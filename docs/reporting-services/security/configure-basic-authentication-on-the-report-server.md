@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8faf2938-b71b-4e61-a172-46da2209ff55
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d93152c87ff874014e6960e4f213e5eac050618
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 18b08fdca61a423353f53406432791d758818ea0
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65573295"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81625869"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver
   Standardmäßig akzeptiert Reporting Services Anforderungen, die Negotiate- und NTLM-Authentifizierung angeben. Wenn Ihre Bereitstellung Client-Anwendungen oder Browser umfasst, die die Standardauthentifizierung verwenden, müssen Sie die Standardauthentifizierung in die Liste der unterstützten Typen aufnehmen. Zusätzlich müssen Sie den anonymen Zugriff auf die Dateien des Berichts-Generators aktivieren, wenn Sie mit dem Berichts-Generator arbeiten möchten.  
@@ -25,7 +25,7 @@ ms.locfileid: "65573295"
   
  Bevor Sie die Standardauthentifizierung aktivieren, stellen Sie sicher, dass sie von der Sicherheitsinfrastruktur unterstützt wird. Unter der Standardauthentifizierung übergibt der Berichtsserver-Webdienst Anmeldeinformationen an die lokale Sicherheitsinstanz. Wenn die Anmeldeinformationen auf ein lokales Benutzerkonto verweisen, wird der Benutzer auf dem Computer, der den Berichtsserver ausführt, von der lokalen Sicherheitsinstanz authentifiziert und erhält ein Sicherheitstoken, das für lokale Ressourcen gültig ist. Anmeldeinformationen für Domänenbenutzerkonten werden an einen Domänencontroller weitergeleitet und von diesem authentifiziert. Das resultierende Ticket gilt für Netzwerkressourcen.  
   
- Wenn Sie das Risiko einschränken möchten, dass Anmeldeinformationen während der Übertragung auf einen Domänencontroller in Ihrem Netzwerk abgefangen werden, benötigen Sie eine Verschlüsselung auf Kanalebene wie Secure Sockets Layer (SSL). Die Standardauthentifizierung selbst überträgt den Benutzernamen in Klartext und das Kennwort in base64-Codierung. Die zusätzliche Verschlüsselung auf Kanalebene macht das Paket unlesbar. Weitere Informationen finden Sie unter [Konfigurieren von SSL-Verbindungen auf einem Berichtsserver im einheitlichen Modus](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+ Wenn Sie das Risiko einschränken möchten, dass Anmeldeinformationen während der Übertragung auf einen Domänencontroller in Ihrem Netzwerk abgefangen werden, benötigen Sie eine Verschlüsselung auf Kanalebene wie Transport Layer Security (TLS), früher als Secure Sockets Layer (SSL) bezeichnet. Die Standardauthentifizierung selbst überträgt den Benutzernamen in Klartext und das Kennwort in base64-Codierung. Die zusätzliche Verschlüsselung auf Kanalebene macht das Paket unlesbar. Weitere Informationen finden Sie unter [Konfigurieren von TLS-Verbindungen auf einem Berichtsserver im einheitlichen Modus](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
  Bedenken Sie, dass Benutzer nach einer Aktivierung der Standardauthentifizierung die Option **Integrierte Sicherheit von Windows** nicht auswählen können, wenn Sie die Verbindungseigenschaften auf eine externe Datenquelle einstellen, die Daten an einen Bericht übergibt. Die Option ist auf den Seiten zu den Datenquelleneigenschaften grau abgeblendet.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "65573295"
   
 |Element|Erforderlich|Gültige Werte|  
 |-------------|--------------|------------------|  
-|LogonMethod|Ja<br /><br /> Wenn Sie keinen Wert angeben, wird 3 verwendet.|**2** = Netzwerkanmeldung für Server mit hoher Leistungsfähigkeit zur Authentifizierung von Nur-Text-Kennwörtern<br /><br /> **3** = Klartextanmeldung, wobei die Anmeldeinformationen aus dem mit jeder HTTP-Anforderung gesendeten Authentifizierungspaket beibehalten werden. Dadurch kann der Server beim Herstellen von Verbindungen zu anderen Servern im Netzwerk die Identität des Benutzers annehmen. (Standardwert)<br /><br /> Hinweis: Die Werte 0 (für interaktive Anmeldung) und 1 (für Batchanmeldung) werden in **nicht**[!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]unterstützt.|  
+|LogonMethod|Ja<br /><br /> Wenn Sie keinen Wert angeben, wird 3 verwendet.|**2** = Netzwerkanmeldung für Server mit hoher Leistungsfähigkeit zur Authentifizierung von Nur-Text-Kennwörtern<br /><br /> **3** = Klartextanmeldung, wobei die Anmeldeinformationen aus dem mit jeder HTTP-Anforderung gesendeten Authentifizierungspaket beibehalten werden. Dadurch kann der Server beim Herstellen von Verbindungen zu anderen Servern im Netzwerk die Identität des Benutzers annehmen. (Standardwert)<br /><br /> Hinweis: Die Werte 0 (für interaktive Anmeldung) und 1 (für Batchanmeldung) werden **NICHT** in [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] unterstützt.|  
 |Realm|Optional|Gibt eine Ressourcenpartition mit Autorisierungs- und Authentifizierungsfunktionen an, mit denen Sie den Zugriff auf geschützte Ressourcen in Ihrem Unternehmen steuern können.|  
 |DefaultDomain|Optional|Gibt die Domäne an, die vom Server für die Benutzerauthentifizierung verwendet wird. Dieser Wert ist optional. Wenn Sie ihn weglassen, verwendet der Berichtsserver den Computernamen als Domäne. Wenn der Computer zu einer Domäne gehört, ist diese Domäne die Standarddomäne. Wenn Sie den Berichtsserver auf einem Domänencontroller installiert haben, ist die verwendete Domäne die vom Computer gesteuerte.|  
   

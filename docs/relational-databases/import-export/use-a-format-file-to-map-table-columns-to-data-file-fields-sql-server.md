@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.custom: seo-lt-2019
-ms.openlocfilehash: a9874a24ae077b0381d8e8e8834b091a72953688
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 821d9e5339c70551a3503faa81ca15276892ed86
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80980593"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529220"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,20 +85,20 @@ Vergleichen Sie die Änderungen:
 ```
 13.0
 4
-1       SQLCHAR 0       7       ","      1     PersonID               ""
-2       SQLCHAR 0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
-3       SQLCHAR 0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
-4       SQLCHAR 0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
+1       SQLCHAR    0       7       ","      1     PersonID               ""
+2       SQLCHAR    0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR    0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR    0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
 
 ```
 **Nachher**
 ```
 13.0
 4
-1       SQLCHAR 0       7       ","      1     PersonID               ""
-2       SQLCHAR 0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
-3       SQLCHAR 0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
-4       SQLCHAR 0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
+1       SQLCHAR    0       7       ","      1     PersonID               ""
+2       SQLCHAR    0       30      ","      3     LastName               SQL_Latin1_General_CP1_CI_AS
+3       SQLCHAR    0       25      ","      2     FirstName              SQL_Latin1_General_CP1_CI_AS
+4       SQLCHAR    0       1       "\r\n"   4     Gender                 SQL_Latin1_General_CP1_CI_AS
 
 ```
 Die geänderte Formatdatei entspricht nun Folgendem:
@@ -116,7 +116,7 @@ bcp TestDatabase.dbo.myRemap format nul -c -x -f D:\BCP\myRemap.xml -t, -T
 Informationen zur Terminologie finden Sie unter [Schemasyntax für XML-Formatdateien](../../relational-databases/import-export/xml-format-files-sql-server.md#StructureOfXmlFFs) .  Öffnen Sie `D:\BCP\myRemap.xml` in Editor, und nehmen Sie die folgenden Änderungen vor:
 1. Die Reihenfolge, in der die \<FIELD>-Elemente in der Formatdatei deklariert sind, ist die Reihenfolge, in der diese Felder in der Datendatei angezeigt werden. Kehren Sie daher die Reihenfolge für die \<FIELD>-Elemente mit den ID-Attributen 2 und 3 um.
 2. Stellen Sie sicher, dass die Werte des \<FIELD>-Attributs ID sequenziell sind.
-3. Die Reihenfolge der \<COLUMN>-Elemente im \<ROW>-Element definiert, in welcher Reihenfolge diese durch den Massenvorgang zurückgegeben werden.  Die XML-Formatdatei weist jedem \<COLUMN>-Element einen lokalen Namen zu, der keine Verbindung zu der Spalte in der Zieltabelle des Massenimportvorgangs aufweist.  Die Reihenfolge der \<COLUMN>-Elemente ist unabhängig von der Reihenfolge der \<FIELD>-Elemente in einer \<RECORD>-Definition.  Jedes \<COLUMN>-Element entspricht einem \<FIELD>-Element (dessen ID im SOURCE-Attribut des \<COLUMN>-Elements angegeben ist).  Somit sind die Werte für \<COLUMN> SOURCE die einzigen Attribute, die eine Überarbeitung erfordern.  Kehren Sie die Reihenfolge für die \<COLUMN>-Attribute SOURCE 2 und 3 um.
+3. Die Reihenfolge der \<COLUMN>-Elemente im \<ROW>-Element definiert, in welcher Reihenfolge diese vom Massenvorgang an das Ziel gesendet werden.  Die XML-Formatdatei weist jedem \<COLUMN>-Element einen lokalen Namen zu, der keine Verbindung zu der Spalte in der Zieltabelle des Massenimportvorgangs aufweist.  Die Reihenfolge der \<COLUMN>-Elemente ist unabhängig von der Reihenfolge der \<FIELD>-Elemente in einer \<RECORD>-Definition.  Jedes \<COLUMN>-Element entspricht einem \<FIELD>-Element (dessen ID im SOURCE-Attribut des \<COLUMN>-Elements angegeben ist).  Somit sind die Werte für \<COLUMN> SOURCE die einzigen Attribute, die eine Überarbeitung erfordern.  Kehren Sie die Reihenfolge für die \<COLUMN>-Attribute SOURCE 2 und 3 um.
 
 Vergleichen Sie die Änderungen:  
 **Vorher**

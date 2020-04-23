@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 95acac097d1c3ec5ffd4989058db0c2927441554
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: e00888943ae196cfb5b579368a7b05d80c4f1182
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72907234"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529114"
 ---
 # <a name="configure-web-synchronization"></a>Websynchronisierung konfigurieren
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "72907234"
   
  Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent zum Konfigurieren der Websynchronisierung wird auf IIS Version 7.0 nicht unterstützt. Beginnend mit SQL Server 2012, empfiehlt sich für die Nutzung der Web-Sync-Komponente auf dem IIS-Server die Installation des SQL Servers mit Replikation. Dabei kann es sich um die kostenlose SQL Server Express Edition handeln.  
   
- SSL ist für die Websynchronisierung erforderlich. Sie benötigen ein von einer Zertifizierungsstelle ausgestelltes Sicherheitszertifikat. Nur zu Testzwecken können Sie ein selbst ausgestelltes Sicherheitszertifikat verwenden.  
+ TLS ist für die Websynchronisierung erforderlich. Sie benötigen ein von einer Zertifizierungsstelle ausgestelltes Sicherheitszertifikat. Nur zu Testzwecken können Sie ein selbst ausgestelltes Sicherheitszertifikat verwenden.  
    
   
  **So konfigurieren Sie IIS für die Websynchronisierung**  
@@ -144,7 +144,7 @@ ms.locfileid: "72907234"
   
 -   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verteiler und -Verleger können sich auf demselben Computer befinden (eine typische Konfiguration für die Mergereplikation). IIS sollte jedoch auf einem separaten Computer installiert werden.  
   
--   Verwenden Sie SSL (Secure Sockets Layer), um die Verbindung zwischen dem Abonnenten und dem Computer mit IIS zu verschlüsseln. Dies ist für die Websynchronisierung erforderlich.  
+-   Verwenden Sie Transport Layer Security (TLS), früher als SSL (Secure Sockets Layer) bezeichnet, um die Verbindung zwischen dem Abonnenten und dem Computer mit IIS zu verschlüsseln. Dies ist für die Websynchronisierung erforderlich.  
   
 -   Verwenden Sie die Standardauthentifizierung für Verbindungen zwischen dem Abonnenten und IIS. Mithilfe der Standardauthentifizierung kann IIS Verbindungen zum Verleger/Verteiler im Namen des Abonnenten herstellen, ohne dass eine Delegierung erforderlich ist. Die Delegierung ist erforderlich, wenn Sie die integrierte Authentifizierung verwenden.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "72907234"
   
 -   Wenn sich Server in der Replikationstopologie hinter einer Firewall befinden, müssen Sie möglicherweise Ports in der Firewall öffnen, um die Websynchronisierung zu aktivieren.  
   
-    -   Der Abonnentencomputer stellt die Verbindung mit dem Computer, auf dem IIS ausgeführt wird, über HTTPS mithilfe von SSL her, das normalerweise für die Verwendung von Port 443 konfiguriert ist. [!INCLUDE[ssEW](../../includes/ssew-md.md)] -Abonnenten können die Verbindung auch über HTTP herstellen, das normalerweise für die Verwendung von Port 80 konfiguriert ist.  
+    -   Der Abonnentencomputer stellt die Verbindung mit dem Computer, auf dem IIS ausgeführt wird, über HTTPS mithilfe von TLS her, das normalerweise für die Verwendung von Port 443 konfiguriert ist. [!INCLUDE[ssEW](../../includes/ssew-md.md)] -Abonnenten können die Verbindung auch über HTTP herstellen, das normalerweise für die Verwendung von Port 80 konfiguriert ist.  
   
     -   Der Computer, auf dem IIS ausgeführt wird, stellt die Verbindung mit dem Verleger oder Verteiler in der Regel über Port 1433 (Standardinstanz) her. Wenn der Verleger oder der Verteiler eine benannte Instanz auf einem Server mit einer anderen Standardinstanz ist, wird normalerweise die Verbindung mit der benannten Instanz über Port 1500 hergestellt.  
   

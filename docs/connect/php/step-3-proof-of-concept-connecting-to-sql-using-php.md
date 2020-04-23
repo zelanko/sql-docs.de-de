@@ -1,5 +1,6 @@
 ---
-title: 'Schritt 3: Proof of Concept für Verbindungen mit SQL mithilfe von PHP | Microsoft-Dokumentation'
+title: 'Schritt 3: Herstellen der Verbindung mit SQL mithilfe von PHP'
+description: Schritt 3 ist ein Proof of Concept, der zeigt, wie Sie mithilfe von PHP eine Verbindung mit SQL Server herstellen können. Die grundlegenden Beispiele veranschaulichen das Auswählen und Einfügen von Daten.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a7451a85-18e5-4fd0-bbcb-2f15a1117290
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b88a71d1800b13b4d8fd867715cc3690eee4fc43
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 69c8b1ec58dbb40ab6e4463d343720e02e583ac8
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926857"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528584"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-php"></a>Schritt 3: Proof of Concept für Verbindungen mit SQL Server mithilfe von PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -79,8 +80,7 @@ Mit der [sqlsrv_query](https://php.net/manual/en/function.sqlsrv-query.php)-Funk
   
 ## <a name="step-3--insert-a-row"></a>Schritt 3:  Einfügen einer Zeile  
   
-In diesem Beispiel erfahren Sie, wie Sie eine [INSERT](../../t-sql/statements/insert-transact-sql.md)-Anweisung sicher ausführen und Parameter zum Schutz Ihrer Anwendung vor einer [Einschleusung von SQL-Befehlen](../../relational-databases/tables/primary-and-foreign-key-constraints.md) übergeben.    
-  
+In diesem Beispiel erfahren Sie, wie Sie eine [INSERT](../../t-sql/statements/insert-transact-sql.md)-Anweisung auf sichere Weise ausführen und Parameter übergeben. Parameterwerte schützen Ihre Anwendung vor einer [Einschleusung von SQL-Befehlen](../../relational-databases/tables/primary-and-foreign-key-constraints.md).
   
 ```php 
     function InsertData()  
@@ -109,7 +109,7 @@ In diesem Beispiel erfahren Sie, wie Sie eine [INSERT](../../t-sql/statements/in
     }  
 ```  
   
-## <a name="step-4--rollback-a-transaction"></a>Schritt 4:  Durchführen eines Rollbacks für eine Transaktion  
+## <a name="step-4--roll-back-a-transaction"></a>Schritt 4:  Ausführen des Rollbacks für eine Transaktion  
   
   
 Dieses Codebeispiel veranschaulicht die Verwendung von Transaktionen für folgende Aufgaben:  
@@ -118,7 +118,7 @@ Dieses Codebeispiel veranschaulicht die Verwendung von Transaktionen für folgen
   
 \- Hinzufügen einer Zeile mit Daten und Aktualisieren einer anderen Datenzeile  
   
-\- Durchführen eines Commits der Transaktion, wenn Einfügung und Aktualisierung erfolgreich waren, und eines Rollbacks der Transaktion, wenn ein Vorgang fehlgeschlagen ist  
+– Durchführen eines Commits der Transaktion, wenn Einfügung und Aktualisierung erfolgreich waren, und eines Rollbacks der Transaktion, wenn bei einem Vorgang ein Fehler aufgetreten ist  
   
   
 ```php 

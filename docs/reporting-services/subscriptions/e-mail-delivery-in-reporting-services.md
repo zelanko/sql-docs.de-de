@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: fda2f130-97b9-4258-9dbb-e93a70f4d08a
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 70127c0f3064dfce46a6c4fea101b0199900fcbe
-ms.sourcegitcommit: c6a2efe551e37883c1749bdd9e3c06eb54ccedc9
+ms.openlocfilehash: c25fa11961ec082a6c8b912eca471d578a29a057
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/06/2020
-ms.locfileid: "80742078"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632528"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>E-Mail-Übermittlung in Reporting Services
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält eine E-Mail-Übermittlungserweiterung, mit der Sie einen Bericht per E-Mail an einzelne Benutzer oder Gruppen senden können. Um einen Bericht per E-Mail zu verteilen, 1) konfigurieren Sie den Berichtsserver für die E-Mail-Zustellung und 2) definieren entweder ein Standardabonnement oder ein datengesteuertes Abonnement. Ein einzelnes Abonnement kann nicht mehrere Berichte in einer einzigen E-Mail-Nachricht übermitteln. Sie können jedoch mehrere Abonnements erstellen.  
   
- Der Berichtsserver stellt über eine Standardverbindung eine Verbindung mit einem E-Mail-Server her. Mit Secure Sockets Layer (SSL) verschlüsselte Kommunikation wird nicht verwendet. Der E-Mail-Server muss ein Remoteserver oder lokaler SMTP-Server (Simple Mail Transport Protocol) im selben Netzwerk wie der Berichtsserver sein.  
+ Der Berichtsserver stellt über eine Standardverbindung eine Verbindung mit einem E-Mail-Server her. Mit Transport Layer Security (TLS), früher als Secure Sockets Layer (SSL) bezeichnet, verschlüsselte Kommunikation wird nicht verwendet. Der E-Mail-Server muss ein Remoteserver oder lokaler SMTP-Server (Simple Mail Transport Protocol) im selben Netzwerk wie der Berichtsserver sein.  
   
  Ausführliche Schritte zum Erstellen eines Abonnements finden Sie hier:  
   

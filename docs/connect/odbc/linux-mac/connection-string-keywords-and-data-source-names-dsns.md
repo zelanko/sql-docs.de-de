@@ -1,5 +1,6 @@
 ---
-title: Herstellen einer Verbindung mit SQL Server | Microsoft-Dokumentation
+title: Herstellen von Verbindungen über ODBC
+description: Erfahren Sie, wie Sie eine Verbindung mit einer Datenbank aus Linux oder macOS mithilfe des Microsoft ODBC Driver for SQL Server herstellen.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 52511cbda93f5148daab116f0def292b55828efd
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: 2b99479883fd1cc74008d62a9c322226ed587244
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219393"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632804"
 ---
 # <a name="connecting-to-sql-server"></a>Herstellen einer Verbindung mit SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,7 +29,7 @@ In diesem Artikel wird beschrieben, wie Sie eine Verbindung mit einer [!INCLUDE[
   
 ## <a name="connection-properties"></a>Verbindungseigenschaften  
 
-Weitere Informationen zu den Schlüsselwörtern und Attributen der Verbindungszeichenfolge, die unter Linux und Mac unterstützt werden, finden Sie unter [Schlüsselwörter und Attribute von DNS- und Verbindungszeichenfolgen](../../../connect/odbc/dsn-connection-string-attribute.md).
+Weitere Informationen zu den Schlüsselwörtern und Attributen der Verbindungszeichenfolge, die unter Linux und macOS unterstützt werden, finden Sie unter [Schlüsselwörter und Attribute von DNS- und Verbindungszeichenfolgen](../dsn-connection-string-attribute.md).
 
 > [!IMPORTANT]  
 > Geben Sie beim Herstellen einer Verbindung mit einer Datenbank, welche Datenbankspiegelung verwendet (oder einen Failoverpartner hat), nicht den Namen der Datenbank in der Verbindungszeichenfolge an. Senden Sie stattdessen den Befehl **use** _Datenbankname_, um eine Verbindung mit der Datenbank herzustellen, bevor Sie Ihre Abfragen ausführen.  
@@ -113,6 +114,6 @@ Fügen Sie entweder dem Abschnitt des Treibers in `odbcinst.ini` oder dem Abschn
 
 ## <a name="see-also"></a>Weitere Informationen
 
-- [Installieren von Microsoft ODBC Driver for SQL Server unter Linux](../../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
-- [Installieren von Microsoft ODBC Driver for SQL Server unter macOS](../../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
-- [Programmierrichtlinien](../../../connect/odbc/linux-mac/programming-guidelines.md)
+- [Installieren von Microsoft ODBC Driver for SQL Server unter Linux](installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Installieren von Microsoft ODBC Driver for SQL Server unter macOS](install-microsoft-odbc-driver-sql-server-macos.md)
+- [Programmierrichtlinien](programming-guidelines.md)

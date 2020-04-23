@@ -1,5 +1,6 @@
 ---
 title: Installation von Microsoft ODBC Driver for SQL Server (macOS)
+description: Erfahren Sie, wie Microsoft ODBC Driver for SQL Server auf macOS-Clients installieren, um Datenbankkonnektivität zu ermöglichen.
 ms.date: 03/05/2020
 ms.prod: sql
 ms.prod_service: connectivity
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - driver, installing
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 61bbc198c695ba6e1a0b6a339bfb110108435de8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9daa17d8619fa05ac9abf52a768740eb3e223c77
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921921"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488518"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-macos"></a>Installation von Microsoft ODBC Driver for SQL Server (macOS)
 
@@ -59,7 +60,7 @@ Der ODBC-Treiber unter macOS besteht aus den folgenden Komponenten:
 |---------------|-----------------|  
 |libmsodbcsql.17.dylib oder libmsodbcsql.13.dylib|Die Datei (`dylib`) der dynamischen Bibliothek, die die gesamte Funktionalität des Treibers enthält. Diese Datei wird in `/usr/local/lib/` installiert.|  
 |`msodbcsqlr17.rll` oder `msodbcsqlr13.rll`|Die begleitende Ressourcendatei für die Treiberbibliothek. Diese Datei wird in `[driver .dylib directory]../share/msodbcsql17/resources/en_US/` für den Treiber 17 und in `[driver .dylib directory]../share/msodbcsql/resources/en_US/` für den Treiber 13 installiert. | 
-|msodbcsql.h|Die Headerdatei, die alle erforderlichen neuen Definitionen für die Verwendung des Treibers enthält.<br /><br /> **Hinweis:**  Sie können nicht auf „msodbcsql.h“ und „odbcss.h“ im selben Programm verweisen.<br /><br /> „msodbcsql“ wird in `/usr/local/include/msodbcsql17/` für den Treiber 17 und in `/usr/local/include/msodbcsql/` für den Treiber 13 installiert. |
+|msodbcsql.h|Die Headerdatei, die alle erforderlichen neuen Definitionen für die Verwendung des Treibers enthält.<br /><br /> **Hinweis:**  Sie können im selben Programm nicht auf „msodbcsql.h“ und auf „odbcss.h“ verweisen.<br /><br /> „msodbcsql“ wird in `/usr/local/include/msodbcsql17/` für den Treiber 17 und in `/usr/local/include/msodbcsql/` für den Treiber 13 installiert. |
 |LICENSE.txt|Die Textdatei, die die Bestimmungen des Endbenutzer-Lizenzvertrags enthält. Diese Datei wird in `/usr/local/share/doc/msodbcsql17/` für den Treiber 17 und in `/usr/local/share/doc/msodbcsql/` für den Treiber 13 platziert. |
 |RELEASE_NOTES|Die Textdatei, die die Versionshinweise enthält. Diese Datei wird in `/usr/local/share/doc/msodbcsql17/` für den Treiber 17 und in `/usr/local/share/doc/msodbcsql/` für den Treiber 13 platziert. |
 

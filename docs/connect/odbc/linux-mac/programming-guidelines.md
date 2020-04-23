@@ -1,5 +1,6 @@
 ---
-title: Programmierrichtlinien (ODBC Driver for SQL Server) | Microsoft-Dokumentation
+title: Programmierrichtlinien (ODBC Driver)
+description: Die Features für die Programmierung des Microsoft ODBC Driver for SQL Server unter macOS und Linux basieren auf ODBC in SQL Server Native Client (ODBC).
 ms.custom: ''
 ms.date: 01/12/2018
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: v-makouz
 ms.author: v-daenge
-ms.openlocfilehash: b54fd76c8c6e60b7250ef354b8999347eb96d95a
-ms.sourcegitcommit: 54cfeb36c9caa51ec68fa8f4a1918e305db5e00a
+ms.openlocfilehash: ecaa595fa08a4a37c9a5d3146dd03af440aa4453
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/11/2020
-ms.locfileid: "81219227"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632790"
 ---
 # <a name="programming-guidelines"></a>Programmierrichtlinien
 
@@ -49,7 +50,7 @@ Die folgenden Abschnitte aus der [!INCLUDE[ssNoVersion](../../../includes/ssnove
 Die Funktionsweise der folgenden Features wurde in diesem Release des ODBC-Treibers für macOS und Linux überprüft:
 
 -   Failoverclusterverbindung
--   [Transparente Netzwerk-IP-Adressauflösung](https://docs.microsoft.com/sql/connect/odbc/linux/using-transparent-network-ip-resolution) (vor ODBC-Treiber 17)
+-   [Transparente Netzwerk-IP-Adressauflösung](../using-transparent-network-ip-resolution.md) (vor ODBC-Treiber 17)
 -   [Erweiterte Treiberablaufverfolgung](https://blogs.msdn.microsoft.com/mattn/2012/05/15/enabling-advanced-driver-tracing-for-the-sql-native-client-odbc-drivers/)
 
 Die folgenden Features sind nicht in dieser Version des ODBC-Treibers für macOS und Linux verfügbar: 
@@ -108,7 +109,7 @@ Für ODBC-Treiber 17 werden die folgenden Zeichensätze bzw. Codierungen für SQ
 
 Wenn die Verbindung hergestellt wird, ermittelt der Treiber das aktuelle Gebietsschema des Prozesses, in dem er geladen wurde. Wenn eine der oben aufgeführten Codierungen verwendet wird, verwendet der Treiber diese Codierung für SQLCHAR-Daten (schmale Zeichen). Andernfalls wird standardmäßig die UTF-8-Codierung verwendet. Da alle Prozesse standardmäßig im Gebietsschema „C“ gestartet werden (und der Treiber daher standardmäßig die UTF-8-Codierung verwendet), sollte die Funktion **setlocale** zum ordnungsgemäßen Festlegen des Gebietsschemas verwendet werden, bevor die Verbindung hergestellt wird. Hierzu muss entweder das Gebietsschema explizit festgelegt oder eine leere Zeichenfolge (z. B. `setlocale(LC_ALL, "")`) verwendet werden, um die Gebietsschemaeinstellungen der Umgebung zu verwenden.
 
-Daher werden Benutzern des ODBC-Treibers 17, die ein Upgrade von Version 13 oder 13.1 ausgeführt haben, in herkömmlichen Linux- oder Mac-Umgebungen keine Unterschiede auffallen, wenn die UTF-8-Codierung verwendet wird. Allerdings müssen Anwendungen, für die mithilfe von `setlocale()` eine andere Codierung aus der obigen Liste festgelegt wurde, diese Codierung anstelle der UTF-8-Codierung für Daten für und aus dem Treiber verwenden.
+Daher werden Benutzern des ODBC-Treibers 17, die ein Upgrade von Version 13 oder 13.1 ausgeführt haben, in herkömmlichen Linux- oder macOS-Umgebungen keine Unterschiede auffallen, wenn die UTF-8-Codierung verwendet wird. Allerdings müssen Anwendungen, für die mithilfe von `setlocale()` eine andere Codierung aus der obigen Liste festgelegt wurde, diese Codierung anstelle der UTF-8-Codierung für Daten für und aus dem Treiber verwenden.
 
 SQLWCHAR-Daten müssen UTF-16LE (Little Endian) sein.
 
@@ -147,8 +148,8 @@ Zum Zeitpunkt der Erstellung dieser Dokumentation beträgt die Standardstapelgr�
 3.  Bei Verwendung des Treibers mit Anwendungen mit sehr vielen Threads kann die Handlevalidierung von unixODBC zu einem Leistungsengpass führen. In solchen Szenarien lässt sich durch Kompilieren von unixODBC mit der Option `--enable-fastvalidate` eine wesentlich bessere Leistung erzielen. Beachten Sie jedoch, dass dies bei Anwendungen, die ungültige Handles an ODBC-APIs übergeben, dazu führen kann, dass diese Anwendungen abstürzen, anstatt `SQL_INVALID_HANDLE`-Fehler zurückzugeben.
 
 ## <a name="see-also"></a>Weitere Informationen  
-[Häufig gestellte Fragen](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)
+[Häufig gestellte Fragen](frequently-asked-questions-faq-for-odbc-linux.md)
 
-[Bekannte Probleme in dieser Version des Treibers](../../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
+[Bekannte Probleme in dieser Version des Treibers](known-issues-in-this-version-of-the-driver.md)
 
-[Versionsanmerkungen](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+[Versionsanmerkungen](release-notes-odbc-sql-server-linux-mac.md)

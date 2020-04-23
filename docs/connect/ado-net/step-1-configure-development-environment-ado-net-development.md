@@ -1,5 +1,5 @@
 ---
-title: 'Schritt 1: Konfigurieren der Entwicklungsumgebung für ADO.NET-Entwicklung | Microsoft-Dokumentation'
+title: 'Schritt 1: Konfigurieren der Entwicklungsumgebung für die ADO.NET-Entwicklung | Microsoft-Dokumentation'
 description: In diesem Artikel wird das Konfigurieren der Entwicklungsumgebung für die ADO.NET-Entwicklung beschrieben.
 ms.custom: ''
 ms.date: 08/15/2019
@@ -11,18 +11,18 @@ ms.assetid: 9cba6a0d-5f21-49af-ac5a-17d199973590
 author: David-Engel
 ms.author: v-daenge
 ms.reviewer: v-kaywon
-ms.openlocfilehash: b6d1328c7bbdebe90a2e30118f67123214008989
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: dde55bd4afd162869606e336126c32c274ea7445
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80918220"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633316"
 ---
 # <a name="step-1-configure-development-environment-for-adonet-development"></a>Schritt 1: Konfigurieren der Entwicklungsumgebung für die ADO.NET-Entwicklung
 
 [!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
-- Nächster Artikel:&nbsp;&nbsp;&nbsp;[Schritt 2: Erstellen einer SQL-Datenbank für die ADO.NET-Entwicklung](step-2-create-sql-database-ado-net-development.md)  
+- Nächster Artikel:&nbsp;&nbsp;&nbsp;[Schritt 2: Erstellen einer SQL-Datenbank für die ADO.NET-Entwicklung](step-2-create-sql-database-ado-net-development.md)  
 
 ## <a name="download-a-net-sql-driver"></a>Herunterladen eines .NET SQL-Treibers
 

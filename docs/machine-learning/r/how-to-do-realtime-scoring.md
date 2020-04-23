@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: c07a5b8d3e1b34c0bb33f44a20ab5fff867db922
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 3f431d1598038d0789579697fccbaeffe5ef1fd0
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117623"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487839"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Vorgehensweise: Generieren von Prognosen und Vorhersagen mit Modellen für maschinelles Lernen in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ Plattformanforderungen schreiben oft die zu verwendende Bewertungsmethodik vor.
 
 | Produktversion und Plattform | Methodik |
 |------------------------------|-------------|
-| SQL Server 2017 unter Windows, SQL Server 2017 Linux und Azure SQL-Datenbank | **Native Bewertung** mit PREDICT T-SQL |
+| SQL Server 2017 oder höher unter Windows und Linux | **Native Bewertung** mit PREDICT T-SQL |
 | SQL Server 2017 (nur Windows), SQL Server 2016 R Services mit SP1 oder höher | **Echtzeitbewertung** mit der gespeicherten Prozedur sp\_rxPredict |
 
 Wir empfehlen die native Bewertung mit der PREDICT-Funktion. Die Verwendung von sp\_rxPredict erfordert, dass Sie die SQLCLR-Integration aktivieren. Berücksichtigen Sie die Sicherheitsrisiken, bevor Sie diese Option aktivieren.

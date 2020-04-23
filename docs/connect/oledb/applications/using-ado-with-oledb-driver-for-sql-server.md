@@ -1,6 +1,6 @@
 ---
-title: Verwenden von ADO mit dem OLE DB-Treiber für SQL Server | Microsoft-Dokumentation
-description: Verwenden von ADO mit dem OLE DB-Treiber für SQL Server
+title: Verwenden von ADO mit dem OLE DB-Treiber
+description: Erfahren Sie, wie Sie ADO mit dem OLE DB-Treiber einschließlich neuer Features wie mehrerer aktiver Resultsets, Abfragebenachrichtigungen, benutzerdefinierter Typen oder des XML-Datentyps verwenden.
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - MSOLEDBSQL, ADO
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: b7e8ab700404aee32140bc935443e5911e4a56db
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 72d82433e04ead61ec71eecd3c8771cbe744b751
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "67989241"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633890"
 ---
 # <a name="using-ado-with-ole-db-driver-for-sql-server"></a>Verwenden von ADO mit dem OLE DB-Treiber für SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "67989241"
 
 -   `DataTypeCompatibility=80`  
 
- Weitere Informationen zu den vom OLE DB-Treiber für SQL Server unterstützten Schlüsselwörtern für ADO-Verbindungszeichenfolgen finden Sie unter [Verwenden von Verbindungszeichenfolgen-Schlüsselwörtern mit dem OLE DB-Treiber für SQL Server](../../oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
+ Weitere Informationen zu den vom OLE DB-Treiber für SQL Server unterstützten Schlüsselwörtern für ADO-Verbindungszeichenfolgen finden Sie unter [Verwenden von Verbindungszeichenfolgen-Schlüsselwörtern mit dem OLE DB-Treiber für SQL Server](using-connection-string-keywords-with-oledb-driver-for-sql-server.md).  
 
  Es folgt ein Beispiel, in dem eine ADO-Verbindungszeichenfolge eingerichtet wird, mit der die Verwendung von des OLE DB-Treibers für SQL Server in vollem Umfang ermöglicht und die MARS-Funktion aktiviert wird:  
 
@@ -167,4 +167,4 @@ Set con = Nothing
  In früheren Versionen des OLE DB-Anbieters hätte dieser Code bewirkt, dass für den zweiten Execute-Aufruf eine Standardverbindung erstellt wird, weil in diesen Versionen nur ein aktives Resultset pro Verbindung geöffnet werden konnte. Weil die Standardverbindung nicht in den OLE DB-Verbindungspool aufgenommen wurde, bedeutete dies zusätzlichen Aufwand. Wenn der OLE DB-Anbieter von OLE DB-Treiber für SQL Server verfügbar macht, sind mehrere aktive Resultsets in einer Verbindung zulässig.  
 
 ## <a name="see-also"></a>Weitere Informationen  
- [Erstellen von Anwendungen mit dem OLE DB-Treiber für SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  
+ [Erstellen von Anwendungen mit dem OLE DB-Treiber für SQL Server](building-applications-with-oledb-driver-for-sql-server.md)  

@@ -1,5 +1,6 @@
 ---
-title: Benutzerdefinierte Keystore-Anbieter | Microsoft-Dokumentation
+title: Benutzerdefinierte Keystore-Anbieter
+description: Erfahren Sie, wie Sie einen benutzerdefinierten Keystore-Anbieter für die Verwendung mit dem ODBC-Treiber für SQL Server und das Always Encrypted-Feature implementieren.
 ms.custom: ''
 ms.date: 07/12/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
 ms.author: v-chojas
 author: David-Engel
-ms.openlocfilehash: c3658c1b7e745ad9b51746b26daf68c1b912f2b7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c814fa5e755c46d09d3c02a6ef17e3d4ab562db7
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924566"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633194"
 ---
 # <a name="custom-keystore-providers"></a>Benutzerdefinierte Keystore-Anbieter
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -24,7 +25,7 @@ ms.locfileid: "80924566"
 
 Die Spaltenverschlüsselungsfunktion von SQL Server 2016 erfordert, dass die auf dem Server gespeicherten verschlüsselten Spaltenverschlüsselungsschlüssel (Encrypted Column Encryption Keys, ECEKs) vom Client abgerufen und anschließend in Spaltenverschlüsselungsschlüsseln (Column Encryption Keys, CEKs) entschlüsselt werden, um auf die in verschlüsselten Spalten gespeicherten Daten zuzugreifen. ECEKs werden mithilfe von Spaltenhauptschlüsseln (Column Master Keys, CMKs) verschlüsselt, und die Sicherheit des CMK ist für die Sicherheit der Spaltenverschlüsselung wichtig. Daher sollte der CMK an einem sicheren Speicherort gespeichert werden. Ein Spaltenverschlüsselungsschlüssel-Speicheranbieter hat den Zweck, eine Schnittstelle bereitzustellen, die dem ODBC-Treiber ermöglicht, auf diese sicher gespeicherten CMKs zuzugreifen. Für Benutzer mit einem eigenen sicheren Speicher bietet die Schnittstelle für benutzerdefinierte Keystore-Anbieter ein Framework für die Implementierung des Zugriffs auf den sicheren Speicher des CMK für den ODBC-Treiber, mit dem dann CEK-Verschlüsselung und -Entschlüsselung durchgeführt werden kann.
 
-Jeder Keystore-Anbieter enthält und verwaltet einen oder mehrere CMKs, die durch Schlüsselpfade identifiziert werden – Zeichenfolgen in einem vom Anbieter definierten Format. So kann zusammen mit dem Verschlüsselungsalgorithmus auch eine vom Anbieter definierte Zeichenfolge verwendet werden, um die Verschlüsselung eines CEK und die Entschlüsselung eines ECEK auszuführen. Der Algorithmus wird zusammen mit dem ECEK und dem Namen des Anbieters in den Verschlüsselungsmetadaten der Datenbank gespeichert. Weitere Informationen finden Sie unter [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) und [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md). Die beiden grundlegenden Vorgänge der Schlüsselverwaltung sind folglich:
+Jeder Keystore-Anbieter enthält und verwaltet einen oder mehrere CMKs, die durch Schlüsselpfade identifiziert werden – Zeichenfolgen in einem vom Anbieter definierten Format. Dieser CMK kann – zusammen mit dem Verschlüsselungsalgorithmus, auch eine vom Anbieter definierte Zeichenfolge – verwendet werden, um die Verschlüsselung eines CEK und die Entschlüsselung eines ECEK auszuführen. Der Algorithmus wird zusammen mit dem ECEK und dem Namen des Anbieters in den Verschlüsselungsmetadaten der Datenbank gespeichert. Weitere Informationen finden Sie unter [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) und [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md). Die beiden grundlegenden Vorgänge der Schlüsselverwaltung sind folglich:
 
 ```
 CEK = DecryptViaCEKeystoreProvider(CEKeystoreProvider_name, Key_path, Key_algorithm, ECEK)
@@ -40,7 +41,7 @@ Dabei wird der `CEKeystoreProvider_name` verwendet, um den spezifischen Spaltenv
 CEK = CEKeyStoreProvider_specific_decrypt(Key_path, Key_algorithm, ECEK)
 ```
 
-Der Treiber muss zwar keine CEKs verschlüsseln, aber ein Schlüsselverwaltungstool muss dies möglicherweise tun, um Vorgänge wie die CMK-Erstellung und -Rotation zu implementieren. Hierfür muss der umgekehrte Vorgang ausgeführt werden:
+Der Treiber muss zwar keine CEKs verschlüsseln, aber ein Schlüsselverwaltungstool muss dies möglicherweise tun, um Vorgänge wie die CMK-Erstellung und -Rotation zu implementieren. Für diese Aktionen muss der umgekehrte Vorgang durchgeführt werden:
 
 ```
 ECEK = CEKeyStoreProvider_specific_encrypt(Key_path, Key_algorithm, CEK)
@@ -95,7 +96,7 @@ Mit Ausnahme von „Free“ verfügen die Funktionen in dieser Schnittstelle üb
 ```
 int Init(CEKEYSTORECONTEXT *ctx, errFunc onError);
 ```
-Platzhaltername für eine anbieterdefinierte Initialisierungsfunktion. Der Treiber ruft diese Funktion einmal auf, nachdem ein Anbieter geladen wurde, aber bevor er sie zum ersten Mal benötigt, um ECEK-Entschlüsselungs- oder Read()-/Write()-Anforderungen auszuführen. Verwenden Sie diese Funktion, um jede erforderliche Initialisierung auszuführen. 
+Platzhaltername für eine anbieterdefinierte Initialisierungsfunktion. Der Treiber ruft diese Funktion einmal auf, nachdem ein Anbieter geladen wurde, aber bevor er sie zum ersten Mal benötigt, um ECEK-Entschlüsselungs- oder Read()-/Write()-Anforderungen auszuführen. Verwenden Sie diese Funktion, um jede erforderliche Initialisierung auszuführen.
 
 |Argument|BESCHREIBUNG|
 |:--|:--|
@@ -113,8 +114,8 @@ Platzhaltername für eine anbieterdefinierte Kommunikationsfunktion. Der Treiber
 |:--|:--|
 |`ctx`|[Eingabe] Vorgangskontext.|
 |`onError`|[Eingabe] Fehlermeldefunktion.|
-|`data`|[Ausgabe] Zeiger auf einen Puffer, in den der Anbieter Daten schreibt, die von der Anwendung gelesen werden sollen. Dies entspricht dem Datenfeld der CEKEYSTOREDATA-Struktur.|
-|`len`|[InOut] Zeiger auf einen Längenwert; bei der Eingabe ist dies die maximale Länge des Datenpuffers, und der Anbieter darf nicht mehr als „*len“ Bytes hineinschreiben. Bei der Rückgabe sollte der Anbieter „*len“ mit der Anzahl der tatsächlich geschriebenen Bytes aktualisieren.|
+|`data`|[Ausgabe] Zeiger auf einen Puffer, in den der Anbieter Daten schreibt, die von der Anwendung gelesen werden sollen. Dieser Puffer entspricht dem data-Feld der CEKEYSTOREDATA-Struktur.|
+|`len`|[InOut] Zeiger auf einen Längenwert; bei der Eingabe ist dies die maximale Länge des Datenpuffers, und der Anbieter darf nicht mehr als „*len“ Bytes hineinschreiben. Bei der Rückgabe sollte der Anbieter „*len“ mit der Anzahl der geschriebenen Bytes aktualisieren.|
 |`Return Value`|Gibt einen Wert ungleich 0 (null) zurück, um Erfolg anzuzeigen, oder 0 (null), um einen Fehler anzuzeigen.|
 
 ```
@@ -126,7 +127,7 @@ Platzhaltername für eine anbieterdefinierte Kommunikationsfunktion. Der Treiber
 |:--|:--|
 |`ctx`|[Eingabe] Vorgangskontext.|
 |`onError`|[Eingabe] Fehlermeldefunktion.|
-|`data`|[Eingabe] Zeiger auf einen Puffer, der die Daten für den zu lesenden Anbieter enthält. Dies entspricht dem data-Feld der CEKEYSTOREDATA-Struktur. Der Anbieter darf nicht mehr als „len“ Bytes aus diesem Puffer lesen.|
+|`data`|[Eingabe] Zeiger auf einen Puffer, der die Daten für den zu lesenden Anbieter enthält. Dieser Puffer entspricht dem data-Feld der CEKEYSTOREDATA-Struktur. Der Anbieter darf nicht mehr als „len“ Bytes aus diesem Puffer lesen.|
 |`len`|[Eingabe] Die Anzahl von Bytes, die in den Daten verfügbar sind. Dies entspricht dem dataSize-Feld der CEKEYSTOREDATA-Struktur.|
 |`Return Value`|Gibt einen Wert ungleich 0 (null) zurück, um Erfolg anzuzeigen, oder 0 (null), um einen Fehler anzuzeigen.|
 
@@ -139,11 +140,11 @@ Platzhaltername für eine anbieterdefinierte ECEK-Entschlüsselungsfunktion. Der
 |:--|:--|
 |`ctx`|[Eingabe] Vorgangskontext.|
 |`onError`|[Eingabe] Fehlermeldefunktion.|
-|`keyPath`|[Eingabe] Der Wert des [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md)-Metadatenattributs für den CMK, auf den der angegebene ECEK verweist. Auf NULL endende Zeichenfolge für breite* Zeichen. Dies dient zur Identifizierung eines von diesem Anbieter behandelten CMK.|
-|`alg`|[Eingabe] Der Wert des [ALGORITHM](../../t-sql/statements/create-column-encryption-key-transact-sql.md)-Metadatenattributs für den angegebenen ECEK. Auf NULL endende Zeichenfolge für breite* Zeichen. Dies dient zur Identifizierung des Verschlüsselungsalgorithmus, der zum Verschlüsseln des gegebenen ECEK verwendet wird.|
+|`keyPath`|[Eingabe] Der Wert des [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md)-Metadatenattributs für den CMK, auf den der angegebene ECEK verweist. Auf NULL endende Zeichenfolge für breite* Zeichen. Dieser Wert dient zur Identifizierung eines von diesem Anbieter behandelten CMK.|
+|`alg`|[Eingabe] Der Wert des [ALGORITHM](../../t-sql/statements/create-column-encryption-key-transact-sql.md)-Metadatenattributs für den angegebenen ECEK. Auf NULL endende Zeichenfolge für breite* Zeichen. Dieser Wert dient zur Identifizierung des Verschlüsselungsalgorithmus, der zum Verschlüsseln des gegebenen ECEK verwendet wird.|
 |`ecek`|[Eingabe] Zeiger auf den zu entschlüsselnden ECEK.|
 |`ecekLen`|[Eingabe] Länge des ECEK.|
-|`cekOut`|[Ausgabe] Der Anbieter muss Speicher für den entschlüsselten ECEK zuweisen und seine Adresse in den Zeiger schreiben, auf den cekOut zeigt. Es muss möglich sein, diesen Speicherblock mithilfe der Funktion [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) oder „free“ (Linux/Mac) freizugeben. Wenn aufgrund eines Fehlers oder aus anderen Gründen kein Arbeitsspeicher zugeordnet wurde, muss der Anbieter *cekOut auf einen NULL-Zeiger festlegen.|
+|`cekOut`|[Ausgabe] Der Anbieter muss Speicher für den entschlüsselten ECEK zuweisen und seine Adresse in den Zeiger schreiben, auf den cekOut zeigt. Es muss möglich sein, diesen Speicherblock mithilfe der Funktion [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) oder „free“ (Linux/macOS) freizugeben. Wenn aufgrund eines Fehlers oder aus anderen Gründen kein Arbeitsspeicher zugeordnet wurde, muss der Anbieter *cekOut auf einen NULL-Zeiger festlegen.|
 |`cekLen`|[Ausgabe] Der Anbieter muss in die Adresse, auf die cekLen verweist, die Länge des entschlüsselten ECEK schreiben, den er in **cekOut geschrieben hat.|
 |`Return Value`|Gibt einen Wert ungleich 0 (null) zurück, um Erfolg anzuzeigen, oder 0 (null), um einen Fehler anzuzeigen.|
 
@@ -157,10 +158,10 @@ Platzhaltername für eine anbieterdefinierte CEK-Verschlüsselungsfunktion. Der 
 |`ctx`|[Eingabe] Vorgangskontext.|
 |`onError`|[Eingabe] Fehlermeldefunktion.|
 |`keyPath`|[Eingabe] Der Wert des [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md)-Metadatenattributs für den CMK, auf den der angegebene ECEK verweist. Auf NULL endende Zeichenfolge für breite* Zeichen. Dies dient zur Identifizierung eines von diesem Anbieter behandelten CMK.|
-|`alg`|[Eingabe] Der Wert des [ALGORITHM](../../t-sql/statements/create-column-encryption-key-transact-sql.md)-Metadatenattributs für den angegebenen ECEK. Auf NULL endende Zeichenfolge für breite* Zeichen. Dies dient zur Identifizierung des Verschlüsselungsalgorithmus, der zum Verschlüsseln des gegebenen ECEK verwendet wird.|
+|`alg`|[Eingabe] Der Wert des [ALGORITHM](../../t-sql/statements/create-column-encryption-key-transact-sql.md)-Metadatenattributs für den angegebenen ECEK. Auf NULL endende Zeichenfolge für breite* Zeichen. Dieser Wert dient zur Identifizierung des Verschlüsselungsalgorithmus, der zum Verschlüsseln des gegebenen ECEK verwendet wird.|
 |`cek`|[Eingabe] Zeiger auf den zu verschlüsselnden CEK.|
 |`cekLen`|[Eingabe] Länge des CEK.|
-|`ecekOut`|[Ausgabe] Der Anbieter muss Speicher für den verschlüsselten CEK zuweisen und seine Adresse in den Zeiger schreiben, auf den ecekOut zeigt. Es muss möglich sein, diesen Speicherblock mithilfe der Funktion [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) oder „free“ (Linux/Mac) freizugeben. Wenn aufgrund eines Fehlers oder aus anderen Gründen kein Arbeitsspeicher zugeordnet wurde, muss der Anbieter *ecekOut auf einen NULL-Zeiger festlegen.|
+|`ecekOut`|[Ausgabe] Der Anbieter muss Speicher für den verschlüsselten CEK zuweisen und seine Adresse in den Zeiger schreiben, auf den ecekOut zeigt. Es muss möglich sein, diesen Speicherblock mithilfe der Funktion [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) oder „free“ (Linux/macOS) freizugeben. Wenn aufgrund eines Fehlers oder aus anderen Gründen kein Arbeitsspeicher zugeordnet wurde, muss der Anbieter *ecekOut auf einen NULL-Zeiger festlegen.|
 |`ecekLen`|[Ausgabe] Der Anbieter muss in die Adresse, auf die ecekLen verweist, die Länge des verschlüsselten CEK schreiben, den er in **ecekOut geschrieben hat.|
 |`Return Value`|Gibt einen Wert ungleich 0 (null) zurück, um Erfolg anzuzeigen, oder 0 (null), um einen Fehler anzuzeigen.|
 
@@ -207,12 +208,12 @@ Wenn Sie einen der speziellen vordefinierten Werte mit dem IDS_MSG-Makro verwend
 
 `onError(ctx, IDS_MSG(IDS_S1_001));`
 
-Damit der Fehler vom Treiber erkannt wird, muss die Anbieterfunktion einen Fehler zurückgeben. Wenn dies im Kontext eines ODBC-Vorgangs durchgeführt wird, wird der Zugriff auf die veröffentlichten Fehler mit dem Verbindungs- oder Anweisungshandle über den standardmäßigen ODBC-Diagnosemechanismus (`SQLError`, `SQLGetDiagRec` und `SQLGetDiagField`) möglich.
+Damit der Fehler vom Treiber erkannt wird, muss die Anbieterfunktion einen Fehler zurückgeben. Wenn im Kontext eines ODBC-Vorgangs ein Fehler auftritt, wird der Zugriff auf die veröffentlichten Fehler mit dem Verbindungs- oder Anweisungshandle über den standardmäßigen ODBC-Diagnosemechanismus (`SQLError`, `SQLGetDiagRec` und `SQLGetDiagField`) möglich.
 
 
 ### <a name="context-association"></a>Kontextverknüpfung
 
-Die `CEKEYSTORECONTEXT`-Struktur kann zusätzlich zur Bereitstellung des Kontexts für den Fehlerrückruf auch verwendet werden, um den ODBC-Kontext zu ermitteln, in dem ein Anbietervorgang ausgeführt wird. Dies ermöglicht einem Anbieter, den einzelnen Kontexten Daten zuzuordnen, z. B. um die Konfiguration pro Verbindung zu implementieren. Zu diesem Zweck enthält die Struktur drei nicht transparente Zeiger, die dem Umgebungs-, Verbindungs- und Anweisungskontext entsprechen:
+Die `CEKEYSTORECONTEXT`-Struktur kann zusätzlich zur Bereitstellung des Kontexts für den Fehlerrückruf auch verwendet werden, um den ODBC-Kontext zu ermitteln, in dem ein Anbietervorgang ausgeführt wird. Dieser Kontext ermöglicht einem Anbieter, den einzelnen Kontexten Daten zuzuordnen, z. B. um die Konfiguration pro Verbindung zu implementieren. Zu diesem Zweck enthält die Struktur drei nicht transparente Zeiger, die dem Umgebungs-, Verbindungs- und Anweisungskontext entsprechen:
 
 ```
 typedef struct CEKeystoreContext
@@ -242,7 +243,7 @@ Der folgende Code ist ein Beispiel für eine minimale Implementierung des Keysto
 /* Custom Keystore Provider Example
 
 Windows:   compile with cl MyKSP.c /LD /MD /link /out:MyKSP.dll
-Linux/Mac: compile with gcc -fshort-wchar -fPIC -o MyKSP.so -shared MyKSP.c
+Linux/macOS: compile with gcc -fshort-wchar -fPIC -o MyKSP.so -shared MyKSP.c
 
  */
 
@@ -368,7 +369,7 @@ Der folgende Code ist eine Demoanwendung, die den oben genannten Keystore-Anbiet
  Example application for demonstration of custom keystore provider usage
 
 Windows:   compile with cl /MD kspapp.c /link odbc32.lib
-Linux/Mac: compile with gcc -o kspapp -fshort-wchar kspapp.c -lodbc -ldl
+Linux/macOS: compile with gcc -o kspapp -fshort-wchar kspapp.c -lodbc -ldl
  
  usage: kspapp connstr
 

@@ -1,5 +1,6 @@
 ---
-title: 'Schritt 3: Proof of Concept für Verbindungen mit SQL Server mithilfe von pyodbc | Microsoft-Dokumentation'
+title: 'Schritt 3: Herstellen der Verbindung mit SQL mithilfe von pyodbc'
+description: Schritt 3 ist ein Proof of Concept, der zeigt, wie Sie mithilfe von Python and pyODBC eine Verbindung mit SQL Server herstellen können. Die grundlegenden Beispiele veranschaulichen das Auswählen und Einfügen von Daten.
 ms.custom: ''
 ms.date: 03/01/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: arob98
 ms.author: angrobe
-ms.openlocfilehash: c5d8adfa33541402fb50017c3790d38f0396d73d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 971f89f9748ab8f31c234f872e817b0b474dcbe0
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78256900"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528474"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>Schritt 3: Proof of Concept für Verbindungen mit SQL mithilfe von pyodbc
 

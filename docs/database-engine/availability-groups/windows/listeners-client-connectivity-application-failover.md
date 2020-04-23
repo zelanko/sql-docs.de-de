@@ -1,6 +1,6 @@
 ---
 title: Herstellen einer Verbindung mit einem Verfügbarkeitsgruppenlistener
-description: Dieser Artikel enthält Informationen zum Herstellen einer Verbindung mit einem Always On-Verfügbarkeitsgruppenlistener sowie dem primären Replikat oder einem schreibgeschützten sekundären Replikat. Außerdem wird die Verwendung von SSL und Kerberos erläutert.
+description: Dieser Artikel enthält Informationen zum Herstellen einer Verbindung mit einem Always On-Verfügbarkeitsgruppenlistener sowie dem primären Replikat oder einem schreibgeschützten sekundären Replikat. Außerdem wird die Verwendung von TLS/SSL und Kerberos erläutert.
 ms.custom: seodec18
 ms.date: 02/27/2020
 ms.prod: sql
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0c8b30de41b8a6a74661e3b4e55e7f2216c29c98
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 4505fed51589e2666dd2aa28e8ee42c4aac27f94
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79433737"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528494"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Herstellen einer Verbindung mit einem Always On-Verfügbarkeitsgruppenlistener 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -131,18 +131,54 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;Integrated Security=SSPI; Mul
   
  Die **MultiSubnetFailover** -Verbindungsoption sollte auf **True** festgelegt werden, auch wenn die Verfügbarkeitsgruppe nur ein einzelnes Subnetz umfasst.  Dies ermöglicht es Ihnen, neue Clients vorzukonfigurieren, um künftig weitere Subnetze zu unterstützen, ohne dass die Clientverbindungszeichenfolgen geändert werden müssen. Darüber hinaus wird die Failoverleistung für Failover in einem Subnetz optimiert.  Die **MultiSubnetFailover** -Verbindungsoption ist zwar nicht erforderlich, bietet jedoch den Vorteil eines schnelleren Subnetzfailovers.  Das liegt daran, dass der Clienttreiber versucht, parallel ein TCP-Socket für alle der Verfügbarkeitsgruppe zugeordneten IP-Adressen zu öffnen.  Der Clienttreiber wartet, bis die erste IP erfolgreich antwortet, und verwendet diese dann für die Verbindung.  
   
-##  <a name="listeners--ssl-certificates"></a><a name="SSLcertificates"></a> Listener und SSL-Zertifikate  
+##  <a name="listeners--tlsssl-certificates"></a><a name="SSLcertificates"></a> Listener und TLS/SSL-Zertifikate  
 
- Wenn beim Herstellen einer Verbindung mit einem Verfügbarkeitsgruppenlistener die beteiligten Instanzen von SQL Server SSL-Zertifikate zusammen mit Sitzungsverschlüsselung verwenden, muss der Clienttreiber den alternativen Antragstellernamen im SSL-Zertifikat unterstützen, um die Verschlüsselung zu erzwingen.  SQL Server-Treiberunterstützung für den alternativen Antragstellernamen des Zertifikats ist für ADO.NET (SqlClient), Microsoft JDBC und SQL Native Client (SNAC) geplant.  
+Wenn beim Herstellen einer Verbindung mit einem Verfügbarkeitsgruppenlistener die beteiligten Instanzen von SQL Server TLS/SSL-Zertifikate zusammen mit Sitzungsverschlüsselung verwenden, muss der Clienttreiber den alternativen Antragstellernamen im TLS/SSL-Zertifikat unterstützen, um die Verschlüsselung zu erzwingen.  SQL Server-Treiberunterstützung für den alternativen Antragstellernamen des Zertifikats ist für ADO.NET (SqlClient), Microsoft JDBC und SQL Native Client (SNAC) geplant.  
   
- Ein X.509-Zertifikat muss für alle beteiligten Serverknoten im Failovercluster mit einer Liste aller im alternativen Antragstellernamen des Zertifikats festgelegten Verfügbarkeitsgruppenlistenern konfiguriert werden.  
-  
- Wenn der WSFC z. B. drei Verfügbarkeitsgruppenlistener mit den Namen `AG1_listener.Adventure-Works.com`, `AG2_listener.Adventure-Works.com`und `AG3_listener.Adventure-Works.com`besitzt, sollte der alternative Antragstellername für das Zertifikat folgendermaßen festgelegt werden:  
-  
+Ein X.509-Zertifikat muss für alle beteiligten Serverknoten im Failovercluster mit einer Liste aller im alternativen Antragstellernamen des Zertifikats festgelegten Verfügbarkeitsgruppenlistenern konfiguriert werden. 
+
+Die Zertifikatwerte haben folgendes Format: 
+
 ```  
-CN = ServerFQDN  
-SAN = ServerFQDN,AG1_listener.Adventure-Works.com, AG2_listener.Adventure-Works.com, AG3_listener.Adventure-Works.com  
-```  
+CN = Server.FQDN  
+SAN = Server.FQDN,Listener1.FQDN,Listener2.FQDN
+```
+
+Sie haben z. B. folgende Werte: 
+
+```
+Servername: Win2019   
+Instance: SQL2019   
+AG: AG2019   
+Listener: Listener2019   
+Domain: contoso.com  (which is also the FQDN)
+```
+
+Bei einem WSFC mit einer einzelnen Verfügbarkeitsgruppe sollte das Zertifikat den voll qualifizierten Domänennamen (Fully Qualified Domain Name, FQDN) des Servers und den FQDN des Listeners aufweisen: 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019.contoso.com, Listener2019.contoso.com 
+```
+
+Mit dieser Konfiguration werden Ihre Verbindungen verschlüsselt, wenn eine Verbindung mit der Instanz (`WIN2019\SQL2019`) oder dem Listener (`Listener2019`) hergestellt wird. 
+
+Abhängig von der Netzwerkkonfiguration gibt es eine kleine Teilmenge von Kunden, die dem SAN ggf. auch das NetBIOS hinzufügen müssen. In diesem Fall sollten die Zertifikatwerte wie folgt lauten: 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019,Win2019.contoso.com,Listener2019,Listener2019.contoso.com
+```
+
+Der WSFC umfasst z. B. drei Verfügbarkeitsgruppenlistener: Listener1, Listener2, Listener3
+
+Dann sollten die Zertifikatwerte wie folgt lauten: 
+
+```
+CN: Win2019.contoso.com
+SAN: Win2019.contoso.com,Listener1.contoso.com,Listener2.contoso.com,Listener3.contoso.com
+```
+  
   
 ##  <a name="listeners-and-kerberos-spns"></a><a name="SPNs"></a> Listener und Kerberos (SPNs) 
 
@@ -162,4 +198,4 @@ setspn -A MSSQLSvc/AG1listener.Adventure-Works.com:1433 corp/svclogin2
 
 Nachdem Sie erfolgreich eine Verbindung mit dem Listener hergestellt haben, sollten Sie ein Offloading von [schreibgeschützten Workloads](overview-of-always-on-availability-groups-sql-server.md) und [Sicherungen](configure-backup-on-availability-replicas-sql-server.md) in Betracht ziehen, um die Leistung zu verbessern. Sie können auch verschiedene [Überwachungsstrategien für Verfügbarkeitsgruppen](monitoring-of-availability-groups-sql-server.md) überprüfen, mit denen Sie die Integrität Ihrer Verfügbarkeitsgruppe gewährleisten können. 
 
-Weitere Informationen zu Verfügbarkeitsgruppen finden Sie unter [Übersicht über Always On-Verfügbarkeitsgruppen (SQL Server)](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md). 
+Weitere Informationen finden Sie im Abschnitt „Verfügbarkeitsmodi“ des Themas [Übersicht über Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md). 

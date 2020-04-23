@@ -9,19 +9,19 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 766adecbc91f88ed0796e4214b7e4074fc564f01
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 6bc7dfadecfe24d5bd91b7dd12eaa3b68ef01753
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117083"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487689"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>Native Bewertung mithilfe der PREDICT-T-SQL-Funktion
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Bei der nativen Bewertung werden die [PREDICT-T-SQL-Funktion](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) und die nativen C++-Erweiterungsfunktionen in SQL Server 2017 verwendet, um Vorhersagewerte oder *Bewertungen* für neue Dateneingaben in nahezu Echtzeit zu generieren. Dieses Verfahren bietet die schnellstmögliche Verarbeitungsgeschwindigkeit von Vorhersage- und Prognoseworkloads, ist aber mit Plattform- und Bibliotheksanforderungen verbunden: In C++ sind nur Funktionen von RevoScaleR und revoscalepy implementiert.
 
-Für die native Bewertung ist ein bereits trainiertes Modell erforderlich. In SQL Server 2017 Windows oder Linux bzw. in Azure SQL-Datenbank können Sie die PREDICT-Funktion in Transact-SQL aufrufen, um eine native Bewertung für neue Daten zu erstellen, die Sie als Eingabeparameter angeben. Die PREDICT-Funktion gibt Bewertungen zu den von Ihnen bereitgestellten Dateneingaben zurück.
+Für die native Bewertung ist ein bereits trainiertes Modell erforderlich. In SQL Server 2017 für Windows oder Linux können Sie die PREDICT-Funktion in Transact-SQL aufrufen, um eine native Bewertung für neue Daten aufzurufen, die Sie als Eingabeparameter angeben. Die PREDICT-Funktion gibt Bewertungen zu den von Ihnen bereitgestellten Dateneingaben zurück.
 
 ## <a name="how-native-scoring-works"></a>Funktionsweise der nativen Bewertung
 
@@ -36,7 +36,7 @@ Die Funktion gibt Vorhersagen für die Eingabedaten zurück, zusammen mit allen 
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-PREDICT ist für alle Editionen der SQL Server 2017-Datenbank-Engine verfügbar und standardmäßig aktiviert, einschließlich SQL Server Machine Learning Services unter Windows, SQL Server 2017 (Windows), SQL Server 2017 (Linux) oder Azure SQL-Datenbank. Sie müssen R bzw. Python nicht installieren oder zusätzliche Funktionen aktivieren.
+PREDICT ist für alle Editionen der Datenbank-Engine von SQL Server 2017 und höher – einschließlich SQL Server Machine Learning Services unter Windows, SQL Server 2017 und höher unter Windows und Linux – verfügbar und standardmäßig aktiviert. Sie müssen R bzw. Python nicht installieren oder zusätzliche Funktionen aktivieren.
 
 + Das Modell muss vorab mit einem der unterstützten **rx**-Algorithmen trainiert werden, die unten aufgeführt sind.
 

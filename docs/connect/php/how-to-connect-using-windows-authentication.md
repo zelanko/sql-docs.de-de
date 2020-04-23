@@ -1,5 +1,6 @@
 ---
-title: 'Gewusst wie: Herstellen einer Verbindung mithilfe der Windows-Authentifizierung | Microsoft-Dokumentation'
+title: 'Gewusst wie: Herstellen einer Verbindung mithilfe der Windows-Authentifizierung'
+description: Erfahren Sie, wie Sie mithilfe der integrierten Windows-Authentifizierung über die Treiber für PHP für SQL Server eine Verbindung herstellen können.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f403a4e0-b0a8-4939-9dc1-e1209626367e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 066c58d9ee72f1160b84d4f4a3de9f7156a47d6e
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4915343cf9ed7ebf730ac11360f10271c59e92c3
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916503"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634827"
 ---
 # <a name="how-to-connect-using-windows-authentication"></a>Gewusst wie: Herstellen einer Verbindung mithilfe der Windows-Authentifizierung
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -31,7 +32,7 @@ Bitte beachten Sie die folgenden Punkte, wenn Sie die Windows-Authentifizierung 
 -   Wenn sich SQL Server und der Webserver auf unterschiedlichen Computern befinden, müssen für SQL Server Remoteverbindungen aktiviert sein.  
   
 > [!NOTE]  
-> Sie können Verbindungsattribute wie z. B. *Database* und *ConnectionPooling* festlegen, wenn Sie eine Verbindung herstellen. Eine vollständige Liste der unterstützten Verbindungsattribute finden Sie unter [Connection Options](../../connect/php/connection-options.md).  
+> Sie können Verbindungsattribute wie z. B. *Database* und *ConnectionPooling* festlegen, wenn Sie eine Verbindung herstellen. Eine vollständige Liste der unterstützten Verbindungsattribute finden Sie unter [Connection Options](connection-options.md).  
   
 Aus folgenden Gründen sollte, wann immer möglich, die Windows-Authentifizierung für die Verbindung zu SQL Server verwendet werden:  
   
@@ -39,7 +40,7 @@ Aus folgenden Gründen sollte, wann immer möglich, die Windows-Authentifizierun
   
 -   Die Benutzer werden über ein zentrales Kontenmanagement verwaltet. Sicherheitsrichtlinien wie z. B. Gültigkeitszeiträume für Passwörter, Vorgaben zur Mindestlänge von Passwörtern und die Sperrung von Konten nach mehreren ungültigen Anmeldeanfragen werden umgesetzt.  
   
-Wenn die Windows-Authentifizierung für Sie nicht praktikabel ist, lesen Sie den Artikel [Vorgehensweise: Herstellen einer Verbindung mithilfe der SQL Server-Authentifizierung](../../connect/php/how-to-connect-using-sql-server-authentication.md).  
+Wenn die Windows-Authentifizierung für Sie nicht praktikabel ist, lesen Sie den Artikel [Vorgehensweise: Herstellen einer Verbindung mithilfe der SQL Server-Authentifizierung](how-to-connect-using-sql-server-authentication.md).  
   
 ## <a name="example"></a>Beispiel  
 Im folgenden Beispiel wird bei Verwendung des SQLSRV-Treibers von [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]die Windows-Authentifizierung verwendet, um eine Verbindung mit einer lokalen SQL Server-Instanz herzustellen. Nach dem Aufbau der Verbindung wird eine Anfrage an den Benutzer gestellt, den Benutzer anzumelden, der auf die Datenbank zugreifen möchte.  
@@ -105,11 +106,11 @@ while ( $row = $stmt->fetch( PDO::FETCH_ASSOC ) ){
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Vorgehensweise: Herstellen einer Verbindung mithilfe der SQL Server-Authentifizierung](../../connect/php/how-to-connect-using-sql-server-authentication.md)
+[Vorgehensweise: Herstellen einer Verbindung mithilfe der SQL Server-Authentifizierung](how-to-connect-using-sql-server-authentication.md)
 
-[Programmierhandbuch für die Microsoft-Treiber für PHP für SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
+[Programmierhandbuch für die Microsoft-Treiber für PHP für SQL Server](programming-guide-for-php-sql-driver.md)
 
-[Informationen zu den Codebeispielen in der Dokumentation](../../connect/php/about-code-examples-in-the-documentation.md)
+[Informationen zu den Codebeispielen in der Dokumentation](about-code-examples-in-the-documentation.md)
 
 [Vorgehensweise: Erstellen eines SQL Server-Anmeldenamens](../../relational-databases/security/authentication-access/create-a-login.md)
 

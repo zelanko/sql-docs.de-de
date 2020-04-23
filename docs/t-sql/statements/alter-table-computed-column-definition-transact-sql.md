@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 746eabda-3b4f-4940-b0b5-1c379f5cf7a5
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 7eaa4c35079d8eec49d7197778a01b7bac6cf9c1
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0b06287c5a21b2b333335cc199a9447200e04110
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982047"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631646"
 ---
 # <a name="alter-table-computed_column_definition-transact-sql"></a>ALTER TABLE computed_column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "73982047"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql
 column_name AS computed_column_expression  
 [ PERSISTED [ NOT NULL ] ]  
 [   
@@ -52,10 +52,10 @@ column_name AS computed_column_expression
   
 ## <a name="arguments"></a>Argumente  
 *column_name*  
- Der Name der Spalte, die geändert, hinzugefügt oder gelöscht werden soll. *column_name*kann 1 bis 128 Zeichen umfassen. Bei neuen Spalten, die mit einem *timestamp*-Datentyp erstellt wurden, ist **column_name** nicht erforderlich. Wenn *column_name* nicht für eine Spalte vom Datentyp **timestamp** angegeben ist, wird der Name **timestamp** verwendet.  
+ Der Name der Spalte, die geändert, hinzugefügt oder gelöscht werden soll. *column_name*kann 1 bis 128 Zeichen umfassen. Bei neuen Spalten, die mit einem **timestamp**-Datentyp erstellt wurden, ist *column_name* nicht erforderlich. Wenn *column_name* nicht für eine Spalte vom Datentyp **timestamp** angegeben ist, wird der Name **timestamp** verwendet.  
   
 *computed_column_expression*  
- Ein Ausdruck, der den Wert einer berechneten Spalte definiert. Eine berechnete Spalte ist eine virtuelle Spalte, die nicht physisch in der Tabelle gespeichert ist, sondern anhand anderer Spalten in derselben Tabelle aus einem Ausdruck berechnet wird. Eine berechnete Spalte kann z. B. folgende Definition haben: cost AS price * qty. Der Ausdruck kann der Name einer nicht berechneten Spalte, eine Konstante, eine Funktion, eine Variable oder eine beliebige durch einen oder mehrere Operatoren verbundene Kombination der genannten Möglichkeiten sein. Der Ausdruck kann weder eine Unterabfrage sein noch einen Aliasdatentyp einschließen.  
+ Ein Ausdruck, der den Wert einer berechneten Spalte definiert. Eine berechnete Spalte ist eine virtuelle Spalte, die nicht physisch in der Tabelle gespeichert ist, sondern anhand anderer Spalten in derselben Tabelle aus einem Ausdruck berechnet wird. Ein Ausdruck muss einen Wert ergeben. Eine berechnete Spalte könnte z.B. die folgende Definition besitzen: cost AS price * qty. Ein weiteres Beispiel für bitweise Operatoren: is_finalised AS is_checked | is_approved. Der Ausdruck kann der Name einer nicht berechneten Spalte, eine Konstante, eine Funktion, eine Variablen oder eine beliebige durch einen oder mehrere Operatoren verbundene Kombination der genannten Möglichkeiten sein. Der Ausdruck kann weder eine Suchbedingung oder Unterabfrage sein noch einen Aliasdatentyp einschließen.  
   
  Berechnete Spalten können in Auswahllisten, WHERE-Klauseln, ORDER BY-Klauseln oder an anderen Stellen verwendet werden, an denen reguläre Ausdrücke verwendet werden. Dabei gelten folgende Ausnahmen:  
   
@@ -127,7 +127,7 @@ ON UPDATE { **NO ACTION** }
  Gibt an, welche Aktion für Zeilen in der Tabelle ausgeführt werden soll, wenn diese Zeilen eine referenzielle Beziehung aufweisen und die Zeile, auf die verwiesen wird, in der übergeordneten Tabelle aktualisiert wird. Wenn jedoch NO ACTION angegeben ist, löst das [!INCLUDE[ssDE](../../includes/ssde-md.md)] einen Fehler aus und führt für die Aktion zum Aktualisieren der Vendor-Zeile ein Rollback aus, falls sich mindestens eine Zeile in der ProductVendor-Tabelle befindet, die auf diese Zeile verweist.  
   
 NOT FOR REPLICATION  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Kann für FOREIGN KEY- und CHECK-Einschränkungen festgelegt werden. Wenn diese Klausel für eine Einschränkung angegeben wird, wird die Einschränkung nicht erzwungen, wenn Replikations-Agents Einfüge-, Update- oder Löschvorgänge ausführen.  
   
@@ -138,7 +138,7 @@ CHECK
  Ein logischer Ausdruck, der TRUE oder FALSE zurückgibt. Der Ausdruck kann keinen Verweis auf einen Aliasdatentyp enthalten.  
   
 ON { *partition_scheme_name*(*partition_column_name*) | *filegroup*| "default"}  
- **Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
+ **Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.  
   
  Gibt den Speicherort des Indexes an, der für die Einschränkung erstellt wurde. Wenn *partition_scheme_name* angegeben wird, wird der Index partitioniert, und die Partitionen werden den Dateigruppen zugeordnet, die durch *partition_scheme_name* angegeben sind. Wenn *filegroup* angegeben ist, wird der Index in der genannten Dateigruppe erstellt. Wenn "default" angegeben ist, oder wenn ON für alle festgelegt ist, wird der Index in derselben Dateigruppe erstellt wie die Tabelle. Wenn ON beim Hinzufügen eines gruppierten Index für eine PRIMARY KEY- oder UNIQUE-Einschränkung angegeben ist, wird die gesamte Tabelle beim Erstellen des gruppierten Index in die angegebene Dateigruppe verschoben.  
   

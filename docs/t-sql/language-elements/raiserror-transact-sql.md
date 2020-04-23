@@ -29,15 +29,18 @@ ms.assetid: 483588bd-021b-4eae-b4ee-216268003e79
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 845a9203bf680921b3ac85283be610a2fa678c0e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 450914318f3bc7a17e16599fd715992356ed6e91
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72252047"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630870"
 ---
 # <a name="raiserror-transact-sql"></a>RAISERROR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+> [!NOTE]
+> Die **RAISERROR**-Anweisung berücksichtigt **SET XACT_ABORT** nicht. In neuen Anwendungen sollte **THROW** statt **RAISERROR** verwendet werden.
 
   Generiert eine Fehlermeldung und initiiert die Verarbeitung von Fehlern für die Sitzung. RAISERROR kann entweder auf eine benutzerdefinierte, in der Katalogsicht „sys.messages“ gespeicherte Meldung verweisen oder eine Meldung dynamisch erstellen. Die Meldung wird als Serverfehlermeldung an die aufrufende Anwendung oder an einen zugeordneten CATCH-Block eines TRY...CATCH-Konstrukts zurückgegeben. In neuen Anwendungen sollte stattdessen [THROW](../../t-sql/language-elements/throw-transact-sql.md) verwendet werden.  
   
@@ -45,7 +48,7 @@ ms.locfileid: "72252047"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 RAISERROR ( { msg_id | msg_str | @local_variable }  
@@ -54,7 +57,7 @@ RAISERROR ( { msg_id | msg_str | @local_variable }
     [ WITH option [ ,...n ] ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 RAISERROR ( { msg_str | @local_variable }  
@@ -157,7 +160,7 @@ RAISERROR (15600,-1,-1, 'mysp_CreateCustomer');
  *Option*  
  Ist eine benutzerdefinierte Option für den Fehler und kann einer der Werte in der folgenden Tabelle sein.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |PROTOKOLL|Protokolliert den Fehler im Fehler- und im Anwendungsprotokoll für die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz. Im Fehlerprotokoll protokollierte Fehler sind derzeit auf maximal 440 Bytes beschränkt. Nur Mitglieder der festen Serverrolle „sysadmin“ oder Benutzer mit ALTER TRACE-Berechtigungen können WITH LOG angeben.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  
 |NOWAIT|Sendet Meldungen sofort an den Client.<br /><br /> [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)]|  

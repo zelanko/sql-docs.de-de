@@ -1,5 +1,6 @@
 ---
-title: Verwenden von Standarddatentypen | Microsoft-Dokumentation
+title: Verwenden von JDBC-Standarddatentypen
+description: Der Microsoft JDBC-Treiber für SQL Server verwendet grundlegende JDBC-Datentypen, um SQL Server-Datentypen in ein Format zu konvertieren, das von Java interpretiert werden kann.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f4608bd48607244c50e7d6fd03b74919448fa074
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 1ab207deaa0632e2e4026aa4950c720ba6b22d75
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924066"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81625562"
 ---
 # <a name="using-basic-data-types"></a>Verwenden von Standarddatentypen
 
@@ -68,37 +69,37 @@ Die folgende Tabelle enthält eine Liste der Standardzuordnungen zwischen den [!
   
 (1) Zur Verwendung von java.sql.Time mit dem Zeittyp [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] müssen Sie die Verbindungseigenschaft **sendTimeAsDatetime** auf „false“ festlegen.  
   
-(2) Sie können mit der **DateTimeOffset-Klasse** programmgesteuert auf die Werte von [datetimeoffset](../../connect/jdbc/reference/datetimeoffset-class.md) zugreifen.  
+(2) Sie können mit der [DateTimeOffset-Klasse](reference/datetimeoffset-class.md) programmgesteuert auf die Werte von **datetimeoffset** zugreifen.  
   
-Die folgenden Abschnitte enthalten Beispiele für die Verwendung des JDBC-Treibers und der Standarddatentypen. Ein ausführlicheres Beispiel für die Verwendung der Standarddatentypen in einer Java-Anwendung finden Sie unter [Standarddatentypen – Beispiel](../../connect/jdbc/basic-data-types-sample.md).  
+Die folgenden Abschnitte enthalten Beispiele für die Verwendung des JDBC-Treibers und der Standarddatentypen. Ein ausführlicheres Beispiel für die Verwendung der Standarddatentypen in einer Java-Anwendung finden Sie unter [Standarddatentypen – Beispiel](basic-data-types-sample.md).  
   
 ## <a name="retrieving-data-as-a-string"></a>Abrufen von Daten als Zeichenfolge
 
-Wenn Sie Daten aus einer Datenquelle abrufen müssen, die einem der JDBC-Standarddatentypen zugeordnet ist und als Zeichenfolge angezeigt werden soll, oder wenn stark typisierte Daten nicht erforderlich sind, können Sie die [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md)-Methode der [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md)-Klasse verwenden, wie in folgendem Beispiel gezeigt:  
+Wenn Sie Daten aus einer Datenquelle abrufen müssen, die einem der JDBC-Standarddatentypen zugeordnet ist und als Zeichenfolge angezeigt werden soll, oder wenn stark typisierte Daten nicht erforderlich sind, können Sie die [getString](reference/getstring-method-sqlserverresultset.md)-Methode der [SQLServerResultSet](reference/sqlserverresultset-class.md)-Klasse verwenden, wie in folgendem Beispiel gezeigt:  
   
-[!code[JDBC#UsingBasicDataTypes1](../../connect/jdbc/codesnippet/Java/using-basic-data-types_1.java)]  
+[!code[JDBC#UsingBasicDataTypes1](codesnippet/Java/using-basic-data-types_1.java)]  
   
 ## <a name="retrieving-data-by-data-type"></a>Abrufen von Daten nach Datentyp
 
 Wenn Sie Daten aus einer Datenquelle abrufen müssen und den Typ der abgerufenen Daten kennen, verwenden Sie eine der get\<Type>-Methoden der SQLServerResultSet-Klasse, die auch als *getter*-Methoden bezeichnet werden. Sie können bei den get\<Type>-Methoden einen Spaltennamen oder einen Spaltenindex verwenden, wie im Folgenden dargestellt:  
   
-[!code[JDBC#UsingBasicDataTypes2](../../connect/jdbc/codesnippet/Java/using-basic-data-types_2.java)]  
+[!code[JDBC#UsingBasicDataTypes2](codesnippet/Java/using-basic-data-types_2.java)]  
   
 > [!NOTE]  
 > Die Methoden getUnicodeStream und getBigDecimal mit Skalierung sind veraltet und werden vom JDBC-Treiber nicht unterstützt.
 
 ## <a name="updating-data-by-data-type"></a>Aktualisieren von Daten nach Datentyp
 
-Wenn Sie den Wert eines Felds in einer Datenquelle aktualisieren müssen, verwenden Sie eine der update\<Typ>-Methoden der SQLServerResultSet-Klasse. Im folgenden Beispiel wird die [updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md)-Methode zusammen mit der [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md)-Methode verwendet, um die Daten in der Datenquelle zu aktualisieren:  
+Wenn Sie den Wert eines Felds in einer Datenquelle aktualisieren müssen, verwenden Sie eine der update\<Typ>-Methoden der SQLServerResultSet-Klasse. Im folgenden Beispiel wird die [updateInt](reference/updateint-method-sqlserverresultset.md)-Methode zusammen mit der [updateRow](reference/updaterow-method-sqlserverresultset.md)-Methode verwendet, um die Daten in der Datenquelle zu aktualisieren:  
   
-[!code[JDBC#UsingBasicDataTypes3](../../connect/jdbc/codesnippet/Java/using-basic-data-types_3.java)]  
+[!code[JDBC#UsingBasicDataTypes3](codesnippet/Java/using-basic-data-types_3.java)]  
   
 > [!NOTE]  
 > Der JDBC-Treiber kann keine SQL Server-Spalte mit einem Spaltennamen aktualisieren, dessen Länge mehr als 127 Zeichen beträgt. Wenn ein Update einer Spalte, deren Name mehr als 127 Zeichen umfasst, ausgeführt werden soll, wird eine Ausnahme ausgegeben.  
   
 ## <a name="updating-data-by-parameterized-query"></a>Aktualisieren von Daten durch parametrisierte Abfragen
 
-Wenn Sie Daten in einer Datenquelle durch eine parametrisierte Abfrage aktualisieren müssen, können Sie den Datentyp der Parameter mit einer der set\<Type>-Methoden der [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)-Klasse festlegen, die auch als *setter-Methoden* bezeichnet werden. Im folgenden Beispiel wird die parametrisierte Abfrage mit der [prepareStatement](../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md)-Methode vorkompiliert, dann wird die [setString](../../connect/jdbc/reference/setstring-method-sqlserverpreparedstatement.md)-Methode verwendet, um vor dem Aufrufen der [executeUpdate](../../connect/jdbc/reference/executeupdate-method.md)-Methode den string-Wert des Parameters festzulegen.  
+Wenn Sie Daten in einer Datenquelle durch eine parametrisierte Abfrage aktualisieren müssen, können Sie den Datentyp der Parameter mit einer der set\<Type>-Methoden der [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md)-Klasse festlegen, die auch als *setter-Methoden* bezeichnet werden. Im folgenden Beispiel wird die parametrisierte Abfrage mit der [prepareStatement](reference/preparestatement-method-sqlserverconnection.md)-Methode vorkompiliert, dann wird die [setString](reference/setstring-method-sqlserverpreparedstatement.md)-Methode verwendet, um vor dem Aufrufen der [executeUpdate](reference/executeupdate-method.md)-Methode den string-Wert des Parameters festzulegen.  
   
 [!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
   

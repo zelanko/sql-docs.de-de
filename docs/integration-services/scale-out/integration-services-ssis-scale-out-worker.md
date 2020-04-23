@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 1f2be60ff216b65afbb50c0e97da4edfb4239aec
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6fd7b8d17790fcc1747116b9454a3aaf38136935
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68082072"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488256"
 ---
 # <a name="integration-services-ssis-scale-out-worker"></a>Integration Services (SSIS) Scale Out-Worker
 
@@ -33,7 +33,7 @@ Sie können den Scale Out-Workerdienst mithilfe der `\<drive\>:\Program Files\Mi
 |DisplayName|Der Anzeigename des Scale Out-Workers. **Wird NICHT in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 verwendet.**|Computername|
 |BESCHREIBUNG|Die Beschreibung des Scale Out-Workers. **Wird NICHT in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 2017 verwendet.**|Leer|
 |MasterEndpoint|Der Endpunkt zum Herstellen einer Verbindung mit dem Scale Out-Master|Der Endpunkt, der während der Installation des Scale Out-Workers festgelegt wurde|
-|MasterHttpsCertThumbprint|Der Fingerabdruck des Client-SSL-Zertifikats, mit dem der Scale Out-Master authentifiziert wird|Der Fingerabdruck des Clientzertifikats, das bei der Installation des Scale Out-Workers angegeben wurde|
+|MasterHttpsCertThumbprint|Der Fingerabdruck des Client-TLS/SSL-Zertifikats, mit dem der Scale Out-Master authentifiziert wird|Der Fingerabdruck des Clientzertifikats, das bei der Installation des Scale Out-Workers angegeben wurde|
 |WorkerHttpsCertThumbprint|Der Fingerabdruck des Zertifikats, das für den Scale Out-Master verwendet wird, um den Scale Out-Worker zu authentifizieren|Der Fingerabdruck eines Zertifikats, das bei der Installation des Scale Out-Workers automatisch erstellt und installiert wurde|
 |StoreLocation|Der Speicherort des Workerzertifikats|LocalMachine|
 |StoreName|Der Name des Speichers, in dem sich das Workerzertifikat befindet|My|

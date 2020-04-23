@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 894ba4f1b73cb482ab521e859d0472f7039bfabf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 910918a3dd0162bc29eef882cf12b529f98fa05f
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77077058"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487169"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Konfigurieren einer URL (SSRS-Konfigurations-Manager)
   Bevor Sie das [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] oder den Berichtsserver-Webdienst verwenden können, müssen Sie mindestens eine URL für jede Anwendung konfigurieren. Die Konfiguration der URLs ist obligatorisch, wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im Modus zur ausschließlichen Installation von Dateien installiert haben (also durch Auswahl der Option **Server installieren, jedoch nicht konfigurieren** auf der Seite mit den Berichtsserver-Installationsoptionen im Installations-Assistenten). Wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in der Standardkonfiguration installiert haben, sind die URLs bereits für jede Anwendung konfiguriert.  
@@ -84,20 +84,20 @@ ms.locfileid: "77077058"
   
 6.  Wenn nicht bereits geschehen, überprüfen Sie, dass IIS (sofern installiert) kein virtuelles Verzeichnis besitzt, das den Namen trägt, den Sie verwenden möchten.  
   
-7.  Wenn Sie ein SSL-Zertifikat installiert haben, können Sie es nun auswählen, um die URL an das SSL-Zertifikat zu binden, das auf Ihrem Computer installiert ist.  
+7.  Wenn Sie ein TLS/SSL-Zertifikat installiert haben, können Sie es nun auswählen, um die URL an das TLS/SSL-Zertifikat zu binden, das auf Ihrem Computer installiert ist.  
   
-8.  Optional können Sie bei Auswahl eines SSL-Zertifikats einen benutzerdefinierten Port angeben. Standardmäßig wird Port Nummer&nbsp;443 verwendet, aber Sie können jeden Port verwenden, der verfügbar ist.  
+8.  Optional können Sie bei der Auswahl eines TLS/SSL-Zertifikats einen benutzerdefinierten Port angeben. Standardmäßig wird Port Nummer&nbsp;443 verwendet, aber Sie können jeden Port verwenden, der verfügbar ist.  
   
 9. Klicken Sie auf **Anwenden** , um die URL zu erstellen.  
   
 10. Testen Sie die URL, indem Sie auf den Link im Abschnitt **URLs** der Seite klicken. Beachten Sie, dass die Berichtsserver-Datenbank erstellt und konfiguriert werden muss, bevor Sie die URL testen können. Anweisungen finden Sie unter [Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
 
 > [!NOTE]
->  Wenn Sie über vorhandene SSL-Bindungen und URL-Reservierungen verfügen und die SSL-Bindung ändern möchten, um z. B. ein anderes Zertifikat bzw. einen anderen Hostheader zu verwenden, wird empfohlen, die folgenden Schritte in der angegebenen Reihenfolge auszuführen:  
+>  Wenn Sie über vorhandene TLS-Bindungen und URL-Reservierungen verfügen und die TLS-Bindung ändern möchten, um z. B. ein anderes Zertifikat oder einen anderen Hostheader zu verwenden, wird empfohlen, die folgenden Schritte in der angegebenen Reihenfolge auszuführen:  
 > 
 >  1.  Entfernen Sie zuerst alle URL-Reservierungen.  
-> 2.  Entfernen Sie anschließend alle SSL Bindungen.  
-> 3.  Erstellen Sie die URLs und SSL-Bindungen anschließend neu.  
+> 2.  Entfernen Sie anschließend alle TLS Bindungen.  
+> 3.  Erstellen Sie die URLs und TLS-Bindungen anschließend neu.  
 > 
 >  Die vorangehenden Schritte können mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager ausgeführt werden.  
 > 
@@ -113,9 +113,9 @@ ms.locfileid: "77077058"
   
 3.  Geben Sie das virtuelle Verzeichnis an. Das [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] lauscht auf derselben IP-Adresse und demselben Port wie der Berichtsserver-Webdienst. Wenn Sie das [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] so konfiguriert haben, dass es auf einen anderen Berichtsserver-Webdienst verweist, müssen Sie die [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] -URL-Einstellungen in der Datei RSReportServer.config überprüfen.  
   
-4.  Wenn Sie ein SSL-Zertifikat installiert haben, können Sie es auswählen, um festzulegen, dass alle Anforderungen an das [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] über HTTPS geleitet werden.  
+4.  Wenn Sie ein TLS/SSL-Zertifikat installiert haben, können Sie es auswählen, um festzulegen, dass alle Anforderungen an das [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] über HTTPS geleitet werden.  
   
-     Optional können Sie bei Auswahl eines SSL-Zertifikats einen benutzerdefinierten Port angeben. Standardmäßig wird Port Nummer&nbsp;443 verwendet, aber Sie können jeden Port verwenden, der verfügbar ist.  
+     Optional können Sie bei der Auswahl eines TLS/SSL-Zertifikats einen benutzerdefinierten Port angeben. Standardmäßig wird Port Nummer&nbsp;443 verwendet, aber Sie können jeden Port verwenden, der verfügbar ist.  
   
 5.  Klicken Sie auf **Anwenden** , um die URL zu erstellen.  
   
@@ -136,14 +136,14 @@ ms.locfileid: "77077058"
  Ein Hostheader ist ein eindeutiger Name, der es mehreren Websites erlaubt, dieselbe IP-Adresse und denselben Port zu verwenden. Hostheadernamen sind leichter zu behalten und einzugeben als IP-Adressen und Portnummern. Ein Beispiel für einen Hostheadernamen könnte www.adventure-works.com sein.  
   
  **SSL-Port**  
- Gibt den Port für SSL-Verbindungen an. Der Standardport für SSL ist 443.  
+ Gibt den Port für TLS/SSL-Verbindungen an. Der Standardport für TLS ist 443.  
   
  **SSL-Zertifikat**  
- Gibt den Zertifikatsnamen eines SSL-Zertifikats an, das Sie auf diesem Computer installiert haben. Wenn das Zertifikat einem Platzhalter zugeordnet wird, können Sie es für eine Berichtsserververbindung verwenden.  
+ Gibt den Zertifikatsnamen eines TLS/SSL-Zertifikats an, das Sie auf diesem Computer installiert haben. Wenn das Zertifikat einem Platzhalter zugeordnet wird, können Sie es für eine Berichtsserververbindung verwenden.  
   
  Gibt den vollqualifizierten Namen des Computers an, für den das Zertifikat registriert ist. Der von Ihnen angegebene Namen muss mit dem Namen identisch sein, für den das Zertifikat registriert ist.  
   
- Um diese Option verwenden zu können, müssen Sie ein Zertifikat installiert haben. Sie müssen auch die UrlRoot-Konfigurationseinstellung in der Datei RSReportServer.config so ändern, dass der vollqualifizierte Name des Computers angegeben wird, für den das Zertifikat registriert ist. Weitere Informationen finden Sie unter [Konfigurieren von SSL-Verbindungen auf einem Berichtsserver im einheitlichen Modus](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+ Um diese Option verwenden zu können, müssen Sie ein Zertifikat installiert haben. Sie müssen auch die UrlRoot-Konfigurationseinstellung in der Datei RSReportServer.config so ändern, dass der vollqualifizierte Name des Computers angegeben wird, für den das Zertifikat registriert ist. Weitere Informationen finden Sie unter [Konfigurieren von TLS-Verbindungen auf einem Berichtsserver im einheitlichen Modus](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 ### <a name="to-set-advanced-properties-on-a-url"></a>So legen Sie erweiterte Eigenschaften für eine URL fest  
   

@@ -15,12 +15,12 @@ ms.assetid: 2cd846e7-5bf3-4144-8772-703c4f439a2a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 8359c9844cf9ebbc91da556f212429c96909d857
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 91277deb1aab5916f23d52fed3f8d8f0530b6fab
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "76285709"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529109"
 ---
 # <a name="replication-programming-concepts"></a>Konzepte für die Replikationsprogrammierung
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ ms.locfileid: "76285709"
   
 2.  Zusätzlich zu dem regulären Datenzugriff, der für eine Vertriebsanwendung erforderlich ist, sollte diese Anwendung einen Vertriebsmitarbeiter in die Lage versetzen, das Pullabonnement bei Bedarf per Mausklick zu synchronisieren. Da die Anwendung von einem Vertriebsmitarbeiter installiert und ausgeführt wird, muss sie außerdem die Möglichkeit bieten, ein Abonnement zu konfigurieren und die Anfangsmomentaufnahme clientseitig zu übernehmen. Die Anwendung verwendet wahlweise die unter Windows zur Verfügung gestellte Infrastruktur zur Erkennung von Funkverbindungen, um das Abonnement automatisch zu synchronisieren, sobald eine Verbindung erkannt wird.  
   
-3.  Beachten Sie alle Sicherheitsrichtlinien für die Replikation, einschließlich der Verwendung der Windows-Authentifizierung und eines virtuellen privaten Netzwerks (VPN), wenn Sie die Verbindung mit dem Verleger herstellen. Wenn Sie die Websynchronisierung implementieren, verwenden Sie eine SSL-Verbindung (Secure Sockets Layer). Weitere Informationen finden Sie unter [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md).  
+3.  Beachten Sie alle Sicherheitsrichtlinien für die Replikation, einschließlich der Verwendung der Windows-Authentifizierung und eines virtuellen privaten Netzwerks (VPN), wenn Sie die Verbindung mit dem Verleger herstellen. Verwenden Sie beim Implementieren der Websynchronisierung eine TLS-Verbindung (Transport Layer Security), früher als Secure Sockets Layer (SSL) bezeichnet. Weitere Informationen finden Sie unter [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md).  
   
 4.  Um die Vorteile der Funktionen von [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] zu nutzen, wird die Anwendung mit einer verwalteten Codesprache entwickelt.  
   

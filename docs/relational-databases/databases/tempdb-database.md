@@ -2,7 +2,7 @@
 title: tempdb-Datenbank | Microsoft-Dokumentation
 description: Dieser Artikel enthält Details zur Konfiguration und Verwendung der tempdb-Datenbank in SQL Server und Azure SQL-Datenbank.
 ms.custom: P360
-ms.date: 08/21/2019
+ms.date: 04/17/2020
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 46807e551052ca6da38fde744d9a1e9dd7c794b0
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5c324d19a0e5005261a1c5a14834ea2d9c2f4f73
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288494"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635352"
 ---
 # <a name="tempdb-database"></a>TempDB-Datenbank
 
@@ -46,7 +46,7 @@ Die **tempdb**-Systemdatenbank ist eine globale Ressource, die für alle Benutze
   - Zeilenversionen, die von Datenänderungstransaktionen in einer Datenbank generiert werden, die READ COMMITTED mit Zeilenversionsverwaltung oder Transaktionen der Momentaufnahmeisolation verwendet.  
   - Zeilenversionen, die von Datenänderungstransaktionen für Funktionen, wie z. B. Onlineindexvorgänge, Multiple Active Result Sets (MARS) und AFTER-Trigger, generiert wurden.  
   
-Vorgänge innerhalb von **tempdb** werden minimal protokolliert, sodass ein Rollback für Transaktionen ausgeführt werden kann. **tempdb** wird bei jedem Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu erstellt, sodass das System immer mit einer bereinigten Kopie der Datenbank startet. Temporäre Tabellen und gespeicherte Prozeduren werden beim Trennen der Verbindung automatisch gelöscht; es sind keine Verbindungen aktiv, wenn das System heruntergefahren wird. Daher wird zwischen den einzelnen Sitzungen von **nichts in**tempdb[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert. Sicherungs- und Wiederherstellungsvorgänge sind in **tempdb** nicht zulässig.  
+Vorgänge innerhalb von **tempdb** werden minimal protokolliert, sodass ein Rollback für Transaktionen ausgeführt werden kann. **tempdb** wird bei jedem Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu erstellt, sodass das System immer mit einer bereinigten Kopie der Datenbank startet. Temporäre Tabellen und gespeicherte Prozeduren werden beim Trennen der Verbindung automatisch gelöscht; es sind keine Verbindungen aktiv, wenn das System heruntergefahren wird. Daher wird zwischen den einzelnen Sitzungen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nichts in **tempdb** gespeichert. Sicherungs- und Wiederherstellungsvorgänge sind in **tempdb** nicht zulässig.  
 
 ## <a name="physical-properties-of-tempdb-in-sql-server"></a>Physische Eigenschaften von tempdb in SQL Server
 
@@ -111,26 +111,26 @@ Eine Beschreibung dieser Datenbankoptionen finden Sie unter [ALTER DATABASE SET-
 
 |SLO|Maximale Dateigröße für tempdb-Daten (GB)|Anzahl von tempdb-Datendateien|Maximale Datengröße für tempdb (GB)|
 |---|---:|---:|---:|
-|Basic|13|1|13|
-|S0|13|1|13|
-|S1|13|1|13|
-|S2|13|1|13|
+|Basic|13,9|1|13,9|
+|S0|13,9|1|13,9|
+|S1|13,9|1|13,9|
+|S2|13,9|1|13,9|
 |S3|32|1|32
 |S4|32|2|64|
 |S6|32|3|96|
 |S7|32|6|192|
 |S9|32|12|384|
 |S12|32|12|384|
-|P1|13|12|156|
-|P2|13|12|156|
-|P4|13|12|156|
-|P6|13|12|156|
-|P11|13|12|156|
-|P15|13|12|156|
-|Elastischer Premium-Pool (alle DTU-Konfigurationen)|13|12|156|
-|Elastischer Standard-Pool (S0-S2)|13|12|156|
+|P1|13,9|12|166,7|
+|P2|13,9|12|166,7|
+|P4|13,9|12|166,7|
+|P6|13,9|12|166,7|
+|P11|13,9|12|166,7|
+|P15|13,9|12|166,7|
+|Elastischer Premium-Pool (alle DTU-Konfigurationen)|13,9|12|166,7|
+|Elastischer Standard-Pool (S0-S2)|13,9|12|166,7|
 |Elastischer Standard-Pool (S3 und höher) |32|12|384|
-|Elastischer Basic-Pool (alle DTU-Konfigurationen)|13|12|156|
+|Elastischer Basic-Pool (alle DTU-Konfigurationen)|13,9|12|166,7|
 ||||
 
 ### <a name="tempdb-sizes-for-vcore-based-service-tiers"></a>tempdb-Größen für auf virtuellen Kern basierende Diensttarife
@@ -264,7 +264,7 @@ Mit dem folgenden T-SQL-Befehl können Sie überprüfen, ob TempDB speicheroptim
 SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
 ```
 
-Wenn nach dem Aktivieren von speicheroptimierten TempDB-Metadaten aus irgendeinem Grund ein Fehler beim Starten des Servers auftritt, können Sie die Funktion umgehen, indem Sie SQL Server mithilfe der Startoption [-f](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) in der **Minimalkonfiguration** starten. Dadurch können Sie die Funktion deaktivieren und SQL Server anschließend im normalen Modus neu starten.
+Wenn nach dem Aktivieren von speicheroptimierten TempDB-Metadaten aus irgendeinem Grund ein Fehler beim Starten des Servers auftritt, können Sie die Funktion umgehen, indem Sie SQL Server mithilfe der Startoption **-f** in der [Minimalkonfiguration](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) starten. Dadurch können Sie die Funktion deaktivieren und SQL Server anschließend im normalen Modus neu starten.
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>Kapazitätsplanung für tempdb in SQL Server
 Das Festlegen der angemessenen Größe von tempdb in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Produktionsumgebung hängt von vielen Faktoren ab. Wie bereits zuvor in diesem Artikel beschrieben, schließen diese Faktoren die vorhandene Workload und die verwendeten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktionen ein. Es wird empfohlen, die vorhandene Workload durch Ausführen folgender Aufgaben in einer SQL Server-Testumgebung zu analysieren:

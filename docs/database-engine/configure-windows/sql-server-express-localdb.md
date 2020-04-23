@@ -16,29 +16,31 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3eedcac9715dec28d3a0ee785effa450d7309c89
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 6f954ae7a2b2316acd70450db4f986b80b6ef73d
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "80342912"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528264"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Microsoft SQL Server 2016 Express LocalDB ist ein Feature von [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-2016.md) speziell für Entwickler. Es ist in SQL Server Express mit Advanced Services verfügbar.
+Microsoft SQL Server 2016 Express LocalDB ist ein Feature von [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-version-15.md) speziell für Entwickler. Es ist in SQL Server Express mit Advanced Services verfügbar.
 
 Bei der Installation von LocalDB wird ein minimalen Satz von Dateien kopiert, der für den Start von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] erforderlich ist. Sobald LocalDB installiert ist, können Sie mithilfe einer speziellen Verbindungszeichenfolge eine Verbindung herstellen. Wenn eine Verbindung hergestellt wird, wird die erforderliche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Infrastruktur automatisch erstellt und gestartet. Sie ermöglicht der Anwendung, die Datenbank zu verwenden, und zwar ohne komplexe Konfigurationstasks. Mit Developer Tools können Entwickler [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] bereitstellen, womit sie [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code schreiben und testen können, und zwar ohne dabei eine vollständige Serverinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwalten zu müssen. 
 
-## <a name="try-it-out"></a>Probieren Sie es aus! 
+## <a name="installation-media"></a>Installationsmedien 
 
-- Um SQL Server Express LocalDB herunterzuladen und zu installieren, navigieren Sie zur Seite **[Downloads für SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)** . LocalDB ist eine Funktion, die Sie während der Installation auswählen. Sie ist verfügbar, wenn Sie die Medien herunterladen. Wenn Sie die Medien herunterladen, wählen Sie **Express Advanced** oder das LocalDB-Paket aus. Im **Visual Studio-Installer** können Sie SQL Server Express LocalDB als Teil der Workload **.NET-Desktopentwicklung** oder als einzelne Komponente installieren.
+LocalDB ist ein Feature, das Sie während der Installation von SQL Server Express auswählen können. Es ist verfügbar, wenn Sie die Medien herunterladen. Wenn Sie die Medien herunterladen, wählen Sie **Express Advanced** oder das LocalDB-Paket aus. 
 
- >[!TIP]
- > Sie können LocalDB auch als Teil von Visual Studio installieren. Wählen Sie während der Installation von Visual Studio die Workload **.NET-Desktopentwicklung** aus, in der SQL Server Express LocalDB enthalten ist.
+- [SQL Server Express 2019](https://go.microsoft.com/fwlink/?LinkID=866658)
+- [SQL Server Express 2017](https://go.microsoft.com/fwlink/?LinkID=853017)
+- [SQL Server Express 2016](https://go.microsoft.com/fwlink/?LinkID=799012)
 
-- Sie haben ein Azure-Konto? [Machen Sie sich mit den ersten Schritten vertraut](https://azure.microsoft.com/services/virtual-machines/sql-server/), und starten Sie einen virtuellen Computer, auf dem SQL Server bereits installiert ist.
+Alternativ dazu können Sie LocalDB über den [Visual Studio-Installer](https://visualstudio.microsoft.com/downloads/) im Rahmen der Workload **Datenspeicherung und -verarbeitung**, der Workload **ASP.NET und Webentwicklung** oder als einzelne Komponente installieren.
+
 
 ## <a name="install-localdb"></a>Installieren von LocalDB
 
@@ -92,8 +94,11 @@ Nur ein Administrator auf dem Computer kann eine freigegebene Instanz von LocalD
 
 Die einfachste Möglichkeit zur Verwendung von LocalDB besteht darin, mit der Verbindungszeichenfolge `Server=(localdb)\MSSQLLocalDB;Integrated Security=true` eine Verbindung mit der automatischen Instanz herzustellen, deren Besitzer der aktuelle Benutzer ist. Um eine bestimmte Datenbank herstellen einer Verbindung mit dem Dateinamen verbinden mithilfe einer Verbindungszeichenfolge ähnlich wie `Server=(LocalDB)\MSSQLLocalDB; Integrated Security=true ;AttachDbFileName=D:\Data\MyDB1.mdf`.
 
+Die Namenskonvention und das Format der Verbindungszeichenfolge für LocalDB haben sich in SQL Server 2014 geändert. Zuvor bestand der Instanzname aus einem einzelnen „v“, gefolgt von LocalDB und Versionsnummer. Ab SQL Server 2014 wird dieses Instanznamensformat nicht mehr unterstützt, stattdessen muss die oben erwähnte Verbindungszeichenfolge verwendet werden.  
+
 >[!NOTE]
->Wenn ein Benutzer zum ersten Mal auf einem Computer versucht, eine Verbindung mit LocalDB herzustellen, muss die automatische Instanz sowohl erstellt als auch gestartet werden. Die zusätzliche Zeit, die für das Erstellen der Instanz benötigt wird, kann dazu führen, dass der Verbindungsversuch abgebrochen und eine Timeoutmeldung ausgegeben wird. Warten Sie in diesem Fall einige Sekunden, bis der Erstellungsvorgang vollständig abgeschlossen ist, und stellen Sie dann erneut eine Verbindung her.
+> - Wenn ein Benutzer zum ersten Mal auf einem Computer versucht, eine Verbindung mit LocalDB herzustellen, muss die automatische Instanz sowohl erstellt als auch gestartet werden. Die zusätzliche Zeit, die für das Erstellen der Instanz benötigt wird, kann dazu führen, dass der Verbindungsversuch abgebrochen und eine Timeoutmeldung ausgegeben wird. Warten Sie in diesem Fall einige Sekunden, bis der Erstellungsvorgang vollständig abgeschlossen ist, und stellen Sie dann erneut eine Verbindung her.
+
 
 ### <a name="create-and-connect-to-a-named-instance"></a>Erstellen einer benannten Instanz und Herstellen einer Verbindung
 

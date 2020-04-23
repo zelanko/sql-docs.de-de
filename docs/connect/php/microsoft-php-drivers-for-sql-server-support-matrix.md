@@ -1,7 +1,8 @@
 ---
-title: Unterstützungsmatrix für Microsoft-Treiber für PHP für SQL Server | Microsoft-Dokumentation
+title: Unterstützungsmatrix für Microsoft-Treiber für PHP
+description: Auf dieser Seite finden Sie die Unterstützungsmatrix und die Support Lifecycle-Richtlinie für die Microsoft PHP-Treiber für SQL Server.
 ms.custom: ''
-ms.date: 01/31/2020
+ms.date: 04/15/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
 manager: ''
-ms.openlocfilehash: 57e7a8e5849b984676c2e0a843c753a12f2f20dd
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 82d394cd3c940de43f8b9706b719515ed45d97a4
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922828"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632753"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Unterstützungsmatrix für Microsoft-PHP-Treiber für SQL Server
 
@@ -106,7 +107,7 @@ Die folgenden Versionen des Windows-Betriebssystems werden mit der aufgelisteten
 |Windows Vista SP2                   |   |   |   |   |   |J  |J  |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-Die folgenden Versionen des Linux- und Mac-Betriebssystems (nur 64-Bit) werden mit der aufgelisteten Version der Microsoft PHP-Treiber unterstützt:
+Die folgenden Versionen des Linux- und macOS-Betriebssystems (nur 64-Bit) werden mit der aufgelisteten Version der Microsoft PHP-Treiber unterstützt:
 
 |Version des PHP für SQL Server-Treibers &#8594;<br />&#8595; Betriebssystem|5.8|5.6|5.3|5,2|4.3|4,0|3.2|
 |--|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -132,12 +133,12 @@ Die folgenden Versionen des Linux- und Mac-Betriebssystems (nur 64-Bit) werden m
 |macOS El Capitan (64-Bit)           |   |   |J  |J  |J  |   |   |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-<sup>1</sup> Experimentelle Unterstützung von Alpine Linux in Version 5.8.
+<sup>1</sup> Experimentelle Unterstützung von Alpine Linux in Version 5.80. Produktionssupport seit Version 5.8.1.
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Versionsanmerkungen](../../connect/php/release-notes-php-sql-driver.md)
+[Versionsanmerkungen](release-notes-php-sql-driver.md)
 
-[Supportressourcen](../../connect/php/support-resources-for-the-php-sql-driver.md)
+[Supportressourcen](support-resources-for-the-php-sql-driver.md)
 
-[Systemanforderungen](../../connect/php/system-requirements-for-the-php-sql-driver.md)
+[Systemanforderungen](system-requirements-for-the-php-sql-driver.md)

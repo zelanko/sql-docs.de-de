@@ -1,5 +1,6 @@
 ---
 title: 'rsServerConfigurationError: Reporting Services-Fehler | Microsoft-Dokumentation'
+description: 'Auf dieser Fehlerreferenzseite erfahren Sie mehr über die Ereignis-ID „rsServerConfigurationError“: Konfigurationsfehler beim Berichtsserver.'
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 0913afc2-34b4-4713-b570-cfd5718975ac
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 4291245b101799238412115ced8b114de5a551be
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0ff0a0b7c59dc70e085c5a61d9b88e28dd41cded
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65572132"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487209"
 ---
 # <a name="rsserverconfigurationerror---reporting-services-error"></a>rsServerConfigurationError – Reporting Services-Fehler
     
@@ -45,7 +46,7 @@ ms.locfileid: "65572132"
 ## <a name="user-action"></a>Benutzeraktion  
  Wenn dieser Fehler auftritt, nachdem Sie manuell eine Konfigurationsdatei bearbeitet haben, machen Sie die Änderungen rückgängig, indem Sie den ursprünglichen Wert wieder eingeben, oder stellen Sie eine vorherige Version wieder her, wenn eine Sicherung existiert.  
   
- Öffnen Sie die Ablaufverfolgungsprotokolldatei des Berichtsservers unter \Microsoft SQL Server\MSRS12.**Instanzname>\Reporting Services\LogFiles, um zusätzliche Fehlermeldungsinformationen zu überprüfen, die mit dem** rsServerConfiguration\<-Fehler ausgegeben werden. Weitere Informationen finden Sie unter [Reporting Services-Protokolldateien und Quellen](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
+ Öffnen Sie die Ablaufverfolgungsprotokolldatei des Berichtsservers unter \Microsoft SQL Server\MSRS12.\<Instanzname>\Reporting Services\LogFiles, um zusätzliche Fehlermeldungsinformationen zu überprüfen, die mit dem **rsServerConfiguration**-Fehler ausgegeben werden. Weitere Informationen finden Sie unter [Reporting Services-Protokolldateien und Quellen](../../reporting-services/report-server/reporting-services-log-files-and-sources.md).  
   
 ## <a name="internal-only"></a>Nur intern  
   

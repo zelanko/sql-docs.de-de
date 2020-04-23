@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7524d1c984d1e12b744c57b97cfeb586dff3f7ce
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: af057cffd0382364488076086f77af03376d64fd
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68770751"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528754"
 ---
 # <a name="replication-distribution-agent"></a>Replikationsverteilungs-Agent
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -135,16 +135,16 @@ distrib [-?]
  Gibt den Sicherheitsmodus des Verteilers an. Der Wert 0 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] steht für den -Authentifizierungsmodus, der Wert 1 für den Windows-Authentifizierungsmodus (Standard).  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
- Die Ebene der SSL-Verschlüsselung (Secure Sockets Layer), die vom Verteilungs-Agent beim Herstellen von Verbindungen verwendet wird.  
+ Die Ebene der Transport Layer Security (TLS), früher als Secure Sockets Layer (SSL) bezeichnet, die vom Verteilungs-Agent beim Herstellen von Verbindungen verwendete Verschlüsselung.  
   
 |Wert von EncryptionLevel|BESCHREIBUNG|  
 |---------------------------|-----------------|  
-|**0**|Gibt an, dass SSL nicht verwendet wird.|  
-|**1**|Gibt an, dass SSL verwendet wird, der Agent jedoch nicht überprüft, ob das SSL-Serverzertifikat von einem vertrauenswürdigen Aussteller signiert wurde.|  
-|**2**|Gibt an, dass SSL verwendet und das Zertifikat überprüft wird.|  
+|**0**|Gibt an, dass TLS nicht verwendet wird.|  
+|**1**|Gibt an, dass TLS verwendet wird, der Agent jedoch nicht überprüft, ob das TLS/SSL-Serverzertifikat von einem vertrauenswürdigen Aussteller signiert wurde.|  
+|**2**|Gibt an, dass TLS verwendet und das Zertifikat überprüft wird.|  
  
  > [!NOTE]  
- >  Ein gültiges SSL-Zertifikat wird mit dem vollqualifizierten Domänennamen der SQL Server-Instanz definiert. Damit der Agent die Verbindung erfolgreich herstellen kann, wenn „-EncryptionLevel“ auf 2 festgelegt ist, sollten Sie einen Alias auf der lokalen SQL Server-Instanz erstellen. Der Parameter „Alias Name“ sollte den Servernamen enthalten, und für den Parameter „Server“ sollte der vollqualifizierte Name der SQL Server-Instanz festgelegt werden.
+ >  Ein gültiges TLS/SSL-Zertifikat wird mit dem vollqualifizierten Domänennamen der SQL Server-Instanz definiert. Damit der Agent die Verbindung erfolgreich herstellen kann, wenn „-EncryptionLevel“ auf 2 festgelegt ist, sollten Sie einen Alias auf der lokalen SQL Server-Instanz erstellen. Der Parameter „Alias Name“ sollte den Servernamen enthalten, und für den Parameter „Server“ sollte der vollqualifizierte Name der SQL Server-Instanz festgelegt werden.
 
  Weitere Informationen finden Sie unter [Anzeigen und Ändern von Replikationssicherheitseinstellungen](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   

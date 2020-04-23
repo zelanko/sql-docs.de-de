@@ -1,6 +1,6 @@
 ---
 title: Erste Schritte mit der Volltextsuche | Microsoft-Dokumentation
-ms.date: 08/22/2016
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
@@ -15,12 +15,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 349e00b7734ed8e8176585c55018b7565649cc1f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: c0394fdfaf25042eef28c4f350b6ca2bf141b14e
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903826"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288161"
 ---
 # <a name="get-started-with-full-text-search"></a>Erste Schritte mit der Volltextsuche
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,10 +55,17 @@ Zum Einrichten der Volltextsuche mithilfe eines Assistenten finden Sie unter [Ve
 2.  Bevor Sie einen Volltextindex für die Document-Tabelle erstellen können, müssen Sie sicherstellen, dass die Tabelle über einen eindeutigen, einspaltigen Index verfügt, der keine NULL-Werte zulässt. Die folgende [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) -Anweisung erstellt in der DocumentID-Spalte der Document-Tabelle den eindeutigen `ui_ukDoc`-Index:  
   
     ```sql 
-    CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
+    CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentNode);  
     ```  
 
-3.  Nachdem Sie einen eindeutigen Schlüssel erstellt haben, können Sie in der `Document` -Tabelle einen Volltextindex erstellen, indem Sie die folgende [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) -Anweisung verwenden.  
+3.  Löschen Sie den vorhandenen Volltextindex in der `Document`-Tabelle mithilfe der folgenden [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md)-Anweisung. 
+
+    ```sql
+    DROP FULLTEXT INDEX ON Production.Document
+    GO
+    ```
+
+4.  Nachdem Sie einen eindeutigen Schlüssel erstellt haben, können Sie in der `Document` -Tabelle einen Volltextindex erstellen, indem Sie die folgende [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) -Anweisung verwenden.  
   
     ```sql  
     CREATE FULLTEXT INDEX ON Production.Document  
@@ -72,6 +79,8 @@ Zum Einrichten der Volltextsuche mithilfe eines Assistenten finden Sie unter [Ve
     GO  
   
     ```  
+    
+  
   
      Die in diesem Beispiel definierte TYPE COLUMN gibt die Typspalte in der Tabelle an, die den Typ des Dokuments in der Spalte Document (binäre Spalte) enthält. In der Typspalte wird die vom Benutzer angegebene Dateierweiterung – „.doc“, „.xls“ usw. – für das Dokument der betreffenden Zeile gespeichert. Die Volltext-Engine verwendet die Erweiterung einer Zeile, um den richtigen Filter für die Analyse der Daten in dieser Zeile aufzurufen. Nachdem der Filter die binären Daten der Zeile analysiert hat, analysiert die angegebene Worttrennung den Inhalt. (In diesem Beispiel wird die Worttrennung für britisches Englisch verwendet.) Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Filtern für die Suche](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
 

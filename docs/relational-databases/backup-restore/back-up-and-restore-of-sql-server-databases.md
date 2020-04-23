@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 570a21b3-ad29-44a9-aa70-deb2fbd34f27
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 6e88e6cf9cb4101f22d3a30f5ca53fdf15b754fa
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0bcf8cbc87fc1784a177a9bf58a43f58156fbb96
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77256743"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487933"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Sichern und Wiederherstellen von SQL Server-Datenbanken
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "77256743"
   
  Durch die Sicherungs- und Wiederherstellungskomponente von SQL Server wird eine wichtige Vorrichtung zum Schutz wichtiger Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken bereitgestellt. Um die Gefahr eines schwerwiegenden Datenverlusts zu minimieren, müssen Sie Ihre Datenbanken regelmäßig sichern, um die Änderungen an Ihren Daten aufzubewahren. Eine gut geplante Sicherungs- und Wiederherstellungsstrategie hilft, Datenbanken vor Datenverlusten zu schützen, die durch eine Vielzahl von Fehlern verursacht werden können. Testen Sie Ihre Strategie, indem Sie einen Sicherungssatz und anschließend Ihre Datenbank wiederherstellen, um sich auf die effektive Reaktion auf einen Notfall vorzubereiten.
   
- Neben dem lokalen Speicher für das Speichern der Sicherung unterstützt SQL Server auch das Sichern und Wiederherstellen mit dem Azure Blob Storage-Dienst. Weitere Informationen finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Für Datenbankdateien, die mit dem Microsoft Azure Blob-Speicherdienst gespeichert wurden, bietet [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] die Option, Azure-Momentaufnahmen für nahezu sofortige Sicherungen und schnellere Wiederherstellungen zu nutzen. Weitere Informationen finden Sie unter [Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
+ Neben dem lokalen Speicher für das Speichern der Sicherung unterstützt SQL Server auch das Sichern und Wiederherstellen mit dem Azure Blob Storage-Dienst. Weitere Informationen finden Sie unter [SQL Server-Sicherung und -Wiederherstellung mit dem Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). Für Datenbankdateien, die mit dem Microsoft Azure Blob-Speicherdienst gespeichert wurden, bietet [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] die Option, Azure-Momentaufnahmen für nahezu sofortige Sicherungen und schnellere Wiederherstellungen zu nutzen. Weitere Informationen finden Sie unter [Dateimomentaufnahme-Sicherungen für Datenbankdateien in Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md). Azure bietet auch eine Sicherungslösung der Unternehmensklasse für SQL Server-Instanzen auf Azure-VMs. Es handelt sich um eine vollständig verwaltete Sicherungslösung, die Always On-Verfügbarkeitsgruppen, Langzeitaufbewahrung Zeitpunktwiederherstellung sowie zentrale Verwaltung und Überwachung unterstützt. Weitere Informationen finden Sie unter [Informationen zur SQL Server-Sicherung auf virtuellen Azure-Computern](https://docs.microsoft.com/azure/backup/backup-azure-sql-database).
   
 ##  <a name="why-back-up"></a>Warum Sichern (back up)?  
 -   Sie können sich vor schwerwiegendem Datenverlust schützen, indem Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken sichern, Testwiederherstellungsprozeduren für die Sicherungen ausführen und Kopien der Sicherungen an einem sicheren Ort außerhalb Ihrer Geschäftsräume aufbewahren. **Das Sichern ist die einzige Möglichkeit, Ihre Daten zu schützen.**

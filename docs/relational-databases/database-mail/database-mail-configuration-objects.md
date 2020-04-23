@@ -32,16 +32,16 @@ helpviewer_keywords:
 ms.assetid: 03f6e4c0-04ff-490a-bd91-637806215bd1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 5082c3ab595cc11ff9ab3f5dbc869c11105ce70a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3a591ccc983732fe09a74db12c4b9f6a5a713955
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68134434"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529428"
 ---
 # <a name="database-mail-configuration-objects"></a>Konfigurationsobjekte für Datenbank-E-Mail
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Datenbank-E-Mail verfügt über zwei Konfigurationsobjekte: Mit den Datenbankkonfigurationsobjekten können Sie die Einstellungen konfigurieren, die von Datenbank-E-Mail beim Senden einer E-Mail von der Datenbankanwendung oder vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent verwendet werden sollen.  
+  Die Datenbank-E-Mail weist zwei Konfigurationsobjekte auf: Mit den Datenbankkonfigurationsobjekten können Sie die Einstellungen konfigurieren, die von der Datenbank-E-Mail beim Senden einer E-Mail von der Datenbankanwendung oder vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent verwendet werden sollen.  
   
 -   Datenbank-E-Mail-Konten  
   
@@ -59,11 +59,11 @@ ms.locfileid: "68134434"
   
  Datenbank-E-Mail unterstützt drei Methoden der Authentifizierung für die Kommunikation mit einem SMTP-Server:  
   
--   Windows-Authentifizierung: Datenbank-E-Mail verwendet dieselben Anmeldeinformationen wie das [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Windows-Dienstkonto zur Authentifizierung auf dem SMTP-Server.  
+-   Windows-Authentifizierung: Die Datenbank-E-Mail verwendet dieselben Anmeldeinformationen wie das [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Windows-Dienstkonto zur Authentifizierung beim SMTP-Server.  
   
--   Standardauthentifizierung: Datenbank-E-Mail verwendet den angegebenen Benutzernamen und das angegebene Kennwort zur Authentifizierung auf dem SMTP-Server.  
+-   Standardauthentifizierung:  Die Datenbank-E-Mail verwendet den angegebenen Benutzernamen und das angegebene Kennwort zur Authentifizierung beim SMTP-Server.  
   
--   Anonyme Authentifizierung: Der SMTP-Server erfordert keinerlei Authentifizierung.  Datenbank-E-Mail verwendet keinerlei Anmeldeinformationen zur Authentifizierung auf dem SMTP-Server.  
+-   Anonyme Authentifizierung:  Der SMTP-Server erfordert keine Authentifizierung.  Datenbank-E-Mail verwendet keinerlei Anmeldeinformationen zur Authentifizierung auf dem SMTP-Server.  
   
  Die Kontoinformationen werden in der **msdb** -Datenbank gespeichert. Jedes Konto besteht aus den folgenden Informationen:  
   
@@ -83,7 +83,7 @@ ms.locfileid: "68134434"
   
 -   Die Portnummer des E-Mail-Servers  
   
--   Eine Spalte des bit-Datentyps gibt an, ob die Verbindung zum SMTP-Mailserver mithilfe von SSL (Secure Sockets Layer) hergestellt wird.  
+-   Eine Spalte des bit-Datentyps gibt an, ob die Verbindung zum SMTP-Mailserver mithilfe von Transport Layer Security (TLS), früher als Secure Sockets Layer (SSL) bezeichnet, hergestellt wird.  
   
 -   Eine Spalte des bit-Datentyps gibt an, ob die Verbindung zum SMTP-Server mithilfe der für [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]konfigurierten Anmeldeinformationen hergestellt wird.  
   

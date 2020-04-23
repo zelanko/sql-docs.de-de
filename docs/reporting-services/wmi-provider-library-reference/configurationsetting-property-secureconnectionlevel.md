@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: fd5549e7-b874-41e2-866e-2f58caf6f733
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fdb8fc97b8b2403366e19456b7c744012ee9007f
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 59c833c86c632c0f5a0838a98f31d89f4f0df5fb
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570252"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635872"
 ---
 # <a name="configurationsetting-property---secureconnectionlevel"></a>ConfigurationSetting-Eigenschaft: SecureConnectionLevel
   Gibt die in der Datei RSReportServer.config angegebene sichere Verbindungsebene zurück. Schreibgeschützt.  
@@ -36,7 +36,7 @@ public Integer SecureConnectionLevel;
 ```  
   
 ## <a name="property-values"></a>Eigenschaftswerte  
- Ein **Integer** -Wert, der die sichere Verbindungsebene darstellt. Die Rückgabewerte geben an, dass SSL entweder konfiguriert ist oder nicht. Ein Wert größer oder gleich 1 gibt an, dass SSL aktiviert ist. Der Wert 0 gibt an, dass SSL deaktiviert wird.  
+ Ein **Integer** -Wert, der die sichere Verbindungsebene darstellt. Die Rückgabewerte geben an, dass TLS entweder konfiguriert ist oder nicht. Ein Wert größer oder gleich 1 gibt an, dass TLS aktiviert ist. Der Wert 0 gibt an, dass TLS deaktiviert ist.  
   
 ## <a name="example-code"></a>Beispielcode  
  [MSReportServer_ConfigurationSetting Class (MSReportServer_ConfigurationSetting-Klasse)](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  

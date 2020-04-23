@@ -1,5 +1,6 @@
 ---
 title: Supportmatrix für den Microsoft JDBC-Treiber für SQL Server
+description: Auf dieser Seite finden Sie die Supportmatrix und die Supportlebenszyklus-Richtlinie für den Microsoft JDBC-Treiber für SQL Server.
 ms.custom: ''
 ms.date: 03/24/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 7f9482c80d3ea84b814857433f6ff2a0389cc544
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2cd2c88cc64f068cb2926fa17302063bd7f15193
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922834"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487816"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server-support-matrix"></a>Supportmatrix für den Microsoft JDBC-Treiber für SQL Server
 
@@ -34,7 +35,7 @@ Die folgenden Microsoft JDBC-Treiber werden bis zum angegebenen Supportende unte
 |Treibername|Version des Treiberpakets|Zutreffende JAR-Datei(en)|Ende des grundlegenden Supports|
 |-|-|-|-|  
 |Microsoft JDBC-Treiber 8.2 für SQL Server|8,2|mssql-jdbc-8.2.2.jre13.jar<br> mssql-jdbc-8.2.2.jre11.jar<br> mssql-jdbc-8.2.2.jre8.jar|24. März 2025|
-|Microsoft JDBC-Treiber 7.4 für SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|2. August 2024|
+|Microsoft JDBC-Treiber 7.4 für SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|2\. August 2024|
 |Microsoft JDBC-Treiber 7.2 für SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|16. April 2024|
 |Microsoft JDBC-Treiber 7.0 für SQL Server|7.0|mssql-jdbc-7.0.0.jre10.jar<br> mssql-jdbc-7.0.0.jre8.jar|31. Juli 2023|
 |Microsoft JDBC-Treiber 6.4 für SQL Server|6.4|mssql-jdbc-6.4.0.jre9.jar<br> mssql-jdbc-6.4.0.jre8.jar<br> mssql-jdbc-6.4.0.jre7.jar|27. Februar 2023|
@@ -47,13 +48,13 @@ Die folgenden Microsoft JDBC-Treiber werden bis zum angegebenen Supportende unte
 |Treibername|Version des Treiberpakets|Ende des grundlegenden Supports|  
 |-|-|-|
 |Microsoft JDBC-Treiber 4.1 für SQL Server|4,1|12. Dezember 2019|  
-|Microsoft JDBC-Treiber 4.0 für SQL Server|4,0|6. März 2017|  
+|Microsoft JDBC-Treiber 4.0 für SQL Server|4,0|6\. März 2017|  
 |Microsoft SQL Server JDBC Driver 3.0|3.0|23. April 2015|  
 |Microsoft SQL Server JDBC Driver 2.2|2.0|31. Dezember 2012|  
 |Microsoft SQL Server 2005 JDBC Driver 1.2|1.2|25. Juni 2011|  
 |Microsoft SQL Server 2005 JDBC Driver 1.1|1.1|25. Juni 2011|  
 |Microsoft SQL Server 2005 JDBC Driver 1.0|1.0|25. Juni 2011|  
-|Microsoft SQL Server 2000 JDBC Driver|2000|9. Juli 2010|  
+|Microsoft SQL Server 2000 JDBC Driver|2000|9\. Juli 2010|  
   
 ## <a name="sql-version-compatibility"></a>SQL-Versionskompatibilität  
   

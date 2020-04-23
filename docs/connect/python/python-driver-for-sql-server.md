@@ -1,5 +1,6 @@
 ---
 title: Python-Treiber für SQL Server | Microsoft-Dokumentation
+description: Sie können mit Python unter Windows, Linux oder macOS eine Verbindung mit einer SQL-Datenbank herstellen.
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: be70fb850262c6825ea45fdf5533f0304b702146
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 347e6e386c0e634ce94b3341334d1463fd5e729d
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926759"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487868"
 ---
 # <a name="python-sql-driver"></a>Python-SQL-Treiber
 
 ![Download-Abwärtspfeil-eingekreist](../../ssms/media/download-icon.png)[SQL-Treiber für Python installieren](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
-Sie können mit Python unter Windows, Linux oder Mac eine Verbindung zu einer SQL-Datenbank herstellen.   
+Sie können mit Python unter Windows, Linux oder macOS eine Verbindung mit einer SQL-Datenbank herstellen.  
   
 ## <a name="getting-started"></a>Erste Schritte  
 Es stehen verschiedene Python-SQL-Treiber zur Verfügung. Microsoft testet und bevorzugt allerdings den Treiber **pyodbc**. Entscheiden Sie sich für einen Treiber, und konfigurieren Sie Ihre Entwicklungsumgebung entsprechend:

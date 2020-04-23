@@ -5,17 +5,17 @@ ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 author: HaoQian-MS
 ms.author: haoqian
-ms.openlocfilehash: c1f2a7670913f2df948201b29f26e0283f27f698
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.reviewer: maghan
+ms.openlocfilehash: b6d36286fc4286c902479271546841841db0b84d
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79288744"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487999"
 ---
 # <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Exemplarische Vorgehensweise: Einrichten von SQL Server Integration Services (SSIS) Scale Out
 
@@ -66,9 +66,9 @@ Verwenden Sie den Installations-Assistenten von [!INCLUDE[ssNoVersion_md](../../
 
     ![Masterkonfiguration](media/master-config.PNG "Masterkonfiguration")
 
-4.  Geben Sie das SSL-Zertifikat, mit dem die Kommunikation zwischen dem Scale Out-Master und dem Scale Out-Worker geschützt wird, mit einer der folgenden folgendermaßen an.
-    * Lassen Sie durch den Setupvorgang ein selbstsigniertes SSL-Standardzertifikat erstellen, indem Sie auf **Neues SSL-Zertifikat erstellen** klicken.  Das Standardzertifikat wird unter „Vertrauenswürdige Stammzertifizierungsstellen“, „Lokaler Computer“ installiert. Sie können die allgemeinen Namen in diesem Zertifikat angeben. Der Hostname des Masterendpunkts sollte in den allgemeinen Namen enthalten sein. Standardmäßig sind der Computername und die IP-Adresse des Masterknotens nicht enthalten.
-    * Wählen Sie ein vorhandenes SSL-Zertifikat auf dem lokalen Computer aus, indem Sie zuerst auf **vorhandenes SSL-Zertifikat verwenden** und dann auf **Durchsuchen** klicken. Der Fingerabdruck des Zertifikats wird im Textfeld angezeigt. Nach Klicken auf **Durchsuchen** werden Zertifikate angezeigt, die in „Vertrauenswürdige Stammzertifizierungsstellen“, „Lokaler Computer“ gespeichert sind. Das Zertifikat, das Sie auswählen, muss hier gespeichert sein.       
+4.  Geben Sie das TLS/SSL-Zertifikat, mit dem die Kommunikation zwischen dem Scale Out-Master und dem Scale Out-Worker geschützt wird, mit einer der folgenden Vorgehensweisen an.
+    * Lassen Sie durch den Setupvorgang ein selbstsigniertes TLS/SSL-Standardzertifikat erstellen, indem Sie auf **Neues SSL-Zertifikat erstellen** klicken.  Das Standardzertifikat wird unter „Vertrauenswürdige Stammzertifizierungsstellen“, „Lokaler Computer“ installiert. Sie können die allgemeinen Namen in diesem Zertifikat angeben. Der Hostname des Masterendpunkts sollte in den allgemeinen Namen enthalten sein. Standardmäßig sind der Computername und die IP-Adresse des Masterknotens nicht enthalten.
+    * Wählen Sie ein vorhandenes TLS/SSL-Zertifikat auf dem lokalen Computer aus, indem Sie zuerst auf **vorhandenes SSL-Zertifikat verwenden** und dann auf **Durchsuchen** klicken. Der Fingerabdruck des Zertifikats wird im Textfeld angezeigt. Nach Klicken auf **Durchsuchen** werden Zertifikate angezeigt, die in „Vertrauenswürdige Stammzertifizierungsstellen“, „Lokaler Computer“ gespeichert sind. Das Zertifikat, das Sie auswählen, muss hier gespeichert sein.       
 
     ![Masterkonfiguration 2](media/master-config-2.PNG "Masterkonfiguration 2")
   
@@ -118,14 +118,14 @@ Verwenden Sie den Installations-Assistenten von [!INCLUDE[ssNoVersion_md](../../
     > [!NOTE]
     > Sie können die Konfiguration des Workers an dieser Stelle überspringen und den [Scale Out-Manager](integration-services-ssis-scale-out-manager.md) verwenden, um den Scale Out-Worker und den Scale Out-Master einander zuzuordnen.
 
-4. Geben Sie für eine Umgebung mit **mehreren Computern** das SSL-Zertifikat des Clients an, das zum Überprüfen des Scale Out-Masters verwendet wird. Für eine Umgebung mit nur **einem einzelnen Computer** müssen Sie kein SSL-Zertifikat des Clients angeben. 
+4. Geben Sie für eine Umgebung mit **mehreren Computern** das TLS/SSL-Zertifikat des Clients an, das zum Überprüfen des Scale Out-Masters verwendet wird. Für eine Umgebung mit nur **einem einzelnen Computer** müssen Sie kein TLS/SSL-Zertifikat des Clients angeben. 
   
-    Klicken Sie auf **Durchsuchen** , um nach der Zertifikatdatei (*.cer) zu suchen. Wählen Sie die Datei `SSISScaleOutMaster.cer` aus, die sich auf dem Computer, auf dem der Scale Out-Master installiert ist, unter `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` befindet, um das SSL-Standardzertifikat zu verwenden.   
+    Klicken Sie auf **Durchsuchen** , um nach der Zertifikatdatei (*.cer) zu suchen. Wählen Sie die Datei `SSISScaleOutMaster.cer` aus, die sich auf dem Computer, auf dem der Scale Out-Master installiert ist, unter `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn` befindet, um das TLS/SSL-Standardzertifikat zu verwenden.   
 
     ![Workerkonfiguration 2](media/worker-config-2.PNG "Workerkonfiguration 2")
 
     > [!NOTE]
-    > Ist das vom Scale Out-Master verwendete SSL-Zertifikat selbstsigniert, muss auf dem Computer mit dem Scale Out-Master ein entsprechendes SSL-Zertifikat des Clients installiert sein. Wenn Sie auf der Seite **Integration Services Scale Out Worker Configuration (Konfiguration für den Integration Services Scale Out-Worker)** den Dateipfad für das Client SSL-Zertifikat bereitstellen, wird es automatisch installiert. Andernfalls müssen Sie das Zertifikat später manuell installieren. 
+    > Ist das vom Scale Out-Master verwendete TLS/SSL-Zertifikat selbstsigniert, muss auf dem Computer mit dem Scale Out-Worker ein entsprechendes TLS/SSL-Zertifikat des Clients installiert sein. Wenn Sie auf der Seite **Workerkonfiguration für horizontales Hochskalieren von Integration Services** den Dateipfad für das TLS/SSL-Clientzertifikat bereitstellen, wird es automatisch installiert. Andernfalls müssen Sie das Zertifikat später manuell installieren. 
      
 5. Schließen Sie den Installations-Assistenten von [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] ab.
 

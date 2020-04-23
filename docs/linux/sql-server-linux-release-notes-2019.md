@@ -7,12 +7,12 @@ ms.date: 03/31/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: e75becc77691ccd91c8c5db01bd08112aaad9476
-ms.sourcegitcommit: 2426a5e1abf6ecf35b1e0c062dc1e1225494cbb0
+ms.openlocfilehash: 7782806a1ba44c4f18c4005dfa592998cc9f026b
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80517674"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81301717"
 ---
 # <a name="release-notes-for-sql-server-2019-on-linux"></a>Versionshinweise für SQL Server 2019 für Linux
 
@@ -29,7 +29,7 @@ Die folgenden Versionshinweise gelten für SQL Server 2019 bei Ausführung unter
 |-----|-----|-----|
 | Red Hat Enterprise Linux 7.3-, 7.4-, 7.5-, 7.6- oder 8-Server | XFS oder EXT4 | [Installationshandbuch](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2, SP3, SP4, oder SP5 | XFS oder EXT4 | [Installationshandbuch](quickstart-install-connect-suse.md) |
-| Ubuntu 16.04 LTS, 18.04 | XFS oder EXT4 | [Installationshandbuch](quickstart-install-connect-ubuntu.md) | 
+| Ubuntu 16.04 LTS, 18.04 LTS | XFS oder EXT4 | [Installationshandbuch](quickstart-install-connect-ubuntu.md) | 
 | Docker-Engine 1.8+ für Windows, Mac oder Linux | – | [Installationshandbuch](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
@@ -205,19 +205,19 @@ In den folgenden Abschnitten werden bekannte Probleme mit dem allgemein verfügb
 
       1. Fügen Sie Folgendes unter „/var/opt/mssql/mssql.conf“ hinzu.
 
-      ```
-      [network]
-      tlsciphers= AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!ECDHE-RSA-AES128-GCM-SHA256:!ECDHE-RSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES128-GCM-SHA256:!ECDHE-ECDSA-AES256-SHA384:!ECDHE-ECDSA-AES128-SHA256:!ECDHE-ECDSA-AES256-SHA:!ECDHE-ECDSA-AES128-SHA:!ECDHE-RSA-AES256-SHA384:!ECDHE-RSA-AES128-SHA256:!ECDHE-RSA-AES256-SHA:!ECDHE-RSA-AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA:!DHE-DSS-AES256-SHA256:!DHE-DSS-AES128-SHA256:!DHE-DSS-AES256-SHA:!DHE-DSS-AES128-SHA:!DHE-DSS-DES-CBC3-SHA:!NULL-SHA256:!NULL-SHA
-      ```
+          ```
+          [network]
+          tlsciphers= AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!ECDHE-RSA-AES128-GCM-SHA256:!ECDHE-RSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES128-GCM-SHA256:!ECDHE-ECDSA-AES256-SHA384:!ECDHE-ECDSA-AES128-SHA256:!ECDHE-ECDSA-AES256-SHA:!ECDHE-ECDSA-AES128-SHA:!ECDHE-RSA-AES256-SHA384:!ECDHE-RSA-AES128-SHA256:!ECDHE-RSA-AES256-SHA:!ECDHE-RSA-AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA:!DHE-DSS-AES256-SHA256:!DHE-DSS-AES128-SHA256:!DHE-DSS-AES256-SHA:!DHE-DSS-AES128-SHA:!DHE-DSS-DES-CBC3-SHA:!NULL-SHA256:!NULL-SHA
+          ```
 
-         >[!NOTE]
-         >In the preceding code, `!` negates the expression. This tells OpenSSL to not use the following cipher suite.  
+         > [!NOTE]
+         > Im vorangehenden Code negiert `!` den Ausdruck. Damit wird OpenSSL mitgeteilt, dass die folgende Verschlüsselungssammlung nicht verwendet werden soll.  
 
       1. Starten Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mithilfe des folgenden Befehls neu.
 
-      ```bash
-      sudo systemctl restart mssql-server
-      ```
+          ```bash
+          sudo systemctl restart mssql-server
+          ```
 
 - [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]-Datenbanken unter Windows, die In-Memory-OLTP nutzen, können nicht in SQL Server 2019 (15.x) für Linux wiederhergestellt werden. Führen Sie zunächst ein Upgrade auf [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], SQL Server 2017 oder SQL Server 2019 unter Windows für die Datenbanken durch, und verschieben Sie sie anschließend per Backup/Wiederherstellung oder durch Trennen/Anfügen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für Linux, um eine [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]-Datenbank wiederherzustellen, die In-Memory-OLTP nutzt.
 

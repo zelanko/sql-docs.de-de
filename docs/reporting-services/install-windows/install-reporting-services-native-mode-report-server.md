@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 8f25e6dc-b753-400e-9e9a-50f4f35bf6c4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 64c6981b34f973737b30480b92152faae9e74fd4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9ea3cde2e407600dab0b595df1dace43dc6b1ca3
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79510191"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486844"
 ---
 # <a name="install-reporting-services-2016-native-mode-report-server"></a>Installieren des Reporting Services 2016-Berichtsservers im einheitlichen Modus
 
@@ -90,7 +90,7 @@ URL-Reservierungen bestehen aus Präfix, Hostname, Port und virtuellem Verzeichn
 
 |Teil|BESCHREIBUNG|
 |----------|-----------------|
-|Präfix|Das Standardpräfix ist http. Wenn Sie zuvor ein SSL-Zertifikat (Secure Sockets Layer) installiert haben, versucht das Setup, die URL-Reservierungen mit dem Präfix HTTPS zu erstellen.|
+|Präfix|Das Standardpräfix ist http. Wenn Sie zuvor ein TLS-Zertifikat (Transport Layer Security, früher als Secure Sockets Layer, SSL, bezeichnet) installiert haben, versucht das Setup, die URL-Reservierungen zu erstellen, die das Präfix HTTPS verwenden.|
 |Hostname|Der Standardhostname ist ein Platzhalter (+). Er gibt an, dass der Berichtsserver eine beliebige HTTP-Anforderung an den angegebenen Port für einen beliebigen Hostnamen akzeptiert, der den Computer erreicht, einschließlich `https://<computername>/reportserver`, `https://localhost/reportserver` oder `https://<IPAddress>/reportserver`.|
 |Port|Der Standardport ist 80. Hinweis: Wenn Sie einen anderen Port als Port 80 verwenden, müssen Sie diesen ausdrücklich der URL hinzufügen, wenn Sie eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Webanwendung in einem Browserfenster öffnen.|
 |Virtuelles Verzeichnis|Standardmäßig werden virtuelle Verzeichnisse im Format „ReportServer_\<*Instanzname*>“ für den Berichtsserver-Webdienst und „Reports_\<*Instanzname*>“ für das [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)] erstellt. Beim Berichtsserver-Webdienst lautet der Standardname für das virtuelle Verzeichnis **reportserver**. Für das [!INCLUDE[ssRSWebPortal-Non-Markdown](../../includes/ssrswebportal-non-markdown-md.md)]ist **reports**das standardmäßige virtuelle Verzeichnis.|
@@ -188,7 +188,7 @@ Weitere Informationen finden Sie im Abschnitt über die einheitlichen Modi in de
 [Configure a Report Server Database Connection (Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank)](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
 [Ausschließliche Datei-Installation &#40;Reporting Services&#41;](../../reporting-services/install-windows/files-only-installation-reporting-services.md)  
 [Initialisieren eines Berichtsservers](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
-[Configure SSL Connections on a Native Mode Report Server (Konfigurieren von SSL-Verbindungen auf einem Berichtsserver im einheitlichen Modus)](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)  
+[Konfigurieren von TLS-Verbindungen auf einem Berichtsserver im einheitlichen Modus](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)  
 [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 
 Haben Sie dazu Fragen? [Stellen Sie eine Frage im Reporting Services-Forum](https://go.microsoft.com/fwlink/?LinkId=620231)

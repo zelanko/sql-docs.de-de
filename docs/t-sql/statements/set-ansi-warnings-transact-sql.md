@@ -1,7 +1,7 @@
 ---
 title: SET ANSI_WARNINGS (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 12/04/2017
+ms.date: 04/15/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: f82aaab0-334f-427b-89b0-de4af596b4fa
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d7209914e92854dc301266625a0345336f787e4e
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 141e7ddb6fb0f8d539af559532debe65c01b569f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67948017"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634463"
 ---
 # <a name="set-ansi_warnings-transact-sql"></a>SET ANSI_WARNINGS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,13 +39,13 @@ ms.locfileid: "67948017"
   
 ## <a name="syntax"></a>Syntax
   
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database
   
 SET ANSI_WARNINGS { ON | OFF }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
 
 SET ANSI_WARNINGS ON
@@ -73,8 +73,8 @@ ANSI_WARNINGS muss beim Erstellen oder Bearbeiten von Indizes für berechnete Sp
 > [!IMPORTANT]
 > ANSI_WARNINGS sollte zum Ausführen von verteilten Abfragen auf ON festgelegt sein.  
   
- Der ODBC-Treiber von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client und der OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legen für ANSI_WARNINGS beim Herstellen einer Verbindung automatisch ON fest. Diese Einstellung kann in ODBC-Datenquellen und ODBC-Verbindungsattributen konfiguriert werden, die in der Anwendung festgelegt werden, bevor die Verbindung hergestellt wird. Der Standardwert für SET ANSI_WARNINGS für Verbindungen von DB-Library-Anwendungen ist OFF.  
-  
+Clients wie der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber, der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und der Microsoft JDBC-Treiber für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legen automatisch ANSI_WARNINGS mit einem Verbindungsflag auf EIN fest. Diese Einstellung kann in ODBC-Datenquellen und ODBC-Verbindungsattributen konfiguriert werden, die in der Anwendung festgelegt werden, bevor die Verbindung hergestellt wird. Der Standardwert für SET ANSI_WARNINGS für Verbindungen von DB-Library-Anwendungen ist OFF. Weitere Informationen finden Sie unter [LOGIN7](https://docs.microsoft.com/openspecs/windows_protocols/ms-tds/773a62b6-ee89-4c02-9e5e-344882630aac) in den TDS-Protokollspezifikationen (Tabular Data Stream). 
+
 Ist SET ANSI_DEFAULTS auf ON festgelegt, so ist ANSI_WARNINGS aktiviert.  
   
 Die Einstellung von ANSI_WARNINGS wird zur Ausführungs- bzw. Laufzeit und nicht zur Analysezeit definiert.  

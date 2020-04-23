@@ -1,5 +1,6 @@
 ---
-title: 'Schritt 4: Herstellen stabiler SQL-Verbindungen mit PHP | Microsoft-Dokumentation'
+title: 'Schritt 4: Herstellen stabiler SQL-Verbindungen mit PHP'
+description: Schritt 4 ist ein Demoprogramm, das veranschaulichen soll, wie vorübergehende Fehler beim Versuch der Verbindungsherstellung zu einer Wiederholung führen.
 ms.custom: ''
 ms.date: 01/22/2018
 ms.prod: sql
@@ -10,18 +11,18 @@ ms.topic: conceptual
 ms.assetid: 8013474f-48e9-43d5-ab89-7b0504044468
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9467a62d2d3ca1cbbd9b5a543c27f310f7d3ba60
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2433dd8662fd06ce8c429fb3d4b25409fa191911
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926892"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528348"
 ---
 # <a name="step-4-connect-resiliently-to-sql-with-php"></a>Schritt 4: Herstellen stabiler SQL-Verbindungen mit PHP
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
   
-Das Demoprogramm wurde so entworfen, dass vorübergehende Fehler (d. h. solche mit einem Fehlercode mit dem Präfix „08“, wie in diesem [Anhang](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes) aufgeführt), die während des Versuchs auftreten, eine Verbindung herzustellen, zu einem nochmaligen Versuch führen. Ein vorübergehender Fehler während des Abfragebefehls bewirkt jedoch, dass das Programm die Verbindung verwirft und eine neue Verbindung herstellt, bevor der Abfragebefehl wiederholt wird. Microsoft spricht keinerlei Empfehlung für oder gegen diese Entwurfsentscheidung aus. Das Demoprogramm soll lediglich die Entwurfsflexibilität veranschaulichen, die Ihnen zur Verfügung steht.  
+Das Demoprogramm wurde so entworfen, dass vorübergehende Fehler (d. h. solche mit einem Fehlercode mit dem Präfix „08“, wie in diesem [Anhang](https://docs.microsoft.com/sql/odbc/reference/appendixes/appendix-a-odbc-error-codes) aufgeführt), die während des Versuchs auftreten, eine Verbindung herzustellen, zu einem nochmaligen Versuch führen. Ein vorübergehender Fehler während des Abfragebefehls bewirkt jedoch, dass das Programm die Verbindung verwirft und eine neue Verbindung herstellt, bevor der Abfragebefehl wiederholt wird. Von dieser Entwurfsoption wird abgeraten. Das Demoprogramm soll lediglich die Entwurfsflexibilität veranschaulichen, die Ihnen zur Verfügung steht.  
   
 Die Länge dieses Codebeispiel ist größtenteils auf die Catch-Exception-Logik zurückzuführen.   
   

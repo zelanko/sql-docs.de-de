@@ -1,5 +1,6 @@
 ---
-title: 'Schritt 3: Proof of Concept für Verbindungen mit SQL Server mithilfe von Java | Microsoft-Dokumentation'
+title: 'Schritt 3: Herstellen der Verbindung mit SQL mithilfe von Java'
+description: Schritt 3 ist ein Proof of Concept, der zeigt, wie Sie mithilfe von Java und JDBC eine Verbindung mit SQL Server herstellen können. Die grundlegenden Beispiele veranschaulichen das Auswählen und Einfügen von Daten.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 014b81238a197f93500ae43a622138bda6818500
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 966c931f5012e5701a0f6db0bd64503be1189d50
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80909139"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528894"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von Java
   

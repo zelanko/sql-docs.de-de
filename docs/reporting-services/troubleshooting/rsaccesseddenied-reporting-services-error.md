@@ -1,5 +1,6 @@
 ---
 title: 'rsAccessedDenied: Reporting Services-Fehler | Microsoft-Dokumentation'
+description: "In dieser Fehlerreferenz erfahren Sie mehr über „rsAccessedDenied“: Die dem Benutzer 'mydomain\\myAccount' erteilten Berechtigungen reichen zum Ausführen des Vorgangs nicht aus."
 ms.date: 05/22/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2f76b1bf-96a2-4755-b76b-84e933220efc
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 0063256e371585fe6d63a1a635aa286fca5a7d39
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ab443e48037add1cc507b71fe87fe7be7bcb43f9
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "66270226"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487241"
 ---
 # <a name="rsaccesseddenied---reporting-services-error"></a>rsAccessedDenied: Reporting Services-Fehler
   Der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Fehler **rsAccessedDenied** tritt auf, wenn ein Benutzer keine Berechtigung zum Ausführen einer Aktion hat, Dies ist beispielsweise der Fall, wenn er nicht über eine Rollenzuweisung zum Öffnen eines Berichts verfügt oder den Browser nicht mit der entsprechenden Berechtigung geöffnet hat.  

@@ -3,17 +3,17 @@ title: Versionshinweise für SQL Server 2017 für Linux
 description: In diesem Artikel werden Versionshinweise und unterstützte Features für SQL Server 2017 für Linux aufgeführt. Es werden sowohl Versionshinweise zum neuesten Release als auch zu einigen früheren Releases aufgeführt.
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/03/2020
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: e52132e0121b602092a9e1bb94cca3e5e8d1ba73
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 0decf0cbaf3d64353e76c4927369503add744808
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286694"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81298260"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Versionshinweise für SQL Server 2017 für Linux
 
@@ -28,9 +28,9 @@ Die folgenden Versionshinweise gelten für [!INCLUDE[ssSQL17](../includes/sssql1
 
 | Plattform | Dateisystem | Installationshandbuch |
 |-----|-----|-----|
-| Red Hat Enterprise Linux 7.3-, 7.4-, 7.5- oder 7.6-Server | XFS oder EXT4 | [Installationshandbuch](quickstart-install-connect-red-hat.md) | 
+| Red Hat Enterprise Linux 7.3-, 7.4-, 7.5-, 7.6- oder 8-Server | XFS oder EXT4 | [Installationshandbuch](quickstart-install-connect-red-hat.md) | 
 | SUSE Enterprise Linux Server v12 SP2 | XFS oder EXT4 | [Installationshandbuch](quickstart-install-connect-suse.md) |
-| Ubuntu 16.04 LTS | XFS oder EXT4 | [Installationshandbuch](quickstart-install-connect-ubuntu.md) | 
+| Ubuntu 16.04 LTS, 18.04 LTS | XFS oder EXT4 | [Installationshandbuch](quickstart-install-connect-ubuntu.md) | 
 | Docker-Engine 1.8+ für Windows, Mac oder Linux | – | [Installationshandbuch](quickstart-install-connect-docker.md) | 
 
 > [!TIP]
@@ -46,6 +46,7 @@ In der folgenden Tabelle wird der Releaseverlauf von [!INCLUDE[ssSQL17](../inclu
 
 | Release               | Version       | Veröffentlichungsdatum |
 |-----------------------|---------------|--------------|
+| [CU20](#CU20)         | 14.0.3294.2   | 2020-04-10   |
 | [CU19](#CU19)         | 14.0.3281.6   | 5\.2.2020   |
 | [CU18](#CU18)         | 14.0.3257.3   | 2019-12-09   |
 | [CU17](#CU17)         | 14.0.3238.1   | 2019-10-08   |
@@ -80,6 +81,27 @@ Führen Sie den entsprechenden Updatebefehl für jedes Paket durch, wenn Sie vor
 - [Installieren des Volltextsuchepakets](sql-server-linux-setup-full-text-search.md)
 - [Install SQL Server Integration Services (Installieren von SQL Server Integration Services)](sql-server-linux-setup-ssis.md)
 - [Aktivieren des SQL Server-Agents](sql-server-linux-setup-sql-agent.md)
+
+## <a name="cu20-april-2020"></a><a id="CU20"></a> CU20 (April 2020)
+
+Dies ist das CU20-Release (Cumulative Update 20) von [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. Die Version von [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] für dieses Release ist 14.0.3294.2. Informationen zu den Fehlerbehebungen und Verbesserungen in diesem Release finden Sie unter <https://support.microsoft.com/help/4541283>.
+
+### <a name="package-details"></a>Paketdetails
+
+Für manuelle oder offline durchgeführte Paketinstallationen können Sie die RPM- und Debian-Pakete herunterladen, die in der folgenden Tabelle aufgeführt werden:
+
+> [!NOTE]
+> **Ubuntu 18.04** und **RHEL 8** werden jetzt für SQL Server 2017 ab CU20 unterstützt.
+>
+> Die Links zu den Offline-Installationspaketen für Ubuntu zeigen auf Ubuntu 18.04-Pakete, mit Ausnahme des SSIS-Pakets (dieses ist für Ubuntu 18.04 nicht verfügbar). Wenn Sie Pakete für Ubuntu 16.04 benötigen, können Sie diese von diesem Downloadpfad herunterladen: <https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/>.
+>
+> Die Links zu den Offline-Installationspaketen für Red Hat zeigen auf RHEL 8-Pakete, mit Ausnahme des SSIS-Pakets (dieses ist für RHEL 8 nicht verfügbar). Wenn Sie Pakete für RHEL 7 benötigen, können Sie diese von diesem Downloadpfad herunterladen: <https://packages.microsoft.com/rhel/7/mssql-server-2017/>.
+
+| Paket | Paketversion | Downloads |
+|-----|-----|-----|
+| Red Hat RPM-Paket | 14.0.3294.2-27 | [RPM-Engine-Paket](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-14.0.3294.2-27.x86_64.rpm)</br>[RPM-Hochverfügbarkeitspaket](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-ha-14.0.3294.2-27.x86_64.rpm)</br>[RPM-Paket für Volltextsuche](https://packages.microsoft.com/rhel/8/mssql-server-2017/mssql-server-fts-14.0.3294.2-27.x86_64.rpm)</br>[SSIS-Paket](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
+| SLES RPM-Paket | 14.0.3294.2-27 | [RPM-Engine-Paket (mssql-server)](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.3294.2-27.x86_64.rpm)</br>[RPM-Hochverfügbarkeitspaket](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.3294.2-27.x86_64.rpm)</br>[RPM-Paket für Volltextsuche](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.3294.2-27.x86_64.rpm) | 
+| Debian-Paket für Ubuntu 18.04 | 14.0.3294.2-27 | [Debian-Engine-Paket](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.3294.2-27_amd64.deb)</br>[Debian-Hochverfügbarkeitspaket](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.3294.2-27_amd64.deb)</br>[Debian-Paket für Volltextsuche](https://packages.microsoft.com/ubuntu/18.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.3294.2-27_amd64.deb)<br/>[SSIS-Paket](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
 
 ## <a name="cu19-february-2020"></a><a id="CU19"></a> CU 19 (Februar 2020)
 
@@ -502,19 +524,19 @@ In den folgenden Abschnitten werden bekannte Probleme mit dem allgemein verfügb
 
       1. Fügen Sie Folgendes unter „/var/opt/mssql/mssql.conf“ hinzu.
 
-      ```
-      [network]
-      tlsciphers= AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!ECDHE-RSA-AES128-GCM-SHA256:!ECDHE-RSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES128-GCM-SHA256:!ECDHE-ECDSA-AES256-SHA384:!ECDHE-ECDSA-AES128-SHA256:!ECDHE-ECDSA-AES256-SHA:!ECDHE-ECDSA-AES128-SHA:!ECDHE-RSA-AES256-SHA384:!ECDHE-RSA-AES128-SHA256:!ECDHE-RSA-AES256-SHA:!ECDHE-RSA-AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA:!DHE-DSS-AES256-SHA256:!DHE-DSS-AES128-SHA256:!DHE-DSS-AES256-SHA:!DHE-DSS-AES128-SHA:!DHE-DSS-DES-CBC3-SHA:!NULL-SHA256:!NULL-SHA
-      ```
+         ```
+         [network]
+         tlsciphers= AES256-GCM-SHA384:AES128-GCM-SHA256:AES256-SHA256:AES128-SHA256:AES256-SHA:AES128-SHA:!ECDHE-RSA-AES128-GCM-SHA256:!ECDHE-RSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES256-GCM-SHA384:!ECDHE-ECDSA-AES128-GCM-SHA256:!ECDHE-ECDSA-AES256-SHA384:!ECDHE-ECDSA-AES128-SHA256:!ECDHE-ECDSA-AES256-SHA:!ECDHE-ECDSA-AES128-SHA:!ECDHE-RSA-AES256-SHA384:!ECDHE-RSA-AES128-SHA256:!ECDHE-RSA-AES256-SHA:!ECDHE-RSA-AES128-SHA:!DHE-RSA-AES256-GCM-SHA384:!DHE-RSA-AES128-GCM-SHA256:!DHE-RSA-AES256-SHA:!DHE-RSA-AES128-SHA:!DHE-DSS-AES256-SHA256:!DHE-DSS-AES128-SHA256:!DHE-DSS-AES256-SHA:!DHE-DSS-AES128-SHA:!DHE-DSS-DES-CBC3-SHA:!NULL-SHA256:!NULL-SHA
+         ```
 
-         >[!NOTE]
-         >In the preceding code, `!` negates the expression. This tells OpenSSL to not use the following cipher suite.  
+         > [!NOTE]
+         > Im vorangehenden Code negiert `!` den Ausdruck. Damit wird OpenSSL mitgeteilt, dass die folgende Verschlüsselungssammlung nicht verwendet werden soll.  
 
       1. Starten Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mithilfe des folgenden Befehls neu.
 
-      ```bash
-      sudo systemctl restart mssql-server
-      ```
+         ```bash
+         sudo systemctl restart mssql-server
+         ```
 
 - [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]-Datenbanken unter Windows, die In-Memory-OLTP nutzen, können nicht in [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] für Linux wiederhergestellt werden. Führen Sie zunächst ein Upgrade auf [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] oder [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] unter Windows für die Datenbanken durch, und verschieben Sie sie anschließend per Backup/Wiederherstellung oder durch Trennen/Anfügen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für Linux, um eine [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]-Datenbank wiederherzustellen, die In-Memory-OLTP nutzt.
 

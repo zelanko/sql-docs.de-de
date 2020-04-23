@@ -1,5 +1,6 @@
 ---
-title: Verwenden von Tabellenwertparametern | Microsoft-Dokumentation
+title: Verwenden von Tabellenwertparametern
+description: Tabellenwertparameter bieten eine effiziente Möglichkeit, mehrere Datenzeilen in einem einzelnen parametrisierten Befehl von einem Client an SQL Server zu senden.
 ms.custom: ''
 ms.date: 11/19/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8a4a46120991400f8e76c91e8a0e9b00ada2eac0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 698cf6e4e44210ea5f4575d4021514c07fe4255d
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923852"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631938"
 ---
 # <a name="using-table-valued-parameters"></a>Verwenden von Tabellenwertparametern
 
@@ -35,7 +36,7 @@ Für den Zugriff auf Spaltenwerte in Tabellenwertparametern können Standard-SEL
 | Resource                                                                                                             | BESCHREIBUNG                                                                         |
 | -------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | [Tabellenwertparameter (Datenbankmodul)](https://go.microsoft.com/fwlink/?LinkId=98363) in der SQL Server-Onlinedokumentation | Beschreibt, wie Sie Tabellenwertparameter erstellen und verwenden.                             |
-| [Benutzerdefinierte Tabellentypen](https://go.microsoft.com/fwlink/?LinkId=98364) in der SQL Server-Onlinedokumentation                  | Beschreibt die benutzerdefinierten Tabellentypen, die zum Deklarieren von Tabellenwertparametern verwendet werden. |
+| [Benutzerdefinierte Tabellentypen](https://go.microsoft.com/fwlink/?LinkId=98364) in der SQL Server-Onlinedokumentation.                  | Beschreibt die benutzerdefinierten Tabellentypen, die zum Deklarieren von Tabellenwertparametern verwendet werden. |
 | Der Abschnitt [Microsoft SQL Server-Datenbank-Engine](https://go.microsoft.com/fwlink/?LinkId=120507) von CodePlex.        | Enthält Beispiele, in denen die Verwendung von SQL Server-Features und -Funktionalität veranschaulicht wird.  |
   
 ## <a name="passing-multiple-rows-in-previous-versions-of-sql-server"></a>Übergeben mehrerer Zeilen in früheren Versionen von SQL Server  
@@ -48,7 +49,7 @@ Vor der Einführung von Tabellenwertparametern in SQL Server 2008 bestanden nur 
   
 - Erstellen einer Reihe von SQL-Einzelanweisungen für Datenänderungen, die sich auf mehrere Zeilen auswirken. Änderungen können einzeln an den Server übermittelt oder in Gruppen zusammengefasst werden. Auch wenn sie in Batches übermittelt werden, die mehrere Anweisungen enthalten, wird jede Anweisung einzeln auf dem Server ausgeführt.  
   
-- Verwenden des bcp-Hilfsprogramms oder von [SQLServerBulkCopy](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md), um eine Vielzahl von Datenzeilen in eine Tabelle zu laden. Wenngleich dieses Verfahren sehr effizient ist, wird die serverseitige Verarbeitung nur dann unterstützt, wenn die Daten in eine temporäre Tabelle oder Tabellenvariable geladen werden.
+- Verwenden des bcp-Hilfsprogramms oder von [SQLServerBulkCopy](using-bulk-copy-with-the-jdbc-driver.md), um eine Vielzahl von Datenzeilen in eine Tabelle zu laden. Wenngleich dieses Verfahren sehr effizient ist, wird die serverseitige Verarbeitung nur dann unterstützt, wenn die Daten in eine temporäre Tabelle oder Tabellenvariable geladen werden.
   
 ## <a name="creating-table-valued-parameter-types"></a>Erstellen von Tabellenwertparameter-Typen  
 
@@ -88,7 +89,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
 
 ## <a name="limitations-of-table-valued-parameters"></a>Einschränkungen bei Tabellenwertparametern
 
-Bei Verwendung von Tabellenwertparametern müssen eine Reihe von Einschränkungen berücksichtigt werden:  
+Für Tabellenwertparameter gelten verschiedene Einschränkungen:  
   
 - Tabellenwertparameter können nicht an benutzerdefinierte Funktionen übergeben werden.  
   
@@ -314,4 +315,4 @@ Die folgenden Methoden wurden dieser Klasse hinzugefügt, um die Übergabe von T
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Übersicht über den JDBC-Treiber](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[Übersicht über den JDBC-Treiber](overview-of-the-jdbc-driver.md)  

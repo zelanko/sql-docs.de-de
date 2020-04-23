@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: b8b484c9-04c4-4ae9-980e-67bbe5aa8481
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ae98fa644b5aa200db807fd93380802e66eb4eb4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 11aaa38d8fb06c288399c253d530c1bd8440e597
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65571279"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634573"
 ---
 # <a name="configurationsetting-method---removesslcertificatebinding"></a>ConfigurationSetting-Methode: RemoveSSLCertificateBinding
-  Entfernt eine SSL-Zertifikatsbindung  
+  Entfernt eine TLS/SSL-Zertifikatsbindung.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,7 +46,7 @@ public void RemoveSSLCertificateBindings(string Application,
  Die IP-Adresse für die Anwendung  
   
  *Port*  
- Der SSL-Port, der der Bindung zugeordnet ist.  
+ Der TLS-Port, der der Bindung zugeordnet ist.  
   
  *lcid*  
  Das Gebietsschema, das für die zurückgegebenen Fehlermeldungen verwendet werden soll  

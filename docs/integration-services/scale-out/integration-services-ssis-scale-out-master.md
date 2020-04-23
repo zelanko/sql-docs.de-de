@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: e2ec01c0dcb22317e2e20e4485621d2a9aa8352a
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: beb565ec08336cb3cee74faf4e4439cc64529a68
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77903807"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488125"
 ---
 # <a name="integration-services-ssis-scale-out-master"></a>Scale Out-Master von Integration Services (SSIS)
 
@@ -55,7 +55,7 @@ Konfigurieren Sie den Scale Out-Masterdienst mithilfe der `<drive>:\Program File
 |Konfiguration  |BESCHREIBUNG  |Standardwert  |
 |---------|---------|---------|
 |PortNumber|Die Netzwerkportnummer, die zur Kommunikation mit einem Scale Out-Worker verwendet wird|8391|
-|SSLCertThumbprint|Der Fingerabdruck des SSL-Zertifikats verwendet, mit dem die Kommunikation mit einem Scale Out-Worker geschützt wird|Der Fingerabdruck des SSL-Zertifikats, das bei der Installation des Scale Out-Masters angegeben wurde|
+|SSLCertThumbprint|Der Fingerabdruck des TLS/SSL-Zertifikats, das zum Schützen der Kommunikation mit einem Scale Out-Worker verwendet wird.|Der Fingerabdruck des bei der Installation des Scale Out-Masters angegebenen TLS/SSL-Zertifikats|
 |SqlServerName|Der Name der [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]-Instanz, die den SSISDB-Katalog enthält. Zum Beispiel: Servername\\Instanzname.|Der Name der SQL Server-Instanz, mit dem der Scale Out-Master installiert wurde|
 |CleanupCompletedJobsIntervalInMs|Die Zeitspanne für das Bereinigen von abgeschlossenen Ausführungsaufträgen (in Millisekunden)|43200000|
 |DealWithExpiredTasksIntervalInMs|Die Zeitspanne für das Verarbeiten von abgelaufenen Ausführungsaufträgen (in Millisekunden)|300000|

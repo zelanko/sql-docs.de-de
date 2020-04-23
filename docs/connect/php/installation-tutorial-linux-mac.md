@@ -1,6 +1,7 @@
 ---
-title: Tutorial zur Linux- und macOS-Installation für die Microsoft-Treiber für PHP für SQL Server | Microsoft-Dokumentation
-ms.date: 12/12/2019
+title: Linux- und macOS-Installation für die Treiber für PHP
+description: In diesen Anweisungen erfahren Sie, wie Sie die Microsoft-Treiber für PHP für SQL Server für Linux oder macOS installieren.
+ms.date: 04/15/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
@@ -9,17 +10,17 @@ ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.openlocfilehash: 913b6d95a7bb9a690f0a8cdd7d8c88b29782f876
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 987534339a6eff11b775d9f54563d158fa5653e9
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79058574"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529018"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Tutorial zur Linux- und macOS-Installation für die Microsoft-Treiber für PHP für SQL Server
-Die folgende Anleitung setzt eine saubere Umgebung voraus und zeigt, wie PHP 7.x, der Microsoft ODBC-Treiber, der Apache-Webserver und die Microsoft-Treiber für PHP für SQL Server unter Ubuntu 16.04, 18.04 und 19.10, Red Hat 7 und 8, Debian 8, 9, und 10, SUSE 12 und 15, Alpine 3.11 (experimentell) sowie macOS 10.13, 10.14 und 10.15 installiert werden. In dieser Anleitung wird empfohlen, die Treiber mit PECL zu installieren, aber Sie können auch die vorab erstellten Binärdateien von der GitHub-Projektseite [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) (Microsoft-Treiber für PHP für SQL Server) herunterladen und gemäß den Anweisungen unter [Laden der Microsoft-Treiber für PHP für SQL Server](../../connect/php/loading-the-php-sql-driver.md) installieren. Eine Beschreibung des Ladevorgangs von Erweiterungen und die Gründe, warum die Erweiterungen nicht zur php.ini-Datei hinzugefügt werden, finden Sie im Abschnitt zum [Laden der Treiber](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
+Die folgende Anleitung setzt eine saubere Umgebung voraus und zeigt, wie PHP 7.x, der Microsoft ODBC-Treiber, der Apache-Webserver und die Microsoft-Treiber für PHP für SQL Server unter Ubuntu 16.04, 18.04 und 19.10, Red Hat 7 und 8, Debian 8, 9, und 10, SUSE 12 und 15, Alpine 3.11 sowie macOS 10.13, 10.14 und 10.15 installiert werden. In dieser Anleitung wird empfohlen, die Treiber mit PECL zu installieren, aber Sie können auch die vorab erstellten Binärdateien von der GitHub-Projektseite [Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases) (Microsoft-Treiber für PHP für SQL Server) herunterladen und gemäß den Anweisungen unter [Laden der Microsoft-Treiber für PHP für SQL Server](../../connect/php/loading-the-php-sql-driver.md) installieren. Eine Beschreibung des Ladevorgangs von Erweiterungen und die Gründe, warum die Erweiterungen nicht zur php.ini-Datei hinzugefügt werden, finden Sie im Abschnitt zum [Laden der Treiber](../../connect/php/loading-the-php-sql-driver.md#loading-the-driver-at-php-startup).
 
-Mit diesen Anweisungen wird standardmäßig PHP 7.4 installiert. Beachten Sie, dass einige unterstützte Linux-Distributionen standardmäßig PHP 7.1 oder eine frühere Version verwenden, die für die neueste Version der PHP-Treiber für SQL Server nicht unterstützt werden. Achten Sie daher auf die Hinweise am Anfang jedes Abschnitts, um stattdessen PHP 7.2 oder 7.3 zu installieren.
+Mit diesen Anweisungen wird standardmäßig PHP 7.4 mit `pecl install` installiert. Möglicherweise müssen Sie zuerst `pecl channel-update pecl.php.net` ausführen. Beachten Sie, dass einige unterstützte Linux-Distributionen standardmäßig PHP 7.1 oder eine frühere Version verwenden, die für die neueste Version der PHP-Treiber für SQL Server nicht unterstützt werden. Achten Sie daher auf die Hinweise am Anfang jedes Abschnitts, um stattdessen PHP 7.2 oder 7.3 zu installieren.
 
 In dieser Anleitung sind auch Anweisungen zum Installieren von PHP FastCGI Process Manager (PHP-FPM) unter Ubuntu enthalten. Dieser ist bei Verwendung des nginx-Webservers anstelle von Apache erforderlich.
 
@@ -308,13 +309,10 @@ Hinweise zum [Testen der Installation](#testing-your-installation) finden Sie am
 ## <a name="installing-the-drivers-on-alpine-311"></a>Installieren der Treiber unter Alpine 3.11
 
 > [!NOTE]
-> Die Unterstützung für Alpine ist experimentell.
-
-> [!NOTE]
-> Die Standardversion von PHP ist 7.3. Alternative PHP-Versionen sind für Alpine 3.11 in anderen Repositorys nicht verfügbar. Sie können PHP stattdessen aus der Quelle kompilieren.
+> Die Standardversion von PHP ist 7.3. Alternative PHP-Versionen sind für Alpine 3.11 möglicherweise in anderen Repositorys verfügbar. Sie können PHP stattdessen aus der Quelle kompilieren.
 
 ### <a name="step-1-install-php"></a>Schritt 1: Installieren von PHP
-PHP-Pakete für Alpine finden Sie im Repository `edge/community`. Fügen Sie folgende Zeile zu `/etc/apt/repositories` hinzu, und ersetzen Sie dabei `<mirror>` durch die URL eines Alpine-Repositoryspiegels:
+PHP-Pakete für Alpine finden Sie im `edge/community`-Repository. Aktivieren Sie auf der WIKI-Seite [Enable Community Repository](https://wiki.alpinelinux.org/wiki/Enable_Community_Repository) (Aktivieren des Community-Repositorys). Fügen Sie folgende Zeile zu `/etc/apt/repositories` hinzu, und ersetzen Sie dabei `<mirror>` durch die URL eines Alpine-Repositoryspiegels:
 ```
 http://<mirror>/alpine/edge/community
 ```
@@ -335,10 +333,7 @@ sudo su
 echo extension=pdo_sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/10_pdo_sqlsrv.ini
 echo extension=sqlsrv.so >> `php --ini | grep "Scan for additional .ini files" | sed -e "s|.*:\s*||"`/00_sqlsrv.ini
 ```
-Möglicherweise müssen Sie ein Gebietsschema definieren:
-```
-export LC_ALL=C
-```
+
 ### <a name="step-4-install-apache-and-configure-driver-loading"></a>Schritt 4. Installieren von Apache und Konfigurieren des Treiberladevorgangs
 ```
 sudo apk add php7-apache2 apache2
@@ -406,7 +401,7 @@ Hinweise zum [Testen der Installation](#testing-your-installation) finden Sie am
 
 ## <a name="testing-your-installation"></a>Testen der Installation
 
-Wenn Sie dieses Beispielskript testen möchten, erstellen Sie eine Datei namens „testsql.php“ im Dokumentenstamm Ihres Systems. Unter Ubuntu, Debian und Red Hat ist dies `/var/www/html/`, unter SUSE `/srv/www/htdocs`, unter Alpine `/var/www/localhost/htdocs` und unter macOS `/usr/local/var/www`. Kopieren Sie folgendes Skript und fügen Sie es dort ein, indem Sie ggf. Server, Datenbank, Benutzername und Kennwort ersetzen. Unter Alpine 3.11 müssen Sie möglicherweise auch im **-Array den** CharacterSet`$connectionOptions` als „UTF-8“ angeben.
+Wenn Sie dieses Beispielskript testen möchten, erstellen Sie eine Datei namens „testsql.php“ im Dokumentenstamm Ihres Systems. Unter Ubuntu, Debian und Red Hat ist dies `/var/www/html/`, unter SUSE `/srv/www/htdocs`, unter Alpine `/var/www/localhost/htdocs` und unter macOS `/usr/local/var/www`. Kopieren Sie folgendes Skript und fügen Sie es dort ein, indem Sie ggf. Server, Datenbank, Benutzername und Kennwort ersetzen.
 ```
 <?php
 $serverName = "yourServername";

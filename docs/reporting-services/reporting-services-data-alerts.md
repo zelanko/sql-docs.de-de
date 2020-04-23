@@ -9,12 +9,12 @@ ms.assetid: 8c234077-b670-45c0-803f-51c5a5e0866e
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bd26e2ddcacd91269a51e663b80acd4edf95c196
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b1cb553c263bc822d5139d50169241a0f19fdd79
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79286624"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487794"
 ---
 # <a name="reporting-services-data-alerts"></a>Reporting Services-Datenwarnungen
 
@@ -131,7 +131,7 @@ Im Folgenden werden die wichtigsten Bereiche der [!INCLUDE[ssRSnoversion](../inc
   
  In der folgenden Tabelle sind die Konfigurationselemente für Datenwarnungen, ihre Standardwerte, Beschreibungen und Speicherorte aufgeführt.  
   
-|Einstellung|Standardwert|BESCHREIBUNG|Location|  
+|Einstellung|Standardwert|BESCHREIBUNG|Standort|  
 |-------------|-------------------|-----------------|--------------|  
 |AlertingCleanupCycleMinutes|20|Zeit zwischen Starts des Cleanupzyklus in Minuten.|Konfigurationsdatei des Berichtsservers|  
 |AlertingExecutionLogCleanupMinutes|10080|Zeit für die Aufbewahrung von Ausführungsprotokolleinträgen in Minuten.|Konfigurationsdatei des Berichtsservers|  
@@ -270,12 +270,12 @@ Im Folgenden werden die wichtigsten Bereiche der [!INCLUDE[ssRSnoversion](../inc
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] stellt Leistungsindikatoren für weitere [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Funktionen bereit. Weitere Informationen finden Sie unter [Leistungsindikatoren für die Leistungsobjekte „ReportServer:Service“ und „ReportServerSharePoint:Service“](../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md), [Leistungsindikatoren für den MSRS 2011-Webdienst und den MSRS 2011-Windows-Dienst, Leistungsobjekte &#40;einheitlicher Modus&#41;](../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md) und [Leistungsindikatoren für den MSRS 2011-Webdienst im SharePoint-Modus und den MSRS 2011-Windows-Dienst im SharePoint-Modus, Leistungsobjekte &#40;SharePoint-Modus&#41;](../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
   
-##  <a name="support-for-ssl"></a><a name="SupportForSSL"></a> Unterstützung für SSL  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] kann den HTTP-SSL-Dienst (Secure Sockets Layer) verwenden, um verschlüsselte Verbindungen zu einem Berichtsserver oder einer SharePoint-Website herzustellen.  
+##  <a name="support-for-tls"></a><a name="SupportForSSL"></a> Unterstützung für TLS  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] kann den HTTP-SSL-Dienst verwenden, um verschlüsselte Verbindungen mit einem Berichtsserver oder einer SharePoint-Website herzustellen. Transport Layer Security (TLS) wurde früher als Secure Sockets Layer (SSL) bezeichnet.
   
- Die Benutzeroberfläche für den Warnungslaufzeitdienst und die Datenwarnungen unterstützt SSL und funktioniert unabhängig von der Verwendung von SSL oder HTTP ähnlich. Es gibt jedoch einige feine Unterschiede. Wenn die Datenwarnungsdefinition mit einer SSL-Verbindung erstellt wird, verwendet die URL, die zurück auf die SharePoint-Bibliothek von der Datenwarnmeldung verweist, auch SSL. Sie können die SSL-Verbindung identifizieren, da sie in der URL HTTPS anstelle von HTTP verwendet. Ebenso verwendet der Link zurück zur SharePoint-Website HTTP, wenn die Datenwarnungsdefinition mit einer HTTP-Verbindung erstellt wurde. Unabhängig davon, ob die Warnungsdefinition mit SSL oder HTTP erstellt wurde, ist die Erfahrung für Benutzer und Warnungsadministratoren bei der Verwendung des Datenwarnungs-Designers oder Datenwarnungs-Managers identisch. Wenn das Protokoll (HTTP oder SSL) zwischen dem Zeitpunkt der Warnungsdefinitionserstellung, dem anschließenden Update und der erneuten Speicherung geändert wird, wird das ursprüngliche Protokoll beibehalten und in Link-URLs verwendet.  
+ Die Benutzeroberfläche für den Warnungslaufzeitdienst und die Datenwarnungen unterstützt TLS und funktioniert unabhängig von der Verwendung von TLS oder HTTP ähnlich. Es gibt jedoch einige feine Unterschiede. Wenn die Datenwarnungsdefinition mit einer TLS-Verbindung erstellt wird, verwendet die URL, die von der Datenwarnmeldung zurück auf die SharePoint-Bibliothek verweist, auch TLS. Sie können die TLS-Verbindung identifizieren, da sie in der URL HTTPS anstelle von HTTP verwendet. Ebenso verwendet der Link zurück zur SharePoint-Website HTTP, wenn die Datenwarnungsdefinition mit einer HTTP-Verbindung erstellt wurde. Unabhängig davon, ob die Warnungsdefinition mit TLS oder HTTP erstellt wurde, ist die Vorgehensweise für Benutzer und Warnungsadministratoren bei der Verwendung des Datenwarnungs-Designers oder Datenwarnungs-Managers identisch. Wenn das Protokoll (HTTP oder TLS) zwischen dem Zeitpunkt der Warnungsdefinitionserstellung, dem anschließenden Update und der erneuten Speicherung geändert wird, wird das ursprüngliche Protokoll beibehalten und in Link-URLs verwendet.  
   
- Wenn Sie eine Datenwarnung für eine SharePoint-Website erstellen, die für die Verwendung von SSL konfiguriert ist, und dann die SSL-Anforderung entfernen, ist die Warnung auf der Website weiterhin funktionsfähig. Wenn die Website gelöscht wird, wird stattdessen die Standardzonenwebsite verwendet.  
+ Wenn Sie eine Datenwarnung für eine SharePoint-Website erstellen, die für die Verwendung von TLS konfiguriert ist, und dann die TLS-Anforderung entfernen, ist die Warnung auf der Website weiterhin funktionsfähig. Wenn die Website gelöscht wird, wird stattdessen die Standardzonenwebsite verwendet.  
   
 ##  <a name="data-alert-user-interface"></a><a name="UserInterface"></a> Benutzeroberfläche für Datenwarnungen  
  Datenwarnungen enthalten SharePoint-Seiten zum Verwalten von Warnungen sowie einen Designer zum Erstellen und Bearbeiten von Datenwarnungsdefinitionen.  

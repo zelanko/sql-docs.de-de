@@ -1,5 +1,6 @@
 ---
-title: Liste der behobenen Fehler | Microsoft-Dokumentation
+title: Liste der behobenen Fehler
+description: Auf dieser Seite werden alle Fehler aufgeführt, die beginnend mit Microsoft ODBC Driver 17 for SQL Server in jedem Release behoben wurden.
 ms.custom: ''
 ms.date: 06/29/2018
 ms.prod: sql
@@ -13,12 +14,12 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-chojas
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: e1be25052ed75370eead58832119d543717b8e16
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0541f875230426f6ebc0fd1f90ac06110861f025
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "78896778"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629720"
 ---
 # <a name="list-of-bugs-fixed"></a>Liste der behobenen Fehler
 
@@ -30,10 +31,10 @@ Auf dieser Seite werden alle Fehler aufgeführt, die beginnend mit [!INCLUDE[msC
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-175-for-ssnoversion"></a>Fehlerbehebungen in [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.5 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
-- Korrektur der AKV-CMK-Metadaten-Hashberechnung unter Linux/Mac
+- Korrektur der AKV-CMK-Metadaten-Hashberechnung unter Linux/macOS
 - Behebung eines Fehlers beim Laden von OpenSSL 1.0.0
 - Behebung von Konvertierungsproblemen bei Verwendung von ISO-8859-1- und ISO-8859-2-Codepages
-- Korrektur des internen Bibliotheksnamens unter Mac zum Einschluss der Versionsnummer
+- Korrektur des internen Bibliotheksnamens unter macOS zum Einschluss der Versionsnummer
 - Korrektur der Einstellung des NULL-Indikators, wenn separate Längen- und Indikatorbindungen verwendet werde
 
 ### <a name="bug-fixes-in-the-msconame-odbc-driver-1742-for-ssnoversion"></a>Fehlerbehebungen in [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.4.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]

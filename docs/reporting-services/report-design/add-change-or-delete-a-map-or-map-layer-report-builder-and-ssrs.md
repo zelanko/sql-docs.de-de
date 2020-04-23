@@ -25,12 +25,12 @@ f1_keywords:
 ms.assetid: 6e89815e-187e-45bf-bf63-3d5c4a246360
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: acd4bd2641296301449138322e0b4d4e15f7ffb4
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 9e2330442d2e50b5f62328d831e582a03e1ac202
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080647"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488247"
 ---
 # <a name="add-change-or-delete-a-map-or-map-layer-report-builder-and-ssrs"></a>Hinzufügen, Ändern oder Löschen einer Karte oder einer Kartenebene (Berichts-Generator und SSRS)
   Eine Karte ist eine Sammlung von Ebenen. Wenn Sie einem paginierten [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] -Bericht eine Karte hinzufügen, definieren Sie die erste Ebene. Sie können zusätzliche Ebenen mit dem Kartenebenen-Assistenten erstellen.  
@@ -75,7 +75,7 @@ ms.locfileid: "77080647"
   
 1.  Klicken Sie auf die Karte, bis der Kartenbereich angezeigt wird.  
   
-2.  Klicken Sie auf der Symbolleiste auf die Schaltfläche **Ebene hinzufügen** , und klicken Sie in der Dropdownliste auf den Typ der Ebene, die Sie hinzufügen möchten: **Punkt**, **Linie**oder **Polygon**.  
+2.  Klicken Sie auf der Symbolleiste auf die Schaltfläche **Ebene hinzufügen**, und klicken Sie in der Dropdownliste auf den Typ der Ebene, die Sie hinzufügen möchten: **Punkt**, **Linie**oder **Polygon**.  
   
     > [!NOTE]  
     >  Sie können eine Kartenebene auch manuell hinzufügen und konfigurieren. Es empfiehlt sich jedoch, neue Ebenen mit dem Kartenebenen-Assistenten hinzuzufügen. Wenn Sie den Assistenten über die Symbolleiste des Kartenbereichs starten möchten, klicken Sie auf die Schaltfläche für den Ebenen-Assistenten (![rs_IconMapLayerWizard](../../reporting-services/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")).  
@@ -220,7 +220,7 @@ ms.locfileid: "77080647"
   
 3.  Legen Sie im Bereich „Eigenschaften“ UseSecureConnection auf **TRUE**fest.  
   
- Die Verbindung für den Bing Maps-Webdienst ruft Bing Maps-Kacheln für diese Ebene mithilfe des HTTP-SSL (Secure Sockets Layer)-Diensts ab.  
+ Die Verbindung für den Bing Maps-Webdienst verwendet den HTTP-SSL-Dienst, um Bing Maps-Kacheln für diese Ebene abzurufen. Transport Layer Security (TLS) wurde früher als Secure Sockets Layer (SSL) bezeichnet.
   
 ##  <a name="to-specify-the-language-for-tile-labels"></a><a name="Language"></a> So geben Sie die Sprache für Kachelbezeichnungen an  
   

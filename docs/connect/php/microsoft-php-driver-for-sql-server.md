@@ -1,5 +1,6 @@
 ---
 title: Microsoft-Treiber für PHP für SQL Server | Microsoft-Dokumentation
+description: Die Microsoft-Treiber für PHP für SQL Server ermöglichen die Integration von PHP-Anwendungen in SQL Server über PHP-Erweiterungen.
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b13d533ae1acd2fee069a2418b70cf9489d74884
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 007bc81ce5528d1f03f73716bf54b325c48a0ff9
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922846"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486737"
 ---
 # <a name="microsoft-drivers-for-php-for-sql-server"></a>Microsoft-Treiber für PHP für SQL Server
 
@@ -24,10 +25,10 @@ ms.locfileid: "80922846"
 Die Microsoft-Treiber für PHP für SQL Server ermöglichen die Integration in SQL Server für PHP-Anwendungen. Die Treiber sind PHP-Erweiterungen, die das Lesen und Schreiben von SQL Server-Daten aus PHP-Skripts ermöglichen. Die Treiber stellen Schnittstellen für den Zugriff auf Daten in Azure SQL-Datenbanken und in allen Editionen von SQL Server 2005 und höher (einschließlich Express-Editionen) bereit. Die Treiber verwenden PHP-Features, einschließlich PHP-Streams, um große Objekte zu lesen und zu schreiben.  
   
 ## <a name="getting-started"></a>Erste Schritte  
-* [Schritt 1: Konfigurieren der Entwicklungsumgebung für PHP-Entwicklung](step-1-configure-development-environment-for-php-development.md)  
+* [Schritt 1: Konfigurieren der Entwicklungsumgebung für die PHP-Entwicklung](step-1-configure-development-environment-for-php-development.md)  
 * [Schritt 2: Erstellen einer Datenbank für die PHP-Entwicklung](step-2-create-a-sql-database-for-php-development.md)  
-* [Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von PHP](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
-* [Schritt 4: Herstellen belastbarer SQL-Verbindungen mit PHP](step-4-connect-resiliently-to-sql-with-php.md)  
+* [Schritt 3: Proof of Concept für Verbindungen mit SQL mithilfe von PHP](step-3-proof-of-concept-connecting-to-sql-using-php.md)  
+* [Schritt 4: Herstellen robuster Verbindungen mit SQL mit PHP](step-4-connect-resiliently-to-sql-with-php.md)  
   
 ## <a name="documentation"></a>Dokumentation  
 * [Erste Schritte](getting-started-with-the-php-sql-driver.md)

@@ -1,18 +1,18 @@
 ---
 title: Herunterladen des Microsoft OLE DB-Treibers für SQL Server | Microsoft-Dokumentation
-description: Informationen dazu, wo Sie den Microsoft OLE DB-Treiber für SQL Server herunterladen können
+description: Laden Sie den Microsoft OLE DB-Treiber für SQL Server herunter, um native Windows-Anwendungen zu entwickeln, die eine Verbindung mit SQL Server und Azure SQL-Datenbank herstellen.
 ms.date: 02/27/2020
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 25080491fee53fccf83645f83b7984676c8d0bd8
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 626cc125d3bbf0603e8e27f26592a831920f35ef
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921097"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488379"
 ---
 # <a name="download-microsoft-ole-db-driver-for-sql-server"></a>Herunterladen des Microsoft OLE DB-Treibers für SQL Server
 

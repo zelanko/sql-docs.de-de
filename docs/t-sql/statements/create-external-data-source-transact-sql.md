@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 461ce274af8d58574afa3e55e44e950b77cb6014
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2e5937edb162883ac0dfde2d6c444b86092e0a4a
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77705885"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633422"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -58,7 +58,7 @@ Erstellt eine externe Datenquelle für PolyBase-Abfragen. Externe Datenquellen w
 
 ## <a name="syntax"></a>Syntax
 
-```
+```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
@@ -106,7 +106,7 @@ Zusätzliche Hinweise und Anweisungen für das Festlegen des Speicherorts:
 - Verwenden Sie beim Abfragen von Hadoop für alle Tabellen die gleiche externe Datenquelle, um eine konsistente Abfragesemantik zu ermöglichen.
 - Sie können das Speicherort-Präfix `sqlserver` verwenden, um eine Verbindung zwischen einer [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]-Instanz und einer anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz, einer [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]-Instanz oder mit Azure Synapse Analytics herzustellen.
 - Geben Sie `Driver={<Name of Driver>}` an, wenn Sie sich über `ODBC` verbinden.
-- `wasb` ist das Standardprotokoll für Azure Blob Storage. `wasbs` ist optional, wird allerdings empfohlen, da Daten mithilfe einer sicheren SSL-Verbindung gesendet werden.
+- `wasb` ist das Standardprotokoll für Azure Blob Storage. `wasbs` ist optional, wird allerdings empfohlen, da Daten mithilfe einer sicheren TLS/SSL-Verbindung gesendet werden.
 - Für erfolgreiche PolyBase-Abfragen während eines Hadoop-`Namenode`-Failovers sollten Sie in Betracht ziehen, eine virtuelle IP-Adresse für den `Namenode` des Hadoop-Clusters zu verwenden. Falls nicht, führen Sie den Befehl [ALTER EXTERNAL DATA SOURCE][alter_eds] aus, um auf den neuen Speicherort zu verweisen.
 
 ### <a name="connection_options--key_value_pair"></a>CONNECTION_OPTIONS = *key_value_pair*
@@ -405,7 +405,7 @@ Erstellt eine externe Datenquelle für elastische Abfragen. Externe Datenquellen
 
 ## <a name="syntax"></a>Syntax
 
-```
+```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
@@ -622,7 +622,7 @@ Erstellt eine externe Datenquelle für PolyBase. Externe Datenquellen werden zum
 
 ## <a name="syntax"></a>Syntax
 
-```
+```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
@@ -654,10 +654,10 @@ Speicherortpfad:
 
 Zusätzliche Hinweise und Anweisungen für das Festlegen des Speicherorts:
 
-- Bei der Bereitstellung von Azure Data Lake Storage Gen2 ist die Standardoption `enable secure SSL connections`. Wenn diese Option aktiviert ist, müssen Sie `abfss` verwenden, wenn eine sichere SSL-Verbindung ausgewählt ist. Beachten Sie, dass `abfss` auch für unsichere SSL-Verbindungen funktioniert.
+- Bei der Bereitstellung von Azure Data Lake Storage Gen2 ist die Standardoption `enable secure SSL connections`. Wenn diese Option aktiviert ist, müssen Sie `abfss` verwenden, wenn eine sichere TLS/SSL-Verbindung ausgewählt ist. Beachten Sie, dass `abfss` auch für unsichere TLS-Verbindungen funktioniert.
 - Azure Synapse überprüft die Existenz der externen Datenquelle nicht, wenn das Objekt erstellt wird. erforderlich. Erstellen Sie zum Überprüfen mithilfe der externe Datenquelle eine externe Tabelle.
 - Verwenden Sie beim Abfragen von Hadoop für alle Tabellen die gleiche externe Datenquelle, um eine konsistente Abfragesemantik zu ermöglichen.
-- `wasb` ist das Standardprotokoll für Azure Blob Storage. `wasbs` ist optional, wird allerdings empfohlen, da Daten mithilfe einer sicheren SSL-Verbindung gesendet werden.
+- `wasb` ist das Standardprotokoll für Azure Blob Storage. `wasbs` ist optional, wird allerdings empfohlen, da Daten mithilfe einer sicheren TLS-Verbindung gesendet werden.
 
 ### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*
 
@@ -872,7 +872,7 @@ Erstellt eine externe Datenquelle für PolyBase-Abfragen. Externe Datenquellen w
 
 ## <a name="syntax"></a>Syntax
 
-```sql
+```syntaxsql
 CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
   ( [ LOCATION = '<prefix>://<path>[:<port>]' ]
@@ -908,7 +908,7 @@ Zusätzliche Hinweise und Anweisungen für das Festlegen des Speicherorts:
 
 - Die PDW-Engine überprüft die Existenz der externen Datenquelle nicht, wenn das Objekt erstellt wird. Erstellen Sie zum Überprüfen mithilfe der externe Datenquelle eine externe Tabelle.
 - Verwenden Sie beim Abfragen von Hadoop für alle Tabellen die gleiche externe Datenquelle, um eine konsistente Abfragesemantik zu ermöglichen.
-- `wasb` ist das Standardprotokoll für Azure Blob Storage. `wasbs` ist optional, wird allerdings empfohlen, da Daten mithilfe einer sicheren SSL-Verbindung gesendet werden.
+- `wasb` ist das Standardprotokoll für Azure Blob Storage. `wasbs` ist optional, wird allerdings empfohlen, da Daten mithilfe einer sicheren TLS-Verbindung gesendet werden.
 - Für erfolgreiche PolyBase-Abfragen während eines Hadoop-`Namenode`-Failovers sollten Sie in Betracht ziehen, eine virtuelle IP-Adresse für den `Namenode` des Hadoop-Clusters zu verwenden. Falls nicht, führen Sie den Befehl [ALTER EXTERNAL DATA SOURCE][alter_eds] aus, um auf den neuen Speicherort zu verweisen.
 
 ### <a name="credential--credential_name"></a>CREDENTIAL = *credential_name*

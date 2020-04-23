@@ -1,6 +1,6 @@
 ---
 title: Homepage für die SQL-Clientprogrammierung | Microsoft-Dokumentation
-description: Hubseite mit kommentierten Links zu Downloads und Dokumentationsmaterial zum Herstellen einer Verbindung mit SQL Server oder Azure SQL-Datenbank für zahlreiche Kombinationen aus Sprachen und Betriebssystemen.
+description: Seite mit kommentierten Links zu Downloads und Dokumentationsmaterial zum Herstellen einer Verbindung mit SQL Server oder Azure SQL-Datenbank für verschiedene Sprachen und Betriebssysteme.
 author: David-Engel
 ms.date: 11/07/2018
 ms.prod: sql
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: v-daveng
 ms.author: v-daenge
-ms.openlocfilehash: df07130ea77578dd467add9d8a96cc331d5c127f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: c3f2b6db58879a8d0fd3ce82a89511275fe9d3bb
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924886"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529044"
 ---
 # <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Startseite für die Clientprogrammierung in Microsoft SQL Server
 
@@ -23,7 +23,7 @@ ms.locfileid: "80924886"
 Willkommen auf unserer Homepage für die Clientprogrammierung zum Interagieren mit Microsoft SQL Server und Azure SQL-Datenbank in der Cloud. Dieser Artikel bietet die folgenden Informationen:
 
 - Die verfügbaren Kombinationen aus Sprache und Treiber werden aufgeführt und beschrieben.
-    - Es werden Informationen zu den Betriebssystemen von Linux (Ubuntu und weitere), macOS und Windows bereitgestellt.
+  - Es werden Informationen zu den Betriebssystemen von Linux (Ubuntu und weitere), macOS und Windows bereitgestellt.
 - Der Artikel stellt Links zur detaillierten Dokumentation für jede Kombination bereit.
 - Die über- und untergeordneten Bereiche der hierarchischen Dokumentation für bestimmte Sprachen werden angezeigt, sofern vorhanden.
 
@@ -35,7 +35,7 @@ In allen Sprachen ist der Code, mit dem eine Verbindung mit SQL Server hergestel
 Details zu den Verbindungszeichenfolgen zum Herstellen einer Verbindung mit Azure SQL-Datenbank finden Sie hier:
 
 - [Abfragen einer Azure SQL-Datenbank mithilfe von .NET Core (C#)](/azure/sql-database/sql-database-connect-query-dotnet-core).
-- Weitere Artikel zu Vorgängen für Azure SQL-Datenbank mit anderen Sprachen, die sich im Inhaltsverzeichnis in der Nähe des oben genannten Artikels befinden. Beispiel: [Abfragen einer Azure SQL-Datenbank mithilfe von PHP](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php).
+- Weitere Artikel zu Azure SQL-Datenbank über andere Sprachen, die sich im Inhaltsverzeichnis in der Nähe des oben genannten Artikels befinden. Beispiel: [Abfragen einer Azure SQL-Datenbank mithilfe von PHP](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-php).
 
 
 #### <a name="build-an-app-webpages"></a>Webseiten zum Erstellen einer App
@@ -105,12 +105,12 @@ Das EF verfügt über direkte oder indirekte Beziehungen zu den folgenden Techno
 - .NET Framework
 - [LINQ to SQL](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/linq/) oder [LINQ to Entities](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/language-reference/linq-to-entities)
 - Erweiterungen der Sprachsyntax, wie z. B. der **=>** -Operator in C#.
-- Praktische Programme, die Quellcode für Klassen generieren, die sich den Tabellen in Ihrer SQL-Datenbank zuordnen lassen. Beispiel: [EdmGen.exe](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe).
+- Praktische Programme, die Quellcode für Klassen generieren, die sich den Tabellen in Ihrer SQL-Datenbank-Instanz zuordnen lassen. Beispiel: [EdmGen.exe](https://docs.microsoft.com/dotnet/framework/data/adonet/ef/edm-generator-edmgen-exe).
 
 
 #### <a name="original-ef-and-new-ef"></a>Ursprüngliches EF und neues EF
 
-Die [Startseite für das Entity Framework](https://docs.microsoft.com/ef/) bietet eine Einführung in das mit folgender Beschreibung:
+Die [Startseite für das Entity Framework](https://docs.microsoft.com/ef/) bietet eine Einführung mit einer ähnlichen Beschreibung wie folgt:
 
 - Das Entity Framework (EF) ist eine objektrelationale Zuordnung (Object-Relational Mapper, O/RM), die .NET-Entwicklern mithilfe von .NET-Objekten das Arbeiten mit einer Datenbank ermöglicht. Im EF ist der Großteil des Datenzugriffscodes, den Entwickler in der Regel schreiben müssen, nicht mehr erforderlich.
 
@@ -132,7 +132,7 @@ EF und verwandte Technologien sind ausgesprochen leistungsstark, und Entwickler,
 
 ## <a name="java-logoimage-ref-330-java-java-and-jdbc"></a>![Java-Logo][image-ref-330-java] Java und JDBC
 
-Microsoft stellt einen JDBC-Treiber (Java Database Connectivity) für die Verwendung mit SQL Server (oder natürlich Azure SQL-Datenbank) bereit. Dabei handelt es sich um einen JDBC-Treiber vom Typ 4, der über die Standardanwendungsprogrammierschnittstellen für JDBC Database Connectivity zur Verfügung stellt.
+Microsoft stellt einen JDBC-Treiber (Java Database Connectivity) für die Verwendung mit SQL Server (oder Azure SQL-Datenbank) bereit. Dabei handelt es sich um einen JDBC-Treiber vom Typ 4, der über die Standardanwendungsprogrammierschnittstellen für JDBC Database Connectivity zur Verfügung stellt.
 
 #### <a name="code-examples"></a>Codebeispiele
 
@@ -162,9 +162,9 @@ Die JDBC-Dokumentation umfasst die folgenden Hauptthemen:
 
 ## <a name="nodejs-logoimage-ref-340-node-nodejs"></a>![Node.js-Logo][image-ref-340-node] Node.js
 
-Mithilfe von Node.js können Sie unter Windows, Linux oder Mac eine Verbindung mit SQL Server herstellen. Die Hauptseite unserer Node.js-Dokumentation befindet sich [hier](./node-js/index.md).
+Mithilfe von Node.js können Sie unter Windows, Linux oder macOS eine Verbindung mit SQL Server herstellen. Die Hauptseite unserer Node.js-Dokumentation befindet sich [hier](./node-js/index.md).
 
-Der Node.js-Verbindungstreiber für SQL Server ist in JavaScript implementiert. Der Treiber verwendet das TDS-Protokoll, das von allen modernen SQL Server-Versionen unterstützt wird. Der Treiber ist ein Open Source-Projekt und [auf GitHub verfügbar](https://tediousjs.github.io/tedious/).
+Der Node.js-Verbindungstreiber für SQL Server ist in JavaScript implementiert. Der Treiber verwendet das TDS-Protokoll, das von allen modernen SQL Server-Versionen unterstützt wird. Der Treiber ist ein Open-Source-Projekt und [auf GitHub verfügbar](https://tediousjs.github.io/tedious/).
 
 #### <a name="code-examples"></a>Codebeispiele
 
@@ -179,7 +179,7 @@ Der Node.js-Verbindungstreiber für SQL Server ist in JavaScript implementiert. 
 
 <a name="an-160-odbc-cpp-docu" />
 
-## <a name="odbc-for-c"></a>ODBC für C++ 
+## <a name="odbc-for-c"></a>ODBC für C++
 
 ![ODBC-Logo][image-ref-350-odbc] ![cpp-big-plus][image-ref-322-cpp]
 
@@ -201,7 +201,7 @@ Bei den ODBC-Inhalten in diesem Abschnitt geht es hauptsächlich um den Zugriff 
 | Bereich | Unterbereich | BESCHREIBUNG |
 | :--- | :------ | :---------- |
 | [ODBC für C++](./odbc/index.md) | Hauptseite unserer Dokumentation. |
-| [Linux-Mac](./odbc/linux-mac/index.md) | &nbsp; | Informationen zur Verwendung von ODBC auf den Linux- oder MacOS-Betriebssystemen. |
+| [Linux-macOS](./odbc/linux-mac/index.md) | &nbsp; | Informationen zur Verwendung von ODBC auf den Linux- oder macOS-Betriebssystemen. |
 | [Windows](./odbc/windows/index.md)     | &nbsp; | Informationen zur Verwendung von ODBC auf den Windows-Betriebssystemen. |
 | [Verwaltung](../odbc/admin/index.md) | &nbsp; | Das Tool zur Verwaltung von ODBC-Datenquellen. |
 | [Microsoft](../odbc/microsoft/index.md)  | &nbsp; | Verschiedene ODBC-Treiber, die von Microsoft erstellt und bereitgestellt werden. |
@@ -255,7 +255,7 @@ Sie können Python für die Interaktion mit SQL Server verwenden.
 | :--- | :---------- |
 | [Python für SQL Server](./python/index.md) | Hauptseite unserer Dokumentation. |
 | [pymssql-Treiber](./python/pymssql/index.md) | Microsoft wartet und testet den pymssql-Treiber nicht.<br /><br />Der pymssql-Verbindungstreiber ist eine einfache Schnittstelle für SQL-Datenbanken, die in Python-Programmen verwendet wird. pymssql setzt auf FreeTDS auf, um eine Python-Datenbank-API-Schnittstelle (PEP-249) zu Microsoft SQL Server bereitzustellen. |
-| [pyodbc-Treiber](./python/pyodbc/index.md)   | Der pyodbc-Verbindungstreiber ist ein Open Source-Python-Modul, das den Zugriff auf ODBC-Datenbanken vereinfacht. Er implementiert die DB API 2.0-Spezifikation und enthält darüber hinaus viele weitere Python-bezogene praktische Funktionen. |
+| [pyodbc-Treiber](./python/pyodbc/index.md)   | Der pyodbc-Verbindungstreiber ist ein Open-Source-Python-Modul, das den Zugriff auf ODBC-Datenbanken vereinfacht. Er implementiert die DB API 2.0-Spezifikation und enthält darüber hinaus viele weitere Python-bezogene praktische Funktionen. |
 | &nbsp; | <br /> |
 
 
@@ -293,7 +293,7 @@ Bei *Erstellen einer App* liegt der Fokus auf Einfachheit und Vollständigkeit �
 
 Im Folgenden finden Sie eine Übersicht über die auf der Website bereitgestellten Informationen:
 
-#### <a name="java-on-ubuntu"></a>Java unter Ubuntu:
+#### <a name="java-on-ubuntu"></a>Java unter Ubuntu
 
 1. Einrichten Ihrer Umgebung
     - Schritt 1.1: Installieren von SQL Server
@@ -306,7 +306,7 @@ Im Folgenden finden Sie eine Übersicht über die auf der Website bereitgestellt
 3. Beschleunigen Ihrer Java-App auf die bis zu 100-fache Geschwindigkeit
     - Schritt 3.1: Erstellen einer Java-App zum Veranschaulichen von Columnstore-Indizes
 
-#### <a name="python-on-windows"></a>Python unter Windows:
+#### <a name="python-on-windows"></a>Python unter Windows
 
 1. Einrichten Ihrer Umgebung
     - Schritt 1.1: Installieren von SQL Server
@@ -325,13 +325,13 @@ Im Folgenden finden Sie eine Übersicht über die auf der Website bereitgestellt
 
 Die folgenden Screenshot zeigen, wie unsere Website mit der Dokumentation für die SQL-Entwicklung aussieht.
 
-#### <a name="choose-a-language"></a>Wählen Sie eine Sprache aus:
+#### <a name="choose-a-language"></a>Wählen Sie eine Sprache
 
 ![Website für die SQL-Entwicklung, erste Schritte][image-ref-390-aka-ms-sqldev-choose-language]
 
 &nbsp;
 
-#### <a name="choose-an-operating-system"></a>Wählen Sie ein Betriebssystem aus:
+#### <a name="choose-an-operating-system"></a>Wählen Sie ein Betriebssystem aus
 
 ![Website für die SQL-Entwicklung, Java Ubuntu][image-ref-400-aka-ms-sqldev-java-ubuntu]
 

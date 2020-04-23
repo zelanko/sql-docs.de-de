@@ -1,5 +1,6 @@
 ---
-title: Herstellen einer Verbindung mit bcp | Microsoft-Dokumentation
+title: Herstellen einer Verbindung mit bcp
+description: Erfahren Sie, wie Sie das bcp-Hilfsprogramm mit dem Microsoft ODBC Driver for SQL Server unter Linux und macOS verwenden.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0967f40a4f38156babe2f5fd736e57b5567cbdcc
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d667309e390ebe7c31af335d8b3d52b9fd524880
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924547"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632805"
 ---
 # <a name="connecting-with-bcp"></a>Herstellen einer Verbindung mit bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Das Hilfsprogramm [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) ist im [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter Linux und macOS verfügbar. Auf dieser Seite werden die Unterschiede im Vergleich zur Windows-Version von `bcp` dokumentiert.
+Das Hilfsprogramm [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) ist mit dem [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter Linux und macOS verfügbar. Auf dieser Seite werden die Unterschiede im Vergleich zur Windows-Version von `bcp` dokumentiert.
   
 - Das Feldabschlusszeichen ist ein Tabulator („\t“).  
   
@@ -61,7 +62,7 @@ Verwendet einen Zeichendatentyp.
 Gibt die Datenbank an, mit der eine Verbindung hergestellt werden soll.  
   
 - -d  
-Bewirkt, dass der Wert, der an die Option -S von `bcp` übergeben wird, als Datenquellenname (Data Source Name, DSN) interpretiert wird. Weitere Informationen finden Sie unter „DSN-Unterstützung in sqlcmd und bcp“ in [Herstellen einer Verbindung mit sqlcmd](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md).  
+Bewirkt, dass der Wert, der an die Option -S von `bcp` übergeben wird, als Datenquellenname (Data Source Name, DSN) interpretiert wird. Weitere Informationen finden Sie unter „DSN-Unterstützung in sqlcmd und bcp“ in [Herstellen einer Verbindung mit sqlcmd](connecting-with-sqlcmd.md).  
   
 - -e *error_file* Gibt den vollständigen Pfad einer Fehlerdatei an, in der alle Zeilen gespeichert werden, die das Hilfsprogramm `bcp` nicht von der Datei in die Datenbank übertragen kann.  
   
@@ -147,4 +148,4 @@ Bei Verwendung mit den Optionen Format und -f format_file wird anstelle der stan
   
 ## <a name="see-also"></a>Weitere Informationen
 
-[Herstellen einer Verbindung mit **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  
+[Herstellen einer Verbindung mit **sqlcmd**](connecting-with-sqlcmd.md)  

@@ -1,5 +1,6 @@
 ---
-title: 'Schritt 3: Proof of Concept für Verbindungen mit SQL Server mithilfe von Node.js | Microsoft-Dokumentation'
+title: 'Schritt 3: Herstellen der Verbindung mit SQL mithilfe von Node.js'
+description: Dieses Beispiel sollte als Proof of Concept angesehen werden, der zeigt, wie eine Verbindung mit SQL mithilfe von Node.js hergestellt wird, und ist vereinfacht, um das Verständnis zu erleichtern.
 ms.custom: ''
 ms.date: 07/23/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: b52af27ed1f811246a7654ee19fa97ba7deddf07
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: e7bc243bbcfe0f132cebe73df18d52ee769ec77e
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923816"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528914"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>Schritt 3: Proof of Concept für Verbindungen mit SQL mithilfe von Node.js
 

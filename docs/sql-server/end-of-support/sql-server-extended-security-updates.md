@@ -10,12 +10,12 @@ author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: pmasl
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: ac74f1af3d570863bafae7185d6d4ce653f1f036
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 243ebc612e5d3786ec54d8ad089e317d440e4bba
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77256725"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488350"
 ---
 # <a name="what-are-extended-security-updates-for-sql-server"></a>Was sind erweiterte Sicherheitsupdates für SQL Server?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -207,6 +207,25 @@ Gehen Sie zum Herunterladen von ESUs wie folgt vor:
 
 1. Laden Sie Sicherheitsupdates hier herunter, sobald sie verfügbar sind. 
 
+## <a name="configure-regional-redundancy"></a>Konfigurieren der regionalen Redundanz 
+
+Kunden, die regionale Redundanz für ihre **SQL Server-Registrierung** benötigen, können Registrierungsdaten in zwei verschiedenen Regionen erstellen. Dann können die Kunden Sicherheitsupdates aus beiden Regionen basierend auf der Verfügbarkeit des **SQL Server-Registrierungsdiensts** herunterladen. 
+
+Um regionale Redundanz herzustellen, muss der Dienst **SQL Server-Registrierung** in zwei verschiedenen Regionen erstellt werden, und der SQL Server-Bestand muss zwischen diesen beiden Diensten aufgeteilt werden. Auf diese Weise wird die Hälfte der SQL Server-Instanzen mit dem Registrierungsdienst in einer Region und die andere Hälfte mit dem Registrierungsdienst in der anderen Region registriert. 
+
+Zum Konfigurieren der regionalen Redundanz führen Sie die folgenden Schritte aus:
+
+1. Teilen Sie Ihren Bestand an SQL Server 2008- oder 2008 R2-Instanzen in zwei Dateien auf, z. B. „upload1.csv“ und „upload2.csv“. 
+  
+   :::image type="content" source="media/sql-server-extended-security-updates/two-upload-files-for-regional-redundancy.png" alt-text="Beispieldateien für den Upload":::
+
+1. Erstellen Sie den ersten **SQL Server-Registrierungsdienst** in einer Region, und führen Sie dann eine Massenregistrierung der Instanzen in einer der CSV-Dateien in dieser Region durch. Beispiel: Erstellen Sie den ersten **SQL Server-Registrierungsdienst** in der Region **USA, Westen**, und führen Sie eine Massenregistrierung Ihrer SQL Server-Instanzen mit der Datei „upload1.csv“ durch. 
+1. Erstellen Sie den zweiten **SQL Server-Registrierungsdienst** in der zweiten Region, und führen Sie dann eine Massenregistrierung der Instanzen in der anderen CSV-Dateien in dieser Region durch. Beispiel: Erstellen Sie den zweiten **SQL Server-Registrierungsdienst** in der Region **USA, Osten**, und führen Sie eine Massenregistrierung Ihrer SQL Server-Instanzen mit der Datei „upload2.csv“ durch. 
+
+
+Sobald die Daten bei den beiden unterschiedlichen Ressourcen für die **SQL Server-Registrierung** registriert sind, können Sie je nach Dienstverfügbarkeit Sicherheitsupdates aus beiden Regionen herunterladen. 
+
+
 ## <a name="faq"></a>Häufig gestellte Fragen
 
 Allgemeine häufig gestellte Fragen zu erweiterten Sicherheitsupdates finden Sie in den [häufig gestellten Fragen zu erweiterten Sicherheitsupdates](https://www.microsoft.com/cloud-platform/extended-security-updates). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifische häufig gestellte Fragen sind nachstehend aufgeführt. 
@@ -292,7 +311,7 @@ Azure unterstützt derzeit kein Clustering mit gemeinsam genutztem Speicher. Hin
 
 **Können Kunden erweiterte Sicherheitsupdates für SQL Server mit einem externen Hoster nutzen?**
 
-Kunden können erweiterte Sicherheitsupdates nicht nutzen, wenn sie ihre [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]-Umgebung in eine PaaS-Implementierung anderer Cloudanbieter verlagern. Wenn Kunden den Umstieg auf virtuelle Computer (IaaS) planen, können sie License Mobility für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über Software Assurance nutzen und erweiterte Sicherheitsupdates von [!INCLUDE[msCoName](../../includes/msconame-md.md)] erwerben. Damit können sie Patches auf die [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]-Instanzen manuell anwenden, die in einer VM (IaaS) auf dem Server eines autorisierten SPLA-Hosters ausgeführt werden. Kostenlose Updates in Azure sind jedoch das attraktivere Angebot.
+Kunden können erweiterte Sicherheitsupdates nicht nutzen, wenn sie ihre [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]-Umgebung in eine PaaS-Implementierung anderer Cloudanbieter verlagern. Wenn Kunden den Umstieg auf virtuelle Computer (IaaS) planen, können sie License Mobility für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über Software Assurance nutzen und erweiterte Sicherheitsupdates von [!INCLUDE[msCoName](../../includes/msconame-md.md)] erwerben. Damit können sie Patches auf die [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]-Instanzen manuell anwenden, die auf einer VM (IaaS) auf dem Server eines autorisierten SPLA-Hosters ausgeführt werden. Kostenlose Updates in Azure sind jedoch das attraktivere Angebot.
 
 **Was sind die besten Vorgehensweisen zur Verbesserung der Leistung von SQL Server in virtuellen Azure-Computern?** 
 

@@ -1,5 +1,6 @@
 ---
 title: Erstellen der Verbindungs-URL | Microsoft-Dokumentation
+description: Lernen Sie das Format der Verbindungszeichenfolge kennen, das vom Microsoft-JDBC-Treiber für SQL Server verwendet wird.
 ms.custom: ''
 ms.date: 01/29/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 889571da70eaf43878d4226751b2b031853f802f
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 59949c80c565cca03c42b453659117abd69c8e7e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922626"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486924"
 ---
 # <a name="building-the-connection-url"></a>Erstellen der Verbindungs-URL
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -98,7 +99,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  \<*Installationsverzeichnis*>\sqljdbc_\<*Version*>\\<*Sprache*>\auth\  
   
- Unter [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]Herstellen von Verbindungen mit SQL Server mit der integrierten Kerberos-Authentifizierung[ finden Sie für alle vom ](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) unterstützten Betriebssysteme eine Beschreibung einer in [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] eingeführten Funktion, dank derer eine Anwendung mithilfe der integrierten Kerberos-Authentifizierung Typ 4 eine Verbindung mit einer Datenbank herstellen kann.  
+ Unter [Herstellen von Verbindungen mit SQL Server mit der integrierten Kerberos-Authentifizierung](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md) finden Sie für alle vom [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] unterstützten Betriebssysteme eine Beschreibung einer in [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] eingeführten Funktion, dank derer eine Anwendung mithilfe der integrierten Kerberos-Authentifizierung Typ 4 eine Verbindung mit einer Datenbank herstellen kann.  
   
 > [!NOTE]  
 >  Wenn Sie eine 32-Bit-JVM (Java Virtual Machine) ausführen, verwenden Sie die Datei mssql-jdbc_auth-\<version>-\<arch>.dll im Ordner x86, auch wenn es sich bei dem Betriebssystem um die x64-Version handelt. Wenn Sie eine 64-Bit-JVM mit einem x64-Prozessor ausführen, verwenden Sie die Datei mssql-jdbc_auth-\<version>-\<arch>.dll im Ordner x64.  

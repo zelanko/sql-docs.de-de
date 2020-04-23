@@ -1,5 +1,6 @@
 ---
-title: Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung | Microsoft-Dokumentation
+title: Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung
+description: Erfahren Sie, wie Sie Java-Anwendungen entwickeln können, die dieses Azure Active Directory-Authentifizierungsfeature mit dem Microsoft-JDBC-Treiber für SQL Server verwenden.
 ms.custom: ''
 ms.date: 01/29/2020
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e46a8e4d290a5b8c23173153c6e72bd7730be4e7
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 73b377076dfea329ba82c0219c28bf9c955d7e7f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922458"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634807"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung
 
@@ -40,7 +41,7 @@ Folgende Verbindungseigenschaften im Microsoft-JDBC-Treiber für SQL Server unte
 
 *   **accessToken**: Verwenden Sie diese Verbindungseigenschaft, um mithilfe eines Zugriffstokens eine Verbindung mit einer SQL-Datenbank herzustellen. accessToken kann nur über den Properties-Parameter der getConnection()-Methode in der DriverManager-Klasse festgelegt werden. Eine Verwendung in der Verbindungs-URL ist nicht möglich.  
 
-Weitere Informationen finden Sie in der Beschreibung der Authentifizierungseigenschaft auf der Seite [Festlegen von Verbindungseigenschaften](../../connect/jdbc/setting-the-connection-properties.md).  
+Weitere Informationen finden Sie in der Beschreibung der Authentifizierungseigenschaft auf der Seite [Festlegen von Verbindungseigenschaften](setting-the-connection-properties.md).  
 
 
 ## <a name="client-setup-requirements"></a>Anforderungen an das Clientsetup
@@ -107,10 +108,10 @@ You have successfully logged on as: <your MSI username>
 
 ## <a name="connecting-using-activedirectoryintegrated-authentication-mode"></a>Herstellen einer Verbindung im ActiveDirectoryIntegrated-Authentifizierungsmodus
 Ab Version 6.4. fügt der Microsoft-JDBC-Treiber Unterstützung für die ActiveDirectoryIntegrated-Authentifizierung mithilfe eines Kerberos-Tickets auf verschiedenen Plattformen hinzu (Windows, Linux und macOS).
-Weitere Informationen finden Sie unter [Einrichten eines Kerberos-Tickets unter Windows, Linux und Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac). Alternativ dazu kann unter Windows auch „mssql-jdbc_auth-\<version>-\<arch>.dll“ für die ActiveDirectoryIntegrated-Authentifizierung mit dem JDBC-Treiber verwendet werden.
+Weitere Informationen finden Sie unter [Einrichten eines Kerberos-Tickets unter Windows, Linux und macOS](#set-kerberos-ticket-on-windows-linux-and-macos). Alternativ dazu kann unter Windows auch „mssql-jdbc_auth-\<version>-\<arch>.dll“ für die ActiveDirectoryIntegrated-Authentifizierung mit dem JDBC-Treiber verwendet werden.
 
 > [!NOTE]
->  Wenn Sie eine ältere Version des Treibers verwenden, finden Sie unter diesem [Link](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) Informationen zu den jeweiligen Abhängigkeiten, die zur Verwendung dieses Authentifizierungsmodus erforderlich sind. 
+>  Wenn Sie eine ältere Version des Treibers verwenden, finden Sie unter diesem [Link](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md) Informationen zu den jeweiligen Abhängigkeiten, die zur Verwendung dieses Authentifizierungsmodus erforderlich sind. 
 
 Im folgenden Beispiel wird veranschaulicht, wie der Modus `authentication=ActiveDirectoryIntegrated` verwendet wird. Führen Sie dieses Beispiel auf einem Computer aus, der in die Domäne eingebunden ist und sich in einem Verbund mit Azure Active Directory befindet. Eine eigenständige Datenbank, die Ihren Azure AD-Prinzipal oder eine der Gruppen repräsentiert, denen Sie angehören, muss in der Datenbank vorhanden sein und über die Berechtigung CONNECT verfügen. 
 
@@ -156,7 +157,7 @@ Bei Ausführung dieses Beispiels auf einem Clientcomputer wird automatisch Ihr K
 You have successfully logged on as: <your domain user name>
 ```
 
-### <a name="set-kerberos-ticket-on-windows-linux-and-mac"></a>Einrichten eines Kerberos-Tickets unter Windows, Linux und Mac
+### <a name="set-kerberos-ticket-on-windows-linux-and-macos"></a>Einrichten eines Kerberos-Tickets unter Windows, Linux und macOS
 
 Sie müssen ein Kerberos-Ticket einrichten, das den aktuellen Benutzer mit einem Windows-Domänenkonto verknüpft. Im Folgenden finden Sie die wichtigsten Schritte.
 
@@ -172,7 +173,7 @@ Das JDK enthält `kinit` – hiermit können Sie auf einem in die Domäne eingeb
 > [!NOTE]
 >  Möglicherweise müssen Sie eine `.ini`-Datei mit `-Djava.security.krb5.conf` angeben, damit Ihre Anwendung das KDC findet.
 
-#### <a name="linux-and-mac"></a>Linux und Mac
+#### <a name="linux-and-macos"></a>Linux und macOS
 
 ##### <a name="requirements"></a>Requirements (Anforderungen)
 Zugriff auf einen in die Windows-Domäne eingebundenen Computer, um den Kerberos-Domänencontroller abzufragen.
@@ -190,7 +191,7 @@ Zugriff auf einen in die Windows-Domäne eingebundenen Computer, um den Kerberos
 - **Zu extrahierende Informationen**: Der Name des Domänencontrollers, in diesem Fall `co1-red-dc-33.domain.company.com`
 
 ##### <a name="step-2-configuring-kdc-in-krb5conf"></a>Schritt 2: Konfigurieren des KDC in „krb5.conf“
-- **Ausführung**: Linux/Mac
+- **Ausführung**: Linux/macOS
 - **Aktion:** Bearbeiten Sie „/etc/krb5.con“ in einem Editor Ihrer Wahl. Konfigurieren Sie die folgenden Schlüssel
   ```
   [libdefaults]
@@ -207,7 +208,7 @@ Zugriff auf einen in die Windows-Domäne eingebundenen Computer, um den Kerberos
 >  Die Domäne muss VOLLSTÄNDIG IN GROSSBUCHSTABEN angegeben werden.
 
 ##### <a name="step-3-testing-the-ticket-granting-ticket-retrieval"></a>Schritt 3: Testen des TGT-Abrufs
-- **Ausführung**: Linux/Mac
+- **Ausführung**: Linux/macOS
 - **Aktion:**
   - Verwenden Sie den Befehl `kinit username@DOMAIN.COMPANY.COM`, um ein TGT aus dem KDC abzurufen. Sie werden zur Eingabe Ihres Domänenkennworts aufgefordert.
   - Verwenden Sie `klist`, um die verfügbaren Tickets anzuzeigen. Wenn der kinit-Befehl erfolgreich war, sollte ein Ticket von krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM angezeigt werden.
@@ -285,7 +286,7 @@ Das folgende Beispiel enthält eine einfache Java-Anwendung, die mithilfe der zu
     11. Erstellen Sie im Abschnitt „Schlüssel“ einen Schlüssel, indem Sie das Namensfeld ausfüllen, die Dauer des Schlüssels auswählen und die Konfiguration speichern (lassen Sie das Wertfeld leer). Nach dem Speichern ist das Wertfeld automatisch ausgefüllt. Kopieren Sie den generierten Wert. Dies ist der geheime Clientschlüssel.
     12. Klicken Sie im linken Navigationsbereich auf „Azure Active Directory“. Suchen Sie die Registerkarte „Endpunkte“ unter „App-Registrierungen“. Kopieren Sie die URL unter „OATH 2.0-TOKENENDPUNKT“ – dies ist Ihre STS-URL.
     
-    ![JDBC_AAD_Token](../../connect/jdbc/media/jdbc_aad_token.png)  
+    ![JDBC_AAD_Token](media/jdbc_aad_token.png)  
 2. Melden Sie sich als Azure Active Directory-Administrator bei Ihrer Azure-SQL Server-Benutzerdatenbank an, und geben Sie mithilfe eines T-SQL-Befehls einen Benutzer der eigenständigen Datenbank als Anwendungsprinzipal an. Weitere Informationen zum Erstellen eines Azure Active Directory-Administrators und eines Benutzers einer eigenständigen Datenbank finden Sie unter [Herstellen einer Verbindung mit SQL-Datenbank oder SQL Data Warehouse unter Verwendung der Azure Active Directory-Authentifizierung](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/).
 
     ```

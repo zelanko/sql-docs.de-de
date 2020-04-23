@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c1092674266b518ec051dd20c51d4b05184ff4f0
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: fdf93fe49275f0604606b65b7a8b5f60df0e887e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "63193849"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488586"
 ---
 # <a name="authentication-in-reporting-services"></a>Authentifizierung in Reporting Services
   Unter Authentifizierung versteht man den Prozess, Benutzerrechte für eine bestimmte Identität einzurichten. Es gibt viele Techniken, die Sie verwenden können, um einen Benutzer zu authentifizieren. Die gängigste Methode ist die Verwendung von Kennwörtern. Wenn Sie beispielsweise die Formularauthentifizierung implementieren, benötigen Sie eine Implementierung, bei der die Benutzer nach den Anmeldeinformationen durchsucht werden (normalerweise über eine Oberfläche, in der Anmeldename und Kennwort angefordert werden) und bei der die Benutzer mit einem Datenspeicher, z. B. einer Datenbanktabelle oder einer Konfigurationsdatei, abgeglichen werden. Wenn die Anmeldeinformationen nicht validiert werden können, schlägt der Authentifizierungsprozess fehl, und der Benutzer nimmt eine anonyme Identität an.  
@@ -117,14 +117,14 @@ internal static bool VerifyPassword(string suppliedUserName,
  Hat der Webdienst einen Benutzer erfolgreich über die Sicherheitserweiterung authentifiziert, generiert er ein Cookie, das für nachfolgende Anforderungen verwendet wird. Das Cookie wird möglicherweise nicht persistent mit der benutzerdefinierten Sicherheitsinstanz gespeichert, da der Berichtsserver über keine eigene Sicherheitsinstanz verfügt. Das Cookie wird von der Webdienstmethode <xref:ReportService2010.ReportingService2010.LogonUser%2A> zurückgegeben und wird in Folgeaufrufen der Webdienstmethode und beim URL-Zugriff verwendet.  
   
 > [!NOTE]  
->  Um zu verhindern, dass das Cookie während der Übertragung beschädigt wird, sollten Authentifizierungscookies, die von <xref:ReportService2010.ReportingService2010.LogonUser%2A> zurückgegeben werden, über SSL-Verschlüsselung (Secure Sockets Layer) verschlüsselt werden.  
+>  Um zu verhindern, dass das Cookie während der Übertragung beschädigt wird, müssen Authentifizierungscookies, die von <xref:ReportService2010.ReportingService2010.LogonUser%2A> zurückgegeben werden, per TLS-Verschlüsselung (Transport Layer Security, früher als Secure Sockets Layer, SSL, bezeichnet) verschlüsselt werden.  
   
  Wenn Sie einen Berichtsserver über URL-Zugriff aufrufen, während eine benutzerdefinierte Sicherheitserweiterung installiert ist, verwalten IIS (Internet Information Services) und [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] die Übertragung des Authentifizierungstickets automatisch. Wenn Sie über die SOAP-API auf den Berichtsserver zugreifen, muss Ihre Implementierung der Proxyklasse zusätzliche Unterstützung für die Verwaltung des Authentifizierungstickets enthalten. Weitere Informationen zur Verwendung der SOAP-API und zur Verwendung des Authentifizierungstickets finden Sie unter „Verwenden des Webdiensts mit benutzerdefinierter Sicherheit“.  
   
 ## <a name="forms-authentication"></a>Formularauthentifizierung  
  Die Formularauthentifizierung ist eine Art der [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]-Authentifizierung, bei der ein authentifizierter Benutzer zu einem HTML-Formular geleitet wird. Sobald der Benutzer seine Anmeldeinformationen angibt, gibt das System ein Cookie aus, das ein Authentifizierungsticket enthält. Bei späteren Anforderungen prüft das System zuerst das Cookie, um festzustellen, ob der Benutzer bereits durch den Berichtsserver authentifiziert wurde.  
   
- [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] kann so erweitert werden, dass die Formularauthentifizierung unterstützt wird. Hierzu werden Sicherheitserweiterungsschnittstellen verwendet, die über die Reporting Services-API zur Verfügung gestellt werden. Wenn Sie [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] so erweitern, dass die Formularauthentifizierung verwendet wird, verwenden Sie für die gesamte Kommunikation mit dem Berichtsserver SSL (Secure Sockets Layer), damit sich unberechtigte Benutzer keinen Zugang auf das Cookie eines anderen Benutzers verschaffen können. SSL ermöglicht Clients und dem Berichtsserver eine gegenseitige Authentifizierung, um sicherzustellen, dass keine anderen Computer den Inhalt der Kommunikation zwischen zwei Computern lesen können. Alle Daten, die über SSL-Verbindung von einem Client versendet werden, sind verschlüsselt, sodass unberechtigte Benutzer an den Berichtsserver gesandte Kennwörter und Daten nicht abfangen können.  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] kann so erweitert werden, dass die Formularauthentifizierung unterstützt wird. Hierzu werden Sicherheitserweiterungsschnittstellen verwendet, die über die Reporting Services-API zur Verfügung gestellt werden. Wenn Sie [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] für die Verwendung der Formularauthentifizierung erweitern, verwenden Sie für die gesamte Kommunikation mit dem Berichtsserver Transport Layer Security (TLS, früher als Secure Sockets Layer, SSL, bezeichnet), damit sich unberechtigte Benutzer keinen Zugriff auf das Cookie eines anderen Benutzers verschaffen können. TLS ermöglicht Clients und dem Berichtsserver eine gegenseitige Authentifizierung, um sicherzustellen, dass keine anderen Computer den Inhalt der Kommunikation zwischen den beiden Computern lesen können. Alle von einem Client über eine TLS-Verbindung gesendeten Daten sind verschlüsselt, sodass unberechtigte Benutzer an den Berichtsserver gesandte Kennwörter und Daten nicht abfangen können.  
   
  Die Formularauthentifizierung wird normalerweise implementiert, um Konten und die Authentifizierung für Nicht-Windows-Plattformen zu unterstützen. Einem Benutzer, der auf einen Berichtsserver zugreifen möchte, wird eine grafische Oberfläche angezeigt, und die angegebenen Anmeldeinformationen werden zur Authentifizierung an eine Sicherheitsinstanz übergeben.  
   

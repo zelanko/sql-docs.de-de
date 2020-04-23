@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c201fe2c-0a76-44e5-a233-05e14cd224a6
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b77faf60734e6aad7248c59d37033b26bb6b92e4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 908c5d532386f83078c0dbb7976462f2d282533e
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67903214"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529131"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Konfigurieren von IIS 7 für die Websynchronisierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "67903214"
   
 1.  Installieren und konfigurieren Sie den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Replikationslistener auf dem Computer mit IIS.  
   
-2.  Konfigurieren Sie SSL (Secure Sockets Layer). SSL wird für die Kommunikation zwischen IIS und allen Abonnenten benötigt.  
+2.  Konfigurieren Sie Transport Layer Security (TLS), früher als Secure Sockets Layer (SSL) bezeichnet. TLS wird für die Kommunikation zwischen IIS und allen Abonnenten benötigt.  
   
 3.  Konfigurieren Sie die IIS-Authentifizierung.  
   
@@ -97,9 +97,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
 ## <a name="configuring-iis-authentication"></a>Konfigurieren der IIS-Authentifizierung  
  Wenn Abonnentencomputer eine Verbindung mit IIS herstellen, muss IIS die Abonnenten authentifizieren, damit sie auf Ressourcen und Prozesse zugreifen können. Die Authentifizierung kann sowohl auf die gesamte Website als auch nur auf das von Ihnen erstellte virtuelle Verzeichnis angewendet werden.  
   
- Sie sollten die Standardauthentifizierung mit SSL verwenden. SSL ist in jedem Fall und unabhängig vom verwendeten Authentifizierungstyp erforderlich.  
-  
- Sie sollten die Standardauthentifizierung mit SSL verwenden. SSL ist in jedem Fall und unabhängig vom verwendeten Authentifizierungstyp erforderlich.  
+ Sie sollten die Standardauthentifizierung mit TLS verwenden. TLS ist in jedem Fall und unabhängig vom verwendeten Authentifizierungstyp erforderlich.
   
 #### <a name="to-configure-iis-authentication"></a>So konfigurieren Sie die IIS-Authentifizierung  
   
@@ -112,7 +110,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
 4.  Klicken Sie mit der rechten Maustaste auf "Standardauthentifizierung", und wählen Sie dann "Aktivieren" aus.  
   
 ## <a name="configuring-secure-sockets-layer"></a>Konfigurieren von SSL (Secure Sockets Layer)  
- Geben Sie zum Konfigurieren von SSL ein Zertifikat an, das der Computer mit IIS verwenden soll. Die Websynchronisierung für die Mergereplikation unterstützt lediglich Serverzertifikate, nicht aber Clientzertifikate. Zum Konfigurieren von IIS für die Bereitstellung müssen Sie zunächst ein Zertifikat von einer Zertifizierungsstelle erwerben. Weitere Informationen zu Zertifikaten finden Sie in der IIS-Dokumentation.  
+ Geben Sie zum Konfigurieren von TLS ein Zertifikat an, das der Computer mit IIS verwenden soll. Die Websynchronisierung für die Mergereplikation unterstützt lediglich Serverzertifikate, nicht aber Clientzertifikate. Zum Konfigurieren von IIS für die Bereitstellung müssen Sie zunächst ein Zertifikat von einer Zertifizierungsstelle erwerben. Weitere Informationen zu Zertifikaten finden Sie in der IIS-Dokumentation.  
   
  Nach dem Installieren des Zertifikats müssen Sie dieses Zertifikat der für die Websynchronisierung verwendeten Website zuordnen. Zum Entwickeln und Testen können Sie ein selbstsigniertes Zertifikat angeben. Sie können von IIS 7 ein Zertifikat erstellen und auf dem Computer registrieren lassen.  
   
@@ -121,9 +119,9 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
 > [!IMPORTANT]  
 >  Ein selbstsigniertes Zertifikat wird für eine Produktionsinstallation nicht empfohlen. Selbstsignierte Zertifikate sind nicht sicher. Verwenden Sie selbstsignierte Zertifikate nur zum Entwickeln und Testen.  
   
- Führen Sie zum Konfigurieren von SSL die folgenden Schritte aus:  
+ Führen Sie zum Konfigurieren von TLS die folgenden Schritte aus:  
   
-1.  Konfigurieren Sie die Website so, dass sie SSL erfordert und Clientzertifikate ignoriert.  
+1.  Konfigurieren Sie die Website so, dass sie TLS erfordert und Clientzertifikate ignoriert.  
   
 2.  Rufen Sie ein Zertifikat von einer Zertifizierungsstelle ab, oder erstellen Sie ein selbstsigniertes Zertifikat.  
   
@@ -268,7 +266,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
     5.  Klicken Sie erneut auf **OK** , um die erweiterten Einstellungen zu schließen.  
   
 ## <a name="testing-the-connection-to-replisapidll"></a>Testen der Verbindung mit replisapi.dll  
- Führen Sie die Websynchronisierung im Diagnosemodus aus, um die Verbindung mit dem Computer mit IIS zu testen und um sicherzustellen, dass das SSL-Zertifikat (Secure Sockets Layer) ordnungsgemäß installiert ist. Wenn Sie die Websynchronisierung im Diagnosemodus ausführen möchten, müssen Sie auf dem Computer mit IIS als Administrator angemeldet sein.  
+ Führen Sie die Websynchronisierung im Diagnosemodus aus, um die Verbindung mit dem Computer mit IIS zu testen und sicherzustellen, dass das TLS/SSL-Zertifikat ordnungsgemäß installiert ist. Wenn Sie die Websynchronisierung im Diagnosemodus ausführen möchten, müssen Sie auf dem Computer mit IIS als Administrator angemeldet sein.  
   
 #### <a name="to-test-the-connection-to-replisapidll"></a>So testen Sie die Verbindung mit replisapi.dll  
   

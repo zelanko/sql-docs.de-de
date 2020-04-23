@@ -1,5 +1,6 @@
 ---
-title: Grundlegendes zu XA-Transaktionen | Microsoft-Dokumentation
+title: Grundlegendes zu XA-Transaktionen
+description: Der Microsoft JDBC-Treiber für SQL Server unterstützt optional verteilte Transaktionen für die Java-Plattform und Enterprise Edition/JDBC 2.0.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: efd99a3bc59b18eb29cb03719212b4f00e0c40b0
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 9bcf55fd300c977105229473228955581da7cdd3
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80916996"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528734"
 ---
 # <a name="understanding-xa-transactions"></a>Grundlegendes zu XA-Transaktionen
 
@@ -46,7 +47,7 @@ Die folgenden zusätzlichen Richtlinien gelten für eng verkoppelte Transaktione
 
 - Wenn Sie XA-Transaktionen zusammen mit MS DTC (Microsoft Distributed Transaction Coordinator) verwenden, stellen Sie möglicherweise fest, dass die aktuelle Version von MS DTC eng verkoppeltes XA-Verzweigungsverhalten nicht unterstützt. MS DTC verfügt beispielsweise über eine 1:1-Zuordnung zwischen einer Transaktions-ID für eine XA-Verzweigung (XID) und einer MS DTC-Transaktions-ID, und die von lose verbundenen XA-Verzweigungen ausgeführten Aktionen sind voneinander isoliert.  
   
-- MS DTC unterstützt auch eng verknüpfte XA-Branches, bei denen mehrere XA-Branches mit der gleichen globalen Transaktions-IDs (GTRID) einer einzelnen MS DTC-Transaktions-ID zugewiesen werden. Durch diese Unterstützung können mehrere eng verkoppelte XA-Verzweigungen die jeweiligen Änderungen im Ressourcen-Manager anzeigen, beispielsweise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+- MS DTC unterstützt auch eng verknüpfte XA-Branches, bei denen mehrere XA-Branches mit der gleichen globalen Transaktions-IDs (GTRID) einer einzelnen MS DTC-Transaktions-ID zugewiesen werden. Durch diese Unterstützung können mehrere eng verkoppelte XA-Verzweigungen die jeweiligen Änderungen im Ressourcen-Manager anzeigen, beispielsweise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
 - Das Flag [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) ermöglicht, dass die Anwendungen die eng verkoppelten XA-Transaktionen verwenden können, die verschiedene XA-Verzweigungstransaktions-IDs (BQUAL) aufweisen, jedoch über dieselbe globale Transaktions-ID (GTRID) und Format-ID (FormatID) verfügen. Damit Sie dieses Feature verwenden können, müssen Sie [SSTRANSTIGHTLYCPLD](../../connect/jdbc/reference/sstranstightlycpld-field-sqlserverxaresource.md) für den flags-Parameter der XAResource.start-Methode festlegen:
   
@@ -140,19 +141,19 @@ Ein Timeoutwert wird für jede Transaktion bei deren Start festgelegt, und es er
   
 - `XADefaultTimeout = 0`, `XAMaxTimeout = 0`
   
-     Bedeutet, dass kein Standardtimeout verwendet wird, und kein maximales Timeout für Clients durchgesetzt wird. In diesem Fall tritt ein Timeout für Transaktionen nur dann auf, wenn der Client ein Timeout mithilfe von „XAResource.setTransactionTimeout“ festlegt.  
+     Bedeutet, dass kein Standardtimeout verwendet wird, und kein maximales Timeout für Clients durchgesetzt wird. In diesem Fall tritt ein Timeout für Transaktionen nur dann auf, wenn der Client ein Timeout mithilfe von XAResource.setTransactionTimeout festlegt.  
   
 - `XADefaultTimeout = 60`, `XAMaxTimeout = 0`
   
-     Bedeutet, dass alle Transaktionen ein Timeout von 60 Sekunden aufweisen, wenn vom Client kein Timeout festgelegt wird. Wenn der Client ein Timeout angibt, wird dieser Timeoutwert verwendet. Es wird kein maximaler Wert für das Timeout durchgesetzt.  
+     Bedeutet, dass alle Transaktionen ein Timeout von 60 Sekunden aufweisen, wenn vom Client kein Timeout festgelegt wird. Wenn der Client ein Timeout angibt, wird dieser Timeoutwert verwendet. Es wird kein maximaler Wert für das Timeout durchgesetzt.  
   
 - `XADefaultTimeout = 30`, `XAMaxTimeout = 60`
   
-     Bedeutet, dass alle Transaktionen ein Timeout von 30 Sekunden aufweisen, wenn vom Client kein Timeout festgelegt wird. Wenn der Client ein Timeout angibt, wird das Timeout des Clients verwendet, sofern es weniger als 60 Sekunden (den Maximalwert) beträgt.  
+     Bedeutet, dass alle Transaktionen ein Timeout von 30 Sekunden aufweisen, wenn vom Client kein Timeout festgelegt wird. Wenn der Client ein Timeout angibt, wird das Timeout des Clients verwendet, sofern es weniger als 60 Sekunden (den Maximalwert) beträgt.  
   
 - `XADefaultTimeout = 0`, `XAMaxTimeout = 30`
   
-     Bedeutet, dass alle Transaktionen ein Timeout von 30 Sekunden (den Maximalwert) aufweisen, wenn vom Client kein Timeout festgelegt wird. Wenn der Client ein Timeout angibt, wird das Timeout des Clients verwendet, sofern es weniger als 30 Sekunden (den Maximalwert) beträgt.  
+     Bedeutet, dass alle Transaktionen ein Timeout von 30 Sekunden (den Maximalwert) aufweisen, wenn vom Client kein Timeout festgelegt wird. Wenn der Client ein Timeout angibt, wird das Timeout des Clients verwendet, sofern es weniger als 30 Sekunden (den Maximalwert) beträgt.  
   
 ### <a name="upgrading-sqljdbc_xadll"></a>Aktualisieren von "sqljdbc_xa.dll"
 

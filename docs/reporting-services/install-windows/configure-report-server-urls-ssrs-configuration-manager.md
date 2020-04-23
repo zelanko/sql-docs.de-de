@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a0134ef0-086c-443e-93b9-7213a3d76393
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: da3f7c0f0385ddfd8bdb61ab7009a6503acfb80a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 021df541af90bcaae13e1544f9f6a72e77f8eaf7
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77080247"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486916"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Konfigurieren von Berichtsserver-URLs (SSRS-Konfigurations-Manager)
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]werden URLs für den Zugriff auf den Report Server-Webdienst und das [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]verwendet. Bevor Sie die eine der Anwendungen verwenden können, müssen Sie mindestens je eine URL für den Webdienst und das [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]konfigurieren. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bietet Standardwerte für beide Anwendungs-URLs, die in den meisten Bereitstellungsszenarien gut funktionieren, auch in parallelen Bereitstellungen mit anderen Webdiensten und -anwendungen.  
@@ -33,7 +33,7 @@ ms.locfileid: "77080247"
 |Hostname|Ein TCP/IP-Netzwerk verwendet eine IP-Adresse, um ein Gerät im Netzwerk eindeutig zu bestimmen. Es gibt eine physische IP-Adresse für jede in einem Computer installierte Netzwerkkarte. Wenn die IP-Adresse in einen Hostheader aufgelöst wird, können Sie den Hostheader angeben. Wenn Sie den Berichtsserver in einem Unternehmensnetzwerk bereitstellen, können Sie den Netzwerknamen des Computers verwenden.|  
 |Port|Ein TCP-Port ist ein Endpunkt im Gerät. Der Berichtsserver lauscht Anforderungen auf einem festgelegten Port.|  
 |Virtuelles Verzeichnis|Ein Port wird oft von mehreren Webdiensten oder Anwendungen gemeinsam genutzt. Aus diesem Grund hat eine Berichtsserver-URL immer ein virtuelles Verzeichnis, das der Anwendung entspricht, die die Anforderung erhält. Sie müssen für jede [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Anwendung, die auf derselben IP-Adresse und auf demselben Port lauscht, einen eindeutigen Namen für das virtuelle Verzeichnis angeben.|  
-|SSL-Einstellungen|URLs in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] können so konfiguriert werden, dass sie ein vorhandenes SSL-Zertifikat verwenden, das bereits vorher auf dem Computer installiert wurde. Weitere Informationen finden Sie unter [Konfigurieren von SSL-Verbindungen auf einem Berichtsserver im einheitlichen Modus](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|  
+|SSL-Einstellungen|URLs in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] können so konfiguriert werden, dass sie ein vorhandenes TLS/SSL-Zertifikat verwenden, das bereits vorher auf dem Computer installiert wurde. Weitere Informationen finden Sie unter [Konfigurieren von TLS-Verbindungen auf einem Berichtsserver im einheitlichen Modus](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).|  
   
 ## <a name="default-urls"></a>Standard-URLs  
  Wenn Sie über eine URL auf einen Berichtsserver oder das [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] zugreifen, sollte die URL den Hostnamen enthalten, nicht die IP-Adresse. In einem TCP/IP-Netzwerk wird die IP-Adresse in einen Hostnamen aufgelöst (oder in den Netzwerknamen des Computers). Falls Sie die URLs mithilfe von Standardwerten konfiguriert haben, sollten Sie den Report Server-Webdienst mithilfe der URLs aufrufen können, die den Computernamen oder localhost als Hostnamen angeben:  
@@ -44,7 +44,7 @@ ms.locfileid: "77080247"
   
  Die Einstellungen, die diese URLs verfügbar machen, werden in der folgenden Tabelle angezeigt. Diese Tabelle zeigt die Standardwerte, die eine Berichtsserver-Verbindung über URLs ermöglichen, die einen Hostnamen enthalten:  
   
-|Teil|value|Erklärung|  
+|Teil|Wert|Erklärung|  
 |----------|-----------|-----------------|  
 |IP-Adresse|Alle zugewiesenen|Der Domänennamendienst in Ihrem Netzwerk löst den Hostnamen in der URL in die IP-Adresse des Computers auf. Solange die IP-Adresse in der von Ihnen definierten URL angegeben ist, erreicht eine Anforderung, die an einen bestimmten Host gesandt wird, stets ihr angegebenes Ziel.|  
 |Port|80|Port 80 ist der Standardport für TCP/IP-Verbindungen auf einem Computer. Da der Berichtsserver die Überwachung an Port 80 durchführt, können Sie die Portnummer der URL weglassen. Wenn Sie einen anderen Port angeben, müssen Sie diesen in der URL angeben.|  

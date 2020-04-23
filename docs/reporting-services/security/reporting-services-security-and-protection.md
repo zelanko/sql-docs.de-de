@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 270075c5-bf12-4467-a775-abbda3d954a5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 03234369ed7422433b35a5e3d296f6db1d1b2223
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 189c0d314ba3f16b00ad570b3e0f9fbce9fa2f7e
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570660"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632419"
 ---
 # <a name="reporting-services-security-and-protection"></a>Sicherheit und Schutz für Reporting Services
   In diesem Abschnitt wird beschrieben, welche Sicherheitsfunktionen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. In diesem Abschnitt werden auch die Autorisierungsmodelle und die Authentifizierungsanbieter erläutert, die in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]unterstützt werden.  
@@ -33,6 +33,6 @@ ms.locfileid: "65570660"
   
 |Taskbeschreibungen|Links|  
 |-----------------------|-----------|  
-|Konfigurieren Sie das Secure Sockets Layer (SSL), um Clientverbindungen zum Berichtsserver zu sichern.|[Configure SSL Connections on a Native Mode Report Server (Konfigurieren von SSL-Verbindungen auf einem Berichtsserver im einheitlichen Modus)](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)|  
+|Konfigurieren Sie zum Sichern von Clientverbindungen mit dem Berichtsserver die Transport Layer Security (TLS), früher als Secure Sockets Layer (SSL) bezeichnet.|[Konfigurieren von TLS-Verbindungen auf einem Berichtsserver im einheitlichen Modus](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md)|  
   
   

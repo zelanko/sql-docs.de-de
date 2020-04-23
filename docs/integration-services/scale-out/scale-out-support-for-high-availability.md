@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: d3dadf7955dcb61b5d652a1190280926af09c4ae
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 27087dd1ef9291cd75f8ef5f9b38f822b8900295
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "79286884"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487989"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Scale Out-Unterstützung für Hochverfügbarkeit
 
@@ -53,7 +53,7 @@ Dieser Hostname entspricht dem Scale Out-Masterendpunkt, der als allgemeiner Clu
 ## <a name="3-install-scale-out-master-on-the-secondary-node"></a>3. Installieren des Scale Out-Masters auf dem Sekundärknoten
 Installieren Sie SQL Server Database Engine Services, Integration Services und den Scale Out-Master auf dem Sekundärknoten für den Scale Out-Master. 
 
-Verwenden Sie dasselbe Scale Out-Masterzertifikat wie für den Primärknoten. Exportieren Sie das SSL-Zertifikat für den Scale Out-Master mit dem privaten Schlüssel auf dem Primärknoten, und installieren Sie es im Stammzertifikatspeicher auf dem Sekundärknoten auf dem lokalen Computer. Wählen Sie dieses Zertifikat bei der Installation des Scale Out-Masters auf dem Sekundärknoten aus.
+Verwenden Sie dasselbe Scale Out-Masterzertifikat wie für den Primärknoten. Exportieren Sie das TLS/SSL-Zertifikat für den Scale Out-Master auf dem Primärknoten mit einem privaten Schlüssel, und installieren Sie es im Stammzertifikatspeicher des lokalen Computers auf dem Sekundärknoten. Wählen Sie dieses Zertifikat bei der Installation des Scale Out-Masters auf dem Sekundärknoten aus.
 
 ![Masterkonfiguration für Hochverfügbarkeit 2](media/ha-master-config2.PNG)
 

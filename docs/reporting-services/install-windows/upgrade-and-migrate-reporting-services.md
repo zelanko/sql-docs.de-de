@@ -11,12 +11,12 @@ author: maggiesMSFT
 ms.author: maggies
 ms.topic: conceptual
 ms.date: 08/17/2017
-ms.openlocfilehash: 9d0ff28e1e9c7784da2c1206f72573ba608797a1
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 0d0484552bc489231c83062ec00aa4e9f73dcb90
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68264992"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487259"
 ---
 # <a name="upgrade-and-migrate-reporting-services"></a>Upgrade and Migrate Reporting Services
 
@@ -24,9 +24,9 @@ ms.locfileid: "68264992"
 
   Dieser Artikel dient zur Übersicht über die Upgrade- und Migrationsoptionen für SQL Server Reporting Services. Es gibt zwei allgemeine Vorgehensweisen beim Upgrade einer SQL Server Reporting Services-Bereitstellung:  
  
--   **Upgrade:** Sie aktualisieren die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Komponenten auf den Servern und Instanzen, auf denen sie derzeit installiert sind. Dies wird im Allgemeinen als „direktes“ Upgrade bezeichnet. Direkte Upgrades zwischen verschiedenen Modi des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Servers werden nicht unterstützt. Beispielsweise können Sie keinen Berichtsserver im einheitlichen Modus auf einen Berichtsserver im SharePoint-Modus aktualisieren. Berichtselemente können allerdings zwischen verschiedenen Modi migriert werden. Weitere Informationen finden Sie weiter unten in diesem Dokument im Abschnitt „Migration vom einheitlichen Modus zum SharePoint-Modus“.  
+-   **Upgrade:** Sie aktualisieren die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Komponenten auf den Servern und Instanzen, auf denen sie derzeit installiert sind. Dies wird im Allgemeinen als „direktes“ Upgrade bezeichnet. Direkte Upgrades zwischen verschiedenen Modi des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Servers werden nicht unterstützt. Beispielsweise können Sie keinen Berichtsserver im einheitlichen Modus auf einen Berichtsserver im SharePoint-Modus aktualisieren. Berichtselemente können allerdings zwischen verschiedenen Modi migriert werden. Weitere Informationen finden Sie weiter unten in diesem Dokument im Abschnitt „Migration vom einheitlichen Modus zum SharePoint-Modus“.  
   
--   **Migrieren:** Sie installieren und konfigurieren eine neue SharePoint-Umgebung, kopieren Ihre Berichtselemente und Ressourcen in die neue Umgebung und konfigurieren die neue Umgebung für die Verwendung der vorhandenen Inhalte. Eine einfachere Form der Migration besteht darin, die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenbanken, die Konfigurationsdateien und (falls Sie den SharePoint-Modus verwenden) die SharePoint-Inhaltsdatenbanken zu kopieren.  
+-   **Migration**: Sie installieren und konfigurieren eine neue SharePoint-Umgebung, kopieren Ihre Berichtselemente und -ressourcen in die neue Umgebung und konfigurieren die neue Umgebung für die Verwendung der vorhandenen Inhalte. Eine einfachere Form der Migration besteht darin, die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenbanken, die Konfigurationsdateien und (falls Sie den SharePoint-Modus verwenden) die SharePoint-Inhaltsdatenbanken zu kopieren.  
     
 > **[!INCLUDE[applies](../../includes/applies-md.md)]** Einheitlicher Modus von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] &#124; SharePoint-Modus von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]
 
@@ -83,7 +83,7 @@ ms.locfileid: "68264992"
   
 -   Sichern Sie alle Anpassungen von vorhandenen virtuellen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Verzeichnissen in IIS.  
   
--   Entfernen Sie ungültige SSL-Zertifikate.  Dies schließt Zertifikate ein, die abgelaufen sind und vor dem Upgrade von Reporting Services nicht aktualisiert werden sollen.  Ungültige Zertifikate haben Fehler beim Upgrade zur Folge, und die folgende Fehlermeldung wird in die Reporting Services-Protokolldatei geschrieben: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: Ein SSL-Zertifikat (Secure Sockets Layer) ist für die Website nicht konfiguriert**.  
+-   Entfernen Sie ungültige TLS/SSL-Zertifikate.  Dies schließt Zertifikate ein, die abgelaufen sind und vor dem Upgrade von Reporting Services nicht aktualisiert werden sollen.  Ungültige Zertifikate haben Fehler beim Upgrade zur Folge, und die folgende Fehlermeldung wird in der Reporting Services-Protokolldatei erfasst: **Microsoft.ReportingServices.WmiProvider.WMIProviderException: Ein SSL-Zertifikat (Secure Sockets Layer) ist für die Website nicht konfiguriert.**  
   
  Bevor Sie eine Produktionsumgebung aktualisieren, führen Sie immer ein Testupgrade in einer Vorproduktionsumgebung aus, die die gleiche Konfiguration wie Ihre Produktionsumgebung aufweist.  
   
@@ -165,27 +165,27 @@ ms.locfileid: "68264992"
 ### <a name="sssql14-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] zu SQL Server Reporting Services  
  **Startumgebung:** [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1, SharePoint 2010 oder SharePoint 2013.  
   
- **Endumgebung**: SQL Server Reporting Services, SharePoint 2013 oder SharePoint 2016.   
+ **Endumgebung:** SQL Server Reporting Services, SharePoint 2013 oder SharePoint 2016.   
   
--   **SharePoint 2013/2016:** SharePoint 2013/2016 unterstützt keine direkten Upgrades von SharePoint 2010. Allerdings wird ein **Upgrade mit Anfügen der Datenbanken unterstützt**  .
+-   **SharePoint 2013/2016:** SharePoint 2013/2016 unterstützt keine direkten Upgrades aus SharePoint 2010. Allerdings wird ein **Upgrade mit Anfügen der Datenbanken unterstützt**  .
   
      Wenn Sie über eine in SharePoint 2010 integrierte [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installation verfügen, kann der SharePoint-Server nicht direkt aktualisiert werden. Sie haben jedoch die Möglichkeit, Inhaltsdatenbanken und Dienstanwendungsdatenbanken von der SharePoint 2010-Farm zu einer SharePoint 2013/2016-Farm zu migrieren.  
   
 ### <a name="sssql11-to-sql-server-reporting-services"></a>[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] zu SQL Server Reporting Services  
  **Startumgebung:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] oder [!INCLUDE[ssSQL11SP1](../../includes/sssql11sp1-md.md)], SharePoint 2010.  
   
- **Endumgebung**: SQL Server Reporting Services, SharePoint 2013 oder SharePoint 2016.   
+ **Endumgebung:** SQL Server Reporting Services, SharePoint 2013 oder SharePoint 2016.   
   
--   **SharePoint 2013/2016:** SharePoint 2013/2016 unterstützt keine direkten Upgrades von SharePoint 2010. Allerdings wird ein **Upgrade mit Anfügen der Datenbanken unterstützt**  .
+-   **SharePoint 2013/2016:** SharePoint 2013/2016 unterstützt keine direkten Upgrades aus SharePoint 2010. Allerdings wird ein **Upgrade mit Anfügen der Datenbanken unterstützt**  .
   
      Wenn Sie über eine in SharePoint 2010 integrierte [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installation verfügen, kann der SharePoint-Server nicht direkt aktualisiert werden. Sie haben jedoch die Möglichkeit, Inhaltsdatenbanken und Dienstanwendungsdatenbanken von der SharePoint 2010-Farm zu einer SharePoint 2013/2016-Farm zu migrieren.  
   
 ### <a name="sskilimanjaro-to-sql-server-reporting-services"></a>[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] zu SQL Server Reporting Services  
  **Startumgebung:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], SharePoint 2010.  
   
- **Endumgebung**: SQL Server Reporting Services, SharePoint 2013 oder SharePoint 2016.  
+ **Endumgebung:** SQL Server Reporting Services, SharePoint 2013 oder SharePoint 2016.  
  
--   **SharePoint 2013/2016:** SharePoint 2013/2016 unterstützt keine direkten Upgrades von SharePoint 2010. Allerdings wird ein **Upgrade mit Anfügen der Datenbanken unterstützt**  .
+-   **SharePoint 2013/2016:** SharePoint 2013/2016 unterstützt keine direkten Upgrades aus SharePoint 2010. Allerdings wird ein **Upgrade mit Anfügen der Datenbanken unterstützt**  .
 
     SharePoint muss zuerst migriert werden, bevor Sie Reporting Services aktualisieren können.
   
@@ -208,9 +208,9 @@ ms.locfileid: "68264992"
   
  Sie müssen den zuvor gesicherten Schlüssel wiederherstellen, um auf dem neuen Computer wieder eine umkehrbare Verschlüsselung einzurichten. Der komplette in der Berichtsserver-Datenbank gespeicherte Schlüsselsatz besteht aus einem symmetrischen Schlüsselwert sowie Informationen zur Dienstidentität, mit denen der Zugriff auf den Schlüssel so beschränkt wird, dass diese nur von der Berichtsserverinstanz verwendet werden können, auf denen sie gespeichert wurden. Während der Schlüsselwiederherstellung ersetzt der Berichtsserver vorhandene Kopien des Schlüssels durch neue Versionen. Die neue Version umfasst Werte für die Computer- und Dienstidentität, die auf dem aktuellen Computer definiert wurden. Weitere Informationen finden Sie in den folgenden Themen:  
   
--   SharePoint-Modus: Abschnitt „Schlüsselverwaltung“ im Artikel [Verwalten einer Reporting Services-SharePoint-Dienstanwendung](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md)  
+-   SharePoint-Modus: Im Abschnitt „Schlüsselverwaltung“ im Artikel [Verwalten einer Reporting Services-SharePoint-Dienstanwendung](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md) finden Sie weitere Informationen.  
   
--   Einheitlicher Modus: [Sichern und Wiederherstellen von Reporting Services-Verschlüsselungsschlüsseln](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
+-   Einheitlicher Modus: Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von Reporting Services-Verschlüsselungsschlüsseln](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
   
 ### <a name="fixed-database-name"></a>Fester Datenbankname  

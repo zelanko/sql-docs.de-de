@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 11354683f94b5805255ddd5b2b5c73ec2c1aa5ba
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 1f7a6a95033d16e7bc39f07d6b72324e3aea6634
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117463"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486719"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>Zuordnungen von Datentypen zwischen R und SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ Folgende Typen von Datentypkategorien, die vom [Typsystem von SQL Server](../../
 
 ## <a name="changes-in-data-types-between-sql-server-2016-and-earlier-versions"></a>Was sich bei Datentypen in SQL Server 2016 im Vergleich zu früheren Versionen geändert hat
 
-Microsoft SQL Server 2016 und Microsoft Azure SQL Database kommen mit Verbesserungen bei der Datentypkonvertierung und bei mehreren anderen Vorgängen. Die meisten dieser Verbesserungen tragen zu einer verbesserten Genauigkeit beim Arbeiten mit Gleitkommatypen bei; außerdem gibt es kleine Änderungen bei Vorgängen mit herkömmlichen **datetime**-Typen.
+Microsoft SQL Server 2016 und höher enthalten Verbesserungen bei der Datentypkonvertierung und verschiedenen anderen Vorgängen. Die meisten dieser Verbesserungen tragen zu einer verbesserten Genauigkeit beim Arbeiten mit Gleitkommatypen bei; außerdem gibt es kleine Änderungen bei Vorgängen mit herkömmlichen **datetime**-Typen.
 
 Diese Verbesserungen stehen Ihnen standardmäßig zur Verfügung, wenn Sie einen Datenbankkompatibilitätsgrad von 130 oder höher verwenden. Wenn Sie allerdings einen anderen Kompatibilitätsgrad verwenden oder über eine ältere Version mit der Datenbank verbunden sind, sehen Sie möglicherweise Unterschiede in der Genauigkeit von Zahlen oder anderen Ergebnissen. 
 

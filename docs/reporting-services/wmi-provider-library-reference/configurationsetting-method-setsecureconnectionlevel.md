@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fac7d5e-2670-4657-9439-331e7d93babb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5318d25ed1e6113e65f6e41d40add3ff0203856c
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 36b5efb8a1be107504cfcd7641b44c83924faa92
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580999"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629601"
 ---
 # <a name="configurationsetting-method---setsecureconnectionlevel"></a>ConfigurationSetting-Methode: SetSecureConnectionLevel
   Legt die sichere Verbindungsebene des Berichtsservers fest  
@@ -48,11 +48,11 @@ public void SetSecureConnectionLevel(Int32 Level,
  Gibt *HRESULT* zurück, wodurch der Erfolg oder das Fehlschlagen des Methodenaufrufs angegeben wird. Der Wert 0 (null) gibt an, dass der Methodenaufruf erfolgreich war. Ein Wert ungleich 0 (null) gibt an, dass ein Fehler aufgetreten ist.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Bei einem Aufruf wird die SecureConnectionLevel-Eigenschaft des Berichtsservers auf den angegebenen Wert festgelegt. Der Wert 0 gibt an, dass SSL deaktiviert wird. Ein Wert größer oder gleich 1 gibt an, dass SSL aktiviert wird.  
+ Bei einem Aufruf wird die SecureConnectionLevel-Eigenschaft des Berichtsservers auf den angegebenen Wert festgelegt. Der Wert 0 gibt an, dass TLS deaktiviert wird. Ein Wert größer oder gleich 1 gibt an, dass TLS aktiviert wird.  
   
 -   Wenn der Wert festgelegt ist, wird das SecureConnectionLevel-Element in der Berichtsserver-Konfigurationsdatei geändert, und für das **URLRoot** -Element in der Konfigurationsdatei wird die Verwendung von „https://“ festgelegt, wenn das angegebene *Level* größer oder gleich 1 ist. Wenn das angegebene *Level* 0 ist, wird die Verwendung von „http://“ festgelegt.  
   
- In [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]wird SecureConnectionLevel zu einer ON-/OFF-Option mit dem Standardwert 0. Bei einem beliebigen Wert größer oder gleich 1, der über eine API der SetSecureConnectionLevel-Methode übergeben wird, wird SSL als aktiviert erachtet und die SecureConnectionLevel-Konfigurationseigenschaft in der Datei „rsreportserver.config“ entsprechend festgelegt. Werte von 2 und 3 werden weiterhin aus Gründen der Abwärtskompatibilität zugelassen.  
+ In [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]wird SecureConnectionLevel zu einer ON-/OFF-Option mit dem Standardwert 0. Bei einem beliebigen Wert größer oder gleich 1, der über eine API der SetSecureConnectionLevel-Methode übergeben wird, wird TLS als aktiviert erachtet und die SecureConnectionLevel-Konfigurationseigenschaft in der Datei „rsreportserver.config“ entsprechend festgelegt. Werte von 2 und 3 werden weiterhin aus Gründen der Abwärtskompatibilität zugelassen.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

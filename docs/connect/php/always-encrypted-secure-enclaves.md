@@ -1,5 +1,6 @@
 ---
-title: Verwenden von Always Encrypted mit Secure Enclaves mit den PHP-Treibern für SQL Server | Microsoft-Dokumentation
+title: Always Encrypted mit Secure Enclaves mit den PHP-Treibern
+description: Erfahren Sie, wie Sie Always Encrypted mit Secure Enclaves mit den Microsoft Treibern für PHP für SQL Server verwenden.
 ms.date: 01/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
@@ -7,15 +8,14 @@ ms.custom: ''
 ms.technology: connectivity
 ms.topic: conceptual
 ms.reviewer: ''
-ms.author: v-dapugl
-author: david-puglielli
-manager: v-mabarw
-ms.openlocfilehash: 796a77f3be0e1d15609f91ee1c36c2769a541cc5
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.author: v-daenge
+author: David-Engel
+ms.openlocfilehash: f407cae7fe7d53a7522e64f0bb26961ebeb4276f
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76941084"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632090"
 ---
 # <a name="using-always-encrypted-with-secure-enclaves-with-the-php-drivers-for-sql-server"></a>Verwenden von Always Encrypted mit Secure Enclaves mit den PHP-Treibern für SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "76941084"
 
 ## <a name="enabling-always-encrypted-with-secure-enclaves"></a>Aktivieren von Always Encrypted mit Secure Enclaves
 
-Unterstützung für Always Encrypted mit Secure Enclaves ist in den PHP-Treibern für SQL Server ab 5.8.0 verfügbar. Always Encrypted mit Secure Enclaves erfordert SQL Server 2019 oder höher und mindestens Version 17.4 des ODBC-Treibers. Weitere Einzelheiten zu den allgemeinen Anforderungen für Always Encrypted mit den PHP-Treibern für SQL Server finden Sie [hier](../../connect/php/using-always-encrypted-php-drivers.md).
+Unterstützung für Always Encrypted mit Secure Enclaves ist in den PHP-Treibern für SQL Server ab 5.8.0 verfügbar. Always Encrypted mit Secure Enclaves erfordert SQL Server 2019 oder höher und mindestens Version 17.4 des ODBC-Treibers. Weitere Einzelheiten zu den allgemeinen Anforderungen für Always Encrypted mit den PHP-Treibern für SQL Server finden Sie [hier](using-always-encrypted-php-drivers.md).
 
 Always Encrypted mit Secure Enclaves gewährleistet die Sicherheit verschlüsselter Daten durch den Nachweis der Enclave, d. h. die Bestätigung der Enclave durch einen externen Nachweisdienst. Um Secure Enclaves verwenden zu können, muss das Schlüsselwort `ColumnEncryption` den Nachweistyp und das Protokoll zusammen mit den zugehörigen Nachweisdaten, getrennt durch ein Komma, identifizieren. Version 17.4 des ODBC-Treibers unterstützt nur virtualisierungsbasierte Sicherheit (VBS) und das Protokoll „Host-Überwachungsdienst“ (Host Guardian Service, HGS) für den Enclave-Typ und das Protokoll. Die zugehörigen Nachweisdaten sind die URL des Nachweisservers. Daher wird Folgendes der Verbindungszeichenfolge hinzugefügt:
 
@@ -46,9 +46,9 @@ In den folgenden Beispielen, eines für SQLSRV und eines für PDO_SQLSRV, wird e
 
 - Bei der Verschlüsselung einer Tabelle mit `ALTER TABLE` darf nur eine Spalte für jeden Aufruf von `ALTER TABLE` verschlüsselt werden, sodass mehrere Aufrufe erforderlich sind, um mehrere Spalten zu verschlüsseln.
 - Wenn der Vergleichsschwellenwert als Parameter für den Vergleich der Typen char und nchar übergeben wird, muss die Spaltenbreite im entsprechenden `SQLSRV_SQLTYPE_*` angegeben werden. Andernfalls wird der Fehler `HY104`, `Invalid precision value` zurückgegeben.
-- Für den Musterabgleich muss die Sortierung mithilfe der `Latin1_General_BIN2`-Klausel als `COLLATE` angegeben werden.
-- Wenn die Musterabgleichzeichenfolge als Parameter für den Abgleich der Typen char und nchar übergeben wird, muss der an `SQLSRV_SQLTYPE_*` oder `sqlsrv_query` übergebene `sqlsrv_prepare` die Länge der abzugleichenden Zeichenfolge und nicht die Größe der Spalte angeben. Der Grund ist, dass die Typen char und nchar am Ende der Zeichenfolge Leerzeichen auffüllen. Wenn Sie z. B. die Zeichenfolge `%abc%` mit einer char(10)-Spalte abgleichen, geben Sie `SQLSRV_SQLTYPE_CHAR(5)` an. Wenn Sie stattdessen `SQLSRV_SQLTYPE_CHAR(10)` angeben, gleicht die Abfrage `%abc%     ` (mit fünf angefügten Leerzeichen) ab. Alle Daten in der Spalte mit weniger als fünf angefügten Leerzeichen stimmen nicht überein (daher würde `abcdef` nicht mit `%abc%` übereinstimmen, da vier vorhanden sind). Verwenden Sie bei Unicode-Zeichenfolgen die Funktionen `mb_strlen` oder `iconv_strlen`, um die Anzahl der Zeichen abzurufen.
-- Die PDO-Schnittstelle erlaubt nicht die Angabe der Länge eines Parameters. Geben Sie stattdessen in `null` die Länge 0 oder `PDOStatement::bindParam` an. Wenn die Länge explizit auf einen anderen Wert festgelegt wird, wird der Parameter als Ausgabeparameter behandelt.
+- Für den Musterabgleich muss die Sortierung mithilfe der `COLLATE`-Klausel als `Latin1_General_BIN2` angegeben werden.
+- Wenn die Musterabgleichzeichenfolge als Parameter für den Abgleich der Typen char und nchar übergeben wird, muss der an `sqlsrv_query` oder `sqlsrv_prepare` übergebene `SQLSRV_SQLTYPE_*` die Länge der abzugleichenden Zeichenfolge und nicht die Größe der Spalte angeben. Der Grund ist, dass die Typen char und nchar am Ende der Zeichenfolge Leerzeichen auffüllen. Wenn Sie z. B. die Zeichenfolge `%abc%` mit einer char(10)-Spalte abgleichen, geben Sie `SQLSRV_SQLTYPE_CHAR(5)` an. Wenn Sie stattdessen `SQLSRV_SQLTYPE_CHAR(10)` angeben, gleicht die Abfrage `%abc%     ` (mit fünf angefügten Leerzeichen) ab. Alle Daten in der Spalte mit weniger als fünf angefügten Leerzeichen stimmen nicht überein (daher würde `abcdef` nicht mit `%abc%` übereinstimmen, da vier vorhanden sind). Verwenden Sie bei Unicode-Zeichenfolgen die Funktionen `mb_strlen` oder `iconv_strlen`, um die Anzahl der Zeichen abzurufen.
+- Die PDO-Schnittstelle erlaubt nicht die Angabe der Länge eines Parameters. Geben Sie stattdessen in `PDOStatement::bindParam` die Länge 0 oder `null` an. Wenn die Länge explizit auf einen anderen Wert festgelegt wird, wird der Parameter als Ausgabeparameter behandelt.
 - Der Musterabgleich funktioniert in Always Encrypted nicht für Typen, die keine Zeichenfolgen sind.
 - Auf eine Fehlerüberprüfung wird aus Gründen der Übersichtlichkeit verzichtet. 
 
@@ -391,8 +391,8 @@ zyxwv
 㛜ꆶ㕸㔈♠既ꁺꖁ㓫ޘ갧ᛄ
 ```
 ## <a name="see-also"></a>Weitere Informationen  
-[Programmierhandbuch für den PHP-SQL-Treiber](../../connect/php/programming-guide-for-php-sql-driver.md)  
-[API-Referenz für den SQLSRV-Treiber](../../connect/php/sqlsrv-driver-api-reference.md)  
-[API-Referenz für den PDO_SQLSRV-Treiber](../../connect/php/pdo-sqlsrv-driver-reference.md)  
-[Verwenden von Always Encrypted mit den PHP-Treibern für SQL Server | Microsoft-Dokumentation](../../connect/php/using-always-encrypted-php-drivers.md)
+[Programmierhandbuch für den PHP-SQL-Treiber](programming-guide-for-php-sql-driver.md)  
+[API-Referenz für den SQLSRV-Treiber](sqlsrv-driver-api-reference.md)  
+[API-Referenz für den PDO_SQLSRV-Treiber](pdo-sqlsrv-driver-reference.md)  
+[Verwendung von Always Encrypted mit den PHP-Treibern für SQL Server](using-always-encrypted-php-drivers.md)
   

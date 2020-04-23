@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 74eee587-d5f5-4d1a-bbae-7f4e3f27e23b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a0933927b3c2fe9f6231831e29c329afb5c4e63c
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 736b0620ecf8f7f44611f98daa97b3cc89f3fc4f
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71710828"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81529254"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Sicherheitsarchitektur für die Websynchronisierung
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "71710828"
  <sup>1</sup> Die integrierte Authentifizierung kann nur verwendet werden, wenn alle Computer derselben Domäne oder aber mehreren Domänen angehören, zwischen denen Vertrauensstellungen bestehen.  
   
 > [!NOTE]  
->  Die Delegierung ist erforderlich, wenn Sie die integrierte Authentifizierung verwenden. Es wird empfohlen, die Standardauthentifizierung und SSL für Verbindungen zwischen Abonnenten und IIS zu verwenden.  
+>  Die Delegierung ist erforderlich, wenn Sie die integrierte Authentifizierung verwenden. Sie sollten die Standardauthentifizierung und TLS für Verbindungen zwischen Abonnenten und IIS verwenden.  
   
 ## <a name="e-connection-to-the-publisher"></a>E. Verbindung mit dem Verleger  
  Die Komponenten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Replikationsüberwachung und -Mergereplikationssynchronisierung werden auf dem Computer gehostet, auf dem IIS ausgeführt wird. Diese Komponenten führen die folgenden Aktionen aus:  

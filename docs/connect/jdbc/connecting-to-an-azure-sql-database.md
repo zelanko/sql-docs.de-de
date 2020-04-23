@@ -1,5 +1,6 @@
 ---
-title: Herstellen einer Verbindung mit Azure SQL-Datenbank | Microsoft-Dokumentation
+title: Herstellen einer Verbindung mit einer Azure SQL-Datenbank
+description: In diesem Artikel werden Probleme behandelt, die bei der Verwendung des Microsoft JDBC-Treibers für SQL Server zum Herstellen einer Verbindung mit einer Azure SQL-Datenbankinstanz auftreten.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,33 +11,33 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: f7ecc575fc444a7f834cd8ed84ee340902199b09
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 8d709a8dee2577a9689a43a839126dcb2ec741e7
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80922468"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632529"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Herstellen einer Verbindung mit einer Azure SQL-Datenbank
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-In diesem Artikel werden Probleme behandelt, die auftreten können, wenn über den [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] eine Verbindung mit einer [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] hergestellt wird. Weitere Informationen zur Verbindung mit einer [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] finden Sie unter:  
+In diesem Artikel werden Probleme behandelt, die auftreten können, wenn mit dem [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] eine Verbindung mit einer [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] hergestellt wird. Weitere Informationen zur Verbindung mit einer [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] finden Sie unter:  
   
 - [SQL Azure-Datenbank](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
   
-- [How to: Connect to SQL Azure Using JDBC (Vorgehensweise: Herstellen einer Verbindung mit SQL Azure mithilfe von JDBC)](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
+- [Vorgehensweise: Herstellen einer Verbindung mit SQL Azure mithilfe von JDBC](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
 
-- [Connecting using Azure Active Directory Authentication (Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung)](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)  
+- [Connecting using Azure Active Directory Authentication (Herstellen einer Verbindung mithilfe der Azure Active Directory-Authentifizierung)](connecting-using-azure-active-directory-authentication.md)  
   
 ## <a name="details"></a>Details
 
 Wenn Sie eine Verbindung mit einer [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]-Instanz herstellen, sollten Sie die Masterdatenbank auswählen, um **SQLServerDatabaseMetaData.getCatalogs** aufzurufen.  
-Die Rückgabe sämtlicher Kataloge aus einer Benutzerdatenbank wird von [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] nicht unterstützt. **SQLServerDatabaseMetaData.getCatalogs** verwendet die Ansicht „sys.databases“, um Kataloge abzurufen. Erläuterung zum Verhalten von [SQLServerDatabaseMetaData.getCatalogs](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) in einer **-Instanz finden Sie im Abschnitt „Berechtigungen“ des Artikels** sys.databases (Transact-SQL)[!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
+Die Rückgabe sämtlicher Kataloge aus einer Benutzerdatenbank wird von [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] nicht unterstützt. **SQLServerDatabaseMetaData.getCatalogs** verwendet die Ansicht „sys.databases“, um Kataloge abzurufen. Eine Erläuterung zum Verhalten von **SQLServerDatabaseMetaData.getCatalogs** in einer [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]-Instanz finden Sie im Abschnitt „Berechtigungen“ des Artikels [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).  
   
 ## <a name="connections-dropped"></a>Getrennte Verbindungen
 
-Bei der Verbindung mit einer [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] können Verbindungen im Leerlauf nach einer Phase ohne Aktivität durch eine Netzwerkkomponente (z.B. eine Firewall) getrennt werden. In diesem Kontext werden zwei Arten von inaktiven Verbindungen behandelt:  
+Bei der Verbindung mit einer [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] können Verbindungen im Leerlauf nach einer Phase ohne Aktivität durch eine Netzwerkkomponente (z. B. eine Firewall) getrennt werden. In diesem Kontext werden zwei Arten von inaktiven Verbindungen behandelt:  
 
 - Inaktive Verbindungen auf der TCP-Ebene, wobei Verbindungen von einer beliebigen Anzahl von Netzwerkgeräten gelöscht werden können.  
 
@@ -90,4 +91,4 @@ jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Verbinden mit SQL Server mit dem JDBC-Treiber](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+[Verbinden mit SQL Server mit dem JDBC-Treiber](connecting-to-sql-server-with-the-jdbc-driver.md)  

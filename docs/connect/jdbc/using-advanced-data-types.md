@@ -1,5 +1,6 @@
 ---
-title: Verwenden von erweiterten Datentypen | Microsoft-Dokumentation
+title: Verwenden von erweiterten Datentypen
+description: Erfahren Sie, wie Sie mit erweiterten JDBC-Datentypen mithilfe des Microsoft JDBC-Treibers für SQL Server SQL Server-Datentypen in Java-Datentypen konvertieren können.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 066a56a3c9556ff6e89478a9deeda3716b7d2aac
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 509c2735475b7113887a2291ac6cdfb67dfc865a
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924076"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528724"
 ---
 # <a name="using-advanced-data-types"></a>Verwenden von erweiterten Datentypen
 
@@ -122,7 +123,7 @@ try (PreparedStatement pstmt = con.prepareStatement("INSERT INTO test1 (Col1, Co
 
 ### <a name="modifying-large-value-types-in-a-database"></a>Ändern von Typen mit umfangreichen Werten in einer Datenbank
 
-In den meisten Fällen wird empfohlen, zum Aktualisieren oder Ändern von umfangreichen Werten in der Datenbank mit [-Befehlen wie ](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md), [ und ](../../connect/jdbc/reference/sqlservercallablestatement-class.md) Parameter über die Klassen [!INCLUDE[tsql](../../includes/tsql-md.md)]SQLServerPreparedStatement`UPDATE` und `WRITE`SQLServerCallableStatement`SUBSTRING` zu übergeben.  
+In den meisten Fällen wird empfohlen, zum Aktualisieren oder Ändern von umfangreichen Werten in der Datenbank mit [!INCLUDE[tsql](../../includes/tsql-md.md)]-Befehlen wie `UPDATE`, `WRITE` und `SUBSTRING` Parameter über die Klassen [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) und [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) zu übergeben.  
 
 Wenn Sie in einer umfangreichen Textdatei ein Wort ersetzen müssen, z.B. in einer archivierten HTML-Datei, können Sie ein Clob-Objekt wie folgt verwenden:  
 

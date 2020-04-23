@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 93acefa8-bb41-4ccc-b763-7801f51134e0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0ff71430707e210daf970e969d854e408d777e4e
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 42359f4b8b6f36eec3c4618d39ee68d0f8c84ba5
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "75258969"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528406"
 ---
 # <a name="work-with-multiple-versions-and-instances-of-sql-server"></a>Arbeiten mit mehreren Versionen und Instanzen von SQL Server
 
@@ -38,9 +38,8 @@ Die folgenden SQL Server-bezogenen Elemente sind bei Installation mehrerer Insta
 
 - Analysis Services
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
-- Reporting Services
-::: moniker-end
+- Reporting Services (in SQL Server 2016 und früher). Ab SQL Server 2016 sind SQL Server Reporting Services (SSRS) eine separate Installation. 
+
 
 Sie können frühere Versionen von SQL Server auf einem Computer aktualisieren, auf dem bereits andere SQL Server-Versionen installiert sind. Unterstützte Upgradeszenarien finden Sie unter [Unterstützte Versions- und Editionsupgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md).
   
@@ -64,7 +63,7 @@ Sie können frühere Versionen von SQL Server auf einem Computer aktualisieren, 
 
  Bestimmte Komponenten werden von allen Instanzen aller installierten Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gemeinsam genutzt. Wenn Sie unterschiedliche Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf demselben Computer parallel installieren, werden diese Komponenten automatisch auf die neueste Version aktualisiert. Solche Komponenten werden im Allgemeinen automatisch deinstalliert, wenn die letzte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deinstalliert wird.
   
- Beispiele: der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Browser und Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer.
+ Beispiele: der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Browser und Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] VSS Writer.
   
 ### <a name="components-shared-across-all-instances-of-the-same-major-version-of-ssnoversion"></a>Von allen Instanzen derselben [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -76,7 +75,7 @@ Beispiele: [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCL
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen, die die gleiche Haupt- und Nebenversion aufweisen, nutzen Komponenten gemeinsam.
   
-Beispiel: Unterstützungsdateien für Setup.
+Beispiel: .
   
 ### <a name="components-specific-to-an-instance-of-ssnoversion"></a>Für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -95,23 +94,24 @@ Weitere Informationen über die [!INCLUDE[ssNoVersion](../../includes/ssnoversio
 ## <a name="using-ssnoversion-side-by-side-with-previous-versions-of-ssnoversion"></a>Parallele Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 Sie können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Computer installieren, auf dem bereits Instanzen einer früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version ausgeführt werden. Wenn auf dem Computer bereits eine Standardinstanz vorhanden ist, muss [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als benannte Instanz installiert werden.  
+
+Die folgende Tabelle zeigt die parallele Unterstützung für jede Version von SQL Server in allgemein unterstützten Windows-Versionen mit installierten erforderlichen .NET-Versionen:
+
+| Vorhandene Instanz | Unterstützung der parallelen Installation| 
+|-------------------|----------------------------|
+| SQL Server 2019 | SQL Server 2008 bis SQL Server 2017| 
+| SQL Server 2017 | SQL Server 2008 bis SQL Server 2016| 
+| SQL Server 2016 | SQL Server 2008 bis SQL Server 2014| 
+
+Weitere Informationen finden Sie unter [Verwenden von SQL Server in Windows 8 und höher](https://support.microsoft.com/help/2681562/using-sql-server-in-windows-8-and-later-versions-of-windows-operating). 
+
   
 > [!CAUTION]  
 > [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep bietet keine Unterstützung für die parallele Installation von vorbereiteten [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Instanzen und früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen auf demselben Computer. Beispielsweise können Sie keine Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] parallel zu einer Instanz von vorbereiteten Instanz von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]vorbereiten. Sie können jedoch mehrere vorbereitete Instanzen der gleichen Hauptversion von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parallel auf dem gleichen Computer installieren. Weitere Informationen finden Sie unter [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).  
 >
-> [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] kann nicht parallel mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Computer installiert werden, auf dem Windows Server 2008 R2 Server Core SP1 ausgeführt wird. Weitere Informationen zu Server Core-Installationen finden Sie unter [Installieren von SQL Server 2016 unter Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
+> SQL Server 2016 und höhere Versionen können nicht parallel mit früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf einem Computer installiert werden, auf dem Windows Server 2008 R2 Server Core SP1 ausgeführt wird. Weitere Informationen zu Server Core-Installationen finden Sie unter [Installieren von SQL Server 2016 unter Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
   
-In der folgenden Tabelle wird die Unterstützung für eine parallele Installation von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]dargestellt:
-  
-|Vorhandene Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|Unterstützung der parallelen Installation|  
-|--------------------------------------------------|----------------------------|  
-|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] (64-Bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (32-Bit)<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (64-Bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (32-Bit)<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (64-Bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (32-Bit)<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (64-Bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (32-Bit)<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (64-Bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (32-Bit)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (64-Bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)] <br /><br /> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|  
 
-In der folgenden Tabelle wird die parallele Unterstützung von [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] mit vorherigen Versionen dargestellt:
-
-|Vorhandene Instanz von [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]|Parallele Unterstützung für frühere Versionen|  
-|--------------------------------------------------|----------------------------|  
-|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (32-Bit)<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (64-Bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (32-Bit)<br /><br /> [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (64-Bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (32-Bit)<br /><br /> [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] (64-Bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (32-Bit)<br /><br /> [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (64-Bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (32-Bit)<br /><br /> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (64-Bit) [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]|  
 
 ## <a name="preventing-ip-address-conflicts"></a>Verhindern von Konflikten mit IP-Adressen
 

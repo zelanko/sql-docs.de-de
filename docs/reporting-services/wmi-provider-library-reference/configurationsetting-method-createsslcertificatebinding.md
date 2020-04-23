@@ -10,15 +10,15 @@ helpviewer_keywords:
 ms.assetid: 407d50e4-0a55-43cb-8ddf-2d82714071b1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7b65838720b7300b92829aa57da58563628740cf
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 3c417eb84350ee2b2c3fcf5e74c0e17b2b195d93
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65570755"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630646"
 ---
 # <a name="configurationsetting-method---createsslcertificatebinding"></a>ConfigurationSetting Method – CreateSSLCertificateBinding (ConfigurationSetting-Methode: CreateSSLCertificateBinding)
-  Erstellt eine SSL-Zertifikatsbindung  
+  Erstellt eine TLS/SSL-Zertifikatsbindung.  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -46,7 +46,7 @@ public void CreateSSLCertificateBinding(string application,
  Die IP-Adresse für die Anwendung  
   
  *Port*  
- Der SSL-Port, der der Bindung zugeordnet ist.  
+ Der TLS-Port, der der Bindung zugeordnet ist.  
   
  *Lcid*  
  Das Gebietsschema, das für die zurückgegebenen Fehlermeldungen verwendet werden soll  
@@ -63,7 +63,7 @@ public void CreateSSLCertificateBinding(string application,
 ## <a name="remarks"></a>Bemerkungen  
  Diese Methode fügt rsreportserver.config eine Bindung für die Anwendung hinzu. Wenn HTTP.SYS noch keine Bindung enthält, wird diese dort erstellt.  
   
- Vor dem Erstellen der Bindung untersucht der Methodenaufruf die URL-Reservierungen für die angegebene Anwendung, um zu überprüfen, ob die SSL-Zertifikatsbindung gültig ist.  
+ Vor dem Erstellen der Bindung untersucht der Methodenaufruf die URL-Reservierungen für die angegebene Anwendung, um zu überprüfen, ob die TLS/SSL-Zertifikatsbindung gültig ist.  
   
  Die folgenden Bedingungen werden überprüft und können Ursache für Fehler sein:  
   

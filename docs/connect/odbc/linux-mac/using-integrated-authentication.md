@@ -1,5 +1,6 @@
 ---
-title: Verwenden der integrierten Authentifizierung | Microsoft-Dokumentation
+title: Nutzung der Integrierten Authentifizierung
+descrption: The Microsoft ODBC Driver for SQL Server on Linux and macOS supports connections that use Kerberos integrated authentication.
 ms.custom: ''
 ms.date: 01/20/2017
 ms.prod: sql
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9499ffdf-e0ee-4d3c-8bca-605371eb52d9
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: e938b9dc95daac7f8e5c4727e1e1185bd8dc8087
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 391d81c46640eb10a0ab2968f278412e55f57611
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80921171"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81629650"
 ---
 # <a name="using-integrated-authentication"></a>Nutzung der Integrierten Authentifizierung
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -34,7 +35,7 @@ Driver='ODBC Driver 13 for SQL Server';Server=your_server;Trusted_Connection=yes
   
 Beim Herstellen einer Verbindung mit einem DSN können Sie auch **Trusted_Connection=yes** zum DSN-Eintrag in `odbc.ini` hinzufügen.
   
-Die `-E`-Option von `sqlcmd` und die `-T`-Option von `bcp` können ebenfalls zum Festlegen der integrierten Authentifizierung verwendet werden. Weitere Informationen dazu finden Sie unter [Connecting with **sqlcmd** (Herstellen einer Verbindung mit sqlcmd)](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md) und [Connecting with **bcp** (Herstellen einer Verbindung mit bcp)](../../../connect/odbc/linux-mac/connecting-with-bcp.md).
+Die `-E`-Option von `sqlcmd` und die `-T`-Option von `bcp` können ebenfalls zum Festlegen der integrierten Authentifizierung verwendet werden. Weitere Informationen dazu finden Sie unter [Connecting with **sqlcmd** (Herstellen einer Verbindung mit sqlcmd)](connecting-with-sqlcmd.md) und [Connecting with **bcp** (Herstellen einer Verbindung mit bcp)](connecting-with-bcp.md).
 
 Stellen Sie sicher, dass der Clientprinzipal, der mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verbunden werden soll, bereits mit Kerberos KDC authentifiziert ist.
   
@@ -125,11 +126,11 @@ Die Uhrzeit auf dem Linux- oder macOS-Computer und die Uhrzeit im Schlüsselvert
 
 Wenn die Kerberos-Authentifizierung fehlschlägt, verwendet der ODBC-Treiber unter Linux oder macOS nicht die NTLM-Authentifizierung.  
 
-Weitere Informationen zur Authentifizierung von Linux- oder macOS-Computern bei Active Directory finden Sie unter [Authentifizieren von Linux-Clients bei Active Directory](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048) und [Best Practices for Integrating OS X with Active Directory (Bewährte Methoden für die Integration von Mac OS X bei Active Directory)](https://training.apple.com/pdf/Best_Practices_for_Integrating_OS_X_with_Active_Directory.pdf). Weitere Informationen zur Konfiguration von Kerberos finden Sie in der [Kerberos-Dokumentation des MIT](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
+Weitere Informationen zur Authentifizierung Ihres Linux- oder macOS-Computers mit Active Directory finden Sie unter [Linux-Clients mit Active Directory authentifizieren](https://technet.microsoft.com/magazine/2008.12.linux.aspx#id0060048). Weitere Informationen zur Konfiguration von Kerberos finden Sie in der [Kerberos-Dokumentation des MIT](https://web.mit.edu/kerberos/krb5-1.12/doc/index.html).
 
 ## <a name="see-also"></a>Weitere Informationen  
-[Programmierrichtlinien](../../../connect/odbc/linux-mac/programming-guidelines.md)
+[Programmierrichtlinien](programming-guidelines.md)
 
-[Versionsanmerkungen](../../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+[Versionsanmerkungen](release-notes-odbc-sql-server-linux-mac.md)
 
-[Verwendung von Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md)
+[Verwendung von Azure Active Directory](../using-azure-active-directory.md)

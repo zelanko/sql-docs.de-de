@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: be854d2002692611289d401b4ad98cb63cf4a27b
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b749231e6be3560ceadf24a51cc1f5cb880c24b3
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68731110"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81288258"
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>Konfigurieren der Serverkonfigurationsoption Netzwerkpaketgröße
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "68731110"
 -   Die maximale Netzwerkpaketgröße für verschlüsselte Verbindungen beträgt 16.383 Bytes.  
   
 > [!NOTE]  
-> Wenn MARS aktiviert ist, fügt der SMUX-Anbieter dem Paket vor der SSL-Verschlüsselung einen 16-Byte-Header hinzu, wodurch die maximale Netzwerkpaketgröße auf 16.368 Bytes verringert wird.
+> Wenn MARS aktiviert ist, fügt der SMUX-Anbieter dem Paket vor der TLS-Verschlüsselung einen 16-Byte-Header hinzu, wodurch die maximale Netzwerkpaketgröße auf 16368 Bytes verringert wird.
    
 ###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
   

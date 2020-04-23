@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7e7cf182-fba0-4604-a474-098461e23e9d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1207c4c9688826b599548477a35ca123b9d39c28
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: b39009d020d906837f4ca4ae4091d12d83cc94c5
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65579938"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81630635"
 ---
 # <a name="configurationsetting-method---listipaddresses"></a>ConfigurationSetting-Methode: ListIPAddresses
   Listet die IP-Adressen für den Berichtsservercomputer auf.  
@@ -56,7 +56,7 @@ public void ListIPAddresses (out string[] IPAddress,
 ## <a name="remarks"></a>Bemerkungen  
  *IPVersion* -Zeichenfolgen sind V4 und V6.  
   
- Wenn *IsDhcpEnabled* gleich **True**ist, ist die *IPAddress* dynamisch. Eine Verwendung für SSL-Bindungen wird nicht empfohlen.  
+ Wenn *IsDhcpEnabled* gleich **True**ist, ist die *IPAddress* dynamisch. Eine Verwendung für TLS-Bindungen wird nicht empfohlen.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
  **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  

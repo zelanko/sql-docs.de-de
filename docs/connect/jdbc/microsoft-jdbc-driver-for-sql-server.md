@@ -1,5 +1,6 @@
 ---
 title: Microsoft JDBC-Treiber für SQL Server | Microsoft-Dokumentation
+description: Microsoft stellt einen JDBC-Treiber für die Verwendung mit SQL Server und Azure SQL-Datenbank bereit und ermöglicht so Konnektivität von allen Java-Anwendungen, -Servern oder -Applets.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 09257402146c8e2354d54a04d202f2daf697bb3d
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: be47bcad4526a65012fdd94e5dfe6b79d780985a
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80928227"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487811"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft JDBC-Treiber für SQL Server
 
@@ -27,16 +28,16 @@ Der Microsoft JDBC-Treiber für SQL Server wurde auf Kompatibilität mit wichtig
   
 ## <a name="getting-started"></a>Erste Schritte  
 
-* [Step 1: Configure development environment for Java development (Schritt 1: Konfigurieren der Entwicklungsumgebung für Java-Entwicklung)](step-1-configure-development-environment-for-java-development.md)  
-* [Step 2: Create a SQL database for Java development (Schritt 2: Erstellen einer SQL-Datenbank für die Java-Entwicklung)](step-2-create-a-sql-database-for-java-development.md)  
-* [Step 3: Proof of concept connecting to SQL using Java (Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von Java)](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
+* [Schritt 1: Konfigurieren der Entwicklungsumgebung für die Java-Entwicklung](step-1-configure-development-environment-for-java-development.md)  
+* [Schritt 2: Erstellen einer SQL-Datenbank für die Java-Entwicklung](step-2-create-a-sql-database-for-java-development.md)  
+* [Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von Java](step-3-proof-of-concept-connecting-to-sql-using-java.md)  
   
 ## <a name="documentation"></a>Dokumentation  
 
 * [Erste Schritte](getting-started-with-the-jdbc-driver.md)
 * [Übersicht](overview-of-the-jdbc-driver.md)  
 * [Programmierhandbuch](programming-guide-for-jdbc-sql-driver.md)
-* [Sicherheit](securing-jdbc-driver-applications.md)  
+* [Security](securing-jdbc-driver-applications.md)  
 * [Leistung und Zuverlässigkeit](improving-performance-and-reliability-with-the-jdbc-driver.md)  
 * [Problembehandlung](diagnosing-problems-with-the-jdbc-driver.md)
 * [Codebeispiele](sample-jdbc-driver-applications.md)

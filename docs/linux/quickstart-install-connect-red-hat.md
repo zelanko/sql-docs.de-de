@@ -5,17 +5,17 @@ description: In diesem Schnellstart erfahren Sie, wie Sie SQL Server 2017 oder 
 author: VanMSFT
 ms.custom: seo-lt-2019
 ms.author: vanto
-ms.date: 01/08/2020
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 92503f59-96dc-4f6a-b1b0-d135c43e935e
-ms.openlocfilehash: 9b953861799e380e4b4221a2cd7fe80badf83ffe
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 895c33e9c75c725e669cf0a51b5a54f555b80880
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "77507537"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81306467"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-red-hat"></a>Schnellstart: Installieren von SQL Server und Erstellen einer Datenbank unter Red Hat
 
@@ -39,19 +39,7 @@ In diesem Schnellstart installieren Sie SQL Server 2019 unter Red Hat Enterpris
 
 ## <a name="prerequisites"></a>Voraussetzungen
 
-<!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
-
 Sie müssen einen Computer mit RHEL 7.3, 7.4, 7.5, 7.6 oder 8 haben, der **mindestens 2 GB** Arbeitsspeicher hat.
-
-::: moniker-end
-
-<!--SQL Server 2017 on Linux-->
-::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
-
-Sie müssen einen Computer mit RHEL 7.3, 7.4, 7.5 oder 7.6 haben, der **mindestens 2 GB** Arbeitsspeicher hat.
-
-::: moniker-end
 
 Um Red Hat Enterprise Linux auf Ihrem eigenen Computer zu installieren, navigieren Sie zu [https://access.redhat.com/products/red-hat-enterprise-linux/evaluation](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation). Sie können auch virtuelle RHEL-Computer in Azure erstellen. Weitere Informationen finden Sie unter [Erstellen und Verwalten virtueller Linux-Computer mit der Azure-Befehlszeilenschnittstelle](https://docs.microsoft.com/azure/virtual-machines/linux/tutorial-manage-vm). Verwenden Sie `--image RHEL` im Aufruf von `az vm create`.
 
@@ -64,12 +52,17 @@ Weitere Systemanforderungen finden Sie unter [Systemanforderungen für SQL Serve
 
 ## <a name="install-sql-server"></a><a id="install"></a>Installieren von SQL Server
 
+> [!NOTE]
+> RHEL 8 wird für SQL Server 2017 ab CU20 unterstützt. Die folgenden Befehle für SQL Server 2017 zeigen auf das RHEL 8-Repository. RHEL 8 ist in python2 nicht vorinstalliert, was SQL Server jedoch erfordert. Weitere Informationen zum Installieren von python2 und Konfigurieren von python2 als Standardinterpreter finden Sie in folgendem Blog: https://www.redhat.com/en/blog/installing-microsoft-sql-server-red-hat-enterprise-linux-8-beta.
+>
+> Wenn Sie RHEL 7 verwenden, ändern Sie den Pfad unten in `/rhel/7` anstelle von `/rhel/8`.
+
 Um SQL Server unter RHEL zu konfigurieren, führen Sie in einem Terminal die folgenden Befehle aus, um das Paket **mssql-server** zu installieren:
 
 1. Laden Sie die Konfigurationsdatei für das Microsoft SQL Server 2017 Red Hat-Repository herunter:
 
    ```bash
-   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo
+   sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/8/mssql-server-2017.repo
    ```
 
    > [!TIP]
@@ -163,44 +156,6 @@ Jetzt wird SQL Server 2019 auf Ihrem RHEL-Computer ausgeführt und ist einsatzbe
 
 ::: moniker-end
 
-<!--SQL Server 2017 on Linux-->
-::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
-
-## <a name="install-the-sql-server-command-line-tools"></a><a id="tools"></a>Installieren der SQL Server-Befehlszeilentools
-
-Um eine Datenbank zu erstellen, müssen Sie eine Verbindung mit einem Tool herstellen, das Transact-SQL-Anweisungen auf dem SQL Server-Computer ausführen kann. Mit den folgenden Schritten installieren Sie die SQL Server-Befehlszeilentools: [sqlcmd](../tools/sqlcmd-utility.md) und [bcp](../tools/bcp-utility.md).
-
-1. Laden Sie die Konfigurationsdatei für das Microsoft Red Hat-Repository herunter.
-
-   ```bash
-   sudo curl -o /etc/yum.repos.d/msprod.repo https://packages.microsoft.com/config/rhel/7/prod.repo
-   ```
-
-1. Wenn Sie eine frühere Version von **mssql-tools** installiert hatten, entfernen Sie alle älteren unixODBC-Pakete.
-
-   ```bash
-   sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
-   ```
-
-1. Führen Sie die folgenden Befehle aus, um **mssql-tools** mit dem unixODBC-Entwicklerpaket zu installieren.
-
-   ```bash
-   sudo yum install -y mssql-tools unixODBC-devel
-   ```
-
-1. Fügen Sie für einfacheres Arbeiten `/opt/mssql-tools/bin/` zu Ihrer **PATH**-Umgebungsvariablen hinzu. Dadurch können Sie die Tools ausführen, ohne den vollständigen Pfad angeben zu müssen. Führen Sie die folgenden Befehle aus, um **PATH** sowohl für Anmeldesitzungen als auch für interaktive Sitzungen oder Sitzungen ohne Anmeldung zu ändern:
-
-   ```bash
-   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bash_profile
-   echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
-   source ~/.bashrc
-   ```
-
-::: moniker-end
-
-<!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
-
 ## <a name="install-the-sql-server-command-line-tools"></a><a id="tools"></a>Installieren der SQL Server-Befehlszeilentools
 
 Um eine Datenbank zu erstellen, müssen Sie eine Verbindung mit einem Tool herstellen, das Transact-SQL-Anweisungen auf dem SQL Server-Computer ausführen kann. Mit den folgenden Schritten installieren Sie die SQL Server-Befehlszeilentools: [sqlcmd](../tools/sqlcmd-utility.md) und [bcp](../tools/bcp-utility.md).
@@ -217,7 +172,7 @@ Um eine Datenbank zu erstellen, müssen Sie eine Verbindung mit einem Tool herst
    sudo yum remove unixODBC-utf16 unixODBC-utf16-devel
    ```
 
-1. Führen Sie die folgenden Befehle aus, um **mssql-tools** mit dem unixODBC-Entwicklerpaket zu installieren.
+1. Führen Sie die folgenden Befehle aus, um **mssql-tools** mit dem unixODBC-Entwicklerpaket zu installieren. Weitere Informationen finden Sie unter [Installieren des Microsoft-ODBC-Treibers für SQL Server (Linux)](../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
    ```bash
    sudo yum install -y mssql-tools unixODBC-devel
@@ -230,7 +185,5 @@ Um eine Datenbank zu erstellen, müssen Sie eine Verbindung mit einem Tool herst
    echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
    source ~/.bashrc
    ```
-
-::: moniker-end
 
 [!INCLUDE [Connect, create, and query data](../includes/sql-linux-quickstart-connect-query.md)]

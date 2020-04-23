@@ -21,12 +21,12 @@ ms.assetid: dca18b8a-ca03-4b7f-9a46-8474d5b66f76
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 15a37c87808b5b44d59a243b2bff57ce6db5de25
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 928e7eafe6de60c71f3a79cef89eb93d5521e2fe
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "72903792"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81305241"
 ---
 # <a name="application-roles"></a>Anwendungsrollen
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "72903792"
  In früheren Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]bestand die einzige Möglichkeit für einen Benutzer, seinen ursprünglichen Sicherheitskontext nach dem Starten einer Anwendungsrolle zurückzuerhalten, darin, die Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]zu trennen und erneut eine Verbindung herzustellen. Seit [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]besitzt **sp_setapprole** eine Option, die ein Cookie erstellt. Das Cookie enthält die vor der Aktivierung der Anwendungsrolle gültigen Kontextinformationen. Das Cookie kann von **sp_unsetapprole** zum Wiederherstellen des ursprünglichen Kontexts der Sitzung verwendet werden. Weitere Informationen über diese neue Option sowie ein Beispiel finden Sie unter [sp_setapprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md)erteilt wurden.  
   
 > [!IMPORTANT]  
->  Die **encrypt** -Option von ODBC wird von **SqlClient**nicht unterstützt. Wenn Sie vertrauliche Informationen über das Netzwerk übertragen, sollten Sie zum Verschlüsseln des Kanals SSL (Secure Sockets Layer) oder IPSec verwenden. Wenn Sie Anmeldeinformationen innerhalb der Clientanwendung persistent speichern müssen, verschlüsseln Sie diese mit den CryptoAPI-Funktionen. In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und höheren Versionen wird der *password* -Parameter als unidirektionaler Hash gespeichert.  
+>  Die **encrypt** -Option von ODBC wird von **SqlClient**nicht unterstützt. Wenn Sie vertrauliche Informationen über das Netzwerk übertragen, verwenden Sie zum Verschlüsseln des Kanals Transport Layer Security (TLS, früher als Secure Sockets Layer, SSL, bezeichnet) oder IPSec. Wenn Sie Anmeldeinformationen innerhalb der Clientanwendung persistent speichern müssen, verschlüsseln Sie diese mit den CryptoAPI-Funktionen. In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und höheren Versionen wird der *password* -Parameter als unidirektionaler Hash gespeichert.  
   
 ## <a name="related-tasks"></a>Related Tasks  
   

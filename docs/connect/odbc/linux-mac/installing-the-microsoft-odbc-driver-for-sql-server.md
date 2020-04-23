@@ -1,5 +1,6 @@
 ---
 title: Installation von Microsoft ODBC Driver for SQL Server (Linux)
+description: Erfahren Sie, wie Microsoft ODBC Driver for SQL Server auf Linux-Clients installieren, um Datenbankkonnektivität zu ermöglichen.
 ms.date: 03/05/2020
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 61639d78617cf1b0611729d17010962766d1bf1c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: a26c8282ec5afe00c3f23987fb82e3759c77c76e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80902074"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487781"
 ---
 # <a name="install-the-microsoft-odbc-driver-for-sql-server-linux"></a>Installation von Microsoft ODBC Driver for SQL Server (Linux)
 
@@ -427,7 +428,7 @@ Wenn Sie es vorziehen/es erforderlich ist, dass der [!INCLUDE[msCoName](../../..
 - Red Hat: ```glibc, e2fsprogs, krb5-libs, openssl, unixODBC```
 - SUSE: ```glibc, libuuid1, krb5, openssl, unixODBC```
 
-Jedes dieser Pakete hat wiederum seine eigenen Abhängigkeiten, die auf dem System entweder vorhanden oder nicht vorhanden sind. Eine allgemeine Lösung für das Problem finden Sie in der Paket-Manager-Dokumentation Ihrer Verteilung: [Redhat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian) und [SUSE](https://en.opensuse.org/Portal:Zypper).
+Jedes dieser Pakete hat wiederum seine eigenen Abhängigkeiten, die auf dem System entweder vorhanden oder nicht vorhanden sind. Eine allgemeine Lösung für das Problem finden Sie in der Paket-Manager-Dokumentation Ihrer Distribution: [Red Hat](https://wiki.centos.org/HowTos/CreateLocalRepos), [Ubuntu](https://unix.stackexchange.com/questions/87130/how-to-quickly-create-a-local-apt-repository-for-random-packages-using-a-debian) und [SUSE](https://en.opensuse.org/Portal:Zypper).
 
 Es ist außerdem gängig, alle abhängigen Pakete manuell herunterzuladen und sie zusammen auf dem Installationscomputer zu platzieren, dann wiederum jedes Paket manuell zu installieren und dabei mit dem [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC-Treiberpaket 13 zu enden.
 
@@ -518,7 +519,7 @@ Der ODBC-Treiber unter Linux besteht aus den folgenden Komponenten:
 |---------------|-----------------|  
 |libmsodbcsql-17.X.so.X.X oder libmsodbcsql-13.X.so.X.X|Das freigegebene Objekt (`so`) der dynamischen Bibliotheksdatei, das die gesamte Funktionalität des Treibers enthält. Diese Datei wird in `/opt/microsoft/msodbcsql17/lib64/` für den Treiber 17 und in `/opt/microsoft/msodbcsql/lib64/` für den Treiber 13 installiert.|  
 |`msodbcsqlr17.rll` oder `msodbcsqlr13.rll`|Die begleitende Ressourcendatei für die Treiberbibliothek. Diese Datei wird in `[driver .so directory]../share/resources/en_US/` installiert.| 
-|msodbcsql.h|Die Headerdatei, die alle erforderlichen neuen Definitionen für die Verwendung des Treibers enthält.<br /><br /> **Hinweis:**  Sie können nicht auf „msodbcsql.h“ und „odbcss.h“ im selben Programm verweisen.<br /><br /> „msodbcsql“ wird in `/opt/microsoft/msodbcsql17/include/` für den Treiber 17 und in `/opt/microsoft/msodbcsql/include/` für den Treiber 13 installiert. |
+|msodbcsql.h|Die Headerdatei, die alle erforderlichen neuen Definitionen für die Verwendung des Treibers enthält.<br /><br /> **Hinweis:**  Sie können im selben Programm nicht auf „msodbcsql.h“ und auf „odbcss.h“ verweisen.<br /><br /> „msodbcsql“ wird in `/opt/microsoft/msodbcsql17/include/` für den Treiber 17 und in `/opt/microsoft/msodbcsql/include/` für den Treiber 13 installiert. |
 |LICENSE.txt|Die Textdatei, die die Bestimmungen des Endbenutzer-Lizenzvertrags enthält. Diese Datei wird in `/usr/share/doc/msodbcsql17/` für den Treiber 17 und in `/usr/share/doc/msodbcsql/` für den Treiber 13 platziert.|
 |RELEASE_NOTES|Die Textdatei, die die Versionshinweise enthält. Diese Datei wird in `/usr/share/doc/msodbcsql17/` für den Treiber 17 und in `/usr/share/doc/msodbcsql/` für den Treiber 13 platziert.|
 

@@ -7,12 +7,12 @@ ms.technology: report-server-sharepoint
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 493abba0e4396b6f12670dd3214d19e4767c4d0d
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 41a39c92a8ec9e9d940c44660a02abe5e710fede
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "65580021"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487023"
 ---
 # <a name="configure-reporting-services-to-use-a-subject-alternative-name"></a>Konfigurieren von Reporting Services für die Verwendung eines alternativen Antragstellernamens
 
@@ -20,11 +20,11 @@ In diesem Artikel wird erklärt, wie Sie Reporting Services (SSRS) für die Verw
 
 Die Anweisungen gelten sowohl für die Berichtsdienst-URL als auch die Webdienst-URL.
 
-Zum Verwenden eines SAN muss das SSL-Zertifikat auf dem Server registriert und signiert sein und über den privaten Schlüssel verfügen. Sie können kein selbstsigniertes Zertifikat verwenden.  
+Zum Verwenden eines SAN muss das TLS/SSL-Zertifikat auf dem Server registriert und signiert sein und über den privaten Schlüssel verfügen. Sie können kein selbstsigniertes Zertifikat verwenden.  
   
- URLs in Reporting Services können für die Verwendung eines SSL-Zertifikats konfiguriert werden. Ein Zertifikat verfügt normalerweise nur über einen Antragstellernamen, der nur eine URL für eine SSL-Sitzung (Secure Sockets Layer) zulässt. Der SAN ist ein zusätzliches Feld im Zertifikat, über das ein SSL-Zertifikat viele URLs überwachen kann. Außerdem kann der SSL-Port dadurch mit anderen Anwendungen gemeinsam verwendet werden. Der SAN sieht ungefähr wie `www.s2.com` aus.  
+ URLs in Reporting Services können für die Verwendung eines TLS/SSL-Zertifikats konfiguriert werden. Ein Zertifikat verfügt normalerweise nur über einen Antragstellernamen, der nur eine URL für eine TLS-Sitzung (Transport Layer Security, früher als Secure Sockets Layer, SSL, bezeichnet) zulässt. Der SAN ist ein zusätzliches Feld im Zertifikat, über das ein TLS-Zertifikat auf viele URLs lauschen kann. Außerdem kann der TLS-Port dadurch mit anderen Anwendungen gemeinsam verwendet werden. Der SAN sieht ungefähr wie `www.s2.com` aus.  
   
- Weitere Informationen zu SSL-Einstellungen für Reporting Services finden Sie unter [Konfigurieren von SSL-Verbindungen auf einem Berichtsserver im einheitlichen Modus](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
+ Weitere Informationen zu TLS-Einstellungen für Reporting Services finden Sie unter [Konfigurieren von TLS-Verbindungen auf einem Berichtsserver im einheitlichen Modus](../../reporting-services/security/configure-ssl-connections-on-a-native-mode-report-server.md).  
   
 ## <a name="configure-ssrs-to-use-a-subject-alternative-name-for-web-service-url"></a>Konfigurieren von SSRS für die Verwendung eines alternativen Antragstellernamens für die Webdienst-URL
   
@@ -32,11 +32,11 @@ Zum Verwenden eines SAN muss das SSL-Zertifikat auf dem Server registriert und s
   
      Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md).  
   
-2.  Wählen Sie auf der Seite **Webdienst-URL** einen SSL-Port und ein SSL-Zertifikat aus.  
+2.  Wählen Sie auf der Seite **Webdienst-URL** einen TLS/SSL-Port und ein TLS/SSL-Zertifikat aus.  
   
      ![Reporting Services-Konfigurations-Manager](../../reporting-services/report-server-sharepoint/media/reportingservices-configurationmanager.png "Reporting Services-Konfigurations-Manager")  
   
-     Der Konfigurations-Manager registriert das SSL-Zertifikat für den Port.  
+     Der Konfigurations-Manager registriert das TLS/SSL-Zertifikat für den Port.  
   
 3.  Öffnen Sie die Datei rsreportserver.config.  
   

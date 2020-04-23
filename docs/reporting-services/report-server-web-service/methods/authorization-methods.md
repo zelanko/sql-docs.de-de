@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 45e9cf2c-facf-4801-9482-c855403f42a8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5a8c9ba25c3f9dfd03aa528b4d02f9e02e197546
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: ae203110efcb9cc6a649d8f0c4af8856c779a741
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79509831"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488423"
 ---
 # <a name="authorization-methods"></a>Autorisierungsmethoden
   Mit diesen Methoden können Sie Tasks, Rollen und Richtlinien auf dem Berichtsserver verwalten.  
@@ -35,7 +35,7 @@ ms.locfileid: "79509831"
 |<xref:ReportService2010.ReportingService2010.GetSystemPermissions%2A>|Gibt die Systemberechtigungen des Benutzers zurück. Diese Methode gilt nur für den einheitlichen Modus.|  
 |<xref:ReportService2010.ReportingService2010.GetSystemPolicies%2A>|Gibt die Systemrichtlinien zurück, einschließlich der Gruppen und Rollen, denen sie zugeordnet sind. Diese Methode gilt nur für den einheitlichen Modus.|  
 |<xref:ReportService2010.ReportingService2010.InheritParentSecurity%2A>|Löscht die Richtlinien, die einem bestimmten Element in der Berichtsserver-Datenbank zugeordnet sind, und legt die Sicherheitsrichtlinien des Elements auf die Werte des übergeordneten Elements fest|  
-|<xref:ReportService2010.ReportingService2010.IsSSLRequired%2A>|Gibt einen booleschen Wert zurück, der angibt, ob das Secure Sockets Layer (SSL)-Protokoll zur Verwendung des <xref:ReportService2010>-Endpunkts erforderlich ist.|  
+|<xref:ReportService2010.ReportingService2010.IsSSLRequired%2A>|Gibt einen booleschen Wert zurück, der angibt, ob das TLS-Protokoll (Transport Layer Security, früher als Secure Sockets Layer, SSL, bezeichnet) zur Verwendung des <xref:ReportService2010>-Endpunkts erforderlich ist.|  
 |<xref:ReportService2010.ReportingService2010.ListRoles%2A>|Gibt die Namen und Beschreibungen der Rollen zurück, die vom Berichtsserver verwaltet werden.|  
 |<xref:ReportExecution2005.ReportExecutionService.ListSecureMethods%2A>|Gibt eine Liste von SOAP-Methoden (Simple Object Access Protocol) im <xref:ReportExecution2005>-Endpunkt zurück, bei deren Aufruf eine sichere Verbindung erforderlich ist. Mit der **SecureConnectionLevel**-Einstellung des Berichtsservers wird bestimmt, welche Methoden zurückgegeben werden.|  
 |<xref:ReportService2010.ReportingService2010.ListTasks%2A>|Gibt die Tasks zurück, die vom Berichtsserver verwaltet werden.|  

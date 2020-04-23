@@ -6,12 +6,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 11/06/2018
-ms.openlocfilehash: 5db33f22ffd5143d88c5654c753f1b08811c0c8a
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 4a5b217ba8733aa92c2255170d2ff1f750d996a7
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "68262903"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487059"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrieren einer Reporting Services-Installation (einheitlicher Modus)
 
@@ -109,7 +109,7 @@ Informationen zum Migrieren einer [!INCLUDE[ssRSnoversion](../../includes/ssrsno
   
 * IP-Adresseinschränkungen werden in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und höheren Versionen nicht unterstützt. Wenn Sie IP-Adresseinschränkungen verwenden, müssen Sie Ihre Berichtslösung vor der Migration umgestalten oder eine Technologie wie z. B. eine Firewall, einen Router oder NAT (Network Address Translation) verwenden, um Adressen zu konfigurieren, die nur eingeschränkt auf den Berichtsserver zugreifen dürfen.  
   
-* Client-SSL-Zertifikate (Secure Sockets Layer) werden in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und höheren Versionen nicht unterstützt. Wenn Sie Client-SSL-Zertifikate verwenden, müssen Sie Ihre Berichtslösung vor der Migration umgestalten.  
+* Client-TLS-Zertifikate (Transport Layer Security, früher als Secure Sockets Layer, SSL, bezeichnet), werden in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und höheren Versionen nicht unterstützt. Wenn Sie Client-TLS-Zertifikate verwenden, müssen Sie Ihre Berichtslösung vor der Migration umgestalten.  
   
 * Wenn Sie einen anderen Authentifizierungstyp als die integrierte Windows-Authentifizierung verwenden, müssen Sie das Element `<AuthenticationTypes>` in der Datei **RSReportServer.config** mit einem unterstützten Authentifizierungstyp aktualisieren. Die unterstützten Authentifizierungstypen sind NTLM, Kerberos, Negotiate und Standard. Die anonyme, die .NET Passport- und die Digestauthentifizierung werden in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und höheren Versionen nicht unterstützt.  
   

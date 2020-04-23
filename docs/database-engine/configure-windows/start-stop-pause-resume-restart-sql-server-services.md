@@ -40,12 +40,12 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 6fee83f5560891e6160c3e885ca0a0ed4e5e8058
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 50f57be62b93d201e472cee0d1d7a6adda67ad97
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "78946731"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81287890"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Starten, Beenden, Anhalten, Fortsetzen und Neustarten von SQL Server-Diensten
 
@@ -338,6 +338,10 @@ Weitere Informationen zur **SHUTDOWN**-Anweisung finden Sie unter [SHUTDOWN &#40
     # Display the state of the service.
     $DfltInstance
     ```  
+  
+##  <a name="using-service-controller-class"></a><a name="ServiceController"></a> Verwenden der ServiceController-Klasse
+
+Sie können die ServiceController-Klasse verwenden, um den SQL Server-Dienst oder einen anderen Windows-Dienst zu steuern. Ein Verwendungsbeispiel finden Sie unter [ServiceController-Klasse](https://docs.microsoft.com/dotnet/api/system.serviceprocess.servicecontroller?view=netframework-4.8).
 
 ## <a name="manage-the-sql-server-service-on-linux"></a>Verwalten des SQL Server-Diensts unter Linux
 

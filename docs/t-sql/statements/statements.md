@@ -1,7 +1,7 @@
 ---
 title: Anweisungen | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 04/17/2020
 ms.prod: sql
 ms.prod_service: sql-data-warehouse, database-engine, pdw, sql-database
 ms.reviewer: ''
@@ -13,23 +13,29 @@ ms.assetid: d8d6f62a-e815-425c-a80e-a63fd34ec275
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 43d4405411005ab43e3f2b2fe9b2136a5793e8a5
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: b130cf3de5e416282c08ce45059db1ea21505ce7
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68099984"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81633526"
 ---
 # <a name="transact-sql-statements"></a>Transact-SQL-Anweisungen
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-In diesem Referenzthema werden die Kategorien der Anweisungen zusammengefasst, die mit Transact-SQL (T-SQL) verwendet werden. Eine Auflistung aller Anweisungen finden Sie im linken Navigationsbereich.
+Eine SQL-Anweisung ist eine unteilbare Arbeitseinheit, die entweder vollständig erfolgreich ist oder vollständig erfolglos. Eine SQL-Anweisung ist ein Satz von Anweisungen, der aus Bezeichnern, Parametern, Variablen, Namen, Datentypen und reservierten SQL-Wörtern besteht, die erfolgreich kompiliert werden. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellt eine *implizite* Transaktion für eine SQL-Anweisung, wenn ein `BeginTransaction`-Befehl nicht den Beginn einer Transaktion angibt. Wenn die Anweisung erfolgreich ist, führt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] immer einen Commit für die implizite Transaktionen aus, und wenn der Befehl einen Fehler generiert, wird ein Rollback für die implizite Transaktion ausgeführt.  
+
+Es gibt viele Arten von Anweisungen. Die wahrscheinlich wichtigste ist die [SELECT](../queries/select-transact-sql.md)-Anweisung, die Zeilen aus der Datenbank abruft und die Auswahl einer oder vieler Zeilen oder Spalten aus einer Tabelle oder zahlreichen Tabellen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht. In diesem Artikel werden die Kategorien der Anweisungen zusammengefasst, die mit Transact-SQL (T-SQL) ergänzend zur `SELECT`-Anweisung verwendet werden. Eine Auflistung aller Anweisungen finden Sie im linken Navigationsbereich.
 
 ## <a name="backup-and-restore"></a>Sichern und Wiederherstellen
+
 Die Backup- und Restore-Anweisungen stellen Möglichkeiten bereit, um Sicherungen zu erstellen und Wiederherstellungen aus Sicherungen vorzunehmen.  Weitere Informationen finden Sie in der [Übersicht zur Sicherung und Wiederherstellung](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md).
 
 ## <a name="data-definition-language"></a>Datendefinitionssprache
+
 Durch DDL-Anweisungen (Data Definition Language, Datendefinitionssprache) werden Datenstrukturen definiert. Verwenden Sie die Anweisungen, um Datenstrukturen in einer Datenbank zu erstellen, zu ändern oder zu löschen.
+
 - ALTER
 - Sortierungen
 - CREATE
@@ -40,6 +46,7 @@ Durch DDL-Anweisungen (Data Definition Language, Datendefinitionssprache) werden
 - UPDATE STATISTICS
 
 ## <a name="data-manipulation-language"></a>Datenbearbeitungssprache
+
 Die DML (Data Manipulation Language, Datenbearbeitungssprache) wirkt sich auf die in der Datenbank gespeicherten Informationen aus. Verwenden Sie diese Anweisungen, um Zeilen in der Datenbank einzufügen, zu aktualisieren und zu verändern.
 
 - BULK INSERT
@@ -50,10 +57,13 @@ Die DML (Data Manipulation Language, Datenbearbeitungssprache) wirkt sich auf di
 - TRUNCATE TABLE
 
 ## <a name="permissions-statements"></a>Berechtigungsanweisungen
+
 Durch Berechtigungsanweisungen wird bestimmt, welche Benutzer und Konten auf Daten zugreifen und Vorgänge ausführen können. Weitere Informationen zur Authentifizierung und zum Zugriff finden Sie im [Sicherheitscenter](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md).
 
 ## <a name="service-broker-statements"></a>Service Broker-Anweisungen
+
 Bei Service Broker handelt es sich um ein Feature, das native Unterstützung für Messaging- und Warteschlangenanwendungen bereitstellt. Weitere Informationen finden Sie unter [Service Broker](../../relational-databases/service-broker/event-notifications.md).
 
 ## <a name="session-settings"></a>Sitzungseinstellungen
+
 Durch SET-Anweisungen wird bestimmt, wie die aktuelle Sitzung ausgeführte Uhrzeiteinstellungen verarbeitet. Eine Übersicht finden Sie unter [SET-Anweisungen](set-statements-transact-sql.md).

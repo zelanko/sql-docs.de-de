@@ -1,5 +1,6 @@
 ---
-title: 'Schritt 1: Konfigurieren der pymssql-Python-Entwicklungsumgebung | Microsoft-Dokumentation'
+title: 'Schritt 1: Konfigurieren der pymssql-Umgebung'
+description: Schritt 1 dieses Leitfadens für die ersten Schritte umfasst die Installation von Python, des Microsoft ODBC Driver for SQL Server und von pymssql in der Entwicklungsumgebung.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,32 +11,32 @@ ms.topic: conceptual
 ms.assetid: 6d392a5e-b08e-4b35-9e99-61260888fc41
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 3310f268bf04b015c5f80cd08b2ae3909fd3a5c2
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: d5eb4a746cf8847c8300091677fe4e07e8173707
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80926803"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634613"
 ---
 # <a name="step-1-configure-development-environment-for-pymssql-python-development"></a>Schritt 1: Konfigurieren der Entwicklungsumgebung für die pymssql-Python-Entwicklung
 Sie müssen Ihre Entwicklungsumgebung entsprechend den Voraussetzungen konfigurieren, um mithilfe des Python-Treibers für SQL Server eine Anwendung entwickeln zu können.    
   
-Beachten Sie, dass der Python-SQL-Treiber das TDS-Protokoll verwendet, das in SQL Server und Azure SQL-Datenbank standardmäßig aktiviert ist.  Es ist keine zusätzliche Konfiguration erforderlich.  
+Der Python-SQL-Treiber verwendet das TDS-Protokoll, das in SQL Server und Azure SQL-Datenbank standardmäßig aktiviert ist.  Es ist keine zusätzliche Konfiguration erforderlich.  
   
 ## <a name="windows"></a>Windows  
   
-1. **Installieren der Python-Runtime und des pip-Paket-Managers**  
+1. **Installieren Sie die Python-Runtime und den pip-Paket-Manager.**  
 a. Gehen Sie zu [python.org](https://www.python.org/downloads/).  
 b. Klicken Sie auf den Link für das gewünschten Windows-Installationsprogramm (MSI-Datei).   
 c. Wenn der Download abgeschlossen ist, führen Sie die MSI-Datei aus, um die Python-Runtime zu installieren.  
   
 2. **Das pymssql-Modul** können Sie [hier](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pymssql) herunterladen.  
   
-    Stellen Sie sicher, dass Sie die richtige WHL-Datei auswählen.  Beispiel: Wählen Sie bei Verwendung von Python 2.7 auf einem 64-Bit-Computer die Datei „pymssql‑2.1.1‑cp27‑none‑win_amd64.whl“ aus. Speichern Sie die WHL-Datei nach dem Herunterladen im Ordner „C:/Python27“.  
+    Stellen Sie sicher, dass Sie die richtige `whl`-Datei auswählen.  Beispiel: Wenn Sie Python 2.7 auf einem 64-Bit-Computer verwenden, wählen Sie `pymssql‑2.1.1‑cp27‑none‑win_amd64.whl` aus. Speichern Sie die `whl`-Datei nach dem Herunterladen im Ordner „C:/Python27“.  
       
 3. **Öffnen Sie „cmd.exe“.**  
   
-4. **Installieren Sie das pymssql-Modul.**      
+4. **Installieren Sie das pymssql-Modul.**  
     Wenn Sie beispielsweise Python 2.7 auf einem 64-Bit-Computer verwenden, funktioniert das folgendermaßen:  
 ```  
 > cd c:\Python27  
@@ -44,7 +45,7 @@ c. Wenn der Download abgeschlossen ist, führen Sie die MSI-Datei aus, um die Py
   
 ## <a name="ubuntu-linux"></a>Ubuntu Linux  
   
-1. **Installieren Sie die Python-Runtime und den pip-Paket-Manager.** Python ist auf den meisten Ubuntu-Distributionen bereits vorinstalliert.  Wenn auf Ihrem Computer kein Python installiert ist, können Sie entweder den Quelltarball von [python.org](https://www.python.org/downloads/) herunterladen und lokale Builds erstellen oder den Paket-Manager verwenden:  
+1. **Installieren Sie die Python-Runtime und den pip-Paket-Manager.**  Python ist bei den meisten Distributionen von Ubuntu vorinstalliert.  Wenn Python nicht auf Ihrem Computer installiert ist, können Sie entweder den Quelltarball von [python.org](https://www.python.org/downloads/) herunterladen und lokale Builds erstellen oder den Paket-Manager verwenden:  
 ```  
 > sudo apt-get install python   
 ```  
@@ -59,11 +60,11 @@ c. Wenn der Download abgeschlossen ist, führen Sie die MSI-Datei aus, um die Py
 > sudo pip install pymssql  
 ```  
   
-## <a name="mac"></a>Mac  
+## <a name="macos"></a>macOS
   
 1. **Installieren der Python-Runtime und des pip-Paket-Managers**  
 a. Gehen Sie zu [python.org](https://www.python.org/downloads/).  
-b. Klicken Sie auf den entsprechenden Link für das Mac-Installationsprogramm (pkg).   
+b. Klicken Sie auf den entsprechenden Link für das macOS-Installationsprogramm (pkg).   
 c. Wenn der Download abgeschlossen ist, führen Sie die PKG-Datei aus, um die Python-Runtime zu installieren.  
   
 2.  **Öffnen Sie ein Terminal.**  

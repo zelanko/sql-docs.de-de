@@ -10,12 +10,12 @@ ms.custom: performance
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: 6c90b71ed61deeadbc0af2592f137893fa676a05
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: ab701d44e14bbbd6234f5301a5fb3abdba451ef2
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67896962"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488131"
 ---
 # <a name="manage-certificates-for-sql-server-integration-services-scale-out"></a>Verwalten von Zertifikaten für SQL Server Integration Services Scale Out
 
@@ -29,20 +29,20 @@ SSIS Scale Out verwendet zwei Zertifikate, um die Kommunikation zwischen dem Sca
 
 In der Regel wird das Scale Out-Masterzertifikat während der Installation des Scale Out-Masters konfiguriert.
 
-Auf der Seite **Integration Services Scale Out-Konfiguration – Masterknoten** des SQL Server-Installations-Assistenten können Sie entweder ein neues selbstsigniertes SSL-Zertifikat erstellen oder ein vorhandenes SSL-Zertifikat verwenden.
+Auf der Seite **Integration Services-Konfiguration für horizontales Hochskalieren – Masterknoten** des SQL Server-Installations-Assistenten können Sie entweder ein neues selbstsigniertes TLS/SSL-Zertifikat erstellen oder ein vorhandenes TLS/SSL-Zertifikat verwenden.
 
 ![Masterkonfiguration](media/master-config.PNG)
 
-**Neues Zertifikat.** Wenn Sie keine besonderen Anforderungen an Zertifikate haben, können Sie ein neues selbstsigniertes SSL-Zertifikat erstellen. Sie können die allgemeinen Namen in diesem Zertifikat näher bestimmen. Stellen Sie sicher, dass der Hostname des Masterendpunkts, der später vom Scale Out-Worker verwendet werden soll, in den allgemeinen Namen enthalten ist. Standardmäßig sind der Computername und die IP-Adresse des Masterknotens darin enthalten. 
+**Neues Zertifikat.** Wenn keine besonderen Anforderungen an Zertifikate bestehen, können Sie ein neues selbstsigniertes TLS/SSL-Zertifikat erstellen. Sie können die allgemeinen Namen in diesem Zertifikat näher bestimmen. Stellen Sie sicher, dass der Hostname des Masterendpunkts, der später vom Scale Out-Worker verwendet werden soll, in den allgemeinen Namen enthalten ist. Standardmäßig sind der Computername und die IP-Adresse des Masterknotens darin enthalten. 
 
-**Vorhandenes Zertifikat.** Wenn Sie sich dafür entscheiden, ein vorhandenes Zertifikat zu verwenden, klicken Sie auf **Durchsuchen**, um aus dem **Stammzertifikatspeicher** des lokalen Computers ein SSL-Zertifikat auszuwählen.
+**Vorhandenes Zertifikat.** Wenn Sie sich dafür entscheiden, ein vorhandenes Zertifikat zu verwenden, klicken Sie auf **Durchsuchen**, um aus dem **Stammzertifikatspeicher** des lokalen Computers ein TLS/SSL-Zertifikat auszuwählen.
 
 ### <a name="change-the-scale-out-master-certificate"></a>Ändern des Scale Out-Masterzertifikats
 
 Sie sollten das Scale Out-Masterzertifikat ändern, weil es abgelaufen sein kann. Führen Sie die folgende Schritte aus, um das Scale Out-Masterzertifikat zu ändern:
 
-#### <a name="1-create-an-ssl-certificate"></a>1. Erstellen Sie ein SSL-Zertifikat.
-Erstellen und installieren Sie mithilfe des folgenden Befehls ein neues SSL-Zertifikat auf dem Masterknoten:
+#### <a name="1-create-a-tlsssl-certificate"></a>1. Erstellen Sie ein TLS/SSL-Zertifikat.
+Erstellen und installieren Sie mithilfe des folgenden Befehls ein neues TLS/SSL-Zertifikat auf dem Masterknoten:
 
 ```dos
 MakeCert.exe -n CN={master endpoint host} SSISScaleOutMaster.cer -r -ss Root -sr LocalMachine -a sha1
@@ -70,7 +70,7 @@ Löschen Sie die ursprüngliche Bindung, und richten Sie die neue Bindung mithil
 
 ```dos
 netsh http delete sslcert ipport=0.0.0.0:{Master port}
-netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={SSL Certificate Thumbprint} certstorename=Root appid={original appid}
+netsh http add sslcert ipport=0.0.0.0:{Master port} certhash={TLS/SSL Certificate Thumbprint} certstorename=Root appid={original appid}
 ```
 
 Beispiel:
@@ -81,18 +81,18 @@ netsh http add sslcert ipport=0.0.0.0:8391 certhash=01d207b300ca662f479beb884efe
 ```
 
 #### <a name="3-update-the-scale-out-master-service-configuration-file"></a>3. Aktualisieren Sie die Konfigurationsdatei des Scale Out-Masterdiensts
-Aktualisieren Sie die Konfigurationsdatei des Scale Out-Masterdiensts (`\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`) auf dem Masterknoten. Aktualisieren Sie **SSLCertThumbprint** auf den Fingerabdruck des neuen SSL-Zertifikats.
+Aktualisieren Sie die Konfigurationsdatei des Scale Out-Masterdiensts (`\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`) auf dem Masterknoten. Aktualisieren Sie **SSLCertThumbprint** auf den Fingerabdruck des neuen TLS/SSL-Zertifikats.
 
 #### <a name="4-restart-the-scale-out-master-service"></a>4. Starten Sie den Scale Out-Masterdienst neu.
 
 #### <a name="5-reconnect-scale-out-workers-to-scale-out-master"></a>5. Stellen Sie erneut eine Verbindung zwischen den Scale Out-Workern und dem Scale Out-Master her.
 Löschen Sie für jeden Scale Out-Worker entweder den Worker, und fügen Sie Ihn erneut mit dem [Scale Out-Manager](integration-services-ssis-scale-out-manager.md) hinzu, oder führen Sie die folgenden Schritte aus:
 
-a.  Installieren Sie das SSL-Clientzertifikat im Stammspeicher des lokalen Computers auf dem Workerknoten.
+a.  Installieren Sie das TLS/SSL-Clientzertifikat im Stammspeicher des lokalen Computers auf dem Workerknoten.
 
 b.  Aktualisieren Sie die Konfigurationsdatei des Scale Out-Workerdiensts.
 
-Aktualisieren Sie die Konfigurationsdatei des Scale Out-Workerdiensts (`\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`) auf dem Workerknoten. Aktualisieren Sie **MasterHttpsCertThumbprint** auf den Fingerabdruck des neuen SSL-Zertifikats.
+Aktualisieren Sie die Konfigurationsdatei des Scale Out-Workerdiensts (`\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\WorkerSettings.config`) auf dem Workerknoten. Aktualisieren Sie **MasterHttpsCertThumbprint** auf den Fingerabdruck des neuen TLS/SSL-Zertifikats.
 
 c.  Starten Sie den Scale Out-Workerdienst neu.
 

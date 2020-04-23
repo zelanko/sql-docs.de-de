@@ -1,7 +1,7 @@
 ---
 title: Erstellen und Verwalten von Volltextindizes | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 03/31/2020
 ms.prod: sql
 ms.prod_service: search, sql-database
 ms.technology: search
@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 55ed06976ef161037134164116ea2364f420f405
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.openlocfilehash: a76112a515f33bc169883c60de68742239c8d4e1
+ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2020
-ms.locfileid: "80530948"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81304430"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Erstellen und Verwalten von Volltextindizes
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../../re
     |----------|-----------------|  
     |**Allgemein**|Ändert die grundlegenden Eigenschaften des Volltextindex. Beinhaltet mehrere änderbare Eigenschaften und eine Reihe von nicht änderbaren Eigenschaften, wie z. B. Datenbankname, Tabellenname und den Namen der Volltextschlüsselspalte. Die änderbaren Eigenschaften lauten:<br /><br /> **Volltextindex-Stoppliste**<br /><br /> **Volltextindizierung aktiviert**<br /><br /> **Änderungsnachverfolgung**<br /><br /> **Sucheigenschaftenliste**|  
     |**Spalten**|Zeigt die Tabellenspalten an, die für die Volltextindizierung verfügbar sind. Die ausgewählte Spalte bzw. die Spalten werden volltextindiziert. Sie können beliebig viele verfügbare Spalten auswählen und in den Volltextindex aufnehmen. Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](populate-full-text-indexes.md).|
-    |**Zeitpläne**|Verwenden Sie diese Seite, um Zeitpläne für einen SQL Server-Agent-Auftrag zu erstellen oder zu verwalten, der eine inkrementelle Tabellenauffüllung für die Auffüllungen des Volltextindexes beginnt. Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../../relational-databases/search/populate-full-text-indexes.md).<br /><br /> Hinweis: Sobald Sie das Dialogfeld **Volltextindexeigenschaften** schließen, werden alle neu erstellten Zeitpläne einem SQL Server-Agent-Auftrag zugeordnet (Start Incremental Table Population on *Datenbankname*.*Tabellenname*).|  
+    |**Zeitpläne**|Verwenden Sie diese Seite, um Zeitpläne für einen SQL Server-Agent-Auftrag zu erstellen oder zu verwalten, der eine inkrementelle Tabellenauffüllung für die Auffüllungen des Volltextindexes beginnt. Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](../../relational-databases/search/populate-full-text-indexes.md).<br /><br /> Hinweis: Sobald Sie das Dialogfeld **Volltextindexeigenschaften** schließen, werden alle neu erstellten Zeitpläne einem SQL Server-Agent-Auftrag zugeordnet (Start Incremental Table Population on *Datenbankname*.*Tabellenname*).|  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] um vorgenommene Änderungen zu speichern und das Dialogfeld **Volltextindexeigenschaften** zu schließen.  
   
@@ -117,15 +117,15 @@ SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );
   
  **Beispiel**  
   
- Im folgenden Beispiel wird abgefragt, ob der `PK_Document_DocumentID` -Index zum Erzwingen der Eindeutigkeit der Volltextschlüsselspalte verwendet wird:  
+ Im folgenden Beispiel wird abgefragt, ob der `PK_Document_DocumentNode` -Index zum Erzwingen der Eindeutigkeit der Volltextschlüsselspalte verwendet wird:  
   
 ```sql  
 USE AdventureWorks  
 GO  
-SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID',  'IsFulltextKey' )  
+SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentNode',  'IsFulltextKey' )  
 ```  
   
- Dieses Beispiel gibt den Wert 1 zurück, wenn der `PK_Document_DocumentID` -Index verwendet wird, um die Eindeutigkeit der Volltextschlüsselspalte zu erzwingen. Andernfalls wird 0 oder NULL zurückgegeben. NULL impliziert, dass ein ungültiger Indexname verwendet wird, der Indexname der Tabelle nicht zugeordnet werden kann, die Tabelle nicht vorhanden ist oder eine andere Fehlerbedingung vorliegt.  
+ Dieses Beispiel gibt den Wert 1 zurück, wenn der `PK_Document_DocumentNode` -Index verwendet wird, um die Eindeutigkeit der Volltextschlüsselspalte zu erzwingen. Andernfalls wird 0 oder NULL zurückgegeben. NULL impliziert, dass ein ungültiger Indexname verwendet wird, der Indexname der Tabelle nicht zugeordnet werden kann, die Tabelle nicht vorhanden ist oder eine andere Fehlerbedingung vorliegt.  
   
 ### <a name="find-the-identifier-of-the-full-text-key-column"></a>Suchen des Bezeichners der Volltextschlüsselspalte  
   
@@ -141,7 +141,7 @@ SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 
   
  Im folgenden Beispiel wird der Bezeichner der Volltextschlüsselspalte oder NULL zurückgegeben. NULL impliziert, dass ein ungültiger Indexname verwendet wird, der Indexname der Tabelle nicht zugeordnet werden kann, die Tabelle nicht vorhanden ist oder eine andere Fehlerbedingung vorliegt.  
   
-```sql  
+```sql
 USE AdventureWorks;  
 GO  
 SELECT OBJECTPROPERTYEX(OBJECT_ID('Production.Document'), 'TableFulltextKeyColumn');  
@@ -162,7 +162,7 @@ SELECT @key_column AS 'Unique Key Column';
 GO  
 ```  
   
- Dieses Beispiel gibt eine Resultsetspalte mit dem Namen `Unique Key Column`zurück, die eine einzelne Zeile mit dem Namen der eindeutigen Schlüsselspalte (DocumentID) der Document-Tabelle enthält. Beachten Sie, dass diese Abfrage NULL zurückgibt, wenn ein ungültiger Indexname verwendet wird, der Indexname der Tabelle nicht zugeordnet werden kann, die Tabelle nicht vorhanden ist oder eine andere Fehlerbedingung vorliegt.  
+ Dieses Beispiel gibt eine Resultsetspalte mit dem Namen `Unique Key Column`zurück, die eine einzelne Zeile mit dem Namen der eindeutigen Schlüsselspalte der Document-Tabelle enthält: DocumentNode. Beachten Sie, dass diese Abfrage NULL zurückgibt, wenn ein ungültiger Indexname verwendet wird, der Indexname der Tabelle nicht zugeordnet werden kann, die Tabelle nicht vorhanden ist oder eine andere Fehlerbedingung vorliegt.  
 
 ## <a name="index-varbinarymax-and-xml-columns"></a>Indizieren von varbinary(max)- und xml-Spalten  
  Wenn ein Volltextindex einer **varbinary(max)** -, **varbinary**- oder **xml** -Spalte erstellt wird, kann die Spalte mit den Volltextprädikaten (CONTAINS und FREETEXT) und -funktionen (CONTAINSTABLE und FREETEXTTABLE) wie jede andere volltextindizierte Spalte durchsucht werden.

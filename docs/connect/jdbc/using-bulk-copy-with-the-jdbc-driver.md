@@ -1,5 +1,6 @@
 ---
-title: Verwenden von Massenkopieren mit dem JDBC-Treiber | Microsoft-Dokumentation
+title: Verwenden von Massenkopieren mit dem JDBC Driver
+description: Mit der SQLServerBulkCopy-Klasse können Sie Datenladelösungen in Java schreiben, die gegenüber den standardmäßigen JDBC-APIs bedeutende Leistungsvorteile bieten.
 ms.custom: ''
 ms.date: 08/12/2019
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 9cc73888791f4fb1c4aab58b60fec51119a2408a
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 945bdaf05c9a10e3ab72b11e0049c6053dd108b5
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924040"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634020"
 ---
 # <a name="using-bulk-copy-with-the-jdbc-driver"></a>Verwenden von Massenkopieren mit dem JDBC Driver
 
@@ -117,7 +118,7 @@ Die einfachste Herangehensweise an einen SQL Server-Massenkopiervorgang ist das 
   
 > [!NOTE]  
 > Wenn Sie für den Massenkopiervorgang beim Auftreten eines Fehlers einen teilweisen oder vollständigen Rollback ausführen müssen, können Sie entweder eine verwaltete SQLServerBulkCopy-Transaktion verwenden oder den Massenkopiervorgang innerhalb einer vorhandenen Transaktion ausführen.  
-> Weitere Informationen finden Sie unter [Transaktionen und Massenkopiervorgänge](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#transaction-and-bulk-copy-operations).  
+> Weitere Informationen finden Sie unter [Transaktionen und Massenkopiervorgänge](#transaction-and-bulk-copy-operations).  
   
  Dies sind die allgemeinen Schritte zum Durchführen eines Massenkopiervorgangs:  
   
@@ -143,7 +144,7 @@ Die einfachste Herangehensweise an einen SQL Server-Massenkopiervorgang ist das 
 Die folgende Anwendung zeigt das Laden von Daten mithilfe der Klasse „SQLServerBulkCopy“. In diesem Beispiel wird ein „ResultSet“ verwendet, um Daten aus der Tabelle „Production.Product“ in der SQL Server AdventureWorks-Datenbank in eine ähnliche Tabelle in der gleichen Datenbank zu kopieren.  
   
 > [!IMPORTANT]  
-> Dieses Beispiel wird nur ausgeführt, wenn Sie die Arbeitstabellen zuvor wie unter [Tabelleneinrichtung](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup) beschrieben erstellt haben. Dieser Code wird nur bereitgestellt, um die Syntax für die Verwendung von „SQLServerBulkCopy“ zu demonstrieren. Wenn sich die Quell- und Zieltabellen in der gleichen SQL Server-Instanz befinden, ist die Verwendung einer Transact-SQL-Anweisung „INSERT …“ einfacher und schneller. SELECT“ zum Kopieren der Daten einfacher und schneller.  
+> Dieses Beispiel wird nur ausgeführt, wenn Sie die Arbeitstabellen zuvor wie unter [Tabelleneinrichtung](#table-setup) beschrieben erstellt haben. Dieser Code wird nur bereitgestellt, um die Syntax für die Verwendung von „SQLServerBulkCopy“ zu demonstrieren. Wenn sich die Quell- und Zieltabellen in der gleichen SQL Server-Instanz befinden, ist die Verwendung einer Transact-SQL-Anweisung „INSERT …“ einfacher und schneller. SELECT“ zum Kopieren der Daten einfacher und schneller.  
 
 ```java
 import java.sql.Connection;
@@ -237,7 +238,7 @@ Mithilfe einer einzelnen Instanz einer SQLServerBulkCopy-Klasse können Sie mehr
 Wenn Sie mehrere Massenkopiervorgänge mithilfe des gleichen SQLServerBulkCopy-Objekts ausführen, bestehen normalerweise keine Einschränkungen hinsichtlich der Gleichheit oder Verschiedenheit der Quell- und Zielinformationen für die einzelnen Vorgänge. Sie müssen jedoch sicherstellen, dass die Informationen zur Spaltenzuordnung bei jedem Schreibvorgang auf dem Server ordnungsgemäß festgelegt sind.  
   
 > [!IMPORTANT]  
-> Dieses Beispiel wird nur ausgeführt, wenn Sie die Arbeitstabellen zuvor wie unter [Tabelleneinrichtung](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup) beschrieben erstellt haben. Dieser Code wird nur bereitgestellt, um die Syntax für die Verwendung von „SQLServerBulkCopy“ zu demonstrieren. Wenn sich die Quell- und Zieltabellen in der gleichen SQL Server-Instanz befinden, ist die Verwendung einer Transact-SQL-Anweisung „INSERT …“ einfacher und schneller. SELECT“ zum Kopieren der Daten einfacher und schneller.  
+> Dieses Beispiel wird nur ausgeführt, wenn Sie die Arbeitstabellen zuvor wie unter [Tabelleneinrichtung](#table-setup) beschrieben erstellt haben. Dieser Code wird nur bereitgestellt, um die Syntax für die Verwendung von „SQLServerBulkCopy“ zu demonstrieren. Wenn sich die Quell- und Zieltabellen in der gleichen SQL Server-Instanz befinden, ist die Verwendung einer Transact-SQL-Anweisung „INSERT …“ einfacher und schneller. SELECT“ zum Kopieren der Daten einfacher und schneller.  
 
 ```java
 import java.sql.Connection;
@@ -366,7 +367,7 @@ In dem Beispiel enthalten Quell- und Zieltabelle jeweils eine Identitätsspalte 
 Der Massenkopiervorgang wird mit dem Wert „10“ für die Eigenschaft **BatchSize** ausgeführt. Wenn der Vorgang auf die ungültige Zeile trifft, wird eine Ausnahme ausgelöst. In diesem ersten Beispiel ist der Massenkopiervorgang nicht transaktional. Für alle bis zum Auftreten des Fehlers kopierten Batches wird ein Commit ausgeführt; für den Batch, der den doppelten Schlüssel enthält, wird ein Rollback ausgeführt, und der Massenkopiervorgang wird vor dem Verarbeiten weiterer Batches angehalten.  
   
 > [!NOTE]  
-> Dieses Beispiel wird nur ausgeführt, wenn Sie die Arbeitstabellen zuvor wie unter [Tabelleneinrichtung](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup) beschrieben erstellt haben. Dieser Code wird nur bereitgestellt, um die Syntax für die Verwendung von „SQLServerBulkCopy“ zu demonstrieren. Wenn sich die Quell- und Zieltabellen in der gleichen SQL Server-Instanz befinden, ist die Verwendung einer Transact-SQL-Anweisung „INSERT …“ einfacher und schneller. SELECT“ zum Kopieren der Daten einfacher und schneller.  
+> Dieses Beispiel wird nur ausgeführt, wenn Sie die Arbeitstabellen zuvor wie unter [Tabelleneinrichtung](#table-setup) beschrieben erstellt haben. Dieser Code wird nur bereitgestellt, um die Syntax für die Verwendung von „SQLServerBulkCopy“ zu demonstrieren. Wenn sich die Quell- und Zieltabellen in der gleichen SQL Server-Instanz befinden, ist die Verwendung einer Transact-SQL-Anweisung „INSERT …“ einfacher und schneller. SELECT“ zum Kopieren der Daten einfacher und schneller.  
 
 ```java
 import java.sql.Connection;
@@ -475,7 +476,7 @@ Sie können ein Verbindungsobjekt, für das Transaktionen aktiviert sind, als Pa
 Die folgende Anwendung ähnelt **BulkCopyNonTransacted**, mit einer Ausnahme: in diesem Beispiel ist der Massenkopiervorgang in einer größeren, externen Transaktion enthalten. Wenn der Fehler aufgrund des Primärschlüsselverstoßes auftritt, wird ein Rollback der gesamten Transaktion ausgeführt, und der Zieltabelle werden keine Zeilen hinzugefügt.
 
 > [!NOTE]  
-> Dieses Beispiel wird nur ausgeführt, wenn Sie die Arbeitstabellen zuvor wie unter [Tabelleneinrichtung](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#table-setup) beschrieben erstellt haben. Dieser Code wird nur bereitgestellt, um die Syntax für die Verwendung von „SQLServerBulkCopy“ zu demonstrieren. Wenn sich die Quell- und Zieltabellen in der gleichen SQL Server-Instanz befinden, ist die Verwendung einer Transact-SQL-Anweisung „INSERT …“ einfacher und schneller. SELECT“ zum Kopieren der Daten einfacher und schneller.  
+> Dieses Beispiel wird nur ausgeführt, wenn Sie die Arbeitstabellen zuvor wie unter [Tabelleneinrichtung](#table-setup) beschrieben erstellt haben. Dieser Code wird nur bereitgestellt, um die Syntax für die Verwendung von „SQLServerBulkCopy“ zu demonstrieren. Wenn sich die Quell- und Zieltabellen in der gleichen SQL Server-Instanz befinden, ist die Verwendung einer Transact-SQL-Anweisung „INSERT …“ einfacher und schneller. SELECT“ zum Kopieren der Daten einfacher und schneller.  
 
 ```java
 import java.sql.Connection;
@@ -570,7 +571,7 @@ public class BulkCopyExistingTransactions {
  Die folgende Anwendung zeigt das Laden von Daten mithilfe der Klasse „SQLServerBulkCopy“. In diesem Beispiel wird eine CSV-Datei verwendet, um aus der Tabelle „Production.Product“ in der SQL Server AdventureWorks-Datenbank exportierte Daten in eine ähnliche Tabelle in der gleichen Datenbank zu kopieren.  
   
 > [!IMPORTANT]  
-> Dieses Beispiel wird nur ausgeführt, wenn Sie die Arbeitstabellen zuvor wie unter [Tabelleneinrichtung](../../ssms/download-sql-server-management-studio-ssms.md) beschrieben erstellt haben, um es abzurufen.  
+> Dieses Beispiel wird nur ausgeführt, wenn Sie die Arbeitstabellen zuvor wie unter [Tabelleneinrichtung](#table-setup) beschrieben erstellt haben, um es abzurufen.  
   
 1. Öffnen Sie **SQL Server Management Studio**, und stellen Sie eine Verbindung mit dem SQL Server-Computer mit der AdventureWorks-Datenbank her.  
   
@@ -658,7 +659,7 @@ Ab dem Microsoft JDBC-Treiber 6.0 für SQL Server wird das Massenkopieren mit Al
   
 Je nach Massenkopieroptionen und je nach Verschlüsselungstyp der Quell- und Zieltabellen kann der JDBC-Treiber die Daten transparent entschlüsseln und verschlüsseln, oder die verschlüsselten Daten werden unverändert gesendet. Im Falle eines Massenkopiervorgangs von Daten aus einer verschlüsselten Spalte in eine nicht verschlüsselte Spalte entschlüsselt der Treiber die Daten beispielsweise transparent, bevor sie an SQL Server gesendet werden. Ähnlich verhält es sich für Massenkopiervorgänge von Daten aus einer nicht verschlüsselten Spalte (oder einer CSV-Datei) in eine verschlüsselte Spalte: Hier verschlüsselt der Treiber die Daten transparent, bevor sie an SQL Server gesendet werden. Wenn sowohl die Quelle als auch das Ziel verschlüsselt sind, sendet der Treiber je nach **allowEncryptedValueModifications**-Massenkopieroption die Daten entweder unverändert, oder er entschlüsselt die Daten und verschlüsselt sie dann wieder, bevor sie an SQL Server gesendet werden.  
   
-Weitere Informationen finden Sie weiter unten unter der Massenkopieroption **allowEncryptedValueModifications** und unter [Using Always Encrypted with the JDBC Driver (Verwenden von Always Encrypted mit dem JDBC-Treiber)](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).  
+Weitere Informationen finden Sie weiter unten unter der Massenkopieroption **allowEncryptedValueModifications** und unter [Using Always Encrypted with the JDBC Driver (Verwenden von Always Encrypted mit dem JDBC-Treiber)](using-always-encrypted-with-the-jdbc-driver.md).  
   
 > [!IMPORTANT]  
 > Einschränkung für den Microsoft JDBC-Treiber 6.0 für SQL Server beim Massenkopieren von Daten aus einer CSV-Datei in verschlüsselte Spalten:  
@@ -723,7 +724,7 @@ Die Klasse „SQLServerBulkCopy“ kann nur verwendet werden, um Daten in SQL Se
 | Boolean UseInternalTransaction           | Wenn angegeben, wird jeder Batch des Massenkopiervorgangs innerhalb einer Transaktion verarbeitet. Wenn „SQLServerBulkCopy“ eine vorhandene Verbindung verwendet, (wie im Konstruktor angegeben), tritt eine SQLServerException auf.  Wenn „SQLServerBulkCopy“ eine dedizierte Verbindung erstellt hat, wird eine Transaktion aktiviert.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | False – keine Transaktion                                               |
 | Int BatchSize                            | Anzahl der Zeilen in jedem Batch. Am Ende jedes Batches werden die im Batch enthaltenen Zeilen an den Server gesendet.<br /><br /> Ein Batch ist abgeschlossen, wenn die Anzahl „BatchSize“ Zeilen verarbeitet wurde oder keine weiteren Zeilen zum Senden an die Zieldatenquelle mehr vorhanden sind.  Wenn die SQLServerBulkCopy-Instanz ohne aktive Option „UseInternalTransaction“ deklariert wurde, werden Zeilen zu jeweils „BatchSize“ zugleich an den Server gesendet, es wird jedoch keine transaktionsbezogene Aktion eingeleitet. Wenn „UseInternalTransaction“ aktiviert ist, wird jeder Batch Zeilen als separate Transaktion eingefügt.                                                                                                                                                                                                                                                                                                                                                                                                                                           | 0 – gibt an, dass jeder writeToServer-Vorgang ein einzelner Batch ist.    |
 | Int BulkCopyTimeout                      | Anzahl der Sekunden für den Abschluss des Vorgangs, bevor ein Timeout eintritt. Der Wert „0“ bedeutet, dass keine Einschränkung vorliegt, und der Massenkopiervorgang wartet unbegrenzt.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | 60 Sekunden.                                                          |
-| Boolean allowEncryptedValueModifications | Diese Option ist ab dem Microsoft JDBC-Treiber 6.0 für SQL Server verfügbar.<br /><br /> Wenn angegeben, aktiviert **allowEncryptedValueModifications** das Massenkopieren von verschlüsselten Daten zwischen Tabellen oder Datenbanken, ohne die Daten zu entschlüsseln. Normalerweise würde eine Anwendung Daten aus verschlüsselten Spalten aus einer Tabelle auswählen, ohne die Daten zu entschlüsseln. Die App würde eine Verbindung zur Datenbank herstellen, und das Spaltenverschlüsselungseinstellungsschlüsselwort wäre auf „deaktiviert“ festgelegt. Dann würde die Anwendung diese Option zum Masseneinfügen der Daten verwenden, die noch verschlüsselt wären. Weitere Informationen finden Sie unter [Verwenden von Always Encrypted mit dem ODBC-Treiber](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).<br /><br /> Gehen Sie bei der Angabe von **AllowEncryptedValueModifications** mit Bedacht vor, da dies möglicherweise zu einer Beschädigung der Datenbank führen kann, da der Treiber nicht überprüft, ob die Daten tatsächlich verschlüsselt oder mit demselben Verschlüsselungstyp, Algorithmus und Schlüssel wie die Zielspalte ordnungsgemäß verschlüsselt wurden. |
+| Boolean allowEncryptedValueModifications | Diese Option ist ab dem Microsoft JDBC-Treiber 6.0 für SQL Server verfügbar.<br /><br /> Wenn angegeben, aktiviert **allowEncryptedValueModifications** das Massenkopieren von verschlüsselten Daten zwischen Tabellen oder Datenbanken, ohne die Daten zu entschlüsseln. Normalerweise würde eine Anwendung Daten aus verschlüsselten Spalten aus einer Tabelle auswählen, ohne die Daten zu entschlüsseln. Die App würde eine Verbindung zur Datenbank herstellen, und das Spaltenverschlüsselungseinstellungsschlüsselwort wäre auf „deaktiviert“ festgelegt. Dann würde die Anwendung diese Option zum Masseneinfügen der Daten verwenden, die noch verschlüsselt wären. Weitere Informationen finden Sie unter [Verwenden von Always Encrypted mit dem ODBC-Treiber](using-always-encrypted-with-the-jdbc-driver.md).<br /><br /> Gehen Sie bei der Angabe von **AllowEncryptedValueModifications** mit Bedacht vor, da dies möglicherweise zu einer Beschädigung der Datenbank führen kann, da der Treiber nicht überprüft, ob die Daten tatsächlich verschlüsselt oder mit demselben Verschlüsselungstyp, Algorithmus und Schlüssel wie die Zielspalte ordnungsgemäß verschlüsselt wurden. |
   
  Getter und Setter:  
   
@@ -796,4 +797,4 @@ Hinweise zur Implementierung und Einschränkungen:
   
 ## <a name="see-also"></a>Weitere Informationen  
 
-[Übersicht über den JDBC-Treiber](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[Übersicht über den JDBC-Treiber](overview-of-the-jdbc-driver.md)  

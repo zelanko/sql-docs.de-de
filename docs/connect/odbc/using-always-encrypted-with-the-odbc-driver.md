@@ -1,5 +1,6 @@
 ---
-title: Verwenden von Always Encrypted mit ODBC Driver for SQL Server | Microsoft-Dokumentation
+title: Verwenden von Always Encrypted mit dem ODBC Driver
+description: Erfahren Sie, wie Sie ODBC-Anwendungen mithilfe von Always Encrypted und dem Microsoft ODBC Driver for SQL Server entwickeln.
 ms.custom: ''
 ms.date: 09/01/2018
 ms.prod: sql
@@ -8,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: v-chojas
-ms.openlocfilehash: 637198e079c6aa1b1e08e1a69e204b36f54f3827
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: d47e0d0f874689ca81a5153de08cb3e81fff22fc
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "79285844"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635423"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Verwenden von Always Encrypted mit ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,7 +26,7 @@ ms.locfileid: "79285844"
 
 ### <a name="introduction"></a>Einführung
 
-Dieser Artikel bietet Informationen zum Entwickeln von ODBC-Anwendungen mithilfe von [Always Encrypted (Datenbank-Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) oder [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md) und dem [ODBC-Treiber für SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
+Dieser Artikel bietet Informationen zum Entwickeln von ODBC-Anwendungen mithilfe von [Always Encrypted (Datenbank-Engine)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) oder [Always Encrypted mit Secure Enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md) und dem [ODBC-Treiber für SQL Server](microsoft-odbc-driver-for-sql-server.md).
 
 Always Encrypted ermöglicht Clientanwendungen das Verschlüsseln von vertraulichen Daten in einer Weise, dass weder die Daten noch die Verschlüsselungsschlüssel zu irgendeinem Zeitpunkt gegenüber SQL Server oder Azure SQL-Datenbank offengelegt werden. Ein Treiber, bei dem Always Encrypted aktiviert ist, z.B. ODBC Driver for SQL Server, erreicht dies durch die transparente Ver- und Entschlüsselung von sensiblen Daten in der Clientanwendung. Der Treiber ermittelt automatisch, welche Abfrageparameter vertraulichen Datenbankspalten (mit Always Encrypted geschützt) entsprechen. Die Werte dieser Parameter werden dann vor der Übergabe an SQL Server oder Azure SQL-Datenbank verschlüsselt. Auf ähnliche Weise entschlüsselt der Treiber die Daten transparent, die von verschlüsselten Datenbankspalten in Abfrageergebnissen empfangen werden. *Always Encrypted mit Secure Enclaves* erweitert dieses Feature um umfangreichere Funktionen für vertrauliche Daten und sorgt gleichzeitig dafür, dass diese Daten vertraulich bleiben.
 
@@ -60,7 +61,7 @@ Beachten Sie, dass das Aktivieren von Always Encrypted für eine erfolgreiche Ve
 ### <a name="enabling-always-encrypted-with-secure-enclaves"></a>Aktivieren von Always Encrypted mit Secure Enclaves
 
 > [!NOTE]
-> Unter Linux und Mac ist zur Verwendung von Always Encrypted mit Secure Enclaves die OpenSSL-Version 1.0.1 oder höher erforderlich.
+> Unter Linux und macOS ist zur Verwendung von Always Encrypted mit Secure Enclaves die OpenSSL-Version 1.0.1 oder höher erforderlich.
 
 Ab Version 17.4 unterstützt der Treiber Always Encrypted mit Secure Enclaves. Um die Verwendung der Enclave beim Herstellen einer Verbindung mit SQL Server 2019 oder höher zu ermöglichen, legen Sie den `ColumnEncryption`-DSN, die Verbindungszeichenfolge oder das Verbindungsattribut auf den Namen des Enclavetyps und des Nachweisprotokolls sowie auf die zugehörigen Nachweisdaten fest (getrennt durch Komma). In Version 17.4 werden nur der Enclavetyp [Virtualisierungsbasierte Sicherheit](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) und das Nachweisprotokoll [Host-Überwachungsdienst](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server) (angegeben durch `VBS-HGS`) unterstützt; geben Sie zur Verwendung die URL des Nachweisservers an, z. B.:
 
@@ -431,16 +432,16 @@ DRIVER=ODBC Driver 17 for SQL Server;SERVER=myServer;Trusted_Connection=Yes;DATA
 Zum Speichern von CMKs im Azure Key Vault sind keine weiteren Änderungen der ODBC-Anwendung erforderlich.
 
 > [!NOTE]
-> Der Treiber enthält eine Liste von Azure Key Vault-Endpunkten, denen der Treiber vertraut. Ab der Treiberversion 17.5.2 kann diese Liste konfiguriert werden: Legen Sie die `AKVTrustedEndpoints`-Eigenschaft im Treiber oder im DSN-Registrierungsschlüssel ODBCINST.INI oder ODBC.INI (Windows) oder in den Dateiabschnitten `odbcinst.ini` oder `odbc.ini` (Linux/Mac) auf eine durch Semikolons getrennte Liste fest. Wenn Sie die Eigenschaft im DSN festlegen, hat diese Einstellung Vorrang vor einer Einstellung im Treiber. Wenn der Wert mit einem Semikolon beginnt, wird die Standardliste erweitert. Andernfalls wird die Standardliste ersetzt. Die Standardliste (ab 17.5) ist `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`.
+> Der Treiber enthält eine Liste von Azure Key Vault-Endpunkten, denen der Treiber vertraut. Ab der Treiberversion 17.5.2 kann diese Liste konfiguriert werden: Legen Sie die `AKVTrustedEndpoints`-Eigenschaft im Treiber oder im DSN-Registrierungsschlüssel ODBCINST.INI oder ODBC.INI (Windows) oder in den Dateiabschnitten `odbcinst.ini` oder `odbc.ini` (Linux/macOS) auf eine durch Semikolons getrennte Liste fest. Wenn Sie die Eigenschaft im DSN festlegen, hat diese Einstellung Vorrang vor einer Einstellung im Treiber. Wenn der Wert mit einem Semikolon beginnt, wird die Standardliste erweitert. Andernfalls wird die Standardliste ersetzt. Die Standardliste (ab 17.5) ist `vault.azure.net;vault.azure.cn;vault.usgovcloudapi.net;vault.microsoftazure.de`.
 
 
 ### <a name="using-the-windows-certificate-store-provider"></a>Verwenden des Windows-Zertifikatspeicheranbieters
 
-Unter Windows enthält ODBC Driver for SQL Server einen integrierten CMK-Speicheranbieter für den Windows-Zertifikatspeicher namens `MSSQL_CERTIFICATE_STORE`. (Dieser Anbieter ist nicht unter macOS oder Linux verfügbar.) Mit diesem Anbieter wird der CMK lokal auf dem Clientcomputer gespeichert, und es ist keine weitere Konfiguration durch die Anwendung erforderlich, um ihn mit dem Treiber zu verwenden. Die Anwendung muss jedoch auf das Zertifikat und den privaten Schlüssel im Speicher zugreifen können. Weitere Informationen finden Sie unter [Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)](https://docs.microsoft.com/sql/relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted).
+Unter Windows enthält ODBC Driver for SQL Server einen integrierten CMK-Speicheranbieter für den Windows-Zertifikatspeicher namens `MSSQL_CERTIFICATE_STORE`. (Dieser Anbieter ist nicht unter macOS oder Linux verfügbar.) Mit diesem Anbieter wird der CMK lokal auf dem Clientcomputer gespeichert, und es ist keine weitere Konfiguration durch die Anwendung erforderlich, um ihn mit dem Treiber zu verwenden. Die Anwendung muss jedoch auf das Zertifikat und den privaten Schlüssel im Speicher zugreifen können. Weitere Informationen finden Sie unter [Erstellen und Speichern von Spaltenhauptschlüsseln (Always Encrypted)](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 ### <a name="using-custom-keystore-providers"></a>Verwenden benutzerdefinierter Keystore-Anbieter
 
-Über die CEKeystoreProvider-Oberfläche unterstützt ODBC Driver for SQL Server auch benutzerdefinierte Schlüsselspeicheranbieter von Drittanbietern. Dadurch kann eine Anwendung Schlüsselspeicheranbieter laden, abfragen und konfigurieren, damit sie vom Treiber zum Zugreifen auf verschlüsselte Spalten verwendet werden können. Anwendungen können auch direkt mit einem Schlüsselspeicheranbieter interagieren, um CEKs für die Speicherung in SQL Server zu verschlüsseln und weitere Aufgaben auszuführen, die über das Zugreifen auf verschlüsselte Spalten mit ODBC hinausgehen. Weitere Informationen finden Sie unter [Custom Keystore Providers (Benutzerdefinierte Schlüsselspeicheranbieter)](../../connect/odbc/custom-keystore-providers.md).
+Über die CEKeystoreProvider-Oberfläche unterstützt ODBC Driver for SQL Server auch benutzerdefinierte Schlüsselspeicheranbieter von Drittanbietern. Dadurch kann eine Anwendung Schlüsselspeicheranbieter laden, abfragen und konfigurieren, damit sie vom Treiber zum Zugreifen auf verschlüsselte Spalten verwendet werden können. Anwendungen können auch direkt mit einem Schlüsselspeicheranbieter interagieren, um CEKs für die Speicherung in SQL Server zu verschlüsseln und weitere Aufgaben auszuführen, die über das Zugreifen auf verschlüsselte Spalten mit ODBC hinausgehen. Weitere Informationen finden Sie unter [Custom Keystore Providers (Benutzerdefinierte Schlüsselspeicheranbieter)](custom-keystore-providers.md).
 
 Zur Interaktion mit benutzerdefinierten Schlüsselspeicheranbietern werden zwei Verbindungsattribute verwendet. Sie lauten wie folgt:
 
@@ -543,7 +544,7 @@ SQLRETURN SQLSetConnectAttr( SQLHDBC ConnectionHandle, SQLINTEGER Attribute, SQL
 Zusätzliche detaillierte Fehlerinformationen können über [SQLGetDiacRec](https://msdn.microsoft.com/library/ms710921(v=vs.85).aspx) abgerufen werden.
 
 > [!NOTE]
-> Der Anbieter kann mithilfe des Verbindungshandles, sofern gewünscht, die geschriebenen Daten einer bestimmten Verbindung zuordnen. Dies ist beim Implementieren von Konfigurationen für einzelne Verbindungen nützlich. Außerdem kann er den Verbindungskontext ignorieren und alle Daten identisch verarbeiten, unabhängig davon, welche Verbindung zum Senden der Daten verwendet wurde. Weitere Informationen finden Sie unter [Context Association (Kontextzuordnung)](../../connect/odbc/custom-keystore-providers.md#context-association).
+> Der Anbieter kann mithilfe des Verbindungshandles, sofern gewünscht, die geschriebenen Daten einer bestimmten Verbindung zuordnen. Dies ist beim Implementieren von Konfigurationen für einzelne Verbindungen nützlich. Außerdem kann er den Verbindungskontext ignorieren und alle Daten identisch verarbeiten, unabhängig davon, welche Verbindung zum Senden der Daten verwendet wurde. Weitere Informationen finden Sie unter [Context Association (Kontextzuordnung)](custom-keystore-providers.md#context-association).
 
 #### <a name="reading-data-from-a-provider"></a>Lesen von Daten von einem Anbieter
 
@@ -565,7 +566,7 @@ Der Aufrufer muss sicherstellen, dass dem Anbieter zum Schreiben der Daten ein P
 
 Die Oberfläche stellt keine weiteren Anforderungen an das Format der zwischen Anwendung und Schlüsselspeicheranbieter übertragenen Daten. Jeder Anbieter kann je nach Anforderungen ein eigenes Protokoll bzw. Datenformat definieren.
 
-Ein Beispiel für das Implementieren eines eigenen Schlüsselspeicheranbieters finden Sie unter [Custom Keystore Providers (Benutzerdefinierte Schlüsselspeicheranbieter)](../../connect/odbc/custom-keystore-providers.md).
+Ein Beispiel für das Implementieren eines eigenen Schlüsselspeicheranbieters finden Sie unter [Custom Keystore Providers (Benutzerdefinierte Schlüsselspeicheranbieter)](custom-keystore-providers.md).
 
 ## <a name="limitations-of-the-odbc-driver-when-using-always-encrypted"></a>Einschränkungen des ODBC-Treibers bei Verwendung von Always Encrypted
 

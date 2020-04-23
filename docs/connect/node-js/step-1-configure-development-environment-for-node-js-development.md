@@ -1,5 +1,6 @@
 ---
-title: 'Schritt 1: Konfigurieren der Entwicklungsumgebung für Node.js-Entwicklung | Microsoft-Dokumentation'
+title: 'Schritt 1: Konfigurieren der Entwicklungsumgebung für Node.js'
+description: Sie müssen Ihre Entwicklungsumgebung entsprechend den Voraussetzungen konfigurieren, um mithilfe des Node.js-Treibers für SQL Server eine Anwendung entwickeln zu können.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,26 +11,26 @@ ms.topic: conceptual
 ms.assetid: 2dad01f1-fadf-4ac9-9b4d-26be3d301886
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 2ba06f87c5ff4970d3d8686e7195d57dc076cc04
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 38337772d9ec9db2503637122d0d1b616dc6ef5f
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923839"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528134"
 ---
-# <a name="step-1--configure-development-environment-for-nodejs-development"></a>Schritt 1: Konfigurieren der Entwicklungsumgebung für die Node.js-Entwicklung
+# <a name="step-1--configure-development-environment-for-nodejs-development"></a>Schritt 1:  Konfigurieren der Entwicklungsumgebung für die Node.js-Entwicklung
 Sie müssen Ihre Entwicklungsumgebung entsprechend den Voraussetzungen konfigurieren, um mithilfe des Node.js-Treibers für SQL Server eine Anwendung entwickeln zu können.  Die gängigste Methode besteht darin, den Node Package Manager (npm) zu verwenden, um das Tedious-Modul zu installieren. Sie können das Tedious-Modul aber auch direkt von [GitHub](https://github.com/pekim/tedious) herunterladen.  
   
-Beachten Sie, dass der Node.js-Treiber das TDS-Protokoll verwendet, das in SQL Server und Azure SQL-Datenbank standardmäßig aktiviert ist.  Es ist keine zusätzliche Konfiguration erforderlich.  
+Der Node.js-Treiber verwendet das TDS-Protokoll, das in SQL Server und Azure SQL-Datenbank standardmäßig aktiviert ist.  Es ist keine zusätzliche Konfiguration erforderlich.  
   
 ## <a name="windows"></a>Windows  
   
-1. **Installieren von Node.js-Runtime und Node Package Manager (npm)**  
+1. **Installieren Sie Node.js-Runtime und Node Package Manager (npm).**  
 a. Wechseln Sie zu [Node.js](https://nodejs.org/en/download/).  
 b. Klicken Sie auf den Link für das gewünschten Windows-Installationsprogramm (MSI-Datei).   
 c. Wenn der Download abgeschlossen ist, führen Sie die MSI-Datei aus, um Node.js zu installieren.  
   
-2. **Öffnen Sie „cmd.exe“.**  
+2. **Öffnen von „cmd.exe“**  
   
 3. **Erstellen Sie ein Projektverzeichnis**, und wechseln Sie zu diesem Verzeichnis.    
 ```  
@@ -41,7 +42,7 @@ c. Wenn der Download abgeschlossen ist, führen Sie die MSI-Datei aus, um Node.j
 > npm init  
 ```  
   
-5. **Installieren des Tedious-Moduls in Ihrem Projekt**  Dies ist die Implementierung des TDS-Protokolls, das der Treiber zur Kommunikation mit SQL Server verwendet.  
+5. **Installieren des Tedious-Moduls in Ihrem Projekt**  Tedious ist die Implementierung des TDS-Protokolls, das zur Kommunikation mit SQL Server verwendet wird.  
 ```  
 > npm install tedious  
 ```  
@@ -50,11 +51,11 @@ c. Wenn der Download abgeschlossen ist, führen Sie die MSI-Datei aus, um Node.j
   
 1.  **Öffnen Sie ein Terminal.**  
   
-2. **Installieren der Node.js-Runtime**  
+2. **Installieren Sie die Node.js-Runtime.**  
 ```  
 >sudo apt-get install node  
 ```  
-3. **Installieren von npm (Node Package Manager)**  
+3. **Installieren Sie npm (Node Package Manager).**  
 ```  
 > sudo apt-get install npm  
 ```  
@@ -69,16 +70,16 @@ c. Wenn der Download abgeschlossen ist, führen Sie die MSI-Datei aus, um Node.j
 > sudo npm init  
 ```  
   
-6. **Installieren des Tedious-Moduls in Ihrem Projekt**  Dies ist die Implementierung des TDS-Protokolls, das der Treiber zur Kommunikation mit SQL Server verwendet.  
+6. **Installieren des Tedious-Moduls in Ihrem Projekt**  Tedious ist die Implementierung des TDS-Protokolls, das zur Kommunikation mit SQL Server verwendet wird.  
 ```  
 > sudo npm install tedious  
 ```  
   
-## <a name="mac"></a>Mac  
+## <a name="macos"></a>macOS  
   
-1. **Installieren von Node.js-Runtime und Node Package Manager (npm)**  
+1. **Installieren Sie die Node.js-Runtime und npm (Node Package Manager).**  
 a. Wechseln Sie zu [Node.js](https://nodejs.org/en/download/).  
-b. Klicken Sie auf den entsprechenden Link für das Mac OS-Installationsprogramm.  
+b. Klicken Sie auf den entsprechenden Link für das macOS-Installationsprogramm.  
 c. Wenn der Download abgeschlossen ist, führen Sie die DMG-Datei aus, um Node.js zu installieren.  
   
 2. **Öffnen Sie ein Terminal.**  
@@ -98,4 +99,3 @@ c. Wenn der Download abgeschlossen ist, führen Sie die DMG-Datei aus, um Node.j
 ```  
 > npm install tedious  
 ```  
-  

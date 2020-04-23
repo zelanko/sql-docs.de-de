@@ -11,12 +11,12 @@ ms.assetid: c8a21481-0f0e-41e3-a1ad-49a84091b422
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 516159955d7e4d69d52f1f462c818e3c005f30b3
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 2adb04d7f50a649d3b98be1732c15ee7c18a1767
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "70958339"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487449"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Überlegungen und Einschränkungen zu temporalen Tabellen
 
@@ -49,10 +49,10 @@ Beachten Sie Folgendes, wenn Sie mit temporalen Tabellen arbeiten:
 - **INSTEAD OF** -Trigger sind weder bei der aktuellen noch bei der Verlaufstabelle zulässig, um zu verhindern, dass die DML-Logik ungültig wird. **AFTER** -Trigger sind nur in der aktuellen Tabelle zulässig. In der Verlaufstabelle werden sie blockiert, um zu vermeiden, dass die DML-Logik blockiert wird.
 - Die Verwendung der Replikationstechniken ist eingeschränkt:
 
-  - **Always On:** wird voll unterstützt
-  - **Change Data Capture und Change Data Tracking:** werden nur für die aktuelle Tabelle unterstützt
-  - **Momentaufnahme und Transaktionsreplikation**: unterstützt nur einen Verleger mit deaktivierten temporalen Tabellen und einen Abonnenten mit aktivierten temporalen Tabellen. In diesem Fall wird der Verleger für eine OLTP-Arbeitsauslastung verwendet, während der Abonnent zum Verlagern der Berichtserstellung dient (einschließlich „AS OF“-Abfragen). Die Verwendung von mehreren Abonnenten wird nicht unterstützt, da dieses Szenario zu inkonsistenten temporalen Daten führen könnte, da jeder von ihnen von der lokalen Systemuhr abhängig wäre.
-  - **Mergereplikation:** wird für temporale Tabellen nicht unterstützt
+  - **Always On:** Vollständig unterstützt.
+  - **Change Data Capture und Änderungsnachverfolgung:** Nur für die aktuelle Tabelle unterstützt.
+  - **Momentaufnahme- und Transaktionsreplikation**: Nur unterstützt für einen Verleger mit deaktivierten temporalen Tabellen und einen Abonnenten mit aktivierten temporalen Tabellen. In diesem Fall wird der Verleger für eine OLTP-Arbeitsauslastung verwendet, während der Abonnent zum Verlagern der Berichtserstellung dient (einschließlich „AS OF“-Abfragen). Wenn der Verteilungs-Agent startet, öffnet er eine Transaktion, die geöffnet bleibt, bis der Agent angehalten wird. Aufgrund dieses Verhaltens werden SysStartTime und SysEndTime mit der Startzeit der ersten Transaktion aufgefüllt, die vom Verteilungs-Agent gestartet wird. Daher kann es besser sein, den Verteilungs-Agent nach einem Zeitplan auszuführen, anstatt die Standardeinstellung zu übernehmen, mit der der Agent kontinuierlich ausgeführt wird. Die Verwendung von mehreren Abonnenten wird nicht unterstützt, da dies aufgrund der Abhängigkeit von der lokalen Systemuhr zu inkonsistenten temporalen Daten führen könnte.
+  - **Mergereplikation:** Für temporale Tabellen nicht unterstützt.
 
 - Reguläre Abfragen betreffen nur Daten in der aktuellen Tabelle. Zum Abfragen von Daten in der Verlaufstabelle müssen Sie zeitliche Abfragen verwenden. Diese werden weiter unten in diesem Thema im Abschnitt „Abfragen temporaler Daten“ behandelt.
 - Eine optimale Indizierungsstrategie enthält einen gruppierten Columnstore-Index und/oder einen B-Strukturindex auf der aktuellen Tabelle und einen Columnstore-Index auf der Verlaufstabelle für die optimale Speichergröße und -Leistung. Falls Sie Ihre eigene Verlaufstabelle erstellen oder verwenden, empfehlen wir Ihnen dringend, diese Art Index zu erstellen. Dieser Index sollte aus Zeitraumspalten bestehen und mit der Spalte „Ende des Zeitraums“ beginnen, um die temporalen Abfragen sowie die Abfragen, die Teil der Datenkonsistenzüberprüfung sind, zu beschleunigen. Die Standardverlaufstabelle hat einen für Sie erstellten gruppierten Rowstore-Index, der auf den Zeitraumspalten (Ende, Start) basiert. Ein nicht gruppierter Rowstore-Index wird mindestens empfohlen.

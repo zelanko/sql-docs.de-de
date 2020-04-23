@@ -1,5 +1,6 @@
 ---
-title: Schlüsselwörter für DSN und Verbindungszeichenfolgen für den ODBC-Treiber – SQL Server | Microsoft Dokumentation
+title: ODBC-DSN und Verbindungszeichenfolgen-Schlüsselwörter
+description: Auf dieser Seite sind die Schlüsselwörter für Verbindungszeichenfolgen und für DSN sowie Verbindungsattribute für die Funktionen „SQLSetConnectAttr“ und „SQLGetConnectAttr“ aufgelistet, die im Rahmen des ODBC-Treibers für SQL Server verfügbar sind.
 ms.custom: ''
 ms.date: 02/04/2019
 ms.prod: sql
@@ -9,12 +10,12 @@ ms.topic: conceptual
 ms.reviewer: v-chojas
 ms.author: v-jizho2
 author: karinazhou
-ms.openlocfilehash: bf9b755176913ad144781c5be0ad53150aedcd1b
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: bf0c3d880b9ebd13106be4247d42afd9d9316da9
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "76911244"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528982"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>Schlüsselwörter und Attribute von DNS- und Verbindungszeichenfolgen
 
@@ -22,7 +23,7 @@ Auf dieser Seite sind die Schlüsselwörter für Verbindungszeichenfolgen und f�
 
 ## <a name="supported-dsnconnection-string-keywords-and-connection-attributes"></a>Unterstützte Schlüsselwörter für DSN/Verbindungszeichenfolgen und Verbindungsattribute
 
-In der folgenden Tabelle sind die verfügbaren Schlüsselwörter und Attribute nach Plattform aufgelistet (L: Linux, M: Max, W: Windows). Klicken Sie auf das Schlüsselwort oder das Attribut, um detailliertere Informationen zu erhalten.
+In der folgenden Tabelle sind die verfügbaren Schlüsselwörter und Attribute nach Plattform aufgelistet (L: Linux; M: macOS; W: Windows). Klicken Sie auf das Schlüsselwort oder das Attribut, um detailliertere Informationen zu erhalten.
 
 | DSN / Verbindungszeichenfolgen-Schlüsselwort | Verbindungsattribut | Plattform |
 |-|-|-|
@@ -121,7 +122,7 @@ In der folgenden Tabelle sind die verfügbaren Schlüsselwörter und Attribute n
 | [ClientKey](../../connect/odbc/dsn-connection-string-attribute.md#clientkey) | | LMW | 
 
 
-Hier sind einige Schlüsselwörter für Verbindungszeichenfolgen und Verbindungsattribute aufgeführt, die nicht in den Artikeln [Using Connection String Keywords with SQL Server Native Client (Verwenden von Schlüsselwörtern für Verbindungszeichenfolgen mit SQL Server Native Client)](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md), [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) und [SQLSetConnectAttr Function (SQLSetConnectAttr-Funktion)](../../odbc/reference/syntax/sqlsetconnectattr-function.md) dokumentiert sind.
+Hier sind einige Schlüsselwörter für Verbindungszeichenfolgen und Verbindungsattribute aufgeführt, die nicht in den Artikeln [Verwenden von Schlüsselwörtern für Verbindungszeichenfolgen mit SQL Server Native Client](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md), [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) und [SQLSetConnectAttr-Funktion](../../odbc/reference/syntax/sqlsetconnectattr-function.md) dokumentiert sind.
 
 ### <a name="description"></a>BESCHREIBUNG
 
@@ -151,7 +152,7 @@ Steuert die Verwendung von SQL Server-Fallbackverbindungen. Wird nicht mehr unte
 
 ###  <a name="authentication---sql_copt_ss_authentication"></a>Authentifizierung – SQL_COPT_SS_AUTHENTICATION
 
-Legt den Authentifizierungsmodus für die Verbindung mit SQL Server fest. Weitere Informationen finden Sie unter [Using Azure Active Directory (Verwenden von Azure Active Directory)](using-azure-active-directory.md).
+Legt den Authentifizierungsmodus für die Verbindung mit SQL Server fest. Weitere Informationen finden Sie unter [Verwenden von Azure Active Directory](using-azure-active-directory.md).
 
 | Schlüsselwortwert | Attributwert | BESCHREIBUNG |
 |-|-|-|
@@ -168,21 +169,21 @@ Legt den Authentifizierungsmodus für die Verbindung mit SQL Server fest. Weiter
 
 ### <a name="columnencryption---sql_copt_ss_column_encryption"></a>ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION
 
-Steuert transparente Spaltenverschlüsselung (Always Encrypted). Weitere Informationen finden Sie unter [Using Always Encrypted with the ODBC Driver for SQL Server (Verwenden von Always Encrypted mit dem ODBC-Treiber für SQL Server)](using-always-encrypted-with-the-odbc-driver.md).
+Steuert transparente Spaltenverschlüsselung (Always Encrypted). Weitere Informationen finden Sie unter [Verwenden von Always Encrypted mit dem ODBC-Treiber für SQL Server](using-always-encrypted-with-the-odbc-driver.md).
 
 | Schlüsselwortwert | Attributwert | BESCHREIBUNG |
 |-|-|-|
-|Enabled|SQL_CE_ENABLED|Aktiviert Always Encrypted.|
+|Aktiviert|SQL_CE_ENABLED|Aktiviert Always Encrypted.|
 |Disabled|SQL_CE_DISABLED|(Standard) Deaktiviert Always Encrypted.|
 | |SQL_CE_RESULTSETONLY|Aktiviert nur die Entschlüsselung (Ergebnisse und Rückgabewerte).|
 
 ### <a name="transparentnetworkipresolution---sql_copt_ss_tnir"></a>TransparentNetworkIPResolution - SQL_COPT_SS_TNIR
 
-Steuert das Feature zur transparenten Netzwerk-IP-Adressauflösung, das mit MultiSubnetFailover interagiert, um erneute Verbindungsversuche zu beschleunigen. Weitere Informationen finden Sie unter [Using Transparent Network IP Resolution (Verwenden der transparenten Netzwerk-IP-Adressauflösung)](using-transparent-network-ip-resolution.md).
+Steuert das Feature zur transparenten Netzwerk-IP-Adressauflösung, das mit MultiSubnetFailover interagiert, um erneute Verbindungsversuche zu beschleunigen. Weitere Informationen finden Sie unter [Verwenden der transparenten Netzwerk-IP-Adressauflösung](using-transparent-network-ip-resolution.md).
 
 | Schlüsselwortwert | Attributwert| BESCHREIBUNG |
 |-|-|-|
-|Enabled|SQL_IS_ON|(Standard) Aktiviert die transparente Netzwerk-IP-Adressauflösung.|
+|Aktiviert|SQL_IS_ON|(Standard) Aktiviert die transparente Netzwerk-IP-Adressauflösung.|
 |Disabled|SQL_IS_OFF|Deaktiviert die transparente Netzwerk-IP-Adressauflösung.|
 
 ### <a name="usefmtonly"></a>UseFMTONLY
@@ -221,7 +222,7 @@ Wenn die Datei mit privatem Schlüssel kennwortgeschützt ist, wird das Schlüss
 
 ### <a name="sql_copt_ss_access_token"></a>SQL_COPT_SS_ACCESS_TOKEN
 
-Ermöglicht die Verwendung eines Zugriffstokens für Azure Active Directory zur Authentifizierung. Weitere Informationen finden Sie unter [Using Azure Active Directory (Verwenden von Azure Active Directory)](using-azure-active-directory.md).
+Ermöglicht die Verwendung eines Zugriffstokens für Azure Active Directory zur Authentifizierung. Weitere Informationen finden Sie unter [Verwenden von Azure Active Directory](using-azure-active-directory.md).
 
 | Attributwert | BESCHREIBUNG |
 |-|-|
@@ -230,7 +231,7 @@ Ermöglicht die Verwendung eines Zugriffstokens für Azure Active Directory zur 
 
 ### <a name="sql_copt_ss_cekeystoredata"></a>SQL_COPT_SS_CEKEYSTOREDATA
 
-Kommuniziert mit einer geladenen Keystore-Anbieterbibliothek. Steuert transparente Spaltenverschlüsselung (Always Encrypted). Dieses Attribut hat keinen Standardwert. Weitere Informationen finden Sie unter [Custom Keystore Providers (Benutzerdefinierte Keystore-Anbieter)](custom-keystore-providers.md).
+Kommuniziert mit einer geladenen Keystore-Anbieterbibliothek. Steuert transparente Spaltenverschlüsselung (Always Encrypted). Dieses Attribut hat keinen Standardwert. Weitere Informationen finden Sie unter [Benutzerdefinierte Keystore-Anbieter](custom-keystore-providers.md).
 
 | Attributwert | BESCHREIBUNG |
 |-|-|
@@ -238,7 +239,7 @@ Kommuniziert mit einer geladenen Keystore-Anbieterbibliothek. Steuert transparen
 
 ### <a name="sql_copt_ss_cekeystoreprovider"></a>SQL_COPT_SS_CEKEYSTOREPROVIDER
 
-Lädt eine Keystore-Anbieterbibliothek für Always Encrypted oder ruft die Namen der geladenen Keystore-Anbieterbibliotheken ab. Weitere Informationen finden Sie unter [Custom Keystore Providers (Benutzerdefinierte Keystore-Anbieter)](custom-keystore-providers.md). Dieses Attribut hat keinen Standardwert.
+Lädt eine Keystore-Anbieterbibliothek für Always Encrypted oder ruft die Namen der geladenen Keystore-Anbieterbibliotheken ab. Weitere Informationen finden Sie unter [Benutzerdefinierte Keystore-Anbieter](custom-keystore-providers.md). Dieses Attribut hat keinen Standardwert.
 
 | Attributwert | BESCHREIBUNG |
 |-|-|
@@ -246,7 +247,7 @@ Lädt eine Keystore-Anbieterbibliothek für Always Encrypted oder ruft die Namen
 
 ### <a name="sql_copt_ss_enlist_in_xa"></a>SQL_COPT_SS_ENLIST_IN_XA
 
-Wenn XA-Transaktionen mit einem XA-konformen Transaktionsprozessor (TP) aktiviert werden sollen, muss die Anwendung mit „SQL_COPT_SS_ENLIST_IN_XA“ die Funktion **SQLSetConnectAttr** sowie einen Zeiger zu einem `XACALLPARAM`-Objekt aufrufen. Diese Option wird unter Windows (ab 17.3), Linux und Mac unterstützt.
+Wenn XA-Transaktionen mit einem XA-konformen Transaktionsprozessor (TP) aktiviert werden sollen, muss die Anwendung mit „SQL_COPT_SS_ENLIST_IN_XA“ die Funktion **SQLSetConnectAttr** sowie einen Zeiger zu einem `XACALLPARAM`-Objekt aufrufen. Diese Option wird unter Windows (ab 17.3), Linux und macOS unterstützt.
 ```
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XACALLPARAM *param
 ``` 
@@ -255,13 +256,13 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, param, SQL_IS_POINTER);  // XA
 SQLSetConnectAttr(hdbc, SQL_COPT_SS_ENLIST_IN_XA, (SQLPOINTER)TRUE, 0);
 ``` 
 
-|value|BESCHREIBUNG|Plattformen|  
+|Wert|BESCHREIBUNG|Plattformen|  
 |-----------|-----------------|-----------------|  
-|XACALLPARAM object*|Der Zeiger auf das `XACALLPARAM`-Objekt.|Windows, Linux und Mac|
+|XACALLPARAM object*|Der Zeiger auf das `XACALLPARAM`-Objekt.|Windows, Linux und macOS|
 |TRUE|Ordnet die XA-Transaktion der ODBC-Verbindung zu. Alle entsprechenden Datenbankaktivitäten werden unter dem Schutz der XA-Transaktion durchgeführt.|Windows|  
 |FALSE|Hebt die Zuordnung der XA-Transaktion zur ODBC-Verbindung auf.|Windows|
 
- Weitere Informationen zu XA-Transaktionen finden Sie unter [Using XA Tansactions (Verwenden von XA-Transaktionen)](../../connect/odbc/use-xa-with-dtc.md).
+ Weitere Informationen zu XA-Transaktionen finden Sie unter [Verwenden von XA-Transaktionen](../../connect/odbc/use-xa-with-dtc.md).
 
 ### <a name="sql_copt_ss_spid"></a>SQL_COPT_SS_SPID
 

@@ -1,5 +1,6 @@
 ---
 title: Node.js-Treiber für SQL Server | Microsoft-Dokumentation
+description: Das Tedious-Modul ist eine Open-Source-JavaScript-Implementierung des TDS-Protokolls, das von allen modernen SQL Server-Versionen unterstützt wird.
 ms.custom: ''
 ms.date: 08/08/2017
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: c4cdbfa6-9b73-4b72-a1a6-e1b45d8a773d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 0b1bc3240a726d1a322d10a80e5841697d8fd898
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2ac747a2ab737fc5368fcf1beb22a15399bfb896
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80923850"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631920"
 ---
 # <a name="nodejs-driver-for-sql-server"></a>Node.js-Treiber für SQL Server
 
@@ -23,12 +24,12 @@ ms.locfileid: "80923850"
 
 Das Tedious-Modul ist eine JavaScript-Implementierung des TDS-Protokolls, das von allen modernen SQL Server-Versionen unterstützt wird. Der Treiber ist ein Open Source-Projekt und auf GitHub verfügbar.  
   
-Sie können mit Node.js unter Windows, Linux oder Mac eine Verbindung zu einer SQL-Datenbank herstellen.  
+Sie können mit Node.js unter Windows, Linux oder macOS eine Verbindung zu einer SQL-Datenbank-Instanz herstellen.  
   
 ## <a name="getting-started"></a>Erste Schritte  
 * [Schritt 1: Konfigurieren der Entwicklungsumgebung für die Node.js-Entwicklung](step-1-configure-development-environment-for-node-js-development.md)  
 * [Schritt 2: Erstellen einer SQL-Datenbank für die Node.js-Entwicklung](step-2-create-a-sql-database-for-node-js-development.md)  
-* [Schritt 3: Machbarkeitsnachweis für Verbindungen mit SQL mithilfe von Node.js](step-3-proof-of-concept-connecting-to-sql-using-node-js.md)  
+* [Schritt 3: Proof of Concept für Verbindungen mit SQL mithilfe von Node.js](step-3-proof-of-concept-connecting-to-sql-using-node-js.md)  
   
 ## <a name="documentation"></a>Dokumentation  
   

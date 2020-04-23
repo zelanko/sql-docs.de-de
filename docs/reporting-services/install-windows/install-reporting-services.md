@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42d3d697ace0f427dcad7fdcd394695672061e13
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.openlocfilehash: 37ce1267bd4b83943560183e5628839858d9c5de
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/29/2020
-ms.locfileid: "77429051"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486819"
 ---
 # <a name="install-sql-server-reporting-services"></a>Installieren von SQL Server Reporting Services
 
@@ -95,7 +95,7 @@ URL-Reservierungen bestehen aus Präfix, Hostname, Port und virtuellem Verzeichn
 
 |Teil|BESCHREIBUNG|
 |----------|-----------------|
-|Präfix|Das Standardpräfix ist http. Wenn Sie zuvor ein SSL-Zertifikat (Secure Sockets Layer) installiert haben, versucht das Setup, die URL-Reservierungen mit dem Präfix HTTPS zu erstellen.|
+|Präfix|Das Standardpräfix ist http. Wenn Sie zuvor ein TLS-Zertifikat (Transport Layer Security, früher als Secure Sockets Layer, SSL, bezeichnet) installiert haben, versucht das Setup, die URL-Reservierungen zu erstellen, die das Präfix HTTPS verwenden.|
 |Hostname|Der Standardhostname ist ein Platzhalter (+). Dieses gibt an, dass der Berichtsserver eine beliebige HTTP-Anforderung an den angegebenen Port für einen beliebigen Hostnamen akzeptiert, der für den Computer steht, einschließlich `https://<computername>/reportserver`, `https://localhost/reportserver` oder `https://<IPAddress>/reportserver.`.|
 |Port|Der Standardport ist 80. Wenn Sie einen anderen Port als Port 80 verwenden, müssen Sie diesen explizit der URL hinzufügen, wenn Sie ein Webportal in einem Browserfenster öffnen.|
 |Virtuelles Verzeichnis|Standardmäßig werden virtuelle Verzeichnisse im Format „ReportServer“ für den Berichtsserver-Webdienst und im Format „Reports“ für das Webportal erstellt. Beim Berichtsserver-Webdienst lautet der Standardname für das virtuelle Verzeichnis **reportserver**. Für das Webportal ist **reports** das virtuelle Standardverzeichnis.|

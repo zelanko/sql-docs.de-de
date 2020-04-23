@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b524f312fa1978b55e74be3dd46a24c95a3f6d29
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: ff235cecbfc4bd01e6531d32f206dec56658a6c2
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81116103"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632110"
 ---
 # <a name="lesson-1-explore-and-visualize-the-data"></a>Lektion 1: Untersuchen und Visualisieren der Daten
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,11 +67,11 @@ Im ursprünglichen öffentlichen Dataset wurden die Taxi-IDs und die Fahrtendate
 > In SQL Server 2019 wurde der Isolationsmechanismus geändert. Daher müssen Sie dem Verzeichnis, in dem die Plotdatei gespeichert ist, geeignete Berechtigungen erteilen. Informationen zum Festlegen dieser Berechtigungen finden Sie im [Abschnitt zu Dateiberechtigungen unter „SQL Server 2019 unter Windows: Isolationsänderungen für Machine Learning Services“](../install/sql-server-machine-learning-services-2019.md#file-permissions).
 ::: moniker-end
 
-Verwenden Sie [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), eine der erweiterten R-Funktionen in [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), um den Plot zu erstellen. In diesem Schritt wird ein Histogramm anhand der Daten aus einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfrage gezeichnet. Sie können diese Funktion in einer gespeicherte Prozedur wie **PlotRxHistogram** einschließen.
+Verwenden Sie [rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram), eine der erweiterten R-Funktionen in [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), um den Plot zu erstellen. In diesem Schritt wird ein Histogramm anhand der Daten aus einer [!INCLUDE[tsql](../../includes/tsql-md.md)]-Abfrage gezeichnet. Sie können diese Funktion in eine gespeicherte Prozedur wie **RxPlotHistogram** einschließen.
 
 1. Klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] im Objekt-Explorer mit der rechten Maustaste auf die Datenbank **NYCTaxi_Sample**, und wählen Sie **Neue Abfrage** aus.
 
-2. Fügen Sie das folgende Skript ein, um eine gespeicherte Prozedur zu erstellen, die das Histogramm zeichnet. Dieses Beispiel heißt **RPlotRxHistogram*.
+2. Fügen Sie das folgende Skript ein, um eine gespeicherte Prozedur zu erstellen, die das Histogramm zeichnet. Dieses Beispiel heißt **RxPlotHistogram**.
 
     ```sql
     CREATE PROCEDURE [dbo].[RxPlotHistogram]

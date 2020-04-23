@@ -1,6 +1,6 @@
 ---
 title: Von Reporting Services unterstützte Datenquellen | Microsoft-Dokumentation
-ms.date: 03/17/2017
+ms.date: 04/16/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-data
@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 5af09901eed4711ced6ae8c389ede859554b38f1
-ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
+ms.openlocfilehash: 9b84ba1a790a86d503ced41f6cd1a95e7bec4dc1
+ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81002774"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81528144"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Von Reporting Services unterstützte Datenquellen (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] werden Berichtsdaten von Datenquellen über eine modulare und erweiterbare Datenschicht abgerufen, für die Datenverarbeitungserweiterungen verwendet werden. Zum Abrufen von Berichtsdaten von einer Datenquelle müssen Sie eine Datenverarbeitungserweiterung auswählen, die den Typ der Datenquelle, die Version der für die Datenquelle ausgeführten Software und die Plattform der Datenquelle (32-Bit oder 64-Bit [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]) unterstützt.  
@@ -168,7 +168,9 @@ Die Unterstützung für diese Datenquelle wurde eingestellt. Verwenden Sie den S
 ###  <a name="microsoft-sql-server-analysis-services-data-processing-extension"></a><a name="AnalysisServices"></a> Microsoft SQL Server Analysis Services-Datenverarbeitungserweiterung  
  Wenn Sie den Datenquellentyp **Microsoft SQL Server Analysis Services**auswählen, müssen Sie eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Datenverarbeitungserweiterung auswählen, mit der der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Datenanbieter für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erweitert wird. Diese Datenverarbeitungserweiterung wird für x86- und x64-basierte Plattformen systemintern kompiliert und auf diesen Plattformen ausgeführt.  
   
- Für diesen Datenanbieter wird das ADOMD.NET-Objektmodell verwendet, um Abfragen mit XMLA (XML for Analysis), Version 1.0, zu erstellen. Ergebnisse werden als vereinfachtes Rowset zurückgegeben. Weitere Informationen finden Sie unter [Analysis Services Connection Type for MDX (SSRS) (Analysis Services-Verbindungstyp für MDX (SSRS))](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md), [Analysis Services Connection Type for DMX (SSRS) (Analysis Services-Verbindungstyp für DMX (SSRS))](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md), [Analysis Services MDX Query Designer User Interface (Benutzeroberfläche des MDX-Abfrage-Designers für Analysis Services)](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md) und [Analysis Services DMX Query Designer User Interface (Benutzeroberfläche des DMX-Abfrage-Designers für Analysis Services)](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md).  
+ Für diesen Datenanbieter wird das ADOMD.NET-Objektmodell verwendet, um Abfragen mit XMLA (XML for Analysis), Version 1.0, zu erstellen. Ergebnisse werden als vereinfachtes Rowset zurückgegeben. Weitere Informationen finden Sie unter [Analysis Services Connection Type for MDX (SSRS) (Analysis Services-Verbindungstyp für MDX (SSRS))](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md), [Analysis Services Connection Type for DMX (SSRS) (Analysis Services-Verbindungstyp für DMX (SSRS))](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md), [Analysis Services MDX Query Designer User Interface (Benutzeroberfläche des MDX-Abfrage-Designers für Analysis Services)](../../reporting-services/report-data/analysis-services-mdx-query-designer-user-interface.md) und [Analysis Services DMX Query Designer User Interface (Benutzeroberfläche des DMX-Abfrage-Designers für Analysis Services)](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md). 
+ 
+ Beachten Sie bei Azure Analysis Services-Datenquellen, dass die mehrstufige Authentifizierung für die Anmeldeinformationen, mit denen eine Verbindung mit der Datenquelle hergestellt wird, deaktiviert sein muss. 
   
  Bei Verbindung mit einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenquelle unterstützt die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenverarbeitungserweiterung mehrwertige Parameter und ordnet Zell- und Elementeigenschaften erweiterten Eigenschaften zu, die von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unterstützt werden. Weitere Informationen finden Sie unter [Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS)](../../reporting-services/report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   

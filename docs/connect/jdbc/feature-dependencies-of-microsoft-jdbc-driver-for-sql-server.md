@@ -1,5 +1,6 @@
 ---
-title: Featureabhängigkeiten des Microsoft JDBC-Treibers für SQL Server | Microsoft-Dokumentation
+title: Featureabhängigkeiten des Microsoft JDBC-Treibers
+description: Erfahren Sie mehr über die Abhängigkeiten des Microsoft JDBC-Treibers für SQL Server und wie Sie ihnen gerecht werden.
 ms.custom: ''
 ms.date: 03/24/2020
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 8aa9b287d6d04b8ea21e8a8fd76460005edc5cd5
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 2a08c60322ba4cb75bef804eafb9a3e68e7df5de
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80917982"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81631200"
 ---
 # <a name="feature-dependencies-of-the-microsoft-jdbc-driver-for-sql-server"></a>Featureabhängigkeiten des Microsoft JDBC-Treibers für SQL Server
 
@@ -94,13 +95,13 @@ Bei bestimmten Projekten, die eines der vorhergehenden Features benötigen, müs
 
 ### <a name="working-with-the-azure-key-vault-provider"></a>Arbeiten mit dem Azure Key Vault-Anbieter:
 
-- Version 8.2.2 des JDBC-Treibers – Abhängigkeitsversionen: Azure-Keyvault (Version 1.2.2), Adal4j (Version 1.6.4), Client-Runtime-for-AutoRest (1.7.0) und die jeweiligen Abhängigkeiten ([Beispielanwendung](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- Version 7.4.1 des JDCB-Treibers – Abhängigkeitsversionen: Azure-Keyvault (Version 1.2.1), Adal4j (Version 1.6.4), Client-Runtime-for-AutoRest (1.6.10) und die jeweiligen Abhängigkeiten ([Beispielanwendung](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- Version 7.2.2 des JDCB-Treibers – Abhängigkeitsversionen: Azure-Keyvault (Version 1.2.0), Azure-Keyvault-Webkey (Version 1.2.0), Adal4j (Version 1.6.3), Client-Runtime-for-AutoRest (1.6.5) und die jeweiligen Abhängigkeiten ([Beispielanwendung](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- Version 7.0.0 des JDCB-Treibers – Abhängigkeitsversionen: Azure-Keyvault (Version 1.0.0), Adal4j (Version 1.6.0) und die jeweiligen Abhängigkeiten ([Beispielanwendung](../../connect/jdbc/azure-key-vault-sample-version-7.0.md))
-- Version 6.4.0 des JDCB-Treibers – Abhängigkeitsversionen: Azure-Keyvault (Version 1.0.0), Adal4j (Version 1.4.0) und die jeweiligen Abhängigkeiten ([Beispielanwendung](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
-- Version 6.2.2 des JDCB-Treibers – Abhängigkeitsversionen: Azure-Keyvault (Version 1.0.0), Adal4j (Version 1.4.0) und die jeweiligen Abhängigkeiten ([Beispielanwendung](../../connect/jdbc/azure-key-vault-sample-version-6.2.2.md))
-- Version 6.0.0 des JDCB-Treibers – Abhängigkeitsversionen: Azure-Keyvault (Version 0.9.7), Adal4j (Version 1.3.0) und die jeweiligen Abhängigkeiten ([Beispielanwendung](../../connect/jdbc/azure-key-vault-sample-version-6.0.0.md))
+- Version 8.2.2 des JDBC-Treibers – Abhängigkeitsversionen: Azure-Keyvault (Version 1.2.2), Adal4j (Version 1.6.4), Client-Runtime-for-AutoRest (1.7.0) und die jeweiligen Abhängigkeiten ([Beispielanwendung](azure-key-vault-sample-version-7.0.md))
+- Version 7.4.1 des JDCB-Treibers – Abhängigkeitsversionen: Azure-Keyvault (Version 1.2.1), Adal4j (Version 1.6.4), Client-Runtime-for-AutoRest (1.6.10) und die jeweiligen Abhängigkeiten ([Beispielanwendung](azure-key-vault-sample-version-7.0.md))
+- Version 7.2.2 des JDCB-Treibers – Abhängigkeitsversionen: Azure-Keyvault (Version 1.2.0), Azure-Keyvault-Webkey (Version 1.2.0), Adal4j (Version 1.6.3), Client-Runtime-for-AutoRest (1.6.5) und die jeweiligen Abhängigkeiten ([Beispielanwendung](azure-key-vault-sample-version-7.0.md))
+- Version 7.0.0 des JDCB-Treibers – Abhängigkeitsversionen: Azure-Keyvault (Version 1.0.0), Adal4j (Version 1.6.0) und die jeweiligen Abhängigkeiten ([Beispielanwendung](azure-key-vault-sample-version-7.0.md))
+- Version 6.4.0 des JDCB-Treibers – Abhängigkeitsversionen: Azure-Keyvault (Version 1.0.0), Adal4j (Version 1.4.0) und die jeweiligen Abhängigkeiten ([Beispielanwendung](azure-key-vault-sample-version-6.2.2.md))
+- Version 6.2.2 des JDCB-Treibers – Abhängigkeitsversionen: Azure-Keyvault (Version 1.0.0), Adal4j (Version 1.4.0) und die jeweiligen Abhängigkeiten ([Beispielanwendung](azure-key-vault-sample-version-6.2.2.md))
+- Version 6.0.0 des JDCB-Treibers – Abhängigkeitsversionen: Azure-Keyvault (Version 0.9.7), Adal4j (Version 1.3.0) und die jeweiligen Abhängigkeiten ([Beispielanwendung](azure-key-vault-sample-version-6.0.0.md))
 
 > [!NOTE]
 > Bei den Treiberversionen 6.2.2 und 6.4.0 wurde die Azure-Keyvault-Java-Abhängigkeit auf Version 1.0.0 aktualisiert. Die neue Version war jedoch nicht mit der vorherigen Version (0.9.7) kompatibel und unterbricht die vorhandene Implementierung im Treiber. Die neue Implementierung im Treiber erforderte API-Änderungen, wodurch wiederum Clientprogramme unterbrochen werden, die den Azure Key Vault-Anbieter verwenden.
@@ -117,15 +118,15 @@ Bei bestimmten Projekten, die eines der vorhergehenden Features benötigen, müs
 - Version 6.2.2 des JDCB-Treibers – Abhängigkeitsversionen: Adal4j (Version 1.4.0) und die entsprechenden Abhängigkeiten
 - Version 6.0.0 des JDCB-Treibers – Abhängigkeitsversionen: Adal4j (Version 1.3.0) und die entsprechenden Abhängigkeiten In dieser Treiberversion können Sie unter Verwendung des _ActiveDirectoryIntegrated_-Authentifizierungsmodus nur unter einem Windows-Betriebssystem und mit „sqljdbc_auth.dll“ und Active Directory Authentication Library für SQL Server (ADALSQL.DLL) eine Verbindung herstellen.
 
-Ab Treiberversion 6.4.0 müssen Anwendungen nicht zwangsläufig ADALSQL.DLL unter Windows-Betriebssystemen verwenden. Bei *Nicht-Windows-Betriebssystemen* benötigt der Treiber zum Arbeiten mit der ActiveDirectoryIntegrated-Authentifizierung ein Kerberos-Ticket. Weitere Informationen zum Herstellen einer Verbindung mit Active Directory mithilfe von Kerberos finden Sie unter [Festlegen eines Kerberos-Tickets unter Windows, Linux und Mac](https://docs.microsoft.com/sql/connect/jdbc/connecting-using-azure-active-directory-authentication#set-kerberos-ticket-on-windows-linux-and-mac).
+Ab Treiberversion 6.4.0 müssen Anwendungen nicht zwangsläufig ADALSQL.DLL unter Windows-Betriebssystemen verwenden. Bei *Nicht-Windows-Betriebssystemen* benötigt der Treiber zum Arbeiten mit der ActiveDirectoryIntegrated-Authentifizierung ein Kerberos-Ticket. Weitere Informationen zum Herstellen einer Verbindung mit Active Directory mithilfe von Kerberos finden Sie unter [Festlegen eines Kerberos-Tickets unter Windows, Linux und macOS](connecting-using-azure-active-directory-authentication.md#set-kerberos-ticket-on-windows-linux-and-macos).
 
 Bei *Windows-Betriebssystemen* sucht der Treiber standardmäßig nach „sqljdbc_auth.dll“ und erfordert keine Kerberos-Ticketeinrichtung oder Azure-Bibliotheksabhängigkeiten. Wenn „sqljdbc_auth.dll“ nicht verfügbar ist, sucht der Treiber (wie unter anderen Betriebssystemen) nach dem Kerberos-Ticket für die Authentifizierung bei Active Directory.
 
 Ab der Treiberversion 8.2.2 wurde „sqljdbc_auth.dll“ in „mssql-jdbc_auth-\<version>-\<arch>.dll“ umbenannt. Beispiel: „mssql-jdbc_auth-8.2.2.x64.dll“.
 
-[Hier finden Sie eine Beispielanwendung](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md), die dieses Feature verwendet.
+[Hier finden Sie eine Beispielanwendung](connecting-using-azure-active-directory-authentication.md), die dieses Feature verwendet.
 
 ## <a name="see-also"></a>Weitere Informationen
 
 [JDBC Driver GitHub repository (GitHub-Repository für den JDBC-Treiber)](https://github.com/microsoft/mssql-jdbc)  
-[JDBC-Treiber-API-Referenz](../../connect/jdbc/reference/jdbc-driver-api-reference.md)
+[JDBC-Treiber-API-Referenz](reference/jdbc-driver-api-reference.md)
