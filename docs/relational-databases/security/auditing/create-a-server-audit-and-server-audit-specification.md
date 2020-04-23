@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: dff79a428833e365d0ca55b287da6154f66d9966
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 8fe4348947203e54a889c9e7fa18067a0562feca
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75952468"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81635753"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Erstellen einer Serverüberwachung und einer Serverüberwachungsspezifikation
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -164,14 +164,19 @@ ms.locfileid: "75952468"
   
 2.  Klicken Sie in der Standardleiste auf **Neue Abfrage**.  
   
-3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**.  
+3.  Kopieren Sie das folgende Beispiel, fügen Sie es in das Abfragefenster ein, und klicken Sie auf **Ausführen**. 
   
     ```  
     -- Creates a server audit called "HIPAA_Audit" with a binary file as the target and no options.  
     CREATE SERVER AUDIT HIPAA_Audit  
-        TO FILE ( FILEPATH ='\\SQLPROD_1\Audit\' );  
+        TO FILE ( FILEPATH ='E:\SQLAudit\' );  
     ```  
-  
+> [!NOTE]
+> Obwohl Sie einen UNC-Pfad als Überwachungsdateiziel verwenden können, sollten Sie Vorsicht walten lassen. Wenn für diese Dateifreigabe eine Netzwerklatenz auftritt, können bei SQL Server Leistungseinbußen auftreten, da Threads auf den Abschluss eines Überprüfungsschreibvorgangs warten würden, bevor sie den Vorgang fortsetzen. Im SQL Server-Fehlerprotokoll, z. B. 17894, können Sie verschiedene Fehlermeldungen beobachten:
+>
+>   2020-02-07 12:21:35.100 Serververteiler (0x7954) aus dem Verteilerpool „XE Engine-Hauptdispatcherpool“ Worker 0x00000058e7300000 scheint auf Knoten 0 keine Ergebnisse zu liefern.
+
+
 #### <a name="to-create-a-server-audit-specification"></a>So erstellen Sie eine Serverüberwachungsspezifikation  
   
 1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDE](../../../includes/ssde-md.md)]-Instanz her.  

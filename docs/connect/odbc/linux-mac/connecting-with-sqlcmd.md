@@ -1,5 +1,6 @@
 ---
-title: Herstellen einer Verbindung mit sqlcmd | Microsoft-Dokumentation
+title: Herstellen einer Verbindung mit sqlcmd
+description: Erfahren Sie, wie Sie das sqlcmd-Hilfsprogramm mit dem Microsoft ODBC Driver for SQL Server unter Linux und macOS verwenden.
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: d2493e3ba903c44cf25bf98a10ddf6f52a56dd7c
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 628968b7d93b9278eb4aaf6ebca3d03fb3cde102
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "80924561"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81632820"
 ---
 # <a name="connecting-with-sqlcmd"></a>Herstellen einer Verbindung mit sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-Das [sqlcmd](https://go.microsoft.com/fwlink/?LinkID=154481)-Hilfsprogramm ist in [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter Linux und macOS verfügbar.
+Das [sqlcmd](https://go.microsoft.com/fwlink/?LinkID=154481)-Hilfsprogramm ist mit [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unter Linux und macOS verfügbar.
   
 Die folgenden Befehle zeigen die Verwendung der Windows-Authentifizierung (Kerberos) bzw. der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Authentifizierung:
   
@@ -51,7 +52,7 @@ Im aktuellen Release sind die folgenden Optionen verfügbar:
   
 - -e Schreibt Eingabeskripts in das Standardausgabegerät (stdout).
 
-- -E Verwendet eine vertrauenswürdige Verbindung (integrierte Authentifizierung). Weitere Informationen zum Herstellen von vertrauenswürdigen Verbindungen, die die integrierte Authentifizierung von einem Linux- oder macOS-Client verwenden, finden Sie unter [Verwenden der integrierten Authentifizierung](../../../connect/odbc/linux-mac/using-integrated-authentication.md).
+- -E Verwendet eine vertrauenswürdige Verbindung (integrierte Authentifizierung). Weitere Informationen zum Herstellen von vertrauenswürdigen Verbindungen, die die integrierte Authentifizierung von einem Linux- oder macOS-Client verwenden, finden Sie unter [Verwenden der integrierten Authentifizierung](using-integrated-authentication.md).
 
 - -f codepage | i:codepage[,o:codepage] | o:codepage[,i:codepage] Gibt die Eingabe- und Ausgabecodepages an. Die Codepagenummer ist ein numerischer Wert, der eine installierte Linux-Codepage angibt.
 (verfügbar seit Version 17.5.1.1)
@@ -67,7 +68,7 @@ Im aktuellen Release sind die folgenden Optionen verfügbar:
 - -k Entfernt oder ersetzt Steuerzeichen.  
   
 - **-K**_anwendungszweck_  
-Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Der einzige derzeit unterstützte Wert ist **ReadOnly**. Wenn **-K** nicht angegeben wird, unterstützt `sqlcmd` keine Konnektivität mit einem sekundären Replikat in einer AlwaysOn-Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [Der ODBC-Treiber unter Linux und macOS für Hochverfügbarkeit und Notfallwiederherstellung](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbindung mit einem Server. Der einzige derzeit unterstützte Wert ist **ReadOnly**. Wenn **-K** nicht angegeben wird, unterstützt `sqlcmd` keine Konnektivität mit einem sekundären Replikat in einer AlwaysOn-Verfügbarkeitsgruppe. Weitere Informationen finden Sie unter [Der ODBC-Treiber unter Linux und macOS für Hochverfügbarkeit und Notfallwiederherstellung](odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
 > **-K** wird in der CTP-Version für SUSE Linux nicht unterstützt. Sie können jedoch das Schlüsselwort **ApplicationIntent=ReadOnly** in einer DSN-Datei angeben, die an `sqlcmd` übergeben wird. Weitere Informationen finden Sie unter „DSN-Unterstützung in `sqlcmd` und `bcp`“ am Ende dieses Themas.  
@@ -77,7 +78,7 @@ Deklariert den Arbeitsauslastungstyp der Anwendung beim Herstellen einer Verbind
 - -m *error_level* Steuert, welche Fehlernachrichten an stdout gesendet werden.  
   
 - **-M**_multisubnetz\_failover_  
-Geben Sie immer **-M** an, wenn Sie eine Verbindung mit dem Verfügbarkeitsgruppenlistener einer [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]-Verfügbarkeitsgruppe oder einer [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]-Failoverclusterinstanz herstellen. **-M** gewährleistet eine schnellere Erkennung von Failovers und Verbindung mit dem (gerade) aktiven Server. Wenn **-M** nicht angegeben ist, ist **-M** deaktiviert. Weitere Informationen finden Sie zu [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] unter [ODBC-Treiber unter Linux und macOS für Hochverfügbarkeit und Notfallwiederherstellung](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
+Geben Sie immer **-M** an, wenn Sie eine Verbindung mit dem Verfügbarkeitsgruppenlistener einer [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]-Verfügbarkeitsgruppe oder einer [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]-Failoverclusterinstanz herstellen. **-M** gewährleistet eine schnellere Erkennung von Failovers und Verbindung mit dem (gerade) aktiven Server. Wenn **-M** nicht angegeben ist, ist **-M** deaktiviert. Weitere Informationen finden Sie zu [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)] unter [ODBC-Treiber unter Linux und macOS für Hochverfügbarkeit und Notfallwiederherstellung](odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
   
 > [!NOTE]  
 > **-M** wird in der CTP-Version für SUSE Linux nicht unterstützt. Sie können jedoch das Schlüsselwort **MultiSubnetFailover=Yes** in einer DSN-Datei angeben, die an `sqlcmd` übergeben wird. Weitere Informationen finden Sie unter „DSN-Unterstützung in `sqlcmd` und `bcp`“ am Ende dieses Themas.  
@@ -161,7 +162,7 @@ Im aktuellen Release sind die folgenden Befehle verfügbar:
 ## <a name="unavailable-options"></a>Nicht verfügbare Optionen
 Im aktuellen Release sind die folgenden Optionen nicht verfügbar:  
 
-- -A Bewirkt die Anmeldung bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] über eine dedizierte Administratorverbindung (Dedicated Administrator Connection, DAC). Weitere Informationen zur Herstellung einer dedizierten Administratorverbindung (DAC) finden Sie unter [Programmierrichtlinien](../../../connect/odbc/linux-mac/programming-guidelines.md).  
+- -A Bewirkt die Anmeldung bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] über eine dedizierte Administratorverbindung (Dedicated Administrator Connection, DAC). Weitere Informationen zur Herstellung einer dedizierten Administratorverbindung (DAC) finden Sie unter [Programmierrichtlinien](programming-guidelines.md).  
   
 - -L Listet die lokal konfigurierten Servercomputer sowie die Namen der Servercomputer auf, die Broadcastnachrichten über das Netzwerk senden.  
   
@@ -227,5 +228,5 @@ Wenn diese Option sowohl im DSN als auch in der `sqlcmd`- oder `bcp`-Befehlszeil
 Vorhandene Skripts, die `isql` aufrufen, können geändert werden, um `sqlcmd` zu verwenden, indem der folgende Alias definiert wird: `alias isql="sqlcmd -D"`.  
 
 ## <a name="see-also"></a>Weitere Informationen  
-[Herstellen einer Verbindung mit **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md)  
+[Herstellen einer Verbindung mit **bcp**](connecting-with-bcp.md)  
  
