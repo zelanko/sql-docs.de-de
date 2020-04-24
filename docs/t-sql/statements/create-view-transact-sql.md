@@ -1,7 +1,7 @@
 ---
 title: CREATE VIEW (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 10/10/2018
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 50ae26a445faa8f8bcd811ed7834868417fc27b4
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 5f29027f7b9ab16b1cb9de5c92f5aaf7dccf9765
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "73982669"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634850"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "73982669"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 CREATE [ OR ALTER ] VIEW [ schema_name . ] view_name [ (column [ ,...n ] ) ]   
@@ -76,7 +76,7 @@ AS select_statement
 }   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CREATE VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
@@ -210,7 +210,7 @@ OR ALTER
   
  Eine partitionierte Sicht auf `Server1` wird wie folgt definiert:  
   
-```  
+```sql
 --Partitioned view as defined on Server1  
 CREATE VIEW Customers  
 AS  
@@ -229,7 +229,7 @@ FROM Server3.CompanyData.dbo.Customers_99;
   
  Im Allgemeinen gilt eine Sicht als partitioniert, wenn sie die folgende Form aufweist:  
   
-```  
+```syntaxsql
 SELECT <select_list1>  
 FROM T1  
 UNION ALL  
@@ -253,7 +253,7 @@ FROM Tn;
   
          Die für `C1` definierte Einschränkung `T1` muss die folgende Form haben:  
   
-        ```  
+        ```syntaxsql
         C1 ::= < simple_interval > [ OR < simple_interval > OR ...]  
         < simple_interval > :: =   
         < col > { < | > | \<= | >= | = < value >}   
@@ -261,13 +261,13 @@ FROM Tn;
         | < col > IN ( value_list )  
         | < col > { > | >= } < value1 > AND  
         < col > { < | <= } < value2 >  
-        ```  
+        ```
   
     -   Die Einschränkungen müssen so festgelegt sein, dass jeder angegebene Wert von `<col>` höchstens eine der Einschränkungen `C1, ..., Cn` erfüllt, sodass die Einschränkungen eine Gruppe von getrennten oder nicht überlappenden Intervallen bilden. Die `<col>`-Spalte, für die die getrennten Einschränkungen definiert sind, wird Partitionierungsspalte genannt. Beachten Sie, dass die Partitionierungsspalte in den zugrunde liegenden Tabellen unterschiedliche Namen haben kann. Die Einschränkungen müssen sich im enabled- und trusted-Status befinden, damit sie die zuvor genannten Bedingungen für die Partitionierungsspalte erfüllen. Wenn die Einschränkungen deaktiviert sind, aktivieren Sie die Einschränkungsprüfung erneut mit der Option CHECK CONSTRAINT *constraint_name* von ALTER TABLE. Verwenden Sie die Option WITH CHECK, um die Einschränkungen zu überprüfen.  
   
          Die folgenden Beispiele zeigen gültige Einschränkungsgruppen:  
   
-        ```  
+        ```syntaxsql
         { [col < 10], [col between 11 and 20] , [col > 20] }  
         { [col between 11 and 20], [col between 21 and 30], [col between 31 and 100] }  
         ```  
@@ -356,7 +356,7 @@ In den folgenden Beispielen werden die Datenbanken „AdventureWorks 2012“ und
 ### <a name="a-using-a-simple-create-view"></a>A. Verwenden einer einfachen CREATE VIEW-Anweisung  
  Im folgenden Beispiel wird mithilfe einer einfachen `SELECT`-Anweisung eine Sicht erstellt. Eine einfache Sicht ist hilfreich, wenn eine Kombination mehrerer Spalten häufig abgefragt wird. Die Daten dieser Sicht stammen aus den `HumanResources.Employee`- und `Person.Person`-Tabellen der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]-Datenbank. Mit diesen Daten werden Name und Einstellungsdatum der Mitarbeiter von [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] bereitgestellt. Die Sicht könnte für die Person erstellt werden, die für die Nachverfolgung von Jubiläen verantwortlich ist. Dabei wird dieser Person nicht der Zugriff auf alle Daten dieser Tabellen gewährt.  
   
-```  
+```sql
 CREATE VIEW hiredate_view  
 AS   
 SELECT p.FirstName, p.LastName, e.BusinessEntityID, e.HireDate  
@@ -371,7 +371,7 @@ GO
   
 **Gilt für:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher und [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-```  
+```sql
 CREATE VIEW Purchasing.PurchaseOrderReject  
 WITH ENCRYPTION  
 AS  
@@ -387,7 +387,7 @@ GO
 ### <a name="c-using-with-check-option"></a>C. Verwenden von WITH CHECK OPTION  
  Im folgenden Beispiel wird die Sicht mit dem Namen `SeattleOnly` gezeigt, die auf fünf Tabellen verweist und Datenänderungen nur bei Mitarbeitern zulässt, die in Seattle leben.  
   
-```  
+```sql
 CREATE VIEW dbo.SeattleOnly  
 AS  
 SELECT p.LastName, p.FirstName, e.JobTitle, a.City, sp.StateProvinceCode  
@@ -408,7 +408,7 @@ GO
 ### <a name="d-using-built-in-functions-within-a-view"></a>D: Verwenden integrierter Funktionen innerhalb einer Sicht  
  Das folgende Beispiel zeigt die Definition einer Sicht, die eine integrierte Funktion enthält. Wenn Sie Funktionen verwenden, müssen Sie für die abgeleitete Spalte einen Spaltennamen angeben.  
   
-```  
+```sql
 CREATE VIEW Sales.SalesPersonPerform  
 AS  
 SELECT TOP (100) SalesPersonID, SUM(TotalDue) AS TotalSales  
@@ -422,7 +422,7 @@ GO
 ### <a name="e-using-partitioned-data"></a>E. Verwenden von partitionierten Daten  
  Das folgende Beispiel verwendet Tabellen mit den Namen `SUPPLY1`, `SUPPLY2`, `SUPPLY3` und `SUPPLY4`. Diese Tabellen entsprechen den Lieferantentabellen von vier Büros in verschiedenen Ländern/Regionen.  
   
-```  
+```sql
 --Create the tables and insert the values.  
 CREATE TABLE dbo.SUPPLY1 (  
 supplyID INT PRIMARY KEY CHECK (supplyID BETWEEN 1 and 150),  
@@ -469,7 +469,7 @@ GO
 ### <a name="f-creating-a-simple-view"></a>F. Erstellen einer einfachen Sicht  
  Im folgenden Beispiel wird eine Sicht erstellt, in dem nur einige Spalten aus der Quelltabelle gewählt werden.  
   
-```  
+```sql
 CREATE VIEW DimEmployeeBirthDates AS  
 SELECT FirstName, LastName, BirthDate   
 FROM DimEmployee;  
@@ -478,7 +478,7 @@ FROM DimEmployee;
 ### <a name="g-create-a-view-by-joining-two-tables"></a>G. Erstellen einer Sicht durch Verknüpfen von zwei Tabellen  
  Im folgenden Beispiel wird eine Sicht mithilfe der Anweisung `SELECT` mit `OUTER JOIN` erstellt. Die Ergebnisse der JOIN-Abfrage füllen die Sicht auf.  
   
-```  
+```sql
 CREATE VIEW view1  
 AS 
 SELECT fis.CustomerKey, fis.ProductKey, fis.OrderDateKey, 

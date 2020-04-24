@@ -7,13 +7,13 @@ ms.date: 04/03/2020
 ms.topic: conceptual
 author: cawrites
 ms.author: chadam
-monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b2958fcb3d1d64f43f0b463a3145e2c580e6792e
-ms.sourcegitcommit: 335d27d0493ddf4ffb770e13f8fe8802208d25ae
+monikerRange: =sql-server-2016||=sql-server-2017||=sqlallproducts-allversions
+ms.openlocfilehash: 4aebb9e64c73762166aa81aebd1bfbab22191bfc
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/09/2020
-ms.locfileid: "81119133"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487367"
 ---
 # <a name="upgrade-machine-learning-python-and-r-components-in-sql-server-instances"></a>Upgrade von Machine Learning-Komponenten (Python und R) in SQL Server-Instanzen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -171,7 +171,7 @@ In den folgenden Anweisungen wird beschrieben, wie Sie die Dateien für eine Off
 
 1. Laden Sie die CAB-Dateien herunter. Unter den folgenden Links finden Sie das Release 9.3. Wenn Sie frühere Versionen benötigen, finden Sie weitere Links unter [R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows-offline#download-required-components). Denken Sie daran, dass Python/Anaconda nur einer SQL Server Machine Learning Services-Instanz hinzugefügt werden kann. Sowohl für Python als auch für R gibt es vorab trainierte Modelle. Die CAB-Dateien stellen Modelle in den Sprachen bereit, die Sie verwenden.
 
-    | Feature | Download |
+    | Funktion | Download |
     |---------|----------|
     | R       | [SRO_3.4.3.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=867186&clcid=1033) |
     | Python  | [SPO_9.3.0.0_1033.cab](https://go.microsoft.com/fwlink/?LinkId=859054) | 
@@ -273,7 +273,7 @@ Möglicherweise haben Sie der Paketbibliothek andere Open-Source- oder Drittanbi
 
 Das Machine Learning Server-Installationsprogramm und SqlBindR geben beide die folgenden Fehlercodes und -meldungen zurück.
 
-|Fehlercode  | Meldung           | Details               |
+|Fehlercode  | `Message`           | Details               |
 |------------|-------------------|-----------------------|
 |Bindungsfehler 0 | OK (bei Erfolg) | Bindung ohne Fehler übergeben. |
 |Bindungsfehler 1 | Ungültige Argumente | Syntaxfehler. |

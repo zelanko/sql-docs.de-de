@@ -10,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6042621491bfd26cb175b1a50d5a68374be41aa9
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: bdb358c2414d40aa39ead1323eff90aefbb3081e
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81115703"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487029"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Neuerungen in SQL Server-Machine Learning Services
 
@@ -43,7 +43,7 @@ Für SQL Server Machine Learning Services werden die folgenden neuen Funktionen 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 ## <a name="new-in-sql-server-2017"></a>Neuerungen in SQL Server 2017
 
-Ab dieser Version werden [Python-Unterstützung und branchenführende Algorithmen für maschinelles Lernen](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/) bereitgestellt. SQL Server 2017 wurde umbenannt, um den neuen Anwendungsbereich widerzuspiegeln. Gleichzeitig geht hiermit die Einführung von [SQL Server Machine Learning Services (datenbankintern)](what-is-sql-server-machine-learning.md) einher, einschließlich der Sprachunterstützung für Python und R. 
+Ab dieser Version werden [Python-Unterstützung und branchenführende Algorithmen für maschinelles Lernen](https://cloudblogs.microsoft.com/sqlserver/2017/04/19/python-in-sql-server-2017-enhanced-in-database-machine-learning/) bereitgestellt. SQL Server 2017 wurde umbenannt, um den neuen Anwendungsbereich widerzuspiegeln. Gleichzeitig geht hiermit die Einführung von [SQL Server Machine Learning Services (datenbankintern)](sql-server-machine-learning-services.md) einher, einschließlich der Sprachunterstützung für Python und R. 
 
 Ankündigungen sämtlicher neuer Funktionen finden Sie unter [Neues in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md).
 
@@ -112,12 +112,6 @@ In SQL Server 2019 wird eine Linux-Unterstützung für R und Python bereitgestel
 
 Unter Linux verfügt SQL Server 2017 nicht über eine R- oder Python-Integration, Sie können jedoch die [native Bewertung](sql-native-scoring.md) unter Linux verwenden, da diese Funktion über die T-SQL-Funktion [PREDICT](../t-sql/queries/predict-transact-sql.md) verfügbar ist, die unter Linux ausgeführt wird. Die native Bewertung ermöglicht eine leistungsstarke Bewertung aus einem vortrainierten Modell, ohne dass eine R-Runtime aufgerufen oder gar benötigt wird.
 ::: moniker-end
-
-<a name="azure-sql-database-roadmap"></a>
-
-## <a name="machine-learning-services-in-azure-sql-database"></a>Machine Learning Services in Azure SQL-Database
-
-Die Machine Learning Services in Azure SQL-Datenbank befinden sich in der öffentlichen Vorschau. Weitere Informationen finden Sie unter [Azure SQL-Datenbank Machine Learning Services (Vorschau)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview).
 
 ## <a name="next-steps"></a>Nächste Schritte
 

@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 48f3b3433d0ca2f4daf08048228989598c5cf36a
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 25b21944db46a5054ad8765b83fe7e2985f8d894
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117223"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486700"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>Was ist SQL Server 2016 R Services?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "81117223"
 R Services ist ein Feature in SQL Server 2016, das die Möglichkeit bietet, R-Skripts mit relationalen Daten auszuführen. Sie können Open-Source-Pakete und -Frameworks und die [Microsoft R-Pakete](#packages) für Predictive Analytics und Machine Learning verwenden. Die Skripts werden in der Datenbank ausgeführt, ohne dass Daten aus SQL Server oder über das Netzwerk verschoben werden. In diesem Artikel werden die Grundlagen von SQL Server R Services erläutert.
 
 > [!Note]
-> R Services wurde in SQL Server 2017 und höher in [Machine Learning Services](../what-is-sql-server-machine-learning.md) umbenannt und dient der Unterstützung von Python und R.
+> R Services wurde in SQL Server 2017 und höher in [Machine Learning Services](../sql-server-machine-learning-services.md) umbenannt und dient der Unterstützung von Python und R.
 
 ## <a name="what-is-r-services"></a>Was sind R Services?
 
@@ -60,7 +60,7 @@ Es gibt zwei Möglichkeiten zum Ausführen von R-Skripts in R Services:
 
 ## <a name="r-version"></a>R-Version
 
-Die R-Version 3.2.2 ist in SQL Server 2016 R Services enthalten. Verwenden Sie für eine neuere Version von R [Machine Learning Services für SQL Server 2017 und später](../what-is-sql-server-machine-learning.md).
+Die R-Version 3.2.2 ist in SQL Server 2016 R Services enthalten. Verwenden Sie für eine neuere Version von R [Machine Learning Services für SQL Server 2017 und später](../sql-server-machine-learning-services.md).
 
 <a name="packages"></a>
 

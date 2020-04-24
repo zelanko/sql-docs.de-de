@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e4aaac1eb06d391cf73f32cda28b12419a2b5645
-ms.sourcegitcommit: fe5c45a492e19a320a1a36b037704bf132dffd51
+ms.openlocfilehash: 4e72ded2e2f2a51805403132c662bff3d70c97ce
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/08/2020
-ms.locfileid: "81119113"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81487112"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Installieren von Python-Paketen mit sqlmlutils
 
@@ -37,7 +37,7 @@ Weitere Informationen zu dem Paketspeicherort und Installationspfaden finden Sie
 
 ### <a name="other-considerations"></a>Weitere Überlegungen
 
-+ Pakete müssen mit den möglichen Versionen von Python konform sein. Weitere Informationen zu der in jeder SQL Server-Version enthaltenen Python-Version finden Sie unter [„Python- und R-Pakete“ im Artikel „Was ist SQL Server Machine Learning Services (Python und R)?“](../what-is-sql-server-machine-learning.md#versions).
++ Pakete müssen mit den möglichen Versionen von Python konform sein. Weitere Informationen zu der in jeder SQL Server-Version enthaltenen Python-Version finden Sie unter [„Python- und R-Pakete“ im Artikel „Was ist SQL Server Machine Learning Services (Python und R)?“](../sql-server-machine-learning-services.md#versions).
 
 + Die Python-Paketbibliothek befindet sich im Ordner „Programme“ Ihrer SQL Server-Instanz, und für die Installation in diesem Ordner sind standardmäßig Administratorberechtigungen erforderlich. Weitere Informationen finden Sie unter [Speicherort der Paketbibliothek](../package-management/python-package-information.md#default-python-library-location).
 

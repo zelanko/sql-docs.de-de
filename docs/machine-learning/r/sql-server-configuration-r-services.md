@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cedc5c08f44da357da70f63b47676383f6f53675
-ms.sourcegitcommit: 68583d986ff5539fed73eacb7b2586a71c37b1fa
+ms.openlocfilehash: 6daadcd1e98e19f2d4f43c4b5a6c95f1cf137697
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/04/2020
-ms.locfileid: "81117343"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81486707"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>SQL Server-Konfiguration für die Verwendung mit R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -192,7 +192,7 @@ Einer der Vorteile von SQL Server ist die Möglichkeit, eine große Anzahl von 
 
 Sie können die Eingabedaten auch als einzelne Abfrage senden, sodass SQL Server dann die Abfrage analysiert. Wenn ein paralleler Abfrageplan für die Eingabedaten erstellt werden kann, werden den Knoten automatisch Partitionsdaten zugewiesen und auch parallel die erforderlichen Verknüpfungen und Aggregationen durchgeführt.
 
-Wenn Sie an den Details zum Definieren einer gespeicherten Prozedur für die Bewertung interessiert sind, sehen Sie sich das Beispielprojekt auf [GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips/SQLR) an, und suchen Sie nach der Datei „step5_score_for_matching.sql“. Das Beispielskript verfolgt auch die Start- und Endzeit der Abfrage nach und schreibt die Zeit in die SQL-Konsole, sodass Sie die Leistung bewerten können.
+Wenn Sie an den Details zum Definieren einer gespeicherten Prozedur für die Bewertung interessiert sind, sehen Sie sich das Beispielprojekt auf [GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips-Resume-Matching/SQLR) an, und suchen Sie nach der Datei „step5_score_for_matching.sql“. Das Beispielskript verfolgt auch die Start- und Endzeit der Abfrage nach und schreibt die Zeit in die SQL-Konsole, sodass Sie die Leistung bewerten können.
 
 ### <a name="concurrent-scoring-using-resource-groups"></a>Gleichzeitige Bewertung mithilfe von Ressourcengruppen
 
@@ -214,7 +214,7 @@ Im Szenario zum Abgleich von Lebensläufen wurde die Parallelität wie folgt ent
 
 - Jede Workloadgruppe muss zwei Bewertungsaufgaben verarbeiten. Sobald eine Aufgabe das Lesen von Daten abgeschlossen hat und die Bewertung beginnt, kann die andere Aufgabe mit dem Lesen von Daten aus der Datenbank beginnen.
 
-Um die PowerShell-Skripts für dieses Szenario anzuzeigen, öffnen Sie die Datei „experiment.ps1“ im [GitHub-Projekt](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips).
+Um die PowerShell-Skripts für dieses Szenario anzuzeigen, öffnen Sie die Datei „experiment.ps1“ im [GitHub-Projekt](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips-Resume-Matching).
 
 ### <a name="storing-models-for-prediction"></a>Speichern von Modellen für die Vorhersage
 

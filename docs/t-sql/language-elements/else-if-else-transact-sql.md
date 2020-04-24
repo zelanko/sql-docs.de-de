@@ -20,12 +20,12 @@ ms.assetid: 6f2b4278-0dea-4603-bbd3-7cbad602a645
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86ae34994c00622ae66eee4afcb3ae3dacedd989
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: f2ff6cc86bb2b8df43ccf47beb144190567492fc
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "68075314"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634941"
 ---
 # <a name="else-ifelse-transact-sql"></a>ELSE (IF...ELSE) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "68075314"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql
 IF Boolean_expression   
      { sql_statement | statement_block }   
 [ ELSE   
@@ -58,14 +58,14 @@ IF Boolean_expression
 ### <a name="a-using-a-simple-boolean-expression"></a>A. Verwenden eines einfachen booleschen Ausdrucks  
  Das folgende Beispiel enthält einen einfachen booleschen Ausdruck (`1=1`), der TRUE ist, und daher wird die erste Anweisung ausgegeben.  
   
-```  
+```sql
 IF 1 = 1 PRINT 'Boolean_expression is true.'  
 ELSE PRINT 'Boolean_expression is false.' ;  
 ```  
   
  Das folgende Beispiel enthält einen einfachen booleschen Ausdruck (`1=2`), der FALSE ist, und daher wird die zweite Anweisung ausgegeben.  
   
-```  
+```sql
 IF 1 = 2 PRINT 'Boolean_expression is true.'  
 ELSE PRINT 'Boolean_expression is false.' ;  
 GO  
@@ -74,7 +74,7 @@ GO
 ### <a name="b-using-a-query-as-part-of-a-boolean-expression"></a>B. Verwenden einer Abfrage als Teil eines booleschen Ausdrucks  
  Im folgenden Beispiel wird eine Abfrage als Teil des booleschen Ausdrucks ausgeführt. Da in der `Product`-Tabelle 10 Fahrräder vorhanden sind, die der `WHERE`-Klausel entsprechen, wird die erste Print-Anweisung ausgeführt. Ändern Sie `> 5` in `> 15`, um die mögliche Ausführung des zweiten Teils der Anweisung anzuzeigen.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 IF   
@@ -87,7 +87,7 @@ GO
 ### <a name="c-using-a-statement-block"></a>C. Verwenden eines Anweisungsblocks  
  Im folgenden Beispiel wird eine Abfrage als Teil des booleschen Ausdrucks ausgeführt, und anschließend werden auf der Grundlage der Ergebnisse des booleschen Ausdrucks leicht abweichende Anweisungsblöcke ausgeführt. Jeder Anweisungsblock beginnt mit `BEGIN`, und er wird mit `END` abgeschlossen.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 DECLARE @AvgWeight decimal(8,2), @BikeCount int  
@@ -119,7 +119,7 @@ GO
 ### <a name="d-using-nested-ifelse-statements"></a>D: Verwenden geschachtelter IF...ELSE-Anweisungen  
  Im folgenden Beispiel wird gezeigt, wie eine IF … ELSE-Anweisung in einer anderen geschachtelt werden kann. Legen Sie die `@Number`-Variable auf `5`, `50` und `500` fest, um die einzelnen Anweisungen zu testen.  
   
-```  
+```sql
 DECLARE @Number int;  
 SET @Number = 50;  
 IF @Number > 100  
@@ -139,7 +139,7 @@ GO
 ### <a name="e-using-a-query-as-part-of-a-boolean-expression"></a>E: Verwenden einer Abfrage als Teil eines booleschen Ausdrucks  
  Im folgenden Beispiel wird `IF...ELSE` verwendet, um basierend auf der Gewichtung eines Elements in der `DimProduct`-Tabelle festzulegen, welche Antwort von zwei Antworten dem Benutzer angezeigt wird.  
   
-```  
+```sql
 -- Uses AdventureWorks  
   
 DECLARE @maxWeight float, @productKey integer  

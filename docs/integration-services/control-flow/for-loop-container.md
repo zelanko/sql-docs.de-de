@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 26d7442164d4d018feb6066e6cafdf12c9312429
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: cf4b7ebc576908cdccabdd3d92eec7420705b44d
+ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "71294150"
+ms.lasthandoff: 04/16/2020
+ms.locfileid: "81488169"
 ---
 # <a name="for-loop-container"></a>For-Schleifencontainer
 
@@ -72,8 +72,6 @@ ms.locfileid: "71294150"
 
 ##  <a name="configure-the-for-loop-container"></a>Konfigurieren des For-Schleifencontainers
 In diesem Verfahren wird beschrieben, wie Sie einen For-Schleifencontainer mithilfe des Dialogfelds **For-Schleifen-Editor** konfigurieren.  
-  
- Ein Beispiel für den For-Schleifencontainer finden Sie unter [Nicht fehleranfällige SSIS-Schleifen](https://go.microsoft.com/fwlink/?LinkId=240295) auf bimonkey.com.  
   
 1.  Doppelklicken Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]auf den For-Schleifencontainer, um den **For-Schleifen-Editor**zu öffnen.  
   

@@ -1,7 +1,7 @@
 ---
 title: SET SHOWPLAN_XML (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 063c4c94fc457b6b9bb69fa0395398c62bf49516
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 3d9e7712128269033a8391169063cf205f40208c
+ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "67941691"
+ms.lasthandoff: 04/17/2020
+ms.locfileid: "81634291"
 ---
 # <a name="set-showplan_all-transact-sql"></a>SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "67941691"
   
 ## <a name="syntax"></a>Syntax  
   
-```  
+```syntaxsql
   
 SET SHOWPLAN_ALL { ON | OFF }  
 ```  
@@ -78,7 +78,8 @@ SET SHOWPLAN_ALL { ON | OFF }
 |**Typ**|Der Knotentyp. Für den übergeordneten Knoten jeder Abfrage ist dies der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungstyp (z. B. SELECT, INSERT, EXECUTE usw.). Für untergeordnete Knoten, die Ausführungspläne darstellen, ist der Typ PLAN_ROW.|  
 |**Parallel**|**0** = Operator wird nicht parallel ausgeführt.<br /><br /> **1** = Operator wird parallel ausgeführt.|  
 |**EstimateExecutions**|Geschätzte Anzahl der Ausführungen dieses Operators, die während der Ausführung der aktuellen Abfrage ausgeführt werden.|  
-  
+|||
+
  *Kosteneinheiten basieren auf einer internen Zeitmessung und nicht auf der normalen Uhrzeit. Sie werden zur Ermittlung der relativen Kosten eines Plans im Vergleich zu anderen Plänen verwendet.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -101,7 +102,7 @@ SET SHOWPLAN_ALL { ON | OFF }
   
  Die Werte in den Spalten **EstimateRows** und **TotalSubtreeCost** sind bei der ersten indizierten Abfrage kleiner, was auf eine deutlich schnellere Verarbeitung und die Verwendung weniger Ressourcen als bei der nicht indizierten Abfrage hinweist.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET SHOWPLAN_ALL ON;  
