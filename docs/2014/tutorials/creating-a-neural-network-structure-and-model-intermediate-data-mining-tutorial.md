@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62856332"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>Erstellen einer neuronalen Netzwerkstruktur und eines neuronalen Netzwerkmodells (Data Mining-Lernprogramm für Fortgeschrittene)
@@ -30,7 +30,7 @@ ms.locfileid: "62856332"
   
  Wenn Sie vom neuronalen Netzwerkmodell dann gelernt haben, welche Faktoren sich am stärksten auf Ihre geschäftliche Fragestellung auswirken, erstellen Sie ein separates Modell für die Vorhersage und Bewertung. Sie verwenden hierzu den [!INCLUDE[msCoName](../includes/msconame-md.md)] Logistic Regression-Algorithmus, der auf dem neuronalen Netzwerkmodell basiert, aber für das Suchen nach einer Lösung auf Grundlage von bestimmten Eingaben optimiert ist.  
   
- **Schritte**  
+ **Nehmen**  
   
  [Erstellen der standardmäßigen Miningstruktur und des Miningmodells](#bkmk_defaul)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62856332"
   
  [Alle Modelle verarbeiten](#bkmk_SeedProcess)  
   
-## Erstellen der standardmäßigen Callcenter-Struktur<a name="bkmk_defaul"></a>  
+## <a name="create-the-default-call-center-structure"></a>Erstellen der standardmäßigen Callcenter-Struktur<a name="bkmk_defaul"></a>  
   
 1.  Klicken Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]Projektmappen-Explorer in mit der rechten Maustaste auf **Mining Strukturen** , und wählen Sie **neue Mining Struktur**aus.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62856332"
     |IssuesRaised|Eingabe|  
     |LevelOneOperators|Eingabe/Vorhersagen|  
     |LevelTwoOperators|Eingabe|  
-    |Aufträge|Eingabe/Vorhersagen|  
+    |Orders|Eingabe/Vorhersagen|  
     |ServiceGrade|Eingabe/Vorhersagen|  
     |Shift|Eingabe|  
     |TotalOperators|Nicht verwenden|  
@@ -101,7 +101,7 @@ ms.locfileid: "62856332"
     |IssuesRaised|Fortlaufend|Long|  
     |LevelOneOperators|Fortlaufend|Long|  
     |LevelTwoOperators|Fortlaufend|Long|  
-    |Aufträge|Fortlaufend|Long|  
+    |Orders|Fortlaufend|Long|  
     |ServiceGrade|Fortlaufend|Double|  
     |Shift|Discrete|Text|  
     |WageType|Discrete|Text|  
@@ -136,24 +136,24 @@ ms.locfileid: "62856332"
   
  Standardmodell (kontinuierlich)  
   
-|VALUE|SUPPORT|  
+|VALUE|Alias|  
 |-----------|-------------|  
 |Missing|0|  
 |0,09875|120|  
   
  Klassifiziert durch Clustering  
   
-|VALUE|SUPPORT|  
+|VALUE|Alias|  
 |-----------|-------------|  
 |\<0,0748051948|34|  
 |0,0748051948-0,09716216215|27|  
-|0,09716216215-0.13297297295|11,9|  
+|0,09716216215-0.13297297295|39|  
 |0.13297297295 - 0.167499999975|10|  
 |>= 0.167499999975|10|  
   
  Klassifiziert durch gleiche Bereiche  
   
-|VALUE|SUPPORT|  
+|VALUE|Alias|  
 |-----------|-------------|  
 |\<0,07|26|  
 |0,07-0,00|22|  
@@ -181,12 +181,12 @@ ms.locfileid: "62856332"
   
  Anstatt die numerischen Werte zu verwenden, können Sie alternativ eine separate abgeleitete Spalte hinzufügen, die die Dienst Qualitäten in vordefinierte Zielbereiche klassifiziert, z. b. \< **am besten** (Service Grade = 0,05), **akzeptabel** (0,10 > Service Grade > 0,05) und **schlecht** (Service Grade >= 0,10).  
   
-###  <a name="bkmk_newColumn"></a>Erstellen einer Kopie einer Spalte und Ändern der Diskretisierungsmethode  
+###  <a name="create-a-copy-of-a-column-and-change-the-discretization-method"></a><a name="bkmk_newColumn"></a>Erstellen einer Kopie einer Spalte und Ändern der Diskretisierungsmethode  
  Erstellen Sie eine Kopie der Mining Spalte, die das Ziel Attribut "Service Grade" enthält, und ändern Sie die Art und Weise, in der die Zahlen gruppiert werden. Sie können mehrere Kopien einer Spalte in einer Miningstruktur erstellen, einschließlich des vorhersagbaren Attributs.  
   
  Für dieses Lernprogramm verwenden Sie die Equal Areas-Methode der Diskretisierung und geben vier Buckets an. Die Gruppierungen, die sich aus dieser Methode ergeben, liegen relativ nah an den Zielwerten, die für Ihre Geschäftsbenutzer von Interesse sind.  
   
-####  <a name="bkmk_ColumnCopy"></a>So erstellen Sie eine angepasste Kopie einer Spalte in der Mining Struktur  
+####  <a name="to-create-a-customized-copy-of-a-column-in-the-mining-structure"></a><a name="bkmk_ColumnCopy"></a>So erstellen Sie eine angepasste Kopie einer Spalte in der Mining Struktur  
   
 1.  Doppelklicken Sie im Projektmappen-Explorer auf die soeben erstellte Miningstruktur.  
   
@@ -222,7 +222,7 @@ ms.locfileid: "62856332"
   
      Beachten Sie, dass beim Hinzufügen einer Kopie einer Miningstrukturspalte das Verwendungsflag der Kopie automatisch auf `Ignore` festgelegt wird. Wenn Sie einer Miningstruktur eine Spaltenkopie hinzufügen, werden Sie in der Regel nicht die Kopie zusammen mit der ursprünglichen Spalte für eine Analyse verwenden. Denn wenn der Algorithmus eine starke Korrelation zwischen den beiden Spalten feststellt, können andere Beziehungen leicht übersehen werden.  
   
-##  <a name="bkmk_NewModel"></a>Hinzufügen eines neuen Mining Modells zur Mining Struktur  
+##  <a name="add-a-new-mining-model-to-the-mining-structure"></a><a name="bkmk_NewModel"></a>Hinzufügen eines neuen Mining Modells zur Mining Struktur  
  Sie haben nun eine neue Gruppierung für das Zielattribut erstellt und müssen ein neues Miningmodell hinzufügen, das die diskretisierte Spalte verwendet. Wenn dies abgeschlossen ist, verfügt die Callcenter-Miningstruktur über zwei Miningmodelle:  
   
 -   Das Miningmodell Callcenterstandard NN behandelt die ServiceGrade-Werte als kontinuierlichen Bereich.  
@@ -243,10 +243,10 @@ ms.locfileid: "62856332"
   
 6.  Suchen Sie analog dazu den Eintrag ServiceGrade-Klassifizierung, und legen Sie die Verwendung von `Ignore` auf `Predict` fest.  
   
-##  <a name="bkmk_Alias2"></a>Erstellen eines Alias für die Ziel Spalte  
+##  <a name="create-an-alias-for-the-target-column"></a><a name="bkmk_Alias2"></a>Erstellen eines Alias für die Ziel Spalte  
  In der Regel können Sie keine Miningmodelle vergleichen, die unterschiedliche vorhersagbare Attribute verwenden. Sie können jedoch einen Alias für eine Miningmodellspalte erstellen. Das heißt, Sie können die Spalte Service Grade im Mining Modell umbenennen, sodass Sie den gleichen Namen wie die ursprüngliche Spalte hat. Anschließend können Sie diese beiden Modelle trotz der unterschiedlichen Diskretisierung der Daten in einem Genauigkeitsdiagramm direkt vergleichen.  
   
-###  <a name="bkmk_Alias"></a>So fügen Sie einen Alias für eine Mining Struktur Spalte in einem Mining Modell hinzu  
+###  <a name="to-add-an-alias-for-a-mining-structure-column-in-a-mining-model"></a><a name="bkmk_Alias"></a>So fügen Sie einen Alias für eine Mining Struktur Spalte in einem Mining Modell hinzu  
   
 1.  Wählen Sie auf der Registerkarte **Mining Modelle** unter **Struktur**die Option Service Grade klassiert aus.  
   
@@ -262,10 +262,10 @@ ms.locfileid: "62856332"
   
      Das Fenster **Eigenschaften** sollte die folgenden Informationen enthalten:  
   
-    |Eigenschaft|value|  
+    |Eigenschaft|Wert|  
     |--------------|-----------|  
     |**Beschreibung**|Temporärer Spaltenalias|  
-    |**id**|Klassierte Service Grade|  
+    |**ID**|Klassierte Service Grade|  
     |**Modellierungsflags**||  
     |**Name**|Service Grade|  
     |**SourceColumn-ID**|Service Grade 1|  
@@ -286,7 +286,7 @@ ms.locfileid: "62856332"
     |IssuesRaised|Eingabe|Eingabe|  
     |LevelOneOperators|Eingabe|Eingabe|  
     |LevelTwoOperators|Eingabe|Eingabe|  
-    |Aufträge|Eingabe|Eingabe|  
+    |Orders|Eingabe|Eingabe|  
     |ServiceGrade-Klassifizierung|Ignorieren|Vorhersagen (ServiceGrade)|  
     |ServiceGrade|Vorhersagen|Ignorieren|  
     |Shift|Eingabe|Eingabe|  
@@ -299,7 +299,7 @@ ms.locfileid: "62856332"
 > [!NOTE]  
 >  Wenn Sie keinen numerischen Wert für den Ausgangswertparameter angeben, wird dieser in SQL Server Analysis Services anhand des Modellnamens generiert. Da die Modelle immer andere Namen haben, müssen Sie einen Ausgangswert festlegen und so sicherstellen, dass sie die Daten in der gleichen Reihenfolge verarbeiten.  
   
-###  <a name="bkmk_SeedProcess"></a>So geben Sie den Seed an und verarbeiten die Modelle  
+###  <a name="to-specify-the-seed-and-process-the-models"></a><a name="bkmk_SeedProcess"></a>So geben Sie den Seed an und verarbeiten die Modelle  
   
 1.  Klicken Sie auf der Registerkarte **Mining Modell** mit der rechten Maustaste auf die Spalte für das Modell "Callcenter-LR", und wählen Sie **Algorithmusparameter festlegen**aus.  
   
@@ -320,6 +320,6 @@ ms.locfileid: "62856332"
  [Untersuchen des Callcentermodells &#40;Data Mining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/exploring-the-call-center-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Mining Strukturen &#40;Analysis Services Data Mining-&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

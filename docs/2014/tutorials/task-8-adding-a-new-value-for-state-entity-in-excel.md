@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 831d0b504a65d485413772ee3711e689e29ee2a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489708"
 ---
-# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>Aufgabe 8: Hinzufügen eines neuen Werts für die Entität 'State' in Excel
+# <a name="task-8-adding-a-new-value-for-state-entity-in-excel"></a>Aufgabe 8: Hinzufügen eines neuen Werts für die Entität „State“ in Excel
   In dieser Aufgabe fügen Sie einen Wert für die Entität "State" in Excel hinzu und veröffentlichen die Änderung auf dem MDS-Server.  
   
 1.  Fügen Sie ein **Arbeitsblatt** in Excel hinzu, indem Sie unten auf die Registerkarte Neu klicken.  
@@ -53,6 +53,6 @@ ms.locfileid: "65489708"
 12. Klicken Sie in Excel im unteren Bereich mit der rechten Maustaste auf das Arbeitsblatt **State** , und klicken Sie auf **Löschen** , um das Arbeitsblatt zu löschen. Durch Löschen des Arbeitsblatts werden keine Daten vom MDS-Server gelöscht.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 9: Erstellen einer abgeleiteten Hierarchie mithilfe von Master Data Manager](../../2014/tutorials/task-9-creating-a-derived-hierarchy-using-master-data-manager.md)  
+ [Aufgabe 9: Erstellen einer abgeleiteten Hierarchie mithilfe des Master Data Manager](../../2014/tutorials/task-9-creating-a-derived-hierarchy-using-master-data-manager.md)  
   
   

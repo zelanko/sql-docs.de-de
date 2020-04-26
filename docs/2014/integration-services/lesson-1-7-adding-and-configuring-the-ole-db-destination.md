@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767559"
 ---
 # <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>Schritt 7: Hinzufügen und Konfigurieren des OLE DB-Ziels
@@ -24,7 +24,7 @@ ms.locfileid: "62767559"
   
 ### <a name="to-add-and-configure-the-sample-ole-db-destination"></a>So fügen Sie das Beispiel-OLE DB-Ziel hinzu und konfigurieren es  
   
-1.  Erweitern Sie in der **SSIS Toolbox** **andere Ziele**, und ziehen Sie OLE **DB Destination** auf die Entwurfsoberfläche der Registerkarte **Datenfluss.** Platzieren Sie das OLE DB-Ziel direkt unter der **Transformation "Lookup Date Key".**  
+1.  Erweitern Sie in der **SSIS-Toolbox**die Option **andere Ziele**, und ziehen Sie **OLE DB Ziel** auf die Entwurfs Oberfläche der Registerkarte **Datenfluss** . Platzieren Sie das OLE DB Ziel direkt unterhalb der Transformation **Lookup Date Key** .  
   
 2.  Klicken Sie auf die Transformation **Lookup Date Key** , und ziehen Sie den grünen Pfeil zum neu hinzugefügten **OLE DB-Ziel** , um die zwei Komponenten miteinander zu verbinden.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62767559"
   
 13. Klicken Sie mit der rechten Maustaste auf das Ziel **Sample OLE DB Destination** und anschließend auf **Eigenschaften**.  
   
-14. Stellen Sie im Fenster `LocaleID` Eigenschaften sicher, dass die Eigenschaft`DefaultCodePage` auf **Englisch (USA)** und die Eigenschaft auf **1252**festgelegt ist.  
+14. Überprüfen Sie im Eigenschaftenfenster, ob `LocaleID` die-Eigenschaft auf **Englisch (USA)** und die`DefaultCodePage` -Eigenschaft auf **1252**festgelegt ist.  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
  [Schritt 8: Vereinfachen des Layouts des Pakets aus Lektion 1](lesson-1-8-making-the-lesson-1-package-easier-to-understand.md)  

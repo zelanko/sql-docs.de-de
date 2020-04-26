@@ -13,22 +13,22 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a957e2032f3be0e48d5bcfa4ed4508775e04477
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62510954"
 ---
-# <a name="job-step-properties-new-job-step-general-page"></a>Auftragsschritt-Eigenschaften: Neuer Auftragsschritt (Seite „Allgemein“)
+# <a name="job-step-properties-new-job-step-general-page"></a>Auftragsschritteigenschaften: Neuer Auftragsschritt (Seite „Allgemein“)
   Mithilfe dieser Seite können Sie die Eigenschaften eines [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrags Schritts anzeigen und ändern oder einen neuen Auftrags Schritt definieren.  
   
  Erweitern Sie im Objekt-Explorer von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent, klicken Sie mit der rechten Maustaste auf **Aufträge**, klicken Sie auf **Neuer Auftrag**, wählen Sie die Seite **Schritte** aus, und klicken Sie auf **Neu**, um zu dieser Seite zu navigieren. Sie können auch zu dieser Seite navigieren, indem Sie mit der rechten Maustaste auf einen Auftrag im Objekt-Explorer klicken, auf **Eigenschaften**klicken, die Seite **Schritte** auswählen, und auf **Neu**, **Einfügen**oder **Bearbeiten**klicken.  
   
-## <a name="options"></a>Tastatur  
- **Schritt Name**  
+## <a name="options"></a>Optionen  
+ **Schrittname**  
  Legt den Namen des Auftrags fest.  
   
- **Typ**  
+ **Type**  
  Legt das durch den Auftrag verwendete Subsystem fest. Basierend auf dem von Ihnen ausgewählten Subsystem ändern sich die für das Definieren des Auftragsschritts angezeigten Optionen.  
   
  **Ausführen als**  
@@ -44,16 +44,16 @@ ms.locfileid: "62510954"
  **Öffnen**  
  Lädt den Befehl aus einer Datei.  
   
- **Alles markieren**  
+ **Alle auswählen**  
  Markiert den Text des Befehls.  
   
- **Copy**  
+ **Kopieren**  
  Kopiert den ausgewählten Text in die Zwischenablage.  
   
  **Einfügen**  
  Fügt die Inhalte aus der Zwischenablage ein.  
   
- **Analysieren**  
+ **Parse**  
  Überprüft die Syntax des Befehls.  
   
 ## <a name="options-for-activex-script-job-steps"></a>Optionen für Auftragsschritte von ActiveX-Skript  
@@ -73,10 +73,10 @@ ms.locfileid: "62510954"
  **Öffnen**  
  Lädt den Befehl aus einer Datei.  
   
- **Alles markieren**  
+ **Alle auswählen**  
  Markiert den Text des Befehls.  
   
- **Copy**  
+ **Kopieren**  
  Kopiert den markierten Text.  
   
  **Einfügen**  
@@ -89,10 +89,10 @@ ms.locfileid: "62510954"
  **Öffnen**  
  Lädt den Befehl aus einer Datei.  
   
- **Alles markieren**  
+ **Alle auswählen**  
  Markiert den Text des Befehls.  
   
- **Copy**  
+ **Kopieren**  
  Kopiert den markierten Text.  
   
  **Einfügen**  
@@ -102,30 +102,30 @@ ms.locfileid: "62510954"
  **Öffnen**  
  Lädt das Skript aus einer Datei.  
   
- **Alles markieren**  
+ **Alle auswählen**  
  Markiert den Text des Skripts.  
   
- **Copy**  
+ **Kopieren**  
  Kopiert den markierten Text.  
   
  **Einfügen**  
  Fügt die Inhalte aus der Zwischenablage ein.  
   
 ## <a name="options-for-replication-distributor-job-steps"></a>Optionen für Replikationsverteiler-Auftragsschritte  
- **Alles markieren**  
+ **Alle auswählen**  
  Markiert den Text des Befehls.  
   
- **Copy**  
+ **Kopieren**  
  Kopiert den markierten Text.  
   
  **Einfügen**  
  Fügt die Inhalte aus der Zwischenablage ein.  
   
 ## <a name="options-for-replication-merge-job-steps"></a>Optionen für Replikationsmerge-Auftragsschritte  
- **Alles markieren**  
+ **Alle auswählen**  
  Markiert den Text des Befehls.  
   
- **Copy**  
+ **Kopieren**  
  Kopiert den markierten Text.  
   
  **Einfügen**  
@@ -135,30 +135,30 @@ ms.locfileid: "62510954"
  **Datenbank**  
  Die Datenbank, die für den Auftragsschritt verwendet werden soll.  
   
- **Alles markieren**  
+ **Alle auswählen**  
  Markiert den Text des Befehls.  
   
- **Copy**  
+ **Kopieren**  
  Kopiert den markierten Text.  
   
  **Einfügen**  
  Fügt die Inhalte aus der Zwischenablage ein.  
   
 ## <a name="options-for-replication-snapshot-job-steps"></a>Optionen für Replikationsmomentaufnahme-Auftragsschritte  
- **Alles markieren**  
+ **Alle auswählen**  
  Markiert den Text des Befehls.  
   
- **Copy**  
+ **Kopieren**  
  Kopiert den markierten Text.  
   
  **Einfügen**  
  Fügt die Inhalte aus der Zwischenablage ein.  
   
 ## <a name="options-for-replication-transaction-log-reader-job-steps"></a>Optionen für Auftragsschritte des Replikationstransaktionsprotokoll-Lesers  
- **Alles markieren**  
+ **Alle auswählen**  
  Markiert den Text des Befehls.  
   
- **Copy**  
+ **Kopieren**  
  Kopiert den markierten Text.  
   
  **Einfügen**  
@@ -171,10 +171,10 @@ ms.locfileid: "62510954"
  **Öffnen**  
  Lädt den Befehl aus einer Datei.  
   
- **Alles markieren**  
+ **Alle auswählen**  
  Markiert den Text des Befehls.  
   
- **Copy**  
+ **Kopieren**  
  Kopiert den markierten Text.  
   
  **Einfügen**  
@@ -190,10 +190,10 @@ ms.locfileid: "62510954"
  **Öffnen**  
  Lädt den Befehl aus einer Datei.  
   
- **Alles markieren**  
+ **Alle auswählen**  
  Markiert den Text des Befehls.  
   
- **Copy**  
+ **Kopieren**  
  Kopiert den markierten Text.  
   
  **Einfügen**  
@@ -211,7 +211,7 @@ ms.locfileid: "62510954"
   
 -   **Dateisystem**  
   
--   **SSIS-Paketspeicher**  
+-   **SSIS-Paket Speicher**  
   
  **Server**  
  Geben Sie den Namen des Servers ein, auf dem das [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paket gespeichert ist. Diese Option ist nur verfügbar, wenn **SQL Server** oder **SSIS-Paketspeicher** für **Paketquelle**angegeben ist.  
@@ -223,10 +223,9 @@ ms.locfileid: "62510954"
  Für Anmeldungen an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung verwendet. Wenn diese Authentifizierungsmethode ausgewählt wurde, geben Sie entsprechend **Benutzername** und **Kennwort**ein.  
   
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung wird aus Gründen der Abwärtskompatibilität bereitgestellt. Aus Sicherheitsgründen sollte möglichst die Windows-Authentifizierung verwendet werden.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung wird aus Gründen der Abwärtskompatibilität bereitgestellt. Aus Sicherheitsgründen sollte möglichst die Windows-Authentifizierung verwendet werden.  
   
- **Paket**  
+ **Pakete**  
  Geben Sie den Speicherort des Pakets ein.  
   
 > [!IMPORTANT]  
@@ -253,7 +252,7 @@ ms.locfileid: "62510954"
 ### <a name="command-files-tab"></a>Registerkarte Befehlsdateien  
  Wählt Befehlsdateien für das Paket aus. Befehlsdateien werden entsprechend ihrer Reihenfolge in der Liste verarbeitet. Die folgenden Optionen sind verfügbar, wenn Sie diese Registerkarte auswählen.  
   
- **Befehls Dateien**  
+ **Befehlsdateien**  
  Führt die Befehlsdateien für das Paket in einer Liste auf.  
   
  **Add (Hinzufügen)**  
@@ -283,28 +282,28 @@ ms.locfileid: "62510954"
 ### <a name="execution-options-tab"></a>Registerkarte Ausführungsoptionen  
  Zeigt die Ausführungsoptionen für das Paket auf dieser Registerkarte an oder ändert die Werte.  
   
- **Paket bei Überprüfungs Warnungen fehlschlagen**  
+ **Paket bei Überprüfungswarnungen fehlschlagen lassen**  
  Wählen Sie diese Option aus, wenn die Paketausführung bei Überprüfungswarnungen fehlschlagen soll.  
   
  **Paket ohne Ausführung überprüfen**  
  Wählen Sie diese Option für den Auftragsschritt aus, wenn das Paket überprüft, nicht jedoch ausgeführt werden soll.  
   
- **Maximal zulässige gleichzeitige ausführbare Dateien**  
+ **Maximale Anzahl von gleichzeitig ausführbaren Dateien**  
  Die maximale Anzahl der gleichzeitig ausführbaren Dateien.  
   
- **Paket Prüfpunkte aktivieren**  
+ **Paketprüfpunkte aktivieren**  
  Wählen Sie diese Option für den Auftragsschritt aus, wenn Paketprüfpunkte verwendet werden sollen.  
   
- **Prüf Punkt Datei**  
+ **Prüfpunktdatei**  
  Geben Sie den Namen der Prüfpunktdatei des Pakets ein.  
   
  **...**  
  Sucht nach der Prüfpunktdatei des Pakets.  
   
- **Neustart Optionen überschreiben**  
+ **Neustartoptionen überschreiben**  
  Wenn Sie diese Option auswählen, können Sie für diesen Auftragsschritt Neustartoptionen angeben, die von den im Paket angegebenen Optionen abweichen.  
   
- **Neustart Option**  
+ **Neustartoption**  
  Wählt die Aktion aus, die bei einem Neustart des Pakets durchgeführt werden soll.  
   
 ### <a name="logging-tab"></a>Registerkarte Protokollierung  
@@ -322,7 +321,7 @@ ms.locfileid: "62510954"
 ### <a name="set-values-tab"></a>Registerkarte Werte festlegen  
  Zeigt die Eigenschaftswerte für das Paket auf dieser Registerkarte an oder ändert die Werte.  
   
- **Eigenschafts Pfad**  
+ **Eigenschaftspfad**  
  Zeigt einen Pfad für die Eigenschaft an oder ändert diese.  
   
  **Wert**  
@@ -340,7 +339,7 @@ ms.locfileid: "62510954"
  **Paketbuild überprüfen**  
  Führt nur Pakete aus, die eine bestimmte Buildnummer besitzen. Bei Auswahl dieser Option schlägt der Auftragsschritt fehl, wenn das Paket nicht die angegebene Buildnummer besitzt.  
   
- **Entwickeln**  
+ **Build**  
  Geben Sie die Buildnummer des Pakets ein.  
   
  **Paket-ID überprüfen**  
@@ -361,7 +360,7 @@ ms.locfileid: "62510954"
  **Die ursprünglichen Optionen wiederherstellen**  
  Verwendet die in diesem Dialogfeld festgelegten Befehlszeilenoptionen.  
   
- **Manuelles Bearbeiten der Befehlszeile**  
+ **Befehlszeile manuell bearbeiten**  
  Gibt die Optionen im Befehlszeilenfenster an.  
   
  **Befehlszeile**  

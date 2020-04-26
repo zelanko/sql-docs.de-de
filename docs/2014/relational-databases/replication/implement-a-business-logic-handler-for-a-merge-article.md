@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 659bba7156ccc1c3a60bef38a51fd983554e4ead
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721205"
 ---
 # <a name="implement-a-business-logic-handler-for-a-merge-article"></a>Implementieren eines Geschäftslogikhandlers für einen Mergeartikel
@@ -46,11 +46,11 @@ ms.locfileid: "62721205"
   
 -   **So implementieren Sie einen Geschäftslogikhandler für einen Mergeartikel mit:**  
   
-     [Replikationsprogrammierung](#ReplProg)  
+     [Replikations Programmierung](#ReplProg)  
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
-##  <a name="ReplProg"></a> Verwenden der Replikationsprogrammierung  
+##  <a name="using-replication-programming"></a><a name="ReplProg"></a> Verwenden der Replikationsprogrammierung  
   
 #### <a name="to-create-and-deploy-a-business-logic-handler"></a>So erstellen Sie einen Geschäftslogikhandler und stellen ihn bereit  
   
@@ -58,7 +58,7 @@ ms.locfileid: "62721205"
   
 2.  Fügen Sie Verweise auf das Projekt für die folgenden Namespaces hinzu.  
   
-    |Assemblyverweis|Location|  
+    |Assemblyverweis|Speicherort|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (Standardinstallation)|  
     |<xref:System.Data>|GAC (Komponente von .NET Framework)|  
@@ -112,7 +112,7 @@ ms.locfileid: "62721205"
   
 1.  Führen Sie [sp_changemergearticle &#40;Transact-SQL ](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)-&#41;**@publication**aus **@article**, und geben Sie,, **@property**den Wert **article_resolver** für und den anzeigen amen des Geschäftslogik **@value**Handlers für an.  
   
-###  <a name="TsqlExample"></a> Beispiele (Replikationsprogrammierung)  
+###  <a name="examples-replication-programming"></a><a name="TsqlExample"></a>Beispiele (Replikations Programmierung)  
  In diesem Beispiel wird ein Geschäftslogikhandler gezeigt, der ein Überwachungsprotokoll erstellt.  
   
  [!code-csharp[HowTo#rmo_BusinessLogicCode](../../snippets/csharp/SQL15/replication/howto/cs/businesslogic.cs#rmo_businesslogiccode)]  
@@ -123,7 +123,7 @@ ms.locfileid: "62721205"
   
  [!code-sql[HowTo#sp_RegisterBLH_10](../../snippets/tsql/SQL15/replication/howto/tsql/registerblh_10.sql#sp_registerblh_10)]  
   
-##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
   
 #### <a name="to-create-a-business-logic-handler"></a>So erstellen Sie einen Geschäftslogikhandler  
   
@@ -131,7 +131,7 @@ ms.locfileid: "62721205"
   
 2.  Fügen Sie Verweise auf das Projekt für die folgenden Namespaces hinzu.  
   
-    |Assemblyverweis|Location|  
+    |Assemblyverweis|Speicherort|  
     |------------------------|--------------|  
     |<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>|[!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]COM (Standardinstallation)|  
     |<xref:System.Data>|GAC (Komponente von .NET Framework)|  
@@ -182,8 +182,7 @@ ms.locfileid: "62721205"
   
     -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> &ndash; ein Anzeigename, den Sie beim Zugriff auf den Geschäftslogikhandler verwenden.  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> &ndash; der Wert `true`.  
+    -   <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.IsDotNetAssembly%2A> &ndash; der Wert `true`.  
   
 #### <a name="to-deploy-a-business-logic-handler"></a>So stellen Sie einen Geschäftslogikhandler bereit  
   
@@ -219,7 +218,7 @@ ms.locfileid: "62721205"
   
 6.  Legen Sie den Anzeigenamen des Geschäftslogikhandlers für <xref:Microsoft.SqlServer.Replication.MergeArticle.ArticleResolver%2A>fest. Dies ist der Wert der <xref:Microsoft.SqlServer.Replication.BusinessLogicHandler.FriendlyName%2A> -Eigenschaft, die beim Registrieren des Geschäftslogikhandlers angegeben wird.  
   
-###  <a name="PShellExample"></a> Beispiele (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a>Beispiele (RMO)  
  Dieses Beispiel zeigt einen Geschäftslogikhandler, der Informationen über Einfüge-, Update- und Löschvorgänge auf dem Abonnenten protokolliert.  
   
  [!code-csharp[HowTo#rmo_BusinessLogicCode](../../snippets/csharp/SQL15/replication/howto/cs/businesslogic.cs#rmo_businesslogiccode)]  
@@ -239,9 +238,9 @@ ms.locfileid: "62721205"
  [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Implementieren eines benutzerdefinierten Konfliktlösers für einen Mergeartikel](implement-a-custom-conflict-resolver-for-a-merge-article.md)   
- [Debuggen eines Geschäftslogikhandlers (Replikationsprogrammierung)](debug-a-business-logic-handler-replication-programming.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)   
+ [Implementieren eines benutzerdefinierten Konflikt Lösers für einen Mergeartikel](implement-a-custom-conflict-resolver-for-a-merge-article.md)   
+ [Debuggen eines Geschäftslogik Handlers &#40;Replikations Programmierung&#41;](debug-a-business-logic-handler-replication-programming.md)   
+ [Bewährte Sicherheitsmethoden für die Replikation](security/replication-security-best-practices.md)   
  [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)  
   
   

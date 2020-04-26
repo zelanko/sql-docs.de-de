@@ -11,13 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 96416c673d3dae6497d56c114ff24df70a8e6872
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63125983"
 ---
 # <a name="operators-node-sql-server-agent-f1-help"></a>Operatoren (Knoten der F1-Hilfe des SQL Server-Agents)
-  Dieser Abschnitt enthält die F1-Hilfe für den Knoten **Operatoren** Objekt-Explorer [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]in.  
+  Dieser Abschnitt enthält die F1-Hilfe zum Knoten **Operatoren** des Objekt-Explorers in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
   

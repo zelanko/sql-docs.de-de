@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98bd7f6c904207aa6d38f2ae756a207f128707a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067540"
 ---
 # <a name="create-a-relationship-between-two-tables-ssas-tabular"></a>Erstellen einer Beziehung zwischen zwei Tabellen (SSAS – tabellarisch)
@@ -71,6 +71,6 @@ ms.locfileid: "66067540"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Löschen von Beziehungen &#40;tabellarischen SSAS-&#41;](delete-relationships-ssas-tabular.md)   
- [Beziehungen &#40;tabellarischen SSAS-&#41;](relationships-ssas-tabular.md)  
+ [Beziehungen &#40;SSAS – tabellarisch&#41;](relationships-ssas-tabular.md)  
   
   

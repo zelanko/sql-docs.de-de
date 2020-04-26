@@ -13,23 +13,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 607ca94af07916fc76ddb02d2c81bf299efc39c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473049"
 ---
 # <a name="post-download-instructions"></a>Bereitstellen von Anweisungen zum Herunterladen
   Mithilfe dieser Seite können Sie Downloadanweisungen für einen Zielserver angeben.  
   
-## <a name="options"></a>Tastatur  
- **Anweisungstypen**  
+## <a name="options"></a>Optionen  
+ **Anweisungstyp**  
  Gibt den Typ der bereitzustellenden Downloadanweisung an.  
   
  **Beschreibung**  
  Zeigt eine Beschreibung der Downloadanweisungen an.  
   
- **Abruf Intervall**  
+ **Abrufintervall**  
  Legt das Abrufintervall für den Zielserver fest. Gilt nur für die Anweisung **Abrufintervall festlegen** .  
   
  **Alle Zielserver**  
@@ -38,7 +38,7 @@ ms.locfileid: "62473049"
  **Diese Zielserver**  
  Wenn diese Option aktiviert ist, werden die Downloadanweisungen für die ausgewählten Zielserver bereitgestellt.  
   
- **Auswahl**  
+ **Auswählen**  
  Gibt an, dass der Zielserver die Downloadanweisung erhalten soll.  
   
  **Ziel Server**  
@@ -47,7 +47,7 @@ ms.locfileid: "62473049"
  **Ortszeit**  
  Zeigt Datum und Uhrzeit des Zielservers in der Ortszeit des Servers an.  
   
- **Abruf Intervall**  
+ **Abrufintervall**  
  Zeigt das aktuelle Abrufintervall für den Zielserver an.  
   
 ## <a name="see-also"></a>Weitere Informationen  

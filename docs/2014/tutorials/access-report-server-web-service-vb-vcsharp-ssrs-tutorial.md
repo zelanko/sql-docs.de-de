@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 9f8c549bef9d07f7b206f4dd8a9a652c8c72896f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62824508"
 ---
 # <a name="accessing-the-report-server-web-service-using-visual-basic-or-visual-c-ssrs-tutorial"></a>Zugreifen auf den Berichtsserver-Webdienst mithilfe von Visual Basic oder Visual C# (SSRS-Lernprogramm)
@@ -37,7 +37,7 @@ ms.locfileid: "62824508"
   
 -   Ausführen der Konsolenanwendung im Debugmodus.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
  Für die vollständige Bearbeitung des Lernprogramms benötigen Sie Folgendes:  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -58,7 +58,7 @@ ms.locfileid: "62824508"
   
  [Lektion 2: Hinzufügen eines Webverweises](../../2014/tutorials/lesson-2-adding-a-web-reference.md)  
   
- [Lektion 3: Zugreifen auf den Webdienst](../../2014/tutorials/lesson-3-accessing-the-web-service.md)  
+ [Lektion 3: Zugriff auf den Webdienst](../../2014/tutorials/lesson-3-accessing-the-web-service.md)  
   
  [Lektion 4: Ausführen der Anwendung &#40;VB-VC&#35;&#41;](../../2014/tutorials/lesson-4-running-the-application-vb-vcsharp.md)  
   

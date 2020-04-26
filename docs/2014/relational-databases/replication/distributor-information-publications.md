@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2d738066e4832c029743d53f7ec99dbb1b6fe5cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721359"
 ---
 # <a name="distributor-information-dialog-box"></a>Verteiler Informationen (Dialog Feld) 
@@ -30,7 +30,7 @@ Dieses Thema enthält Informationen zum Dialogfeld " **Verteiler** ".
 
   Die Registerkarte **Veröffentlichungen** enthält Zusammenfassungsinformationen zu allen Veröffentlichungen auf dem Verteiler, die Sie im linken Bereich ausgewählt haben.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  Die Informationen, die bezüglich der vom Verteiler unterstützten Veröffentlichungen angezeigt werden, umfassen eine Spalte mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz des Verlegers. Ansonsten stimmten die Veröffentlichungsinformationen mit den Informationen überein, die beim Anzeigen von Veröffentlichungen in der Verlegeransicht des Replikationsmonitors bereitgestellt werden. Weitere Informationen zu den Spalten auf der Registerkarte **Veröffentlichungen** finden Sie unter [Publisher Information, Publications](publisher-information-publications.md).  
 
 ## <a name="subscription-watch-list"></a>Überwachungsliste für Abonnements
@@ -45,13 +45,13 @@ Dieses Thema enthält Informationen zum Dialogfeld " **Verteiler** ".
   Informationen zu Abonnements von Momentaufnahmeveröffentlichungen enthalten den Namen des Verlegers. Davon abgesehen entsprechen die bereitgestellten Funktionen und Informationen in diesem Dialogfeld denen in der Verlegeransicht. Weitere Informationen zur Verwendung dieses Dialogfelds finden Sie unter [Verlegerinformationen, Überwachungsliste für Abonnements &#40;Momentaufnahmeveröffentlichung, SQL Server 2005 und später&#41;](publisher-information-subscription-watch-list-snapshot.md).  
 
 ## <a name="agents"></a>Agents
-  Auf der Registerkarte **Agents** werden Informationen zu den Agents und Wartungsaufträgen angezeigt, die dem Verleger und dem Abonnenten zugeordnet sind:  
+   Auf der Registerkarte **Agents** werden Informationen zu den Agents und Wartungsaufträgen angezeigt, die dem Verleger und dem Abonnenten zugeordnet sind.  
   
  Die Agents, die auf der Registerkarte **Agents** in der Verteileransicht für einen Verteiler verfügbar sind, umfassen alle Agents, die auf der Registerkarte **Agents** für einen Verleger verfügbar sind. Die Registerkarte **Agents** für einen Verteiler in der Verteileransicht enthält jedoch auch einen Verteiler-Agent und einen Merge-Agent.  
   
  Weitere Informationen zu Momentaufnahme-, Protokollleser- und Warteschlangenlese-Agents sowie Wartungsaufträgen finden Sie unter [Publisher Information, Agents](publisher-information-agents.md). Beachten Sie, dass beim Anzeigen von Agent-Informationen für einen Verteiler auf der Registerkarte **Agents** Verlegerinformationen für den Momentaufnahme- und den Protokollleser-Agent vorhanden sind. Auf der Registerkarte **Agents** für einen Verteiler in der Verteileransicht können Sie auch jedoch **Verteiler-Agent** und **Merge-Agent**auswählen.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  In den folgenden Abschnitten werden die Daten beschrieben, die auf dieser Registerkarte für den Verteiler-Agent und den Merge-Agent angezeigt werden.  
   
 ### <a name="distributor-agent"></a>Verteiler-Agent  
@@ -73,7 +73,7 @@ Dieses Thema enthält Informationen zum Dialogfeld " **Verteiler** ".
  **Abonnement**  
  Der Name des Abonnements im Format [*SubscriberName*].[*Database*].  
   
- **Typ**  
+ **Type**  
  Der Typ der Replikation: push, pull oder anonymous.  
   
  **Letzte Startzeit**  
@@ -88,7 +88,7 @@ Dieses Thema enthält Informationen zum Dialogfeld " **Verteiler** ".
  **Übermittlungsrate**  
  Die Rate (in Befehlen pro Sekunde), mit der bei der letzten Ausführung des Agents für Initialisierungsbefehle ein Commit in der Verteilungsdatenbank ausgeführt wurde.  
   
- **Latenz**  
+ **Latency**  
  Die verstrichene Zeit in Sekunden zwischen dem Commit der letzten Änderung in der Veröffentlichungsdatenbank und dem Commit des zugehörigen Befehls in der Verteilungsdatenbank.  
   
  **#Trans**  
@@ -119,7 +119,7 @@ Dieses Thema enthält Informationen zum Dialogfeld " **Verteiler** ".
  **Abonnement**  
  Der Name des Abonnements im Format [*SubscriberName*].[*Database*].  
   
- **Typ**  
+ **Type**  
  Der Typ der Replikation: push, pull oder anonymous.  
   
  **Letzte Startzeit**  
@@ -160,7 +160,7 @@ Dieses Thema enthält Informationen zum Dialogfeld " **Verteiler** ".
   
  
 ## <a name="see-also"></a>Weitere Informationen  
- [Starten des Replikationsmonitors](monitor/start-the-replication-monitor.md)   
- [Überwachen der Replikation](monitoring-replication.md)  
+ [Starten des Replikations Monitors](monitor/start-the-replication-monitor.md)   
+ [Überwachung der Replikation](monitoring-replication.md)  
   
   

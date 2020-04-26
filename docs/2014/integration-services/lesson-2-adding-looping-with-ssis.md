@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a542b2828a2ea6803a6b4174396e57c7e9d3af4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767552"
 ---
 # <a name="lesson-2-adding-looping"></a>Lektion 2: Hinzufügen von Schleifen
@@ -22,8 +22,7 @@ ms.locfileid: "62767552"
   
  Das Verwenden einer einzelnen flachen Datei ist allerdings bei einem ETL-Vorgang (Extract, Transform and Load, Extrahieren, Transformieren und Laden) selten. Von einem typischen ETL-Vorgang würden Daten aus mehreren flachen Dateiquellen extrahiert. Das Extrahieren von Daten aus mehreren Quellen erfordert eine iterative (wiederholende) Ablaufsteuerung. Eine der am häufigsten erwarteten Features von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ist die Fähigkeit, Paketen problemlos Iterationen oder Schleifen hinzuzufügen.  
   
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] bietet zwei Containertypen für Schleifenvorgänge durch Pakete an: den Foreach- und den For-Schleifencontainer. Der Foreach-Schleifencontainer verwendet einen Enumerator für die Ausführung der Schleife, während der For-Schleifencontainer normalerweise einen Variablenausdruck verwendet. In dieser Lektion wird der Foreach-Schleifencontainer verwendet.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] bietet zwei Containertypen für Schleifenvorgänge durch Pakete an: den Foreach- und den For-Schleifencontainer. Der Foreach-Schleifencontainer verwendet einen Enumerator für die Ausführung der Schleife, während der For-Schleifencontainer normalerweise einen Variablenausdruck verwendet. In dieser Lektion wird der Foreach-Schleifencontainer verwendet.  
   
  Durch den Foreach-Schleifencontainer wird es für ein Paket möglich, die Ablaufsteuerung für jedes Element eines angegebenen Enumerators zu wiederholen. Mithilfe des Foreach-Schleifencontainer können Sie die folgenden Elemente aufzählen:  
   
@@ -41,8 +40,7 @@ ms.locfileid: "62767552"
   
 -   Knoten in einem XPath-Ausdruck (XML Path Language)  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO)  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects (SMO)  
   
  In dieser Lektion ändern Sie das in Lektion 1 erstellte einfache ETL-Paket, um die Vorteile des Foreach-Schleifencontainers nutzen zu können. Sie legen auch benutzerdefinierte Paketvariablen fest, um die Iteration durch alle flachen Dateien im Ordner für das Lernprogrammpaket zu ermöglichen. Wenn Sie die vorherige Lektion nicht abgeschlossen haben, können Sie auch das abgeschlossene Paket aus Lektion 1 kopieren, das im Lernprogramm enthalten ist.  
   
@@ -54,16 +52,16 @@ ms.locfileid: "62767552"
 ## <a name="lesson-tasks"></a>Lektionsaufgaben  
  Diese Lektion enthält die folgenden Aufgaben:  
   
--   [Schritt 1: Kopieren des Pakets aus Lektion 1](lesson-2-1-copying-the-lesson-1-package.md)  
+-   [Schritt 1: Kopieren des Pakets aus Lektion 1](lesson-2-1-copying-the-lesson-1-package.md)  
   
 -   [Schritt 2: Hinzufügen und Konfigurieren des Foreach-Schleifencontainers](lesson-2-2-adding-and-configuring-the-foreach-loop-container.md)  
   
 -   [Schritt 3: Ändern des Flatfile-Verbindungs-Managers](lesson-2-3-modifying-the-flat-file-connection-manager.md)  
   
--   [Schritt 4: Testen des Lektion 2-Tutorialpakets](lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+-   [Schritt 4: Testen des Tutorialpakets aus Lektion 2](lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Lektion beginnen  
- [Schritt 1: Kopieren des Pakets aus Lektion 1](lesson-2-1-copying-the-lesson-1-package.md)  
+ [Schritt 1: Kopieren des Pakets aus Lektion 1](lesson-2-1-copying-the-lesson-1-package.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [For-Schleifencontainer](control-flow/for-loop-container.md)  

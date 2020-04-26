@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c1d98187fbe76e726dadfe163d75a27c51fd60e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767642"
 ---
 # <a name="step-4-adding-package-configurations"></a>Schritt 4: Hinzufügen von Paketkonfigurationen
@@ -40,7 +40,7 @@ ms.locfileid: "62767642"
   
 4.  Wählen Sie im Dialogfeld **Paketkonfigurationsplaner**gegebenenfalls die Option **Paketkonfigurationen aktivieren** aus, und klicken Sie anschließend auf **Hinzufügen**.  
   
-5.  Klicken Sie auf der Willkommensseite des Paketkonfigurations-Assistenten auf **Weiter**.  
+5.  Klicken Sie im Paketkonfigurations-Assistenten auf der Seite Willkommen auf **weiter**.  
   
 6.  Wählen Sie auf der Seite Konfigurationstyp auswählen die Option **XML-Konfigurationsdatei** in der Liste **Konfigurationstyp** aus, wählen Sie die Option **Konfigurations Speicherort ist in einer Umgebungsvariablen gespeichert** aus, und geben `DataTransfer,` Sie in der Liste die Umgebungsvariable **DataTransfer** ein.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62767642"
   
 7.  Klicken Sie auf **Weiter**.  
   
-8.  Geben Sie auf der Seite „Assistenten abschließen“ im Feld **Konfigurationsname** **DataTransfer EV Configuration** ein, prüfen Sie den Inhalt der Konfiguration im Bereich **Vorschau** , und klicken Sie anschließend auf **Fertig stellen**.  
+8.  Geben Sie auf der Seite „Assistenten abschließen“ im Feld **Konfigurationsname****DataTransfer EV Configuration** ein, prüfen Sie den Inhalt der Konfiguration im Bereich **Vorschau** , und klicken Sie anschließend auf **Fertig stellen**.  
   
 9. Schließen Sie das Dialogfeld **Paketkonfigurationsplaner**.  
   
@@ -63,13 +63,13 @@ ms.locfileid: "62767642"
   
 4.  Aktivieren Sie im Dialogfeld Paketkonfigurationsplaner das Kontrollkästchen **Paketkonfigurationen aktivieren** , und klicken Sie anschließend auf **Hinzufügen**.  
   
-5.  Klicken Sie auf der Willkommensseite des Paketkonfigurations-Assistenten auf **Weiter**.  
+5.  Klicken Sie im Paketkonfigurations-Assistenten auf der Seite Willkommen auf **weiter**.  
   
 6.  Wählen Sie auf der Seite Konfigurationstyp auswählen die Option **XML-Konfigurationsdatei** in der Liste **Konfigurationstyp** aus, und klicken Sie anschließend auf **Durchsuchen**.  
   
-7.  Navigieren Sie im Dialogfeld **Speicherort der Konfigurationsdatei auswählen** zu „C:\DeploymentTutorial“, geben Sie im Feld **Dateiname** **DataTransferConfig** ein, und klicken Sie anschließend auf **Speichern**.  
+7.  Navigieren Sie im Dialogfeld **Speicherort der Konfigurationsdatei auswählen** zu „C:\DeploymentTutorial“, geben Sie im Feld **Dateiname****DataTransferConfig** ein, und klicken Sie anschließend auf **Speichern**.  
   
-8.  Klicken Sie auf der Seite „Konfigurationstyp auswählen“ auf **Weiter**.  
+8.  Klicken Sie auf der Seite Konfigurationstyp auswählen auf **weiter**.  
   
 9. Erweitern Sie auf der Seite Eigenschaften für den Exportvorgang auswählen DataTransfer, Connection Managers, Deployment Tutorial Log und Properties, und aktivieren Sie anschließend das Kontrollkästchen **Verbindungszeichenfolge** .  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62767642"
   
 11. Klicken Sie auf **Weiter**.  
   
-12. Geben Sie auf der Seite „Assistenten abschließen“ im Feld **Konfigurationsname** **DataTransfer Configuration** ein, überprüfen Sie den Inhalt der Konfiguration, und klicken Sie anschließend auf **Fertig stellen**.  
+12. Geben Sie auf der Seite „Assistenten abschließen“ im Feld **Konfigurationsname****DataTransfer Configuration** ein, überprüfen Sie den Inhalt der Konfiguration, und klicken Sie anschließend auf **Fertig stellen**.  
   
 13. Überprüfen Sie im Dialogfeld **Paketkonfigurationsplaner** , ob DataTransfer EV Configuration als Erstes und DataTransfer Configuration als Zweites aufgeführt wird, und klicken Sie anschließend auf **Schließen**.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "62767642"
   
 4.  Klicken Sie im Dialogfeld **Paketkonfigurationsplaner**auf **Hinzufügen**.  
   
-5.  Klicken Sie auf der Willkommensseite des Paketkonfigurations-Assistenten auf **Weiter**.  
+5.  Klicken Sie im Paketkonfigurations-Assistenten auf der Seite Willkommen auf **weiter**.  
   
 6.  Wählen Sie auf der Seite Konfigurationstyp auswählen die Option **XML-Konfigurationsdatei** in der Liste **Konfigurationstyp** aus, wählen Sie die Option **Konfigurations Speicherort ist in einer Umgebungsvariablen gespeichert** aus, `LoadXMLData` oder wählen Sie die `LoadXMLData` Umgebungsvariable in der Liste aus.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62767642"
   
 7.  Klicken Sie auf **Weiter**.  
   
-8.  Geben Sie auf der Seite „Assistenten abschließen“ im Feld **Konfigurationsname** **LoadXMLData EV Configuration** ein, überprüfen Sie den Inhalt der Konfiguration, und klicken Sie anschließend auf **Fertig stellen**.  
+8.  Geben Sie auf der Seite „Assistenten abschließen“ im Feld **Konfigurationsname****LoadXMLData EV Configuration** ein, überprüfen Sie den Inhalt der Konfiguration, und klicken Sie anschließend auf **Fertig stellen**.  
   
 ### <a name="to-create-the-xml-configuration-for-the-loadxmldata-package"></a>So erstellen Sie die XML-Konfiguration für das LoadXMLData-Paket  
   
@@ -112,19 +112,19 @@ ms.locfileid: "62767642"
   
 4.  Aktivieren Sie im Dialogfeld Paketkonfigurationsplaner das Kontrollkästchen **Paketkonfigurationen aktivieren** , und klicken Sie auf **Hinzufügen**.  
   
-5.  Klicken Sie auf der Willkommensseite des Paketkonfigurations-Assistenten auf **Weiter**.  
+5.  Klicken Sie im Paketkonfigurations-Assistenten auf der Seite Willkommen auf **weiter**.  
   
 6.  Wählen Sie auf der Seite Konfigurationstyp auswählen die Option **XML-Konfigurationsdatei** in der Liste **Konfigurationstyp** aus, und klicken Sie auf **Durchsuchen**.  
   
-7.  Navigieren Sie im Dialogfeld **Speicherort der Konfigurationsdatei auswählen** zu „C:\DeploymentTutorial“, geben Sie im Feld **Dateiname** **LoadXMLDataConfig** ein, und klicken Sie anschließend auf **Speichern**.  
+7.  Navigieren Sie im Dialogfeld **Speicherort der Konfigurationsdatei auswählen** zu „C:\DeploymentTutorial“, geben Sie im Feld **Dateiname****LoadXMLDataConfig** ein, und klicken Sie anschließend auf **Speichern**.  
   
-8.  Klicken Sie auf der Seite „Konfigurationstyp auswählen“ auf **Weiter**.  
+8.  Klicken Sie auf der Seite Konfigurationstyp auswählen auf **weiter**.  
   
 9. Erweitern Sie auf der Seite „Eigenschaften für den Exportvorgang auswählen“ LoadXMLData, Executables, Load XML Data und Properties, und aktivieren Sie anschließend die Kontrollkästchen **[XMLSource].[XMLData]** und **[XMLSource].[XMLSchemaDefinition]** .  
   
 10. Klicken Sie auf **Weiter**.  
   
-11. Geben Sie auf der Seite „Assistenten abschließen“ im Feld **Konfigurationsname** **LoadXMLData Configuration** ein, überprüfen Sie den Inhalt der Konfiguration, und klicken Sie anschließend auf **Fertig stellen**.  
+11. Geben Sie auf der Seite „Assistenten abschließen“ im Feld **Konfigurationsname****LoadXMLData Configuration** ein, überprüfen Sie den Inhalt der Konfiguration, und klicken Sie anschließend auf **Fertig stellen**.  
   
 12. Überprüfen Sie im Dialogfeld **Paketkonfigurationsplaner** , ob „LoadXMLData EV Configuration“ als Erstes und „LoadXMLData Configuration“ als Zweites aufgeführt wird, und klicken Sie anschließend auf **Schließen**.  
   

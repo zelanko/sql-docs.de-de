@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d44ab9256367ceb9883b55bb9b01ad67e14ded32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62705521"
 ---
 # <a name="manage-event-sessions-in-the-object-explorer"></a>Verwalten von Ereignissitzungen im Objekt-Explorer
@@ -96,7 +96,7 @@ STATE = STOP
   
 4.  Erweitern Sie das Dropdownfeld **Vorlage** .  
   
-5.  Klicken Sie auf **\<Aus Datei…> Öffnen**, und suchen Sie nach der Sitzung (XML-Datei), die Sie importieren möchten.  
+5.  Klicken Sie auf ** \<Datei aus... >öffnen** und suchen Sie nach der Sitzung (XML-Datei), die Sie importieren möchten.  
   
  Die Sitzung wird unter dem Knoten **Sitzungen** angezeigt. Standardmäßig die Sitzung nicht gestartet.  
   
@@ -113,7 +113,7 @@ STATE = STOP
   
 4.  Klicken Sie nach der Überarbeitung der Ereignissitzung auf **OK**.  
   
-## <a name="script-an-event-session-definition-using-includetsqlincludestsql-mdmd"></a>Skript für eine Ereignissitzung als Definition mit [!INCLUDE[tsql](../../includes/tsql-md.md)]  
+## <a name="script-an-event-session-definition-using-tsql"></a>Skript für eine Ereignissitzung als Definition mit [!INCLUDE[tsql](../../includes/tsql-md.md)]  
  Sowohl der Assistent für neue Sitzungen als auch das Dialogfeld "Neue Sitzung" verfügen über eine Skriptoption, die den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code generiert, der die Sitzung für erweiterte Ereignisse definiert.  
   
  Sie können auf den [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code für eine vorhandene Sitzung für erweiterte Ereignisse zugreifen, indem Sie mit der rechten Maustaste auf den Sitzungsnamen klicken, die Option **Skript für Sitzung als**und dann **Erstellen in**auswählen.  
@@ -123,7 +123,7 @@ STATE = STOP
   
 -   Im Abfrage-Editor mit `DROP EVENT SESSION`.  
   
--   Im **Objekt-Explorer**  
+-   In **Objekt-Explorer**.  
   
  Wenn Sie eine Ereignissitzung löschen, werden alle Konfigurationsinformationen entfernt, und die Sitzungsdefinition wird nicht mehr in der „sys.server_event_sessions“-Katalogsicht angezeigt.  
   
@@ -134,7 +134,7 @@ STATE = STOP
   
  So löschen Sie eine Sitzung für erweiterte Ereignisse im **Objekt-Explorer**:  
   
-1.  Erweitern Sie die Knoten **Verwaltung**, **Erweiterte Ereignisse**und anschließend **Sitzungen** .  
+1.  Erweitern Sie die Knoten **Verwaltung**, **Erweiterte Ereignisse**und dann **Sitzungen** .  
   
 2.  Klicken Sie mit der rechten Maustaste auf eine Sitzung, und wählen Sie **Löschen**aus.  
   

@@ -15,16 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a6ede05e340cbd2822cd72ceee514f6ce31a2755
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62766852"
 ---
 # <a name="managing-packages-and-folders-programmatically"></a>Programmgesteuerte Verwaltung von Paketen und Ordnern
   Beim programmgesteuerten Arbeiten mit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen möchten Sie möglicherweise feststellen, ob ein einzelnes Paket oder ein einzelner Ordner vorhanden ist, oder Sie möchten die Ordner mit gespeicherten Paketen verwalten. Die <xref:Microsoft.SqlServer.Dts.Runtime.Application>-Klasse des <xref:Microsoft.SqlServer.Dts.Runtime>-Namespace stellt eine Reihe von Methoden bereit, die diese Anforderungen erfüllen.  
   
-##  <a name="exists"></a> Bestimmen, ob ein Paket oder ein Ordner vorhanden ist  
+##  <a name="determining-whether-a-package-or-folder-exists"></a><a name="exists"></a> Bestimmen, ob ein Paket oder ein Ordner vorhanden ist  
  Um programmgesteuert zu ermitteln, ob ein gespeichertes Paket vorhanden ist, rufen Sie eine der folgenden Methoden auf, bevor Sie versuchen, das Paket zu laden und auszuführen:  
   
 |Speicherort|Aufzurufende Methode|  
@@ -41,10 +41,10 @@ ms.locfileid: "62766852"
   
 
   
-##  <a name="managing"></a> Verwalten von Paketen und Ordnern  
+##  <a name="managing-packages-and-folders"></a><a name="managing"></a> Verwalten von Paketen und Ordnern  
  Die <xref:Microsoft.SqlServer.Dts.Runtime.Application>-Klasse des <xref:Microsoft.SqlServer.Dts.Runtime>-Namespace stellt zusätzliche Methoden zum Verwalten von Paketen und den Ordnern, in denen diese gespeichert sind, bereit.  
   
-###  <a name="managing_rempkg"></a> Entfernen eines Pakets  
+###  <a name="removing-a-package"></a><a name="managing_rempkg"></a> Entfernen eines Pakets  
  Rufen Sie zum programmgesteuerten Entfernen eines gespeicherten Pakets eine der folgenden Methoden auf:  
   
 |Speicherort|Aufzurufende Methode|  
@@ -54,7 +54,7 @@ ms.locfileid: "62766852"
   
 
   
-###  <a name="managing_create"></a> Erstellen eines Ordners  
+###  <a name="creating-a-folder"></a><a name="managing_create"></a> Erstellen eines Ordners  
  Rufen Sie zum programmgesteuerten Erstellen eines Speicherordners eine der folgenden Methoden auf:  
   
 |Speicherort|Aufzurufende Methode|  
@@ -64,7 +64,7 @@ ms.locfileid: "62766852"
   
 
   
-###  <a name="managing_remfldr"></a> Entfernen eines Ordners  
+###  <a name="removing-a-folder"></a><a name="managing_remfldr"></a> Entfernen eines Ordners  
  Rufen Sie zum programmgesteuerten Entfernen eines Speicherordners eine der folgenden Methoden auf:  
   
 |Speicherort|Aufzurufende Methode|  
@@ -74,7 +74,7 @@ ms.locfileid: "62766852"
   
   
   
-###  <a name="managing_rename"></a> Umbenennen eines Ordners  
+###  <a name="renaming-a-folder"></a><a name="managing_rename"></a> Umbenennen eines Ordners  
  Rufen Sie zum programmgesteuerten Umbenennen eines Speicherordners eine der folgenden Methoden auf:  
   
 |Speicherort|Aufzurufende Methode|  
@@ -88,6 +88,6 @@ ms.locfileid: "62766852"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Paketverwaltung &#40;SSIS-Dienst&#41;](../service/package-management-ssis-service.md)   
- [Programmgesteuertes Auflisten verfügbarer Pakete](../run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)  
+ [Enumerating Available Packages Programmatically](../run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)  
   
   

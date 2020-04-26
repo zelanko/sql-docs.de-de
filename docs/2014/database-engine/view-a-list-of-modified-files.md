@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c35062e6dfa339d0cd37f3905dc801f0f47becba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62773428"
 ---
 # <a name="view-a-list-of-modified-files"></a>Anzeigen einer Liste geänderter Dateien
@@ -35,7 +35,7 @@ ms.locfileid: "62773428"
      **Ankunft**  
      Checkt die Projektmappe ein.  
   
-     **Iny**  
+     **Kommentare**  
      Ordnet dem ausstehenden Eincheckvorgang einen Nur-Text-Kommentar zu. Für jede Version eines Projekts wird ein Kommentar erstellt und zugeordnet und in der Datenbank für die Quellcodeverwaltung gespeichert.  
   
      **Optionen**  
@@ -60,7 +60,7 @@ ms.locfileid: "62773428"
      **Versionsvergleich**  
      Öffnet das Dialogfeld mit den **unterschiedlichen Optionen** für Visual SourceSafe, das eine ausgewählte Datei im Entwicklungs Umgebungs Projekt mit einer beliebigen anderen ausgewählten Datei vergleicht und ggf. die Unterschiede anzeigt.  
   
-     **Rückgängig machen**  
+     **Rückgängig: Auschecken**  
      Kehrt das Auschecken aller im Fenster **ausstehende Eincheck** Vorgänge ausgewählten Elemente um.  
   
      **Name**  

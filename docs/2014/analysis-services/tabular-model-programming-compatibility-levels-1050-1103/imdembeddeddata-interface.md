@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 83e46e9b62359623093415ca456ecadd72f847cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62757778"
 ---
 # <a name="imdembedded-interface"></a>IMDEmbedded-Schnittstelle
@@ -38,7 +38,7 @@ ms.locfileid: "62757778"
   
 -   Speichert die lokale oder prozessinterne Datenbank im eingebetteten Datenstrom im Containerdokument. Wird von `IPersistStream` geerbt.  
   
-## <a name="reference"></a>Verweis  
+## <a name="reference"></a>Referenz  
  Der folgende Verweis dokumentiert die `IMDEmbedded` -Schnittstelle, wie in der **Msmd. h** -Header Datei dargestellt.  
   
 ### <a name="source-file-pxoembeddeddataidl"></a>Quelldatei: PXOEmbeddedData.idl  
@@ -81,7 +81,7 @@ HRESULT GetStreamIdentifier (
     )  
 ```  
   
-#### <a name="description"></a>BESCHREIBUNG  
+#### <a name="description"></a>Beschreibung  
  Ruft den von der Hostanwendung verwendeten Bezeichner in den eingebetteten Datenstrom im Containerdokument ab.  
   
 #### <a name="parameters"></a>Parameter  
@@ -103,7 +103,7 @@ HRESULT GetStreamIdentifier (
   
  Die möglichen Werte für DBPROP_MSMD_EMBEDDED_DATA lauten wie folgt:  
   
-|Name|value|Definition|  
+|Name|Wert|Definition|  
 |----------|-----------|----------------|  
 |DBPROPVAL_EMBED_NONE|0x00|Es ist keine eingebettete Datenbank verfügbar.|  
 |DBPROPVAL_EMBED_EMBEDDED|0x01|Die aktuelle Anwendung enthält die eingebettete Datenbank.|  
@@ -125,7 +125,7 @@ HRESULT SetContainerURL (
     )  
 ```  
   
-#### <a name="description"></a>BESCHREIBUNG  
+#### <a name="description"></a>Beschreibung  
  Legt die URL für die Datei fest, die den eingebetteten Datenstrom enthält.  
   
 #### <a name="parameters"></a>Parameter  
@@ -155,7 +155,7 @@ HRESULT SetHosted (
     )  
 ```  
   
-#### <a name="description"></a>BESCHREIBUNG  
+#### <a name="description"></a>Beschreibung  
  Legt ein Flag fest, das angibt, ob sich die Einbettungsanwendung in einer gehosteten Umgebung befindet.  
   
 #### <a name="parameters"></a>Parameter  
@@ -185,7 +185,7 @@ HRESULT SetTempDirPath (
     )  
 ```  
   
-#### <a name="description"></a>BESCHREIBUNG  
+#### <a name="description"></a>Beschreibung  
  Legt den Pfad zu den von der Einbettungsanwendung verwendeten temporären Dateien fest.  
   
 #### <a name="parameters"></a>Parameter  
@@ -213,11 +213,11 @@ HRESULT SetTempDirPath (
 HRESULT Cancel ( void )  
 ```  
   
-#### <a name="description"></a>BESCHREIBUNG  
+#### <a name="description"></a>Beschreibung  
  Bricht den aktuellen Vorgang für die eingebettete Datenbank ab.  
   
 #### <a name="parameters"></a>Parameter  
- Keine.  
+ Keine  
   
 #### <a name="return-value"></a>Rückgabewert  
  `S_OK`  
@@ -244,7 +244,7 @@ HRESULT GetSizeMax (
     )  
 ```  
   
-#### <a name="description"></a>BESCHREIBUNG  
+#### <a name="description"></a>Beschreibung  
  Ruft die geschätzte Größe des Datenstroms (in Byte) zum Speichern des eingebetteten Objekts ab. Wird von `IPersistStream` geerbt.  
   
 #### <a name="parameters"></a>Parameter  
@@ -264,11 +264,11 @@ HRESULT GetSizeMax (
 HRESULT IsDirty ( void )  
 ```  
   
-#### <a name="description"></a>BESCHREIBUNG  
+#### <a name="description"></a>Beschreibung  
  Überprüft, ob sich die eingebettete Datenbank seit der letzten Speicherung geändert hat. Wird von `IPersistStream` geerbt.  
   
 #### <a name="parameters"></a>Parameter  
- (Keine)  
+ none  
   
 #### <a name="return-values"></a>Rückgabewert(e)  
  `S_OK`  
@@ -288,7 +288,7 @@ HRESULT Load (
     )  
 ```  
   
-#### <a name="description"></a>BESCHREIBUNG  
+#### <a name="description"></a>Beschreibung  
  Lädt die eingebettete Datenbank in die lokale oder prozessinterne Engine. Wird von `IPersistStream` geerbt.  
   
 #### <a name="parameters"></a>Parameter  
@@ -314,7 +314,7 @@ HRESULT Save (
     )  
 ```  
   
-#### <a name="description"></a>BESCHREIBUNG  
+#### <a name="description"></a>Beschreibung  
  Speichert die lokale oder in-Process-Datenbank im eingebetteten Datenstrom im Container Dokument. Wird von `IPersistStream` geerbt.  
   
 #### <a name="parameters"></a>Parameter  

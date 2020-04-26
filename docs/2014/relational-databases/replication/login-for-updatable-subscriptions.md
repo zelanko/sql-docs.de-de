@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d8162c7654d99cd2ebab41d290c0a39c6c686686
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63058096"
 ---
 # <a name="login-for-updatable-subscriptions"></a>Anmeldename für aktualisierbare Abonnements
@@ -33,10 +33,10 @@ ms.locfileid: "63058096"
   
 -   Ein durch die Replikation erstellter Verbindungsserver. Die Verbindung wird mit den Anmeldeinformationen des Benutzers hergestellt, der die Änderung auf dem Abonnenten vornimmt.  
   
- Die ersten beiden Optionen können im Assistenten angegeben werden. Die letzte Option kann nur mit [sp_link_publication &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql)angegeben werden. Geben Sie für den **** Parameter **@security_mode**den Wert 1 an.  
+ Die ersten beiden Optionen können im Assistenten angegeben werden. Die letzte Option kann nur mit [sp_link_publication &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql)angegeben werden. Geben Sie für den **1** Parameter **@security_mode**den Wert 1 an.  
   
-## <a name="options"></a>Tastatur  
- **Erstellen Sie einen Verbindungs Server, der mithilfe der folgenden SQL Server Authentifizierungs Anmeldung eine Verbindung herstellt:**  
+## <a name="options"></a>Optionen  
+ **Erstellen Sie einen Verbindungsserver, der die Verbindung mithilfe des folgenden Anmeldenamens für die SQL Server-Authentifizierung herstellt:**  
  Durch die Replikation wird ein Verbindungsserver mithilfe der in den Feldern **Anmeldename** und **Kennwort** angegebenen Anmeldeinformationen erstellt.  
   
  **Anmeldung**  
@@ -48,12 +48,12 @@ ms.locfileid: "63058096"
  **Kennwort bestätigen**  
  Geben Sie das Kennwort zur Bestätigung der fehlerfreien Eingabe erneut ein.  
   
- **Verwenden Sie einen Verbindungs Server oder Remote Server, den Sie bereits definiert haben.**  
+ **Vordefinierten Verbindungsserver oder Remoteserver verwenden**  
  Bei dieser Option ist ein bereits von Ihnen definierter Verbindungsserver oder Remoteserver erforderlich. Weitere Informationen finden Sie unter [Verbindungsserver &#40;Datenbank-Engine&#41;](../linked-servers/linked-servers-database-engine.md) und [Remoteserver](../../database-engine/configure-windows/remote-servers.md). Stellen Sie sicher, dass der für den Verbindungsserver oder Remoteserver verwendete Anmeldename ein sicheres Kennwort sowie ausschließlich die in diesem Thema beschriebenen Berechtigungen aufweist.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen eines aktualisierbaren Abonnements für eine Transaktions Veröffentlichung](publish/create-an-updatable-subscription-to-a-transactional-publication.md)   
- [Anzeigen und Ändern von Replikationssicherheitseinstellungen](security/view-and-modify-replication-security-settings.md)   
+ [Anzeigen und Ändern von Replikations Sicherheitseinstellungen](security/view-and-modify-replication-security-settings.md)   
  [Aktualisierbare Abonnements für die Transaktions Replikation](transactional/updatable-subscriptions-for-transactional-replication.md)   
  [Abonnieren von Veröffentlichungen](subscribe-to-publications.md)  
   

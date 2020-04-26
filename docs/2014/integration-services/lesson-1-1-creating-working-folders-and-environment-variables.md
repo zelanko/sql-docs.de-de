@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b58da11d973d169a0372e59c7e8d7e174e3cf789
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767652"
 ---
 # <a name="step-1-creating-working-folders-and-environment-variables"></a>Schritt 1: Erstellen von Arbeitsordnern und Umgebungsvariablen
@@ -52,7 +52,7 @@ ms.locfileid: "62767652"
   
 6.  Klicken Sie auf **OK**.  
   
-7.  Klicken Sie erneut auf **neu** , `LoadXMLData` und geben **** Sie im Feld Variablenname `C:\DeploymentTutorial\loadxmldataconfig.dtsconfig` und im Feld **Variablen Wert** ein.  
+7.  Klicken Sie erneut auf **neu** , `LoadXMLData` und geben **Variable name** Sie im Feld Variablenname `C:\DeploymentTutorial\loadxmldataconfig.dtsconfig` und im Feld **Variablen Wert** ein.  
   
 8.  Klicken Sie auf **OK** , um das Dialogfeld **Umgebungsvariablen** zu beenden.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62767652"
   
 6.  Klicken Sie auf **OK**.  
   
-7.  Klicken Sie erneut auf **neu** , `LoadXMLData` und geben **** Sie im Feld Variablenname `C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig` und im Feld **Variablen Wert** ein.  
+7.  Klicken Sie erneut auf **neu** , `LoadXMLData` und geben **Variable name** Sie im Feld Variablenname `C:\DeploymentTutorialInstall\loadxmldataconfig.dtsconfig` und im Feld **Variablen Wert** ein.  
   
 8.  Klicken Sie auf **OK** , um das Dialogfeld **Umgebungsvariablen** zu beenden.  
   

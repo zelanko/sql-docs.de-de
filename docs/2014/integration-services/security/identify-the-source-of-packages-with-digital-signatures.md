@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 714ede33a89a3ab4e44dae682887ee0c21c9f363
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62766652"
 ---
 # <a name="identify-the-source-of-packages-with-digital-signatures"></a>Identifizieren der Quelle von Paketen mit digitalen Signaturen
@@ -34,16 +34,16 @@ ms.locfileid: "62766652"
   
 -   Wählen Sie die Option **Digitale Signatur beim Laden eines Pakets überprüfen** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]aus, um die digitale Signatur aller Pakete vor dem Laden der Pakete zum Entwurfszeitpunkt zu überprüfen. Diese Option ist eine globale Einstellung für alle Pakete in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Weitere Informationen finden Sie unter [General Page](../general-page-of-integration-services-designers-options.md).  
   
--   Um die digitale Signatur eines einzelnen Pakets zu überprüfen, geben `/VerifyS[igned]` Sie die Option an, wenn Sie das Paket mit dem Hilfsprogramm **dtexec** ausführen. Weitere Informationen finden Sie unter [dtexec Utility](../packages/dtexec-utility.md).  
+-   Um die digitale Signatur eines einzelnen Pakets zu überprüfen, geben `/VerifyS[igned]` Sie die Option an, wenn Sie das Paket mit dem Hilfsprogramm **dtexec** ausführen. Weitere Informationen finden Sie [hier](../packages/dtexec-utility.md).  
   
 ## <a name="setting-a-registry-value-to-check-the-package-signature"></a>Festlegen eines Registrierungswerts zum Überprüfen der Paketsignatur  
- [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]unterstützt außerdem den optionalen Registrierungs Wert **BlockedSignatureStates**, mit dem Sie die Richtlinie einer Organisation zum Laden von signierten und nicht signierten Paketen verwalten können. Der Registrierungswert kann das Laden von Paketen verhindern, wenn die Pakete nicht signiert sind, oder ungültige oder nicht vertrauenswürdige Signaturen enthalten. Weitere Informationen zum Festlegen des Registrierungswerts finden Sie unter [Implementieren einer Signaturrichtlinie durch Festlegen eines Registrierungswerts](../implement-a-signing-policy-by-setting-a-registry-value.md).  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützt außerdem den optionalen Registrierungswert **BlockedSignatureStates**, mit dem Sie die Richtlinie einer Organisation zum Laden von signierten und nicht signierten Paketen verwalten können. Der Registrierungswert kann das Laden von Paketen verhindern, wenn die Pakete nicht signiert sind, oder ungültige oder nicht vertrauenswürdige Signaturen enthalten. Weitere Informationen zum Festlegen des Registrierungswerts finden Sie unter [Implementieren einer Signaturrichtlinie durch Festlegen eines Registrierungswerts](../implement-a-signing-policy-by-setting-a-registry-value.md).  
   
 > [!NOTE]  
 >  Der optionale Registrierungswert **BlockedSignatureStates** kann eine Einstellung angeben, die restriktiver ist als die Option für die digitale Signatur, die in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] oder in der **dtexec**-Befehlszeile festgelegt wurde. In dieser Situation überschreibt die restriktivere Registrierungseinstellung die andere Einstellung.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Integration Services-Pakete &#40;SSIS&#41;](../integration-services-ssis-packages.md)   
+ [Integration Services &#40;SSIS-&#41; Paketen](../integration-services-ssis-packages.md)   
  [Sicherheitsübersicht &#40;Integration Services&#41;](security-overview-integration-services.md)  
   
   

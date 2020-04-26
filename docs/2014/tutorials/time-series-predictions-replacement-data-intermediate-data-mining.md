@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: c96b70775105ea9446810ac3b064ae7cb07d4337
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312882"
 ---
 # <a name="time-series-predictions-using-replacement-data-intermediate-data-mining-tutorial"></a>Erstellen von Zeitreihenvorhersagen mit Ersetzungsdaten (Data Mining-Lernprogramm für Fortgeschrittene)
@@ -102,7 +102,7 @@ ms.locfileid: "63312882"
   
     2.  Wählen Sie für **Feld**die Option Region aus.  
   
-    3.  Geben **** Sie als Alias **Model used**ein.  
+    3.  Geben **Alias**Sie als Alias **Model used**ein.  
   
 7.  Im nächsten Schritt fügen Sie den Ergebnissen eine weitere Bezeichnung hinzu, der Sie entnehmen können, auf welche Reihe sich die Vorhersage bezieht.  
   
@@ -118,7 +118,7 @@ ms.locfileid: "63312882"
   
     2.  Wählen Sie in der Spalte **Feld** die Option **prättimeseries**aus.  
   
-    3.  Geben **** Sie als Alias **vorhergesagte Werte**ein.  
+    3.  Geben **Alias**Sie als Alias **vorhergesagte Werte**ein.  
   
     4.  Ziehen Sie das Feld AvgQty aus dem Bereich **Mining Modell** in die Spalte **Kriterium/Argument** , indem Sie den Drag & Drop-Vorgang verwenden.  
   
@@ -162,6 +162,6 @@ AND
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Abfrage Beispiele für Zeitreihen Modelle](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [Prättimeseries &#40;DMX-&#41;](/sql/dmx/predicttimeseries-dmx)  
+ [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
   
   

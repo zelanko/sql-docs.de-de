@@ -16,21 +16,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ae7c7197fffcad7f64a82cf7c060e2e35e9bf460
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721403"
 ---
 # <a name="sql-server-replication-distributor-properties"></a>Eigenschaften des SQL Server-Replikation Verteilers
 In diesem Thema werden die Eigenschaften erläutert, die auf den Seiten **Allgemein**, **Verleger**und **Verteilungs Datenbank** im Fenster **Verteiler Eigenschaften** gefunden werden. 
 
 ## <a name="general"></a>Allgemein
-  Auf der Seite **Allgemein** des Dialog Felds **Verteiler Eigenschaften** können Sie Verteilungs Datenbanken hinzufügen und löschen und Eigenschaften der Verteilungs Datenbank festlegen.  
+  Mithilfe der Seite **Allgemein** des Dialogfelds **Verteilereigenschaften** können Sie Verteilungsdatenbanken hinzufügen und löschen sowie Eigenschaften von Verteilungsdatenbanken festlegen.  
   
  Die Verteilungsdatenbank speichert Metadaten und Verlaufsdaten für alle Replikationstypen und Transaktionen für die Transaktionsreplikation. In vielen Fällen reicht eine Verteilungsdatenbank aus. Wenn jedoch mehrere Verleger einen Verteiler verwenden, sollten Sie die Erstellung einer Verteilungsdatenbank für jeden Verleger in Betracht ziehen. Auf diese Weise stellen Sie sicher, dass die durch jede Verteilungsdatenbank fließenden Daten eindeutig sind.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Datenbanken**  
  Das Eigenschaftenraster **Datenbanken** zeigt den Namen und die Beibehaltungseigenschaften der Verteilungsdatenbanken auf dem Verteiler an. **Transaktionsbeibehaltung** ist die Dauer, die Transaktionen für die Transaktionsreplikation gespeichert werden (die Transaktionsbeibehaltung wird auch als Verteilungsbeibehaltung bezeichnet). **Verlaufsbeibehaltung** ist die Dauer, die Metadaten des Verlaufs für jede Art von Replikation gespeichert werden. Weitere Informationen zu Beibehaltungsdauer finden Sie unter [Abonnementablauf und -deaktivierung](subscription-expiration-and-deactivation.md).  
   
@@ -49,12 +49,12 @@ In diesem Thema werden die Eigenschaften erläutert, die auf den Seiten **Allgem
 
   Mithilfe der Seite **Verleger** des Dialogfelds **Verteilereigenschaften** können Sie es Verlegern ermöglichen, diesen Verteiler zu verwenden. Sie können auch zu diesen Verlegern gehörige Eigenschaften festlegen. Beachten Sie, dass dieser Server nicht zu einem Verleger wird, wenn Sie es einem Verleger ermöglichen, diesen Server als Verteiler zu verwenden. Sie müssen eine Verbindung mit dem Verleger herstellen, ihn für das Veröffentlichen konfigurieren und diesen Server als Verteiler auswählen. Sie können den Verleger konfigurieren und mithilfe des Assistenten für neue Veröffentlichung einen Verteiler auswählen.  
   
-### <a name="options"></a>Tastatur  
- **Verleger**  
+### <a name="options"></a>Optionen  
+ **Herausgeber**  
  Wählen Sie die Server aus, die diesen Verteiler verwenden dürfen. Klicken Sie auf die Eigenschaftenschaltfläche (die Schaltfläche mit den **drei Punkten**) neben einem Verleger, um zusätzliche Eigenschaften anzuzeigen und festzulegen.  
   
  **Add (Hinzufügen)**  
- Wenn der von Ihnen gewünschte Server nicht in der Liste enthalten ist, klicken Sie auf **Hinzufügen** , um einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger oder einen Oracle-Verleger zur Liste der verfügbaren Verleger hinzuzufügen. Wenn der von Ihnen hinzugefügte Server der erste Server ist, der diesen Verteiler als Remoteverteiler verwendet, werden Sie aufgefordert, ein Kennwort für administrative Verbindungen einzugeben.  
+ Wenn der von Ihnen gewünschte Server nicht in der Liste enthalten ist, klicken Sie auf **Hinzufügen**, um einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger oder einen Oracle-Verleger zur Liste der verfügbaren Verleger hinzuzufügen. Wenn der von Ihnen hinzugefügte Server der erste Server ist, der diesen Verteiler als Remoteverteiler verwendet, werden Sie aufgefordert, ein Kennwort für administrative Verbindungen einzugeben.  
   
  **Kennwort für administrative Verbindung**  
  Verwenden Sie diese Option, um das Kennwort für die Verbindung zu aktualisieren, die die Replikation zwischen dem Verleger und dem Remoteverteiler mithilfe der **distributor_admin** -Anmeldung herstellt:  
@@ -66,19 +66,19 @@ In diesem Thema werden die Eigenschaften erläutert, die auf den Seiten **Allgem
  Weitere Informationen zur Sicherheit für Verteiler finden Sie unter [Schützen des Verteilers](security/secure-the-distributor.md).  
 
 ## <a name="distribution-database"></a>Verteilungsdatenbank
- Im Dialogfeld **Eigenschaften der Verteilungs Datenbank** können Sie eine Reihe von Eigenschaften anzeigen und die Transaktions Beibehaltungs Dauer und die Aufbewahrungsdauer für die Datenbank festlegen.  
+  Mithilfe des Dialogfelds **Eigenschaften der Verteilungsdatenbank** können Sie eine Reihe von Eigenschaften anzeigen und die Transaktionsbeibehaltungsdauer und die Aufbewahrungsdauer für den Verlauf für die Datenbank festlegen.  
   
 ### <a name="options"></a>Tastatur  
  **Name**  
  Der Name der Verteilungsdatenbank. Der Standardwert ist 'distribution' (schreibgeschützt).  
   
- **Dateispeicher Orte**  
+ **Dateispeicherorte**  
  Der Speicherort der Datenbankdatei und der Protokolldatei (schreibgeschützt).  
   
- **Transaktions Beibehaltungs Dauer**  
+ **Transaktionsbeibehaltungsdauer**  
  Wird auch als Beibehaltungsdauer für die Verteilung bezeichnet. Der Zeitraum, für den Transaktionen für die Transaktionsreplikation gespeichert werden. Weitere Informationen finden Sie unter [Subscription Expiration and Deactivation](subscription-expiration-and-deactivation.md).  
   
- **Beibehaltungs Dauer für Verlauf**  
+ **Aufbewahrungsdauer für Verlauf**  
  Der Zeitraum, für den die Metadaten des Verlaufs für jede Art von Replikation gespeichert werden.  
   
  **Warteschlangenlese-Agent Sicherheit**  

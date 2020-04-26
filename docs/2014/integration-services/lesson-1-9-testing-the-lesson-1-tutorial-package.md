@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 566284668ac8ea27aded665da7028375d97623e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767607"
 ---
-# <a name="step-9-testing-the-lesson-1-tutorial-package"></a>Schritt 9: Testen des Lektion 1-Lernprogrammpakets
+# <a name="step-9-testing-the-lesson-1-tutorial-package"></a>Schritt 9: Testen des Tutorialpakets aus Lektion 1
   In dieser Lektion haben Sie die folgenden Aufgaben ausgeführt:  
   
 -   Ein neues [!INCLUDE[ssIS](../includes/ssis-md.md)] -Projekt erstellt.  
@@ -41,7 +41,7 @@ ms.locfileid: "62767607"
   
 ### <a name="to-run-the-lesson-1-tutorial-package"></a>So führen Sie das Lernprogrammpaket aus Lektion 1 aus  
   
-1.  Klicken Sie im Menü **Debuggen** auf **Debuggen starten**.  
+1.  Klicken Sie im Menü **Debuggen** auf **Debugging starten**.  
   
      Das Paket wird ausgeführt, wobei der **FactCurrency** -Faktentabelle in **AdventureWorksDW2012**1.097 Zeilen erfolgreich hinzugefügt werden.  
   

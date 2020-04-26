@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5ec45b0a29f9f4c8fb1e6a9b683e47797f194885
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721024"
 ---
 # <a name="lesson-2-preparing-the-snapshot-folder"></a>Lektion 2: Vorbereiten des Momentaufnahmeordners
@@ -38,7 +38,7 @@ ms.locfileid: "62721024"
   
 7.  Klicken Sie im Dialogfeld **Berechtigungen** auf **Hinzufügen**. Geben Sie im Textfeld **Benutzer, Computer, Dienst Konto oder Gruppen auswählen** den Namen des in Lektion 1 erstellten Momentaufnahmen-Agent Kontos wie \< _Machine_Name>_ **\ repl_snapshot**ein, wobei \< *Machine_Name>* der Name des Verlegers ist. Klicken Sie auf **Namen überprüfen**, und klicken Sie dann auf **OK**.  
   
-8.  Wiederholen Sie den vorherigen Schritt, um Berechtigungen für den Verteilungs-Agent \<, wie _Machine_Name>_ **\ repl_distribution**, und für den \<Merge-Agent Machine_Name _>_ **\**repl_merge hinzuzufügen.  
+8.  Wiederholen Sie den vorherigen Schritt, um Berechtigungen für den Verteilungs-Agent (als \<_Machine_Name>_**\repl_distribution**) und für den Merge-Agent (als \<_Machine_Name>_**\repl_merge**) hinzuzufügen.  
   
 9. Überprüfen Sie, ob die folgenden Berechtigungen gewährt wurden.  
   

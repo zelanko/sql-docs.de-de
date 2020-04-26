@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1beb0a644edb25537b85c559192ece9288c2de6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62638778"
 ---
 # <a name="developer39s-guide-analysis-services"></a>Entwickler&#39;s Guide (Analysis Services)
@@ -32,13 +32,13 @@ ms.locfileid: "62638778"
  [Mehrdimensionale Modellprogrammierung](multidimensional-models/multidimensional-model-programming.md)  
  Beschreibt die Entwicklungsaufgaben und Herangehensweisen zum Integrieren mehrdimensionaler Modellobjekte in eine benutzerdefinierte Projektmappe.  
   
- [Analysis Services Schemarowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)  
+ [Analysis Services-Schemarowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)  
  Beschreibt die Schemarowsets, die Informationen zu Serverstatus, Servervorgängen und Datenbankobjekten liefern.  
   
  [Analysis Services Skriptsprache &#40;ASSL&#41; Referenz](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
  Beschreibt die ASSL-Erweiterungen für XMLA. ASSL stellt eine Datendefinitions- und Datenbearbeitungssprache für mehrdimensionale Analysis Services-Modelle bereit und ist eine Ergänzung der XMLA-Spezifikation.  
   
- [XML for Analysis &#40;XMLA&#41; Verweis](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
+ [XML for Analysis-Referenz &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
  Beschreibt XMLA-Begriffe, die Hinweise dazu liefern, wie XMLA zu Ihrer benutzerdefinierten Projektmappe beitragen kann. Darüber hinaus wird der Grad der Kompatibilität mit der XMLA 1.1-Spezifikation beschrieben.  
   
   

@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8267f70049d0ef37c0ce80bc594dff25d53f15fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721093"
 ---
 # <a name="lesson-1-publishing-data-using-transactional-replication"></a>Lektion 1: Veröffentlichen von Daten mithilfe der Transaktionsreplikation
-  In dieser Lektion erstellen Sie mithilfe [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] von eine Transaktions Veröffentlichung, um eine gefilterte Teilmenge der **Product** -Tabelle in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank zu veröffentlichen. Außerdem fügen Sie der Veröffentlichungszugriffsliste (Publication Access List, PAL) die vom Verteilungs-Agent verwendete SQL Server-Anmeldung hinzu. Bevor Sie dieses Tutorial starten, sollten Sie das vorherige Tutorial ( [Vorbereiten des Servers für die Replikation](tutorial-preparing-the-server-for-replication.md)) abgeschlossen haben.  
+   In dieser Lektion erstellen Sie mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Transaktionsveröffentlichung, um eine gefilterte Teilmenge der **Product**-Tabelle in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Beispieldatenbank zu veröffentlichen. Außerdem fügen Sie der Veröffentlichungszugriffsliste (Publication Access List, PAL) die vom Verteilungs-Agent verwendete SQL Server-Anmeldung hinzu. Bevor Sie dieses Tutorial starten, sollten Sie das vorherige Tutorial ( [Vorbereiten des Servers für die Replikation](tutorial-preparing-the-server-for-replication.md)) abgeschlossen haben.  
   
 ### <a name="to-create-a-publication-and-define-articles"></a>So erstellen Sie eine Veröffentlichung und definieren Artikel  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62721093"
   
 10. Deaktivieren Sie auf der Seite „Agentsicherheit“ das Kontrollkästchen **Sicherheitseinstellungen des Momentaufnahme-Agents verwenden** .  
   
-11. Klicken Sie für den Momentaufnahmen-Agent auf **Sicherheitseinstellungen** , geben Sie \< _Machine_Name>_ **\ repl_snapshot** im Feld **Prozess Konto** ein, geben Sie das Kennwort für dieses Konto an, und klicken Sie dann auf **OK**.  
+11. Klicken Sie für den Momentaufnahme-Agent auf **Sicherheitseinstellungen**, geben Sie \<_Machine_Name>_**\repl_snapshot** im Feld **Prozesskonto** ein, geben Sie das Kennwort für dieses Konto ein und klicken Sie anschließend auf **OK**.  
   
 12. Wiederholen Sie den vorherigen Schritt, um repl_logreader als Prozesskonto für den Protokolllese-Agenten festzulegen, und klicken Sie anschließend auf **Fertig stellen**.  
   
@@ -76,14 +76,14 @@ ms.locfileid: "62721093"
   
 3.  Wählen Sie die Seite **Veröffentlichungszugriffsliste** aus und klicken Sie auf **Hinzufügen**.  
   
-4.  Klicken Sie im Dialogfeld **Veröffentlichungs Zugriff hinzufügen** auf _<Machine_Name>_ **\ repl_distribution** , und klicken Sie dann auf **OK**. Klicken Sie auf **OK**.  
+4.  Wählen Sie im Dialogfeld **Veröffentlichungszugriff hinzufügen** die Anmeldung _<Computername>_**\repl_distribution** aus und klicken Sie auf **OK**. Klicken Sie auf **OK**.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
  Sie haben die Transaktionsveröffentlichung erfolgreich erstellt. Als Nächstes abonnieren Sie diese Veröffentlichung. Siehe [Lektion 2: Erstellen eines Abonnements für die Transaktionsveröffentlichung](lesson-2-creating-a-subscription-to-the-transactional-publication.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Filtern von veröffentlichten Daten](publish/filter-published-data.md)   
- [Define an Article](publish/define-an-article.md)   
+ [Definieren eines Artikels](publish/define-an-article.md)   
  [Erstellen und Anwenden der Momentaufnahme](create-and-apply-the-snapshot.md)  
   
   

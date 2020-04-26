@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: df86c46bdae8a40a5fa49d38517e8e5588d50e09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185398"
 ---
 # <a name="lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial"></a>Lektion 6: Erstellen und Verwenden von Vorhersagen (Lernprogramm zu Data Mining-Grundlagen)
@@ -26,7 +26,7 @@ ms.locfileid: "63185398"
   
  Diese Lektion enthält die folgenden Themen:  
   
- [Erstellen von Vorhersagen &#40;grundlegenden Data&#41;Mining-Lernprogramm](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Erstellen von Vorhersagen &#40;Tutorial zu Data Mining-Grundlagen&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
  [Verwenden von Drillthrough für Strukturdaten &#40;Lernprogramm zu Data Mining-Grundlagen&#41;](../../2014/tutorials/using-drillthrough-on-structure-data-basic-data-mining-tutorial.md)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "63185398"
  [Lektion 5: Testen von Modellen &#40;Lernprogramm zu Data Mining-Grundlagen&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
- [Erstellen von Vorhersagen &#40;grundlegenden Data&#41;Mining-Lernprogramm](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Erstellen von Vorhersagen &#40;Tutorial zu Data Mining-Grundlagen&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Mining Modell Inhalt von Entscheidungsstruktur Modellen &#40;Analysis Services Data Mining-&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)   

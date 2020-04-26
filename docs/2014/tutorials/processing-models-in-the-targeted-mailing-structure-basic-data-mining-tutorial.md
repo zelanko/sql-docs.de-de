@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 605088d405cbd2dcfba92a2da5fa4e07c38d8f0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188226"
 ---
 # <a name="processing-models-in-the-targeted-mailing-structure-basic-data-mining-tutorial"></a>Verarbeiten von Modellen in der Targeted Mailing-Struktur (Lernprogramm zu Data Mining-Grundlagen)
@@ -22,7 +22,7 @@ ms.locfileid: "63188226"
   
 -   Bei der Bereitstellung wird das Projekt an einen *Server gesendet,* und es werden alle Objekte in diesem Projekt auf dem Server erstellt.  
   
--   ** Bei der Verarbeitung [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] werden-Objekte mit Daten aus relationalen Datenquellen aufgefüllt.  
+-   *Processing* Bei der Verarbeitung [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] werden-Objekte mit Daten aus relationalen Datenquellen aufgefüllt.  
   
  Modelle können erst dann verwendet werden, wenn sie bereitgestellt und verarbeitet wurden. Wenn Sie Änderungen am Modell vornehmen, z. B. neue Daten hinzufügen, müssen Sie die Modelle darüber hinaus erneut bereitstellen und verarbeiten.  
   
@@ -71,6 +71,6 @@ ms.locfileid: "63188226"
  [Lektion 4: Untersuchen der Ziel-Mailing-Modelle &#40;grundlegenden Data Mining-Lernprogramm&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verarbeitungsanforderungen und Überlegungen &#40;Data Mining-&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Anforderungen und Überlegungen zur Verarbeitung &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

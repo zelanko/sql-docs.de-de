@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 475acd590d8bbdf43acb1f1a99781b82b475f0aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62714562"
 ---
 # <a name="proxy-account-properties-references-tab"></a>Proxyeigenschaften (Registerkarte Verweise)
   Diese schreibgeschützte Seite listet die Auftrags Schritte auf, die auf [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ein Proxy Konto des-Agents verweisen.  
   
-## <a name="options"></a>Tastatur  
- **Auftragsname**  
+## <a name="options"></a>Optionen  
+ **Auftrags Name**  
  Namen der Aufträge, die dieses Proxykonto verwenden.  
   
  **Auftragsschritt**  

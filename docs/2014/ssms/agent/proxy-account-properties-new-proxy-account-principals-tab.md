@@ -13,17 +13,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f97e8fec31f6011b7a2769753bed35e4ab62b47b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62650221"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-principals-tab"></a>Proxykontoeigenschaften und neues Proxykonto (Registerkarte „Prinzipale“)
   Mithilfe dieser Seite können Sie die Prinzipale anzeigen oder ändern, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Auftrags Schritten ein Proxy Konto für den-Agent verwenden können.  
   
-## <a name="options"></a>Tastatur  
- **Proxy Konto Prinzipale**  
+## <a name="options"></a>Optionen  
+ **Proxy account principals**  
  Lists the principals that can use this proxy account.  
   
  **Add (Hinzufügen)**  

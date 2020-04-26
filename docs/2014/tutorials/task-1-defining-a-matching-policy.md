@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481315"
 ---
-# <a name="task-1-defining-a-matching-policy"></a>Aufgabe 1: Definieren einer Abgleichsrichtlinie
+# <a name="task-1-defining-a-matching-policy"></a>Aufgabe 1: Definieren einer Abgleichrichtlinie
   In dieser Aufgabe erstellen Sie eine Abgleichsrichtlinie mit einer Regel. Die Regel verfügt über eine Voraussetzung: **Lieferanten-ID**. Dies bedeutet, dass die Lieferanten-IDs erfüllt werden müssen, bevor die anderen Domänen in der Regel verwendet werden. Die Regel verwendet zwei andere Domänen: **Lieferanten Name** mit dem **Ähnlichkeits** Wert **70%** und **Contact Email** mit einem **Ähnlichkeits** Wert von **30%**.  
   
-1.  Klicken Sie auf der Hauptseite des **DQS-Clients**auf den **Pfeil nach rechts** neben der Wissensdatenbank **Suppliers** , und wählen Sie abgleichsrichtlinie aus. ****  
+1.  Klicken Sie auf der Hauptseite des **DQS-Clients**auf den **Pfeil nach rechts** neben der Wissensdatenbank **Suppliers** , und wählen Sie abgleichsrichtlinie aus. **Matching Policy**  
   
      ![Menü "Abgleichsrichtlinie" auf Hauptseite](../../2014/tutorials/media/et-definingamatchingpolicy-01.jpg "Menü "Abgleichsrichtlinie" auf Hauptseite")  
   
@@ -35,7 +35,7 @@ ms.locfileid: "65481315"
   
      ![Seite "Zuordnen" bei der Definition der Abgleichsrichtlinie](../../2014/tutorials/media/et-definingamatchingpolicy-02.jpg "Seite "Zuordnen" bei der Definition der Abgleichsrichtlinie")  
   
-5.  Klicken Sie auf **weiter** , um zur Seite abgleichsrichtlinie zu wechseln, auf der Sie eine abgleichsrichtlinie mit einer Regel definieren. ****  
+5.  Klicken Sie auf **weiter** , um zur Seite abgleichsrichtlinie zu wechseln, auf der Sie eine abgleichsrichtlinie mit einer Regel definieren. **Matching Policy**  
   
 6.  Klicken Sie auf der Symbolleiste auf die Schaltfläche Vergleichs **Regel erstellen** , um eine Regel in der Richtlinie zu erstellen.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "65481315"
   
 11. Wählen Sie **Lieferanten Name** Domäne aus, wählen **Sie Ähnlichkeit** **aus,** und geben Sie **70** für die **Gewichtung**ein.  Hier geben Sie an, dass Lieferantennamen nicht übereinstimmen müssen, aber ähnlich sein können, damit die Datensätze als Übereinstimmung gelten. Die Gewichtung gibt den Beitrag des Ergebnisses dieses Felds zur Gesamt Treffergenauigkeit an.  
   
-12. Wiederholen Sie die vorherigen beiden Schritte **, um die** **e-Mail-Adresse für die e-Mail-Adresse** ****  
+12. Wiederholen Sie die vorherigen beiden Schritte **, um die** **e-Mail-Adresse für die e-Mail-Adresse** **Weight**  
   
 13. Beachten Sie, dass die **minimale Treffer** Genauigkeit auf **80%** festgelegt ist. Dies ist der Wert, der auf der Registerkarte **Allgemein** der **Konfigurations** Seite der **DQS-Verwaltung**angezeigt wird. Sie können dieses Ergebnis hier nur über diesen Schwellenwert erhöhen.  
   
@@ -66,6 +66,6 @@ ms.locfileid: "65481315"
 16. Klicken Sie auf **weiter** , um zur Seite **passende Ergebnisse** zu wechseln.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 2: Testen und Veröffentlichen der Abgleichsrichtlinie](../../2014/tutorials/task-2-testing-and-publishing-the-matching-policy.md)  
+ [Aufgabe 2: Testen und Veröffentlichen der Abgleichrichtlinie](../../2014/tutorials/task-2-testing-and-publishing-the-matching-policy.md)  
   
   

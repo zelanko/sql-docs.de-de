@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b7d2a9f075879ce1bfa0c0e7257ea8a2495562c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62757938"
 ---
 # <a name="csdlbi-attributes-for-report-design"></a>CSDLBI-Attribute für Berichtsentwurf
@@ -36,7 +36,7 @@ ms.locfileid: "62757938"
 |`ReferenceName`|Text|Der Bezeichner, der verwendet wird, um in einer DAX-Abfrage auf diese Entität zu verweisen. Wenn kein Bezeichner angegeben wird, wird der Name verwendet.|  
 |`Caption`|Text|Der Anzeigename für die Entität.|  
 |`Documentation`|Text|Beschreibender Text, der Geschäftskunden die Bedeutung der Daten erläutert.|  
-|`Hidden`|Boolean|Gibt an, ob die Entität angezeigt werden soll. Der Standardwert lautet `false`.|  
+|`Hidden`|Boolean|Gibt an, ob die Entität angezeigt werden soll. Der Standardwert ist `false`.|  
 |`CollectionCaption`|Text|Der Pluralname für den Verweis auf einen Satz von Instanzen der Entität. Wenn der Name nicht angegeben wird, wird das Caption-Attribut verwendet.|  
 |`DisplayKey`|MemberRef[]|Eine sortierte Felderliste, mit der einem Geschäftskunden eine Entitätsinstanz angezeigt wird. Die Verweise können Instanz- und Navigationseigenschaften einschließen. Wenn auf eine Navigationseigenschaft verwiesen wird, wird der `DisplayKey` der Zielentität angezeigt. Wenn der `DisplayKey`-Wert ausgelassen wird, wird das Schlüsselfeld verwendet.|  
 |`DefaultImage`|MemberRef|Ein Verweis auf das Feld, das ein Bild enthält, mit dem einem Geschäftskunden visuell eine Entitätsinstanz angezeigt wird. Wenn der Verweis nicht angegeben wird, wird das erste Bildfeld in der Entität verwendet (sofern vorhanden).|  

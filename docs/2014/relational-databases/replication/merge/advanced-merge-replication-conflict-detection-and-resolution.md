@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5aaf7031afb1b3c148bbef2bcafd5d40f4947f8d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63000344"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>Erweiterte Konflikterkennung und -lösung bei der Mergereplikation
@@ -40,7 +40,7 @@ ms.locfileid: "63000344"
   
     -   Ein in verwaltetem Code geschriebener *Geschäftslogikhandler*  
   
-    -   Ein COM-basierter *benutzerdefinierter Konfliktlöser*  
+    -   Ein COM-basierter *benutzerdefinierter Konflikt Löser*.  
   
     -   Ein von [!INCLUDE[msCoName](../../../includes/msconame-md.md)]bereitgestellter COM-basierter Konfliktlöser  
   
@@ -57,7 +57,7 @@ ms.locfileid: "63000344"
   
  Weitere Informationen finden Sie unter [Ermitteln und Lösen von Konflikten in logischen Datensätzen](advanced-merge-replication-conflict-resolving-in-logical-record.md).  
   
- Informationen zum Eingeben der Konfliktnachverfolgungs- und -lösungsebene für einen Artikel finden Sie unter [Specify the Conflict Tracking and Resolution Level for Merge Articles](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
+ Informationen zum Eingeben der Konfliktnachverfolgungs- und -lösungsebene für einen Artikel finden Sie unter [Geben Sie den Konflikt nachverfolgen und-lösungsebene für Mergeveröffentlichungen](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution).  
   
 ## <a name="conflict-resolution"></a>Konfliktlösung  
  Wenn ein Konflikt erkannt wird, startet der Merge-Agent den ausgewählten Konfliktlöser und verwendet diesen zur Bestimmung des Konfliktgewinners. Die Gewinnerzeile wird auf dem Verleger und auf dem Abonnenten angewendet, und die Daten der verlierenden Zeile werden in eine Konflikttabelle geschrieben. Konflikte werden direkt nach dem Ausführen des Konfliktlösers gelöst, es sei denn, Sie haben angegeben, dass Konflikte interaktiv gelöst werden sollen.  
@@ -81,11 +81,11 @@ ms.locfileid: "63000344"
   
 -   Ein COM-basierter benutzerdefinierter Konfliktlöser  
   
-     Die Mergereplikation stellt eine API bereit, mit der Konfliktlöser als COM-Objekte in Programmiersprachen, z. B. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] oder [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)], geschrieben werden können. Weitere Informationen finden Sie unter [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
+     Die Mergereplikation stellt eine API zum Schreiben von Resolvern als com- [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] Objekte [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]in Sprachen wie oder bereit. Weitere Informationen finden Sie unter [COM-Based Custom Resolvers](advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
   
 -   Ein von [!INCLUDE[msCoName](../../../includes/msconame-md.md)]bereitgestellter COM-basierter Konfliktlöser  
   
-     [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enthält mehrere COM-basierte Konfliktlöser. Weitere Informationen finden Sie unter [Microsoft COM-basierte Konfliktlöser](advanced-merge-replication-conflict-com-based-resolvers.md).  
+     [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enthält eine Reihe von COM-basierten Konflikt Löser. Weitere Informationen finden Sie unter [Microsoft COM-basierte Konfliktlöser](advanced-merge-replication-conflict-com-based-resolvers.md).  
   
  Informationen zum Auswählen des geeigneten Konfliktlösertyps finden Sie unter [Auswählen von Resolvern](advanced-merge-replication-conflict-choose-a-resolver.md).  
   
@@ -109,7 +109,7 @@ ms.locfileid: "63000344"
   
  Im Konflikt-Viewer werden Informationen aus drei Systemtabellen angezeigt:  
   
--   Die Replikation erstellt eine Konflikttabelle für jede Tabelle in einem Mergeartikel, deren Name das folgende Format aufweist: **MSmerge_conflict_\<PublicationName>_\<ArticleName>** .  
+-   Die Replikation erstellt eine Konflikttabelle für jede Tabelle in einem Mergeartikel, deren Name das folgende Format aufweist: **MSmerge_conflict_\<PublicationName>_\<ArticleName>**.  
   
      Konflikttabellen weisen dieselbe Struktur auf wie die Tabellen, auf denen sie basieren. Eine Zeile in einer dieser Tabellen besteht aus der verlierenden Version einer Konfliktzeile (die gewinnende Version der Zeile befindet sich in der eigentlichen Benutzertabelle).  
   

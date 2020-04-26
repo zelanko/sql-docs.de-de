@@ -10,10 +10,10 @@ ms.date: 04/26/2018
 ms.author: genemi
 ms.reviewer: sudeepk
 ms.openlocfilehash: 205e0a1ee6f93a11c471154534f460d9fa379d33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62473638"
 ---
 # <a name="documentation-for-sql-server-2014-is-moving-to-docs"></a>Die Dokumentation für SQL Server 2014 wird zu Docs verschoben
@@ -27,7 +27,7 @@ Die folgenden Links finden Sie in der Dokumentation zu SQL Server 2014, die Micr
 - *SQL Server 2014*
     - [https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx](https://msdn.microsoft.com/library/dn197878(v=sql.10).aspx)
 
-- *Onlinedokumentation für SQLServer 2014*
+- *Onlinedokumentation für SQL Server 2014*
     - [https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx](https://msdn.microsoft.com/library/ms130214(v=sql.120).aspx)
 
 MSDN ist ein initialismus für *Microsoft Developer Network*.

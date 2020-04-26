@@ -14,16 +14,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ea0abd8387b638ce7d51f0fb2f40424adce10187
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63267446"
 ---
 # <a name="sql-server-profiler-f1-help"></a>SQL Server Profiler (F1-Hilfe)
-  Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ist ein Tool, mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem Ereignisse von einem Server erfasst werden. Die Ereignisse werden in einer Ablaufverfolgungsdatei gespeichert, die später analysiert oder beim Versuch, ein Problem zu diagnostizieren, zur Wiedergabe einer bestimmten Reihe von Schritten verwendet werden kann.  
+  Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] ist ein Tool, das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ereignisse von einem Server aufzeichnet. Die Ereignisse werden in einer Ablaufverfolgungsdatei gespeichert, die später analysiert oder beim Versuch, ein Problem zu diagnostizieren, zur Wiedergabe einer bestimmten Reihe von Schritten verwendet werden kann.  
   
- Der folgende Abschnitt enthält die kontextbezogenen Hilfethemen für [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Diese Themen können Sie auch direkt von der Benutzeroberfläche aus aufrufen, indem Sie in Dialogfeldern die F1-TASTE drücken oder auf die Schaltfläche **Hilfe** klicken.  
+ Der folgende Abschnitt enthält die kontextbezogenen Hilfethemen für [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]. Diese Themen sind über die Benutzeroberfläche verfügbar, indem Sie die F1-Taste drücken oder in den Dialogfeldern auf **Hilfe** klicken.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Profiler](sql-server-profiler.md)   

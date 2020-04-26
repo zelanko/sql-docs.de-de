@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: baa4910b2849c4eb2dd04c6d0115c83683ee8bea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63044095"
 ---
 # <a name="testing-a-filtered-model-basic-data-mining-tutorial"></a>Testen eines gefilterten Modells (Lernprogramm zu Data Mining-Grundlagen)
@@ -83,11 +83,11 @@ ms.locfileid: "63044095"
      Auf der Registerkarte **Mining Modelle** werden nun zwei neue Modelle angezeigt.  
   
 ## <a name="evaluate-the-results"></a>Auswerten der Ergebnisse  
- Zeigen Sie die Ergebnisse an, und werten Sie die Genauigkeit der gefilterten Modelle analog zu den vorhergehenden drei Modellen aus. Weitere Informationen finden Sie unter  
+ Zeigen Sie die Ergebnisse an, und werten Sie die Genauigkeit der gefilterten Modelle analog zu den vorhergehenden drei Modellen aus. Weitere Informationen finden Sie unter:  
   
  [Untersuchen des Entscheidungsstruktur Modells &#40;grundlegenden Data Mining-Lernprogramm&#41;](../../2014/tutorials/exploring-the-decision-tree-model-basic-data-mining-tutorial.md)  
   
- [Testen der Genauigkeit mit Lift Charts &#40;Lernprogramm zu Data Mining-Grundlagen&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [Überprüfen der Genauigkeit mit Prognosegütediagrammen &#40;Lernprogramm zu Data Mining-Grundlagen&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 #### <a name="to-explore-the-filtered-models"></a>So untersuchen Sie die gefilterten Modelle  
   
@@ -97,7 +97,7 @@ ms.locfileid: "63044095"
   
 3.  Folie **zeigt** die Ebene `3`auf an.  
   
-4.  Ändern Sie **** den Wert für `1`background in.  
+4.  Ändern Sie **Background** den Wert für `1`background in.  
   
 5.  Platzieren Sie den Cursor über dem Knoten mit der Bezeichnung **alle** , um die Anzahl der Fahrrad Käufer im Vergleich zu nicht Fahrrad Käufern anzuzeigen.  
   
@@ -129,15 +129,15 @@ ms.locfileid: "63044095"
  Ein Beispiel für das Anwenden von Filtern auf eine Reihe von Tabellen finden Sie unter Data Mining-Lernprogramm für fort [geschrittene &#40;Analysis Services Data Mining-&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md).  
   
 ## <a name="previous-task-in-lesson"></a>Vorherige Aufgabe in der Lektion  
- [Testen der Genauigkeit mit Lift Charts &#40;Lernprogramm zu Data Mining-Grundlagen&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
+ [Überprüfen der Genauigkeit mit Prognosegütediagrammen &#40;Lernprogramm zu Data Mining-Grundlagen&#41;](../../2014/tutorials/testing-accuracy-with-lift-charts-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 6: Erstellen und arbeiten mit Vorhersagen &#40;Lernprogramm zu Data Mining-Grundlagen&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Lektion 6: Erstellen und Verwenden von Vorhersagen &#40;Tutorial zu Data Mining-Grundlagen&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Data Mining-Lernprogramm für fortgeschrittene &#40;Analysis Services-Data Mining-&#41;](../../2014/tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md)   
  [Mining Modell Tasks und Anleitungen](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [Löschen eines Filters aus einem Mining Modell](../../2014/analysis-services/data-mining/delete-a-filter-from-a-mining-model.md)   
- [Filter für Mining Modelle &#40;Analysis Services Data Mining-&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [Filter für Miningmodelle &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

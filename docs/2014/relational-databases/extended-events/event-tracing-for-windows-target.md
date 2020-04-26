@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e855b9de09727a4437cad99a2534aee9d960298b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62519304"
 ---
 # <a name="event-tracing-for-windows-target"></a>Ereignisablaufverfolgung für Windows-Ziel
@@ -48,13 +48,13 @@ ms.locfileid: "62519304"
   
  In der folgenden Tabelle werden die verfügbaren Optionen für das Konfigurieren des ETW-Ziels beschrieben.  
   
-|Option|Zulässige Werte|BESCHREIBUNG|  
+|Option|Zulässige Werte|Beschreibung|  
 |------------|--------------------|-----------------|  
 |default_xe_session_name|Eine Zeichenfolge mit bis zu 256 Zeichen. Dieser Wert ist optional.|Der Name der Sitzung für erweiterte Ereignisse. Standardmäßig ist dies XE_DEFAULT_ETW_SESSION.|  
 |default_etw_session_logfile_path|Eine Zeichenfolge mit bis zu 256 Zeichen. Dieser Wert ist optional.|Der Pfad der Protokolldatei für die Sitzung für erweiterte Ereignisse. Standardmäßig ist dies %TEMP%\XEEtw.etl.|  
 |default_etw_session_logfile_size_mb|Eine beliebige Ganzzahl ohne Vorzeichen. Dieser Wert ist optional.|Die Protokolldateigröße in Megabyte (MB) für die Sitzung für erweiterte Ereignisse. Die Standardeinstellung ist 20 MB.|  
 |default_etw_session_buffer_size_kb|Eine beliebige Ganzzahl ohne Vorzeichen. Dieser Wert ist optional.|Die Größe des Puffers im Arbeitsspeicher in Kilobyte (KB) für die Sitzung für erweiterte Ereignisse. Die Standardeinstellung ist 128 KB.|  
-|retries|Eine beliebige Ganzzahl ohne Vorzeichen.|Die Anzahl erneuter Versuche, das Ereignis im ETW-Subsystem zu veröffentlichen, bevor es gelöscht wird. Die Standardeinstellung ist 0.|  
+|retries|Eine beliebige Ganzzahl ohne Vorzeichen.|Die Anzahl erneuter Versuche, das Ereignis im ETW-Subsystem zu veröffentlichen, bevor es gelöscht wird. Der Standardwert ist 0.|  
   
  Die Konfiguration dieser Einstellungen ist optional. Das ETW-Ziel verwendet Standardwerte für diese Einstellungen.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "62519304"
     > [!IMPORTANT]  
     >  Der Dateipfad kann nicht geändert werden, nachdem die erste Sitzung gestartet wurde.  
   
--   MOF-Dateien (Managed Object Format) befinden sich im Ordner *<Installationspfad\<* \Microsoft SQL Server\Shared. Weitere Informationen finden Sie unter [Managed Object Format](https://go.microsoft.com/fwlink/?LinkId=92851) auf der MSDN-Website.  
+-   Managed Object Format (MOF)-Dateien befinden sich in * \<Ihrem Installationspfad>* \Microsoft SQL Server\Shared. Weitere Informationen finden Sie unter [Managed Object Format](https://go.microsoft.com/fwlink/?LinkId=92851) auf der MSDN-Website.  
   
 ## <a name="adding-the-target-to-a-session"></a>Hinzufügen des Ziels zu einer Sitzung  
  Wenn Sie das ETW-Ziel einer Sitzung für erweiterte Ereignisse hinzufügen möchten, müssen Sie beim Erstellen oder Ändern einer Ereignissitzung die folgende Anweisung einschließen:  
@@ -87,9 +87,9 @@ ADD TARGET package0.etw_classic_sync_target
  Weitere Informationen zu einem vollständigen Beispiel, das zeigt, wie das ETW-Ziel verwendet wird und wie die Daten angezeigt werden, finden Sie unter [Überwachen der Systemaktivität mit erweiterten Ereignissen](monitor-system-activity-using-extended-events.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Ziele für erweiterte Ereignisse von SQL Server](../../database-engine/sql-server-extended-events-targets.md)   
- [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [Ziele für erweiterte Ereignisse SQL Server](../../database-engine/sql-server-extended-events-targets.md)   
+ [sys. dm_xe_session_targets &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
+ [Erstellen einer Ereignis Sitzung &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)  
   
   

@@ -14,16 +14,16 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a1457a6d407b2b20c28e93c0ed681ab1dc8109d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721160"
 ---
 # <a name="lesson-1-creating-windows-accounts-for-replication"></a>Lektion 1: Erstellen von Windows-Konten für die Replikation
   In dieser Lektion erstellen Sie Windows-Konten zum Ausführen von Replikations-Agents. Sie erstellen für die folgenden Agents ein separates Windows-Konto auf dem lokalen Server:  
   
-|Agent|Location|Kontoname|  
+|Agent|Speicherort|Kontoname|  
 |-----------|--------------|------------------|  
 |Momentaufnahme-Agent|Herausgeber|\<*machine_name*> \ repl_snapshot|  
 |Protokolllese-Agent|Herausgeber|\<*machine_name*> \ repl_logreader|  
@@ -65,6 +65,6 @@ ms.locfileid: "62721160"
  Sie haben Windows-Konten für Replikations-Agents erfolgreich erstellt. Als Nächstes konfigurieren Sie den Momentaufnahmeordner. Weitere Informationen finden Sie unter [Lektion 2: Vorbereiten des Momentaufnahmeordners](lesson-2-preparing-the-snapshot-folder.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Übersicht über Replikations-Agents](agents/replication-agents-overview.md)  
+ [Replikations-Agents (Übersicht)](agents/replication-agents-overview.md)  
   
   

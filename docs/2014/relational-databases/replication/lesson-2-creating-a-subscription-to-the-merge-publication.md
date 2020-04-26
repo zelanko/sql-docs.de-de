@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 495fb831490a35043b500caea2c835bfd80b6a8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721028"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Lektion 2: Erstellen eines Abonnements für die Mergeveröffentlichung
@@ -36,7 +36,7 @@ ms.locfileid: "62721028"
   
 5.  Klicken Sie auf der Seite Speicherort des Merge-Agents auf **Jeden Agent auf seinem Abonnenten ausführen**, und klicken Sie anschließend auf **Weiter**.  
   
-6.  Wählen Sie auf der Seite Abonnenten den Instanznamen des Abonnenten Servers aus, und **** wählen Sie ** \<** unter Abonnement Datenbank die Option neue Daten Bank>aus der Liste aus.  
+6.  Wählen Sie auf der Seite Abonnenten den Instanznamen des Abonnenten Servers aus, und **Subscription Database**wählen Sie ** \<** unter Abonnement Datenbank die Option neue Daten Bank>aus der Liste aus.  
   
 7.  Geben Sie im Dialogfeld **Neue Datenbank** den Namen **SalesOrdersReplica** in das Feld **Datenbankname** ein, klicken Sie auf **OK**, und klicken Sie anschließend auf **Weiter**.  
   
@@ -76,6 +76,6 @@ ms.locfileid: "62721028"
 ## <a name="see-also"></a>Weitere Informationen  
  [Abonnieren von Veröffentlichungen](subscribe-to-publications.md)   
  [Create a Pull Subscription](create-a-pull-subscription.md)   
- [Momentaufnahmen für Mergeveröffentlichungen mit parametrisierten Filtern](snapshots-for-merge-publications-with-parameterized-filters.md)  
+ [Momentaufnahmen für eine Mergeveröffentlichung mit parametrisierten Filtern](snapshots-for-merge-publications-with-parameterized-filters.md)  
   
   

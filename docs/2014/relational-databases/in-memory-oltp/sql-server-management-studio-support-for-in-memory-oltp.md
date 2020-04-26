@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 1b640d9d27e9ad624dab83fdb97a301b3a54b1e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62468192"
 ---
 # <a name="sql-server-management-studio-support-for-in-memory-oltp"></a>SQL Server Management Studio-Unterstützung für In-Memory OLTP
@@ -84,7 +84,7 @@ ms.locfileid: "62468192"
   
     -   Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf die Datenbank, klicken Sie auf **Eigenschaften**und dann auf die Seite **Allgemein** . Der Wert für die Eigenschaft **Speicheroptimierten Objekten zugewiesener Arbeitsspeicher** gibt den Arbeitsspeicher an, der speicheroptimierten Objekten in der Datenbank zugeordnet ist. Der Wert für die Eigenschaft **Von speicheroptimierten Objekten genutzter Arbeitsspeicher** gibt den Arbeitsspeicher an, der von speicheroptimierten Objekten in der Datenbank verwendet wird.  
   
-## <a name="supported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Unterstützte Funktionen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="supported-features-in-ssmanstudiofull"></a>Unterstützte Funktionen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] unterstützt Funktionen und Vorgänge, die von der Datenbank-Engine in Datenbanken mit speicheroptimierten Datendateigruppen, speicheroptimierten Tabellen, Indizes und systemintern kompilierten gespeicherten Prozeduren unterstützt werden.  
   
  Für Datenbank-, Tabellen-, gespeicherte Prozedur-, benutzerdefinierte Tabellentyp- oder Indexobjekte wurden die folgenden [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Funktionen aktualisiert oder erweitert, um In-Memory OLTP zu unterstützen.  
@@ -150,7 +150,7 @@ ms.locfileid: "62468192"
   
 -   Template Explorer  
   
-## <a name="unsupported-features-in-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>Nicht unterstützte Funktionen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
+## <a name="unsupported-features-in-ssmanstudiofull"></a>Nicht unterstützte Funktionen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
  Für In-Memory-OLTP-Objekte unterstützt [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] keine Funktionen und Vorgänge, die auch nicht von der Datenbank-Engine unterstützt werden.  
   
  Weitere Informationen zu nicht unterstützten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Funktionen finden Sie [unter Unterstützte SQL Server Features](unsupported-sql-server-features-for-in-memory-oltp.md).  

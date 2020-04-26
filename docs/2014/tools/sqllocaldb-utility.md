@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f13a16e7c8f507914abe8529e02b76161072c5bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63035399"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB-Hilfsprogramm
@@ -43,31 +43,31 @@ SqlLocalDB.exe
 ```  
   
 ## <a name="arguments"></a>Argumente  
- [ **Create** | **c** ] Instanzname>* \<Instanzversion>* [**-s** ] * \<*  
+ [ **create** | **c** ] *\<Instanzname>* *\<Instanzversion>* [ **-s** ]  
  Erstellt eine neue Instanz von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. `SqlLocalDB`verwendet die Version der [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] Binärdateien, die von der * \<Instanzversion>* Argument angegeben werden. Die Versionsnummer wird im numerischen Format mit mindestens einer Dezimalzahl angegeben. Die Nebenversionsnummern (Service Packs) sind optional. Beispielsweise werden die folgenden zwei Versionsnummern akzeptiert: 11.0 oder 11.0.1186. Die angegebene Version muss auf dem Computer installiert sein. Wenn nicht angegeben, wird standardmäßig die Version des `SqlLocalDB` Hilfsprogramms verwendet. Durch Hinzufügen von **-s** wird die neue Instanz von **LocalDB**gestartet.  
   
- [ **Freigabe** | **h** ]  
+ [ **share** | **h** ]  
  Gibt die angegebene private Instanz von **LocalDB** mithilfe des angegebenen freigegebenen Namens frei. Wenn die Benutzer-SID oder der Kontoname weggelassen wird, wird standardmäßig der aktuelle Benutzer verwendet.  
   
- [ **nicht freigegebene** | **u** ]  
+ [ **unshared** | **u** ]  
  Beendet die Freigabe der angegebenen freigegebenen Instanz von **LocalDB**.  
   
- [ **Löschen** | von**d** ] * \<Instanzname>*  
+ [ **delete** | **d** ] *\<instance-name>*  
  Löscht die angegebene Instanz von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**.  
   
- [ **Start** | **s** ] "*\<Instanzname>*"  
+ [ **start** | **s** ] " *\<instance-name>* "  
  Startet die angegebene Instanz von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. Bei Erfolg gibt die Anweisung die Named Pipe-Adresse von **LocalDB**zurück.  
   
- [ **Beendigung** | **p** ] Instanzname>[**-i** ] [**-k** ] * \<*  
+ [ **stop** | **p** ] *\<instance-name>* [ **-i** ] [ **-k** ]  
  Beendet die angegebene Instanz von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. Durch Hinzufügen von **-i** wird das herunter `NOWAIT` fahren der Instanz mit der Option angefordert Durch Hinzufügen von **-k** wird der Instanzprozess ohne Kontaktieren abgebrochen.  
   
- [ **Info** | **i** ] [ * \<Instanzname>* ]  
+ [ **info** | **i** ] [ *\<instance-name>* ]  
  Listet alle Instanzen von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** auf, die im Besitz des aktuellen Benutzers sind.  
   
- Instanzname>gibt Name, Version, Status (wird ausgeführt oder beendet), Letzte Startzeit für die angegebene Instanz von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **localdb**und den lokalen Pipenamen von **localdb**zurück. * \<*  
+ *\<Instanzname>* gibt Name, Version, Status („Wird ausgeführt“ oder „Beendet“), die letzte Startzeit für die angegebene Instanz von [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB** und den Namen der lokalen Pipe von **LocalDB** zurück.  
   
- [Ablauf **Verfolgung** | **t** ] ein oder**aus** **** |   
- **Trace on** aktiviert die Ablauf Verfolgung `SqlLocalDB` für die API-Aufrufe für den aktuellen Benutzer. **Trace off** deaktiviert die Ablauf Verfolgung.  
+ [ **trace** | **t** ] **on** | **off**  
+ **Trace on** aktiviert die Ablauf Verfolgung `SqlLocalDB` für die API-Aufrufe für den aktuellen Benutzer. **trace off** deaktiviert die Ablaufverfolgung.  
   
  **-?**  
  Gibt kurze Beschreibungen der einzelnen `SqlLocalDB` Optionen zurück.  

@@ -13,23 +13,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9b7941f7d85404f56d24252534c518037d30a17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62695659"
 ---
 # <a name="job-propertiesnew-job-steps-page"></a>Auftragseigenschaften: Neuer Auftrag (Seite „Schritte“)
   Mithilfe dieser Seite können Sie Auftrags Schritte für einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrag anzeigen und organisieren.  
   
-## <a name="options"></a>Tastatur  
- **Auftrags Schritt Liste**  
+## <a name="options"></a>Optionen  
+ **Auftragsschrittliste**  
  Führt die Auftragsschritte für diesen Auftrag auf.  
   
  **Schritt verschieben**  
  Verschiebt den Auftrag um einen Schritt nach oben oder unten in der Liste.  
   
- **Start Schritt**  
+ **Startschritt**  
  Wählt den Schritt aus, mit dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent bei Beginn des Auftrags startet.  
   
  **Neu**  

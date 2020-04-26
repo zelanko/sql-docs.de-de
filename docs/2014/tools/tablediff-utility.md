@@ -19,16 +19,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cb8b8bec38b428ca7b2eea5166867141b34a2405
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68185973"
 ---
 # <a name="tablediff-utility"></a>tablediff (Hilfsprogramm)
   Mit dem Hilfsprogramm **tablediff** wird verglichen, ob die Daten in zwei Tabellen konvergent sind. Das Hilfsprogramm eignet sich besonders zur Problembehandlung bei mangelnder Konvergenz in einer Replikationstopologie. Dieses Hilfsprogramm kann an der Eingabeaufforderung oder in einer Batchdatei verwendet werden, um die folgenden Aufgaben auszuführen:  
   
--   Zeilenweise Vergleich zwischen einer Quell Tabelle in einer Instanz von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , die als Replikations Verleger fungiert, und der Ziel Tabelle in einer oder mehreren [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Instanzen von, die als Replikations Abonnenten fungieren.  
+-   Durchführen eines zeilenweisen Vergleichs einer Quelltabelle in einer [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz, die als Replikationsherausgeber fungiert, mit der Zieltabelle in einer oder mehreren [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanzen, die als Replikationsabonnenten fungieren.  
   
 -   Ausführen eines schnellen Vergleichs, indem nur Zeilenanzahl und Schema verglichen werden.  
   
@@ -79,22 +79,22 @@ ms.locfileid: "68185973"
  **-sourceServer** *source_server_name*[**\\**_instance_name_]  
  Der Name des Quellservers. Geben Sie den _\_Quell Server\_Namen_ für die Standard [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Instanz von an. Geben Sie den**\\**_Instanznamen\__ des _\_Quell Server\_namens_für eine benannte Instanz von an. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
   
- **-SourceDatabase-** *source_database*  
+ **-sourcedatabase** *source_database*  
  Der Name der Quelldatenbank.  
   
- **-SourceTable** *source_table_name*  
+ **-sourcetable** *source_table_name*  
  Der Name der zu überprüfenden Quelldatenbank.  
   
- **-sourceschema-** *source_schema_name*  
+ **-sourceschema** *source_schema_name*  
  Der Schemabesitzer der Quelltabelle. Standardmäßig wird dbo als Tabellenbesitzer angenommen.  
   
- **-SourcePassword** *source_password*  
+ **-sourcepassword** *source_password*  
  Das Kennwort für den Anmeldenamen, der verwendet wird, um mithilfe der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung eine Verbindung mit dem Quellserver herzustellen.  
   
 > [!IMPORTANT]  
 >  Anmeldeinformationen sollten, sofern möglich, zur Laufzeit angegeben werden. Wenn Anmeldeinformationen in einer Skriptdatei gespeichert werden müssen, sollten Sie die Datei an einem sicheren Ort speichern, um den unbefugten Zugriff zu vermeiden.  
   
- **-SOURCEUSER** *source_login*  
+ **-sourceuser** *source_login*  
  Der Anmeldename, der verwendet wird, um mithilfe der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung eine Verbindung mit dem Quellserver herzustellen. Wenn *Quellanmeldename* nicht angegeben wird, wird die Windows-Authentifizierung zum Herstellen der Verbindung mit dem Quellserver verwendet. [!INCLUDE[ssNoteWinAuthentication](../includes/ssnotewinauthentication-md.md)]  
   
  **-sourcelocked**  
@@ -106,7 +106,7 @@ ms.locfileid: "68185973"
  **-destinationdatabase** *subscription_database*  
  Der Name der Zieldatenbank.  
   
- **-DestinationTable** *destination_table*  
+ **-destinationtable** *destination_table*  
  Entspricht dem Namen der Zieltabelle.  
   
  **-destinationschema** *destination_schema_name*  
@@ -125,9 +125,9 @@ ms.locfileid: "68185973"
  Die Zieltabelle wird während des Vergleichs mit den Tabellenhinweisen TABLOCK und HOLDLOCK gesperrt.  
   
  **-b** *large_object_bytes*  
- Ist die Anzahl von Bytes, die für LOB-Datentyp-Spalten verglichen werden sollen, darunter: `text`, `ntext`, `image`, `varchar(max)`, `nvarchar(max)` und `varbinary(max)`. *large_object_bytes* standardmäßig die Größe der Spalte. Alle Daten über *large_object_bytes* werden nicht überprüft.  
+ Ist die Anzahl von Bytes, die für LOB-Datentyp-Spalten verglichen werden sollen, darunter: `text`, `ntext`, `image`, `varchar(max)`, `nvarchar(max)` und `varbinary(max)`. *large_object_bytes* wird standardmäßig auf die Größe der Spalte festgelegt. Alle Daten über *large_object_bytes* werden nicht überprüft.  
   
- **-BF**  *number_of_statements*  
+ **-bf** *number_of_statements*  
  Die Anzahl der [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen, die in die aktuelle [!INCLUDE[tsql](../includes/tsql-md.md)] -Skriptdatei geschrieben werden können, wenn die Option **-f** verwendet wird. Wenn die Anzahl der [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen *number_of_statements*überschreitet, wird eine neue [!INCLUDE[tsql](../includes/tsql-md.md)] -Skriptdatei erstellt.  
   
  **-c**  
@@ -148,13 +148,13 @@ ms.locfileid: "68185973"
  **-q**  
  Ausführen eines schnellen Vergleichs, indem nur Zeilenanzahl und Schema verglichen werden.  
   
- **-RC** *number_of_retries*  
+ **-rc** *number_of_retries*  
  Gibt an, wie oft das Hilfsprogramm einen fehlgeschlagenen Vorgang wiederholt.  
   
- **-RI**  *retry_interval*  
+ **-ri** *retry_interval*  
  Gibt das Intervall (in Sekunden) zwischen den Wiederholungen an.  
   
- **-Strict**  
+ **-strict**  
  Für Quell- und Zielschema wird ein strenger Vergleich durchgeführt.  
   
  **-t** *connection_timeouts*  
@@ -169,7 +169,7 @@ ms.locfileid: "68185973"
 |**2**|Tabellenunterschiede|  
   
 ## <a name="remarks"></a>Bemerkungen  
- Das Hilfsprogramm **Hilfsprogramm tablediff** kann nicht mit nicht-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Servern verwendet werden.  
+ Das Hilfsprogramm **tablediff** kann für Server, auf denen[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nicht installiert ist, nicht verwendet werden.  
   
  Tabellen, die Spalten des Datentyps `sql_variant` enthalten, werden nicht unterstützt.  
   
@@ -177,8 +177,8 @@ ms.locfileid: "68185973"
   
 |Quelldatentyp|Zieldatentyp|  
 |----------------------|---------------------------|  
-|`tinyint`|`smallint`, `int`oder`bigint`|  
-|`smallint`|`int`noch`bigint`|  
+|`tinyint`|`smallint`, `int`oder `bigint`|  
+|`smallint`|`int` oder `bigint`|  
 |`int`|`bigint`|  
 |`timestamp`|`varbinary`|  
 |`varchar(max)`|`text`|  
@@ -202,7 +202,7 @@ ms.locfileid: "68185973"
   
 -   `timestamp`  
   
--   **basi**  
+-   **xml**  
   
 -   `text`  
   
@@ -220,6 +220,6 @@ ms.locfileid: "68185973"
  Damit Sie die Option **-o** oder **-f** verwenden können, müssen Sie über Schreibberechtigungen für das angegebene Dateiverzeichnis verfügen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Vergleichen replizierter Tabellen auf Unterschiede &#40;Replikations Programmierung&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
+ [Überprüfen replizierter Tabellen auf Unterschiede &#40;Replikationsprogrammierung&#41;](../relational-databases/replication/administration/compare-replicated-tables-for-differences-replication-programming.md)  
   
   

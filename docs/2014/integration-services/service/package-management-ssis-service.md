@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89e925d72b4ca4815c05e9f4ab67211a1a7ea980
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62766626"
 ---
 # <a name="package-management-ssis-service"></a>Paketverwaltung (SSIS-Dienst)
@@ -41,8 +41,7 @@ ms.locfileid: "62766626"
 -   Importieren und Exportieren von Paketen  
   
 > [!IMPORTANT]  
->  In diesem Thema wird der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst beschrieben, ein Windows-Dienst zur Verwaltung von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen. 
-  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] unterstützt den Dienst für die Abwärtskompatibilität mit früheren Versionen von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]können Sie Objekte, z. B. Pakete, auf dem Integration Services-Server verwalten.  
+>  In diesem Thema wird der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst beschrieben, ein Windows-Dienst zur Verwaltung von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] unterstützt den Dienst für die Abwärtskompatibilität mit früheren Versionen von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]können Sie Objekte, z. B. Pakete, auf dem Integration Services-Server verwalten.  
   
 ## <a name="package-store"></a>Paketspeicher  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]stellt zwei Ordner der obersten Ebene für den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Zugriff auf Pakete bereit: **Ausführen von Paketen** und **gespeicherten Paketen**. Der Ordner **Ausgeführte Pakete** enthält eine Auflistung der Pakete, die derzeit auf dem Server ausgeführt werden. Im Ordner **Gespeicherte Pakete** sind die im Paketspeicher gespeicherten Pakete aufgelistet. Hierbei handelt es sich um die einzigen vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst verwalteten Pakete. Der Paketspeicher kann aus den msdb-Datenbank- und/oder den Dateisystemordnern bestehen, die in der Konfigurationsdatei des [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Diensts aufgelistet sind. In der Konfigurationsdatei sind die zu verwaltenden msdb- und Dateisystemordner angegeben. Sie können Pakete auch an anderen Stellen des Dateisystems speichern, die nicht vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst verwaltet werden.  
@@ -74,8 +73,7 @@ ms.locfileid: "62766626"
  Weitere Informationen finden Sie unter [Konfigurieren des Integration Services-Diensts &#40;SSIS-Dienst&#41;](../configuring-the-integration-services-service-ssis-service.md).  
   
 ## <a name="importing-and-exporting-packages"></a>Importieren und Exportieren von Paketen  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Pakete können entweder in der msdb-Datenbank oder im Dateisystem gespeichert werden. Sie können ein Paket mit der Import- oder Exportfunktion von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] von einem Speichertyp in einen anderen kopieren. Sie können ein Paket auch in denselben Speichertyp importieren und das Paket umbenennen, um eine Kopie eines Pakets erstellen zu können. Das **dtutil** -Eingabeaufforderungs-Hilfsprogramm (dtutil.exe) kann auch zum Importieren und Exportieren von Paketen verwendet werden.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Pakete können entweder in der msdb-Datenbank oder im Dateisystem gespeichert werden. Sie können ein Paket mit der Import- oder Exportfunktion von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] von einem Speichertyp in einen anderen kopieren. Sie können ein Paket auch in denselben Speichertyp importieren und das Paket umbenennen, um eine Kopie eines Pakets erstellen zu können. Das **dtutil** -Eingabeaufforderungs-Hilfsprogramm (dtutil.exe) kann auch zum Importieren und Exportieren von Paketen verwendet werden.  
   
  Weitere Informationen finden Sie unter [dtutil Utility](../dtutil-utility.md).  
   
@@ -83,7 +81,7 @@ ms.locfileid: "62766626"
   
 -   [Importieren und Exportieren von Paketen &#40;SSIS-Dienst&#41;](../import-and-export-packages-ssis-service.md)  
   
--   [Anzeigen von Integration Services Paketen in SQL Server Management Studio &#40;SSIS-Dienst&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)  
+-   [Anzeigen von Integration Services-Paketen in SQL Server Management Studio &#40;SSIS-Dienst&#41;](../view-integration-services-packages-in-sql-server-management-studio-ssis-service.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Integration Services-Dienst &#40;SSIS-Dienst&#41;](integration-services-service-ssis-service.md)  

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c86975f273b2efa5d1384df676519ee622a1677
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62731985"
 ---
 # <a name="xml-elements-xmla"></a>XML-Elemente (XMLA)
@@ -26,7 +26,7 @@ ms.locfileid: "62731985"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Eigenschaft|BESCHREIBUNG|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |[Header &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-headers/xml-elements-headers)|Beschreibt die Elemente, die in einem SOAP-Header eines SOAP-Umschlags durch die Anwendung oder eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz gesendet werden, um Funktionen auf Protokollebene zu verwalten.|  
 |[Methoden &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods)|Beschreibt die obersten Elemente, die von einer Anwendung in einem SOAP-Umschlag an eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz gesendet werden, um Daten oder Metadaten abzufragen oder Aktionen auf der Instanz durchzuführen.|  
@@ -36,6 +36,6 @@ ms.locfileid: "62731985"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [XML-Datentypen &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-data-types/xml-data-types-xmla)   
- [Entwickeln mit Analysis Services Skriptsprache &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ [Entwickeln mit Analysis Services Scripting Language &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
   

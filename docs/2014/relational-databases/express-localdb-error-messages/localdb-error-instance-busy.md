@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b334a62c56d4fb62337204eae91f83eed290b641
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62519406"
 ---
 # <a name="localdb_error_instance_busy"></a>LOCALDB_ERROR_INSTANCE_BUSY
@@ -29,7 +29,7 @@ ms.locfileid: "62519406"
 |Komponente|Laufzeit-API der lokalen Datenbank|  
 |Meldungstext|Der angeforderte Vorgang für die lokale Datenbankinstanz kann nicht ausgeführt werden, weil die angegebene Instanz gerade verwendet wird. Beenden Sie die Instanz, und wiederholen Sie den Vorgang.|  
   
-## <a name="explanation"></a>Erklärung  
+## <a name="explanation"></a>Erläuterung  
  Die angegebene Instanz wird ausgeführt.  
   
 ## <a name="user-action"></a>Benutzeraktion  

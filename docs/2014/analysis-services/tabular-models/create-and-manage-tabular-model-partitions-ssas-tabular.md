@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72c5b69aee10d8ac1342b3f037d76ab6ef5fc36c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067400"
 ---
 # <a name="create-and-manage-tabular-model-partitions-ssas-tabular"></a>Erstellen und Verwalten von Tabellenmodellpartitionen (SSAS – tabellarisch)
@@ -33,7 +33,7 @@ ms.locfileid: "66067400"
 ## <a name="tasks"></a>Aufgaben  
  Um Partitionen für die bereitgestellte Datenbank eines tabellarischen Modells zu erstellen und zu verwalten, verwenden Sie das Dialogfeld **Partitionen** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Um das Dialogfeld **Partitionen** anzuzeigen, klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]mit der rechten Maustaste auf eine Tabelle und klicken dann auf **Partitionen**.  
   
-###  <a name="bkmk_create_new"></a>So erstellen Sie eine neue Partition  
+###  <a name="to-create-a-new-partition"></a><a name="bkmk_create_new"></a>So erstellen Sie eine neue Partition  
   
 1.  Klicken Sie im Dialogfeld **Partitionen** auf die Schaltfläche **Neu** .  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66067400"
   
 4.  Um die Anweisung zu überprüfen, klicken Sie auf **Syntax überprüfen**.  
   
-###  <a name="bkmk_copy"></a>So kopieren Sie eine Partition  
+###  <a name="to-copy-a-partition"></a><a name="bkmk_copy"></a> So kopieren Sie eine Partition  
   
 1.  Wählen Sie im Dialogfeld **Partitionen** in der Liste **Partitionen** die Partition aus, die Sie kopieren möchten, und klicken Sie dann auf die Schaltfläche **Kopieren** .  
   
@@ -51,19 +51,19 @@ ms.locfileid: "66067400"
   
 3.  Bearbeiten Sie die SQL-Abfrageanweisung unter **SQL-Anweisung**.  
   
-###  <a name="bkmk_merge"></a>So führen Sie zwei oder mehr Partitionen zusammen  
+###  <a name="to-merge-two-or-more-partitions"></a><a name="bkmk_merge"></a> So führen Sie Partitionen zusammen  
   
 -   Wählen Sie im Dialogfeld **Partitionen** in der Liste **Partitionen** mithilfe von STRG-Klicken die Partitionen aus, die Sie zusammenführen möchten, und klicken Sie dann auf die Schaltfläche **Zusammenführen** .  
   
 > [!IMPORTANT]  
 >  Beim Zusammenführen von Partitionen werden die Partitionsmetadaten nicht aktualisiert. Administratoren müssen die SQL-Anweisung ändern, damit bei den Verarbeitungsvorgängen der resultierenden Partition alle Daten in der zusammengeführten Partition verarbeitet werden.  
   
-###  <a name="bkmk_delete"></a>So löschen Sie eine Partition  
+###  <a name="to-delete-a-partition"></a><a name="bkmk_delete"></a> So löschen Sie eine Partition  
   
 -   Wählen Sie im Dialogfeld **Partitionen** in der Liste **Partitionen** die Partition aus, die Sie löschen möchten, und klicken Sie dann auf die Schaltfläche **Löschen** .  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Tabellarische Modell Partitionen &#40;tabellarischen SSAS-&#41;](partitions-ssas-tabular.md)   
- [Verarbeiten von Tabellen Modell Partitionen &#40;tabellarischen SSAS-&#41;](process-tabular-model-partitions-ssas-tabular.md)  
+ [Verarbeiten von Tabellenmodellpartitionen &#40;SSAS – tabellarisch&#41;](process-tabular-model-partitions-ssas-tabular.md)  
   
   

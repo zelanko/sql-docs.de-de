@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a93eed388f494b7d0aeaac127b95bc0d87c76963
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "68210693"
 ---
 # <a name="optimize-merge-replication-performance-with-conditional-delete-tracking"></a>Optimieren der Mergereplikationsleistung durch bedingtes Nachverfolgen von Löschvorgängen
@@ -44,12 +44,12 @@ ms.locfileid: "68210693"
 > [!IMPORTANT]  
 >  Wenn andere Prozesse weiterhin auf dem Verleger aktiv sind, müssen Sie sicherstellen, dass keine Löschvorgänge erfolgen, die an Abonnenten weitergegeben werden sollen, solange die Nachverfolgung deaktiviert ist.  
   
- **So geben Sie an, dass Löschvorgänge nicht verfolgt werden sollen**  
+ **So geben Sie an, dass Löschvorgänge nicht nachverfolgt werden**  
   
 -   Replikationsprogrammierung mit [!INCLUDE[tsql](../../../includes/tsql-md.md)]: [Specify That Deletes Should Not Be Tracked For Merge Articles &#40;Replication Transact-SQL Programming&#41; (Angeben, dass Löschvorgänge für Mergeartikel nicht nachverfolgt werden sollen &#40;Replication Transact-SQL Programming&#41;)](..//publish/specify-merge-replication-properties.md#tracking-deletes)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Article Options for Merge Replication](article-options-for-merge-replication.md)   
+ [Artikeloptionen für die Mergereplikation](article-options-for-merge-replication.md)   
  [Optimieren der Leistung der Mergereplikation durch nur herunterladbare Artikel](optimize-merge-replication-performance-with-download-only-articles.md)  
   
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c394792f3d56614c4e3bc316e2b4a73dcd1e88b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211346"
 ---
 # <a name="operator-properties-and-new-operator-general-page"></a>Operatoreigenschaften und neuer Operator (Seite „Allgemein“)
@@ -29,25 +29,25 @@ ms.locfileid: "68211346"
  **Aktiviert**  
  Aktiviert den Operator. Bei fehlender Aktivierung werden keine Benachrichtigungen an den Operator gesendet.  
   
- **Name der E-Mail**  
+ **E-Mail-Name**  
  Gibt die E-Mail-Adresse des Operators an.  
   
  **NET SEND-Adresse**  
  Gibt die für **NET SEND**zu verwendende Adresse an.  
   
- **Pager-e-Mail**  
+ **Pager-E-Mail-Name**  
  Gibt die E-Mail-Adresse für den Pager des Operators an.  
   
- **Pager nach Zeitplan**  
+ **Pager empfangsbereit am**  
  Legt fest, zu welchen Zeiten der Pager aktiv ist.  
   
- **Montag-Sonntag**  
+ **Montag - Sonntag**  
  Wählen Sie die Tage aus, an denen der Pager aktiv ist.  
   
- **Workday BEGIN**  
+ **Arbeitstag - Beginn**  
  Wählen Sie die Tageszeit aus, nach deren Eintreten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent Meldungen an den Pager sendet.  
   
- **Arbeitstag-Ende**  
+ **Arbeitstag - Ende**  
  Wählen Sie die Tageszeit aus, nach deren Eintreten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent keine weiteren Meldungen an den Pager sendet.  
   
 ## <a name="see-also"></a>Weitere Informationen  

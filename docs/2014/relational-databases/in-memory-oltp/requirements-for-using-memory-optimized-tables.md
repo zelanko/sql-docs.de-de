@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9b9e442fb97245d32c398602cdfd727de8239cb8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62467894"
 ---
 # <a name="requirements-for-using-memory-optimized-tables"></a>Anforderungen für die Verwendung von speicheroptimierten Tabellen
@@ -22,8 +22,7 @@ ms.locfileid: "62467894"
   
 -   64-Bit Enterprise, Developer oder Evaluation Edition von [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] benötigt ausreichend Arbeitsspeicher, um die Daten in speicheroptimierten Tabellen und Indizes aufnehmen zu können. Um auch Zeilenversionen zu berücksichtigen, sollten Sie doppelt so viel Arbeitsspeicher wie die zu erwartende Größe der speicheroptimierten Tabellen und Indizes bereitstellen. Die tatsächlich erforderliche Arbeitsspeichergröße ist jedoch abhängig von der Arbeitsauslastung. Überwachen Sie die Speicherauslastung, und nehmen Sie bei Bedarf geeignete Anpassungen vor. Die Datengröße in speicheroptimierten Tabellen darf den für den Pool zulässigen Prozentsatz nicht überschreiten. Informationen zum Ermitteln der Größe einer Speicher optimierten Tabelle finden Sie unter [sys. dm_db_xtp_table_memory_stats &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql).  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] benötigt ausreichend Arbeitsspeicher, um die Daten in speicheroptimierten Tabellen und Indizes aufnehmen zu können. Um auch Zeilenversionen zu berücksichtigen, sollten Sie doppelt so viel Arbeitsspeicher wie die zu erwartende Größe der speicheroptimierten Tabellen und Indizes bereitstellen. Die tatsächlich erforderliche Arbeitsspeichergröße ist jedoch abhängig von der Arbeitsauslastung. Überwachen Sie die Speicherauslastung, und nehmen Sie bei Bedarf geeignete Anpassungen vor. Die Datengröße in speicheroptimierten Tabellen darf den für den Pool zulässigen Prozentsatz nicht überschreiten. Informationen zum Ermitteln der Größe einer Speicher optimierten Tabelle finden Sie unter [sys. dm_db_xtp_table_memory_stats &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-xtp-table-memory-stats-transact-sql).  
   
      Wenn die Datenbank datenträgerbasierte Tabellen enthält, müssen Sie genügend Arbeitsspeicher für den Pufferpool und die Abfrageverarbeitung in diesen Tabellen bereitstellen.  
   
@@ -39,14 +38,13 @@ ms.locfileid: "62467894"
   
      Zum Installieren der Bericht Generierung ([bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu in-Memory OLTP portiert werden soll](determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) und [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] (um in-Memory OLTP über [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] Objekt-Explorer zu verwalten) wählen Sie bei der Installation [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]von die Option **Verwaltungs Tools-einfach** oder **Verwaltungs Tools-erweitert** aus.  
   
-## <a name="important-notes-on-using-includehek_2includeshek-2-mdmd"></a>Wichtige Anmerkungen zur Verwendung von [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
+## <a name="important-notes-on-using-hek_2"></a>Wichtige Anmerkungen zur Verwendung von [!INCLUDE[hek_2](../../../includes/hek-2-md.md)]  
   
 -   Die Gesamtgröße aller dauerhaften Tabellen in einer Datenbank sollte im Arbeitsspeicher maximal 250 GB betragen. Weitere Informationen finden Sie unter [Dauerhaftigkeit für Speicher optimierte Tabellen](durability-for-memory-optimized-tables.md).  
   
 -   Diese Version von [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] kann auf Systemen mit 2 oder 4 Sockets und weniger als 60 Kernen optimal ausgeführt werden.  
   
--   Prüfpunktdateien dürfen nicht manuell gelöscht werden. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt automatisch eine Garbage Collection für nicht benötigte Prüfpunktdateien aus. Weitere Informationen finden Sie im Thema zum Zusammenführen von Daten-und Änderungs Dateien in der [Dauerhaftigkeit für Speicher optimierte Tabellen](durability-for-memory-optimized-tables.md).  
+-   Prüfpunktdateien dürfen nicht manuell gelöscht werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt automatisch eine Garbage Collection für nicht benötigte Prüfpunktdateien aus. Weitere Informationen finden Sie im Thema zum Zusammenführen von Daten-und Änderungs Dateien in der [Dauerhaftigkeit für Speicher optimierte Tabellen](durability-for-memory-optimized-tables.md).  
   
 -   In dieser ersten Version von In-Memory OLTP (in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) besteht die einzige Möglichkeit, eine speicheroptimierte Dateigruppe zu entfernen, im Löschen der Datenbank.  
   

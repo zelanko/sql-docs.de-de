@@ -11,18 +11,18 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 48e233c6f2c7a55bf2420825b9fb3064db6e89e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481251"
 ---
-# <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>Aufgabe 10: Hinzufügen der Transformation für Fuzzygruppierung, um Duplikate zu identifizieren
+# <a name="task-10-adding-fuzzy-group-transform-to-identify-duplicates"></a>Aufgabe 10: Hinzufügen der Transformation für Fuzzygruppierung zur Identifizierung von Duplikaten
   In dieser Aufgabe fügen Sie eine Transformation für Fuzzygruppierung zum Datenfluss hinzu. Mit der Transformation für Fuzzygruppierung können Duplikate in den Quelldaten identifiziert werden. Weitere Informationen finden Sie unter [Transformation für Fuzzygruppierung](../integration-services/data-flow/transformations/fuzzy-grouping-transformation.md) .  
   
 1.  Ziehen Sie die Transformation für **Fuzzygruppierung** in **andere Transformationen** der **SSIS-Toolbox** auf die Registerkarte **Datenfluss** unter **richtige und korrigierte Datensätze kombinieren**.  
   
-2.  Klicken Sie in der Registerkarte Datenfluss mit der rechten Maustaste auf Transformation für **Fuzzygruppierung** , **und klicken Sie** **** Geben Sie **Group Suppliers with Matching IDs** ein, und drücken **Sie die Eingabe**Taste  
+2.  Klicken Sie in der Registerkarte Datenfluss mit der rechten Maustaste auf Transformation für **Fuzzygruppierung** , **und klicken Sie** **Data Flow** Geben Sie **Group Suppliers with Matching IDs** ein, und drücken **Sie die Eingabe**Taste  
   
 3.  Verbinden Sie **korrekte und korrigierte Datensätze** **mit Gruppen Lieferanten mit übereinstimmenden IDs** , die den blauen Connector verwenden.  
   
@@ -55,6 +55,6 @@ ms.locfileid: "65481251"
 15. Klicken Sie auf **OK** , um den **Transformations-Editor für fuzzygruppen**  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 11: Hinzufügen der Transformation 'Bedingtes Teilen', um Duplikate zu filtern](../../2014/tutorials/task-11-adding-conditional-split-transform-to-filter-duplicates.md)  
+ [Aufgabe 11: Hinzufügen der Transformation „Bedingtes Teilen“ zur Filterung von Duplikaten](../../2014/tutorials/task-11-adding-conditional-split-transform-to-filter-duplicates.md)  
   
   

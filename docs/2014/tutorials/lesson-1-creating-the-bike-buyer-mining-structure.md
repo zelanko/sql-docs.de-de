@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d6384910858d87a80aa3c8f897bc88e45f4504fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62678503"
 ---
 # <a name="lesson-1-creating-the-bike-buyer-mining-structure"></a>Lektion 1: Erstellen der Bike Buyer-Miningstruktur
@@ -87,7 +87,7 @@ WITH HOLDOUT (<holdout specifier>)
   
 -   Ändern Sie die Abfrage, um die Mining Struktur zu erstellen.  
   
--   Führen Sie die Abfrage aus.  
+-   Ausführen der Abfrage  
   
 ## <a name="creating-the-query"></a>Erstellen einer Abfrage  
  Im ersten Schritt stellen Sie eine Verbindung zu einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] her und erstellen eine neue DMX-Abfrage in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  
@@ -113,7 +113,7 @@ WITH HOLDOUT (<holdout specifier>)
     [<mining structure>]   
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     [Bike Buyer]  
@@ -125,7 +125,7 @@ WITH HOLDOUT (<holdout specifier>)
     <key column>   
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     CustomerKey LONG KEY  
@@ -137,7 +137,7 @@ WITH HOLDOUT (<holdout specifier>)
     <mining structure columns>   
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     [Age] LONG DISCRETIZED(Automatic,10),  
@@ -161,7 +161,7 @@ WITH HOLDOUT (<holdout specifier>)
     WITH HOLDOUT (holdout specifier>)  
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     WITH HOLDOUT (30 PERCENT or 1000 CASES)  

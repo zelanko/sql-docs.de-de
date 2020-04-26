@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5eae331b064d83510d657f6f09a819955e6259a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62762419"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Anfügen und Trennen von Datenbanken (SQL Server)
@@ -41,13 +41,13 @@ ms.locfileid: "62762419"
   
   
   
-##  <a name="Security"></a> Sicherheit  
+##  <a name="security"></a><a name="Security"></a> Sicherheit  
  Dateizugriffsberechtigungen werden während einer Reihe von Datenbankvorgängen festgelegt, einschließlich des Trennens oder Anfügens einer Datenbank.  
   
 > [!IMPORTANT]  
->  Das Anfügen oder Wiederherstellen von Datenbanken aus unbekannten oder nicht vertrauenswürdigen Quellen wird nicht empfohlen. Solche Datenbanken können bösartigen Code enthalten, der möglicherweise unbeabsichtigten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code ausführt oder Fehler verursacht, indem er das Schema oder die physische Datenbankstruktur ändert. Bevor Sie eine Datenbank aus einer unbekannten oder nicht vertrauenswürdigen Quelle verwenden, führen Sie [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) für die Datenbank auf einem nicht Produktionsserver aus, und überprüfen Sie außerdem den Code, z. b. gespeicherte Prozeduren oder anderen benutzerdefinierten Code, in der Datenbank.  
+>  Das Anfügen oder Wiederherstellen von Datenbanken aus unbekannten oder nicht vertrauenswürdigen Quellen wird nicht empfohlen. Solche Datenbanken können bösartigen Code enthalten, der möglicherweise unbeabsichtigten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Code ausführt oder Fehler verursacht, indem er das Schema oder die physische Datenbankstruktur ändert. Bevor Sie eine Datenbank aus einer unbekannten oder nicht vertrauenswürdigen Quelle verwenden, führen Sie auf einem Nichtproduktionsserver [DBCC CHECKDB](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) für die Datenbank aus. Überprüfen Sie außerdem den Code in der Datenbank, z.B. gespeicherte Prozeduren oder anderen benutzerdefinierten Code.  
   
-##  <a name="DetachDb"></a>Trennen einer Datenbank  
+##  <a name="detaching-a-database"></a><a name="DetachDb"></a> Trennen einer Datenbank  
  Durch das Trennen einer Datenbank wird diese aus der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entfernt. Die Datenbank selbst bleibt jedoch innerhalb der Daten- und Transaktionsprotokolldateien intakt. Diese Dateien können anschließend verwendet werden, um die Datenbank einer beliebigen Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]anzufügen. Darin eingeschlossen ist der Server, von dem die Datenbank ursprünglich getrennt wurde.  
   
  Eine Datenbank kann in folgenden Fällen nicht getrennt werden:  
@@ -84,7 +84,7 @@ ms.locfileid: "62762419"
   
 3.  Trennen Sie die Datenbank erneut.  
   
-##  <a name="AttachDb"></a>Anfügen einer Datenbank  
+##  <a name="attaching-a-database"></a><a name="AttachDb"></a> Anfügen einer Datenbank  
  Eine kopierte oder getrennte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank kann angefügt werden. Wenn Sie eine [!INCLUDE[ssVersion2005](../../includes/sscurrent-md.md)] Serverinstanz anfügen, werden die Katalogdateien von Ihrem vorherigen Speicherort aus zusammen mit den anderen Datenbankdateien angefügt [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], wie in. Weitere Informationen finden Sie unter [Upgrade der Volltextsuche](../search/upgrade-full-text-search.md).  
   
  Wenn Sie eine Datenbank anfügen, müssen alle Datendateien (MDF- und NDF-Dateien) verfügbar sein. Wenn eine Datendatei einen anderen Pfad als beim Erstellen oder beim letzten Anfügen der Datenbank aufweist, müssen Sie den aktuellen Pfad der Datei angeben.  
@@ -104,7 +104,7 @@ ms.locfileid: "62762419"
   
   
   
-###  <a name="Metadata"></a>Metadatenänderungen beim Anfügen einer Datenbank  
+###  <a name="metadata-changes-on-attaching-a-database"></a><a name="Metadata"></a> Ändern von Metadaten beim Anfügen einer Datenbank  
  Wenn eine schreibgeschützte Datenbank getrennt und dann erneut angefügt wird, gehen die Sicherungsinformationen zur aktuellen differenziellen Basis verloren. Bei der *differenziellen Basis* handelt es sich um die letzte vollständige Sicherung aller Daten in der Datenbank oder einer Teilmenge ihrer Dateien oder Dateigruppen. Ohne die Basissicherungsinformationen ist die **master** -Datenbank nicht mehr mit der schreibgeschützten Datenbank synchronisiert. Daher können später erstellte differenzielle Sicherungen zu unerwarteten Ergebnissen führen. Wenn Sie deshalb differenzielle Sicherungen für eine schreibgeschützte Datenbank verwenden, sollten Sie nach dem erneuten Anfügen der Datenbank eine neue differenzielle Basis einrichten, indem Sie eine vollständige Sicherung erstellen. Informationen zum Verwenden von differenziellen Sicherungen finden Sie unter [Differenzielle Sicherungen &#40;SQL Server&#41;](../backup-restore/differential-backups-sql-server.md).  
   
  Beim Anfügen wird die Datenbank gestartet. Im Allgemeinen wird die Datenbank beim Anfügen in genau demselben Status wieder verfügbar gemacht, in dem sie sich unmittelbar vor dem Trennen oder Kopieren befunden hat. Die datenbankübergreifenden Besitzketten für die Datenbank werden durch Trenn- und Anfügevorgänge jedoch deaktiviert. Informationen zum Aktivieren der Verkettung finden Sie unter [Datenbankübergreifende Besitzverkettung (Serverkonfigurationsoption)](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md). Außerdem wird TRUSTWORTHY auf OFF festgelegt, wenn die Datenbank angefügt wird. Informationen zum Festlegen von TRUSTWORTHY auf ON finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
@@ -112,14 +112,14 @@ ms.locfileid: "62762419"
 ### <a name="backup-and-restore-and-attach"></a>Sichern, Wiederherstellen und Anfügen  
  Eine Datenbank mit Wiederherstellungsdateien kann ebenso wie eine Datenbank, die vollständig oder teilweise offline ist, nicht angefügt werden. Sie können die Datenbank anfügen, wenn Sie die Wiederherstellungssequenz beenden. Sie können die Wiederherstellungssequenz anschließend erneut starten.  
   
-###  <a name="OtherServerInstance"></a> Anfügen einer Datenbank an eine andere Serverinstanz  
+###  <a name="attaching-a-database-to-another-server-instance"></a><a name="OtherServerInstance"></a> Anfügen einer Datenbank an eine andere Serverinstanz  
   
 > [!IMPORTANT]  
 >  Eine Datenbank, die in einer neueren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt wurde, kann in früheren Versionen nicht angefügt werden.  
   
- Wenn Sie eine Datenbank an eine andere Serverinstanz anfügen, müssen Sie die Metadaten für die Datenbank, wie Anmeldenamen und Aufträge, auf der anderen Serverinstanz unter Umständen teilweise oder vollständig neu erstellen, um Benutzern und Anwendungen ein konsistentes Verhalten zu bieten. Weitere Informationen finden Sie unter [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Serverinstanz &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
+ Wenn Sie eine Datenbank an eine andere Serverinstanz anfügen, müssen Sie die Metadaten für die Datenbank, wie Anmeldenamen und Aufträge, auf der anderen Serverinstanz unter Umständen teilweise oder vollständig neu erstellen, um Benutzern und Anwendungen ein konsistentes Verhalten zu bieten. Weitere Informationen finden Sie unter [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Server Instanz &#40;SQL Server&#41;](manage-metadata-when-making-a-database-available-on-another-server.md).  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So trennen Sie eine Datenbank**  
   
 -   [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql)  
@@ -132,19 +132,19 @@ ms.locfileid: "62762419"
   
 -   [Anfügen einer Datenbank](attach-a-database.md)  
   
--   [sp_attach_db &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-db-transact-sql)  
+-   [sp_attach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-db-transact-sql)  
   
--   [sp_attach_single_file_db &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql)  
+-   [sp_attach_single_file_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-single-file-db-transact-sql)  
   
- **So aktualisieren Sie eine Datenbank mithilfe von Trenn-und Anfüge Vorgängen**  
+ **So aktualisieren Sie eine Datenbank durch Trennen und Anfügen**  
   
--   [Aktualisieren einer Datenbank durchtrennen und Anfügen &#40;Transact-SQL-&#41;](upgrade-a-database-using-detach-and-attach-transact-sql.md)  
+-   [Aktualisieren einer Datenbank durch Trennen und Anfügen &#40;Transact-SQL&#41;](upgrade-a-database-using-detach-and-attach-transact-sql.md)  
   
- **So verschieben Sie eine Datenbank mithilfe von Trenn-und Anfüge Vorgängen**  
+ **So verschieben Sie eine Datenbank durch Trennen und Anfügen**  
   
--   [Verschieben einer Datenbank durchtrennen und Anfügen &#40;Transact-SQL-&#41;](move-a-database-using-detach-and-attach-transact-sql.md)  
+-   [Verschieben einer Datenbank durch Trennen und Anfügen &#40;Transact-SQL&#41;](move-a-database-using-detach-and-attach-transact-sql.md)  
   
- **So löschen Sie eine Daten Bank Momentaufnahme**  
+ **So löschen Sie eine Datenbank-Momentaufnahme**  
   
 -   [Löschen einer Datenbankmomentaufnahme &#40;Transact-SQL&#41;](drop-a-database-snapshot-transact-sql.md)  
   

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5f562a0cbd489202d5dbab7de6ac0d19ebeef348
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62519367"
 ---
 # <a name="localdb_error_instance_already_shared"></a>LOCALDB_ERROR_INSTANCE_ALREADY_SHARED
@@ -29,7 +29,7 @@ ms.locfileid: "62519367"
 |Komponente|Laufzeit-API der lokalen Datenbank|  
 |Meldungstext|Die angegebene lokale Datenbankinstanz ist bereits freigegeben.|  
   
-## <a name="explanation"></a>Erklärung  
+## <a name="explanation"></a>Erläuterung  
  Die angegebene lokale Datenbankinstanz ist bereits unter einem anderen Freigabenamen freigegeben.  
   
 ## <a name="user-action"></a>Benutzeraktion  

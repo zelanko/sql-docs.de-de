@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f80afa10c1dbd067648db26c2bed0f423f371b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "63250550"
 ---
 # <a name="optimize-parameterized-filter-performance-with-precomputed-partitions"></a>Optimieren der Leistung parametrisierter Filter mithilfe vorausberechneter Partitionen
@@ -30,7 +30,7 @@ ms.locfileid: "63250550"
   
  Neben dem Verwenden von vordefinierten Partitionen generieren Sie vorab Momentaufnahmen und/oder ermöglichen Abonnenten das Anfordern der Momentaufnahmegenerierung und -anwendung beim ersten Synchronisieren. Verwenden Sie eine oder beide dieser Optionen, um Momentaufnahmen für Veröffentlichungen bereitzustellen, die parametrisierte Filter verwenden. Wenn Sie keine dieser beiden Optionen angeben, werden die Abonnements mit einer Reihe von SELECT- und INSERT-Anweisungen statt mit dem **bcp** -Hilfsprogramm initialisiert, wodurch sich der Prozess deutlich verlangsamt. Weitere Informationen finden Sie unter [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md).  
   
- **So verwenden Sie Voraus berechnete Partitionen**  
+ **So verwenden Sie vorausberechnete Partitionen**  
   
  Vorausberechnete Partitionen werden standardmäßig für alle neuen und vorhandenen Veröffentlichungen aktiviert, die den oben beschriebenen Richtlinien folgen. Die Einstellung kann mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder programmgesteuert geändert werden. Weitere Informationen finden Sie unter [Optimize Parameterized Row Filters](../publish/optimize-parameterized-row-filters.md).  
   
@@ -53,7 +53,7 @@ ms.locfileid: "63250550"
   
 ### <a name="database-collation"></a>Datenbanksortierung  
   
--   Wenn vorausberechnete Partitionen verwendet werden, wird stets die Sortierung der Datenbank zu Vergleichen herangezogen und nicht die Sortierung der Tabelle oder Spalte. Stellen Sie sich folgendes Szenario vor:  
+-   Wenn vorausberechnete Partitionen verwendet werden, wird stets die Sortierung der Datenbank zu Vergleichen herangezogen und nicht die Sortierung der Tabelle oder Spalte. Nehmen Sie das folgende Szenario als Beispiel:  
   
     -   Eine Datenbank mit einer Sortierung, die Groß- und Kleinschreibung unterscheidet, enthält eine Tabelle mit einer Sortierung ohne Unterscheidung der Groß- und Kleinschreibung.  
   
@@ -67,6 +67,6 @@ ms.locfileid: "63250550"
  Bei vorausberechneten Partitionen besteht ein geringfügiger Leistungsabfall, wenn Änderungen vom Abonnenten auf den Verleger hochgeladen werden. Der Großteil der Zeit bei der Mergeverarbeitung wird jedoch für die Auswertung von Partitionen und den Download von Änderungen vom Verleger zum Abonnenten aufgewendet. Deshalb kann der Reingewinn noch immer erheblich sein. Der Leistungsvorteil variiert je nach Anzahl der Abonnenten, die gleichzeitig eine Synchronisierung ausführen, und der Anzahl von Updates pro Synchronisierung, bei denen Zeilen zwischen Partitionen verschoben werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Parametrisierte Zeilen Filter](parameterized-filters-parameterized-row-filters.md)  
+ [Parametrisierte Zeilenfilter](parameterized-filters-parameterized-row-filters.md)  
   
   

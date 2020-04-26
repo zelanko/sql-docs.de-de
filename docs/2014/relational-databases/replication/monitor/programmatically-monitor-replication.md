@@ -29,10 +29,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 949c8585b3886d0d3f422e76d031b390d248e9a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62667246"
 ---
 # <a name="programmatically-monitor-replication"></a>Programmgesteuertes Überwachen der Replikation
@@ -54,7 +54,7 @@ ms.locfileid: "62667246"
   
  [Replikationsverwaltungsobjekte (RMO)](#RMO)  
   
-##  <a name="Tsql"></a> Transact-SQL  
+##  <a name="transact-sql"></a><a name="Tsql"></a> Transact-SQL  
   
 #### <a name="to-monitor-publishers-publications-and-subscriptions-from-the-distributor"></a>So überwachen Sie Verleger, Veröffentlichungen und Abonnements auf dem Verteiler  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62667246"
   
     -   Einen Wert **1** für **@mode** , um die Schwellenwertmetrik für die Überwachung zu aktivieren, oder der Wert **2** , um diese zu deaktivieren.  
   
-##  <a name="RMO"></a> Replikationsverwaltungsobjekte (RMO)  
+##  <a name="replication-management-objects-rmo"></a><a name="RMO"></a> Replikationsverwaltungsobjekte (RMO)  
   
 #### <a name="to-monitor-a-subscription-to-a-merge-publication-at-the-subscriber"></a>So überwachen Sie ein Abonnement für eine Mergeveröffentlichung auf dem Abonnenten  
   
@@ -268,18 +268,13 @@ ms.locfileid: "62667246"
   
         |value|BESCHREIBUNG|  
         |-----------|-----------------|  
-        |1|
-  `expiration` - überwacht den bevorstehenden Ablauf von Abonnements für Transaktionsveröffentlichungen.|  
-        |2|
-  `latency` - überwacht die Leistung von Abonnements für Transaktionsveröffentlichungen.|  
-        |4|
-  `mergeexpiration` - überwacht den bevorstehenden Ablauf von Abonnements für Mergeveröffentlichungen.|  
+        |1|`expiration` - überwacht den bevorstehenden Ablauf von Abonnements für Transaktionsveröffentlichungen.|  
+        |2|`latency` - überwacht die Leistung von Abonnements für Transaktionsveröffentlichungen.|  
+        |4|`mergeexpiration` - überwacht den bevorstehenden Ablauf von Abonnements für Mergeveröffentlichungen.|  
         |5|`mergeslowrunduration`-überwacht die Dauer von Mergesynchronisierungen über Verbindungen mit niedriger Bandbreite (DPS).|  
         |6|`mergefastrunduration`-überwacht die Dauer von Mergesynchronisierungen über Verbindungen mit hoher Bandbreite (LAN-Verbindungen).|  
-        |7|
-  `mergefastrunspeed` - Überwachung der Synchronisierungsgeschwindigkeit von Mergesynchronisierungen über Verbindungen mit hoher Bandbreite (LAN-Verbindungen).|  
-        |8|
-  `mergeslowrunspeed` - überwacht die Synchronisierungsgeschwindigkeit von Mergesynchronisierungen über Verbindungen mit niedriger Bandbreite (DFÜ-Verbindungen).|  
+        |7|`mergefastrunspeed` - Überwachung der Synchronisierungsgeschwindigkeit von Mergesynchronisierungen über Verbindungen mit hoher Bandbreite (LAN-Verbindungen).|  
+        |8|`mergeslowrunspeed` - überwacht die Synchronisierungsgeschwindigkeit von Mergesynchronisierungen über Verbindungen mit niedriger Bandbreite (DFÜ-Verbindungen).|  
   
     -   *enable* - <xref:System.Boolean> -Wert, der angibt, ob die Metrik für die Veröffentlichung aktiviert ist.  
   

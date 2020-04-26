@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e7b77b445ff8cbef8be3acb72ef9cdb6fa3af159
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63224596"
 ---
 # <a name="exploring-the-decision-tree-model-basic-data-mining-tutorial"></a>Untersuchen des Entscheidungsstrukturmodells (Lernprogramm zu Data Mining-Grundlagen)
@@ -22,7 +22,7 @@ ms.locfileid: "63224596"
   
 
   
-##  <a name="Decision_Tree_Tab"></a>Registerkarte Entscheidungsstruktur  
+##  <a name="decision-tree-tab"></a><a name="Decision_Tree_Tab"></a>Registerkarte Entscheidungsstruktur  
  Auf der Registerkarte **Entscheidungs** Struktur können Sie Entscheidungsbäume für jedes vorhersagbare Attribut im Dataset anzeigen.  
   
  In diesem Fall prognostiziert das Modell nur eine Spalte Bike Buyer, sodass nur eine Struktur angezeigt werden kann. Wenn weitere Strukturen vorhanden waren, können **Sie das Struktur** Feld verwenden, um eine andere Struktur auszuwählen.  
@@ -43,7 +43,7 @@ ms.locfileid: "63224596"
   
 3.  Folie **zeigt die Ebene** auf den vierten Balken an.  
   
-4.  Ändern Sie **** den Wert für `1`background in.  
+4.  Ändern Sie **Background** den Wert für `1`background in.  
   
      Durch Ändern der **Hintergrund** Einstellung können Sie schnell die Anzahl der Fälle in jedem Knoten sehen, die den Zielwert `1` für [Bike Buyer] aufweisen. In diesem besonderen Szenario stellt jeder Fall einen Kunden dar. Der Wert `1` gibt an, dass der Kunde zuvor ein Fahrrad gekauft hat. der Wert **0** gibt an, dass der Kunde kein Fahrrad gekauft hat. Je dunkler die Schattierung des Knotens ist, desto höher ist der Prozentsatz der Fälle im Knoten mit dem Zielwert.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "63224596"
      Das gleiche Arbeitsblatt wird angezeigt, und die Strukturspalten wurden an das Ende angefügt.  
   
   
-###  <a name="Dependency_Network_Tab"></a>Registerkarte Abhängigkeits Netzwerk  
+###  <a name="dependency-network-tab"></a><a name="Dependency_Network_Tab"></a>Registerkarte Abhängigkeits Netzwerk  
  Auf der Registerkarte **Abhängigkeits Netzwerk** werden die Beziehungen zwischen den Attributen angezeigt, die zur Vorhersagefähigkeit des Mining Modells beitragen. Der Abhängigkeitsnetzwerk-Viewer bestätigt die Erkenntnisse, dass Alter und Region wichtige Faktoren für den Kauf eines Fahrrads darstellen.  
   
 ##### <a name="to-explore-the-model-in-the-dependency-network-tab"></a>So untersuchen Sie das Modell auf der Registerkarte "Abhängigkeitsnetzwerk"  

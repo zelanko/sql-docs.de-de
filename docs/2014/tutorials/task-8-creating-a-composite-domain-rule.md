@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7e40ec982a9b2c43c3d55ec60179ac9a0b80e8a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489630"
 ---
-# <a name="task-8-creating-a-composite-domain-rule"></a>Aufgabe 8: Erstellen einer Verbunddomänenregel
+# <a name="task-8-creating-a-composite-domain-rule"></a>Aufgabe 8: Erstellen einer Verbunddomänenregel
   In dieser Aufgabe erstellen Sie eine Regel für die Verbund Domäne der **Adressvalidierung** . Sie definieren eine Domänen übergreifende Regel: Wenn **Stadt** " **Los Angeles**" ist, muss der **Status** " **ca** " lauten, wobei " **City** " und " **State** " zwei Domänen  
   
 1.  Wechseln Sie im rechten Bereich zur Registerkarte für die **CD-Regeln** .  
@@ -35,6 +35,6 @@ ms.locfileid: "65489630"
 6.  Klicken Sie am unteren Rand der Seite auf die Schaltfläche **Schließen** , um zur Hauptseite des DQS-Clients zu wechseln. In der nächsten Lektion veröffentlichen Sie die Wissensdatenbank. Beachten Sie, dass die Wissensdatenbank gesperrt ist (Schlosssymbol).  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 9: Konfigurieren eines Reference Data Service](../../2014/tutorials/task-9-configuring-a-reference-data-service.md)  
+ [Aufgabe 9: Konfigurieren eines Verweisdatendiensts](../../2014/tutorials/task-9-configuring-a-reference-data-service.md)  
   
   

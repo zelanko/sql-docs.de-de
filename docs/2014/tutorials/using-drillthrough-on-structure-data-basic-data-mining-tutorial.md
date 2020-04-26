@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 68d5d29a4aed7380bd7a53c65d140aac24912392
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62745541"
 ---
 # <a name="using-drillthrough-on-structure-data-basic-data-mining-tutorial"></a>Verwenden von Drillthrough für Strukturdaten (Lernprogramm zu Data Mining-Grundlagen)
@@ -24,9 +24,9 @@ ms.locfileid: "62745541"
   
 1.  Klicken Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]im Data Mining-Designer auf der Registerkarte **Miningmodelle** mit der rechten Maustaste auf das **TM_Decision_Tree** -Modell, und wählen Sie **Eigenschaften**aus.  
   
-2.  Klicken Sie im Fenster Eigenschaften auf **AllowDrillthrough**, und wählen Sie **True**aus.  
+2.  Klicken Sie im Eigenschaftenfenster auf **AllowDrillthrough**, und wählen Sie **True**aus.  
   
-3.  Klicken Sie auf der Registerkarte Miningmodelle mit der rechten Maustaste auf das Modell, und wählen Sie **Modell verarbeiten**aus.  
+3.  Klicken Sie auf der Registerkarte **Miningmodelle**mit der rechten Maustaste auf das Modell, und wählen Sie Modell verarbeiten aus.  
   
  Weitere Informationen finden Sie unter [Drillthrough-Abfragen &#40;Data Mining-&#41;](../../2014/analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62745541"
   
 2.  Wählen Sie das **TM_Decision_Tree** -Modell aus der Liste **Miningmodell** aus.  
   
-3.  Ändern Sie **** den Wert für `1`background in. Auf diese Weise zeigen Sie nur den Teil des Modells an, der sich auf Kunden bezieht, die Fahrräder gekauft haben.  
+3.  Ändern Sie **Background** den Wert für `1`background in. Auf diese Weise zeigen Sie nur den Teil des Modells an, der sich auf Kunden bezieht, die Fahrräder gekauft haben.  
   
 4.  Wählen Sie den Microsoft Struktur-Viewer aus der Liste **Viewer** aus. Dadurch wird eine Aktualisierung des Viewers mit den neuen Filterbedingungen erzwungen. Suchen Sie anschließend den Knoten **Age >= 34 und <41** , und klicken Sie mit der rechten Maustaste auf den Knoten.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62745541"
  Gratulation – Sie haben das Lernprogramm zu Data Mining-Grundlagen abgeschlossen. Nachdem Sie sich mit der Verwendung der Data Mining-Tools vertraut gemacht haben, wird empfohlen, das Data Mining-Lernprogramm für Fortgeschrittene zu absolvieren. Darin wird das Erstellen von Modellen für Vorhersagen, Market Basket-Analysen und Sequenzcluster veranschaulicht.  
   
 ## <a name="previous-task-in-lesson"></a>Vorherige Aufgabe in der Lektion  
- [Erstellen von Vorhersagen &#40;grundlegenden Data&#41;Mining-Lernprogramm](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
+ [Erstellen von Vorhersagen &#40;Tutorial zu Data Mining-Grundlagen&#41;](../../2014/tutorials/creating-predictions-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [erstellt eine Vorhersage mithilfe des Generators für Vorhersageabfragen](../../2014/analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  

@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8d873d3664c88963b17550734b488e6872a9cc84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721097"
 ---
 # <a name="lesson-3-configuring-distribution"></a>Lektion 3: Konfigurieren der Verteilung
@@ -31,7 +31,7 @@ ms.locfileid: "62721097"
 2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Replikation** , und klicken Sie anschließend auf **Verteilung konfigurieren**.  
   
     > [!NOTE]  
-    >  Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]localhost** anstelle des tatsächlichen Servernamens verwendet haben, um eine Verbindung mit ** herzustellen, werden Sie in einer Warnmeldung darauf hingewiesen, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht in der Lage ist, eine Verbindung mit dem Server **"localhost"** herzustellen. Klicken Sie im Warnungsdialogfeld auf **OK** . Ändern Sie im Dialogfeld **Verbindung mit Server herstellen** die Angabe für **Servername** von **localhost** in den Namen des Servers. Klicken Sie auf **Verbinden**.  
+    >  Wenn Sie **localhost[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anstelle des tatsächlichen Servernamens verwendet haben, um eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herzustellen, werden Sie in einer Warnmeldung darauf hingewiesen, dass ** nicht in der Lage ist, eine Verbindung mit dem Server **"localhost"** herzustellen. Klicken Sie im Warnungs Dialogfeld auf **OK** . Ändern Sie im Dialogfeld **Verbindung mit Server herstellen** die Angabe für **Servername** von **localhost** in den Namen des Servers. Klicken Sie auf **Verbinden**.  
   
      Der Verteilungskonfigurations-Assistent wird gestartet.  
   
@@ -47,11 +47,11 @@ ms.locfileid: "62721097"
   
 ### <a name="setting-database-permissions-at-the-publisher"></a>Festlegen der Datenbankberechtigungen auf dem Verleger  
   
-1.  Erweitern Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]den Knoten **Sicherheit**, klicken Sie mit der rechten Maustaste auf **Anmeldungen**, und wählen Sie anschließend **Neue Anmeldung**aus.  
+1.  Erweitern [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Sie in die Option **Sicherheit**, klicken Sie mit der rechten Maustaste auf **Anmeldungen**, und wählen Sie dann **neue Anmeldung**aus.  
   
-2.  Klicken Sie auf der Seite **Allgemein** auf **Suchen**, \<geben Sie _Machine_Name>_ **\ repl_snapshot** im Feld **Geben Sie die zu ausgewäfenden Objektnamen** ein ein, wobei \< *Machine_Name>* der Name des lokalen Verleger Servers ist. Klicken Sie auf **Namen überprüfen**, und klicken Sie dann auf **OK**.  
+2.  Klicken Sie auf der Seite **Allgemein** auf **Suchen**, geben Sie im Feld **Geben Sie die zu verwendenden Objektnamen ein** die Zeichenfolge \<_Machine_Name>_**\repl_snapshot** ein, wobei \<*Machine_Name>* der Name des lokalen Verlegerservers ist. Klicken Sie auf **Namen überprüfen**, und klicken Sie anschließend auf **OK**.  
   
-3.  Wählen Sie auf der Seite **Benutzerzuordnung** in der Liste **Benutzer, die dieser Anmeldung zugeordnet sind** sowohl die **Verteilungs** - als auch die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank aus.  
+3.  Wählen Sie auf der Seite **Benutzer Zuordnung** in der Liste **Benutzer, die dieser Anmeldung zugeordnet** sind **distribution** sowohl die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Verteilungs-als auch die-Datenbank aus.  
   
      Wählen Sie in der Liste **Daten bankrollen Mitgliedschaft** die `db_owner` Rolle für den Anmelde Namen für beide Datenbanken aus.  
   

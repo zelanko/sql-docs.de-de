@@ -19,21 +19,19 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: fe12f1c4ca1c0946572c61e89f4f4edb8ba9a762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185639"
 ---
 # <a name="market-basket-dmx-tutorial"></a>Market Basket DMX-Lernprogramm
   In diesem Lernprogramm erfahren Sie, wie Miningmodelle mithilfe der Abfragesprache Data Mining-Erweiterungen (Data Mining Extensions, DMX) erstellt, trainiert und analysiert werden. Anschließend verwenden Sie diese Miningmodelle zum Erstellen von Vorhersagen, die beschreiben, welche Produkte tendenziell als Kombinationskäufe erworben werden.  
   
- Die Miningmodelle werden aus Daten erstellt, die in der [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]-Beispieldatenbank enthalten sind. In dieser Datenbank werden Daten für das fiktive Unternehmen [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] gespeichert. 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ist ein großes, multinationales Produktionsunternehmen. Das Unternehmen fertigt und verkauft Fahrräder aus Metall und Verbundwerkstoffen auf dem nordamerikanischen, europäischen und asiatischen Markt. Der Hauptsitz befindet sich mit 290 Mitarbeitern in Bothell, Washington. Darüber hinaus sind mehrere regionale Vertriebsteams über die internationalen Zielmärkte des Unternehmens verteilt.  
+ Die Miningmodelle werden aus Daten erstellt, die in der [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]-Beispieldatenbank enthalten sind. In dieser Datenbank werden Daten für das fiktive Unternehmen [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] gespeichert. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] ist ein großes, multinationales Produktionsunternehmen. Das Unternehmen fertigt und verkauft Fahrräder aus Metall und Verbundwerkstoffen auf dem nordamerikanischen, europäischen und asiatischen Markt. Der Hauptsitz befindet sich mit 290 Mitarbeitern in Bothell, Washington. Darüber hinaus sind mehrere regionale Vertriebsteams über die internationalen Zielmärkte des Unternehmens verteilt.  
   
 ## <a name="tutorial-scenario"></a>Lernprogrammszenario  
- Das Unternehmen [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] hat entschieden, eine benutzerdefinierte Anwendung zu erstellen, die mithilfe von Data Mining-Funktionen vorhersagt, welche Produkte die Kunden tendenziell als Kombinationskauf erwerben. Das Ziel für die benutzerdefinierte Anwendung besteht darin, eine Reihe von Produkten anzugeben und vorherzusagen, welche zusätzlichen Produkte mit den angegebenen Produkten gekauft werden. 
-  [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] verwendet diese Informationen für eine Vorschlagsfunktion auf der entsprechenden Website sowie zur verbesserten Darstellung von Informationen für den Kunden.  
+ Das Unternehmen [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] hat entschieden, eine benutzerdefinierte Anwendung zu erstellen, die mithilfe von Data Mining-Funktionen vorhersagt, welche Produkte die Kunden tendenziell als Kombinationskauf erwerben. Das Ziel für die benutzerdefinierte Anwendung besteht darin, eine Reihe von Produkten anzugeben und vorherzusagen, welche zusätzlichen Produkte mit den angegebenen Produkten gekauft werden. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] verwendet diese Informationen für eine Vorschlagsfunktion auf der entsprechenden Website sowie zur verbesserten Darstellung von Informationen für den Kunden.  
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stellt mehrere Tools bereit, die zum Ausführen dieser Aufgabe verwendet werden [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] können:  
   
@@ -100,7 +98,7 @@ ms.locfileid: "63185639"
  [Lektion 4: Ausführen von Warenkorbvorhersagen](../../2014/tutorials/lesson-4-executing-market-basket-predictions.md)  
  In dieser Lektion erfahren Sie, wie mithilfe der `PREDICTION JOIN`-Anweisung Vorhersagen für Miningmodelle erstellt werden.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
  Stellen Sie vor dem Durchführen des Lernprogramms sicher, dass Folgendes installiert ist:  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]  
@@ -112,11 +110,11 @@ ms.locfileid: "63185639"
  Aus Sicherheitsgründen werden die Beispieldatenbanken standardmäßig nicht installiert. Um die offiziellen Beispiel Datenbanken für [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]zu installieren, wechseln [http://www.CodePlex.com/MSFTDBProdSamples](https://go.microsoft.com/fwlink/?LinkId=88417) Sie zu oder auf der Startseite Microsoft SQL Server Samples and Community Projects des Abschnitts Microsoft SQL Server Product Samples. Klicken Sie auf **Datenbanken**und anschließend auf die Registerkarte **Releases** , und wählen Sie die gewünschten Datenbanken aus.  
   
 > [!NOTE]  
->  Wenn Sie Tutorials überprüfen, empfiehlt es sich, der Symbolleiste in der Dokument Anzeige die Schaltflächen **Nächstes Thema** und **Vorheriges Thema** hinzuzufügen.  
+>  Zur besseren Anzeige der Lernprogramme empfehlen wir Ihnen, dass Sie der Symbolleiste in der Dokumentanzeige die Schaltflächen **Nächstes Thema** und **Vorheriges Thema** hinzufügen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Tutorial zu Bike Buyer DMX](../../2014/tutorials/bike-buyer-dmx-tutorial.md)   
  [Tutorial zu Data Mining-Grundlagen](../../2014/tutorials/basic-data-mining-tutorial.md)   
- [Lektion 3: aufbauen eines Market Basket-Szenarios &#40;Data Mining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Lektion 3: Erstellen eines Warenkorbszenarios &#40;Data Mining-Tutorial für Fortgeschrittene&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
   
   

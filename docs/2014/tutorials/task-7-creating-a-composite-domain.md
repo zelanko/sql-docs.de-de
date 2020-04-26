@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bbc00117e10e48adbde37b9f0561610feff8f87e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65488968"
 ---
-# <a name="task-7-creating-a-composite-domain"></a>Aufgabe 7: Erstellen einer Verbunddomänenregel
+# <a name="task-7-creating-a-composite-domain"></a>Aufgabe 7: Erstellen einer Verbunddomäne
   In dieser Aufgabe erstellen Sie eine Verbund Domäne, **Address Validation**(Adress **Zeile**, **Ort**, **Bundesland**und **ZIP** -Domänen). Mit einer Verbunddomäne können Sie eine domänenübergreifende Regel definieren, die mehrere Domänen an einer Regel beteiligt. Eine Verbunddomäne hat weitere Vorteile, beispielsweise die Möglichkeit, einen Feldwert für mehrere Domänen zu analysieren.  Beispielsweise kann ein Wert für ein Feld "Full Name" für separate Domänen "First Name", "Middle Name" und "Last Name" analysiert werden. Im Rahmen dieses Lernprogramms definieren Sie nur eine domänenübergreifende Regel. Weitere Informationen finden Sie unter [Verwalten einer Verbund Domäne](https://msdn.microsoft.com/library/hh510399.aspx) .  
   
 1.  Klicken Sie im linken Bereich auf der Symbolleiste auf die Schaltfläche **Verbund Domäne erstellen** .  
@@ -33,6 +33,6 @@ ms.locfileid: "65488968"
 4.  Klicken Sie auf **OK** , um das Dialogfeld zu schließen.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 8: Erstellen einer Verbunddomänenregel](../../2014/tutorials/task-8-creating-a-composite-domain-rule.md)  
+ [Aufgabe 8: Erstellen einer Verbunddomänenregel](../../2014/tutorials/task-8-creating-a-composite-domain-rule.md)  
   
   

@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d3e8b5f0be58d9153fbe4d0ffd0287ea753fcc5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62721083"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>Lektion 2: Erstellen eines Abonnements für die Transaktionsveröffentlichung
@@ -36,7 +36,7 @@ ms.locfileid: "62721083"
   
 5.  Wenn der Name der Abonnenteninstanz auf der Seite Abonnenten nicht angezeigt wird, klicken Sie auf **Abonnent hinzufügen**, klicken Sie auf **SQL Server-Abonnenten hinzufügen**, geben Sie den Namen der Abonnenteninstanz im Dialogfeld **Verbindung mit Server herstellen** ein, und klicken Sie dann auf **Verbinden**.  
   
-6.  Wählen Sie auf der Seite Abonnenten den Instanznamen des Abonnenten Servers aus, und wählen Sie **** ** \<** unter Abonnement Datenbank die Option neue Daten Bank>aus.  
+6.  Wählen Sie auf der Seite Abonnenten den Instanznamen des Abonnenten Servers aus, und wählen Sie **Subscription Database** ** \<** unter Abonnement Datenbank die Option neue Daten Bank>aus.  
   
 7.  Geben Sie im Dialogfeld **Neue Datenbank** den Namen **ProductReplica** in das Feld **Datenbankname** ein, klicken Sie auf **OK**, und klicken Sie dann auf **Weiter**.  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62721083"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Initialisieren eines Abonnements mit einer Momentaufnahme](initialize-a-subscription-with-a-snapshot.md)   
- [Create a Push Subscription](create-a-push-subscription.md)   
+ [Erstellen eines Pushabonnements](create-a-push-subscription.md)   
  [Abonnieren von Veröffentlichungen](subscribe-to-publications.md)  
   
   

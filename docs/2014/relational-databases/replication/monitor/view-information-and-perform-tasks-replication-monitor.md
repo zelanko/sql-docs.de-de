@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 400db44d053caf131ef13947adbd0154875995cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62667131"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor
@@ -38,10 +38,10 @@ Im Replikationsmonitor finden Sie mehrere Registerkarten und Optionen, mit denen
     -   Protokolllese-Agent, der von allen Transaktionsveröffentlichungen verwendet wird.    
     -   Dem Warteschlangenlese-Agent, der von Transaktionsveröffentlichungen verwendet wird, die Abonnements mit verzögertem Update über eine Warteschlange aufweisen.  
   
--   **Warnungen** (für Verteiler, [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] auf denen und höher ausgeführt wird)   
+-   **Warnungen** (bei Verteilern, auf denen [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder höher ausgeführt wird)   
     -   Auf dieser Registerkarte können Sie Warnungen für Agents angeben.  
   
--   Überwachungs **Token** (nur bei der Transaktions Replikation für Verteiler, auf [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] denen und höher ausgeführt wird)  
+-   **Überwachungstoken** (nur bei der Transaktionsreplikation für Verteiler, auf denen [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder höher ausgeführt wird)  
   
      Über diese Registerkarte können Sie die Latenzzeit messen, d. h. die Zeitspanne zwischen dem Ausführen des Commit für eine Transaktion auf dem Verleger und dem Ausführen des Commit für die entsprechende Aktion auf dem Abonnenten.  
   
@@ -168,5 +168,5 @@ Im Replikationsmonitor finden Sie mehrere Registerkarten und Optionen, mit denen
 
 ## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen und Ändern von Veröffentlichungseigenschaften](../publish/view-and-modify-publication-properties.md)   
- [Überwachen der Replikation](../monitoring-replication.md)  
+ [Überwachung der Replikation](../monitoring-replication.md)  
   

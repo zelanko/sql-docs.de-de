@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2716e985897f8115d189d9410b7cdb13fb1af291
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62822066"
 ---
 # <a name="lesson-5-extending-the-time-series-model"></a>Lektion 5: Erweitern des Zeitreihenmodells
@@ -61,7 +61,7 @@ PREDICTION JOIN <source query>
     SELECT [<model columns>,] PredictTimeSeries(<table column reference>, n, EXTEND_MODEL_CASES)   
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     SELECT [Model Region],  
@@ -78,7 +78,7 @@ PREDICTION JOIN <source query>
     FROM <mining model>  
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     FROM [Forecasting_MIXED]  
@@ -90,7 +90,7 @@ PREDICTION JOIN <source query>
     PREDICTION JOIN <source query>  
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     NATURAL PREDICTION JOIN   
@@ -111,7 +111,7 @@ PREDICTION JOIN <source query>
     [WHERE <criteria>]  
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     WHERE [ModelRegion] = 'M200 Europe' OR  
@@ -177,7 +177,7 @@ PREDICTION JOIN <source query>
 |M200 Pacific|9/25/2008 12:00:00 AM|38|38|  
 |M200 Pacific|10/25/2008 12:00:00 AM|41|41|  
 |M200 Pacific|11/25/2008 12:00:00 AM|36|36|  
-|M200 Pacific|12/25/2008 12:00:00 AM|11,9|11,9|  
+|M200 Pacific|12/25/2008 12:00:00 AM|39|39|  
   
  Aus diesen Ergebnissen sind zwei Dinge ersichtlich:  
   
@@ -234,6 +234,6 @@ WHERE [ModelRegion] = 'M200 Europe'
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Abfrage Beispiele für Zeitreihen Modelle](../../2014/analysis-services/data-mining/time-series-model-query-examples.md)   
- [Prättimeseries &#40;DMX-&#41;](/sql/dmx/predicttimeseries-dmx)  
+ [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx)  
   
   

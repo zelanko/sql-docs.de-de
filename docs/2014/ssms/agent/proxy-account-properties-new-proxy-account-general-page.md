@@ -13,20 +13,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59361a2c0428be8ec7f2abc5b3a7fd199611bccc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62650201"
 ---
 # <a name="proxy-account-properties-and-new-proxy-account-general-page"></a>Proxykontoeigenschaften und neues Proxykonto (Seite „Allgemein“)
   Verwenden Sie diese Seite, um die Eigenschaften eines [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxy Kontos anzuzeigen oder zu ändern.  
   
-## <a name="options"></a>Tastatur  
- **Proxy Name**  
+## <a name="options"></a>Optionen  
+ **Proxyname**  
  Geben Sie den Namen des Proxys ein.  
   
- **Name der Anmelde Informationen**  
+ **Name der Anmeldeinformationen**  
  Geben Sie den Namen der Anmeldeinformationen für den Proxy ein.  
   
 > [!NOTE]  
@@ -38,10 +38,10 @@ ms.locfileid: "62650201"
  **Beschreibung**  
  Geben Sie die Beschreibung für den Proxy ein.  
   
- **Aktiv in den folgenden Subsystemen**  
+ **Folgenden Subsystemen gegenüber aktiv**  
  Wählen Sie die Subsysteme aus, auf die das Proxykonto zugreifen kann.  
   
- **Neuzuweisen von Auftrags Schritten**  
+ **Auftragsschritte erneut zuweisen an**  
  Wählen Sie den Proxy aus, dem die Auftragsschritte neu zugewiesen werden sollen. Die Liste ist aktiviert, wenn Sie den Zugriff auf ein Subsystem aufheben, auf das der Proxy vorher zugreifen konnte.  
   
 ## <a name="see-also"></a>Weitere Informationen  

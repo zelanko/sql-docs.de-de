@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2513bc3837dd224f6561eb0015ced538ea3add8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62678451"
 ---
 # <a name="lesson-1-creating-a-time-series-mining-model-and-mining-structure"></a>Lektion 1: Erstellen eines Miningmodells und einer Miningstruktur für eine Zeitreihe
@@ -100,7 +100,7 @@ CREATE MINING MODEL [Mining Model Name]
     [mining model name]   
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     [Forecasting_MIXED]  
@@ -112,7 +112,7 @@ CREATE MINING MODEL [Mining Model Name]
     <key columns>  
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     [Reporting Date] DATE KEY TIME,  
@@ -129,7 +129,7 @@ CREATE MINING MODEL [Mining Model Name]
     < predictable attribute columns> )  
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     [Quantity] LONG CONTINUOUS PREDICT,  
@@ -144,7 +144,7 @@ CREATE MINING MODEL [Mining Model Name]
     WITH DRILLTHROUGH  
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     USING Microsoft_Time_Series(AUTO_DETECT_PERIODICITY = 0.8, FORECAST_METHOD = 'MIXED')  
@@ -195,7 +195,7 @@ CREATE MINING MODEL [Mining Model Name]
  In der nächsten Lektion fügen Sie der **Forecasting_MIXED** Mining Struktur, die Sie soeben erstellt haben, ein Mining Modell hinzu.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 2: Hinzufügen von Miningmodellen zur Zeitreihen-Miningstruktur](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
+ [Lektion 2: Hinzufügen von Miningmodellen zur Miningstruktur für Zeitreihen](../../2014/tutorials/lesson-2-adding-mining-models-to-the-time-series-mining-structure.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Mining Modell Inhalt von Zeitreihen Modellen &#40;Analysis Services Data Mining-&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)   

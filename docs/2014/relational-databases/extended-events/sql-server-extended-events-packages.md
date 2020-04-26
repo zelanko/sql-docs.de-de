@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62638741"
 ---
 # <a name="sql-server-extended-events-packages"></a>Pakete für erweiterte Ereignisse von SQL Server
@@ -36,7 +36,7 @@ ms.locfileid: "62638741"
   
  Ein Paket kann eines oder alle der folgenden Objekte enthalten. Eine detailliertere Beschreibung der Objekte finden Sie weiter unten in diesem Thema:  
   
--   Events  
+-   Ereignisse  
   
 -   Ziele  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62638741"
   
  ![Die Beziehung zwischen einem Modul, Paketen und einem Objekt](../../database-engine/media/xepackagesobjects.gif "Die Beziehung zwischen einem Modul, Paketen und einem Objekt")  
   
-### <a name="events"></a>Events  
+### <a name="events"></a>Ereignisse  
  Mithilfe von Ereignissen werden relevante Punkte im Ausführungspfad eines Programms überwacht, z. B. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Das Auslösen eines Ereignisses bedeutet immer auch, dass der relevante Punkt erreicht wurde, und liefert Informationen über den Status zu dem Zeitpunkt, an dem das Ereignis ausgelöst wurde.  
   
  Ereignisse können ausschließlich für Ablaufverfolgungszwecke oder auslösende Aktionen verwendet werden. Diese Aktionen können synchron oder asynchron sein.  
@@ -70,7 +70,7 @@ ms.locfileid: "62638741"
 #### <a name="event-categorization"></a>Ereigniskategorisierung  
  Extended Events verwendet ein Ereigniskategorisierungsmodell ähnlich der Ereignisablaufverfolgung für Windows (Event Tracing for Windows, ETW). Zwei Ereigniseigenschaften werden für die Kategorisierung verwendet, und zwar Kanal und Schlüsselwort. Durch die Verwendung dieser Eigenschaften wird die Integration von Extended Events in ETW und die zugehörigen Tools unterstützt.  
   
- **Channel**  
+ **Kanal**  
   
  Ein Kanal identifiziert die Zielgruppe für ein Ereignis. Eine Beschreibung zu diesen Kanälen finden Sie in der folgenden Tabelle.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "62638741"
 |Admin|Admin-Ereignisse sind hauptsächlich für Endbenutzer, Administratoren und Supportmitarbeiter vorgesehen. Die Ereignisse, die in den Admin-Kanälen gefunden werden, weisen auf ein Problem mit einer wohldefinierten Lösung hin, zu dessen Behebung ein Administrator Maßnahmen ergreifen kann. Ein Beispiel für ein Admin-Ereignis ist, wenn beim Herstellen einer Verbindung mit einem Drucker ein Fehler auftritt. Diese Ereignisse sind entweder umfassend beschrieben oder weisen eine Meldung mit Hinweisen zur Behebung des Fehlers auf.|  
 |Bei Betrieb|Operational-Ereignisse werden zum Analysieren und Diagnostizieren eines Problems oder eines Vorkommens verwendet. Mit ihnen können basierend auf dem Problem oder dem Vorkommen Tools oder Tasks ausgelöst werden. Ein Beispiel für ein solches Ereignis ist, wenn ein Drucker einem System hinzugefügt oder daraus entfernt wird.|  
 |Analytic|Analytic-Ereignisse werden in großem Umfang veröffentlicht. Sie beschreiben Programmvorgänge und werden in der Regel in Leistungsuntersuchungen verwendet.|  
-|Debuggen|Debug-Ereignisse werden ausschließlich von Entwicklern zum Diagnostizieren eines Problems verwendet, das Debuggen erforderlich macht.<br /><br /> Hinweis: Ereignisse im Debug-Kanal geben interne Implementierungs spezifische Zustandsdaten zurück. Die Schemas und Daten, die die von den Ereignissen zurückgegeben werden, werden in künftigen Versionen von SQL Server möglicherweise geändert oder werden ungültig. Daher werden Ereignisse im Debug-Kanal in künftigen Versionen von SQL Server unter Umständen ohne vorherigen Hinweis geändert oder entfernt.|  
+|Debug|Debug-Ereignisse werden ausschließlich von Entwicklern zum Diagnostizieren eines Problems verwendet, das Debuggen erforderlich macht.<br /><br /> Hinweis: Ereignisse im Debug-Kanal geben interne Implementierungs spezifische Zustandsdaten zurück. Die Schemas und Daten, die die von den Ereignissen zurückgegeben werden, werden in künftigen Versionen von SQL Server möglicherweise geändert oder werden ungültig. Daher werden Ereignisse im Debug-Kanal in künftigen Versionen von SQL Server unter Umständen ohne vorherigen Hinweis geändert oder entfernt.|  
   
  **Schlüsselwort**  
   
@@ -137,7 +137,7 @@ where name = 'keyword_map'
 ### <a name="types"></a>Typen  
  Da es sich bei Daten um eine Auflistung aneinandergereihter Bytes handelt, werden zum Interpretieren der Daten die Länge und die Eigenschaften der Byte-Auflistung benötigt. Diese Informationen werden im Typ-Objekt gekapselt. Die folgenden Typen werden für Paketobjekte bereitgestellt:  
   
--   Ereignis  
+-   event  
   
 -   action  
   
@@ -147,7 +147,7 @@ where name = 'keyword_map'
   
 -   pred_compare  
   
--   type  
+-   Typ  
   
  Weitere Informationen finden Sie unter [sys.dm_xe_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-objects-transact-sql).  
   
@@ -214,8 +214,8 @@ where name = 'lock_mode'
  Ausgehend von dieser Tabelle wird als Beispiel eine Spalte mit dem Namen mode und dem Wert 5 angenommen. Die Tabelle gibt an, dass 5 zu X zugeordnet wird. Das bedeutet, dass der Sperrentyp Exclusive ist.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Extended Events Sessions](sql-server-extended-events-sessions.md)   
- [Engine für erweiterte Ereignisse von SQL Server](sql-server-extended-events-engine.md)   
+ [SQL Server Sitzungen für erweiterte Ereignisse](sql-server-extended-events-sessions.md)   
+ [SQL Server-Engine für erweiterte Ereignisse](sql-server-extended-events-engine.md)   
  [Ziele für erweiterte Ereignisse von SQL Server](../../database-engine/sql-server-extended-events-targets.md)  
   
   

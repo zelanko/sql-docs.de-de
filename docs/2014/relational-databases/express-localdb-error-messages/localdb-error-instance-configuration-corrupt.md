@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40e660cc41724310e7462b2d78b7d3d8787784ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62519274"
 ---
 # <a name="localdb_error_instance_configuration_corrupt"></a>LOCALDB_ERROR_INSTANCE_CONFIGURATION_CORRUPT
@@ -29,7 +29,7 @@ ms.locfileid: "62519274"
 |Komponente|Laufzeit-API der lokalen Datenbank|  
 |Meldungstext|Die lokale Datenbankinstanz ist beschädigt. Ausführliche Fehlerinformationen finden Sie im Windows-Anwendungsereignisprotokoll.|  
   
-## <a name="explanation"></a>Erklärung  
+## <a name="explanation"></a>Erläuterung  
  Eine Instanzkonfiguration ist beschädigt.  
   
 ## <a name="user-action"></a>Benutzeraktion  

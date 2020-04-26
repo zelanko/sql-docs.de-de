@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6aa4074aa04af86e478b57b1870fd0dd855bea8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63315079"
 ---
 # <a name="exploring-the-call-center-model-intermediate-data-mining-tutorial"></a>Prüfen des Callcentermodells (Data Mining-Lernprogramm für Fortgeschrittene)
@@ -24,7 +24,7 @@ ms.locfileid: "63315079"
   
 -   [Microsoft Generic Content Tree Viewer](#bkmk_genviewer) **:** dieser Standard-Viewer stellt ausführliche Details zu den Mustern und Statistiken bereit, die vom Algorithmus beim Generieren des Modells erkannt wurden.  
   
-##  <a name="bkmk_NNviewer"></a>Microsoft-Viewer für neuronale Netzwerke  
+##  <a name="microsoft-neural-network-viewer"></a><a name="bkmk_NNviewer"></a>Microsoft-Viewer für neuronale Netzwerke  
  Der Viewer enthält drei Bereiche: **Eingabe**, **Ausgabe**und **Variablen**.  
   
  Mithilfe des **Ausgabe** Bereichs können Sie unterschiedliche Werte für das vorhersagbare Attribut oder die abhängige Variable auswählen. Wenn das Modell mehrere vorhersagbare Attribute enthält, können Sie das Attribut aus der Liste **Ausgabe Attribut** auswählen.  
@@ -107,14 +107,14 @@ ms.locfileid: "63315079"
   
  Wenn Sie jedoch die Liste der Faktoren genauer überprüfen, finden Sie einige andere Faktoren, die weniger deutliche Auswirkungen haben und schwieriger zu interpretieren sind. Zum Beispiel scheint die Schicht die Dienstqualität zu beeinflussen, aber das Liftergebnis und die relativen Wahrscheinlichkeiten geben an, dass die Schicht kein Hauptfaktor ist.  
   
-|attribute|value|Begünstigt \< 0,07|Begünstigt >= 0,12|  
+|attribute|Wert|Begünstigt \< 0,07|Begünstigt >= 0,12|  
 |---------------|-----------|--------------------|----------------------|  
 |Average Time Per Issue|89,087-120,000||Ergebnis: 100<br /><br /> Wahrscheinlichkeit von value1:4,45%<br /><br /> Wahrscheinlichkeit von Value2:51,94%<br /><br /> Lift für value1:0,19<br /><br /> Lift für Value2:1,94|  
 |Average Time Per Issue|44,000-70,597|Ergebnis: 92,35<br /><br /> Wahrscheinlichkeit von Wert 1: 60,06 %<br /><br /> Wahrscheinlichkeit von Wert 2: 8,30 %<br /><br /> Lift für Wert 1: 2,61<br /><br /> Lift für Wert 2: 0,31||  
   
  [Zurück zum Anfang](#bkmk_NNviewer)  
   
-##  <a name="bkmk_genviewer"></a>Microsoft Generic Content Tree-Viewer  
+##  <a name="microsoft-generic-content-tree-viewer"></a><a name="bkmk_genviewer"></a>Microsoft Generic Content Tree-Viewer  
  Mit diesem Viewer können Sie die vom Algorithmus bei der Modellverarbeitung erstellten Informationen noch ausführlicher untersuchen. Der **microsoftgeneric Content Tree Viewer** stellt das Mining Modell als eine Reihe von Knoten dar, in denen jeder Knoten gelernte Informationen über die Trainingsdaten repräsentiert. Dieser Viewer kann mit allen Modellen verwendet werden, die Inhalte der Knoten variieren jedoch abhängig vom Modelltyp.  
   
  Bei neuronalen Netzwerkmodellen oder logistischen Regressionsmodellen kann z. B. der `marginal statistics node` sehr nützlich sein. Dieser Knoten enthält abgeleitete Statistiken über die Werteverteilung in den Daten. Diese Informationen können nützlich sein, um ohne die Ausführung vieler T-SQL-Abfragen schnell eine Zusammenfassung der Daten zu erhalten. Das Diagramm mit Klassifizierungswerten im vorherigen Thema wurde aus dem Knoten für Randstatistiken abgeleitet.  

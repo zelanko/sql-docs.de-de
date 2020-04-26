@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7c5fc9d863c23c1cae08c04fef7810aeda446762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65476988"
 ---
-# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Aufgabe 13: Hinzufügen von OLE DB-Ziels, um Daten in die MDS-Stagingtabelle zu schreiben
+# <a name="task-13-adding-ole-db-destination-to-write-data-to-mds-staging-table"></a>Aufgabe 13: Hinzufügen von OLE DB-Zielen zum Schreiben von Daten in die MDS-Stagingtabelle
   Nachdem Sie die Werte für " **importtype** " und " **batchtag** " allen Datensätzen hinzugefügt haben, können Sie Sie für das Staging an MDS senden. In dieser Aufgabe verwenden Sie das OLE DB Ziel, um die Daten in die **Stagingtabelle "STG. supplier_Leaf** " zu schreiben.  
   
 1.  Ziehen Sie **OLE DB Ziel** aus dem Abschnitt **andere Ziele** in der **SSIS-Toolbox** auf die Registerkarte **Datenfluss** , und legen Sie Sie unter für **MDS erforderliche Spalten hinzufügen**fest.  
@@ -49,6 +49,6 @@ ms.locfileid: "65476988"
      ![Abgeschlossener Datenfluss](../../2014/tutorials/media/et-addingoledbdestinationtowdtomdsst-03.jpg "Abgeschlossener Datenfluss")  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 14: Hinzufügen von Execute SQL Task zur Ablaufsteuerung, um die gespeicherte Prozedur für MDS auszuführen](../../2014/tutorials/task-14-add-execute-to-control-flow-run-mds-stored-procedure.md)  
+ [Aufgabe 14: Hinzufügen des Tasks „SQL ausführen“ zur Ablaufsteuerung, um die gespeicherte Prozedur für MDS auszuführen](../../2014/tutorials/task-14-add-execute-to-control-flow-run-mds-stored-procedure.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6a6e123e525512a72d70bcc8ca2eba549d1347e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676279"
 ---
 # <a name="lesson-1-creating-the-market-basket-mining-structure"></a>Lektion 1: Erstellen der Market Basket-Miningstruktur
@@ -80,8 +80,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
  Informationen zu den Typen von Mining Struktur Spalten, die Sie definieren können, finden Sie unter [Mining Struktur Spalten](../../2014/analysis-services/data-mining/mining-structure-columns.md).  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] erstellt standardmäßig ein zu 30 % zurückgehaltenes Dataset für jede Miningstruktur. Wenn Sie jedoch DMX zum Erstellen einer Miningstruktur verwenden, müssen Sie das zurückgehaltene Dataset (falls gewünscht) manuell hinzufügen.  
+>  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] erstellt standardmäßig ein zu 30 % zurückgehaltenes Dataset für jede Miningstruktur. Wenn Sie jedoch DMX zum Erstellen einer Miningstruktur verwenden, müssen Sie das zurückgehaltene Dataset (falls gewünscht) manuell hinzufügen.  
   
 ## <a name="lesson-tasks"></a>Lektionsaufgaben  
  Im Rahmen dieser Lektion führen Sie die folgenden Aufgaben aus:  
@@ -118,7 +117,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
     [mining structure name]   
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     [Market Basket]  
@@ -130,7 +129,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
     <key column>  
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     OrderNumber TEXT KEY  
@@ -144,7 +143,7 @@ CREATE MINING STRUCTURE [Mining Structure Name]
        <nested mining structure columns> )  
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     [Products] TABLE (  

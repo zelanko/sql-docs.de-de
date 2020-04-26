@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 65adf53cc7401053b66b8c77839b267e7d20406a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62704625"
 ---
 # <a name="new-job-schedule-job-schedule-properties"></a>Neuer Auftragszeitplan: Eigenschaften des Auftragszeitplans
@@ -37,22 +37,22 @@ ms.locfileid: "62704625"
  Klicken Sie zum Aktivieren oder Deaktivieren des Zeitplans auf das Kontrollkästchen.  
   
 ## <a name="recurring-schedule-types-options"></a>Zeitplantypoptionen für wiederkehrende Aufträge  
- **Vorkommen**  
+ **Tritt auf**  
  Wählen Sie das Intervall aus, nach dem der Zeitplan wiederholt wird.  
   
  **Wiederholen alle**  
  Wählen Sie die Anzahl der Tage oder Wochen aus, die zwischen der wiederholten Ausführung des Zeitplans liegen. Bei monatlich wiederholten Zeitplänen ist diese Option nicht verfügbar.  
   
- **Pfingst**  
+ **Montag**  
  Legt fest, dass der Auftrag an einem Montag ausgeführt wird. Nur bei wöchentlich wiederholten Zeitplänen verfügbar.  
   
  **Mitteilte**  
  Legt fest, dass der Auftrag an einem Dienstag ausgeführt wird. Nur bei wöchentlich wiederholten Zeitplänen verfügbar.  
   
- **Mittwoch**  
+ **Wednesday**  
  Legt fest, dass der Auftrag an einem Mittwoch ausgeführt wird. Nur bei wöchentlich wiederholten Zeitplänen verfügbar.  
   
- **Thursday**  
+ **Mitteilte**  
  Legt fest, dass der Auftrag an einem Donnerstag ausgeführt wird Nur bei wöchentlich wiederholten Zeitplänen verfügbar.  
   
  **Am**  
@@ -61,13 +61,13 @@ ms.locfileid: "62704625"
  **Samstag**  
  Legt fest, dass der Auftrag an einem Samstag ausgeführt wird Nur bei wöchentlich wiederholten Zeitplänen verfügbar.  
   
- **Sunday**  
+ **Sonntag**  
  Legt fest, dass der Auftrag an einem Sonntag ausgeführt wird Nur bei wöchentlich wiederholten Zeitplänen verfügbar.  
   
  **Ertag**  
  Wählen Sie den Tag des Monats aus, an dem der Zeitplan ausgeführt werden soll. Nur bei monatlich wiederholten Zeitplänen verfügbar.  
   
- **Alle**  
+ **alle**  
  Wählen Sie die Anzahl der Monate aus, die zwischen wiederholten Ausführungen des Zeitplans liegen sollen. Nur bei monatlich wiederholten Zeitplänen verfügbar.  
   
  **Die**  
@@ -97,6 +97,6 @@ ms.locfileid: "62704625"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen und Anfügen von Zeitplänen an Aufträge](create-and-attach-schedules-to-jobs.md)   
- [Schedule a Job](schedule-a-job.md)  
+ [Planen eines Auftrags](schedule-a-job.md)  
   
   

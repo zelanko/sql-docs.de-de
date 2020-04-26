@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c251a77d0272e069d57b46940f8fcb06144653a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "62767432"
 ---
 # <a name="step-3-modifying-the-flat-file-connection-manager"></a>Schritt 3: Ändern des Flatfile-Verbindungs-Managers
@@ -26,11 +26,11 @@ ms.locfileid: "62767432"
   
 1.  Klicken Sie im Bereich **Verbindungs-Manager** mit der rechten Maustaste auf **Sample Flat File Source Data**(Beispielquelldaten von Flatfiles), und wählen Sie **Eigenschaften**aus.  
   
-2.  Klicken Sie im Eigenschaftenfenster für **Ausdrücke** in die leere Zelle, und klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)**.  
+2.  Klicken Sie im Eigenschaftenfenster für **Ausdrücke**in die leere Zelle, und klicken Sie dann auf die Schaltfläche mit den Auslassungs Punkten **(...)**.  
   
 3.  Geben Sie im Dialogfeld **Eigenschafts Ausdrucks-Editor** in der Spalte **Eigenschaft** den Text `ConnectionString`ein, oder wählen Sie ihn aus.  
   
-4.  Klicken Sie in der Spalte **Ausdruck** auf die Schaltfläche mit den Auslassungspunkten **(...)**, um das Dialogfeld **Ausdrucks-Generator** zu öffnen.  
+4.  Klicken Sie in der Spalte **Ausdruck** auf die Schaltfläche mit den Auslassungs Punkten **(...)** , um das Dialogfeld **Ausdrucks** -Generator zu öffnen.  
   
 5.  Erweitern Sie im Dialogfeld **Ausdrucks-Generator** den Knoten **Variablen** .  
   
@@ -41,6 +41,6 @@ ms.locfileid: "62767432"
 8.  Klicken Sie auf **OK** , um das Dialogfeld **Eigenschaftsausdrucks-Editor** zu schließen.  
   
 ## <a name="next-lesson-task"></a>Aufgabe in der nächsten Lektion  
- [Schritt 4: Testen des Lektion 2-Tutorialpakets](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
+ [Schritt 4: Testen des Tutorialpakets aus Lektion 2](../integration-services/lesson-2-4-testing-the-lesson-2-tutorial-package.md)  
   
   
