@@ -218,8 +218,10 @@
           items:
             - name: Problembehandlung für Kubernetes
               href: big-data-cluster/cluster-troubleshooting-commands.md
-            - name: Active Directory-Gruppenbereich
+            - name: Active Directory-Integration
               href: big-data-cluster/troubleshoot-active-directory.md
+            - name: HDFS-Administratorrechte
+              href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
     - name: Verweis
       items:
         - name: BDC-Partner
