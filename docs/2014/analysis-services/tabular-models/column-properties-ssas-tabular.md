@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2773c2b837aa9344e2e8427c6f960fa098fa2408
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067611"
 ---
 # <a name="column-properties-ssas-tabular"></a>Spalteneigenschaften (SSAS – tabellarisch)
@@ -28,23 +28,23 @@ ms.locfileid: "66067611"
   
 -   [So konfigurieren Sie Eigenschafteneinstellungen für Spalten](#bkmk_config_prop)  
   
-##  <a name="bkmk_properties"></a>Spalten Eigenschaften  
+##  <a name="column-properties"></a><a name="bkmk_properties"></a>Spalten Eigenschaften  
  **Grundlegend**  
   
-|Eigenschaft|Standardeinstellung|BESCHREIBUNG|  
+|Eigenschaft|Standardeinstellung|Beschreibung|  
 |--------------|---------------------|-----------------|  
 |**Spalten Name**||Der Name der Spalte, der im Modell gespeichert und in der Feldliste von Berichtserstellungsclients angezeigt wird.|  
-|**Daten Format**|Wird automatisch während des Imports bestimmt.|Gibt das Anzeigeformat an, das für Daten in dieser Spalte verwendet werden soll. Nachdem Sie ein Datenformat festgelegt haben, können Sie Eigenschaften festlegen, die für jedes Format spezifisch sind. Wenn Sie z. B. das Format **Währung** wählen, können Sie die Anzahl der sichtbaren Dezimalstellen festlegen und das Tausendertrennzeichen und das Währungssymbol auswählen. Diese Eigenschaft verfügt über folgende Optionen:<br /><br /> **Allgemein**<br /><br /> **Dezimalzahl**<br /><br /> **Ganze Zahl**<br /><br /> **Währungs**<br /><br /> **Aler**<br /><br /> **Wissenschaftlich**<br /><br /> Wenn die Spaltenwerte Bilder enthalten, siehe **Repräsentatives Bild**.|  
+|**Daten Format**|Wird automatisch während des Imports bestimmt.|Gibt das Anzeigeformat an, das für Daten in dieser Spalte verwendet werden soll. Nachdem Sie ein Datenformat festgelegt haben, können Sie Eigenschaften festlegen, die für jedes Format spezifisch sind. Wenn Sie z. B. das Format **Währung** wählen, können Sie die Anzahl der sichtbaren Dezimalstellen festlegen und das Tausendertrennzeichen und das Währungssymbol auswählen. Diese Eigenschaft verfügt über folgende Optionen:<br /><br /> **Allgemein**<br /><br /> **Decimal Number**<br /><br /> **Ganze Zahl**<br /><br /> **Währung**<br /><br /> **Prozentwert**<br /><br /> **Wissenschaftlich**<br /><br /> Wenn die Spaltenwerte Bilder enthalten, siehe **Repräsentatives Bild**.|  
 |**Datentyp**|Wird automatisch während des Imports bestimmt.|Gibt den Datentyp für alle Werte in der Spalte an.|  
 |**Beschreibung**||Eine Textbeschreibung für die Spalte.<br /><br /> In bestimmten Berichtserstellungsclients wird die Beschreibung als QuickInfo angezeigt, wenn der Endbenutzer den Cursor über dieser Spalte in der Feldliste hält.|  
-|**Ausgeblendet**|False|Gibt an, ob die Spalte in den Feldlisten von Berichtserstellungsclients ausgeblendet wird.<br /><br /> Legen Sie diese Eigenschaft auf **True** fest, um diese Spalte in der Anzeige auszublenden. Zum Beispiel sind Spalten, die Bezeichner oder Schlüssel enthalten, für den Endbenutzer in der Regel nicht nützlich.<br /><br /> Wenn Sie eine Spalte im Berichtserstellungsclient ausblenden, wird das Feld nicht in den Modelldaten unterdrückt. Das Feld ist immer noch sichtbar, wenn Sie eine Abfrage für das Modell erstellen. Eine ausgeblendete Spalte kann weiterhin für Gruppierungen oder Sortierungen verwendet werden.<br /><br /> Die Eigenschaft **Ausgeblendet** stellt keinerlei Datensicherheit bereit. Verwenden Sie Zeilenfilter in Rollen, wenn Sie Daten schützen möchten. Weitere Informationen finden Sie unter [Rollen &#40;SSAS – tabellarisch&#41;](roles-ssas-tabular.md)erstellte tabellarische Modellprojekte.|  
+|**Verbirgt**|False|Gibt an, ob die Spalte in den Feldlisten von Berichtserstellungsclients ausgeblendet wird.<br /><br /> Legen Sie diese Eigenschaft auf **True** fest, um diese Spalte in der Anzeige auszublenden. Zum Beispiel sind Spalten, die Bezeichner oder Schlüssel enthalten, für den Endbenutzer in der Regel nicht nützlich.<br /><br /> Wenn Sie eine Spalte im Berichtserstellungsclient ausblenden, wird das Feld nicht in den Modelldaten unterdrückt. Das Feld ist immer noch sichtbar, wenn Sie eine Abfrage für das Modell erstellen. Eine ausgeblendete Spalte kann weiterhin für Gruppierungen oder Sortierungen verwendet werden.<br /><br /> Die Eigenschaft **Ausgeblendet** stellt keinerlei Datensicherheit bereit. Verwenden Sie Zeilenfilter in Rollen, wenn Sie Daten schützen möchten. Weitere Informationen finden Sie unter [Rollen &#40;SSAS – tabellarisch&#41;](roles-ssas-tabular.md)erstellte tabellarische Modellprojekte.|  
 |**Nach Spalte sortieren**||Gibt eine andere Spalte an, nach der die Werte in dieser Spalte sortiert werden. Zwischen den beiden Spalten muss eine Beziehung vorhanden sein.<br /><br /> Dieser Wert muss der Name einer vorhandenen Spalte sein. Sie können keine Formel oder Measure angeben.|  
   
- **Bericht Erstellungs Eigenschaften**  
+ **Berichterstellungseigenschaften**  
   
  Ausführliche Informationen über das Festlegen der [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]-Tabellenverhaltenseigenschaften finden Sie unter [Konfigurieren von Tabellenverhaltenseigenschaften für Power View-Berichte &#40;SSAS – tabellarisch&#41;](power-view-configure-table-behavior-properties-for-reports.md).  
   
-|Eigenschaft|Standardeinstellung|BESCHREIBUNG|  
+|Eigenschaft|Standardeinstellung|Beschreibung|  
 |--------------|---------------------|-----------------|  
 |Standardbild|False|Gibt an, welche Spalte ein Bild bereitstellt, das die Zeilendaten (z. B. eine Foto-ID in einem Mitarbeiterdatensatz) darstellt.|  
 |Standardbeschriftung|False|Legt fest, welche Spalte einen Anzeigenamen angibt, um Zeilendaten (z. B. Mitarbeitername in einem Mitarbeiterdatensatz) darzustellen.|  
@@ -54,7 +54,7 @@ ms.locfileid: "66067611"
 |Zusammenfassen nach|Standard|Gibt Berichtserstellungsclienttools an, die die Aggregatfunktion SUM für die Spaltenberechnungen übernehmen, wenn einer Feldliste diese Spalte hinzugefügt wird. Wählen Sie es aus der Dropdownliste aus, um die Standardberechnung zu ändern. Diese Eigenschaft gilt nur für Spalten vom aggregierbaren Typ.|  
 |Position der Tabellendetails|Kein Standardfeld festgelegt|Gibt diese Spalte an, oder einem Satz von Feldern von einer einzelnen Tabelle kann ein Measure hinzugefügt werden, um die Tabellenvisualisierungserfahrung in einem Berichtserstellungsclient zu verbessern.|  
   
-###  <a name="bkmk_config_prop"></a>So konfigurieren Sie Einstellungen für Spalten Eigenschaften  
+###  <a name="to-configure-column-property-settings"></a><a name="bkmk_config_prop"></a>So konfigurieren Sie Einstellungen für Spalten Eigenschaften  
   
 1.  Wählen Sie im Modell-Designer eine Spalte in einer Tabelle aus.  
   
@@ -63,6 +63,6 @@ ms.locfileid: "66067611"
 ## <a name="see-also"></a>Weitere Informationen  
  [Power View Bericht Erstellungs Eigenschaften &#40;tabellarischen SSAS-&#41;](properties-ssas-tabular.md)   
  [Ausblenden oder Fixieren von Spalten &#40;tabellarischen SSAS-&#41;](hide-or-freeze-columns-ssas-tabular.md)   
- [Hinzufügen von Spalten zu einer Tabelle &#40;tabellarischen SSAS-&#41;](add-columns-to-a-table-ssas-tabular.md)  
+ [Hinzufügen von Spalten zu einer Tabelle &#40;SSAS – tabellarisch&#41;](add-columns-to-a-table-ssas-tabular.md)  
   
   

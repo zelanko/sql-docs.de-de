@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fd074e705c5ae135eb8161a0ea5d2919d1c183e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076257"
 ---
 # <a name="create-and-manage-a-remote-partition-analysis-services"></a>Erstellen und Verwalten einer Remotepartition (Analysis Services)
@@ -34,8 +34,7 @@ ms.locfileid: "66076257"
   
 -   Beide Serverinstanzen müssen die gleiche Version aufweisen. Beide Datenbanken sollten die gleiche Funktionsebene aufweisen.  
   
--   Beide Instanzen müssen für TCP-Verbindungen konfiguriert sein. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nicht unterstützt.  
+-   Beide Instanzen müssen für TCP-Verbindungen konfiguriert sein. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nicht unterstützt.  
   
 -   Die Firewalleinstellungen auf beiden Computern müssen so festgelegt werden, dass sie Außenverbindungen akzeptieren. Weitere Informationen zum Einrichten der Firewall finden Sie unter [Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](../instances/configure-the-windows-firewall-to-allow-analysis-services-access.md).  
   
@@ -125,8 +124,7 @@ ms.locfileid: "66076257"
 5.  Auf dem Masterserver: Klicken Sie mit der rechten Maustaste auf den Cubenamen im Projektmappen-Explorer, wählen Sie **Verarbeiten** aus, und lassen Sie den Cube vollständig verarbeiten.  
   
 ## <a name="administering-remote-partitions"></a>Verwalten von Remotepartitionen  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt sowohl die parallele als auch die sequenzielle Verarbeitung von Remotepartitionen. Die Transaktionen sämtlicher Instanzen, die an der Verarbeitung der Partitionen eines Cubes beteiligt sind, werden von der Masterdatenbank koordiniert, in der die Partitionen definiert wurden. Anschließend werden Verarbeitungsberichte an alle Instanzen gesendet, durch die eine Partition verarbeitet wurde.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt sowohl die parallele als auch die sequenzielle Verarbeitung von Remotepartitionen. Die Transaktionen sämtlicher Instanzen, die an der Verarbeitung der Partitionen eines Cubes beteiligt sind, werden von der Masterdatenbank koordiniert, in der die Partitionen definiert wurden. Anschließend werden Verarbeitungsberichte an alle Instanzen gesendet, durch die eine Partition verarbeitet wurde.  
   
  Ein Cube, der Remotepartitionen enthält, kann zusammen mit den zugehörigen Partitionen in einer einzelnen Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]verwaltet werden. Die Metadaten für die Remotepartition können jedoch nur in der Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] angezeigt und aktualisiert werden, in der die Partition und deren übergeordneter Cube definiert wurden. Die Remotepartition kann in der Remoteinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]nicht angezeigt oder aktualisiert werden.  
   
@@ -134,6 +132,6 @@ ms.locfileid: "66076257"
 >  Obwohl für die Speicherung von Remotepartitionen dedizierte Datenbanken nicht für Schemarowsets verfügbar gemacht werden, können Anwendungen, die Analysis Management Objects (AMO) verwenden, eine dedizierte Datenbank weiterhin mithilfe des Discover-Befehls von XML for Analysis ermitteln. Über einen TCP- oder HTTP-Client direkt an eine dedizierte Datenbank gesendete CREATE- oder DELETE-Befehle werden zwar erfolgreich ausgeführt, der Server gibt jedoch eine Warnung mit dem Hinweis zurück, dass diese dediziert verwaltete Datenbank durch die Aktion beschädigt werden könnte.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Partitionen &#40;Analysis Services Mehrdimensionale Daten&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Partitionen &#40;Analysis Services – mehrdimensionale Daten&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e6874d2fc2fd0206e7fe61d4e217820b4171a13e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067849"
 ---
 # <a name="table-properties-dialog-box-ssas---tabular"></a>Tabelleneigenschaften (Dialogfeld, SSAS – tabellarisch)
@@ -24,15 +24,15 @@ ms.locfileid: "66067849"
   
  Zum Anzeigen des Dialogfelds **Tabelleneigenschaften** klicken Sie im Objekt-Explorer mit der rechten Maustaste auf eine Tabelle und wählen die Option **Eigenschaften**aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 |Begriff|Definition|  
 |----------|----------------|  
 |**Name**|Zeigt den Namen der Tabelle an.|  
-|**id**|Zeigt den Bezeichner der Tabelle an.|  
+|**ID**|Zeigt den Bezeichner der Tabelle an.|  
 |**Beschreibung**|Zeigt die Beschreibung der Tabelle an.|  
 |**Timestamp erstellen**|Zeigt das Datum und die Uhrzeit der Erstellung der Tabelle an.|  
-|**Letzte Schema Aktualisierung**|Zeigt das Datum und die Uhrzeit des letzten Updates der Metadaten für die Tabelle an.|  
+|**Letztes Schemaupdate**|Zeigt das Datum und die Uhrzeit des letzten Updates der Metadaten für die Tabelle an.|  
 |**State**|Zeigt den Verarbeitungsstatus der Tabelle an. Weitere Informationen zu den Werten für diese Eigenschaft finden Sie unter <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**Zuletzt verarbeitet**|Zeigt das Datum und die Uhrzeit an, zu der die Tabelle zuletzt verarbeitet wurde.|  
 |**Aktueller Speichermodus**|Zeigt den aktuellen Speichermodus der Tabelle an. Der Speichermodus wird auf Datenbankebene festgelegt und wird von allen Tabellen geerbt. Sie können keine anderen Speichermodi auf Tabellenebene verwenden. Gültige Werte sind InMemory (Standard), InMemoryWithDirectQuery, DirectQuery, DirectQueryWithinMemory.|  

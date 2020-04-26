@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7fd9d9b293287d76b50c351b29b74df509793168
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076541"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Konfigurieren des Zeichenfolgenspeichers für Dimensionen und Partitionen
@@ -24,7 +24,7 @@ ms.locfileid: "66076541"
   
  Für diese Eigenschaften gibt es u. a. folgende gültige Werte:  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**1050**|Gibt die standardmäßige Zeichenfolgenspeicherarchitektur an, für die eine maximale Dateigröße von 4 GB pro Speicher gilt.|  
 |**1100**|Gibt den größeren Zeichenfolgenspeicher an, unterstützt bis zu 4 Milliarden eindeutige Zeichenfolgen pro Speicher.|  
@@ -34,15 +34,15 @@ ms.locfileid: "66076541"
   
  Dieses Thema enthält folgende Abschnitte:  
   
--   [Informationen zu Zeichen folgen speichern](#bkmk_background)  
+-   [Informationen zu Zeichenfolgenspeichern](#bkmk_background)  
   
 -   [Voraussetzungen](#bkmk_prereq)  
   
--   [Schritt 1: Festlegen der stringstorecompatiblitylevel-Eigenschaft in SQL Server Data Tools](#bkmk_step1)  
+-   [Schritt 1: Festlegen der StringStoreCompatiblityLevel-Eigenschaft in SQL Server-Datentools](#bkmk_step1)  
   
 -   [Schritt 2: Verarbeiten der Objekte](#bkmk_step2)  
   
-##  <a name="bkmk_background"></a>Informationen zu Zeichen folgen speichern  
+##  <a name="about-string-stores"></a><a name="bkmk_background"></a>Informationen zu Zeichen folgen speichern  
  Der Konfiguration des Zeichenfolgenspeichers ist optional. Das bedeutet, dass sogar neue Datenbanken, die Sie erstellen, die Architektur für Standardzeichenfolgenspeicher verwenden, für die die maximale Dateigröße von 4 GB gilt. Die Architektur für größeren Zeichenfolgenspeicher beeinträchtigt die Leistung geringfügig, ist jedoch bemerkbar. Sie sollten diese Architektur nur verwenden, wenn die maximale Größe von 4 GB für Zeichenfolgenspeicherdateien erreicht bzw. fast erreicht wird.  
   
 > [!NOTE]  
@@ -54,14 +54,14 @@ ms.locfileid: "66076541"
   
  Im Gegensatz zur Architektur für Standardzeichenfolgenspeicher, in der es eine Obergrenze für die Größe der physischen Datei gibt, basiert der größere Zeichenfolgenspeicher auf einer maximalen Anzahl von Zeichenfolgen. Der größere Zeichenfolgenspeicher kann maximal 4 Milliarden eindeutige Zeichenfolgen oder 4 Milliarden Datensätze enthalten, je nachdem, welcher Wert zuerst erreicht wird. Der größere Zeichenfolgenspeicher erstellt Datensätze von gleichmäßiger Größe, wobei jeder Datensatz gleich einer 64-KB-Seite ist. Bei sehr langen Zeichenfolgen, die nicht in einen einzelnen Datensatz passen, liegt die tatsächliche Grenze bei weniger als 4 Milliarden Zeichenfolgen.  
   
-##  <a name="bkmk_prereq"></a> Voraussetzungen  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> Voraussetzungen  
  Sie müssen [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] oder eine neuere Version von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]haben.  
   
  Dimensionen und Partitionen müssen MOLAP-Speicher verwenden.  
   
  Der Kompatibilitätsgrad der Datenbank muss auf 1100 festgelegt werden. Wenn Sie eine Datenbank mithilfe von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] und der [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] -Version oder einer neueren Version von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellt oder bereitgestellt haben, ist der Kompatibilitätsgrad der Datenbank bereits auf 1100 festgelegt. Wenn Sie eine in einer früheren Version von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellte Datenbank in ssSQL11 oder eine neuere Version verschoben haben, müssen Sie den Kompatibilitätsgrad aktualisieren. Für Datenbanken, die Sie verschieben, aber nicht erneut bereitstellen, können Sie den Kompatibilitätsgrad mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] festlegen. Weitere Informationen finden Sie unter [Festlegen des Kompatibilitäts Grad einer mehrdimensionalen Datenbank &#40;Analysis Services&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
-##  <a name="bkmk_step1"></a>Schritt 1: Festlegen der stringstorecompatiblitylevel-Eigenschaft in SQL Server Data Tools  
+##  <a name="step-1-set-the-stringstorecompatiblitylevel-property-in-sql-server-data-tools"></a><a name="bkmk_step1"></a>Schritt 1: Festlegen der stringstorecompatiblitylevel-Eigenschaft in SQL Server Data Tools  
   
 1.  Öffnen Sie das Projekt mit den zu ändernden Dimensionen oder Partitionen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -77,9 +77,9 @@ ms.locfileid: "66076541"
   
 7.  Erweitern Sie die Partition, wählen Sie die Partition aus, die zusätzliche Speicherkapazität erfordert, und ändern Sie dann die **StringStoresCompatibilityLevel** -Eigenschaft.  
   
-8.  Speichern Sie die Datei .  
+8.  Speichern Sie die Datei.  
   
-##  <a name="bkmk_step2"></a>Schritt 2: Verarbeiten der Objekte  
+##  <a name="step-2-process-the-objects"></a><a name="bkmk_step2"></a>Schritt 2: Verarbeiten der Objekte  
  Die neue Speicherarchitektur wird verwendet, nachdem Sie die Objekte verarbeitet haben. Die Verarbeitung der Objekte zeigt auch an, dass das Problem der Speichereinschränkung behoben wurde, da der Fehler, der zuvor bei einer Überlaufbedingung des Zeichenfolgenspeichers gemeldet wurde, nicht mehr auftreten sollte.  
   
 -   Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf die soeben geänderte Dimension, und wählen Sie **Verarbeiten**aus.  

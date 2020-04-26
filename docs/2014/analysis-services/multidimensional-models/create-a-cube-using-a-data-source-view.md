@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84e134854770f0096cc99c94698cfd8d7e3e818a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076557"
 ---
 # <a name="create-a-cube-using-a-data-source-view"></a>Erstellen eines Cubes mithilfe einer Datenquellensicht
@@ -49,7 +49,7 @@ ms.locfileid: "66076557"
 -   Auf der Registerkarte **Diagramm** wird das Schema der Datenquellensicht angezeigt. Die Tabellen sind farblich codiert, um Fakten oder Dimensionen anzugeben. Klicken Sie auf eine beliebige Tabelle im Schema, und klicken Sie dann auf **Fakt** oder **Dimension** , um die Einstellung für diese Tabelle zu aktivieren oder zu deaktivieren. Verwenden Sie zum Ändern der Vergrößerung die Schaltfläche **Zoom** .  
   
 > [!NOTE]  
->  Auf der Registerkarte **Diagramm** können Sie das Assistentenfenster vergrößern oder maximieren, um das Schema anzuzeigen.  
+>   Auf der Registerkarte **Diagramm** können Sie das Assistentenfenster vergrößern oder maximieren, um das Schema anzuzeigen.  
   
  Wenn die Datenquellensicht eine Zeitdimensionstabelle enthält, wählen Sie sie in der Liste **Zeitdimensionstabelle** aus. Wenn keine vorhanden ist, lassen ** \<Sie keine>** ausgewählt. Dies ist das Standardelement in der Liste. Durch Auswahl einer Tabelle als Zeitdimensionstabelle wird sie auch auf den Registerkarten **Tabellen** und **Diagramm** als Dimensionstabelle ausgewählt.  
   

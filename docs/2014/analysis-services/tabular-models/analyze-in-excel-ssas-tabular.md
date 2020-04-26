@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f8090c75108f7a384019030082699917fca915b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067689"
 ---
 # <a name="analyze-in-excel-ssas-tabular"></a>Analysieren in Excel (SSAS – tabellarisch)
@@ -28,7 +28,7 @@ ms.locfileid: "66067689"
   
 -   [Verwandte Aufgaben](#bkmk_rt)  
   
-##  <a name="bkmk_benefits"></a> Vorteile  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>Davon  
  Die Funktion In Excel analysieren bietet Modellentwicklern die Möglichkeit, die Effizienz eines Modellprojekts unter Verwendung der verbreiteten Datenanalyseanwendung Microsoft Excel zu testen. Um die Funktion „In Excel analysieren“ zu verwenden, muss Microsoft Office 2003 oder höher auf demselben Computer wie [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]installiert sein.  
   
 > [!NOTE]  
@@ -44,20 +44,20 @@ ms.locfileid: "66067689"
  **Anderer Windows-Benutzer**  
  Verwendet einen angegebenen Windows-Benutzernamen anstatt den Namen des aktuell angemeldeten Benutzers. Zur Verwendung eines anderen Windows-Benutzers ist kein Kennwort erforderlich. Objekte und Daten können nur in Excel innerhalb des Kontexts des effektiven Benutzernamens angezeigt werden. In Excel können keine Änderungen an Modellobjekten oder -daten vorgenommen werden.  
   
- **Spielen**  
+ **Rolle**  
  Eine Rolle wird verwendet, um Benutzerberechtigungen für die Objektmetadaten und die Daten zu definieren. Rollen werden normalerweise für einen bestimmten Windows-Benutzer oder eine Windows-Benutzergruppe definiert. Bestimmte Rollen können zusätzliche Filter auf Zeilenebene einschließen, die in einer DAX-Formel definiert sind. Wenn Sie die Funktion In Excel analysieren verwenden, können Sie optional eine zu verwendende Rolle auswählen. Objektmetadaten und Datensichten werden durch Berechtigungen und Filter eingeschränkt, die für die Rolle definiert sind. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Rollen &#40;SSAS – tabellarisch&#41;](roles-ssas-tabular.md).  
   
  Zusätzlich zum effektiven Benutzer oder der Rolle können Sie eine Perspektive angeben. Perspektiven ermöglichen Modellentwicklern die Definition von Modellobjekt- und Datensichten für bestimmte Geschäftsszenarien. Standardmäßig wird keine Perspektive verwendet. Um eine Perspektive mit In Excel analysieren zu verwenden, müssen Perspektiven bereits mit dem Dialogfeld Perspektiven in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]definiert worden sein. Wenn eine Perspektive angegeben wird, enthält die PivotTable-Liste nur die in der Perspektive ausgewählten Objekte. Weitere Informationen finden Sie unter [Erstellen und Verwalten von Perspektiven &#40;tabellarischen SSAS-&#41;](perspectives-ssas-tabular.md).  
   
-##  <a name="bkmk_rt"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="bkmk_rt"></a> Verwandte Aufgaben  
   
 |**Thema**|**Beschreibung**|  
 |---------------|---------------------|  
-|[Analysieren eines tabellarischen Modells in Excel &#40;tabellarischen SSAS-&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)|In diesem Thema wird Folgendes beschrieben: Öffnen von Excel über die Funktion In Excel analysieren im Modell-Designer, Erstellen einer Datenquellenverbindung mit der Arbeitsbereichsdatenbank des Modells und Hinzufügen einer PivotTable zum Arbeitsblatt.|  
+|[Analysieren eines Tabellenmodells in Excel &#40;SSAS – tabellarisch&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)|In diesem Thema wird Folgendes beschrieben: Öffnen von Excel über die Funktion In Excel analysieren im Modell-Designer, Erstellen einer Datenquellenverbindung mit der Arbeitsbereichsdatenbank des Modells und Hinzufügen einer PivotTable zum Arbeitsblatt.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Analysieren eines tabellarischen Modells in Excel &#40;tabellarischen SSAS-&#41;](analyze-a-tabular-model-in-excel-ssas-tabular.md)   
  [Rollen &#40;tabellarischen SSAS-&#41;](roles-ssas-tabular.md)   
- [Perspektiven &#40;tabellarischen SSAS-&#41;](perspectives-ssas-tabular.md)  
+ [Perspektiven &#40;SSAS – tabellarisch&#41;](perspectives-ssas-tabular.md)  
   
   

@@ -13,25 +13,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 054707856c017877b868c1ad754fbaa3520a8c59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66068015"
 ---
 # <a name="suggest-related-columns-data-mining-wizard"></a>Verbundene Spalten vorschlagen (Data Mining-Assistent)
   Verwenden Sie die Seite **Verbundene Spalten vorschlagen** , um Empfehlungen der **Vorschlagen** -Funktion anzuzeigen, die Sie auf der vorherigen Seite des Assistenten ausgewählt haben. Eingabespalten werden basierend auf ihrer Zuordnung in der Spalte **Vorhersagbar** , die Sie ausgewählt haben, vorab ausgewählt. Falls Sie die Änderungen in diesem Dialogfeld akzeptieren, werden die Änderungen auf der Seite **Trainingsdaten angeben** wiedergegeben.  
   
- **Weitere Informationen finden Sie unter:** [Data Mining-Assistent &#40;Analysis Services Data Mining-&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Mining Struktur](data-mining/create-a-relational-mining-structure.md)  
+ **Weitere Informationen:** [Data Mining-Assistent &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Spalten Name**  
  Zeigt die Eingabespalten an, die Sie auf der Seite **Trainingsdaten angeben** des Assistenten definiert haben.  
   
- **Endergebnis**  
+ **Bewertung**  
  Zeigt das Verhältnis zwischen der Spalte und der zuvor ausgewählten Spalte **Vorhersagbar** an.  
   
- **Input** (Eingabe)  
+ **Eingabe**  
  Wählen Sie diese Option aus, um diese Spalte in die Berechnung von Vorhersagen einzuschließen.  
   
 ## <a name="see-also"></a>Weitere Informationen  

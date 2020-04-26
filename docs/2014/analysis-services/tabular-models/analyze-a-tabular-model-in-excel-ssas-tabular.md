@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 17d2b9fee3c4e733ed46f9b975e69f84f05b93f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067760"
 ---
 # <a name="analyze-a-tabular-model-in-excel-ssas-tabular"></a>Analysieren eines Tabellenmodells in Excel (SSAS – tabellarisch)
@@ -51,6 +51,6 @@ ms.locfileid: "66067760"
 >  Die PivotTable-Feldliste in Excel wird nicht automatisch aktualisiert, wenn Sie im Modell-Designer Änderungen am Modellprojekt vornehmen. Um die PivotTable-Feldliste zu aktualisieren, klicken Sie in Excel im Menüband **Optionen** auf **Aktualisieren**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [In Excel analysieren &#40;tabellarischen SSAS-&#41;](analyze-in-excel-ssas-tabular.md)  
+ [Analysieren in Excel &#40;SSAS – tabellarisch&#41;](analyze-in-excel-ssas-tabular.md)  
   
   

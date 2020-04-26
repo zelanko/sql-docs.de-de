@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 223a8a300a4f3000512f8d75dfb7595cb52abc08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/25/2020
 ms.locfileid: "66067828"
 ---
 # <a name="tabular-model-designer-ssas-tabular"></a>Designer für tabellarische Modelle (SSAS – tabellarisch)
@@ -32,13 +32,13 @@ ms.locfileid: "66067828"
   
 -   [Visual Studio-Integration](#bkmk_vsint)  
   
-##  <a name="bkmk_benefits"></a> Vorteile  
- Wenn Sie [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] installieren, werden den verfügbaren Projekttypen neue Projektvorlagen zum Erstellen tabellarischer Modelle hinzugefügt. Nachdem ein neues Projekt für tabellarische Modelle auf der Grundlage einer der Vorlagen erstellt wurde, können Sie mit der Erstellung von Modellen beginnen. Dazu verwenden Sie die Designer-Tools und Assistenten für tabellarische Modelle.  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>Davon  
+ Wenn Sie [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]installieren, werden den verfügbaren Projekttypen neue Projektvorlagen zum Erstellen tabellarischer Modelle hinzugefügt. Nachdem ein neues Projekt für tabellarische Modelle auf der Grundlage einer der Vorlagen erstellt wurde, können Sie mit der Erstellung von Modellen beginnen. Dazu verwenden Sie die Designer-Tools und Assistenten für tabellarische Modelle.  
   
- Zusätzlich zu neuen Vorlagen und Tools zum Erstellen professioneller Projektmappen für mehrdimensionale und tabellarische Modelle stellt die [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]-Umgebung Debugging- und Projektlebenszyklusfunktionen bereit, mit denen Sie immer die leistungsstärksten BI-Lösungen für Ihre Organisation erstellen können. Weitere Informationen zu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] finden Sie unter [Erste Schritte mit Visual Studio](https://go.microsoft.com/fwlink/?LinkId=206389).  
+ Zusätzlich zu neuen Vorlagen und Tools zum Erstellen professioneller Projektmappen für mehrdimensionale und tabellarische Modelle stellt die [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] -Umgebung Debugging- und Projektlebenszyklusfunktionen bereit, mit denen Sie immer die leistungsstärksten BI-Lösungen für Ihre Organisation erstellen können. Weitere Informationen zu [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]finden Sie unter [Erste Schritte mit Visual Studio](https://go.microsoft.com/fwlink/?LinkId=206389).  
   
-##  <a name="bkmk_proj_temp"></a>Projektvorlagen  
- Wenn Sie [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] installieren, werden den Business Intelligence-Projekttypen die folgenden Projektvorlagen für tabellarische Modelle hinzugefügt:  
+##  <a name="project-templates"></a><a name="bkmk_proj_temp"></a>-Projektvorlagen  
+ Wenn Sie [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]installieren, werden den Business Intelligence-Projekttypen die folgenden Projektvorlagen für tabellarische Modelle hinzugefügt:  
   
  **Analysis Services-Projekt für tabellarische Modelle**  
  Mit dieser Vorlage kann ein neues, leeres tabellarisches Modellprojekt erstellt werden.  
@@ -52,8 +52,8 @@ ms.locfileid: "66067828"
 > [!NOTE]  
 >  Projekte für tabellarische Modelle erfordern, dass eine sich im tabellarischen Modus befindliche Analysis Services-Serverinstanz lokal oder im Netzwerk ausgeführt wird.  
   
-##  <a name="bkmk_wind_men"></a>Fenster und Menüs  
- Die [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]-Erstellungsumgebung für tabellarische Modelle schließt Folgendes ein:  
+##  <a name="windows-and-menus"></a><a name="bkmk_wind_men"></a> Fenster und Menüs  
+ Die [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] -Erstellungsumgebung für tabellarische Modelle schließt Folgendes ein:  
   
 ### <a name="designer-window"></a>Designerfenster  
  Das Designerfenster dient zur Erstellung tabellarischer Modelle, indem das Modell in einer visuellen Darstellung abgebildet wird. Wenn Sie die Datei Model.bim öffnen, wird das Modell im Designerfenster geöffnet. Zum Erstellen eines Modells im Designerfenster stehen zwei unterschiedliche Ansichtsmodi zur Verfügung:  
@@ -84,7 +84,7 @@ ms.locfileid: "66067828"
   
 -   "Measure"  
   
- Die Projekteigenschaften im Eigenschaftenfenster enthalten nur den Projektnamen und den Projektordner. Projekte verfügen außerdem über zusätzliche Einstellungen für Bereitstellungsoptionen und den Bereitstellungsserver, die Sie über ein Dialogfeld für modale Eigenschaften festlegen können. Klicken Sie in **Projektmappen-Explorer** mit der rechten Maustaste auf das Projekt, und klicken Sie anschließend auf **Eigenschaften**, um diese Eigenschaften anzuzeigen.  
+ Die Projekteigenschaften im Eigenschaftenfenster enthalten nur den Projektnamen und den Projektordner. Projekte verfügen außerdem über zusätzliche Einstellungen für Bereitstellungsoptionen und den Bereitstellungsserver, die Sie über ein Dialogfeld für modale Eigenschaften festlegen können. Klicken Sie in **Projektmappen-Explorer**mit der rechten Maustaste auf das Projekt, und klicken Sie anschließend auf **Eigenschaften**, um diese Eigenschaften anzuzeigen.  
   
  In die Felder des Eigenschaftenfensters sind Steuerelemente eingebettet, die geöffnet werden, wenn Sie darauf klicken. Der Typ des Bearbeitungssteuerelements hängt von der bestimmten Eigenschaft ab. Die Steuerelemente umfassen Bearbeitungsfelder, Dropdownlisten und Links zu benutzerdefinierten Dialogfeldern. Die in grau angezeigten Eigenschaften sind schreibgeschützt.  
   
@@ -104,28 +104,28 @@ ms.locfileid: "66067828"
  Die **Fehlerliste** wird standardmäßig erst angezeigt, nachdem ein Fehler zurückgegeben wurde. Sie können das Fenster **Fehlerliste** jedoch jederzeit anzeigen. Klicken Sie zum Anzeigen des Fensters **Fehlerliste** auf das Menü **Ansicht** und anschließend auf **Fehlerliste**.  
   
 ### <a name="output"></a>Output  
- Erstellungs- und Bereitstellungsinformationen werden (zusätzlich zum modalen Statusdialogfeld) im Fenster **Ausgabe** angezeigt. Klicken Sie zum Anzeigen des Ausgabefensters auf das Menü **Ansicht** und anschließend auf **Ausgabe**.  
+ Erstellungs- und Bereitstellungsinformationen werden (zusätzlich zum modalen Statusdialogfeld) im Fenster **Ausgabe** angezeigt. Klicken Sie zum Anzeigen des Ausgabefensters auf das Menü **Ansicht** und anschließend auf **Ausgabe** .  
   
 ### <a name="menu-items"></a>Menüelemente  
- Wenn Sie [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] installieren, werden der Visual Studio-Menüleiste zusätzliche Menüelemente speziell für die Erstellung tabellarischer Modelle hinzugefügt. Das Menü **Modell** kann verwendet werden, um den Datenimport-Assistenten zu starten, vorhandene Verbindungen anzuzeigen, Arbeitsbereichsdaten zu verarbeiten und den Modellarbeitsbereich in [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel zu durchsuchen. Das Menü **Tabelle** kann verwendet werden, um Beziehungen zwischen Tabellen zu erstellen und zu verwalten, Measures zu erstellen und zu verwalten sowie Datentabelleneinstellungen, Berechnungsoptionen und andere Tabelleneigenschaften anzugeben. Im Menü **Spalte** können Sie Spalten in einer Tabelle hinzufügen und löschen, Spalten aus- und einblenden und verschiedene Spalteneigenschaften angeben, z.B. Datentypen und Filter. Sie können Projektmappen für tabellarische Modelle über das Menü **Erstellen** anlegen und bereitstellen. Die Funktionen zum Kopieren bzw. Einfügen sind im Menü **Bearbeiten** enthalten.  
+ Wenn Sie [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]installieren, werden der Visual Studio-Menüleiste zusätzliche Menüelemente speziell für die Erstellung tabellarischer Modelle hinzugefügt. Das Menü **Modell** kann verwendet werden, um den Datenimport-Assistenten zu starten, vorhandene Verbindungen anzuzeigen, Arbeitsbereichsdaten zu verarbeiten und den Modellarbeitsbereich in [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel zu durchsuchen. Das Menü **Tabelle** kann verwendet werden, um Beziehungen zwischen Tabellen zu erstellen und zu verwalten, Measures zu erstellen und zu verwalten sowie Datentabelleneinstellungen, Berechnungsoptionen und andere Tabelleneigenschaften anzugeben. Im Menü **Spalte** können Sie Spalten in einer Tabelle hinzufügen und löschen, Spalten aus- und einblenden und verschiedene Spalteneigenschaften angeben, z.B. Datentypen und Filter. Sie können Projektmappen für tabellarische Modelle über das Menü **Erstellen** anlegen und bereitstellen. Die Funktionen zum Kopieren bzw. Einfügen sind im Menü **Bearbeiten** enthalten.  
   
  Zusätzlich zu diesen Menüelementen werden die Analysis Services-Optionen um weitere Einstellungen ergänzt, die im Menü Extras verfügbar sind.  
   
 ### <a name="toolbar"></a>Symbolleiste  
  Die Analysis Services-Symbolleiste ermöglicht den schnellen und einfachen Zugriff auf die am häufigsten verwendeten Befehle für die Modellerstellung.  
   
-##  <a name="bkmk_vsint"></a>Visual Studio-Integration  
+##  <a name="visual-studio-integration"></a>Integration in <a name="bkmk_vsint"></a> Visual Studio  
  **Quell Code Verwaltung**  
  Analysis Services-Projekte werden mit dem ausgewählten Plug-In für die Quellcodeverwaltung integriert. Wenn Sie Visual Studio für die Verwendung der Quellcodeverwaltung konfiguriert haben, können Sie die Funktionen zum Ein-/Auschecken im Projektmappen-Explorer verwenden. Weitere Informationen zum Konfigurieren von Team Foundation Server finden Sie unter [Konfigurieren von Visual Studio für die Verwendung der Team Foundation-Versionskontrolle](https://msdn.microsoft.com/library/ms253064.aspx). Viele Drittanbieter-Plug-Ins für die Quellcodeverwaltung werden ebenfalls unterstützt.  
   
- **Schrift**  
- Tabellarische Modelle verwenden die Schriftart der [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]-Umgebung, um die Schriftarten in der Anzeige zu steuern. Es kann erforderlich sein, diese Schriftart zu ändern, wenn die [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]-Standardschriftart nicht über alle Unicode-Zeichen verfügt, die Sie für Ihre Sprache benötigen. Klicken Sie zum Ändern von Schriftarten auf das Menü **Extras** > **Optionen** und anschließend auf **Schriftarten und Farben**.  
+ **Schriftarten**  
+ Tabellarische Modelle verwenden die Schriftart der [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] -Umgebung, um die Schriftarten in der Anzeige zu steuern. Es kann erforderlich sein, diese Schriftart zu ändern, wenn die [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] -Standardschriftart nicht über alle Unicode-Zeichen verfügt, die Sie für Ihre Sprache benötigen. Klicken Sie zum Ändern von Schriftarten auf das Menü **Extras** &gt; **Optionen**und anschließend auf **Schriftarten und Farben**.  
   
  **Tastenkombinationen**  
- Die Analysis Services-Tastenkombinationen können über das Dialogfeld Tools->Optionen->Tastatur konfiguriert bzw. neu zugeordnet werden. Einige globale [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]-Verknüpfungen, wie z.B. „Erstellen“, „Speichern“, „Debuggen“, „neues Projekt“ usw., werden im Kontext des Designers für tabellarische Modelle unterstützt. Andere spezifische Tastenkombinationen des Designers für tabellarische Modelle sind im Analysis Services-Kontext verfügbar.  
+ Die Analysis Services-Tastenkombinationen können über das Dialogfeld Tools->Optionen->Tastatur konfiguriert bzw. neu zugeordnet werden. Einige globale [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] -Verknüpfungen, wie z.B. „Erstellen“, „Speichern“, „Debuggen“, „neues Projekt“ usw., werden im Kontext des Designers für tabellarische Modelle unterstützt. Andere spezifische Tastenkombinationen des Designers für tabellarische Modelle sind im Analysis Services-Kontext verfügbar.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Tabellarische Modellprojekte &#40;tabellarischen SSAS-&#41;](tabular-models/tabular-model-projects-ssas-tabular.md)   
- [Eigenschaften &#40;tabellarischen SSAS-&#41;](tabular-models/properties-ssas-tabular.md)  
+ [Eigenschaften &#40;SSAS – tabellarisch&#41;](tabular-models/properties-ssas-tabular.md)  
   
   

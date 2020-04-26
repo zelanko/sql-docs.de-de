@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c6541a60b4810319fd353d39a3922244c018496f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076511"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Erstellen eines Cubes aus einer Vorlage, ohne eine Datenquellensicht zu verwenden
@@ -23,8 +23,7 @@ ms.locfileid: "66076511"
 ## <a name="selecting-the-build-method"></a>Auswählen der Erstellungsmethode  
  Klicken Sie im Cube-Assistenten auf der Seite **Erstellungsmethode auswählen** auf **Cube ohne eine Datenquelle erstellen**. Um den Cube mithilfe einer vorhandenen Cubevorlage zu erstellen, aktivieren Sie das Kontrollkästchen **Cubevorlage verwenden** . . Wenn Sie sich gegen die Verwendung einer Vorlage entscheiden, müssen Sie die Optionen manuell festlegen.  
   
- In Cubevorlagen sind vordefinierte Measures, Measuregruppen, Dimensionen, Hierarchien und Attribute enthalten. Wenn Sie eine Vorlage auswählen, verwendet der Assistent die Objektdefinitionen in den Vorlagen als Grundlage zum Festlegen der Optionen auf den folgenden Seiten. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] wird mit mehreren Vorlagen für Standardcubes installiert. Der Serveradministrator kann auch Cube- oder Dimensionsvorlagen hinzufügen, die speziell auf die Daten in Ihrem Unternehmen abgestimmt sind.  
+ In Cubevorlagen sind vordefinierte Measures, Measuregruppen, Dimensionen, Hierarchien und Attribute enthalten. Wenn Sie eine Vorlage auswählen, verwendet der Assistent die Objektdefinitionen in den Vorlagen als Grundlage zum Festlegen der Optionen auf den folgenden Seiten. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] wird mit mehreren Vorlagen für Standardcubes installiert. Der Serveradministrator kann auch Cube- oder Dimensionsvorlagen hinzufügen, die speziell auf die Daten in Ihrem Unternehmen abgestimmt sind.  
   
 ## <a name="selecting-dimensions"></a>Auswählen von Dimensionen  
  Mithilfe der Seite **Dimensionen auswählen** des Assistenten können Sie dem Cube vorhandene Dimensionen hinzufügen. Diese Seite wird nur angezeigt, wenn im Projekt oder der Datenbank bereits freigegebene Dimensionen ohne eine Datenquelle vorhanden sind. Dimensionen, die über eine Datenquelle verfügen, sind nicht aufgeführt.  
@@ -58,16 +57,16 @@ ms.locfileid: "66076511"
   
 |Column|BESCHREIBUNG|  
 |------------|-----------------|  
-|**Typ**|Zeigt den Dimensionstyp einer Vorlagendimension an. Klicken Sie auf diese Zelle, um den Dimensionstyp für eine Dimension zu ändern. In dieser Spalte wird die **Type** -Eigenschaft für das Dimensionsobjekt festgelegt.|  
+|**Type**|Zeigt den Dimensionstyp einer Vorlagendimension an. Klicken Sie auf diese Zelle, um den Dimensionstyp für eine Dimension zu ändern. In dieser Spalte wird die **Type** -Eigenschaft für das Dimensionsobjekt festgelegt.|  
 |`Name`|Zeigt den Namen der Dimension an. Klicken Sie auf diese Zelle, um einen anderen Namen einzugeben. Mit diesem Wert wird `Name` die-Eigenschaft für das Dimensions Objekt festgelegt.|  
-|**SCD**|Gibt an, dass dies eine langsam veränderliche Dimension (Slowly Changing Dimension, SCD) ist. Wenn Sie dieses Kontrollkästchen aktivieren, werden der Dimension die Attribute SCD-Startdatum, Ursprüngliche ID des Enddatums und Status hinzugefügt. **SCD** ist standardmäßig ausgewählt, wenn Sie eine Vorlage zum Erstellen des Cubes verwenden und der Assistent diese vier Attributtypen in einer Vorlagen Dimension erkennt.|  
+|**SCD**|Gibt an, dass dies eine langsam veränderliche Dimension (Slowly Changing Dimension, SCD) ist. Wenn Sie dieses Kontrollkästchen aktivieren, werden der Dimension die Attribute SCD-Startdatum, Ursprüngliche ID des Enddatums und Status hinzugefügt. **SCD** wird standardmäßig ausgewählt, wenn Sie den Cube anhand einer Vorlage erstellen und der Assistent diese vier Attributtypen in einer Vorlagendimension erkennt.|  
 |**Attribute**|Zeigt die Attribute an, die für die Dimension erstellt werden sollen. Jedem Attributnamen in der Liste wird der Dimensionsname vorangestellt. Diese Liste ist schreibgeschützt. Nachdem Sie den Assistenten abgeschlossen haben, können Sie die Attribute mithilfe des Dimensions-Designers ändern.|  
   
 ## <a name="defining-time-periods"></a>Definieren von Zeiträumen  
  Geben Sie den Datumsbereich, der in der Dimension enthalten sein soll, mithilfe der Seite **Zeiträume definieren** des Assistenten an. Beispielsweise können Sie einen Bereich auswählen, der in Ihren Daten am 1. Januar des ersten Jahres beginnt, und die Jahreszahlen bis über die aktuelle Transaktion hinaus ausweiten. Transaktionen außerhalb dieses Bereichs werden entweder nicht angezeigt, oder sie werden als unbekannte Elemente in der Dimension angezeigt, abhängig von der Einstellung der `UnknownMemberVisible`-Eigenschaft für die Dimension. Die `UnknownMemberName`-Eigenschaft gibt die Beschriftung für das unbekannte Element an. Sie können auch den in Ihren Daten verwendeten Wochenbeginn ändern. (Der Standard ist Sonntag.)  
   
 > [!NOTE]  
->  Die Seite **Zeiträume definieren** wird nur angezeigt, wenn Sie auf der Seite **Neue Dimensionen definieren** des Assistenten eine Zeitdimension in den Cube aufnehmen.  
+>   Die Seite **Zeiträume definieren** wird nur angezeigt, wenn Sie auf der Seite **Neue Dimensionen definieren** des Assistenten eine Zeitdimension in den Cube aufnehmen.  
   
  Wählen Sie die Zeiträume (**Jahr**, **Halbjahr**, **Quartal**, **Trimester**, **Monat**, **Zehn Tage**, **Woche**und **Datum**) aus, die Sie in das Schema einfügen möchten. Der Date-Zeitraum muss ausgewählt werden; das Date-Attribut ist das Schlüsselattribut für die Dimension, ohne das die Dimension nicht funktioniert. Sie können auch die Sprache ändern, die zur Beschriftung der Elemente der Dimension verwendet wird.  
   
@@ -80,7 +79,7 @@ ms.locfileid: "66076511"
 ## <a name="specifying-additional-calendars"></a>Angeben zusätzlicher Kalender  
  Auf der Seite **Zusätzliche Kalender angeben** des Assistenten können Sie Kalender auswählen, auf denen die Hierarchien der Dimension basieren sollen. Sie können einen der folgenden Kalender auswählen:  
   
-|Kalender|BESCHREIBUNG|  
+|Kalender|Beschreibung|  
 |--------------|-----------------|  
 |Geschäftskalender|Ein zwölfmonatiger Geschäftskalender. Wenn Sie diesen Kalender auswählen, müssen Sie den Anfangstag des vom Unternehmen verwendeten Geschäftsjahres angeben.|  
 |Berichtskalender (oder Marketingkalender)|Ein zwölfmonatiger Berichtskalender, der in einem sich wiederholenden dreimonatigen (quartalsweisen) Muster zwei Monate mit vier und einen Monat mit fünf Wochen enthält. Wenn Sie diesen Kalender auswählen, geben Sie den Starttag und-Monat sowie das dreimonatige Muster 4-4-5, 4-5-4 oder 5-4-4 Wochen an, wobei jede Ziffer die Anzahl der Wochen in einem Monat darstellt.|  

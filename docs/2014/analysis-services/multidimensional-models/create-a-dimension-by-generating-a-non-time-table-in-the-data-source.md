@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 962df497e804011e69e2a350c24ce41f4c273b6d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076438"
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>Erstellen einer Dimension durch Generieren einer Nichtzeittabelle in der Datenquelle
@@ -31,19 +31,19 @@ ms.locfileid: "66076438"
   
 -   Kunde  
   
--   Date  
+-   Datum  
   
--   Abteilung  
+-   Department  
   
 -   Destination Currency  
   
--   Mitarbeiter  
+-   Employee  
   
 -   Gebiet  
   
 -   Internet Sales Order Details  
   
--   Organisation  
+-   Organization  
   
 -   Produkt  
   
