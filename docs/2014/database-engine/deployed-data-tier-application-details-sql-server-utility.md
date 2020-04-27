@@ -19,10 +19,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754093"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>Details zu bereitgestellten Datenebenenanwendungen (SQL Server-Hilfsprogramm)
@@ -46,11 +46,11 @@ ms.locfileid: "62754093"
   
 -   Name – Der Name der Datenebenenanwendung.  
   
--   Anwendungs-CPU – Zeigt den Zustand der Prozessorauslastung für diese Datenebenenanwendung an. Der Zustand dieses Parameters wird anhand der Richtlinie zur CPU-Auslastung bestimmt, die für die Datenebenenanwendung festgelegt wurde, und anhand der Konfigurationseinstellung der Auswertungsrichtlinie für veränderliche Ressourcen. Weitere Informationen finden Sie unter [reduzieren von Rauschen in Richtlinien zur CPU-Auslastung &#40;SQL Server-Hilfsprogramm&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+-   Anwendungs-CPU – Zeigt den Zustand der Prozessorauslastung für diese Datenebenenanwendung an. Der Zustand dieses Parameters wird anhand der Richtlinie zur CPU-Auslastung bestimmt, die für die Datenebenenanwendung festgelegt wurde, und anhand der Konfigurationseinstellung der Auswertungsrichtlinie für veränderliche Ressourcen. Weitere Informationen finden Sie unter [ Reduzieren von Informationsrauschen bei Richtlinien zur CPU-Auslastung &#40;SQL Server-Hilfsprogramm&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
      Um den Verlauf der Prozessorauslastung für diese Datenebenenanwendung anzuzeigen bzw. die Richtliniengrenzwerte einzusehen oder zu ändern, klicken Sie auf die Registerkarte **CPU-Auslastung**.  
   
--   Computer-CPU: Zeigt den Zustand der Prozessorauslastung für den Computer an. Der Zustand dieses Parameters wird anhand der Richtlinie zur CPU-Auslastung bestimmt, die für den Computer festgelegt wurde, und anhand der Konfigurationseinstellung der Auswertungsrichtlinie für veränderliche Ressourcen. Weitere Informationen finden Sie unter [reduzieren von Rauschen in Richtlinien zur CPU-Auslastung &#40;SQL Server-Hilfsprogramm&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+-   Computer-CPU: Zeigt den Zustand der Prozessorauslastung für den Computer an. Der Zustand dieses Parameters wird anhand der Richtlinie zur CPU-Auslastung bestimmt, die für den Computer festgelegt wurde, und anhand der Konfigurationseinstellung der Auswertungsrichtlinie für veränderliche Ressourcen. Weitere Informationen finden Sie unter [ Reduzieren von Informationsrauschen bei Richtlinien zur CPU-Auslastung &#40;SQL Server-Hilfsprogramm&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
   
      Um den Verlauf der Prozessorauslastung für diese Datenebenenanwendung anzuzeigen bzw. die Richtliniengrenzwerte einzusehen oder zu ändern, klicken Sie auf die Registerkarte **CPU-Auslastung**.  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62754093"
   
 -   Vertrauenswürdig: (True oder False)  
   
--   Sortierung  
+-   Sortierreihenfolge  
   
 -   Kompatibilitätsgrad: (z. B. Version100)  
   
@@ -155,7 +155,7 @@ ms.locfileid: "62754093"
   
 -   Vertrauenswürdig: (True oder False)  
   
--   Sortierung  
+-   Sortierreihenfolge  
   
 -   Kompatibilitätsgrad: (z. B. Version100)  
   
@@ -166,9 +166,9 @@ ms.locfileid: "62754093"
 -   Letzter Berichtszeitpunkt: Diese Spalte zeigt das lokale Datum und die lokale Uhrzeit des UCPs unter Verwendung des datetime-Datentyps an. Weitere Informationen finden Sie unter dem Thema [datetime (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=164071) in der SQL Server-Onlinedokumentation. Beachten Sie bei Verwendung des Hilfsprogramm-Objektmodells, dass SSMS den datetimeoffset-Datentyp verwendet. Weitere Informationen finden Sie unter dem Thema [datetimeoffset (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=141713) in der SQL Server-Onlinedokumentation.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Details zu verwalteten Instanzen &#40;SQL Server-Hilfsprogramm&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
+ [Verwaltete Instanz Details &#40;SQL Server-Hilfsprogramm&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
  [SQL Server-Hilfsprogramm des Utility-Dashboards &#40;&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
- [Überwachen von SQL Server-Instanzen im SQL Server-Hilfsprogramm](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
+ [Überwachen von Instanzen von SQL Server im SQL Server-Hilfsprogramm](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)   
  [Funktionen und Tasks im SQL Server-Hilfsprogramm](../relational-databases/manage/sql-server-utility-features-and-tasks.md)  
   
   

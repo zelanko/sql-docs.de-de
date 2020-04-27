@@ -13,10 +13,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 87fcd7656ff1e86522e4ea398fc49d91acde9a34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62672073"
 ---
 # <a name="change-data-capture-and-other-sql-server-features"></a>Change Data Capture und andere SQL Server-Funktionen
@@ -30,10 +30,10 @@ ms.locfileid: "62672073"
   
 -   [Wiederherstellen oder Anfügen einer Datenbank, die für Change Data Capture aktiviert ist](#RestoreOrAttach)  
   
-##  <a name="ChangeTracking"></a> Änderungsnachverfolgung  
+##  <a name="change-tracking"></a><a name="ChangeTracking"></a>Änderungsnachverfolgung  
  Change Data Capture und die [Änderungsnachverfolgung](about-change-tracking-sql-server.md) können für dieselbe Datenbank aktiviert werden. Dabei sind keine besonderen Aspekte zu berücksichtigen. Weitere Informationen finden Sie unter [Verwenden der Änderungsnachverfolgung &#40;SQL Server&#41;](work-with-change-tracking-sql-server.md).  
   
-##  <a name="DatabaseMirroring"></a>Daten Bank Spiegelung  
+##  <a name="database-mirroring"></a><a name="DatabaseMirroring"></a>Daten Bank Spiegelung  
  Eine Datenbank, die für Change Data Capture aktiviert ist, kann gespiegelt werden. Um sicherzustellen, dass Erfassungen und Cleanups nach einem Failover automatisch durchgeführt werden, führen Sie folgende Schritte aus:  
   
 1.  Stellen Sie sicher, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent auf der neuen Prinzipalserverinstanz ausgeführt wird.  
@@ -46,7 +46,7 @@ ms.locfileid: "62672073"
   
  Informationen zur Datenbankspiegelung finden Sie unter [ Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
-##  <a name="TransReplication"></a>Transaktions Replikation  
+##  <a name="transactional-replication"></a><a name="TransReplication"></a>Transaktions Replikation  
  Change Data Capture und die Transaktionsreplikation können in einer Datenbank parallel vorhanden sein, allerdings wird die Auffüllung der Änderungstabellen anders behandelt, wenn beide Funktionen aktiviert sind. Change Data Capture und die Transaktionsreplikation verwenden immer dieselbe Prozedur, nämlich [sp_replcmds](/sql/relational-databases/system-stored-procedures/sp-replcmds-transact-sql), um die Änderungen aus dem Transaktionsprotokoll auszulesen. Wenn Change Data Capture allein aktiviert ist, ruft ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agentauftrag die Prozedur `sp_replcmds` auf. Wenn beide Funktionen in der gleichen Datenbank aktiviert sind, ruft `sp_replcmds`der Protokolllese-Agent auf. Dieser Agent füllt sowohl die Änderungstabellen als auch die Tabellen der Verteilungsdatenbank auf. Weitere Informationen finden Sie unter [Replication Log Reader Agent](../replication/agents/replication-log-reader-agent.md).  
   
  Angenommen, Change Data Capture ist für die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Datenbank aktiviert, und zwei Tabellen sind für die Erfassung aktiviert. Um die Änderungstabellen aufzufüllen, ruft der Aufzeichnungsauftrag `sp_replcmds` auf. Die Datenbank wird für die Transaktionsreplikation aktiviert, und eine Veröffentlichung wird erstellt. Anschließend wird der Protokolllese-Agent für die Datenbank erstellt, und der Erfassungsauftrag wird gelöscht. Der Protokolllese-Agent fährt fort, das Protokoll ab der letzten Protokollfolgenummer zu durchsuchen, für die ein Commit in die Änderungstabelle ausgeführt wurde. Auf diese Weise wird die Datenkonsistenz in den Änderungstabellen sichergestellt. Wenn die Transaktionsreplikation in dieser Datenbank deaktiviert wird, wird der Protokolllese-Agent entfernt und der Aufzeichnungsauftrag neu erstellt.  
@@ -56,7 +56,7 @@ ms.locfileid: "62672073"
   
  Die **proc exec** -Option der Transaktionsreplikation ist nicht verfügbar, wenn Change Data Capture aktiviert ist.  
   
-##  <a name="RestoreOrAttach"></a>Wiederherstellen oder Anfügen einer Datenbank, die für Change Data Capture aktiviert ist  
+##  <a name="restoring-or-attaching-a-database-enabled-for-change-data-capture"></a><a name="RestoreOrAttach"></a>Wiederherstellen oder Anfügen einer Datenbank, die für Change Data Capture aktiviert ist  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet die folgende Logik, um zu ermitteln, ob Change Data Capture nach dem Wiederherstellen oder Anfügen einer Datenbank aktiviert bleibt:  
   
 -   Wenn eine Datenbank auf demselben Server mit demselben Datenbanknamen wiederhergestellt wird, bleibt Change Data Capture aktiviert.  

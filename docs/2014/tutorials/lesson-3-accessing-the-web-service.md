@@ -11,19 +11,19 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 09671f8880f9f7745359961d9c6c126a893d26a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653783"
 ---
-# <a name="lesson-3-accessing-the-web-service"></a>Lektion 3: Zugreifen auf den Webdienst
+# <a name="lesson-3-accessing-the-web-service"></a>Lektion 3: Zugriff auf den Webdienst
   Nachdem Sie dem Projekt einen Verweis auf den Berichtsserver-Webdienst hinzugefügt haben, besteht der nächste Schritt darin, eine Instanz der Proxyklasse des Webdiensts zu erstellen. Auf die Methoden des Webdiensts kann durch Aufrufen der Methoden in der Proxyklasse zugegriffen werden. Wenn diese Methoden von Ihrer Anwendung aufgerufen werden, behandelt der von [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] generierte Proxyklassencode die Kommunikation zwischen Ihrer Anwendung und dem Webdienst.  
   
  Zuerst erstellen Sie <xref:ReportService2010.ReportingService2010> - eine Instanz der Proxyklasse des Webdiensts. Dann rufen Sie die <xref:ReportService2010.ReportingService2010.GetProperties%2A>-Methode des Webdiensts mithilfe der Proxyklasse auf. Sie verwenden diesen Aufruf zum Abrufen des Namens und der Beschreibung eines der Beispielsberichte, Company Sales.  
   
 > [!NOTE]  
->  Beim Zugreifen auf einen Webdienst, der unter [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] mit Advanced Services ausgeführt wird, müssen Sie "$SQLExpress" an den "ReportServer"-Pfad anfügen. Beispiel:  
+>  Beim Zugreifen auf einen Webdienst, der unter [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] mit Advanced Services ausgeführt wird, müssen Sie "$SQLExpress" an den "ReportServer"-Pfad anfügen. Zum Beispiel:  
 >   
 >  `http://<Server Name>/reportserver$sqlexpress/reportservice2010.asmx"`  
   

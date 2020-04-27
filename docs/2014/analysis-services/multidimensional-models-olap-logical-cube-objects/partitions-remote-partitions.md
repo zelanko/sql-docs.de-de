@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d092c33c8c350dc19b749fd3b31ccf1b8c73eac6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727339"
 ---
 # <a name="remote-partitions"></a>Remotepartitionen
@@ -43,7 +43,7 @@ ms.locfileid: "62727339"
   
 |||  
 |-|-|  
-|Speichertyp|Data|  
+|Speichertyp|Daten|  
 |MOLAP|Die Aggregationen einer Partition sowie eine Kopie der Quelldaten der Partition|  
 |HOLAP|Die Aggregationen von Partitionen|  
 |ROLAP|Keine Partitionsdaten|  
@@ -58,6 +58,6 @@ ms.locfileid: "62727339"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen und Verwalten einer Remote Partition &#40;Analysis Services&#41;](../multidimensional-models/create-and-manage-a-remote-partition-analysis-services.md)   
- [Verarbeiten von Analysis Services Objekten](../multidimensional-models/processing-analysis-services-objects.md)  
+ [Verarbeiten von Analysis Services-Objekten](../multidimensional-models/processing-analysis-services-objects.md)  
   
   

@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 07f8ecc0e6550fcec63a0b1ebb906cd5ffd3aaf1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62524331"
 ---
 # <a name="tutorial-getting-started-with-the-database-engine"></a>Tutorial: Erste Schritte mit der Datenbank-Engine
@@ -42,7 +42,7 @@ ms.locfileid: "62524331"
   
  Auf Ihrem System müssen zum Verwenden dieses Lernprogramms folgende Anwendungen installiert sein:  
   
--   [https://login.microsoftonline.com/consumers/]([!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]). [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]kann installiert werden, indem [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Sie das-Setup ausführen oder aus dem [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=144346)herunterladen und installieren.  
+-   [https://login.microsoftonline.com/consumers/]([!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]). [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] kann installiert werden, indem Sie das [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Setup ausführen oder das Paket vom [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=144346)herunterladen und installieren.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Tutorial: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)  

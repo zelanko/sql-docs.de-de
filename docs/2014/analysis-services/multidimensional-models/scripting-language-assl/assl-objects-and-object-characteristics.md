@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aee5e7b94aaaca2b35e34f8c4d49c2834189f114
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736614"
 ---
 # <a name="assl-objects-and-object-characteristics"></a>ASSL-Objekte und -Objekteigenschaften
@@ -63,8 +63,7 @@ ms.locfileid: "62736614"
   
 -   `LastSchemaUpdate`  
   
--   
-  `LastProcessed` (wenn geeignet)  
+-   `LastProcessed` (wenn geeignet)  
   
 > [!NOTE]  
 >  Die Klassifizierung eines Objekts als Hauptobjekt wirkt sich darauf aus, wie eine Instanz von [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] dieses Objekt behandelt und wie es in der Objektdefinitionssprache gehandhabt wird. Diese Klassifizierung ist jedoch keine Garantie dafür, dass [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Tools für die Verwaltung und Entwicklung das unabhängige Erstellen, Bearbeiten oder Löschen dieser Objekte zulassen.  
@@ -74,7 +73,7 @@ ms.locfileid: "62736614"
   
 -   Hierarchien und Ebenen  
   
--   Attributes  
+-   Attribute  
   
 -   Measures  
   
@@ -82,12 +81,12 @@ ms.locfileid: "62736614"
   
 -   Einem Cube zugeordnete Befehle  
   
--   Aggregationen  
+-   Aggregations  
   
 ## <a name="object-expansion"></a>ObjectExpansion  
  Mit der `ObjectExpansion`-Beschränkung kann der Grad der Erweiterung des vom Server zurückgegebenen ASSL XML-Werts festgelegt werden. Für diese Beschränkung sind die in der folgenden Tabelle aufgeführten Optionen verfügbar.  
   
-|Enumerationswert|Zulässig für \<Alter>|BESCHREIBUNG|  
+|Enumerationswert|Zulässig für \<Alter>|Beschreibung|  
 |-----------------------|---------------------------|-----------------|  
 |*ReferenceOnly*|nein|Gibt nur den Namen, die ID und den Timestamp für das angeforderte Objekt und alle enthaltenen Hauptobjekte rekursiv zurück.|  
 |*ObjectProperties*|ja|Erweitert das angeforderte Objekt und die enthaltenen Nebenobjekte, aber gibt keine enthaltenen Hauptobjekte zurück.|  
@@ -97,10 +96,8 @@ ms.locfileid: "62736614"
  In diesem ASSL-Verweisabschnitt wird die *ExpandFull* -Darstellung beschrieben. Alle anderen `ObjectExpansion`-Ebenen werden von dieser Ebene abgeleitet.  
   
 ## <a name="object-processing"></a>Objektverarbeitung  
- ASSL enthält schreibgeschützte Elemente oder Eigenschaften (z. B. `LastProcessed`), die von der [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz gelesen werden können, jedoch nicht angegeben werden, wenn Befehlsskripts an die Instanz übermittelt werden. 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ignoriert geänderte Werte für schreibgeschützte Elemente, ohne eine Warnung oder einen Fehler auszugeben.  
+ ASSL enthält schreibgeschützte Elemente oder Eigenschaften (z. B. `LastProcessed`), die von der [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Instanz gelesen werden können, jedoch nicht angegeben werden, wenn Befehlsskripts an die Instanz übermittelt werden. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ignoriert geänderte Werte für schreibgeschützte Elemente, ohne eine Warnung oder einen Fehler auszugeben.  
   
- 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ignoriert auch unpassende oder irrelevante Eigenschaften, ohne Überprüfungsfehler auszulösen. Beispielsweise sollte das X-Element nur vorhanden sein, wenn das Y-Element einen besonderen Wert aufweist. Die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Instanz ignoriert das X-Element, anstatt es in Bezug auf den Wert des Y-Elements zu überprüfen.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] ignoriert auch unpassende oder irrelevante Eigenschaften, ohne Überprüfungsfehler auszulösen. Beispielsweise sollte das X-Element nur vorhanden sein, wenn das Y-Element einen besonderen Wert aufweist. Die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Instanz ignoriert das X-Element, anstatt es in Bezug auf den Wert des Y-Elements zu überprüfen.  
   
   

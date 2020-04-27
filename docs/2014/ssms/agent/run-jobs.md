@@ -16,23 +16,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 22d1b8074fb40cdd7eda3a5f57704b893242cfcd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62666827"
 ---
 # <a name="run-jobs"></a>Ausführen von Aufträgen
-  Zum Verwalten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Aufträgen können Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozeduren oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verwaltungsobjekte verwenden.  
+  Zum Verwalten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Aufträgen können Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozeduren oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verwaltungsobjekte verwenden.  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |||  
 |-|-|  
-|**Beschreibung**|**Thema**|  
+|**Beschreibung**|**Sonder**|  
 |Beschreibt, wie ein [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag gestartet wird.|[Starten eines Auftrags](start-a-job.md)|  
 |Beschreibt, wie ein [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag beendet wird.|[Stop a Job](stop-a-job.md)|  
-|Beschreibt, wie ein [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag deaktiviert oder aktiviert wird.|[Disable or Enable a Job](disable-or-enable-a-job.md)|  
+|Beschreibt, wie ein [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrag deaktiviert oder aktiviert wird.|[Deaktivieren oder Aktivieren eines Auftrags](disable-or-enable-a-job.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [dbo. sysdownloadlist &#40;Transact-SQL-&#41;](/sql/relational-databases/system-tables/dbo-sysdownloadlist-transact-sql)  

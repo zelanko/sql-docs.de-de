@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f936853c284196b05b6da6369f4410bed2297d4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736363"
 ---
 # <a name="specify-parameters"></a>Angeben von Parametern
@@ -63,10 +63,10 @@ GO
  Durch das explizite Benennen der Parameter und Zuweisen der entsprechenden Werte zu jedem Parameter in einem Prozeduraufruf ist es möglich, dass die Parameter in beliebiger Reihenfolge angegeben werden. Wenn z. B. die Prozedur **my_proc** drei Parameter mit den Namen **\@first**, **\@second** und **\@third** erwartet, können die Werte, die an die Prozedur übergeben werden, den Parameternamen wie folgt zugewiesen werden: `EXECUTE my_proc @second = 2, @first = 1, @third = 3;`  
   
 > [!NOTE]
->  Wenn ein Parameterwert im Format ** \@Parameter =**_value_angegeben wird, müssen alle nachfolgenden Parameter auf diese Weise bereitgestellt werden. Wenn die Parameterwerte nicht im Format ** \@Parameter =**_value_übergeben werden, müssen die Werte in derselben Reihenfolge (von links nach rechts) angegeben werden, da die Parameter in der CREATE PROCEDURE-Anweisung aufgeführt sind.  
+>  Wenn ein Parameterwert im Format **\@parameter =** _value_ angegeben wird, müssen auch alle nachfolgenden Parameter auf diese Weise angegeben werden. Wenn die Parameterwerte nicht im Format **\@parameter =** _value_ übergeben werden, müssen die Werte in derselben Reihenfolge (von links nach rechts) angegeben werden, in der die Parameter in der CREATE PROCEDURE-Anweisung aufgeführt sind.  
 > 
 > [!WARNING]
->  Jeder Parameter, der im Format ** \@Parameter =**_value_ mit dem Parameter falsch geschrieben wird, bewirkt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , dass einen Fehler generiert und die Prozedur Ausführung verhindert.  
+>  Jeder Parameter, der im Format **\@parameter =** _value_ übergeben und falsch geschrieben wird, bewirkt, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einen Fehler generiert und die Prozedurausführung beendet.  
   
 ## <a name="specifying-parameter-data-types"></a>Angeben von Parameterdatentypen  
  Parameter müssen mit einem Datentyp definiert werden, wann sie in einer CREATE PROCEDURE-Anweisung deklariert werden. Durch den Datentyp eines Parameters werden der Typ und der Wertebereich festgelegt, die beim Aufruf der Prozedur für den Parameter akzeptiert werden. Wenn Sie z. B. einen Parameter mit dem `tinyint`-Datentyp definieren, werden nur numerische Werte im Bereich von 0 bis 255 als Werte für diesen Parameter akzeptiert. Wenn eine Prozedur mit einem Wert ausgeführt wird, der nicht mit dem Datentyp kompatibel ist, wird ein Fehler zurückgegeben.  

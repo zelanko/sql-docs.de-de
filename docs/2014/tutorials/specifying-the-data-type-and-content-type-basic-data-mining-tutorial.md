@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 583a6fda2dbb4698405a3d69f33955531b3c1c10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62720054"
 ---
 # <a name="specifying-the-data-type-and-content-type-basic-data-mining-tutorial"></a>Angeben des Datentyps und des Inhaltstyps (Lernprogramm zu Data Mining-Grundlagen)
@@ -32,25 +32,25 @@ ms.locfileid: "62720054"
     |------------|------------------|---------------|  
     |**Address Line1**|**Discrete**|**Text**|  
     |**Address Line2**|**Discrete**|**Text**|  
-    |**Eder**|**Fortlaufend**|**Long**|  
-    |**Bike Buyer**|**Discrete**|**Long**|  
-    |**Entfernung der Entfernung**|**Discrete**|**Text**|  
-    |**CustomerKey**|**Schlüssel**|**Long**|  
+    |**Eder**|**Fortlaufend**|**Lange**|  
+    |**Bike Buyer**|**Discrete**|**Lange**|  
+    |**Commute Distance**|**Discrete**|**Text**|  
+    |**CustomerKey**|**Schlüssel**|**Lange**|  
     |**DateLastPurchase**|**Fortlaufend**|**Date**|  
     |**E-Mail Adresse**|**Discrete**|**Text**|  
     |**EnglishEducation**|**Discrete**|**Text**|  
     |**English Occupation**|**Discrete**|**Text**|  
     |**FirstName**|**Discrete**|**Text**|  
-    |**Geschlechter**|**Discrete**|**Text**|  
+    |**Geschlecht**|**Discrete**|**Text**|  
     |**Geography Key**|**Discrete**|**Text**|  
-    |**Hausbesitzerflag**|**Discrete**|**Text**|  
+    |**House Owner Flag**|**Discrete**|**Text**|  
     |**Nachname**|**Discrete**|**Text**|  
     |**Marital Status**|**Discrete**|**Text**|  
-    |**Anzahl der Autos im Besitz**|**Discrete**|**Long**|  
-    |**Anzahl der Kinder zu Hause**|**Discrete**|**Long**|  
+    |**Number Cars Owned**|**Discrete**|**Lange**|  
+    |**Anzahl der Kinder zu Hause**|**Discrete**|**Lange**|  
     |**Region**|**Discrete**|**Text**|  
-    |**Total Children**|**Discrete**|**Long**|  
-    |**Yearly Income**|**Fortlaufend**|**Maß**|  
+    |**Total Children**|**Discrete**|**Lange**|  
+    |**Yearly Income**|**Fortlaufend**|**Double**|  
   
 3.  Klicken Sie auf **Weiter**.  
   
@@ -62,6 +62,6 @@ ms.locfileid: "62720054"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Inhaltstypen &#40;Data Mining-&#41;](../../2014/analysis-services/data-mining/content-types-data-mining.md)   
- [Datentypen &#40;Data Mining-&#41;](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
+ [Datentypen &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/data-types-data-mining.md)  
   
   

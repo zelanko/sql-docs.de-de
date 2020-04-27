@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 12013ae253680621d154d7a6af87005aedbd92a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62511450"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
@@ -58,16 +58,16 @@ HRESULT GetStatus(
   
  Wenn es sich bei *pulProgressMax* um einen NULL-Zeiger handelt, wird kein erwarteter maximaler Wert zurückgegeben.  
   
- " *Peer asynchphase*" [out]  
+ *peAsynchPhase*[out]  
  Ein Zeiger auf den Arbeitsspeicher, in dem weitere Informationen über den Status des asynchronen Vorgangs zurückgegeben werden sollen. Gültige Werte:  
   
  DBASYNCHPHASE_INITIALIZATION – Das Objekt befindet sich in einer Initialisierungsphase. Die Argumente *pulProgress* und *pulProgressMax* geben an, wie weit der Vorgang in etwa abgeschlossen ist. Das Objekt ist noch nicht vollständig materialisiert. Der Versuch, andere Schnittstellen aufzurufen, schlägt möglicherweise fehl, und die vollständige Gruppe von Schnittstellen ist möglicherweise für das Objekt nicht verfügbar. Wenn der asynchrone Vorgang die Folge eines Aufrufs von **ICommand::Execute** für einen Befehl zum Aktualisieren, Löschen oder Einfügen von Zeilen war und wenn *cParamSets* größer als 1 ist, zeigen *pulProgress* und *pulProgressMax* möglicherweise den Status für einen einzelnen Parametersatz oder für das gesamte Array von Parametersätzen an.  
   
  DBASYNCHPHASE_POPULATION – Das Objekt befindet sich in einer Auffüllungsphase. Obwohl das Rowset vollständig initialisiert ist und der gesamte Satz von Schnittstellen für das Objekt verfügbar ist, sind möglicherweise zusätzliche Zeilen noch nicht in das Rowset aufgefüllt. Während *pulProgress* und *pulProgressMax* auf die Anzahl der aufgefüllten Zeilen basiert werden kann, werden sie im Allgemeinen auf die Zeit oder den Aufwand basiert, der zum Auffüllen des Rowsets erforderlich ist. Ein Aufrufer sollte daher diese Information als grobe Schätzung ansehen, wie lang der Vorgang dauern könnte, nicht als Schätzung für die letztendliche Zeilenanzahl. Diese Phase wird nur während der Auffüllung eines Rowsets zurückgegeben. Sie wird nie bei der Initialisierung eines Datenquellobjekts oder durch die Ausführung eines Befehls zum Aktualisieren, Löschen oder Einfügen von Zeilen zurückgegeben.  
   
- DBASYNCHPHASE_COMPLETE – Alle asynchronen Verarbeitungsvorgänge für das Objekt sind abgeschlossen. **ISSAsynchStatus:: GetStatus** gibt ein HRESULT zurück, das das Ergebnis des Vorgangs angibt. Normalerweise ist dies das HRESULT, das zurückgegeben worden wäre, wäre der Vorgang synchron aufgerufen worden. Wenn der asynchrone Vorgang die Folge eines Aufrufs von **ICommand::Execute** für einen Befehl zum Aktualisieren, Löschen oder Einfügen von Zeilen war, entsprechen *pulProgress* und *pulProgressMax* der Gesamtzahl der Zeilen, die von dem Befehl betroffen sind. Wenn *cParamSets* größer als 1 ist, ist dies die Gesamtanzahl der Zeilen, die von allen während der Ausführung angegebenen Parametersätzen betroffen sind. Wenn es sich bei *peAsynchPhase* um einen NULL-Zeiger handelt, wird kein Statuscode zurückgegeben.  
+ DBASYNCHPHASE_COMPLETE – Alle asynchronen Verarbeitungsvorgänge für das Objekt sind abgeschlossen. **ISSAsynchStatus::GetStatus** gibt ein HRESULT zurück, das das Ergebnis des Vorgangs angibt. Normalerweise ist dies das HRESULT, das zurückgegeben worden wäre, wäre der Vorgang synchron aufgerufen worden. Wenn der asynchrone Vorgang die Folge eines Aufrufs von **ICommand::Execute** für einen Befehl zum Aktualisieren, Löschen oder Einfügen von Zeilen war, entsprechen *pulProgress* und *pulProgressMax* der Gesamtzahl der Zeilen, die von dem Befehl betroffen sind. Wenn *cParamSets* größer als 1 ist, ist dies die Gesamtanzahl der Zeilen, die von allen während der Ausführung angegebenen Parametersätzen betroffen sind. Wenn es sich bei *peAsynchPhase* um einen NULL-Zeiger handelt, wird kein Statuscode zurückgegeben.  
   
- DBASYNCHPHASE_CANCELED – Die asynchrone Verarbeitung des Objekts wurde abgebrochen. **ISSAsynchStatus:: GetStatus** gibt DB_E_CANCELED zurück. Wenn der asynchrone Vorgang die Folge eines Aufrufs von **ICommand::Execute** für einen Befehl zum Aktualisieren, Löschen oder Einfügen von Zeilen war, entspricht *pulProgress* der Gesamtzahl der Zeilen für alle Parametersätze, die von dem Befehl vor dem Abbrechen betroffen wurden.  
+ DBASYNCHPHASE_CANCELED – Die asynchrone Verarbeitung des Objekts wurde abgebrochen. **ISSAsynchStatus::GetStatus** gibt DB_E_CANCELED zurück. Wenn der asynchrone Vorgang die Folge eines Aufrufs von **ICommand::Execute** für einen Befehl zum Aktualisieren, Löschen oder Einfügen von Zeilen war, entspricht *pulProgress* der Gesamtzahl der Zeilen für alle Parametersätze, die von dem Befehl vor dem Abbrechen betroffen wurden.  
   
  *ppwszStatusText*[in/out]  
  Ein Zeiger auf den Arbeitsspeicher, der weitere Informationen über den Vorgang enthält. Mit diesem Wert kann ein Anbieter zwischen verschiedenen Elementen eines Vorgangs unterscheiden, z.B. verschiedene Ressourcen, auf die zugegriffen wurde. Diese Zeichenfolge wird gemäß der DBPROP_INIT_LCID-Eigenschaft für das Datenquellobjekt lokalisiert.  
@@ -97,16 +97,16 @@ HRESULT GetStatus(
  Der *hChapter* -Parameter ist ungültig.  
   
  E_UNEXPECTED  
- **ISSAsynchStatus:: GetStatus** wurde für ein Datenquellen Objekt aufgerufen, und **IDBInitialize:: Initialize** wurde nicht für das Datenquellen Objekt aufgerufen.  
+ **ISSAsynchStatus::GetStatus** wurde für ein Datenquellobjekt aufgerufen, für das **IDBInitialize::Initialize** nicht aufgerufen wurde.  
   
- **ISSAsynchStatus:: GetStatus** wurde für ein Rowset aufgerufen, **ITransaction:: Commit** oder **ITransaction:: Abort** wurde aufgerufen, und das Objekt befindet sich in einem Zombie Zustand.  
+ **ISSAsynchStatus::GetStatus** wurde für ein Rowset aufgerufen, **ITransaction::Commit** oder **ITransaction::Abort** wurde aufgerufen, und das Objekt befindet sich in einem Zombiezustand.  
   
- **ISSAsynchStatus:: GetStatus** wurde für ein Rowset aufgerufen, das in seiner Initialisierungsphase asynchron abgebrochen wurde. Das Rowset befindet sich in einem Zombiezustand.  
+ **ISSAsynchStatus::GetStatus** wurde für ein Rowset aufgerufen, das in seiner Initialisierungsphase asynchron abgebrochen wurde. Das Rowset befindet sich in einem Zombiezustand.  
   
  E_FAIL  
  Es ist ein anbieterspezifischer Fehler aufgetreten.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die **ISSAsynchStatus**-Methode verhält sich genauso wie die **ISSAsynchStatus::GetStatus**-Methode, gibt jedoch anstelle von DB_E_CANCELED E_UNEXPECTED zurück, wenn die Initialisierung eines Datenquellenobjekts abgebrochen wird (obwohl [ISSAsynchStatus::WaitForAsynchCompletion](issasynchstatus-waitforasynchcompletion-ole-db.md) DB_E_CANCELED zurückgibt). Dies ist darauf zurückzuführen, dass das Datenquellobjekt nach einem Abbruchvorgang nicht mehr den gewöhnlichen Zombiestatus aufweist, sodass weitere Initialisierungsvorgänge durchgeführt werden können.  
   
  Wenn das Rowset initialisiert oder asynchron aufgefüllt wird, muss es diese Methode unterstützen.  

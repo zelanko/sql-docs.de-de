@@ -13,14 +13,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 19381b0c5dbe690a60b2c536a8da759205c08c31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62643452"
 ---
 # <a name="granting-access-to-a-database-object"></a>Erteilen des Zugriffs auf ein Datenbankobjekt
-  Als Administrator können Sie die SELECT-Anweisungen aus der Tabelle **Products** und der **vw_Names** anzeigen und die **pr_Names** Prozedur ausführen. Mary kann jedoch nicht. Verwenden Sie die GRANT-Anweisung, um Mary die erforderlichen Berechtigungen zu erteilen.  
+   Als Administrator können Sie die SELECT-Anweisung für die **Products**-Tabelle und die **vw_Names**-Sicht ausführen. Außerdem können Sie die **pr_Names**-Prozedur ausführen. Mary hingegen ist dazu nicht berechtigt. Verwenden Sie die GRANT-Anweisung, um Mary die erforderlichen Berechtigungen zu erteilen.  
   
 ### <a name="procedure-title"></a>Titel der Prozedur  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62643452"
  [Zusammenfassung: Konfigurieren von Berechtigungen für Datenbankobjekte](lesson-2-5-summary-configuring-permissions-on-database-objects.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [GRANT &#40;Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql)   
+ [Grant &#40;Transact-SQL-&#41;](/sql/t-sql/statements/grant-transact-sql)   
  [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)  
   
   

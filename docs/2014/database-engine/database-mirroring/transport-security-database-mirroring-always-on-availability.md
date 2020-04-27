@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 18b52163cb1e8c6be0cf7fdea37861662d6e4830
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754295"
 ---
 # <a name="transport-security-for-database-mirroring-and-alwayson-availability-groups-sql-server"></a>Transportsicherheit für Datenbankspiegelung und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
@@ -31,7 +31,7 @@ ms.locfileid: "62754295"
   
 
   
-##  <a name="Authentication"></a> Authentifizierung  
+##  <a name="authentication"></a><a name="Authentication"></a> Authentifizierung  
  Unter Authentifizierung versteht man den Prozess, mit dem überprüft wird, ob es sich bei einem Benutzer wirklich um die Person handelt, die der Benutzer angeblich ist. Verbindungen zwischen Datenbank-Spiegelungsendpunkten erfordern die Authentifizierung. Verbindungsanforderungen von einem Partner oder ggf. einem Zeugen müssen authentifiziert werden.  
   
  Der für Datenbankspiegelung oder [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] von einer Serverinstanz verwendete Authentifizierungstyp ist eine Eigenschaft des Endpunkts der Datenbankspiegelung. Für Datenbankspiegelungs-Endpunkte sind zwei Arten von Transportsicherheit verfügbar: Windows-Authentifizierung (die Security Support Provider Interface (SSPI)) oder zertifikatbasierte Authentifizierung.  
@@ -55,7 +55,7 @@ ms.locfileid: "62754295"
   
  Eine Serverinstanz verwendet den privaten Schlüssel ihres eigenen Zertifikats, um bei einem Verbindungsaufbau ihre Identität einzurichten. Die Serverinstanz, die die Verbindungsanforderung empfängt, verwendet den öffentlichen Schlüssel des Absenderzertifikats, um die Identität des Absenders zu authentifizieren. Angenommen es gibt z. B. zwei Serverinstanzen, Server_A und Server_B. Von Server_A wird ein privater Schlüssel zur Verschlüsselung des Verbindungsheaders verwendet, bevor eine Verbindungsanforderung an Server_B gesendet wird. Von Server_B wird der öffentliche Schlüssel des Zertifikats von Server_A verwendet, um den Verbindungsheader zu entschlüsseln. Wenn der entschlüsselte Header richtig ist, weiß Server_B, dass der Header von Server_A verschlüsselt wurde, und die Verbindung wird authentifiziert. Wenn der entschlüsselte Header nicht richtig ist, erkennt Server_B, dass die Verbindungsanforderung nicht authentisch ist, und verweigert den Verbindungsaufbau.  
   
-##  <a name="DataEncryption"></a>Datenverschlüsselung  
+##  <a name="data-encryption"></a><a name="DataEncryption"></a>Datenverschlüsselung  
  Standardmäßig setzt ein Datenbank-Spiegelungsendpunkt die Verschlüsselung der über Spiegelungsverbindungen gesendeten Daten voraus. In diesem Fall kann der Endpunkt nur Verbindungen mit Endpunkten herstellen, die ebenfalls mit Verschlüsselung arbeiten. Sofern Sie nicht garantieren können, dass Ihr Netzwerk sicher ist, wird empfohlen, das Verschlüsseln bei Verbindungen zur Datenbankspiegelung vorauszusetzen. Allerdings können Sie die Verschlüsselung auch deaktivieren oder festlegen, dass die Verschlüsselung zwar unterstützt wird, jedoch nicht erforderlich ist. Bei deaktivierter Verschlüsselung werden die Daten niemals verschlüsselt, und der Endpunkt kann keine Verbindung mit einem Endpunkt herstellen, der die Verschlüsselung erfordert. Wenn die Verschlüsselung unterstützt wird, werden die Daten nur dann verschlüsselt, wenn der gegenüberliegende Endpunkt die Verschlüsselung unterstützt oder erfordert.  
   
 > [!NOTE]  
@@ -63,10 +63,9 @@ ms.locfileid: "62754295"
   
  Sie können auch die Verschlüsselungsalgorithmen steuern, die von einem Endpunkt verwendet werden können, indem Sie einen der folgenden Werte für die ALGORITHM-Option in einer CREATE ENDPOINT- oder ALTER ENDPOINT-Anweisung angeben:  
   
-|ALGORITHM-Wert|BESCHREIBUNG|  
+|ALGORITHM-Wert|Beschreibung|  
 |---------------------|-----------------|  
-|RC4|Gibt an, dass der Endpunkt den RC4-Algorithmus verwenden muss. Dies ist die Standardoption.<br /><br /> Hinweis: der RC4-Algorithmus ist veraltet. 
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Stattdessen wird die Verwendung von AES empfohlen.|  
+|RC4|Gibt an, dass der Endpunkt den RC4-Algorithmus verwenden muss. Dies ist die Standardoption.<br /><br /> Hinweis: der RC4-Algorithmus ist veraltet. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Stattdessen wird die Verwendung von AES empfohlen.|  
 |AES|Gibt an, dass der Endpunkt den AES-Algorithmus verwenden muss.|  
 |AES RC4|Gibt an, dass die beiden Endpunkte einen Verschlüsselungsalgorithmus aushandeln, wobei dieser Endpunkt dem AES-Algorithmus den Vorzug gibt.|  
 |RC4 AES|Gibt an, dass die beiden Endpunkte einen Verschlüsselungsalgorithmus aushandeln, wobei dieser Endpunkt dem RC4-Algorithmus den Vorzug gibt.|  
@@ -80,27 +79,27 @@ ms.locfileid: "62754295"
   
  Informationen zur [!INCLUDE[tsql](../../includes/tsql-md.md)]-Syntax zum Angeben der Verschlüsselung finden Sie unter [CREATE ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-endpoint-transact-sql).  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
- **So konfigurieren Sie die Transportsicherheit für einen Datenbankspiegelungs-Endpunkt**  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
+ **So konfigurieren Sie die Transportsicherheit für einen Datenbankspiegelung-Endpunkt**  
   
--   [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung (Transact-SQL)](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
+-   [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung (SQL Server Management Studio)](establish-database-mirroring-session-windows-authentication.md)  
   
--   [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung (Transact-SQL)](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [Ermöglicht einem Datenbankspiegelungs-Endpunkt die Verwendung von Zertifikaten für ausgehende Verbindungen &#40;Transact-SQL-&#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
+-   [Ermöglichen des Verwendens von Zertifikaten für ausgehende Verbindungen für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Auswählen eines Verschlüsselungsalgorithmus](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-endpoint-transact-sql)   
- [DROP ENDPOINT (Transact-SQL)](/sql/t-sql/statements/drop-endpoint-transact-sql)   
+ [Drop Endpoint &#40;Transact-SQL-&#41;](/sql/t-sql/statements/drop-endpoint-transact-sql)   
  [Security Center für SQL Server Datenbank-Engine und Azure SQL-Datenbank](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)   
- [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Serverinstanz &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
+ [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Server Instanz &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md)   
  [Der Datenbankspiegelungs-Endpunkt &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [sys. database_mirroring_endpoints &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql)   
  [sys. dm_db_mirroring_connections &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/database-mirroring-sys-dm-db-mirroring-connections)   
- [Problembehandlung für die Datenbankspiegelungskonfiguration (SQL Server)](troubleshoot-database-mirroring-configuration-sql-server.md)   
+ [Problembehandlung bei der Daten Bank Spiegelungs Konfiguration &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [Problembehandlung AlwaysOn-Verfügbarkeitsgruppen Konfigurations &#40;SQL Server&#41;gelöscht](../availability-groups/windows/troubleshoot-always-on-availability-groups-configuration-sql-server.md)
   
   

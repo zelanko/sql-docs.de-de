@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67df7c541b0c664f200f6cf77affc0c809dbc719
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736353"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>Kopieren von Spalten von einer Tabelle in eine andere Tabelle (Datenbank-Engine)
@@ -31,23 +31,23 @@ ms.locfileid: "62736353"
   
      [Sicherheit](#Security)  
   
--   **Zum Übersetzen von Spalten mit:**  
+-   **So kopieren Sie Spalten mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
  Wenn Sie eine Spalte mit einem Aliasdatentyp aus einer Datenbank in eine andere kopieren, steht der Aliasdatentyp in der Zieldatenbank möglicherweise nicht zur Verfügung. In diesem Fall wird der Spalte der ähnlichste Grunddatentyp zugewiesen, der in der Datenbank verfügbar ist.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Tabelle.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>So kopieren Sie Spaltendefinitionen von einer Tabelle in eine andere  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62736353"
      Wenn Sie Zeilen innerhalb einer Tabelle kopieren, können Sie die Quelltabelle als Zieltabelle hinzufügen.  
   
     > [!NOTE]  
-    >  Der **Abfrage-Designer** kann nicht im Voraus bestimmen, welche Tabellen und Sichten aktualisiert werden können. Daher werden im Dialogfeld **Zieltabelle für Anfügeabfrage auswählen** in der Tabellenliste alle in der abgefragten Datenverbindung verfügbaren Tabellen und Sichten angezeigt, d. h. auch diejenigen, in die möglicherweise keine Zeilen kopiert werden können.  
+    >  Der**Abfrage-Designer** kann nicht im Voraus bestimmen, welche Tabellen und Sichten Sie aktualisieren können. Daher werden im Dialogfeld **Zieltabelle für Anfügeabfrage auswählen** in der Tabellenliste alle in der abgefragten Datenverbindung verfügbaren Tabellen und Sichten angezeigt, d. h. auch diejenigen, in die möglicherweise keine Zeilen kopiert werden können.  
   
 5.  Klicken Sie mit der rechten Maustaste auf den Diagrammbereich und dann im Kontextmenü auf **Tabelle zu Diagramm hinzufügen**.  
   
@@ -97,9 +97,9 @@ ms.locfileid: "62736353"
   
 11. Klicken Sie auf die Schaltfläche **SQL ausführen** , um die Abfrage auszuführen.  
   
-     Wenn Sie eine Abfrage zum Einfügen von Ergebnissen ausführen, werden im [Ergebnis](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)Bereich keine Ergebnisse angezeigt. Stattdessen wird eine Meldung mit der Anzahl der kopierten Zeilen ausgegeben.  
+     Beim Ausführen einer Abfrage zum Einfügen von Ergebnissen werden im [Ergebnisbereich](../../ssms/visual-db-tools/results-pane-visual-database-tools.md)keine Ergebnisse angezeigt. Stattdessen wird eine Meldung mit der Anzahl der kopierten Zeilen ausgegeben.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>So kopieren Sie Spaltendefinitionen von einer Tabelle in eine andere  
   

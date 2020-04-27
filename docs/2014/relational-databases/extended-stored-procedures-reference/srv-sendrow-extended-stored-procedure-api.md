@@ -21,17 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f39355222b491be27cc1b914401dcc459151e4bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62718057"
 ---
 # <a name="srv_sendrow-extended-stored-procedure-api"></a>srv_sendrow (API für erweiterte gespeicherte Prozeduren)
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
   
  Sendet eine Zeile mit Daten an den Client.  
   
@@ -52,7 +51,7 @@ srvproc
 ## <a name="returns"></a>Rückgabe  
  SUCCEED oder FAIL.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die **srv_sendrow** -Funktion wird einmal für jede an den Client gesendete Zeile aufgerufen. Alle Zeilen müssen an den Client gesendet werden, bevor Nachrichten, Statuswerte oder Abschlussstatus mit **srv_sendmsg**, **srv_status**oder **srv_senddone**gesendet werden.  
   
  Beim Senden einer Zeile, für die nicht alle Spalten mit **srv_describe** definiert wurden, zeigt die API für erweiterte gespeicherte Prozeduren eine Informationsfehlermeldung an und gibt FAIL an den Client zurück. In diesem Fall wird die Zeile nicht gesendet.  
@@ -64,6 +63,6 @@ srvproc
 >  Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren sorgfältig prüfen, und Sie sollten die kompilierten DLL-Dateien testen, bevor Sie sie auf einem Produktionsserver installieren. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [srv_describe &#40;API für erweiterte gespeicherte Prozeduren&#41;](srv-describe-extended-stored-procedure-api.md)  
+ [srv_describe (API für erweiterte gespeicherte Prozeduren)](srv-describe-extended-stored-procedure-api.md)  
   
   

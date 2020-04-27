@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c1ea3cd62c97cecd9af0b8b696156b9f2622f5b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755511"
 ---
 # <a name="establish-a-database-mirroring-session-using-windows-authentication-transact-sql"></a>Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung (Transact-SQL)
@@ -63,9 +63,9 @@ ms.locfileid: "62755511"
   
 4.  Um den Prinzipalserver als Partner auf der Spiegelungsdatenbank festzulegen, stellen Sie eine Verbindung mit dem Spiegelungsserver her, und geben Sie die folgende Anweisung aus:  
   
-     ALTER DATABASE *<database_name>* Set Partner **=** _<server_network_address>_  
+     ALTER DATABASE *<Datenbankname>* SET PARTNER **=**_<Server-Netzwerkadresse>_  
   
-     Dabei ist *<database_name>* der Name der zu spiegelnden Datenbank (dieser Name ist auf beiden Partnern identisch), und *<server_network_address>* die Servernetzwerk Adresse des Prinzipal Servers ist.  
+     Dabei ist *<Datenbankname>* der Name der zu spiegelnden Datenbank (dieser Name ist für beide Partner gleich) und *<Server-Netzwerkadresse>* die Servernetzwerkadresse des Prinzipalservers.  
   
      Die Syntax für eine Server-Netzwerkadresse lautet folgendermaßen:  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62755511"
   
 5.  Um den Spiegelserver als Partner auf der Prinzipaldatenbank festzulegen, stellen Sie eine Verbindung mit dem Prinzipalserver her, und geben Sie die folgende Anweisung aus:  
   
-     ALTER DATABASE *<database_name>* Set Partner **=** _<server_network_address>_  
+     ALTER DATABASE *<Datenbankname>* SET PARTNER **=**_<Server-Netzwerkadresse>_  
   
      Weitere Informationen finden Sie unter Schritt 4.  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62755511"
   
     -   **Modus mit hoher Leistung**  
   
-         Wenn Sie kein automatisches Failover wünschen oder wenn Ihnen Leistung wichtiger als hohe Verfügbarkeit ist, können Sie alternativ die Transaktionssicherheit deaktivieren. Weitere Informationen finden Sie unter [Ändern der Transaktionssicherheit in einer Datenbank-Spiegelungssitzung &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
+         Wenn Sie kein automatisches Failover wünschen oder wenn Ihnen Leistung wichtiger als hohe Verfügbarkeit ist, können Sie alternativ die Transaktionssicherheit deaktivieren. Weitere Informationen finden Sie unter [Ändern der Transaktionssicherheit in einer Datenbank-Spiegelungs Sitzung &#40;Transact-SQL-&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
         > [!NOTE]  
         >  Im Modus für hohe Leistung sollte WITNESS auf OFF festgelegt sein. Weitere Informationen finden Sie unter [Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit &#40;Datenbankspiegelung&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
@@ -210,16 +210,16 @@ ms.locfileid: "62755511"
 >  Ein vollständiges Beispiel für das Einrichten der Sicherheitskomponenten, das Vorbereiten der Spiegeldatenbank, das Einrichten der Partner und das Hinzufügen eines Zeugen finden Sie unter [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Alter Database &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [Das Einrichten der Daten Bank Spiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Ermöglicht den Netzwerk Zugriff auf einen Datenbankspiegelungs-Endpunkt mithilfe der Windows-Authentifizierung &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)   
- [Vorbereiten einer Spiegeldatenbank auf die Spiegelung (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md)   
- [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung (Transact-SQL)](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
+ [Bereiten Sie eine Spiegel Datenbank für die Spiegelung &#40;SQL Server vor&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)   
+ [Erstellen eines Datenbankspiegelungs-Endpunkts für die Windows-Authentifizierung &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
  [Daten Bank Spiegelung und Protokoll Versand &#40;SQL Server&#41;](database-mirroring-and-log-shipping-sql-server.md)   
  [Daten Bank Spiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Datenbankspiegelung und Replikation (SQL Server)](database-mirroring-and-replication-sql-server.md)   
- [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [Daten Bank Spiegelung und Replikation &#40;SQL Server&#41;](database-mirroring-and-replication-sql-server.md)   
+ [Das Einrichten der Daten Bank Spiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Geben Sie eine Server-Netzwerkadresse &#40;Daten Bank Spiegelung an&#41;](specify-a-server-network-address-database-mirroring.md)   
- [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)  
+ [Betriebsmodi der Datenbankspiegelung](database-mirroring-operating-modes.md)  
   
   

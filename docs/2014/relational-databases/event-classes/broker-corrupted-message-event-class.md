@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a49f10826496e9e8fea46b1846b74535a173f821
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62664085"
 ---
 # <a name="brokercorrupted-message-event-class"></a>Broker:Corrupted Message-Ereignisklasse
@@ -46,13 +46,13 @@ ms.locfileid: "62664085"
 |**NTUserName**|**nvarchar**|Der Name des Benutzers, der Besitzer der Verbindung ist, die dieses Ereignis generiert hat.|6|Ja|  
 |**ObjectName**|**nvarchar**|Der Dienstname der anderen Seite der Konversation und die Verbindungszeichenfolge, die die Remotedatenbank verwendet hat, um eine Verbindung mit dieser Datenbank herzustellen.|34|Nein|  
 |**RoleName**|**nvarchar**|Die Rolle des Endpunktes, der diese Nachricht empfängt. Einer der folgenden Werte:<br /><br /> **Initiator**:<br />                  Der empfangende Endpunkt ist der Initiator der Konversation.<br /><br /> **Ziel**:<br />                  Der empfangende Endpunkt ist das Ziel der Konversation.|38|Nein|  
-|**Servername**|**nvarchar**|Der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , für die eine Ablaufverfolgung ausgeführt wird.|26|Nein|  
-|**severity**|**int**|Wenn ein Fehler bewirkt hat, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Nachricht gelöscht hat, der Schweregrad des Fehlers.|29|Nein|  
+|**ServerName**|**nvarchar**|Der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , für die eine Ablaufverfolgung ausgeführt wird.|26|Nein|  
+|**Schweregrad**|**int**|Wenn ein Fehler bewirkt hat, dass [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Nachricht gelöscht hat, der Schweregrad des Fehlers.|29|Nein|  
 |**SPID**|**int**|Die Serverprozess-ID, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem Prozess zugewiesen wurde, der diesem Client zugeordnet ist.|12|Ja|  
 |**StartTime**|**datetime**|Der Zeitpunkt, zu dem das Ereignis begonnen hat, falls verfügbar.|14|Ja|  
 |**State**|**int**|Gibt den Standort im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Quellcode an, der das Ereignis erstellt hat. Jeder Ort, von dem aus dieses Ereignis ggf. erstellt werden kann, besitzt einen anderen Statuscode. Der Microsoft Software Service kann mithilfe dieses Statuscodes herausfinden, wo das Ereignis generiert wurde.|30|Nein|  
 |**TextData**|**ntext**|Beschreibung der erkannten Beschädigung|1|Ja|  
-|**Transaktions-ID**|**BIGINT**|Die vom System zugewiesene ID der Transaktion.|4|Nein|  
+|**TransactionID**|**bigint**|Die vom System zugewiesene ID der Transaktion.|4|Nein|  
   
  Die **TextData** -Spalte dieses Ereignisses enthält eine Nachricht, die das Problem mit der Nachricht beschreibt.  
   

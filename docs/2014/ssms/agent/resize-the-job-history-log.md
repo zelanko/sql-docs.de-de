@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1a8c9ab517d1f6a122144604d6b147e6f5eeaf6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62650887"
 ---
 # <a name="resize-the-job-history-log"></a>Resize the Job History Log
@@ -31,20 +31,20 @@ ms.locfileid: "62650887"
   
      [Sicherheit](#Security)  
   
--   **So legen Sie Größenbeschränkungen für Auftragsverlaufs Protokolle fest mit:**  
+-   **So legen Sie Größenbeschränkungen für den Auftragsverlauf fest mit**  
   
      [SQL Server Management Studio](#SSMS)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
  Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-resize-the-job-history-log-based-on-raw-size"></a>So ändern Sie die Größe des Auftragsverlaufsprotokolls basierend auf der Basisgröße  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]her, und erweitern Sie dann diese Instanz.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz her, und erweitern Sie dann die Instanz.  
   
 2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent**, und klicken Sie anschließend auf **Eigenschaften**.  
   

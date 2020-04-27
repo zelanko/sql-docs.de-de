@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab7695b6a80772ddcd01996e783fffd806447c59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473201"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>Zuweisen eines Auftrags zu einer Auftragskategorie
@@ -30,18 +30,18 @@ ms.locfileid: "62473201"
  Auftragskategorien helfen Ihnen dabei, Ihre Aufträge zum einfachen Filtern und Gruppieren zu organisieren. Sie können z. B. alle Aufträge für die Datenbanksicherung in der Datenbankwartungskategorie organisieren. Sie können Aufträge integrierten Auftragskategorien zuweisen, oder Sie erstellen eine benutzerdefinierte Auftragskategorie und weisen ihr dann Aufträge zu.  
   
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
  Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
   
   
-##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-assign-a-job-to-a-job-category"></a>So weisen Sie einen Auftrag einer Auftragskategorie zu  
   
-1.  Klicken Sie im **Objekt-Explorer**auf das Pluszeichen, um den Server zu erweitern, auf dem Sie einer Auftragskategorie einen Auftrag hinzufügen möchten.  
+1.  Klicken Sie im **Objekt-Explorer** auf das Pluszeichen, um den Server zu erweitern, auf dem Sie einer Auftragskategorie einen Auftrag hinzufügen möchten.  
   
 2.  Klicken Sie auf das Pluszeichen, um **SQL Server-Agent**zu erweitern.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62473201"
 6.  Klicken Sie auf **OK**.  
   
   
-##  <a name="TSQL"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-assign-a-job-to-a-job-category"></a>So weisen Sie einen Auftrag einer Auftragskategorie zu  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62473201"
   
   
   
-##  <a name="SMO"></a>Verwenden von SQL Server Management Objects  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Verwenden von SQL Server Management Objects  
  **So weisen Sie einen Auftrag einer Auftragskategorie zu**  
   
  Verwenden Sie die `JobCategory`-Klasse in einer von Ihnen ausgewählten Programmiersprache, z. B. Visual Basic, Visual C# oder PowerShell.  

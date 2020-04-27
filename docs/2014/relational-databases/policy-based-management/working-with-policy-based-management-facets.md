@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 037eb57f53bf583195efdf1f91fcd55f94ebaddc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676902"
 ---
 # <a name="working-with-policy-based-management-facets"></a>Arbeiten mit Facets der richtlinienbasierten Verwaltung
@@ -29,7 +29,7 @@ ms.locfileid: "62676902"
   
  In diesem Thema wird beschrieben, wie der Status eines Facets in eine XML-Datei kopiert wird.  
   
-##  <a name="BeforeYouBegin"></a> Berechtigungen  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Berechtigungen  
  Die Verfahren in diesem Thema erfordern die Mitgliedschaft in der PolicyAdministratorRole-Rolle in der msdb-Datenbank.  
   
 ## <a name="viewing-and-copying-facet-states"></a>Anzeigen und Kopieren von Facet-Status  

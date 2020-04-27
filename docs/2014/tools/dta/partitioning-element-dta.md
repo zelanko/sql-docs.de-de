@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: acf6d033595952186b411ef0e547858f8b59771b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62657235"
 ---
 # <a name="partitioning-element-dta"></a>Partitioning-Element (DTA)
@@ -38,8 +38,7 @@ ms.locfileid: "62657235"
   
 |Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
-|**Datentyp und -länge**|
-  `string`, keine maximale Länge.|  
+|**Datentyp und -länge**|`string`, keine maximale Länge.|  
 |**Zulässige Werte**|**NONE**<br /> Keine Partitionierung.<br /><br /> **FULL**<br /> Vollständige Partitionierung. (Erhöht die Leistung.)<br /><br /> **ALIGNED**<br /> Nur ausgerichtete Partitionierung. (Erleichtert die Verwaltbarkeit.)<br /><br /> Verwenden Sie nur einen dieser Werte mit diesem Element.<br /><br /> **ALIGNED** bedeutet, dass in der vom Datenbankoptimierungsratgeber generierten Empfehlung jeder vorgeschlagene Index auf exakt dieselbe Weise partitioniert wird wie die zugrunde liegende Tabelle, für die der Index definiert ist. Nicht gruppierte Indizes für eine indizierte Sicht werden mit der indizierten Sicht ausgerichtet.|  
 |**Standardwert**|**NONE**|  
 |**Vorkommen**|Einmalig erforderlich für das `TuningOptions`-Element, es sei denn, das `DropOnlyMode`-Element wird verwendet. Wird das `DropOnlyMode`-Element verwendet, kann das `Partitioning`-Element nicht verwendet werden. Diese Elemente schließen sich gegenseitig aus.|  

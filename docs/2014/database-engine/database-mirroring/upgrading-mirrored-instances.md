@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 857e18b1b956d3d8c9d2fc4c5692dbf022bf85fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754278"
 ---
 # <a name="minimize-downtime-for-mirrored-databases-when-upgrading-server-instances"></a>Minimieren der Ausfallzeit von gespiegelten Datenbanken beim Aktualisieren von Serverinstanzen
@@ -71,7 +71,7 @@ ms.locfileid: "62754278"
   
     -   In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: Ändern Sie im Dialogfeld **Datenbankeigenschaften** auf der Seite **Spiegelung** die Option [Betriebsmodus](../../relational-databases/databases/database-properties-mirroring-page.md) in **Hohe Sicherheit ohne automatisches Failover (synchron)** . Informationen über den Zugriff auf diese Seite finden Sie unter [Starten des Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md).  
   
-    -   In [!INCLUDE[tsql](../../includes/tsql-md.md)]: Legen Sie die Transaktionssicherheit auf FULL fest. Weitere Informationen finden Sie unter [Ändern der Transaktionssicherheit in einer Datenbank-Spiegelungs Sitzung &#40;Transact-SQL-&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
+    -   In [!INCLUDE[tsql](../../includes/tsql-md.md)]: Legen Sie die Transaktionssicherheit auf FULL fest. Weitere Informationen finden Sie unter [Ändern der Transaktionssicherheit in einer Datenbank-Spiegelungssitzung &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
 ### <a name="to-remove-a-witness-from-a-session"></a>So entfernen Sie einen Zeugen aus einer Sitzung  
   
@@ -101,7 +101,7 @@ ms.locfileid: "62754278"
   
      Ziel dieses Schritts ist es, dass eine andere Serverinstanz zum Spiegelserver in jeder Spiegelungssitzung wird, an der sie als Partner beteiligt ist.  
   
-     **Einschränkungen nach einem Failover zu einer aktualisierten Serverinstanz.**  
+     **Einschränkungen nach einem Failover zu einer aktualisierten Serverinstanz**  
   
      Nach dem Ausführen eines Failovers von einer früheren zu einer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Serverinstanz wird die Datenbanksitzung angehalten. Sie kann erst dann fortgesetzt werden, wenn der andere Partner aktualisiert wurde. Der Prinzipalserver nimmt jedoch nach wie vor Verbindungen an und lässt den Datenzugriff auf die und Änderungen an der Prinzipaldatenbank zu.  
   
@@ -134,21 +134,21 @@ ms.locfileid: "62754278"
   
 1.  Im Modus für hohe Sicherheit können Sie den Zeugen in jeder Spiegelungssitzung wiederherstellen.  
   
-     **So geben Sie einen Zeugen zurück**  
+     **So fügen Sie einen Zeugen wieder hinzu**  
   
     -   [Hinzufügen oder Ersetzen eines Datenbank-Spiegelungszeugen &#40;SQL Server Management Studio&#41;](add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
-    -   [Hinzufügen eines Datenbankspiegelungs-Zeugen mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
+    -   [Hinzufügen eines Zeugen für die Datenbankspiegelung mithilfe der Windows-Authentifizierung (Transact-SQL)](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [ALTER DATABASE-Datenbankspiegelung &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
+ [Alter Database-Daten Bank Spiegelung &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [Anzeigen des Status einer gespiegelten Datenbank &#40;SQL Server Management Studio&#41;](view-the-state-of-a-mirrored-database-sql-server-management-studio.md)   
  [Daten Bank Spiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Installieren eines Service Packs auf einem System mit minimalen Ausfallzeiten für gespiegelte Datenbanken](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md)   
- [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
+ [Rollenwechsel während einer Datenbank-Spiegelungs Sitzung &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Erzwingen des Dienstanbieter in einer Datenbank-Spiegelungs Sitzung &#40;Transact-SQL-&#41;](force-service-in-a-database-mirroring-session-transact-sql.md)   
- [Starten des Datenbankspiegelungs-Monitors &#40;SQL Server Management Studio&#41;](start-database-mirroring-monitor-sql-server-management-studio.md)   
- [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)  
+ [Starten Sie Datenbankspiegelungs-Monitor &#40;SQL Server Management Studio&#41;](start-database-mirroring-monitor-sql-server-management-studio.md)   
+ [Betriebsmodi der Datenbankspiegelung](database-mirroring-operating-modes.md)  
   
   

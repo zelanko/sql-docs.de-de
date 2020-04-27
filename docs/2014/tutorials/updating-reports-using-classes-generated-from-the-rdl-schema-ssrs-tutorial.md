@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: 313a5268b754089d4ca8964328d53cb23ec6edd1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62746114"
 ---
 # <a name="updating-reports-using-classes-generated-from-the-rdl-schema-ssrs-tutorial"></a>Aktualisieren von Berichten mithilfe von Klassen, die aus dem RDL-Schema generiert wurden (SSRS-Lernprogramm)
@@ -42,7 +42,7 @@ ms.locfileid: "62746114"
 > [!NOTE]  
 >  Bei Berichten ohne Beschreibung verursachen die in diesem Lernprogramm bereitgestellten Codebeispiele u. U. einen Fehler. Dies liegt daran, dass für Berichte, für die keine Beschreibung angegeben wurde, keine Beschreibungseigenschaft vorhanden ist.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
  Für die vollständige Bearbeitung des Lernprogramms benötigen Sie Folgendes:  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrentUI](../includes/sscurrentui-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -61,7 +61,7 @@ ms.locfileid: "62746114"
  **Geschätzte Zeit bis zum Abschluss des Tutorials:** 30 Minuten  
   
 ## <a name="tasks"></a>Aufgaben  
- [Lektion 1: Erstellen des RDL-Schema-Projekts in Visual Studio](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  
+ [Lektion 1: Erstellen des RDL-Schemaprojekts in Visual Studio](../../2014/tutorials/lesson-1-create-the-rdl-schema-visual-studio-project.md)  
   
  [Lektion 2: Generieren von Klassen aus dem RDL-Schema mithilfe des XSD-Tools](../../2014/tutorials/lesson-2-generate-classes-from-the-rdl-schema-using-the-xsd-tool.md)  
   

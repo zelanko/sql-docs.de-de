@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 323ea04d32501f04156ffa81452fad5e5cf86664
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62689508"
 ---
 # <a name="bcp_control"></a>bcp_control
@@ -63,7 +63,7 @@ iValue
   
  Ein Sequenz Fehler tritt auch auf, wenn Sie `bcp_control(hdbc,` nach dem Aufruf von`, (void *)FALSE)` `bcp_control(hdbc,` bcpdelta ayread fmt`, (void *)TRUE)` und bcp_writefmt bcpdelta aylefmt aufrufen.  
   
- Weitere Informationen finden Sie unter [metadatenermittlung](../native-client/features/metadata-discovery.md).  
+ Weitere Informationen finden Sie unter [Metadatenermittlung](../native-client/features/metadata-discovery.md).  
   
  BCPFILECP  
  *iValue* enthält die Nummer der Codepage für die Datendatei. Sie können die Nummer der Codepage angeben, z. B. 1252 oder 850 bzw. einen der folgenden Werte  
@@ -137,7 +137,7 @@ iValue
 ## <a name="returns"></a>Rückgabe  
  SUCCEED oder FAIL.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Mit dieser Funktion werden verschiedene Steuerelementparameter für Massenkopiervorgänge festgelegt, einschließlich der Anzahl von Fehlern, die vor dem Abbrechen eines Massenkopiervorgangs zulässig sind, der Nummern der ersten und letzten Zeilen, die aus einer Datendatei kopiert werden sollen, und der Batchgröße.  
   
  Außerdem wird diese Funktion dazu verwendet, die SELECT-Anweisung beim Massenkopieren des Resultsets einer SELECT-Anweisung aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzugeben. Legen Sie *eOption* auf BCPHINTS fest, und legen Sie *iValue* auf einen Zeiger auf eine SQLTCHAR-Zeichenfolge fest, die die SELECT-Anweisung enthält.  

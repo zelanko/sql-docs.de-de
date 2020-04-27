@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5d8ef6822b623e546aa0215964ba0ae237862687
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754033"
 ---
 # <a name="use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server"></a>Verwenden von Warnungsschwellenwerten und Warnmeldungen für Spiegelungsleistungsmetriken (SQL Server)
@@ -31,27 +31,27 @@ ms.locfileid: "62754033"
   
  **In diesem Thema:**  
   
--   [Leistungsmetriken und Warnungs Schwellenwerte](#PerfMetricsAndWarningThresholds)  
+-   [Leistungsmetriken und Warnungsschwellenwerte](#PerfMetricsAndWarningThresholds)  
   
 -   [Einrichten und Verwalten von Schwellenwerten für Warnungen](#SetUpManageWarningThresholds)  
   
--   [Verwenden von Warnungen für eine gespiegelte Datenbank](#UseAlerts)  
+-   [Verwenden von Warnmeldungen für eine gespiegelte Datenbank](#UseAlerts)  
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="PerfMetricsAndWarningThresholds"></a>Leistungsmetriken und Warnungs Schwellenwerte  
+##  <a name="performance-metrics-and-warning-thresholds"></a><a name="PerfMetricsAndWarningThresholds"></a>Leistungsmetriken und Warnungs Schwellenwerte  
  In der folgenden Tabelle werden die Leistungsmetriken, für die Warnungen konfiguriert werden können, zusammen mit den entsprechenden Warnungsschwellenwerten und der entsprechende Bezeichnung des Datenbanküberwachungs-Monitors aufgelistet.  
   
 |Leistungsmetrik|Schwellenwert für Warnung|Bezeichnung des Datenbankspiegelungs-Monitors|  
 |------------------------|-----------------------|--------------------------------------|  
-|Nicht gesendetes Protokoll|Gibt an, bei welcher Menge (in KB) an nicht gesendeten Protokolldaten eine Warnung auf der Prinzipalserverinstanz generiert wird. Anhand dieser Warnung, die speziell für den Modus für hohe Leistung relevant ist, kann der potenzielle Datenverlust in KB gemessen werden. Die Warnung ist aber auch für den Modus für hohe Sicherheit relevant, wenn die Spiegelung angehalten oder unterbrochen wird, weil die Verbindung zwischen den Partnern getrennt wurde.|**Warnen, wenn das nicht gesendete Protokoll den Schwellenwert überschreitet**|  
-|Nicht wiederhergestelltes Protokoll|Gibt an, bei welcher Menge (in KB) an nicht wiederhergestellten Protokolldaten eine Warnung auf der Spiegelserverinstanz generiert wird. Diese Warnung ermöglicht die Messung der Failoverzeit. Die *Failoverzeit* besteht hauptsächlich aus der Zeit, die der frühere Spiegel Server benötigt, um ein Roll Forward für alle in der Wiederholungs Warteschlange verbleibenden Protokolle sowie eine kurze zusätzliche Zeit auszuführen.<br /><br /> Hinweis: Bei einem automatischen Failover hängt die Zeitspanne, die es dauert, bis das System den Fehler bemerkt, nicht von der Failoverzeit ab.<br /><br /> Weitere Informationen finden Sie unter [Einschätzen der Unterbrechung des Diensts während des Rollenwechsels &#40;Datenbankspiegelung&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)ausgetauscht werden.|**Warnen, wenn das nicht wiederhergestellte Protokoll den Schwellenwert überschreitet**|  
-|Älteste, nicht gesendete Transaktion|Gibt die Menge an Transaktionen (in Anzahl Minuten) an, die sich in der Sendewarteschlange ansammeln dürfen, bevor auf der Prinzipalserverinstanz eine Warnung generiert wird. Anhand dieser Warnung, die speziell für den Modus für hohe Leistung relevant ist, kann der potenzielle Datenverlust im Hinblick auf die Zeit gemessen werden. Die Warnung ist aber auch für den Modus für hohe Sicherheit relevant, wenn die Spiegelung angehalten oder unterbrochen wird, weil die Verbindung zwischen den Partnern getrennt wurde.|**Warnen, wenn das Alter der ältesten, nicht gesendeten Transaktion den Schwellenwert überschreitet**|  
-|Spiegelungscommitaufwand|Gibt die durchschnittliche Verzögerung (in Anzahl der Millisekunden) pro Transaktion an, die toleriert wird, bevor auf dem Prinzipalserver eine Warnung generiert wird. Hierbei handelt es sich um die Verzögerung, die entsteht, während die Prinzipalserverinstanz darauf wartet, dass die Spiegelserverinstanz den Transaktionsprotokolldatensatz in die Wiederholungswarteschlange schreibt. Dieser Wert ist nur im Modus für hohe Sicherheit relevant.|**Warnen, wenn der Spiegelungscommitaufwand den Schwellenwert überschreitet**|  
+|Nicht gesendetes Protokoll|Gibt an, bei welcher Menge (in KB) an nicht gesendeten Protokolldaten eine Warnung auf der Prinzipalserverinstanz generiert wird. Anhand dieser Warnung, die speziell für den Modus für hohe Leistung relevant ist, kann der potenzielle Datenverlust in KB gemessen werden. Die Warnung ist aber auch für den Modus für hohe Sicherheit relevant, wenn die Spiegelung angehalten oder unterbrochen wird, weil die Verbindung zwischen den Partnern getrennt wurde.|**Warnhinweis anzeigen, wenn das nicht gesendete Protokoll den Schwellenwert überschreitet.**|  
+|Nicht wiederhergestelltes Protokoll|Gibt an, bei welcher Menge (in KB) an nicht wiederhergestellten Protokolldaten eine Warnung auf der Spiegelserverinstanz generiert wird. Diese Warnung ermöglicht die Messung der Failoverzeit. Die*Failoverzeit* besteht hauptsächlich aus der Zeit, die der frühere Spiegelserver benötigt, um ein Rollforward für die Protokolldaten auszuführen, die sich noch in seiner Wiederholungswarteschlange befinden, sowie einer zusätzlichen kurzen Zeitspanne.<br /><br /> Hinweis: Bei einem automatischen Failover hängt die Zeitspanne, die es dauert, bis das System den Fehler bemerkt, nicht von der Failoverzeit ab.<br /><br /> Weitere Informationen finden Sie unter [Einschätzen der Unterbrechung des Diensts während des Rollenwechsels &#40;Datenbankspiegelung&#41;](estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)ausgetauscht werden.|**Warnhinweis anzeigen, wenn das nicht wiederhergestellte Protokoll den Schwellenwert überschreitet.**|  
+|Älteste, nicht gesendete Transaktion|Gibt die Menge an Transaktionen (in Anzahl Minuten) an, die sich in der Sendewarteschlange ansammeln dürfen, bevor auf der Prinzipalserverinstanz eine Warnung generiert wird. Anhand dieser Warnung, die speziell für den Modus für hohe Leistung relevant ist, kann der potenzielle Datenverlust im Hinblick auf die Zeit gemessen werden. Die Warnung ist aber auch für den Modus für hohe Sicherheit relevant, wenn die Spiegelung angehalten oder unterbrochen wird, weil die Verbindung zwischen den Partnern getrennt wurde.|**Warnhinweis anzeigen, wenn das Alter der ältesten, nicht gesendeten Transaktion den Schwellenwert überschreitet.**|  
+|Spiegelungscommitaufwand|Gibt die durchschnittliche Verzögerung (in Anzahl der Millisekunden) pro Transaktion an, die toleriert wird, bevor auf dem Prinzipalserver eine Warnung generiert wird. Hierbei handelt es sich um die Verzögerung, die entsteht, während die Prinzipalserverinstanz darauf wartet, dass die Spiegelserverinstanz den Transaktionsprotokolldatensatz in die Wiederholungswarteschlange schreibt. Dieser Wert ist nur im Modus für hohe Sicherheit relevant.|**Warnhinweis anzeigen, wenn der Spiegelungscommitaufwand den Schwellenwert überschreitet.**|  
   
  Für jede dieser Leistungsmetrik kann vom Systemadministrator ein Schwellenwert für eine gespiegelte Datenbank angegeben werden. Weitere Informationen finden Sie unter [Einrichten und Verwalten von Schwellenwerten für Warnungen](#SetUpManageWarningThresholds)weiter unten in diesem Thema.  
   
-##  <a name="SetUpManageWarningThresholds"></a>Einrichten und Verwalten von Schwellenwerten für Warnungen  
+##  <a name="setting-up-and-managing-warning-thresholds"></a><a name="SetUpManageWarningThresholds"></a>Einrichten und Verwalten von Schwellenwerten für Warnungen  
  Ein Systemadministrator kann einen oder mehrere Warnungsschwellenwerte für die wichtigsten Leistungsmetriken für die Spiegelung konfigurieren. Es wird empfohlen, einen Schwellenwert für eine bestimmte Warnung jeweils auf beiden Partnern festzulegen, um sicherzustellen, dass bei einem Failover der Datenbank die Warnung beibehalten wird. Der geeignete Schwellenwert für jeden der Partner hängt von den Leistungsmöglichkeiten des betreffenden Partnersystems ab.  
   
  Warnungsschwellenwerte können mit einem der folgenden Tools konfiguriert und verwaltet werden:  
@@ -66,14 +66,14 @@ ms.locfileid: "62754033"
   
      Mit den folgenden gespeicherten Systemprozeduren kann ein Administrator Warnungsschwellenwerte für die gespiegelten Datenbanken jeweils für einen Partner festlegen.  
   
-    |Verfahren|BESCHREIBUNG|  
+    |Verfahren|Beschreibung|  
     |---------------|-----------------|  
-    |[sp_dbmmonitorchangealert &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql)|Mit dieser Prozedur können Warnungsschwellenwerte für eine bestimmte Spiegelungsleistungsmetrik hinzugefügt oder geändert werden.|  
-    |[sp_dbmmonitorhelpalert &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql)|Gibt Informationen zu Warnungsschwellenwerten zurück, die für eine oder mehrere der Schlüsselleistungsmetriken für die Überwachung der Datenbankspiegelung festgelegt wurden.|  
-    |[sp_dbmmonitordropalert &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql)|Entfernt die Warnung für eine angegebene Leistungsmetrik.|  
+    |[sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql)|Mit dieser Prozedur können Warnungsschwellenwerte für eine bestimmte Spiegelungsleistungsmetrik hinzugefügt oder geändert werden.|  
+    |[sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql)|Gibt Informationen zu Warnungsschwellenwerten zurück, die für eine oder mehrere der Schlüsselleistungsmetriken für die Überwachung der Datenbankspiegelung festgelegt wurden.|  
+    |[sp_dbmmonitordropalert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql)|Entfernt die Warnung für eine angegebene Leistungsmetrik.|  
   
 ## <a name="performance-threshold-events-sent-to-the-windows-event-log"></a>Leistungsschwellenwert-Ereignisse, die an das Windows-Ereignisprotokoll gesendet werden  
- Wenn für eine Leistungsmetrik ein Warnungsschwellenwert definiert wurde, wird beim Aktualisieren der Statustabelle der neueste Wert im Vergleich zum Schwellenwert ausgewertet. Wenn der Schwellenwert erreicht wurde, generiert die Updateprozedur, **sp_dbmmonitorupdate**, ein Informationsereignis, ein so genanntes *Leistungsschwellenwert-Ereignis*, für die Metrik und schreibt das Ereignis in das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Ereignisprotokoll. In der folgenden Tabelle werden die Ereignis-IDs der Leistungsschwellenwert-Ereignisse aufgelistet.  
+ Wenn für eine Leistungsmetrik ein Warnungsschwellenwert definiert wurde, wird beim Aktualisieren der Statustabelle der neueste Wert im Vergleich zum Schwellenwert ausgewertet. Wenn der Schwellenwert erreicht wurde, generiert die Aktualisierungs Prozedur ( **sp_dbmmonitorupdate**) ein Informations Ereignis (ein *Leistungs Schwellenwert Ereignis*) für die Metrik und schreibt das Ereignis [!INCLUDE[msCoName](../../includes/msconame-md.md)] in das Windows-Ereignisprotokoll. In der folgenden Tabelle werden die Ereignis-IDs der Leistungsschwellenwert-Ereignisse aufgelistet.  
   
 |Leistungsmetrik|Ereignis-ID|  
 |------------------------|--------------|  
@@ -87,9 +87,8 @@ ms.locfileid: "62754033"
 >   
 >  Thema.  
   
-##  <a name="UseAlerts"></a>Verwenden von Warnungen für eine gespiegelte Datenbank  
- Eine wichtige Komponente der Überwachung einer gespiegelten Datenbank ist das Konfigurieren von Warnmeldungen für bedeutsame bei der Datenbankspiegelung auftretende Ereignisse. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert die folgenden Typen von Datenbank-Spiegelungsereignissen:  
+##  <a name="using-alerts-for-a-mirrored-database"></a><a name="UseAlerts"></a>Verwenden von Warnungen für eine gespiegelte Datenbank  
+ Eine wichtige Komponente der Überwachung einer gespiegelten Datenbank ist das Konfigurieren von Warnmeldungen für bedeutsame bei der Datenbankspiegelung auftretende Ereignisse. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generiert die folgenden Typen von Datenbank-Spiegelungsereignissen:  
   
 -   Leistungsschwellenwert-Ereignisse  
   
@@ -111,34 +110,34 @@ ms.locfileid: "62754033"
 > [!IMPORTANT]  
 >  Für alle Spiegelungssitzungen wird dringend empfohlen, die Datenbank so zu konfigurieren, dass bei jedem Statusänderungsereignis eine Warnmeldung gesendet wird. Sofern eine Statusänderung nicht als Ergebnis einer manuellen Konfigurationsänderung erwartet wird, muss davon ausgegangen werden, dass ein Ereignis aufgetreten ist, das Ihre Daten gefährden kann. Um den Schutz der Daten sicherzustellen, müssen Sie die Ursache einer unerwarteten Statusänderung herausfinden und beheben.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
- **So erstellen Sie eine Warnung mithilfe von SQL Server Management Studio**  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
+ **So erstellen Sie eine Warnung mit SQL Server Management Studio**  
   
--   [Erstellen einer Warnung mithilfe einer Fehlernummer](../../ssms/agent/create-an-alert-using-an-error-number.md)  
+-   [Create an Alert Using an Error Number](../../ssms/agent/create-an-alert-using-an-error-number.md)  
   
 -   [Erstellen einer WMI-Ereigniswarnung](../../ssms/agent/create-a-wmi-event-alert.md)  
   
- **Überwachen der Daten Bank Spiegelung**  
+ **So überwachen Sie die Datenbankspiegelung**  
   
 -   [Starten des Datenbankspiegelungs-Monitors &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
--   [sp_dbmmonitoraddmonitoring &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql)  
+-   [sp_dbmmonitoraddmonitoring &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitoraddmonitoring-transact-sql)  
   
--   [sp_dbmmonitorchangealert &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql)  
+-   [sp_dbmmonitorchangealert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangealert-transact-sql)  
   
--   [sp_dbmmonitorchangemonitoring &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql)  
+-   [sp_dbmmonitorchangemonitoring &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorchangemonitoring-transact-sql)  
   
--   [sp_dbmmonitordropalert &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql)  
+-   [sp_dbmmonitordropalert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql)  
   
--   [sp_dbmmonitordropmonitoring &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql)  
+-   [sp_dbmmonitordropmonitoring &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitordropmonitoring-transact-sql)  
   
--   [sp_dbmmonitorhelpalert &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql)  
+-   [sp_dbmmonitorhelpalert &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql)  
   
--   [sp_dbmmonitorhelpmonitoring &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql)  
+-   [sp_dbmmonitorhelpmonitoring &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql)  
   
--   [sp_dbmmonitorresults &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql)  
+-   [sp_dbmmonitorresults &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql)  
   
--   [sp_dbmmonitorupdate &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql)  
+-   [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Daten Bank Spiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   

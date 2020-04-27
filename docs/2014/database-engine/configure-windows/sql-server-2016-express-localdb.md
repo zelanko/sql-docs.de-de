@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 224facf54b0cde09f97010be472e3cc28754e94b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62756989"
 ---
 # <a name="sql-server-2014-express-localdb"></a>SQL Server 2014 Express LocalDB
@@ -29,7 +29,7 @@ ms.locfileid: "62756989"
 ## <a name="installing-localdb"></a>Installieren von LocalDB  
  Die primäre Methode für die `LocalDB` Installation von ist die Verwendung des sqllocaldb. msi-Programms. `LocalDB`ist eine Option bei der Installation einer beliebigen SKU von [!INCLUDE[ssExpCurrent](../../includes/ssexpcurrent-md.md)]. Wählen `LocalDB` Sie während der Installation von auf der Seite [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] **Funktionsauswahl** aus. Es kann nur eine Installation der `LocalDB` Binärdateien für jede Haupt [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Version vorhanden sein. Mehrere [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Prozesse können gestartet werden und verwenden dann die gleichen Binärdateien. Eine Instanz von, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] die als gestartet `LocalDB` wurde, unterliegt denselben Einschränkungen wie[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]  
   
-## <a name="description"></a>BESCHREIBUNG  
+## <a name="description"></a>Beschreibung  
  Das `LocalDB` Setup Programm installiert die erforderlichen Dateien mithilfe des sqllocaldb. msi-Programms auf dem Computer. Nach der Installation `LocalDB` ist eine Instanz von [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , mit der Datenbanken [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt und geöffnet werden können. Die Systemdatenbankdateien für die Datenbank werden im lokalen AppData-Pfad des Benutzers gespeichert. Dieser Pfad ist normalerweise verborgen. Beispiel: **C:\Users\\<Benutzer\>\AppData\Local\Microsoft\Microsoft SQL Server Local DB\Instances\LocalDBApp1\\**. Benutzerdatenbankdateien werden an dem vom Benutzer angegebenen Speicherort gespeichert, in der Regel im Ordner **C:\Users\\<Benutzer\>\Documents\\**.  
   
  `LocalDB` Weitere Informationen zum Einschließen in eine Anwendung finden Sie in der [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Dokumentation [lokale Daten Übersicht](https://msdn.microsoft.com/library/ms233817\(VS.110\).aspx), Exemplarische Vorgehensweise [: Erstellen einer SQL Server localdb-Datenbank](https://msdn.microsoft.com/library/ms233763\(VS.110\).aspx)und Exemplarische Vorgehensweise [: Herstellen einer Verbindung mit Daten in einer SQL Server localdb-Datenbank (Windows Forms)](https://msdn.microsoft.com/library/ms171890\(VS.110\).aspx).  
@@ -88,12 +88,12 @@ REM Gather information about the instance of LocalDB
 |||  
 |-|-|  
 |Name|"LocalDBApp1"|  
-|Version|\<Aktuelle Version>|  
+|Version|\<aktuelle Version>|  
 |Freigegebener Name|""|  
 |Besitzer|„\<Ihr Windows-Benutzerkonto>“|  
 |Automatisch erstellen|Nein|  
 |State|„Wird ausgeführt“|  
-|Letzte Startzeit|\<Datums-und Uhrzeit>|  
+|Letzte Startzeit|\<Datum und Uhrzeit>|  
 |Instanz-Pipename|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|  
   
 > [!NOTE]  

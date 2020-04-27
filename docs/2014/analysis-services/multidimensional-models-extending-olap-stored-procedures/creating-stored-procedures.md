@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7beb77adf595b055a6c1e4a7543b428a06ce7640
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62703090"
 ---
 # <a name="creating-stored-procedures"></a>Erstellen gespeicherter Prozeduren
@@ -46,7 +46,7 @@ ms.locfileid: "62703090"
   
 3.  Geben Sie unter **Dateiname**die dll an, die die gespeicherten Prozeduren enthält.  
   
-4.  Geben **** Sie unter AssemblyName einen Namen für die Assembly an.  
+4.  Geben **Assembly name**Sie unter AssemblyName einen Namen für die Assembly an.  
   
 5.  Wenn es sich um einen Debugbuild der Bibliothek handelt, die Sie zum Debuggen gespeicherter Prozeduren verwenden möchten, aktivieren Sie das Kontrollkästchen **Debuginformationen einschließen** . Weitere Informationen zum Debuggen gespeicherter Prozeduren finden Sie unter [Debuggen von gespeicherten](debugging-stored-procedures.md)  
   
@@ -69,7 +69,7 @@ ms.locfileid: "62703090"
   
 3.  Geben Sie unter **Dateiname**die dll an, die die gespeicherten Prozeduren enthält.  
   
-4.  Geben **** Sie unter AssemblyName einen Namen für die Assembly an.  
+4.  Geben **Assembly name**Sie unter AssemblyName einen Namen für die Assembly an.  
   
 5.  Wenn es sich um einen Debugbuild der Bibliothek handelt, die Sie zum Debuggen gespeicherter Prozeduren verwenden möchten, aktivieren Sie das Kontrollkästchen **Debuginformationen einschließen** . Weitere Informationen zum Debuggen gespeicherter Prozeduren finden Sie unter [Debuggen von gespeicherten](debugging-stored-procedures.md)  
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0c927d68c597e64a477382a909aa6eda583d47e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676605"
 ---
 # <a name="set-the-history-retention-period-sql-server-management-studio"></a>Festlegen der Beibehaltungsdauer für den Verlauf (SQL Server Management Studio)
@@ -25,7 +25,7 @@ ms.locfileid: "62676605"
   
 ### <a name="to-specify-the-history-retention-period"></a>So geben Sie die Beibehaltungsdauer für den Verlauf an  
   
-1.  Klicken Sie auf der Seite **Allgemein** des Dialogfelds **Verteilereigenschaften > \<Verteiler>** auf die Schaltfläche mit den Auslassungspunkten ( **…** ) für die Verteilungsdatenbank.  
+1.  Klicken Sie im Dialogfeld **Verteiler Eigenschaften- \<Verteiler>** auf der Seite **Allgemein** auf die Schaltfläche mit den Eigenschaften (**...**) für die Verteilungs Datenbank.  
   
 2.  Geben Sie im Feld **Replikationsleistungsverlauf speichern** einen Wert ein.  
   

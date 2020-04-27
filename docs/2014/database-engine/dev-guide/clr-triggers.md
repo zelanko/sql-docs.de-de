@@ -26,18 +26,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 87d822e97a75bbd08375980fe6a6f0341d8f9c60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755257"
 ---
 # <a name="clr-triggers"></a>CLR-Trigger
   Aufgrund der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Integration mit der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Common Language Runtime (CLR) können Sie jede beliebige [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Sprache verwenden, um CLR-Trigger zu erstellen. Dieser Abschnitt enthält spezifische Informationen zu Triggern, die mit CLR-Integration implementiert werden. Eine ausführliche Erläuterung der Trigger finden Sie unter [DDL-Trigger](../../relational-databases/triggers/ddl-triggers.md).  
   
 ## <a name="what-are-triggers"></a>Was sind Trigger?  
- Ein Trigger ist ein besonderer Typ einer gespeicherten Prozedur, die automatisch ausgeführt wird, wenn ein Sprachereignis ausgeführt wird. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält zwei allgemeine Typen von Triggern: DML-Trigger (Data Manipulation Language, Datenbearbeitungssprache) und DDL-Trigger (Data Definition Language, Datendefinitionssprache). DML-Trigger können verwendet werden, wenn die Anweisungen `INSERT`, `UPDATE` oder `DELETE` Daten in einer angegebenen Tabelle oder Sicht ändern. DDL-Trigger lösen gespeicherte Prozeduren als Reaktion auf verschiedene DDL-Anweisungen aus. Dies sind in erster Linie Anweisungen, die mit `CREATE`, `ALTER` und `DROP` beginnen. DDL-Trigger können für Verwaltungsaufgaben verwendet werden, z. B. zum Überwachen und Steuern von Datenbankvorgängen.  
+ Ein Trigger ist ein besonderer Typ einer gespeicherten Prozedur, die automatisch ausgeführt wird, wenn ein Sprachereignis ausgeführt wird. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält zwei allgemeine Typen von Triggern: DML-Trigger (Data Manipulation Language, Datenbearbeitungssprache) und DDL-Trigger (Data Definition Language, Datendefinitionssprache). DML-Trigger können verwendet werden, wenn die Anweisungen `INSERT`, `UPDATE` oder `DELETE` Daten in einer angegebenen Tabelle oder Sicht ändern. DDL-Trigger lösen gespeicherte Prozeduren als Reaktion auf verschiedene DDL-Anweisungen aus. Dies sind in erster Linie Anweisungen, die mit `CREATE`, `ALTER` und `DROP` beginnen. DDL-Trigger können für Verwaltungsaufgaben verwendet werden, z. B. zum Überwachen und Steuern von Datenbankvorgängen.  
   
 ## <a name="unique-capabilities-of-clr-triggers"></a>Spezifische Funktionen von CLR-Triggern  
  In [!INCLUDE[tsql](../../includes/tsql-md.md)] geschriebene Trigger können feststellen, welche Spalten der auslösenden Sicht oder Tabelle mit den Funktionen `UPDATE(column)` und `COLUMNS_UPDATED()` aktualisiert wurden.  
@@ -73,10 +72,9 @@ ms.locfileid: "62755257"
 -   Für DDL-Trigger ist die Liste möglicher TriggerAction-Werte beachtlich länger. Weitere Informationen hierzu finden Sie im Abschnitt "TriggerAction Enumeration" in der .NET Framework-SDK-Dokumentation.  
   
 ### <a name="using-the-inserted-and-deleted-tables"></a>Verwenden der Tabellen 'inserted' und 'deleted'  
- In DML-Triggeranweisungen werden zwei spezielle Tabellen verwendet: die **eingefügte** Tabelle und die **Gelöschte** Tabelle. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt und verwendet diese Tabellen automatisch. Sie können diese temporären Tabellen verwenden, um die Auswirkungen bestimmter Datenänderungen zu testen und Bedingungen für DML-Triggeraktionen festzulegen. Die Daten in den Tabellen können Sie jedoch nicht direkt ändern.  
+ In DML-Triggeranweisungen werden zwei spezielle Tabellen verwendet: die **eingefügte** Tabelle und die **Gelöschte** Tabelle. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt und verwendet diese Tabellen automatisch. Sie können diese temporären Tabellen verwenden, um die Auswirkungen bestimmter Datenänderungen zu testen und Bedingungen für DML-Triggeraktionen festzulegen. Die Daten in den Tabellen können Sie jedoch nicht direkt ändern.  
   
- CLR-Trigger können über den Prozess internen CLR-Anbieter auf die **eingefügten** und **gelöschten** Tabellen zugreifen. Dazu wird ein `SqlCommand`-Objekt vom SqlContext-Objekt abgerufen. Beispiel:  
+ CLR-Trigger können über den Prozess internen CLR-Anbieter auf die **eingefügten** und **gelöschten** Tabellen zugreifen. Dazu wird ein `SqlCommand`-Objekt vom SqlContext-Objekt abgerufen. Zum Beispiel:  
   
  C#  
   
@@ -661,7 +659,7 @@ DROP TABLE Table1;
  [CREATE TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-trigger-transact-sql)   
  [DML-Trigger](../../relational-databases/triggers/dml-triggers.md)   
  [DDL-Trigger](../../relational-databases/triggers/ddl-triggers.md)   
- [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)   
+ [Try... Catch &#40;Transact-SQL-&#41;](/sql/t-sql/language-elements/try-catch-transact-sql)   
  [Aufbauen von Datenbankobjekten mit CLR-&#41; Integration (Common Language Runtime) &#40;](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)   
  [EVENTDATA &#40;Transact-SQL&#41;](/sql/t-sql/functions/eventdata-transact-sql)  
   

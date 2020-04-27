@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d780010d0cae7dbbe358c9ae5e6430ed0fff4d2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727663"
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>Cubespeicherung (Analysis Services – Mehrdimensionale Daten)
@@ -35,7 +35,7 @@ ms.locfileid: "62727663"
   
  Der Speicher wird für einzelne Partitionen definiert. Für jede Measuregruppe in einem Cube ist mindestens eine Partition vorhanden. Weitere Informationen finden Sie unter [Partitionen &#40;Analysis Services-mehrdimensionalen Daten&#41;](partitions-analysis-services-multidimensional-data.md), [Partitions Speicher Modi und Verarbeitung](partitions-partition-storage-modes-and-processing.md), [Measures und Measure-Gruppen](../multidimensional-models/measures-and-measure-groups.md)und [Erstellen von Measures und Messen von Gruppen in mehrdimensionalen Modellen](../multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md).  
   
-## <a name="partition-storage"></a>Partitionsspeicher  
+## <a name="partition-storage"></a>Partition Storage  
  Der Speicher für eine Measuregruppe kann in mehrere Partitionen unterteilt werden. Mithilfe von Partitionen können Sie eine Measuregruppe in unterschiedlichen Segmenten auf einem oder mehreren Servern verteilen und Speicher und Abfrageleistung optimieren. Jede Partition in einer Measuregruppe kann auf einer anderen Datenquelle basieren und mit anderen Speichereinstellungen gespeichert werden.  
   
  Sie legen die Datenquelle für eine Partition fest, wenn Sie sie erstellen. Sie können die Datenquelle für eine vorhandene Partition auch ändern. Eine Measuregruppe kann vertikal oder horizontal partitioniert werden. Jede Partition in einer vertikal partitionierten Measuregruppe basiert auf der gefilterten Sicht einer einzelnen Quelltabelle. Wenn eine Measuregruppe beispielsweise auf einer einzelnen Tabelle mit mehreren Jahren an Daten basiert, können Sie eine separate Partition für die Daten der einzelnen Jahre erstellen. Im Gegensatz dazu basiert jede Partition in einer horizontal partitionierten Measuregruppe auf einer separaten Tabelle. Horizontale Partitionen sollten Sie verwenden, wenn die Datenquelle die Daten der einzelnen Jahre jeweils in einer separaten Tabelle speichert.  

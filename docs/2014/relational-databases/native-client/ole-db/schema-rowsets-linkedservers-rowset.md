@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a136e3b2064e42e6bae7cfb39f059dbaa41a8410
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62667335"
 ---
 # <a name="linkedservers-rowset-ole-db"></a>LINKEDSERVERS-Rowset (OLE DB)
@@ -25,7 +25,7 @@ ms.locfileid: "62667335"
   
  Das **LINKEDSERVERS** -Rowset enthält die folgenden Spalten.  
   
-|Spaltenname|Typindikator|BESCHREIBUNG|  
+|Spaltenname|Typindikator|Beschreibung|  
 |-----------------|--------------------|-----------------|  
 |SVR_NAME|DBTYPE_WSTR|Name eines Verbindungsservers|  
 |SVR_PRODUCT|DBTYPE_WSTR|Hersteller oder ein anderer Name, der den Typ des Datenspeichers identifiziert, der durch den Namen des Verbindungsservers repräsentiert wird.|  
@@ -37,6 +37,6 @@ ms.locfileid: "62667335"
  Das Rowset wird nach SRV_NAME sortiert, und eine einzelne Einschränkung wird für SRV_NAME unterstützt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Schemarowset-Unterstützung &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
+ [Schema Rowset Support &#40;OLE DB&#41; (Schemarowset-Unterstützung &#40;OLE DB&#41;)](schema-rowset-support-ole-db.md)  
   
   

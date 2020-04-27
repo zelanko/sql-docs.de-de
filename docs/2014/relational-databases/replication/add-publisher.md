@@ -15,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 735162edb8e7eda06e99d69ed74d4752b7f0d950
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676916"
 ---
 # <a name="sql-server-replication-add-publisher-dialog-box"></a>Dialogfeld ' Verleger hinzufügen ' SQL Server-Replikation 
-  Im Dialogfeld **Verleger hinzufügen** können Sie dem linken Bereich des Replikations Monitors einen oder mehrere Verleger hinzufügen. Nach dem Hinzufügen eines Verlegers werden durch das Auswählen des Verlegers im linken Bereich Informationen zu diesem Verleger im rechten Bereich anzeigt.  
+  Mithilfe des Dialogfelds **Verleger hinzufügen** können Sie dem linken Bereich des Replikationsmonitors einen oder mehrere Verleger hinzufügen. Nach dem Hinzufügen eines Verlegers werden durch das Auswählen des Verlegers im linken Bereich Informationen zu diesem Verleger im rechten Bereich anzeigt.  
   
 ## <a name="options"></a>Tastatur  
  **Add (Hinzufügen)**  
@@ -34,7 +34,7 @@ ms.locfileid: "62676916"
   
 -   **Oracle-Verleger hinzufügen...**  
   
-     Stellen Sie mithilfe des Dialogfelds [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributor associated with the Oracle Publisher using the **Connect to Server** dialog box.  
+     Stellen Sie mithilfe des Dialogfelds **Verbindung mit Server herstellen** eine Verbindung mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verteiler her, der dem Oracle-Verleger zugeordnet ist.  
   
 -   **Geben Sie einen Verteiler an, und fügen Sie seine Verleger hinzu...**  
   

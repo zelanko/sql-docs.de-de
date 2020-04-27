@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 38bc4d44b988192be76ed613f52793dc2e8daefc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62629712"
 ---
 # <a name="subscription-synchronization-history-merge-subscription-sql-server-2005-and-later"></a>Abonnement, Synchronisierungsverlauf (Mergeabonnement, SQL Server 2005 und höher)
@@ -97,7 +97,7 @@ ms.locfileid: "62629712"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Starten des Replikationsmonitors](monitor/start-the-replication-monitor.md)   
- [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikations](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Überwachen der Replikation](monitoring-replication.md)   
  [Übersicht über Replikations-Agents](agents/replication-agents-overview.md)  
   

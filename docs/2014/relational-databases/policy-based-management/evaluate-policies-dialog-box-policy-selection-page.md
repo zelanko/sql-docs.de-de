@@ -13,17 +13,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6266dd29c3486b6ae4163b15cffbc455eee31c5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62705125"
 ---
 # <a name="evaluate-policies-dialog-box-policy-selection-page"></a>Dialogfeld 'Richtlinien auswerten', Seite 'Richtlinienauswahl'
   Mithilfe dieses Dialogfelds können Sie richtlinienbasierte Verwaltungsrichtlinien auswerten. Durch Auswahl der Seite **Auswertungsergebnisse** können Sie Richtlinien auf die Elemente in einem Zielsatz anwenden, die mit den Richtlinien nicht übereinstimmen.  
   
-## <a name="options"></a>Tastatur  
- **`Source`**  
+## <a name="options"></a>Optionen  
+ **Quelle**  
  Gibt die Quelle der Richtlinien an. Um die Quelle zu ändern, klicken Sie auf die Schaltfläche zum Durchsuchen (**...**), um das Dialogfeld **Quelle auswählen** zu öffnen.  
   
  **Dateien**  
@@ -38,15 +38,15 @@ ms.locfileid: "62705125"
  **Richtlinien: Kategorie**  
  Die Kategorie der Richtlinie. Dieses Feld ist schreibgeschützt.  
   
- **Richtlinien: Facetten**  
+ **Richtlinien: Facet**  
  Das von der Richtlinie implementierte Facet. Dieses Feld ist schreibgeschützt.  
   
- **Ausgewertet**  
+ **Evaluate**  
  Führt die Richtlinie im Auswertungsmodus aus. Dadurch wird ein Kompatibilitätsbericht für den Zielsatz generiert. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird jedoch nicht neu konfiguriert, und es wird auch keine zukünftige Kompatibilität durchgesetzt.  
   
 ## <a name="possible-errors"></a>Mögliche Fehler  
   
--   **Keine Ziele gefunden.**  
+-   **Keine Ziele gefunden**  
   
      Der Zielsatz könnte aus einem der folgenden Gründe leer sein:  
   
@@ -61,7 +61,7 @@ ms.locfileid: "62705125"
     -   Der Typ des Zielservers unterscheidet sich dem des Servers, auf dem die Richtlinie ausgewertet wird. Wenn Sie in [!INCLUDE[ssDE](../../includes/ssde-md.md)]beispielsweise versuchen, eine Richtlinie auszuwerten, die für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellt wurde, erhalten Sie einen leeren Zielsatz.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwalten von Servern mit der richtlinienbasierten Verwaltung](administer-servers-by-using-policy-based-management.md)   
+ [Verwalten von Servern mit der Richtlinien basierten Verwaltung](administer-servers-by-using-policy-based-management.md)   
  [Dialogfeld 'Richtlinien auswerten', Seite 'Auswertungsergebnisse'](evaluate-policies-dialog-box-evaluation-results-page.md)  
   
   

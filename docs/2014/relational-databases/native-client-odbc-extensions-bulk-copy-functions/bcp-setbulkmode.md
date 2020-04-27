@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9671447a2fba1cd57b021266f29de7af741f0de6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62688797"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
@@ -52,10 +52,10 @@ cbRow
  *hdbc*  
  Das für den Massenkopiervorgang aktivierte ODBC-Verbindungshandle.  
   
- *Property*  
+ *property*  
  Eine Konstante vom Typ BYTE. Eine Liste der Konstanten finden Sie in der Tabelle im Abschnitt mit Hinweisen.  
   
- *pfield*  
+ *pField*  
  Der Zeiger auf den Wert des Feldabschlusszeichens.  
   
  *cbField*  
@@ -70,14 +70,14 @@ cbRow
 ## <a name="returns"></a>Rückgabe  
  SUCCEED oder FAIL  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  bcp_setbulkmode können zum Massen kopieren aus einer Abfrage oder einer Tabelle verwendet werden. Wenn bcp_setbulkmode zum Massen Kopieren einer Abfrage Anweisung verwendet wird, muss Sie vor dem Aufrufen von bcp_control mit BCP_HINT aufgerufen werden.  
   
  bcp_setbulkmode ist eine Alternative zur Verwendung von [bcp_setcolfmt](bcp-setcolfmt.md) und [bcp_columns](bcp-columns.md), mit denen Sie nur das Format einer Spalte pro Funktions aufzurufen angeben können.  
   
  In der folgenden Tabelle sind die Konstanten für den *property* -Parameter aufgelistet.  
   
-|Eigenschaft|BESCHREIBUNG|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |BCP_OUT_CHARACTER_MODE|Gibt den Zeichenausgabemodus an.<br /><br /> Entspricht der Option-c in bcp. Und, um zu bcp_setcolfmt, `BCP_FMT_TYPE` wobei die- `SQLCHARACTER`Eigenschaft auf festgelegt ist.|  
 |BCP_OUT_WIDE_CHARACTER_MODE|Gibt den Unicode-Ausgabemodus an.<br /><br /> Entspricht der-w-Option in bcp. EXE und bcp_setcolfmt, `BCP_FMT_TYPE` deren-Eigenschaft `SQLNCHAR`auf festgelegt ist.|  

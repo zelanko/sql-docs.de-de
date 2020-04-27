@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f457c901c4226b9a0ead23de57c2455c619f406e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62714762"
 ---
 # <a name="compute-capacity-limits-by-edition-of-sql-server"></a>Compute Capacity Limits by Edition of SQL Server
@@ -28,7 +28,7 @@ ms.locfileid: "62714762"
   
  In der folgenden Tabelle werden die Schreibweisen, die im oben angegebenen Diagramm verwendet werden, beschrieben:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |0..1|Null oder Eins|  
 |1|Genau eins|  
@@ -80,11 +80,11 @@ ms.locfileid: "62714762"
   
  Die folgende Tabelle gibt die Rechenkapazitätsgrenzen für eine einzelne Instanz jeder Edition von [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]an:  
   
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]AntiVir|Maximale von einer einzelnen Instanz verwendete Rechenkapazität ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Maximale von einer einzelnen Instanz verwendete Rechenkapazität (AS, RS)|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Edition|Maximale von einer einzelnen Instanz verwendete Rechenkapazität ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)])|Maximale von einer einzelnen Instanz verwendete Rechenkapazität (AS, RS)|  
 |---------------------------------------|--------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------|  
 |Enterprise Edition: Core-basierte Lizenzierung<sup>1</sup>|Maximum des Betriebssystems|Maximum des Betriebssystems|  
 |Entwickler|Maximum des Betriebssystems|Maximum des Betriebssystems|  
-|Auswertung|Maximum des Betriebssystems|Maximum des Betriebssystems|  
+|Bewertung|Maximum des Betriebssystems|Maximum des Betriebssystems|  
 |Business Intelligence|Beschränkt auf weniger als 4 Sockets oder 16 Kerne|Maximum des Betriebssystems|  
 |Standard|Beschränkt auf weniger als 4 Sockets oder 16 Kerne|Beschränkt auf weniger als 4 Sockets oder 16 Kerne|  
 |Web|Beschränkt auf weniger als 4 Sockets oder 16 Kerne|Beschränkt auf weniger als 4 Sockets oder 16 Kerne|  

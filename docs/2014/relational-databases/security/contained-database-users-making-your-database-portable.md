@@ -14,18 +14,17 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a10f892c8fd635892d76061e9f33649340e69593
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655474"
 ---
-# <a name="contained-database-users---making-your-database-portable"></a>Eigenständige Datenbankbenutzer – Generieren einer portablen Datenbank
+# <a name="contained-database-users---making-your-database-portable"></a>Eigenständige Datenbankbenutzer - machen Sie Ihre Datenbank portabel
   Verwenden Sie eigenständige Datenbankbenutzer, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - und [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Verbindungen auf Datenbankebene zu authentifizieren. Eine eigenständige Datenbank ist eine Datenbank, die von anderen Datenbanken und der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/[!INCLUDE[ssSDS](../../includes/sssds-md.md)] (und der Masterdatenbank), der die Datenbank hostet, isoliert ist. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt eigenständige Datenbankbenutzer sowohl für die Windows- als auch für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung. Kombinieren Sie bei Verwendung von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]eigenständige Datenbankbenutzer mit den Firewallregeln auf Datenbankebene. In diesem Thema werden die Unterschiede und Vorteile der Verwendung von einem eigenständigen Datenbankmodell im Vergleich zum herkömmlichen Anmelde-/Benutzermodell sowie zu Firewallregeln für Windows bzw. auf Serverebene vorgestellt. Bestimmte Szenarien, Verwaltbarkeit oder Anwendungsgeschäftslogik können dennoch den Einsatz des herkömmlichen Anmelde-/Benutzermodells und von Firewallregeln auf Serverebene erfordern.  
   
 > [!NOTE]  
->  Bei der Entwicklung des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Diensts durch [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und dem Wechsel zu stärker garantierten SLAs, müssen Sie möglicherweise zum eigenständigen Datenbankbenutzermodell und den datenbankbezogenen Firewallregeln wechseln, um die SLA für höhere Verfügbarkeit sowie höhere maximale Anmelderaten für eine bestimmte Datenbank zu erreichen. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ermutigt Sie, solche Änderungen noch heute zu berücksichtigen.  
+>  Bei der Entwicklung des [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Diensts durch [!INCLUDE[ssSDS](../../includes/sssds-md.md)] und dem Wechsel zu stärker garantierten SLAs, müssen Sie möglicherweise zum eigenständigen Datenbankbenutzermodell und den datenbankbezogenen Firewallregeln wechseln, um die SLA für höhere Verfügbarkeit sowie höhere maximale Anmelderaten für eine bestimmte Datenbank zu erreichen. [!INCLUDE[msCoName](../../includes/msconame-md.md)] ermutigt Sie, solche Änderungen noch heute zu berücksichtigen.  
   
 ## <a name="traditional-login-and-user-model"></a>Herkömmliches Anmelde- und Benutzermodell  
  Beim herkömmlichen Verbindungsmodell stellen Windows-Benutzer oder Mitglieder der Windows-Gruppen eine Verbindung mit dem [!INCLUDE[ssDE](../../includes/ssde-md.md)] durch die Bereitstellung von Benutzer- oder Gruppenanmeldeinformationen her, die von Windows authentifiziert werden. Oder die Verbindung bietet sowohl einen Namen und ein Kennwort stellt eine Verbindung über die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung her (das ist die einzige Option für den Verbindungsaufbau mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)]). In beiden Fällen muss in der Masterdatenbank eine Anmeldung vorhanden sein, die den Anmeldeinformationen zur Verbindungsherstellung entspricht. Nachdem [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Anmeldeinformationen für die Windows-Authentifizierung bestätigt oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen authentifiziert, versucht die Verbindung in der Regel eine Verbindung zu einer Benutzerdatenbank herzustellen. Zum Herstellen einer Verbindung mit einer Benutzerdatenbank muss die Anmeldung einem Datenbankbenutzer in der Datenbank zugeordnet werden können. Die Verbindungszeichenfolge kann auch angeben, dass eine Verbindung mit einer bestimmten Datenbank hergestellt werden soll, was in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] optional und in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]erforderlich ist.  
@@ -45,13 +44,12 @@ ms.locfileid: "62655474"
 ### [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  Windows-Firewall-Regeln gelten für alle Verbindungen und haben die gleichen Auswirkungen auf Anmeldungen (Verbindungen nach dem traditionellen Modell) und eigenständige Datenbankbenutzer. Weitere Informationen zur Windows-Firewall finden Sie unter [Konfigurieren einer Windows-Firewall für Datenbank-Engine-Zugriff](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md).  
   
-### <a name="includesssdsincludessssds-mdmd-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)]Firewalls  
- 
-  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ermöglicht separate Firewallregeln für Verbindungen auf Serverebene (Anmeldenamen) und für Verbindungen auf Datenbankebene (eigenständige Datenbankbenutzer). Bei der Verbindung mit einer Benutzerdatenbank werden zuerst die Datenbank-Firewallregeln überprüft. Wenn es keine Regel gibt, die den Zugriff auf die Datenbank ermöglicht, werden die Firewallregeln auf Serverebene geprüft, sodass der Zugriff auf eine logischer Server-Masterdatenbank erforderlich ist. Firewallregeln auf Datenbankebene können zusammen mit eigenständigen Datenbankbenutzern die Notwendigkeit beseitigen, während der Verbindung auf die Masterdatenbank des Servers zuzugreifen, was eine verbesserte Verbindungsskalierbarkeit bietet.  
+### <a name="sssds-firewalls"></a>[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Firewalls  
+ [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ermöglicht separate Firewallregeln für Verbindungen auf Serverebene (Anmeldenamen) und für Verbindungen auf Datenbankebene (eigenständige Datenbankbenutzer). Bei der Verbindung mit einer Benutzerdatenbank werden zuerst die Datenbank-Firewallregeln überprüft. Wenn es keine Regel gibt, die den Zugriff auf die Datenbank ermöglicht, werden die Firewallregeln auf Serverebene geprüft, sodass der Zugriff auf eine logischer Server-Masterdatenbank erforderlich ist. Firewallregeln auf Datenbankebene können zusammen mit eigenständigen Datenbankbenutzern die Notwendigkeit beseitigen, während der Verbindung auf die Masterdatenbank des Servers zuzugreifen, was eine verbesserte Verbindungsskalierbarkeit bietet.  
   
  Weitere Informationen zu [!INCLUDE[ssSDS](../../includes/sssds-md.md)] -Firewall-Regeln finden Sie unter den folgenden Themen:  
   
--   [Azure SQL-Daten Bank Firewall](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
+-   [Azure SQL-Datenbank-Firewall](https://msdn.microsoft.com/library/azure/ee621782.aspx)  
   
 -   [Vorgehensweise: Konfigurieren von Firewalleinstellungen (Azure SQL-Datenbank)](https://msdn.microsoft.com/library/azure/jj553530.aspx)  
   
@@ -69,7 +67,7 @@ ms.locfileid: "62655474"
 |-----------------------|-----------------------------------|  
 |So ändern Sie das Kennwort im Kontext der Masterdatenbank:<br /><br /> `ALTER LOGIN login_name  WITH PASSWORD = 'strong_password';`|So ändern Sie das Kennwort im Kontext der Benutzerdatenbank:<br /><br /> `ALTER USER user_name  WITH PASSWORD = 'strong_password';`|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 -   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]müssen eigenständige Datenbankbenutzer für die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aktiviert werden. Weitere Informationen finden Sie unter [Serverkonfigurationsoption für die Authentifizierung der eigenständigen Datenbank](../../database-engine/configure-windows/contained-database-authentication-server-configuration-option.md).  
   

@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 04b1c5322408f66ab2a4023e3d215cc7e669eab6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62745759"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>Synchronisieren eines Abonnements mithilfe der Synchronisierungsverwaltung von Windows (Synchronisierungsverwaltung von Windows)
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)]Die Synchronisierungs Verwaltung von Windows kann nur zum Synchronisieren von Abonnements [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Veröffentlichungen verwendet werden, wenn auf dem gleichen Computer wie der Synchronisierungs-Manager ausgeführt wird (es kann auch zum Synchronisieren von Offline Dateien und Webseiten verwendet werden). So verwenden Sie die Synchronisierungsverwaltung:  
+  Die Synchronisierungsverwaltung von Windows[!INCLUDE[msCoName](../../includes/msconame-md.md)] kann nur zum Synchronisieren von Abonnements für Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Veröffentlichungen verwendet werden, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf demselben Computer ausgeführt wird wie die Synchronisierungsverwaltung. (Die Synchronisierungsverwaltung kann auch zum Synchronisieren von Offlinedateien und Webseiten verwendet werden.) So verwenden Sie die Synchronisierungsverwaltung:  
   
 1.  Aktivieren Sie die Synchronisierung von Pullabonnements mithilfe der Synchronisierungsverwaltung im Dialogfeld **Abonnementeigenschaften – \<Subscriber>: \<SubscriptionDatabase>**. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [Anzeigen und Ändern der Eigenschaften von Pullabonnements](view-and-modify-pull-subscription-properties.md).  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62745759"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>So aktivieren Sie die Synchronisierung von Pullabonnements mithilfe der Synchronisierungsverwaltung von Windows  
   
-1.  Wählen Sie im Dialogfeld **Abonnementeigenschaften – **Subscriber>: **SubscriptionDatabase>\< auf der Seite \<Allgemein** für die Option **Synchronisierungsverwaltung von Windows verwenden** den Wert **Aktivieren** aus.  
+1.  Wählen Sie im Dialogfeld **Abonnementeigenschaften – \<Subscriber>: \<SubscriptionDatabase>** auf der Seite **Allgemein** für die Option **Synchronisierungsverwaltung von Windows verwenden** den Wert **Aktivieren** aus.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -75,9 +75,9 @@ ms.locfileid: "62745759"
   
     -   **Identifi**  
   
-    -   **Abonnenten Anmeldung**, **Verteiler Anmeldung**und **Verleger Anmeldung** (nur für die Mergereplikation)  
+    -   **Abonnentenanmeldung**, **Verteileranmeldung**und **Verlegeranmeldung** (nur für die Mergereplikation)  
   
-    -   **Webserver Informationen** (für Mergeabonnements auf Abonnenten, auf denen SQL Server 2005 oder höher ausgeführt wird)  
+    -   **Webserverinformationen** (für Mergeabonnements auf Abonnenten, auf denen SQL Server 2005 oder höher ausgeführt wird)  
   
     -   **Andere**  
   
@@ -103,13 +103,13 @@ ms.locfileid: "62745759"
   
 3.  Sie können die im interaktiven Konfliktlöser angezeigten Spalten auch beliebig bearbeiten und dann auf eine der folgenden Schaltflächen klicken, um den Konflikt zu lösen:  
   
-    -   **Vorgeschlagene Annahme**  
+    -   **Vorschläge akzeptieren**  
   
     -   **Verleger akzeptieren**  
   
-    -   **Abonnent akzeptieren**  
+    -   **Abonnenten akzeptieren**  
   
-    -   **Alle automatisch auflösen** (alle aktuellen Konflikte werden ohne weitere Eingaben aufgelöst)  
+    -   **Alle automatisch lösen** (alle aktuellen Konflikte werden ohne weitere Eingaben gelöst)  
   
      Die ausgewählte Zeile wird dann auf den Verleger und/oder Abonnenten angewendet. Bei folgenden Synchronisierungen wird die Zeile an andere Knoten der Topologie weitergegeben.  
   
@@ -117,5 +117,5 @@ ms.locfileid: "62745759"
 >  Bearbeitungen werden nur dann angewendet, wenn sie zur Zeile gehören, die für die Lösung ausgewählt wurde. Wenn Sie z. B. Bearbeitungen unter **Verleger**vornehmen und dann auf **Abonnenten akzeptieren**klicken, werden die Bearbeitungen verworfen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Interaktive Konfliktlösung](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
+ [Interactive Conflict Resolution](merge/advanced-merge-replication-conflict-interactive-resolution.md)  
   

@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 871d248eec557033c181bbd3d162cd17875dd30c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702690"
 ---
 # <a name="calculations"></a>Berechnungen
@@ -31,8 +31,7 @@ ms.locfileid: "62702690"
   
  Berechnete Elemente können für eine beliebige Dimension, einschließlich der Measuredimension, definiert werden. Berechnete Elemente, die auf der Measuredimension erstellt wurden, werden als berechnete Measures bezeichnet.  
   
- Obwohl berechnete Elemente normalerweise auf Daten basieren, die bereits im Cube vorhanden sind, können Sie komplexe Ausdrücke erstellen, indem Sie Daten mit arithmetischen Operatoren, Zahlen und Funktionen kombinieren. Mit MDX-Funktionen wie LookupCube können Sie auch auf Daten in anderen Cubes in der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbank zugreifen. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] enthält standardisierte Visual Studio-Funktionsbibliotheken, und mit gespeicherten Prozeduren können Sie Daten aus anderen Quellen als der aktuellen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbank abrufen. Weitere Informationen zu gespeicherten Prozeduren finden Sie unter [Definieren von gespeicherten Prozeduren](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md).  
+ Obwohl berechnete Elemente normalerweise auf Daten basieren, die bereits im Cube vorhanden sind, können Sie komplexe Ausdrücke erstellen, indem Sie Daten mit arithmetischen Operatoren, Zahlen und Funktionen kombinieren. Mit MDX-Funktionen wie LookupCube können Sie auch auf Daten in anderen Cubes in der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbank zugreifen. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] enthält standardisierte Visual Studio-Funktionsbibliotheken, und mit gespeicherten Prozeduren können Sie Daten aus anderen Quellen als der aktuellen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbank abrufen. Weitere Informationen zu gespeicherten Prozeduren finden Sie unter [Definieren von gespeicherten Prozeduren](../multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md).  
   
  Angenommen, die leitenden Mitarbeiter eines Transportunternehmens möchten ermitteln, welcher Frachttyp, ausgehend vom Gewinn pro Mengeneinheit, rentabler versendet werden kann. Sie verwenden dazu einen Shipments-Cube, der die Dimensionen Cargo, Fleet und Time sowie die Measures Price_to_Ship, Cost_to_Ship und Volume_in_Cubic_Meters enthält; der Cube enthält jedoch kein Measure für die Rentabilität. Sie können in dem Cube ein berechnetes Element als Measure mit dem Namen Profit_per_Cubic_Meter erstellen, wobei Sie die vorhandenen Measures im folgenden Ausdruck verwenden:  
   

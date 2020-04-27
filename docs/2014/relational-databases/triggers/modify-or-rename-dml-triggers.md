@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 824ea1587955884f10a53579865d2029cc63eefc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473221"
 ---
 # <a name="modify-or-rename-dml-triggers"></a>Ändern oder Umbenennen von DML-Triggern
@@ -40,13 +40,13 @@ ms.locfileid: "62473221"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Wenn Sie einen Trigger umbenennen, muss der Trigger in der aktuellen Datenbank vorhanden sein, und der neue Name muss den Regeln für [Bezeichner](../databases/database-identifiers.md)entsprechen.  
   
-###  <a name="Recommendations"></a> Empfehlungen  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
   
 -   Es wird davon abgeraten, die gespeicherte Prozedur [sp_rename](/sql/relational-databases/system-stored-procedures/sp-rename-transact-sql) zum Umbenennen eines Triggers zu verwenden. Wenn Sie Teile eines Objektnamens ändern, können Skripts und gespeicherte Prozeduren funktionsunfähig werden. Durch das Umbenennen eines Triggers wird der entsprechende Objektname in der definition-Spalte der [sys.sql_modules-Katalogsicht](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) nicht geändert. Es wird empfohlen, den Trigger stattdessen zu löschen und neu zu erstellen.  
   
@@ -62,12 +62,12 @@ ms.locfileid: "62473221"
   
     -   [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql)  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Zum Ändern eines DML-Triggers ist eine ALTER-Berechtigung für die Tabelle oder Sicht erforderlich, für die der Trigger definiert ist.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-modify-a-dml-trigger"></a>So ändern Sie einen DML-Trigger  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62473221"
   
 2.  [Erstellen Sie den Trigger neu](../triggers/create-dml-triggers.md), und geben Sie dabei den neuen Namen an.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-modify-a-trigger-using-alter-trigger"></a>So ändern Sie einen Trigger mit ALTER TRIGGER  
   

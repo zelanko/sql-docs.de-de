@@ -15,14 +15,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7cc9a06601ed0819457b9348bb10cb33b4b92d37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637913"
 ---
 # <a name="when-to-use-sql-server-native-client"></a>Einsatzbedingungen für SQL Server Native Client
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ist eine Technologie, mit der Sie auf Daten in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank zugreifen können.  Eine Besprechung der unterschiedlichen Datenzugriffstechnologien finden Sie unter [Data Access Technologies Road Map (Übersicht über Datenzugriffstechnologien)](https://go.microsoft.com/fwlink/?LinkID=179186).  
   
  Sie sollten bei der Entscheidung, ob Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client als Datenzugriffstechnologie in einer Anwendung verwenden sollen, verschiedene Faktoren berücksichtigen.  
@@ -40,6 +39,6 @@ ms.locfileid: "62637913"
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Native Client Programmierung](../../relational-databases/native-client/sql-server-native-client-programming.md)   
  [ODBC-Themen zur Vorgehensweise](../native-client-odbc-how-to/odbc-how-to-topics.md)   
- [Vorgehensweisen für OLE DB](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [Gewusst-wie-Themen zu OLE DB](../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

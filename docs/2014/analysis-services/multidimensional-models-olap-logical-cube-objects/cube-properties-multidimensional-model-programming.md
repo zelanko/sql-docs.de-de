@@ -32,10 +32,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d2b99362f242ff7f815e9ceb9f67db9c80983c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727646"
 ---
 # <a name="cube-properties"></a>Cubeeigenschaften
@@ -46,7 +46,7 @@ ms.locfileid: "62727646"
   
  Weitere Informationen zum Festlegen von Cube-Eigenschaften finden Sie unter [Cube Designer &#40;Analysis Services-Multidimensional Data&#41;](../cube-designer-analysis-services-multidimensional-data.md).  
   
-|Eigenschaft|BESCHREIBUNG|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |`AggregationPrefix`|Gibt das für Aggregationsnamen verwendete gemeinsame Präfix an.|  
 |`Collation`|Gibt den Gebietsschemabezeichner (LCID) und das Vergleichsflag, durch einen Unterstrich voneinander getrennt, an, wie z. B. Latin1_General_C1_AS.|  

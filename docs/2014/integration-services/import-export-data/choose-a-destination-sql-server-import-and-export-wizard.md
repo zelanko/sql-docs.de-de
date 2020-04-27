@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 746aed7f49b0db51f46a32fdf040eb5b9e968dd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768024"
 ---
 # <a name="choose-a-destination-sql-server-import-and-export-wizard"></a>Ziel auswählen (SQL Server-Import/Export-Assistent)
@@ -70,10 +70,10 @@ ms.locfileid: "62768024"
  **Durchsuchen**  
  Suchen Sie nach einer Datei mithilfe des Dialogfelds **Öffnen**.  
   
- **Gebietsschema**  
+ **Konfigurations**  
  Geben Sie die Gebietsschema-ID (LCID) an, die die Sortierreihenfolge für Zeichen und das Datums- und Zeitformat definiert.  
   
- **Unicode-**  
+ **Unicode**  
  Gibt an, ob Unicode verwendet werden soll. Wenn Sie Unicode verwenden, brauchen Sie keine Codepage anzugeben.  
   
  **Codepage**  
@@ -82,7 +82,7 @@ ms.locfileid: "62768024"
  **Ges**  
  Gibt an, ob die Datei Formatierung mit Trennzeichen, fester Breite oder rechtem Flatterrand verwendet.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |Durch Trennzeichen getrennt|Spalten werden durch ein Trennzeichen getrennt, das auf der Seite **Spalten** angegeben wird.|  
 |Feste Breite|Spalten haben eine feste Breite.|  
@@ -91,7 +91,7 @@ ms.locfileid: "62768024"
  **Textqualifizierer**  
  Geben Sie die zu verwendenden Textqualifizierer ein. Sie können z. B. angeben, dass jede Textspalte in Anführungszeichen eingeschlossen werden soll.  
   
- **Spaltennamen in der ersten Daten Zeile**  
+ **Spaltennamen in der ersten Datenzeile**  
  Gibt an, ob die Spaltennamen in der ersten Datenzeile angezeigt werden.  
   
 ### <a name="destination--microsoft-excel"></a>Ziel = Microsoft Excel  

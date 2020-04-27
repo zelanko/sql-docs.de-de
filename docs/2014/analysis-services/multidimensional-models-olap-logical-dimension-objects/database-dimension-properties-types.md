@@ -28,10 +28,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbe1c8932c082ce537cd5dc3f2b12d98c05c3811
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62728556"
 ---
 # <a name="dimension-types"></a>Dimensionstypen
@@ -42,11 +42,11 @@ ms.locfileid: "62728556"
 ## <a name="available-dimension-types"></a>Verfügbare Dimensionstypen  
  In der folgenden Tabelle werden die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]verfügbaren Dimensions Typen beschrieben.  
   
-|Dimensionstyp|BESCHREIBUNG|  
+|Dimensionstyp|Beschreibung|  
 |--------------------|-----------------|  
-|Regulär |Eine Dimension, für die kein spezieller Dimensionstyp festgelegt wurde|  
-|Time|Eine Dimension, deren Attribute Zeiträume darstellen, z. B. Jahre, Semester, Quartale, Monate und Tage|  
-|Organisation|Eine Dimension, deren Attribute organisatorische Informationen darstellen, z. B. Angestellte oder Tochterunternehmen|  
+|Regulär|Eine Dimension, für die kein spezieller Dimensionstyp festgelegt wurde|  
+|Zeit|Eine Dimension, deren Attribute Zeiträume darstellen, z. B. Jahre, Semester, Quartale, Monate und Tage|  
+|Organization|Eine Dimension, deren Attribute organisatorische Informationen darstellen, z. B. Angestellte oder Tochterunternehmen|  
 |Gebiet|Eine Dimension, deren Attribute geografische Informationen darstellen, z. B. Städte oder Postleitzahlen|  
 |BillOfMaterials|Eine Dimension, deren Attribute Informationen zu Inventar oder Produktion darstellen, z. B. Stücklisten für Produkte|  
 |Konten|Eine Dimension, deren Attribute ein Kontodiagramm für Finanzberichte darstellen|  
@@ -55,13 +55,13 @@ ms.locfileid: "62728556"
 |Szenario|Eine Dimension, deren Attribute Informationen für Planung oder strategische Analyse darstellen|  
 |Quantitative|Eine Dimension, deren Attribute quantitative Informationen darstellen|  
 |Hilfsprogramm|Eine Dimension, deren Attribute verschiedene Informationen darstellen|  
-|Currency|Dieser Dimensionstyp enthält Währungsdaten und Metadaten|  
+|Währung|Dieser Dimensionstyp enthält Währungsdaten und Metadaten|  
 |Rates|Eine Dimension, deren Attribute Währungskursinformationen darstellen|  
 |Kanal|Eine Dimension, deren Attribute verschiedene Kanalinformationen darstellen|  
 |Promotion|Eine Dimension, deren Attribute verschiedene Marketinghöherstufungsinformationen darstellen|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen einer Dimension mithilfe einer vorhandenen Tabelle](../multidimensional-models/create-a-dimension-by-using-an-existing-table.md)   
- [Dimensionen &#40;Analysis Services Mehrdimensionale Daten&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensionen &#40;Analysis Services – mehrdimensionale Daten&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

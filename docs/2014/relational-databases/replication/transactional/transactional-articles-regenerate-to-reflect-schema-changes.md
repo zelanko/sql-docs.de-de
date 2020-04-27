@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a99a98fd0d471e8cb0f8ab880ae1a6c55e1b121
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655505"
 ---
 # <a name="regenerate-custom-transactional-procedures-to-reflect-schema-changes"></a>Erneutes Generieren von Transaktionsprozeduren zur Erfassung von Schemaänderungen
@@ -43,7 +43,7 @@ ms.locfileid: "62655505"
      Bei der nächsten relevanten Schemaänderung wird dieses Skript innerhalb derselben Transaktion wie der DDL-Befehl auf allen Abonnenten ausgeführt. Nach Abschluss der Schemaänderung wird die Registrierung des Skripts aufgehoben. Damit das Skript bei einer weiteren Schemaänderung wieder ausgeführt wird, müssen Sie es erneut registrieren.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](transactional-articles-specify-how-changes-are-propagated.md)   
+ [Angeben der Weitergabemethode für Änderungen bei Transaktions Artikeln](transactional-articles-specify-how-changes-are-propagated.md)   
  [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../publish/make-schema-changes-on-publication-databases.md)  
   
   

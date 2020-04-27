@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 77581cc6d8838e0cfed4bb7cc615f4d1f58de0d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62761462"
 ---
 # <a name="create-unique-constraints"></a>Erstellen von Unique-Einschränkungen
@@ -36,14 +36,14 @@ ms.locfileid: "62761462"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Tabelle.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-a-unique-constraint"></a>So erstellen Sie eine UNIQUE-Einschränkung  
   
@@ -55,9 +55,9 @@ ms.locfileid: "62761462"
   
 4.  Klicken Sie im Datenblattbereich unter **Allgemein**auf **Typ** , und wählen Sie im Dropdown-Listenfeld rechts neben der Eigenschaft den Eintrag **Eindeutiger Schlüssel** aus.  
   
-5.  Klicken Sie im Menü **Datei** auf **Speichern** > _Tabellenname_.  
+5.  Klicken Sie im Menü **Datei** auf _Tabellenname_**speichern**.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-create-a-unique-constraint"></a>So erstellen Sie eine UNIQUE-Einschränkung  
   

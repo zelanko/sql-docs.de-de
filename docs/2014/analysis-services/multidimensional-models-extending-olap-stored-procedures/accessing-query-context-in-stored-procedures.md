@@ -16,21 +16,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 93624a612126e9103144b8b53272122e66202b8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702667"
 ---
 # <a name="accessing-query-context-in-stored-procedures"></a>Zugreifen auf den Abfragekontext in gespeicherten Prozeduren
   Der Ausführungskontext einer gespeicherten Prozedur steht innerhalb des Codes der gespeicherten Prozedur als `Context`-Objekt des ADOMD.NET-Serverobjektmodells zur Verfügung. Der Kontext ist schreibgeschützt und kann nicht von der gespeicherten Prozedur geändert werden. Für dieses Objekt stehen die folgenden Eigenschaften zur Verfügung.  
   
-|Eigenschaft|type|BESCHREIBUNG|  
+|Eigenschaft|type|Beschreibung|  
 |--------------|----------|-----------------|  
-|**CURRENTCUBE**|Cube|Der Cube für den aktuellen Abfragekontext.|  
-|**CurrentDatabaseName**|String|Der Bezeichner der aktuellen Datenbank.|  
+|**CurrentCube**|Cube|Der Cube für den aktuellen Abfragekontext.|  
+|**CurrentDatabaseName**|Zeichenfolge|Der Bezeichner der aktuellen Datenbank.|  
 |**CurrentConnection**|Verbindung|Ein Verweis auf das Verbindungsobjekt im aktuellen Kontext.|  
-|**Tage**|Integer|Die Durchlaufnummer für den aktuellen Kontext.|  
+|**Erfolgreich**|Integer|Die Durchlaufnummer für den aktuellen Kontext.|  
   
  Das `Context`-Objekt ist vorhanden, wenn das MDX-Objektmodell (Multidimensional Expressions) in einer gespeicherten Prozedur verwendet wird. Es ist nicht verfügbar, wenn das MDX-Objektmodell auf einem Client verwendet wird. Das `Context`-Objekt wird nicht explizit an die gespeicherte Prozedur übergeben bzw. von ihr zurückgegeben. Es ist während der Ausführung der gespeicherten Prozedur verfügbar.  
   

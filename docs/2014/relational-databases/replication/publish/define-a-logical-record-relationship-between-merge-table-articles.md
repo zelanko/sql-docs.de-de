@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0c1c5be804f60fa57b677a418c19d8aadee23f22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62691662"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Definieren einer logische Datensatzbeziehung zwischen Mergetabellenartikeln
@@ -35,7 +35,7 @@ ms.locfileid: "62691662"
   
      [Einschränkungen](#Restrictions)  
   
--   **So definieren Sie eine logische Daten Satz Beziehung zwischen Mergetabellenartikeln mit:**  
+-   **So definieren Sie eine logische Datensatzbeziehung zwischen Mergetabellenartikeln mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -43,13 +43,13 @@ ms.locfileid: "62691662"
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Wenn Sie einen logischen Datensatz hinzufügen, ändern oder löschen, nachdem Abonnements für die Veröffentlichung initialisiert wurden, müssen Sie eine neue Momentaufnahme generieren und alle Abonnements nach vorgenommener Änderung erneut initialisieren. Weitere Informationen zum Ändern von Eigenschaften finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](change-publication-and-article-properties.md).  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Zum Definieren logischer Datensätze steht Ihnen das Dialogfeld **Join hinzufügen** zur Verfügung, das über den Assistenten für neue Veröffentlichung und das Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>** verfügbar ist. Weitere Informationen zum Verwenden des Assistenten sowie Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](view-and-modify-publication-properties.md).  
   
  Logische Datensätze können nur dann im Dialogfeld **Join hinzufügen** definiert werden, wenn sie auf einen Joinfilter in einer Mergeveröffentlichung angewendet werden und die Veröffentlichung die Anforderungen für die Verwendung vorausberechneter Partitionen erfüllt. Wenn Sie logische Datensätze definieren möchten, die nicht auf Joinfilter angewendet werden, und die Konflikterkennung und -lösung auf der Ebene des logischen Datensatzes festlegen möchten, müssen Sie gespeicherte Prozeduren verwenden.  
@@ -72,7 +72,7 @@ ms.locfileid: "62691662"
   
      So löschen Sie nur die logische Datensatzbeziehung:  
   
-    1.  Wählen Sie im Assistenten für neue Veröffentlichung auf der Seite **Zeilen filtern** oder im Dialogfeld **Veröffentlichungseigenschaften – **Veröffentlichung>** auf der Seite \<Zeilen filtern** im Bereich **Gefilterte Tabellen** den der logischen Datensatzbeziehung zugeordneten Joinfilter aus, und klicken Sie dann auf **Bearbeiten**.  
+    1.  Wählen Sie im Assistenten für neue Veröffentlichung auf der Seite **Zeilen filtern** oder im Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>** auf der Seite **Zeilen filtern** im Bereich **Gefilterte Tabellen** den der logischen Datensatzbeziehung zugeordneten Joinfilter aus, und klicken Sie dann auf **Bearbeiten**.  
   
     2.  Deaktivieren Sie im Dialogfeld **Join bearbeiten** die Option **Logischer Datensatz**.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "62691662"
   
     -   Wählen Sie im Assistenten für neue Veröffentlichung auf der Seite **Zeilen filtern** bzw. im Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>** im Bereich **Gefilterte Tabellen** den betreffenden Filter aus, und klicken Sie dann auf **Löschen**. Wenn der Joinfilter, den Sie löschen möchten, mit anderen Joins erweitert ist, werden diese Joins beim Löschen des Filters selbst ebenfalls gelöscht.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Sie können logische Datensatzbeziehungen zwischen Artikeln programmgesteuert mithilfe gespeicherter Replikationsprozeduren angeben.  
   
 #### <a name="to-define-a-logical-record-relationship-without-an-associated-join-filter"></a>So definieren Sie eine logische Datensatzbeziehung ohne einen zugeordneten Joinfilter  
@@ -108,9 +108,9 @@ ms.locfileid: "62691662"
   
 4.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergefilter](/sql/relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql)aus. Geben **@publication**Sie, den Namen eines Artikels in der Beziehung für **@article**, den Namen des zweiten **@join_articlename**Artikels für, einen Namen für die Beziehung für **@filtername**, eine-Klausel, die die Beziehung zwischen den beiden Artikeln für **@join_filterclause**definiert, den Typ des Joins **@join_unique_key** für und einen der folgenden Werte für **@filter_type**an:  
   
-    -   **2** : definiert eine logische Beziehung.  
+    -   **2** &ndash; Definiert eine logische Datensatzbeziehung.  
   
-    -   **3** : definiert eine logische Beziehung mit einem Joinfilter.  
+    -   **3** &ndash; Definiert eine logische Beziehung mit einem Joinfilter.  
   
     > [!NOTE]  
     >  Wird kein Joinfilter verwendet, ist die Richtung der Beziehung zwischen den beiden Artikeln nicht wichtig.  
@@ -144,12 +144,12 @@ ms.locfileid: "62691662"
   
 2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_dropmergefilter](/sql/relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql)aus. Geben **@publication**Sie, den Namen eines der Artikel in der Beziehung für **@article**und den Namen der Beziehung aus Schritt 1 für **@filtername**an.  
   
-###  <a name="TsqlExample"></a> Beispiel (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Beispiel (Transact-SQL)  
  Im folgenden Beispiel werden vorausberechnete Partitionen für eine vorhandene Veröffentlichung aktiviert und ein logischer Datensatz erstellt, der die zwei neuen Artikel für die Tabellen `SalesOrderHeader` und `SalesOrderDetail` umfasst.  
   
  [!code-sql[HowTo#sp_AddMergeLogicalRecord](../../../snippets/tsql/SQL15/replication/howto/tsql/createlogicalrecordpub.sql#sp_addmergelogicalrecord)]  
   
-##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
   
 > [!NOTE]  
 >  Bei der Mergereplikation können Sie auch angeben, dass Konflikte auf der Ebene logischer Datensätze nachverfolgt und gelöst werden. Diese Optionen können mit RMO jedoch nicht festgelegt werden.  
@@ -194,7 +194,7 @@ ms.locfileid: "62691662"
   
 10. Wiederholen Sie die Schritte 8 und 9 für jede weitere logische Datensatzbeziehung in der Veröffentlichung.  
   
-###  <a name="PShellExample"></a>Beispiel (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a>Beispiel (RMO)  
  In diesem Beispiel wird ein logischer Datensatz erstellt, der die zwei neuen Artikel für die Tabellen `SalesOrderHeader` und `SalesOrderDetail` umfasst.  
   
  [!code-csharp[HowTo#rmo_CreateLogicalRecord](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createlogicalrecord)]  
@@ -203,10 +203,10 @@ ms.locfileid: "62691662"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Definieren und Ändern eines Joinfilters zwischen Mergeartikeln](define-and-modify-a-join-filter-between-merge-articles.md)   
- [Definieren und Ändern eines parametrisierten Zeilen Filters für einen Mergeartikel](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
+ [Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel](define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [Definieren und Ändern eines statischen Zeilen Filters](define-and-modify-a-static-row-filter.md)   
  [Gruppieren von Änderungen an verknüpften Zeilen mit logischen Datensätzen](../merge/group-changes-to-related-rows-with-logical-records.md)   
  [Optimieren der Leistung parametrisierter Filter mit voraus berechneten Partitionen](../merge/parameterized-filters-optimize-for-precomputed-partitions.md)   
- [Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen](../merge/group-changes-to-related-rows-with-logical-records.md)  
+ [Gruppieren von Änderungen an verknüpften Zeilen mit logischen Datensätzen](../merge/group-changes-to-related-rows-with-logical-records.md)  
   
   

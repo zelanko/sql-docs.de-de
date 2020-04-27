@@ -17,13 +17,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b43cdabb83b8f255b315e16b4bbe0d9af1156c51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655336"
 ---
-# <a name="queued-updating-conflict-detection-and-resolution"></a>Konflikterkennung und -lösung beim verzögerten Update über eine Warteschlange
+# <a name="queued-updating-conflict-detection-and-resolution"></a>Queued Updating Conflict Detection and Resolution
   Da die verzögerte Aktualisierung von Abonnements über eine Warteschlange Änderungen an denselben Daten an mehreren Standorten zulässt, können Konflikte auftreten, wenn die Daten auf dem Verleger synchronisiert werden. Die Replikation erkennt alle Konflikte, wenn Änderungen mit dem Verleger synchronisiert werden, und löst die Konflikte anhand der Richtlinie zur Konfliktlösung, die Sie beim Erstellen der Veröffentlichung ausgewählt haben. Die folgenden Konflikte sind möglich:  
   
 -   Update- und Einfügekonflikte. Diese Konflikte treten auf, wenn dieselben Daten an zwei verschiedenen Speicherorten geändert werden. Eine Änderung setzt sich dabei unbeabsichtigt gegen eine andere durch.  

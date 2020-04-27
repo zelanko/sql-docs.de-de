@@ -21,28 +21,27 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b3be16ea856b5d632ba5a0285bad2c4d2d93709c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62473146"
 ---
 # <a name="automated-administration-across-an-enterprise"></a>Automatisierte Verwaltung in einem Unternehmen
-  Die Automatisierung der Verwaltung über mehrere Instanzen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] von hinweg wird *Multiserververwaltung*genannt. Verwenden Sie die Multiserveradministration für folgende Aufgaben:  
+  Das Automatisieren der Verwaltung über mehrere Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] hinweg wird *Multiserververwaltung*genannt. Verwenden Sie die Multiserveradministration für folgende Aufgaben:  
   
 -   Verwalten von zwei oder mehr Servern.  
   
 -   Erstellen von Zeitplänen für den Informationsfluss zwischen Unternehmensservern für Dataware Housing.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ist ständig bestrebt, die Gesamtbetriebskosten zu senken, und führt zu diesem Zweck in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] zwei neue Funktionen ein: eine Methode zur Serververwaltung, die als richtlinienbasierte Verwaltung bezeichnet wird, und Multiserverabfragen, die Konfigurationsserver und Servergruppen verwenden. Diese Funktionen können in Verbindung mit oder anstelle einiger der Funktionen verwendet werden, die in diesem Thema beschrieben werden. Weitere Informationen finden Sie unter [Verwalten von Servern mit der Richtlinien basierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) und [Verwalten mehrerer Server mithilfe von zentralen Verwaltungs Servern](../../relational-databases/administer-multiple-servers-using-central-management-servers.md).  
+>  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ist ständig bestrebt, die Gesamtbetriebskosten zu senken, und führt zu diesem Zweck in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] zwei neue Funktionen ein: eine Methode zur Serververwaltung, die als richtlinienbasierte Verwaltung bezeichnet wird, und Multiserverabfragen, die Konfigurationsserver und Servergruppen verwenden. Diese Funktionen können in Verbindung mit oder anstelle einiger der Funktionen verwendet werden, die in diesem Thema beschrieben werden. Weitere Informationen finden Sie unter [Verwalten von Servern mit der Richtlinien basierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) und [Verwalten mehrerer Server mithilfe von zentralen Verwaltungs Servern](../../relational-databases/administer-multiple-servers-using-central-management-servers.md).  
   
  Für die Multiserveradministration benötigen Sie mindestens einen Masterserver und mindestens einen Zielserver. Ein Masterserver verteilt Aufträge an die Zielserver und empfängt Ereignisse von ihnen. Auf dem Masterserver ist zudem die zentrale Kopie der Auftragsdefinitionen für Aufträge gespeichert, die auf Zielservern ausgeführt werden. Zielserver stellen in regelmäßigen Abständen Verbindungen mit dem Masterserver her, um den Zeitplan der Aufträge zu aktualisieren. Ist ein neuer Auftrag auf dem Masterserver vorhanden, lädt der Zielserver den Auftrag herunter. Nach dem Beenden des Auftrags stellt der Zielserver erneut eine Verbindung mit dem Masterserver her und berichtet den Status des Auftrags.  
   
  Die folgende Abbildung stellt die Beziehung zwischen Master- und Zielserver dar:  
   
- ![Multiserver-Verwaltungskonfiguration](../../database-engine/media/multisvr.gif "Multiserver-Verwaltungskonfiguration")  
+ ![Multiserververwaltungskonfiguration](../../database-engine/media/multisvr.gif "Multiserververwaltungskonfiguration")  
   
  Wenn Sie Abteilungsserver in einem großen Unternehmen verwalten, können Sie Folgendes definieren:  
   
@@ -83,7 +82,7 @@ ms.locfileid: "62473146"
  Enthält Informationen dazu, wie die automatisierte Verwaltung in einer Multiserverumgebung die Selbstoptimierungsfunktionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]nutzt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Datenbank-Engine Abwärtskompatibilität](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
+ [Abwärtskompatibilität der SQL Server-Datenbank-Engine](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [Registrieren von Servern](../register-servers/register-servers.md)   
  [sp_add_targetservergroup &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-add-targetservergroup-transact-sql)   
  [sp_delete_targetserver &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-delete-targetserver-transact-sql)   

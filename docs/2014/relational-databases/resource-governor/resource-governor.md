@@ -14,14 +14,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8d2cdad589ac9c669ae06672260bd99a1de72e8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62704873"
 ---
 # <a name="resource-governor"></a>Resource Governor
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Resource Governor ist eine-Funktion, mit der Sie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Arbeitsauslastung und den Verbrauch von Systemressourcen verwalten können. Mit Resource Governor können Sie Grenzwerte für die Menge an CPU, physischer E/A und Arbeitsspeicher angeben, die für eingehende Anwendungsanforderungen zur Verfügung stehen.  
+  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Funktion, mit der Sie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Arbeitsauslastung und den Verbrauch von Systemressourcen verwalten können. Mit Resource Governor können Sie Grenzwerte für die Menge an CPU, physischer E/A und Arbeitsspeicher angeben, die für eingehende Anwendungsanforderungen zur Verfügung stehen.  
   
 ## <a name="benefits-of-resource-governor"></a>Vorteile der Ressourcenkontrolle  
  Mit der Ressourcenkontrolle können Sie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Arbeitsauslastungen und -Ressourcen verwalten, indem Sie durch eingehende Anforderungen Grenzen für den Ressourcenverbrauch festlegen. Im Kontext der Ressourcenkontrolle bezeichnet Arbeitsauslastung eine Reihe von ähnlich dimensionierten Abfragen oder Anforderungen, die als einzelne Entität behandelt werden kann und sollte. Dies ist zwar keine Voraussetzung, je einheitlicher das Ressourcenverwendungsmuster einer Arbeitsauslastung jedoch ist, desto größer der Nutzen der Ressourcenkontrolle. Ressourcengrenzen können in Echtzeit mit minimaler Wirkung auf Arbeitsauslastungen, die ausgeführt werden, neu konfiguriert werden.  
@@ -75,7 +75,7 @@ ms.locfileid: "62704873"
   
 -   Durch den Ressourcenpool werden die von der Anwendung (zum Beispiel Anwendung 3) benötigten Ressourcen bereitgestellt und begrenzt.  
   
- ![Funktionale Komponenten der Ressourcenkontrolle](../../database-engine/media/rg-basic-funct-components.gif "Funktionale Komponenten der Ressourcenkontrolle")  
+ ![Funktionale Komponenten von Resource Governor](../../database-engine/media/rg-basic-funct-components.gif "Funktionale Komponenten von Resource Governor")  
   
 ## <a name="resource-governor-tasks"></a>Tasks der Ressourcenkontrolle  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62704873"
 |Beschreibt, wie die Ressourcenkontrolle deaktiviert wird.|[Deaktivieren der Ressourcenkontrolle](disable-resource-governor.md)|  
 |Beschreibt, wie ein Ressourcenpool erstellt, geändert und gelöscht wird.|[Ressourcenpool für die Ressourcenkontrolle](resource-governor-resource-pool.md)|  
 |Beschreibt, wie eine Arbeitsauslastungsgruppe erstellt, geändert, verschoben und gelöscht wird.|[Arbeitsauslastungsgruppe der Ressourcenkontrolle](resource-governor-workload-group.md)|  
-|Beschreibt, wie benutzerdefinierte Klassifizierungsfunktionen erstellt und getestet werden.|[Klassifizierungsfunktion der Ressourcenkontrolle](resource-governor-classifier-function.md)|  
+|Beschreibt, wie benutzerdefinierte Klassifizierungsfunktionen erstellt und getestet werden.|[Resource Governor Classifier Function](resource-governor-classifier-function.md)|  
 |Beschreibt, wie die Ressourcenkontrolle mithilfe einer Vorlage konfiguriert wird.|[Konfigurieren der Ressourcenkontrolle mit einer Vorlage](configure-resource-governor-using-a-template.md)|  
 |Beschreibt, wie Eigenschaften der Ressourcenkontrolle angezeigt werden.|[Anzeigen der Eigenschaften der Ressourcenkontrolle](view-resource-governor-properties.md)|  
   

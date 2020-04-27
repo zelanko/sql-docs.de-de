@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: d4c542aa1491710d49ec4c24c027e69f2eef24a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62643120"
 ---
 # <a name="setenable-method-servernetworkprotocolipaddress-class"></a>SetEnable-Methode (ServerNetworkProtocolIPAddress-Klasse)
@@ -38,13 +38,13 @@ object
 ```  
   
 ## <a name="parts"></a>Bestandteile  
- *Objekt*  
- Ein [ServerNetworkProtocolIPAdress-Klassen](servernetworkprotocolipaddress-class.md) Objekt, das eine IP-Adresse für das Netzwerkprotokoll in der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Instanz von darstellt.  
+ *object*  
+ A [ServerNetworkProtocolIPAdress-Klassenobjekt](servernetworkprotocolipaddress-class.md) , das eine IP-Adresse für das Netzwerkprotokoll in der Instanz von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]darstellt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein `uint32`-Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird; jede andere Zahl gibt einen Fehler an.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

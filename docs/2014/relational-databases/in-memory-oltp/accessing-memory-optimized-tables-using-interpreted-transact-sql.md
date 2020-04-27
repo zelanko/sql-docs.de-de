@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c81ac6c0c8dcf7e24c80b426654164c668fcf3a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62468607"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Zugreifen auf speicheroptimierte Tabellen mit interpretiertem Transact-SQL
@@ -42,7 +42,7 @@ ms.locfileid: "62468607"
 |Datenbankübergreifend|Datenbankübergreifende Abfragen<br /><br /> Datenbankübergreifende Transaktionen<br /><br /> Verbindungsserver|  
   
 ## <a name="table-hints"></a>Tabellenhinweise  
- Weitere Informationen zu Tabellenhinweisen finden Sie unter [Tabellenhinweise &#40;Transact-SQL&#41;](/sql/t-sql/queries/hints-transact-sql-table). Zur Unterstützung von [!INCLUDE[hek_2](../../includes/hek-2-md.md)] wurde die SNAPSHOT-Isolation hinzugefügt.  
+ Weitere Informationen zu Tabellenhinweisen finden Sie unter [Tabellen Hinweise &#40;Transact-SQL-&#41;](/sql/t-sql/queries/hints-transact-sql-table). Zur Unterstützung von [!INCLUDE[hek_2](../../includes/hek-2-md.md)] wurde die SNAPSHOT-Isolation hinzugefügt.  
   
  Die folgenden Tabellenhinweise werden nicht unterstützt, wenn mit interpretiertem [!INCLUDE[tsql](../../includes/tsql-md.md)]auf eine speicheroptimierte Tabelle zugegriffen wird.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "62468607"
 >  Ein Tabellenhinweis auf die Isolationsstufe ist bei speicheroptimierten Tabellen, auf die der Zugriff mit Abfragen im Autocommit-Modus erfolgt, nicht erforderlich.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Transact-SQL-Unterstützung für In-Memory OLTP](transact-sql-support-for-in-memory-oltp.md)   
+ [Transact-SQL-Unterstützung für in-Memory OLTP](transact-sql-support-for-in-memory-oltp.md)   
  [Migrieren zu In-Memory OLTP](migrating-to-in-memory-oltp.md)  
   
   

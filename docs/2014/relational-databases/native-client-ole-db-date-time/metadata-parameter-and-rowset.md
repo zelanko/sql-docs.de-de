@@ -1,5 +1,5 @@
 ---
-title: Parameter-und Rowsetmetadaten | Microsoft-Dokumentation
+title: Metadaten für Parameter und Rowsets | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2b96876a050f9ba46363792eec22d76640ee6fc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655626"
 ---
 # <a name="parameter-and-rowset-metadata"></a>Metadaten für Parameter und Rowsets
@@ -62,7 +62,7 @@ ms.locfileid: "62655626"
 |datetime2 oder DBTYPE_DBTIMESTAMP|DBTYPE_DBTIMESTAMP|16|0..7|  
 |datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|20|0..7|  
   
- Der *bPrecision* -Parameter wird ignoriert.  
+ Der Parameter *bPrecision* wird ignoriert.  
   
  Beim Senden von Daten an den Server wird DBPARAMFLAGS_SS_ISVARIABLESCALE ignoriert. Anwendungen können die Verwendung von älteren TDS-Typen (Tabular Data Stream) durch Verwenden der anbieterspezifischen Typnamen "`datetime`" und "`smalldatetime`" erzwingen. Wenn eine Verbindung [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] mit (oder höher) Servern besteht`datetime2`, wird das Format verwendet, und bei Bedarf wird eine implizite Server Konvertierung durchzuführen, wenn der Typname "`datetime2`" oder "DBTYPE_DBTIMESTAMP" lautet. *bScale* wird ignoriert, wenn die anbieterspezifischen Typnamen`datetime`"" oder`smalldatetime`"" verwendet werden. Andernfalls müssen die Anwendungen sicherstellen, dass *bScale* ordnungsgemäß festgelegt ist. Anwendungen, die von MDAC [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Native Client [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] von aktualisiert werden und "DBTYPE_DBTIMESTAMP" verwenden, schlagen fehl, wenn *bScale* nicht ordnungsgemäß festgelegt wird. Bei Verbindung mit Serverinstanzen vor [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] tritt für einen anderen *bscale*-Wert als 0 oder 3 mit DBTYPE_DBTIMESTAMP ein Fehler auf und E_FAIL wird zurückgegeben.  
   
@@ -78,8 +78,7 @@ ms.locfileid: "62655626"
 |DBTYPE_DBTIMESTAMPOFFSET|datetimeoffset(7)|  
   
 ## <a name="icolumnsrowsetgetcolumnsrowset"></a>IColumnsRowset::GetColumnsRowset  
- 
-  `IColumnsRowset::GetColumnsRowset` gibt die folgenden Spalten zurück.  
+ `IColumnsRowset::GetColumnsRowset` gibt die folgenden Spalten zurück.  
   
 |Spaltentyp|DBCOLUMN_TYPE|DBCOLUM_COLUMNSIZE|DBCOLUMN_PRECISION|DBCOLUMN_SCALE, DBCOLUMN_DATETIMEPRECISION|DBCOLUMN_FLAGS, DBCOLUMNFLAGS_SS_ISVARIABLESCALE|  
 |-----------------|--------------------|-------------------------|-------------------------|--------------------------------------------------|---------------------------------------------------------|  
@@ -140,9 +139,9 @@ ms.locfileid: "62655626"
   
  Die übrigen Flags (DBCOLUMNFLAGS_ISNULLABLE, DBCOLUMNFLAGS_MAYBENULL, DBCOLUMNFLAGS_WRITE und DBCOLUMNFLAGS_WRITEUNKNOWN) können festgelegt werden.  
   
- In *dwFlags* wird das neue Flag DBCOLUMNFLAGS_SS_ISVARIABLESCALE bereitgestellt, mit dem eine Anwendung den Servertyp von Spalten bestimmen kann, wobei *wType* DBTYPE_DBTIMESTAMP ist. *bScale* muss auch verwendet werden, um den Servertyp zu identifizieren.  
+ In *dwFlags* wird das neue Flag DBCOLUMNFLAGS_SS_ISVARIABLESCALE bereitgestellt, mit dem eine Anwendung den Servertyp von Spalten bestimmen kann, wobei *wType* DBTYPE_DBTIMESTAMP ist. *bScale* muss ebenfalls verwendet werden, um den Servertyp zu identifizieren.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Metadaten &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
+ [Metadata &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
   
   

@@ -19,16 +19,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad6c8de47577eccd7797517c8080957d7afe1abd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727544"
 ---
 # <a name="defining-and-identifying-objects-xmla"></a>Definieren und Identifizieren von Objekten (XMLA)
   Objekte werden in XMLA-Befehlen (XML for Analysis) mithilfe von Objektbezeichnern und Objektverweisen identifiziert und mithilfe von ASSL-Elementen (Analysis Services Scripting Language) definiert.  
   
-## <a name="object-identifiers"></a>Objekt Bezeichner  
+## <a name="object-identifiers"></a>Objektbezeichner  
  Ein-Objekt wird mit dem eindeutigen Bezeichner des-Objekts identifiziert, das in einer Instanz [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]von definiert ist. Objektbezeichner können entweder explizit angegeben oder durch die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Instanz bestimmt werden, wenn [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] das Objekt erstellt. Mit der [Discover](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-discover) -Methode können Sie Objekt Bezeichner für nachfolgende `Discover` oder [Execute](https://docs.microsoft.com/bi-reference/xmla/xml-elements-methods-execute) -Methodenaufrufe abrufen.  
   
 ## <a name="object-references"></a>Objektverweise  

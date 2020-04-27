@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0bb04374ede05406fdf6d273a76a246bb35f5dac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637868"
 ---
 # <a name="basic-syntax-of-the-for-xml-clause"></a>Basissyntax der FOR XML-Klausel
@@ -29,7 +29,7 @@ ms.locfileid: "62637868"
 > [!IMPORTANT]  
 >  Die XMLDATA-Direktive zur FOR XML-Option ist veraltet. Verwenden Sie XSD-Generierung für RAW- und AUTO-Modus. Es gibt keinen Ersatz für die XMLDATA-Direktive im EXPLICIT-Modus. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- Im folgenden finden Sie die grundlegende Syntax, die in der [for-Klausel (Transact-SQL)](/sql/t-sql/queries/select-for-clause-transact-sql)beschrieben wird:  
+ Im Folgenden wird die Basissyntax der [FOR-Klausel (Transact-SQL) beschrieben](/sql/t-sql/queries/select-for-clause-transact-sql):  
   
 ```  
 [ FOR { BROWSE | <XML> } ]  
@@ -88,7 +88,7 @@ XML
  TYPE  
  Gibt an, dass die Abfrage die Ergebnisse als **xml** -Typ zurückgibt. Weitere Informationen finden Sie unter [TYPE Directive in FOR XML Queries](type-directive-in-for-xml-queries.md).  
   
- ROOT [('*rootName*')]  
+ ROOT [('*RootName*')]  
  Gibt an, dass ein einzelnes Element der obersten Ebene dem als Ergebnis zurückgegebenen XML-Dokument hinzugefügt wird. Optional können Sie den zu generierenden Stammelementnamen angeben. Der Standardwert lautet "root".  
   
 ## <a name="see-also"></a>Weitere Informationen  

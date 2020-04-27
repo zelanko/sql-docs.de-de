@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f1d449defa98112c87a4b5789f1cff6f764252e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62659574"
 ---
 # <a name="droponlymode-element-dta"></a>DropOnlyMode-Element (DTA)
@@ -36,18 +36,18 @@ ms.locfileid: "62659574"
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|BESCHREIBUNG|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
-|**Datentyp und -länge**|Keine.|  
-|**Standardwert**|Keine.|  
-|**Vorkommen**|Optional. Nur einmalige Verwendung pro `TuningOptions`-Element möglich. Keine Verwendung möglich, wenn im `TuningOptions`-Element die folgenden Elemente angegeben sind:<br /><br /> [Das Featureset-Element &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Partitionierungs Element &#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> [Keepvorhandenes Element &#40;DTA&#41;](keepexisting-element-dta.md) wird auf **alle** festgelegt.|  
+|**Datentyp und -länge**|Keine|  
+|**Standardwert**|Keine|  
+|**Vorkommt**|Optional. Nur einmalige Verwendung pro `TuningOptions`-Element möglich. Keine Verwendung möglich, wenn im `TuningOptions`-Element die folgenden Elemente angegeben sind:<br /><br /> [FeatureSet-Element &#40;DTA&#41;](featureset-element-dta.md)<br /><br /> [Partitioning-Element &#40;DTA&#41;](partitioning-element-dta.md)<br /><br /> [KeepExisting-Element &#40;DTA&#41;](keepexisting-element-dta.md) ist auf **ALL** festgelegt|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Elemente|  
 |------------------|--------------|  
 |**Übergeordnetes Element**|[TuningOptions-Element &#40;DTA&#41;](tuningoptions-element-dta.md)|  
-|**Untergeordnete Elemente**|Keine.|  
+|**Untergeordnete Elemente**|Keine|  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel veranschaulicht den `TuningOptions`-Abschnitt einer XML-Eingabedatei des Datenbankoptimierungsratgebers, wobei `DropOnlyMode` angegeben ist. In diesem Beispiel ist die Optimierungszeit auf 24 Stunden (1440 Minuten) begrenzt, und alle vorhandenen gruppierten und nicht gruppierten Indizes sollen gelöscht werden:  

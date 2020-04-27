@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6ed8a56892cfd70b43341ffff8349faa56094a97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62519140"
 ---
 # <a name="report-server-item-properties"></a>Eigenschaften der Berichtsserverelemente
@@ -35,7 +35,7 @@ ms.locfileid: "62519140"
 |**CreatedBy**|Der Name des Benutzers, der das Element ursprünglich zur Berichtsserver-Datenbank hinzugefügt hat.|  
 |**CreationDate**|Der Zeitpunkt (Datum und Uhrzeit), zu dem das Element zur Berichtsserver-Datenbank hinzugefügt wurde.|  
 |**Beschreibung**|Die Beschreibung des Elements.|  
-|**Hidden**|Ein Wert, der angibt, ob das Element für Benutzer sichtbar und verfügbar ist.|  
+|**Verbirgt**|Ein Wert, der angibt, ob das Element für Benutzer sichtbar und verfügbar ist.|  
 |**ID**|Die ID eines Elements in der Berichtsserver-Datenbank.|  
 |**ModifiedBy**|Der Name des Benutzers, der das Element als Letzter in der Berichtsserver-Datenbank geändert hat.|  
 |**ModifiedDate**|Zeitpunkt (Datum und Uhrzeit) der letzten Änderung des Elements durch den Benutzer.|  
@@ -59,17 +59,17 @@ ms.locfileid: "62519140"
 |--------------|-----------------|  
 |**Sprache**|Die in einem Bericht verwendete Sprache. Der Wert ist ein Sprachcode, der in der IETF-Spezifikation (Internet Engineering Task Force) RFC1766 definiert ist. Der erste Teil ist eine Bezeichnung aus zwei Zeichen für die Basissprache. Der zweite Teil ist durch einen Bindestrich getrennt und legt die Variation oder den Dialekt der Sprache fest. Wenn der Wert nicht im `Style`-Element angegeben ist, das zum `Body`-Element in der Berichtsdefinition gehört, entspricht der Standardwert der Sprache des Berichtsservers.|  
 |`ReportProcessingTimeout`|Timeout (in Sekunden) für einen einzelnen Bericht. Wenn dieser Wert festgelegt ist, versucht der Berichtsserver, die Verarbeitung eines Berichts zu beenden, sobald der angegebene Zeitraum überschritten wird. Gültige Werte sind `-1` und `2`,`147`,`483`,`647`. Wenn der Wert `-1` ist, findet bei Berichten während der Verarbeitung kein Timeout statt. Wenn der Wert ist `null`, wird der Wert der System Eigenschaft `ReportProcessingTimeout` für das Timeout der Berichts Verarbeitung verwendet. Der Standardwert ist `null`. Weitere Informationen finden Sie unter [Berichtsserver-Systemeigenschaften](reporting-services-properties-report-server-system-properties.md).|  
-|**Executiondate**|Zeitpunkt (Datum und Uhrzeit), zu dem zuletzt eine Berichtsmomentaufnahme für einen Bericht erstellt wurde.|  
-|**Canrununbeaufsichtigt**|Ein Wert, der angibt, ob ein Bericht unbeaufsichtigt nach einem Zeitplan ausgeführt werden kann. Ist diese Eigenschaft auf `true` eingestellt, sind die Standardwerte für die Berichtsparameter definiert, und die Anmeldeinformationen für die Datenquelle werden mit dem Bericht gespeichert, oder die Option zum Abrufen der Anmeldeinformationen ist auf `None` eingestellt. Ist diese Eigenschaft auf `false` eingestellt, sind die Voraussetzungen zum unbeaufsichtigten Ausführen eines Berichts nicht erfüllt. Weitere Informationen finden Sie unter [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung &#40;SSRS-Konfigurations-Manager&#41;](../../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
-|**Hasparameterdefaultvalues**|Ein Wert, der angibt, ob im Bericht gültige Standardwerte für alle Berichtsparameter festgelegt wurden. Der Wert lautet auch `true`, wenn ein Bericht keine Berichtsparameter hat. Wenn diese Eigenschaft `false` lautet, verfügen ein oder mehrere Berichtsparameter über keinen gültigen Standardwert.|  
-|**Hasdatasourcecredenseins**|Ein Wert, der angibt, dass die Option zum Abrufen der Anmeldeinformationen für alle zum Bericht gehörigen Datenquellen entweder `None` oder `Store` lautet. Wenn diese Eigenschaft `false` lautet, ist eine Option zum Abrufen der Anmeldeinformationen für eine der zum Bericht gehörigen Datenquellen auf `Integrated` oder auf `Prompt` eingestellt.|  
-|**Issnapshotexecution**|Ein Wert, der angibt, ob der Bericht eine Momentaufnahme ist.|  
-|**Hasschedulereadydatasources**|Ein Wert, der angibt, ob die Datenquellen eines Berichts so konfiguriert sind, dass die geplante Ausführung unterstützt wird. Wenn die Eigenschaft auf `false` eingestellt ist, können die Benutzer den Bericht nicht abonnieren.|  
+|**ExecutionDate**|Zeitpunkt (Datum und Uhrzeit), zu dem zuletzt eine Berichtsmomentaufnahme für einen Bericht erstellt wurde.|  
+|**CanRunUnattended**|Ein Wert, der angibt, ob ein Bericht unbeaufsichtigt nach einem Zeitplan ausgeführt werden kann. Ist diese Eigenschaft auf `true` eingestellt, sind die Standardwerte für die Berichtsparameter definiert, und die Anmeldeinformationen für die Datenquelle werden mit dem Bericht gespeichert, oder die Option zum Abrufen der Anmeldeinformationen ist auf `None` eingestellt. Ist diese Eigenschaft auf `false` eingestellt, sind die Voraussetzungen zum unbeaufsichtigten Ausführen eines Berichts nicht erfüllt. Weitere Informationen finden Sie unter [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung &#40;SSRS-Konfigurations-Manager&#41;](../../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).|  
+|**HasParameterDefaultValues**|Ein Wert, der angibt, ob im Bericht gültige Standardwerte für alle Berichtsparameter festgelegt wurden. Der Wert lautet auch `true`, wenn ein Bericht keine Berichtsparameter hat. Wenn diese Eigenschaft `false` lautet, verfügen ein oder mehrere Berichtsparameter über keinen gültigen Standardwert.|  
+|**HasDataSourceCredentials**|Ein Wert, der angibt, dass die Option zum Abrufen der Anmeldeinformationen für alle zum Bericht gehörigen Datenquellen entweder `None` oder `Store` lautet. Wenn diese Eigenschaft `false` lautet, ist eine Option zum Abrufen der Anmeldeinformationen für eine der zum Bericht gehörigen Datenquellen auf `Integrated` oder auf `Prompt` eingestellt.|  
+|**IsSnapshotExecution**|Ein Wert, der angibt, ob der Bericht eine Momentaufnahme ist.|  
+|**HasScheduleReadyDataSources**|Ein Wert, der angibt, ob die Datenquellen eines Berichts so konfiguriert sind, dass die geplante Ausführung unterstützt wird. Wenn die Eigenschaft auf `false` eingestellt ist, können die Benutzer den Bericht nicht abonnieren.|  
   
 ## <a name="resource-properties"></a>Ressourceneigenschaften  
  Zusätzlich zu den zuvor aufgeführten Elementeigenschaften gilt folgende Eigenschaft für Ressourcen in der Berichtsserver-Datenbank.  
   
-|Eigenschaft|BESCHREIBUNG|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |**MimeType**|Der MIME-Typ einer Ressource in der Berichtsserver-Datenbank.|  
   

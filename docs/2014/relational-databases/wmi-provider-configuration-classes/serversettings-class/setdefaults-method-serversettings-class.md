@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: daa5635fc64e46dd8b6ccf6b9ab4cf38dc5d492d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62735893"
 ---
 # <a name="setdefaults-method-serversettings-class"></a>SetDefaults-Methode (ServerSettings-Klasse)
@@ -40,19 +40,19 @@ OverwriteAll
 ```  
   
 ## <a name="parts"></a>Bestandteile  
- *Objekt*  
+ *object*  
  Ein [ServerSettings-Klassenobjekt](serversettings-class.md) , das Einstellungen eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Clientinstanz darstellt.  
   
 #### <a name="parameters"></a>Parameter  
   
-|Parameter|BESCHREIBUNG|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
 |*Overschreiteall*|Ein boleescher Wert, der angibt, ob vorhandene Werte in der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] überschreiben werden sollen: `true` zum Überschreiben bestehender Daten oder `false`, wenn vorhandene Daten nicht überschrieben werden sollen.|  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein u`int32`-Wert, der 0 beträgt, wenn der Dienst erfolgreich geändert wurde. Der Wert beträgt 1, wenn die Anforderung nicht unterstützt wird; jede andere Zahl gibt einen Fehler an.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

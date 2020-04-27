@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d4a5067598b475ed8fe103606088d0e4d6d0554
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62689406"
 ---
 # <a name="bcp_writefmt"></a>bcp_writefmt
@@ -52,7 +52,7 @@ szFormatFile
 ## <a name="returns"></a>Rückgabe  
  SUCCEED oder FAIL.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die Formatdatei gibt das Datenformat einer durch Massenkopieren erstellten Datendatei an. Durch Aufrufen von [bcp_columns](bcp-columns.md) und [bcp_colfmt](bcp-colfmt.md) wird das Format der Datendatei definiert. **bcp_writefmt** speichert diese Definition in der Datei, auf die von *szFormatFile*verwiesen wird. Weitere Informationen finden Sie unter [bcp_init](bcp-init.md).  
   
  Weitere Informationen zur Struktur von **bcp** -Datenformat Dateien finden Sie unter [importieren und Exportieren von Massendaten mithilfe des Hilfsprogramms bcp &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  

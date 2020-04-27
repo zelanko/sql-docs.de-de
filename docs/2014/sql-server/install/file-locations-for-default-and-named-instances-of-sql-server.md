@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ca9df655e00b1f2fd1919f30bb1bb166e2556b91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62505136"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>Dateispeicherorte für Standard- und benannte Instanzen von SQL Server
@@ -29,10 +29,10 @@ ms.locfileid: "62505136"
 >   
 >  Systemdatenbanken (Master, Model, MSDB und TempDB) und [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Benutzerdatenbanken können mit dem SMB (Server Message Block)-Dateiserver als Speicheroption installiert werden. Dies gilt sowohl für eigenständige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstallationen (FCI). Weitere Informationen finden Sie unter [Installieren von SQL Server mit SMB-Dateifreigabe als Speicheroption](../../database-engine/install-windows/install-sql-server-with-smb-fileshare-as-a-storage-option.md).  
 >   
->  Löschen Sie keines der folgenden Verzeichnisse oder dessen Inhalt: Binn, Data, Ftdata, HTML oder 1033. Andere Verzeichnisse können ggf. gelöscht werden. Möglicherweise können Sie auf diese Weise verloren gegangene Funktionalität oder Daten dann aber nur abrufen, indem Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]deinstallieren und anschließend erneut installieren. Löschen oder ändern Sie keine HTM-Dateien im Verzeichnis HTML. Sie sind für die ordnungsgemäße Funktion der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Tools erforderlich.  
+>  Löschen Sie keines der folgenden Verzeichnisse oder dessen Inhalt: Binn, Data, Ftdata, HTML oder 1033. Andere Verzeichnisse können ggf. gelöscht werden. Möglicherweise können Sie auf diese Weise verloren gegangene Funktionalität oder Daten dann aber nur abrufen, indem Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]deinstallieren und anschließend erneut installieren. Löschen oder ändern Sie keine HTM-Dateien im Verzeichnis HTML. Sie sind für die ordnungsgemäße Funktion der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tools erforderlich.  
   
-## <a name="shared-files-for-all-instances-of-includessnoversionincludesssnoversion-mdmd"></a>Freigegebene Dateien für alle Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Allgemeine Dateien, die von allen Instanzen auf einem einzelnen Computer verwendet werden, werden [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]im Ordner \<installiert, wobei *Laufwerk*> der Laufwerk Buchstabe ist, auf dem die Komponenten installiert sind. Der Standardwert ist Laufwerk "C".  
+## <a name="shared-files-for-all-instances-of-ssnoversion"></a>Freigegebene Dateien für alle Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ Gemeinsame, von allen Instanzen auf einem Computer verwendete Dateien werden im Ordner [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)] installiert, wobei \<*Laufwerk* für den Buchstaben des Laufwerks steht, auf dem die Komponenten installiert sind. Der Standardwert ist Laufwerk "C".  
   
 ## <a name="file-locations-and-registry-mapping"></a>Dateispeicherorte und Registrierungszuordnung  
  Während des Setups von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird für jede Serverkomponente eine Instanz-ID generiert. Die Serverkomponenten in dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind [!INCLUDE[ssDE](../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]und [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
@@ -61,14 +61,14 @@ ms.locfileid: "62505136"
   
  Sie können jeden Wert für die Instanz-ID angeben, sollten aber Sonderzeichen und reservierte Schlüsselwörter vermeiden.  
   
- Sie können während des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setups eine nicht standardmäßige Instanz-ID angeben. Anstelle von \<Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird ein \<benutzerdefinierter Pfad\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, wenn der Benutzer eine Änderung des Standardinstallationsverzeichnisses auswählt. Beachten Sie, dass die Instanz-IDs, die mit einem Unterstrich (_) beginnen oder das Nummernzeichen (#) oder Dollarzeichen ($) enthalten, nicht unterstützt werden.  
+ Sie können während des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setups eine nicht standardmäßige Instanz-ID angeben. Anstelle von \<Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird ein \<benutzerdefinierter Pfad\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet, wenn der Benutzer eine Änderung des Standardinstallationsverzeichnisses auswählt. Beachten Sie, dass die Instanz-IDs, die mit einem Unterstrich (_) beginnen oder das Nummernzeichen (#) oder Dollarzeichen ($) enthalten, nicht unterstützt werden.  
   
 > [!NOTE]  
->  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]und Client Komponenten sind nicht instanzabhängig und erhalten daher keine Instanz-ID. Standardmäßig werden nicht instanzabhängige Komponenten in einem einzelnen Verzeichnis installiert: [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]. Wenn der Installationspfad einer freigegebenen Komponente geändert wird, wirkt sich diese Änderung auch auf die anderen freigegebenen Komponenten aus. Bei allen zukünftigen Installationen werden die nicht instanzbezogenen Komponenten wieder im gleichen Verzeichnis installiert wie bei der ursprünglichen Installation.  
+>  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] und Clientkomponenten sind nicht instanzabhängig und bekommen daher keine Instanz-ID zugewiesen. Standardmäßig werden nicht instanzabhängige Komponenten in einem einzelnen Verzeichnis installiert: [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]. Wenn der Installationspfad einer freigegebenen Komponente geändert wird, wirkt sich diese Änderung auch auf die anderen freigegebenen Komponenten aus. Bei allen zukünftigen Installationen werden die nicht instanzbezogenen Komponenten wieder im gleichen Verzeichnis installiert wie bei der ursprünglichen Installation.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ist die einzige [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponente, die nach der Installation Instanzumbenennung unterstützt. Wenn eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] umbenannt wird, ändert sich die Instanz-ID nicht. Nach abgeschlossener Instanzumbenennung wird die während der Installation erstellte Instanz-ID von Verzeichnissen und Registrierungsschlüsseln weiterhin verwendet.  
   
- Die Registrierungs Struktur wird\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<für instanzabhängige Komponenten unter HKLM\Software*Instance_ID*> erstellt. Beispiel:  
+ Die Registrierungsstruktur wird für instanzabhängige Komponenten unter HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<*Instanz_ID* erstellt. Ein auf ein Objekt angewendeter  
   
 -   HKLM\Software\\[!INCLUDE[msCoName](../../includes/msconame-md.md)]\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12. MyInstance  
   
@@ -91,20 +91,20 @@ ms.locfileid: "62505136"
   
 |Komponente|Standardpfad<sup>1, 2</sup>|Konfigurierbarer<sup>3</sup> -oder fester Pfad|  
 |---------------|---------------------------------|--------------------------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)]Serverkomponenten|\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12. \<InstanceId>\|konfigurierbar|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)]Datendateien|\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12. \<InstanceId>\|konfigurierbar|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Servers|\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\msas12. \<InstanceId>\|konfigurierbar|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Datendateien|\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\msas12. \<InstanceId>\|konfigurierbar|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Berichts Server|\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\msrs12. \<InstanceId> \Reporting Services\ReportServer\bin\|konfigurierbar|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Berichts-Manager|\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\msrs12. \<InstanceId> \Reporting Services\ReportManager\|fester Pfad|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] Serverkomponenten|\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12. \<InstanceId>\|konfigurierbar|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] Datendateien|\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12. \<InstanceId>\|konfigurierbar|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server|\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\msas12. \<InstanceId>\|konfigurierbar|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datendateien|\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\msas12. \<InstanceId>\|konfigurierbar|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Berichtsserver|\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\msrs12. \<InstanceId> \Reporting Services\ReportServer\bin\|konfigurierbar|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Berichts-Manager|\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\msrs12. \<InstanceId> \Reporting Services\ReportManager\|fester Pfad|  
 |[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|\<Installationsverzeichnis> \120\dts\|konfigurierbar<sup>4</sup>|  
 |Clientkomponenten (außer bcp.exe und sqlcmd.exe)|\<Installationsverzeichnis>\|\120\toolskonfigurierbar<sup>4</sup>|  
-|Clientkomponenten (bcp.exe und sqlcmd.exe)|\<Installationsverzeichnis> \Client sdk\odbc\110\tools\binn|Fester Pfad|  
+|Clientkomponenten (bcp.exe und sqlcmd.exe)|\<Installationsverzeichnis>\Client SDK\ODBC\110\Tools\Binn|Fester Pfad|  
 |Replikations- und serverbasierte COM-Objekte|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]COM\\<sup>5</sup>|Fester Pfad|  
 |Von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bereitgestellte DLLs für die Data Transformation Runtime-Engine, die Data Transformation Pipeline-Engine und das `dtexec`-Eingabeaufforderungshilfsprogramm|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Binn|Fester Pfad|  
 |DLLs, die die Verbindungsunterstützung für Integration Services verwalten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\Verbindungen|Fester Pfad|  
 |DLLs für alle Arten von Enumeratoren, die von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützt werden|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]DTS\ForEach-Enumeratoren|Fester Pfad|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser Dienst, WMI-Anbieter|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Gemeinsam\|verwendeter fester Pfad|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser-Dienst, WMI-Anbieter|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Gemeinsam\|verwendeter fester Pfad|  
 |Komponenten, die von allen Instanzen von gemeinsam genutzt werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)]Gemeinsam\|verwendeter fester Pfad|  
   
  <sup>1</sup> Stellen Sie sicher, dass der\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Ordner "\Program Files \" mit eingeschränkten Berechtigungen geschützt ist.  
@@ -122,7 +122,7 @@ ms.locfileid: "62505136"
   
  Wenn Sie beim Setup einen Installationspfad für die Serverkomponenten oder Datendateien angeben, verwendet das Setup-Programm die Instanzkennung zusätzlich zum angegebenen Speicherort für Programm- und Datendateien. Die Instanz-ID wird vom Setup nicht für Tools und andere freigegebene Dateien verwendet. Darüber hinaus verwendet das Setup keine Instanz-ID für das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Programm und Datendateien. Für das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Repository wird jedoch eine Instanz-ID verwendet.  
   
- Wenn Sie einen Installationspfad für die Funktion [!INCLUDE[ssDE](../../includes/ssde-md.md)] festlegen, wird dieser Pfad vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Setup als Stammverzeichnis für alle instanzspezifischen Ordner der Installation, einschließlich der SQL-Datendateien, verwendet. Wenn Sie in diesem Fall "c:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12." als Stammverzeichnis festlegen, \<InstanceName> \MSSQL\\", instanzspezifische Verzeichnisse werden am Ende dieses Pfads hinzugefügt.  
+ Wenn Sie einen Installationspfad für die Funktion [!INCLUDE[ssDE](../../includes/ssde-md.md)] festlegen, wird dieser Pfad vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup als Stammverzeichnis für alle instanzspezifischen Ordner der Installation, einschließlich der SQL-Datendateien, verwendet. Wenn Sie in diesem Fall "c:\Programme\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\mssql12." als Stammverzeichnis festlegen, \<InstanceName> \MSSQL\\", instanzspezifische Verzeichnisse werden am Ende dieses Pfads hinzugefügt.  
   
  Wenn die im Installations-Assistenten für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereitgestellte Upgradefunktionalität USESYSDB verwendet wird, kann der Fall eintreten, dass das Produkt in einer rekursiven Ordnerstruktur installiert wird. \< *Sqlprogramfiles*> z. b. \mssql12\mssql\ MSSQL10_50 \MSSQL\Data\\. Legen Sie stattdessen bei Verwendung der USESYSDB-Funktion nur einen Installationspfad für die Funktion "SQL-Datendateien" und nicht für die Funktion [!INCLUDE[ssDE](../../includes/ssde-md.md)] fest.  
   

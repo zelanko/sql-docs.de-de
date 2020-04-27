@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 769e4cb9298ce2a92f7200d9e04743d6b16f842d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62523883"
 ---
 # <a name="define-transact-sql-job-step-options"></a>Definieren von Optionen für Transact-SQL-Auftragsschritte
@@ -30,18 +30,18 @@ ms.locfileid: "62523883"
   
      [Sicherheit](#Security)  
   
--   So **definieren Sie die Optionen für Transact-SQL-Auftrags Schritte mit:**  
+-   **So definieren Sie die Optionen für Transact-SQL-Auftragsschritte mit**  
   
      [SQL Server Management Studio](#SSMS)  
   
      [SQL Server Management Objects](#SMO)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
  Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-define-transact-sql-job-step-options"></a>So definieren Sie die Optionen für Transact-SQL-Auftragsschritte  
   
@@ -69,8 +69,8 @@ ms.locfileid: "62523883"
   
 9. Wenn Sie ein Mitglied der festen Serverrolle **sysadmin** sind und diesen Auftragsschritt unter einem anderen SQL-Anmeldenamen ausführen möchten, wählen Sie den SQL-Anmeldenamen in der Liste **Ausführen als Benutzer** aus.  
   
-##  <a name="SMO"></a>Verwenden von SQL Server Management Objects  
- **So definieren Sie die Optionen für Transact-SQL-Auftrags Schritte**  
+##  <a name="using-sql-server-management-objects"></a><a name="SMO"></a>Verwenden von SQL Server Management Objects  
+ **So definieren Sie die Optionen für Transact-SQL-Auftragsschritte**  
   
  Verwenden Sie die `JobStep`-Klasse in einer von Ihnen ausgewählten Programmiersprache, z. B. Visual Basic, Visual C# oder PowerShell.  
   

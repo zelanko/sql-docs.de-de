@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f9c04c03c08f118314dc96c8b491e61be317f40c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62691594"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication-management-studio"></a>Erstellen eines aktualisierbaren Abonnements für eine Transaktionsveröffentlichung (Management Studio)
@@ -35,18 +35,18 @@ Zum Konfigurieren aktualisierbarer Abonnements steht Ihnen die Seite **Aktualisi
 2. Erweitern Sie den Ordner **Replikation** , und erweitern Sie dann den Ordner **Lokale Veröffentlichungen** .
 3. Klicken Sie mit der rechten Maustaste auf eine Transaktionsveröffentlichung, die für aktualisierbare Abonnements aktiviert ist, und klicken Sie dann auf **Neue Abonnements**.
 4. Geben Sie auf den folgenden Seiten des Assistenten die Optionen für das Abonnement an. Geben Sie dabei z. B. an, wo der Verteilungs-Agent ausgeführt werden soll.
-5. Vergewissern Sie sich, dass auf der Seite **aktualisierbare Abonnements** des **Assistenten für neue Abonnements** **Replizieren** ausgewählt ist.
+5. Kontrollieren Sie auf der Seite **Aktualisierbare Abonnements** des **Assistenten für neue Veröffentlichung**, dass die Option **Replizieren** aktiviert ist.
 6. Wählen Sie in der Dropdownliste **Commit auf Verleger ausführen** eine Option aus:
 
     *  Wenn Sie Abonnements mit sofortigem Update verwenden möchten, aktivieren Sie die Option **Commit für Änderungen gleichzeitig ausführen**. Wenn Sie diese Option aktivieren und die Veröffentlichung Abonnements mit verzögertem Update über eine Warteschlange zulässt (Standardkonfiguration bei Veröffentlichungen, die im Assistenten für neue Veröffentlichung erstellt wurden), wird für die **update_mode**-Abonnementeigenschaft **failover** festgelegt. Dieser Modus ermöglicht es Ihnen, bei Bedarf später zum Update über eine Warteschlange zu wechseln.
-    *  Wenn Sie Abonnements mit verzögertem Update über eine Warteschlange verwenden möchten, aktivieren Sie die Option **Änderungen in die Warteschlange einreihen und Commit baldmöglichst ausführen**. Wenn Sie diese Option aktivieren und die Veröffentlichung Abonnements mit sofortigem Update zulässt (Standard bei Veröffentlichungen, die mit dem Assistenten für neue Veröffentlichung erstellt wurden) und auf dem Abonnenten SQL Server 2005 oder eine höhere Version ausgeführt wird, wird die Eigenschaft "Abonnement" **update_mode** auf ein verzögertes Failover festgelegt. Dieser Modus ermöglicht es Ihnen, bei Bedarf später zum sofortigen Update zu wechseln.
+    *  Wenn Sie Abonnements mit verzögertem Update über eine Warteschlange verwenden möchten, aktivieren Sie die Option **Änderungen in die Warteschlange einreihen und Commit baldmöglichst ausführen**. Wenn Sie diese Option aktivieren, die Veröffentlichung Abonnements mit sofortigem Update zulässt (Standardkonfiguration bei Veröffentlichungen, die im Assistenten für neue Veröffentlichung erstellt wurden) und auf dem Abonnenten SQL Server 2005 oder eine höhere Version ausgeführt wird, wird für die **update_mode**-Abonnementeigenschaft die Einstellung „queued failover“ festgelegt. Dieser Modus ermöglicht es Ihnen, bei Bedarf später zum sofortigen Update zu wechseln.
 
     Weitere Informationen zum Umschalten zwischen den Updatemodi finden Sie unter [Umschalten zwischen Updatemodi für ein aktualisierbares Transaktionsabonnement](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).
 
-7. Die Seite **Anmeldung für aktualisierbare Abonnements** wird für Abonnements angezeigt, die sofortiges Aktualisieren verwenden oder **update_mode** auf ein verzögertes **Failover**festgelegt haben. Geben Sie auf der Seite **Anmeldename für aktualisierbare Abonnements** einen Verbindungsserver an, über den die Verbindungen mit dem Verleger für Abonnements mit sofortigem Update hergestellt werden sollen. Die Verbindungen werden durch die Trigger verwendet, die auf dem Abonnenten ausgelöst werden und die Änderungen zum Verleger weitergeben. Wählen Sie eine der folgenden Optionen aus:
+7. Bei Abonnements, die das sofortige Update verwenden oder bei denen für **update_mode** die Einstellung **queued failover** festgelegt ist, wird die Seite **Anmeldename für aktualisierbare Abonnements** angezeigt. Geben Sie auf der Seite **Anmeldename für aktualisierbare Abonnements** einen Verbindungsserver an, über den die Verbindungen mit dem Verleger für Abonnements mit sofortigem Update hergestellt werden sollen. Die Verbindungen werden durch die Trigger verwendet, die auf dem Abonnenten ausgelöst werden und die Änderungen zum Verleger weitergeben. Wählen Sie eine der folgenden Optionen aus:
 
-    * **Erstellen Sie einen Verbindungs Server, der mithilfe SQL Server-Authentifizierung eine Verbindung herstellt.** Wählen Sie diese Option aus, wenn Sie keinen Remoteserver oder Verbindungsserver für die Verbindungen zwischen dem Abonnenten und dem Verleger definiert haben. Die Replikation erstellt dann einen Verbindungsserver für Sie. Das Konto, das Sie angeben, muss bereits auf dem Verleger vorhanden sein.
-    * **Verwenden Sie einen Verbindungs Server oder Remote Server, den Sie bereits definiert haben.** Wählen Sie diese Option aus, wenn Sie einen Remoteserver oder Verbindungsserver zwischen dem Abonnenten und dem Verleger mithilfe von [sp_addserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql), [sp_addlinkedserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql), SQL Server Management Studio oder einer anderen Methode definiert haben.
+    * **Verbindungsserver erstellen, der mithilfe der SQL Server-Authentifizierung eine Verbindung herstellt.** Wählen Sie diese Option aus, wenn Sie keinen Remoteserver oder Verbindungsserver für die Verbindungen zwischen dem Abonnenten und dem Verleger definiert haben. Die Replikation erstellt dann einen Verbindungsserver für Sie. Das Konto, das Sie angeben, muss bereits auf dem Verleger vorhanden sein.
+    * **Vordefinierten Verbindungsserver oder Remoteserver verwenden** Wählen Sie diese Option aus, wenn Sie einen Remoteserver oder Verbindungsserver zwischen dem Abonnenten und dem Verleger mithilfe von [sp_addserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql), [sp_addlinkedserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql), SQL Server Management Studio oder einer anderen Methode definiert haben.
 
     Informationen zu den Berechtigungen, die das Verbindungsserverkonto benötigt, finden Sie unter **Abonnements mit verzögertem Update über eine Warteschlange** unter [Hier Linkbeschreibung eingeben](../security/secure-the-subscriber.md).
 
@@ -62,18 +62,18 @@ Zum Konfigurieren aktualisierbarer Abonnements steht Ihnen die Seite **Aktualisi
 5. Stellen Sie im Dialogfeld **Verbindung mit Server herstellen** eine Verbindung mit dem Verleger her.
 6. Wählen Sie auf der Seite **Veröffentlichung** eine für aktualisierbare Abonnements aktivierte Transaktionsveröffentlichung aus.
 7. Geben Sie auf den folgenden Seiten des Assistenten die Optionen für das Abonnement an. Geben Sie dabei z. B. an, wo der Verteilungs-Agent ausgeführt werden soll.
-8. Kontrollieren Sie auf der Seite **Aktualisierbare Abonnements** des Assistenten für neue Veröffentlichung, dass die Option **Replizieren** aktiviert ist.
+8. Vergewissern Sie sich, dass auf der Seite **aktualisierbare Abonnements** des Assistenten für neue Abonnements **Replizieren** ausgewählt ist.
 9. Wählen Sie in der Dropdownliste **Commit auf Verleger ausführen** eine Option aus:
 
     * Wenn Sie Abonnements mit sofortigem Update verwenden möchten, aktivieren Sie die Option **Commit für Änderungen gleichzeitig ausführen**. Wenn Sie diese Option aktivieren und die Veröffentlichung Abonnements mit verzögertem Update über eine Warteschlange zulässt (Standardkonfiguration bei Veröffentlichungen, die im Assistenten für neue Veröffentlichung erstellt wurden), wird für die **update_mode**-Abonnementeigenschaft **failover** festgelegt. Dieser Modus ermöglicht es Ihnen, bei Bedarf später zum Update über eine Warteschlange zu wechseln.
-    * Wenn Sie Abonnements mit verzögertem Update über eine Warteschlange verwenden möchten, aktivieren Sie die Option **Änderungen in die Warteschlange einreihen und Commit baldmöglichst ausführen**. Wenn Sie diese Option aktivieren, die Veröffentlichung Abonnements mit sofortigem Update zulässt (Standardkonfiguration bei Veröffentlichungen, die im Assistenten für neue Veröffentlichung erstellt wurden) und auf dem Abonnenten SQL Server 2005 oder eine höhere Version ausgeführt wird, wird für die **update_mode**-Abonnementeigenschaft die Einstellung queued **failover** festgelegt. Dieser Modus ermöglicht es Ihnen, bei Bedarf später zum sofortigen Update zu wechseln.
+    * Wenn Sie Abonnements mit verzögertem Update über eine Warteschlange verwenden möchten, aktivieren Sie die Option **Änderungen in die Warteschlange einreihen und Commit baldmöglichst ausführen**. Wenn Sie diese Option aktivieren und die Veröffentlichung Abonnements mit sofortigem Update zulässt (Standard bei Veröffentlichungen, die mit dem Assistenten für neue Veröffentlichung erstellt wurden) und auf dem Abonnenten SQL Server 2005 oder eine höhere Version ausgeführt wird, wird die Eigenschaft "Abonnement" **update_mode** auf ein verzögertes **Failover**festgelegt. Dieser Modus ermöglicht es Ihnen, bei Bedarf später zum sofortigen Update zu wechseln.
 
     Weitere Informationen zum Umschalten zwischen den Updatemodi finden Sie unter [Umschalten zwischen Updatemodi für ein aktualisierbares Transaktionsabonnement](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).
 
-10. Bei Abonnements, die das sofortige Update verwenden oder bei denen für **update_mode** die Einstellung queued **failover** festgelegt ist, wird die Seite **Anmeldename für aktualisierbare Abonnements** angezeigt. Geben Sie auf der Seite **Anmeldename für aktualisierbare Abonnements** einen Verbindungsserver an, über den die Verbindungen mit dem Verleger für Abonnements mit sofortigem Update hergestellt werden sollen. Die Verbindungen werden durch die Trigger verwendet, die auf dem Abonnenten ausgelöst werden und die Änderungen zum Verleger weitergeben. Wählen Sie eine der folgenden Optionen aus:
+10. Die Seite **Anmeldung für aktualisierbare Abonnements** wird für Abonnements angezeigt, die sofortiges Aktualisieren verwenden oder **update_mode** auf ein verzögertes **Failover**festgelegt haben. Geben Sie auf der Seite **Anmeldename für aktualisierbare Abonnements** einen Verbindungsserver an, über den die Verbindungen mit dem Verleger für Abonnements mit sofortigem Update hergestellt werden sollen. Die Verbindungen werden durch die Trigger verwendet, die auf dem Abonnenten ausgelöst werden und die Änderungen zum Verleger weitergeben. Wählen Sie eine der folgenden Optionen aus:
 
-    * **Erstellen Sie einen Verbindungs Server, der mithilfe SQL Server-Authentifizierung eine Verbindung herstellt.** Wählen Sie diese Option aus, wenn Sie keinen Remoteserver oder Verbindungsserver für die Verbindungen zwischen dem Abonnenten und dem Verleger definiert haben. Die Replikation erstellt dann einen Verbindungsserver für Sie. Das Konto, das Sie angeben, muss bereits auf dem Verleger vorhanden sein.
-    * **Verwenden Sie einen Verbindungs Server oder Remote Server, den Sie bereits definiert haben.** Wählen Sie diese Option aus, wenn Sie einen Remoteserver oder Verbindungsserver zwischen dem Abonnenten und dem Verleger mithilfe von [sp_addserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql), [sp_addlinkedserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql), SQL Server Management Studio oder einer anderen Methode definiert haben.
+    * **Verbindungsserver erstellen, der mithilfe der SQL Server-Authentifizierung eine Verbindung herstellt.** Wählen Sie diese Option aus, wenn Sie keinen Remoteserver oder Verbindungsserver für die Verbindungen zwischen dem Abonnenten und dem Verleger definiert haben. Die Replikation erstellt dann einen Verbindungsserver für Sie. Das Konto, das Sie angeben, muss bereits auf dem Verleger vorhanden sein.
+    * **Vordefinierten Verbindungsserver oder Remoteserver verwenden** Wählen Sie diese Option aus, wenn Sie einen Remoteserver oder Verbindungsserver zwischen dem Abonnenten und dem Verleger mithilfe von [sp_addserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql), [sp_addlinkedserver (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql), SQL Server Management Studio oder einer anderen Methode definiert haben.
 
     Informationen zu den Berechtigungen, die das Verbindungsserverkonto benötigt, finden Sie unter **Abonnements mit verzögertem Update über eine Warteschlange** unter [Hier Linkbeschreibung eingeben](../security/secure-the-subscriber.md).
 
@@ -93,14 +93,11 @@ Zum Konfigurieren aktualisierbarer Abonnements steht Ihnen die Seite **Aktualisi
 
 3. Führen Sie auf dem Abonnenten [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql)aus. Geben Sie `@publisher` und `@publication`und einen der folgenden Werte für `@update_mode`fest:
 
-    * 
-  `sync tran` – Ermöglicht sofortige Updates des Abonnements.
-    * 
-  `failover` – Ermöglicht das sofortige Aktualisieren für das Abonnement, wobei als Failoveroption das verzögerte Aktualisieren über eine Warteschlange verwendet wird.
+    * `sync tran` – Ermöglicht sofortige Updates des Abonnements.
+    * `failover` – Ermöglicht das sofortige Aktualisieren für das Abonnement, wobei als Failoveroption das verzögerte Aktualisieren über eine Warteschlange verwendet wird.
 
     > [!NOTE]  
->  
-  `failover` erfordert, dass die Veröffentlichung auch Abonnements mit verzögertem Aktualisieren über eine Warteschlange zulässt. 
+>  `failover` erfordert, dass die Veröffentlichung auch Abonnements mit verzögertem Aktualisieren über eine Warteschlange zulässt. 
  
 4. Führen Sie auf dem Abonnenten [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)aus. Geben Sie Folgendes an:
 
@@ -115,11 +112,9 @@ Zum Konfigurieren aktualisierbarer Abonnements steht Ihnen die Seite **Aktualisi
 
 5. Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql)aus. Geben Sie `@publisher`, `@publication`, den Namen der Veröffentlichungsdatenbank für `@publisher_db`und einen der folgenden Werte für `@security_mode`an: 
 
-    * 
-  `0` – Verwenden Sie die SQL Server-Authentifizierung, wenn Updates beim Verleger vorgenommen werden. Diese Option erfordert auf dem Verleger die Angabe gültiger Anmeldeinformationen für `@login` und `@password`.
-    * 
-  `1` – Verwenden Sie zum Verbindungsaufbau mit dem Verleger den Sicherheitskontext des Benutzers, der Änderungen am Abonnenten vornimmt. Weitere Informationen zu den in Verbindung mit diesem Sicherheitsmodus geltenden Beschränkungen finden Sie unter [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) .
-    * `2`-Verwenden Sie einen vorhandenen benutzerdefinierten Anmelde Namen für den verknüpften Server, der mit [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)erstellt wurde.
+    * `0` – Verwenden Sie die SQL Server-Authentifizierung, wenn Updates beim Verleger vorgenommen werden. Diese Option erfordert auf dem Verleger die Angabe gültiger Anmeldeinformationen für `@login` und `@password`.
+    * `1` – Verwenden Sie zum Verbindungsaufbau mit dem Verleger den Sicherheitskontext des Benutzers, der Änderungen am Abonnenten vornimmt. Weitere Informationen zu den in Verbindung mit diesem Sicherheitsmodus geltenden Beschränkungen finden Sie unter [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) .
+    * `2` – Verwenden Sie einen vorhandenen benutzerdefinierten Anmeldenamen für den Verbindungsserver, der mit [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)erstellt wurde.
 
 6. Führen Sie [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) `@publication`auf dem Verleger aus, `@subscriber`und `@destination_db`geben Sie dabei,,, `@subscription_type`den Wert Pull für und den in Schritt 3 für `@update_mode`angegebenen Wert an.
 
@@ -140,14 +135,11 @@ Damit wird das Pullabonnement beim Verleger registriert.
 
 3. Führen Sie auf dem Verleger [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)aus. Geben Sie `@publication`, `@subscriber`, `@destination_db`und einen der folgenden Werte für `@update_mode`fest:
 
-    * 
-  `sync tran` – Aktiviert die Unterstützung für sofortige Updates.
-    * 
-  `failover` – Aktiviert die Unterstützung für sofortige Updates, wobei verzögerte Updates über eine Warteschlange als Failoveroption verwendet werden.
+    * `sync tran` – Aktiviert die Unterstützung für sofortige Updates.
+    * `failover` – Aktiviert die Unterstützung für sofortige Updates, wobei verzögerte Updates über eine Warteschlange als Failoveroption verwendet werden.
 
     > [!NOTE]  
->  
-  `failover` erfordert, dass die Veröffentlichung auch Abonnements mit verzögertem Aktualisieren über eine Warteschlange zulässt. 
+>  `failover` erfordert, dass die Veröffentlichung auch Abonnements mit verzögertem Aktualisieren über eine Warteschlange zulässt. 
  
 4. Führen Sie auf dem Verleger [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql)aus. Geben Sie die folgenden Parameter an:
 
@@ -162,11 +154,9 @@ Damit wird das Pullabonnement beim Verleger registriert.
 
 5. Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql)aus. Geben Sie `@publisher`, `@publication`, den Namen der Veröffentlichungsdatenbank für `@publisher_db`und einen der folgenden Werte für `@security_mode`an: 
 
-     * 
-  `0` – Verwenden Sie die SQL Server-Authentifizierung, wenn Updates beim Verleger vorgenommen werden. Diese Option erfordert auf dem Verleger die Angabe gültiger Anmeldeinformationen für `@login` und `@password`.
-     * 
-  `1` – Verwenden Sie zum Verbindungsaufbau mit dem Verleger den Sicherheitskontext des Benutzers, der Änderungen am Abonnenten vornimmt. Weitere Informationen zu den in Verbindung mit diesem Sicherheitsmodus geltenden Beschränkungen finden Sie unter [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) .
-     * `2`-Verwenden Sie einen vorhandenen benutzerdefinierten Anmelde Namen für den verknüpften Server, der mit [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)erstellt wurde.
+     * `0` – Verwenden Sie die SQL Server-Authentifizierung, wenn Updates beim Verleger vorgenommen werden. Diese Option erfordert auf dem Verleger die Angabe gültiger Anmeldeinformationen für `@login` und `@password`.
+     * `1` – Verwenden Sie zum Verbindungsaufbau mit dem Verleger den Sicherheitskontext des Benutzers, der Änderungen am Abonnenten vornimmt. Weitere Informationen zu den in Verbindung mit diesem Sicherheitsmodus geltenden Beschränkungen finden Sie unter [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) .
+     * `2` – Verwenden Sie einen vorhandenen benutzerdefinierten Anmeldenamen für den Verbindungsserver, der mit [sp_addlinkedserver](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)erstellt wurde.
 
 
 ## <a name="create-a-queued-updating-pull-subscription"></a>Erstellen eines Pullabonnements mit verzögertem Update über eine Warteschlange ##
@@ -183,14 +173,11 @@ Damit wird das Pullabonnement beim Verleger registriert.
 
 3. Führen Sie auf dem Abonnenten [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql)aus. Geben Sie `@publisher` und `@publication`und einen der folgenden Werte für `@update_mode`fest:
 
-    * 
-  `queued tran` – Aktiviert das verzögerte Update über eine Warteschlange für das Abonnement.
-    * 
-  `queued failover` – Aktiviert die Unterstützung für verzögerte Updates über eine Warteschlange, wobei sofortige Updates als Failoveroption verwendet werden.
+    * `queued tran` – Aktiviert das verzögerte Update über eine Warteschlange für das Abonnement.
+    * `queued failover` – Aktiviert die Unterstützung für verzögerte Updates über eine Warteschlange, wobei sofortige Updates als Failoveroption verwendet werden.
 
     > [!NOTE]  
->  
-  `queued failover` erfordert, dass die Veröffentlichung auch Abonnements mit sofortigem Update zulässt. Damit im Fehlerfall sofortige Updates durchgeführt werden können, müssen Sie unter Verwendung von [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) die Anmeldeinformationen definieren, unter denen Änderungen am Abonnenten auf dem Verleger repliziert werden sollen.
+>  `queued failover` erfordert, dass die Veröffentlichung auch Abonnements mit sofortigem Update zulässt. Damit im Fehlerfall sofortige Updates durchgeführt werden können, müssen Sie unter Verwendung von [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) die Anmeldeinformationen definieren, unter denen Änderungen am Abonnenten auf dem Verleger repliziert werden sollen.
  
 4. Führen Sie auf dem Abonnenten [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql)aus. Geben Sie die folgenden Parameter an:
 
@@ -222,10 +209,8 @@ Damit wird das Pullabonnement beim Verleger registriert.
 
 3. Führen Sie auf dem Verleger [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql)aus. Geben Sie `@publication`, `@subscriber`, `@destination_db`und einen der folgenden Werte für `@update_mode`fest:
 
-    * 
-  `queued tran` – Aktiviert das verzögerte Update über eine Warteschlange für das Abonnement.
-    * 
-  `queued failover` – Aktiviert die Unterstützung für verzögerte Updates über eine Warteschlange, wobei sofortige Updates als Failoveroption verwendet werden.
+    * `queued tran` – Aktiviert das verzögerte Update über eine Warteschlange für das Abonnement.
+    * `queued failover` – Aktiviert die Unterstützung für verzögerte Updates über eine Warteschlange, wobei sofortige Updates als Failoveroption verwendet werden.
 
     > [!NOTE]  
 >  Die Option „queued failover“ erfordert, dass die Veröffentlichung auch Abonnements mit sofortigem Update zulässt. Damit im Fehlerfall sofortige Updates durchgeführt werden können, müssen Sie unter Verwendung von [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) die Anmeldeinformationen definieren, unter denen Änderungen am Abonnenten auf dem Verleger repliziert werden sollen.
@@ -314,14 +299,14 @@ GO
 ```
 
 ## <a name="set-queued-updating-conflict-resolution-options-sql-server-management-studio"></a>Festlegen der Konfliktlösungsoptionen für verzögerte Updates über eine Warteschlange (SQL Server Management Studio)
-  Legen Sie im Dialogfeld **Veröffentlichungs Eigenschaften- \<Veröffentlichung>** auf der Seite **Abonnementoptionen** Optionen zur Konflikt Auflösung für Veröffentlichungen fest, die Abonnements mit verzögertem Update über eine Warteschlange unterstützen Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
+  Die Konfliktlösungsoptionen für Veröffentlichungen, die Abonnements mit verzögertem Update über eine Warteschlange unterstützen, werden auf der Seite **Abonnementoptionen** des Dialogfelds **Veröffentlichungseigenschaften - \<Veröffentlichung>** festgelegt. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 ### <a name="to-set-queued-updating-conflict-resolution-options"></a>So legen Sie die Konfliktlösungsoptionen für das verzögerte Update über eine Warteschlange fest  
   
 1.  Wählen Sie auf der Seite **Abonnementoptionen** des Dialogfelds **Veröffentlichungseigenschaften - \<Veröffentlichung>** für die Option **Richtlinie zur Konfliktlösung** einen der folgenden Werte aus:    
-    -   **Verleger Änderung beibehalten**    
-    -   **Abonnenten Änderung beibehalten**    
-    -   **Erneutes Initialisieren des Abonnements**    
+    -   **Verlegeränderung beibehalten**    
+    -   **Abonnentenänderung beibehalten**    
+    -   **Abonnement erneut initialisieren**    
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
 
 ## <a name="see-also"></a>Weitere Informationen ##

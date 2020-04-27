@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e2013a604c517ae93ee17640013e2260f50cf28e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62670922"
 ---
 # <a name="about-change-tracking-sql-server"></a>Informationen zur Änderungsnachverfolgung (SQL Server)
@@ -68,9 +68,9 @@ ms.locfileid: "62670922"
  Informationen zu den an den einzelnen Zeilen vorgenommenen Änderungen können auch mithilfe der Änderungsnachverfolgung abgerufen werden. Dazu zählen z. B. der Typ des DML-Vorgangs, der die Änderung (Einfügung, Update oder Löschung) bewirkt hat, oder die Spalten, die im Rahmen eines Updatevorgangs geändert wurden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Aktivieren und Deaktivieren der Änderungsnachverfolgung &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
- [Verwenden der Änderungsnachverfolgung &#40;SQL Server&#41;](../track-changes/work-with-change-tracking-sql-server.md)   
- [Verwalten der Änderungsnachverfolgung &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
+ [Aktivieren und deaktivieren Sie Änderungsnachverfolgung &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
+ [Arbeiten Sie mit Änderungsnachverfolgung &#40;SQL Server&#41;](../track-changes/work-with-change-tracking-sql-server.md)   
+ [Verwalten Sie Änderungsnachverfolgung &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
  [Nachverfolgen von Datenänderungen &#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)  
   
   

@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d55ecc81d9ae71b33e068b2d1d68ea1775ed6c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62728498"
 ---
 # <a name="database-dimension-properties"></a>Eigenschaften von Datenbankdimensionen
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]werden die Merkmale einer Dimension durch die Metadaten für die Dimension definiert, basierend auf den Einstellungen verschiedener Dimensions Eigenschaften und den Attributen oder Hierarchien, die in der Dimension enthalten sind. In der folgenden Tabelle werden die Dimensionseigenschaften in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] beschrieben.  
   
-|Eigenschaft|BESCHREIBUNG|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |`AttributeAllMemberName`|Gibt den Namen des Alle-Elements für Attribute in einer Dimension an.|  
 |`Collation`|Bestimmt die von der Dimension verwendete Sortierung.|  
@@ -55,6 +55,6 @@ ms.locfileid: "62728498"
  [Attribute und Attribut Hierarchien](attributes-and-attribute-hierarchies.md)   
  [Benutzer Hierarchien](user-hierarchies.md)   
  [Dimensions Beziehungen](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [Dimensionen &#40;Analysis Services Mehrdimensionale Daten&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensionen &#40;Analysis Services – mehrdimensionale Daten&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

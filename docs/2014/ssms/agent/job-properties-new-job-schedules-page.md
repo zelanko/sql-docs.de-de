@@ -13,23 +13,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 98478b8ed61a49e74a70d576ccd3600319fce645
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62695672"
 ---
-# <a name="job-properties-new-job-schedules-page"></a>Job Properties: New Job (Schedules Page)
+# <a name="job-properties-new-job-schedules-page"></a>Auftragseigenschaften: Neuer Auftrag (Seite „Zeitpläne“)
   Verwenden Sie diese Seite, um Zeitpläne für einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrag anzuzeigen und zu organisieren.  
   
-## <a name="options"></a>Tastatur  
- **Zeit Plan Liste**  
+## <a name="options"></a>Optionen  
+ **Zeitplanliste**  
  Führt die Zeitpläne für diesen Auftrag auf.  
   
  **Neu**  
  Erstellt einen neuen Zeitplan. Nachdem Sie den Zeitplan erstellt haben, wird er dem Auftrag hinzugefügt.  
   
- **Suchen**  
+ **Auswählen**  
  Wählt einen Zeitplan aus den vorhandenen Zeitplänen aus. Da ein Auftrag und ein Zeitplan denselben Besitzer haben müssen, können Sie mit dieser Option nur unter Zeitplänen auswählen, deren Besitzer Sie sind.  
   
  **Bearbeiten**  

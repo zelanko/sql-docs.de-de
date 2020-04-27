@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4438dc445a9e1fc72fdb48b0863b75f041e2253f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62753027"
 ---
 # <a name="summary-solutions-and-script-projects"></a>Zusammenfassung: Projektmappen und Skriptprojekte
-  Durch die Nutzung der umfassenden Entwickler Features [!INCLUDE[msCoName](../../includes/msconame-md.md)] von Visual Studio [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] bietet die Funktionalität, die Entwickler für die Code Verwaltung auf Unternehmensebene benötigen. Sie können benutzerdefinierte Vorlagen erstellen, um wiederkehrende Aufgaben zu unterstützen und komplexe Skriptprojekte in einer zentralen und koordinierten Umgebung zu speichern und zu verwalten.  
+   Durch die Nutzung der umfassenden Entwicklungsfunktionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Studio bietet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] die Funktionalität, die Entwickler für die Codeverwaltung auf Unternehmensebene benötigen. Sie können benutzerdefinierte Vorlagen erstellen, um wiederkehrende Aufgaben zu unterstützen und komplexe Skriptprojekte in einer zentralen und koordinierten Umgebung zu speichern und zu verwalten.  
   
 ## <a name="return-to-sql-server-tools-tutorials-portal"></a>Zurück zum Portal für die Lernprogramme zu SQL Server-Tools  
  [Tutorial: SQL Server Management Studio](tutorial-sql-server-management-studio.md)  

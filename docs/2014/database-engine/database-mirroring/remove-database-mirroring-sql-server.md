@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6d398c2c9d8439025c7ff5ec7a8e4295b24d337
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754678"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>Entfernen der Datenbankspiegelung (SQL Server)
@@ -25,14 +25,14 @@ ms.locfileid: "62754678"
   
  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Datenbank.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-remove-database-mirroring"></a>So entfernen Sie die Datenbankspiegelung  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62754678"
   
 5.  Zum Entfernen der Spiegelung klicken Sie auf **Spiegeln entfernen**. Es wird eine Bestätigungsaufforderung angezeigt. Wenn Sie auf **Ja**klicken, wird die Sitzung beendet, und die Spiegelung wird aus der Datenbank entfernt.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Zum Entfernen der Datenbankspiegelung verwenden Sie die **Datenbankeigenschaften**. Verwenden Sie die Seite **Spiegelung** im Dialogfeld **Datenbankeigenschaften** .  
   
 #### <a name="to-remove-database-mirroring"></a>So entfernen Sie die Datenbankspiegelung  
@@ -69,16 +69,16 @@ ms.locfileid: "62754678"
     ALTER DATABASE AdventureWorks2012 SET PARTNER OFF;  
     ```  
   
-##  <a name="FollowUp"></a>Nachverfolgung: Entfernen der Daten Bank Spiegelung  
+##  <a name="follow-up-removing-database-mirroring"></a><a name="FollowUp"></a> Nachverfolgung: Entfernen der Datenbankspiegelung  
   
 > [!NOTE]  
 >  Weitere Informationen zu den Auswirkungen des Entfernens der Datenbankspiegelung finden Sie unter [Entfernen der Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
--   **Wenn Sie beabsichtigen, die Spiegelung für die Datenbank neu zu starten**  
+-   **Wenn Sie die Datenbankspiegelung erneut starten möchten**  
   
      Vor dem erneuten Starten der Spiegelung müssen alle Protokollsicherungen, die nach dem Entfernen der Spiegelung für die Prinzipaldatenbank erstellt wurden, auf die Spiegeldatenbank angewendet werden.  
   
--   **Wenn Sie die Spiegelung nicht erneut starten möchten**  
+-   **Wenn Sie die Datenbankspiegelung nicht erneut starten möchten**  
   
      Sie haben auch die Möglichkeit, die frühere Spiegeldatenbank wiederherzustellen. Auf der Serverinstanz, die den Spiegelserver darstellte, können Sie die folgende [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung ausführen:  
   
@@ -89,21 +89,21 @@ ms.locfileid: "62754678"
     > [!IMPORTANT]  
     >  Wenn Sie diese Datenbank wiederherstellen, sind zwei voneinander abweichende Datenbanken mit demselben Namen online. Deshalb müssen Sie sicherstellen, dass Clients nur auf eine der beiden zugreifen können (in der Regel die aktuellere Prinzipaldatenbank).  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Anhalten oder Fortsetzen einer Datenbank-Spiegelungssitzung (SQL Server)](pause-or-resume-a-database-mirroring-session-sql-server.md)  
   
 -   [Entfernen des Zeugen aus einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
--   [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
+-   [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung (SQL Server Management Studio)](establish-database-mirroring-session-windows-authentication.md)  
   
--   [Einrichten einer Datenbank-Spiegelungs Sitzung mithilfe der Windows-Authentifizierung &#40;Transact-SQL-&#41;](database-mirroring-establish-session-windows-authentication.md)  
+-   [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)  
   
--   [Beispiel: Einrichten der Daten Bank Spiegelung mithilfe von Zertifikaten &#40;Transact-SQL-&#41;](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+-   [Beispiel: Einrichten der Datenbankspiegelung mithilfe von Zertifikaten (Transact-SQL)](example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Daten Bank Spiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
+ [Das Einrichten der Daten Bank Spiegelung &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)   
  [AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](../availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

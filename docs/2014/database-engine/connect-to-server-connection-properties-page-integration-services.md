@@ -14,26 +14,26 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6eb81944ae4c3abab1d20fb203ee400cb8c01245
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755242"
 ---
 # <a name="connect-to-server-connection-properties-page-integration-services"></a>Verbinden mit SQL Server Integration Services (Eigenschaftenseite Verbindung)
-  Auf dieser Registerkarte können Sie Optionen anzeigen und angeben, wenn Sie eine Verbindung mit [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] herstellen oder [!INCLUDE[ssIS](../includes/ssis-md.md)] in **Registrierte Server**registrieren. Beim Herstellen einer Verbindung werden die Optionen **verbinden** und **Optionen** nur in diesem Dialogfeld angezeigt. Beim Registrieren **** [!INCLUDE[ssIS](../includes/ssis-md.md)]wird nur **Test** und speichern in diesem Dialogfeld angezeigt.  
+  Auf dieser Registerkarte können Sie Optionen anzeigen und angeben, wenn Sie eine Verbindung mit [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] herstellen oder [!INCLUDE[ssIS](../includes/ssis-md.md)] in **Registrierte Server**registrieren. Die Felder**Verbinden** und **Optionen** werden nur beim Herstellen einer Verbindung in diesem Dialogfeld angezeigt. Die Felder**Testen** und **Speichern** werden nur beim Registrieren von [!INCLUDE[ssIS](../includes/ssis-md.md)]in diesem Dialogfeld angezeigt.  
   
-## <a name="options"></a>Tastatur  
- **Port Nummer**  
+## <a name="options"></a>Optionen  
+ **Portnummer**  
  Geben Sie die Nummer des von [!INCLUDE[ssIS](../includes/ssis-md.md)]verwendeten Ports ein.  
   
- **Verbindungs Timeout**  
+ **Verbindungstimeout**  
  Geben Sie die Anzahl der Sekunden ein, die auf das Herstellen einer Verbindung gewartet werden soll, bevor ein Timeout eintritt. Der Standardwert ist 15 Sekunden.  
   
  **Ausführungs Timeout**  
  Geben Sie an, wie lange (in Sekunden) auf den Abschluss eines Tasks auf dem Server gewartet werden soll. Der Standardwert beträgt null Sekunden, d. h. es wird kein Timeout verwendet.  
   
- **Alle zurücksetzen**  
+ **Alles zurücksetzen**  
  Ersetzt alle manuell eingegebenen Verbindungseigenschaftswerte durch die Standardwerte.  
   
  **Herstellen einer Verbindung**  
@@ -45,7 +45,7 @@ ms.locfileid: "62755242"
  **Test**  
  Klicken Sie hier, um beim Registrieren von [!INCLUDE[ssIS](../includes/ssis-md.md)] in **Registrierte Server**die Verbindung zu testen.  
   
- **Sicher**  
+ **Speichern**  
  Speichert die Einstellungen in **Registrierte Server**.  
   
   

@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8d482ac020aaaf5ac8f029306441c3e9979f4379
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62689065"
 ---
 # <a name="bcp_init"></a>bcp_init
@@ -74,7 +74,7 @@ eDirection
 ## <a name="returns"></a>Rückgabe  
  SUCCEED oder FAIL.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Rufen Sie **bcp_init** auf, bevor Sie eine andere Massen Kopierfunktion aufrufen. **bcp_init** führt die erforderlichen Initialisierungen für einen Massen Kopiervorgang von Daten zwischen der Arbeitsstation [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]und aus.  
   
  Die **bcp_init** -Funktion muss mit einem ODBC-Verbindungs Handle bereitgestellt werden, das für die Verwendung mit Massen Kopierfunktionen aktiviert ist. Um das Handle zu aktivieren, verwenden Sie [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) , wobei SQL_COPT_SS_BCP auf einem zugeordneten, aber nicht verbundenen Verbindungs Handle auf SQL_BCP_ON festgelegt ist. Wenn Sie versuchen, das Attribut einem bereits verbundenen Verbindungshandle zuzuweisen, tritt ein Fehler auf.  

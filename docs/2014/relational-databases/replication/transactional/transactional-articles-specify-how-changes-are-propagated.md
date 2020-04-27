@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655675"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln
@@ -43,7 +43,7 @@ ms.locfileid: "62655675"
   
 -   **sp_MSdel_\<** *Tabellenname* **>** behandelt Löschvorgänge.  
   
- Der in der Prozedur verwendete **\< ***Tabellenname ***>** hängt davon ab, wie der Artikel der Veröffentlichung hinzugefügt wurde und ob die Abonnementdatenbank eine Tabelle mit demselben Namen und einem anderen Besitzer enthält.  
+ Der ** \< ***tablename*** > ** in der Prozedur verwendete Tabellenname hängt davon ab, wie der Artikel der Veröffentlichung hinzugefügt wurde und ob die Abonnement Datenbank eine Tabelle mit demselben Namen und einem anderen Besitzer enthält.  
   
  Jede dieser Prozeduren kann durch eine benutzerdefinierte Prozedur ersetzt werden, die Sie beim Hinzufügen eines Artikels zur Veröffentlichung angeben. In einer Anwendung verwendete benutzerdefinierte Prozeduren erfordern eine benutzerdefinierte Logik: z. B. das Einfügen von Daten in eine Überwachungstabelle, wenn eine Zeile auf einem Abonnenten aktualisiert wird. Weitere Informationen zum Angeben von benutzerdefinierten gespeicherten Prozeduren finden Sie in den oben aufgeführten Themen.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62655675"
   
 -   Wenn Sie Schemaänderungen an einer veröffentlichten Tabelle vornehmen, müssen die benutzerdefinierten Prozeduren neu generiert werden. Weitere Informationen finden Sie unter [Erneutes Generieren von Transaktionsprozeduren zur Erfassung von Schemaänderungen](transactional-articles-regenerate-to-reflect-schema-changes.md).  
   
--   Wenn Sie einen höheren Wert als 1 für den **-SubscriptionStreams** -Parameter des Verteilungs-Agent verwenden, müssen Sie sicherstellen, dass Updates an der Primärschlüsselspalte erfolgreich sind. Beispiel:  
+-   Wenn Sie einen höheren Wert als 1 für den **-SubscriptionStreams** -Parameter des Verteilungs-Agent verwenden, müssen Sie sicherstellen, dass Updates an der Primärschlüsselspalte erfolgreich sind. Zum Beispiel:  
   
     ```  
     update ... set pk = 2 where pk = 1 -- update 1  
@@ -146,7 +146,7 @@ old-c1, old-c2, old-c3,... old-cn
 ```  
   
 > [!NOTE]  
->  Beim Verwenden von XCALL wird erwartet, dass die Anfangsimagewerte für **text** - und **image** -Spalten NULL sind.  
+>   Beim Verwenden von XCALL wird erwartet, dass die Anfangsimagewerte für **text** - und **image** -Spalten NULL sind.  
   
 ## <a name="examples"></a>Beispiele  
  Bei den folgenden Prozeduren handelt es sich um Standardprozeduren, die für die `Vendor Table` in der [!INCLUDE[ssSampleDBCoShort](../../../includes/sssampledbcoshort-md.md)] -Beispieldatenbank erstellt wurden.  
@@ -214,6 +214,6 @@ go
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Article Options for Transactional Replication](article-options-for-transactional-replication.md)  
+ [Artikeloptionen für die Transaktionsreplikation](article-options-for-transactional-replication.md)  
   
   

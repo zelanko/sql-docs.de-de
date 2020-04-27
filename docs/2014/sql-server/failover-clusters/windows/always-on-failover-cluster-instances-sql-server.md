@@ -21,14 +21,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ff76632459f25981041e5585cd9cbb3dbcf906c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62520470"
 ---
 # <a name="always-on-failover-cluster-instances-sql-server"></a>AlwaysOn-Failoverclusterinstanzen (SQL Server)
-  Als Teil des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Always On-Angebots nutzen Always On-Failoverclusterinstanzen die Funktionalität des Windows Server-Failoverclustering (WSFC), um durch Redundanz auf Serverinstanzebene (eine *Failoverclusterinstanz* [FCI]) lokale Hochverfügbarkeit zu bieten. Eine FCI ist eine einzelne Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Diese ist auf Windows Server-Failoverclustering-Knoten (WSFC) und möglicherweise auf mehreren Subnetzen installiert. In einem Netzwerk wird eine FCI als eine Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] angezeigt, die auf einem einzelnen Computer ausgeführt wird. Die FCI bietet jedoch die Möglichkeit zur Failoverbereitstellung von einem WSFC-Knoten zu einem anderen, wenn der aktuelle Knoten nicht verfügbar ist.  
+  Im Rahmen des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always on Angebots nutzt Always on-Failoverclusterinstanzen die wsfc (Windows Server Failover Clustering)-Funktion, um eine lokale Hochverfügbarkeit durch Redundanz auf der Ebene der Server Instanz (eine *Failoverclusterinstanz* (FCI)) bereitzustellen. Eine FCI ist eine einzelne Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Diese ist auf Windows Server-Failoverclustering-Knoten (WSFC) und möglicherweise auf mehreren Subnetzen installiert. In einem Netzwerk wird eine FCI als eine Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] angezeigt, die auf einem einzelnen Computer ausgeführt wird. Die FCI bietet jedoch die Möglichkeit zur Failoverbereitstellung von einem WSFC-Knoten zu einem anderen, wenn der aktuelle Knoten nicht verfügbar ist.  
   
  Eine FCI kann [AlwaysOn-Verfügbarkeitsgruppen](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) nutzen, um die Remotewiederherstellung im Notfall auf Datenbankebene bereitzustellen. Weitere Informationen finden Sie unter [Failoverclustering und Always On-Verfügbarkeitsgruppen (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md).  
   
@@ -41,15 +41,15 @@ ms.locfileid: "62520470"
   
 -   [Empfehlungen](#Recommendations)  
   
--   [Übersicht über Failoverclusterinstanzen](#Overview)  
+-   [Failoverclusterinstanz-Übersicht](#Overview)  
   
 -   [Elemente einer Failoverclusterinstanz](#FCIelements)  
   
--   [SQL Server von failoverkonzepten und-Aufgaben](#ConceptsAndTasks)  
+-   [Konzepte und Tasks des SQL Server-Failovers](#ConceptsAndTasks)  
   
 -   [Verwandte Themen](#RelatedTopics)  
   
-##  <a name="Benefits"></a>Vorteile einer Failoverclusterinstanz  
+##  <a name="benefits-of-a-failover-cluster-instance"></a><a name="Benefits"></a>Vorteile einer Failoverclusterinstanz  
  Wenn bei einem Server Hardware- oder Softwarefehler auftreten, kommt es bei den mit dem Server verbundenen Anwendungen oder Clients zu Ausfallzeiten. Wenn eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz konfiguriert wird, um eine FCI (statt einer eigenständigen Instanz) zu sein, wird die Hochverfügbarkeit dieser [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz vom Vorhandensein redundanter Knoten in der FCI geschützt. Nur jeweils einer der Knoten in der FCI kann die WSFC-Ressourcengruppe besitzen. Bei einem Fehler (Hardwarefehler, Betriebssystemfehler, Anwendungs- oder Dienstfehler) oder einem geplanten Upgrade wird der Ressourcengruppenbesitz zu einem anderen WSFC-Knoten verschoben. Dieser Prozess ist für den Client oder die Anwendung transparent, der bzw. die eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] herstellt. Dadurch werden die Ausfallzeiten der Anwendung oder des Clients bei einem Fehler minimiert. Die folgende Liste enthält einige wichtige Vorteile, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanzen bieten:  
   
 -   Schutz auf Instanzebene durch Redundanz  
@@ -73,10 +73,10 @@ ms.locfileid: "62520470"
   
 -   Eingeschränkte Ressourcenauslastung während Failover ausgeführt werden  
   
-##  <a name="Recommendations"></a> Empfehlungen  
+##  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
  Es wird empfohlen, in einer Produktionsumgebung statische IP-Adressen zusammen mit der virtuellen IP-Adresse einer Failoverclusterinstanz zu verwenden.  Von der Verwendung von DHCP in einer Produktionsumgebung wird abgeraten. Wenn es zu einer Ausfallzeit kommt und das DHCP-IP-Leasing abläuft, ist für die erneute Registrierung der dem DNS-Namen zugeordneten neuen DHCP-IP-Adresse zusätzlich Zeit erforderlich.  
   
-##  <a name="Overview"></a>Übersicht über Failoverclusterinstanzen  
+##  <a name="failover-cluster-instance-overview"></a><a name="Overview"></a>Übersicht über Failoverclusterinstanzen  
  Eine FCI wird in einer WSFC-Ressourcengruppe mit einem oder mehreren WSFC-Knoten ausgeführt. Wenn die FCI gestartet wird, nimmt einer der Knoten den Besitz der Ressourcengruppe an und schaltet seine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz online. Zu den Ressourcen, die dieser Knoten besitzt, gehören:  
   
 -   Netzwerkname  
@@ -85,13 +85,11 @@ ms.locfileid: "62520470"
   
 -   Freigegebene Datenträger  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank-Engine-Dienste  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank-Engine-Dienste  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent-Dienst  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Dienst  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Analysis Services-Dienst, sofern installiert  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Analysis Services-Dienst, sofern installiert  
   
 -   Eine Dateifreigaberessource, wenn die FILESTREAM-Funktion installiert ist  
   
@@ -123,7 +121,7 @@ ms.locfileid: "62520470"
   
  Weitere Informationen finden Sie unter [Failoverrichtlinie für Failoverclusterinstanzen](failover-policy-for-failover-cluster-instances.md) .  
   
-##  <a name="FCIelements"></a>Elemente einer Failoverclusterinstanz  
+##  <a name="elements-of-a-failover-cluster-instance"></a><a name="FCIelements"></a>Elemente einer Failoverclusterinstanz  
  Eine FCI besteht aus einem Satz physischer Server (Knoten), die über eine ähnliche Hardwarekonfiguration sowie über eine identische Softwarekonfiguration verfügen, einschließlich Betriebssystemversion und Patchebene sowie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Version, -Patchebene, -Komponenten und -Instanzname. Identische Softwarekonfiguration ist notwendig, um sicherzustellen, dass die FCI vollständig funktional sein kann, da es zwischen den Knoten Failover ausführt.  
   
  WSFC-Ressourcengruppe  
@@ -141,7 +139,7 @@ ms.locfileid: "62520470"
  Virtuelle IP-Adressen  
  Im Fall einer Multisubnetz-FCI wird jedem Subnetz eine virtuelle IP-Adresse in der FCI zugewiesen. Während eines Failovers wird der VNN auf dem DNS-Server aktualisiert, um auf die virtuelle IP-Adresse für das jeweilige Subnetz zu verweisen. Anwendungen und Clients können dann eine Verbindung mit der FCI herstellen, die den gleichen VNN nach einem Multisubnetzfailover verwendet.  
   
-##  <a name="ConceptsAndTasks"></a>SQL Server von failoverkonzepten und-Aufgaben  
+##  <a name="sql-server-failover-concepts-and-tasks"></a><a name="ConceptsAndTasks"></a>SQL Server von failoverkonzepten und-Aufgaben  
   
 |Konzepte und Tasks|Thema|  
 |------------------------|-----------|  
@@ -149,13 +147,13 @@ ms.locfileid: "62520470"
 |Beschreibt Konzepte hinsichtlich FCI-Verwaltung und -Wartung.|[Verwaltung und Wartung von Failoverclusterinstanzen](failover-cluster-instance-administration-and-maintenance.md)|  
 |Beschreibt die Konfiguration und Konzepte von Multisubnetzen.|[SQL Server multisubnetzclustering (; SQL Server);](sql-server-multi-subnet-clustering-sql-server.md)|  
   
-##  <a name="RelatedTopics"></a>Verwandte Themen  
+##  <a name="related-topics"></a><a name="RelatedTopics"></a>Verwandte Themen  
   
-|**Themen Beschreibungen**|**Thema**|  
+|**Beschreibungen der Themen**|**Sonder**|  
 |----------------------------|---------------|  
 |Beschreibt die Installation eines neuen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCIs.|[Erstellen Sie einen neuen SQL Server Failovercluster (; Setup);](../install/create-a-new-sql-server-failover-cluster-setup.md)|  
-|Beschreibt die Aktualisierung eines [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] -Failoverclusters.|[Aktualisieren eines SQL Server-Failoverclusters](upgrade-a-sql-server-failover-cluster-instance.md)|  
-|Beschreibt Konzepte des Windows-Failoverclustering und stellt Links zu Tasks für Windows-Failoverclustering bereit.|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [Übersicht über Failovercluster](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]R2: [Übersicht über Failovercluster](https://go.microsoft.com/fwlink/?LinkId=177879)|  
+|Beschreibt die Aktualisierung eines [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] -Failoverclusters.|[Upgraden eines SQL Server-Failoverclusters](upgrade-a-sql-server-failover-cluster-instance.md)|  
+|Beschreibt Konzepte des Windows-Failoverclustering und stellt Links zu Tasks für Windows-Failoverclustering bereit.|[!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]: [Übersicht über Failovercluster](https://go.microsoft.com/fwlink/?LinkId=177878)<br /><br /> [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)] R2: [Übersicht über Failovercluster](https://go.microsoft.com/fwlink/?LinkId=177879)|  
 |Beschreibt die Unterschiede der Konzepte zwischen Knoten in einer FCI und Replikaten innerhalb einer Verfügbarkeitsgruppe. Zudem werden Überlegungen zum Hosten mithilfe einer FCI für eine Verfügbarkeitsgruppe eines Replikats dargelegt.|[Failoverclustering und AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md)|  
   
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf393a3e0f117098dc4a85bae3e6c68728f43a64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721808"
 ---
 # <a name="replication-programming-concepts"></a>Konzepte für die Replikationsprogrammierung
@@ -54,7 +54,7 @@ ms.locfileid: "62721808"
   
 -   Die Replikationstopologien und ihre Ausrichtung auf die Replikationstypen.  
   
- Wenn [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Replikation neu für Sie ist, finden Sie unter [Replikationstypen](../types-of-replication.md) weitere Informationen.  
+ Wenn die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Replikation noch neu für Sie ist, finden Sie unter [Replikationstypen](../types-of-replication.md) weitere Informationen.  
   
 ## <a name="defining-application-functionality"></a>Definieren der Anwendungsfunktionen  
  Nachdem Sie die Replikationstopologie definiert haben, bestimmen Sie die Funktionen, die die Anwendung bieten soll. Diese Funktionen können von einem Skript zur Synchronisierung eines Abonnements über eine Anwendung mit einer Benutzerschnittstelle bis hin zur Konfiguration der Replikation reichen. Die Replikation unterstützt die folgenden allgemeinen Programmierungstasks:  

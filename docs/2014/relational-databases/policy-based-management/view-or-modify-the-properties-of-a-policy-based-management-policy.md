@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6d5b5b5ee05f467c0881b38108d126da523ea2e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676932"
 ---
 # <a name="view-or-modify-the-properties-of-a-policy-based-management-policy"></a>Anzeigen oder Ändern der Eigenschaften einer Richtlinie der richtlinienbasierten Verwaltung
@@ -35,18 +35,18 @@ ms.locfileid: "62676932"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die Mitgliedschaft in der PolicyAdministratorRole-Rolle in der msdb-Datenbank.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-view-the-properties-of-all-policies-on-an-object"></a>So zeigen Sie die Eigenschaften aller Richtlinien für ein Objekt an  
   
-1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf einen Server, ein Serverobjekt, eine Datenbank oder ein Datenbankobjekt, zeigen Sie auf **Richtlinien** , und wählen Sie dann **Anzeigen**aus. Weitere Informationen zu den verfügbaren Optionen im Dialogfeld **Richtlinien anzeigen –** _Objektname_ finden Sie unter [Dialogfeld „Richtlinien anzeigen“](view-policies-dialog-box.md).  
+1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf einen Server, ein Serverobjekt, eine Datenbank oder ein Datenbankobjekt, zeigen Sie auf **Richtlinien** , und wählen Sie dann **Anzeigen**aus. Weitere Informationen zu den verfügbaren Optionen im Dialogfeld **Richtlinien anzeigen – **_Objektname_ finden Sie unter [Dialogfeld „Richtlinien anzeigen“](view-policies-dialog-box.md).  
   
 2.  Wenn Sie fertig sind, klicken Sie auf **Schließen**.  
   
@@ -60,11 +60,11 @@ ms.locfileid: "62676932"
   
 4.  Klicken Sie auf das Pluszeichen, um den Ordner **Richtlinien** zu erweitern.  
   
-5.  Klicken Sie mit der rechten Maustaste auf die Richtlinie, die Sie anzeigen oder ändern möchten, und wählen Sie **Eigenschaften**aus. Weitere Informationen zu den verfügbaren Optionen im Dialogfeld **Richtlinie öffnen –** _Richtlinienname_ finden Sie unter [Dialogfeld „Neue Richtlinie erstellen“ oder „Richtlinie öffnen“, Seite „Allgemein“](../../integration-services/general-page-of-integration-services-designers-options.md) oder [Dialogfeld „Neue Richtlinie erstellen“ oder „Richtlinie öffnen“, Seite „Beschreibung“](create-new-policy-or-open-policy-dialog-box-description-page.md).  
+5.  Klicken Sie mit der rechten Maustaste auf die Richtlinie, die Sie anzeigen oder ändern möchten, und wählen Sie **Eigenschaften**aus. Weitere Informationen zu den verfügbaren Optionen im Dialogfeld **Richtlinie öffnen – **_Richtlinienname_ finden Sie unter [Dialogfeld „Neue Richtlinie erstellen“ oder „Richtlinie öffnen“, Seite „Allgemein“](../../integration-services/general-page-of-integration-services-designers-options.md) oder [Dialogfeld „Neue Richtlinie erstellen“ oder „Richtlinie öffnen“, Seite „Beschreibung“](create-new-policy-or-open-policy-dialog-box-description-page.md).  
   
 6.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-view-a-policys-properties"></a>So zeigen Sie die Eigenschaften einer Richtlinie an  
   

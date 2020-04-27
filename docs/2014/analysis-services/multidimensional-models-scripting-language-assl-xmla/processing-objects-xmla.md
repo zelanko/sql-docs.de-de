@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ab38ea9b58e891d813a3ca73f43d20a364275da0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727596"
 ---
 # <a name="processing-objects-xmla"></a>Verarbeiten von Objekten (XMLA)
@@ -54,7 +54,7 @@ ms.locfileid: "62727596"
   
  In der folgenden Tabelle werden die Konstanten der Eigenschaft `Type` und die verschiedenen Objekte, die über die Konstanten verarbeitet werden können, aufgelistet.  
   
-|`Type`Wert|Anwendbare Objekte|  
+|Wert vom Typ `Type`|Anwendbare Objekte|  
 |--------------------|------------------------|  
 |*ProcessFull*|Cube, Datenbank, Dimension, Measuregruppe, Miningmodell, Miningstruktur, Partition|  
 |*ProcessAdd*|Dimension, Partition|  
@@ -112,7 +112,7 @@ ms.locfileid: "62727596"
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="description"></a>BESCHREIBUNG  
+### <a name="description"></a>Beschreibung  
  Im folgenden Beispiel wird die [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Beispieldatenbank vollständig verarbeitet.  
   
 ### <a name="code"></a>Code  

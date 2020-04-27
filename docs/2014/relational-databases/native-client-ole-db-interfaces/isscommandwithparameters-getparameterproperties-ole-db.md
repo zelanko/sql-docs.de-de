@@ -1,5 +1,5 @@
 ---
-title: 'ISSCommandWithParameters:: GetParameterProperties (OLE DB) | Microsoft-Dokumentation'
+title: ISSCommandWithParameters::GetParameterProperties (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6d492a64b6d8a4e8ddf7de27067f1f0bcfef205e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638082"
 ---
 # <a name="isscommandwithparametersgetparameterproperties-ole-db"></a>'ISSCommandWithParameters::GetParameterProperties' (OLE DB)
@@ -36,7 +36,7 @@ SSPARAMPROPS **prgParamProperties);
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *pcparser*[out] [in]  
+ *pcParams*[out] [in]  
  Ein Zeiger auf den Arbeitsspeicher, der die Anzahl von SSPARAMPROPS-Strukturen enthält, die in *prgParamProperties*zurückgegeben werden.  
   
  *prgParamProperties*[out]  
@@ -45,8 +45,8 @@ SSPARAMPROPS **prgParamProperties);
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  Die **GetParameterProperties** -Methode gibt dieselben Fehlercodes zurück wie die OLE DB **ICommandProperties::GetProperties** -Methode, allerdings können DB_S_ERRORSOCCURRED und DB_E_ERRORSOCCURED nicht ausgelöst werden.  
   
-## <a name="remarks"></a>Bemerkungen  
- **ISSCommandWithParameters:: GetParameterProperties** verhält sich in Bezug auf **GetParameterInfo**konsistent. Wenn [ISSCommandWithParameters::SetParameterProperties](isscommandwithparameters-setparameterproperties-ole-db.md) und **SetParameterInfo** nicht aufgerufen wurden oder mit einem Wert von 0 (null) für **cParams** aufgerufen wurden, leitet GetParameterInfo Parameterinformationen ab und gibt diese zurück. Wenn **ISSCommandWithParameters::SetParameterProperties** oder **SetParameterInfo** für mindestens einen Parameter aufgerufen wurde, gibt **ISSCommandWithParameters::GetParameterProperties** Eigenschaften nur für die Parameter zurück, für die **ISSCommandWithParameters::SetParameterProperties** aufgerufen wurde. Wenn **ISSCommandWithParameters::SetParameterProperties** nach **ISSCommandWithParameters::GetParameterProperties** oder **GetParameterInfo**aufgerufen wird, geben nachfolgende Aufrufe von **ISSCommandWithParameters::GetParameterProperties** die überschriebenen Werte für jene Parameter zurück, für die **ISSCommandWithParameters::SetParameterProperties** aufgerufen wurde.  
+## <a name="remarks"></a>Hinweise  
+ **ISSCommandWithParameters::GetParameterProperties** verhält sich in Bezug auf **GetParameterInfo**konsistent. Wenn [ISSCommandWithParameters::SetParameterProperties](isscommandwithparameters-setparameterproperties-ole-db.md) und **SetParameterInfo** nicht aufgerufen wurden oder mit einem Wert von 0 (null) für **cParams** aufgerufen wurden, leitet GetParameterInfo Parameterinformationen ab und gibt diese zurück. Wenn **ISSCommandWithParameters::SetParameterProperties** oder **SetParameterInfo** für mindestens einen Parameter aufgerufen wurde, gibt **ISSCommandWithParameters::GetParameterProperties** Eigenschaften nur für die Parameter zurück, für die **ISSCommandWithParameters::SetParameterProperties** aufgerufen wurde. Wenn **ISSCommandWithParameters::SetParameterProperties** nach **ISSCommandWithParameters::GetParameterProperties** oder **GetParameterInfo**aufgerufen wird, geben nachfolgende Aufrufe von **ISSCommandWithParameters::GetParameterProperties** die überschriebenen Werte für jene Parameter zurück, für die **ISSCommandWithParameters::SetParameterProperties** aufgerufen wurde.  
   
  Die SSPARAMPROPS-Struktur ist folgendermaßen definiert:  
   
@@ -60,13 +60,13 @@ SSPARAMPROPS **prgParamProperties);
   
  `};`  
   
-|Mitglied|BESCHREIBUNG|  
+|Member|Beschreibung|  
 |------------|-----------------|  
 |*iOrdinal*|Die Ordnungszahl des übergebenen Parameters|  
-|*cpropertysets*|Die Anzahl von DBPROPSET-Strukturen in *rgPropertySets*|  
+|*cPropertySets*|Die Anzahl von DBPROPSET-Strukturen in *rgPropertySets*|  
 |*rgPropertySets*|Ein Zeiger auf den Speicher, in den ein Array aus DBPROPSET-Strukturen zurückgegeben werden soll|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [' ISSCommandWithParameters ' &#40;OLE DB&#41;](isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](isscommandwithparameters-ole-db.md)  
   
   

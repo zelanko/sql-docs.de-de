@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a57f4b1a56c3a23c9be8957f97fa7b352f9674a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638164"
 ---
 # <a name="columns-with-a-name"></a>Spalten mit Namen
@@ -33,7 +33,7 @@ ms.locfileid: "62638164"
 -   Eine Spalte hat einen unterschiedlichen Namen.  
   
 ## <a name="column-name-starts-with-an-at-sign-"></a>Spaltenname beginnt mit einem At-Zeichen (\@)  
- Wenn der Spaltenname mit einem @-Zeichen (\@) beginnt und keinen Schrägstrich (/) enthält, wird ein Attribut des <`row`> Elements erstellt, das über den entsprechenden Spaltenwert verfügt. Die folgende Abfrage gibt beispielsweise ein Rowset mit zwei Spalten (\@PmId, Name) zurück. Im resultierenden XML-Code wird dem entsprechenden <**>-Element ein **PmId`row`-Attribut hinzugefügt und diesem der Wert ProductModelID zugewiesen.  
+ Wenn der Spaltenname mit einem @-Zeichen (\@) beginnt und keinen Schrägstrich (/) enthält, wird ein Attribut des <`row`> Elements erstellt, das über den entsprechenden Spaltenwert verfügt. Die folgende Abfrage gibt beispielsweise ein Rowset mit zwei Spalten (\@PmId, Name) zurück. Im resultierenden XML-Code wird dem entsprechenden <`row`>-Element ein **PmId**-Attribut hinzugefügt und diesem der Wert ProductModelID zugewiesen.  
   
 ```  
   
@@ -68,7 +68,7 @@ go
 ## <a name="column-name-does-not-start-with-an-at-sign-"></a>Spaltenname beginnt nicht mit einem At-Zeichen (\@)  
  Wenn der Spaltenname nicht mit einem at-Zeichen (\@) beginnt, keiner der XPath-Knoten Tests ist und keinen Schrägstrich (/) enthält, wird ein XML-Element erstellt, das ein untergeordnetes Element des Row-Elements ist, <`row` standardmäßig>.  
   
- Die folgende Abfrage gibt den Spaltennamen result an. Folglich wird dem <`result`>-Element das untergeordnete <`row`>-Element hinzugefügt.  
+ Die folgende Abfrage gibt den Spaltennamen result an. Folglich wird dem <`row`>-Element das untergeordnete <`result`>-Element hinzugefügt.  
   
 ```  
 SELECT 2+2 as result  
@@ -83,7 +83,7 @@ for xml PATH
 </row>  
 ```  
   
- Die folgende Abfrage gibt den Spaltennamen ManuWorkCenterInformation für den XML-Code an, der von der für die Instructions-Spalte vom **xml** -Typ angegebenen XQuery zurückgegeben wurde. Folglich wird dem <`ManuWorkCenterInformation`>-Element das untergeordnete <`row`>-Element hinzugefügt.  
+ Die folgende Abfrage gibt den Spaltennamen ManuWorkCenterInformation für den XML-Code an, der von der für die Instructions-Spalte vom **xml** -Typ angegebenen XQuery zurückgegeben wurde. Folglich wird dem <`row`>-Element das untergeordnete <`ManuWorkCenterInformation`>-Element hinzugefügt.  
   
 ```  
 SELECT   
@@ -167,7 +167,7 @@ FOR XML PATH, ELEMENTS XSINIL
   
  Standardmäßig generiert der PATH-Modus elementzentrierten XML-Code. Daher hat die Angabe der ELEMENTS-Direktive in einer Abfrage im PATH-Modus keine Wirkung. Die ELEMENTS-Direktive erweist sich jedoch in Verbindung mit XSINIL als nützlich, um Elemente für NULL-Werte zu generieren.  
   
- Die folgende Abfrage ruft außer der ID und dem Namen die Adresse eines Mitarbeiters ab. Entsprechend dem Pfad in den Spaltennamen für Adressspalten wird dem <`Address`>-Element ein untergeordnetes <`row`>-Element hinzugefügt, und die Adressdetails werden als untergeordnete Elemente des <`Address`>-Elements hinzugefügt.  
+ Die folgende Abfrage ruft außer der ID und dem Namen die Adresse eines Mitarbeiters ab. Entsprechend dem Pfad in den Spaltennamen für Adressspalten wird dem <`row`>-Element ein untergeordnetes <`Address`>-Element hinzugefügt, und die Adressdetails werden als untergeordnete Elemente des <`Address`>-Elements hinzugefügt.  
   
 ```  
 SELECT EmployeeID   "@EmpID",   

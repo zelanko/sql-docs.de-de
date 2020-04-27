@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1cec7e92d8c32cd8c50098ece83082b61bca7ae2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754713"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>Datenbankspiegelungs-Monitor (Seite Status)
   Diese schreibgeschützte Seite zeigt den neuesten Spiegelungsstatus für die Prinzipal- und die Spiegelserverinstanz der Datenbank an, die zum jetzigen Zeitpunkt in der Navigationsstruktur ausgewählt ist. Wenn Informationen zu einer Instanz zurzeit nicht verfügbar sind, sind einige der Zellen im Raster **Status** , das dieser Instanz entspricht, ausgegraut und zeigen die Option **Unbekannt**an.  
   
- **So verwenden Sie SQL Server Management Studio zum Überwachen der Daten Bank Spiegelung**  
+ **So verwenden Sie SQL Server Management Studio zum Überwachen der Datenbankspiegelung**  
   
 -   [Starten des Datenbankspiegelungs-Monitors &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
@@ -40,14 +40,14 @@ ms.locfileid: "62754713"
 |-----------------|-----------------|  
 |**Serverinstanz**|Name der Serverinstanz, deren Status in der Zeile **Status** angezeigt wird.|  
 |**Aktuelle Rolle**|Aktuelle Rolle der Serverinstanz: **Prinzipal** oder **Spiegel**.|  
-|**Spiegelungs Status**|Der von der Serverinstanz gemeldete Spiegelungsstatus und ein Symbol, das den Schweregrad des Status angibt. Im Folgenden sind die möglichen Statuswerte und die zugehörigen Symbole aufgeführt:<br /><br /> -: Status **unbekannt**. Der Monitor ist mit keinem der beiden Partner verbunden. Es sind nur die Informationen verfügbar, die vom Monitor zwischengespeichert wurden.<br /><br /> Warnsymbol: <br />                            Status **Synchronisierung**.<br />                          Der Inhalt der Spiegeldatenbank liegt zeitlich hinter dem Inhalt der Prinzipaldatenbank. Die Prinzipalserverinstanz sendet Protokolldatensätze an die Spiegelserverinstanz, die die Änderungen auf die Spiegeldatenbank anwendet, um ein Rollforward dafür auszuführen. Beim Start einer Datenbank-Spiegelungssitzung befinden sich Spiegel- und Prinzipaldatenbank in diesem Status.<br /><br /> Standard-Daten Bank Zylinder: Status<br />                            **Synchronisiert**.<br />                          Wenn der Spiegelserver den Stand des Prinzipalservers erreicht hat, wechselt der Datenbankstatus zu **Synchronisiert**. Die Datenbank verbleibt in diesem Status, solange der Prinzipalserver Änderungen an den Spiegelserver sendet und der Spiegelserver Änderungen auf die Spiegeldatenbank anwendet. Im Modus für hohe Sicherheit ist sowohl das automatische Failover als auch das manuelle Failover ohne Datenverlust möglich. Im Modus für hohe Leistung ist immer ein gewisser Datenverlust möglich, sogar im Status **Synchronisiert** .<br /><br /> Warnsymbol: Status<br />                            Angeh **alten.**<br />                            Die Prinzipaldatenbank ist verfügbar, sendet aber keine Protokolle an den Spiegelserver.<br /><br /> Fehler Symbol: Status <br />                            Nicht **getrennt**.<br />                          Die Serverinstanz kann keine Verbindung mit ihrem Partner herstellen.|  
-|**Zeugen Verbindung**|Der Verbindungsstatus des Zeugen, dem ein Statussymbol vorangestellt ist: **Unbekannt**, **Verbunden**oder **Getrennt**.|  
+|**Spiegelungsstatus**|Der von der Serverinstanz gemeldete Spiegelungsstatus und ein Symbol, das den Schweregrad des Status angibt. Im Folgenden sind die möglichen Statuswerte und die zugehörigen Symbole aufgeführt:<br /><br /> -: Status **unbekannt**. Der Monitor ist mit keinem der beiden Partner verbunden. Es sind nur die Informationen verfügbar, die vom Monitor zwischengespeichert wurden.<br /><br /> Warnsymbol: <br />                            Status **Synchronisierung**.<br />                          Der Inhalt der Spiegeldatenbank liegt zeitlich hinter dem Inhalt der Prinzipaldatenbank. Die Prinzipalserverinstanz sendet Protokolldatensätze an die Spiegelserverinstanz, die die Änderungen auf die Spiegeldatenbank anwendet, um ein Rollforward dafür auszuführen. Beim Start einer Datenbank-Spiegelungssitzung befinden sich Spiegel- und Prinzipaldatenbank in diesem Status.<br /><br /> Standard-Daten Bank Zylinder: Status<br />                            **Synchronisiert**.<br />                          Wenn der Spiegelserver den Stand des Prinzipalservers erreicht hat, wechselt der Datenbankstatus zu **Synchronisiert**. Die Datenbank verbleibt in diesem Status, solange der Prinzipalserver Änderungen an den Spiegelserver sendet und der Spiegelserver Änderungen auf die Spiegeldatenbank anwendet. Im Modus für hohe Sicherheit ist sowohl das automatische Failover als auch das manuelle Failover ohne Datenverlust möglich. Im Modus für hohe Leistung ist immer ein gewisser Datenverlust möglich, sogar im Status **Synchronisiert** .<br /><br /> Warnsymbol: Status<br />                            Angeh **alten.**<br />                            Die Prinzipaldatenbank ist verfügbar, sendet aber keine Protokolle an den Spiegelserver.<br /><br /> Fehler Symbol: Status <br />                            Nicht **getrennt**.<br />                          Die Serverinstanz kann keine Verbindung mit ihrem Partner herstellen.|  
+|**Zeugenverbindung**|Der Verbindungsstatus des Zeugen, dem ein Statussymbol vorangestellt ist: **Unbekannt**, **Verbunden**oder **Getrennt**.|  
 |**History**|Klicken Sie auf diese Schaltfläche, um den Verlauf der Spiegelung auf der Serverinstanz anzuzeigen. Dadurch wird das Dialogfeld **Datenbankspiegelungsverlauf** geöffnet, das den Verlauf des Spiegelungsstatus und Statistiken für eine gespiegelte Datenbank auf einer bestimmten Serverinstanz anzeigt.<br /><br /> Die Schaltfläche **Verlauf** ist abgeblendet, wenn der Monitor nicht mit der Serverinstanz verbunden ist.|  
   
  **Prinzipal Protokoll (** * \<Zeit>* **)**  
  Status des Protokolls auf der Prinzipal Serverinstanz zur lokalen Zeit auf der Serverinstanz, angegeben nach * \<Zeit>*. Folgende Parameter werden angezeigt:  
   
- **Nicht gesendetes Protokoll**  
+ **Nicht gesendete Protokolle**  
  Die Menge der Protokolldaten (in Kilobyte), die sich in der Sendewarteschlange befinden.  
   
  **Älteste, nicht gesendete Transaktion**  
@@ -80,7 +80,7 @@ ms.locfileid: "62754713"
  **Zeit zum Senden und Wiederherstellen aller aktuellen Protokolle (geschätzt)**  
  Die benötigte Zeit zum Senden und Wiederherstellen des gesamten Protokolls, für das zum aktuellen Zeitpunkt auf dem Prinzipal ein Commit ausgeführt wurde. Diese Zeit kann geringer sein als die Summe der Werte der Felder **Zeit zum Senden des Protokolls (geschätzt)** und **Zeit zum Wiederherstellen des Protokolls (geschätzt)** , da das Senden und Wiederherstellen parallel erfolgen kann. Diese Schätzung sagt die Zeit voraus, die zum Senden und Wiederherstellen neuer Transaktionen benötigt wird, für die beim Bearbeiten von Rückständen in der Sendewarteschlange auf dem Prinzipal ein Commit ausgeführt wurde.  
   
- **Zeugen Adresse**  
+ **Zeugenadresse**  
  Netzwerkadresse der Zeugenserverinstanz. Informationen zum Format dieser Adresse finden Sie unter [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](specify-a-server-network-address-database-mirroring.md).  
   
  **Betriebsmodus**  
@@ -92,13 +92,13 @@ ms.locfileid: "62754713"
   
 -   **Hohe Sicherheit mit automatischem Failover (synchron)**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Mitglieder der festen Datenbankrolle **dbm_monitor** können den vorhandenen Spiegelungsstatus entweder mithilfe des Datenbankspiegelungs-Monitors oder der gespeicherten Prozedur **sp_dbmmonitorresults** anzeigen. Diese Benutzer können jedoch nicht die Statustabelle aktualisieren. Sie sind abhängig davon, dass der **Auftrag für den Datenbankspiegelungs-Monitor**die Statustabelle regelmäßig aktualisiert. Das Alter des angezeigten Status kann ein Benutzer über die Zeitangaben in den Bezeichnungen **Prinzipalprotokoll (***\<Zeit>***)** und **Spiegelungsprotokoll (***\<Zeit>***)** erfahren.  
   
  Wenn dieser Auftrag nicht vorhanden ist oder der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent beendet wurde, veraltet der Status zunehmend und gibt die Konfiguration der Spiegelungssitzung möglicherweise nicht mehr wieder. So kann z. B. nach einem Failover fälschlicherweise angezeigt werden, dass die Partner dieselbe Rolle haben (Prinzipal oder Spiegel), oder der aktuelle Prinzipalserver wird als Spiegel angezeigt, während der aktuelle Spiegelserver als Prinzipal angezeigt wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Starten des Datenbankspiegelungs-Monitors &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
+ [Starten Sie Datenbankspiegelungs-Monitor &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Überwachen der Daten Bank Spiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Starten des Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   

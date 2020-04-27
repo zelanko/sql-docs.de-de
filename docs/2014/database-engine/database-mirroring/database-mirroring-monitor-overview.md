@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 36dcb23a2e4dde09d5c57d7c837fa90eae3fddf5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755030"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Datenbankspiegelungs-Monitor (Übersicht)
@@ -45,7 +45,7 @@ ms.locfileid: "62755030"
   
  Für jede registrierte Datenbank werden die folgenden Informationen angezeigt:  
   
- _<Database_name>_ **(** _ \<Status #d2_ **,** _<PRINCIPAL_SERVER_ **->**><_MIRROR_SERVER>_ **)**  
+ _<Database_name>_ **(** _\<Status>_ **,** _<PRINCIPAL_SERVER>_ **->** _<MIRROR_SERVER>_ **)**  
   
  *<Database_name>*  
  Der Name einer gespiegelten Datenbank, die für den Datenbankspiegelungs-Monitor registriert ist.  
@@ -55,18 +55,18 @@ ms.locfileid: "62755030"
   
 |Symbol|Status|BESCHREIBUNG|  
 |----------|------------|-----------------|  
-|Symbol "Warnung"|**Unknown**|Der Monitor ist mit keinem der beiden Partner verbunden. Es sind nur die Informationen verfügbar, die vom Monitor zwischengespeichert wurden.|  
-|Symbol "Warnung"|**Wird synchronisiert**|Der Inhalt der Spiegeldatenbank liegt zeitlich hinter dem Inhalt der Prinzipaldatenbank. Die Prinzipalserverinstanz sendet Protokolldatensätze an die Spiegelserverinstanz, die die Änderungen auf die Spiegeldatenbank anwendet, um ein Rollforward dafür auszuführen.<br /><br /> Beim Start einer Datenbank-Spiegelungssitzung befinden sich Spiegel- und Prinzipaldatenbank in diesem Status.|  
+|Warnungssymbol|**Unbekannt**|Der Monitor ist mit keinem der beiden Partner verbunden. Es sind nur die Informationen verfügbar, die vom Monitor zwischengespeichert wurden.|  
+|Warnungssymbol|**Wird synchronisiert**|Der Inhalt der Spiegeldatenbank liegt zeitlich hinter dem Inhalt der Prinzipaldatenbank. Die Prinzipalserverinstanz sendet Protokolldatensätze an die Spiegelserverinstanz, die die Änderungen auf die Spiegeldatenbank anwendet, um ein Rollforward dafür auszuführen.<br /><br /> Beim Start einer Datenbank-Spiegelungssitzung befinden sich Spiegel- und Prinzipaldatenbank in diesem Status.|  
 |Standard-Datenbankzylinder|**Synchronisiert**|Wenn der Spiegelserver den Stand des Prinzipalservers erreicht hat, wechselt der Datenbankstatus zu **Synchronisiert**. Die Datenbank behält diesen Status so lange bei, wie der Prinzipalserver Änderungen an den Spiegelserver sendet und der Spiegelserver Änderungen auf die Spiegeldatenbank anwendet.<br /><br /> Im Modus für hohe Sicherheit ist sowohl das automatische Failover als auch das manuelle Failover ohne Datenverlust möglich.<br /><br /> Im Modus für hohe Leistung ist immer ein gewisser Datenverlust möglich, sogar im Status **Synchronisiert** .|  
-|Symbol "Warnung"|**Gesperrt**|Die Prinzipaldatenbank ist verfügbar, sendet aber keine Protokolle an den Spiegelserver.|  
-|Fehlersymbol|**Koppelt**|Die Serverinstanz kann keine Verbindung mit ihrem Partner herstellen.|  
+|Warnungssymbol|**Angehalten**|Die Prinzipaldatenbank ist verfügbar, sendet aber keine Protokolle an den Spiegelserver.|  
+|Fehlersymbol|**Nicht verbunden**|Die Serverinstanz kann keine Verbindung mit ihrem Partner herstellen.|  
   
  *<PRINCIPAL_SERVER>*  
  Der Name des Partners, der derzeit die Prinzipalserverinstanz ist. Der Name weist folgendes Format auf:  
   
- *<SYSTEM_NAME>*[**\\** _<instance_name>_]  
+ *<SYSTEM_NAME>* [ **\\** _<instance_name>_ ]  
   
- Dabei ist *<SYSTEM_NAME>* der Name des Systems, auf dem sich die Serverinstanz befindet. Für eine nicht standardmäßige Serverinstanz wird auch der Instanzname angezeigt: _<SYSTEM_NAME>_ **\\** _<instance_name>_.  
+ Dabei ist *<SYSTEM_NAME>* der Name des Systems, auf dem sich die Serverinstanz befindet. Für eine nicht standardmäßige Serverinstanz wird auch der Instanzname angezeigt: _<SYSTEM_NAME>_ **\\** _<instance_name>_ .  
   
  *<MIRROR_SERVER>*  
  Der Name des Partners, der derzeit die Spiegelserverinstanz ist. Das Format ist identisch mit dem Format für den Prinzipalserver.  
@@ -74,7 +74,7 @@ ms.locfileid: "62755030"
 ## <a name="detail-pane"></a>Detailbereich  
  Die Darstellung des Monitors ist abhängig davon, ob eine Datenbank ausgewählt ist. Wenn Sie den Monitor öffnen, zeigt der Detailbereich den Link **Gespiegelte Datenbank registrieren** an. Klicken Sie darauf, um eine Datenbank zu registrieren. Registrierte Datenbanken werden unter dem Knoten **Datenbankspiegelungs-Monitor** in der Navigationsstruktur aufgelistet. Der Datenbankspiegelungs-Monitor versucht immer, eine Verbindung mit jeder Serverinstanz herzustellen, für die gespeicherte Anmeldeinformationen vorliegen.  
   
- Wenn Sie eine Datenbank auswählen, wird der Status auf der Seite im Registerformat **Status** im Detailbereich angezeigt. Der Inhalt dieser Seite stammt sowohl von der Prinzipal- als auch von der Spiegelserverinstanz. Die Seite wird asynchron aufgefüllt, wenn Statusinformationen über separate Verbindungen mit der Prinzipal- und der Spiegelserverinstanz gesammelt werden. Der Status wird automatisch in Intervallen von 30 Sekunden aktualisiert.  
+ Wenn Sie eine Datenbank auswählen, wird der Status auf der Seite im Registerformat **Status** im Detailbereich angezeigt. Der Inhalt dieser Seite stammt sowohl von der Prinzipal- als auch von der Spiegelserverinstanz. Die Seite wird mit den Statusinformationen, die über jeweils separate Verbindungen zur Prinzipalserver- und Spiegelserverinstanz gesammelt werden, asynchron gefüllt. Der Status wird automatisch in Intervallen von 30 Sekunden aktualisiert.  
   
 > [!NOTE]  
 >  Sie können die Aktualisierungsrate des Monitors nicht ändern, aber die Statustabelle vom Dialogfeld **Datenbankspiegelungsverlauf** aus aktualisieren.  
@@ -98,12 +98,12 @@ ms.locfileid: "62755030"
 |**Registrierung für diese Datenbank aufheben**|Entfernt die ausgewählte Datenbank aus dem Datenbankspiegelungs-Monitor.|  
 |**Schwellenwerte für Warnung festlegen...**|Öffnet das Dialogfeld **Schwellenwerte für Warnung festlegen** . In diesem Dialogfeld kann ein Systemadministrator Warnungen für die Datenbank auf jedem der Partner aktivieren oder deaktivieren und den Schwellenwert jeder Warnung ändern. Es ist empfehlenswert, einen Schwellenwert für eine bestimmte Warnung auf beiden Partnern festzulegen, um sicherzustellen, dass die Warnung weiterhin angezeigt wird, wenn ein Failover der Datenbank erfolgt. Der geeignete Schwellenwert für jeden Partner ist abhängig von der Leistungsfähigkeit des Systems des betreffenden Partners.<br /><br /> Ein Ereignis wird nur dann in das Ereignisprotokoll für eine Leistung geschrieben, sofern der Wert seinen Schwellenwert erreicht oder überschreitet, wenn die Statustabelle aktualisiert wird. Wenn ein Spitzenwert den Schwellenwert vorübergehend zwischen zwei Statusupdates erreicht, wird dieser Spitzenwert nicht erkannt.|  
   
- **So überwachen Sie die Daten Bank Spiegelung mithilfe von SQL Server Management Studio**  
+ **So überwachen Sie die Datenbankspiegelung mithilfe von SQL Server Management Studio**  
   
 -   [Starten des Datenbankspiegelungs-Monitors &#40;SQL Server Management Studio&#41;](../database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Überwachen der Daten Bank Spiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
+ [Überwachen der Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
  [Starten des Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   
   

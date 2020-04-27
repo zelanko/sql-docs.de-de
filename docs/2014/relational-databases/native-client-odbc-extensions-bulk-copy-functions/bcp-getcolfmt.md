@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db8b433652829b16890552a70bd1e0d08d1c1bc4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62689091"
 ---
 # <a name="bcp_getcolfmt"></a>bcp_getcolfmt
@@ -60,7 +60,7 @@ pcbLen
  *Flächen*  
  Die Spaltenzahl, für die die Eigenschaft abgerufen wird.  
   
- *Property*  
+ *property*  
  Eine der Eigenschaftskonstanten.  
   
  *pValue*  
@@ -75,10 +75,10 @@ pcbLen
 ## <a name="returns"></a>Rückgabe  
  SUCCEED oder FAIL.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Spalten Format-Eigenschaftswerte sind im Thema [bcp_setcolfmt](bcp-setcolfmt.md) aufgeführt. Die Spalten Format-Eigenschaftswerte werden durch Aufrufen der **bcp_setcolfmt** -Funktion festgelegt, und die **bcp_getcolfmt** -Funktion wird verwendet, um den Eigenschafts Wert des Spalten Formats zu suchen.  
   
- Verhaltensänderungen werden möglicherweise beim Herstellen einer Verbindung [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] mit einem Server Computer (oder höher) im Vergleich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu früheren Versionen beobachtet. Weitere Informationen finden Sie unter [metadatenermittlung](../native-client/features/metadata-discovery.md).  
+ Verhaltensänderungen werden möglicherweise beim Herstellen einer Verbindung [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] mit einem Server Computer (oder höher) im Vergleich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu früheren Versionen beobachtet. Weitere Informationen finden Sie unter [Metadatenermittlung](../native-client/features/metadata-discovery.md).  
   
 ## <a name="bcp_getcolfmt-support-for-enhanced-date-and-time-features"></a>bcp_getcolfmt-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  
  Die Typen, die mit `BCP_FMT_TYPE` der-Eigenschaft für Datums-/Uhrzeittypen verwendet werden, sind wie in [Massen Kopier Änderungen für verbesserte Datums-und Uhrzeit Typen &#40;OLE DB und ODBC-&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)angegeben.  

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a91d050e489aa782ab10490d294a7fba8c806fe4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62688900"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Strategien zum Sichern und Wiederherstellen einer Mergereplikation
@@ -56,7 +56,7 @@ ms.locfileid: "62688900"
 > [!IMPORTANT]  
 >  Wenn eine Veröffentlichungsdatenbank mit einer Abonnementdatenbank synchronisiert wird, kann es passieren, dass veröffentlichte Tabellen nach dem Wiederherstellen aus der Sicherung einen neueren Stand aufweisen als nicht veröffentlichte Tabellen.  
   
- Wenn Sie die Veröffentlichungsdatenbank mit einem Abonnenten synchronisieren, auf dem eine frühere Version von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] als [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] ausgeführt wird, kann das Abonnement nicht anonym sein – es muss sich um ein Clientabonnement oder ein Serverabonnement handeln (in früheren Versionen als lokales Abonnement bzw. globales Abonnement bezeichnet).  
+ Wenn Sie mit einem Abonnenten synchronisieren, auf dem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eine frühere [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]Version von als ausgeführt wird, kann das Abonnement nicht anonym sein. Es muss sich um ein Client Abonnement oder ein Server Abonnement handeln (in früheren Versionen als lokales Abonnement und globale Abonnements bezeichnet).  
   
  Informationen zum Synchronisieren eines Abonnements finden Sie unter [Synchronize a Push Subscription](../synchronize-a-push-subscription.md) und [Synchronize a Pull Subscription](../synchronize-a-pull-subscription.md).  
   

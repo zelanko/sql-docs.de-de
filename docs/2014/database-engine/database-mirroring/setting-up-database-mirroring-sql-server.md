@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c6b7fcdc3f50b941feac4958daa6dad49fde9eac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754455"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>Einrichten der Datenbankspiegelung (SQL Server)
@@ -27,7 +27,7 @@ ms.locfileid: "62754455"
   
  
   
-##  <a name="PrepareInstances"></a> Vorbereiten einer Serverinstanz zum Hosten eines Spiegelservers  
+##  <a name="preparing-a-server-instance-to-host-a-mirror-server"></a><a name="PrepareInstances"></a> Vorbereiten einer Serverinstanz zum Hosten eines Spiegelservers  
  Für jede Datenbank-Spiegelungssitzung gilt:  
   
 1.  Prinzipalserver, Spiegelserver und Zeuge müssen ggf. von separaten Serverinstanzen gehostet werden, die auf getrennten Hostsystemen ausgeführt werden. Jede der Serverinstanzen erfordert einen Datenbankspiegelungs-Endpunkt. Wenn Sie einen Datenbankspiegelungs-Endpunkt erstellen müssen, stellen Sie sicher, dass die anderen Serverinstanzen darauf zugreifen können.  
@@ -48,7 +48,7 @@ ms.locfileid: "62754455"
   
 3.  Legen Sie auf der Serverinstanz, auf der die Spiegeldatenbank gehostet wird, die übrigen Umgebungseinstellungen fest, die für die gespiegelte Datenbank erforderlich sind. Weitere Informationen finden Sie unter [Verwalten von Metadaten beim Bereitstellen einer Datenbank auf einer anderen Serverinstanz &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
-##  <a name="EstablishUsingWinAuthentication"></a> Übersicht: Einrichten einer Datenbank-Spiegelungssitzung  
+##  <a name="overview-establishing-a-database-mirroring-session"></a><a name="EstablishUsingWinAuthentication"></a> Übersicht: Einrichten einer Datenbank-Spiegelungssitzung  
  Die grundlegenden Schritte zum Einrichten einer Spiegelungssitzung lauten wie folgt:  
   
 1.  Erstellen Sie die Spiegeldatenbank, indem Sie die folgenden Sicherungen mithilfe von RESTORE WITH NORECOVERY für jeden Wiederherstellungsvorgang wiederherstellen:  
@@ -99,7 +99,7 @@ ms.locfileid: "62754455"
   
  
   
-##  <a name="InThisSection"></a> In diesem Abschnitt  
+##  <a name="in-this-section"></a><a name="InThisSection"></a> In diesem Abschnitt  
  [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)  
  Fasst die Schritte zum Erstellen einer Spiegeldatenbank oder zum Vorbereiten einer Spiegeldatenbank vor dem Fortsetzen einer angehaltenen Sitzung zusammen. Darüber hinaus werden Links zu Themen zur Vorgehensweise bereitgestellt.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "62754455"
  [Einrichten von Anmeldekonten für die Daten Bank Spiegelung oder AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](set-up-login-accounts-database-mirroring-always-on-availability.md)  
  Beschreibt, wie eine Anmeldung für eine Remoteserverinstanz erstellt wird, die ein anderes Konto als die lokale Serverinstanz verwendet.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **SQL Server Management Studio**  
   
 -   [Starten des Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
@@ -146,7 +146,7 @@ ms.locfileid: "62754455"
   
  **Transact-SQL/SQL Server Management Studio**  
   
--   [Minimieren der Ausfallzeit von gespiegelten Datenbanken beim Aktualisieren von Serverinstanzen](upgrading-mirrored-instances.md)  
+-   [Vorgehensweise: Minimieren der Ausfallzeit von gespiegelten Datenbanken beim Aktualisieren von Serverinstanzen](upgrading-mirrored-instances.md)  
   
 -   [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)  
   

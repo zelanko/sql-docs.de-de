@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: bfc7cc16c9751ebdf64a8e9cd110547255c944ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62626047"
 ---
 # <a name="monitor-and-enforce-best-practices-by-using-policy-based-management"></a>Überwachen und Erzwingen von Best Practices mit der richtlinienbasierten Verwaltung
@@ -61,8 +61,8 @@ ms.locfileid: "62626047"
 |Gerätetreiber-Steuerungsfehler im Windows-Ereignisprotokoll|[Gerätetreiber-Steuerungsfehler](device-driver-control-error.md)|  
 |Fehler "Gerät nicht bereit" im Windows-Ereignisprotokoll|[Fehler 'Gerät nicht bereit'](device-not-ready-error.md)|  
 |Fehler aufgrund fehlerhafter E/A-Anforderung im Windows-Ereignisprotokoll|[Fehlerhafte Eingabe Ausgabeanforderung ermitteln](detect-failed-input-and-output-requests.md)|  
-|E/A-Verzögerungswarnung im Windows-Ereignisprotokoll|[Überprüfen des Datenträger-E/A-Subsystems auf E/A-Verzögerungen](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
-|E/A-Fehler im Windows-Ereignisprotokoll während eines Hardwareseitenfehlers|[Eingabe- und Ausgabefehler während eines Hardwareseitenfehlers](input-and-output-error-during-hard-page-fault.md)|  
+|E/A-Verzögerungswarnung im Windows-Ereignisprotokoll|[Check Disk Input and Output Subsystem for IO Delay Problems](check-disk-input-and-output-subsystem-for-io-delay-problems.md)|  
+|E/A-Fehler im Windows-Ereignisprotokoll während eines Hardwareseitenfehlers|[Input and Output Error During Hard Page Fault](input-and-output-error-during-hard-page-fault.md)|  
 |Fehler beim erneuten Leseversuch im Windows-Ereignisprotokoll|[Überprüfen des Datenträger-E/A-Subsystems auf Lesewiederholungsprobleme](check-disk-input-output-subsystem-for-read-retry-problems.md)|  
 |E/A-Timeoutfehler des Speichersystems im Windows-Ereignisprotokoll|[Speichersystem – E/A-Timeout](storage-system-input-output-time-out.md)|  
 |Fehler aufgrund eines Systemfehlers im Windows-Ereignisprotokoll|[Unerwartete Systemfehler](unexpected-system-failures.md)|  

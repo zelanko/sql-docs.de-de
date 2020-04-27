@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: be03754ea8eeb61d838357667da6e37e1be6bc31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62626150"
 ---
 # <a name="sql-server-replication"></a>SQL Server-Replikation
@@ -38,7 +38,7 @@ Informationen zur Abwärtskompatibilität finden Sie unter [Abwärtskompatibilit
  ## <a name="replication-security"></a>Replikationssicherheit
   
 -   [Anzeigen und Ändern von Replikations Sicherheitseinstellungen](security/view-and-modify-replication-security-settings.md)  
--   [Verwalten von Anmeldungen in der Veröffentlichungs Zugriffsliste](security/manage-logins-in-the-publication-access-list.md)  
+-   [Verwalten von Anmeldungen in der Veröffentlichungszugriffsliste](security/manage-logins-in-the-publication-access-list.md)  
   
 ## <a name="publishing-and-distribution"></a>Veröffentlichung und Verteilung  
   
@@ -54,7 +54,7 @@ Informationen zur Abwärtskompatibilität finden Sie unter [Abwärtskompatibilit
 -   [Anzeigen und Ändern von Artikeleigenschaften](publish/view-and-modify-article-properties.md)    
 -   [Löschen einer Veröffentlichung](publish/delete-a-publication.md)   
 -   [Löschen eines Artikels](publish/delete-an-article.md)    
--   [Erstellen einer Veröffentlichung aus einer Oracle Database](publish/create-a-publication-from-an-oracle-database.md)   
+-   [Erstellen einer Veröffentlichung aus einer Oracle-Datenbank](publish/create-a-publication-from-an-oracle-database.md)   
 -   [Festlegen des Ablaufdatums für Abonnements](publish/set-the-expiration-period-for-subscriptions.md)  
 -   [Angeben von Schema Optionen](publish/specify-schema-options.md)  
 -   [Replizieren von Schema Änderungen](publish/replicate-schema-changes.md)    
@@ -68,7 +68,7 @@ Informationen zur Abwärtskompatibilität finden Sie unter [Abwärtskompatibilit
   
 ### <a name="filter-data"></a>Filtern von Daten  
   
--   [Definieren und Ändern eines Spalten Filters](publish/define-and-modify-a-column-filter.md)    
+-   [Definieren und Ändern eines Spaltenfilters](publish/define-and-modify-a-column-filter.md)    
 -   [Definieren und Ändern eines statischen Zeilen Filters](publish/define-and-modify-a-static-row-filter.md)    
 -   [Definieren und Ändern eines parametrisierten Zeilenfilters für einen Mergeartikel](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
 -   [Optimieren von parametrisierten Zeilen filtern](publish/optimize-parameterized-row-filters.md)    
@@ -77,13 +77,13 @@ Informationen zur Abwärtskompatibilität finden Sie unter [Abwärtskompatibilit
 ### <a name="transactional-replication-options"></a>Transaktionsreplikationsoptionen  
   
 -   [Festlegen der Propagierungsmethode für Datenänderungen an Transaktionsartikeln](publish/set-the-propagation-method-for-data-changes-to-transactional-articles.md)    
--   [Aktivieren des Aktualisierens von Abonnements für Transaktions Veröffentlichungen](publish/enable-updating-subscriptions-for-transactional-publications.md)  
+-   [Aktivieren des Aktualisierens von Abonnements für Transaktionsveröffentlichungen](publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
 ### <a name="merge-replication-options"></a>Mergereplikationsoptionen  
   
--   [Define a Logical Record Relationship Between Merge Table Articles](publish/define-a-logical-record-relationship-between-merge-table-articles.md)    
+-   [Definieren einer logische Datensatzbeziehung zwischen Mergetabellenartikeln](publish/define-a-logical-record-relationship-between-merge-table-articles.md)    
 -   [Eigenschaften für Mergereplikation angeben](publish/specify-merge-replication-properties.md)    
--   [Angeben eines mergeartikelresolvers](publish/specify-a-merge-article-resolver.md)    
+-   [Angeben eines Mergeartikelkonfliktlösers](publish/specify-a-merge-article-resolver.md)    
 
   
 ## <a name="manage-subscriptions"></a>Verwalten von Abonnements  
@@ -100,7 +100,7 @@ Informationen zur Abwärtskompatibilität finden Sie unter [Abwärtskompatibilit
   
 ## <a name="synchronize-subscriptions"></a>Synchronisieren von Abonnements  
   
--   [Erstellen und Anwenden der Anfangs Momentaufnahme](create-and-apply-the-initial-snapshot.md)   
+-   [Erstellen und Anwenden der Anfangsmomentaufnahme](create-and-apply-the-initial-snapshot.md)   
 -   [Erstellen einer Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern](create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)    
 -   [Initialisieren eines Transaktionsabonnements von einer Sicherung](initialize-a-transactional-subscription-from-a-backup.md)    
 -   [Manuelles Initialisieren eines Abonnements](initialize-a-subscription-manually.md)    
@@ -109,7 +109,7 @@ Informationen zur Abwärtskompatibilität finden Sie unter [Abwärtskompatibilit
 -   [Erneutes Initialisieren eines Abonnements](reinitialize-a-subscription.md)    
 -   [Ausführen von Skripts während der Synchronisierung](execute-scripts-during-synchronization-replication-transact-sql-programming.md)    
 -   [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](implement-a-business-logic-handler-for-a-merge-article.md)  
--   [Debuggen eines Geschäftslogikhandlers (Replikationsprogrammierung)](debug-a-business-logic-handler-replication-programming.md)    
+-   [Debuggen eines Geschäftslogikhandlers &#40;Replikationsprogrammierung&#41;](debug-a-business-logic-handler-replication-programming.md)    
 -   [Steuern des Verhaltens von Triggern und Einschränkungen während der Synchronisierung](control-behavior-of-triggers-and-constraints-in-synchronization.md)    
 -   [Implementieren eines benutzerdefinierten Konfliktlösers für einen Mergeartikel](implement-a-custom-conflict-resolver-for-a-merge-article.md)  
   
@@ -131,7 +131,7 @@ Informationen zur Abwärtskompatibilität finden Sie unter [Abwärtskompatibilit
 ## <a name="monitor"></a>Überwachen
   
 -   [Zulassen, dass Nichtadministratoren den Replikationsmonitor verwenden](monitor/allow-non-administrators-to-use-replication-monitor.md)    
--   [Programmgesteuertes Überwachen der Replikation](monitor/programmatically-monitor-replication.md)    
+-   [Programmgesteuerte Überwachen der Replikation](monitor/programmatically-monitor-replication.md)    
 -   [Anzeigen replizierter Befehle und anderer Informationen in der Verteilungs Datenbank](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
 -   [Anzeigen von Konfliktinformationen für Mergepublikationen](view-conflict-information-for-merge-publications.md) 
 -   [Messen der Latenzzeit und Überprüfen der Verbindungen bei Transaktionsreplikationen](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  

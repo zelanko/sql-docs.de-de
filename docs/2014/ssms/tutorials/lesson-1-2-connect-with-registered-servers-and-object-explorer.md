@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 374d75c18adc091eaf6a01ae1164a529a34accee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62636424"
 ---
 # <a name="connect-with-registered-servers-and-object-explorer"></a>Herstellen einer Verbindung mit registrierten Servern und dem Objekt-Explorer
@@ -37,7 +37,7 @@ ms.locfileid: "62636424"
   
 5.  Geben Sie im Feld **Name des registrierten Servers** den Namen [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]ein.  
   
-6.  Wählen Sie **** **** auf der Registerkarte Verbindungs Eigenschaften in der Liste Verbindung mit Datenbank herstellen die Option **Server durchsuchen... >aus. \< **  
+6.  Wählen Sie **Connection Properties** **Connect to database** auf der Registerkarte Verbindungs Eigenschaften in der Liste Verbindung mit Datenbank herstellen die Option **Server durchsuchen... >aus. \< **  
   
 7.  Klicken Sie im Dialogfeld **Nach Datenbanken suchen** auf **Ja**.  
   

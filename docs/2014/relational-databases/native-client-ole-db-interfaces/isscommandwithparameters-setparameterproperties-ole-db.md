@@ -1,5 +1,5 @@
 ---
-title: 'ISSCommandWithParameters:: SetParameterProperties (OLE DB) | Microsoft-Dokumentation'
+title: ISSCommandWithParameters::SetParameterProperties (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 778021ce007f0c1eac68197e0c07e2cb7b0bb001
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638771"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>'ISSCommandWithParameters::SetParameterProperties' (OLE DB)
@@ -36,7 +36,7 @@ SSPARAMPROPS rgParamProperties[]);
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *cparameams*[in]  
+ *cParams*[in]  
  Die Anzahl der SSPARAMPROPS-Strukturen im *rgParamProperties*-Array. Wenn diese Zahl 0 (NULL `ISSCommandWithParameters::SetParameterProperties` ) ist, werden alle Eigenschaften gelöscht, die möglicherweise für Parameter im Befehl angegeben wurden.  
   
  *rgParamProperties*[in]  
@@ -45,7 +45,7 @@ SSPARAMPROPS rgParamProperties[]);
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  Die `ISSCommandWithParameters::SetParameterProperties` -Methode gibt dieselben Fehlercodes zurück wie die Core-OLE DB **ICommandProperties:: SetProperties** -Methode.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Das Festlegen von Parameter Eigenschaften mit dieser Methode ist für eine Parameter Basis nach Ordinalzahl oder mit einem einzelnen `ISSCommandWithParameters::SetParameterProperties` -Befehl zulässig, sobald ssparamproperties aus dem Eigenschafts Array erstellt wurde.  
   
  Die **SetParameterInfo** -Methode muss aufgerufen werden, bevor `ISSCommandWithParameters::SetParameterProperties` die-Methode aufgerufen wird. Durch Aufrufen von `SetParameterProperties(0, NULL)` werden alle angegebenen Parametereigenschaften gelöscht, während der Aufruf von `SetParameterInfo(0,NULL,NULL)` alle Parameterinformationen löscht, einschließlich Eigenschaften, die einem Parameter zugeordnet sind.  
@@ -70,15 +70,15 @@ SSPARAMPROPS rgParamProperties[]);
   
  `};`  
   
- Verbesserungen in der Datenbank- [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Engine, beginnend mit "ISSCommandWithParameters:: SetParameterProperties", um genauere Beschreibungen der erwarteten Ergebnisse zu erhalten. Diese präziseren Ergebnisse können sich von den Werten unterscheiden, die von ISSCommandWithParameters:: SetParameterProperties in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]früheren Versionen von zurückgegeben wurden. Weitere Informationen finden Sie unter [metadatenermittlung](../native-client/features/metadata-discovery.md).  
+ Verbesserungen an der Datenbank-Engine ab [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] ermöglichen das Abrufen genauerer Beschreibungen der erwarteten Ergebnisse durch ISSCommandWithParameters::SetParameterProperties. Diese genaueren Ergebnisse unterscheiden sich möglicherweise von den Werten, die in früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von SSCommandWithParameters::SetParameterProperties zurückgegeben wurden. Weitere Informationen finden Sie unter [Metadatenermittlung](../native-client/features/metadata-discovery.md).  
   
-|Mitglied|BESCHREIBUNG|  
+|Member|Beschreibung|  
 |------------|-----------------|  
 |*iOrdinal*|Die Ordnungszahl des übergebenen Parameters|  
-|*cpropertysets*|Die Anzahl von DBPROPSET-Strukturen in *rgPropertySets*|  
+|*cPropertySets*|Die Anzahl von DBPROPSET-Strukturen in *rgPropertySets*|  
 |*rgPropertySets*|Ein Zeiger auf den Speicher, in den ein Array aus DBPROPSET-Strukturen zurückgegeben werden soll|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [' ISSCommandWithParameters ' &#40;OLE DB&#41;](isscommandwithparameters-ole-db.md)  
+ [ISSCommandWithParameters &#40;OLE DB&#41;](isscommandwithparameters-ole-db.md)  
   
   

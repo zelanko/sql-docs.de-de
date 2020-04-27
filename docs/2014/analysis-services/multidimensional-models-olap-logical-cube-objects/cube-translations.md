@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c34024f61f5c7b42030e0acb848783e1acae3d6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62728502"
 ---
 # <a name="cube-translations"></a>Cubeübersetzungen
@@ -29,8 +29,7 @@ ms.locfileid: "62728502"
   
  Ein einfaches <xref:Microsoft.AnalysisServices.Translation>-Objekt besteht aus: Sprach-ID-Nummer und übersetzter Beschriftung. Die Sprach-ID-Nummer ist eine `Integer`, die die Sprach-ID enthält. Die übersetzte Beschriftung ist der übersetzte Text.  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ist eine Cube-Übersetzung eine sprachspezifische Darstellung des Namens eines Cube-Objekts, z. b. eine Beschriftung oder ein Anzeige Ordner. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt auch Übersetzungen von Dimensions- und Elementnamen.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ist eine Cube-Übersetzung eine sprachspezifische Darstellung des Namens eines Cube-Objekts, z. b. eine Beschriftung oder ein Anzeige Ordner. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt auch Übersetzungen von Dimensions- und Elementnamen.  
   
  Übersetzungen bieten Serverunterstützung für Clientanwendungen, die mehrere Sprachen unterstützen können. Es kommt häufig vor, dass Cubedaten von Benutzern aus unterschiedlichen Ländern angezeigt werden. Es ist nützlich, verschiedene Elemente eines Cubes in eine andere Sprache übersetzen zu können, damit diese Benutzer die Metadaten des Cubes anzeigen und verstehen können. So kann beispielsweise ein Anwender des Produkts im geschäftlichen Bereich in Frankreich über eine Arbeitsstation mit einer französischen Gebietsschemaeinstellung auf einen Cube zugreifen und die Objekteigenschaftswerte auf Französisch anzeigen. Ein Anwender des Produkts im geschäftlichen Bereich in Deutschland wiederum kann über eine Arbeitsstation mit einer deutschen Gebietsschemaeinstellung auf denselben Cube zugreifen und die Objekteigenschaftswerte auf Deutsch anzeigen.  
   
@@ -39,6 +38,6 @@ ms.locfileid: "62728502"
 ## <a name="see-also"></a>Weitere Informationen  
  [Dimensions Übersetzungen](../multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   
  [Übersetzungen &#40;Analysis Services&#41;](../translations-analysis-services.md)   
- [Globalisierungs Tipps und bewährte Methoden &#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
+ [Tipps und Best Practices für die Globalisierung &#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
   
   

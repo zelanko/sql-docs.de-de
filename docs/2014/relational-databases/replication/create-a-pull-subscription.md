@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f8868957d7c479de3a51a599deed42c34d6676eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721592"
 ---
 # <a name="create-a-pull-subscription"></a>Create a Pull Subscription
@@ -29,7 +29,7 @@ ms.locfileid: "62721592"
  Das Einrichten eines Pullabonnements für die P2P-Replikation ist mit einem Skript möglich, aber nicht über den Assistenten.  
   
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Erstellen Sie mit dem Assistenten für neue Abonnements ein Pullabonnement auf dem Verleger oder dem Abonnenten. Folgen Sie den Seiten im Assistenten für folgende Aufgaben:  
   
 -   Angeben des Verlegers und der Veröffentlichung.  
@@ -56,7 +56,7 @@ ms.locfileid: "62721592"
   
 #### <a name="to-create-a-pull-subscription-from-the-publisher"></a>So erstellen Sie ein Pullabonnement auf dem Verleger  
   
-1.  Stellen Sie in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit dem Verleger her, und erweitern Sie dann den Server Knoten.  
+1.  Stellen Sie in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] eine Verbindung mit dem Herausgeber her, und erweitern Sie den Serverknoten.  
   
 2.  Erweitern Sie den Ordner **Replikation** , und erweitern Sie dann den Ordner **Lokale Veröffentlichungen** .  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62721592"
   
 3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Lokale Abonnements** , und klicken Sie dann auf **Neue Abonnements**.  
   
-4.  Wählen Sie im Assistenten für neue Abonnements auf der Seite **Veröffentlichung** in der Dropdownliste **Verleger\< die Option ****SQL Server-Verleger suchen>\< oder ****Oracle-Verleger suchen>** aus.  
+4.  Wählen Sie im Assistenten für neue Abonnements auf der Seite **Veröffentlichung** in der Dropdownliste **Verleger\< die Option** **SQL Server-Verleger suchen>\< oder** **Oracle-Verleger suchen>** aus.  
   
 5.  Stellen Sie im Dialogfeld **Verbindung mit Server herstellen** eine Verbindung mit dem Verleger her.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62721592"
   
 7.  Schließen Sie die Seiten im Assistenten für neue Abonnements ab.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Pullabonnements können mithilfe von gespeicherten Replikationsprozeduren programmgesteuert erstellt werden. Die verwendeten gespeicherten Prozeduren hängen vom Typ der Veröffentlichung ab, zu der das Abonnement gehört.  
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>So erstellen Sie ein Pullabonnement für eine Momentaufnahme- oder Transaktionsveröffentlichung  
@@ -106,7 +106,7 @@ ms.locfileid: "62721592"
   
     -   Einen Zeitplan für den Verteilungs-Agentauftrag für dieses Abonnement. Weitere Informationen finden Sie unter [Angeben von Synchronisierungszeitplänen](specify-synchronization-schedules.md).  
   
-4.  Führen Sie auf dem Verleger [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) aus, um das Pullabonnement zu registrieren. Geben **@publication**Sie **@subscriber**, und **@destination_db**an. Geben Sie den Wert **pull** für **@subscription_type**.  
+4.  Führen Sie auf dem Verleger [sp_addsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) aus, um das Pullabonnement zu registrieren. Geben **@publication**Sie **@subscriber**, und **@destination_db**an. Geben Sie für **pull** den Wert **@subscription_type**.  
   
 #### <a name="to-create-a-pull-subscription-to-a-merge-publication"></a>So erstellen Sie ein Pullabonnement für eine Mergeveröffentlichung  
   
@@ -122,7 +122,7 @@ ms.locfileid: "62721592"
   
     -   **@subscription_priority**: Geben Sie eine Priorität für das Abonnement an (**0,00** bis **99,99**). Dies ist nur für Serverabonnements erforderlich.  
   
-         Weitere Informationen finden Sie unter [Erweiterte Konflikterkennung und-Lösung bei der Mergereplikation](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
+         Weitere Informationen finden Sie unter [Erweiterte Konflikterkennung und -lösung bei der Mergereplikation](merge/advanced-merge-replication-conflict-detection-and-resolution.md)angegeben wird.  
   
 3.  Führen Sie auf dem Abonnenten [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) aus. Geben Sie die folgenden Parameter an:  
   
@@ -141,7 +141,7 @@ ms.locfileid: "62721592"
   
 4.  Führen Sie auf dem Verleger [sp_addmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) aus. Geben **@publication**Sie **@subscriber**, **@subscriber_db**, und den Wert **Pull** für an **@subscription_type**. Damit wird das Pullabonnement registriert.  
   
-###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Beispiele (Transact-SQL)  
  Im folgenden Beispiel wird ein Pullabonnement für eine Transaktionsveröffentlichung erstellt. Der erste Batch wird auf dem Abonnenten ausgeführt, und der zweite Batch wird auf dem Verleger ausgeführt. Die Werte für den Anmeldenamen und das Kennwort werden zur Laufzeit mithilfe von sqlcmd-Skriptvariablen bereitgestellt.  
   
  [!code-sql[HowTo#sp_addtranpullsubscriptionagent](../../snippets/tsql/SQL15/replication/howto/tsql/createtranpullsub.sql#sp_addtranpullsubscriptionagent)]  
@@ -154,7 +154,7 @@ ms.locfileid: "62721592"
   
  [!code-sql[HowTo#sp_addmergepullsubscription](../../snippets/tsql/SQL15/replication/howto/tsql/createmergepullsub.sql#sp_addmergepullsubscription)]  
   
-##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
  Die RMO-Klassen, die zum Erstellen eines Pullabonnements verwendet werden, richten sich nach dem Typ der Veröffentlichung, zu der das Abonnement gehört.  
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>So erstellen Sie ein Pullabonnement für eine Momentaufnahme- oder Transaktionsveröffentlichung  
@@ -167,7 +167,7 @@ ms.locfileid: "62721592"
   
 4.  Führen Sie ein bitweises logisches AND (`&` in Visual C# und `And` in Visual Basic) zwischen der <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>-Eigenschaft und <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull> aus. Falls das Ergebnis <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None> lautet, legen Sie für <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> das Ergebnis eines bitweisen logischen OR (`|` in Visual C# und `Or` in Visual Basic) zwischen <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> und <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull> fest. Rufen Sie dann <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> auf, um Pullabonnements zu ermöglichen.  
   
-5.  Falls die Abonnementdatenbank nicht vorhanden ist, erstellen Sie sie mithilfe der <xref:Microsoft.SqlServer.Management.Smo.Database> -Klasse. Weitere Informationen finden Sie unter [erstellen, ändern und Entfernen von Datenbanken](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
+5.  Falls die Abonnementdatenbank nicht vorhanden ist, erstellen Sie sie mithilfe der <xref:Microsoft.SqlServer.Management.Smo.Database> -Klasse. Weitere Informationen finden Sie unter [Erstellen, Ändern und Löschen von Datenbanken](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
 6.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransPullSubscription>-Klasse.  
   
@@ -186,8 +186,7 @@ ms.locfileid: "62721592"
     -   Die Felder <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> und <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> oder <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> von <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>, um die Anmeldeinformationen für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto bereitzustellen, unter dem der Verteilungs-Agent auf dem Abonnenten ausgeführt wird. Mit diesem Konto werden lokale Verbindungen mit dem Abonnenten sowie Remoteverbindungen mithilfe der Windows-Authentifizierung hergestellt.  
   
         > [!NOTE]  
-        >  
-  <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> muss zwar nicht festgelegt werden, wenn das Abonnement von einem Mitglied der festen Serverrolle `sysadmin` erstellt wurde, aber es empfiehlt sich. In diesem Fall nimmt der Agent die Identität des SQL Server-Agent-Kontos an. Weitere Informationen finden Sie unter [Sicherheitsmodell des Replikations-Agents](security/replication-agent-security-model.md).  
+        >  <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> muss zwar nicht festgelegt werden, wenn das Abonnement von einem Mitglied der festen Serverrolle `sysadmin` erstellt wurde, aber es empfiehlt sich. In diesem Fall nimmt der Agent die Identität des SQL Server-Agent-Kontos an. Weitere Informationen finden Sie unter [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
     -   (Optional) Den Wert `true` für <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A>, um einen Agentauftrag zu erstellen, mit dem das Abonnement synchronisiert wird. Wenn Sie `false` angeben (Standard), kann das Abonnement nur programmgesteuert synchronisiert werden, und Sie müssen zusätzliche Eigenschaften für <xref:Microsoft.SqlServer.Replication.TransSynchronizationAgent> angeben, wenn Sie von der <xref:Microsoft.SqlServer.Replication.TransPullSubscription.SynchronizationAgent%2A>-Eigenschaft auf dieses Objekt zugreifen. Weitere Informationen finden Sie unter [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
@@ -210,7 +209,7 @@ ms.locfileid: "62721592"
   
 4.  Führen Sie ein bitweises logisches AND (`&` in Visual C# und `And` in Visual Basic) zwischen der <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>-Eigenschaft und <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull> aus. Falls das Ergebnis <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None> lautet, legen Sie für <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> das Ergebnis eines bitweisen logischen OR (`|` in Visual C# und `Or` in Visual Basic) zwischen <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> und <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPull> fest. Rufen Sie dann <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> auf, um Pullabonnements zu ermöglichen.  
   
-5.  Falls die Abonnementdatenbank nicht vorhanden ist, erstellen Sie sie mithilfe der <xref:Microsoft.SqlServer.Management.Smo.Database> -Klasse. Weitere Informationen finden Sie unter [erstellen, ändern und Entfernen von Datenbanken](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
+5.  Falls die Abonnementdatenbank nicht vorhanden ist, erstellen Sie sie mithilfe der <xref:Microsoft.SqlServer.Management.Smo.Database> -Klasse. Weitere Informationen finden Sie unter [Erstellen, Ändern und Löschen von Datenbanken](../server-management-objects-smo/tasks/creating-altering-and-removing-databases.md).  
   
 6.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.MergePullSubscription>-Klasse.  
   
@@ -229,8 +228,7 @@ ms.locfileid: "62721592"
     -   Die Felder <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> und <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> oder <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> von <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>, um die Anmeldeinformationen für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto bereitzustellen, unter dem der Merge-Agent auf dem Abonnenten ausgeführt wird. Mit diesem Konto werden lokale Verbindungen mit dem Abonnenten sowie Remoteverbindungen mithilfe der Windows-Authentifizierung hergestellt.  
   
         > [!NOTE]  
-        >  
-  <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> muss zwar nicht festgelegt werden, wenn das Abonnement von einem Mitglied der festen Serverrolle `sysadmin` erstellt wurde, aber es empfiehlt sich. In diesem Fall nimmt der Agent die Identität des SQL Server-Agent-Kontos an. Weitere Informationen finden Sie unter [Sicherheitsmodell des Replikations-Agents](security/replication-agent-security-model.md).  
+        >  <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A> muss zwar nicht festgelegt werden, wenn das Abonnement von einem Mitglied der festen Serverrolle `sysadmin` erstellt wurde, aber es empfiehlt sich. In diesem Fall nimmt der Agent die Identität des SQL Server-Agent-Kontos an. Weitere Informationen finden Sie unter [Replication Agent Security Model](security/replication-agent-security-model.md).  
   
     -   (Optional) Den Wert `true` für <xref:Microsoft.SqlServer.Replication.PullSubscription.CreateSyncAgentByDefault%2A>, um einen Agentauftrag zu erstellen, mit dem das Abonnement synchronisiert wird. Wenn Sie `false` angeben (Standard), kann das Abonnement nur programmgesteuert synchronisiert werden, und Sie müssen zusätzliche Eigenschaften für <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent> angeben, wenn Sie von der <xref:Microsoft.SqlServer.Replication.MergePullSubscription.SynchronizationAgent%2A>-Eigenschaft auf dieses Objekt zugreifen. Weitere Informationen finden Sie unter [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md).  
   
@@ -242,7 +240,7 @@ ms.locfileid: "62721592"
   
 9. Rufen Sie mit der Instanz der <xref:Microsoft.SqlServer.Replication.MergePublication> -Klasse aus Schritt 2 die <xref:Microsoft.SqlServer.Replication.MergePublication.MakePullSubscriptionWellKnown%2A> -Methode auf, um das Pullabonnement beim Verleger zu registrieren. Wenn diese Registrierung bereits vorhanden ist, tritt eine Ausnahme auf.  
   
-###  <a name="PShellExample"></a>Beispiel (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> Beispiel (RMO)  
  Im folgenden Beispiel wird ein neues Pullabonnement für eine Transaktionsveröffentlichung erstellt. Die Anmeldeinformationen für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto, mit dem der Verteilungs-Agentauftrag erstellt wird, werden zur Laufzeit übergeben.  
   
  [!code-csharp[HowTo#rmo_CreateTranPullSub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createtranpullsub)]  
@@ -268,9 +266,9 @@ ms.locfileid: "62721592"
  [!code-vb[HowTo#rmo_vb_CreateMergePullSub_WebSync](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergepullsub_websync)]  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Replikationsverwaltungsobjekte Konzepte](concepts/replication-management-objects-concepts.md)   
- [Eigenschaften von Pullabonnements anzeigen und ändern](view-and-modify-pull-subscription-properties.md)   
- [Websynchronisierung konfigurieren](configure-web-synchronization.md)   
+ [Replication Management Objects Concepts](concepts/replication-management-objects-concepts.md)   
+ [Anzeigen und Ändern der Eigenschaften von Pullabonnements](view-and-modify-pull-subscription-properties.md)   
+ [Konfigurieren der Websynchronisierung](configure-web-synchronization.md)   
  [Abonnieren von Veröffentlichungen](subscribe-to-publications.md)   
  [Bewährte Methoden für die Replikationssicherheit](security/replication-security-best-practices.md)  
   

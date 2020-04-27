@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ffb9c242b30c3b0ddfc1cadae20ea261c616475b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62767902"
 ---
 # <a name="performing-operation-sql-server-import-and-export-wizard"></a>Vorgang wird ausgeführt (SQL Server-Import/Export-Assistent)
@@ -26,7 +26,7 @@ ms.locfileid: "62767902"
   
  Mit dem SQL Server-Import/Export-Assistenten werden Daten aus einer Quelle in ein Ziel kopiert. Mit dem Assistenten können auch eine Zieldatenbank und Zieltabellen erstellt werden. Wenn Sie jedoch mehrere Datenbanken, Tabellen oder andere Datenbankobjekte kopieren müssen, verwenden Sie stattdessen den Assistenten zum Kopieren von Datenbanken. Weitere Informationen finden Sie unter [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Aktion**  
  Zeigt alle Aktionen an, die Teil des Vorgangs sind.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62767902"
  **Beenden**  
  Mit der Schaltfläche **Beenden** können Sie den Vorgang ggf. unterbrechen.  
   
- **Report**  
+ **Bericht**  
  Mit dieser Option können Sie einen Bericht mit den Ergebnissen anzeigen, den Bericht in einer Datei speichern, den Bericht in die Zwischenablage kopieren oder den Bericht per E-Mail versenden.  
   
   

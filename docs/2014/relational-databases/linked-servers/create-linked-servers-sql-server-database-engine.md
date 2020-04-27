@@ -18,33 +18,33 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a288f5c9f42e282694b864e4493d02dcd6cfa3a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62743492"
 ---
 # <a name="create-linked-servers-sql-server-database-engine"></a>Erstellen von Verbindungsservern (SQL Server-Datenbank-Engine)
   In diesem Thema wird die Erstellung eines Verbindungsservers und das Zugreifen auf Daten von einem anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]erläutert. Durch Erstellen eines Verbindungsservers können Sie mit Daten aus mehreren Quellen arbeiten. Der Verbindungsserver muss keine weitere Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sein, allerdings ist dies ein gängiges Szenario.  
   
-##  <a name="Background"></a> Hintergrund  
+##  <a name="background"></a><a name="Background"></a> Hintergrund  
  Ein Verbindungsserver ermöglicht den Zugriff auf verteilte, heterogene Abfragen für OLE DB-Datenquellen. Nach der Erstellung eines Verbindungsservers können für den Server verteilte Abfragen ausgeführt werden, und Abfragen können Tabellen von mehreren Datenquellen verknüpfen. Wenn der Verbindungsserver als Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]definiert wird, können remote gespeicherte Prozeduren ausgeführt werden.  
   
  Die Funktionen und erforderlichen Argumente des Verbindungsservers können erheblich abweichen. In diesem Thema werden typische Beispiele aufgeführt, allerdings werden nicht alle Optionen beschrieben. Weitere Informationen finden Sie unter [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql) erläutert.  
   
-##  <a name="Security"></a> Sicherheit  
+##  <a name="security"></a><a name="Security"></a> Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Wenn- [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen verwendet werden `ALTER ANY LINKED SERVER` , ist die-Berechtigung auf dem Server oder die Mitgliedschaft in der festen Server Rolle **festen setupadmin** erforderlich. Bei Verwendung [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] von `CONTROL SERVER` ist die-Berechtigung oder die Mitgliedschaft in der festen Server Rolle **sysadmin** erforderlich.  
   
-##  <a name="Procedures"></a>Erstellen eines Verbindungs Servers  
+##  <a name="how-to-create-a-linked-server"></a><a name="Procedures"></a> So erstellen Sie einen Verbindungsserver  
  Sie können eine der folgenden Anwendungen verwenden:  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-sql-server-management-studio"></a>So erstellen Sie einen Verbindungsserver für eine andere Instanz von SQL Server anhand von SQL Server Management Studio  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62743492"
      **Datenquelle**  
      Geben Sie den Namen der Datenquelle ein, wie er durch den OLE DB-Anbieter interpretiert wird. Wenn Sie eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]herstellen, geben Sie den Instanznamen an.  
   
-     **Anbieter Zeichenfolge**  
+     **Anbieterzeichenfolge**  
      Geben Sie die ProgID des OLE DB-Anbieters ein, die der Datenquelle entspricht. Beispiele für gültige Anbieterzeichenfolgen finden Sie unter [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)erläutert.  
   
      **Location**  
@@ -88,15 +88,15 @@ ms.locfileid: "62743492"
      **Lokale Anmeldung**  
      Gibt die lokale Anmeldung an, mit der eine Verbindung zum Verbindungsserver hergestellt werden kann. Die lokale Anmeldung kann eine Anmeldung sein, die entweder die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung oder eine Windows-authentifizierte Anmeldung verwendet. Verwenden Sie diese Liste, um die Verbindung mit spezifischen Anmeldungen zu beschränken oder einigen Anmeldungen das Herstellen einer Verbindung unter einer anderen Anmeldung zu ermöglichen.  
   
-     **Identität**  
+     **Impersonate**  
      Übergibt den Benutzernamen und das Kennwort von der lokalen Anmeldung an den Verbindungsserver. Bei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung muss eine Anmeldung mit dem genau gleichen Namen und Kennwort auf dem Remoteserver vorhanden sein. Bei Windows-Anmeldungen muss die Anmeldung eine gültige Anmeldung auf dem Verbindungsserver sein.  
   
      Um Identitätswechsel verwenden zu können, muss die Konfiguration die Anforderungen für die Delegierung erfüllen.  
   
-     **Remote Benutzer**  
+     **Remotebenutzer**  
      Verwendet den Remotebenutzer für die Zuordnung von Benutzern, die nicht in **Lokale Anmeldung**definiert sind. Der **Remotebenutzer** muss ein Anmeldename mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung auf dem Remoteserver sein.  
   
-     **Remote Kennwort**  
+     **Remotekennwort**  
      Gibt das Kennwort des Remotebenutzers an.  
   
      **Add (Hinzufügen)**  
@@ -108,13 +108,13 @@ ms.locfileid: "62743492"
      **Nicht durchgeführt**  
      Gibt an, dass für nicht in der Liste definierte Anmeldungen keine Verbindung hergestellt wird.  
   
-     **Ohne Verwendung eines Sicherheits Kontexts**  
+     **Nicht in einem Sicherheitskontext verwendet**  
      Gibt an, dass für nicht in der Liste definierte Anmeldungen eine Verbindung ohne Verwendung eines Sicherheitskontexts hergestellt wird.  
   
-     **Wird mithilfe des aktuellen Sicherheits Kontexts der Anmeldung vorgenommen**  
+     **Im aktuellen Sicherheitskontext der Anmeldung verwendet**  
      Gibt an, dass für nicht in der Liste definierte Anmeldungen eine Verbindung mithilfe des aktuellen Sicherheitskontexts der Anmeldung hergestellt wird. Wenn die Verbindung mit dem lokalen Server mithilfe der Windows-Authentifizierung hergestellt wurde, werden zum Herstellen der Verbindung mit dem Remoteserver Ihre Windows-Anmeldeinformationen verwendet. Wenn die Verbindung mit dem lokalen Server mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung hergestellt wurde, werden zum Herstellen der Verbindung mit dem Remoteserver Anmeldename und Kennwort verwendet. In diesem Fall muss eine Anmeldung mit dem genau gleichen Namen und Kennwort auf dem Remoteserver vorhanden sein.  
   
-     **Mithilfe dieses Sicherheits Kontexts erstellt**  
+     **In folgendem Sicherheitskontext verwendet**  
      Gibt an, dass eine Verbindung mithilfe der Anmeldung und des Kennworts hergestellt wird, die in den Feldern **Remoteanmeldung** und **Mit Kennwort** für nicht in der Liste definierte Anmeldungen angegeben sind. Die Remoteanmeldung muss eine Anmeldung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung auf dem Remoteserver sein.  
   
 5.  Klicken Sie optional auf die Seite **Serveroptionen**  , um Serveroptionen anzuzeigen oder zu bestimmen.  
@@ -130,15 +130,15 @@ ms.locfileid: "62743492"
      **RPC**  
      Aktiviert RPC (Remote Procedure Call, Remoteprozeduraufruf) von dem angegebenen Server.  
   
-     **RPC-Ausgabe**  
+     **RPC Out**  
      Aktiviert RPC zu dem angegebenen Server.  
   
-     **Remote Sortierung verwenden**  
+     **Remotesortierung verwenden**  
      Bestimmt, ob die Sortierung einer Remotespalte oder eines lokalen Servers verwendet wird.  
   
      Wenn True angegeben ist, wird für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquellen die Sortierung der Remotespalten und für Datenquellen, die keine[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquellen sind, die im Sortierungsnamen angegebene Sortierung verwendet.  
   
-     Wenn False angegeben ist, verwenden verteilte Abfragen immer die Standardsortierung des lokalen Servers, während der Sortierungsname und die Sortierung von Remotespalten ignoriert werden. Der Standardwert lautet „false“.  
+     Wenn False angegeben ist, verwenden verteilte Abfragen immer die Standardsortierung des lokalen Servers, während der Sortierungsname und die Sortierung von Remotespalten ignoriert werden. Die Standardeinstellung ist „false“.  
   
      **Sortierungs Name**  
      Gibt den Namen der von der Remotedatenquelle verwendeten Sortierung an, wenn für die Option zum Verwenden der Remotesortierung der Wert True festgelegt ist und es sich bei der Datenquelle nicht um eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquelle handelt. Der Name muss eine von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützte Sortierung sein.  
@@ -147,7 +147,7 @@ ms.locfileid: "62743492"
   
      Der Verbindungsserver muss eine einzige Sortierung unterstützen, die für alle Spalten in diesem Server verwendet wird. Legen Sie diese Option nicht fest, wenn der Verbindungsserver mehrere Sortierungen in einer einzelnen Datenquelle unterstützt oder wenn festgestellt wird, dass die Sortierung des Verbindungsservers nicht mit einer der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sortierungen übereinstimmt.  
   
-     **Verbindungstimeout**  
+     **Verbindungs Timeout**  
      Timeoutwert in Sekunden für das Herstellen einer Verbindung mit einem Verbindungsserver.  
   
      Wenn der Wert 0 beträgt, verwenden Sie den Standardwert von **sp_configure** für die Option [remote login timeout](../../database-engine/configure-windows/configure-the-remote-login-timeout-server-configuration-option.md) .  
@@ -157,7 +157,7 @@ ms.locfileid: "62743492"
   
      Wenn der Wert 0 beträgt, verwenden Sie den Standardwert von **sp_configure** für die Option [Timeout für Remoteabfragen](../../database-engine/configure-windows/configure-the-remote-query-timeout-server-configuration-option.md) .  
   
-     **Herauf Stufung verteilter Transaktionen aktivieren**  
+     **Höherstufung von verteilten Transaktionen aktivieren**  
      Verwenden Sie diese Option, um die Aktionen einer Server-zu-Server-Prozedur durch eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Distributed Transaction Coordinator-Transaktion (MS DTC) zu schützen. Wenn diese Option auf TRUE festgelegt ist und eine remote gespeicherte Prozedur aufgerufen wird, wird eine verteilte Transaktion gestartet und bei MS DTC eingetragen. Weitere Informationen finden Sie unter [sp_serveroption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql)erläutert.  
   
 6.  Klicken Sie auf **OK**.  
@@ -166,8 +166,7 @@ ms.locfileid: "62743492"
   
 -   Um die Optionen anzuzeigen, die der Anbieter zur Verfügung stellt, klicken Sie auf die Seite für die **Anbieteroptionen**.  
   
-     Nicht alle Anbieter verfügen über die gleichen Optionen. Bei einigen Typen von Daten sind z. B. Indizes verfügbar, für einige nicht. Mittels dieses Dialogfelds kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Funktionen des Anbieters verstehen. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert einige allgemeine Datenanbieter; wenn das Produkt, das die Daten bereitstellt, jedoch geändert wird, unterstützt der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installierte Anbieter möglicherweise nicht alle neuesten Funktionen. Die beste Informationsquelle zu den Funktionen des Produkts, das die Daten bereitstellt, ist die Dokumentation für dieses Produkt.  
+     Nicht alle Anbieter verfügen über die gleichen Optionen. Bei einigen Typen von Daten sind z. B. Indizes verfügbar, für einige nicht. Mittels dieses Dialogfelds kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Funktionen des Anbieters verstehen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert einige allgemeine Datenanbieter; wenn das Produkt, das die Daten bereitstellt, jedoch geändert wird, unterstützt der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installierte Anbieter möglicherweise nicht alle neuesten Funktionen. Die beste Informationsquelle zu den Funktionen des Produkts, das die Daten bereitstellt, ist die Dokumentation für dieses Produkt.  
   
      **Dynamischer Parameter**  
      Zeigt an, dass der Anbieter die Parametermarkierungssyntax '?' für parametrisierte Abfragen zulässt. Legen Sie diese Option nur dann fest, wenn der Anbieter die **ICommandWithParameters** -Schnittstelle und ein Fragezeichen (?) als Parametermarkierung unterstützt. Durch diese Option kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parametrisierte Abfragen für den Anbieter ausführen. Die Fähigkeit zur Ausführung parametrisierter Abfragen für den Anbieter kann bei bestimmten Abfragen zu einer verbesserten Leistung führen.  
@@ -179,24 +178,21 @@ ms.locfileid: "62743492"
      Es werden nur OLE DB-Schnittstellen der Ebene 0 mit diesem Anbieter aufgerufen.  
   
      **InProcess zulassen**  
-     
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht, dass der Anbieter als In-Process-Server instanziiert wird. Wenn diese Option nicht festgelegt ist, wird der Anbieter standardmäßig außerhalb des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozesses instanziiert. Durch Instanziieren des Anbieters außerhalb des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozesses wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozess vor Fehlern beim Anbieter geschützt. Wenn der Anbieter außerhalb des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozesses instanziiert wird, sind Updates oder Einfügungen nicht zulässig, die auf Spalten mit langen Daten verweisen (`text`, `ntext`, oder `image`).  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht, dass der Anbieter als In-Process-Server instanziiert wird. Wenn diese Option nicht festgelegt ist, wird der Anbieter standardmäßig außerhalb des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozesses instanziiert. Durch Instanziieren des Anbieters außerhalb des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozesses wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozess vor Fehlern beim Anbieter geschützt. Wenn der Anbieter außerhalb des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozesses instanziiert wird, sind Updates oder Einfügungen nicht zulässig, die auf Spalten mit langen Daten verweisen (`text`, `ntext`, oder `image`).  
   
-     **Nicht transaktive Updates**  
-     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]lässt Updates zu, selbst wenn **itransaktionlocal** nicht verfügbar ist. Wenn diese Option aktiviert ist, sind Updates für den Anbieter nicht wiederherstellbar, da der Anbieter keine Transaktionen unterstützt.  
+     **Nicht durchgeführte Updates**  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lässt Updates zu, selbst wenn **ITransactionLocal** nicht zur Verfügung steht. Wenn diese Option aktiviert ist, sind Updates für den Anbieter nicht wiederherstellbar, da der Anbieter keine Transaktionen unterstützt.  
   
-     **Index als Zugriffs Pfad**  
-     
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht, Indizes des Anbieters zum Abrufen von Daten zu verwenden. Standardmäßig werden Indizes nur für Metadaten verwendet und nicht geöffnet.  
+     **Index als Zugriffsmethode**  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht, Indizes des Anbieters zum Abrufen von Daten zu verwenden. Standardmäßig werden Indizes nur für Metadaten verwendet und nicht geöffnet.  
   
-     **Ad-hoc-Zugriff nicht zulassen**  
-     
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erlaubt keinen Ad-hoc-Zugriff über die Funktionen OPENROWSET und OPENDATASOURCE auf den OLE DB-Anbieter. Wenn diese Option nicht festgelegt ist, lässt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ebenfalls keinen Ad-hoc-Zugriff zu.  
+     **Ad-hoc-Zugriffe nicht zulassen**  
+     [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erlaubt keinen Ad-hoc-Zugriff über die Funktionen OPENROWSET und OPENDATASOURCE auf den OLE DB-Anbieter. Wenn diese Option nicht festgelegt ist, lässt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ebenfalls keinen Ad-hoc-Zugriff zu.  
   
-     **Unterstützt den Like-Operator**  
+     **Unterstützt 'Like'-Operator**  
      Gibt an, dass der Anbieter Anfragen unterstützt, die das LIKE-Schlüsselwort verwenden.  
   
-###  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Verwenden Sie zum Erstellen eines Verbindungsservers mithilfe von [!INCLUDE[tsql](../../includes/tsql-md.md)] die Anweisungen [sp_addlinkedserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql), [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql) und [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql) .  
   
 ##### <a name="to-create-a-linked-server-to-another-instance-of-sql-server-using-transact-sql"></a>So erstellen Sie einen Verbindungsserver für eine andere Instanz von SQL Server anhand von Transact-SQL  
@@ -224,7 +220,7 @@ ms.locfileid: "62743492"
   
     ```  
   
-##  <a name="FollowUp"></a>Nachverfolgung: nach der Erstellung eines Verbindungs Servers auszuführenden Schritte  
+##  <a name="follow-up-steps-to-take-after-you-create-a-linked-server"></a><a name="FollowUp"></a> Nachverfolgung: Nach der Erstellung eines Verbindungsservers zu unternehmende Schritte  
   
 #### <a name="to-test-the-linked-server"></a>So testen Sie den Verbindungsserver  
   
@@ -251,8 +247,8 @@ ms.locfileid: "62743492"
      Wenn für den Anmeldenamen vom Verbindungsserver NULL zurückgegeben wird, zeigt dies an, dass der Anmeldename auf dem Verbindungsserver nicht vorhanden ist. Von diesen Anmeldenamen kann der Verbindungsserver erst verwendet werden, wenn der Verbindungsserver so konfiguriert wird, dass ein anderer Sicherheitskontext weitergegeben wird oder der Verbindungsserver anonyme Verbindungen akzeptiert.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verbindungsserver &#40;Datenbank-Engine&#41;](linked-servers-database-engine.md)   
+ [Datenbank-Engine Verbindungs Server &#40;&#41;](linked-servers-database-engine.md)   
  [sp_addlinkedserver &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql)   
- [sp_serveroption &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql)  
+ [sp_serveroption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-serveroption-transact-sql)  
   
   

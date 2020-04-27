@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bd661506dbb792eb55194c61d7284d619e63a5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702063"
 ---
 # <a name="performing-batch-operations-xmla"></a>Ausführen von Batchvorgängen (XMLA)
@@ -32,7 +32,7 @@ ms.locfileid: "62702063"
 ## <a name="running-transactional-and-nontransactional-batch-commands"></a>Ausführen von transaktionalen und nicht transaktionalen Batchbefehlen  
  Der Befehl `Batch` führt Befehle in einer von zwei Methoden aus:  
   
- **Transaktion**  
+ **Transaktions**  
  Wenn das `Transaction` -Attribut des `Batch` -Befehls auf true festgelegt ist `Batch` , führt der Befehl alle Befehle, die im- `Batch` Befehl enthalten sind, in einer einzelnen Transaktion (einem *Transaktions Batch)* aus.  
   
  Wenn ein Befehl in einem transaktionalen Batch fehlschlägt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , führt einen Rollback für `Batch` jeden Befehl im Befehl aus, der vor dem fehl `Batch` geschlagenen Befehl ausgeführt wurde, und der Befehl wird sofort beendet. Jegliche noch nicht ausgeführten Befehle im Befehl `Batch` werden nicht ausgeführt. Nachdem der Befehl `Batch` beendet wurde, meldet der Befehl `Batch` alle Fehler, die für den fehlgeschlagenen Befehl aufgetreten sind.  
@@ -59,8 +59,7 @@ ms.locfileid: "62702063"
   
  Um Befehle parallel auszuführen, fügen Sie die Befehle, die parallel ausgeführt werden sollen, der [parallel](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/parallel-element-xmla) -Eigenschaft des `Batch` Befehls hinzu. Derzeit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] können nur zusammenhängende sequenzielle [Prozess](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/process-element-xmla) Befehle parallel ausgeführt werden. Alle anderen XMLA-Befehle, z. b. [Create](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla) oder [Alter](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/alter-element-xmla), `Parallel` die in der-Eigenschaft enthalten sind, werden seriell ausgeführt.  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] versucht, alle `Process`-Befehle, die in die `Parallel`-Eigenschaft eingebunden werden, parallel auszuführen. Es gibt allerdings keine Garantie dafür, dass alle enthaltenen `Process`-Befehle parallel ausgeführt werden. Die Instanz analysiert jeden `Process`-Befehl, und wenn die Instanz ermittelt, dass der Befehl nicht parallel ausgeführt werden kann, wird der `Process`-Befehl seriell ausgeführt.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] versucht, alle `Process`-Befehle, die in die `Parallel`-Eigenschaft eingebunden werden, parallel auszuführen. Es gibt allerdings keine Garantie dafür, dass alle enthaltenen `Process`-Befehle parallel ausgeführt werden. Die Instanz analysiert jeden `Process`-Befehl, und wenn die Instanz ermittelt, dass der Befehl nicht parallel ausgeführt werden kann, wird der `Process`-Befehl seriell ausgeführt.  
   
 > [!NOTE]  
 >  Damit Befehle parallel ausgeführt werden können, muss das `Transaction`-Attribut des `Batch`-Befehls auf True gesetzt sein, da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nur eine aktive Transaktion pro Verbindung unterstützt und nicht transaktionale Batches jeden Befehl in einer separaten Transaktion ausführen. Wenn Sie die `Parallel`-Eigenschaft in einen nicht transaktionalen Batch einbinden, tritt ein Fehler auf.  

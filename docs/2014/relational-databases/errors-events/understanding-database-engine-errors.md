@@ -16,14 +16,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2f8f7264b63417d9dc337aec62ee5734dcf8ad98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62761688"
 ---
 # <a name="understanding-database-engine-errors"></a>Grundlegendes zu Datenbank-Engine-Fehlern
-  Fehler, die von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ausgelöst werden, verfügen über die in der folgenden Tabelle beschriebenen Attribute.  
+  Von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ausgelöste Fehler weisen die in der folgenden Tabelle beschriebenen Attribute auf.  
   
 |attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
@@ -36,7 +36,7 @@ ms.locfileid: "62761688"
   
  Alle System- und benutzerdefinierten Fehlermeldungen in einer [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz sind in der Katalogsicht **sys.messages** enthalten. Die RAISERROR-Anweisung kann zur Rückgabe von benutzerdefinierten Fehlern an eine Anwendung verwendet werden.  
   
- Alle Datenbank-APIs, wie [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **SQLClient** -Namespace, ActiveX Data Objects (ADO), OLE DB und Open Database Connectivity (ODBC) berichten die grundlegenden Fehlerattribute. Diese Information schließt die Fehlernummer und die Meldungszeichenfolge ein. Nicht alle APIs berichten jedoch alle anderen Fehlerattribute.  
+ Alle Datenbank-APIs, z. B. das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] **SQLClient**-Namespace, ActiveX Data Objects (ADO), OLE DB und Open Database Connectivity (ODBC), melden die grundlegenden Fehlerattribute. Diese Information schließt die Fehlernummer und die Meldungszeichenfolge ein. Nicht alle APIs berichten jedoch alle anderen Fehlerattribute.  
   
  Informationen zu einem Fehler, der innerhalb des Bereichs des TRY-Blocks eines TRY...CATCH-Konstrukts auftritt, können im [!INCLUDE[tsql](../../includes/tsql-md.md)]-Code mithilfe von Funktionen wie ERROR_LINE, ERROR_MESSAGE, ERROR_NUMBER, ERROR_PROCEDURE, ERROR_SEVERITY und ERROR_STATE innerhalb des Bereichs des zugehörigen CATCH-Blocks abgerufen werden. Weitere Informationen finden Sie unter [TRY...CATCH &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/try-catch-transact-sql).  
   

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1b79c0908f8639df869d01a8ff862afc5be77cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754242"
 ---
 # <a name="determining-the-correct-bucket-count-for-hash-indexes"></a>Bestimmen der korrekten Bucketanzahl für Hashindizes
@@ -82,12 +82,12 @@ FROM sys.dm_db_xtp_hash_index_stats AS hs
  Zwei wichtige Indikatoren für den Zustand von Hashindizes lauten wie folgt:  
   
  *empty_bucket_percent*  
- *empty_bucket_percent* gibt die Anzahl der leeren Bucket im Hashindex an.  
+ *empty_bucket_percent* gibt die Anzahl der leeren Buckets im Hashindex an.  
   
  Wenn *empty_bucket_percent* kleiner als 10 Prozent ist, ist die Bucketanzahl wahrscheinlich zu niedrig. Im Idealfall sollte *empty_bucket_percent* mindestens 33 Prozent betragen. Wenn die Bucketanzahl der Anzahl der Indexschlüsselwerte entspricht, ist ca. 1/3 der Buckets aufgrund der Hashverteilung leer.  
   
  *avg_chain_length*  
- *avg_chain_length* die die durchschnittliche Länge der Zeilen Ketten in den hashbuchern angibt.  
+ *avg_chain_length* gibt die durchschnittliche Länge der Zeilenketten in den Hashbuckets an.  
   
  Wenn *avg_chain_length* größer als 10 und *empty_bucket_percent* größer als 10 Prozent ist, sind wahrscheinlich zahlreiche doppelte Indexschlüsselwerte vorhanden, und ein nicht gruppierter Index wäre besser geeignet. Eine durchschnittliche Kettenlänge von 1 ist ideal.  
   
@@ -132,8 +132,8 @@ GO
 |Indexname|total_bucket_count|empty_bucket_count|empty_bucket_percent|avg_chain_length|max_chain_length|  
 |----------------|--------------------------|--------------------------|----------------------------|------------------------|------------------------|  
 |IX_Status|8|4|50|65536|65536|  
-|IX_OrderSequence|32.768|13|0|8|26|  
-|PK_SalesOrd_B14003C3F8FB3364|262.144|96319|36|1|8|  
+|IX_OrderSequence|32768|13|0|8|26|  
+|PK_SalesOrd_B14003C3F8FB3364|262144|96319|36|1|8|  
   
  Betrachten Sie die drei Hashindizes für diese Tabelle:  
   

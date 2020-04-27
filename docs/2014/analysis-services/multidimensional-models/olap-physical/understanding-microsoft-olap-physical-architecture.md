@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 68e1bba4999f237d5b38ac3f475d2b67fc41959b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62724805"
 ---
 # <a name="physical-architecture-analysis-services---multidimensional-data"></a>Physische Architektur (Analysis Services – Mehrdimensionale Daten)
@@ -24,7 +24,7 @@ ms.locfileid: "62724805"
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  Die folgenden Themen enthalten weitere Informationen zur Architektur einer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Lösung.  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[OLAP-Engine-Serverkomponenten](olap-engine-server-components.md)|Beschreibt die Komponenten eines [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Servers.|  
 |[Lokale Cubes &#40;Analysis Services Mehrdimensionale Daten&#41;](local-cubes-analysis-services-multidimensional-data.md)|Beschreibt, wie eigenständige Cubes und der Bereich solcher Implementierungen unter einer [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Lösung implementiert werden.|  

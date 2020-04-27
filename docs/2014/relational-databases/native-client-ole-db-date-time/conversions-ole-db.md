@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b35583f18cbe590773c6661091186f669e012555
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62638207"
 ---
 # <a name="bindings-and-conversions-ole-db"></a>Bindungen und Konvertierungen (OLE DB)
@@ -32,11 +32,11 @@ ms.locfileid: "62638207"
   
 -   Das Format von `time`-Zeichenfolgen ist:  
   
-     *HH*:*mm*:*SS*[.* 9999999*]  
+     *hh*:*mm*:*ss*[.*9999999*]  
   
 -   Das Format von `date`-Zeichenfolgen ist:  
   
-     *JJJJ*-*mm*-*DD*  
+     *yyyy*-*mm*-*dd*  
   
 > [!NOTE]  
 >  Frühere Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client und SQLOLEDB haben OLE-Konvertierungen implementiert, falls Standardkonvertierungen fehlgeschlagen sind. Als Ergebnis unterscheiden sich einige von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 sowie höheren Versionen ausgeführte Konvertierungen von der OLE DB-Spezifikation.  
@@ -69,6 +69,6 @@ ms.locfileid: "62638207"
  Beschreibt date/time-Konvertierungen, die zwischen [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] (oder höher) und einer Clientanwendung durchgeführt werden, die mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB geschrieben wurde.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Datums-und Uhrzeit Verbesserungen &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+ [Date and Time Improvements &#40;OLE DB&#41; (Verbesserungen bei Datum und Uhrzeit &#40;OLE DB&#41;)](date-and-time-improvements-ole-db.md)  
   
   

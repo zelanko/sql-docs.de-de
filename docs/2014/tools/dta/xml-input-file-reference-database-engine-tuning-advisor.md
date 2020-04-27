@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b560b36eb98ec73723a4ce25cb3c647f4962b634
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62509982"
 ---
 # <a name="xml-input-file-reference-database-engine-tuning-advisor"></a>XML-Eingabedateireferenz (Datenbankoptimierungsratgeber)
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)]Der-Optimierungs Ratgeber kann eine-Datenbank mithilfe einer XML-Eingabedatei optimieren. Anhand dieser XML-Datei wird festgelegt, welche Datenbanken, Tabellen, Arbeitsauslastungsdateien oder -tabellen und Optimierungsoptionen für die Optimierungssitzung verwendet werden sollen. Außerdem können Sie mit dieser Datei eine vom Benutzer angegebene Konfiguration zum Ausführen von Was-wäre-wenn-Analysen festlegen.  
+  [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgeber kann mithilfe einer XML-Eingabedatei eine Datenbank optimieren. Anhand dieser XML-Datei wird festgelegt, welche Datenbanken, Tabellen, Arbeitsauslastungsdateien oder -tabellen und Optimierungsoptionen für die Optimierungssitzung verwendet werden sollen. Außerdem können Sie mit dieser Datei eine vom Benutzer angegebene Konfiguration zum Ausführen von Was-wäre-wenn-Analysen festlegen.  
   
  In XML-Eingabedateien des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgebers befinden sich hierarchisch angeordnete XML-Elemente mit Text oder anderen Elementen, die die Einstellungen der Optimierungssitzung angeben. Die XML-Eingabedatei des [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Optimierungsratgebers muss den Standards für wohlgeformte XML-Dokumente entsprechen, d. h., dass bei allen Elementnamen die Groß-/Kleinschreibung beachtet wird. Die Groß-/Kleinschreibung der Elemente ist wie in Pascal. Das bedeutet, dass das erste Zeichen ein Großbuchstabe und der erste Buchstabe eines nachfolgenden verketteten Worts ein Großbuchstabe ist.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "62509982"
   
 -   [Server-Element &#40;DTA&#41;](server-element-dta.md)  
   
--   [&#40;DTA-Arbeits Auslastungs Element&#41;](workload-element-dta.md)  
+-   [Workload-Element &#40;DTA&#41;](workload-element-dta.md)  
   
 -   [TuningOptions-Element &#40;DTA&#41;](tuningoptions-element-dta.md)  
   
--   [Konfigurations Element &#40;DTA&#41;](configuration-element-dta.md)  
+-   [Configuration-Element &#40;DTA&#41;](configuration-element-dta.md)  
   
 ## <a name="server-elements"></a>Serverelemente  
   
@@ -62,9 +62,9 @@ ms.locfileid: "62509982"
   
 -   [File-Element &#40;DTA&#41;](file-element-dta.md)  
   
--   [Database-Element für Workloads &#40;DTA&#41;](database-element-for-workload-dta.md)  
+-   [Database-Element zur Arbeitsauslastung &#40;DTA&#41;](database-element-for-workload-dta.md)  
   
--   [Event String-Element &#40;DTA&#41;](eventstring-element-dta.md)  
+-   [EventString-Element &#40;DTA&#41;](eventstring-element-dta.md)  
   
 ## <a name="tuning-options-elements"></a>Optimierungsoptionselemente  
   
@@ -72,27 +72,27 @@ ms.locfileid: "62509982"
   
 -   [StorageBoundInMB-Element &#40;DTA&#41;](storageboundinmb-element-dta.md)  
   
--   [Testserver-Element &#40;DTA&#41;](testserver-element-dta.md)  
+-   [TestServer-Element &#40;DTA&#41;](testserver-element-dta.md)  
   
--   [Das Featureset-Element &#40;DTA&#41;](featureset-element-dta.md)  
+-   [FeatureSet-Element &#40;DTA&#41;](featureset-element-dta.md)  
   
--   [Partitionierungs Element &#40;DTA&#41;](partitioning-element-dta.md)  
+-   [Partitioning-Element &#40;DTA&#41;](partitioning-element-dta.md)  
   
 -   [DropOnlyMode-Element &#40;DTA&#41;](droponlymode-element-dta.md)  
   
--   [Keepvorhandenes Element &#40;DTA&#41;](keepexisting-element-dta.md)  
+-   [KeepExisting-Element &#40;DTA&#41;](keepexisting-element-dta.md)  
   
 -   [OnlineIndexOperation-Element &#40;DTA&#41;](onlineindexoperation-element-dta.md)  
   
--   [Databasedas Connect-Element &#40;DTA&#41;](databasetoconnect-element-dta.md)  
+-   [DatabaseToConnect-Element &#40;DTA&#41;](databasetoconnect-element-dta.md)  
   
 ## <a name="configuration-elements"></a>Konfigurationselemente  
   
--   [Server-Element für Configuration &#40;DTA&#41;](server-element-for-configuration-dta.md)  
+-   [Server-Element für Konfiguration &#40;DTA&#41;](server-element-for-configuration-dta.md)  
   
--   [Database-Element für Configuration &#40;DTA&#41;](database-element-for-configuration-dta.md)  
+-   [Database-Element für Konfiguration &#40;DTA&#41;](database-element-for-configuration-dta.md)  
   
--   [Empfehlungs Element &#40;DTA&#41;](recommendation-element-dta.md)  
+-   [Recommendation-Element &#40;DTA&#41;](recommendation-element-dta.md)  
   
 -   [Create Element &#40;DTA&#41;](create-element-dta.md)  
   
@@ -104,7 +104,7 @@ ms.locfileid: "62509982"
   
 -   [Name-Element für Spalte &#40;DTA&#41;](name-element-for-column-dta.md)  
   
--   [FILEGROUP-Element für Index &#40;DTA&#41;](filegroup-element-for-index-dta.md)  
+-   [Filegroup-Element für Index &#40;DTA&#41;](filegroup-element-for-index-dta.md)  
   
 ## <a name="database-elements"></a>Datenbankelemente  
   

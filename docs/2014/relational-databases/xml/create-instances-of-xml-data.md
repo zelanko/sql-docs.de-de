@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637608"
 ---
 # <a name="create-instances-of-xml-data"></a>Erstellen von Instanzen der XML-Daten
@@ -67,8 +67,7 @@ from OpenRowset(BULK 'filename.xml', SINGLE_BLOB) R(x)
   
  Standardmäßig verwirft der XML-Parser insignifikante Leerzeichen, wenn Zeichenfolgendaten in XML konvertiert werden, wenn eine der folgenden Bedingungen zutrifft:  
   
--   
-  `The xml:space` -Attribut ist nicht für ein Element oder seine Vorgängerelemente definiert.  
+-   `The xml:space` -Attribut ist nicht für ein Element oder seine Vorgängerelemente definiert.  
   
 -   Das `xml:space` -Attribut für ein Element oder eines seiner Vorgängerelemente weist den Standardwert auf.  
   

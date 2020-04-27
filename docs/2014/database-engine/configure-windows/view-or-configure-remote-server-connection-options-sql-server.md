@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5dfc0aa145f106fc57c25a6249b928ee27ab4b87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62757195"
 ---
 # <a name="view-or-configure-remote-server-connection-options-sql-server"></a>Anzeigen oder Konfigurieren von Verbindungsoptionen für Remoteserver (SQL Server)
@@ -38,14 +38,14 @@ ms.locfileid: "62757195"
   
 -   **Nachverfolgung:**  [Nach dem Konfigurieren von Verbindungsoptionen für Remoteserver](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Für das Ausführen von **sp_serveroption** sind ALTER ANY LINKED SERVER-Berechtigungen auf dem Server erforderlich.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-view-or-configure-remote-server-connection-options"></a>So zeigen Sie Verbindungsoptionen für Remoteserver an oder konfigurieren sie  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62757195"
   
 4.  Wiederholen Sie Schritt 1 bis 3 auf dem zweiten Server des Remoteserverpaares.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-view-remote-server-connection-options"></a>So zeigen Sie Verbindungsoptionen für Remoteserver an  
   
@@ -86,7 +86,7 @@ USE master;
 EXEC sp_serveroption 'SEATTLE3', 'collation compatible', 'true';  
 ```  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Nach dem Konfigurieren von Verbindungsoptionen für Remoteserver  
+##  <a name="follow-up-after-you-configure-remote-server-connection-options"></a><a name="FollowUp"></a>Nächster Schritt: Nach dem Konfigurieren von Verbindungsoptionen für Remoteserver  
  Der Remoteserver muss angehalten und neu gestartet werden, damit die Einstellung wirksam werden kann.  
   
 ## <a name="see-also"></a>Weitere Informationen  

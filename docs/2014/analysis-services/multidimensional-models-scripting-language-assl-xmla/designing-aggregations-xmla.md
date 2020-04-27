@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81450789395dfef84f81896990fa251514d3489e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702120"
 ---
 # <a name="designing-aggregations-xmla"></a>Entwerfen von Aggregationen (XMLA)
@@ -55,12 +55,12 @@ ms.locfileid: "62702120"
   
  Das `Query`-Element enthält einen durch Trennzeichen getrennten Wert, der die folgenden Argumente beinhaltet:  
   
- *Frequency*,*DataSet*[,*DataSet*...]  
+ *Frequency*,*Dataset*[,*Dataset*...]  
   
- *Häufig*  
+ *Frequency*  
  Ein Gewichtungsfaktor, der der Anzahl der Male entspricht, die eine Abfrage zuvor ausgeführt wurde. Wenn das `Query` Element eine neue Abfrage darstellt, stellt der *Häufigkeits* Wert den Gewichtungsfaktor dar, der vom Entwurfsprozess zum Auswerten der Abfrage verwendet wird. Bei steigendem Häufigkeitswert, steigt die Gewichtung auf die Abfrage während des Entwurfsprozesses.  
   
- *DataSet*  
+ *Dataset*  
  Eine numerische Zeichenfolge, die festlegt, welche Attribute einer Dimension in die Abfrage eingebunden werden. Diese Zeichenfolge muss die gleiche Anzahl an Zeichen wie die Anzahl an Attributen in der Dimension haben. null (0) zeigt an, dass das Attribut an der angegebenen Ordnungsposition für die angegebene Dimension nicht in der Abfrage enthalten ist. Eins (1) zeigt an, dass das Attribut an der angegebenen Ordnungsposition für die angegebene Dimension in der Abfrage enthalten ist.  
   
  Beispielsweise bezieht sich die Zeichenfolge "011" auf eine Abfrage mit einer Dimension mit drei Attributen, von denen das zweite und dritte Attribut in der Abfrage enthalten sind.  
@@ -104,10 +104,10 @@ ms.locfileid: "62702120"
 |Column|Datentyp|BESCHREIBUNG|  
 |------------|---------------|-----------------|  
 |Schritte|Integer|Die Anzahl der Schritte, die vom Befehl vor dem Zurückgeben der Steuerung an die Clientanwendung abgewartet werden.|  
-|Time|Lange ganze Zahl|Die Anzahl der Millisekunden, die vom Befehl vor dem Zurückgeben der Steuerung an die Clientanwendung abgewartet werden.|  
-|Optimierung|Double|Der geschätzte Prozentwert der Leistungsverbesserung, der durch den Befehl vor dem Zurückgeben der Steuerung an die Clientanwendung erreicht wird.|  
+|Zeit|Lange ganze Zahl|Die Anzahl der Millisekunden, die vom Befehl vor dem Zurückgeben der Steuerung an die Clientanwendung abgewartet werden.|  
+|Optimization (Optimierung)|Double|Der geschätzte Prozentwert der Leistungsverbesserung, der durch den Befehl vor dem Zurückgeben der Steuerung an die Clientanwendung erreicht wird.|  
 |Storage|Lange ganze Zahl|Die geschätzte Anzahl an Bytes, die vom Befehl vor dem Zurückgeben der Steuerung an die Clientanwendung abgewartet werden.|  
-|Aggregationen|Lange ganze Zahl|Die Anzahl der Aggregationen, die vom Befehl vor dem Zurückgeben der Steuerung an die Clientanwendung definiert werden.|  
+|Aggregations|Lange ganze Zahl|Die Anzahl der Aggregationen, die vom Befehl vor dem Zurückgeben der Steuerung an die Clientanwendung definiert werden.|  
 |LastStep|Boolean|Gibt an, ob die Daten im Rowset den letzten Schritt im Entwurfsprozess darstellen. Wenn die `Materialize`-Eigenschaft des Befehls auf den Wert TRUE festgelegt wurde, wird der Wert dieser Spalte ebenfalls auf TRUE festgelegt.|  
   
  Sie können die Entwurfsstatistiken verwenden, die im Rowset enthalten sind, das nach jedem `DesignAggregations`-Befehl sowohl im iterativen als auch im Batchentwurf zurückgegeben wird. Im iterativen Entwurf können Sie die Entwurfsstatistiken verwenden, um den Status zu bestimmen und anzuzeigen. Wenn Sie Aggregationen in einem Batch entwerfen, können Sie die Entwurfsstatistiken verwenden, um die Anzahl der vom Befehl erstellten Aggregationen zu bestimmen.  

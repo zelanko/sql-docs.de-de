@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f76ba993508807e57e73d5e53ea25a4cbe382529
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727442"
 ---
 # <a name="write-enabled-dimensions"></a>Dimensionen mit aktiviertem Schreibzugriff
@@ -30,8 +30,7 @@ ms.locfileid: "62727442"
   
  Die Daten in einer Dimension sind im Allgemeinen schreibgeschützt. In bestimmten Szenarien kann es jedoch erwünscht sein, den Schreibzugriff für eine Dimension zu aktivieren. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ermöglicht die Schreib Aktivierung einer Dimension Geschäfts Benutzern, den Inhalt der Dimension zu ändern und die unmittelbaren Auswirkungen der Änderungen auf die Hierarchien der Dimension anzuzeigen. Der Schreibzugriff kann für jede Dimension aktiviert werden, die auf einer einzelnen Tabelle basiert. In einer Dimension mit aktiviertem Schreibzugriff können Benutzer im geschäftlichen Bereich und Administratoren Attributelemente innerhalb der Dimension ändern, verschieben, hinzufügen und löschen. Diese Updates werden zusammenfassend als *Rückschreiben von Dimensionen*bezeichnet.  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt das Rückschreiben von Dimensionen für alle Dimensionsattribute, und jedes Element einer Dimension kann dabei geändert werden. Für einen Cube oder eine Partition mit aktiviertem Schreibzugriff werden die Updates in einer Rückschreibetabelle getrennt von den Quelltabellen des Cubes gespeichert. Allerdings werden die Updates für eine Dimension mit aktiviertem Schreibzugriff direkt in der Tabelle der Dimension gespeichert. Auch wenn die Dimension mit aktiviertem Schreibzugriff in einen Cube mit mehreren Partitionen eingebunden ist und einige oder alle der zugehörigen Datenquellen über Kopien der Dimensionstabelle verfügen, wird während eines Rückschreibevorgangs zudem nur die Originaltabelle aktualisiert.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt das Rückschreiben von Dimensionen für alle Dimensionsattribute, und jedes Element einer Dimension kann dabei geändert werden. Für einen Cube oder eine Partition mit aktiviertem Schreibzugriff werden die Updates in einer Rückschreibetabelle getrennt von den Quelltabellen des Cubes gespeichert. Allerdings werden die Updates für eine Dimension mit aktiviertem Schreibzugriff direkt in der Tabelle der Dimension gespeichert. Auch wenn die Dimension mit aktiviertem Schreibzugriff in einen Cube mit mehreren Partitionen eingebunden ist und einige oder alle der zugehörigen Datenquellen über Kopien der Dimensionstabelle verfügen, wird während eines Rückschreibevorgangs zudem nur die Originaltabelle aktualisiert.  
   
  Dimensionen mit aktiviertem Schreibzugriff und Cubes mit aktiviertem Schreibzugriff weisen unterschiedliche, jedoch sich ergänzende Funktionen auf. Durch eine Dimension mit aktiviertem Schreibzugriff erhalten Anwender der Unternehmenssoftware und Administratoren die Möglichkeit, Elemente zu aktualisieren, wohingegen sie durch einen Cube mit aktiviertem Schreibzugriff in die Lage versetzt werden, Zellenwerte zu aktualisieren. Obwohl sich diese zwei Funktionen ergänzen, müssen Sie sie nicht kombiniert verwenden. Eine Dimension muss nicht in einen Cube eingebunden sein, damit das Rückschreiben von Dimensionen verwendet werden kann. So kann eine Dimension mit aktiviertem Schreibzugriff auch in einen Cube eingebunden sein, für den der Schreibzugriff nicht aktiviert wurde. Für die Aktivierung des Schreibzugriffs von Dimensionen und Cubes und für die Verwaltung ihrer Sicherheit verwenden Sie unterschiedliche Verfahren.  
   
@@ -63,6 +62,6 @@ ms.locfileid: "62727442"
 ## <a name="see-also"></a>Weitere Informationen  
  [Daten Bank Dimensions Eigenschaften](database-dimension-properties.md)   
  [Partitionen mit aktiviertem Schreibzugriff](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
- [Dimensionen &#40;Analysis Services Mehrdimensionale Daten&#41;](dimensions-analysis-services-multidimensional-data.md)  
+ [Dimensionen &#40;Analysis Services – mehrdimensionale Daten&#41;](dimensions-analysis-services-multidimensional-data.md)  
   
   

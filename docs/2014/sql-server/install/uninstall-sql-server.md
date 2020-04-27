@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d81180c9cbadec8816c401bc6b8c8d200e76e28b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62470228"
 ---
 # <a name="uninstall-sql-server-2014"></a>Deinstallieren von SQL Server 2014
@@ -47,6 +47,6 @@ ms.locfileid: "62470228"
 ## <a name="see-also"></a>Weitere Informationen  
  [Planen einer SQL Server-Installation](planning-a-sql-server-installation.md)   
  [Installieren von SQL Server 2014](../../database-engine/install-windows/install-sql-server.md)   
- [Aktualisieren auf SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
+ [Upgrade auf SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
   
   

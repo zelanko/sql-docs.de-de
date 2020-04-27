@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 52781de1cd4b6309f3ebeb9a2c59ae85b0b32dbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754596"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>Anhalten oder Fortsetzen einer Datenbank-Spiegelungssitzung (SQL Server)
@@ -32,26 +32,26 @@ ms.locfileid: "62754596"
   
      [Sicherheit](#Security)  
   
--   **Zum replacethistext mit:**  
+-   **So ReplaceThisText mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
--   Nach **Verfolgung:**[nach dem Anhalten oder Fortsetzen der Daten Bank Spiegelung](#FollowUp)    
+-   **Nachverfolgung:**  [Nach dem Anhalten oder Fortsetzen der Datenbankspiegelung](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
  Eine Datenbank-Spiegelungssitzung kann jederzeit angehalten werden. Dadurch kann die Leistung bei Engpässen ggf. verbessert werden, und anschließend können Sie die angehaltene Sitzung jederzeit fortsetzen.  
   
 > [!CAUTION]  
 >  Nach einem erzwungenen Dienst, wenn der ursprüngliche Prinzipalserver die Verbindung wiederherstellt, wird die Spiegelung angehalten. Das Fortsetzen der Spiegelung in dieser Situation könnte auf dem ursprünglichen Prinzipalserver zu Datenverlust führen. Informationen zum Verwalten des potenziellen Datenverlusts finden Sie unter [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md).  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Datenbank.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Eine Datenbank-Spiegelungssitzung können Sie auf der Seite **Spiegelung** der Datenbankeigenschaften anhalten bzw. fortsetzen.  
   
 #### <a name="to-pause-or-resume-database-mirroring"></a>So halten Sie eine Datenbankspiegelung an bzw. setzen sie fort  
@@ -70,7 +70,7 @@ ms.locfileid: "62754596"
   
 5.  Klicken Sie zum Fortsetzen der Sitzung auf **Fortsetzen**.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-pause-database-mirroring"></a>So halten Sie die Datenbankspiegelung an  
   
@@ -108,17 +108,17 @@ ms.locfileid: "62754596"
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
     ```  
   
-##  <a name="FollowUp"></a>Nachverfolgung: nach dem Anhalten oder Fortsetzen der Daten Bank Spiegelung  
+##  <a name="follow-up-after-pausing-or-resuming-database-mirroring"></a><a name="FollowUp"></a>Nachverfolgung: nach dem Anhalten oder Fortsetzen der Daten Bank Spiegelung  
   
--   **Nach dem Anhalten der Daten Bank Spiegelung**  
+-   **Nach dem Anhalten der Datenbankspiegelung**  
   
      Treffen Sie auf der primären Datenbank entsprechende Vorkehrungen, um ein Überlaufen des Transaktionsprotokolls zu verhindern. Weitere Informationen finden Sie unter [Das Transaktionsprotokoll &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md).  
   
--   **Nach fortsetzen der Daten Bank Spiegelung**  
+-   **Nach dem Fortsetzen der Datenbankspiegelung**  
   
      Durch das Fortsetzen einer Datenbankspiegelung wird die Spiegeldatenbank in den SYNCHRONIZING-Status gesetzt. Ist die Sicherheitsstufe auf FULL festgelegt, holt der Spiegel den aktuellen Verarbeitungsstand des Prinzipals auf, und die Spiegeldatenbank geht in den SYNCHRONIZED-Status über. Zu diesem Zeitpunkt ist das Ausführen eines Failovers möglich. Ist der Zeuge vorhanden und auf ON festgelegt, ist ein automatisches Failover möglich. Bei Abwesenheit eines Zeugen ist ein manuelles Failover möglich.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Entfernen der Datenbankspiegelung (SQL Server)](remove-database-mirroring-sql-server.md)  
   

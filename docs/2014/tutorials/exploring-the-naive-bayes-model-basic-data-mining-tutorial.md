@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: eb35c829b798335a27a37629711acf299ac2c7c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62472884"
 ---
 # <a name="exploring-the-naive-bayes-model-basic-data-mining-tutorial"></a>Untersuchen des Naive Bayes-Modells (Lernprogramm zu Data Mining-Grundlagen)
@@ -24,7 +24,7 @@ ms.locfileid: "62472884"
   
  
   
-##  <a name="DependencyNetwork"></a>Abhängigkeits Netzwerk  
+##  <a name="dependency-network"></a><a name="DependencyNetwork"></a>Abhängigkeits Netzwerk  
  Die Registerkarte **Abhängigkeits Netzwerk** funktioniert auf die gleiche Weise wie die Registerkarte **Abhängigkeits Netzwerk** für den [!INCLUDE[msCoName](../includes/msconame-md.md)] Struktur-Viewer. Jeder Knoten im Viewer steht für ein Attribut, und die Linien zwischen den Knoten stellen Beziehungen dar. In dem Viewer können Sie alle Attribute sehen, die sich auf den Status des vorhersagbaren Attributs Bike Buyer auswirken.  
   
 #### <a name="to-explore-the-model-in-the-dependency-network-tab"></a>So untersuchen Sie das Modell auf der Registerkarte "Abhängigkeitsnetzwerk"  
@@ -42,7 +42,7 @@ ms.locfileid: "62472884"
      Wenn Sie den Schieberegler nach unten ziehen, werden nur noch diejenigen Attribute angezeigt, welche die stärksten Auswirkungen auf die [Bike Buyer]-Spalte haben. Durch Anpassen des Schiebereglers können Sie herausfinden, dass die einflussreichsten Attribute unter anderem folgende sind: Anzahl der Autos im Besitz, Arbeitsweg und Anzahl der Kinder insgesamt.  
  
   
-##  <a name="AttributeProfiles"></a>Attribut profile  
+##  <a name="attribute-profiles"></a><a name="AttributeProfiles"></a> Attributprofile  
  Auf der Registerkarte **Attribut profile** wird beschrieben, wie sich unterschiedliche Zustände der Eingabe Attribute auf das Ergebnis des vorhersagbaren Attributs auswirken.  
   
 #### <a name="to-explore-the-model-in-the-attribute-profiles-tab"></a>So untersuchen Sie das Modell auf der Registerkarte "Attributprofile"  
@@ -64,19 +64,19 @@ ms.locfileid: "62472884"
      Die **Mining Legende** zeigt eine ausführlichere Ansicht an.  
   
   
-##  <a name="AttributeCharacteristics"></a>Attribut Merkmale  
+##  <a name="attribute-characteristics"></a><a name="AttributeCharacteristics"></a>Attribut Merkmale  
  Mit der Registerkarte **Attribut Merkmale** können Sie ein Attribut und einen Wert auswählen, um zu sehen, wie häufig Werte für andere Attribute in den ausgewählten Wert Fällen angezeigt werden.  
   
 #### <a name="to-explore-the-model-in-the-attribute-characteristics-tab"></a>So untersuchen Sie das Modell auf der Registerkarte "Attributmerkmale"  
   
-1.  Vergewissern Sie **** sich, dass `Bike Buyer` in der Liste Attribut die Option ausgewählt ist.  
+1.  Vergewissern Sie **Attribute** sich, dass `Bike Buyer` in der Liste Attribut die Option ausgewählt ist.  
   
 2.  Legen Sie den **Wert** auf **1**fest.  
   
      Im Viewer sehen Sie, dass Kunden, die keine Kinder zu Hause und einen kurzen Arbeitsweg haben und in Nordamerika leben mit größerer Wahrscheinlichkeit ein Fahrrad kaufen.  
   
   
-##  <a name="AttributeDiscrimination"></a>Attribut Unterscheidung  
+##  <a name="attribute-discrimination"></a><a name="AttributeDiscrimination"></a>Attribut Unterscheidung  
  Mithilfe der Registerkarte **Attribut Unterscheidung** können Sie die Beziehung zwischen zwei diskreten Werten von Bike Einkauf und anderen Attributwerten untersuchen. Da das `TM_NaiveBayes` Modell nur zwei Zustände aufweist: 1 und 0, müssen Sie keine Änderungen am Viewer vornehmen.  
   
  Im Viewer können Sie sehen, dass Personen, die keine Autos besitzen, tendenziell Fahrräder kaufen. Personen, die zwei Autos besitzen, kaufen tendenziell keine Fahrräder.  

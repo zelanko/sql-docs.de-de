@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 414cdedb8f2bc3dee4edc792c11b6438306818c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754543"
 ---
 # <a name="removing-database-mirroring-sql-server"></a>Entfernen der Datenbankspiegelung (SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "62754543"
 > [!NOTE]  
 >  Um die Spiegelung nach dem Anhalten einer Sitzung fortzusetzen, müssen Sie eine neue Datenbankspiegelungssitzung einrichten. Wenn Sie nach dem Beenden der Spiegelung eine Protokollsicherung erstellt haben, müssen Sie diese Sicherung auf die Spiegelungsdatenbank anwenden, bevor Sie die Spiegelung erneut starten.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So entfernen Sie die Datenbankspiegelung**  
   
 -   [Entfernen der Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)  

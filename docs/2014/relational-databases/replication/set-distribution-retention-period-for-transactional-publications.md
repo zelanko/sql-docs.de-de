@@ -14,18 +14,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8c272cef68f1fc392aed05a3d8d45ab665674e39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676625"
 ---
 # <a name="set-the-distribution-retention-period-for-transactional-publications-sql-server-management-studio"></a>Festlegen der Beibehaltungsdauer für die Verteilung bei Transaktionsveröffentlichungen (SQL Server Management Studio)
-  Geben Sie die Mindestbeibehaltungsdauer und die maximale Beibehaltungsdauer der Verteilung im Dialogfeld **Eigenschaften der Verteilungsdatenbank - \<Verteilungsdatenbank>** an. Dieses Dialogfeld ist über die Seite **Allgemein** des Dialogfelds **Verteilereigenschaften - \<Distributor>** verfügbar. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](view-and-modify-distributor-and-publisher-properties.md).  
+   Geben Sie die Mindestbeibehaltungsdauer und die maximale Beibehaltungsdauer der Verteilung im Dialogfeld **Eigenschaften der Verteilungsdatenbank – \<Verteilungsdatenbank>** an. Dieses Dialogfeld ist über die Seite **Allgemein** des Dialogfelds **Verteilereigenschaften - \<Distributor>** verfügbar. Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](view-and-modify-distributor-and-publisher-properties.md).  
   
 ### <a name="to-specify-the-distribution-retention-period"></a>So geben Sie die Beibehaltungsdauer für die Verteilung an  
   
-1.  Klicken Sie auf der Seite **Allgemein** des Dialogfelds **Verteilereigenschaften > \<Verteiler>** auf die Schaltfläche mit den Auslassungspunkten ( **…** ) für die Verteilungsdatenbank.  
+1.  Klicken Sie im Dialogfeld **Verteiler Eigenschaften- \<Verteiler>** auf der Seite **Allgemein** auf die Schaltfläche mit den Eigenschaften (**...**) für die Verteilungs Datenbank.  
   
 2.  Zum Angeben der Mindestbeibehaltungsdauer geben Sie einen Wert in das Feld **Mindestens** ein; zum Angeben der maximalen Beibehaltungsdauer geben Sie einen Wert in das Feld **Aber nicht länger als** ein.  
   

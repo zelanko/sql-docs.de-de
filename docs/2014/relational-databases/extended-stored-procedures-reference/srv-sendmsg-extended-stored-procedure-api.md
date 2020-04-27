@@ -21,17 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 12a7ae2db2d0e1c91e85eeb4a2c2691579c2da70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62745551"
 ---
 # <a name="srv_sendmsg-extended-stored-procedure-api"></a>srv_sendmsg (API für erweiterte gespeicherte Prozeduren)
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
   
  Sendet eine Meldung an den Client.  
   
@@ -77,16 +76,16 @@ msglen
  *srvproc*  
  Ein Zeiger auf die SRV_PROC-Struktur, die das Handle für eine bestimmte Clientverbindung ist (in diesem Fall das Handle, das die Sprachanforderung erhalten hat). Die Struktur enthält Informationen, mit der die API-Bibliothek für erweiterte gespeicherte Prozeduren die Kommunikation und Daten zwischen der Anwendung und dem Client verwaltet.  
   
- *msgType*  
+ *msgtype*  
  Ist entweder SRV_MSG_INFO oder SRV_MSG_ERROR, je nachdem, ob der Server eine Informations- oder Fehlermeldung sendet.  
   
  *msgnum*  
  Eine 4-Byte-Meldungsnummer.  
   
- *klassi*  
+ *class*  
  Gibt den Fehlerschweregrad an. Ein Schweregrad kleiner oder gleich 10 wird als Informationsmeldung betrachtet.  
   
- *Land*  
+ *state*  
  Stellt die Fehlerzustandsnummer für die aktuelle Meldung bereit. Die Fehlerzustandsnummer enthält Informationen über den Fehlerkontext. Gültige Zustandsnummern liegen zwischen 0 und 255.  
   
  *rpcname*  
@@ -95,7 +94,7 @@ msglen
  *rpcnamelen*  
  Wird derzeit nicht unterstützt.  
   
- *linumum*  
+ *linenum*  
  Die Zeilennummer im Sprachbefehlsbatch, für die die Meldung gilt. Die Zeilennummern beginnen bei 1. Legen Sie den Wert auf 0 fest, wenn *linenum* nicht für die Meldung gilt.  
   
  *Nachricht*  
@@ -107,14 +106,14 @@ msglen
 ## <a name="returns"></a>Rückgabe  
  SUCCEED oder FAIL  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Funktion sendet Fehler- oder Informationsmeldungen an den Client. Sie wird für jede zu sendende Meldung einmal aufgerufen.  
   
  Mithilfe von **srv_sendmsg** können Meldungen in beliebiger Reihenfolge gesendet werden, bevor oder nachdem alle Zeilen (sofern vorhanden) mit **srv_sendrow**gesendet wurden. Ggf. müssen alle Meldungen an den Client gesendet werden, bevor der Abschlussstatus mit **srv_senddone**gesendet wird.  
   
  Zum Versenden von Meldungen in Unicode verwenden Sie **srv_wsendmsg** anstelle von **srv_sendmsg**.  
   
- Weitere Informationen finden Sie unter [Unicode-Daten und Server-Codepages](../extended-stored-procedures-programming/unicode-data-and-server-code-pages.md).  
+ Weitere Informationen finden Sie unter [Unicode Data and Server Code Pages (Unicode-Daten und Server Codepages)](../extended-stored-procedures-programming/unicode-data-and-server-code-pages.md).  
   
 > [!IMPORTANT]  
 >  Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren sorgfältig prüfen, und Sie sollten die kompilierten DLL-Dateien testen, bevor Sie sie auf einem Produktionsserver installieren. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  

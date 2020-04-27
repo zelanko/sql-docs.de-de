@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62689028"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
@@ -43,7 +43,7 @@ fIsMaxType
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *toben*  
+ *token*  
  Ein Wert, der ein BCP-Typtoken angibt.  
   
  *Flächen*  
@@ -52,51 +52,51 @@ fIsMaxType
 ## <a name="returns"></a>Rückgabe  
  Eine Zeichenfolge, die den SQL-Typnamen enthält, der dem BCP-Typ entspricht. Wenn ein ungültiger BCP-Typ angegeben wird, wird eine leere Zeichenfolge zurückgegeben.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die BCP-Typtoken werden in der sqlncli.h-Headerdatei und der sqlncli11.lib-Bibliothek definiert.  
   
  In der unten stehenden Tabelle werden die möglichen BCP-Typen aufgeführt, mit der Angabe, ob es sich um max-Typen handelt, sowie deren erwartete Ausgabe.  
   
 |BCP-Typname|MaxType|Output|  
 |-------------------|-------------|------------|  
-|`SQLDECIMAL`|Sie können das|**Decimal**|  
-|`SQLNUMERIC`|Sie können das|**isch**|  
-|`SQLINT1`|Sie können das|**tinyint**|  
-|`SQLINT2`|Sie können das|**smallint**|  
-|`SQLINT4`|Sie können das|**int**|  
-|`SQLMONEY`|Sie können das|**money**|  
-|`SQLFLT8`|Sie können das|**float**|  
-|`SQLDATETIME`|Sie können das|**datetime**|  
-|`SQLBITN`|Sie können das|**bit-null**|  
-|`SQLBIT`|Sie können das|**bit**|  
-|`SQLBIGCHAR`|Nein|**Char**|  
-|`SQLCHARACTER`|Nein|**Char**|  
+|`SQLDECIMAL`|Sowohl als auch|**decimal**|  
+|`SQLNUMERIC`|Sowohl als auch|**numeric**|  
+|`SQLINT1`|Sowohl als auch|**tinyint**|  
+|`SQLINT2`|Sowohl als auch|**smallint**|  
+|`SQLINT4`|Sowohl als auch|**int**|  
+|`SQLMONEY`|Sowohl als auch|**money**|  
+|`SQLFLT8`|Sowohl als auch|**float**|  
+|`SQLDATETIME`|Sowohl als auch|**datetime**|  
+|`SQLBITN`|Sowohl als auch|**bit-null**|  
+|`SQLBIT`|Sowohl als auch|**bit**|  
+|`SQLBIGCHAR`|Nein|**char**|  
+|`SQLCHARACTER`|Nein|**char**|  
 |`SQLBIGVARCHAR`|Nein|**varchar**|  
 |`SQLVARCHAR`|Nein|**varchar**|  
-|`SQLTEXT`|Sie können das|**text**|  
-|`SQLBIGBINARY`|Nein|**BINARY**|  
+|`SQLTEXT`|Sowohl als auch|**text**|  
+|`SQLBIGBINARY`|Nein|**binary**|  
 |`SQLBINARY`|Nein|**Ärer**|  
 |`SQLBIGVARBINARY`|Nein|**Varbinary**|  
 |`SQLVARBINARY`|Nein|**Varbinary**|  
-|`SQLIMAGE`|Sie können das|**Image**|  
-|`SQLINTN`|Sie können das|**int-null**|  
-|`SQLDATETIMN`|Sie können das|**datetime-null**|  
-|`SQLMONEYN`|Sie können das|**money-null**|  
-|`SQLFLTN`|Sie können das|**float-null**|  
-|`SQLAOPSUM`|Sie können das|**Pauschalen**|  
-|`SQLAOPAVG`|Sie können das|**AVG**|  
-|`SQLAOPCNT`|Sie können das|**Countdown**|  
-|`SQLAOPMIN`|Sie können das|**Man**|  
-|`SQLAOPMAX`|Sie können das|**Max**|  
-|`SQLDATETIM4`|Sie können das|**smalldatetime**|  
-|`SQLMONEY4`|Sie können das|**Smallmoney**|  
-|`SQLFLT4`|Sie können das|**Wirkliche**|  
-|`SQLUNIQUEID`|Sie können das|**uniqueidentifier**|  
+|`SQLIMAGE`|Sowohl als auch|**Image**|  
+|`SQLINTN`|Sowohl als auch|**int-null**|  
+|`SQLDATETIMN`|Sowohl als auch|**datetime-null**|  
+|`SQLMONEYN`|Sowohl als auch|**money-null**|  
+|`SQLFLTN`|Sowohl als auch|**float-null**|  
+|`SQLAOPSUM`|Sowohl als auch|**Pauschalen**|  
+|`SQLAOPAVG`|Sowohl als auch|**AVG**|  
+|`SQLAOPCNT`|Sowohl als auch|**Count**|  
+|`SQLAOPMIN`|Sowohl als auch|**Man**|  
+|`SQLAOPMAX`|Sowohl als auch|**Max**|  
+|`SQLDATETIM4`|Sowohl als auch|**smalldatetime**|  
+|`SQLMONEY4`|Sowohl als auch|**Smallmoney**|  
+|`SQLFLT4`|Sowohl als auch|**Wirkliche**|  
+|`SQLUNIQUEID`|Sowohl als auch|**uniqueidentifier**|  
 |`SQLNCHAR`|Nein|**NCHAR**|  
 |`SQLNVARCHAR`|Nein|**Nvarchar**|  
-|`SQLNTEXT`|Sie können das|**Ntext**|  
-|`SQLVARIANT`|Sie können das|**sql_variant**|  
-|`SQLINT8`|Sie können das|**Bigint**|  
+|`SQLNTEXT`|Sowohl als auch|**Ntext**|  
+|`SQLVARIANT`|Sowohl als auch|**sql_variant**|  
+|`SQLINT8`|Sowohl als auch|**Bigint**|  
 |`SQLCHARACTER`|Ja|**varchar(max)**|  
 |`SQLBIGCHAR`|Ja|**varchar(max)**|  
 |`SQLBIGVARCHAR`|Ja|**varchar(max)**|  
@@ -108,7 +108,7 @@ fIsMaxType
 |`SQLNCHAR`|Ja|**nvarchar(max)**|  
 |`SQLNVARCHAR`|Ja|**nvarchar(max)**|  
 |`SQLXML`|Ja|**Basi**|  
-|`SQLUDT`|Sie können das|**UDT**|  
+|`SQLUDT`|Sowohl als auch|**UDT**|  
   
 ## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  
  Die Tokenparameterwerte für Datums-/Uhrzeittypen werden in der Spalte "Type in sqlncli. h" der Tabelle unter [Massen Kopier Änderungen für verbesserte Datums-und Uhrzeittypen &#40;OLE DB und ODBC-&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)beschrieben. Der zurückgegebene Wert ist in der entsprechenden Zeile der Spalte "Dateispeichertyp" angegeben.  

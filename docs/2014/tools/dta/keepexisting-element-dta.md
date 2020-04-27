@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fc3ae8c7e11a3f5a4aa71e91463cbe80ab70c7e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62735632"
 ---
 # <a name="keepexisting-element-dta"></a>KeepExisting-Element (DTA)
@@ -38,8 +38,7 @@ ms.locfileid: "62735632"
   
 |Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
-|**Datentyp und -länge**|
-  `string`, Grenzwert für die Länge wird vom Server erzwungen.|  
+|**Datentyp und -länge**|`string`, Grenzwert für die Länge wird vom Server erzwungen.|  
 |**Zulässige Werte**|**NONE**<br /> Keine vorhandenen Strukturen.<br /><br /> **ALL**<br /> Alle vorhandenen Strukturen.<br /><br /> **ALIGNED**<br /> Alle Strukturen mit ausgerichteten Partitionen.<br /><br /> **CL_IDX**<br /> Alle gruppierten Indizes für Tabellen.<br /><br /> **IDX**<br /> Alle gruppierten und nicht gruppierten Indizes für Tabellen.<br /><br /> Verwenden Sie nur einen dieser Werte mit diesem Element.|  
 |**Standardwert**|Keine.|  
 |**Vorkommen**|Optional. Nur einmalige Verwendung pro `TuningOptions`-Element möglich.|  

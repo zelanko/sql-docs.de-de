@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 341066defb122e33e82cfde87a561bc9df1ed762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62721652"
 ---
 # <a name="configure-web-synchronization"></a>Websynchronisierung konfigurieren
@@ -101,8 +101,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
  Wenn Sie einen Verleger zum ersten Mal verwenden, müssen Sie auch einen Verteiler und eine Momentaufnahmefreigabe konfigurieren. Der Merge-Agent bei jedem Abonnenten muss über Leseberechtigungen für die Momentaufnahmefreigabe verfügen. Weitere Informationen finden Sie unter [Verteilung konfigurieren](configure-distribution.md) und [Sichern des Momentaufnahmeordners](security/secure-the-snapshot-folder.md).  
   
- 
-  `gen` ist ein reserviertes Wort in Websync-Dateien (XML). Versuchen Sie nicht, Tabellen zu veröffentlichen, in denen Spalten mit dem Namen `gen` enthalten sind.  
+ `gen` ist ein reserviertes Wort in Websync-Dateien (XML). Versuchen Sie nicht, Tabellen zu veröffentlichen, in denen Spalten mit dem Namen `gen` enthalten sind.  
   
 ## <a name="configuring-the-subscription"></a>Konfigurieren des Abonnements  
  Nachdem Sie eine Veröffentlichung aktiviert und IIS konfiguriert haben, erstellen Sie ein Pullabonnement und geben an, dass es mithilfe von IIS synchronisiert werden soll. (Die Websynchronisierung wird nur für Pullabonnements unterstützt.)  

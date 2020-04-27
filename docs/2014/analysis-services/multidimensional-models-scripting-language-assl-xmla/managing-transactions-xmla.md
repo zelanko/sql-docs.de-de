@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad8a77d1d8552dc811c1232afb53c142452658db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62727213"
 ---
 # <a name="managing-transactions-xmla"></a>Verwalten von Transaktionen (XMLA)
@@ -37,16 +37,12 @@ ms.locfileid: "62727213"
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellt eine *implizite* Transaktion für einen XMLA-Befehl, `BeginTransaction` wenn der Start einer Transaktion vom Befehl nicht angegeben wird. Wenn der Befehl erfolgreich ist, führt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] immer einen Commit für die implizite Transaktionen aus, und wenn der Befehl einen Fehler generiert, wird ein Rollback für die implizite Transaktion ausgeführt.  
   
  **Explizite Transaktion**  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellt eine *explizite* Transaktion, wenn `BeginTransaction` der Befehl eine Transaktion startet. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] führt jedoch einen Commit für eine explizite Transaktion nur aus, wenn ein `CommitTransaction`-Befehl gesendet wird und führt ein Rollback für eine explizite Transaktion aus, wenn ein `RollbackTransaction`-Befehl gesendet wird.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellt eine *explizite* Transaktion, wenn `BeginTransaction` der Befehl eine Transaktion startet. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] führt jedoch einen Commit für eine explizite Transaktion nur aus, wenn ein `CommitTransaction`-Befehl gesendet wird und führt ein Rollback für eine explizite Transaktion aus, wenn ein `RollbackTransaction`-Befehl gesendet wird.  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] führt zudem ein Rollback sowohl für implizite als auch für explizite Transaktionen aus, wenn die aktuelle Sitzung beendet wird, bevor die aktive Transaktion fertiggestellt wird.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] führt zudem ein Rollback sowohl für implizite als auch für explizite Transaktionen aus, wenn die aktuelle Sitzung beendet wird, bevor die aktive Transaktion fertiggestellt wird.  
   
 ## <a name="transactions-and-reference-counts"></a>Transaktionen und Verweiszähler  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwaltet einen Transaktionsverweiszähler für jede Sitzung. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt jedoch keine geschachtelten Transaktionen, da nur eine aktive Transaktion pro Sitzung verwaltet wird. Wenn die aktuelle Sitzung keine aktive Transaktion besitzt, wird der Transaktionsverweiszähler auf null festgelegt.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwaltet einen Transaktionsverweiszähler für jede Sitzung. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt jedoch keine geschachtelten Transaktionen, da nur eine aktive Transaktion pro Sitzung verwaltet wird. Wenn die aktuelle Sitzung keine aktive Transaktion besitzt, wird der Transaktionsverweiszähler auf null festgelegt.  
   
  Dies bedeutet, dass jeder `BeginTransaction`-Befehl den Verweiszähler um eins erhöht, während jeder `CommitTransaction`-Befehl den Verweiszähler um eins verringert. Wenn ein `CommitTransaction`-Befehl den Transaktionszähler auf null festlegt, führt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] einen Commit für die Transaktion aus.  
   

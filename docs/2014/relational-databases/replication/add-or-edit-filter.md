@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fa12421f39119fbbb5e40c8c2b6dc7f103cd9a45
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62676876"
 ---
 # <a name="add-or-edit-filter"></a>Hinzufügen oder Bearbeiten von Filtern
-  In den Dialogfeldern **Filter hinzufügen** und **Filter bearbeiten** können Sie statische Zeilen Filter und parametrisierte Zeilen Filter hinzufügen und bearbeiten.  
+  Mithilfe der Dialogfelder **Filter hinzufügen** und **Filter bearbeiten** können Sie statische Zeilenfilter und parametrisierte Zeilenfilter hinzufügen und bearbeiten.  
   
 > [!NOTE]  
 >  Für das Bearbeiten in einer vorhandenen Veröffentlichung ist eine neue Momentaufnahme für die Veröffentlichung erforderlich. Wenn eine Veröffentlichung Abonnements besitzt, müssen die Abonnements erneut initialisiert werden. Weitere Informationen zum Ändern von Eigenschaften finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](publish/change-publication-and-article-properties.md).  
@@ -32,7 +32,7 @@ ms.locfileid: "62676876"
 ## <a name="options"></a>Tastatur  
  Dieses Dialogfeld umfasst einen zweistufigen Vorgang für die Transaktions- und Momentaufnahmeveröffentlichungen sowie einen dreistufigen Vorgang für Mergeveröffentlichungen. Für alle Veröffentlichungstypen ist es erforderlich, dass Sie eine zu filternde Tabelle und eine oder mehrere Spalten auswählen, die im Filter eingeschlossen sein sollen. Der Filter wird als standardmäßige WHERE-Klausel definiert.  
   
-1.  **Zu filternde Tabelle auswählen**  
+1.  **Wählen Sie die zu filternde Tabelle aus**  
   
      Wenn Sie einen bereits vorhandenen Filter bearbeiten, kann die Tabellenauswahl nicht geändert werden. Wenn Sie einen neuen Filter hinzufügen, wählen Sie aus der Dropdown-Liste eine Tabelle aus. Tabellen werden in der Liste nur angezeigt, wenn sie auf der Seite **Artikel** ausgewählt wurden und nicht bereits einen Zeilenfilter besitzen. Wenn eine Tabelle bereits einen Zeilenfilter besitzt und Sie einen neuen definieren möchten:  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62676876"
   
     3.  Bearbeiten Sie einen vorhandenen Filter im Dialogfeld **Filter bearbeiten** .  
   
-2.  **Vervollständigen Sie die Filter Anweisung, um zu ermitteln, welche Tabellenzeilen Abonnenten empfangen werden.**  
+2.  **Vervollständigen Sie die Filteranweisung, um die von Abonnenten empfangenen Tabellenzeilen zu identifizieren**  
   
      Definieren Sie eine neue Filteranweisung, oder bearbeiten Sie eine vorhandene. Im Listenfeld **Spalten** werden alle Spalten aufgeführt, die Sie aus einer in **Wählen Sie die zu filternde Tabelle aus**ausgewählten Tabelle veröffentlichen. Der Textbereich **Filteranweisung** enthält den Standardtext im folgenden Format:  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62676876"
   
 3.  **Geben Sie an, wie viele Abonnements Daten aus dieser Tabelle empfangen.**  
   
-     [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höhere Versionen; nur Mergereplikation. Mithilfe von Mergereplikationen können Sie den für Ihre Daten und Ihre Anwendung am besten geeigneten Partitionstyp angeben. Wenn Sie **Eine Zeile aus dieser Tabelle wird nur an ein Abonnement gesendet**auswählen, legt die Mergereplikation die Option für nicht überlappende Partitionen fest. Nicht überlappende Partitionen arbeiten zur Leistungsverbesserung mit vorausberechneten Partitionen zusammen, wobei nicht überlappende Partitionen die bei vorausberechneten Partitionen entstehenden Uploadkosten minimieren. Die Leistungsvorteile nicht überlappender Partitionen treten deutlicher hervor, wenn die verwendeten parametrisierten Filter und Joinfilter komplexer sind. Bei Auswahl dieser Option müssen Sie jedoch sicherstellen, dass die Daten so partitioniert werden, dass eine Zeile nicht für mehrere Abonnenten repliziert werden kann. Weitere Informationen finden Sie im Abschnitt zum Festlegen von Partitionsoptionen unter [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
+     [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höher; nur für Mergereplikationen. Mithilfe von Mergereplikationen können Sie den für Ihre Daten und Ihre Anwendung am besten geeigneten Partitionstyp angeben. Wenn Sie **Eine Zeile aus dieser Tabelle wird nur an ein Abonnement gesendet**auswählen, legt die Mergereplikation die Option für nicht überlappende Partitionen fest. Nicht überlappende Partitionen arbeiten zur Leistungsverbesserung mit vorausberechneten Partitionen zusammen, wobei nicht überlappende Partitionen die bei vorausberechneten Partitionen entstehenden Uploadkosten minimieren. Die Leistungsvorteile nicht überlappender Partitionen treten deutlicher hervor, wenn die verwendeten parametrisierten Filter und Joinfilter komplexer sind. Bei Auswahl dieser Option müssen Sie jedoch sicherstellen, dass die Daten so partitioniert werden, dass eine Zeile nicht für mehrere Abonnenten repliziert werden kann. Weitere Informationen finden Sie im Abschnitt zum Festlegen von Partitionsoptionen unter [Parameterized Row Filters](merge/parameterized-filters-parameterized-row-filters.md).  
   
  Nachdem Sie einen Filter hinzugefügt oder bearbeitet haben, klicken Sie auf **OK** , um die Änderungen zu speichern und das Dialogfeld zu schließen. Der von Ihnen angegebene Filter wird analysiert und für die Tabelle in der SELECT-Klausel ausgeführt. Wenn die Filteranweisung Syntaxfehler oder andere Probleme enthält, werden Sie benachrichtigt und können die Filteranweisung bearbeiten.  
   

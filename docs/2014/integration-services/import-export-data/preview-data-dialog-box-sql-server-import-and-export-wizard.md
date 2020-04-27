@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 55102e5b91b9b544a38338dbbbbcd882bc66f84a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62767982"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>Datenvorschau (Dialogfeld) (SQL Server-Import/Export-Assistent)
@@ -30,11 +30,11 @@ ms.locfileid: "62767982"
   
 -   Klicken Sie auf der Seite **Quell Tabellen und-Sichten auswählen** des- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import/Export-Assistenten auf **Vorschau**.  
   
-## <a name="options"></a>Tastatur  
- **`Source`**  
+## <a name="options"></a>Optionen  
+ **Quelle**  
  Zeigt die Abfrage an, die der Assistent an die Datenquelle sendet.  
   
- **Beispiel Datenraster**  
+ **Beispieldatenraster**  
  Zeigt bis zu 200 Zeilen der Beispieldaten an, die von der Abfrage zurückgegeben wurden.  
   
   

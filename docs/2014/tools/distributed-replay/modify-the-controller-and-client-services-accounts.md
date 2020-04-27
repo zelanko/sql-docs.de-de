@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9f9439fd1b0844b09e26331859ce37d18817f908
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62505995"
 ---
 # <a name="modify-the-controller-and-client-services-accounts"></a>Ändern von Controller- und Clientdienstkonten
@@ -24,7 +24,7 @@ ms.locfileid: "62505995"
   
 1.  Geben Sie auf dem Computer mit den Distributed Replay-Diensten an der Eingabeaufforderung `dcomcnfg` ein.  
   
-2.  Doppelklicken Sie auf **Dienste**, scrollen Sie nach unten, und klicken Sie mit der rechten Maustaste auf **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<Dienstname>**. Klicken Sie anschließend auf **Start** oder auf **Beenden**.  
+2.  Doppelklicken Sie auf **Dienste**, scrollen Sie nach unten, und klicken Sie mit der rechten Maustaste auf **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay \<Dienstname>** . Klicken Sie anschließend auf **Start** oder auf **Beenden**.  
   
 ### <a name="to-modify-the-distributed-replay-controller-service"></a>So ändern Sie den Distributed Replay Controller-Dienst  
   
@@ -32,9 +32,9 @@ ms.locfileid: "62505995"
   
 2.  Klicken Sie unter **Dienste**mit der rechten Maustaste auf **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller**, und wählen Sie dann **Eigenschaften**aus.  
   
-3.  Wählen Sie im Fenster ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Eigenschaften von Distributed Replay Controller** auf der Registerkarte **Anmelden** die Option **dieses Konto**aus, geben Sie das neue Anmelde Konto ein, oder klicken Sie auf **Durchsuchen** , und klicken Sie dann auf **OK**.  
+3.  Wählen Sie im Fenster **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller** auf der Registerkarte **Anmelden** die Option **Dieses Konto**aus, geben Sie das neue Anmeldekonto ein, oder klicken Sie auf **Durchsuchen** , um dieses zu suchen. Klicken Sie dann auf **OK**.  
   
-     **Wichtig**: Wenn Sie Distributed Replay Controller konfigurieren, können Sie mindestens ein Benutzerkonto angeben, das zum Ausführen der Distributed Replay Client-Dienste verwendet wird. Die folgenden Kontotypen werden unterstützt:  
+     **Wichtig**: Wenn Sie den Distributed Replay Controller konfigurieren, können Sie mindestens ein Benutzerkonto angeben, das zum Ausführen der Distributed Replay Client-Dienste verwendet wird. Die folgenden Kontotypen werden unterstützt:  
   
     -   Domänenbenutzerkonto  
   
@@ -76,7 +76,7 @@ ms.locfileid: "62505995"
   
 2.  Beenden Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client-Dienst.  
   
-3.  Wählen Sie im Fenster ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Eigenschaften von Distributed Replay-Client** auf der Registerkarte **Anmelden** die Option **dieses Konto**aus, geben Sie das neue Anmelde Konto ein, **oder klicken Sie**auf **Durchsuchen** , um das neue Anmelde Konto einzugeben  
+3.  Wählen Sie im Fenster **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client** auf der Registerkarte **Anmelden** die Option **Dieses Konto**aus, geben Sie das neue Anmeldekonto ein, oder klicken Sie auf **Durchsuchen** , um dieses zu suchen. Klicken Sie dann auf **OK**.  
   
 4.  Starten Sie den Distributed Replay Client-Dienst.  
   

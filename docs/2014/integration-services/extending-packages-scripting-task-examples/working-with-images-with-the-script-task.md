@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b27b5bbc77d1d48e3697893e2e21dcf7d8a6c570
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768446"
 ---
 # <a name="working-with-images-with-the-script-task"></a>Arbeiten mit Bildern mithilfe des Skripttasks
@@ -40,7 +40,7 @@ ms.locfileid: "62768446"
 > [!NOTE]  
 >  Wenn Sie einen Task erstellen möchten, den Sie einfacher in mehreren Paketen wiederverwenden können, empfiehlt es sich, den Code in diesem Skripttaskbeispiel als Ausgangspunkt für einen benutzerdefinierten Task zu verwenden. Weitere Informationen finden Sie unter [Entwickeln eines benutzerdefinierten Tasks](../extending-packages-custom-objects/task/developing-a-custom-task.md).  
   
-##  <a name="example1"></a> Beschreibung zu Beispiel 1: Konvertieren von Bildern in das JPEG-Format  
+##  <a name="example-1-description-convert-images-to-jpeg-format"></a><a name="example1"></a> Beschreibung zu Beispiel 1: Konvertieren von Bildern in das JPEG-Format  
  Im folgenden Beispiel wird eine Bilddatei, die durch eine Variable definiert ist, geöffnet und mithilfe eines Encoders als komprimierte JPEG-Datei gespeichert. Der Code zum Abrufen der Encoderinformationen wird in einer privaten Funktion gekapselt.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>So konfigurieren Sie dieses Skripttaskbeispiel zur Verwendung mit einer einzelnen Bilddatei  
@@ -149,7 +149,7 @@ End Function
   
 ```  
   
-##  <a name="example2"></a> Beschreibung zu Beispiel 2: Erstellen und Speichern von Miniaturbildern  
+##  <a name="example-2-description-create-and-save-thumbnail-images"></a><a name="example2"></a> Beschreibung zu Beispiel 2: Erstellen und Speichern von Miniaturbildern  
  Im folgenden Beispiel wird eine Bilddatei, die durch eine Variable definiert ist, geöffnet, ein Miniaturbild dieses Bilds mit gleichem Seitenverhältnis erstellt und das Miniaturbild mit geändertem Dateinamen gespeichert. Der Code, der Höhe und Breite des Miniaturbilds berechnet und dabei das Seitenverhältnis beibehält, wird in einer privaten Unterroutine gekapselt.  
   
 #### <a name="to-configure-this-script-task-example-for-use-with-a-single-image-file"></a>So konfigurieren Sie dieses Skripttaskbeispiel zur Verwendung mit einer einzelnen Bilddatei  

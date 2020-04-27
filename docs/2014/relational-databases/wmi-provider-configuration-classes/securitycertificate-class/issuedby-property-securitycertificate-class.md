@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 0f5bd1e1e6ce8b35d81ee5c17333543dfe5d8ab8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62511281"
 ---
 # <a name="issuedby-property-securitycertificate-class"></a>IssuedBy-Eigenschaft (SecurityCertificate-Klasse)
@@ -37,13 +37,13 @@ object
 ```  
   
 ## <a name="parts"></a>Bestandteile  
- *Objekt*  
+ *object*  
  Ein [SecurityCertificate-Klassenobjekt](securitycertificate-class.md) , das ein Sicherheitszertifikat darstellt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Zeichenfolgenwert, der das Objekt angibt, das das Sicherheitszertifikat ausgegeben hat.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Servernetzwerkprotokollen und Netzwerkbibliotheken](https://msdn.microsoft.com/library/ms177485\(v=sql.100\).aspx)  

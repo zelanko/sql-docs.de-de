@@ -13,16 +13,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9e0520c28d78b8036072b70de2d8f83a1a8c72da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62628775"
 ---
 # <a name="subscription-distributor-to-subscriber-history-snapshot-subscription"></a>Abonnement, Verlauf Verteiler zu Abonnent (Momentaufnahmeabonnement)
-  Die Registerkarte **Verlauf Verteiler zu Abonnent** zeigt detaillierte Informationen zum Verteilungs-Agent an, u. a. Status, Verlauf, Informationsmeldungen und alle Fehlermeldungen.  
+   Die Registerkarte **Verlauf Verteiler zu Abonnent** zeigt detaillierte Informationen zum Verteilungs-Agent an, u.a. Status, Verlauf, Informationsmeldungen und alle Fehlermeldungen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Wählen Sie im Menü **Sicht** aus, welche Sitzungen des Verteilungs-Agents angezeigt werden, und wählen Sie dann eine bestimmte Sitzung aus dem Raster mit der Bezeichnung **Sitzungen des Verteilungs-Agents**aus. Detaillierte Informationen zu dieser Sitzung werden im Raster mit der Bezeichnung **Aktionen in der ausgewählten Sitzung**angezeigt. Wenn die ausgewählte Sitzung mit einem Fehler beendet wurde, wird auch der Textbereich mit der Bezeichnung **Fehlerdetails oder Meldung der ausgewählten Sitzung** angezeigt.  
   
  **Ansicht**  
@@ -42,7 +42,7 @@ ms.locfileid: "62628775"
  **Startzeit**  
  Startzeit der Sitzung.  
   
- **Beendigungszeit**  
+ **Endzeit**  
  Beendigungszeit der Sitzung. Wenn der Agent noch nicht beendet wurde, ist dieses Feld leer.  
   
  **Duration**  
@@ -61,9 +61,9 @@ ms.locfileid: "62628775"
  Wird nur angezeigt, wenn in der ausgewählten Sitzung in der **Status** -Spalte der Wert **Fehler** angezeigt wird. Dieser Textbereich zeigt detaillierte Fehlerinformationen sowie den Befehl an, der zum Zeitpunkt des Fehlers auszuführen versucht wurde. Er enthält außerdem Links zu weiteren Informationen, die sich auf den Fehler beziehen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Starten des Replikationsmonitors](monitor/start-the-replication-monitor.md)   
- [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](monitor/view-information-and-perform-tasks-replication-monitor.md)   
- [Überwachen der Replikation](monitoring-replication.md)   
- [Übersicht über Replikations-Agents](agents/replication-agents-overview.md)  
+ [Starten des Replikations Monitors](monitor/start-the-replication-monitor.md)   
+ [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikations](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Überwachung der Replikation](monitoring-replication.md)   
+ [Replikations-Agents (Übersicht)](agents/replication-agents-overview.md)  
   
   

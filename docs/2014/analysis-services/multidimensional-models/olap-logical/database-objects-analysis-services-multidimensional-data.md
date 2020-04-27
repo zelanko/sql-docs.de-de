@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 39116b4bf8c4c361dfa82ca0d8a38dc6977de217
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62725655"
 ---
 # <a name="database-objects-analysis-services---multidimensional-data"></a>Datenbankobjekte (Analysis Services - Mehrdimensionale Daten)
@@ -56,15 +56,15 @@ ms.locfileid: "62725655"
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  In den folgenden Themen werden die Objekte beschrieben, die sowohl von OLAP- als auch von Data Mining-Funktionen in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]verwendet werden.  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Datenquellen in mehrdimensionalen Modellen](../data-sources-in-multidimensional-models.md)|Beschreibt eine Datenquelle in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].|  
-|[Datenquellensichten in mehrdimensionalen Modellen](../data-source-views-in-multidimensional-models.md)|Beschreibt ein logisches Datenmodell, das auf mindestens einer Datenquelle in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]basiert.|  
+|[Datenquellsichten in mehrdimensionalen Modellen](../data-source-views-in-multidimensional-models.md)|Beschreibt ein logisches Datenmodell, das auf mindestens einer Datenquelle in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]basiert.|  
 |[Cubes in mehrdimensionalen Modellen](../cubes-in-multidimensional-models.md)|Beschreibt Cubes und Cubeobjekte, einschließlich Measures, Measuregruppen, Dimensionsverwendungbeziehungen, Berechnungen, Key Performance Indicators (KPIs), Aktionen, Übersetzungen, Partitionen und Perspektiven.|  
-|[Dimensionen &#40;Analysis Services Mehrdimensionale Daten&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)|Beschreibt Dimensionen und Dimensionsobjekte, einschließlich Attribute, Attributbeziehungen, Hierarchien, Ebenen und Elemente.|  
-|[Mining Strukturen &#40;Analysis Services Data Mining-&#41;](../../data-mining/mining-structures-analysis-services-data-mining.md)|Beschreibt Miningstrukturen und Miningobjekte, einschließlich Miningmodellen.|  
-|[Sicherheitsrollen &#40;Analysis Services Mehrdimensionale Daten&#41;](security-roles-analysis-services-multidimensional-data.md)|Beschreibt eine Rolle, den Sicherheitsmechanismus, der zum Steuern des Zugriffs auf Objekte in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]verwendet wird.|  
-|[Verwaltung von mehrdimensionalen Modellen](../multidimensional-model-assemblies-management.md)|Beschreibt eine Assembly, eine Auflistung von benutzerdefinierten Funktionen, die zum Erweitern der Sprachen MDX und DMX in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]verwendet werden.|  
+|[Dimensionen &#40;Analysis Services – mehrdimensionale Daten&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)|Beschreibt Dimensionen und Dimensionsobjekte, einschließlich Attribute, Attributbeziehungen, Hierarchien, Ebenen und Elemente.|  
+|[Miningstrukturen &#40;Analysis Services – Data Mining&#41;](../../data-mining/mining-structures-analysis-services-data-mining.md)|Beschreibt Miningstrukturen und Miningobjekte, einschließlich Miningmodellen.|  
+|[Sicherheitsrollen &#40;Analysis Services – Mehrdimensionale Daten&#41;](security-roles-analysis-services-multidimensional-data.md)|Beschreibt eine Rolle, den Sicherheitsmechanismus, der zum Steuern des Zugriffs auf Objekte in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]verwendet wird.|  
+|[Verwaltung von mehrdimensionalen Modellassemblys](../multidimensional-model-assemblies-management.md)|Beschreibt eine Assembly, eine Auflistung von benutzerdefinierten Funktionen, die zum Erweitern der Sprachen MDX und DMX in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]verwendet werden.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Unterstützte Datenquellen &#40;mehrdimensionalen SSAS-&#41;](../supported-data-sources-ssas-multidimensional.md)   

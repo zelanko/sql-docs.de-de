@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b8e3854d98833354fd859d687bfa7e85e99601de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62670443"
 ---
 # <a name="delete-a-database-diagram-visual-database-tools"></a>Löschen eines Datenbankdiagramms (Visual Database Tools)
@@ -33,7 +33,7 @@ ms.locfileid: "62670443"
   
 3.  Klicken Sie im Kontextmenü auf den Befehl **Löschen** .  
   
-4.  Über eine Meldung werden Sie zum Bestätigen des Löschvorgangs aufgefordert. Klicken Sie auf **Ja**.  
+4.  Über eine Meldung werden Sie zum Bestätigen des Löschvorgangs aufgefordert. Wählen Sie die Option **Ja** aus.  
   
  Das Datenbankdiagramm wird aus der Datenbank gelöscht. Beim Löschen eines Datenbankdiagramms werden die Tabellen im Diagramm nicht gelöscht.  
   

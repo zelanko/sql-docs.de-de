@@ -13,14 +13,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d7dd13f417ccf7b6240d8e3f8328d0b3cd9371bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62755596"
 ---
 # <a name="connect-to-server-analysis-services"></a>Verbindung mit Server herstellen (Analysis Services)
-  Verwenden Sie dieses Dialogfeld, um Optionen für die Verbindung [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]mit anzuzeigen oder anzugeben.  
+  Verwenden Sie dieses Dialogfeld, um Optionen bei der Verbindungsherstellung mit [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] anzuzeigen oder anzugeben.  
   
 ## <a name="options"></a>Tastatur  
  **Servertyp**  

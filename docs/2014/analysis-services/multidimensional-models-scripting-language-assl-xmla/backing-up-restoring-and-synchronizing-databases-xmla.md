@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6163a538c4e8872016f7ec572e4c177cfe92de94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702280"
 ---
 # <a name="backing-up-restoring-and-synchronizing-databases-xmla"></a>Sichern, Wiederherstellen und Synchronisieren von Datenbanken (XMLA)
@@ -32,7 +32,7 @@ ms.locfileid: "62702280"
   
 -   Der Synchronisierungs [Befehl synchronisiert](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla) eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Datenbank mit den Daten und Metadaten einer anderen Datenbank, wie im Abschnitt [Synchronisieren von Datenbanken](#synchronizing_databases)beschrieben.  
   
-##  <a name="backing_up_databases"></a>Sichern von Datenbanken  
+##  <a name="backing-up-databases"></a><a name="backing_up_databases"></a>Sichern von Datenbanken  
  Wie bereits erwähnt, sichert der `Backup`-Befehl eine angegebene [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbank in einer Sicherungsdatei. Der `Backup`-Befehl weist mehrere Eigenschaften auf, mit denen Sie die zu sichernde Datenbank, die zu verwendende Sicherungsdatei, die Methode zum Sichern von Sicherheitsdefinitionen sowie die zu sichernden Remotepartitionen angeben können.  
   
 > [!IMPORTANT]  
@@ -59,7 +59,7 @@ ms.locfileid: "62702280"
   
  Der Wert der `Security`-Eigenschaft ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |*SkipMembership*|Einbeziehen von Sicherheitsdefinitionen und Ausschließen von Informationen zur Mitgliedschaft in der Sicherungsdatei.|  
 |*CopyAll*|Einbeziehen von Sicherheitsdefinitionen und Informationen zur Mitgliedschaft in der Sicherungsdatei.|  
@@ -70,7 +70,7 @@ ms.locfileid: "62702280"
   
  Für jede zu sichernde Remote Datenquelle können Sie die zugehörige Sicherungsdatei angeben, indem Sie ein [Location](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/location-element-xmla) -Element in die Location [-Eigenschaft des](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/locations-element-xmla) - `Backup` Befehls einschließen. Für `Location` das-Element sollte `File` die-Eigenschaft auf den UNC-Pfad und den Dateinamen der Remote Sicherungsdatei festgelegt sein, und seine [DataSourceID-](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/id-element-xmla) Eigenschaft muss auf den Bezeichner der Remote Datenquelle festgelegt werden, die in der Datenbank definiert ist.  
   
-##  <a name="restoring_databases"></a>Daten Bank Wiederherstellung  
+##  <a name="restoring-databases"></a><a name="restoring_databases"></a>Daten Bank Wiederherstellung  
  Der `Restore`-Befehl stellt eine angegebene [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbank mithilfe einer Sicherungsdatei wieder her. Der `Restore`-Befehl weist mehrere Eigenschaften auf, mit denen Sie die wiederherzustellende Datenbank, die zu verwendende Sicherungsdatei, die Methode zum Wiederherstellen von Sicherheitsdefinitionen sowie die zu speichernden Remotepartitionen und das Verschieben relationaler OLAP-Objekte (ROLAP-Objekte) angeben können.  
   
 > [!IMPORTANT]  
@@ -89,7 +89,7 @@ ms.locfileid: "62702280"
   
  Der Wert dieses Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |*SkipMembership*|Einbeziehen von Sicherheitsdefinitionen und Ausschließen von Informationen zur Mitgliedschaft in der Datenbank.|  
 |*CopyAll*|Einbeziehen von Sicherheitsdefinitionen und Informationen zur Mitgliedschaft in der Datenbank.|  
@@ -109,7 +109,7 @@ ms.locfileid: "62702280"
   
  Sie können das `Location`-Element in einem `Restore`-Befehl verwenden, um ROLAP-Objekte zu verschieben. Für jedes `Location` Element, das zum Verschieben einer Datenquelle verwendet `DataSourceType` wird, muss die-Eigenschaft explizit auf *local*festgelegt werden. Sie müssen auch die `ConnectionString`-Eigenschaft des `Location`-Elements auf die Verbindungszeichenfolge für den neuen Speicherort festlegen. Während der Wiederherstellung ersetzt der `Restore`-Befehl die Verbindungszeichenfolge für die Datenquelle, die von der `DataSourceID`-Eigenschaft des `Location`-Elements identifiziert wird, durch den Wert der `ConnectionString`-Eigenschaft des `Location`-Elements.  
   
-##  <a name="synchronizing_databases"></a>Synchronisieren von Datenbanken  
+##  <a name="synchronizing-databases"></a><a name="synchronizing_databases"></a>Synchronisieren von Datenbanken  
  Der Befehl `Synchronize` synchronisiert die Daten und die Metadaten einer angegebenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbank mit denen einer anderen Datenbank. Der `Synchronize`-Befehl weist verschiedene Eigenschaften auf, mit denen Sie die Quelldatenbank, die Methode zur Synchronisierung von Sicherheitsdefinitionen, die zu synchronisierenden Remotepartitionen und die Synchronisierung von ROLAP-Objekten angeben können.  
   
 > [!NOTE]  
@@ -127,7 +127,7 @@ ms.locfileid: "62702280"
   
  Der Wert dieses Elements ist auf eine der in der folgenden Tabelle aufgelisteten Zeichenfolgen beschränkt.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |*SkipMembership*|Einbeziehen von Sicherheitsdefinitionen und Ausschließen von Informationen zur Mitgliedschaft in der Zieldatenbank.|  
 |*CopyAll*|Einbeziehen von Sicherheitsdefinitionen und Informationen zur Mitgliedschaft in der Zieldatenbank.|  

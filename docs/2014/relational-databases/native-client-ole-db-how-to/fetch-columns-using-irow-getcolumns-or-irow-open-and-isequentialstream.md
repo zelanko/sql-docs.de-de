@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca820a8f7f916aa473bdd527e24a9549b7c5195e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62467583"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-or-irowopen-and-isequentialstream"></a>Abrufen von Spalten mithilfe von IRow::GetColumns (oder IRow::Open) und ISequentialStream
@@ -35,12 +35,11 @@ ms.locfileid: "62467583"
   
 3.  Rufen Sie die Spaltendaten mit `IRow::Open()` oder `IRow::GetColumns()` ab.  
   
-    -   
-  `IRow::Open()` kann verwendet werden, um in der Zeile einen `ISequentialStream` zu öffnen. Geben Sie DBGUID_STREAM an, um anzugeben, dass die Spalte einen Strom von Binärdaten enthält (mit `IStream` oder `ISequentialStream` können Daten aus der Spalte gelesen werden).  
+    -   `IRow::Open()` kann verwendet werden, um in der Zeile einen `ISequentialStream` zu öffnen. Geben Sie DBGUID_STREAM an, um anzugeben, dass die Spalte einen Strom von Binärdaten enthält (mit `IStream` oder `ISequentialStream` können Daten aus der Spalte gelesen werden).  
   
     -   Wenn `IRow::GetColumns()` verwendet wird, wird das **pData** -Element der DBCOLUMNACCESS-Struktur so festgelegt, dass es auf ein Stream-Objekt verweist.  
   
-4.  Verwenden Sie **ISequentialStream:: Read ()** wiederholt, um die angegebene Anzahl von Bytes in den Consumerpuffer zu lesen.  
+4.  Verwenden Sie **ISequentialStream::Read()** mehrmals, um die angegebene Anzahl von Bytes in den Consumerpuffer zu lesen.  
   
 ## <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt, wie Sie mithilfe von IRow eine einzelne Zeile abrufen können. In diesem Beispiel wird jeweils eine Spalte aus der Zeile abgerufen. In diesem Beispiel wird die Verwendung von IRow::Open() sowie IRow::GetColumns() veranschaulicht. Im Beispiel werden die Spaltendaten mithilfe von ISequentialStream::Read gelesen.  
@@ -671,6 +670,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Vorgehensweisen für OLE DB](ole-db-how-to-topics.md)  
+ [Gewusst-wie-Themen zu OLE DB](ole-db-how-to-topics.md)  
   
   

@@ -14,14 +14,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1a15690eb5aff48ec0f72df16e8342ed5c0522c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62524060"
 ---
 # <a name="create-clr-functions"></a>Erstellen von CLR-Funktionen
-  Sie können ein Datenbankobjekt in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellen, die in einer Assembly programmiert ist, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] die im Common Language Runtime (CLR) erstellt wurde. Datenbankobjekte, die das reichhaltige Programmiermodell nutzen können, das von der Common Language Runtime bereitgestellt wird, sind z. B. Aggregatfunktionen, Funktionen, gespeicherte Prozeduren, Trigger und Typen.  
+  Sie können ein Datenbankobjekt in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz erstellen, das in einer Assembly programmiert wird, die in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-CLR (Common Language Runtime) erstellt wird. Datenbankobjekte, die das reichhaltige Programmiermodell nutzen können, das von der Common Language Runtime bereitgestellt wird, sind z. B. Aggregatfunktionen, Funktionen, gespeicherte Prozeduren, Trigger und Typen.  
   
  Zum Erstellen einer CLR-Funktion in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] müssen folgende Schritte ausgeführt werden:  
   
@@ -56,10 +56,10 @@ ms.locfileid: "62524060"
  CLR-Funktionen können für den Zugriff auf nativen (nicht verwalteten) Code verwendet werden, z.B. in C oder C++ geschriebenen Code. Dazu wird PInvoke vom verwalteten Code aus ausgeführt (Einzelheiten finden Sie unter [Aufrufen nativer Funktionen aus verwaltetem Code](https://go.microsoft.com/fwlink/?LinkID=181929) ). Dies kann die Wiederverwendung von Legacycode als CLR-UDFs oder das Programmieren leistungskritischer UDFs in systemeigenem Code ermöglichen. Die Verwendung einer UNSAFE-Assembly wird in diesem Fall vorausgesetzt. Warnhinweise zur Verwendung von UNSAFE-Assemblys finden Sie unter [CLR Integration Code Access Security](../clr-integration/security/clr-integration-code-access-security.md) .  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erstellen Sie benutzerdefinierte Funktionen &#40;Datenbank-Engine&#41;](create-user-defined-functions-database-engine.md)   
- [Erstellen von benutzerdefinierten Aggregaten](create-user-defined-aggregates.md)   
+ [Erstellen benutzerdefinierter Funktionen &#40;Datenbank-Engine&#41;](create-user-defined-functions-database-engine.md)   
+ [Erstellen benutzerdefinierter Aggregate](create-user-defined-aggregates.md)   
  [Ausführen von benutzerdefinierten Funktionen](execute-user-defined-functions.md)   
- [Anzeigen von benutzerdefinierten Funktionen](view-user-defined-functions.md)   
+ [Anzeigen benutzerdefinierter Funktionen](view-user-defined-functions.md)   
  [Programmierkonzepte für die Integration der Common Language Runtime &#40;CLR&#41;](../clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
   

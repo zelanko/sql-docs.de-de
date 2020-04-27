@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b0326330e3d2052e8e997a293f666a8fc725391b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62689076"
 ---
 # <a name="bcp_done"></a>'bcp_done'
@@ -46,7 +46,7 @@ hdbc
 ## <a name="returns"></a>Rückgabe  
  Die Anzahl von Zeilen, die nach dem letzten Aufruf von [bcp_batch](bcp-batch.md) permanent gespeichert wurden, oder -1 im Fall eines Fehlers.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Rufen Sie **bcp_done** nach dem letzten Aufruf von [bcp_sendrow](bcp-sendrow.md) oder [bcp_moretext](bcp-moretext.md)auf. Wenn Sie **bcp_done** nach dem Kopieren aller Daten nicht aufrufen, treten Fehler auf.  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2596ed7eb2d714ff0790daa013a5e47ecd134b38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653706"
 ---
 # <a name="lesson-3-adding-and-processing-models"></a>Lektion 3: Hinzufügen und Verarbeiten von Modellen
@@ -40,6 +40,6 @@ ms.locfileid: "62653706"
  [Lektion 4: Untersuchen der Ziel-Mailing-Modelle &#40;grundlegenden Data Mining-Lernprogramm&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Hinzufügen von Mining Modellen zu einer Struktur &#40;Analysis Services Data Mining-&#41;](../../2014/analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)  
+ [Hinzufügen von Miningmodellen zu einer Struktur &#40;Analysis Services - Data Mining&#41;](../../2014/analysis-services/data-mining/add-mining-models-to-a-structure-analysis-services-data-mining.md)  
   
   

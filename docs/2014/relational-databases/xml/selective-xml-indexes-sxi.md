@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a00800150f5f100f97687df59bc4603f07d0fcc3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62679821"
 ---
 # <a name="selective-xml-indexes-sxi"></a>Selektive XML-Indizes (SXI)
@@ -32,7 +32,7 @@ ms.locfileid: "62679821"
   
  Die selektive XML-Indexfunktion unterstützt auch sekundäre selektive XML-Indizes für Knoten, die von einem selektiven XML-Index indiziert wurden. Diese sekundären selektiven Indizes sind effizient und verbessern die Leistung von Abfragen noch weiter.  
   
-##  <a name="benefits"></a> Vorteile selektiver XML-Indizes  
+##  <a name="benefits-of-selective-xml-indexes"></a><a name="benefits"></a> Vorteile selektiver XML-Indizes  
  Selektive XML-Indizes bieten die folgenden Vorteile:  
   
 1.  Deutlich verbesserte Abfrageleistung für den XML-Datentyp bei typische Abfragelasten.  
@@ -45,7 +45,7 @@ ms.locfileid: "62679821"
   
 
   
-##  <a name="compare"></a> Selektive XML-Indizes und primäre XML-Indizes  
+##  <a name="selective-xml-indexes-and-primary-xml-indexes"></a><a name="compare"></a> Selektive XML-Indizes und primäre XML-Indizes  
   
 > [!IMPORTANT]  
 >  Im Hinblick auf eine bessere Leistung und einen effizienteren Speicher erstellen Sie in den meisten Fällen einen selektiven XML-Index anstatt eines gewöhnlichen XML-Indexes.  
@@ -58,7 +58,7 @@ ms.locfileid: "62679821"
   
 
   
-##  <a name="example"></a> Einfaches Beispiel für einen selektiven XML-Index  
+##  <a name="simple-example-of-a-selective-xml-index"></a><a name="example"></a> Einfaches Beispiel für einen selektiven XML-Index  
  Betrachten Sie das folgende XML-Fragment, das ein XML-Dokument in einer Tabelle mit ungefähr 500.000 Zeilen darstellt:  
   
 ```xml  
@@ -103,7 +103,7 @@ FOR
   
 ## <a name="supported-features-prerequisites-and-limitations"></a>Unterstützte Funktionen, Voraussetzungen und Einschränkungen  
   
-###  <a name="features"></a> Unterstützte XML-Funktionen  
+###  <a name="supported-xml-features"></a><a name="features"></a> Unterstützte XML-Funktionen  
  Selektive XML-Indizes unterstützen die XQuery, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in den exist()-, value()- und nodes()-Methoden unterstützt werden.  
   
 -   Für die exist()-, value()- und nodes()-Methoden enthalten selektive XML-Indizes ausreichende Informationen, um den gesamten Ausdruck zu transformieren.  
@@ -116,7 +116,7 @@ FOR
   
 
   
-###  <a name="unsupported"></a> Nicht unterstützte XML-Funktionen  
+###  <a name="unsupported-xml-features"></a><a name="unsupported"></a> Nicht unterstützte XML-Funktionen  
  Selektive XML-Indizes unterstützen nicht die folgenden Funktionen, die in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Implementierung von XML unterstützt werden:  
   
 -   Indizieren von Knoten mit komplexen XS-Typen: Union-Typen, Sequenztypen, und Listtypen.  
@@ -133,7 +133,7 @@ FOR
   
 
   
-###  <a name="prereq"></a> Voraussetzungen  
+###  <a name="prerequisites"></a><a name="prereq"></a> Voraussetzungen  
  Die folgenden Voraussetzungen müssen erfüllt sein, bevor Sie einen selektiven XML-Index für eine XML-Spalte in einer Benutzertabelle erstellen können:  
   
 -   Für den Primärschlüssel der Benutzertabelle muss ein gruppierter Index vorhanden sein.  
@@ -144,7 +144,7 @@ FOR
   
 
   
-###  <a name="limits"></a> Einschränkungen  
+###  <a name="limitations"></a><a name="limits"></a> Einschränkungen  
  **Allgemeine Anforderungen und Einschränkungen**  
   
 -   Jeder selektive XML-Index kann nur für eine einzige XML-Spalte erstellt werden.  
@@ -197,7 +197,7 @@ FOR
   
 
   
-##  <a name="reltasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="reltasks"></a> Verwandte Aufgaben  
   
 |||  
 |-|-|  

@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2e63ef1a2463f65e108ade9a43b748e02831da57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62725254"
 ---
 # <a name="security-roles--analysis-services---multidimensional-data"></a>Sicherheitsrollen (Analysis Services – Mehrdimensionale Daten)
@@ -75,23 +75,15 @@ ms.locfileid: "62725254"
   
  Folgende Aktionen werden durch Berechtigungen aktiviert:  
   
-|Action|Werte|Erklärung|  
+|Aktion|Werte|Erläuterung|  
 |------------|------------|-----------------|  
-|Prozess|{`true`, `false`}<br /><br /> Standard=`false`|Wenn `true` festgelegt wird, können Elemente das Objekt sowie alle in dem Objekt enthaltenen Objekte verarbeiten.<br /><br /> Prozessberechtigungen gelten nicht für Miningmodelle. 
-  <xref:Microsoft.AnalysisServices.MiningModel>-Berechtigungen werden immer von <xref:Microsoft.AnalysisServices.MiningStructure> geerbt.|  
-|ReadDefinition|{`None`, `Basic`, `Allowed`}<br /><br /> Standard=`None`|Gibt an, ob Elemente die mit dem Objekt verbundenen Datendefinitionen (ASSL) lesen können.<br /><br /> Wenn `Allowed` festgelegt wird, können Elemente die mit dem Objekt verbundenen ASSL lesen.<br /><br /> 
-  `Basic` und `Allowed` werden von in dem Objekt enthaltenen Objekten geerbt. 
-  `Allowed` überschreibt `Basic` und `None`.<br /><br /> 
-  `Allowed` ist für DISCOVER_XML_METADATA auf einem Objekt erforderlich 
-  `Basic` ist erforderlich, um verknüpfte Objekte und lokale Cubes zu erstellen.|  
-|Lesen|{`None`, `Allowed`}<br /><br /> Standard=`None` (außer für DimensionPermission, hier gilt Standard=`Allowed`)|Gibt an, ob Elemente über Lesezugriff auf Schemarowsets und Dateninhalt verfügen.<br /><br /> `Allowed`bietet Lesezugriff auf eine Datenbank, mit der Sie eine Datenbank ermitteln können.<br /><br /> 
-  `Allowed` für einen Cube ermöglicht Lesezugriff auf Schemarowsets und Zugriff auf Cubeinhalte (wenn nicht eingeschränkt durch <xref:Microsoft.AnalysisServices.CellPermission> und <xref:Microsoft.AnalysisServices.CubeDimensionPermission>).<br /><br /> 
-  `Allowed` für eine Dimension gewährt diese Leseberechtigung für alle Attributen in der Dimension (wenn nicht eingeschränkt durch <xref:Microsoft.AnalysisServices.CubeDimensionPermission>). Die Leseberechtigung wird nur für die statische Vererbung an die <xref:Microsoft.AnalysisServices.CubeDimensionPermission> verwendet. Wenn `None` für eine Dimension festgelegt wird, wird die Dimension verborgen und Standardelemente erhalten nur Zugriff auf aggregierbare Attribute. Wenn die Dimension ein nicht aggregierbares Attribut enthält, wird ein Fehler ausgegeben.<br /><br /> Wenn `Allowed` für <xref:Microsoft.AnalysisServices.MiningModelPermission> festgelegt wird, werden Berechtigungen für das Anzeigen von Objekten in Schemarowsets und die Ausführung von vorhergesagten Joins erteilt.<br /><br /> **Noteallowed** ist erforderlich, um ein beliebiges Objekt in der Datenbank zu lesen oder zu schreiben.|  
+|Prozess|{`true`, `false`}<br /><br /> Standard=`false`|Wenn `true` festgelegt wird, können Elemente das Objekt sowie alle in dem Objekt enthaltenen Objekte verarbeiten.<br /><br /> Prozessberechtigungen gelten nicht für Miningmodelle. <xref:Microsoft.AnalysisServices.MiningModel>-Berechtigungen werden immer von <xref:Microsoft.AnalysisServices.MiningStructure> geerbt.|  
+|ReadDefinition|{`None`, `Basic`, `Allowed`}<br /><br /> Standard=`None`|Gibt an, ob Elemente die mit dem Objekt verbundenen Datendefinitionen (ASSL) lesen können.<br /><br /> Wenn `Allowed` festgelegt wird, können Elemente die mit dem Objekt verbundenen ASSL lesen.<br /><br /> `Basic` und `Allowed` werden von in dem Objekt enthaltenen Objekten geerbt. `Allowed` überschreibt `Basic` und `None`.<br /><br /> `Allowed` ist für DISCOVER_XML_METADATA auf einem Objekt erforderlich `Basic` ist erforderlich, um verknüpfte Objekte und lokale Cubes zu erstellen.|  
+|Lesen|{`None`, `Allowed`}<br /><br /> Standard=`None` (außer für DimensionPermission, hier gilt Standard=`Allowed`)|Gibt an, ob Elemente über Lesezugriff auf Schemarowsets und Dateninhalt verfügen.<br /><br /> `Allowed`bietet Lesezugriff auf eine Datenbank, mit der Sie eine Datenbank ermitteln können.<br /><br /> `Allowed` für einen Cube ermöglicht Lesezugriff auf Schemarowsets und Zugriff auf Cubeinhalte (wenn nicht eingeschränkt durch <xref:Microsoft.AnalysisServices.CellPermission> und <xref:Microsoft.AnalysisServices.CubeDimensionPermission>).<br /><br /> `Allowed` für eine Dimension gewährt diese Leseberechtigung für alle Attributen in der Dimension (wenn nicht eingeschränkt durch <xref:Microsoft.AnalysisServices.CubeDimensionPermission>). Die Leseberechtigung wird nur für die statische Vererbung an die <xref:Microsoft.AnalysisServices.CubeDimensionPermission> verwendet. Wenn `None` für eine Dimension festgelegt wird, wird die Dimension verborgen und Standardelemente erhalten nur Zugriff auf aggregierbare Attribute. Wenn die Dimension ein nicht aggregierbares Attribut enthält, wird ein Fehler ausgegeben.<br /><br /> Wenn `Allowed` für <xref:Microsoft.AnalysisServices.MiningModelPermission> festgelegt wird, werden Berechtigungen für das Anzeigen von Objekten in Schemarowsets und die Ausführung von vorhergesagten Joins erteilt.<br /><br /> **Noteallowed** ist erforderlich, um ein beliebiges Objekt in der Datenbank zu lesen oder zu schreiben.|  
 |Schreiben|{`None`, `Allowed`}<br /><br /> Standard=`None`|Gibt an, ob Elemente über Schreibzugriff auf Daten des übergeordneten Objekts verfügen.<br /><br /> Der Zugriff gilt für <xref:Microsoft.AnalysisServices.Dimension>, <xref:Microsoft.AnalysisServices.Cube> und <xref:Microsoft.AnalysisServices.MiningModel>-Unterklassen. Er gilt nicht für Datenbank-<xref:Microsoft.AnalysisServices.MiningStructure>-Unterklassen, die einen Überprüfungsfehler generieren.<br /><br /> Wenn `Allowed` für <xref:Microsoft.AnalysisServices.Dimension> festgelegt wird, werden Schreibberechtigungen für alle Attribute in der Dimension gewährt.<br /><br /> Wenn `Allowed` für <xref:Microsoft.AnalysisServices.Cube> festgelegt wird, werden Schreibberechtigungen für die Zellen des Cubes gewährt, für deren Partitionen der Typ=writeback definiert wurde.<br /><br /> Wenn `Allowed` für <xref:Microsoft.AnalysisServices.MiningModel> festgelegt wird, werden Berechtigungen für die Änderung des Modellinhalts gewährt.<br /><br /> Wenn `Allowed` für <xref:Microsoft.AnalysisServices.MiningStructure> festgelegt wird, besitzt dies in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] keine bestimmte Bedeutung. **Hinweis:**  Schreiben kann nicht auf fest `Allowed` gelegt werden, es sei denn, Read ist auch auf`Allowed`|  
-|**Hinweis zur Verwaltung:** nur in Daten Bank Berechtigungen|{`true`, `false`}<br /><br /> Standard=`false`|Gibt an, ob Elemente eine Datenbank verwalten können.<br /><br /> 
-  `true` gewährt Elementen Zugriff auf alle Objekte in einer Datenbank.<br /><br /> Ein Element kann über Verwaltungsberechtigungen für eine bestimmte Datenbank verfügen, jedoch nicht für andere.|  
+|**Hinweis zur Verwaltung:** nur in Daten Bank Berechtigungen|{`true`, `false`}<br /><br /> Standard=`false`|Gibt an, ob Elemente eine Datenbank verwalten können.<br /><br /> `true` gewährt Elementen Zugriff auf alle Objekte in einer Datenbank.<br /><br /> Ein Element kann über Verwaltungsberechtigungen für eine bestimmte Datenbank verfügen, jedoch nicht für andere.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Autorisierungs Zugriff auf Objekte und Vorgänge &#40;Analysis Services&#41;](../authorizing-access-to-objects-and-operations-analysis-services.md)  
+ [Autorisieren des Zugriffs auf Objekte und Vorgänge &#40;Analysis Services&#41;](../authorizing-access-to-objects-and-operations-analysis-services.md)  
   
   

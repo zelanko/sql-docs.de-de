@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d2d799eff20ebe060fd68e0c55015f4c401edfff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736317"
 ---
 # <a name="change-column-order-in-a-table"></a>Ändern der Spaltenreihenfolge einer Tabelle
@@ -34,7 +34,7 @@ ms.locfileid: "62736317"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-change-the-column-order"></a>So ändern Sie die Spaltenreihenfolge  
   
@@ -44,7 +44,7 @@ ms.locfileid: "62736317"
   
 3.  Ziehen Sie die Spalte an eine andere Position innerhalb der Tabelle.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **So ändern Sie die Spaltenreihenfolge**  
   
  Diese Aufgabe kann nicht mit Transact-SQL-Anweisungen ausgeführt werden.  

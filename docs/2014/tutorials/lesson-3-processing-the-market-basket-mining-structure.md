@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ce2c2e6944d524a38edc331d2cd128ca7cf7d419
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62653853"
 ---
 # <a name="lesson-3-processing-the-market-basket-mining-structure"></a>Lektion 3: Verarbeiten der Market Basket-Miningstruktur
@@ -106,7 +106,7 @@ RELATE [<case key>] TO [<foreign key>]
     [<mining structure>]  
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     Market Basket  
@@ -120,7 +120,7 @@ RELATE [<case key>] TO [<foreign key>]
     ( SKIP, <skipped column> )  
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     [OrderNumber],  
@@ -128,8 +128,7 @@ RELATE [<case key>] TO [<foreign key>]
     (SKIP, [Model])  
     ```  
   
-     In der Anweisung verweist `Products` auf die von der SHAPE-Anweisung definierte Products-Tabelle. 
-  `SKIP` wird verwendet, um die Model-Spalte zu ignorieren, die in den Quelldaten als Schlüssel existiert, aber nicht von der Miningstruktur verwendet wird.  
+     In der Anweisung verweist `Products` auf die von der SHAPE-Anweisung definierte Products-Tabelle. `SKIP` wird verwendet, um die Model-Spalte zu ignorieren, die in den Quelldaten als Schlüssel existiert, aber nicht von der Miningstruktur verwendet wird.  
   
 5.  Ersetzen Sie Folgendes:  
   
@@ -144,7 +143,7 @@ RELATE [<case key>] TO [<foreign key>]
     ) AS [<nested table>]  
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     SHAPE {  

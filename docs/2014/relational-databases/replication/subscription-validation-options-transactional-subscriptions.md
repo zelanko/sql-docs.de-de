@@ -15,16 +15,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a82e13202209121897a5e5878a141c8d53800a47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62745421"
 ---
 # <a name="subscription-validation-options-transactional-subscriptions"></a>Optionen für die Abonnementüberprüfung (Transaktionsabonnements)
-  Mithilfe des Dialogfelds **Optionen für die Abonnementüberprüfung** können Sie angeben, ob zur Überprüfung nur die Zeilenanzahl oder die Zeilenanzahl und eine binäre Prüfsumme verwendet werden soll.  
+  Verwenden Sie das Dialogfeld Optionen für die **Abonnement** Überprüfung, um anzugeben, ob die Überprüfung nur die Zeilen Anzahl oder eine Zeilen Anzahl und eine binäre Prüfsumme verwenden soll.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Überprüfen Sie, ob der Abonnent die gleiche Anzahl von Zeilen mit replizierten Daten enthält wie der Verleger**  
  Wählen Sie den Typ der Zeilenanzahlüberprüfung aus, die ausgeführt werden soll. Bei Oracle-Veröffentlichungen ist die einzig verfügbare Option **Tatsächliche Zeilenanzahl durch direktes Abfragen der Tabellen berechnen**.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62745421"
  Standardmäßig wird der Verteilungs-Agent ununterbrochen ausgeführt. Wählen Sie diese Option aus, um den Agent nach dem Ausführen der Überprüfung zu beenden. Dadurch können Sie prüfen, ob die Überprüfung erfolgreich verlaufen ist, bevor die Replikation der Daten an den Abonnenten fortgesetzt wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Überprüfen der Daten am Abonnenten](validate-data-at-the-subscriber.md)   
+ [Überprüfen von Daten auf dem Abonnenten](validate-data-at-the-subscriber.md)   
  [Überprüfen von replizierten Daten](validate-data-at-the-subscriber.md)  
   
   

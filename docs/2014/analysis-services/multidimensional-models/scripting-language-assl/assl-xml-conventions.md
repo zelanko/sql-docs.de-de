@@ -25,10 +25,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41e0a3fcf4348efcb2108a1205c1d2d8eabfb85c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62736393"
 ---
 # <a name="assl-xml-conventions"></a>XML-Konventionen in ASSL
@@ -150,7 +150,7 @@ ms.locfileid: "62736393"
 |-------------------|-------------------|  
 |`Boolean`|False|  
 |`String`|"" (leere Zeichenfolge)|  
-|`Integer`noch`Long`|0 (Null)|  
+|`Integer` oder `Long`|0 (Null)|  
 |`Timestamp`|12:00:00 Uhr, 1/1/0001 (entspricht einem .NET Frameworks `System.DateTime` mit 0 Ticks)|  
   
  Eine Element, das vorhanden, jedoch leer ist, wird interpretiert, als hätte es den Wert einer NULL-Zeichenfolge, nicht den Standardwert.  

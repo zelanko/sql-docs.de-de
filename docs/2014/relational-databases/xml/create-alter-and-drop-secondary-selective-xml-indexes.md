@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b96e0bb7f28349e4d0b0ed5225f9b29e58de982f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62637847"
 ---
 # <a name="create-alter-and-drop-secondary-selective-xml-indexes"></a>Erstellen, Ändern und Löschen sekundärer, selektiver XML-Indizes
   Beschreibt, wie ein neuer sekundärer, selektiver XML-Index erstellt bzw. ein vorhandener sekundärer, selektiver XML-Index geändert oder gelöscht wird.  
   
-##  <a name="create"></a> Erstellen eines sekundären, selektiven XML-Indexes  
+##  <a name="creating-a-secondary-selective-xml-index"></a><a name="create"></a> Erstellen eines sekundären, selektiven XML-Indexes  
   
 ### <a name="how-to-create-a-secondary-selective-xml-index"></a>Vorgehensweise: Erstellen eines sekundären, selektiven XML-Indexes  
  **Erstellen eines sekundären, selektiven XML-Indexes mit Transact-SQL**  
@@ -41,7 +41,7 @@ FOR
 ```  
   
   
-##  <a name="alter"></a> Ändern eines sekundären, selektiven XML-Indexes  
+##  <a name="altering-a-secondary-selective-xml-index"></a><a name="alter"></a> Ändern eines sekundären, selektiven XML-Indexes  
  Die ALTER-Anweisung wird für sekundäre, selektive XML-Indizes nicht unterstützt. Um einen sekundären, selektiven XML-Index zu ändern, löschen Sie den vorhandenen Index und erstellen ihn erneut.  
   
 ### <a name="how-to-alter-a-secondary-selective-xml-index"></a>Vorgehensweise: Ändern eines sekundären, selektiven XML-Indexes  
@@ -67,7 +67,7 @@ FOR
 ```  
   
   
-##  <a name="drop"></a> Löschen eines sekundären, selektiven XML-Indexes  
+##  <a name="dropping-a-secondary-selective-xml-index"></a><a name="drop"></a> Löschen eines sekundären, selektiven XML-Indexes  
   
 ### <a name="how-to-drop-a-secondary-selective-xml-index"></a>Vorgehensweise: Löschen eines sekundären, selektiven XML-Indexes  
  **Löschen eines sekundären, selektiven XML-Indexes mit Transact-SQL**  

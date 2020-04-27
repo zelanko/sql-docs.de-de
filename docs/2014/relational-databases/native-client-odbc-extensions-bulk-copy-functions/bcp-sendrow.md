@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e8ef7aa7a4354f5a3fbc334504512b2ee8d131b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62688830"
 ---
 # <a name="bcp_sendrow"></a>'bcp_sendrow'
@@ -46,7 +46,7 @@ hdbc
 ## <a name="returns"></a>Rückgabe  
  SUCCEED oder FAIL.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die **bcp_sendrow** -Funktion erstellt eine Zeile aus Programmvariablen und sendet sie an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Vor dem Aufruf von **bcp_sendrow**müssen Sie Aufrufe an [bcp_bind](bcp-bind.md) vornehmen, um die Programmvariablen mit den Zeilendaten anzugeben.  

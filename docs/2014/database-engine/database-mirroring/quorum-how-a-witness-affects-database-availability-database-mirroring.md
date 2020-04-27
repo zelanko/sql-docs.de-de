@@ -22,14 +22,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 26abcc214c4f4304019bbc855379b56cab7cfc96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754415"
 ---
 # <a name="quorum-how-a-witness-affects-database-availability-database-mirroring"></a>Quorum: Auswirkungen eines Zeugen auf die Datenbankverfügbarkeit (Datenbankspiegelung)
-  Wenn ein Zeuge für eine Datenbank-Spiegelungssitzung festgelegt wird, ist ein *Quorum* erforderlich. Das Quorum ist eine Beziehung, die vorhanden ist, wenn zwei oder mehr Serverinstanzen in einer Datenbank-Spiegelungssitzung miteinander verbunden sind. Typischerweise sind am Quorum drei miteinander verbundene Serverinstanzen beteiligt. Wird ein Zeuge festgelegt, ist ein Quorum erforderlich, damit die Datenbank verfügbar wird. Das Quorum wurde für den Modus für hohe Sicherheit mit automatischem Failover konzipiert und stellt sicher, dass eine Datenbank zu einem bestimmten Zeitpunkt im Besitz nur jeweils eines Partners ist.  
+   Wenn ein Zeuge für eine Datenbank-Spiegelungssitzung festgelegt wird, ist ein *Quorum* erforderlich. Das Quorum ist eine Beziehung, die vorhanden ist, wenn zwei oder mehr Serverinstanzen in einer Datenbank-Spiegelungssitzung miteinander verbunden sind. Typischerweise sind am Quorum drei miteinander verbundene Serverinstanzen beteiligt. Wird ein Zeuge festgelegt, ist ein Quorum erforderlich, damit die Datenbank verfügbar wird. Das Quorum wurde für den Modus für hohe Sicherheit mit automatischem Failover konzipiert und stellt sicher, dass eine Datenbank zu einem bestimmten Zeitpunkt im Besitz nur jeweils eines Partners ist.  
   
  Wenn die Verbindung einer bestimmten Serverinstanz mit der Spiegelungssitzung getrennt wird, verliert diese Instanz das Quorum. Sind keine Serverinstanzen verbunden, verliert die Sitzung das Quorum, und die Datenbank ist nicht mehr verfügbar. Drei Quorumtypen sind möglich:  
   
@@ -102,8 +102,8 @@ ms.locfileid: "62754415"
  In Szenario 2 verliert der Zeuge sein Quorum, während die Partner **Partner_A** und **Partner_B**das Quorum gemeinsam behalten; die Datenbank bleibt online. Dann verlieren auch die Partner ihr Quorum, und die Datenbank wird offline geschaltet. Später stellt der Prinzipalserver ( **Partner_A**) die Verbindung mit dem Zeugen wieder her und erhält dadurch das Quorum. Der Zeuge bestätigt, dass **Partner_A** noch immer im Besitz der Prinzipalrolle ist, und **Partner_A** schaltet die Datenbank wieder online.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Betriebsmodi der Datenbankspiegelung](database-mirroring-operating-modes.md)   
- [Rollenwechsel während einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
+ [Betriebsmodi der Daten Bank Spiegelung](database-mirroring-operating-modes.md)   
+ [Rollenwechsel während einer Datenbank-Spiegelungs Sitzung &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Datenbank-Spiegelungs Zeuge](database-mirroring-witness.md)   
  [Mögliche Fehler während der Daten Bank Spiegelung](possible-failures-during-database-mirroring.md)   
  [Spiegelungsstatus &#40;SQL Server&#41;](mirroring-states-sql-server.md)  

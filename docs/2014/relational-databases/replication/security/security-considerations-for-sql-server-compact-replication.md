@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cf96d8118d35fab87e50f1a4237bafcb9b586c2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62666863"
 ---
 # <a name="security-considerations-for-sql-server-compact-replication"></a>Überlegungen zur Sicherheit für die Replikation von SQL Server Compact
-  Die Sicherung der Konnektivität zwischen einer Instanz der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank-Engine und [!INCLUDE[ssEW](../../../includes/ssew-md.md)] umfasst die richtige Konfiguration der Sicherheit sowohl für Microsoft Internetinformationsdienste (IIS) als auch für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+  Das Sichern der Konnektivität zwischen einer [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Instanz von [!INCLUDE[ssEW](../../../includes/ssew-md.md)] Datenbank-Engine und umfasst das ordnungsgemäße Konfigurieren der Sicherheit für Microsoft Internetinformationsdienste [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)](IIS) und.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server-Replikation Sicherheit](view-and-modify-replication-security-settings.md)   

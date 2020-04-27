@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 81235bf4bf4f1234be3d1ffdc341d3239b8d2b35
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62655494"
 ---
 # <a name="updatable-subscriptions-for-transactional-replication"></a>Updatable Subscriptions for Transactional Replication
@@ -56,7 +56,7 @@ ms.locfileid: "62655494"
  **So wechseln Sie den Updatemodus**  
   
  Zum Wechseln des Updatemodus müssen Sie die Veröffentlichung und das Abonnement für beide Modi aktivieren und zwischen beiden nach Bedarf wechseln. Weitere Informationen finden Sie unter  
-[Wechseln Zwischen Aktualisierungsmodi für ein updatableTransaktionsabonnement](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
+[Wechseln Sie zwischen Update Modi für ein Aktualisier bares Transaktions Abonnement](../administration/switch-between-update-modes-for-an-updatable-transactional-subscription.md).  
   
 ### <a name="considerations-for-using-updatable-subscriptions"></a>Überlegungen zur Verwendung von aktualisierbaren Abonnements  
   
@@ -123,8 +123,8 @@ ms.locfileid: "62655494"
     -   Wenn Konflikte zu erwarten sind, gehen Sie folgendermaßen vor: Verwenden Sie keine FOREIGN KEY-Einschränkungen auf dem Verleger oder dem Abonnenten, wenn Sie die Konfliktlösung "Abonnent gewinnt" verwenden; verwenden Sie keine FOREIGN KEY-Einschränkungen auf dem Abonnenten, wenn Sie die Konfliktlösung "Verleger gewinnt" verwenden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Peer-to-Peer-Transaktionsreplikation](peer-to-peer-transactional-replication.md)   
- [Transaktionsreplikation](transactional-replication.md)   
+ [Peer-zu-Peer-Transaktions Replikation](peer-to-peer-transactional-replication.md)   
+ [Transaktions Replikation](transactional-replication.md)   
  [Veröffentlichen von Daten und Datenbankobjekten](../publish/publish-data-and-database-objects.md)   
  [Abonnieren von Veröffentlichungen](../subscribe-to-publications.md)  
   

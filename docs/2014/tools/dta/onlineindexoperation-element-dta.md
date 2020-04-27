@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9bb877ae48153d4fabae13170eb5f072218012d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62657215"
 ---
 # <a name="onlineindexoperation-element-dta"></a>OnlineIndexOperation-Element (DTA)
@@ -38,8 +38,7 @@ ms.locfileid: "62657215"
   
 |Merkmal|BESCHREIBUNG|  
 |--------------------|-----------------|  
-|**Datentyp und -länge**|
-  `string`, keine maximale Länge.|  
+|**Datentyp und -länge**|`string`, keine maximale Länge.|  
 |**Zulässige Werte**|**OFF**<br /> Es können keine empfohlenen physischen Entwurfsstrukturen online erstellt werden.<br /><br /> **ON**<br /> Alle empfohlenen physischen Entwurfsstrukturen können online erstellt werden.<br /><br /> **GEMISCHT**<br /> Der Datenbankoptimierungsratgeber versucht, sofern möglich physische Entwurfsstrukturen zu empfehlen, die online erstellt werden können.<br /><br /> Verwenden Sie einen dieser Werte mit diesem Element. Wenn Indizes online erstellt werden, wird das Schlüsselwort **ONLINE = ON** an die Objektdefinition angehängt.|  
 |**Standardwert**|Keine.|  
 |**Vorkommen**|Optional. Wenn Sie verwendet wird, kann nur einmal für das `TuningOptions` -Element verwendet werden.|  

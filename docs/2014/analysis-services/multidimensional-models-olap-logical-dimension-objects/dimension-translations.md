@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81e0ecacaa185b9fe520513af57ced3b382a343c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62728526"
 ---
 # <a name="dimension-translations"></a>Dimensionsübersetzungen
@@ -38,6 +38,6 @@ ms.locfileid: "62728526"
 ## <a name="see-also"></a>Weitere Informationen  
  [Cubeübersetzungen](../multidimensional-models-olap-logical-cube-objects/cube-translations.md)   
  [Übersetzungen &#40;Analysis Services&#41;](../translations-analysis-services.md)   
- [Globalisierungs Tipps und bewährte Methoden &#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
+ [Tipps und Best Practices für die Globalisierung &#40;Analysis Services&#41;](../globalization-tips-and-best-practices-analysis-services.md)  
   
   

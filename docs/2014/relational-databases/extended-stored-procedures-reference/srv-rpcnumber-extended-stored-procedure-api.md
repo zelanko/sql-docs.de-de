@@ -21,17 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1036cbe649a2448b3eb4838621ec8be0590b1c3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62745561"
 ---
 # <a name="srv_rpcnumber-extended-stored-procedure-api"></a>srv_rpcnumber (API für erweiterte gespeicherte Prozeduren)
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
   
  Gibt die Nummernkomponente für den derzeit remote gespeicherten Prozeduraufruf zurück.  
   
@@ -52,7 +51,7 @@ srvproc
 ## <a name="returns"></a>Rückgabe  
  Die Nummernkomponente für die derzeit remote gespeicherte Prozedur. Wenn der Client beim Ausführen der remote gespeicherten Prozedur keine Nummernkomponente verwendet oder wenn derzeit keine remote gespeicherte Prozedur vorhanden ist, wird -1 zurückgegegeben.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Funktion gibt nur die Nummernkomponente der remote gespeicherten Prozedur zurück. Sie schließt die optionalen Spezifizierer für den Besitzer, den remote gespeicherten Prozedurnamen und den Datenbanknamen nicht ein.  
   
 > [!IMPORTANT]  

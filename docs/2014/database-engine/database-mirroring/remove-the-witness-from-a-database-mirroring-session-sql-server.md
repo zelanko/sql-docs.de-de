@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0fee60fa1a78c2d6d0becb63b2319105016adf1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754668"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>Entfernen des Zeugen aus einer Datenbank-Spiegelungssitzung (SQL Server)
@@ -36,16 +36,16 @@ ms.locfileid: "62754668"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   Nach **Verfolgung:**[nach dem Entfernen des Zeugen](#FollowUp)    
+-   **Nachverfolgung:**  [Nach dem Entfernen des Zeugen](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Datenbank.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-remove-the-witness"></a>So entfernen Sie den Zeugen  
   
@@ -60,7 +60,7 @@ ms.locfileid: "62754668"
     > [!NOTE]  
     >  Wenn Sie vom Modus für hohe Sicherheit mit automatischem Failover zum Modus zur hohe Leistung wechseln, wird das Feld **Zeuge** automatisch gelöscht.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-remove-the-witness"></a>So entfernen Sie den Zeugen  
   
@@ -70,7 +70,7 @@ ms.locfileid: "62754668"
   
 3.  Führen Sie die folgende Anweisung aus:  
   
-     [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) *database_name* Set Witness Off  
+     [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring) *Datenbankname* SET WITNESS OFF  
   
      Dabei ist *Datenbankname* der Name der gespiegelten Datenbank.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62754668"
     ALTER DATABASE AdventureWorks2012 SET WITNESS OFF ;  
     ```  
   
-##  <a name="FollowUp"></a>Nachverfolgung: nach dem Entfernen des Zeugen  
+##  <a name="follow-up-after-removing-the-witness"></a><a name="FollowUp"></a> Nachverfolgung: Nach dem Entfernen des Zeugen  
  Durch das Deaktivieren des Zeugen ändert sich der [Betriebsmodus](database-mirroring-operating-modes.md)entsprechend der Einstellung für die Transaktionssicherheit:  
   
 -   Wenn die Transaktionssicherheit auf FULL (Standardeinstellung) festgelegt ist, wird in der Sitzung der synchrone Modus für hohe Sicherheit ohne automatisches Failover verwendet.  
@@ -90,14 +90,14 @@ ms.locfileid: "62754668"
 > [!TIP]  
 >  Die Transaktionssicherheitseinstellung der Datenbank wird auf jedem Partner in der [sys.database_mirroring](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql)-Katalogsicht in der **mirroring_safety_level**-Spalte und der **mirroring_safety_level_desc**-Spalte aufgezeichnet.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
--   [Hinzufügen eines Datenbankspiegelungs-Zeugen mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
+-   [Hinzufügen eines Zeugen für die Datenbankspiegelung mithilfe der Windows-Authentifizierung (Transact-SQL)](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
 -   [Hinzufügen oder Ersetzen eines Datenbank-Spiegelungszeugen &#40;SQL Server Management Studio&#41;](../database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [ALTER DATABASE-Datenbankspiegelung &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
+ [Alter Database-Daten Bank Spiegelung &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-transact-sql-database-mirroring)   
  [Ändern der Transaktionssicherheit in einer Datenbank-Spiegelungs Sitzung &#40;Transact-SQL-&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)   
  [Hinzufügen eines Datenbankspiegelungs-Zeugen mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)   
  [Database Mirroring Witness](database-mirroring-witness.md)  

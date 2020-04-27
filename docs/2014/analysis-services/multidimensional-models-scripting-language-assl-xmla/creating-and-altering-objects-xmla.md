@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3dcc6eedc97b3d476d79420b4e067883e17f03d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62702302"
 ---
 # <a name="creating-and-altering-objects-xmla"></a>Erstellen und Ändern von Objekten (XMLA)
@@ -94,7 +94,7 @@ ms.locfileid: "62702302"
   
 ## <a name="examples"></a>Beispiele  
   
-### <a name="description"></a>BESCHREIBUNG  
+### <a name="description"></a>Beschreibung  
  Im folgenden Beispiel wird eine relationale Datenquelle erstellt, [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf die-Beispieldatenbank verweist.  
   
 ### <a name="code"></a>Code  

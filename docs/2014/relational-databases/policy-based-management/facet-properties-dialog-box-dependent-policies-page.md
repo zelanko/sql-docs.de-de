@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f6817e1fd906a577801625b4ab4320cc957e539
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62704916"
 ---
 # <a name="facet-properties-dialog-box-dependent-policies-page"></a>Dialogfeld 'Facet-Eigenschaften', Seite 'Abhängige Richtlinien'
@@ -30,9 +30,9 @@ ms.locfileid: "62704916"
  Ein Häkchen gibt an, dass die Richtlinie derzeit aktiviert ist. Ist leer, wenn die Richtlinie nicht aktiviert ist.  
   
  **History**  
- Klicken Sie auf den Link **Verlauf anzeigen** , um den Bericht zum Ausführungsverlauf anzuzeigen.  
+ Klicken Sie auf den Link **Verlauf anzeigen** , um den Bericht zum Ausführungs Verlauf anzuzeigen.  
   
- **Erstellt**  
+ **Schaff**  
  Das Datum, an dem die Richtlinie erstellt wurde.  
   
 ## <a name="see-also"></a>Weitere Informationen  

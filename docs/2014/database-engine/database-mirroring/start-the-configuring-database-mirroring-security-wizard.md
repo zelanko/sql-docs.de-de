@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b9f9d698496c05ca28d0d2a8b8341007bca13e8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62754445"
 ---
 # <a name="start-the-configuring-database-mirroring-security-wizard-sql-server-management-studio"></a>Starten des Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung (SQL Server Management Studio)
@@ -35,7 +35,7 @@ ms.locfileid: "62754445"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Daten Bank Spiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)   
- [Datenbankeigenschaften &#40;Seite Wird gespiegelt&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
- [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
+ [Daten Bank Eigenschaften &#40;Seite "Spiegelung"&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
+ [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung (SQL Server Management Studio)](establish-database-mirroring-session-windows-authentication.md)  
   
   

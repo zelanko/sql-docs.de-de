@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4c789ea6cececcfacbc428fda393c1c13684765
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62704853"
 ---
 # <a name="facet-properties-dialog-box-general-page"></a>Dialogfeld 'Facet-Eigenschaften', Seite 'Allgemein'
   Mithilfe dieses Dialogfelds können Sie die Eigenschaften eines Facets der richtlinienbasierten Verwaltung anzeigen. Jedes Facet kann auf ein oder mehrere Zieltypen angewendet werden, z. B.: auf Server, Datenbank oder Tabelle. Mit dieser Seite können Sie anzeigen, welche Zieltypen sich auf dieses Facet beziehen. Die Eigenschaften eines Facets werden bei der Erstellung des Facets definiert und können mit dieser Seite nicht geändert werden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Beschreibung**  
  Liefert eine allgemeine Beschreibung des Facets.  
   

@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8ca6b4b0c4449880a407e27df9becf340c84a2eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62643068"
 ---
 # <a name="ipaddressname-property-servernetworkprotocolipaddress-class"></a>IpAddressName-Eigenschaft (ServerNetworkProtocolIPAddress-Klasse)
@@ -37,8 +37,8 @@ object
 ```  
   
 ## <a name="parts"></a>Bestandteile  
- *Objekt*  
- Ein Objekt der [ServerNetworkProtocolIPAdress-Klasse](servernetworkprotocolipaddress-class.md) , das eine IP-Adresse für das Netzwerkprotokoll in der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]darstellt.  
+ *object*  
+ A [ServerNetworkProtocolIPAdress-Klassenobjekt](servernetworkprotocolipaddress-class.md) , das eine IP-Adresse für das Netzwerkprotokoll in der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]darstellt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Zeichenfolgenwert, der den Namen der IP-Adresse angibt.  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 313b1764dfb17c3a8b49fa3ffa139668f9b2b421
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62726116"
 ---
 # <a name="analysis-services-personalization-extensions"></a>Personalisierungserweiterungen für Analysis Services
@@ -30,8 +30,7 @@ ms.locfileid: "62726116"
   
 -   **Schnelle Verteilung** Teilen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Sie Personalisierungs Erweiterungen für andere Softwareentwickler, ohne sich ausführlich mit den Informationen zu befassen, wo oder wie Sie diese erweiterte Funktionalität finden.  
   
- 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Personalisierungserweiterungen sind vielseitig verwendbar. Zum Beispiel weist das Unternehmen Verkäufe auf, die verschiedene Währungen einschließen. Sie erstellen ein berechnetes Element, das die zusammengefassten Verkäufe in der lokalen Währung der Person zurückgibt, die auf den Cube zugreift. Sie erstellen dieses Element als Personalisierungserweiterung. Sie geben dann dieses berechnete Element für eine Gruppe von Benutzern frei. Nach der Freigabe haben diese Benutzer sofortigen Zugriff auf das berechnete Element, sobald sie eine Verbindung mit dem Server herstellen. Sie haben auch dann Zugriff, wenn sie nicht die gleiche Schnittstelle verwenden, wie die, mit der das berechnete Element erstellt wurde.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Personalisierungserweiterungen sind vielseitig verwendbar. Zum Beispiel weist das Unternehmen Verkäufe auf, die verschiedene Währungen einschließen. Sie erstellen ein berechnetes Element, das die zusammengefassten Verkäufe in der lokalen Währung der Person zurückgibt, die auf den Cube zugreift. Sie erstellen dieses Element als Personalisierungserweiterung. Sie geben dann dieses berechnete Element für eine Gruppe von Benutzern frei. Nach der Freigabe haben diese Benutzer sofortigen Zugriff auf das berechnete Element, sobald sie eine Verbindung mit dem Server herstellen. Sie haben auch dann Zugriff, wenn sie nicht die gleiche Schnittstelle verwenden, wie die, mit der das berechnete Element erstellt wurde.  
   
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]Personalisierungs Erweiterungen sind eine einfache und elegante Änderung an der vorhandenen Architektur der verwalteten Assembly und werden im gesamten [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] <xref:Microsoft.AnalysisServices.AdomdServer> Objektmodell, in der MDX-Syntax (Multidimensional Expressions) und in Schemarowsets verfügbar gemacht.  
   
@@ -42,8 +41,7 @@ ms.locfileid: "62726116"
  Wenn Sie den Dienst starten [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , lädt die erforderlichen Assemblys und bestimmt, <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> welche Klassen das benutzerdefinierte Attribut aufweisen.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] definiert benutzerdefinierte Attribute als Möglichkeit, den Code zu beschreiben und das Laufzeitverhalten zu beeinflussen. Weitere Informationen finden Sie im Thema "[Übersicht über Attribute](https://go.microsoft.com/fwlink/?LinkId=82929)" im [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Entwicklerhandbuch auf MSDN.  
+>  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] definiert benutzerdefinierte Attribute als Möglichkeit, den Code zu beschreiben und das Laufzeitverhalten zu beeinflussen. Weitere Informationen finden Sie im Thema "[Übersicht über Attribute](https://go.microsoft.com/fwlink/?LinkId=82929)" im [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Entwicklerhandbuch auf MSDN.  
   
  Ruft für alle Klassen mit <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> dem benutzerdefinierten Attribut die Standardkonstruktoren auf. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] Das Aufrufen aller Konstruktoren beim Start bietet einen gebräuchlichen Ort, von dem aus neue Objekte erstellt werden können und der von Benutzeraktivitäten unabhängig ist.  
   
@@ -52,7 +50,7 @@ ms.locfileid: "62726116"
  Sitzungskontext  
  Für Objekte, die auf Personalisierungserweiterungen basieren, erstellt [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] während der Clientsitzung eine Ausführungsumgebung und erstellt die meisten dieser Objekte dynamisch in dieser Umgebung. Wie alle anderen CLR-Assemblys hat diese Ausführungsumgebung auch Zugriff auf andere Funktionen und gespeicherte Prozeduren. Wenn die Benutzersitzung beendet ist [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] , entfernt die dynamisch erstellten Objekte und schließt die Ausführungsumgebung.  
   
- Events  
+ Ereignisse  
  Die Objekterstellung wird von den Sitzungsereignissen `On-Cube-OpenedCubeOpened` und `On-Cube-ClosingCubeClosing` ausgelöst.  
   
  Die Kommunikation zwischen dem Client und dem Server kommt nur durch bestimmte Ereignisse zustande. Durch diese Ereignisse wird der Client auf die Situationen aufmerksam gemacht, die zur Erstellung der Clientobjekte führen. Die Umgebung des Clients wird dynamisch mit zwei Sätzen von Ereignissen erstellt: Sitzungsereignisse und Cubeereignisse.  
@@ -67,8 +65,7 @@ ms.locfileid: "62726116"
  Die gesamte Objekterstellung und -verwaltung ist von dieser Architektur unabhängig, und einzig die Entwickler dieser Objekte tragen die Verantwortung dafür.  
   
 ## <a name="infrastructure-foundations"></a>Infrastrukturgrundlagen  
- 
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Personalisierungserweiterungen basieren auf vorhandenen Komponenten. Nachfolgend finden Sie eine Zusammenfassung der Erweiterungen und Verbesserungen, die von der Funktionalität der Personalisierungserweiterungen bereitgestellt werden.  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Personalisierungserweiterungen basieren auf vorhandenen Komponenten. Nachfolgend finden Sie eine Zusammenfassung der Erweiterungen und Verbesserungen, die von der Funktionalität der Personalisierungserweiterungen bereitgestellt werden.  
   
 ### <a name="assemblies"></a>Assemblys  
  Das benutzerdefinierte Attribut <xref:Microsoft.AnalysisServices.AdomdServer.PlugInAttribute> kann Ihren benutzerdefinierten Assemblys hinzugefügt werden, um die [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]-Personalisierungserweiterungsklassen zu identifizieren.  
@@ -81,16 +78,13 @@ ms.locfileid: "62726116"
   
  **Eigenschaften**  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.SessionID%2A>, ein schreibgeschützter Zeichenfolgenwert, der die Sitzungs-ID der aktuellen Verbindung darstellt.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.SessionID%2A>, ein schreibgeschützter Zeichenfolgenwert, der die Sitzungs-ID der aktuellen Verbindung darstellt.  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.ClientCulture%2A>, ein schreibgeschützter Verweis auf die der aktuellen Sitzung zugeordnete Clientkultur.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.ClientCulture%2A>, ein schreibgeschützter Verweis auf die der aktuellen Sitzung zugeordnete Clientkultur.  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.User%2A>, ein schreibgeschützter Verweis auf die dem aktuellen Benutzer zugeordnete Identitätsschnittstelle.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.User%2A>, ein schreibgeschützter Verweis auf die dem aktuellen Benutzer zugeordnete Identitätsschnittstelle.  
   
- **Events**  
+ **Ereignisse**  
   
 -   <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection.CubeOpened>  
   
@@ -99,24 +93,20 @@ ms.locfileid: "62726116"
 #### <a name="new-properties-in-the-context-class"></a>Neue Eigenschaften in der Kontextklasse  
  Die <xref:Microsoft.AnalysisServices.AdomdServer.Context>-Klasse verfügt über zwei neue Eigenschaften:  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Context.Server%2A>, ein schreibgeschützter Verweis auf das neue Serverobjekt.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Context.Server%2A>, ein schreibgeschützter Verweis auf das neue Serverobjekt.  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentConnection%2A>, ein schreibgeschützter Verweis auf das neue <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection>-Objekt.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Context.CurrentConnection%2A>, ein schreibgeschützter Verweis auf das neue <xref:Microsoft.AnalysisServices.AdomdServer.AdomdConnection>-Objekt.  
   
 #### <a name="new-server-class"></a>Neue Serverklasse  
  Die <xref:Microsoft.AnalysisServices.AdomdServer.Server>-Klasse ist neu und macht mehrere Personalisierungserweiterungen durch sowohl Klasseneigenschaften als auch Klassenereignisse verfügbar.  
   
  **Eigenschaften**  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Server.Name%2A>, ein schreibgeschützter Zeichenfolgenwert, der den Servernamen darstellt.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Server.Name%2A>, ein schreibgeschützter Zeichenfolgenwert, der den Servernamen darstellt.  
   
--   
-  <xref:Microsoft.AnalysisServices.AdomdServer.Server.Culture%2A>, ein schreibgeschützter Verweis auf die dem Server zugeordnete globale Kultur.  
+-   <xref:Microsoft.AnalysisServices.AdomdServer.Server.Culture%2A>, ein schreibgeschützter Verweis auf die dem Server zugeordnete globale Kultur.  
   
- **Events**  
+ **Ereignisse**  
   
 -   <xref:Microsoft.AnalysisServices.AdomdServer.Server.SessionOpened>  
   
@@ -125,13 +115,13 @@ ms.locfileid: "62726116"
 #### <a name="adomdcommand-class"></a>AdomdCommand-Klasse  
  Die <xref:Microsoft.AnalysisServices.AdomdServer.AdomdCommand>-Klasse unterstützt jetzt folgende MDX-Befehle:  
   
--   [Create Member-Anweisung &#40;MDX-&#41;](/sql/mdx/mdx-data-definition-create-member)  
+-   [CREATE MEMBER-Anweisung &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-member)  
   
 -   [Aktualisieren der Member-Anweisung &#40;MDX-&#41;](/sql/mdx/mdx-data-definition-update-member)  
   
 -   [Drop Member-Anweisung &#40;MDX-&#41;](/sql/mdx/mdx-data-definition-drop-member)  
   
--   [CREATE SET-Anweisung &#40;MDX-&#41;](/sql/mdx/mdx-data-definition-create-set)  
+-   [CREATE SET-Anweisung &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-set)  
   
 -   [Drop Set-Anweisung &#40;MDX-&#41;](/sql/mdx/mdx-data-definition-drop-set)  
   
