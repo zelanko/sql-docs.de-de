@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: be19f42fa5e8a154d8f29e359b6a52395c6504d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104027"
 ---
 # <a name="configure-report-builder-access"></a>Konfigurieren des Berichts-Generator-Zugriffs
-  Berichts-Generator ist ein Ad-hoc-Bericht Erstellungs Tool [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , das mit einem für den einheitlichen Modus oder im SharePoint-Integrationsmodus konfigurierten Berichts Server installiert wird.  
+  Der Berichts-Generator ist ein Tool für die Ad-hoc-Berichterstellung, das mit einem für den einheitlichen oder den integrierten SharePoint-Modus konfigurierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsserver zusammen installiert wird.  
   
  Der Zugriff auf den Berichts-Generator ist von den folgenden Faktoren abhängig:  
   
@@ -37,8 +37,7 @@ ms.locfileid: "66104027"
 ## <a name="prerequisites"></a>Voraussetzungen  
  Der Berichts-Generator ist nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt werden, finden Sie unter [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
- Auf dem Client Computer muss [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2,0 installiert sein. 
-  [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] stellt die Infrastruktur zum Ausführen von [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] -Anwendungen bereit.  
+ Auf dem Client Computer muss [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2,0 installiert sein. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] stellt die Infrastruktur zum Ausführen von [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] -Anwendungen bereit.  
   
  Sie müssen [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 6.0 oder höher verwenden.  
   
@@ -130,7 +129,7 @@ ms.locfileid: "66104027"
   
 7.  Klicken Sie auf die Registerkarte **Ordnereinstellungen** .  
   
-8.  Klicken Sie auf die Registerkarte **Sicherheit**.  
+8.  Klicken Sie auf die Registerkarte **Sicherheit** .  
   
 9. Wenn für den Benutzer oder die Gruppe, für den bzw. die Sie den Zugriff auf den Berichts-Generator konfigurieren möchten, klicken Sie auf **Bearbeiten**.  
   
@@ -168,7 +167,7 @@ ms.locfileid: "66104027"
  [Planen der Reporting Services-und Power View Browser Unterstützung &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md)   
  [Starten Sie Berichts-Generator &#40;Berichts-Generator&#41;](../report-builder/start-report-builder.md)   
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md)   
- [Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../tools/connect-to-a-report-server-in-management-studio.md)   
+ [Herstellen einer Verbindung mit einem Berichts Server in Management Studio](../tools/connect-to-a-report-server-in-management-studio.md)   
  [Berichtsserver-Systemeigenschaften](../report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)  
   
   

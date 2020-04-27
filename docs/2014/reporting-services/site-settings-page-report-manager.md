@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 07fc0207020887d7e3ceb8716ee76c78a55d2bac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101120"
 ---
 # <a name="site-settings-page-report-manager"></a>Siteeinstellungen (Seite) (Berichts-Manager)
@@ -57,7 +57,7 @@ ms.locfileid: "66101120"
   
  Integrierter SharePoint-Modus: die Standard-URL hat das Format http://\<*SharePoint_site*>/_vti_bin/ReportBuilder/ReportBuilder_3_0_0_0. Application. "  
   
- **Anwenden**  
+ **übernehmen**  
  Klicken Sie auf diese Schaltfläche, um die Änderungen auf dem Berichtsserver zu speichern.  
   
  **Sicherheit**  

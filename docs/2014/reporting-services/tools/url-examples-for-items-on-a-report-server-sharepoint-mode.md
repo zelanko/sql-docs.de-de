@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7cbf3b3e6e378f27e5c56de6b043c95c56774f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099450"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>Beispiele für URLs von veröffentlichten Berichtselementen auf einem Berichtsserver im SharePoint-Modus (SSRS)
@@ -51,7 +51,7 @@ ms.locfileid: "66099450"
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>URL für eine SharePoint-Serverwebsite oder -Unterwebsite  
  Wenn Sie einen Bericht oder eine Berichtsdatenquelle bereitstellen, müssen Sie eine URL zu einer SharePoint-Website und ggf. -Unterwebsite verwenden. In der URL wird der Name der Website unmittelbar nach dem Servernamen angezeigt, z.B. http://*Servername/Website* oder http://*Servername/Website/Unterwebsite*.  
   
- Bei einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007- [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] oder-Webanwendung entsprechen die Website und die unter Website häufig den Registerkarten auf der Hauptwebsite. Klicken Sie zum Suchen des Website- oder Unterwebsitenamens auf **Homepage**und anschließend auf **Gesamter Websiteinhalt**. Führen Sie einen Bildlauf ganz nach unten durch, und suchen Sie nach **Websites und Arbeitsbereiche**. Im folgenden Abschnitt sind die Websites aufgeführt.  
+ In einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] 2007- oder [!INCLUDE[SPS2010](../../includes/sps2010-md.md)]-Webanwendung entsprechen die Website und die Unterwebsite häufig den Registerkarten auf der Hauptwebsite. Klicken Sie zum Suchen des Website- oder Unterwebsitenamens auf **Homepage**und anschließend auf **Gesamter Websiteinhalt**. Führen Sie einen Bildlauf ganz nach unten durch, und suchen Sie nach **Websites und Arbeitsbereiche**. Im folgenden Abschnitt sind die Websites aufgeführt.  
   
 ### <a name="url-for-a-sharepoint-library"></a>URL für eine SharePoint-Bibliothek  
  Wenn Sie einen Bericht oder ein verknüpftes Element in einer SharePoint-Bibliothek bereitstellen, müssen Sie eine URL zur SharePoint-Bibliothek verwenden. Die URL für eine Bibliothek unterscheidet sich je nach verwendeter SharePoint-Version.  
@@ -102,7 +102,7 @@ ms.locfileid: "66099450"
 |Der Beispielbericht „Company Sales“ im Ordner **Documents/Doc** einer [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] - oder [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] -Instanz.|http://TestServer/TestSite/Documents/Doc/Company%20Sales.rdl|  
 |Der Beispielbericht "Company Sales" im Ordner **Report Center** einer [!INCLUDE[offSPServ](../../includes/offspserv-md.md)] - oder [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] -Instanz.|http://TestServer/TestSite/Reports/Doc/Company%20Sales.rdl|  
   
-##  <a name="publishingToDocLib"></a>Veröffentlichen von einem Authoring Tool in einer SharePoint-Bibliothek  
+##  <a name="publishing-from-an-authoring-tool-to-a-sharepoint-library"></a><a name="publishingToDocLib"></a> Veröffentlichen in einer SharePoint-Bibliothek über ein Erstellungstool  
  Wenn Sie ein Berichterstellungstool zum Veröffentlichen von Berichten und zugehörigen Dateien in einer Bibliothek verwenden, werden die Dateien überprüft, bevor sie hinzugefügt werden. Wenn Sie Berichte und zugehörige Dateien mithilfe der **Upload** -Aktion in einer SharePoint-Bibliothek hochladen, erfolgt keine Überprüfung. Sie wissen erst, ob die Datei gültig ist, wenn Sie den Bericht verwalten, bearbeiten oder ausführen und somit auf ihn zugreifen.  
   
 > [!NOTE]  
@@ -136,7 +136,7 @@ ms.locfileid: "66099450"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Veröffentlichen eines Berichts in einer SharePoint-Bibliothek](../reports/publish-a-report-to-a-sharepoint-library.md)   
- [Veröffentlichen einer freigegebenen Datenquelle in einer SharePoint-Bibliothek](../reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
+ [Publish a Shared Data Source to a SharePoint Library (Veröffentlichen einer freigegebenen Datenquelle in einer SharePoint-Bibliothek)](../reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
  [Project Property Pages Dialog Box (Projekt (Eigenschaftenseiten, Dialogfeld))](project-property-pages-dialog-box.md)  
   
   

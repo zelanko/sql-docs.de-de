@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eed9b1a0deb7e88c85283ea3dc7cab9bf893937f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101997"
 ---
 # <a name="create-and-manage-role-assignments"></a>Erstellen und Verwalten von Rollenzuweisungen
@@ -63,10 +63,10 @@ ms.locfileid: "66101997"
  Zum Löschen von Rollenzuweisungen aktivieren Sie das Kontrollkästchen neben den Rollenzuweisungen, die Sie löschen möchten, und klicken Sie dann auf **Löschen**. Zum Löschen von Rollenzuweisungen können Sie auch auf die Schaltfläche **Zur übergeordneten Sicherheit zurückkehren**klicken. Dadurch werden die vorhandenen Rollenzuweisungen für das Element gelöscht und stattdessen die Rollenzuweisungen eines übergeordneten Elements verwendet.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Gewähren von Benutzerzugriff auf einen Berichtsserver &#40;Berichts-Manager&#41;](grant-user-access-to-a-report-server.md)   
+ [Gewähren von Benutzer Zugriff auf einen Berichts Server &#40;Berichts-Manager&#41;](grant-user-access-to-a-report-server.md)   
  [Ändern oder Löschen einer Rollenzuweisung &#40;Berichts-Manager&#41;](role-assignments-modify-or-delete.md)   
  [Rollenzuweisungen](role-assignments.md)   
- [Rollendefinitionen](role-definitions.md)   
+ [Rollen Definitionen](role-definitions.md)   
  [Vordefinierte Rollen](role-definitions-predefined-roles.md)   
  [Granting Permissions on a Native Mode Report Server (Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus)](granting-permissions-on-a-native-mode-report-server.md)  
   

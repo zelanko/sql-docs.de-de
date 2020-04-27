@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e148fa4f7a5340217a2efe2374312568eee43435
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099931"
 ---
 # <a name="reporting-services-in-sql-server-management-studio-ssrs"></a>Reporting Services in SQL Server Management Studio (SSRS)
@@ -42,10 +42,10 @@ ms.locfileid: "66099931"
   
 -   [Löschen eines Elements &#40;Management Studio&#41;](delete-an-item-management-studio.md)  
   
--   [&#40;Management Studio für Berichts Server Aufträge abbrechen&#41;](cancel-report-server-jobs-management-studio.md)  
+-   [Berichtsserveraufträge abbrechen &#40;Management Studio&#41;](cancel-report-server-jobs-management-studio.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Berichtsserver im Management Studio (F1-Hilfe)](report-server-in-management-studio-f1-help.md)   
+ [Berichts Server in Management Studio F1-Hilfe](report-server-in-management-studio-f1-help.md)   
  [Einführung in SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md)  
   
   

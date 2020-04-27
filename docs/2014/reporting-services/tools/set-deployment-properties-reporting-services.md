@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85ddbe528734e5824c80bd5cc00a15d3b32c9bec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099552"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Festlegen von Bereitstellungseigenschaften (Reporting Services)
@@ -65,7 +65,7 @@ ms.locfileid: "66099552"
   
 10. Geben Sie im Textfeld **TargetServerURL** die URL des Zielberichtsservers ein. Diese Eigenschaft müssen Sie vor dem Veröffentlichen eines Berichts auf eine gültige URL eines Berichtsservers festlegen. Wenn Sie auf einem Berichtsserver veröffentlichen, der im einheitlichen Modus ausgeführt wird, verwenden Sie die URL des virtuellen Verzeichnisses des Berichtsservers (z.B. http: *//Server/Berichtsserver* oder https: *//Server/Berichtsserver)* . Dies ist das virtuelle Verzeichnis des Berichtsservers, nicht des Berichts-Managers.  
   
-     Verwenden Sie eine URL für eine SharePoint-Stammwebsite oder -Unterwebsite, wenn der Bericht auf einem Berichtsserver veröffentlicht wird, der im integrierten SharePoint-Modus ausgeführt wird. Wenn Sie keine Website angeben, wird die Standardwebsite der obersten Ebene (z.B. http://*Servername*, http://*Servername*/*Website* oder http://*Servername*/*Website*/*Unterwebsite*) verwendet.  
+     Verwenden Sie eine URL für eine SharePoint-Stammwebsite oder -Unterwebsite, wenn der Bericht auf einem Berichtsserver veröffentlicht wird, der im integrierten SharePoint-Modus ausgeführt wird. Wenn Sie keine Website angeben, wird die Standard Website der obersten Ebene verwendet (z. b. http://*Servername*, http://*Servername*/*Site* oder http://*Servername*/*Site*/*unter Website*).  
   
 ### <a name="to-set-configuration-manager-properties"></a>So legen Sie Konfigurations-Manager-Eigenschaften fest  
   
@@ -84,8 +84,8 @@ ms.locfileid: "66099552"
  [Veröffentlichen von Datenquellen und Berichten](../reports/publishing-data-sources-and-reports.md)   
  [Anzeigen einer Vorschau für Berichte](../reports/previewing-reports.md)   
  [Berichts-Designer F1-Hilfe](report-designer-f1-help.md)   
- [Beispiele für URLs von veröffentlichten Berichtselementen auf einem Berichtsserver im SharePoint-Modus (SSRS)](url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
- [Eigenschaftsseiten für Projekt (Dialogfeld)](project-property-pages-dialog-box.md)   
+ [URL-Beispiele für veröffentlichte Berichts Elemente auf einem Berichts Server im SharePoint-Modus &#40;SSRS&#41;](url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
+ [Eigenschaften Seiten für Projekt (Dialog Feld)](project-property-pages-dialog-box.md)   
  [Veröffentlichen von Berichten auf einem Berichtsserver](../reports/publishing-reports-to-a-report-server.md)  
   
   

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 009d7527f71966003d02e5963de451fda9710ae4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098841"
 ---
 # <a name="upload-documents-to-a-sharepoint-library-reporting-services-in-sharepoint-mode"></a>Hochladen von Dokumenten in eine SharePoint-Bibliothek (Reporting Services im SharePoint-Modus)
@@ -50,6 +50,6 @@ ms.locfileid: "66098841"
 ## <a name="see-also"></a>Weitere Informationen  
  [Veröffentlichen eines Berichts in einer SharePoint-Bibliothek](reports/publish-a-report-to-a-sharepoint-library.md)   
  [Veröffentlichen einer freigegebenen Datenquelle in einer SharePoint-Bibliothek](reports/publish-a-shared-data-source-to-a-sharepoint-library.md)   
- [Granting Permissions on Report Server Items on a SharePoint Site (Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website)](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
+ [Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website](security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)  
   
   

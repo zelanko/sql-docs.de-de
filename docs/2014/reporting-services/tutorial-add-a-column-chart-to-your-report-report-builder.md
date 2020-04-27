@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 723e8fe5f657d3b9eda2d6ab73966830a13a3aac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099127"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)
@@ -30,12 +30,12 @@ ms.locfileid: "66099127"
   
  ![rs_TutorialColChartFinished](../../2014/tutorials/media/rs-tutorialcolchartfinished.gif "rs_TutorialColChartFinished")  
   
-##  <a name="BackToTop"></a>Was Sie lernen werden  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Was Sie lernen werden  
  In diesem Lernprogramm lernen Sie Folgendes:  
   
 1.  [Erstellen eines Diagramms mithilfe des Diagramm-Assistenten](#Chart)  
   
-2.  [Diagrammtyp auswählen](#ChartType)  
+2.  [Auswählen des Diagrammtyps](#ChartType)  
   
 3.  [Formatieren und Beschriften der horizontalen Achse](#Horizontal)  
   
@@ -56,10 +56,10 @@ ms.locfileid: "66099127"
   
  Geschätzte Zeit zum Bearbeiten dieses Tutorials: 15 Minuten.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Chart"></a>1. Erstellen eines Diagramm Berichts mithilfe des Diagramm-Assistenten  
+##  <a name="1-create-a-chart-report-from-the-chart-wizard"></a><a name="Chart"></a>1. Erstellen eines Diagramm Berichts mithilfe des Diagramm-Assistenten  
  Verwenden Sie im Dialogfeld " **Getting Started** " den Diagramm-Assistenten, um ein eingebettetes DataSet zu erstellen, eine freigegebene Datenquelle auszuwählen und ein Säulendiagramm zu erstellen.  
   
 > [!NOTE]  
@@ -85,7 +85,7 @@ ms.locfileid: "66099127"
     > [!NOTE]  
     >  Welche Datenquelle Sie auswählen, ist unwichtig, solange Sie über ausreichende Berechtigungen verfügen. Aus der Datenquelle werden keine Daten abgerufen. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung (Berichts-Generator)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-6.  Klicken Sie auf der Seite **Abfrage entwerfen** auf **als Text bearbeiten**.  
+6.  Klicken Sie auf der Seite **Abfrage entwerfen** auf **Als Text bearbeiten**.  
   
 7.  Fügen Sie die folgende Abfrage in den Abfragebereich ein:  
   
@@ -108,11 +108,11 @@ ms.locfileid: "66099127"
     UNION SELECT CAST('2009-12-31' AS date) AS SalesDate, CAST(81946. AS money) AS Sales  
     ```  
   
-8.  (Optional) Klicken Sie auf die Schaltfläche „Ausführen“ ( **!** ), um die Daten anzuzeigen, auf denen das Diagramm basiert.  
+8.  (Optional) Klicken Sie auf die Schaltfläche Ausführen (**!**), um die Daten anzuzeigen, auf denen das Diagramm basiert.  
   
 9. Klicken Sie auf **Weiter**.  
   
-##  <a name="ChartType"></a>2. Wählen Sie den Diagrammtyp aus.  
+##  <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. Wählen Sie den Diagrammtyp aus.  
  Sie können aus einer Vielzahl vordefinierter Diagrammtypen auswählen.  
   
 #### <a name="to-add-a-column-chart"></a>So fügen Sie einem Bericht ein Säulendiagramm hinzu  
@@ -137,7 +137,7 @@ ms.locfileid: "66099127"
   
 8.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-##  <a name="Horizontal"></a>3. Formatieren und beschriften der horizontalen Achse  
+##  <a name="3-format-and-label-the-horizontal-axis"></a><a name="Horizontal"></a>3. Formatieren und beschriften der horizontalen Achse  
  Standardmäßig werden die Werte auf der horizontalen Achse in einem allgemeinen Format angezeigt, dessen Größe automatisch an die Diagrammgröße angepasst wird.  
   
 #### <a name="to-format-a-date-on-the-horizontal-axis"></a>So formatieren Sie ein Datum auf der horizontalen Achse  
@@ -184,7 +184,7 @@ ms.locfileid: "66099127"
   
  Im Diagramm werden die Bezeichnungen gedreht, und die Bezeichnung für jedes dritte Datum wird angezeigt.  
   
-##  <a name="Legend"></a>4. Verschieben der Legende  
+##  <a name="4-move-the-legend"></a><a name="Legend"></a>4. Verschieben der Legende  
  Die Legende wird automatisch auf Basis der Kategorie- und Reihendaten erstellt.  
   
 #### <a name="to-move-the-legend-below-the-chart-area-of-a-column-chart"></a>So verschieben Sie die Legende unter den Diagrammbereich eines Säulendiagramms  
@@ -203,7 +203,7 @@ ms.locfileid: "66099127"
   
 6.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-##  <a name="ChartTitle"></a>5. Titel des Diagramms  
+##  <a name="5-title-the-chart"></a><a name="ChartTitle"></a>5. Titel des Diagramms  
   
 #### <a name="to-change-the-chart-title-above-the-chart-area"></a>So ändern Sie den Diagrammtitel über dem Diagrammbereich  
   
@@ -213,7 +213,7 @@ ms.locfileid: "66099127"
   
 3.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-##  <a name="Vertical"></a>6. Formatieren und beschriften der vertikalen Achse  
+##  <a name="6-format-and-label-the-vertical-axis"></a><a name="Vertical"></a>6. Formatieren und beschriften der vertikalen Achse  
  Standardmäßig werden die Werte auf der vertikalen Achse in einem allgemeinen Format angezeigt, dessen Größe automatisch an die Diagrammgröße angepasst wird.  
   
 #### <a name="to-format-as-currency-the-numbers-on-the-vertical-axis"></a>So formatieren Sie die Zahlen auf der vertikalen Achse als Währung  
@@ -242,7 +242,7 @@ ms.locfileid: "66099127"
   
 12. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-##  <a name="Average"></a>7. Hinzufügen eines gleitenden Durchschnitts  
+##  <a name="7-add-a-moving-average"></a><a name="Average"></a>7. Hinzufügen eines gleitenden Durchschnitts  
   
 #### <a name="to-add-a-moving-average"></a>So fügen Sie einen gleitenden Durchschnitt hinzu  
   
@@ -266,7 +266,7 @@ ms.locfileid: "66099127"
   
  Im Diagramm wird eine Linie angezeigt, die den gleitenden Durchschnitt für den Gesamtumsatz nach Datum darstellt – gemittelt über jeweils vier Datumsangaben.  
   
-##  <a name="Title"></a>8. Hinzufügen eines Berichts Titels  
+##  <a name="8-add-a-report-title"></a><a name="Title"></a>8. Hinzufügen eines Berichts Titels  
   
 #### <a name="to-add-a-report-title"></a>So fügen Sie einen Berichtstitel hinzu  
   
@@ -276,7 +276,7 @@ ms.locfileid: "66099127"
   
 3.  Geben Sie **Umsatz Diagramm**ein, drücken Sie die EINGABETASTE, und geben Sie dann **Januar bis Dezember 2009**ein, sodass Sie wie folgt aussieht:  
   
-     **Umsatz Diagramm**  
+     **Umsatzdiagramm**  
   
      **Januar bis Dezember 2009**  
   
@@ -290,13 +290,13 @@ ms.locfileid: "66099127"
   
 7.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-##  <a name="Save"></a>9. Speichern des Berichts  
+##  <a name="9-save-the-report"></a><a name="Save"></a>9. Speichern des Berichts  
   
 #### <a name="to-save-the-report"></a>So speichern Sie den Bericht  
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
   
-2.  Klicken Sie auf die Schaltfläche "Berichts-Generator" und anschließend auf **Speichern unter**.  
+2.  Klicken Sie auf die Schaltfläche Berichts-Generator und anschließend auf **Speichern unter**.  
   
 3.  Geben Sie im Feld **Name**den Text **Sales Order Column Chart**ein.  
   

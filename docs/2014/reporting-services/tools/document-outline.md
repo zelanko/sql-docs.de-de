@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f90a3e23dfd22d18d527db73fd0270723f2c44a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100278"
 ---
 # <a name="document-outline"></a>Dokumentgliederung
@@ -24,7 +24,7 @@ ms.locfileid: "66100278"
   
  Wenn das Fenster **Dokumentgliederung** nicht angezeigt wird, klicken Sie im Menü **Ansicht**auf **Weitere Fenster**und anschließend auf Dokumentgliederung.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Alle erweitern**  
  Klicken Sie, um alle Knoten in der Hierarchie zu erweitern.  
   

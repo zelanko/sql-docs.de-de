@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a04c27fd790a1ad5c4ba453b43af5983a6440e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099530"
 ---
 # <a name="server-properties-logging-page"></a>Servereigenschaften (Seite Protokollierung)
@@ -24,18 +24,18 @@ ms.locfileid: "66099530"
   
  Um diese Seite zu öffnen, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]starten Sie, stellen eine Verbindung mit einem Berichts Server her, klicken mit der rechten Maustaste auf den Namen des Berichts Servers und wählen **Eigenschaften**aus. Klicken Sie auf **Protokollierung** , um diese Seite zu öffnen.  
   
-## <a name="options"></a>Tastatur  
- **Protokollierung der Berichts Ausführung aktivieren**  
+## <a name="options"></a>Optionen  
+ **Protokollierung der Berichtsausführung aktivieren**  
  Klicken Sie auf diese Schaltfläche, um Informationen über die Berichtsaktivität zu erstellen und zu speichern. Ist diese Option aktiviert, verfolgt der Berichtsserver nach, welche Berichte verwendet werden, die Häufigkeit der Berichtsverarbeitung, der Typ des durchgeführten Berichtsvorgangs, das Ausgabeformat und wer den Bericht ausgeführt hat. Weitere Informationen zu zusätzlichen Datenpunkten, die im Protokoll aufgezeichnet werden, finden Sie unter [Berichts Server-Ausführungs Protokoll und die ExecutionLog3-Sicht](../report-server/report-server-executionlog-and-the-executionlog3-view.md).  
   
  **Protokolleinträge entfernen, die älter sind als die folgende Anzahl von Tagen**  
  Geben Sie die Anzahl an Tagen an, nach denen die Protokolleinträge aus dem Berichtsausführungsprotokoll gelöscht werden. Der Standardwert ist 60 Tage.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Festlegen von Berichtsservereigenschaften &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
- [Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](connect-to-a-report-server-in-management-studio.md)   
+ [&#40;Management Studio Eigenschaften für Berichts Server festlegen&#41;](set-report-server-properties-management-studio.md)   
+ [Herstellen einer Verbindung mit einem Berichts Server in Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Reporting Services-Protokolldateien und Quellen](../report-server/reporting-services-log-files-and-sources.md)   
- [Berichtsserver im Management Studio (F1-Hilfe)](report-server-in-management-studio-f1-help.md)   
+ [Berichts Server in Management Studio F1-Hilfe](report-server-in-management-studio-f1-help.md)   
  [Berichtsserverausführungsprotokoll und die ExecutionLog3-Ansicht](../report-server/report-server-executionlog-and-the-executionlog3-view.md)  
   
   

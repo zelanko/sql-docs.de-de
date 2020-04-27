@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d1725e49ce825d3d57a3b41857e26a3843fbfc7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104192"
 ---
 # <a name="configure-a-native-mode-report-server-for-local-administration-ssrs"></a>Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung (SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "66104192"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Einheitlicher Modus|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus|  
   
 -   [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)]  
   
@@ -49,29 +49,29 @@ ms.locfileid: "66104192"
   
  Dieses Verfahren verbessert zwar die allgemeine Sicherheit des Systems, verhindert jedoch, dass Sie die vordefinierten integrierten Rollenzuweisungen verwenden, die von Reporting Services für lokale Administratoren erstellt werden.  
   
--   [Übersicht über Konfigurationsänderungen](#bkmk_configuraiton_overview)  
+-   [Übersicht der Konfigurationsänderungen](#bkmk_configuraiton_overview)  
   
--   [So konfigurieren Sie den lokalen Berichts Server und die Berichts-Manager Verwaltung](#bkmk_configure_local_server)  
+-   [So konfigurieren Sie den Berichtsserver und den Berichts-Manager für die lokale Verwaltung](#bkmk_configure_local_server)  
   
--   [So konfigurieren Sie SQL Server Management Studio (SSMS) für die lokale Verwaltung des Berichts Servers](#bkmk_configure_ssms)  
+-   [So konfigurieren Sie SQL Server Management Studio (SSMS) für die lokale Verwaltung des Berichtsservers](#bkmk_configure_ssms)  
   
 -   [So konfigurieren Sie SQL Server Data Tools BI (SSDT) für die Veröffentlichung auf einem lokalen Berichtsserver](#bkmk_configure_ssdt)  
   
--   [Zusätzliche Informationen](#bkmk_addiitonal_informaiton)  
+-   [Weitere Informationen](#bkmk_addiitonal_informaiton)  
   
-##  <a name="bkmk_configuraiton_overview"></a>Übersicht über Konfigurationsänderungen  
+##  <a name="overview-of-configuration-changes"></a><a name="bkmk_configuraiton_overview"></a>Übersicht über Konfigurationsänderungen  
  Durch die folgenden Konfigurationsänderungen wird der Server so konfiguriert, dass Berichtsserverinhalte und -vorgänge mit Standardbenutzerberechtigungen verwaltet werden können:  
   
 -   Fügen Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -URLs zu vertrauenswürdigen Websites hinzu. Internet Explorer wird unter den aufgelisteten Betriebssystemen standardmäßig im **geschützten Modus**ausgeführt. Diese Funktion verhindert, dass Browseranforderungen Prozesse auf hoher Ebene erreichen, die auf demselben Computer ausgeführt werden. Sie können den geschützten Modus für die Berichtsserveranwendungen deaktivieren, indem Sie sie als vertrauenswürdige Sites hinzufügen.  
   
 -   Erstellen Sie Rollenzuweisungen, die Ihnen als Berichtsserveradministrator die Berechtigung zur Verwaltung von Inhalt und Vorgängen verleihen, ohne die Funktion **Als Administrator ausführen** in Internet Explorer verwenden zu müssen. Durch das Erstellen von Rollenzuweisungen für Ihr Windows-Benutzerkonto erhalten Sie Zugriff auf einen Berichtsserver mit Inhalts-Manager- und Systemadministratorberechtigungen durch explizite Rollenzuweisungen, die die vordefinierten, integrierten Rollenzuweisungen ersetzen, die von Reporting Services erstellt werden.  
   
-##  <a name="bkmk_configure_local_server"></a>So konfigurieren Sie den lokalen Berichts Server und die Berichts-Manager Verwaltung  
+##  <a name="to-configure-local-report-server-and-report-manager-administration"></a><a name="bkmk_configure_local_server"></a>So konfigurieren Sie den lokalen Berichts Server und die Berichts-Manager Verwaltung  
  Führen Sie die Konfigurationsschritte in diesem Abschnitt aus, wenn beim Navigieren zu einem lokalen Berichtsserver eine mit der folgenden vergleichbare Fehlermeldung angezeigt wird:  
   
 -   Der Benutzer `'Domain\[user name]`' verfügt nicht über die erforderlichen Berechtigungen. Stellen Sie sicher, dass ausreichende Berechtigungen erteilt und die Einschränkungen der Windows-Benutzerkontensteuerung (UAC) behandelt wurden.  
   
-###  <a name="bkmk_site_settings"></a>Einstellungen für vertrauenswürdige Websites im Browser  
+###  <a name="trusted-site-settings-in-the-browser"></a><a name="bkmk_site_settings"></a>Einstellungen für vertrauenswürdige Websites im Browser  
   
 1.  Öffnen Sie ein Browserfenster mit "Als Administrator ausführen"-Berechtigungen. Klicken Sie im Menü **Start** auf **Alle Programme**, klicken Sie mit der rechten Maustaste auf **Internet Explorer**, und wählen Sie **Als Administrator ausführen**aus.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "66104192"
   
 3.  Geben Sie in der URL-Adresse die Berichts-Manager-URL ein. Anweisungen finden Sie unter [Berichts-Manager (einheitlicher SSRS-Modus)](../report-manager-ssrs-native-mode.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
-4.  Klicken Sie auf **Tools**.  
+4.  Klicken Sie auf **Extras**.  
   
 5.  Klicken Sie auf **Internetoptionen**.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "66104192"
   
 12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-###  <a name="bkmk_configure_folder_settings"></a>Ordner Einstellungen für Berichts-Manager  
+###  <a name="report-manager-folder-settings"></a><a name="bkmk_configure_folder_settings"></a> Ordnereinstellungen im Berichts-Manager  
   
 1.  Klicken Sie im Berichts-Manager auf der Startseite auf **Ordnereinstellungen**.  
   
@@ -111,14 +111,14 @@ ms.locfileid: "66104192"
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-###  <a name="bkmk_configure_site_settings"></a>Berichts-Manager Site Einstellungen  
+###  <a name="report-manager-site-settings"></a><a name="bkmk_configure_site_settings"></a> Siteeinstellungen im Berichts-Manager  
   
 1.  Öffnen Sie den Browser mit Administratorprivilegien, und navigieren Sie zum Berichts-Manager unter `http://<server name>/reports`.  
   
 2.  Klicken Sie in der oberen Ecke der Startseite auf **Siteeinstellungen** .  
   
     > [!TIP]  
-    >  **Hinweis:** Wenn die Option **Site Einstellungen** nicht angezeigt wird, schließen Sie den Browser, öffnen Sie ihn erneut, und navigieren Sie zum Berichts-Manager mit Administratorrechten.  
+    >  **Hinweis:** Wenn die Option **Siteeinstellungen** nicht angezeigt wird, schließen Sie den Browser, öffnen Sie ihn mit Administratorprivilegien erneut, und navigieren Sie zum Berichts-Manager.  
   
 3.  Klicken Sie auf **Sicherheit**.  
   
@@ -134,10 +134,10 @@ ms.locfileid: "66104192"
   
 9. Öffnen Sie den Berichts-Manager in Internet Explorer erneut, ohne **Als Administrator ausführen**zu verwenden.  
   
-##  <a name="bkmk_configure_ssms"></a>So konfigurieren Sie SQL Server Management Studio (SSMS) für die lokale Verwaltung des Berichts Servers  
+##  <a name="to-configure-sql-server-management-studio-ssms-for-local-report-server-administration"></a><a name="bkmk_configure_ssms"></a>So konfigurieren Sie SQL Server Management Studio (SSMS) für die lokale Verwaltung des Berichts Servers  
  Standardmäßig ist es nur möglich, auf alle in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügbaren Berichtsservereigenschaften zuzugreifen, wenn Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] mit Administratorprivilegien starten.  
   
- So **konfigurieren [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ** Sie Rollen Eigenschaften und Rollenzuweisungen, sodass Sie nicht jedes Mal [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] mit erweiterten Berechtigungen beginnen müssen:  
+ **So konfigurieren Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** , sodass [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] nicht jedes Mal mit erweiterten Berechtigungen gestartet werden muss:  
   
 -   Klicken Sie im Menü **Start** auf **Alle Programme**und anschließend auf **SQL Server 2014**. Klicken Sie mit der rechten Maustaste auf **[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]**, und klicken Sie anschließend auf **Als Administrator ausführen**.  
   
@@ -157,18 +157,18 @@ ms.locfileid: "66104192"
   
  Wenn Sie jetzt [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] öffnen und nicht explizit **Als Administrator ausführen** auswählen, haben Sie Zugriff auf die Berichtsservereigenschaften.  
   
-##  <a name="bkmk_configure_ssdt"></a>So konfigurieren Sie SQL Server Data Tools BI (SSDT) für die Veröffentlichung auf einem lokalen Berichts Server  
+##  <a name="to-configure-sql-server-data-tools-bi-ssdt-to-publish-to-a-local-report-server"></a><a name="bkmk_configure_ssdt"></a>So konfigurieren Sie SQL Server Data Tools BI (SSDT) für die Veröffentlichung auf einem lokalen Berichts Server  
  Wenn Sie [!INCLUDE[SSDTDev11](../../includes/ssdtdev11-md.md)] unter einem der im ersten Abschnitt dieses Themas aufgeführten Betriebssysteme installiert haben und SSDT mit einem lokalen Berichtsserver im einheitlichen Modus interagieren soll, treten Berechtigungsfehler auf, sofern Sie [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] nicht mit erweiterten Berechtigungen öffnen oder Reporting Services-Rollen konfigurieren. Wenn Sie nicht über ausreichende Berechtigungen verfügen, können z. B. folgende Probleme auftreten:  
   
 -   Beim Versuch, Berichtselemente auf dem lokalen Berichtsserver bereitzustellen, wird im Fenster **Fehlerliste** eine Fehlermeldung wie die folgende angezeigt:  
   
     -   Die dem Benutzer „Domain\\<Benutzername\>“ erteilten Berechtigungen reichen zum Ausführen des Vorgangs nicht aus.  
   
- **So führen Sie bei jedem Öffnen von SSDT mit erhöhten Berechtigungen aus:**  
+ **So verwenden Sie bei jedem Öffnen von SSDT erweiterte Berechtigungen**  
   
 1.  Geben `sql server` Sie auf dem Startbildschirm ein, und klicken Sie dann mit der rechten Maustaste auf **SQL Server Data Tools für Visual Studio**. Klicken Sie auf **Als Administrator ausführen**.  
   
-     **Oder**unter älteren Betriebssystemen:  
+     **Oder**verfahren Sie bei älteren Betriebssystemen wie folgt:  
   
      Klicken Sie im Menü **Start** auf **Alle Programme**und dann auf **SQL Server 2014**. Klicken Sie mit der rechten Maustaste auf **SQL Server Data Tools**und dann auf **Als Administrator ausführen**.  
   
@@ -178,11 +178,11 @@ ms.locfileid: "66104192"
   
  Sie können jetzt Berichte und andere Elemente auf einem lokalen Berichtsserver bereitstellen.  
   
- **So konfigurieren [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Sie Rollenzuweisungen so, dass SSDT nicht jedes Mal mit erweiterten Berechtigungen gestartet werden muss:**  
+ **So konfigurieren Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Rollenzuweisungen, damit SSDT nicht jedes Mal mit erweiterten Berechtigungen gestartet werden muss**  
   
 -   Siehe die Abschnitte [Ordnereinstellungen im Berichts-Manager](#bkmk_configure_folder_settings) und [Siteeinstellungen im Berichts-Manager](#bkmk_configure_site_settings) weiter oben in diesem Thema.  
   
-##  <a name="bkmk_addiitonal_informaiton"></a>Weitere Informationen  
+##  <a name="additional-information"></a><a name="bkmk_addiitonal_informaiton"></a>Weitere Informationen  
  Ein weiterer häufiger Konfigurationsschritt in Verbindung mit der Verwaltung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] besteht darin, Port 80 in der Windows-Firewall zu öffnen, um den Zugriff auf den Berichtsservercomputer zu ermöglichen. Anweisungen finden Sie unter [Configure a Firewall for Report Server Access](configure-a-firewall-for-report-server-access.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

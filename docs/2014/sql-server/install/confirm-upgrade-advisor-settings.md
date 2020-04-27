@@ -17,16 +17,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2384dd7c53c95d460cb1b749472abb2c9010f2c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096071"
 ---
 # <a name="confirm-upgrade-advisor-settings"></a>Bestätigen der Upgrade Advisor-Einstellungen
   Auf dieser Seite können Sie die ausgewählten Optionen und die von Ihnen eingegebenen Parameter für den Analyse-Assistenten des Upgrade Advisor überprüfen. Nachdem Sie die Optionen und Parameter überprüft haben, klicken Sie auf **Ausführen** , um die Analyse zu starten.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Upgrade Advisor-Einstellungen**  
  Sie können alle Informationen und Parameter überprüfen, die Sie für jede einzelne Komponente eingegeben haben, sowie die Parameter, die für den gesamten Upgrade Advisor gelten. Die Berichtsoptionen, einschließlich des Ausgabeverzeichnisses, werden aufgelistet.  
   

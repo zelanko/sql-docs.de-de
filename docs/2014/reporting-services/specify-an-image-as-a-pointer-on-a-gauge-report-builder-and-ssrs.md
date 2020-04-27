@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c7a57987a5d1cd0ac7984db3b716521d9c7a09af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101145"
 ---
 # <a name="specify-an-image-as-a-pointer-on-a-gauge-report-builder-and-ssrs"></a>Festlegen eines Bilds als Zeiger auf einem Messgerät (Berichts-Generator und SSRS)
@@ -57,9 +57,9 @@ ms.locfileid: "66101145"
 10. Wählen Sie in **TransparentColor**einen Farbwert aus, den Sie aus dem Bild entfernen möchten. Dies führt zu einer gleichmäßigen Darstellung des Zeigers auf dem Messgerät.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Formatieren von Zeigern auf einem Messgerät (Berichts-Generator und SSRS)](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
+ [Formatieren von Zeigern auf einem Messgerät &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-pointers-on-a-gauge-report-builder-and-ssrs.md)   
  [Hinzufügen eines Messgerätes zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-design/add-a-gauge-to-a-report-report-builder-and-ssrs.md)   
- [Formatieren von Linien, Farben und Bildern (Berichts-Generator und SSRS)](report-design/images-report-builder-and-ssrs.md)   
+ [Formatieren von Linien, Farben und Bildern &#40;Berichts-Generator und SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
  [Messgeräte &#40;Berichts-Generator und SSRS&#41;](report-design/gauges-report-builder-and-ssrs.md)  
   
   

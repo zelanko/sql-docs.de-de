@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 066c69298126cbc635d388d75659b98dcff95917
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101809"
 ---
 # <a name="create-delete-or-modify-a-role-management-studio"></a>Erstellen, Löschen oder Ändern einer Rolle (Management Studio)
@@ -76,8 +76,8 @@ ms.locfileid: "66101809"
          Wählen Sie die Aufgaben aus, die Mitglieder dieser Rolle ausführen können, und klicken Sie dann auf **OK** , um die Änderungen zu übernehmen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](../tools/connect-to-a-report-server-in-management-studio.md)   
+ [Herstellen einer Verbindung mit einem Berichts Server in Management Studio](../tools/connect-to-a-report-server-in-management-studio.md)   
  (Create-and-manage-role-assignments.MD)   
- [Reporting Services in SQL Server Management Studio &#40;SSRS&#41;](../tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
+ [Reporting Services in SQL Server Management Studio (SSRS)](../tools/reporting-services-in-sql-server-management-studio-ssrs.md)  
   
   

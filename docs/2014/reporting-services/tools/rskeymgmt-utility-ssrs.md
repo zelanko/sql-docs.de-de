@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c9b5ca361cbfb5de42341fad8625f10d7ce3c2fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099812"
 ---
 # <a name="rskeymgmt-utility-ssrs"></a>rskeymgmt-Hilfsprogramm (SSRS)
@@ -75,9 +75,8 @@ ms.locfileid: "66099812"
  `-j`  
  Konfiguriert eine Remoteberichtsserver-Instanz für die gemeinsame Nutzung der Berichtsserver-Datenbank, die von der lokalen Berichtsserverinstanz verwendet wird.  
   
- **-r**  *InstallationID*  
- Entfernt die Informationen zu einem symmetrischen Schlüssel für eine bestimmte Berichtsserverinstanz, wodurch der Berichtsserver aus einer Bereitstellung für horizontales Skalieren entfernt wird. 
-  *installationID* ist ein GUID-Wert, der in der Datei RSReportserver.config gefunden werden kann.  
+ **-r**  *Installations-ID*  
+ Entfernt die Informationen zu einem symmetrischen Schlüssel für eine bestimmte Berichtsserverinstanz, wodurch der Berichtsserver aus einer Bereitstellung für horizontales Skalieren entfernt wird. *installationID* ist ein GUID-Wert, der in der Datei RSReportserver.config gefunden werden kann.  
   
  `-f`  *Datei*  
  Gibt einen vollqualifizierten Pfad zu der Datei an, in der eine Sicherungskopie der symmetrischen Schlüssel gespeichert ist.  
@@ -104,7 +103,7 @@ ms.locfileid: "66099812"
  `-v`  *anmelden*  
  (Erforderlich für `-u`) Gibt das Kennwort eines Administratorkontos auf dem Remotecomputer an, den Sie der Bereitstellung für horizontales Skalieren hinzufügen möchten.  
   
- **-t**Ablauf*Verfolgung*    
+ **-t**  *trace*  
  Schreibt Fehlermeldungen in das Ablaufverfolgungsprotokoll. Dieses Argument enthält keinen Wert. Weitere Informationen finden Sie unter [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -165,10 +164,10 @@ rskeymgmt -j -i <initializedinstance> -m <computer name> -n <newinstance>
 rskeymgmt -r <installationID>  
 ```  
   
-## <a name="file-location"></a>Dateispeicherort  
+## <a name="file-location"></a>Speicherort  
  Rschräymgmt. exe befindet sich unter ** \< *Laufwerk*>: \Programme\Microsoft SQL server\110\tools\binn** oder unter ** \< *Laufwerk*>: \Programme (x86) \Microsoft SQL server\110\tools\binn**. Sie können das Hilfsprogramm von einem beliebigen Ordner im Dateisystem ausführen.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Ein Berichtsserver verschlüsselt gespeicherte Anmeldeinformationen und Verbindungsinformationen. Zum Verschlüsseln von Daten werden ein öffentlicher Schlüssel und ein symmetrischer Schlüssel verwendet. Eine Berichtsserver-Datenbank muss über gültige Schlüssel verfügen, damit der Berichtsserver ausgeführt werden kann. Mithilfe von **rskeymgmt** können Sie die Schlüssel sichern, löschen oder wiederherstellen. Wenn die Schlüssel nicht wiederhergestellt werden können, bietet dieses Tool eine Möglichkeit zum Löschen verschlüsselter Inhalte, die nicht mehr verwendet werden können.  
   
  Das Hilfsprogramm **rskeymgmt** wird zum Verwalten des Schlüsselsatzes verwendet, der während der Installation oder Initialisierung definiert wurde. Über einen RPC-Endpunkt (Remote Procedure Call, Remoteprozeduraufruf) stellt es eine Verbindung mit dem Windows-Dienst des lokalen Berichtsservers her. Der Windows-Dienst des Berichtsservers muss ausgeführt werden, damit dieses Hilfsprogramm funktionsfähig ist.  
@@ -176,8 +175,8 @@ rskeymgmt -r <installationID>
  Weitere Informationen zu den Verschlüsselungsschlüsseln finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md) und [Initialisieren eines Berichtsservers (SSRS-Konfigurations-Manager)](../install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren (SSRS-Konfigurations-Manager)](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
- [Reporting Services Berichts Server &#40;einheitlicher Modus&#41;](../report-server/reporting-services-report-server-native-mode.md)   
+ [Konfigurieren eines Berichts Servers im einheitlichen Modus für die Bereitstellung für horizontales Skalieren &#40;SSRS-Configuration Manager&#41;](../install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)   
+ [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [Eingabeaufforderungs-Hilfsprogramme für Berichts Server &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
  [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   

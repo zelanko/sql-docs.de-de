@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 493e042e58c5a13bc94f299197ac8a75972f7ed6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102308"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>Speichern von Berichten auf dem Computer (Berichts-Generator)
@@ -22,7 +22,7 @@ ms.locfileid: "66102308"
   
 ### <a name="to-save-a-report"></a>So speichern Sie einen Bericht  
   
-1.  Klicken Sie über die Schaltfläche Berichts-Generator auf **Speichern**. Das Dialogfeld **Speichern unter** _\<Berichtselement>_ wird geöffnet.  
+1.  Klicken Sie über die Schaltfläche Berichts-Generator auf **Speichern**. Das Dialogfeld>**als**_\<Berichts Element_ speichern wird geöffnet.  
   
     > [!NOTE]  
     >  Wenn Sie einen Bericht erneut speichern, wird er automatisch am vorherigen Speicherort erneut gespeichert. Verwenden Sie die Option **Speichern unter** , um den Speicherort zu ändern.  
@@ -35,7 +35,7 @@ ms.locfileid: "66102308"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>So speichern Sie einen Bericht unter einem anderen Namen  
   
-1.  Klicken Sie auf die Schaltfläche "Berichts-Generator" und anschließend auf **Speichern unter**. Das Dialogfeld **Speichern unter** _\<Berichtselement>_ wird geöffnet.  
+1.  Klicken Sie auf die Schaltfläche Berichts-Generator und anschließend auf **Speichern unter**. Das Dialogfeld>**als**_\<Berichts Element_ speichern wird geöffnet.  
   
 2.  Navigieren Sie zum Speicherort auf dem Computer, auf dem Sie den Bericht speichern möchten.  
   
@@ -44,9 +44,9 @@ ms.locfileid: "66102308"
 4.  Wählen Sie unter **Elemente des Typs**den Typ des Berichtselements aus, das Sie speichern. Der Typ für Berichte ist Berichte (* .rdl).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Suchen, anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   
- [Speichern von Berichten &#40;Berichts-Generator&#41;](report-builder/saving-reports-report-builder.md)   
+ [Die Berichte &#40;Berichts-Generator werden gespeichert&#41;](report-builder/saving-reports-report-builder.md)   
  [Exportieren eines Berichts in ein anderes Dateiformat (Berichts-Generator und SSRS)](../../2014/reporting-services/export-a-report-as-another-file-type-report-builder-and-ssrs.md)  
   
   

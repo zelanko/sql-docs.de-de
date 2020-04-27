@@ -28,14 +28,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0c465a50547d8ca45947dc5db5c56221a8a4538
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100818"
 ---
 # <a name="manage-a-running-process"></a>Verwalten eines ausgeführten Prozesses
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] überwacht den Status von Aufträgen, die auf dem Berichts Server ausgeführt werden. Die in Bearbeitung befindlichen Aufträge werden in regelmäßigen Abständen vom Berichtsserver gescannt und die Statusinformationen in die Berichtsserver-Datenbank bzw. bei Verwendung des SharePoint-Modus in die Dienstanwendungs-Datenbanken geschrieben. Ein Auftrag wird verarbeitet, wenn alle folgenden Prozesse ausgeführt werden: Abfrageausführung auf einem Remote- oder auf einem lokalen Datenbankserver, Berichtsverarbeitung und Berichtsrendering.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] überwacht den Status von Aufträgen, die auf dem Berichtsserver ausgeführt werden. Die in Bearbeitung befindlichen Aufträge werden in regelmäßigen Abständen vom Berichtsserver gescannt und die Statusinformationen in die Berichtsserver-Datenbank bzw. bei Verwendung des SharePoint-Modus in die Dienstanwendungs-Datenbanken geschrieben. Ein Auftrag wird verarbeitet, wenn alle folgenden Prozesse ausgeführt werden: Abfrageausführung auf einem Remote- oder auf einem lokalen Datenbankserver, Berichtsverarbeitung und Berichtsrendering.  
   
  Sie können sowohl *Benutzeraufträge* als auch *Systemaufträge*verwalten.  
   
@@ -64,12 +64,12 @@ ms.locfileid: "66100818"
   
 -   [Anzeigen und Abbrechen von Aufträgen (SharePoint-Modus)](#bkmk_sharepoint)  
   
--   [Programm gesteuertes Verwalten von Aufträgen](#bkmk_programmatically)  
+-   [Programmgesteuertes Verwalten von Aufträgen](#bkmk_programmatically)  
   
-##  <a name="bkmk_native"></a>Anzeigen und Abbrechen von Aufträgen (einheitlicher Modus)  
- Sie können verwenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , um einen Auftrag, der auf dem Berichts Server ausgeführt wird, anzuzeigen oder abzubrechen. Zum Abrufen einer Liste mit Aufträgen, die aktuell ausgeführt werden, oder zum Abrufen des aktuellen Auftragsstatus aus der Berichtsserver-Datenbank müssen Sie die Seite aktualisieren. Wenn Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]eine Verbindung zum Berichtsserver herstellen, können Sie einen Auftragsordner öffnen, um eine Liste der Berichte anzuzeigen, die aktuell auf dem Berichtsservercomputer bearbeitet werden. Statusinformationen zu jedem Auftrag werden auf der Seite Auftragseigenschaften angezeigt. Sie können Statusinformationen für alle Aufträge anzeigen lassen, indem Sie das Dialogfeld Berichtsserveraufträge abbrechen öffnen.  
+##  <a name="view-and-cancel-jobs-native-mode"></a><a name="bkmk_native"></a> Anzeigen und Abbrechen von Aufträgen (einheitlicher Modus)  
+ Sie können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] zum Anzeigen oder Abbrechen eines auf dem Berichtsserver ausgeführten Auftrags verwenden. Zum Abrufen einer Liste mit Aufträgen, die aktuell ausgeführt werden, oder zum Abrufen des aktuellen Auftragsstatus aus der Berichtsserver-Datenbank müssen Sie die Seite aktualisieren. Wenn Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]eine Verbindung zum Berichtsserver herstellen, können Sie einen Auftragsordner öffnen, um eine Liste der Berichte anzuzeigen, die aktuell auf dem Berichtsservercomputer bearbeitet werden. Statusinformationen zu jedem Auftrag werden auf der Seite Auftragseigenschaften angezeigt. Sie können Statusinformationen für alle Aufträge anzeigen lassen, indem Sie das Dialogfeld Berichtsserveraufträge abbrechen öffnen.  
   
- Sie können verwenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] , um einen Auftrag, der auf dem Berichts Server ausgeführt wird, anzuzeigen oder abzubrechen. Zum Abrufen einer Liste mit Aufträgen, die aktuell ausgeführt werden, oder zum Abrufen des aktuellen Auftragsstatus aus der Berichtsserver-Datenbank müssen Sie die Seite aktualisieren. Wenn Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]eine Verbindung zum Berichtsserver herstellen, können Sie einen Auftragsordner öffnen, um eine Liste der Berichte anzuzeigen, die aktuell auf dem Berichtsservercomputer bearbeitet werden. Statusinformationen zu jedem Auftrag werden auf der Seite Auftragseigenschaften angezeigt. Sie können Statusinformationen für alle Aufträge anzeigen lassen, indem Sie das Dialogfeld Berichtsserveraufträge abbrechen öffnen.  
+ Sie können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] zum Anzeigen oder Abbrechen eines auf dem Berichtsserver ausgeführten Auftrags verwenden. Zum Abrufen einer Liste mit Aufträgen, die aktuell ausgeführt werden, oder zum Abrufen des aktuellen Auftragsstatus aus der Berichtsserver-Datenbank müssen Sie die Seite aktualisieren. Wenn Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]eine Verbindung zum Berichtsserver herstellen, können Sie einen Auftragsordner öffnen, um eine Liste der Berichte anzuzeigen, die aktuell auf dem Berichtsservercomputer bearbeitet werden. Statusinformationen zu jedem Auftrag werden auf der Seite Auftragseigenschaften angezeigt. Sie können Statusinformationen für alle Aufträge anzeigen lassen, indem Sie das Dialogfeld Berichtsserveraufträge abbrechen öffnen.  
   
  Mit [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] können Sie die Modellgenerierung, die Modellverarbeitung oder datengesteuerte Abonnements nicht auflisten oder abbrechen. Reporting Services bietet keine Möglichkeit zum Abbrechen der Modellgenerierung bzw. -verarbeitung. Sie können jedoch datengesteuerte Abonnements mit den unter diesem Thema aufgeführten Anweisungen abbrechen.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66100818"
   
 3.  Legen Sie hierfür `False` fest.  
   
-4.  Speichern Sie die Datei .  
+4.  Speichern Sie die Datei.  
   
 5.  Löschen Sie im Berichts-Manager das datengesteuerte Abonnement aus der Registerkarte Abonnements des Berichts oder aus **Meine Abonnements**.  
   
@@ -100,28 +100,28 @@ ms.locfileid: "66100818"
 ### <a name="configuring-frequency-settings-for-retrieving-job-status"></a>Konfigurieren von Frequenzeinstellungen für den Abruf des Auftragsstatus  
  Ein Auftrag, der gerade ausgeführt wird, wird in der temporären Datenbank des Berichtsservers gespeichert. Durch Ändern der Konfigurationseinstellungen in der Datei RSReportServer.config können Sie steuern, wie oft der Berichtsserver nach Aufträgen, die verarbeitet werden, scannt, sowie das Intervall festlegen, nach dem der Status eines ausgeführten Auftrags von Neu in Wird ausgeführt geändert wird. Die Einstellung `RunningRequestsDbCycle` gibt an, wie oft der Berichtsserver nach ausgeführten Prozessen scannt. Standardmäßig werden die Statusinformationen alle 60 Sekunden aufgezeichnet. Die Einstellung `RunningRequestsAge` gibt das Intervall an, nach dem der Status eines Auftrags von "Neu" in "Wird ausgeführt" geändert wird.  
   
-##  <a name="bkmk_sharepoint"></a>Anzeigen und Abbrechen von Aufträgen (SharePoint-Modus)  
+##  <a name="view-and-cancel-jobs-sharepoint-mode"></a><a name="bkmk_sharepoint"></a> Anzeigen und Abbrechen von Aufträgen (SharePoint-Modus)  
  Die Verwaltung von Aufträgen in einer SharePoint-Modusbereitstellung wird für jede [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung abgeschlossen, indem die SharePoint-Zentraladministration verwendet wird.  
   
 #### <a name="to-manage-jobs-in-sharepoint-mode"></a>So verwalten Sie Aufträge im SharePoint-Modus  
   
-1.  Klicken Sie in der SharePoint-zentral Administration auf **Dienst Anwendungen verwalten**.  
+1.  Klicken Sie in der Sharepoint-Zentraladministration auf **Dienstanwendungen verwalten**.  
   
 2.  Suchen und klicken Sie auf den Namen Ihrer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung, um die Seite für die Verwaltung von Anwendungen zu öffnen.  
   
-3.  Klicken Sie auf **Aufträge verwalten**  
+3.  Klicken Sie auf **Aufträge verwalten**.  
   
 4.  Klicken Sie auf die **Auftrag-ID** , um die Details des Auftrags anzuzeigen.  
   
 5.  Klicken Sie alternativ auf das Feld für den Auftrag, und klicken Sie auf **Löschen** , um den Auftrag abzubrechen. Durch das Löschen des Auftrags wird nicht das Abonnement gelöscht.  
   
-##  <a name="bkmk_programmatically"></a>Programm gesteuertes Verwalten von Aufträgen  
+##  <a name="managing-jobs-programmatically"></a><a name="bkmk_programmatically"></a> Programmgesteuertes Verwalten von Aufträgen  
  Sie können Aufträge programmgesteuert oder mit einem Skript verwalten. Weitere Informationen finden Sie unter <xref:ReportService2010.ReportingService2010.ListJobs%2A>, <xref:ReportService2010.ReportingService2010.CancelJob%2A>verwalten.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [&#40;Management Studio für Berichts Server Aufträge abbrechen&#41;](../tools/cancel-report-server-jobs-management-studio.md)   
- [Auftrags Eigenschaften &#40;Management Studio&#41;](../tools/job-properties-management-studio.md)   
- [Ändern Sie eine Reporting Services Konfigurationsdatei &#40;RSReportServer. config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Berichtsserveraufträge abbrechen &#40;Management Studio&#41;](../tools/cancel-report-server-jobs-management-studio.md)   
+ [Auftragseigenschaften (Management Studio)](../tools/job-properties-management-studio.md)   
+ [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](../report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
  [RSReportServer-Konfigurationsdatei](../report-server/rsreportserver-config-configuration-file.md)   
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md)   
  [Monitoring Report Server Performance (Überwachen der Leistung des Berichtsservers)](../report-server/monitoring-report-server-performance.md)  

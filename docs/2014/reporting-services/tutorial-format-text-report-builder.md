@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dc58232ed3025063fb329392b58895ed667465f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098901"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Lernprogramm: Formatieren von Text (Berichts-Generator)
@@ -28,7 +28,7 @@ ms.locfileid: "66098901"
   
  Eine erweiterte Version des Berichts, den Sie in diesem Lernprogramm erstellen, ist als [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Berichts-Generator-Beispielbericht verfügbar. Weitere Informationen zum Herunterladen dieses Beispiel Berichts und anderer Informationen finden Sie unter [Berichts-Generator-Beispiel Berichte](https://go.microsoft.com/fwlink/?LinkId=184851).  
   
-##  <a name="BackToTop"></a>Was Sie lernen werden  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Was Sie lernen werden  
   
 ### <a name="set-up-the-report"></a>Einrichten des Berichts  
  1. [Erstellen eines leeren Berichts mit einer Datenquelle und einem DataSet](#CreateReport)  
@@ -50,10 +50,10 @@ ms.locfileid: "66098901"
   
  Ungefähre Dauer dieses Lernprogramms: 20 Minuten.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="CreateReport"></a>Erstellen eines leeren Berichts mit einer Datenquelle und einem DataSet  
+##  <a name="create-a-blank-report-with-a-data-source-and-dataset"></a><a name="CreateReport"></a>Erstellen eines leeren Berichts mit einer Datenquelle und einem DataSet  
   
 #### <a name="to-create-a-blank-report"></a>So erstellen Sie einen leeren Bericht  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66098901"
   
 #### <a name="to-create-a-data-source"></a>So erstellen Sie eine Datenquelle  
   
-1.  Klicken Sie im Berichtsdaten Bereich auf **neu**, und klicken Sie dann auf **Datenquelle**.  
+1.  Klicken Sie im Berichtsdatenbereich auf **Neu**, und klicken Sie dann auf **Datenquelle**.  
   
 2.  Geben Sie im Feld **Name** Folgendes ein: **TextDataSource**  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66098901"
   
 #### <a name="to-create-a-dataset"></a>So erstellen Sie ein Dataset  
   
-1.  Klicken Sie im Berichtsdaten Bereich auf **neu**, und klicken Sie dann auf **DataSet**.  
+1.  Klicken Sie im Berichtsdatenbereich auf **Neu**und anschließend auf **Dataset**.  
   
 2.  Vergewissern Sie sich, dass die Datenquelle **TextDataSource**ist.  
   
@@ -128,13 +128,13 @@ ms.locfileid: "66098901"
     UNION SELECT CAST('2009-01-06' AS date) as SalesDate, 'Fernando Ross' as FullName,'South' as Territory, 'Digital' as Subcategory, 'Slim Digital' as Product, CAST(6648.25 AS money) AS Sales, 35 as Quantity, 'What is New in Report Builder' as Link, 'https://go.microsoft.com/fwlink/?LinkId=165064' AS URL  
     ```  
   
-7.  Klicken Sie auf Ausführen (**!**), um die Abfrage auszuführen.  
+7.  Klicken Sie auf „Ausführen“ (**!**), um die Abfrage auszuführen.  
   
      Bei den Abfrageergebnissen handelt es sich um die Daten, die im Bericht angezeigt werden können.  
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="AddField"></a>Fügen Sie dem Bericht ein Feld hinzu Designoberfläche  
+##  <a name="add-a-field-to-the-report-design-surface"></a><a name="AddField"></a>Fügen Sie dem Bericht ein Feld hinzu Designoberfläche  
  Wenn Sie möchten, dass ein Feld aus dem Dataset in einem Bericht erscheint, werden Sie möglicherweise zunächst versuchen, das Feld direkt auf die Entwurfsoberfläche zu ziehen. Diese Übung zeigt auf, warum dies nicht funktioniert und wie stattdessen vorzugehen ist.  
   
 #### <a name="to-add-a-field-to-the-report-and-get-the-wrong-result"></a>So fügen Sie dem Bericht ein Feld hinzu (und erhalten das falsche Ergebnis)  
@@ -189,7 +189,7 @@ ms.locfileid: "66098901"
   
 7.  Wählen Sie das Listenfeld aus, und drücken Sie die ENTF-TASTE.  
   
-##  <a name="AddTable"></a>Fügen Sie dem Bericht eine Tabelle hinzu Designoberfläche  
+##  <a name="add-a-table-to-the-report-design-surface"></a><a name="AddTable"></a>Fügen Sie dem Bericht eine Tabelle hinzu Designoberfläche  
  Erstellen Sie diese Tabelle, damit Sie Hyperlinks und den gedrehten Text an einer bestimmten Stelle ablegen können.  
   
 #### <a name="to-add-a-table-to-the-report"></a>So fügen Sie dem Bericht eine Tabelle hinzu  
@@ -220,7 +220,7 @@ ms.locfileid: "66098901"
   
 12. Klicken Sie auf **Ausführen**.  
   
-##  <a name="AddHyperlink"></a>Hinzufügen eines Links zum Bericht  
+##  <a name="add-a-hyperlink-to-the-report"></a><a name="AddHyperlink"></a>Hinzufügen eines Links zum Bericht  
  In diesem Abschnitt fügen Sie dem Text in der Tabelle aus dem vorherigen Abschnitt einen Link hinzu.  
   
 #### <a name="to-add-a-hyperlink-to-the-report"></a>So fügen Sie dem Bericht einen Link hinzu  
@@ -237,7 +237,7 @@ ms.locfileid: "66098901"
   
 6.  Das Aussehen des Texts unterscheidet sich nicht. Es muss jedoch dem des Linktexts entsprechen.  
   
-7.  Wählen Sie `[LinkText]` aus.  
+7.  Klicken Sie auf `[LinkText]`.  
   
 8.  Klicken Sie im Abschnitt **Schriftart** der Registerkarte **Home** auf die Schaltfläche unter **streichen** , klicken Sie auf den Dropdown Pfeil neben der Schaltfläche **Farbe** , und klicken Sie dann auf **blau**.  
   
@@ -247,7 +247,7 @@ ms.locfileid: "66098901"
   
 10. Klicken Sie auf einen Link. Wenn der Computer mit dem Internet verbunden ist, wird vom Browser ein Hilfethema zu Berichts-Generator geöffnet.  
   
-##  <a name="RotateText"></a>Drehen von Text im Bericht  
+##  <a name="rotate-text-in-the-report"></a><a name="RotateText"></a>Drehen von Text im Bericht  
  In diesem Abschnitt drehen Sie Text in der Tabelle aus den vorherigen Abschnitten.  
   
 #### <a name="to-rotate-text"></a>So drehen Sie Text  
@@ -273,7 +273,7 @@ ms.locfileid: "66098901"
   
  Nun verläuft der Text in der `[Territory]` -Zelle in den Zellen vertikal von unten nach oben.  
   
-##  <a name="FormatHTML"></a>Anzeigen von Text mit HTML-Formatierung  
+##  <a name="displaying-text-with-html-formatting"></a><a name="FormatHTML"></a>Anzeigen von Text mit HTML-Formatierung  
   
 #### <a name="to-display-text-formatted-as-html"></a>So zeigen Sie als HTML formatierten Text an  
   
@@ -313,7 +313,7 @@ ms.locfileid: "66098901"
   
  Der Text im Textfeld wird als Überschrift, Absatz und Aufzählung angezeigt.  
   
-##  <a name="FormatCurrency"></a>Formatieren von Währungen  
+##  <a name="format-currency"></a><a name="FormatCurrency"></a>Formatieren von Währungen  
   
 #### <a name="to-format-numbers-as-currency"></a>So formatieren Sie Zahlen als Währung  
   
@@ -331,14 +331,14 @@ ms.locfileid: "66098901"
   
  Im Bericht werden nun formatierte Daten angezeigt, und die Lesbarkeit wurde verbessert.  
   
-##  <a name="Save"></a>Speichern des Berichts  
+##  <a name="save-the-report"></a><a name="Save"></a>Speichern des Berichts  
  Sie können Berichte auf einem Berichtsserver, in einer SharePoint-Bibliothek oder auf dem Computer speichern.  
   
  Speichern Sie in diesem Lernprogramm den Bericht auf einem Berichtsserver. Wenn Sie keinen Zugriff auf einen Berichtsserver besitzen, speichern Sie den Bericht auf dem Computer.  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>So speichern Sie den Bericht auf einem Berichtsserver  
   
-1.  Klicken Sie in der Schaltfläche **Berichts-Generator** auf **Speichern**unter.  
+1.  Klicken Sie auf die Schaltfläche **Berichts-Generator** und anschließend auf **Speichern unter**.  
   
 2.  Klicken Sie auf **Letzte Sites und Server**.  
   
@@ -354,7 +354,7 @@ ms.locfileid: "66098901"
   
 #### <a name="to-save-the-report-on-your-computer"></a>So speichern Sie den Bericht auf dem Computer  
   
-1.  Klicken Sie in der Schaltfläche **Berichts-Generator** auf **Speichern**unter.  
+1.  Klicken Sie auf die Schaltfläche **Berichts-Generator** und anschließend auf **Speichern unter**.  
   
 2.  Klicken Sie auf **Desktop**, **Meine Dokumente**oder **Arbeitsplatz**, und navigieren Sie anschließend zu dem Ordner, in dem Sie den Bericht speichern möchten.  
   
@@ -367,7 +367,7 @@ ms.locfileid: "66098901"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Lernprogramme &#40;Berichts-Generator&#41;](report-builder-tutorials.md)   
- [Formatieren von Berichtselementen (Berichts-Generator und SSRS)](report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Formatieren von Berichts Elementen &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Berichts-Generator in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)  
   
   

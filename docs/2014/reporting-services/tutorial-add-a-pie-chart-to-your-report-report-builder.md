@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f004241f078a9fb23acbca392f687a9b7c20ae84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099049"
 ---
 # <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)
@@ -26,12 +26,12 @@ ms.locfileid: "66099049"
   
  ![rs_TutorialPieChartConcave](../../2014/tutorials/media/rs-tutorialpiechartconcave.gif "rs_TutorialPieChartConcave")  
   
-##  <a name="BackToTop"></a>Was Sie lernen werden  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Was Sie lernen werden  
  In diesem Tutorial lernen Sie Folgendes:  
   
 1.  [Erstellen eines Kreisdiagramms im Diagramm-Assistenten](#Chart)  
   
-2.  [Diagrammtyp auswählen](#ChartType)  
+2.  [Auswählen des Diagrammtyps](#ChartType)  
   
 3.  [Anzeigen von Prozentsätzen in jedem Slice](#Percentages)  
   
@@ -48,10 +48,10 @@ ms.locfileid: "66099049"
   
  Ungefähre Dauer dieses Lernprogramms: 10 Minuten  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Chart"></a>1. Erstellen eines Kreis Diagramms im Diagramm-Assistenten  
+##  <a name="1-create-a-pie-chart-from-the-chart-wizard"></a><a name="Chart"></a>1. Erstellen eines Kreis Diagramms im Diagramm-Assistenten  
  Erstellen Sie im Dialogfeld Erste Schritte mithilfe des Diagramm-Assistenten ein eingebettetes Dataset, wählen Sie eine freigegebene Datenquelle aus, und erstellen Sie ein Kreisdiagramm.  
   
 > [!NOTE]  
@@ -77,7 +77,7 @@ ms.locfileid: "66099049"
     > [!NOTE]  
     >  Welche Datenquelle Sie auswählen, ist unwichtig, solange Sie über ausreichende Berechtigungen verfügen. Aus der Datenquelle werden keine Daten abgerufen. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung (Berichts-Generator)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-6.  Klicken Sie auf der Seite **Abfrage entwerfen** auf **Als Text bearbeiten**.  
+6.  Klicken Sie auf der Seite **Abfrage entwerfen** auf **als Text bearbeiten**.  
   
 7.  Fügen Sie die folgende Abfrage in den Abfragebereich ein:  
   
@@ -92,11 +92,11 @@ ms.locfileid: "66099049"
     UNION SELECT 'Full Frame Digital Camera' AS Product, CAST(247250.85 AS money) AS Sales  
     ```  
   
-8.  (Optional) Klicken Sie auf die Schaltfläche „Ausführen“ ( **!** ), um die Daten anzuzeigen, auf denen das Diagramm basiert.  
+8.  (Optional) Klicken Sie auf die Schaltfläche Ausführen (**!**), um die Daten anzuzeigen, auf denen das Diagramm basiert.  
   
 9. Klicken Sie auf **Weiter**.  
   
-##  <a name="ChartType"></a>2. Wählen Sie den Diagrammtyp aus.  
+##  <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. Wählen Sie den Diagrammtyp aus.  
  Sie können aus einer Vielzahl vordefinierter Diagrammtypen auswählen.  
   
 #### <a name="to-add-a-pie-chart"></a>So fügen Sie ein Kreisdiagramm hinzu  
@@ -123,7 +123,7 @@ ms.locfileid: "66099049"
   
  Im Bericht wird das Kreisdiagramm mit acht Slices angezeigt, eines für jedes Produkt. Die Größe der Slices stellt den Umsatz für das jeweilige Produkt dar. Drei der Slices sind relativ dünn.  
   
-##  <a name="Percentages"></a>3. Anzeigen von Prozentsätzen in jedem Slice  
+##  <a name="3-display-percentages-in-each-slice"></a><a name="Percentages"></a>3. Anzeigen von Prozentsätzen in jedem Slice  
  Sie können für jeden Slice des Kreisdiagramms den Prozentsatz des Slices im Vergleich zum gesamten Kreis anzeigen.  
   
 #### <a name="to-display-percentages-in-each-slice-of-the-pie-chart"></a>So zeigen Sie Prozentwerte in den einzelnen Segmenten eines Kreisdiagramms an  
@@ -149,7 +149,7 @@ ms.locfileid: "66099049"
   
  Im Bericht wird der Prozentsatz am gesamten Kreis für jeden Kreisslice angezeigt.  
   
-##  <a name="CombineSlices"></a>4. Kombinieren von kleinen Slices zu einem Slice  
+##  <a name="4-combine-small-slices-into-one-slice"></a><a name="CombineSlices"></a>4. Kombinieren von kleinen Slices zu einem Slice  
  Drei der Slices im Kreis sind relativ klein. Sie können mehrere kleine Slices zu einem größeren Slice kombinieren, durch das alle Slices dargestellt werden.  
   
 #### <a name="to-combine-any-slices-on-the-pie-chart-smaller-than-5-percent-into-one-slice"></a>So kombinieren Sie alle Slices des Kreisdiagramms unter fünf Prozent zu einem Slice  
@@ -172,7 +172,7 @@ ms.locfileid: "66099049"
   
  In der Legende ist die Kategorie "Other" jetzt vorhanden. Im neuen Kreisslice werden alle Slices, die kleiner als 5 % waren, zu einem Slice kombiniert, das 6 % des gesamten Kreises darstellt.  
   
-##  <a name="DrawingEffect"></a>5. Anpassen des Zeichnungs Effekts  
+##  <a name="5-customize-the-drawing-effect"></a><a name="DrawingEffect"></a>5. Anpassen des Zeichnungs Effekts  
  Das Standardformat für Kreisdiagramme im Diagramm-Assistenten ist "Ozean", ein Format mit einem konkaven Zeichnungseffekt. Sie können das Format nach dem Ausführen des Assistenten ändern.  
   
 #### <a name="to-add-a-drawing-effect-to-the-pie-chart"></a>So fügen Sie dem Kreisdiagramm einen Zeichnungseffekt hinzu  
@@ -196,7 +196,7 @@ ms.locfileid: "66099049"
   
  ![rs_TutorialPieChartSoftEdge](../../2014/tutorials/media/rs-tutorialpiechartsoftedge.gif "rs_TutorialPieChartSoftEdge")  
   
-##  <a name="Title"></a>6. Hinzufügen eines Berichts Titels  
+##  <a name="6-add-a-report-title"></a><a name="Title"></a>6. Hinzufügen eines Berichts Titels  
   
 #### <a name="to-add-a-report-title"></a>So fügen Sie einen Berichtstitel hinzu  
   
@@ -218,13 +218,13 @@ ms.locfileid: "66099049"
   
 6.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-##  <a name="Save"></a>7. Speichern des Berichts  
+##  <a name="7-save-the-report"></a><a name="Save"></a>7. Speichern des Berichts  
   
 #### <a name="to-save-the-report"></a>So speichern Sie den Bericht  
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
   
-2.  Klicken Sie auf die Schaltfläche "Berichts-Generator" und anschließend auf **Speichern unter**.  
+2.  Klicken Sie auf die Schaltfläche Berichts-Generator und anschließend auf **Speichern unter**.  
   
 3.  Geben Sie im Feld **Name**den Namen **Umsatz-Kreisdiagramm**ein.  
   

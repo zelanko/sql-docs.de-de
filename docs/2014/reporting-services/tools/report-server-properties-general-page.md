@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93365925d412f672b9e8d3e5a9b5f67a850e508a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100000"
 ---
 # <a name="server-properties-general-page"></a>Servereigenschaften (Seite Allgemein)
@@ -28,7 +28,7 @@ ms.locfileid: "66100000"
   
 ## <a name="options"></a>Tastatur  
  **Name**  
- Geben Sie den Anwendungsnamen ein, der im Berichts-Manager angezeigt werden soll. Standardmäßig ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]dieser Wert. Der von Ihnen angegebene Name wird nur im Berichts-Manager angezeigt.  
+ Geben Sie den Anwendungsnamen ein, der im Berichts-Manager angezeigt werden soll. Standardmäßig ist dieser Wert auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] festgelegt. Der von Ihnen angegebene Name wird nur im Berichts-Manager angezeigt.  
   
  **Version**  
  Diese Eigenschaft ist schreibgeschützt. Gibt die Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] an, die Sie verwenden.  
@@ -39,23 +39,23 @@ ms.locfileid: "66100000"
  **Authentifizierungsmodus**  
  Diese Eigenschaft ist schreibgeschützt. Sie identifiziert die Typen der von der Berichtsserverinstanz akzeptierten Authentifizierungsanforderungen. Möchten Sie den Authentifizierungsmodus ändern, müssen Sie die Datei RSReportServer.config ändern. Weitere Informationen finden Sie unter [Authentication with the Report Server](../security/authentication-with-the-report-server.md).  
   
- **Urne**  
+ **URL**  
  Diese Eigenschaft ist schreibgeschützt. Sie gibt die URL zum Report Server-Webdienst an. Dieser Wert wird im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool angegeben. Weitere Informationen finden Sie unter [Konfigurieren einer URL &#40;SSRS-Konfigurations-Manager&#41;](../install-windows/configure-a-url-ssrs-configuration-manager.md).  
   
- **Meine Berichte Ordner für jeden Benutzer aktivieren**  
+ **Für jeden Benutzer den Ordner 'Meine Berichte' aktivieren**  
  Den Ordner Meine Berichte für Benutzer verfügbar machen. Diese Option ist nur für Berichtsserver im einheitlichen Modus verfügbar.  
   
- **Wählen Sie die Rolle aus, die auf jeden meine Berichte Ordner angewendet werden soll**  
+ **Wählen Sie die Rolle für jeden Ordner 'Meine Berichte' aus**  
  Geben Sie eine für die Sicherheit des Ordners Meine Berichte zu verwendende Rollendefinition an. Die Rollendefinition identifiziert die Aufgaben, die im jeweiligen Ordner Meine Berichte unterstützt werden.  
   
  **Download für das ActiveX-Client-Drucksteuerelement aktivieren**  
  Legt die `EnableClientPrinting`-Berichtsserver-Systemeigenschaft fest. Wenn Sie Clientdruck aktivieren, können Benutzer mit lokaler Administratorberechtigung ein signiertes ActiveX-Steuerelement zum Drucken von HTML-Berichten herunterladen. Weitere Informationen finden Sie unter [Aktivieren und Deaktivieren des clientseitigen Drucks für Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Festlegen von Berichtsservereigenschaften &#40;Management Studio&#41;](set-report-server-properties-management-studio.md)   
- [Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](connect-to-a-report-server-in-management-studio.md)   
+ [&#40;Management Studio Eigenschaften für Berichts Server festlegen&#41;](set-report-server-properties-management-studio.md)   
+ [Herstellen einer Verbindung mit einem Berichts Server in Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Aktivieren und Deaktivieren von Meine Berichte](../report-server/enable-and-disable-my-reports.md)   
- [Berichtsserver im Management Studio (F1-Hilfe)](report-server-in-management-studio-f1-help.md)   
+ [Berichts Server in Management Studio F1-Hilfe](report-server-in-management-studio-f1-help.md)   
  [Sichern von Meine Berichte](../security/secure-my-reports.md)  
   
   

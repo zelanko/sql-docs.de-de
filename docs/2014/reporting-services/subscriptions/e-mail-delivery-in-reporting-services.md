@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 68024e36dd5f8188097ebcc673056c1b6d11e59b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100887"
 ---
 # <a name="e-mail-delivery-in-reporting-services"></a>E-Mail-Übermittlung in Reporting Services
@@ -28,7 +28,7 @@ ms.locfileid: "66100887"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint-Modus &#124; SharePoint 2010 und SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Einheitlicher Modus|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]SharePoint-Modus &#124; SharePoint 2010 und SharePoint 2013<br /><br /> **[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus|  
   
 ## <a name="e-mail-delivery-options"></a>Optionen für die E-Mail-Übermittlung  
  Die Berichtsserver-E-Mail-Übermittlung kann Berichte wie folgt übermitteln:  
@@ -47,7 +47,7 @@ ms.locfileid: "66100887"
   
      Falls Ihr Browser HTML 4.0 und MHTML unterstützt und Sie das Webarchiv-Renderingformat auswählen, wird der Bericht in die Nachricht eingebettet. Bei allen anderen Renderingformaten (CSV, PDF usw.) werden Berichte als Anlagen übermittelt. Diese Funktion können Sie in der Konfigurationsdatei RSReportServer deaktivieren.  
   
-     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]die Größe der Anlage oder Nachricht wird nicht vor dem Senden des Berichts überprüft. Überschreitet die Anlage oder Nachricht den von Ihrem Mailserver zugelassenen Höchstwert, wird der Bericht nicht übermittelt. Wählen Sie bei großen Berichten eine andere Übermittlungsoption aus (z.B. URL oder Benachrichtigung).  
+     [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] führt keine Überprüfung der Größe der Anlage oder Nachricht vor dem Senden des Berichts durch. Überschreitet die Anlage oder Nachricht den von Ihrem Mailserver zugelassenen Höchstwert, wird der Bericht nicht übermittelt. Wählen Sie bei großen Berichten eine andere Übermittlungsoption aus (z.B. URL oder Benachrichtigung).  
   
  Die Übermittlungsoptionen, die bestimmen, wie ein Bericht übermittelt wird, werden beim Erstellen des Abonnements festgelegt. Wenn Sie im Abonnement z.B. **Link einschließen** auswählen, enthält die E-Mail-Nachricht einen Link zum Bericht.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66100887"
   
  Informationen zum Konfigurieren eines Berichtsservers im SharePoint-Modus finden Sie im folgenden Thema:  
   
--   [Konfigurieren Sie E-Mail für eine Reporting Services-Dienst Anwendung &#40;SharePoint 2010 und SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
+-   [Konfigurieren von E-Mail für eine Reporting Services-Dienstanwendung &#40;SharePoint 2010 und SharePoint 2013&#41;](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Aufgaben und Berechtigungen](../security/tasks-and-permissions.md)   

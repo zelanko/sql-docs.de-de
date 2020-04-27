@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 21c8de3e6903a28ad8358431f5e455df31d3044e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097951"
 ---
 # <a name="setservicestate-method-wmi-msreportserver_configurationsetting"></a>SetServiceState-Methode (WMI: MSReportServer_ConfigurationSetting)
@@ -42,13 +42,13 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
 ```  
   
 ## <a name="parameters"></a>Parameter  
- *Enablewindowsservice*  
+ *EnableWindowsService*  
  Ein `Boolean`-Wert, der den Status des Windows-Diensts angibt. Bei dem Wert `true` wird der Windows-Dienst des Berichtsservers gestartet. Bei dem Wert `false` wird der Windows-Dienst beendet.  
   
- *Enablewebservice*  
+ *EnableWebService*  
  Ein `Boolean`-Wert, der den Status des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Webdiensts angibt. Bei dem Wert `true` wird der Webdienst des Berichtsservers gestartet. Bei dem Wert `false` wird der Webdienst beendet.  
   
- *Enablereportmanager*  
+ *EnableReportManager*  
  Ein `Boolean`-Wert, der den gewünschten Status des Berichts-Managers angibt.  
   
  *HRESULT*  
@@ -60,7 +60,7 @@ public void SetSecureConnectionLevel(Boolean EnableWindowsService,
 ## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  

@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99418b11eecdb3077e3def746eae56e43bab2d60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096839"
 ---
 # <a name="accept-license-terms"></a>Akzeptieren von Lizenzbedingungen
@@ -27,11 +27,10 @@ ms.locfileid: "66096839"
   
  Sie können den Lizenzvertrag drucken oder in die Zwischenablage kopieren. Akzeptieren Sie die Lizenzbedingungen, und klicken Sie dann auf **Weiter**, um den Vorgang fortzusetzen. Um die Installation zu beenden, klicken Sie auf **Abbrechen**.  
   
-## <a name="customer-experience-improvement-program-ceip"></a>Programm zur Verbesserung der Benutzerfreundlichkeit (Customer Experience Improvement Program, CEIP)  
- Wenn Sie die Erstellung von CEIP-Berichten aktivieren, wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] so konfiguriert, dass in regelmäßigen Abständen ein Bericht an [!INCLUDE[msCoName](../../includes/msconame-md.md)]gesendet wird. Die Berichte enthalten Informationen zur Hardwarekonfiguration und zur Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und zugehörigen Komponenten. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] verwendet die Funktionsverwendungsdaten, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weiter zu verbessern. Folgende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten werden von dieser Funktion überwacht:  
+## <a name="customer-experience-improvement-program-ceip"></a>Customer Experience Improvement Program (CEIP)  
+ Wenn Sie die Erstellung von CEIP-Berichten aktivieren, wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] so konfiguriert, dass in regelmäßigen Abständen ein Bericht an [!INCLUDE[msCoName](../../includes/msconame-md.md)]gesendet wird. Die Berichte enthalten Informationen zur Hardwarekonfiguration und zur Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und zugehörigen Komponenten. [!INCLUDE[msCoName](../../includes/msconame-md.md)] verwendet die Funktionsverwendungsdaten, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] weiter zu verbessern. Folgende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten werden von dieser Funktion überwacht:  
   
--   Der [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
+-   Das [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
   
@@ -43,7 +42,7 @@ ms.locfileid: "66096839"
   
 -   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Setup  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup  
   
  Informationen zur Funktionsverwendung werden an [!INCLUDE[msCoName](../../includes/msconame-md.md)]gesendet und dort mit eingeschränktem Zugriff gespeichert.  
   
@@ -60,15 +59,15 @@ ms.locfileid: "66096839"
 ## <a name="error-reporting"></a>Fehlerberichterstellung  
  Verwenden Sie die Seite **Einstellungen für Fehler- und Verwendungsberichte** des Installations-Assistenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , um die Funktionalität für Fehler- oder Verwendungsberichte für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu aktivieren.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind die Funktionen zur Auflistung von Funktionsverwendungsdaten und zur Fehlerberichterstellung für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]sowie die entsprechenden Komponenten standardmäßig deaktiviert.  
   
  Fehlerberichterstellung  
  Wenn Sie die Funktion Fehlerberichterstellung aktivieren, wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] so konfiguriert, dass automatisch ein Bericht an [!INCLUDE[msCoName](../../includes/msconame-md.md)] gesendet wird, sobald ein schwerwiegender Fehler in einer der folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten auftritt:  
   
--   Der [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
+-   Das [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Büros  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent  
   
 -   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]  
   
@@ -78,8 +77,7 @@ ms.locfileid: "66096839"
   
 -   Replikation  
   
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] verwendet Fehlerberichte, um die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktionalität zu verbessern, und behandelt alle Informationen vertraulich.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] verwendet Fehlerberichte, um die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktionalität zu verbessern, und behandelt alle Informationen vertraulich.  
   
  Informationen zu Fehlern werden über eine sichere Verbindung (https) an [!INCLUDE[msCoName](../../includes/msconame-md.md)]gesendet, wo sie mit eingeschränkten Zugriffsrechten gespeichert werden. Alternativ dazu können Sie die Fehlerberichte auch an Ihren Firmen-Fehlerberichtsserver senden.  
   
@@ -95,8 +93,7 @@ ms.locfileid: "66096839"
   
 -   Informationen aus dem Arbeitsspeicher oder aus Dateien zum Prozess, der den Fehler verursacht hat.  
   
- 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] verfolgt nicht die Absicht, Dateien, Namen, Adresse, E-Mail-Adresse oder andere persönliche Daten von Ihnen zu erfassen. Der Fehlerbericht kann jedoch persönliche Informationen aus dem Arbeitsspeicher oder Dateien des Prozesses enthalten, der den Fehler verursacht hat. Mithilfe dieser Daten ist es möglich, Ihre Identität zu ermitteln. [!INCLUDE[msCoName](../../includes/msconame-md.md)] verwendet diese Daten jedoch nicht zu diesem Zweck.  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] verfolgt nicht die Absicht, Dateien, Namen, Adresse, E-Mail-Adresse oder andere persönliche Daten von Ihnen zu erfassen. Der Fehlerbericht kann jedoch persönliche Informationen aus dem Arbeitsspeicher oder Dateien des Prozesses enthalten, der den Fehler verursacht hat. Mithilfe dieser Daten ist es möglich, Ihre Identität zu ermitteln. [!INCLUDE[msCoName](../../includes/msconame-md.md)] verwendet diese Daten jedoch nicht zu diesem Zweck.  
   
  Weitere Informationen über die Datenschutz- und Datensammlungsrichtlinie für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] finden Sie unter [Microsoft SQL Server-Datenschutzbestimmungen](../../../2014/getting-started/microsoft-sql-server-privacy-statement.md).  
   

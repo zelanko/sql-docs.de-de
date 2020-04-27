@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b456d165ef9c4f09bb040cefb63644efb51c112
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098863"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Lernprogramm: Kartenbericht (Berichts-Generator)
@@ -26,7 +26,7 @@ ms.locfileid: "66098863"
   
  In diesem Lernprogramm erstellen Sie einen Kartenbericht, in dem Geschäftsstandorte in Countys des Bundesstaats New York angezeigt werden.  
   
-##  <a name="BackToTop"></a>Was Sie lernen werden  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Was Sie lernen werden  
  In diesem Lernprogramm lernen Sie Folgendes:  
   
 1.  [Erstellen einer Karte mit einer Polygonebene im Karten-Assistenten](#Map)  
@@ -66,10 +66,10 @@ ms.locfileid: "66098863"
   
  Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Map"></a>1. Erstellen einer Karte mit einer Polygon Ebene im Karten-Assistenten  
+##  <a name="1-create-a-map-with-a-polygon-layer-from-the-map-wizard"></a><a name="Map"></a>1. Erstellen einer Karte mit einer Polygon Ebene im Karten-Assistenten  
  Führen Sie dem Bericht eine Karte aus dem Kartenkatalog hinzu. Die Karte enthält eine Ebene, auf der die Countys im Bundesstaat New York angezeigt werden. Die Form jedes Countys ist ein Polygon, das auf eingebetteten räumlichen Daten in der Karte aus dem Kartenkatalog basiert.  
   
 #### <a name="to-add-a-map-with-the-map-wizard-in-a-new-report"></a>So fügen Sie mit dem Karten-Assistenten eine Karte in einem neuen Bericht hinzu  
@@ -138,7 +138,7 @@ ms.locfileid: "66098863"
   
  Die Kartenlegende und die Farbskala werden noch nicht angezeigt, da den Countys noch keine analytischen Daten zugeordnet sind. Sie fügen später in diesem Lernprogramm analytische Daten hinzu.  
   
-##  <a name="PointLayer"></a>2. Hinzufügen einer Karten Punkt Ebene, um Geschäftsstandorte anzuzeigen  
+##  <a name="2-add-a-map-point-layer-to-display-store-locations"></a><a name="PointLayer"></a>2. Hinzufügen einer Karten Punkt Ebene, um Geschäftsstandorte anzuzeigen  
  Fügen Sie mithilfe des Kartenebenen-Assistenten eine Punktebene hinzu, die den Standort von Geschäften anzeigt.  
   
 > [!NOTE]  
@@ -148,7 +148,7 @@ ms.locfileid: "66098863"
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
-2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie ![rs_IconMapLayerWizard](../../2014/tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard")auf der Symbolleiste auf die Schaltfläche **Assistent für neue Ebenen** .  
+2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie auf der Symbolleiste auf die Schaltfläche **Assistent für neue Ebenen**![rs_IconMapLayerWizard](../../2014/tutorials/media/rs-iconmaplayerwizard.gif "rs_IconMapLayerWizard").  
   
 3.  Wählen Sie auf der Seite **Quelle räumlicher Daten auswählen** den Eintrag **SQL Server-Abfrage nach räumlichen Daten**aus, und klicken Sie auf **Weiter**.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "66098863"
   
 6.  Klicken Sie auf **Weiter**.  
   
-7.  Klicken Sie auf der Seite Abfrage entwerfen auf **Als Text bearbeiten**.  
+7.  Klicken Sie auf der Seite Abfrage entwerfen auf **als Text bearbeiten**.  
   
 8.  Fügen Sie den folgenden Text in den Abfragebereich ein:  
   
@@ -237,7 +237,7 @@ ms.locfileid: "66098863"
   
  Auf der Karte werden die Standorte von Geschäften im Bundesstaat New York angezeigt. Der Markertyp für jedes Geschäft basiert auf der Aufstellfläche. Fünf Bereiche wurden automatisch für die Aufstellfläche berechnet.  
   
-##  <a name="LineLayer"></a>3. Hinzufügen einer Karten Linien Ebene, um eine Route anzuzeigen  
+##  <a name="3-add-a-map-line-layer-to-display-a-route"></a><a name="LineLayer"></a>3. Hinzufügen einer Karten Linien Ebene, um eine Route anzuzeigen  
  Fügen Sie mithilfe des Kartenebenen-Assistenten eine Kartenebene hinzu, die eine Route zwischen zwei Geschäften anzeigt. In diesem Lernprogramm wird der Weg für drei Geschäftsstandorte erstellt. In einer Geschäftsanwendung könnte es sich bei dem Weg um die beste Route zwischen Geschäften handeln.  
   
 #### <a name="to-add-a-line-layer-to-map"></a>So fügen Sie der Karte eine Linienebene hinzu  
@@ -254,7 +254,7 @@ ms.locfileid: "66098863"
   
 6.  Klicken Sie auf **Weiter**.  
   
-7.  Klicken Sie auf der Seite **Abfrage entwerfen** auf **Als Text bearbeiten**. Der Abfrage-Designer wechselt in den textbasierten Modus.  
+7.  Klicken Sie auf der Seite **Abfrage entwerfen** auf **als Text bearbeiten**. Der Abfrage-Designer wechselt in den textbasierten Modus.  
   
 8.  Fügen Sie den folgenden Text in den Abfragebereich ein:  
   
@@ -283,14 +283,14 @@ ms.locfileid: "66098863"
   
  In der Karte wird eine neue Linien Ebene mit **DataSet**vom Typ räumlicher Datenquelle angezeigt. In diesem Beispiel stammen die räumlichen Daten aus einem Dataset, aber der Linie sind keine analytischen Daten zugeordnet.  
   
-##  <a name="TileLayer"></a>4. Hinzufügen eines Kachel Hintergrunds für die Kachel  
+##  <a name="4-add-a-bing-maps-tile-background"></a><a name="TileLayer"></a>4. Hinzufügen eines Kachel Hintergrunds für die Kachel  
  Fügen Sie eine Kartenebene hinzu, die einen Bing Maps-Kachelhintergrund anzeigt.  
   
 #### <a name="to-add-a-virtual-earth-tile-background"></a>So fügen Sie einen Virtual Earth-Kachelhintergrund hinzu  
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
-2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie auf der Symbolleiste auf Ebene![rs_IconMapAddLayer](../../2014/tutorials/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer") **Hinzufügen**.  
+2.  Doppelklicken Sie auf die Karte, um den Bereich **Kartenebenen** anzuzeigen. Klicken Sie auf der Symbolleiste auf **Ebene hinzufügen**![rs_IconMapAddLayer](../../2014/tutorials/media/rs-iconmapaddlayer.gif "rs_IconMapAddLayer").  
   
 3.  Klicken Sie in der Dropdownliste auf **Kachelebene**.  
   
@@ -305,7 +305,7 @@ ms.locfileid: "66098863"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Transparent"></a>5. eine Ebene transparent machen  
+##  <a name="5-make-a-layer-transparent"></a><a name="Transparent"></a>5. eine Ebene transparent machen  
  Sie können die Reihenfolge von Ebenen und die Transparenz jeder Ebene anpassen, um die Elemente auf einer Ebene durch andere Ebenen durchscheinen zu lassen und den gewünschten Transparenzeffekt zu erzielen.  
   
 #### <a name="to-set-the-transparency-of-a-layer"></a>So legen Sie die Transparenz einer Ebene fest  
@@ -316,7 +316,7 @@ ms.locfileid: "66098863"
   
 3.  Klicken Sie in PolygonLayer1 auf den Pfeil nach unten, und klicken Sie dann auf **ebenendungen**. Das Dialogfeld **Polygonebeneneigenschaften von Karten** wird geöffnet.  
   
-4.  Klicken Sie auf **Transparenz**.  
+4.  Klicken Sie auf **Sichtbarkeit**.  
   
 5.  Geben Sie unter **Transparenz (%)** den Typ **30**ein.  
   
@@ -324,12 +324,12 @@ ms.locfileid: "66098863"
   
  Auf der Entwurfsoberfläche werden die Countys halbtransparent dargestellt.  
   
-##  <a name="Vary"></a>6. verändern der Bezirks Farbe basierend auf den Verkäufen  
+##  <a name="6-vary-county-color-based-on-sales"></a><a name="Vary"></a>6. verändern der Bezirks Farbe basierend auf den Verkäufen  
  Jedes County in der Polygonebene hat eine andere Farbe, da der Berichtsprozessor automatisch auf der Grundlage des Designs, das Sie auf der letzten Seite des Karten-Assistenten ausgewählt haben, einen Farbwert aus der Farbpalette zuweist.  
   
  In den folgenden Schritten geben Sie eine Farbregel an, um bestimmte Farben einem Bereich von Geschäftsumsätzen für jedes County zuzuordnen. Die Farben rot, gelb und grün geben relativ hohe, mittlere bzw. niedrige Umsätze an. Formatieren Sie die Farbskala, um Währungswerte anzuzeigen. Zeigen Sie die Jahresumsatzbereiche in einer neuen Legende an. Verwenden Sie für Countys ohne Geschäfte keine Farbe, um anzuzeigen, dass keine zugeordneten Daten vorliegen.  
   
-###  <a name="Relationship"></a>6a. Erstellen einer Beziehung zwischen räumlichen und analytischen Daten  
+###  <a name="6a-build-a-relationship-between-spatial-and-analytical-data"></a><a name="Relationship"></a>6a. Erstellen einer Beziehung zwischen räumlichen und analytischen Daten  
  Um die Countyformen auf der Grundlage analytischer Daten farblich zu unterscheiden, müssen Sie zuerst die analytischen Daten den räumlichen Daten zuordnen. In diesem Lernprogramm verwenden Sie zu diesem Zweck den Countynamen.  
   
 ##### <a name="to-build-a-relationship-between-spatial-data-and-analytical-data"></a>So erstellen Sie eine Beziehung zwischen räumlichen Daten und analytischen Daten  
@@ -358,7 +358,7 @@ ms.locfileid: "66098863"
   
  Jedem County mit einem Geschäft ist eine Farbe zugeordnet, die auf der Farbpalette für das im Assistenten ausgewählte Format basiert.  
   
-###  <a name="ColorRules"></a>6B. Festlegen von Farbregeln für Polygone  
+###  <a name="6b-specify-color-rules-for-polygons"></a><a name="ColorRules"></a>6B. Festlegen von Farbregeln für Polygone  
  Zum Erstellen einer Regel, die die Farbe jedes Countys basierend auf dem Geschäftsumsatz verändert, müssen Sie die Bereichswerte, die Anzahl anzuzeigender Einteilungen innerhalb dieses Bereichs und die zu verwendenden Farben angeben.  
   
 ##### <a name="to-specify-color-rules-for-all-polygons-that-have-associated-data"></a>So geben Sie Farbregeln für alle Polygone mit zugeordneten Daten an  
@@ -377,7 +377,7 @@ ms.locfileid: "66098863"
   
 7.  Ändern Sie **Endfarbe** in **Grün**.  
   
-     **Rot** stellt niedrige Umsatz Werte dar, **Gelb** stellt mittlere Umsatz Werte dar, und **grün** stellt hohe Umsatz Werte dar. Der Berichtsprozessor berechnet einen Bereich von Farben auf der Grundlage dieser Werte und der Optionen, die Sie auf der Seite **Verteilung** auswählen.  
+     **Rot** stellt niedrige Umsatzwerte dar, **Gelb** stellt mittlere Umsatzwerte dar, und **Grün** stellt hohe Umsatzwerte dar. Der Berichtsprozessor berechnet einen Bereich von Farben auf der Grundlage dieser Werte und der Optionen, die Sie auf der Seite **Verteilung** auswählen.  
   
 8.  Klicken Sie auf **Verteilung**.  
   
@@ -395,7 +395,7 @@ ms.locfileid: "66098863"
   
  Auf der Farbskala werden fünf Farben angezeigt: rot, orange, gelb, gelbgrün und grün. Jede Farbe stellt einen Umsatzbereich dar, der automatisch auf Grundlage der Umsätze nach County berechnet wird.  
   
-###  <a name="ColorScale"></a>6C. Formatieren der Daten in der Farbskala als Währung  
+###  <a name="6c-format-the-data-in-the-color-scale-as-currency"></a><a name="ColorScale"></a>6C. Formatieren der Daten in der Farbskala als Währung  
  Für Daten wird standardmäßig ein allgemeines Format verwendet. Sie können benutzerdefinierte Formate anwenden.  
   
 ##### <a name="to-set-the-format-for-the-color-scale"></a>So legen Sie das Format für die Farbskala fest  
@@ -414,7 +414,7 @@ ms.locfileid: "66098863"
   
  Die Farbskala zeigt für jeden Bereich den Jahresumsatz im Währungsformat an.  
   
-###  <a name="NewLegend"></a>6d. Erstellen einer neuen Legende  
+###  <a name="6d-create-a-new-legend"></a><a name="NewLegend"></a>6d. Erstellen einer neuen Legende  
  Standardmäßig werden alle Regeln in der ersten Legende angezeigt. Sie können Legenden hinzufügen, um die Anzeige für eine Karte zu verbessern.  
   
  Das Ändern der Standardanzeige umfasst zwei Schritte: Erstellen Sie eine neue Legende, und ordnen Sie dann die Regelergebnisse für eine Kartenebene der neuen Legende zu.  
@@ -437,7 +437,7 @@ ms.locfileid: "66098863"
   
  Die Legende wird erweitert, um den Titel anzuzeigen.  
   
-###  <a name="Associate"></a>6E. Zuordnen der Legende und Farbregeln  
+###  <a name="6e-associate-legend-and-color-rules"></a><a name="Associate"></a>6E. Zuordnen der Legende und Farbregeln  
  In jeder Legende können ein oder mehrere Sätze von Regelergebnissen angezeigt werden.  
   
 ##### <a name="to-associate-a-legend-with-color-rules"></a>So ordnen Sie einer Legende Farbregeln zu  
@@ -462,7 +462,7 @@ ms.locfileid: "66098863"
   
  Die Countys mit zugeordneten Geschäften und Umsätzen werden entsprechend den Farbregeln angezeigt. Countys ohne Umsätze ist keine Farbe zugeordnet.  
   
-###  <a name="NoData"></a>6f. Ändern der Farbe für Countys ohne Daten  
+###  <a name="6f-change-color-for-counties-with-no-data"></a><a name="NoData"></a>6f. Ändern der Farbe für Countys ohne Daten  
  Sie können die Standardanzeigeoptionen für alle Kartenelemente auf einer Ebene festlegen. Farbregeln haben Vorrang vor diesen Anzeigeoptionen.  
   
 ##### <a name="to-set-the-display-properties-for-all-elements-on-a-layer"></a>So legen Sie die Anzeigeeigenschaften für alle Elemente auf einer Ebene fest  
@@ -485,7 +485,7 @@ ms.locfileid: "66098863"
   
  Countys ohne zugeordnete Daten werden blau dargestellt. Nur Countys, denen analytische Daten zugeordnet sind, werden durch **grüne** Farben **aus den von** Ihnen angegebenen Farb Regeln angezeigt.  
   
-##  <a name="CustomPoint"></a>7. Hinzufügen eines benutzerdefinierten Punkts  
+##  <a name="7-add-a-custom-point"></a><a name="CustomPoint"></a>7. Hinzufügen eines benutzerdefinierten Punkts  
  Geben Sie einen Punkt an, und verwenden Sie den Markertyp " **PushPin** ", um einen neuen Speicher darzustellen, der noch nicht erstellt wurde.  
   
 #### <a name="to-add-a-custom-point"></a>So fügen Sie einen benutzerdefinierten Punkt hinzu  
@@ -534,7 +534,7 @@ ms.locfileid: "66098863"
   
  Die Bezeichnung wird über dem Geschäftsstandort angezeigt.  
   
-##  <a name="CenterView"></a>Zentrieren der Kartenansicht  
+##  <a name="center-the-map-view"></a><a name="CenterView"></a>Zentrieren der Kartenansicht  
  Ändern Sie den Mittelpunkt und die Zoomstufe des Kartenviewports.  
   
 #### <a name="to-change-the-viewport"></a>So ändern Sie den Viewport  
@@ -555,7 +555,7 @@ ms.locfileid: "66098863"
   
  In der Entwurfsansicht basieren die Karte auf der Anzeigeoberfläche und die Ansicht auf Beispieldaten. Im gerenderten Bericht wird die Kartenansicht in der angegebenen Ansicht zentriert.  
   
-##  <a name="Title"></a>Hinzufügen eines Berichts Titels  
+##  <a name="add-a-report-title"></a><a name="Title"></a>Hinzufügen eines Berichts Titels  
   
 #### <a name="to-add-a-report-title"></a>So fügen Sie einen Berichtstitel hinzu  
   
@@ -565,13 +565,13 @@ ms.locfileid: "66098863"
   
  Dieser Titel wird am Anfang des Berichts angezeigt. Elemente über dem Berichtshauptteil entsprechen einer Berichtskopfzeile, wenn keine Seitenkopfzeile definiert ist.  
   
-##  <a name="Save"></a>Speichern des Berichts  
+##  <a name="save-the-report"></a><a name="Save"></a>Speichern des Berichts  
   
 #### <a name="to-save-the-report"></a>So speichern Sie den Bericht  
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
-2.  Klicken Sie auf die Schaltfläche "Berichts-Generator" und anschließend auf **Speichern unter**.  
+2.  Klicken Sie auf die Schaltfläche Berichts-Generator und anschließend auf **Speichern unter**.  
   
 3.  Geben Sie im Feld **Name**den Namen **Umsätze der Geschäfte in New York**ein.  
   
@@ -587,7 +587,7 @@ ms.locfileid: "66098863"
 ## <a name="see-also"></a>Weitere Informationen  
  [Lernprogramme &#40;Berichts-Generator&#41;](report-builder-tutorials.md)   
  [Berichts-Generator in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)   
- [Karten-Assistent und Kartenebenen-Assistent &#40;Berichts-Generator und SSRS&#41;](report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
+ [Karten-Assistent und Karten Ebenen-Assistent &#40;Berichts-Generator und SSRS&#41;](report-design/map-wizard-and-map-layer-wizard-report-builder-and-ssrs.md)   
  [Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten &#40;Berichts-Generator und SSRS&#41;](report-design/vary-polygon-line-and-point-display-by-rules-and-analytical-data.md)  
   
   

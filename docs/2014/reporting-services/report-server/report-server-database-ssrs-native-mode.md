@@ -18,14 +18,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5e5f5225ef696a5477ef9d0aa4a67749bc5e4a88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103445"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>Berichtsserver-Datenbank (nativer SSRS-Modus)
-  Ein-Berichts Server ist ein Zustands loser Server, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] der den zum Speichern von Metadaten und Objekt Definitionen verwendet. Eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Installation im nativen Modus verwendet zwei Datenbanken, um den persistenten Datenspeicher von temporären Speicheranforderungen zu trennen. Die Datenbanken werden gemeinsam erstellt und sind durch ihre Namen aneinander gebunden. Standardmäßig lauten die Datenbanknamen **Report Server** bzw. **ReportServerTempDB**.  
+  Ein Berichtsserver ist ein zustandsloser Server, der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-[!INCLUDE[ssDE](../../includes/ssde-md.md)] zum Speichern von Metadaten und Objektdefinitionen verwendet. Eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Installation im nativen Modus verwendet zwei Datenbanken, um den persistenten Datenspeicher von temporären Speicheranforderungen zu trennen. Die Datenbanken werden gemeinsam erstellt und sind durch ihre Namen aneinander gebunden. Die Namen der Datenbanken lauten standardmäßig **reportserver** bzw. **reportservertempdb**.  
   
  Bei einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Installation im SharePoint-Modus wird zusätzlich eine Datenbank für die Datenwarnfunktion erstellt. Die drei Datenbanken im SharePoint-Modus sind [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dienstanwendungen zugeordnet. Weitere Informationen finden Sie unter [Verwalten einer Reporting Services-SharePoint-Dienstanwendung](../manage-a-reporting-services-sharepoint-service-application.md)  
   
@@ -60,16 +60,15 @@ ms.locfileid: "66103445"
 ## <a name="report-server-temporary-database"></a>Temporäre Berichtsserver-Datenbank  
  Jede Berichtsserver-Datenbank speichert mithilfe einer zugehörigen temporären Datenbank Sitzungs- und Ausführungsdaten, zwischengespeicherte Berichte und Arbeitstabellen, die vom Berichtsserver generiert werden. Im Hintergrund ausgeführte Serverprozesse entfernen regelmäßig ältere und nicht mehr verwendete Elemente aus den Tabellen in der temporären Datenbank.  
   
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] erstellt eine fehlende temporäre Datenbank nicht neu und repariert auch keine fehlenden oder geänderten Tabellen. Auch wenn die temporäre Datenbank keine persistenten Daten enthält, sollten Sie eine Kopie davon sichern, sodass Sie sie im Rahmen einer Wiederherstellung nach einem Fehler nicht neu erstellen müssen.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] erstellt eine fehlende temporäre Datenbank nicht neu und repariert auch keine fehlenden oder geänderten Tabellen. Auch wenn die temporäre Datenbank keine persistenten Daten enthält, sollten Sie eine Kopie davon sichern, sodass Sie sie im Rahmen einer Wiederherstellung nach einem Fehler nicht neu erstellen müssen.  
   
  Wenn Sie die temporäre Datenbank sichern und anschließend wiederherstellen, sollten Sie die Inhalte löschen. Grundsätzlich können die Inhalte der temporären Datenbank jederzeit bedenkenlos gelöscht werden. Nach dem Löschen der Inhalte müssen Sie den Windows-Dienst „Berichtsserver“ jedoch neu starten.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Hosten einer Berichts Server-Datenbank in einem SQL Server-Failovercluster](../install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
- [Speichern verschlüsselter Berichts Server Daten &#40;SSRS-Configuration Manager&#41;](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
- [Reporting Services Berichts Server](../reporting-services-report-server.md)   
- [Verwalten einer Berichts Server-Datenbank &#40;SSRS im einheitlichen Modus&#41;](report-server-database-ssrs-native-mode.md)   
+ [Hosten einer Berichtsserver-Datenbank in einem SQL Server-Failovercluster](../install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
+ [SSRS-Verschlüsselungsschlüssel: Speichern verschlüsselter Berichtsserverdaten](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Reporting Services-Berichtsserver](../reporting-services-report-server.md)   
+ [Verwalten einer Berichtsserver-Datenbank &#40;nativer SSRS-Modus&#41;](report-server-database-ssrs-native-mode.md)   
  [Erstellen einer Berichtsserver-Datenbank](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Sicherungs- und Wiederherstellungsvorgänge für Reporting Services](../install-windows/backup-and-restore-operations-for-reporting-services.md)  
   

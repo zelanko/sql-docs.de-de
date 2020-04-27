@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2708c2609d23c6094cd69bddd08d958a85262d88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099317"
 ---
 # <a name="errors-and-events-reference-reporting-services"></a>Fehler- und Ereignisreferenz (Reporting Services)
@@ -35,11 +35,11 @@ ms.locfileid: "66099317"
 |Ereignis-ID|type|Category|`Source`|BESCHREIBUNG|  
 |--------------|----------|--------------|------------|-----------------|  
 |106|Fehler|Scheduling|Berichtsserver|Zum Definieren geplanter Operationen (beispielsweise Berichtsabonnierung und -übermittlung) muss SQL Server-Agent ausgeführt werden.|  
-|[107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|Fehler|Start/Herunterfahren|Berichtsserver<br /><br /> Prozessor für Zeitplanung und Übermittlung|Der Quell>kann keine Verbindung mit der Berichts Server-Datenbank herstellen. * \<* Weitere Informationen finden Sie unter [Report Server-Windows-Dienst &#40;MSSQLServer&#41; 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md).|  
-|108|Fehler|Durchwahl|Berichtsserver<br /><br /> Berichts-Manager|Quell>kann eine Übermittlungs-, Datenverarbeitungs-oder Renderingerweiterung nicht laden. * \<*<br /><br /> Dies ist wahrscheinlich auf eine unvollständige Bereitstellung oder das Entfernen einer Erweiterung zurückzuführen. Weitere Informationen finden Sie unter [Deploying a Data Processing Extension](../extensions/data-processing/deploying-a-data-processing-extension.md) und [Deploying a Delivery Extension](../extensions/delivery-extension/deploying-a-delivery-extension.md).|  
+|[107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md)|Fehler|Start/Herunterfahren|Berichtsserver<br /><br /> Prozessor für Zeitplanung und Übermittlung|*\<Quelle>* kann keine Verbindung mit der Berichtsserver-Datenbank herstellen. Weitere Informationen finden Sie unter [Report Server-Windows-Dienst &#40;MSSQLServer&#41; 107](../../relational-databases/errors-events/mssqlserver-107-database-engine-error.md).|  
+|108|Fehler|Durchwahl|Berichtsserver<br /><br /> Berichts-Manager|*\<Quelle>* kann keine Übermittlungs-, Datenverarbeitungs- oder Renderingerweiterung laden.<br /><br /> Dies ist wahrscheinlich auf eine unvollständige Bereitstellung oder das Entfernen einer Erweiterung zurückzuführen. Weitere Informationen finden Sie unter [Deploying a Data Processing Extension](../extensions/data-processing/deploying-a-data-processing-extension.md) und [Deploying a Delivery Extension](../extensions/delivery-extension/deploying-a-delivery-extension.md).|  
 |109|Information|Verwaltung|Berichtsserver<br /><br /> Berichts-Manager|Die Konfigurationsdatei wurde geändert. Weitere Informationen finden Sie unter [Reporting Services Configuration Files](../report-server/reporting-services-configuration-files.md).|  
 |110|Warnung|Verwaltung|Berichtsserver<br /><br /> Berichts-Manager|Eine Einstellung in einer der Konfigurationsdateien wurde geändert und ist daher nicht mehr gültig. Stattdessen wird der Standardwert verwendet. Weitere Informationen finden Sie unter [Reporting Services Configuration Files](../report-server/reporting-services-configuration-files.md).|  
-|111|Fehler|Protokollierung|Berichtsserver<br /><br /> Berichts-Manager|Der Quell>kann das Ablauf Verfolgungs Protokoll nicht erstellen. * \<* Weitere Informationen finden Sie unter [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).|  
+|111|Fehler|Protokollierung|Berichtsserver<br /><br /> Berichts-Manager|*\<Quelle>* kann das Ablaufverfolgungsprotokoll nicht erstellen. Weitere Informationen finden Sie unter [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).|  
 |112|Warnung|Sicherheit|Berichtsserver|Der Berichtsserver hat einen möglichen Denial-of-Service-Angriff (DoS) entdeckt. Weitere Informationen finden Sie unter [Sicherheit und Schutz für Reporting Services](../security/reporting-services-security-and-protection.md).|  
 |113|Fehler|Protokollierung|Berichtsserver|Der Berichtsserver kann einen Leistungsindikator nicht erstellen.|  
 |114|Fehler|Start/Herunterfahren|Berichts-Manager|Der Berichts-Manager kann keine Verbindung mit dem Berichtsserverdienst herstellen.|  
@@ -47,7 +47,7 @@ ms.locfileid: "66099317"
 |116|Fehler|Intern|Berichtsserver<br /><br /> Berichts-Manager<br /><br /> Prozessor für Zeitplanung und Übermittlung|Ein interner Fehler ist aufgetreten.|  
 |117|Fehler|Start/Herunterfahren|Berichtsserver|Die Version der Berichtsserver-Datenbank ist ungültig.|  
 |118|Warnung|Protokollierung|Berichtsserver<br /><br /> Berichts-Manager|Das Ablaufverfolgungsprotokoll befindet sich nicht an der erwarteten Verzeichnisposition. Ein neues Ablaufverfolgungsprotokoll wird im Standardverzeichnis erstellt. Weitere Informationen finden Sie unter [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).|  
-|119|Fehler|Aktivierung|Berichtsserver<br /><br /> Prozessor für Zeitplanung und Übermittlung|Der Quell>wurde kein Zugriff auf den Inhalt der Berichts Server-Datenbank gewährt. * \<*|  
+|119|Fehler|Aktivierung|Berichtsserver<br /><br /> Prozessor für Zeitplanung und Übermittlung|*\<Quelle>* wurde kein Zugriff auf den Inhalt der Berichtsserver-Datenbank gewährt.|  
 |120|Fehler|Aktivierung|Berichtsserver|Der symmetrische Schlüssel kann nicht entschlüsselt werden. Wahrscheinlichste Ursache ist eine Änderung des Kontos, unter dem der Dienst ausgeführt wird. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |121|Fehler|Start/Herunterfahren|Berichtsserver|Fehler beim Starten des Remoteprozeduraufruf-Diensts.|  
 |122|Warnung|Lieferung|Prozessor für Zeitplanung und Übermittlung|Der Prozessor für Zeitplanung und Übermittlung konnte keine Verbindung zum SMTP-Server herstellen, der für die Übermittlung von E-Mail verwendet wird. Weitere Informationen zu SMTP-Serververbindungen finden Sie unter [Konfigurieren eines Berichts Servers für die e-Mail-Übermittlung &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md).|  
@@ -56,10 +56,9 @@ ms.locfileid: "66099317"
 |125|Information|Aktivierung|Berichtsserver|Der Schlüssel für die Datenverschlüsselung wurde erfolgreich extrahiert. Weitere Informationen zu Schlüsseln finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |126|Information|Aktivierung|Berichtsserver|Der Schlüssel für die Datenverschlüsselung wurde erfolgreich angewandt. Weitere Informationen zu Schlüsseln finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
 |127|Information|Aktivierung|Berichtsserver|Der verschlüsselte Inhalt wurde erfolgreich aus der Berichtsserver-Datenbank entfernt. Weitere Informationen zum Löschen von nicht wiederherstellbaren verschlüsselten Daten finden Sie unter [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md).|  
-|128|Fehler|Aktivierung|Berichtsserver|
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Komponenten aus verschiedenen Versionen können nicht zusammen verwendet werden.|  
+|128|Fehler|Aktivierung|Berichtsserver|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Komponenten aus verschiedenen Versionen können nicht zusammen verwendet werden.|  
 |129|Fehler|Verwaltung|Berichtsserver<br /><br /> Prozessor für Zeitplanung und Übermittlung|Ein verschlüsselter Wert der Konfigurationseinstellung kann nicht entschlüsselt werden.|  
-|130|Fehler|Verwaltung|Berichtsserver<br /><br /> Prozessor für Zeitplanung und Übermittlung|Quell>die Konfigurationsdatei nicht finden. * \<* Konfigurationsdateien sind für den Berichtsserver erforderlich.|  
+|130|Fehler|Verwaltung|Berichtsserver<br /><br /> Prozessor für Zeitplanung und Übermittlung|*\<Quelle>* kann die Konfigurationsdatei nicht finden. Konfigurationsdateien sind für den Berichtsserver erforderlich.|  
 |131|Fehler|Sicherheit|Berichtsserver<br /><br /> Prozessor für Zeitplanung und Übermittlung|Ein verschlüsselter Benutzerdatenwert konnte nicht entschlüsselt werden.|  
 |132|Fehler|Sicherheit|Berichtsserver|Fehler beim Verschlüsseln von Benutzerdaten. Der Wert kann nicht gespeichert werden.|  
 |133|Fehler|Verwaltung|Berichtsserver<br /><br /> Berichts-Manager<br /><br /> Prozessor für Zeitplanung und Übermittlung|Fehler beim Laden der Konfigurationsdatei. Dieser Fehler kann auftreten, wenn XML ungültig ist.|  
@@ -67,6 +66,6 @@ ms.locfileid: "66099317"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Überwachen Reporting Services Abonnements](../subscriptions/monitor-reporting-services-subscriptions.md)   
- [Reporting Services-Protokolldateien und -Quellen](../report-server/reporting-services-log-files-and-sources.md)  
+ [Reporting Services Log Files and Sources (Reporting Services-Protokolldateien und -Quellen)](../report-server/reporting-services-log-files-and-sources.md)  
   
   

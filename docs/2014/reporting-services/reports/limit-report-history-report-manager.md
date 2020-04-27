@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fd493fae67e3aa47c5c53cd3ad12d018b0b72f70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102641"
 ---
 # <a name="limit-report-history-report-manager"></a>Einschränken des Berichtsverlaufs (Berichts-Manager)
@@ -47,7 +47,7 @@ ms.locfileid: "66102641"
 4.  Wählen Sie die Optionen für Ihren Bericht aus, und klicken Sie auf **Anwenden**. Weitere Informationen zu den einzelnen Optionen finden Sie unter [Momentaufnahmeoptionen Eigenschaftenseite (Berichts-Manager)](../snapshot-options-properties-page-report-manager.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Hinzufügen einer Momentaufnahme zum Berichtsverlauf &#40;Berichts-Manager&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)   
- [Berichts-Manager (einheitlicher SSRS-Modus)](../report-manager-ssrs-native-mode.md)  
+ [Hinzufügen einer Momentaufnahme zum Berichts Verlauf &#40;Berichts-Manager&#41;](../report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md)  
   
   

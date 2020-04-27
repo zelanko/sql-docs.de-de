@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b78691b0300b6098dfa88c35b4b61c7aa63fed4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099819"
 ---
 # <a name="rsconfig-utility-ssrs"></a>rsconfig-Hilfsprogramm (SSRS)
@@ -51,12 +51,10 @@ ms.locfileid: "66099819"
 |`-c`|Erforderlich, wenn `-e` nicht verwendet wird.|Gibt die Verbindungszeichenfolge, die Anmeldeinformationen und die Datenquellenwerte an, die verwendet werden, um die Verbindung zwischen einem Berichtsserver und der Berichtsserver-Datenbank herzustellen.<br /><br /> Dieses Argument enthält keinen Wert. Es müssen jedoch weitere Argumente angegeben werden, um alle erforderlichen Verbindungswerte für dieses Argument bereitzustellen.<br /><br /> Zu den Argumenten, die Sie `-c` mit `-m`angeben können, gehören `-i`,`-d` **-s**,`-p`,,`-t``-a``-u`,, und.|  
 |`-e`|Erforderlich, wenn `-c` nicht verwendet wird.|Gibt das Konto für die unbeaufsichtigte Berichtsausführung an.<br /><br /> Dieses Argument enthält keinen Wert. Sie müssen jedoch zusätzliche Argumente in der Befehlszeile einschließen, um die in der Konfigurationsdatei verschlüsselten Werte anzugeben.<br /><br /> Zu den Argumenten, die Sie mit `-e` angeben können, gehören `-u` und `-p`. Darüber hinaus können Sie `-t` festlegen.|  
 |`-m`  *Computername*|Erforderlich, wenn Sie eine Remote-Berichtsserverinstanz konfigurieren.|Gibt den Namen des Computers an, der den Berichtsserver hostet. Wird dieses Argument nicht angegeben, wird der Standardwert `localhost` verwendet.|  
-|**-s**  *Servername*|Erforderlich.|Gibt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz an, die die Berichtsserver-Datenbank hostet.|  
+|**-s**  *servername*|Erforderlich.|Gibt die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz an, die die Berichtsserver-Datenbank hostet.|  
 |`-i`  *InstanceName*|Erforderlich, wenn Sie benannte Instanzen verwenden.|Wenn Sie eine benannte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz zum Hosten der Berichtsserver-Datenbank verwenden, gibt dieser Wert die benannte Instanz an.|  
 |`-d`  *DatabaseName*|Erforderlich.|Gibt den Namen der Berichtsserver-Datenbank an.|  
-|`-a`  *authmethod*|Erforderlich.|Gibt die Authentifizierungsmethode an, die vom Berichtsserver zum Herstellen der Verbindung mit der Berichtsserver-Datenbank verwendet wird. Gültige Werte sind `Windows` oder `SQL` (die Groß- und Kleinschreibung wird bei diesem Argument nicht beachtet).<br /><br /> 
-  `Windows` gibt an, dass der Berichtsserver die Windows-Authentifizierung verwendet.<br /><br /> 
-  `SQL` gibt an, dass der Berichtsserver die SQL Server-Authentifizierung verwendet.|  
+|`-a`  *authmethod*|Erforderlich.|Gibt die Authentifizierungsmethode an, die vom Berichtsserver zum Herstellen der Verbindung mit der Berichtsserver-Datenbank verwendet wird. Gültige Werte sind `Windows` oder `SQL` (die Groß- und Kleinschreibung wird bei diesem Argument nicht beachtet).<br /><br /> `Windows` gibt an, dass der Berichtsserver die Windows-Authentifizierung verwendet.<br /><br /> `SQL` gibt an, dass der Berichtsserver die SQL Server-Authentifizierung verwendet.|  
 |`-u`  *[Domäne\\] Benutzername*|Erforderlich, wenn `-e` verwendet wird; optional, wenn `-c` angegeben wird.|Gibt ein Benutzerkonto für die Verbindung mit der Berichtsserver-Datenbank oder für ein Konto für unbeaufsichtigte Vorgänge an.<br /><br /> Bei Angabe von **rsconfig -e**ist dieses Argument erforderlich. Bei dem Konto muss es sich um ein Domänenbenutzerkonto handeln.<br /><br /> Bei **rsconfig-c** und `-a SQL`muss dieses Argument einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmelde Namen angeben.<br /><br /> Bei **rsconfig-c** und `-a Windows`kann dieses Argument einen Domänen Benutzer, ein integriertes Konto oder Anmelde Informationen für das Dienst Konto angeben. Wenn Sie ein Domänenkonto angeben, geben Sie *Domäne* und *Benutzername* im Format *Domäne\Benutzername*an. Wenn Sie ein integriertes Konto verwenden, ist dieses Argument optional. Wenn Sie die Anmeldeinformationen für ein Dienstkonto verwenden möchten, geben Sie dieses Argument nicht an.|  
 |`-p`  *anmelden*|Erforderlich, wenn `-u` angegeben wird.|Gibt das Kennwort an, das mit dem *Benutzername* -Argument verwendet wird. Sie können für dieses Argument einen leeren Wert festlegen, falls für das Konto kein Kennwort erforderlich ist. Bei Domänenkonten wird bei diesem Wert die Groß- und Kleinschreibung beachtet.|  
 |`-t`|Optional.|Schreibt Fehlermeldungen in das Ablaufverfolgungsprotokoll. Dieses Argument enthält keinen Wert. Weitere Informationen finden Sie unter [Report Server Service Trace Log](../report-server/report-server-service-trace-log.md).|  
@@ -64,10 +62,10 @@ ms.locfileid: "66099819"
 ## <a name="permissions"></a>Berechtigungen  
  Auf dem Computer, der den von Ihnen konfigurierten Berichtsserver hostet, müssen Sie als lokaler Administrator angemeldet sein.  
   
-## <a name="file-location"></a>Dateispeicherort  
+## <a name="file-location"></a>Speicherort  
  „Rsconfig.exe“ befindet sich unter **\Programme\Microsoft SQL Server\110\Tools\Binn**. Sie können das Hilfsprogramm von einem beliebigen Ordner im Dateisystem ausführen.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Es gibt zwei Gründe für die Verwendung von Rsconfig.exe:  
   
 -   Ändern der Verbindungsinformationen, die ein Berichtsserver für die Verbindung mit einer Berichtsserver-Datenbank verwendet.  
@@ -126,8 +124,8 @@ rsconfig -e -m <REMOTECOMPUTERNAME> -s <SQLSERVERNAME> -u <DOMAIN\ACCOUNT> -p <P
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren einer Verbindung mit der Berichts Server-Datenbank &#40;SSRS-Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
  [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung &#40;SSRS-Configuration Manager&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
- [Reporting Services Berichts Server &#40;einheitlicher Modus&#41;](../report-server/reporting-services-report-server-native-mode.md)   
- [Speichern verschlüsselter Berichts Server Daten &#40;SSRS-Configuration Manager&#41;](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
+ [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../report-server/reporting-services-report-server-native-mode.md)   
+ [SSRS-Verschlüsselungsschlüssel: Speichern verschlüsselter Berichtsserverdaten](../install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Reporting Services-Konfigurationsdateien](../report-server/reporting-services-configuration-files.md)   
  [Eingabeaufforderungs-Hilfsprogramme für Berichts Server &#40;SSRS&#41;](report-server-command-prompt-utilities-ssrs.md)   
  [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)  

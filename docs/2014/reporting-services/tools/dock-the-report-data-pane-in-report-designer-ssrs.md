@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 669983c17792d555a1310e2248c4fb98cee16f9b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100342"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Andocken des Berichtsdatenbereichs im Berichts-Designer (SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "66100342"
      Um zwischen den letzten beiden Anzeigezuständen umzuschalten, doppelklicken Sie auf die Titelleiste des Berichtsdatenbereichs.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Berichtsdaten Bereich](../report-data/report-data-pane.md)   
+ [Berichtsdatenbereich](../report-data/report-data-pane.md)   
  [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

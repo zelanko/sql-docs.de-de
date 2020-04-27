@@ -24,10 +24,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c73e75bbdf458b27d0f879a91e72ececc832b88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102486"
 ---
 # <a name="publishing-reports-to-a-report-server"></a>Veröffentlichen von Berichten auf einem Berichtsserver
@@ -58,8 +58,8 @@ ms.locfileid: "66102486"
  Wenn Sie ein Berichtsserverprojekt veröffentlichen, werden alle Berichte in diesem Projekt veröffentlicht. Alle Berichte werden mithilfe derselben Projektkonfiguration bereitgestellt: auf demselben Berichtsserver, im selben Ordner auf dem Server usw. Zur Veröffentlichung von Berichten auf verschiedenen Servern veröffentlichen Sie sie entweder nacheinander oder schließen nur die gewünschten Berichte in das Berichtsserverprojekt ein. Eine Projektmappe kann mehrere Berichtsserverprojekte enthalten. Die Verwendung mehrerer Projekte erleichtert zudem die Verwaltung der Berichtsbereitstellung, weil Sie zur Bereitstellung unterschiedlicher Projekte jeweils eine andere Konfiguration verwenden können.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Eigenschaftsseiten für Projekt (Dialogfeld)](../tools/project-property-pages-dialog-box.md)   
+ [Eigenschaften Seiten für Projekt (Dialog Feld)](../tools/project-property-pages-dialog-box.md)   
  [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
- [Upgrade Reports (Aktualisieren von Berichten)](../install-windows/upgrade-reports.md)  
+ [Aktualisieren von Berichten](../install-windows/upgrade-reports.md)  
   
   

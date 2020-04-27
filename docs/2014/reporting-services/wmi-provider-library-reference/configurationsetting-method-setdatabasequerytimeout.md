@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff1b75e942de46309df68707cc3acec976adb991
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098072"
 ---
 # <a name="setdatabasequerytimeout-method-wmi-msreportserver_configurationsetting"></a>SetDatabaseQueryTimeout-Methode (WMI: MSReportServer_ConfigurationSetting)
@@ -41,7 +41,7 @@ public void SetDatabaseQueryTimeout (Int32 LogonTimeout,
 ```  
   
 ## <a name="parameters"></a>Parameter  
- *Logontimeout*  
+ *LogonTimeout*  
  Der Standardtimeoutwert (in Sekunden) für Berichtsserver-Datenbankabfragen  
   
  *HRESULT*  
@@ -51,7 +51,7 @@ public void SetDatabaseQueryTimeout (Int32 LogonTimeout,
  Gibt *HRESULT* zurück, wodurch der Erfolg oder das Fehlschlagen des Methodenaufrufs angegeben wird. Der Wert 0 (null) gibt an, dass der Methodenaufruf erfolgreich war. Ein Wert ungleich 0 (null) gibt an, dass ein Fehler aufgetreten ist.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  

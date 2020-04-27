@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8c6dd1e22f90b834f5683a53d7b206dd1c8ad46e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099513"
 ---
 # <a name="set-report-server-properties-management-studio"></a>Festlegen von Berichtsservereigenschaften (Management Studio)
-  Sie können Berichts Server-Systemeigenschaften in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] festlegen, um Funktionen zu aktivieren oder Server Standardwerte festzulegen.  
+  Sie können Features in den Systemeigenschaften des Berichtsservers in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] aktivieren oder die Standardeinstellungen für den Server festlegen.  
   
 ### <a name="to-open-the-advanced-server-properties-page"></a>So öffnen Sie die Seite mit den erweiterten Servereigenschaften  
   

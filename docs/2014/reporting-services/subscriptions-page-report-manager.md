@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eec92d7c58b68b14374666f65489f145fa863422
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101087"
 ---
 # <a name="subscriptions-page-report-manager"></a>Abonnements (Seite) (Berichts-Manager)
@@ -43,7 +43,7 @@ ms.locfileid: "66101087"
   
 4.  Wählen Sie die Registerkarte **Abonnements** aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Löschen**  
  Klicken Sie auf diese Schaltfläche, um ein Abonnement zu löschen. Bevor Sie Abonnements löschen, aktivieren Sie das Kontrollkästchen neben den zu löschenden Abonnements.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66101087"
  **Bearbeiten**  
  Klicken Sie auf diese Schaltfläche, um die Beschreibung anzuzeigen oder zu bearbeiten.  
   
- **Report**  
+ **Bericht**  
  Wenn Sie diese Seite aus einer freigegebenen Datenquelle öffnen, identifiziert diese Spalte den Bericht, für den das Abonnement definiert ist. Die Spalte **Ordner** identifiziert den Speicherort des Berichts.  
   
  **Beschreibung**  

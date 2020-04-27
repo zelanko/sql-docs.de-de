@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 232ee51614a668b07263c3e3a4182f23652135bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099872"
 ---
 # <a name="reporting-services-login-dialog-box-ssrs"></a>Reporting Services-Anmeldung (Dialogfeld) (SSRS)
@@ -24,9 +24,9 @@ ms.locfileid: "66099872"
   
 -   **Hinweis** Wenn Sie zum ersten Mal einen Bericht auf einem Berichts Server veröffentlicht haben, nachdem Sie die Bereitstellungs Eigenschaft **TargetServerURL** für ein Projekt festgelegt haben, überprüfen Sie, ob der angegebene Servername `http://localhost/reportserver`dem Wert entspricht `http://localhost/reports`und nicht. Durch Angeben des `reports` -Verzeichnisses auf dem lokalen Server anstelle des `reportserver` -Verzeichnisses wird indirekt bewirkt, dass dieses Dialogfeld geöffnet wird. Weitere Informationen zum Festlegen von **TargetServerURL** finden Sie unter [Festlegen von Bereitstellungseigenschaften (Reporting Services)](set-deployment-properties-reporting-services.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Server**  
- Zeigt den Namen des Berichtsservers an. Beispiel: `http://localhost/reportserver`. Für Berichtsserver, die einen anderen Port verwenden als Standardport 80, schließen Sie die Portnummer ein. Beispiel: `http://localhost:81/reportserver`.  
+ Zeigt den Namen des Berichtsservers an. Beispielsweise `http://localhost/reportserver`. Für Berichtsserver, die einen anderen Port verwenden als Standardport 80, schließen Sie die Portnummer ein. Beispielsweise `http://localhost:81/reportserver`.  
   
  **Benutzername**  
  Geben Sie den Benutzernamen ein, der beim Anmelden am Webdienst verwendet werden soll.  

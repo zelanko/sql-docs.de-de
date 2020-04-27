@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 33f9329031c589c533277b1e681ea1cb7bae49b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098138"
 ---
 # <a name="reserveurl-method-wmi-msreportserver_configurationsetting"></a>ReserveURL-Methode (WMI: MSReportServer_ConfigurationSetting)
@@ -42,7 +42,7 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  *URLString*  
  Die URL für die Reservierung  
   
- *LCID*  
+ *lcid*  
  Das Gebietsschema, das für die zurückgegebenen Fehlermeldungen verwendet werden soll  
   
  *Fehler*  
@@ -55,14 +55,14 @@ public void ReserveURL(string Application, string UrlString, int Lcid,
  Gibt *HRESULT* zurück, wodurch der Erfolg oder das Fehlschlagen des Methodenaufrufs angegeben wird. Der Wert 0 (null) gibt an, dass der Methodenaufruf erfolgreich war. Ein Fehlercode gibt an, dass der Aufruf nicht erfolgreich war.  
   
 ## <a name="remarks"></a>Bemerkungen  
- *UrlString* enthält nicht den Namen des virtuellen Verzeichnisses. Dazu wird die [SetVirtualDirectory](configurationsetting-method-setvirtualdirectory.md) -Methode bereitgestellt.  
+ *UrlString* beinhaltet nicht den Namen des virtuellen Verzeichnisses. Dazu wird die [SetVirtualDirectory](configurationsetting-method-setvirtualdirectory.md) -Methode bereitgestellt.  
   
  URL-Reservierungen werden für das aktuelle Windows-Dienstkonto erstellt. Eine Änderung des Windows-Dienstkontos erfordert das manuelle Aktualisieren der URL-Reservierungen.  
   
  Diese Methode verursacht einen "harten" Wiederverwendungsvorgang. Anwendungsdomänen werden neu gestartet, nachdem dieser Vorgang abgeschlossen wurde.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  

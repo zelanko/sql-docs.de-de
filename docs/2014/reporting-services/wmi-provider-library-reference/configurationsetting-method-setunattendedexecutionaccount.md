@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 095929c60d586fa0ed6c857412a369171acdaa10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097925"
 ---
 # <a name="setunattendedexecutionaccount-method-wmi-msreportserver_configurationsetting"></a>SetUnattendedExecutionAccount-Methode (WMI: MSReportServer_ConfigurationSetting)
@@ -41,7 +41,7 @@ public void SetUnattendedExecutionAccount (string UserName,
 ```  
   
 ## <a name="parameters"></a>Parameter  
- *User*  
+ *UserName*  
  Ein Windows-Konto, das für die unbeaufsichtigte Ausführung verwendet werden soll  
   
  *Kennwort*  
@@ -59,7 +59,7 @@ public void SetUnattendedExecutionAccount (string UserName,
  Die Methode „SetUnattendedExecutionAccount“ kann nicht für die unbeaufsichtigte Ausführung im Kontext des Report Server-Windows-Diensts verwendet werden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  

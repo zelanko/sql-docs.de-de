@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4f86c02acfcefba4972769367649cfd6b2075107
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103619"
 ---
 # <a name="process-large-reports"></a>Verarbeiten von großen Berichten
@@ -71,8 +71,8 @@ ms.locfileid: "66103619"
 ## <a name="see-also"></a>Weitere Informationen  
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Festlegen von Berichtsverarbeitungseigenschaften](set-report-processing-properties.md)   
- [Angeben von Anmelde Informationen und Verbindungsinformationen für Berichtsdaten Quellen](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](report-server-content-management-ssrs-native-mode.md)   
- [&#40;Berichts-Manager vorab laden&#41;](preload-the-cache-report-manager.md)  
+ [Vorabladen des Caches (Berichts-Manager)](preload-the-cache-report-manager.md)  
   
   

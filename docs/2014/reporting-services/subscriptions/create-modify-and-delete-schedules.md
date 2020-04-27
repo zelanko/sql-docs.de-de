@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e04f3f9a89fef9c00312ae1622f74fc0a279314
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100881"
 ---
 # <a name="create-modify-and-delete-schedules"></a>Create, Modify, and Delete Schedules
@@ -40,7 +40,7 @@ ms.locfileid: "66100881"
   
 -   [Erstellen und Verwalten von freigegebenen Zeitplänen (einheitlicher Modus)](#bkmk_native)  
   
-##  <a name="bkmk_overview"></a>Übersicht über das Verwalten frei gegebener Zeitpläne  
+##  <a name="overview-of-managing-shared-schedules"></a><a name="bkmk_overview"></a>Übersicht über das Verwalten frei gegebener Zeitpläne  
  Freigegebene Zeitpläne für den einheitlichen Modus werden auf der Seite Zeitpläne des Berichts-Managers oder im Ordner Freigegebene Zeitpläne in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]verwaltet. Verwenden Sie für den SharePoint-Modus die Verwaltungsseiten für die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung.  
   
  Sie können alle freigegebenen Zeitpläne anzeigen, die für den Berichtsserver definiert sind, Zeitpläne anhalten und fortsetzen (nur für Berichts-Manager) sowie Zeitpläne zum Ändern oder Löschen auswählen. Auf der Seite "Freigegebene Zeitpläne" sind die folgenden Informationen zum Status jedes Zeitplans zusammengefasst: Häufigkeit, Besitzer, Ablaufzeitpunkt und Status.  
@@ -51,9 +51,9 @@ ms.locfileid: "66100881"
   
 -   Anzeigen der Seite "Berichte" eines bestimmten freigegebenen Zeitplans. Auf dieser Seite werden alle Berichte und freigegebenen Datasets aufgeführt, die den freigegebenen Zeitplan verwenden.  
   
--   Anzeigen der Protokolldateien oder Ablaufverfolgungsprotokolle der Berichtsausführung, um zu ermitteln, ob Berichte zu den im Zeitplan angegebenen Zeiten ausgeführt wurden. Weitere Informationen finden Sie unter [Reporting Services-Protokolldateien und-Quellen](../report-server/reporting-services-log-files-and-sources.md).  
+-   Anzeigen der Protokolldateien oder Ablaufverfolgungsprotokolle der Berichtsausführung, um zu ermitteln, ob Berichte zu den im Zeitplan angegebenen Zeiten ausgeführt wurden. Weitere Informationen finden Sie unter [Reporting Services-Protokolldateien und Quellen](../report-server/reporting-services-log-files-and-sources.md).  
   
-##  <a name="bkmk_sharepoint"></a>Erstellen und Verwalten von freigegebenen Zeitplänen (SharePoint-Modus)  
+##  <a name="create-and-manage-shared-schedules-sharepoint-mode"></a><a name="bkmk_sharepoint"></a>Erstellen und Verwalten von freigegebenen Zeitplänen (SharePoint-Modus)  
  Bei einem freigegebenen Zeitplan handelt es sich um einen Zeitplan für verschiedene Zwecke, der sofort verwendbare Zeitplaninformationen zu einer beliebigen Anzahl von Berichten oder Abonnements bietet. Einen freigegebenen Zeitplan erstellen Sie einmal und verweisen dann in einem Abonnement oder auf einer Eigenschaftenseite darauf, wenn Sie Zeitplaninformationen benötigen. Freigegebene Zeitpläne können zentral verwaltet, angehalten und fortgesetzt werden. Einen benutzerdefinierten Zeitplan müssen Sie dagegen manuell bearbeiten, um zu verhindern, dass ein Bericht oder ein Abonnement ausgeführt wird.  
   
  Sie müssen ein Websiteadministrator sein, um freigegebene Zeitpläne auf einer SharePoint-Website erstellen, ändern oder löschen zu können.  
@@ -102,7 +102,7 @@ ms.locfileid: "66100881"
   
 4.  Wählen Sie den Zeitplan aus, und klicken Sie auf **Löschen**.  
   
-##  <a name="bkmk_native"></a>Erstellen und Verwalten von freigegebenen Zeitplänen (einheitlicher Modus)  
+##  <a name="create-and-manage-shared-schedules-native-mode"></a><a name="bkmk_native"></a>Erstellen und Verwalten von freigegebenen Zeitplänen (einheitlicher Modus)  
  Freigegebene Zeitpläne müssen mit der Zeitplanseite des Berichts-Managers oder dem Ordner mit den freigegebenen Zeitplänen in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]manuell gelöscht werden. Wenn Sie einen freigegebenen Zeitplan löschen, der verwendet wird, werden alle Verweise darauf durch berichtsspezifische Zeitpläne ersetzt.  
   
  Berichts- und abonnementspezifische Zeitpläne werden beim Löschen eines Berichts oder Abonnements oder bei der Auswahl einer anderen Vorgehensweise zum Ausführen des Berichts bzw. des Abonnements gelöscht. So wird beispielsweise mit **Diesen Bericht immer mit den neuesten Daten ausführen** ein berichtsspezifischer Zeitplan gelöscht, den Sie für die Ausführung eines Berichts als Berichtsausführungs-Momentaufnahme erstellt haben.  
@@ -159,8 +159,7 @@ ms.locfileid: "66100881"
   
  Wenn Sie einen freigegebenen Zeitplan löschen, der von mehreren Berichten und Abonnements verwendet wird, erstellt der Berichtsserver für Berichte und Abonnements, die vorher den freigegebenen Zeitplan verwendet haben, eigene Zeitpläne. Jeder dieser neuen Zeitpläne enthält das Datum, die Zeit und die Wiederholungsoption, die in dem freigegebenen Zeitplan angegeben wurden. Beachten Sie, dass [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] keine zentrale Verwaltung für einzelne Zeitpläne bereitstellt. Wenn Sie einen freigegebenen Zeitplan löschen, müssen Sie jetzt die Zeitplaninformationen für jedes einzelne Element verwalten.  
   
- Wenn Sie nicht sicher sind, ob ein freigegebener Zeitplan verwendet wird, sollten Sie diesen ggf. stattdessen in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] löschen. 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] bietet die gleichen Verwaltungsfunktionen für freigegebene Zeitpläne wie der Berichts-Manager, verfügt aber zusätzlich über eine Berichtsseite mit dem Namen jedes Bericht, der den Zeitplan verwendet.  
+ Wenn Sie nicht sicher sind, ob ein freigegebener Zeitplan verwendet wird, sollten Sie diesen ggf. stattdessen in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] löschen. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] bietet die gleichen Verwaltungsfunktionen für freigegebene Zeitpläne wie der Berichts-Manager, verfügt aber zusätzlich über eine Berichtsseite mit dem Namen jedes Bericht, der den Zeitplan verwendet.  
   
 ### <a name="create-delete-or-modify-a-shared-schedule-management-studio"></a>Erstellen, Löschen oder Ändern eines freigegebenen Zeitplans (Management Studio)  
  Ein freigegebener Zeitplan enthält Informationen zum Zeitplan und zu Wiederholungen, die von einer beliebigen Anzahl veröffentlichter Berichte und Abonnements verwendet werden können, die auf einem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsserver ausgeführt werden. Werden zahlreiche Berichte und Abonnements gleichzeitig ausgeführt, können Sie für diese Aufträge einen freigegebenen Zeitplan erstellen. Soll zu einem späteren Zeitpunkt das Wiederholungsmuster oder das Enddatum geändert werden, können Sie diese Änderung für alle Berichte und Abonnements an einer Stelle vornehmen.  

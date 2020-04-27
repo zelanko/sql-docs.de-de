@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9b597f8aab58d2fd9a4dd44e9361469656bec32c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101273"
 ---
 # <a name="shared-dataset-selection-page-report-manager"></a>Auswahl freigegebener Datasets (Seite), (Berichts-Manager)
@@ -35,7 +35,7 @@ ms.locfileid: "66101273"
   
 4.  Wählen Sie die Registerkarte **Freigegebene Datasets** aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Durchsuchen**  
  Für jeden Namen eines freigegebenen Datasets in einem Bericht können Sie den aktuellen Ordnerpfad und den Namen des freigegebenen Zieldatasets überprüfen.  
   
@@ -45,15 +45,15 @@ ms.locfileid: "66101273"
   
  Klicken Sie auf die Schaltfläche **OK** , um die Auswahl freigegebener Datasets zu beenden, oder auf **Abbrechen** , um die Suche nach einem freigegebenen Dataset abzubrechen.  
   
- **Anwenden**  
+ **übernehmen**  
  Speichern Sie die Änderungen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Die Inhaltsseite &#40;Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Verwalten von freigegebenen Datasets](report-data/manage-shared-datasets.md)   
+ [Freigegebene Datasets verwalten](report-data/manage-shared-datasets.md)   
  [Berichts-Manager F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
- [Berichtsteile und Datasets in Berichts-Generator](report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Berichts Teile und Datasets in Berichts-Generator](report-data/report-parts-and-datasets-in-report-builder.md)   
  [Eingebettete und freigegebene Datasets &#40;Berichts-Generator und SSRS&#41;](report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

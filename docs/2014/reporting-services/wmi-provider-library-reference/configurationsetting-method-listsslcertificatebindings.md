@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0a2a33d7aa992fd434b29fd519c805f57b2b46fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098360"
 ---
 # <a name="listsslcertificatebindings-method-wmi-msreportserver_configurationsetting"></a>ListSSLCertificateBindings-Methode (WMI: MSReportServer_ConfigurationSetting)
@@ -42,19 +42,19 @@ public void ListSSLCertificateBindings(Int32 Lcid, out string[] Application,
  *LCID*  
  Das Gebietsschema, das für die zurückgegebenen Fehlermeldungen verwendet werden soll  
   
- *Anwendung []*  
+ *Application[]*  
  [out] Die Anwendungen, die Zertifikatsbindungen aufweisen  
   
- *Certifi-ehash []*  
+ *CertificateHash[]*  
  [out] Die Hashes für die Zertifikate  
   
- *IPAddress []*  
+ *IPAddress[]*  
  [out] Die IP-Adresse für die Anwendungen  
   
- *Port []*  
+ *Port[]*  
  [out] Die in der Bindung in rsreportserver.config gespeicherte Portnummer.  
   
- *Fehler []*  
+ *Errors[]*  
  [out] Die Beschreibungen für Fehler, die aufgetreten sind  
   
  *Länge*  
@@ -69,7 +69,7 @@ public void ListSSLCertificateBindings(Int32 Lcid, out string[] Application,
 ## <a name="remarks"></a>Bemerkungen  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  

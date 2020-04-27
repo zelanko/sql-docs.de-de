@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e68bb7c70d08fb07d3079436fafe5fd61ae104f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097919"
 ---
 # <a name="setvirtualdirectory-method-wmi-msreportserver_configurationsetting"></a>SetVirtualDirectory-Methode (WMI: MSReportServer_ConfigurationSetting)
@@ -42,7 +42,7 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
  *VirtualDirectory*  
  Der Name des virtuellen Verzeichnisses  
   
- *LCID*  
+ *lcid*  
  Die Gebietsschema-ID für das virtuelle Verzeichnis  
   
  *Fehler*  
@@ -62,7 +62,7 @@ public void SetVirtualDirectory(string Application, string VirtualDirectory,
  Aktualisiert den Wert des \Configuration\URLReservations\Application\VirtualDirectory-Elements. Ist erfolgreich, auch wenn noch keine URL-Reservierungen erstellt wurden.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  

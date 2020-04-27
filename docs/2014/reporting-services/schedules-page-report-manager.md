@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 927a9fc96e11bffdcacf7a12f09ee93d25f153fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102317"
 ---
 # <a name="schedules-page-report-manager"></a>Zeitpläne (Seite) (Berichts-Manager)
@@ -36,7 +36,7 @@ ms.locfileid: "66102317"
   
 3.  Wählen Sie die Registerkarte **Zeitpläne** aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Neuer Zeitplan**  
  Klicken Sie auf diese Schaltfläche, um die Seite Zeitplanung zu öffnen. Auf dieser Seite können Sie Angaben zur Häufigkeit machen.  
   
@@ -46,13 +46,13 @@ ms.locfileid: "66102317"
  **Anhalten**  
  Klicken Sie auf diese Schaltfläche, um das Ausführen eines freigegebenen Zeitplans vorübergehend zu unterbrechen. Durch das Anhalten eines Zeitplans wird auch das Ausführen von Abonnements und anderer geplanter Prozesse verhindert.  
   
- **Fortsetzen**  
+ **Zusetzen**  
  Klicken Sie auf diese Schaltfläche, um einen freigegebenen Zeitplan fortzusetzen. Versäumte Prozesse, deren Ausführung geplant war, während der Zeitplan angehalten wurde, werden nicht fortgesetzt.  
   
  **Zeitplan**  
  Zeigt die freigegebenen Zeitpläne an, die aktuell definiert sind. Klicken Sie auf einen freigegebenen Zeitplan, um die Informationen zur Häufigkeit anzuzeigen oder zu bearbeiten.  
   
- **Hersteller**  
+ **Ersteller**  
  Zeigt den Namen des Benutzers an, der den freigegebenen Zeitplan erstellt hat.  
   
  **Zuletzt ausgeführt, Nächste Ausführung**  

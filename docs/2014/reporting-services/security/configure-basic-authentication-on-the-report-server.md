@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 32b46265b5da376bc974b55c48bf54bad88917d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102157"
 ---
 # <a name="configure-basic-authentication-on-the-report-server"></a>Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver
@@ -86,8 +86,7 @@ ms.locfileid: "66102157"
   
 |Element|Erforderlich|Gültige Werte|  
 |-------------|--------------|------------------|  
-|LogonMethod|Ja<br /><br /> Wenn Sie keinen Wert angeben, wird 3 verwendet.|
-  `2` = Netzwerkanmeldung für Server mit hoher Leistungsfähigkeit zur Authentifizierung von Nur-Text-Kennwörtern<br /><br /> `3`= Klartext-Anmeldung, bei der Anmelde Informationen im Authentifizierungs Paket beibehalten werden, das mit jeder HTTP-Anforderung gesendet wird, sodass der Server die Identität des Benutzers annehmen kann, wenn er eine Verbindung mit anderen Servern im Netzwerk herstellt. (Standardwert)<br /><br /> Hinweis: Die Werte 0 (für interaktive Anmeldung) und 1 (für Batchanmeldung) werden in [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]nicht unterstützt.|  
+|LogonMethod|Ja<br /><br /> Wenn Sie keinen Wert angeben, wird 3 verwendet.|`2` = Netzwerkanmeldung für Server mit hoher Leistungsfähigkeit zur Authentifizierung von Nur-Text-Kennwörtern<br /><br /> `3`= Klartext-Anmeldung, bei der Anmelde Informationen im Authentifizierungs Paket beibehalten werden, das mit jeder HTTP-Anforderung gesendet wird, sodass der Server die Identität des Benutzers annehmen kann, wenn er eine Verbindung mit anderen Servern im Netzwerk herstellt. (Standardwert)<br /><br /> Hinweis: Die Werte 0 (für interaktive Anmeldung) und 1 (für Batchanmeldung) werden in [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] nicht unterstützt.|  
 |Realm|Optional|Gibt eine Ressourcenpartition mit Autorisierungs- und Authentifizierungsfunktionen an, mit denen Sie den Zugriff auf geschützte Ressourcen in Ihrem Unternehmen steuern können.|  
 |DefaultDomain|Optional|Gibt die Domäne an, die vom Server für die Benutzerauthentifizierung verwendet wird. Dieser Wert ist optional. Wenn Sie ihn weglassen, verwendet der Berichtsserver den Computernamen als Domäne. Wenn der Computer zu einer Domäne gehört, ist diese Domäne die Standarddomäne. Wenn Sie den Berichtsserver auf einem Domänencontroller installiert haben, ist die verwendete Domäne die vom Computer gesteuerte.|  
   
@@ -138,7 +137,7 @@ ms.locfileid: "66102157"
   
      Der Authentifizierungsmodus muss auf `Windows` festgelegt werden, wenn Sie eine Web.config-Datei aufnehmen möchten.  
   
-     `Identity impersonate`kann oder `True` `False`sein.  
+     `Identity impersonate` kann `True` oder `False` sein.  
   
     -   Legen Sie `False` fest, wenn ASP.NET das Sicherheitstoken nicht lesen darf. Die Anforderung wird im Sicherheitskontext des Berichtsserverdienstes ausgeführt.  
   
@@ -157,7 +156,7 @@ ms.locfileid: "66102157"
 8.  Starten Sie den Berichtsserver neu.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Anwendungs Domänen für Berichts Server Anwendungen](../report-server/application-domains-for-report-server-applications.md)   
+ [Anwendungsdomänen für Berichtsserveranwendungen](../report-server/application-domains-for-report-server-applications.md)   
  [Sicherheit und Schutz für Reporting Services](reporting-services-security-and-protection.md)  
   
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f16b86b1343d83c44819427b8ba6c43726798e93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098541"
 ---
 # <a name="createsslcertificatebinding-method-wmi-msreportserver_configurationsetting"></a>CreateSSLCertificateBinding-Methode (WMI: MSReportServer_ConfigurationSetting)
@@ -50,7 +50,7 @@ public void CreateSSLCertificateBinding(string application,
  *Port*  
  Der SSL-Port, der der Bindung zugeordnet ist.  
   
- *LCID*  
+ *Lcid*  
  Das Gebietsschema, das für die zurückgegebenen Fehlermeldungen verwendet werden soll  
   
  *Fehler*  
@@ -80,7 +80,7 @@ public void CreateSSLCertificateBinding(string application,
 5.  Eine URL-Reservierung, die einen Hostnamen angibt, ist vorhanden, der Hostname stimmt jedoch nicht mit dem Zertifikathostnamen überein.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 08fc68575e2515907f31e82cf3609d73da1c95d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099786"
 ---
 # <a name="schedule-properties-reports-page"></a>Zeitplaneigenschaften (Registerkarte Berichte)
@@ -27,20 +27,20 @@ ms.locfileid: "66099786"
  Um diese Seite zu öffnen, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]starten Sie, stellen Sie eine Verbindung mit einem Berichts Server her, **Öffnen Sie den**Ordner frei **gegebene Zeitpläne** , klicken Sie mit der rechten Maustaste auf einen freigegebenen Zeitplan, und wählen Sie **Eigenschaften**aus.  
   
 > [!NOTE]  
->  Diese Funktion ist nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2012-Editionen unterstützte Funktionen](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+>  Diese Funktion ist nicht in jeder Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar. Eine Liste der Funktionen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die von den-Editionen unterstützt werden, finden Sie [unter von den-Editionen unterstützte Funktionen SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Ordner**  
  Gibt den Pfad des Berichts an.  
   
- **Report**  
+ **Bericht**  
  Gibt den Namen des Berichts an, der den Zeitplan verwendet.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen, Ändern oder Löschen von Zeitplänen](../subscriptions/create-modify-and-delete-schedules.md)   
  [Zeitpläne](../subscriptions/schedules.md)   
- [Berichtsserver im Management Studio (F1-Hilfe)](report-server-in-management-studio-f1-help.md)   
- [Vorgehensweise: Herstellen einer Verbindung mit einem Berichtsserver in Management Studio](connect-to-a-report-server-in-management-studio.md)   
+ [Berichts Server in Management Studio F1-Hilfe](report-server-in-management-studio-f1-help.md)   
+ [Herstellen einer Verbindung mit einem Berichts Server in Management Studio](connect-to-a-report-server-in-management-studio.md)   
  [Konfigurieren allgemeiner Eigenschaften für einen Bericht &#40;Berichts-Manager&#41;](../configure-general-properties-for-a-report-report-manager.md)  
   
   

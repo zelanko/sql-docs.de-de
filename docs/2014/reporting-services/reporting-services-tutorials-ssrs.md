@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 35532f3889836aa1a84858fb547f2764b1d4a902
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102692"
 ---
 # <a name="reporting-services-tutorials-ssrs"></a>Reporting Services-Tutorials (SSRS)
   Dieser Abschnitt enthält Lernprogramme [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]für.  
   
- [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Lernprogramm&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)  
+ [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Tutorial&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)  
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ermöglicht datengesteuerte Abonnements, sodass Sie die Verteilung eines Berichts auf der Basis einer dynamischen Liste von Abonnenten, die den Bericht erhalten, anpassen können. Datengesteuerte Abonnements werden normalerweise von einem Berichtsserveradministrator erstellt und verwaltet. Für das Anlegen von datengesteuerten Abonnements sind Erfahrungen im Erstellen von Abfragen, Kenntnisse darüber, welche Datenquellen Abonnentendaten enthalten, und erhöhte Berechtigungen auf einem Berichtsserver erforderlich.  
   
  [Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;](create-a-basic-table-report-ssrs-tutorial.md)  

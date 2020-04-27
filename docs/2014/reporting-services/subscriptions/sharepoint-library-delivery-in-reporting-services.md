@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93a62ec076b9dc61cd01d18796f04bbaa04eb93b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100699"
 ---
 # <a name="sharepoint-library-delivery-in-reporting-services"></a>SharePoint-Bibliotheksübermittlung in Reporting Services
   Falls der Berichtsserver für die SharePoint-Integration konfiguriert ist, enthält er eine Übermittlungserweiterung, mit der Sie einen Bericht an eine SharePoint-Bibliothek senden können.  
   
- Zum Verwenden der SharePoint-Übermittlungserweiterung müssen Sie ein Abonnement von einer Anwendungsseite auf einer SharePoint-Website aus erstellen und dann **SharePoint-Dokumentbibliothek** als Übermittlungstyp auswählen. Die SharePoint-Übermittlungs Erweiterung kann nicht für Abonnements verwendet werden, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] die Sie in oder Berichts-Manager erstellen.  
+ Zum Verwenden der SharePoint-Übermittlungserweiterung müssen Sie ein Abonnement von einer Anwendungsseite auf einer SharePoint-Website aus erstellen und dann **SharePoint-Dokumentbibliothek** als Übermittlungstyp auswählen. Die SharePoint-Übermittlungserweiterung kann nicht für Abonnements verwendet werden, die Sie in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder im Berichts-Manager erstellen.  
   
 > [!NOTE]  
 >  Die Übermittlung von Berichten an eine SharePoint-Website wird von der Übermittlungserweiterung nicht unterstützt, wenn der Berichtsserver im einheitlichen Modus ausgeführt wird. Wenn Sie versuchen, die Übermittlungserweiterung für einen Berichtsserver im einheitlichen Modus programmgesteuert aufzurufen, wird vom Server der `rsDeliveryExtensionNotFound`-Fehler zurückgegeben und der `rsOperationNotSupportedSharePointMode`-Fehler in den Berichtsserver-Protokolldateien protokolliert.  
@@ -85,7 +85,7 @@ ms.locfileid: "66100699"
  Wenn Sie die Funktion zum automatischen Kopieren verwenden, um die neueste Version einer Datei an mehrere Speicherorte zu kopieren, wird die Datei kopiert, sofern **Überschreiben** aktiviert ist. Wenn Sie **AutoIncrement** oder **None**verwendet haben, tritt bei der Übermittlung ein `rsDeliveryError` Fehler auf, und der Fehler tritt auf.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erstellen und Verwalten von Abonnements für Berichts Server im SharePoint-Modus](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
+ [Erstellen und Verwalten von Abonnements für Berichtsserver im SharePoint-Modus](create-and-manage-subscriptions-for-sharepoint-mode-report-servers.md)   
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   

@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 575eab878e0ef9b4357c09a0a3deedf143c237b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098483"
 ---
 # <a name="generatedatabaserightsscript-method-wmi-msreportserver_configurationsetting"></a>GenerateDatabaseRightsScript-Methode (WMI: MSReportServer_ConfigurationSetting)
@@ -43,7 +43,7 @@ out Int32 HRESULT);
 ```  
   
 ## <a name="parameters"></a>Parameter  
- *User*  
+ *UserName*  
  Der Benutzername oder die Windows-Sicherheits-ID (SID) des Benutzers, dem durch das Skript Berechtigungen erteilt werden.  
   
  *DatabaseName*  
@@ -77,18 +77,12 @@ out Int32 HRESULT);
   
 |Konto/SID, das bzw. die übersetzt wird|Allgemeiner Name|Remotename|  
 |---------------------------------------|-----------------|-----------------|  
-|(S-1-5-18)|Lokales System|
-  \<Domäne>\\<Computername\>$|  
-|.\LocalSystem|Lokales System|
-  \<Domäne>\\<Computername\>$|  
-|ComputerName\LocalSystem|Lokales System|
-  \<Domäne>\\<Computername\>$|  
-|LocalSystem|Lokales System|
-  \<Domäne>\\<Computername\>$|  
-|(S-1-5-20)|Netzwerkdienst|
-  \<Domäne>\\<Computername\>$|  
-|NT AUTHORITY\NetworkService|Netzwerkdienst|
-  \<Domäne>\\<Computername\>$|  
+|(S-1-5-18)|Lokales System|\<Domäne>\\<Computername\>$|  
+|.\LocalSystem|Lokales System|\<Domäne>\\<Computername\>$|  
+|ComputerName\LocalSystem|Lokales System|\<Domäne>\\<Computername\>$|  
+|LocalSystem|Lokales System|\<Domäne>\\<Computername\>$|  
+|(S-1-5-20)|Netzwerkdienst|\<Domäne>\\<Computername\>$|  
+|NT AUTHORITY\NetworkService|Netzwerkdienst|\<Domäne>\\<Computername\>$|  
 |(S-1-5-19)|Lokaler Dienst|Fehler – siehe unten.|  
 |NT AUTHORITY\LocalService|Lokaler Dienst|Fehler – siehe unten.|  
   
@@ -100,14 +94,13 @@ out Int32 HRESULT);
   
 |Wert von "DatabaseServerName"|Beispiel|  
 |---------------------------------|-------------|  
-|"."||  
+|„.“||  
 |„(local)“||  
 |„LOCAL“||  
 |localhost||  
-|\<MachineName->|testlab14|  
-|
-  \<ComputerFQDN>|example.redmond.microsoft.com|  
-|\<IPAddress->|180.012.345,678|  
+|\<Computername>|testlab14|  
+|\<ComputerFQDN>|example.redmond.microsoft.com|  
+|\<IP-Adresse>|180.012.345,678|  
   
  Wenn *IsWindowsUser* auf `true`festgelegt ist, ruft der WMI-Anbieter LookupAccountName auf, um die sid für das Konto zu erhalten, und ruft dann LookupAccountSid auf, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um den Namen zu erhalten, der in das Skript eingefügt werden soll. Hierdurch wird sichergestellt, dass der verwendete Kontoname die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Überprüfung erfolgreich durchläuft.  
   
@@ -120,7 +113,7 @@ out Int32 HRESULT);
  Das generierte Skript unterstützt [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 und [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  

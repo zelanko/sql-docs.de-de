@@ -13,16 +13,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c70a75b08a3e9fcda2ae9a31a27477070d09e6e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096781"
 ---
 # <a name="analysis-services-parameters"></a>Analysis Services-Parameter
   Zum Analysieren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]von müssen Sie eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] angeben und Informationen darüber bereitstellen, wie Sie eine Verbindung mit dieser Instanz herstellen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Instanzname**  
  Wählen Sie eine Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] aus der Liste aus.  
   

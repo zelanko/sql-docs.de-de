@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 63ac5bf29ca441a18be4bc5e46448475b56104bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100300"
 ---
 # <a name="design-view"></a>Entwurfsansicht
@@ -27,7 +27,7 @@ ms.locfileid: "66100300"
 ## <a name="report-design-surface"></a>Berichtsentwurfsoberfläche  
  Diese Entwurfsoberfläche besteht aus drei Abschnitten: Berichtshauptteil, Seitenkopf und Seitenfuß. Mithilfe der Toolbox können Sie Elemente auswählen, die in einem dieser drei Abschnitte platziert werden sollen. Verwenden Sie den Berichtsdatenbereich, um Bilder, Parameter, Datenquellen und Datasets, einschließlich Datasetabfragen und Feldlisten, anzuzeigen. Nachdem Sie Berichtselemente zur Entwurfsoberfläche hinzugefügt haben, ziehen Sie Datasetfelder aus dem **Berichtsdatenbereich** in Datenregionen wie eine Tabelle, Matrix oder Liste. Jedes Element in der Berichtsentwurfsoberfläche enthält Eigenschaften, die mithilfe eines Eigenschaftendialogfelds oder des Bereichs Eigenschaften verwaltet werden können.  
   
-## <a name="toolbox"></a>Toolbox  
+## <a name="toolbox"></a>Werkzeugkasten  
  Die Toolbox listet Datenbereiche und andere Berichtselemente auf, die für den Bericht verfügbar sind. Doppelklicken Sie auf das entsprechende Symbol, oder ziehen Sie das Symbol auf die Entwurfsoberfläche, um Berichtselemente aus der Toolbox hinzuzufügen. Sie können anschließend die Form und die Größe mithilfe der Objekthandles ändern.  
   
 ## <a name="report-data-pane"></a>Berichtsdatenbereich  
@@ -51,7 +51,7 @@ ms.locfileid: "66100300"
  Verwenden Sie den Bereich Eigenschaften, um Eigenschaften für das ausgewählte Berichtselement auf der Entwurfsoberfläche oder die ausgewählte Gruppe im Gruppierungsbereich anzuzeigen. Alternativ können Sie mit der rechten Maustaste auf das ausgewählte Berichtselement oder die Gruppe klicken und anschließend auf **Eigenschaften** klicken, um das entsprechende Dialogfeld **Eigenschaften** für das Berichtselement oder die Gruppe zu öffnen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Seitenkopf- und Seitenfußzeilen &#40;Berichts-Generator und SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Seiten Kopfzeilen und-Fußzeilen &#40;Berichts-Generator und SSRS&#41;](../report-design/page-headers-and-footers-report-builder-and-ssrs.md)   
  [Berichtsentwurfstipps (Berichts-Generator und SSRS)](../report-design/report-design-tips-report-builder-and-ssrs.md)  
   
   

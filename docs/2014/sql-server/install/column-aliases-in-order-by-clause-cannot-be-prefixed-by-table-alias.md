@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1f4328c6a70c00766979a13bbcf8dc2b8bd77f42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096318"
 ---
 # <a name="column-aliases-in-order-by-clause-cannot-be-prefixed-by-table-alias"></a>Spaltenaliase in ORDER BY-Klauseln können nicht vom Tabellenalias als Präfix verwendet werden
@@ -36,8 +36,7 @@ FROM Person.Contact p
 ORDER BY p.l  
 ```  
   
- 
-  [!INCLUDE[ssDEversion10](../../includes/ssdeversion10-md.md)] ordnet `p.l` in der `ORDER BY`-Klausel keiner gültigen Spalte in der Tabelle zu.  
+ [!INCLUDE[ssDEversion10](../../includes/ssdeversion10-md.md)] ordnet `p.l` in der `ORDER BY`-Klausel keiner gültigen Spalte in der Tabelle zu.  
   
 ### <a name="exception"></a>Ausnahme  
  Wenn der in der ORDER BY-Klausel vorangestellte Spaltenalias ein gültiger Spaltenname in der angegebenen Tabelle ist, wird die Abfrage ohne Fehler ausgeführt. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] kann die Semantik der Anweisung unterschiedlich sein. So ist der Spaltenalias (`id`) in der folgenden Anweisung beispielsweise ein gültiger Spaltenname in der `sysobjects`-Tabelle. In [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] wird der `CAST`-Vorgang beim Ausführen der Anweisung durchgeführt, nachdem das Resultset sortiert wurde. Dies bedeutet, dass die `name`-Spalte im Sortiervorgang verwendet wird. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] wird der `CAST`-Vorgang vor dem Sortiervorgang ausgeführt. Dies bedeutet, dass die `id`-Spalte der Tabelle im Sortiervorgang verwendet wird und das Resultset in einer unerwarteten Reihenfolge zurückgegeben wird.  

@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 223940bda5cf30098d431cfcc3ded53a867a92b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096445"
 ---
 # <a name="cluster-node-configuration-complete"></a>Clusterknotenkonfiguration (Vollständig)
   Auf der Seite Clusterknotenkonfiguration (Vollständig) können Sie eine vorhandene Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] angeben, die für das Clustering vorbereitet wurde. Zum Installieren oder Aktualisieren eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusters müssen Sie das Setupprogramm für jeden einzelnen Knoten des Failoverclusters ausführen. Zum Hinzufügen eines Knotens zu einem vorhandenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failovercluster müssen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup für den Knoten ausführen, der der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failoverclusterinstanz hinzugefügt werden soll.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Auswahl aus den Dropdownfeldern:  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Instanzname: Wählen Sie den Instanznamen für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failovercluster aus.  

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cf44b6af30d5db32c006c5a7d9b59d1810840d18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103191"
 ---
 # <a name="turn-reporting-services-features-on-or-off"></a>Aktivieren und Deaktivieren der Reporting Services-Funktionen
@@ -31,11 +31,11 @@ ms.locfileid: "66103191"
   
 -   [Berichts-Manager](#ReportManager)  
   
--   [Report Builder (Berichts-Generator)](#ReportBuilder)  
+-   [Berichts-Generator](#ReportBuilder)  
   
--   [Integrierte Sicherheit von Windows für Berichtsdaten Quellen](#WinIntSec)  
+-   [Integrierte Sicherheit von Windows für Berichtsdatenquellen](#WinIntSec)  
   
-##  <a name="RSWebSvc"></a>Report Server-Webdienst  
+##  <a name="report-server-web-service"></a><a name="RSWebSvc"></a>Report Server-Webdienst  
   
 #### <a name="to-turn-on-or-off-the-report-server-web-service-by-editing-configuration"></a>So aktivieren bzw. deaktivieren Sie den Berichtsserver-Webdienst, indem Sie die Konfiguration bearbeiten  
   
@@ -71,7 +71,7 @@ ms.locfileid: "66103191"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="Sched"></a>Scheduled Events und Übermittlung  
+##  <a name="scheduled-events-and-delivery"></a><a name="Sched"></a> Geplante Ereignisse und Übermittlung  
   
 #### <a name="to-turn-on-or-off-scheduled-events-and-delivery-by-editing-configuration"></a>So aktivieren bzw. deaktivieren Sie geplante Ereignisse und die Übermittlung, indem Sie die Konfiguration bearbeiten  
   
@@ -117,7 +117,7 @@ ms.locfileid: "66103191"
 > [!NOTE]  
 >  Die Hintergrundverarbeitung kann nicht vollständig deaktiviert werden, da sie Datenbankverwaltungsfunktionen enthält, die für den Serverbetrieb benötigt werden.  
   
-##  <a name="ReportManager"></a>Berichts-Manager  
+##  <a name="report-manager"></a><a name="ReportManager"></a>Berichts-Manager  
   
 #### <a name="to-turn-on-or-off-report-manager-by-editing-configuration"></a>So aktivieren bzw. deaktivieren Sie den Berichts-Manager, indem Sie die Konfiguration bearbeiten  
   
@@ -153,7 +153,7 @@ ms.locfileid: "66103191"
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="ReportBuilder"></a>Berichts-Generator  
+##  <a name="report-builder"></a><a name="ReportBuilder"></a> Berichts-Generator  
   
 #### <a name="to-turn-on-or-off-report-builder-by-using-sql-server-management-studio"></a>So aktivieren bzw. deaktivieren Sie den Berichts-Generator mithilfe von SQL Server Management Studio  
   
@@ -169,7 +169,7 @@ ms.locfileid: "66103191"
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="WinIntSec"></a>Integrierte Sicherheit von Windows  
+##  <a name="windows-integrated-security"></a><a name="WinIntSec"></a> Integrierte Sicherheit von Windows  
   
 #### <a name="to-turn-on-or-off-windows-integrated-security-by-using-sql-server-management-studio"></a>So aktivieren bzw. deaktivieren Sie die integrierte Windows-Sicherheit mithilfe von SQL Server Management Studio  
   
@@ -179,9 +179,9 @@ ms.locfileid: "66103191"
   
 3.  Klicken Sie im Dialogfeld **Servereigenschaften** unter **Seite auswählen**auf **Sicherheit**.  
   
-    -   Um die integrierte Sicherheit von Windows zu aktivieren, wählen Sie die Option **integrierte Sicherheit von Windows für Berichtsdaten Quellen aktivieren aus** .  
+    -   Um die integrierte Sicherheit von Windows zu aktivieren, wählen Sie die Option **Integrierte Sicherheit von Windows für Berichtsdatenquellen aktivieren** .  
   
-    -   Um die integrierte Sicherheit von Windows zu deaktivieren, deaktivieren Sie die Option **integrierte Sicherheit von Windows für Berichtsdaten Quellen aktivieren** .  
+    -   Um die integrierte Sicherheit von Windows zu deaktivieren, heben Sie die Auswahl der Option **Integrierte Sicherheit von Windows für Berichtsdatenquellen aktivieren** auf.  
   
 4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

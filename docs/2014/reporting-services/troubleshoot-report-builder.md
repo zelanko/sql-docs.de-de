@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aae8b41dbd3751b21a7dc015b0a8157cf650185a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099335"
 ---
 # <a name="troubleshoot-report-builder"></a>Problembehandlung in Berichts-Generator
@@ -25,7 +25,7 @@ ms.locfileid: "66099335"
  Die folgenden Themen helfen Ihnen bei der Behandlung von Problemen mit Berichten. Die Themen sind nach dem Benutzertyp (Autor eines Berichts oder Berichtsserveradministrator) gegliedert.  
   
 ## <a name="report-authors"></a>Berichtsautoren  
- [Problembehandlung bei Berichten: Karten Berichte &#40;Berichts-Generator und SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
  [Problembehandlung bei Berichts teilen &#40;Berichts-Generator und SSRS&#41;](report-parts-report-builder-and-ssrs.md)  
   

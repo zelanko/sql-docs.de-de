@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a543182d5c367be9cc1be875f05c1ab5d4c9bfcf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099041"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Lernprogramm: Hinzufügen einer Sparkline zum Bericht (Berichts-Generator)
@@ -26,7 +26,7 @@ ms.locfileid: "66099041"
   
  Das Video Gewusst [wie: Erstellen einer sparkline in einer Tabelle (Berichts-Generator Video)](https://technet.microsoft.com/bi/ff871942.aspx) veranschaulicht, wie ein ähnlicher Bericht mit Sparklines erstellt wird.  
   
-##  <a name="BackToTop"></a>Was Sie lernen werden  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Was Sie lernen werden  
  In diesem Lernprogramm lernen Sie Folgendes:  
   
  1. [Erstellen eines Berichts mit einer Tabelle](#CreateTable)  
@@ -50,16 +50,16 @@ ms.locfileid: "66099041"
   
  Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="CreateTable"></a>1. Erstellen eines Berichts mit einer Tabelle  
+##  <a name="1-create-a-report-with-a-table"></a><a name="CreateTable"></a>1. Erstellen eines Berichts mit einer Tabelle  
   
 #### <a name="to-create-a-report"></a>So erstellen Sie einen Bericht  
   
 1.  Klicken Sie auf **Start**, zeigen Sie auf **Programme**, zeigen Sie auf **Microsoft SQL Server 2012 Berichts-Generator**, und klicken Sie dann auf **Berichts-Generator**.  
   
-     Das Dialogfeld " **Getting Started** " wird geöffnet.  
+     Das Dialogfeld **Erste Schritte** wird geöffnet.  
   
     > [!NOTE]  
     >  Wenn das Dialogfeld " **Getting Started** " nicht angezeigt wird, klicken Sie auf der Schaltfläche " **Berichts-Generator** " auf **neu**.  
@@ -99,7 +99,7 @@ ms.locfileid: "66099041"
   
 13. Klicken Sie auf **Weiter**.  
   
-##  <a name="Query"></a>2. Erstellen einer Abfrage im Tabellen-Assistenten  
+##  <a name="2-create-a-query-in-the-table-wizard"></a><a name="Query"></a>2. Erstellen einer Abfrage im Tabellen-Assistenten  
  In einem Bericht können Sie ein freigegebenes Dataset mit einer vordefinierten Abfrage verwenden oder ein eingebettetes Dataset erstellen, das nur in Ihrem Bericht verwendet wird. In diesem Lernprogramm erstellen Sie ein eingebettetes Dataset.  
   
 > [!NOTE]  
@@ -162,7 +162,7 @@ ms.locfileid: "66099041"
   
 9. Klicken Sie auf **Weiter**.  
   
-10. Vergewissern Sie sich auf der Seite **Layout auswählen** , dass unter **Optionen**die Option **Teil- und Gesamtergebnisse anzeigen** ausgewählt ist.  
+10. Vergewissern Sie sich, dass auf der Seite **Layout auswählen** unter **Optionen die Option** **Teil-und Gesamtsummen anzeigen** ausgewählt ist.  
   
      Im Vorschaubereich des Assistenten wird eine Tabelle mit drei Zeilen angezeigt. Bei der Ausführung des Berichts wird jede Zeile wie folgt angezeigt:  
   
@@ -186,7 +186,7 @@ ms.locfileid: "66099041"
   
 15. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-##  <a name="Sparkline"></a>3. Hinzufügen einer sparkline  
+##  <a name="3-add-a-sparkline"></a><a name="Sparkline"></a>3. Hinzufügen einer sparkline  
   
 #### <a name="to-add-a-sparkline-chart-to-a-table"></a>So fügen Sie einer Tabelle ein Sparklinediagramm hinzu  
   
@@ -216,7 +216,7 @@ ms.locfileid: "66099041"
   
      ![rs_SprklineMtrxUnaligndBars](../../2014/tutorials/media/rs-sprklinemtrxunaligndbars.gif "rs_SprklineMtrxUnaligndBars")  
   
-##  <a name="AlignSparklines"></a>4. horizontales und horizontales Ausrichten der Sparklines  
+##  <a name="4-align-the-sparklines-vertically-and-horizontally"></a><a name="AlignSparklines"></a>4. horizontales und horizontales Ausrichten der Sparklines  
  Die Sparklines sind schwer zu lesen, wenn Sie nicht alle die gleichen Messungen verwenden. Sowohl die horizontale als auch die vertikale Achse muss mit dem Rest übereinstimmen.  
   
 #### <a name="to-set-alignment-for-the-sparklines-in-the-table"></a>So legen Sie die Ausrichtung für die Sparklines in der Tabelle fest  
@@ -243,8 +243,8 @@ ms.locfileid: "66099041"
   
  Die Ausrichtung aller Balken entspricht nun der der Balken in den anderen Zeilen.  
   
-##  <a name="FormatCurrency"></a>5. (optional) Formatieren von Daten als Währung  
- Die Zusammenfassungsdaten für das Feld **Sales** werden standardmäßig als eine Zahl im Standardzahlenformat angezeigt. Formatieren Sie das Feld, um die Zahl als Währung anzuzeigen. Ändern Sie die Einstellung der Option **Platzhalterformate** , um formatierte Textfelder und Platzhaltertext als Beispielwerte anzuzeigen.  
+##  <a name="5-optional-format-data-as-currency"></a><a name="FormatCurrency"></a>5. (optional) Formatieren von Daten als Währung  
+ Standardmäßig wird in den Zusammenfassungs Daten für das Feld **Sales** eine allgemeine Zahl angezeigt. Formatieren Sie das Feld, um die Zahl als Währung anzuzeigen. Ändern Sie die Einstellung der Option **Platzhalterformate** , um formatierte Textfelder und Platzhaltertext als Beispielwerte anzuzeigen.  
   
 #### <a name="to-format-a-currency-field"></a>So formatieren Sie ein Währungsfeld  
   
@@ -260,7 +260,7 @@ ms.locfileid: "66099041"
   
  Die Zusammenfassungs Werte für **Sales** werden als Währung angezeigt.  
   
-##  <a name="FormatDates"></a>6. (optional) Formatieren von Daten als Datumsangaben  
+##  <a name="6-optional-format-data-as-dates"></a><a name="FormatDates"></a>6. (optional) Formatieren von Daten als Datumsangaben  
  Standardmäßig werden im Feld **salesdate** sowohl Datums-als auch Uhrzeit Informationen angezeigt. Durch entsprechende Formatierung kann auch nur das Datum angezeigt werden.  
   
 #### <a name="to-format-a-date-field-as-the-default-format"></a>So formatieren Sie ein Datumsfeld als Standardformat  
@@ -277,7 +277,7 @@ ms.locfileid: "66099041"
   
  Die **salesdate** -Werte werden im Standard Datumsformat angezeigt.  
   
-##  <a name="Width"></a>7. (optional) Ändern der Spaltenbreite  
+##  <a name="7-optional-change-column-widths"></a><a name="Width"></a>7. (optional) Ändern der Spaltenbreite  
  Standardmäßig enthält jede Zelle in einer Tabelle ein Textfeld. Textfelder werden beim Rendern der Seite entsprechend dem anzuzeigenden Text vertikal erweitert. Im gerenderten Bericht werden alle Zeilen auf die Höhe des größten gerenderten Textfelds in der Zeile vergrößert. Die Höhe der Zeile auf der Entwurfsoberfläche hat keinen Einfluss auf die Höhe der Zeile im gerenderten Bericht.  
   
  Um die Höhe der Zeilen zu reduzieren, vergrößern Sie die Spaltenbreite, sodass der erwartete Inhalt der Textfelder in der Spalte in einer Zeile untergebracht werden kann.  
@@ -294,7 +294,7 @@ ms.locfileid: "66099041"
   
 4.  Klicken Sie auf **Ausführen** , um den Bericht in der Vorschau anzuzeigen.  
   
-##  <a name="Title"></a>8. (optional) Hinzufügen eines Berichts Titels  
+##  <a name="8-optional-add-a-report-title"></a><a name="Title"></a>8. (optional) Hinzufügen eines Berichts Titels  
  Ein Berichtstitel wird oben im Bericht angezeigt. Sie können den Berichtstitel in eine Berichtskopfzeile einfügen oder, wenn der Bericht keine Kopfzeile enthält, in einem Textfeld am oberen Rand des Berichtshauptteils. In diesem Lernprogramm verwenden Sie das Textfeld, das automatisch am oberen Rand des Berichtshauptteils platziert wird.  
   
  Die Darstellung des Texts kann weiter verbessert werden, indem andere Schriftschnitte, Größen und Farben für Ausdrücke und einzelne Zeichen des Texts angewendet werden. Weitere Informationen finden Sie unter [Formatieren von Text in einem Textfeld (Berichts-Generator und SSRS)](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md).  
@@ -317,12 +317,12 @@ ms.locfileid: "66099041"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Save"></a>9. Speichern des Berichts  
+##  <a name="9-save-the-report"></a><a name="Save"></a>9. Speichern des Berichts  
  Speichern Sie den Bericht auf einem Berichtsserver oder auf Ihrem Computer. Wenn Sie den Bericht nicht auf dem Berichtsserver speichern, ist eine Reihe von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Funktionen nicht verfügbar, z. B. Berichtsteile und Unterberichte.  
   
 #### <a name="to-save-the-report-on-a-report-server"></a>So speichern Sie den Bericht auf einem Berichtsserver  
   
-1.  Klicken Sie in der Schaltfläche **Berichts-Generator** auf **Speichern**unter.  
+1.  Klicken Sie auf die Schaltfläche **Berichts-Generator** und anschließend auf **Speichern unter**.  
   
 2.  Klicken Sie auf **Letzte Sites und Server**.  
   
@@ -338,7 +338,7 @@ ms.locfileid: "66099041"
   
 #### <a name="to-save-the-report-on-your-computer"></a>So speichern Sie den Bericht auf dem Computer  
   
-1.  Klicken Sie in der Schaltfläche **Berichts-Generator** auf **Speichern**unter.  
+1.  Klicken Sie auf die Schaltfläche **Berichts-Generator** und anschließend auf **Speichern unter**.  
   
 2.  Klicken Sie auf **Desktop**, **Eigene Dokumente**oder **Computer**, und navigieren Sie zu dem Ordner, in dem Sie den Bericht speichern möchten.  
   

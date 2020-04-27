@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 649795e5e142563b64014f2ccf970f0df5de134b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103468"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>Berichtsserverausführungsprotokoll und die ExecutionLog3-Ansicht
@@ -25,7 +25,7 @@ ms.locfileid: "66103468"
   
  Für den SharePoint-Modus konfigurierte Berichtsserver können auch die SharePoint-ULS-Protokolle verwenden. Weitere Informationen finden Sie unter [Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)  
   
-##  <a name="bkmk_top"></a> Anzeigen von Protokollinformationen  
+##  <a name="viewing-log-information"></a><a name="bkmk_top"></a> Anzeigen von Protokollinformationen  
  Die Berichtsserverausführung protokolliert Daten zur Berichtsausführung in einer internen Datenbanktabelle. Die Informationen aus der Tabelle sind in SQL Server-Sichten verfügbar.  
   
  Das Berichtsausführungsprotokoll wird in der Berichtsserver-Datenbank gespeichert, die standardmäßig **ReportServer**genannt wird. Die SQL-Ansichten enthalten die Ausführungsprotokollinformationen. Die Ansichten „2“ und „3“ wurden in aktuelleren Versionen hinzugefügt und enthalten neue Felder, oder sie enthalten Felder mit benutzerfreundlicheren Namen als die vorherigen Versionen. Die älteren Ansichten bleiben im Produkt, sodass es keinerlei Auswirkungen auf benutzerdefinierte Anwendungen, die von ihnen abhängen, gibt. Wenn keine Abhängigkeit von einer älteren Sicht vorliegt, z.B. ExecutionLog, wird empfohlen, die neueste Sicht, ExecutionLog**3**, zu verwenden.  
@@ -44,7 +44,7 @@ ms.locfileid: "66103468"
   
 -   [Protokollierungsfelder (ExecutionLog)](#bkmk_executionlog)  
   
-##  <a name="bkmk_sharepoint"></a> Konfigurationseinstellungen für einen Berichtsserver im SharePoint-Modus  
+##  <a name="configuration-settings-for-a-sharepoint-mode-report-server"></a><a name="bkmk_sharepoint"></a> Konfigurationseinstellungen für einen Berichtsserver im SharePoint-Modus  
  Sie können die Berichtsausführungsprotokollierung in den Systemeinstellungen einer [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dienstanwendung aktivieren oder deaktivieren.  
   
  Standardmäßig werden Protokolleinträge 60 Tage gespeichert. Einträge, die dieses Datum überschreiten, werden um 2.00 Uhr entfernt. täglich um 2:00 Uhr entfernt. Für eine länger vorhandene Installation stehen Informationen jeweils nur 60 Tage lang zur Verfügung.  
@@ -71,7 +71,7 @@ ms.locfileid: "66103468"
   
 2.  Ändern Sie **ExecutionLogLevel** in **Ausführlich**. Dieses Feld ist ein Texteingabefeld, und die zwei möglichen Werte sind **Ausführlich** und **Normal**.  
   
-##  <a name="bkmk_native"></a> Konfigurationseinstellungen für einen Berichtsserver im einheitlichen Modus  
+##  <a name="configuration-settings-for-a-native-mode-report-server"></a><a name="bkmk_native"></a> Konfigurationseinstellungen für einen Berichtsserver im einheitlichen Modus  
  Sie können die Protokollierung der Berichtsausführung auf der Seite "Servereigenschaften" in SQL Server Management Studio aktivieren oder deaktivieren. **EnableExecutionLogging** ist eine erweiterte Eigenschaft.  
   
  Standardmäßig werden Protokolleinträge 60 Tage gespeichert. Einträge, die dieses Datum überschreiten, werden um 2.00 Uhr entfernt. täglich um 2:00 Uhr entfernt. Für eine länger vorhandene Installation stehen Informationen jeweils nur 60 Tage lang zur Verfügung.  
@@ -98,7 +98,7 @@ ms.locfileid: "66103468"
   
 2.  Ändern Sie im Abschnitt **Benutzerdefiniert** den Wert für **ExecutionLogLevel** in **Ausführlich**. Dieses Feld ist ein Texteingabefeld, und die zwei möglichen Werte sind **Ausführlich** und **Normal**.  
   
-##  <a name="bkmk_executionlog3"></a> Protokollierungsfelder (ExecutionLog3)  
+##  <a name="log-fields-executionlog3"></a><a name="bkmk_executionlog3"></a> Protokollierungsfelder (ExecutionLog3)  
  Dieser Sicht wurde ein zusätzlicher Leitungsdiagnoseknoten in der XML-basierten Spalte **AdditionalInfo** hinzugefügt. Die Spalte AdditionalInfo enthält eine XML-Struktur von 1:n zusätzlichen Informationsfeldern. Folgendes ist eine Beispiel-Transact-SQL-Anweisung, um Zeilen aus der Ansicht ExecutionLog3 abzurufen. Im Beispiel wird davon ausgegangen, dass der Name der Berichtsserver-Datenbank **ReportServer**lautet:  
   
 ```  
@@ -117,19 +117,19 @@ select * from ExecutionLog3 order by TimeStart DESC
 |RequestType|Mögliche Werte:<br />**Interactive**<br />**Abonnement**<br /><br /> <br /><br /> Das Analysieren von nach RequestType=Subscription gefilterten und nach TimeStart sortierten Protokolldaten enthüllt möglicherweise Zeiträume starker Abonnementnutzung und Sie möchten vielleicht einige der Berichtsabonnements in eine andere Zeit ändern.|  
 |Format|Renderingformat.|  
 |Parameter|Parameterwerte, die für die Berichtsausführung verwendet werden.|  
-|ItemAction|Mögliche Werte:<br /><br /> **Rendern**<br /><br /> **Sortieren**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **Findstring**<br /><br /> **Auszuführen**<br /><br /> **RenderEdit**|  
+|ItemAction|Mögliche Werte:<br /><br /> **Render**<br /><br /> **Sortieren**<br /><br /> **BookMarkNavigation**<br /><br /> **DocumentNavigation**<br /><br /> **GetDocumentMap**<br /><br /> **FindString**<br /><br /> **Auszuführen**<br /><br /> **RenderEdit**|  
 |TimeStart|Anfangs- und Beendigungszeit für die Verarbeitung eines Berichts.|  
 |TimeEnd||  
 |TimeDataRetrieval|Anzahl von Millisekunden, die zum Abrufen der Daten benötigt werden.|  
 |TimeProcessing|Anzahl von Millisekunden, die zum Verarbeiten des Berichts benötigt werden.|  
 |TimeRendering|Anzahl von Millisekunden, die zum Rendern des Berichts benötigt werden.|  
-|`Source`|Quelle der Berichtsausführung. Mögliche Werte:<br /><br /> **Live**<br /><br /> **Cache**: gibt eine zwischengespeicherte Ausführung an, z. b. werden Datasetabfragen nicht Live ausgeführt.<br /><br /> **Überblick**<br /><br /> **History**<br /><br /> **Adhoc** : gibt entweder einen dynamisch generierten Berichts modellbasierten Drillthrough-Bericht oder einen Berichts-Generator Bericht an, der auf einem Client in der Vorschau angezeigt wird, der den Berichts Server für die Verarbeitung und das Rendering verwendet.<br /><br /> **Session**: gibt eine nach Verfolgungs Anforderung in einer bereits eingerichteten Sitzung an.  Beispiel: Die ursprüngliche Anforderung besteht im Anzeigen von Seite 1, die Anschlussanforderung ist das Exportieren in Excel mit dem aktuellen Sitzungsstatus.<br /><br /> **RDCE**: gibt eine Anpassungs Erweiterung für die Berichts Definition an. Eine benutzerdefinierte RDCE-Erweiterung kann eine Berichtsdefinition dynamisch anpassen, bevor sie bei der Berichtsausführung an die Verarbeitungs-Engine übergeben wird.|  
+|`Source`|Quelle der Berichtsausführung. Mögliche Werte:<br /><br /> **Live**<br /><br /> **Cache**: gibt eine zwischengespeicherte Ausführung an, z. b. werden Datasetabfragen nicht Live ausgeführt.<br /><br /> **Momentaufnahme**<br /><br /> **History**<br /><br /> **Adhoc** : gibt entweder einen dynamisch generierten Berichts modellbasierten Drillthrough-Bericht oder einen Berichts-Generator Bericht an, der auf einem Client in der Vorschau angezeigt wird, der den Berichts Server für die Verarbeitung und das Rendering verwendet.<br /><br /> **Session**: gibt eine nach Verfolgungs Anforderung in einer bereits eingerichteten Sitzung an.  Beispiel: Die ursprüngliche Anforderung besteht im Anzeigen von Seite 1, die Anschlussanforderung ist das Exportieren in Excel mit dem aktuellen Sitzungsstatus.<br /><br /> **RDCE**: gibt eine Anpassungs Erweiterung für die Berichts Definition an. Eine benutzerdefinierte RDCE-Erweiterung kann eine Berichtsdefinition dynamisch anpassen, bevor sie bei der Berichtsausführung an die Verarbeitungs-Engine übergeben wird.|  
 |Status|Status (entweder rsSuccess oder ein Fehlercode; beim Auftreten mehrerer Fehler wird nur der erste Fehler aufgezeichnet).|  
 |ByteCount|Größe von gerenderten Berichten in Bytes.|  
 |RowCount|Anzahl der von Abfragen zurückgegebenen Zeilen.|  
 |AdditionalInfo|Ein XML-Eigenschaftenbehälter, der weitere Informationen zur Ausführung enthält. Der Inhalt kann für jede Zeile anders sein.|  
   
-##  <a name="bkmk_additionalinfo"></a> Das AdditionalInfo-Feld  
+##  <a name="the-additionalinfo-field"></a><a name="bkmk_additionalinfo"></a> Das AdditionalInfo-Feld  
  Das AdditionalInfo-Feld ist ein XML-Eigenschaftenbehälter oder eine Struktur, die weitere Informationen zur Ausführung enthält. Der Inhalt kann für jede Zeile im Protokoll anders sein.  
   
  Die folgenden Tabellen sind Beispiele für den Inhalt des AddtionalInfo-Felds für die Standardprotokollierung und die ausführliche Protokollierung:  
@@ -297,7 +297,7 @@ select * from ExecutionLog3 order by TimeStart DESC
   
     ```  
   
-##  <a name="bkmk_executionlog2"></a> Protokollierungsfelder (ExecutionLog2)  
+##  <a name="log-fields-executionlog2"></a><a name="bkmk_executionlog2"></a> Protokollierungsfelder (ExecutionLog2)  
  Diese Ansicht hat einige neue Felder hinzugefügt und einige andere umbenannt. Folgendes ist eine Beispiel-Transact-SQL-Anweisung, mit der Sie Zeilen aus der Ansicht ExecutionLog2 abrufen können. Im Beispiel wird davon ausgegangen, dass der Name der Berichtsserver-Datenbank **ReportServer**lautet:  
   
 ```  
@@ -328,7 +328,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |RowCount|Anzahl der von Abfragen zurückgegebenen Zeilen.|  
 |AdditionalInfo|Ein XML-Eigenschaftenbehälter, der weitere Informationen zur Ausführung enthält.|  
   
-##  <a name="bkmk_executionlog"></a> Protokollierungsfelder (ExecutionLog)  
+##  <a name="log-fields-executionlog"></a><a name="bkmk_executionlog"></a> Protokollierungsfelder (ExecutionLog)  
  Folgendes ist eine Beispiel-Transact-SQL-Anweisung, mit der Sie Zeilen aus der Ansicht ExecutionLog abrufen können. Im Beispiel wird davon ausgegangen, dass der Name der Berichtsserver-Datenbank **ReportServer**lautet:  
   
 ```  
@@ -358,7 +358,7 @@ select * from ExecutionLog order by TimeStart DESC
 |RowCount|Anzahl der von Abfragen zurückgegebenen Zeilen.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
+ [Aktivieren von Reporting Services Ereignissen für das SharePoint-Ablauf Verfolgungs Protokoll &#40;ULS&#41;](turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)   
  [Reporting Services-Protokolldateien und Quellen](../report-server/reporting-services-log-files-and-sources.md)   
  [Fehler- und Ereignisreferenz &#40;Reporting Services&#41;](../troubleshooting/errors-and-events-reference-reporting-services.md)  
   

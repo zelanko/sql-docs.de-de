@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c62e2793f11853158b7b31d1e79feb4ae59977de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098294"
 ---
 # <a name="listreportserversindatabase-method-wmi-msreportserver_configurationsetting"></a>ListReportServersInDatabase-Methode (WMI: MSReportServer_ConfigurationSetting)
@@ -45,16 +45,16 @@ public void ListReportServersInDatabase (out string[] MachineNames,
 ```  
   
 ## <a name="parameters"></a>Parameter  
- *Machinumames []*  
+ *MachineNames[]*  
  [out] Ein Array, das die Computernamen für die Berichtsserverinstallationen in der Datenbank enthält  
   
- *Instancenames []*  
+ *InstanceNames[]*  
  [aus] Ein Array mit den Instanznamen der einzelnen Berichtsserverinstallationen in der Datenbank.  
   
- *Installationids []*  
+ *InstallationIDs[]*  
  [out] Ein Array, das die Installations-IDs für jede Berichtsserverinstallation in der Datenbank enthält  
   
- *IsInitialized []*  
+ *IsInitialized[]*  
  [out] Ein Array, das den Initialisierungsstatus für jede Berichtsserverinstallation in der Datenbank enthält  
   
  *Länge*  
@@ -73,7 +73,7 @@ public void ListReportServersInDatabase (out string[] MachineNames,
  ListReportServersInDatabase listet die Berichtsserverinstallationen auf, die in der Berichtsserver-Datenbank vorhanden sind. Dies geschieht unabhängig davon, ob diese Installationen Zugriff auf sichere Informationen haben, und es wird ein übereinstimmender Satz von Arrays mit Informationen zu jeder Installation zurückgegeben.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  

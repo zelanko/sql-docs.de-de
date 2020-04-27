@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 00590faa3ef5fb63338465d85202f4010cd3b72d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104163"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Konfigurieren einer Firewall für den Zugriff auf den Berichtsserver
@@ -45,7 +45,7 @@ ms.locfileid: "66104163"
   
 3.  Klicken Sie auf **Eingehende Regeln**.  
   
-4.  Klicken Sie im Fenster **Aktionen** auf **neue Regel** **.**  
+4.  Klicken Sie im Fenster **Aktionen** auf **Neue Regel****.**  
   
 5.  Wählen Sie **Port** als **Regeltyp**aus.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "66104163"
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren des Berichtsserver-Dienstkontos &#40;SSRS-Konfigurations-Manager&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Konfigurieren von Berichtsserver-URLs &#40;SSRS-Konfigurations-Manager&#41;](../install-windows/configure-report-server-urls-ssrs-configuration-manager.md)   
- [Erstellen einer Berichtsserver-Datenbank](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [Erstellen einer Berichts Server-Datenbank &#40;SSRS-Configuration Manager&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Konfigurieren des Berichtsserver-Dienstkontos &#40;SSRS-Konfigurations-Manager&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Manage a Reporting Services Native Mode Report Server (Verwalten eines Berichtsservers von Reporting Services im einheitlichen Modus)](manage-a-reporting-services-native-mode-report-server.md)  
   

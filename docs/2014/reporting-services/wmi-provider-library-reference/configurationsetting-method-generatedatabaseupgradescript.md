@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a095b63f8c42709700f6f338edc409f801f8be3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098462"
 ---
 # <a name="generatedatabaseupgradescript-method-wmi-msreportserver_configurationsetting"></a>GenerateDatabaseUpgradeScript-Methode (WMI: MSReportServer_ConfigurationSetting)
@@ -43,10 +43,10 @@ public void GenerateDatabaseUpgradeScript (string DatabaseName,
 ```  
   
 ## <a name="parameters"></a>Parameter  
- *DatabaseName*  
+ *Databasename*  
  Eine Zeichenfolge, die den Namen der zu aktualisierenden Berichtsserver-Datenbank enthält  
   
- *Server Version*  
+ *ServerVersion*  
  Eine Zeichenfolge, die die Version des Berichtsservers enthält  
   
  *Skript*  
@@ -62,7 +62,7 @@ public void GenerateDatabaseUpgradeScript (string DatabaseName,
  Das generierte Skript unterstützt [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]und [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  

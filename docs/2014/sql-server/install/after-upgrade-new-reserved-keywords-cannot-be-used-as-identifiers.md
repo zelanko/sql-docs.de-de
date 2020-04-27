@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d187fbe95a75091b0cbcf4bf09225c5f60a9af01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096892"
 ---
 # <a name="after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers"></a>Nach dem Upgrade können neue reservierte Schlüsselwörter nicht als Bezeichner verwendet werden
@@ -27,7 +27,7 @@ ms.locfileid: "66096892"
 ## <a name="component"></a>Komponente  
  Datenbank-Engine  
   
-## <a name="description"></a>BESCHREIBUNG  
+## <a name="description"></a>Beschreibung  
  Bei Kompatibilitätsgrad 90 oder niedriger sind die folgenden Wörter keine reservierten Schlüsselwörter und können in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripts als Bezeichner oder Objektnamen verwendet werden. Bei Kompatibilitätsgrad 100 sind diese Wörter vollständig reservierte Schlüsselwörter und sollten nicht als Bezeichner oder Objektnamen verwendet werden.  
   
 -   EXTERNAL  
@@ -52,7 +52,7 @@ ms.locfileid: "66096892"
 -   Verweisen Sie mit Begrenzungsbezeichnern auf das Objekt. Beispielsweise verwendet die- `CREATE TABLE [MERGE] ([MERGE] int);` Anweisung eckige Klammern, um den Objektnamen Merge zu begrenzen.  
   
 ## <a name="external-resources"></a>Externe Ressourcen  
- [Reservierte Schlüsselwörter &#40;Transact-SQL-&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  
+ [Reserved Keywords &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/reserved-keywords-transact-sql)  
   
  [MERGE &#40;Transact-SQL&#41;](/sql/t-sql/statements/merge-transact-sql)  
   

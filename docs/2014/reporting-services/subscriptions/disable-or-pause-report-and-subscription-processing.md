@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1607637630c507588602dd7e566917ce1eeb6080
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100923"
 ---
 # <a name="pause-report-and-subscription-processing"></a>Anhalten der Berichts- und Abonnementverarbeitung
@@ -47,8 +47,8 @@ ms.locfileid: "66100923"
  Wenn ein Bericht oder ein Abonnement mit einem freigegebenen Zeitplan ausgeführt wird, können Sie den Zeitplan anhalten, um die Verarbeitung zu verhindern. Alle Berichts- und Abonnementverarbeitungen, die mit dem Zeitplan gesteuert werden, werden zurückgestellt, bis der Zeitplan fortgesetzt wird. Weitere Informationen finden Sie unter Anhalten und Fortsetzen von frei [gegebenen Zeitplänen](schedules.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Reporting Services Berichts Server &#40;einheitlicher Modus&#41;](../report-server/reporting-services-report-server-native-mode.md)   
+ [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../report-server/reporting-services-report-server-native-mode.md)   
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md)   
- [Sicherheit (Eigenschaften Seite), Elemente &#40;Berichts-Manager&#41;](../security-properties-page-items-report-manager.md)  
+ [Sicherheit (Eigenschaftenseite), Elemente, (Berichts-Manager)](../security-properties-page-items-report-manager.md)  
   
   

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a1c799ec4fc37fa5cdbd6f3bcc72fad7f4c45ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102592"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Öffnen und Schließen eines Berichts (Berichts-Manager)
@@ -32,7 +32,7 @@ ms.locfileid: "66102592"
   
 3.  Klicken Sie auf einen Berichtsnamen oder ein Symbol, um einen Bericht anzuzeigen. Das folgende Symbol zeigt einen Bericht an:  
   
-     ![Berichts Symbol](../media/hlp-16doc.gif "Bericht (Symbol)")  
+     ![Berichtssymbol](../media/hlp-16doc.gif "Berichtssymbol")  
   
      Für einige Berichte ist es erforderlich, dass Sie einen Benutzernamen und ein Kennwort oder einen Parameterwert angeben.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66102592"
 ## <a name="see-also"></a>Weitere Informationen  
  [Suchen nach Berichten und anderen Elementen &#40;Berichts-Generator und SSRS&#41;](../report-builder/searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
  [Die Inhaltsseite &#40;Berichts-Manager&#41;](../contents-page-report-manager.md)   
- [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Berichtsserver Content Management (einheitlicher SSRS-Modus)](../report-server/report-server-content-management-ssrs-native-mode.md)  
+ [Suchen, anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

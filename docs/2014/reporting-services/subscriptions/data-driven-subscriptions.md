@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 90733af47898116236d94c9b9f6ccc6d9fc542ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100869"
 ---
 # <a name="data-driven-subscriptions"></a>Datengesteuerte Abonnements
@@ -46,7 +46,7 @@ ms.locfileid: "66100869"
   
 -   Weitere Informationen zu den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die die Funktion für datengesteuerte Abonnements unterstützen, finden Sie unter [von den-Editionen unterstützte Funktionen SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)).  
   
--   Wählen Sie für Abonnementdaten eine Datenquelle aus, die Schemainformationen für den Berichtsserver bereitstellen kann. Beispiele für unterstützte Datenquellen Typen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sind relationale Daten, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Oracle- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Datenbanken,-Paketdaten, ODBC-Datenquellen und OLE DB Datenquellen. Weitere Informationen zu den Anforderungen an Abonnentendatenquellen finden Sie unter [Verwenden einer externen Datenquelle für Abonnentendaten &#40;datengesteuertes Abonnement&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
+-   Wählen Sie für Abonnementdaten eine Datenquelle aus, die Schemainformationen für den Berichtsserver bereitstellen kann. Beispiele für unterstützte Datenquellentypen sind relationale [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Daten, Oracle, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbanken, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketdaten, ODBC-Datenquellen und OLE DB-Datenquellen. Weitere Informationen zu den Anforderungen an Abonnentendatenquellen finden Sie unter [Verwenden einer externen Datenquelle für Abonnentendaten &#40;datengesteuertes Abonnement&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
 ## <a name="working-with-data-driven-subscriptions"></a>Arbeiten mit datengesteuerten Abonnements  
  Die folgenden Themen enthalten weitere Informationen zu datengesteuerten Abonnements.  
@@ -54,13 +54,13 @@ ms.locfileid: "66100869"
 |Themen|BESCHREIBUNG|  
 |------------|-----------------|  
 |[Erstellen, Ändern und Löschen eines datengesteuerten Abonnements](data-driven-subscriptions.md)|Erläutert das Erstellen, Ändern oder Löschen eines datengesteuerten Abonnements.|  
-|[Verwenden Sie eine externe Datenquelle für Abonnentendaten &#40;datengesteuerten Abonnements&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|Enthält Informationen zu den Datenquellen, die Sie für ein datengesteuertes Abonnement verwenden können.|  
-|[Erstellen eines datengesteuerten Abonnements &#40;SSRS-Lernprogramm&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)|Enthält schrittweise Anleitungen zum Erstellen eines datengesteuerten Abonnements.|  
+|[Verwenden einer externen Datenquelle für Abonnentendaten &#40;datengesteuertes Abonnement&#41;](use-an-external-data-source-for-subscriber-data-data-driven-subscription.md)|Enthält Informationen zu den Datenquellen, die Sie für ein datengesteuertes Abonnement verwenden können.|  
+|[Erstellen eines datengesteuerten Abonnements &#40;SSRS-Tutorial&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)|Enthält schrittweise Anleitungen zum Erstellen eines datengesteuerten Abonnements.|  
 |[Zwischenspeichern von Berichten &#40;SSRS&#41;](../report-server/caching-reports-ssrs.md)|Beschreibt die Verwendung des NULL-Übermittlungsanbieters mit einem datengesteuerten Abonnement, um den Cache vorab zu laden.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](subscriptions-and-delivery-reporting-services.md)   
  [Erstellen einer datengesteuerten Abonnementseite &#40;Berichts-Manager&#41;](../create-data-driven-subscription-page-report-manager.md)   
- [&#40;Berichts-Manager vorab laden&#41;](../report-server/preload-the-cache-report-manager.md)  
+ [Vorabladen des Caches (Berichts-Manager)](../report-server/preload-the-cache-report-manager.md)  
   
   

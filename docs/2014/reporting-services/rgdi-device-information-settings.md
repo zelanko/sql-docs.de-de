@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 78377afa1f1f71f8553a17df30a904a275afd577
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102481"
 ---
 # <a name="rgdi-device-information-settings"></a>RGDI-Geräteinformationseinstellungen
@@ -22,12 +22,12 @@ ms.locfileid: "66102481"
   
 |Einstellung|value|  
 |-------------|-----------|  
-|`Page`|Gibt die Seite des zu rendernden Berichts an. Standardwert: `1`.|  
+|`Page`|Gibt die Seite des zu rendernden Berichts an. Der Standardwert ist `1`.|  
 |`RGDIVersion`|Diese Einstellung hat keine Auswirkungen.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Übergeben von Geräteinformationseinstellungen an Renderingerweiterungen](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
- [Anpassen der Parameter für Renderingerweiterungen in der Datei „RSReportServer.config“](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
+ [Übergeben von Geräte Informationseinstellungen an Renderingerweiterungen](report-server-web-service/net-framework/passing-device-information-settings-to-rendering-extensions.md)   
+ [Anpassen von Renderingerweiterungsparametern in RSReportServer. config](customize-rendering-extension-parameters-in-rsreportserver-config.md)   
  [Technische Referenz (SSRS)](../../2014/reporting-services/technical-reference-ssrs.md)  
   
   

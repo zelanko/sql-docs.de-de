@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9012a5cbc130ac79963e033c8c3d93807d946445
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098437"
 ---
 # <a name="getadminsiteurl-method-wmi"></a>GetAdminSiteUrl-Methode (WMI)
@@ -34,7 +34,7 @@ public void GetAdminSiteUrl(out string AdminSiteUrl, out Int32 HRESULT);
 ```  
   
 ## <a name="parameters"></a>Parameter  
- *Adminsiteurl*  
+ *AdminSiteUrl*  
  [out] Eine Zeichenfolge, die die absolute URL für die Zentraladministrationswebsite für die SharePoint-Farm enthält, in die der Berichtsserver integriert ist.  
   
  *HRESULT*  
@@ -44,9 +44,9 @@ public void GetAdminSiteUrl(out string AdminSiteUrl, out Int32 HRESULT);
  Gibt *HRESULT* zurück, wodurch der Erfolg oder das Fehlschlagen des Methodenaufrufs angegeben wird. Der Wert 0 (null) gibt an, dass der Methodenaufruf erfolgreich war. Ein Wert ungleich 0 (null) gibt an, dass ein Fehler aufgetreten ist.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [MSReportServer_ConfigurationSetting-Methoden](msreportserver-configurationsetting-methods.md)  
+ [MSReportServer_ConfigurationSetting Methods (MSReportServer_ConfigurationSetting-Methoden)](msreportserver-configurationsetting-methods.md)  
   
   

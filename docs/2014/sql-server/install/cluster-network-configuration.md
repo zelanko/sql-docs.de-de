@@ -14,22 +14,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 48dca8e9ce522f2520521441b2e7eea349ff099b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096437"
 ---
 # <a name="cluster-network-configuration"></a>Netzwerkkonfiguration für Cluster
   Verwenden Sie die Seite **Netzwerkauswahl für Cluster** , um die Netzwerkressourcen für die Failoverclusterinstanz anzugeben.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Netzwerk Name des Failoverclusters: Dies ist der Name, der zum Identifizieren der Failoverclusterinstanz im Netzwerk verwendet wird. ** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **  
   
- **Netzwerkeinstellungen** : Geben Sie den IP-Typ und die IP-Adresse für die Failoverclusterinstanz an.  
+ **Netzwerkeinstellungen** – Geben Sie den IP-Typ und die IP-Adresse für die Failoverclusterinstanz an.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zeigt während der Vorgänge Knoten hinzufügen und Knoten entfernen eine schreibgeschützte Liste vorhandener IP-Adressen für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failovercluster an.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zeigt während der Vorgänge Knoten hinzufügen und Knoten entfernen eine schreibgeschützte Liste vorhandener IP-Adressen für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Failovercluster an.  
   
 -   Integrierte Installation:  
   

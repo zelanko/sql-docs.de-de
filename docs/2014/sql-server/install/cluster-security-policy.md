@@ -13,16 +13,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8b8b0e523020fcb17c49cdfc8ad778ccf59f8a8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66096329"
 ---
 # <a name="cluster-security-policy"></a>Sicherheitsrichtlinie für Cluster
   Verwenden Sie die Seite Sicherheitsrichtlinie für Cluster, um die Sicherheitsrichtlinie für die Failoverclusterinstanz zu konfigurieren.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Geben Sie globale oder lokale Domänegruppen für Clusterdienste an. Alle Ressourcenberechtigungen werden durch Gruppen auf Domänenebene gesteuert, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienstkonten als Mitglieder enthalten. Weitere Informationen über die Dienstsicherheits-ID (SID)-Funktionen für [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)]finden Sie unter [Einrichten von Windows-Dienstkonten](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
   

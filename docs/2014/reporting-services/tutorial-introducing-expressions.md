@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 79563abac2c6a9ed64dff93667ff3d3966b70bc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098849"
 ---
 # <a name="tutorial-introducing-expressions"></a>Lernprogramm: Einführung in Ausdrücke
@@ -26,7 +26,7 @@ ms.locfileid: "66098849"
   
  ![rs_ExpressionsTutorial](../../2014/tutorials/media/rs-expressionstutorial.gif "rs_ExpressionsTutorial")  
   
-##  <a name="BackToTop"></a>Was Sie lernen werden  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Was Sie lernen werden  
  In diesem Lernprogramm lernen Sie Folgendes:  
   
 1.  [Erstellen eines Tabellenberichts und eines Datasets mit dem Tabellen- oder Matrix-Assistenten](#Setup)  
@@ -55,10 +55,10 @@ ms.locfileid: "66098849"
   
  Geschätzte Zeit zum Bearbeiten dieses Lernprogramms: 30 Minuten  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Setup"></a>1. Erstellen eines Tabellen Berichts und eines Datasets mit dem Tabellen-oder Matrix-Assistenten  
+##  <a name="1-create-a-table-report-and-dataset-from-the-table-or-matrix-wizard"></a><a name="Setup"></a>1. Erstellen eines Tabellen Berichts und eines Datasets mit dem Tabellen-oder Matrix-Assistenten  
  Erstellen Sie einen Tabellenbericht, eine Datenquelle und ein Dataset. Für den Entwurf der Tabelle werden nur einige wenige Felder verwendet. Nach Fertigstellung des Assistenten werden Sie manuell Spalten hinzufügen. Mit dem Assistenten können Sie die Tabelle einfach gestalten und formatieren.  
   
 > [!NOTE]  
@@ -91,7 +91,7 @@ ms.locfileid: "66098849"
   
 7.  Klicken Sie auf **Weiter**.  
   
-8.  Klicken Sie auf der Seite **Abfrage entwerfen** auf **als Text bearbeiten**.  
+8.  Klicken Sie auf der Seite **Abfrage entwerfen** auf **Als Text bearbeiten**.  
   
 9. Fügen Sie die folgende Abfrage in den Abfragebereich ein:  
   
@@ -156,7 +156,7 @@ ms.locfileid: "66098849"
   
 17. Klicken Sie auf der Seite Format **auswählen** auf **Slate**, und klicken Sie dann auf **Fertig**stellen.  
   
-##  <a name="UpdateNames"></a>2. Aktualisieren der Standardnamen der Datenquelle und des Datasets  
+##  <a name="2-update-default-names-of-the-data-source-and-dataset"></a><a name="UpdateNames"></a>2. Aktualisieren der Standardnamen der Datenquelle und des Datasets  
   
 #### <a name="to-update-the-default-name-of-the-data-source"></a>So aktualisieren Sie den Standardnamen der Datenquelle  
   
@@ -178,7 +178,7 @@ ms.locfileid: "66098849"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Concatenate"></a>3. Anzeigen von Vorname, ursprünglicher Name und Nachname  
+##  <a name="3-display-first-name-initial-and-last-name"></a><a name="Concatenate"></a>3. Anzeigen von Vorname, ursprünglicher Name und Nachname  
  Verwenden Sie die **Left**-Funktion und den **Concatenate (Verketten)** (**&**)-Operator in einem Ausdruck, um einen Namen mit den Anfangsbuchstaben des zweiten Vornamens und dem Nachnamen zu erhalten. Sie können den Ausdruck Schritt für Schritt erstellen oder diesen Teil der Prozedur überspringen und den Ausdruck aus dem Tutorial in das Dialogfeld **Ausdruck** kopieren und einfügen.  
   
 #### <a name="to-add-the-name-column"></a>So fügen Sie die Spalte "Name" hinzu  
@@ -215,7 +215,7 @@ ms.locfileid: "66098849"
   
 12. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-##  <a name="Gender"></a>4. Verwenden von Bildern zum Anzeigen von Geschlecht  
+##  <a name="4-use-images-to-display-gender"></a><a name="Gender"></a>4. Verwenden von Bildern zum Anzeigen von Geschlecht  
  Verwenden Sie Bilder, um das Geschlecht einer Person anzuzeigen, und weisen Sie für den Fall unbekannter Werte ein drittes Bild zu. Sie fügen dem Bericht drei versteckte Bilder und eine neue Spalte für die Bildanzeige hinzu. Sie legen dann fest, welches Bild auf Grundlage des Werts im Feld "Geschlecht" in der Spalte angezeigt wird.  
   
  Um eine Farbe auf die Tabellenzelle anzuwenden, die das Bild enthält, wenn Sie aus dem Bericht einen Balkenbericht machen, fügen Sie zuerst ein Rechteck hinzu und dann das Bild in das Rechteck ein. Sie benötigen das Rechteck, da Sie einem Rechteck eine Hintergrundfarbe zuordnen können, nicht aber einem Bild.  
@@ -296,7 +296,7 @@ ms.locfileid: "66098849"
   
 14. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-##  <a name="Lookup"></a>5. Suchen Sie den CountryRegion-Namen.  
+##  <a name="5-look-up-countryregion-name"></a><a name="Lookup"></a>5. Suchen Sie den CountryRegion-Namen.  
  Erstellen Sie das CountryRegion-Dataset, und verwenden Sie die **Lookup**-Funktion, um den Namen des Lands/der Region anstelle des Bezeichners des Lands/der Region anzuzeigen.  
   
 #### <a name="to-create-the-countryregion-dataset"></a>So erstellen Sie das CountryRegion-Dataset  
@@ -356,7 +356,7 @@ ms.locfileid: "66098849"
   
 6.  Doppelklicken Sie in der Liste **Kategorie** auf **Felder (Ausdrücke)**.  
   
-7.  Doppelklicken **** Sie `CountryRegionID`in der Liste Werte auf.  
+7.  Doppelklicken **Values** Sie `CountryRegionID`in der Liste Werte auf.  
   
 8.  Wenn der Cursor nicht bereits unmittelbar nach `CountryRegionID.Value` platziert ist, korrigieren Sie das.  
   
@@ -370,8 +370,8 @@ ms.locfileid: "66098849"
   
 11. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-##  <a name="Count"></a>6. Anzahl der Tage seit dem letzten Kauf  
- Fügen Sie eine Spalte hinzu, und **** verwenden Sie anschließend die `ExecutionTime` Now-Funktion oder die integrierte globale Variable, um die Anzahl der Tage seit dem letzten Einkauf einer Person zu berechnen.  
+##  <a name="6-count-days-since-last-purchase"></a><a name="Count"></a>6. Anzahl der Tage seit dem letzten Kauf  
+ Fügen Sie eine Spalte hinzu, und **Now** verwenden Sie anschließend die `ExecutionTime` Now-Funktion oder die integrierte globale Variable, um die Anzahl der Tage seit dem letzten Einkauf einer Person zu berechnen.  
   
 #### <a name="to-add-the-days-ago-column"></a>So fügen Sie die Spalte "Vor (n) Tagen)" hinzu  
   
@@ -416,7 +416,7 @@ ms.locfileid: "66098849"
   
 17. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Indicator"></a>7. Verwenden eines Indikators zur Anzeige des Umsatz Vergleichs  
+##  <a name="7-use-an-indicator-to-show-sales-comparison"></a><a name="Indicator"></a>7. Verwenden eines Indikators zur Anzeige des Umsatz Vergleichs  
  Fügen Sie eine neue Spalte hinzu, und verwenden Sie einen Indikator, um anzuzeigen, ob die Käufe im laufenden Jahr oberhalb oder unterhalb des durchschnittlichen YTD-Einkäufen liegen. Die Funktion **Round** entfernt die Dezimalstellen aus den Werten.  
   
  Für die Konfiguration des Indikators und seiner Zustände sind mehrere Schritte erforderlich. Wenn Sie möchten, können Sie im Verfahren "so konfigurieren Sie den Indikator" fortfahren und die fertigen Ausdrücke aus diesem Tutorial in das Dialogfeld **Ausdruck** kopieren bzw. einfügen.  
@@ -521,7 +521,7 @@ ms.locfileid: "66098849"
   
 38. Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-##  <a name="GreenBar"></a>8. machen Sie den Bericht zu einem "grünen Balken Bericht".  
+##  <a name="8-make-the-report-a-green-bar-report"></a><a name="GreenBar"></a>8. machen Sie den Bericht zu einem "grünen Balken Bericht".  
  Verwenden Sie einen Parameter, um die Farbe zu bestimmen, die abwechselnd auf die Zeilen im Bericht angewendet wird, um einen Balkenbericht zu erstellen.  
   
 #### <a name="to-add-a-parameter"></a>So fügen Sie einen Parameter hinzu  
@@ -542,7 +542,7 @@ ms.locfileid: "66098849"
   
 7.  Klicken Sie auf **Hinzufügen**.  
   
-8.  Geben Sie im Feld **Bezeichnung** Folgendes ein: **Gelb** .  
+8.  Geben Sie im Feld **Bezeichnung** Folgendes ein: **Gelb**  
   
 9. Geben Sie im Feld **Wert** Folgendes ein: **Gelb**  
   
@@ -638,7 +638,7 @@ ms.locfileid: "66098849"
   
      Der Bericht wird gerendert und die abwechselnden Zeilen weisen den gewünschten Hintergrund auf.  
   
-##  <a name="DateFormat"></a>optionale Formatieren der Datums Spalte  
+##  <a name="optional-format-date-column"></a><a name="DateFormat"></a>optionale Formatieren der Datums Spalte  
  Formatieren Sie die Spalte **Last Purchase**, die Datumsangaben enthält.  
   
 #### <a name="to-format-date-column"></a>So formatieren Sie die Datumsspalte  
@@ -651,7 +651,7 @@ ms.locfileid: "66098849"
   
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Title"></a>optionale Hinzufügen eines Berichts Titels  
+##  <a name="optional-add-a-report-title"></a><a name="Title"></a>optionale Hinzufügen eines Berichts Titels  
  Hinzufügen eines Titels zu einem Bericht  
   
 #### <a name="to-add-a-report-title"></a>So fügen Sie einen Berichtstitel hinzu  
@@ -672,14 +672,14 @@ ms.locfileid: "66098849"
   
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-##  <a name="Save"></a>optionale Speichern des Berichts  
+##  <a name="optional-save-the-report"></a><a name="Save"></a>optionale Speichern des Berichts  
  Sie können Berichte auf einem Berichtsserver, in einer SharePoint-Bibliothek oder auf dem Computer speichern. Weitere Informationen finden Sie unter [Speichern von Berichten &#40;Berichts-Generator&#41;](report-builder/saving-reports-report-builder.md).  
   
  Speichern Sie in diesem Lernprogramm den Bericht auf einem Berichtsserver. Wenn Sie keinen Zugriff auf einen Berichtsserver besitzen, speichern Sie den Bericht auf dem Computer.  
   
 #### <a name="to-save-the-report-to-a-report-server"></a>So speichern Sie den Bericht auf einem Berichtsserver  
   
-1.  Klicken Sie in der Schaltfläche **Berichts-Generator** auf **Speichern**unter.  
+1.  Klicken Sie auf die Schaltfläche **Berichts-Generator** und anschließend auf **Speichern unter**.  
   
 2.  Klicken Sie auf **Letzte Sites und Server**.  
   
@@ -695,7 +695,7 @@ ms.locfileid: "66098849"
   
 #### <a name="to-save-the-report-to-your-computer"></a>So speichern Sie den Bericht auf Ihrem Computer  
   
-1.  Klicken Sie in der Schaltfläche **Berichts-Generator** auf **Speichern**unter.  
+1.  Klicken Sie auf die Schaltfläche **Berichts-Generator** und anschließend auf **Speichern unter**.  
   
 2.  Klicken Sie auf **Desktop**, **Meine Dokumente**oder **Arbeitsplatz**, und navigieren Sie anschließend zu dem Ordner, in dem Sie den Bericht speichern möchten.  
   
@@ -707,8 +707,8 @@ ms.locfileid: "66098849"
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Indikatoren &#40;Berichts-Generator und SSRS&#41;](report-design/indicators-report-builder-and-ssrs.md)   
- [Bilder, Textfelder, Rechtecke und Linien &#40;Berichts-Generator und SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
- [Tabellen (Berichts-Generator und SSRS)](report-design/tables-report-builder-and-ssrs.md)   
+ [Bilder, Text Felder, Rechtecke und Linien &#40;Berichts-Generator und SSRS&#41;](report-design/rectangles-and-lines-report-builder-and-ssrs.md)   
+ [Tabellen &#40;Berichts-Generator und SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
  [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-data/report-datasets-ssrs.md)  
   
   

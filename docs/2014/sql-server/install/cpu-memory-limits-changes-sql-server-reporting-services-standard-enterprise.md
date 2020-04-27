@@ -11,22 +11,20 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4d8e18215c6078026b617e079879da1eadbca612
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095955"
 ---
 # <a name="changes-to-cpu-and-memory-limits-for-sql-server-reporting-services-standard-and-enterprise"></a>Änderungen an CPU- und Arbeitsspeichergrenzen für SQL Server Reporting Services Standard und Enterprise
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services Standard und Enterprise unterstützen maximal 64 GB Systemspeicher.  
   
 ## <a name="component"></a>Komponente  
  [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
 ### <a name="description"></a>BESCHREIBUNG  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Reporting Services Standard und Enterprise unterstützen maximal 64 GB Systemspeicher. Möglicherweise müssen Sie Ihre aktuellen Systemeinstellungen erneut konfigurieren, um sie an die neuen Grenzwerte anzupassen.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Reporting Services Standard und Enterprise unterstützen maximal 64 GB Systemspeicher. Möglicherweise müssen Sie Ihre aktuellen Systemeinstellungen erneut konfigurieren, um sie an die neuen Grenzwerte anzupassen.  
   
  Weitere Informationen zu den CPU-und Arbeitsspeicher Limits für andere [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Editionen von finden Sie unter [Compute Capacity Limits by Edition of SQL Server](../compute-capacity-limits-by-edition-of-sql-server.md)und [von den Editionen von SQL Server unterstützter Arbeitsspeicher](https://go.microsoft.com/fwlink/?LinkId=212633).  
   

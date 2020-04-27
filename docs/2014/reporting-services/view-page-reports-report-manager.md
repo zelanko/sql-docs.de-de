@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c8731c1d0f79d99919c4a087521565a6ec590278
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098738"
 ---
 # <a name="view-page-reports-report-manager"></a>Anzeigen (Seite, Berichte) (Berichts-Manager)
   Mithilfe der Seite Anzeigen für Berichte können Sie einen Bericht anzeigen. Wenn Sie einen Bericht erstmalig im Berichts-Manager öffnen, wird er in HTML formatiert. HTML-Berichte enthalten eine Berichtssymbolleiste, die oben im Bericht angezeigt wird, sodass Sie durch die Berichtsseiten navigieren, innerhalb eines Berichts suchen oder den Bericht in ein anderes Format exportieren können. Die folgende Abbildung zeigt die Berichtssymbolleiste.  
   
- ![Berichts Symbolleiste](media/htmlviewer-toolbar.gif "Berichtssymbolleiste")  
+ ![Berichtssymbolleiste](media/htmlviewer-toolbar.gif "Berichtssymbolleiste")  
 Berichtssymbolleiste  
   
  Berichte können in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]so konfiguriert werden, dass sie bei Bedarf oder aus einer Berichtsausführungs-Momentaufnahme ausgeführt werden. Wenn ein Bericht bei Bedarf ausgeführt wird, tritt die gesamte Daten- und Berichtsverarbeitung jedes Mal auf, wenn Sie den Bericht öffnen. Wenn Sie einen Bericht anzeigen, der zur Ausführung als Berichtsausführungs-Momentaufnahme konfiguriert ist, trat die Datenverarbeitung auf, als die Momentaufnahme erstellt wurde.  
@@ -29,7 +29,7 @@ Berichtssymbolleiste
  Nicht alle Berichtsfunktionen sind in allen Exportformaten verfügbar. Wenn Sie einen HTML-Bericht in ein anderes Format exportieren, gibt es erwartungsgemäß Unterschiede in der Darstellung des Berichts. Enthält der Bericht interaktive Funktionen (wie Links, Lesezeichen oder Dokumentstrukturen), sind diese möglicherweise im neuen Format nicht verfügbar oder nicht auf die gleiche Weise funktionsfähig.  
   
 ## <a name="generating-data-feeds-from-report-data"></a>Generieren von Datenfeeds aus Berichtsdaten  
- Sie können Datenfeeds aus Berichten generieren. Die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Atom-Renderingerweiterung generiert zwei Atom-kompatible Dokumente: ein Atom-Dienstdokument, in dem die vom Bericht bereitgestellten Datenfeeds aufgeführt sind, und die Datenfeeds , die die Berichtsdaten enthalten. Die Datenfeeds werden von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in einem standardisierten, Atom 1.0-kompatiblen Format generiert, das von Anwendungen gelesen bzw. zwischen Anwendungen ausgetauscht werden kann, die Atom-kompatible Datenfeeds nutzen. Der [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] -Client kann z. B. Datenfeeds nutzen, die aus Berichten generiert werden.  
+ Sie können Datenfeeds aus Berichten generieren. Die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Atom-Renderingerweiterung generiert zwei Atom-konforme Dokumente: ein Atom-Dienstdokument, in dem die vom Bericht bereitgestellten Datenfeeds aufgeführt sind, und die Datenfeeds , die die Berichtsdaten enthalten. Die Datenfeeds werden von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in einem standardisierten, Atom 1.0-konformen Format generiert, das von Anwendungen gelesen bzw. zwischen Anwendungen ausgetauscht werden kann, die Atom-konformen Datenfeeds nutzen. Der [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] -Client kann z. B. Datenfeeds nutzen, die aus Berichten generiert werden.  
   
 ## <a name="running-parameterized-reports"></a>Ausführen von parametrisierten Berichten  
  Ein Bericht mit Eingabefeldern und der Schaltfläche **Bericht anzeigen** wird als parametrisierter Bericht bezeichnet. Um einen parametrisierten Bericht anzuzeigen, müssen Sie möglicherweise Werte bereitstellen, die zum Ausführen des Berichts erforderlich sind.  

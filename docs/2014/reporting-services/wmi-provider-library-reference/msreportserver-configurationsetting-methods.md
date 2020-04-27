@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6d3fc7ae8ad4c3018bcc512296a670fdaac3b64e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66097357"
 ---
 # <a name="msreportserver_configurationsetting-methods"></a>MSReportServer_ConfigurationSetting-Methoden
@@ -34,26 +34,26 @@ ms.locfileid: "66097357"
 |||  
 |-|-|  
 |[BackupEncryptionKey](configurationsetting-method-backupencryptionkey.md)|Sichert den Verschlüsselungsschlüssel für die Instanz. Der Verschlüsselungsschlüssel wird mit einem Kennwort verschlüsselt gespeichert.|  
-|[Die Methode "kreatess lcertificatebinding" &#40;WMI-MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-createsslcertificatebinding.md)|Erstellt eine SSL-Zertifikatsbindung|  
+|[CreateSSLCertificateBinding-Methode &#40;WMI: MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-createsslcertificatebinding.md)|Erstellt eine SSL-Zertifikatsbindung|  
 |[DeleteEncryptedInformation](configurationsetting-method-deleteencryptedinformation.md)|Löscht die verschlüsselten Informationen aus der Berichtsserver-Datenbank|  
 |[DeleteEncryptionKey](configurationsetting-method-deleteencryptionkey.md)|Löscht die Verschlüsselungsschlüssel aus der Berichtsserver-Datenbank|  
 |[GenerateDatabaseCreationScript](configurationsetting-method-generatedatabasecreationscript.md)|Generiert ein SQL-Skript, mit dem die Berichtsserver-Datenbank erstellt werden kann|  
 |[GenerateDatabaseRightsScript](configurationsetting-method-generatedatabaserightsscript.md)|Generiert ein SQL-Skript, mit dem einem Benutzer Berechtigungen für die Berichtsserver-Datenbank erteilt werden können|  
 |[GenerateDatabaseUpgradeScript](configurationsetting-method-generatedatabaseupgradescript.md)|Generiert ein SQL-Skript, mit dem die Berichtsserver-Datenbank aktualisiert werden kann|  
-|[GetAdminSiteUrl-Methode &#40;WMI-&#41;](configurationsetting-method-getadminsiteurl.md)|Ruft die absolute URL für die Zentraladministrationswebsite ab|  
+|[GetAdminSiteUrl Method &#40;WMI&#41;](configurationsetting-method-getadminsiteurl.md)|Ruft die absolute URL für die Zentraladministrationswebsite ab|  
 |[GetDatabaseVersionDisplayName](configurationsetting-method-getdatabaseversiondisplayname.md)|Ruft den Anzeigenamen für eine gegebene Versionszeichenfolge in der Berichtsserver-Datenbank ab|  
 |[InitializeReportServer](configurationsetting-method-initializereportserver.md)|Initialisiert die angegebene Berichtsserverinstanz.|  
-|[Die ListInstalledSharePointVersions-Methode &#40;WMI-&#41;](configurationsetting-method-listinstalledsharepointversions.md)|Gibt einen Satz von Token zurück, die die Versionen von [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)]Microsoft [!INCLUDE[SPF2010](../../includes/spf2010-md.md)], oder [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] darstellen, die auf dem gleichen Computer wie der Berichts Server installiert sind.|  
-|[Die listipadressen-Methode &#40;WMI-MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-listipaddresses.md)|Listet IP-Adressen für den Computer auf|  
+|[ListInstalledSharePointVersions-Methode &#40;WMI&#41;](configurationsetting-method-listinstalledsharepointversions.md)|Diese Methode gibt eine Reihe von Tokens zurück, die die Versionen von Microsoft [!INCLUDE[winSPServ](../../includes/winspserv-md.md)] [!INCLUDE[offSPServ](../../includes/offspserv-md.md)], [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] oder [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] darstellen, die auf dem gleichen Computer wie der Berichtsserver installiert sind.|  
+|[ListIPAddresses-Methode &#40;WMI: MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-listipaddresses.md)|Listet IP-Adressen für den Computer auf|  
 |[ListReportServersInDatabase](configurationsetting-method-listreportserversindatabase.md)|Gibt eine Liste von Berichtsserverinstallationen zurück, die in der Berichtsserver-Datenbank vorhanden sind. Dies geschieht unabhängig davon, ob diese Installationen Zugriff auf sichere Informationen haben.|  
-|[Die ListReservedURLs-Methode &#40;WMI-MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-listreservedurls.md)|Listet für alle Anwendungen auf dem Berichtsserver reservierte URLs auf|  
-|[Die listsslcertificatebinding-Methode &#40;WMI-MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-listsslcertificatebindings.md)|Listet die in HTTP.SYS vorhandenen und die von RSReportServer.config erwarteten SSL-Zertifikatsbindungen auf.|  
-|[Listsslzertifikats-Methode &#40;WMI-MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-listsslcertificates.md)|Listet die auf dem Computer installierten SSL-Zertifikate auf.|  
+|[ListReservedURLs-Methode &#40;WMI: MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-listreservedurls.md)|Listet für alle Anwendungen auf dem Berichtsserver reservierte URLs auf|  
+|[ListSSLCertificateBindings-Methode &#40;WMI: MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-listsslcertificatebindings.md)|Listet die in HTTP.SYS vorhandenen und die von RSReportServer.config erwarteten SSL-Zertifikatsbindungen auf.|  
+|[ListSSLCertificates-Methode &#40;WMI: MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-listsslcertificates.md)|Listet die auf dem Computer installierten SSL-Zertifikate auf.|  
 |[ReencryptSecureInformation](configurationsetting-method-reencryptsecureinformation.md)|Generiert einen neuen Verschlüsselungsschlüssel und verschlüsselt alle sicheren Informationen in der Berichtsserver-Datenbank erneut mit diesem neuen Schlüssel|  
-|[Die removesslcertificatebinding-Methode &#40;WMI-MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-removesslcertificatebinding.md)|Entfernt eine SSL-Zertifikatsbindung|  
+|[RemoveSSLCertificateBindings-Methode &#40;WMI: MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-removesslcertificatebinding.md)|Entfernt eine SSL-Zertifikatsbindung|  
 |[RemoveUnattendedExecutionAccount](configurationsetting-method-removeunattendedexecutionaccount.md)|Löscht den Eintrag für das Konto für die unbeaufsichtigte Ausführung aus der Berichtsserverkonfiguration|  
-|[RemoveUrl-Methode &#40;WMI-MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-removeurl.md)|Entfernt eine für den Berichtsserver reservierte URL|  
-|[Die ReserveURL-Methode &#40;WMI-MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-reserveurl.md)|Fügt eine URL-Reservierung für eine gegebene Anwendung hinzu|  
+|[RemoveURL-Methode &#40;WMI: MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-removeurl.md)|Entfernt eine für den Berichtsserver reservierte URL|  
+|[ReserveURL-Methode &#40;WMI: MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-reserveurl.md)|Fügt eine URL-Reservierung für eine gegebene Anwendung hinzu|  
 |[RestoreEncryptionKey](configurationsetting-method-restoreencryptionkey.md)|Wendet den angegebenen Verschlüsselungsschlüssel erneut auf die Berichtsserver-Datenbank an|  
 |[SetDatabaseConnection](configurationsetting-method-setdatabaseconnection.md)|Legt die Berichtsserver-Datenbankverbindung auf eine bestimmte Berichtsserver-Datenbank fest|  
 |[SetDatabaseLogonTimeout](configurationsetting-method-setdatabaselogontimeout.md)|Gibt den Standardtimeoutwert für Anmeldeversuche bei der Berichtsserver-Datenbank an|  
@@ -62,7 +62,7 @@ ms.locfileid: "66097357"
 |[SetSecureConnectionLevel](configurationsetting-method-setsecureconnectionlevel.md)|Legt die sichere Verbindungsebene des Berichtsservers fest|  
 |[SetServiceState](configurationsetting-method-setservicestate.md)|Schaltet den Berichtsserverdienst ein und aus|  
 |[SetUnattendedExecutionAccount](configurationsetting-method-setunattendedexecutionaccount.md)|Gibt das Konto an, das verwendet wird, um Berichte unbeaufsichtigt auszuführen|  
-|[SetVirtualDirectory-Methode &#40;WMI-MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setvirtualdirectory.md)|Legt das virtuelle Verzeichnis für eine Anwendung fest|  
+|[SetVirtualDirectory-Methode &#40;WMI: MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setvirtualdirectory.md)|Legt das virtuelle Verzeichnis für eine Anwendung fest|  
 |[SetWindowsServiceIdentity](configurationsetting-method-setwindowsserviceidentity.md)|Lässt den Berichtsserverdienst als den angegebenen Windows-Benutzer ausführen und gewährt diesem Konto die erforderlichen Dateisystemberechtigungen, damit der Berichtsserver ausgeführt werden kann.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bf5b7cd9ea96adf4dc2bab781b087f7c5a117ccb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102510"
 ---
 # <a name="publishing-data-sources-and-reports"></a>Veröffentlichen von Datenquellen und Berichten
@@ -29,7 +29,7 @@ ms.locfileid: "66102510"
  Wenn Sie den Bericht mithilfe einer freigegebenen Datenquelle erstellt haben, müssen Sie diese an demselben Speicherort veröffentlichen wie den Bericht. Ähnlich wie Berichte können auch freigegebene Datenquellen auf dem Berichtsserver getrennt verwaltet werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Previewing Reports (Vorschau von Berichten)](previewing-reports.md)  
+ [Ausführen einer Vorschau für Berichte](previewing-reports.md)  
  Beschreibt, wie der Bericht vor dem Veröffentlichen in der Vorschau angezeigt werden kann.  
   
  [Veröffentlichen von Berichten auf einem Berichtsserver](publishing-reports-to-a-report-server.md)  
@@ -43,7 +43,7 @@ ms.locfileid: "66102510"
  [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](../report-data/report-datasets-ssrs.md)   
  [Seiten Layout und Rendering &#40;Berichts-Generator und SSRS&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)   
  [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](../report-data/report-datasets-ssrs.md)   
- [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Suchen, anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS &#41;](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md)   
  [Drucken von Berichten (Berichts-Generator und SSRS)](../report-builder/print-reports-report-builder-and-ssrs.md)  
   

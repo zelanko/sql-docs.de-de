@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4be5a0ba8575467467a6d73a7d6fac27e914463f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104366"
 ---
 # <a name="report-properties-dialog-box-page-setup-report-builder"></a>Berichtseigenschaften (Dialogfeld), Seite einrichten (Berichts-Generator)
   Wählen Sie im Dialogfeld **Berichts Eigenschaften**die Option **Seite einrichten** , um Seiten Optionen für den gesamten Bericht festzulegen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Zoll**  
  Gibt das Seitenformat in Zoll an. Standardmäßig wird durch die Gebietsschemaeinstellungen bestimmt, welche Seiteneinheit ausgewählt ist.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "66104366"
  **Hochformat**  
  Gibt die Seitenausrichtung des Berichts an. Im Hochformat ist die vertikale Kante der Seite länger als die horizontale Kante.  
   
- **Landschaf**  
+ **Querformat**  
  Gibt die Seitenausrichtung des Berichts an. Im Querformat ist die horizontale Kante der Seite länger als die vertikale Kante.  
   
  **Papierformat**  

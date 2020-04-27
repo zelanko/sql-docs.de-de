@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a73f3be75a7f0cadf633943aeafffb7217d8e29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101161"
 ---
 # <a name="snapshot-options-properties-page-report-manager"></a>Momentaufnahmeoptionen (Eigenschaftenseite) (Berichts-Manager)
@@ -36,7 +36,7 @@ ms.locfileid: "66101161"
   
 4.  Wählen Sie die Registerkarte **Momentaufnahmeoptionen** aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **"Berichtsverlauf" kann manuell erstellt werden**  
  Aktivieren Sie dieses Kontrollkästchen, um nach Bedarf dem Berichtsverlauf Momentaufnahmen hinzuzufügen. Wenn Sie dieses Kontrollkästchen aktivieren, wird die Schaltfläche **Neue Momentaufnahme** auf der Seite Verlauf angezeigt.  
   
@@ -57,11 +57,11 @@ ms.locfileid: "66101161"
   
  Der Berichtsverlauf wird in der Berichtsserverdatenbank gespeichert. Wenn Sie umfangreiche oder sehr viele Berichte haben, deren Verlauf Sie speichern möchten, dann erwägen Sie, die Menge der Berichtsverläufe zu beschränken, damit die Speicherplatzanforderungen für die Berichtsserver-Datenbank nicht allzu hoch werden.  
   
- **Anwenden**  
+ **übernehmen**  
  Klicken Sie auf diese Schaltfläche, um die Änderungen zu speichern.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Hinzufügen einer Momentaufnahme zum Berichtsverlauf &#40;Berichts-Manager&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Hinzufügen einer Momentaufnahme zum Berichts Verlauf &#40;Berichts-Manager&#41;](report-server/add-a-snapshot-to-report-history-report-manager.md)   
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Erstellen, Ändern und Löschen von Momentaufnahmen im Berichtsverlauf](report-server/create-modify-and-delete-snapshots-in-report-history.md)   
  [Berichts-Manager (F1-Hilfe)](../../2014/reporting-services/report-manager-f1-help.md)  

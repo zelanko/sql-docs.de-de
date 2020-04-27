@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ba05d426f9515793ad3a924e375ff9a6ab9f940f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095881"
 ---
 # <a name="database-engine-configuration---user-instance"></a>Konfiguration der Datenbank-Engine - Benutzerinstanz
@@ -30,13 +30,12 @@ ms.locfileid: "66095881"
  Die Benutzerinstanz, auch bekannt als untergeordnete Instanz oder Clientinstanz, ist eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die durch die übergeordnete Instanz (die primäre Instanz, die wie [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]als Dienst ausgeführt wird) für den Benutzer generiert wurde. Die Benutzerinstanz wird als Benutzerprozess in dem Sicherheitskontext des Benutzers ausgeführt. Die Benutzerinstanz ist von der übergeordneten Instanz und anderen Benutzerinstanzen, die auf dem Computer ausgeführt werden, isoliert. Im Zusammenhang mit der Benutzerinstanzfunktion wird auch der Ausdruck „Ausführen von Instanzen als normaler Benutzer“ (RANU, Run As Normal User) verwendet.  
   
 > [!NOTE]  
->  Anmeldungen, die während des Setups als Mitglieder der festen Server Rolle **sysadmin** bereitgestellt werden, werden in der Vorlagen Datenbank als Administratoren bereitgestellt. Sie sind so lange Mitglieder der festen Serverrolle **sysadmin** auf der Benutzerinstanz, bis sie entfernt werden.  
+>  Während des Setups als Mitglieder der festen Serverrolle **sysadmin** bereitgestellte Anmeldungen werden in der Vorlagendatenbank als Administratoren bereitgestellt. Sie sind so lange Mitglieder der festen Serverrolle **sysadmin** auf der Benutzerinstanz, bis sie entfernt werden.  
   
  Benutzer zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Administratorrolle hinzufügen  
  Standardmäßig deaktiviert. Aktivieren Sie dieses Kontrollkästchen, um den aktuellen Setupbenutzer der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Administratorrolle hinzuzufügen.  
   
- 
-  [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)]-Benutzer, die Mitglieder von VORDEFINIERT\Administratoren sind, werden nicht automatisch der festen Serverrolle sysadmin hinzugefügt, wenn sie eine Verbindung mit [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] herstellen. Nur [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] -Benutzer, die explizit einer Administratorrolle auf Serverebene hinzugefügt wurden, können [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]verwalten. Mitglieder der Gruppe VORDEFINIERT\Administratoren können eine Verbindung mit der [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] -Instanz herstellen, verfügen jedoch nur über begrenzte Berechtigungen für Datenbankaufgaben. Daher müssen Benutzern, deren [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] -Berechtigungen in früheren Versionen von Windows von VORDEFINIERT\Administratoren und VORDEFINIERT\Benutzer vererbt wurden, unter [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] explizit Administratorberechtigungen in Instanzen von [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)]erteilt werden.  
+ [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)]-Benutzer, die Mitglieder von VORDEFINIERT\Administratoren sind, werden nicht automatisch der festen Serverrolle sysadmin hinzugefügt, wenn sie eine Verbindung mit [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] herstellen. Nur [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] -Benutzer, die explizit einer Administratorrolle auf Serverebene hinzugefügt wurden, können [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]verwalten. Mitglieder der Gruppe VORDEFINIERT\Administratoren können eine Verbindung mit der [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] -Instanz herstellen, verfügen jedoch nur über begrenzte Berechtigungen für Datenbankaufgaben. Daher müssen Benutzern, deren [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] -Berechtigungen in früheren Versionen von Windows von VORDEFINIERT\Administratoren und VORDEFINIERT\Benutzer vererbt wurden, unter [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] explizit Administratorberechtigungen in Instanzen von [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)]erteilt werden.  
   
  Wenn Sie nach Beendigung dieses Installationsprogramms Änderungen an Benutzerrollen vornehmen möchten, verwenden Sie das Oberflächen-Konfigurationstool von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (SQLSAC.exe). Klicken Sie zum Aktualisieren der Liste der Benutzer in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Systemadministratorrolle auf den Link **Neuen Administrator hinzufügen** .  
   

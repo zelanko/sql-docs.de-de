@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f5ea9e6e4e36e62828f3036c3765ba42c202448c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098345"
 ---
 # <a name="initializereportserver-method-wmi-msreportserver_configurationsetting"></a>InitializeReportServer-Methode (WMI: MSReportServer_ConfigurationSetting)
@@ -63,7 +63,7 @@ public void InitializeReportServer(string InstallationID,
  Wenn die [IsInitialized](configurationsetting-property-isinitialized.md) -Eigenschaft des Berichts Servers auf `true` festgelegt ist, wenn die InitializeReportServer-Methode aufgerufen wird, gibt die Methode Erfolg zurück, ohne zu versuchen, den Verschlüsselungsschlüssel zu verschlüsseln.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  

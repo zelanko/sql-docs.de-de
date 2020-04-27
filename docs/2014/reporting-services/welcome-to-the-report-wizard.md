@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58643214df2caa53ddf88810e1fe519a243fc739
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098651"
 ---
 # <a name="welcome-to-the-report-wizard"></a>Willkommen im Berichts-Assistenten
   Mithilfe dieser Seite des Berichts-Assistenten können Sie eine Zusammenfassung der auszuführenden Aufgaben anzeigen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Diese Seite nicht wieder anzeigen**  
  Wählen Sie diese Option aus, um die Seite beim nächsten Start des Assistenten auszulassen.  
   

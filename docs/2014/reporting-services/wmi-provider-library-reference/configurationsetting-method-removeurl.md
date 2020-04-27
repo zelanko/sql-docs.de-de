@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bdd38b66a62b3d839f89f078904f7a3a9cc82d66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66098170"
 ---
 # <a name="removeurl-method-wmi-msreportserver_configurationsetting"></a>RemoveURL-Methode (WMI: MSReportServer_ConfigurationSetting)
@@ -42,7 +42,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
  *URLString*  
  Die URL für die Reservierung  
   
- *LCID*  
+ *lcid*  
  Das Gebietsschema, das für die zurückgegebenen Fehlermeldungen verwendet werden soll  
   
  *Fehler*  
@@ -55,7 +55,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
  Gibt *HRESULT* zurück, wodurch der Erfolg oder das Fehlschlagen des Methodenaufrufs angegeben wird. Der Wert 0 (null) gibt an, dass der Methodenaufruf erfolgreich war. Ein Fehlercode gibt an, dass der Aufruf nicht erfolgreich war.  
   
 ## <a name="remarks"></a>Bemerkungen  
- *UrlString* enthält nicht den Namen des virtuellen Verzeichnisses. die [SetVirtualDirectory-Methode &#40;WMI-MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setvirtualdirectory.md) Methode wird zu diesem Zweck bereitgestellt.  
+ *UrlString* beinhaltet nicht den Namen des virtuellen Verzeichnisses – die Methode [SetVirtualDirectory-Methode &#40;WMI: MSReportServer_ConfigurationSetting&#41;](configurationsetting-method-setvirtualdirectory.md) ist für diesen Zweck vorgesehen.  
   
  Vor einem Aufruf der [ReserveURL](configurationsetting-method-reserveurl.md) -Methode müssen Sie einen Wert für die VirtualDirectory-Konfigurationseigenschaft des *Anwendungsparameters* angeben. Verwenden Sie die Methode [SetVirtualDirectory-Methode (WMI: MSReportServer_ConfigurationSetting)](configurationsetting-method-setvirtualdirectory.md), um die VirtualDirectory-Eigenschaft festzulegen.  
   
@@ -64,7 +64,7 @@ public void RemoveURL(string Application, string UrlString, int Lcid,
  Diese Methode verursacht einen "harten" Wiederverwendungsvorgang und ein Beenden aller Nichtkonfigurationsdomänen für Anwendungen. Die Anwendungsdomänen werden nach dem Abschluss des Vorgangs neu gestartet.  
   
 ## <a name="requirements"></a>Requirements (Anforderungen)  
- **Namespace:**[!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
+ **Namespace:** [!INCLUDE[ssRSWMInmspcA](../../includes/ssrswminmspca-md.md)]  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [MSReportServer_ConfigurationSetting Members (MSReportServer_ConfigurationSetting-Member)](msreportserver-configurationsetting-members.md)  

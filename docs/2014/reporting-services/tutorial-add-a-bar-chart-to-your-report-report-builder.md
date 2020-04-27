@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2db0ec56ec79134cdb1cba51e1c19d9ac124f4f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66099198"
 ---
 # <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)
@@ -30,12 +30,12 @@ ms.locfileid: "66099198"
   
  ![rs_BarChartTutorial](../../2014/tutorials/media/rs-barcharttutorial.gif "rs_BarChartTutorial")  
   
-##  <a name="BackToTop"></a>Was Sie lernen werden  
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Was Sie lernen werden  
  In diesem Lernprogramm lernen Sie Folgendes:  
   
 1.  [Erstellen eines Diagramms mithilfe des Diagramm-Assistenten](#Chart)  
   
-2.  [Diagrammtyp auswählen](#ChartType)  
+2.  [Auswählen des Diagrammtyps](#ChartType)  
   
 3.  [Anzeigen aller Kategoriewerte auf der vertikalen Achse](#AllValues)  
   
@@ -58,10 +58,10 @@ ms.locfileid: "66099198"
   
  Geschätzte Zeit zum Bearbeiten dieses Tutorials: 15 Minuten.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).  
   
-##  <a name="Chart"></a>1. Erstellen eines Diagramm Berichts mithilfe des Diagramm-Assistenten  
+##  <a name="1-create-a-chart-report-from-the-chart-wizard"></a><a name="Chart"></a>1. Erstellen eines Diagramm Berichts mithilfe des Diagramm-Assistenten  
  Erstellen Sie im Dialogfeld " **Getting Started** " ein eingebettetes DataSet, wählen Sie eine freigegebene Datenquelle aus, und erstellen Sie mithilfe des Diagramm-Assistenten ein Balkendiagramm.  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ ms.locfileid: "66099198"
     > [!NOTE]  
     >  Welche Datenquelle Sie auswählen, ist unwichtig, solange Sie über ausreichende Berechtigungen verfügen. Aus der Datenquelle werden keine Daten abgerufen. Weitere Informationen finden Sie unter [Alternative Methoden zum Herstellen einer Datenverbindung (Berichts-Generator)](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md).  
   
-6.  Klicken Sie auf der Seite **Abfrage entwerfen** auf **als Text bearbeiten**.  
+6.  Klicken Sie auf der Seite **Abfrage entwerfen** auf **Als Text bearbeiten**.  
   
 7.  Fügen Sie die folgende Abfrage in den Abfragebereich ein:  
   
@@ -108,11 +108,11 @@ ms.locfileid: "66099198"
     UNION SELECT 'Brian' as FirstName, 'Burke' as LastName, CAST(187000. AS money) AS SalesYear2009, CAST(207000. AS money) AS SalesYear2008  
     ```  
   
-8.  (Optional) Klicken Sie auf die Schaltfläche „Ausführen“ ( **!** ), um die Daten anzuzeigen, auf denen das Diagramm basiert.  
+8.  (Optional) Klicken Sie auf die Schaltfläche Ausführen (**!**), um die Daten anzuzeigen, auf denen das Diagramm basiert.  
   
 9. Klicken Sie auf **Weiter**.  
   
-##  <a name="ChartType"></a>2. Wählen Sie den Diagrammtyp aus.  
+##  <a name="2-choose-the-chart-type"></a><a name="ChartType"></a>2. Wählen Sie den Diagrammtyp aus.  
  Sie können aus einer Vielzahl vordefinierter Diagrammtypen auswählen.  
   
 #### <a name="to-add-a-column-chart"></a>So fügen Sie einem Bericht ein Säulendiagramm hinzu  
@@ -145,7 +145,7 @@ ms.locfileid: "66099198"
   
  Im Bericht wird das Balkendiagramm für die Umsätze der einzelnen Vertriebsmitarbeiter in den Jahren 2008 und 2009 angezeigt. Die Balkenlänge entspricht dem jeweiligen Gesamtumsatz.  
   
-##  <a name="AllValues"></a>3. Ändern der Anzeige von Namen auf der vertikalen Achse  
+##  <a name="3-modify-the-display-of-names-on-the-vertical-axis"></a><a name="AllValues"></a>3. Ändern der Anzeige von Namen auf der vertikalen Achse  
  Standardmäßig werden auf der vertikalen Achse nur einige der Werte angezeigt. Sie können das Diagramm so ändern, dass alle Kategorien angezeigt werden.  
   
 #### <a name="to-display-all-sales-persons-along-the-category-axis-of-a-bar-chart"></a>So zeigen Sie auf der Kategorieachse eines Balkendiagramms alle Vertriebsmitarbeiter an  
@@ -165,7 +165,7 @@ ms.locfileid: "66099198"
 > [!NOTE]  
 >  Wenn Sie die Namen der Vertriebsmitarbeiter auf der vertikalen Achse nicht lesen können, können Sie das Diagramm vergrößern oder die Formatierungsoptionen für die Achsenbezeichnungen ändern.  
   
-###  <a name="CategoryExpression"></a>Nachname und Vorname auf vertikaler Achse anzeigen  
+###  <a name="display-last-name-and-first-name-on-vertical-axis"></a><a name="CategoryExpression"></a>Nachname und Vorname auf vertikaler Achse anzeigen  
  Sie können den Kategorieausdruck so ändern, dass die Nach- und Vornamen der einzelnen Vertriebsmitarbeiter angezeigt werden.  
   
 ##### <a name="to-change-the-category-expression"></a>So ändern Sie den Kategorieausdruck  
@@ -193,7 +193,7 @@ ms.locfileid: "66099198"
 > [!NOTE]  
 >  Wenn Sie die Namen der Vertriebsmitarbeiter auf der vertikalen Achse nicht lesen können, können Sie das Diagramm vergrößern oder die Formatierungsoptionen für die Achsenbezeichnungen ändern.  
   
-##  <a name="Sort"></a>4. Ändern der Sortierreihenfolge für Namen auf der vertikalen Achse  
+##  <a name="4-change-the-sort-order-for-names-on-the-vertical-axis"></a><a name="Sort"></a>4. Ändern der Sortierreihenfolge für Namen auf der vertikalen Achse  
  Beim Sortieren der Daten eines Diagramms wird die Reihenfolge der Werte auf der Kategorieachse geändert.  
   
 #### <a name="to-sort-the-names-in-alphabetical-order-on-the-bar-chart"></a>So sortieren Sie die Namen im Balkendiagramm in alphabetischer Reihenfolge  
@@ -220,7 +220,7 @@ ms.locfileid: "66099198"
   
  Die Namen auf der horizontalen Achse werden in umgekehrter Reihenfolge sortiert, wobei **alerca** oben und **Zeng** unten angezeigt wird.  
   
-##  <a name="Legend"></a>5. Verschieben der Legende  
+##  <a name="5-move-the-legend"></a><a name="Legend"></a>5. Verschieben der Legende  
  Um die Lesbarkeit der Diagrammwerte zu verbessern, können Sie gegebenenfalls die Diagrammlegende verschieben. So können Sie zum Beispiel in einem Balkendiagramm mit einer horizontalen Anordnung der Balken die Legende oberhalb oder unterhalb des Diagrammbereichs platzieren. Dann bleibt horizontal mehr Platz für die Balken.  
   
 #### <a name="to-display-the-legend-below-the-chart-area-of-a-bar-chart"></a>So zeigen Sie die Legende unterhalb des Diagrammbereichs eines Balkendiagramms an  
@@ -239,7 +239,7 @@ ms.locfileid: "66099198"
   
 6.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-##  <a name="ChartTitle"></a>6. Titel des Diagramms  
+##  <a name="6-title-the-chart"></a><a name="ChartTitle"></a>6. Titel des Diagramms  
   
 #### <a name="to-change-the-chart-title-above-the-chart-area-of-a-bar-chart"></a>So ändern Sie den Diagrammtitel über dem Diagrammbereich eines Balkendiagramms  
   
@@ -251,7 +251,7 @@ ms.locfileid: "66099198"
   
 4.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-##  <a name="Horizontal"></a>7. Formatieren und beschriften der horizontalen Achse  
+##  <a name="7-format-and-label-the-horizontal-axis"></a><a name="Horizontal"></a>7. Formatieren und beschriften der horizontalen Achse  
  Standardmäßig werden die Werte auf der horizontalen Achse in einem allgemeinen Format angezeigt, dessen Größe automatisch an die Diagrammgröße angepasst wird.  
   
 #### <a name="to-format-the-numbers-on-the-horizontal-axis"></a>So formatieren Sie die Zahlen auf der horizontalen Achse  
@@ -278,7 +278,7 @@ ms.locfileid: "66099198"
   
  Auf der horizontalen Achse des Berichts werden die Umsätze als Währung in Tausendern ohne Dezimalstellen angezeigt.  
   
-##  <a name="Filter"></a>8. Hinzufügen eines Filters zum Anzeigen der fünf besten Werte  
+##  <a name="8-add-a-filter-to-display-the-top-five-values"></a><a name="Filter"></a>8. Hinzufügen eines Filters zum Anzeigen der fünf besten Werte  
  Sie können dem Diagramm einen Filter hinzufügen, um anzugeben, welche Daten des Datasets ein- oder ausgeschlossen werden sollen.  
   
 #### <a name="to-add-a-filter-and-display-the-top-five-values"></a>So können Sie einen Filtern hinzufügen und die fünf besten Werte anzeigen  
@@ -293,7 +293,7 @@ ms.locfileid: "66099198"
   
 5.  Klicken Sie auf **Hinzufügen**. Ein neuer leerer Filter wird angezeigt.  
   
-6.  Geben **** Sie in Ausdruck **[Sum ("salesyear2009")]** ein. Dadurch wird der zugrunde liegende Ausdruck `=Sum(Fields!SalesYear2009.Value)`erstellt, der durch Klicken auf die Schaltfläche **fx** angezeigt wird.  
+6.  Geben **Expression**Sie in Ausdruck **[Sum ("salesyear2009")]** ein. Dadurch wird der zugrunde liegende Ausdruck `=Sum(Fields!SalesYear2009.Value)`erstellt, der durch Klicken auf die Schaltfläche **fx** angezeigt wird.  
   
 7.  Überprüfen Sie, ob der Datentyp gleich **Text**ist.  
   
@@ -309,7 +309,7 @@ ms.locfileid: "66099198"
   
  Im Diagramm werden die Namen der fünf besten Vertriebsmitarbeiter gemäß den Umsatzdaten des Jahres 2009 angezeigt.  
   
-##  <a name="Title"></a>9. Hinzufügen eines Berichts Titels  
+##  <a name="9-add-a-report-title"></a><a name="Title"></a>9. Hinzufügen eines Berichts Titels  
   
 #### <a name="to-add-a-report-title"></a>So fügen Sie einen Berichtstitel hinzu  
   
@@ -317,7 +317,7 @@ ms.locfileid: "66099198"
   
 2.  Geben Sie **Umsatz-Balkendiagramm**ein, drücken Sie die EINGABETASTE, und geben Sie dann **Top Five-Verkäufer für 2009**ein, sodass es wie folgt aussieht:  
   
-     **Umsatz Balkendiagramm**  
+     **Umsatz-Balkendiagramm**  
   
      **Top Five-Verkaufsschlager 2009**  
   
@@ -331,13 +331,13 @@ ms.locfileid: "66099198"
   
 6.  Klicken Sie auf **Ausführen** , um eine Vorschau des Berichts anzuzeigen.  
   
-##  <a name="Save"></a>10. Speichern des Berichts  
+##  <a name="10-save-the-report"></a><a name="Save"></a>10. Speichern des Berichts  
   
 #### <a name="to-save-the-report"></a>So speichern Sie den Bericht  
   
 1.  Wechseln Sie zur Berichtsentwurfsansicht.  
   
-2.  Klicken Sie in der Schaltfläche **Berichts-Generator** auf **Speichern**unter.  
+2.  Klicken Sie auf die Schaltfläche **Berichts-Generator** und anschließend auf **Speichern unter**.  
   
 3.  Geben Sie im Feld **Name**die Zeichenfolge **Umsatz-Balkendiagramm**ein.  
   

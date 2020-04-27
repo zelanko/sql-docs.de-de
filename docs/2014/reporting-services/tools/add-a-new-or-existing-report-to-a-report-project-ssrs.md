@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bd6b3cc87757a8d0edc9067bd2f8f0911ccef238
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66100467"
 ---
 # <a name="add-a-new-or-existing-report-to-a-report-project-ssrs"></a>Hinzufügen eines neuen oder vorhandenen Berichts zu einem Berichtsprojekt (SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "66100467"
   
     -   **Wählen Sie einen Berichtstyp aus.** Als Nächstes muss der gewünschte Berichtstyp ausgewählt werden. Sie können zwischen einem tabellarischen Bericht und einem Matrixbericht auswählen. Ein tabellarischer Bericht verfügt über eine feste Anzahl von Spalten. Ein Matrix- oder Kreuztabellenbericht verfügt über eine variable Anzahl von Spalten, die vom Ergebnis der Abfrage abhängt. In einem Kartenbericht werden Analysedaten vor einem geografischen Hintergrund dargestellt.  
   
-    -   **Wählen Sie einen Stil aus.** Im nächsten Schritt wird mithilfe einer Formatvorlage ein Format auf den Bericht angewendet. Wählen Sie eine Vorlage aus, um Formate wie Schriftart, Farbe und Rahmenart auf den Bericht anzuwenden. Der Berichts-Designer stellt sechs Formatvorlagen bereit: Schiefer, Wald, Geschäftlich, Fett, Ozean und Generisch. Darüber hinaus können Sie weitere Formatvorlagen hinzufügen.  
+    -   **Wählen Sie ein Format aus.** Im nächsten Schritt wird mithilfe einer Formatvorlage ein Format auf den Bericht angewendet. Wählen Sie eine Vorlage aus, um Formate wie Schriftart, Farbe und Rahmenart auf den Bericht anzuwenden. Der Berichts-Designer stellt sechs Formatvorlagen bereit: Schiefer, Wald, Geschäftlich, Fett, Ozean und Generisch. Darüber hinaus können Sie weitere Formatvorlagen hinzufügen.  
   
         > [!NOTE]  
         >  Sie können vorhandene Vorlagen ändern oder neue hinzufügen, indem Sie die Datei "StyleTemplates. xml" im Ordner "\Programme\Microsoft Visual Studio 10.0 \ Common7\IDE\PrivateAssemblies\Business Intelligence Wizards\Reports\Styles\\<lang \< [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]\> " Bearbeiten, wobei lang> die Sprache ist, die Sie verwenden (wenn Sie beispielsweise die englische Sprachversion von verwenden, lautet der Ordnername "en"). Dieser Ordner befindet sich auf dem Computer, auf dem Berichts-Designer installiert ist. Von der Datei StyleTemplates.xml sind zwei Kopien verfügbar. Um die mithilfe des Berichts-Assistenten angewendeten Formate zu ändern, müssen Sie die Datei bearbeiten, die in dem für die verwendete Sprache erstellten Ordner gespeichert wurde.  
@@ -65,6 +65,6 @@ ms.locfileid: "66100467"
      Der Bericht wird dem Projekt im Ordner **Berichte** hinzugefügt. Wenn Sie das Projekt schließen und erneut öffnen, sind die Berichte alphabetisch geordnet.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Reporting Services-Tutorials &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  
+ [Reporting Services-Tutorials (SSRS)](../reporting-services-tutorials-ssrs.md)  
   
   
