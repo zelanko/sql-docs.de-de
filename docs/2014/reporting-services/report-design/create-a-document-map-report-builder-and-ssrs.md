@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 99456151a71e74d0e85baec19cc42d8450c00ae4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106167"
 ---
 # <a name="create-a-document-map-report-builder-and-ssrs"></a>Erstellen einer Dokumentstruktur (Berichts-Generator und SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66106167"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DocMapRenderExtensions"></a> Dokumentstrukturen und Renderingerweiterungen  
+##  <a name="document-maps-and-rendering-extensions"></a><a name="DocMapRenderExtensions"></a> Dokumentstrukturen und Renderingerweiterungen  
  Die Dokumentstruktur ist für die Verwendung in der HTML-Renderingerweiterung vorgesehen, z.B. in der Vorschau und im Berichts-Viewer. Andere Renderingerweiterungen verwenden andere Verfahren zum Darstellen einer Dokumentstruktur:  
   
 -   PDF rendert eine Dokumentstruktur in Form des Lesezeichen-Bereichs.  
@@ -112,13 +112,13 @@ ms.locfileid: "66106167"
 4.  Fügen Sie die URL in den Berichts-Manager ein, und drücken Sie dann die EINGABETASTE. Der Bericht wird ausgeführt, und die Dokumentstruktur ist ausgeblendet.  
   
 > [!NOTE]  
->  Weitere Informationen zum Herunterladen von Beispiel Berichten finden [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Sie unter [Berichts-Generator und Berichts-Designer Beispiel Berichte](https://go.microsoft.com/fwlink/?LinkId=198283).  
+>  Weitere Informationen zum Herunterladen von Beispielberichten finden Sie unter [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Beispielberichte für Berichts-Generator und Berichts-Designer](https://go.microsoft.com/fwlink/?LinkId=198283).  
 >   
 >  Weitere Informationen finden Sie unter "URL-Zugriff" in der [Reporting Services-Dokumentation](https://go.microsoft.com/fwlink/?linkid=121312) in der SQL Server-Onlinedokumentation.  
   
  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Suchen und Anzeigen von Berichten in Berichts-Manager &#40;Berichts-Generator und SSRS&#41;](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+ [Finding and Viewing Reports in Report Manager (Report Builder and SSRS) (Suchen und Anzeigen von Berichten in Berichts-Manager (Berichts-Generator und SSRS))](../report-builder/finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

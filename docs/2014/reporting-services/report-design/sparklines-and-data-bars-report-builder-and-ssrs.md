@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 28b981dfe725a42228f287bc7a02df836030f3d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104959"
 ---
 # <a name="sparklines-and-data-bars-report-builder-and-ssrs"></a>Sparklines und Datenbalken (Berichts-Generator und SSRS)
@@ -33,20 +33,20 @@ ms.locfileid: "66104959"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="KindsofSparklines"></a>Typen von Sparklines  
+##  <a name="types-of-sparklines"></a><a name="KindsofSparklines"></a>Typen von Sparklines  
  Sie können fast genauso viele Typen von Sparklines erstellen, wie es reguläre Diagramme gibt. Im Allgemeinen können Sie keine 3D-Sparklines erstellen. Sie können Sparklineversionen der folgenden Volldiagramme erstellen:  
   
--   [Säulen Diagramme &#40;Berichts-Generator und SSRS-&#41;](charts-report-builder-and-ssrs.md): grundlegende, gestapelte Säulen Diagramme und gestapelte Säulen Diagramme (100%).  
+-   [Säulendiagramme (Berichts-Generator und SSRS)](charts-report-builder-and-ssrs.md): einfache, gestapelte und gestapelte Säulendiagramme (100 %)  
   
--   [Liniendiagramme &#40;Berichts-Generator und SSRS-&#41;](line-charts-report-builder-and-ssrs.md): alles außer 3D-Liniendiagramm.  
+-   [Liniendiagramme (Berichts-Generator und SSRS)](line-charts-report-builder-and-ssrs.md): alles außer 3D-Liniendiagrammen  
   
--   [Flächen Diagramme &#40;Berichts-Generator und SSRS-&#41;](area-charts-report-builder-and-ssrs.md): alles außer 3D-Flächen Diagrammen  
+-   [Flächendiagramme (Berichts-Generator und SSRS)](area-charts-report-builder-and-ssrs.md): alles außer 3D-Flächendiagrammen  
   
--   Kreis [Diagramme &#40;Berichts-Generator und SSRS&#41;](pie-charts-report-builder-and-ssrs.md): und Ring Diagramme, sowohl flach als auch 3D, jedoch nicht die anderen Formen, wie z. b. Trichter-und Pyramiden Diagramme.  
+-   [Kreisdiagramme (Berichts-Generator und SSRS)](pie-charts-report-builder-and-ssrs.md): Ringdiagramme, sowohl flach als auch 3D, jedoch keine anderen Formen wie Trichter- und Pyramidendiagramme  
   
--   [Bereichs Diagramme &#40;Berichts-Generator und SSRS-&#41;](range-charts-report-builder-and-ssrs.md): der bestand, der Kerzenständer, die Fehler Leiste und die boxplotdiagramme.  
+-   [Bereichsdiagramme &#40;Berichts-Generator und SSRS&#41;](range-charts-report-builder-and-ssrs.md): Kurs-, Kerzen-, Abweichungsbalken- und Boxplotdiagramme.  
   
-##  <a name="DataBars"></a>Daten Balken  
+##  <a name="data-bars"></a><a name="DataBars"></a>Daten Balken  
  Datenbalken stellen in der Regel einen einzelnen Datenpunkt dar, obwohl sie wie normale Balkendiagramme auch mehrere Datenpunkte darstellen können. Sie enthalten häufig mehrere Reihen ohne Kategorie oder verfügen über Reihengruppierungen.  
   
  ![rs_DataBars](../media/rs-databars.gif "rs_DataBars")  
@@ -55,11 +55,11 @@ ms.locfileid: "66104959"
   
  Sie können Datenbalkenversionen der folgenden Volldiagramme erstellen:  
   
--   [Balkendiagramme &#40;Berichts-Generator und SSRS&#41;](bar-charts-report-builder-and-ssrs.md): einfache, gestapelte und gestapelte Balkendiagramme (100%).  
+-   [Balkendiagramme (Berichts-Generator und SSRS)](bar-charts-report-builder-and-ssrs.md): einfache, gestapelte und gestapelte Balkendiagramme (100 %)  
   
--   [Säulen Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md): Basis-, gestapelte Säulen Diagramme und gestapelte Säulen Diagramme (100%). Säulendiagramme können entweder Sparklines oder Datenbalken sein.  
+-   [Säulendiagramme (Berichts-Generator und SSRS)](charts-report-builder-and-ssrs.md): einfache, gestapelte und gestapelte Säulendiagramme (100 %) Säulendiagramme können entweder Sparklines oder Datenbalken sein.  
 
-##  <a name="AlignDatainTableMatrix"></a>Ausrichten von sparkline-Daten in einer Tabelle oder Matrix  
+##  <a name="aligning-sparkline-data-in-a-table-or-matrix"></a><a name="AlignDatainTableMatrix"></a>Ausrichten von sparkline-Daten in einer Tabelle oder Matrix  
  Wenn Sie eine Sparkline in eine Tabelle oder eine Matrix einfügen, ist es normalerweise wichtig, dass die Datenpunkte in den einzelnen Sparklines mit den Datenpunkten der anderen Sparklines in dieser Spalte übereinstimmen. Andernfalls ist es schwierig, die Daten in den verschiedenen Zeilen zu vergleichen. Wenn Sie z. B. die Umsatzdaten verschiedener Vertriebsmitarbeiter im Unternehmen nach Monat vergleichen, müssen die Monate übereinstimmen. Wenn ein Mitarbeiter im Monat April abwesend war, gib es für diesen Mitarbeiter für diesen Monat keine Daten. Für diesen Monat sollte daher eine Lücke angezeigt werden, und die Daten für die folgenden Monate sollten an den Daten der anderen Mitarbeiter ausgerichtet sein. Sie erreichen dies durch die Ausrichtung der horizontalen Achse. Weitere Informationen finden Sie im Abschnitt über Sparklines unter [Ausdrucksbereich für Gesamtwerte, Aggregate und integrierte Auflistungen (Berichts-Generator und SSRS)](expression-scope-for-totals-aggregates-and-built-in-collections.md) und [Ausrichten von Diagrammdaten in einer Tabelle oder einer Matrix (Berichts-Generator und SSRS)](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md).  
   
  Auf ähnliche Weise müssen die Daten auch vertikal auszurichten sein, um Zeilen vergleichen zu können. Dies bedeutet, dass die Höhe der Balken oder Linien in einer Sparkline oder einem Datenbalken relativ zur Höhe der Balken und Linien aller anderen Sparklines oder Datenbalken sein muss. Andernfalls können Sie die Zeilen nicht miteinander vergleichen.  
@@ -68,17 +68,17 @@ ms.locfileid: "66104959"
   
  In diesem Bild wird das Säulendiagramm für die täglichen Verkäufe jedes Mitarbeiters dargestellt. Beachten Sie, dass Tage, an denen ein Mitarbeiter keine Verkäufe getätigt hat, leer gelassen werden und die nachfolgenden Tage ausgerichtet werden. Dies ist ein Beispiel für die horizontale Ausrichtung. Beachten Sie außerdem, dass für einige Mitarbeiter jeder Balken kurz ist und kein Balken den oberen Rand der Zelle erreicht. Dies ist ein Beispiel für die vertikale Ausrichtung. Ohne diese Ausrichtung würden sich die kurzen Balken in Zeilen ohne hohe Balken bis an den oberen Rand der Zelle erstrecken.  
 
-##  <a name="UnderstandScope"></a>Grundlegendes zu den für eine sparkline oder einen Daten Balken bereitgestellten Daten  
+##  <a name="understanding-the-data-supplied-to-a-sparkline-or-data-bar"></a><a name="UnderstandScope"></a>Grundlegendes zu den für eine sparkline oder einen Daten Balken bereitgestellten Daten  
  Wenn Sie einer Tabelle oder einer Matrix eine Sparkline oder einen Datenbalken hinzufügen, wird dies als *schachteln* eines Datenbereichs in einem anderen bezeichnet. Schachteln bedeutet, dass die für eine Sparkline oder einen Datenbalken bereitgestellten Daten von dem Dataset gesteuert werden, auf dem die Tabelle oder Matrix basiert, sowie durch die Position in der Tabelle oder Matrix. Weitere Informationen finden Sie unter [Geschachtelte Datenbereiche &#40;Berichts-Generator und SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md).  
   
-##  <a name="ConvertSparklinetoChart"></a>Umstellen einer sparkline oder eines Daten Balkens in ein vollständiges Diagramm  
+##  <a name="converting-a-sparkline-or-data-bar-to-a-full-chart"></a><a name="ConvertSparklinetoChart"></a> Konvertieren einer Sparkline oder eines Datenbalkens in ein Volldiagramm  
  Da Sparklines und Datenbalken nur eine Art von Diagramm sind, können Sie diese bei Bedarf in ein Volldiagramm mit allen entsprechenden Funktionen konvertieren, indem Sie mit der rechten Maustaste auf das Diagramm klicken und dann **In Volldiagramm konvertieren**auswählen. Wenn Sie dies durchführen, werden die Achsenlinien, Bezeichnungen, Teilstriche und die Legende automatisch hinzugefügt.  
   
 > [!NOTE]  
 >  Sie können ein Volldiagramm nicht durch einen einfachen Klick in eine Sparkline oder einen Datenbalken konvertieren. Sie können jedoch eine Sparkline oder einen Datenbalken aus einem Volldiagramm erstellen, indem Sie alle Diagrammelemente löschen, die nicht Teil von Sparklines und Datenbalken sind.  
 
-##  <a name="HowTo"></a>Themen zur Vorgehensweise  
- [Hinzufügen von Sparklines und Daten Balken &#40;Berichts-Generator und SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Themen zur Vorgehensweise  
+ [Hinzufügen von Sparklines und Datenbalken &#40;Berichts-Generator und SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md)  
   
  [Ausrichten von Diagrammdaten in einer Tabelle oder einer Matrix &#40;Berichts-Generator und SSRS&#41;](align-the-data-in-a-chart-in-a-table-or-matrix-report-builder-and-ssrs.md)  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66104959"
   
  [Hinzufügen oder Entfernen von Rändern aus einem Diagramm &#40;Berichts-Generator und SSRS&#41;](add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  
   
- [Ändern eines Diagramm Typs &#40;Berichts-Generator und SSRS&#41;](change-a-chart-type-report-builder-and-ssrs.md)  
+ [Ändern eines Diagrammtyps (Berichts-Generator und SSRS)](change-a-chart-type-report-builder-and-ssrs.md)  
   
  [Definieren von Farben in einem Diagramm mit einer Palette &#40;Berichts-Generator und SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66104959"
   
  [Angeben einer logarithmischen Skalierung (Berichts-Generator und SSRS)](specify-a-logarithmic-scale-report-builder-and-ssrs.md)  
   
- [Angeben eines Achsenintervalls &#40;Berichts-Generator und SSRS&#41;](specify-an-axis-interval-report-builder-and-ssrs.md)  
+ [Angeben eines Achsenintervalls (Berichts-Generator und SSRS)](specify-an-axis-interval-report-builder-and-ssrs.md)  
   
  [Angeben von Farben, die für mehrere Formdiagramme konsistent sind &#40;Berichts-Generator und SSRS&#41;](shape-charts-report-builder-and-ssrs.md)  
   

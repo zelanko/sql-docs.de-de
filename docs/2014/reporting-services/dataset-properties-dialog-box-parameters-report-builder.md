@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 295a40bc7964e50e5fc0c4a9ea0294b593fdde18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109389"
 ---
 # <a name="dataset-properties-dialog-box-parameters-report-builder"></a>Dataseteigenschaften (Dialogfeld), Parameter (Berichts-Generator)
@@ -60,12 +60,12 @@ ms.locfileid: "66109389"
   
  Um NULL anzugeben, aktivieren Sie die Option NULL zulassen.  
   
- **Nur Leseberechtigung**  
+ **Schreibgeschützt**  
  Nur für freigegebene Datasets.  
   
  Aktivieren Sie diese Option, um diesen Parameter in der freigegebenen Datasetdefinition als schreibgeschützt zu markieren. Wenn das freigegebene Dataset einem Bericht hinzugefügt wird, wird der Parameter nicht in den Eigenschaften angezeigt. Wenn das freigegebene Dataset auf dem Berichtsserver zwischengespeichert wird, kann der Wert nicht geändert werden.  
   
- **Nullable**  
+ **NULL zulassen**  
  Nur für freigegebene Datasets.  
   
  Aktivieren Sie diese Option, um NULL-Werte zuzulassen.  
@@ -79,11 +79,11 @@ ms.locfileid: "66109389"
  [Berichts-Generator Hilfe zu Dialog Feldern, Bereichen und Assistenten](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Dataseteigenschaften (Dialog Feld), Abfrage &#40;Berichts-Generator&#41;](report-data/dataset-properties-dialog-box-query-report-builder.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
- [Tutorial: Add a Parameter to Your Report (Report Builder) (Tutorial: Hinzufügen eines Parameters zu einem Bericht (Berichts-Generator))](tutorial-add-a-parameter-to-your-report-report-builder.md)   
- [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
- [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [Tutorial: Hinzufügen eines Parameters zu einem Bericht &#40;Berichts-Generator&#41;](tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Berichts Parameter &#40;Berichts-Generator und Berichts-Designer&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Melden Sie eingebettete Datasets und freigegebene Datasets &#40;Berichts-Generator und SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Abfrage-Designer &#40;Berichts-Generator&#41;](../../2014/reporting-services/query-designers-report-builder.md)   
- [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [Melden Sie eingebettete Datasets und freigegebene Datasets &#40;Berichts-Generator und SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Erstellen eines freigegebenen Datasets oder eingebetteten Datasets &#40;Berichts-Generator und SSRS&#41;](report-data/create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
   

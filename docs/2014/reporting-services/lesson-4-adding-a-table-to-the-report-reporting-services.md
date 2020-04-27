@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3bb152b749041451cdb3a3294c24d8b172c49a99
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108451"
 ---
 # <a name="lesson-4-adding-a-table-to-the-report-reporting-services"></a>Lektion 4: Hinzufügen einer Tabelle zum Bericht (Reporting Services)
@@ -70,7 +70,7 @@ ms.locfileid: "66108451"
  Sie haben Ihrem Bericht erfolgreich einen Tabellendatenbereich hinzugefügt, dem Datenbereich Felder hinzugefügt und den Bericht in der Vorschau angezeigt. Anschließend formatieren Sie Spaltenheader sowie Datums- und Währungswerte. Weitere Informationen finden Sie unter [Lektion 5: Formatieren eines Berichts (Reporting Services)](../reporting-services/lesson-5-formatting-a-report-reporting-services.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Tabellen (Berichts-Generator und SSRS)](report-design/tables-report-builder-and-ssrs.md)   
+ [Tabellen &#40;Berichts-Generator und SSRS&#41;](report-design/tables-report-builder-and-ssrs.md)   
  [Datasetfeld-Sammlung &#40;Berichts-Generator und SSRS&#41;](report-data/dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

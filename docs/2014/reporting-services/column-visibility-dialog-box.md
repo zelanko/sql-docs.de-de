@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 246189cf3b49212379c5c87f5600388097a2fb11
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109771"
 ---
 # <a name="column-visibility-dialog-box"></a>Spaltensichtbarkeit (Dialogfeld)
   Mithilfe des Dialogfelds **Spaltensichtbarkeit** können Sie die ausgewählte Spalte beim ersten Ausführen des Berichts anzeigen oder ausblenden oder die Sichtbarkeit der Spalte mit einem anderen Berichtselement aktivieren bzw. deaktivieren.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Bei erstmaliger Ausführung des Berichts**  
  Wählen Sie eine Option aus, um die ursprüngliche Anzeige des Berichtselements im Bericht anzugeben.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66109771"
 ## <a name="see-also"></a>Weitere Informationen  
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Hinzufügen einer Erweiterungs-oder Reduzier Aktion zu einem Element &#40;Berichts-Generator und SSRS&#41;](report-design/add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs.md)   
- [Bilder &#40;Berichts-Generator und SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
- [Report Designer F1 Help (Berichts-Designer (F1-Hilfe))](tools/report-designer-f1-help.md)  
+ [Images &#40;Berichts-Generator und SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [Berichts-Designer (F1-Hilfe)](tools/report-designer-f1-help.md)  
   
   

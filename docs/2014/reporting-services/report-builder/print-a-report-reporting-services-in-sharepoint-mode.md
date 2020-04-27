@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8bc6234789e85105799a865e46b8b7ffe82286f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107752"
 ---
 # <a name="print-a-report-reporting-services-in-sharepoint-mode"></a>Drucken eines Berichts (Reporting Services im SharePoint-Modus)
@@ -49,6 +49,6 @@ ms.locfileid: "66107752"
      Klicken Sie auf die Schaltfläche **Vorschau** , um den Bericht vor dem Drucken anzuzeigen. Dadurch wird die erste Seite des Berichts in einem separaten Vorschaufenster geöffnet. Weitere Seiten werden beim Rendern des Berichts auf dem Berichtsserver verfügbar. Ein als Vorschau angezeigter Bericht wird im EMF-Format gerendert. Sie können zur vorherigen oder nächsten Seite navigieren, bis die letzte Seite erreicht ist. Dann ist die Schaltfläche **Weiter** deaktiviert. Klicken Sie auf die Schaltfläche **Ränder** , um die Druckränder auf der Vorschauseite zu ändern. Das Dialogfeld **Ränder** wird angezeigt. Konfigurieren Sie den oberen, unteren, rechten und linken Rand, und klicken Sie auf **OK**. Das Dialogfeld wird geschlossen, und die Einstellungen werden für die Renderingvorschau und den Druckvorgang gespeichert.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Enable and Disable Client-Side Printing for Reporting Services (Aktivieren und Deaktivieren des clientseitige Drucks für Reporting Services)](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
+ [Aktivieren und Deaktivieren des clientseitige Drucks für Reporting Services](../report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
   

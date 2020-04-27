@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0a3cbe076564d1ce24cbe606485462cbfe012407
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109892"
 ---
 # <a name="calculated-series-properties-dialog-box-markers-report-builder-and-ssrs"></a>Eigenschaften von berechneten Reihen (Dialogfeld), Marker (Berichts-Generator und SSRS)
   Wählen Sie im Dialogfeld **Eigenschaften von berechneten Reihen** die Option **Marker** aus, um die Darstellung von Markern auf den einzelnen Datenpunkten einer Reihe zu definieren. Marker sind nur für bestimmte Diagrammtypen verfügbar. Die folgenden Diagrammtypen unterstützen Marker: Flächendiagramm, Balkendiagramm, Säulendiagramm, Liniendiagramm, Polardiagramm und Punktdiagramm. Weitere Informationen zu Diagrammfunktionen finden Sie unter [Diagrammtypen &#40;Berichts-Generator und SSRS&#41;](report-design/chart-types-report-builder-and-ssrs.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Markertyp**  
  Wählen Sie einen Markertyp aus, wenn Marker im Diagramm aktiviert werden. Standardmäßig ist der Wert **Kreis**festgelegt.  
   
@@ -41,9 +41,9 @@ ms.locfileid: "66109892"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
- [Formatieren von Reihenfarben in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Definieren von Farben in einem Diagramm mit einer Palette (Berichts-Generator und SSRS)](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
+ [Formatieren von Reihen Farben in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Formatieren von Achsen Bezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Definieren von Farben in einem Diagramm mit einer Palette &#40;Berichts-Generator und SSRS&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [Zeichnen von Daten auf einer sekundären Achse &#40;Berichts-Generator und SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [Formatieren von Datenpunkten in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
  [Hinzufügen eines gleitenden Durchschnitts zu einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  

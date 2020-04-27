@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 74bb1b6e8178f104c3987cedba1986c599e6d42b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105319"
 ---
 # <a name="avg-function-report-builder-and-ssrs"></a>Avg-Funktion (Berichts-Generator und SSRS)
@@ -38,8 +38,7 @@ Avg(expression, scope, recursive)
  (`String`) optional. Der Name eines Datasets, einer Gruppe oder eines Datenbereichs mit den Berichtselementen, auf die die Aggregatfunktion anzuwenden ist. Wenn *scope* nicht angegeben ist, wird der aktuelle Bereich verwendet.  
   
  *recursive*  
- (**Enumerationstyp**) Optional. 
-  `Simple` (Standardwert) oder `RdlRecursive`. Gibt an, ob die Aggregation rekursiv auszuführen ist.  
+ (**Enumerationstyp**) Optional. `Simple` (Standardwert) oder `RdlRecursive`. Gibt an, ob die Aggregation rekursiv auszuführen ist.  
   
 ## <a name="return-type"></a>Rückgabetyp  
  Gibt für Dezimalausdrücke einen Wert vom Typ `Decimal` und für alle anderen Ausdrücke einen Wert vom Typ `Double` zurück.  

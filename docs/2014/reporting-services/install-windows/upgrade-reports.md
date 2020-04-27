@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8f97567188cc3c1f4e4082be1c4c1378ca97122f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108595"
 ---
 # <a name="upgrade-reports"></a>Upgrade Reports
@@ -43,28 +43,26 @@ ms.locfileid: "66108595"
   
 -   [Vom Upgrade unterstützte Versionen](#bkmk_versionsupported)  
   
--   [Berichts Definitions Dateien (. RDL) und Berichts-Designer](#bkmk_rdlfiles)  
+-   [Berichtsdefinitionsdateien (RDL-Dateien) und Berichts-Designer](#bkmk_rdlfiles)  
   
--   [Veröffentlichte Berichte und Berichts Momentaufnahmen](#bkmk_publishedreports_and_snapshots)  
+-   [Veröffentlichte Berichte und Berichtsmomentaufnahmen](#bkmk_publishedreports_and_snapshots)  
   
--   [Abwärts Kompatibilitätsmodus](#bkmk_backcompat)  
+-   [Abwärtskompatibilitätsmodus](#bkmk_backcompat)  
   
--   [Aktualisieren eines Berichts mit unter Berichten](#bkmk_subreports)  
+-   [Aktualisieren eines Berichts mit Unterberichten](#bkmk_subreports)  
   
--   [Aktualisieren eines Berichts mit benutzerdefinierten Berichts Elementen](#bkmk_CRIs)  
+-   [Aktualisieren eines Berichts mit benutzerdefinierten Berichtselementen](#bkmk_CRIs)  
   
 -   [CRI konvertieren (Dialogfeld)](#bkmk_convertCRIdialog)  
   
-##  <a name="bkmk_versionsupported"></a>Vom Upgrade unterstützte Versionen  
+##  <a name="versions-supported-by-upgrade"></a><a name="bkmk_versionsupported"></a>Vom Upgrade unterstützte Versionen  
  Berichte, die in einer vorherigen Version von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] erstellt wurden, können aktualisiert werden. Dazu gehören die folgenden Versionen:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 mit Service Pack 1  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 mit Service Pack 1  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 mit Service Pack 2  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 mit Service Pack 2  
   
 -   [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]  
   
@@ -72,7 +70,7 @@ ms.locfileid: "66108595"
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
-##  <a name="bkmk_rdlfiles"></a>Berichts Definitions Dateien (. RDL) und Berichts-Designer  
+##  <a name="report-definition-rdl-files-and-report-designer"></a><a name="bkmk_rdlfiles"></a>Berichts Definitions Dateien (. RDL) und Berichts-Designer  
  Eine Berichtsdefinitionsdatei schließt einen Verweis auf den RDL-Namespace ein, der die Version des Berichtsdefinitionsschemas angibt, das zur Überprüfung der RDL-Datei verwendet wird.  
   
  Wenn Sie eine RDL-Datei im Berichts-Designer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]öffnen und der Bericht für einen vorherigen Namespace erstellt wurde, erstellt der Berichts-Designer automatisch eine Sicherungsdatei und aktualisiert den Bericht auf den aktuellen Namespace. Dies ist die einzige Möglichkeit, wie Sie eine Berichtsdefinitionsdatei aktualisieren können.  
@@ -86,15 +84,15 @@ ms.locfileid: "66108595"
   
  Informationen zum Ermitteln des aktuellen RDL-Schemas für einen Bericht, einen Berichtsserver oder den Berichts-Designer finden Sie unter [Suchen der Berichtsdefinitions-Schemaversion &#40;SSRS&#41;](../reports/find-the-report-definition-schema-version-ssrs.md).  
   
-##  <a name="bkmk_publishedreports_and_snapshots"></a>Veröffentlichte Berichte und Berichts Momentaufnahmen  
+##  <a name="published-reports-and-report-snapshots"></a><a name="bkmk_publishedreports_and_snapshots"></a>Veröffentlichte Berichte und Berichts Momentaufnahmen  
  Bei der ersten Verwendung versucht der Berichtsserver, vorhandene veröffentlichte Berichte und Berichtsmomentaufnahmen auf das neue Berichtsdefinitionsschema zu aktualisieren, ohne dass Sie etwas unternehmen müssen. Es wird versucht, das Upgrade auszuführen, wenn der Benutzer einen Bericht oder eine Berichtsmomentaufnahme anzeigt bzw. wenn der Berichtsserver ein Abonnement verarbeitet. Die Berichtsdefinition wird nicht ersetzt, sondern weiterhin auf dem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Berichtsserver im ursprünglichen Schema gespeichert. Wenn ein Bericht nicht automatisch aktualisiert werden kann, wird er im Abwärtskompatibilitätsmodus ausgeführt.  
   
-##  <a name="bkmk_backcompat"></a>Abwärts Kompatibilitätsmodus  
+##  <a name="backward-compatibility-mode"></a><a name="bkmk_backcompat"></a>Abwärts Kompatibilitätsmodus  
  Berichte, die erfolgreich aktualisiert wurden, werden vom [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] -Berichtsprozessor verarbeitet. Wenn ein Bericht nicht automatisch aktualisiert werden kann, wird er vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsprozessor im Abwärtskompatibilitätsmodus verarbeitet. Ein Bericht kann nicht von beiden Berichtsprozessoren verarbeitet werden. Bei der ersten Verwendung wird ein Bericht entweder erfolgreich aktualisiert oder für den Abwärtskompatibilitätsmodus markiert.  
   
  Nur der [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] -Berichtsprozessor unterstützt neue Funktionen. Wenn ein Bericht nicht aktualisiert werden kann, können Sie zwar den gerenderten Bericht anzeigen, die neuen Funktionen sind jedoch nicht verfügbar. Um die neuen Funktionen nutzen zu können, muss ein Bericht erfolgreich aktualisiert werden.  
   
-##  <a name="bkmk_subreports"></a>Aktualisieren eines Berichts mit unter Berichten  
+##  <a name="upgrading-a-report-with-subreports"></a><a name="bkmk_subreports"></a>Aktualisieren eines Berichts mit unter Berichten  
  Wenn ein Bericht Unterberichte enthält, kann einer von vier möglichen Zustände während des Upgrades auftreten:  
   
 -   Der Hauptbericht und alle Unterberichte können erfolgreich aktualisiert werden. Sie werden vom [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] -Berichtsprozessor verarbeitet.  
@@ -109,9 +107,8 @@ ms.locfileid: "66108595"
   
  Für Drillthroughberichte gilt diese Einschränkung nicht, da sie als unabhängige Berichte verarbeitet werden.  
   
-##  <a name="bkmk_CRIs"></a>Aktualisieren eines Berichts mit benutzerdefinierten Berichts Elementen  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichte können benutzerdefinierte Berichtselemente (CRI) enthalten, die von Drittanbietern bereitgestellt und vom Systemadministrator auf dem Computer zur Berichtserstellung und dem Berichtsserver installiert wurden. Berichte, die CRIs enthalten, können auf die folgenden Weisen aktualisiert werden:  
+##  <a name="upgrading-a-report-with-custom-report-items"></a><a name="bkmk_CRIs"></a>Aktualisieren eines Berichts mit benutzerdefinierten Berichts Elementen  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichte können benutzerdefinierte Berichtselemente (CRI) enthalten, die von Drittanbietern bereitgestellt und vom Systemadministrator auf dem Computer zur Berichtserstellung und dem Berichtsserver installiert wurden. Berichte, die CRIs enthalten, können auf die folgenden Weisen aktualisiert werden:  
   
 -   Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Berichtsserver von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 2005 wird auf einen [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] -Berichtsserver aktualisiert. Auf dem Berichtsserver veröffentlichte Berichte werden automatisch bei der ersten Verwendung aktualisiert.  
   
@@ -140,7 +137,7 @@ ms.locfileid: "66108595"
 |Dundas 2005 Chart CRI mit nicht unterstützten Funktionen|Es wird kein Upgrade durchgeführt.<br /><br /> Sie werden vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsprozessor verarbeitet.|  
 |Dundas 2005 Gauge CRI mit nicht unterstützten Funktionen|Es wird kein Upgrade durchgeführt.<br /><br /> Sie werden vom [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichtsprozessor verarbeitet.|  
   
-###  <a name="OpeningaReport"></a>Öffnen eines Berichts mit CRIs in Berichts-Designer  
+###  <a name="opening-a-report-with-cris-in-report-designer"></a><a name="OpeningaReport"></a> Öffnen eines Berichts mit CRIs im Berichts-Designer  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Wenn Sie einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 2005-Bericht mit CRIs in Berichts-Designer in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]öffnen, wird der Bericht auf das neue Berichts Definitions Schema aktualisiert. Abhängig von den im Bericht enthaltenen CRIs wird eine der folgenden Aktionen ausgeführt:  
   
 -   Es wurden CRIs von Drittanbietern erkannt. Wenn die auf dem Computer zur Berichtserstellung installierte CRI-Version nicht mit dem neuen RDL-Schema kompatibel ist, wird in der Entwurfsoberfläche ein Textfeld mit einem roten X angezeigt. Sie müssen sich an Ihren Systemadministrator wenden, um neue Versionen der CRIs von Drittanbietern zu installieren, die mit dem neuen RDL-Schema kompatibel sind.  
@@ -188,11 +185,11 @@ ms.locfileid: "66108595"
   
 -   Benutzerdefinierte Bilder  
   
-###  <a name="bkmk_convertCRIdialog"></a>CRI konvertieren (Dialog Feld)  
+###  <a name="convert-cri-dialog-box"></a><a name="bkmk_convertCRIdialog"></a>CRI konvertieren (Dialog Feld)  
  Dieser Bericht enthält benutzerdefinierte Berichtselemente (Custom Report Item, CRI) mit nicht unterstützten Funktionen. CRIs sind Erweiterungen der Berichtsdefinitionssprache (Report Definition Language, RDL) zur Unterstützung benutzerdefinierter Objekte, die Daten in einem Bericht anzeigen. CRIs umfassen Entwurfszeit- und Laufzeitkomponenten, die von Drittanbietern bereitgestellt werden.  
   
 > [!NOTE]  
->  Die Entscheidung, benutzerdefinierte Berichtselemente auf einem Berichtsserver zuzulassen, wird vom Systemadministrator getroffen. Zum Anzeigen von CRIs in einem Bericht müssen die CRI-Komponenten auf dem Berichterstellungsserver installiert sein, um einen Bericht als Vorschau anzuzeigen, und auf dem Berichtsserver, um einen veröffentlichten oder hochgeladenen Bericht anzuzeigen. Weitere Informationen finden Sie unter [Benutzerdefinierte Berichtselemente](../custom-report-items/custom-report-items.md) und in der Dokumentation des Softwaredrittanbieters.  
+>  Die Entscheidung, benutzerdefinierte Berichtselemente auf einem Berichtsserver zuzulassen, wird vom Systemadministrator getroffen. Zum Anzeigen von CRIs in einem Bericht müssen die CRI-Komponenten auf dem Berichterstellungsserver installiert sein, um einen Bericht als Vorschau anzuzeigen, und auf dem Berichtsserver, um einen veröffentlichten oder hochgeladenen Bericht anzuzeigen. Weitere Informationen finden Sie unter [Benutzerdefinierte Berichts Elemente](../custom-report-items/custom-report-items.md) und Dokumentation des Drittanbieter-Softwareanbieters.  
   
  Einige CRIs können im neuen Berichtsdefinitionsformat in Berichtselemente konvertiert werden. Die Liste der CRIs, die konvertiert werden können, finden Sie unter [Upgrading Reports](upgrade-reports.md). Entscheiden Sie anhand der folgenden Liste, ob die CRIs in diesem Bericht konvertiert werden sollen:  
   

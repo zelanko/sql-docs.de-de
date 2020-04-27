@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 356ad7ed670ee13bbc6b4e2d7a86cb6095e79e10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108397"
 ---
 # <a name="lesson-7-add-drillthrough-action-on-parent-report"></a>Lektion 7: Hinzufügen einer Drillthroughaktion für den übergeordneten Bericht
@@ -36,7 +36,7 @@ ms.locfileid: "66108397"
   
 7.  Geben Sie im Feld Name den **Namen** **ProductID** ein, und klicken Sie dann in der Dropdown Liste **Wert** auf **ProductID** .  
   
-8.  Klicken Sie zum Fertigstellen auf **OK** .  
+8.  Klicken Sie auf **OK** , um den Vorgang abzuschließen.  
   
 ## <a name="next-task"></a>Nächste Aufgabe  
  Sie haben dem übergeordneten Bericht erfolgreich eine Drillthroughaktion hinzugefügt. Anschließend erstellen Sie einen Datenfilter für die Datentabelle, die für den untergeordneten Bericht definiert wurde.  

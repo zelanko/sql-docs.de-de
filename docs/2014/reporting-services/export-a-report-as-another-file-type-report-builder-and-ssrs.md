@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6da8c1190c07d3df930a2d83937e3a5ec39da32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109179"
 ---
 # <a name="export-a-report-as-another-file-type-report-builder-and-ssrs"></a>Exportieren eines Berichts in ein anderes Dateiformat (Berichts-Generator und SSRS)
@@ -56,13 +56,13 @@ ms.locfileid: "66109179"
   
 6.  Klicken Sie auf **Öffnen**, um den Bericht im ausgewählten Exportformat anzuzeigen.  
   
-     \- oder –  
+     \- oder -  
   
      Klicken Sie auf **Speichern**, um den Bericht sofort im ausgewählten Exportformat zu speichern.  
   
      Der Bericht wird mit der Anwendung, die dem von Ihnen gewählten Format zugeordnet ist, entweder angezeigt oder gespeichert. Wenn Sie auf **Speichern**klicken, werden Sie aufgefordert, einen Speicherort für Ihren Bericht anzugeben.  
   
-     **Hinweis** Wenn das Programm den Bericht nicht im gewählten Format öffnen kann, weil diesem Dateityp kein Programm zugeordnet ist, werden Sie aufgefordert, den exportierten Bericht zu speichern oder ein Programm online zu finden, um den Bericht zu öffnen.  
+     **Hinweis** Wenn das Programm den Bericht nicht im gewählten Format öffnen kann, weil diesem Dateityp kein Programm zugeordnet ist, werden Sie aufgefordert, den exportierten Bericht zu speichern oder im Internet ein Programm zum Öffnen des Berichts zu suchen.  
   
 ### <a name="to-export-a-report-as-another-file-type-in-a-sharepoint-library"></a>So exportieren Sie einen Bericht als anderen Dateityp in eine SharePoint-Bibliothek  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66109179"
   
 3.  Klicken Sie auf **Öffnen**, um den Bericht im ausgewählten Exportformat anzuzeigen.  
   
-     \- oder –  
+     \- oder -  
   
      Klicken Sie auf **Speichern**, um den Bericht sofort im ausgewählten Exportformat zu speichern.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66109179"
   
      Sie können den Dateinamen des exportierten Berichts ändern.  
   
-     **Hinweis** Wenn das Programm den Bericht nicht im gewählten Format öffnen kann, weil diesem Dateityp kein Programm zugeordnet ist, werden Sie aufgefordert, den exportierten Bericht zu speichern oder ein Programm online zu finden, um den Bericht zu öffnen.  
+     **Hinweis** Wenn das Programm den Bericht nicht im gewählten Format öffnen kann, weil diesem Dateityp kein Programm zugeordnet ist, werden Sie aufgefordert, den exportierten Bericht zu speichern oder im Internet ein Programm zum Öffnen des Berichts zu suchen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)   

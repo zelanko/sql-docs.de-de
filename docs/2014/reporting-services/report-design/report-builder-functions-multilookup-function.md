@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e6a60f1b47c7015fa0fca27cc7ce68bf4d04b15d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105211"
 ---
 # <a name="multilookup-function-report-builder-and-ssrs"></a>Multilookup-Funktion (Berichts-Generator und SSRS)
@@ -47,8 +47,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
  Gibt einen Wert vom Typ `VariantArray` zurück; gibt `Nothing` zurück, wenn keine Übereinstimmung vorhanden ist.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Verwenden Sie `Multilookup`, um eine Wertemenge aus einem Dataset für Name-Wert-Paare abzurufen, in dem jedes Paar über eine 1:1-Beziehung verfügt. 
-  `MultiLookup` ist mit dem Aufrufen von `Lookup` für eine Menge von Namen oder Schlüsseln vergleichbar. Beispiel: Für einen mehrwertigen Parameter, der auf Primärschlüsselbezeichnern basiert, können Sie `Multilookup` in einem Ausdruck in einem Textfeld in einer Tabelle verwenden, um zugeordnete Werte aus einem Dataset abzurufen, das nicht an den Parameter oder die Tabelle gebunden ist.  
+ Verwenden Sie `Multilookup`, um eine Wertemenge aus einem Dataset für Name-Wert-Paare abzurufen, in dem jedes Paar über eine 1:1-Beziehung verfügt. `MultiLookup` ist mit dem Aufrufen von `Lookup` für eine Menge von Namen oder Schlüsseln vergleichbar. Beispiel: Für einen mehrwertigen Parameter, der auf Primärschlüsselbezeichnern basiert, können Sie `Multilookup` in einem Ausdruck in einem Textfeld in einer Tabelle verwenden, um zugeordnete Werte aus einem Dataset abzurufen, das nicht an den Parameter oder die Tabelle gebunden ist.  
   
  Mit `Multilookup` wird Folgendes ausgeführt:  
   
@@ -62,8 +61,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
  Es gelten folgende Einschränkungen:  
   
--   
-  `Multilookup` wird ausgewertet, nachdem alle Filterausdrücke angewendet wurden.  
+-   `Multilookup` wird ausgewertet, nachdem alle Filterausdrücke angewendet wurden.  
   
 -   Nur eine Suchebene wird unterstützt. Ein Quell-, Ziel- oder Ergebnisausdruck kann keinen Verweis auf eine Suchfunktion einschließen.  
   
@@ -71,8 +69,7 @@ Multilookup(source_expression, destination_expression, result_expression, datase
   
 -   Quell-, Ziel- und Ergebnisausdrücke können keine Verweise auf Berichts- oder Gruppenvariablen einschließen.  
   
--   
-  `Multilookup` kann nicht als Ausdruck für die folgenden Berichtselemente verwendet werden:  
+-   `Multilookup` kann nicht als Ausdruck für die folgenden Berichtselemente verwendet werden:  
   
     -   Dynamische Verbindungszeichenfolgen für eine Datenquelle.  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2de2ed783db4f717b86e94424b994f78d4eb75d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105589"
 ---
 # <a name="managing-report-parts"></a>Verwalten von Berichtsteilen
@@ -31,7 +31,7 @@ ms.locfileid: "66105589"
  Wenn Berichtsteile von einer Berichterstellungsanwendung wie Berichts-Generator auf einem Berichtsserver im integrierten SharePoint-Modus veröffentlicht werden, wird auch der Berichtsserverkatalog aktualisiert, und die Suchergebnisse aus dem Berichtsteilkatalog entsprechen exakt dem neuen oder aktualisierten Berichtsteil.  
   
 #### <a name="directly-uploading-report-parts-to-a-sharepoint-folder"></a>Direktes Hochladen von Berichtsteilen in einen SharePoint-Ordner  
- Wenn ein Berichtsteil direkt in einen SharePoint-Dokumentordner hochgeladen (und nicht von einer Berichterstellungsanwendung veröffentlicht) wird, wird der Berichtsserverkatalog nicht zusätzlich aktualisiert. Daher wird der hochgeladene Berichtsteil bei Suchen im Berichtsteilkatalog nicht gefunden. Um besser zu gewährleisten, dass die SharePoint-Ordner und der Berichtsserverkatalog synchronisiert bleiben, können Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Feature zur Berichtsserver-Dateisynchronisierung auf dem SharePoint-Server aktivieren. Weitere Informationen finden Sie unter [Aktivieren der Berichts Server Dateisynchronisierung-Funktion in der SharePoint-zentral Administration](../activate-report-server-file-sync-feature-sharepoint-central-administration.md).  
+ Wenn ein Berichtsteil direkt in einen SharePoint-Dokumentordner hochgeladen (und nicht von einer Berichterstellungsanwendung veröffentlicht) wird, wird der Berichtsserverkatalog nicht zusätzlich aktualisiert. Daher wird der hochgeladene Berichtsteil bei Suchen im Berichtsteilkatalog nicht gefunden. Um besser zu gewährleisten, dass die SharePoint-Ordner und der Berichtsserverkatalog synchronisiert bleiben, können Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Feature zur Berichtsserver-Dateisynchronisierung auf dem SharePoint-Server aktivieren. Weitere Informationen finden Sie unter [Aktivieren des Features zur Berichtsserver-Dateisynchronisierung in der SharePoint-Zentraladministration](../activate-report-server-file-sync-feature-sharepoint-central-administration.md).  
   
  Die Dateien können auch durch das Aufrufen einiger Reporting Services-Verwaltung-APIs wie GetProperties und SetProperties synchronisiert werden.  
   
@@ -51,10 +51,10 @@ ms.locfileid: "66105589"
   
  (*) Neu in dieser Version.  
   
-|Eigenschaft|BESCHREIBUNG|Berichtsteil<br /><br /> Katalogsuchkriterien|  
+|Eigenschaft|Beschreibung|Berichtsteil<br /><br /> Katalogsuchkriterien|  
 |--------------|-----------------|---------------------------------------------|  
-|Name|Dies ist eines der Kriterien, nach denen ein Benutzer im Berichtsteilkatalog suchen kann.|Ja|  
-|BESCHREIBUNG|Möglicherweise möchten Sie Berichtsteilnamen auf eine Weise organisieren, die es für Benutzer einfacher macht, sie im Katalog zu finden. Beispielweise können Sie nach einer Beschreibung suchen, die mit "Vertrieb>>" beginnt, um alle Berichtsteile zu finden, die sich auf Vertriebsdaten und -präsentationen beziehen.|Ja|  
+|name|Dies ist eines der Kriterien, nach denen ein Benutzer im Berichtsteilkatalog suchen kann.|Ja|  
+|Beschreibung|Möglicherweise möchten Sie Berichtsteilnamen auf eine Weise organisieren, die es für Benutzer einfacher macht, sie im Katalog zu finden. Beispielweise können Sie nach einer Beschreibung suchen, die mit "Vertrieb>>" beginnt, um alle Berichtsteile zu finden, die sich auf Vertriebsdaten und -präsentationen beziehen.|Ja|  
 |CreatedBy|Die ID des Benutzers, der den Berichtsteil zur Berichtsserver-Datenbank hinzugefügt hat. Das genaue Format hängt von der Authentifizierungsmethode ab. Einige Authentifizierungsmethoden führen z. B. dazu, dass der vollständige Domänen-\Benutzername im CreatedBy-Feld und dem ModifiedBy-Feld angezeigt wird.|Ja|  
 |CreationDate|Das Datum, an dem der Berichtsteil ursprünglich erstellt wurde.<br /><br /> Dies ist eines der Kriterien, nach denen ein Benutzer im Berichtsteilkatalog suchen kann.|Ja|  
 |ModifiedBy|ModifiedBy ist der Name des Benutzers, der den Berichtsteil zuletzt geändert hat.|Ja|  
@@ -75,13 +75,13 @@ ms.locfileid: "66105589"
   
 ### <a name="server-in-sharepoint-integrated-mode"></a>Server im integrierten SharePoint-Modus  
   
-|Aktionen|Role|  
+|Aktionen|Role-Eigenschaft|  
 |-------------|----------|  
 |Hinzufügen, Löschen, Bearbeiten von Elementeigenschaften, Verwalten der Sicherheit und Herunterladen von Berichtsteilen|Vollzugriff|  
 |Hinzufügen, Löschen, Bearbeiten von Elementeigenschaften und Herunterladen von Berichtsteilen|Entwurf<br /><br /> Mitwirken|  
 |Suchen und Wiederverwenden|Lesen<br /><br /> Nur anzeigen|  
   
-### <a name="security-considerations"></a>Sicherheitshinweise  
+### <a name="security-considerations"></a>Überlegungen zur Sicherheit  
   
 -   Wenn Berichtsteildefinitionen in einem Bericht wiederverwendet werden, werden sie zusammen mit der identifizierenden Komponenten-ID vollständig in die Berichtsdefinition kopiert. Wenn ein Berichtsteil auf dem Server aktualisiert wird, können Benutzer wählen, die aktualisierten Berichtsteile zu ihrem Bericht herunterzuladen. Die heruntergeladenen Updates sind ebenfalls vollständige Kopien des Berichtsteils in der Berichtsdefinition und ersetzen die vorhandene Version des Berichtsteils, die im Bericht enthalten war.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "66105589"
 -   Für Berichtsteile werden die gleichen Berechtigungsrichtlinien wie für den vorhandenen Elementtyp „Ressource“ verwendet. Hinsichtlich der Vererbung von Sicherheitsberechtigungen wird innerhalb eines Ordners nicht zwischen herkömmlichen Ressourcenelementen und Berichtsteilen unterschieden. Beispielsweise erbt der Berichtsteil die gleiche Berechtigungsrichtlinie wie die Bilder im selben Ordner. Wenn diese Unterscheidung erforderlich ist, kann die Sicherheit auf Elementebene für die gewünschten Berichtsteile konfiguriert werden. Andernfalls können Sie Berichtsteile in separaten Ordnern speichern, für die die benötigten Berechtigungen konfiguriert wurden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Berichtsteile und Datasets in Berichts-Generator](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Berichts Teile und Datasets in Berichts-Generator](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [Allgemeine Eigenschaften (Seite), Berichts Teile &#40;Berichts-Manager&#41;](../general-properties-page-report-parts-report-manager.md)   
  [Die Seite "Elemente verschieben" &#40;Berichts-Manager&#41;](../move-items-page-report-manager.md)   
  [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   

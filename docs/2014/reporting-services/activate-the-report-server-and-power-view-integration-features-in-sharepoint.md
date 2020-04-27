@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e30ae6ea0e7fa314748c4da265650273c0a7d56e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110026"
 ---
 # <a name="activate-the-report-server-and-power-view-integration-features-in-sharepoint"></a>Aktivieren der Berichtsserver- und Power View-Integrationsfunktionen in SharePoint
@@ -30,11 +30,11 @@ ms.locfileid: "66110026"
   
  Inhalte dieses Themas:  
   
--   [So aktivieren Sie die Website Sammlungs Funktionen des Berichts Servers und der Power View-Integration:](#bkmk_features)  
+-   [So aktivieren Sie die Websitesammlungsfunktion für die Berichtsserver- und Power View-Integration:](#bkmk_features)  
   
--   [So aktivieren oder deaktivieren Sie die Website Sammlungs Funktion für Reporting Services zentral Administration:](#bkmk_centraladmin)  
+-   [So aktivieren oder deaktivieren Sie die Websitesammlungsfunktion für die Berichtsserver-Zentraladministration:](#bkmk_centraladmin)  
   
-##  <a name="bkmk_features"></a>So aktivieren Sie die Website Sammlungs Funktionen des Berichts Servers und der Power View-Integration:  
+##  <a name="to-activate-the-report-server-and-power-view-integration-site-collection-features"></a><a name="bkmk_features"></a>So aktivieren Sie die Website Sammlungs Funktionen des Berichts Servers und der Power View-Integration:  
   
 1.  Öffnen Sie den Browser für die Website, auf der die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Funktionen aktiviert werden sollen.  
   
@@ -46,11 +46,11 @@ ms.locfileid: "66110026"
   
 5.  Suchen Sie in der Liste **Berichtsserver-Integrationsfunktion** oder **Funktion zur Power View-Integration** .  
   
-6.  Klicken Sie auf **Aktivieren**.  
+6.  Klicken Sie auf **Activate** (Aktivieren).  
   
  Verwenden Sie zum Deaktivieren der Funktionen die gleiche Prozedur, klicken Sie jedoch auf **Deaktivieren** statt auf **Aktivieren**.  
   
-##  <a name="bkmk_centraladmin"></a>So aktivieren oder deaktivieren Sie die Website Sammlungs Funktion für Reporting Services zentral Administration:  
+##  <a name="to-activate-or-deactivate-reporting-services-central-administration-site-collection-feature"></a><a name="bkmk_centraladmin"></a>So aktivieren oder deaktivieren Sie die Website Sammlungs Funktion für Reporting Services zentral Administration:  
   
 1.  Öffnen Sie den Browser für die SharePoint-Zentraladministration.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66110026"
   
 5.  Suchen Sie in der Liste die Funktion **Berichtsserver-Zentraladministration** .  
   
-6.  Klicken Sie auf **Aktivieren**.  
+6.  Klicken Sie auf **Activate** (Aktivieren).  
   
  Verwenden Sie zum Deaktivieren der Funktion die gleiche Prozedur, klicken Sie jedoch auf **Deaktivieren** statt **Aktivieren**.  
   

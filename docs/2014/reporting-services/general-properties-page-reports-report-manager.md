@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b89d67636dd28514b8d5f34bee423e60abd9b81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109103"
 ---
 # <a name="general-properties-page-reports-report-manager"></a>Allgemeine Eigenschaften (Seite) (Berichte, Berichts-Manager)
@@ -43,7 +43,7 @@ ms.locfileid: "66109103"
  **In Listenansicht ausblenden**  
  Wählen Sie diese Option aus, um den Bericht für Benutzer auszublenden, die den Listenansichtsmodus im Berichts-Manager verwenden. Der Listenansichtsmodus ist das Standardanzeigeformat beim Durchsuchen der Ordnerhierarchie auf dem Berichtsserver. In der Listenansicht erstrecken sich Namen und Beschreibungen über die Seite. Das alternative Format ist die Detailsansicht. Detailansichten lassen Beschreibungen aus, enthalten jedoch andere Informationen zum Element. Obwohl Sie ein Element in der Listenansicht ausblenden können, kann es in der Detailansicht nicht ausgeblendet werden. Wenn Sie den Zugriff auf ein Element einschränken möchten, müssen Sie eine Rollenzuweisung erstellen.  
   
- **Anwenden**  
+ **übernehmen**  
  Klicken Sie auf diese Schaltfläche, um die Änderungen zu speichern.  
   
  **Löschen**  
@@ -55,7 +55,7 @@ ms.locfileid: "66109103"
  **Verknüpften Bericht erstellen**  
  Klicken Sie auf diese Schaltfläche, um die Seite Neuer verknüpfter Bericht zu öffnen. Weitere Informationen zu dieser Seite und zu verknüpften Berichten finden Sie unter [Seite "Neuer verknüpfter Bericht" &#40;Berichts-Manager&#41;](../../2014/reporting-services/new-linked-report-page-report-manager.md).  
   
- **Sicher**  
+ **Speichern**  
  Klicken Sie auf diese Schaltfläche, um eine schreibgeschützte Kopie der Berichtsdefinition zu extrahieren. Abhängig von den auf Ihrem Computer definierten Dateizuordnungen wird die Datei in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] oder einer anderen Anwendung geöffnet. In den meisten Fällen wird der Bericht als XML-Datei geöffnet.  
   
  Die von Ihnen geöffnete Kopie ist mit der ursprünglichen Berichtsdefinition identisch, die auf dem Berichtsserver veröffentlicht wurde. Alle Eigenschaften, die für den Bericht nach dessen Veröffentlichung festgelegt wurden (wie Parameter und Datenquelleneigenschaften) sind nicht in der von Ihnen geöffneten Datei enthalten.  

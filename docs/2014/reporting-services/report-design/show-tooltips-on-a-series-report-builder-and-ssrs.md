@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6901123f4a28560c504bc9a83522cb108a6d7b12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104925"
 ---
 # <a name="show-tooltips-on-a-series-report-builder-and-ssrs"></a>Anzeigen von QuickInfos für eine Reihe (Berichts-Generator und SSRS)
@@ -33,8 +33,8 @@ ms.locfileid: "66104925"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Formatieren von Datenpunkten in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
- [Ändern des Texts eines Legendenelements (Berichts-Generator und SSRS)](chart-legend-change-item-text-report-builder.md)   
- [Formatieren von Reihenfarben in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Ändern Sie den Text eines Legenden Elements &#40;Berichts-Generator und SSRS&#41;](chart-legend-change-item-text-report-builder.md)   
+ [Formatieren von Reihen Farben in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Hinzufügen einer Drillthroughaktion für einen Bericht (Berichts-Generator und SSRS)](add-a-drillthrough-action-on-a-report-report-builder-and-ssrs.md)  
   
   

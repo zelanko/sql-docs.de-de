@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6981b756bacd720284fcd38fd29c9ba371db8a87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107929"
 ---
 # <a name="exporting-to-a-csv-file-report-builder-and-ssrs"></a>Exportieren als CSV-Datei (Berichts-Generator und SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66107929"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="CSVRendering"></a> CSV-Rendering  
+##  <a name="csv-rendering"></a><a name="CSVRendering"></a>CSV-Rendering  
  Ein CSV-Bericht, der mit den Standardeinstellungen gerendert wurde, besitzt folgende Merkmale:  
   
 -   Das standardmäßige Feldtrennzeichen ist ein Komma (,).  
@@ -55,7 +55,7 @@ ms.locfileid: "66107929"
   
 -   Zeile  
   
--   Image  
+-   Bild  
   
 -   Rechteck  
   
@@ -96,7 +96,7 @@ ms.locfileid: "66107929"
   
  
   
-##  <a name="RenderingModes"></a> Renderermodi  
+##  <a name="renderer-modes"></a><a name="RenderingModes"></a> Renderermodi  
  Für die CSV-Renderingerweiterung stehen zwei Modi zur Verfügung. Ein Modus ist für Excel, der andere für Anwendungen von Drittanbietern optimiert, die eine strikte CSV-Kompatibilität mit der CSV-Spezifikation in RFC 4180 erfordern. Je nach verwendetem Modus werden Peerdatenbereiche unterschiedlich behandelt.  
   
 ### <a name="default-mode"></a>Standardmodus  
@@ -120,7 +120,7 @@ ms.locfileid: "66107929"
 #### <a name="formatting"></a>Formatierung  
  Die Werte sind unformatiert.  
   
-##  <a name="Interactivity"></a> Interaktivität  
+##  <a name="interactivity"></a><a name="Interactivity"></a>Interaktivität  
  Interaktivität wird von keinem der durch diesen Renderer generierten CSV-Formate unterstützt. Die folgenden interaktiven Elemente werden nicht gerendert:  
   
 -   Links  
@@ -139,16 +139,16 @@ ms.locfileid: "66107929"
   
 
   
-##  <a name="DeviceInfo"></a> Geräteinformationseinstellungen  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>Geräte Informationseinstellungen  
  Sie kännen einige Standardeinstellungen für diesen Renderer ändern, beispielsweise den Modus für das Rendern, die Zeichen, die als Trennzeichen verwendet werden können, und die Zeichen, die als Textqualifizierer für die Standardzeichenfolge verwendet werden können. Ändern Sie dazu die Geräteinformationseinstellungen. Weitere Informationen finden Sie unter [CSV Device Information Settings](../csv-device-information-settings.md).  
   
   
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Renderingverhalten (Berichts-Generator und SSRS)](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Renderingverhaltensweisen &#40;Berichts-Generator und SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
- [Rendern von Berichtselementen (Berichts-Generator und SSRS)](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Rendern von Berichts Elementen &#40;Berichts-Generator und SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

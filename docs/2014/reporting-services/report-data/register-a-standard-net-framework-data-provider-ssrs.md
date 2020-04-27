@@ -18,16 +18,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 208b1363de6b1c6892ba8f265365b1d304b6ceab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107155"
 ---
 # <a name="register-a-standard-net-framework-data-provider-ssrs"></a>Registrieren eines .NET Framework-Standarddatenproviders (SSRS)
   Wenn Sie zum Abrufen von Daten für ein [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Berichtsdataset einen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenanbieter eines Drittanbieters verwenden möchten, müssen Sie die [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieterassembly an zwei Speicherorten bereitstellen und registrieren: auf dem Berichterstellungsclient und auf dem Berichtsserver. Auf dem Berichterstellungsclient müssen Sie den Datenanbieter als Datenquellentyp registrieren und einem Abfrage-Designer zuordnen. Beim Erstellen eines Berichtsdatasets können Sie diesen Datenanbieter als Datenquellentyp auswählen. Der zugeordnete Abfrage-Designer wird geöffnet, um das Erstellen von Abfragen für diesen Datenquellentyp zu erleichtern. Der Datenanbieter muss auf dem Berichtsserver als Datenquellentyp registriert werden. Anschließend können Sie veröffentlichte Berichte verarbeiten, für die mithilfe dieses Datenanbieters Daten von einer Datenquelle abgerufen werden.  
   
- Es wird nicht notwendigerweise die gesamte Funktionalität von Drittanbieter-Datenanbietern unterstützt, die mit den Datenverarbeitungserweiterungen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verfügbar ist. Weitere Informationen finden Sie unter [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md). Informationen zum Erweitern der Funktionalität eines .[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] zu Datenanbietern finden Sie unter [Implementieren einer Datenverarbeitungs Erweiterung](../extensions/data-processing/implementing-a-data-processing-extension.md).  
+ Es wird nicht notwendigerweise die gesamte Funktionalität von Drittanbieter-Datenanbietern unterstützt, die mit den Datenverarbeitungserweiterungen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verfügbar ist. Weitere Informationen finden Sie unter [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md). Informationen zum Erweitern der Funktionalität eines .[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieters finden Sie unter [Implementieren von Datenverarbeitungserweiterungen](../extensions/data-processing/implementing-a-data-processing-extension.md).  
   
  Zum Installieren und Registrieren von Datenanbietern benötigen Sie Anmeldeinformationen als Administrator.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66107155"
   
 4.  Fügen Sie einen Eintrag für den [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieter hinzu.  
   
-    |attribute|Beschreibung|  
+    |attribute|BESCHREIBUNG|  
     |---------------|-----------------|  
     |`Name`|Geben Sie einen eindeutigen Namen für den Datenanbieter an, z. B. **MyNETDataProvider**. Die maximale Länge für das `Name`-Attribut beträgt 255 Zeichen. Der Name muss für sämtliche Einträge im `Extension`-Element einer Konfigurationsdatei eindeutig sein. Der hier eingeschlossene Wert wird beim Erstellen einer neuen Datenquelle in der Dropdownliste der Datenquellentypen angezeigt.|  
     |`Type`|Geben Sie eine durch Trennzeichen getrennte Liste ein, die den vollqualifizierten Namespace der Klasse enthält, die die <xref:System.Data.IDbConnection> -Schnittstelle implementiert, gefolgt vom Namen der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieterassembly (ohne die Dateinamenerweiterung DLL).|  
@@ -69,7 +69,7 @@ ms.locfileid: "66107155"
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   
     ```  
   
-     Wenn Sie die Assembly in den GAC (Global Assembly Cache, globalen Assemblycache) laden, müssen Sie die Eigenschaften für starke Namen bereitstellen. Beispiel:  
+     Wenn Sie die Assembly in den GAC (Global Assembly Cache, globalen Assemblycache) laden, müssen Sie die Eigenschaften für starke Namen bereitstellen. Zum Beispiel:  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly,Version=1.0.0.0, Culture=neutral, PublicKeyToken=MyPublicToken"/>  
@@ -131,7 +131,7 @@ ms.locfileid: "66107155"
   
 4.  Fügen Sie einen Eintrag für den Datenanbieter hinzu.  
   
-    |attribute|BESCHREIBUNG|  
+    |Attribut|Beschreibung|  
     |---------------|-----------------|  
     |`Name`|Geben Sie einen eindeutigen Namen für den Datenanbieter an, z. B. **MyNETDataProvider**. Die maximale Länge für das `Name`-Attribut beträgt 255 Zeichen. Der Name muss für sämtliche Einträge im `Extension`-Element einer Konfigurationsdatei eindeutig sein. Der hier eingeschlossene Wert wird beim Erstellen einer neuen Datenquelle in der Dropdownliste der Datenquellentypen angezeigt.|  
     |`Type`|Geben Sie eine durch Trennzeichen getrennte Liste ein, die den vollqualifizierten Namespace der Klasse enthält, die die <xref:System.Data.IDbConnection> -Schnittstelle implementiert, gefolgt vom Namen der [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Datenanbieterassembly (ohne die Dateinamenerweiterung DLL).|  
@@ -142,7 +142,7 @@ ms.locfileid: "66107155"
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly" />   
     ```  
   
-     Wenn Sie die Assembly in den GAC (Global Assembly Cache, globaler Assemblycache) laden, müssen Sie die Eigenschaften für starke Namen bereitstellen. Beispiel:  
+     Wenn Sie die Assembly in den GAC (Global Assembly Cache, globaler Assemblycache) laden, müssen Sie die Eigenschaften für starke Namen bereitstellen. Zum Beispiel:  
   
     ```  
     <Extension Name="MyNETDataProvider" Type="CompanyName.ExtensionName.DataProviderConnectionClass, DataProviderAssembly, Version=1.0.0.0, Culture=neutral, PublicKeyToken=MyPublicToken"/>  
@@ -196,14 +196,13 @@ ms.locfileid: "66107155"
 ## <a name="platform-considerations"></a>Bedingungen bezüglich der Plattform  
  Auf einer 64-Bit-Plattform (x64) wird [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] im 32-Bit-WOW-Modus ausgeführt. Wenn Sie Berichte auf einer x64-Plattform erstellen, müssen auf dem Berichterstellungsclient 32-Bit-Datenanbieter installiert sein, um eine Vorschau der Berichte zu ermöglichen. Wenn Sie den Bericht in demselben System veröffentlichen, benötigen Sie x64-Datenanbieter zum Anzeigen des Berichts im Berichts-Manager.  
   
- 
-  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] wird für [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-basierte Plattformen nicht unterstützt.  
+ [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] wird für [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-basierte Plattformen nicht unterstützt.  
   
  Die mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installierten Datenverarbeitungserweiterungen müssen für jede Plattform systemintern kompiliert und in den richtigen Verzeichnissen installiert werden. Wenn Sie einen benutzerdefinierten Datenanbieter oder einen [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] -Standarddatenanbieter registrieren, muss dieser systemintern für die betreffende Plattform kompiliert und im entsprechenden Verzeichnis installiert werden. Wenn Sie diesen auf einer 32-Bit-Plattform ausführen, muss der Datenanbieter für eine 32-Bit-Plattform kompiliert werden. Wenn Sie ihn auf einer 64-Bit-Plattform ausführen, muss der Datenanbieter für die 64-Bit-Plattform kompiliert werden. Sie können keinen 32-Bit-Datenanbieter verwenden, der in 64-Bit-Schnittstellen für eine 64-Bit-Plattform eingeschlossen ist. Überprüfen Sie Ihre Drittanbietersoftware auf Informationen dazu, ob der Datenanbieter für die installierte Plattform verwendet werden kann. Weitere Informationen zu Datenanbietern und zur Plattformunterstützung finden Sie unter [Von Reporting Services unterstützte Datenquellen (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren und Verwalten eines Berichtsservers &#40;einheitlicher SSRS-Modus&#41;](../report-server/configure-and-administer-a-report-server-ssrs-native-mode.md)   
- [Implementieren von Datenverarbeitungserweiterungen](../extensions/data-processing/implementing-a-data-processing-extension.md)   
+ [Implementieren einer Datenverarbeitungs Erweiterung](../extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Reporting Services-Konfigurationsdateien](../report-server/reporting-services-configuration-files.md)   
  [Codezugriffssicherheit in Reporting Services](../extensions/secure-development/code-access-security-in-reporting-services.md)  
   

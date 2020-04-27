@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aa3f8b6ec0cd81f1a29ea3262bd3ec52dd8158ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109088"
 ---
 # <a name="general-properties-page-report-parts-report-manager"></a>Allgemeine Eigenschaften (Seite), Berichtsteile (Berichts-Manager)
@@ -33,7 +33,7 @@ ms.locfileid: "66109088"
   
 3.  Klicken Sie in der Dropdownliste auf **Verwalten**. Die Eigenschaftenseite Allgemein wird geöffnet.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Geändert am**  
  Datum und Uhrzeit, zu denen die Berichtsteileigenschaften zuletzt auf dem Server geändert wurden oder eine neue Version des Berichtsteils auf dem Server veröffentlicht wurde. Schreibgeschützt.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66109088"
  **Typ**  
  Der Typ des Berichtsteils. Schreibgeschützt.  
   
- **Anwenden**  
+ **übernehmen**  
  Speichern Sie die Änderungen.  
   
  **Löschen**  
@@ -70,7 +70,7 @@ ms.locfileid: "66109088"
  **Move**  
  Klicken Sie auf diese Option, um die Seite Elemente verschieben zu öffnen und einen Berichtsteil innerhalb der Ordnerhierarchie des Berichtsservers zu verschieben. Weitere Informationen finden Sie auf der [Seite zum Verschieben von Elementen &#40;Berichts-Manager&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
- **Downloaden**  
+ **Download**  
  Extrahieren Sie eine Kopie der Berichtsteildefinition, die als RSC-Datei gespeichert werden soll. Die RSC-Datei kann in einen Berichtsserverordner hochgeladen oder zum Ersetzen eines vorhandenen Berichtsteils in einem Berichtsserverordner verwendet werden.  
   
  **Stelle**  
@@ -80,7 +80,7 @@ ms.locfileid: "66109088"
  [Verwalten von Berichts teilen](report-design/managing-report-parts.md)   
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Die Inhaltsseite &#40;Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
- [Berichtsteile &#40;Berichts-Generator und SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
+ [Berichts Teile &#40;Berichts-Generator und SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
  [Berichts-Manager F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
  [Berichtsteile und Datasets in Berichts-Generator](report-data/report-parts-and-datasets-in-report-builder.md)  
   

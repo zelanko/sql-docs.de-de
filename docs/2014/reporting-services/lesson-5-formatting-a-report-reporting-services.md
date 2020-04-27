@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f1acd7bf033ca2170a2a2b0cb1f701606510bf14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108433"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lektion 5: Formatieren eines Berichts (Reporting Services)
@@ -26,9 +26,9 @@ ms.locfileid: "66108433"
   
 -   [Formatieren der Währung](#bkmk_format_currency)  
   
--   [Ändern der Textart und der Spaltenbreite](#bkmk_change_textstyle)  
+-   [Ändern von Textart und Spaltenbreite](#bkmk_change_textstyle)  
   
-##  <a name="bkmk_format_date"></a>Formatieren des Datums  
+##  <a name="format-the-date"></a><a name="bkmk_format_date"></a>Formatieren des Datums  
  Im Feld Date werden standardmäßig Datums- und Uhrzeitangaben angezeigt. Durch entsprechende Formatierung kann auch nur das Datum angezeigt werden.  
   
 #### <a name="to-format-a-date-field"></a>So formatieren Sie ein Datumsfeld  
@@ -37,7 +37,7 @@ ms.locfileid: "66108433"
   
 2.  Klicken Sie mit der rechten Maustaste auf die Zelle mit dem Feldausdruck `[Date]` und anschließend auf das Dialogfeld **Textfeldeigenschaften**.  
   
-3.  Klicken Sie auf **Zahl**, und wählen **** Sie `Date`dann im Feld Kategorie den Wert aus.  
+3.  Klicken Sie auf **Zahl**, und wählen **Category** Sie `Date`dann im Feld Kategorie den Wert aus.  
   
 4.  Wählen Sie im Feld **Typ** die Option **31. Januar 2000**aus.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66108433"
   
 6.  Zeigen Sie den Bericht in der Vorschau an, um die Änderung am Feld `[Date]` zu sehen, und wechseln Sie dann zurück zur Entwurfsansicht.  
   
-##  <a name="bkmk_format_currency"></a>Formatieren der Währung  
+##  <a name="format-the-currency"></a><a name="bkmk_format_currency"></a>Formatieren der Währung  
  Im Feld LineTotal wird eine Zahl im Standardzahlenformat angezeigt. Formatieren Sie das Feld, um die Zahl als Währung anzuzeigen.  
   
 #### <a name="to-format-a-currency-field"></a>So formatieren Sie ein Währungsfeld  
@@ -58,7 +58,7 @@ ms.locfileid: "66108433"
   
     -   **Dezimalstellen: 2**  
   
-    -   **Negative Zahlen: ($12345,00)**  
+    -   **Negative Zahlen: ($12345.00)**  
   
     -   **Symbol: $ Englisch (USA)**  
   
@@ -70,7 +70,7 @@ ms.locfileid: "66108433"
   
 6.  Zeigen Sie den Bericht in der Vorschau an, um die Änderung am Feld `[LineTotal]` zu sehen, und wechseln Sie dann zurück zur Entwurfsansicht.  
   
-##  <a name="bkmk_change_textstyle"></a>Ändern der Textart und der Spaltenbreite  
+##  <a name="change-text-style-and-column-widths"></a><a name="bkmk_change_textstyle"></a>Ändern der Textart und der Spaltenbreite  
  Sie können auch die Formatierung der Kopfzeile ändern, um diese von den anderen Datenzeilen im Bericht zu unterscheiden. Abschließend passen Sie die Breite der Spalten an.  
   
 #### <a name="to-format-header-rows-and-table-columns"></a>So formatieren Sie Kopfzeilen und Tabellenspalten  

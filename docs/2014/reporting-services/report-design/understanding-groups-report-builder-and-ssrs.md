@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ccdef0ccb338f268abd205a95421382eb554fce9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104541"
 ---
 # <a name="understanding-groups-report-builder-and-ssrs"></a>Grundlegendes zu Gruppen (Berichts-Generator und SSRS)
@@ -25,7 +25,7 @@ ms.locfileid: "66104541"
   
  Zur besseren Veranschaulichung einer Gruppe betrachten Sie die folgende Abbildung, in der der Tablix-Datenbereich in der Vorschau dargestellt ist. In dieser Abbildung kategorisieren die Zeilengruppen das Dataset nach Produkttyp, und die Spaltengruppen kategorisieren das Dataset nach geografischer Region und Jahr.  
   
- ![Tablix-Datenbereich Bereiche](../media/rs-tablixareas.gif "Tablix-Datenbereich Bereiche")  
+ ![Zonen des Tablix-Datenbereichs](../media/rs-tablixareas.gif "Zonen des Tablix-Datenbereichs")  
   
  In den folgenden Abschnitten sind die verschiedenen Aspekte von Gruppen beschrieben.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "66104541"
 ### <a name="groups-in-a-tablix-data-region-details-row-and-column-groups"></a>Gruppen in einem Tablix-Datenbereich: Detail-, Zeilen- und Spaltengruppen  
  Wie in diesem Thema bereits dargestellt, ermöglichen es Tablix-Datenbereiche, Daten nach Zeilen oder Spalten in Gruppen zu organisieren. Zeilen- und Spaltengruppen sind jedoch nicht die einzigen in einem Tablix-Datenbereich verfügbaren Gruppen. Dieser Datenbereich kann die folgenden Typen von Gruppen aufweisen:  
   
--   **Detail Gruppe** Die Detail Gruppe besteht aus allen Daten aus einem Berichts Dataset nach Berichts-Generator oder Berichts-Designer Anwenden von DataSet-und Datenbereichs filtern. Die Gruppe Details ist daher die einzige Gruppe, die keinen Gruppierungsausdruck besitzt.  
+-   **Gruppe "Details"** Die Detailgruppe besteht aus sämtlichen Daten, die in einem Berichtsdataset enthalten sind, nachdem Dataset- und Datenbereichsfilter von Berichts-Generator oder Berichts-Designer angewendet wurden. Die Gruppe Details ist daher die einzige Gruppe, die keinen Gruppierungsausdruck besitzt.  
   
      Im Grunde gibt die Detailgruppe die Daten an, die angezeigt werden, wenn Sie in einem Abfrage-Designer eine Datasetabfrage ausführen. Angenommen, Sie verfügen über eine Abfrage, mit der alle Spalten in einer Tabelle mit Bestellungen abgerufen werden. Die Daten in dieser Detailgruppe enthalten dann sämtliche Werte für jede Zeile für alle Spalten in der Tabelle. Die Daten in dieser Detailgruppe enthalten außerdem die Werte für alle berechneten Datasetfelder, die Sie erstellt haben.  
   
@@ -75,20 +75,19 @@ ms.locfileid: "66104541"
   
      Wenn Sie einem Bericht eine Tabelle oder Liste hinzufügen, erstellen Berichts-Generator und Berichts-Designer automatisch die Gruppe Details und fügen eine Zeile hinzu, in der die Detaildaten angezeigt werden. Wenn Sie Zellen in dieser Zeile Datasetfelder hinzufügen, werden standardmäßig einfache Ausdrücke für die Felder angezeigt, z. B. [Sales]. Wenn Sie den Datenbereich anzeigen, wird die Detailzeile für jeden Wert im Resultset einmal wiederholt.  
   
--   **Zeilen Gruppen und Spalten Gruppen** Sie können Daten nach Zeilen oder Spalten in Gruppen organisieren. Zeilengruppen werden vertikal auf einer Seite erweitert. Spaltengruppen werden horizontal auf einer Seite erweitert. Gruppen können geschachtelt werden, z. B., können Sie diese zuerst nach [Year], dann nach [Quarter] und dann nach [Month] gruppieren. Gruppen können auch aneinander grenzen, z. B. können Sie die Gruppierung nach [Territory] und unabhängig davon nach [ProductCategory] vornehmen.  
+-   **Zeilengruppen und Spaltengruppen** Sie können Daten nach Zeilen oder Spalten in Gruppen organisieren. Zeilengruppen werden vertikal auf einer Seite erweitert. Spaltengruppen werden horizontal auf einer Seite erweitert. Gruppen können geschachtelt werden, z. B., können Sie diese zuerst nach [Year], dann nach [Quarter] und dann nach [Month] gruppieren. Gruppen können auch aneinander grenzen, z. B. können Sie die Gruppierung nach [Territory] und unabhängig davon nach [ProductCategory] vornehmen.  
   
      Wenn Sie eine Gruppe für einen Datenbereich erstellen, fügen Berichts-Generator und Berichts-Designer dem Datenbereich automatisch Zeilen oder Spalten hinzu und verwenden diese Zeilen oder Spalten für die Anzeige von Gruppendaten.  
   
--   **Rekursive Hierarchie Gruppen** Eine rekursive Hierarchie Gruppe organisiert Daten aus einem einzelnen Berichts DataSet, das mehrere Ebenen enthält. In einer rekursiven Hierarchiegruppe kann eine Organisationshierarchie angezeigt werden, z. B. [Employee], der an [Employee] berichtet. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt Gruppeneigenschaften und integrierte Funktionen bereit, mit denen Sie Gruppen für diese Art von Berichtsdaten erstellen können. Weitere Informationen finden Sie unter [Erstellen von rekursiven Hierarchiegruppen &#40;Berichts-Generator und SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
+-   **Rekursive Hierarchiegruppen** In einer rekursiven Hierarchiegruppe sind Daten aus einem einzelnen Berichtsdataset organisiert, das mehrere Ebenen enthält. In einer rekursiven Hierarchiegruppe kann eine Organisationshierarchie angezeigt werden, z. B. [Employee], der an [Employee] berichtet. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt Gruppeneigenschaften und integrierte Funktionen bereit, mit denen Sie Gruppen für diese Art von Berichtsdaten erstellen können. Weitere Informationen finden Sie unter [Erstellen von rekursiven Hierarchiegruppen &#40;Berichts-Generator und SSRS&#41;](creating-recursive-hierarchy-groups-report-builder-and-ssrs.md).  
   
  Die folgende Liste fasst die Methoden für die Arbeit mit Gruppen für die einzelnen Datenbereiche zusammen:  
   
--   **Tabelle** Definieren von Gruppen für die Zeilen Gruppen, angrenzende Zeilen Gruppen und rekursive Hierarchie Zeilen Gruppen (z. b. für ein Organigramm). In einer Tabelle ist standardmäßig eine Detailgruppe enthalten. Fügen Sie Gruppen hinzu, indem Sie Datasetfelder in den Gruppierungsbereich für eine ausgewählte Tabelle ziehen.  
+-   **Tabelle** Sie können geschachtelte Zeilengruppen, angrenzende Zeilengruppen und rekursive Hierarchiegruppen (z.B. für ein Organigramm) definieren. In einer Tabelle ist standardmäßig eine Detailgruppe enthalten. Fügen Sie Gruppen hinzu, indem Sie Datasetfelder in den Gruppierungsbereich für eine ausgewählte Tabelle ziehen.  
   
--   **Matrix** Definieren von Zeilen-und Spalten Gruppen und angrenzenden Zeilen-und Spalten Gruppen. Fügen Sie Gruppen hinzu, indem Sie Datasetfelder in den Gruppierungsbereich für eine ausgewählte Matrix ziehen.  
+-   **Matrix** Sie können geschachtelte Zeilen- und Spaltengruppen sowie angrenzende Zeilen- und Spaltengruppen definieren. Fügen Sie Gruppen hinzu, indem Sie Datasetfelder in den Gruppierungsbereich für eine ausgewählte Matrix ziehen.  
   
--   **Liste** Standardmäßig unterstützt die Detail Gruppe. Wird meist für die Unterstützung einer Gruppierungsebene verwendet. Fügen Sie Gruppen hinzu, indem Sie Datasetfelder in den Gruppierungsbereich für eine ausgewählte Liste ziehen.  
+-   **Liste** Unterstützt standardmäßig die Detailgruppe. Wird meist für die Unterstützung einer Gruppierungsebene verwendet. Fügen Sie Gruppen hinzu, indem Sie Datasetfelder in den Gruppierungsbereich für eine ausgewählte Liste ziehen.  
   
  Wenn Sie eine Gruppe hinzugefügt haben, werden die Zeilen- und Spaltenhandles des Datenbereichs so geändert, dass sie die Gruppenmitgliedschaft wiedergeben. Beim Löschen einer Gruppe können Sie entweder nur die Gruppendefinition oder die Gruppe und alle zugeordneten Zeilen und Spalten löschen. Weitere Informationen finden Sie unter [Zellen, Zeilen und Spalten des Tablix-Datenbereichs (Berichts-Generator und SSRS)](tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
@@ -101,9 +100,9 @@ ms.locfileid: "66104541"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen oder Löschen einer Gruppe in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](add-or-delete-a-group-in-a-data-region-report-builder-and-ssrs.md)   
- [Hinzufügen eines Gesamtergebnisses zu einer Gruppe oder einem Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
+ [Hinzufügen eines Gesamtergebnisses zu einer Gruppe oder einem Tablix-Datenbereich (Berichts-Generator und SSRS)](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md)   
  [Sortieren von Daten in einem Datenbereich &#40;Berichts-Generator und SSRS&#41;](sort-data-in-a-data-region-report-builder-and-ssrs.md)   
- [Drilldown-Aktion &#40;Berichts-Generator und SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
+ [Drilldownaktion &#40;Berichts-Generator und SSRS&#41;](drilldown-action-report-builder-and-ssrs.md)   
  [Listen (Berichts-Generator und SSRS)](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

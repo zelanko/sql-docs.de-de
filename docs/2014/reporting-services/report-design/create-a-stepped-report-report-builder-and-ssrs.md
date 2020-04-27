@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: de074a61bea0941b52240fe4d7b66eadc0cacaeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106130"
 ---
 # <a name="create-a-stepped-report-report-builder-and-ssrs"></a>Erstellen von abgestuften Berichten (Berichts-Generator und SSRS)
   Ein abgestufter Bericht zeigt Detailzeilen oder Untergruppen wie im folgenden Beispiel unter einer übergeordneten Gruppe eingerückt in der gleichen Spalte an.  
   
- ![Gerenderter gestufter Bericht](../media/steppedreportrendered.gif "Gerenderter gestufter Bericht")  
+ ![Gerenderter abgestufter Bericht](../media/steppedreportrendered.gif "Gerenderter abgestufter Bericht")  
   
  Bei herkömmlichen Tabellenberichten wird die übergeordnete Gruppe in einer angrenzenden Spalte im Bericht platziert. Der neue Tablix-Datenbereich ermöglicht es Ihnen, eine Gruppe und Detailzeilen bzw. Untergruppen zur gleichen Spalte hinzuzufügen. Um die Gruppenzeilen von den Detailzeilen oder Zeilen untergeordneter Gruppen zu unterscheiden, können Sie entweder eine Formatierung wie eine Schriftfarbe anwenden oder die Detailzeilen mit einem Einzug versehen.  
   
@@ -78,11 +78,11 @@ ms.locfileid: "66106130"
   
      Ihr Datenbereich sollte dem folgenden Beispiel ähneln.  
   
-     ![Datenbereich für gestuften Bericht](../media/steppedreportdataregion.gif "Datenbereich für gestuften Bericht")  
+     ![Datenbereich für abgestuften Bericht](../media/steppedreportdataregion.gif "Datenbereich für abgestuften Bericht")  
   
-     **Datenbereich für abgestuftes Berichts Layout**  
+     **Datenbereich für abgestuftes Berichtslayout**  
   
-     Klicken Sie auf der Registerkarte **Startseite** auf **Ausführen**. Der Bericht zeigt die Gruppe mit eingezogenen Ebenen für die Untergruppenwerte an.  
+     Klicken Sie auf der Registerkarte **Home** auf **Ausführen**. Der Bericht zeigt die Gruppe mit eingezogenen Ebenen für die Untergruppenwerte an.  
   
 ### <a name="to-create-a-stepped-report-with-multiple-groups"></a>So erstellen Sie einen abgestuften Bericht mit mehreren Gruppen  
   
@@ -104,12 +104,12 @@ ms.locfileid: "66106130"
 3.  Ändern Sie die Auffüllung für die Zelle, die die Gruppendaten enthält.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Seitenkopf- und Seitenfußzeilen &#40;Berichts-Generator und SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
- [Formatieren von Berichtselementen (Berichts-Generator und SSRS)](formatting-report-items-report-builder-and-ssrs.md)   
+ [Seiten Kopfzeilen und-Fußzeilen &#40;Berichts-Generator und SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)   
+ [Formatieren von Berichts Elementen &#40;Berichts-Generator und SSRS&#41;](formatting-report-items-report-builder-and-ssrs.md)   
  [Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
- [Tabellen (Berichts-Generator und SSRS)](tables-report-builder-and-ssrs.md)   
- [Matrizen (Berichts-Generator und SSRS)](create-a-matrix-report-builder-and-ssrs.md)   
- [Listen (Berichts-Generator und SSRS)](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Tabellen &#40;Berichts-Generator und SSRS&#41;](tables-report-builder-and-ssrs.md)   
+ [Matrizen &#40;Berichts-Generator und SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
+ [Listet &#40;Berichts-Generator und SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

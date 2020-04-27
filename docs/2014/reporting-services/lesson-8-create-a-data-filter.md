@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5204cab43e3c801acf80113ec92c51e00c0f9d13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108391"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>Lektion 8: Erstellen eines Datenfilters
@@ -39,7 +39,7 @@ ms.locfileid: "66108391"
   
 3.  Klicken Sie auf die Seite **Filter** und dann auf **Hinzufügen**.  
   
-4.  Klicken Sie **** im abgelegten Ausdruck `ProductID` auf aus der Dropdown Liste. Dies ist die Spalte, auf die Sie den Filter anwenden.  
+4.  Klicken Sie **Expression** im abgelegten Ausdruck `ProductID` auf aus der Dropdown Liste. Dies ist die Spalte, auf die Sie den Filter anwenden.  
   
 5.  Klicken Sie in der**=** Dropdown Liste **Operator** auf den Gleichheits Operator ().  
   

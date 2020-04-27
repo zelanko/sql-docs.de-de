@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f91cd8a93571b62f57933ff7556004f8c7b42a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108036"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>Verarbeitungsoptionen (Eigenschaftenseite) (Berichts-Manager)
@@ -36,7 +36,7 @@ ms.locfileid: "66108036"
   
 4.  Wählen Sie die Registerkarte **Verarbeitungsoptionen** aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Diesen Bericht immer mit den neuesten Daten ausführen**  
  Verwenden Sie diese Option, wenn die Berichtsdaten abgerufen werden sollen, sobald der Benutzer den Bericht auswählt. Wenn eine zwischengespeicherte Kopie des Berichts verfügbar ist, wird diese an den Benutzer zurückgegeben; andernfalls erfolgt das Abrufen und Rendern der Daten, wenn ein Benutzer den Bericht auswählt.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66108036"
  Dieser Wert gilt für die Berichtsverarbeitung auf einem Berichtsserver. Durch diesen Wert wird kein Timeout für die Datenverarbeitung auf dem Datenbankserver festgelegt, der die Daten für den Bericht zur Verfügung stellt. Wenn Sie diesen Wert festlegen, müssen Sie jedoch genügend Zeit sowohl für die Daten- als auch für die Berichtsverarbeitung zur Verfügung stellen. Die Zählung für die Berichtsverarbeitung beginnt mit der Auswahl des Berichts und endet mit dem Öffnen des Berichts.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Festlegen von Berichtsverarbeitungseigenschaften](report-server/set-report-processing-properties.md)   
+ [Festlegen von Berichts Verarbeitungseigenschaften](report-server/set-report-processing-properties.md)   
  [Zwischenspeichern von Berichten (SSRS)](report-server/caching-reports-ssrs.md)   
  [Erstellen, Ändern oder Löschen von Zeitplänen](subscriptions/create-modify-and-delete-schedules.md)   
  [Berichts-Manager (F1-Hilfe)](../../2014/reporting-services/report-manager-f1-help.md)  

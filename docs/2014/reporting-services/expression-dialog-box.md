@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 905aa453c8a6cac78e8423d071672d6431e3c3c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109198"
 ---
 # <a name="expression-dialog-box"></a>Ausdruck (Dialogfeld)
@@ -34,7 +34,7 @@ ms.locfileid: "66109198"
  Das Dialogfeld **Ausdruck** ist kontextbezogen. Die Kategorieelemente und Beschreibungen verändern sich je nach verwendeter Ausdruckskategorie. Es unterstützt IntelliSense, Anweisungsvervollständigungen, Funktionsaufrufbeispiele sowie Syntaxfarben zur schnelleren Erkennung von Syntaxfehlern.  
   
 ## <a name="expression-constructs"></a>Ausdruckskonstrukte  
- Ausdrücke beginnen mit einem Gleichheitszeichen (=) und können Konstanten, Literale, Operatoren und Verweise auf integrierte Felder, Auflistungen und Funktionen, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]-Laufzeitbibliotheksfunktionen, [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]-CLR-Klassen (Common Language Runtime) sowie benutzerdefinierte Funktionen enthalten. Die folgende Liste beschreibt die Kategorien und Werte, die Sie einem Ausdruck hinzufügen können.  
+ Ausdrücke beginnen mit einem Gleichheitszeichen (=) und können Konstanten, Literale, Operatoren und Verweise auf integrierte Felder, Auflistungen und Funktionen, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)] -Laufzeitbibliotheksfunktionen, [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] -CLR-Klassen (Common Language Runtime) sowie benutzerdefinierte Funktionen enthalten. Die folgende Liste beschreibt die Kategorien und Werte, die Sie einem Ausdruck hinzufügen können.  
   
  **Ausdruck festlegen für:**  _\<PropertyName>_  
  Der Name der Eigenschaft, für die Sie einen Ausdruck definieren. Sie können diese Einstellung auch im Eigenschaftenfenster nach dem Namen vornehmen.  
@@ -47,7 +47,7 @@ ms.locfileid: "66109198"
  **Integrierte Felder**  
  Bietet eine Liste der in der globalen Auflistung enthaltenen Elemente, die Sie in einem Ausdruck verwenden können. Einige Auflistungen werden nur unterstützt, nachdem der Bericht auf dem Server veröffentlicht wurde. Weitere Informationen finden Sie unter [Integrierte globale Werte und Benutzerverweise &#40;Berichts-Generator und SSRS&#41;](report-design/built-in-collections-built-in-globals-and-users-references-report-builder.md).  
   
- **Parameter**  
+ **Parameters**  
  Bietet eine Liste von Berichtsparametern.  
   
  **Felder (** _ \<Ausgewähltes Dataset>_ **)**  
@@ -67,7 +67,7 @@ ms.locfileid: "66109198"
   
  Zu den häufig verwendeten Funktionen gehören integrierte Berichts- und Aggregationsfunktionen, [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]-Laufzeitbibliotheksfunktionen und [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] Common Language Runtime (CLR)-Klassen im <xref:System.Math>- und <xref:System.Convert>-Namespace. Sie können auch Verweise auf CLR-Klassen und externe Assemblys hinzufügen, die nicht in der Kategorieliste angezeigt werden. Weitere Informationen finden Sie unter [Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md)-Ausdruck dar.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Codefenster  
  Im oben angezeigten Codefenster können Sie einen Ausdruck eingeben. Wenn Sie das Dialogfeld **Ausdruck** öffnen, enthält das Codefenster den Ausdruck. Sie können den Ausdruck ersetzen oder bearbeiten. Sie können Funktionsaufrufe, Operatoren, Konstanten, Felder, Parameter, Elemente aus den globalen Auflistungen sowie Verweise auf benutzerdefinierten Code hinzufügen. Das Codefenster zeigt Ihre Änderungen sofort an.  
   
@@ -89,13 +89,13 @@ ms.locfileid: "66109198"
 ## <a name="see-also"></a>Weitere Informationen  
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [Ausdrucksverwendungen in Berichten &#40;Berichts-Generator und SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
+ [Ausdruck verwendet in Berichten &#40;Berichts-Generator und SSRS&#41;](report-design/expression-uses-in-reports-report-builder-and-ssrs.md)   
  [Formatieren von Zahlen und Datumsangaben &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-numbers-and-dates-report-builder-and-ssrs.md)   
- [Parameters Collection References (Report Builder and SSRS) (Verweise auf Parameterauflistungen (Berichts-Generator und SSRS))](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
- [Beispiele für Gruppierungsausdrücke (Berichts-Generator und SSRS)](report-design/group-expression-examples-report-builder-and-ssrs.md)   
+ [Die Parameter Sammlung verweist auf &#40;Berichts-Generator und SSRS&#41;](report-design/built-in-collections-parameters-collection-references-report-builder.md)   
+ [Beispiele für Gruppierungs Ausdrücke &#40;Berichts-Generator und SSRS&#41;](report-design/group-expression-examples-report-builder-and-ssrs.md)   
  [Beispiele für Filter Gleichungen &#40;Berichts-Generator und SSRS&#41;](report-design/filter-equation-examples-report-builder-and-ssrs.md)   
- [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
- [Integrierte Sammlungen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](report-design/built-in-collections-in-expressions-report-builder.md)   
+ [Datentypen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](report-design/data-types-in-expressions-report-builder-and-ssrs.md)   
+ [Integrierte Auflistungen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](report-design/built-in-collections-in-expressions-report-builder.md)   
  [Hinzufügen eines Ausdrucks &#40;Berichts-Generator und SSRS&#41;](report-design/add-an-expression-report-builder-and-ssrs.md)  
   
   

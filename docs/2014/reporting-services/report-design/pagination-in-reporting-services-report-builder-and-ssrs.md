@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58abb892f737b3f5b3c707c9e26fd44249d8e54f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105477"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Paginierung in Reporting Services (Berichts-Generator und SSRS)
@@ -45,14 +45,14 @@ ms.locfileid: "66105477"
   
  Der Bereich der physischen Seite, der nach Zuweisen von Raum für Ränder, Spaltenabstände und Seitenkopf- und Seitenfußzeile verbleibt, wird als *verwendbarer Seitenbereich*bezeichnet. Ränder werden nur übernommen, wenn Sie Berichte in Renderingformaten mit harten Seitenumbrüchen rendern und drucken. Das folgende Bild gibt den Rand und verwendbaren Seitenbereich einer physischen Seite an.  
   
- ![Physische Seite mit Rändern und verwendbarem Bereich.](../media/rspagemargins.gif "Physische Seite mit Rändern und verwendbarem Bereich.")  
+ ![Physische Seite mit Rändern und verwendbarem Bereich](../media/rspagemargins.gif "Physische Seite mit Rändern und verwendbarem Bereich")  
   
 ### <a name="newsletter-style-columns"></a>Spalten im Zeitungsformat  
  Ihr Bericht kann in Spalten, wie Spalten in einer Zeitung, unterteilt werden, die als logische Seiten behandelt und auf derselben physischen Seite gerendert werden. Sie sind von links nach rechts und von oben nach unten angeordnet und werden durch Leerraum zwischen den einzelnen Spalten abgetrennt. Wird der Bericht in mehr als eine Spalte unterteilt, wird jede physische Seite vertikal in Spalten unterteilt. Jede Spalte wird als eine logische Seite behandelt. Angenommen, es sind zwei Spalten auf einer physischen Seite vorhanden. Dann füllt der Inhalt des Berichts zunächst die erste und anschließend die zweite Spalte aus. Wenn der Bericht nicht vollständig in die ersten beiden Spalten passt, füllt der Bericht die erste Spalte und anschließend die zweite Spalte auf der nächsten Seite aus. Die Spalten werden weiter von links nach rechts und oben nach unten ausgefüllt, bis alle Berichtselemente gerendert sind. Wenn Sie Spaltengrößen angeben, durch die die horizontale oder vertikale Breite null ergibt, wird der Spaltenabstand standardmäßig auf null gesetzt.  
   
  Spalten werden im Bereich **Berichtseigenschaften** , im Dialogfeld **Seite einrichten** oder durch Ändern der Eigenschaften TopMargin, BottomMargin, LeftMargin und RightMargin im Bereich **Eigenschaften** festgelegt. Wenn Sie eine nicht definierte Seitenrandgröße verwenden möchten, können Sie die Randgröße in den Geräteinformationseinstellungen für den entsprechenden Renderer angeben, mit dem Sie den Bericht exportieren. Spalten werden nur übernommen, wenn Sie Berichte im PDF- oder in Bildformaten rendern und drucken. Das folgende Bild gibt den verwendbaren Seitenbereich einer Seite mit Spalten an.  
   
- ![Physische Seite mit gezeichneten Spalten.](../media/rspagecolumns.gif "Physische Seite mit gezeichneten Spalten.")  
+ ![Physische Seite mit Spalten](../media/rspagecolumns.gif "Physische Seite mit Spalten")  
   
 ## <a name="page-breaks-and-page-names"></a>Seitenumbrüche und Seitennamen  
  Durch die Verwendung von Seitennamen ist ein Bericht u. U. besser zu lesen, und die darin enthaltenen Daten sind einfacher zu überwachen und zu exportieren. Reporting Services stellen Eigenschaften für Berichte und Tablix-Datenbereiche (Tabelle, Matrix und Liste), Gruppen und Rechtecke im Bericht bereit, mit denen die Paginierung gesteuert, Seitenzahlen zurückgesetzt und bei Seitenumbrüchen neue Namen für Berichtsseiten angegeben werden können. Mit diesen Funktionen können Berichte unabhängig vom Format optimiert werden, in dem sie gerendert werden, sie sind jedoch insbesondere beim Exportieren von Berichten in Excel-Arbeitsmappen hilfreich.  
@@ -83,6 +83,6 @@ ms.locfileid: "66105477"
  Weitere Informationen zur Funktion dieser Eigenschaften beim Exportieren von Berichten nach Excel finden Sie unter [Exportieren nach Microsoft Excel (Berichts-Generator und SSRS)](../report-builder/exporting-to-microsoft-excel-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Seitenlayout und Rendering &#40;Berichts-Generator und SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)  
+ [Seitenlayout und Rendering (Berichts-Generator und SSRS)](page-layout-and-rendering-report-builder-and-ssrs.md)  
   
   

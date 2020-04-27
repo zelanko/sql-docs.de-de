@@ -14,21 +14,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bb841d8014bd1a66d533c10c4740c016bb13e737
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110099"
 ---
 # <a name="access-report-server-items-using-url-access"></a>Zugreifen auf Berichtsserverelemente über den URL-Zugriff
-  In diesem Thema wird beschrieben, wie Sie auf Katalog Elemente verschiedener Typen in einer Berichts Server-Datenbasis oder auf einer SharePoint-Website mit *RS: Command*=-*Wert*zugreifen.  
+  In diesem Thema wird beschrieben, wie Sie in einer Berichtsserver-Datenbank oder auf einer SharePoint-Website unter Verwendung von *rs:Befehl*=*Wert*auf Katalogelemente mit unterschiedlichen Typen zugreifen.  
   
- Es ist nicht erforderlich, diese Parameterzeichenfolge hinzuzufügen. Wenn Sie sie weglassen, wertet der Berichtsserver den Elementtyp aus und wählt den entsprechenden Parameterwert automatisch aus. Die Verwendung der *RS: Command*=*value* -Zeichenfolge in der URL verbessert jedoch die Leistung des Berichts Servers.  
+ Es ist nicht erforderlich, diese Parameterzeichenfolge hinzuzufügen. Wenn Sie sie weglassen, wertet der Berichtsserver den Elementtyp aus und wählt den entsprechenden Parameterwert automatisch aus. Durch die Verwendung der *rs:Command*=*Value* -Zeichenfolge in der URL verbessert sich jedoch die Leistung des Berichtsservers.  
   
  Beachten Sie in den Beispielen unten die `_vti_bin` -Proxysyntax. Weitere Informationen zum Verwenden der Proxysyntax finden Sie unter [URL Access Parameter Reference](url-access-parameter-reference.md).  
   
 ## <a name="access-a-report"></a>Zugreifen auf einen Bericht  
- Um einen Bericht im Browser anzuzeigen, verwenden Sie den *RS: Command*=-*Rendering* -Parameter. Beispiel:  
+ Um einen Bericht im Browser anzuzeigen, verwenden Sie den *RS: Command*=-*Rendering* -Parameter. Zum Beispiel:  
   
  `Native` `http://myrshost/reportserver?/Sales/YearlySalesByCategory&rs:Command=Render`  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66110099"
  `SharePoint` `http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/Sales/StorePicture.jpg&rs:Command=GetResourceContents`  
   
 ## <a name="access-a-data-source"></a>Zugreifen auf eine Datenquelle  
- Um auf eine Datenquelle zuzugreifen, verwenden Sie den Parameter *RS: Command*=*GetDataSourceContents* . Wenn Ihr Browser XML unterstützt, wird die Datenquellendefinition angezeigt, wenn Sie ein für die Datenquelle authentifizierter Benutzer mit der Berechtigung `Read Contents` sind. Beispiel:  
+ Um auf eine Datenquelle zuzugreifen, verwenden Sie den Parameter *RS: Command*=*GetDataSourceContents* . Wenn Ihr Browser XML unterstützt, wird die Datenquellendefinition angezeigt, wenn Sie ein für die Datenquelle authentifizierter Benutzer mit der Berechtigung `Read Contents` sind. Zum Beispiel:  
   
  `Native` `http://myrshost/reportserver?/Sales/AdventureWorks2012&rs:Command=GetDataSourceContents`  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66110099"
  Die Verbindungszeichenfolge wird auf Grundlage der **SecureConnectionLevel** -Einstellung des Berichtsservers zurückgegeben. Weitere Informationen zur **SecureConnectionLevel** -Einstellung finden Sie unter [Using Secure Web Service Methods](report-server-web-service/net-framework/using-secure-web-service-methods.md).  
   
 ## <a name="access-the-contents-of-a-folder"></a>Zugreifen auf den Inhalt eines Ordners  
- Um auf den Inhalt eines Ordners zuzugreifen, verwenden Sie den *RS: Command*=*GetChildren* -Parameter. Es wird eine generische Seite zur Ordnernavigation zurückgegeben, die Links zu den Unterordnern, Berichten, Datenquellen und Ressourcen im angeforderten Ordner enthält. Beispiel:  
+ Um auf den Inhalt eines Ordners zuzugreifen, verwenden Sie den *RS: Command*=*GetChildren* -Parameter. Es wird eine generische Seite zur Ordnernavigation zurückgegeben, die Links zu den Unterordnern, Berichten, Datenquellen und Ressourcen im angeforderten Ordner enthält. Zum Beispiel:  
   
  `Native` `http://myrshost/reportserver?/Sales&rs:Command=GetChildren`  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66110099"
  Die angezeigte Benutzeroberfläche hat Ähnlichkeit mit dem Verzeichnissuchmodus, der von [!INCLUDE[msCoName](../includes/msconame-md.md)] IIS (Internet Information Server) verwendet wird. Die Versionsnummer, einschließlich der Buildnummer des Berichtsservers, wird ebenfalls unter der Ordnerliste angezeigt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [URL-Zugriff &#40;SSRS&#41;](url-access-ssrs.md)   
- [URL Access Parameter Reference (URL-Zugriffsparameterverweis)](url-access-parameter-reference.md)  
+ [URL-Zugriff &#40;SSRS-&#41;](url-access-ssrs.md)   
+ [URL-Zugriffsparameterreferenz](url-access-parameter-reference.md)  
   
   

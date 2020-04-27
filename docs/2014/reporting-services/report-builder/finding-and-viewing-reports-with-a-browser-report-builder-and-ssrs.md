@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c1e620bb0fd5cbf5ff6541fd1aa4a3552bd2eb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107861"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Suchen und Anzeigen von Berichten mit einem Browser (Berichts-Generator und SSRS)
@@ -49,8 +49,7 @@ Ordner in einem Browser
 -   Eine Dateierweiterung zeigt eine Ressource an. Die Dateierweiterung identifiziert den MIME-Typ der Ressource. Beispielsweise steht .jpg für ein Bild im JPEG-Format.  
   
 ## <a name="typing-the-url-address-of-a-report"></a>Eingeben der URL-Adresse eines Berichts  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unterstützt den URL-Zugriff auf bestimmte Elemente eines Berichtsservers. Die URL muss einen vollqualifizierten Pfad zum Bericht und Befehle zum Rendern des Berichts einschließen. Falls der Bericht Parameter enthält, müssen Sie die entsprechenden Werte angeben, die zum Öffnen des Berichts erforderlich sind. Wenn Sie eine URL für einen Bericht eingeben, der Leerzeichen im Pfad, Parameterwerte oder eine Renderingerweiterung enthält, müssen Sie URL-codierte Zeichen in der URL verwenden, um die gewünschten Ergebnisse zu erhalten. Das folgende Beispiel zeigt eine Berichts-URL, die die Codierung der Zeichen im Pfadnamen, Parameter und eine Renderingerweiterung enthält:  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unterstützt den URL-Zugriff auf bestimmte Elemente eines Berichtsservers. Die URL muss einen vollqualifizierten Pfad zum Bericht und Befehle zum Rendern des Berichts einschließen. Falls der Bericht Parameter enthält, müssen Sie die entsprechenden Werte angeben, die zum Öffnen des Berichts erforderlich sind. Wenn Sie eine URL für einen Bericht eingeben, der Leerzeichen im Pfad, Parameterwerte oder eine Renderingerweiterung enthält, müssen Sie URL-codierte Zeichen in der URL verwenden, um die gewünschten Ergebnisse zu erhalten. Das folgende Beispiel zeigt eine Berichts-URL, die die Codierung der Zeichen im Pfadnamen, Parameter und eine Renderingerweiterung enthält:  
   
  `http://<Webservername>/reportserver?/<reportfolder>/employee+sales+summary&ReportYear=2004&ReportMonth=06&EmpID=24&rs:Command=Render&rs:Format=HTML4.0`  
   
@@ -59,6 +58,6 @@ Ordner in einem Browser
  Weitere Informationen über den Zugriff auf einen Bericht über eine URL, einschließlich Informationen über den Aufbau einer URL finden Sie unter "URL-Zugriff" in der [Reporting Services-Dokumentation](https://go.microsoft.com/fwlink/?linkid=121312) in der SQL Server-Onlinedokumentation.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Suchen und Anzeigen von Berichten in Berichts-Manager &#40;Berichts-Generator und SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+ [Finding and Viewing Reports in Report Manager (Report Builder and SSRS) (Suchen und Anzeigen von Berichten in Berichts-Manager (Berichts-Generator und SSRS))](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
   
   

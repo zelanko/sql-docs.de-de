@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5f24c78e82d437ab7e2147122c5065f0b7274d5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105229"
 ---
 # <a name="lookupset-function-report-builder-and-ssrs"></a>LookupSet-Funktion (Berichts-Generator und SSRS)
@@ -71,8 +71,7 @@ LookupSet(source_expression, destination_expression, result_expression, dataset)
   
 -   Quell-, Ziel- und Ergebnisausdrücke können keine Verweise auf Berichts- oder Gruppenvariablen einschließen.  
   
--   
-  `LookupSet` kann nicht als Ausdruck für die folgenden Berichtselemente verwendet werden:  
+-   `LookupSet` kann nicht als Ausdruck für die folgenden Berichtselemente verwendet werden:  
   
     -   Dynamische Verbindungszeichenfolgen für eine Datenquelle.  
   

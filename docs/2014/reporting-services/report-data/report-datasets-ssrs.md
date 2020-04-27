@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 019ca09c83b0b3011e9940d9a4c988ce223e192f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107123"
 ---
 # <a name="add-data-to-a-report-report-builder-and-ssrs"></a>Hinzufügen von Daten zu einem Bericht (Berichts-Generator und SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "66107123"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Methods"></a>Hinzufügen von Berichtsdaten  
+##  <a name="adding-report-data"></a><a name="Methods"></a> Hinzufügen von Berichtsdaten  
  Im Berichts-Generator stehen Ihnen folgende Möglichkeiten zum Hinzufügen von Berichtsdaten zur Verfügung.  
   
 -   Fügen Sie dem Bericht Berichtsteile von einem Berichtsserver hinzu. Jeder Berichtsteil ist in sich abgeschlossen und schließt abhängige Datasets ein. Die Datasets sind vordefiniert.  
@@ -77,7 +77,7 @@ ms.locfileid: "66107123"
   
 -   [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  
 
-##  <a name="QuickStart"></a>Hinzufügen von Daten mit Berichts teilen  
+##  <a name="adding-data-with-report-parts"></a><a name="QuickStart"></a> Hinzufügen von Daten mit Berichtsteilen  
  Berichtsteile enthalten die Datasets, von denen sie abhängen. Diese Datasets werden basierend auf freigegebenen Datenquellen erstellt, die auf dem Berichtsserver verfügbar sind. Wenn Sie dem Bericht im Berichts-Generator einen Berichtsteil hinzufügen, werden die abhängigen Datasets dem Bericht hinzugefügt (ähnlich wie beim manuellen Hinzufügen). Ein vordefiniertes Diagramm enthält z.B. ein Dataset. Zeigen Sie eine Vorschau des Berichts an, um die Daten anzuzeigen.  
   
 > [!NOTE]  
@@ -87,7 +87,7 @@ ms.locfileid: "66107123"
   
 -   Weitere Informationen finden Sie unter [Berichtsteile &#40;Berichts-Generator und SSRS&#41;](../report-parts-report-builder-and-ssrs.md) und [Berichtsteile im Berichts-Designer &#40;SSRS&#41;](../report-design/report-parts-in-report-designer-ssrs.md).  
 
-##  <a name="Queries"></a>Abfragen und Abfrage-Designer  
+##  <a name="queries-and-query-designers"></a><a name="Queries"></a> Abfragen und Abfrage-Designer  
  Zum Angeben der Daten, die Sie aus einer Datenquelle abrufen möchten, erstellen Sie einen Abfragebefehl. Jeder Datenquellentyp stellt einen zugehörigen *Abfrage-Designer* bereit, mit dessen Hilfe Sie die Abfrage erstellen können. Der Abfrage-Designer kann grafisch oder textbasiert sein. In einem grafischen Abfrage-Designer zeigen Sie Metadaten an, die die Daten in der externen Datenquelle darstellen, und erstellen durch Ziehen von Feldern oder Entitäten in die Abfrageentwurfsoberfläche interaktiv eine Abfrage. In einem textbasierten Abfrage-Designer schreiben oder importieren Sie Abfragen in der Abfragesyntax, die von der externen Datenquelle unterstützt wird.  
   
  Im Abfrage-Designer können Sie die Abfrage ausführen, um Beispieldaten anzuzeigen und die Abfragebefehlssyntax zu überprüfen. Spaltennamen im Resultset werden die Feldnamen, die im Berichtsdatenbereich angezeigt werden. Das Resultset muss ein einzelner Satz von Zeilen und Spalten sein, der die gleiche Anzahl von Werten für jede Datenzeile aufweist. Mehrere Resultsets aus einer einzelnen Abfrage werden nicht unterstützt. Unregelmäßige Hierarchien, die keine konstante Anzahl von Spalten enthalten und für jede Zeile eine andere Anzahl von Datenwerten erzeugen können, werden nicht unterstützt.  
@@ -96,27 +96,27 @@ ms.locfileid: "66107123"
   
  Die Kommunikation zwischen einer Datenerweiterung und der externen Datenquelle wird von Datenanbietern behandelt. Die Unterstützung der Abfragebefehlssyntax, Abfrageparameter und Datentypen für Werte im Resultset wird von den einzelnen Datenanbietern bestimmt. Weitere Informationen finden Sie im Thema zum jeweiligen Datenerweiterungstyp und unter [Abfrage-Designer &#40;Berichts-Generator&#41;](../query-designers-report-builder.md).  
 
-##  <a name="HowTo"></a> Themen zur Vorgehensweise  
+##  <a name="how-to-topics"></a><a name="HowTo"></a> Themen zur Vorgehensweise  
  [Hinzufügen und Überprüfen einer Datenverbindung oder Datenquelle &#40;Berichts-Generator und SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Erstellen eines freigegebenen Datasets oder eingebetteten Datasets &#40;Berichts-Generator und SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
  [Hinzufügen, Bearbeiten und Aktualisieren von Feldern im Berichtsdatenbereich &#40;Berichts-Generator und SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md)  
   
- [Erstellen Sie eine Abfrage im relationalen Abfrage-Designer &#40;Berichts-Generator und SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
+ [Erstellen einer Abfrage im relationalen Abfrage-Designer &#40;Berichts-Generator und SSRS&#41;](build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md)  
   
- [Anzeigen von ausgeblendeten Datasets für Parameter Werte für mehrdimensionale Daten &#40;Berichts-Generator und SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
+ [Anzeigen von ausgeblendeten Datasets für Parameterwerte für mehrdimensionale Daten &#40;Berichts-Generator und SSRS&#41;](show-hidden-datasets-for-parameter-values-multidimensional-data.md)  
   
- [Hinzufügen eines Filters zu einem DataSet &#40;Berichts-Generator und SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [Hinzufügen eines Filters zu einem Dataset &#40;Berichts-Generator und SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
- [Legen Sie eine Meldung ohne Daten für einen Datenbereich &#40;Berichts-Generator und SSRS fest&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
+ [Festlegen einer Meldung über fehlende Daten für einen Datenbereich &#40;Berichts-Generator und SSRS&#41;](set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md)  
   
- [Zuordnen eines Abfrage Parameters zu einem Berichts Parameter &#40;Berichts-Generator und SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
+ [Zuordnen eines Abfrageparameters zu einem Berichtsparameter &#40;Berichts-Generator und SSRS&#41;](associate-a-query-parameter-with-a-report-parameter-report-builder-and-ssrs.md)  
   
  [Definieren von Parametern im MDX-Abfrage-Designer für Analysis Services &#40;Berichts-Generator und SSRS&#41;](define-parameters-in-the-mdx-query-designer-for-analysis-services.md)  
 
-##  <a name="Section"></a> In diesem Abschnitt  
- [Berichtsteile und Datasets in Berichts-Generator](report-parts-and-datasets-in-report-builder.md)  
+##  <a name="in-this-section"></a><a name="Section"></a> In diesem Abschnitt  
+ [Report Parts and Datasets in Report Builder (Berichtsteile und Datasets in Berichts-Generator)](report-parts-and-datasets-in-report-builder.md)  
   
  [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
   
@@ -124,8 +124,8 @@ ms.locfileid: "66107123"
   
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
- [Datasetfeld-Sammlung &#40;Berichts-Generator und SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
+ [Datasetfelder-Sammlung &#40;Berichts-Generator und SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
 
 ## <a name="see-also"></a>Weitere Informationen  
  [Berichtsentwurfsansicht &#40;Berichts-Generator&#41;](../report-builder/report-design-view-report-builder.md)   
- [Konzepte der Berichterstellung &#40;Berichts-Generator und SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Berichterstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  

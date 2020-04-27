@@ -13,20 +13,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e902d40a75e3034bb22f27711de325914d255435
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109830"
 ---
 # <a name="choose-the-deployment-location"></a>Bereitstellungsspeicherort auswählen
   Verwenden Sie diese Seite des Berichts-Assistenten, um den Bereitstellungsserver und -ordner für das Berichtsserverprojekt festzulegen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Berichts Server**  
  Geben Sie die URL des virtuellen Verzeichnisses des Berichts Servers ein, z http://localhost/reportserver. b.. Dies ist das virtuelle Verzeichnis des Berichtsservers, nicht des Berichts-Managers. Standardmäßig wird der Berichtsserver mit dem virtuellen Verzeichnis mit der Bezeichnung reportserver installiert.  
   
- **Bereitstellungsordner**  
+ **Bereitstellungs Ordner**  
  Geben Sie den Namen des Zielordners für das Veröffentlichen der Berichte ein, die im Berichtsserverprojekt enthalten sind. Der Standardwert für den Ordner ist der Name des Projekts. Falls der Ordner nicht auf dem Berichtsserver vorhanden ist, erstellt der Berichts-Designer den Ordner, wenn die Berichte veröffentlicht werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  

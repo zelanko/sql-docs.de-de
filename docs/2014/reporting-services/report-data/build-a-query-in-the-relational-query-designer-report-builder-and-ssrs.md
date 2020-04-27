@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 901abf5be70f0b3c70b89b0415c59f19a9327b29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107437"
 ---
 # <a name="build-a-query-in-the-relational-query-designer-report-builder-and-ssrs"></a>Erstellen einer Abfrage im relationalen Abfrage-Designer (Berichts-Generator und SSRS)
@@ -83,7 +83,7 @@ ms.locfileid: "66107437"
   
 ### <a name="to-view-a-query-result-set"></a>So zeigen Sie ein Abfrageresultset an  
   
-1.  Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Abfrage ausführen (!)**.  
+1.  Klicken Sie auf der Symbolleiste des Abfrage-Designers auf **Abfrage ausführen (!)** .  
   
     > [!NOTE]  
     >  Der Abfrage-Designer verwendet Entwurfszeitanmeldeinformationen, um die Abfrage auszuführen und das Resultset abzurufen. Weitere Informationen finden Sie unter [Angeben von Anmeldeinformationen im Berichts-Generator](../specify-credentials-in-report-builder.md).  
@@ -92,11 +92,11 @@ ms.locfileid: "66107437"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-datasets-ssrs.md)   
- [Hinzufügen von Daten aus externen Datenquellen &#40;SSRS-&#41;](add-data-from-external-data-sources-ssrs.md)   
+ [Hinzufügen von Daten aus externen Datenquellen (SSRS)](add-data-from-external-data-sources-ssrs.md)   
  [Abfrage-Designer &#40;Berichts-Generator&#41;](../query-designers-report-builder.md)   
  [Erstellen eines freigegebenen Datasets oder eingebetteten Datasets &#40;Berichts-Generator und SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)   
  [Berichtsentwurfsansicht &#40;Berichts-Generator&#41;](../report-builder/report-design-view-report-builder.md)   
- [Entwurfs Ansicht für freigegebene Datasets &#40;Berichts-Generator&#41;](../report-builder/shared-dataset-design-view-report-builder.md)   
+ [Freigegebene Datasetentwurfsansicht &#40;Report Builder&#41;](../report-builder/shared-dataset-design-view-report-builder.md)   
  [Abfrage-Designer in Reporting Services](../reporting-services-query-designers.md)  
   
   

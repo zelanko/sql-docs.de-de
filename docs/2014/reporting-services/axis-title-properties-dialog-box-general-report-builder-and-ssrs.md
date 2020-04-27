@@ -14,34 +14,34 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4797dd3535ff00511594110cd7f2668af2223d3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109968"
 ---
 # <a name="axis-title-properties-dialog-box-general-report-builder-and-ssrs"></a>Achsentiteleigenschaften (Dialogfeld), Allgemein (Berichts-Generator und SSRS)
   Wählen Sie **Allgemein** im Dialogfeld **Achsentiteleigenschaften** aus, um den Achsentitel zu definieren. Der Achsentitel wird unter der X-Achse oder neben der Y-Achse angezeigt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Titel**  
  Geben Sie einen Titel oder einen Ausdruck ein, der den Achsentitel darstellt.  
   
  **Titelausrichtung**  
  Wählen Sie eine Ausrichtung, oder geben Sie einen Ausdruck ein, der die Ausrichtung des Achsentitels relativ zum Schnittpunkt der Achsen darstellt.  
   
--   **Near** Zeigt den Achsentitel für die Schnittmenge der beiden Achsen an.  
+-   **Nah** Zeigt den Achsentitel am Schnittpunkt der beiden Achsen an.  
   
--   **Zentrieren** Zeigt den Achsentitel in der Mitte der Achse an.  
+-   **Zentriert** Zeigt den Achsentitel im Zentrum der Achse an.  
   
--   **Weit** Zeigt den Achsentitel vom Schnittpunkt der beiden Achsen an.  
+-   **Entfernt** Zeigt den Achsentitel vom Schnittpunkt der beiden Achsen entfernt an.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
- [Formatieren von Reihenfarben in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Angeben eines Achsenintervalls (Berichts-Generator und SSRS)](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
- [Formatieren von Achsenbezeichnungen als Datumsangabe oder Währung (Berichts-Generator und SSRS)](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+ [Formatieren von Reihen Farben in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Formatieren von Achsen Bezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Angeben eines Achsen Intervalls &#40;Berichts-Generator und SSRS&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
+ [Formatieren von Achsen Bezeichnungen als Datumsangaben oder Währungen &#40;Berichts-Generator und SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [Zeichnen von Daten auf einer sekundären Achse &#40;Berichts-Generator und SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [Achseneigenschaften (Dialogfeld), Achsenoptionen (Berichts-Generator und SSRS)](../../2014/reporting-services/axis-properties-dialog-box-axis-options-report-builder-and-ssrs.md)  
   

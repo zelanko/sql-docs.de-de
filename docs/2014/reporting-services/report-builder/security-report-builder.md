@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8a68a050627d431570327822cccc60dd0aaf860b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107605"
 ---
 # <a name="security-report-builder"></a>Sicherheit (Berichts-Generator)
@@ -24,19 +24,19 @@ ms.locfileid: "66107605"
   
  Voraussetzung für die Erstellung, Veröffentlichung und Verwendung von Berichten und berichtsbezogenen Elementen ist ein Verständnis der Zusammenhänge zwischen Sicherheitsfunktionen und den folgenden Bereichen:  
   
--   **Der Berichts Server oder die SharePoint-Website, auf der Sie Berichte veröffentlichen** Diese Funktionen werden vom Berichts Server Administrator oder SharePoint-Website Administrator verwaltet.  
+-   **Berichtsserver oder SharePoint-Website, auf dem bzw. der Sie Berichte veröffentlichen:** Diese Funktionen werden vom Berichtsserveradministrator oder SharePoint-Websiteadministrator verwaltet.  
   
--   **Veröffentlichte Berichte und Berichts bezogene Elemente** Zu den Berichts bezogenen Elementen zählen eingebettete und freigegebene Datenquellen und deren Anmelde Informationen, freigegebene Datasets, Parameter, Berichts Teile und Berichts Modelle. Die Sicherheitsfunktionen für diese Elemente werden vom Autor des Berichts verwaltet. Der Berichtsserveradministrator bzw. SharePoint-Websiteadministrator muss dem Autor des Berichts ausreichende Berechtigungen gewähren, damit er die Elemente veröffentlichen und freigeben kann.  
+-   **Veröffentlichte Berichte und berichtsbezogene Elemente:** Zu den berichtsbezogenen Elementen zählen eingebettete und freigegebene Datenquellen und die zugehörigen Anmeldeinformationen, freigegebene Datasets, Parameter, Berichtsteile und Berichtsmodelle. Die Sicherheitsfunktionen für diese Elemente werden vom Autor des Berichts verwaltet. Der Berichtsserveradministrator bzw. SharePoint-Websiteadministrator muss dem Autor des Berichts ausreichende Berechtigungen gewähren, damit er die Elemente veröffentlichen und freigeben kann.  
   
--   **Von einem Bericht verwendete externe Datenquellen** Diese Funktionen werden vom Besitzer der externen Datenquelle verwaltet.  
+-   **In einem Bericht verwendete externe Datenquellen:** Diese Funktionen werden vom Besitzer der externen Datenquelle verwaltet.  
   
--   **Berichts Modelle, die auf externen Datenquellen basieren** Diese Funktionen werden vom Modell-Designer verwaltet.  
+-   **Auf externen Datenquellen basierende Berichtsmodelle:** Diese Funktionen werden vom Modell-Designer verwaltet.  
   
--   **Interaktive Berichtsfunktionen wie Parameter** Diese Funktionen werden vom Autor des Berichts verwaltet.  
+-   **Interaktive Berichtsfunktionen wie Parameter:** Diese Funktionen werden vom Autor des Berichts verwaltet.  
   
  In diesem Thema erfahren Sie, wie Sicherheitsfunktionen zum Verwalten und Schützen von Berichten und berichtsbezogenen Elementen verwendet werden.  
   
-##  <a name="ReportServers"></a>Grundlegendes zur Sicherheit für Berichts Server  
+##  <a name="understanding-security-for-report-servers"></a><a name="ReportServers"></a> Grundlegendes zur Sicherheit für Berichtsserver  
  Das Veröffentlichen und Anzeigen von Berichten sind privilegierte Vorgänge. Ein Berichtsserveradministrator stellt durch Berechtigungen sicher, dass nur autorisierte Benutzer Berichte auf den folgenden Berichtsservertypen veröffentlichen und anzeigen können:  
   
 -   Im einheitlichen Modus konfigurierter Berichtsserver  
@@ -57,7 +57,7 @@ ms.locfileid: "66107605"
   
 =
   
-##  <a name="Reports"></a>Grundlegendes zur Sicherheit für veröffentlichte Berichte und Berichts bezogene Elemente  
+##  <a name="understanding-security-for-published-reports-and-report-related-items"></a><a name="Reports"></a> Grundlegendes zur Sicherheit für veröffentlichte Berichte und berichtsbezogene Elemente  
  Die Sicherheit für Berichte und berichtsbezogene Elemente wird vom Berichtsserveradministrator verwaltet. Zu berichtsbezogenen Elementen zählen eingebettete und freigegebene Datenquellen sowie die zugehörigen Anmeldeinformationen, freigegebene Datasets, Parameter, Berichtsteile und Modelle.  
   
  Berichte und berichtsbezogene Elemente und Vorgänge können auf einem Berichtsserver oder einer SharePoint-Website unabhängig voneinander geschützt werden. Die Berechtigung für den Zugriff auf Elemente und Vorgänge wird mithilfe von Sicherheitsrichtlinien erteilt, durch die ein Benutzer- oder Gruppenkonto einer Berechtigungsebene für ein Element zugeordnet wird. Berechtigungen für einen Container, z. B. ein Ordner, werden von Elementen im Container geerbt, um die Komplexität und den Aufwand für die Verwaltung von Richtlinien zu reduzieren. Wenn ein Benutzer z. B. die spezifische Berechtigung "Berichte anzeigen" für einen Ordner besitzt, gilt diese Berechtigung für die Elemente im Ordner.  
@@ -81,11 +81,11 @@ ms.locfileid: "66107605"
   
  Wenn Berichtsteile vom ursprünglichen Speicherort verschoben werden, enthält die Updatebenachrichtigung sowohl den aktuellen als auch den vorherigen Speicherort des Berichtsteils. Akzeptieren Sie nur Updates von vertrauenswürdigen Speicherorten.  
   
- Weitere Informationen finden Sie unter [Berichtsteile &#40;Berichts-Generator und SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
+ Weitere Informationen finden Sie unter [Berichts Teile &#40;Berichts-Generator und SSRS&#41;](../report-parts-report-builder-and-ssrs.md).  
   
 =  
   
-##  <a name="Data"></a>Grundlegendes zur Sicherheit für Berichtsdaten und externe Datenquellen  
+##  <a name="understanding-security-for-report-data-and-external-data-sources"></a><a name="Data"></a> Grundlegendes zur Sicherheit für Berichtsdaten und externe Datenquellen  
  Sie können in einem Bericht auf Daten aus externen Datenquellen zugreifen, indem Sie im Bericht eine eingebettete Datenquelle erstellen oder einen Verweis auf eine freigegebene Datenquelle oder ein freigegebenes Dataset hinzufügen.  
   
  Für jede externe Datenquelle müssen Sie Anmeldeinformationen mit entsprechenden Berechtigungen für den Zugriff auf die Quelle und die zugrunde liegenden Daten angeben. Der Datenquellenbesitzer gibt den erforderlichen Anmeldeinformationstyp für diesen Zugriff an.  
@@ -102,14 +102,14 @@ ms.locfileid: "66107605"
   
 =
   
-##  <a name="Models"></a>Grundlegendes zu Modellen und Sicherheits Filtern  
+##  <a name="understanding-models-and-security-filters"></a><a name="Models"></a> Grundlegendes zu Modellen und Sicherheitsfiltern  
  Wenn Daten aus einem auf externen Daten basierenden Berichtsmodell abgerufen werden, können Sie im Modell Sicherheitsfilter anwenden. So können Daten gut geschützt werden, da jeder Benutzer, der einen Bericht ausführt, nur die Daten sieht, für die er über Berechtigungen verfügt.  
   
  Berichtsparameter werden nicht für die Sicherheit auf Zeilenebene verwendet. Sie verhindern nicht, dass Benutzer oder Benutzergruppen bestimmte Datenzeilen sehen. Die Sicherheit der im Bericht angezeigten Daten muss mit Sicherheitsfiltern oder der Modellelementsicherheit gewährleistet werden.  
   
 =
   
-##  <a name="Interactive"></a>Grundlegendes zur Sicherheit der Berichterstellung für interaktive Funktionen  
+##  <a name="understanding-security-for-report-authoring-for-interactive-features"></a><a name="Interactive"></a> Grundlegendes zur Sicherheit der Berichterstellung für interaktive Funktionen  
  In Berichten werden häufig Parameter verwendet, um Benutzern die interaktive Anpassung ihrer Ansicht eines Berichts zu ermöglichen. Die folgenden bewährten Tipps helfen Ihnen, gut durchdachte Berichte zu erstellen:  
   
 -   Verwenden Sie Parameter, die auf Abfrageparametern basieren und vom Typ **Text** sind, nur, wenn Sie gültige Werte geben. Durch eine Liste verfügbarer Werte stellen Sie sicher, dass Benutzer nur gültige Werte auswählen. Ohne eine solche Liste ist es nicht möglich, die Werte einzuschränken, die ein Benutzer eingeben kann.  

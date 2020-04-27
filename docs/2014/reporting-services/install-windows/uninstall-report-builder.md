@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: eeb260942f378eb1e93751fc118f82e67a13d45b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108662"
 ---
 # <a name="uninstall-the-stand-alone-version-of-report-builder-report-builder"></a>Deinstallieren der eigenständigen Version des Berichts-Generators (Berichts-Generator)
@@ -38,7 +38,7 @@ ms.locfileid: "66108662"
   
 ### <a name="to-uninstall-report-builder-from-the-command-line"></a>So deinstallieren Sie den Berichts-Generator über die Befehlszeile  
   
-1.  Klicken Sie im Menü **Start** auf **Ausführen**.  
+1.  Klicken Sie im **Startmenü** auf **Ausführen**.  
   
 2.  Geben Sie im Textfeld **Öffnen** den Text`cmd.`  
   

@@ -14,17 +14,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff9f3281e47cf6dfdf8a189c653d0e061f4a761d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109961"
 ---
 # <a name="axis-properties-dialog-box-axis-options-report-builder-and-ssrs"></a>Achseneigenschaften (Dialogfeld), Achsenoptionen (Berichts-Generator und SSRS)
-  Wählen Sie im Dialogfeld Eigenschaften für **horizontale** oder **verticalaxis** die **Option Achsen Optionen** aus, um die Darstellung der angegebenen Achse im Diagramm zu definieren. In älteren Versionen von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] wurden standardmäßig alle Bezeichnungen auf der x-Achse angezeigt. Ab Version [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008 werden Bezeichnungen ggf. übersprungen, um ein übersichtlicheres Bild zu erzielen und sich überlappende Beschriftungen zum vermeiden. Weitere Informationen finden Sie unter [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
+  Wählen Sie im Dialogfeld Eigenschaften für **horizontale** oder **verticalaxis** die **Option Achsen Optionen** aus, um die Darstellung der angegebenen Achse im Diagramm zu definieren. In älteren Versionen von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]wurden standardmäßig alle Bezeichnungen auf der x-Achse angezeigt. Ab Version [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 2008 werden Bezeichnungen ggf. übersprungen, um ein übersichtlicheres Bild zu erzielen und sich überlappende Beschriftungen zum vermeiden. Weitere Informationen finden Sie unter [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md).  
   
-## <a name="options"></a>Tastatur  
- **Skalierungs Unterbrechungen aktivieren**  
+## <a name="options"></a>Optionen  
+ **Skalierungsunterbrechungen aktivieren**  
  Wählen Sie diese Option aus, damit das Diagramm bei Bedarf Skalierungsunterbrechungen zeichnen kann. Wenn diese Option aktiviert ist, berechnet das Diagramm automatisch, ob genügend Unterschied zwischen den oberen und unteren Punkten des Datasets besteht, um eine Skalierungsunterbrechung zu zeichnen.  
   
  **Richtung umkehren**  
@@ -39,18 +39,18 @@ ms.locfileid: "66109961"
  **Skalare Achse**  
  Wählen Sie diese Option, um einen Satz von Achsenwerten über eine fortlaufende Skala anzuzeigen. Wenn das Dataset beispielsweise Daten für Januar, März und November enthält, zeigt eine Nicht-Skalarachse nur diese Monate an, während eine Skalarachse alle Monate des Jahrs anzeigt.  
   
- **Logarithmische Skala verwenden**  
+ **Logarithmische Skalierung verwenden**  
  Wählen Sie diese Option aus, um anzugeben, dass die Achsenskalierung logarithmisch ist. Diese Option ist nur auf der Y-Achse verfügbar, wenn die Achse positive numerische Werte enthält.  
   
  Geben Sie die zu verwendende logarithmische Basis in das Feld ein, wenn für die Achse die Verwendung einer logarithmischen Skala festgelegt wurde. Standardmäßig verwendet das Diagramm eine Basis von 10 für die logarithmische Skalierung einer Achse. Diese Option ist nur auf der Y-Achse verfügbar, wenn die Achse numerische Werte enthält.  
   
- **Minimum**  
+ **Garantien**  
  Geben Sie einen Ausdruck oder einen Wert für den Minimalwert für die X-Achse ein. Falls kein Wert angegeben ist, wird der Minimalwert durch die Daten bestimmt, die durch das Dataset zurückgegeben werden.  
   
  **Maximale**  
  Geben Sie einen Ausdruck oder einen Wert für den Maximalwert für die X-Achse ein. Falls kein Wert angegeben ist, wird der Maximalwert durch die Daten bestimmt, die durch das Dataset zurückgegeben werden.  
   
- **Tri**  
+ **Intervall**  
  Geben Sie einen Ausdruck oder einen Wert für das Intervall zwischen den Achsenbeschriftungen ein. Geben Sie z. B. 1 ein, damit jede Kategoriebezeichnung auf der Achse angezeigt wird. Geben Sie 2 ein, um nur jede zweite Kategoriebezeichnung anzuzeigen. Falls kein Wert angegeben wird, werden die Bezeichnungen automatisch anhand der Werte im Dataset berechnet.  
   
  **Intervalltyp**  
@@ -60,11 +60,11 @@ ms.locfileid: "66109961"
  Geben Sie einen Ausdruck ein, oder wählen Sie einen Wert aus, um einen Rand zwischen den Diagrammelementen und den Seiten des Diagramms hinzuzufügen bzw. zu entfernen. Wenn diese Option auf **Automatisch**festgelegt wird, werden Seitenränder hinzugefügt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Formatieren von Achsen Bezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
- [Formatieren von Reihenfarben in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Angeben eines Achsenintervalls (Berichts-Generator und SSRS)](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
- [Formatieren von Achsenbezeichnungen als Datumsangabe oder Währung (Berichts-Generator und SSRS)](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
+ [Formatieren von Reihen Farben in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Angeben eines Achsen Intervalls &#40;Berichts-Generator und SSRS&#41;](report-design/specify-an-axis-interval-report-builder-and-ssrs.md)   
+ [Formatieren von Achsen Bezeichnungen als Datumsangaben oder Währungen &#40;Berichts-Generator und SSRS&#41;](report-design/format-axis-labels-as-dates-or-currencies-report-builder-and-ssrs.md)   
  [Zeichnen von Daten auf einer sekundären Achse &#40;Berichts-Generator und SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [Sparklines und Daten Balken &#40;Berichts-Generator und SSRS&#41;](report-design/sparklines-and-data-bars-report-builder-and-ssrs.md)   
  [Hinzufügen oder Entfernen von Rändern aus einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/add-or-remove-margins-from-a-chart-report-builder-and-ssrs.md)  

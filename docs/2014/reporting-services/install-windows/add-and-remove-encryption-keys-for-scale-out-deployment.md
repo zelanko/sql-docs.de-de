@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b935a74dba93596e734537f62f2ccafd192f3523
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108915"
 ---
 # <a name="add-and-remove-encryption-keys-for-scale-out-deployment-ssrs-configuration-manager"></a>Hinzufügen und Entfernen von Verschlüsselungsschlüsseln für die Bereitstellung für horizontales Skalieren (SSRS-Konfigurations-Manager)
@@ -62,7 +62,7 @@ ms.locfileid: "66108915"
  Mit diesen Schritten entfernen Sie den Berichtsserver aus einer Bereitstellung für horizontales Skalieren. Dabei wird die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Instanz auf dem Berichtsserver jedoch nicht deinstalliert. Nachdem Sie den Berichtsserver aus einer Bereitstellung für horizontales Skalieren entfernt haben, können Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] vom Server deinstallieren, wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf dem Server nicht mehr benötigen. Weitere Informationen finden Sie unter [Deinstallieren einer vorhandenen SQL Server-Instanz (Setup)](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
- [Initialisieren eines Berichtsservers &#40;SSRS-Konfigurations-Manager&#41;](ssrs-encryption-keys-initialize-a-report-server.md)  
+ [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Configuration Manager&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Initialisieren eines Berichtsservers (SSRS-Konfigurations-Manager)](ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

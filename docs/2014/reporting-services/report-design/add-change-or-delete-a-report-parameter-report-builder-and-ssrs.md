@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ebf333b49c20c7eadef4fdbcd54834c450d274c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106687"
 ---
 # <a name="add-change-or-delete-a-report-parameter-report-builder-and-ssrs"></a>Hinzufügen, Ändern oder Löschen von Berichtsparametern (Berichts-Generator und SSRS)
@@ -58,16 +58,16 @@ ms.locfileid: "66106687"
 2.  Klicken Sie mit der rechten Maustaste auf den Berichtsparameter, und klicken Sie anschließend auf **Löschen**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Hinzufügen, Ändern oder Löschen von verfügbaren Werten für einen Berichtsparameter &#40;Berichts-Generator und SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)   
- [Hinzufügen, Ändern oder Löschen von Standardwerten für einen Berichtsparameter (Berichts-Generator und SSRS)](add-change-or-delete-default-values-for-a-report-parameter.md)   
- [Ändern der Reihenfolge von Berichtsparametern &#40;Berichts-Generator und SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
- [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](report-parameters-report-builder-and-report-designer.md)   
+ [Hinzufügen, ändern oder Löschen von verfügbaren Werten für einen Berichts Parameter &#40;Berichts-Generator und SSRS&#41;](add-change-or-delete-available-values-for-a-report-parameter.md)   
+ [Hinzufügen, ändern oder Löschen von Standardwerten für einen Berichts Parameter &#40;Berichts-Generator und SSRS&#41;](add-change-or-delete-default-values-for-a-report-parameter.md)   
+ [Ändern der Reihenfolge von Berichts Parametern &#40;Berichts-Generator und SSRS&#41;](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md)   
+ [Berichts Parameter &#40;Berichts-Generator und Berichts-Designer&#41;](report-parameters-report-builder-and-report-designer.md)   
  [Berichts-Generator Hilfe zu Dialog Feldern, Bereichen und Assistenten](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
  [Hinzufügen von kaskadierenden Parametern zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](add-cascading-parameters-to-a-report-report-builder-and-ssrs.md)   
- [Tutorial: Add a Parameter to Your Report (Report Builder) (Tutorial: Hinzufügen eines Parameters zu einem Bericht (Berichts-Generator))](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Tutorial: Hinzufügen eines Parameters zu einem Bericht &#40;Berichts-Generator&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Lernprogramme &#40;Berichts-Generator&#41;](../report-builder-tutorials.md)   
- [Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern &#40;Berichts-Generator und SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
- [Parameters Collection References (Report Builder and SSRS) (Verweise auf Parameterauflistungen (Berichts-Generator und SSRS))](built-in-collections-parameters-collection-references-report-builder.md)   
- [Add a multi-value parameter to a Report (Hinzufügen eines aus mehreren Werten bestehenden Parameters zu einem Bericht)](add-a-multi-value-parameter-to-a-report.md)  
+ [Hinzufügen von datasetfiltern, Datenbereichs Filtern und Gruppen Filtern &#40;Berichts-Generator und SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [Die Parameter Sammlung verweist auf &#40;Berichts-Generator und SSRS&#41;](built-in-collections-parameters-collection-references-report-builder.md)   
+ [Hinzufügen eines aus mehreren Werten bestehenden Parameters zu einem Bericht](add-a-multi-value-parameter-to-a-report.md)  
   
   

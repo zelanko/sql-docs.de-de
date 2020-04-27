@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: defd23b4ef341f54551490470de494edd942221e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108557"
 ---
 # <a name="legend-properties-dialog-box-general-report-builder-and-ssrs"></a>Legendeneigenschaften (Dialogfeld), Allgemein (Berichts-Generator und SSRS)
@@ -27,18 +27,18 @@ ms.locfileid: "66108557"
  **Name**  
  Geben Sie einen Namen für die Legende ein.  
   
- **Layout **  
+ **Layout**  
  Wählen Sie eine Option aus, um das Layout der Legende anzugeben. Das Standardlegendenlayout ist "Automatische Tabelle".  
   
--   **Hohe Tabelle** Zeigen Sie den Inhalt der Legende in einer Tabelle an. Legendeneinträge werden hinzugefügt, um die Legende vertikal zu erweitern.  
+-   **Hohe Tabelle:** Zeigt den Inhalt der Legende in einer Tabelle an. Legendeneinträge werden hinzugefügt, um die Legende vertikal zu erweitern.  
   
--   **Spalte** Zeigen Sie den Inhalt der Legende in einer einzelnen Spalte an.  
+-   **Spalte:** Zeigt den Inhalt der Legende in einer einzelnen Spalte an.  
   
--   **Zeile** Zeigen Sie den Inhalt der Legende in einer einzelnen Zeile an.  
+-   **Zeile:** Zeigt den Inhalt der Legende in einer einzelnen Zeile an.  
   
--   **Breite Tabelle** Zeigen Sie den Inhalt der Legende in einer Tabelle an. Legendeneinträge werden hinzugefügt, um die Legende horizontal zu erweitern.  
+-   **Breite Tabelle:** Zeigt den Inhalt der Legende in einer Tabelle an. Legendeneinträge werden hinzugefügt, um die Legende horizontal zu erweitern.  
   
--   **Automatische Tabelle** Zeigen Sie den Inhalt der Legende in einer Tabelle an. Legendeneinträge werden hinzugefügt, um die Legende je nach verfügbarem Platz im Diagramm horizontal oder vertikal zu erweitern.  
+-   **Automatische Tabelle:** Zeigt den Inhalt der Legende in einer Tabelle an. Legendeneinträge werden hinzugefügt, um die Legende je nach verfügbarem Platz im Diagramm horizontal oder vertikal zu erweitern.  
   
  **An Diagrammfläche andocken**  
  Aktivieren Sie diese Option, um die Legende einer Diagrammfläche zuzuordnen.  
@@ -48,10 +48,10 @@ ms.locfileid: "66108557"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
- [Formatieren von Reihenfarben in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
+ [Formatieren von Reihen Farben in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Formatieren der Legende in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
- [Formatieren von Achsenbezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
- [Definieren von Farben in einem Diagramm mit einer Palette (Berichts-Generator und SSRS)](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
+ [Formatieren von Achsen Bezeichnungen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-axis-labels-on-a-chart-report-builder-and-ssrs.md)   
+ [Definieren von Farben in einem Diagramm mit einer Palette &#40;Berichts-Generator und SSRS&#41;](report-design/define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)   
  [Zeichnen von Daten auf einer sekundären Achse &#40;Berichts-Generator und SSRS&#41;](report-design/plot-data-on-a-secondary-axis-report-builder-and-ssrs.md)   
  [Formatieren der Legende in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/chart-legend-formatting-report-builder.md)   
  [Hinzufügen eines gleitenden Durchschnitts zu einem Diagramm &#40;Berichts-Generator und SSRS&#41;](report-design/add-a-moving-average-to-a-chart-report-builder-and-ssrs.md)  

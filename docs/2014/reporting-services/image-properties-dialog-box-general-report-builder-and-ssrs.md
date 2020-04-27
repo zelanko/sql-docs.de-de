@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8a66c424bfe5bd4a2587140a0f5238f46833a061
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109028"
 ---
 # <a name="image-properties-dialog-box-general-report-builder-and-ssrs"></a>Bildeigenschaften (Dialogfeld), Allgemein (Berichts-Generator und SSRS)
@@ -33,11 +33,11 @@ ms.locfileid: "66109028"
  **Bildquelle auswählen**  
  Geben Sie den Speicherort des Bilds an, sodass der Berichtsprozessor dieses beim Rendern des Berichts abrufen kann.  
   
--   **Extern** Wählen Sie diese Option aus, wenn das Bild als Datei auf einem Berichts Server oder Webserver weiterhin vorhanden sein soll.  
+-   **Extern** Wählen Sie diese Option aus, wenn das Bild als Datei auf einem Berichtsserver oder Webserver gespeichert bleiben soll.  
   
 -   **Eingebettet** Wählen Sie diese Option aus, wenn Sie das Bild in den Bericht einbetten möchten.  
   
--   **Datenbank** Wählen Sie diese Option aus, wenn Sie einen Daten Bank Feldnamen einschließen möchten, der die Bilder darstellt, die Sie in den Bericht einschließen möchten.  
+-   **Datenbank** Wählen Sie diese Option aus, wenn Sie einen Datenbankfeldnamen für die Bilder, die in Ihrem Bericht enthalten sein sollen, einschließen möchten.  
   
  **Dieses Bild verwenden**  
  Diese Option wird angezeigt, wenn Sie die Option **Eingebettet** oder **Extern** auswählen.  
@@ -57,7 +57,7 @@ ms.locfileid: "66109028"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [Bilder &#40;Berichts-Generator und SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
- [Berichts-Generator Hilfe zu Dialog Feldern, Bereichen und Assistenten](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Images &#40;Berichts-Generator und SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [Hilfe zu Dialogfeldern, Bereichen und Assistenten in Berichts-Generator](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

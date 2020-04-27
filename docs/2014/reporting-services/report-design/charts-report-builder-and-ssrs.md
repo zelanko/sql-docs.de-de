@@ -21,10 +21,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fb26ce238953f9bf4a3472385de6dd1bf5c167d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106246"
 ---
 # <a name="charts-report-builder-and-ssrs"></a>Diagramme (Berichts-Generator und SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "66106246"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="DesigningChart"></a> Entwerfen eines Diagramms  
+##  <a name="designing-a-chart"></a><a name="DesigningChart"></a> Entwerfen eines Diagramms  
  Nachdem Sie der Entwurfsoberfläche einen Diagrammdatenbereich hinzugefügt haben, können Sie Berichtsdataset-Felder für numerische und nicht numerische Daten in den Diagrammdatenbereich des Diagramms ziehen. Wenn Sie in der Entwurfsoberfläche auf das Diagramm klicken, wird der Diagrammdatenbereich mit drei untergeordneten Bereichen angezeigt: Kategoriegruppen, Reihengruppen und Werte. Wenn der Bericht über ein freigegebenes oder eingebettetes Dataset verfügt, werden die Felder im Dataset im Berichtsdatenbereich angezeigt. Ziehen Sie die Felder aus dem Dataset in den entsprechenden Bereich. Wenn einem Bereich des Diagramms ein Feld hinzugefügt wird, wird in der Standardeinstellung in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ein Aggregat für das Feld berechnet. Sie können auch die Reihengruppierung verwenden, um Reihen dynamisch zu generieren. Das Diagramm ist darüber hinaus eng mit der Matrix verknüpft.  
   
  ![rs_chartwSeriesCategories](../media/rs-chartwseriescategories.gif "rs_chartwSeriesCategories")  
@@ -49,7 +49,7 @@ ms.locfileid: "66106246"
   
   
   
-##  <a name="SimilarMatrix"></a>Ähnlichkeiten mit einer Matrix  
+##  <a name="similarities-to-a-matrix"></a><a name="SimilarMatrix"></a>Ähnlichkeiten mit einer Matrix  
  Eine Möglichkeit, die Funktionsweise von Diagrammen zu veranschaulichen, ist der Vergleich mit Matrizen.  
   
  ![Neue Matrix aus Toolbox hinzugefügt, markiert](../media/rs-matrixtemplatenewselected.gif "Neue Matrix aus Toolbox hinzugefügt, markiert")  
@@ -64,7 +64,7 @@ ms.locfileid: "66106246"
   
  
   
-##  <a name="AddingData"></a> Hinzufügen von Daten zum Diagramm  
+##  <a name="adding-data-to-the-chart"></a><a name="AddingData"></a> Hinzufügen von Daten zum Diagramm  
  Angenommen, Sie verfügen über einen Bericht, in dem der Vertrieb nach Namen anzeigt wird. Sie legen das Feld Vollständiger Name im Kategoriegruppenbereich und das Feld Vertrieb im Wertebereich ab.  
   
  Wenn Sie das Feld Vertrieb im Wertebereich ablegen, wird der Text des Datenfelds in der Legende angezeigt, und die Daten aus diesem numerischen Feld werden zu einem einzelnen Wert aggregiert. Standardmäßig wird der Wert mit der integrierten Funktion SUM aggregiert. Der Diagrammdatenbereich enthält einen einfachen Ausdruck für das Feld. Im Beispiel wird `[Sum(Sales)]` für den Feldausdruck `=Sum(Fields!Sales.Value)`angezeigt. Wenn keine Gruppen angegeben werden, zeigt das Diagramm nur einen Datenpunkt an. Um mehrere Datenpunkte anzuzeigen, müssen Sie die Daten gruppieren, indem Sie ein Gruppierungsfeld hinzufügen. Wenn Sie das Feld Name dem Kategoriegruppenbereich hinzufügen, wird dem Diagramm automatisch ein Gruppierungsfeld mit demselben Namen wie das Feld hinzugefügt. Wenn Felder hinzugefügt werden, in denen Werte entlang der x- und y-Achse definiert werden, verfügt das Diagramm über genügend Informationen, um die Daten korrekt zu zeichnen.  
@@ -75,7 +75,7 @@ ms.locfileid: "66106246"
   
   
   
-##  <a name="GroupsInChart"></a> Kategorie- und Reihengruppen in einem Diagramm  
+##  <a name="category-and-series-groups-in-a-chart"></a><a name="GroupsInChart"></a> Kategorie- und Reihengruppen in einem Diagramm  
  Diagramme unterstützen geschachtelte Kategorie- und Reihengruppen. In Diagrammen werden keine Detaildaten angezeigt. Fügen Sie Gruppen einem Diagramm hinzu, indem Sie Datasetfelder in die Kategorie- und Reihenablagezonen für ein ausgewähltes Diagramm ziehen.  
   
  Formdiagramme, z. B. Kreisdiagramme, unterstützen Kategoriegruppen und geschachtelte Kategoriegruppen. Andere Diagramme, z. B. Balkendiagramme, unterstützen Kategoriegruppen und Reihengruppen. Sie können Gruppen schachteln, müssen jedoch sicherstellen, dass die Anzahl der Kategorien oder Reihen nicht die Lesbarkeit der Informationen im Diagramm erschwert.  
@@ -85,14 +85,14 @@ ms.locfileid: "66106246"
   
   
   
-##  <a name="DatasetConsiderations"></a> Überlegungen zu Datasets vor dem Erstellen eines Diagramms  
+##  <a name="dataset-considerations-before-creating-a-chart"></a><a name="DatasetConsiderations"></a> Überlegungen zu Datasets vor dem Erstellen eines Diagramms  
  Diagramme stellen eine Zusammenfassungsansicht Ihrer Daten bereit. Bei großen Datasets können die Informationen in einem Diagramm jedoch verdeckt oder unlesbar werden. So können fehlende oder NULL-Datenpunkte, für einen Diagrammtyp schlecht geeignete Datentypen sowie erweiterte Anwendungen, wie das Kombinieren von Diagrammen mit Tabellen, die Lesbarkeit eines Diagramms beeinträchtigen. Bevor Sie ein Diagramm erstellen, sollten Sie daher Ihre Daten sorgfältig aufbereiten und analysieren, sodass Sie Ihre Diagramme schnell und effizient gestalten können.  
   
  Sie können einem Bericht so viele Diagramme hinzufügen, wie Sie möchten. Ein Diagramm ist wie jeder andere Datenbereich, z. B. eine Matrix oder eine Tabelle, an ein einzelnes Dataset gebunden. Wenn Sie mehrere Datasets in einem Diagramm anzeigen möchten, können Sie ein zusätzliches Dataset erstellen, das eine JOIN oder UNION-Anweisung in der SQL-Abfrage verwendet, bevor Sie dem Diagramm Daten hinzufügen. Weitere Informationen über die JOIN- und UNION-Anweisungen finden Sie in der Onlinedokumentation oder einer anderen SQL-Referenz.  
   
  Ziehen Sie in Betracht, die Daten in der Datasetabfrage vorab zu aggregieren, falls keine detaillierten Daten notwendig oder nützlich sind. Verringern Sie die Anzahl der Kategorien im Dataset, um die einzelnen Datenpunkte eindeutiger anzuzeigen. Sie können das Dataset filtern oder der Abfrage eine Bedingung hinzufügen, die die Anzahl der zurückgegebenen Zeilen reduziert.  
   
-##  <a name="BestPractices"></a> Bewährte Methoden für das Anzeigen von Daten in einem Diagramm  
+##  <a name="best-practices-when-displaying-data-in-a-chart"></a><a name="BestPractices"></a> Bewährte Methoden für das Anzeigen von Daten in einem Diagramm  
  Diagramme sind höchst effektiv, wenn die Anzahl der angezeigten Elemente ein klares Bild der zugrunde liegenden Informationen ergibt. Manche Diagramme, wie Punktdiagramme, profitieren von zahlreichen Datenpunkten, während andere Diagramme, wie Kreisdiagramme, mit weniger Datenpunkten besser wirken. Daher sollten Sie bei der Auswahl des Diagrammtyps sorgfältig vorgehen und berücksichtigen, welche Werte in Ihrem Dataset enthalten sind und wie diese Informationen angezeigt werden sollen. Weitere Informationen finden Sie unter [Diagrammtypen &#40;Berichts-Generator und SSRS&#41;](chart-types-report-builder-and-ssrs.md).  
   
  Es gibt mehrere Methoden, um Daten in einem Diagramm zu konsolidieren:  
@@ -107,7 +107,7 @@ ms.locfileid: "66106246"
   
   
   
-##  <a name="AggregateValues"></a> Aggregieren von Werten von einem Datenfeld im Diagramm  
+##  <a name="aggregating-values-from-a-data-field-on-the-chart"></a><a name="AggregateValues"></a> Aggregieren von Werten von einem Datenfeld im Diagramm  
  Wenn dem Wertebereich des Diagramms ein Feld hinzugefügt wird, wird in der Standardeinstellung in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ein Aggregat für das Feld berechnet. Wenn Sie ein Feld auf das Diagramm ziehen, ohne das Feld in einem bestimmten Bereich abzulegen, bestimmt das Diagramm anhand des Datentyps für das Feld, ob dieses Feld zur Kategorie- (x-) oder Wertachse (y-Achse) gehört. Numerische Felder, die im Wertebereich abgelegt werden, werden mit der SUM-Funktion aggregiert. Wenn der Datentyp des Wertefelds im Wertebereich String lautet, kann das Diagramm auch dann keinen numerischen Wert anzeigen, wenn sich in den Feldern Zahlen befinden. Im Diagramm wird daher die COUNT-Funktion angezeigt. Zur Vermeidung dieses Verhaltens sollten Sie sicherstellen, dass die verwendeten Felder numerische Datentypen und keine Zeichenfolgen mit formatierten Zahlen aufweisen. Mit einem Visual Basic-Ausdruck können Sie Zeichenfolgenwerte in einen numerischen Datentyp konvertieren, indem Sie die `CDbl`-Konstante oder die `CInt`-Konstante verwenden. Zum Beispiel wird mit dem folgenden komplexen Ausdruck das Feld `MyField` mit als Zeichenfolgen formatierten numerischen Werten konvertiert.  
   
  `=Sum(CDbl(Fields!MyField.Value))`  
@@ -116,7 +116,7 @@ ms.locfileid: "66106246"
   
   
   
-##  <a name="InThisSection"></a> In diesem Abschnitt  
+##  <a name="in-this-section"></a><a name="InThisSection"></a>In diesem Abschnitt  
  [Hinzufügen eines Diagramms zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
  Beschreibt die ersten Schritte beim Hinzufügen eines Diagramms zum Bericht.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "66106246"
  [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)  
  Verwenden Sie Formatierungen, um die Gesamtdarstellung zu verbessern und wichtige Datenpunkte des Diagramms hervorzuheben.  
   
- [Leere und NULL-Datenpunkte in Diagrammen &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md)  
+ [Leere und NULL-Datenpunkte in Diagrammen (Berichts-Generator und SSRS)](charts-report-builder-and-ssrs.md)  
  Beschreibt Überlegungen beim Arbeiten mit Diagrammen, die auf Feldern mit leeren oder NULL-Werten basieren.  
   
  [Anzeigen einer Reihe mit mehreren Datenbereichen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)  
@@ -148,11 +148,11 @@ ms.locfileid: "66106246"
  Tipps zum Arbeiten mit Diagrammen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Bilder, Textfelder, Rechtecke und Linien &#40;Berichts-Generator und SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
- [Interaktive Sortierung, Dokumentstrukturen und Links &#40;Berichts-Generator und SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
- [Geschachtelte Datenbereiche &#40;Berichts-Generator und SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
- [Tutorial: Hinzufügen eines Säulendiagramms zu einem Bericht (Berichts-Generator)](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   
- [Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
+ [Bilder, Text Felder, Rechtecke und Linien &#40;Berichts-Generator und SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md)   
+ [Interaktive Sortierung, Dokument Strukturen und Verknüpfungen &#40;Berichts-Generator und SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)   
+ [&#40;von Berichts-Generator und SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
+ [Tutorial: Hinzufügen eines Säulen Diagramms zu einem Bericht &#40;Berichts-Generator&#41;](../tutorial-add-a-column-chart-to-your-report-report-builder.md)   
+ [Tutorial: Hinzufügen eines Kreis Diagramms zu einem Bericht &#40;Berichts-Generator&#41;](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [Tutorial: Hinzufügen eines Balkendiagramms zu einem Bericht (Berichts-Generator)](../tutorial-add-a-bar-chart-to-your-report-report-builder.md)  
   
   

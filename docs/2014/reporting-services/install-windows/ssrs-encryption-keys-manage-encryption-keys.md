@@ -18,14 +18,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4858b9844c4b07d270c615d30089d104bb7ba76a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108732"
 ---
 # <a name="configure-and-manage-encryption-keys-ssrs-configuration-manager"></a>Konfigurieren und Verwalten von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet Verschlüsselungsschlüssel, um Anmelde- und Verbindungsinformationen zu sichern, die in einer Berichtsserver-Datenbank gespeichert sind. Die Verschlüsselung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]besteht aus einer Kombination von öffentlichen, privaten und symmetrischen Schlüsseln, die zum Schutz sensibler Daten verwendet werden. Der symmetrische Schlüssel wird bei der Initialisierung des Berichtsservers erstellt, wenn Sie den Berichtsserver installieren oder konfigurieren. Er wird vom Berichtsserver verwendet, um sensible Daten zu verschlüsseln, die auf dem Berichtsserver gespeichert sind. Öffentliche und private Schlüssel werden vom Betriebssystem erstellt und zum Schutz des symmetrischen Schlüssels verwendet. Ein Paar aus einem privaten und einem öffentlichen Schlüssel wird für jede Berichtsserverinstanz erstellt, die sensible Daten in einer Berichtsserver-Datenbank speichert.  
   
  Zur Verwaltung der Verschlüsselungsschlüssel gehört das Erstellen einer Sicherungskopie des symmetrischen Schlüssels und das Wissen darüber, wann und wie die Schlüssel wiederhergestellt, gelöscht oder geändert werden müssen. Wenn Sie eine Berichtsserverinstallation migrieren oder eine Bereitstellung für dezentrales Skalieren konfigurieren, benötigen Sie eine Sicherungskopie des symmetrischen Schlüssels, sodass Sie ihn auf die neue Installation anwenden können.  
@@ -46,13 +45,13 @@ ms.locfileid: "66108732"
 -   Hinzufügen oder Entfernen einer Berichtsserverinstanz aus einer Berichtsserverbereitstellung für dezentrales Skalieren, bei der mehrere Berichtsserver eine einzige Berichtsserver-Datenbank und den symmetrischen Schlüssel, der für diese Datenbank die umkehrbare Verschlüsselung bereitstellt, gemeinsam nutzen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Initialisieren eines Berichtsservers &#40;SSRS-Konfigurations-Manager&#41;](ssrs-encryption-keys-initialize-a-report-server.md)  
+ [Initialisieren eines Berichtsservers (SSRS-Konfigurations-Manager)](ssrs-encryption-keys-initialize-a-report-server.md)  
  Erläutert das Erstellen von Verschlüsselungsschlüsseln.  
   
  [Sichern und Wiederherstellen von Reporting Services-Verschlüsselungsschlüsseln](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)  
  Erläutert das Sichern von Verschlüsselungsschlüsseln und das Wiederherstellen dieser Schlüssel, um eine Berichtsserverinstallation wiederherzustellen oder zu migrieren.  
   
- [Speichern verschlüsselter Berichts Server Daten &#40;SSRS-Configuration Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [SSRS-Verschlüsselungsschlüssel: Speichern verschlüsselter Berichtsserverdaten](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
  Beschreibt die Verschlüsselung auf einem Berichtsserver.  
   
  [Löschen und erneutes Erstellen von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)  
@@ -62,6 +61,6 @@ ms.locfileid: "66108732"
  Beschreibt das Hinzufügen und Entfernen von Verschlüsselungsschlüsseln, um zu steuern, welche Berichtsserver Teil der Bereitstellung für dezentrales Skalieren sind.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Speichern verschlüsselter Berichts Server Daten &#40;SSRS-Configuration Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [SSRS-Verschlüsselungsschlüssel: Speichern verschlüsselter Berichtsserverdaten](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

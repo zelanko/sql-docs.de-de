@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 901ed097b1a1f689a854d60e0df9b541403fdc76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109132"
 ---
 # <a name="general-properties-page-folders-report-manager"></a>Allgemein (Eigenschaftenseite, Ordner) (Berichts-Manager)
@@ -43,7 +43,7 @@ ms.locfileid: "66109132"
  **In Listenansicht ausblenden**  
  Wählen Sie diese Option aus, um den Ordner für Benutzer auszublenden, die den Listenansichtsmodus im Berichts-Manager verwenden. Der Listenansichtsmodus ist das Standardanzeigeformat beim Durchsuchen der Ordnerhierarchie auf dem Berichtsserver. In der Listenansicht erstrecken sich Namen und Beschreibungen über die Seite. Das alternative Format ist die Detailsansicht. Detailansichten lassen Beschreibungen aus, enthalten jedoch andere Informationen zum Element. Obwohl Sie ein Element in der Listenansicht ausblenden können, kann es in der Detailansicht nicht ausgeblendet werden. Wenn Sie den Zugriff auf ein Element einschränken möchten, müssen Sie eine Rollenzuweisung erstellen.  
   
- **Anwenden**  
+ **übernehmen**  
  Klicken Sie auf diese Schaltfläche, um die Änderungen zu speichern.  
   
  **Löschen**  

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8ae243786119823a7be4a093fcfef232f58d8492
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108674"
 ---
 # <a name="create-a-native-mode-report-server-database--ssrs-configuration-manager"></a>Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus (SSRS-Konfigurations-Manager)
@@ -34,7 +34,7 @@ ms.locfileid: "66108674"
   
  Wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] entweder in der Standardkonfiguration für den einheitlichen Modus installiert haben, wurde die Berichtsserver-Datenbank automatisch während der Installation der Berichtsserver-Instanz erstellt und konfiguriert. Mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager können Sie die von Setup automatisch konfigurierten Einstellungen anzeigen bzw. ändern.  
   
-##  <a name="rsdbrequirements"></a>Bevor Sie beginnen  
+##  <a name="before-you-start"></a><a name="rsdbrequirements"></a> Vorbereitungen  
  Das Erstellen bzw. die Konfiguration einer Berichtsserver-Datenbank erfolgt in mehreren Schritten. Bevor Sie die Berichtsserver-Datenbank erstellen, sollten Sie sich überlegen, wie Sie die folgenden Elemente angeben möchten:  
   
  Datenbankserver auswählen  
@@ -79,7 +79,7 @@ ms.locfileid: "66108674"
   
 2.  Doppelklicken Sie auf der Seite Datenbank auf **Datenbank ändern**.  
   
-3.  Klicken Sie auf **neue Berichts Server-Datenbank erstellen**, und klicken Sie dann auf **weiter**.  
+3.  Klicken Sie auf **Neue Berichtsserver-Datenbank erstellen**und dann auf **Weiter**.  
   
 4.  Stellen Sie eine Verbindung mit der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, die Sie zum Erstellen und Hosten der Berichtsserver-Datenbank verwenden möchten.  
   

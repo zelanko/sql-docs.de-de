@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fb96831c54a67a6ea74ca984cb346dcaaf50a335
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104631"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Textfelder (Berichts-Generator und SSRS)
@@ -39,7 +39,7 @@ ms.locfileid: "66104631"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="GrowShrinkTextBox"></a>Vergrößern und Verkleinern eines Textfelds  
+##  <a name="growing-and-shrinking-a-text-box"></a><a name="GrowShrinkTextBox"></a> Vergrößern und Verkleinern eines Textfelds  
  Standardmäßig haben Textfelder eine feste Größe. Sie können zulassen, dass ein Textfeld auf Grundlage seines Inhalts verkleinert oder vertikal erweitert wird. Weitere Informationen finden Sie unter [Zulassen, dass Textfelder vergrößert oder verkleinert werden &#40;Berichts-Generator und SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md).  
   
 ## <a name="orienting-a-text-box"></a>Ausrichten eines Textfelds  
@@ -55,14 +55,14 @@ ms.locfileid: "66104631"
   
  Informationen zu den ersten Schritten beim Ändern der Textausrichtung finden Sie im Abschnitt zum Drehen von Text im [Tutorial: Formatieren von Text &#40;Berichts-Generator&#41;](../tutorial-format-text-report-builder.md). Weitere Informationen finden Sie unter [Festlegen der Text Feld Ausrichtung &#40;Berichts-Generator und SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md).  
   
-##  <a name="HowTo"></a> Themen zur Vorgehensweise  
- [Hinzufügen, verschieben oder Löschen eines Textfelds &#40;Berichts-Generator und SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Themen zur Vorgehensweise  
+ [Hinzufügen, Verschieben oder Löschen von Textfeldern &#40;Berichts-Generator und SSRS&#41;](add-move-or-delete-a-text-box-report-builder-and-ssrs.md)  
   
- [Formatieren von Text in einem Textfeld &#40;Berichts-Generator und SSRS&#41;](format-text-in-a-text-box-report-builder-and-ssrs.md)  
+ [Formatieren von Text in einem Textfeld (Berichts-Generator und SSRS)](format-text-in-a-text-box-report-builder-and-ssrs.md)  
   
- [Festlegen der Text Feld Ausrichtung &#40;Berichts-Generator und SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)  
+ [Festlegen der Textfeldausrichtung &#40;Berichts-Generator und SSRS&#41;](set-text-box-orientation-report-builder-and-ssrs.md)  
   
- [Ermöglicht das Vergrößern oder Verkleinern eines Textfelds &#40;Berichts-Generator und SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
+ [Zulassen, dass Textfelder vergrößert oder verkleinert werden &#40;Berichts-Generator und SSRS&#41;](allow-a-text-box-to-grow-or-shrink-report-builder-and-ssrs.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Formatieren von Text und Platzhaltern &#40;Berichts-Generator und SSRS&#41;](formatting-text-and-placeholders-report-builder-and-ssrs.md)   

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8d289466fcff56a78172c54f24a093e0af169484
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107998"
 ---
 # <a name="query-builder-report-wizard"></a>Abfrage-Generator (Berichts-Assistent)
@@ -53,7 +53,7 @@ ms.locfileid: "66107998"
  Zeigt das von der Abfrage zurückgegebene Resultset an.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
+ [Melden Sie eingebettete Datasets und freigegebene Datasets &#40;Berichts-Generator und SSRS&#41;](report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Hilfe des Berichts-Assistenten](../../2014/reporting-services/report-wizard-help.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8e8809b53078387fa58a961458693122753698e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107902"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportieren nach XML (Berichts-Generator und SSRS)
@@ -23,7 +23,7 @@ ms.locfileid: "66107902"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportItems"></a> Berichtselemente  
+##  <a name="report-items"></a><a name="ReportItems"></a> Berichtselemente  
  In der folgenden Tabelle wird beschrieben, wie Berichtselemente gerendert werden.  
   
 |Element|Renderingverhalten|  
@@ -51,28 +51,24 @@ ms.locfileid: "66107902"
   
 -   Ausgeblendete Elemente, die nicht durch Umschalten sichtbar gemacht werden können, werden nicht gerendert. Sichtbare Elemente und ausgeblendete Elemente, die durch Umschalten sichtbar gemacht werden können, werden gerendert.  
   
--   
-  `Images, lines, and custom report items` werden ignoriert.  
+-   `Images, lines, and custom report items` werden ignoriert.  
   
-##  <a name="DataTypes"></a> Datentypen  
+##  <a name="data-types"></a><a name="DataTypes"></a>Datentypen  
  Dem Textfeldelement oder -attribut wird basierend auf den im Textfeld angezeigten Werten ein XSD-Datentyp zugewiesen.  
   
 |Wert aller Textfeldelemente|Zugewiesener Datentyp|  
 |--------------------------------|---------------------------|  
 |`Int16`, `Int32`, `Int64`, `UInt16`, `UInt32`, `UInt64`, `Byte`, `SByte`|**xsd:integer**|  
-|
-  `Decimal` (oder `Decimal` und jeder ganzzahlige oder BYTE-Datentyp)|**xsd:decimal**|  
-|
-  `Float` (oder `Decimal` und jeder ganzzahlige oder BYTE-Datentyp)|**xsd:float**|  
-|
-  `Double` (oder `Decimal` und jeder ganzzahlige oder BYTE-Datentyp)|**xsd:double**|  
-|`DateTime or DateTime Offset`|**XSD: DateTime**|  
-|`Time`|**XSD: String**|  
-|`Boolean`|**XSD: Boolescher Wert**|  
-|`String`, `Char`|**XSD: String**|  
-|Andere|**XSD: String**|  
+|`Decimal` (oder `Decimal` und jeder ganzzahlige oder BYTE-Datentyp)|**xsd:decimal**|  
+|`Float` (oder `Decimal` und jeder ganzzahlige oder BYTE-Datentyp)|**xsd:float**|  
+|`Double` (oder `Decimal` und jeder ganzzahlige oder BYTE-Datentyp)|**xsd:double**|  
+|`DateTime or DateTime Offset`|**xsd:dateTime**|  
+|`Time`|**xsd:string**|  
+|`Boolean`|**xsd:boolean**|  
+|`String`, `Char`|**xsd:string**|  
+|Andere|**xsd:string**|  
   
-##  <a name="XMLSpecificRenderingRules"></a>XML-spezifische Renderingerweiterungen  
+##  <a name="xml-specific-rendering-rules"></a><a name="XMLSpecificRenderingRules"></a> XML-spezifische Renderingregeln  
  In den folgenden Abschnitten wird beschrieben, wie die XML-Renderingerweiterungen die Elemente innerhalb des Berichts interpretieren.  
   
 ### <a name="report-body"></a>Hauptteil des Berichts  
@@ -80,11 +76,11 @@ ms.locfileid: "66107902"
   
  XML-Namespacedefinitionen und Schemareferenzattribute sind ebenfalls im Berichtselement enthalten. Variablen werden fett formatiert:  
   
- \<**Report** xmlns = "Schema Name" xmlns: xsi<http://www.w3.org/2001/XMLSchema-instance>= "" xsi:**schemaloation**= "**schemanamereporturl**&amp;RC% 3aschema = true" Name = "Report**Name" >**  
+ \<**Report** xmlns="**SchemaName**" xmlns:xsi="<http://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
   
  Die Werte für die Variablen lauten wie folgt:  
   
-|Name|value|  
+|name|Wert|  
 |----------|-----------|  
 |Bericht|Report.DataElementName|  
 |ReportURL|URL-codierte absolute URL zum Bericht auf dem Server.|  
@@ -109,7 +105,7 @@ ms.locfileid: "66107902"
 ### <a name="custom-report-items"></a>Custom Report Items  
  CustomReportItems (CRI) sind für die Renderingerweiterung nicht sichtbar. Wenn ein benutzerdefiniertes Berichtselement im Bericht vorhanden ist, rendert die Renderingerweiterung dieses als konventionelles Berichtselement.  
   
-### <a name="images"></a>Images  
+### <a name="images"></a>Bilder  
  Bilder werden nicht gerendert.  
   
 ### <a name="lines"></a>Linien  
@@ -152,20 +148,20 @@ ms.locfileid: "66107902"
   
  Wenn der DataElementOutput-Eigenschaftswert „Output“ lautet, wird die Kopfzeile eines wiederholten Elements als untergeordnetes Element des Detailelements gerendert.  
   
-##  <a name="CustomFormatsXSLTransformations"></a>Benutzerdefinierte Formate und XSL-Transformationen  
+##  <a name="custom-formats-and-xsl-transformations"></a><a name="CustomFormatsXSLTransformations"></a> Benutzerdefinierte Formate und XSL-Transformationen  
  Von der XML-Renderingerweiterung erstellte XML-Dateien können mithilfe von XSL-Transformationen (XSLT) in beinahe jedes Format transformiert werden. Mit dieser Funktion können Daten in Formaten erstellt werden, die von den vorhandenen Renderingerweiterungen nicht unterstützt werden. Bevor Sie eine eigene Renderingerweiterung erstellen, sollten Sie die Verwendung der XML-Renderingerweiterung und von XSLT in Betracht ziehen.  
   
-##  <a name="DuplicateName"></a>Doppelte Namen  
+##  <a name="duplicate-names"></a><a name="DuplicateName"></a> Doppelte Namen  
  Wenn doppelte Datenelementnamen innerhalb des gleichen Bereichs vorhanden sind, zeigt der Renderer eine Fehlermeldung an.  
   
-##  <a name="XSLTTransformations"></a>XSLT-Transformationen  
+##  <a name="xslt-transformations"></a><a name="XSLTTransformations"></a>XSLT-Transformationen  
  Der XML-Renderer kann eine serverseitige XSLT-Transformation für die ursprünglichen XML-Daten übernehmen. Wenn eine XSLT-Transformation übernommen wird, gibt der Renderer den transformierten Inhalt statt der ursprünglichen XML-Daten aus. Die Transformation tritt auf dem Server, nicht auf dem Client auf.  
   
  Die XSLT-Transformation, die für die Ausgabe übernommen werden soll, wird entweder in der Berichtsdefinitionsdatei mithilfe der DataTransform-Eigenschaft des Berichts oder mithilfe des *DeviceInfo* -XSLT-Parameters definiert. Wenn beide Werte festgelegt werden, tritt die Transformation bei jeder Verwendung des XML-Renderers auf. Wenn Abonnements verwendet werden, muss die XSLT-Transformation in der DataTransform-RDL-Eigenschaft definiert werden.  
   
  Ist eine XSLT-Datei sowohl in der DataTransform-Definitionseigenschaft als auch der Geräteinformationseinstellung angegeben, tritt die in DataTransform angegebene XSLT-Transformation zuerst auf. Anschließend findet die von den Geräteinformationseinstellungen festgelegte XSLT-Transformation statt.  
   
-###  <a name="DeviceInfo"></a> Geräteinformationseinstellungen  
+###  <a name="device-information-settings"></a><a name="DeviceInfo"></a>Geräte Informationseinstellungen  
  Sie können einige Standardeinstellungen für diesen Renderer ändern, indem Sie die Geräteinformationseinstellungen ändern. Dazu gehören:  
   
 -   Eine auf die XML-Ausgabe anzuwendende Transformation (XSLT).  
@@ -186,7 +182,7 @@ ms.locfileid: "66107902"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Renderingverhalten (Berichts-Generator und SSRS)](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Renderingverhaltensweisen &#40;Berichts-Generator und SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
- [Rendern von Berichtselementen (Berichts-Generator und SSRS)](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Rendern von Berichts Elementen &#40;Berichts-Generator und SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  

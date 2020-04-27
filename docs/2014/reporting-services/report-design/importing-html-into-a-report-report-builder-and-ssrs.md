@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fcab02cbe7f24da3567fdfa615a6595a268185ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105670"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Importieren von HTML in einen Bericht (Berichts-Generator und SSRS)
@@ -75,6 +75,6 @@ ms.locfileid: "66105670"
 -   Wenn eine Eigenschaft bei Attributen oder CSS-Formaten mehrfach angegeben wurde, wird nur die letzte Instanz der Eigenschaft verwendet. Wenn Ihr Text z. b. ** \<p align = "Left" align = "Right" #b0 **ist, wird der Text rechtsbündig ausgerichtet.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Rendern in HTML (Berichts-Generator und SSRS)](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  
+ [Rendern in das HTML-Format &#40;Berichts-Generator und SSRS&#41;](../report-builder/rendering-to-html-report-builder-and-ssrs.md)  
   
   

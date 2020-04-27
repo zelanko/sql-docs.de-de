@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 737e5eb03cabe655b4b1dc1da6735b9b4ef68c05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107251"
 ---
 # <a name="manage-report-data-sources"></a>Verwalten von Berichtsdatenquellen
@@ -63,12 +63,12 @@ ms.locfileid: "66107251"
 |----------|----------|----------|  
 |Anzeigen von Beispielen für Verbindungszeichenfolgen||[Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
 |Wählen Sie eine Methode zum Abrufen von Anmeldeinformationen, um eine Verbindung mit einer Datenquelle herzustellen.||[Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](specify-credential-and-connection-information-for-report-data-sources.md)|  
-|Hinzufügen von Eigenschaften für die Datenquellenverbindung zu einer Berichtsdefinitionsdatei (.rdl)|Berichts-Designer|[Erstellen einer eingebetteten oder freigegebenen Datenquelle &#40;SSRS-&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)|  
+|Hinzufügen von Eigenschaften für die Datenquellenverbindung zu einer Berichtsdefinitionsdatei (.rdl)|Berichts-Designer|[Erstellen einer eingebetteten oder freigegebenen Datenquelle &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)|  
 |Hinzufügen und Verknüpfen mit einer freigegebenen Datenquellendatei (.rds) im Berichtsprojekt|Berichts-Designer|[Erstellen, Ändern und Löschen von freigegebenen Datenquellen &#40;SSRS&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)|  
 |Erstellen einer vordefinierten Liste von Datenquellen, die Benutzer zur Laufzeit auswählen können. Wenn Benutzer Berichte anfordern, stellt der Bericht eine Liste von Datenquellen bereit. Benutzer müssen auswählen, welche Datenquelle vor dem Ausführen des Berichts verwendet werden soll. Um einem Bericht eine Liste der auszuwählenden Datenquellen hinzuzufügen, verwenden Sie einen Ausdruck.<br /><br /> Dies wird als dynamische Datenquellenverbindung bezeichnet.|Berichts-Designer|[Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
-|Erstellen eines freigegebenen Datenquellenelements auf einem Berichtsserver|Berichts-Manager|[Erstellen, löschen oder Ändern einer freigegebenen Datenquelle &#40;Berichts-Manager&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)|  
+|Erstellen eines freigegebenen Datenquellenelements auf einem Berichtsserver|Berichts-Manager|[Erstellen, Löschen oder Ändern einer freigegebenen Datenquelle &#40;Berichts-Manager&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)|  
 |Speichern von Anmeldeinformationen als Voraussetzung für das Erstellen von Abonnements oder Berichtsmomentaufnahmen|Berichts-Manager|[Store Credentials in a Reporting Services Data Source (Speichern von Anmeldeinformationen in einer Reporting Services-Datenquelle)](store-credentials-in-a-reporting-services-data-source.md)|  
-|Bearbeiten von Eigenschaften für die Datenquellenverbindung in einem veröffentlichten Bericht|Berichts-Manager|[Konfigurieren von Datenquellen Eigenschaften für einen Bericht &#40;Berichts-Manager&#41;](configure-data-source-properties-for-a-report-report-manager.md)|  
+|Bearbeiten von Eigenschaften für die Datenquellenverbindung in einem veröffentlichten Bericht|Berichts-Manager|[Konfigurieren von Datenquelleneigenschaften für einen Bericht &#40;Berichts-Manager&#41;](configure-data-source-properties-for-a-report-report-manager.md)|  
 |Erstellen eines freigegebenen Datenquellenelements auf einem Berichtsserver|SharePoint-Site|[Erstellen und Verwalten von freigegebenen Datenquellen &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md)|  
 |Verwenden vorhandener ODC-Verbindungsinformationen mit einem Bericht|SharePoint-Site|[Verwenden einer Office Data Connection &#40;.odc&#41; für Berichte &#40;Reporting Services im integrierten SharePoint-Modus&#41;](use-an-office-data-connection-odc-with-reports.md)|  
   
@@ -81,6 +81,6 @@ ms.locfileid: "66107251"
  [Speichern von Anmelde Informationen in einer Reporting Services Datenquelle](store-credentials-in-a-reporting-services-data-source.md)   
  [Datenverbindungen, Datenquellen und Verbindungs Zeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Datenquellen, die von Reporting Services &#40;SSRS unterstützt werden&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [Berichtsserver Content Management (einheitlicher SSRS-Modus)](../report-server/report-server-content-management-ssrs-native-mode.md)  
+ [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

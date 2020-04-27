@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: bf433f27a5d8dc7f5e0efcf6f5774ed292d1e1a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109068"
 ---
 # <a name="general-properties-page-shared-datasets-report-manager"></a>Allgemeine Eigenschaften (Seite), Freigegebene Datasets (Berichts-Manager)
@@ -48,7 +48,7 @@ ms.locfileid: "66109068"
  **Timeout für Abfrageausführung**  
  Geben Sie die Anzahl von Sekunden bis zum Timeout der Abfrage ein. Wenn der Wert 0 ist, tritt bei der Abfrage kein Timeout auf.  
   
- **Anwenden**  
+ **übernehmen**  
  Speichern Sie die Änderungen.  
   
  **Löschen**  
@@ -57,7 +57,7 @@ ms.locfileid: "66109068"
  **Move**  
  Verschieben Sie ein freigegebenes Dataset in der Ordnerhierarchie des Berichtsservers. Durch Klicken auf diese Schaltfläche wird die Seite Elemente verschieben geöffnet, auf der Sie Ordner nach einem neuen Speicherort durchsuchen können. Weitere Informationen finden Sie auf der [Seite zum Verschieben von Elementen &#40;Berichts-Manager&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
- **Downloaden**  
+ **Download**  
  Extrahieren Sie eine Kopie der Definition des freigegebenen Datasets. Abhängig von den auf Ihrem Computer definierten Dateizuweisungen wird die Datei in Visual Studio oder einer anderen Anwendung geöffnet. In den meisten Fällen wird das freigegebene Dataset als XML-Datei geöffnet.  
   
  **Stelle**  
@@ -69,7 +69,7 @@ ms.locfileid: "66109068"
  [Berichts-Manager F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
  [Cache Aktualisierungs Optionen &#40;Berichts-Manager&#41;](../../2014/reporting-services/cache-refresh-options-report-manager.md)   
  [Zwischenspeichern (Seite), freigegebene Datasets &#40;Berichts-Manager&#41;](../../2014/reporting-services/caching-page-shared-datasets-report-manager.md)   
- [Verwalten von freigegebenen Datasets](report-data/manage-shared-datasets.md)   
+ [Freigegebene Datasets verwalten](report-data/manage-shared-datasets.md)   
  [Zwischenspeichern von freigegebenen Datasets &#40;SSRS&#41;](report-server/cache-shared-datasets-ssrs.md)  
   
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1ddca4b59219598ef6685b6d3529f84725a2f075
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107340"
 ---
 # <a name="dataset-properties-dialog-box-filters"></a>Dataseteigenschaften (Dialogfeld), Filter
@@ -36,7 +36,7 @@ ms.locfileid: "66107340"
  **Pfeil nach unten**  
  Verschiebt den ausgewählten Filter in der Liste nach unten.  
   
- **Ausdruck**  
+ **expression**  
  Geben Sie den Ausdruck ein, auf den ein Filter angewendet werden soll, oder wählen Sie ihn aus. Klicken Sie auf die Ausdrucks Schaltfläche (**FX**), um den Ausdruck zu bearbeiten.  
   
  **Datentyp**  
@@ -49,7 +49,7 @@ ms.locfileid: "66107340"
  Geben Sie den Ausdruck oder Wert ein, der beim Auswerten des im Feld **Ausdruck** angegebenen Ausdrucks verwendet werden soll. Klicken Sie auf die Ausdrucks Schaltfläche (**FX**), um den Ausdruck zu bearbeiten.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Filtern, gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-datasets-ssrs.md)  
   
   

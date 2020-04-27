@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 03ffd44d2d119554537898f960d6befedd04dbe3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108248"
 ---
 # <a name="map-parallel-properties-dialog-box-labels"></a>Paralleleneigenschaften von Karten (Dialogfeld), Bezeichnungen
@@ -29,8 +29,8 @@ ms.locfileid: "66108248"
   
  Klicken Sie auf die Schaltfläche **Ausdruck** (*fx*), um einen Ausdruck zu bearbeiten, der den Wert der Option festlegt.  
   
-## <a name="options"></a>Tastatur  
- **Tri**  
+## <a name="options"></a>Optionen  
+ **Intervall**  
  Geben Sie einen ganzzahligen Wert in Grad ein, der das Intervall zwischen Parallelen angibt. Standardmäßig ist **Automatisch** ausgewählt. Wenn diese Option auf **Automatisch**festgelegt wird, wird der Wert durch die Daten aus dem Kartendataset bestimmt.  
   
  **Bezeichnungen anzeigen**  
@@ -39,15 +39,15 @@ ms.locfileid: "66108248"
  **Platzierung**  
  Wählen Sie einen Speicherort aus, um die Bezeichnungen relativ zum oberen und unteren Rand und zur Mitte des Viewports anzuzeigen. Die Standardplatzierung ist **Nah**.  
   
--   **Near** Zeigt Bezeichnungen oben an.  
+-   **Nah** Zeigt Beschriftungen oben an.  
   
--   **Ein Quartal** Zeigt Bezeichnungen auf halbem Weg zwischen dem oberen und dem Mittelpunkt an.  
+-   **Ein Viertel** Zeigt Bezeichnungen auf halbem Weg zwischen dem oberen Rand und dem Mittelpunkt an.  
   
--   **Zentrieren** Anzeigen von Bezeichnungen in der Mitte.  
+-   **Mitte** Zeigt Bezeichnungen im Mittelpunkt an.  
   
--   **Drei Quartale** Zeigt Bezeichnungen auf halbem Weg zwischen dem Mittelpunkt und dem unteren Rand an.  
+-   **Drei Viertel** Zeigt Bezeichnungen auf halbem Weg zwischen dem Mittelpunkt und dem unteren Rand an.  
   
--   **Weit** Zeigt die Bezeichnungen unten an.  
+-   **Entfernt** Zeigt Bezeichnungen unten an.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Karten &#40;Berichts-Generator und SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   

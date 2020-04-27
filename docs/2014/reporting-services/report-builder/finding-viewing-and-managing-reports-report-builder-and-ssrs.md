@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6e2dc5a7ff69a61aae3d72fb9d9feca6abc3253c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107827"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)
@@ -34,7 +34,7 @@ ms.locfileid: "66107827"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FindingAndViewingReportsRB30"></a>Suchen und Anzeigen von Berichten in Berichts-Generator  
+##  <a name="finding-and-viewing-reports-in-report-builder"></a><a name="FindingAndViewingReportsRB30"></a> Suchen und Anzeigen von Berichten in Berichts-Generator  
  Um einen Bericht zu suchen, mit dem Sie arbeiten möchten, oder eine freigegebene Datenquelle, ein Bild oder einen Unterbericht auszuwählen, die in einem Bericht verwendet werden sollen, durchsuchen Sie Ihren Computer, die Ordner auf einem Berichtsserver oder die SharePoint-Website, die in Reporting Services integriert wurde.  
   
  Sie müssen eine URL für den Berichtsserver angeben und die entsprechenden Berechtigungen für die Ordner haben, mit denen Sie Berichtelemente lesen und speichern können, um Berichte auf einem Berichtsserver zu suchen. Wenden Sie sich an den Systemadministrator für den Berichtsserver, damit Sie die entsprechende URL und die erforderlichen Berechtigungen erhalten.  
@@ -43,15 +43,15 @@ ms.locfileid: "66107827"
   
  Berichts-Generator unterstützt Sie bei den folgenden Tasks:  
   
--   Suchen von **Berichten** Wenn Sie nach einem Bericht suchen, können Sie das vertraute Dialogfeld **Datei öffnen** , das Microsoft Office-Format verwendet wird, das für Berichts-Generator angepasst ist. Sie können die Ordner auf einem Berichtsserver oder einem Dateisystem suchen, einschließlich Meine Berichte<legacyBold>, <legacyBold>Sites und Server<legacyBold>, <legacyBold>Desktop, </legacyBold>Eigene Dateien</legacyBold> und </legacyBold>Arbeitsplatz</legacyBold>. Sites und Server enthält eine Liste der zuletzt verwendeten Server.  
+-   **Suchen nach Berichten:** Bei der Suche nach einem Bericht können Sie das vertraute Dialogfeld **Datei öffnen** im Stil von Microsoft Office verwenden, das für Berichts-Generator angepasst wurde. Sie können die Ordner auf einem Berichtsserver oder einem Dateisystem suchen, einschließlich Meine Berichte<legacyBold>, <legacyBold>Sites und Server<legacyBold>, <legacyBold>Desktop, </legacyBold>Eigene Dateien</legacyBold> und </legacyBold>Arbeitsplatz</legacyBold>. Sites und Server enthält eine Liste der zuletzt verwendeten Server.  
   
--   Suchen von frei **gegebenen Datenquellen** Wenn Sie nach einer freigegebenen Datenquelle suchen, können Sie aus einer Liste der zuletzt verwendeten Daten auswählen oder zu einem anderen Ordner auf demselben Berichts Server wie der Bericht navigieren.  
+-   **Suchen von freigegebenen Datenquellen** Bei der Suche nach einer freigegebenen Datenquelle können Sie aus einer Liste der zuletzt verwendeten Objekte wählen oder zu einem anderen Ordner auf demselben Berichtsserver wie der Bericht wechseln.  
   
--   **Anzeigen von Berichten** Beim Erstellen oder Aktualisieren von Berichten wird ein Bericht in Berichts-Generator der Vorschau angezeigt. Wenn Berichts-Generator eine Verbindung mit einem Berichtsserver hergestellt hat, lädt und verarbeitet der Berichtsserver den Bericht. Andernfalls werden die Berichte lokal verarbeitet. Der Berichts-Viewer in Berichts-Generator zeigt den gerenderten Bericht an.  
+-   **Anzeigen von Berichten** Sie zeigen in Berichts-Generator einen Bericht in der Vorschau an, wenn Sie Berichte erstellen oder aktualisieren. Wenn Berichts-Generator eine Verbindung mit einem Berichtsserver hergestellt hat, lädt und verarbeitet der Berichtsserver den Bericht. Andernfalls werden die Berichte lokal verarbeitet. Der Berichts-Viewer in Berichts-Generator zeigt den gerenderten Bericht an.  
   
 
   
-##  <a name="ViewingAndManagingReportServer"></a>Anzeigen und Verwalten von Berichten auf einem Berichts Server  
+##  <a name="viewing-and-managing-reports-on-a-report-server"></a><a name="ViewingAndManagingReportServer"></a> Anzeigen und Verwalten von Berichten auf einem Berichtsserver  
  Sie können den Berichts-Manager verwenden, um Berichte auf dem Berichtsserver anzuzeigen und zu verwalten. Durchsuchen Sie die Ordner auf dem Server, um nach Berichten zu suchen, führen Sie Berichte aus, um sie in einem Browser anzuzeigen, und führen Sie Verwaltungstasks aus.  
   
  Berichts-Manager unterstützt Sie bei folgenden Verwaltungstasks:  
@@ -77,7 +77,7 @@ ms.locfileid: "66107827"
  ![Bericht (Symbolleiste in Berichts-Manager)](../media/hs-reportserver-blowout.gif "Bericht (Symbolleiste in Berichts-Manager)")  
 Berichts-Manager-Fenster  
   
- ![Berichts Symbolleiste](../media/htmlviewer-toolbar.gif "Berichtssymbolleiste")  
+ ![Berichtssymbolleiste](../media/htmlviewer-toolbar.gif "Berichtssymbolleiste")  
 Berichtssymbolleiste  
   
  Nachdem Sie einen Bericht ausgeführt haben, können Sie ihn in ein anderes Format exportieren, z. B. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Excel oder PDF. Sie können den Bericht auch mithilfe einer Datenrenderingerweiterung wie einer CSV-Renderingerweiterung (durch Trennzeichen getrennt) exportieren und die CSV-Datendatei danach als Eingabe für eine andere Anwendung verwenden. Weitere Informationen zum Exportieren von Berichten finden Sie unter [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](export-reports-report-builder-and-ssrs.md) und [Exportieren eines Berichts als einen anderen Dateityp &#40;Berichts-Generator und SSRS&#41;](../export-a-report-as-another-file-type-report-builder-and-ssrs.md).  
@@ -91,14 +91,13 @@ Berichtssymbolleiste
   
 |Option|Ergebnis|  
 |------------|------------|  
-|Schaltfläche " **Aktualisieren** " im Browserfenster|Zeigt den im Sitzungscache gespeicherten Bericht an. Ein Sitzungscache wird erstellt, wenn ein Benutzer einen Bericht öffnet. 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet Browsersitzungen, um eine konsistente Anzeige sicherzustellen, während ein Bericht geöffnet ist.|  
-|![Browser aktualisieren (Schaltfläche) auf der Berichtsymbolleiste](../media/htmlviewer-refresh.GIF "Browser aktualisieren (Schaltfläche) auf der Berichtsymbolleiste")|Wenn Sie auf der Berichtssymbolleiste auf die Schaltfläche **Aktualisieren** klicken, führt der Berichtsserver die Abfrage erneut aus und aktualisiert die Berichtsdaten, falls der Bericht bedarfsgesteuert ausgeführt wird. Falls der Bericht zwischengespeichert ist oder es sich um eine Momentaufnahme handelt, wird der in der Berichtsserver-Datenbank gespeicherte Bericht angezeigt, wenn auf **Aktualisieren** geklickt wird.|  
+|Schaltfläche**Aktualisieren** im Browserfenster|Zeigt den im Sitzungscache gespeicherten Bericht an. Ein Sitzungscache wird erstellt, wenn ein Benutzer einen Bericht öffnet. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet Browsersitzungen, um eine konsistente Anzeige sicherzustellen, während ein Bericht geöffnet ist.|  
+|![Schaltfläche zum Aktualisieren des Browsers auf der Berichtssymbolleiste](../media/htmlviewer-refresh.GIF "Browser aktualisieren (Schaltfläche) auf der Berichtsymbolleiste")|Wenn Sie auf der Berichtssymbolleiste auf die Schaltfläche **Aktualisieren** klicken, führt der Berichtsserver die Abfrage erneut aus und aktualisiert die Berichtsdaten, falls der Bericht bedarfsgesteuert ausgeführt wird. Falls der Bericht zwischengespeichert ist oder es sich um eine Momentaufnahme handelt, wird der in der Berichtsserver-Datenbank gespeicherte Bericht angezeigt, wenn auf **Aktualisieren** geklickt wird.|  
 |Tastenkombination STRG+F5|Führt zum selben Ergebnis wie das Klicken auf die Schaltfläche **Aktualisieren** auf der Berichtssymbolleiste.|  
   
 
   
-##  <a name="ViewingAndManagingSharePointSite"></a>Anzeigen und Verwalten von Berichts Server Elementen über eine SharePoint-Website  
+##  <a name="viewing-and-managing-report-server-items-from-a-sharepoint-site"></a><a name="ViewingAndManagingSharePointSite"></a> Anzeigen und Verwalten von Berichtsserverelementen von einer SharePoint-Website  
  Wenn der Systemadministrator einen Berichtsserver für die Ausführung im integrierten SharePoint-Modus konfiguriert, können Sie Berichte und andere Berichtsserverelemente von einer SharePoint-Website aus anzeigen und verwalten.  
   
  Die SharePoint-Website stellt Seiten zum Festlegen der Datenquelleneigenschaften, für den Berichtsverlauf, für Berichtsverarbeitungsoptionen, Zeitpläne, Abonnements und Berichtsparameter und zum Erstellen freigegebener Zeitpläne bereit. Die Verwaltung von Berichtsserverelementen auf einer SharePoint-Website unterscheidet sich nicht von der Erstellung und Verwaltung mithilfe anderer Tools in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -122,21 +121,19 @@ Berichtssymbolleiste
  ![rs_SharePointRunReport](../media/rs-sharepointrunreport.gif "rs_SharePointRunReport")  
   
 ### <a name="managing-items-through-actions"></a>Verwalten von Elementen mithilfe von Aktionen  
- Verwaltungsaufgaben werden durch Aktionen in einem Dropdownmenü für jedes Element unterstützt. Je nach Berechtigungen sind für die einzelnen Elemente allgemeine Aktionen verfügbar, die Standardaktionen für Elemente sind, die in einer SharePoint-Bibliothek gespeichert sind. **Eigenschaften anzeigen** und **Eigenschaften bearbeiten** sind Beispiele für häufige Aktionen. Benutzerdefinierte Aktionen stellen elementspezifische Verwaltungsfunktionen bereit. Das folgende Bild zeigt die Aktionen für eine Berichtsdefinition. 
-  **Abonnements verwalten** und **Verarbeitungsoptionen verwalten**sind Beispiele für benutzerdefinierte Aktionen für eine Berichtsdefinition:  
+ Verwaltungsaufgaben werden durch Aktionen in einem Dropdownmenü für jedes Element unterstützt. Je nach Berechtigungen sind für die einzelnen Elemente allgemeine Aktionen verfügbar, die Standardaktionen für Elemente sind, die in einer SharePoint-Bibliothek gespeichert sind. **Eigenschaften anzeigen** und **Eigenschaften bearbeiten** sind Beispiele für solche allgemeinen Aktionen. Benutzerdefinierte Aktionen stellen elementspezifische Verwaltungsfunktionen bereit. Das folgende Bild zeigt die Aktionen für eine Berichtsdefinition. **Abonnements verwalten** und **Verarbeitungsoptionen verwalten**sind Beispiele für benutzerdefinierte Aktionen für eine Berichtsdefinition:  
   
  ![Menübefehle für Berichtsserverelemente](../media/rs-ecbforrsitems.gif "Menübefehle für Berichtsserverelemente")  
   
 
   
-##  <a name="DeskTop"></a>Anzeigen von Berichten in einer Desktop Anwendung  
+##  <a name="viewing-reports-in-a-desktop-application"></a><a name="DeskTop"></a> Anzeigen von Berichten in einer Desktopanwendung  
  Sie können die Anzeige im Browser vollständig umgehen und stattdessen eine Desktopanwendung, wie z.B. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Excel, als Berichts-Viewer verwenden. Dazu definieren Sie ein Abonnement, das ein Desktopanwendungsformat und einen freigegebenen Zielordner angibt. Der Berichtsserver generiert den Bericht als Anwendungsdatei, fügt eine Dateierweiterung an und speichert den Bericht als Datei auf der Festplatte. Anschließend können Sie [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Excel (oder eine andere Anwendung) anstelle eines Browsers zum Anzeigen des Berichts verwenden.  
   
 
   
-##  <a name="AboutUserSessions"></a>Informationen zu Benutzersitzungen  
- 
-  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet Browsersitzungen, um die Konsistenz beim Anzeigen von Berichten aufrechtzuerhalten. Sitzungen basieren auf Browserverbindungen, nicht auf authentifizierten Benutzern. Jedes Mal, wenn ein Benutzer einen Bericht in einem Browserfenster öffnet, wird eine neue Sitzung erstellt. Nachdem eine Browsersitzung eingerichtet wurde, verwenden Sie weiterhin die Berichtsversion, die zu Beginn der Sitzung geöffnet wurde, selbst wenn der Bericht auf dem Berichtsserver geändert wird. Wenn Sie z. B. einen Bericht um 23:00 Uhr öffnen und ein Berichtsautor denselben Bericht um 23:01 Uhr erneut veröffentlicht, verwendet Ihre Sitzung dieselbe Version, die Sie während der Sitzung geöffnet haben.  
+##  <a name="about-user-sessions"></a><a name="AboutUserSessions"></a> Benutzersitzungen  
+ [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet Browsersitzungen, um die Konsistenz beim Anzeigen von Berichten aufrechtzuerhalten. Sitzungen basieren auf Browserverbindungen, nicht auf authentifizierten Benutzern. Jedes Mal, wenn ein Benutzer einen Bericht in einem Browserfenster öffnet, wird eine neue Sitzung erstellt. Nachdem eine Browsersitzung eingerichtet wurde, verwenden Sie weiterhin die Berichtsversion, die zu Beginn der Sitzung geöffnet wurde, selbst wenn der Bericht auf dem Berichtsserver geändert wird. Wenn Sie z. B. einen Bericht um 23:00 Uhr öffnen und ein Berichtsautor denselben Bericht um 23:01 Uhr erneut veröffentlicht, verwendet Ihre Sitzung dieselbe Version, die Sie während der Sitzung geöffnet haben.  
   
  Aktualisieren Sie einen Bericht innerhalb einer Sitzung mithilfe der Browserschaltfläche **Aktualisieren** , wird die ursprüngliche Sitzungsversion des Berichts angezeigt. Wenn Sie einen bedarfsgesteuerten Bericht mithilfe der Schaltfläche **Aktualisieren** auf der Berichtssymbolleiste aktualisieren, wird der Bericht erneut ausgeführt, und neue Daten, falls vorhanden, werden angezeigt.  
   
@@ -144,10 +141,10 @@ Berichtssymbolleiste
   
 
   
-##  <a name="InThisSection"></a> In diesem Abschnitt  
+##  <a name="in-this-section"></a><a name="InThisSection"></a>In diesem Abschnitt  
  Die folgenden Themen enthalten weitere Informationen zum Anzeigen und Verwalten von Berichten.  
   
- [Suchen und Anzeigen von Berichten in Berichts-Manager &#40;Berichts-Generator und SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
+ [Finding and Viewing Reports in Report Manager (Report Builder and SSRS) (Suchen und Anzeigen von Berichten in Berichts-Manager (Berichts-Generator und SSRS))](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)  
  Beschreibt, wie Sie mit dem Berichts-Manager Berichte suchen, anzeigen und verwalten  
   
  [Suchen und Anzeigen von Berichten mit einem Browser &#40;Berichts-Generator und SSRS&#41;](finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs.md)  
@@ -156,7 +153,7 @@ Berichtssymbolleiste
  [Suchen nach Berichten und anderen Elementen &#40;Berichts-Generator und SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)  
  Beschreibt, wie die Suchfunktionalität im Berichts-Manager verwendet wird, um nach Elementen auf dem Berichtsserver zu suchen.  
   
- [Verwenden von Meine Berichte &#40;Berichts-Generator und SSRS&#41;](using-my-reports-report-builder-and-ssrs.md)  
+ [Using My Reports (Report Builder and SSRS) (Verwenden von Meine Berichte (Berichts-Generator und SSRS))](using-my-reports-report-builder-and-ssrs.md)  
  Beschreibt, wie Sie den Ordner Meine Berichte als persönlichen Arbeitsbereich zum Speichern und Arbeiten mit eigenen Berichten verwenden.  
   
  [Anzeigen einer Berichtsvorschau in Berichts-Generator](previewing-reports-in-report-builder.md)  
@@ -165,7 +162,7 @@ Berichtssymbolleiste
 
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Speichern von Berichten &#40;Berichts-Generator&#41;](saving-reports-report-builder.md)   
+ [Die Berichte &#40;Berichts-Generator werden gespeichert&#41;](saving-reports-report-builder.md)   
  [Berichts-Generator in SQL Server 2014](report-builder-in-sql-server-2016.md)   
  [Installation, Deinstallation und Unterstützung des Berichts-Generators](../install-uninstall-and-report-builder-support.md)  
   

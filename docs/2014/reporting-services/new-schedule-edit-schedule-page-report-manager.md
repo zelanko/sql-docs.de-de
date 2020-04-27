@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ea1eed70c3eac8bac1c4141628e72ce0af8099c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108151"
 ---
 # <a name="new-schedule-edit-schedule-page-report-manager"></a>Neuer Zeitplan: Seite "Zeitplan bearbeiten" (Berichts-Manager)
@@ -72,19 +72,19 @@ ms.locfileid: "66108151"
   
 5.  Klicken Sie unter **Optionen für die Abonnementverarbeitung**auf **Neuer Zeitplan**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Zeitplandetails**  
  Wählen Sie Optionen aus, um den Zeitpunkt und die Häufigkeit der Berichtsausführung zu bestimmen. Die Optionen für die Häufigkeit sind überlagernd. Die erste Gruppe von Optionen gibt eine Kategorie der Häufigkeit an (Stunde, Tag, Woche usw.). Die zweite Gruppe von Optionen, die angezeigt wird, basiert auf der ersten Auswahl.  
   
--   **Hour** definiert einen Zeitplan, der in stündlichen Intervallen ausgeführt wird. Im Abschnitt **Anfangs- und Enddatum** können Sie den Tag angeben, an dem der Zeitplan ausgeführt werden soll.  
+-   Durch**Stunde** definieren Sie einen Zeitplan mit stündlicher Ausführung. Im Abschnitt **Anfangs- und Enddatum** können Sie den Tag angeben, an dem der Zeitplan ausgeführt werden soll.  
   
--   **Day** definiert einen Zeitplan, der an den von Ihnen ausgewählten Tagen zu einer bestimmten Uhrzeit (Stunde und Minute) ausgeführt wird. Sie können Tage auf folgende Weise angeben: jeden \< *Tag*>, jeden Wochentag und jede \< *Zahl*> Tag. Wenn eine Option ausgewählt ist, stehen die anderen nicht zur Verfügung, auch wenn es so aussieht, als seien die anderen Tage ebenfalls ausgewählt.  
+-   Durch**Tag** definieren Sie einen Zeitplan, der an den von Ihnen angegebenen Tagen zu einer bestimmten Uhrzeit (Stunde und Minute) ausgeführt wird. Sie können Tage auf folgende Weise angeben: jeden \< *Tag*>, jeden Wochentag und jede \< *Zahl*> Tag. Wenn eine Option ausgewählt ist, stehen die anderen nicht zur Verfügung, auch wenn es so aussieht, als seien die anderen Tage ebenfalls ausgewählt.  
   
--   **Week** definiert einen Zeitplan, der in wöchentlichen Intervallen zu einer bestimmten Uhrzeit (Stunde und Minute) ausgeführt wird. Der Zeitabstand kann vollständige Wochen betragen (z. B. alle zwei Wochen) oder Tage innerhalb einer Woche.  
+-   Durch**Woche** definieren Sie einen Zeitplan, der zu der von Ihnen angegebenen Uhrzeit (Stunde und Minute) wöchentlich ausgeführt wird. Der Zeitabstand kann vollständige Wochen betragen (z. B. alle zwei Wochen) oder Tage innerhalb einer Woche.  
   
--   **Month** definiert einen Zeitplan, der monatlich ausgeführt wird. Innerhalb eines Monats können Sie einen Tag auf der Grundlage eines Musters auswählen (z. B. den letzten Sonntag jeden Monats) oder spezifische Kalenderdaten angeben (z. B. den 1. und 15., um den ersten und fünfzehnten Tag jeden Monats anzugeben). Mithilfe von Kommas und Bindestrichen können Sie mehrere Tage und Bereiche angeben (Beispiel: 1, 5, 7-12, 21).  
+-   Durch**Monat** definieren Sie einen Zeitplan mit monatlicher Ausführung. Innerhalb eines Monats können Sie einen Tag auf der Grundlage eines Musters auswählen (z. B. den letzten Sonntag jeden Monats) oder spezifische Kalenderdaten angeben (z. B. den 1. und 15., um den ersten und fünfzehnten Tag jeden Monats anzugeben). Mithilfe von Kommas und Bindestrichen können Sie mehrere Tage und Bereiche angeben (Beispiel: 1, 5, 7-12, 21).  
   
--   **Definiert einen** Zeitplan, der nur einmal ausgeführt wird. Im Abschnitt **Anfangs- und Enddatum** können Sie den Tag angeben, an dem der Zeitplan ausgeführt werden soll. Dieser Zeitplan läuft unmittelbar nach seiner Verarbeitung ab.  
+-   Durch**Einmal** definieren Sie einen Zeitplan mit einmaliger Ausführung. Im Abschnitt **Anfangs- und Enddatum** können Sie den Tag angeben, an dem der Zeitplan ausgeführt werden soll. Dieser Zeitplan läuft unmittelbar nach seiner Verarbeitung ab.  
   
  **Anfangs- und Enddatum**  
  Geben Sie das Anfangsdatum für den Beginn der Gültigkeit des Zeitplans und das Enddatum für den Ablauf des Zeitplans an.  

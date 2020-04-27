@@ -19,14 +19,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 42299bce176f3fa93b9a145204ff95e292aed542
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108891"
 ---
 # <a name="configure-the-unattended-execution-account-ssrs-configuration-manager"></a>Konfigurieren des unbeaufsichtigten Ausführungskontos (SSRS-Konfigurations-Manager)
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt ein besonderes Konto bereit, das für die unbeaufsichtigte Berichtsverarbeitung und zum Senden von Verbindungsanforderungen über das Netzwerk verwendet wird. Das Konto wird bei folgenden Vorgängen verwendet:  
   
 -   Senden Sie Verbindungsanforderungen über das Netzwerk für Berichte, die Datenbankauthentifizierung verwenden, oder stellen Sie die Verbindung mit externen Berichtsdatenquellen her, für die keine Authentifizierung erforderlich ist oder verwendet wird. Weitere Informationen finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../../integration-services/connection-manager/data-sources.md) in der SQL Server-Onlinedokumentation.  
@@ -58,9 +57,9 @@ ms.locfileid: "66108891"
   
 3.  Geben Sie den folgenden Befehl ein, um das Konto in einer lokalen Berichtsserverinstanz zu konfigurieren:  
   
-     **rsconfig-e-u\<Domäne/username>-p\<-Kennwort>**  
+     **rsConfig -e -u\<Domäne/Benutzername> -p\<Kennwort**  
   
- **rsconfig-e** unterstützt weitere Argumente. Weitere Informationen zur Syntax und zum Anzeigen von Beispielbefehlen finden Sie in der SQL Server-Onlinedokumentation unter [rsconfig-Hilfsprogramm (SSRS)](../tools/rsconfig-utility-ssrs.md).  
+ **rsconfig -e** unterstützt weitere Argumente. Weitere Informationen zur Syntax und zum Anzeigen von Beispielbefehlen finden Sie in der SQL Server-Onlinedokumentation unter [rsconfig-Hilfsprogramm (SSRS)](../tools/rsconfig-utility-ssrs.md).  
   
 ### <a name="how-account-information-is-stored"></a>Speichern von Kontoinformationen  
  Wenn Sie das Konto festlegen, werden die folgenden Einstellungen als verschlüsselte Werte in der Datei RSreportserver.config in einer lokalen oder einer Remote-Berichtsserverinstanz angegeben:  

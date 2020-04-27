@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1adbeccdedb8d80900047790d94ff35568460ff4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108278"
 ---
 # <a name="map-viewport-properties-dialog-box-optimization"></a>Eigenschaften des Kartenviewports (Dialogfeld), Optimierung
@@ -27,11 +27,11 @@ ms.locfileid: "66108278"
   
  Klicken Sie auf die Schaltfläche **Ausdruck** (*fx*), um einen Ausdruck zu bearbeiten, der den Wert der Option festlegt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Leistung**  
  Schieben Sie den Zeiger näher zu **Leistung** , um die Karte zu vereinfachen und weniger Details anzuzeigen.  
   
- **Qualität**  
+ **Quality**  
  Schieben Sie den Zeiger näher zu **Qualität** , um die Karte detaillierter zu zeichnen.  
   
  **Kartenauflösung**  
@@ -39,6 +39,6 @@ ms.locfileid: "66108278"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Karten &#40;Berichts-Generator und SSRS&#41;](report-design/maps-report-builder-and-ssrs.md)   
- [Problembehandlung bei Berichten: Karten Berichte &#40;Berichts-Generator und SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41;](report-design/troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

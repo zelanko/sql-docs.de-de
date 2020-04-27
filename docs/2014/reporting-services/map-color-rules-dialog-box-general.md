@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e97de85cdd57fdb21aa82379243eb6954358ea38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108321"
 ---
 # <a name="map-color-rules-dialog-box-general"></a>Farbregeln der Karte (Dialogfeld), Allgemein
@@ -25,17 +25,17 @@ ms.locfileid: "66108321"
   
  Um alle Kartenelemente einer Ebene durch Angeben eines dekorativen Farbverlaufs mit unterschiedlichen primären und sekundären Farben anzuzeigen, verwenden Sie im Dialogfeld Polygoneigenschaften von Karten die Seite **Ausfüllen** . Farbregeln haben Vorrang gegenüber Anzeigeeigenschaften für eine Ebene. Weitere Informationen finden Sie unter [Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](report-design/customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md).  
   
-## <a name="options"></a>Tastatur  
- **Vorlagen Stil anwenden**  
+## <a name="options"></a>Optionen  
+ **Vorlagenstil anwenden**  
  Aktivieren Sie diese Option, um Farbe auf Grundlage des Designs zu verwenden, das im Assistenten ausgewählt wurde oder in den Polygon-, Linien- oder Punktebeneneigenschaften festgelegt wurde. Ein Design legt Standardoptionen für Farbe, Schriftart und Rahmen für die Karte fest. Für diese Option wird keine Regel angewendet, um Farben jedem Kartenelement zuzuweisen.  
   
- **Visualisieren von Daten mithilfe der Farbpalette**  
+ **Daten mithilfe der Farbpalette anzeigen**  
  Aktivieren Sie diese Option, um analytische Daten mithilfe von Farben aus einer bestimmten Farbpalette visuell darzustellen.  
   
- **Visualisieren von Daten mithilfe von Farbbereichen**  
+ **Daten mithilfe von Farbbereichen anzeigen**  
  Aktivieren Sie diese Option, um analytische Daten mit einem Bereich von Farben für jedes Kartenelement visuell darzustellen. Wenn Sie z. B. Rot als Startfarbe, Gelb als mittlere Farbe und Grün als Endfarbe angeben, sind Werte im niedrigen Bereich rot, Werte im mittleren Bereich sind gelb, und Werte im obersten Bereich sind grün.  
   
- **Visualisieren von Daten mithilfe benutzerdefinierter Farben**  
+ **Daten mithilfe benutzerdefinierter Farben anzeigen**  
  Aktivieren Sie diese Option, um analytische Daten durch das Angeben einer eigenen Liste von Farben visuell darzustellen.  
   
  **Datenfeld**  

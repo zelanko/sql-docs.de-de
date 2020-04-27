@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e4c71d67b215732eae6e94af1d0c92d9231f4a01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106264"
 ---
 # <a name="chart-types-report-builder-and-ssrs"></a>Diagrammtypen (Berichts-Generator und SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "66106264"
   
  Der Diagrammtyp kann nach dem Erstellen des Diagramms geändert werden. Weitere Informationen finden Sie unter [Ändern eines Diagrammtyps (Berichts-Generator und SSRS)](change-a-chart-type-report-builder-and-ssrs.md).  
   
- Beispiele für viele dieser Diagrammtypen sind als Beispielberichte verfügbar. Weitere Informationen zum Herunterladen von Beispiel Berichten finden [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Sie unter [Berichts-Generator und Berichts-Designer Beispiel Berichte](https://go.microsoft.com/fwlink/?LinkId=198283).  
+ Beispiele für viele dieser Diagrammtypen sind als Beispielberichte verfügbar. Weitere Informationen zum Herunterladen von Beispielberichten finden Sie unter [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][Beispielberichte für Berichts-Generator und Berichts-Designer](https://go.microsoft.com/fwlink/?LinkId=198283).  
   
 |Diagrammtyp|Verhältnisdaten anzeigen|Börsendaten anzeigen|Lineare Daten anzeigen|Mehrwertige Daten anzeigen|  
 |----------------|------------------------|------------------------|-------------------------|-------------------------------|  
@@ -49,7 +49,7 @@ ms.locfileid: "66106264"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [Leere und NULL-Datenpunkte in Diagrammen (Berichts-Generator und SSRS)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
+ [Leere und NULL-Datenpunkte in Diagrammen &#40;Berichts-Generator und SSRS&#41;](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   
  [Hinzufügen eines Diagramms zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md)  
   
   

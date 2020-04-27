@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e5f77df0a2e5322687f5724e7921932a551d07ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107168"
 ---
 # <a name="report-parts-and-datasets-in-report-builder"></a>Berichtsteile und Datasets in Berichts-Generator
@@ -28,7 +28,7 @@ ms.locfileid: "66107168"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Adding"></a> Hinzufügen eines Berichtsteils mit abhängigen Datasets zum Bericht  
+##  <a name="adding-a-report-part-with-dependent-datasets-to-your-report"></a><a name="Adding"></a>Hinzufügen eines Berichts Teils mit abhängigen Datasets zum Bericht  
  Wenn Sie dem Bericht einen Berichtsteil hinzufügen, werden die darin enthaltenen abhängigen Datasets ebenfalls dem Bericht hinzugefügt. Da ein Berichtsteil ein Rechteck mit vielen anderen Berichtselementen umfassen kann, können dem Bericht mehrere abhängige Datasets hinzugefügt werden. Jedes freigegebene Dataset ist ein unabhängiger Verweis. Die freigegebene Datenquelle, von der er abhängt, wird dem Bericht nicht hinzugefügt. Jedes eingebettete Dataset fügt auch die eingebettete oder freigegebene Datenquelle hinzu, von der es abhängt.  
   
  Die Anmeldeinformationen für eine eingebettete Datenquelle werden nicht als Teil des Berichtsteils gespeichert. Wenn dem Bericht eine eingebettete Datenquelle hinzugefügt wird, werden Sie zur Eingabe von Anmeldeinformationen aufgefordert, wenn Sie den Bericht ausführen. Wenn Sie die Nachfrage nach Anmeldeinformationen vermeiden möchten, verwenden Sie lediglich Berichtsteile, die auf freigegebenen Datenquellen mit gespeicherten Anmeldeinformationen basieren.  
@@ -36,7 +36,7 @@ ms.locfileid: "66107168"
  Nachdem Sie dem Bericht einen Berichtsteil hinzugefügt haben, unterscheiden sich die hinzugefügten Datasets nicht von anderen eingebetteten oder freigegebenen Datasets, die Sie erstellen. Sie können die zusätzlichen Datasets im Berichtsdatenbereich anzeigen. Eingebettete Datasets werden unter der entsprechenden freigegebenen Datenquelle angezeigt, während freigegebene Datasets im Ordner für freigegebene Datasets aufgeführt werden.  
   
   
-##  <a name="Customizing"></a> Anpassen von abhängigen Datasets  
+##  <a name="customizing-dependent-datasets"></a><a name="Customizing"></a>Anpassen von abhängigen Datasets  
  Nachdem Sie dem Bericht Berichtsteile hinzugefügt haben, könnten Sie diesen in der Vorschau anzeigen und Änderungen an den Daten vornehmen. Die Art der Änderungen hängt vom Typ der Datasets ab, mit denen Sie arbeiten.  
   
  Um Daten und Datenoptionen für ein eingebettetes Dataset zu ändern, können Sie die Dataseteigenschaften einschließlich der Abfrage so bearbeiten, als ob Sie das Dataset selbst erstellt hätten.  
@@ -46,7 +46,7 @@ ms.locfileid: "66107168"
  Weitere Informationen zum Ändern der Definition eines freigegebenen Datasets oder zum Anzeigen der letzten Datenänderungen für ein freigegebenes Dataset in Ihrem Bericht finden Sie unter [Erstellen eines freigegebenen Datasets oder eingebetteten Datasets&#40;Berichts-Generator und SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md) und [Hinzufügen, Bearbeiten und Aktualisieren von Feldern im Berichtsdatenbereich &#40;Berichts-Generator und SSRS&#41;](add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
   
-##  <a name="Publishing"></a> Veröffentlichen von abhängigen Datasets als freigegebene Datasets  
+##  <a name="publishing-dependent-datasets-as-shared-datasets"></a><a name="Publishing"></a>Veröffentlichen von abhängigen Datasets als freigegebene Datasets  
  Wenn Sie ein Berichtselement veröffentlichen, das abhängige Datasets aufweist, können Sie jedes Dataset als freigegebenes Dataset oder als eingebettetes Dataset veröffentlichen, das weiterhin in das Berichtselement eingebettet ist.  
   
  Wenn Sie die Option für das freigegebene Dataset wählen, wird das Dataset auf dem Berichtsserver als freigegebene Datasetdefinition gespeichert. Im Bericht wird jedes Berichtselement, das dieses Dataset verwendet, so aktualisiert, dass es auf das freigegebene Dataset verweist, das sich jetzt auf dem Berichtsserver befindet. Dies hat zwei Ergebnisse zur Folge:  
@@ -60,9 +60,9 @@ ms.locfileid: "66107168"
   
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Berichtsentwurfsansicht &#40;Berichts-Generator&#41;](../report-builder/report-design-view-report-builder.md)   
- [Sicherheit (Berichts-Generator)](../report-builder/security-report-builder.md)   
- [Berichtsteile &#40;Berichts-Generator und SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
- [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Berichtsentwurfs Ansicht &#40;Berichts-Generator&#41;](../report-builder/report-design-view-report-builder.md)   
+ [Sicherheits &#40;Berichts-Generator&#41;](../report-builder/security-report-builder.md)   
+ [Berichts Teile &#40;Berichts-Generator und SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [Melden Sie eingebettete Datasets und freigegebene Datasets &#40;Berichts-Generator und SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

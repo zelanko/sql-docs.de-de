@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9e68650b21ee8cddc6258ab64b874bcf51ec1a83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108538"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lektion 1: Erstellen einer Beispiel-Abonnentendatenbank
@@ -63,7 +63,7 @@ ms.locfileid: "66108538"
  Sie haben erfolgreich die Abonnementdaten erstellt, welche die Berichtsverteilung steuern und über die die Berichtsausgabe für jeden Abonnenten angepasst werden kann. Nun ändern Sie noch die Datenquelleneigenschaften des Berichts, den Sie an die Abonnenten verteilen. Die Datenquelleneigenschaften werden geändert, um den Bericht auf die Übermittlung als datengesteuertes Abonnement vorzubereiten. Sie ändern auch den Berichtsentwurf, um einen Parameter einzuschließen, den das Abonnement mit den Abonnentendaten verwendet. [Lektion 2: Ändern der Eigenschaften der Berichtsdaten Quelle](lesson-2-modifying-the-report-data-source-properties.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Lernprogramm&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Tutorial&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Erstellen einer Datenbank](../relational-databases/databases/create-a-database.md)   
  [Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;](create-a-basic-table-report-ssrs-tutorial.md)  
   

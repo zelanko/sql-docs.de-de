@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8fd750b8c83816caf775fd508d892ff2511ce67f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109900"
 ---
 # <a name="choose-item-location-page-report-manager"></a>Speicherort für Elemente auswählen (Seite) (Berichts-Manager)
@@ -51,11 +51,11 @@ ms.locfileid: "66109900"
   
 4.  Klicken Sie auf der Registerkarte **Allgemein** auf der Eigenschaftenseite auf **Speicherort ändern** , um die Seite Speicherort für Elemente auswählen zu öffnen.  
   
-## <a name="options"></a>Tastatur  
- **Location**  
+## <a name="options"></a>Optionen  
+ **Speicherort**  
  Geben Sie den Namen des Ordners an, der das von Ihnen erstellte Element enthalten soll. Sie können den vollständigen Namen eingeben oder die Baumansicht verwenden, um zu dem gewünschten Ordner zu wechseln.  
   
- **Baumansicht**  
+ **Strukturansicht**  
  Zeigt die Ordnerstruktur des Namespace des Berichtsservers an. Klicken Sie auf einen Ordnernamen, um den vollständigen Pfad zum Feld **Speicherort** hinzuzufügen.  
   
  Klicken Sie auf die Symbole zum Erweitern (+) und Reduzieren (-) in der Strukturansicht, um die Ordner zu öffnen und zu schließen, ohne dass die Ordnernamen zum Feld **Speicherort** hinzugefügt werden. Zum Hinzufügen eines Ordnernamens zum Feld **Speicherort** klicken Sie auf den Namen des Ordners.  

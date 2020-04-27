@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7bedf016dce02928bbd47dbfce60943ec667a824
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109472"
 ---
 # <a name="data-source-properties-dialog-box-general-report-builder"></a>Datenquelleneigenschaften (Dialogfeld), Allgemein (Berichts-Generator)
@@ -60,7 +60,7 @@ ms.locfileid: "66109472"
  **Einzelne Transaktion bei der Verarbeitung der Abfragen verwenden**  
  Wählen Sie diese Option, um anzugeben, dass Datasets, die diese Datenquelle verwenden, in einer einzelnen Transaktion für die Datenbank ausgeführt werden. Um Transaktionen für Unterberichte aufzunehmen, die dieselbe Datenquelle verwenden, wählen Sie den Unterbericht und legen im Eigenschaftenbereich **MergeTransactions** auf **True**fest.  
   
- **Verbindung testen**  
+ **Testen der Verbindung**  
  Klicken Sie auf diese Option, um zu überprüfen, dass die Datenquellenverbindung mit den angegebenen Anmeldeinformationen funktioniert. Wenn die Verbindung nicht hergestellt werden kann, müssen Sie die Anmeldeinformationen und die Serververfügbarkeit überprüfen. Sie können Datenquellenverbindungen für eingebettete und freigegebene Datenquellen testen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
@@ -68,6 +68,6 @@ ms.locfileid: "66109472"
  [Hinzufügen und Überprüfen einer Datenverbindung oder Datenquelle &#40;Berichts-Generator und SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)   
  [Datenverbindungen, Datenquellen und Verbindungs Zeichenfolgen in Berichts-Generator](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Datenquellen Eigenschaften (Dialog Feld), Anmelde Informationen &#40;Berichts-Generator&#41;](../../2014/reporting-services/data-source-properties-dialog-box-credentials-report-builder.md)   
- [Berichts-Generator Hilfe zu Dialog Feldern, Bereichen und Assistenten](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Hilfe zu Dialogfeldern, Bereichen und Assistenten in Berichts-Generator](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

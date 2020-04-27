@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5dd4d113c92e0a2d094aa02d49010a5dd477c6ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109457"
 ---
 # <a name="data-source-properties-dialog-box-credentials-report-builder"></a>Datenquelleigenschaften (Dialogfeld), Anmeldeinformationen (Berichts-Generator)
   Wählen Sie im Dialogfeld **Datenquelleneigenschaften** die Option **Anmeldeinformationen** aus, um die Anmeldeinformationen für eine eingebettete Datenquelle im Bericht anzuzeigen und zu ändern. Die von Ihnen bereitgestellten Anmeldeinformationen werden für den Zugriff auf die Datenquelle für die Berichtsvorschau verwendet. Weitere Informationen zu Anmeldeinformationen finden Sie unter [Angeben von Anmeldeinformationen im Berichts-Generator](../../2014/reporting-services/specify-credentials-in-report-builder.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Windows-Authentifizierung verwenden (Integrierte Sicherheit)**  
  Wählen Sie diese Option aus, um die Windows-Authentifizierung zu verwenden.  
   
@@ -35,13 +35,13 @@ ms.locfileid: "66109457"
  **Kennwort**  
  Geben Sie ein Kennwort ein, um sich bei der Datenquelle anzumelden.  
   
- **Aufforderung zur Eingabe von Anmeldeinformationen**  
+ **Eingabeaufforderung zu Anmeldeinformationen**  
  Aktivieren Sie diese Option, um beim Ausführen des Berichts eine Aufforderung zur Eingabe von Anmeldeinformationen anzuzeigen.  
   
  **Eingabeaufforderungs-Zeichenfolge eingeben**  
  Geben Sie einen Satz ein, mit dem der Benutzer zur Eingabe von Anmeldeinformationen für die Datenquelle aufgefordert wird.  
   
- **Keine Anmeldeinformationen**  
+ **Keine Anmelde Informationen**  
  Wählen Sie diese Option aus, wenn keine Anmeldeinformationen für die Datenquelle bereitgestellt werden sollen. Diese Option kann nur verwendet werden, wenn die Datenquelle keine Anmeldeinformationen annimmt oder wenn Sie Anmeldeinformationen auf andere Art übergeben.  
   
  Bei einigen Datenerweiterungen muss das Konto für die unbeaufsichtigte Ausführung auf dem Berichtsserver konfiguriert werden.  

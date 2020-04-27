@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b987dd46f6a60a0d0cadc95cf187566eafa4f527
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109273"
 ---
 # <a name="embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs"></a>Eingebettete und freigegebene Datenverbindungen oder Datenquellen (Berichts-Generator und SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "66109273"
   
 -   **Datenverbindung.** Wird auch als *Datenquelle*. Eine Datenverbindung umfasst einen Namen und Verbindungseigenschaften, die vom Verbindungstyp abhängen. Programmbedingt enthält eine Datenverbindung keine Anmeldeinformationen. Eine Datenverbindung gibt nicht an, welche Daten aus der externen Datenquelle abgerufen werden sollen. Geben Sie hierzu beim Erstellen eines Datasets eine Abfrage an.  
   
--   **Datenquellen Definition.** Eine Datei, die die XML-Darstellung einer Berichtsdatenquelle enthält. Wenn ein Bericht veröffentlicht wird, werden seine Datenquellen unabhängig von der Berichtsdefinition auf dem Berichtsserver oder der SharePoint-Website als Datenquellendefinitionen gespeichert. Ein Berichtsserveradministrator kann z. B. die Verbindungszeichenfolge oder die Anmeldeinformationen aktualisieren. Auf einem systemeigenen Berichtsserver lautet der Dateityp RDS. Auf einer SharePoint-Website lautet der Dateityp RSDS.  
+-   **Datenquellendefinition.** Eine Datei, die die XML-Darstellung einer Berichtsdatenquelle enthält. Wenn ein Bericht veröffentlicht wird, werden seine Datenquellen unabhängig von der Berichtsdefinition auf dem Berichtsserver oder der SharePoint-Website als Datenquellendefinitionen gespeichert. Ein Berichtsserveradministrator kann z. B. die Verbindungszeichenfolge oder die Anmeldeinformationen aktualisieren. Auf einem systemeigenen Berichtsserver lautet der Dateityp RDS. Auf einer SharePoint-Website lautet der Dateityp RSDS.  
   
 -   **Verbindungs Zeichenfolge.** Eine Verbindungszeichenfolge ist eine Zeichenfolgenversion der Verbindungseigenschaften, die zum Herstellen einer Verbindung mit einer Datenquelle erforderlich sind. Verbindungseigenschaften unterscheiden sich je nach Datenverbindungstyp. Beispiele finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
@@ -48,15 +48,15 @@ ms.locfileid: "66109273"
   
  In Berichts-Designer können Sie nicht zu einer freigegebenen Datenquelle auf dem Berichtsserver wechseln. Sie können freigegebene Datenquellen als Teil eines Projekts im Projektmappen-Explorer erstellen und auswählen, ob sie auf einem Berichtsserver bereitgestellt werden sollen. Sie können festlegen, sie wegen Unterschiede in vom Computer oder dem Berichtsserver erforderlichen Anmeldeinformationen nur lokal zu verwenden. Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
- Das folgende Symbol zeigt ein frei gegebenes Datenquellen Element in der Ordnerhierarchie des Berichts Servers an: Symbol für frei ![gegebene Datenquelle](media/hlp-16datasource.png "Freigegebene Datenquelle (Symbol)")  
+ Das folgende Symbol zeigt ein frei gegebenes Datenquellen Element in der Ordnerhierarchie des Berichts Servers an: Symbol für frei ![gegebene Datenquelle](media/hlp-16datasource.png "Symbol für freigegebene Datenquelle")  
   
 ## <a name="embedded-data-sources"></a>Eingebettete Datenquellen  
  Eine eingebettete Datenquellenverbindung ist eine Datenverbindung, die in der Berichtsdefinition gespeichert wird. Eingebettete Informationen für eine Datenquellenverbindung können nur in dem Bericht verwendet werden, in den die Informationen eingebettet wurden. Verwenden Sie das Dialogfeld **Datenquelleneigenschaften** , um eingebettete Datenquellen zu definieren und zu verwalten.  
   
-##  <a name="Comparing"></a>Vergleichen von eingebetteten und freigegebenen Datenquellen  
+##  <a name="comparing-embedded-and-shared-data-sources"></a><a name="Comparing"></a>Vergleichen von eingebetteten und freigegebenen Datenquellen  
  In der folgenden Tabelle werden die Unterschiede zwischen eingebetteten und freigegebenen Datenquellen zusammengefasst:  
   
-|BESCHREIBUNG|Eingebettet<br /><br /> Data source|Shared<br /><br /> Data source|  
+|Beschreibung|Eingebettet<br /><br /> Data source|Shared<br /><br /> Data source|  
 |-----------------|------------------------------|----------------------------|  
 |Die Datenverbindung ist in die Berichtsdefinition eingebettet.|![Verfügbar](media/greencheck.gif "Verfügbar")||  
 |Der Zeiger auf die Datenverbindung auf dem Berichtsserver ist in die Berichtsdefinition eingebettet.||![Verfügbar](media/greencheck.gif "Verfügbar")|  

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 076a0179871775984799fc8ce5366a220f812867
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108259"
 ---
 # <a name="mhtml-device-information-settings"></a>Geräteinformationseinstellungen für MHTML
@@ -26,8 +26,8 @@ ms.locfileid: "66108259"
 |Einstellung|value|  
 |-------------|-----------|  
 |**JavaScript**|Gibt an, ob JavaScript im gerenderten Bericht unterstützt wird.|  
-|**OutlookCompat**|Gibt an, ob beim Rendern zusätzliche Metadaten verwendet werden sollen, um die Darstellung des Berichts in Outlook zu optimieren. Standardwert: `true`.|  
-|**MHTML-Fragment**|Gibt an, ob anstelle eines vollständigen MHTML-Dokuments ein MHTML-Fragment erstellt wird. Ein MHTML-Fragment enthält den Berichtsinhalt in einem TABLE-Element und lässt das HTML-Element und das BODY-Element aus. Standardwert: `false`.|  
+|**OutlookCompat**|Gibt an, ob beim Rendern zusätzliche Metadaten verwendet werden sollen, um die Darstellung des Berichts in Outlook zu optimieren. Der Standardwert ist `true`.|  
+|**MHTML-Fragment**|Gibt an, ob anstelle eines vollständigen MHTML-Dokuments ein MHTML-Fragment erstellt wird. Ein MHTML-Fragment enthält den Berichtsinhalt in einem TABLE-Element und lässt das HTML-Element und das BODY-Element aus. Der Standardwert ist `false`.|  
 |**DataVisualizationFitSizing**|Gibt das Verhalten für die Datenvisualisierungsanpassung in einem Tablix an. Dies schließt Diagramm, Messgerät und Karte ein.<br /><br /> Mögliche Werte: **Ungefähr** und **Genau**.<br /><br /> Der Standardwert lautet **Ungefähr**. Wird die Einstellung aus der Datei **rsreportserver.config** entfernt, lautet der Wert für das Standardverhalten **Genau**.<br /><br /> Die Aktivierung von **Genau** hat möglicherweise Auswirkungen auf die Leistung, da die Verarbeitung zur Ermittlung der genauen Größe möglicherweise länger dauert.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

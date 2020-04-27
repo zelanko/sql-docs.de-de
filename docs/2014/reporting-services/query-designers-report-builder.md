@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 58a7e1a9d5ae71d659cfd214b46f3a004ea71101
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108009"
 ---
 # <a name="query-designers-report-builder"></a>Abfrage-Designer (Berichts-Generator)
@@ -26,7 +26,7 @@ ms.locfileid: "66108009"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Analysis Services die Benutzeroberfläche des MDX-Abfrage-Designers &#40;Berichts-Generator&#41;](../../2014/reporting-services/analysis-services-mdx-query-designer-user-interface-report-builder.md)  
+-   [Benutzeroberfläche des MDX-Abfrage-Designers für Analysis Services &#40;Berichts-Generator&#41;](../../2014/reporting-services/analysis-services-mdx-query-designer-user-interface-report-builder.md)  
   
 -   [Die Benutzeroberfläche des Text basierten Abfrage-Designers &#40;Berichts-Generator&#41;](report-data/text-based-query-designer-user-interface-report-builder.md)  
   

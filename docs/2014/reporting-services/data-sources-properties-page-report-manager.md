@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e094c61fe26faca4e60303c340f2b3557c0f148e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109421"
 ---
 # <a name="data-sources-properties-page-report-manager"></a>Datenquellen (Eigenschaftenseite) (Berichts-Manager)
@@ -31,11 +31,11 @@ ms.locfileid: "66109421"
   
 2.  Zeigen Sie auf den Bericht, und klicken Sie auf den Dropdownpfeil.  
   
-3.  Klicken Sie im Dropdownmenü auf **Verwalten**. Dadurch wird die Seite **Allgemeine Eigenschaften** für den Bericht geöffnet.  
+3.  Klicken Sie im Dropdownmenü auf **Verwalten**. Dadurch wird die Seite **Allgemeine** Eigenschaften für den Bericht geöffnet.  
   
 4.  Wählen Sie die Registerkarte **Datenquellen** .  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Eine freigegebene Datenquelle**  
  Geben Sie eine freigegebene Datenquelle zur Verwendung im Bericht an. Weitere Informationen zum Erstellen einer neuen Datenquelle finden Sie unter [erstellen, löschen oder Ändern einer freigegebenen Datenquelle &#40;Berichts-Manager&#41;](../../2014/reporting-services/create-delete-or-modify-a-shared-data-source-report-manager.md).  
   
@@ -90,12 +90,12 @@ ms.locfileid: "66109421"
   
  Um diese Option verwenden zu können, müssen Sie vorher das unbeaufsichtigte Ausführungskonto für die Bereitstellung des Berichtsservers konfiguriert haben. Das unbeaufsichtigte Ausführungskonto wird zum Herstellen der Verbindung mit externen Datenquellen verwendet, wenn keine anderen Quellen für Anmeldeinformationen verfügbar sind. Wenn Sie diese Option angeben und das Konto nicht konfiguriert ist, schlägt die Verbindung mit der Berichtsdatenquelle fehl, und der Bericht wird nicht verarbeitet.  Weitere Informationen zu diesem Konto finden Sie unter [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung &#40;SSRS-Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
- **Anwenden**  
+ **übernehmen**  
  Klicken Sie auf diese Schaltfläche, um die Änderungen zu speichern.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwalten von Berichtsdatenquellen](report-data/manage-report-data-sources.md)   
- [Angeben von Anmelde Informationen und Verbindungsinformationen für Berichtsdaten Quellen](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Verwalten von Berichtsdaten Quellen](report-data/manage-report-data-sources.md)   
+ [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Berichts-Manager (F1-Hilfe)](../../2014/reporting-services/report-manager-f1-help.md)  
   
   

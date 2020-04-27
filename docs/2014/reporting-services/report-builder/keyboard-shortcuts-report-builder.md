@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 040d49e66e9feed4f8bc213c8189c8d41486b77d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107778"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Tastenkombinationen (Berichts-Generator)
@@ -32,7 +32,7 @@ ms.locfileid: "66107778"
   
 ## <a name="keyboard-shortcuts-in-report-builder"></a>Tastenkombinationen im Berichts-Generator  
   
-|BESCHREIBUNG|Tastenkombination|  
+|Beschreibung|Tastenkombination|  
 |-----------------|---------------------|  
 |Öffnet das Menü Berichts-Generator.|ALT+F|  
 |Erstellt einen Bericht.|STRG+N|  
@@ -93,7 +93,7 @@ ms.locfileid: "66107778"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Berichts-Generator in SQL Server 2014](report-builder-in-sql-server-2016.md)   
- [Berichtsentwurfsansicht &#40;Berichts-Generator&#41;](report-design-view-report-builder.md)   
- [Glossar &#40;Berichts-Generator&#41;](glossary-report-builder.md)  
+ [Berichtsentwurfs Ansicht &#40;Berichts-Generator&#41;](report-design-view-report-builder.md)   
+ [Glossar (Berichts-Generator)](glossary-report-builder.md)  
   
   

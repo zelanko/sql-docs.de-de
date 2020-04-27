@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 062733f1ee68cd90ccc1b9a15d0cadc06b7e6f89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109718"
 ---
 # <a name="connect-filter-or-documents-web-part-reporting-services-in-sharepoint-integrated-mode"></a>Verbinden eines Filters oder Dokumentwebparts (Reporting Services im integrierten SharePoint-Modus)
@@ -47,7 +47,7 @@ ms.locfileid: "66109718"
   
 8.  Klicken Sie auf **Hinzufügen**. Der Webpart wird oben in der Zone hinzugefügt.  
   
-9. Klicken Sie in der Zone mit dem Webpart auf das Menü **Bearbeiten** des Webparts, zeigen Sie auf **Verbindungen**, zeigen **Sie auf Filter Werte senden an**, und wählen Sie dann **Berichts-Viewer** - -*Berichts Name*aus.  
+9. Klicken Sie in der Zone mit dem Webpart auf das Menü **bearbeiten** des Webparts, zeigen Sie auf **Verbindungen**, zeigen Sie auf **Filterwerte senden an**, und wählen Sie anschließend **Berichts-Viewer** - *Berichtsname*.  
   
 10. Checken Sie Ihre Änderungen ein, und speichern Sie die Seite.  
   

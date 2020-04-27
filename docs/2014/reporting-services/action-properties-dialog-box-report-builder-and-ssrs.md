@@ -34,20 +34,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3d6069d5720121b02c627528ec772cb61ddb0a10
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110083"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Aktionseigenschaften (Dialogfeld) (Berichts-Generator und SSRS)
   Das Dialogfeld **Aktion** kann verwendet werden, um Linkoptionen für Diagramme, Messgeräte und Kartenelemente zu aktivieren, die Links unterstützen. Definieren Sie eine Aktion, damit ein Benutzer auf den Bereicht klicken und einen Link mit einer URL, einem anderen Bericht auf demselben Berichtsserver oder auf einer SharePoint-Site, die in einen Berichtsserver integriert ist, oder mit einer anderen Stelle in demselben Bericht herstellen kann.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Als Aktion aktivieren**  
  Wählen Sie eine Option aus, um anzugeben, welche Aktion ausgeführt werden soll, wenn Benutzer auf das Element klicken.  
   
- **Keine**  
+ **None**  
  Wählen Sie diese Option aus, um anzugeben, dass für dieses Element keine Aktion ausgeführt wird.  
   
  **Gehe zu Bericht**  
@@ -103,8 +103,8 @@ ms.locfileid: "66110083"
 ## <a name="see-also"></a>Weitere Informationen  
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   
  [Berichts-Generator Hilfe zu Dialog Feldern, Bereichen und Assistenten](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)   
- [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
- [Hinzufügen eines Unterberichts und Hinzufügen von Parametern (Berichts-Generator und SSRS)](report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
+ [Berichts Parameter &#40;Berichts-Generator und Berichts-Designer&#41;](report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Fügen Sie einen unter Bericht und Parameter &#40;Berichts-Generator und SSRS hinzu&#41;](report-design/add-a-subreport-and-parameters-report-builder-and-ssrs.md)   
  [Interaktive Sortierung, Dokumentstrukturen und Links &#40;Berichts-Generator und SSRS&#41;](report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md)  
   
   

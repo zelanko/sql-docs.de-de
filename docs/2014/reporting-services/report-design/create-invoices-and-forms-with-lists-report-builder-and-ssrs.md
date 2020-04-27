@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3a6ded5c61c9f7bd624f1fc24b77054bd170929
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106152"
 ---
 # <a name="lists-report-builder-and-ssrs"></a>Listen (Berichts-Generator und SSRS)
@@ -30,20 +30,20 @@ ms.locfileid: "66106152"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="AddingList"></a>Hinzufügen einer Liste zum Bericht  
+##  <a name="adding-a-list-to-your-report"></a><a name="AddingList"></a>Hinzufügen einer Liste zum Bericht  
  Fügen Sie der Entwurfsoberfläche über die Registerkarte "Einfügen" auf dem Menüband eine Liste hinzu. Standardmäßig enthält die Liste anfänglich eine einzelne Zelle in einer der Detailgruppe zugeordneten Zeile.  
   
- ![Berichtselement 'Neue Liste' auf der Entwurfsoberfläche](../media/rs-listtemplatenew.gif "Berichtselement 'Neue Liste' auf der Entwurfsoberfläche")  
+ ![Berichtselement „Neue Liste“ auf der Entwurfsoberfläche](../media/rs-listtemplatenew.gif "Berichtselement „Neue Liste“ auf der Entwurfsoberfläche")  
   
  Wenn Sie auf der Entwurfsoberfläche eine Liste auswählen, werden Zeilen- und Spaltenhandles angezeigt, wie in der folgenden Abbildung dargestellt.  
   
- ![Neue Liste aus Toolbox hinzugefügt, markiert](../media/rs-listtemplatenewselected.gif "Neue Liste aus Toolbox hinzugefügt, markiert")  
+ ![Ausgewählte neu zur Toolbox hinzugefügte Liste](../media/rs-listtemplatenewselected.gif "Ausgewählte neu zur Toolbox hinzugefügte Liste")  
   
  Die zu Beginn verwendete Liste ist eine Vorlage auf Grundlage des Tablix-Datenbereichs. Wenn Sie eine Liste hinzugefügt haben, können Sie den Entwurf weiter verbessern, indem Sie den Inhalt oder die Darstellung der Liste durch Angeben von Filter-, Sortier- oder Gruppierungsausdrücken ändern oder indem Sie die Art der Anzeige der Liste für alle Berichtsseiten ändern. Weitere Informationen finden Sie unter [Steuern der Tablix-Datenbereichsanzeige auf einer Berichtsseite &#40;Berichts-Generator und SSRS&#41;](controlling-the-tablix-data-region-display-on-a-report-page.md). Die Liste enthält anfangs nur eine Spalte und Zeile. Sie können den Listenentwurf jedoch weiterentwickeln, indem Sie geschachtelte oder angrenzende Zeilengruppen oder Spaltengruppen oder zusätzliche Detailzeilen hinzufügen. Weitere Informationen finden Sie unter [Untersuchen der Flexibilität eines Tablix-Datenbereichs &#40;Berichts-Generator und SSRS&#41;](exploring-the-flexibility-of-a-tablix-data-region-report-builder-and-ssrs.md).  
   
 
   
-##  <a name="DisplayingLayout"></a>Anzeigen von Daten in einem frei Form Layout  
+##  <a name="displaying-data-in-a-free-form-layout"></a><a name="DisplayingLayout"></a> Anzeigen von Daten in einem Freiformlayout  
  Wenn Sie Daten nicht in einem Raster, sondern in einem Freiformlayout anordnen möchten, können Sie der Entwurfsoberfläche eine Liste hinzufügen. Ziehen Sie Felder aus dem Berichtsdatenbereich in die Zelle. Standardmäßig enthält die Zelle ein Rechteck, das als Container verwendet wird. Verschieben Sie jedes Feld im Container, bis Sie der Entwurf Ihren Wünschen entspricht. Die Ausrichtungslinien, die beim Ziehen von Textfeldern im rechteckigen Container angezeigt werden, erleichtern das vertikale und horizontale Ausrichten der Kanten. Entfernen Sie unerwünschte Abstände, indem Sie die Größe der Zelle anpassen. Weitere Informationen finden Sie unter [Ändern der Zeilenhöhe oder der Spaltenbreite (Berichts-Generator und SSRS)](change-row-height-or-column-width-report-builder-and-ssrs.md).  
   
  Die folgende Abbildung zeigt eine Liste mit Informationen zu einer Bestellung, den Feldern "Date", "Order", "Qty", "Product" und "LineTotal" sowie einer Grafik.  
@@ -59,7 +59,7 @@ ms.locfileid: "66106152"
   
 
   
-##  <a name="DisplayingGrouping"></a>Anzeigen von Daten mit einer Gruppierungs Ebene  
+##  <a name="displaying-data-with-one-level-of-grouping"></a><a name="DisplayingGrouping"></a> Anzeigen von Daten mit einer Gruppierungsebene  
  Da Listen automatisch einen Container bereitstellen, können sie verwendet werden, um gruppierte Daten mit mehreren Sichten anzuzeigen. Wenn Sie die Standardliste zum Angeben einer Gruppe ändern möchten, bearbeiten Sie die Gruppe Details, und geben Sie einen neuen Namen sowie einen Gruppierungsausdruck an.  
   
  Zum Beispiel können Sie eine Tabelle und ein Diagramm mit unterschiedlichen Sichten desselben Datasets einbetten. Der Liste können Sie eine Gruppe hinzufügen, sodass die geschachtelten Berichtselemente einmal für jeden Gruppenwert wiederholt werden. Die folgende Abbildung zeigt eine nach Produktkategorie gruppierte Liste. Es ist keine Detailzeile vorhanden. Zwei Tabellen sind in der Liste nebeneinander geschachtelt. In der ersten Tabelle sind die Unterkategorien mit Gesamtverkäufen dargestellt. In der zweiten Tabelle ist die Kategorie nach geografischem Gebiet gruppiert angezeigt, mit einem Diagramm mit der Verteilung der Unterkategorien.  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 706b930627039b5d2944b162ba9681808bfcc62c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105468"
 ---
 # <a name="plan-a-map-report-report-builder-and-ssrs"></a>Planen eines Kartenberichts (Berichts-Generator und SSRS)
@@ -23,7 +23,7 @@ ms.locfileid: "66105468"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="MapPurpose"></a>Geben Sie den Zweck der Zuordnung an.  
+##  <a name="specify-the-purpose-of-the-map"></a><a name="MapPurpose"></a> Angeben des Zweckes der Karte  
  Ein gut entworfener Bericht stellt Informationen bereit, die Benutzern helfen, sich ihren Anliegen zu widmen. Um eine nützliche, leicht verständliche Kartenansicht zu erstellen, entscheiden Sie, welchen Fragen Sie mit der Karte beantworten wollen. Sie können beispielsweise auf einer Karte die folgenden Arten von Daten visuell darstellen, um Marktchanchen zu identifizieren:  
   
 -   Anteilige Verkäufe in jedem Laden.  
@@ -38,7 +38,7 @@ ms.locfileid: "66105468"
   
  
   
-##  <a name="Data"></a>Angeben der räumlichen und analytischen Daten  
+##  <a name="specify-the-spatial-and-analytical-data"></a><a name="Data"></a> Angeben der räumlichen und analytischen Daten  
  Sie müssen angeben, welche räumlichen und analytischen Daten Sie benötigen.  
   
  Analytische Daten können aus einem Berichtsdataset, aus Beispieldaten einer Karte aus dem Kartenkatalog oder aus analytischen Daten, die in den räumlichen Daten einer ESRI-Shape-Datei enthalten sind, stammen.  
@@ -77,9 +77,9 @@ ms.locfileid: "66105468"
   
  Räumliche Daten müssen die folgenden Felder enthalten:  
   
--   **Räumliche Daten.** Ein Feld für räumliche Daten, das die Koordinatensätze enthält, die die einzelnen Punkte, Linien und Polygone definieren.  
+-   **Spatial data.** Ein Feld für räumliche Daten, das die Koordinatensätze enthält, die die einzelnen Punkte, Linien und Polygone definieren.  
   
--   **Übereinstimmungs Felder.** Mindestens ein Feld, das jedes räumliche Datenfeld eindeutig identifiziert. Beispielsweise können Sie für einen Punkt, der einen Ladenstandort darstellt, den Namen des Ladens verwenden. Wenn der Name des Ladens in den räumlichen Daten nicht eindeutig ist, können Sie zusätzlich den Namen des Ortes einschließen.  
+-   **Übereinstimmungsfelder.** Mindestens ein Feld, das jedes räumliche Datenfeld eindeutig identifiziert. Beispielsweise können Sie für einen Punkt, der einen Ladenstandort darstellt, den Namen des Ladens verwenden. Wenn der Name des Ladens in den räumlichen Daten nicht eindeutig ist, können Sie zusätzlich den Namen des Ortes einschließen.  
   
  Die Übereinstimmungsfelder werden verwendet, um die räumlichen Daten mit den analytischen Daten zu verknüpfen.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66105468"
   
 
   
-##  <a name="MapType"></a>Auswählen eines Karten Typs  
+##  <a name="choose-a-map-type"></a><a name="MapType"></a> Auswählen eines Kartentyps  
  Bei der Ausführung des Karten-Assistenten fügen Sie dem Bericht eine Karte und die erste Kartenebene hinzu. Mit dem Assistenten können Sie dem Bericht einen der folgenden Typen von Karten hinzufügen:  
   
 -   Eine Standardkarte, die Standorte ohne zugeordnete analytische Daten anzeigt.  
@@ -126,16 +126,16 @@ ms.locfileid: "66105468"
   
  
   
-##  <a name="Legend"></a>Planen von Legenden  
+##  <a name="plan-for-legends"></a><a name="Legend"></a> Planen von Legenden  
  Um den Benutzern die Interpretation einer Karte zu erleichtern, können Sie mehrere Kartenlegenden, eine Farbskala und eine Entfernungsskala hinzufügen. Planen Sie beim Entwerfen einer Karte, wo die Legenden angezeigt werden sollen. Sie können die folgenden Informationen zu jeder Legende angeben:  
   
--   **Speicherort der Legende.** Legenden können beispielsweise innerhalb oder außerhalb des Viewports angezeigt werden, sowie an 12 diskreten Orten relativ zum Viewport.  
+-   **Ort der Legende.** Legenden können beispielsweise innerhalb oder außerhalb des Viewports angezeigt werden, sowie an 12 diskreten Orten relativ zum Viewport.  
   
--   **Legenden Stile**. Sie können beispielsweise Eigenschaften für den Schriftschnitt, die Rahmenart, Trennlinien und die Füllung angeben.  
+-   **Legendenarten**. Sie können beispielsweise Eigenschaften für den Schriftschnitt, die Rahmenart, Trennlinien und die Füllung angeben.  
   
--   **Legenden Titel.** Sie können beispielsweise den Titeltext angeben und unabhängig steuern, ob der Titel für eine Kartenlegende oder die Farbskala angezeigt werden soll.  
+-   **Legendentitel.** Sie können beispielsweise den Titeltext angeben und unabhängig steuern, ob der Titel für eine Kartenlegende oder die Farbskala angezeigt werden soll.  
   
--   **Karten Legenden Layout.** Kartenlegenden können beispielsweise als hohe oder breite Tabellen angezeigt werden.  
+-   **Kartenlegendenlayout.** Kartenlegenden können beispielsweise als hohe oder breite Tabellen angezeigt werden.  
   
  Der Inhalt der Legende wird während der Berichtsverarbeitung auf der Grundlage von Regeloptionen automatisch erstellt, die Sie für jede Ebene festlegen.  
   
@@ -145,7 +145,7 @@ ms.locfileid: "66105468"
   
 
   
-##  <a name="Embedding"></a>Ausgleichen der Größe der Berichts Definition und der Berichts Verarbeitungszeit  
+##  <a name="balance-report-definition-size-and-report-processing-time"></a><a name="Embedding"></a> Finden eines Gleichgewichts zwischen Definitionsgröße und Verarbeitungszeit des Berichts  
  Um Berichte für Karten gut zu entwerfen, müssen Sie ein Gleichgewicht zwischen den Optionen finden, die die Leistung und die Definitionsgröße des Berichts steuern. Kartenelemente, die auf räumlichen Daten oder Bing-Kartenkacheln basieren, können statisch sein und in die Berichtsdefinition eingebettet werden oder dynamisch sein und bei jeder Verarbeitung des Berichts erstellt werden. Sie müssen die Zielkonflikte für statische und dynamische Kartendaten bewerten und das für Ihre Situation angemessene Gleichgewicht suchen. Beachten Sie die folgenden Informationen, um diese Entscheidung zu treffen:  
   
 -   Eingebettete Kartenelemente können die Größe der Berichtsdefinition bedeutend erhöhen, aber reduzieren die Zeit, die erforderlich ist, um die Karte im Bericht anzuzeigen. Möglicherweise gelten für den Berichtsserver Größenbeschränkungen, die Sie berücksichtigen müssen.  
@@ -162,8 +162,8 @@ ms.locfileid: "66105468"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Anpassen der Daten und der Anzeige einer Karte oder einer Kartenebene &#40;Berichts-Generator und SSRS&#41;](customize-the-data-and-display-of-a-map-or-map-layer-report-builder-and-ssrs.md)   
- [Tutorial: Karten Bericht &#40;Berichts-Generator&#41;](../tutorial-map-report-report-builder.md)   
+ [Tutorial: Kartenbericht (Berichts-Generator)](../tutorial-map-report-report-builder.md)   
  [Karten &#40;Berichts-Generator und SSRS&#41;](maps-report-builder-and-ssrs.md)   
- [Problembehandlung bei Berichten: Karten Berichte &#40;Berichts-Generator und SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
+ [Problembehandlung bei Berichten: Kartenberichte &#40;Berichts-Generator und SSRS&#41;](troubleshoot-reports-map-reports-report-builder-and-ssrs.md)  
   
   

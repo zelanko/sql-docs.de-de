@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3eb41d807a1b4678882c791a7bdeb7693de7b08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107920"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Exportieren als PDF-Datei (Berichts-Generator und SSRS)
@@ -27,7 +27,7 @@ ms.locfileid: "66107920"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="FontRequirements"></a> Schriftarteinbettung  
+##  <a name="font-embedding"></a><a name="FontRequirements"></a>Schriftart Einbettung  
  Wenn möglich, bettet die PDF-Renderingerweiterung die Teilmenge jeder Schriftart ein, die benötigt wird, um den Bericht in der PDF-Datei anzuzeigen. Schriftarten, die im Bericht verwendet werden, müssen auf dem Berichtsserver installiert sein. Wenn der Berichtsserver einen Bericht im PDF-Format generiert, verwendet er zum Erstellen von Zeichenzuordnungen in der PDF-Datei die in der Schriftart gespeicherten Informationen, auf die der Bericht verweist. Ist die Schriftart, auf die verwiesen wird, nicht auf dem Berichtsserver installiert, enthält die resultierende PDF-Datei möglicherweise nicht die richtigen Zuordnungen und wird nicht ordnungsgemäß angezeigt.  
   
  Schriftarten werden in die PDF-Datei eingebettet, wenn die folgenden Bedingungen erfüllt sind:  
@@ -57,7 +57,7 @@ ms.locfileid: "66107920"
   
  Die in die PDF-Datei eingebetteten Schriftarten sind in den Eigenschaften der Schriftart enthalten, die als Metadaten mit der Datei gespeichert werden.  
   
-##  <a name="Metadata"></a> Metadaten  
+##  <a name="metadata"></a><a name="Metadata"></a>Benötigten  
  Zusätzlich zum Berichtslayout schreibt die PDF-Renderingerweiterung folgende Metadaten in das PDF Document Information Dictionary.  
   
 |PDF-Eigenschaft|Erstellt von|  
@@ -65,14 +65,13 @@ ms.locfileid: "66107920"
 |`Title`|Das `Name`-Attribut des `Report`-RDL-Elements|  
 |`Author`|Das `Author`-RDL-Element|  
 |`Subject`|Das `Description`-RDL-Element|  
-|`Creator`|
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Produktname und -Version|  
+|`Creator`|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Produktname und -Version|  
 |`Producer`|Name und Version der Renderingerweiterung|  
 |`CreationDate`|Berichtsausführungszeit im `datetime`-PDF-Format|  
   
   
   
-##  <a name="Interactivity"></a> Interaktivität  
+##  <a name="interactivity"></a><a name="Interactivity"></a>Interaktivität  
  Einige interaktive Elemente werden in PDF unterstützt. Im Folgenden werden spezifische Funktionsweisen beschrieben.  
   
 ### <a name="show-and-hide"></a>Einblenden und Ausblenden  
@@ -94,7 +93,7 @@ ms.locfileid: "66107920"
   
   
   
-##  <a name="Compression"></a>Komprimi  
+##  <a name="compression"></a><a name="Compression"></a>Komprimi  
  Die Bildkomprimierung basiert auf dem ursprünglichen Dateityp des Bilds. Die PDF-Renderingerweiterung komprimiert PDF-Dateien standardmäßig.  
   
  Damit die Bildkomprimierung in der PDF-Datei möglichst erhalten bleibt, werden JPEG-Bilder im JPEG- und alle anderen Bildtypen im BMP-Format gespeichert.  
@@ -104,16 +103,16 @@ ms.locfileid: "66107920"
   
   
   
-##  <a name="DeviceInfo"></a> Geräteinformationseinstellungen  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>Geräte Informationseinstellungen  
  Sie können einige Standardeinstellungen für diesen Renderer ändern, indem Sie die Geräteinformationseinstellungen ändern. Weitere Informationen finden Sie unter [PDF Device Information Settings](../pdf-device-information-settings.md).  
   
   
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Renderingverhalten (Berichts-Generator und SSRS)](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Renderingverhaltensweisen &#40;Berichts-Generator und SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
- [Rendern von Berichtselementen (Berichts-Generator und SSRS)](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Rendern von Berichts Elementen &#40;Berichts-Generator und SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  
   
   

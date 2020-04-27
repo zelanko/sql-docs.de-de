@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f77fb2a9a23c5cc44cadfcc2b4e43039f69def07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104466"
 ---
 # <a name="report-manager-f1-help"></a>Berichts-Manager (F1-Hilfe)
@@ -28,7 +28,7 @@ ms.locfileid: "66104466"
   
 -   [Speicherort für Elemente auswählen (Seite)](../../2014/reporting-services/choose-item-location-page-report-manager.md)  
   
--   [Berichte mit Durchklicken](../../2014/reporting-services/clickthrough-reports-page-report-manager.md)  
+-   [Seite „Berichte mit Durchklicken“](../../2014/reporting-services/clickthrough-reports-page-report-manager.md)  
   
 -   [Inhalt (Seite)](../../2014/reporting-services/contents-page-report-manager.md)  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66104466"
   
 -   [Suchergebnisse (Seite)](../../2014/reporting-services/search-page-report-manager.md)  
   
--   [Sicherheit (Seite; Siteeinstellungen)](../../2014/reporting-services/security-page-site-settings-report-manager.md)  
+-   [Sicherheit (Seite) (Site Einstellungen)](../../2014/reporting-services/security-page-site-settings-report-manager.md)  
   
 -   [Sicherheit (Eigenschaften Seite, Elemente)](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
   

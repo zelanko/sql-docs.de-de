@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3859dbf74d1def19b5f3aad405a884ae607fbca3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107972"
 ---
 # <a name="tutorials-report-builder"></a>Lernprogramme (Berichts-Generator)
@@ -68,8 +68,8 @@ ms.locfileid: "66107972"
  Folgen Sie den Schritten in diesem Lernprogramm, um zu erfahren, wie Sie mit Ausdrücken Feldwerte verketten, berechnen, suchen und in einem Bericht anzeigen. Sie lernen außerdem, wie Sie mithilfe von Ausdrücken je nach Situation verschiedene Bilder und Indikatorzustände anzeigen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Berichtsentwurfsansicht &#40;Berichts-Generator&#41;](report-builder/report-design-view-report-builder.md)   
+ [Berichtsentwurfs Ansicht &#40;Berichts-Generator&#41;](report-builder/report-design-view-report-builder.md)   
  [Berichts-Generator in SQL Server 2014](report-builder/report-builder-in-sql-server-2016.md)   
- [Tutorial: Erstellen eines Quick-Diagramm Berichts Offline &#40;Berichts-Generator&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+ [Tutorial: Erstellen eines Quick-Diagrammberichts offline &#40;Berichts-Generator&#41;](report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
   
   

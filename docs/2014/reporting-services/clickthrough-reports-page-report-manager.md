@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d996463baaed3095b6866fa2da88ed811745878d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109799"
 ---
 # <a name="clickthrough-reports-page-report-manager"></a>Berichte mit Durchklicken (Seite) (Berichts-Manager)
@@ -46,7 +46,7 @@ ms.locfileid: "66109799"
   
 4.  Wählen Sie die Registerkarte **Durchklicken** aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Modellelementhierarchie**  
  Zeigt die im Modellnamespace enthaltenen Entitäten, Ordner und Elemente an, für die Sie einen benutzerdefinierten Bericht bereitstellen können.  
   

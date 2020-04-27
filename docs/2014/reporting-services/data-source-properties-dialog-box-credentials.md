@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ed5b58aa9a4fe81a55e602fb61f673bf10059ee7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109453"
 ---
 # <a name="data-source-properties-dialog-box-credentials"></a>Datenquelleneigenschaften (Dialogfeld), Anmeldeinformationen
   Wählen Sie im Dialogfeld **Datenquelleneigenschaften** die Option **Anmeldeinformationen** aus, um die Anmeldeinformationen für eine Datenquelle im Bericht anzuzeigen und zu ändern. Die von Ihnen bereitgestellten Anmeldeinformationen werden für den Zugriff auf die Datenquelle und zum Zwischenspeichern einer Kopie der Daten für die Berichtsvorschau verwendet. Weitere Informationen dazu, wie Vorschaudaten zwischengespeichert werden, finden Sie unter [Ausführen einer Vorschau für Berichte](reports/previewing-reports.md). Weitere Anmeldeinformationen finden Sie unter [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](report-data/specify-credential-and-connection-information-for-report-data-sources.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Windows-Authentifizierung verwenden (Integrierte Sicherheit)**  
  Wählen Sie diese Option aus, um die Windows-Authentifizierung zu verwenden.  
   
@@ -36,18 +36,18 @@ ms.locfileid: "66109453"
  **Kennwort**  
  Geben Sie ein Kennwort ein, das beim Anmelden an der Datenquelle verwendet werden soll.  
   
- **Aufforderung zur Eingabe von Anmeldeinformationen**  
+ **Eingabeaufforderung zu Anmeldeinformationen**  
  Wählen Sie diese Option aus, um beim Ausführen des Berichts Anmeldeinformationen anzufordern.  
   
  **Eingabeaufforderungs-Zeichenfolge eingeben**  
  Geben Sie einen Satz ein, mit dem der Benutzer zur Eingabe von Anmeldeinformationen für die Datenquelle aufgefordert wird.  
   
- **Keine Anmeldeinformationen**  
+ **Keine Anmelde Informationen**  
  Wählen Sie diese Option aus, wenn keine Anmeldeinformationen für die Datenquelle bereitgestellt werden sollen. Diese Option kann nur verwendet werden, wenn die Datenquelle keine Anmeldeinformationen annimmt oder wenn Sie Anmeldeinformationen auf andere Art übergeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Dialog Feld "Datenquellen Eigenschaften", "Allgemein"](../../2014/reporting-services/data-source-properties-dialog-box-general.md)   
- [Angeben von Anmelde Informationen und Verbindungsinformationen für Berichtsdaten Quellen](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)  
   
   

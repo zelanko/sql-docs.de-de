@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ae18d021465a7d14ea22b56534ea48ac316154c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109909"
 ---
 # <a name="caching-page-shared-datasets-report-manager"></a>Zwischenspeichern (Seite), Freigegebene Datasets (Berichts-Manager)
@@ -36,7 +36,7 @@ ms.locfileid: "66109909"
   
 4.  Klicken Sie auf die Registerkarte **Zwischenspeichern** .  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Freigegebenes Dataset zwischenspeichern**  
  Speichert eine temporäre Kopie der Daten in einem Cache, sobald ein Benutzer erstmalig einen Bericht öffnet, der das freigegebene Dataset verwendet. Nachfolgende Benutzer, die den Bericht innerhalb des Zeitraums der Zwischenspeicherung ausführen, erhalten die zwischengespeicherte Kopie der Daten. Die Zwischenspeicherung erhöht in der Regel die Leistung, da die Daten aus dem Cache zurückgegeben werden und die Datasetabfrage nicht erneut ausgeführt werden muss.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66109909"
  **Frei gegebener Zeitplan**  
  Geben Sie einen Zeitplan an, der für Berichte, Abonnements und andere freigegebene Datasets gemeinsam verwendet wird.  
   
- **Anwenden**  
+ **übernehmen**  
  Speichern Sie die Änderungen.  
   
 ## <a name="see-also"></a>Weitere Informationen  

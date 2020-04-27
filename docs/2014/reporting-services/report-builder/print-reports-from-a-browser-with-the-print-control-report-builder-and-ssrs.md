@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d80d59759befa0a6d7b601509a99c7cc6e22fbf0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107755"
 ---
 # <a name="print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs"></a>Drucken von Berichten in einem Browser mit dem Drucksteuerelement (Berichts-Generator und SSRS)
@@ -28,16 +28,16 @@ ms.locfileid: "66107755"
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="print-options"></a>Druckoptionen  
- Sie können Druckeigenschaften für Ihren Bericht konfigurieren, indem Sie im Dialogfeld **Drucken** auf die Schaltfläche **Eigenschaften** klicken. Das **Papierformat** wird durch die Standardhöhe und-Breite der Berichts Seitengröße festgelegt, wie in der Berichtsdefinition definiert. Die verfügbaren Werte sind vom Druckertyp und seinen Funktionen abhängig. Für Breite und Höhe werden Standardwerte angezeigt, die durch die auf dem Computer konfigurierten Druckertreiber bestimmt werden. Nach dem Ändern dieser Werte wird der Bericht mit den neuen Abmessungen gedruckt. Die Seitenbreite und -höhe wird durch **Ausrichtung**bestimmt. Mögliche Werte sind **Hochformat** oder **Querformat**. Die angezeigte Standardausrichtung ist von der Seitenbreite und Seitenhöhe des Berichts abhängig.  
+ Sie können Druckeigenschaften für Ihren Bericht konfigurieren, indem Sie im Dialogfeld **Drucken** auf die Schaltfläche **Eigenschaften** klicken. Der Wert für**Papierformat** wird durch die Standardhöhe und -breite der Berichtsseitengröße gemäß Berichtsdefinition bestimmt. Die verfügbaren Werte sind vom Druckertyp und seinen Funktionen abhängig. Für Breite und Höhe werden Standardwerte angezeigt, die durch die auf dem Computer konfigurierten Druckertreiber bestimmt werden. Nach dem Ändern dieser Werte wird der Bericht mit den neuen Abmessungen gedruckt. Die Seitenbreite und -höhe wird durch **Ausrichtung**bestimmt. Mögliche Werte sind **Hochformat** oder **Querformat**. Die angezeigte Standardausrichtung ist von der Seitenbreite und Seitenhöhe des Berichts abhängig.  
   
 > [!NOTE]  
->  Das Dialogfeld **Drucken** und die Standarddruckereinstellungen für Breite, Höhe und Seitenausrichtung werden von der Berichtsdefinition bestimmt.  
+>   Das Dialogfeld **Drucken** und die Standarddruckereinstellungen für Breite, Höhe und Seitenausrichtung werden von der Berichtsdefinition bestimmt.  
   
 ### <a name="print-preview"></a>Seitenansicht  
  Sie können die Vorschau eines Berichts anzeigen, indem Sie im Dialogfeld **Drucken** auf die Schaltfläche **Vorschau** klicken. Durch Klicken auf Vorschau wird die erste Seite des Berichts in einem separaten Vorschaufenster geöffnet. Weitere Seiten werden beim Rendern des Berichts auf dem Berichtsserver verfügbar. Ein als Vorschau angezeigter Bericht wird im EMF-Format gerendert. Sie können zur vorherigen oder nächsten Seite navigieren, bis die letzte Seite erreicht ist. Dann ist die Schaltfläche **Weiter** deaktiviert.  
   
 ### <a name="adjusting-print-margins"></a>Anpassen der Druckränder  
- Sie können die Druckränder im gerenderten EMF-Bericht vor dem Drucken des Berichts ändern. Klicken Sie hierzu im Dialogfeld **Drucken** auf die Schaltfläche **Vorschau** . Klicken Sie oben auf der Vorschauseite auf die Schaltfläche **Ränder** . Das Dialogfeld Ränder wird angezeigt. Konfigurieren Sie bei Bedarf den oberen, unteren, rechten und linken Rand. [!INCLUDE[clickOK](../../includes/clickok-md.md)]Das Dialogfeld wird geschlossen, und die Einstellungen werden für die Renderingvorschau und den Druckvorgang gespeichert.  
+ Sie können die Druckränder im gerenderten EMF-Bericht vor dem Drucken des Berichts ändern. Klicken Sie hierzu im Dialogfeld **Drucken** auf die Schaltfläche **Vorschau** . Klicken Sie oben auf der Vorschauseite auf die Schaltfläche **Ränder** . Das Dialogfeld Ränder wird angezeigt. Konfigurieren Sie bei Bedarf den oberen, unteren, rechten und linken Rand. [!INCLUDE[clickOK](../../includes/clickok-md.md)] Das Dialogfeld wird geschlossen, und die Einstellungen werden für die Renderingvorschau und den Druckvorgang gespeichert.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Drucken von Berichten &#40;Berichts-Generator und SSRS&#41;](print-reports-report-builder-and-ssrs.md)   

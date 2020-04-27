@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 22d183aa8ddbad06b0dc949bfe1780f360eb96ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107868"
 ---
 # <a name="finding-and-viewing-reports-in-report-manager-report-builder-and-ssrs"></a>Suchen und Anzeigen von Berichten in Berichts-Manager (Berichts-Generator und SSRS)
@@ -37,7 +37,7 @@ Berichts-Manager-Menüband
   
 -   Zum Navigieren nach unten in der Ordnerhierarchie öffnen Sie einen Unterordner des aktuellen Ordners. Ordner enthalten Berichte, Ressourcen, freigegebene Datenquellenelemente und andere Ordner. Durch Klicken auf ein Ordnersymbol wird der Ordner mit dem Inhalt der direkt darunter gelegenen Hierarchieebene angezeigt.  
   
--   Zum Navigieren nach oben in der Ordnerhierarchie klicken Sie in der Linkleiste oben auf der Seite auf den Namen des Ordners, dessen Inhalt Sie anzeigen möchten. **(1)** in der obigen Abbildung.  
+-   Zum Navigieren nach oben in der Ordnerhierarchie klicken Sie in der Linkleiste oben auf der Seite auf den Namen des Ordners, dessen Inhalt Sie anzeigen möchten. **(1)** in der Abbildung oben.  
   
 ## <a name="opening-a-report"></a>Öffnen eines Berichts  
  Wenn Sie einen Bericht gefunden haben, klicken Sie auf den Namen des Berichts, um ihn zu öffnen. Der Bericht wird in HTML gerendert und im Berichts-Manager auf der Seite Inhalt angezeigt. Berichte werden stets von der Browsersitzung zwischengespeichert. Wenn Sie einen Bericht öffnen, können Sie in der Regel durch Klicken auf die Schaltfläche **Zurück** wieder zu dem Bericht zurückkehren. Dies gilt auch, wenn Sie einen Benutzernamen und ein Kennwort zum Ausführen des Berichts eingeben mussten. Ein gerenderter Bericht kann erst beim Schließen des Browsers vollständig geschlossen werden.  
@@ -48,7 +48,7 @@ Berichts-Manager-Menüband
   
 ## <a name="to-search-for-a-items"></a>So suchen Sie nach Elementen  
   
--   Geben Sie für die Suche nach Elementen im Berichts-Manager oben auf der Seite in das Textfeld **Suchen** eine Suchzeichenfolge ein. **(2)** in der obigen Abbildung. Suchvorgänge beginnen in der Ordnerhierarchie im Knoten der obersten Ebene und werden in den untergeordneten Zweigen fortgesetzt. Falls Sie keine Zugriffsberechtigung für einen bestimmten Zweig haben, wird dieser ausgelassen. Dies ist der Fall bei Ordnern vom Typ Meine Berichte anderer Benutzer und bei anderen Ordnern, die nicht generell verfügbar sind. Nur Berichte und Elemente, die Sie anzeigen dürfen, werden in die Suchergebnisse einbezogen.  
+-   Geben Sie für die Suche nach Elementen im Berichts-Manager oben auf der Seite in das Textfeld **Suchen** eine Suchzeichenfolge ein. **(2)** in der Abbildung oben. Suchvorgänge beginnen in der Ordnerhierarchie im Knoten der obersten Ebene und werden in den untergeordneten Zweigen fortgesetzt. Falls Sie keine Zugriffsberechtigung für einen bestimmten Zweig haben, wird dieser ausgelassen. Dies ist der Fall bei Ordnern vom Typ Meine Berichte anderer Benutzer und bei anderen Ordnern, die nicht generell verfügbar sind. Nur Berichte und Elemente, die Sie anzeigen dürfen, werden in die Suchergebnisse einbezogen.  
   
 -   Um anhand des Namens oder einer Beschreibung nach einem Element zu suchen, geben Sie den gesamten Text oder einen Teil davon an. Bei der Suchzeichenfolge wird die Groß/Kleinschreibung nicht beachtet. Suchoperatoren wie z.B. Pluszeichen (+) oder Minuszeichen (–) zum Ein- oder Ausschließen von Suchkriterien sind nicht zulässig.  
   
@@ -56,6 +56,6 @@ Berichts-Manager-Menüband
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Suchen nach Berichten und anderen Elementen &#40;Berichts-Generator und SSRS&#41;](searching-for-reports-and-other-items-report-builder-and-ssrs.md)   
- [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS )](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

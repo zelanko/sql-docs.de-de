@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 808ad67429ee49d6b04533863112b4cbb3af2514
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108877"
 ---
 # <a name="e-mail-settings---configuration-manager-ssrs-native-mode"></a>E-Mail-Einstellungen – Konfigurations-Manager (einheitlicher SSRS-Modus)
@@ -30,7 +30,7 @@ ms.locfileid: "66108877"
   
  [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Einheitlicher Modus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Absenderadresse**  
  Gibt die E-Mail-Adresse an, die im Feld Von: einer generierten E-Mail verwendet werden soll. Sie müssen ein Benutzerkonto angeben, das über die Berechtigung zum Senden von E-Mails vom SMTP-Server verfügt.  
   

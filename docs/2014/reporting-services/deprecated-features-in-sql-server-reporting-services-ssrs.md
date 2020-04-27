@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d5cbef64cbed910018e7d2f8dae1844074aaa3f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109351"
 ---
 # <a name="deprecated-features-in-sql-server-reporting-services-in-sql-server-2014"></a>Als veraltet markierte Funktionen in SQL Server Reporting Services in SQL Server 2014
@@ -27,18 +27,18 @@ ms.locfileid: "66109351"
   
  Inhalte dieses Themas:  
   
--   [SQL Server 2014 Reporting Services als veraltet markierte Funktionen](#bkmk_2014)  
+-   [Als veraltet markierte Funktionen in SQL Server 2014 Reporting Services](#bkmk_2014)  
   
 -   [Als veraltet markierte Funktionen in SQL Server 2012 SP1 Reporting Services](#bkmk_2012sp1)  
   
--   [SQL Server 2012 Reporting Services als veraltet markierte Funktionen](#bkmk_2012)  
+-   [Als veraltet markierte Funktionen in SQL Server 2012 Reporting Services](#bkmk_2012)  
   
 -   [Als veraltet markierte Funktionen in SQL Server 2008 R2 Reporting Services](#bkmk_kj)  
   
-##  <a name="bkmk_2014"></a>SQL Server 2014 Reporting Services als veraltet markierte Funktionen  
+##  <a name="sql-server-2014-reporting-services-deprecated-features"></a><a name="bkmk_2014"></a>SQL Server 2014 Reporting Services als veraltet markierte Funktionen  
   
 ### <a name="features-not-supported-in-the-next-version-of-sql-server"></a>Funktionen, die in der nächsten Version von SQL Server nicht unterstützt werden  
- Die folgenden [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Funktionen werden in der **nächsten** Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]nicht mehr unterstützt. Verwenden Sie diese Funktionen nicht zum Entwickeln neuer Anwendungen, und ändern Sie so bald wie möglich die Anwendungen, in denen diese Funktionen zurzeit verwendet werden.  
+ Die folgenden [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Funktionen werden in der **nächsten** Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]nicht mehr unterstützt. Verwenden Sie diese Funktionen nicht zum Entwickeln neuer Anwendungen, und ändern Sie so bald wie möglich die Anwendungen, in denen diese Funktionen zurzeit verwendet werden.  
   
 #### <a name="html-rendering-extension-device-information-settings"></a>HTML-Renderingerweiterung für Geräteinformationseinstellungen  
  Die Geräteinformationseinstellungen für die HTML-Renderingerweiterung sind veraltet.  
@@ -99,7 +99,7 @@ ms.locfileid: "66109351"
   
  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] wurden keine [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]-Funktionen als veraltet markiert.  
   
-##  <a name="bkmk_2012sp1"></a>SQL Server 2012 SP1 Reporting Services als veraltet markierte Funktionen  
+##  <a name="sql-server-2012-sp1-reporting-services-deprecated-features"></a><a name="bkmk_2012sp1"></a>SQL Server 2012 SP1 Reporting Services als veraltet markierte Funktionen  
  In diesem Abschnitt werden als veraltet markierte [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Funktionen in [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)]beschrieben. Die folgenden Funktionen von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] werden in der nächsten Version von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]noch unterstützt, aber in zukünftigen Versionen entfernt. Die betreffende Version von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] wurde noch nicht festgelegt.  
   
 ### <a name="sharepoint-web-parts"></a>SharePoint-Webparts  
@@ -107,7 +107,7 @@ ms.locfileid: "66109351"
   
  Weitere Informationen zu den veralteten Webparts finden Sie unter [Anzeigen und Durchsuchen von Berichten im einheitlichen Modus mithilfe von SharePoint-Webparts (SSRS)](https://msdn.microsoft.com/library/ms159772.aspx)  
   
-##  <a name="bkmk_2012"></a>SQL Server 2012 Reporting Services als veraltet markierte Funktionen  
+##  <a name="sql-server-2012-reporting-services-deprecated-features"></a><a name="bkmk_2012"></a>SQL Server 2012 Reporting Services als veraltet markierte Funktionen  
  In diesem Abschnitt werden als veraltet markierte [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Funktionen in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]beschrieben.  
   
 ### <a name="html-rendering-extension-device-information-settings"></a>HTML-Renderingerweiterung für Geräteinformationseinstellungen  
@@ -159,7 +159,7 @@ ms.locfileid: "66109351"
   
 -   <xref:ReportService2010.ReportingService2010.IsSSLRequired%2A>  
   
-##  <a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services als veraltet markierte Funktionen  
+##  <a name="sql-server-2008-r2-reporting-services-deprecated-features"></a><a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services als veraltet markierte Funktionen  
   
 > [!NOTE]  
 >  Da SQL Server 2008 R2 ein kleineres Versionsupgrade von SQL Server 2008 darstellt, wird empfohlen, auch den Inhalt im Abschnitt zu SQL Server 2008 zu lesen.  

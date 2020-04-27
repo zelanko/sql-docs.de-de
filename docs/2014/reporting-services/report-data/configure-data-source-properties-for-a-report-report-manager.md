@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7823ce29facb7f1c85a51a12b31ee2076a0d023b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107415"
 ---
 # <a name="configure-data-source-properties-for-a-report--report-manager"></a>Konfigurieren von Datenquelleneigenschaften für einen Bericht (Berichts-Manager)
@@ -28,7 +28,7 @@ ms.locfileid: "66107415"
   
 1.  Starten Sie den [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md).  
   
-2.  Navigieren Sie im Berichts-Manager zur Seite **Inhalt** . Navigieren Sie zu dem Bericht, für den Sie eine berichtsspezifische Datenquelle konfigurieren möchten, und öffnen Sie den Bericht.  
+2.  Navigieren Sie in Berichts-Manager zur Seite **Inhalt** . Navigieren Sie zu dem Bericht, für den Sie eine berichtsspezifische Datenquelle konfigurieren möchten, und öffnen Sie den Bericht.  
   
 3.  Klicken Sie auf die Registerkarte **Eigenschaften** . Die Seite **Allgemeine** Eigenschaften wird geöffnet.  
   
@@ -62,8 +62,8 @@ ms.locfileid: "66107415"
  [Die Inhaltsseite &#40;Berichts-Manager&#41;](../contents-page-report-manager.md)   
  [Die Seite "neue Datenquelle" &#40;Berichts-Manager&#41;](../new-data-source-page-report-manager.md)   
  [Erstellen, ändern und Löschen von freigegebenen Datenquellen &#40;SSRS-&#41;](create-modify-and-delete-shared-data-sources-ssrs.md)   
- [Verwalten von Berichtsdatenquellen](manage-report-data-sources.md)   
+ [Verwalten von Berichtsdaten Quellen](manage-report-data-sources.md)   
  [Erstellen, löschen oder Ändern einer freigegebenen Datenquelle &#40;Berichts-Manager&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Die Eigenschaften Seite "Datenquellen" &#40;Berichts-Manager&#41;](../data-sources-properties-page-report-manager.md)  
+ [Datenquellen-Eigenschaftenseite (Berichts-Manager)](../data-sources-properties-page-report-manager.md)  
   
   

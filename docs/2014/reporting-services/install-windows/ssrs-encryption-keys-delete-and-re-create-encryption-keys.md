@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c293b7007ccb8a42928c02ed37bcaacb898504f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108700"
 ---
 # <a name="delete-and-re-create-encryption-keys--ssrs-configuration-manager"></a>Löschen und erneutes Erstellen von Verschlüsselungsschlüsseln (SSRS-Konfigurations-Manager)
@@ -116,7 +116,7 @@ ms.locfileid: "66108700"
 4.  Für Abonnements, die verschlüsselte Daten verwenden (d. h. die Dateifreigabe-Übermittlungserweiterung und alle verschlüsselten Übermittlungserweiterungen von Drittanbietern) öffnen Sie jedes Abonnement, und geben Sie die Anmeldeinformationen erneut ein. Abonnements, die Übermittlungsoption Berichtsserver-E-Mail verwenden, verwenden keine verschlüsselten Daten und sind bei einer Schlüsseländerung nicht betroffen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
- [Speichern verschlüsselter Berichts Server Daten &#40;SSRS-Configuration Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Configuration Manager&#41;](ssrs-encryption-keys-manage-encryption-keys.md)   
+ [SSRS-Verschlüsselungsschlüssel: Speichern verschlüsselter Berichtsserverdaten](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

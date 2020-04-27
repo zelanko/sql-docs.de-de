@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b086d067241606b61d733fc58c358195966a1345
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108850"
 ---
 # <a name="configure-report-server-urls--ssrs-configuration-manager"></a>Konfigurieren von Berichtsserver-URLs (SSRS-Konfigurations-Manager)
@@ -48,7 +48,7 @@ ms.locfileid: "66108850"
   
  Die Einstellungen, die diese URLs verfügbar machen, werden in der folgenden Tabelle angezeigt. Diese Tabelle zeigt die Standardwerte, die eine Berichtsserver-Verbindung über URLs ermöglichen, die einen Hostnamen enthalten:  
   
-|Teil|value|Erklärung|  
+|Teil|Wert|Erklärung|  
 |----------|-----------|-----------------|  
 |IP-Adresse|Alle zugewiesenen|Der Domänennamendienst in Ihrem Netzwerk löst den Hostnamen in der URL in die IP-Adresse des Computers auf. Solange die IP-Adresse in der von Ihnen definierten URL angegeben ist, erreicht eine Anforderung, die an einen bestimmten Host gesandt wird, stets ihr angegebenes Ziel.|  
 |Port|80|Port 80 ist der Standardport für TCP/IP-Verbindungen auf einem Computer. Da der Berichtsserver die Überwachung an Port 80 durchführt, können Sie die Portnummer der URL weglassen. Wenn Sie einen anderen Port angeben, müssen Sie diesen in der URL angeben.|  
@@ -67,20 +67,20 @@ ms.locfileid: "66108850"
  [Konfigurieren einer URL &#40;SSRS-Konfigurations-Manager&#41;](configure-a-url-ssrs-configuration-manager.md)  
  Dieses Thema enthält Anweisungen für das Einstellen und Ändern einer URL-Reservierung im [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool.  
   
- [Informationen zu URL-Reservierungen und-Registrierungen &#40;SSRS-Configuration Manager&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md)  
+ [Informationen zu URL-Reservierungen und -Registrierungen &#40;SSRS-Konfigurations-Manager&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md)  
  Mithilfe von URLs greifen Sie auf Anwendungen und Berichte zu. Dieses Thema behandelt Anwendungs-URLs, Standard-URLs und die Funktionsweise der URL-Reservierung und -Registrierung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
   
- [URL-Reservierungs Syntax &#40;SSRS-Configuration Manager&#41;](url-reservation-syntax-ssrs-configuration-manager.md)  
+ [URL-Reservierungssyntax &#40;SSRS-Konfigurations-Manager&#41;](url-reservation-syntax-ssrs-configuration-manager.md)  
  Die Standard-URL-Reservierungen, die von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet werden, sind für die meisten Szenarien gültig. Wenn Sie jedoch den Zugriff einschränken oder die Verwendung auf Internet- oder Extranetzugang erweitern möchten, müssen Sie die Einstellungen möglicherweise an Ihre Anforderungen anpassen. Diese Thema behandelt die Syntax einer URL-Reservierung und gibt Empfehlungen zur Erstellung eigener Reservierungen, die Ihrer Verwendung entsprechen.  
   
- [URLs in Konfigurationsdateien &#40;SSRS-Configuration Manager&#41;](urls-in-configuration-files-ssrs-configuration-manager.md)  
+ [URLs in Konfigurationsdateien &#40;SSRS-Konfigurations-Manager&#41;](urls-in-configuration-files-ssrs-configuration-manager.md)  
  Die Datei RSReportServer.config enthält mehrere Einträge für URL-Reservierungen und URLs, die vom Berichts-Manager und der Berichtsserver-E-Mail-Übermittlung verwendet werden. Dieses Thema fasst die URL-Konfigurationseinstellungen zusammen, damit Sie verstehen können, wie sich diese unterscheiden.  
   
- [URL-Reservierungen für Berichts Server Bereitstellungen mit mehreren Instanzen &#40;SSRS-Configuration Manager&#41;](url-reservations-for-multi-instance-report-server-deployments.md)  
+ [URL-Reservierungen für Berichtsserver-Bereitstellungen mit mehreren Instanzen &#40;SSRS-Konfigurations-Manager&#41;](url-reservations-for-multi-instance-report-server-deployments.md)  
  Wenn Sie mehrere Instanzen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] auf einem Computer installieren, erhöht sich die Wahrscheinlichkeit, dass beim Registrieren einer URL doppelte URLs auftreten. Um diese Fehler zu vermeiden, befolgen Sie in diesem Thema die Empfehlungen zum Erstellen von instanzenspezifischen URL-Reservierungen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Konfigurieren einer URL &#40;SSRS-Konfigurations-Manager&#41;](configure-a-url-ssrs-configuration-manager.md)   
+ [Konfigurieren einer URL &#40;SSRS-Configuration Manager&#41;](configure-a-url-ssrs-configuration-manager.md)   
  [Webdienst-URL &#40;einheitlicher SSRS-Modus&#41;](../../sql-server/install/web-service-url-ssrs-native-mode.md)  
   
   

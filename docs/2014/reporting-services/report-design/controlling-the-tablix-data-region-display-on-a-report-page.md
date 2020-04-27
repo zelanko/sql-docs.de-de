@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c6fd4b09947bc10a9e4e960ca1097f807a47c14f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106209"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>Steuern der Tablix-Datenbereichsanzeige auf einer Berichtsseite (Berichts-Generator und SSRS)
@@ -34,28 +34,28 @@ ms.locfileid: "66106209"
   
 -   **Anzeigen einer Meldung, wenn keine Daten vorhanden sind**. Wenn zur Laufzeit keine Daten für ein Berichtsdataset vorhanden sind, können Sie eine eigene Meldung schreiben, die statt des Datenbereichs angezeigt werden soll. Weitere Informationen finden Sie unter [Festlegen einer Meldung über fehlende Daten für einen Datenbereich &#40;Berichts-Generator und SSRS&#41;](../report-data/set-a-no-data-message-for-a-data-region-report-builder-and-ssrs.md).  
   
--   Bedingtes Ausblenden von **Daten**. Wenn Sie bedingt steuern möchten, ob ein Datenbereich oder Teile eines Datenbereichs angezeigt oder ausgeblendet werden sollen, können Sie die Hidden `True` -Eigenschaft auf oder auf einen Ausdruck festlegen. Ausdrücke können Verweise auf Berichtsparameter enthalten. Sie können auch ein Element zum Ein-/Ausschalten angeben, sodass die Benutzer entscheiden können, ob Detaildaten angezeigt werden sollen. Weitere Informationen finden Sie unter [Drilldownaktion &#40;Berichts-Generator und SSRS&#41;](drilldown-action-report-builder-and-ssrs.md).  
+-   **Bedingtes Ausblenden von Daten**. Wenn Sie bedingt steuern möchten, ob ein Datenbereich oder Teile eines Datenbereichs angezeigt oder ausgeblendet werden sollen, können Sie die Hidden `True` -Eigenschaft auf oder auf einen Ausdruck festlegen. Ausdrücke können Verweise auf Berichtsparameter enthalten. Sie können auch ein Element zum Ein-/Ausschalten angeben, sodass die Benutzer entscheiden können, ob Detaildaten angezeigt werden sollen. Weitere Informationen finden Sie unter [Drilldownaktion &#40;Berichts-Generator und SSRS&#41;](drilldown-action-report-builder-and-ssrs.md).  
   
 -   **Zusammenführen von Zellen.** Mehrere zusammenhängende Zellen in einer Tabelle können zu einer einzelnen Zelle kombiniert werden. Dies wird als mehrere Spalten überspannende Zellen oder Zusammenführung von Zellen bezeichnet. Zellen können nur horizontal oder vertikal kombiniert werden. Wenn Sie Zellen zusammenführen, bleiben nur die Daten in der ersten Zelle erhalten. Daten in anderen Zellen werden entfernt. Zusammengeführte Zellen können in ihre ursprünglichen Spalten aufgeteilt werden. Weitere Informationen finden Sie unter [Zusammenführen von Zellen in einem Datenbereich (Berichts-Generator und SSRS)](merge-cells-in-a-data-region-report-builder-and-ssrs.md).  
   
 ## <a name="controlling-tablix-data-region-position-and-expansion-on-a-page"></a>Steuern von Position und Erweiterung des Tablix-Datenbereichs auf einer Seite  
  Mit den folgenden Funktionen kann die Darstellung eines Tablix-Datenbereichs in einem gerenderten Bericht gesteuert werden:  
   
--   **Steuern der Position eines Tablix--Datenbereichs in Bezug auf andere Berichts Elemente**. Ein Tablix-Datenbereich kann über, neben oder unter anderen Berichtselementen auf der Berichtsentwurfsoberfläche positioniert werden. Zur Laufzeit erweitert [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nach Bedarf den Tablix-Datenbereich für die Daten, die für das verknüpfte Dataset abgerufen werden, und verschiebt ggf. Peer-Berichtselemente weiter nach außen. Um ein Tablix-Element neben einem anderen Berichtselement zu verankern, müssen Sie die Berichtselemente als Peers festlegen und ihre relativen Positionen anpassen. Weitere Informationen finden Sie unter [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md).  
+-   **Das Steuern von der Position eines Tablix-Datenbereichs in Verhältnis zu anderen Berichtselementen**. Ein Tablix-Datenbereich kann über, neben oder unter anderen Berichtselementen auf der Berichtsentwurfsoberfläche positioniert werden. Zur Laufzeit erweitert [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nach Bedarf den Tablix-Datenbereich für die Daten, die für das verknüpfte Dataset abgerufen werden, und verschiebt ggf. Peer-Berichtselemente weiter nach außen. Um ein Tablix-Element neben einem anderen Berichtselement zu verankern, müssen Sie die Berichtselemente als Peers festlegen und ihre relativen Positionen anpassen. Weitere Informationen finden Sie unter [Renderingverhalten &#40;Berichts-Generator und SSRS&#41;](rendering-behaviors-report-builder-and-ssrs.md).  
   
--   **Ändern der Erweiterungs Richtung**. Um zu steuern, ob ein Tablix-Datenbereich von links nach rechts (LTR) oder von rechts nach links (RTL) über die Breite der Seite erweitert wird, verwenden Sie die Direction-Eigenschaft, auf die über das Eigenschaftenfenster zugegriffen werden kann. Weitere Informationen finden Sie unter [Rendern von Datenbereichen (Berichts-Generator und SSRS)](rendering-data-regions-report-builder-and-ssrs.md).  
+-   **Ändern der Erweiterungsrichtung**. Um zu steuern, ob ein Tablix-Datenbereich von links nach rechts (LTR) oder von rechts nach links (RTL) über die Breite der Seite erweitert wird, verwenden Sie die Direction-Eigenschaft, auf die über das Eigenschaftenfenster zugegriffen werden kann. Weitere Informationen finden Sie unter [Rendern von Datenbereichen (Berichts-Generator und SSRS)](rendering-data-regions-report-builder-and-ssrs.md).  
   
 ## <a name="controlling-how-a-tablix-data-region-renders-on-a-page"></a>Steuern, wie ein Tablix-Datenbereich auf einer Seite gerendert wird  
  In der folgenden Liste wird beschrieben, wie Sie die Anzeige eines Tablix-Datenbereichs in einem Bericht steuern können:  
   
--   **Steuern von Paging**. Um den Umfang der Daten zu steuern, die pro Berichtsseite angezeigt werden, können Sie Seitenumbrüche für Datenbereiche festlegen. Sie können auch Seitenumbrüche für Gruppen festlegen. Seitenumbrüche können sich auf die Leistung von bedarfsgesteuertem Rendering auswirken, wenn sich der Umfang der Daten verringert, der pro Seite verarbeitet werden muss. Weitere Informationen finden Sie unter [Paginierung in Reporting Services (Berichts-Generator und SSRS)](pagination-in-reporting-services-report-builder-and-ssrs.md) und [Hinzufügen eines Seitenumbruchs (Berichts-Generator und SSRS)](add-a-page-break-report-builder-and-ssrs.md).  
+-   **Steuern der Paginierung**. Um den Umfang der Daten zu steuern, die pro Berichtsseite angezeigt werden, können Sie Seitenumbrüche für Datenbereiche festlegen. Sie können auch Seitenumbrüche für Gruppen festlegen. Seitenumbrüche können sich auf die Leistung von bedarfsgesteuertem Rendering auswirken, wenn sich der Umfang der Daten verringert, der pro Seite verarbeitet werden muss. Weitere Informationen finden Sie unter [Paginierung in Reporting Services (Berichts-Generator und SSRS)](pagination-in-reporting-services-report-builder-and-ssrs.md) und [Hinzufügen eines Seitenumbruchs (Berichts-Generator und SSRS)](add-a-page-break-report-builder-and-ssrs.md).  
   
--   **Anzeigen von Daten auf beiden Seiten von Zeilen Headern**. Zeilenköpfe müssen nicht unbedingt an der Seite eines Tablix-Datenbereichs angezeigt werden. Sie können die Zeilenköpfe zwischen Spalten verschieben, sodass Datenspalten vor den Zeilenköpfen angezeigt werden. Ändern Sie dazu die GroupsBeforeRowHeaders-Eigenschaft für die Matrix. Sie können auf diese Eigenschaft über das Eigenschaftenfenster zugreifen. Der Wert für diese Eigenschaft ist eine ganze Zahl; durch den Wert 2 werden beispielsweise zwei Gruppeninstanzen von Datenbereichsspalten-Daten vor der Spalte mit den Zeilenköpfen angezeigt.  
+-   **Anzeigen von Daten auf beiden Seiten der Zeilenköpfe**. Zeilenköpfe müssen nicht unbedingt an der Seite eines Tablix-Datenbereichs angezeigt werden. Sie können die Zeilenköpfe zwischen Spalten verschieben, sodass Datenspalten vor den Zeilenköpfen angezeigt werden. Ändern Sie dazu die GroupsBeforeRowHeaders-Eigenschaft für die Matrix. Sie können auf diese Eigenschaft über das Eigenschaftenfenster zugreifen. Der Wert für diese Eigenschaft ist eine ganze Zahl; durch den Wert 2 werden beispielsweise zwei Gruppeninstanzen von Datenbereichsspalten-Daten vor der Spalte mit den Zeilenköpfen angezeigt.  
   
 ## <a name="controlling-how-tablix-row-and-column-groups-render"></a>Steuernd, wie Tablix-Zeilen- und -Spaltengruppen gerendert werden  
  Die Steuerung, wie ein Tablix-Datenbereich gerendert wird, hängt von den Gruppenstrukturen ab. Ein Tablix-Datenbereich kann vier Bereiche enthalten, wie in der folgenden Abbildung dargestellt:  
   
- ![Tablix-Datenbereich Bereiche](../media/rs-tablixareas.gif "Tablix-Datenbereich Bereiche")  
+ ![Tablix-Datenbereich Bereiche](../media/rs-tablixareas.gif "Zonen des Tablix-Datenbereichs")  
   
  Der Zeilengruppenbereich und der Spaltegruppenbereich enthalten Gruppenköpfe. Wenn ein Tablix-Datenbereich Gruppenheader hat, steuern Sie, wie Zeilen und Spalten wiederholt werden, indem Sie auf der Seite **Allgemein** des Dialogfelds **Tablix-Eigenschaften** Eigenschaften festlegen.  
   
@@ -65,21 +65,21 @@ ms.locfileid: "66106209"
   
  In der folgenden Liste wird beschrieben, wie Sie die Anzeige eines Tablix-Datenbereichs in einem Bericht steuern können:  
   
--   **Wiederholen von Zeilen-und Spaltenüberschriften auf mehreren Seiten**. Sie können Zeilen-und Spaltenüberschriften auf jeder Seite anzeigen, über die sich ein Tablix--Datenbereich erstreckt. Weitere Informationen finden Sie unter [Anzeigen von Zeilen- und Spaltenüberschriften auf mehreren Seiten &#40;Berichts-Generator und SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md).  
+-   **Wiederholen von Zeilen- und Spaltenköpfen auf mehreren Seiten.** Sie können Zeilen- und Spaltenköpfe auf jeder Seite eines Tablix-Datenbereichs anzeigen. Weitere Informationen finden Sie unter [Anzeigen von Zeilen- und Spaltenüberschriften auf mehreren Seiten &#40;Berichts-Generator und SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md).  
   
--   **Beim Scrollen werden Zeilen-und Spaltenheader in der Ansicht belassen**. Sie können steuern, ob die Zeilen- und Spaltenköpfe in einer Ansicht beibehalten werden, wenn Sie in einem Browser einen Bildlauf für einen Bericht durchführen. Weitere Informationen finden Sie unter [Sichtbarhalten von Kopfzeilen beim Scrollen durch einen Bericht (Berichts-Generator und SSRS)](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md).  
+-   **Beibehalten von Zeilen- und Spaltenköpfen in der Ansicht beim Durchführen eines Bildlaufs.** Sie können steuern, ob die Zeilen- und Spaltenköpfe in einer Ansicht beibehalten werden, wenn Sie in einem Browser einen Bildlauf für einen Bericht durchführen. Weitere Informationen finden Sie unter [Sichtbarhalten von Kopfzeilen beim Scrollen durch einen Bericht (Berichts-Generator und SSRS)](keep-headers-visible-when-scrolling-through-a-report-report-builder-and-ssrs.md).  
   
  Weitere Informationen darüber, wie sich das Exportieren eines Berichts in unterschiedliche Formate auf das Rendern eines Tablix-Datenbereichs auf einer Seite auswirkt, finden Sie unter [Renderingverhalten (Berichts-Generator und SSRS)](rendering-behaviors-report-builder-and-ssrs.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verknüpfen mehrerer Datenbereiche mit einem Dataset &#40;Berichts-Generator und SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
- [Geschachtelte Datenbereiche &#40;Berichts-Generator und SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
+ [Verknüpfen mehrerer Datenbereiche mit dem gleichen Dataset &#40;Berichts-Generator und SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md)   
+ [&#40;von Berichts-Generator und SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md)   
  [Ausdrucks Bereich für Gesamtwerte, Aggregate und integrierte Auflistungen &#40;Berichts-Generator und SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md)   
  [Steuern von Seitenumbrüchen, Überschriften, Spalten und Zeilen &#40;Berichts-Generator und SSRS&#41;](controlling-page-breaks-headings-columns-and-rows-report-builder-and-ssrs.md)   
  [Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](../tablix-data-region-report-builder-and-ssrs.md)   
- [Tabellen (Berichts-Generator und SSRS)](tables-report-builder-and-ssrs.md)   
- [Matrizen (Berichts-Generator und SSRS)](create-a-matrix-report-builder-and-ssrs.md)   
- [Listen (Berichts-Generator und SSRS)](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
+ [Tabellen &#40;Berichts-Generator und SSRS&#41;](tables-report-builder-and-ssrs.md)   
+ [Matrizen &#40;Berichts-Generator und SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md)   
+ [Listet &#40;Berichts-Generator und SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)  
   
   

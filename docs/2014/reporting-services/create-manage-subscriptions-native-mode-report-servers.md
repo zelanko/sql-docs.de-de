@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d6f18ff05cf6283e4358e8f8afd76a5858b0b41a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109599"
 ---
 # <a name="create-and-manage-subscriptions-for-native-mode-report-servers"></a>Erstellen und Verwalten von Abonnements für Berichtsserver im einheitlichen Modus
@@ -52,7 +52,7 @@ ms.locfileid: "66109599"
  Eine entfernte Übermittlungserweiterung ist im Berichts-Manager oder auf einer SharePoint-Website nicht mehr verfügbar. Das Entfernen einer Übermittlungserweiterung kann inaktive Abonnements zur Folge haben. Stellen Sie vor dem Entfernen einer Erweiterung sicher, dass Sie die Abonnements löschen oder sie so konfigurieren, dass sie eine andere Übermittlungserweiterung verwenden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Verwenden von "Meine Abonnements"](subscriptions/use-my-subscriptions-native-mode-report-server.md)  
+ [Verwenden von „Meine Abonnements“](subscriptions/use-my-subscriptions-native-mode-report-server.md)  
  Erläutert die Verwendung der Seite Meine Abonnements zum Verwalten der eigenen Abonnements.  
   
  [Anhalten der Berichts- und Abonnementverarbeitung](subscriptions/disable-or-pause-report-and-subscription-processing.md)  

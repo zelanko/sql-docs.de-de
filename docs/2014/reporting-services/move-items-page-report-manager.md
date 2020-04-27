@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f64a9e9efe180c2db776c38553403e5f7cdfac9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108214"
 ---
 # <a name="move-items-page-report-manager"></a>Elemente verschieben (Seite, Berichts-Manager)
@@ -37,7 +37,7 @@ ms.locfileid: "66108214"
 2.  Klicken Sie auf der Symbolleiste auf **Detailansicht**.  
   
     > [!NOTE]  
-    >  Wenn nur die **Kachel Ansicht**angezeigt wird, befinden Sie sich bereits in der **Detailansicht**.  
+    >   Wenn nur die **Kachelansicht**angezeigt wird, sind Sie bereits in der **Detailansicht**.  
   
 3.  Aktivieren Sie das Kontrollkästchen neben einem Element, und klicken Sie dann auf der Symbolleiste auf **Verschieben** . Sie können mehr als ein Kontrollkästchen aktivieren, wenn Sie mehrere Elemente an den gleichen neuen Speicherort verschieben möchten.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66108214"
 2.  Klicken Sie auf der Symbolleiste auf **Kachelansicht**.  
   
     > [!NOTE]  
-    >  Wenn nur die **Detailansicht**angezeigt wird, befinden Sie sich bereits in der **Kachel Ansicht**.  
+    >   Wenn nur **Detailansicht**angezeigt wird, sind Sie bereits in der Kachelansicht ****.  
   
 3.  Zeigen Sie auf ein Element, und klicken Sie auf den Dropdownpfeil.  
   

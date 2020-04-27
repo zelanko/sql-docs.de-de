@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5c1cf33c00dc9bf0b2fbf588fea9793e0deabfc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106882"
 ---
 # <a name="add-a-border-to-a-report-report-builder-and-ssrs"></a>Hinzufügen eines Rahmens zu einem Bericht (Berichts-Generator und SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "66106882"
 1.  Klicken Sie mit der rechten Maustaste außerhalb irgendeines Elements auf die Kopfzeile, und klicken Sie anschließend auf **Kopfzeileneigenschaften**. Fügen Sie auf der Registerkarte **Rahmen** einen linken, oberen und rechten Rahmen in dem gewünschten Format hinzu.  
   
     > [!NOTE]  
-    >  Wenn Sie in Ihrem Bericht keine Kopfzeilen verwenden, können Sie Rahmen nur um den Berichts Hauptteil platzieren, oder Sie können über die Registerkarte **Einfügen** Header hinzufügen.  
+    >   Wenn Sie in Ihrem Bericht keine Kopfzeilen verwenden, können Sie Rahmen nur um den Berichtshauptteil platzieren. Sie können auch auf der Registerkarte **Einfügen** Kopfzeilen hinzufügen.  
   
 2.  Klicken Sie im Hauptteil mit der rechten Maustaste außerhalb irgendeines Elements auf die Entwurfsoberfläche, und klicken Sie auf **Eigenschaften des Hauptteils**. Fügen Sie auf der Registerkarte **Rahmen** einen linken und rechten Rahmen in dem gewünschten Format hinzu.  
   

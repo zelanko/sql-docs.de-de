@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 130027d60f5458b451d4f853a79228510c5e7d66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109616"
 ---
 # <a name="create-data-driven-subscription-page-report-manager"></a>Datengesteuertes Abonnement erstellen (Seite) (Berichts-Manager)
@@ -36,7 +36,7 @@ ms.locfileid: "66109616"
   
 2.  Zeigen Sie auf den Bericht, und klicken Sie auf den Dropdownpfeil.  
   
-3.  Klicken Sie im Dropdownmenü auf **Verwalten**. Dadurch wird die Seite **Allgemeine Eigenschaften** für den Bericht geöffnet.  
+3.  Klicken Sie im Dropdownmenü auf **Verwalten**. Dadurch wird die Seite **Allgemeine** Eigenschaften für den Bericht geöffnet.  
   
 4.  Wählen Sie die Registerkarte **Abonnements** , und klicken Sie dann auf **Neues datengesteuertes Abonnement**.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66109616"
 ## <a name="specify-a-connection-page-2"></a>Angeben einer Verbindung (Seite 2)  
  Wenn Sie eine freigegebene Datenquelle angegeben haben, können Sie auf dieser Seite das freigegebene Datenquellenelement auswählen. Mithilfe des Baumsteuerelements können Sie zum gewünschten Element wechseln und dieses auswählen. Falls Sie eine Verbindung für dieses Abonnement definieren, können Sie auf dieser Seite die folgenden Optionen angeben.  
   
- **Verbindungstyp.**  
+ **Verbindungstyp**  
  Wählen Sie die Datenverarbeitungserweiterung für die Datenquelle aus.  
   
  **Verbindungs Zeichenfolge**  
@@ -75,7 +75,7 @@ ms.locfileid: "66109616"
   
  Falls die Datenquelle die Windows-Authentifizierung verwendet, wählen Sie die Option **Windows-Anmeldeinformationen verwenden** , wenn eine Verbindung mit der Datenquelle hergestellt wird.  
   
- Wählen Sie Anmeldeinformationen sind nicht erforderlich, wenn Sie eine Datenquelle verwenden, die Benutzerverbindungen nicht authentifiziert (wenn die Datenquelle beispielsweise eine XML-Datei ist). Diese Option erfordert, dass Sie vorher das unbeaufsichtigte Ausführungskonto konfiguriert haben. Weitere Informationen finden Sie unter [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung &#40;SSRS-Configuration Manager&#41;](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
+ Wählen Sie Anmeldeinformationen sind nicht erforderlich, wenn Sie eine Datenquelle verwenden, die Benutzerverbindungen nicht authentifiziert (wenn die Datenquelle beispielsweise eine XML-Datei ist). Diese Option erfordert, dass Sie vorher das unbeaufsichtigte Ausführungskonto konfiguriert haben. Weitere Informationen finden Sie unter [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung (SSRS-Konfigurations-Manager)](install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
 ## <a name="specify-a-query-page-3"></a>Angeben einer Abfrage (Seite 3)  
  Verwenden Sie diese Seite, um die Abfrage einzugeben, die die Abonnentendaten abruft. Die besten Ergebnisse erzielen Sie, wenn Sie die Abfrage zunächst in SQL Server Management Studio ausführen, bevor Sie sie in dem datengesteuerten Abonnement verwenden. Sie können dann die Ergebnisse untersuchen, um sicherzustellen, dass Sie die Informationen erhalten, die Sie benötigen. Auf folgende wichtige Punkte sollten Sie bei den Abfrageergebnissen achten:  
@@ -87,7 +87,7 @@ ms.locfileid: "66109616"
  **Abfrage**  
  Geben Sie eine SQL-Abfrage oder einen Befehl an, mit der bzw. dem ein Resultset mit je einer Zeile für jeden Empfänger des Abonnements abgerufen wird. Auf den nachfolgenden Seiten wird das Resultset verwendet, um datengesteuerte Erweiterungseinstellungen aufzufüllen.  
   
- **Zeit**  
+ **Timeout**  
  Geben Sie einen Timeoutwert für die Abfrage ein. Dieser Wert muss groß genug sein, damit die Abfrageverarbeitung abgeschlossen werden kann.  
   
  **Überprüfen**  
@@ -108,7 +108,7 @@ ms.locfileid: "66109616"
  **Dateiname**  
  Gibt einen Dateinamen für den Bericht an. Die Dateifreigabe-Übermittlungserweiterung übermittelt einen Bericht als statische Anwendungsdatei an einen freigegebenen Ordner. In den meisten Fällen sollten Sie einen Wert aus der Datenbank verwenden, um den Dateinamen zu erstellen. Abhängig davon, wie Sie den Schreibmodus festlegen, führt die Verwendung eines statischen Werts dazu, dass jede neue Übermittlung die vorherige Übermittlung überschreibt.  
   
- **Path**  
+ **Pfad**  
  Gibt einen freigegebenen Ordner an, auf den über eine Netzwerkverbindung zugegriffen werden kann. Klicken Sie im Startmenü auf **Ausführen** , und geben Sie den Ordner Pfad im folgenden Format ein, um zu über \\ \\ prüfen, ob\> \\ der Ordner zugänglich ist:<\>Computername<FreigegebenerOrdnerName.  
   
  **Renderformat**  
@@ -153,11 +153,10 @@ ms.locfileid: "66109616"
  **Täglich**  
  Definieren Sie einen Zeitplan, der an den von Ihnen angegebenen Tagen zu einer bestimmten Uhrzeit (Stunde und Minute) ausgeführt wird. Sie können Tage auf folgende Weise angeben: jeden * \<Tag>*, jeden Wochentag und jede * \<Zahl>* Tag. Wenn eine Option ausgewählt ist, stehen die anderen nicht zur Verfügung, auch wenn es so aussieht, als seien die anderen Tage ebenfalls ausgewählt.  
   
- **
-  <c0>Wöchentlich</c0>**  
+ **Wöchentlich**  
  Definieren Sie einen Zeitplan, der zu der von Ihnen angegebenen Uhrzeit (Stunde und Minute) wöchentlich ausgeführt wird. Der Zeitabstand kann vollständige Wochen betragen (z. B. alle zwei Wochen) oder Tage innerhalb einer Woche.  
   
- **Lichem**  
+ **Monatlich**  
  Definieren Sie einen Zeitplan mit monatlicher Ausführung. Innerhalb eines Monats können Sie einen Tag auf der Grundlage eines Musters auswählen (z. B. den letzten Sonntag jeden Monats) oder spezifische Kalenderdaten angeben (z. B. den 1. und 15., um den ersten und fünfzehnten Tag jeden Monats anzugeben). Mithilfe von Kommas und Bindestrichen können Sie mehrere Tage und Bereiche angeben (Beispiel: 1, 5, 7-12, 21).  
   
  **Einmal**  
@@ -172,8 +171,8 @@ ms.locfileid: "66109616"
 ## <a name="see-also"></a>Weitere Informationen  
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Data-Driven Subscriptions](subscriptions/data-driven-subscriptions.md)   
- [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Lernprogramm&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
- [Angeben von Anmelde Informationen und Verbindungsinformationen für Berichtsdaten Quellen](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Tutorial&#41;](create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Abonnements und Übermittlung &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Berichts-Manager (F1-Hilfe)](../../2014/reporting-services/report-manager-f1-help.md)  
   

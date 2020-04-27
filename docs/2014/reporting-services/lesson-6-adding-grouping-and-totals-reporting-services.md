@@ -11,13 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5607dfb046e7f50eb3a015e1f4f13711256435a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108405"
 ---
-# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
+# <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten (Reporting Services)
   Fügen Sie dem Bericht Gruppierungen und Gesamtwerte hinzu, um Daten zu gruppieren und zusammenzufassen.  
   
  Weitere Informationen zum Hinzufügen von laufenden Summen zu Berichten finden Sie unter [Hinzufügen von Summen zu Reporting Services Berichten (SSRS)](https://www.tutorialgateway.org/add-total-and-subtotal-to-ssrs-report/).  
@@ -34,11 +34,11 @@ ms.locfileid: "66108405"
   
 -   [So veröffentlichen Sie den Bericht auf dem Berichts Server (optional)](#bkmk_publishreport)  
   
-##  <a name="bkmk_groupdata"></a>So gruppieren Sie Daten in einem Bericht  
+##  <a name="to-group-data-in-a-report"></a><a name="bkmk_groupdata"></a>So gruppieren Sie Daten in einem Bericht  
   
 1.  Klicken Sie auf die Registerkarte **Entwurf** .  
   
-2.  Wenn der Bereich **Zeilen Gruppen** nicht angezeigt wird, klicken Sie mit der rechten Maustaste auf die Entwurfs Oberfläche, und klicken Sie auf **anzeigen** und dann auf **Gruppierung**.  
+2.  Wenn Sie den Bereich **Zeilengruppen** nicht sehen, klicken Sie mit der rechten Maustaste auf die Entwurfsoberfläche. Klicken Sie auf **Sicht** und dann auf **Gruppierung**.  
   
 3.  Ziehen Sie im **Berichtsdatenbereich** das Feld `Date` in den Bereich **Zeilengruppen**. Platzieren Sie das Feld über der Zeile **(Details)**.  
   
@@ -58,9 +58,9 @@ ms.locfileid: "66108405"
   
 6.  Wechseln Sie zur Registerkarte **Vorschau** , um eine Vorschau des Berichts anzuzeigen. Die Vorschau sollte ähnlich der folgenden Abbildung aussehen:  
   
-     ![Tabelle gruppiert nach 'Date' und dann 'Order'](../../2014/tutorials/media/rs-basictablegroupspreview.gif "Tabelle gruppiert nach 'Date' und dann 'Order'")  
+     ![Tabelle gruppiert nach „Date“ und dann „Order“](../../2014/tutorials/media/rs-basictablegroupspreview.gif "Tabelle gruppiert nach „Date“ und dann „Order“")  
   
-##  <a name="bkmk_addtotals"></a>So fügen Sie einem Bericht Summen hinzu  
+##  <a name="to-add-totals-to-a-report"></a><a name="bkmk_addtotals"></a>So fügen Sie einem Bericht Summen hinzu  
   
 1.  Wechseln Sie in die Entwurfsansicht.  
   
@@ -80,13 +80,13 @@ ms.locfileid: "66108405"
   
      ![Entwurfsansicht: Einfache Tabelle mit Gesamtergebnis der Bestellungen](../../2014/tutorials/media/rs-basictablesumlinetotaldesign.gif "Entwurfsansicht: Einfache Tabelle mit Gesamtergebnis der Bestellungen")  
   
-##  <a name="bkmk_adddailytotal"></a>So fügen Sie einem Bericht ein Tagesergebnis hinzu  
+##  <a name="to-add-a-daily-total-to-a-report"></a><a name="bkmk_adddailytotal"></a>So fügen Sie einem Bericht ein Tagesergebnis hinzu  
   
 1.  Klicken Sie mit der rechten Maustaste auf die Zelle Order , zeigen Sie auf **Gesamtergebnis hinzufügen**, und klicken Sie auf **Danach**.  
   
      Dadurch wird eine neue Zeile mit Summen der Menge und Dollarbetrag für jeden Tag und der Bezeichnung "**Total**" in der Spalte Order hinzugefügt.  
   
-2.  Geben Sie das Wort **Daily** in der gleichen Zelle vor dem Wort **Total** ein, sodass es die **tägliche Summe**liest.  
+2.  Geben Sie in der gleichen Zelle zuerst das Wort **Daily** und anschließend das Wort **Total** ein, um **Daily Total**zu erhalten.  
   
 3.  Wählen Sie die Zelle **Daily Total** aus, und markieren Sie die beiden Zellen für **Sum** sowie die leere Zelle dazwischen.  
   
@@ -94,7 +94,7 @@ ms.locfileid: "66108405"
   
      ![](../../2014/tutorials/media/rs-basictablesumdaytotaldesign.gif "rs_BasicTableSumDayTotalDesign")  
   
-##  <a name="bkmk_addgrandtotal"></a>So fügen Sie einem Bericht ein Gesamtergebnis hinzu  
+##  <a name="to-add-a-grand-total-to-a-report"></a><a name="bkmk_addgrandtotal"></a>So fügen Sie einem Bericht ein Gesamtergebnis hinzu  
   
 1.  Klicken Sie mit der rechten Maustaste auf die Zelle Date, zeigen Sie auf **Gesamtergebnis hinzufügen**, und klicken Sie auf **Danach**.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "66108405"
   
      ![Vorschau: Einfache Tabelle mit Gesamtergebnis](../../2014/tutorials/media/rs-basictablesumgrandtotalpreview.gif "Vorschau: Einfache Tabelle mit Gesamtergebnis")  
   
-##  <a name="bkmk_publishreport"></a>So veröffentlichen Sie den Bericht auf dem Berichts Server (optional)  
+##  <a name="to-publish-the-report-to-the-report-server-optional"></a><a name="bkmk_publishreport"></a>So veröffentlichen Sie den Bericht auf dem Berichts Server (optional)  
   
 1.  Ein optionaler Schritt besteht darin, den vervollständigten Bericht auf dem Berichtsserver im einheitlichen Modus zu veröffentlichen, damit Sie den Bericht im Berichts-Manager anzeigen können.  
   

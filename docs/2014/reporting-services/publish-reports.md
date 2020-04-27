@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86ab056f18e69b0b264525377efb0d257ebc2b95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108028"
 ---
 # <a name="publish-reports"></a>Veröffentlichen von Berichten
@@ -42,8 +42,8 @@ ms.locfileid: "66108028"
 ## <a name="see-also"></a>Weitere Informationen  
  [Veröffentlichen von Datenquellen und Berichten](reports/publishing-data-sources-and-reports.md)   
  [Anzeigen einer Vorschau für Berichte](reports/previewing-reports.md)   
- [Veröffentlichen von Berichten auf einem Berichtsserver](reports/publishing-reports-to-a-report-server.md)   
- [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Veröffentlichen von Berichten auf einem Berichts Server](reports/publishing-reports-to-a-report-server.md)   
+ [Suchen, anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS &#41;](report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](report-builder/export-reports-report-builder-and-ssrs.md)  
   
   

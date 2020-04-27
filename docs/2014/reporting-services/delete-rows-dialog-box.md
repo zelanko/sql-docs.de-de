@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2fbc640573d6d897205e11dbc40d40210502ee60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109312"
 ---
 # <a name="delete-rows-dialog-box"></a>Zeilen löschen (Dialogfeld)
   Im Dialogfeld **Zeilen löschen** können Sie Zeilen aus einer Tabelle, einer Matrix oder einem Listendatenbereich löschen. Bei Zeilen, die Gruppen zugeordnet sind, können Sie auch die Gruppendefinitionen löschen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Zeilen und zugeordnete Gruppe löschen**  
  Wählen Sie diese Option aus, um Zeilen und die zugeordneten Gruppendefinitionen zu löschen.  
   

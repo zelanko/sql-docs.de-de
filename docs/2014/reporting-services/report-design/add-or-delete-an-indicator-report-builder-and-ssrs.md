@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 763d39ef4804a986fb190c3b5e9d8039a827bd63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106578"
 ---
 # <a name="add-or-delete-an-indicator-report-builder-and-ssrs"></a>Hinzufügen oder Löschen eines Indikators (Berichts-Generator und SSRS)
@@ -26,11 +26,11 @@ ms.locfileid: "66106578"
   
  Sie können die Werte und die Status von Indikatoren aktualisieren. Weitere Informationen finden Sie in den folgenden Themen:  
   
--   [Ändern von Indikator Symbolen und Indikator Sätzen &#40;Berichts-Generator und SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
+-   [Ändern von Indikatorsymbolen und Indikatorsätzen &#40;Berichts-Generator und SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md)  
   
 -   [Festlegen und Konfigurieren von Maßeinheiten &#40;Berichts-Generator und SSRS&#41;](set-and-configure-measurement-units-report-builder-and-ssrs.md)  
   
--   [Festlegen des Synchronisierungs Bereichs &#40;Berichts-Generator und SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
+-   [Festlegen des Synchronisierungsbereichs &#40;Berichts-Generator und SSRS&#41;](set-synchronization-scope-report-builder-and-ssrs.md)  
   
  Da ein Indikator im Messgerätebereich positioniert wird, müssen Sie den Indikator statt des Bereichs auswählen, wenn Sie den Indikator mit dem Dialogfeld **Indikatoreigenschaften** oder dem Bereich **Eigenschaften** konfigurieren möchten. Die folgende Abbildung enthält einen ausgewählten Indikator in dessen Messgerätbereich.  
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 69f340855e37ffde49aec0af096c094a142659d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109185"
 ---
 # <a name="export-a-report-using-url-access"></a>Exportieren von Berichten über URL-Zugriff
@@ -38,7 +38,7 @@ http://myspsite/subsite/_vti_bin/reportserver?http://myspsite/subsite/myrereport
  Wenn Sie den *Format* -Parameter nicht als Teil der URL aufnehmen, erkennt der Berichtsserver den Browser und rendert den Bericht im entsprechenden HTML-Format.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [URL-Zugriff &#40;SSRS&#41;](url-access-ssrs.md)   
- [URL Access Parameter Reference (URL-Zugriffsparameterverweis)](url-access-parameter-reference.md)  
+ [URL-Zugriff &#40;SSRS-&#41;](url-access-ssrs.md)   
+ [URL-Zugriffsparameterreferenz](url-access-parameter-reference.md)  
   
   

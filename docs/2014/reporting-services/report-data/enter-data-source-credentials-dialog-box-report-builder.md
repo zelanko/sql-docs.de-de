@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f44b35fcb8a6568e0dcd4e9d3eba412207d1e83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107321"
 ---
 # <a name="enter-data-source-credentials-dialog-box-report-builder"></a>Datenquellen-Anmeldeinformationen eingeben (Dialogfeld), (Berichts-Generator)
   Verwenden Sie das Dialogfeld **Datenquellen-Anmeldeinformationen eingeben** , um Ihre Anmeldeinformationen zum Abrufen von Daten aus der Datenquelle bereitzustellen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Benutzername**  
  Geben Sie den Benutzernamen ein, um sich bei der Datenquelle anzumelden.  
   
@@ -33,6 +33,6 @@ ms.locfileid: "66107321"
  [Datenverbindungen, Datenquellen und Verbindungs Zeichenfolgen in Berichts-Generator](../data-connections-data-sources-and-connection-strings-in-report-builder.md)   
  [Dialog Feld "Datenquellen Eigenschaften", "Allgemein" &#40;Berichts-Generator&#41;](../data-source-properties-dialog-box-general-report-builder.md)   
  [Anmelde Informationen in Berichts-Generator angeben](../specify-credentials-in-report-builder.md)   
- [Berichts-Generator Hilfe zu Dialog Feldern, Bereichen und Assistenten](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Hilfe zu Dialogfeldern, Bereichen und Assistenten in Berichts-Generator](../report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

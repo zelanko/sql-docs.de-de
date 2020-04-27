@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dde53428c738fc30595d17b62175b50835fe7ec2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105037"
 ---
 # <a name="scatter-charts-report-builder-and-ssrs"></a>Punktdiagramme (Berichts-Generator und SSRS)
@@ -22,14 +22,14 @@ ms.locfileid: "66105037"
   
  Die folgende Abbildung zeigt ein Beispiel für ein Punktdiagramm.  
   
- ![Punkt Diagramm](../media/rs-scatterchart.gif "Punkt Diagramm")  
+ ![Punktdiagramm](../media/rs-scatterchart.gif "Punktdiagramm")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="variations"></a>Abweichungen  
   
--   **Verlor.** Blasendiagramme zeigen den Unterschied zwischen zwei Werten eines Datenpunkts basierend auf der Größe der Blase an. Je größer die Blase, desto größer der Unterschied zwischen den beiden Werten.  
+-   **Blase.** Blasendiagramme zeigen den Unterschied zwischen zwei Werten eines Datenpunkts basierend auf der Größe der Blase an. Je größer die Blase, desto größer der Unterschied zwischen den beiden Werten.  
   
 -   **3D-Blase**. Ein dreidimensionales Blasendiagramm.  
   

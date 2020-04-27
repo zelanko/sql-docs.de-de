@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b6aab8fc0c8e083181779c13654b0d7d42531e50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108168"
 ---
 # <a name="new-linked-report-page-report-manager"></a>Neuer verknüpfter Bericht (Seite) (Berichts-Manager)
@@ -50,7 +50,7 @@ ms.locfileid: "66108168"
  **Beschreibung**  
  Geben Sie eine Beschreibung des Berichtsinhalts ein. Diese Beschreibung wird für Benutzer, die über die Berechtigung zum Zugreifen auf den Bericht verfügen, auf der Seite Inhalt angezeigt.  
   
- **Location**  
+ **Speicherort**  
  Geben Sie den Ordnerpfad des Berichts an. Standardmäßig werden verknüpfte Berichte als gleichgeordnete Elemente des Basisberichts erstellt. Klicken Sie auf **Speicherort ändern** , um den verknüpften Bericht in einem anderen Ordner zu speichern.  
   
  **OK**  

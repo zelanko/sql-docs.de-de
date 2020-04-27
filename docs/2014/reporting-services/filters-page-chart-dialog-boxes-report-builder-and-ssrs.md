@@ -18,20 +18,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 268ca47f33e8e2514b297c2bb2a30eb77b7a8f08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109142"
 ---
 # <a name="filters-page-chart-dialog-boxes-report-builder-and-ssrs"></a>Filter (Seite), Diagramm-Dialogfelder (Berichts-Generator und SSRS)
   Klicken Sie auf **Filter** im:  
   
--   Dialogfeld **Kategoriegruppeneigenschaften** , um Datenpunkte in einer Reihe zu filtern, die nach Kategorie gruppiert wurde.  
+-   Dialogfeld**Kategoriegruppeneigenschaften** , um Datenpunkte in einer Reihe zu filtern, die nach Kategorie gruppiert wurde.  
   
--   **Diagramm Eigenschaften** (Dialogfeld), um Filteroptionen für das Diagramm zu definieren.  
+-   Dialogfeld**Diagrammeigenschaften** , um allgemeine Filteroptionen für das Diagramm zu definieren.  
   
--   **Reihen Gruppen Eigenschaften** (Dialogfeld), um die Anzahl der Reihen in der ausgewählten Gruppe einzuschränken.  
+-   Dialogfeld**Reihengruppeneigenschaften** , um die Anzahl der Reihen in der ausgewählten Gruppe einzuschränken.  
   
 ## <a name="options"></a>Tastatur  
  **Add (Hinzufügen)**  
@@ -46,7 +46,7 @@ ms.locfileid: "66109142"
  **Pfeil nach unten**  
  Klicken Sie auf diese Schaltfläche, um den ausgewählten Filter in der Liste nach unten zu verschieben.  
   
- **Ausdruck**  
+ **expression**  
  Geben Sie den Ausdruck ein, auf den ein Filter angewendet werden soll, oder wählen Sie ihn aus. Klicken Sie auf die Ausdrucks Schaltfläche (**FX**), um den Ausdruck zu bearbeiten.  
   
  **Datentyp**  
@@ -63,7 +63,7 @@ ms.locfileid: "66109142"
  Geben Sie den Ausdruck oder Wert, mit dem der Ausdruck ausgewertet werden soll, in **Ausdruck**ein.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern &#40;Berichts-Generator und SSRS&#41;](report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [Hinzufügen von datasetfiltern, Datenbereichs Filtern und Gruppen Filtern &#40;Berichts-Generator und SSRS&#41;](report-design/add-dataset-filters-data-region-filters-and-group-filters.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](report-design/expressions-report-builder-and-ssrs.md)   
  [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)  

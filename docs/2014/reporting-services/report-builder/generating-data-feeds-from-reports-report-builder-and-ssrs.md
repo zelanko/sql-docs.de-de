@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d7afc644d96c895164aa954cc4813762cc4ef32d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107839"
 ---
 # <a name="generating-data-feeds-from-reports-report-builder-and-ssrs"></a>Generieren von Datenfeeds aus Berichten (Berichts-Generator und SSRS)
@@ -32,7 +32,7 @@ ms.locfileid: "66107839"
   
  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="ReportDataAsDataFeeds"></a>Berichte als Daten Feeds  
+##  <a name="reports-as-data-feeds"></a><a name="ReportDataAsDataFeeds"></a>Berichte als Daten Feeds  
  Sie können einen Produktionsbericht als Datenfeed exportieren oder einen Bericht erstellen, dessen Hauptzweck in der Bereitstellung in Daten in Form von Datenfeeds für Anwendungen besteht. Durch die Verwendung von Berichten als Datenfeed haben Sie eine zusätzliche Möglichkeit, Daten für Anwendungen bereitzustellen, auf die nicht problemlos über Clientdatenanbieter zugegriffen werden kann, oder wenn Sie es vorziehen, die Komplexität der Datenquelle zu verbergen und die Datennutzung zu vereinfachen. Ein weiterer Vorteil der Verwendung von Berichtsdaten als Datenfeed besteht darin, dass Sie Funktionen von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] wie den Berichts-Manager, Sicherheits- und Planungsfunktionen sowie Berichtsmomentaufnahmen zur Verwaltung der Berichte verwenden können, die Datenfeeds bereitstellen.  
   
  Um die Atom-Renderingerweiterung optimal nutzen zu können, sollten Sie verstehen, wie der Bericht in Datenfeeds gerendert wird. Bei Verwendung vorhandener Berichte ist es hilfreich, im Voraus zu wissen, welche Datenfeeds aus den Berichten generiert werden. Wenn Sie Berichte speziell zur Verwendung als Datenfeeds erstellen, haben Sie die Möglichkeit, die enthaltenen Daten und das Berichtslayout genau auf eine optimale Nutzung des Datenfeeds abzustimmen, was einen erheblichen Vorteil bietet.  
@@ -41,7 +41,7 @@ ms.locfileid: "66107839"
   
 
   
-##  <a name="AtomServiceDocument"></a>Atom-Dienst Dokument (atomsvc-Datei)  
+##  <a name="atom-service-document-atomsvc-file"></a><a name="AtomServiceDocument"></a>Atom-Dienst Dokument (atomsvc-Datei)  
  In einem Atom-Dienstdokument ist eine Verbindung mit mindestens einem Datenfeed angegeben. Bei der Verbindung handelt es sich mindestens um eine einfache URL für den Datendienst, der den Feed erzeugt.  
   
  Wenn Sie Berichtsdaten mit der Atom-Renderingerweiterung rendern, sind im Atom-Dienstdokument die für einen Bericht verfügbaren Datenfeeds aufgeführt. Im Dokument ist mindestens ein Datenfeed für jeden Datenbereich im Bericht enthalten. Tabellen und Messgeräte generieren jeweils nur einen Datenfeed, während Matrizen, Listen und Diagramme je nach den darin angezeigten Daten mehrere Datenfeeds generieren könnten.  
@@ -62,7 +62,7 @@ ms.locfileid: "66107839"
   
 
   
-##  <a name="DataFeeds"></a>Daten Feeds  
+##  <a name="data-feeds"></a><a name="DataFeeds"></a>Daten Feeds  
  Bei einem Datenfeed handelt es sich um eine XML-Datei mit einem konsistenten Tabellenformat, das sich nie ändert, und veränderbaren Daten, die mit jeder Berichtsausführung variieren können. Die von [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] generierten Datenfeeds verfügen über das gleiche Format wie die von ADO.NET Data Services generierten Feeds.  
   
  Ein Datenfeed enthält zwei Abschnitte: Header und Daten. Die Atom-Spezifikation definiert die Elemente in den beiden Abschnitten. Der Header enthält Informationen wie das für die Datenfeeds zu verwendende Zeichencodierungsschema.  
@@ -126,7 +126,7 @@ ms.locfileid: "66107839"
   
 
   
-##  <a name="FlatteningReportData"></a>Vereinfachen von Berichtsdaten  
+##  <a name="flattening-report-data"></a><a name="FlatteningReportData"></a>Vereinfachen von Berichtsdaten  
  Der Atom-Renderer stellt Berichtsdaten als vereinfachte Rowsets in einem XML-Format bereit. Die Regeln zum Vereinfachen von Datentabellen sind bis auf einige Ausnahmen mit denen des CSV-Renderers identisch:  
   
 -   Elemente im Bereich werden bis auf Detailebene vereinfacht. Die Textfelder auf oberster Ebene werden im Gegensatz zum CSV-Renderer in jedem in den Datenfeed geschriebenen Eintrag angezeigt.  
@@ -149,7 +149,7 @@ ms.locfileid: "66107839"
   
 
   
-##  <a name="AtomRendering"></a>Atom-Rendering-Regeln  
+##  <a name="atom-rendering-rules"></a><a name="AtomRendering"></a>Atom-Rendering-Regeln  
  Beim Rendern eines Datenfeeds ignoriert die Atom-Renderingerweiterung die folgenden Informationen:  
   
 -   Formatierung und Layout  
@@ -164,7 +164,7 @@ ms.locfileid: "66107839"
   
 -   Linien  
   
--   Images  
+-   Bilder  
   
 -   Automatische Teilergebnisse  
   
@@ -187,7 +187,7 @@ ms.locfileid: "66107839"
   
 
   
-##  <a name="DeviceInfo"></a> Geräteinformationseinstellungen  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>Geräte Informationseinstellungen  
  Sie können einige Standardeinstellungen für diesen Renderer ändern, einschließlich des zu verwendenden Codierungsschemas. Weitere Informationen finden Sie unter [ATOM Device Information Settings](../atom-device-information-settings.md).  
   
 

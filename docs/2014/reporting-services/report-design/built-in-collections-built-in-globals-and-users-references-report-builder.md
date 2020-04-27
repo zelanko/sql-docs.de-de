@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef0438dfa0750c2a516a801a2d81b5d1c0b49721
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106438"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>Integrierte globale Werte und Benutzerverweise (Berichts-Generator und SSRS)
@@ -44,7 +44,7 @@ ms.locfileid: "66106438"
 ### <a name="renderformat"></a>RenderFormat  
  In der folgenden Tabelle werden die Elemente von `RenderFormat` beschrieben.  
   
-|Mitglied|type|BESCHREIBUNG|  
+|Member|type|BESCHREIBUNG|  
 |------------|----------|-----------------|  
 |Name|`String`|Der Name des Renderers laut Registrierung in der RSReportServer-Konfigurationsdatei.<br /><br /> Verfügbar während bestimmter Teile des Berichtsverarbeitungs-/Renderingzyklus.|  
 |IsInteractive|`Boolean`|Gibt an, ob die aktuelle Renderinganforderung ein interaktives Renderingformat verwendet.|  
@@ -63,9 +63,7 @@ ms.locfileid: "66106438"
   
 -   Wenn dieser Ausdruck für eine ausgewählte Spalte im Dialogfeld **Spaltensichtbarkeit** platziert wird, wird die Spalte nur angezeigt, wenn der Bericht nach Excel exportiert wird. Andernfalls ist die Spalte ausgeblendet.  
   
-     
-  `EXCELOPENXML` bezieht sich auf das Excel-Format aus Office 2007. 
-  `EXCEL` bezieht sich auf das Excel-Format aus Office 2003.  
+     `EXCELOPENXML` bezieht sich auf das Excel-Format aus Office 2007. `EXCEL` bezieht sich auf das Excel-Format aus Office 2003.  
   
      `=IIF(Globals!RenderFormat.Name = "EXCELOPENXML" OR Globals!RenderFormat.Name = "EXCEL", false, true)`  
   
@@ -76,7 +74,7 @@ ms.locfileid: "66106438"
   
 |**Member**|**Typ**|**Beschreibung**|  
 |----------------|--------------|---------------------|  
-|`Language`|`String`|Die Sprache des Benutzers, der den Bericht ausführt. Beispiel: `en-US`.|  
+|`Language`|`String`|Die Sprache des Benutzers, der den Bericht ausführt. Beispielsweise `en-US`.|  
 |`UserID`|`String`|Die Benutzer-ID des Benutzers, der den Bericht ausführt. Wenn Sie die Windows-Authentifizierung verwenden, stellt dieser Wert das Domänenkonto des aktuellen Benutzers dar. Der Wert wird von der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Sicherheitserweiterung bestimmt, für die die Windows-Authentifizierung oder die benutzerdefinierte Authentifizierung verwendet werden kann.|  
   
  Weitere Informationen zur Unterstützung mehrerer Sprachen in einem Bericht finden Sie unter „Überlegungen zu Lösungsentwürfen für mehrsprachige oder globale Bereitstellungen“ in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dokumentation in der [SQL Server-Onlinedokumentation](https://go.microsoft.com/fwlink/?LinkId=120955).  
@@ -93,7 +91,7 @@ ms.locfileid: "66106438"
 ## <a name="see-also"></a>Weitere Informationen  
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Dialog Feld ' Ausdruck ' &#40;Berichts-Generator&#41;](../expression-dialog-box-report-builder.md)   
- [Datentypen in Ausdrücken (Berichts-Generator und SSRS)](expressions-report-builder-and-ssrs.md)   
+ [Datentypen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Formatieren von Zahlen und Datumsangaben &#40;Berichts-Generator und SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expression-examples-report-builder-and-ssrs.md)  
   

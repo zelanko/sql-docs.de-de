@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7fb80bffc3160b171cbffd40b80d5c8c0f9bb137
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108992"
 ---
 # <a name="image-properties-dialog-box-size-report-builder-and-ssrs"></a>Bildeigenschaften (Dialogfeld), Größe (Berichts-Generator und SSRS)
   Wählen Sie im Dialogfeld **Bildeigenschaften** die Option **Größe** aus, um die Größe der in einem Feld oder im Entwurfsbereich angezeigten Bilder zu formatieren oder um den zusätzlichen Abstand zwischen dem Rand einer Zelle oder eines Textfelds und dem in der Zelle oder dem Textfeld enthaltenen Bild oder Textfeld zu ändern.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Ursprüngliche Größe**  
  Wenn diese Option ausgewählt ist und das Bild in einem Feld angezeigt wird, wird die Feldgröße an das größte Bild im gesamten Satz angepasst. Wenn diese Option ausgewählt ist und das Bild im Entwurfsbereich angezeigt wird, wird das Bild in der Originalgröße angezeigt.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66108992"
 ## <a name="see-also"></a>Weitere Informationen  
  [Bildeigenschaften (Dialog Feld), allgemein &#40;Berichts-Generator und SSRS&#41;](../../2014/reporting-services/image-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [Bilder &#40;Berichts-Generator und SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
- [Berichts-Generator Hilfe zu Dialog Feldern, Bereichen und Assistenten](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
+ [Images &#40;Berichts-Generator und SSRS&#41;](report-design/images-report-builder-and-ssrs.md)   
+ [Hilfe zu Dialogfeldern, Bereichen und Assistenten in Berichts-Generator](../../2014/reporting-services/report-builder-help-for-dialog-boxes-panes-and-wizards.md)  
   
   

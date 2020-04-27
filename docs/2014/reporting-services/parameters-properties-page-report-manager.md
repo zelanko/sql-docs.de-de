@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 866fe023ff6ca2fe83264d65319618c5def0749a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108120"
 ---
 # <a name="parameters-properties-page-report-manager"></a>Parameter (Eigenschaftenseite) (Berichts-Manager)
@@ -35,7 +35,7 @@ ms.locfileid: "66108120"
   
 4.  Wählen Sie die Registerkarte **Parameter** aus. Wenn die Registerkarte **Parameter** nicht angezeigt wird, enthält der Bericht keine Parameter.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Parameter Name**  
  Gibt den Namen des Parameters an.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66108120"
   
  Wenn Sie anschließend angeben, dass dem Benutzer eine Eingabeaufforderung angezeigt wird, wird der Standardwert als Anfangswert verwendet, den Benutzer verwenden oder auch ändern können. Wenn keine Eingabeaufforderung für den Parameterwert angezeigt wird, wird dieser Wert für alle Benutzer verwendet, die den Bericht ausführen.  
   
- **NULL**  
+ **Normal**  
  Aktivieren Sie dieses Kontrollkästchen, um NULL als Standardwert anzugeben. Ein NULL-Wert bedeutet, dass der Bericht ausgeführt werden kann, auch wenn der Benutzer keinen Parameterwert bereitstellt. Falls in dieser Spalte kein Kontrollkästchen angezeigt wird, akzeptiert der Parameter keine NULL-Werte.  
   
  **Hide (Ausblenden)**  

@@ -18,14 +18,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8156e3d62e8aac027499ad1e267e1f6e14f5ef9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108692"
 ---
 # <a name="store-encrypted-report-server-data-ssrs-configuration-manager"></a>Speichern verschlüsselter Berichtsserverdaten (SSRS-Konfigurations-Manager)
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] speichert verschlüsselte Werte in der Berichtsserver-Datenbank und in Konfigurationsdateien. Die meisten verschlüsselten Werte stellen Anmeldeinformationen für den Zugriff auf externe Datenquellen dar, die Daten für Berichte bereitstellen. In diesem Thema werden die verschlüsselten Werte, die in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]verwendeten Verschlüsselungsfunktionen sowie andere Arten von gespeicherten, vertraulichen Daten beschrieben, die Sie kennen sollten.  
   
 ## <a name="encrypted-values"></a>Verschlüsselte Werte  
@@ -33,7 +32,7 @@ ms.locfileid: "66108692"
   
 -   Verbindungsinformationen und Anmeldeinformationen, mit denen ein Berichtsserver eine Verbindung zu einer Berichtsserver-Datenbank herstellt, die interne Serverdaten speichert.  
   
-     Diese Werte werden während der Installation oder Berichtsserverkonfiguration angegeben und verschlüsselt. Mit dem Reporting Services-Konfigurationstool oder dem Hilfsprogramm **rsconfig** können Sie die Verbindungsinformationen jederzeit aktualisieren. Die Verschlüsselung der Konfigurationseinstellungen wird mithilfe des auf dem lokalen Computer verwendeten Computerschlüssels durchgeführt, der für alle Benutzer verfügbar ist. Die verschlüsselten Verbindungsinformationen für den Berichtsserver werden in der Datei rsreportserver.config gespeichert (verschlüsselte Einstellungen sind in keiner weiteren Konfigurationsdatei gespeichert). Weitere Informationen finden Sie unter [Konfigurieren einer Verbindung mit der Berichts Server-Datenbank &#40;SSRS Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
+     Diese Werte werden während der Installation oder Berichtsserverkonfiguration angegeben und verschlüsselt. Mit dem Reporting Services-Konfigurationstool oder dem Hilfsprogramm **rsconfig** können Sie die Verbindungsinformationen jederzeit aktualisieren. Die Verschlüsselung der Konfigurationseinstellungen wird mithilfe des auf dem lokalen Computer verwendeten Computerschlüssels durchgeführt, der für alle Benutzer verfügbar ist. Die verschlüsselten Verbindungsinformationen für den Berichtsserver werden in der Datei rsreportserver.config gespeichert (verschlüsselte Einstellungen sind in keiner weiteren Konfigurationsdatei gespeichert). Weitere Informationen finden Sie unter [Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
 -   Gespeicherte Anmeldeinformationen, mit denen ein Berichtsserver eine Verbindung zu externen Datenquellen herstellt, die Daten für einen Bericht bereitstellen.  
   
@@ -50,8 +49,7 @@ ms.locfileid: "66108692"
      Dieser Wert wird während der Installation oder Serverkonfiguration erstellt und dann als verschlüsselter Wert in der Berichtsserver-Datenbank gespeichert. Der Windows-Dienst des Berichtsservers verwendet diesen Schlüssel zum Ver- und Entschlüsseln von Daten, die in der Berichtsserver-Datenbank gespeichert wurden.  
   
 ## <a name="encryption-functionality-in-reporting-services"></a>Verschlüsselungsfunktionen in Reporting Services  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet Kryptografiefunktionen, die Teil des Windows-Betriebssystems sind. Die symmetrische und die asymmetrische Verschlüsselung werden verwendet.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet Kryptografiefunktionen, die Teil des Windows-Betriebssystems sind. Die symmetrische und die asymmetrische Verschlüsselung werden verwendet.  
   
  Daten in der Berichtsserver-Datenbank werden mithilfe eines symmetrischen Schlüssels verschlüsselt. Es gibt nur einen symmetrischen Schlüssel für jede Berichtsserver-Datenbank. Dieser symmetrische Schlüssel wird selbst durch den öffentlichen Schlüssel eines von Windows generierten asymmetrischen Schlüsselpaares verschlüsselt. Der private Schlüssel wird vom Berichtsserver-Windows-Dienstkonto gehalten.  
   
@@ -64,8 +62,7 @@ ms.locfileid: "66108692"
  Auf einem Berichtsserver werden weitere Daten gespeichert, die nicht verschlüsselt sind, aber möglicherweise vertrauliche Informationen enthalten, die Sie schützen möchten. Insbesondere Berichtsverlaufs-Momentaufnahmen und Berichtsausführungs-Momentaufnahmen enthalten Abfrageergebnisse mit Daten, die nur für autorisierte Benutzer gedacht sind. Beim Verwenden von Momentaufnahmefunktionen für Berichte mit vertraulichen Daten sollten Sie beachten, dass Benutzer, die Tabellen in einer Berichtsserver-Datenbank öffnen können, möglicherweise auf Teile eines gespeicherten Berichts zugreifen können, indem sie den Inhalt der Tabelle überprüfen.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unterstützt weder die Zwischenspeicherung noch den Berichtsverlauf für Berichte, die Parameter basierend auf der Sicherheits-ID des Benutzers verwenden.  
+>  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unterstützt weder die Zwischenspeicherung noch den Berichtsverlauf für Berichte, die Parameter basierend auf der Sicherheits-ID des Benutzers verwenden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](ssrs-encryption-keys-manage-encryption-keys.md)  

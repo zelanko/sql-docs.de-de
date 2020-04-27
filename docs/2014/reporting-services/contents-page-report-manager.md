@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6d64754328954becb328a70a09fca8d2a6472050
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109728"
 ---
 # <a name="contents-page-report-manager"></a>Inhalt (Seite, Berichts-Manager)
@@ -22,20 +22,20 @@ ms.locfileid: "66109728"
   
  Die Seite Inhalt zeigt die Elemente, zu deren Anzeige Sie berechtigt sind. Wenn Sie über die entsprechenden Berechtigungen verfügen, können Sie die Elemente zudem verschieben, löschen und hinzufügen. Sie müssen auf **Detailansicht** klicken, um auf die Schaltflächen **Löschen** und **Verschieben** zuzugreifen. Wenn keine Elemente angezeigt werden, wenden Sie sich an den Berichtsserveradministrator. Es kann sein, dass Sie keiner Rolle zugewiesen sind, die den Zugriff auf den Inhalt oder die Vorgänge des Berichtsservers ermöglicht.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Neuer Ordner**  
  Klicken Sie auf diese Schaltfläche, um die Seite Neuer Ordner zu öffnen. Auf dieser Seite können Sie einen Ordner unter dem aktuellen Ordner erstellen.  
   
  **Neue Datenquelle**  
  Klicken Sie auf diese Schaltfläche, um die Seite Neue Datenquelle zu öffnen. Auf dieser Seite können Sie ein freigegebenes Datenquellenelement erstellen.  
   
- **Report Builder (Berichts-Generator)**  
+ **Berichts-Generator**  
  Klicken Sie auf diese Schaltfläche, um den Berichts-Generator zu starten. Um aus dem Berichts-Manager auf den Berichts-Generator zugreifen zu können, muss der Berichts-Generator auf dem Berichtsserver aktiviert sein, und Sie müssen über die Berechtigung verfügen, ihn zu verwenden. Weitere Informationen finden Sie unter [Konfigurieren des Berichts-Generator-Zugriffs](report-server/configure-report-builder-access.md).  
   
  **Ordnereinstellungen**  
  Klicken Sie auf diese Schaltfläche, um Eigenschaften des aktuellen Ordners zu öffnen und zu verwalten.  
   
- **Datei hochladen**  
+ **Hochladen einer Datei**  
  Klicken Sie auf diese Schaltfläche, um die Seite Datei hochladen zu öffnen. Auf dieser Seite können Sie eine Datei aus dem Dateisystem auf einen Berichtsserver kopieren. Sie können Dateien hochladen, um Berichte und Ressourcen hinzuzufügen (z. B. Diagramme, Dokumente oder anderen zusätzlichen Inhalt, der mit einem Bericht gespeichert werden soll). Hochgeladene Dateien werden in einer Berichtsserver-Datenbank gespeichert und verwaltet. Wählen Sie zum Hochladen eines Berichts eine Datei mit der Erweiterung RDL aus  
   
  **Detailansicht**  

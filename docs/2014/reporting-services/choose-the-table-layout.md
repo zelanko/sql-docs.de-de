@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 916ea06221ffd6ff33427a26870cd3005ec79e67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109851"
 ---
 # <a name="choose-the-table-layout"></a>Auswählen des Tabellenlayouts
   Verwenden Sie die Seite Tabellenlayout auswählen des Berichts-Assistenten, um das Layout der Tabelle im Bericht auszuwählen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Abgestuft**  
  Erstellen Sie einen Bericht, der eine Spalte für jedes Feld enthält, wobei Gruppenfelder in Kopfzeilen von Gruppen auf der linken Seite der Detailfeldspalten angezeigt werden. Dieser Tabellentyp enthält keine Gruppenfußzeilen.  
   

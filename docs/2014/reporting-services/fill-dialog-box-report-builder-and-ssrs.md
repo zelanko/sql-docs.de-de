@@ -20,27 +20,27 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86f54b00e530e70d1952461ce7b98b9238e4c3f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109161"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>Ausfüllen (Dialogfeld) (Berichts-Generator und SSRS)
   Auf der Registerkarte **Ausfüllen** können Sie Farboptionen für den Hintergrund einer oder mehrerer Zellen in einem Datenbereich oder einem Textfeld angeben.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Füllfarbe**  
  Klicken Sie auf die Farbschaltfläche, um eine Füllfarbe für das Rechteck auszuwählen. Klicken Sie auf die Ausdrucksschaltfläche (**fx**), um den _Ausdruck_ zu bearbeiten. Hierbei kann es sich um einen Hexadezimalwert für die RGB-Farbe oder eine der vordefinierten Farben im Dialogfeld **Ausdruck** handeln. Um eine Liste vordefinierter Farben anzuzeigen, wählen Sie **Web** im Bereich **Element**aus. Die im Bereich **Titel** aufgelisteten Farbnamen können in den Ausdruckstextbereich eingegeben werden. Verwenden Sie bei der Eingabe des Farbnamens kein Gleichheitszeichen (=) oder Anführungszeichen ("").  
   
  **Bildquelle auswählen**  
  Geben Sie den Speicherort des Bilds an, sodass der Berichtsprozessor dieses beim Rendern des Berichts anzeigen kann.  
   
--   **Extern** Wählen Sie diese Option aus, wenn das Bild als Datei auf einem Berichts Server oder Webserver weiterhin vorhanden sein soll.  
+-   **Extern** Wählen Sie diese Option aus, wenn das Bild als Datei auf einem Berichtsserver oder Webserver gespeichert bleiben soll.  
   
 -   **Eingebettet** Wählen Sie diese Option aus, wenn Sie das Bild in den Bericht einbetten möchten.  
   
--   **Datenbank** Wählen Sie diese Option aus, wenn Sie einen Daten Bank Feldnamen einschließen möchten, der die Bilder darstellt, die Sie in den Bericht einschließen möchten.  
+-   **Datenbank** Wählen Sie diese Option aus, wenn Sie einen Datenbankfeldnamen für die Bilder, die in Ihrem Bericht enthalten sein sollen, einschließen möchten.  
   
  **Dieses Bild verwenden**  
  Diese Option wird angezeigt, wenn Sie die Option **Eingebettet** oder **Extern** auswählen.  
@@ -59,7 +59,7 @@ ms.locfileid: "66109161"
  Wählen Sie das entsprechende Format der in der Datenbank enthaltenen Bilder aus (z. B. BMP, JPEG, GIF, PNG oder X-PNG).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Formatieren von Berichtselementen (Berichts-Generator und SSRS)](report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Formatieren von Berichts Elementen &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Formatieren von Text und Platzhaltern &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Bilder &#40;Berichts-Generator und SSRS&#41;](report-design/images-report-builder-and-ssrs.md)  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1589f171fd8d402572408186a10b3e6f4ac97982
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107588"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Freigegebene Datasetentwurfsansicht (Report Builder)
@@ -24,7 +24,7 @@ ms.locfileid: "66107588"
   
  Weitere Informationen zum Arbeiten mit Daten in einem Bericht finden Sie unter [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](../report-data/report-datasets-ssrs.md).  
   
-##  <a name="Ribbon"></a>Das Menüband  
+##  <a name="the-ribbon"></a><a name="Ribbon"></a>Das Menüband  
  Das Menüband bietet schnellen Zugriff auf die Befehle, die Sie zur Ausführung einer Aufgabe benötigen. Die Befehle sind in den folgenden logischen Gruppen organisiert: Verbindung, Dataset und Abfrage-Designer.  
   
 ### <a name="connection"></a>Verbindung  
@@ -36,9 +36,9 @@ ms.locfileid: "66107588"
  Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen](../data-connections-data-sources-and-connection-strings-in-report-builder.md).  
   
 ### <a name="dataset"></a>Dataset  
- Verwenden Sie die Schaltfläche **Optionen festlegen** , um Eigenschaften des freigegebenen Datasets festzulegen. Dabei handelt es sich z. B. um:  
+ Verwenden Sie die Schaltfläche **Optionen festlegen** , um Eigenschaften des freigegebenen Datasets festzulegen. Hierzu gehört Folgendes:  
   
--   Felder. Sie können ein Feld hinzufügen oder ein Feld in der Feldauflistung bearbeiten.  
+-   Felder Sie können ein Feld hinzufügen oder ein Feld in der Feldauflistung bearbeiten.  
   
 -   Datenoptionen. Sie können Optionen festlegen, die sich auf die Übereinstimmungskriterien und die Sortierreihenfolge auswirken, z. B. Berücksichtigung der Groß- und Kleinschreibung und Sortierung.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66107588"
   
 
   
-##  <a name="DesignSurface"></a>Die Abfrage-Designer-Oberfläche  
+##  <a name="the-query-designer-surface"></a><a name="DesignSurface"></a>Die Abfrage-Designer-Oberfläche  
  Ein Abfrage-Designer hilft Ihnen, eine Abfrage in der für die externe Datenquelle erforderlichen Syntax zu erstellen.  
   
  Bei einigen Datenquellentypen ist ein grafischer Abfrage-Designer verfügbar, mit dem Sie die Metadaten in einer externen Datenquelle durchsuchen können. Sie können Namen interaktiv vom Metadatenbereich in die Abfrageentwurfsoberfläche ziehen oder die gewünschten Namen interaktiv auswählen.  
@@ -72,7 +72,7 @@ ms.locfileid: "66107588"
   
 
   
-##  <a name="Results"></a>Anzeigen von Abfrage Ergebnissen  
+##  <a name="viewing-query-results"></a><a name="Results"></a>Anzeigen von Abfrage Ergebnissen  
  Durch die Abfragen, die Sie in der Entwurfsansicht für freigegebene Datasets erstellen, werden beim Verarbeiten des Berichts Daten über die Datenverbindung abgerufen.  
   
  Führen Sie die Abfrage aus, um Beispieldaten von der Datenverbindung anzuzeigen. So können Sie sicherstellen, dass die Abfrage den erwarteten Datentyp zurückgibt. Die Spalten im Resultset stammen aus den Metadaten für Datenschemas aus der Datenverbindung. Die Spaltennamen werden zur Datasetfeldauflistung. Die im Abfrageresultset angezeigten Werte der Daten sind Entwurfszeitdaten. Nachdem Sie das freigegebene Dataset als Definition des freigegebenen Datasets auf dem Berichtsserver gespeichert haben, wird nur der Abfragetext gespeichert. Die Daten im Abfrageresultset werden nicht gespeichert.  
@@ -90,14 +90,14 @@ ms.locfileid: "66107588"
   
 
   
-##  <a name="Save"></a>Speichern des freigegebenen Datasets  
+##  <a name="saving-the-shared-dataset"></a><a name="Save"></a> Speichern des freigegebenen Datasets  
  Klicken Sie zum Speichern der erstellten Abfrage auf die Schaltfläche **Berichts-Generator** und anschließend auf **Speichern** oder **Speichern unter**. Navigieren Sie zum entsprechenden Ordner auf dem Berichtsserver, und speichern Sie die freigegebene Datasetdefinition. Das freigegebene Dataset steht anderen Benutzern erst zur Verfügung, wenn Sie es auf dem Berichtsserver speichern.  
   
 
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](../report-data/report-datasets-ssrs.md)   
- [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Filtern, gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

@@ -13,15 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 088889518d88c5fd45f988fe03185e22f041b627
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109654"
 ---
 # <a name="create-an-embedded-or-shared-data-source-ssrs"></a>Erstellen einer eingebettete oder freigegebenen Datenquelle (SSRS)
-  Eine Berichtsdatenquelle gibt einen Namen und Verbindungsinformationen an. 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] unterstützt zwei Typen von Datenquellen: eingebettet und freigegeben. Eine eingebettete Datenquelle wird in einer Berichtsdefinition definiert und nur von diesem Bericht verwendet. Eine freigegebene Datenquelle wird als separates Element definiert und kann von mehreren Berichten verwendet werden. Weitere Informationen finden Sie unter [eingebettete und freigegebene Datenverbindungen oder Datenquellen &#40;Berichts-Generator und SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md).  
+  Eine Berichtsdatenquelle gibt einen Namen und Verbindungsinformationen an. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] unterstützt zwei Typen von Datenquellen: eingebettet und freigegeben. Eine eingebettete Datenquelle wird in einer Berichtsdefinition definiert und nur von diesem Bericht verwendet. Eine freigegebene Datenquelle wird als separates Element definiert und kann von mehreren Berichten verwendet werden. Weitere Informationen finden Sie unter [eingebettete und freigegebene Datenverbindungen oder Datenquellen &#40;Berichts-Generator und SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md).  
   
  Wechseln Sie in Berichts-Generator zum Berichtsserver oder zu einer SharePoint-Website, und wählen Sie Datenquellen aus, oder erstellen Sie eingebettete Datenquellen. Freigegebene Datenquellen können in Berichts-Generator nicht erstellt werden.  
   
@@ -91,6 +90,6 @@ ms.locfileid: "66109654"
  [Konvertieren einer Datenquelle aus Embedded in freigegebene &#40;Berichts-Generator und SSRS&#41;](report-data/convert-data-sources-report-builder-and-ssrs.md)   
  [Binden eines Berichts oder Modells an eine freigegebene Datenquelle &#40;SSRS&#41;](report-data/bind-a-report-or-model-to-a-shared-data-source-ssrs.md)   
  [Konfigurieren von Datenquellen Eigenschaften für einen Bericht &#40;Berichts-Manager&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)   
- [Datenquellen, die von Reporting Services &#40;SSRS unterstützt werden&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
   
   

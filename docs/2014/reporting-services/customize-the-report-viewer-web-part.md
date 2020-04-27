@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 73fd65c8770d6e0c25232d727d56529910edc6cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109541"
 ---
 # <a name="customize-the-report-viewer-web-part"></a>Anpassen des Berichts-Viewer-Webparts
@@ -58,7 +58,7 @@ ms.locfileid: "66109541"
   
  Die benutzerdefinierten Eigenschaften des Berichts-Viewer-Webparts werden nachfolgend aufgelistet.  
   
-|Eigenschaft|BESCHREIBUNG|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |Bericht|Ein vollqualifizierter Pfad für einen Bericht, der sich auf der aktuellen SharePoint-Website oder auf einer Website innerhalb der gleichen Webanwendung oder Farm befindet. Optimale Ergebnisse beim Festlegen zusätzlicher Eigenschaften erzielen Sie, indem Sie nach dem Angeben der Berichts-URLs auf Anwenden klicken.|  
 |Linkziel|Standard-HTML, die den Zielrahmen für die Anzeige von verknüpftem Inhalt im aktuellen Dokument angibt. Für Berichte, die Links zu externen Websites enthalten, können Sie angeben, ob ein Zieldokument den vorhandenen Bericht im aktuellen Fenster ersetzt oder in einem neuen Browserfenster geöffnet wird. Gültige Werte sind unter anderem `_Top`, `_Blank` und `_Self`. Mit `_Top` wird das aktuelle Fenster verwendet, mit `_Blank` wird das Dokument in einem neuen Browserfenster geladen, und mit `_Self` wird das Dokument im aktuellen Frame geöffnet. Obwohl `_Parent` ein gültiger Wert für das Target-Attribut in HTML ist, sollten Sie ihn nicht für ein in eine Seite eingebettetes Berichts-Viewer-Webpart verwenden.|  
@@ -84,7 +84,7 @@ ms.locfileid: "66109541"
 ## <a name="customizing-the-toolbar"></a>Anpassen der Symbolleiste  
  Die Symbolleiste wird unterhalb des Titels angezeigt und erstreckt sich über den oberen Rand des Berichts. Die Symbolleiste stellt ein Menü **Aktionen** , eine Seitennavigation für paginierte Berichte, eine Aktualisierung und einen Zoom bereit. Sie enthält ein Dokumentstruktur-Steuerelement für Berichte, die über eine Dokumentstruktur verfügen. Das Menü **Aktionen** enthält Befehle zum Exportieren des Berichts, zum Suchen nach Text oder Zahlen in einem Bericht, zum Drucken des Berichts und zum Öffnen des Berichts im Berichts-Generator.  
   
- Sie können dem Menü  **Aktionen** keine neuen Befehle hinzufügen, aber Sie können es anpassen, indem Sie die Optionen ändern, die Benutzern sichtbar sind. Um die Sichtbarkeit von Symbolleisten Schaltflächen und Steuerelementen zu ändern, ändern Sie die Optionen im Abschnitt **Sichtbarkeit der Symbolleisten Elemente** des Webparts. Sie können auch den Befehl **Drucken** oder bestimmte Exportformate entfernen, indem Sie die Verfügbarkeit dieser Funktionen auf dem Berichtsserver aufheben. Für Berichte mit Seitenumbrüchen sind Steuerelemente für die Seitennavigation verfügbar. Andernfalls besteht der Bericht aus einer einzelnen Seite unterschiedlicher Länge. Bei der **Aktualisierung** wird der Bericht erneut verarbeitet, wobei die für den Bericht aktuellen Parameter verwendet werden. Wenn Sie alle Steuerelemente auf einer Zeile anzeigen möchten, legen Sie die Gesamtbreite des Webparts auf mindestens 400 Pixel fest.  
+ Sie können dem Menü  **Aktionen** keine neuen Befehle hinzufügen, aber Sie können es anpassen, indem Sie die Optionen ändern, die Benutzern sichtbar sind. Um die Sichtbarkeit von Symbolleisten Schaltflächen und Steuerelementen zu ändern, ändern Sie die Optionen im Abschnitt **Sichtbarkeit der Symbolleisten Elemente** des Webparts. Sie können auch den Befehl **Drucken** oder bestimmte Exportformate entfernen, indem Sie die Verfügbarkeit dieser Funktionen auf dem Berichtsserver aufheben. Für Berichte mit Seitenumbrüchen sind Steuerelemente für die Seitennavigation verfügbar. Andernfalls besteht der Bericht aus einer einzelnen Seite unterschiedlicher Länge. Mit**Aktualisieren** wird der Bericht erneut verarbeitet, wobei die für den Bericht aktuellen Parameter verwendet werden. Wenn Sie alle Steuerelemente auf einer Zeile anzeigen möchten, legen Sie die Gesamtbreite des Webparts auf mindestens 400 Pixel fest.  
   
 ## <a name="customizing-the-viewing-area"></a>Anpassen des Ansichtsbereichs  
  Der Ansichtsbereich wird für das Anzeigen von Berichten verwendet. Der Berichtsansichtsbereich wird ggf. mit den Bereichen Parameter und Anmeldeinformationen gemeinsam verwendet. Wenn Anmeldeinformationen erforderlich sind, wird der Bereich Anmeldeinformationen neben einem leeren Berichtsansichtsbereich angezeigt. Der Bereich Anmeldeinformationen wird geschlossen, nachdem der Benutzer Anmeldeinformationen eingegeben und den Bericht ausgeführt hat. Wenn Sie den Text anpassen möchten, mit dem Benutzer zum Festlegen von Anmeldeinformationen aufgefordert werden, ändern Sie die Datenquellen-Verbindungseigenschaften. Weitere Informationen finden Sie unter [Erstellen und Verwalten von freigegebenen Datenquellen (Reporting Services im integrierten SharePoint-Modus)](../../2014/reporting-services/create-manage-shared-data-sources-reporting-services-sharepoint-integrated-mode.md).  

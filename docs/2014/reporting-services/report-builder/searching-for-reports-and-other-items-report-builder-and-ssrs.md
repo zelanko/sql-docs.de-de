@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 76746ade9222257bcea6962c180ea12a01ff8afa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107652"
 ---
 # <a name="searching-for-reports-and-other-items-report-builder--and-ssrs"></a>Suchen nach Berichten und anderen Elementen (Berichts-Generator und SSRS)
@@ -35,7 +35,7 @@ ms.locfileid: "66107652"
 ## <a name="see-also"></a>Weitere Informationen  
  [Suchen und Anzeigen von Berichten in Berichts-Manager &#40;Berichts-Generator und SSRS&#41;](finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs.md)   
  [Verwenden von Meine Berichte &#40;Berichts-Generator und SSRS&#41;](using-my-reports-report-builder-and-ssrs.md)   
- [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
- [Öffnen und schließen Sie einen Bericht &#40;Berichts-Manager&#41;](../reports/open-and-close-a-report-report-manager.md)  
+ [Suchen, anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Öffnen und Schließen eines Berichts (Berichts-Manager)](../reports/open-and-close-a-report-report-manager.md)  
   
   

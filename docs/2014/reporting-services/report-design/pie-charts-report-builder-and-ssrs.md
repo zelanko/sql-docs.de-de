@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ad12b85455d65197de81eca820814cb016f28043
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105486"
 ---
 # <a name="pie-charts-report-builder-and-ssrs"></a>Kreisdiagramme (Berichts-Generator und SSRS)
@@ -22,22 +22,22 @@ ms.locfileid: "66105486"
   
  Die folgende Abbildung zeigt ein 3D-Kreisdiagramm mit als Prozentsätze formatierten Datenbezeichnungen an.  Die Legende wird in der Mitte rechts positioniert.  
   
- ![Kreis Diagramm](../media/piechart.gif "Kreisdiagramm")  
+ ![Kreisdiagramm](../media/piechart.gif "Kreisdiagramm")  
   
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
 ## <a name="variations"></a>Abweichungen  
   
--   **Explodierter**Kreis. Ein Kreisdiagramm, in dem die Segmente vom Kreismittelpunkt ausgerückt werden. Neben dem explodierten Kreisdiagramm, in dem alle Segmente getrennt sind, können Sie ein explodiertes Segmentdiagramm erstellen, in dem nur ein Segment ausgerückt ist.  
+-   **Explodierter Kreis**. Ein Kreisdiagramm, in dem die Segmente vom Kreismittelpunkt ausgerückt werden. Neben dem explodierten Kreisdiagramm, in dem alle Segmente getrennt sind, können Sie ein explodiertes Segmentdiagramm erstellen, in dem nur ein Segment ausgerückt ist.  
   
--   **** Ring. Ein Kreisdiagramm mit einer offenen Fläche in der Mitte.  
+-   **Ring**. Ein Kreisdiagramm mit einer offenen Fläche in der Mitte.  
   
--   **Explodierter**Ring. Ein Ringdiagramm, in dem die Segmente vom Ringmittelpunkt ausgerückt werden.  
+-   **Explodierter Ring**. Ein Ringdiagramm, in dem die Segmente vom Ringmittelpunkt ausgerückt werden.  
   
--   **3D-** Kreis. Ein Kreisdiagramm im 3D-Format.  
+-   **3D-Kreis**. Ein Kreisdiagramm im 3D-Format.  
   
--   **Explodierter 3D-** Kreis. Ein explodiertes Kreisdiagramm im 3D-Format.  
+-   **Explodierter 3D-Kreis**. Ein explodiertes Kreisdiagramm im 3D-Format.  
   
 ## <a name="data-considerations-for-display-on-a-pie-chart"></a>Überlegungen zu Daten für die Anzeige in einem Kreisdiagramm  
   
@@ -58,14 +58,14 @@ ms.locfileid: "66105486"
 ## <a name="applying-drawing-styles-to-a-pie-chart"></a>Übernehmen von Zeichnungsarten für ein Kreisdiagramm  
  Sie können dem Kreisdiagramm besondere Zeichnungsarten hinzufügen, um die visuelle Wirkung zu erhöhen. Zeichnungsarten schließen Abschrägung und konkave Effekte ein. Diese Effekte sind nur in einem 2D-Kreisdiagramm verfügbar. Die folgende Abbildung zeigt ein Beispiel für die Abschrägung und die konkaven Zeichnungsarten in einem Kreisdiagramm.  
   
- ![Zeichnungsart – Kreis](../media/rs-piedrawingeffects-concave2.gif "Zeichnungsart – Kreis")  
+ ![Zeichnungsart: Kreis](../media/rs-piedrawingeffects-concave2.gif "Zeichnungsart: Kreis")  
   
  Weitere Informationen finden Sie unter [Hinzufügen einer Abschrägung, Prägung und Struktur zu einem Diagramm &#40;Berichts-Generator und SSRS&#41;](chart-effects-add-bevel-emboss-or-texture-report-builder.md).  
   
 ## <a name="displaying-percentage-values-on-a-pie-chart"></a>Anzeigen von Prozentwerten in einem Kreisdiagramm  
  Wie andere Formdiagramme stellen Kreisdiagramme Anteile des Ganzen dar. Daher werden Kreisdiagrammbezeichnungen üblicherweise als Prozentsätze formatiert. Zur Wahrung der Konsistenz mit anderen Diagrammtypen zeigt das Diagramm Prozentbezeichnungen nicht standardmäßig an. Weitere Informationen zum Anzeigen von Werten als Prozentsätze im Diagramm finden Sie unter [Anzeigen von Prozentwerten in einem Kreisdiagramm &#40;Berichts-Generator und SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md). Weitere Informationen zum Formatieren von Zahlen als Prozentsätze im Bericht finden Sie unter [Formatieren von Zahlen und Datumsangaben &#40;Berichts-Generator und SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md).  
   
- ![Kreisdiagramm mit als Prozentsätzen formatierten Datenpunktbezeichnungen](../media/rs-piechartpercentages.gif "Kreisdiagramm mit als Prozentsätzen formatierten Datenpunktbezeichnungen")  
+ ![Kreisdiagramm mit als Prozentsätze formatierten Datenpunktbezeichnungen](../media/rs-piechartpercentages.gif "Kreisdiagramm mit als Prozentsätze formatierten Datenpunktbezeichnungen")  
   
 ## <a name="preventing-overlapped-labels-on-a-pie-chart"></a>Verhindern von überlappenden Bezeichnungen in einem Kreisdiagramm  
  Wenn viele Datenpunkte in einem Kreisdiagramm vorhanden sind, überschneiden sich die Datenbezeichnungen. Es gibt mehrere Möglichkeiten, das Überlappen der Bezeichnungen zu verhindern:  
@@ -86,9 +86,9 @@ ms.locfileid: "66105486"
 -   Zusammenfassen kleinerer Slices in einem ergänzenden Kreisdiagramm. Das zweite Kreisdiagramm wird nicht im Designer angezeigt. Stattdessen wird bei der Berichtsverarbeitung anhand der Werte der Datenelemente für das Diagramm ermittelt, ob ein zweites Kreisdiagramm angezeigt werden muss. In diesem Fall werden die Werte einem weiteren Kreisdiagramm hinzugefügt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Anzeigen von Datenpunkt Bezeichnungen außerhalb eines Kreis Diagramms &#40;Berichts-Generator und SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
+ [Anzeigen von Datenpunktbezeichnungen außerhalb eines Kreisdiagramms &#40;Berichts-Generator und SSRS&#41;](display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   
  [Zusammenfassen von kleinen Slices in einem Kreisdiagramm (Berichts-Generator und SSRS)](collect-small-slices-on-a-pie-chart-report-builder-and-ssrs.md)   
- [Anzeigen von Prozentwerten in einem Kreis Diagramm &#40;Berichts-Generator und SSRS&#41;](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
+ [Anzeigen von Prozentwerten in einem Kreisdiagramm (Berichts-Generator und SSRS)](display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md)   
  [Tutorial: Hinzufügen eines Kreisdiagramms zu einem Bericht (Berichts-Generator)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)   
  [Formatieren der Legende in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [Leere und NULL-Datenpunkte in Diagrammen (Berichts-Generator und SSRS)](empty-and-null-data-points-in-charts-report-builder-and-ssrs.md)   

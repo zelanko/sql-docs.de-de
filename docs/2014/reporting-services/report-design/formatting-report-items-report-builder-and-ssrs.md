@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e1f2aeda7b835c72d06372193c37baa858c603d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105790"
 ---
 # <a name="formatting-report-items-report-builder-and-ssrs"></a>Formatieren von Berichtselementen (Berichts-Generator und SSRS)
@@ -47,10 +47,10 @@ ms.locfileid: "66105790"
  [Formatieren von Zahlen und Datumsangaben &#40;Berichts-Generator und SSRS&#41;](formatting-numbers-and-dates-report-builder-and-ssrs.md)  
  Beschreibt die Verwendung der standardmäßigen und benutzerdefinierten Formatierungszeichenfolgen, die von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]unterstützt werden.  
   
- [Formatieren von Linien, Farben und Bildern (Berichts-Generator und SSRS)](images-report-builder-and-ssrs.md)  
+ [Formatieren von Linien, Farben und Bildern &#40;Berichts-Generator und SSRS&#41;](images-report-builder-and-ssrs.md)  
  Beschreibt, wie Sie innerhalb von Berichtselementen und Datenbereichen Zeilen, Gitternetzlinien, Farben und Bilder formatieren.  
   
- [Festlegen des Gebiets Schemas für einen Bericht oder ein Textfeld &#40;Reporting Services&#41;](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
+ [Festlegen des Gebietsschemas für einen Bericht oder ein Textfeld &#40;Reporting Services&#41;](set-the-locale-for-a-report-or-text-box-reporting-services.md)  
  Beschreibt, wie die Einstellung für Datenanzeigeformate geändert wird, die sich durch Sprache und Bereich unterscheiden, z. B. Datum, Währungs- und Zahlenwerte.  
   
 ## <a name="see-also"></a>Weitere Informationen  
