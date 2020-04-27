@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7d68f329aecdd1284bac311db4139470bba55e41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162381"
 ---
 # <a name="enable-indexes-and-constraints"></a>Aktivieren von Indizes und Einschränkungen
@@ -41,9 +41,9 @@ ms.locfileid: "63162381"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Nachdem der Index neu erstellt wurde, müssen alle Einschränkungen, die aufgrund der Deaktivierung des Indexes deaktiviert wurden, manuell aktiviert werden. PRIMARY KEY- und UNIQUE-Einschränkungen werden durch Neuerstellen des zugehörigen Indexes aktiviert. Dieser Index muss neu erstellt (aktiviert) werden, bevor Sie FOREIGN KEY-Einschränkungen aktivieren können, die auf die PRIMARY KEY- oder UNIQUE-Einschränkung verweisen. FOREIGN KEY-Einschränkungen werden mithilfe der ALTER TABLE CHECK CONSTRAINT-Anweisung aktiviert.  
   
@@ -68,12 +68,12 @@ ms.locfileid: "63162381"
     |DROP INDEX.|Die Aktion ist erfolgreich.|Die Aktion ist erfolgreich.|  
     |CREATE INDEX WITH DROP_EXISTING.|Die Aktion erzeugt einen Fehler.|Die Aktion ist erfolgreich.|  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Bei der Verwendung von DBCC DBREINDEX muss der Benutzer die Tabelle besitzen oder Mitglied der festen Serverrolle **sysadmin** oder der festen Datenbankrollen **db_ddladmin** und **db_owner** sein.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-enable-a-disabled-index"></a>So aktivieren Sie einen deaktivierten Index  
   
@@ -103,7 +103,7 @@ ms.locfileid: "63162381"
   
  Die folgenden Informationen sind im Dialogfeld **Indizes neu erstellen** verfügbar:  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-enable-a-disabled-index-using-alter-index"></a>So aktivieren Sie einen deaktivierten Index mit ALTER INDEX  
   

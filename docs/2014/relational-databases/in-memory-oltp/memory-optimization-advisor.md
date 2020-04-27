@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d2fe137a21f2bd48113e65524b4315494f40a49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63158001"
 ---
 # <a name="memory-optimization-advisor"></a>Ratgeber für die Speicheroptimierung
@@ -25,7 +25,7 @@ ms.locfileid: "63158001"
   
  Stellen Sie zunächst eine Verbindung mit der Instanz her, die die datenträgerbasierte Datenbanktabelle enthält. Die Verbindung kann mit einer Instanz von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] oder [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hergestellt werden. Wenn Sie jedoch einen Migrationsvorgang mit dem Ratgeber ausführen möchten, müssen Sie eine Verbindung mit einer [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] -Instanz herstellen, für die In-Memory OLTP aktiviert ist. Weitere Informationen zu den Anforderungen für In-Memory OLTP finden Sie unter [Requirements for Using Memory-Optimized Tables](memory-optimized-tables.md).  
   
- Weitere Informationen zu Migrationsmethoden finden Sie unter [In-Memory OLTP - Common Workload Patterns and Migration Considerations (In-Memory-OLTP: Allgemeine Workloadmuster und Überlegungen zur Migration)](https://msdn.microsoft.com/library/dn673538.aspx).  
+ Informationen zu Migrationsmethoden finden Sie unter [in-Memory OLTP-allgemeine Arbeits Auslastungs Muster und Überlegungen zur Migration](https://msdn.microsoft.com/library/dn673538.aspx).  
   
 ## <a name="walkthrough-using-the-memory-optimization-advisor"></a>Exemplarische Vorgehensweise: Ratgeber für die Speicheroptimierung  
  Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf die Tabelle, die Sie konvertieren möchten, und wählen Sie **Ratgeber für die Speicheroptimierung**aus. Daraufhin wird die Willkommensseite für **Ratgeber für die Speicheroptimierung von Tabellen**angezeigt.  
@@ -46,7 +46,7 @@ ms.locfileid: "63158001"
   
  Warnungen, die eine Aktion erfordern, sind in der linken Spalte mit einem gelben Dreieck gekennzeichnet. Wenn solche Warnungen vorliegen, sollten Sie die Migration beenden, die Ursache der Warnungen beseitigen und den Vorgang neu starten. Wenn die Warnungen nicht aufgelöst werden, kann die migrierte Tabelle einen Fehler verursachen.  
   
- Klicken Sie auf **Bericht generieren** , um einen HTML-Bericht dieser Warnungen zu generieren. Klicken Sie zum Fortfahren auf **Weiter** .  
+ Klicken Sie auf **Bericht generieren** , um einen HTML-Bericht dieser Warnungen zu generieren. Klicken Sie zum Fortfahren auf **Weiter**.  
   
 ### <a name="review-optimization-options"></a>Optimierungsoptionen überprüfen  
  Auf dem folgenden Bildschirm können Sie Optionen für die Migration zu In-Memory OLTP ändern:  
@@ -84,7 +84,7 @@ ms.locfileid: "63158001"
 > [!WARNING]  
 >  Wählen Sie diese Option nur aus, wenn Sie das mit nicht dauerhaften Tabellen verbundene Datenverlustrisiko in Kauf nehmen.  
   
- Klicken Sie auf zum Fortfahren auf **Weiter**.  
+ Klicken Sie auf **Weiter**, um fortzufahren.  
   
 ### <a name="review-primary-key-conversion"></a>Konvertierung des primären Schlüssels überprüfen  
  Der nächste Bildschirm lautet **Konvertierung des primären Schlüssels überprüfen**. Der Ratgeber für die Speicheroptimierung stellt fest, ob die Tabelle einen oder mehrere primäre Schlüssel enthält und füllt die Spaltenliste anhand von Primärschlüssel-Metadaten auf. Wenn Sie eine Migration zu einer dauerhaften speicheroptimierten Tabelle ausführen möchten, müssen Sie einen Primärschlüssel erstellen.  

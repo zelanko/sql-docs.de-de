@@ -13,19 +13,19 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d7c61a21f149a50c4893c9c82d3624e0905a481b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022426"
 ---
 # <a name="script-to-grant-oracle-permissions"></a>Skript zum Erteilen von Oracle-Berechtigungen
-  Das in diesem Thema bereitgestellte Skript wird während der Konfiguration einer Oracle-Datenbank verwendet, die Daten mithilfe [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] der Replikation veröffentlicht. Dieses Skript ist auch nach der Installation im folgenden Verzeichnis verfügbar: * \<Laufwerk>*:\\\Programme\Microsoft SQL Server\\*\<instanceName>* \MSSQL\Install\oracleadmin.SQL. Weitere Informationen zum Konfigurieren der Oracle-Datenbank finden Sie unter [Konfigurieren eines Oracle-Verlegers](configure-an-oracle-publisher.md).  
+  Das in diesem Thema bereitgestellte Skript wird während der Konfiguration von Oracle-Datenbanken verwendet, die Daten mithilfe der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Replikation veröffentlichen. Nach der Installation ist das Skript auch in folgendem Verzeichnis verfügbar: *\<Laufwerk>* :\\\Programme\Microsoft SQL Server\\ *\<Instanzname>* \MSSQL\Install\oracleadmin.sql. Weitere Informationen zum Konfigurieren der Oracle-Datenbank finden Sie unter [Konfigurieren eines Oracle-Verlegers](configure-an-oracle-publisher.md).  
   
 > [!NOTE]  
 >  Dieses Skript enthält die `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`-Anweisung. Diese Anweisung ist für die von der Transaktionsreplikation verwendeten Trigger erforderlich. Wenn Sie ausschließlich mit Momentaufnahmereplikation arbeiten, können Sie diese Zeile aus dem Skript entfernen.  
   
- **So führen Sie das Skript aus dem Oracle\*SQL Plus-Hilfsprogramm aus**  
+ **Ausführen des Skripts vom Oracle SQL\*Plus-Hilfsprogramm**  
   
 1.  Öffnen Sie auf dem SQL Server-Verteiler das Fenster Eingabeaufforderung.  
   

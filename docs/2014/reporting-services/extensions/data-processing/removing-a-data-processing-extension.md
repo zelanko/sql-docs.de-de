@@ -15,18 +15,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9f5dfd3a6a7615fa3fd91c917bba6dbf0808f0f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63163973"
 ---
 # <a name="removing-a-data-processing-extension"></a>Entfernen einer Datenverarbeitungserweiterung
   Sie entfernen eine Datenverarbeitungserweiterung, indem Sie das **Erweiterungselement** für die Datenverarbeitungserweiterung aus der Konfigurationsdatei entfernen. Wenn Sie Einträge für einen Berichtsserver und den Berichts-Designer vorgenommen haben, entfernen Sie das **Erweiterungselement** aus den beiden Dateien „RSReportServer.config“ und „RSReportDesigner.config“. Nachdem Sie die Konfigurationsdaten entfernt haben, steht Ihre Datenverarbeitungserweiterung nicht mehr für die Komponente zur Verfügung.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erweiterungen für Reporting Services](../reporting-services-extensions.md)   
- [Implementieren von Datenverarbeitungserweiterungen](implementing-a-data-processing-extension.md)   
- [Reporting Services Extension Library (Reporting Services-Erweiterungsbibliothek)](../reporting-services-extension-library.md)  
+ [Reporting Services Erweiterungen](../reporting-services-extensions.md)   
+ [Implementieren einer Datenverarbeitungs Erweiterung](implementing-a-data-processing-extension.md)   
+ [Reporting Services-Erweiterungsbibliothek](../reporting-services-extension-library.md)  
   
   

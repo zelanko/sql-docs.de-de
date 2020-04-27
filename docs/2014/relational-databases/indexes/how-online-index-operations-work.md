@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 102c3d72d811627074da570ee74902e51a4b86dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162162"
 ---
 # <a name="how-online-index-operations-work"></a>Funktionsweise von Onlineindexvorgängen
@@ -36,13 +36,13 @@ ms.locfileid: "63162162"
   
      Die bereits vorhandenen Indizes stehen den gleichzeitigen Benutzern für Auswahl-, Einfüge-, Update- und Löschvorgänge zur Verfügung. Hierzu zählen auch Masseneinfügungen (wir unterstützt aber nicht empfohlen) und implizite Updates durch Trigger und Einschränkungen der referenziellen Integrität. Alle bereits vorhandenen Indizes sind für Abfragen und Suchvorgänge verfügbar. Dies bedeutet, dass sie vom Abfrageoptimierer ausgewählt und gegebenenfalls in Indexhinweisen angegeben werden können.  
   
--   **Spar**  
+-   **Ziel**  
   
      Das Ziel bzw. die Ziele stellen den neuen Index (Heap) oder eine Gruppe neuer Indizes dar, die erstellt oder neu erstellt wird. Einfüge-, Update- und Löschvorgänge durch den Benutzer an der Quelle werden von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] während des Indexvorgangs auf das Ziel angewendet. Wenn der Onlineindexvorgang beispielsweise einen gruppierten Index neu erstellt, ist der neu erstellte gruppierte Index das Ziel, [!INCLUDE[ssDE](../../includes/ssde-md.md)] erstellt nicht gruppierte Indizes nicht neu, wenn ein gruppierter Index neu erstellt wird.  
   
      Der Zielindex wird während der Verarbeitung von SELECT-Anweisungen erst durchsucht, nachdem ein Commit für den Vorgang ausgeführt wurde. Intern wird der Index als schreibgeschützt markiert.  
   
--   **Temporärer Mapping-Index**  
+-   **Temporärer Zuordnungsindex**  
   
      Onlineindexvorgänge, die einen gruppierten Index erstellen, löschen oder neu erstellen, benötigen auch einen temporären Zuordnungsindex. Dieser temporäre Index wird von gleichzeitigen Transaktionen verwendet, um zu bestimmen, welche Datensätze in den neuen Indizes gelöscht werden sollen, die erstellt werden, wenn Zeilen in der zugrunde liegenden Tabelle aktualisiert oder gelöscht werden. Dieser nicht gruppierte Index wird im gleichen Schritt erstellt wie der neue gruppierte Index (oder Heap) und erfordert keinen separaten Sortiervorgang. Gleichzeitige Transaktionen behalten zudem den temporären Zuordnungsindex in all ihren Einfüge-, Update- und Löschvorgängen bei.  
   
@@ -62,8 +62,7 @@ ms.locfileid: "63162162"
 |Entwickeln<br /><br /> Hauptphase|Die Daten werden gescannt, sortiert, zusammengeführt und in Massenladevorgängen in das Ziel eingefügt.<br /><br /> Auswahl-, Einfüge-, Update- und Löschvorgänge durch gleichzeitige Benutzer werden sowohl auf die bereits vorhandenen Indizes als auch auf sämtliche neu erstellten Indizes angewendet.|IS<br /><br /> INDEX_BUILD_INTERNAL_RESOURCE**|  
 |Endphase<br /><br /> Sehr kurze Phase|Alle Transaktionen ohne Commit müssen abgeschlossen werden, bevor diese Phase gestartet wird. Je nach der eingerichteten Sperre werden alle Lese- und Schreibtransaktionen für einen sehr kurzen Zeitraum gesperrt, bis diese Phase abgeschlossen ist.<br /><br /> Sie Systemmetadaten werden aktualisiert; d. h., die Quelle wurde durch das Ziel ersetzt.<br /><br /> Die Quelle wird gelöscht, falls dies erforderlich ist. Beispielsweise nach dem erneuten Erstellen oder dem Löschen eines gruppierten Indexes.|INDEX_BUILD_INTERNAL_RESOURCE**<br /><br /> S für die Tabelle, sofern ein nicht gruppierter Index erstellt wird.\*<br /><br /> Schemaänderungssperre (SCH-M, Schema Modification), sofern eine Quellstruktur (Index oder Tabelle) gelöscht wird.\*|  
   
- 
-  \* Der Indexvorgang wartet, bis Updatetransaktionen ohne Commit abgeschlossen sind, bevor er die S- oder SCH-M-Sperre für die Tabelle einrichtet.  
+ \* Der Indexvorgang wartet, bis Updatetransaktionen ohne Commit abgeschlossen sind, bevor er die S- oder SCH-M-Sperre für die Tabelle einrichtet.  
   
  ** Die Ressourcensperre INDEX_BUILD_INTERNAL_RESOURCE verhindert die Ausführung gleichzeitiger DDL-Vorgänge (Datendefinitionssprache) für die Quelle und bereits vorhandene Strukturen, während der Indexvorgang ausgeführt wird. Diese Sperre verhindert beispielsweise die gleichzeitige Neuerstellung zweier Indizes für dieselbe Tabelle. Obwohl diese Ressourcensperre der Sch-M-Sperre zugeordnet ist, verhindert sie keine Datenbearbeitungsanweisungen.  
   
@@ -87,6 +86,6 @@ ms.locfileid: "63162162"
 ## <a name="related-content"></a>Verwandte Inhalte  
  [Ausführen von Onlineindexvorgängen](perform-index-operations-online.md)  
   
- [Richtlinien für Online Index Vorgänge](guidelines-for-online-index-operations.md)  
+ [Richtlinien für Onlineindexvorgänge](guidelines-for-online-index-operations.md)  
   
   

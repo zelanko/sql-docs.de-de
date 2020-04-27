@@ -15,23 +15,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9a9c5f01bd682e68e44a7a974cbbaeade8008d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62937017"
 ---
-# <a name="job-categories-manage-job-categories"></a>Auftragskategorien: Auftragskategorien verwalten
-  Mithilfe des Dialog Felds **Auftrags Kategorien** können Sie Auftrags Kategorien hinzufügen oder löschen. Integrierte Auftragskategorien können nicht gelöscht werden.  
+# <a name="job-categories-manage-job-categories"></a>Auftragskategorien: Verwalten von Auftragskategorien
+  Mithilfe des Dialogfelds **Auftragskategorien** können Sie Auftragskategorien hinzufügen oder löschen. Integrierte Auftragskategorien können nicht gelöscht werden.  
   
 ## <a name="options"></a>Tastatur  
  **Name**  
  Name der Auftragskategorie.  
   
- **Anzahl der Aufträge in der Kategorie**  
+ **Auftragsanzahl in der Kategorie**  
  Anzahl der für diese Kategorie definierten Aufträge.  
   
- **Anzeigen von Aufträgen**  
+ **Aufträge anzeigen**  
  Öffnet das Dialogfeld **Eigenschaften** für die ausgewählte Kategorie, in dem alle aktuell für diese Kategorie definierten Aufträge aufgeführt sind.  
   
  **Add (Hinzufügen)**  

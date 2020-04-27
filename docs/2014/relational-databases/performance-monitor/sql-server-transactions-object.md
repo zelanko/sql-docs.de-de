@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c7dffaac161a61496c296ec99ec1f9ad2e1951a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63183004"
 ---
 # <a name="sql-server-transactions-object"></a>SQL Server, Transaktionen-Objekt
@@ -40,7 +40,7 @@ ms.locfileid: "63183004"
 |**Update-Momentaufnahmetransaktionen**|Die Anzahl aktuell aktiver Transaktionen, von denen die Momentaufnahmeisolationsstufe verwendet wird und Daten geändert wurden.|  
 |**Versionscleanuprate (KB/s)**|Die Rate (in Kilobytes pro Sekunde), mit der Zeilenversionen aus dem Versionsspeicher für Momentaufnahmeisolationen in **tempdb**entfernt werden.|  
 |**Versionsgenerierungsrate (KB/s)**|Die Rate (in Kilobytes pro Sekunde), mit der neue Zeilenversionen zum Versionsspeicher für Momentaufnahmeisolationen in **tempdb**hinzugefügt werden.|  
-|**Versionsspeichergröße (KB)**|Der Speicherplatz (in Kilobytes) in **tempdb** , der für die Speicherung von Zeilenversionen für Momentaufnahmeisolationsstufen verwendet wird.|  
+|**Versionsspeicher Größe (KB)**|Der Speicherplatz (in Kilobytes) in **tempdb** , der für die Speicherung von Zeilenversionen für Momentaufnahmeisolationsstufen verwendet wird.|  
 |**Anzahl der Versionsspeichereinheiten**|Die Anzahl aktiver Zuordnungseinheiten im Momentaufnahmeisolations-Versionsspeicher in **tempdb**.|  
 |**Erstellung von Versionsspeichereinheiten**|Die Anzahl der Zuordnungseinheiten, die seit dem Start der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] im Momentaufnahmeisolationsspeicher erstellt worden sind.|  
 |**Abschneiden von Versionsspeichereinheiten**|Die Anzahl der Zuordnungseinheiten, die seit dem Start der Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] aus dem Momentaufnahmeisolationsspeicher entfernt worden sind.|  

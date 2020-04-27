@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1da4462f3ba23d263cd30d222f7b9026285b1159
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162376"
 ---
 # <a name="modify-an-index"></a>Ändern eines Indexes
@@ -35,7 +35,7 @@ ms.locfileid: "63162376"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-modify-an-index"></a>So ändern Sie einen Index  
   
@@ -53,7 +53,7 @@ ms.locfileid: "63162376"
   
 1.  Wenn Sie die Position einer Indexspalte hinzufügen, entfernen oder ändern möchten, wählen Sie im Dialogfeld **Indexeigenschaften** die Seite **Allgemein** aus.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-modify-an-index"></a>So ändern Sie einen Index  
   
@@ -75,11 +75,11 @@ ms.locfileid: "63162376"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
- [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
- [INDEXPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/indexproperty-transact-sql)   
- [sys.indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)   
- [sys.index_columns &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql)   
- [Festlegen von Indexoptionen](set-index-options.md)   
+ [Alter Index &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
+ [INDEXPROPERTY &#40;Transact-SQL-&#41;](/sql/t-sql/functions/indexproperty-transact-sql)   
+ [sys. Indexes &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)   
+ [sys. index_columns &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-index-columns-transact-sql)   
+ [Festlegen von Index Optionen](set-index-options.md)   
  [Umbenennen von Indizes](indexes.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e0904239933361b80727700c94b03e379751251f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164053"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Prüfen des Sequenzclustermodells (Data Mining-Lernprogramm)
@@ -32,7 +32,7 @@ ms.locfileid: "63164053"
   
 -   [Generische Inhaltssicht](#bkmk_Generic)  
   
-##  <a name="bkmk_CDiagram"></a>Registerkarte Cluster Diagramm  
+##  <a name="cluster-diagram-tab"></a><a name="bkmk_CDiagram"></a>Registerkarte Cluster Diagramm  
  Die Registerkarte **Cluster Diagramm** zeigt die Cluster, die der Algorithmus in der Datenbank ermittelt hat, grafisch an. Das Layout im Diagramm gibt die Beziehungen der Cluster an, wobei ähnliche Cluster nahe zusammen gruppiert sind. Standardmäßig gibt die Schattierung der einzelnen Knotenfarben die Dichte aller Fälle auf dem Cluster an, d. h., je dunkler die Schattierung des Knotens, desto mehr Fälle enthält er. Sie können die Bedeutung der Knotenschattierung ändern, sodass diese die Unterstützung in den einzelnen Clustern für ein Attribut und einen Status darstellt.  
   
  Sie können die Cluster auch umbenennen, um es einfacher zu machen, Zielcluster zu identifizieren und mit diesen zu arbeiten. Für dieses Lernprogramm benennen Sie den Cluster um, der den höchsten Prozentsatz an Kunden aus der Pazifikregion hat, und der Cluster, sowie den Cluster, der insgesamt die meisten Fälle enthält.  
@@ -72,7 +72,7 @@ ms.locfileid: "63164053"
   
 #### <a name="to-drill-through-to-details-from-the-cluster-diagram"></a>So führen Sie einen Drillthrough zu Details vom Clusterdiagramm aus durch  
   
-1.  Klicken Sie mit `Pacific Cluster`der rechten Maustaste auf Drillthrough, und wählen Sie dann **Modell-und Struktur Spalten**aus. ****  
+1.  Klicken Sie mit `Pacific Cluster`der rechten Maustaste auf Drillthrough, und wählen Sie dann **Modell-und Struktur Spalten**aus. **Drill Through**  
   
      Das Dialogfeld **Drillthrough** wird geöffnet. Spalten, die nicht im Modell verwendet werden, aber für Abfragen verfügbar sind, weisen das Präfix " **Structure**" auf.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "63164053"
   
  [Zurück zum Anfang](#bkmk_CDiagram)  
   
-##  <a name="bkmk_CProfiles"></a>Registerkarte Cluster profile  
+##  <a name="cluster-profiles-tab"></a><a name="bkmk_CProfiles"></a>Registerkarte Cluster profile  
  Die Registerkarte **Cluster profile** zeigt die Sequenzen an, die sich in den einzelnen Clustern befinden. Die Cluster sind in den einzelnen Spalten rechts von der Spalte **Zustände** aufgeführt.  
   
  Im Viewer beschreibt die Zeile **Modell** die Gesamtverteilung der Elemente in einem Cluster, und die Zeile **Model. Samples** enthält Sequenzen der Elemente. Jede Zeile der Farbsequenzen in jeder Zelle der **Model. Samples** -Zeile stellt das Verhalten eines zufällig ausgewählten Benutzers im Cluster dar.  
@@ -132,12 +132,12 @@ ms.locfileid: "63164053"
   
  [Zurück zum Anfang](#bkmk_CDiagram)  
   
-##  <a name="bkmk_CChars"></a>Registerkarte Cluster Merkmale  
+##  <a name="cluster-characteristics-tab"></a><a name="bkmk_CChars"></a>Registerkarte Cluster Merkmale  
  Auf der Registerkarte **Cluster Merkmale** werden die Übergänge zwischen Zuständen in einem Cluster zusammengefasst, indem Balken angezeigt werden, die die Wichtigkeit des Attribut Werts für den ausgewählten Cluster visuell darstellen. Die Spalte **Variablen** gibt Aufschluss darüber, wie das Modell für den ausgewählten Cluster oder die ausgewählte Population wichtig ist: entweder ein bestimmter Wert oder die Beziehung zwischen den Werten, die als *Übergang*bezeichnet werden. Die Spalte **Werte** stellt weitere Details zum Wert oder Übergang bereit, und die **Wahrscheinlichkeits** Spalte stellt die Gewichtung dieses Attributs oder Übergangs visuell dar.  
   
 #### <a name="to-view-the-important-attributes-for-a-cluster"></a>So zeigen Sie die wichtigen Attribute für einen Cluster an  
   
-1.  Wählen Sie **** `Pacific Cluster`in der Dropdown Liste Cluster aus.  
+1.  Wählen Sie **Cluster** `Pacific Cluster`in der Dropdown Liste Cluster aus.  
   
      Die Liste wird aktualisiert, um die Eigenschaften des Clusters anzuzeigen, den `Pacific Cluster`Sie umbenannt haben. In diesem Cluster ist `Region`das wichtigste Merkmal.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "63164053"
   
  [Zurück zum Anfang](#bkmk_CDiagram)  
   
-##  <a name="bkmk_CDiscrim2"></a>Registerkarte Cluster Unterscheidung  
+##  <a name="cluster-discrimination-tab"></a><a name="bkmk_CDiscrim2"></a>Registerkarte Cluster Unterscheidung  
  Mithilfe der Registerkarte **Cluster Unterscheidung** können Sie zwei Cluster vergleichen, um zu bestimmen, welche Attribute einen bestimmten Cluster von einem anderen Cluster unterscheiden. Die Registerkarte enthält vier Spalten: **Variablen**, **Werte**, **Cluster 1**und **Cluster 2**.  Sie können einen beliebigen Cluster auswählen, der als **Cluster 1** und **Cluster 2**verwendet werden soll.  
   
  Die Spalte **Variablen** zeigt den Namen des Attributs an, bei dem es sich entweder um einen Spaltennamen oder eine Kombination aus Spaltenname und Wort **Übergang**handeln kann. Die Spalte **Werte** zeigt den exakten Wert des Attributs oder des Übergangs an. Die schattierten Balken in den Spalten für **Cluster 1** und **Cluster 2** geben die Stärke des Attributs in den Clustern an, die Sie vergleichen. Je länger die Leiste, desto wahrscheinlicher schließt der Cluster Fälle mit diesem Attribut ein.  
@@ -188,7 +188,7 @@ ms.locfileid: "63164053"
   
  [Zurück zum Anfang](#bkmk_CDiagram)  
   
-##  <a name="bkmk_StateTran"></a>Registerkarte Statusübergänge  
+##  <a name="state-transitions-tab"></a><a name="bkmk_StateTran"></a>Registerkarte Statusübergänge  
  Auf der Registerkarte **Zustandsübergänge** können Sie einen Cluster auswählen und seine Zustandsübergänge durchsuchen. Wenn Sie in der Dropdown Liste Cluster die Option **Population (alle)** auswählen, zeigt das Diagramm die Verteilung der Zustände für das gesamte Mining Modell an.  
   
  Jeder Knoten im Diagramm stellt einen Status oder möglichen Wert der Sequenzen dar, die Sie versuchen zu analysieren. Die Hintergrundfarbe der Knoten gibt die Frequenz dieses Status an. Zeilen verbinden einige Status und zeigen einen Übergang zwischen Status an. Sie können den Schieberegler nach oben oder unten verschieben, um den Wahrscheinlichkeitsschwellenwert für die Übergänge zu ändern. Einigen Knoten sind Zahlen zugeordnet, die die Wahrscheinlichkeit dieses Status angeben.  
@@ -227,7 +227,7 @@ ms.locfileid: "63164053"
   
  [Zurück zum Anfang](#bkmk_CDiagram)  
   
-##  <a name="bkmk_Generic"></a>Generischer Inhaltsstruktur-Viewer  
+##  <a name="generic-content-tree-viewer"></a><a name="bkmk_Generic"></a>Generischer Inhaltsstruktur-Viewer  
  Dieser Viewer kann für alle Modelle verwendet werden, unabhängig vom Algorithmus oder Modelltyp. Der **microsoftgeneric Content Tree Viewer** ist in der Dropdown Liste **Viewer** verfügbar.  
   
  Eine Inhaltsstruktur ist die Darstellung eines Miningmodells als eine Reihe von Knoten, in der jeder Knoten das erlangte Wissen über die Trainingsdaten repräsentiert. Der Knoten kann ein Muster, ein Regelsatz, ein Cluster oder die Definition eines Datenbereichs mit gemeinsamen Attributen sein. Der genaue Inhalt des Knotens ist je nach Algorithmus und vorhersagbarem Attribut unterschiedlich, die allgemeine Darstellung des Inhalts ist jedoch gleich.  

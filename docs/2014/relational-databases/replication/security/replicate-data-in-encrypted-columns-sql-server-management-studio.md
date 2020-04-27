@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 97fd1ef113ec76a00394da298f1def188168a37d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62955843"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>Replizieren von Daten in verschlüsselten Spalten (SQL Server Management Studio)
@@ -56,7 +56,7 @@ ms.locfileid: "62955843"
   
 4.  Führen Sie [CLOSE SYMMETRIC KEY](/sql/t-sql/statements/close-symmetric-key-transact-sql) aus, um den Schlüssel zu schließen.  
   
-5.  Veröffentlichen Sie die Tabelle, die die verschlüsselte Spalte enthält. Weitere Informationen finden Sie unter [Create a Publication](../publish/create-a-publication.md).  
+5.  Veröffentlichen Sie die Tabelle, die die verschlüsselte Spalte enthält. Weitere Informationen finden Sie unter [Erstellen einer Veröffentlichung](../publish/create-a-publication.md).  
   
 6.  Abonnieren Sie die Veröffentlichung. Weitere Informationen finden Sie unter [Erstellen eines Pullabonnnements](../create-a-pull-subscription.md) und [Erstellen eines Pushabonnements](../create-a-push-subscription.md).  
   

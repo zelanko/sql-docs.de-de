@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e5b7592ba97f779d3c1aeb83f34317ef7c6833d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022245"
 ---
 # <a name="non-sql-server-subscribers"></a>Nicht-SQL Server-Abonnenten
@@ -87,8 +87,7 @@ ms.locfileid: "63022245"
   
 ### <a name="replication-feature-support"></a>Unterstützte Funktionen der Replikation  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt zwei Arten von Abonnements bereit: Push und Pull. Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten müssen Pushabonnements verwenden, wobei der Verteilungs-Agent auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler ausgeführt wird.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt zwei Arten von Abonnements bereit: Push und Pull. Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten müssen Pushabonnements verwenden, wobei der Verteilungs-Agent auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler ausgeführt wird.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt zwei Momentaufnahmeformate bereit: systemeigener BCP-Modus und Zeichenmodus. Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten erfordern Momentaufnahmen im Zeichenmodus.  
   
@@ -97,7 +96,7 @@ ms.locfileid: "63022245"
 -   Nicht-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Abonnenten können nicht automatisch von einer Sicherung initialisiert werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Heterogene Datenbankreplikation](heterogeneous-database-replication.md)   
+ [Heterogene Replikation](heterogeneous-database-replication.md)   
  [Abonnieren von Veröffentlichungen](../subscribe-to-publications.md)  
   
   

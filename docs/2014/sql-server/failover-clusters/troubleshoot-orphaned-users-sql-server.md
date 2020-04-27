@@ -19,17 +19,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 38a33b34b64cf285e94f66c547b2309b8daf1ae8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63035665"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Problembehandlung bei verwaisten Benutzern (SQL Server)
   Der Prinzipal muss einen gültigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen besitzen, um sich bei einer Instanz von Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] anzumelden. Der Anmeldename wird bei der Authentifizierung benötigt, bei der überprüft wird, ob der Prinzipal eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz herstellen darf. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Anmeldungen auf einer Serverinstanz werden in der **sys. server_principals** -Katalog Sicht und in der **sys. syslogins** -Kompatibilitäts Sicht angezeigt.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen verwenden für den Zugriff auf die einzelnen Datenbanken einen Datenbankbenutzer, der dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen zugeordnet ist. Es gibt jedoch zwei Ausnahmen:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen verwenden für den Zugriff auf die einzelnen Datenbanken einen Datenbankbenutzer, der dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen zugeordnet ist. Es gibt jedoch zwei Ausnahmen:  
   
 -   Das Gastkonto.  
   

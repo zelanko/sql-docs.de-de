@@ -11,18 +11,18 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: ff7af7c8fd578d29254c8c34fe946246fa275120
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157889"
 ---
 # <a name="in-memory-oltp-code-samples"></a>Codebeispiele für In-Memory OLTP
   Dieser Abschnitt enthält Codebeispiele zum Veranschaulichen von In-Memory OLTP:  
   
--   [Demo: Leistungsverbesserungen von In-Memory OLTP](demonstration-performance-improvement-of-in-memory-oltp.md)  
+-   [Demo: Leistungsverbesserungen von in-Memory OLTP](demonstration-performance-improvement-of-in-memory-oltp.md)  
   
--   [Erweiterungen von AdventureWorks zur Veranschaulichung von In-Memory OLTP](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)  
+-   [Erweiterungen von AdventureWorks zur Veranschaulichung von In-Memory-OLTP](../../database-engine/extensions-to-adventureworks-to-demonstrate-in-memory-oltp.md)  
   
 -   [Erstellen einer speicheroptimierten Tabelle und einer systemintern kompilierten gespeicherten Prozedur](creating-a-memory-optimized-table-and-a-natively-compiled-stored-procedure.md)  
   

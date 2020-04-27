@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 840af91236f95d2065a926db93100e0a2bdc312f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62989085"
 ---
 # <a name="filter-published-data"></a>Filtern von veröffentlichten Daten
@@ -61,7 +61,7 @@ ms.locfileid: "62989085"
 ## <a name="static-row-filters"></a>Statische Zeilenfilter  
  Die folgende Abbildung zeigt eine veröffentlichte Tabelle, die so gefiltert wird, dass nur die Zeilen 2, 3 und 6 in die Veröffentlichung aufgenommen werden.  
   
- ![Zeilen Filterung](../media/repl-16.gif "Zeilenfilterung")  
+ ![Zeilenfilterung](../media/repl-16.gif "Zeilenfilterung")  
   
  Bei einem statischen Zeilenfilter werden die zu veröffentlichenden Daten mit einer WHERE-Klausel ausgewählt. Dabei geben Sie den letzten Teil der WHERE-Klausel an. Sehen Sie sich die **Product** -Tabelle in der AdventureWorks-Beispieldatenbank an, in der die **ProductLine**-Spalte enthalten ist. Wenn Sie nur die Zeilen mit den Daten zu Produkten veröffentlichen möchten, die sich auf Mountainbikes beziehen, geben Sie `ProductLine = 'M'`an.  
   
@@ -129,8 +129,7 @@ ms.locfileid: "62989085"
   
 -   Bei der Transaktionsreplikation können Sie eine indizierte Sicht als Sicht oder als Tabelle replizieren. Wenn Sie die Sicht als Tabelle replizieren, können Sie keine Spalten aus der Tabelle filtern.  
   
- Zeilenfilter sind nicht für den datenbankübergreifenden Einsatz konzipiert. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] beschränkt die Ausführung von `sp_replcmds` (für Filter) mit Absicht auf den Datenbankbesitzer (`dbo`). Der`dbo` besitzt keine datenbankübergreifenden Berechtigungen. Aufgrund der CDC (Change Data Capture)-Erweiterung in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] füllt die `sp_replcmds`-Logik die Änderungsnachverfolgungtabellen mit Informationen auf, auf die der Benutzer zu Abfragezwecken zurückgreifen kann. Aus Sicherheitsgründen schränkt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Ausführung dieser Logik ein, sodass ein böswilliger `dbo` dieser Ausführungs Pfad nicht von einem böswilligen nicht missbräuchlich kann. Beispielsweise könnte ein böswilliger `dbo` Trigger für CDC-Tabellen einschleusen, die dann ausgeführt werden, wenn der Benutzer `sp_replcmds` aufruft (in diesem Fall der logreader-Agent).  Wenn das Konto, unter dem der Agent ausgeführt wird, über höhere Berechtigungen verfügt, könnte der böswillige `dbo` seine Berechtigungen ausweiten.  
+ Zeilenfilter sind nicht für den datenbankübergreifenden Einsatz konzipiert. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] beschränkt die Ausführung von `sp_replcmds` (für Filter) mit Absicht auf den Datenbankbesitzer (`dbo`). Der`dbo` besitzt keine datenbankübergreifenden Berechtigungen. Aufgrund der CDC (Change Data Capture)-Erweiterung in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] füllt die `sp_replcmds`-Logik die Änderungsnachverfolgungtabellen mit Informationen auf, auf die der Benutzer zu Abfragezwecken zurückgreifen kann. Aus Sicherheitsgründen schränkt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Ausführung dieser Logik ein, sodass ein böswilliger `dbo` dieser Ausführungs Pfad nicht von einem böswilligen nicht missbräuchlich kann. Beispielsweise könnte ein böswilliger `dbo` Trigger für CDC-Tabellen einschleusen, die dann ausgeführt werden, wenn der Benutzer `sp_replcmds` aufruft (in diesem Fall der logreader-Agent).  Wenn das Konto, unter dem der Agent ausgeführt wird, über höhere Berechtigungen verfügt, könnte der böswillige `dbo` seine Berechtigungen ausweiten.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Veröffentlichen von Daten und Datenbankobjekten](publish-data-and-database-objects.md)  

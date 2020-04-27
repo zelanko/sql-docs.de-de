@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d09464ce4a61903a3e9b74711482d2ce07bd0c4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62985754"
 ---
 # <a name="reporting-services-extension-library"></a>Reporting Services-Erweiterungsbibliothek
-  Die Reporting Services-Erweiterungsbibliothek enthält eine Reihe von Klassen, Schnittstellen und Werttypen, die mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] geliefert werden. Diese Bibliothek bietet Zugriff auf Systemfunktionen und ist als Grundlage dafür konzipiert, welche [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Anwendungen zum Erweitern [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] von Komponenten verwendet werden können.  
+  Die Reporting Services-Erweiterungsbibliothek enthält eine Reihe von Klassen, Schnittstellen und Werttypen, die mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] geliefert werden. Diese Bibliothek bietet Zugriff auf Systemfunktionen und wird von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Anwendungen als Grundlage für die Erweiterung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Komponenten verwendet.  
   
 ## <a name="namespaces"></a>Namespaces  
  Die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Erweiterungsbibliothek stellt die folgenden Namespaces bereit.  

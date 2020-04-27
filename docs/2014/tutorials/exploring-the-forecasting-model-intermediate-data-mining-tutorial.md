@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 607f300fbf2138796bb02c66c62386fcc93e6a45
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62992264"
 ---
 # <a name="exploring-the-forecasting-model-intermediate-data-mining-tutorial"></a>Prüfen des Planungserstellungsmodells (Data Mining-Lernprogramm für Fortgeschrittene)
@@ -28,7 +28,7 @@ ms.locfileid: "62992264"
   
 -   [Microsoft Generic Content Viewer](#bkmk_Content)  
   
-##  <a name="bkmk_Charts"></a>Registerkarte Diagramme  
+##  <a name="charts-tab"></a><a name="bkmk_Charts"></a>Registerkarte Diagramme  
  Die Registerkarte **Diagramme** des [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series-Viewers zeigt Ihnen grafisch alle einzelnen Reihen, einschließlich historischer Daten und Vorhersagen. Jede Zeile im Zeitreihendiagramm stellt eine eindeutige Kombination von Produkt, Bereich und vorhersagbarem Attribut dar.  
   
  In der Legende auf der rechten Seite des Viewers sind die verfügbren Zeitreihen auf Grundlage der Auswahl in der Dropdownliste aufgeführt. Aktivieren und deaktivieren Sie die Kontrollkästchen in der Legende, um zu steuern, welche Zeitreihe im Diagramm angezeigt wird.  
@@ -87,8 +87,8 @@ ms.locfileid: "62992264"
   
  [Zurück zum Anfang](#bkmk_Charts)  
   
-##  <a name="bkmk_Model"></a>Registerkarte Modell  
- Auf **** der Registerkarte Modell [!INCLUDE[msCoName](../includes/msconame-md.md)] des Time Series-Viewers im Data Mining-Designer können Sie das Vorhersagemodell in Form eines Struktur Diagramms anzeigen.  
+##  <a name="model-tab"></a><a name="bkmk_Model"></a>Registerkarte Modell  
+ Auf **Model** der Registerkarte Modell [!INCLUDE[msCoName](../includes/msconame-md.md)] des Time Series-Viewers im Data Mining-Designer können Sie das Vorhersagemodell in Form eines Struktur Diagramms anzeigen.  
   
  Beachten Sie zuerst, dass das von Ihnen erstellte Modell eigentlich 24 verschiedene Strukturen enthält, da Ihre Daten zwei verschiedene Messwerte (Menge und Menge) für die Verkäufe mehrerer Produktlinien (T1000 usw.) in drei verschiedenen Bereichen (Europa, Nordamerika und Pazifik) beschreiben. Dabei stellt jede Struktur ein Modell der Verkaufsmuster für eine andere Kombination von Bereich, Produkt und vorhersagbarem Attribut dar.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "62992264"
   
 -   Wenn ein Strukturdiagramm für eine Zeitreihe mehrere Verzweigungen hat, bedeutet dies, dass die erkannte Zeitreihe zu komplex für eine Darstellung als einzelne Gleichung ist. Stattdessen kann das Strukturdiagramm mehrere Verzweigungen enthalten, wobei jede Verzweigung mit den Bedingungen beschriftet ist, durch die die Struktur *geteilt*wurde. Wenn sich die Struktur teilt, stellt jede Verzweigung ein Zeitsegment dar, innerhalb dessen der Trend als einzelne Gleichung beschrieben werden kann.  
   
-     Wenn Sie sich z. b. das Diagramm Diagramm ansehen und einen plötzlichen Anstieg des Vertriebs Volumens sehen, der in einem Jahr und in einem Jahresende beginnt, können Sie zur **Modell** Ansicht wechseln, um das genaue Datum anzuzeigen, an dem sich der Trend geändert hat. Die Verzweigungen in der Struktur, die "vor September" und "nach September" darstellen, enthalten unterschiedliche Formeln: eine Formel, die die Verkaufstrends nach dem Teilen mathematisch beschreibt, und eine weitere Formel, die die Umsatz Trends für September bis der Jahr-Ende-Feiertag.  
+     Wenn Sie sich z. b. das Diagramm Diagramm ansehen und einen plötzlichen Anstieg des Vertriebs Volumens sehen, der in einem Jahr und in einem Jahresende beginnt, können Sie zur **Modell** Ansicht wechseln, um das genaue Datum anzuzeigen, an dem sich der Trend geändert hat. Die Verzweigungen in der Struktur, die "vor September" und "nach September" darstellen, enthalten unterschiedliche Formeln: eine Formel, in der die Verkaufstrends nach dem Teilen mathematisch beschrieben werden, und eine weitere Formel, die die Umsatz Trends für September bis zum Jahresende beschreibt.  
   
 #### <a name="to-explore-the-decision-tree-for-a-time-series-model"></a>So untersuchen Sie die Entscheidungsstruktur für ein Zeitreihenmodell  
   
@@ -130,7 +130,7 @@ ms.locfileid: "62992264"
   
  [Zurück zum Anfang](#bkmk_Charts)  
   
-##  <a name="bkmk_Content"></a>Optionale Generischer Inhaltsstruktur-Viewer  
+##  <a name="optional-generic-content-tree-viewer"></a><a name="bkmk_Content"></a>Optionale Generischer Inhaltsstruktur-Viewer  
  Zusätzlich zum benutzerdefinierten Viewer für Zeitreihen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stellt den **microsoftgeneric Content Tree Viewer** für die Verwendung mit allen Data Mining Modellen bereit. Dieser Viewer bietet einige Vorteile:  
   
 -   **Microsoft Time Series-Viewer**: in dieser Ansicht werden die Ergebnisse der beiden Algorithmen zusammengeführt. Obwohl Sie jede Reihe getrennt anzeigen können, können Sie nicht bestimmen, wie die Ergebnisse jedes Algorithmus kombiniert wurden. Zudem zeigen die QuickInfos und die Mininglegende in dieser Sicht nur die wichtigsten Statistiken an.  

@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 04231d0020d44107f9c8136aad9f26e8c098df47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63035319"
 ---
 # <a name="about-the-sql-server-license-terms-sscm"></a>Informationen zu den SQL Server-Lizenzbedingungen (SSCM)
@@ -22,15 +22,13 @@ ms.locfileid: "63035319"
   
  Wenn mehrere Instanzen derselben Edition und Sprache von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf demselben Computer installiert sind, gelten die Lizenzbedingungen für alle Instanzen dieser Edition und Sprache.  
   
- Der Name der Datei mit den Lizenzbedingungen gibt die Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und die Sprachversion von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an: Beispiel:  
+ Der Name der Datei mit den Lizenzbedingungen gibt die Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und die Sprachversion von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] an: Zum Beispiel:  
   
 -   License_DEV_ENU.txt für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer in der Sprachversion Englisch.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard in der Sprachversion Italienisch.  
+-   License_STD_ITA.txt für  Standard in der Sprachversion Italienisch.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Upgrade Advisor in der Sprachversion Japanisch.  
+-   License_UA_JPN.txt für  Upgrade Advisor in der Sprachversion Japanisch.  
   
 -   License_SQLNCLI_ENU.txt für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client in der Sprachversion Englisch.  
   

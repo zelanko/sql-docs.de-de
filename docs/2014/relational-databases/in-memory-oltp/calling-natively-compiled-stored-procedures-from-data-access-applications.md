@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 09f68c2a8f316189b1b28e9b252950ce6761d19d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63156833"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>Aufrufen von systemintern kompilierten gespeicherten Prozeduren über Datenzugriffsanwendungen
@@ -48,8 +48,7 @@ ms.locfileid: "63156833"
   
 -   Mehrmaliges Ausführen der gespeicherte Prozedur mit `SQLExecute`  
   
- Das folgende Codefragment veranschaulicht die vorbereitete Ausführung einer gespeicherten Prozedur zum Hinzufügen von Einzelposten zu einer Bestellung. 
-  `SQLPrepare` wird nur einmal und `SQLExecute` mehrmals aufgerufen, einmal pro Prozedurausführung.  
+ Das folgende Codefragment veranschaulicht die vorbereitete Ausführung einer gespeicherten Prozedur zum Hinzufügen von Einzelposten zu einer Bestellung. `SQLPrepare` wird nur einmal und `SQLExecute` mehrmals aufgerufen, einmal pro Prozedurausführung.  
   
 ```  
 // Bind parameters  
@@ -394,6 +393,6 @@ int _tmain() {
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Nativ kompilierte gespeicherte Prozeduren](natively-compiled-stored-procedures.md)  
+ [System intern kompilierte gespeicherte Prozeduren](natively-compiled-stored-procedures.md)  
   
   

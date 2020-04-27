@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d97fecf49f9d74e2a74444c12dfdf598fb1da469
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63161901"
 ---
 # <a name="index-properties-f1-help"></a>Indexeigenschaften (F1-Hilfe)
@@ -34,13 +34,13 @@ ms.locfileid: "63161901"
   
  [(Index-)spalten auswählen (Dialogfeld)](#Columns)  
   
- [Speicherseite für Index Eigenschaften](#Storage)  
+ [Indexeigenschaften auf der Seite "Speicher"](#Storage)  
   
  [Indexeigenschaften auf der Seite "Räumlich"](#Spatial)  
   
  [Indexeigenschaften auf der Seite "Filter"](#Filter)  
   
-##  <a name="General"></a>Index Eigenschaften (Seite Allgemein)  
+##  <a name="index-properties-general-page"></a><a name="General"></a> Indexeigenschaften auf der Seite "Allgemein"  
  Auf der Seite Allgemein können Sie die Indexeigenschaften für die ausgewählte Tabelle oder Sicht anzeigen und ändern. Die Optionen für jede Seite ändern sich möglicherweise abhängig vom ausgewählten Indextyp.  
   
  **Tabellenname**  
@@ -54,9 +54,9 @@ ms.locfileid: "63161901"
  **Indextyp**  
  Gibt den Indextyp an. Gibt bei neuen Indizes den Indextyp an, der beim Öffnen des Dialogfelds ausgewählt ist. Indizes können folgende Typen aufweisen: **Gruppiert**, **Nicht gruppiert**, **Primäre XML**, **Sekundäre XML**, **Räumlich**, **Gruppierter Columnstore**oder **Nicht gruppierter Columnstore**.  
   
- **Hinweis** Für jede Tabelle ist nur ein gruppierter Index zulässig. Pro Tabelle ist nur ein speicheroptimierter xVelocity-columnstore-Index zulässig.  
+ **Hinweis** Es ist nur ein gruppierter Index pro Tabelle zulässig. Pro Tabelle ist nur ein speicheroptimierter xVelocity-columnstore-Index zulässig.  
   
- **Gem**  
+ **Eindeutig**  
  Durch Aktivierung dieses Kontrollkästchens wird der Index zu einem eindeutigen Index gemacht. Zwei Zeilen mit demselben Wert sind dann nicht zulässig. Standardmäßig ist dieses Kontrollkästchen deaktiviert. Wenn beim Ändern eines vorhandenen Indexes zwei Zeilen denselben Wert aufweisen, schlägt die Indexerstellung fehl. In Spalten, in denen NULL-Werte zulässig sind, ist bei einem eindeutigen Index ein NULL-Wert zulässig.  
   
  Wenn Sie im Feld **Indextyp** die Option **Räumlich** auswählen, ist das Kontrollkästchen **Eindeutig** abgeblendet.  
@@ -86,14 +86,14 @@ ms.locfileid: "63161901"
  **Größe**  
  Zeigt die maximale Anzahl von Bytes an, die für das Speichern der Spaltendatentypen benötigt wird. Zeigt eine Null (0) für eine räumliche oder XML-Spalte an.  
   
- **Identity**  
+ **Identität**  
  Zeigt an, ob die am Indexschlüssel beteiligte Spalte eine Identitätsspalte ist.  
   
- **NULL-Werten zulassen**  
+ **NULL-Werte zulassen**  
  Zeigt an, ob in der am Indexschlüssel beteiligten Spalte NULL-Werte in der Tabellen- oder Sichtspalte gespeichert werden dürfen.  
   
  **Add (Hinzufügen)**  
- Fügt dem Indexschlüssel eine Spalte hinzu. Wählen Sie Tabellen Spalten aus dem Dialogfeld **Spalten aus** * \<Tabellenname auswählen>* aus, das angezeigt wird, wenn Sie auf **Hinzufügen**klicken. Wenn Sie eine Spalte ausgewählt haben, ist diese Schaltfläche bei einem räumlichen Index abgeblendet.  
+ Fügt dem Indexschlüssel eine Spalte hinzu. Wählen Sie Tabellenspalten im Dialogfeld **Spalten auswählen aus** *\<Tabellenname>* aus, das angezeigt wird, wenn Sie auf **Hinzufügen** klicken. Wenn Sie eine Spalte ausgewählt haben, ist diese Schaltfläche bei einem räumlichen Index abgeblendet.  
   
  **Remove**  
  Entfernt die ausgewählte Spalte aus der Beteiligung am Indexschlüssel.  
@@ -105,12 +105,12 @@ ms.locfileid: "63161901"
  Verschiebt die ausgewählte Spalte im Indexschlüsselraster nach unten.  
   
  **columnstore-Spalten**  
- Klicken Sie auf **Hinzufügen**, um Spalten für den columnstore-Index auszuwählen. Einschränkungen für einen Columnstore-Index finden Sie unter [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql).  
+ Klicken Sie auf **Hinzufügen** , um Spalten für den columnstore-Index auszuwählen. Einschränkungen für einen Columnstore-Index finden Sie unter [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql).  
   
- **Enthaltene Spalten**  
- Nimmt Nichtschlüsselspalten in den nicht gruppierten Index auf. Mit dieser Option können Sie die aktuellen Indexgrenzwerte hinsichtlich der Gesamtgröße eines Indexschlüssels und der maximalen Anzahl der Spalten in einem Indexschlüssel umgehen, indem Sie Spalten auf Blattebene eines nicht gruppierten Indexes als Nichtschlüsselspalten hinzufügen. Weitere Informationen finden Sie unter [Erstellen von Indizes mit eingebundenen Spalten](create-indexes-with-included-columns.md) .  
+ **Eingeschlossene Spalten**  
+ Nimmt Nichtschlüsselspalten in den nicht gruppierten Index auf. Mit dieser Option können Sie die aktuellen Indexgrenzwerte hinsichtlich der Gesamtgröße eines Indexschlüssels und der maximalen Anzahl der Spalten in einem Indexschlüssel umgehen, indem Sie Spalten auf Blattebene eines nicht gruppierten Indexes als Nichtschlüsselspalten hinzufügen. Weitere Informationen finden Sie unter [Erstellen von Indizes mit eingeschlossenen Spalten](create-indexes-with-included-columns.md).  
   
-##  <a name="Columns"></a>Dialog Feld ' Spalten auswählen (Index) '  
+##  <a name="select-index-columns-dialog-box"></a><a name="Columns"></a> (Index-)spalten auswählen (Dialogfeld)  
  Mithilfe dieser Seite können Sie der Seite **Indexeigenschaften, Allgemein** beim Erstellen oder Ändern eines Indexes Spalten hinzufügen.  
   
  **Kontrollkästchen**  
@@ -122,22 +122,22 @@ ms.locfileid: "63161901"
  **Datentyp**  
  Der Datentyp der Spalte.  
   
- **Satz**  
+ **Byte**  
  Die Größe der Spalte in Bytes.  
   
- **Identity**  
+ **Identität**  
  Zeigt bei Identitätsspalten **Ja** an. Wenn die Spalte keine Identitätsspalte ist, wird **Nein** angezeigt.  
   
  **NULL-Werte zulassen**  
  Zeigt **Ja** an, wenn die Tabellendefinition für die Spalte NULL-Werte zulässt. Zeigt **Nein** an, wenn die Tabellendefinition für die Spalte keine NULL-Werte zulässt.  
   
-##  <a name="Storage"></a>Optionen für die Speicherseite  
+##  <a name="storage-page-options"></a><a name="Storage"></a>Optionen für die Speicherseite  
  Auf dieser Seite können Sie Dateigruppen- bzw. Partitionsschemaeigenschaften für den ausgewählten Index anzeigen und ändern. Zeigt nur Optionen in Zusammenhang mit dem Indextyp an.  
   
  **Datei Gruppe**  
  Speichert den Index in der angegebenen Dateigruppe. Diese Liste enthält nur Standarddateigruppen (ROW). Die Standardauswahl in der Liste ist die PRIMARY-Dateigruppe der Datenbank. Weitere Informationen finden Sie unter [Datenbankdateien und Dateigruppen](../databases/database-files-and-filegroups.md).  
   
- **FILESTREAM-Datei Gruppe**  
+ **FILESTREAM-Dateigruppe**  
  Gibt die Dateigruppe für FILESTREAM-Daten an. Diese Liste zeigt nur FILESTREAM-Dateigruppen an. Die Standardlistenauswahl ist die Dateigruppe PRIMARY FILESTREAM. Weitere Informationen finden Sie unter [FILESTREAM &#40;SQL Server&#41;](../blob/filestream-sql-server.md).  
   
  **Partitionsschema**  
@@ -150,19 +150,19 @@ ms.locfileid: "63161901"
   
  Wenn die Tabelle nicht partitioniert ist, ist das Feld leer.  
   
- **Partitionsschema Parameter**  
+ **Partitionsschemaparameter**  
  Zeigt den Namen der Spalte an, die Teil des Partitionsschemas ist.  
   
  **Tabellenspalte**  
  Wählt die Tabelle oder Sicht aus, die dem Partitionsschema zugeordnet werden soll.  
   
- **Spaltendatentyp**  
+ **Datentyp der Spalte**  
  Zeigt Datentypinformationen zu der Spalte an.  
   
 > [!NOTE]  
->  Wenn die Tabellenspalte eine berechnete Spalte ist, wird unter **Spaltendatentyp** „berechnete Spalte“ angezeigt.  
+>   Wenn die Tabellenspalte eine berechnete Spalte ist, wird unter **Datentyp der Spalte** "berechnete Spalte" angezeigt.  
   
- **Online Verarbeitung von DML-Anweisungen während der Index Verschiebung zulassen**  
+ **Onlineverarbeitung von DML-Anweisungen während der Indexverschiebung zulassen**  
  Ermöglicht Benutzern während des Indexvorgangs den Zugriff auf die zugrunde liegenden Tabellen- bzw. gruppierten Indexdaten und zugehörigen nicht gruppierten Indizes. Weitere Informationen finden Sie unter [Ausführen von Onlineindexvorgängen](perform-index-operations-online.md) .  
   
 > [!NOTE]  
@@ -174,7 +174,7 @@ ms.locfileid: "63161901"
 > [!NOTE]  
 >  Wird ein Wert angegeben, der über der Anzahl der verfügbaren CPUs liegt, wird die tatsächliche Anzahl der CPUs verwendet.  
   
-##  <a name="Spatial"></a>Optionen für räumliche Seiten Indizes  
+##  <a name="spatial-page-index-options"></a><a name="Spatial"></a>Optionen für räumliche Seiten Indizes  
  Auf der Seite **Räumlich** können Sie die Werte der räumlichen Eigenschaften anzeigen oder angeben. Weitere Informationen finden Sie unter [Räumliche Daten &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md).  
   
 ### <a name="bounding-box"></a>Umgebendes Feld  
@@ -195,7 +195,7 @@ ms.locfileid: "63161901"
  Die Y-Koordinate der oberen rechten Ecke des umgebenden Felds.  
   
 ### <a name="general"></a>Allgemein  
- **Mosaik Schema**  
+ **Mosaikschema**  
  Gibt das Mosaikschema für den Index an. Folgende Mosaikschemas werden unterstützt.  
   
  **Geometrieraster**  
@@ -218,7 +218,7 @@ ms.locfileid: "63161901"
  Auf höchster Ebene verwendet die Indizierung die Anzahl von Zellen, die zum Bereitstellen eines vollständigen Mosaiks der höchsten Ebene erforderlich sind, wenn ein Objekt mehr Zellen abdeckt, als durch *n*angegeben sind. In solchen Fällen ist es möglich, dass ein Objekt mehr als die angegebene Anzahl von Zellen erhält. Die maximale Anzahl ist dann die Anzahl von Zellen, die von dem Raster der höchsten Ebene generiert wird, welche von der Dichte der **Ebene 1** abhängt.  
   
 ### <a name="grids"></a>Raster  
- In diesem Bereich wird die Dichte des Rasters auf jeder Ebene des Mosaikschemas angezeigt. Die Dichte wird als **Niedrig**, **Mittel**oder **Hoch**angegeben. Der Standardwert ist **Mittel**. **Low** stellt ein 4X4-Raster (16 Zellen) dar, **Mittel** stellt ein 8x8-Raster (64 Zellen) dar, und **High** stellt ein 16x16-Raster (256 Zellen) dar. Diese Optionen sind nicht verfügbar, wenn die Mosaikoptionen **Automatisches Geometrieraster** oder **Automatisches Geografieraster** nicht ausgewählt sind.  
+ In diesem Bereich wird die Dichte des Rasters auf jeder Ebene des Mosaikschemas angezeigt. Die Dichte wird als **Niedrig**, **Mittel**oder **Hoch**angegeben. Der Standardwert ist **Mittel**. **Niedrig** stellt ein Raster aus 4x4, also 16 Zellen, **Mittel** ein Raster aus 8x8, also 64 Zellen, und **Hoch** ein Raster aus 16x16, also 256 Zellen, dar. Diese Optionen sind nicht verfügbar, wenn die Mosaikoptionen **Automatisches Geometrieraster** oder **Automatisches Geografieraster** nicht ausgewählt sind.  
   
  **Ebene 1**  
  Die Dichte des Rasters der obersten (höchsten) Ebene.  
@@ -226,21 +226,21 @@ ms.locfileid: "63161901"
  **Ebene 2**  
  Die Dichte des Rasters der zweiten Ebene.  
   
- **Ebene 3**  
+ **Level 3**  
  Die Dichte des Rasters der dritten Ebene.  
   
  **Ebene 4**  
  Die Dichte des Rasters der vierten Ebene.  
   
-##  <a name="Filter"></a>Seite "Filter"  
+##  <a name="filter-page"></a><a name="Filter"></a>Seite "Filter"  
  Auf dieser Seite können Sie das Filterprädikat für einen gefilterten Index eingeben. Weitere Informationen finden Sie unter [erstellen gefilterter Indizes](create-filtered-indexes.md).  
   
- **Filter Ausdruck**  
- Definiert, welche Datenzeilen in den gefilterten Index eingeschlossen werden sollen. Zum Beispiel, `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
+ **Filterausdruck**  
+ Definiert, welche Datenzeilen in den gefilterten Index eingeschlossen werden sollen. Beispiel: `StartDate > '20000101' AND EndDate IS NOT NULL'.`  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Festlegen von Indexoptionen](set-index-options.md)   
- [INDEXPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/indexproperty-transact-sql)   
+ [Festlegen von Index Optionen](set-index-options.md)   
+ [INDEXPROPERTY &#40;Transact-SQL-&#41;](/sql/t-sql/functions/indexproperty-transact-sql)   
  [sys.indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)  
   
   

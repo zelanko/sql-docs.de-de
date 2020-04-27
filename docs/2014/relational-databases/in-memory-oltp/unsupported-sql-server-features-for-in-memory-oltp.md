@@ -11,16 +11,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157243"
 ---
 # <a name="supported-sql-server-features"></a>Unterstützte SQL Server-Funktionen
   In diesem Thema werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen erläutert, bei denen die Verwendung mit speicheroptimierten Objekte unterstützt bzw. nicht unterstützt wird.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-features-supported-for-in-memory-oltp"></a>Unterstützte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktionen für In-Memory OLTP  
+## <a name="ssnoversion-features-supported-for-in-memory-oltp"></a>Unterstützte [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktionen für In-Memory OLTP  
  Die folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen werden in einer Datenbank unterstützt, die speicheroptimierte Objekte enthält, einschließlich einer speicheroptimierten Dateigruppe.  
   
  Informationen zu unterstützten Datentypen finden Sie unter [Supported Data Types](supported-data-types-for-in-memory-oltp.md).  
@@ -37,11 +37,11 @@ ms.locfileid: "63157243"
   
 -   Katalogsichten, dynamische Verwaltungssichten und erweiterte Ereignisse für Unterstützbarkeit. Weitere Informationen finden Sie unter [Systemsichten, gespeicherte Prozeduren, DMVs und Wartetypen für In-Memory OLTP](../../database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md).  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Verwaltungs Objekte. Weitere Informationen finden Sie unter [SQL Server Management Objects-Unterstützung für In-Memory OLTP](sql-server-management-objects-support-for-in-memory-oltp.md).  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects. Weitere Informationen finden Sie unter [SQL Server Management Objects-Unterstützung für In-Memory OLTP](sql-server-management-objects-support-for-in-memory-oltp.md).  
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Weitere Informationen finden Sie unter [SQL Server Management Studio-Unterstützung für In-Memory OLTP](sql-server-management-studio-support-for-in-memory-oltp.md).  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]PowerShell. Weitere Informationen finden Sie unter [Übersicht über SQL Server PowerShell](https://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx).  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Weitere Informationen finden Sie unter [Übersicht über SQL Server PowerShell](https://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx).  
   
 -   Importieren und Exportieren von Massendaten mithilfe des Hilfsprogramms bcp. Weitere Informationen finden Sie unter [Importieren und Exportieren von Massendaten mithilfe des bcp-Hilfsprogramms &#40;SQL Server&#41;](../import-export/import-and-export-bulk-data-by-using-the-bcp-utility-sql-server.md).  
   
@@ -65,7 +65,7 @@ ms.locfileid: "63157243"
   
 -   Protokollversand: Mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Protokollversand können Sie Transaktionsprotokollsicherungen von einer primären Datenbank auf einer primären Serverinstanz automatisch an eine oder mehrere sekundäre Datenbanken auf getrennten sekundären Serverinstanzen senden. Weitere Informationen finden Sie unter [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md).  
   
--   Die Transaktionsreplikation in speicheroptimierte Tabellen auf Abonnenten wird eingeschränkt unterstützt. Weitere Informationen finden Sie unter [Replikation mit Abonnenten von speicheroptimierten Tabellen](../replication/replication-to-memory-optimized-table-subscribers.md).  
+-   Die Transaktionsreplikation in speicheroptimierte Tabellen auf Abonnenten wird eingeschränkt unterstützt. Weitere Informationen finden Sie unter [Replikation mit Abonnenten von Speicher optimierten Tabellen](../replication/replication-to-memory-optimized-table-subscribers.md).  
   
 -   Ressourcenkontrolle: Die Ressourcenkontrolle ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktion, mit der Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Arbeitsauslastung und den Verbrauch von Systemressourcen verwalten können. Mit Resource Governor können Sie Grenzwerte für die Menge an CPU, physischer E/A und Arbeitsspeicher angeben, die für eingehende Anwendungsanforderungen zur Verfügung stehen. Weitere Informationen finden Sie unter [Managing Memory for In-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md) und [Resource Governor](../resource-governor/resource-governor.md).  
   
@@ -73,16 +73,15 @@ ms.locfileid: "63157243"
   
 -   BACPAC-Unterstützung.  
   
-## <a name="includessnoversionincludesssnoversion-mdmd-features-not-supported-for-in-memory-oltp"></a>
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen, die für In-Memory-OLTP nicht unterstützt werden  
+## <a name="ssnoversion-features-not-supported-for-in-memory-oltp"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen, die für In-Memory-OLTP nicht unterstützt werden  
  Die folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen werden in einer Datenbank nicht unterstützt, die speicheroptimierte Objekte (einschließlich einer speicheroptimierten Dateigruppe) enthält.  
   
-|Nicht unterstützte Funktion|Featurebeschreibung|  
+|Nicht unterstützte Funktion|Funktionsbeschreibung|  
 |-------------------------|-------------------------|  
 |Datenkomprimierung bei speicheroptimierten Tabellen|Sie können die Datenkomprimierungsfunktion verwenden, um die Komprimierung der Daten innerhalb einer Datenbank sowie die Reduzierung der Datenbankgröße zu vereinfachen. Weitere Informationen finden Sie unter [Data Compression](../data-compression/data-compression.md).|  
 |Partitionierung von speicheroptimierten Tabellen und HASH-Indizes.|Die Daten partitionierter Tabellen und Indizes werden in Einheiten aufgeteilt, die über mehrere Dateigruppen in einer Datenbank verteilt sein können. Weitere Informationen finden Sie unter [partitionierte Tabellen und Indizes](../partitions/partitioned-tables-and-indexes.md).|  
 |Die transparente Datenverschlüsselung (TDE) für die speicheroptimierte Datendateigruppe einer Datenbank.|Die transparente Datenverschlüsselung (TDE) führt die E/A-Verschlüsselung und -Entschlüsselung der Daten und der Protokolldateien in Echtzeit durch. Weitere Informationen finden Sie unter [Transparente Datenverschlüsselung &#40;TDE&#41;](../security/encryption/transparent-data-encryption.md).<br /><br /> TDE kann auf einer Datenbank aktiviert werden, die über In-Memory OLTP-Objekte verfügt. In-Memory OLTP-Protokolldatensätze werden verschlüsselt, wenn TDE aktiviert ist. Die Prüfpunktdateien für permanente Tabellen werden nicht verschlüsselt, auch wenn TDE für die Datenbank aktiviert ist.|  
-|Replikation|Replikationskonfigurationen, die keine Transaktionsreplikation in speicheroptimierte Tabellen auf Abonnenten darstellen, sind mit Tabellen oder Sichten, die auf speicheroptimierte Tabellen verweisen, nicht kompatibel. Die Replikation mit sync_mode = ' Database Snapshot ' wird nicht unterstützt, wenn eine Speicher optimierte Datei Gruppe vorhanden ist. Weitere Informationen finden Sie unter [Replikation mit Abonnenten von speicheroptimierten Tabellen](../replication/replication-to-memory-optimized-table-subscribers.md).|  
+|Replikation|Replikationskonfigurationen, die keine Transaktionsreplikation in speicheroptimierte Tabellen auf Abonnenten darstellen, sind mit Tabellen oder Sichten, die auf speicheroptimierte Tabellen verweisen, nicht kompatibel. Die Replikation mit sync_mode = ' Database Snapshot ' wird nicht unterstützt, wenn eine Speicher optimierte Datei Gruppe vorhanden ist. Weitere Informationen finden Sie unter [Replikation mit Abonnenten von Speicher optimierten Tabellen](../replication/replication-to-memory-optimized-table-subscribers.md).|  
 |Multiple Active Result Sets (MARS)|Multiple Active Result Sets (MARS) werden für speicheroptimierte Tabellen nicht unterstützt. Dieser Fehler kann auch auf die Verwendung eines Verbindungsservers hinweisen. Ein Verbindungsserver kann MARS verwenden. Verbindungsserver werden für speicheroptimierte Tabellen nicht unterstützt. Stattdessen müssen Sie eine direkte Verbindung mit dem Server und der Datenbank herstellen, die die speicheroptimierten Tabellen hostet.|  
 |Spiegelung|Die Datenbankspiegelung ist eine Lösung zum Verbessern der Verfügbarkeit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank. Weitere Informationen finden Sie unter [Datenbankspiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).|  
 |Protokollneuerstellung|Die Neuerstellung des Protokolls, entweder durch Anfügen oder mithilfe von ALTER DATABASE, wird für Datenbanken mit einer MEMORY_OPTIMIZED_DATA-Dateigruppe nicht unterstützt.|  
@@ -92,7 +91,7 @@ ms.locfileid: "63157243"
 |Änderungsnachverfolgung|Die Änderungsnachverfolgung kann in einer Datenbank mit In-Memory OLTP-Objekten aktiviert werden. Änderungen in speicheroptimierten Tabellen werden allerdings nicht nachverfolgt.|  
 |DDL-Trigger|DDL-Trigger auf Datenbankebene und Serverebene werden bei In-Memory OLTP-Tabellen und systemintern kompilierten gespeicherten Prozeduren nicht unterstützt.|  
 |Change Data Capture (CDC)|CDC sollte nicht für eine Datenbank aktiviert werden, die über In-Memory OLTP-Objekte verfügt, da es bestimmte Vorgänge wie DROP verhindert.|  
-|Datenbankkapselung|Datenbankkapselung wird nicht in Datenbanken unterstützt, die über systemintern kompilierte gespeicherte Prozeduren und speicheroptimierte Tabellen verfügen. Weitere Informationen finden Sie unter [eigenständige Datenbanken](../databases/contained-databases.md) .|  
+|Datenbankkapselung|Datenbankkapselung wird nicht in Datenbanken unterstützt, die über systemintern kompilierte gespeicherte Prozeduren und speicheroptimierte Tabellen verfügen. Weitere Informationen finden Sie unter [Contained Databases](../databases/contained-databases.md).|  
 |Kontextverbindungen|Zugreifen auf speicheroptimierte Tabellen mithilfe der Kontextverbindung aus CLR-gespeicherten Prozeduren wird nicht unterstützt.|  
 |Cursor|Keysetgesteuerte und dynamische Cursor für Abfragen, die auf speicheroptimierte Tabellen zugreifen. Diese Abfragen werden zu "statisch" herabgestuft und sind schreibgeschützt.|  
 |TABLESTAMP|TABLESTAMP wird nicht unterstützt. Weitere Informationen finden Sie unter [FROM &#40;Transact-SQL&#41;](/sql/t-sql/queries/from-transact-sql).|  
@@ -106,7 +105,7 @@ ms.locfileid: "63157243"
   
  Datenbankübergreifende Transaktionen werden bis auf einige Ausnahmen nicht unterstützt. In der folgenden Tabelle werden unterstützte Szenarien und entsprechende Einschränkungen beschrieben. (Siehe auch [Datenbankübergreifende Abfragen](cross-database-queries.md).)  
   
-|Datenbanken|Zulässig|BESCHREIBUNG|  
+|Datenbanken|Zulässig|Beschreibung|  
 |---------------|-------------|-----------------|  
 |Benutzerdatenbanken, Modell- und msdb-Datenbank|Nein|Datenbankübergreifende Abfragen und Transaktionen werden nicht unterstützt.<br /><br /> Abfragen und Transaktionen, die auf speicheroptimierte Tabellen oder systemintern kompilierte gespeicherte Prozeduren zugreifen, können nicht auf andere Datenbanken zugreifen. Eine Ausnahme bilden der Systemdatenbankmaster (schreibgeschützter Zugriff) und "tempdb".|  
 |Ressourcendatenbank und tempdb|Ja|Es gibt keine Einschränkungen für datenbankübergreifende Transaktionen, die, außer bei einer einzelnen Benutzerdatenbank, nur die Ressourcendatenbank und tempdb verwenden.|  

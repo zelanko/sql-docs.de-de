@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cb9d48156ecd1ca98dc36c10c2680883160582c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157108"
 ---
 # <a name="administer-servers-by-using-policy-based-management"></a>Verwalten von Servern mit der richtlinienbasierten Verwaltung
@@ -38,7 +38,7 @@ ms.locfileid: "63157108"
 -   Die Datenbank [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] hat eine Benennungskonvention, die vorschreibt, dass alle gespeicherten Prozeduren mit den Buchstaben AW_ beginnen. Eine Richtlinie wird erstellt, mit der diese Richtlinie erzwungen werden soll. Ein Administrator testet diese Richtlinie und erhält eine Liste gespeicherter Prozeduren, die diese Richtlinie nicht einhalten. Wenn zukünftig gespeicherte Prozeduren diese Benennungskonvention nicht einhalten, erzeugt die Erstellungsanweisung für die gespeicherte Prozedur einen Fehler.  
   
 > [!NOTE]  
->  Bitte beachten Sie, dass Richtlinien die Funktionsweise einiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen beeinflussen können. Beispielsweise verwenden Change Data Capture und die Transaktionsreplikation beide die systranschemas-Tabelle, die keinen Index hat. Wenn Sie eine Richtlinie aktivieren, die festlegt, dass alle Tabellen einen Index aufweisen müssen, bewirkt die Erzwingung der Einhaltung der Richtlinie das Fehlschlagen dieser Funktionen.  
+>  Bitte beachten Sie, dass Richtlinien die Funktionsweise einiger [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktionen beeinflussen können. Beispielsweise verwenden Change Data Capture und die Transaktionsreplikation beide die systranschemas-Tabelle, die keinen Index hat. Wenn Sie eine Richtlinie aktivieren, die festlegt, dass alle Tabellen einen Index aufweisen müssen, bewirkt die Erzwingung der Einhaltung der Richtlinie das Fehlschlagen dieser Funktionen.  
   
  Richtlinien werden mit [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]erstellt und verwaltet. Der Vorgang umfasst folgende Schritte:  
   
@@ -53,7 +53,7 @@ ms.locfileid: "63157108"
  Für Fehler bei Richtlinien wird im Objekt-Explorer eine kritische Zustandswarnung in Form eines roten Symbols neben dem Ziel und den übergeordneten Knoten in der Strukturansicht des Objekt-Explorers angezeigt.  
   
 > [!NOTE]  
->  Wenn das System den Objektsatz für eine Richtlinie berechnet, werden die Systemobjekte standardmäßig ausgeschlossen.  Falls der Objektsatz der Richtlinie z. B. auf alle Tabellen verweist, gilt die Richtlinie nicht für Systemtabellen. Wenn Benutzer eine Richtlinie in Verbindung mit Systemobjekten auswerten möchten, können sie dem Objektsatz Systemobjekte explizit hinzufügen. Obwohl alle Richtlinien für den Auswertungsmodus **Zeitplan prüfen** unterstützt werden, werden aus Leistungsgründen jedoch nicht alle Richtlinien mit beliebigen Objektsätzen für den Auswertungsmodus **Änderungen prüfen** unterstützt. Weitere Informationen finden Sie unter [https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx).  
+>  Wenn das System den Objektsatz für eine Richtlinie berechnet, werden die Systemobjekte standardmäßig ausgeschlossen.  Falls der Objektsatz der Richtlinie z. B. auf alle Tabellen verweist, gilt die Richtlinie nicht für Systemtabellen. Wenn Benutzer eine Richtlinie in Verbindung mit Systemobjekten auswerten möchten, können sie dem Objektsatz Systemobjekte explizit hinzufügen. Obwohl alle Richtlinien für den Auswertungsmodus **Zeitplan prüfen** unterstützt werden, werden aus Leistungsgründen jedoch nicht alle Richtlinien mit beliebigen Objektsätzen für den Auswertungsmodus **Änderungen prüfen** unterstützt. Weitere Informationen finden Sie unter[https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx](https://blogs.msdn.com/b/sqlpbm/archive/2009/04/13/policy-evaluation-modes.aspx)  
   
 ## <a name="policy-based-management-concepts"></a>Konzepte der richtlinienbasierten Verwaltung  
  Die richtlinienbasierte Verwaltung besteht aus drei Komponenten:  
@@ -72,7 +72,7 @@ ms.locfileid: "63157108"
   
     -   **Bedarfs**gesteuert. Dieser Modus wertet die Richtlinie aus, wenn sie vom Benutzer direkt angegeben wird.  
   
-    -   **Bei Änderung: verhindern**. Dieser automatisierte Modus verwendet DDL-Trigger, um Richtlinienverstöße zu verhindern.  
+    -   **Bei Änderung - Verhindern**. Dieser automatisierte Modus verwendet DDL-Trigger, um Richtlinienverstöße zu verhindern.  
   
         > [!IMPORTANT]  
         >  Wenn die Serverkonfigurationsoption für geschachtelte Trigger deaktiviert ist, funktioniert **Bei Änderung: Verhindern** nicht ordnungsgemäß. Die richtlinienbasierte Verwaltung basiert auf DDL-Triggern, um DDL-Vorgänge zu erkennen und dafür ein Rollback auszuführen, falls diese Vorgänge nicht mit Richtlinien übereinstimmen, die diesen Auswertungsmodus verwenden. Das Entfernen der DDL-Trigger für die richtlinienbasierte Verwaltung oder das Deaktivieren geschachtelter Trigger bewirkt das Fehlschlagen oder ein unerwartetes Ausführungsverhalten dieses Auswertungsmodus.  
@@ -91,8 +91,7 @@ ms.locfileid: "63157108"
  Ein Satz logischer Eigenschaften, die das Verhalten oder die Eigenschaften bestimmter Typen von verwalteten Zielen modellieren. Die Anzahl und die Merkmale der Eigenschaften sind in das Facet integriert und können nur durch den Ersteller des Facets hinzugefügt oder entfernt werden. Ein Zieltyp kann ein oder mehrere Verwaltungsfacets implementieren, und ein Verwaltungsfacet kann von einem oder mehreren Zieltypen implementiert werden. Bestimmte Eigenschaften eines Facets können nur für eine bestimmte Version gelten.  
   
  Bedingung der richtlinienbasierten Verwaltung  
- Ein boolescher Ausdruck, der einen Satz zulässiger Zustände eines durch die richtlinienbasierte Verwaltung verwalteten Ziels für ein Verwaltungsfacet angibt. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Sortierungen beizubehalten. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sortierungen den Windows-Sortierungen nicht genau entsprechen, testen Sie die Bedingung, um zu ermitteln, wie Konflikte vom Algorithmus aufgelöst werden.  
+ Ein boolescher Ausdruck, der einen Satz zulässiger Zustände eines durch die richtlinienbasierte Verwaltung verwalteten Ziels für ein Verwaltungsfacet angibt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Sortierungen beizubehalten. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sortierungen den Windows-Sortierungen nicht genau entsprechen, testen Sie die Bedingung, um zu ermitteln, wie Konflikte vom Algorithmus aufgelöst werden.  
   
  Richtlinie der richtlinienbasierten Verwaltung  
  Eine Bedingung der richtlinienbasierten Verwaltung und das erwartete Verhalten, wie z. B. Auswertungsmodus, Zielfilter und Zeitplan. Eine Richtlinie kann nur eine einzige Bedingung enthalten. Richtlinien können aktiviert oder deaktiviert sein. Richtlinien werden in der msdb-Datenbank gespeichert.  
@@ -130,9 +129,9 @@ ms.locfileid: "63157108"
 |Beschreibt die Überprüfung der Einhaltung einer Richtlinie durch eine Serverinstanz, eine Datenbank, ein Serverobjekt oder ein Datenbankobjekt.|[Auswerten einer Richtlinie der richtlinienbasierten Verwaltung von einem Objekt aus](evaluate-a-policy-based-management-policy-from-an-object.md)<br /><br /> [Auswerten einer Richtlinie der richtlinienbasierten Verwaltung von der Richtlinie aus](evaluate-a-policy-based-management-policy-from-that-policy.md)<br /><br /> [Auswerten einer Richtlinie der richtlinienbasierten Verwaltung nach einem Zeitplan](evaluate-a-policy-based-management-policy-on-a-schedule.md)|  
 |Beschreibt das Anzeigen eines richtlinienbasierten Verwaltungsfacet-Status und Kopieren in eine Datei.|[Arbeiten mit Facets der richtlinienbasierten Verwaltung](working-with-policy-based-management-facets.md)|  
 |Stellt eine Reihe von Richtliniendateien bereit, die Sie als Richtlinien für Best Practices importieren können, und beschreibt die Auswertung der Richtlinien für einen Zielsatz, der Instanzen, Instanzobjekte, Datenbanken oder Datenbankobjekte enthält.|[Überwachen und Erzwingen von Best Practices mit der richtlinienbasierten Verwaltung](monitor-and-enforce-best-practices-by-using-policy-based-management.md)|  
-|Enthält die F1-Hilfethemen zum Knoten **Richtlinienverwaltung** des Objekt-Explorers von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Der Knoten "Richtlinien Verwaltung" &#40;Objekt-Explorer&#41;](../../ssms/object/object-explorer.md)|  
+|Enthält die F1-Hilfethemen zum Knoten **Richtlinienverwaltung** des Objekt-Explorers von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Richtlinienverwaltungsknoten &#40;Objekt-Explorer&#41;](../../ssms/object/object-explorer.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Sichten der Richtlinien basierten Verwaltung &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/policy-based-management-views-transact-sql)  
+ [Sichten der richtlinienbasierten Verwaltung &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/policy-based-management-views-transact-sql)  
   
   

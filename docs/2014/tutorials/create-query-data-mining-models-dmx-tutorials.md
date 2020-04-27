@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 22ed01105a32f460bcbeb2c067299fdf62af2eed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63180556"
 ---
 # <a name="creating-and-querying-data-mining-models-with-dmx-tutorials-analysis-services---data-mining"></a>Erstellen und Abfragen von Data Mining-Modellen mit DMX: Lernprogramme (Analysis Services – Data Mining)
@@ -38,10 +38,10 @@ ms.locfileid: "63180556"
   
      In diesem Lernprogramm wird ein Forecasting-Modell erstellt, um die Verwendung der CREATE MODEL (DMX)-Anweisung zu veranschaulichen. Anschließend fügen Sie verwandte Modelle hinzu und passen das Verhalten der einzelnen Modelle durch Ändern der Parameter im Microsoft Time Series-Algorithmus an. Abschließend erstellen Sie Vorhersagen und aktualisieren die Vorhersagen mit neuen Daten. Die Möglichkeit zum Update von Zeitreihen wurde in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]hinzugefügt.  
   
-## <a name="reference"></a>Verweis  
- [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
+## <a name="reference"></a>Referenz  
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  
   
- [Data Mining-Erweiterungen &#40;DMX-&#41; Referenz](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](/sql/dmx/data-mining-extensions-dmx-reference)  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
   

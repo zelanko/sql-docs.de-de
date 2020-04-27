@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 924c8f9dca934c81eab74c102509a8d04f66997b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033557"
 ---
 # <a name="sql-server-native-client-ole-db"></a>SQL Server Native Client (OLE DB)
@@ -36,7 +36,7 @@ ms.locfileid: "63033557"
   
 -   [Erstellen einer SQL Server Native Client OLE DB-Anbieteranwendung](../../native-client-ole-db-provider/creating-a-sql-server-native-client-ole-db-provider-application.md)  
   
--   [Datenquellen Objekte &#40;OLE DB&#41;](../../native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
+-   [Datenquellenobjekte &#40;OLE DB&#41;](../../native-client-ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
 -   [Befehle](../../native-client-ole-db-commands/commands.md)  
   
@@ -50,11 +50,11 @@ ms.locfileid: "63033557"
   
 -   [Datentypen &#40;OLE DB&#41;](../../native-client-ole-db-data-types/data-types-ole-db.md)  
   
--   [Schemarowset-Unterstützung &#40;OLE DB&#41;](schema-rowset-support-ole-db.md)  
+-   [Schema Rowset Support &#40;OLE DB&#41; (Schemarowset-Unterstützung &#40;OLE DB&#41;)](schema-rowset-support-ole-db.md)  
   
 -   [Tabellenwertparameter &#40;OLE DB&#41;](../../native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)  
   
--   [Datums-und Uhrzeit Verbesserungen &#40;OLE DB&#41;](../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
+-   [Date and Time Improvements &#40;OLE DB&#41; (Verbesserungen bei Datum und Uhrzeit &#40;OLE DB&#41;)](../../native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
 -   [Große benutzerdefinierte CLR-Typen &#40;OLE DB&#41;](large-clr-user-defined-types-ole-db.md)  
   
@@ -62,15 +62,15 @@ ms.locfileid: "63033557"
   
 -   [Transaktionen](../../native-client-ole-db-transactions/transactions.md)  
   
--   [Errors](../../native-client-ole-db-errors/errors.md)  
+-   [Mern](../../native-client-ole-db-errors/errors.md)  
   
--   [Dienstprinzipalnamen (SPN) &#40;SPNs&#41; in Clientverbindungen &#40;(OLE DB&#41;)](service-principal-names-spns-in-client-connections-ole-db.md)  
+-   [Dienstprinzipalnamen (SPN) in Clientverbindungen (OLE DB)](service-principal-names-spns-in-client-connections-ole-db.md)  
   
--   [Sparsespalten unterstützen &#40;OLE DB&#41;](sparse-columns-support-ole-db.md)  
+-   [Unterstützung für Sparsespalten &#40;OLE DB&#41;](sparse-columns-support-ole-db.md)  
   
 -   [SQL Server Native Client &#40;OLE DB&#41; Referenz](../../native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)  
   
--   [Vorgehensweisen für OLE DB](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+-   [Gewusst-wie-Themen zu OLE DB](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Programmierung für SQL Server Native Client](../sql-server-native-client-programming.md)  

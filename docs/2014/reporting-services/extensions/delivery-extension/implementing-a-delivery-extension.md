@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cae33496e4dddcaf2d14ba2d87f0d4013795e58f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63165133"
 ---
 # <a name="implementing-a-delivery-extension"></a>Implementieren von Übermittlungserweiterungen
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ermöglicht Benutzern das Erstellen und Veröffentlichen von Berichten, die nach der Erstellung und Veröffentlichung an verschiedene Speicherorte übermittelt werden können. Außerdem enthält [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verschiedene Übermittlungserweiterungen und eine Übermittlungs-API, mit der Entwickler zusätzliche Übermittlungserweiterungen erstellen können, um die Übermittlungsfunktionen in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] noch zu erweitern.  
+  Mithilfe von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] können Benutzer Berichte erstellen und veröffentlichen, die anschließend an diverse Orte übermittelt werden. Außerdem enthält [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verschiedene Übermittlungserweiterungen und eine Übermittlungs-API, mit der Entwickler zusätzliche Übermittlungserweiterungen erstellen können, um die Übermittlungsfunktionen in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] noch zu erweitern.  
   
  Eine Beispielimplementierung einer Übermittlungserweiterung finden Sie unter [SQL Server Reporting Services-Produktbeispiele](https://go.microsoft.com/fwlink/?LinkId=177889).  
   
@@ -31,19 +31,19 @@ ms.locfileid: "63165133"
  [Übersicht über Übermittlungs Erweiterungen] Delivery-Extensions-Overview.MD)  
  Erläutert, wie eine benutzerdefinierte Übermittlungserweiterung für [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] geschrieben wird.  
   
- [Vorbereiten der Implementierung von Übermittlungserweiterungen](preparing-to-implement-a-delivery-extension.md)  
+ [Preparing to Implement a Delivery Extension (Vorbereiten der Implementierung von Übermittlungserweiterungen)](preparing-to-implement-a-delivery-extension.md)  
  Beschreibt die verfügbaren Schnittstellen und Klassen beim Implementieren einer [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Übermittlungserweiterung sowie die Themen, die vor der Implementierung berücksichtigt werden sollten.  
   
- [Erstellen einer Bibliothek für Übermittlungserweiterungen](creating-a-delivery-extension-library.md)  
+ [Creating a Delivery Extension Library (Erstellen einer Bibliothek für Übermittlungserweiterungen)](creating-a-delivery-extension-library.md)  
  Beschreibt die Zuordnung eines Namespace für die [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Übermittlungserweiterung und die Kompilierung der Übermittlungserweiterung in eine DLL-Bibliothek.  
   
- [Implementieren der IDeliveryExtension-Schnittstelle für Übermittlungserweiterungen](implementing-the-ideliveryextension-interface-for-a-delivery-extension.md)  
+ [Implementing the IDeliveryExtension Interface for a Delivery Extension (Implementieren der IDeliveryExtension-Schnittstelle für Übermittlungserweiterungen)](implementing-the-ideliveryextension-interface-for-a-delivery-extension.md)  
  Beschreibt die Attribute einer Übermittlungserweiterung und die Art der Implementierung einer eigenen Klasse für die Übermittlungserweiterung.  
   
- [Verwenden einer Notification-Klasse für eine Übermittlungserweiterung](using-a-notification-class-for-a-delivery-extension.md)  
+ [Using a Notification Class for a Delivery Extension (Verwenden einer Notification-Klasse für eine Übermittlungserweiterung)](using-a-notification-class-for-a-delivery-extension.md)  
  Beschreibt die Attribute der **Notification**-Klasse und die Verwendungsweise in Ihrer Implementierung der Übermittlungserweiterung  
   
- [Verwenden der Setting-Klasse für eine Übermittlungserweiterung](using-the-setting-class-for-a-delivery-extension.md)  
+ [Using the Setting Class for a Delivery Extension (Verwenden der Setting-Klasse für eine Übermittlungserweiterung)](using-the-setting-class-for-a-delivery-extension.md)  
  Beschreibt die Attribute der **Setting**-Klasse und die Verwendungsweise in Ihrer Implementierung der Übermittlungserweiterung  
   
  [Verwenden der IDeliveryReportServerInformation-Schnittstelle für Übermittlungserweiterungen](using-the-ideliveryreportserverinformation-interface-for-a-delivery-extension.md)  
@@ -52,7 +52,7 @@ ms.locfileid: "63165133"
  [Verwenden der Report-Klasse für eine Übermittlungserweiterung](using-the-report-class-for-a-delivery-extension.md)  
  Beschreibt die Attribute der **Report**-Klasse und die Verwendungsweise in Ihrer Implementierung der Übermittlungserweiterung  
   
- [Using the RenderedOutputFile Class for a Delivery Extension (Verwenden der RenderedOutputFile-Klasse für eine Übermittlungserweiterung)](using-the-renderedoutputfile-class-for-a-delivery-extension.md)  
+ [Verwenden der RenderedOutputFile-Klasse für eine Übermittlungserweiterung](using-the-renderedoutputfile-class-for-a-delivery-extension.md)  
  Beschreibt die Attribute der **RenderedOutputFile**-Klasse und die Verwendungsweise in Ihrer Implementierung der Übermittlungserweiterung  
   
  [Implementieren der ISubscriptionBaseUIUserControl-Schnittstelle für eine Übermittlungserweiterung](implementing-the-isubscriptionbaseuiusercontrol-interface.md)  
@@ -68,7 +68,7 @@ ms.locfileid: "63165133"
  Beschreibt, wie Sie eine Übermittlungserweiterung von einem Berichtsserver entfernen  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erweiterungen für Reporting Services](../reporting-services-extensions.md)   
- [Reporting Services Extension Library (Reporting Services-Erweiterungsbibliothek)](../reporting-services-extension-library.md)  
+ [Reporting Services Erweiterungen](../reporting-services-extensions.md)   
+ [Reporting Services-Erweiterungsbibliothek](../reporting-services-extension-library.md)  
   
   

@@ -13,20 +13,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 08b27cdf4c3b50e1605a9e35f54eaebbdc2bb5bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63182885"
 ---
 # <a name="select-objects-object-explorer"></a>Objekte auswählen (Objekt-Explorer)
-  Mit dem Dialogfeld **Objekte auswählen** können Sie einer Liste in einem anderen Dialogfeld ein Objekt hinzufügen. Der Titel des Dialogfelds und die darin verfügbaren Optionen hängen davon ab, wie es geöffnet wurde. Es werden nur verfügbare Optionen angezeigt. Wenn Sie z. B. einen Besitzer für ein neues Objekt auswählen, sind nur Benutzernamen verfügbar.  
+  Verwenden Sie das Dialogfeld **Objekte auswählen** , um der Liste in einem anderen Dialogfeld ein Objekt hinzuzufügen. Der Titel des Dialogfelds und die darin verfügbaren Optionen hängen davon ab, wie es geöffnet wurde. Es werden nur verfügbare Optionen angezeigt. Wenn Sie z. B. einen Besitzer für ein neues Objekt auswählen, sind nur Benutzernamen verfügbar.  
   
 ## <a name="options"></a>Tastatur  
- **Diese Objekttypen auswählen**  
- Zeigt eine Liste der Typen an, zu denen die auszuwählenden Objekte gehören. Zu den Typen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zählen Prinzipale auf Ebene und Datenbankebene sowie Sicherungs fähige Elemente. Dieses Feld wird anhand der Auswahl im Dialogfeld **Objekttypen auswählen** ausgefüllt, auf das über die Schaltfläche **Objekttypen** zugegriffen wird.  
+ **Wählen Sie Objekttypen aus**  
+ Zeigt eine Liste der Typen an, zu denen die auszuwählenden Objekte gehören. Zu diesen Typen gehören auch Prinzipale und sicherungsfähige Typen auf [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ebene und Datenbankebene. Dieses Feld wird anhand der Auswahl im Dialogfeld **Objekttypen auswählen** ausgefüllt, auf das über die Schaltfläche **Objekttypen** zugegriffen wird.  
   
- **Geben Sie die zu ausgewäfnenden Objektnamen ein**  
+ **Geben Sie die Namen der auszuwählenden Objekte ein**  
  Geben Sie eine durch Semikolons getrennte Liste der auszuwählenden Objekte ein. Auszuwählende Objekte müssen zu einem Typ gehören, der im Feld **Wählen Sie Objekttypen aus** aufgeführt ist. Die Objekte können aus einer Liste ausgewählt werden, auf die per Mausklick auf die Schaltfläche **Durchsuchen** zugegriffen wird.  
   
  **Objekttypen**  

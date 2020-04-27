@@ -17,14 +17,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9865425573ae3d9c8f2e16af0da283c5ea684150
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62990205"
 ---
 # <a name="column-properties-visual-database-tools"></a>Spalteneigenschaften (Visual Database Tools)
-  Für Spalten gibt es zwei Sätze von Eigenschaften: einen vollständigen Satz, der im Tabellen-Designer auf der Registerkarte **Spalteneigenschaften** angezeigt wird (nur für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken verfügbar), und eine Teilmenge, die im Server-Explorer im Eigenschaftenfenster angezeigt wird.  
+  Für Spalten gibt es zwei Gruppen von Eigenschaften: eine vollständige Gruppe, die auf der Registerkarte **Spalteneigenschaften** im Tabellen-Designer angezeigt wird (nur für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbanken verfügbar) und eine Teilgruppe, die im Eigenschaftenfenster des Server-Explorers angezeigt wird.  
   
 > [!NOTE]  
 >  Die in diesem Thema behandelten Eigenschaften sind nicht alphabetisch, sondern nach Kategorie angeordnet.  
@@ -53,10 +53,10 @@ ms.locfileid: "62990205"
  **Datentyp**  
  Zeigt den Datentyp der ausgewählten Spalte an. Weitere Informationen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
   
- **ID-Inkrement**  
+ **ID-Schrittweite**  
  Zeigt an, in welchen Schrittweiten der **ID-Startwert** für jede weitere Zeile der Identitätsspalte erhöht wird. (Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
- **ID-Seed**  
+ **ID-Startwert**  
  Zeigt den der ersten Tabellenzeile der Identitätsspalte zugeordneten Startwert an. (Gilt nur für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
  **Ist Identity**  
@@ -65,13 +65,13 @@ ms.locfileid: "62990205"
  **Länge**  
  Zeigt die Anzahl der für zeichenbasierte Datentypen zulässigen Zeichen an.  
   
- **Nullable**  
+ **NULL zulassen**  
  Zeigt an, ob die Spalte NULL-Werte zulässt.  
   
- **Präziser**  
+ **Genauigkeit**  
  Zeigt die maximale Anzahl der für numerische Datentypen zulässigen Stellen. Bei nicht numerischen Datentypen wird diese Eigenschaft mit **0** angegeben.  
   
- **Migen**  
+ **Skalieren**  
  Zeigt die maximale Anzahl von Stellen an, die bei numerischen Datentypen rechts vom Dezimalkomma erscheinen können. Dieser Wert muss kleiner oder gleich der Genauigkeit sein. Bei nicht numerischen Datentypen wird diese Eigenschaft mit **0** angegeben.  
   
 ## <a name="column-properties-tab"></a>Registerkarte Spalteneigenschaften  
@@ -95,46 +95,46 @@ ms.locfileid: "62990205"
  **Datentyp**  
  Zeigt den Datentyp der ausgewählten Spalte an. Um diese Eigenschaft zu bearbeiten, klicken Sie auf ihren Wert, erweitern Sie die Dropdownliste, und wählen Sie einen anderen Wert aus. Weitere Informationen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql).  
   
- **Standardwert oder-Bindung**  
+ **Standardwert oder -bindung**  
  Zeigt, welcher Standardwert für die Spalte verwendet wird, wenn kein Wert angegeben ist. Die Dropdownliste enthält alle in der Datenquelle definierten globalen Standards. Um die Spalte an einen globalen Standard zu binden, wählen Sie diesen aus der Dropdownliste aus. Sie können den Standardwert aber auch direkt als Text eingeben, um eine Standardeinschränkung für die Spalte zu erstellen.  
   
  **Länge**  
  Zeigt die Anzahl der für zeichenbasierte Datentypen zulässigen Zeichen an. Diese Eigenschaft ist nur für zeichenbasierte Datentypen verfügbar.  
   
- **Präziser**  
+ **Genauigkeit**  
  Zeigt die maximale Anzahl der für numerische Datentypen zulässigen Stellen. Bei nicht numerischen Datentypen wird diese Eigenschaft mit **0** angegeben. Diese Eigenschaft ist nur für numerische Datentypen verfügbar.  
   
- **Migen**  
+ **Skalieren**  
  Zeigt die maximale Anzahl von Stellen an, die bei numerischen Datentypen rechts vom Dezimalkomma erscheinen können. Dieser Wert muss kleiner oder gleich der Genauigkeit sein. Bei nicht numerischen Datentypen wird diese Eigenschaft mit **0** angegeben. Diese Eigenschaft ist nur für numerische Datentypen verfügbar.  
   
  **Kategorie Tabellen-Designer**  
  Wird erweitert, um die restlichen Eigenschaften anzuzeigen.  
   
  **Sortierung**  
- Zeigt die Sortierungseinstellung der ausgewählten Spalte an. Klicken Sie auf **Sortierung** und dann rechts neben dem Wert auf die Schaltfläche mit den Auslassungspunkten **(...)**, um diese Einstellung zu ändern.  
+ Zeigt die Sortierungseinstellung der ausgewählten Spalte an. Klicken Sie auf **Sortierung** und dann rechts neben dem Wert auf die Schaltfläche mit den Auslassungspunkten **(...)** , um diese Einstellung zu ändern.  
   
- **Berechnete Spalten Spezifikations Kategorie**  
+ **Spezifikationskategorie der berechneten Spalte**  
  Wird erweitert, um die Eigenschaften für **Formel** und für **Ist Persisted**anzuzeigen. Wenn die Spalte berechnet ist, wird außerdem die Formel angezeigt. Um die Formel zu bearbeiten, erweitern Sie diese Kategorie, und bearbeiten Sie sie in der **Formel** -Eigenschaft.  
   
  **Formel**  
  Zeigt, wenn es sich um eine berechnete Spalte handelt, die von der ausgewählten Spalte verwendete Formel. In diesem Feld können Sie eine Formel angeben oder ändern.  
   
- **Ist persistent**  
+ **Ist Persisted**  
  Ermöglicht das Speichern der berechneten Spalte mit der Datenquelle. Eine persistente berechnete Spalte kann indiziert werden.  
   
- **Komprimierter Datentyp**  
+ **Datentyp-Kurzform**  
  Zeigt die Informationen zum Felddatentyp an, im gleichen Format wie in der SQL-Anweisung CREATE TABLE. Beispiel: Ein Feld, das eine Zeichenfolge variabler Länge mit einer maximalen Länge von 20 Zeichen enthält, würde als "varchar(20)" dargestellt. Um diese Eigenschaft zu ändern, geben Sie den Wert direkt ein.  
   
  **Beschreibung**  
- Zeigt die Beschreibung der Spalte an. Klicken Sie auf Beschreibung und dann rechts neben der Eigenschaft auf die Schaltfläche mit den Auslassungspunkten **(...)**, um die vollständige Beschreibung anzuzeigen oder zu bearbeiten.  
+ Zeigt die Beschreibung der Spalte an. Klicken Sie auf Beschreibung und dann rechts neben der Eigenschaft auf die Schaltfläche mit den Auslassungspunkten **(...)** , um die vollständige Beschreibung anzuzeigen oder zu bearbeiten.  
   
- **Volltext-Spezifikations Kategorie**  
+ **Kategorie Volltextspezifikation**  
  Wird erweitert, um die spezifischen Eigenschaften von Volltextspalten anzuzeigen.  
   
- **Ist voll Text indiziert**  
+ **Ist volltextindiziert**  
  Gibt an, ob die Spalte volltextindiziert ist. Diese Eigenschaft kann nur dann auf **Ja** festgelegt werden, wenn für den Datentyp der Spalte eine Volltextsuche möglich ist und wenn für die Spalte in der zugehörigen Tabelle ein Volltextindex angegeben ist. Um diesen Wert zu ändern, klicken Sie auf den Wert, erweitern Sie die Dropdownliste, und wählen Sie einen anderen Wert aus.  
   
- **Voll Texttyp-Spalte**  
+ **Volltexttyp-Spalte**  
  Zeigt, welche Spalte verwendet wird, um den Dokumenttyp einer Spalte vom Typ Image zu definieren. Der Datentyp Image kann verwendet werden, um Dokumente zu speichern, die von DOC-Dateien bis zu XML-Dateien reichen.  
   
  **Sprache**  
@@ -145,19 +145,19 @@ ms.locfileid: "62990205"
   
  Wenn Sie eine **Sprache** vor der Option **Statistische Semantik**auswählen und die ausgewählte Sprache über kein zugeordnetes semantisches Sprachmodell verfügt, ist die Option **Statistische Semantik** auf **Nein** festgelegt, und sie kann nicht geändert werden. Wenn Sie die Option **Statistische Semantik** auf **Ja** festlegen, bevor Sie eine **Sprache**auswählen, sind in der Spalte **Sprache** nur die Sprachen verfügbar, für die das semantische Sprachmodell unterstützt wird.  
   
- **Hat nicht SQL Server Abonnenten**  
+ **Hat Nicht-SQL Server-Abonnent**  
  Zeigt, ob die Spalte einen anderen SQL Server-Abonnenten als Microsoft hat.  
   
- **Kategorie der Identitäts Spezifikation**  
+ **Identitätsspezifikationskategorie**  
  Wird erweitert, um die Eigenschaften von **Ist Identity**, **ID-Schrittweite**und **ID-Startwert**anzuzeigen.  
   
  **Ist Identity**  
  Zeigt, ob die ausgewählte Spalte die Identity-Spalte der Tabelle ist. Um die Eigenschaft zu ändern, öffnen Sie die Tabelle im Tabellen-Designer, und bearbeiten Sie die Eigenschaften im **Eigenschaften** -Fenster. Diese Einstellungen gelten nur für Spalten mit einem zahlenbasierten Datentyp wie *int*.  
   
- **ID-Inkrement**  
+ **ID-Schrittweite**  
  Zeigt an, in welchen Schrittweiten der **ID-Startwert** für jede weitere Zeile erhöht wird. Wenn Sie nichts eingeben, wird standardmäßig der Wert 1 zugewiesen. Um diese Eigenschaft zu bearbeiten, geben Sie den Wert direkt ein.  
   
- **ID-Seed**  
+ **ID-Startwert**  
  Zeigt den der ersten Zeile der Tabelle zugewiesenen Wert an. Wenn Sie nichts eingeben, wird standardmäßig der Wert 1 zugewiesen. Um diese Eigenschaft zu bearbeiten, geben Sie den Wert direkt ein.  
   
  **Ist deterministisch**  
@@ -169,23 +169,22 @@ ms.locfileid: "62990205"
  **Ist indizierbar**  
  Zeigt, ob die ausgewählte Spalte indiziert werden kann. Beispiel: Nichtdeterministische, berechnete Spalten können nicht indiziert werden.  
   
- **Ist Merge-veröffentlicht**  
+ **Ist mit Mergereplikation veröffentlicht**  
  Zeigt, ob die Spalte eine Mergeveröffentlichung ist.  
   
- **Ist nicht für die Replikation**  
+ **Ist nicht zu replizieren**  
  Gibt an, ob die ursprünglichen Identitätswerte bei der Replikation erhalten bleiben. Um diese Eigenschaft zu bearbeiten, klicken Sie auf ihren Wert, erweitern Sie die Dropdownliste, und wählen Sie einen anderen Wert aus.  
   
- **Wird repliziert**  
+ **Ist repliziert**  
  Zeigt, ob diese Spalte an einem anderen Speicherort repliziert wird.  
   
- **Ist ROWGUID**  
+ **Ist RowGuid**  
  Gibt an, ob [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Spalte als ROWGUID verwendet. Sie können diesen Wert nur für eine Spalte mit dem-Datentyp auf **Yes** festlegen `uniqueidentifier`. Um diese Eigenschaft zu bearbeiten, klicken Sie auf ihren Wert, erweitern Sie die Dropdownliste, und wählen Sie einen anderen Wert aus.  
   
  **Größe**  
  Zeigt die für den Datentyp der Spalte zulässige Größe in Byte an. Beispiel: Ein `nchar`-Datentyp kann eine Länge von 10 besitzen (die Anzahl der Zeichen), würde aber wegen der Unicode-Zeichensätze eine Größe von 20 Byte besitzen.  
   
 > [!NOTE]  
->  Die Länge eines `varchar(max)`-Datentyps variiert je nach Zeile. sp_help gibt (-1) als Länge der `varchar(max)` Spalte zurück. 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] zeigt -1 als Spaltengröße an.  
+>  Die Länge eines `varchar(max)`-Datentyps variiert je nach Zeile. sp_help gibt (-1) als Länge der `varchar(max)` Spalte zurück. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] zeigt -1 als Spaltengröße an.  
   
   

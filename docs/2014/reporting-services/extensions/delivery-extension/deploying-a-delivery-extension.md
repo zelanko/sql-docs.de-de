@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b95fbb99affb91743d5b922f748cae5554736f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63164411"
 ---
 # <a name="deploying-a-delivery-extension"></a>Bereitstellen von Übermittlungserweiterungen
@@ -26,7 +26,7 @@ ms.locfileid: "63164411"
   
  Wenn eine Übermittlungserweiterung ersetzt oder aktualisiert wird, bleiben alle Abonnements, die auf die Übermittlungserweiterung verweisen, gültig.  
   
- Nachdem Sie die Übermittlungs Erweiterung geschrieben [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] und in eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] Bibliothek kompiliert haben, müssen Sie die Erweiterung in das entsprechende Verzeichnis kopieren und der entsprechenden [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Konfigurationsdatei einen Eintrag hinzufügen, damit der Berichts Server Sie finden kann.  
+ Nachdem Sie die [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Übermittlungserweiterung geschrieben und in eine [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Bibliothek kompiliert haben, müssen Sie die Erweiterung in das entsprechende Verzeichnis kopieren und einen Eintrag in der entsprechenden [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Konfigurationsdatei vornehmen, damit die Erweiterung vom Berichtsserver gefunden werden kann.  
   
 ## <a name="configuration-file-extension-element"></a>Extension-Element für die Konfigurationsdatei  
  Übermittlungserweiterungen, die Sie für den Berichtsserver bereitstellen, müssen in der Konfigurationsdatei als `Extension`-Elemente hinzugefügt werden. Die Konfigurationsdatei für den Berichtsserver heißt RSReportServer.config.  
@@ -139,7 +139,7 @@ ms.locfileid: "63164411"
  Sie können prüfen, ob die Übermittlungserweiterung erfolgreich auf dem Berichtsserver bereitgestellt wurde, indem Sie die Webdienstmethode <xref:ReportService2010.ReportingService2010.ListExtensions%2A> verwenden. Sie können auch den Berichts-Manager öffnen und prüfen, ob die Erweiterung in der Liste der für ein Abonnement verfügbaren Übermittlungserweiterungen enthalten ist. Weitere Informationen zu Berichts-Manager und Abonnements finden Sie unter [Abonnements und Übermittlung &#40;Reporting Services&#41;](../../subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Implementieren von Übermittlungserweiterungen](implementing-a-delivery-extension.md)   
- [Reporting Services Extension Library (Reporting Services-Erweiterungsbibliothek)](../reporting-services-extension-library.md)  
+ [Implementieren einer Übermittlungs Erweiterung](implementing-a-delivery-extension.md)   
+ [Reporting Services-Erweiterungsbibliothek](../reporting-services-extension-library.md)  
   
   

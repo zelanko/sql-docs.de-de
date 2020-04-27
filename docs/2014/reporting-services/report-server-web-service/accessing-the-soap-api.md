@@ -22,10 +22,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ab8db976275a60cfbf1e0afb78457afad18fc366
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63012262"
 ---
 # <a name="accessing-the-soap-api"></a>Accessing the SOAP API
@@ -51,9 +51,9 @@ http://server/reportserver/ReportService2010.asmx?wsdl
   
  In der folgenden Tabelle werden die einzelnen Elemente in der URL beschrieben.  
   
-|URL-Element|BESCHREIBUNG|  
+|URL-Element|Beschreibung|  
 |-----------------|-----------------|  
-|*Servers*|Der Name des Servers, auf dem der Berichtsserver eingesetzt wird.|  
+|*server*|Der Name des Servers, auf dem der Berichtsserver eingesetzt wird.|  
 |*Report Server*|Der Name des Ordners, der den XML-Webdienst enthält. Dieser wird während des Setups konfiguriert.|  
 |*\<Endpunkt Name>. asmx*|Der Name des Webdienst-Endpunkts.|  
   

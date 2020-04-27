@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff434efd0a9f4fcb3316143e598e636bff85f487
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63157829"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Einführung in speicheroptimierte Tabellen
@@ -28,7 +28,7 @@ ms.locfileid: "63157829"
   
  Die folgende Abbildung veranschaulicht die Multiversionsverwaltung. Die Abbildung zeigt eine Tabelle mit drei Zeilen, und jede Zeile weist unterschiedliche Versionen auf.  
   
- ![Multiversionsverwaltung.](../../database-engine/media/hekaton-tables-1.gif "Multiversionsverwaltung.")  
+ ![Multiversionsverwaltung](../../database-engine/media/hekaton-tables-1.gif "Multiversionsverwaltung")  
   
  Die Tabelle enthält drei Zeilen: r1, r2 und r3. r1 verfügt über drei Versionen, r2 über zwei Versionen und r3 über vier Versionen. Beachten Sie, dass unterschiedliche Versionen derselben Zeile nicht unbedingt aufeinander folgende Speicheradressen belegen. Die unterschiedlichen Zielversionen können über die Tabellendatenstruktur verteilt sein.  
   
@@ -52,11 +52,11 @@ ms.locfileid: "63157829"
   
  In der folgenden Tabelle wird der systemeigene und interpretierte [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Zugriff für verschiedene Objekte zusammengefasst.  
   
-|Funktion|Zugriff mithilfe einer systemintern kompilierten gespeicherten Prozedur|Interpretierter [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Zugriff|CLR-Zugriff|  
+|Feature|Zugriff mithilfe einer systemintern kompilierten gespeicherten Prozedur|Interpretierter [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Zugriff|CLR-Zugriff|  
 |-------------|-------------------------------------------------------|-------------------------------------------|----------------|  
 |Speicheroptimierte Tabellen|Ja|Ja|Nein <sup>1</sup>|  
-|[Speicheroptimierte Tabellenvariablen](../../database-engine/memory-optimized-table-variables.md)|Ja|Ja|Nein|  
-|[Nativ kompilierte gespeicherte Prozeduren](https://msdn.microsoft.com/library/dn133184.aspx)|Sie können die EXECUTE-Anweisung nicht verwenden, um eine gespeicherte Prozedur über eine systemintern kompilierte gespeicherte Prozedur auszuführen.|Ja|Nein <sup>1</sup>|  
+|[Speicher optimierte Tabellen Variablen](../../database-engine/memory-optimized-table-variables.md)|Ja|Ja|Nein|  
+|[System intern kompilierte gespeicherte Prozeduren](https://msdn.microsoft.com/library/dn133184.aspx)|Sie können die EXECUTE-Anweisung nicht verwenden, um eine gespeicherte Prozedur über eine systemintern kompilierte gespeicherte Prozedur auszuführen.|Ja|Nein <sup>1</sup>|  
   
  <sup>1</sup> Sie können nicht über die Kontext Verbindung (die Verbindung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , wenn ein CLR-Modul ausgeführt wird) auf eine Speicher optimierte Tabelle oder eine System intern kompilierte gespeicherte Prozedur zugreifen. Sie können jedoch eine andere Verbindung erstellen und öffnen, über die Sie auf speicheroptimierte Tabellen und systemintern kompilierte gespeicherte Prozeduren zugreifen können. Weitere Informationen finden Sie unter [reguläre und Kontext Verbindungen](../clr-integration/data-access/context-connections-vs-regular-connections.md).  
   
@@ -66,7 +66,7 @@ ms.locfileid: "63157829"
  Kommunikation  
  Eine Anwendung mit vielen Aufrufen kurzer gespeicherter Prozeduren erzielt möglicherweise einen kleineren Leistungszuwachs als eine Anwendung, bei der weniger Aufrufe und zusätzliche Funktionen in jede gespeicherte Prozedur implementiert sind.  
   
- [!INCLUDE[tsql](../../../includes/tsql-md.md)]Niederlage  
+ [!INCLUDE[tsql](../../../includes/tsql-md.md)] Ausführung  
  In-Memory OLTP gewährleistet die beste Leistung bei systemintern kompilierten gespeicherten Prozeduren im Gegensatz zu interpretierten gespeicherten Prozeduren oder Abfrageausführungen. Gespeicherte Prozeduren, durch die andere gespeicherte Prozeduren ausgeführt werden, können nicht systemintern kompiliert werden. Allerdings kann der Zugriff auf speicheroptimierte Tabellen aus solchen gespeicherten Prozeduren von Nutzen sein.  
   
  Bereichsscan vs. Punktsuche  

@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a0f4e99247fe1a4a80734e56d8db1e05b961e43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62961066"
 ---
 # <a name="oledb-errors-event-class"></a>OLEDB Errors-Ereignisklasse
-  Die OLEDB Errors-Ereignisklasse tritt [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in auf, wenn ein-Rückruf eines OLE DB Anbieters einen Fehler zurückgibt. Verwenden Sie diese Ereignisklasse in Ablaufverfolgungen, um ein fehlgeschlagenes HRESULT von einem OLE DB-Anbieter anzuzeigen.  
+  Die Ereignisklasse „OLEDB Errors“ tritt in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf, wenn beim Aufruf eines OLE DB-Anbieters ein Fehler zurückgegeben wird. Verwenden Sie diese Ereignisklasse in Ablaufverfolgungen, um ein fehlgeschlagenes HRESULT von einem OLE DB-Anbieter anzuzeigen.  
   
  Wenn die OLEDB Errors-Ereignisklasse in eine Ablaufverfolgung eingeschlossen ist, ist der Verarbeitungsaufwand davon abhängig, wie häufig im Rahmen der Ablaufverfolgung OLE DB-Anbieterfehler für die Datenbank auftreten. Wenn solche Fehler häufig auftreten, kann die Gesamtleistung durch die Ablaufverfolgung erheblich beeinträchtigt werden.  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62961066"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |ApplicationName|`nvarchar`|Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
 |ClientProcessID|`int`|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Client die Clientprozess-ID angibt.|9|Ja|  
-|DatabaseID|`int`|Die ID der Datenbank, die durch die USE *database* -Anweisung angegeben wurde, bzw. die ID der Standarddatenbank, wenn für eine bestimmte Instanz keine USE *database* -Anweisung ausgegeben wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]zeigt den Namen der Datenbank an, wenn die ServerName-Datenspalte in der Ablauf Verfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|Ja|  
+|DatabaseID|`int`|Die ID der Datenbank, die durch die use *Database* -Anweisung angegeben wurde, oder die Standard *Datenbank* , wenn für eine bestimmte Instanz keine USE database-Anweisung ausgegeben wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die ServerName-Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|Ja|  
 |DatabaseName|`nvarchar`|Name der Datenbank, in der die Benutzeranweisung ausgeführt wird.|35|Ja|  
 |Fehler|`int`|Vom Anbieter zurückgegebenes HRESULT.|31|Ja|  
 |EventClass|`int`|Ereignistyp = 61.|27|Nein|  
@@ -55,7 +55,7 @@ ms.locfileid: "62961066"
 |TransactionID|`bigint`|Die vom System zugewiesene ID der Transaktion.|4|Ja|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [sp_trace_setevent &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [OLE-Automatisierungsobjekte in Transact-SQL](../stored-procedures/ole-automation-objects-in-transact-sql.md)  
   
   

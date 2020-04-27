@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8db42e567b80ca282b89d9be29fffff3e643ea7a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015649"
 ---
 # <a name="view-statistics-properties"></a>Anzeigen von Statistikeigenschaften
@@ -31,20 +31,20 @@ ms.locfileid: "63015649"
   
      [Sicherheit](#Security)  
   
--   **So zeigen Sie Statistik Eigenschaften an mit:**  
+-   **So zeigen Sie Statistikeigenschaften an mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Zum Anzeigen des Statistikobjekts muss der Benutzer Besitzer der Tabelle oder Mitglied der festen Serverrolle `sysadmin` bzw. der festen Datenbankrollen `db_owner` oder `db_ddladmin` sein.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-view-statistics-properties"></a>So zeigen Sie Statistikeigenschaften an  
   
@@ -58,14 +58,14 @@ ms.locfileid: "63015649"
   
 5.  Klicken Sie mit der rechten Maustaste auf das Statistikobjekt, dessen Eigenschaften Sie anzeigen möchten, und wählen Sie **Eigenschaften**aus.  
   
-6.  Wählen Sie im Dialogfeld **Statistikeigenschaften –** _statistics_name_ im Bereich **Seite auswählen** die Option **Details**aus.  
+6.  Klicken Sie im Dialogfeld **Statistikeigenschaften -** _statistics_name_ im Bereich **Seite auswählen** auf die Option **Details**.  
   
-     Die folgenden Eigenschaften werden im Dialogfeld **Statistikeigenschaften –****statistics_name** _statistics_name_ angezeigt.  
+     Die folgenden Eigenschaften werden auf der Seite **Details** im Dialogfeld **Statistikeigenschaften -** _statistics_name_ angezeigt.  
   
      **Tabellenname**  
      Zeigt den Namen der Tabelle an, die von den Statistiken beschrieben wird.  
   
-     **Statistik Name**  
+     **Statistikname**  
      Zeigt den Namen des Datenbankobjekts an, in dem die Statistiken gespeichert sind.  
   
      **Statistik für INDEXstatistics_name**  
@@ -82,33 +82,33 @@ ms.locfileid: "63015649"
      **Zeilen**  
      Gesamtanzahl der Zeilen in der Tabelle oder indizierten Sicht zum Zeitpunkt des letzten Updates der Statistik. Wenn die Statistik gefiltert wird oder einem gefilterten Index entspricht, kann die Anzahl der Zeilen geringer als die Anzahl der Zeilen in der Tabelle sein.  
   
-     **Stichproben von Zeilen**  
+     **Rows Sampled**  
      Gesamtzahl der Zeilen, die für die statistischen Berechnungen in die Stichprobe aufgenommen wurden. Wenn Rows Sampled < Rows, sind das angezeigte Histogramm und die Dichteergebnisse Schätzungen auf Grundlage der als Stichprobe entnommenen Zeilen.  
   
      **Schritte**  
      Anzahl der Schritte im Histogramm. Jeder Schritt umfasst einen Bereich von Spaltenwerten gefolgt von einem oberen Spaltengrenzwert. Die Histogrammschritte werden in der Statistik in der ersten Schlüsselspalte definiert. Die maximale Anzahl von Schritten ist 200.  
   
-     **Gas**  
+     **Density**  
      Berechnet als 1 / *verschiedene Werte* für alle Werte in der ersten Schlüsselspalte des Statistikobjekts mit Ausnahme der Begrenzungswerte des Histogramms. Dieser Dichtewert wird vom Abfrageoptimierer nicht verwendet und für die Abwärtskompatibilität mit Versionen vor SQL Server 2008 angezeigt.  
   
-     **Durchschnittliche Schlüssellänge**  
+     **Average Key Length**  
      Durchschnittliche Anzahl von Bytes pro Wert für alle Schlüsselspalten im Statistikobjekt.  
   
-     **Zeichen folgen Index**  
-     "Ja" gibt an, dass das Statistikobjekt Statistiken über Zusammenfassungen von Zeichenfolgen enthält, um die Kardinalitätsschätzungen für Abfrageprädikate, die den LIKE-Operator verwenden, zu verbessern, z. B. `WHERE ProductName LIKE '%Bike'`. Zeichen folgen Zusammenfassungs Statistiken werden getrennt vom Histogramm gespeichert und in der ersten Schlüssel Spalte des Statistik Objekts erstellt, wenn Sie vom Typ **char**, **varchar**, **NCHAR**, **nvarchar**, **varchar (max)**, **nvarchar (max)**, **Text**oder **ntext**ist.  
+     **String Index**  
+     "Ja" gibt an, dass das Statistikobjekt Statistiken über Zusammenfassungen von Zeichenfolgen enthält, um die Kardinalitätsschätzungen für Abfrageprädikate, die den LIKE-Operator verwenden, zu verbessern, z. B. `WHERE ProductName LIKE '%Bike'`. Zusammenfassungen von Zeichenfolgen werden getrennt vom Histogramm gespeichert und in der ersten Schlüsselspalte des Statistikobjekts erstellt, wenn es vom Typ **char**, **varchar**, **nchar**, **nvarchar**, **varchar(max)** , **nvarchar(max)** , **text**, or **ntext**ist.  
   
-     **Filter Ausdruck**  
+     **Filterausdruck**  
      Prädikat für die Teilmenge von Tabellenzeilen, die im Statistikobjekt enthalten sind. NULL = Nicht gefilterte Statistik.  
   
-     **Ungefilterte Zeilen**  
+     **Unfiltered Rows**  
      Gesamtzahl von Zeilen in der Tabelle vor dem Anwenden des Filterausdrucks. Wenn Filter Expression NULL ist, ist Unfiltered Rows gleich Rows.  
   
      Die folgenden Informationen beschreiben die Spalten, die im Resultset für DENSITY_VECTOR zurückgegeben werden.  
   
-     **Alle dichten**  
+     **All Density**  
      Die Dichte ist 1 / *verschiedene Werte*. Die Ergebnisse zeigen die Dichte für jedes Präfix von Spalten im Statistikobjekt mit einer Zeile pro Dichte an. Bei einem unterschiedlichen Wert handelt es sich um eine unterschiedliche Liste der Spaltenwerte pro Zeile und pro Spaltenpräfix. Wenn das Statistikobjekt beispielsweise Schlüsselspalten (A, B, C) enthält, geben die Ergebnisse die Dichte der unterschiedlichen Wertelisten jedes dieser Spaltenpräfixe an: (A), (A, B) und (A, B, C). Mit dem Präfix (A, B, C) ist jede dieser Listen eine Liste unterschiedlicher Werte: (3, 5, 6), (4, 4, 6), (4, 5, 6), (4, 5, 7). Mit dem Präfix (A, B) weisen dieselben Spaltenwerte diese Listen unterschiedlicher Werte auf: (3, 5), (4, 4) und (4, 5).  
   
-     **Durchschnittliche Länge**  
+     **Average Length**  
      Durchschnittliche Länge in Bytes zum Speichern einer Liste der Spaltenwerte für das Spaltenpräfix. Wenn die Werte in der Liste (3, 5, 6) beispielsweise jeweils 4 Bytes erfordern, beträgt die Länge 12 Bytes.  
   
      **Spalten**  
@@ -133,7 +133,7 @@ ms.locfileid: "63015649"
   
 7.  Klicken Sie auf **OK**.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-view-statistics-properties"></a>So zeigen Sie Statistikeigenschaften an  
   

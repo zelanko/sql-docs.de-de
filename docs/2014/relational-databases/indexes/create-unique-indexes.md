@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cf786e48e6e76ca6a16a0a50a954a2a07d3f7a66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63162352"
 ---
 # <a name="create-unique-indexes"></a>Erstellen eindeutiger Indizes
@@ -50,9 +50,9 @@ ms.locfileid: "63162352"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Benefits"></a> Vorteile eines eindeutigen Indexes  
+###  <a name="benefits-of-a-unique-index"></a><a name="Benefits"></a> Vorteile eines eindeutigen Indexes  
   
 -   Eindeutige Indizes für mehrere Spalten stellen sicher, dass jede Kombination der Werte in der indizierten Spalte eindeutig ist. Wenn z. B. ein eindeutiger Index für eine Kombination der Spalten **LastName**, **FirstName**und **MiddleName** erstellt wird, können keine zwei Zeilen in der Tabelle dieselbe Kombination der Werte in diesen Spalten aufweisen.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "63162352"
   
 -   Eindeutige Indizes stellen weitere hilfreiche Informationen für den Abfrageoptimierer bereit, der effizientere Ausführungspläne erstellen kann.  
   
-###  <a name="Implementations"></a> Typische Implementierungen  
+###  <a name="typical-implementations"></a><a name="Implementations"></a> Typische Implementierungen  
  Eindeutige Indizes werden auf folgende Weise implementiert:  
   
 -   **PRIMARY KEY- oder UNIQUE-Einschränkung**  
@@ -83,18 +83,18 @@ ms.locfileid: "63162352"
   
      Zum Erstellen einer indizierten Sicht wird ein eindeutiger gruppierter Index für mindestens eine Spalte der Sicht definiert. Diese Sicht wird ausgeführt und das Resultset auf der Blattebene des Indexes gespeichert, so wie auch Tabellendaten in einem gruppierten Index gespeichert werden. Weitere Informationen finden Sie unter [Erstellen von indizierten Sichten](../views/views.md).  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Ein eindeutiger Index, die UNIQUE-Einschränkung oder die PRIMARY KEY-Einschränkung kann nicht erstellt werden, wenn in den Daten doppelte Schlüsselwerte vorhanden sind.  
   
 -   Ein eindeutiger, nicht gruppierter Index kann eingeschlossene Nichtschlüsselspalten enthalten. Weitere Informationen finden Sie unter [Create Indexes with Included Columns](create-indexes-with-included-columns.md).  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Der Benutzer muss ein Mitglied der festen Serverrolle **sysadmin** bzw. der festen Datenbankrollen **db_ddladmin** und **db_owner** sein.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-a-unique-index-by-using-the-table-designer"></a>So erstellen Sie einen eindeutigen Index mit dem Tabellen-Designer  
   
@@ -124,7 +124,7 @@ ms.locfileid: "63162352"
   
 13. Klicken Sie auf **Schließen**.  
   
-14. Klicken Sie im Menü **Datei** auf ****_table_name_speichern.  
+14. Klicken Sie im Menü **Datei** auf **Save**_table_name_speichern.  
   
 #### <a name="create-a-unique-index-by-using-object-explorer"></a>Erstellen eines eindeutigen Indexes mit dem Objekt-Explorer  
   
@@ -142,13 +142,13 @@ ms.locfileid: "63162352"
   
 7.  Klicken Sie unter **Indexschlüsselspalten** auf **Hinzufügen…** .  
   
-8.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus**_table_name_ das Kontrollkästchen bzw. die Kontrollkästchen der Tabellenspalte oder der Spalten, die dem eindeutigen Index hinzugefügt werden sollen.  
+8.  Aktivieren Sie im Dialogfeld **Spalten auswählen aus**_table_name_ die Kontrollkästchen der Tabellenspalten, die dem eindeutigen Index hinzugefügt werden sollen.  
   
 9. Klicken Sie auf **OK**.  
   
 10. Klicken Sie im Dialogfeld **Neuer Index** auf **OK**.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-create-a-unique-index-on-a-table"></a>So erstellen Sie einen eindeutigen Index auf einer Tabelle  
   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fdf00d1291180197f66cd6cb23cf27f10659c68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63183017"
 ---
 # <a name="sql-server-resource-pool-stats-object"></a>SQL Server, 'Statistiken für Ressourcenpools'-Objekt
@@ -43,16 +43,16 @@ ms.locfileid: "63183017"
 |Zielspeicher (KB)|Der Zielarbeitsspeicher in Kilobyte (KB), die der Ressourcenpool, auf Grundlage der Einstellungen für den Ressourcenpool und des Serverstatus, abzurufen versucht.|  
 |E/A-Lesevorgänge von Datenträger/s|Die Anzahl der Lesevorgänge vom Datenträger in der letzten Sekunde.|  
 |Gedrosselte E/A-Lesevorgänge auf Datenträger/s|Die Anzahl der in der letzten Sekunde gedrosselten Lesevorgänge.|  
-|Byte gelesen/s |Die Anzahl der in der letzten Sekunde vom Datenträger gelesenen Bytes.|  
+|Byte gelesen/s|Die Anzahl der in der letzten Sekunde vom Datenträger gelesenen Bytes.|  
 |Durchschnittl. Datenträgerzeit (ms)|Die durchschnittliche Zeit (in Millisekunden) eines Lesevorgangs vom Datenträger.|  
 |E/A-Schreibvorgänge auf Datenträger/s|Die Anzahl der Schreibvorgänge auf den Datenträger in der letzten Sekunde.|  
 |Gedrosselte E/A-Schreibvorgänge auf Datenträger/s|Die Anzahl der in der letzten Sekunde gedrosselten Schreibvorgänge.|  
-| Byte geschrieben/s|Die Anzahl der in der letzten Sekunde auf den Datenträger geschriebenen Bytes.|  
+|Byte geschrieben/s|Die Anzahl der in der letzten Sekunde auf den Datenträger geschriebenen Bytes.|  
 |Durchschnittl. Datenträgerzeit (ms)/Schreiben E/A|Die durchschnittliche Zeit (in Millisekunden) eines Schreibvorgangs auf den Datenträger.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](monitor-resource-usage-system-monitor.md)   
- [SQL Server, 'Statistiken für Arbeitsauslastungsgruppen'-Objekt](sql-server-workload-group-stats-object.md)   
+ [Überwachen der Ressourcennutzung &#40;System Monitor&#41;](monitor-resource-usage-system-monitor.md)   
+ [SQL Server, Arbeits Auslastungs Gruppen-Statistik Objekt](sql-server-workload-group-stats-object.md)   
  [Ressourcenkontrolle](../resource-governor/resource-governor.md)  
   
   

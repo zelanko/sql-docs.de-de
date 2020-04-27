@@ -24,16 +24,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cc9657d8db84b67abe324aea9614dd27c2d9df83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033727"
 ---
 # <a name="statistics"></a>Statistik
   Der Abfrageoptimierer verwendet Statistiken zum Erstellen von Abfrageplänen, die die Abfrageleistung verbessern. Bei den meisten Abfragen generiert der Abfrageoptimierer automatisch die notwendigen Statistiken für einen hochwertigen Abfrageplan. In einigen Fällen müssen Sie weitere Statistiken erstellen oder den Abfrageentwurf ändern, um optimale Ergebnisse zu erzielen. Dieses Thema enthält eine Erläuterung von Statistikkonzepten sowie Richtlinien zur effektiven Verwendung von Abfrageoptimierungsstatistiken.  
   
-##  <a name="DefinitionQOStatistics"></a> Komponenten und Konzepte  
+##  <a name="components-and-concepts"></a><a name="DefinitionQOStatistics"></a> Komponenten und Konzepte  
  Statistik  
  Statistiken zur Abfrageoptimierung sind Objekte, die statistische Informationen über die Verteilung von Werten in Spalten einer Tabelle oder indizierten Sicht enthalten. Der Abfrageoptimierer verwendet diese Statistiken, um die *Kardinalität*oder Anzahl von Zeilen im Abfrageergebnis zu schätzen. Diese *Kardinalitätsschätzungen* ermöglichen es dem Abfrageoptimierer, einen hochwertigen Abfrageplan zu erstellen. Beispielsweise kann der Abfrageoptimierer Kardinalitätsschätzungen verwenden, um statt des ressourcenintensiveren Index Scan-Operators den Index Seek-Operator auszuwählen und so die Abfrageleistung zu verbessern.  
   
@@ -105,7 +105,7 @@ ORDER BY s.name;
 |-|  
 |**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] bis [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
   
-##  <a name="CreateStatistics"></a>Zeitpunkt der Erstellung von Statistiken  
+##  <a name="when-to-create-statistics"></a><a name="CreateStatistics"></a> Zeitpunkt der Erstellung von Statistiken  
  Der Abfrageoptimierer erstellt automatisch folgende Statistiken:  
   
 1.  Bei der Indexerstellung berechnet der Abfrageoptimierer Statistiken für Indizes, die sich auf Tabellen oder Sichten beziehen. Diese Statistiken werden für die Schlüsselspalten des Indexes erstellt. Wenn es sich um einen gefilterten Index handelt, erstellt der Abfrageoptimierer gefilterte Statistiken für die gleiche Teilmenge von Zeilen, die für den gefilterten Index angegeben wurden. Weitere Informationen zu gefilterten Indizes finden Sie unter [Erstellen gefilterter Indizes](../indexes/create-filtered-indexes.md) und [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql).  
@@ -191,11 +191,11 @@ GO
   
 -   Löschen Sie temporäre Statistiken mit der Anweisung [DROP STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-statistics-transact-sql) -Anweisung generierte Statistiken erstellt wurden.  
   
--   Überwachen Sie Statistiken mit den Katalogsichten **sys.stats** und **sys.stats_columns**. **sys_stats** enthält die **is_temporary** Spalte, um anzugeben, welche Statistiken permanent sind und welche temporär sind.  
+-   Überwachen Sie Statistiken mit den Katalogsichten **sys.stats** und **sys.stats_columns** . **sys_stats** beinhaltet die Spalte **is_temporary** . Damit wird angegeben, welche Statistiken dauerhaft und welche temporär sind.  
   
  Da temporäre Statistiken in `tempdb` gespeichert werden, werden durch einen Neustart des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Diensts alle temporären Statistiken entfernt.  
   
-##  <a name="UpdateStatistics"></a>Zeitpunkt der Statistik Aktualisierung  
+##  <a name="when-to-update-statistics"></a><a name="UpdateStatistics"></a>Zeitpunkt der Statistikaktualisierung  
  Der Abfrageoptimierer stellt fest, wann Statistiken veraltet sein könnten, und aktualisiert sie, sobald sie für einen Abfrageplan benötigt werden. In einigen Fällen können Sie den Abfrageplan und damit die Abfrageleistung verbessern, indem Sie Statistiken häufiger aktualisieren, als dies bei Aktivierung von AUTO_UPDATE_STATISTICS der Fall ist. Sie können Statistiken mit der UPDATE STATISTICS-Anweisung oder der gespeicherten Prozedur sp_updatestats aktualisieren.  
   
  Durch das Update von Statistiken wird sichergestellt, dass Abfragen anhand aktueller Statistiken kompiliert werden. Dies führt jedoch dazu, dass Abfragen neu kompiliert werden. Es empfiehlt sich, Statistiken nicht zu oft zu aktualisieren und die Vorteile optimierter Abfragepläne gegen den Zeitaufwand für die Neukompilierung von Abfragen abzuwägen. Die Entscheidung hängt von der verwendeten Anwendung ab.  
@@ -225,7 +225,7 @@ GO
   
  Vorgänge wie das Neuerstellen, Defragmentieren oder Neuorganisieren eines Indexes wirken sich nicht auf die Verteilung von Daten aus. Folglich müssen Sie keine Statistiken aktualisieren, nachdem Sie die Vorgänge ALTER INDEX REBUILD, DBCC REINDEX, DBCC INDEXDEFRAG oder ALTER INDEX REORGANIZE ausgeführt haben. Der Abfrageoptimierer aktualisiert Statistiken, wenn mit ALTER INDEX REBUILD oder DBCC DBREINDEX ein Index für eine Tabelle oder Sicht erstellt wird. Dieses Statistikupdate tritt jedoch als Nebenprodukt der Indexneuerstellung auf. Der Abfrageoptimierer führt keine Statistikaktualisierung nach einem DBCC INDEXDEFRAG-Vorgang oder ALTER INDEX REORGANIZE-Vorgang aus.  
   
-##  <a name="DesignStatistics"></a>Abfragen, die Statistiken effektiv verwenden  
+##  <a name="queries-that-use-statistics-effectively"></a><a name="DesignStatistics"></a> Abfragen mit effektiver Verwendung von Statistiken  
  Bestimmte Abfrageimplementierungen, z. B. lokale Variablen und komplexe Ausdrücke im Abfrageprädikat, können zu suboptimalen Abfrageplänen führen. Sie können dies verhindern, indem Sie Abfrageentwurfsrichtlinien für die effektive Verwendung von Statistiken befolgen. Weitere Informationen zu Abfrageprädikaten finden Sie unter [Suchbedingung &#40;Transact-SQL&#41;](/sql/t-sql/queries/search-condition-transact-sql).  
   
  Zur Optimierung von Abfrageplänen können Sie Abfrageentwurfsrichtlinien anwenden, die Statistiken effektiv einsetzen, um *Kardinalitätsschätzungen* für Ausdrücke, Variablen und Funktionen in Abfrageprädikaten zu verbessern. Wenn der Abfrageoptimierer den Wert eines Ausdrucks, einer Variablen oder Funktion nicht kennt, weiß er nicht, welchen Wert er im Histogramm suchen soll. Folglich kann nicht die beste Kardinalitätsschätzung aus dem Histogramm abgerufen werden. Für alle als Stichprobe entnommenen Zeilen im Histogramm verwendet der Abfrageoptimierer stattdessen die durchschnittliche Anzahl von Zeilen pro eindeutigem Wert als Basis für die Kardinalitätsschätzung. Dies führt zu suboptimalen Kardinalitätsschätzungen und kann die Abfrageleistung beeinträchtigen.  
@@ -324,11 +324,11 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von Statistiken &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-statistics-transact-sql)   
- [UPDATE STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/update-statistics-transact-sql)   
- [sp_updatestats &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)   
- [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)   
- [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
- [DROP STATISTICS &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-statistics-transact-sql)   
+ [Aktualisieren von Statistiken &#40;Transact-SQL-&#41;](/sql/t-sql/statements/update-statistics-transact-sql)   
+ [sp_updatestats &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-updatestats-transact-sql)   
+ [DBCC SHOW_STATISTICS &#40;Transact-SQL-&#41;](/sql/t-sql/database-console-commands/dbcc-show-statistics-transact-sql)   
+ [ALTER DATABASE SET-Optionen &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)   
+ [DROP STATISTICS &#40;Transact-SQL-&#41;](/sql/t-sql/statements/drop-statistics-transact-sql)   
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
- [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
+ [Alter Index &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-index-transact-sql)   
  [Erstellen gefilterter Indizes](../indexes/create-filtered-indexes.md)  

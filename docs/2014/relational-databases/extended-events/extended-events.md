@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 485c748aad8b07a5e8b92a02c03d51a82e5f362a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62990701"
 ---
 # <a name="extended-events"></a>Erweiterte Ereignisse
@@ -25,16 +25,15 @@ ms.locfileid: "62990701"
   
  Weitere Informationen über die Funktion Erweiterte Ereignisse finden Sie online unter [Erweiterte Ereignisse von SQL Server](https://blogs.msdn.com/b/extended_events/).  
   
-## <a name="benefits-of-includessnoversionincludesssnoversion-mdmd-extended-events"></a>Vorteile von erweiterten Ereignissen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- Erweiterte Ereignisse ist ein Lightweight-Leistungsüberwachungssystem, das sehr wenige Leistungsressourcen verwendet. Erweiterte Ereignisse stellt zwei grafische Benutzeroberflächen (**Assistent für neue Sitzungen** und **neue Sitzung**) zum Erstellen, ändern, anzeigen und Analysieren der Sitzungsdaten bereit.  
+## <a name="benefits-of-ssnoversion-extended-events"></a>Vorteile von erweiterten Ereignissen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+ Erweiterte Ereignisse ist ein Lightweight-Leistungsüberwachungssystem, das sehr wenige Leistungsressourcen verwendet. Die Funktion „Erweiterte Ereignisse“ stellt zwei grafische Benutzeroberflächen (**Assistent für neue Sitzungen** und **Neue Sitzung**) zum Erstellen, Ändern, Anzeigen und Analysieren der Sitzungsdaten bereit.  
   
 ## <a name="extended-events-concepts"></a>Konzepte für erweiterte Ereignisse  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Die Funktion „Erweiterte Ereignisse“ basiert auf vorhandenen Konzepten, z.B. einem Ereignis oder einem Ereignisconsumer, verwendet Konzepte aus der Ereignisablaufverfolgung für Windows und führt neue Konzepte ein.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Die Funktion „Erweiterte Ereignisse“ basiert auf vorhandenen Konzepten, z.B. einem Ereignis oder einem Ereignisconsumer, verwendet Konzepte aus der Ereignisablaufverfolgung für Windows und führt neue Konzepte ein.  
   
  In der folgenden Tabelle werden die Konzepte von "Erweiterte Ereignisse" beschrieben.  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Pakete für erweiterte Ereignisse von SQL Server](sql-server-extended-events-packages.md)|Beschreibt die Pakete für erweiterte Ereignisse, in denen Objekte enthalten sind, mit denen Daten beim Ausführen einer Sitzung für erweiterte Ereignisse abgerufen und verarbeitet werden.|  
 |[Ziele für erweiterte Ereignisse von SQL Server](../../database-engine/sql-server-extended-events-targets.md)|Beschreibt die Ereignisconsumer, die während einer Ereignissitzung Daten empfangen können.|  
@@ -74,7 +73,7 @@ ms.locfileid: "62990701"
   
 -   Die Möglichkeit zur dynamischen Überwachung aktiver Prozesse mit minimaler Beeinträchtigung dieser Prozesse.  
   
--   Eine standardmäßige Systemintegritätssitzung, die ohne merkliche Auswirkungen auf die Leistung ausgeführt wird. In der Sitzung werden Systemdaten erfasst, mit deren Hilfe Sie Leistungsprobleme beheben können. Weitere Informationen finden Sie unter [Verwenden der system_health-Sitzung](use-the-ssms-xe-profiler.md).  
+-   Eine standardmäßige Systemintegritätssitzung, die ohne merkliche Auswirkungen auf die Leistung ausgeführt wird. In der Sitzung werden Systemdaten erfasst, mit deren Hilfe Sie Leistungsprobleme beheben können. Weitere Informationen finden Sie unter [Verwenden der system_health Sitzung](use-the-ssms-xe-profiler.md).  
   
 ## <a name="extended-events-tasks"></a>Tasks für erweiterte Ereignisse  
  Durch Verwenden von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] zum Ausführen von [!INCLUDE[tsql](../../includes/tsql-md.md)] -DDL-Anweisungen (Data Definition Language), dynamischen Verwaltungssichten und -funktionen oder Katalogsichten können Sie einfache oder komplexe Problembehandlungslösungen für erweiterte Ereignisse von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für Ihre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Umgebung erstellen.  
@@ -83,7 +82,7 @@ ms.locfileid: "62990701"
 |----------------------|-----------|  
 |Verwenden Sie den **Objekt-Explorer** , um Ereignissitzungen zu verwalten.|[Verwalten von Ereignissitzungen im Objekt-Explorer](../../ssms/object/object-explorer.md)|  
 |Beschreibt, wie Sie eine Sitzung für erweiterte Ereignisse erstellen.|[Erstellen einer Sitzung für erweiterte Ereignisse](../../database-engine/create-an-extended-events-session.md)|  
-|Beschreibt, wie Sie Zieldaten anzeigen und aktualisieren.|[Anzeigen von Ereignissitzungsdaten](../../database-engine/view-event-session-data.md)|  
+|Beschreibt, wie Sie Zieldaten anzeigen und aktualisieren.|[Anzeigen von Ereignis Sitzungsdaten](../../database-engine/view-event-session-data.md)|  
 |Beschreibt, wie Sie die folgenden Tools von erweiterten Ereignissen zum Erstellen und Verwalten von erweiterten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ereignissitzungen verwenden:|[Tools für erweiterte Ereignisse](extended-events-tools.md)|  
 |Beschreibt, wie Sie eine Sitzung für erweiterte Ereignisse ändern.|[Ändern einer Sitzung für erweiterte Ereignisse](alter-an-extended-events-session.md)|  
 |Beschreibt, wie Sie Zieldaten kopieren oder exportieren.|[Kopieren oder Exportieren von Zieldaten](../../database-engine/copy-or-export-target-data.md)|  
@@ -94,7 +93,7 @@ ms.locfileid: "62990701"
 |Beschreibt, wie Sie die Ereignisse und Aktionen für erweiterte Ereignisse anzeigen, die den einzelnen SQL-Ablaufverfolgungsereignissen und deren zugeordneten Spalten entsprechen.|[Anzeigen der Entsprechungen von erweiterten Ereignissen für SQL-Ablaufverfolgungsklassen](view-the-extended-events-equivalents-to-sql-trace-event-classes.md)|  
 |Beschreibt, wie Sie die Parameter suchen, die sich festlegen lassen, wenn Sie das ADD TARGET-Argument in CREATE EVENT SESSION oder ALTER EVENT SESSION verwenden.|[Abrufen der konfigurierbaren Parameter für das ADD TARGET-Argument](../../database-engine/get-the-configurable-parameters-for-the-add-target-argument.md)|  
 |Beschreibt, wie Sie ein vorhandenes SQL-Ablaufverfolgungsskript in eine Sitzung für erweiterte Ereignisse konvertieren.|[Konvertieren eines vorhandenen SQL-Ablaufverfolgungsskripts in eine Sitzung für erweiterte Ereignisse](convert-an-existing-sql-trace-script-to-an-extended-events-session.md)|  
-|Beschreibt die Ermittlung der gesperrten Abfragen, des Plans der Abfrage und des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Stapels zum Zeitpunkt der Sperrung.|[Feststellen, welche Abfragen Sperren enthalten](determine-which-queries-are-holding-locks.md)|  
+|Beschreibt die Ermittlung der gesperrten Abfragen, des Plans der Abfrage und des [!INCLUDE[tsql](../../includes/tsql-md.md)] -Stapels zum Zeitpunkt der Sperrung.|[Bestimmen, welche Abfragen Sperren aufrecht haben](determine-which-queries-are-holding-locks.md)|  
 |Beschreibt, wie Sie die Quelle von Sperren identifizieren, die die Datenbankleistung beeinträchtigen.|[Suchen der Objekte, die über die meisten Sperren verfügen](find-the-objects-that-have-the-most-locks-taken-on-them.md)|  
 |Beschreibt, wie Sie anhand von erweiterten Ereignissen mit der Ereignisablaufverfolgung für Windows die Systemaktivität überwachen.|[Überwachen der Systemaktivität mit erweiterten Ereignissen](monitor-system-activity-using-extended-events.md)|  
   
@@ -103,7 +102,7 @@ ms.locfileid: "62990701"
  [DAC-Unterstützung für SQL Server-Objekte und-Versionen](../data-tier-applications/dac-support-for-sql-server-objects-and-versions.md)   
  [Bereitstellen einer Datenebenenanwendung](../data-tier-applications/deploy-a-data-tier-application.md)   
  [Überwachen von Datenebenenanwendungen](../data-tier-applications/monitor-data-tier-applications.md)   
- [Dynamische Verwaltungssichten für erweiterte Ereignisse](../views/views.md)   
+ [Dynamische Verwaltungs Sichten für erweiterte Ereignisse](../views/views.md)   
  [Katalog Sichten für erweiterte Ereignisse &#40;Transact-SQL-&#41;] (~/relational-databases/System-Catalog-views/Extended-Events-Catalog-views-Transact-SQL  
   
   
