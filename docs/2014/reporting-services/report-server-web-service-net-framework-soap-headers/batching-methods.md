@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 8b7ec19101b1abcb2e0fb825923cce7a237149dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63020135"
 ---
 # <a name="batching-methods"></a>Methoden der Batchverarbeitung
@@ -102,7 +102,7 @@ class Sample
 ## <a name="see-also"></a>Weitere Informationen  
  <xref:ReportService2005.ReportingService2005.CancelBatch%2A>   
  <xref:ReportService2005.ReportingService2005.CreateBatch%2A>   
- [Technische Referenz (SSRS)](../technical-reference-ssrs.md)   
- [Using Reporting Services SOAP Headers (Verwenden von Reporting Services SOAP-Headern)](using-reporting-services-soap-headers.md)  
+ [Technische Referenz &#40;SSRS&#41;](../technical-reference-ssrs.md)   
+ [Verwenden von Reporting Services SOAP-Headern](using-reporting-services-soap-headers.md)  
   
   

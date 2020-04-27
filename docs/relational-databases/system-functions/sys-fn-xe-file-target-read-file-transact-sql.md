@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 126b05adab3a07099f6c9110e18e54910f5b2f25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "73982991"
 ---
 # <a name="sysfn_xe_file_target_read_file-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
@@ -47,7 +47,7 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *ADS*  
+ *path*  
  Der Pfad zu den zu lesenden Dateien. der *Pfad* kann Platzhalter enthalten und den Namen einer Datei enthalten. *Pfad ist vom Datentyp* **nvarchar (260)**. Es gibt keinen Standardwert. Im Kontext von Azure SQL-Datenbank handelt es sich bei diesem Wert um eine HTTP-URL zu einer Datei in Azure Storage.
   
  *mdpath*  
@@ -74,11 +74,11 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
 |object_name|**nvarchar(256)**|Der Name des Ereignisses. Lässt keine NULL-Werte zu.|  
 |event_data|**nvarchar(max)**|Der Ereignisinhalt im XML-Format. Lässt keine NULL-Werte zu.|  
 |file_name|**nvarchar(260)**|Der Name der Datei, die das Ereignis enthält. Lässt keine NULL-Werte zu.|  
-|file_offset|**BIGINT**|Der Offset des Blocks in der Datei, der das Ereignis enthält. Lässt keine NULL-Werte zu.|  
+|file_offset|**bigint**|Der Offset des Blocks in der Datei, der das Ereignis enthält. Lässt keine NULL-Werte zu.|  
 |timestamp_utc|**datetime2**|**Gilt für:** [!INCLUDE[ssSQLv14](../../includes/sssqlv14-md.md)] und höher und [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br />Das Datum und die Uhrzeit (UTC-Zeitzone) des Ereignisses. Lässt keine NULL-Werte zu.|  
 
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Das Lesen umfangreicher Resultsets durch Ausführen von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **sys. fn_xe_file_target_read_file** in führt möglicherweise zu einem Fehler. Verwenden Sie das **Ergebnis im Datei** Modus (**STRG + UMSCHALT + F**), um große Resultsets in eine Datei zu exportieren und die Datei stattdessen mit einem anderen Tool zu lesen.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -94,8 +94,8 @@ SELECT * FROM sys.fn_xe_file_target_read_file('C:\traces\*.xel', 'C:\traces\meta
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungssichten für erweiterte Ereignisse](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
- [Katalogsichten für erweiterte Ereignisse &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
+ [Dynamische Verwaltungs Sichten für erweiterte Ereignisse](../../relational-databases/system-dynamic-management-views/extended-events-dynamic-management-views.md)   
+ [Katalog Sichten für erweiterte Ereignisse &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/extended-events-catalog-views-transact-sql.md)   
  [Erweiterte Ereignisse](../../relational-databases/extended-events/extended-events.md)  
   
   

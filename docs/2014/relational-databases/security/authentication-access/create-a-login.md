@@ -23,10 +23,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: b765248e43dc66b9e1c038df27ca9a8b6135706d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63012022"
 ---
 # <a name="create-a-login"></a>Erstellen eines Anmeldenamens
@@ -46,9 +46,9 @@ ms.locfileid: "63012022"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   Nach **Verfolgung:**[nach dem Erstellen eines Anmelde namens auszuführenden Schritte](#FollowUp)    
+-   **Nachverfolgung:**  [Erforderliche Schritte nach Erstellen eines Anmeldenamens](#FollowUp)  
   
-##  <a name="Background"></a> Hintergrund  
+##  <a name="background"></a><a name="Background"></a>-Hintergrund  
  Eine Anmeldung ist ein Sicherheitsprinzipal oder eine Entität, die von einem sicheren System authentifiziert werden kann. Benutzer benötigen einen Anmeldenamen, um eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]herstellen zu können. Sie können auf Grundlage eines Windows-Prinzipals (z. B. ein Domänenbenutzer oder eine Windows-Domänengruppe) eine Anmeldung erstellen, oder Sie können eine Anmeldung erstellen, die nicht auf einem Windows-Prinzipal (z. B. eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldung) basiert.  
   
 > [!NOTE]  
@@ -56,18 +56,18 @@ ms.locfileid: "63012022"
   
  Als Sicherheitsprinzipale können Anmeldenamen Berechtigungen gewährt werden. Der Gültigkeitsbereich eines Anmeldenamens ist das gesamte [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. Um eine bestimmte Datenbank mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]zu verbinden, muss ein Anmeldename einem Datenbankbenutzer zugeordnet werden. Die Berechtigungen innerhalb der Datenbank werden dem Datenbankbenutzer, nicht dem Anmeldenamen, gewährt bzw. verweigert. Berechtigungen, bei denen der Gültigkeitsbereich die gesamte Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] abdeckt (z. B. die `CREATE ENDPOINT`-Berechtigung), kann ein Anmeldung gewährt werden.  
   
-##  <a name="Security"></a> Sicherheit  
+##  <a name="security"></a><a name="Security"></a> Sicherheit  
   
 ### <a name="permissions"></a>Berechtigungen  
  Erfordert die `ALTER ANY LOGIN`-Berechtigung oder die `ALTER LOGIN`-Berechtigung für den Server.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 ##### <a name="to-create-a-sql-server-login"></a>So erstellen Sie eine SQL Server-Anmeldung  
   
 1.  Erweitern Sie im Objekt-Explorer den Ordner der Serverinstanz, in dem Sie eine neue Anmeldung erstellen möchten.  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Sicherheit**, zeigen Sie auf **Neu**, und wählen Sie dann **Anmeldung...** aus.  
+2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Sicherheit** , zeigen Sie auf **neu**, und wählen Sie **Anmelden**aus.  
   
 3.  Geben Sie in das Dialogfeld **Anmeldung - Neu** auf der Seite **Allgemein** einen Benutzernamen in das Feld **Anmeldename** ein. Klicken Sie alternativ auf **Suchen...**, um das Dialogfeld **Benutzer oder Gruppe auswählen** zu öffnen.  
   
@@ -87,15 +87,15 @@ ms.locfileid: "63012022"
   
 5.  Um eine Anmeldung zu erstellen, die auf einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank gespeichert wird, wählen Sie **SQL Server-Authentifizierung**aus.  
   
-    1.  Geben Sie im Feld **Kennwort** ein Kennwort für den neuen Benutzer ein. Geben Sie dieses Kennwort erneut im Feld **Kennwort bestätigen** ein.  
+    1.  Geben Sie im Feld **Kennwort** ein Kennwort für den neuen Benutzer ein. Geben Sie im Feld **Kennwort bestätigen** das Kennwort erneut ein.  
   
     2.  Wenn Sie ein vorhandenes Kennwort ändern, wählen Sie **Altes Kennwort angeben**aus, und geben Sie dann das alte Kennwort im Feld **Altes Kennwort** ein.  
   
-    3.  Um Kennwortrichtlinienoptionen für Komplexität und Erzwingung zu erzwingen, wählen Sie **Kennwortrichtlinie erzwingen**aus. Weitere Informationen finden Sie unter [Password Policy](../password-policy.md). Dies ist eine Standardoption, wenn **SQL Server-Authentifizierung** ausgewählt wird.  
+    3.  Um Kennwortrichtlinienoptionen für Komplexität und Erzwingung zu erzwingen, wählen Sie **Kennwortrichtlinie erzwingen**aus. Weitere Informationen finden Sie unter [Password Policy](../password-policy.md). Dies ist eine Standardoption, wenn **SQL Server Authentifizierung** ausgewählt wird.  
   
-    4.  Um den Ablauf von Kennwortrichtlinienoptionen zu erzwingen, wählen Sie **Ablauf des Kennworts erzwingen**aus. **Kennwortrichtlinie erzwingen** muss ausgewählt sein, damit dieses Kontrollkästchen aktiviert werden kann. Dies ist eine Standardoption, wenn **SQL Server-Authentifizierung** ausgewählt wird.  
+    4.  Um den Ablauf von Kennwortrichtlinienoptionen zu erzwingen, wählen Sie **Ablauf des Kennworts erzwingen**aus. **Kennwortrichtlinie erzwingen** muss ausgewählt sein, damit dieses Kontrollkästchen aktiviert werden kann. Dies ist eine Standardoption, wenn **SQL Server Authentifizierung** ausgewählt wird.  
   
-    5.  Wählen Sie **Benutzer muss das Kennwort bei der nächsten Anmeldung ändern**aus, um den Benutzer zu zwingen, nach der ersten Anmeldung ein neues Kennwort zu erstellen. Die Option**Ablauf des Kennworts erzwingen** muss ausgewählt sein, damit dieses Kontrollkästchen aktiviert werden kann. Dies ist eine Standardoption, wenn **SQL Server-Authentifizierung** ausgewählt wird.  
+    5.  Wählen Sie **Benutzer muss das Kennwort bei der nächsten Anmeldung ändern**aus, um den Benutzer zu zwingen, nach der ersten Anmeldung ein neues Kennwort zu erstellen. Die Option**Ablauf des Kennworts erzwingen** muss ausgewählt sein, damit dieses Kontrollkästchen aktiviert werden kann. Dies ist eine Standardoption, wenn **SQL Server Authentifizierung** ausgewählt wird.  
   
 6.  Um einem eigenständigen Sicherheitszertifikat die Anmeldung zuzuordnen, wählen Sie **Zugeordnet zu Zertifikat** aus, und wählen Sie anschließend den Namen eines vorhandenen Zertifikats aus der Liste aus.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "63012022"
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="additional-options"></a>Zusätzliche Optionen  
- Im Dialogfeld **Anmeldung – Neu** sind auch Optionen auf vier zusätzlichen Seiten verfügbar: **Serverrollen**, **Benutzerzuordnung**, **Sicherungsfähige Elemente** und **Status**.  
+ Das Dialogfeld **Anmeldung-neu** bietet auch Optionen auf vier zusätzlichen Seiten: **Server Rollen**, **Benutzer Zuordnung**, **Sicherungs**fähige Elemente und **Status**.  
   
 ### <a name="server-roles"></a>Serverrollen  
  Die Seite **Serverrollen** listet alle möglichen Rollen auf, die der neuen Anmeldung zugewiesen werden können. Die folgenden Optionen sind verfügbar:  
@@ -119,7 +119,7 @@ ms.locfileid: "63012022"
  Mitglieder der festen Serverrolle **bulkadmin** können die BULK INSERT-Anweisung ausführen.  
   
  Kontrollkästchen**dbcreator**  
- Mitglieder der festen Serverrolle **dbcreator** können beliebige Datenbanken erstellen, ändern, löschen und wiederherstellen.  
+ Mitglieder der festen Server Rolle **dbcreator** können beliebige Datenbanken erstellen, ändern, löschen und wiederherstellen.  
   
  Kontrollkästchen**diskadmin**  
  Mitglieder der festen Serverrolle **diskadmin** können Datenträgerdateien verwalten.  
@@ -131,7 +131,7 @@ ms.locfileid: "63012022"
  Alle SQL Server-Benutzer, -Gruppen und -Rollen gehören standardmäßig zur festen Serverrolle **public** .  
   
  Kontrollkästchen**securityadmin**  
- Mitglieder der festen Serverrolle **securityadmin** können Anmeldungen und deren Eigenschaften verwalten. Sie verfügen für Berechtigungen auf Serverebene über die Berechtigungen GRANT, DENY und REVOKE. Sie verfügen für Berechtigungen auf Datenbankebene ebenfalls über die Berechtigungen GRANT, DENY und REVOKE. Sie können außerdem Kennwörter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldungen zurücksetzen.  
+ Mitglieder der festen Server Rolle **securityadmin** verwalten Anmeldungen und deren Eigenschaften. Sie verfügen für Berechtigungen auf Serverebene über die Berechtigungen GRANT, DENY und REVOKE. Sie verfügen für Berechtigungen auf Datenbankebene ebenfalls über die Berechtigungen GRANT, DENY und REVOKE. Sie können außerdem Kennwörter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldungen zurücksetzen.  
   
  Kontrollkästchen**serveradmin**  
  Mitglieder der festen Serverrolle **serveradmin** können serverweite Konfigurationsoptionen ändern und den Server herunterfahren.  
@@ -160,10 +160,10 @@ ms.locfileid: "63012022"
  **Standardschema**  
  Gibt das Standardschema des Benutzers an. Wenn ein Benutzer zum ersten Mal erstellt wird, wird als Standardschema **dbo**verwendet. Es kann auch ein Standardschema angegeben werden, das noch nicht vorhanden ist. Für Benutzer, die einer Windows-Gruppe, einem Zertifikat oder einem asymmetrischen Schlüssel zugeordnet sind, kann kein Standardschema angegeben werden.  
   
- **Gastkonto aktiviert für:** _Datenbankname_  
+ **Gastkonto aktiviert für:**  _Datenbankname_  
  Ein Nur-Lese-Attribut, das angibt, ob das Gastkonto für die ausgewählte Datenbank aktiviert ist. Verwenden Sie die Seite **Status** des Dialogfelds **Anmeldungseigenschaften** des Gastkontos, um das Gastkonto zu aktivieren oder zu deaktivieren.  
   
- **Mitgliedschaft in Datenbankrolle für:** _Datenbankname_  
+ **Mitgliedschaft in Datenbankrolle für:**  _Datenbankname_  
  Wählen Sie die Rollen für den Benutzer in der angegebenen Datenbank aus. Alle Benutzer sind Mitglieder der **public** -Rolle in allen Datenbanken und können nicht entfernt werden. Weitere Informationen zu Datenbankrollen finden Sie unter [Rollen auf Datenbankebene](database-level-roles.md).  
   
 ### <a name="securables"></a>Sicherungsfähige Elemente  
@@ -179,21 +179,21 @@ ms.locfileid: "63012022"
 2.  Wählen Sie im Dialogfeld **Objekte hinzufügen** eine der folgenden Optionen aus: **bestimmte Objekte...**, **alle Objekte des Typs...** oder **der Server**_server_name_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > [!NOTE]  
-    >  Wenn Sie **den Server**_server_name_ auswählen, wird das obere Raster automatisch mit allen Sicherungs fähigen Objekten des Servers gefüllt.  
+    >  Wenn Sie die Option **Der Server**_Servername_ auswählen, wird das obere Raster automatisch mit allen sicherungsfähigen Objekten des Servers gefüllt.  
   
-3.  Bei Auswahl der Option **Bestimmte Objekte...**:  
+3.  Wenn Sie **bestimmte Objekte auswählen...**:  
   
-    1.  Klicken Sie im Dialogfeld **Objekte auswählen** unter **Wählen Sie Objekttypen aus** auf **Objekttypen...**.  
+    1.  Klicken Sie im Dialogfeld **Objekte auswählen** unter **Wählen Sie die Objekttypen**aus auf **Objekttypen...**.  
   
-    2.  Wählen Sie im Dialogfeld **Objekttypen auswählen** beliebige oder alle der folgenden Objekttypen aus: **Endpunkte**, **Anmeldungen**, **Server**, **Verfügbarkeitsgruppen** und **Serverrollen**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+    2.  Wählen Sie im Dialogfeld **Objekttypen auswählen** einen der folgenden Objekttypen aus: **Endpunkte**, **Anmeldungen**, **Server**, **Verfügbarkeitsgruppen**und **Serverrollen**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    3.  Klicken Sie unter **Geben Sie die Namen der auszuwählenden Objekte ein (Beispiele)** auf **Durchsuchen...**.  
+    3.  Klicken Sie unter **Geben Sie die zu ausgewäfenden Objektnamen ein (Beispiele)** auf **Durchsuchen...**.  
   
     4.  Wählen Sie im Dialogfeld **Nach Objekten suchen** eines der verfügbaren Objekte vom Typ aus, den Sie im Dialogfeld **Objekttypen auswählen** ausgewählt haben, und klicken Sie anschließend auf **OK**.  
   
     5.  Klicken Sie im Dialogfeld **Objekte auswählen** auf **OK**.  
   
-4.  Wenn Sie im Dialogfeld **Objekttypen auswählen** die Option **All objects of the types...** (Alle Objekte der Typen...) auswählen, wählen Sie beliebige oder alle der folgenden Objekttypen aus: **Endpunkte**, **Anmeldungen**, **Server**, **Verfügbarkeitsgruppen** und **Serverrollen**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Wenn Sie **alle Objekte des Typs**auswählen, wählen Sie im Dialogfeld **Objekttypen auswählen** einen oder alle der folgenden Objekttypen aus: **Endpunkte**, **Anmeldungen**, **Server**, **Verfügbarkeits Gruppen**und **Server Rollen**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **Name**  
  Die Namen der Prinzipale oder sicherungsfähigen Elemente, die dem Raster hinzugefügt werden.  
@@ -210,7 +210,7 @@ ms.locfileid: "63012022"
  **Grantor**  
  Der Prinzipal, der die Berechtigung erteilt.  
   
- **Erteilen**  
+ **Schusses**  
  Aktivieren Sie diese Option, um der Anmeldung diese Berechtigung zu erteilen. Deaktivieren Sie diese Option, um diese Berechtigung aufzuheben.  
   
  **Mit Erteilung**  
@@ -237,9 +237,9 @@ ms.locfileid: "63012022"
  Wählen Sie diese Option aus, um diesen Anmeldenamen zu aktivieren oder zu deaktivieren. Für diese Option wird die ALTER LOGIN-Anweisung mit der Option ENABLE oder DISABLE verwendet.  
   
  **SQL Server-Authentifizierung**  
- Das Kontrollkästchen **Anmeldung ist gesperrt** ist nur verfügbar, wenn der ausgewählte Anmeldename die Verbindung mithilfe der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung herstellt, und wenn der Anmeldename gesperrt ist. Diese Einstellung ist schreibgeschützt. Führen Sie ALTER LOGIN mit der Option UNLOCK aus, wenn Sie die Sperre für eine Anmeldung aufheben möchten.  
+ Das Kontrollkästchen **Anmeldung ist gesperrt** ist nur verfügbar, wenn der ausgewählte Anmelde Name die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Verbindung mithilfe der-Authentifizierung herstellt und der Anmelde Name gesperrt wurde. Diese Einstellung ist schreibgeschützt. Führen Sie ALTER LOGIN mit der Option UNLOCK aus, wenn Sie die Sperre für eine Anmeldung aufheben möchten.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-create-a-login-using-windows-authentication"></a>So erstellen Sie eine Anmeldung mit Windows-Authentifizierung  
   
@@ -278,7 +278,7 @@ ms.locfileid: "63012022"
   
  Weitere Informationen finden Sie unter [CREATE LOGIN &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-login-transact-sql).  
   
-##  <a name="FollowUp"></a>Nächster Schritt: Erforderliche Schritte nach dem Erstellen eines Anmeldenamens  
+##  <a name="follow-up-steps-to-take-after-you-create-a-login"></a><a name="FollowUp"></a> Nachverfolgung: Erforderliche Schritte nach Erstellen eines Anmeldenamens  
  Nach der Erstellung eines Anmeldenamens kann dieser zwar eine Verbindung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]herstellen, er verfügt jedoch nicht unbedingt über ausreichende Berechtigungen, um damit sinnvolle Aufgaben ausführen zu können. Die folgende Liste enthält Links zu häufigen Anmeldeaktionen.  
   
 -   Informationen darüber, wie ein Anmeldename einer Datenbankrolle beitreten kann, finden Sie unter [Verknüpfen einer Rolle](join-a-role.md).  

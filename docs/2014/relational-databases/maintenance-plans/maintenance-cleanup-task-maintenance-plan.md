@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 175998d210bec502199922831adc3508cc9171a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63035722"
 ---
 # <a name="maintenance-cleanup-task-maintenance-plan"></a>Task 'Wartungscleanup' (Wartungsplan)
@@ -55,13 +55,13 @@ ms.locfileid: "63035722"
  **Dateierweiterung**  
  Geben Sie die Dateierweiterung der zu löschenden Dateien an.  
   
- **Unterordner der ersten Ebene einschließen**  
+ **Unterordner auf oberster Ebene einschließen**  
  Löscht Dateien mit der für **Dateierweiterung** angegebenen Erweiterung aus den Unterordnern der obersten Ebene unter **Ordner**.  
   
- **Dateien basierend auf dem Alter der Datei zur Task Laufzeit löschen**  
+ **Dateien anhand ihres Alters zur Tasklaufzeit löschen**  
  Geben Sie das Mindestalter der zu löschenden Dateien an, indem Sie im Feld **Dateien löschen, die älter sind als** eine Zahl und eine Zeiteinheit festlegen.  
   
- **Dateien löschen, die älter sind als die folgenden**  
+ **Dateien löschen, die älter sind als**  
  Geben Sie das Mindestalter der zu löschenden Dateien an, in dem Sie eine Nummer und eine Zeiteinheit (Tag, Woche, Monat oder Jahr) festlegen. Dateien, die älter sind als der angegebene Zeitrahmen, werden gelöscht.  
   
  **T-SQL anzeigen**  
@@ -71,19 +71,19 @@ ms.locfileid: "63035722"
 >  Wenn die Anzahl der betroffenen Objekte groß ist, kann die Anzeige erhebliche Zeit in Anspruch nehmen.  
   
 ## <a name="new-connection-dialog-box"></a>Neue Verbindung (Dialogfeld)  
- **Verbindungs Name**  
+ **Verbindungsname**  
  Geben Sie einen Namen für die neue Verbindung ein.  
   
- **Servernamen auswählen oder eingeben**  
+ **Wählen Sie einen Servernamen aus, oder geben Sie ihn ein.**  
  Wählen Sie den Server aus, zu dem bei der Ausführung dieses Tasks eine Verbindung hergestellt werden soll.  
   
  **...**  
  Wählen Sie diese Option aus, um die Liste der verfügbaren Server anzuzeigen.  
   
- **Geben Sie Informationen ein, um sich beim Server anzumelden.**  
+ **Geben Sie Informationen zum Anmelden am Server ein**  
  Legt fest, wie die Authentifizierung gegenüber dem Server stattfindet.  
   
- **Integrierte Sicherheit von Windows verwenden**  
+ **Integrierte Sicherheit von Windows NT verwenden**  
  Stellt mithilfe der Microsoft Windows-Authentifizierung eine Verbindung zu einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her.  
   
  **Einen bestimmten Benutzernamen und ein bestimmtes Kennwort verwenden**  

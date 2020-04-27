@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7ceed5f82af858f6a2dc3a88df7276d5ba2fda3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211209"
 ---
 # <a name="creating-a-login"></a>Erstellen einer Anmeldung
@@ -26,7 +26,7 @@ ms.locfileid: "68211209"
   
 ### <a name="to-create-a-new-windows-account"></a>So erstellen Sie ein neues Windows-Konto  
   
-1.  Klicken Sie im **Startmenü**auf **Ausführen**, **** geben `%SystemRoot%\system32\compmgmt.msc /s`Sie im Feld Öffnen ein, und klicken Sie dann auf **OK** , um das Programm Computer Verwaltung zu öffnen.  
+1.  Klicken Sie im **Startmenü**auf **Ausführen**, **Open** geben `%SystemRoot%\system32\compmgmt.msc /s`Sie im Feld Öffnen ein, und klicken Sie dann auf **OK** , um das Programm Computer Verwaltung zu öffnen.  
   
 2.  Erweitern Sie unter **Systemprogramme**den Eintrag **Lokale Benutzer und Gruppen**, klicken Sie mit der rechten Maustaste auf **Benutzer**und anschließend auf **Neuer Benutzer**.  
   
@@ -36,8 +36,7 @@ ms.locfileid: "68211209"
   
 ### <a name="to-create-a-login"></a>So erstellen Sie eine Anmeldung  
   
-1.  Geben Sie in einem Abfrage-Editor-Fenster von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]folgenden Code ein, und führen Sie ihn aus. Ersetzen Sie dabei `computer_name` durch den Namen Ihres Computers. 
-  `FROM WINDOWS` gibt an, dass Windows den Benutzer authentifiziert. Mit dem optionalen `DEFAULT_DATABASE` -Argument wird `Mary` mit der `TestData` -Datenbank verbunden, sofern nicht ihre Verbindungszeichenfolge eine andere Datenbank angibt. Diese Anweisung führt das Semikolon als optionale Beendigung für eine [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisung ein.  
+1.  Geben Sie in einem Abfrage-Editor-Fenster von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]folgenden Code ein, und führen Sie ihn aus. Ersetzen Sie dabei `computer_name` durch den Namen Ihres Computers. `FROM WINDOWS` gibt an, dass Windows den Benutzer authentifiziert. Mit dem optionalen `DEFAULT_DATABASE` -Argument wird `Mary` mit der `TestData` -Datenbank verbunden, sofern nicht ihre Verbindungszeichenfolge eine andere Datenbank angibt. Diese Anweisung führt das Semikolon als optionale Beendigung für eine [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisung ein.  
   
     ```  
     CREATE LOGIN [computer_name\Mary]  

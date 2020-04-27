@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 609322d265d18345e7ef39b4598cb6e1c226c97a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206693"
 ---
 # <a name="execute-a-stored-procedure-using-odbc-call-syntax-and-process-return-codes-and-output-parameters-ole-db"></a>Ausführen einer gespeicherten Prozedur (mithilfe der ODBC CALL-Syntax) sowie Verarbeiten von Rückgabecodes und Ausgabeparametern (OLE DB)
@@ -32,8 +32,7 @@ ms.locfileid: "68206693"
   
 2.  Erstellen Sie mithilfe eines DBBINDING-Strukturarrays einen Satz von Bindungen (eine für jede Parametermarkierung).  
   
-3.  Erstellen Sie einen Accessor für die definierten Parameter mithilfe der `IAccessor::CreateAccessor`-Methode. 
-  `CreateAccessor` erstellt einen Accessor aus einem Satz Bindungen.  
+3.  Erstellen Sie einen Accessor für die definierten Parameter mithilfe der `IAccessor::CreateAccessor`-Methode. `CreateAccessor` erstellt einen Accessor aus einem Satz Bindungen.  
   
 4.  Geben Sie die DBPARAMS-Struktur ein.  
   

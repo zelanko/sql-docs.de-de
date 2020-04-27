@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d257b6eee1fb3adc0ba611f58a1d5eea5adf3f86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013390"
 ---
 # <a name="introduction-to-xml-bulk-load-sqlxml-40"></a>Einführung in XML-Massenladen (SQLXML 4.0)
@@ -40,8 +40,7 @@ ms.locfileid: "66013390"
   
 -   XSD- und XDR-Schemas mit Anmerkungen Weitere Informationen zu XSD-Schemas mit Anmerkungen finden Sie unter [Einführung in XSD-Schemas mit Anmerkungen &#40;SQLXML 4,0&#41;](../../sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Informationen zu XDR-Schemas mit Anmerkungen finden Sie unter [mit Anmerkungen versehene XDR-Schemas &#40;in SQLXML 4,0&#41;veraltet ](../../sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Masseneinfügemechanismen, z. B. die [!INCLUDE[tsql](../../../includes/tsql-md.md)] BULK INSERT-Anweisung und das bcp-Hilfsprogramm. Weitere Informationen finden Sie unter [Bulk Insert &#40;Transact-SQL-&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) und [bcp-Hilfsprogramm](../../../tools/bcp-utility.md).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Masseneinfügemechanismen, z. B. die [!INCLUDE[tsql](../../../includes/tsql-md.md)] BULK INSERT-Anweisung und das bcp-Hilfsprogramm. Weitere Informationen finden Sie unter [Bulk Insert &#40;Transact-SQL-&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) und [bcp-Hilfsprogramm](../../../tools/bcp-utility.md).  
   
 ## <a name="streaming-of-xml-data"></a>Streaming von XML-Daten  
  Da das XML-Quelldokument unter Umständen groß ist, wird das gesamte Dokument für die Massenladenverarbeitung nicht in den Speicher gelesen. Stattdessen interpretiert XML-Massenladen die XML-Daten als Datenstrom und liest diesen. Während das Hilfsprogramm die Daten liest, identifiziert es die Datenbanktabelle(n), generiert den entsprechenden Datensatz bzw. Datensätze aus der XML-Datenquelle und sendet den Datensatz bzw. die Datensätze zum Einfügen an [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  

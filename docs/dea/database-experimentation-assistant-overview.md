@@ -13,10 +13,10 @@ author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
 ms.openlocfilehash: 939ff20fd0b708e949aee41d8aa2f3f59b63a9eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75247122"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>Übersicht über den Assistenten für Datenbankexperimente
@@ -113,6 +113,6 @@ Das erfassen und Senden von Telemetriedaten ist optional. Führen Sie die folgen
 
 Die [Microsoft-Datenschutzbestimmungen unterliegen der Microsoft-Datenschutzerklärung](https://aka.ms/dea-privacy)
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - Der Artikel [Übersicht über den Arbeits](database-experimentation-assistant-get-started.md)Auslastungs Vergleichsprozess, der den Prozess zum Vergleichen von Arbeits Auslastungen in zwei Umgebungen erläutert.

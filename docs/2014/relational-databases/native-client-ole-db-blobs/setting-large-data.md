@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: da56cbf334bca884e71469c63429135d6db84953
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140625"
 ---
 # <a name="setting-large-data"></a>Festlegen großer Datenmengen
@@ -41,7 +41,7 @@ ms.locfileid: "63140625"
 ## <a name="how-to-set-large-data"></a>So legen Sie große Datenmengen fest  
  Zum Übergeben eines Zeigers an das eigene Speicherobjekt erstellt der Consumer einen Accessor, der den Wert der BLOB-Spalte bindet, und ruft anschließend die **IRowsetChange::SetData** -Methode oder die **IRowsetChange::InsertRow** -Methode auf. So legen Sie BLOB-Daten fest:  
   
-1.  Erstellen Sie eine DBOBJECT-Struktur, die beschreibt, wie auf die BLOB-Spalte zugegriffen werden soll. Legen Sie das *dwFlag*-Element der DBOBJECT-Struktur auf STGM_READ fest, und legen Sie das *iid*-Element auf IID_ISequentialStream (die verfügbar zu machende Schnittstelle) fest.  
+1.  Erstellen Sie eine DBOBJECT-Struktur, die beschreibt, wie auf die BLOB-Spalte zugegriffen werden soll. Legen Sie das Element *dwFlag* der DBOBJECT-Struktur auf STGM_READ fest, und legen Sie das *IID* -Element auf IID_ISequentialStream (die Schnittstelle, die verfügbar gemacht werden soll) fest.  
   
 2.  Legen Sie die Eigenschaften in der DBPROPSET_ROWSET-Eigenschaftengruppe so fest, dass das Rowset aktualisiert werden kann.  
   

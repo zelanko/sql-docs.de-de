@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bffa36106278b8913a9ecb042e94318c41ce87b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022592"
 ---
 # <a name="configure-an-oracle-publisher"></a>Konfigurieren eines Oracle-Verlegers
@@ -26,7 +26,7 @@ ms.locfileid: "63022592"
   
 2.  Erteilen Sie dem in Schritt eins erstellten administrativen Oracle-Benutzer für die Tabellen, die Sie veröffentlichen möchten, direkt für die jeweilige Tabelle (nicht über eine Rolle) eine SELECT-Berechtigung.  
   
-3.  Installieren Sie die Oracle-Client Software und OLE DB Anbieter [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auf dem-Verteiler, und starten Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] dann die Instanz, und starten Sie Sie neu. Wenn der Verteiler auf einer 64-Bit-Plattform ausgeführt wird, müssen Sie die 64-Bit-Version des Oracle OLE DB-Anbieters verwenden.  
+3.  Installieren Sie die Oracle-Clientsoftware und den OLE DB-Anbieter auf dem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verteiler, und starten Sie die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz anschließend neu. Wenn der Verteiler auf einer 64-Bit-Plattform ausgeführt wird, müssen Sie die 64-Bit-Version des Oracle OLE DB-Anbieters verwenden.  
   
 4.  Konfigurieren Sie die Oracle-Datenbank auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler als Verleger.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63022592"
 >  Sie müssen ein Mitglied der festen Serverrolle **sysadmin** sein, um einen Verleger oder Verteiler zu aktivieren und um eine Oracle-Veröffentlichung bzw. ein Abonnement einer Oracle-Veröffentlichung erstellen zu können.  
   
 ## <a name="creating-the-replication-administrative-user-schema-within-the-oracle-database"></a>Erstellen des Schemas für den administrativen Replikationsbenutzer innerhalb der Oracle-Datenbank  
- Replikations-Agents stellen eine Verbindung mit der Oracle-Datenbank her und führen Operationen im Kontext eines Benutzerschemas aus, das Sie erstellen müssen. Diesem Schema müssen mehrere Berechtigungen erteilt werden, die im nächsten Abschnitt aufgeführt werden. Dieses Schema besitzt mit Ausnahme des öffentlichen Synonyms [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication process on the Oracle Publisher, with the exception of a public synonym, **MSSQLSERVERDISTRIBUTOR**. Weitere Informationen zu den in der Oracle-Datenbank erstellten Objekten finden Sie unter [Objects Created on the Oracle Publisher](objects-created-on-the-oracle-publisher.md).  
+ Replikations-Agents stellen eine Verbindung mit der Oracle-Datenbank her und führen Operationen im Kontext eines Benutzerschemas aus, das Sie erstellen müssen. Diesem Schema müssen mehrere Berechtigungen erteilt werden, die im nächsten Abschnitt aufgeführt werden. Dieses Schema besitzt mit Ausnahme des öffentlichen Synonyms **MSSQLSERVERDISTRIBUTOR** alle Objekte, die durch den [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Replikationsprozess erstellt wurden. Weitere Informationen zu den in der Oracle-Datenbank erstellten Objekten finden Sie unter [Objects Created on the Oracle Publisher](objects-created-on-the-oracle-publisher.md).  
   
 > [!NOTE]  
 >  Beim Löschen des öffentlichen Synonyms **MSSQLSERVERDISTRIBUTOR** und des konfigurierten Oracle-Replikationsbenutzers mit der **CASCADE** -Option werden alle Replikationsobjekte vom Oracle-Verleger entfernt.  
@@ -74,7 +74,7 @@ ms.locfileid: "63022592"
   
  Im Oracle Universal Installer müssen Sie folgende Informationen angeben:  
   
-|Information|BESCHREIBUNG|  
+|Information|Beschreibung|  
 |-----------------|-----------------|  
 |Oracle-Homeverzeichnis|Der Pfad zum Installationsverzeichnis für die Oracle-Software. Übernehmen Sie die Standardeinstellung (C:\oracle\ora90 oder Ähnliches), oder geben Sie einen anderen Pfad ein. Weitere Informationen zum Oracle-Homeverzeichnis finden Sie im Abschnitt zu Überlegungen zum Oracle-Homeverzeichnis weiter unten in diesem Thema.|  
 |Oracle-Homeverzeichnisname|Alias für den Pfad zum Oracle-Homeverzeichnis.|  
@@ -82,7 +82,7 @@ ms.locfileid: "63022592"
   
  Wenn der Oracle Universal Installer abgeschlossen ist, konfigurieren Sie die Netzwerkkonnektivität mit Net Configuration Assistant. Zur Konfiguration der Netzwerkkonnektivität müssen Sie vier Informationen eingeben. Der Oracle-Datenbankadministrator, der die Netzwerkkonfiguration beim Einrichten der Datenbank und der Überwachung (Listener) konfiguriert, kann Ihnen diese Informationen geben, falls Sie sie nicht selbst besitzen. Führen Sie folgende Schritte aus:  
   
-|Action|BESCHREIBUNG|  
+|Aktion|BESCHREIBUNG|  
 |------------|-----------------|  
 |Identifizieren Sie die Datenbank.|Es gibt zwei Methoden, mit denen Sie die Datenbank identifizieren können. Die erste Methode besteht darin, die Oracle SID (System Identifier) zu verwenden. Die SID ist in jeder Oracle-Version verfügbar. Die zweite Methode besteht darin, den Dienstnamen zu verwenden, der ab Oracle Version 8.0 verfügbar ist. Beide Methoden basieren auf einem Wert, der beim Erstellen der Datenbank konfiguriert wird. Wichtig ist dabei, dass Sie bei der Clientnetzwerkkonfiguration dieselbe Benennungsmethode verwenden wie der Administrator beim Konfigurieren des Listeners der Datenbank.|  
 |Identifizieren Sie den Datenbankalias.|Für den Zugriff auf die Oracle-Datenbank müssen Sie einen Netzwerkalias angeben. Dieser Alias muss auch angegeben werden, wenn Sie die Oracle-Datenbank auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler als Verleger identifizieren. Der Netzwerkalias ist im Wesentlichen ein Zeiger auf die während der Erstellung der Datenbank konfigurierte Remote-SID bzw. den Service Name. In manchen Oracle-Versionen und -Produkten wird er u. a. auch als "Net Service Name" oder "TNS Alias" bezeichnet. SQL*Plus fordert bei der Anmeldung zur Eingabe dieses Netzwerkalias als Parameter "Host String" auf.|  
@@ -97,11 +97,11 @@ ms.locfileid: "63022592"
   
  Wenn Sie eine Verbindung mit dem Oracle-Verleger herstellen konnten, versuchen Sie, sich mit dem Konto und dem Kennwort bei der Datenbank anzumelden, die dem erstellten Schema für den administrativen Replikationsbenutzer zugeordnet sind. Beim Ausführen unter demselben Windows-Konto, das der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienst verwendet, muss Folgendes ausgeführt werden:  
   
-1.  Klicken Sie auf **Start** und dann auf **Ausführen**.  
+1.  Klicken Sie im **Startmenü**auf **Ausführen**.  
   
 2.  Geben Sie `cmd` ein und klicken Sie dann auf **OK**.  
   
-3.  Geben Sie an einer Eingabeaufforderung Folgendes ein:  
+3.  Geben Sie an der Eingabeaufforderung Folgendes ein:  
   
      `sqlplus <UserSchemaLogin>/<UserSchemaPassword>@<NetServiceName>`  
   
@@ -129,9 +129,9 @@ ms.locfileid: "63022592"
  Informationen zum Konfigurieren eines Oracle-Verlegers und zum Erstellen einer Veröffentlichung finden Sie unter [Create a Publication from an Oracle Database](../publish/create-a-publication-from-an-oracle-database.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Überlegungen zu administrativen Aufgaben bei Oracle-Verlegern](administrative-considerations-for-oracle-publishers.md)   
- [Data Type Mapping for Oracle Publishers](data-type-mapping-for-oracle-publishers.md)   
- [Begriffe im Zusammenhang mit dem Veröffentlichen von Oracle-Daten](glossary-of-terms-for-oracle-publishing.md)   
+ [Administrative Überlegungen für Oracle-Verleger](administrative-considerations-for-oracle-publishers.md)   
+ [Datentyp Zuordnung für Oracle-Verleger](data-type-mapping-for-oracle-publishers.md)   
+ [Glossar der Begriffe für Veröffentlichungen mit Oracle](glossary-of-terms-for-oracle-publishing.md)   
  [Veröffentlichungen mit Oracle (Übersicht)](oracle-publishing-overview.md)  
   
   

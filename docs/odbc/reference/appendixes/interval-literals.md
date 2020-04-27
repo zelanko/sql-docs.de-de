@@ -1,5 +1,5 @@
 ---
-title: Intervall-Literale | Microsoft Docs
+title: Intervall Literale | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,82 +15,82 @@ ms.assetid: f9e6c3c7-4f98-483f-89d8-ebc5680f021b
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: c1761ac0acb57b3f375a7d19e9371384c000eca5
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81304941"
 ---
 # <a name="interval-literals"></a>Intervallliterale
-ODBC erfordert, dass alle Treiber die Konvertierung des SQL_CHAR oder SQL_VARCHAR Datentyps in alle C-Intervalldatentypen unterstützen. Wenn die zugrunde liegende Datenquelle jedoch keine Intervalldatentypen unterstützt, muss der Treiber das richtige Format des Wertes im Feld SQL_CHAR kennen, um diese Konvertierungen zu unterstützen. In ähnlicher Weise erfordert ODBC, dass jeder ODBC C-Typ in SQL_CHAR oder SQL_VARCHAR kann, sodass ein Treiber wissen muss, welches Intervall im Zeichenfeld gespeichert sein soll. In diesem Abschnitt wird die Syntax von Intervallliteralen beschrieben, die der Treiberschreiber verwenden muss, um die SQL_CHAR Felder während der Konvertierung in oder von C-Intervalldatentypen zu überprüfen.  
+Für ODBC müssen alle Treiber die Konvertierung der SQL_CHAR oder SQL_VARCHAR Datentyps in alle C-Intervall Datentypen unterstützen. Wenn die zugrunde liegende Datenquelle jedoch keine Intervall Datentypen unterstützt, muss der Treiber das richtige Format des Werts im Feld SQL_CHAR kennen, um diese Konvertierungen zu unterstützen. Ebenso erfordert ODBC, dass alle ODBC C-Typen in SQL_CHAR oder SQL_VARCHAR konvertiert werden können. Daher muss ein Treiber wissen, welches Format ein im Zeichenfeld gespeicherter Zeitraum aufweisen sollte. In diesem Abschnitt wird die Syntax von Intervall literalen beschrieben, die der treiberwriter zum Validieren der SQL_CHAR Felder während der Konvertierung in oder aus C-Intervall Datentypen verwenden muss.  
   
 > [!NOTE]  
->  Die vollständige BNF-Syntax für Intervallliterale wird im Abschnitt [Intervallliterale Syntax](../../../odbc/reference/appendixes/interval-literal-syntax.md) in Anhang C: SQL Grammar angezeigt.  
+>  Die gesamte BNF-Syntax für intervallliterale wird im Abschnitt [Interval-Literalsyntax](../../../odbc/reference/appendixes/interval-literal-syntax.md) in Anhang C: SQL-Grammatik gezeigt.  
   
- Um Intervallliterale als Teil einer SQL-Anweisung zu übergeben, wird eine Escapeklauselsyntax für Intervallliterale definiert. Weitere Informationen finden Sie unter [Datum, Uhrzeit und Zeitstempelliterale](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
+ Um Intervall Literale als Teil einer SQL-Anweisung zu übergeben, wird eine Escape-KlauselSyntax für intervallliterale definiert. Weitere Informationen finden Sie unter [Date-, Time-und Timestamp-Literale](../../../odbc/reference/develop-app/date-time-and-timestamp-literals.md).  
   
- Ein Intervallliteral ist der Folgenden:  
+ Ein intervallliteral hat folgendes Format:  
   
 ```  
 INTERVAL[<sign>] 'value' <interval qualifier>  
 ```  
   
- wobei "INTERVAL" angibt, dass es sich bei dem Zeichenliteral um ein Intervall handelt. Das Zeichen kann entweder plus oder minus sein; Sie befindet sich außerhalb der Intervallzeichenfolge und ist optional.  
+ Where "Interval" gibt an, dass das Zeichen Literale ein Intervall ist. Das Vorzeichen kann entweder Plus oder minus sein. Sie liegt außerhalb der Intervall Zeichenfolge und ist optional.  
   
- Der Intervallqualifizierer kann entweder ein einzelnes Datumszeitfeld sein \<oder aus \<zwei Datumszeitfeldern in der Form bestehen: *führendes Feld*> to *trailing field*>.  
+ Der Intervall Qualifizierer kann entweder ein einzelnes DateTime-Feld sein oder aus zwei DateTime-Feldern bestehen, in \<folgendem Format: *führendes Feld*> an \< *nachfolgende Feld*>.  
   
--   Wenn das Intervall aus einem einzelnen Feld besteht, kann es sich bei dem einzelnen Feld um ein Feld ohne Sekunde handelt, das von einer optionalen Führungsgenauigkeit in Klammern begleitet werden kann. Das einzelne Datumsuhrfeld kann auch ein zweites Feld sein, das von der optionalen Führungsgenauigkeit, der optionalen Sekundengenauigkeit in Klammern oder beidem begleitet werden kann. Wenn sowohl eine führende Genauigkeit als auch eine Sekundengenauigkeit für ein Sekundenfeld vorhanden sind, werden sie durch Kommas getrennt. Wenn das Sekundenfeld eine Sekundengenauigkeit aufweist, muss es auch eine führende Genauigkeit aufweisen.  
+-   Wenn das Intervall aus einem einzelnen Feld besteht, kann das einzelne Feld ein nicht zweites Feld sein, das möglicherweise von einer optionalen vorangehende Genauigkeit in Klammern begleitet wird. Das einzelne DateTime-Feld kann auch ein zweites Feld sein, das möglicherweise von der optionalen vorangebenden Genauigkeit, der optionalen Genauigkeit in Sekundenbruchteilen in Klammern oder beides begleitet wird. Wenn sowohl eine führende Genauigkeit als auch eine Genauigkeit von Sekundenbruchteilen für ein Sekunden Feld vorhanden sind, werden diese durch Kommas getrennt. Wenn das Sekunden Feld eine Genauigkeit von Sekundenbruchteilen aufweist, muss es auch eine führende Genauigkeit aufweisen.  
   
--   Wenn das Intervall aus führenden und nachfolgenden Feldern besteht, ist das führende Feld ein Feld, das nicht in sekundender Höhe liegt und von der Intervall-führenden Feldgenauigkeit in Klammern begleitet werden kann. Das nachfolgende Feld kann entweder ein Feld ohne Sekunde oder ein zweites Feld sein, das von einer Intervall-Sekunden-Präzision in Klammern begleitet werden kann.  
+-   Wenn das Intervall aus führenden und nachfolgenden Feldern besteht, ist das führende Feld ein nicht zweites Feld, das möglicherweise von der in Klammern führenden Feld Genauigkeit begleitet wird. Das nachfolgende Feld kann entweder ein nicht zweites Feld oder ein zweites Feld sein, das von einer Genauigkeit in Sekundenbruchteilen in Klammern eingeschlossen werden kann.  
   
- Die Intervallzeichenfolge im *Wert* wird in einfache Anführungszeichen eingeschlossen. Es kann entweder ein Jahres-Monats-Literal oder ein Tageszeitliteral sein. Das Format der Zeichenfolge im *Wert* wird durch die folgenden Regeln bestimmt:  
+ Die Intervall Zeichenfolge in *value* wird in einfache Anführungszeichen eingeschlossen. Dabei kann es sich entweder um ein Jahr oder einen tagesliteral handeln. Das Format der Zeichenfolge in *value* wird durch die folgenden Regeln bestimmt:  
   
--   Die Zeichenfolge enthält einen Dezimalwert für jedes \<Feld, das durch den *Intervallqualifizierer* impliziert wird>. *interval*  
+-   Die Zeichenfolge enthält einen Dezimalwert für jedes Feld, das vom \< *Intervall* *Qualifizierer*> impliziert wird.  
   
--   Wenn die Intervallgenauigkeit die Felder JAHR und MONAT enthält, werden die Werte dieser Felder durch ein Minuszeichen getrennt.  
+-   Wenn die Intervall Genauigkeit die Felder Jahr und Monat umfasst, werden die Werte dieser Felder durch ein Minuszeichen voneinander getrennt.  
   
--   Wenn die Intervallgenauigkeit die Felder TAG und STUNDE enthält, werden die Werte dieser Felder durch ein Leerzeichen getrennt.  
+-   Wenn die Intervall Genauigkeit die Felder Day und Hour umfasst, werden die Werte dieser Felder durch ein Leerzeichen voneinander getrennt.  
   
--   Wenn die Intervallgenauigkeit das Feld HOUR und die Felder niedrigerer Ordnung (MINUTE und SECOND) enthält, werden die Werte dieser Felder durch einen Doppelpunkt getrennt.  
+-   Wenn die Genauigkeit des Intervalls die Feld Stunde und die unteren Reihen folgen Felder (Minute und Sekunde) umfasst, werden die Werte dieser Felder durch einen Doppelpunkt getrennt.  
   
--   Wenn die Intervallgenauigkeit ein SECOND-Feld enthält und die Genauigkeit der ausgedrückten oder impliziten Sekunden ungleich Null ist, ist das Zeichen unmittelbar vor der ersten Ziffer des Bruchteils der Sekunde ein Punkt.  
+-   Wenn die Genauigkeit des Intervalls ein zweites Feld enthält und die angegebene oder implizite Sekunden Genauigkeit nicht NULL ist, ist das Zeichen unmittelbar vor der ersten Ziffer des Bruchteils der zweiten ein Punkt.  
   
--   Kein Feld darf mehr als zwei Ziffern lang sein, außer:  
+-   Ein Feld kann nicht mehr als zwei Ziffern lang sein, außer:  
   
-    -   Der Wert des führenden Feldes kann so lang sein wie die implizite oder implizite Intervallführungsgenauigkeit.  
+    -   Der Wert des führenden Felds kann so lang sein, wie das angegebene oder implizite Intervall mit der Spitzen Genauigkeit.  
   
-    -   Der Bruchteil des SECOND-Feldes kann so lang sein wie die Präzision der ausgedrückten oder impliziten Sekunden.  
+    -   Der Bruchteil des zweiten Felds kann so lang sein, dass es die Genauigkeit der Ausdrücken oder implizierten Sekunden aufweist.  
   
-    -   Die nachfolgenden Felder folgen den üblichen Einschränkungen des Gregorianischen Kalenders. (Siehe [Einschränkungen des Gregorianischen Kalenders](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md).)  
+    -   Die nachfolgenden Felder folgen den üblichen Einschränkungen des gregorianischen Kalenders. (Siehe [Einschränkungen des gregorianischen Kalenders](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md).)  
   
- In der folgenden Tabelle sind Beispiele für gültige Intervallliterale aufgeführt, die in der ODBC-Escapeklausel für Intervalle enthalten sind. Die Syntax der Escape-Klausel lautet wie folgt:  
+ In der folgenden Tabelle sind Beispiele für gültige Intervall Literale aufgeführt, die in der ODBC-Escapesequenz für Intervalle enthalten sind. Die Syntax der Escape-Klausel lautet wie folgt:  
   
 > [!NOTE]  
->  *"INTERVAL-Zeichenintervall-String-Intervall-Qualifizierer"*  
+>  *{Intervall Zeichen Intervall-Zeichen folgen Intervall-Qualifizierer}*  
   
-|Literale Escape-Klausel|Angegebenes Intervall|  
+|Literale Escape-Klausel|Festgelegtes Intervall|  
 |---------------------------|------------------------|  
-|"INTERVALL '326' JAHR(4)|Gibt ein Intervall von 326 Jahren an. Die Intervallführungsgenauigkeit beträgt 4.|  
-|"INTERVALL '326' MONAT(3)|Gibt ein Intervall von 326 Monaten an. Die Intervallführungsgenauigkeit beträgt 3.|  
-|"INTERVAL '3261' DAY(4)|Gibt ein Intervall von 3261 Tagen an. Die Intervallführungsgenauigkeit beträgt 4.|  
-|INTERVALL '163' STUNDE(3)|Gibt ein Intervall von 163 Tagen an. Die Intervallführungsgenauigkeit beträgt 3.|  
-|INTERVALL '163' MINUTE(3)|Gibt ein Intervall von 163 Minuten an. Die Intervallführungsgenauigkeit beträgt 3.|  
-|INTERVALL '223.16' SEKUNDE(3,2)"|Gibt ein Intervall von 223,16 Sekunden an. Die Intervall-Führungsgenauigkeit beträgt 3, und die Sekundengenauigkeit ist 2.|  
-|"INTERVALL '163-11' JAHR(3) BIS MONAT"|Gibt ein Intervall von 163 Jahren und 11 Monaten an. Die Intervallführungsgenauigkeit beträgt 3.|  
-|INTERVAL '163 12' TAG(3) BIS STUNDE'|Gibt ein Intervall von 163 Tagen und 12 Stunden an. Die Intervallführungsgenauigkeit beträgt 3.|  
-|INTERVAL '163 12:39' TAG(3) BIS MINUTE'|Gibt ein Intervall von 163 Tagen, 12 Stunden und 39 Minuten an. Die Intervallführungsgenauigkeit beträgt 3.|  
-|INTERVAL '163 12:39:59.163' DAY(3) BIS SECOND(3)'|Gibt ein Intervall von 163 Tagen, 12 Stunden, 39 Minuten und 59,163 Sekunden an. Die Intervall-Führungsgenauigkeit beträgt 3, und die Sekundengenauigkeit ist 3.|  
-|INTERVAL '163:39' STUNDE(3) BIS MINUTE'|Gibt ein Intervall von 163 Stunden und 39 Minuten an. Die Intervallführungsgenauigkeit beträgt 3.|  
-|INTERVALL '163:39:59.163' STUNDE(3) BIS SEKUNDE(4)'|Gibt ein Intervall von 163 Stunden, 39 Minuten und 59,163 Sekunden an. Die Intervall-Führungsgenauigkeit beträgt 3, und die Sekundengenauigkeit beträgt 4.|  
-|INTERVALL '163:59.163' MINUTE(3) BIS SECOND(5)'|Gibt ein Intervall von 163 Minuten und 59,163 Sekunden an. Die Intervall-Führungsgenauigkeit beträgt 3, und die Sekundengenauigkeit ist 5.|  
-|INTERVALL -'16 23:39:56.23' TAG ZU SEKUNDE|Gibt ein Intervall von minus 16 Tagen, 23 Stunden, 39 Minuten und 56,23 Sekunden an. Die implizite Führungsgenauigkeit beträgt 2, und die implizite Sekundengenauigkeit beträgt 6.|  
+|{Interval ' 326 ' Jahr (4)}|Gibt ein Intervall von 326 Jahren an. Die angegebene Intervall Genauigkeit beträgt 4.|  
+|{Interval ' 326 ' Monat (3)}|Gibt ein Intervall von 326 Monaten an. Die angegebene Intervall Genauigkeit beträgt 3.|  
+|{Interval ' 3261 ' Tag (4)}|Gibt ein Intervall von 3261 Tagen an. Die angegebene Intervall Genauigkeit beträgt 4.|  
+|{INTERVAL "163" Stunde (3)}|Gibt ein Intervall von 163 Tagen an. Die angegebene Intervall Genauigkeit beträgt 3.|  
+|{Interval ' 163 ' Minute (3)}|Gibt ein Intervall von 163 Minuten an. Die angegebene Intervall Genauigkeit beträgt 3.|  
+|{Interval ' 223,16 ' Second (3, 2)}|Gibt ein Intervall von 223,16 Sekunden an. Die angegebene Intervall Genauigkeit beträgt 3 und die Sekunden Genauigkeit 2.|  
+|{Interval ' 163-11 ' Jahr (3) bis Monat}|Gibt ein Intervall von 163 Jahren und 11 Monaten an. Die angegebene Intervall Genauigkeit beträgt 3.|  
+|{Interval ' 163 12 ' Tag (3) bis Stunde}|Gibt ein Intervall von 163 Tagen und 12 Stunden an. Die angegebene Intervall Genauigkeit beträgt 3.|  
+|{Interval ' 163 12:39 ' Tag (3) bis Minute}|Gibt ein Intervall von 163 Tagen, 12 Stunden und 39 Minuten an. Die angegebene Intervall Genauigkeit beträgt 3.|  
+|{Interval ' 163 12:39:59.163 ' Tag (3) bis Sekunde (3)}|Gibt ein Intervall von 163 Tagen, 12 Stunden, 39 Minuten und 59,163 Sekunden an. Die angegebene Intervall Genauigkeit beträgt 3 und die Sekunden Genauigkeit 3.|  
+|{INTERVAL "163:39" Stunde (3) bis Minute}|Gibt ein Intervall von 163 Stunden und 39 Minuten an. Die angegebene Intervall Genauigkeit beträgt 3.|  
+|{Interval ' 163:39:59.163 ' Stunde (3) bis Sekunde (4)}|Gibt ein Intervall von 163 Stunden, 39 Minuten und 59,163 Sekunden an. Die angegebene Intervall Genauigkeit beträgt 3 und die Sekunden Genauigkeit 4.|  
+|{Interval ' 163:59.163 ' Minute (3) bis Sekunde (5)}|Gibt ein Intervall von 163 Minuten und 59,163 Sekunden an. Die angegebene Intervall Genauigkeit beträgt 3 und die Sekunden Genauigkeit 5.|  
+|{INTERVAL-"16 23:39:56.23" Day to Second}|Gibt ein Intervall von minus 16 Tagen, 23 Stunden, 39 Minuten und 56,23 Sekunden an. Die implizite führende Genauigkeit ist 2, und die implizite Sekunden Genauigkeit ist 6.|  
   
- In der folgenden Tabelle sind Beispiele für ungültige Intervallliterale aufgeführt:  
+ In der folgenden Tabelle sind Beispiele für ungültige Intervall Literale aufgeführt:  
   
-|Literale Escape-Klausel|Grund, warum ungültig|  
+|Literale Escape-Klausel|Grund für ungültiges|  
 |---------------------------|------------------------|  
-|INTERVALL '163' STUNDE(2)|Die Intervallführungsgenauigkeit ist 2, aber der Wert des führenden Feldes ist 163.|  
-|INTERVALL '223.16' SEKUNDE(2,2)"<br /><br /> INTERVALL '223.16' SEKUNDE(3,1)"|Im ersten Beispiel ist die Führende Genauigkeit zu klein, und im zweiten Beispiel ist die Sekundengenauigkeit zu klein.|  
-|INTERVALL '223.16' SEKUNDE<br /><br /> "INTERVALL''223'-JAHR"|Da die führende Genauigkeit nicht angegeben ist, wird standardmäßig 2 angegeben, was zu klein ist, um das angegebene Literal zu enthalten.|  
-|INTERVAL '22.1234567' SEKUNDE'|Die Sekundengenauigkeit ist nicht angegeben, daher ist sie standardmäßig auf 6 festgelegt. Das Literal hat sieben Ziffern hinter dem Dezimaltrennzeichen.|  
-|"INTERVALL '163-13' JAHR(3) BIS MONAT"<br /><br /> INTERVAL '163 65' TAG(3) BIS STUNDE'<br /><br /> INTERVAL '163 62:39' TAG(3) BIS MINUTE'<br /><br /> INTERVAL '163 12:125:59.163' DAY(3) BIS SECOND(3)'<br /><br /> INTERVAL '163:144' STUNDE(3) BIS MINUTE'<br /><br /> INTERVALL '163:567:234.163' STUNDE(3) BIS SEKUNDE(4)'<br /><br /> INTERVALL '163:591.163' MINUTE(3) BIS SECOND(5)'|Das nachfolgende Feld folgt nicht den Regeln des Gregorianischen Kalenders.|
+|{INTERVAL "163" Stunde (2)}|Die angegebene Intervall Genauigkeit ist 2, aber der Wert des führenden Felds ist 163.|  
+|{Interval ' 223,16 ' Second (2, 2)}<br /><br /> {Interval ' 223,16 ' Second (3, 1)}|Im ersten Beispiel ist die führende Genauigkeit zu klein, und im zweiten Beispiel ist die Genauigkeit der Sekunden zu klein.|  
+|{Interval ' 223,16 ' Second}<br /><br /> {Interval ' 223 ' Jahr}|Da die führende Genauigkeit nicht angegeben ist, wird standardmäßig 2 verwendet. Dies ist zu klein, um das angegebene Literalzeichen zu speichern.|  
+|{Interval ' 22,1234567 ' Second}|Die Sekunden Genauigkeit ist nicht angegeben, d. h., der Standardwert ist 6. Das Literale weist sieben Ziffern nach dem Dezimaltrennzeichen auf.|  
+|{Interval ' 163-13 ' Jahr (3) bis Monat}<br /><br /> {Interval ' 163 65 ' Tag (3) bis Stunde}<br /><br /> {Interval ' 163 62:39 ' Tag (3) bis Minute}<br /><br /> {Interval ' 163 12:125:59.163 ' Tag (3) bis Sekunde (3)}<br /><br /> {INTERVAL "163:144" Stunde (3) bis Minute}<br /><br /> {INTERVAL "163:567:234.163" Stunde (3) bis Sekunde (4)}<br /><br /> {Interval ' 163:591.163 ' Minute (3) bis Sekunde (5)}|Das nachfolgende Feld folgt nicht den Regeln des gregorianischen Kalenders.|

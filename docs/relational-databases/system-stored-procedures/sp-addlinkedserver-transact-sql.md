@@ -18,10 +18,10 @@ ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: ad01313933cb2e04bf22257bcdd0eb93a1a755e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72313746"
 ---
 # <a name="sp_addlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-SQL)
@@ -44,7 +44,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
   
 ## <a name="arguments"></a>Argumente  
 [ @server = ] * \'Server\' *          
-Der Name des zu erstellenden Verbindungsservers. *Server* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+Der Name des zu erstellenden Verbindungsservers. *server* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
 [ @srvproduct = ] * \'product_name\' *          
 Der Produktname der OLE DB-Datenquelle, die als Verbindungsserver hinzugefügt werden soll. *product_name* ist vom Datentyp **nvarchar (** 128 **)** und hat den Standardwert NULL. Wenn **SQL Server**, *provider_name*, *data_source*, *Location*, *provider_string*und *catalog* nicht angegeben werden müssen.  
@@ -79,26 +79,23 @@ Der eindeutige Programmbezeichner (Programmatic Identifier, PROGID) des OLE DB-A
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine.  
+ Keine  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die folgende Tabelle zeigt die Einrichtungsmöglichkeiten eines Verbindungsservers für Datenquellen, auf die über OLE DB zugegriffen werden kann. Für die Einrichtung eines Verbindungsservers für eine bestimmte Datenquelle gibt es mehrere Möglichkeiten; für die einzelnen Datenquellentypen sind möglicherweise mehrere Zeilen vorhanden. Diese Tabelle zeigt auch die **sp_addlinkedserver** Parameterwerte, die zum Einrichten des Verbindungs Servers verwendet werden sollen.  
   
 |OLE DB-Remotedatenquelle|OLE DB-Anbieter|product_name|provider_name|data_source|location|provider_string|catalog|  
 |-------------------------------|---------------------|-------------------|--------------------|------------------|--------------|----------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieter|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<sup>1</sup> (Standard)||||||  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieter|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] <sup>1</sup> (Standard)||||||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieter||**SQLNCLI**|Netzwerkname von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (für Standardinstanz)|||Datenbankname (optional)|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-OLE DB-Anbieter||**SQLNCLI**|*Servername*\\*instanceName* (für eine bestimmte Instanz)|||Datenbankname (optional)|  
 |Oracle, Version 8 und höher|Oracle-Anbieter für OLE DB|Any|**OraOLEDB.Oracle**|Alias für die Oracle-Datenbank||||  
 |Access/Jet|Microsoft OLE DB-Anbieter für Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Vollständiger Pfad der Jet-Datenbankdatei||||  
 |ODBC-Datenquelle (ODBC data source)|Microsoft OLE DB-Anbieter für ODBC|Any|**MSDASQL**|System-DSN der ODBC-Datenquelle||||  
-|ODBC-Datenquelle (ODBC data source)|[!INCLUDE[msCoName](../../includes/msconame-md.md)]OLE DB Anbieter für ODBC|Any|**MSDASQL**|||ODBC-Verbindungszeichenfolge||  
-|Dateisystem|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB-Anbieter für den Indexdienst|Any|**MSIDXS**|Katalogname von Indexdienstleistung||||  
-|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel-Kalkulationstabelle|[!INCLUDE[msCoName](../../includes/msconame-md.md)]OLE DB Anbieter für Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Vollständiger Pfad der Excel-Datei||Excel 5,0||  
-|IBM DB2-Datenbank|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB-Anbieter für DB2|Any|**DB2OLEDB**|||Weitere [!INCLUDE[msCoName](../../includes/msconame-md.md)] Informationen finden Sie unter OLE DB Provider für DB2-Dokumentation.|Katalogname der DB2-Datenbank|  
+|ODBC-Datenquelle (ODBC data source)|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB-Anbieter für ODBC|Any|**MSDASQL**|||ODBC-Verbindungszeichenfolge||  
+|Dateisystem|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB-Anbieter für den Indexdienst|Any|**MSIDXS**|Katalogname von Indexdienstleistung||||  
+|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel-Kalkulationstabelle|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB-Anbieter für Jet|Any|**Microsoft.Jet.OLEDB.4.0**|Vollständiger Pfad der Excel-Datei||Excel 5,0||  
+|IBM DB2-Datenbank|[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB-Anbieter für DB2|Any|**DB2OLEDB**|||Weitere [!INCLUDE[msCoName](../../includes/msconame-md.md)] Informationen finden Sie unter OLE DB Provider für DB2-Dokumentation.|Katalogname der DB2-Datenbank|  
   
  <sup>1</sup> diese Art der Einrichtung eines Verbindungs Servers erzwingt, dass der Name des Verbindungs Servers mit dem Netzwerknamen der Remote Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]identisch ist. Verwenden Sie *data_source* , um den Server anzugeben.  
   
@@ -199,7 +196,7 @@ EXEC sp_addlinkedserver
 GO  
 ```  
   
-### <a name="d-using-the-microsoft-ole-db-provider-for-excel-spreadsheet"></a>D: Verwenden des Microsoft OLE DB-Anbieters für Excel-Arbeitsblätter  
+### <a name="d-using-the-microsoft-ole-db-provider-for-excel-spreadsheet"></a>D. Verwenden des Microsoft OLE DB-Anbieters für Excel-Arbeitsblätter  
  Um eine Verbindungs Server Definition mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB-Anbieter für Jet für den Zugriff auf eine Excel-Tabelle im 1997-2003-Format zu erstellen, erstellen Sie zunächst einen benannten Bereich in Excel, indem Sie die Spalten und Zeilen des Excel-Arbeitsblatts angeben, die ausgewählt werden sollen. Auf den Namen des Bereichs kann dann als Tabellenname in einer verteilten Abfrage verwiesen werden.  
   
 ```sql  
@@ -287,7 +284,7 @@ EXEC sp_addlinkedserver
        Default Schema=admin;';  
 ```  
   
-### <a name="g-add-a-includesssdsfullincludessssdsfull-mdmd-as-a-linked-server-for-use-with-distributed-queries-on-cloud-and-on-premises-databases"></a>G. Hinzufügen [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] eines als Verbindungs Server für die Verwendung mit verteilten Abfragen in Cloud-und lokalen Datenbanken  
+### <a name="g-add-a-sssdsfull-as-a-linked-server-for-use-with-distributed-queries-on-cloud-and-on-premises-databases"></a>G. Hinzufügen [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] eines als Verbindungs Server für die Verwendung mit verteilten Abfragen in Cloud-und lokalen Datenbanken  
  Sie können eine [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] als Verbindungsserver hinzufügen und diesen dann für verteilte Abfragen verwenden, die lokale Datenbanken und Clouddatenbanken umfassen. Dies ist eine Komponente für Daten Bank Hybridlösungen, die lokale Unternehmensnetzwerke und die Azure-Cloud umfassen.  
   
  Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Box-Produkt enthält das Feature für verteilte Abfragen, mit dem Sie Abfragen zum Kombinieren von Daten aus lokalen Datenquellen und Daten aus Remote Quellen (einschließlich Daten aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht-Datenquellen), die als Verbindungs Server definiert sind, schreiben können. Jede [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (außer der virtuellen Masterdatenbank) kann als einzelner Verbindungsserver hinzugefügt und wie jede andere Datenbank direkt in Datenbankanwendungen verwendet werden.  
@@ -334,7 +331,7 @@ SELECT * FROM myLinkedServer.myDatabase.dbo.myTable
  [sp_dropserver &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   
  [sp_serveroption &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md)   
  [sp_setnetname &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-setnetname-transact-sql.md)   
- [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Systemtabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

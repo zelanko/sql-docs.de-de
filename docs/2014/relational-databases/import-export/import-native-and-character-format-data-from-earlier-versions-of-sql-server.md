@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8f41e323faeb898be1f44159760bb1c28b7ab024
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011917"
 ---
 # <a name="import-native-and-character-format-data-from-earlier-versions-of-sql-server"></a>Importieren von Daten aus früheren SQL Server-Versionen im systemeigenen Format oder im Zeichenformat
@@ -55,15 +55,15 @@ ms.locfileid: "66011917"
  Wenn Sie einen Massen Export von Daten mithilfe **des-V80-** Schalters durchlaufen, `nvarchar(max)`werden, `varchar(max)` `varbinary(max)`,, XML und UDT-Daten im einheitlichen Modus mit einem 4- `text`Byte `image`-Präfix wie die Daten, und und `ntext` nicht mit einem 8-Byte-Präfix [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] gespeichert. Dies ist der Standardwert für und spätere Versionen.  
   
 ## <a name="copying-date-values"></a>Kopieren von Datumswerten  
- **bcp** verwendet die ODBC-API für das Massen kopieren. Deshalb verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bcp **zum Importieren von Datumswerten in** das ODBC-Datumsformat (*jjjj-mm-tt hh:mm:ss*[*.f...*]).  
+ Von**bcp** wird die ODBC-API für das Massenkopieren verwendet. Deshalb verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bcp **zum Importieren von Datumswerten in** das ODBC-Datumsformat (*jjjj-mm-tt hh:mm:ss*[ *.f...* ]).  
   
  Der Befehl **bcp** exportiert Datendateien im Zeichenformat unter Verwendung des ODBC- `datetime` Standard `smalldatetime` Formats für-und-Werte. So wird beispielsweise eine `datetime`-Spalte mit dem Datum `12 Aug 1998` beim Massenkopieren in eine Datendatei als die Zeichenfolge `1998-08-12 00:00:00.000` übertragen.  
   
 > [!IMPORTANT]  
 >  Wenn Sie Daten mithilfe von `smalldatetime` **bcp**in ein Feld importieren, achten Sie darauf, dass der Wert für Sekunden 00,000 ist. Andernfalls schlägt der Vorgang fehl. Der `smalldatetime`-Datentyp kann nur Werte beinhalten, die auf die volle Minute gerundet sind. BULK INSERT und INSERT ... SELECT * FROM OPENROWSET(BULK...) schlagen in diesem Fall nicht fehl, schneiden jedoch den Sekundenwert ab.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
- **So verwenden Sie Datenformate für Massen Import oder Massen Export**  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
+ **So verwenden Sie Datenformate für Massenimport oder Massenexport**  
   
 -   [Verwenden des Zeichenformats zum Importieren und Exportieren von Daten &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66011917"
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [Datentypen &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [SQL Server Datenbank-Engine Abwärtskompatibilität](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
+ [Abwärtskompatibilität der SQL Server-Datenbank-Engine](../../database-engine/sql-server-database-engine-backward-compatibility.md)   
  [CAST und CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql)  
   
   

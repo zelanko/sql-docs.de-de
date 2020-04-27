@@ -11,10 +11,10 @@ ms.assetid: 8bdab026-a0c0-41f3-9d36-f3919c23247f
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 2e204b5021cb2928988331c73750821225a4192d
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81728441"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>Erstellen von Proxyklassen für den Master Data Manager-Webdienst
@@ -28,10 +28,10 @@ ms.locfileid: "81728441"
   
 1.  Öffnen Sie die Datei „Web.config“ von [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] in einem Text-Editor. Diese Datei befindet sich im Ordner "WebApplication" des [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Installationspfads.  
   
-2.  Suchen Sie den Bereich **mdsWsHttpBehavior** unter **\<serviceBehaviors>**. Legen Sie für das ** \<>-Elements serviceMetadata** **httpGetEnabled** auf **true**fest.  
+2.  Suchen Sie den Bereich **mdsWsHttpBehavior** unter **\<serviceBehaviors>**. Legen Sie für das Element ** \<serviceMetadata>** den Wert **HttpGetEnabled** auf **true**fest.  
   
     > [!NOTE]  
-    >  Wenn Sie Webdienste über Transport Layer Security (TLS), früher bekannt als SSL (Secure Sockets Layer), aktivieren möchten, legen Sie **httpsGetEnabled** im Abschnitt **mdsWsHttpBehavior** der Datei web.config auf **true** fest. Außerdem müssen Sie **mdsWsHTTPBinding** so ändern, dass es auch für TLS konfiguriert ist, und den Abschnitt nicht-TLS auskommentieren.  
+    >  Wenn Sie Webdienste über Transport Layer Security (TLS) aktivieren möchten, die zuvor als Secure Sockets Layer (SSL) bekannt waren, legen Sie **HttpsGetEnabled** im Abschnitt **mdtaushttpbehavior** der Datei "Web. config" auf " **true** " fest. Außerdem müssen Sie **mdtaushttpbinding** ändern, sodass es auch für TLS konfiguriert ist, und den nicht-TLS-Abschnitt auskommentieren.  
   
 3.  Speichern Sie die an der Datei vorgenommenen Änderungen.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "81728441"
  Ist Visual Studio 2010 installiert, lassen sich Proxyklassen am einfachsten durch das Hinzufügen eines **Dienstverweises** zum Projekt erstellen. Die Adresse des Dienstverweises ist die URL der [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]-Webanwendung, wobei "/service/service.svc" angefügt wird. Beispiel: `https://yourserver/MDS/service/service.svc`. Weitere Informationen finden Sie unter [Vorgehensweise: Hinzufügen, Aktualisieren oder Entfernen eines Dienstverweises](https://go.microsoft.com/fwlink/?LinkId=221167).  
   
 ## <a name="creating-proxy-classes-by-using-svcutilexe"></a>Erstellen von Proxyklassen mit "Svcutil.exe"  
- Sie müssen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] entweder [!INCLUDE[msCoName](../../includes/msconame-md.md)] oder das Windows SDK installiert sein, um Svcutil.exe auf Ihrem Computer zu haben. Wenn Sie [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] verwenden, müssen Sie den Befehl über die [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-Eingabeaufforderung ausführen. Weitere Informationen finden Sie unter [ServiceModel Metadata Utility-Tool (Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027) und [Generieren eines WCF-Clients aus Dienstmetadaten](https://go.microsoft.com/fwlink/?LinkId=164821).  
+ Sie müssen entweder [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] oder den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows SDK installiert haben, damit "Svcutil. exe" auf Ihrem Computer installiert ist. Wenn Sie [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] verwenden, müssen Sie den Befehl über die [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-Eingabeaufforderung ausführen. Weitere Informationen finden Sie unter [ServiceModel Metadata Utility-Tool (Svcutil.exe)](https://go.microsoft.com/fwlink/?LinkId=165027) und [Generieren eines WCF-Clients aus Dienstmetadaten](https://go.microsoft.com/fwlink/?LinkId=164821).  
   
  Verwenden Sie zum Erstellen mehrerer C#-Proxyklassen mit "Svcutil.exe" einen Befehl wie folgt:  
   

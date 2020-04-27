@@ -2,7 +2,6 @@
 title: Verwenden von OPENJSON mit dem Standardschema
 ms.date: 06/02/2016
 ms.prod: sql
-ms.reviewer: genemi
 ms.technology: ''
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,17 +9,18 @@ helpviewer_keywords:
 ms.assetid: 8e28a8f8-71a8-4c25-96b8-0bbedc6f41c4
 author: jovanpop-msft
 ms.author: jovanpop
+ms.reviewer: genemi
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3e4aac74ac35fc5d75320b420e85b130be110340
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: 633737d8dd302d6546662fb048c3f3e1ea50c19b
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "74096038"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087360"
 ---
-# <a name="use-openjson-with-the-default-schema-sql-server"></a>Verwenden von OPENJSON mit dem Standardschema (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+# <a name="use-openjson-with-the-default-schema"></a>Verwenden von OPENJSON mit dem Standardschema 
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
   Verwenden Sie **OPENJSON** mit dem Standardschema, um eine Tabelle mit einer Zeile für jede Eigenschaft des Objekts oder für jedes Element im Array zurückzugeben.  
   
@@ -36,7 +36,7 @@ FROM OPENJSON('{"name":"John","surname":"Doe","age":45}')
   
  **Ergebnisse**  
   
-|Key|value|  
+|Schlüssel|Wert|  
 |---------|-----------|  
 |name|John|  
 |surname|Doe|  
@@ -52,7 +52,7 @@ FROM OPENJSON('["en-GB", "en-UK","de-AT","es-AR","sr-Cyrl"]')
   
  **Ergebnisse**  
   
-|Key|value|  
+|Schlüssel|Wert|  
 |---------|-----------|  
 |0|en-GB|  
 |1|en-UK|  
@@ -85,7 +85,7 @@ FROM OPENJSON(@json,N'lax $.info')
   
  **Ergebnisse**  
   
-|Key|value|type|  
+|Schlüssel|Wert|type|  
 |---------|-----------|----------|  
 |type|1|0|  
 |address|{ "town":"Bristol", "county":"Avon", "country":"England" }|5|  

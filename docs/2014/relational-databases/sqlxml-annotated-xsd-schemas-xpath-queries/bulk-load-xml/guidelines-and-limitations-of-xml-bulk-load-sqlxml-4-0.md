@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 329fb8df41df5d97cfcc3750c2850d03278d3739
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013450"
 ---
 # <a name="guidelines-and-limitations-of-xml-bulk-load-sqlxml-40"></a>Richtlinien und Einschränkungen von XML-Massenladen (SQLXML 4.0)
@@ -171,7 +171,6 @@ ms.locfileid: "66013450"
   
 -   Wenn Sie Datenwerte mithilfe von XML-Massenladen einfügen, müssen die Werte im Format (-)CCYY-MM-DD((+-)TZ) angegeben werden. Dies ist das XSD-Standardformat für das Datum.  
   
--   Einige Eigenschaftenflags sind mit anderen Eigenschaftenflags nicht kompatibel. Beispielsweise wird beim Massenladen `Ignoreduplicatekeys=true` nicht gleichzeitig mit `Keepidentity=false` unterstützt. Bei `Keepidentity=false` wird für das Massenladen erwartet, dass der Server die Schlüsselwerte generiert. Tabellen sollten für den Schlüssel eine `IDENTITY`-Einschränkung besitzen. Der Server generiert keine doppelten Schlüssel, was bedeutet, dass `Ignoreduplicatekeys` nicht auf `true` festgelegt werden muss. 
-  `Ignoreduplicatekeys` muss nur dann auf `true` festgelegt werden, wenn Primärschlüsselwerte aus den eingehenden Daten in eine Tabelle mit Zeilen hochgeladen werden und es möglicherweise Konflikte im Zusammenhang mit Primärschlüsselwerten gibt.  
+-   Einige Eigenschaftenflags sind mit anderen Eigenschaftenflags nicht kompatibel. Beispielsweise wird beim Massenladen `Ignoreduplicatekeys=true` nicht gleichzeitig mit `Keepidentity=false` unterstützt. Bei `Keepidentity=false` wird für das Massenladen erwartet, dass der Server die Schlüsselwerte generiert. Tabellen sollten für den Schlüssel eine `IDENTITY`-Einschränkung besitzen. Der Server generiert keine doppelten Schlüssel, was bedeutet, dass `Ignoreduplicatekeys` nicht auf `true` festgelegt werden muss. `Ignoreduplicatekeys` muss nur dann auf `true` festgelegt werden, wenn Primärschlüsselwerte aus den eingehenden Daten in eine Tabelle mit Zeilen hochgeladen werden und es möglicherweise Konflikte im Zusammenhang mit Primärschlüsselwerten gibt.  
   
   

@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40bd2c5735b68a165bcdff4a26069505994dbd85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211256"
 ---
-# <a name="options-environment-fonts-and-colors-page"></a>Optionen (Umgebung: Seite „Schriftarten und Farben“)
-  Im Dialogfeld **Optionen** können Sie ein benutzerdefiniertes Schriftart-und Farbschema für verschiedene Elemente der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Benutzeroberfläche in erstellen. Klicken Sie im Menü **Extras** auf **Optionen** , erweitern Sie den Ordner **Umgebung** , und klicken Sie anschließend auf **Schriftarten und Farben**.  
+# <a name="options-environment-fonts-and-colors-page"></a>Optionen (Umgebung: Seite zu Schriftarten und Farben)
+  Im Dialogfeld **Optionen** können Sie ein benutzerdefiniertes Schriftart- und Farbschema für verschiedene Elemente der Benutzeroberfläche in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] erstellen. Klicken Sie im Menü **Extras** auf **Optionen** , erweitern Sie den Ordner **Umgebung** , und klicken Sie anschließend auf **Schriftarten und Farben**.  
   
  Änderungen am Farbschema werden nicht in der Sitzung wirksam, in der Sie sie vornehmen. Sie können Farbänderungen auswerten, indem Sie eine andere Instanz von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] öffnen und die Bedingungen erstellen, unter denen Sie die Anwendung Ihrer Änderungen erwarten.  
   
@@ -34,14 +34,14 @@ ms.locfileid: "68211256"
 |Fenster "Suchergebnisse"|Änderungen an den Anzeigeeinstellungen für Schriftart, Größe und Farbe für dieses Element wirken sich auf die Darstellung von Text im Fenster „Suchergebnisse“ (FindResults) aus.|  
 |Ausgabefenster|Änderungen an den Anzeigeeinstellungen für Schriftart, Größe und Farbe für dieses Element wirken sich auf die Darstellung von Text im Ausgabefenster aus.|  
 |Rasterergebnisse|Änderungen an den Anzeigeeinstellungen für Schriftart, Größe und Farbe für dieses Element wirken sich auf die Darstellung von Text im Bereich **Rasterergebnisse** des Fensters „Abfrage“ aus.|  
-|Ausführungsplan|Änderungen an den Anzeigeeinstellungen für Schriftart, Größe und Farbe für dieses Element wirken sich auf die Darstellung von Text im Ausführungs Plan [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von [!INCLUDE[ssEW](../../includes/ssew-md.md)] -und-Abfragen aus.|  
+|Ausführungsplan|Änderungen an den Anzeigeeinstellungen für Schriftart, Größe und Farbe für dieses Element wirken sich auf die Darstellung von Text im Ausführungsplan von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Abfragen sowie Abfragen von [!INCLUDE[ssEW](../../includes/ssew-md.md)] aus.|  
 |Textergebnis|Änderungen an den Anzeigeeinstellungen für Schriftart, Größe und Farbe für dieses Element wirken sich auf die Darstellung von Text im Bereich **Textergebnisse** des Fensters „Abfrage“ aus.|  
 |Business Intelligence-Designer|Änderungen an den Anzeigeeinstellungen für Schriftart, Größe und Farbe für dieses Element wirken sich auf die Darstellung von Text im Fenster „Business Intelligence-Designer“ aus.|  
   
- **Standardwerte verwenden**  
+ **Standard verwenden**  
  Die Schaltfläche **Standard verwenden** setzt den Wert für die Standardschriftart- und -farbwerte des Listenelements zurück, das Sie aus der Liste **Einstellungen anzeigen für** ausgewählt haben.  
   
- **Schriftart (fett formatierter Typ gibt Schriftarten mit fester Breite an)**  
+ **Schriftart (Fett bedeutet mit fester Breite formatiert)**  
  Führt alle Schriftarten auf, die auf Ihrem System installiert sind. Wenn diese Dropdownliste erstmalig geöffnet wird, ist die aktuelle Schriftart für das Element ausgewählt, das Sie aus der Liste **Einstellungen anzeigen für** ausgewählt haben. Feste Schriftarten können im Editor leichter ausgerichtet werden und werden in Fettschrift angezeigt.  
   
  **Größe**  
@@ -59,7 +59,7 @@ ms.locfileid: "68211256"
   
 -   Reduzierbarer Text: Ein Block mit Text oder Code, der innerhalb des Code-Editors (nur XML) ein- bzw. ausgeblendet werden kann.  
   
- **Element Vordergrund**  
+ **Elementvordergrund**  
  Führt die verfügbaren Farben auf, die Sie für den Vordergrund des unter **Elemente anzeigen**ausgewählten Elements auswählen können. Weil einige Elemente in Beziehung zueinander stehen, sollte ein einheitliches Anzeigeschema beibehalten werden. Beispielsweise wird bei Änderung der Vordergrundfarbe von Text auch die Vordergrundfarbe für Elemente des Typs Zeichenfolge geändert.  
   
  **Benutzerdefiniert**  
@@ -68,13 +68,13 @@ ms.locfileid: "68211256"
 > [!NOTE]  
 >  Ihre Möglichkeiten, benutzerdefinierte Farben zu definieren, werden möglicherweise durch die Farbeinstellungen für Ihr Computerdisplay eingeschränkt. Wenn für Ihren Computer beispielsweise die Anzeige von 256 Farben festgelegt ist und Sie im Dialogfeld **Farbe** eine benutzerdefinierte Farbe auswählen, wird von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] aus der Liste **Grundfarben** als Standardwert die Farbe ausgewählt, die der benutzerdefinierten Farbe am nächsten kommt. Außerdem wird im Dialogfeld **Farbe** die Farbe Schwarz angezeigt.  
   
- **Element Hintergrund**  
+ **Elementhintergrund**  
  Stellt eine Farbpalette bereit, aus der Sie für das in der Liste **Elemente anzeigen**ausgewählte Element eine Hintergrundfarbe auswählen können. Weil einige Elemente in Beziehung zueinander stehen, sollte ein einheitliches Anzeigeschema beibehalten werden. Beispielsweise wird bei Änderung der Hintergrundfarbe von Text auch die Hintergrundfarbe für Elemente des Typs SQL-Zeichenfolge geändert.  
   
  **Benutzerdefiniert**  
  Zeigt das Dialogfeld **Farbe** an, in dem Sie für das in der Liste **Elemente anzeigen** ausgewählte Element eine benutzerdefinierte Farbe festlegen können.  
   
- **Bold**  
+ **Fett**  
  Aktivieren Sie dieses Kontrollkästchen, wenn der Text ausgewählter Anzeigeelemente in Fettschrift angezeigt werden soll. Text in Fettschrift ist in einem Editor einfacher zu identifizieren.  
   
  **Beispiel**  

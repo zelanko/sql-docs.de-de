@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 6b4aa4358259492e1b49672b054eddb8713c7473
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211986"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Erstellen einer Server- und Datenbank-Überwachungsspezifikation
@@ -35,34 +35,34 @@ ms.locfileid: "68211986"
   
      [Sicherheit](#Security)  
   
--   **So erstellen Sie eine Serverüberwachung und Daten Bank Überwachungs Spezifikation mit:**  
+-   **So erstellen Sie eine Server- und Datenbank-Überwachungsspezifikation mit**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
  Datenbank-Überwachungsspezifikationen sind nicht sicherungsfähige Objekte, die sich in einer gegebenen Datenbank befinden. Wenn eine Datenbank-Überwachungsspezifikation erstellt wird, befindet sich diese in einem deaktivierten Zustand.  
   
  Wenn Sie in einer Benutzerdatenbank eine Datenbank-Überwachungsspezifikation erstellen oder ändern, sollten Sie keine Überwachungsaktionen für Serverbereichsobjekte einschließen, z. B. die Systemsichten. Wenn Objekte mit Serverbereich eingeschlossen sind, wird die Überwachung zwar erstellt. Die Objekte mit Serverbereich sind jedoch nicht enthalten, und es wird kein Fehler zurückgegeben. Verwenden Sie eine Datenbank-Überwachungsspezifikation in der master-Datenbank, um Objekte mit Serverbereich zu überwachen.  
   
  Die Datenbank-Überwachungsspezifikationen befinden sich in der Datenbank, in der sie erstellt werden, mit Ausnahme der Systemdatenbank `tempdb`.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
   
 -   Benutzer mit der ALTER ANY DATABASE AUDIT-Berechtigung können Datenbank-Überwachungsspezifikationen erstellen und sie an eine beliebige Überwachung binden.  
   
 -   Nachdem eine Datenbank-Überwachungsspezifikation erstellt wurde, kann diese von Prinzipalen mit den Berechtigungen CONTROL SERVER und ALTER ANY DATABASE AUDIT oder von Prinzipalen mit Zugriff auf das sysadmin-Konto angezeigt werden.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-a-server-audit"></a>So erstellen Sie eine Serverüberwachung  
   
-1.  Erweitern Sie im Objekt-Explorer den Ordner **Sicherheit** .  
+1.  Erweitern Sie in Objekt-Explorer den Ordner **Sicherheit** .  
   
 2.  Klicken Sie **mit der rechten** Maustaste auf den Ordner Überwachungen, und wählen Sie neue über **Prüfung**aus. Weitere Informationen finden Sie unter [Create a Server Audit and Server Audit Specification](create-a-server-audit-and-server-audit-specification.md).  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68211986"
   
 2.  Erweitern Sie den Ordner **Sicherheit** .  
   
-3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Datenbank-Überwachungsspezifikationen** und dann auf **Neue Datenbank-Überwachungsspezifikation...**.  
+3.  Klicken Sie mit der rechten Maustaste auf den Ordner Datenbank-Überwachungs **Spezifikationen** , und wählen Sie **neue Datenbank**-Überwachungs Spezifikation aus.  
   
      Die folgenden Optionen sind im Dialogfeld **Datenbank-Überwachungsspezifikation erstellen** verfügbar.  
   
@@ -90,21 +90,21 @@ ms.locfileid: "68211986"
      **Objektschema**  
      Zeigt das Schema für den angegebenen **Objektnamen**an.  
   
-     **Objektnamen**  
+     **Objektname**  
      Der Name des zu überwachenden Objekts. Das Objekt ist nur für Überwachungsaktionen verfügbar, es gilt nicht für Überwachungsgruppen.  
   
-     **Auslassungspunkte (…)**  
+     **Ellipse (...)**  
      Öffnet das Dialogfeld **Objekte auswählen** , in dem Sie anhand des angegebenen **Überwachungsaktionstyps**nach einem verfügbaren Objekt suchen und es auswählen können.  
   
-     **Prinzipalname**  
+     **Prinzipal Name**  
      Das Konto, anhand dessen die Überwachung für das zu überwachende Objekt gefiltert wird.  
   
-     **Auslassungspunkte (…)**  
+     **Ellipse (...)**  
      Öffnet das Dialogfeld **Objekte auswählen** , in dem Sie nach einem verfügbaren Objekt anhand des angegebenen **Objektnamens**suchen und es auswählen können.  
   
 4.  Nachdem Sie alle Optionen ausgewählt haben, klicken Sie auf **OK**.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-create-a-server-audit"></a>So erstellen Sie eine Serverüberwachung  
   

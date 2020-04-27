@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c0dbc5c5c72b6c69a6d2d390ac6c2c8920a19332
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062191"
 ---
 # <a name="access-to-files-used-by-packages"></a>Zugriff auf Dateien, die von Paketen verwendet werden
@@ -38,8 +38,7 @@ ms.locfileid: "66062191"
  Diese Dateien müssen separat geschützt werden. Dies gilt insbesondere dann, wenn sie vertrauliche Informationen beinhalten.  
   
 ## <a name="configuration-files"></a>Konfigurationsdateien  
- Wenn in einer Konfiguration vertrauliche Informationen enthalten sind, wie z.B. der Anmeldename und das Kennwort, sollten Sie die Konfiguration in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]speichern oder eine Zugriffssteuerungsliste (ACL, Access Control List) verwenden, um den Zugriff auf den Speicherort bzw. auf den Ordner, in dem die Dateien gespeichert sind, zu beschränken und den Zugriff nur bestimmten Konten zu gewähren. In der Regel wird den Konten Zugriff gewährt, denen die Berechtigung zum Ausführen von Paketen erteilt wird, und den Konten, die Pakete verwalten und Probleme bei Paketen beheben. Hierzu gehört z. B. das Überprüfen der Inhalte der Konfiguration, des Prüfpunkts und der Protokolldateien. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereitgestellte Speicher ist sicherer, da er Schutz auf Server- und Datenbankebene bietet. Verwenden Sie zum Speichern der Konfigurationen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurationstyp. Verwenden Sie zum Speichern im Dateisystem den XML-Konfigurationstyp.  
+ Wenn in einer Konfiguration vertrauliche Informationen enthalten sind, wie z.B. der Anmeldename und das Kennwort, sollten Sie die Konfiguration in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]speichern oder eine Zugriffssteuerungsliste (ACL, Access Control List) verwenden, um den Zugriff auf den Speicherort bzw. auf den Ordner, in dem die Dateien gespeichert sind, zu beschränken und den Zugriff nur bestimmten Konten zu gewähren. In der Regel wird den Konten Zugriff gewährt, denen die Berechtigung zum Ausführen von Paketen erteilt wird, und den Konten, die Pakete verwalten und Probleme bei Paketen beheben. Hierzu gehört z. B. das Überprüfen der Inhalte der Konfiguration, des Prüfpunkts und der Protokolldateien. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereitgestellte Speicher ist sicherer, da er Schutz auf Server- und Datenbankebene bietet. Verwenden Sie zum Speichern der Konfigurationen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfigurationstyp. Verwenden Sie zum Speichern im Dateisystem den XML-Konfigurationstyp.  
   
  Weitere Informationen finden Sie unter [Paketkonfigurationen](../../2014/integration-services/package-configurations.md), [Erstellen von Paketkonfigurationen](../../2014/integration-services/create-package-configurations.md)und [Überlegungen zur Sicherheit bei SQL Server-Installationen](../../2014/sql-server/install/security-considerations-for-a-sql-server-installation.md).  
   

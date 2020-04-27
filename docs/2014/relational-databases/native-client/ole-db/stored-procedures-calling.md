@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7385dddea48813615a851979e526af5f03a23332
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206579"
 ---
 # <a name="calling-a-stored-procedure-ole-db"></a>Aufrufen einer gespeicherten Prozedur (OLE DB)
@@ -43,7 +43,7 @@ ms.locfileid: "68206579"
   
 1.  Geben Sie die Parameterinformationen in ein Array aus DBPARAMBINDINFO-Strukturen ein, also den Parameternamen, den anbieterspezifischen Namen für den Datentyp des Parameters oder einen standardmäßigen Datentypennamen usw. Jede Struktur im Array beschreibt einen Parameter. Dieses Array wird dann an die **SetParameterInfo**-Methode übergeben.  
   
-2.  Rufen Sie die **ICommandWithParameters::SetParameterInfo**-Methode auf, um dem Anbieter Parameter zu beschreiben. **SetParameterInfo** gibt den systemeigenen Datentyp der einzelnen Parameter an. **SetParameterInfo** -Argumente:  
+2.  Rufen Sie die **ICommandWithParameters::SetParameterInfo**-Methode auf, um dem Anbieter Parameter zu beschreiben. **SetParameterInfo** gibt den nativen Datentyp jedes Parameters an. **SetParameterInfo**-Argumente sind:  
   
     -   Die Anzahl von Parametern, für die Typinformationen festzulegen sind  
   
@@ -82,8 +82,7 @@ ms.locfileid: "68206579"
   
 -   RPC-Escapesequenz (Remote Procedure Call, Remoteprozeduraufruf)  
   
--   
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)]EXECUTE-Anweisung  
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)]EXECUTE-Anweisung  
   
 ### <a name="odbc-call-escape-sequence"></a>ODBC CALL-Escapesequenz  
  Wenn Sie die Parameterinformationen kennen, rufen Sie die **ICommandWithParameters::SetParameterInfo**-Methode auf, um dem Anbieter die Parameter zu beschreiben. Wenn hingegen die ODBC CALL-Syntax zum Aufrufen einer gespeicherten Prozedur verwendet wird, ruft der Anbieter eine Hilfsfunktion auf, um die Parameterinformationen der gespeicherten Prozedur zu ermitteln.  
@@ -94,7 +93,7 @@ ms.locfileid: "68206579"
   
  {[**? =**]**aufrufen**_procedure_name_[**(**[*Parameter*] [**,**[*Parameter*]]... **)**]}  
   
- Beispiel:  
+ Zum Beispiel:  
   
 ```  
 {call SalesByCategory('Produce', '1995')}  
@@ -115,12 +114,12 @@ ms.locfileid: "68206579"
 {rpc SalesByCategory}  
 ```  
   
- Eine Beispielanwendung, die eine RPC-Escapesequenz veranschaulicht, finden [Sie unter Ausführen einer gespeicherten Prozedur &#40;mithilfe der RPC-Syntax&#41; und Verarbeiten von Rückgabe Codes und Ausgabeparametern &#40;OLE DB&#41;](../../native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
+ Eine Beispielanwendung, die eine RPC-Escapesequenz veranschaulicht, finden Sie unter [Ausführen einer gespeicherten Prozedur &#40;mithilfe der RPC-Syntax&#41; und Verarbeiten von Rückgabecode und Ausgabeparametern &#40;OLE DB&#41;](../../native-client-ole-db-how-to/results/execute-stored-procedure-with-rpc-and-process-output.md).  
   
 ### <a name="transact-sql-execute-statement"></a>'EXECUTE'-Anweisung (Transact-SQL)  
  Die ODBC CALL-Escapesequenz und die RPC-Escapesequenz stellen im Vergleich zur [EXECUTE](/sql/t-sql/language-elements/execute-transact-sql)-Anweisung die bevorzugten Methoden zum Aufrufen einer gespeicherten Prozedur dar. Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter verwendet den RPC- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Mechanismus von, um die Befehls Verarbeitung zu optimieren. Dieses RPC-Protokoll erhöht die Leistung, indem es einen Großteil der Parameterverarbeitung und Anweisungsauswertung auf dem Server überflüssig macht.  
   
- Das folgende Beispiel zeigt die EXECUTE[!INCLUDE[tsql](../../../includes/tsql-md.md)] **-Anweisung (**):  
+ Dies ist ein Beispiel für die -Anweisung [!INCLUDE[tsql](../../../includes/tsql-md.md)] **EXECUTE**:  
   
 ```  
 EXECUTE SalesByCategory 'Produce', '1995'  

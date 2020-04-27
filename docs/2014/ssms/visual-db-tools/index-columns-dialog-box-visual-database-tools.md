@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21e9b4b0f05b2728ac42bbba96a6227872ceaeec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015792"
 ---
 # <a name="index-columns-dialog-box-visual-database-tools"></a>Indexspalten (Dialogfeld) (Visual Database Tools)
@@ -30,7 +30,7 @@ ms.locfileid: "63015792"
  Wählen Sie eine Sortierreihenfolge für die angegebene Spalte aus. Die verfügbaren Optionen lauten **Aufsteigend** und **Absteigend**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erstellen gruppierter Indizes](../../relational-databases/indexes/create-clustered-indexes.md)   
+ [Erstellen von gruppierten Indizes](../../relational-databases/indexes/create-clustered-indexes.md)   
  [Erstellen nicht gruppierter Indizes](../../relational-databases/indexes/create-nonclustered-indexes.md)   
  [Dialog Feld "Indizes und Schlüssel" &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   

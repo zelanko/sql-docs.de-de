@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d2aadd055334c7ee64871c2fdfe5239c9849e90
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68210946"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>Ausführen einer bedarfsgesteuerten Auswertung mit dem Objekt-Explorer
@@ -40,7 +40,7 @@ ms.locfileid: "68210946"
   
 3.  Klicken Sie im Dialogfeld **Richtlinien auswerten** neben dem Feld **Quelle** auf die Schaltfläche mit den Auslassungs Punkten (**...**).  
   
-4.  Im Dialogfeld **Quelle auswählen** können Sie entweder **Dateien** oder **Server** als Quelle der auszuwertenden Richtlinien Dateien auswählen. Wenn Sie auf **Server**klicken, können Sie eine Bedarfs gesteuerte Auswertung aller Best Practices-Richtlinien durchführen, die zuvor in die Richtlinien basierte Verwaltung auf einem lokalen Server oder Remote Server importiert wurden. In diesem Tutorial klicken Sie auf **Dateien**und wählen dann die einzelnen Richtlinien Dateien aus, die Sie auswerten möchten. Gehen Sie dazu folgendermaßen vor:  
+4.  Im Dialogfeld **Quelle auswählen** können Sie entweder **Dateien** oder **Server** als Quelle der auszuwertenden Richtlinien Dateien auswählen. Wenn Sie auf **Server**klicken, können Sie eine Bedarfs gesteuerte Auswertung aller Best Practices-Richtlinien durchführen, die zuvor in die Richtlinien basierte Verwaltung auf einem lokalen Server oder Remote Server importiert wurden. In diesem Tutorial klicken Sie auf **Dateien**und wählen dann die einzelnen Richtlinien Dateien aus, die Sie auswerten möchten. Gehen Sie hierzu folgendermaßen vor:  
   
     1.  Klicken Sie auf **Dateien**.  
   

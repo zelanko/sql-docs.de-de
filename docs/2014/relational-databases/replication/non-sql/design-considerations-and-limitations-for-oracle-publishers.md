@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 043bf26fb17a3433e59623b5b3bfddaaea8bc89f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022512"
 ---
 # <a name="design-considerations-and-limitations-for-oracle-publishers"></a>Überlegungen zum Entwurf und Einschränkungen für Oracle-Verleger
-  Das Veröffentlichen über Oracle-Datenbanken erfolgt nahezu auf die gleiche Weise wie das Veröffentlichen über [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbanken. Beachten Sie jedoch die folgenden Punkte und Einschränkungen:  
+  Die Veröffentlichung aus einer Oracle-Datenbank ist so konzipiert, dass Sie nahezu identisch mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] der Veröffentlichung aus einer Datenbank funktioniert. Beachten Sie jedoch die folgenden Punkte und Einschränkungen:  
   
 -   Die Option Oracle (Gateway) bietet eine bessere Leistung im Vergleich zur Option Oracle (Vollständig), allerdings ist es mit dieser Option nicht möglich, dieselbe Tabelle in mehreren Transaktionsveröffentlichungen zu veröffentlichen. Eine Tabelle kann in höchstens eine Transaktionsveröffentlichung und in beliebig viele Momentaufnahmeveröffentlichungen aufgenommen werden. Wenn Sie dieselbe Tabelle in mehreren Transaktionsveröffentlichungen veröffentlichen müssen, wählen Sie die Option Oracle (Vollständig) aus.  
   
@@ -166,7 +166,7 @@ ms.locfileid: "63022512"
  Weitere Informationen zur Replikations Sicherheit finden Sie unter [SQL Server-Replikation-Sicherheit](../security/view-and-modify-replication-security-settings.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Überlegungen zu administrativen Aufgaben bei Oracle-Verlegern](administrative-considerations-for-oracle-publishers.md)   
+ [Administrative Überlegungen für Oracle-Verleger](administrative-considerations-for-oracle-publishers.md)   
  [Konfigurieren eines Oracle-Verlegers](configure-an-oracle-publisher.md)   
  [Veröffentlichungen mit Oracle (Übersicht)](oracle-publishing-overview.md)  
   

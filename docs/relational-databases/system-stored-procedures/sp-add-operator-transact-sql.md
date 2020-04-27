@@ -18,10 +18,10 @@ ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f410024e1458d20e436df72cc2978ce41b5d60df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "74095504"
 ---
 # <a name="sp_add_operator-transact-sql"></a>sp_add_operator (Transact-SQL)
@@ -58,7 +58,7 @@ sp_add_operator [ @name = ] 'name'
   
 `[ @email_address = ] 'email_address'`Die e-Mail-Adresse des Operators. Diese Zeichenfolge wird direkt an das E-Mail-System übergeben. *email_address* ist vom Datentyp **nvarchar (100)** und hat den Standardwert NULL.  
   
- Sie können entweder eine physische e-Mail-Adresse oder einen Alias für *email_address*angeben. Beispiel:  
+ Sie können entweder eine physische e-Mail-Adresse oder einen Alias für *email_address*angeben. Zum Beispiel:  
   
  '**jdoe**' oder '**jdoe\@XYZ.com**'  
   
@@ -81,12 +81,12 @@ sp_add_operator [ @name = ] 'name'
   
 `[ @pager_days = ] pager_days`Ist eine Zahl, die die Tage angibt, an denen der Operator für Seiten verfügbar ist (abhängig von den angegebenen Start-und Endzeiten). *pager_days*ist vom Datentyp **tinyint**. der Standardwert ist **0** , was bedeutet, dass der Operator nie zum Empfangen einer Seite verfügbar ist. Gültige Werte sind **0** bis **127**. *pager_days*wird berechnet, indem die einzelnen Werte für die erforderlichen Tage addiert werden. Beispielsweise ist von Montag bis Freitag **2**+**4**+**8**+**16**+**32** = **62**. In der folgenden Tabelle werden die Werte für die einzelnen Wochentage aufgelistet.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Sonntag|  
 |**2**|Montag|  
 |**4**|Tuesday|  
-|**88**|Mittwoch|  
+|**88**|Wednesday|  
 |**Uhr**|Thursday|  
 |**32**|Freitag|  
 |**64**|Samstag|  
@@ -101,13 +101,12 @@ sp_add_operator [ @name = ] 'name'
 ## <a name="result-sets"></a>Resultsets  
  Keine  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_add_operator** müssen von der **msdb** -Datenbank aus ausgeführt werden.  
   
  Pagerbenachrichtigungen werden mithilfe des E-Mail-Systems durchgeführt. Daher muss das zugrunde liegende E-Mail-System in der Lage sein, Nachrichten an Pager zu senden.  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Aufträge problemlos mithilfe einer grafischen Oberfläche verwaltet werden. Dies ist die empfohlene Vorgehensweise für die Erstellung und Verwaltung der Auftragsinfrastruktur.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Aufträge problemlos mithilfe einer grafischen Oberfläche verwaltet werden. Dies ist die empfohlene Vorgehensweise für die Erstellung und Verwaltung der Auftragsinfrastruktur.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_add_operator**ausführen.  

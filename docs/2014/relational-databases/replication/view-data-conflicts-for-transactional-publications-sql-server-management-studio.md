@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e046351ca3dc7977691fc98e24453ccbf8e6af53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144411"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>Anzeigen von Datenkonflikten für Transaktionsveröffentlichungen (SQL Server Management Studio)
@@ -63,7 +63,7 @@ ms.locfileid: "63144411"
 6.  Schließen Sie den Replikationskonflikt-Viewer.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Peer-to-Peer Transactional Replication](transactional/peer-to-peer-transactional-replication.md)   
- [Erkennen und Auflösen von Konflikten beim Aktualisieren von verzögertem Update](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)  
+ [Peer-zu-Peer-Transaktions Replikation](transactional/peer-to-peer-transactional-replication.md)   
+ [Konflikterkennung und -lösung beim verzögerten Update über eine Warteschlange](transactional/updatable-subscriptions-queued-updating-conflict-resolution.md)  
   
   

@@ -38,10 +38,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 3df05bddf37970ce0ff0d796bc2b5d93d309b4dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63011721"
 ---
 # <a name="database-level-roles"></a>Rollen auf Datenbankebene
@@ -58,7 +58,7 @@ ms.locfileid: "63011721"
   
  In der folgenden Tabelle werden die festen Datenbankrollen und ihre Möglichkeiten aufgeführt. Diese Rollen sind in allen Datenbanken vorhanden.  
   
-|Rollenname auf Datenbankebene|BESCHREIBUNG|  
+|Rollenname auf Datenbankebene|Beschreibung|  
 |-------------------------------|-----------------|  
 |**db_owner**|Mitglieder der festen Datenbankrolle **db_owner** können alle Aktivitäten zur Konfiguration und Wartung an der Datenbank ausführen und können die Datenbank auch löschen.|  
 |**db_securityadmin**|Mitglieder der festen Datenbankrolle **db_securityadmin** können die Rollenmitgliedschaft ändern und Berechtigungen verwalten. Das Hinzufügen von Prinzipalen zu dieser Rolle könnte zu einer unbeabsichtigten Ausweitung von Privilegien führen.|  
@@ -78,7 +78,7 @@ ms.locfileid: "63011721"
 |`db_ssisadmin`<br /><br /> **db_ssisoperator**<br /><br /> **db_ssisltduser**|Mitglieder dieser Datenbankrollen können [!INCLUDE[ssIS](../../../includes/ssis-md.md)]verwalten und verwenden. Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], die von einer früheren Version aktualisiert wurden, enthalten möglicherweise eine ältere Version der Rolle, die mit Data Transformation Services (DTS) und nicht mit [!INCLUDE[ssIS](../../../includes/ssis-md.md)] benannt wurde. Weitere Informationen finden Sie unter [Integration Services Roles &#40;SSIS Service&#41;](../../../integration-services/security/integration-services-roles-ssis-service.md) (Integration Services-Rollen [SSIS-Dienst]).|  
 |`dc_admin`<br /><br /> **dc_operator**<br /><br /> **dc_proxy**|Mitglieder dieser Datenbankrollen können den Datensammler verwalten und verwenden. Weitere Informationen finden Sie unter [Data Collection](../../data-collection/data-collection.md).|  
 |**PolicyAdministratorRole**|Mitglieder der Datenbankrolle **db_PolicyAdministratorRole** können alle Aktivitäten zur Konfiguration und Wartung für Richtlinien und Bedingungen der richtlinienbasierten Verwaltung ausführen. Weitere Informationen finden Sie unter [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../policy-based-management/administer-servers-by-using-policy-based-management.md).|  
-|**Rolle ServerGroupAdministratorRole**<br /><br /> **Rolle ServerGroupReaderRole**|Mitglieder dieser Datenbankrollen können registrierte Servergruppen verwalten und verwenden.|  
+|**ServerGroupAdministratorRole**<br /><br /> **ServerGroupReaderRole**|Mitglieder dieser Datenbankrollen können registrierte Servergruppen verwalten und verwenden.|  
 |**dbm_monitor**|Wird in der `msdb` -Datenbank erstellt, wenn die erste Datenbank in Datenbankspiegelungs-Monitor registriert wird. Die **dbm_monitor** -Rolle hat keine Mitglieder, bis ein Systemadministrator der Rolle Benutzer zuweist.|  
   
 > [!IMPORTANT]  
@@ -87,21 +87,21 @@ ms.locfileid: "63011721"
 ## <a name="working-with-database-level-roles"></a>Arbeiten mit Rollen auf Datenbankebene  
  In der folgenden Tabelle werden die Befehle, Sichten und Funktionen zum Arbeiten mit Rollen auf Datenbankebene erklärt.  
   
-|Funktion|type|BESCHREIBUNG|  
+|Funktion|type|Beschreibung|  
 |-------------|----------|-----------------|  
-|[sp_helpdbfixedrole &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql)|Metadaten|Gibt eine Liste der festen Datenbankrollen zurück.|  
-|[sp_dbfixedrolepermission &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql)|Metadaten|Zeigt die Berechtigungen einer festen Datenbankrolle an.|  
-|[sp_helprole &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-helprole-transact-sql)|Metadaten|Gibt Informationen zu den Rollen in der aktuellen Datenbank zurück.|  
-|[sp_helprolemember &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql)|Metadaten|Gibt Informationen zu den Mitgliedern einer Rolle in der aktuellen Datenbank zurück.|  
+|[sp_helpdbfixedrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql)|Metadaten|Gibt eine Liste der festen Datenbankrollen zurück.|  
+|[sp_dbfixedrolepermission &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dbfixedrolepermission-transact-sql)|Metadaten|Zeigt die Berechtigungen einer festen Datenbankrolle an.|  
+|[sp_helprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helprole-transact-sql)|Metadaten|Gibt Informationen zu den Rollen in der aktuellen Datenbank zurück.|  
+|[sp_helprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helprolemember-transact-sql)|Metadaten|Gibt Informationen zu den Mitgliedern einer Rolle in der aktuellen Datenbank zurück.|  
 |[sys.database_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)|Metadaten|Gibt eine Zeile für jedes Mitglied jeder Datenbankrolle zurück.|  
 |[IS_MEMBER &#40;Transact-SQL&#41;](/sql/t-sql/functions/is-member-transact-sql)|Metadaten|Zeigt an, ob der aktuelle Benutzer ein Mitglied der angegebenen Microsoft Windows-Gruppe oder der Microsoft SQL Server-Datenbankrolle ist.|  
-|[CREATE ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-role-transact-sql)|Get-Help|Erstellt eine neue Datenbankrolle in der aktuellen Datenbank.|  
-|[Alter Role &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-role-transact-sql)|Get-Help|Ändert den Namen einer Datenbankrolle.|  
-|[DROP ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-role-transact-sql)|Get-Help|Entfernt eine Rolle aus der Datenbank.|  
-|[sp_addrole &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-addrole-transact-sql)|Get-Help|Erstellt eine neue Datenbankrolle in der aktuellen Datenbank.|  
-|[sp_droprole &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-droprole-transact-sql)|Get-Help|Entfernt eine Datenbankrolle aus der aktuellen Datenbank.|  
-|[sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)|Get-Help|Fügt einer Datenbankrolle in der aktuellen Datenbank einen Datenbankbenutzer, eine Datenbankrolle, einen Windows-Anmeldenamen oder eine Windows-Gruppe hinzu.|  
-|[sp_droprolemember &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)|Get-Help|Entfernt ein Sicherheitskonto aus einer SQL Serverrolle in der aktuellen Datenbank.|  
+|[CREATE ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-role-transact-sql)|Befehl|Erstellt eine neue Datenbankrolle in der aktuellen Datenbank.|  
+|[ALTER ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-role-transact-sql)|Befehl|Ändert den Namen einer Datenbankrolle.|  
+|[DROP ROLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-role-transact-sql)|Befehl|Entfernt eine Rolle aus der Datenbank.|  
+|[sp_addrole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrole-transact-sql)|Befehl|Erstellt eine neue Datenbankrolle in der aktuellen Datenbank.|  
+|[sp_droprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprole-transact-sql)|Befehl|Entfernt eine Datenbankrolle aus der aktuellen Datenbank.|  
+|[sp_addrolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addrolemember-transact-sql)|Befehl|Fügt einer Datenbankrolle in der aktuellen Datenbank einen Datenbankbenutzer, eine Datenbankrolle, einen Windows-Anmeldenamen oder eine Windows-Gruppe hinzu.|  
+|[sp_droprolemember &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droprolemember-transact-sql)|Get-Help|Entfernt ein Sicherheitskonto aus einer SQL Serverrolle in der aktuellen Datenbank.|  
   
 ## <a name="public-database-role"></a>Datenbankrolle public  
  Jeder Datenbankbenutzer gehört der Datenbankrolle **public** an. Wenn einem Benutzer keine bestimmten Berechtigungen für ein sicherungsfähiges Objekt erteilt oder verweigert werden, erbt der Benutzer die Berechtigungen, die der Datenbankrolle **public** für dieses Objekt erteilt wurden.  
@@ -109,12 +109,12 @@ ms.locfileid: "63011721"
 ## <a name="related-content"></a>Verwandte Inhalte  
  [Sicherheitskatalogsichten &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/security-catalog-views-transact-sql)  
   
- [Gespeicherte Sicherheits Prozeduren &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/security-stored-procedures-transact-sql)  
+ [Gespeicherte Sicherheitsprozeduren &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/security-stored-procedures-transact-sql)  
   
  [Sicherheitsfunktionen &#40;Transact-SQL&#41;](/sql/t-sql/functions/security-functions-transact-sql)  
   
  [Sichern von SQL Server](../securing-sql-server.md)  
   
- [sp_helprotect &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-helprotect-transact-sql)  
+ [sp_helprotect &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helprotect-transact-sql)  
   
   

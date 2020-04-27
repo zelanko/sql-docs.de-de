@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5547d5fb1c2b083a51837df5d9cacb1be393f555
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144596"
 ---
 # <a name="view-offline-log-files"></a>Anzeigen von Offlineprotokolldateien
@@ -45,7 +45,7 @@ ms.locfileid: "63144596"
   
 -   [SqlErrorLogFile Class](../wmi-provider-configuration-classes/sqlerrorlogfile-class.md) (Dieses Thema veranschaulicht das Abrufen von Informationen zu allen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Protokolldateien für eine angegebene Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
-##  <a name="BeforeYouBegin"></a> Berechtigungen  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Berechtigungen  
  Wenn Sie eine Verbindung mit einer Offlineprotokolldatei herstellen möchten, müssen Sie auf dem lokalen und dem Remotecomputer über die folgenden Berechtigungen verfügen:  
   
 -   Lesezugriff auf den **Root\Microsoft\SqlServer\ComputerManagement12** -WMI-Namespace. Standardmäßig verfügt jeder Benutzer durch die Berechtigung Konto aktivieren über Lesezugriff. Weitere Informationen finden Sie im Verfahren "So überprüfen Sie WMI-Berechtigungen" weiter unten in diesem Abschnitt.  
@@ -60,7 +60,7 @@ ms.locfileid: "63144596"
   
 1.  Öffnen Sie das Snap-In WMI-Kontrolle. Führen Sie dazu je nach Betriebssystem eine der folgenden Aktionen aus:  
   
-    -   Klicken **** Sie auf Start `wmimgmt.msc` , geben Sie im Feld **Suche starten** ein, und drücken Sie dann die EINGABETASTE.  
+    -   Klicken **Start**Sie auf Start `wmimgmt.msc` , geben Sie im Feld **Suche starten** ein, und drücken Sie dann die EINGABETASTE.  
   
     -   Klicken Sie im **Startmenü**auf **Ausführen**, geben `wmimgmt.msc`Sie ein, und drücken Sie die EINGABETASTE.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "63144596"
   
     3.  Geben Sie den Namen des Remotecomputers ein, und klicken Sie dann auf **OK**.  
   
-3.  Klicken Sie mit der rechten Maustaste auf **WMI-Steuerung (lokal)** oder **WMI-Steuerung (***Remote Computername***)**, und klicken Sie dann auf **Eigenschaften**.  
+3.  Klicken Sie mit der rechten Maustaste auf **WMI-Steuerung (Lokal)** oder **WMI-Steuerung (***Remotecomputername***)**, und klicken Sie dann auf **Eigenschaften**.  
   
 4.  Klicken Sie im Dialogfeld **Eigenschaften von WMI-Kontrolle** auf die Registerkarte **Sicherheit** .  
   

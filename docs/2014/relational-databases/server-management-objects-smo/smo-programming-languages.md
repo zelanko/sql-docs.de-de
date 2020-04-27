@@ -18,16 +18,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: feca89ac2ac888c2fa9f082595e761e898dea971
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211926"
 ---
 # <a name="programming-languages"></a>Programmiersprachen
   In diesem Abschnitt wird beschrieben, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wie Sie Management Objects (SMO [!INCLUDE[msCoName](../../includes/msconame-md.md)] ) in Visual Basic [!INCLUDE[msCoName](../../includes/msconame-md.md)] .net, Visual c# .net [!INCLUDE[msCoName](../../includes/msconame-md.md)] und Visual C++ programmieren.  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Erste Schritte in Visual Basic .NET](../../database-engine/dev-guide/getting-started-in-visual-basic-net.md)|Stellt Informationen zum Schreiben eines SMO-Programms mit Visual Basic .NET bereit.|  
 |[Einstieg in Visual C&#35; .net](smo-programming-getting-started-in-visual-csharp-net.md)|Stellt Informationen zum Schreiben eines SMO-Programms mit Visual C# .NET bereit.|  

@@ -24,14 +24,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d99b7e43a2218c79538fc2e7245733dec44e39f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211967"
 ---
 # <a name="create-a-database-user"></a>Erstellen eines Datenbankbenutzers
-  In diesem Thema wird beschrieben, wie Sie einen einer Anmeldung zugeordneten Datenbankbenutzer in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]erstellen können. Der Datenbankbenutzer ist die Identität der Anmeldung, wenn er mit einer Datenbank verbunden ist. Der Datenbankbenutzer kann den gleichen Namen verwenden wie die Anmeldung, dies ist jedoch nicht erforderlich. In diesem Thema wird davon ausgegangen, dass in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bereits eine Anmeldung vorhanden ist. Weitere Informationen zum Erstellen einer Anmeldung finden Sie unter [Erstellen eines Anmelde](create-a-login.md)namens.  
+  In diesem Thema wird beschrieben, wie Sie einen einer Anmeldung zugeordneten Datenbankbenutzer in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]erstellen können. Der Datenbankbenutzer ist die Identität der Anmeldung, wenn er mit einer Datenbank verbunden ist. Der Datenbankbenutzer kann den gleichen Namen verwenden wie die Anmeldung, dies ist jedoch nicht erforderlich. In diesem Thema wird davon ausgegangen, dass in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]bereits eine Anmeldung vorhanden ist. Weitere Informationen zum Erstellen einer Anmeldung finden Sie unter [Erstellen eines Anmelde](create-a-login.md)namens.  
   
  **In diesem Thema**  
   
@@ -47,9 +47,9 @@ ms.locfileid: "68211967"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Hintergrund  
+###  <a name="background"></a><a name="Restrictions"></a>-Hintergrund  
  Ein Benutzer ist ein Sicherheitsprinzipal auf Datenbankebene. Anmeldungen müssen einem Datenbankbenutzer zugeordnet werden, damit eine Verbindung zu einer Datenbank hergestellt werden kann. Eine Anmeldung kann unterschiedlichen Datenbanken als unterschiedliche Benutzer zugeordnet werden, aber kann nur als ein Benutzer in jeder Datenbank zugeordnet werden. In einer teilweise eigenständigen Datenbank kann ein Benutzer erstellt werden, der über keinen Anmeldenamen verfügt. Weitere Informationen zu eigenständigen Datenbankbenutzern finden Sie unter [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql). Wenn in einer Datenbank Gastbenutzer aktiviert sind, kann eine Anmeldung, die keinem Datenbankbenutzer zugeordnet ist, als Gastbenutzer auf die Datenbank zugreifen.  
   
 > [!IMPORTANT]  
@@ -57,12 +57,12 @@ ms.locfileid: "68211967"
   
  Als Sicherheitsprinzipalen können Benutzern Berechtigungen gewährt werden. Die Datenbank ist der Bereich eines Benutzers. Um eine bestimmte Datenbank mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]zu verbinden, muss ein Anmeldename einem Datenbankbenutzer zugeordnet werden. Die Berechtigungen innerhalb der Datenbank werden dem Datenbankbenutzer, nicht dem Anmeldenamen, gewährt bzw. verweigert.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die `ALTER ANY USER`-Berechtigung für die Datenbank.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 ##### <a name="to-create-a-database-user"></a>So erstellen Sie einen Datenbankbenutzer  
   
@@ -74,15 +74,15 @@ ms.locfileid: "68211967"
   
 4.  Wählen Sie im Dialogfeld **Datenbankbenutzer-neu** auf der Seite **Allgemein** einen der folgenden Benutzer Typen aus der Liste **Benutzertyp** aus: **SQL-Benutzer mit Anmelde**Name, **SQL-Benutzer ohne Anmelde**Name, Benutzer, der **einem Zertifikat**zugeordnet ist, Benutzer, der **einem asymmetrischen Schlüssel**zugeordnet ist oder **Windows-Benutzer**.  
   
-5.  Geben Sie in das Feld **Benutzername** den Namen für den neuen Benutzer ein. Wenn Sie **Windows-Benutzer** aus der Liste **Benutzertyp** ausgewählt haben, können Sie zudem auf die Auslassungspunkte **(…)** klicken, um das Dialogfeld **Benutzer oder Gruppe auswählen** zu öffnen.  
+5.  Geben Sie in das Feld **Benutzername** den Namen für den neuen Benutzer ein. Wenn Sie Windows- **Benutzer** aus der Liste **Benutzertyp** ausgewählt haben, können Sie auch auf die Schaltfläche mit den Auslassungs Punkten **(...)** klicken, um das Dialogfeld **Benutzer oder Gruppe auswählen** zu öffnen.  
   
-6.  Geben Sie im Feld **Anmeldename** den Anmeldenamen für den Benutzer ein. Klicken Sie alternativ auf die Auslassungspunkte **(…)**, um das Dialogfeld **Anmeldenamen auswählen** zu öffnen. Der **Anmelde Name** ist verfügbar, wenn Sie entweder **SQL-Benutzer mit Anmelde** Name oder Windows- **Benutzer** aus der Liste **Benutzertyp** auswählen.  
+6.  Geben Sie im Feld **Anmeldename** den Anmeldenamen für den Benutzer ein. Klicken Sie alternativ auf die Auslassungspunkte **(…)**, um das Dialogfeld **Anmeldenamen auswählen** zu öffnen. **Anmeldename** ist verfügbar, wenn Sie entweder **SQL-Benutzer mit Anmeldename** oder **Windows-Benutzer** aus der Liste **Benutzertyp** auswählen.  
   
-7.  Im Feld **Standardschema** wird das Schema angegeben, das von diesem Benutzer erstellte Objekte besitzen wird. Klicken Sie alternativ auf die Auslassungspunkte **(…)**, um das Dialogfeld **Schema auswählen** zu öffnen. **Das Standardschema** ist verfügbar, wenn Sie **entweder SQL-Benutzer mit Anmelde**Name, SQL- **Benutzer ohne Anmelde**Name oder Windows- **Benutzer** aus der Liste **Benutzertyp** auswählen.  
+7.  Im Feld **Standardschema** wird das Schema angegeben, das von diesem Benutzer erstellte Objekte besitzen wird. Klicken Sie alternativ auf die Auslassungspunkte **(…)**, um das Dialogfeld **Schema auswählen** zu öffnen. **Standardschema** ist verfügbar, wenn Sie entweder **SQL-Benutzer mit Anmeldename**, **SQL-Benutzer ohne Anmeldename**oder **Windows-Benutzer** aus der Liste **Benutzertyp** auswählen.  
   
-8.  Geben Sie im Feld **Zertifikatsname** das Zertifikat an, das für den Datenbankbenutzer verwendet werden soll. Klicken Sie alternativ auf die Auslassungspunkte **(…)**, um das Dialogfeld **Zertifikat auswählen** zu öffnen. Der **Zertifikat Name** ist verfügbar, wenn Sie **Benutzer, der einem Zertifikat zugeordnet ist, in** der Liste **Benutzertyp** auswählen.  
+8.  Geben Sie im Feld **Zertifikatsname** das Zertifikat an, das für den Datenbankbenutzer verwendet werden soll. Klicken Sie alternativ auf die Auslassungspunkte **(…)**, um das Dialogfeld **Zertifikat auswählen** zu öffnen. **Zertifikatname** ist verfügbar, wenn Sie die Option **Benutzer, der einem Zertifikat zugeordnet ist** aus der Liste **Benutzertyp** auswählen.  
   
-9. Geben Sie im Feld **Asymmetrischer Schlüsselname**  den Schlüssel an, der für den Datenbankbenutzer verwendet werden soll. Klicken Sie alternativ auf die Auslassungspunkte **(…)**, um das Dialogfeld **Asymmetrischen Schlüssel auswählen** zu öffnen. Der **Name des asymmetrischen Schlüssels** ist verfügbar **, wenn Sie Benutzer, der einem asymmetrischen Schlüssel zugeordnet ist,** aus der Liste **Benutzertyp** auswählen  
+9. Geben Sie im Feld **Asymmetrischer Schlüsselname**  den Schlüssel an, der für den Datenbankbenutzer verwendet werden soll. Klicken Sie alternativ auf die Auslassungspunkte **(…)**, um das Dialogfeld **Asymmetrischen Schlüssel auswählen** zu öffnen. Die Option für den **asymmetrischen Schlüsselnamen** ist verfügbar, wenn Sie die Option **Benutzer, der einem asymmetrischen Schlüssel zugeordnet ist** aus der Liste **Benutzertyp** auswählen.  
   
 10. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -106,13 +106,13 @@ ms.locfileid: "68211967"
      **Eigenschaften**  
      Zeigt bzw. gibt die erweiterten Eigenschaften für das Objekt an. Jede erweiterte Eigenschaft besteht aus einem aus Name und Wert bestehenden Paar von Metadaten, das dem Objekt zugeordnet ist.  
   
-     **Auslassungspunkte (…)**  
+     **Ellipse (...)**  
      Klicken Sie auf die Auslassungspunkte **(…)** hinter **Wert**, um das Dialogfeld **Wert für erweiterte Eigenschaft** zu öffnen. Geben Sie den Wert der erweiterten Eigenschaft an diesem größeren Speicherort ein, bzw. zeigen Sie ihn an. Weitere Informationen finden Sie unter [Wert für erweiterte Eigenschaft (Dialogfeld)](../../databases/value-for-extended-property-dialog-box.md).  
   
      **Löschen**  
      Entfernt die ausgewählte erweiterte Eigenschaft.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-create-a-database-user"></a>So erstellen Sie einen Datenbankbenutzer  
   

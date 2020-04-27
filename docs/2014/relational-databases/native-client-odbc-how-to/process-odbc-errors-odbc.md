@@ -13,20 +13,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: deab0fc5535b188016d018c34587995c65356fb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206789"
 ---
 # <a name="process-odbc-errors-odbc"></a>Verarbeiten von ODBC-Fehlern (ODBC)
   Zwei ODBC-Funktionsaufrufe können verwendet werden, um ODBC-Meldungen abzurufen: [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) und [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md). Um primäre, mit ODBC verbundene Informationen in den Feldern **SQLState**, **pfNative**and **ErrorMessage** zu erhalten, rufen Sie [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) auf, bis SQL_NO_DATA zurückgegeben wird. Für jeden Diagnosedatensatz kann [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) aufgerufen werden, um einzelne Felder abzurufen. Alle treiberspezifischen Felder müssen mit `SQLGetDiagField` abgerufen werden.  
   
- [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) und [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) werden vom ODBC-Treiber-Manager, nicht von einem einzelnen Treiber verarbeitet. Der ODBC-Treiber-Manager speichert treiberspezifische Diagnosefelder erst zwischen, wenn eine erfolgreiche Verbindung hergestellt wurde. Der Aufruf von [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) für treiberspezifische Diagnosefelder ist vor dem erfolgreichen Herstellen einer Verbindung nicht möglich. Dies betrifft auch die ODBC-Verbindungsbefehle, auch wenn sie SQL_SUCCESS_WITH_INFO zurückgeben. Treiberspezifische Diagnosefelder sind bis zum nächsten ODBC-Funktionsaufruf nicht verfügbar.  
+ [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) und [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) werden vom ODBC-Treiber-Manager, nicht von einem einzelnen Treiber, verarbeitet. Der ODBC-Treiber-Manager speichert treiberspezifische Diagnosefelder erst zwischen, wenn eine erfolgreiche Verbindung hergestellt wurde. Der Aufruf von [SQLGetDiagField](../native-client-odbc-api/sqlgetdiagfield.md) für treiberspezifische Diagnosefelder ist vor dem erfolgreichen Herstellen einer Verbindung nicht möglich. Dies betrifft auch die ODBC-Verbindungsbefehle, auch wenn sie SQL_SUCCESS_WITH_INFO zurückgeben. Treiberspezifische Diagnosefelder sind bis zum nächsten ODBC-Funktionsaufruf nicht verfügbar.  
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>BESCHREIBUNG  
+### <a name="description"></a>Beschreibung  
  Dieses Beispiel zeigt einen einfachen Fehlerhandler, der [SQLGetDiagRec](https://go.microsoft.com/fwlink/?LinkId=58402) für die Standard-ODBC-Informationen aufruft. Anschließend wird geprüft, ob eine gültige Verbindung vorhanden ist. Ist dies der Fall, wird `SQLGetDiagField` für die ODBC-treiberspezifischen Diagnosefelder von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aufgerufen. Dieses Beispiel wird nicht auf IA64-basierten Systemen unterstützt.  
   
  Dieses Beispiel wurde für ODBC, Version 3.0 oder höher, entwickelt.  

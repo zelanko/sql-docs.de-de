@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a65630dc42e74aef762913775688ce5221f79fd
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174459"
 ---
 # <a name="microsoft-naive-bayes-algorithm"></a>Microsoft Naive Bayes Algorithm
@@ -55,7 +55,7 @@ ms.locfileid: "78174459"
 
  Für ein Naive Bayes-Modell gelten die folgenden Anforderungen:
 
--   **Eine einzelne Schlüssel Spalte** Jedes Modell muss eine numerische Spalte oder Text Spalte enthalten, die jeden Datensatz eindeutig identifiziert. Verbundschlüssel sind nicht zulässig.
+-   **Nur eine Schlüsselspalte:** Jedes Modell muss eine numerische Spalte oder Textspalte enthalten, die jeden Datensatz eindeutig identifiziert. Verbundschlüssel sind nicht zulässig.
 
 -   **Eingabe Spalten** In einem Naive Bayes-Modell müssen alle Spalten entweder diskrete oder diskretisierte Spalten sein. Informationen zum Diskretisieren von Spalten finden Sie unter [Diskretisierungsmethoden &#40;Data Mining-&#41;](discretization-methods-data-mining.md).
 
@@ -65,7 +65,7 @@ ms.locfileid: "78174459"
 
      Wenn Sie im umgekehrten Verwendungsfall ein Modell oder Dataset untersuchen, ist die Fähigkeit des Algorithmus, Korrelationen zwischen Variablen zu identifizieren, hingegen hilfreich, da hierdurch Beziehungen zwischen den Eingaben identifiziert werden können.
 
--   Mindestens **eine vorhersagbare Spalte** Das vorhersagbare Attribut muss diskrete oder diskretisierte Werte enthalten.
+-   **Mindestens eine vorhersagbare Spalte:** Das vorhersagbare Attribut muss diskrete oder diskretisierte Werte enthalten.
 
      Die Werte der vorhersagbaren Spalte können als Eingaben behandelt werden. Wenn Sie ein neues Dataset untersuchen, um Beziehungen zwischen den Spalten zu ermitteln, kann dieses Vorgehen nützlich sein.
 
@@ -81,7 +81,7 @@ ms.locfileid: "78174459"
 
  Informationen zum Erstellen von Abfragen für ein Data Mining-Modell finden Sie unter [Data Mining-Abfragen](data-mining-queries.md). Beispiele zur Verwendung von Abfragen in Verbindung mit einem Naive Bayes-Modell finden Sie unter [Beispiele für Naive Bayes-Modellabfrage](naive-bayes-model-query-examples.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 -   Unterstützt die Verwendung von PMML (Predictive Model Markup Language) zum Erstellen von Miningmodellen.
 

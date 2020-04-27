@@ -17,14 +17,13 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 558173381d88eac95fc2b6993e11a1104844abf7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022202"
 ---
-# <a name="ibm-db2-subscribers"></a>IBM DB2-Abonnenten
-  
+# <a name="ibm-db2-subscribers"></a>IBM DB2 Subscribers
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt Pushabonnements für IBM DB2/AS 400, DB2/MVS und DB2/Universal Database über die OLE DB-Anbieter, die mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Host Integration-Server bereitgestellt werden.  
   
 ## <a name="configuring-an-ibm-db2-subscriber"></a>Konfigurieren eines IBM DB2-Abonnenten  
@@ -63,7 +62,7 @@ ms.locfileid: "63022202"
   
      Skripts können aus verschiedenen Gründen geändert werden, der häufigste Grund ist jedoch das Ändern von Datentypzuordnungen. Weitere Informationen dazu finden Sie unter den Überlegungen zu Datentypänderungen in diesem Thema. Wenn Sie das [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Skript ändern, sollten sich Änderungen ausschließlich auf Datentypzuordnungen beziehen (und das Skript darf keine Kommentare enthalten). Wenn weit reichendere Änderungen erforderlich sind, erstellen Sie ein DB2-Skript.  
   
-     **So ändern Sie ein Artikel Skript und stellen Sie es als benutzerdefiniertes Erstellungs Skript bereit**  
+     **So ändern Sie ein Artikelskript und stellen Sie es als benutzerdefiniertes Erstellungsskript bereit**  
   
     1.  Nachdem die Momentaufnahme für die Veröffentlichung generiert wurde, wechseln Sie in den Momentaufnahmeordner für die Veröffentlichung.  
   
@@ -75,7 +74,7 @@ ms.locfileid: "63022202"
   
     5.  Führen Sie sp_changearticle aus, wobei Sie den Dateipfad und den Namen für die Eigenschaft *creation_script* angeben. Weitere Informationen finden Sie unter [sp_changearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql).  
   
-     **So erstellen Sie ein Artikel Skript und stellen Sie es als benutzerdefiniertes Erstellungs Skript bereit**  
+     **So erstellen Sie ein Artikelskript und stellen Sie es als benutzerdefiniertes Erstellungsskript bereit**  
   
     1.  Erstellen Sie mit dem DB2 SQL-Dialekt ein Artikelskript. Stellen Sie sicher, dass **bypass_translation**die erste Zeile in der Datei ist und nichts sonst in der Zeile steht.  
   
@@ -167,7 +166,7 @@ ms.locfileid: "63022202"
      In einigen DB2-Umgebungen ist [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] `char` ein Datenelement nicht auf Einzel Byte Zeichen beschränkt. bei der Länge eines Char-oder varchar-Elements muss dies berücksichtigt werden. Sie müssen auch *Rückschaltungs* - und *Dauerumschaltungs* zeichen berücksichtigen, wenn diese benötigt werden. Wenn Sie Tabellen mit `nchar` -und- `nvarchar` Spalten replizieren, müssen Sie möglicherweise eine größere maximale Länge für den Datentyp in einem benutzerdefinierten Erstellungs Skript angeben. Informationen zum Angeben eines benutzerdefinierten Erstellungsskripts finden Sie in Schritt 5 im Abschnitt zum Konfigurieren eines IBM DB2-Abonnenten in diesem Thema.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Nicht-SQL Server-Abonnenten](non-sql-server-subscribers.md)   
+ [Non-SQL Server Subscribers](non-sql-server-subscribers.md)   
  [Abonnieren von Veröffentlichungen](../subscribe-to-publications.md)  
   
   

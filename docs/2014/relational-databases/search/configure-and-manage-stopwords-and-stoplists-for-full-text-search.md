@@ -18,16 +18,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fe48b26960db591ce803b1f110e9293fd22d6554
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011516"
 ---
 # <a name="configure-and-manage-stopwords-and-stoplists-for-full-text-search"></a>Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche
   Um zu verhindern, dass ein Volltextindex unnötig aufgebläht wird, verfügt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über einen Mechanismus, der häufig vorkommende, für die Suche nutzlose Zeichenfolgen ignoriert. Diese verworfenen Zeichenfolgen werden als *Stoppwörter*bezeichnet. Während der Indexerstellung lässt die Volltext-Engine Stoppwörter vom Volltextindex weg. Dies bedeutet, dass Volltextabfragen nicht nach Stoppwörtern suchen.  
   
-##  <a name="understand"></a>Grundlegendes zu Stopp Wörtern und Stopp Listen  
+##  <a name="understanding-stopwords-and-stoplists"></a><a name="understand"></a>Grundlegendes zu Stopp Wörtern und Stopp Listen  
  Ein Stoppwort kann ein Wort mit einer Bedeutung in einer bestimmten Sprache oder ein *Token* ohne jegliche linguistische Bedeutung sein. Beispielsweise werden in der englischen Sprache Wörter wie "a", "and", "is" und "the" im Volltextindex ausgelassen, da sie erfahrungsgemäß keinen Beitrag zur Suche leisten.  
   
  Obwohl der Volltextindex die Inklusion von Stoppwörtern ignoriert, berücksichtigt er ihre Position. Als Beispiel sei der Ausdruck "Instructions are applicable to these Adventure Works Cycles models" angeführt. In der folgenden Tabelle sind die Positionen der Wörter im Ausdruck angegeben:  
@@ -46,10 +46,10 @@ ms.locfileid: "66011516"
   
  Die Stoppwörter "are", "to" und "these" an den Positionen 2, 4 und 5 werden im Volltextindex ausgelassen. Die Positionsinformationen bleiben jedoch erhalten, sodass die Positionen der anderen Wörter im Ausdruck unverändert bleiben.  
   
- Stoppwörter werden über Objekte mit dem Namen "Stoplisten" in Datenbanken verwaltet. Eine *Stoppliste* ist eine Liste mit Stoppwörtern, die, wenn sie einem Volltextindex zugeordnet ist, auf Volltextabfragen für diesen Index angewendet wird.  
+ Stoppwörter werden über Objekte mit dem Namen "Stoplisten" in Datenbanken verwaltet. Eine *Stopp Liste* ist eine Liste von Stopp Wörtern, die, wenn Sie einem Volltextindex zugeordnet ist, auf voll Text Abfragen für diesen Index angewendet wird.  
   
   
-##  <a name="creating"></a>Erstellen einer Stopp Liste  
+##  <a name="creating-a-stoplist"></a><a name="creating"></a>Erstellen einer Stopp Liste  
  Zum Erstellen einer Stopliste stehen die folgenden Möglichkeiten zur Verfügung:  
   
 -   Verwenden der vom System bereitgestellten Stopliste in der Datenbank. Der Lieferumfang von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] umfasst eine Systemstopliste, die die am häufigsten verwendeten Stoppwörter für jede unterstützte Sprache enthält, d. h. für jede Sprache, die den jeweiligen Wörtertrennungen standardmäßig zugeordnet ist. Die Systemstoppliste enthält gebräuchliche Stoppwörter für alle unterstützten Sprachen.  Sie können die Systemstoppliste kopieren und Ihre Kopie durch das Hinzufügen und Entfernen von Stoppwörtern anpassen.  
@@ -95,7 +95,7 @@ ms.locfileid: "66011516"
 -   [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)  
   
   
-##  <a name="queries"></a>Verwenden einer Stopp Liste in voll Text Abfragen  
+##  <a name="using-a-stoplist-in-full-text-queries"></a><a name="queries"></a>Verwenden einer Stopp Liste in voll Text Abfragen  
  Wenn Sie eine Stopliste in Abfragen nutzen möchten, müssen Sie diese einem Volltextindex zuordnen. Sie können einem Volltextindex eine Stoppliste zuordnen, wenn Sie den Index erstellen, oder Sie können den Index später ändern, um eine Stoppliste hinzuzufügen.  
   
  **So erstellen Sie einen Volltextindex und ordnen diesem eine Stoppliste zu**  
@@ -111,7 +111,7 @@ ms.locfileid: "66011516"
 -   [Füllwörtertransformation (Serverkonfigurationsoption)](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md)  
   
   
-##  <a name="viewing"></a>Anzeigen von Stopp Listen und Stopp Listen-Metadaten  
+##  <a name="viewing-stoplists-and-stoplist-metadata"></a><a name="viewing"></a>Anzeigen von Stopp Listen und Stopp Listen-Metadaten  
  **So zeigen Sie alle Stoppwörter einer Stopliste an**  
   
 -   [sys.fulltext_stopwords &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)  
@@ -124,10 +124,10 @@ ms.locfileid: "66011516"
   
  **So zeigen Sie das Tokenisierungsergebnis einer Kombination aus Wörtertrennung, Thesaurus und Stoplisten an**  
   
--   [sys.dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
+-   [sys. dm_fts_parser &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
   
   
-##  <a name="change"></a>Ändern der Stoppwörter in einer Stopp Liste  
+##  <a name="changing-the-stopwords-in-a-stoplist"></a><a name="change"></a>Ändern der Stoppwörter in einer Stopp Liste  
  **So fügen Sie einer Stopliste Stoppwörter hinzu oder löschen diese**  
   
 -   [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)  
@@ -153,7 +153,7 @@ ms.locfileid: "66011516"
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
   
-##  <a name="upgrade"></a>Aktualisieren von Füll Wörtern von SQL Server 2005  
+##  <a name="upgrading-noise-words-from-sql-server-2005"></a><a name="upgrade"></a>Aktualisieren von Füll Wörtern von SQL Server 2005  
  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] -Füllwörter wurden durch Stoppwörter ersetzt. Wenn eine Datenbank von [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]aktualisiert wird, werden die Füllwortdateien nicht mehr verwendet. Die Füllwortdateien werden jedoch im Ordner "FTDATA\FTNoiseThesaurusBak" gespeichert, und Sie können sie später beim Aktualisieren oder Erstellen der entsprechenden Stoplisten verwenden. Informationen zum Upgrade von Füllwortdateien auf Stoplisten finden Sie unter [Upgrade der Volltextsuche](upgrade-full-text-search.md).  
   
   

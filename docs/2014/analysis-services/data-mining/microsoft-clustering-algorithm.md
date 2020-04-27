@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d6edc91257b31703573923ae8d7e63f2e1ccf1c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174702"
 ---
 # <a name="microsoft-clustering-algorithm"></a>Microsoft Clustering-Algorithmus
@@ -53,11 +53,11 @@ ms.locfileid: "78174702"
 
  Für Clusteringmodelle gelten folgende Anforderungen:
 
--   **Eine einzelne Schlüssel Spalte** Jedes Modell muss eine numerische Spalte oder Text Spalte enthalten, die jeden Datensatz eindeutig identifiziert. Verbundschlüssel sind nicht zulässig.
+-   **Nur eine Schlüsselspalte:** Jedes Modell muss eine numerische Spalte oder Textspalte enthalten, die jeden Datensatz eindeutig identifiziert. Verbundschlüssel sind nicht zulässig.
 
--   **Eingabe Spalten** Jedes Modell muss mindestens eine Eingabe Spalte enthalten, die die Werte enthält, die zum Erstellen der Cluster verwendet werden. Sie können beliebig viele Eingabespalten verwenden. Abhängig von der Anzahl von Werten in jeder Spalte, kann sich der zum Trainieren des Modells erforderliche Zeitaufwand durch das Hinzufügen zusätzlicher Spalten jedoch erhöhen.
+-   **Eingabespalten** Jedes Modell muss mindestens eine Eingabespalte enthalten, welche die zur Bildung der Cluster verwendeten Werte enthält. Sie können beliebig viele Eingabespalten verwenden. Abhängig von der Anzahl von Werten in jeder Spalte, kann sich der zum Trainieren des Modells erforderliche Zeitaufwand durch das Hinzufügen zusätzlicher Spalten jedoch erhöhen.
 
--   **Optionale vorhersagbare Spalte** Der Algorithmus benötigt keine vorhersagbare Spalte, um das Modell zu erstellen, aber Sie können eine vorhersagbare Spalte mit fast jedem Datentyp hinzufügen. Die Werte der vorhersagbaren Spalte können als Eingabe für das Clusteringmodell behandelt werden. Sie können auch angeben, dass diese Werte nur für Vorhersagen verwendet werden sollen. Wenn Sie beispielsweise das Einkommen der Kunden vorhersagen möchten, indem Sie Cluster auf der Grundlage demografischer Daten wie Region oder Alter bilden, würden Sie die Einkommensspalte als `PredictOnly` festlegen und alle übrigen Spalten, wie z. B. Region oder Alter, als Eingabespalten hinzufügen.
+-   **Optionale vorhersagbare Spalte** Der Algorithmus benötigt keine vorhersagbare Spalte zur Erstellung des Modells. Sie können aber eine vorhersagbare Spalte fast jeden Datentyps hinzufügen. Die Werte der vorhersagbaren Spalte können als Eingabe für das Clusteringmodell behandelt werden. Sie können auch angeben, dass diese Werte nur für Vorhersagen verwendet werden sollen. Wenn Sie beispielsweise das Einkommen der Kunden vorhersagen möchten, indem Sie Cluster auf der Grundlage demografischer Daten wie Region oder Alter bilden, würden Sie die Einkommensspalte als `PredictOnly` festlegen und alle übrigen Spalten, wie z. B. Region oder Alter, als Eingabespalten hinzufügen.
 
  Ausführliche Informationen zu den in Clustermodellen unterstützten Inhaltstypen und Datentypen finden Sie im Abschnitt „Anforderungen“ unter [Technische Referenz für den Microsoft Clustering-Algorithmus](microsoft-clustering-algorithm-technical-reference.md).
 
@@ -73,7 +73,7 @@ ms.locfileid: "78174702"
 
  Informationen zum Erstellen von Abfragen für ein Data Mining-Modell finden Sie unter [Data Mining-Abfragen](data-mining-queries.md). Beispiele zur Verwendung von Abfragen in Verbindung mit einem Clustermodell finden Sie unter [Beispiele für Clustermodellabfragen](clustering-model-query-examples.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 -   Unterstützt die Verwendung von PMML (Predictive Model Markup Language) zum Erstellen von Miningmodellen.
 

@@ -1,5 +1,5 @@
 ---
-title: Verwenden von großen Werttypen | Microsoft-Dokumentation
+title: Verwenden von Datentypen mit umfangreichen Werten | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5416684273d74a5f40ff6219eaab95323de6a0d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206987"
 ---
 # <a name="using-large-value-types"></a>Verwenden von Datentypen mit umfangreichen Werten
@@ -43,7 +43,7 @@ ms.locfileid: "68206987"
   
  Spalten mit den Datentypen **varchar(max)**, **varbinary(max)** und **nvarchar(max)**, bei denen die **maximale** Größe auf „Unbegrenzt“ festgelegt ist, werden von den OLE DB-Kernschemarowsets und Schnittstellen, die Spaltendatentypen wiedergeben, als ISLONG dargestellt.  
   
- Die **IAccessor**-Implementierung des Befehlsobjekts wurde geändert, um das Binden als DBTYPE_IUNKNOWN zu ermöglichen. Wenn der Consumer DBTYPE_IUNKNOWN angibt und *pObject* auf NULL festlegt, gibt der Anbieter die **ISequentialStream**-Schnittstelle an den Consumer zurück, sodass der Consumer den **varchar(max)**-, **nvarchar(max)**- oder **varbinary(max)**-Datenstrom aus den Ausgabevariablen übertragen kann.  
+ Die **IAccessor** -Implementierung des Befehls Objekts wurde geändert, um die Bindung als DBTYPE_IUNKNOWN zuzulassen. Wenn der Consumer DBTYPE_IUNKNOWN angibt und *pObject* auf NULL festlegt, gibt der Anbieter die **ISequentialStream**-Schnittstelle an den Consumer zurück, sodass der Consumer den **varchar(max)**-, **nvarchar(max)**- oder **varbinary(max)**-Datenstrom aus den Ausgabevariablen übertragen kann.  
   
  Aus dem Datenstrom übertragene Ausgabeparameterwerte werden nach den Ergebniszeilen zurückgegeben. Wenn die Anwendung versucht, durch Aufrufen von **IMultipleResults::GetResult** zum nächsten Resultset überzugehen, ohne alle zurückgegebenen Ausgabeparameterwerte zu verbrauchen, wird DB_E_OBJECTOPEN zurückgegeben.  
   

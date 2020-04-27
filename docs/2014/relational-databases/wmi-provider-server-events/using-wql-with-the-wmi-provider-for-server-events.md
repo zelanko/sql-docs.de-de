@@ -17,10 +17,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 18c4b6448438ebb8c95f999569d51edfecf04206
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211585"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Verwenden von WQL mit dem WMI-Anbieter für Serverereignisse
@@ -82,7 +82,7 @@ WHERE where_condition
   
  Nur der `=`-Operand kann zusammen mit `DatabaseName`, `SchemaName` und `ObjectName` verwendet werden. Andere Ausdrücke können nicht mit diesen Ereigniseigenschaften verwendet werden.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die *where_condition* der Syntax des WMI-Anbieters für Server Ereignisse bestimmt Folgendes:  
   
 -   Der Bereich, in dem der Anbieter versucht, die angegebene *event_type*abzurufen: Serverebene, Datenbankebene oder Objektebene (das einzige derzeit unterstützte Objekt ist Queue). Letztlich bestimmt dieser Bereich den Typ der in der Zieldatenbank erstellten Ereignisbenachrichtigung. Dieser Prozess wird Ereignisbenachrichtigungsregistrierung genannt.  

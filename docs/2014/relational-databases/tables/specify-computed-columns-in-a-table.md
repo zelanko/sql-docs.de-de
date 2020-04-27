@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca62d8d45ab5a116ab657646abf2393c69e73c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211805"
 ---
 # <a name="specify-computed-columns-in-a-table"></a>Angeben von berechneten Spalten in einer Tabelle
@@ -36,22 +36,22 @@ ms.locfileid: "68211805"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Limitations"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Limitations"></a> Einschränkungen  
   
 -   Eine berechnete Spalte kann nicht als DEFAULT- oder FOREIGN KEY-Einschränkungsdefinition oder mit einer NOT NULL-Einschränkungsdefinition verwendet werden. Eine berechnete Spalte kann jedoch als Schlüsselspalte in einem Index oder als Teil einer PRIMARY KEY- oder UNIQUE-Einschränkung verwendet werden, wenn der Wert der berechneten Spalte durch einen deterministischen Ausdruck definiert ist und der Datentyp des Ergebnisses in Indexspalten zulässig ist. Falls die Tabelle z. B. die Spalten "a" und "b" vom Datentyp int aufweist, kann die berechnete Spalte "a + b" indiziert werden. Dagegen kann die berechnete Spalte "a + DATEPART(dd, GETDATE())" nicht indiziert werden, da sich der Wert in späteren Aufrufen ändern kann.  
   
 -   Eine berechnete Spalte kann nicht das Ziel einer INSERT- oder UPDATE-Anweisung sein.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Tabelle.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
-###  <a name="NewColumn"></a> So fügen Sie eine neue berechnete Spalte hinzu  
+###  <a name="to-add-a-new-computed-column"></a><a name="NewColumn"></a> So fügen Sie eine neue berechnete Spalte hinzu  
   
 1.  Erweitern Sie in **Objekt-Explorer**die Tabelle, der Sie die neue berechnete Spalte hinzufügen möchten. Klicken Sie mit der rechten Maustaste auf **Spalten** , und wählen Sie **Neue Spalte**aus.  
   
@@ -66,7 +66,7 @@ ms.locfileid: "68211805"
   
 5.  Geben Sie an, ob die Daten persistent gespeichert werden sollen, indem Sie im Dropdownfeld für die untergeordnete Eigenschaft **IsPersisted** die Option **Ja** oder **Nein** wählen.  
   
-6.  Klicken Sie im Menü **Datei** auf **Speichern** > _Tabellenname_.  
+6.  Klicken Sie im Menü **Datei** auf _Tabellenname_**speichern**.  
   
 #### <a name="to-add-a-computed-column-definition-to-an-existing-column"></a>So fügen Sie einer vorhandenen Spalte die Definition einer berechneten Spalte hinzu  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68211805"
   
 3.  Fügen Sie eine neue Spalte hinzu, und geben Sie die Formel der berechneten Spalte an, indem Sie die vorangehenden Schritte ausführen, um eine neue berechnete Spalte hinzuzufügen.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-add-a-computed-column-when-creating-a-table"></a>So fügen Sie eine berechnete Spalte beim Erstellen einer Tabelle hinzu  
   
@@ -133,6 +133,6 @@ ms.locfileid: "68211805"
   
     ```  
   
-     Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-table-transact-sql).  
+     Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql).  
   
 ###  <a name="TsqlExample"></a>  

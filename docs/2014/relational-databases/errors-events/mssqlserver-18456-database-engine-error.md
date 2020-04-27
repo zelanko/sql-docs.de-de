@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f37f2ce9ec367d136eb853ce3bffe81f22b2dc4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62869595"
 ---
 # <a name="mssqlserver_18456"></a>MSSQLSERVER_18456
@@ -60,7 +60,7 @@ ms.locfileid: "62869595"
 ## <a name="additional-error-information"></a>Zusätzliche Fehlerinformationen  
  Zur Verbesserung der Sicherheit bleibt die Art des Authentifizierungsfehlers in der an den Client zurückgegebenen Fehlermeldung absichtlich verborgen. Im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Fehlerprotokoll hingegen enthält ein entsprechender Fehler einen Fehlerzustand, der einem Authentifizierungsfehler zugeordnet werden kann. Vergleichen Sie den Fehlerzustand mit der folgenden Liste, um den Grund für den Anmeldefehler zu bestimmen.  
   
-|State|Beschreibung|  
+|State|BESCHREIBUNG|  
 |-----------|-----------------|  
 |1|Es sind keine Fehlerinformationen verfügbar. Dieser Status bedeutet normalerweise, dass Sie keine Berechtigung haben, die Fehlerdetails zu empfangen. Weitere Informationen erhalten Sie beim [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Administrator.|  
 |2|Die Benutzer-ID ist nicht gültig.|  
@@ -75,7 +75,7 @@ ms.locfileid: "62869595"
   
  Andere Fehlerzustände liegen vor und weisen auf einen unerwarteten internen Verarbeitungsfehler hin.  
   
- **Eine zusätzliche ungewöhnliche mögliche Ursache**  
+ **Weitere ungewöhnliche mögliche Ursache**  
   
  Fehler beim **Anmeldeversuch mithilfe der SQL-Authentifizierung. Der Server ist nur für die Windows-Authentifizierung konfiguriert.** kann in den folgenden Situationen zurückgegeben werden.  
   
@@ -88,10 +88,10 @@ ms.locfileid: "62869595"
 ## <a name="examples"></a>Beispiele  
  In diesem Beispiel ist der Fehlerzustand des Authentifizierungsfehlers 8. Dies zeigt an, dass das Kennwort falsch ist.  
   
-|Date|`Source`|`Message`|  
+|Datum|`Source`|`Message`|  
 |----------|------------|-------------|  
-|2007-12-05 20:12:56.34|Anmeldung|Fehler: 18456, Schweregrad: 14, Status: 8.|  
-|2007-12-05 20:12:56.34|Anmeldung|Fehler bei der Anmeldung für den Benutzer <Benutzername>. [Client: \<IP-Adresse>]|  
+|2007-12-05 20:12:56.34|Anmelden|Fehler: 18456, Schweregrad: 14, Status: 8.|  
+|2007-12-05 20:12:56.34|Anmelden|Fehler bei der Anmeldung für den Benutzer <Benutzername>. [Client: \<IP-Adresse>]|  
   
 > [!NOTE]  
 >  Wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des Windows-Authentifizierungsmodus installiert und später in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und den Windows-Authentifizierungsmodus geändert, wird der Anmeldename **sa** zunächst deaktiviert. Dies verursacht den Fehler "Status 7": "Fehler bei der Anmeldung für den Benutzer ' sa '". Informationen zum Aktivieren des **sa** -Anmelde namens finden Sie unter [Ändern des Server Authentifizierungsmodus](../../database-engine/configure-windows/change-server-authentication-mode.md).  

@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 01982222ba5a18086aeadbbec776cba222f0e235
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207050"
 ---
 # <a name="prepared-execution"></a>Vorbereitete Ausführung
@@ -31,8 +31,7 @@ ms.locfileid: "68207050"
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verringert den Leistungsunterschied zwischen direkter und vorbereiteter Ausführung durch verbesserte Algorithmen zum erkennen und wieder verwenden von Ausführungsplänen von **SQLExecDirect**. Dadurch stehen einige der Leistungsvorteile einer vorbereiteten Ausführung auch für direkt ausgeführte Anweisungen zur Verfügung. Weitere Informationen finden Sie unter [direkte Ausführung](direct-execution.md).  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt außerdem auch eine systemeigene Unterstützung für die vorbereitete Ausführung bereit. Ein Ausführungsplan wird auf **SQLPrepare** erstellt und später ausgeführt, wenn **SQLExecute** aufgerufen wird. Da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nicht zum Erstellen temporärer gespeicherter Prozeduren auf **SQLPrepare**erforderlich ist, wird in den Systemtabellen in **tempdb**kein zusätzlicher mehr Aufwand geboten.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt außerdem auch eine systemeigene Unterstützung für die vorbereitete Ausführung bereit. Ein Ausführungsplan wird auf **SQLPrepare** erstellt und später ausgeführt, wenn **SQLExecute** aufgerufen wird. Da [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nicht zum Erstellen temporärer gespeicherter Prozeduren auf **SQLPrepare**erforderlich ist, wird in den Systemtabellen in **tempdb**kein zusätzlicher mehr Aufwand geboten.  
   
  Aus Leistungsgründen wird die Anweisungs Vorbereitung verzögert, bis **SQLExecute** aufgerufen wird oder ein Metaeigenschaftsvorgang (z. b. [SQLDescribeCol](../../native-client-odbc-api/sqldescribecol.md) oder [SQLDescribeParam](../../native-client-odbc-api/sqldescribeparam.md) in ODBC) ausgeführt wird. Dies ist das Standardverhalten. Fehler in der vorbereiteten Anweisung werden erst dann erkannt, wenn die Anweisung ausgeführt oder ein Metaeigenschaftsvorgang durchgeführt wird. Wenn Sie das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC-treiberspezifische Anweisungsattribut SQL_SOPT_SS_DEFER_PREPARE auf SQL_DP_OFF setzen, kann dieses Standardverhalten deaktiviert werden.  
   

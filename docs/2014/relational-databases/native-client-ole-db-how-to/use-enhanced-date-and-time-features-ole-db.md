@@ -1,5 +1,5 @@
 ---
-title: Verwenden erweiterter Datums-und Uhrzeit Funktionen (OLE DB) | Microsoft-Dokumentation
+title: Verwenden von erweiterten Datums- und Uhrzeitfeatures (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b614db01d4128ec30d6d52260a781fffd69e8c8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207022"
 ---
 # <a name="use-enhanced-date-and-time-features-ole-db"></a>Verwenden von erweiterten Datums- und Uhrzeitfeatures (OLE DB)
-  In diesem Beispiel wird die Verwendung der in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] eingeführten Features für Datum und Uhrzeit veranschaulicht. Das Beispiel verwendet die vier neuen Datums-und Uhrzeit Typen`date`( ****, Time `datetime2`, und `datetimeoffset`) zum Ausführen von Befehlen mit Parametern und zum Abrufen der Rowsetergebnisse.  
+  In diesem Beispiel wird die Verwendung der in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] eingeführten Features für Datum und Uhrzeit veranschaulicht. Das Beispiel verwendet die vier neuen Datums-und Uhrzeit Typen`date`( **time**, Time `datetime2`, und `datetimeoffset`) zum Ausführen von Befehlen mit Parametern und zum Abrufen der Rowsetergebnisse.  
   
  Dieses Beispiel erfordert die AdventureWorks-Beispieldatenbank, die Sie von der Homepage [Microsoft SQL Server Samples and Community Projects](https://go.microsoft.com/fwlink/?LinkID=85384) herunterladen können.  
   

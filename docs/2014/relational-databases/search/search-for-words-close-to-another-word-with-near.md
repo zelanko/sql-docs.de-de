@@ -21,16 +21,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fadff7e68404ffae528cb4630e1f6c4b8156ccc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011067"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Suchen von Wörtern in der Nähe eines anderen Worts mit NEAR
   Sie können in einem [CONTAINS](/sql/t-sql/queries/contains-transact-sql) -Prädikat oder in einer [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) -Funktion mithilfe eines NEAR-Begriffs nach Wörtern oder Wendungen suchen, die nahe beieinander liegen. Sie können auch die maximale Anzahl von nicht als Suchkriterium festgelegten Begriffen angeben, die zwischen dem ersten und dem letzten Suchbegriff liegen. Außerdem können Sie in einer beliebigen Reihenfolge oder in der angegebenen Reihenfolge nach Wörtern oder Ausdrücken suchen. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]unterstützt sowohl den früheren [generischen NEAR-Begriff](#Generic_NEAR), der nun veraltet ist, als auch den [benutzerdefinierten near](#Custom_NEAR)-Begriff [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], der in neu ist.  
   
-##  <a name="Custom_NEAR"></a>Der benutzerdefinierte NEAR-Begriff  
+##  <a name="the-custom-proximity-term"></a><a name="Custom_NEAR"></a>Der benutzerdefinierte NEAR-Begriff  
  Mit dem benutzerdefinierten NEAR-Begriff werden die folgenden neuen Funktionen eingeführt:  
   
 -   Sie können die maximale Anzahl von nicht als Suchkriterium angegebenen Begriffen oder den *maximalen Abstand*zwischen dem ersten Suchbegriff und dem letzten Suchbegriff angeben, bei dem eine Übereinstimmung zurückgegeben wird.  
@@ -77,11 +77,10 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
  Beachten Sie, dass die Volltext-Engine bei von rechts nach links geschriebenen Sprachen (z. B. Arabisch oder Hebräisch) die angegebenen Begriffe in umgekehrter Reihenfolge anwendet. Auch der Objekt-Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] kehrt die Anzeigereihenfolge von angegebenen Wörtern in Sprachen mit einer Leserichtung von rechts nach links automatisch um.  
   
 > [!NOTE]  
->  Weitere Informationen finden Sie unter [Weitere Überlegungen zu NEAR-Suchen](#Additional_Considerations) an späterer Stelle in diesem Thema.  
+>  Weitere Informationen finden Sie unter[Weitere Überlegungen zu NEAR-Suchen](#Additional_Considerations)an späterer Stelle in diesem Thema.  
   
 ### <a name="how-maximum-distance-is-measured"></a>Messen des maximalen Abstands  
- Ein bestimmter maximaler Abstand (z. B. 10 oder 25) gibt an, wie viele Nicht-Suchbegriffe (einschließlich von Stoppwörtern) in einer angegebenen Zeichenfolge zwischen dem Suchbegriff und dem letzten Suchbegriff auftreten können. 
-  `NEAR((dogs, cats, "hunting mice"), 3)` gibt z. B. die folgende Zeile zurück, in der die Gesamtzahl der Nicht-Suchbegriffe gleich 3 ist ("`enjoy`", "`but`" und "`avoid`"):  
+ Ein bestimmter maximaler Abstand (z. B. 10 oder 25) gibt an, wie viele Nicht-Suchbegriffe (einschließlich von Stoppwörtern) in einer angegebenen Zeichenfolge zwischen dem Suchbegriff und dem letzten Suchbegriff auftreten können. `NEAR((dogs, cats, "hunting mice"), 3)` gibt z. B. die folgende Zeile zurück, in der die Gesamtzahl der Nicht-Suchbegriffe gleich 3 ist ("`enjoy`", "`but`" und "`avoid`"):  
   
  "`Cats` `enjoy` `hunting mice``, but avoid` `dogs``.`"  
   
@@ -90,7 +89,7 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
  "`Cats` `enjoy` `hunting mice``, but usually avoid` `dogs``.`"  
   
 ### <a name="combining-a-custom-proximity-term-with-other-terms"></a>Kombinieren eines benutzerdefinierten NEAR-Begriffs mit anderen Begriffen  
- Sie können einen benutzerdefinierten NEAR-Begriff mit einigen anderen Begriffen kombinieren. Sie können einen benutzerdefinierten NEAR-Begriff mit AND (&), OR (|) oder AND NOT (&!) mit einem anderen benutzerdefinierten NEAR-Begriff, einem einfachen Begriff oder einem Präfixbegriff kombinieren. Beispiel:  
+ Sie können einen benutzerdefinierten NEAR-Begriff mit einigen anderen Begriffen kombinieren. Sie können einen benutzerdefinierten NEAR-Begriff mit AND (&), OR (|) oder AND NOT (&!) mit einem anderen benutzerdefinierten NEAR-Begriff, einem einfachen Begriff oder einem Präfixbegriff kombinieren. Zum Beispiel:  
   
 -   CONTAINS('NEAR((*Begriff1*,*Begriff2*),5) AND *Begriff3*')  
   
@@ -102,7 +101,7 @@ CONTAINS(column_name, 'NEAR((John, Smith), 2)')
   
 -   CONTAINS('NEAR((*Begriff1*,*Begriff2*),5) OR NEAR((*Begriff3*,*Begriff4*),2, TRUE)')  
   
- Beispiel:  
+ Ein auf ein Objekt angewendeter  
   
 ```  
 CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')  
@@ -126,7 +125,7 @@ GO
   
 
   
-##  <a name="Additional_Considerations"></a>Weitere Überlegungen zu near-suchen  
+##  <a name="additional-considerations-for-proximity-searches"></a><a name="Additional_Considerations"></a>Weitere Überlegungen zu near-suchen  
  In diesem Abschnitt werden Aspekte erläutert, die sich sowohl auf generische als auch auf benutzerdefinierte NEAR-Suchen auswirken:  
   
 -   Einander überschneidende Vorkommen von Suchbegriffen  
@@ -148,14 +147,13 @@ GO
   
      Wenn NEAR in der CONTAINSTABLE-Funktion verwendet wird, wirken sich die Anzahl der Treffer in einem Dokument relativ zu seiner Länge sowie der Abstand zwischen dem ersten und dem letzten Suchbegriff in den einzelnen Treffern auf die Rangfolge des jeweiligen Dokuments aus. Wenn für einen generischen NEAR-Begriff die gefundenen Suchbegriffe >50 logische Begriffe auseinander liegen, ist der für ein Dokument zurückgegebene Rang gleich 0 (null). Wenn für einen benutzerdefinierten NEAR-Begriff keine ganze Zahl als maximaler Abstand angegeben ist, erhält ein Dokument, das nur Treffer mit einer Lücke >100 logische Begriffe aufweist, den Rang 0 (null). Weitere Informationen zum Generieren der Rangfolge bei benutzerdefinierten NEAR-Suchen finden Sie unter [Einschränken von Suchergebnissen mit RANK](limit-search-results-with-rank.md).  
   
--   
-  **Füllwörtertransformation** (Serveroption)  
+-   **Füllwörtertransformation** (Serveroption)  
   
      Der Wert von **Füllwörtertransformation** wirkt sich darauf aus, wie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Stoppwörter behandelt werden, wenn diese in NEAR-Suchen angegeben sind. Weitere Informationen finden Sie unter [Füllwörtertransformation (Serverkonfigurationsoption)](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md).  
   
 
   
-##  <a name="Generic_NEAR"></a>Der veraltete generische NEAR-Begriff  
+##  <a name="the-deprecated-generic-proximity-term"></a><a name="Generic_NEAR"></a>Der veraltete generische NEAR-Begriff  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]Es wird empfohlen, den [benutzerdefinierten NEAR-Begriff](#Custom_NEAR)zu verwenden.  
@@ -173,10 +171,10 @@ GO
 > [!NOTE]  
 >  Informationen zur <generic_proximity_term>-Syntax finden Sie unter [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql).  
   
- Weitere Informationen finden Sie unter [Weitere Überlegungen zu NEAR-Suchen](#Additional_Considerations) an späterer Stelle in diesem Thema.  
+ Weitere Informationen finden Sie unter[Weitere Überlegungen zu NEAR-Suchen](#Additional_Considerations)an späterer Stelle in diesem Thema.  
   
 ### <a name="combining-a-generic-proximity-term-with-other-terms"></a>Kombinieren eines generischen NEAR-Begriffs mit anderen Begriffen  
- Sie können einen generischen NEAR-Begriff mit AND (&), OR (|) oder AND NOT (&!) mit einem anderen generischen NEAR-Begriff, einem einfachen Begriff oder einem Präfixbegriff kombinieren. Beispiel:  
+ Sie können einen generischen NEAR-Begriff mit AND (&), OR (|) oder AND NOT (&!) mit einem anderen generischen NEAR-Begriff, einem einfachen Begriff oder einem Präfixbegriff kombinieren. Zum Beispiel:  
   
 ```  
 CONTAINSTABLE (Production.ProductDescription,  
@@ -228,7 +226,7 @@ CONTAINSTABLE(Production.Document, Document, '(reflector ~ bracket ~ installatio
   
 ## <a name="see-also"></a>Weitere Informationen  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/containstable-transact-sql)   
- [Abfragen mit voll Text Suche](query-with-full-text-search.md)   
+ [Abfragen mit Volltextsuche](query-with-full-text-search.md)   
  [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql)  
   
   

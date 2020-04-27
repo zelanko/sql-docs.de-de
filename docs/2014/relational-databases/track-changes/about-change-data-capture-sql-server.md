@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b2539995f50e31e7342a4cd27fe7277a103d041f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211732"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Über Change Data Capture (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "68211732"
 ## <a name="change-data-capture-data-flow"></a>Change Data Capture &ndash; Datenfluss  
  Die folgende Abbildung zeigt den Hauptdatenfluss für Change Data Capture.  
   
- ![Change Data Capture – Datenfluss](../../database-engine/media/cdcdataflow.gif "Change Data Capture &ndash; Datenfluss")  
+ ![Change Data Capture-Datenfluss](../../database-engine/media/cdcdataflow.gif "Change Data Capture &ndash; Datenfluss")  
   
  Die Quelle der Änderungsdaten ist für Change Data Capture das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Transaktionsprotokoll. Bei Einfügungen, Aktualisierungen und Löschungen in den nachverfolgten Quelltabellen werden diesem Protokoll entsprechende Einträge hinzugefügt, die diese Änderungen beschreiben. Das Protokoll dient als Eingabe für den Erfassungsvorgang. Der Prozess liest das Protokoll und fügt der Änderungstabelle, die mit der nachverfolgten Tabelle verknüpft ist, Informationen über die Änderungen hinzu. Zur Aufzählung der Änderungen in den Änderungstabellen innerhalb eines angegebenen Bereichs werden Funktionen bereitgestellt, und die Informationen werden in Form eines gefilterten Resultsets zurückgegeben. Das gefilterte Resultset wird typischerweise von einem Anwendungsprozess verwendet, um die Darstellung der Quelle in einer externen Umgebung zu aktualisieren.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "68211732"
 ## <a name="see-also"></a>Weitere Informationen  
  [Nachverfolgen von Datenänderungen &#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)   
  [Aktivieren und Deaktivieren von Change Data Capture &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-data-capture-sql-server.md)   
- [Arbeiten mit Änderungsdaten &#40;SQL Server&#41;](../track-changes/work-with-change-data-sql-server.md)   
+ [Arbeiten mit Änderungs Daten &#40;SQL Server&#41;](../track-changes/work-with-change-data-sql-server.md)   
  [Verwalten und Überwachen von Change Data Capture &#40;SQL Server&#41;](../track-changes/administer-and-monitor-change-data-capture-sql-server.md)  
   
   

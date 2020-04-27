@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6eea28d6bccfa8d0f785f3b27e98141e94dd313c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206625"
 ---
 # <a name="table-valued-parameters-sql-server-native-client"></a>Tabellenwertparameter (SQL Server Native Client)
@@ -25,7 +25,7 @@ ms.locfileid: "68206625"
   
  Informationen zu Tabellenwert Parametern und ODBC finden Sie unter [Tabellenwert Parameter &#40;ODBC-&#41;](../../native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  
   
- Informationen zu Tabellenwert Parametern und OLE DB finden Sie unter [Tabellenwert Parameter &#40;OLE DB&#41;](../../native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md).  
+ Weitere Informationen zu Tabellenwertparametern und OLE DB finden Sie unter [Tabellenwertparameter &#40;OLE DB&#41;](../../native-client-ole-db-table-valued-parameters/table-valued-parameters-ole-db.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Native Client-Funktionen](sql-server-native-client-features.md)  

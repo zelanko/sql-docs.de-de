@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 037e3c9c61b2c6648ec1194a766256d5e6cae5cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149341"
 ---
 # <a name="install-distributed-replay"></a>Installieren von Distributed Replay
@@ -28,7 +28,7 @@ ms.locfileid: "63149341"
 |[Installieren von Distributed Replay von der Eingabeaufforderung](install-distributed-replay-overview.md)|Thema mit Anleitungen, das Beispielsyntax und Installationsparameter zum Ausführen eines unbeaufsichtigten Setups bereitstellt.|  
 |[Installieren von Distributed Replay mithilfe einer Konfigurationsdatei](../../sql-server/install/install-distributed-replay-using-a-configuration-file.md)|Thema mit Anleitungen, das Beispielsyntax und Installationsparameter zum Ausführen von Distributed Replay mithilfe einer Konfigurationsdatei bereitstellt.|  
 |[Ausführen der Schritte nach der Installation](complete-the-post-installation-steps.md)|Thema mit Anleitungen zum Ausführen einer Distributed Replay-Installation.|  
-|[Ändern von Controller- und Clientdienstkonten](modify-the-controller-and-client-services-accounts.md)|Thema mit Anleitungen zum Starten und Beenden der Distributed Replay-Controller- und -Client-Dienste sowie zum Ändern der Dienstkonten.|  
+|[Ändern der Controller-und Client Dienst Konten](modify-the-controller-and-client-services-accounts.md)|Thema mit Anleitungen zum Starten und Beenden der Distributed Replay-Controller- und -Client-Dienste sowie zum Ändern der Dienstkonten.|  
 |[Reparieren einer Distributed Replay-Installation](../../sql-server/install/repair-a-distributed-replay-installation.md)|Thema mit Anleitungen zum Reparieren einer fehlerhaften Distributed Replay-Installation.|  
 |[Deinstallieren einer vorhandenen Distributed Replay-Instanz](../../sql-server/install/uninstall-an-existing-instance-of-distributed-replay.md)|Thema mit Anleitungen zum Deinstallieren einer vorhandenen Distributed Replay-Instanz.|  
   

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a855df4440f2c023380a97aa37e35047db27ebb9
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174419"
 ---
 # <a name="microsoft-linear-regression-algorithm"></a>Microsoft Linear Regression-Algorithmus
@@ -44,11 +44,11 @@ ms.locfileid: "78174419"
 ## <a name="data-required-for-linear-regression-models"></a>Erforderliche Daten für lineare Regressionsmodelle
  Wenn Sie Daten für die Verwendung in einem linearen Regressionsmodell aufbereiten, müssen Sie sich mit den Anforderungen des jeweiligen Algorithmus vertraut machen. Hierbei müssen Sie auch berücksichtigen, welcher Datenumfang erforderlich ist und wie diese Daten verwendet werden. Für diesen Modelltyp gelten folgende Anforderungen:
 
--   **Eine einzelne Schlüssel Spalte** Jedes Modell muss eine numerische Spalte oder Text Spalte enthalten, die jeden Datensatz eindeutig identifiziert. Verbundschlüssel sind nicht zulässig.
+-   **Nur eine Schlüsselspalte:** Jedes Modell muss eine numerische Spalte oder Textspalte enthalten, die jeden Datensatz eindeutig identifiziert. Verbundschlüssel sind nicht zulässig.
 
--   **Vorhersagbare Spalte** Erfordert mindestens eine vorhersagbare Spalte. Sie können mehrere vorhersagbare Attribute in ein Modell aufnehmen, bei denen es sich jedoch um kontinuierliche numerische Datentypen handeln muss. Sie können keinen datetime-Datentyp als vorhersagbares Attribut verwenden, selbst wenn der systemeigene Speicher für die Daten numerisch ist.
+-   **Eine vorhersagbare Spalte** Mindestens eine vorhersagbare Spalte ist erforderlich. Sie können mehrere vorhersagbare Attribute in ein Modell aufnehmen, bei denen es sich jedoch um kontinuierliche numerische Datentypen handeln muss. Sie können keinen datetime-Datentyp als vorhersagbares Attribut verwenden, selbst wenn der systemeigene Speicher für die Daten numerisch ist.
 
--   **Eingabe Spalten** Eingabe Spalten müssen kontinuierliche numerische Daten enthalten, und Ihnen muss der entsprechende Datentyp zugewiesen werden.
+-   **Eingabespalten** Eingabespalten müssen kontinuierliche numerische Daten enthalten, und ihnen muss der entsprechende Datentyp zugewiesen sein.
 
  Weitere Informationen finden Sie im Abschnitt „Anforderungen“ unter [Technische Referenz für den Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm-technical-reference.md).
 
@@ -66,7 +66,7 @@ ms.locfileid: "78174419"
 
  Wenn es sich bei dem vorhersagbaren Attribut um einen kontinuierlichen numerischen Datentyp handelt, können Sie neben der Erstellung eines linearen Regressionsmodells durch Auswahl des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus auch ein Entscheidungsstrukturmodell entwickeln, das Regressionen enthält. In diesem Fall teilt der Algorithmus die Daten, sofern entsprechende Trennpunkte gefunden werden. Für einige Datenbereiche wird jedoch stattdessen eine Regressionsformel erstellt. Weitere Informationen über Regressionsstrukturen innerhalb eines Entscheidungsstrukturmodells finden Sie unter [Miningmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 -   Unterstützt nicht die Verwendung von PMML (Predictive Model Markup Language) zum Erstellen von Miningmodellen.
 

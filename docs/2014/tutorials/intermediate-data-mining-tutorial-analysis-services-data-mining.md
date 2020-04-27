@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 4c244701d8a58765061ef3bde1f918c8be5a941d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63017181"
 ---
 # <a name="intermediate-data-mining-tutorial-analysis-services---data-mining"></a>Data Mining-Lernprogramm für Fortgeschrittene (Analysis Services - Data Mining)
@@ -52,24 +52,23 @@ ms.locfileid: "63017181"
   
  Zunächst erstellen Sie Modelle für einzelne Regionen und anschließend ein allgemeines Modell für Kreuzvorhersagen.  
   
- [Lektion 3: aufbauen eines Market Basket-Szenarios &#40;Data Mining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
+ [Lektion 3: Erstellen eines Warenkorbszenarios &#40;Data Mining-Tutorial für Fortgeschrittene&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)  
  In dieser Lektion fügen Sie eine neue Datenquellensicht hinzu und lernen, mit geschachtelten Tabellen und geschachtelten Schlüsseln zu arbeiten. Auf der Grundlage dieser Daten legen Sie ein Miningmodell an, das in einem Market Basket-Szenario verwendet werden kann. Sie werden auch Mining Modelle untersuchen, die mit dem [!INCLUDE[msCoName](../includes/msconame-md.md)] Association-Algorithmus erstellt wurden.  
   
  [Lektion 4: Entwickeln eines Sequence Clustering-Szenarios &#40;Data Mining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)  
  In dieser Lektion lernen Sie, ein Miningmodell anzulegen, das in einem Sequenzclusterszenario verwendet werden kann. Sie lernen, wie Sie Miningmodelle prüfen, die mit dem [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering-Algorithmus erstellt wurden.  
   
- [Lektion 5: aufbauen von neuronalen Netzwerk-und logistischen Regressionsmodellen &#40;Data&#41;Mining-Lernprogramms](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Lektion 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen &#40;Data Mining-Tutorial für Fortgeschrittene&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
  In dieser Lektion erstellen Sie mehrere zugehörige Miningmodelle mithilfe der Microsoft Neural Network- und Microsoft Logistic Regression-Algorithmen. Sie erfahren zudem, wie Sie mithilfe von Datenquellensichten Daten untersuchen, die den Modellen zugrunde liegen.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
  Stellen Sie sicher, dass Folgendes installiert ist:  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mit der [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] -Datenbank.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mit der [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] -Datenbank.  
   
  Aus Sicherheitsgründen werden die Beispieldatenbanken standardmäßig nicht installiert. Um die offiziellen Datenbanken für [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]zu installieren, rufen Sie die Seite [Microsoft SQL-Beispiel Datenbanken](https://go.microsoft.com/fwlink/?LinkId=88417) auf, und wählen Sie die entsprechende Version der-Beispieldatenbank aus.  
   

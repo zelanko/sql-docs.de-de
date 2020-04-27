@@ -16,12 +16,12 @@ f1_keywords:
 author: swinarko
 ms.author: sawinark
 ms.reviewer: maghan
-ms.openlocfilehash: 38ccbeaf23e6d2daab46739064e30c4fc508d10f
-ms.sourcegitcommit: 58158eda0aa0d7f87f9d958ae349a14c0ba8a209
+ms.openlocfilehash: d164711a45b34b0974b2cca3d13fc216c378ed8b
+ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
-ms.locfileid: "75501919"
+ms.lasthandoff: 04/23/2020
+ms.locfileid: "82087420"
 ---
 # <a name="power-query-source-preview"></a>Power Query-Quelle (Preview)
 
@@ -70,7 +70,7 @@ Im **Power Query-Verbindungs-Manager-Editor** müssen Sie **Datenquellenart**, *
 
 ![„Art“ im PQ-Quellen-Verbindungs-Manager-Editor](media/power-query-source/pq-source-connection-manager-editor-kind.png)
 
-Einige dieser Quellen (**Oracle**, **DB2**, **MySQL**, **PostgreSQL**, **Teradata**, **Sybase**) erfordern zusätzliche Installationen von ADO.NET-Treibern, die Sie über den Artikel [Power Query-Voraussetzungen](https://support.office.com/article/data-source-prerequisites-power-query-6062cf52-c764-45d0-a1c6-fbf8fc05b05a) abrufen können. Sie können die Schnittstelle für benutzerdefinierte Installationen verwenden, um sie in Ihrer Azure-SSIS IR zu installieren. Siehe hierzu den Artikel [Anpassen von Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
+Einige dieser Quellen (**Oracle**, **DB2**, **MySQL**, **PostgreSQL**, **Teradata**, **Sybase**) erfordern zusätzliche Installationen von ADO.NET-Treibern, die Sie über den Artikel [Power Query-Voraussetzungen](/power-bi/desktop-data-source-prerequisites) abrufen können. Sie können die Schnittstelle für benutzerdefinierte Installationen verwenden, um sie in Ihrer Azure-SSIS IR zu installieren. Siehe hierzu den Artikel [Anpassen von Azure-SSIS IR](https://docs.microsoft.com/azure/data-factory/how-to-configure-azure-ssis-ir-custom-setup).
 
 Als **Datenquellenpfad** können Sie datenquellenspezifische Eigenschaften eingeben, die eine Verbindungszeichenfolge ohne die Authentifizierungsinformationen ergeben. Beispielsweise wird der den Pfad für die **SQL**-Datenquelle als `<Server>;<Database>` gebildet. Sie können die Schaltfläche **Bearbeiten** auswählen, um datenquellenspezifischen Eigenschaften Werte zuzuweisen, die den Pfad bilden.
 

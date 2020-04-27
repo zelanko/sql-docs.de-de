@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 73415bf802973fcac8cd0fe29c6db3bd5e110f6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63015282"
 ---
 # <a name="migration-issues-for-natively-compiled-stored-procedures"></a>Migrationsprobleme bei systemintern kompilierten gespeicherten Prozeduren
@@ -22,9 +22,9 @@ ms.locfileid: "63015282"
   
  Weitere Informationen zu systemintern kompilierten gespeicherten Prozeduren finden Sie unter [Natively Compiled Stored Procedures](natively-compiled-stored-procedures.md).  
   
--   [Erstellen von und Zugreifen auf Tabellen in TempDB aus nativ kompilierten gespeicherten Prozeduren](create-and-access-tables-in-tempdb-from-stored-procedures.md)  
+-   [Erstellen von und Zugreifen auf Tabellen in TempDB aus systemintern kompilierten gespeicherten Prozeduren](create-and-access-tables-in-tempdb-from-stored-procedures.md)  
   
--   [Simulieren einer EXISTS-Klausel in einer systemintern kompilierten gespeicherten Prozedur](simulating-an-if-while-exists-statement-in-a-natively-compiled-module.md)  
+-   [Simulieren einer EXISTS-Klausel in einer nativ kompilierten gespeicherten Prozedur](simulating-an-if-while-exists-statement-in-a-natively-compiled-module.md)  
   
 -   [Implementieren von MERGE-Funktionalität](implementing-merge-functionality-in-a-natively-compiled-stored-procedure.md)  
   
@@ -32,7 +32,7 @@ ms.locfileid: "63015282"
   
 -   [Implementieren eines äußeren Joins](implementing-an-outer-join.md)  
   
--   [Implementieren des OR-Operators in systemintern kompilierten gespeicherten Prozeduren](../../database-engine/implementing-the-or-operator-in-natively-compiled-stored-procedures.md)  
+-   [Implementieren des OR-Operators in nativ kompilierten gespeicherten Prozeduren](../../database-engine/implementing-the-or-operator-in-natively-compiled-stored-procedures.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Migrieren zu In-Memory OLTP](migrating-to-in-memory-oltp.md)  

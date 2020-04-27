@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 24587f27710381ac787fe8045029df681e401af5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63036195"
 ---
 # <a name="set-index-options"></a>Festlegen von Indexoptionen
@@ -39,28 +39,28 @@ ms.locfileid: "63036195"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
--   **So ändern Sie die Eigenschaften eines Indexes mit:**  
+-   **So ändern Sie die Eigenschaften eines Indexes mithilfe von:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Die folgenden Optionen werden sofort mit der SET-Klausel in der ALTER INDEX-Anweisung für den Index übernommen: ALLOW_PAGE_LOCKS, ALLOW_ROW_LOCKS, IGNORE_DUP_KEY und STATISTICS_NORECOMPUTE.  
   
--   Die folgenden Optionen können festgelegt werden, wenn Sie mit ALTER INDEX REBUILD oder CREATE INDEX WITH DROP_EXISTING einen Index neu erstellen: PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP und DROP_EXISTING (nur CREATE INDEX).  
+-   Die folgenden Optionen können beim Neuerstellen eines Indexes mithilfe von ALTER INDEX REBUILD oder CREATE INDEX WITH DROP_EXISTING festgelegt werden: PAD_INDEX, FILLFACTOR, SORT_IN_TEMPDB, IGNORE_DUP_KEY, STATISTICS_NORECOMPUTE, ONLINE, ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, MAXDOP und DROP_EXISTING (nur CREATE INDEX).  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-modify-the-properties-of-an-index-in-table-designer"></a>So ändern Sie die Eigenschaften eines Indexes im Tabellen-Designer  
   
@@ -96,9 +96,9 @@ ms.locfileid: "63036195"
   
 7.  Ändern Sie die Einstellungen beliebiger oder aller Eigenschaften, um den Index anzupassen.  
   
-8.  Zum Hinzufügen, Entfernen oder Ändern der Position einer Indexspalte wählen Sie im Dialogfeld **Indexeigenschaften –****Allgemein** _Allgemein_ aus. Weitere Informationen finden Sie unter [Index Properties F1 Help](index-properties-f1-help.md).  
+8.  Zum Hinzufügen, Entfernen oder Ändern der Position einer Indexspalte wählen Sie auf der Seite **Allgemein** im Dialogfeld **Index Properties –** _Indexname_ (Indexeigenschaften – Indexname) aus. Weitere Informationen finden Sie unter [Index Properties F1 Help](index-properties-f1-help.md).  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-see-the-properties-of-all-the-indexes-in-a-table"></a>So sehen Sie die Eigenschaften aller Indizes in einer Tabelle  
   

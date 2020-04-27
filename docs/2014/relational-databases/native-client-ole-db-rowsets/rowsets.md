@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c78f634f78cdcd970c1d731071a291930cf00ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206653"
 ---
 # <a name="rowsets"></a>Rowsets
@@ -48,11 +48,11 @@ ms.locfileid: "68206653"
   
 -   [Erstellen eines Rowsets mit 'IopenRowset'](creating-a-rowset-with-iopenrowset.md)  
   
--   [Erstellen von Rowsets mit 'ICommand::Execute'](creating-rowsets-with-icommand-execute.md)  
+-   [Erstellen von Rowsets mit ' ICommand:: Execute '](creating-rowsets-with-icommand-execute.md)  
   
 -   [Eigenschaften und Verhaltensweisen von Rowsets](rowset-properties-and-behaviors.md)  
   
--   [Rowsets und SQL Server-Cursor](rowsets-and-sql-server-cursors.md)  
+-   [Rowsets und SQL Server Cursor](rowsets-and-sql-server-cursors.md)  
   
 -   [Abrufen von Zeilen](fetching-rows.md)  
   

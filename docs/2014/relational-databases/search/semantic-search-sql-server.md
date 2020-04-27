@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 651705426b52b822c3eb8c7cf9d341968bbc088f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010993"
 ---
 # <a name="semantic-search-sql-server"></a>Semantische Suche (SQL Server)
@@ -27,12 +27,12 @@ ms.locfileid: "66010993"
   
  Sie fragen diese semantischen Indizes mit drei Transact-SQL-Rowsetfunktionen ab, um die Ergebnisse als strukturierte Daten abzurufen.  
   
-##  <a name="whatcanido"></a>Was kann ich mit der semantischen Suche tun?  
+##  <a name="what-can-i-do-with-semantic-search"></a><a name="whatcanido"></a>Was kann ich mit der semantischen Suche tun?  
  Die semantische Suche basiert auf der vorhandenen Volltextsuchfunktion in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ermöglicht jedoch neue Szenarien, die über Schlüsselwortsuchen hinausgehen. Während Sie bei der Volltextsuche *Wörter* in einem Dokument abfragen können, können Sie bei der *semantischen* Suche die Bedeutung des Dokuments abfragen. Die jetzt möglichen Lösungen umfassen die automatische Tagextraktion, die Ermittlung von verwandten Inhalten sowie die hierarchische Navigation über ähnlichen Inhalt. Sie können beispielsweise den Index von Schlüsselausdrücken abfragen, um die Taxonomie für eine Organisation oder für einen Korpus von Dokumenten zu erstellen. Oder sie können den Dokumentähnlichkeitsindex abfragen, um Lebensläufe zu identifizieren, die einer Arbeitsplatzbeschreibung entsprechen.  
   
  In den folgenden Beispielen sind die Funktionen der semantischen Suche dargestellt.  
   
-###  <a name="find1"></a>Suchen der Schlüssel Ausdrücke in einem Dokument  
+###  <a name="find-the-key-phrases-in-a-document"></a><a name="find1"></a>Suchen der Schlüssel Ausdrücke in einem Dokument  
  Die folgende Abfrage ruft die Schlüsselausdrücke ab, die im Beispieldokument identifiziert wurden. Sie präsentiert die Ergebnisse in absteigender Reihenfolge nach dem Grad der statistischen Bedeutung der einzelnen Schlüsselausdrücke. Diese Abfrage ruft die Funktion [semantickeyphrasetable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semantickeyphrasetable-transact-sql) auf.  
   
 ```sql  
@@ -50,7 +50,7 @@ SELECT @Title AS Title, keyphrase, score
   
   
   
-###  <a name="find2"></a>Suchen von ähnlichen oder verwandten Dokumenten  
+###  <a name="find-similar-or-related-documents"></a><a name="find2"></a>Suchen von ähnlichen oder verwandten Dokumenten  
  Die folgende Abfrage ruft die Dokumente ab, die als dem Beispieldokument ähnlich oder damit verwandt identifiziert wurden. Sie präsentiert die Ergebnisse in absteigender Reihenfolge nach dem Grad der Ähnlichkeit von zwei Dokumenten. Diese Abfrage ruft die Funktion [semanticsimilaritytable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritytable-transact-sql) auf.  
   
 ```vb  
@@ -70,7 +70,7 @@ SELECT @Title AS SourceTitle, DocumentTitle AS MatchedTitle,
   
   
   
-###  <a name="find3"></a>Suchen der Schlüssel Ausdrücke, die Dokumente ähnlich oder verwandt machen  
+###  <a name="find-the-key-phrases-that-make-documents-similar-or-related"></a><a name="find3"></a>Suchen der Schlüssel Ausdrücke, die Dokumente ähnlich oder verwandt machen  
  Die folgende Abfrage ruft die Schlüsselausdrücke ab, die zwei Beispieldokumente ähnlich oder verwandt machen. Sie präsentiert die Ergebnisse in absteigender Reihenfolge nach dem Grad, der die Gewichtung der einzelnen Schlüsselausdrücke angibt. Diese Abfrage ruft die Funktion [semanticsimilaritytable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql) auf.  
   
 ```sql  
@@ -89,7 +89,7 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
   
   
   
-##  <a name="store"></a>Speichern von Dokumenten in SQL Server  
+##  <a name="storing-documents-in-sql-server"></a><a name="store"></a>Speichern von Dokumenten in SQL Server  
  Bevor Sie Dokumente mit der semantischen Suche indizieren können, müssen Sie die Dokumente in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank speichern.  
   
  Die FileTable-Funktion in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] macht unstrukturierte Dateien und Dokument zu so genannten "First Class Citizens" (FCCs) der relationalen Datenbank. Folglich können Datenbankentwickler Dokumente zusammen mit strukturierten Daten in Transact-SQL-basierten Vorgängen bearbeiten.  
@@ -98,7 +98,7 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
   
   
   
-##  <a name="reltasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="reltasks"></a> Verwandte Aufgaben  
  [Installieren und Konfigurieren der semantischen Suche](install-and-configure-semantic-search.md)  
  Beschreibt die erforderlichen Komponenten für die statistische semantische Suche und wie diese Komponenten installiert oder überprüft werden.  
   
@@ -114,7 +114,7 @@ SELECT @SourceTitle AS SourceTitle, @MatchedTitle AS MatchedTitle, keyphrase, sc
  [Verwalten und Überwachen der semantischen Suche](manage-and-monitor-semantic-search.md)  
  Beschreibt den Prozess der semantischen Indizierung sowie die Tasks im Zusammenhang mit der Überwachung und Verwaltung der Indizes.  
   
-##  <a name="relcontent"></a> Verwandte Inhalte  
+##  <a name="related-content"></a><a name="relcontent"></a> Verwandte Inhalte  
  [Semantische Such-DDL, Funktionen, gespeicherte Prozeduren und Sichten](../views/views.md)  
  Führt die zur Unterstützung der semantischen Suche hinzugefügten oder geänderten Transact-SQL-Anweisungen und SQL Server-Datenbankobjekte auf.  
   

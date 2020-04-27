@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 1ab207deaa0632e2e4026aa4950c720ba6b22d75
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 97c0d4b269bfda9a9c01bf8b08f93e2b2f5f83d5
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81625562"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728374"
 ---
 # <a name="using-basic-data-types"></a>Verwenden von Standarddatentypen
 
@@ -101,20 +101,20 @@ Wenn Sie den Wert eines Felds in einer Datenquelle aktualisieren müssen, verwen
 
 Wenn Sie Daten in einer Datenquelle durch eine parametrisierte Abfrage aktualisieren müssen, können Sie den Datentyp der Parameter mit einer der set\<Type>-Methoden der [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md)-Klasse festlegen, die auch als *setter-Methoden* bezeichnet werden. Im folgenden Beispiel wird die parametrisierte Abfrage mit der [prepareStatement](reference/preparestatement-method-sqlserverconnection.md)-Methode vorkompiliert, dann wird die [setString](reference/setstring-method-sqlserverpreparedstatement.md)-Methode verwendet, um vor dem Aufrufen der [executeUpdate](reference/executeupdate-method.md)-Methode den string-Wert des Parameters festzulegen.  
   
-[!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
+[!code[JDBC#UsingBasicDataTypes4](codesnippet/Java/using-basic-data-types_4.java)]  
   
-Weitere Informationen zu parametrisierten Abfragen finden Sie unter [Verwenden einer SQL-Anweisung mit Parametern](../../connect/jdbc/using-an-sql-statement-with-parameters.md).  
+Weitere Informationen zu parametrisierten Abfragen finden Sie unter [Verwenden einer SQL-Anweisung mit Parametern](using-an-sql-statement-with-parameters.md).  
 
 ## <a name="passing-parameters-to-a-stored-procedure"></a>Übergeben von Parametern an gespeicherte Prozeduren
 
 Wenn Sie typisierte Parameter an eine gespeicherte Prozedur übergeben müssen, können Sie die Parameter mit einer der set\<Type>-Methoden der [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md)-Klasse nach Namen oder Index festlegen. Im folgenden Beispiel wird der Aufruf der gespeicherten Prozedur mit der [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md)-Methode eingerichtet, dann wird die [setString](../../connect/jdbc/reference/setstring-method-sqlservercallablestatement.md)-Methode verwendet, um vor dem Aufrufen der [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md)-Methode den Parameter für den Aufruf festzulegen.  
   
-[!code[JDBC#UsingBasicDataTypes5](../../connect/jdbc/codesnippet/Java/using-basic-data-types_5.java)]  
+[!code[JDBC#UsingBasicDataTypes5](codesnippet/Java/using-basic-data-types_5.java)]  
   
 > [!NOTE]  
 > In diesem Beispiel wird ein Resultset zurückgegeben, das die Ergebnisse der gespeicherten Prozedur enthält.
 
-Weitere Informationen zum Verwenden des JDBC-Treibers mit gespeicherten Prozeduren und Eingabeparametern finden Sie unter [Verwenden von gespeicherten Prozeduren mit Eingabeparametern](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md).  
+Weitere Informationen zum Verwenden des JDBC-Treibers mit gespeicherten Prozeduren und Eingabeparametern finden Sie unter [Verwenden von gespeicherten Prozeduren mit Eingabeparametern](using-a-stored-procedure-with-input-parameters.md).  
 
 ## <a name="retrieving-parameters-from-a-stored-procedure"></a>Abrufen von Parametern von gespeicherten Prozeduren
 

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f074872f05ff907d88d58e986d33ae128bcb5f2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010158"
 ---
 # <a name="enable-and-configure-filestream"></a>Aktivieren und Konfigurieren von FILESTREAM
@@ -25,7 +25,7 @@ ms.locfileid: "66010158"
 > [!NOTE]  
 >  Sie können FILESTREAM nicht in einer 32-Bit-Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktivieren, die unter einem 64-Bit-Betriebssystem ausgeführt wird.  
   
-##  <a name="enabling"></a> Aktivieren von FILESTREAM  
+##  <a name="enabling-filestream"></a><a name="enabling"></a> Aktivieren von FILESTREAM  
   
 #### <a name="to-enable-and-change-filestream-settings"></a>So aktivieren und ändern Sie FILESTREAM-Einstellungen  
   
@@ -62,9 +62,9 @@ ms.locfileid: "66010158"
   
 
   
-##  <a name="best"></a>Bewährte Methoden  
+##  <a name="best-practices"></a><a name="best"></a>Bewährte Methoden  
   
-###  <a name="config"></a>Physische Konfiguration und Wartung  
+###  <a name="physical-configuration-and-maintenance"></a><a name="config"></a> Physische Konfiguration und Verwaltung  
  Beachten Sie beim Einrichten von FILESTREAM-Speichervolumes die folgenden Richtlinien:  
   
 -   Deaktivieren Sie kurze Dateinamen auf FILESTREAM-Computersystemen. Bei kurzen Dateinamen dauert das Erstellen erheblich länger. Um kurze Dateinamen zu deaktivieren, verwenden Sie das Windows-Hilfsprogramm **fsutil** .  
@@ -88,7 +88,7 @@ ms.locfileid: "66010158"
   
 
   
-###  <a name="database"></a>Physischer Daten bankentwurf  
+###  <a name="physical-database-design"></a><a name="database"></a>Physischer Daten bankentwurf  
  Beachten Sie beim Entwerfen einer FILESTREAM-Datenbank die folgenden Richtlinien:  
   
 -   FILESTREAM-Spalten müssen von einer entsprechenden `uniqueidentifier`ROWGUID-Spalte begleitet werden. Diese Arten von Tabellen müssen auch über einen eindeutigen Index verfügen. In der Regel ist dieser Index kein gruppierter Index. Wenn die Geschäftslogik für Datenbanken einen gruppierten Index erfordert, müssen Sie sicherstellen, dass die im Index gespeicherten Werte nicht zufällig sind. Zufallswerte bewirken, dass der Index neu sortiert wird, sobald in der Tabelle eine Zeile hinzugefügt oder entfernt wird.  

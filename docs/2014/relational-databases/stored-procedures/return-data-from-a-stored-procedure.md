@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6b11f924ce5692378896f1fd7d50186861abf223
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140447"
 ---
 # <a name="return-data-from-a-stored-procedure"></a>Zurückgeben von Daten von einer gespeicherten Prozedur
@@ -254,8 +254,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Deklarieren @local_variable &#40;Transact-SQL-&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
- [Drucken &#40;Transact-SQL-&#41;](/sql/t-sql/language-elements/print-transact-sql)   
+ [DEKLARIEREN SIE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql)   
+ [PRINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/print-transact-sql)   
  [Festlegen @local_variable &#40;Transact-SQL-&#41;](/sql/t-sql/language-elements/set-local-variable-transact-sql)   
  [Cursor](../cursors.md)   
  [Rückgabe &#40;Transact-SQL-&#41;](/sql/t-sql/language-elements/return-transact-sql)   

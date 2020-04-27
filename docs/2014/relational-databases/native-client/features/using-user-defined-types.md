@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f2adbf40b3fe0b0e079198087a47f525d464a41b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206613"
 ---
 # <a name="using-user-defined-types"></a>Verwenden von benutzerdefinierten Typen
@@ -42,28 +42,28 @@ ms.locfileid: "68206613"
 ### <a name="data-bindings-and-coercions"></a>Datenbindungen und -umwandlungen  
  Die folgende Tabelle veranschaulicht die Bindung und Umwandlung bei Verwendung der aufgeführten Datentypen mit einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-UDT. UDT-Spalten werden über den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter als DBTYPE_UDT verfügbar gemacht. Die Metadaten können Sie über die entsprechenden Schemarowsets abrufen und so Ihre benutzerdefinierten Typen als Objekte verwalten.  
   
-|Datentyp|Zu Server<br /><br /> **UDT**|Zu Server<br /><br /> **nicht-UDT**|Von Server<br /><br /> **UDT**|Von Server<br /><br /> **nicht-UDT**|  
+|Datentyp|Zu Server<br /><br /> **UDT**|Zu Server<br /><br /> **non-UDT**|Von Server<br /><br /> **UDT**|Von Server<br /><br /> **non-UDT**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_UDT|Unterstützt<sup>6</sup>|Fehler<sup>1</sup>|Unterstützt<sup>6</sup>|Fehler<sup>5</sup>|  
-|DBTYPE_BYTES|Unterstützt<sup>6</sup>|N/V<sup>2</sup>|Unterstützt<sup>6</sup>|N/V<sup>2</sup>|  
-|DBTYPE_WSTR|Unterstützt<sup>3, 6</sup>|N/V<sup>2</sup>|Unterstützt<sup>4, 6</sup>|N/V<sup>2</sup>|  
-|DBTYPE_BSTR|Unterstützt<sup>3, 6</sup>|N/V<sup>2</sup>|Unterstützt<sup>4</sup>|N/V<sup>2</sup>|  
-|DBTYPE_STR|Unterstützt<sup>3, 6</sup>|N/V<sup>2</sup>|Unterstützt<sup>4, 6</sup>|N/V<sup>2</sup>|  
-|DBTYPE_IUNKNOWN|Nicht unterstützt|N/V<sup>2</sup>|Nicht unterstützt|N/V<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Unterstützt<sup>6</sup>|N/V<sup>2</sup>|Unterstützt<sup>4</sup>|N/V<sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|Unterstützt<sup>3, 6</sup>|N/V<sup>2</sup>|–|N/V<sup>2</sup>|  
+|DBTYPE_BYTES|Unterstützt<sup>6</sup>|Nicht zutreffend<sup>2</sup>|Unterstützt<sup>6</sup>|Nicht zutreffend<sup>2</sup>|  
+|DBTYPE_WSTR|Unterstützt<sup>3,6</sup>|Nicht zutreffend<sup>2</sup>|Unterstützt<sup>4,6</sup>|Nicht zutreffend<sup>2</sup>|  
+|DBTYPE_BSTR|Unterstützt<sup>3,6</sup>|Nicht zutreffend<sup>2</sup>|Unterstützt<sup>4</sup>|Nicht zutreffend<sup>2</sup>|  
+|DBTYPE_STR|Unterstützt<sup>3,6</sup>|Nicht zutreffend<sup>2</sup>|Unterstützt<sup>4,6</sup>|Nicht zutreffend<sup>2</sup>|  
+|DBTYPE_IUNKNOWN|Nicht unterstützt|Nicht zutreffend<sup>2</sup>|Nicht unterstützt|Nicht zutreffend<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Unterstützt<sup>6</sup>|Nicht zutreffend<sup>2</sup>|Unterstützt<sup>4</sup>|Nicht zutreffend<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|Unterstützt<sup>3,6</sup>|Nicht zutreffend<sup>2</sup>|–|Nicht zutreffend<sup>2</sup>|  
   
- <sup>1</sup> Wenn ein anderer Servertyp als DBTYPE_UDT mit **ICommandWithParameters:: SetParameterInfo** angegeben wird und der Accessortyp DBTYPE_UDT ist, tritt ein Fehler auf, wenn die Anweisung ausgeführt wird (DB_E_ERRORSOCCURRED, der Parameter Status DBSTATUS_E_BADACCESSOR). Andernfalls werden die Daten an den Server gesendet, der Server gibt jedoch einen Fehler zurück und zeigt an, dass keine implizite Umwandlung des UDT in den Parameterdatentyp erfolgt.  
+ <sup>1</sup>Wird ein anderer Servertyp als DBTYPE_UDT mit **ICommandWithParameters::SetParameterInfo** angegeben, und ist der Accessortyp DBTYPE_UDT, tritt bei Ausführung der Anweisung ein Fehler auf (DB_E_ERRORSOCCURRED; der Parameterstatus lautet DBSTATUS_E_BADACCESSOR). Andernfalls werden die Daten an den Server gesendet, der Server gibt jedoch einen Fehler zurück und zeigt an, dass keine implizite Umwandlung des UDT in den Parameterdatentyp erfolgt.  
   
  <sup>2</sup> Über den Rahmen dieses Themas hinaus.  
   
- <sup>3</sup> Datenkonvertierung von hexadezimal Zeichenfolge in binäre Daten erfolgt.  
+ <sup>3</sup>Es erfolgt eine Datenkonvertierung einer hexadezimalen Zeichenfolge in Binärdaten.  
   
- <sup>4</sup> Datenkonvertierungen von Binärdaten in eine hexadezimale Zeichenfolge.  
+ <sup>4</sup>Es erfolgt eine Datenkonvertierung von Binärdaten in eine hexadezimale Zeichenfolge.  
   
- <sup>5</sup> Die Validierung kann zum Zeitpunkt der Erstellung der Zugriffsmethode oder zum Abruf Zeitpunkt erfolgen. der Fehler wird DB_E_ERRORSOCCURRED, der Bindungs Status ist auf DBBINDSTATUS_UNSUPPORTEDCONVERSION festgelegt.  
+ <sup>5</sup>Die Überprüfung kann zum Zeitpunkt der Accessorerstellung oder zum Zeitpunkt des Abrufens vorgenommen werden. Der Fehler ist DB_E_ERRORSOCCURRED, der Bindungsstatus ist auf DBBINDSTATUS_UNSUPPORTEDCONVERSION festgelegt.  
   
- <sup>6</sup> BY_REF können verwendet werden.  
+ <sup>6</sup>BY_REF wird möglicherweise verwendet.  
   
  DBTYPE_NULL und DBTYPE_EMPTY können für Eingabeparameter gebunden werden, aber nicht für Ausgabeparameter oder Ergebnisse. Ist der Status für Eingabeparameter gebunden, muss er auf DBSTATUS_S_ISNULL oder DBSTATUS_S_DEFAULT festgelegt werden.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "68206613"
 #### <a name="the-procedure_parameters-schema-rowset"></a>Das PROCEDURE_PARAMETERS-Schemarowset  
  Die folgenden Hinzufügungen wurden am PROCEDURE_PARAMETERS-Schemarowset vorgenommen.  
   
-|Spaltenname|type|BESCHREIBUNG|  
+|Spaltenname|type|Beschreibung|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Der dreiteilige Namensbezeichner.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Der dreiteilige Namensbezeichner.|  
@@ -92,7 +92,7 @@ ms.locfileid: "68206613"
 #### <a name="the-sql_assemblies-schema-rowset"></a>Das SQL_ASSEMBLIES-Schemarowset  
  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter macht ein neues Anbieter spezifisches Schemarowset verfügbar, das die registrierten UDTs beschreibt. Der ASSEMBLY-Server wird möglicherweise als DBTYPE_WSTR angegeben, ist aber nicht im Rowset vorhanden. Ohne Angabe wird das Rowset standardmäßig für den aktuellen Server festgelegt. Das SQL_ASSEMBLIES-Schemarowset wird in der folgenden Tabelle definiert.  
   
-|Spaltenname|type|BESCHREIBUNG|  
+|Spaltenname|type|Beschreibung|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|Der Katalogname der Assembly, die den Typ enthält.|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|Der Name des Schemas oder der Eigentümername der Assembly, die den Typ enthält. Obwohl der Bereich einer Assembly durch die Datenbank und nicht durch ein Schema definiert wird, hat sie einen Eigentümer, der hier angegeben wird.|  
@@ -104,7 +104,7 @@ ms.locfileid: "68206613"
 #### <a name="the-sql_assemblies_-dependencies-schema-rowset"></a>Das SQL_ASSEMBLIES_ DEPENDENCIES-Schemarowset  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Der Native Client OLE DB-Anbieter macht ein neues Anbieter spezifisches Schemarowset verfügbar, das die Assemblyabhängigkeiten für einen angegebenen Server beschreibt. ASSEMBLY_SERVER wird möglicherweise vom Aufrufer als DBTYPE_WSTR angegeben, ist aber nicht im Rowset vorhanden. Ohne Angabe wird das Rowset standardmäßig für den aktuellen Server festgelegt. Das SQL_ASSEMBLY_DEPENDENCIES-Schemarowset wird in der folgenden Tabelle definiert.  
   
-|Spaltenname|type|BESCHREIBUNG|  
+|Spaltenname|type|Beschreibung|  
 |-----------------|----------|-----------------|  
 |ASSEMBLY_CATALOG|DBTYPE_WSTR|Der Katalogname der Assembly, die den Typ enthält.|  
 |ASSEMBLY_SCHEMA|DBTYPE_WSTR|Der Name des Schemas oder der Eigentümername der Assembly, die den Typ enthält. Obwohl der Bereich einer Assembly durch die Datenbank und nicht durch ein Schema definiert wird, hat sie einen Eigentümer, der hier angegeben wird.|  
@@ -114,7 +114,7 @@ ms.locfileid: "68206613"
 #### <a name="the-sql_user_types-schema-rowset"></a>Das SQL_USER_TYPES-Schemarowset  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Der Native Client OLE DB-Anbieter macht ein neues Schemarowset, SQL_USER_TYPES, verfügbar, das beschreibt, wann die registrierten UDTs für einen bestimmten Server hinzugefügt werden. UDT_SERVER muss vom Aufrufer als DBTYPE_WSTR angegeben werden, ist aber nicht im Rowset vorhanden. Das SQL_USER_TYPES-Schemarowset wird in der folgenden Tabelle definiert.  
   
-|Spaltenname|type|BESCHREIBUNG|  
+|Spaltenname|type|Beschreibung|  
 |-----------------|----------|-----------------|  
 |UDT_CATALOGNAME|DBTYPE_WSTR|Bei UDT-Spalten ist diese Eigenschaft eine Zeichenfolge, die den Namen des Katalogs angibt, in dem der UDT definiert ist.|  
 |UDT_SCHEMANAME|DBTYPE_WSTR|Bei UDT-Spalten ist diese Eigenschaft eine Zeichenfolge, die den Namen des Schemas angibt, in dem der UDT definiert ist.|  
@@ -124,7 +124,7 @@ ms.locfileid: "68206613"
 #### <a name="the-columns-schema-rowset"></a>Das COLUMNS-Schemarowset  
  Dem COLUMNS-Schemarowset wurden unter anderem die folgenden Spalten hinzugefügt.  
   
-|Spaltenname|type|BESCHREIBUNG|  
+|Spaltenname|type|Beschreibung|  
 |-----------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Bei UDT-Spalten ist diese Eigenschaft eine Zeichenfolge, die den Namen des Katalogs angibt, in dem der UDT definiert ist.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Bei UDT-Spalten ist diese Eigenschaft eine Zeichenfolge, die den Namen des Schemas angibt, in dem der UDT definiert ist.|  
@@ -137,7 +137,7 @@ ms.locfileid: "68206613"
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>Die DBPROPSET_SQLSERVERPARAMETER-Eigenschaftengruppe  
  Um UDTs über OLE DB zu unterstützen, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implementiert Native Client den neuen DBPROPSET_SQLSERVERPARAMETER-Eigenschaften Satz, der die folgenden Werte enthält.  
   
-|Name|type|BESCHREIBUNG|  
+|Name|type|Beschreibung|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_UDT_CATALOGNAME|DBTYPE_WSTR|Der dreiteilige Namensbezeichner.<br /><br /> Bei UDT-Parametern ist diese Eigenschaft eine Zeichenfolge, die den Namen des Katalogs angibt, in dem der UDT definiert ist.|  
 |SSPROP_PARAM_UDT_SCHEMANAME|DBTYPE_WSTR|Der dreiteilige Namensbezeichner.<br /><br /> Bei UDT-Parametern ist diese Eigenschaft eine Zeichenfolge, die den Namen des Schemas angibt, in dem der UDT definiert ist.|  
@@ -148,14 +148,14 @@ ms.locfileid: "68206613"
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>Die DBPROPSET_SQLSERVERCOLUMN-Eigenschaftengruppe  
  Um die Erstellung von Tabellen in der **ITableDefinition** -Schnittstelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zu unterstützen, fügt Native Client die folgenden drei neuen Spalten dem DBPROPSET_SQLSERVERCOLUMN-Eigenschaften Satz hinzu.  
   
-|Name|BESCHREIBUNG|type|BESCHREIBUNG|  
+|Name|Beschreibung|type|Beschreibung|  
 |----------|-----------------|----------|-----------------|  
 |SSPROP_COL_UDT_CATALOGNAME|UDT_CATALOGNAME|VT_BSTR|Bei Spalten vom Typ DBTYPE_UDT ist diese Eigenschaft eine Zeichenfolge, die den Namen des Katalogs angibt, in dem der UDT definiert ist.|  
 |SSPROP_COL_UDT_SCHEMANAME|UDT_SCHEMANAME|VT_BSTR|Bei Spalten vom Typ DBTYPE_UDT ist diese Eigenschaft eine Zeichenfolge, die den Namen des Schemas angibt, in dem der UDT definiert ist.|  
 |SSPROP_COL_UDT_NAME|UDT_NAME|VT_BSTR|Bei Spalten vom Typ DBTYPE_UDT ist diese Eigenschaft eine Zeichenfolge, die den einteiligen Namen des UDT angibt. Für andere Spaltentypen gibt diese Eigenschaft eine leere Zeichenfolge zurück.|  
   
 > [!NOTE]  
->  UDTs werden nicht im PROVIDER_TYPES Schemarowset angezeigt. Alle Spalten haben Lese- und Schreibzugriff.  
+>  UDTs werden nicht im Schemarowset „PROVIDER_TYPES“ angezeigt. Alle Spalten haben Lese- und Schreibzugriff.  
   
  ADO verweist mit dem entsprechenden Eintrag aus der Beschreibungsspalte auf diese Eigenschaften.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "68206613"
 #### <a name="the-icolumnsrowset-interface"></a>Die IDBColumnsRowset-Schnittstelle  
  Zusätzlich zur **ISSCommandWithParameters** -Schnittstelle fügt [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client dem Rowset, das durch Aufrufen der **IColumnsRowset:: GetColumnRowset** -Methode zurückgegeben wird, auch neue Werte hinzu, einschließlich der folgenden.  
   
-|Spaltenname|type|BESCHREIBUNG|  
+|Spaltenname|type|Beschreibung|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_UDT_CATALOGNAME|DBTYPE_WSTR|Ein UDT-Katalognamensbezeichner.|  
 |DBCOLUMN_SS_UDT_SCHEMANAME|DBTYPE_WSTR|Ein UDT-Schemanamensbezeichner.|  
@@ -205,7 +205,7 @@ ms.locfileid: "68206613"
  Bei der Umwandlung von C- in SQL-Datentypen können SQL_C_WCHAR, SQL_C_BINARY und SQL_C_CHAR in SQL_SS_UDT umgewandelt werden. Beachten Sie jedoch, dass Binärdaten in eine hexadezimale Zeichenfolge konvertiert werden, wenn Sie die SQL-Datentypen SQL_C_WCHAR und SQL_C_CHAR konvertieren.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Native Client-Funktionen](sql-server-native-client-features.md)   
- [' ISSCommandWithParameters ' &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [SQL Server Native Client Features](sql-server-native-client-features.md)   
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

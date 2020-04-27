@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7a4dbc20442181ce97b060118094dfa0667803db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011079"
 ---
 # <a name="search-document-properties-with-search-property-lists"></a>Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten
@@ -30,7 +30,7 @@ ms.locfileid: "66011079"
   
  Der zugeordnete [Filter](configure-and-manage-filters-for-search.md) (IFilter) bestimmt, ob die Eigenschaftensuche für einen bestimmten Dokumenttyp möglich ist. Bei einigen Dokumenttypen extrahiert der zugeordnete IFilter einige oder alle für diesen Dokumenttyp definierten Eigenschaften und den Inhalt des Dokumenttextes. Sie können einen Volltextindex konfigurieren, um Eigenschaftensuchen nur für Eigenschaften zu unterstützen, die während der Volltextindizierung von einem IFilter extrahiert werden. Zu den IFilters, die Dokumenteigenschaften extrahieren, zählen die IFilters für Microsoft Office-Dokumenttypen (z. B. DOCX, XLSX und PPTX). Der XML-IFilter gibt dagegen keine Eigenschaften aus.  
   
-##  <a name="How_FTS_Works_with_search_properties"></a> Verwenden von Sucheigenschaften bei der Volltextsuche  
+##  <a name="how-full-text-search-works-with-search-properties"></a><a name="How_FTS_Works_with_search_properties"></a> Verwenden von Sucheigenschaften bei der Volltextsuche  
   
 ### <a name="internal-property-ids"></a>Interne Eigenschaften-IDs  
  Die Volltext-Engine weist jeder registrierten Eigenschaft nach dem Zufallsprinzip eine interne Eigenschaften-ID zu, die die Eigenschaft in der betreffenden Suchliste eindeutig identifiziert und die für diese Sucheigenschaftenliste spezifisch ist. Wenn also eine Eigenschaft mehreren Sucheigenschaftenlisten hinzugefügt wird, weist sie für die einzelnen Listen wahrscheinlich unterschiedliche interne Eigenschaften-IDs auf.  
@@ -58,16 +58,16 @@ ms.locfileid: "66011079"
   
   
   
-##  <a name="impact"></a> Auswirkungen der Aktivierung der Eigenschaftensuche  
+##  <a name="impact-of-enabling-property-searching"></a><a name="impact"></a> Auswirkungen der Aktivierung der Eigenschaftensuche  
  Das Konfigurieren einen Volltextindex für die Unterstützung der Suche nach einer oder mehreren Eigenschaften führt zu einem leichten Größenzuwachs des Index, entsprechend der in der Sucheigenschaftenliste angegebenen Anzahl von Eigenschaften und dem Inhalt der einzelnen Eigenschaften.  
   
  Beim Testen typischer Korpus von Microsoft Word<sup>?</sup>?, Excel<sup>??</sup><sup>und PowerPoint?</sup> Dokumente, wir haben einen Volltextindex für die Indizierung typischer Such Eigenschaften konfiguriert. Durch das Indizieren dieser Eigenschaften wuchs die Größe des Volltextindex um ca. 5 Prozent. Wir erwarten, dass dieser annähernde Größenzuwachs für die meisten Dokumentkorpus typisch sein wird. Der Größenzuwachs hängt letztlich jedoch von der Menge der Eigenschaftendaten im jeweiligen Dokumentkorpus in Bezug auf die Gesamtmenge der Daten ab.  
   
   
   
-##  <a name="creating"></a> Erstellen einer Sucheigenschaftenliste und Aktivieren der Eigenschaftensuche  
+##  <a name="creating-a-search-property-list-and-enabling-property-search"></a><a name="creating"></a>Erstellen einer Such Eigenschaften Liste und Aktivieren der Eigenschaften Suche  
   
-###  <a name="creating_sub"></a> Erstellen von Sucheigenschaftenlisten  
+###  <a name="creating-a-search-property-list"></a><a name="creating_sub"></a>Erstellen einer Such Eigenschaften Liste  
  **So erstellen Sie eine Sucheigenschaftenliste mit Transact-SQL**  
   
  Verwenden Sie die Anweisung [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql), und geben Sie mindestens einen Namen für die Liste an.  
@@ -98,7 +98,7 @@ ms.locfileid: "66011079"
   
  
   
-###  <a name="adding"></a> Hinzufügen von Eigenschaften zu einer Sucheigenschaftenliste  
+###  <a name="adding-properties-to-a-search-property-list"></a><a name="adding"></a>Hinzufügen von Eigenschaften zu einer Such Eigenschaften Liste  
  Für die Eigenschaftensuche muss eine *Sucheigenschaftenliste* erstellt werden. Zudem muss mindestens eine Eigenschaft angegeben werden, die als durchsuchbar festgelegt werden soll. Wenn Sie einer Sucheigenschaftenliste eine Eigenschaft hinzufügen, wird die Eigenschaft für die betreffende Liste registriert. Wenn Sie einer Sucheigenschaftenliste eine Eigenschaft hinzufügen möchten, benötigen Sie die folgenden Werte:  
   
 -   Eigenschaftensatz-GUID  
@@ -109,7 +109,7 @@ ms.locfileid: "66011079"
   
      Jede Sucheigenschaft besitzt einen Bezeichner, der innerhalb des Eigenschaftensatzes eindeutig ist. Beachten Sie, dass der Bezeichner für eine bestimmte Eigenschaft entweder eine ganze Zahl oder eine Zeichenfolge sein kann. Die Volltextsuche unterstützt jedoch nur ganzzahlige Bezeichner.  
   
--   Eigenschaftenname  
+-   Name der Eigenschaft  
   
      Dies ist der Name, den Benutzer in Volltextabfragen angeben, um nach der Eigenschaft zu suchen. Eigenschaftsnamen können interne Leerzeichen enthalten. Die maximale Länge beträgt 256 Zeichen.  
   
@@ -149,7 +149,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
   
   
-###  <a name="associating"></a> Zuordnen einer Sucheigenschaftenliste zu einem Volltextindex  
+###  <a name="associating-a-search-property-list-with-a-full-text-index"></a><a name="associating"></a> Zuordnen einer Sucheigenschaftenliste zu einem Volltextindex  
  Damit ein Volltextindex die Eigenschaftensuche für die in einer Sucheigenschaftenliste registrierten Eigenschaften unterstützt, müssen Sie dem Index die Sucheigenschaftenliste zuordnen und den Index neu auffüllen. Durch das erneute Auffüllen des Volltextindexes werden eigenschaftenspezifische Indexeinträge für Suchbegriffe in den einzelnen registrierten Eigenschaften erstellt.  
   
  Solange der Volltextindex dieser Sucheigenschaftenliste zugeordnet ist, kann in Volltextabfragen mit der PROPERTY-Option des CONTAINS-Prädikats nach Eigenschaften gesucht werden, die für diese Sucheigenschaftenliste registriert sind.  
@@ -166,7 +166,7 @@ ALTER SEARCH PROPERTY LIST DocumentTablePropertyList
   
   
   
-##  <a name="Ov_CONTAINS_using_PROPERTY"></a> Abfragen von Sucheigenschaften mit CONTAINS  
+##  <a name="querying-search-properties-with-contains"></a><a name="Ov_CONTAINS_using_PROPERTY"></a>Abfragen von Such Eigenschaften mit "enthält"  
  Die [CONTAINS](/sql/t-sql/queries/contains-transact-sql) -Basissyntax für eine Volltextabfrage mit Eigenschaftenbereich lautet wie folgt:  
   
 ```sql  
@@ -188,9 +188,9 @@ GO
   
   
   
-##  <a name="managing"></a> Verwalten von Sucheigenschaftenlisten  
+##  <a name="managing-search-property-lists"></a><a name="managing"></a>Verwalten von Such Eigenschaften Listen  
   
-###  <a name="viewing"></a> Anzeigen und Ändern von Sucheigenschaftenlisten  
+###  <a name="viewing-and-changing-a-search-property-list"></a><a name="viewing"></a>Anzeigen und Ändern einer Such Eigenschaften Liste  
  **So ändern Sie eine Sucheigenschaftenliste mit Transact-SQL**  
   
  Verwenden Sie die Anweisung [ALTER SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-search-property-list-transact-sql) zum Hinzufügen oder Entfernen von Sucheigenschaften.  
@@ -211,7 +211,7 @@ GO
   
     1.  Klicken Sie zum Entfernen einer Dokumenteigenschaft auf den Zeilenkopf links von der Eigenschaft, und drücken Sie ENTF.  
   
-    2.  Klicken Sie zum Hinzufügen einer Dokumenteigenschaft auf die leere Zeile am unteren Rand der Liste (rechts vom **\*** ), und geben Sie die Werte für die neue Eigenschaft ein.  
+    2.  Klicken Sie zum Hinzufügen einer Dokument Eigenschaft auf die leere Zeile am unteren Rand der Liste rechts neben der **\***, und geben Sie die Werte für die neue Eigenschaft ein.  
   
          Weitere Informationen zu diesen Werten finden Sie unter [Sucheigenschaftenlisten-Editor](../../database-engine/search-property-list-editor.md). Wie Sie diese Werte für die von Microsoft definierte Eigenschaften erhalten, erfahren Sie unter [Suchen von Eigenschaftensatz-GUIDs und ganzzahligen Eigenschaft-IDs für Sucheigenschaften](find-property-set-guids-and-property-integer-ids-for-search-properties.md). Weitere Informationen zu Eigenschaften, die von einem unabhängigen Softwareanbieter (ISV) definiert wurden, finden Sie in der Dokumentation des betreffenden Anbieters.  
   
@@ -219,7 +219,7 @@ GO
   
   
   
-###  <a name="deleting"></a> Löschen von Sucheigenschaftenlisten  
+###  <a name="deleting-a-search-property-list"></a><a name="deleting"></a>Löschen einer Such Eigenschaften Liste  
  Eine Eigenschaftenliste kann nicht aus einer Datenbank gelöscht werden, solange sie einem Volltextindex zugeordnet ist.  
   
  **So löschen Sie eine Sucheigenschaftenliste mit Transact-SQL**  
@@ -240,7 +240,7 @@ GO
 
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Suchen von Eigenschaftensatz-GUIDs und ganzzahligen Eigenschaft-IDs für Sucheigenschaften](find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
+ [Suchen von Eigenschaften Satz-GUIDs und ganzzahligen Eigenschafts-IDs für Such Eigenschaften](find-property-set-guids-and-property-integer-ids-for-search-properties.md)   
  [Konfigurieren und Verwalten von Filtern für die Suche](configure-and-manage-filters-for-search.md)  
   
   

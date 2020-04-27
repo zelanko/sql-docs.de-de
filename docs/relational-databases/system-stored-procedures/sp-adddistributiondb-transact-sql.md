@@ -16,10 +16,10 @@ ms.assetid: e9bad56c-d2b3-44ba-a4d7-ff2fd842e32d
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: ef595adcf3772dcac92c58764d99bca4374aeb0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68771355"
 ---
 # <a name="sp_adddistributiondb-transact-sql"></a>sp_adddistributiondb (Transact-SQL)
@@ -75,13 +75,13 @@ sp_adddistributiondb [ @database= ] 'database'
   
 `[ @security_mode = ] security_mode`Der Sicherheitsmodus, der beim Herstellen einer Verbindung mit dem Verteiler verwendet werden soll. *security_mode* ist vom Datentyp **int**und hat den Standardwert 1. **0** gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Authentifizierung an. **1** gibt die integrierte Windows-Authentifizierung an.  
   
-`[ @login = ] 'login'`Der Anmelde Name, der beim Herstellen einer Verbindung mit dem Verteiler verwendet wird, um die Verteilungs Datenbank zu erstellen. Dies ist erforderlich, wenn *security_mode* auf **0**festgelegt ist. *Login* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @login = ] 'login'`Der Anmelde Name, der beim Herstellen einer Verbindung mit dem Verteiler verwendet wird, um die Verteilungs Datenbank zu erstellen. Dies ist erforderlich, wenn *security_mode* auf **0**festgelegt ist. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
 `[ @password = ] 'password'`Das Kennwort, das beim Herstellen einer Verbindung mit dem Verteiler verwendet wird. Dies ist erforderlich, wenn *security_mode* auf **0**festgelegt ist. *Password* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 `[ @createmode = ] createmode`" *kreatemode* " ist vom Datentyp **int**. der Standardwert ist 1. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**1** (Standard)|Erstellen Sie eine Datenbank, oder verwenden Sie die vorhandene Datenbank, und wenden Sie dann die Datei **instdist. SQL** an, um Replikations Objekte in der Verteilungs|  
@@ -97,7 +97,7 @@ sp_adddistributiondb [ @database= ] 'database'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_adddistributiondb** wird bei allen Replikations Typen verwendet. Diese gespeicherte Prozedur kann jedoch nur auf einem Verteiler ausgeführt werden.  
   
  Sie müssen den Verteiler konfigurieren, indem Sie [sp_adddistributor](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md) vor dem Ausführen **sp_adddistributiondb**ausführen.  
@@ -168,7 +168,7 @@ GO
  [sp_changedistributiondb &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
  [sp_dropdistributiondb &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
- [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Verteilung konfigurieren](../../relational-databases/replication/configure-distribution.md)  
   
   

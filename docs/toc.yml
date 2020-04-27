@@ -218,8 +218,10 @@
           items:
             - name: Problembehandlung für Kubernetes
               href: big-data-cluster/cluster-troubleshooting-commands.md
-            - name: Active Directory-Integration
+            - name: Active Directory-Domänengruppenbereich
               href: big-data-cluster/troubleshoot-active-directory.md
+            - name: Active Directory-DNS
+              href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
             - name: HDFS-Administratorrechte
               href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
     - name: Verweis

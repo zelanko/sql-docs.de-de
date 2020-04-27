@@ -13,21 +13,21 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5cdd19895a1cf91e1c5c8608013cb52482f946c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046535"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB-Unterstützung von Tabellenwertparameter-Typen (Eigenschaften)
   Dieses Thema stellt Informationen zu OLE DB-Eigenschaften und -Eigenschaftensätzen bereit, die Tabellenwertparameter-Rowsetobjekten zugeordnet werden.  
   
 ## <a name="properties"></a>Eigenschaften  
- Im Folgenden werden die Eigenschaften aufgelistet, die durch die IRowsetInfo::GetProperties-Methode für Tabellenwertparameter-Rowsetobjekte verfügbar gemacht werden. Beachten Sie, dass alle Tabellenwertparameter-Rowseteigenschaften schreibgeschützt sind. Daher führt der Versuch, die Eigenschaften über IOpenRowset:: OPENROWSET oder ITableDefinitionWithConstraints:: up-Methode festzulegen, zu einem Fehler, und es wird kein Objekt erstellt.  
+ Im Folgenden werden die Eigenschaften aufgelistet, die durch die IRowsetInfo::GetProperties-Methode für Tabellenwertparameter-Rowsetobjekte verfügbar gemacht werden. Beachten Sie, dass alle Tabellenwertparameter-Rowseteigenschaften schreibgeschützt sind. Daher führt der Versuch, die Eigenschaften über die Methoden IOpenRowset::OpenRowset oder ITableDefinitionWithConstraints::CreateTableWithConstraints auf ihren Nichtstandardwert festzulegen, zu einem Fehler, und es wird kein Objekt erstellt.  
   
  Im Tabellenwertparameter-Rowsetobjekt nicht implementierte Eigenschaften werden hier nicht aufgelistet. Eine vollständige Liste von Eigenschaften finden Sie in der OLE DB-Dokumentation in den Windows Data Access Components.  
   
-|Eigenschafts-ID|value|  
+|Eigenschafts-ID|Wert|  
 |-----------------|-----------|  
 |DBPROP_ABORTPRESERVE|VARIANT_TRUE|  
 |DBPROP_ACCESSORDER|DBPROPVAL_AO_RANDOM|  
@@ -74,14 +74,14 @@ ms.locfileid: "63046535"
  Die folgenden Eigenschaftensätze unterstützen Tabellenwertparameter.  
   
 ### <a name="dbpropset_sqlservercolumn"></a>DBPROPSET_SQLSERVERCOLUMN  
- Diese Eigenschaft wird vom Consumer beim Erstellen eines Tabellenwert Parameter-Rowsetobjekts mithilfe von ITableDefinitionWithConstraints:: foratetablewitheinschränkungen für jede Spalte über die DBCOLUMNDESC-Struktur verwendet, falls erforderlich.  
+ Diese Eigenschaft wird vom Consumer ggf. beim Erstellen eines Rowsetobjekts für Tabellenwertparameter mithilfe von ITableDefinitionWithConstraints::CreateTableWithConstraints für alle Spaten durch die DBCOLUMNDESC-Struktur verwendet.  
   
 |Eigenschafts-ID|Eigenschaftswert|  
 |-----------------|--------------------|  
 |SSPROP_COL_COMPUTED|R/W: Lesen/Schreiben<br /><br /> Standard: VARIANT_FALSE<br /><br /> Typ: VT_BOOL<br /><br /> Beschreibung: Die Festlegung auf VARIANT_TRUE gibt an, dass die Spalte eine berechnete Spalte ist. VARIANT_FALSE gibt an, dass sie keine berechnete Spalte ist.|  
   
 ### <a name="dbpropset_sqlserverparameter"></a>DBPROPSET_SQLSERVERPARAMETER  
- Diese Eigenschaften werden vom Consumer gelesen, während beim Festlegen spezifischer Eigenschaften über den Tabellenwert Parameter die Typinformationen des Tabellenwert Parameters in Aufrufen von ISSCommandWithParameters:: GetParameterProperties ermittelt und vom Consumer festgelegt werden. mithilfe von ISSCommandWithParameters:: SetParameterProperties.  
+ Diese Eigenschaften werden vom Consumer beim Erkennen der Typinformationen der Tabellenwertparameter in Aufrufen an ISSCommandWithParameters::GetParameterProperties gelesen und beim Festlegen bestimmter Eigenschaften des Tabellenwertparameters durch ISSCommandWithParameters::SetParameterProperties festgelegt.  
   
  In der folgenden Tabelle werden detaillierte Beschreibungen dieser Eigenschaften bereitgestellt.  
   

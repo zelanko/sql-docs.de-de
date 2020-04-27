@@ -13,10 +13,10 @@ ms.author: rajsell
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: 36e36060e16ff85ba2b1fa58d9d900231cf6581f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75258525"
 ---
 # <a name="overview-of-the-workload-comparison-process"></a>Übersicht über den Arbeits Auslastungs Vergleichsprozess
@@ -63,6 +63,6 @@ Die letzte Phase des Prozesses besteht darin, einen Analysebericht mithilfe der 
 - Wenn eine oder mehrere Komponenten fehlen, wird eine Seite mit Links zu Downloads angezeigt, die angezeigt wird, wenn Sie versuchen, einen neuen Analysebericht zu generieren (Internet Verbindung erforderlich).
 - Um einen Bericht anzuzeigen, der in einer früheren Version des Tools generiert wurde, müssen Sie zuerst das Schema aktualisieren.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Siehe auch
 
 - Informationen zum Erstellen einer Ablauf Verfolgungs Datei mit einem Protokoll von Ereignissen, die auf einem Server auftreten, finden Sie im Artikel aufzeichnen [einer Ablauf Verfolgung in Assistent für Datenbankexperimente](database-experimentation-assistant-capture-trace.md).

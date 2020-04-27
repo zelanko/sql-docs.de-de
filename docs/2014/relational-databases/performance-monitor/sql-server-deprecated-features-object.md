@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206962"
 ---
 # <a name="sql-server-deprecated-features-object"></a>'SQL Server:Als veraltet markierte Funktionen'-Objekt
@@ -27,13 +27,11 @@ ms.locfileid: "68206962"
   
  In der folgenden Tabelle werden die Instanzen des „SQL Server:Als veraltet markierte Funktionen“-Leistungsindikators beschrieben.  
   
-|'SQL Server:Als veraltet markierte Funktionen'-Leistungsindikatorinstanzen|BESCHREIBUNG|  
+|'SQL Server:Als veraltet markierte Funktionen'-Leistungsindikatorinstanzen|Beschreibung|  
 |------------------------------------------------------|-----------------|  
 |'#' und '##' als Namen von temporären Tabellen und gespeicherten Prozeduren|Ein Bezeichner wurde gefunden, der keine anderen Zeichen als # enthielt. Verwenden Sie mindestens ein zusätzliches Zeichen. Tritt einmal pro Kompilierung auf.|  
 |Funktionsaufrufsyntax '::'|Für eine Tabellenwertfunktion wurde die Funktionsaufrufsyntax :: gefunden. Ersetzen Sie `SELECT column_list FROM` dies durch * \< function_name>. * `()` Ersetzen Sie beispielsweise `SELECT * FROM ::fn_virtualfilestats(2,1)`durch `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Tritt einmal pro Kompilierung auf.|  
-|
-  \@ und Namen, die mit \@\@ beginnen, als [!INCLUDE[tsql](../../includes/tsql-md.md)]-Bezeichner|Ein Bezeichner wurde gefunden, der mit \@ oder \@\@ beginnt. 
-  \@, \@\@ oder Namen, die mit \@\@ beginnen, dürfen nicht als Bezeichner verwendet werden. Tritt einmal pro Kompilierung auf.|  
+|\@ und Namen, die mit \@\@ beginnen, als [!INCLUDE[tsql](../../includes/tsql-md.md)]-Bezeichner|Ein Bezeichner wurde gefunden, der mit \@ oder \@\@ beginnt. \@, \@\@ oder Namen, die mit \@\@ beginnen, dürfen nicht als Bezeichner verwendet werden. Tritt einmal pro Kompilierung auf.|  
 |ADDING TAPE DEVICE|Die als veraltet markierte Funktion sp_addumpdevice`tape`' ' wurde gefunden. Verwenden Sie stattdessen`disk`sp_addumpdevice ' '. Tritt einmal pro Verwendung auf.|  
 |ALL-Berechtigung|Gesamtanzahl der gefundenen Vorkommnisse der Syntax GRANT ALL, DENY ALL oder REVOKE ALL. Ändern Sie die Syntax, um einzelne Berechtigungen zu widerrufen. Tritt einmal pro Abfrage auf.|  
 |ALTER DATABASE WITH TORN_PAGE_DETECTION|Gesamtanzahl der Verwendungen der veralteten Funktion – der TORN_PAGE_DETECTION-Option von ALTER DATABASE – seit dem Start der Serverinstanz. Verwenden Sie stattdessen die Syntax PAGE_VERIFY. Tritt einmal pro Verwendung in einer DDL-Anweisung auf.|  
@@ -96,7 +94,7 @@ ms.locfileid: "68206962"
 |Hindi|Ereignis tritt einmal pro Datenbankstart und einmal pro Sortierungsverwendung auf. Planen Sie, Anwendungen zu ändern, die diese Sortierung verwenden. Verwenden Sie stattdessen Indic_General_90.|  
 |HOLDLOCK-Tabellenhinweis ohne Klammern||  
 |IDENTITYCOL|Die Syntax INDENTITYCOL wurde gefunden. Schreiben Sie die Anweisungen so um, dass sie die $identity-Syntax verwenden. Tritt einmal pro Kompilierung auf.|  
-|Indexsicht-Auswahlliste ohne COUNT_BIG(\*)|Die Auswahlliste einer indizierten Aggregatsicht muss den Wert COUNT_BIG (\*) enthalten.|  
+|Indexsicht-Auswahlliste ohne COUNT_BIG(*)|Die Auswahlliste einer indizierten Aggregatsicht muss den Wert COUNT_BIG (\*) enthalten.|  
 |INDEX_OPTION|CREATE TABLE-, ALTER TABLE- oder CREATE INDEX-Syntax ohne Klammern um die Optionen gefunden. Schreiben Sie Anweisung so um, dass sie die aktuelle Syntax verwendet. Tritt einmal pro Abfrage auf.|  
 |INDEXKEY_PROPERTY|Die Syntax INDEXKEY_PROPERTY wurde gefunden. Schreiben Sie die Anweisungen so um, dass sie sys.index_columns abfragen. Tritt einmal pro Kompilierung auf.|  
 |Indirekte TVF-Hinweise|Das indirekte Anwenden von Tabellenhinweisen auf einen Aufruf einer Tabellenwertfunktion (Table Valued Function, TVF) mit mehreren Anweisungen über eine Sicht wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nicht mehr unterstützt.|  

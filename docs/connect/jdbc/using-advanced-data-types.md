@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: David-Engel
 ms.author: v-daenge
-ms.openlocfilehash: 509c2735475b7113887a2291ac6cdfb67dfc865a
-ms.sourcegitcommit: 1a96abbf434dfdd467d0a9b722071a1ca1aafe52
+ms.openlocfilehash: 70de1a4d2508a955510eb160af5622d7c1252520
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
-ms.locfileid: "81528724"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81727930"
 ---
 # <a name="using-advanced-data-types"></a>Verwenden von erweiterten Datentypen
 
@@ -77,7 +77,7 @@ rs.next();
 InputStream is = rs.getBinaryStream(2);  
 ```
 
-Sie können die Daten auch mit der [getBytes](../../connect/jdbc/reference/getbytes-method-sqlserverresultset.md)-Methode wie folgt als Bytearray lesen:  
+Sie können die Daten auch mit der [getBytes](reference/getbytes-method-sqlserverresultset.md)-Methode wie folgt als Bytearray lesen:  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT photo FROM mypics");  
@@ -123,7 +123,7 @@ try (PreparedStatement pstmt = con.prepareStatement("INSERT INTO test1 (Col1, Co
 
 ### <a name="modifying-large-value-types-in-a-database"></a>Ändern von Typen mit umfangreichen Werten in einer Datenbank
 
-In den meisten Fällen wird empfohlen, zum Aktualisieren oder Ändern von umfangreichen Werten in der Datenbank mit [!INCLUDE[tsql](../../includes/tsql-md.md)]-Befehlen wie `UPDATE`, `WRITE` und `SUBSTRING` Parameter über die Klassen [SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) und [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) zu übergeben.  
+In den meisten Fällen wird empfohlen, zum Aktualisieren oder Ändern von umfangreichen Werten in der Datenbank mit [!INCLUDE[tsql](../../includes/tsql-md.md)]-Befehlen wie `UPDATE`, `WRITE` und `SUBSTRING` Parameter über die Klassen [SQLServerPreparedStatement](reference/sqlserverpreparedstatement-class.md) und [SQLServerCallableStatement](reference/sqlservercallablestatement-class.md) zu übergeben.  
 
 Wenn Sie in einer umfangreichen Textdatei ein Wort ersetzen müssen, z.B. in einer archivierten HTML-Datei, können Sie ein Clob-Objekt wie folgt verwenden:  
 
@@ -173,12 +173,12 @@ Weitere Informationen zu benutzerdefinierten Datentypen finden Sie in der [!INCL
   
 ## <a name="sql_variant-data-type"></a>Sql_variant-Datentyp
 
-Weitere Informationen über den Datentyp sql_variant finden Sie unter [Verwenden des sql_variant-Datentyps](../../connect/jdbc/using-sql-variant-datatype.md).  
+Weitere Informationen über den Datentyp sql_variant finden Sie unter [Verwenden des sql_variant-Datentyps](using-sql-variant-datatype.md).  
 
 ## <a name="spatial-data-types"></a>Räumliche Datentypen
 
-Informationen zu räumlichen Datentypen finden Sie unter [Verwenden von räumlichen Datentypen](../../connect/jdbc/use-spatial-datatypes.md).  
+Informationen zu räumlichen Datentypen finden Sie unter [Verwenden von räumlichen Datentypen](use-spatial-datatypes.md).  
 
 ## <a name="see-also"></a>Weitere Informationen
 
-[Grundlegendes zu den Datentypen des JDBC-Treibers](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  
+[Grundlegendes zu den Datentypen des JDBC-Treibers](understanding-the-jdbc-driver-data-types.md)  

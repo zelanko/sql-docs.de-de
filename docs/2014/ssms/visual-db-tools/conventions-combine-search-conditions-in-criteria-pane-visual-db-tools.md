@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3a1022770526386640f0ad2aa114a2161ba16dc8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140385"
 ---
 # <a name="conventions-for-combining-search-conditions-in-the-criteria-pane-visual-database-tools"></a>Konventionen für das Kombinieren von Suchbedingungen im Kriterienbereich (Visual Database Tools)
@@ -162,7 +162,7 @@ WHERE (hire_date < '01/01/95' ) AND
   
  Diese WHERE-Klausel wird vom Abfrage- und Sicht-Designer folgendermaßen im Kriterienbereich dargestellt:  
   
- ![Im Kriterienbereich definierte verknüpfte OR-Klauseln](../../database-engine/media//vs-criteriapane3.gif "Im Kriterienbereich definierte verknüpfte OR-Klauseln")  
+ ![Im Kriterienbereich definierte, verknüpfte OR-Klauseln](../../database-engine/media//vs-criteriapane3.gif "Im Kriterienbereich definierte, verknüpfte OR-Klauseln")  
   
  Wenn Sie die Abfrage ändern (z. B. durch Ändern eines der Werte im Kriterienbereich), erstellt der Abfrage- und Sicht-Designer die SQL-Anweisung im SQL-Bereich neu. Die neu erstellte SQL-Anweisung stimmt eher mit der Anzeige im Kriterienbereich als mit der ursprünglichen Anweisung überein. Wenn der Kriterienbereich z. B. verteilte AND-Klauseln enthält, wird die Anweisung im SQL-Bereich mit eindeutig verteilten AND-Klauseln erstellt. Ausführliche Informationen finden Sie weiter oben unter "Verwenden von AND mit mehreren OR-Klauseln".  
   

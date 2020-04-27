@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 583e0f92f96c153fdeb0ade57fcdfa1d27578350
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061987"
 ---
 # <a name="add-delete-change-scope-of-user-defined-variable-in-a-package"></a>Hinzufügen, Löschen, Ändern des Bereichs von benutzerdefinierten Variablen in einem Paket
@@ -24,8 +24,7 @@ ms.locfileid: "66061987"
   
  Weitere Informationen zu Variablenbereichen finden Sie unter [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md).  
   
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt außerdem Systemvariablen bereit, die zur Laufzeit Systeminformationen zur Verfügung stellen und die in Containern, z. B. Paketen und Ereignishandlern, verwendet werden können. Systemvariablen können nicht gelöscht werden.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt außerdem Systemvariablen bereit, die zur Laufzeit Systeminformationen zur Verfügung stellen und die in Containern, z. B. Paketen und Ereignishandlern, verwendet werden können. Systemvariablen können nicht gelöscht werden.  
   
 ### <a name="to-add-a-variable"></a>So fügen Sie eine Variable hinzu  
   
@@ -47,7 +46,7 @@ ms.locfileid: "66061987"
   
 6.  Klicken Sie wahlweise auf das Symbol **Rasteroptionen** , wählen Sie zusätzliche Spalten aus, die im Dialogfeld **Variable Rasteroptionen** angezeigt werden sollen, und klicken Sie dann auf **OK**.  
   
-7.  Legen Sie optional die Variableneigenschaften fest. Weitere Informationen finden Sie unter [Festlegen der Eigenschaften von benutzerdefinierten Variablen](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md).  
+7.  Legen Sie optional die Variableneigenschaften fest. Weitere Informationen finden Sie unter [Festlegen der Eigenschaften von benutzerdefinierten Variablen](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)definiert.  
   
 8.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66061987"
   
 4.  Wählen Sie die zu löschende Variable aus, und klicken Sie dann auf **Variable löschen**.  
   
-     Wenn die Variable nicht im Fenster „Variablen“ angezeigt wird, klicken Sie auf **Rasteroptionen**, und wählen Sie dann **Variablen aller Bereiche anzeigen** aus.  
+     Wenn die Variable nicht im Fenster Variablen angezeigt wird, klicken Sie auf **Raster Optionen** , und wählen Sie dann **Variablen aller Bereiche anzeigen aus**.  
   
 5.  Wenn das Dialogfeld **Löschen der Variablen bestätigen** aufgerufen wird, klicken Sie zur Bestätigung auf **Ja** .  
   
@@ -77,14 +76,14 @@ ms.locfileid: "66061987"
   
 4.  Wählen Sie die Variable aus, und klicken Sie dann auf **Variable verschieben**.  
   
-     Wenn die Variable nicht im Fenster „Variablen“ angezeigt wird, klicken Sie auf **Rasteroptionen**, und wählen Sie dann **Variablen aller Bereiche anzeigen** aus.  
+     Wenn die Variable nicht im Fenster Variablen angezeigt wird, klicken Sie auf **Raster Optionen** , und wählen Sie dann **Variablen aller Bereiche anzeigen aus**.  
   
 5.  Wählen Sie im Dialogfeld **Neuen Bereich auswählen** das Paket oder einen Container, Task oder Ereignishandler im Paket aus, um den Gültigkeitsbereich der Variablen zu ändern.  
   
 6.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS-&#41; Variablen](integration-services-ssis-variables.md)   
  [Verwenden von Variablen in Paketen](../../2014/integration-services/use-variables-in-packages.md)   
  [Festlegen der Eigenschaften einer benutzerdefinierten Variablen](../../2014/integration-services/set-the-properties-of-a-user-defined-variable.md)   
  [Verwenden der Werte von Variablen und Parametern in einem untergeordneten Paket](../../2014/integration-services/use-the-values-of-variables-and-parameters-in-a-child-package.md)  

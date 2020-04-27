@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ef7972014dff498172b9c016b3a7debb79a054fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149850"
 ---
 # <a name="column-element-for-index-dta"></a>Column-Element für Index (DTA)
@@ -45,11 +45,11 @@ ms.locfileid: "63149850"
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|BESCHREIBUNG|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
-|**Datentyp und -länge**|Keine.|  
-|**Standardwert**|Keine.|  
-|**Vorkommen**|Angabe von bis zu 1024 Spalten für das `Index`-Element möglich.|  
+|**Datentyp und -länge**|Keine|  
+|**Standardwert**|Keine|  
+|**Vorkommt**|Angabe von bis zu 1024 Spalten für das `Index`-Element möglich.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   

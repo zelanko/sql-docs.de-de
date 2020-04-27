@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47f4f0abf784118dd94b62d7b8e08a2e060c639a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211387"
 ---
 # <a name="job-properties-and-new-job-general-page"></a>Auftragseigenschaften und „Neuer Auftrag“ (Seite „Allgemein“)
@@ -41,10 +41,10 @@ ms.locfileid: "68211387"
  **Aktiviert**  
  Aktivieren Sie den Auftrag. Wenn der Auftrag nicht aktiviert ist, wird er nicht als Antwort auf einen Zeitplan oder eine Warnung ausgeführt. Sie können den Auftrag jedoch weiterhin mithilfe der gespeicherten Prozedur **sp_start_job** starten.  
   
- **`Source`**  
+ **Quelle**  
  Zeigt den Masterserver für den Auftrag an. Nur auf der Seite **Auftragseigenschaften– Allgemein** verfügbar.  
   
- **Erstellt**  
+ **Schaff**  
  Zeigt das Datum und die Uhrzeit der Auftragserstellung an. Nur auf der Seite **Auftragseigenschaften– Allgemein** verfügbar.  
   
  **Zuletzt geändert**  
@@ -58,6 +58,6 @@ ms.locfileid: "68211387"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Implementieren von Aufträgen](implement-jobs.md)   
- [Auftragskategorien: Auftragskategorien verwalten](job-categories-manage-job-categories.md)  
+ [Auftragskategorien: Verwalten von Auftragskategorien](job-categories-manage-job-categories.md)  
   
   

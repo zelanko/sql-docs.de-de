@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bba5156d159c87ad6ad0e011268bc655b45a5c37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63032417"
 ---
 # <a name="object-dependencies"></a>Objektabhängigkeiten
@@ -33,7 +33,7 @@ ms.locfileid: "63032417"
  **Objekte, von denen das**_\<ausgewählte Objekt>_ **abhängig** ist      
  Durch Klicken auf diese Schaltfläche wird eine Liste der Objekte angezeigt, deren Abhängigkeiten nachverfolgt werden und von denen das ausgewählte Objekt abhängig ist.  
   
- **Zen**  
+ **Abhängigkeiten**  
  Wenn **auf** _ \<Objekte, die von ausgewähltem Objekt>_ abhängen, geklickt wird, wird eine hierarchische Ansicht der Objekte angezeigt, die vom ausgewählten Objekt abhängig sind. Wenn **auf Objekte, von denen** _ \<das ausgewählte Objekt>_ **abhängt** , geklickt wird, wird eine hierarchische Ansicht der Objekte angezeigt, von denen das ausgewählte Objekt abhängig ist.  
   
  **Name**  
@@ -48,7 +48,7 @@ ms.locfileid: "63032417"
   
  Gibt das Datum und die Uhrzeit des letzten Updates der Abhängigkeitsinformationen an.  
   
- **Abhängigkeits Typen**  
+ **Abhängigkeitstyp**  
  > [!NOTE]  
 >  Diese Option ist nur auf der Seite **Allgemein** verfügbar.  
   

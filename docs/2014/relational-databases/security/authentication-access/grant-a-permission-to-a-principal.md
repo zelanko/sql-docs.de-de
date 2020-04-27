@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 9b0ff18a9b3c6ff338a2b827b91ff20bbc7b2ce9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63011959"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>Erteilen einer Berechtigung für einen Prinzipal
@@ -36,21 +36,21 @@ ms.locfileid: "63011959"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
  Mit den folgenden Best Practices wird die Verwaltung von Berechtigungen erleichtert.  
   
 -   Erteilen von Berechtigungen für Rollen statt einzelner Anmeldenamen oder Benutzer. Wenn eine Einzelperson durch eine andere ersetzt wird, kann fortgehende Einzelperson aus der Rolle entfernt und die neue Person der Rolle hinzugefügt werden. Die vielen Berechtigungen, die der Rolle möglicherweise zugeordnet sind, sind für die neue Einzelperson automatisch verfügbar. Wenn mehrere Personen in einer Organisation die gleichen Berechtigungen benötigen, können Sie diese der Rolle hinzufügen und ihnen so die gleichen Berechtigungen gewähren.  
   
 -   Konfigurieren Sie ähnliche sicherungsfähige Elemente (Tabellen, Sichten und Prozeduren) als im Besitz eines Schemas befindlich, und gewähren Sie dem Schema anschließend Berechtigungen. Beispielsweise kann das Lohnlistenschema mehrere Tabellen, Sichten und gespeicherte Prozeduren besitzen. Durch Gewähren des Zugriffs für das Schema können alle zum Ausführen der Lohnlistenfunktion erforderlichen Berechtigungen gleichzeitig erteilt werden. Weitere Informationen zu den sicherungsfähigen Elementen, denen Berechtigungen gewährt werden können, finden Sie unter [Securables](../securables.md).  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Der Berechtigende (oder der mit der AS-Option angegebene Prinzipal) muss entweder über die Berechtigung selbst mit GRANT OPTION oder über eine höhere Berechtigung verfügen, in der die erteilte Berechtigung impliziert ist. Mitglieder der festen Serverrolle **sysadmin** können beliebige Berechtigungen erteilen.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-grant-permission-to-a-principal"></a>So erteilen Sie eine Berechtigung für einen Prinzipal  
   
@@ -69,7 +69,7 @@ ms.locfileid: "63011959"
   
 6.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-grant-permission-to-a-principal"></a>So erteilen Sie eine Berechtigung für einen Prinzipal  
   

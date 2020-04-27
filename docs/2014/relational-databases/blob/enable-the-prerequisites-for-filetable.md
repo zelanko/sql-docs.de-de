@@ -13,16 +13,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b4e4679a6022a37a72ce7083d3467bbbccd69f45
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010168"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>Aktivieren der erforderlichen Komponenten für FileTable
   Beschreibt, wie die erforderlichen Komponenten zum Erstellen und Verwenden von FileTables aktiviert werden.  
   
-##  <a name="EnablePrereq"></a> Aktivieren der erforderlichen Komponenten für FileTable  
+##  <a name="enabling-the-prerequisites-for-filetable"></a><a name="EnablePrereq"></a> Aktivieren der erforderlichen Komponenten für FileTable  
  Aktivieren Sie zum Aktivieren der erforderlichen Komponenten zum Erstellen und Verwenden von FileTables die folgenden Elemente:  
   
 -   **Auf Instanzebene:**  
@@ -37,24 +37,24 @@ ms.locfileid: "66010168"
   
     -   [Angeben eines Verzeichnisses für FileTables auf Datenbankebene](#BasicsDirectory)  
   
-##  <a name="BasicsFilestream"></a> Aktivieren von FILESTREAM auf Instanzebene  
+##  <a name="enabling-filestream-at-the-instance-level"></a><a name="BasicsFilestream"></a> Aktivieren von FILESTREAM auf Instanzebene  
  FileTables erweitern die Funktionen der FILESTREAM-Funktion von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Daher muss FILESTREAM für Datei-E/A-Zugriff auf der Windows-Ebene und in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aktiviert werden, bevor Sie FileTables erstellen und verwenden können.  
   
-###  <a name="HowToFilestream"></a> Vorgehensweise: Aktivieren von FILESTREAM auf Instanzebene  
+###  <a name="how-to-enable-filestream-at-the-instance-level"></a><a name="HowToFilestream"></a> Vorgehensweise: Aktivieren von FILESTREAM auf Instanzebene  
  Informationen zum Aktivieren von FILESTREAM finden Sie unter [Aktivieren und Konfigurieren von FILESTREAM](enable-and-configure-filestream.md).  
   
  Wenn Sie `sp_configure` aufrufen, um FILESTREAM auf Instanzebene zu aktivieren, müssen Sie die filestream_access_level-Option auf 2 festlegen. Weitere Informationen finden Sie unter [Filestream-Zugriffsebene (Serverkonfigurationsoption)](../../database-engine/configure-windows/filestream-access-level-server-configuration-option.md).  
   
-###  <a name="firewall"></a> Vorgehensweise: Zulassen von FILESTREAM durch die Firewall  
+###  <a name="how-to-allow-filestream-through-the-firewall"></a><a name="firewall"></a> Vorgehensweise: Zulassen von FILESTREAM durch die Firewall  
  Informationen zum Zulassen von FILESTREAM durch die Firewall finden Sie unter [Configure a Firewall for FILESTREAM Access](configure-a-firewall-for-filestream-access.md).  
   
-##  <a name="filegroup"></a> Bereitstellen einer FILESTREAM-Dateigruppe auf der Datenbankebene  
+##  <a name="providing-a-filestream-filegroup-at-the-database-level"></a><a name="filegroup"></a> Bereitstellen einer FILESTREAM-Dateigruppe auf der Datenbankebene  
  Bevor Sie FileTables in einer Datenbank erstellen können, muss die Datenbank eine FILESTREAM-Dateigruppe haben. Weitere Informationen zu dieser Voraussetzung finden Sie unter [Erstellen einer FILESTREAM-aktivierten Datenbank](create-a-filestream-enabled-database.md).  
   
-##  <a name="BasicsNTAccess"></a> Aktivieren des nicht transaktionalen Zugriffs auf Datenbankebene  
+##  <a name="enabling-non-transactional-access-at-the-database-level"></a><a name="BasicsNTAccess"></a> Aktivieren des nicht transaktionalen Zugriffs auf Datenbankebene  
  Über FileTables können Windows-Anwendungen ein Windows-Dateihandle für FILESTREAM-Daten abrufen, ohne dass hierfür eine Transaktion erforderlich ist. Um diesen nicht transaktionalen Zugriff auf in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gespeicherte Dateien zuzulassen, müssen Sie die gewünschte Ebene des nicht transaktionalen Zugriffs auf Datenbankebene für jede Datenbank angeben, die FileTables enthält.  
   
-###  <a name="HowToCheckAccess"></a> Vorgehensweise: Überprüfen, ob nicht transaktionaler Zugriff auf Datenbanken aktiviert ist  
+###  <a name="how-to-check-whether-non-transactional-access-is-enabled-on-databases"></a><a name="HowToCheckAccess"></a> Vorgehensweise: Überprüfen, ob nicht transaktionaler Zugriff auf Datenbanken aktiviert ist  
  Fragen Sie die Katalogsicht [sys.database_filestream_options &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql) ab, und überprüfen Sie die Spalten **non_transacted_access** und **non_transacted_access_desc**.  
   
 ```sql  
@@ -63,7 +63,7 @@ SELECT DB_NAME(database_id), non_transacted_access, non_transacted_access_desc
 GO  
 ```  
   
-###  <a name="HowToNTAccess"></a> Vorgehensweise: Aktivieren von nicht transaktionalem Zugriff auf Datenbankebene  
+###  <a name="how-to-enable-non-transactional-access-at-the-database-level"></a><a name="HowToNTAccess"></a> Vorgehensweise: Aktivieren von nicht transaktionalem Zugriff auf Datenbankebene  
  Die verfügbaren Stufen des nicht transaktionalen Zugriffs sind FULL, READ_ONLY und OFF.  
   
  **Angeben der Ebene des nicht transaktionalen Zugriffs mit Transact-SQL**  
@@ -84,12 +84,12 @@ GO
  **Angeben der Ebene des nicht transaktionalen Zugriffs mithilfe von SQL Server Management Studio**  
  Sie können die Ebene des nicht transaktionalen Zugriffs im Feld **FILESTREAM Nicht durchgeführter Zugriff** der Seite **Optionen** des Dialogfelds **Datenbankeigenschaften** angeben. Weitere Informationen zu diesem Dialogfeld finden Sie unter [Datenbankeigenschaften &#40;Seite Optionen&#41;](../databases/database-properties-options-page.md).  
   
-##  <a name="BasicsDirectory"></a> Angeben eines Verzeichnisses für FileTables auf Datenbankebene  
+##  <a name="specifying-a-directory-for-filetables-at-the-database-level"></a><a name="BasicsDirectory"></a> Angeben eines Verzeichnisses für FileTables auf Datenbankebene  
  Wenn Sie nicht transaktionalen Zugriff auf Dateien auf Datenbankebene aktivieren, können Sie gleichzeitig optional einen Verzeichnisnamen mit der **DIRECTORY_NAME** -Option angeben. Wenn Sie keinen Verzeichnisnamen angeben, wenn Sie nicht transaktionalen Zugriff aktivieren, müssen Sie diesen später angeben, bevor Sie FileTables in der Datenbank erstellen können.  
   
  In der FileTable-Ordnerhierarchie wird dieses Verzeichnis auf Datenbankebene das untergeordnete Element des Freigabenamens, das für FILESTREAM auf Instanzebene angegeben wurde, und das übergeordnete Element von den in der Datenbank erstellten FileTables. Weitere Informationen finden Sie unter [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md).  
   
-###  <a name="HowToDirectory"></a> Vorgehensweise: Angeben eines Verzeichnisses für FileTables auf Datenbankebene  
+###  <a name="how-to-specify-a-directory-for-filetables-at-the-database-level"></a><a name="HowToDirectory"></a> Vorgehensweise: Angeben eines Verzeichnisses für FileTables auf Datenbankebene  
  Der angegebene Name muss in der Instanz für Verzeichnisse auf Datenbankebene eindeutig sein.  
   
  **Angeben eines Verzeichnisses für FileTables mit Transact-SQL**  
@@ -128,7 +128,7 @@ GO
  **Angeben eines Verzeichnisses für FileTables mithilfe von SQL Server Management Studio**  
  Sie können im Feld **FILESTREAM Verzeichnisname** der Seite **Optionen** des Dialogfelds **Datenbankeigenschaften** einen Verzeichnisnamen angeben. Weitere Informationen zu diesem Dialogfeld finden Sie unter [Datenbankeigenschaften &#40;Seite Optionen&#41;](../databases/database-properties-options-page.md).  
   
-###  <a name="viewnames"></a> Vorgehensweise: Anzeigen vorhandener Verzeichnisnamen für die Instanz  
+###  <a name="how-to-view-existing-directory-names-for-the-instance"></a><a name="viewnames"></a> Vorgehensweise: Anzeigen vorhandener Verzeichnisnamen für die Instanz  
  Fragen Sie zum Anzeigen einer Liste vorhandener Verzeichnisnamen für die Instanz die [sys.database_filestream_options &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql)-Katalogsicht ab, und überprüfen Sie die **filestream_database_directory_name**-Spalte.  
   
 ```sql  
@@ -137,7 +137,7 @@ SELECT DB_NAME ( database_id ), directory_name
 GO  
 ```  
   
-###  <a name="ReqDirectory"></a> Anforderungen und Einschränkungen für das Verzeichnis auf Datenbankebene  
+###  <a name="requirements-and-restrictions-for-the-database-level-directory"></a><a name="ReqDirectory"></a> Anforderungen und Einschränkungen für das Verzeichnis auf Datenbankebene  
   
 -   Das Festlegen von **DIRECTORY_NAME** ist beim Aufrufen von **CREATE DATABASE** oder **ALTER DATABASE** optional. Wenn Sie keinen Wert für **DIRECTORY_NAME** angeben, bleibt der Verzeichnisname NULL. Sie können jedoch erst FileTables in der Datenbank erstellen, wenn Sie einen Wert für **DIRECTORY_NAME** auf Datenbankebene angeben.  
   

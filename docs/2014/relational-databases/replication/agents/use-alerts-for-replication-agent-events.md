@@ -22,19 +22,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a670a78f6e906221638fb67c1cf5be8398b415b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68210733"
 ---
 # <a name="use-alerts-for-replication-agent-events"></a>Verwenden von Warnungen für Replikations-Agentereignisse
-  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]und [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] der-Agent bieten eine Möglichkeit, Ereignisse wie Replikations-Agent-Ereignisse mithilfe von Warnungen zu überwachen. Der[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent überwacht das Windows-Anwendungsprotokoll auf Ereignisse, die Warnungen zugeordnet sind. Bei Auftreten eines solchen Ereignisses antwortet der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent automatisch, indem er eine Aufgabe ausführt, die Sie definiert haben, und/oder eine E-Mail- oder Pager-Nachricht an den angegebenen Operator sendet. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enthält einen Satz vordefinierter Warnungen für Replikations-Agents ein, die Sie konfigurieren können, um eine Task auszuführen und/oder einen Operator zu benachrichtigen. Weitere Informationen zum Definieren eines auszuführenden Tasks finden Sie im Abschnitt zum Automatisieren einer Antwort auf eine Warnung in diesem Thema.  
+  [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] und der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent ermöglichen die Überwachung von Ereignissen mithilfe von Warnungen, z. B. bei Ereignissen des Replikations-Agents. Der[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent überwacht das Windows-Anwendungsprotokoll auf Ereignisse, die Warnungen zugeordnet sind. Bei Auftreten eines solchen Ereignisses antwortet der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent automatisch, indem er eine Aufgabe ausführt, die Sie definiert haben, und/oder eine E-Mail- oder Pager-Nachricht an den angegebenen Operator sendet. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] enthält einen Satz vordefinierter Warnungen für Replikations-Agents ein, die Sie konfigurieren können, um eine Task auszuführen und/oder einen Operator zu benachrichtigen. Weitere Informationen zum Definieren eines auszuführenden Tasks finden Sie im Abschnitt zum Automatisieren einer Antwort auf eine Warnung in diesem Thema.  
   
  Die folgenden Warnungen werden installiert, wenn ein Computer als Verteiler konfiguriert wird:  
   
-|Nachrichten-ID|Vordefinierte Warnung|Bedingung, die die Warnung auslöst|Zusätzlich eingegebene Informationen in msdb..sysreplicationalerts|  
+|Meldungs-ID|Vordefinierte Warnung|Bedingung, die die Warnung auslöst|Zusätzlich eingegebene Informationen in msdb..sysreplicationalerts|  
 |----------------|----------------------|-----------------------------------------|-----------------------------------------------------------------|  
 |14150|**Replikation: Der Agent war erfolgreich.**|Agent wird erfolgreich heruntergefahren.|Ja|  
 |14151|**Replikation: Fehler beim Agent.**|Agent wird mit einem Fehler heruntergefahren.|Ja|  
@@ -48,9 +47,9 @@ ms.locfileid: "68210733"
   
  Zusätzlich zu diesen Warnungen bietet der Replikationsmonitor eine Reihe von status- und leistungsbezogenen Warnungen. Weitere Informationen finden Sie unter [Festlegen von Schwellenwerten und Warnungen in der Infrastruktur der Replikations Monitor](../monitor/set-thresholds-and-warnings-in-replication-monitor.md) Warnungen. Weitere Informationen finden Sie unter [Erstellen eines benutzerdefinierten Ereignisses](../../../ssms/agent/create-a-user-defined-event.md).  
   
- **Konfigurieren von vordefinierten Replikations Warnungen**  
+ **So konfigurieren Sie vordefinierte Replikationswarnungen**  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Konfigurieren von vordefinierten Replikations Warnungen &#40;SQL Server Management Studio&#41;](../administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]: [Konfigurieren von vordefinierten Replikationswarnungen &#40;SQL Server Management Studio&#41;](../administration/configure-predefined-replication-alerts-sql-server-management-studio.md)  
   
 ## <a name="viewing-the-application-log-directly"></a>Direktes Anzeigen des Anwendungsprotokolls  
  Verwenden Sie zum Anzeigen des Anwendungsprotokolls von Windows die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Ereignisanzeige. Das Anwendungsprotokoll enthält sowohl [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Fehlermeldungen als auch Meldungen zu vielen anderen Aktivitäten auf dem Computer. Im Gegensatz zum [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Fehlerprotokoll wird beim Neustart von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nicht jedes Mal ein neues Anwendungsprotokoll erstellt (in jeder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Sitzung werden neue Ereignisse in ein vorhandenes Anwendungsprotokoll geschrieben). Sie können allerdings angeben, wie lange die protokollierten Ereignisse beibehalten werden. Wenn Sie das Windows-Anwendungsprotokoll anzeigen, können Sie das Protokoll nach bestimmten Ereignissen filtern. Weitere Informationen finden Sie in der Windows-Dokumentation.  
@@ -88,8 +87,8 @@ deallocate hc
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwaltung des Replikations-Agents](replication-agent-administration.md)   
+ [Replikations-Agent](replication-agent-administration.md)   
  [Bewährte Methoden für die Replikations Verwaltung](../administration/best-practices-for-replication-administration.md)   
- [Überwachen der &#40;Replikation&#41;](../monitoring-replication.md)  
+ [Überwachung (Replikation)](../monitoring-replication.md)  
   
   

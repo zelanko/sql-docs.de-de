@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 79ddfb40d33c8585b94ccc9718100e771da5e92e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63126599"
 ---
 # <a name="diagram-pane-visual-database-tools"></a>Diagrammbereich (Visual Database Tools)
@@ -53,11 +53,11 @@ ms.locfileid: "63126599"
   
 |Symbol|Objekttyp|  
 |----------|-----------------|  
-|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbi1.gif "Visual Database Tools (Symbol)")|Tabelle|  
-|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbi2.gif "Visual Database Tools (Symbol)")|Abfrage oder Sicht|  
-|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbi3.gif "Visual Database Tools (Symbol)")|Verknüpfte Tabelle|  
-|![Symbol für Visual Database Tools](../../database-engine/media//dvudficon.gif "Visual Database Tools (Symbol)")|Benutzerdefinierte Funktion|  
-|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbi5.gif "Visual Database Tools (Symbol)")|Verknüpfte Sicht|  
+|![Visual Database Tools (Symbol)](../../database-engine/media//dv3wbi1.gif "Visual Database Tools (Symbol)")|Tabelle|  
+|![Visual Database Tools (Symbol)](../../database-engine/media//dv3wbi2.gif "Visual Database Tools (Symbol)")|Abfrage oder Sicht|  
+|![Visual Database Tools (Symbol)](../../database-engine/media//dv3wbi3.gif "Visual Database Tools (Symbol)")|Verknüpfte Tabelle|  
+|![Visual Database Tools (Symbol)](../../database-engine/media//dvudficon.gif "Visual Database Tools (Symbol)")|Benutzerdefinierte Funktion|  
+|![Visual Database Tools (Symbol)](../../database-engine/media//dv3wbi5.gif "Visual Database Tools (Symbol)")|Verknüpfte Sicht|  
   
  Jedes Rechteck zeigt die Datenspalten für die Tabelle bzw. das Tabellenwertobjekt an. Neben den Spaltennamen finden Sie Kontrollkästchen und Symbole, die Informationen zum Verwenden der Spalten in der Abfrage liefern. In QuickInfos erhalten Sie u. a. Informationen zum Datentyp und zur Größe der Spalten.  
   
@@ -65,11 +65,11 @@ ms.locfileid: "63126599"
   
 |Kontrollkästchen oder Symbol|BESCHREIBUNG|  
 |-------------------------|-----------------|  
-|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbi7.gif "Visual Database Tools (Symbol)")<br /><br /> ![Symbol für Visual Database Tools](../../database-engine/media//dv3wbi8.gif "Visual Database Tools (Symbol)")<br /><br /> ![Symbol für Visual Database Tools](../../database-engine/media//dv3wbi9.gif "Visual Database Tools (Symbol)")<br /><br /> ![Symbol für Visual Database Tools](../../database-engine/media//dv3wbia.gif "Visual Database Tools (Symbol)")|Gibt an, ob eine Datenspalte im Resultset der Abfrage enthalten ist oder nicht (SELECT-Abfrage) oder ob sie in einer UPDATE-, INSERT FROM-, MAKE TABLE- oder INSERT INTO-Abfrage verwendet wird. Wählen Sie die Spalte aus, um sie in die Ergebnisse aufzunehmen. Wenn **(Alle Spalten)** ausgewählt ist, werden in der Ausgabe alle Datenspalten angezeigt.<br /><br /> Das mit dem Kontrollkästchen verwendete Symbol ändert sich entsprechend dem Typ der erstellten Abfrage. Beim Erstellen einer DELETE-Abfrage können Sie keine einzelnen Spalten auswählen.|  
-|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbib.gif "Visual Database Tools (Symbol)")<br /><br /> ![Symbol für Visual Database Tools](../../database-engine/media//dv3wbic.gif "Visual Database Tools (Symbol)")|Zeigt an, dass die Datenspalte zum Sortieren der Abfrageergebnisse verwendet wird (d. h. Teil einer ORDER BY-Klausel ist). Das Symbol wird als A-Z bei aufsteigender oder als Z-A bei absteigender Sortierreihenfolge dargestellt.|  
-|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbid.gif "Visual Database Tools (Symbol)")|Zeigt an, dass die Datenspalte in einer Aggregatabfrage zum Erstellen eines gruppierten Resultsets verwendet wird (d. h. Teil einer GROUP BY-Klausel ist).|  
-|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbie.gif "Visual Database Tools (Symbol)")|Zeigt an, dass die Datenspalte in eine Suchbedingung der Abfrage eingebunden ist (d. h. Teil einer WHERE- oder HAVING-Klausel ist).|  
-|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbif.gif "Visual Database Tools (Symbol)")|Zeigt an, dass die Inhalte der Datenspalte für die Ausgabe zusammengefasst werden (d. h. in eine SUM- oder AVG- oder eine andere Aggregatfunktion eingebunden sind).|  
+|![Visual Database Tools (Symbol)](../../database-engine/media//dv3wbi7.gif "Visual Database Tools (Symbol)")<br /><br /> ![Visual Database Tools (Symbol)](../../database-engine/media//dv3wbi8.gif "Visual Database Tools (Symbol)")<br /><br /> ![Visual Database Tools (Symbol)](../../database-engine/media//dv3wbi9.gif "Visual Database Tools (Symbol)")<br /><br /> ![Visual Database Tools (Symbol)](../../database-engine/media//dv3wbia.gif "Visual Database Tools (Symbol)")|Gibt an, ob eine Datenspalte im Resultset der Abfrage enthalten ist oder nicht (SELECT-Abfrage) oder ob sie in einer UPDATE-, INSERT FROM-, MAKE TABLE- oder INSERT INTO-Abfrage verwendet wird. Wählen Sie die Spalte aus, um sie in die Ergebnisse aufzunehmen. Wenn **(Alle Spalten)** ausgewählt ist, werden in der Ausgabe alle Datenspalten angezeigt.<br /><br /> Das mit dem Kontrollkästchen verwendete Symbol ändert sich entsprechend dem Typ der erstellten Abfrage. Beim Erstellen einer DELETE-Abfrage können Sie keine einzelnen Spalten auswählen.|  
+|![Visual Database Tools (Symbol)](../../database-engine/media//dv3wbib.gif "Visual Database Tools (Symbol)")<br /><br /> ![Visual Database Tools (Symbol)](../../database-engine/media//dv3wbic.gif "Visual Database Tools (Symbol)")|Zeigt an, dass die Datenspalte zum Sortieren der Abfrageergebnisse verwendet wird (d. h. Teil einer ORDER BY-Klausel ist). Das Symbol wird als A-Z bei aufsteigender oder als Z-A bei absteigender Sortierreihenfolge dargestellt.|  
+|![Visual Database Tools (Symbol)](../../database-engine/media//dv3wbid.gif "Visual Database Tools (Symbol)")|Zeigt an, dass die Datenspalte in einer Aggregatabfrage zum Erstellen eines gruppierten Resultsets verwendet wird (d. h. Teil einer GROUP BY-Klausel ist).|  
+|![Visual Database Tools (Symbol)](../../database-engine/media//dv3wbie.gif "Visual Database Tools (Symbol)")|Zeigt an, dass die Datenspalte in eine Suchbedingung der Abfrage eingebunden ist (d. h. Teil einer WHERE- oder HAVING-Klausel ist).|  
+|![Visual Database Tools (Symbol)](../../database-engine/media//dv3wbif.gif "Visual Database Tools (Symbol)")|Zeigt an, dass die Inhalte der Datenspalte für die Ausgabe zusammengefasst werden (d. h. in eine SUM- oder AVG- oder eine andere Aggregatfunktion eingebunden sind).|  
   
 > [!NOTE]  
 >  Der Abfrage- und Sicht-Designer zeigt keine Datenspalten für eine Tabelle oder ein Tabellenwertobjekt an, wenn Sie nicht über die erforderlichen Zugriffsrechte verfügen oder der ODBC-Treiber keine Informationen über die Tabelle oder das Objekt zurückgeben kann. In einem solchen Fall zeigt der Abfrage- und Sicht-Designer nur die Titelleiste für die Tabelle oder das Objekt mit Tabellenstruktur an.  
@@ -81,19 +81,19 @@ ms.locfileid: "63126599"
   
 |Joinliniensymbol|BESCHREIBUNG|  
 |--------------------|-----------------|  
-|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbih.gif "Visual Database Tools (Symbol)")|Innerer Join (erstellt mit einem Gleichheitszeichen).|  
-|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbii.gif "Visual Database Tools (Symbol)")|Innerer Join mit dem Operator "größer als". (Der im Symbol der Joinlinie angezeigte Operator gibt den im Join verwendeten Operator wieder.)|  
-|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbij.gif "Visual Database Tools (Symbol)")|Äußerer Join, bei dem sämtliche Zeilen aus der links angezeigten Tabelle aufgenommen werden, auch wenn keine Übereinstimmungen in der verknüpften Tabelle vorliegen.|  
-|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbik.gif "Visual Database Tools (Symbol)")|Äußerer Join, bei dem sämtliche Zeilen aus der rechts angezeigten Tabelle aufgenommen werden, auch wenn keine Übereinstimmungen in der verknüpften Tabelle vorliegen.|  
-|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbil.gif "Visual Database Tools (Symbol)")|Ein vollständiger äußerer Join, bei dem alle Zeilen aus beiden Tabellen aufgenommen werden, auch wenn keine Übereinstimmungen in der verknüpften Tabelle vorliegen.|  
+|![Visual Database Tools (Symbol)](../../database-engine/media//dv3wbih.gif "Visual Database Tools (Symbol)")|Innerer Join (erstellt mit einem Gleichheitszeichen).|  
+|![Visual Database Tools (Symbol)](../../database-engine/media//dv3wbii.gif "Visual Database Tools (Symbol)")|Innerer Join mit dem Operator "größer als". (Der im Symbol der Joinlinie angezeigte Operator gibt den im Join verwendeten Operator wieder.)|  
+|![Visual Database Tools (Symbol)](../../database-engine/media//dv3wbij.gif "Visual Database Tools (Symbol)")|Äußerer Join, bei dem sämtliche Zeilen aus der links angezeigten Tabelle aufgenommen werden, auch wenn keine Übereinstimmungen in der verknüpften Tabelle vorliegen.|  
+|![Visual Database Tools (Symbol)](../../database-engine/media//dv3wbik.gif "Visual Database Tools (Symbol)")|Äußerer Join, bei dem sämtliche Zeilen aus der rechts angezeigten Tabelle aufgenommen werden, auch wenn keine Übereinstimmungen in der verknüpften Tabelle vorliegen.|  
+|![Visual Database Tools (Symbol)](../../database-engine/media//dv3wbil.gif "Visual Database Tools (Symbol)")|Ein vollständiger äußerer Join, bei dem alle Zeilen aus beiden Tabellen aufgenommen werden, auch wenn keine Übereinstimmungen in der verknüpften Tabelle vorliegen.|  
   
  Symbole an den Enden der Joinlinie zeigen den Jointyp an. In der folgenden Tabelle werden die Jointypen und die an den Enden der Joinlinien verwendeten Symbole aufgelistet.  
   
 |Symbole an den Enden der Joinlinien|BESCHREIBUNG|  
 |-------------------------------|-----------------|  
-|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbim.gif "Visual Database Tools (Symbol)")|1:1-Join|  
-|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbin.gif "Visual Database Tools (Symbol)")|1:n-Join|  
-|![Symbol für Visual Database Tools](../../database-engine/media//dv3wbio.gif "Visual Database Tools (Symbol)")|Der Abfrage- und Sicht-Designer konnte den Jointyp nicht ermitteln.|  
+|![Visual Database Tools (Symbol)](../../database-engine/media//dv3wbim.gif "Visual Database Tools (Symbol)")|1:1-Join|  
+|![Visual Database Tools (Symbol)](../../database-engine/media//dv3wbin.gif "Visual Database Tools (Symbol)")|1:n-Join|  
+|![Visual Database Tools (Symbol)](../../database-engine/media//dv3wbio.gif "Visual Database Tools (Symbol)")|Der Abfrage- und Sicht-Designer konnte den Jointyp nicht ermitteln.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Themen zur Vorgehensweise beim Entwerfen von Abfragen und Sichten &#40;Visual Database Tools&#41;](visual-database-tools.md)   

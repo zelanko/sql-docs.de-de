@@ -1,5 +1,5 @@
 ---
-title: Konvertieren von Daten aus SQL-In-C-Datentypen | Microsoft Docs
+title: Datentypen werden von SQL in C-Datentypen umgerechnet | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -21,34 +21,34 @@ ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 1a10730cb3910c55679c264583801cd57c83bfc3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81284750"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Konvertieren von Daten von SQL- zu C-Datentypen
-Wenn eine Anwendung **SQLFetch**, **SQLFetchScroll**oder **SQLGetData**aufruft, ruft der Treiber die Daten aus der Datenquelle ab. Bei Bedarf werden die Daten aus dem Datentyp, in dem der Treiber sie abgerufen hat, in den Datentyp konvertiert, der durch das *TargetType-Argument* in **SQLBindCol** oder **SQLGetData** angegeben wird. Schließlich werden die Daten an der Position gespeichert, auf die das *TargetValuePtr-Argument* in **SQLBindCol** oder **SQLGetData** (und das SQL_DESC_DATA_PTR Feld der ARD) zeigt.  
+Wenn eine Anwendung **SQLFetch**, **SQLFetchScroll**oder **SQLGetData**aufruft, ruft der Treiber die Daten aus der Datenquelle ab. Bei Bedarf werden die Daten aus dem Datentyp, in dem der Treiber Sie abgerufen hat, in den Datentyp konvertiert, der durch das *TargetType* -Argument in **SQLBindCol** oder **SQLGetData** angegeben wird. Schließlich werden die Daten an dem Speicherort gespeichert, auf den durch das *targetvalueptr* -Argument in **SQLBindCol** oder **SQLGetData** (und das SQL_DESC_DATA_PTR-Feld der ARD) verwiesen wird.  
   
- Die folgende Tabelle zeigt die unterstützten Konvertierungen von ODBC SQL-Datentypen in ODBC C-Datentypen. Ein ausgefüllter Kreis gibt die Standardkonvertierung für einen SQL-Datentyp an (den C-Datentyp, in den die Daten konvertiert werden, wenn der Wert von *TargetType* SQL_C_DEFAULT ist). Ein hohler Kreis zeigt eine unterstützte Konvertierung an.  
+ In der folgenden Tabelle sind die unterstützten Konvertierungen von ODBC-SQL-Datentypen in ODBC-C-Datentypen aufgeführt. Ein ausgefüllter Kreis gibt die Standard Konvertierung für einen SQL-Datentyp an (der C-Datentyp, in den die Daten konvertiert werden, wenn der Wert von *TargetType* SQL_C_DEFAULT). Ein leerer Kreis gibt eine unterstützte Konvertierung an.  
   
- Für eine ODBC *3.x-Anwendung,* die mit einem ODBC *2.x-Treiber* arbeitet, wird die Konvertierung von treiberspezifischen Datentypen möglicherweise nicht unterstützt.  
+ Für eine ODBC *3. x* -Anwendung, die mit einem ODBC *2. x* -Treiber arbeitet, wird die Konvertierung von treiberspezifischen Datentypen möglicherweise nicht unterstützt.  
   
- Das Format der konvertierten Daten wird von der Windows®-Ländereinstellung nicht beeinflusst.  
+ Das Format der konvertierten Daten wird von der Einstellung für das Windows-® Land nicht beeinträchtigt.  
   
- In den Tabellen in den folgenden Abschnitten wird beschrieben, wie der Treiber oder die Datenquelle die aus der Datenquelle abgerufenen Daten konvertiert. Treiber sind erforderlich, um Konvertierungen in alle ODBC C-Datentypen aus den von ihnen unterstützten ODBC SQL-Datentypen zu unterstützen. Für einen bestimmten ODBC SQL-Datentyp listet die erste Spalte der Tabelle die rechtlichen Eingabewerte des *TargetType-Arguments* in **SQLBindCol** und **SQLGetData**auf. In der zweiten Spalte werden die Ergebnisse eines Tests aufgelistet, der häufig das in **SQLBindCol** oder **SQLGetData**angegebene *BufferLength-Argument* verwendet, das der Treiber ausführt, um zu bestimmen, ob er die Daten konvertieren kann. Für jedes Ergebnis werden in der dritten und vierten Spalte die Werte aufgeführt, die in den Puffern platziert werden, die vom *TargetValuePtr* angegeben *werden,* und StrLen_or_IndPtr Argumente, die in **SQLBindCol** oder **SQLGetData** angegeben sind, nachdem der Treiber versucht hat, die Daten zu konvertieren. (Das *StrLen_or_IndPtr* Argument entspricht dem SQL_DESC_OCTET_LENGTH_PTR der ARD.) In der letzten Spalte wird die SQLSTATE aufgeführt, die für jedes Ergebnis von **SQLFetch**, **SQLFetchScroll**oder **SQLGetData**zurückgegeben wird.  
+ In den Tabellen in den folgenden Abschnitten wird beschrieben, wie der Treiber oder die Datenquelle aus der Datenquelle abgerufene Daten konvertiert. Treiber sind erforderlich, um Konvertierungen in alle ODBC C-Datentypen von den unterstützten ODBC-SQL-Datentypen zu unterstützen. Für einen bestimmten ODBC SQL-Datentyp listet die erste Spalte der Tabelle die zulässigen Eingabewerte des *TargetType* -Arguments in **SQLBindCol** und **SQLGetData**auf. In der zweiten Spalte sind die Ergebnisse eines Tests aufgeführt. häufig wird das in **SQLBindCol** oder **SQLGetData**angegebene *BufferLength* -Argument verwendet, um zu bestimmen, ob die Daten konvertiert werden können. Für jedes Ergebnis werden in der dritten und vierten Spalte die Werte aufgeführt, die in den von *targetvalueptr* angegebenen Puffern abgelegt werden, und *StrLen_or_IndPtr* in **SQLBindCol** oder **SQLGetData** angegebenen Argumente, nachdem der Treiber versucht hat, die Daten zu konvertieren. (Das *StrLen_or_IndPtr* -Argument entspricht dem SQL_DESC_OCTET_LENGTH_PTR Feld der ARD.) Die letzte Spalte listet den SQLSTATE auf, der für jedes Ergebnis von **SQLFetch**, **SQLFetchScroll**oder **SQLGetData**zurückgegeben wurde.  
   
- Wenn das *TargetType-Argument* in **SQLBindCol** oder **SQLGetData** einen Bezeichner für einen ODBC C-Datentyp enthält, der in der Tabelle für einen bestimmten ODBC SQL-Datentyp nicht angezeigt wird, **gibt SQLFetch**, **SQLFetchScroll**oder **SQLGetData** SQLSTATE 07006 (Restricted data type attribute violation) zurück. Wenn das *TargetType-Argument* einen Bezeichner enthält, der eine Konvertierung von einem treiberspezifischen SQL-Datentyp in einen ODBC C-Datentyp angibt und diese Konvertierung vom Treiber nicht unterstützt wird, gibt **SQLFetch**, **SQLFetchScroll**oder **SQLGetData** SQLSTATE HYC00 zurück (Optionale Funktion ist nicht implementiert).  
+ Wenn das *TargetType* -Argument in **SQLBindCol** oder **SQLGetData** einen Bezeichner für einen ODBC C-Datentyp enthält, der in der Tabelle für einen bestimmten ODBC-SQL-Datentyp nicht angezeigt wird, gibt **SQLFetch**, **SQLFetchScroll**oder **SQLGetData** SQLSTATE 07006 (eingeschränkte Datentyp Attribut Verletzung) zurück. Wenn das *TargetType* -Argument einen Bezeichner enthält, der eine Konvertierung von einem treiberspezifischen SQL-Datentyp in einen ODBC-C-Datentyp angibt, und diese Konvertierung nicht vom Treiber, **SQLFetch**, **SQLFetchScroll**oder **SQLGetData** unterstützt wird, gibt SQLSTATE HYC00 (optionales Feature nicht implementiert) zurück.  
   
- Obwohl er nicht in den Tabellen angezeigt wird, gibt der Treiber SQL_NULL_DATA im Puffer zurück, der durch das *Argument StrLen_or_IndPtr* angegeben wird, wenn der SQL-Datenwert NULL ist. Eine Erläuterung der Verwendung von *StrLen_or_IndPtr,* wenn mehrere Aufrufe zum Abrufen von Daten durchgeführt werden, finden Sie in der [SQLGetData-Funktionsbeschreibung.](../../../odbc/reference/syntax/sqlgetdata-function.md) Wenn SQL-Daten in Zeichen-C-Daten konvertiert \*werden, enthält die in *StrLen_or_IndPtr* zurückgegebene Zeichenanzahl nicht das Null-Beendigungs-Byte. Wenn *TargetValuePtr* ein Nullzeiger ist, gibt **SQLGetData** SQLSTATE HY009 (Ungültige Verwendung von NULL-Zeiger) zurück. in **SQLBindCol**wird die Bindung der Spalte aufgekleben.  
+ Obwohl Sie in den Tabellen nicht angezeigt wird, gibt der Treiber SQL_NULL_DATA in dem Puffer zurück, der durch das *StrLen_or_IndPtr* -Argument angegeben wird, wenn der SQL-Datenwert NULL ist. Eine Erläuterung der Verwendung von *StrLen_or_IndPtr* , wenn mehrere Aufrufe zum Abrufen von Daten durchgeführt werden, finden Sie in der Beschreibung der [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)-Funktion. Wenn SQL-Daten in Zeichen-C-Daten konvertiert werden, enthält die \*in *StrLen_or_IndPtr* zurückgegebene Zeichen Anzahl nicht das NULL-Terminierungs Byte. Wenn *targetvalueptr* ein NULL-Zeiger ist, gibt **SQLGetData** SQLSTATE HY009 (Ungültige Verwendung des NULL-Zeigers) zurück. in **SQLBindCol**wird dadurch die Bindung der Spalte entbindet.  
   
  Die folgenden Begriffe und Konventionen werden in den Tabellen verwendet:  
   
--   **Bytelänge der Daten** ist die Anzahl der Bytes von C-Daten, die in **TargetValuePtr*zurückgegeben werden können, unabhängig davon, ob die Daten abgeschnitten werden, bevor sie an die Anwendung zurückgegeben werden. Bei Zeichenfolgendaten enthält dies nicht den Speicherplatz für das Null-Beendigungszeichen.  
+-   Die **Byte Länge der Daten** ist die Anzahl der Bytes von C-Daten, die in **targetvalueptr*zurückgegeben werden können, unabhängig davon, ob die Daten abgeschnitten werden, bevor Sie an die Anwendung zurückgegeben werden. Bei Zeichen folgen Daten enthält dies nicht den Platz für das NULL-Terminierungs Zeichen.  
   
--   **Die Zeichenbytelänge** ist die Gesamtzahl der Bytes, die zum Anzeigen der Daten im Zeichenformat erforderlich sind. Dies ist wie für jeden C-Datentyp im Abschnitt [Anzeigegröße](../../../odbc/reference/appendixes/display-size.md)definiert, mit der Ausnahme, dass die Zeichenbytelänge in Bytes liegt, während die Anzeigegröße in Zeichen angegeben ist.  
+-   **Zeichen Byte Länge** ist die Gesamtanzahl der Bytes, die zum Anzeigen der Daten im Zeichenformat benötigt werden. Dies ist für jeden C-Datentyp in der Abschnitts [Anzeige Größe](../../../odbc/reference/appendixes/display-size.md)definiert, mit dem Unterschied, dass die Zeichen Länge in Byte liegt, während die Anzeige Größe in Zeichen angegeben ist.  
   
--   Wörter in *Kursivschrift* stellen Funktionsargumente oder Elemente der SQL-Grammatik dar. Die Syntax von Grammatikelementen finden Sie unter [Anhang C: SQL Grammar](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
+-   *Kursiv* geschriebene Wörter stellen Funktionsargumente oder Elemente der SQL-Grammatik dar. Die Syntax von Grammatik Elementen finden Sie in [Anhang C: SQL-Grammatik](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md).  
   
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   

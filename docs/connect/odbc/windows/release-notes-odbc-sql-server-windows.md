@@ -12,12 +12,12 @@ ms.reviewer: v-chojas
 author: v-makouz
 ms.author: v-chojas
 manager: kenvh
-ms.openlocfilehash: 2e0ed6f2976f0b0f0b93f91f70f82ba30822c87c
-ms.sourcegitcommit: 8ffc23126609b1cbe2f6820f9a823c5850205372
+ms.openlocfilehash: 5054a00901251bc9b947e7c147619b785f52ae9d
+ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
 ms.translationtype: HT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/17/2020
-ms.locfileid: "81633877"
+ms.lasthandoff: 04/21/2020
+ms.locfileid: "81728459"
 ---
 # <a name="release-notes-for-microsoft-odbc-driver-for-sql-server-on-windows"></a>Versionshinweise für Microsoft ODBC Driver for SQL Server für Windows
 
@@ -256,8 +256,8 @@ Für den x86-Treiber: [Chinesisch (vereinfacht)](https://go.microsoft.com/fwlink
 
 | Neues Feature | Details |
 | :------------ | :------ |
-| Mit dem ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wurden [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) und [Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md) hinzugefügt | Diese hinzugefügten Unterstützungen stehen zur Verfügung, wenn eine Verbindung mit Microsoft SQL Server 2016 oder einer höheren Version hergestellt wird |
-| Es wurden Schlüsselwörter und Attribute für das Verbindungspooling hinzugefügt, die den Unterstützungen für Always Encrypted und Azure Active Directory entsprechen | Diese Schlüsselwörter und Attribute werden unter [Treiberfähiges Verbindungspooling im ODBC-Treiber für SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md) beschrieben. |
+| Mit dem ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wurden [Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md) und [Azure Active Directory](../using-azure-active-directory.md) hinzugefügt | Diese hinzugefügten Unterstützungen stehen zur Verfügung, wenn eine Verbindung mit Microsoft SQL Server 2016 oder einer höheren Version hergestellt wird |
+| Es wurden Schlüsselwörter und Attribute für das Verbindungspooling hinzugefügt, die den Unterstützungen für Always Encrypted und Azure Active Directory entsprechen | Diese Schlüsselwörter und Attribute werden unter [Treiberfähiges Verbindungspooling im ODBC-Treiber für SQL Server](driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md) beschrieben. |
 | &nbsp; | &nbsp; |
 
 ## <a name="13"></a>13

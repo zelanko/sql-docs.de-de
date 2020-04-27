@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3ce118fb3234d45ae0606fb4bcc99777a945acda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63143831"
 ---
 # <a name="log-file-viewer-f1-help"></a>Protokolldatei-Viewer (F1-Hilfe)
@@ -32,7 +32,7 @@ ms.locfileid: "63143831"
  **Protokoll laden**  
  Öffnen Sie ein Dialogfeld, in dem Sie eine zu ladende Protokolldatei angeben können.  
   
- **Exportieren**  
+ **Export**  
  Öffnen Sie ein Dialogfeld, in dem Sie die im Raster **Protokolldateizusammenfassung** angezeigten Informationen in eine Textdatei exportieren können.  
   
  **Aktualisieren**  
@@ -47,20 +47,20 @@ ms.locfileid: "63143831"
  **Beenden**  
  Beendet das Laden der Protokolldateieinträge. Diese Option können Sie z. B. verwenden, wenn das Laden einer Remote- oder Offline-Protokolldatei eine lange Zeit in Anspruch nimmt und Sie nur die zuletzt erstellten Einträge anzeigen möchten.  
   
- **Protokolldatei Zusammenfassung**  
+ **Protokolldateizusammenfassung**  
  In diesem Informationsbereich wird eine Zusammenfassung der Protokolldateifilterung angezeigt. Wenn die Datei nicht gefiltert wurde, wird folgender Text angezeigt: **Kein Filter angewendet**. Nach Anwendung eines Filters auf das Protokoll wird folgender Text angezeigt: **Protokolleinträge auf diesen Fall filtern:** \<Filterkriterien>.  
   
- **Details der ausgewählten Zeile**  
+ **Details für die ausgewählte Zeile**  
  Wählen Sie eine Zahl aus, um am unteren Rand der Seite zusätzliche Details zu der ausgewählten Ereigniszeile anzuzeigen. Die Spalten können durch Ziehen an neue Positionen im Raster neu angeordnet werden. Die Breite der Spalten kann durch Ziehen der Spaltentrennbalken in der Kopfzeile des Rasters nach links oder rechts geändert werden. Wenn Sie auf die Spaltentrennbalken in der Kopfzeile des Rasters doppelklicken, wird die Breite der Spalte automatisch an die Breite des Inhalts angepasst.  
   
  **Instanz**  
- Der Name der Instanz, bei der das Ereignis aufgetreten ist. Dies wird als *Computername*\\*Instanzname*angezeigt.  
+ Der Name der Instanz, bei der das Ereignis aufgetreten ist. Dieser wird im Format *Computername*\\*Instanzname*.  
   
 ## <a name="frequently-displayed-columns"></a>Häufig angezeigte Spalten  
  **Date**  
  Zeigt das Datum des Ereignisses an.  
   
- **`Source`**  
+ **Quelle**  
  Zeigt die Ausgangsfunktion an, mit dem das Ereignis erstellt wurde, z. B. den Namen des Diensts (z. B. MSSQLSERVER). Dies wird nicht für alle Protokolltypen angezeigt.  
   
  **Meldung**  
@@ -69,7 +69,7 @@ ms.locfileid: "63143831"
  **Protokolltyp**  
  Zeigt den Typ des Protokolls an, zu dem das Ereignis gehört. Alle ausgewählten Protokolle werden im Fenster für die Protokolldateizusammenfassung angezeigt.  
   
- **Protokoll Quelle**  
+ **Protokollquelle**  
  Zeigt eine Beschreibung des Quellprotokolls an, in dem das Ereignis aufgezeichnet wird.  
   
 ## <a name="permissions"></a>Berechtigungen  

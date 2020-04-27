@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 96d211defa789888a3fd7b513b4dff60fa795cb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058987"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>Editor für den Task 'SQL ausführen' (Seite Allgemein)
@@ -34,7 +34,7 @@ ms.locfileid: "66058987"
  Beschreiben Sie den Task 'SQL ausführen'. Es wird hierbei empfohlen, das Paket zweckbezogen zu beschreiben, sodass Pakete selbsterklärend und einfacher zu verwalten sind.  
   
  **Zeit**  
- Geben Sie die maximale Anzahl von Sekunden an, die der Task ausgeführt wird, bevor ein Timeout eintritt. Der Wert 0 gibt eine unbegrenzte Zeit an. Die Standardeinstellung ist 0.  
+ Geben Sie die maximale Anzahl von Sekunden an, die der Task ausgeführt wird, bevor ein Timeout eintritt. Der Wert 0 gibt eine unbegrenzte Zeit an. Der Standardwert ist 0.  
   
 > [!NOTE]  
 >  Bei gespeicherten Prozeduren tritt kein Timeout ein, wenn sie diese die Funktionalität des Ruhezustands dadurch emulieren, dass sie mehr Zeit für das Herstellen von Verbindungen und das Abschließen von Transaktionen bereitstellen, als durch den Wert für **TimeOut**angegeben wird. Gespeicherte Prozeduren, die Abfragen ausführen, unterliegen jedoch immer den durch den Wert für **TimeOut**angegebenen Zeitbeschränkungen.  
@@ -45,18 +45,18 @@ ms.locfileid: "66058987"
 > [!NOTE]  
 >  Wenn der Task „SQL ausführen“ einen ADO- oder ODBC-Verbindungs-Manager verwendet, ist die **CodePage** -Eigenschaft nicht verfügbar. Wenn Ihre Projektmappe eine Codepage erfordert, verwenden Sie einen OLE DB- oder einen ADO.NET-Verbindungs-Manager mit dem Task "SQL ausführen".  
   
- **Eigenschaft typeconversionmode**  
+ **TypeConversionMode**  
  Wenn Sie diese Eigenschaft auf `Allowed` festlegen, wird anhand des Tasks "SQL ausführen" versucht, Ausgabeparameter sowie Abfrageergebnisse in den Datentyp der Variablen zu konvertieren, der die Ergebnisse zugewiesen sind. Dies gilt für den Resultsettyp **Einzelne Zeile** .  
   
- **Resultset**  
+ **ResultSet**  
  Geben Sie den von der auszuführenden SQL-Anweisung erwarteten Ergebnistyp an. Wählen Sie zwischen **Einzelne Zeile**, **Vollständiges Resultset**, **XML**und **Keine**aus.  
   
  **ConnectionType**  
  Wählen Sie den Typ des Verbindungs-Managers aus, der zum Herstellen der Verbindung mit der Datenquelle verwendet werden soll. Zu den verfügbaren Verbindungstypen zählen: **OLE DB**, **ODBC**, **ADO**, **ADO.NET** und **SQLMOBILE**.  
   
- **Verwandte Themen:** [OLE DB Verbindungs-Manager](connection-manager/ole-db-connection-manager.md), [ODBC-Verbindungs-Manager](connection-manager/odbc-connection-manager.md), ADO- [Verbindungs](connection-manager/ado-connection-manager.md)-Manager, [ADO.NET-Verbindungs](connection-manager/ado-net-connection-manager.md)-Manager, [SQL Server Compact Edition-Verbindungs-Manager](connection-manager/sql-server-compact-edition-connection-manager.md)  
+ **Verwandte Themen:** [OLE DB-Verbindungs-Manager](connection-manager/ole-db-connection-manager.md), [ODBC-Verbindungs-Manager](connection-manager/odbc-connection-manager.md), [ADO-Verbindungs-Manager-](connection-manager/ado-connection-manager.md), [ADO.NET-Verbindungs-Manager](connection-manager/ado-net-connection-manager.md), [SQL Server Compact Edition-Verbindungs-Manager](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
- **Verbindung**  
+ **Connection**  
  Wählen Sie die Verbindung aus einer Liste definierter Verbindungs-Manager aus. Klicken Sie \<zum Erstellen einer neuen Verbindung auf **neue Verbindung...**>.  
   
  **SQLSourceType**  
@@ -64,24 +64,23 @@ ms.locfileid: "66058987"
   
  Je nachdem, welchen Verbindungs-Manager-Typ der Task SQL ausführen verwendet, müssen Sie bestimmte Parametermarkierungen in parametrisierten SQL-Anweisungen verwenden.  
   
- **Verwandte Themen:** Abschnitt Ausführen parametrisierter SQL-Befehle im [Task "SQL ausführen](control-flow/execute-sql-task.md) "  
+ **Verwandte Themen:** Abschnitt „Ausführen parametrisierter SQL-Befehle“ in [SQL ausführen (Task)](control-flow/execute-sql-task.md)  
   
  Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**Direkte Eingabe**|Legen Sie als Quelle eine Transact-SQL-Anweisung fest. Bei Auswahl dieses Wertes wird die dynamische Option **SQLStatement**angezeigt.|  
-|**Dateiverbindung**|Wählen Sie eine Datei aus, die eine Transact-SQL-Anweisung enthält. Durch Festlegen dieser Option wird die dynamische Option **FileConnection**angezeigt.|  
+|**Direct input**|Legen Sie als Quelle eine Transact-SQL-Anweisung fest. Bei Auswahl dieses Wertes wird die dynamische Option **SQLStatement**angezeigt.|  
+|**File connection**|Wählen Sie eine Datei aus, die eine Transact-SQL-Anweisung enthält. Durch Festlegen dieser Option wird die dynamische Option **FileConnection**angezeigt.|  
 |**Variable**|Legen Sie als Quelle eine Variable fest, die die Transact-SQL-Anweisung definiert. Bei Auswahl dieses Wertes wird die dynamische Option **SourceVariable**angezeigt.|  
   
- **Queryisstoredprocedure**  
+ **QueryIsStoredProcedure**  
  Zeigt an, ob die angegebene auszuführende SQL-Anweisung eine gespeicherte Prozedur ist. Diese Eigenschaft weist nur dann den Lese-/Schreibmodus auf, wenn der Task den ADO-Verbindungs-Manager verwendet. Andernfalls ist die Eigenschaft schreibgeschützt und ihr Wert ist auf `false` festgelegt.  
   
  **BypassPrepare**  
- Geben Sie an, ob die SQL-Anweisung vorbereitet ist.  
-  `true` überspringt die Vorbereitung. Mit `false` wird die SQL-Anweisung vor dem Ausführen vorbereitet. Diese Option ist nur für OLE DB-Verbindungen verfügbar, die die Vorbereitung unterstützen.  
+ Geben Sie an, ob die SQL-Anweisung vorbereitet ist.  `true` überspringt die Vorbereitung. Mit `false` wird die SQL-Anweisung vor dem Ausführen vorbereitet. Diese Option ist nur für OLE DB-Verbindungen verfügbar, die die Vorbereitung unterstützen.  
   
- **Verwandte Themen:**  [vorbereitete Ausführung](../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
+ **Verwandte Themen:**  [Vorbereitete Ausführung](../relational-databases/native-client-odbc-queries/executing-statements/prepared-execution.md)  
   
  **Durchsuchen**  
  Suchen Sie mithilfe des Dialogfelds **Öffnen** eine Datei, die eine SQL-Anweisung enthält. Wählen Sie eine Datei aus, um den Dateiinhalt als SQL-Anweisung in die **SQLStatement** -Eigenschaft zu kopieren.  
@@ -96,15 +95,15 @@ ms.locfileid: "66058987"
   
 ### <a name="sqlsourcetype--direct-input"></a>SQLSourceType = Direct input  
  **SQLStatement**  
- Geben Sie die auszuführende SQL-Anweisung in das Optionsfeld ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen (…), um die SQL-Anweisung in das Dialogfeld **SQL-Abfrage eingeben** einzugeben. Sie können auch auf **Abfrage erstellen** klicken, um die Anweisung mithilfe des Dialogfelds **Abfrage-Generator** zusammenzustellen.  
+ Geben Sie die auszuführende SQL-Anweisung in das Optionsfeld ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen (...), um die SQL-Anweisung im Dialogfeld **SQL-Abfrage eingeben** einzugeben, oder klicken Sie auf **Abfrage erstellen** , um die Anweisung mithilfe des Dialog Felds **Abfrage-Generator** zu verfassen.  
   
  **Verwandte Themen:** [Abfrage-Generator](../../2014/integration-services/query-builder.md)  
   
 ### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = File connection  
  **FileConnection**  
- Wählen Sie einen vorhandenen Dateiverbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
+ Wählen Sie einen vorhandenen Dateiverbindungs-Manager \<aus, oder klicken Sie auf **neue Verbindung.**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
- **Verwandte Themen:** [Dateiverbindungs-Manager](connection-manager/file-connection-manager.md), [Dateiverbindungs-Manager-Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Verwandte Themen:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variable  
  **SourceVariable**  
@@ -113,7 +112,7 @@ ms.locfileid: "66058987"
  **Verwandte Themen:** [Integration Services &#40;SSIS-&#41; Variablen](integration-services-ssis-variables.md), [Variable hinzufügen](../../2014/integration-services/add-variable.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor für den Task ' SQL ausführen ' &#40;Seite Parameter Zuordnung&#41;](../../2014/integration-services/execute-sql-task-editor-parameter-mapping-page.md)   
  [Editor für den Task "SQL ausführen" &#40;resultsetseite&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  
   

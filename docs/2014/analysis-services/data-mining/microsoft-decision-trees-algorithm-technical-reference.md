@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 304cd31b4d89d56bee5dbc903c784ee4bf7af5fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73637526"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Decision Trees-Algorithmus
@@ -67,7 +67,7 @@ ms.locfileid: "73637526"
 |Algorithmus|Analysemethode|Kommentare|  
 |---------------|------------------------|--------------|  
 |Entscheidungsstrukturen|Interessantheitsgrad<br /><br /> Shannon-Entropie<br /><br /> Bayes-Methode mit K2-A-priori-Verteilung<br /><br /> Bayes-Dirichlet mit uniformer A-priori-Verteilung (Standard)|Wenn irgendeine Spalte nicht binäre kontinuierliche Werte enthält, wird der Interessantheitsgrad für alle Spalten verwendet, um die Konsistenz zu gewährleisten. Andernfalls wird die Standardmethode oder die angegebene Methode verwendet.|  
-|Linear Regression|Interessantheitsgrad|Der Linear Regression-Algorithmus verwendet nur den Interessantheitsgrad, da er nur kontinuierliche Spalten unterstützt.|  
+|Lineare Regression|Interessantheitsgrad|Der Linear Regression-Algorithmus verwendet nur den Interessantheitsgrad, da er nur kontinuierliche Spalten unterstützt.|  
   
 ### <a name="scalability-and-performance"></a>Skalierbarkeit und Leistung  
  Die Klassifizierung ist eine wichtige Data Mining-Strategie. Im Allgemeinen steigt die Menge an Informationen, die zur Klassifizierung der Fälle erforderlich ist, direkt proportional zur Anzahl der Eingabedatensätze. Dies schränkt den Umfang der Daten ein, die klassifiziert werden können. Der Microsoft Decision Trees-Algorithmus verwendet die folgenden Methoden, um diese Probleme zu lösen, die Leistung zu verbessern und Speicherbeschränkungen aufzuheben:  
@@ -99,7 +99,7 @@ ms.locfileid: "73637526"
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus unterstützt Parameter, die sich auf die Leistung und Genauigkeit des resultierenden Miningmodells auswirken. Sie können außerdem Modellierungsflags für die Miningmodellspalten oder Miningstrukturspalten festlegen, um die Verarbeitung der Daten zu steuern.  
   
 > [!NOTE]  
->  Der Microsoft Decision Trees-Algorithmus ist in allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar, einige erweiterte Parameter, mit denen das Verhalten des Microsoft Decision Trees-Algorithmus angepasst werden kann, stehen jedoch nur in bestimmten Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zur Verfügung. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2012-Editionen unterstützte Funktionen](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473).  
+>  Der Microsoft Decision Trees-Algorithmus ist in allen Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügbar, einige erweiterte Parameter, mit denen das Verhalten des Microsoft Decision Trees-Algorithmus angepasst werden kann, stehen jedoch nur in bestimmten Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zur Verfügung. Eine Liste der Funktionen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die von den-Editionen unterstützt werden, finden Sie [unter von den-Editionen unterstützte Funktionen SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)).  
   
 ### <a name="setting-algorithm-parameters"></a>Festlegen von Algorithmusparametern  
  In der folgenden Tabelle sind die Parameter beschrieben, die mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus verwendet werden können.  
@@ -142,14 +142,14 @@ ms.locfileid: "73637526"
  *MINIMUM_SUPPORT*  
  Bestimmt die Mindestanzahl von Blattfällen, die zum Generieren einer Teilung in der Entscheidungsstruktur erforderlich sind.  
   
- (Standardwert: 10.)  
+ Der Standardwert ist 10.  
   
  Sie müssen möglicherweise diesen Wert erhöhen, wenn das Dataset sehr groß ist, um übermäßiges Trainieren zu vermeiden.  
   
  *SCORE_METHOD*  
  Bestimmt die zum Berechnen des Teilungsergebnisses zu verwendende Methode. Die folgenden Optionen sind verfügbar:  
   
-|id|Name|  
+|Id|name|  
 |--------|----------|  
 |1|Entropie|  
 |3|Bayes-Methode mit K2-A-priori-Verteilung|  
@@ -162,18 +162,18 @@ ms.locfileid: "73637526"
  *SPLIT_METHOD*  
  Bestimmt die zum Teilen des Knotens zu verwendende Methode. Die folgenden Optionen sind verfügbar:  
   
-|id|Name|  
+|Id|name|  
 |--------|----------|  
-|1|**Binär:** Gibt an, dass die Struktur unabhängig von der tatsächlichen Anzahl der Werte für das Attribut in zwei Verzweigungen aufgeteilt werden soll.|  
-|2|**Fertigstellen:** Gibt an, dass die Struktur so viele Teilungen erstellen kann, wie Attributwerte vorhanden sind.|  
-|3|**Beides:** Gibt an, dass Analysis Services bestimmen kann, ob eine binäre oder eine komplette Teilung verwendet werden soll, um die besten Ergebnisse zu erzielen.|  
+|1|**Binary:** Gibt an, dass die Struktur unabhängig von der tatsächlichen Anzahl der Werte für das Attribut in zwei Verzweigungen aufgeteilt werden soll.|  
+|2|**Complete:** Gibt an, dass die Struktur so viele Teilungen erstellen kann, wie Attributwerte vorhanden sind.|  
+|3|**Both:** Gibt an, dass Analysis Services bestimmen kann, ob eine binäre oder vollständige Teilung verwendet werden soll, um die besten Ergebnisse zu erzielen.|  
   
  Der Standardwert ist 3.  
   
 ### <a name="modeling-flags"></a>Modellierungsflags  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Tree-Algorithmus unterstützt die folgenden Modellierungsflags. Wenn Sie die Miningstruktur oder das Miningmodell erstellen, definieren Sie Modellierungsflags, die angeben, wie die Werte in den einzelnen Spalten während der Analyse behandelt werden. Weitere Informationen finden Sie unter [Modellierungsflags &#40;Data Mining&#41;](modeling-flags-data-mining.md).  
   
-|Modellierungsflag|BESCHREIBUNG|  
+|Modellierungsflag|Beschreibung|  
 |-------------------|-----------------|  
 |MODEL_EXISTENCE_ONLY|Dies bedeutet, dass die Spalte zwei mögliche Statuswerte haben kann: `Missing` und `Existing`. Ein NULL-Wert ist ein fehlender Wert.<br /><br /> Gilt für die Miningmodellspalten.|  
 |NOT NULL|Gibt an, dass die Spalte keinen NULL-Wert enthalten kann. Ein Fehler tritt auf, wenn Analysis Services während des Modelltrainings einen NULL-Wert erkennt.<br /><br /> Gilt für die Miningstrukturspalten.|  
@@ -187,7 +187,7 @@ ms.locfileid: "73637526"
   
  Wenn Sie beispielsweise das Kaufverhalten von Kunden mithilfe des Attributs **Einkommen** vorhersagen und das Modellierungsflag REGRESSOR für die Spalte festlegen, versucht der Algorithmus zuerst, die Werte der Spalte **Einkommen** mithilfe einer Standardregressionsformel zuzuordnen. Ist die Abweichung zu groß, dann wird die Regressionsformel ignoriert und die Struktur nach einem anderen Attribut unterteilt. Der Decision Tree-Algorithmus versucht nach der Unterteilung, jedem der Zweige einen Regressor für Einkommen zuzuordnen.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
  Ein Entscheidungsstrukturmodell muss eine Schlüsselspalte, Eingabespalten und mindestens eine vorhersagbare Spalte enthalten.  
   
 ### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten  
@@ -204,6 +204,6 @@ ms.locfileid: "73637526"
 ## <a name="see-also"></a>Weitere Informationen  
  [Microsoft Decision Trees-Algorithmus](microsoft-decision-trees-algorithm.md)   
  [Beispiele für Entscheidungsstruktur-Modell Abfragen](decision-trees-model-query-examples.md)   
- [Mining Modell Inhalt von Entscheidungsstruktur Modellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Miningmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

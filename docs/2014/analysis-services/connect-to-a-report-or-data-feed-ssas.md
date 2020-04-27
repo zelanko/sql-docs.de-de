@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7a8feb912a7987328afa06043b18586f6e9bb29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70151830"
 ---
 # <a name="connect-to-a-report-or-data-feed-ssas"></a>Mit einem Bericht oder Datenfeed verbinden (SSAS)
@@ -26,7 +26,7 @@ ms.locfileid: "70151830"
  **Anzeige Name der Verbindung**  
  Geben Sie einen Anzeigenamen für die Verbindung mit dem Datenfeed ein.  
   
- **Berichts Pfad**  
+ **Berichtspfad**  
  Führt die URL für einen SQL Server Reporting Services-Bericht auf, der Datenfeeds generiert. Klicken Sie auf **Durchsuchen** , um die URL für den Bericht anzugeben.  
   
  Klicken Sie auf **Bericht anzeigen**, um den Bericht anzuzeigen.  
@@ -37,7 +37,7 @@ ms.locfileid: "70151830"
  **Erweitert**  
  Legen Sie zusätzliche Verbindungs Eigenschaften im Dialogfeld **Erweiterte Eigenschaften festlegen** fest.  
   
- **Verbindung testen**  
+ **Testen der Verbindung**  
  Stellen Sie unter Verwendung der aktuellen Einstellungen eine Verbindung mit der Datenquelle her. Eine Meldung gibt Aufschluss darüber, ob die Verbindungsherstellung erfolgreich war.  
   
 ## <a name="from-an-azure-datamarket-dataset"></a>Aus einem Azure DataMarket-Dataset  
@@ -64,7 +64,7 @@ ms.locfileid: "70151830"
  **Erweitert**  
  Legen Sie zusätzliche Verbindungs Eigenschaften im Dialogfeld **Erweiterte Eigenschaften festlegen** fest.  
   
- **Verbindung testen**  
+ **Testen der Verbindung**  
  Stellen Sie unter Verwendung der aktuellen Einstellungen eine Verbindung mit der Datenquelle her. Eine Meldung gibt Aufschluss darüber, ob die Verbindungsherstellung erfolgreich war.  
   
 ## <a name="from-other-feeds"></a>Aus anderen Feeds  
@@ -82,7 +82,7 @@ ms.locfileid: "70151830"
  **Erweitert**  
  Legen Sie zusätzliche Verbindungseigenschaften im Dialogfeld **Erweiterte Eigenschaften festlegen** fest.  
   
- **Verbindung testen**  
+ **Testen der Verbindung**  
  Stellen Sie unter Verwendung der aktuellen Einstellungen eine Verbindung mit der Datenquelle her. Eine Meldung gibt Aufschluss darüber, ob die Verbindungsherstellung erfolgreich war.  
   
   

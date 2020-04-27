@@ -29,14 +29,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 54aab33e754331482ef154d9172f0e41cd251db0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63011917"
 ---
 # <a name="principals-database-engine"></a>Prinzipale (Datenbank-Engine)
-  *Prinzipale* sind Entitäten, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Ressourcen anfordern können. Wie bei anderen Komponenten des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Autorisierungsmodells können Prinzipale hierarchisch angeordnet werden. Der Einflussbereich eines Prinzipals richtet sich nach dem Definitionsbereich des Prinzipals (Windows, Server, Datenbank) und danach, ob der Prinzipal unteilbar ist oder es sich um eine Auflistung handelt. Ein Windows-Anmeldename ist ein Beispiel eines unteilbaren Prinzipals und eine Windows-Gruppe das eines Prinzipals, der eine Auflistung darstellt. Jeder Prinzipal weist eine Sicherheits-ID (SID) auf.  
+  *Prinzipale* sind Entitäten, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Ressourcen anfordern können. Wie bei anderen Komponenten des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Autorisierungsmodells können Prinzipale hierarchisch angeordnet werden. Der Einflussbereich eines Prinzipals richtet sich nach dem Definitionsbereich des Prinzipals (Windows, Server, Datenbank) und danach, ob der Prinzipal unteilbar ist oder es sich um eine Auflistung handelt. Ein Windows-Anmeldename ist ein Beispiel eines unteilbaren Prinzipals und eine Windows-Gruppe das eines Prinzipals, der eine Auflistung darstellt. Jeder Prinzipal weist eine Sicherheits-ID (SID) auf.  
   
  **Prinzipale auf Windows-Ebene**  
   
@@ -44,9 +44,9 @@ ms.locfileid: "63011917"
   
 -   Lokaler Windows-Anmeldename  
   
- ****-**** **Prinzipale** auf SQL Server Ebene  
+ **SQL Server**-**level** **Prinzipale** auf SQL Server Ebene  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Anmel  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldename  
   
 -   Serverrolle  
   
@@ -70,26 +70,19 @@ ms.locfileid: "63011917"
 ## <a name="certificate-based-sql-server-logins"></a>Zertifikatbasierte SQL Server-Anmeldenamen  
  Serverprinzipale, deren Name von doppelten Nummernzeichen (##) eingeschlossen ist, sind nur für die systeminterne Verwendung vorgesehen. Die folgenden Prinzipale werden bei der Installation von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aus Zertifikaten erstellt und sollten nicht gelöscht werden.  
   
--   
-  \##MS_SQLResourceSigningCertificate##  
+-   \##MS_SQLResourceSigningCertificate##  
   
--   
-  \##MS_SQLReplicationSigningCertificate##  
+-   \##MS_SQLReplicationSigningCertificate##  
   
--   
-  \##MS_SQLAuthenticatorCertificate##  
+-   \##MS_SQLAuthenticatorCertificate##  
   
--   
-  \##MS_AgentSigningCertificate##  
+-   \##MS_AgentSigningCertificate##  
   
--   
-  \##MS_PolicyEventProcessingLogin##  
+-   \##MS_PolicyEventProcessingLogin##  
   
--   
-  \##MS_PolicySigningCertificate##  
+-   \##MS_PolicySigningCertificate##  
   
--   
-  \##MS_PolicyTsqlExecutionLogin##  
+-   \##MS_PolicyTsqlExecutionLogin##  
   
 ## <a name="the-guest-user"></a>Der guest-Benutzer  
  Jede Datenbank enthält einen **Gast**. Dem **guest** -Benutzer erteilte Berechtigungen werden von Benutzern geerbt, die Zugriff auf die Datenbank, jedoch kein Benutzerkonto in der Datenbank besitzen. Der **Gast** Benutzer kann nicht gelöscht werden. er kann jedoch deaktiviert werden, indem die `CONNECT` Berechtigung aufgehoben wird. Die `CONNECT` Berechtigung kann durch Ausführen `REVOKE CONNECT FROM GUEST` innerhalb einer anderen Datenbank als der Master-oder tempdb-Datenbank aufgehoben werden.  
@@ -100,7 +93,7 @@ ms.locfileid: "63011917"
 ## <a name="related-tasks"></a>Related Tasks  
  Dieser Abschnitt der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Onlinedokumentation umfasst die folgenden Themen:  
   
--   [Gewusst-wie-Themen zum Verwalten von Anmeldungen, Benutzern und Schemas](managing-logins-users-and-schemas-how-to-topics.md)  
+-   [Verwalten von Anmeldungen, Benutzern und Schemas: Vorgehensweisen](managing-logins-users-and-schemas-how-to-topics.md)  
   
 -   [Rollen auf Serverebene](server-level-roles.md)  
   
@@ -111,9 +104,9 @@ ms.locfileid: "63011917"
 ## <a name="see-also"></a>Weitere Informationen  
  [Sichern von SQL Server](../securing-sql-server.md)   
  [sys. database_principals &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-database-principals-transact-sql)   
- [sys.server_principals &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)   
+ [sys. server_principals &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-server-principals-transact-sql)   
  [sys. sql_logins &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-sql-logins-transact-sql)   
- [sys.database_role_members &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)   
+ [sys. database_role_members &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-database-role-members-transact-sql)   
  [Rollen auf Server Ebene](server-level-roles.md)   
  [Rollen auf Datenbankebene](database-level-roles.md)  
   

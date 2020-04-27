@@ -14,31 +14,31 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4d18ef352c3e5ab6342e573d16bc3deaed5db72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211990"
 ---
 # <a name="create-a-resource-pool"></a>Erstellen eines Ressourcenpools
   Mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]können Sie einen Ressourcenpool erstellen.  
   
--   Vorbereitungen **:**[Einschränkungen](#LimitationsRestrictions), [Berechtigungen](#Permissions)    
+-   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  
   
--   So **Erstellen Sie einen Ressourcenpool mit:**[SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)    
+-   **Zum Erstellen eines Ressourcenpools mit:**  [SQL Server Management Studio](#CreRPProp), [Transact-SQL](#CreRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="LimitationsRestrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Einschränkungen  
  Der maximale CPU-Prozentsatz muss gleich oder höher als der minimale CPU-Prozentsatz sein. Der maximale Arbeitsspeicherprozentsatz muss gleich oder höher als der minimale Arbeitsspeicherprozentsatz sein.  
   
  Die Summe der minimalen CPU-Prozentsätze und minimalen Arbeitsspeicherprozentsätze für alle Ressourcenpools darf nicht größer als 100 sein.  
   
-###  <a name="Permissions"></a> Berechtigungen  
+###  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Zum Erstellen eines Ressourcenpools ist die CONTROL SERVER-Berechtigung erforderlich.  
   
-##  <a name="CreRPProp"></a>Erstellen Sie mit SQL Server Management Studio einen Ressourcen Pool.  
- **So erstellen Sie einen Ressourcenpool mit[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
+##  <a name="create-a-resource-pool-using-sql-server-management-studio"></a><a name="CreRPProp"></a> Erstellen eines Ressourcenpools in SQL Server Management Studio  
+ **So erstellen Sie einen Ressourcenpool in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  Öffnen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]den Objekt-Explorer, und erweitern Sie den Knoten **Verwaltung** rekursiv, bis **Ressourcenkontrolle**angezeigt wird.  
   
@@ -52,8 +52,8 @@ ms.locfileid: "68211990"
   
 6.  Klicken Sie auf **OK**, um die Änderungen zu speichern.  
   
-##  <a name="CreRPTSQL"></a>Erstellen eines Ressourcenpools mit Transact-SQL  
- **So erstellen Sie einen Ressourcenpool mit[!INCLUDE[tsql](../../includes/tsql-md.md)]**  
+##  <a name="create-a-resource-pool-using-transact-sql"></a><a name="CreRPTSQL"></a>Erstellen eines Ressourcenpools mit Transact-SQL  
+ **So erstellen Sie einen Ressourcenpool in [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  Führen Sie die `CREATE RESOURCE POOL`-Anweisung aus, und geben Sie dabei die festzulegenden Eigenschaftswerte an.  
   
@@ -72,12 +72,12 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Resource Governor](resource-governor.md)   
- [Aktivieren der Ressourcenkontrolle](enable-resource-governor.md)   
- [Ressourcenpool für die Ressourcenkontrolle](resource-governor-resource-pool.md)   
+ [Aktivieren von Resource Governor](enable-resource-governor.md)   
+ [Ressourcen Pool Resource Governor](resource-governor-resource-pool.md)   
  [Ändern der Einstellungen für den Ressourcen Pool](change-resource-pool-settings.md)   
  [Löschen eines Ressourcenpools](delete-a-resource-pool.md)   
  [Konfigurieren von Resource Governor mithilfe einer Vorlage](configure-resource-governor-using-a-template.md)   
- [Arbeitsauslastungsgruppe der Ressourcenkontrolle](resource-governor-workload-group.md)   
+ [Resource Governor Auslastungs Gruppe](resource-governor-workload-group.md)   
  [Resource Governor Classifier-Funktion](resource-governor-classifier-function.md)   
  [Erstellen eines Ressourcenpools &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  

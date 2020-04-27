@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cd3f6498cbfb4ef8cf38e27879d619472a6693ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68210764"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>Aktualisieren von Replikationsskripts (Replikationsprogrammierung mit Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68210764"
   
 -   **sp_addpushsubscription_agent**:  
   
-     Sie sollten nun [sp_addpushsubscription_agent &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql) ausführen, um explizit einen Auftrag hinzuzufügen und die Windows**@job_login** - **@job_password**Anmelde Informationen (und) anzugeben, unter denen der Verteilungs-Agent Auftrag auf dem Verteiler ausgeführt wird. In Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]wurde dieser Vorgang automatisch beim Erstellen eines Pushabonnements ausgeführt.  
+     Sie sollten nun [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql) ausführen, um explizit einen Auftrag hinzuzufügen, und die Windows-Anmeldeinformationen (**@job_login** und **@job_password**) anzugeben, unter denen der Auftrag des Verteilungs-Agents auf dem Verteiler ausgeführt wird. In Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] vor [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]wurde dieser Vorgang automatisch beim Erstellen eines Pushabonnements ausgeführt.  
   
 -   **sp_addmergepushsubscription_agent**:  
   
@@ -69,19 +69,19 @@ ms.locfileid: "68210764"
   
 ### <a name="to-upgrade-scripts-that-configure-a-snapshot-or-transactional-publication"></a>So aktualisieren Sie Skripts, mit denen eine Momentaufnahme- oder eine Transaktionsveröffentlichung konfiguriert werden  
   
-1.  Führen Sie im vorhandenen Skript [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) vor [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie die Windows-Anmelde Informationen an, unter **@job_name** denen **@job_password**die Protokolllese-Agent für und ausgeführt wird. Wenn der Agent beim Herstellen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] einer Verbindung mit dem Verleger die-Authentifizierung verwendet, müssen Sie auch den **** Wert 0 **@publisher_security_mode** für und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die-Anmelde **@publisher_login** Informationen **@publisher_password**für und angeben. Dadurch wird ein Auftrag des Protokolllese-Agents für die Veröffentlichungsdatenbank erstellt.  
+1.  Führen Sie im vorhandenen Skript [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql) vor [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben Sie die Windows-Anmelde Informationen an, unter **@job_name** denen **@job_password**die Protokolllese-Agent für und ausgeführt wird. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung verwendet, müssen Sie zudem den Wert **0** für **@publisher_security_mode** und die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldeinformationen für **@publisher_login** und **@publisher_password**. Dadurch wird ein Auftrag des Protokolllese-Agents für die Veröffentlichungsdatenbank erstellt.  
   
     > [!NOTE]  
     >  Dieser Schritt muss nur bei Transaktionsveröffentlichungen, nicht bei Momentaufnahmeveröffentlichungen ausgeführt werden.  
   
-2.  (Optional) Führen Sie [sp_addqreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) vor [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql) auf dem Verteiler für die Verteilungsdatenbank aus. Geben Sie die Windows-Anmelde Informationen an, unter **@job_name** denen **@job_password**die Warteschlangenlese-Agent für und ausgeführt wird. Dadurch wird ein Auftrag des Warteschlangenlese-Agents für den Verteiler erstellt.  
+2.  (Optional) Führen Sie [sp_addqreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql) vor [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) auf dem Verteiler für die Verteilungsdatenbank aus. Geben Sie die Windows-Anmelde Informationen an, unter **@job_name** denen **@job_password**die Warteschlangenlese-Agent für und ausgeführt wird. Dadurch wird ein Auftrag des Warteschlangenlese-Agents für den Verteiler erstellt.  
   
     > [!NOTE]  
     >  Dieser Schritt muss nur bei Transaktionsveröffentlichungen ausgeführt werden, die Abonnenten mit verzögertem Update über eine Warteschlange unterstützen.  
   
 3.  (Optional) Aktualisieren Sie die Ausführung von [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql), um alle Nichtstandardwerte für Parameter festzulegen, die neue Replikationsfunktionen implementieren.  
   
-4.  Führen Sie nach [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)[sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben **@publication** Sie und die Windows-Anmelde Informationen an, unter **@job_name** denen **@job_password**die Momentaufnahmen-Agent für und ausgeführt wird. Wenn der Agent beim Herstellen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] einer Verbindung mit dem Verleger die-Authentifizierung verwendet, müssen Sie auch den **** Wert 0 **@publisher_security_mode** für und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die-Anmelde **@publisher_login** Informationen **@publisher_password**für und angeben. Dadurch wird ein Auftrag des Momentaufnahme-Agents für die Veröffentlichung erstellt.  
+4.  Führen Sie nach [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql)[sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben **@publication** Sie und die Windows-Anmelde Informationen an, unter **@job_name** denen **@job_password**die Momentaufnahmen-Agent für und ausgeführt wird. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung verwendet, müssen Sie zudem den Wert **0** für **@publisher_security_mode** und die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldeinformationen für **@publisher_login** und **@publisher_password**. Dadurch wird ein Auftrag des Momentaufnahme-Agents für die Veröffentlichung erstellt.  
   
 5.  (Optional) Aktualisieren Sie die Ausführung von [sp_addarticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql), um alle Nichtstandardwerte für Parameter festzulegen, die neue Replikationsfunktionen implementieren.  
   
@@ -89,15 +89,15 @@ ms.locfileid: "68210764"
   
 1.  Nach dem Ausführen der gespeicherten Prozedur, mit der das Abonnement erstellt wird, müssen Sie die gespeicherte Prozedur ausführen, mit der der Auftrag des Verteilungs-Agents erstellt wird, damit das Abonnement synchronisiert wird. Welche gespeicherte Prozedur Sie verwenden, hängt vom Typ des Abonnements ab.  
   
-    -   Aktualisieren Sie bei einem Pullabonnement die Ausführung von [sp_addpullsubscription_agent &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql) , um die Windows-Anmelde Informationen bereitzustellen, **@job_name** unter **@job_password**denen die Verteilungs-Agent auf dem Abonnenten für und ausgeführt wird. Dies geschieht nach der Ausführung von [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Weitere Informationen finden Sie unter [Create a Pull Subscription](../create-a-pull-subscription.md).  
+    -   Aktualisieren Sie bei einem Pullabonnement die Ausführung von [sp_addpullsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql), um die Windows-Anmeldeinformationen bereitzustellen, unter denen der Verteilungs-Agent auf dem Abonnenten für **@job_name** und **@job_password** ausgeführt wird. Dies geschieht nach der Ausführung von [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Weitere Informationen finden Sie unter [Create a Pull Subscription](../create-a-pull-subscription.md).  
   
-    -   Führen Sie [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql) für ein Pushabonnement auf dem Verleger aus. Geben **@subscriber**Sie **@subscriber_db**, **@publication**,, Windows-Anmelde Informationen, unter denen die Verteilungs-Agent auf **@job_name** dem **@job_password**Verteiler für und ausgeführt wird, sowie einen Zeitplan für diesen Agentauftrag an. Weitere Informationen finden Sie unter [Angeben von Synchronisierungszeitplänen](../specify-synchronization-schedules.md). Dies geschieht nach der Ausführung von [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Weitere Informationen finden Sie unter [Create a Push Subscription](../create-a-push-subscription.md).  
+    -   Führen Sie [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql) für ein Pushabonnement auf dem Verleger aus. Geben **@subscriber**Sie **@subscriber_db**, **@publication**,, Windows-Anmelde Informationen, unter denen die Verteilungs-Agent auf **@job_name** dem **@job_password**Verteiler für und ausgeführt wird, sowie einen Zeitplan für diesen Agentauftrag an. Weitere Informationen finden Sie unter [Angeben von Synchronisierungs Zeitplänen](../specify-synchronization-schedules.md). Dies geschieht nach der Ausführung von [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Weitere Informationen finden Sie unter [Create a Push Subscription](../create-a-push-subscription.md).  
   
 ### <a name="to-upgrade-scripts-that-configure-a-merge-publication"></a>So aktualisieren Sie Skripts, mit denen eine Mergeveröffentlichung konfiguriert wird  
   
 1.  (Optional) Aktualisieren Sie im vorhandenen Skript die Ausführung von [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql), um alle Nichtstandardwerte für Parameter festzulegen, die neue Replikationsfunktionen implementieren.  
   
-2.  Führen Sie nach [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)[sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben **@publication** Sie und die Windows-Anmelde Informationen an, unter **@job_name** denen **@job_password**die Momentaufnahmen-Agent für und ausgeführt wird. Wenn der Agent beim Herstellen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] einer Verbindung mit dem Verleger die-Authentifizierung verwendet, müssen Sie auch den **** Wert 0 **@publisher_security_mode** für und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die-Anmelde **@publisher_login** Informationen **@publisher_password**für und angeben. Dadurch wird ein Auftrag des Momentaufnahme-Agents für die Veröffentlichung erstellt.  
+2.  Führen Sie nach [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)[sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) auf dem Verleger für die Veröffentlichungsdatenbank aus. Geben **@publication** Sie und die Windows-Anmelde Informationen an, unter **@job_name** denen **@job_password**die Momentaufnahmen-Agent für und ausgeführt wird. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Authentifizierung verwendet, müssen Sie zudem den Wert **0** für **@publisher_security_mode** und die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldeinformationen für **@publisher_login** und **@publisher_password**. Dadurch wird ein Auftrag des Momentaufnahme-Agents für die Veröffentlichung erstellt.  
   
 3.  (Optional) Aktualisieren Sie die Ausführung von [sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql), um alle Nichtstandardwerte für Parameter festzulegen, die neue Replikationsfunktionen implementieren.  
   
@@ -107,7 +107,7 @@ ms.locfileid: "68210764"
   
     -   Aktualisieren Sie bei einem Pullabonnement die Ausführung von [sp_addmergepullsubscription_agent &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) , um die Windows-Anmelde Informationen bereitzustellen, **@job_name** unter **@job_password**denen die Merge-Agent auf dem Abonnenten für und ausgeführt wird. Dies geschieht nach der Ausführung von [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). Weitere Informationen finden Sie unter [Create a Pull Subscription](../create-a-pull-subscription.md).  
   
-    -   Führen Sie für ein Pushabonnement [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql) auf dem Verleger aus. Geben **@subscriber**Sie **@subscriber_db**, **@publication**,, die Windows-Anmelde Informationen, unter denen die Merge-Agent auf **@job_name** dem **@job_password**Verteiler ausgeführt wird, für und und einen Zeitplan für diesen Agentauftrag an. Weitere Informationen finden Sie unter [Angeben von Synchronisierungszeitplänen](../specify-synchronization-schedules.md). Dies geschieht nach der Ausführung von [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql). Weitere Informationen finden Sie unter [Create a Push Subscription](../create-a-push-subscription.md).  
+    -   Führen Sie für ein Pushabonnement [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql) auf dem Verleger aus. Geben **@subscriber**Sie **@subscriber_db**, **@publication**,, die Windows-Anmelde Informationen, unter denen die Merge-Agent auf **@job_name** dem **@job_password**Verteiler ausgeführt wird, für und und einen Zeitplan für diesen Agentauftrag an. Weitere Informationen finden Sie unter [Angeben von Synchronisierungs Zeitplänen](../specify-synchronization-schedules.md). Dies geschieht nach der Ausführung von [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql). Weitere Informationen finden Sie unter [Create a Push Subscription](../create-a-push-subscription.md).  
   
 ## <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird ein [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] -Skript dargestellt, mit dem eine Transaktionsveröffentlichung für die Product-Tabelle erstellt wird. Diese Veröffentlichung unterstützt sofortige Updates mit Updates über eine Warteschlange als Failover. Standardparameter wurden zwecks besserer Lesbarkeit entfernt.  
@@ -118,7 +118,7 @@ ms.locfileid: "68210764"
  Im folgenden Beispiel wird die Aktualisierung des vorherigen Skripts dargestellt, mit dem eine Transaktionsveröffentlichung erstellt wird, damit es unter [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und späteren Versionen erfolgreich ausgeführt werden kann. Diese Veröffentlichung unterstützt sofortige Updates mit Updates über eine Warteschlange als Failover. Standardwerte für neue Parameter wurden explizit deklariert.  
   
 > [!NOTE]  
->  Windows-Anmeldeinformationen werden zur Laufzeit mithilfe von **sqlcmd** -Skriptvariablen angegeben.  
+>   Windows-Anmeldeinformationen werden zur Laufzeit mithilfe von **sqlcmd** -Skriptvariablen angegeben.  
   
  [!code-sql[HowTo#sp_createtranpub_NWpostupgrade](../../../snippets/tsql/SQL15/replication/howto/tsql/createnwtranpublication.sql#sp_createtranpub_nwpostupgrade)]  
   
@@ -131,7 +131,7 @@ ms.locfileid: "68210764"
  Im folgenden Beispiel wird das vorherige Skript dargestellt, mit dem eine Mergeveröffentlichung erstellt wird und das aktualisiert wurde, damit es unter [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und späteren Versionen erfolgreich ausgeführt werden kann. Standardwerte für neue Parameter wurden explizit deklariert.  
   
 > [!NOTE]  
->  Windows-Anmeldeinformationen werden zur Laufzeit mithilfe von **sqlcmd** -Skriptvariablen angegeben.  
+>   Windows-Anmeldeinformationen werden zur Laufzeit mithilfe von **sqlcmd** -Skriptvariablen angegeben.  
   
  [!code-sql[HowTo#sp_createmergepub_NWpostupgrade](../../../snippets/tsql/SQL15/replication/howto/tsql/createnwmergepublication.sql#sp_createmergepub_nwpostupgrade)]  
   
@@ -144,7 +144,7 @@ ms.locfileid: "68210764"
  Im folgenden Beispiel wird die Aktualisierung des vorherigen Skripts dargestellt, mit dem ein Pushabonnement für eine Transaktionsveröffentlichung erstellt wird und das aktualisiert wurde, damit es unter [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und späteren Versionen erfolgreich ausgeführt werden kann. Standardwerte für neue Parameter wurden explizit deklariert.  
   
 > [!NOTE]  
->  Windows-Anmeldeinformationen werden zur Laufzeit mithilfe von **sqlcmd** -Skriptvariablen angegeben.  
+>   Windows-Anmeldeinformationen werden zur Laufzeit mithilfe von **sqlcmd** -Skriptvariablen angegeben.  
   
  [!code-sql[HowTo#sp_createtranpushsub_NWpostupgrade](../../../snippets/tsql/SQL15/replication/howto/tsql/createnwpushsub.sql#sp_createtranpushsub_nwpostupgrade)]  
   
@@ -157,7 +157,7 @@ ms.locfileid: "68210764"
  Im folgenden Beispiel wird die Aktualisierung des vorherigen Skripts dargestellt, mit dem ein Pushabonnement für eine Mergeveröffentlichung erstellt wird und das aktualisiert wurde, damit es unter [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und späteren Versionen erfolgreich ausgeführt werden kann. Standardwerte für neue Parameter wurden explizit deklariert.  
   
 > [!NOTE]  
->  Windows-Anmeldeinformationen werden zur Laufzeit mithilfe von **sqlcmd** -Skriptvariablen angegeben.  
+>   Windows-Anmeldeinformationen werden zur Laufzeit mithilfe von **sqlcmd** -Skriptvariablen angegeben.  
   
  [!code-sql[HowTo#sp_createmergepushsub_NWpostupgrade](../../../snippets/tsql/SQL15/replication/howto/tsql/createnwpushsub.sql#sp_createmergepushsub_nwpostupgrade)]  
   
@@ -170,7 +170,7 @@ ms.locfileid: "68210764"
  Im folgenden Beispiel wird die Aktualisierung des vorherigen Skripts dargestellt, mit dem ein Pullabonnement für eine Transaktionsveröffentlichung erstellt wird und das aktualisiert wurde, damit es unter [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und späteren Versionen erfolgreich ausgeführt werden kann. Standardwerte für neue Parameter wurden explizit deklariert.  
   
 > [!NOTE]  
->  Windows-Anmeldeinformationen werden zur Laufzeit mithilfe von **sqlcmd** -Skriptvariablen angegeben.  
+>   Windows-Anmeldeinformationen werden zur Laufzeit mithilfe von **sqlcmd** -Skriptvariablen angegeben.  
   
  [!code-sql[HowTo#sp_createtranpullsub_NWpostupgrade](../../../snippets/tsql/SQL15/replication/howto/tsql/createnwpullsub.sql#sp_createtranpullsub_nwpostupgrade)]  
   
@@ -183,18 +183,18 @@ ms.locfileid: "68210764"
  Im folgenden Beispiel wird die Aktualisierung des vorherigen Skripts dargestellt, mit dem ein Pullabonnement für eine Mergeveröffentlichung erstellt wird und das aktualisiert wurde, damit es unter [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und späteren Versionen erfolgreich ausgeführt werden kann. Standardwerte für neue Parameter wurden explizit deklariert.  
   
 > [!NOTE]  
->  Windows-Anmeldeinformationen werden zur Laufzeit mithilfe von **sqlcmd** -Skriptvariablen angegeben.  
+>   Windows-Anmeldeinformationen werden zur Laufzeit mithilfe von **sqlcmd** -Skriptvariablen angegeben.  
   
  [!code-sql[HowTo#sp_createmergepullsub_NWpostupgrade](../../../snippets/tsql/SQL15/replication/howto/tsql/createnwpullsub.sql#sp_createmergepullsub_nwpostupgrade)]  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Create a Publication](../publish/create-a-publication.md)   
- [Create a Push Subscription](../create-a-push-subscription.md)   
+ [Erstellen eines Pushabonnements](../create-a-push-subscription.md)   
  [Create a Pull Subscription](../create-a-pull-subscription.md)   
- [Anzeigen und Ändern von Replikationssicherheitseinstellungen](../security/view-and-modify-replication-security-settings.md)   
+ [Anzeigen und Ändern von Replikations Sicherheitseinstellungen](../security/view-and-modify-replication-security-settings.md)   
  [MSSQL_ENG021797](../mssql-eng021797.md)   
  [MSSQL_ENG021798](../mssql-eng021798.md)   
- [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
+ [Konzepte für gespeicherte System Prozeduren von](../concepts/replication-system-stored-procedures-concepts.md)   
  [Aktualisieren von replizierten Datenbanken](../../../database-engine/install-windows/upgrade-replicated-databases.md)  
   
   
