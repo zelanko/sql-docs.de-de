@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68199458"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken
@@ -46,7 +46,7 @@ ms.locfileid: "68199458"
   
  Informationen zu Überlegungen zum Hinzufügen und Löschen von Artikeln aus Veröffentlichungen finden Sie unter [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](add-articles-to-and-drop-articles-from-existing-publications.md).  
   
- **So replizieren Sie Schema Änderungen**  
+ **So replizieren Sie Schemaänderungen**  
   
  Die oben aufgeführten Schemaänderungen werden standardmäßig repliziert. Informationen zum Deaktivieren der Replikation von Schemaänderungen finden Sie unter [Replicate Schema Changes](replicate-schema-changes.md).  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68199458"
   
 -   Schemaänderungen unterliegen den Einschränkungen von [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Beispielsweise können Sie mit ALTER TABLE keine Primärschlüsselspalten ändern.  
   
--   Datentypzuordnung wird nur für die Anfangsmomentaufnahme ausgeführt. Schemaänderungen werden nicht vorherigen Versionen von Datentypen zugeordnet. Beispiel: Wenn die `ALTER TABLE ADD datetime2 column`-Anweisung in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] verwendet wird, wird der Datentyp nicht für `nvarchar`-Abonnenten in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] umgewandelt. In einigen Fällen werden Schemaänderungen auf dem Verleger blockiert.  
+-   Datentypzuordnung wird nur für die Anfangsmomentaufnahme ausgeführt. Schemaänderungen werden nicht vorherigen Versionen von Datentypen zugeordnet. Beispiel: Wenn die `ALTER TABLE ADD datetime2 column`-Anweisung in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] verwendet wird, wird der Datentyp nicht für [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]-Abonnenten in `nvarchar` umgewandelt. In einigen Fällen werden Schemaänderungen auf dem Verleger blockiert.  
   
 -   Wenn für eine Veröffentlichung die Weitergabe von Schemaänderungen festgelegt ist, werden die Schemaänderungen unabhängig davon weitergegeben, wie die verbundene Schemaoption für einen Artikel in der Veröffentlichung festgelegt ist. Beispiel: Sie entscheiden sich, FOREIGN KEY-Einschränkungen für einen Tabellenartikel nicht zu replizieren, geben dann jedoch einen ALTER TABLE-Befehl aus, mit dem der Tabelle auf dem Verleger ein Fremdschlüssel hinzugefügt wird. In diesem Fall wird der Fremdschlüssel der Tabelle auf dem Abonnenten hinzugefügt. Um das zu verhindern, deaktivieren Sie die Weitergabe von Schemaänderungen, bevor Sie den ALTER TABLE-Befehl ausgeben.  
   
@@ -81,8 +81,7 @@ ms.locfileid: "68199458"
   
 -   READ UNCOMMITTED ist keine unterstützte Isolationsstufe, wenn Sie DDL auf einer veröffentlichten Tabelle ausführen.  
   
--   
-  `SET CONTEXT_INFO` sollte nicht verwendet werden, um den Transaktionskontext zu ändern, in dem Schemaänderungen für veröffentlichte Objekte ausgeführt werden.  
+-   `SET CONTEXT_INFO` sollte nicht verwendet werden, um den Transaktionskontext zu ändern, in dem Schemaänderungen für veröffentlichte Objekte ausgeführt werden.  
   
 #### <a name="adding-columns"></a>Hinzufügen von Spalten  
   
@@ -106,7 +105,7 @@ ms.locfileid: "68199458"
   
 -   Die zu löschende Spalte darf nicht in den Filterklauseln eines Artikels einer Veröffentlichung in der Datenbank verwendet werden.  
   
--   Beim Löschen einer Spalte aus einem veröffentlichten Artikel sollten Sie alle Einschränkungen, Indizes oder Eigenschaften der Spalte berücksichtigen, die sich auf die Datenbank auswirken können. Beispiel:  
+-   Beim Löschen einer Spalte aus einem veröffentlichten Artikel sollten Sie alle Einschränkungen, Indizes oder Eigenschaften der Spalte berücksichtigen, die sich auf die Datenbank auswirken können. Zum Beispiel:  
   
     -   Sie können keine in einem Primärschlüssel verwendeten Spalten aus Artikeln in Transaktionsveröffentlichungen löschen, da die Spalten von der Replikation verwendet werden.  
   
@@ -147,8 +146,7 @@ ms.locfileid: "68199458"
         |`hierarchyid`|Änderung zulassen|Änderung blockieren|Änderung blockieren|  
         |`geography` und `geometry`|Änderung zulassen|Änderung zulassen<sup>1</sup>|Änderung blockieren|  
         |`filestream`|Änderung zulassen|Änderung blockieren|Änderung blockieren|  
-        |
-  `date`, `time`, `datetime2` und `datetimeoffset`|Änderung zulassen|Änderung zulassen<sup>1</sup>|Änderung blockieren|  
+        |`date`, `time`, `datetime2` und `datetimeoffset`|Änderung zulassen|Änderung zulassen<sup>1</sup>|Änderung blockieren|  
   
          <sup>1</sup> SQL Server Compact Abonnenten konvertieren diese Datentypen auf dem Abonnenten.  
   
@@ -159,12 +157,12 @@ ms.locfileid: "68199458"
 -   Die Mergereplikation stellt gespeicherte Prozeduren bereit, mit denen Schemaänderungen bei der Problembehandlung ausgelassen werden können. Weitere Informationen finden Sie unter [sp_markpendingschemachange &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql) und [sp_enumeratependingschemachanges &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-enumeratependingschemachanges-transact-sql).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [ALTER TABLE &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
+ [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [Alter View &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-view-transact-sql)   
  [ALTER PROCEDURE &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-procedure-transact-sql)   
  [Alter Function &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-function-transact-sql)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-trigger-transact-sql)   
  [Veröffentlichen von Daten und Datenbankobjekten](publish-data-and-database-objects.md)   
- [Erneutes Generieren von benutzerdefinierten Transaktions Prozeduren zur Darstellung von Schema Änderungen](../transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)  
+ [Erneutes Generieren von Transaktionsprozeduren zur Erfassung von Schemaänderungen](../transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)  
   
   

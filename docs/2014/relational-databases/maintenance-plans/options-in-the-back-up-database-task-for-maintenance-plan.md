@@ -16,21 +16,21 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4a31052bb0633d370098e328741432f6b854d65e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68205941"
 ---
 # <a name="back-up-database-task-maintenance-plan"></a>Task 'Datenbank sichern' (Wartungsplan)
-  Verwenden Sie das Dialogfeld **Task ' Datenbank sichern** ', um dem Wartungsplan einen Sicherungs Task hinzuzufügen. Eine Sicherung der Datenbank ist für den Fall wichtig, dass die Datenbank bei einem System- oder Hardwareausfall (oder einem Benutzerfehler) beschädigt wird. In diesem Fall muss eine Sicherungskopie wiederhergestellt werden. Dieser Task ermöglicht vollständige und differenzielle Sicherungen sowie Sicherungen von Dateien, Dateigruppen und Transaktionsprotokollen.  
+  Mithilfe des Dialogfelds **Task 'Datenbank sichern'** können Sie dem Wartungsplan einen Sicherungstask hinzufügen. Eine Sicherung der Datenbank ist für den Fall wichtig, dass die Datenbank bei einem System- oder Hardwareausfall (oder einem Benutzerfehler) beschädigt wird. In diesem Fall muss eine Sicherungskopie wiederhergestellt werden. Dieser Task ermöglicht vollständige und differenzielle Sicherungen sowie Sicherungen von Dateien, Dateigruppen und Transaktionsprotokollen.  
   
- **So erstellen Sie einen Task ' Datenbank sichern '**  
+ **So erstellen Sie einen Datenbanksicherungstask**  
   
 -   [Erstellen eines Wartungsplans](create-a-maintenance-plan.md)  
   
 ## <a name="options"></a>Tastatur  
- **Verbindung**  
+ **Connection**  
  Wählen Sie die Serververbindung aus, die bei der Ausführung dieses Tasks verwendet werden soll.  
   
  **Neu**  
@@ -42,10 +42,10 @@ ms.locfileid: "68205941"
  **Alle Datenbanken**  
  Generiert einen Wartungsplan, der Wartungstasks für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken ausführt.  
   
- **Alle System Datenbanken (Master, msdb, Model)**  
+ **Alle Systemdatenbanken ('master', 'msdb', 'model')**  
  Generiert einen Wartungsplan, der Wartungstasks für alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Systemdatenbanken ausführt. Für benutzerdefinierte Datenbanken werden keine Wartungstasks ausgeführt.  
   
- **Alle Benutzer Datenbanken (mit Ausnahme von Master, Model, msdb, tempdb)**  
+ **Alle Benutzerdatenbanken (außer 'master', 'model', 'msdb', 'tempdb')**  
  Generiert einen Wartungsplan, der Wartungstasks für alle benutzerdefinierten Datenbanken ausführt. Für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Systemdatenbanken werden keine Wartungstasks ausgeführt.  
   
  **Diese Datenbanken**  
@@ -54,22 +54,22 @@ ms.locfileid: "68205941"
  **Sicherungstyp**  
  Zeigt den Typ der Sicherung an, die ausgeführt werden soll.  
   
- **Sicherungs Komponente**  
+ **Sicherungskomponente**  
  Wählen Sie **Datenbank** aus, um die gesamte Datenbank zu sichern. Wählen Sie **Datei und Dateigruppen** aus, um nur einen Teil der Datenbank zu sichern. Bei Auswahl dieser Option müssen Sie die Datei bzw. Dateigruppe angeben. Wenn im Feld **Datenbanken** mehrere Datenbanken ausgewählt wurden, geben Sie für die **Sicherungskomponenten** nur **Datenbanken**an. Erstellen Sie einen Task für jede Datenbank, um Datei- oder Dateigruppensicherungen auszuführen.  
   
- **Sicherungs Satz läuft ab**  
+ **Sicherungssatz läuft ab**  
  Geben Sie an, wann der Sicherungssatz durch einen anderen Sicherungssatz überschrieben werden kann.  
   
  **Sichern auf**  
  Sichert die Datenbank in einer Datei oder auf einem Band. Es stehen nur Bandmedien zur Verfügung, die an den Computer mit der Datenbank angeschlossen sind.  
   
- **Sichern von Datenbanken in einer oder mehreren Dateien**  
+ **Datenbanken in einer oder in mehreren Dateien sichern**  
  Klicken Sie auf **Hinzufügen** , um das Dialogfeld **Sicherungsziel auswählen** zu öffnen, und geben Sie einen oder mehrere Datenträgerspeicherorte oder Bandgeräte an.  
   
  **Wenn Sicherungsdateien vorhanden sind**  
  Wählen Sie **Anfügen** , um diese Sicherung an das Ende der Datei anzufügen. Wählen Sie **Überschreiben**aus, um alle alten Sicherungen in der Datei zu entfernen und sie mit der neuen Sicherung zu ersetzen.  
   
- **Erstellen einer Sicherungsdatei für jede Datenbank**  
+ **Für jede Datenbank eine Sicherungsdatei erstellen**  
  Erstellt eine Sicherungsdatei an dem im Feld für den Ordner angegebenen Speicherort. Für jede ausgewählte Datenbank wird eine Datei erstellt.  
   
  **Unterverzeichnis für jede Datenbank erstellen**  
@@ -84,22 +84,22 @@ ms.locfileid: "68205941"
  **Ordner**  
  Gibt den Ordner an, in dem die automatisch erstellten Datenbankdateien gespeichert werden sollen.  
   
- **Sicherungsdatei Erweiterung**  
+ **Sicherungsdateierweiterung**  
  Gibt die Dateierweiterung an, die für Sicherungsdateien verwendet wird. Der Standardwert ist **.bak**.  
   
- **Sicherungs Integrität überprüfen**  
+ **Sicherungsintegrität überprüfen**  
  Überprüft, ob der Sicherungssatz vollständig ist und alle Volumes lesbar sind.  
   
- **Protokoll Fragment sichern und Datenbank im Wiederherstellungs Status belassen**  
+ **Protokollfragment sichern und Datenbank im Wiederherstellungsstatus belassen**  
  Führen Sie eine Protokollsicherung als letzten Schritt vor dem Wiederherstellen einer Datenbank aus. Weitere Informationen finden Sie unter [Protokollfragmentsicherungen &#40;SQL Server&#41;](../backup-restore/tail-log-backups-sql-server.md).  
   
- **Sicherungs Komprimierung festlegen**  
+ **Sicherungskomprimierung festlegen**  
  Wählen Sie in [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (oder höher) einen der folgenden Werte für die [Sicherungskomprimierung](../backup-restore/backup-compression-sql-server.md) aus:  
   
 |||  
 |-|-|  
-|**Standard Servereinstellung verwenden**|Klicken Sie hier, um die Standardeinstellung auf Serverebene zu verwenden.<br /><br /> Diese Standardeinstellung wird durch die Serverkonfigurationsoption **Komprimierungsstandard für Sicherung** festgelegt. Weitere Informationen zum Anzeigen der aktuellen Einstellung dieser Option finden Sie unter [anzeigen oder Konfigurieren der Server Konfigurationsoption "Standardeinstellung für die Sicherungs Komprimierung](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)".|  
-|**Sicherung komprimieren**|Klicken Sie hier, um die Sicherung unabhängig von der Standardeinstellung auf Serverebene zu komprimieren.<br /><br /> ** \* Wichtig \* \* ** Standardmäßig steigt die CPU-Auslastung durch die Komprimierung erheblich, und die durch den Komprimierungs Vorgang verbrauchte CPU-Auslastung kann sich negativ auf parallele Vorgänge auswirken Daher ist es u. U. sinnvoll, in einer Sitzung, bei der die CPU-Nutzung durch die [Ressourcenkontrolle](../resource-governor/resource-governor.md) eingeschränkt ist, komprimierte Sicherungen mit niedriger Priorität zu erstellen. Weitere Informationen finden Sie unter [Einschränken der CPU-Nutzung durch die Sicherungskomprimierung mithilfe der Ressourcenkontrolle &#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
+|**Standardservereinstellungen verwenden**|Klicken Sie hier, um die Standardeinstellung auf Serverebene zu verwenden.<br /><br /> Diese Standardeinstellung wird durch die Serverkonfigurationsoption **Komprimierungsstandard für Sicherung** festgelegt. Informationen zum Anzeigen der aktuellen Einstellung dieser Option finden Sie unter [Anzeigen oder Konfigurieren der Serverkonfigurationsoption „Standardeinstellung für die Sicherungskomprimierung“](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).|  
+|**Sicherung komprimieren**|Klicken Sie hier, um die Sicherung unabhängig von der Standardeinstellung auf Serverebene zu komprimieren.<br /><br /> **\*\* Wichtig \*\*** Standardmäßig steigt die CPU-Nutzung durch die Komprimierung erheblich, und die bei der Komprimierung zusätzlich verbrauchten CPU-Ressourcen können sich negativ auf gleichzeitige Vorgänge auswirken. Daher ist es u. U. sinnvoll, in einer Sitzung, bei der die CPU-Nutzung durch die [Ressourcenkontrolle](../resource-governor/resource-governor.md) eingeschränkt ist, komprimierte Sicherungen mit niedriger Priorität zu erstellen. Weitere Informationen finden Sie unter [Einschränken der CPU-Nutzung durch die Sicherungskomprimierung mithilfe der Ressourcenkontrolle &#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
 |**Sicherung nicht komprimieren**|Klicken Sie hier, um unabhängig von der Standardeinstellung auf Serverebene eine nicht komprimierte Sicherung zu erstellen.|  
   
  **T-SQL anzeigen**  
@@ -109,23 +109,23 @@ ms.locfileid: "68205941"
 >  Wenn die Anzahl der betroffenen Objekte groß ist, kann die Anzeige erhebliche Zeit in Anspruch nehmen.  
   
 ## <a name="new-connection-dialog-box"></a>Neue Verbindung (Dialogfeld)  
- **Verbindungs Name**  
+ **Verbindungsname**  
  Geben Sie einen Namen für die neue Verbindung ein.  
   
- **Servernamen auswählen oder eingeben**  
+ **Wählen Sie einen Servernamen aus, oder geben Sie ihn ein.**  
  Wählen Sie den Server aus, zu dem bei der Ausführung dieses Tasks eine Verbindung hergestellt werden soll.  
   
  **Aktualisieren**  
  Mithilfe dieser Option aktualisieren Sie die Liste der verfügbaren Server.  
   
- **Geben Sie Informationen ein, um sich beim Server anzumelden.**  
+ **Geben Sie Informationen zum Anmelden am Server ein**  
  Legt fest, wie die Authentifizierung gegenüber dem Server stattfindet.  
   
- **Integrierte Sicherheit von Windows verwenden**  
+ **Integrierte Sicherheit von Windows NT verwenden**  
  Stellt mithilfe der Windows-Authentifizierung eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] her.  
   
- **Einen bestimmten Benutzernamen und ein bestimmtes Kennwort verwenden**  
- Stellt mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Authentifizierung eine Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her. Diese Option ist nicht verfügbar.  
+ **Bestimmten Benutzernamen und bestimmtes Kennwort verwenden**  
+ Stellt mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung eine Verbindung zu einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] her. Diese Option ist nicht verfügbar.  
   
  **Benutzername**  
  Stellt eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung für den Gebrauch bei der Authentifizierung bereit. Diese Option ist nicht verfügbar.  

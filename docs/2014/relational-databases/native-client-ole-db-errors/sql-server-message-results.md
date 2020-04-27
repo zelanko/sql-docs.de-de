@@ -1,5 +1,5 @@
 ---
-title: Ergebnisse der SQL Server Meldung | Microsoft-Dokumentation
+title: SQL Server-Meldungsergebnisse | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff604f4c5d66a5742868e25ba05ca6b4528ddb1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206707"
 ---
 # <a name="sql-server-message-results"></a>SQL Server-Meldungsergebnisse
@@ -41,6 +41,6 @@ ms.locfileid: "68206707"
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Consumer des Native Client OLE DB-Anbieters, der die dynamische Angabe von Abfragetext zulässt, sollte Fehler Schnittstellen nach jeder Ausführung der Element Funktion unabhängig vom Wert des Rückgabecodes, dem vorhanden sein oder Fehlen eines zurückgegebenen **IRowset** -oder **IMultipleResults** -Schnittstellen Verweises oder der Anzahl betroffener Zeilen überprüfen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Errors](errors.md)  
+ [Mern](errors.md)  
   
   

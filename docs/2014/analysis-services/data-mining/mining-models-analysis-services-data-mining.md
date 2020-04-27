@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57f62b125872e6b851235c1517925c6ee10058d8
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174429"
 ---
 # <a name="mining-models-analysis-services---data-mining"></a>Miningmodelle (Analysis Services – Data Mining)
@@ -31,7 +31,7 @@ ms.locfileid: "78174429"
 
  [Architektur des Mining Modells](#bkmk_mdlArch)
 
- [Definieren von Data Mining-Modellen](#bkmk_mdlDefine)
+ [Definition von Data Mining-Modellen](#bkmk_mdlDefine)
 
  [Miningmodelleigenschaften](#bkmk_mdlProps)
 
@@ -41,7 +41,7 @@ ms.locfileid: "78174429"
 
  [Anzeigen und Abfragen von Mining Modellen](#bkmk_mdlView)
 
-##  <a name="bkmk_mdlArch"></a>Architektur des Mining Modells
+##  <a name="mining-model-architecture"></a><a name="bkmk_mdlArch"></a> Architektur des Miningmodells
  Ein Data Mining-Modell erhält Daten aus einer Miningstruktur und analysiert diese Daten durch die Verwendung eines Data Mining-Algorithmus. Die Miningstruktur und das Miningmodell sind separate Objekte. Die Miningstruktur speichert Informationen, die die Datenquelle definieren. Ein Miningmodell speichert Informationen, die aus der statistischen Verarbeitung der Daten herrühren, beispielsweise die als Ergebnis der Analyse gefundenen Muster.
 
  Ein Miningmodell ist leer, bis die Daten, die von der Miningstruktur bereitgestellt werden, verarbeitet und analysiert wurden. Nachdem ein Miningmodell verarbeitet wurde, enthält es Metadaten, Ergebnisse und Bindungen zur Miningstruktur.
@@ -58,7 +58,7 @@ ms.locfileid: "78174429"
 
  [Architektur des Mining Modells](#bkmk_mdlArch)
 
-##  <a name="bkmk_mdlDefine"></a>Definieren von Data Mining-Modellen
+##  <a name="defining-data-mining-models"></a><a name="bkmk_mdlDefine"></a>Definieren von Data Mining-Modellen
  Ein Data Mining-Modell wird mithilfe der folgenden allgemeinen Schritte erstellt:
 
 -   Erstellen Sie die zugrunde liegende Miningstruktur, und schließen Sie die Datenspalten ein, die u. U. benötigt werden.
@@ -71,8 +71,7 @@ ms.locfileid: "78174429"
 
 -   Füllen Sie das Modell mit Daten auf, indem Sie die Struktur und das Modell *verarbeiten* .
 
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt die folgenden Tools bereit, um die Verwaltung Ihrer Miningmodelle zu unterstützen:
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt die folgenden Tools bereit, um die Verwaltung Ihrer Miningmodelle zu unterstützen:
 
 -   Der Data Mining-Assistent unterstützt Sie bei der Erstellung einer Struktur und des zugehörigen Miningmodells. Dies ist die leichteste Vorgehensweise. Der Assistent erstellt automatisch die erforderliche Miningstruktur und unterstützt Sie bei der Konfiguration der wichtigen Einstellungen.
 
@@ -84,22 +83,22 @@ ms.locfileid: "78174429"
 
  [Architektur des Mining Modells](#bkmk_mdlArch)
 
-##  <a name="bkmk_mdlProps"></a>Mining Modell Eigenschaften
+##  <a name="mining-model-properties"></a><a name="bkmk_mdlProps"></a>Mining Modell Eigenschaften
  Jedes Miningmodell verfügt über Eigenschaften, die das Modell und seine Metadaten definieren. Hierzu gehören Name, Beschreibung, Datum der letzten Verarbeitung des Modells, Berechtigungen für das Modell und Filter für die zum Trainieren verwendeten Daten.
 
  Jedes Miningmodell verfügt darüber hinaus über Eigenschaften, die sich aus der Miningstruktur ableiten und die vom Modell verwendeten Datenspalten beschreiben. Wenn eine vom Modell verwendete Spalte eine geschachtelte Tabelle ist, kann auf die Spalte auch ein separater Filter angewendet werden.
 
  Zusätzlich enthält jedes Miningmodell zwei besondere Eigenschaften: <xref:Microsoft.AnalysisServices.MiningModel.Algorithm%2A> und <xref:Microsoft.AnalysisServices.MiningModelColumn.Usage%2A>.
 
--   **Algorithmuseigenschaft** Gibt den Algorithmus an, der verwendet wird, um das Modell zu erstellen. Die verfügbaren Algorithmen hängen von Ihrem Anbieter ab. Eine Liste der in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]enthaltenen Algorithmen finden Sie unter [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md). Die `Algorithm`-Eigenschaft gilt für das Miningmodell und kann für jedes Modell nur einmal festgelegt werden. Sie können den Algorithmus zu einem späteren Zeitpunkt ändern, aber einige Spalten im Miningmodell werden möglicherweise ungültig, wenn sie vom ausgewählten Algorithmus nicht unterstützt werden. Nachdem diese Eigenschaft geändert wurde, muss das Modell immer erneut verarbeitet werden.
+-   **Algorithmus-Eigenschaft** Legt den Algorithmus fest, der zur Erstellung des Modells verwendet wird. Die verfügbaren Algorithmen hängen von Ihrem Anbieter ab. Eine Liste der in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]enthaltenen Algorithmen finden Sie unter [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md). Die `Algorithm`-Eigenschaft gilt für das Miningmodell und kann für jedes Modell nur einmal festgelegt werden. Sie können den Algorithmus zu einem späteren Zeitpunkt ändern, aber einige Spalten im Miningmodell werden möglicherweise ungültig, wenn sie vom ausgewählten Algorithmus nicht unterstützt werden. Nachdem diese Eigenschaft geändert wurde, muss das Modell immer erneut verarbeitet werden.
 
--   **Usage-Eigenschaft** Definiert, wie jede Spalte vom Modell verwendet wird. Sie können die Spaltenverwendung als `Input`, `Predict`, `Predict Only` oder `Key`. Die `Usage`-Eigenschaft gilt für einzelne Spalten des Miningmodells und muss für jede in einem Modell enthaltene Spalte separat festgelegt werden. Wenn die Struktur eine Spalte enthält, die Sie im Modell nicht verwenden möchten, wird die Verwendung auf `Ignore` festgelegt. Beispiele für Daten, die Sie zwar in die Miningstruktur einschließen können, in der Analyse u. U. jedoch nicht verwenden, sind Kundennamen oder E-Mail-Adressen. Auf diese Weise können sie später abgefragt werden, ohne sie in der Analysephase zu berücksichtigen.
+-   **Usage-Eigenschaft** Definiert die Verwendung der einzelnen Spalten durch das Modell. Sie können die Spaltenverwendung als `Input`, `Predict`, `Predict Only` oder `Key`. Die `Usage`-Eigenschaft gilt für einzelne Spalten des Miningmodells und muss für jede in einem Modell enthaltene Spalte separat festgelegt werden. Wenn die Struktur eine Spalte enthält, die Sie im Modell nicht verwenden möchten, wird die Verwendung auf `Ignore` festgelegt. Beispiele für Daten, die Sie zwar in die Miningstruktur einschließen können, in der Analyse u. U. jedoch nicht verwenden, sind Kundennamen oder E-Mail-Adressen. Auf diese Weise können sie später abgefragt werden, ohne sie in der Analysephase zu berücksichtigen.
 
  Sie können die Werte der Eigenschaften des Miningmodells nach der Erstellung eines Miningmodells ändern. Allerdings erfordert jede Änderung, auch die des Namens des Miningmodells, eine erneute Verarbeitung des Modells. Nachdem Sie das Modell erneut verarbeitet haben, sehen Sie möglicherweise andere Ergebnisse.
 
  [Architektur des Mining Modells](#bkmk_mdlArch)
 
-##  <a name="bkmk_mdlCols"></a>Mining Modell Spalten
+##  <a name="mining-model-columns"></a><a name="bkmk_mdlCols"></a>Mining Modell Spalten
  Das Miningmodell enthält Datenspalten, die aus den in der Miningstruktur definierten Spalten abgerufen werden. Sie können auswählen, welche Spalten aus der Miningstruktur im Modell verwendet werden sollen, und Kopien der Miningstrukturspalten erstellen und diese dann umbenennen oder ihre Verwendungsart ändern. Zusätzlich müssen Sie bei der Modellerstellung festlegen, auf welche Weise die Spalte vom Modell verwendet wird. Dazu gehören beispielsweise folgende Informationen: ob die Spalte ein Schlüssel ist, ob sie für Vorhersagen verwendet wird oder ob sie vom Algorithmus ignoriert werden kann.
 
  Es wird empfohlen, während der Modellerstellung nicht jede verfügbare Datenspalte automatisch hinzuzufügen, sondern die Daten in der Struktur sorgfältig daraufhin zu überprüfen, ob sie für die Analyse geeignet sind, und nur diese Spalten in das Modell einzuschließen. Beispielsweise sollten Sie nicht mehrere Spalten mit den gleichen Daten einschließen und keine Spalten verwenden, die größtenteils eindeutige Werte enthalten. Wenn Sie der Meinung sind, dass eine Spalte nicht verwendet werden sollte, müssen Sie diese nicht aus der Miningstruktur oder dem Miningmodell löschen, sondern können stattdessen die Spalte mit einem Flag versehen, das festlegt, dass diese Spalte bei der Erstellung des Modells ignoriert werden soll. Dies bedeutet, dass die Spalte in der Miningstruktur verbleibt, im Miningmodell jedoch nicht verwendet wird. Wenn Sie Drillthroughs vom Modell zur Miningstruktur aktiviert haben, können Sie die Informationen später aus der Spalte abrufen.
@@ -110,15 +109,15 @@ ms.locfileid: "78174429"
 
  [Architektur des Mining Modells](#bkmk_mdlArch)
 
-##  <a name="bkmk_mdlProcess"></a>Verarbeiten von Mining Modellen
+##  <a name="processing-mining-models"></a><a name="bkmk_mdlProcess"></a> Verarbeiten von Miningmodellen
  Beim Data Mining-Modell handelt es sich bis zu seiner Verarbeitung um ein leeres Objekt. Bei der Verarbeitung eines Modells werden die Daten, die von der Struktur zwischengespeichert werden, durch einen Filter geschickt, falls einer im Modell definiert wurde, und durch den Algorithmus analysiert. Der Algorithmus berechnet Zusammenfassungsstatistiken zur Beschreibung der Daten, identifiziert die Regeln und Muster innerhalb der Daten und verwendet diese dann zum Auffüllen des Modells.
 
  Nach der Verarbeitung enthält das Miningmodell zahlreiche Informationen zu den in der Analyse gefundenen Daten und Mustern, einschließlich Statistiken, Regeln und Regressionsformeln. Sie können diese Informationen mithilfe der benutzerdefinierten Viewer durchsuchen oder Data Mining-Abfragen erstellen, um die Informationen abzurufen und zu Analyse- und Präsentationszwecken zu verwenden.
 
  [Architektur des Mining Modells](#bkmk_mdlArch)
 
-##  <a name="bkmk_mdlView"></a>Anzeigen und Abfragen von Mining Modellen
- Nach der Verarbeitung eines Modells können Sie es mithilfe der in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verfügbaren benutzerdefinierten Viewer durchsuchen. Geben Sie unter
+##  <a name="viewing-and-querying-mining-models"></a><a name="bkmk_mdlView"></a> Anzeigen und Abfragen von Miningmodellen
+ Nach der Verarbeitung eines Modells können Sie es mithilfe der in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verfügbaren benutzerdefinierten Viewer durchsuchen. Für
 
  Darüber hinaus können Sie Abfragen des Miningmodells erstellen, um entweder Vorhersagen zu treffen oder Modellmetadaten oder vom Modell erstellte Muster abzufragen. Abfragen werden über Data Mining-Erweiterungen (DMX; Data Mining Extensions) erstellt.
 
@@ -126,10 +125,10 @@ ms.locfileid: "78174429"
 
 |Themen|Links|
 |------------|-----------|
-|Hier erfahren Sie, wie Miningstrukturen erstellt werden, die mehrere Miningmodelle unterstützen. Informationen zur Verwendung von Spalten in Modellen.|[Miningstrukturspalten](mining-structure-columns.md)<br /><br /> [Miningmodellspalten](mining-model-columns.md)<br /><br /> [Inhaltstypen &#40;Data Mining-&#41;](content-types-data-mining.md)|
-|Hier erhalten Sie Informationen zu den verschiedenen Algorithmen und erfahren, wie sich die Auswahl des Algorithmus auf den Modellinhalt auswirkt.|[Mining Modell Inhalt &#40;Analysis Services Data Mining-&#41;](mining-model-content-analysis-services-data-mining.md)<br /><br /> [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](data-mining-algorithms-analysis-services-data-mining.md)|
-|Hier erfahren Sie, wie Eigenschaften für das Modell festgelegt werden, die dessen Zusammensetzung und Verhalten beeinflussen.|[Miningmodelleigenschaften](mining-model-properties.md)<br /><br /> [Modellierungsflags &#40;Data Mining-&#41;](modeling-flags-data-mining.md)|
-|Informationen zu programmierbaren Schnittstellen für das Data Mining.|[Entwickeln mit Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)<br /><br /> [Data Mining-Erweiterungen &#40;DMX-&#41; Referenz](/sql/dmx/data-mining-extensions-dmx-reference)|
+|Hier erfahren Sie, wie Miningstrukturen erstellt werden, die mehrere Miningmodelle unterstützen. Informationen zur Verwendung von Spalten in Modellen.|[Miningstrukturspalten](mining-structure-columns.md)<br /><br /> [Miningmodellspalten](mining-model-columns.md)<br /><br /> [Inhaltstypen &#40;Data Mining&#41;](content-types-data-mining.md)|
+|Hier erhalten Sie Informationen zu den verschiedenen Algorithmen und erfahren, wie sich die Auswahl des Algorithmus auf den Modellinhalt auswirkt.|[Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md)<br /><br /> [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)|
+|Hier erfahren Sie, wie Eigenschaften für das Modell festgelegt werden, die dessen Zusammensetzung und Verhalten beeinflussen.|[Miningmodelleigenschaften](mining-model-properties.md)<br /><br /> [Modellierungsflags &#40;Data Mining&#41;](modeling-flags-data-mining.md)|
+|Informationen zu programmierbaren Schnittstellen für das Data Mining.|[Entwickeln mit Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)<br /><br /> [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](/sql/dmx/data-mining-extensions-dmx-reference)|
 |Informationen zur Verwendung der benutzerdefinierten Data Mining-Viewer in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|[Data Mining-Modell-Viewer](data-mining-model-viewers.md)|
 |Beispiele für verschiedene Abfragetypen, die für Data Mining-Modelle verwendet werden können.|[Data Mining-Abfragen](data-mining-queries.md)|
 
@@ -141,11 +140,11 @@ ms.locfileid: "78174429"
 |Hinzufügen und Löschen von Miningmodellen|[Hinzufügen eines Miningmodells zu einer vorhandenen Miningstruktur](add-a-mining-model-to-an-existing-mining-structure.md)<br /><br /> [Löschen eines Miningmodells aus einer Miningstruktur](delete-a-mining-model-from-a-mining-structure.md)|
 |Arbeiten mit Miningmodellspalten|[Ausschließen einer Spalte aus einem Miningmodell](exclude-a-column-from-a-mining-model.md)<br /><br /> [Erstellen eines Alias für eine Modellspalte](create-an-alias-for-a-model-column.md)<br /><br /> [Ändern der Diskretisierung von Spalten in Miningmodellen](change-the-discretization-of-a-column-in-a-mining-model.md)<br /><br /> [Bestimmen einer in einem Modell als Regressor zu verwendenden Spalte](specify-a-column-to-use-as-regressor-in-a-model.md)|
 |Ändern von Modelleigenschaften|[Ändern der Eigenschaften eines Miningmodells](change-the-properties-of-a-mining-model.md)<br /><br /> [Anwenden eines Filters auf ein Miningmodell](apply-a-filter-to-a-mining-model.md)<br /><br /> [Löschen eines Filters aus einem Miningmodell](delete-a-filter-from-a-mining-model.md)<br /><br /> [Aktivieren von Drillthrough für ein Miningmodell](enable-drillthrough-for-a-mining-model.md)<br /><br /> [Anzeigen oder Ändern von Algorithmusparametern](view-or-change-algorithm-parameters.md)|
-|„Kopieren“. Verschieben oder Verwalten von Modellen|[Erstellen einer Kopie eines Miningmodells](make-a-copy-of-a-mining-model.md)<br /><br /> [Kopieren einer Sicht eines Miningmodells](copy-a-view-of-a-mining-model.md)<br /><br /> [Exportieren &#40;DMX-&#41;](/sql/dmx/export-dmx)<br /><br /> [Importieren &#40;DMX-&#41;](/sql/dmx/import-dmx)|
+|„Kopieren“. Verschieben oder Verwalten von Modellen|[Erstellen einer Kopie eines Miningmodells](make-a-copy-of-a-mining-model.md)<br /><br /> [Kopieren einer Sicht eines Miningmodells](copy-a-view-of-a-mining-model.md)<br /><br /> [EXPORT &#40;DMX&#41;](/sql/dmx/export-dmx)<br /><br /> [IMPORT &#40;DMX&#41;](/sql/dmx/import-dmx)|
 |Auffüllen von Modellen mit Daten oder Aktualisieren von Daten in einem Modell|[Verarbeiten eines Miningmodells](process-a-mining-model.md)|
 |Arbeiten mit OLAP-Modellen|[Erstellen einer Data Mining-Dimension](create-a-data-mining-dimension.md)|
 
 ## <a name="see-also"></a>Weitere Informationen
- [Datenbankobjekte &#40;Analysis Services Mehrdimensionale Daten&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)
+ [Datenbankobjekte &#40;Analysis Services – Mehrdimensionale Daten&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)
 
 

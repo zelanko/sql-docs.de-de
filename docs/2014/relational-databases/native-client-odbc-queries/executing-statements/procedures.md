@@ -17,13 +17,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d030d4fb12ce9217bbdb88f501a0b0674c5a5828
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206752"
 ---
-# <a name="procedures"></a>Prozeduren
+# <a name="procedures"></a>Verfahren
   Eine gespeicherte Prozedur ist ein vorkompiliertes ausführbares Objekt, das eine oder mehrere [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisungen enthält. Gespeicherte Prozeduren können Ein- und Ausgabeparameter enthalten und auch einen ganzzahligen Rückgabecode ausgeben. Eine Anwendung kann kann mithilfe von Katalogfunktionen verfügbare gespeicherte Prozeduren auflisten.  
   
  ODBC-Anwendungen für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sollten gespeicherte Prozeduren nur mithilfe der direkten Ausführung aufrufen. Bei einer Verbindung mit früheren Versionen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]von implementiert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] der Native Client-ODBC-Treiber die [SQLPrepare-Funktion](https://go.microsoft.com/fwlink/?LinkId=59360) , indem eine temporäre gespeicherte Prozedur erstellt wird, die dann für **SQLExecute**aufgerufen wird. Es erhöht den Aufwand, damit **SQLPrepare** eine temporäre gespeicherte Prozedur erstellt, die nur die gespeicherte Ziel Prozedur aufruft und die gespeicherte Ziel Prozedur direkt ausführt. Selbst bei einer Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] muss der Aufruf eines zusätzlichen Roundtrips durch das Netzwerk vorbereitet und ein Ausführungsplan, mit dem nur der Ausführungsplan der gespeicherten Prozedur aufgerufen wird, erstellt werden.  

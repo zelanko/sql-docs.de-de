@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ff1acb1fb3af2708b14b31eeb82aa0989685630c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68210816"
 ---
 # <a name="sql-server-plan-cache-object"></a>SQL Server, Plancache-Objekt
@@ -28,21 +28,20 @@ ms.locfileid: "68210816"
 |SQL Server, Plancache-Leistungsindikatoren|BESCHREIBUNG|  
 |------------------------------------|-----------------|  
 |**Cachetrefferquote**|Das Verhältnis zwischen Cachetreffern und -suchvorgängen.|  
-|**Cache Objekt Anzahl**|Anzahl der Cacheobjekte im Cache.|  
-|**Cache Seiten**|Anzahl der von Cacheobjekten verwendeten 8-KB-Seiten.|  
-|**Verwendete Cache Objekte**|Anzahl der verwendeten Cacheobjekte.|  
+|**Cacheobjektzähler**|Anzahl der Cacheobjekte im Cache.|  
+|**Cacheseiten**|Anzahl der von Cacheobjekten verwendeten 8-KB-Seiten.|  
+|**Verwendete Cacheobjekte**|Anzahl der verwendeten Cacheobjekte.|  
   
  Jeder Leistungsindikator in dem Objekt enthält die folgenden Instanzen:  
   
 |Plancache-Instanz|BESCHREIBUNG|  
 |-------------------------|-----------------|  
 |**_Total**|Informationen zu allen Typen von Cacheinstanzen.|  
-|**SQL-Pläne**|Abfragepläne, die von einer Ad-hoc- [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage, einschließlich automatisch parametrisierten Abfragen, oder durch [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen generiert wurden, die mit **sp_prepare** oder **sp_cursorprepare**vorbereitet wurden. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] speichert die Pläne für Ad-hoc- [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen für die spätere Wiederverwendung zwischen, wenn die identische [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung später ausgeführt wird. Vom Benutzer parametrisierte Abfragen (selbst wenn sie nicht ausdrücklich vorbereitet sind) werden ebenfalls mit Prepared SQL Plans überwacht.|  
-|**Objekt Pläne**|Abfragepläne, die durch Erstellen von gespeicherten Prozeduren, Funktionen oder Triggern generiert wurden.|  
+|**Sql-Pläne**|Abfragepläne, die von einer Ad-hoc- [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfrage, einschließlich automatisch parametrisierten Abfragen, oder durch [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen generiert wurden, die mit **sp_prepare** oder **sp_cursorprepare**vorbereitet wurden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] speichert die Pläne für Ad-hoc- [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen für die spätere Wiederverwendung zwischen, wenn die identische [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung später ausgeführt wird. Vom Benutzer parametrisierte Abfragen (selbst wenn sie nicht ausdrücklich vorbereitet sind) werden ebenfalls mit Prepared SQL Plans überwacht.|  
+|**Objektpläne**|Abfragepläne, die durch Erstellen von gespeicherten Prozeduren, Funktionen oder Triggern generiert wurden.|  
 |**Gebundene Strukturen**|Normalisierte Strukturen für Sichten, Regeln, berechnete Spalten und CHECK-Einschränkungen.|  
 |**Erweiterte gespeicherte Prozeduren**|Kataloginformationen für erweiterte Prozeduren.|  
-|**Temporäre Tabellen & Tabellen Variablen**|Cacheinformationen zu temporären Tabellen und Tabellenvariablen.|  
+|**Temporäre Tabellen & Tabellenvariablen**|Cacheinformationen zu temporären Tabellen und Tabellenvariablen.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Server Konfigurationsoptionen für den Server Arbeitsspeicher](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   

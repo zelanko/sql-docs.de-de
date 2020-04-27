@@ -16,10 +16,10 @@ ms.assetid: ef50ccf6-e360-4e4b-91b9-6706b8fabefa
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 48f94f7fcf823a9ed9acc519e393369e44b45302
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68771340"
 ---
 # <a name="sp_adddynamicsnapshot_job-transact-sql"></a>sp_adddynamicsnapshot_job (Transact-SQL)
@@ -75,7 +75,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @frequency_type = ] frequency_type`Die Häufigkeit, mit der der Auftrag für die Momentaufnahme gefilterter Daten geplant werden soll. *frequency_type* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
 |**2**|On-Demand-Streaming|  
@@ -84,7 +84,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |**Uhr**|Monatlich|  
 |**32**|Monatlich, relativ|  
 |**64**|Autostart|  
-|**128**|Serie|  
+|**128**|Wiederholt|  
   
 `[ @frequency_interval = ] frequency_interval`Der Zeitraum (in Tagen), in dem der Auftrag für die Momentaufnahme gefilterter Daten ausgeführt wird. *frequency_interval* ist vom Datentyp **int**und hat den Standardwert 1. der Wert hängt vom Wert *frequency_type*ab.  
   
@@ -92,15 +92,15 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
 |--------------------------------|-------------------------------------|  
 |**1**|*frequency_interval* wird nicht verwendet.|  
 |**4** (Standard)|Alle *frequency_interval* Tage, wobei der Standardwert täglich ist.|  
-|**88**|*frequency_interval* ist eine oder mehrere der folgenden (kombiniert mit einem [&#124; &#40;bitweisen or&#41; &#40;Transact-SQL-&#41;](../../t-sql/language-elements/bitwise-or-transact-sql.md) logischen Operator):<br /><br /> **1** = Sonntag &#124; **2** = Montag &#124; **4** = Dienstag &#124; **8** = Mittwoch &#124; **16** = Donnerstag #a4 **32** = Freitag #a5 **64** = Samstag|  
+|**88**|*frequency_interval* ist eine oder mehrere der folgenden (kombiniert mit einem [&#124; &#40;bitweisen or&#41; &#40;Transact-SQL-&#41;](../../t-sql/language-elements/bitwise-or-transact-sql.md) logischen Operator):<br /><br /> **1** = Sonntag &#124; **2** = Montag &#124; **4** = Dienstag &#124; **8** = Mittwoch &#124; **16** = Donnerstag &#124; **32** = Freitag &#124; **64** = Samstag|  
 |**Uhr**|Am *frequency_interval* Tag des Monats.|  
-|**32**|*frequency_interval* ist einer der folgenden:<br /><br /> **1** = Sonntag &#124; **2** = Montag &#124; **3** = Dienstag &#124; **4** = Mittwoch &#124; **5** = Donnerstag #a4 **6** = Freitag #a5 **7** = Samstag #a6 **8** = Tag #a7 **9** = Weekday #a8 **10** = Wochenendtag|  
+|**32**|*frequency_interval* ist einer der folgenden:<br /><br /> **1** = Sonntag &#124; **2** = Montag &#124; **3** = Dienstag &#124; **4** = Mittwoch &#124; **5** = Donnerstag &#124; **6** = Freitag &#124; **7** = Samstag &#124; **8** = Tag &#124; **9** = Weekday &#124; **10** = Wochenendtag|  
 |**64**|*frequency_interval* wird nicht verwendet.|  
 |**128**|*frequency_interval* wird nicht verwendet.|  
   
 `[ @frequency_subday = ] frequency_subday`Gibt die Einheiten für die *frequency_subday_interval*an. *frequency_subday* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
 |**2**|Sekunde|  
@@ -111,7 +111,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Das Vorkommen des Auftrags für eine Momentaufnahme gefilterter Daten in jedem Monat. Dieser Parameter wird verwendet, wenn *frequency_type* auf **32** (monatlich, relativ) festgelegt ist. *frequency_relative_interval* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**1** (Standard)|First (Erster)|  
 |**2**|Sekunde|  
@@ -133,14 +133,14 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**Name**|**int**|Identifiziert den Auftrag für eine Momentaufnahme gefilterter Daten in der [MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md) -Systemtabelle.|  
+|**id**|**int**|Identifiziert den Auftrag für eine Momentaufnahme gefilterter Daten in der [MSdynamicsnapshotjobs](../../relational-databases/system-tables/msdynamicsnapshotjobs-transact-sql.md) -Systemtabelle.|  
 |**dynamic_snapshot_jobname**|**sysname**|Name des Auftrags für eine Momentaufnahme gefilterter Daten.|  
 |**dynamic_snapshot_jobid**|**uniqueidentifier**|Identifiziert den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent-Auftrag auf dem Verteiler eindeutig.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_adddynamicsnapshot_job** wird bei der Mergereplikation für Veröffentlichungen verwendet, die einen parametrisierten Filter verwenden.  
   
 ## <a name="example"></a>Beispiel  
@@ -151,7 +151,7 @@ sp_adddynamicsnapshot_job [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen einer Momentaufnahme für eine Mergeveröffentlichung mit parametrisierten Filtern](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)   
- [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
+ [Parametrisierte Zeilen Filter](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [sp_dropdynamicsnapshot_job &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropdynamicsnapshot-job-transact-sql.md)   
  [sp_helpdynamicsnapshot_job &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)  
   

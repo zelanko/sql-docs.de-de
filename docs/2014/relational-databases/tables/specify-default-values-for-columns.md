@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8a02385a6cd12b85be1661c738488c000f810510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196723"
 ---
 # <a name="specify-default-values-for-columns"></a>Angeben von Standardwerten für Spalten
@@ -35,15 +35,15 @@ ms.locfileid: "68196723"
   
      [Sicherheit](#Security)  
   
--   **So geben Sie einen Standardwert an mit:**  
+-   **So geben Sie einen benutzerdefinierten Standardwert an mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Wenn die Eingabe im Feld **Standardwert** einen gebundenen Standardwert ersetzt (der ohne Klammern angezeigt wird), werden Sie aufgefordert, die Bindung des Standardwerts aufzuheben und ihn durch den neuen Standardwert zu ersetzen.  
   
@@ -53,12 +53,12 @@ ms.locfileid: "68196723"
   
 -   Wenn Sie ein Objekt bzw. eine Funktion eingeben, geben Sie den Namen des Objekts bzw. der Funktion ein, ohne ihn in Anführungszeichen einzuschließen.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Tabelle.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-specify-a-default-value-for-a-column"></a>So geben Sie einen Standardwert für eine Spalte an  
   
@@ -71,9 +71,9 @@ ms.locfileid: "68196723"
     > [!NOTE]  
     >  Um einen numerischen Standardwert einzugeben, geben Sie die Zahl ein. Geben Sie bei einem Objekt oder einer Funktion den entsprechenden Namen ein. Geben Sie für einen alphanumerischen Standardwert den Wert in einfachen Anführungszeichen ein.  
   
-4.  Klicken Sie im Menü **Datei** auf **Speichern** > _Tabellenname_.  
+4.  Klicken Sie im Menü **Datei** auf _Tabellenname_**speichern**.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-specify-a-default-value-for-a-column"></a>So geben Sie einen Standardwert für eine Spalte an  
   
@@ -95,6 +95,6 @@ ms.locfileid: "68196723"
   
     ```  
   
- Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-table-transact-sql).  
+ Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql).  
   
 ###  <a name="TsqlExample"></a>  

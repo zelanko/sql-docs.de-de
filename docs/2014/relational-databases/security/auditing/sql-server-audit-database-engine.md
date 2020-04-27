@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8286c918c224b92e1f391931569030a7218252f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68198423"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (Datenbank-Engine)
@@ -34,7 +34,7 @@ ms.locfileid: "68198423"
 ## <a name="sql-server-audit-components"></a>SQL Server Audit-Komponenten  
  Eine *Überwachung* besteht aus mehreren Elementen, die in einem einzelnen Paket für eine bestimmte Gruppe von Server- oder Datenbankaktionen zusammengefasst werden. Die Komponenten von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit geben zusammen eine Ausgabe aus, die als Überwachung bezeichnet wird, ebenso wie durch die Kombination von Berichtsdefinitionen mit Grafiken und Datenelementen ein Bericht erstellt wird.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Audit verwendet *Erweiterte Ereignisse* , um eine Überwachung zu erstellen. Weitere Informationen zu erweiterten Ereignissen finden Sie unter [Erweiterte Ereignisse](../../extended-events/extended-events.md).  
+ Die[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachung verwendet *erweiterte Ereignisse* , um eine Überwachung zu erstellen. Weitere Informationen zu erweiterten Ereignissen finden Sie unter [Erweiterte Ereignisse](../../extended-events/extended-events.md).  
   
 ### <a name="sql-server-audit"></a>SQL Server Audit  
  Das *SQL Server Audit* -Objekt erfasst eine einzelne Instanz von Aktionen auf Server-oder Datenbankebene und Gruppen von Aktionen, die überwacht werden sollen. Die Überwachung wird auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanzebene ausgeführt. Es können mehrere Überwachungen pro [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz vorliegen.  
@@ -51,7 +51,7 @@ ms.locfileid: "68198423"
 ### <a name="database-audit-specification"></a>Datenbank-Überwachungsspezifikation  
  Das *Datenbank-Überwachungsspezifikation* -Objekt gehört ebenfalls zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit. Sie können eine Datenbank-Überwachungsspezifikation pro [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank und pro Überwachung erstellen.  
   
- Die Datenbank-Überwachungsspezifikation listet viele Überwachungsaktionen auf Datenbankebene auf, die von erweiterten Ereignissen ausgelöst werden. Sie können einer Datenbank-Überwachungsspezifikation Überwachungsaktionsgruppen oder Überwachungsereignisse hinzufügen. Überwachungs *Ereignisse* sind atomarische Aktionen, die von der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Engine überwacht werden können. Überwachungs *Aktionsgruppen* sind vordefinierte Gruppen von Aktionen. Beide befinden sich im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbankbereich. Diese Aktionen werden an die Überwachung gesendet, die sie im Ziel aufzeichnet. Beziehen Sie in einer Benutzerdatenbank-Überwachungsspezifikation keine Objekte mit Serverbereich ein, wie Systemsichten.  
+ Die Datenbank-Überwachungsspezifikation listet viele Überwachungsaktionen auf Datenbankebene auf, die von erweiterten Ereignissen ausgelöst werden. Sie können einer Datenbank-Überwachungsspezifikation Überwachungsaktionsgruppen oder Überwachungsereignisse hinzufügen. *Überwachungsereignisse* sind die unteilbaren Aktionen, die von der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Engine überwacht werden können. *Überwachungsaktionsgruppen* sind vorab definierte Aktionsgruppen. Beide befinden sich im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbankbereich. Diese Aktionen werden an die Überwachung gesendet, die sie im Ziel aufzeichnet. Beziehen Sie in einer Benutzerdatenbank-Überwachungsspezifikation keine Objekte mit Serverbereich ein, wie Systemsichten.  
   
  Überwachungsaktionsgruppen auf Datenbankebene und Überwachungsaktionen werden im Thema [SQL Server Audit-Aktionsgruppen und -Aktionen](sql-server-audit-action-groups-and-actions.md)beschrieben.  
   
@@ -71,8 +71,7 @@ ms.locfileid: "68198423"
   
 -   Für das Lesen von Überwachungsdateien autorisierte Überwachungsleser müssen über eine Leseberechtigung verfügen.  
   
- Selbst wenn [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Daten in eine Datei schreibt, können andere Windows-Benutzer mit entsprechender Berechtigung die Überwachungsdatei lesen. 
-  [!INCLUDE[ssDE](../../../includes/ssde-md.md)] lässt eine exklusive Sperre, die Lesevorgänge verhindert, nicht zu.  
+ Selbst wenn [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Daten in eine Datei schreibt, können andere Windows-Benutzer mit entsprechender Berechtigung die Überwachungsdatei lesen. [!INCLUDE[ssDE](../../../includes/ssde-md.md)] lässt eine exklusive Sperre, die Lesevorgänge verhindert, nicht zu.  
   
  Da [!INCLUDE[ssDE](../../../includes/ssde-md.md)] auf die Datei zugreifen kann, können [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Anmeldungen mit CONTROL SERVER-Berechtigungen über [!INCLUDE[ssDE](../../../includes/ssde-md.md)] auf Überwachungsdateien zugreifen. Um alle Benutzer aufzuzeichnen, die die Überwachungsdatei lesen, definieren Sie eine Überwachung in master.sys.fn_get_audit_file. Dadurch werden die Anmeldenamen von Benutzern mit CONTROL SERVER-Berechtigung aufgezeichnet, die über [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]auf die Überwachungsdatei zugegriffen haben.  
   
@@ -138,15 +137,15 @@ ms.locfileid: "68198423"
 |||  
 |-|-|  
 |[ALTER AUTHORIZATION](/sql/t-sql/statements/alter-authorization-transact-sql)|[CREATE SERVER AUDIT](/sql/t-sql/statements/create-server-audit-transact-sql)|  
-|[Alter Database Audit Specification](/sql/t-sql/statements/alter-database-audit-specification-transact-sql)|[Create Server Audit Specification](/sql/t-sql/statements/create-server-audit-specification-transact-sql)|  
-|[ALTER SERVER AUDIT](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)|[Datenbank-Überwachungs Spezifikation löschen](/sql/t-sql/statements/drop-database-encryption-key-transact-sql)|  
-|[Alter Server Audit Specification](/sql/t-sql/statements/alter-server-audit-transact-sql)|[Löschen der Server Überwachung](/sql/t-sql/statements/drop-server-audit-transact-sql)|  
-|[Datenbank-Überwachungs Spezifikation erstellen](/sql/t-sql/statements/create-database-audit-specification-transact-sql)|[Drop Server Audit Specification](/sql/t-sql/statements/drop-server-audit-specification-transact-sql)|  
+|[ALTER DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/alter-database-audit-specification-transact-sql)|[Create Server Audit Specification](/sql/t-sql/statements/create-server-audit-specification-transact-sql)|  
+|[ALTER SERVER AUDIT](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)|[DROP DATABASE AUDIT SPECIFICATION](/sql/t-sql/statements/drop-database-encryption-key-transact-sql)|  
+|[ALTER SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/alter-server-audit-transact-sql)|[DROP SERVER AUDIT](/sql/t-sql/statements/drop-server-audit-transact-sql)|  
+|[Datenbank-Überwachungs Spezifikation erstellen](/sql/t-sql/statements/create-database-audit-specification-transact-sql)|[DROP SERVER AUDIT SPECIFICATION](/sql/t-sql/statements/drop-server-audit-specification-transact-sql)|  
   
 ### <a name="dynamic-views-and-functions"></a>Dynamische Sichten und Funktionen  
  In der folgenden Tabelle werden die dynamischen Sichten und Funktion aufgelistet, die Sie für eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachung verwenden können.  
   
-|Dynamische Sichten und Funktionen|BESCHREIBUNG|  
+|Dynamische Sichten und Funktionen|Beschreibung|  
 |---------------------------------|-----------------|  
 |[sys.dm_audit_actions](/sql/relational-databases/system-dynamic-management-views/sys-dm-audit-actions-transact-sql)|Gibt eine Zeile für jede Überwachungsaktion zurück, die im Überwachungsprotokoll festgehalten werden kann, und für jede Überwachungsaktionsgruppe, die als Teil von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit konfiguriert werden kann.|  
 |[sys.dm_server_audit_status](/sql/relational-databases/system-dynamic-management-views/sys-dm-server-audit-status-transact-sql)|Stellt Informationen über den aktuellen Status der Überwachung bereit.|  
@@ -156,13 +155,13 @@ ms.locfileid: "68198423"
 ### <a name="catalog-views"></a>Katalogsichten  
  In der folgenden Tabelle werden die Katalogsichten aufgeführt, die Sie für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachung verwenden können.  
   
-|Katalogansichten|BESCHREIBUNG|  
+|Katalogansichten|Beschreibung|  
 |-------------------|-----------------|  
-|[sys. database_ audit_specifications](/sql/relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql)|Enthält Informationen über die Datenbanküberwachungsspezifikationen in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachung auf einer Serverinstanz.|  
+|[sys.database_audit_specifications](/sql/relational-databases/system-catalog-views/sys-database-audit-specifications-transact-sql)|Enthält Informationen über die Datenbanküberwachungsspezifikationen in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachung auf einer Serverinstanz.|  
 |[sys.database_audit_specification_details](/sql/relational-databases/system-catalog-views/sys-database-audit-specification-details-transact-sql)|Enthält Informationen über die Datenbank-Überwachungsspezifikationen in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachung auf einer Serverinstanz für alle Datenbanken.|  
 |[sys.server_audits](/sql/relational-databases/system-catalog-views/sys-server-audits-transact-sql)|Enthält eine Zeile für jede [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachung in einer Serverinstanz.|  
 |[sys.server_audit_specifications](/sql/relational-databases/system-catalog-views/sys-server-audit-specifications-transact-sql)|Enthält Informationen über die Serverüberwachungsspezifikationen in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachung auf einer Serverinstanz.|  
-|[sys. server_audit_specifications_details](/sql/relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql)|Enthält Informationen über Details der Serverüberwachungsspezifikation (Aktionen) in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachung auf einer Serverinstanz.|  
+|[sys.server_audit_specifications_details](/sql/relational-databases/system-catalog-views/sys-server-audit-specification-details-transact-sql)|Enthält Informationen über Details der Serverüberwachungsspezifikation (Aktionen) in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachung auf einer Serverinstanz.|  
 |[sys.server_file_audits](/sql/relational-databases/system-catalog-views/sys-server-file-audits-transact-sql)|Enthält erweiterte Informationen über den Dateiüberwachungstyp in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachung auf einer Serverinstanz.|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -192,20 +191,20 @@ ms.locfileid: "68198423"
 ## <a name="related-tasks"></a>Related Tasks  
  [Erstellen einer Serverüberwachung und einer Serverüberwachungsspezifikation](create-a-server-audit-and-server-audit-specification.md)  
   
- [Erstellen einer Server Überwachung und einer Daten Bank Überwachungs Spezifikation](create-a-server-audit-and-database-audit-specification.md)  
+ [Erstellen einer Server- und Datenbank-Überwachungsspezifikation](create-a-server-audit-and-database-audit-specification.md)  
   
- [Anzeigen eines SQL Server Überwachungs Protokolls](view-a-sql-server-audit-log.md)  
+ [Anzeigen eines SQL Server-Überwachungsprotokolls](view-a-sql-server-audit-log.md)  
   
  [Schreiben von SQL-Serverüberwachungsereignissen in das Sicherheitsprotokoll](write-sql-server-audit-events-to-the-security-log.md)  
   
 ## <a name="topics-closely-related-to-auditing"></a>Themen zu Überwachung  
- [Server Eigenschaften &#40;Seite "Sicherheit"&#41;](../../../database-engine/configure-windows/server-properties-security-page.md)  
+ [Servereigenschaften &#40;Seite „Sicherheit“&#41;](../../../database-engine/configure-windows/server-properties-security-page.md)  
  Erklärt, wie die Anmeldeüberwachung für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]aktiviert wird. Die Überwachungsdatensätze werden im Windows-Anwendungsprotokoll gespeichert.  
   
  [C2-Überwachungsmodus (Serverkonfigurationsoption)](../../../database-engine/configure-windows/c2-audit-mode-server-configuration-option.md)  
  Erläutert den C2-Sicherheitskompatibilitäts-Überwachungsmodus in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- [Sicherheitsüberwachung-Ereignis Kategorie &#40;SQL Server Profiler&#41;](../../../relational-databases/event-classes/security-audit-event-category-sql-server-profiler.md)  
+ [Sicherheitsüberwachung-Ereigniskategorie &#40;SQL Server Profiler&#41;](../../../relational-databases/event-classes/security-audit-event-category-sql-server-profiler.md)  
  Erklärt die Überwachungsereignisse, die Sie in [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)]verwenden können. Weitere Informationen finden Sie unter [SQL Server Profiler](../../../tools/sql-server-profiler/sql-server-profiler.md).  
   
  [SQL-Ablaufverfolgung](../../sql-trace/sql-trace.md)  
@@ -214,11 +213,11 @@ ms.locfileid: "68198423"
  [DDL-Trigger](../../triggers/ddl-triggers.md)  
  Erklärt, wie Sie DDL-Trigger (Data Definition Language) zum Nachverfolgen von Änderungen an den Datenbanken verwenden können.  
   
- [Microsoft TechNet: SQL Server TechCenter: SQL Server 2005 Sicherheit und Schutz](https://go.microsoft.com/fwlink/?LinkId=101152)  
+ [Microsoft TechNet: SQL Server-TechCenter: SQL Server 2005 – Sicherheit und Schutz](https://go.microsoft.com/fwlink/?LinkId=101152)  
  Stellt aktuelle Informationen zur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Sicherheit bereit.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Überwachungs Aktionsgruppen und-Aktionen](sql-server-audit-action-groups-and-actions.md)   
- [SQL Server Überwachungsdaten Sätze](sql-server-audit-records.md)  
+ [SQL Server Audit-Datensätze](sql-server-audit-records.md)  
   
   

@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2159178c2fd26aca54d099f7345dbb62039ee34e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196427"
 ---
 # <a name="create-indexed-views"></a>Erstellen von indizierten Sichten
@@ -29,7 +29,7 @@ ms.locfileid: "68196427"
   
   
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
  Die folgenden Schritte sind zum Erstellen einer indizierten Sicht erforderlich und wichtig für eine erfolgreiche Implementierung der indizierten Sicht:  
   
 1.  Stellen Sie sicher, dass die SET-Optionen für alle vorhandenen Tabellen korrekt sind, auf die in der Sicht verwiesen wird.  
@@ -42,7 +42,7 @@ ms.locfileid: "68196427"
   
 5.  Erstellen Sie den eindeutigen gruppierten Index für die Sicht.  
   
-###  <a name="Restrictions"></a>Erforderliche SET-Optionen für indizierte Sichten  
+###  <a name="required-set-options-for-indexed-views"></a><a name="Restrictions"></a>Erforderliche SET-Optionen für indizierte Sichten  
  Das Auswerten desselben Ausdrucks kann im [!INCLUDE[ssDE](../../includes/ssde-md.md)] zu unterschiedlichen Ergebnissen führen, wenn bei der Ausführung der Abfrage unterschiedliche SET-Optionen aktiviert sind. Wenn die SET-Option CONCAT_NULL_YIELDS_NULL auf ON festgelegt ist, gibt beispielsweise der Ausdruck **'** abc **'** + NULL den Wert NULL zurück. Wenn die Option CONCAT_NULL_YIEDS_NULL allerdings auf OFF festgelegt ist, ergibt derselbe Ausdruck **'** abc **'**.  
   
  Um sicherzustellen, dass die Sichten ordnungsgemäß verwaltet werden können und konsistente Ergebnisse zurückgeben, sind für indizierte Sichten feste Werte für mehrere SET-Optionen erforderlich. Die SET-Optionen in der folgenden Tabelle müssen auf die Werte festgelegt werden, die in der Spalte "Requirements **dvalue** " angezeigt werden, wenn die folgenden Bedingungen eintreten:  
@@ -130,12 +130,12 @@ ms.locfileid: "68196427"
   
 -   Wenn die Sichtdefinition eine GROUP BY-Klausel enthält, kann der Schlüssel des eindeutigen gruppierten Index nur auf die Spalten verweisen, die in der GROUP BY-Klausel angegeben sind.  
   
-###  <a name="Recommendations"></a> Empfehlungen  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
  Wenn Sie in indizierten Sichten auf `datetime`- und `smalldatetime`-Zeichenfolgenliterale verweisen, wird empfohlen, das Literal mithilfe eines deterministischen Datenformats explizit in den gewünschten Datentyp zu konvertieren. Eine Liste der deterministischen Datenformatstile finden Sie unter [CAST und CONVERT &#40;Transact-SQL&#41;](/sql/t-sql/functions/cast-and-convert-transact-sql). Ausdrücke, die eine implizite Konvertierung von Zeichenfolgen in `datetime` oder `smalldatetime` umfassen, werden als nicht deterministisch angesehen. Der Grund hierfür ist, dass die Ergebnisse von den LANGUAGE- und DATEFORMAT-Einstellungen der Serversitzung abhängen. Die Ergebnisse des Ausdrucks `CONVERT (datetime, '30 listopad 1996', 113)` hängen beispielsweise von der LANGUAGE-Einstellung ab, da die Zeichenfolge '`listopad`' für verschiedene Monate in verschiedenen Sprachen steht. In ähnlicher Weise interpretiert `DATEADD(mm,3,'2000-12-01')`in dem Ausdruck [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Zeichenfolge `'2000-12-01'` basierend auf der DATEFORMAT-Einstellung.  
   
  Die implizierte Konvertierung von Nicht-Unicode-Zeichendaten zwischen Sortierungen wird auch als nicht deterministisch angesehen.  
   
-###  <a name="Considerations"></a>Überlegungen  
+###  <a name="considerations"></a><a name="Considerations"></a>Überlegungen  
  Die Einstellung der Option **large_value_types_out_of_row** der Spalten in einer indizierten Sicht wird von der Einstellung für die entsprechende Spalte in der Basistabelle vererbt. Dieser Wert wird mithilfe von [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql)festgelegt. Die Standardeinstellung für Spalten, die auf Grundlage von Ausdrücken erstellt werden, ist 0. Das bedeutet, dass umfangreiche Werte innerhalb der Zeile gespeichert werden.  
   
  Indizierte Sichten können für eine partitionierte Tabelle erstellt werden und selbst partitioniert werden.  
@@ -146,12 +146,12 @@ ms.locfileid: "68196427"
   
  Indizes für Tabellen und Sichten können deaktiviert werden. Wenn ein gruppierter Index für eine Tabelle deaktiviert wird, werden Indizes für die den Tabellen zugeordneten Sichten auch deaktiviert.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die CREATE VIEW-Berechtigung in der Datenbank und die ALTER-Berechtigung für das Schema, in dem die Sicht erstellt wird.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-create-an-indexed-view"></a>So erstellen Sie eine indizierte Sicht  
   
@@ -212,9 +212,9 @@ ms.locfileid: "68196427"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
- [SET ANSI_NULLS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
- [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
- [SET ANSI_WARNINGS &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
+ [Festlegen ANSI_NULLS &#40;Transact-SQL-&#41;](/sql/t-sql/statements/set-ansi-nulls-transact-sql)   
+ [Festlegen ANSI_PADDING &#40;Transact-SQL-&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql)   
+ [Festlegen ANSI_WARNINGS &#40;Transact-SQL-&#41;](/sql/t-sql/statements/set-ansi-warnings-transact-sql)   
  [SET ARITHABORT &#40;Transact-SQL-&#41;](/sql/t-sql/statements/set-arithabort-transact-sql)   
  [Festlegen CONCAT_NULL_YIELDS_NULL &#40;Transact-SQL-&#41;](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql)   
  [Festlegen NUMERIC_ROUNDABORT &#40;Transact-SQL-&#41;](/sql/t-sql/statements/set-numeric-roundabort-transact-sql)   

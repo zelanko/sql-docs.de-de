@@ -13,27 +13,27 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3da27154a824433d214dc495bf7f236ff104274f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68198939"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>Konfigurieren der Ressourcenkontrolle mit einer Vorlage
   Sie können die Ressourcenkontrolle mit einer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]bereitgestellten Vorlage konfigurieren.  
   
--   Vorbereitungen **:**[Berechtigungen](#Permissions)    
+-   **Vorbereitungen:**  [Berechtigungen](#Permissions)  
   
--   So **Erstellen Sie eine Arbeits Auslastungs Gruppe mit:**[einer Vorlage](#ConfRGTemplate)    
+-   **Erstellen einer Arbeitsauslastungsgruppe mit** [einer Vorlage](#ConfRGTemplate)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
  Gehen Sie wie folgt vor, um eine Vorlage zu öffnen und zu bearbeiten, mit der ein Ressourcenpool und eine Arbeitsauslastungsgruppe für diesen Pool erstellt werden. Darüber hinaus können Sie mit dieser Vorlage eine benutzerdefinierte Klassifizierungsfunktion erstellen, die neue Verbindungen entweder in die Standardgruppe oder in die von Ihnen erstellte Arbeitsauslastungsgruppe leitet.  
   
-###  <a name="Permissions"></a> Berechtigungen  
+###  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen der Ressourcenkontrolle in der Vorlage erfordern die CONTROL SERVER-Berechtigung.  
   
-##  <a name="ConfRGTemplate"></a>Konfigurieren von Resource Governor mithilfe einer Vorlage  
- **So konfigurieren Sie die Ressourcenkontrolle mithilfe einer Vorlage in[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
+##  <a name="configure-resource-governor-using-a-template"></a><a name="ConfRGTemplate"></a> Konfigurieren der Ressourcenkontrolle mit einer Vorlage  
+ **So konfigurieren Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  Klicken Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]im Menü **Ansicht** auf **Vorlagen-Explorer**.  
   
@@ -52,11 +52,11 @@ ms.locfileid: "68198939"
  [Aktivieren der Ressourcenkontrolle](enable-resource-governor.md)   
  [Ressourcenpool für die Ressourcenkontrolle](resource-governor-resource-pool.md)   
  [Arbeitsauslastungsgruppe der Ressourcenkontrolle](resource-governor-workload-group.md)   
- [Resource Governor Classifier-Funktion](resource-governor-classifier-function.md)   
- [Anzeigen von Resource Governor Eigenschaften](view-resource-governor-properties.md)   
- [Erstellen eines Ressourcenpools &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
- [Erstellen einer Arbeits Auslastungs Gruppe &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-workload-group-transact-sql)   
- [CREATE FUNCTION &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-function-transact-sql)   
+ [Klassifizierungsfunktion der Ressourcenkontrolle](resource-governor-classifier-function.md)   
+ [Anzeigen der Eigenschaften der Ressourcenkontrolle](view-resource-governor-properties.md)   
+ [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql)   
+ [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-workload-group-transact-sql)   
+ [CREATE FUNCTION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-function-transact-sql)   
  [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)  
   
   

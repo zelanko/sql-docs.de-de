@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 06bfc2148f7a367fa02d94109e9b5b8a250fd1f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68198979"
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>Anzeigen und Ändern der Eigenschaften von Pullabonnements
@@ -38,7 +38,7 @@ ms.locfileid: "68198979"
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Anzeigen der Eigenschaften von Pullabonnements vom Verleger oder Abonnenten aus ist über das Dialogfeld **Abonnementeigenschaften - \<Verleger>:\<Veröffentlichungsdatenbank>** möglich, das in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügbar ist. Weitere Eigenschaften können vom Abonnenten aus angezeigt werden, und das Ändern der Eigenschaften ist auf dem Abonnenten möglich. Das Anzeigen von Eigenschaften ist vom Verleger aus über die Registerkarte **Alle Abonnements** möglich, die im Replikationsmonitor verfügbar ist. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](monitor/start-the-replication-monitor.md).  
   
 #### <a name="to-view-pull-subscription-properties-from-the-publisher-in-management-studio"></a>So zeigen Sie Eigenschaften von Pullabonnements vom Verleger aus in Management Studio an  
@@ -71,7 +71,7 @@ ms.locfileid: "68198979"
   
 4.  Zeigen Sie die Eigenschaften an, und klicken Sie dann auf **OK**.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Pullabonnements können geändert und auf ihre Eigenschaften kann mithilfe gespeicherter Replikationsprozeduren programmgesteuert zugegriffen werden. Welche gespeicherten Prozeduren verwendet werden, hängt vom Typ der Veröffentlichung ab, zu der das Abonnement gehört.  
   
 #### <a name="to-view-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>So zeigen Sie die Eigenschaften eines Pullabonnements für eine Momentaufnahme- oder eine Transaktionsveröffentlichung an  
@@ -86,7 +86,7 @@ ms.locfileid: "68198979"
   
 3.  Führen Sie auf dem Verleger [sp_helpsubscription](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql)aus. Geben **@publication** Sie **@subscriber**und an.  
   
-4.  Führen Sie [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)auf dem Verleger aus, **@subscriber**und geben Sie an. Dadurch werden Informationen zu dem Abonnenten angezeigt.  
+4.  Führen Sie auf dem Verleger [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)aus, und geben Sie **@subscriber**verfügbar ist. Dadurch werden Informationen zu dem Abonnenten angezeigt.  
   
 #### <a name="to-change-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>So ändern Sie die Eigenschaften eines Pullabonnements für eine Momentaufnahme- oder eine Transaktionsveröffentlichung  
   
@@ -113,13 +113,13 @@ ms.locfileid: "68198979"
   
 3.  Führen Sie auf dem Verleger [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql) aus, um Abonnementinformationen anzuzeigen. Zum Zurückgeben von Informationen zu einem bestimmten Abonnement müssen Sie **@publication**, **@subscriber**und den Wert **Pull** für **@subscription_type**angeben.  
   
-4.  Führen Sie [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)auf dem Verleger aus, **@subscriber**und geben Sie an. Dadurch werden Informationen zu dem Abonnenten angezeigt.  
+4.  Führen Sie auf dem Verleger [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)aus, und geben Sie **@subscriber**verfügbar ist. Dadurch werden Informationen zu dem Abonnenten angezeigt.  
   
 #### <a name="to-change-the-properties-of-a-pull-subscription-to-a-merge-publication"></a>So ändern Sie die Eigenschaften eines Pullabonnements für eine Mergeveröffentlichung  
   
 1.  Führen Sie auf dem Abonnenten [sp_changemergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql)aus. Geben **@publication**Sie **@publisher**, **@publisher_db**,, die zu ändernde Abonnement **@property**Eigenschaft als und den neuen Wert **@value**als.  
   
-##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
  Die RMO-Klassen, mit denen Sie die Eigenschaften von Pullabonnements anzeigen oder ändern, hängen vom Typ der Veröffentlichung ab, für die das Pullabonnement erstellt wird.  
   
 #### <a name="to-view-or-modify-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>So zeigen Sie die Eigenschaften eines Pullabonnements für eine Momentaufnahme- oder eine Transaktionsveröffentlichung an oder ändern sie  
@@ -159,7 +159,7 @@ ms.locfileid: "68198979"
 8.  Trennen Sie alle Verbindungen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikations](monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [Replication Security Best Practices](security/replication-security-best-practices.md)   
  [Abonnieren von Veröffentlichungen](subscribe-to-publications.md)  
   

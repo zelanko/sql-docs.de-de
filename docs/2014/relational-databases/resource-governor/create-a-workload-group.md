@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1cd3b72418d0791d70d28d2dca0a434190a2d4a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68198926"
 ---
 # <a name="create-a-workload-group"></a>Erstellen einer Arbeitsauslastungsgruppe
@@ -27,19 +27,19 @@ ms.locfileid: "68198926"
   
 -   **Erstellen einer Arbeitsauslastungsgruppe mit:**  [SQL Server Management Studio](#CreWGProp), [Transact-SQL](#CreWGTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="LimitationsRestrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Einschränkungen  
  **REQUEST_MAX_MEMORY_GRANT_PERCENT**  
   
  Der durch die Indexerstellung für eine nicht ausgerichtete partitionierte Tabelle belegte Arbeitsspeicher ist proportional zur Anzahl der beteiligten Partitionen. Wenn der insgesamt erforderliche Arbeitsspeicher die Grenze übersteigt, die pro Abfrage von der Arbeitsauslastungsgruppe festgelegt wurde (REQUEST_MAX_MEMORY_GRANT_PERCENT), kann bei dieser Indexerstellung ein Fehler auftreten. Da die Standardarbeitsauslastungsgruppe Abfragen zulässt, die die pro Abfrage festgelegte Grenze mit dem mindestens für eine Kompatibilität mit SQL Server 2005 erforderlichen Arbeitsspeicher übersteigen, können Benutzer dieselbe Indexerstellung in der Standardarbeitsauslastungsgruppe ausführen. Voraussetzung ist, dass der Standardressourcenpool über ausreichend Gesamtarbeitsspeicher verfügt, um eine solche Abfrage ausführen zu können.  
   
  Bei der Indexerstellung darf mehr Arbeitsbereichsspeicher verwendet werden, als ursprünglich zugewiesen, um eine bessere Leistung zu erzielen. Die Ressourcenkontrolle unterstützt diese besondere Behandlung, die ursprüngliche und alle weiteren Speicherzuweisungen werden jedoch durch die Einstellungen für Arbeitsauslastungsgruppe und Ressourcenpool begrenzt.  
   
-###  <a name="Permissions"></a> Berechtigungen  
+###  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Zum Erstellen einer Arbeitsauslastungsgruppe ist die CONTROL SERVER-Berechtigung erforderlich.  
   
-##  <a name="CreWGProp"></a> Erstellen einer Arbeitsauslastungsgruppe in SQL Server Management Studio  
+##  <a name="create-a-workload-group-using-sql-server-management-studio"></a><a name="CreWGProp"></a> Erstellen einer Arbeitsauslastungsgruppe in SQL Server Management Studio  
  **So erstellen Sie Arbeitsauslastungsgruppen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  Erweitern Sie im Objekt-Explorer rekursiv den Knoten **Verwaltung** , bis einschließlich zum Ressourcenpool mit der zu ändernden Arbeitsauslastungsgruppe.  
@@ -56,7 +56,7 @@ ms.locfileid: "68198926"
   
 7.  Klicken Sie auf **OK**, um die Änderungen zu speichern.  
   
-##  <a name="CreWGTSQL"></a> Erstellen einer Arbeitsauslastungsgruppe mit Transact-SQL  
+##  <a name="create-a-workload-group-using-transact-sql"></a><a name="CreWGTSQL"></a> Erstellen einer Arbeitsauslastungsgruppe mit Transact-SQL  
  **So erstellen Sie Arbeitsauslastungsgruppen in [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
 1.  Führen Sie die CREATE WORKLOAD GROUP-Anweisung aus, und geben Sie dabei die festzulegenden Eigenschaftswerte an.  

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9db326ac27a7137f03f34e242c3c5c3931637f36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68198993"
 ---
 # <a name="conflict-detection-in-peer-to-peer-replication"></a>Konflikterkennung bei der Peer-zu-Peer-Replikation
@@ -100,6 +100,6 @@ ms.locfileid: "68198993"
     5.  Execute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql): Geben Sie ' p2p_continue_onconflict ' für @property den- `false` Parameter und @value den-Parameter an.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Peer-to-Peer Transactional Replication](peer-to-peer-transactional-replication.md)  
+ [Peer-zu-Peer-Transaktionsreplikation](peer-to-peer-transactional-replication.md)  
   
   

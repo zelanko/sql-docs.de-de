@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e4049cfa36020431e9cae8cbe2431c1c270d5deb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68212029"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>Anzeigen und Ändern der Verteiler- und Verlegereigenschaften
@@ -31,9 +31,9 @@ ms.locfileid: "68212029"
   
      [Empfehlungen](#Recommendations)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
--   **So können Sie Verteiler-und Verleger Eigenschaften anzeigen und ändern mit:**  
+-   **So können Sie Verteiler- und Verlegereigenschaften anzeigen und ändern mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -41,16 +41,16 @@ ms.locfileid: "68212029"
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Recommendations"></a> Empfehlungen  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
   
 -   Bei Verlegern, auf denen eine niedrigere Versionen als [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]ausgeführt wird, kann ein Benutzer der festen Serverrolle **sysadmin** auf der Seite **Abonnenten** Abonnenten registrieren. Ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]müssen Abonnenten für die Replikation nicht mehr explizit registriert werden.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-view-and-modify-distributor-properties"></a>So zeigen Sie die Verteilereigenschaften an oder ändern diese  
   
@@ -82,7 +82,7 @@ ms.locfileid: "68212029"
   
 4.  Ändern Sie die Eigenschaften nach Bedarf, und klicken Sie dann auf **OK**.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Die Verleger- und Verteilereigenschaften können mit gespeicherten Replikationsprozeduren programmgesteuert angezeigt werden.  
   
 #### <a name="to-view-distributor-and-distribution-database-properties"></a>So zeigen Sie Verleger- und Verteilerdatenbankeigenschaften an  
@@ -104,7 +104,7 @@ ms.locfileid: "68212029"
   
 4.  Führen Sie auf dem Verteiler [sp_changedistpublisher](/sql/relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql) aus, um mit dem Verteiler die Eigenschaften eines Verlegers zu ändern.  
   
-###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a>Beispiele (Transact-SQL)  
  Das folgende Beispielskript [!INCLUDE[tsql](../../includes/tsql-md.md)] gibt Informationen über den Verteiler und die Verteilerdatenbank zurück.  
   
  [!code-sql[HowTo#sp_helpdistributor](../../snippets/tsql/SQL15/replication/howto/tsql/changedistpub.sql#sp_helpdistributor)]  
@@ -122,7 +122,7 @@ ms.locfileid: "68212029"
   
  [!code-sql[HowTo#sp_changedistributor_password](../../snippets/tsql/SQL15/replication/howto/tsql/changedistpub.sql#sp_changedistributor_password)]  
   
-##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
   
 #### <a name="to-view-and-modify-distributor-properties"></a>So zeigen Sie die Verteilereigenschaften an oder ändern diese  
   
@@ -187,7 +187,7 @@ ms.locfileid: "68212029"
   
     5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationServer.ChangeDistributorPassword%2A> -Methode auf. Übergeben Sie den neuen Kennwortwert aus Schritt 5 für den *password* -Parameter.  
   
-###  <a name="PShellExample"></a>Beispiel (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a>Beispiel (RMO)  
  In diesem Beispiel wird gezeigt, wie Verteilungs- und Verteilungsdatenbankeigenschaften geändert werden.  
   
 > [!IMPORTANT]  
@@ -203,7 +203,7 @@ ms.locfileid: "68212029"
  [Verteilung konfigurieren](configure-distribution.md)   
  [Replikationsverwaltungsobjekte Konzepte](concepts/replication-management-objects-concepts.md)   
  [Informations Skript für Verteiler und Verleger](administration/distributor-and-publisher-information-script.md)   
- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
- [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikations](monitor/view-information-and-perform-tasks-replication-monitor.md)  
+ [Konzepte für gespeicherte System Prozeduren von](concepts/replication-system-stored-procedures-concepts.md)   
+ [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](monitor/view-information-and-perform-tasks-replication-monitor.md)  
   
   

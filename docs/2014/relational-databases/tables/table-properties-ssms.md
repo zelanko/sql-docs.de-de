@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196707"
 ---
 # <a name="table-properties"></a>Tabelleneigenschaften
@@ -36,7 +36,7 @@ ms.locfileid: "68196707"
   
 4.  [Seite "Speicher"](#Storage)  
   
-##  <a name="GeneralPage"></a> Seite Allgemein  
+##  <a name="general-page"></a><a name="GeneralPage"></a> Seite Allgemein  
  **Datenbank**  
  Name der Datenbank, die diese Tabelle enthält.  
   
@@ -80,12 +80,12 @@ ms.locfileid: "68196707"
  DISABLE  
  Verhindert die Sperrenausweitung in den meisten Fällen. Sperren auf Tabellenebene sind jedoch nicht völlig ausgeschlossen. Wenn Sie z. B. eine Tabelle scannen, die unter der serialisierbaren Isolationsstufe keinen gruppierten Index aufweist, muss [!INCLUDE[ssDE](../../includes/ssde-md.md)] eine Tabellensperre zulassen, damit die Datenintegrität gewahrt wird.  
   
- **Tabelle wird repliziert**  
- Gibt an, ob die Tabelle mit der Replikationsfunktion von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine andere Datenbank repliziert wurde. Mögliche Werte sind `True` und `False`.  
+ **Die Tabelle ist repliziert**  
+ Gibt an, ob die Tabelle mit der Replikationsfunktion von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine andere Datenbank repliziert wurde. Mögliche Werte sind `True` oder `False`.  
   
-##  <a name="ChangeTracking"></a>Änderungsnachverfolgung Seite  
+##  <a name="change-tracking-page"></a><a name="ChangeTracking"></a>Änderungsnachverfolgung Seite  
  **Änderungsnachverfolgung**  
- Gibt an, ob die Änderungsnachverfolgung für die Tabelle aktiviert ist. Standardwert: `False`.  
+ Gibt an, ob die Änderungsnachverfolgung für die Tabelle aktiviert ist. Der Standardwert ist `False`.  
   
  Diese Option ist nur dann verfügbar, wenn die Änderungsnachverfolgung für die Datenbank aktiviert ist.  
   
@@ -96,66 +96,66 @@ ms.locfileid: "68196707"
   
  Weitere Informationen zur Änderungsnachverfolgung finden Sie unter [Informationen zur Änderungsnachverfolgung &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md).  
   
-##  <a name="FileTable"></a>FILETABLE-Seite  
+##  <a name="filetable-page"></a><a name="FileTable"></a>FILETABLE-Seite  
  Zeigt die auf FileTables bezogenen Eigenschaften der Tabelle an. Weitere Informationen finden Sie unter [FileTables &#40;SQL Server&#41;](../blob/filetables-sql-server.md).  
   
- **Sortierung der FILETABLE-Namensspalte**  
+ **Sortierung der FileTable-Namensspalte**  
  Die Sortierung, die in einer FileTable auf die Spalte **Name** angewendet wird. Die Spalte **Name** enthält Datei- und Verzeichnisnamen.  
   
- **Name des FILETABLE-Verzeichnisses**  
+ **Name des FileTable-Verzeichnisses**  
  Der Stammordner für die FileTable.  
   
- **Aktivierter FILETABLE-Namespace**  
+ **Aktivierter FileTable-Namespace**  
  Wenn `True`, gibt dieser Wert an, dass die Tabelle eine FileTable ist. Wenn Sie diesen Wert in `False` ändern, ändern Sie die FileTable in eine gewöhnliche Benutzertabelle. Wenn Sie die Tabelle später wieder in eine FileTable ändern möchten, muss die Tabelle eine FileTable-Konsistenzprüfung bestehen, damit die Konvertierung erfolgreich ist.  
   
-##  <a name="Storage"></a>Seite "Speicher"  
+##  <a name="storage-page"></a><a name="Storage"></a>Seite "Speicher"  
  Zeigt die speicherbezogenen Eigenschaften der ausgewählten Tabelle an.  
   
 ### <a name="compression"></a>Komprimierung  
  **Komprimierungstyp**  
  Der Komprimierungstyp der Tabelle. Diese Eigenschaft ist nur für nicht partitionierte Tabellen verfügbar. Weitere Informationen finden Sie unter [Data Compression](../data-compression/data-compression.md).  
   
- **Partitionen mit Seiten Komprimierung**  
+ **Partitionen mit Seitenkomprimierung**  
  Die Nummern der Partitionen, für die die Seitenkomprimierung verwendet wird. Diese Eigenschaft ist nur für partitionierte Tabellen verfügbar.  
   
  **Nicht komprimierte Partitionen**  
  Die Nummern der nicht komprimierten Partitionen. Diese Eigenschaft ist nur für partitionierte Tabellen verfügbar.  
   
- **Partitionen mit Zeilen Komprimierung**  
+ **Partitionen mit Zeilenkomprimierung**  
  Die Nummern der Partitionen, für die die Zeilenkomprimierung verwendet wird. Diese Eigenschaft ist nur für partitionierte Tabellen verfügbar.  
   
 ### <a name="filegroup"></a>Dateigruppe  
- **Text Dateigruppe**  
+ **Textdateigruppe**  
  Name der Dateigruppe, die die Textdaten für die Tabelle enthält.  
   
  **Datei Gruppe**  
  Der Name der Dateigruppe, die die Tabelle enthält.  
   
- **Die Tabelle ist partitioniert.**  
+ **Die Tabelle ist partitioniert**  
  Mögliche Werte sind `True` und `False`.  
   
- **FILESTREAM-Datei Gruppe**  
+ **FILESTREAM-Dateigruppe**  
  Geben Sie den Namen der FILESTREAM-Datendateigruppe an, wenn die Tabelle eine `varbinary(max)`-Spalte mit FILESTREAM-Attribut aufweist. Der Standardwert entspricht der standardmäßigen FILESTREAM-Datendateigruppe.  
   
  Wenn die Tabelle keine FILESTREAM-Daten enthält, ist das Feld leer.  
   
 ### <a name="general"></a>Allgemein  
- **Vardecimal-Speicherformat ist aktiviert**  
+ **Das VarDecimal-Speicherformat ist aktiviert.**  
  Wenn `True`der Wert ist, gibt dieser schreibgeschützte `decimal` Wert `numeric` an, dass die Datentypen und mithilfe des vardecimal--Speicher Formats gespeichert werden. Um diese Option zu ändern, verwenden `vardecimal storage format` Sie die Option [sp_tableoption](/sql/relational-databases/system-stored-procedures/sp-tableoption-transact-sql). Das Vardecimal-Speicherformat ist veraltet. Verwenden Sie stattdessen die ROW-Komprimierung.  
   
- **Index Speicher**  
+ **Indexspeicher**  
  Der Speicherplatz in Megabytes, der von den Indizes in der Tabelle belegt wird. Dieser Wert schließt die Speicherverwendung für den XML-Index der Tabelle nicht mit ein. Verwenden Sie stattdessen [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) , wenn XML-Indizes zur Tabelle gehören.  
   
- **Zeilen Anzahl**  
+ **Zeilenanzahl**  
  Anzahl der Zeilen in der Tabelle.  
   
- **Datenbereich**  
+ **Datenspeicher**  
  Der Speicherplatz in Megabytes, der von den Daten in der Tabelle belegt wird.  
   
 ### <a name="partitioning"></a>Partitionierung  
  Dieser Abschnitt ist nur verfügbar, wenn die Tabelle partitioniert ist. Weitere Informationen finden Sie unter [partitionierte Tabellen und Indizes](../partitions/partitioned-tables-and-indexes.md).  
   
- **Partitions Spalte**  
+ **Partitionsspalte**  
  Der Name der Spalte, nach der die Tabelle partitioniert ist.  
   
  **Partitionsschema**  

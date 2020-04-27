@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b2956dba6bb5c5107c5421f32bfa354e603a5b18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68205465"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Senden von Daten als Tabellenwertparameter mit Data-at-Execution (ODBC)
@@ -183,7 +183,7 @@ from @Items
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>BESCHREIBUNG  
+### <a name="description"></a>Beschreibung  
  Dieses Beispiel zeigt, dass Sie mit ODBC TVP Zeilen Streaming, eine Zeile pro SQLPutData-Befehl, verwenden können, ähnlich wie bei der Verwendung von bcp. exe zum Laden von Daten in eine Datenbank.  
   
  Ändern Sie den Servernamen in der Verbindungszeichenfolge, bevor Sie das Beispiel erstellen.  
@@ -371,7 +371,7 @@ EXIT:
   
 ## <a name="example"></a>Beispiel  
   
-### <a name="description"></a>BESCHREIBUNG  
+### <a name="description"></a>Beschreibung  
  Dieses Beispiel zeigt, dass Sie mit ODBC TVP Zeilen Streaming, mehrere Zeilen pro aufzurufenden SQLPutData-Vorgang verwenden können, ähnlich wie bei der Verwendung von bcp. exe zum Laden von Daten in eine Datenbank.  
   
  Ändern Sie den Servernamen in der Verbindungszeichenfolge, bevor Sie das Beispiel erstellen.  

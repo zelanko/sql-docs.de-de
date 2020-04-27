@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9d9f3ab9f80c6f2c77153439cf554f0ae8598586
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68195775"
 ---
 # <a name="working-with-the-wmi-provider-for-configuration-management"></a>Arbeiten mit dem WMI-Anbieter für die Konfigurationsverwaltung
@@ -41,7 +41,7 @@ ms.locfileid: "68195775"
 \\.\root\Microsoft\SqlServer\ComputerManagement12\instance_name  
 ```  
   
- wobei `instance_name` in einer Standardinstallation von `MSSQLSERVER` standardmäßig auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] festgelegt wird.  
+ wobei `instance_name` in einer Standardinstallation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] standardmäßig auf `MSSQLSERVER` festgelegt wird.  
   
  **Hinweis:** Wenn Sie über die Windows-Firewall eine Verbindung herstellen, müssen Sie sicherstellen, dass Ihre Computer ordnungsgemäß konfiguriert sind. Weitere Informationen finden Sie im Artikel "Herstellen einer Verbindung über die Windows- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Firewall" in der Windows-Verwaltungsinstrumentation Dokumentation auf der MSDN- [Website](https://go.microsoft.com/fwlink/?linkid=15426).  
   

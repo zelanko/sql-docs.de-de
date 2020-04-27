@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a4a4d87ccae235aee1a11e58aff60fe8e34d6205
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68207095"
 ---
 # <a name="handling-errors-and-messages"></a>Behandlung von Fehlern und Meldungen
@@ -39,7 +39,7 @@ ms.locfileid: "68207095"
   
  Die ursprüngliche [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native API (DB-Library für C) ermöglicht einer Anwendung die Installation von Rückruf Fehlerbehandlung und Nachrichten Behandlung, die Fehler oder Meldungen zurückgeben. Einige [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen, wie PRINT, RAISERROR, DBCC und SET, geben ihre Ergebnisse an die Meldungshandlerfunktion der DB-Library anstatt an ein Resultset zurück. Jedoch verfügt die ODBC-API über keine solche Rückruffähigkeit. Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zurückgegebenen Nachrichten erkennt, wird der ODBC-Rückgabecode auf SQL_SUCCESS_WITH_INFO oder SQL_ERROR festgelegt, und die Nachricht wird als mindestens ein Diagnosedaten Satz zurückgegeben. Daher muss eine ODBC-Anwendung diese Rückgabecodes sorgfältig testen und **SQLGetDiagRec** aufrufen, um Nachrichten Daten abzurufen.  
   
- Informationen zur Ablaufverfolgung von Fehlern finden Sie unter [Data Access Tracing (Ablaufverfolgung für den Datenzugriff)](https://go.microsoft.com/fwlink/?LinkId=125805). Informationen zu Verbesserungen der in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]hinzugefügten Fehler Ablauf Verfolgung finden Sie unter Zugreifen auf [Diagnoseinformationen im Protokoll für erweiterte Ereignisse](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
+ Informationen zur Ablaufverfolgung von Fehlern finden Sie unter [Data Access Tracing (Ablaufverfolgung für den Datenzugriff)](https://go.microsoft.com/fwlink/?LinkId=125805). Informationen zu Verbesserungen der in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hinzugefügten Fehlerablaufverfolgung finden Sie unter [Zugreifen auf Diagnoseinformationen im Protokoll der erweiterten Ereignisse](../native-client/features/accessing-diagnostic-information-in-the-extended-events-log.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
@@ -54,6 +54,6 @@ ms.locfileid: "68207095"
 -   [Fehlermeldungen](error-messages.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Native Client &#40;ODBC-&#41;](../native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)  
   
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f34b06d90bfb8e028004beb03c3f4b9a87345c0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211371"
 ---
 # <a name="job-activity-monitor"></a>Auftragsaktivitätsmonitor
@@ -46,10 +46,10 @@ ms.locfileid: "68211371"
  Die dem Auftrag zugewiesene Auftragskategorie.  
   
  **Ausführbar**  
- **Ja** , wenn der Auftrag ausgeführt werden kann. **Nein** , wenn der Auftrag nicht ausgeführt werden kann. Ein Auftrag kann nicht ausgeführt werden, wenn er keine Schritte oder keinen Zielserver aufweist.  
+ **Ja** , wenn der Auftrag ausgeführt werden kann; **Nein** , wenn der Auftrag nicht ausgeführt werden kann. Ein Auftrag kann nicht ausgeführt werden, wenn er keine Schritte oder keinen Zielserver aufweist.  
   
  **Geplant**  
- **Ja** , wenn der Auftrag einem Auftrags Zeitplan zugewiesen ist; **Nein** , wenn der Auftrag über keinen Zeitplan verfügt.  
+ **Ja** , wenn der Auftrag einem Auftragszeitplan zugewiesen ist; **Nein** , wenn für den Auftrag kein Zeitplan vorhanden ist.  
   
  <sup>1</sup> Nur Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Server Rolle sysadmin und der Server Administrator Gruppe können Werte in dieser Spalte sehen. Mitglieder der SQLAgentOperatorRole-Rolle können keine Werte in dieser Spalte sehen.  
   

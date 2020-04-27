@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e1d08c7f660d4deee887f95a06a7848f6d40b2d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211337"
 ---
 # <a name="specify-a-target-server39s-location-sql-server-management-studio"></a>Angeben eines Zielserverstandorts r&#39;s (SQL Server Management Studio)
@@ -31,27 +31,27 @@ ms.locfileid: "68211337"
   
      [Sicherheit](#Security)  
   
--   **So geben Sie den Speicherort eines Zielservers an mit:**  
+-   **So geben Sie den Speicherort eines Zielservers an mit**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
  Wenn diese Aktion ausgeführt wird, wird die Registrierung bearbeitet. Die Registrierung sollte nicht manuell bearbeitet werden, da durch ungeeignete oder fehlerhafte Änderungen schwerwiegende Konfigurationsprobleme auf dem System verursacht werden können. Nur erfahrene Benutzer sollten deshalb den Registrierungs-Editor zum Bearbeiten der Registrierung verwenden. Weitere Informationen finden Sie in der Dokumentation zu Microsoft Windows.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
+ Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-specify-a-target-servers-location"></a>So geben Sie den Speicherort eines Zielservers an  
   
-1.  Klicken Sie im **Objekt-Explorer**auf das Pluszeichen, um den Masterserver zu erweitern, auf dem Sie den Speicherort des Zielservers angeben möchten.  
+1.  Klicken Sie im **Objekt-Explorer** auf das Pluszeichen, um den Masterserver zu erweitern, auf dem Sie den Speicherort des Zielservers angeben möchten.  
   
 2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent**, zeigen Sie auf **Multiserververwaltung**, und klicken Sie auf **Zielserver verwalten**.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "68211337"
   
 4.  Geben Sie in das Feld **Speicherort** einen Speicherort für den Server ein, und klicken Sie dann auf **OK**.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-specify-a-target-servers-location"></a>So geben Sie den Speicherort eines Zielservers an  
   

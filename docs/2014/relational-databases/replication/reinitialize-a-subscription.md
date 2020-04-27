@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3f148cc75ba7ae1987d0114186b76273f35e8d03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68199228"
 ---
 # <a name="reinitialize-a-subscription"></a>Erneutes Initialisieren eines Abonnements
@@ -34,10 +34,10 @@ ms.locfileid: "68199228"
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Das erneute Initialisieren eines Abonnements ist ein zweistufiger Prozess:  
   
-1.  Zunächst müssen die Abonnements für eine Veröffentlichung, die erneut initialisiert werden sollen, *gekennzeichnet* werden. Das Kennzeichnen der Abonnements für die erneute Initialisierung erfolgt im Dialogfeld **Abonnements erneut initialisieren** , das über die Ordner **Lokale Veröffentlichungen** und **Lokale Abonnements** in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verfügbar ist. Abonnements können darüber hinaus auch auf der Registerkarte **Alle Abonnements** und über den Veröffentlichungsknoten im Replikationsmonitor als erneut zu initialisieren gekennzeichnet werden. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](monitor/start-the-replication-monitor.md). Beim Kennzeichnen eines Abonnements für die erneute Initialisierung können Sie zwischen den folgenden Optionen auswählen:  
+1.  Zunächst müssen die Abonnements für eine Veröffentlichung, die erneut initialisiert werden sollen, *gekennzeichnet* werden. Das Kennzeichnen der Abonnements für die erneute Initialisierung erfolgt im Dialogfeld **Abonnements erneut initialisieren**, das über die Ordner **Lokale Veröffentlichungen** und **Lokale Abonnements** in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügbar ist. Abonnements können darüber hinaus auch auf der Registerkarte **Alle Abonnements** und über den Veröffentlichungsknoten im Replikationsmonitor als erneut zu initialisieren gekennzeichnet werden. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](monitor/start-the-replication-monitor.md). Beim Kennzeichnen eines Abonnements für die erneute Initialisierung können Sie zwischen den folgenden Optionen auswählen:  
   
      **Aktuelle Momentaufnahme verwenden**  
      Wählen Sie diese Option aus, wenn die aktuelle Momentaufnahme beim nächsten Ausführen des Verteilungs- oder Merge-Agents auf den Abonnenten angewendet werden soll. Wenn keine gültige Momentaufnahme verfügbar ist, kann diese Option nicht ausgewählt werden.  
@@ -102,7 +102,7 @@ ms.locfileid: "68199228"
   
 3.  Wählen Sie im Dialogfeld **Abonnements erneut initialisieren** die gewünschten Optionen aus, und klicken Sie dann auf **Für erneute Initialisierung kennzeichnen**.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Abonnements können mithilfe von gespeicherten Replikationsprozeduren programmgesteuert erneut initialisiert werden. Welche gespeicherte Prozedur verwendet wird, hängt dem Typ des Abonnements (d. h. Push- oder Pullabonnement) und vom Typ der Veröffentlichung ab, zu der das Abonnement gehört.  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>So initialisieren Sie ein Pullabonnement für eine Transaktionsveröffentlichung erneut  
@@ -139,29 +139,29 @@ ms.locfileid: "68199228"
   
 1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql)unter Angabe eines der folgenden Werte für **@automatic_reinitialization_policy**aus:  
   
-    -   **1** : Änderungen werden vom Abonnenten hochgeladen, bevor ein Abonnement gemäß der Änderung der Veröffentlichung automatisch erneut initialisiert wird.  
+    -   **1** &ndash; Änderungen werden vom Abonnenten hochgeladen, bevor eine automatische Neuinitialisierung des Abonnements durchgeführt wird, die durch eine Änderung an der Veröffentlichung erforderlich wurde.  
   
-    -   **0** -Änderungen auf dem Abonnenten werden verworfen, wenn ein Abonnement gemäß der Änderung der Veröffentlichung automatisch erneut initialisiert wird.  
+    -   **0** &ndash; Änderungen am Abonnenten werden verworfen, bevor eine automatische Neuinitialisierung des Abonnements durchgeführt wird, die durch eine Änderung an der Veröffentlichung erforderlich wurde.  
   
     > [!IMPORTANT]  
     >  Wenn Sie einen parametrisierten Filter hinzufügen, löschen oder ändern, können ausstehende Änderungen auf dem Abonnenten während der erneuten Initialisierung nicht auf den Verleger hochgeladen werden. Wenn Sie ausstehende Änderungen hochladen möchten, sollten Sie vor dem Ändern des Filters alle Abonnements synchronisieren.  
   
-     Weitere Informationen finden Sie unter [Create a Publication](publish/create-a-publication.md).  
+     Weitere Informationen finden Sie unter [Erstellen einer Veröffentlichung](publish/create-a-publication.md).  
   
 #### <a name="to-change-the-reinitialization-policy-for-an-existing-merge-publication"></a>So ändern Sie die Neuinitialisierungsrichtlinie für eine vorhandene Mergeveröffentlichung  
   
 1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)unter Angabe von **automatic_reinitialization_policy** für **@property** und einem der folgenden Werte für **@value**aus:  
   
-    -   **1** : Änderungen werden vom Abonnenten hochgeladen, bevor ein Abonnement gemäß der Änderung der Veröffentlichung automatisch erneut initialisiert wird.  
+    -   **1** &ndash; Änderungen werden vom Abonnenten hochgeladen, bevor eine automatische Neuinitialisierung des Abonnements durchgeführt wird, die durch eine Änderung an der Veröffentlichung erforderlich wurde.  
   
-    -   **0** -Änderungen auf dem Abonnenten werden verworfen, wenn ein Abonnement gemäß der Änderung der Veröffentlichung automatisch erneut initialisiert wird.  
+    -   **0** &ndash; Änderungen am Abonnenten werden verworfen, bevor eine automatische Neuinitialisierung des Abonnements durchgeführt wird, die durch eine Änderung an der Veröffentlichung erforderlich wurde.  
   
     > [!IMPORTANT]  
     >  Wenn Sie einen parametrisierten Filter hinzufügen, löschen oder ändern, können ausstehende Änderungen auf dem Abonnenten während der erneuten Initialisierung nicht auf den Verleger hochgeladen werden. Wenn Sie ausstehende Änderungen hochladen möchten, sollten Sie vor dem Ändern des Filters alle Abonnements synchronisieren.  
   
      Weitere Informationen finden Sie unter [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
   
-##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
  Einzelne Abonnements können für die erneute Initialisierung markiert werden, sodass während der nächsten Synchronisierung eine neue Momentaufnahme angewendet wird. Abonnements können mithilfe von Replikationsverwaltungsobjekten (RMO) programmgesteuert erneut initialisiert werden. Die zu verwendenden Klassen hängen Typ der Veröffentlichung, zu der das Abonnement gehört, und dem Typ des Abonnements ab (d. h. Push- oder Pullabonnement).  
   
 #### <a name="to-reinitialize-a-pull-subscription-to-a-transactional-publication"></a>So initialisieren Sie ein Pullabonnement für eine Transaktionsveröffentlichung erneut  
@@ -230,7 +230,7 @@ ms.locfileid: "68199228"
   
 5.  Synchronisieren Sie das Pushabonnement. Weitere Informationen finden Sie unter [Synchronize a Push Subscription](synchronize-a-push-subscription.md).  
   
-###  <a name="PShellExample"></a> Beispiele (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a>Beispiele (RMO)  
  Im folgenden Beispiel wird ein Pullabonnement für eine Transaktionsveröffentlichung erneut initialisiert.  
   
  [!code-csharp[HowTo#rmo_ReinitTranPullSub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_reinittranpullsub)]  

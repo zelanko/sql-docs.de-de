@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: de7ff72e7ce135ab477e3d254eeb26193c8bbc69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206043"
 ---
 # <a name="create-a-maintenance-plan"></a>Erstellen eines Wartungsplans
@@ -30,23 +30,23 @@ ms.locfileid: "68206043"
   
      [Sicherheit](#Security)  
   
--   **So erstellen Sie einen Wartungsplan mit:**  
+-   **Erstellen eines Wartungsplans mit**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
  Wenn Sie einen Multiserver-Wartungsplan erstellen möchten, muss eine Multiserverumgebung mit einem Masterserver und mindestens einem Zielserver konfiguriert sein. Multiserver-Wartungspläne müssen auf dem Masterserver erstellt und verwaltet werden. Diese Pläne können auf Zielservern zwar angezeigt, jedoch nicht verwaltet werden.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Sie müssen ein Mitglied der festen Server Rolle **sysadmin** sein, um Wartungspläne erstellen oder verwalten zu können.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-a-maintenance-plan-using-the-maintenance-plan-wizard"></a>So erstellen Sie einen Wartungsplan mithilfe des Wartungsplanungs-Assistenten  
   
@@ -64,11 +64,11 @@ ms.locfileid: "68206043"
   
 2.  Klicken Sie auf das Pluszeichen, um den Ordner **Verwaltung** zu erweitern.  
   
-3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Wartungspläne** , und klicken Sie anschließend auf **Neuer Wartungsplan**.  
+3.  Klicken Sie mit der rechten Maustaste auf den Ordner **Wartungspläne** , und wählen Sie **Neuer Wartungsplan**aus.  
   
 4.  Erstellen Sie einen Wartungsplan anhand der Schritte unter [Erstellen eines Wartungsplans &#40;Entwurfsoberfläche für Wartungspläne&#41;](create-a-maintenance-plan-maintenance-plan-design-surface.md).  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-create-a-maintenance-plan"></a>So erstellen Sie einen Wartungsplan  
   
@@ -135,14 +135,14 @@ ms.locfileid: "68206043"
   
     ```  
   
- Weitere Informationen finden Sie unter  
+ Weitere Informationen finden Sie unter:  
   
--   [sp_add_job &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
+-   [sp_add_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-job-transact-sql)  
   
--   [sp_add_jobstep &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
+-   [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)  
   
--   [sp_add_schedule &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)  
+-   [sp_add_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)  
   
--   [sp_attach_schedule &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
+-   [sp_attach_schedule &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql)  
   
   

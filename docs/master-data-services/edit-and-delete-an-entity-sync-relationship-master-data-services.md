@@ -11,10 +11,10 @@ ms.assetid: 9a5e37f3-352e-45a6-b4a0-6f98f83b4bd8
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4d8f95671bebf3d67368a35ab61f3c24392186fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728239"
 ---
 # <a name="edit-and-delete-an-entity-sync-relationship-master-data-services"></a>Bearbeiten und Löschen einer Entitäten-Synchronisierungspartnerschaft (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "73728239"
 ## <a name="prerequisites"></a>Voraussetzungen  
  Voraussetzungen zum Bearbeiten einer Entitäten-Synchronisierungspartnerschaft.  
   
--   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich "Systemverwaltung" zuzugreifen. Weitere Informationen finden Sie unter [Funktions Bereichs Berechtigungen &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich "Systemverwaltung" zuzugreifen. Weitere Informationen finden Sie unter [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
 -   Sie müssen ein Modelladministrator des Zielmodells sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
@@ -34,7 +34,7 @@ ms.locfileid: "73728239"
   
  Voraussetzungen zum Löschen einer Entitäten-Synchronisierungspartnerschaft.  
   
--   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich "Systemverwaltung" zuzugreifen. Weitere Informationen finden Sie unter [Funktions Bereichs Berechtigungen &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich "Systemverwaltung" zuzugreifen. Weitere Informationen finden Sie unter [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
 -   Sie müssen ein Modelladministrator des Zielmodells sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "73728239"
   
 -   Synchronisierung generiert keine Zielentitätstransaktionen/-verläufe.  
   
- **So bearbeiten Sie eine Entitäten-Synchronisierungs Partnerschaft**  
+ **So bearbeiten Sie eine Entitäten-Synchronisierungspartnerschaft**  
   
 1.  Klicken Sie im Master Data Manager auf **Systemverwaltung**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "73728239"
   
 6.  Klicken Sie auf **Speichern**.  
   
- **So löschen Sie eine Entitäten-Synchronisierungs Partnerschaft**  
+ **So löschen Sie eine Entitäten-Synchronisierungspartnerschaft**  
   
 1.  Klicken Sie im Master Data Manager auf **Systemverwaltung**.  
   
@@ -86,6 +86,6 @@ ms.locfileid: "73728239"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen und Ausführen einer Entitäten-Synchronisierungs Partnerschaft &#40;Master Data Services&#41;](../master-data-services/create-and-execute-an-entity-sync-relationship-master-data-services.md)   
- [Die Entitäten-Synchronisierungs Beziehung &#40;Master Data Services&#41;](../master-data-services/entity-sync-relationship-master-data-services.md)  
+ [Entitäten-Synchronisierungspartnerschaft &#40;Master Data Services&#41;](../master-data-services/entity-sync-relationship-master-data-services.md)  
   
   

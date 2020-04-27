@@ -18,10 +18,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ec1c7205597224e5fca27942ca25ad4e197ec0d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68198410"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Erstellen einer Serverüberwachung und einer Serverüberwachungsspezifikation
@@ -33,7 +33,7 @@ ms.locfileid: "68198410"
   
      [Einschränkungen](#Restrictions)  
   
-     [Security](#Security)  
+     [Sicherheit](#Security)  
   
 -   **So erstellen Sie eine Serverüberwachung und eine Serverüberwachungsspezifikation mit**  
   
@@ -41,17 +41,17 @@ ms.locfileid: "68198410"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Eine Überwachung muss vorhanden sein, bevor Sie eine Serverüberwachungsspezifikation für sie erstellen. Wenn eine Serverüberwachungsspezifikation erstellt wird, befindet sie sich im deaktivierten Zustand.  
   
 -   Die CREATE SERVER AUDIT-Anweisung liegt im Bereich einer Transaktion. Wird ein Rollback für die Transaktion ausgeführt, so wird auch für die Anweisung ein Rollback durchgeführt.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
   
 -   Um eine Serverüberwachung zu erstellen, zu ändern oder zu löschen, benötigen Prinzipale die ALTER ANY SERVER AUDIT-Berechtigung oder die CONTROL SERVER-Berechtigung.  
   
@@ -59,13 +59,13 @@ ms.locfileid: "68198410"
   
 -   Sobald eine Serverüberwachungsspezifikation erstellt wurde, kann sie von Prinzipalen mit den folgenden Berechtigungen eingesehen werden: CONTROL SERVER oder ALTER ANY SERVER AUDIT. Außerdem kann sie von Prinzipalen eingesehen werden, die über das „sysadmin“-Konto oder expliziten Zugriff auf die Überwachung verfügen.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-a-server-audit"></a>So erstellen Sie eine Serverüberwachung  
   
-1.  Erweitern Sie im Objekt-Explorer den Ordner **Sicherheit** .  
+1.  Erweitern Sie in Objekt-Explorer den Ordner **Sicherheit** .  
   
-2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Überwachungen**, und wählen Sie dann **Neue Überwachung...** aus.  
+2.  Klicken Sie **mit der rechten** Maustaste auf den Ordner Überwachungen, und wählen Sie neue über **Prüfung**aus.  
   
      Die folgenden Optionen befinden sich im Dialogfeld **Überwachung erstellen** auf der Seite **Allgemein** :  
   
@@ -76,13 +76,13 @@ ms.locfileid: "68198410"
      Gibt in Millisekunden den Zeitraum an, der verstreichen kann, bevor die Verarbeitung von Überwachungsaktionen erzwungen wird.  Der Wert 0 steht für eine synchrone Übermittlung. Der standardmäßige Mindestwert beträgt **1000** (1 Sekunde). Der maximale Wert beträgt 2.147.483.647 (2.147.483,647 Sekunden oder 24 Tage, 20 Stunden, 31 Minuten und 23,647 Sekunden).  
   
      **Bei Überwachungsprotokollfehler:**  
-     **Fortsetzen**  
+     **Continue**  
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Vorgänge werden fortgesetzt. Überwachungsdatensätze werden nicht beibehalten. Die Überwachung versucht weiterhin, Ereignisse zu protokollieren und wird fortgesetzt, wenn die Fehlerbedingung aufgelöst wurde. Durch Auswählen der **Continue** -Option können unter Umständen unüberwachte Aktivitäten ausgeführt werden, die gegen Ihre Sicherheitsrichtlinien verstoßen. Wählen Sie diese Option aus, wenn die weitere Verwendung von [!INCLUDE[ssDE](../../../includes/ssde-md.md)] wichtiger als die Beibehaltung einer vollständigen Überwachung ist. Dies ist die Standardauswahl.  
   
      **Herunterfahren des Servers**  
      Erzwingt, dass ein Server heruntergefahren wird, wenn die Serverinstanz, die in das Ziel schreiben soll, keine Daten in das Überwachungsziel schreiben kann. Die Anmeldung, die dies ausgibt, muss über die `SHUTDOWN`-Berechtigung verfügen. Wenn die Anmeldung nicht über diese Berechtigung verfügt, schlägt diese Funktion fehl, und es wird eine Fehlermeldung ausgegeben. Es treten keine überwachten Ereignisse auf. Wählen Sie diese Option aus, wenn ein Überwachungsfehler die Sicherheit oder die Integrität des Systems beeinträchtigen konnte.  
   
-     **Fehler bei Vorgang**  
+     **Fehler Vorgang**  
      In Fällen, in denen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit keine Informationen in das Überwachungsprotokoll schreiben kann, bewirkt diese Option, dass Datenbankaktionen fehlschlagen, wenn sie andernfalls überwachte Ereignisse verursachen würden. Es treten keine überwachten Ereignisse auf. Aktionen, die keine überwachten Ereignisse verursachen, können fortgesetzt werden. Die Überwachung versucht weiterhin, Ereignisse zu protokollieren und wird fortgesetzt, wenn die Fehlerbedingung aufgelöst wurde. Wählen Sie diese Option aus, wenn die Beibehaltung einer vollständigen Überwachung wichtiger als der Vollzugriff auf [!INCLUDE[ssDE](../../../includes/ssde-md.md)]ist.  
   
     > [!IMPORTANT]  
@@ -94,7 +94,7 @@ ms.locfileid: "68198410"
      **Dateipfad**  
      Gibt den Speicherort des Ordners an, in den Überwachungsdaten geschrieben werden, wenn das **Überwachungsziel** eine Datei ist.  
   
-     **Auslassungspunkte (…)**  
+     **Ellipse (...)**  
      Öffnet das Dialogfeld **Ordner suchen-**_server_name_ , um einen Dateipfad anzugeben oder einen Ordner zu erstellen, in den die Überwachungs Datei geschrieben wird.  
   
      **Maximale Grenze für Überwachungsdatei:**  
@@ -154,7 +154,7 @@ ms.locfileid: "68198410"
   
 3.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-create-a-server-audit"></a>So erstellen Sie eine Serverüberwachung  
   

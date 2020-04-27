@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fdbca3ed012e082c899a5015faabc5c0019fcd75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68197106"
 ---
 # <a name="stored-procedures-database-engine"></a>Gespeicherte Prozeduren (Datenbank-Engine)
-  Eine gespeicherte Prozedur in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist eine Gruppe von einer oder mehreren [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen oder ein Verweis auf [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] eine CLR-Methode (Common Language Runtime). Prozeduren sind mit Konstrukten anderer Programmiersprachen vergleichbar, da sie folgende Fähigkeiten aufweisen:  
+  Eine gespeicherte Prozedur in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entspricht einer oder mehreren [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen oder einem Verweis auf eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-CLR-Methode (Common Language Runtime). Prozeduren sind mit Konstrukten anderer Programmiersprachen vergleichbar, da sie folgende Fähigkeiten aufweisen:  
   
 -   Annehmen von Eingabeparametern und Zurückgeben mehrerer Werte in Form von Ausgabeparametern an das aufrufende Programm.  
   
@@ -59,16 +59,15 @@ ms.locfileid: "68197106"
   
 ## <a name="types-of-stored-procedures"></a>Typen von gespeicherten Prozeduren  
  Benutzerdefiniert  
- Eine benutzerdefinierte Prozedur kann in einer benutzerdefinierten Datenbank sowie in allen Systemdatenbanken außer der **Ressourcendatenbank** erstellt werden. Die Prozedur kann entweder [!INCLUDE[tsql](../../includes/tsql-md.md)] in oder als Verweis auf eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] CLR-Methode (Common Language Runtime) entwickelt werden.  
+ Eine benutzerdefinierte Prozedur kann in einer benutzerdefinierten Datenbank sowie in allen Systemdatenbanken außer der **Ressourcendatenbank** erstellt werden. Die Prozedur kann entweder in [!INCLUDE[tsql](../../includes/tsql-md.md)] oder als Verweis auf eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-CLR-Methode (Common Language Runtime) entwickelt werden.  
   
- Temporär  
+ Temporäre Prozeduren  
  Temporäre Prozeduren stellen eine Art benutzerdefinierter Prozedur dar. Temporäre Prozeduren verhalten sich wie dauerhafte Prozeduren, mit der Ausnahme, dass temporäre Prozeduren in **tempdb**gespeichert werden. Es gibt zwei Arten von temporären Prozeduren: lokale und globale temporäre Prozeduren. Sie unterscheiden sich hinsichtlich ihrer Namen, ihrer Sichtbarkeit und ihrer Verfügbarkeit. Die Namen lokaler temporärer Prozeduren beginnen mit einem einzelnen Nummernzeichen (#). Sie sind nur im Rahmen der aktuellen Benutzerverbindung sichtbar und werden gelöscht, sobald die Verbindung getrennt wird. Die Namen globaler temporärer Prozeduren beginnen mit zwei Nummernzeichen (##). Nachdem sie erstellt wurden, sind sie für jeden Benutzer sichtbar und werden am Ende der letzten Sitzung, in der die Prozedur verwendet wird, gelöscht.  
   
  System  
  Systemprozeduren sind in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]enthalten. Sie werden physisch in der internen, ausgeblendeten **Ressourcendatenbank** gespeichert und logisch im **sys** -Schema jeder system- und benutzerdefinierten Datenbank angezeigt. Außerdem verfügt die **msdb-Datenbank** über gespeicherte Systemprozeduren im **dbo** -Schema, die zum Planen von Warnungen und Aufträgen verwendet werden. Da Systemprozeduren mit dem Präfix **sp_** beginnen, wird davon abgeraten, dieses Präfix beim Benennen benutzerdefinierter Prozeduren zu verwenden. Eine vollständige Liste der systemgespeicherten Prozeduren finden Sie unter [Systemgespeicherte Prozeduren &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql).  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die Systemprozeduren, die eine Schnittstelle von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu externen Programmen für verschiedene Wartungsaktivitäten bereitstellen. Diese erweiterten Prozeduren verwenden das Präfix xp_. Eine vollständige Liste der erweiterten Prozeduren finden Sie unter [Gespeicherte allgemeine erweiterte Prozeduren &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die Systemprozeduren, die eine Schnittstelle von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu externen Programmen für verschiedene Wartungsaktivitäten bereitstellen. Diese erweiterten Prozeduren verwenden das Präfix xp_. Eine vollständige Liste der erweiterten Prozeduren finden Sie unter [Gespeicherte allgemeine erweiterte Prozeduren &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql).  
   
  Erweiterte benutzerdefinierte Prozeduren  
  Mit erweiterten gespeicherten Prozeduren können externe Routinen in einer Programmiersprache wie C erstellt werden. Diese Prozeduren sind DLLs, die von einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dynamisch geladen und ausgeführt werden können.  
@@ -93,6 +92,6 @@ ms.locfileid: "68197106"
 |Beschreibt, wie die Abhängigkeiten von einer gespeicherten Prozedur angezeigt werden.|[Anzeigen der Abhängigkeiten einer gespeicherten Prozedur](view-the-dependencies-of-a-stored-procedure.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- [CLR-gespeicherte Prozeduren](../../database-engine/dev-guide/clr-stored-procedures.md)  
+ [Gespeicherte CLR-Prozeduren](../../database-engine/dev-guide/clr-stored-procedures.md)  
   
   

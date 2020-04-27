@@ -16,10 +16,10 @@ ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0ba0e2384ec63d29d3a5030c0b018998896dc8cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68769182"
 ---
 # <a name="sp_addmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
@@ -74,18 +74,18 @@ sp_addmergefilter [ @publication = ] 'publication'
   
 `[ @filter_type = ] filter_type`Gibt den hinzu zufügenden Filtertyp an. *filter_type* ist vom Datentyp **tinyint**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Nur Joinfilter. Erforderlich zur unter [!INCLUDE[ssEW](../../includes/ssew-md.md)] Stützung von-Abonnenten.|  
 |**2**|Nur logische Datensatzbeziehung.|  
-|**€**|Sowohl Joinfilter als auch logische Datensatzbeziehung.|  
+|**3**|Sowohl Joinfilter als auch logische Datensatzbeziehung.|  
   
  Weitere Informationen finden Sie unter [Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen](../../relational-databases/replication/merge/group-changes-to-related-rows-with-logical-records.md).  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_addmergefilter** wird bei der Mergereplikation verwendet.  
   
  **sp_addmergefilter** können nur mit Tabellen Artikeln verwendet werden. Artikel für Sichten und indizierte Sichten werden nicht unterstützt.  
@@ -107,9 +107,9 @@ sp_addmergefilter [ @publication = ] 'publication'
  Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_addmergefilter**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
+ [Definieren eines Artikels](../../relational-databases/replication/publish/define-an-article.md)   
  [Definieren und Ändern eines Joinfilters zwischen Mergeartikeln](../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
- [Join Filters](../../relational-databases/replication/merge/join-filters.md)   
+ [Joinfilter](../../relational-databases/replication/merge/join-filters.md)   
  [sp_changemergefilter &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changemergefilter-transact-sql.md)   
  [sp_dropmergefilter &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
  [sp_helpmergefilter &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   

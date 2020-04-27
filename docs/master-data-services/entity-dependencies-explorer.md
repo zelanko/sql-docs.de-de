@@ -13,10 +13,10 @@ ms.assetid: 9d922118-1412-4a9d-9c02-70d6c48d6c0d
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 86b9a2ed9738790cf9747fbad104074393fd33d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729275"
 ---
 # <a name="entity-dependencies-explorer"></a>Entitätsabhängigkeiten-Explorer
@@ -24,8 +24,7 @@ ms.locfileid: "73729275"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   
-
-  [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] In 2016 wurde eine neue Explorer-Seite namens „Entitätsabhängigkeiten“ hinzugefügt, die alternative Möglichkeiten zur Visualisierung von Beziehungen zwischen Entitätselementen innerhalb eines Modells bietet. Die Visualisierung basiert auf den Werten ihrer domänenbasierten Attribute (DBA), ohne dass eine abgeleitete Hierarchie definiert werden muss.   
+[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] In 2016 wurde eine neue Explorer-Seite namens „Entitätsabhängigkeiten“ hinzugefügt, die alternative Möglichkeiten zur Visualisierung von Beziehungen zwischen Entitätselementen innerhalb eines Modells bietet. Die Visualisierung basiert auf den Werten ihrer domänenbasierten Attribute (DBA), ohne dass eine abgeleitete Hierarchie definiert werden muss.   
   
 Sie hilft beim Beantworten folgender Frage: „ Wer verwendet meine Entität und wie?“. Die Ansicht ist ähnlich der Explorer-Seite der abgeleiteten Hierarchie, umfasst jedoch mehr. Sie zeigt alle DBA-Beziehungen an, nicht nur die, die als Teil einer bestimmten Hierarchie definiert sind. Eine Hierarchiedefinition ist nicht erforderlich, da die angezeigte hierarchische Struktur einfach aus vorhandenen DBAs abgeleitet wird.  
   

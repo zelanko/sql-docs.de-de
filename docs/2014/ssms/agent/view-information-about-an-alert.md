@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c5567abc0893bd183c2468f82278a014e2005113
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211297"
 ---
 # <a name="view-information-about-an-alert"></a>View Information About an Alert
@@ -32,20 +32,20 @@ ms.locfileid: "68211297"
   
      [Sicherheit](#Security)  
   
--   **So zeigen Sie Informationen zu einer Warnung an mit:**  
+-   **So zeigen Sie Informationen zu einer Warnung an mit**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** Information über eine Warnung anzeigen. Andere Benutzer müssen Mitglieder der festen Datenbankrolle **SQLAgentOperatorRole** in der **msdb** -Datenbank sein.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-view-information-about-an-alert"></a>So zeigen Sie Informationen zu einer Warnung an  
   
@@ -57,7 +57,7 @@ ms.locfileid: "68211297"
   
 4.  Klicken Sie mit der rechten Maustaste auf die Warnung mit den von Ihnen gewünschten Informationen, die Sie anzeigen möchten, und wählen Sie **Eigenschaften**aus.  
   
-     Weitere Informationen zu den verfügbaren Optionen im Dialogfeld Eigenschaften von _alert_name_**Warnung** finden Sie unter:  
+     Weitere Informationen zu den im Dialogfeld _Eigenschaften von Warnung_**Warnungsname** enthaltenen verfügbaren Optionen finden Sie unter:  
   
     -   [Warnungs Eigenschaften-neue Warnung &#40;Seite "Allgemein"&#41;](../../integration-services/general-page-of-integration-services-designers-options.md)  
   
@@ -65,11 +65,11 @@ ms.locfileid: "68211297"
   
     -   [Warnungs Eigenschaften: Seite "neue Warnung &#40;Optionen"&#41;](alert-properties-new-alert-options-page.md)  
   
-    -   [Warnungs Eigenschaften &#40;Seite "Verlauf"&#41;](alert-properties-history-page.md)  
+    -   [Warnungseigenschaften &#40;Seite „Verlauf“&#41;](alert-properties-history-page.md)  
   
 5.  Wenn Sie fertig sind, klicken Sie auf **OK**.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-view-information-about-an-alert"></a>So zeigen Sie Informationen zu einer Warnung an  
   

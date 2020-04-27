@@ -17,27 +17,27 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b32db07a67e309d304aeb145be59fd79c0af5f49
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174211"
 ---
 # <a name="browsing-a-neural-network-model"></a>Durchsuchen von Neural Network-Modellen
   Wenn Sie ein neuronales Netzwerk oder ein logistisches Regressionsmodell mithilfe von **Durchsuchen** öffnen, wird das Modell in einem interaktiven Viewer angezeigt, der mit dem Viewer für neuronale Netzwerkmodelle in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] vergleichbar ist. Mithilfe des Viewers können Sie Korrelationen untersuchen und Informationen zu den Mustern im Modell und zu den zugrunde liegenden Daten abrufen.
 
-##  <a name="BKMK_Tabs"></a>Untersuchen des Modells
+##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>Untersuchen des Modells
  Modelle, die auf den [!INCLUDE[msCoName](../includes/msconame-md.md)]-Algorithmen "Neural Network" oder "Logistic Regression" basieren, ähneln sich insofern, als sie Daten als eine Gruppe von Verbindungen zwischen bekannten Eingaben und Ausgaben analysieren. Mit dem **Durchsuchen**-Viewer können Sie diese Verbindungen mithilfe der folgenden Steuerelemente untersuchen:
 
 -   [Variablen](#BKMK_Variables)
 
--   [Eingaben](#BKMK_Inputs)
+-   [Ungs](#BKMK_Inputs)
 
 -   [Ausgaben](#BKMK_Outputs)
 
  Zum Testen dieses Viewers können Sie ein Modell mit dem [Assistent zum Klassifizieren &#40;Data Mining-Add-Ins für Excel&#41;](classify-wizard-data-mining-add-ins-for-excel.md) erstellen und die Option **Erweitert** verwenden, um den Algorithmus im Dialogfeld **Algorithmusparameter** in Microsoft Logistic Regression zu ändern.
 
-###  <a name="BKMK_Variables"></a>Instan
+###  <a name="variables"></a><a name="BKMK_Variables"></a>Instan
  Im Bereich **Variablen** wird eine Liste der Eingabevariablen in der Reihenfolge angezeigt, in der sie sich auf das Modell auswirken. Sie verwenden die Steuerelemente **Eingabe** und **Ausgabe**, um das Modell zu filtern. Dadurch können Sie beeinflussen, welche Variablen angezeigt und in welcher Reihenfolge sie angezeigt werden.
 
  Mit diesem Viewer können Sie die Faktoren untersuchen, die den größten Einfluss darauf haben, ob ein Kunde eher der Fahrradkäuferkategorie oder der Nichtkäuferkategorie angehört.
@@ -72,17 +72,17 @@ ms.locfileid: "78174211"
 
      Eine QuickInfo wird angezeigt, die ein Ergebnis für *Wichtigkeit*, ein Ergebnispaar für *Wahrscheinlichkeit* und ein Ergebnispaar für *Prognosegüte* enthält.
 
-    -   Die **Wichtigkeit** wird für das gesamte Dataset berechnet und identifiziert das Attribut, das bei allen Eingaben am meisten mit dem Zielergebnis korreliert. Der Viewer sortiert die Werte im Diagramm nach den Wichtigkeitsbewertungen.
+    -   Die **Wichtigkeit** wird für das gesamte Dataset berechnet. Sie identifiziert das Attribut, das auf der Grundlage aller Eingaben die stärkste Korrelation mit dem Zielergebnis aufweist. Der Viewer sortiert die Werte im Diagramm nach den Wichtigkeitsbewertungen.
 
-    -   Die **Wahrscheinlichkeit** wird für jeden Satz von Attribut/Wert-Paaren für die Ziel Ergebnisse über das gesamte Dataset berechnet.
+    -   Die **Wahrscheinlichkeit** wird für die einzelnen Sätze von Attribut/Wert-Paaren im gesamten Dataset berechnet und in den Zielergebnissen ausgegeben.
 
-    -   **Lift (Lift** ) gibt Aufschluss darüber, wie nützlich dieses Attribut/Wert-Paar für das herauf Stufen eines Ergebnisses oder eines anderen ist.
+    -   Die **Prognosegüte** gibt an, wie hilfreich ein bestimmtes Attribut/Wert-Paar für die Höherstufung eines Ergebnisses ist.
 
      Hinweis: Die QuickInfo enthält die gleichen Informationen, unabhängig davon, ob Sie die Maus auf der einen oder anderen Spalte positionieren.
 
  [Zurück zum Anfang](#BKMK_Tabs)
 
-###  <a name="BKMK_Inputs"></a>Ungs
+###  <a name="inputs"></a><a name="BKMK_Inputs"></a>Ungs
  Im Bereich **Eingaben** können Sie einen Satz von Eingaben auswählen und diesen als Filter auf das Modell anwenden. So erkennen Sie auf der Grundlage der Trainingsdaten, wie sich diese Optionen auf das Ergebnis auswirken.
 
 ##### <a name="explore-inputs"></a>Untersuchen von Eingaben
@@ -113,7 +113,7 @@ ms.locfileid: "78174211"
 
  [Zurück zum Anfang](#BKMK_Tabs)
 
-###  <a name="BKMK_Outputs"></a>Ausgaben
+###  <a name="outputs"></a><a name="BKMK_Outputs"></a>Ausgaben
  Im Bereich **Ausgabe** können Sie das Ergebnis auswählen, das interessant für Sie ist. In neuronalen Netzwerken können Sie so viele Ergebnisspalten angeben, wie Sie möchten. Allerdings erhöht sich durch zusätzliche Ausgaben auch die Komplexität des Modells, sodass sich die Verarbeitungsdauer verlängern kann.
 
  Um zwei Ausgaben zu vergleichen, müssen die Spalten den Typ **Vorhersagen** oder **Nur vorhersagen** aufweisen.

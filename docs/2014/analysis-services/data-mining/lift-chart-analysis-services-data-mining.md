@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: feba3688947362847a95aea2d800c1fc6f15f6cf
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174680"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Prognosegütediagramm (Analysis Services – Data Mining)
@@ -31,7 +31,7 @@ ms.locfileid: "78174680"
 
  Ein Gewinndiagramm ist ein verwandter Diagrammtyp, der die gleichen Informationen enthält wie ein Prognosegütediagramm, jedoch außerdem die projizierte Gewinnsteigerung anzeigt, die mit einem Modell verbunden ist.
 
-##  <a name="bkmk_Top"></a>Grundlegendes zum Lift Chart
+##  <a name="understanding-the-lift-chart"></a><a name="bkmk_Top"></a>Grundlegendes zum Lift Chart
  In der Theorie ist ein Prognosegütediagramm schwer vorstellbar. Daher wird zur Veranschaulichung der Tools für Prognosegütediagramme und der im Diagramm enthaltenen Informationen in diesem Abschnitt ein Szenario mit einem Prognosegütediagramm verwendet, mit dessen Hilfe die Reaktion auf eine Targeted Mailing-Kampagne geschätzt wird.
 
  Der Marketingabteilung in diesem Szenario ist bekannt, dass bei Mailing-Kampagnen typischerweise mit einer Antwortquote von 10 Prozent zu rechnen ist. Eine Liste mit 10.000 potenziellen Kunden ist in einer Tabelle in der Datenbank gespeichert. Ausgehend von der typischen Antwortquote ist normalerweise zu erwarten, dass nur ca. 1.000 potenzielle Kunden antworten. Jedoch reicht das für das Projekt angesetzte Budget nicht aus, um alle 10.000 in der Datenbank gespeicherten Kunden anzuschreiben. Zusätzlich soll die Antwortquote verbessert werden. In diesem Szenario wird angenommen, dass das Budget nur für Werbeschreiben an 5.000 Kunden ausreicht. Der Marketingabteilung bieten sich zwei Möglichkeiten:
@@ -65,7 +65,7 @@ ms.locfileid: "78174680"
 
  Die **Mininglegende** enthält auch Ergebnisse und statistische Daten, mit deren Hilfe Sie das Diagramm interpretieren können. Diese Ergebnisse stellen die Genauigkeit des Modells an der grauen Linie dar, die in diesem Szenario so positioniert ist, dass sie 30 Prozent der gesamten Testfälle umfasst.
 
-|Reihe und Modell|Punkte|Zielauffüllung|Wahrscheinlichkeitsvorhersage|
+|Reihe und Modell|Bewertung|Zielauffüllung|Wahrscheinlichkeitsvorhersage|
 |-----------------------|-----------|-----------------------|-------------------------|
 |Targeted Mailing alle|0.71|47.40%|61.38%|
 |Targeted Mailing unter 30|0.85|51.81%|46.62%|
@@ -95,7 +95,7 @@ ms.locfileid: "78174680"
 
  Sie können in das Diagramm klicken, um den vertikalen, grauen Balken zu verschieben. Die **Mininglegende** zeigt den Prozentsatz der Fälle insgesamt an sowie den Prozentsatz der Fälle, die richtig vorhergesagt wurden. Wenn Sie den grauen Schieberegler beispielsweise auf die 50-Prozent-Marke ziehen, zeigt die **Mininglegende** die folgenden Genauigkeitsergebnisse an. Diese Abbildungen basieren auf dem TM_Decision Tree-Modell, das im Data Mining-Grundlagen-Lernprogramm erstellt wird.
 
-|Reihen, Modell|Punkte|Zielauffüllung|Wahrscheinlichkeitsvorhersage|
+|Reihen, Modell|Bewertung|Zielauffüllung|Wahrscheinlichkeitsvorhersage|
 |-------------------|-----------|-----------------------|-------------------------|
 |TM_Decision Tree|0.77|40.50%|72.91%|
 |Idealmodell||50.00%||
@@ -117,6 +117,6 @@ ms.locfileid: "78174680"
  [Zurück zum Anfang](#bkmk_Top)
 
 ## <a name="see-also"></a>Weitere Informationen
- [Testen und validieren &#40;Data Mining-&#41;](testing-and-validation-data-mining.md)
+ [Tests und Überprüfung &#40;Data Mining&#41;](testing-and-validation-data-mining.md)
 
 

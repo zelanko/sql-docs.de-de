@@ -21,10 +21,10 @@ ms.assetid: 564fae96-b88c-4f22-9338-26ec168ba6f5
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 6b9b6e62d0f69c5182ad69e21cb46800d4ddcc86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72909400"
 ---
 # <a name="sysfn_all_changes_ltcapture_instancegt-transact-sql"></a>sys. fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)
@@ -60,12 +60,11 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  Dieser Parameter kann eine von zwei möglichen Bedeutungen annehmen, abhängig von dem für den Fall @closed_high_end_point , dass sys. sp_cdc_generate_wrapper_function aufgerufen wird, um das CREATE-Skript für die Wrapper Funktion zu generieren:  
   
--   @closed_high_end_point= 1  
+-   @closed_high_end_point = 1  
   
      Im Resultset sind nur Zeilen in der Tabelle cdc. <capture_instance>_CT Änderung enthalten, denen eine comdtzeit zugeordnet ist, die kleiner oder gleich end_time ist.  
   
--   
-  @closed_high_end_point = 0  
+-   @closed_high_end_point = 0  
   
      Im Resultset sind nur Zeilen in der CDC. capture_instance_CT Änderungs Tabelle enthalten, denen eine comdtzeit zugeordnet ist, die streng kleiner als end_time ist.  
   
@@ -76,7 +75,7 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
  Eine der folgenden Optionen ist möglich:  
   
- alle  
+ all  
  Gibt alle Änderungen innerhalb des angegebenen LSN-Bereichs zurück. Bei Änderungen aufgrund eines Updatevorgangs gibt diese Option nur die Zeile zurück, die die neuen Werte nach Anwendung des Updates enthält.  
   
  all update old  
@@ -84,15 +83,15 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Spaltentyp|BESCHREIBUNG|  
+|Spaltenname|Spaltentyp|Beschreibung|  
 |-----------------|-----------------|-----------------|  
-|__CDC_STARTLSN|**Binär (10)**|Die Commit-LSN der Transaktion, die der Änderung zugeordnet ist. Alle Änderungen, für die ein Commit in derselben Transaktion ausgeführt wurde, verwenden dieselbe Commit-LSN.|  
-|__CDC_SEQVAL|**Binär (10)**|Sequenzwert, mit dem Zeilenänderungen in einer Transaktion sortiert werden.|  
+|__CDC_STARTLSN|**binary(10)**|Die Commit-LSN der Transaktion, die der Änderung zugeordnet ist. Alle Änderungen, für die ein Commit in derselben Transaktion ausgeführt wurde, verwenden dieselbe Commit-LSN.|  
+|__CDC_SEQVAL|**binary(10)**|Sequenzwert, mit dem Zeilenänderungen in einer Transaktion sortiert werden.|  
 |\<Spalten aus @column_list>|**variiert**|Die Spalten, die im *column_list* Argument identifiziert werden, die sp_cdc_generate_wrapper_function werden, wenn es aufgerufen wird, um das Skript zu generieren, mit dem die Wrapper Funktion erstellt wird.|  
 |__CDC_OPERATION|**nvarchar (2)**|Ein Vorgangscode, der den Vorgang angibt, der zum Anwenden der Zeile auf die Zielumgebung erforderlich ist. Dies variiert basierend auf dem Wert des Arguments, *row_filter_option* im-Befehl bereitgestellt wird:<br /><br /> *row_filter_option* = ' alle '<br /><br /> 'D' - Löschvorgang<br /><br /> 'I' - Einfügevorgang<br /><br /> 'UN' - Updatevorgang, neue Werte<br /><br /> *row_filter_option* = "Alle aktualisieren alt"<br /><br /> 'D' - Löschvorgang<br /><br /> 'I' - Einfügevorgang<br /><br /> 'UN' - Updatevorgang, neue Werte<br /><br /> 'UO' - Updatevorgang, alte Werte|  
 |\<Spalten aus @update_flag_list>|**bit**|Ein Bitflag, das durch Anfügen von _uflag an den Spaltennamen benannt wird. Das Flag wird immer auf NULL festgelegt \_, wenn _CDC_OPERATION ', ' I ', von ' UO ' ist. Wenn \__CDC_OPERATION auf ' un ' festgelegt ist, wird es auf 1 festgelegt, wenn das Update eine Änderung an der entsprechenden Spalte erzeugt hat. Andernfalls ist es 0.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die fn_all_changes_<capture_instance> Funktion dient als Wrapper für die Abfragefunktion CDC. fn_cdc_get_all_changes_<capture_instance>. Die gespeicherte Prozedur sys.sp_cdc_generate_wrapper wird zum Generieren des Skripts zum Erstellen des Wrappers verwendet.  
   
  Wrapperfunktionen werden nicht automatisch erstellt. Es gibt zwei Dinge, die Sie tun müssen, um Wrapper Funktionen zu erstellen:  
@@ -113,6 +112,6 @@ fn_all_changes_<capture_instance> ('start_time' ,'end_time', '<row_filter_option
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sys. sp_cdc_generate_wrapper_function &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
- [CDC. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

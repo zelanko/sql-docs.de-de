@@ -16,10 +16,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: bd272abda4b22f220e3fc599111d10cb4979f42e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211971"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Schreiben von SQL-Serverüberwachungsereignissen in das Sicherheitsprotokoll
@@ -47,31 +47,31 @@ ms.locfileid: "68211971"
   
      [Sicherheit](#Security)  
   
--   **So schreiben Sie SQL Server Überwachungs Ereignisse in das Sicherheitsprotokoll:**  
+-   **So schreiben Sie SQL-Serverüberwachungsereignisse in das Sicherheitsprotokoll**  
   
-     [Konfigurieren der Einstellung für die Überwachung des Objekt Zugriffs in Windows mithilfe von "Auditpol"](#auditpolAccess)  
+     [Konfigurieren der Einstellung für die Überwachung von Objektzugriffsversuchen in Windows mit "auditpol"](#auditpolAccess)  
   
-     [Konfigurieren der Einstellung für die Überwachung des Objekt Zugriffs in Windows mithilfe von secpol](#secpolAccess)  
+     [Konfigurieren der Einstellung für die Überwachung von Objektzugriffsversuchen in Windows mit "secpol"](#secpolAccess)  
   
-     [Erteilen der Berechtigung zum Generieren von Sicherheits Überwachungen für ein Konto mit "secpol"](#secpolPermission)  
+     [Erteilen von Berechtigungen zum Generieren von Sicherheitsüberwachungen für ein Konto mit "secpol"](#secpolPermission)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
- Administratoren des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Computers sollten sich bewusst sein, dass lokale Einstellungen für das Sicherheitsprotokoll durch eine Domänenrichtlinie überschrieben werden können. In diesem Fall überschreibt die Domänenrichtlinie möglicherweise die Einstellung für die Unterkategorie (**auditpol /get /subcategory:"application generated"** ). Dies kann sich auf die Fähigkeit von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auswirken, Ereignisse zu protokollieren. Dabei kann nicht nachvollzogen werden, dass die Ereignisse, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zu überwachen versucht, nicht aufgezeichnet werden.  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
+ Administratoren des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Computers sollten sich bewusst sein, dass lokale Einstellungen für das Sicherheitsprotokoll durch eine Domänenrichtlinie überschrieben werden können. In diesem Fall überschreibt die Domänenrichtlinie möglicherweise die Einstellung für die Unterkategorie (**auditpol /get /subcategory:"application generated"**). Dies kann sich auf die Fähigkeit von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] auswirken, Ereignisse zu protokollieren. Dabei kann nicht nachvollzogen werden, dass die Ereignisse, die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zu überwachen versucht, nicht aufgezeichnet werden.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Sie müssen Windows-Administrator sein, um diese Einstellungen konfigurieren zu können.  
   
-##  <a name="auditpolAccess"></a> So konfigurieren Sie die Einstellung für die Überwachung von Objektzugriffsversuchen in Windows mit "auditpol"  
+##  <a name="to-configure-the-audit-object-access-setting-in-windows-using-auditpol"></a><a name="auditpolAccess"></a>So konfigurieren Sie die Einstellung für die Überwachung des Objekt Zugriffs in Windows mit "Auditpol"  
   
 1.  Öffnen Sie eine Eingabeaufforderung mit Administratorberechtigungen.  
   
     1.  Zeigen Sie im Menü **Start** auf **Alle Programme**, zeigen Sie auf **Zubehör**, klicken Sie mit der rechten Maustaste auf **Eingabeaufforderung**, und klicken Sie dann auf **Als Administrator ausführen**.  
   
-    2.  Wenn das Dialogfeld **Benutzerkontensteuerung** geöffnet wird, klicken Sie auf **Weiter**.  
+    2.  Falls das Dialogfeld **Benutzerkontensteuerung** geöffnet wird, klicken Sie auf **Fortsetzen**.  
   
 2.  Führen Sie die folgende Anweisung aus, um die Überwachung von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]zu aktivieren.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "68211971"
   
 3.  Schließen Sie das Eingabeaufforderungsfenster.  
   
-##  <a name="secpolAccess"></a> So erteilen Sie die Berechtigung zum Generieren von Sicherheitsüberwachungen für ein Konto mit "secpol"  
+##  <a name="to-grant-the-generate-security-audits-permission-to-an-account-using-secpol"></a><a name="secpolAccess"></a>So erteilen Sie die Berechtigung zum Generieren von Sicherheits Überwachungen für ein Konto mit "secpol"  
   
 1.  Klicken Sie in allen Windows-Betriebssystemen im Menü **Start** auf **Ausführen**.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "68211971"
   
 9. Starten Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] neu, um diese Einstellung zu aktivieren.  
   
-##  <a name="secpolPermission"></a> So konfigurieren Sie die Einstellung für die Überwachung von Objektzugriffsversuchen in Windows mit "secpol"  
+##  <a name="to-configure-the-audit-object-access-setting-in-windows-using-secpol"></a><a name="secpolPermission"></a> So konfigurieren Sie die Einstellung für die Überwachung von Objektzugriffsversuchen in Windows mit "secpol"  
   
 1.  Wenn das Betriebssystem eine frühere Version als [!INCLUDE[wiprlhext](../../../includes/wiprlhext-md.md)] oder Windows Server 2008 ist, klicken Sie im Menü **Start** auf **Ausführen**.  
   

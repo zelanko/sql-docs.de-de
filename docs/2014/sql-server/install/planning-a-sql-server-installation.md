@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b1baf29a88ff25eb278271719680d1979940c590
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211494"
 ---
 # <a name="planning-a-sql-server-installation"></a>Planen einer SQL Server-Installation
@@ -51,7 +51,7 @@ ms.locfileid: "68211494"
  [Netzwerkprotokolle und Netzwerkbibliotheken](../../../2014/sql-server/install/network-protocols-and-network-libraries.md)  
  In diesem Thema werden die Standardkonfiguration von Netzwerkprotokollen in dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]und die verfügbaren Konfigurationsoptionen beschrieben.  
   
- [Verwenden mehrerer Versionen und Instanzen von SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
+ [Arbeiten mit mehreren Versionen und Instanzen von SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md)  
  In diesem Thema werden die Überlegungen zum Installieren mehrerer Versionen und Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]beschrieben.  
   
  [Lokale Sprachversionen in SQL Server](../../../2014/sql-server/install/local-language-versions-in-sql-server.md)  
@@ -64,7 +64,7 @@ ms.locfileid: "68211494"
  [Installieren von SQL Server 2014-BI-Funktionen](install-sql-server-business-intelligence-features.md)  
  In diesem Abschnitt der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setupdokumentation wird erläutert, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen, die Teil der Microsoft BI-Plattform sind, installiert werden.  
   
- [Aktualisieren auf SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
+ [Upgrade auf SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
  Der Abschnitt bietet eine Übersicht über das Aktualisieren von Instanzen früherer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Versionen auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  [Deinstallieren von SQL Server 2014](uninstall-sql-server.md)  

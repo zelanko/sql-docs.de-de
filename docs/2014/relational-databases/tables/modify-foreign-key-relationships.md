@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 116a41ac2eca1f69a98391c9018b8623a10f6047
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68196843"
 ---
 # <a name="modify-foreign-key-relationships"></a>Ändern von Fremdschlüsselbeziehungen
@@ -40,9 +40,9 @@ ms.locfileid: "68196843"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
  Für die neue Fremdschlüsselspalte und die verknüpfte Primärschlüsselspalte müssen Datentyp und Größe übereinstimmen, mit diesen Ausnahmen:  
   
 -   Eine Spalte vom Typ `char` oder `sysname` kann mit einer Spalte vom Typ `varchar` verknüpft werden.  
@@ -51,12 +51,12 @@ ms.locfileid: "68196843"
   
 -   Ein Aliasdatentyp kann mit seinem Basistyp verknüpft werden.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Tabelle.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-modify-a-foreign-key"></a>So ändern Sie einen Fremdschlüssel  
   
@@ -141,7 +141,7 @@ ms.locfileid: "68196843"
   
 4.  Klicken Sie im Menü **Datei** auf **Speichern** > _Tabellenname_.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **So ändern Sie einen Fremdschlüssel**  
   
  Um eine FOREIGN KEY-Einschränkung mit Transact-SQL zu ändern, müssen Sie zuerst die vorhandene FOREIGN KEY-Einschränkung löschen und sie dann mit der neuen Definition neu erstellen. Weitere Informationen finden Sie unter [Delete Foreign Key Relationships](delete-foreign-key-relationships.md) und [Create Foreign Key Relationships](create-foreign-key-relationships.md).  
