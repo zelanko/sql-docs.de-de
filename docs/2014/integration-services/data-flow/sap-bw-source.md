@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 169c35d89075646aa3f4964d0e9d6eda92bc13a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62901068"
 ---
 # <a name="sap-bw-source"></a>SAP BW-Quelle
-  Die SAP BW-Quelle ist die Quellkomponente von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Daher extrahiert die SAP BW Quelle Daten aus einem SAP NetWeaver BW-System, Version 7, und macht diese Daten im Datenfluss in einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Paket verfügbar.  
+  Die SAP BW-Quelle ist die Quellkomponente von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW. Daher extrahiert die SAP BW-Quelle Daten aus einem SAP NetWeaver BW-System, Version 7, und macht diese Daten im Datenfluss in einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket verfügbar.  
   
  Diese Quelle weist eine Ausgabe und eine Fehlerausgabe auf.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "62901068"
   
 -   [Konfigurieren der SAP BW-Quelle](#bkmk_Configure_Source)  
   
-##  <a name="bkmk_Prepare_Objects"></a> Vorbereiten der SAP NetWeaver BW-Objekte, die für die Quelle erforderlich sind  
+##  <a name="preparing-the-sap-netweaver-bw-objects-that-the-source-requires"></a><a name="bkmk_Prepare_Objects"></a> Vorbereiten der SAP NetWeaver BW-Objekte, die für die Quelle erforderlich sind  
  Die SAP BW-Quelle erfordert, dass sich bestimmte Objekte im SAP NetWeaver BW-System befinden, damit die Quelle funktionsfähig ist. Wenn diese Objekte noch nicht vorhanden sind, müssen Sie diese Schritte ausführen, um die Objekte im SAP NetWeaver BW-System zu erstellen und zu konfigurieren.  
   
 > [!NOTE]  
@@ -80,12 +80,12 @@ ms.locfileid: "62901068"
   
      Die SAP BW-Quelle kann die Prozesskette aufrufen, um den Datenübertragungsprozess zu aktivieren.  
   
-##  <a name="bkmk_Connect_Database"></a> Herstellen einer Verbindung mit dem SAP NetWeaver BW-System  
+##  <a name="connecting-to-the-sap-netweaver-bw-system"></a><a name="bkmk_Connect_Database"></a> Herstellen einer Verbindung mit dem SAP NetWeaver BW-System  
  Um eine Verbindung mit dem SAP NetWeaver BW-System, Version 7, herzustellen, verwendet die SQL BW-Quelle den SAP BW-Verbindungs-Manager, der im Lieferumfang des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW-Pakets enthalten ist. Der SAP BW-Verbindungs-Manager ist der einzige [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Verbindungs-Manager, der von der SAP BW-Quelle verwendet werden kann.  
   
  Weitere Informationen zum SAP BW-Verbindungs-Manager finden Sie unter [SAP BW Connection Manager](../connection-manager/sap-bw-connection-manager.md).  
   
-##  <a name="bkmk_Configure_Source"></a> Konfigurieren der SAP BW-Quelle  
+##  <a name="configuring-the-sap-bw-source"></a><a name="bkmk_Configure_Source"></a> Konfigurieren der SAP BW-Quelle  
  Es gibt folgende Möglichkeiten, um die SAP BW-Quelle zu konfigurieren:  
   
 -   Suchen Sie das OHS (Open Hub Service)-Ziel, das zum Extrahieren von Daten verwendet werden soll, und wählen Sie es aus.  

@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea7f5f06816b6dd4ddf840f63119bebb0ebf80e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62889213"
 ---
 # <a name="set-package-properties"></a>Festlegen von Paketeigenschaften
@@ -64,7 +64,7 @@ ms.locfileid: "62889213"
 ## <a name="properties-by-category"></a>Eigenschaften nach Kategorie  
  In den folgenden Tabellen sind die Paketeigenschaften nach Kategorie aufgelistet.  
   
-###  <a name="Checkpoints"></a> Prüfpunkte  
+###  <a name="checkpoints"></a><a name="Checkpoints"></a> Prüfpunkte  
  Mit den Eigenschaften in dieser Kategorie können Sie das Paket von dem Punkt an, an dem der Fehler in der Paketablaufsteuerung auftrat, neu starten, anstatt das Paket vom Beginn der Ablaufsteuerung erneut auszuführen. Weitere Informationen finden Sie unter [Neustarten von Paketen mit Prüfpunkten](packages/restart-packages-by-using-checkpoints.md).  
   
 |Eigenschaft|BESCHREIBUNG|  
@@ -74,15 +74,15 @@ ms.locfileid: "62889213"
 |`SaveCheckpoints`|Gibt an, ob die Prüfpunkte in die Prüfpunktdatei geschrieben werden, wenn das Paket ausgeführt wird. Der Standardwert dieser Eigenschaft ist `False`.|  
   
 > [!NOTE]  
->  Das Festlegen der Prüfpunktausführungsoption `/CheckPointing on` von dtexec entspricht der `SaveCheckpoints`-Eigenschaft des Pakets "True" oder der `CheckpointUsage`-Eigenschaft "Immer". Weitere Informationen finden Sie unter [dtexec Utility](packages/dtexec-utility.md).  
+>  Das Festlegen der Prüfpunktausführungsoption `/CheckPointing on` von dtexec entspricht der `SaveCheckpoints`-Eigenschaft des Pakets "True" oder der `CheckpointUsage`-Eigenschaft "Immer". Weitere Informationen finden Sie [hier](packages/dtexec-utility.md).  
   
-###  <a name="Execution"></a>Niederlage  
+###  <a name="execution"></a><a name="Execution"></a> Ausführung  
  Mit den Eigenschaften in dieser Kategorie wird das Laufzeitverhalten des Paketobjekts konfiguriert.  
   
-|Eigenschaft|BESCHREIBUNG|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |`DelayValidation`|Zeigt an, ob die Paketüberprüfung bis zur Ausführung des Pakets verschoben wird. Der Standardwert dieser Eigenschaft ist `False`.|  
-|**Disable**|Zeigt an, ob das Paket deaktiviert ist. Der Standardwert dieser Eigenschaft ist `False`.|  
+|**Deaktivieren**|Zeigt an, ob das Paket deaktiviert ist. Der Standardwert dieser Eigenschaft ist `False`.|  
 |`DisableEventHandlers`|Gibt an, ob die Paketereignishandler ausgeführt werden. Der Standardwert dieser Eigenschaft ist `False`.|  
 |`FailPackageOnFailure`|Gibt an, ob das Paket bei einem Fehler in einer Paketkomponente fehlschlägt. Der einzige gültige Wert dieser Eigenschaft ist `False`.|  
 |`FailParentOnError`|Gibt an, ob der übergeordnete Container bei einem Fehler in einem untergeordneten Container fehlschlägt. Der Standardwert dieser Eigenschaft ist `False`.|  
@@ -90,16 +90,16 @@ ms.locfileid: "62889213"
 |`MaximumErrorCount`|Die maximale zulässige Anzahl von Fehlern, nach der die Ausführung eines Pakets beendet wird. Der Standardwert dieser Eigenschaft ist **1**.|  
 |`PackagePriorityClass`|Die Win32-Threadprioritätsklasse des Paketthreads. Mögliche Werte sind `Default`, `AboveNormal`, `Normal`, `BelowNormal` und `Idle`. Der Standardwert dieser Eigenschaft ist `Default`. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSPriorityClass>.|  
   
-###  <a name="ForcedExecutionValue"></a>Erzwungener Ausführungs Wert  
+###  <a name="forced-execution-value"></a><a name="ForcedExecutionValue"></a>Erzwungener Ausführungs Wert  
  Mit den Eigenschaften in dieser Kategorie wird ein optionaler Ausführungswert für das Paket konfiguriert.  
   
-|Eigenschaft|BESCHREIBUNG|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |`ForcedExecutionValue`|Wenn ForceExecutionValue auf `True`festgelegt ist, ein-Wert, der den vom Paket zurückgegebenen optionalen Ausführungs Wert angibt. Der Standardwert dieser Eigenschaft ist **0**.|  
 |`ForcedExecutionValueType`|Der Datentyp von ForcedExecutionValue. Der Standardwert dieser Eigenschaft ist `Int32`.|  
 |`ForceExecutionValue`|Ein boolescher Wert, der angibt, ob ein bestimmter optionaler Ausführungswert des Containers erzwungen werden soll. Der Standardwert dieser Eigenschaft ist `False`.|  
   
-###  <a name="Identification"></a>Identifi  
+###  <a name="identification"></a><a name="Identification"></a> Identifikation  
  Mit den Eigenschaften in dieser Kategorie werden Informationen bereitgestellt, wie z. B. der eindeutige Bezeichner und der Name des Pakets.  
   
 |Eigenschaft|BESCHREIBUNG|  
@@ -112,10 +112,10 @@ ms.locfileid: "62889213"
 |`Name`|Der Name des Pakets.|  
 |`PackageType`|Der Pakettyp. Mögliche Werte sind `Default`, `DTSDesigner`, `DTSDesigner100`, `DTSWizard`, `SQLDBMaint` und `SQLReplication`. Der Standardwert dieser Eigenschaft ist `Default`. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType>.|  
   
-###  <a name="Misc"></a>Verschiedenes  
+###  <a name="misc"></a><a name="Misc"></a>Verschiedenes  
  Mit den Eigenschaften in dieser Kategorie wird auf Konfigurationen und Ausdrücke zugegriffen, die von einem Paket verwendet werden. Außerdem werden Informationen zum Gebietsschema und zum Protokollierungsmodus des Pakets bereitgestellt. Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](expressions/use-property-expressions-in-packages.md).  
   
-|Eigenschaft|BESCHREIBUNG|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |`Configurations`|Die Auflistung mit Konfigurationen, die vom Paket verwendet werden. Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**, um Paketkonfigurationen anzuzeigen und zu konfigurieren.|  
 |`Expressions`|Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**, um Ausdrücke für Paketeigenschaften zu erstellen.<br /><br /> Hinweis: Sie können Eigenschafts Ausdrücke für alle Paket Eigenschaften erstellen, die im Objektmodell enthalten sind, und nicht nur die Eigenschaften, die im Eigenschaftenfenster aufgeführt sind.<br /><br /> Weitere Informationen finden Sie unter [Verwenden von Eigenschaftsausdrücken in Paketen](expressions/use-property-expressions-in-packages.md).<br /><br /> Erweitern Sie `Expressions`, um vorhandene Eigenschaftsausdrücke anzuzeigen. Klicken Sie in einem Ausdruckstextfeld auf die Schaltfläche zum Durchsuchen **(...)**, um einen Ausdruck zu ändern und auszuwerten.|  
@@ -126,26 +126,26 @@ ms.locfileid: "62889213"
 |`SuppressConfigurationWarnings`|Zeigt an, ob die von Konfigurationen generierten Warnungen unterdrückt werden. Der Standardwert dieser Eigenschaft ist `False`.|  
 |`UpdateObjects`|Zeigt an, ob das Paket aktualisiert wird, um neuere Versionen der vorhandenen Objekte zu verwenden, falls neuere Versionen verfügbar sind. Beispielsweise wird ein Paket mit einem Masseneinfügungstask aktualisiert, wenn diese Eigenschaft auf `True` festgelegt ist, damit die neuere Version des Masseneinfügungstasks von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] verwendet wird. Der Standardwert dieser Eigenschaft ist `False`.|  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
  Mit den Eigenschaften in dieser Kategorie wird die Schutzebene des Pakets konfiguriert. Weitere Informationen finden Sie unter [Access Control for Sensitive Data in Packages](security/access-control-for-sensitive-data-in-packages.md).  
   
-|Eigenschaft|BESCHREIBUNG|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |`PackagePassword`|Das Kennwort für Paket Schutz Ebenen`EncryptSensitiveWithPassword` ( `EncryptAllWithPassword`und), die Kenn Wörter erfordern.|  
 |`ProtectionLevel`|Die Schutzebene des Pakets. Die Werte lauten `DontSaveSensitive`, `EncryptSensitiveWithUserKey`, `EncryptSensitiveWithPassword`, `EncryptAllWithPassword`und **ServerStorage**. Der Standardwert dieser Eigenschaft ist `EncryptSensitiveWithUserKey`. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSProtectionLevel>.|  
   
-###  <a name="Transactions"></a>Handel  
+###  <a name="transactions"></a><a name="Transactions"></a>Handel  
  Mit den Eigenschaften in dieser Kategorie werden die Isolationsstufe und die Transaktionsoption des Pakets konfiguriert. Weitere Informationen finden Sie unter [Integration Services-Transaktionen](integration-services-transactions.md).  
   
-|Eigenschaft|BESCHREIBUNG|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |`IsolationLevel`|Die Isolationsstufe der Pakettransaktionen.  Der Standardwert dieser Eigenschaft ist `Serializable`. Gültige Werte sind <br />`Unspecified`<br />`Chaos`<br />`ReadUncommitted`<br />`ReadCommitted`<br />`RepeatableRead`<br />`Serializable`<br />`Snapshot`.<br /><br /> Das System wendet die `IsolationLevel`-Eigenschaft nur dann auf Pakettransaktionen an, wenn der Wert der `TransactionOption`-Eigenschaft auf `Required` festgelegt ist.<br /><br /> Der Wert der von einem untergeordneten Container angeforderten `IsolationLevel`-Eigenschaft wird ignoriert, wenn die folgenden Bedingungen erfüllt sind:<br /><br /> Der Wert der `TransactionOption`-Eigenschaft des untergeordneten Containers ist `Supported`.<br />Der untergeordnete Container nimmt an der Transaktion eines übergeordneten Containers teil.<br /><br /> Der Wert der vom Container angeforderten `IsolationLevel`-Eigenschaft wird nur berücksichtigt, wenn der Container eine neue Transaktion initiiert. Ein Container initiiert eine neue Transaktion, wenn die folgenden Bedingungen erfüllt sind:<br /><br /> Der Wert der `TransactionOption`-Eigenschaft des Containers ist `Required`.<br />Der übergeordnete Container hat nicht bereits eine Transaktion gestartet.<br /><br /> <br /><br /> Hinweis: Der Wert `Snapshot` der Eigenschaft `IsolationLevel` ist mit Pakettransaktionen nicht kompatibel. Daher können Sie die `IsolationLevel`-Eigenschaft nicht verwenden, um die Isolationsstufe von Pakettransaktionen auf `Shapshot` festzulegen. Verwenden Sie stattdessen eine SQL-Abfrage, um Pakettransaktionen auf `Snapshot` festzulegen. Weitere Informationen finden Sie unter [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql).<br /><br /> Weitere Informationen zur `IsolationLevel`-Eigenschaft finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DtsContainer.IsolationLevel%2A>.|  
 |`TransactionOption`|Die Transaktionsteilnahme des Pakets. Die Werte lauten `NotSupported`, `Supported`, `Required`. Der Standardwert dieser Eigenschaft ist `Supported`. Weitere Informationen finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.DTSTransactionOption>.|  
   
-###  <a name="Version"></a>Version  
+###  <a name="version"></a><a name="Version"></a>Version  
  Mit den Eigenschaften in dieser Kategorie werden Informationen zur Version des Paketobjekts bereitgestellt.  
   
-|Eigenschaft|BESCHREIBUNG|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |`VersionBuild`|Die Versionsnummer des Paketbuilds.|  
 |`VersionComments`|Kommentare zur Paketversion.|  

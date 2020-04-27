@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6338c7a306f163f786f2c1e7d44ae4dbc66504ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62902447"
 ---
 # <a name="flat-file-source"></a>Flatfilequelle
@@ -55,15 +55,15 @@ ms.locfileid: "62902447"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Quellen-Editor für Flatfiles** festlegen können:  
   
--   [Quellen-Editor für Flatfiles &#40;Seite Verbindungs-Manager&#41;](../flat-file-source-editor-connection-manager-page.md)  
+-   [Quellen-Editor für Flatfiles &#40;Seite „Verbindungs-Manager“&#41;](../flat-file-source-editor-connection-manager-page.md)  
   
--   [Quellen-Editor für Flatfiles &#40;Seite "Spalten"&#41;](../flat-file-source-editor-columns-page.md)  
+-   [Quellen-Editor für Flatfiles &#40;Seite Spalten&#41;](../flat-file-source-editor-columns-page.md)  
   
 -   [Quellen-Editor für Flatfiles &#40;Seite Fehlerausgabe&#41;](../flat-file-source-editor-error-output-page.md)  
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Common Properties](../common-properties.md)  
+-   [Allgemeine Eigenschaften](../common-properties.md)  
   
 -   [Benutzerdefinierte Eigenschaften der Flatfile](flat-file-custom-properties.md)  
   

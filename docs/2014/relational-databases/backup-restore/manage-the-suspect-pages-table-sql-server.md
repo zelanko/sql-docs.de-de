@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0f6c6afc1822e2f56189aace2836a15486d1b73b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921955"
 ---
 # <a name="manage-the-suspect_pages-table-sql-server"></a>Verwalten der suspect_pages-Tabelle (SQL Server)
@@ -30,9 +30,9 @@ ms.locfileid: "62921955"
   
  Eine Seite wird als "fehlerverdächtig" betrachtet , wenn das [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] bei dem Versuch, eine Datenseite zu lesen, einen der folgenden Fehler findet:  
   
--   Ein [823-Fehler](../errors-events/mssqlserver-823-database-engine-error.md) , der durch eine vom Betriebssystem ausgegebene zyklische Redundanz Prüfung (CRC) verursacht wurde, z. b. ein Datenträger Fehler (bestimmte Hardwarefehler).  
+-   Einen [Fehler vom Typ 823](../errors-events/mssqlserver-823-database-engine-error.md) , der durch eine vom Betriebssystem ausgegebene zyklische Redundanzprüfung (CRC) verursacht wurde, beispielsweise ein Datenträgerfehler (bestimmte Hardwarefehler).  
   
--   [824-Fehler](../errors-events/mssqlserver-824-database-engine-error.md), z. b. eine zerrissene Seite (logischer Fehler)  
+-   Einen [Fehler vom Typ 824](../errors-events/mssqlserver-824-database-engine-error.md), z.B. eine zerrissene Seite (logische Fehler).  
   
  Die Seiten-ID jeder fehlerverdächtigen Seite wird in der **suspect_pages** -Tabelle aufgezeichnet. Das [!INCLUDE[ssDE](../../includes/ssde-md.md)] zeichnet alle fehlerverdächtigen Seiten auf, die während der regulären Verarbeitung auftreten, z. B. bei folgenden Vorgängen:  
   
@@ -58,9 +58,9 @@ ms.locfileid: "62921955"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Recommendations"></a> Empfehlungen  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
   
 -   **In der suspect_pages-Tabelle aufgezeichnete Fehler**  
   
@@ -115,12 +115,12 @@ ms.locfileid: "62921955"
   
      Ein Datenbankadministrator kann auch Datensätze einfügen oder aktualisieren. Das Aktualisieren einer Zeile ist z. B. sinnvoll, wenn der Datenbankadministrator weiß, dass eine bestimmte fehlerverdächtige Seite tatsächlich intakt ist, den Datensatz jedoch für eine Weile erhalten möchte.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Jeder mit Zugriff auf **msdb** kann die Daten in der Tabelle **suspect_pages** lesen. Jeder mit UPDATE-Berechtigung für die suspect_pages-Tabelle kann ihre Datensätze aktualisieren. Mitglieder der festen Datenbankrolle **db_owner** auf **msdb** oder der festen Serverrolle **sysadmin** können Datensätze einfügen, aktualisieren und löschen.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-manage-the-suspect_pages-table"></a>So verwalten Sie die "suspect_pages"-Tabelle  
   
@@ -132,7 +132,7 @@ ms.locfileid: "62921955"
   
 4.  Bearbeiten, aktualisieren oder löschen Sie im Abfragefenster die gewünschten Zeilen.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-manage-the-suspect_pages-table"></a>So verwalten Sie die "suspect_pages"-Tabelle  
   

@@ -13,23 +13,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 517ba30e4565ec05e5fa15a650bb39909d24dd02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62894764"
 ---
 # <a name="save-and-execute-package-sql-server-import-and-export-wizard"></a>Paket speichern und ausführen (SQL Server-Import/Export-Assistent)
   Verwenden Sie das Dialogfeld **Paket speichern und ausführen** , um das Paket sofort auszuführen, es zur späteren Ausführung zu speichern oder beides.  
   
 > [!NOTE]  
->  Wenn Sie ein Paket vor der Ausführung beenden, wird das Paket nicht gespeichert, auch wenn Sie das Kontrollkästchen **Speichern** aktiviert haben.  
+>   Wenn Sie ein Paket vor dem Abschluss der Ausführung beenden, wird das Paket nicht gespeichert, auch wenn Sie das Kontrollkästchen **Speichern** aktiviert haben.  
   
  Weitere Informationen zu diesem Assistenten finden Sie unter [SQL Server-Import/Export-Assistenten](import-and-export-data-with-the-sql-server-import-and-export-wizard.md). Weitere Informationen zu den Optionen für das Starten des Assistenten sowie zu den Berechtigungen, die zum erfolgreichen Ausführen des Assistenten erforderlich sind, finden Sie unter [Ausführen des SQL Server-Import/Export-Assistenten](start-the-sql-server-import-and-export-wizard.md).  
   
  Mit dem SQL Server-Import/Export-Assistenten werden Daten aus einer Quelle in ein Ziel kopiert. Mit dem Assistenten können auch eine Zieldatenbank und Zieltabellen erstellt werden. Wenn Sie jedoch mehrere Datenbanken, Tabellen oder andere Datenbankobjekte kopieren müssen, verwenden Sie stattdessen den Assistenten zum Kopieren von Datenbanken. Weitere Informationen finden Sie unter [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Sofort ausführen**  
  Wählen Sie diese Option aus, um das Paket sofort auszuführen.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62894764"
 > [!NOTE]  
 >  Diese Option ist nur verfügbar, wenn Sie die Option **SSIS-Paket speichern** ausgewählt haben.  
   
- **Paket Schutz Ebene**  
+ **Paketschutzebene**  
  Wählen Sie eine Schutzebene aus der Liste aus.  
   
  Die Schutzebene bestimmt die Methode, das Kennwort oder den Benutzerschlüssel und den Bereich des Paketschutzes. Der Schutz kann alle Daten oder nur vertrauliche Daten einschließen. Informationen zu den Anforderungen und Optionen für die Paket Sicherheit finden Sie unter [Access Control für sensible Daten in Paketen](../security/access-control-for-sensitive-data-in-packages.md) und [Sicherheitsübersicht &#40;Integration Services&#41;](../security/security-overview-integration-services.md).  

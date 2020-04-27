@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3cf58665c69c744b35c8703f7f00fc07e0b8aafc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891170"
 ---
-# <a name="step-1-copying-the-lesson-4-package"></a>Schritt 1: Kopieren des Pakets aus Lektion 4
+# <a name="step-1-copying-the-lesson-4-package"></a>Schritt 1: Kopieren des Pakets aus Lektion 4
   In dieser Aufgabe erstellen Sie eine Kopie des in Lektion 4 erstellten Pakets namens „Lesson 4.dtsx“. Alternativ können Sie dem Projekt auch das im Tutorial enthaltene, abgeschlossene Paket aus Lektion 4 hinzufügen und anschließend eine Kopie dieses Pakets erstellen. Sie werden diese neue Kopie in der gesamten Lektion 5 verwenden.  
   
 ### <a name="to-copy-the-lesson-4-package"></a>So kopieren Sie das Paket aus Lektion 4  
@@ -28,13 +28,13 @@ ms.locfileid: "62891170"
   
 3.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf **Lesson 4.dtsx**, und klicken Sie anschließend auf **Kopieren**.  
   
-4.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf **SSIS-Pakete**und anschließend auf **Einfügen**.  
+4.  Klicken Sie in Projektmappen-Explorer mit der rechten Maustaste auf **SSIS-Pakete**, und klicken Sie dann auf **Einfügen**.  
   
      Standardmäßig wird das kopierte Paket „Lesson 5.dtsx“ benannt.  
   
 5.  Doppelklicken Sie im Projektmappen-Explorer auf **Lesson 5.dtsx** , um das Paket zu öffnen.  
   
-6.  Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle im Hintergrund der Registerkarte **Ablaufsteuerung** und anschließend auf **Eigenschaften**.  
+6.  Klicken Sie mit der rechten Maustaste auf eine beliebige Stelle im Hintergrund der Registerkarte **Ablauf Steuerung** und dann auf **Eigenschaften**.  
   
 7.  Aktualisieren Sie im Eigenschaftenfenster die `Name` -Eigenschaft auf `Lesson 5`.  
   
@@ -44,9 +44,9 @@ ms.locfileid: "62891170"
   
 1.  Öffnen Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools und das SSIS-Lernprogrammprojekt.  
   
-2.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf **SSIS-Pakete**, und klicken Sie auf **Vorhandenes Paket hinzufügen**.  
+2.  Klicken Sie in Projektmappen-Explorer mit der rechten Maustaste auf **SSIS-Pakete**, und klicken Sie auf **vorhandenes Paket hinzufügen**  
   
-3.  Wählen Sie im Dialogfeld **Kopie des vorhandenen Pakets hinzufügen** unter **Paketspeicherort**die Option **Dateisystem**aus.  
+3.  Wählen Sie im Dialogfeld **Kopie des vorhandenen Pakets hinzufügen** unter **Paket Speicherort**die Option **Dateisystem**aus.  
   
 4.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)**, navigieren Sie zu **Lesson 4.dtsx** auf Ihrem Computer, und klicken Sie anschließend auf **Öffnen**.  
   

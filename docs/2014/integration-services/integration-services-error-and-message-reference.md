@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec7f81ec412a2ed597f8cd282b637fc5adf73ebf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892658"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Fehler- und Meldungsreferenz von Integration Services
@@ -43,10 +43,10 @@ ms.locfileid: "62892658"
   
 -   [Fehlermeldungen der Datenflusskomponenten (DTSBC_E_*)](#msgPipeline)  
   
-##  <a name="msgError"></a> Fehlermeldungen  
+##  <a name="error-messages"></a><a name="msgError"></a> Fehlermeldungen  
  Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Fehlermeldungen beginnen mit `DTS_E_`.  
   
-|Hexadezimalcode|Dezimalcode|Symbolischer Name|Beschreibung|  
+|Hexadezimalcode|Dezimalcode|Symbolischer Name|BESCHREIBUNG|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x8002F347|-2147290297|DTS_E_STOREDPROCSTASK_OVERWRITINGSPATDESTINATION|Die gespeicherte Prozedur "%1" wird am Ziel überschrieben.|  
 |0x8020837E|-2145352834|DTS_E_ADOSRCUNKNOWNTYPEMAPPEDTONTEXT|Der Datentyp "%1"in Spalte %2 wird für %3 nicht unterstützt. Diese Spalte wird in DT_NTEXT umgewandelt.|  
@@ -789,7 +789,7 @@ ms.locfileid: "62892658"
 |0xC00292A8|-1073573208|DTS_E_TRANSFERDBTASK_MUSTHAVESOURCEFILES|Mindestens eine Quelldatei muss angegeben werden.|  
 |0xC00292A9|-1073573207|DTS_E_TRANSFERDBTASKS_SRCFILENOTFOUND|Die Datei "%1" wurde in der "%2"-Quelldatenbank nicht gefunden.|  
 |0xC00292B3|-1073573197|DTS_E_MSMQTASK_FIPS1402COMPLIANCE|Der angeforderte Vorgang ist in mit U.S. FIPS 140-2 konformen Systemen unzulässig. FIPS 140-2 kompatiblen Systemen unzulässig.|  
-|0xC002F210|-1073548784|DTS_E_SQLTASK_ERROREXECUTINGTHEQUERY|Fehler beim Ausführen der Abfrage "%1": "%2". Mögliche Fehlerursachen: Probleme bei der Abfrage, nicht richtig festgelegte „ResultSet“-Eigenschaft, nicht richtig festgelegte Parameter oder nicht richtig hergestellte Verbindung.|  
+|0xC002F210|-1073548784|DTS_E_SQLTASK_ERROREXECUTINGTHEQUERY|Fehler beim Ausführen der Abfrage "%1": "%2". Mögliche Ursachen sind folgende: Probleme bei der Abfrage, nicht richtig festgelegte ResultSet-Eigenschaft, nicht richtig festgelegte Parameter oder nicht richtig hergestellte Verbindung.|  
 |0xC002F300|-1073548544|DTS_E_TRANSFERSPTASK_ERRORREADINGSPNAMES|Fehler beim Lesen der Namen gespeicherter Prozeduren aus der XML-Datei.|  
 |0xC002F301|-1073548543|DTS_E_TRANSFERSPTASK_INVALIDDATANODE|Ungültiger Datenknoten für den Task Gespeicherte Prozeduren übertragen.|  
 |0xC002F302|-1073548542|DTS_E_TRANSFERTASKS_CONNECTIONTYPEISNOTSMOSERVER|Die Verbindung "%1" ist nicht vom Typ "SMOServer".|  
@@ -1113,7 +1113,7 @@ ms.locfileid: "62892658"
 |0xC00470F4|-1073450764|DTS_E_EXPREVALINVALIDNULLSCALE|Der Wert %1!d! , der für den scale-Parameter der NULL-Funktion mit dem %2-Datentyp angegeben ist, liegt außerhalb des zulässigen Bereichs. Der Wert für die Dezimalstellen muss zwischen %3!d! und „%4!d!“ liegen. Der Wert für die Dezimalstellen darf die Genauigkeit nicht überschreiten und darf nicht negativ sein.|  
 |0xC00470F5|-1073450763|DTS_E_EXPREVALINVALIDNULLLENGTH|Der Wert %1!d! , der für den length-Parameter der NULL-Funktion mit dem %2-Datentyp angegeben ist, ist negativ und deshalb ungültig. Der Wert für die Länge muss positiv sein.|  
 |0xC00470F6|-1073450762|DTS_E_NEGATIVESNOTALLOWED|%1 kann kein negativer Wert zugewiesen werden.|  
-|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|Die benutzerdefinierte Eigenschaft "%1" für "%2" darf nicht auf True festgelegt werden.  Folgende Spaltendatentypen sind möglich:  DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2 oder DT_FILETIME.|  
+|0xC00470F7|-1073450761|DTS_E_FASTPARSENOTALLOWED|Die benutzerdefinierte Eigenschaft "%1" für "%2" darf nicht auf True festgelegt werden.  Folgende Spaltendatentypen sind möglich: DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4, DT_UI8, DT_DBTIMESTAMP, DT_DBTIMESTAMP2, DT_DBTIMESTAMPOFFSET, DT_DATE, DT_DBDATE, DT_DBTIME, DT_DBTIME2 oder DT_FILETIME.|  
 |0xC00470F8|-1073450760|DTS_E_CANNOTREATTACHPATH|"%1" kann nicht erneut angefügt werden. Löschen Sie den Pfad, fügen Sie einen neuen Pfad hinzu, und fügen Sie das Objekt an.|  
 |0xC00470F9|-1073450759|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSPLURALSINGULAR|Die %1-Funktion erfordert %2!d!-Parameter, nicht %3!d!-Parameter . Der Funktionsname wurde erkannt, aber die Parameteranzahl ist ungültig.|  
 |0xC00470FA|-1073450758|DTS_E_EXPREVALINVALIDNUMBEROFPARAMSSINGULARPLURAL|Die %1-Funktion erfordert %2!d!-Parameter, Parameter, und nicht %3!d! Parameter auf. Der Funktionsname wurde erkannt, aber die Parameteranzahl ist ungültig.|  
@@ -2017,10 +2017,10 @@ ms.locfileid: "62892658"
 |||DTS_E_GETCATMANAGERFAILED|Fehler beim Erstellen des COM-Komponenten-Kategorien-Managers aufgrund des Fehlers 0x%1!8.8X! „%2!s!“.|  
 |||DTS_E_COMPONENTINITFAILED|Komponente %1!s! konnte nicht gestartet werden, und zwar aufgrund des Fehlers 0x%2!8.8X! „%3!s!“.|  
   
-##  <a name="msgWarning"></a> Warnmeldungen  
+##  <a name="warning-messages"></a><a name="msgWarning"></a> Warnmeldungen  
  Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Warnmeldungen beginnen mit `DTS_W_`.  
   
-|Hexadezimalcode|Dezimalcode|Symbolischer Name|Beschreibung|  
+|Hexadezimalcode|Dezimalcode|Symbolischer Name|BESCHREIBUNG|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x80000036|-2147483594|DTS_W_COUNTDOWN|Es bleiben %1!lu! Tage für die Evaluierung. Nach Ablauf der Evaluierung können die Pakete nicht mehr ausgeführt werden.|  
 |0x80010015|-2147418091|DTS_W_GENERICWARNING|Warnung(en) wurde(n) ausgelöst. Vorher sollten genauere Warnungen ausgegeben worden sein, die die Bedeutung der Warnung(en) erläutern.|  
@@ -2124,7 +2124,7 @@ ms.locfileid: "62892658"
 |0x8004801E|-2147188706|DTS_W_COULDNOTFINDCURRENTVERSION|Der Wert "%1" für die Komponente "%2" wurde nicht gefunden. Der CurrentVersion-Wert für die Komponente wurde nicht gefunden. Dieser Fehler tritt auf, wenn in der Komponente für die Registrierungsinformationen kein CurrentVersion-Wert im DTSInfo-Abschnitt festgelegt ist. Die Meldung wird während der Komponentenentwicklung angezeigt, oder wenn die Komponente in einem Paket verwendet wird, wenn die Komponente nicht ordnungsgemäß registriert ist.|  
 |0x80049300|-2147183872|DTS_W_BUFFERGETTEMPFILENAME|Der Puffer-Manager konnte einen temporären Dateinamen nicht abrufen.|  
 |0x80049301|-2147183871|DTS_W_UNUSABLETEMPORARYPATH|Der Puffer-Manager konnte eine temporäre Datei im Pfad "%1" nicht erstellen. Der Pfad wird nicht mehr für den temporären Speicher berücksichtigt.|  
-|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|Warnung: Der globale freigegebene Speicher konnte nicht geöffnet werden, um mit der Leistungs-DLL zu kommunizieren. Es sind keine Leistungsindikatoren für Datenfluss verfügbar.  Führen Sie dieses Paket als Administrator oder auf der Systemkonsole aus, um dieses Problem zu beheben.|  
+|0x80049304|-2147183868|DTS_W_DF_PERFCOUNTERS_DISABLED|Warnung: Der globale freigegebene Speicher konnte nicht geöffnet werden, um mit der Leistungs-DLL zu kommunizieren; es sind keine Datenfluss-Leistungsindikatoren verfügbar.  Führen Sie dieses Paket als Administrator oder auf der Systemkonsole aus, um dieses Problem zu beheben.|  
 |0x8020200F|-2145378289|DTS_W_PARTIALROWFOUNDATENDOFFILE|Das Ende der Datei weist eine unvollständige Zeile auf.|  
 |0x8020202B|-2145378261|DTS_W_ENDOFFILEREACHWHILEREADINGHEADERROWS|Beim Lesen des Headers wurde das Ende der Datendatei erreicht. Stellen Sie sicher, dass das Kopfzeilentrennzeichen und die Anzahl von auszulassenden Kopfzeilen richtig sind.|  
 |0x80202066|-2145378202|DTS_W_CANTRETRIEVECODEPAGEFROMOLEDBPROVIDER|Die Codepageinformationen für die Spalte können nicht vom OLE DB-Anbieter abgerufen werden.  Falls die Eigenschaft "%1" von der Komponente unterstützt wird, wird die Codepage dieser Eigenschaft verwendet.  Ändern Sie den Wert der Eigenschaft, falls die aktuellen Codepagewerte falsch sind.  Falls die Eigenschaft nicht von der Komponente unterstützt wird, wird die Codepage des Gebietsschemabezeichners der Komponente verwendet.|  
@@ -2163,10 +2163,10 @@ ms.locfileid: "62892658"
 |0xC020822C|-1071611348|DTS_W_UNMAPPEDOUTPUTCOLUMN|%1 ist keine Eingabespalte zugeordnet.|  
 |0x930D|37645|DTS_W_EXTERNALTABLECOLSOUTOFSYNC|Die Tabelle "%1" wurde geändert. Möglicherweise wurden der Tabelle neue Spalten hinzugefügt.|  
   
-##  <a name="msgInfo"></a> Informationsmeldungen  
+##  <a name="informational-messages"></a><a name="msgInfo"></a> Informationsmeldungen  
  Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Informationsmeldungen beginnen mit `DTS_I_`.  
   
-|Hexadezimalcode|Dezimalcode|Symbolischer Name|Beschreibung|  
+|Hexadezimalcode|Dezimalcode|Symbolischer Name|BESCHREIBUNG|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x4001100A|1073811466|DTS_I_STARTINGTRANSACTION|Verteilte Transaktion für diesen Container wird gestartet.|  
 |0x4001100B|1073811467|DTS_I_COMMITTINGTRANSACTION|Commit für verteilte Transaktion, die von diesem Container gestartet wurde, wird ausgeführt.|  
@@ -2262,10 +2262,10 @@ ms.locfileid: "62892658"
 |0x40209317|1075876631|DTS_I_CACHEFILEWRITESUCCEEDED|%1 hat den Cache in die Datei "%2" geschrieben.|  
 |0x4020F42C|1075901484|DTS_I_OLEDBDESTZEROMAXCOMMITSIZE|Die Eigenschaft der maximalen Einfügungscommitgröße des OLE DB-Ziels "%1" wird auf 0 (null) festgelegt. Diese Einstellung kann dazu führen, dass das ausgeführte Paket nicht mehr antwortet. Weitere Informationen finden Sie im F1-Hilfethema 'Ziel-Editor für OLE DB' (Verbindungs-Manager-Seite).|  
   
-##  <a name="msgGeneral"></a> Allgemeine Meldungen und Ereignismeldungen  
+##  <a name="general-and-event-messages"></a><a name="msgGeneral"></a> Allgemeine Meldungen und Ereignismeldungen  
  Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Fehlermeldungen beginnen mit `DTS_MSG_`.  
   
-|Hexadezimalcode|Dezimalcode|Symbolischer Name|Beschreibung|  
+|Hexadezimalcode|Dezimalcode|Symbolischer Name|BESCHREIBUNG|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x1|1|DTS_MSG_CATEGORY_SERVICE_CONTROL|Falsche Funktion.|  
 |0x2|2|DTS_MSG_CATEGORY_RUNNING_PACKAGE_MANAGEMENT|Die angegebene Datei wurde nicht gefunden.|  
@@ -2301,19 +2301,19 @@ ms.locfileid: "62892658"
 |0x4010310D|1074802957|DTS_MSG_EVENTLOGENTRY_PACKAGEEND|Ereignisname: %1<br /><br /> Meldung: %9<br /><br /> Operator: %2<br /><br /> Quellenname: %3<br /><br /> Quellen-ID: %4<br /><br /> Ausführungs-ID: %5<br /><br /> Startzeit: %6<br /><br /> Beendigungszeit: %7<br /><br /> Datencode: %8|  
 |0x4010310E|1074802958|DTS_MSG_EVENTLOGENTRY_INFORMATION|Ereignisname: %1<br /><br /> Meldung: %9<br /><br /> Operator: %2<br /><br /> Quellenname: %3<br /><br /> Quellen-ID: %4<br /><br /> Ausführungs-ID: %5<br /><br /> Startzeit: %6<br /><br /> Beendigungszeit: %7<br /><br /> Datencode: %8|  
   
-##  <a name="msgSuccess"></a> Erfolgsmeldungen  
+##  <a name="success-messages"></a><a name="msgSuccess"></a> Erfolgsmeldungen  
  Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Erfolgsmeldungen beginnen mit `DTS_S_`.  
   
-|Hexadezimalcode|Dezimalcode|Symbolischer Name|Beschreibung|  
+|Hexadezimalcode|Dezimalcode|Symbolischer Name|BESCHREIBUNG|  
 |----------------------|------------------|-------------------|-----------------|  
 |0x40003|262147|DTS_S_NULLDATA|Der Wert ist NULL.|  
 |0x40005|262149|DTS_S_TRUNCATED|Der Zeichenfolgenwert war abgeschnitten. Der Puffer hat eine Zeichenfolge empfangen, die für die Spalte zu lang war. Die Zeichenfolge wurde deshalb vom Puffer abgeschnitten.|  
 |0x200001|2097153|DTS_S_EXPREVALTRUNCATIONOCCURRED|Beim Auswerten des Ausdrucks wurden Daten abgeschnitten. Der Abschneidevorgang erfolgte während der Auswertung, wozu jeder beliebige Punkt in einem Zwischenschritt zählen kann.|  
   
-##  <a name="msgPipeline"></a> Fehlermeldungen der Datenflusskomponenten  
+##  <a name="data-flow-component-error-messages"></a><a name="msgPipeline"></a> Fehlermeldungen der Datenflusskomponenten  
  Die symbolischen Namen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Fehlermeldungen beginnen mit `DTSBC_E_`, wobei "BC" auf die systemeigene Basisklasse verweist, von der die meisten Microsoft-Datenflusskomponenten abgeleitet werden.  
   
-|Hexadezimalcode|Dezimalcode|Symbolischer Name|Beschreibung|  
+|Hexadezimalcode|Dezimalcode|Symbolischer Name|BESCHREIBUNG|  
 |----------------------|------------------|-------------------|-----------------|  
 |0xC8000002|-939524094|DTSBC_E_INCORRECTEXACTNUMBEROFTOTALOUTPUTS|Die Gesamtanzahl der Ausgaben und Fehlerausgaben (%1!lu!) ist falsch. Dieser Wert muss genau %2!lu! betragen.|  
 |0xC8000003|-939524093|DTSBC_E_FAILEDTOGETOUTPUTBYINDEX|Die Ausgabe mit dem Index %1!lu! kann nicht abgerufen werden.|  

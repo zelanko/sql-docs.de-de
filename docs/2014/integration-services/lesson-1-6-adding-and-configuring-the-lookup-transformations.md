@@ -11,17 +11,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f652519efc4b77bd785cdded468fe114f6499200
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891548"
 ---
-# <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>Schritt 6: Hinzufügen und Konfigurieren von Suchtransformationen
+# <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>Schritt 6: Hinzufügen und Konfigurieren der Transformationen zum Suchen
   Nach dem Konfigurieren der Flatfilequelle zum Extrahieren von Daten aus der Quelldatei besteht die nächste Aufgabe darin, die Suchtransformationen zu definieren, die zum Abrufen der Werte für **CurrencyKey** und **DateKey**erforderlich sind. Von einer Transformation zum Suchen wird eine Suche durchgeführt, indem Daten in der angegebenen Eingabespalte mit einer Spalte in einem referenzierten Dataset verknüpft werden. Bei dem Verweisdataset kann es sich um eine vorhandene Tabelle oder Sicht, eine neue Tabelle oder das Ergebnis einer SQL-Anweisung handeln. In diesem Lernprogramm stellt die Transformation für Suche stellt mithilfe eines OLE DB-Verbindungs-Managers eine Verbindung mit der Datenbank her, die die Daten enthält, die als Quelle des Verweisdatasets dienen.  
   
 > [!NOTE]  
->  Sie können die Transformation für Suche auch so konfigurieren, dass sie eine Verbindung mit einem Cache herstellt, der das Verweisdataset enthält. Weitere Informationen finden Sie unter [Transformation für Suche](data-flow/transformations/lookup-transformation.md).  
+>  Sie können die Transformation für Suche auch so konfigurieren, dass sie eine Verbindung mit einem Cache herstellt, der das Verweisdataset enthält. Weitere Informationen finden Sie unter [Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
  Für dieses Lernprogramm fügen Sie die folgenden zwei Transformationskomponenten zum Suchen zu dem Paket hinzu und konfigurieren sie:  
   
@@ -134,6 +134,6 @@ ms.locfileid: "62891548"
  [Schritt 7: Hinzufügen und Konfigurieren des OLE DB-Ziels](lesson-1-7-adding-and-configuring-the-ole-db-destination.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Suchtransformation](data-flow/transformations/lookup-transformation.md)  
+ [Transformation für Suche](data-flow/transformations/lookup-transformation.md)  
   
   

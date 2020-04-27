@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bcf462f82d7455f83bb0bee8a3b0af991ec2e7db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62920055"
 ---
 # <a name="sqlpipe-object"></a>SqlPipe-Objekt
@@ -29,8 +29,7 @@ ms.locfileid: "62920055"
  Für CLR-Datenbankobjekte (Common Language Runtime), die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt werden, können Sie die Ergebnisse mit der `Send`-Methode des `SqlPipe`-Objekts an die verbundene Pipe senden. Greifen Sie auf die `Pipe`-Eigenschaft des `SqlContext`-Objekts zu, um das `SqlPipe`-Objekt abzurufen. Die `SqlPipe`-Klasse gleicht konzeptionell der `Response`-Klasse in ASP.NET. Weitere Informationen finden Sie in der Referenzdokumentation zur SqlPipe-Klasse im .NET Framework Software Development Kit.  
   
 ## <a name="returning-tabular-results-and-messages"></a>Zurückgeben von Tabellenergebnissen und Meldungen  
- 
-  `SqlPipe` verfügt über eine `Send`-Methode, die drei Überladungen besitzt. Sie lauten wie folgt:  
+ `SqlPipe` verfügt über eine `Send`-Methode, die drei Überladungen besitzt. Sie lauten wie folgt:  
   
 -   `void Send(string message)`  
   
@@ -49,12 +48,10 @@ ms.locfileid: "62920055"
 ## <a name="returning-custom-result-sets"></a>Zurückgeben von benutzerdefinierten Resultsets  
  Verwaltete gespeicherte Prozeduren können Resultsets senden, die nicht von einem `SqlDataReader` stammen. Die `SendResultsStart`-Methode ermöglicht es gespeicherten Prozeduren zusammen mit `SendResultsRow` und `SendResultsEnd`, benutzerdefinierte Resultsets an den Client zu senden.  
   
- 
-  `SendResultsStart` akzeptiert einen `SqlDataRecord` als Eingabe. Die Methode kennzeichnet den Anfang eines Resultsets und erstellt mithilfe der Datensatzmetadaten die Metadaten zur Beschreibung des Resultsets. Der Wert des Datensatzes wird nicht mit `SendResultsStart` gesendet. Alle nachfolgenden Zeilen, die mit der `SendResultsRow`-Methode gesendet werden, müssen dieser Metadatendefinition entsprechen.  
+ `SendResultsStart` akzeptiert einen `SqlDataRecord` als Eingabe. Die Methode kennzeichnet den Anfang eines Resultsets und erstellt mithilfe der Datensatzmetadaten die Metadaten zur Beschreibung des Resultsets. Der Wert des Datensatzes wird nicht mit `SendResultsStart` gesendet. Alle nachfolgenden Zeilen, die mit der `SendResultsRow`-Methode gesendet werden, müssen dieser Metadatendefinition entsprechen.  
   
 > [!NOTE]  
->  Nach dem Aufruf der `SendResultsStart`-Methode können nur `SendResultsRow` und `SendResultsEnd` aufgerufen werden. Ein Aufruf einer beliebigen anderen Methode in der gleichen Instanz von `SqlPipe` verursacht eine `InvalidOperationException`. 
-  `SendResultsEnd` setzt `SqlPipe` auf den Ausgangszustand zurück, in dem andere Methoden aufgerufen werden können.  
+>  Nach dem Aufruf der `SendResultsStart`-Methode können nur `SendResultsRow` und `SendResultsEnd` aufgerufen werden. Ein Aufruf einer beliebigen anderen Methode in der gleichen Instanz von `SqlPipe` verursacht eine `InvalidOperationException`. `SendResultsEnd` setzt `SqlPipe` auf den Ausgangszustand zurück, in dem andere Methoden aufgerufen werden können.  
   
 ### <a name="example"></a>Beispiel  
  Die gespeicherte `uspGetProductLine`-Prozedur gibt den Namen, die Produktnummer, die Farbe und den Listenpreis aller Produkte innerhalb einer bestimmten Produktlinie zurück. Diese gespeicherte Prozedur nimmt genaue Übereinstimmungen für *prodLine*an.  

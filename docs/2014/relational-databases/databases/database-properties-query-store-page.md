@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 51116c993cf795e6390ac463f67f75e2ddff3e0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917211"
 ---
 # <a name="database-properties-query-store-page"></a>Datenbankeigenschaften (Seite des Abfragespeichers)
@@ -59,11 +59,11 @@ ms.locfileid: "62917211"
   
  Das rechte Diagramm zeigt den derzeit verbrauchten Anteil des Abfragespeicherkontingents. Beachten Sie, dass das Kontingent im linken Diagramm nicht angezeigt wird. Das Kontingent kann die aktuelle Größe der Datenbank überschreiten.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Der Abfragespeicher bietet über DBAs Einblick in die Auswahl und die Leistung des Abfrageplans. Er vereinfacht das Beheben von Leistungsproblemen, indem er das schnelle Auffinden von Leistungsabweichungen durch Änderungen an Abfrageplänen ermöglicht. Das Feature erfasst automatisch einen Verlauf der Abfrage-, Plan- und Laufzeitstatistiken und bewahrt diese zur Überprüfung auf. Es unterteilt die Daten nach Zeitfenstern und ermöglicht es Ihnen so, Verwendungsmuster für Datenbanken zu erkennen und zu verstehen, wann Abfrageplanänderungen auf dem Server aufgetreten sind. Der Abfragespeicher kann mithilfe dieser Eigenschaftenseite der Abfragespeicherdatenbank oder mithilfe der [ALTER DATABASE SET](/sql/t-sql/statements/alter-database-transact-sql-set-options) -Option konfiguriert werden. Der Abfragespeicher stellt Informationen mithilfe eines [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] -Dialogfelds dar. Weitere Informationen zum Abfragespeicher finden Sie unter [Monitoring Performance By Using the Query Store](../performance/monitoring-performance-by-using-the-query-store.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Gespeicherte Prozeduren für den Abfragespeicher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql)   
+ [Abfragespeicher gespeicherter Prozeduren &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql)   
  [Katalogsichten des Abfragespeichers &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/query-store-catalog-views-transact-sql)  
   
   

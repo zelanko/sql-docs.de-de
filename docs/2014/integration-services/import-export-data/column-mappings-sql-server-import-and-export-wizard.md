@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0108004bc7fb5743ab92c455f4aee99a9f3df498
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62893041"
 ---
 # <a name="column-mappings-sql-server-import-and-export-wizard"></a>Spaltenzuordnungen (SQL Server-Import/Export-Assistent)
@@ -29,29 +29,29 @@ ms.locfileid: "62893041"
   
  Mit dem SQL Server-Import/Export-Assistenten werden Daten aus einer Quelle in ein Ziel kopiert. Mit dem Assistenten können auch eine Zieldatenbank und Zieltabellen erstellt werden. Wenn Sie jedoch mehrere Datenbanken, Tabellen oder andere Datenbankobjekte kopieren müssen, verwenden Sie stattdessen den Assistenten zum Kopieren von Datenbanken. Weitere Informationen finden Sie unter [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
-## <a name="options"></a>Tastatur  
- **`Source`**  
+## <a name="options"></a>Optionen  
+ **Quelle**  
  Identifiziert die ausgewählte Quelltabelle, -sicht oder -abfrage.  
   
  **Ziel**  
  Identifiziert die ausgewählte Zieltabelle, -sicht oder -abfrage.  
   
- **Ziel Tabelle/-Datei erstellen**  
+ **Zieltabelle erstellen**  
  Geben Sie an, ob eine Zieltabelle erstellt werden soll, falls noch keine solche Tabelle vorhanden ist.  
   
- **Zeilen in Ziel Tabelle/-Datei löschen**  
+ **Zeilen in Zieltabelle löschen**  
  Geben Sie an, ob die Daten aus einer vorhandenen Tabelle gelöscht werden sollen, bevor neue Daten geladen werden.  
   
- **Zeilen an Ziel Tabelle/-Datei anfügen**  
+ **Append rows to destination table/file**  
  Geben Sie an, ob die neuen Daten an die in der Tabelle bereits enthaltenen Daten angefügt werden sollen.  
   
  **SQL bearbeiten**  
  Verwenden Sie die default-Anweisung im Dialogfeld **SQL-Anweisung CREATE TABLE** , oder ändern Sie Sie für Ihre Zwecke. Wenn die Anweisung geändert wird, müssen Sie auch für die Tabellenzuordnung die entsprechenden Änderungen vornehmen.  
   
- **Ziel Tabelle löschen und erneut erstellen**  
+ **Zieltabelle löschen und erneut erstellen**  
  Wählen Sie diese Option aus, um die Zieltabelle zu überschreiben. Diese Option ist nur verfügbar, wenn Sie den Assistenten verwenden, um die Zieltabelle zu erstellen. Die Zieltabelle wird nur gelöscht und erneut erstellt, wenn Sie das vom Assistenten erstellte Paket speichern und anschließend erneut ausführen.  
   
- **Aktivieren der Identitäts Einfügung**  
+ **IDENTITY_INSERT aktivieren**  
  Wählen Sie diese Option aus, damit vorhandene IDENTITY-Werte in den Quelldaten in eine IDENTITY-Spalte in der Zieltabelle eingefügt werden können. Standardmäßig ist dies für die Identity-Zielspalte nicht zulässig.  
   
  **Zuordnungen**  
@@ -59,7 +59,7 @@ ms.locfileid: "62893041"
   
  Diese Liste weist die folgenden Spalten auf:  
   
- **`Source`**  
+ **Quelle**  
  Zeigen Sie die einzelnen Quellspalten an, für die Transformationsparameter festgelegt werden können.  
   
  **Ziel**  
@@ -68,16 +68,16 @@ ms.locfileid: "62893041"
  **Typ**  
  Wählen Sie einen Datentyp für die Spalte aus.  
   
- **Nullable**  
+ **NULL zulassen**  
  Geben Sie an, ob der NULL-Wert in der Spalte zulässig ist.  
   
  **Größe**  
  Geben Sie die Anzahl der Zeichen in der Spalte an.  
   
- **Präziser**  
+ **Genauigkeit**  
  Geben Sie die Genauigkeit der angezeigten Daten in der Anzahl der Ziffern an.  
   
- **Migen**  
+ **Skalieren**  
  Geben Sie die Anzahl der Dezimalstellen der angezeigten Daten an.  
   
   

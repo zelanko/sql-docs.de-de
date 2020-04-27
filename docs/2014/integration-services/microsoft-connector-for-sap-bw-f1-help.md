@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 80dfa890b16b27ac00218f9e9e7895411c8ac9eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890659"
 ---
 # <a name="microsoft-connector-11-for-sap-bw-f1-help"></a>F1-Hilfe zu Microsoft Connector 1.1 for SAP BW
@@ -27,11 +27,11 @@ ms.locfileid: "62890659"
   
 ### <a name="sap-bw-connection-manager-f1-help"></a>F1-Hilfe zum SAP BW-Verbindungs-Manager  
   
--   [Verbindungs-Manager-Editor für SAP BW](sap-bw-connection-manager-editor.md)  
+-   [SAP BW-Verbindungs-Manager-Editor](sap-bw-connection-manager-editor.md)  
   
 ### <a name="sap-bw-source-f1-help"></a>F1-Hilfe zur SAP BW-Quelle  
   
--   [Quellen-Editor für SAP BW &#40;Seite Verbindungs-Manager&#41;](data-flow/sap-bw-source-editor-connection-manager-page.md)  
+-   [Quellen-Editor für SAP BW &#40;Seite „Verbindungs-Manager“&#41;](data-flow/sap-bw-source-editor-connection-manager-page.md)  
   
 -   [Quellen-Editor für SAP BW &#40;Seite Spalten&#41;](data-flow/sap-bw-source-editor-columns-page.md)  
   

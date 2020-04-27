@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0caed882338b4ac1ce2f3e1e225693017ff1605
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62899933"
 ---
 # <a name="term-extraction-transformation"></a>Transformation für Ausdrucksextrahierung
@@ -173,17 +173,17 @@ ms.locfileid: "62899933"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Transformations-Editor für Ausdrucksextrahierung** festlegen können:  
   
--   [Transformations-Editor für Ausdrucksextrahierung &#40;Registerkarten&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
+-   [Transformations-Editor für Ausdrucksextrahierung &#40;Registerkarte „Ausdrucksextrahierung“&#41;](../../term-extraction-transformation-editor-term-extraction-tab.md)  
   
--   [Transformations-Editor für Ausdrucksextrahierung &#40;&#41;Register](../../term-extraction-transformation-editor-exclusion-tab.md)  
+-   [Transformations-Editor für Ausdrucksextrahierung &#40;Registerkarte „Ausschluss“&#41;](../../term-extraction-transformation-editor-exclusion-tab.md)  
   
--   [Transformations-Editor für Ausdrucksextrahierung &#40;&#41;Register](../../term-extraction-transformation-editor-advanced-tab.md)  
+-   [Transformations-Editor für Ausdrucksextrahierung &#40;Registerkarte „Erweitert“&#41;](../../term-extraction-transformation-editor-advanced-tab.md)  
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Common Properties](../../common-properties.md)  
+-   [Allgemeine Eigenschaften](../../common-properties.md)  
   
--   [Benutzerdefinierte Eigenschaften von Transformationen](transformation-custom-properties.md)  
+-   [Transformation Custom Properties](transformation-custom-properties.md)  
   
  Weitere Informationen zum Festlegen der Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../set-the-properties-of-a-data-flow-component.md).  
   

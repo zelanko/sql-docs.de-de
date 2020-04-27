@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7905d620cb9bff24f92e73929322ed995a1d8ba0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919655"
 ---
 # <a name="disallowed-types-and-members-in-microsoftvisualbasicdll"></a>Unzulässige Typen und Elemente in "Microsoft.VisualBasic.dll"
@@ -60,8 +60,8 @@ ms.locfileid: "62919655"
 |Microsoft.VisualBasic.Interaction.CreateObject()|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Interaction.DeleteSetting()|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Interaction.GetObject()|ExternalProcessMgmt|  
-|Microsoft.VisualBasic.Interaction.InputBox()|Benutzeroberfläche|  
-|Microsoft.VisualBasic.Interaction.MsgBox()|Benutzeroberfläche|  
+|Microsoft.VisualBasic.Interaction.InputBox()|UI|  
+|Microsoft.VisualBasic.Interaction.MsgBox()|UI|  
 |Microsoft.VisualBasic.Logging.AspLog|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Logging.FileLogTraceListener..ctor()|ExternalProcessMgmt|  
 |Microsoft.VisualBasic.Logging.FileLogTraceListener.Close()|Synchronization|  

@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: cf5c0b6c7004f458e424e58d738cce22e97afa2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919589"
 ---
 # <a name="clr-scalar-valued-functions"></a>CLR-Skalarwertfunktionen
@@ -82,11 +82,9 @@ End Class
   
  Die erste Codezeile verweist auf `Microsoft.SqlServer.Server`, um auf Attribute zuzugreifen, und auf `System.Data.SqlClient`, um auf den ADO.NET-Namespace zuzugreifen. (Dieser Namespace enthält `SqlClient`, den .NET Framework-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].)  
   
- Danach empfängt die Funktion das benutzerdefinierte `SqlFunction`-Attribut, das im `Microsoft.SqlServer.Server`-Namespace enthalten ist. Das benutzerdefinierte Attribut gibt an, ob die benutzerdefinierte Funktion (UDF) den prozessinternen Anbieter verwendet, um Daten im Server zu lesen. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lässt nicht zu, dass UDFs Daten aktualisieren, einfügen oder löschen. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann die Ausführung einer UDF optimieren, die den prozessinternen Anbieter nicht verwendet. Dies wird angegeben, indem `DataAccessKind` auf `DataAccessKind.None` festgelegt wird. Die Zielmethode in der nächsten Zeile ist eine öffentliche statische Methode (shared in Visual Basic .NET).  
+ Danach empfängt die Funktion das benutzerdefinierte `SqlFunction`-Attribut, das im `Microsoft.SqlServer.Server`-Namespace enthalten ist. Das benutzerdefinierte Attribut gibt an, ob die benutzerdefinierte Funktion (UDF) den prozessinternen Anbieter verwendet, um Daten im Server zu lesen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lässt nicht zu, dass UDFs Daten aktualisieren, einfügen oder löschen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann die Ausführung einer UDF optimieren, die den prozessinternen Anbieter nicht verwendet. Dies wird angegeben, indem `DataAccessKind` auf `DataAccessKind.None` festgelegt wird. Die Zielmethode in der nächsten Zeile ist eine öffentliche statische Methode (shared in Visual Basic .NET).  
   
- Die `SqlContext`-Klasse, die im `Microsoft.SqlServer.Server`-Namespace enthalten ist, kann dann über die bereits eingerichtete Verbindung mit der `SqlCommand`-Instanz auf ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekt zugreifen. Hier wird zwar kein Gebrauch davon gemacht, aber auch der aktuelle Transaktionskontext ist über die `System.Transactions`-Anwendungsprogrammierschnittstelle (API) verfügbar.  
+ Die `SqlContext`-Klasse, die im `Microsoft.SqlServer.Server`-Namespace enthalten ist, kann dann über die bereits eingerichtete Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz auf ein `SqlCommand`-Objekt zugreifen. Hier wird zwar kein Gebrauch davon gemacht, aber auch der aktuelle Transaktionskontext ist über die `System.Transactions`-Anwendungsprogrammierschnittstelle (API) verfügbar.  
   
  Die meisten Codezeilen im Funktionsrumpf sollten Entwicklern bekannt vorkommen, die bereits Clientanwendungen mit Typen aus dem `System.Data.SqlClient`-Namespace geschrieben haben.  
   
@@ -130,8 +128,7 @@ vbc.exe /t:library /out:FirstUdf.dll FirstUdf.vb
 ```  
   
 > [!NOTE]  
->  
-  `/t:library` gibt an, dass eine Bibliothek und keine ausführbare Datei erzeugt werden soll. Ausführbare Dateien können nicht in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert werden.  
+>  `/t:library` gibt an, dass eine Bibliothek und keine ausführbare Datei erzeugt werden soll. Ausführbare Dateien können nicht in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert werden.  
   
 > [!NOTE]  
 >  Visual C++-Datenbankobjekte, die mit `/clr:pure` kompiliert wurden, können nicht in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt werden. Zu solchen Datenbankobjekten gehören beispielsweise Skalarwertfunktionen.  

@@ -16,14 +16,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ea923f72e0c9e505bc9e1f056d5ff4dbe36ad9a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62901014"
 ---
 # <a name="audit-transformation"></a>Überwachungstransformation
-  Mithilfe der Überwachungstransformation werden in den Datenfluss eines Pakets Daten zur Umgebung, in der das Paket ausgeführt wird, eingeschlossen. Dem Datenfluss kann z. B. der Name des Pakets, Computers und Operators hinzugefügt werden. [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] schließt Systemvariablen ein, die diese Informationen bereit [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellen.  
+  Mithilfe der Überwachungstransformation werden in den Datenfluss eines Pakets Daten zur Umgebung, in der das Paket ausgeführt wird, eingeschlossen. Dem Datenfluss kann z. B. der Name des Pakets, Computers und Operators hinzugefügt werden. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] enthält Systemvariablen, die diese Informationen bereitstellen.  
   
 ## <a name="system-variables"></a>Systemvariablen  
  In der folgenden Tabelle sind die Systemvariablen beschrieben, die von der Überwachungstransformation verwendet werden können.  
@@ -38,7 +38,7 @@ ms.locfileid: "62901014"
 |`MachineName`|5|Der Computername.|  
 |`UserName`|6|Der Anmeldename der Person, die das Paket gestartet hat.|  
 |`TaskName`|7|Der Name des Datenflusstasks, dem die Überwachungstransformation zugeordnet ist.|  
-|**TaskID**|8|Der eindeutige Bezeichner des Datenflusstasks.|  
+|**TaskId**|8|Der eindeutige Bezeichner des Datenflusstasks.|  
   
 ## <a name="configuration-of-the-audit-transformation"></a>Konfiguration der Überwachungstransformation  
  Zum Konfigurieren der Überwachungstransformation stellen Sie den Namen einer neuen Ausgabespalte bereit, die der Transformationsausgabe hinzugefügt werden soll, und ordnen dann der Ausgabespalte die Systemvariable zu. Eine einzelne Systemvariable kann mehreren Spalten zugeordnet werden.  
@@ -51,9 +51,9 @@ ms.locfileid: "62901014"
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Common Properties](../../common-properties.md)  
+-   [Allgemeine Eigenschaften](../../common-properties.md)  
   
--   [Benutzerdefinierte Eigenschaften von Transformationen](transformation-custom-properties.md)  
+-   [Transformation Custom Properties](transformation-custom-properties.md)  
   
  Weitere Informationen zum Festlegen der Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../set-the-properties-of-a-data-flow-component.md).  
   

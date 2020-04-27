@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7532f2a6f2c50f53e5af01c2cec979170b493147
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922932"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>Anwenden von Transaktionsprotokollsicherungen (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "62922932"
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="Requirements"></a>Anforderungen für die Wiederherstellung von Transaktionsprotokoll Sicherungen  
+##  <a name="requirements-for-restoring-transaction-log-backups"></a><a name="Requirements"></a>Anforderungen für die Wiederherstellung von Transaktionsprotokoll Sicherungen  
  Für das Anwenden einer Transaktionsprotokollsicherung müssen folgende Voraussetzungen erfüllt sein:  
   
 -   **Ausreichende Protokollsicherungen für eine Wiederherstellungssequenz:** Es müssen ausreichend Protokolldatensätze gesichert sein, damit eine Wiederherstellungssequenz abgeschlossen werden kann. Die erforderlichen Protokollsicherungen (einschließlich der [Sicherung des Protokollfragments](tail-log-backups-sql-server.md) , sofern erforderlich) müssen vor dem Start einer Wiederherstellungssequenz zur Verfügung stehen.  
@@ -50,7 +50,7 @@ ms.locfileid: "62922932"
     > [!TIP]  
     >  Eine bewährte Methode besteht darin, alle Protokollsicherungen (RESTORE LOG *Datenbankname* WITH NORECOVERY) wiederherzustellen. Stellen Sie nach dem Wiederherstellen der letzten Protokollsicherung die Datenbank in einem separaten Vorgang (RESTORE DATABASE *Datenbankname* WITH RECOVERY) wieder her.  
   
-##  <a name="RecoveryAndTlogs"></a>Wiederherstellungs-und Transaktionsprotokolle  
+##  <a name="recovery-and-transaction-logs"></a><a name="RecoveryAndTlogs"></a>Wiederherstellungs-und Transaktionsprotokolle  
  Wenn Sie den Wiederherstellungsvorgang abschließen und die Datenbank wiederherstellen, wird während der Wiederherstellung für alle unvollständigen Transaktionen ein Rollback ausgeführt. Dies wird als *Rollbackphase*bezeichnet. Das Rollback ist erforderlich, um die Integrität der Datenbank wiederherzustellen. Nach dem Rollback wird die Datenbank online geschaltet, und es können keine weiteren Transaktionsprotokollsicherungen auf die Datenbank angewendet werden.  
   
  So kann z. B. eine Reihe von Transaktionsprotokollsicherungen eine lang andauernde Transaktion enthalten. Der Start der Transaktion wird in der ersten Transaktionsprotokollsicherung, das Ende der Transaktion jedoch in der zweiten Transaktionsprotokollsicherung aufgezeichnet. Es gibt keinen Datensatz für einen Commit- oder Rollbackvorgang in der ersten Transaktionsprotokollsicherung. Wenn ein Wiederherstellungsvorgang nach dem Anwenden der ersten Transaktionsprotokollsicherung ausgeführt wird, wird die lang andauernde Transaktion als unvollständig behandelt, und für die in der ersten Transaktionsprotokollsicherung aufgezeichneten Datenänderungen dieser Transaktion wird ein Rollback ausgeführt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ist das Anwenden einer zweiten Transaktionsprotokollsicherung nach diesem Zeitpunkt nicht zulässig.  
@@ -58,10 +58,10 @@ ms.locfileid: "62922932"
 > [!NOTE]  
 >  Unter bestimmten Umständen können Sie eine Datei während der Protokollwiederherstellung explizit hinzufügen.  
   
-##  <a name="PITrestore"></a>Verwenden von Protokoll Sicherungen zur Wiederherstellung bis zum Zeitpunkt des Fehlers  
+##  <a name="using-log-backups-to-restore-to-the-point-of-failure"></a><a name="PITrestore"></a>Verwenden von Protokoll Sicherungen zur Wiederherstellung bis zum Zeitpunkt des Fehlers  
  Nehmen Sie die folgende Ereignissequenz an.  
   
-|Time|Ereignis|  
+|Zeit|Ereignis|  
 |----------|-----------|  
 |8:00 Uhr|Sichern der Datenbank zum Erstellen einer vollständigen Datenbanksicherung.|  
 |12:00 Uhr|Sichern des Transaktionsprotokolls.|  
@@ -95,7 +95,7 @@ ms.locfileid: "62922932"
 > [!NOTE]  
 >  In einigen Fällen können Sie auch mit Transaktionsprotokollen eine Datenbank zu einem bestimmten Zeitpunkt wiederherstellen. Informationen finden Sie unter [Wiederherstellen einer SQL Server-Datenbank zu einem Zeitpunkt &#40;vollständiges Wiederherstellungsmodell&#41;](restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md)bezeichnet.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So wenden Sie eine Transaktionsprotokollsicherung an**  
   
 -   [Wiederherstellen einer Transaktionsprotokollsicherung &#40;SQL Server&#41;](restore-a-transaction-log-backup-sql-server.md)  

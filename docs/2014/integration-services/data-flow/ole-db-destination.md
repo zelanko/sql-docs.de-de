@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7d9b75cc79f1f127858ce8547aa222524614ac09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62901549"
 ---
 # <a name="ole-db-destination"></a>OLE DB-Ziel
@@ -83,7 +83,7 @@ ms.locfileid: "62901549"
   
  Neben den im Dialogfeld **Ziel-Editor für OLE DB** verfügbar gemachten Optionen für schnelles Laden können Sie das OLE DB-Ziel so konfigurieren, dass die folgenden Optionen für das Massenladen verwendet werden, indem Sie die Optionen im Dialogfeld **Erweiterter Editor** in der FastLoadOptions-Eigenschaft eingeben.  
   
-|Option für schnelles Laden|BESCHREIBUNG|  
+|Option für schnelles Laden|Beschreibung|  
 |----------------------|-----------------|  
 |KILOBYTES_PER_BATCH|Gibt die einzufügende Größe in Kilobyte an. Die-Option hat die `KILOBYTES_PER_BATCH`  =  \<Form positive Ganzzahl**>**.|  
 |FIRE_TRIGGERS|Gibt an, ob in der Einfügetabelle Trigger ausgelöst werden. Die Option hat die Form **FIRE_TRIGGERS**. Das Vorhandensein der Option gibt an, dass Trigger ausgelöst werden.|  
@@ -101,15 +101,15 @@ ms.locfileid: "62901549"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Ziel-Editor für OLE DB** festlegen können:  
   
--   [OLE DB Ziel-Editor &#40;Seite "Verbindungs-Manager"&#41;](../ole-db-destination-editor-connection-manager-page.md)  
+-   [Ziel-Editor für OLE DB &#40;Seite „Verbindungs-Manager“&#41;](../ole-db-destination-editor-connection-manager-page.md)  
   
--   [OLE DB Ziel-Editor &#40;Seite Zuordnungen&#41;](../ole-db-destination-editor-mappings-page.md)  
+-   [Ziel-Editor für OLE DB &#40;Seite „Zuordnungen“&#41;](../ole-db-destination-editor-mappings-page.md)  
   
--   [OLE DB Ziel-Editor &#40;Seite Fehlerausgabe&#41;](../ole-db-destination-editor-error-output-page.md)  
+-   [Ziel-Editor für OLE DB &#40;Seite „Fehlerausgabe“&#41;](../ole-db-destination-editor-error-output-page.md)  
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Common Properties](../common-properties.md)  
+-   [Allgemeine Eigenschaften](../common-properties.md)  
   
 -   [Benutzerdefinierte Eigenschaften für OLE DB](ole-db-custom-properties.md)  
   

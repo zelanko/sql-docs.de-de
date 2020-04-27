@@ -18,13 +18,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e25c90b3baa4e718f40dc3a3f84b6dc221d54c33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62878282"
 ---
-# <a name="ssis-tutorial-creating-a-simple-etl-package"></a>SSIS-Lernprogramm: Erstellen eines einfachen ETL-Pakets
+# <a name="ssis-tutorial-creating-a-simple-etl-package"></a>SSIS-Tutorial: Erstellen eines einfachen ETL-Pakets
   [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (SSIS) ist eine Plattform zum entwickeln leistungsstarker Daten Integrationslösungen, einschließlich der ETL-Pakete (extrahieren, Transformieren und laden) für Data [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Warehousing. SSIS enthält grafische Tools und Assistenten zum Erstellen und Debuggen von Paketen; Tasks zum Ausführen von Workflowfunktionen wie z. B. FTP-Vorgänge, Ausführen von SQL-Anweisungen und Senden von E-Mails; Datenquellen und Ziele zum Extrahieren und Laden von Daten; Transformationen zum Bereinigen, Aggregieren, Zusammenführen und Kopieren von Daten; einen Verwaltungsdienst, den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst zum Verwalten der Paketausführung und -speicherung; und Anwendungsprogrammierschnittstellen (APIs, Application Programming Interfaces) zum Programmieren des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Objektmodells.  
   
  In diesem Tutorial erfahren Sie, wie Sie mit dem [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer ein einfaches [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Paket erstellen. Das von Ihnen erstellte Paket übernimmt Daten aus einer Flatfile, formatiert die Daten und fügt die neu formatierten Daten in eine Faktentabelle ein. In den folgenden Lektionen wird das Paket erweitert, um Schleifen, Paketkonfigurationen, Protokollierung und Fehlerfluss zu demonstrieren.  
@@ -34,7 +34,7 @@ ms.locfileid: "62878282"
 ## <a name="what-you-will-learn"></a>Lernziele  
  Die beste Möglichkeit, sich mit den neuen Tools, Steuerelementen und Features vertraut zu [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] machen, die in verfügbar sind, ist die Verwendung dieser Tools. Dieses Lernprogramm leitet Sie Schritt für Schritt durch den [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer, um ein einfaches ETL-Paket einschließlich Schleifen, Konfigurationen, Fehlerflusslogik und Protokollierung zu erstellen.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
  Dieses Tutorial richtet sich an Benutzer, die mit grundlegenden Daten Bank Vorgängen vertraut sind, aber nur über begrenzte Kenntnisse [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]in Bezug auf die neuen Funktionen von verfügen.  
   
  Ihr System muss die folgenden installierten Komponenten aufweisen, damit dieses Lernprogramm verwendet werden kann:  

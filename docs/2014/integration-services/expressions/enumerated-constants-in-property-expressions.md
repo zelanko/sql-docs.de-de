@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b22e25ad9053ed4da0187035cff00ff7e3ca70af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62898898"
 ---
 # <a name="enumerated-constants-in-property-expressions"></a>Aufgezählte Konstanten in Eigenschaftsausdrücken
@@ -43,7 +43,7 @@ ms.locfileid: "62898898"
   
  [Common Properties](#CommonProperties)  
   
-##  <a name="Package"></a> Paket  
+##  <a name="package"></a><a name="Package"></a> Paket  
  In den folgenden Tabellen finden Sie eine Auflistung der Anzeigenamen und der entsprechenden numerischen Werte für Eigenschaften von Paketen, die Sie mithilfe von Werten eines Enumerators festlegen.  
   
  `PackageType`Eigenschaften Satz mithilfe von Werten aus der `DTSPackageType` -Enumeration.  
@@ -86,7 +86,7 @@ ms.locfileid: "62898898"
 |EncryptAllWithUserKey|4|  
 |ServerStorage|5|  
   
-##  <a name="PrecedenceConstraints"></a> Rangfolgeneinschränkungen  
+##  <a name="precedence-constraints"></a><a name="PrecedenceConstraints"></a> Rangfolgeneinschränkungen  
  `EvalOp`Eigenschaften Satz mithilfe von Werten aus der `DTSPrecedenceEvalOp` -Enumeration.  
   
 |Anzeigename in DTSPrecedenceEvalOp|Numerischer Wert|  
@@ -105,7 +105,7 @@ ms.locfileid: "62898898"
 |Completion|2|  
 |Canceled|3|  
   
-##  <a name="Foreach"></a> Foreach-Schleifenenumeratoren  
+##  <a name="foreach-loop-enumerators"></a><a name="Foreach"></a> Foreach-Schleifenenumeratoren  
  Die Foreach-Schleife enthält eine Reihe von Enumeratoren mit Eigenschaften, die mithilfe von Eigenschaftsausdrücken festgelegt werden können.  
   
 ### <a name="foreach-ado-enumerator"></a>Foreach-ADO-Enumerator  
@@ -143,7 +143,7 @@ ms.locfileid: "62898898"
 |Node|1|  
 |NodeText|2|  
   
-##  <a name="Tasks"></a> Aufgaben  
+##  <a name="tasks"></a><a name="Tasks"></a> Aufgaben  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält eine Reihe von Tasks mit Eigenschaften, die mithilfe von Eigenschaftsausdrücken festgelegt werden können.  
   
 ### <a name="analysis-services-execute-ddl-task"></a>DDL ausführen (Analysis Services-Task)  
@@ -475,7 +475,7 @@ ms.locfileid: "62898898"
 |Schnell|1|  
 |Precise|2|  
   
-##  <a name="MaintenancePlanTasks"></a> Wartungsplantasks  
+##  <a name="maintenance-plan-tasks"></a><a name="MaintenancePlanTasks"></a> Wartungsplantasks  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält eine Reihe von Tasks, mit denen SQL Server-Tasks für die Verwendung in Wartungsplänen und [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen ausgeführt werden.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt nicht die programmgesteuerte Verwendung dieser Tasks, und die Programmierungsreferenzdokumentation enthält keine API-Dokumentation dieser Tasks und ihrer zugehörigen Enumeratoren.  
@@ -568,7 +568,7 @@ ms.locfileid: "62898898"
 |Index|2|  
 |All|3|  
   
-##  <a name="CommonProperties"></a> Allgemeine Eigenschaften  
+##  <a name="common-properties"></a><a name="CommonProperties"></a> Allgemeine Eigenschaften  
  Pakete, Tasks, die Foreach-Schleife, die For-Schleife und Sequenzcontainer können die folgenden Enumerationen verwenden, um die angegebenen Eigenschaften festzulegen.  
   
  `ForceExecutionResult`Eigenschaften Satz mithilfe von Werten aus der `DTSForcedExecResult` -Enumeration.  

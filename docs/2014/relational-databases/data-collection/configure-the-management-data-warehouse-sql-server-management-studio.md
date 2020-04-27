@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a29a8b9adda07015a7f6fec953db42748a1e752e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918820"
 ---
 # <a name="configure-the-management-data-warehouse-sql-server-management-studio"></a>Konfigurieren des Verwaltungs-Data Warehouses (SQL Server Management Studio)
@@ -36,7 +36,7 @@ ms.locfileid: "62918820"
 > [!NOTE]  
 >  Wenn der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent für die Verwendung eines der Systemdienstkonten (Lokales System, Netzwerkdienst oder Lokaler Dienst) konfiguriert ist und das Verwaltungs-Data Warehouse auf einer anderen Instanz als der Datensammler erstellt wird, müssen Sie die Sammlungssätze so konfigurieren, dass sie einen Proxy zum Hochladen von Daten in das Verwaltungs-Data Warehouse verwenden.  
   
-### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-includessnoversionincludesssnoversion-mdmd"></a>Konfigurieren des Verwaltungs-Data Warehouses auf einer einzelnen oder mehreren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+### <a name="configure-the-management-data-warehouse-on-a-single-instance-or-multiple-instances-of-ssnoversion"></a>Konfigurieren des Verwaltungs-Data Warehouses auf einer einzelnen oder mehreren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 1.  Stellen Sie sicher, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ausgeführt wird.  
   
@@ -59,15 +59,15 @@ ms.locfileid: "62918820"
   
 6.  Wiederholen Sie Schritt 5, bis alle Datenbankinstanzen, die den Datensammler verwenden, so konfiguriert sind, dass sie Daten in das gemeinsam verwendete Verwaltungs-Data Warehouse hochladen.  
   
-####  <a name="Wizard"></a>Assistent zum Konfigurieren von Verwaltungs Data Warehouse  
+####  <a name="configure-management-data-warehouse-wizard"></a><a name="Wizard"></a> Assistent für die Konfiguration des Verwaltungs-Data Warehouses  
  **Willkommensseite**  
   
  Die Willkommensseite ist die Anfangsseite des Assistenten für die Konfiguration der Datensammlung. Die Anzeige dieser Seite ist optional.  
   
- **Diese anfangs Seite nicht mehr anzeigen.**  
+ **Diese Anfangsseite nicht mehr anzeigen.**  
  Wählen Sie diese Option aus, damit diese Seite beim nächsten Start des Assistenten für die Konfiguration der Datensammlung nicht mehr angezeigt wird.  
   
- **Konfigurieren der Verwaltungs Data Warehouse-Speicherseite**  
+ **Konfiguration der Verwaltungs-Data Warehouse-Speicherseite**  
   
  Auf dieser Seite können Sie einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankserver und ein Verwaltungs-Data Warehouse auswählen. Das Verwaltungs-Data Warehouse ist eine relationale Datenbank, in der aufgelistete Daten gespeichert werden.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62918820"
   
  Die Option **Neu** ist nur beim Konfigurieren eines Datensammlungssatzes verfügbar.  
   
- **Zuordnen von Anmeldungen und Benutzern (Seite)**  
+ **Zuordnen von Anmeldenamen und Benutzern (Seite)**  
   
  Verwenden Sie diese Seite, um Benutzerrollen für Datenbanken Anmeldenamen für das Verwaltungs-Data Warehouse zuzuordnen.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "62918820"
   
  Geben Sie eine Anmeldung durch Aktivieren des Kontrollkästchens **Zuordnen** für die Anmeldung an.  
   
- **Mitgliedschaft in Daten Bank Rolle für:**  *\<Data Warehouse Name>*  
+ **Mitgliedschaft in Datenbankrolle für:** *\<Data Warehouse-Name>*  
  Wählen Sie die Verwaltungs-Data Warehouse-Rolle aus, der der Anmeldenamen zugeordnet ist. Aktivieren Sie zu diesem Zweck das bzw. die entsprechenden Kontrollkästchen:  
   
 -   **mdw_admin**  
@@ -105,11 +105,11 @@ ms.locfileid: "62918820"
  **Neue Anmeldung**  
  Öffnen Sie das Dialogfeld **Anmeldung – Neu** , und erstellen Sie eine neue Anmeldung für das Verwaltungs-Data Warehouse.  
   
- **Assistenten Seite beenden**  
+ **Seite "Assistenten abschließen"**  
   
  Auf dieser Seite können Sie die Datensammlungskonfiguration überprüfen und abschließen. Der im Ansichtsfenster angezeigten Struktur ist zu entnehmen, welche Konfigurationen angewendet und welche Aktionen ausgeführt werden, wenn Sie auf **Fertig stellen**klicken.  
   
- **Seite "Status der Datensammlung konfigurieren"**  
+ **Konfigurieren des Fortschritts des Assistenten für die Konfiguration der Datensammlung (Seite)**  
   
  Auf dieser Seite können Sie die Ergebnisse der einzelnen Konfigurationsschritte anzeigen.  
   
@@ -130,12 +130,12 @@ ms.locfileid: "62918820"
   
 -   Bericht als E-Mail senden  
   
- **Ihrer**  
+ **Close**  
  Schließen Sie den Assistenten.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sp_syscollector_enable_collector &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql)   
- [sp_syscollector_disable_collector &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql)   
+ [sp_syscollector_enable_collector &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql)   
+ [sp_syscollector_disable_collector &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql)   
  [Datensammlung](data-collection.md)   
  [Verwalten von Datensammlungen](manage-data-collection.md)  
   

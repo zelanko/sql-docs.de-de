@@ -15,17 +15,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8fe96b7d84a2e363166238c3e840cac383f443dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918122"
 ---
 # <a name="monitor-data-tier-applications"></a>Überwachen von Datenebenenanwendungen
-  Eine Datenebenenanwendung (DAC) kann über den **Hilfsprogramm-Explorer** und **Objekt-Explorer** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) zusammen mit System Sichten und-Tabellen überwacht werden. Zusätzlich können alle Objekte der in der DAC enthaltenen Datenbank mithilfe standardmäßiger Datenbank- und [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Überwachungsverfahren überwacht werden.  
+  Eine Datenebenenanwendung (DAC) kann vom **Hilfsprogramm-Explorer** und **Objekt-Explorer** zusammen mit Systemsichten und -tabellen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS) überwacht werden. Zusätzlich können alle Objekte der in der DAC enthaltenen Datenbank mithilfe standardmäßiger Datenbank- und [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Überwachungsverfahren überwacht werden.  
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
- Beim Bereitstellen einer DAC in einer verwalteten Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]werden Informationen über die bereitgestellte DAC in das SQL Server-Hilfsprogramm integriert, wenn der Hilfsprogramm-Sammlungssatz das nächste Mal von der Instanz an den Steuerungspunkt für das Hilfsprogramm gesendet wird. Sie können dann grundlegende Zustandsinformationen zur DAC mit dem [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **Hilfsprogramm-Explorer**.  
+ Beim Bereitstellen einer DAC in einer verwalteten Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]werden Informationen über die bereitgestellte DAC in das SQL Server-Hilfsprogramm integriert, wenn der Hilfsprogramm-Sammlungssatz das nächste Mal von der Instanz an den Steuerungspunkt für das Hilfsprogramm gesendet wird. Sie können dann grundlegende Integritätsinformationen zur DAC mit dem [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Hilfsprogramm-Explorer**in** anzeigen.  
   
  Der SSMS- **Objekt-Explorer** zeigt grundlegende Konfigurationsinformationen zu den einzelnen DACs an, die auf einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]bereitgestellt werden, unabhängig von, ob die Instanz im SQL Server-Hilfsprogramm verwaltet wird. Darüber hinaus kann die Datenbank, die mit einer bereitgestellten DAC verknüpft ist, mit den gleichen Prozeduren zum Überwachen aller Datenbanken überwacht werden.  
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d1cc7358a7058af9feb3f0540085ab140cfd8a7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62889633"
 ---
 # <a name="loading-and-running-a-remote-package-programmatically"></a>Programmgesteuertes Laden und Ausführen eines Remotepakets
@@ -29,7 +29,7 @@ ms.locfileid: "62889633"
   
  Alternativ können Sie ein Remotepaket auch auf einem lokalen Computer ausführen, auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] installiert ist. Weitere Informationen finden Sie unter [Programmgesteuertes Laden und Ausführen eines lokalen Pakets](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md).  
   
-##  <a name="top"></a> Ausführen eines Remotepakets auf dem Remotecomputer  
+##  <a name="running-a-remote-package-on-the-remote-computer"></a><a name="top"></a> Ausführen eines Remotepakets auf dem Remotecomputer  
  Wie bereits erwähnt, gibt es mehrere Möglichkeiten, ein Remotepaket auf einem Remoteserver auszuführen:  
   
 -   [Verwenden von SQL Server-Agent zum programmgesteuerten Ausführen des Remotepakets](#agent)  
@@ -38,7 +38,7 @@ ms.locfileid: "62889633"
   
  Nahezu alle in diesem Thema erläuterten Methoden zum Laden und Speichern von Paketen erfordern einen Verweis auf die `Microsoft.SqlServer.ManagedDTS`-Assembly. Die Ausnahme ist der ADO.net-Ansatz, der in diesem Thema veranschaulicht wird, um die gespeicherte Prozedur **sp_start_job** auszuführen, bei `System.Data`der nur ein Verweis auf erforderlich ist. Nachdem Sie den Verweis in einem neuen Projekt zur `Microsoft.SqlServer.ManagedDTS`-Assembly hinzugefügt haben, importieren Sie den <xref:Microsoft.SqlServer.Dts.Runtime>-Namespace mit der Anweisung `using` oder `Imports`.  
   
-###  <a name="agent"></a> Verwenden von SQL Server-Agent zum programmgesteuerten Ausführen eines Remotepakets auf dem Server  
+###  <a name="using-sql-server-agent-to-run-a-remote-package-programmatically-on-the-server"></a><a name="agent"></a> Verwenden von SQL Server-Agent zum programmgesteuerten Ausführen eines Remotepakets auf dem Server  
  Im folgenden Beispielcode wird die programmgesteuerte Verwendung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent zum Ausführen eines Remotepakets auf dem Server veranschaulicht. Im Codebeispiel wird die gespeicherte Systemprozedur **sp_start_job** aufgerufen, die einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Auftrag startet. Der Auftrag, den die Prozedur startet, hat den Namen `RunSSISPackage` und befindet sich auf dem Remotecomputer. Der `RunSSISPackage`-Auftrag führt das Paket auf dem Remotecomputer aus.  
   
 > [!NOTE]  
@@ -145,7 +145,7 @@ namespace LaunchSSISPackageAgent_CS
   
  
   
-###  <a name="service"></a> Verwenden eines Webdiensts oder einer Remotekomponente zum programmgesteuerten Auszuführen eines Remotepakets  
+###  <a name="using-a-web-service-or-remote-component-to-run-a-remote-package-programmatically"></a><a name="service"></a> Verwenden eines Webdiensts oder einer Remotekomponente zum programmgesteuerten Auszuführen eines Remotepakets  
  Für die vorherige Lösung zum programmgesteuerten Ausführen von Paketen auf dem Server ist kein benutzerdefinierter Code auf dem Server erforderlich. Möglicherweise bevorzugen Sie jedoch eine Lösung, bei der Pakete ohne SQL Server-Agent ausgeführt werden. Im Folgenden wird ein Beispiel für einen Webdienst, der auf dem Server zum lokalen Starten von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paketen erstellt werden kann, sowie für eine Testanwendung dargestellt, mit deren Hilfe der Webdienst von einem Clientcomputer aus aufgerufen werden kann. Wenn Sie anstelle eines Webdiensts lieber eine Remotekomponente erstellen, können Sie dieselbe Codelogik mit nur wenigen Änderungen für eine Remotekomponente verwenden. Für eine Remotekomponente sind jedoch möglicherweise umfangreichere Konfigurationsschritte erforderlich als für einen Webdienst.  
   
 > [!IMPORTANT]  
@@ -425,8 +425,8 @@ namespace LaunchSSISPackageSvcTestCS
 ![Integration Services Symbol (klein)](../media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Grundlegendes zu den Unterschieden zwischen der lokalen und der Remoteausführung](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
- [Programmgesteuertes Laden und Ausführen eines lokalen Pakets](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
+ [Informationen zu den Unterschieden zwischen der lokalen und der Remote Ausführung](../run-manage-packages-programmatically/understanding-the-differences-between-local-and-remote-execution.md)   
+ [Programm gesteuertes laden und Ausführen eines lokalen Pakets](../run-manage-packages-programmatically/loading-and-running-a-local-package-programmatically.md)   
  [Laden der Ausgabe eines lokalen Pakets](../run-manage-packages-programmatically/loading-the-output-of-a-local-package.md)  
   
   

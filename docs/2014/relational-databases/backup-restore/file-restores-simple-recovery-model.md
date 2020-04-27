@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5157fcfeb54e22c404dcba29655771a1c2034e2c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921822"
 ---
 # <a name="file-restores-simple-recovery-model"></a>Dateiwiederherstellungen (einfaches Wiederherstellungsmodell)
@@ -50,7 +50,7 @@ ms.locfileid: "62921822"
   
 
   
-##  <a name="Overview"></a>Übersicht über die Datei-und Dateigruppen Wiederherstellung mit dem einfachen Wiederherstellungs Modell  
+##  <a name="overview-of-file-and-filegroup-restore-under-the-simple-recovery-model"></a><a name="Overview"></a>Übersicht über die Datei-und Dateigruppen Wiederherstellung mit dem einfachen Wiederherstellungs Modell  
  Ein Dateiwiederherstellungsszenario besteht aus einer einzelnen Wiederherstellungssequenz, bei der die geeigneten Daten kopiert, ein Rollforward ausgeführt und die Daten anschließend wiederhergestellt werden:  
   
 1.  Jede beschädigte Datei wird von der letzten Dateisicherung wiederhergestellt.  
@@ -62,13 +62,13 @@ ms.locfileid: "62921822"
   
  Die Wiederherstellungssequenz enthält nur zwei [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisungen. Mit der ersten Anweisung wird unter Verwendung von WITH NORECOVERY eine sekundäre Datei (Datei `A`) wiederhergestellt. Im zweiten Vorgang werden unter Verwendung von WITH RECOVERY zwei weitere Dateien ( `B` und `C` ) von einem anderen Sicherungsmedium wiederhergestellt:  
   
-1.  *Datenbankdatei* **=** _name_of_file_A_ wiederherstellen  
+1.  RESTORE DATABASE *Datenbank* FILE **=**_Name_von_Datei_A_  
   
      FROM *Dateisicherung_von_Datei_A*  
   
      mit NORECOVERY **;**  
   
-2.  *Datenbankdatei* **=** _name_of_file_B_wiederherstellen **,**_name_of_file_C_  
+2.  RESTORE DATABASE *Datenbank* FILE **=**_Name_von_Datei_B_**,**_Name_von_Datei_C_  
   
      FROM *Dateisicherung_der_Dateien_B_und_C*  
   
@@ -78,11 +78,11 @@ ms.locfileid: "62921822"
   
 -   [Beispiel: Onlinewiederherstellung einer schreibgeschützten Datei &#40;einfaches Wiederherstellungsmodell&#41;](example-online-restore-of-a-read-only-file-simple-recovery-model.md)  
   
--   [Beispiel: Offline Wiederherstellung der primären und einer anderen Datei Gruppe &#40;vollständiges Wiederherstellungs Modell&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
+-   [Beispiel: Offlinewiederherstellung der primären Dateigruppe und einer weiteren Dateigruppe &#40;vollständiges Wiederherstellungsmodell&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So stellen Sie Dateien und Dateigruppen wieder her**  
   
 -   [Wiederherstellen von Dateien und Dateigruppen über vorhandene Dateien &#40;SQL Server&#41;](restore-files-and-filegroups-over-existing-files-sql-server.md)  
@@ -100,9 +100,9 @@ ms.locfileid: "62921822"
  [Differenzielle Sicherungen &#40;SQL Server&#41;](differential-backups-sql-server.md)   
  [Vollständige Datei Sicherungen &#40;SQL Server&#41;](full-file-backups-sql-server.md)   
  [Übersicht über Sicherungen &#40;SQL Server&#41;](backup-overview-sql-server.md)   
- [Wiederherstellungs-und Wiederherstellungs Übersicht &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
+ [Übersicht über Wiederherstellungsvorgänge &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
- [Vollständige Datenbankwiederherstellungen &#40;einfaches Wiederherstellungsmodell&#41;](complete-database-restores-simple-recovery-model.md)   
+ [Umfassende Daten Bank Wiederherstellungen &#40;einfaches Wiederherstellungs Modell&#41;](complete-database-restores-simple-recovery-model.md)   
  [Schrittweise Wiederherstellungen &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)  
   
   

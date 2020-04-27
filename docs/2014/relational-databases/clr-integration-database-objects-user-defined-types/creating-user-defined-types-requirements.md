@@ -21,10 +21,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 63f297f1a2a3ae738e00e37acf381b830ced9e7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919661"
 ---
 # <a name="user-defined-type-requirements"></a>Anforderungen für den benutzerdefinierten Typ
@@ -35,8 +35,7 @@ ms.locfileid: "62919661"
   
  Der UDT muss das `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` angeben. Die Verwendung des `System.SerializableAttribute`-Schlüsselworts ist optional, wird aber empfohlen.  
   
--   Der UDT muss die `System.Data.SqlTypes.INullable`-Schnittstelle in der Klasse oder Struktur implementieren, indem er eine öffentliche `static` (`Shared` in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic) `Null`-Methode erstellt. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erkennt standardmäßig NULL-Werte. Dies ist notwendig für Code, der im UDT ausgeführt wird, um in der Lage zu sein, einen NULL-Wert zu erkennen.  
+-   Der UDT muss die `System.Data.SqlTypes.INullable`-Schnittstelle in der Klasse oder Struktur implementieren, indem er eine öffentliche `static` (`Shared` in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic) `Null`-Methode erstellt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erkennt standardmäßig NULL-Werte. Dies ist notwendig für Code, der im UDT ausgeführt wird, um in der Lage zu sein, einen NULL-Wert zu erkennen.  
   
 -   Der UDT muss eine öffentliche `static` (oder `Shared`) `Parse`-Methode enthalten, die Analysen unterstützt, sowie eine öffentliche `ToString`-Methode für das Konvertieren in eine Zeichenfolgendarstellung des Objekts.  
   
@@ -46,8 +45,7 @@ ms.locfileid: "62919661"
   
 -   Es darf nur eine Serialisierung eines UDT-Objekts geben. Die Überprüfung schlägt fehl, wenn die Serialisierungs- oder Deserialisierungsroutinen mehr als eine Darstellung eines bestimmten Objekts erkennen.  
   
--   
-  `SqlUserDefinedTypeAttribute.IsByteOrdered` muss `true` sein, um Daten in Bytereihenfolge zu vergleichen. Wenn die IComparable-Schnittstelle nicht implementiert ist und `SqlUserDefinedTypeAttribute.IsByteOrdered` den Wert `false` hat, schlagen Vergleiche in Bytereihenfolge fehl.  
+-   `SqlUserDefinedTypeAttribute.IsByteOrdered` muss `true` sein, um Daten in Bytereihenfolge zu vergleichen. Wenn die IComparable-Schnittstelle nicht implementiert ist und `SqlUserDefinedTypeAttribute.IsByteOrdered` den Wert `false` hat, schlagen Vergleiche in Bytereihenfolge fehl.  
   
 -   Ein in einer Klasse definierter UDT muss über einen öffentlichen Konstruktor verfügen, der keine Argumente verwendet. Sie können optional zusätzliche überladene Klassenkonstruktoren erstellen.  
   
@@ -55,8 +53,7 @@ ms.locfileid: "62919661"
   
 -   Öffentliche Namen dürfen nicht länger als 128 Zeichen sein, und Sie müssen den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Benennungs Regeln für Bezeichner entsprechen, wie in [Daten Bank bezeichnerdaten](../databases/database-identifiers.md)definiert.  
   
--   
-  `sql_variant`-Spalten können keine Instanzen eines UDTs enthalten.  
+-   `sql_variant`-Spalten können keine Instanzen eines UDTs enthalten.  
   
 -   Auf vererbte Member kann nicht von [!INCLUDE[tsql](../../includes/tsql-md.md)] aus zugegriffen werden, da das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Typsystem die Vererbungshierarchie zwischen UDTs nicht kennt. Sie können Vererbung allerdings verwenden, wenn Sie Klassen strukturieren, und Sie können diese Methoden in der verwalteten Codeimplementierung des Typs aufrufen.  
   
@@ -82,16 +79,14 @@ ms.locfileid: "62919661"
   
 -   Alle Felder müssen serialisierbar sein.  
   
--   
-  `System.Runtime.InteropServices.StructLayoutAttribute` muss als `StructLayout.LayoutKindSequential` angegeben werden, wenn der UDT in einer Klasse und nicht in einer Struktur definiert wird. Dieses Attribut steuert das physische Layout der Datenfelder und wird verwendet, um zu erzwingen, dass die Elemente in der Reihenfolge angeordnet werden, in der sie erscheinen. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bestimmt anhand dieses Attributs die Feldreihenfolge für UDTs mit mehreren Werten.  
+-   `System.Runtime.InteropServices.StructLayoutAttribute` muss als `StructLayout.LayoutKindSequential` angegeben werden, wenn der UDT in einer Klasse und nicht in einer Struktur definiert wird. Dieses Attribut steuert das physische Layout der Datenfelder und wird verwendet, um zu erzwingen, dass die Elemente in der Reihenfolge angeordnet werden, in der sie erscheinen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bestimmt anhand dieses Attributs die Feldreihenfolge für UDTs mit mehreren Werten.  
   
  Ein Beispiel für einen UDT, der mit `Native` der Serialisierung definiert wird, finden Sie unter Point UDT beim [Codieren von benutzerdefinierten Typen](creating-user-defined-types-coding.md).  
   
 ## <a name="userdefined-serialization"></a>UserDefined-Serialisierung  
  Die `UserDefined`-Formateinstellung für das `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute`-Attribut gibt dem Entwickler volle Kontrolle über das Binärformat. Wenn Sie die `Format`-Attributeigenschaft als `UserDefined` angeben, müssen Sie im Code wie folgt vorgehen:  
   
--   Geben Sie die optionale `IsByteOrdered`-Attributeigenschaft an. Standardwert: `false`.  
+-   Geben Sie die optionale `IsByteOrdered`-Attributeigenschaft an. Der Standardwert ist `false`.  
   
 -   Geben Sie die `MaxByteSize`-Eigenschaft von `Microsoft.SqlServer.Server.SqlUserDefinedTypeAttribute` an.  
   
@@ -147,7 +142,7 @@ ms.locfileid: "62919661"
   
 -   Größer als oder gleich (>=)  
   
--   Kleiner als oder gleich (<=)  
+-   Kleiner oder gleich (<=)  
   
 ### <a name="implementing-nullability"></a>Implementieren von NULL-Zulässigkeit  
  Zusätzlich zum ordnungsgemäßen Angeben der Attribute für die Assemblys muss die Klasse auch NULL-Zulässigkeit unterstützen. UDTs, die in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladen werden, erkennen Nullwerte, aber damit der UDT einen Nullwert erkennt, muss die Klasse die `INullable`-Schnittstelle implementieren. Weitere Informationen und ein Beispiel für die Implementierung der NULL-Zulässigkeit in einem UDT finden Sie unter Programmieren von [benutzerdefinierten Typen](creating-user-defined-types-coding.md).  

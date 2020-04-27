@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 767d77eefe8c54fe5a3d584c670cc991b284178e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917043"
 ---
 # <a name="master-database"></a>master-Datenbank
@@ -53,7 +53,7 @@ ms.locfileid: "62917043"
 |CONCAT_NULL_YIELDS_NULL|OFF|Ja|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Ja|  
 |CURSOR_DEFAULT|GLOBAL|Ja|  
-|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Nein <br /><br /> Nein <br /><br /> Nein|  
+|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Nein <br /><br /> Nein <br /><br /> Nein |  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Ja|  
 |DB_CHAINING|EIN|Nein|  
 |ENCRYPTION|OFF|Nein|  
@@ -76,7 +76,7 @@ ms.locfileid: "62917043"
   
 -   Ändern der Sortierung. Die Standardsortierung entspricht der Serversortierung.  
   
--   Ändern des Datenbankbesitzers der Besitzer von **Master** ist **sa**.  
+-   Ändern des Datenbankbesitzers Der Besitzer von**master** ist **sa**.  
   
 -   Erstellen eines Volltextkatalogs oder Volltextindex.  
   

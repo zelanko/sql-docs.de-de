@@ -34,10 +34,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 19ea6e9f077b5097b8c5daa6d967a17336553ba7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919951"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>Registrieren benutzerdefinierter Typen in SQL Server
@@ -64,8 +64,7 @@ ms.locfileid: "62919951"
 ### <a name="using-create-assembly"></a>Verwenden von CREATE ASSEMBLY  
  Mit der CREATE ASSEMBLY-Syntax wird die Assembly in der Datenbank registriert, in der Sie den UDT verwenden möchten. Sobald die Assembly registriert wurde, liegen keine Abhängigkeiten vor.  
   
- Das Erstellen mehrerer Versionen der gleichen Assembly in einer Datenbank ist nicht zulässig. Es ist jedoch möglich, mehrere Versionen der gleichen Assembly basierend auf der Kultur in einer bestimmten Datenbank zu erstellen. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterscheidet verschiedene Kulturversionen einer Assembly anhand der Namen, die in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert wurden. Weitere Informationen finden Sie unter "Erstellen und Verwenden von Assemblys mit starkem Namen" im .NET Framework SDK.  
+ Das Erstellen mehrerer Versionen der gleichen Assembly in einer Datenbank ist nicht zulässig. Es ist jedoch möglich, mehrere Versionen der gleichen Assembly basierend auf der Kultur in einer bestimmten Datenbank zu erstellen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterscheidet verschiedene Kulturversionen einer Assembly anhand der Namen, die in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registriert wurden. Weitere Informationen finden Sie unter "Erstellen und Verwenden von Assemblys mit starkem Namen" im .NET Framework SDK.  
   
  Wenn CREATE ASSEMBLY mit dem SAFE- oder EXTERNAL_ACCESS-Berechtigungssatz ausgeführt wird, wird die Assembly überprüft, um sicherzustellen, dass sie überprüfbar und typsicher ist. Wenn Sie keinen Berechtigungssatz angeben, wird standardmäßig SAFE vorausgesetzt. Code mit dem UNSAFE-Berechtigungssatz wird nicht überprüft. Weitere Informationen zu Assemblyberechtigungen finden Sie unter [Entwerfen von Assemblys](../../relational-databases/clr-integration/assemblies-designing.md).  
   
@@ -113,8 +112,7 @@ EXTERNAL NAME Point.[Point];
 -   Funktionen, gespeicherte Prozeduren oder Trigger, die Variablen und Parameter des UDT verwenden und in der Datenbank mit der WITH SCHEMABINDING-Klausel erzeugt wurden.  
   
 ### <a name="example"></a>Beispiel  
- 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)] muss in der folgenden Reihenfolge ausgeführt werden. Zuerst muss die Tabelle, die auf den `Point`-UDT verweist, anschließend der Typ und zuletzt die Assembly gelöscht werden.  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] muss in der folgenden Reihenfolge ausgeführt werden. Zuerst muss die Tabelle, die auf den `Point`-UDT verweist, anschließend der Typ und zuletzt die Assembly gelöscht werden.  
   
 ```  
 DROP TABLE dbo.Points;  
@@ -179,7 +177,7 @@ ADD FILE FROM '\\Projects\Point\Point.cs' AS PointSource;
  **file_id**  
  Eine Zahl, die die einzelnen-Objekte identifiziert, wobei das erste-Objekt, das einem angegebenen zugeordnet ist, **assembly_id** den Wert 1 erhält. Wenn mehrere Objekte mit demselben **assembly_id**verknüpft sind, wird jeder nachfolgende **file_id** Wert um 1 erhöht.  
   
- **inhaltliche**  
+ **content**  
  Die Hexadezimaldarstellung der Assembly oder Datei.  
   
  Sie können die CAST-oder CONVERT-Funktion verwenden, um den Inhalt der **Inhalts** Spalte in lesbaren Text umzuwandeln. Die folgende Abfrage konvertiert die Inhalte der Point.cs-Datei in lesbaren Text, wobei der Name in der WHERE-Klausel verwendet wird, um den Ergebnissatz auf eine einzelne Zeile zu beschränken.  

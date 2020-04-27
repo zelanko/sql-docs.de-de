@@ -23,14 +23,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c52fa04c46ff41ce67094599a6a2f3f5074e8f03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873557"
 ---
 # <a name="data-compression"></a>Datenkomprimierung
-  
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt die Zeilen- und Seitenkomprimierung für rowstore-Tabellen und -Indizes sowie Columnstore und die columnstore-Archivierungskomprimierung für columnstore-Tabellen und -Indizes.  
   
  Verwenden Sie für rowstore-Tabellen und -Indizes die Datenkomprimierungsfunktion, um die Größe der Datenbank zu reduzieren. Zusätzlich zum Sparen von Speicherplatz kann mithilfe der Datenkomprimierung auch die Leistung von E/A-intensiven Arbeitsauslastungen verbessert werden, da die Daten auf weniger Seiten gespeichert werden und Abfragen weniger Seiten vom Datenträger lesen müssen. Zusätzliche CPU-Ressourcen sind jedoch auf dem Datenbankserver erforderlich, um die Daten zu komprimieren und dekomprimieren, während Daten mit der Anwendung ausgetauscht werden. Sie können die Zeilen- und Seitenkomprimierung für die folgenden Datenbankobjekte konfigurieren:  
@@ -103,8 +102,7 @@ ms.locfileid: "62873557"
 -   Für Tabellen, für die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] das vardecimal-Speicherformat implementiert wurde, wird diese Einstellung bei Durchführung eines Upgrades beibehalten. Sie können die Zeilenkomprimierung auf Tabellen mit dem vardecimal-Speicherformat anwenden. Da die Zeilenkomprimierung dem vardecimal-Speicherformat übergeordnet ist, besteht jedoch kein Grund, das vardecimal-Speicherformat beizubehalten. Der Komprimierungsgrad für Dezimalwerte wird durch die Kombination von vardecimal-Speicherformat und Zeilenkomprimierung nicht erhöht. Sie können die Seitenkomprimierung auf Tabellen mit dem vardecimal-Speicherformat anwenden, erzielen damit jedoch nicht unbedingt einen höheren Komprimierungsgrad für die Spalten im vardecimal-Speicherformat.  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt das vardecimal-Speicherformat. Da mit der Zeilenkomprimierung jedoch dasselbe Ergebnis erzielt wird, wurde das vardecimal-Speicherformat als veraltet markiert. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
+    >  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt das vardecimal-Speicherformat. Da mit der Zeilenkomprimierung jedoch dasselbe Ergebnis erzielt wird, wurde das vardecimal-Speicherformat als veraltet markiert. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
 ## <a name="using-columnstore-and-columnstore-archive-compression"></a>Verwenden von Columnstore und der Columnstore-Archivierungskomprimierung  
   
@@ -255,12 +253,12 @@ REBUILD PARTITION = ALL WITH (
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Implementierung von Zeilen Komprimierung](row-compression-implementation.md)   
- [Implementierung von Seitenkomprimierung](page-compression-implementation.md)   
+ [Implementierung der Seiten Komprimierung](page-compression-implementation.md)   
  [Unicode-Komprimierungs Implementierung](unicode-compression-implementation.md)   
  [Erstellen eines Partitions Schemas &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-partition-scheme-transact-sql)   
  [Erstellen einer Partitions Funktion &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-partition-function-transact-sql)   
  [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql)   
- [ALTER TABLE &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
+ [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql)   
  [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)   
  [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)  
   

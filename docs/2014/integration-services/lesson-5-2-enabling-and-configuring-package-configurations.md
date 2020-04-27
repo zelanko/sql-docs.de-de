@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa75b3a71832eaba4064de5a9dd90e73236e8177
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891056"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>Schritt 2: Aktivieren und Konfigurieren von Paketkonfigurationen
@@ -26,14 +26,14 @@ ms.locfileid: "62891056"
   
 2.  Wählen Sie im Menü [!INCLUDE[ssIS](../includes/ssis-md.md)] den Befehl **Variablen**aus.  
   
-3.  Klicken Sie im Fenster **Variablen** auf das Symbol Variable hinzufügen .  
+3.  Klicken Sie im Fenster **Variablen** auf das Symbol „Variable hinzufügen“.  
   
 4.  Geben Sie im Feld **Name** den Namen **varFolderName**ein.  
   
     > [!IMPORTANT]  
     >  Bei Variablennamen wird nach Groß-/Kleinschreibung unterschieden.  
   
-5.  Vergewissern Sie sich, dass im Feld **Bereich** der Name des Pakets, Lektion 5, angezeigt wird.  
+5.  Überprüfen Sie, ob im Feld **Bereich** der Name des Pakets (Lesson 5) angezeigt wird.  
   
 6.  Legen Sie den Wert des Felds **Datentyp** der `varFolderName` -Variable auf **String**fest.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "62891056"
   
 5.  Wählen Sie im Dialogfeld **Paketkonfigurationsplaner** die Option **Paketkonfigurationen aktivieren**aus, und klicken Sie anschließend auf **Hinzufügen**.  
   
-6.  Klicken Sie auf der Willkommensseite des Paketkonfigurations-Assistenten auf **Weiter**.  
+6.  Klicken Sie im Paketkonfigurations-Assistenten auf der Seite Willkommen auf **weiter**.  
   
 7.  Überprüfen Sie auf der Seite **Konfigurationstyp auswählen** , ob **Konfigurationstyp** auf **XML-Konfigurationsdatei**festgelegt ist.  
   
@@ -75,9 +75,9 @@ ms.locfileid: "62891056"
   
 10. Geben Sie im Dialogfeld **Speicherort der Konfigurationsdatei auswählen** als **Dateinamen****SSISTutorial**ein, und klicken Sie auf **Speichern**.  
   
-11. Klicken Sie auf der Seite **Konfigurationstyp auswählen** auf **Weiter.**  
+11. Klicken Sie auf der Seite **Konfigurationstyp auswählen** auf **Weiter**.  
   
-12. Erweitern Sie auf der Seite **Eigenschaften für den Export auswählen** im Bereich **Objekte** den Knoten **Variablen**, erweitern Sie **varFolderName**, erweitern Sie **Eigenschaften**, und wählen Sie dann **Wert**aus.  
+12. Erweitern Sie **Variablen** auf der Seite **Eigenschaften für den Exportvorgang auswählen** im Bereich **Objekte**, erweitern Sie **varFolderName**und **Eigenschaften**, und wählen Sie anschließend **Wert**aus.  
   
 13. Klicken Sie auf der Seite **Eigenschaften für den Exportvorgang auswählen** auf **Weiter**.  
   
@@ -105,6 +105,6 @@ ms.locfileid: "62891056"
 3.  Fügen Sie `New Sample Data` die kopierten Dateien in den Ordner ein.  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
- [Schritt 3: Ändern des Directory-Eigenschaftskonfigurationswertes](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
+ [Schritt 3: Ändern des Konfigurationswerts der Directory-Eigenschaft](lesson-5-3-modifying-the-directory-property-configuration-value.md)  
   
   

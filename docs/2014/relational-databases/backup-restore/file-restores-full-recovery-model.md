@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a78b177b1fb429535a4bb9b271d0b1dbc4eedc79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921941"
 ---
 # <a name="file-restores-full-recovery-model"></a>Dateiwiederherstellungen (vollständiges Wiederherstellungsmodell)
@@ -54,7 +54,7 @@ ms.locfileid: "62921941"
   
   
   
-##  <a name="Overview"></a> Wiederherstellen von beschädigten Dateien aus Dateisicherungen  
+##  <a name="restoring-damaged-files-from-file-backups"></a><a name="Overview"></a> Wiederherstellen von beschädigten Dateien aus Dateisicherungen  
   
 1.  Erstellen Sie vor dem Wiederherstellen von beschädigten Dateien nach Möglichkeit eine [Sicherung des Protokollfragments](tail-log-backups-sql-server.md).  
   
@@ -120,7 +120,7 @@ RESTORE LOG database_name FROM <tail_log_backup>
   
 -   [Beispiel: Offlinewiederherstellung der primären Dateigruppe und einer weiteren Dateigruppe &#40;vollständiges Wiederherstellungsmodell&#41;](example-offline-restore-of-primary-and-one-other-filegroup-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So stellen Sie Dateien und Dateigruppen wieder her**  
   
 -   [Wiederherstellen von Dateien an einem neuen Speicherort &#40;SQL Server&#41;](restore-files-to-a-new-location-sql-server.md)  

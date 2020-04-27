@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 71efd530222ce548bb867b9e886b1891d5aedb05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62899448"
 ---
 # <a name="errors-and-events-reference-integration-services"></a>Fehler- und Ereignisreferenz (Integration Services)
@@ -42,7 +42,7 @@ ms.locfileid: "62899448"
 |DTS_E_CONNECTIONNOTFOUND|Gibt an, dass das Paket nicht ausgeführt werden kann, da der angegebene Verbindungs-Manager nicht gefunden werden kann.|  
 |DTS_E_CONNECTIONREQUIREDFORMETADATA|Zeigt an, dass [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer eine Verbindung mit einer Datenquelle herstellen muss, um neue oder aktualisierte Metadaten für eine Quelle oder ein Ziel anzurufen, und dass diese Verbindung nicht hergestellt werden kann.|  
 |DTS_E_MULTIPLECACHEWRITES|Gibt an, dass das Paket nicht ausgeführt werden kann, da von einer Transformation für Cachetransformation versucht wird, Daten in den Cache im Arbeitsspeicher zu schreiben. Eine andere Transformation für Cachetransformation hat jedoch bereits in den Cache im Arbeitsspeicher geschrieben.|  
-|DTS_E_PRODUCTLEVELTOLOW|Gibt an, dass das Paket nicht ausgeführt werden kann, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] da die entsprechende Version von nicht installiert ist.|  
+|DTS_E_PRODUCTLEVELTOLOW|Zeigt an, dass das Paket nicht ausgeführt werden kann, weil die geeignete Version von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] nicht installiert ist.|  
 |DTS_E_READNOTFILLEDCACHE|Gibt an, dass eine Transformation für Suche versucht, Daten aus dem Cache im Arbeitsspeicher zu lesen, während gleichzeitig eine Transformation für Cachetransformation Daten in den Cache schreibt.|  
 |DTS_E_UNPROTECTXMLFAILED|Gibt an, dass das System einen geschützten XML-Knoten nicht entschlüsselt hat.|  
 |DTS_E_WRITEWHILECACHEINUSE|Gibt an, dass eine Transformation für Cachetransformation versucht, Daten in den Cache im Arbeitsspeicher zu schreiben, während gleichzeitig eine Transformation für Suche Daten aus dem Cache im Arbeitsspeicher liest.|  

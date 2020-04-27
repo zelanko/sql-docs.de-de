@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f4146e19c6306cbe83659390605f570561fcc08f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917819"
 ---
 # <a name="database-engine-extended-stored-procedure-programming"></a>Datenbank-Engine – Programmierung der erweiterten gespeicherten Prozedur
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)]Verwenden Sie stattdessen die CLR-Integration. Weitere Informationen finden Sie unter [Common Language Runtime &#40;CLR&#41; Programmierkonzepte für die Integration](clr-integration/common-language-runtime-clr-integration-programming-concepts.md).  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration. Weitere Informationen finden Sie unter [Common Language Runtime &#40;CLR&#41; Programmierkonzepte für die Integration](clr-integration/common-language-runtime-clr-integration-programming-concepts.md).  
   
  Die [!INCLUDE[msCoName](../includes/msconame-md.md)] API für erweiterte gespeicherte Prozeduren bietet eine serverbasierte Anwendungsprogrammierschnittstelle (Application Programming [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Interface, API) zum Erweitern der Funktionalität. Die API besteht aus C- und C++-Funktionen und Makros, die zum Erstellen von Anwendungen in den folgenden Kategorien verwendet werden: erweiterte gespeicherte Prozeduren und Gateway-Anwendungen.  
   

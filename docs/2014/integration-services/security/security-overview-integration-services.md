@@ -21,14 +21,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b2e86fff86e24668e7fe6382545e024bed1a4025
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62927088"
 ---
 # <a name="security-overview-integration-services"></a>Sicherheitsübersicht (Integration Services)
-  Die Sicherheit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] in besteht aus mehreren Ebenen, die eine umfangreiche und flexible Sicherheitsumgebung bereitstellen. Diese Sicherheitsebenen umfassen die Verwendung digitaler Signaturen, Paketeigenschaften, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankrollen und Betriebssystemberechtigungen. Die meisten dieser Sicherheitsfunktionen können den Kategorien Identität und Zugriffssteuerung zugeordnet werden.  
+  Die Sicherheit von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] besteht aus mehreren Schichten, die eine umfangreiche und flexible Sicherheitsumgebung bereitstellen. Diese Sicherheitsebenen umfassen die Verwendung digitaler Signaturen, Paketeigenschaften, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankrollen und Betriebssystemberechtigungen. Die meisten dieser Sicherheitsfunktionen können den Kategorien Identität und Zugriffssteuerung zugeordnet werden.  
   
 ## <a name="identity-features"></a>Identitätsfunktionen  
  Sie können das folgende Ziel erreichen, indem Sie Identitätsfunktionen in den Paketen implementieren:  
@@ -50,8 +50,7 @@ ms.locfileid: "62927088"
   
 -   Pakete und zugehörige Dateien, wie Konfigurationen, Protokolle und Prüfpunktdateien, die im Dateisystem gespeichert werden  
   
--   
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst und Informationen über Pakete, die der Dienst in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]anzeigt  
+-   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst und Informationen über Pakete, die der Dienst in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]anzeigt  
   
 ### <a name="controlling-access-to-the-contents-of-packages"></a>Steuern des Zugriffs auf den Inhalt von Paketen  
  Zum Einschränken des Zugriffs auf den Inhalt eines Pakets können Sie Pakete verschlüsseln, indem Sie die ProtectionLevel-Eigenschaft des jeweiligen Pakets entsprechend festlegen. Sie können diese Eigenschaft auf die für das Paket benötigte Schutzebene festlegen. In einer Teamentwicklungsumgebung kann ein Paket beispielsweise mithilfe eines Kennworts verschlüsselt werden, das nur den Teammitgliedern bekannt ist, die an dem Paket arbeiten.  
@@ -68,9 +67,7 @@ ms.locfileid: "62927088"
 #### <a name="saving-packages-to-the-msdb-database"></a>Speichern von Paketen in der msdb-Datenbank  
  Das Speichern der Pakete in der msdb-Datenbank trägt zur Sicherheit auf der Server-, Datenbank- und Tabellenebene bei. In der msdb-Datenbank werden [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete in der Tabelle „sysssispackages“ gespeichert. Da die Pakete in der sysssispackages- und der sysdtspackages-Tabelle der msdb-Datenbank gespeichert werden, werden die Pakete beim Sichern der msdb-Datenbank ebenfalls automatisch gesichert.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Pakete, die in der msdb-Datenbank gespeichert sind, können auch durch Anwenden der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Rollen auf Datenbankebene geschützt werden. 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bietet auf Datenbankebene die drei festen Rollen „db_ssisadmin“, „db_ssisltduser“ und „db_ssisoperator“ zum Steuern des Paketzugriffs. Den einzelnen Paketen kann eine Lese- und eine Schreibrolle zugewiesen werden. Sie können auch benutzerdefinierte Rollen auf Datenbankebene definieren, die in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen verwendet werden. Rollen können nur für Pakete implementiert werden, die in der msdb-Datenbank in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gespeichert werden. Weitere Informationen finden Sie unter [Integration Services Roles &#40;SSIS Service&#41;](integration-services-roles-ssis-service.md) (Integration Services-Rollen [SSIS-Dienst]).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Pakete, die in der msdb-Datenbank gespeichert sind, können auch durch Anwenden der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Rollen auf Datenbankebene geschützt werden. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bietet auf Datenbankebene die drei festen Rollen „db_ssisadmin“, „db_ssisltduser“ und „db_ssisoperator“ zum Steuern des Paketzugriffs. Den einzelnen Paketen kann eine Lese- und eine Schreibrolle zugewiesen werden. Sie können auch benutzerdefinierte Rollen auf Datenbankebene definieren, die in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen verwendet werden. Rollen können nur für Pakete implementiert werden, die in der msdb-Datenbank in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gespeichert werden. Weitere Informationen finden Sie unter [Integration Services Roles &#40;SSIS Service&#41;](integration-services-roles-ssis-service.md) (Integration Services-Rollen [SSIS-Dienst]).  
   
 #### <a name="saving-packages-to-the-file-system"></a>Speichern von Paketen im Dateisystem  
  Wenn Sie Pakete statt in der msdb-Datenbank im Dateisystem speichern, müssen Sie die Paketdateien und Ordner, die Paketdateien enthalten, sichern.  
@@ -90,8 +87,7 @@ ms.locfileid: "62927088"
  Weitere Informationen zu Konfigurationen finden Sie unter [Package Configurations](../package-configurations.md).  
   
 ### <a name="controlling-access-to-the-integration-services-service"></a>Steuern des Zugriffs auf den Integration Services-Dienst  
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst zum Auflisten der gespeicherten Pakete verwendet. Damit nicht autorisierte Benutzer keine Informationen über Pakete anzeigen können, die auf lokalen und Remotecomputern gespeichert sind, und auf diese Weise Zugriff auf private Daten erhalten, müssen Sie den Zugriff auf Computer, auf denen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst ausgeführt wird, einschränken.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] wird der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst zum Auflisten der gespeicherten Pakete verwendet. Damit nicht autorisierte Benutzer keine Informationen über Pakete anzeigen können, die auf lokalen und Remotecomputern gespeichert sind, und auf diese Weise Zugriff auf private Daten erhalten, müssen Sie den Zugriff auf Computer, auf denen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst ausgeführt wird, einschränken.  
   
  Weitere Informationen finden Sie unter [Zugriff auf den Integration Services-Dienst](../access-to-the-integration-services-service.md).  
   

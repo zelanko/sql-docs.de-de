@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ebbb5ac25ea71dc5b9929fb529414b059c0589fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919306"
 ---
 # <a name="getting-information-about-assemblies"></a>Abrufen von Informationen zu Assemblys
@@ -30,19 +30,19 @@ ms.locfileid: "62919306"
   
  **So rufen Sie Informationen zu allen Assemblys in der Datenbank ab**  
   
--   [sys. Assemblys &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-assemblies-transact-sql)  
+-   [sys.assemblies &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assemblies-transact-sql)  
   
  **So rufen Sie Informationen zu Assemblydateien einschließlich Assemblybinärdateien, -quelldateien und -debugdateien ab**  
   
--   [sys. assembly_files &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-files-transact-sql)  
+-   [sys.assembly_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-files-transact-sql)  
   
  **So rufen Sie Informationen zu assemblyübergreifenden Verweisen ab**  
   
--   [sys. assembly_references &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-references-transact-sql)  
+-   [sys.assembly_references &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-references-transact-sql)  
   
  **So rufen Sie Informationen zu benutzerdefinierten Typen ab**  
   
--   [sys. assembly_types &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-types-transact-sql)  
+-   [sys.assembly_types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-assembly-types-transact-sql)  
   
 -   [sys.types &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-types-transact-sql)  
   

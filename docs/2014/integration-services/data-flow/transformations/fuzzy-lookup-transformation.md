@@ -31,10 +31,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0b77d45ca55adaa85e4e37e9da817f325ce0fc7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900315"
 ---
 # <a name="fuzzy-lookup-transformation"></a>Transformation für Fuzzysuche
@@ -74,9 +74,9 @@ ms.locfileid: "62900315"
   
  Die Transformationsausgabespalten enthalten die Eingabespalten, die als Pass-Through-Spalten markiert sind, die ausgewählten Spalten in der Suchtabelle und die folgenden zusätzlichen Spalten:  
   
--   **_Similarity**eine Spalte, die die Ähnlichkeit zwischen den Werten in den Eingabe-und Verweis Spalten beschreibt.  
+-   **_Similarity**, eine Spalte, die die Ähnlichkeit zwischen den Werten in den Eingabe- und Verweisspalten beschreibt.  
   
--   **_Confidence**eine Spalte, die die Qualität der Übereinstimmung beschreibt.  
+-   **_Confidence**, eine Spalte, die die Qualität der Übereinstimmung beschreibt.  
   
  Die Transformation verwendet die Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank, um die temporären Tabellen zu erstellen, die vom Fuzzyübereinstimmungsalgorithmus verwendet werden.  
   
@@ -92,8 +92,8 @@ ms.locfileid: "62900315"
 |Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |**GenerateAndMaintainNewIndex**|Zum Erstellen, Speichern und Verwalten eines neuen Indexes. Bei der Transformation werden Trigger für die Verweistabelle installiert, damit Verweis- und Indextabelle synchronisiert bleiben.|  
-|**Generateandpersistnetwindex**|Zum Erstellen und Speichern eines Indexes, aber nicht zum Verwalten.|  
-|**Generatenewindex**|Zum Erstellen eines neuen Indexes, aber nicht zum Speichern.|  
+|**GenerateAndPersistNewIndex**|Zum Erstellen und Speichern eines Indexes, aber nicht zum Verwalten.|  
+|**GenerateNewIndex**|Zum Erstellen eines neuen Indexes, aber nicht zum Speichern.|  
 |**ReuseExistingIndex**|Zur erneuten Verwendung eines bereits vorhandenen Indexes.|  
   
 ### <a name="maintenance-of-the-match-index-table"></a>Verwaltung der Übereinstimmungsindextabelle  
@@ -126,24 +126,24 @@ ms.locfileid: "62900315"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Transformations-Editor für Fuzzysuche** festlegen können:  
   
--   [Transformations-Editor für Fuzzysuche &#40;Registerkarte Verweis Tabelle&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
+-   [Transformations-Editor für Fuzzysuche &#40;Registerkarte „Verweistabelle“&#41;](../../fuzzy-lookup-transformation-editor-reference-table-tab.md)  
   
--   [Transformations-Editor für Fuzzysuche &#40;Registerkarte „Spalten“&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
+-   [Transformations-Editor für Fuzzysuche &#40;Registerkarte Spalten&#41;](../../fuzzy-lookup-transformation-editor-columns-tab.md)  
   
--   [Transformations-Editor für Fuzzysuche &#40;Registerkarte Erweitert&#41;](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
+-   [Transformations-Editor für Fuzzysuche &#40;Registerkarte „Erweitert“&#41;](../../fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Common Properties](../../common-properties.md)  
+-   [Allgemeine Eigenschaften](../../common-properties.md)  
   
--   [Benutzerdefinierte Eigenschaften von Transformationen](transformation-custom-properties.md)  
+-   [Transformation Custom Properties](transformation-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Weitere Informationen zum Festlegen der Eigenschaften einer Datenflusskomponente finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](../set-the-properties-of-a-data-flow-component.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Transformation für Suche](lookup-transformation.md)   
- [Fuzzy Grouping Transformation](fuzzy-grouping-transformation.md)   
+ [Fuzzygruppierung](fuzzy-grouping-transformation.md)   
  [SQL Server Integration Services-Transformationen](integration-services-transformations.md)  
   
   

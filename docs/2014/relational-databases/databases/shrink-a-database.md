@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 21f58cd6991b760edeefb81c37e02c617f8e09cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917007"
 ---
 # <a name="shrink-a-database"></a>Verkleinern einer Datenbank
@@ -32,9 +32,9 @@ ms.locfileid: "62917007"
   
 
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Die Datenbank kann nicht unter die Mindestgröße der Datenbank verkleinert werden. Die Mindestgröße stellt die Größe dar, die bei der ursprünglichen Erstellung der Datenbank angegeben wurde, bzw. die letzte explizite Größe, die bei einer Dateigrößenänderung, z. B. mit DBCC SHRINKFILE, festgelegt wurde. Wenn z. B. eine Datenbank ursprünglich mit einer Größe von 10 MB erstellt und auf 100 MB vergrößert wurde, kann die Datenbank höchstens auf 10 MB verkleinert werden, auch wenn alle Daten in der Datenbank gelöscht wurden.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62917007"
   
 -   Bei DBCC SHRINKDATABASE tritt ein Fehler auf, wenn ein speicheroptimierter xVelocity-columnstore-Index gefunden wird. Vor dem Aufeinandertreffen mit dem columnstore-Index erledigte Arbeiten werden erfolgreich durchgeführt, die Datenbank ist daher möglicherweise kleiner. Zum Abschließen von DBCC SHRINKDATABASE deaktivieren Sie alle columnstore-Indizes, bevor Sie DBCC SHRINKDATABASE ausführen, und erstellen die columnstore-Indizes dann neu.  
   
-###  <a name="Recommendations"></a> Empfehlungen  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
   
 -   Zum Anzeigen des aktuellen freien (nicht zugeordneten) Speicherplatzes in der Datenbank. Weitere Informationen finden Sie unter [Anzeigen von Informationen zum Daten- und Protokollspeicherplatz einer Datenbank](display-data-and-log-space-information-for-a-database.md)  
   
@@ -56,12 +56,12 @@ ms.locfileid: "62917007"
   
     -   Legen Sie die Datenbankoption AUTO_SHRINK nicht auf ON fest, es sei denn, besondere Anforderungen machen dies erforderlich.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** oder der festen Datenbankrolle **db_owner** .  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
+ Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-shrink-a-database"></a>So verkleinern Sie eine Datenbank  
   
@@ -74,13 +74,13 @@ ms.locfileid: "62917007"
      **Datenbank**  
      Zeigt den Namen der ausgewählten Datenbank an.  
   
-     **Aktuell zugewiesener Speicherplatz**  
+     **Aktuell zugeordneter Speicherplatz**  
      Zeigt den gesamten verwendeten und nicht verwendeten Speicherplatz für die ausgewählte Datenbank an.  
   
      **Verfügbarer freier Speicherplatz**  
      Zeigt die Summe des freien Speicherplatzes in den Protokoll- und Datendateien der ausgewählten Datenbank an.  
   
-     **Dateien vor dem Freigeben von nicht verwendetem Speicherplatz neu organisieren**  
+     **Dateien vor dem Freigeben von nicht belegtem Speicherplatz neu organisieren**  
      Wenn diese Option ausgewählt wird, entspricht dies dem Ausführen von DBCC SHRINKDATABASE mit der Angabe einer Option zur Prozentvorgabe. Das Deaktivieren dieser Option entspricht dem Ausführen von DBCC SHRINKDATABASE mit der Option TRUNCATEONLY. Standardmäßig ist diese Option beim Öffnen des Dialogfelds nicht ausgewählt. Wenn diese Option ausgewählt ist, muss der Benutzer eine Option zur Prozentvorgabe angeben.  
   
      **Maximal verfügbarer Speicherplatz in Dateien nach dem Verkleinern**  
@@ -88,7 +88,7 @@ ms.locfileid: "62917007"
   
 4.  Klicken Sie auf **OK**.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-shrink-a-database"></a>So verkleinern Sie eine Datenbank  
   
@@ -100,14 +100,14 @@ ms.locfileid: "62917007"
   
  [!code-sql[DBCC#DBCC_SHRINKDB1](../../snippets/tsql/SQL14/tsql/dbcc/transact-sql/dbcc_other.sql#dbcc_shrinkdb1)]  
   
-##  <a name="FollowUp"></a>Nachverfolgung: nach dem Verkleinern einer Datenbank  
+##  <a name="follow-up-after-you-shrink-a-database"></a><a name="FollowUp"></a>Nachverfolgung: nach dem Verkleinern einer Datenbank  
  Die zum Verkleinern einer Datei verschobenen Daten können an beliebigen freien Platz in der Datei verschoben werden. Dies führt zur Indexfragmentierung und kann die Leistung von Abfragen, die einen Bereich des Indexes suchen, verlangsamen. Zur Vermeidung von Fragmentierung sollten die Dateiindizes nach der Verkleinerung neu erstellt werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Verkleinern einer Datei](shrink-a-file.md)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
- [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
- [DBCC &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
+ [sys. database_files &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql)   
+ [DBCC &#40;Transact-SQL-&#41;](/sql/t-sql/database-console-commands/dbcc-transact-sql)   
  [DBCC SHRINKFILE &#40;Transact-SQL-&#41;](/sql/t-sql/database-console-commands/dbcc-shrinkfile-transact-sql)   
  [Datenbankdateien und Dateigruppen](database-files-and-filegroups.md)  
   

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62916882"
 ---
 # <a name="tempdb-database"></a>tempdb-Datenbank
@@ -79,7 +79,7 @@ ms.locfileid: "62916882"
 |CONCAT_NULL_YIELDS_NULL|OFF|Ja|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Ja|  
 |CURSOR_DEFAULT|GLOBAL|Ja|  
-|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Nein <br /><br /> Nein <br /><br /> Nein|  
+|Datenbankverfügbarkeitsoptionen|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Nein<br /><br /> Nein <br /><br /> Nein |  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Ja|  
 |DB_CHAINING|EIN|Nein|  
 |ENCRYPTION|OFF|Nein|  
@@ -143,6 +143,6 @@ ms.locfileid: "62916882"
  [Verschieben von Datenbankdateien](move-database-files.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Arbeiten mit tempdb in SQL Server 2005](https://chresandro.wordpress.com/2014/09/29/working-with-tempdb-in-sql-server-2005/)  
+ [Verwenden von tempdb in SQL Server 2005](https://chresandro.wordpress.com/2014/09/29/working-with-tempdb-in-sql-server-2005/)  
   
   

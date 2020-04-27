@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 223111874ca34ba4df4968c550e6cc47edf2b390
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62920046"
 ---
 # <a name="sqlcontext-object"></a>SqlContext-Objekt
@@ -26,20 +26,15 @@ ms.locfileid: "62920046"
   
  Der Kontext des aufrufenden Codes wird in einem `SqlContext`-Objekt abstrahiert. Weitere Informationen zu `SqlTriggerContext`-Methoden und -Eigenschaften finden Sie in der Referenzdokumentation zur `Microsoft.SqlServer.Server.SqlTriggerContext`-Klasse im [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-SDK.  
   
- 
-  `SqlContext` stellt den Zugriff auf folgende Komponenten bereit:  
+ `SqlContext` stellt den Zugriff auf folgende Komponenten bereit:  
   
--   
-  `SqlPipe`: Das `SqlPipe`-Objekt stellt die "Pipe" dar, d. h. den Kanal, durch den die Ergebnisse den Client erreichen. Weitere Informationen zum- `SqlPipe` Objekt finden Sie unter [SqlPipe-Objekt](sqlpipe-object.md).  
+-   `SqlPipe`: Das `SqlPipe`-Objekt stellt die "Pipe" dar, d. h. den Kanal, durch den die Ergebnisse den Client erreichen. Weitere Informationen zum- `SqlPipe` Objekt finden Sie unter [SqlPipe-Objekt](sqlpipe-object.md).  
   
--   
-  `SqlTriggerContext`: Das `SqlTriggerContext`-Objekt kann nur innerhalb eines CLR-Triggers abgerufen werden. Es stellt Informationen über den Vorgang bereit, durch den der Trigger ausgelöst wurde, sowie eine Übersicht der aktualisierten Spalten. Weitere Informationen zum- `SqlTriggerContext` Objekt finden Sie unter [SqlTriggerContext-Objekt](sqltriggercontext-object.md).  
+-   `SqlTriggerContext`: Das `SqlTriggerContext`-Objekt kann nur innerhalb eines CLR-Triggers abgerufen werden. Es stellt Informationen über den Vorgang bereit, durch den der Trigger ausgelöst wurde, sowie eine Übersicht der aktualisierten Spalten. Weitere Informationen zum- `SqlTriggerContext` Objekt finden Sie unter [SqlTriggerContext-Objekt](sqltriggercontext-object.md).  
   
--   
-  `IsAvailable`: Die `IsAvailable`-Eigenschaft wird verwendet, um die Verfügbarkeit des Kontexts zu ermitteln.  
+-   `IsAvailable`: Die `IsAvailable`-Eigenschaft wird verwendet, um die Verfügbarkeit des Kontexts zu ermitteln.  
   
--   
-  `WindowsIdentity`: Die `WindowsIdentity`-Eigenschaft wird verwendet, um die Windows-Identität des aufrufenden Programms abzurufen.  
+-   `WindowsIdentity`: Die `WindowsIdentity`-Eigenschaft wird verwendet, um die Windows-Identität des aufrufenden Programms abzurufen.  
   
 ## <a name="determining-context-availability"></a>Bestimmen der Kontextverfügbarkeit  
  Fragen Sie die `SqlContext`-Klasse ab, um zu ermitteln, ob der gerade ausgeführte Code prozessintern ausgeführt wird. Überprüfen Sie dazu die `IsAvailable`-Eigenschaft des `SqlContext`-Objekts. Die `IsAvailable`-Eigenschaft ist schreibgeschützt und gibt `True` zurück, wenn der aufrufende Code innerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird und auf andere `SqlContext`-Elemente zugegriffen werden kann. Wenn die `IsAvailable`-Eigenschaft `False` zurückgibt, lösen alle anderen `SqlContext`-Elemente eine `InvalidOperationException`-Ausnahme aus, falls sie verwendet werden. Wenn `IsAvailable``False` zurückgibt, schlagen alle Versuche, ein Verbindungsobjekt zu öffnen, bei denen "context connection=true" festgelegt ist, fehl.  

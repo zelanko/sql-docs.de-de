@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2109346c60ca807dcc818941f9baff862a211247
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62921796"
 ---
 # <a name="recover-a-database-without-restoring-data-transact-sql"></a>Wiederherstellen einer Datenbank ohne Wiederherstellung von Daten (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "62921796"
  RESTORE DATABASE *database_name* WITH RECOVERY  
   
 > [!NOTE]  
->  Die FROM **=** \<*Sicherungsgerät>* -Klausel wird für reine Wiederherstellungsvorgänge nicht verwendet, da keine Sicherung erforderlich ist.  
+>  Die from **=** \< *backup_device>* -Klausel wird für reine Wiederherstellungs Vorgänge nicht verwendet, da keine Sicherung erforderlich ist.  
   
  **Beispiel**  
   
@@ -89,10 +89,10 @@ RESTORE DATABASE Sales FILEGROUP=SalesGroup2 WITH RECOVERY;
 -   <xref:Microsoft.SqlServer.Management.Smo.Restore.SqlRestore%2A>  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Onlinewiederherstellungen &#40;SQL Server&#41;](online-restore-sql-server.md)   
- [Schrittweise Wiederherstellungen &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
- [Dateiwiederherstellungen &#40;einfaches Wiederherstellungsmodell&#41;](file-restores-simple-recovery-model.md)   
- [Dateiwiederherstellungen &#40;vollständiges Wiederherstellungsmodell&#41;](file-restores-full-recovery-model.md)   
+ [Online Wiederherstellung &#40;SQL Server&#41;](online-restore-sql-server.md)   
+ [&#40;SQL Server wird schrittweise wieder hergestellt&#41;](piecemeal-restores-sql-server.md)   
+ [Datei Wiederherstellungen &#40;einfache Wiederherstellungs Modell&#41;](file-restores-simple-recovery-model.md)   
+ [Datei Wiederherstellungen &#40;vollständigen Wiederherstellungs Modell&#41;](file-restores-full-recovery-model.md)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)  
   
   

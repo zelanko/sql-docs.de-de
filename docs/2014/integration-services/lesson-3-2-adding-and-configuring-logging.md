@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ef4f5d42ae3451d4199e84480a5672e437d7ca5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892436"
 ---
 # <a name="step-2-adding-and-configuring-logging"></a>Schritt 2: Hinzufügen und Konfigurieren der Protokollierung
@@ -34,7 +34,7 @@ ms.locfileid: "62892436"
   
 5.  Ändern Sie optional **Beschreibung**.  
   
-6.  Klicken Sie **** ** \<** in der Spalte Konfiguration auf neue Verbindungs>, um das Ziel anzugeben, in das die Protokollinformationen geschrieben werden.  
+6.  Klicken Sie **Configuration** ** \<** in der Spalte Konfiguration auf neue Verbindungs>, um das Ziel anzugeben, in das die Protokollinformationen geschrieben werden.  
   
      Wählen Sie im Dialogfeld **Dateiverbindungs-Manager-Editor** für **Verwendungstyp**die Option **Datei erstellen**aus, und klicken Sie anschließend auf **Durchsuchen**. Standardmäßig wird vom Dialogfeld **Dateien auswählen** der Projektordner geöffnet, aber Sie können Protokollinformationen an beliebiger Stelle speichern.  
   
@@ -58,6 +58,6 @@ ms.locfileid: "62892436"
 14. Klicken Sie auf **OK**.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- [Schritt 3: Testen des Lektion 3-Tutorialpakets](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
+ [Schritt 3: Testen des Tutorialpakets aus Lektion 3](../integration-services/lesson-3-3-testing-the-lesson-3-tutorial-package.md)  
   
   

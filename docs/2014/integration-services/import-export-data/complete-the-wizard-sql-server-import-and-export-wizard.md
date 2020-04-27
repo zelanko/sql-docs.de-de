@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7119b421f1207a60970e14077bc8c316e998e13f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62893071"
 ---
 # <a name="complete-the-wizard-sql-server-import-and-export-wizard"></a>Assistenten abschließen (SQL Server-Import/Export-Assistent)
@@ -26,8 +26,8 @@ ms.locfileid: "62893071"
   
  Mit dem SQL Server-Import/Export-Assistenten werden Daten aus einer Quelle in ein Ziel kopiert. Mit dem Assistenten können auch eine Zieldatenbank und Zieltabellen erstellt werden. Wenn Sie jedoch mehrere Datenbanken, Tabellen oder andere Datenbankobjekte kopieren müssen, verwenden Sie stattdessen den Assistenten zum Kopieren von Datenbanken. Weitere Informationen finden Sie unter [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
-## <a name="options"></a>Tastatur  
- **Zusammenfassung der Optionen**  
+## <a name="options"></a>Optionen  
+ **Zusammenfassungsoptionen**  
  Zeigen Sie eine Zusammenfassung an, die die folgenden Informationen enthält:  
   
 -   Die vom Assistenten verwendete Quelle und die verwendeten Ziele.  

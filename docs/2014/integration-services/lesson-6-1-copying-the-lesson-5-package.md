@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ede34999b9ca7a18a2bb5ec997c4a93735b82be2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890756"
 ---
-# <a name="step-1-copying-the-lesson-5-package"></a>Schritt 1: Kopieren des Pakets aus Lektion 5
+# <a name="step-1-copying-the-lesson-5-package"></a>Schritt 1: Kopieren des Pakets aus Lektion 5
   In dieser Aufgabe erstellen Sie eine Kopie des in Lektion 5 erstellten Pakets Lesson 5.dtsx. Wahlweise können Sie dem Projekt auch das im Lernprogramm enthaltene abgeschlossene Paket aus Lektion 5 hinzufügen und dann von diesem Paket eine Kopie erstellen. Sie verwenden diese neue Kopie im gesamten Rest der Lektion 6.  
   
 ### <a name="to-copy-the-lesson-5-package"></a>So kopieren Sie das Lektion 5-Paket aus  
@@ -63,6 +63,6 @@ ms.locfileid: "62890756"
      Wenn die Projektmappe nach dem Kopieren des Lektion 5-Pakets noch Pakete aus vorherigen Lektionen enthält, klicken Sie mit der rechten Maustaste auf die einzelnen Pakete aus Lektion 1 bis 5 und klicken dann auf Aus Projekt ausschließen. Anschließend sollte nur noch Lesson 6.dtsx in der Projektmappe enthalten sein.  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
- [Schritt 2: Converting the Project to the Project Deployment Model (Konvertieren des Projekts in das Projektbereitstellungsmodell)](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
+ [Schritt 2: Konvertieren des Projekts in das Projektbereitstellungsmodell](lesson-6-2-converting-the-project-to-the-project-deployment-model.md)  
   
   

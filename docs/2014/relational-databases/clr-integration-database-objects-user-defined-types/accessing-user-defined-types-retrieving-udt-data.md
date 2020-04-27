@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 085b1783214e7f629f1cb91084303edacd151c25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874641"
 ---
 # <a name="retrieving-udt-data"></a>Abrufen von UDT-Daten
@@ -41,8 +41,7 @@ ms.locfileid: "62874641"
 >  **SqlClient** kann beim Laden eines UDTs im Fall von nicht übereinstimmenden UDT-Versionen oder anderen Problemen einen UDT möglicherweise nicht laden. Wenden Sie in diesem Fall die üblichen Maßnahmen zur Problembehandlung an, um zu ermitteln, aus welchem Grund die Assembly, die den UDT enthält, nicht von der aufrufenden Anwendung gefunden werden kann. Weitere Informationen finden Sie im Thema "Diagnostizieren von Fehlern mit Assistenten für verwaltetes Debuggen" in der .NET Framework-Dokumentation.  
   
 ## <a name="accessing-udts-with-a-sqldatareader"></a>UDT-Zugriff über SqlDataReader  
- 
-  `System.Data.SqlClient.SqlDataReader` kann im Client-Code verwendet werden, um ein Resultset mit einer UDT-Spalte abzurufen, die als Instanz des Objekts verfügbar gemacht wird.  
+ `System.Data.SqlClient.SqlDataReader` kann im Client-Code verwendet werden, um ein Resultset mit einer UDT-Spalte abzurufen, die als Instanz des Objekts verfügbar gemacht wird.  
   
 ### <a name="example"></a>Beispiel  
  Dieses Beispiel zeigt, wie Sie die `Main`-Methode verwenden, um ein neues `SqlDataReader`-Objekt zu erstellen. In diesem Codebeispiel werden die folgenden Aktionen ausgeführt:  

@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ffd706cdb17bd73281ee4a62842362b09c6311ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922554"
 ---
 # <a name="common-language-runtime-clr-integration-programming-concepts"></a>Programmierkonzepte für die Common Language Runtime (CLR)-Integration
@@ -60,7 +60,7 @@ ms.locfileid: "62922554"
  [Überwachung und Problembehandlung von verwalteten Datenbankobjekten](monitoring-and-troubleshooting-managed-database-objects.md)  
  Enthält Informationen zu den Tools, die zum Überwachen und zur Problembehandlung von verwalteten Datenbankobjekten und Assemblys in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]verwendet werden können.  
   
- [Verwendungs Szenarien und Beispiele für die CLR-&#41; Integration von Common Language Runtime &#40;](../../database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
+ [Verwendungsszenarios und Beispiele für Common Language Runtime-Integration &#40;CLR&#41;](../../database-engine/dev-guide/usage-scenarios-and-examples-for-common-language-runtime-clr-integration.md)  
  Beschreibt Verwendungsszenarien und Codebeispiele mit CLR-Objekten.  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 26af58e208527d155b5ddf3506be4509627c1f7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918338"
 ---
 # <a name="management-data-warehouse"></a>Verwaltungs-Data Warehouse
@@ -109,7 +109,7 @@ ms.locfileid: "62918338"
   
  Detaillierte Informationen zu Datentyp und Inhalt für die Datenbanktabellenspalten erhalten Sie, indem Sie die Dokumentation für die entsprechende gespeicherte Prozedur des Datensammlers für die einzelnen Tabellen lesen.  
   
-### <a name="best-practices"></a>Bewährte Methoden  
+### <a name="best-practices"></a>Empfehlungen  
  Für die Arbeit mit dem Verwaltungs-Data Warehouse werden die folgenden bewährten Methoden empfohlen:  
   
 -   Ändern Sie die Metadaten der Tabellen im Verwaltungs-Data Warehouse nicht, außer Sie fügen einen neuen Sammlertyp hinzu.  
@@ -126,8 +126,8 @@ ms.locfileid: "62918338"
 |Die Liste von Tabellen im Abschnitt "Momentaufnahme-Schema" wurde aktualisiert. snapshots.os_memory_clerks,snapshots.sql_process_and_system_memory und snapshots.io_virtual_file_stats wurden hinzugefügt. snapshots.os_process_memory und snapshots.distinct_query_stats wurden entfernt.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Gespeicherte Prozeduren für das Verwaltungs-Data Warehouse &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
- [Gespeicherte Prozeduren für den Datensammler &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
+ [Verwaltungs Data Warehouse gespeicherte Prozeduren &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql)   
+ [Gespeicherte Prozeduren für den Datensammler &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql)   
  [Datensammlung](data-collection.md)   
  [Anzeigen eines Sammlungssatzberichts &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md)  
   

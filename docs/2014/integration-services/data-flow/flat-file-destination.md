@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 30f8f566dc04726076dd9eb7c4d91b56f687218d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62902445"
 ---
 # <a name="flat-file-destination"></a>Flatfileziel
@@ -44,13 +44,13 @@ ms.locfileid: "62902445"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Quellen-Editor für Flatfiles** festlegen können:  
   
--   [Ziel-Editor für Flatfiles &#40;Seite Verbindungs-Manager&#41;](../flat-file-destination-editor-connection-manager-page.md)  
+-   [Ziel-Editor für Flatfiles &#40;Seite „Verbindungs-Manager“&#41;](../flat-file-destination-editor-connection-manager-page.md)  
   
--   [Ziel-Editor für Flatfiles &#40;Seite Zuordnungen&#41;](../flat-file-destination-editor-mappings-page.md)  
+-   [Ziel-Editor für Flatfiles &#40;Seite „Zuordnungen“&#41;](../flat-file-destination-editor-mappings-page.md)  
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Common Properties](../common-properties.md)  
+-   [Allgemeine Eigenschaften](../common-properties.md)  
   
 -   [Benutzerdefinierte Eigenschaften der Flatfile](flat-file-custom-properties.md)  
   

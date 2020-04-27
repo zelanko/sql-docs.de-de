@@ -18,14 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 262a6404ced039e629aa7e507c211949dab7bad2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892296"
 ---
 # <a name="integration-services-backward-compatibility"></a>Integration Services – Abwärtskompatibilität
-  In diesem Abschnitt werden die Änderungen zwischen verschiedenen Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]beschrieben. Es werden Funktionen behandelt, die nicht mehr verfügbar sind oder in einer zukünftigen Version entfernt. Es werden außerdem Änderungen am Produkt beschrieben, die bekanntermaßen eine bestehende Anwendung unterbrechen oder deren Verhalten ändern, wenn diese [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Funktionen enthält.  
+  In diesem Abschnitt werden die Änderungen zwischen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]den Versionen von beschrieben. Es werden Funktionen behandelt, die nicht mehr verfügbar sind oder in einer zukünftigen Version entfernt. Es werden außerdem Änderungen am Produkt beschrieben, die bekanntermaßen eine bestehende Anwendung unterbrechen oder deren Verhalten ändern, wenn diese [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Funktionen enthält.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   

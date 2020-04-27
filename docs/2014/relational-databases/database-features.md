@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 7cec72a2f70db07e5653d095ce586b50604d6412
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917664"
 ---
 # <a name="database-features"></a>Datenbankfunktionen
@@ -34,6 +34,6 @@ ms.locfileid: "62917664"
 |[&#40;SQL Server suchen&#41;](../database-engine/search-sql-server.md)|[Binary Large Object &#40;Blob&#41; Daten &#40;SQL Server&#41;](blob/binary-large-object-blob-data-sql-server.md)||  
 |[Benutzerdefinierte Funktionen](user-defined-functions/user-defined-functions.md)|[Datenebenenanwendungen](data-tier-applications/data-tier-applications.md)||  
 |[Statistik](statistics/statistics.md)|[Das Transaktionsprotokoll &#40;SQL Server&#41;](logs/the-transaction-log-sql-server.md)||  
-|[Planhinweislisten](performance/plan-guides.md)|[Datenbankprüfpunkte &#40;SQL Server&#41;](logs/database-checkpoints-sql-server.md)||  
+|[Plan Hinweis Listen](performance/plan-guides.md)|[Datenbankprüfpunkte &#40;SQL Server&#41;](logs/database-checkpoints-sql-server.md)||  
   
   

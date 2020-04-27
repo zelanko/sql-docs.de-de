@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 32b95a5d156ae52394b7128b024c86b9a7e308b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891538"
 ---
 # <a name="step-5-adding-and-configuring-the-flat-file-source"></a>Schritt 5: Hinzufügen und Konfigurieren der Flatfilequelle
@@ -43,10 +43,10 @@ ms.locfileid: "62891538"
 9. Überprüfen Sie im Eigenschaftenfenster, ob `LocaleID` die-Eigenschaft auf **Englisch (USA)** festgelegt ist.  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
- [Schritt 6: Hinzufügen und Konfigurieren von Suchtransformationen](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
+ [Schritt 6: Hinzufügen und Konfigurieren der Transformationen zum Suchen](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Flatfilequelle](data-flow/flat-file-source.md)   
- [Verbindungs-Manager-Editor für Flatfiles &#40;Seite Allgemein&#41;](general-page-of-integration-services-designers-options.md)  
+ [Verbindungs-Manager-Editor für Flatfiles &#40;Seite „Allgemein“&#41;](general-page-of-integration-services-designers-options.md)  
   
   

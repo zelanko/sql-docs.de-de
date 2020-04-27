@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6e399cf6c145f36febd9b32ae7a84c54741bb43
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62893595"
 ---
 # <a name="choose-a-data-source-sql-server-import-and-export-wizard"></a>Datenquelle auswählen (SQL Server-Import/Export-Assistent)
@@ -26,7 +26,7 @@ ms.locfileid: "62893595"
   
  Mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Import/Export-Assistenten werden Daten aus einer Quelle in ein Ziel kopiert. Mit dem Assistenten können auch eine Zieldatenbank und Zieltabellen erstellt werden. Wenn Sie jedoch mehrere Datenbanken, Tabellen oder andere Datenbankobjekte kopieren müssen, verwenden Sie stattdessen den Assistenten zum Kopieren von Datenbanken. Weitere Informationen finden Sie unter [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Data Source**  
  Wählen Sie den Datenanbieter aus, dessen Datenspeicherformat mit dem der Quelle übereinstimmt. Möglicherweise sind für die Datenquelle mehrere Anbieter verfügbar. Mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Sie z. b. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client, den .NET Framework Datenanbieter für SQL Server oder den Microsoft OLE DB-Anbieter für SQL Server verwenden.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "62893595"
  Geben Sie den Namen der Quelldatenbank ein.  
   
  **Integrierte Sicherheit**  
- Geben Sie `True` an, um eine Verbindung mithilfe der integrierten Windows-Authentifizierung herzustellen, oder `False`, um mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung eine Verbindung herzustellen. Wenn Sie `False` angeben, müssen Sie eine Benutzer-ID und ein Kennwort eingeben. Standardwert: `False`.  
+ Geben Sie `True` an, um eine Verbindung mithilfe der integrierten Windows-Authentifizierung herzustellen, oder `False`, um mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung eine Verbindung herzustellen. Wenn Sie `False` angeben, müssen Sie eine Benutzer-ID und ein Kennwort eingeben. Der Standardwert ist `False`.  
   
  **Benutzer-ID**  
  Geben Sie einen Benutzernamen für die Datenbankverbindung an, wenn Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwenden.  
@@ -117,12 +117,12 @@ ms.locfileid: "62893595"
 ### <a name="data-source--flat-file-source"></a>Datenquelle = Flatfilequelle  
  Unter den folgenden Themen finden Sie Informationen zu den Optionen für eine Flatfile-Datenquelle.  
   
- [Verbindungs-Manager-Editor für Flatfiles &#40;Seite Allgemein&#41;](../general-page-of-integration-services-designers-options.md)  
+ [Verbindungs-Manager-Editor für Flatfiles &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)  
   
- [Verbindungs-Manager-Editor für Flatfiles &#40;Seite Spalten&#41;](../flat-file-connection-manager-editor-columns-page.md)  
+ [Verbindungs-Manager-Editor für Flatfiles &#40;Seite „Spalten“&#41;](../flat-file-connection-manager-editor-columns-page.md)  
   
- [Verbindungs-Manager-Editor für Flatfiles &#40;Seite Erweiterte Seite&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
+ [Verbindungs-Manager-Editor für Flatfiles &#40;Seite „Erweitert“&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
   
- [Verbindungs-Manager-Editor für Flatfiles &#40;Vorschau Seite&#41;](../flat-file-connection-manager-editor-preview-page.md)  
+ [Verbindungs-Manager-Editor für Flatfiles &#40;Seite „Vorschau“&#41;](../flat-file-connection-manager-editor-preview-page.md)  
   
   

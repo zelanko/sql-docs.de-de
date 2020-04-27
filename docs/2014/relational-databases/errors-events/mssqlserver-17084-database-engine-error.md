@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 95d0da610a8030c68bcf25d650e68aef4ae83128
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62915451"
 ---
 # <a name="mssqlserver_17084"></a>MSSQLSERVER_17084
@@ -36,8 +36,7 @@ ms.locfileid: "62915451"
  Die WITH-Klausel der Anweisung BEGIN ATOMIC gab keinen Wert für eine Option an.  
   
 ## <a name="user-action"></a>Benutzeraktion  
- 
-  `ATOMIC`-Blöcke erfordern Werte für die `WITH`-Optionen `TRANSACTION ISOLATION LEVEL` und `LANGUAGE`. Beispiel:  
+ `ATOMIC`-Blöcke erfordern Werte für die `WITH`-Optionen `TRANSACTION ISOLATION LEVEL` und `LANGUAGE`. Beispiel:  
   
 ```  
 BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE= N'us_english')  

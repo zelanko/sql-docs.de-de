@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: e39106ea1c4077d1aee90cedc17c5af07503a136
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62919537"
 ---
 # <a name="using-systemtransactions"></a>Verwenden von 'System.Transactions'
@@ -31,8 +31,7 @@ ms.locfileid: "62919537"
   
  Wenn innerhalb von `TransactionScope` eine Ausnahme auftritt, wird die Transaktion als inkonsistent markiert und aufgegeben. Es wird ein Rollback für die Transaktion ausgeführt, wenn `TransactionScope` verworfen wird. Wenn keine Ausnahme auftritt, wird für teilnehmende Transaktionen ein Commit ausgeführt.  
   
- 
-  `TransactionScope` sollte nur verwendet werden, wenn auf lokale Datenquellen und Remotedatenquellen oder externe Ressourcen-Manager zugegriffen wird. Der Grund dafür ist, dass die `TransactionScope`-Klasse immer zur Höherstufung von Transaktionen führt, selbst dann, wenn sie nur innerhalb einer Kontextverbindung verwendet wird.  
+ `TransactionScope` sollte nur verwendet werden, wenn auf lokale Datenquellen und Remotedatenquellen oder externe Ressourcen-Manager zugegriffen wird. Der Grund dafür ist, dass die `TransactionScope`-Klasse immer zur Höherstufung von Transaktionen führt, selbst dann, wenn sie nur innerhalb einer Kontextverbindung verwendet wird.  
   
 > [!NOTE]  
 >  Die `TransactionScope`-Klasse erstellt `System.Transactions.Transaction.IsolationLevel` standardmäßig mit dem Wert `Serializable`. Je nach Ihrer Anwendung kann es vorteilhaft sein, die Isolationsstufe herabzusetzen, um ein hohes Konfliktpotenzial in der Anwendung zu vermeiden.  

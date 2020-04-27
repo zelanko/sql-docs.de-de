@@ -24,14 +24,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3648798bdbdfb6114fb44b0c4086340bb32d1085
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890203"
 ---
 # <a name="execute-package-utility-dtexecui-ui-reference"></a>Referenz zur Benutzeroberfläche des Paketausführungs-Hilfsprogramms (DtExecUI)
-  Verwenden Sie das **Paketausführungshilfsprogramm** , um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete auszuführen. Das Hilfsprogramm führt Pakete aus, die an einem von dreispeicher [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Orten gespeichert sind [!INCLUDE[ssIS](../../includes/ssis-md.md)] :-Datenbank,-Paket Speicher und das Dateisystem. Diese Benutzeroberfläche, die über [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder durch Eingabe von an einer `dtexecui` Eingabeaufforderung geöffnet werden kann, stellt eine Alternative zum Ausführen von Paketen mithilfe des Eingabe Aufforderungs Tools **dtexec** dar.  
+  Verwenden Sie das **Paketausführungshilfsprogramm** , um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete auszuführen. Das Hilfsprogramm führt Pakete aus, die an einem von drei Speicherorten gespeichert wurden: in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank, im [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Paketspeicher und im Dateisystem. Diese Benutzeroberfläche, die über [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder durch Eingabe von an einer `dtexecui` Eingabeaufforderung geöffnet werden kann, stellt eine Alternative zum Ausführen von Paketen mithilfe des Eingabe Aufforderungs Tools **dtexec** dar.  
   
  Pakete werden im selben Prozess ausgeführt wie das **dtexecui.exe** -Hilfsprogramm. Da es sich bei diesem Hilfsprogramm um ein 32-Bit-Tool handelt, werden Pakete, die mithilfe von **dtexecui.exe** in einer 64-Bit-Umgebung ausgeführt werden, in Windows unter Win32 (WOW) ausgeführt. Beim Entwickeln und Testen von Befehlen mithilfe des Paketausführungshilfsprogramms (dtexecui.exe) auf einem 64-Bit-Computer sollten Sie die Befehle mithilfe der 64-Bit-Version von **dtexec.exe** im 64-Bit-Modus testen, bevor Sie die Befehle auf einem Produktionsserver bereitstellen oder deren Ausführung planen.  
   
@@ -67,16 +67,16 @@ ms.locfileid: "62890203"
 |||  
 |-|-|  
 |value|BESCHREIBUNG|  
-|**SQL Server**|Wählen Sie diese Option aus, wenn sich [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]das Paket in befindet. Geben Sie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und einen Benutzernamen und das Kennwort für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung an. Für jeden Benutzernamen und jedes Kennwort werden an der Eingabeaufforderungen die Optionen **/USER** _Benutzername_ und **/PASSWORD** _Kennwort_ options to the commund prompt.|  
+|**SQL Server**|Wählen Sie diese Option, wenn das Paket auf [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert ist. Geben Sie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und einen Benutzernamen und das Kennwort für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung an. Für jeden Benutzernamen und jedes Kennwort werden an der Eingabeaufforderungen die Optionen **/USER** _Benutzername_ und **/PASSWORD** _Kennwort_ hinzugefügt.|  
 |**Dateisystem**|Wählen Sie diese Option, wenn das Paket im Dateisystem gespeichert ist.|  
 |**SSIS-Paketspeicher**|Wählen Sie diese Option aus, wenn das Paket im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Paketspeicher gespeichert ist.|  
   
  Mit jeder dieser Auswahlmöglichkeiten sind die folgenden Optionen verbunden.  
   
- **Auszuführen**  
+ **Ausführen**  
  Klicken Sie hier, um das Paket auszuführen.  
   
- **Ihrer**  
+ **Close**  
  Klicken Sie hier, um das Dialogfeld **Paketausführungshilfsprogramm** zu schließen.  
   
 ### <a name="dynamic-options"></a>Dynamische Optionen  
@@ -91,18 +91,18 @@ ms.locfileid: "62890203"
  **Windows-Authentifizierung verwenden**  
  Wählen Sie diese Option aus, um die Windows-Authentifizierung zu verwenden und sich mithilfe eines [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzerkontos anzumelden.  
   
- **SQL Server Authentifizierung verwenden**  
+ **SQL Server-Authentifizierung verwenden**  
  Wählen Sie diese Option aus, um die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung zu verwenden. Wenn ein Benutzer eine Verbindung mit einem angegebenen Benutzernamen und einem Kennwort von einer nicht vertrauenswürdigen Verbindung herstellt, führt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Authentifizierung aus, indem überprüft wird, ob ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldekonto eingerichtet wurde und ob das angegebene Kennwort mit dem zuvor aufgezeichneten übereinstimmt. Wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Anmeldekonto nicht finden kann, schlägt die Authentifizierung fehl und der Benutzer erhält eine Fehlermeldung.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung.  
   
  **Paket**  
- Geben Sie den Namen des Pakets ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)**, um das Paket mithilfe des Dialogfelds **SSIS-Paket auswählen** zu suchen.  
+ Geben Sie den Namen des Pakets ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)** , um das Paket mithilfe des Dialogfelds **SSIS-Paket auswählen** zu suchen.  
   
 #### <a name="package-source--file-system"></a>Package Source = File System  
  **Paket**  
- Geben Sie den Namen des Pakets ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)**, um das Paket mithilfe des Dialogfelds „Öffnen“ zu suchen. In dem Dialogfeld werden standardmäßig nur Dateien mit der Erweiterung .dtsx aufgelistet.  
+ Geben Sie den Namen des Pakets ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)** , um das Paket mithilfe des Dialogfelds „Öffnen“ zu suchen. In dem Dialogfeld werden standardmäßig nur Dateien mit der Erweiterung .dtsx aufgelistet.  
   
 #### <a name="package-source--ssis-package-store"></a>Package Source = SSIS Package Store  
  **Server**  
@@ -114,11 +114,11 @@ ms.locfileid: "62890203"
  **Windows-Authentifizierung verwenden**  
  Wählen Sie diese Option aus, um die Windows-Authentifizierung zu verwenden und sich mithilfe eines Microsoft Windows-Benutzerkontos anzumelden.  
   
- **SQL Server Authentifizierung verwenden**  
+ **SQL Server-Authentifizierung verwenden**  
  Diese Option ist nicht verfügbar, wenn Sie ein in **SSIS-Paketspeicher**gespeichertes Paket ausführen.  
   
  **Paket**  
- Geben Sie den Namen des Pakets ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)**, um das Paket mithilfe des Dialogfelds **SSIS-Paket auswählen** zu suchen.  
+ Geben Sie den Namen des Pakets ein, oder klicken Sie auf die Schaltfläche mit den Auslassungspunkten **(...)** , um das Paket mithilfe des Dialogfelds **SSIS-Paket auswählen** zu suchen.  
   
 ## <a name="configurations-page"></a>Konfigurationsseite  
  Auf der Seite **Konfigurationen** des Dialogfelds **Paketausführungsprogramm** wählen Sie die Konfigurationsdateien aus, die zur Laufzeit geladen werden sollen, und geben Sie die Reihenfolge an, in der sie geladen werden sollen.  
@@ -139,17 +139,17 @@ ms.locfileid: "62890203"
  **Remove**  
  Wählen Sie in der Liste eine Konfigurationsdatei aus, und klicken Sie anschließend auf **Entfernen**.  
   
- **Auszuführen**  
+ **Ausführen**  
  Klicken Sie hier, um das Paket auszuführen.  
   
- **Ihrer**  
+ **Close**  
  Klicken Sie hier, um das Dialogfeld **Paketausführungshilfsprogramm** zu schließen.  
   
 ## <a name="command-files-page"></a>Seite "Befehlsdateien"  
  Wählen Sie auf der Seite **Befehlsdateien** des Dialogfelds **Paketausführungsprogramm** die Befehlsdateien aus, die zur Laufzeit geladen werden sollen.  
   
 ### <a name="options"></a>Tastatur  
- **Befehls Dateien**  
+ **Befehlsdateien**  
  Führt die vom Paket verwendeten Befehlsdateien auf. Ein Paket kann mehrere Dateien verwenden, um Befehlszeilenoptionen festzulegen.  
   
  **Pfeiltasten**  
@@ -161,10 +161,10 @@ ms.locfileid: "62890203"
  **Remove**  
  Wählen Sie im Textfeld eine Befehlsdatei aus, und entfernen Sie sie anschließend mithilfe der Schaltfläche **Entfernen** .  
   
- **Auszuführen**  
+ **Ausführen**  
  Klicken Sie hier, um das Paket auszuführen.  
   
- **Ihrer**  
+ **Close**  
  Klicken Sie hier, um das Dialogfeld **Paketausführungshilfsprogramm** zu schließen.  
   
 ## <a name="connection-managers-page"></a>Seite "Verbindungs-Manager"  
@@ -177,47 +177,47 @@ ms.locfileid: "62890203"
  **Beschreibung**  
  Zeigt eine Beschreibung für jeden Verbindungs-Manager an. Die Beschreibungen können nicht bearbeitet werden.  
   
- **Verbindungs Zeichenfolge**  
+ **Verbindungszeichenfolge**  
  Bearbeiten Sie die Verbindungszeichenfolge für einen Verbindungs-Manager. Dieses Feld kann nur bearbeitet werden, wenn das Kontrollkästchen **Verbindungs-Manager** aktiviert ist.  
   
- **Auszuführen**  
+ **Ausführen**  
  Klicken Sie hier, um das Paket auszuführen.  
   
- **Ihrer**  
+ **Close**  
  Klicken Sie hier, um das Dialogfeld **Paketausführungshilfsprogramm** zu schließen.  
   
 ## <a name="execution-options-page"></a>Seite "Ausführungsoptionen"  
  Auf der Seite **Ausführungsoptionen** des Dialogfelds **Paketausführungshilfsprogramm** können Sie Laufzeitoptionen für das Paket angeben.  
   
 ### <a name="options"></a>Tastatur  
- **Paket bei Überprüfungs Warnungen fehlschlagen**  
+ **Paket bei Überprüfungswarnungen fehlschlagen lassen**  
  Gibt an, ob ein Paket fehlschlägt, wenn eine Überprüfungswarnung auftritt.  
   
  **Paket ohne Ausführung überprüfen**  
  Gibt an, ob das Paket nur überprüft wird.  
   
- **Maximal zulässige gleichzeitige ausführbare Dateien**  
+ **Maximale Anzahl von gleichzeitig ausführbaren Dateien**  
  Gibt an, ob Sie die maximale Anzahl der ausführbaren Dateien angeben möchten, die gleichzeitig im Paket ausgeführt werden können. Nachdem Sie dieses Kontrollkästchen aktiviert haben, verwenden Sie das Drehfeld, um die maximale Anzahl von ausführbaren Dateien anzugeben.  
   
- **Paket Prüfpunkte aktivieren**  
+ **Paketprüfpunkte aktivieren**  
  Gibt an, ob Paketprüfpunkte aktiviert sind.  
   
- **Prüf Punkt Datei**  
+ **Prüfpunktdatei**  
  Führt die vom Paket verwendete Prüfpunktdatei auf, wenn die Paketprüfpunkte aktiviert sind.  
   
  **Durchsuchen**  
- Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)**, um die Prüfpunktdatei mithilfe des Dialogfelds **Öffnen** zu suchen, wenn Paketprüfpunkte aktiviert sind. Wenn bereits eine Prüfpunktdatei angegeben ist, wird diese durch die ausgewählte Datei ersetzt.  
+ Klicken Sie auf die Schaltfläche zum Durchsuchen **(…)** , um die Prüfpunktdatei mithilfe des Dialogfelds **Öffnen** zu suchen, wenn Paketprüfpunkte aktiviert sind. Wenn bereits eine Prüfpunktdatei angegeben ist, wird diese durch die ausgewählte Datei ersetzt.  
   
- **Neustart Optionen überschreiben**  
+ **Neustartoptionen überschreiben**  
  Gibt an, ob die Neustartoptionen überschrieben werden, wenn Sie die Paketprüfpunkte aktivieren.  
   
- **Neustart Option**  
+ **Neustartoption**  
  Wählen Sie aus, wie die Prüfpunkte verwendet werden sollen, wenn die Neustartoptionen überschrieben werden.  
   
- **Auszuführen**  
+ **Ausführen**  
  Klicken Sie hier, um das Paket auszuführen.  
   
- **Ihrer**  
+ **Close**  
  Klicken Sie hier, um das Dialogfeld **Paketausführungshilfsprogramm** zu schließen.  
   
 ## <a name="reporting-page"></a>Berichtsseite  
@@ -227,10 +227,10 @@ ms.locfileid: "62890203"
  **Konsolenereignisse**  
  Geben Sie die Ereignisse und Meldungstypen an, die gemeldet werden sollen.  
   
- **Keine**  
+ **None**  
  Wählen Sie diese Option aus, um keinerlei Informationen zu melden.  
   
- **Errors**  
+ **Fehler**  
  Wählen Sie diese Option aus, um Fehlermeldungen zu melden.  
   
  **Warnungen**  
@@ -242,10 +242,10 @@ ms.locfileid: "62890203"
  **Pipelineereignisse**  
  Wählen Sie diese Option aus, um Meldungen zu Datenflussereignissen zu melden.  
   
- **Information**  
+ **Informationen**  
  Wählen Sie diese Option aus, um Informationsmeldungen zu melden.  
   
- **Ausführliche**  
+ **Ausführlich**  
  Wählen Sie diese Option aus, um die ausführliche Berichterstellung zu verwenden.  
   
  **Konsolenprotokollierung**  
@@ -275,36 +275,36 @@ ms.locfileid: "62890203"
  **Startzeit und Beendigungszeit**  
  Wählen Sie diese Option aus, um zu melden, wann das Paket gestartet und beendet wurde.  
   
- **Auszuführen**  
+ **Ausführen**  
  Klicken Sie hier, um das Paket auszuführen.  
   
- **Ihrer**  
+ **Close**  
  Klicken Sie hier, um das Dialogfeld **Paketausführungshilfsprogramm** zu schließen.  
   
 ## <a name="logging-page"></a>Protokollierungsseite  
  Auf der Seite **Protokollierung** des Dialogfelds **Paketausführungsprogramm** können Sie festlegen, welche Protokollanbieter dem Paket zur Laufzeit zur Verfügung stehen sollen. Stellen Sie den Typ des Paketprotokollanbieters und die Verbindungszeichenfolge für die Verbindung mit dem Protokoll bereit. Für jeden Protokollanbietereintrag wird der Eingabeaufforderung eine Instanz der Option **/LOGGER**_classid_ hinzugefügt.  
   
 ### <a name="options"></a>Tastatur  
- **Protokoll Anbieter**  
+ **Protokollanbieter**  
  Wählen Sie einen Protokollanbieter aus der Liste aus.  
   
- **Konfigurations Zeichenfolge**  
+ **Konfigurationszeichenfolge**  
  Wählen Sie den Namen des Verbindungs-Managers aus dem Paket aus, das auf den Speicherort des Protokolls zeigt, oder geben Sie die Verbindungszeichenfolge für die Verbindung mit dem Protokollanbieter ein.  
   
  **Remove**  
  Wählen Sie einen Protokollanbieter aus, und klicken Sie auf ihn, um ihn zu entfernen.  
   
- **Auszuführen**  
+ **Ausführen**  
  Klicken Sie hier, um das Paket auszuführen.  
   
- **Ihrer**  
+ **Close**  
  Klicken Sie hier, um das Dialogfeld **Paketausführungshilfsprogramm** zu schließen.  
   
 ## <a name="set-values-page"></a>Seite "Werte festlegen"  
  Auf der Seite **Werte festlegen** des Dialogfelds **Paketausführungsprogramm** können Sie die Eigenschaftenwerte von Paketen, ausführbaren Dateien, Verbindungen, Variablen und Protokollanbietern festlegen, indem Sie die Pfade der Eigenschaften und die Eigenschaftenwerte eingeben. Für jeden Pfadeintrag wird der Eingabeaufforderung eine Instanz der Option **/SET**_propertypath;value_ hinzugefügt.  
   
 ### <a name="options"></a>Tastatur  
- **Eigenschafts Pfad**  
+ **Eigenschaftspfad**  
  Geben Sie den Pfad der Eigenschaft ein. In der Pfadsyntax wird der umgekehrte Schrägstrich (\\) verwendet, um zu kennzeichnen, dass es sich beim nächsten Element um einen Container handelt, durch einen Punkt (.) wird gekennzeichnet, dass das folgende Element eine Eigenschaft ist, und Klammern kennzeichnen ein Sammelelement. Das Element kann anhand seines Index oder Namens identifiziert werden. Der Eigenschaftspfad einer Paketvariablen lautet beispielsweise \Package.Variables[MyVariable].Value.  
   
  **Wert**  
@@ -313,10 +313,10 @@ ms.locfileid: "62890203"
  **Remove**  
  Wählen Sie einen Eigenschaftspfad aus, und klicken Sie darauf, um ihn zu entfernen.  
   
- **Auszuführen**  
+ **Ausführen**  
  Klicken Sie hier, um das Paket auszuführen.  
   
- **Ihrer**  
+ **Close**  
  Klicken Sie hier, um das Dialogfeld **Paketausführungshilfsprogramm** zu schließen.  
   
 ## <a name="verification-page"></a>Überprüfungsseite  
@@ -344,10 +344,10 @@ ms.locfileid: "62890203"
  Versions-ID  
  Geben Sie die Versions-ID an.  
   
- **Auszuführen**  
+ **Ausführen**  
  Klicken Sie hier, um das Paket auszuführen.  
   
- **Ihrer**  
+ **Close**  
  Klicken Sie hier, um das Dialogfeld **Paketausführungshilfsprogramm** zu schließen.  
   
 ## <a name="command-line-page"></a>Befehlszeilenseite  
@@ -357,16 +357,16 @@ ms.locfileid: "62890203"
  **Die ursprünglichen Optionen wiederherstellen**  
  Klicken Sie hier, um den ursprünglichen Status der Befehlszeile wiederherzustellen. Verwenden Sie diese Option, wenn Sie mithilfe der Option **Befehlszeile manuell bearbeiten** Änderungen vorgenommen haben und nun die ursprünglichen Optionen der Befehlszeile wiederherstellen möchten.  
   
- **Manuelles Bearbeiten der Befehlszeile**  
+ **Befehlszeile manuell bearbeiten**  
  Klicken Sie hier, um die Befehlszeile im Textfeld **Befehlszeile** zu bearbeiten.  
   
  **Befehlszeile**  
  Zeigt die aktuelle Befehlszeile an. Die Befehlszeile kann nur bearbeitet werden, wenn Sie die Option zum manuellen Bearbeiten der Befehlszeile aktiviert haben.  
   
- **Auszuführen**  
+ **Ausführen**  
  Klicken Sie hier, um das Paket auszuführen.  
   
- **Ihrer**  
+ **Close**  
  Klicken Sie hier, um das Dialogfeld **Paketausführungshilfsprogramm** zu schließen.  
   
 ## <a name="see-also"></a>Weitere Informationen  

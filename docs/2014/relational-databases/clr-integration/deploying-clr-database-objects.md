@@ -16,15 +16,14 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 4e06dfced9b9800c0e5c0b7d0dca208bac67c900
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62920843"
 ---
 # <a name="deploying-clr-database-objects"></a>Bereitstellen von CLR-Datenbankobjekten
-  Die Verteilung einer fertigen Anwendung oder eines Moduls zur Installation und Ausführung auf anderen Computern wird als Bereitstellung bezeichnet. Bei Verwendung von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio können Sie CLR-Datenbankobjekte (Common Language Runtime) entwickeln und auf einem Testserver bereitstellen. Stattdessen können verwaltete Datenbankobjekte auch mit den Redistributionsdateien von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework statt mit Visual Studio kompiliert werden. Die kompilierten Assemblys, die die CLR-Datenbankobjekte enthalten, können dann mit Visual Studio- oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisungen auf einem Testserver bereitgestellt werden. Beachten Sie, dass Visual Studio .NET 2003 nicht für CLR-Integrationsprogrammierung oder Bereitstellung verwendet werden kann. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] beinhaltet ein vorinstalliertes .NET Framework, und Visual Studio .NET 2003 kann nicht die .NET Framework 2.0-Assemblys verwenden.  
+  Die Verteilung einer fertigen Anwendung oder eines Moduls zur Installation und Ausführung auf anderen Computern wird als Bereitstellung bezeichnet. Bei Verwendung von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Studio können Sie CLR-Datenbankobjekte (Common Language Runtime) entwickeln und auf einem Testserver bereitstellen. Stattdessen können verwaltete Datenbankobjekte auch mit den Redistributionsdateien von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework statt mit Visual Studio kompiliert werden. Die kompilierten Assemblys, die die CLR-Datenbankobjekte enthalten, können dann mit Visual Studio- oder [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Anweisungen auf einem Testserver bereitgestellt werden. Beachten Sie, dass Visual Studio .NET 2003 nicht für CLR-Integrationsprogrammierung oder Bereitstellung verwendet werden kann. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] beinhaltet ein vorinstalliertes .NET Framework, und Visual Studio .NET 2003 kann nicht die .NET Framework 2.0-Assemblys verwenden.  
   
  Sobald die CLR-Methoden auf dem Testserver getestet und verifiziert wurden, können sie mit einem Bereitstellungsskript auf die Produktionsserver verteilt werden. Das Bereitstellungsskript kann manuell oder mithilfe von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] generiert werden (siehe das Verfahren weiter unten in diesem Thema).  
   
@@ -68,7 +67,7 @@ ms.locfileid: "62920843"
   
  `CREATE ASSEMBLY HelloWorld from 'c:\helloworld.dll' WITH PERMISSION_SET = SAFE;`  
   
-1.  Die Prozedur, die Funktion, das Aggregat, der benutzerdefinierte Typ oder der Trigger müssen dann in der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erstellt werden. Wenn die `HelloWorld`-Assembly eine Methode namens `HelloWorld` in der `Procedures`-Klasse enthält, dann kann der folgende [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Code der Abfrage hinzugefügt werden, um in `hello` eine Prozedur namens [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zu erstellen.  
+1.  Die Prozedur, die Funktion, das Aggregat, der benutzerdefinierte Typ oder der Trigger müssen dann in der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erstellt werden. Wenn die `HelloWorld`-Assembly eine Methode namens `HelloWorld` in der `Procedures`-Klasse enthält, dann kann der folgende [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Code der Abfrage hinzugefügt werden, um in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eine Prozedur namens `hello` zu erstellen.  
   
  `CREATE PROCEDURE hello`  
   
@@ -97,7 +96,7 @@ ms.locfileid: "62920843"
   
 6.  Für jeden Objekttyp, der im Bereich **Objekttypen auswählen** ausgewählt ist, wird der Bereich ** \<>Typ auswählen** angezeigt. In diesem Bereich stehen alle Instanzen des betreffenden Datenbankobjekttyps zur Auswahl, die in der angegebenen Datenbank registriert sind. Wählen Sie mindestens ein Objekt aus, und klicken Sie auf **weiter**.  
   
-7.  Der Bereich **Ausgabeoptionen** wird angezeigt, wenn alle gewünschten Datenbankobjekt Typen ausgewählt wurden. Wählen Sie **Skript in Datei aus,** und geben Sie einen Dateipfad für das Skript an. Wählen Sie **Weiter** aus. Prüfen Sie Ihre Auswahl, und klicken Sie auf **Fertig**stellen. Das Bereitstellungsskript wird im angegebenen Dateipfad gespeichert.  
+7.  Der Bereich **Ausgabeoptionen** wird angezeigt, wenn alle gewünschten Datenbankobjekt Typen ausgewählt wurden. Wählen Sie **Skript in Datei aus,** und geben Sie einen Dateipfad für das Skript an. Klicken Sie auf **Weiter**. Prüfen Sie Ihre Auswahl, und klicken Sie auf **Fertig**stellen. Das Bereitstellungsskript wird im angegebenen Dateipfad gespeichert.  
   
 ## <a name="post-deployment-scripts"></a>Skripts nach der Bereitstellung  
  Sie können ein Skript nach der Bereitstellung ausführen.  

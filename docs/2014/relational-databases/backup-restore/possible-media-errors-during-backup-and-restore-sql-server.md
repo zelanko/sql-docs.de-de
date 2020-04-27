@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 46b9fef97433609310169c98d8ffc623a21a10c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876111"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Mögliche Medienfehler während der Sicherung und Wiederherstellung (SQL Server)
@@ -38,7 +38,7 @@ ms.locfileid: "62876111"
   
   
   
-##  <a name="BckChecksums"></a> Sicherungsprüfsummen  
+##  <a name="backup-checksums"></a><a name="BckChecksums"></a> Sicherungsprüfsummen  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden drei Prüfsummentypen unterstützt: eine Prüfsumme auf Seiten, eine Prüfsumme in Protokollblöcken und eine Sicherungsprüfsumme. Beim Generieren einer Sicherungsprüfsumme wird von BACKUP überprüft, ob die aus der Datenbank gelesenen Daten mit Prüfsummen oder Indikatoren für zerrissene Seiten konsistent sind, die möglicherweise in der Datenbank vorhanden sind.  
   
  Von der BACKUP-Anweisung wird optional eine Sicherungsprüfsumme auf dem Sicherungsdatenstrom berechnet. Wenn Seitenprüfsummen oder Informationen zu zerrissenen Seiten auf einer gegebenen Seite vorhanden sind, wird von BACKUP während der Seitensicherung die Prüfsumme, der Status für zerrissene Seiten und die Seiten-ID für die Seite überprüft. Beim Erstellen einer Sicherungsprüfsumme werden von Sicherungsvorgängen keine Prüfsummen zu Seiten hinzugefügt. Seiten werden so gesichert, wie sie in der Datenbank vorgefunden werden, und bleiben durch die Sicherung unverändert.  
@@ -75,7 +75,7 @@ ms.locfileid: "62876111"
   
 4.  Es wird eine Meldung ausgegeben, dass die Sicherung erfolgreich generiert wurde, aber Seitenfehler enthält.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  **So aktivieren oder deaktivieren Sie Sicherungsprüfsummen**  
   
 -   [Aktivieren oder deaktivieren von Sicherungsprüfsummen während der Sicherung oder Wiederherstellung &#40;SQL Server&#41;](enable-or-disable-backup-checksums-during-backup-or-restore-sql-server.md)  

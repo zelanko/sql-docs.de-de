@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96fd1b081ec9d990014dc61db7938f745cffa041
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922435"
 ---
 # <a name="backup-and-restore-interoperability-and-coexistence-sql-server"></a>Sicherung und Wiederherstellung: Interoperabilität und gleichzeitige Verwendung (SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "62922435"
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="FileRestoreAndDbStartup"></a> Dateiwiederherstellung und Starten einer Datenbank  
+##  <a name="file-restore-and-database-startup"></a><a name="FileRestoreAndDbStartup"></a> Dateiwiederherstellung und Starten einer Datenbank  
  Dieser Abschnitt betrifft nur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken mit mehreren Dateigruppen.  
   
 > [!NOTE]  
@@ -52,14 +52,14 @@ ms.locfileid: "62922435"
   
  Wenn der Start erfolgreich ist, bleibt jede Dateigruppe, die eine Offlinedatei enthält, offline.  
   
-##  <a name="OnlineRestoreAndDisabledIndexes"></a> Onlinewiederherstellung und deaktivierte Indizes  
+##  <a name="online-restore-and-disabled-indexes"></a><a name="OnlineRestoreAndDisabledIndexes"></a> Onlinewiederherstellung und deaktivierte Indizes  
  Dieses Abschnitt betrifft nur Datenbanken mit mehreren Dateigruppen und für das einfache Wiederherstellungsmodell Datenbanken mit mindestens einer schreibgeschützten Dateigruppe.  
   
  Wenn die Datenbank online ist, kann der Index in diesen Fällen nur erstellt, gelöscht, aktiviert oder deaktiviert werden, wenn alle Dateigruppen, die einen beliebigen Teil des Indexes enthalten, online sind.  
   
  Informationen zum Wiederherstellen von Offlinedateigruppen finden Sie unter [Onlinewiederherstellung &#40;SQL Server&#41;](online-restore-sql-server.md).  
   
-##  <a name="DbMandBnR"></a> Datenbankspiegelung und Sicherung/Wiederherstellung  
+##  <a name="database-mirroring-and-backup-and-restore"></a><a name="DbMandBnR"></a> Datenbankspiegelung und Sicherung/Wiederherstellung  
  Dieser Abschnitt betrifft nur Datenbanken mit mehreren Dateigruppen, für die das vollständige Wiederherstellungsmodell verwendet wird.  
   
 > [!NOTE]  
@@ -84,7 +84,7 @@ ms.locfileid: "62922435"
   
 -   Das Wiederherstellen der Prinzipaldatenbank ist nicht zulässig.  
   
-##  <a name="PiecemealAndFTIndexes"></a> Schrittweise Wiederherstellung und Volltextindizes  
+##  <a name="piecemeal-restore-and-full-text-indexes"></a><a name="PiecemealAndFTIndexes"></a> Schrittweise Wiederherstellung und Volltextindizes  
  Dieser Abschnitt betrifft nur Datenbanken mit mehreren Dateigruppen und bei Datenbanken mit einfachem Modell nur schreibgeschützte Dateigruppen.  
   
  Volltextindizes werden in Datenbankdateigruppen gespeichert und können von einer schrittweisen Wiederherstellung betroffen sein. Wenn sich ein Volltextindex in derselben Dateigruppe befindet wie zugehörige Tabellendaten, wird die schrittweise Wiederherstellung ordnungsgemäß ausgeführt.  
@@ -111,7 +111,7 @@ ms.locfileid: "62922435"
   
  Sobald sowohl die Tabellendateigruppe als auch die Volltextindex-Dateigruppe online sind, wird eine ggf. angehaltene Volltextauffüllung fortgesetzt.  
   
-##  <a name="FileBnRandCompression"></a> Dateisicherung und -wiederherstellung und die Komprimierung  
+##  <a name="file-backup-and-restore-and-compression"></a><a name="FileBnRandCompression"></a> Dateisicherung und -wiederherstellung und die Komprimierung  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt die NTFS-Dateisystemkomprimierung schreibgeschützter Dateigruppen und Datenbanken.  
   
  Das Wiederherstellen von Dateien in einer schreibgeschützten Dateigruppe wird für komprimierte NTFS-Dateien unterstützt. Das Sichern und Wiederherstellen dieser Dateigruppen erfolgt im Prinzip wie bei jeder anderen schreibgeschützten Dateigruppe, jedoch mit folgenden Ausnahmen:  
@@ -123,7 +123,7 @@ ms.locfileid: "62922435"
 > [!NOTE]  
 >  Protokolldateien von Datenbanken mit Lese-/Schreibzugriff sollten unter keinen Umständen in komprimierten Dateisystemen gespeichert werden.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](../../database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md)  
   

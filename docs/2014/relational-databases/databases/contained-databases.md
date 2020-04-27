@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ee9d1c22a216024f388d30978dbb62be933425cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917569"
 ---
 # <a name="contained-databases"></a>Eigenständige Datenbanken
@@ -37,17 +37,17 @@ ms.locfileid: "62917569"
   
  Dieses Thema enthält folgende Abschnitte:  
   
--   [Konzepte zur teilweise eigenständigen Datenbank](#Concepts)  
+-   [Konzepte von teilweise eigenständigen Datenbanken](#Concepts)  
   
--   [Kapselung](#containment)  
+-   [Begrenzung](#containment)  
   
 -   [Vorteile der Verwendung teilweise eigenständiger Datenbanken](#benefits)  
   
 -   [Einschränkungen](#Limitations)  
   
--   [Identifizieren der Daten Bank Kap](#Identifying)  
+-   [Identifizieren der Datenbankkapselung](#Identifying)  
   
-##  <a name="Concepts"></a>Konzepte von teilweise eigenständigen Datenbanken  
+##  <a name="partially-contained-database-concepts"></a><a name="Concepts"></a> Konzepte zur teilweise eigenständigen Datenbank  
  Eine vollständig eigenständige Datenbank schließt alle erforderlichen Datenbankeinstellungen und Metadaten zum Definieren der Datenbank ein, und ihre Konfiguration ist nicht von der [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] -Instanz abhängig, in der die Datenbank installiert ist. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]konnte das Trennen einer Datenbank von der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine zeitraubende Angelegenheit sein, und es erforderte ein fundiertes Wissen der Beziehung zwischen den Datenbanken und der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die teilweise eigenständigen Datenbanken erleichtern das Trennen einer Datenbank von der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und anderen Datenbanken.  
   
  In der eigenständigen Datenbank werden Funktionen entsprechend der Kapselung erkannt. Jede benutzerdefinierte Entität, die sich ausschließlich auf Funktionen stützt, die in der Datenbank enthalten sind, wird als vollständig enthalten angesehen. Jede benutzerdefinierte Entität, die sich ausschließlich auf Funktionen stützt, die sich außerhalb der Datenbank befinden, wird als nicht enthalten angesehen. (Weitere Informationen finden Sie im Abschnitt [Eigenständigkeit](#containment) in diesem Thema.)  
@@ -67,8 +67,7 @@ ms.locfileid: "62917569"
  Eine Datenbank, deren Eigenständigkeit auf **NONE** festgelegt ist. Alle Datenbanken in Versionen vor [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] sind nicht enthalten. Die Kapselung aller Datenbanken von [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher ist standardmäßig auf **NONE** festgelegt.  
   
  Teilweise enthaltene Datenbank  
- Eine teilweise eigenständige Datenbank ist eine eigenständige Datenbank, die einige Funktionen zulassen kann, die die Datenbankbegrenzung überschreiten. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält die Fähigkeit ein zu bestimmen, wann die Kapselungsbegrenzung überschritten wird.  
+ Eine teilweise eigenständige Datenbank ist eine eigenständige Datenbank, die einige Funktionen zulassen kann, die die Datenbankbegrenzung überschreiten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält die Fähigkeit ein zu bestimmen, wann die Kapselungsbegrenzung überschritten wird.  
   
  Enthaltener Benutzer  
  Es gibt zwei Typen von Benutzern für enthaltene Datenbanken.  
@@ -91,9 +90,9 @@ ms.locfileid: "62917569"
   
  Innerhalb der Datenbankbegrenzung befindet sich das *Datenbankmodell*, in dem die Datenbanken entwickelt und verwaltet werden. Beispiele für Entitäten, die sich innerhalb der Datenbank befinden, sind Systemtabellen (z.B. **sys.tables**), eigenständige Datenbankbenutzer mit Kennwörtern sowie Benutzertabellen in der aktuellen Datenbank, auf die mit einem zweiteiligen Namen verwiesen wird.  
   
- Außerhalb der Datenbankbegrenzung befindet sich das *Verwaltungsmodell*, das sich auf Funktionen auf Instanzebene und auf die Verwaltung bezieht. Beispiele für Entitäten, die sich außerhalb der Datenbankbegrenzung befinden, sind Systemtabellen wie **sys.endpoints**, Anmeldungen zugeordnete Benutzer und Benutzertabellen in einer anderen Datenbank, auf die mit einem dreiteiligen Namen verwiesen wird.  
+ Außerhalb der Datenbankbegrenzung befindet sich das *Verwaltungsmodell*, das sich auf Funktionen auf Instanzebene und auf die Verwaltung bezieht. Beispiele für Entitäten, die sich außerhalb der Datenbankbegrenzung befinden, sind Systemtabellen wie **sys.endpoints**, zu Anmeldungen zugeordnete Benutzer und Benutzertabellen in einer anderen Datenbank, auf die mit einem dreiteiligen Namen verwiesen wird.  
   
-##  <a name="containment"></a>Begrenzung  
+##  <a name="containment"></a><a name="containment"></a> Eigenständigkeit  
  Benutzerentitäten, die sich vollständig innerhalb der Datenbank befinden, werden als *enthalten* angesehen. Alle Benutzerentitäten, die sich außerhalb der Datenbank befinden oder sich auf die Interaktion mit Funktionen außerhalb der Datenbank stützen, werden als *nicht enthalten* angesehen.  
   
  Im Allgemeinen sind Benutzerentitäten folgenden Kapselungskategorien zuzuordnen:  
@@ -102,7 +101,7 @@ ms.locfileid: "62917569"
   
 -   Nicht eigenständige Benutzerentitäten (Entitäten, die die Datenbankbegrenzung überschreiten), z.B. „sys.server_principals“ oder ein Serverprinzipal (eine Anmeldung) selbst. Jeglicher Code, in dem diese Entitäten oder Funktionen verwendet werden, die auf diese Entitäten verweisen, ist nicht enthalten.  
   
-###  <a name="partial"></a>Teilweise eigenständige Datenbank  
+###  <a name="partially-contained-database"></a><a name="partial"></a> Partially Contained Database  
  Die Funktion der enthaltenen Datenbank ist derzeit nur in einem teilweise enthaltenen Status verfügbar. Eine teilweise enthaltene Datenbank ist eine enthaltene Datenbank, die die Verwendung nicht enthaltener Funktionen zulässt.  
   
  Geben Sie Informationen zu nicht eigenständigen Objekten und Funktionen mithilfe von [sys.dm_db_uncontained_entities](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql) und [sys.sql_modules &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-modules-transact-sql) zurück. Durch Bestimmen des Kapselungsstatus der Elemente von Datenbanken können Sie ermitteln, welche Objekte und Funktionen ersetzt oder geändert werden müssen, um eine Kapselung zu erzielen.  
@@ -112,7 +111,7 @@ ms.locfileid: "62917569"
   
  Das Verhalten teilweise eigenständiger Datenbanken unterscheidet sich von dem abhängiger Datenbanken am deutlichsten hinsichtlich der Sortierung. Weitere Informationen zu Sortierungsaspekten finden Sie unter [Contained Database Collations](contained-database-collations.md).  
   
-##  <a name="benefits"></a>Vorteile der Verwendung teilweise eigenständiger Datenbanken  
+##  <a name="benefits-of-using-partially-contained-databases"></a><a name="benefits"></a> Vorteile des Verwendens von teilweise enthaltenen Datenbanken  
  Im Zusammenhang mit abhängigen Datenbanken treten Probleme und Schwierigkeiten auf, die mithilfe einer teilweise eigenständigen Datenbank behoben werden können.  
   
 ### <a name="database-movement"></a>Verschiebung von Datenbanken  
@@ -134,7 +133,7 @@ ms.locfileid: "62917569"
 ### <a name="database-administration"></a>Datenbankverwaltung  
  Durch das Beibehalten der Datenbankeinstellungen in der Datenbank (im Gegensatz zur master-Datenbank) erhält jeder Datenbankbesitzer mehr Kontrolle über seine Datenbank, und zwar ohne die Datenbankbesitzer-Berechtigung **sysadmin** zu erteilen.  
   
-##  <a name="Limitations"></a>Einschränken  
+##  <a name="limitations"></a><a name="Limitations"></a>Einschränken  
  Für teilweise eigenständige Datenbanken sind die folgenden Funktionen nicht zulässig.  
   
 -   Teilweise Enthaltene Datenbanken unterstützen weder die Replikation, noch das Aufzeichnen oder das Nachverfolgen von Änderungsdaten.  
@@ -150,9 +149,8 @@ ms.locfileid: "62917569"
 > [!WARNING]  
 >  Temporär gespeicherte Prozeduren sind derzeit zulässig. Da temporär gespeicherte Prozeduren die Kapselung verletzen, ist nicht davon auszugehen, dass sie in künftigen Versionen der eigenständigen Datenbank unterstützt werden.  
   
-##  <a name="Identifying"></a>Identifizieren der Daten Bank Kap  
- Es sind zwei Tools verfügbar, mit denen der Einschlussstatus der Datenbank bestimmt werden kann. 
-  [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql) ist eine Sicht, in der alle möglicherweise nicht eigenständigen Entitäten in der Datenbank angezeigt werden. Das database_uncontained_usage-Ereignis wird ausgelöst, wenn eine tatsächliche nicht enthaltene Entität zur Laufzeit bestimmt wird.  
+##  <a name="identifying-database-containment"></a><a name="Identifying"></a>Identifizieren der Daten Bank Kap  
+ Es sind zwei Tools verfügbar, mit denen der Einschlussstatus der Datenbank bestimmt werden kann. [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql) ist eine Sicht, in der alle möglicherweise nicht eigenständigen Entitäten in der Datenbank angezeigt werden. Das database_uncontained_usage-Ereignis wird ausgelöst, wenn eine tatsächliche nicht enthaltene Entität zur Laufzeit bestimmt wird.  
   
 ### <a name="sysdm_db_uncontained_entities"></a>sys.dm_db_uncontained_entities  
  In dieser Sicht werden alle Entitäten in der Datenbank angezeigt, bei denen es sich um nicht enthaltene Entitäten handeln könnte, weil sie beispielsweise die Datenbankbegrenzung überschreiten. Hierzu zählen die Benutzerentitäten, die Objekte außerhalb des Datenbankmodells verwenden können. Da die Kapselung einiger Entitäten (z. B. der Entitäten mit dynamischem SQL) jedoch erst zur Laufzeit bestimmt werden kann, werden in der Sicht möglicherweise einige Entitäten angezeigt, die eigentlich keine nicht enthaltenen Entitäten sind. Weitere Informationen finden Sie unter [sys.dm_db_uncontained_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-uncontained-entities-transact-sql).  
@@ -161,7 +159,7 @@ ms.locfileid: "62917569"
  Dieses XEvent wird ausgelöst, wenn nicht enthaltene Entität zur Laufzeit bestimmt wird. Dies schließt in Clientcode ausgelöste Entitäten ein. Dieses Xevent wird nur für tatsächliche nicht enthaltene Entitäten ausgelöst. Das Ereignis wird jedoch nur zur Laufzeit ausgelöst. Daher werden alle nicht enthaltenen Benutzerentitäten, die nicht ausgeführt wurden, von diesem XEvent nicht identifiziert.  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- [Geänderte Funktionen &#40;eigenständige Datenbank&#41;](modified-features-contained-database.md)  
+ [Geänderte Funktionen &#40;Enthaltene Datenbank&#41;](modified-features-contained-database.md)  
   
  [Enthaltene Datenbanksortierungen](contained-database-collations.md)  
   

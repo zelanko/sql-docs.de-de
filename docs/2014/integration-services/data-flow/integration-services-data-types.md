@@ -19,16 +19,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fbd39569da4623eda3bb3906fd81bd5da69ab831
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62902440"
 ---
 # <a name="integration-services-data-types"></a>SQL Server Integration Services-Datentypen
   Wenn Daten an einen Datenfluss in einem Paket weitergegeben werden, konvertiert die Quelle, die die Daten extrahiert, diese in einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp. Numerischen Daten wird ein numerischer Datentyp, Zeichenfolgendaten wird ein Zeichendatentyp und Daten ein Datumsdatentyp zugewiesen. Anderen Daten, wie z. B. GUIDs und BLOBs (Binary Large Object Blocks), werden ebenfalls entsprechende [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentypen zugewiesen. Falls Daten von einem Datentyp sind, der nicht in einen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp konvertiert werden kann, tritt ein Fehler auf.  
   
- Einige Datenfluss Komponenten konvertieren Datentypen zwischen den [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentypen und den verwalteten Datentypen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Weitere Informationen zur Zuordnung von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] zu verwalteten Datentypen finden Sie unter [Verwenden von Datentypen im Datenfluss](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
+ Einige Datenflusskomponenten konvertieren [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Datentypen in verwaltete Datentypen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Weitere Informationen zur Zuordnung von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] zu verwalteten Datentypen finden Sie unter [Verwenden von Datentypen im Datenfluss](../extending-packages-custom-objects/data-flow/working-with-data-types-in-the-data-flow.md).  
   
  In der folgenden Tabelle sind die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentypen aufgeführt. Bei einigen der Datentypen in der Tabelle werden auch die für sie geltende Genauigkeit und die Anzahl der Dezimalstellen genannt. Weitere Informationen zu Genauigkeit und Dezimalstellen finden Sie unter [Genauigkeit, Dezimalstellen und Länge &#40;Transact-SQL&#41;](/sql/t-sql/data-types/precision-scale-and-length-transact-sql).  
   
@@ -60,15 +60,14 @@ ms.locfileid: "62902440"
 |DT_UI4|Eine ganze Zahl ohne Vorzeichen und einer Länge von 4 Bytes.|  
 |DT_UI8|Eine ganze Zahl ohne Vorzeichen und einer Länge von 8 Bytes.|  
 |DT_WSTR|Eine NULL-terminierte Unicode-Zeichenfolge mit einer maximalen Länge von 4000 Zeichen. (Wenn ein Spaltenwert zusätzliche Nullabschlusszeichen enthält, wird die Zeichenfolge bei der ersten Null abgeschnitten.)|  
-|DT_IMAGE|Ein Binärwert mit einer maximalen Größe von 2<sup>31</sup>-1 (2.147.483.647) Bytes. .|  
+|DT_IMAGE|Ein Binärwert mit einer maximalen Größe von 2<sup>31</sup>-1 (2.147.483.647) Bytes. erforderlich.|  
 |DT_NTEXT|Eine Unicode-Zeichenfolge mit einer maximalen Länge von 2<sup>30</sup> -1 (1.073.741.823) Zeichen.|  
 |DT_TEXT|Eine [!INCLUDE[vcpransi](../../../includes/vcpransi-md.md)]/MBCS-Zeichenfolge-Zeichenfolge mit einer maximalen Länge von 2<sup>31</sup>-1 (2.147.483.647) Zeichen.|  
   
 ## <a name="conversion-of-data-types"></a>Datentypkonvertierung  
  Falls die Daten in einer Spalte nicht die vom Quelldatentyp zugeordnete normale Breite benötigen, können Sie den Datentyp der Spalte ändern. Wenn jede Datenzeile so schmal wie möglich ist, wird die Leistung beim Übertragen von Daten optimiert, denn umso schmaler eine Zeile ist, desto schneller werden die Daten von der Quelle an das Ziel verschoben.  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält einen vollständigen Satz numerischer Datentypen, sodass der Datentyp in hohem Maß auf die Größe der Daten abgestimmt werden kann. Wenn z. B. die Werte in einer Spalte mit einem DT_UI8-Datentyp immer ganze Zahlen zwischen 0 und 3000 sind, können Sie den Datentyp in DT_UI2 ändern. Wenn entsprechend eine Spalte mit dem DT_CY-Datentyp die Datenanforderungen des Pakets erfüllen kann, indem stattdessen ein ganzzahliger Datentyp verwendet wird, können Sie den Datentyp in DT_I4 ändern.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält einen vollständigen Satz numerischer Datentypen, sodass der Datentyp in hohem Maß auf die Größe der Daten abgestimmt werden kann. Wenn z. B. die Werte in einer Spalte mit einem DT_UI8-Datentyp immer ganze Zahlen zwischen 0 und 3000 sind, können Sie den Datentyp in DT_UI2 ändern. Wenn entsprechend eine Spalte mit dem DT_CY-Datentyp die Datenanforderungen des Pakets erfüllen kann, indem stattdessen ein ganzzahliger Datentyp verwendet wird, können Sie den Datentyp in DT_I4 ändern.  
   
  Es gibt folgende Möglichkeiten, um den Datentyp einer Spalte zu ändern:  
   
@@ -223,21 +222,21 @@ ms.locfileid: "62902440"
 |---------------|--------------------------------------------|------------------------------|---------|---------------------------------|--------------------------|--------------------------|  
 |DT_BOOL|bit|bit|bit||||  
 |DT_BYTES|binary, varbinary, timestamp|binary, varbinary, timestamp|BigBinary, VarBinary|RAW|||  
-|DT_CY|smallmoney, money|smallmoney, money|Currency||||  
+|DT_CY|smallmoney, money|smallmoney, money|Währung||||  
 |DT_DATE|||||||  
 |DT_DBDATE|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)|[date &#40;Transact-SQL&#41;](/sql/t-sql/data-types/date-transact-sql)||date|date|date|  
 |DT_DBTIME||||timestamp|time|time|  
-|DT_DBTIME2|[Zeit &#40;Transact-SQL-&#41;](/sql/t-sql/data-types/time-transact-sql)(p)|[Zeit &#40;Transact-SQL-&#41;](/sql/t-sql/data-types/time-transact-sql) (p)|||||  
-|DT_DBTIMESTAMP|[DateTime-&#40;Transact-SQL-&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL-&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[DateTime-&#40;Transact-SQL-&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL-&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|Datetime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
+|DT_DBTIME2|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql)(p)|[time &#40;Transact-SQL&#41;](/sql/t-sql/data-types/time-transact-sql) (p)|||||  
+|DT_DBTIMESTAMP|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|[datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql), [smalldatetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/smalldatetime-transact-sql)|Datetime|TIMESTAMP, DATE, INTERVAL|TIME, TIMESTAMP, DATE|TIME, TIMESTAMP, DATE|  
 |DT_DBTIMESTAMP2|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)|[datetime2 &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime2-transact-sql)||timestamp|timestamp|timestamp|  
-|DT_DBTIMESTAMPOFFSET|[DateTimeOffset &#40;Transact-SQL-&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql)(p)|[DateTimeOffset &#40;Transact-SQL-&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
+|DT_DBTIMESTAMPOFFSET|[datetimeoffset &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql)(p)|[datetimeoffset &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetimeoffset-transact-sql) (p)||timestampoffset|timestamp,<br /><br /> varchar|timestamp,<br /><br /> varchar|  
 |DT_DECIMAL|||||||  
 |DT_FILETIME|||||||  
 |DT_GUID|UNIQUEIDENTIFIER|UNIQUEIDENTIFIER|GUID||||  
 |DT_I1|||||||  
-|DT_I2|SMALLINT|SMALLINT|Schnellstart||SMALLINT|SMALLINT|  
+|DT_I2|SMALLINT|SMALLINT|Short||SMALLINT|SMALLINT|  
 |DT_I4|INT|INT|Long||INTEGER|INTEGER|  
-|DT_I8|BIGINT|BIGINT|||BIGINT|BIGINT|  
+|DT_I8|BIGINT|BIGINT|||bigint|bigint|  
 |DT_NUMERIC|decimal, numeric|decimal, numeric|Decimal|NUMBER, INT|decimal, numeric|decimal, numeric|  
 |DT_R4|real|real|Single||real|real|  
 |DT_R8|float|float|Double|FLOAT, REAL|FLOAT, DOUBLE|FLOAT, DOUBLE|  

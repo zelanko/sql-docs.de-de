@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6504e4f5eee83d670b4843fb8d956b23a84d4aad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62893031"
 ---
 # <a name="configure-flat-file-destination-sql-server-import-and-export-wizard"></a>Flatfileziel konfigurieren (SQL Server-Import/Export-Assistent)
@@ -26,36 +26,36 @@ ms.locfileid: "62893031"
   
  Mit dem SQL Server-Import/Export-Assistenten werden Daten aus einer Quelle in ein Ziel kopiert. Mit dem Assistenten können auch eine Zieldatenbank und Zieltabellen erstellt werden. Wenn Sie jedoch mehrere Datenbanken, Tabellen oder andere Datenbankobjekte kopieren müssen, verwenden Sie stattdessen den Assistenten zum Kopieren von Datenbanken. Weitere Informationen finden Sie unter [Use the Copy Database Wizard](../../relational-databases/databases/use-the-copy-database-wizard.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Quellflatfile**  
  Der Name der Zieldatei.  
   
- **Zeilen Trennzeichen**  
+ **Zeilentrennzeichen**  
  Wählen Sie ein Trennzeichen für Zeilen aus der Liste aus.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**Programmiert Verlangt**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
+|**{CR}{LF}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**Programmiert**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf.|  
-|**Verlangt**|Als Trennzeichen für Zeilen dient ein Zeilenvorschub.|  
+|**{LF}**|Als Trennzeichen für Zeilen dient ein Zeilenvorschub.|  
 |**Semikolon {;}**|Als Trennzeichen für Zeilen dient ein Semikolon.|  
 |**Doppelpunkt {:}**|Als Trennzeichen für Zeilen dient ein Doppelpunkt.|  
 |**Komma{,}**|Als Trennzeichen für Zeilen dient ein Komma.|  
-|**Tab {t}**|Als Trennzeichen für Zeilen dient ein Tabulator.|  
+|**Tabulator {t}**|Als Trennzeichen für Zeilen dient ein Tabulator.|  
 |**Senkrechter Strich {&#124;}**|Als Trennzeichen für Zeilen dient ein senkrechter Strich.|  
   
- **Spalten Trennzeichen**  
+ **Spaltentrennzeichen**  
  Wählen Sie ein Trennzeichen für Spalten aus der Liste aus.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**Programmiert Verlangt**|Die Spalten werden durch eine Kombination aus Wagen Rücklauf-Zeilenvorschub getrennt.|  
+|**{CR}{LF}**|Die Spalten werden durch eine Kombination aus Wagen Rücklauf-Zeilenvorschub getrennt.|  
 |**Programmiert**|Als Trennzeichen für Spalten dient ein Wagenrücklauf.|  
-|**Verlangt**|Als Trennzeichen für Spalten dient ein Zeilenvorschub.|  
+|**{LF}**|Als Trennzeichen für Spalten dient ein Zeilenvorschub.|  
 |**Semikolon {;}**|Als Trennzeichen für Spalten dient ein Semikolon.|  
 |**Doppelpunkt {:}**|Als Trennzeichen für Spalten dient ein Doppelpunkt.|  
 |**Komma{,}**|Als Trennzeichen für Spalten dient ein Komma.|  
-|**Tab {t}**|Als Trennzeichen für Spalten dient ein Tabulator.|  
+|**Tabulator {t}**|Als Trennzeichen für Spalten dient ein Tabulator.|  
 |**Senkrechter Strich {&#124;}**|Als Trennzeichen für Spalten dient ein senkrechter Strich.|  
   
  **Vorschau**  

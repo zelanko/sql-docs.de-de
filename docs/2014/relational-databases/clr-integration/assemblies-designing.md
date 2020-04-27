@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: ad5135eb8141cc84bc6e5bddc8bd8477f4699b9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874928"
 ---
 # <a name="designing-assemblies"></a>Entwerfen von Assemblys
@@ -57,8 +57,7 @@ ms.locfileid: "62874928"
  Wenn Sie UNSAFE angeben, kann der Code in der Assembly außerdem Vorgänge ausführen, die von der CLR-Überprüfung als typunsicher betrachtet werden. Diese Vorgänge können potenziell auf unkontrollierte Weise auf Speicherpuffer im [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Prozessraum zugreifen. UNSAFE-Assemblys können außerdem potenziell das Sicherheitssystem von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] oder der CLR unterlaufen. UNSAFE-Berechtigungen sollten nur hochgradig vertrauenswürdigen Assemblys durch erfahrene Entwickler oder Administratoren erteilt werden. Nur Mitglieder der festen Server Rolle **sysadmin** können unsichere Assemblys erstellen.  
   
 ## <a name="restrictions-on-assemblies"></a>Einschränkungen für Assemblys  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] belegt verwalteten Code in Assemblys mit einigen Einschränkungen, damit sichergestellt wird, dass diese auf zuverlässige und skalierbare Weise ausgeführt werden können. Dies bedeutet, dass bestimmte Vorgänge, die die Robustheit des Servers beeinträchtigen könnten, in SAFE- und EXTERNAL_ACCESS-Assemblys nicht zulässig sind.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] belegt verwalteten Code in Assemblys mit einigen Einschränkungen, damit sichergestellt wird, dass diese auf zuverlässige und skalierbare Weise ausgeführt werden können. Dies bedeutet, dass bestimmte Vorgänge, die die Robustheit des Servers beeinträchtigen könnten, in SAFE- und EXTERNAL_ACCESS-Assemblys nicht zulässig sind.  
   
 ### <a name="disallowed-custom-attributes"></a>Unzulässige benutzerdefinierte Attribute  
  Assemblys dürfen nicht mit den folgenden benutzerdefinierten Attributen mit Anmerkungen versehen werden:  

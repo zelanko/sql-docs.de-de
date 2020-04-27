@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3823b6d55439aad860d9176933c348e44acc1ba5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62922848"
 ---
 # <a name="sql-server-identifiers-in-powershell"></a>SQL Server-Bezeichnern in PowerShell
@@ -54,8 +54,8 @@ SQLSERVER:\SQL\MyComputer\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing
 |Beschreibt, wie das Windows PowerShell-Escapezeichen für in PowerShell-Pfaden nicht unterstützte Zeichen verwendet wird.|[Escape-Bezeichner für SQL Server](escape-sql-server-identifiers.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server PowerShell-Anbieter](sql-server-powershell-provider.md)   
- [SQL Server-PowerShell](sql-server-powershell.md)   
+ [SQL Server PowerShell Anbieter](sql-server-powershell-provider.md)   
+ [SQL Server PowerShell](sql-server-powershell.md)   
  [Datenbankbezeichner](../relational-databases/databases/database-identifiers.md)  
   
   

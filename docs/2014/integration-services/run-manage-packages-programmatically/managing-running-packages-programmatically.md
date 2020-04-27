@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 42c4383692677c0e124e72b997fdca54707f4d03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62889590"
 ---
 # <a name="managing-running-packages-programmatically"></a>Programmgesteuerte Verwaltung von ausgeführten Paketen
@@ -63,6 +63,6 @@ ms.locfileid: "62889590"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Paketverwaltung &#40;SSIS-Dienst&#41;](../service/package-management-ssis-service.md)   
- [Programmgesteuertes Auflisten verfügbarer Pakete](../run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)  
+ [Enumerating Available Packages Programmatically](../run-manage-packages-programmatically/enumerating-available-packages-programmatically.md)  
   
   

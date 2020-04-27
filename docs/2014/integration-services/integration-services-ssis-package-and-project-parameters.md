@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cfd6a65e1561f252574ff919c8b63b0bbd57876f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62892243"
 ---
 # <a name="integration-services-ssis-parameters"></a>Integration Services (SSIS)-Parameter
-  Mit[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -(SSIS-)Parametern können Sie Eigenschaften in Paketen zur Zeit der Paketausführung Werte zuweisen. Sie können *Projektparameter* auf Projektebene und *Paket Parameter* auf Paketebene erstellen. Projektparameter werden verwendet, um jegliche externen Eingaben bereitzustellen, die das Projekt für ein oder mehrere Pakete im Projekt empfängt. Mit Paketparametern können Sie die Paketausführung ändern, ohne das Paket bearbeiten und erneut bereitstellen zu müssen.  
+  Mit[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -(SSIS-)Parametern können Sie Eigenschaften in Paketen zur Zeit der Paketausführung Werte zuweisen. Sie können *Projektparameter* auf Projektebene und *Paketparameter* auf Paketebene erstellen. Projektparameter werden verwendet, um jegliche externen Eingaben bereitzustellen, die das Projekt für ein oder mehrere Pakete im Projekt empfängt. Mit Paketparametern können Sie die Paketausführung ändern, ohne das Paket bearbeiten und erneut bereitstellen zu müssen.  
   
  In [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] können Sie im Fenster **Project.params** Projektparameter erstellen, ändern oder löschen. Sie erstellen, ändern und löschen Paketparameter mit der Registerkarte **Parameter** im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer. Im Dialogfeld **Parametrisieren** können Sie einen neuen oder vorhandenen Parameter einer Taskeigenschaft zuordnen. Weitere Informationen zum Verwenden des Fensters **Project.params** und der Registerkarte **Parameter** finden Sie unter [Create Parameters](create-parameters.md). Weitere Informationen zum Dialogfeld **Parametrisieren** finden Sie unter [Parameterize Dialog Box](parameterize-dialog-box.md).  
   
@@ -51,7 +51,7 @@ ms.locfileid: "62892243"
   
  Sie können mehreren Paketeigenschaften mithilfe eines einzelnen Parameters einen Wert zuweisen. Einer einzelnen Paketeigenschaft kann nur ein Wert aus einem einzelnen Parameter zugewiesen werden.  
   
-###  <a name="executions"></a>Ausführungen und Parameter Werte  
+###  <a name="executions-and-parameter-values"></a><a name="executions"></a> Ausführungen und Parameterwerte  
  Die *Ausführung* ist ein Objekt, das eine einzelne Instanz der Paketausführung darstellt. Wenn Sie eine Ausführung erstellen, geben Sie alle Details an, die zum Ausführen eines Pakets erforderlich sind, z. B. Ausführungsparameterwerte. Sie können die Parameterwerte vorhandener Ausführungen auch ändern.  
   
  Wenn Sie einen Ausführungsparameterwert explizit festlegen, ist dieser Wert nur auf diese spezielle Instanz der Ausführung anwendbar. Der Ausführungswert wird anstelle eines Serverwerts oder eines Entwurfswerts verwendet. Wenn Sie keinen Ausführungswert explizit festlegen und ein Serverwert angegeben wurde, wird der Serverwert verwendet.  
@@ -68,21 +68,21 @@ ms.locfileid: "62892243"
 #### <a name="determining-execution-parameter-values"></a>Bestimmen von Ausführungsparameterwerten  
  Die folgenden Transact-SQL-Sichten und die gespeicherte Prozedur können verwendet werden, um Parameterwerte anzuzeigen und festzulegen.  
   
- [catalog. execution_parameter_values &#40;ssisdb-Datenbank&#41;](/sql/integration-services/system-views/catalog-execution-parameter-values-ssisdb-database)(Sicht)  
+ [catalog.execution_parameter_values &#40;SSISDB-Datenbank&#41;](/sql/integration-services/system-views/catalog-execution-parameter-values-ssisdb-database) (Sicht)  
  Zeigt die tatsächlichen Parameterwerte an, die von einer bestimmten Ausführung verwendet werden.  
   
- [catalog. get_parameter_values &#40;ssisdb-Datenbank&#41;](/sql/integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database) (gespeicherte Prozedur)  
+ [catalog.get_parameter_values &#40;SSISDB-Datenbank&#41;](/sql/integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database) (gespeicherte Prozedur)  
  Löst die tatsächlichen Werte für das angegebene Paket und den Umgebungsverweis auf und zeigt diese an.  
   
- [catalog. object_parameters &#40;ssisdb-Datenbank&#41;](/sql/integration-services/system-views/catalog-object-parameters-ssisdb-database) (Sicht)  
+ [catalog.object_parameters &#40;SSISDB-Datenbank&#41;](/sql/integration-services/system-views/catalog-object-parameters-ssisdb-database) (Sicht)  
  Zeigt die Parameter und Eigenschaften für alle Pakete und Projekte im [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Katalog an, einschließlich der Entwurfsstandard- und Serverstandardwerte.  
   
  [catalog.set_execution_parameter_value &#40;SSISDB-Datenbank&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database)  
  Legt den Wert eines Parameters für eine Instanz der Ausführung im [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Katalog fest.  
   
- Sie können den Parameterwert auch im Dialogfeld **Paket ausführen** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ändern. Weitere Informationen finden Sie unter [Dialog Feld "Paket ausführen](../../2014/integration-services/execute-package-dialog-box.md)".  
+ Sie können den Parameterwert auch im Dialogfeld **Paket ausführen** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ändern. Weitere Informationen finden Sie unter [Execute Package Dialog Box](../../2014/integration-services/execute-package-dialog-box.md).  
   
- Sie können einen Parameterwert auch mit der dtexec-Option `/Parameter` ändern. Weitere Informationen finden Sie unter [dtexec Utility](packages/dtexec-utility.md).  
+ Sie können einen Parameterwert auch mit der dtexec-Option `/Parameter` ändern. Weitere Informationen finden Sie [hier](packages/dtexec-utility.md).  
   
 ### <a name="parameter-validation"></a>Parameterüberprüfung  
  Wenn Parameterwerte nicht aufgelöst werden können, schlägt die entsprechende Paketausführung fehl. Zur Fehlervermeidung können Sie Projekte und Pakete im Dialogfeld **Überprüfen** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]überprüfen. Mit der Überprüfung stellen Sie sicher, dass alle Parameter über die notwendigen Werte verfügen oder die notwendigen Werte mit bestimmten Umgebungsverweisen auflösen können. Mit der Überprüfung können auch andere häufig auftretende Paketprobleme überprüft werden.  

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 69aedf4a3712b79672a0630e953e399c08f23338
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876189"
 ---
 # <a name="online-restore-sql-server"></a>Onlinewiederherstellungen [SQL Server]
@@ -59,7 +59,7 @@ ms.locfileid: "62876189"
     > [!NOTE]  
     >  Die Datei kann auch vor der Wiederherstellungssequenz manuell offline geschaltet werden. Weitere Informationen finden Sie unter "Offlineschalten einer Datenbank oder Datei" weiter unten in diesem Thema.  
   
-##  <a name="taking_db_or_file_offline"></a>Offline schalten einer Datenbank oder Datei  
+##  <a name="taking-a-database-or-file-offline"></a><a name="taking_db_or_file_offline"></a>Offline schalten einer Datenbank oder Datei  
  Wenn Sie keine Onlinewiederherstellung verwenden möchten, können Sie die Datenbank offline schalten, bevor Sie die Wiederherstellungssequenz starten. Dazu können Sie eine der folgenden Methoden verwenden:  
   
 -   Bei jedem Wiederherstellungsmodell können Sie die Datenbank offline schalten, indem Sie die folgende [ALTER DATABASE](/sql/t-sql/statements/alter-database-transact-sql) -Anweisung verwenden:  
@@ -91,7 +91,7 @@ ms.locfileid: "62876189"
   
 -   [Beispiel: Onlinewiederherstellung einer schreibgeschützten Datei &#40;vollständiges Wiederherstellungsmodell&#41;](example-online-restore-of-a-read-only-file-full-recovery-model.md)  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Wiederherstellen von Dateien und Dateigruppen &#40;SQL Server&#41;](restore-files-and-filegroups-sql-server.md)  
   
@@ -101,13 +101,13 @@ ms.locfileid: "62876189"
   
 -   [Wiederherstellen einer Datenbank ohne Wiederherstellung von Daten &#40;Transact-SQL&#41;](recover-a-database-without-restoring-data-transact-sql.md)  
   
--   [Entfernen Sie veraltete Dateigruppen &#40;SQL Server&#41;](remove-defunct-filegroups-sql-server.md)  
+-   [Entfernen von veralteten Dateigruppen &#40;SQL Server&#41;](remove-defunct-filegroups-sql-server.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dateiwiederherstellungen &#40;vollständiges Wiederherstellungsmodell&#41;](file-restores-full-recovery-model.md)   
- [Dateiwiederherstellungen &#40;einfaches Wiederherstellungsmodell&#41;](file-restores-simple-recovery-model.md)   
- [Wiederherstellung von Seiten &#40;SQL Server&#41;](restore-pages-sql-server.md)   
- [Schrittweise Wiederherstellungen &#40;SQL Server&#41;](piecemeal-restores-sql-server.md)   
+ [Datei Wiederherstellungen &#40;vollständigen Wiederherstellungs Modell&#41;](file-restores-full-recovery-model.md)   
+ [Datei Wiederherstellungen &#40;einfache Wiederherstellungs Modell&#41;](file-restores-simple-recovery-model.md)   
+ [Seiten &#40;SQL Server wiederherstellen&#41;](restore-pages-sql-server.md)   
+ [&#40;SQL Server wird schrittweise wieder hergestellt&#41;](piecemeal-restores-sql-server.md)   
  [Übersicht über Wiederherstellungsvorgänge &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)  
   
   

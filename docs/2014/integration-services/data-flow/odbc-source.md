@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d125a725a9e1c0cab34c7066fd9554ef0099d6e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62901105"
 ---
 # <a name="odbc-source"></a>ODBC-Quelle
@@ -76,7 +76,7 @@ ms.locfileid: "62901105"
   
 -   [Quellen-Editor für ODBC &#40;Seite „Fehlerausgabe“&#41;](../odbc-source-editor-error-output-page.md)  
   
- Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können.  
+ Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die Programm gesteuert festgelegt werden können.  
   
  So öffnen Sie das Dialogfeld **Erweiterter Editor** :  
   
@@ -94,6 +94,6 @@ ms.locfileid: "62901105"
   
 -   [Extrahieren von Daten mithilfe der ODBC-Quelle](odbc-source.md)  
   
--   [Benutzerdefinierte Eigenschaften der ODBC-Quelle](odbc-source-custom-properties.md)  
+-   [ODBC Source Custom Properties](odbc-source-custom-properties.md)  
   
   

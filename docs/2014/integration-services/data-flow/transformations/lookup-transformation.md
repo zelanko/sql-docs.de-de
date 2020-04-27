@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47b04c547700eda94d4c4f19b4a1211f8cdbf694
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900238"
 ---
 # <a name="lookup-transformation"></a>Transformation für Suche
@@ -59,7 +59,7 @@ ms.locfileid: "62900238"
   
 -   Sind in der Verweistabelle mehrere übereinstimmende Einträge vorhanden, gibt die Transformation für Suche nur den ersten übereinstimmenden Eintrag zurück, der von der Suchabfrage zurückgegeben wird. Wenn mehrere übereinstimmende Einträge gefunden werden, wird von der Transformation für Suche nur dann ein Fehler bzw. eine Warnung generiert, wenn die Transformation für das Laden des gesamten Verweisdatasets in den Cache konfiguriert ist. In diesem Fall, wird von der Transformation für Suche eine Warnung generiert, wenn die Transformation während des Füllens des Caches mehrere übereinstimmende Einträge erkennt.  
   
- Der Join kann ein zusammengesetzter Join sein. Das bedeutet, dass Sie mehrere Spalten in der Transformationseingabe mit Spalten im Verweisdataset verknüpfen können. Die Transformation unterstützt Joinspalten eines beliebigen Datentyps, außer DT_R4, DT_R8, DT_TEXT, DT_NTEXT oder DT_IMAGE. Weitere Informationen finden Sie unter [Integration Services Datentypen](../integration-services-data-types.md).  
+ Der Join kann ein zusammengesetzter Join sein. Das bedeutet, dass Sie mehrere Spalten in der Transformationseingabe mit Spalten im Verweisdataset verknüpfen können. Die Transformation unterstützt Joinspalten eines beliebigen Datentyps, außer DT_R4, DT_R8, DT_TEXT, DT_NTEXT oder DT_IMAGE. Weitere Informationen finden Sie unter [Integration Services-Datentypen](../integration-services-data-types.md).  
   
  Normalerweise werden Werte aus dem Verweisdataset der Transformationsausgabe hinzugefügt. Beispielsweise kann die Transformation für die Suche einen Produktnamen aus einer Tabelle mithilfe eines Wertes aus einer Eingabespalte extrahieren und den Produktnamen dann der Transformationsausgabe hinzufügen. Die Werte aus der Verweistabelle können Spaltenwerte ersetzen oder können neuen Spalten hinzugefügt werden.  
   
@@ -85,9 +85,9 @@ ms.locfileid: "62900238"
   
  Im Folgenden finden Sie weitere Vorteile einer persistenten Speicherung des Caches in einer Datei:  
   
--   ***Geben Sie die Cachedatei für mehrere Pakete frei. Weitere Informationen finden***[Sie unter Implementieren einer Transformation für Suche im voll Cache Modus mit dem](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)Cacheverbindungs-Manager ***.***      
+-   ***Die Cachedatei kann für mehrere Pakete freigegeben werden. Weitere Informationen finden Sie unter***  [Implementieren einer Suchtransformation im Vollcachemodus mit der Transformation für Cacheverbindungs-Manager](../../connection-manager/lookup-transformation-full-cache-mode-cache-connection-manager.md)  ***.***  
   
--   Die Cachedatei kann mit einem Paket bereitgestellt werden. ***Anschließend können Sie die Daten auf mehreren Computern verwenden.*** Weitere Informationen finden Sie unter [Erstellen und Bereitstellen eines Cache für die Transformation für Suche](create-and-deploy-a-cache-for-the-lookup-transformation.md).  
+-   Die Cachedatei kann mit einem Paket bereitgestellt werden. ***Die Daten können dann auf mehreren Computern verwendet werden.*** Weitere Informationen finden Sie unter [Erstellen und Bereitstellen eines Cache für die Transformation für Suche](create-and-deploy-a-cache-for-the-lookup-transformation.md).  
   
 -   Sie können die Rohdatendatei-Quelle zum Lesen der Daten aus der Cachedatei verwenden. Dann können Sie die Daten mithilfe anderer Datenflusskomponenten umwandeln oder verschieben. Weitere Informationen finden Sie unter [Raw File Source](../raw-file-source.md).  
   
@@ -114,8 +114,7 @@ ms.locfileid: "62900238"
   
      Diese Option für die Zwischenspeicherung ist kompatibel mit der Option für keine Zwischenspeicherung, die für die Transformation für Suche in [!INCLUDE[ssISversion2005](../../../includes/ssisversion2005-md.md)]verfügbar ist.  
   
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterscheiden sich in der Art des Zeichenfolgenvergleichs. Wenn die Transformation für Suche so konfiguriert ist, dass das Verweisdataset in den Cache geladen wird, bevor die Transformation für Suche ausgeführt wird, führt [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] den Suchvergleich im Cache aus. Andernfalls verwendet der Suchvorgang eine parametrisierte SQL-Anweisung, und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] führt den Suchvergleich aus. Dies bedeutet, dass die Transformation für Suche je nach Cachetyp möglicherweise eine unterschiedliche Anzahl von Übereinstimmungen aus der gleichen Suchtabelle zurückgibt.  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterscheiden sich in der Art des Zeichenfolgenvergleichs. Wenn die Transformation für Suche so konfiguriert ist, dass das Verweisdataset in den Cache geladen wird, bevor die Transformation für Suche ausgeführt wird, führt [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] den Suchvergleich im Cache aus. Andernfalls verwendet der Suchvorgang eine parametrisierte SQL-Anweisung, und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] führt den Suchvergleich aus. Dies bedeutet, dass die Transformation für Suche je nach Cachetyp möglicherweise eine unterschiedliche Anzahl von Übereinstimmungen aus der gleichen Suchtabelle zurückgibt.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen. Weitere Einzelheiten finden Sie in den folgenden Hilfethemen:  
