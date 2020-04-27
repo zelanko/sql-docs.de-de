@@ -13,21 +13,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5126ab2c44dbd5045af86cda54068b9ec8ed2f03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069683"
 ---
 # <a name="select-data-source-view-data-mining-wizard"></a>Datenquellensicht auswählen (Data Mining-Assistent)
   Verwenden Sie die Seite **Datenquellensicht auswählen** , um die Datenquellensicht für die Miningstruktur zu identifizieren.  
   
 > [!NOTE]  
->  Diese Seite wird nur angezeigt, wenn Sie **aus vorhandener relationaler Datenbank oder Data Warehouse** auf der Seite **Definitions Methode auswählen** des Assistenten ausgewählt haben.  
+>   Diese Seite wird nur dann angezeigt, wenn Sie auf der Seite **Definitionsmethode auswählen** des Assistenten **Aus vorhandener relationaler Datenbank oder vorhandenem Data Warehouse** ausgewählt haben.  
   
- **Weitere Informationen finden** Sie unter [Datenquellen Sichten in mehrdimensionalen Modellen](multidimensional-models/data-source-views-in-multidimensional-models.md), [Data Mining-Assistent &#40;Analysis Services Data Mining-&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Mining Struktur](data-mining/create-a-relational-mining-structure.md) .  
+ **Weitere Informationen:** [Datenquellsichten in mehrdimensionalen Modellen](multidimensional-models/data-source-views-in-multidimensional-models.md), [Data Mining-Assistent &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verfügbare Datenquellensichten**  
  Klicken Sie auf die Datenquelle für die Miningstruktur.  
   

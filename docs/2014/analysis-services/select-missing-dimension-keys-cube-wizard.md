@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8abc1974d6bf7aedec63299f8127e759a4a88ffb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069400"
 ---
 # <a name="select-missing-dimension-keys-cube-wizard"></a>Fehlende Dimensionsschlüssel auswählen (Cube-Assistent)
   Mithilfe der Seite **Fehlende Dimensionsschlüssel auswählen** können Sie die Schlüsselspalten auswählen, die verwendet werden sollen, wenn bei einer neuen Dimension kein Schlüssel für die Primärtabelle definiert ist.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Dimensionsschlüssel**  
  Wählen Sie eine oder mehr Schlüsselspalten aus der Primärtabelle der Dimension aus, die als Schlüssel für die Dimension verwendet werden sollen.  
   

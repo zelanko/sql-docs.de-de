@@ -13,23 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1f41b6138093b5ecbd6793a5c5210a9e8c6c412b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069655"
 ---
 # <a name="select-case-level-columns-data-mining-wizard"></a>Spalten auf Fallebene auswählen (Data Mining-Assistent)
   Verwenden Sie die Seite **Spalten auf Fallebene auswählen** , um die Attribute und Measures der zugrunde liegenden Quellcubedimension auszuwählen, die zu den Spalten auf Fallebene der Miningstruktur werden.  
   
 > [!NOTE]  
->  Diese Seite wird nur dann angezeigt, wenn Sie auf der Seite **Definitionsmethode auswählen** des Assistenten **Aus vorhandenem Cube** ausgewählt haben.  
+>  Diese Seite wird nur dann angezeigt, wenn Sie auf der Seite **Definitionsmethode auswählen** des Assistenten **Aus vorhandenem Cube ausgewähl**t haben.  
   
- **Weitere Informationen finden Sie unter:** [Data Mining-Assistent &#40;Analysis Services Data Mining-&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Mining Struktur](data-mining/create-a-relational-mining-structure.md)  
+ **Weitere Informationen:** [Data Mining-Assistent &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>Tastatur  
- **Verwandte Attribute und Measures**  
- Wählen Sie die Attribute und Measures aus, die zu den Spalten auf Fallebene der Miningstruktur werden. Alle ausgewählten Attribute müssen sich in Hierarchien befinden oder die Attributhierarchien müssen aktiviert sein.  
+## <a name="options"></a>Optionen  
+ **Verknüpfte Attribute und Measures**  
+ Wählen Sie die Attribute und Measures aus, die zu den Spalten auf Fallebene der Miningstruktur werden. Alle ausgewählten Attribute müssen sich in Hierarchien befinden, oder die Attributhierarchien müssen aktiviert sein.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Data Mining-Assistent (F1-Hilfe &#40;Analysis Services-Data Mining-&#41;](data-mining-wizard-f1-help-analysis-services-data-mining.md)   

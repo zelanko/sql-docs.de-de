@@ -13,19 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fde8172abbebe08fc4aae4cc0282955c2a582d02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069688"
 ---
 # <a name="select-calendars-dimension-wizard"></a>Kalender auswählen (Dimensions-Assistent)
   Auf der Seite **Kalender auswählen** können Sie für eine gegebene Zeitdimension zusätzliche Hierarchien zur Darstellung von Geschäfts-, Berichts-, Produktions- oder ISO 8601-Kalendern (International Organization for Standardization, Internationale Organisation für Normung) erstellen.  
   
 > [!NOTE]  
->  Diese Seite wird nur angezeigt, wenn auf der Seite **Dimensionstyp auswählen** die Option **Serverzeitdimension** oder auf der Seite **Erstellungsmethode auswählen** die Option **Dimension ohne eine Datenquelle erstellen** und auf der Seite **Dimensionstyp auswählen** die Option **Zeitdimension** ausgewählt wurden.  
+>   Diese Seite wird nur angezeigt, wenn auf der Seite **Dimensionstyp auswählen** die Option **Serverzeitdimension** oder auf der Seite **Erstellungsmethode auswählen** die Option **Dimension ohne eine Datenquelle erstellen** und auf der Seite **Dimensionstyp auswählen** die Option **Zeitdimension** ausgewählt wurden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Geschäftskalender**  
  Wählen Sie diese Option aus, um eine Zeithierarchie basierend auf einem Geschäftskalender zu erstellen.  
   
@@ -33,13 +33,13 @@ ms.locfileid: "66069688"
  Wählen Sie Tag und Monat für den Beginn des Geschäftskalenders aus.  
   
 > [!NOTE]  
->  Diese Option ist nur bei Auswahl von **Geschäftskalender** verfügbar.  
+>   Diese Option ist nur bei Auswahl von **Geschäftskalender** verfügbar.  
   
  **Benennungskonvention für Geschäftskalender**  
  Wählen Sie eine Benennungskonvention für den Geschäftskalender aus. Wählen Sie entweder **Kalenderjahrname** oder **Kalenderjahrname +1**aus.  
   
 > [!NOTE]  
->  Diese Option ist nur bei Auswahl von **Geschäftskalender** verfügbar.  
+>   Diese Option ist nur bei Auswahl von **Geschäftskalender** verfügbar.  
   
  **Berichtskalender (oder Marketingkalender)**  
  Wählen Sie diese Option aus, um eine Zeithierarchie basierend auf einem Berichtskalender zu erstellen.  
@@ -58,7 +58,7 @@ ms.locfileid: "66069688"
   
  In der folgenden Tabelle werden die für das Muster Woche nach Monat verfügbaren Optionen aufgeführt.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Woche 445**|Der erste und zweite Monat im Quartal haben jeweils vier Wochen, während der dritte Monat im Quartal fünf Wochen hat.|  
 |**Woche 454**|Der erste und dritte Monat im Quartal haben jeweils vier Wochen, während der zweite Monat im Quartal fünf Wochen hat.|  
@@ -71,13 +71,13 @@ ms.locfileid: "66069688"
  Wählen Sie Woche und Monat für den Beginn des Produktionskalenders aus.  
   
 > [!NOTE]  
->  Diese Option ist nur bei Auswahl von **Produktionskalender** verfügbar.  
+>   Diese Option ist nur bei Auswahl von **Produktionskalender** verfügbar.  
   
  **Quartal mit zusätzlichen Zeiträumen**  
  Wählen Sie das Quartal mit den zusätzlichen Zeiträumen aus, oder geben Sie ein entsprechendes Quartal ein.  
   
 > [!NOTE]  
->  Diese Option ist nur bei Auswahl von **Produktionskalender** verfügbar.  
+>   Diese Option ist nur bei Auswahl von **Produktionskalender** verfügbar.  
   
  **ISO 8601-Kalender**  
  Wählen Sie diese Option aus, um eine Hierarchie basierend auf einem ISO 8601-Kalender zu erstellen.  

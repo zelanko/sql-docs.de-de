@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d44afc5bb4c352a2cb5dfd39030a52db990e3a0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069596"
 ---
 # <a name="select-creation-method-dimension-wizard"></a>Erstellungsmethode auswählen (Dimensions-Assistent)
@@ -26,7 +26,7 @@ ms.locfileid: "66069596"
   
 -   Klicken Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]im **Projektmappen-Explorer**mit der rechten Maustaste auf den Ordner **Dimensionen** eines [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekts, und klicken Sie anschließend auf **Neue Dimension**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Vorhandene Tabelle verwenden**  
  Erstellen Sie aus einer oder mehreren Tabellen einer Datenquelle eine Dimension. Welche Attribute für die Dimension verfügbar sind, hängt von der Struktur der in der Tabelle enthaltenen Daten ab.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66069596"
   
  Weitere Informationen finden Sie unter [Erstellen einer Dimension durch Generieren einer Nichtzeittabelle in der Datenquelle](multidimensional-models/create-a-dimension-by-generating-a-non-time-table-in-the-data-source.md).  
   
- **Fungiert**  
+ **Vorlage**  
  Wählen Sie die Vorlage aus, die Sie zum erstellen der Dimension verwenden möchten. Vorlagen stellen einen vollständigen Satz von Attributen und Hierarchiedefinitionen zur Verfügung, die einem bestimmten geschäftlichen Zweck dienen.  
   
 > [!NOTE]  

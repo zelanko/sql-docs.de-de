@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6825417c53e0b0f9eb79e42e1a38737f6a60ce63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069314"
 ---
 # <a name="select-objects-linked-object-wizard"></a>Objekte auswählen (Assistent für verknüpfte Objekte)
@@ -25,8 +25,8 @@ ms.locfileid: "66069314"
 > [!NOTE]  
 >  Dimensionen und Measuregruppen werden (einschließlich der zugeordneten Measures) verknüpft. Aktionen, KPIs (Key Performance Indicators) und Berechnungen werden importiert.  
   
-## <a name="options"></a>Tastatur  
- **Verfügbare Objekte**  
+## <a name="options"></a>Optionen  
+ **Available objects**  
  Wählen Sie die Objekte aus, die verknüpft bzw. importiert werden sollen.  
   
 > [!NOTE]  
