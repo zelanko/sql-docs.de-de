@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 626ab7363a264b47d7c907c56c0e6c6d4d208dba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873011"
 ---
 # <a name="row-compression-implementation"></a>Row Compression Implementation
@@ -57,20 +57,20 @@ ms.locfileid: "62873011"
 |`datetime2`|Ja|Verwendet die Datendarstellung mit ganzen Zahlen mit 6 bis 9 Bytes. Die ersten 4 Bytes stellen das Datum dar. Die Anzahl der von der Zeit in Anspruch genommenen Bytes hängt von der Genauigkeit der Zeit ab, die angegeben wird.<br /><br /> Der ganzzahlige Wert stellt die Anzahl von Tagen ab dem 1.1.0001 mit der Obergrenze 31.12.9999 dar. Die Komprimierung nimmt 3 Bytes ein, um ein Datum im Jahr 2005 darzustellen.<br /><br /> Bei der Zeit gibt es keine Speicherplatzersparnis, da hier 2 bis 4 Bytes für verschiedene Zeitgenauigkeiten zulässig sind. Deshalb verwendet die Komprimierung für eine Zeitgenauigkeit von einer Sekunde 2 Bytes für die Zeit, wobei das zweite Byte nach 255 Sekunden genommen wird.|  
 |`datetimeoffset`|Ja|Ähnelt `datetime2` mit Ausnahme der vorhandenen 2 Bytes für die Zeitzone mit dem Format (HH:MM).<br /><br /> Wie bei `datetime2` können mit der Komprimierung 2 Bytes gespart werden.<br /><br /> Für Zeitzonenwerte ist der MM-Wert in den meisten Fällen möglicherweise 0. Deshalb kann mit der Komprimierung möglicherweise 1 Byte gespart werden.<br /><br /> Bei der Zeilenkomprimierung ändert sich der Speicherplatz nicht.|  
 |`char`|Ja|Nachfolgende Auffüllungszeichen werden entfernt. Beachten Sie, dass [!INCLUDE[ssDE](../../includes/ssde-md.md)] unabhängig von der verwendeten Sortierung immer dasselbe Auffüllungszeichen einfügt.|  
-|`varchar`|Nein|Keine Auswirkungen.|  
-|`text`|Nein|Keine Auswirkungen.|  
+|`varchar`|Nein|Keine Auswirkung.|  
+|`text`|Nein|Keine Auswirkung.|  
 |`nchar`|Ja|Nachfolgende Auffüllungszeichen werden entfernt. Beachten Sie, dass [!INCLUDE[ssDE](../../includes/ssde-md.md)] unabhängig von der verwendeten Sortierung immer dasselbe Auffüllungszeichen einfügt.|  
-|`nvarchar`|Nein|Keine Auswirkungen.|  
-|`ntext`|Nein|Keine Auswirkungen.|  
+|`nvarchar`|Nein|Keine Auswirkung.|  
+|`ntext`|Nein|Keine Auswirkung.|  
 |`binary`|Ja|Nachfolgende Nullen werden entfernt.|  
-|`varbinary`|Nein|Keine Auswirkungen.|  
-|`image`|Nein|Keine Auswirkungen.|  
+|`varbinary`|Nein|Keine Auswirkung.|  
+|`image`|Nein|Keine Auswirkung.|  
 |`cursor`|Nein|Keine Auswirkung.|  
 |`timestamp` / `rowversion`|Ja|Verwendet die Datendarstellung mit ganzen Zahlen mit 8 Byte. Es gibt für jede Datenbank einen Zeitstempelzähler, dessen Wert bei 0 beginnt. Dieser Wert kann wie jeder andere ganzzahlige Wert komprimiert werden.|  
-|`sql_variant`|Nein|Keine Auswirkungen.|  
-|`uniqueidentifier`|Nein|Keine Auswirkungen.|  
+|`sql_variant`|Nein|Keine Auswirkung.|  
+|`uniqueidentifier`|Nein|Keine Auswirkung.|  
 |`table`|Nein|Keine Auswirkung.|  
-|`xml`|Nein|Keine Auswirkungen.|  
+|`xml`|Nein|Keine Auswirkung.|  
 |Benutzerdefinierte Typen|Nein|Dies wird intern als `varbinary` dargestellt.|  
 |FILESTREAM|Nein|Dies wird intern als `varbinary` dargestellt.|  
   

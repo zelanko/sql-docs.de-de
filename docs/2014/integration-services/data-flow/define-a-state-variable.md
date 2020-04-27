@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b0dcc3c1709943207834aab6ef4b39453b2d89d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62827565"
 ---
 # <a name="define-a-state-variable"></a>Definieren einer Statusvariablen
@@ -85,7 +85,7 @@ ms.locfileid: "62827565"
  Wenn Sie den CDC-Steuerungstask nicht mit der Option Automatic State Persistence verwenden, müssen Sie den Variablenwert aus dem persistentem Speicher laden, in dem der Wert bei der letzten Ausführung des Pakets gespeichert wurde. In diesen persistenten Speicher wird der Wert auch zurückgeschrieben, nachdem die Verarbeitung des aktuellen Verarbeitungsbereichs abgeschlossen wurde.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [CDC Control Task](../control-flow/cdc-control-task.md)   
- [CDC Control Task Editor](../cdc-control-task-editor.md)  
+ [CDC-Steuerungs Task](../control-flow/cdc-control-task.md)   
+ [Task-Editor für CDC-Steuerelement](../cdc-control-task-editor.md)  
   
   

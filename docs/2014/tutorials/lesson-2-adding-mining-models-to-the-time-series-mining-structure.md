@@ -11,13 +11,13 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ae0bb91fafb53c0c077a4e0d82558b550d0e6070
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62855720"
 ---
-# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Lektion 2: Hinzufügen von Miningmodellen zur Zeitreihen-Miningstruktur
+# <a name="lesson-2-adding-mining-models-to-the-time-series-mining-structure"></a>Lektion 2: Hinzufügen von Miningmodellen zur Miningstruktur für Zeitreihen
   In dieser Lektion fügen Sie der Mining Struktur, die Sie soeben in [Lektion 1: Erstellen eines Zeitreihen-Mining Modells und einer Mining Struktur](../../2014/tutorials/lesson-1-creating-a-time-series-mining-model-and-mining-structure.md)erstellt haben, ein neues Mining Modell hinzu.  
   
 ## <a name="alter-mining-structure-statement"></a>ALTER MINING STRUCTURE-Anweisung  
@@ -105,7 +105,7 @@ WITH DRILLTHROUGH
     <mining structure name>   
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     [Forecasting_MIXED_Structure]  
@@ -117,7 +117,7 @@ WITH DRILLTHROUGH
     <mining model name>   
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     Forecasting_ARIMA  
@@ -129,7 +129,7 @@ WITH DRILLTHROUGH
     <key columns>,  
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     [ReportingDate],  
@@ -144,7 +144,7 @@ WITH DRILLTHROUGH
     <mining model columns>  
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     ([Quantity] PREDICT,  
@@ -159,7 +159,7 @@ WITH DRILLTHROUGH
     [WITH DRILLTHROUGH]  
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     USING Microsoft_Time_Series (AUTO_DETECT_PERIODICITY = .08, FORECAST_METHOD = 'ARIMA')  

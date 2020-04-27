@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3308899190aa63ebb9be93c4c9af15d5e0f94600
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62830394"
 ---
 # <a name="send-mail-task"></a>Mail senden (Task)
@@ -58,7 +58,7 @@ ms.locfileid: "62830394"
 ## <a name="custom-logging-messages-available-on-the-send-mail-task"></a>Verfügbare benutzerdefinierte Meldungen für die Protokollierung für den Task 'Mail senden'  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task 'Mail senden' aufgelistet. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md).  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`SendMailTaskBegin`|Zeigt an, dass das Senden einer E-Mail-Nachricht begonnen wurde.|  
 |`SendMailTaskEnd`|Zeigt an, dass das Senden einer E-Mail-Nachricht beendet wurde.|  
@@ -69,9 +69,9 @@ ms.locfileid: "62830394"
   
  Klicken Sie auf eines der folgenden Themen, um Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Editor für den Task ' Mail senden ' &#40;Seite Allgemein&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor für den Task „Mail senden“ &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor für den Task ' Mail senden ' &#40;Seite e-Mail&#41;](../send-mail-task-editor-mail-page.md)  
+-   [Editor für den Task „Mail senden“ &#40;Seite „E-Mail“&#41;](../send-mail-task-editor-mail-page.md)  
   
 -   [Seite Ausdrücke](../expressions/expressions-page.md)  
   
@@ -87,7 +87,7 @@ ms.locfileid: "62830394"
 -   Technischer Artikel [Vorgehensweise: Senden von E-Mails mit Zustellungsbenachrichtigung in C#](https://go.microsoft.com/fwlink/?LinkId=237625)(Gewusst wie: Senden von E-Mails mit Zustellungsbenachrichtigung in C#) auf shareourideas.com  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Integration Services-Tasks](integration-services-tasks.md)   
+ [Aufgaben Integration Services](integration-services-tasks.md)   
  [Ablaufsteuerung](control-flow.md)  
   
   

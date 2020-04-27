@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4466ebd24647520c7cbba2bf0baa93a0f60a72bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833814"
 ---
 # <a name="flat-file-connection-manager"></a>Verbindungs-Manager für Flatfiles
@@ -71,13 +71,13 @@ ms.locfileid: "62833814"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Verbindungs-Manager-Editor für Flatfiles &#40;Seite Allgemein&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Verbindungs-Manager-Editor für Flatfiles &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Verbindungs-Manager-Editor für Flatfiles &#40;Seite Spalten&#41;](../flat-file-connection-manager-editor-columns-page.md)  
+-   [Verbindungs-Manager-Editor für Flatfiles &#40;Seite „Spalten“&#41;](../flat-file-connection-manager-editor-columns-page.md)  
   
--   [Verbindungs-Manager-Editor für Flatfiles &#40;Seite Erweiterte Seite&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
+-   [Verbindungs-Manager-Editor für Flatfiles &#40;Seite „Erweitert“&#41;](../flat-file-connection-manager-editor-advanced-page.md)  
   
--   [Verbindungs-Manager-Editor für Flatfiles &#40;Vorschau Seite&#41;](../flat-file-connection-manager-editor-preview-page.md)  
+-   [Verbindungs-Manager-Editor für Flatfiles &#40;Seite „Vorschau“&#41;](../flat-file-connection-manager-editor-preview-page.md)  
   
  Weitere Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und [Programmgesteuertes Hinzufügen von Verbindungen](../building-packages-programmatically/adding-connections-programmatically.md)festgelegt.  
   

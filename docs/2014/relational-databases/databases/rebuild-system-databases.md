@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b58378e8ba2193a186fb58e3e784bf9bc3cb4d4c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62871277"
 ---
 # <a name="rebuild-system-databases"></a>Neuerstellen von Systemdatenbanken
-  System Datenbanken müssen neu erstellt werden, um Beschädigungs Probleme in den System Datenbanken [Master](master-database.md), [Model](model-database.md), [msdb](msdb-database.md)oder [Resource](resource-database.md) zu beheben oder die Standardsortierung auf Serverebene zu ändern. Dieses Thema enthält schrittweise Anweisungen für die Neuerstellung von Systemdatenbanken in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  Systemdatenbanken müssen neu erstellt werden, um Beschädigungen der Systemdatenbanken [master](master-database.md), [model](model-database.md), [msdb](msdb-database.md)oder [resource](resource-database.md) zu beheben oder die Standardsortierung auf Serverebene zu ändern. Dieses Thema enthält schrittweise Anweisungen für die Neuerstellung von Systemdatenbanken in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  **In diesem Thema**  
   
@@ -33,24 +33,24 @@ ms.locfileid: "62871277"
   
      [Voraussetzungen](#Prerequisites)  
   
--   **Abläufen**  
+-   **Vorgehensweisen:**  
   
      [Neuerstellen von Systemdatenbanken](#RebuildProcedure)  
   
-     [Erneutes Erstellen der Ressourcendatenbank](#Resource)  
+     [Neuerstellen der resource-Datenbank](#Resource)  
   
      [Erstellen einer neuen msdb-Datenbank](#CreateMSDB)  
   
--   **Zur Nachverfolgung:**  
+-   **Nachverfolgung:**  
   
-     [Beheben von Fehlern bei der Neuerstellung](#Troubleshoot)  
+     [Problembehandlung von Fehlern bei der Neuerstellung](#Troubleshoot)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
  Bei der Neuerstellung der Systemdatenbanken master, model, msdb und tempdb werden die Datenbanken abgelegt und an ihrem ursprünglichen Speicherort neu erstellt. Wenn in der REBUILD-Anweisung eine neue Sortierung angegeben wird, werden die Systemdatenbanken unter Verwendung dieser Sortiereinstellung erstellt. Alle Benutzeränderungen an diesen Datenbanken gehen verloren. Beispielsweise kann die master&lt;/ -Datenbank benutzerdefinierte Objekte, die msdb&lt;/ -Datenbank geplante Aufträge und die model&lt;/ -Datenbank Änderungen der Standardeinstellungen für Datenbanken enthalten.  
   
-###  <a name="Prerequisites"></a> Voraussetzungen  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
  Führen Sie die folgenden Aufgaben aus, bevor Sie die Systemdatenbanken neu erstellen, um sicherzustellen, dass Sie die Systemdatenbanken mit ihren aktuellen Einstellungen wiederherstellen können.  
   
 1.  Zeichnen Sie alle serverweiten Konfigurationswerte auf.  
@@ -86,7 +86,7 @@ ms.locfileid: "62871277"
   
 7.  Überprüfen Sie, ob Kopien der Daten und Protokollvorlagendateien der Datenbanken master, model und msdb auf dem lokalen Server vorhanden sind. Der Standardspeicherort für die Vorlagendateien ist C:\Programme\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Binn\Vorlagen. Diese Dateien werden während der Neuerstellung verwendet und müssen vorhanden sein, um Setup erfolgreich ausführen zu können. Wenn sie fehlen, führen Sie die Reparaturfunktion von Setup aus, oder kopieren Sie die Dateien manuell vom Installationsmedium. Um die Dateien auf dem Installationsmedium zu suchen, navigieren Sie zum entsprechenden Plattformverzeichnis (x86 oder x64) und dann zu setup\sql_engine_core_inst_msi\Pfiles\SqlServr\MSSQL.X\MSSQL\Binn\Vorlagen.  
   
-##  <a name="RebuildProcedure"></a>Neuerstellen von System Datenbanken  
+##  <a name="rebuild-system-databases"></a><a name="RebuildProcedure"></a> Neuerstellen von Systemdatenbanken  
  Mit der folgenden Vorgehensweise werden die Systemdatenbanken master, model, msdb und tempdb  neu erstellt. Sie können die Systemdatenbanken, die neu erstellt werden sollen, nicht angeben. Für gruppierte Instanzen muss diese Vorgehensweise für den aktiven Knoten ausgeführt werden, und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressource in der entsprechenden Clusteranwendungsgruppe muss zuvor offline geschaltet werden.  
   
  Durch diese Vorgehensweise wird die Ressourcendatenbank nicht neu erstellt. Führen Sie hierzu die Schritte im Abschnitt "Vorgehensweise zum Neuerstellen der resource-Datenbank" weiter unten in diesem Thema aus.  
@@ -104,7 +104,7 @@ ms.locfileid: "62871277"
     |/QUIET oder /Q|Gibt an, dass Setup ohne Benutzeroberfläche ausgeführt wird.|  
     |/ACTION=REBUILDDATABASE|Gibt an, dass die Systemdatenbanken vom Setup neu erstellt werden.|  
     |/InstanceName =*instanceName*|Der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz. Geben Sie MSSQLSERVER für die Standardinstanz ein.|  
-    |/SQLSYSADMINACCOUNTS=*accounts*|Gibt die Windows-Gruppen oder die individuellen Konten an, die der festen Serverrolle `sysadmin` hinzugefügt werden sollen. Wenn Sie mehr als ein Konto angeben, trennen Sie die Konten mit einem Leerzeichen. Geben Sie z.B. **BUILTIN\Administrators MyDomain\MyUser**ein. Wenn Sie ein Konto angeben, dessen Name ein Leerzeichen enthält, setzen Sie den Kontonamen in doppelte Anführungszeichen. Geben Sie z. B. Folgendes ein: `NT AUTHORITY\SYSTEM`.|  
+    |/SQLSYSADMINACCOUNTS=*accounts*|Gibt die Windows-Gruppen oder die individuellen Konten an, die der festen Serverrolle `sysadmin` hinzugefügt werden sollen. Wenn Sie mehr als ein Konto angeben, trennen Sie die Konten mit einem Leerzeichen. Geben Sie z.B. **BUILTIN\Administrators MyDomain\MyUser**ein. Wenn Sie ein Konto angeben, dessen Name ein Leerzeichen enthält, setzen Sie den Kontonamen in doppelte Anführungszeichen. Geben Sie z. B. `NT AUTHORITY\SYSTEM` ein|  
     |[ /SAPWD=*StrongPassword* ]|Gibt das Kennwort für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `sa` das Konto an. Dieser Parameter ist erforderlich, wenn die Instanz den gemischten Authentifizierungsmodus ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - und Windows-Authentifizierung) verwendet.<br /><br /> ** \* \* Sicherheits \* Hinweis** Das `sa` Konto ist ein bekanntes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Konto, das häufig von böswilligen Benutzern betroffen ist. Es ist sehr wichtig, dass Sie ein sicheres Kennwort für die `sa`-Anmeldung verwenden.<br /><br /> Geben Sie diesen Parameter nicht für den Windows-Authentifizierungsmodus an.|  
     |[ /SQLCOLLATION=*CollationName* ]|Gibt eine neue Sortierung auf Serverebene an. Dieser Parameter ist optional. Wenn keine Sortierung angegeben wird, wird die aktuelle Sortierung des Servers verwendet.<br /><br /> ** \* Wichtig \* \* ** Durch das Ändern der Sortierung auf Serverebene wird die Sortierung vorhandener Benutzer Datenbanken nicht geändert. Alle neu erstellten Benutzerdatenbanken verwenden standardmäßig die neue Sortierung.<br /><br /> Weitere Informationen finden Sie unter [Festlegen oder Ändern der Serversortierung](../collations/set-or-change-the-server-collation.md).|  
   
@@ -129,7 +129,7 @@ ms.locfileid: "62871277"
   
 -   Überprüfen Sie, ob die serverweiten Konfigurationswerte zu den Werten passen, die Sie zuvor aufgezeichnet haben.  
   
-##  <a name="Resource"></a>Erneutes Erstellen der Ressourcendatenbank  
+##  <a name="rebuild-the-resource-database"></a><a name="Resource"></a> Neuerstellen der resource-Datenbank  
  Mit der folgenden Vorgehensweise wird die Ressourcensystemdatenbank neu erstellt. Wenn Sie die Ressourcendatenbank neu erstellen, gehen alle Service Packs und Hotfixes verloren und müssen daher noch einmal angewendet werden.  
   
 #### <a name="to-rebuild-the-resource-system-database"></a>So erstellen Sie die Systemdatenbank "resource" neu  
@@ -142,11 +142,11 @@ ms.locfileid: "62871277"
   
 4.  Wählen Sie auf der Seite Instanz auswählen die zu reparierende Instanz aus, und klicken Sie dann zum auf **Weiter**, um den Vorgang fortzusetzen.  
   
-5.  Die Reparaturregeln werden ausgeführt, um den Vorgang zu überprüfen. Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
+5.  Die Reparaturregeln werden ausgeführt, um den Vorgang zu überprüfen. Klicken Sie zum Fortfahren auf **Weiter**.  
   
 6.  Klicken Sie auf der Seite **Bereit zum Reparieren** auf **Reparieren**. Wenn die Seite Abgeschlossen angezeigt wird, wurde der Vorgang abgeschlossen.  
   
-##  <a name="CreateMSDB"></a>Erstellen einer neuen msdb-Datenbank  
+##  <a name="create-a-new-msdb-database"></a><a name="CreateMSDB"></a>Erstellen einer neuen msdb-Datenbank  
  Wenn die `msdb` Datenbank beschädigt ist und Sie nicht über eine Sicherung der- `msdb` Datenbank verfügen, können Sie mit dem `msdb` **instmsdb** -Skript eine neue erstellen.  
   
 > [!WARNING]  
@@ -174,9 +174,9 @@ ms.locfileid: "62871277"
   
 9. Erstellen Sie den in der `msdb` Datenbank gespeicherten Benutzer Inhalt, z. b. Aufträge, Warnungen usw. neu.  
   
-10. Sichern Sie die `msdb`-Datenbank.  
+10. Sichern Sie die `msdb` -Datenbank.  
   
-##  <a name="Troubleshoot"></a>Beheben von Fehlern bei der Neuerstellung  
+##  <a name="troubleshoot-rebuild-errors"></a><a name="Troubleshoot"></a> Problembehandlung von Fehlern bei der Neuerstellung  
  Syntaxfehler und andere Laufzeitfehler werden im Eingabeaufforderungsfenster angezeigt. Überprüfen Sie die SETUP-Anweisung auf folgende Syntaxfehler:  
   
 -   Fehlender Schrägstrich (/) vor jedem Parameternamen  

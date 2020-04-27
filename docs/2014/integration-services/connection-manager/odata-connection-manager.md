@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b0596e9ba13e617b6f4eef961966bcc07107314
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833108"
 ---
 # <a name="odata-connection-manager"></a>OData-Verbindungs-Manager
@@ -48,7 +48,7 @@ ms.locfileid: "62833108"
   
 |||  
 |-|-|  
-|Eigenschaft|BESCHREIBUNG|  
+|Eigenschaft|Beschreibung|  
 |url|Die URL zum Dienstdokument.|  
 |UserName|Der Benutzername, der für die Standardauthentifizierung verwendet wird.|  
 |Kennwort|Das Kennwort, das für die Standardauthentifizierung verwendet wird.|  

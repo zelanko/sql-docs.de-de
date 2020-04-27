@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a74ab896e974410e8357a22546cb63ed7365a149
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833155"
 ---
 # <a name="analysis-services-execute-ddl-task"></a>DDL ausführen (Analysis Services-Task)
@@ -218,9 +218,9 @@ ms.locfileid: "62833155"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Analysis Services Editor für den Task ' DDL ausführen ' &#40;Seite Allgemein&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor für den Analysis Services-Task „DDL ausführen“ &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Analysis Services DDL-Task-Editor &#40;DDL-Seite ausführen&#41;](../analysis-services-execute-ddl-task-editor-ddl-page.md)  
+-   [Editor für den Analysis Services-Task „DDL ausführen“ &#40;Seite „DDL“&#41;](../analysis-services-execute-ddl-task-editor-ddl-page.md)  
   
 -   [Seite Ausdrücke](../expressions/expressions-page.md)  
   

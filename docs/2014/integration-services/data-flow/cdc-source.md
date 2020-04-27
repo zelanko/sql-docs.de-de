@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4572e9fc61649f638b7c86ee23c75450216a4342
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62828129"
 ---
 # <a name="cdc-source"></a>CDC-Quelle
@@ -73,27 +73,22 @@ use <cdc-enabled-database-name>
 @end_lsn, '<mode>')  
 ```  
   
- Dabei gilt:  
+ Dabei gilt Folgendes:  
   
--   
-  \<cdc-enabled-database-name> ist der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank, in der die Änderungstabellen enthalten sind.  
+-   \<cdc-enabled-database-name> ist der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank, in der die Änderungstabellen enthalten sind.  
   
--   
-  \<value-from-state-cs> ist der Wert, der in der CDC-Statusvariablen als CS/\<value-from-state-cs>/ (CS steht für Current-processing-range-Start) angegeben wird.  
+-   \<value-from-state-cs> ist der Wert, der in der CDC-Statusvariablen als CS/\<value-from-state-cs>/ (CS steht für Current-processing-range-Start) angegeben wird.  
   
--   
-  \<value-from-state-ce> ist der Wert, der in der CDC-Statusvariablen als CE/\<value-from-state-ce>/ (CE steht für Current-processing-range-End) angegeben wird.  
+-   \<value-from-state-ce> ist der Wert, der in der CDC-Statusvariablen als CE/\<value-from-state-ce>/ (CE steht für Current-processing-range-End) angegeben wird.  
   
--   
-  \<mode> steht für die CDC-Verarbeitungsmodi. Die Verarbeitungsmodi haben einen der folgenden Werte: **All**, **All with Old Values**, **Net**, **Net with Update Mask**, **Net with Merge**.  
+-   \<mode> steht für die CDC-Verarbeitungsmodi. Die Verarbeitungsmodi haben einen der folgenden Werte: **All**, **All with Old Values**, **Net**, **Net with Update Mask**, **Net with Merge**.  
   
  Dieses Skript trägt zur Isolierung von Problemen bei, indem sie im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]reproduziert werden, wo sie leicht reproduziert und identifiziert werden können.  
   
 #### <a name="sql-server-error-message"></a>SQL Server-Fehlermeldung  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gibt möglicherweise die folgende Meldung zurück:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]gibt möglicherweise die folgende Meldung zurück:  
   
- **Für die Prozedur oder Funktion cdc. fn_cdc_get_net_changes_\<. wurde eine unzureichende Anzahl von Argumenten angegeben. >.**  
+ **Für die Prozedur oder Funktion cdc.fn_cdc_get_net_changes_\<..> wurden zu wenig Argumente bereitgestellt.**  
   
  Dieser Fehler gibt nicht an, dass ein Argument fehlt. Die Bedeutung ist, dass die Start- bzw. End-LSN-Werte in der CDC-Statusvariablen ungültig sind.  
   
@@ -108,7 +103,7 @@ use <cdc-enabled-database-name>
   
 -   [Quellen-Editor für CDC &#40;Seite „Fehlerausgabe“&#41;](../cdc-source-editor-error-output-page.md)  
   
- Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können.  
+ Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die Programm gesteuert festgelegt werden können.  
   
  So öffnen Sie das Dialogfeld **Erweiterter Editor** :  
   

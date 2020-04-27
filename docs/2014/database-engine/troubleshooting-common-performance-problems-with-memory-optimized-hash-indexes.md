@@ -11,23 +11,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d7ed4098feb8bfd2d156e3de2f81fbf7329915aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62842535"
 ---
 # <a name="troubleshooting-common-performance-problems-with-memory-optimized-hash-indexes"></a>Problembehandlung für häufige Leistungsprobleme bei speicheroptimierten Hashindizes
   Der Schwerpunkt dieses Themas liegt auf der Problembehandlung und dem Umgehen von häufigen Problemen mit Hashindizes.  
   
 ## <a name="search-requires-a-subset-of-hash-index-key-columns"></a>Suche erfordert eine Teilmenge von Hashindex-Schlüsselspalten  
- **Problem:** Bei Hash Indizes sind Werte für alle Index Schlüssel Spalten erforderlich, um den Hashwert zu berechnen und die entsprechenden Zeilen in der Hash Tabelle zu suchen. Wenn eine Abfrage nur Gleichheitsprädikate für eine Teilmenge der Indexschlüssel in der WHERE-Klausel enthält, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] daher nicht mithilfe einer Indexsuche die Zeilen suchen, die den Prädikaten in der WHERE-Klausel entsprechen.  
+ **Problem:** Bei Hashindizes sind Werte für alle Indexschlüsselspalten erforderlich, um den Hashwert zu berechnen und die entsprechenden Zeilen in der Hashtabelle zu suchen. Wenn eine Abfrage nur Gleichheitsprädikate für eine Teilmenge der Indexschlüssel in der WHERE-Klausel enthält, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] daher nicht mithilfe einer Indexsuche die Zeilen suchen, die den Prädikaten in der WHERE-Klausel entsprechen.  
   
  Im Gegensatz dazu unterstützen geordnete Indizes wie datenträgerbasierte nicht gruppierte Indizes und speicheroptimierte nicht gruppierte Indizes die Indexsuche mit einer Teilmenge der Indexschlüsselspalten, sofern es sich um die führenden Spalten im Index handelt.  
   
- **Symptom:** Dies führt zu einer Leistungsminderung, da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vollständige Tabellenscans anstelle einer Index Suche ausführen muss, was in der Regel ein schnellerer Vorgang ist.  
+ **Symptom:** Dies führt zu einer Leistungsverringerung, da [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vollständige Tabellenscans anstelle einer Indexsuche ausführen muss, die normalerweise schneller ist.  
   
- Problembehandlung **:** Neben der Leistungsminderung zeigt die Überprüfung der Abfrage Pläne einen Scan anstelle eines Index Suchvorgangs an. Bei einer relativ einfachen Abfrage zeigt die Überprüfung des Abfragetexts und der Indexdefinition auch, ob für die Suche eine Teilmenge der Indexschlüsselspalten erforderlich ist.  
+ **Problembehandlung:** Neben der Leistungsverringerung zeigt die Überprüfung der Abfragepläne einen Scan anstelle einer Indexsuche. Bei einer relativ einfachen Abfrage zeigt die Überprüfung des Abfragetexts und der Indexdefinition auch, ob für die Suche eine Teilmenge der Indexschlüsselspalten erforderlich ist.  
   
  Betrachten Sie die folgende Tabelle und Abfrage:  
   
@@ -48,7 +48,7 @@ WITH (MEMORY_OPTIMIZED = ON)
   
  Die Tabelle verfügt über einen Hashindex für die beiden Spalten (o_id, od_id), während die Abfrage ein Gleichheitsprädikat für (o_id) enthält. Da die Abfrage nur Gleichheitsprädikate für eine Teilmenge der Indexschlüsselspalten enthält, kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] keinen Indexsuchvorgang mit "PK_od" ausführen. Stattdessen muss [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] auf einen vollständigen Indexscan zurückgreifen.  
   
- Problem Umgehungen **:** Es gibt eine Reihe möglicher Problem Umgehungen. Beispiel:  
+ **Problemumgehungen:** Es gibt eine Reihe von möglichen Problemumgehungen. Zum Beispiel:  
   
 -   Erstellen Sie den Index mit dem Typ eines nicht gruppierten Indexes anstelle eines nicht gruppierten Hash erneut. Der speicheroptimierte nicht gruppierte Index wird sortiert, und somit kann [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eine Indexsuche der führenden Indexschlüsselspalten ausführen. Die resultierende Primärschlüsseldefinition für das Beispiel lautet `constraint PK_od primary key nonclustered`.  
   

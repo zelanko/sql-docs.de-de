@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a11983c6fc9e1ca2e8917fd2efdaa5c90b4d3c30
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62828578"
 ---
 # <a name="cdc-flow-components"></a>CDC-Flusskomponenten
@@ -26,11 +26,11 @@ ms.locfileid: "62828578"
   
  Folgende Change Data Capture-Komponenten von Attunity sind verfügbar:  
   
- **CDC-Ablauf Steuerungskomponente**:  
+ **CDC-Ablaufsteuerungskomponente:**  
   
  [CDC-Steuerungstask](../control-flow/cdc-control-task.md)  
   
- **CDC-Datenfluss Komponenten**:  
+ **CDC-Datenflusskomponenten:**  
   
  [CDC-Quelle](cdc-source.md)  
   
@@ -91,9 +91,9 @@ ms.locfileid: "62828578"
   
  Die folgenden Schritte werden in der Abbildung dargestellt:  
   
--   **Änderungen für Tabelle x** ist eine CDC-Quelle, die an Tabelle x vorgenommene Änderungen liest, die im CDC-Verarbeitungsbereich vorgenommen wurden, der in der übergeordneten Ablauf Steuerung festgelegt wurde.  
+-   **Änderungen für Tabelle X** ist eine CDC-Quelle, die Änderungen an Tabelle X in dem von der übergeordneten Ablaufsteuerung bestimmten CDC-Verarbeitungsbereich liest.  
   
--   **CDC Splitter X** wird verwendet, um die Änderungen in Einfügungen, Löschungen und Updates aufzuteilen. In diesem Szenario wird davon ausgegangen, dass die CDC-Quelle zum Erzeugen von Nettoänderungen konfiguriert ist, sodass andere Änderungstypen parallel verarbeitet werden können.  
+-   **CDC-Splitter X** wird verwendet, um die Änderungen in Einfügungen, Löschungen und Updates zu teilen. In diesem Szenario wird davon ausgegangen, dass die CDC-Quelle zum Erzeugen von Nettoänderungen konfiguriert ist, sodass andere Änderungstypen parallel verarbeitet werden können.  
   
 -   Die spezifischen Änderungen werden dann downstream weiter verarbeitet. In dieser Abbildung werden die Änderungen in Tabellen mit mehreren ODBC-Zielen eingefügt, in der Realität kann die Verarbeitung jedoch anders aussehen.  
   
@@ -123,11 +123,11 @@ ms.locfileid: "62828578"
   
  Die folgende Abbildung zeigt ein SSIS-Paket, das die ersten zwei Szenarien unterstützt:  
   
- ![SSIS-Paketbehandlung, Szenario eins und zwei](../media/scenarioonetwo.gif "SSIS-Paketbehandlung, Szenario eins und zwei")  
+ ![SSIS-Paketbehandlung für die ersten beiden Szenarios](../media/scenarioonetwo.gif "SSIS-Paketbehandlung für die ersten beiden Szenarios")  
   
  Die folgende Abbildung zeigt ein SSIS-Paket, das das dritte Szenario unterstützt:  
   
- ![SSIS-Paketbehandlung, Szenario drei](../media/scenario3.gif "SSIS-Paketbehandlung, Szenario drei")  
+ ![SSIS-Paketbehandlung, Szenario 3](../media/scenario3.gif "SSIS-Paketbehandlung, Szenario 3")  
   
  Nach dem anfänglich geladenen Paket wird ein Trickle-Feed-Updatepaket nach einem Zeitplan wiederholt ausgeführt, um Änderungen zu verarbeiten, sobald sie verfügbar werden.  
   
@@ -176,7 +176,7 @@ ms.locfileid: "62828578"
 |0-(INITIAL)|Der Status, bevor alle Pakete in der aktuellen CDC-Gruppe ausgeführt werden. Dieser Status liegt auch vor, wenn der CDC-Status leer ist.<br /><br /> Weitere Informationen zu CDC-Steuerungstaskvorgängen finden Sie unter [CDC-Steuerungstask](../control-flow/cdc-control-task.md).|  
 |1-ILSTART (Initial-Load-Started)|Der Status beim Start des anfänglich geladenen Pakets. Dieser Schritt erfolgt nach dem Aufruf des CDC-Steuerungstasks durch den **MarkInitialLoadStart** -Vorgang.<br /><br /> Weitere Informationen zu CDC-Steuerungstaskvorgängen finden Sie unter [CDC-Steuerungstask](../control-flow/cdc-control-task.md).|  
 |2- ILEND (Initial-Load-Ended)|Der Status bei erfolgreicher Beendigung des anfänglich geladenen Pakets. Dieser Schritt erfolgt nach dem Aufruf des CDC-Steuerungstasks durch den MarkInitialLoadEnd-Vorgang.<br /><br /> Weitere Informationen zu CDC-Steuerungstaskvorgängen finden Sie unter [CDC-Steuerungstask](../control-flow/cdc-control-task.md).|  
-|3-ILUPDATE (Initial Load Update)|Der Status nach der ersten Ausführung des Updatepakets nach dem anfänglichen Ladevorgang, während der anfängliche Verarbeitungsbereich noch verarbeitet wird. Dieser Schritt erfolgt nach dem Aufruf des CDC-Steuerungstasks durch den **GetProcessingRange** -Vorgang.<br /><br /> Wenn die **_ $** -Verarbeitungs Spalte verwendet wird, wird Sie auf 1 festgelegt, um anzugeben, dass das Paket möglicherweise Zeilen erneut verarbeitet, die bereits am Ziel vorhanden sind.<br /><br /> Weitere Informationen zu CDC-Steuerungstaskvorgängen finden Sie unter [CDC-Steuerungstask](../control-flow/cdc-control-task.md).|  
+|3-ILUPDATE (Initial Load Update)|Der Status nach der ersten Ausführung des Updatepakets nach dem anfänglichen Ladevorgang, während der anfängliche Verarbeitungsbereich noch verarbeitet wird. Dieser Schritt erfolgt nach dem Aufruf des CDC-Steuerungstasks durch den **GetProcessingRange** -Vorgang.<br /><br /> Wenn die **_$reprocessing** -Spalte verwendet wird, wird sie auf 1 festgelegt, um anzugeben, dass das Paket möglicherweise Zeilen erneut verarbeitet, die bereits im Ziel vorhanden sind.<br /><br /> Weitere Informationen zu CDC-Steuerungstaskvorgängen finden Sie unter [CDC-Steuerungstask](../control-flow/cdc-control-task.md).|  
 |4-TFEND (Trickle-Feed-Update-Ended)|Der für reguläre CDC-Ausführungen erwartete Status. Er gibt an, dass die vorherige Ausführung erfolgreich abgeschlossen wurde und eine neue Ausführung mit einem neuen Verarbeitungsbereich gestartet werden kann.|  
 |5-TFSTART (Trickle-Feed-Update-Started)|Der Status bei nachfolgenden Ausführungen des Updatepakets nach dem Aufruf des CDC-Steuerungstasks durch den **GetProcessingRange** -Vorgang.<br /><br /> Er gibt an, dass eine reguläre CDC-Ausführung gestartet, aber noch nicht einwandfrei beendet wurde (**MarkProcessedRange**).<br /><br /> Weitere Informationen zu CDC-Steuerungstaskvorgängen finden Sie unter [CDC-Steuerungstask](../control-flow/cdc-control-task.md).|  
 |6-TFREDO (Reprocessing-Trickle-Feed-Updates)|Der Status bei einem **GetProcessingRange** -Vorgang, der nach TFSTART stattfindet. Er gibt an, dass die vorherige Ausführung nicht erfolgreich abgeschlossen wurde.<br /><br /> Wenn die __$reprocessing-Spalte verwendet wird, wird sie auf 1 festgelegt, um anzugeben, dass das Paket möglicherweise Zeilen erneut verarbeitet, die bereits im Ziel vorhanden sind.|  
@@ -217,6 +217,6 @@ ms.locfileid: "62828578"
 -   Video [CDC für Oracle-Datenbanken mit SQL Server Integration Services 2012 (SQL Server Video)](https://technet.microsoft.com/sqlserver/jj218898)auf technet.microsoft.com.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [CDC Control Task](../control-flow/cdc-control-task.md)  
+ [CDC-Steuerungstask](../control-flow/cdc-control-task.md)  
   
   

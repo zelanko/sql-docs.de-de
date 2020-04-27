@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6be23e1a45f2b2ed0cc055c5032a72ffe2387399
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831768"
 ---
 # <a name="execute-sql-task"></a>SQL ausführen (Task)
@@ -54,9 +54,9 @@ ms.locfileid: "62831768"
 ## <a name="creating-sql-statements"></a>Erstellen von SQL-Anweisungen  
  Die Quelle für die SQL-Anweisungen, die von diesem Task verwendet werden, kann eine Taskeigenschaft mit einer Anweisung, eine Verbindung mit einer Datei mit mindestens einer Anweisung oder der Name einer Variablen sein, die eine Anweisung enthält. Die SQL-Anweisungen müssen in dem Dialekt des Quelldatenbank-Managementsystems (DBMS, Database Management System) erstellt werden. Weitere Informationen finden Sie unter [Integration Services-Abfragen &#40;SSIS&#41;](../integration-services-ssis-queries.md).  
   
- Wenn die SQL-Anweisungen in einer Datei gespeichert sind, stellt der Task mithilfe eines Verbindungs-Managers eine Verbindung mit der Datei her. Weitere Informationen finden Sie unter [Dateiverbindungs-Manager](../connection-manager/file-connection-manager.md).  
+ Wenn die SQL-Anweisungen in einer Datei gespeichert sind, stellt der Task mithilfe eines Verbindungs-Managers eine Verbindung mit der Datei her. Weitere Informationen finden Sie unter [File Connection Manager](../connection-manager/file-connection-manager.md).  
   
- Im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer können Sie zum Eingeben von SQL-Anweisungen das Dialogfeld **Editor für den Task SQL ausführen** oder den **Abfrage-Generator**verwenden. Dabei handelt es sich um eine grafische Benutzeroberfläche zum Erstellen von SQL-Abfragen. Weitere Informationen finden Sie unter [Editor für den Task „SQL ausführen“ &#40;Seite „Allgemein“&#41;](../execute-sql-task-editor-general-page.md) und [Abfrage-Generator](../query-builder.md).  
+ Im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer können Sie zum Eingeben von SQL-Anweisungen das Dialogfeld **Editor für den Task SQL ausführen** oder den **Abfrage-Generator**verwenden. Dabei handelt es sich um eine grafische Benutzeroberfläche zum Erstellen von SQL-Abfragen. Weitere Informationen finden Sie unter [Execute SQL Task Editor &#40;General Page&#41;](../execute-sql-task-editor-general-page.md) und [Abfrage-Generator](../query-builder.md).  
   
 > [!NOTE]  
 >  Gültige SQL-Anweisungen, die außerhalb des Tasks "SQL ausführen" erstellt wurden, werden vom Task "SQL ausführen" möglicherweise nicht erfolgreich analysiert.  
@@ -104,7 +104,7 @@ ms.locfileid: "62831768"
 ### <a name="custom-log-entries"></a>Benutzerdefinierte Protokolleinträge  
  In der folgenden Tabelle wird der benutzerdefinierte Protokolleintrag für den Task <legacyBold>SQL ausführen</legacyBold> beschrieben. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md).  
   
-|Protokolleintrag|BESCHREIBUNG|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |`ExecuteSQLExecutingQuery`|Enthält Informationen zu den Ausführungsphasen der SQL-Anweisung. Protokolleinträge werden geschrieben, wenn der Task eine Verbindung mit der Datenbank erhält, wenn der Task beginnt, die SQL-Anweisung vorzubereiten, und nachdem die Ausführung der SQL-Anweisung abgeschlossen wurde. Der Protokolleintrag für die Vorbereitungsphase schließt die vom Task verwendete SQL-Anweisung ein.|  
   

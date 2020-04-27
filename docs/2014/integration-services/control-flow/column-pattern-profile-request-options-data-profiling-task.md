@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4ceb9402780788d3a2a45e8d2b838c156c28faab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832607"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Optionen für die Anforderung für Spaltenmusterprofil (Datenprofilerstellungs-Task)
@@ -45,10 +45,10 @@ ms.locfileid: "62832607"
   
 |Tag|Begriff|  
 |---------|----------|  
-|Richtung|Ost|  
-|Richtung|West|  
-|Richtung|Nord|  
-|Richtung|Süd|  
+|Direction|Ost|  
+|Direction|West|  
+|Direction|Nord|  
+|Direction|Süd|  
   
  Sie können ein andere Tag verwenden, um die verschiedenen Wörter zu gruppieren, die die Bezeichnung einer "Straße" in Straßennamen ausdrücken.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62832607"
 ## <a name="request-properties-options"></a>Optionen für Anforderungseigenschaften  
  Für eine **Anforderung für Spaltenmusterprofil**zeigt der Bereich **Anforderungseigenschaften** die folgenden Gruppen von Optionen an:  
   
--   **Daten**, die die Optionen **TableOrView** und **Column** enthalten  
+-   **Daten**, die die Optionen **TableOrView** und **Spalte** enthalten  
   
 -   **Allgemein**  
   
@@ -79,23 +79,23 @@ ms.locfileid: "62832607"
   
 ### <a name="data-options"></a>Datenoptionen  
  **ConnectionManager**  
- Wählen Sie den vorhandenen [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager aus, der den .NET-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) verwendet, um eine Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank herzustellen, die die Tabelle oder Sicht enthält, für die ein Profil erstellt werden soll.  
+ Wählen Sie den vorhandenen [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager aus, der den .NET-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) verwendet, um eine Verbindung zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank herzustellen, die die Tabelle oder Sicht enthält, für die ein Profil erstellt werden soll.  
   
  **TableOrView**  
  Wählen Sie die vorhandene Tabelle oder die Sicht aus, die die Spalte enthält, für die ein Profil erstellt werden soll.  
   
  Weitere Informationen finden Sie im Abschnitt "TableorView-Optionen" in diesem Thema.  
   
- **Spalte**  
+ **Column**  
  Wählen Sie die vorhandene Spalte aus, für die ein Profil erstellt werden soll. Wählen **Sie\*()** aus, um ein Profil für alle Spalten  
   
  Weitere Informationen finden Sie im Abschnitt "Spaltenoptionen" in diesem Thema.  
   
 #### <a name="tableorview-options"></a>TableOrView-Optionen  
- **Chaos**  
+ **Schema**  
  Gibt das Schema an, zu dem die ausgewählte Tabelle gehört. Diese Option ist schreibgeschützt.  
   
- **Table**  
+ **Glaub**  
  Zeigt den Namen der ausgewählten Tabelle an. Diese Option ist schreibgeschützt.  
   
 #### <a name="column-options"></a>Spaltenoptionen  
@@ -112,11 +112,11 @@ ms.locfileid: "62832607"
  **RequestId**  
  Geben Sie einen beschreibenden Namen ein, um diese Profilanforderung zu kennzeichnen. In der Regel müssen Sie den automatisch generierten Wert nicht ändern.  
   
-### <a name="options"></a>Tastatur  
- **Maxnumofpatterns**  
+### <a name="options"></a>Optionen  
+ **MaxNumberOfPatterns**  
  Geben Sie die maximale Anzahl von Mustern an, die das Profil berechnen soll. Der Standardwert dieser Option ist 10. Der Maximalwert ist 100.  
   
- **Prozagedatacoveragegewünschter**  
+ **PercentageDataCoverageDesired**  
  Geben Sie den Prozentwert der Daten an, die die berechneten Muster abdecken sollen. Der Standardwert dieser Option ist 95 (Prozent).  
   
  **CaseSensitive**  
@@ -127,23 +127,23 @@ ms.locfileid: "62832607"
   
  Weitere Informationen finden Sie unter "Grundlegendes zur Verwendung von Trennzeichen und Symbolen" in diesem Thema.  
   
- **MB**  
+ **Symbole**  
  Führen Sie die Symbole auf, die als Teil von Mustern beibehalten werden sollen. Beispiele könnten "/" für Datumsangaben, ":" für Uhrzeiten und "@" für E-Mail-Adressen enthalten. Standardmäßig enthält die Liste der **Symbole** die folgenden Zeichen: `,.;:-"'`~ =&/@!? () <> []{}| # * ^% '.  
   
  Weitere Informationen finden Sie unter "Grundlegendes zur Verwendung von Trennzeichen und Symbolen" in diesem Thema.  
   
- **Tagtableconnectionmanager**  
+ **TagTableConnectionManager**  
  Wählen Sie den vorhandenen [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager aus, der den .NET-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SqlClient) verwendet, um eine Verbindung zur [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank herzustellen, die die Tagtabelle enthält.  
   
  Weitere Informationen finden Sie unter "Grundlegendes zur Verwendung der Tagtabelle" in diesem Thema.  
   
- **Tagtablename**  
+ **TagTableName**  
  Wählen Sie die vorhandene Tagtabelle aus, die zwei Zeichenfolgenspalten mit der Bezeichnung "Tag" und "Begriff" aufweisen muss.  
   
  Weitere Informationen finden Sie unter "Grundlegendes zur Verwendung der Tagtabelle" in diesem Thema.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Editor für den Datenprofilerstellungs-Task &#40;&#41;Seite Allgemein](../general-page-of-integration-services-designers-options.md)   
- [Schnell Profil Formular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](single-table-quick-profile-form-data-profiling-task.md)  
+ [Schnellprofilformular für eine einzelne Tabelle &#40;Datenprofilerstellungs-Task&#41;](single-table-quick-profile-form-data-profiling-task.md)  
   
   

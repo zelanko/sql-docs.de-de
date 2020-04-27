@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39bd24414e2382557a22469da502bad91abe20b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873408"
 ---
 # <a name="system-data-collection-set-reports"></a>Berichte der Systemdaten-Sammlungssätze
@@ -38,7 +38,7 @@ ms.locfileid: "62873408"
   
  Sie können diese Berichte verwenden, um Informationen zum Überwachen der Systemkapazität und zur Behandlung von Problemen mit der Systemleistung abzurufen.  
   
-##  <a name="Disk"></a> Bericht über die Zusammenfassung der Datenträgerverwendung  
+##  <a name="disk-usage-summary-report"></a><a name="Disk"></a> Bericht über die Zusammenfassung der Datenträgerverwendung  
  Der Bericht über die Zusammenfassung der Datenträgerverwendung enthält Daten über die Speicherplatzverwendung aller Datenbanken in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die in den Berichten bereitgestellten Daten werden unter Verwendung des Sammlungssatzes für die Datenträgerverwendung ermittelt, der den generischen T-SQL-Abfragensammlertyp verwendet.  
   
  Sie können auf den Bericht über die Zusammenfassung der Datenträgerverwendung vom Objekt-Explorer aus zugreifen. Erweitern Sie den Ordner **Verwaltung** , klicken Sie mit der rechten Maustaste auf **Datensammlung**, zeigen Sie auf **Berichte**und anschließend auf **Verwaltungs-Data Warehouse**, und klicken Sie auf **Zusammenfassung der Datenträgerverwendung**, um den Bericht anzuzeigen. Weitere Informationen finden Sie unter [Anzeigen eines Sammlungssatzberichts &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md).  
@@ -71,7 +71,7 @@ ms.locfileid: "62873408"
   
  Der von jeder Datendatei in der Datenbank verwendete Speicherplatz wird aufgeführt. Reservierter Speicherplatz ist die Menge von verwendetem Speicherplatz plus dem Speicherplatz, der der Datei zugeordnet, jedoch noch nicht verwendet wurde. Verwendeter Speicherplatz ist der tatsächlich von der Datei momentan verwendete Speicherplatz, ohne den zugeordneten Speicherplatz.  
   
-##  <a name="Query"></a> Bericht "Abfragestatistik - Verlauf"  
+##  <a name="query-statistics-history-report"></a><a name="Query"></a> Bericht "Abfragestatistik - Verlauf"  
  Der Bericht Abfragestatistik - Verlauf enthält Statistiken zur Abfrageausführung. Die Daten in diesem Bericht werden unter Verwendung des Sammlungssatzes für die Abfragestatistik ermittelt, der den Abfrageaktivitäts-Sammlertyp verwendet.  
   
  Sie können auf den Bericht Abfragestatistik - Verlauf über den Objekt-Explorer zugreifen. Erweitern Sie den Ordner **Verwaltung** , klicken Sie mit der rechten Maustaste auf **Datensammlung**, zeigen Sie auf **Berichte**und anschließend auf **Verwaltungs-Data Warehouse**, und klicken Sie auf **Abfragestatistik – Verlauf**, um den Bericht anzuzeigen. Weitere Informationen finden Sie unter [Anzeigen eines Sammlungssatzberichts &#40;SQL Server Management Studio&#41;](view-a-collection-set-report-sql-server-management-studio.md).  
@@ -118,7 +118,7 @@ ms.locfileid: "62873408"
   
  Verwenden Sie die Schaltfläche Kalender, um das Startdatum, die Startzeit und die Dauer der Daten anzugeben, über die ein Bericht erstellt werden soll.  
   
-###  <a name="Server"></a> Bericht "Serveraktivität - Verlauf"  
+###  <a name="server-activity-history-report"></a><a name="Server"></a> Bericht "Serveraktivität - Verlauf"  
  Der Bericht Serveraktivität - Verlauf zeigt die anfängliche Ansicht der Serveraktivität für eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und das Hostbetriebssystem an.  
   
  In der folgenden Tabelle werden die Diagramme beschrieben, mit denen die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Aktivität und Systemaktivität im Bericht und in den ausführlichen Unterberichten, die über die Diagramme aufrufbar sind, grafisch dargestellt werden.  

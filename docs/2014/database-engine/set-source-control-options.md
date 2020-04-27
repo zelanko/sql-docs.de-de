@@ -17,10 +17,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0a654932689785d96aaff049551faf19494c311a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62843734"
 ---
 # <a name="set-source-control-options"></a>Festlegen von Quellcodeverwaltungsoptionen
@@ -50,7 +50,7 @@ ms.locfileid: "62843734"
      **Rollenbeschreibung**  
      Wenn Sie eine dieser Rollen auswählen, werden die entsprechenden Quellcodeverwaltungsoptionen automatisch ausgewählt.  
   
-    |Role|BESCHREIBUNG|  
+    |Role|Beschreibung|  
     |----------|-----------------|  
     |**Visual SourceSafe**|Gibt an, dass die von [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe-Benutzern am häufigsten verwendeten Einstellungen verwendet werden sollen.|  
     |**Unabhängiger Entwickler**|Gibt an, dass Sie unabhängig arbeiten.|  
@@ -59,7 +59,7 @@ ms.locfileid: "62843734"
      **Statusupdate im Hintergrund**  
      Aktualisiert automatisch die Signalsymbole der Quellcodeverwaltung im Projektmappen-Explorer, wenn sich der Status eines Elements ändert. Wenn Sie bei der Ausführung serverintensiver Vorgänge, insbesondere beim Öffnen einer Projektmappe oder eines Projekts aus der Quellcodeverwaltung, Verzögerungen bemerken, kann das Deaktivieren dieses Kontrollkästchen die Leistung verbessern.  
   
-     **Anmelde-ID**  
+     **Login ID**  
      Gibt den Benutzernamen an, der für die Anmeldung beim Quellcode-Verwaltungsanbieter verwendet wird. Wenn Sie von Ihrem Quell Code Verwaltungs Anbieter unterstützt wird, wird dieser Name automatisch im **Anmelde** Dialogfeld ausgefüllt, um den Quell Code Verwaltungs Server zu erreichen. Deaktivieren Sie automatische Benutzeranmeldungen, um diese Option zu aktivieren, indem Sie das Administratorprogramm Ihres Quellcode-Verwaltungsanbieters verwenden. Starten Sie anschließend [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] neu.  
   
      **Erweitert**  
@@ -69,14 +69,12 @@ ms.locfileid: "62843734"
   
 5.  Wählen Sie im Feld **Umgebungseinstellungen** für die Quell Code Verwaltung die Rolle aus, für die Sie Quell Code Verwaltungs Optionen festlegen möchten.  
   
-     
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] wählt automatisch die standardmäßigen Quellcodeverwaltungsoptionen für die Rolle aus, die Sie ausgewählt haben. Wenn Sie eine der Standardoptionen deaktivieren, wird im Feld Quell Code Verwaltungs **Umgebung** die Option **Benutzer** definiert angezeigt, um anzugeben, dass Sie die ursprünglich ausgewählte Rolle angepasst haben.  
+     [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] wählt automatisch die standardmäßigen Quellcodeverwaltungsoptionen für die Rolle aus, die Sie ausgewählt haben. Wenn Sie eine der Standardoptionen deaktivieren, wird im Feld Quell Code Verwaltungs **Umgebung** die Option **Benutzer** definiert angezeigt, um anzugeben, dass Sie die ursprünglich ausgewählte Rolle angepasst haben.  
   
      **Umgebungseinstellungen für Quellcodeverwaltung**  
-     Gibt die Rolle an, die Sie verwenden möchten. 
-  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] definiert die folgenden Rollen.  
+     Gibt die Rolle an, die Sie verwenden möchten. [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] definiert die folgenden Rollen.  
   
-    |Role|BESCHREIBUNG|  
+    |Role|Beschreibung|  
     |----------|-----------------|  
     |**Visual SourceSafe**|Gibt an, dass die von [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe-Benutzern am häufigsten verwendeten Einstellungen verwendet werden sollen.|  
     |**Unabhängiger Entwickler**|Gibt an, dass Sie unabhängig arbeiten.|  
@@ -92,15 +90,15 @@ ms.locfileid: "62843734"
   
      **Speichern**  
   
-    |Action|BESCHREIBUNG|  
+    |Aktion|Beschreibung|  
     |------------|-----------------|  
     |**Aufforderung zum Auschecken**|Zeigt das Dialogfeld **Auschecken** an.|  
     |**Automatisch auschecken**|Checkt das Element aus, ohne das Dialogfeld **Auschecken** anzuzeigen. Dies ist die Standardoption.|  
     |**Speichern unter**|Speichert die Daten in einer neuen Datei.|  
   
-     **Bearbeitung**  
+     **Bearbeiten**  
   
-    |Action|BESCHREIBUNG|  
+    |Aktion|Beschreibung|  
     |------------|-----------------|  
     |**Aufforderung zum Auschecken**|Zeigt das Dialogfeld **Auschecken** an.|  
     |**Aufforderung zum exklusiven Auschecken**|Zeigt das Dialogfeld **Auschecken** an.|  

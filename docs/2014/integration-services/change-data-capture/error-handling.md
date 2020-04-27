@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e0924c4ac6d2ddd4e14b35794b9c03ac7fb2e136
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62835648"
 ---
 # <a name="error-handling"></a>Fehlerbehandlung
@@ -38,7 +38,7 @@ ms.locfileid: "62835648"
 |------------|------------------------|-----------------------|------------------|  
 |ABORTED|0|1|Die Oracle CDC-Instanz wird nicht ausgeführt. Der Unterstatus ABORTED gibt an, dass die Oracle CDC-Instanz ACTIVE war und dann unerwartet beendet wurde.<br /><br /> Der Unterstatus ABORTED wird von der Hauptinstanz des Oracle CDC Service festgelegt, wenn erkannt wird, dass die Oracle CDC-Instanz während des Status ACTIVE nicht ausgeführt wird.|  
 |ERROR|0|1|Die Oracle CDC-Instanz wird nicht ausgeführt. Der Status ERROR gibt an, dass die CDC-Instanz ACTIVE war und dann ein Fehler aufgetreten ist, der nicht behebbar ist, sodass die Instanz sich selbst deaktiviert hat. Der Status ERROR enthält die folgenden Unterstatuscodes:<br /><br /> MISCONFIGURED: Ein nicht behebbarer Konfigurationsfehler wurde erkannt.<br /><br /> PASSWORD-REQUIRED: Für den Change Data Capture Designer für Oracle von Attunity ist kein Kennwort festgelegt, oder das konfigurierte Kennwort ist nicht gültig. Der Grund kann eine Änderung des Kennworts für den asymmetrischen Schlüssel des Diensts sein.|  
-|RUNNING|1|0|Die CDC-Instanz wird ausgeführt und verarbeitet Änderungsdatensätze. Der Status RUNNING enthält die folgenden Unterstatuscodes:<br /><br /> IDLE: Alle Änderungsdatensätze wurden verarbeitet und in den Zielsteuertabellen ( **_CT**) gespeichert. Es ist keine aktive Transaktion in Verbindung mit den Steuertabellen vorhanden.<br /><br /> PROCESSING: Es werden Änderungsdatensätze verarbeitet, die noch nicht in die Steuertabellen ( **_CT**) geschrieben wurden.|  
+|RUNNING|1|0|Die CDC-Instanz wird ausgeführt und verarbeitet Änderungsdatensätze. Der Status RUNNING enthält die folgenden Unterstatuscodes:<br /><br /> IDLE: Alle Änderungsdatensätze wurden verarbeitet und in den Zielsteuertabellen (**_CT**) gespeichert. Es ist keine aktive Transaktion in Verbindung mit den Steuertabellen vorhanden.<br /><br /> PROCESSING: Es werden Änderungsdatensätze verarbeitet, die noch nicht in die Steuertabellen (**_CT**) geschrieben wurden.|  
 |STOPPED|0|0|Die CDC-Instanz wird nicht ausgeführt. Der Unterstatus STOP gibt an, dass die CDC-Instanz ACTIVE war und dann ordnungsgemäß beendet wurde.|  
 |SUSPENDED|1|1|Die CDC-Instanz wird ausgeführt, aber die Verarbeitung wurde aufgrund eines behebbaren Fehlers angehalten. Der Status SUSPENDED enthält die folgenden Unterstatuscodes:<br /><br /> DISCONNECTED: Die Verbindung zur Oracle-Quelldatenbank kann nicht hergestellt werden. Die Verarbeitung wird fortgesetzt, nachdem die Verbindung wiederhergestellt wurde.<br /><br /> STORAGE: Der Speicher ist voll. Die Verarbeitung wird fortgesetzt, wenn Speicher verfügbar wird. In einigen Fällen wird dieser Status möglicherweise nicht angezeigt, weil die Statustabelle nicht aktualisiert werden kann.<br /><br /> LOGGER: Die Protokollierung verfügt über eine Verbindung mit Oracle, kann aber aufgrund eines vorübergehenden Problems die Oracle-Transaktionsprotokolle nicht lesen.|  
 |DATAERROR|x|x|Dieser Statuscode wird nur für die Tabelle **xdbcdc_trace** verwendet. Er wird nicht in der Tabelle **xdbcdc_state** angezeigt. Ablaufverfolgungsdatensätze mit diesem Status weisen auf ein Problem mit einem Oracle-Protokolldatensatz hin. Der fehlerhafte Protokolldatensatz wird in der Spalte **data** als BLOB gespeichert. Der Status DATAERROR enthält die folgenden Unterstatuscodes:<br /><br /> BADRECORD: Der angefügte Protokolldatensatz konnte nicht analysiert werden.<br /><br /> CONVERT-ERROR: Die Daten in einigen Spalten konnten nicht in die Zielspalten in der Aufzeichnungstabelle konvertiert werden. Dieser Status wird nur angezeigt, wenn in der Konfiguration angegeben ist, dass Konvertierungsfehler zu Ablaufverfolgungsdatensätzen führen sollen.|  

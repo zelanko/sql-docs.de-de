@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 741c8633a9b7eed9fcd253918c34a27119e51ee4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62854901"
 ---
 # <a name="column-properties-general-page"></a>Spalteneigenschaften (Registerkarte Allgemein)
@@ -46,16 +46,16 @@ ms.locfileid: "62854901"
  **Berechneter Text**  
  Gibt die Anweisung an, die zur Berechnung des Spaltentexts verwendet wird. Weitere Informationen finden Sie unter [Specify Computed Columns in a Table](specify-computed-columns-in-a-table.md).  
   
- **Identity**  
+ **Identität**  
  Gibt an, ob die Spalte die Identitätsspalte der Tabelle ist. Mögliche Werte sind **True** und **False**.  
   
- **ID-Seed**  
+ **ID-Startwert**  
  Gibt den anfänglichen Zeilenwert für eine Identitätsspalte an.  
   
- **ID-Inkrement**  
- Die Eigenschaft **ID-Inkrement** gibt den Wert an, den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beim Generieren eines Identitätswerts für eine eingefügte Zeile zum größten vorhandenen Zeilenidentitätswert hinzufügt.  
+ **ID-Schrittweite**  
+ Die Eigenschaft **ID-Schrittweite** gibt den Wert an, den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum größten vorhandenen Zeilenidentitätswert hinzufügt, während ein Identitätswert für eine eingefügte Zeile generiert wird.  
   
- **Standard Bindung**  
+ **Standardbindungen**  
  Der an die Spalte gebundene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Standard. Ohne gebundenen Standard ist diese Spalte leer.  
   
  **Standardschema**  
@@ -64,7 +64,7 @@ ms.locfileid: "62854901"
  **Regel**  
  Identifiziert die Datenintegritätseinschränkung, die an die Spalte gebunden ist. Ohne gebundene Regel ist diese Spalte leer.  
   
- **Regel Schema**  
+ **Regelschema**  
  Zeigt das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankschema an, das die Regel besitzt, die an diejenige Spalte gebunden ist, auf die verwiesen wird. Ohne gebundene Regel ist diese Spalte leer.  
   
  **Länge**  
@@ -76,27 +76,25 @@ ms.locfileid: "62854901"
  **Numerische Genauigkeit**  
  Gibt die maximale Anzahl von Ziffern bei einem numerischen Datentyp mit fester Genauigkeit an.  
   
- **Numerische Skala**  
+ **Numerische Dezimalstellen**  
  Gibt die Anzahl von Ziffern rechts vom Dezimaltrennzeichen bei einem numerischen Datentyp mit fester Genauigkeit an.  
   
- **XML-Schema Namespace**  
+ **XML-Schemanamespace**  
  Definiert den Typ der XML-Spalte mithilfe einer XSD-Überprüfung (XML Schema Definition Language).  
   
- **Schema des XML-Schema Namespace**  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Schema, das den XML-Schemanamespace besitzt.  
+ **XML-Schemanamespace-Schema**  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Schema, das den XML-Schemanamespace besitzt.  
   
 > [!NOTE]  
->  Es gibt eine Reihe häufig verwendeter, jedoch unterschiedlicher Bedeutungen des Begriffs Schema. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird ein Schema zum Organisieren von Datenbankobjekten verwendet. Ähnliches gilt für den Begriff Besitz. XML verwendet das Schema zum Definieren der Organisation von XML-Informationen in einer Reihe von Namespaces. Es stellt eine Möglichkeit dar, miteinander in Beziehung stehenden XML-Code zu gruppieren.  
+>  Es gibt eine Reihe häufig verwendeter, jedoch unterschiedlicher Bedeutungen des Begriffs Schema. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird ein Schema zum Organisieren von Datenbankobjekten verwendet. Ähnliches gilt für den Begriff Besitz. XML verwendet das Schema zum Definieren der Organisation von XML-Informationen in einer Reihe von Namespaces. Es stellt eine Möglichkeit dar, miteinander in Beziehung stehenden XML-Code zu gruppieren.  
   
- **Ist geringer Dichte**  
+ **Ist von geringer Dichte**  
  Gibt an, ob die Spalte eine Sparsespalte ist. Mögliche Werte sind **True** und **False**. Weitere Informationen finden Sie unter [Verwenden von Spalten mit geringer Dichte](use-sparse-columns.md).  
   
- **Ist Spalten Satz**  
+ **Ist ein Spaltensatz**  
  Gibt an, ob es sich bei der Spalte um einen Spaltensatz handelt. Mögliche Werte sind **True** und **False**. Weitere Informationen finden Sie unter [Verwenden von Spaltensätzen](use-column-sets.md).  
   
- **ANSI-Padding-Status**  
+ **ANSI-Auffüllungsstatus**  
  Gibt an, ob die ANSI-Auffüllung aktiviert ist. Weitere Informationen finden Sie unter [SET ANSI_PADDING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-ansi-padding-transact-sql).  
   
  **Volltext**  
@@ -105,7 +103,7 @@ ms.locfileid: "62854901"
  **Statistische Semantik**  
  Gibt an, ob die statistische semantische Suche für die Spalte aktiviert ist. Weitere Informationen finden Sie unter [Semantische Suche &#40;SQL Server&#41;](../search/semantic-search-sql-server.md).  
   
- **Nicht für Replikation**  
+ **Not For Replication**  
  Gibt an, ob die Spalte zur Replizierung zur Verfügung steht. Mögliche Werte sind **True** und **False**.  
   
   

@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 18916e8287841015727c37ed8833fbc29b1e6ba2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62869147"
 ---
 # <a name="mssqlserver_21892"></a>MSSQLSERVER_21892
@@ -33,8 +33,7 @@ ms.locfileid: "62869147"
 |Meldungstext|„sys.availability_replicas“ kann beim primären Replikat der Verfügbarkeitsgruppe, das dem virtuellen Netzwerknamen '%s' für die Servernamen der Mitgliedsreplikate zugeordnet ist, nicht abgefragt werden: Fehler =%d, Fehlermeldung =% s.'|  
   
 ## <a name="explanation"></a>Erklärung  
- 
-  `sp_validate_replica_hosts_as_publishers` fragt das aktuelle Primäre der Verfügbarkeitsgruppe ab, das dem umgeleiteten Verleger zugeordnet ist, um die Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu bestimmen, welche die Mitgliedsreplikate hosten.  Wenn diese Abfrage fehlschlägt, wird Fehler 21892 zurückgegeben.  
+ `sp_validate_replica_hosts_as_publishers` fragt das aktuelle Primäre der Verfügbarkeitsgruppe ab, das dem umgeleiteten Verleger zugeordnet ist, um die Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu bestimmen, welche die Mitgliedsreplikate hosten.  Wenn diese Abfrage fehlschlägt, wird Fehler 21892 zurückgegeben.  
   
  In dem `sp_validate_replica_hosts_as_publishers`Aufruf wird der temporäre Verbindungsserver in der Regel zum ersten Mal verwendet. Wenn Verbindungsprobleme vorliegen, ist es daher wahrscheinlich, dass diese zuerst beim Aufruf von `sp_validate_replica_hosts_as_publishers` augenscheinlich werden. Im Gegensatz zu `sp_validate_redirected_publisher` verwendet der von `sp_validate_replica_hosts_as_publishers` verwendete Verbindungsserver beim Herstellen einer Verbindung mit Replikathost der Verfügbarkeitsgruppen immer die Anmeldeinformationen des Aufrufers.  
   

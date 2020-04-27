@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e3888782f93dde5726ed808383ea7da0c9a02a4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62827193"
 ---
 # <a name="performance-statistics-event-class"></a>Performance Statistics-Ereignisklasse
@@ -33,7 +33,7 @@ ms.locfileid: "62827193"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|NULL|52|Ja|  
 |BinaryData|`image`|NULL|2|Ja|  
-|DatabaseID|`int`|Die ID der Datenbank, die durch die use *Database* -Anweisung angegeben wurde, oder die Standarddatenbank, wenn für eine bestimmte Instanz keine use *Database* -Anweisung ausgegeben wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]zeigt den Namen der Datenbank an, wenn die ServerName-Datenspalte in der Ablauf Verfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|Ja|  
+|DatabaseID|`int`|Die ID der Datenbank, die durch die use *Database* -Anweisung angegeben wurde, oder die Standarddatenbank, wenn für eine bestimmte Instanz keine use *Database* -Anweisung ausgegeben wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die ServerName-Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|Ja|  
 |EventSequence|`int`|Sequenz eines bestimmten Ereignisses innerhalb der Anforderung.|51|Nein|  
 |EventSubClass|`int`|Der Typ der Ereignisunterklasse.<br /><br /> 0 = Neuer SQL-Text des Batches, der zurzeit nicht im Cache vorhanden ist.<br /><br /> Die folgenden EventSubClass-Typen werden in der Ablaufverfolgung für Ad-hoc-Batches generiert.<br /><br /> Für Ad-hoc-Batches mit *n* Abfragen:<br /><br /> 1 vom Typ 0|21|Ja|  
 |IntegerData2|`int`|NULL|55|Ja|  
@@ -52,7 +52,7 @@ ms.locfileid: "62827193"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|Die Gesamtanzahl der Neukompilierungen dieses Plans.|52|Ja|  
 |BinaryData|`image`|Binary XML des kompilierten Plans.|2|Ja|  
-|DatabaseID|`int`|Die ID der Datenbank, die durch die use *Database* -Anweisung angegeben wurde, oder die Standarddatenbank, wenn für eine bestimmte Instanz keine use *Database* -Anweisung ausgegeben wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]zeigt den Namen der Datenbank an, wenn die ServerName-Datenspalte in der Ablauf Verfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|Ja|  
+|DatabaseID|`int`|Die ID der Datenbank, die durch die use *Database* -Anweisung angegeben wurde, oder die Standarddatenbank, wenn für eine bestimmte Instanz keine use *Database* -Anweisung ausgegeben wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die ServerName-Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|Ja|  
 |EventSequence|`int`|Sequenz eines bestimmten Ereignisses innerhalb der Anforderung.|51|Nein|  
 |SessionLoginName|`nvarchar`|Der Anmeldename des Benutzers, der die Sitzung gestartet hat. Wenn Sie beispielsweise mithilfe von Login1 eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen und eine Anweisung als Login2 ausführen, zeigt SessionLoginName den Wert Login1 an und LoginName den Wert Login2. Diese Spalte zeigt sowohl den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch den Windows-Anmeldenamen an.|64|Ja|  
 |EventSubClass|`int`|Der Typ der Ereignisunterklasse.<br /><br /> 1 = Abfragen innerhalb einer gespeicherten Prozedur wurden kompiliert.<br /><br /> Die folgenden EventSubClass-Typen werden in der Ablaufverfolgung für gespeicherte Prozeduren generiert.<br /><br /> Für gespeicherte Prozeduren mit *n* Abfragen:<br /><br /> *n* vom Typ 1|21|Ja|  
@@ -76,7 +76,7 @@ ms.locfileid: "62827193"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|Die Gesamtanzahl der Neukompilierungen dieses Plans.|52|Ja|  
 |BinaryData|`image`|Binary XML des kompilierten Plans.|2|Ja|  
-|DatabaseID|`int`|Die ID der Datenbank, die durch die use *Database* -Anweisung angegeben wurde, oder die Standarddatenbank, wenn für eine bestimmte Instanz keine use *Database* -Anweisung ausgegeben wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]zeigt den Namen der Datenbank an, wenn die ServerName-Datenspalte in der Ablauf Verfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|Ja|  
+|DatabaseID|`int`|Die ID der Datenbank, die durch die use *Database* -Anweisung angegeben wurde, oder die Standarddatenbank, wenn für eine bestimmte Instanz keine use *Database* -Anweisung ausgegeben wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die ServerName-Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|Ja|  
 |EventSequence|`int`|Sequenz eines bestimmten Ereignisses innerhalb der Anforderung.|51|Nein|  
 |SessionLoginName|`nvarchar`|Der Anmeldename des Benutzers, der die Sitzung gestartet hat. Wenn Sie beispielsweise mithilfe von Login1 eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen und eine Anweisung als Login2 ausführen, zeigt SessionLoginName den Wert Login1 an und LoginName den Wert Login2. Diese Spalte zeigt sowohl den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch den Windows-Anmeldenamen an.|64|Ja|  
 |EventSubClass|`int`|Der Typ der Ereignisunterklasse.<br /><br /> 2 = Abfragen innerhalb einer Ad-hoc-SQL-Anweisung wurden kompiliert.<br /><br /> Die folgenden EventSubClass-Typen werden in der Ablaufverfolgung für Ad-hoc-Batches generiert.<br /><br /> Für Ad-hoc-Batches mit *n* Abfragen:<br /><br /> *n* vom Typ 2|21|Ja|  
@@ -99,7 +99,7 @@ ms.locfileid: "62827193"
 |----------------------|---------------|-----------------|---------------|----------------|  
 |BigintData1|`bigint`|Die Gesamtanzahl der Neukompilierungen dieses Plans.|52|Ja|  
 |BinaryData|`image`|NULL|2|Ja|  
-|DatabaseID|`int`|Die ID der Datenbank, die durch die use *Database* -Anweisung angegeben wurde, oder die Standarddatenbank, wenn für eine bestimmte Instanz keine use *Database* -Anweisung ausgegeben wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]zeigt den Namen der Datenbank an, wenn die ServerName-Datenspalte in der Ablauf Verfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|Ja|  
+|DatabaseID|`int`|Die ID der Datenbank, die durch die use *Database* -Anweisung angegeben wurde, oder die Standarddatenbank, wenn für eine bestimmte Instanz keine use *Database* -Anweisung ausgegeben wurde. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] zeigt den Namen der Datenbank an, wenn die ServerName-Datenspalte in der Ablaufverfolgung aufgezeichnet wird und der Server verfügbar ist. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|Ja|  
 |EventSequence|`int`|Sequenz eines bestimmten Ereignisses innerhalb der Anforderung.|51|Nein|  
 |SessionLoginName|`nvarchar`|Der Anmeldename des Benutzers, der die Sitzung gestartet hat. Wenn Sie beispielsweise mithilfe von Login1 eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen und eine Anweisung als Login2 ausführen, zeigt SessionLoginName den Wert Login1 an und LoginName den Wert Login2. Diese Spalte zeigt sowohl den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch den Windows-Anmeldenamen an.|64|Ja|  
 |EventSubClass|`int`|Der Typ der Ereignisunterklasse.<br /><br /> 3 = Eine zwischengespeicherte Abfrage wurde gelöscht, und die Leistungsverlaufsdaten dieses Plans werden nun gelöscht.<br /><br /> Die folgenden EventSubClass-Typen werden in der Ablaufverfolgung generiert.<br /><br /> Für Ad-hoc-Batches mit *n* Abfragen:<br /><br /> 1 vom Typ 3, wenn die Abfrage aus dem Cache geleert wird<br /><br /> Für gespeicherte Prozeduren mit *n* Abfragen:<br />1 vom Typ 3, wenn die Abfrage aus dem Cache geleert wird.|21|Ja|  
@@ -155,7 +155,7 @@ ms.locfileid: "62827193"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erweiterte Ereignisse](../extended-events/extended-events.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
+ [sp_trace_setevent &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql)   
  [Showplan XML for Query Compile (Ereignisklasse)](showplan-xml-for-query-compile-event-class.md)   
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](../views/views.md)  
   

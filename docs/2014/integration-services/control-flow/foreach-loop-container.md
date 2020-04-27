@@ -18,22 +18,22 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bb50b4000397ca3dd51be58867e45135d1d587f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831579"
 ---
 # <a name="foreach-loop-container"></a>Foreach-Schleifencontainer
   Der Foreach-Schleifencontainer definiert eine sich wiederholende Ablaufsteuerung in einem Paket. Die Schleifenimplementierung ist mit der **Foreach**-Schleifenstruktur in Programmiersprachen zu vergleichen. In einem Paket wird die Schleife mithilfe eines Foreach-Enumerators aktiviert.  Der Foreach-Schleifencontainer wiederholt die Ablaufsteuerung für jedes Element eines angegebenen Enumerators.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt die folgenden Enumeratortypen bereit:  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt die folgenden Enumeratortypen bereit:  
   
 -   Foreach-ADO-Enumerator zum Aufzählen von Zeilen in Tabellen. Beispielsweise können Sie die Zeilen in einem ADO-Recordset abrufen.  
   
      Stattdessen speichert das Recordsetziel Daten im Speicher eines Recordsets, das in einer `Object`-Paketvariablen des Datentyps gespeichert ist. Sie verwenden einen Foreach-Schleifencontainer mit dem Foreach-ADO-Enumerator normalerweise, um die Zeilen eines Recordsets nacheinander zu verarbeiten. Die für den Foreach-ADO-Enumerator angegebene Variable muss vom Object-Datentyp sein. Weitere Informationen zum Recordsetziel finden Sie unter [Use a Recordset Destination](../data-flow/recordset-destination.md).  
   
--   Enumerator für Foreach-ADO.NET-Schemarowsets zum Aufzählen der Schemainformationen zu einer Datenquelle. Beispielsweise können Sie eine Liste der Tabellen in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank auflisten und erhalten.  
+-   Enumerator für Foreach-ADO.NET-Schemarowsets zum Aufzählen der Schemainformationen zu einer Datenquelle. Beispielsweise können Sie die Tabellen in der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] aufzählen und eine Liste mit diesen Tabellen abrufen.  
   
 -   Foreach-Datei-Enumerator zum Aufzählen von Dateien in einem Ordner. Der Enumerator kann Unterordner durchlaufen. Beispielsweise können Sie alle Dateien mit der Dateinamenerweiterung LOG im Windows-Ordner und in dessen Unterordnern lesen.  
   

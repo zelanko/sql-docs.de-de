@@ -15,26 +15,25 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 14f380f510070da1b8fa77f7f5440640ce37452b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62856503"
 ---
 # <a name="view-the-dependencies-of-a-stored-procedure"></a>Anzeigen der Abhängigkeiten einer gespeicherten Prozedur
     
-##  
-  <a name="Top"></a> In diesem Thema wird beschrieben, wie mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Abhängigkeiten von gespeicherten Prozeduren in [!INCLUDE[tsql](../../includes/tsql-md.md)] angezeigt werden.  
+##  <a name="this-topic-describes-how-to-view-stored-procedure-dependencies-in-sscurrent-by-using-ssmanstudiofull-or-tsql"></a><a name="Top"></a> In diesem Thema wird beschrieben, wie mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] Abhängigkeiten von gespeicherten Prozeduren in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] angezeigt werden.  
   
--   Vorbereitungen **:**[Sicherheit](#Security)    
+-   **Vorbereitungen:**  [Sicherheit](#Security)  
   
 -   **So zeigen Sie die Abhängigkeiten einer Prozedur an mit:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Systemfunktion: `sys.dm_sql_referencing_entities`  
  Erfordert die CONTROL-Berechtigung für die Entität, auf die verwiesen wird, und die SELECT-Berechtigung für sys.dm_sql_referencing_entities. Wenn es sich bei der Entität, auf die verwiesen wird, um eine Partitionsfunktion handelt, ist die CONTROL-Berechtigung für die Datenbank erforderlich. Standardmäßig wird die SELECT-Berechtigung der public-Rolle erteilt.  
   
@@ -44,15 +43,15 @@ ms.locfileid: "62856503"
  Objektkatalogsicht: `sys.sql_expression_dependencies`  
  Erfordert die VIEW DEFINITION-Berechtigung für die Datenbank und die SELECT-Berechtigung für sys.sql_expression_dependencies für die Datenbank. Standardmäßig wird die SELECT-Berechtigung nur Mitgliedern der festen Datenbankrolle db_owner gewährt. Wenn einem anderen Benutzer die SELECT-Berechtigung und die VIEW DEFINITION-Berechtigung erteilt werden, kann dieser Berechtigte alle Abhängigkeiten in der Datenbank anzeigen.  
   
-##  <a name="Procedures"></a>Anzeigen der Abhängigkeiten einer gespeicherten Prozedur  
+##  <a name="how-to-view-the-dependencies-of-a-stored-procedure"></a><a name="Procedures"></a>Anzeigen der Abhängigkeiten einer gespeicherten Prozedur  
  Sie können eine der folgenden Anwendungen verwenden:  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
- **So zeigen Sie die Abhängigkeiten einer Prozedur in Objekt-Explorer**  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+ **So zeigen Sie die Abhängigkeiten von einer Prozedur im Objekt-Explorer an**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und erweitern Sie dann diese Instanz.  
   
@@ -66,7 +65,7 @@ ms.locfileid: "62856503"
   
 6.  Klicken Sie auf **OK**.  
   
-###  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **So zeigen Sie die Abhängigkeiten einer Prozedur im Abfrage-Editor an**  
   
  Systemfunktion: `sys.dm_sql_referencing_entities`  
@@ -184,8 +183,8 @@ ms.locfileid: "62856503"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Umbenennen einer gespeicherten Prozedur](rename-a-stored-procedure.md)   
- [sys. dm_sql_referencing_entities &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql)   
- [sys. dm_sql_referenced_entities &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql)   
+ [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql)   
+ [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql)  
   
   

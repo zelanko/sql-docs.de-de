@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7c710065bf0a87b5ec3850010344f2ef5114022e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62830561"
 ---
 # <a name="script-task"></a>Skripttask
@@ -66,7 +66,7 @@ ms.locfileid: "62830561"
 ### <a name="configuring-the-script-task-in-the-designer"></a>Konfigurieren des Skripttasks im Designer  
  In der folgenden Tabelle wird das `ScriptTaskLogEntry`-Ereignis beschrieben, das für den Skripttask protokolliert werden kann. Das `ScriptTaskLogEntry` Ereignis wird für die Protokollierung auf der Registerkarte **Details** des Dialog Felds **SSIS-Protokolle konfigurieren** ausgewählt. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md).  
   
-|Protokolleintrag|BESCHREIBUNG|  
+|Protokolleintrag|Beschreibung|  
 |---------------|-----------------|  
 |`ScriptTaskLogEntry`|Gibt die Ergebnisse des Implementierens der Protokollierung innerhalb des Skripts an. Der Task schreibt für jeden Aufruf der `Log`-Methode des `Dts`-Objekts einen Protokolleintrag. Der Task schreibt diese Einträge, wenn der Code ausgeführt wird. Weitere Informationen finden Sie unter [Logging in the Script Task](../extending-packages-scripting/task/logging-in-the-script-task.md).|  
   
@@ -74,7 +74,7 @@ ms.locfileid: "62830561"
   
 -   [Skripttask-Editor &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Skripttask-Editor &#40;Seite „Skript“&#41;](../script-task-editor-script-page.md)  
+-   [Skripttask-Editor &#40;Seite Skript&#41;](../script-task-editor-script-page.md)  
   
 -   [Seite Ausdrücke](../expressions/expressions-page.md)  
   

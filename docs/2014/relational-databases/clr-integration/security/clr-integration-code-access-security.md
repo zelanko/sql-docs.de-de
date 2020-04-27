@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d829ef131bc8772ce2d84391513ffa52b2f2ff1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873738"
 ---
 # <a name="clr-integration-code-access-security"></a>CLR-Integration und Codezugriffssicherheit
@@ -51,71 +51,49 @@ ms.locfileid: "62873738"
  Der benutzerdefinierte Teil der Hostrichtlinie von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] basiert darauf, dass der Assemblybesitzer einen von drei Berechtigungsbuckets für jede Assembly angibt. Weitere Informationen über die unten aufgeführten Sicherheitsberechtigungen finden Sie unter .NET Framework SDK.  
   
 ### <a name="safe"></a>SAFE  
- Nur interne Berechnungen und lokaler Datenzugriff sind zulässig. 
-  `SAFE` ist der restriktivste Berechtigungssatz. Code, der von einer Assembly mit `SAFE`-Berechtigungen ausgeführt wird, hat keinen Zugriff auf externe Systemressourcen wie Dateien, das Netzwerk, Umgebungsvariablen oder die Registrierung.  
+ Nur interne Berechnungen und lokaler Datenzugriff sind zulässig. `SAFE` ist der restriktivste Berechtigungssatz. Code, der von einer Assembly mit `SAFE`-Berechtigungen ausgeführt wird, hat keinen Zugriff auf externe Systemressourcen wie Dateien, das Netzwerk, Umgebungsvariablen oder die Registrierung.  
   
- 
-  `SAFE`-Assemblys verfügen über folgende Berechtigungen und Werte:  
+ `SAFE`-Assemblys verfügen über folgende Berechtigungen und Werte:  
   
 |Berechtigung|Wert(e)/Beschreibung|  
 |----------------|-----------------------------|  
-|`SecurityPermission`|
-  `Execution:` Berechtigung zur Ausführung von verwaltetem Code.|  
-|`SqlClientPermission`|
-  `Context connection = true`, `context connection = yes`: Es kann nur die Kontextverbindung verwendet werden, und die Verbindungszeichenfolge kann nur den Wert "context connection=true" oder "context connection=yes" angeben.<br /><br /> **AllowBlankPassword = false:**  Leere Kenn Wörter sind nicht zulässig.|  
+|`SecurityPermission`|`Execution:` Berechtigung zur Ausführung von verwaltetem Code.|  
+|`SqlClientPermission`|`Context connection = true`, `context connection = yes`: Es kann nur die Kontextverbindung verwendet werden, und die Verbindungszeichenfolge kann nur den Wert "context connection=true" oder "context connection=yes" angeben.<br /><br /> **AllowBlankPassword = false:**  Leere Kenn Wörter sind nicht zulässig.|  
   
 ### <a name="external_access"></a>EXTERNAL_ACCESS  
  EXTERNAL_ACCESS Assemblys verfügen über dieselben `SAFE` Berechtigungen wie Assemblys, mit der zusätzlichen Fähigkeit, auf externe Systemressourcen wie z. b. Dateien, Netzwerke, Umgebungsvariablen und die Registrierung zuzugreifen.  
   
- 
-  `EXTERNAL_ACCESS`-Assemblys verfügen außerdem über folgende Berechtigungen und Werte:  
+ `EXTERNAL_ACCESS`-Assemblys verfügen außerdem über folgende Berechtigungen und Werte:  
   
 |Berechtigung|Wert(e)/Beschreibung|  
 |----------------|-----------------------------|  
 |`DistributedTransactionPermission`|`Unrestricted:`Verteilte Transaktionen sind zulässig.|  
 |`DNSPermission`|`Unrestricted:`Berechtigung zum Anfordern von Informationen von Domänen Namen Servern.|  
-|`EnvironmentPermission`|
-  `Unrestricted:` Der vollständige Zugriff auf System- und Benutzerumgebungsvariablen ist zulässig.|  
-|`EventLogPermission`|
-  `Administer:` Folgende Aktionen sind zulässig: Erstellen einer Ereignisquelle, Lesen vorhandener Protokolle, Löschen von Ereignisquellen oder -protokollen, Reagieren auf Einträge, Löschen eines Ereignisprotokolls, Überwachen von Ereignissen und Zugreifen auf eine Auflistung sämtlicher Ereignisprotokolle.|  
-|`FileIOPermission`|
-  `Unrestricted:` Der vollständige Zugriff auf Dateien und Ordner ist zulässig.|  
-|`KeyContainerPermission`|
-  `Unrestricted:` Der vollständige Zugriff auf Schlüsselcontainer ist zulässig.|  
-|`NetworkInformationPermission`|
-  `Access:` Die Pingausführung ist zulässig.|  
+|`EnvironmentPermission`|`Unrestricted:` Der vollständige Zugriff auf System- und Benutzerumgebungsvariablen ist zulässig.|  
+|`EventLogPermission`|`Administer:` Folgende Aktionen sind zulässig: Erstellen einer Ereignisquelle, Lesen vorhandener Protokolle, Löschen von Ereignisquellen oder -protokollen, Reagieren auf Einträge, Löschen eines Ereignisprotokolls, Überwachen von Ereignissen und Zugreifen auf eine Auflistung sämtlicher Ereignisprotokolle.|  
+|`FileIOPermission`|`Unrestricted:` Der vollständige Zugriff auf Dateien und Ordner ist zulässig.|  
+|`KeyContainerPermission`|`Unrestricted:` Der vollständige Zugriff auf Schlüsselcontainer ist zulässig.|  
+|`NetworkInformationPermission`|`Access:` Die Pingausführung ist zulässig.|  
 |`RegistryPermission`|Lässt Leseberechtigungen für `HKEY_CLASSES_ROOT`, `HKEY_LOCAL_MACHINE`, `HKEY_CURRENT_USER`, `HKEY_CURRENT_CONFIG` und `HKEY_USERS.` zu.|  
-|`SecurityPermission`|
-  `Assertion:` Die Fähigkeit zu bestätigen, dass alle Aufrufer dieses Codes über die erforderliche Berechtigung für den Vorgang verfügen.<br /><br /> 
-  `ControlPrincipal:` Die Fähigkeit zum Verändern des Hauptobjekts.<br /><br /> 
-  `Execution:` Berechtigung zur Ausführung von verwaltetem Code.<br /><br /> 
-  `SerializationFormatter:` Die Fähigkeit zum Bereitstellen von Serialisierungsdiensten.|  
-|**Smtpberechtigung**|
-  `Access:` Ausgehende Verbindungen an den Anschluss 25 des SMTP-Hosts werden zugelassen.|  
-|`SocketPermission`|
-  `Connect:` Ausgehende Verbindungen (alle Ports, alle Protokolle) auf einer Transportadresse werden zugelassen.|  
-|`SqlClientPermission`|
-  `Unrestricted:`Der vollständige Zugriff auf die Datenquelle ist zulässig.|  
-|`StorePermission`|
-  `Unrestricted:` Der vollständige Zugriff auf X.509-Zertifikatspeicher ist zulässig.|  
-|`WebPermission`|
-  `Connect:` Ausgehende Verbindungen an Webressourcen werden zugelassen.|  
+|`SecurityPermission`|`Assertion:` Die Fähigkeit zu bestätigen, dass alle Aufrufer dieses Codes über die erforderliche Berechtigung für den Vorgang verfügen.<br /><br /> `ControlPrincipal:` Die Fähigkeit zum Verändern des Hauptobjekts.<br /><br /> `Execution:` Berechtigung zur Ausführung von verwaltetem Code.<br /><br /> `SerializationFormatter:` Die Fähigkeit zum Bereitstellen von Serialisierungsdiensten.|  
+|**Smtpberechtigung**|`Access:` Ausgehende Verbindungen an den Anschluss 25 des SMTP-Hosts werden zugelassen.|  
+|`SocketPermission`|`Connect:` Ausgehende Verbindungen (alle Ports, alle Protokolle) auf einer Transportadresse werden zugelassen.|  
+|`SqlClientPermission`|`Unrestricted:`Der vollständige Zugriff auf die Datenquelle ist zulässig.|  
+|`StorePermission`|`Unrestricted:` Der vollständige Zugriff auf X.509-Zertifikatspeicher ist zulässig.|  
+|`WebPermission`|`Connect:` Ausgehende Verbindungen an Webressourcen werden zugelassen.|  
   
 ### <a name="unsafe"></a>UNSAFE  
  Unsicher ermöglicht Assemblys den uneingeschränkten Zugriff auf Ressourcen innerhalb und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]außerhalb von. Code, der innerhalb einer `UNSAFE`-Assembly ausgeführt wird, kann außerdem nicht verwalteten Code aufrufen.  
   
- 
-  `UNSAFE`-Assemblys erhalten `FullTrust`.  
+ `UNSAFE`-Assemblys erhalten `FullTrust`.  
   
 > [!IMPORTANT]  
->  
-  `SAFE` ist die empfohlene Berechtigungseinstellung für Assemblys, die Berechnungs- und Datenverwaltungstasks ausführen, ohne auf Ressourcen außerhalb von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zuzugreifen. `EXTERNAL_ACCESS`Assemblys werden standardmäßig [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] als Dienst Konto ausgeführt, und `EXTERNAL_ACCESS` die Ausführungs Berechtigung sollte nur für Anmeldungen erteilt werden, die als Dienst Konto vertrauenswürdig eingestuft werden. Aus Sicht der Sicherheit sind die `EXTERNAL_ACCESS`-Assembly und die `UNSAFE`-Assembly identisch. 
-  `EXTERNAL_ACCESS`-Assemblys bieten gegenüber `UNSAFE`-Assemblys jedoch ein Mehr an Zuverlässigkeit und Stabilität. Durch `UNSAFE` die Angabe von kann der Code in der Assembly ungültige Vorgänge [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]für die ausführen. Weitere Informationen zum Erstellen von CLR-Assemblys in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]finden Sie unter [Managing CLR Integration](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)Assemblys.  
+>  `SAFE` ist die empfohlene Berechtigungseinstellung für Assemblys, die Berechnungs- und Datenverwaltungstasks ausführen, ohne auf Ressourcen außerhalb von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zuzugreifen. `EXTERNAL_ACCESS`Assemblys werden standardmäßig [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] als Dienst Konto ausgeführt, und `EXTERNAL_ACCESS` die Ausführungs Berechtigung sollte nur für Anmeldungen erteilt werden, die als Dienst Konto vertrauenswürdig eingestuft werden. Aus Sicht der Sicherheit sind die `EXTERNAL_ACCESS`-Assembly und die `UNSAFE`-Assembly identisch. `EXTERNAL_ACCESS`-Assemblys bieten gegenüber `UNSAFE`-Assemblys jedoch ein Mehr an Zuverlässigkeit und Stabilität. Durch `UNSAFE` die Angabe von kann der Code in der Assembly ungültige Vorgänge [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]für die ausführen. Weitere Informationen zum Erstellen von CLR-Assemblys in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]finden Sie unter [Managing CLR Integration](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)Assemblys.  
   
 ## <a name="accessing-external-resources"></a>Zugreifen auf externe Ressourcen  
  Wenn ein benutzerdefinierter Typ (UDT), eine gespeicherte Prozedur oder eine andere Konstruktassembly mit dem `SAFE`-Berechtigungssatz registriert wird, kann der verwaltete Code, der in dem Konstrukt ausgeführt wird, nicht auf externe Ressourcen zugreifen. Wenn jedoch entweder der `EXTERNAL_ACCESS`-Berechtigungssatz oder der `UNSAFE`-Berechtigungssatz angegeben wird und der verwaltete Code versucht, auf externe Ressourcen zuzugreifen, wendet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] folgende Regeln an:  
   
-|Wenn|Dann|  
+|Wenn|Then|  
 |--------|----------|  
 |Der Ausführungskontext entspricht einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldung.|Versuche, auf externe Ressourcen zuzugreifen, werden verweigert, und eine Sicherheitsausnahme wird ausgelöst.|  
 |Der Ausführungskontext entspricht einer Windows-Anmeldung, und der Ausführungskontext ist der ursprüngliche Aufrufer.|Der Zugriff auf die externe Ressource erfolgt im Sicherheitskontext des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Dienstkontos.|  
@@ -129,7 +107,7 @@ ms.locfileid: "62873738"
 |-|-|-|-|  
 ||`SAFE`|`EXTERNAL_ACCESS`|`UNSAFE`|  
 |`Code Access Security Permissions`|Nur ausführen|Ausführen + Zugriff auf externe Ressourcen|Uneingeschränkt (einschließlich P/Invoke)|  
-|`Programming model restrictions`|Ja|Ja|Keine Einschränkungen|  
+|`Programming model restrictions`|Ja|Ja|Keine Beschränkungen|  
 |`Verifiability requirement`|Ja|Ja|Nein |  
 |`Local data access`|Ja|Ja|Ja|  
 |`Ability to call native code`|Nein|Nein |Ja|  

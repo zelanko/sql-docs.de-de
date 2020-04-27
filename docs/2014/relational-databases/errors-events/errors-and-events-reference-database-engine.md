@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 537ea93edb56b84be0cbeff5633b943252a98ff8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62870902"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>Fehler- und Ereignisreferenz (Datenbank-Engine)
@@ -37,8 +37,8 @@ Dieser Abschnitt enthält ausgewählte Datenbank-Engine Fehlermeldungen, die wei
   
 |Resource|BESCHREIBUNG|  
 |--------------|-----------------|  
-|[SQL Server Community](https://go.microsoft.com/fwlink/?LinkId=42455)|Diese Site bietet Links zu Newsgroups und Foren, die von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Community überwacht werden. Hier sind auch Community-Informationsquellen aufgeführt, z. B. Blogs und Websites. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Community ist bei Problemen ausgesprochen hilfreich, obwohl die Beantwortung von Fragen nicht unbedingt sichergestellt ist.|  
+|[SQL Server-Community](https://go.microsoft.com/fwlink/?LinkId=42455)|Diese Site bietet Links zu Newsgroups und Foren, die von der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Community überwacht werden. Hier sind auch Community-Informationsquellen aufgeführt, z. B. Blogs und Websites. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Community ist bei Problemen ausgesprochen hilfreich, obwohl die Beantwortung von Fragen nicht unbedingt sichergestellt ist.|  
 |[SQL Server Developer Center-Community](https://go.microsoft.com/fwlink/?LinkId=42456)|Diese Site ist speziell auf Newsgroups, Foren und andere Communityressourcen ausgerichtet, die für Entwickler von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von Interesse sind.|  
-|[Hilfe und Support von Microsoft](https://go.microsoft.com/fwlink/?linkid=16419)|Verwenden Sie diese Website, um sich mit einer Frage an einen Supportmitarbeiter von [!INCLUDE[msCoName](../../includes/msconame-md.md)] zu wenden.|  
+|[Microsoft Hilfe- und Supportcenter](https://go.microsoft.com/fwlink/?linkid=16419)|Verwenden Sie diese Website, um sich mit einer Frage an einen Supportmitarbeiter von [!INCLUDE[msCoName](../../includes/msconame-md.md)] zu wenden.|  
   
   

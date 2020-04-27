@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0b7cef1e64ab9c499c52ac3bbc0364a05bfcc812
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62829482"
 ---
 # <a name="transfer-master-stored-procedures-task"></a>In master gespeicherte Prozeduren übertragen (Task)
@@ -64,7 +64,7 @@ ms.locfileid: "62829482"
   
  Klicken Sie auf eines der folgenden Themen, um Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Editor für den Task "Master gespeicherte Prozeduren übertragen" &#40;&#41;Seite](../general-page-of-integration-services-designers-options.md)  
+-   [Editor für den Task „In 'master' gespeicherte Prozeduren übertragen“ &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Editor für den Task „In master gespeicherte Prozeduren übertragen“ &#40;Seite „Gespeicherte Prozeduren“&#41;](../transfer-master-stored-procedures-task-editor-stored-procedures-page.md)  
   
@@ -83,7 +83,7 @@ ms.locfileid: "62829482"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Objekte übertragen (Task)](transfer-sql-server-objects-task.md)   
- [Integration Services-Tasks](integration-services-tasks.md)   
+ [Aufgaben Integration Services](integration-services-tasks.md)   
  [Ablaufsteuerung](control-flow.md)  
   
   

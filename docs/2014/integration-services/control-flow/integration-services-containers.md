@@ -17,14 +17,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 172aa2a77293dd7e9a9ee50bfe0002a71c59cbb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831258"
 ---
 # <a name="integration-services-containers"></a>SQL Server Integration Services-Container
-  Container sind Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , die die Struktur für Pakete und Dienste für Aufgaben bereitstellen. Sie unterstützen das Wiederholen von Ablaufsteuerungen in Paketen und sie gruppieren Tasks und Container zu sinnvollen Arbeitseinheiten. Container können neben Tasks andere Container einschließen.  
+  Bei Containern handelt es sich um Objekte in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], die eine Struktur für Pakete, Dienste sowie Tasks bereitstellen. Sie unterstützen das Wiederholen von Ablaufsteuerungen in Paketen und sie gruppieren Tasks und Container zu sinnvollen Arbeitseinheiten. Container können neben Tasks andere Container einschließen.  
   
  Container werden von Paketen für folgende Zwecke verwendet:  
   
@@ -35,8 +35,7 @@ ms.locfileid: "62831258"
 -   Gruppieren von Tasks und Containern, die als Einheit erfolgreich ausgeführt werden oder einen Fehler erzeugen müssen. Beispielsweise kann ein Paket Tasks gruppieren, mit denen Zeilen in einer Datenbanktabelle gelöscht und hinzugefügt werden, und anschließend einen Commit oder ein Rollback für alle Tasks ausführen, wenn bei einem Task ein Fehler auftritt.  
   
 ## <a name="container-types"></a>Containertypen  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt vier verschiedene Containertypen zum Erstellen von Paketen bereit. In der folgenden Tabelle sind die Containertypen aufgeführt.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt vier verschiedene Containertypen zum Erstellen von Paketen bereit. In der folgenden Tabelle sind die Containertypen aufgeführt.  
   
 |Container|BESCHREIBUNG|  
 |---------------|-----------------|  

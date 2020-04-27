@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ab3cdf0079d0c01d95b73339e1fce8960658f93a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62836334"
 ---
 # <a name="package-properties-dialog-box"></a>Paketeigenschaften (Dialogfeld)
@@ -31,7 +31,7 @@ ms.locfileid: "62836334"
   
 -   [Konfigurieren der Optionen](#options)  
   
-##  <a name="open_dialog"></a> Öffnen des Dialogfelds "Paketeigenschaften"  
+##  <a name="open-the-package-properties-dialog-box"></a><a name="open_dialog"></a> Öffnen des Dialogfelds "Paketeigenschaften"  
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung zum [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server her.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62836334"
   
 5.  Klicken Sie mit der rechten Maustaste auf das Paket, und wählen Sie **Eigenschaften**aus.  
   
-##  <a name="options"></a> Konfigurieren der Optionen  
+##  <a name="configure-the-options"></a><a name="options"></a> Konfigurieren der Optionen  
  Auf der Seite **Allgemein** können Sie die Eigenschaften des ausgewählten Pakets anzeigen.  
   
  Alle Eigenschaften auf der Seite **Allgemein** sind schreibgeschützt.  
@@ -57,7 +57,7 @@ ms.locfileid: "62836334"
  Listet die ID des Pakets auf.  
   
  **Einstiegspunkt**  
- Der Wert `True` gibt an, dass das Paket direkt gestartet wird. Der Wert `False` gibt an, dass das Paket von einem anderen Paket mit dem Task "Paket ausführen" gestartet wird. Standardwert: `True`.  
+ Der Wert `True` gibt an, dass das Paket direkt gestartet wird. Der Wert `False` gibt an, dass das Paket von einem anderen Paket mit dem Task "Paket ausführen" gestartet wird. Der Standardwert ist `True`.  
   
  Sie können diese Eigenschaft in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] für das übergeordnete Paket und die untergeordneten Pakete festlegen, indem Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Paket und anschließend auf **Einstiegspunktpaket**klicken.  
   

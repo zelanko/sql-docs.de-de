@@ -11,17 +11,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 441fbef735366b63ad56fc6652f79c977378ba2c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62843716"
 ---
 # <a name="search-sql-server"></a>Suche (SQL Server)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]stellt Suchfunktionen für Text und Dokumente bereit, die über die Funktionalität des [!INCLUDE[tsql](../includes/tsql-md.md)] `LIKE` -Schlüssel Worts hinausgehen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Volltextsuche](../relational-databases/search/full-text-search.md)  
+ [Voll Text Suche](../relational-databases/search/full-text-search.md)  
  Identifiziert Texte oder Dokumente, die bestimmte Wörter oder Ausdrücke enthalten und zusätzliche Suchbedingungen wie Nähe von Suchbegriffen erfüllen.  
   
  [SQL Server der semantischen Suche &#40;&#41;](../relational-databases/search/semantic-search-sql-server.md)  

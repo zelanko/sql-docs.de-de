@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eaefd6e7ae4748505db9bd84601de6166f9d5f98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62830126"
 ---
 # <a name="transfer-error-messages-task"></a>Fehlermeldungen übertragen (Task)
@@ -65,7 +65,7 @@ ms.locfileid: "62830126"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Editor für den Task Fehlermeldungen übertragen &#40;Seite Allgemein&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor für den Task „Fehlermeldungen übertragen“ &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)  
   
 -   [Editor für den Task „Fehlermeldungen übertragen“ &#40;Seite „Nachrichten“&#41;](../transfer-error-messages-task-editor-messages-page.md)  
   
@@ -81,7 +81,7 @@ ms.locfileid: "62830126"
 -   [Festlegen der Eigenschaften eines Tasks oder Containers](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Integration Services-Tasks](integration-services-tasks.md)   
+ [Aufgaben Integration Services](integration-services-tasks.md)   
  [Ablaufsteuerung](control-flow.md)  
   
   

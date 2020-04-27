@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 98bfedce41d05a613fe47941b86cfa3fa176ee5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62869177"
 ---
 # <a name="mssqlserver_21879"></a>MSSQLSERVER_21879
@@ -33,8 +33,7 @@ ms.locfileid: "62869177"
 |Meldungstext|Der umgeleitete Server '%s' kann nicht nach dem ursprünglichen Verleger '%s' und der Verlegerdatenbank '%s' abgefragt werden, um den Namen des Remoteservers zu bestimmen; Fehler %d, Fehlermeldung '%s.'|  
   
 ## <a name="explanation"></a>Erklärung  
- 
-  `sp_validate_redirected_publisher` verwendet einen temporären Verbindungsserver, der erstellt wird, um eine Verbindung mit dem umgeleiteten Verleger herzustellen und den Namen des Remoteservers zu ermitteln. Fehler 21879 wird zurückgegeben, wenn die Verbindungsserverabfrage fehlschlägt. In dem Aufruf, mit dem der Remoteservername angefordert wird, wird der temporäre Verbindungsserver in der Regel zum ersten Mal verwendet. Wenn Verbindungsprobleme vorliegen, ist es daher wahrscheinlich, dass diese zuerst in diesem Aufruf augenscheinlich werden. Dieser Remoteaufruf führt auf dem Remoteserver einfach select `@@servername` aus.  
+ `sp_validate_redirected_publisher` verwendet einen temporären Verbindungsserver, der erstellt wird, um eine Verbindung mit dem umgeleiteten Verleger herzustellen und den Namen des Remoteservers zu ermitteln. Fehler 21879 wird zurückgegeben, wenn die Verbindungsserverabfrage fehlschlägt. In dem Aufruf, mit dem der Remoteservername angefordert wird, wird der temporäre Verbindungsserver in der Regel zum ersten Mal verwendet. Wenn Verbindungsprobleme vorliegen, ist es daher wahrscheinlich, dass diese zuerst in diesem Aufruf augenscheinlich werden. Dieser Remoteaufruf führt auf dem Remoteserver einfach select `@@servername` aus.  
   
  Für den Verbindungsserver, der zum Abfragen des umgeleiteten Verlegers verwendet wird, werden der Sicherheitsmodus, die Anmeldung und das Kennwort verwendet, die beim Aufruf von `sp_adddistpublisher` für den ursprünglichen Verleger angegeben wurden.  
   

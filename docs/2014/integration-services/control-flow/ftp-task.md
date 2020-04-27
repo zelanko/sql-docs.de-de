@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fcc071c10a2daa31190727dfc9f3cbe617bdcb66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62831525"
 ---
 # <a name="ftp-task"></a>FTP-Task
@@ -48,7 +48,7 @@ ms.locfileid: "62831525"
 ## <a name="predefined-ftp-operations"></a>Vordefinierte FTP-Vorgänge  
  Der FTP-Task schließt vordefinierte Vorgänge ein. In der folgenden Tabelle werden diese Vorgänge beschrieben.  
   
-|Vorgang|Beschreibung|  
+|Vorgang|BESCHREIBUNG|  
 |---------------|-----------------|  
 |Dateien senden|Sendet eine Datei vom lokalen Computer an den FTP-Server.|  
 |Dateien empfangen|Speichert eine Datei vom FTP-Server auf dem lokalen Computer.|  
@@ -62,7 +62,7 @@ ms.locfileid: "62831525"
 ## <a name="custom-log-entries-available-on-the-ftp-task"></a>Verfügbare benutzerdefinierte Protokolleinträge für den FTP-Task  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den FTP-Task aufgelistet. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md).  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`FTPConnectingToServer`|Zeigt an, dass mit dem Task eine Verbindung zum FTP-Server initiiert wurde.|  
 |`FTPOperation`|Berichtet den Beginn und Typ des vom Task ausgeführten FTP-Vorgangs.|  
@@ -77,7 +77,7 @@ ms.locfileid: "62831525"
 ## <a name="see-also"></a>Weitere Informationen  
  [Editor für den FTP-Task &#40;Seite "Allgemein"&#41;](../general-page-of-integration-services-designers-options.md)   
  [FTP-Task-Editor &#40;Seite "Dateiübertragung"&#41;](../ftp-task-editor-file-transfer-page.md)   
- [Integration Services-Tasks](integration-services-tasks.md)   
+ [Aufgaben Integration Services](integration-services-tasks.md)   
  [Ablaufsteuerung](control-flow.md)  
   
   

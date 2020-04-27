@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12340ae2ba13bf6219cf9940a56eeaa8b995f3e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62829493"
 ---
 # <a name="wmi-data-reader-task"></a>WMI-Datenleser (Task)
@@ -74,7 +74,7 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="custom-logging-messages-available-on-the-wmi-data-reader-task"></a>Verfügbare benutzerdefinierte Meldungen für die Protokollierung für den Task 'WMI-Datenleser'  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge für den Task WMI-Datenleser aufgelistet. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md).  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`WMIDataReaderGettingWMIData`|Zeigt an, dass das Lesen der WMI-Daten begonnen wurde.|  
 |`WMIDataReaderOperation`|Berichtet die vom Task ausgeführte WQL-Abfrage.|  
@@ -84,7 +84,7 @@ Select * FROM Win32_QuickFixEngineering
   
  Klicken Sie auf eines der folgenden Themen, um Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Editor für den Task ' WMI-Daten Leser ' &#40;Seite WMI-Optionen&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
+-   [Editor für den Task „WMI-Datenleser“ &#40;Seite WMI-Optionen&#41;](../wmi-data-reader-task-editor-wmi-options-page.md)  
   
 -   [Seite Ausdrücke](../expressions/expressions-page.md)  
   
@@ -98,7 +98,7 @@ Select * FROM Win32_QuickFixEngineering
 -   [Festlegen der Eigenschaften eines Tasks oder Containers](../set-the-properties-of-a-task-or-container.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Integration Services-Tasks](integration-services-tasks.md)   
+ [Aufgaben Integration Services](integration-services-tasks.md)   
  [Ablaufsteuerung](control-flow.md)  
   
   

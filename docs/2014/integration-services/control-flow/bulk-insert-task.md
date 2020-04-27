@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9b5da9ff28dc658f870033a02fe88b14ea442c51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832872"
 ---
 # <a name="bulk-insert-task"></a>Masseneinfügungstask
@@ -89,11 +89,11 @@ ms.locfileid: "62832872"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Massen Einfügungs Task-Editor &#40;Seite Allgemein&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Masseneinfügungstask-Editor &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Massen Einfügungs Task-Editor &#40;Verbindungs Seite&#41;](../bulk-insert-task-editor-connection-page.md)  
+-   [Masseneinfügungstask-Editor &#40;Seite „Verbindung“&#41;](../bulk-insert-task-editor-connection-page.md)  
   
--   [Massen Einfügungs Task-Editor &#40;Options Seite&#41;](../bulk-insert-task-editor-options-page.md)  
+-   [Masseneinfügungstask-Editor &#40;Seite „Optionen“&#41;](../bulk-insert-task-editor-options-page.md)  
   
 -   [Seite Ausdrücke](../expressions/expressions-page.md)  
   

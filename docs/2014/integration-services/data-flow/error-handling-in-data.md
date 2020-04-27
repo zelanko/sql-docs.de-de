@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b5a98877e04a077bf1bb1c0c527500f3102b862
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62827145"
 ---
 # <a name="error-handling-in-data"></a>Fehlerbehandlung in Daten
@@ -59,7 +59,7 @@ ms.locfileid: "62827145"
   
  Sie können konfigurieren, wie Quellen, Transformationen und Ziele Fehler und das Abschneiden von Daten behandeln. In der folgenden Tabelle werden diese Optionen beschrieben.  
   
-|Option|BESCHREIBUNG|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |Fehler bei Komponente|Bei einem Fehler oder beim Abschneiden von Daten wird der Datenflusstask nicht ausgeführt. Dies ist die Standardoption für einen Fehler und das Abschneiden von Daten.|  
 |Fehler ignorieren|Der Fehler oder das Abschneiden von Daten wird ignoriert, und die Datenzeile wird an die Ausgabe der Transformation oder Quelle weitergeleitet.|  
@@ -78,7 +78,7 @@ ms.locfileid: "62827145"
  [Datenfluss](data-flow.md)   
  [Transformieren von Daten mit Transformationen](transformations/transform-data-with-transformations.md)   
  [Verbinden von Komponenten mit Pfaden](../connect-components-with-paths.md)   
- [Datenflusstask](../control-flow/data-flow-task.md)   
+ [Datenfluss Task](../control-flow/data-flow-task.md)   
  [Datenfluss](data-flow.md)  
   
   

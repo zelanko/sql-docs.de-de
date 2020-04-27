@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5941b15c0aea7319d132e05b902133d3d8b986fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62823697"
 ---
 # <a name="use-custom-reports-with-object-explorer-node-properties"></a>Verwenden benutzerdefinierter Berichte mit Eigenschaften von Objekt-Explorer-Knoten
@@ -37,7 +37,7 @@ ms.locfileid: "62823697"
 ## <a name="object-explorer-node-report-parameters-example"></a>Berichtsparameter für Objekt-Explorer-Knoten (Beispiel)  
  Gehen Sie zum Ausführen dieses Beispiels wie folgt vor:  
   
- **So zeigen Sie die Berichts Parameterwerte für einen Knoten in Objekt-Explorer an**  
+ **So zeigen Sie die Berichtsparameterwerte für einen Knoten im Objekt-Explorer an**  
   
 1.  Kopieren Sie den folgenden Beispielcode in eine neue Textdatei, und benennen Sie die Datei mit einer RDL-Erweiterung.  
   

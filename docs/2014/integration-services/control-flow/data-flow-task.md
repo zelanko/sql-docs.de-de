@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eab0ef5519aea7f563104d61146ed5f441d15981
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62832453"
 ---
 # <a name="data-flow-task"></a>Datenflusstask
@@ -44,9 +44,7 @@ ms.locfileid: "62832453"
  ![Datenflüsse](../media/mw-dts-09.gif "Datenflüsse")  
   
 ## <a name="log-entries"></a>Protokolleinträge  
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt für alle Tasks einen Satz Protokollereignisse zur Verfügung. 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] für viele Tasks benutzerdefinierte Protokolleinträge bereit. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md). Der Datenflusstask enthält die folgenden benutzerdefinierten Protokolleinträge:  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt für alle Tasks einen Satz Protokollereignisse zur Verfügung. [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] für viele Tasks benutzerdefinierte Protokolleinträge bereit. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md). Der Datenflusstask enthält die folgenden benutzerdefinierten Protokolleinträge:  
   
 |Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
@@ -90,15 +88,15 @@ ms.locfileid: "62832453"
   
  Die folgende Tabelle enthält z. B. die als Spalten analysierte Meldung "Die Zeilen wurden als Eingabe für eine Datenflusskomponente bereitgestellt. :  : 1185 : Ausgabe der OLE DB-Quelle : 1180 : Sort : 1181 : Sortiereingabe : 76". Die Meldung wurde vom `OnPipelineRowsSent`-Ereignis geschrieben, als Zeilen von der OLE DB-Quelle an die Transformation zum Sortieren gesendet wurden.  
   
-|Column|BESCHREIBUNG|value|  
+|Column|BESCHREIBUNG|Wert|  
 |------------|-----------------|-----------|  
-|**Pathid**|Der Wert der `ID`-Eigenschaft des Pfads zwischen der OLE DB-Quelle und der Transformation zum Sortieren.|1185|  
+|**PathID**|Der Wert der `ID`-Eigenschaft des Pfads zwischen der OLE DB-Quelle und der Transformation zum Sortieren.|1185|  
 |**PathName**|Der Wert der `Name`-Eigenschaft des Pfads.|Ausgabe der OLE DB-Quelle|  
 |**ComponentID**|Der Wert der- `ID` Eigenschaft der Transformation zum Sortieren.|1180|  
 |**ComponentName**|Der Wert der `Name`-Eigenschaft der Transformation zum Sortieren.|Sortieren|  
-|**Inputid**|Der Wert der `ID`-Eigenschaft der Eingabe der Transformation zum Sortieren.|1181|  
+|**InputID**|Der Wert der `ID`-Eigenschaft der Eingabe der Transformation zum Sortieren.|1181|  
 |**InputName**|Der Wert der `Name`-Eigenschaft der Eingabe der Transformation zum Sortieren.|Sortiereingabe|  
-|**Rowssent**|Die Anzahl von Zeilen, die an die Eingabe der Transformation zum Sortieren gesendet wurden.|76|  
+|**RowsSent**|Die Anzahl von Zeilen, die an die Eingabe der Transformation zum Sortieren gesendet wurden.|76|  
   
 ## <a name="configuration-of-the-data-flow-task"></a>Konfiguration des Datenflusstasks  
  Eigenschaften können Sie im Fenster **Eigenschaften** oder programmgesteuert festlegen.  

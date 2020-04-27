@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c6c7ecd59bcf3a3ece0d61ecbb428bb39a80068f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62833745"
 ---
 # <a name="odbc-connection-manager"></a>ODBC-Verbindungs-Manager
@@ -42,11 +42,11 @@ ms.locfileid: "62833745"
   
  Klicken Sie auf das folgende Thema, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [ODBC-Verbindungs-Manager – Referenz zur Benutzeroberfläche](../odbc-connection-manager-ui-reference.md)  
+-   [ODBC-Verbindungs-Manager: Referenz zur Benutzeroberfläche](../odbc-connection-manager-ui-reference.md)  
   
  Weitere Informationen zum programmgesteuerten Konfigurieren eines Verbindungs-Managers finden Sie unter <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager> und [Programmgesteuertes Hinzufügen von Verbindungen](../building-packages-programmatically/adding-connections-programmatically.md)festgelegt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Integration Services-Verbindungen &#40;SSIS&#41;](integration-services-ssis-connections.md)  
+ [Integration Services (SSIS) Connections (Integration Services-Verbindungen (SSIS))](integration-services-ssis-connections.md)  
   
   

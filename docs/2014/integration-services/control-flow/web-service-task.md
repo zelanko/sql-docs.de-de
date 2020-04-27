@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f21a5f938b2dcd7b90fa71ab946d2986b0633987
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62829404"
 ---
 # <a name="web-service-task"></a>Webdienst (Task)
@@ -53,7 +53,7 @@ ms.locfileid: "62829404"
 ## <a name="custom-logging-messages-available-on-the-web-service-task"></a>Verfügbare benutzerdefinierte Meldungen für die Protokollierung für den Task 'Webdienst'  
  In der folgenden Tabelle werden die benutzerdefinierten Protokolleinträge aufgelistet, die für den Task 'Webdienst' aktiviert werden können. Weitere Informationen finden Sie unter [Integration Services-Protokollierung &#40;SSIS&#41;](../performance/integration-services-ssis-logging.md) und [Benutzerdefinierte Meldungen für die Protokollierung](../custom-messages-for-logging.md).  
   
-|Protokolleintrag|Beschreibung|  
+|Protokolleintrag|BESCHREIBUNG|  
 |---------------|-----------------|  
 |`WSTaskBegin`|Der Zugriff auf einen Webdienst wurde begonnen.|  
 |`WSTaskEnd`|Eine Webdienstmethode wurde beendet.|  
@@ -64,11 +64,11 @@ ms.locfileid: "62829404"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Editor für den Task ' Webdienst ' &#40;Seite Allgemein&#41;](../general-page-of-integration-services-designers-options.md)  
+-   [Editor für den Task „Webdienst“ &#40;Seite „Allgemein“&#41;](../general-page-of-integration-services-designers-options.md)  
   
--   [Editor für den Task ' Webdienst ' &#40;Eingabe Seite&#41;](../web-service-task-editor-input-page.md)  
+-   [Editor für den Task „Webdienst“ &#40;Seite „Eingabe“&#41;](../web-service-task-editor-input-page.md)  
   
--   [Editor für den Task ' Webdienst ' &#40;Ausgabe Seite&#41;](../web-service-task-editor-output-page.md)  
+-   [Editor für den Task „Webdienst“ &#40;Seite „Ausgabe“&#41;](../web-service-task-editor-output-page.md)  
   
 -   [Seite Ausdrücke](../expressions/expressions-page.md)  
   

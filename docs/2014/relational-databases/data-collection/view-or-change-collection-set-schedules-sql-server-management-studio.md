@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 348a50b1f199fa28b9bc67718b47ee4819bdde87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873492"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Anzeigen oder Ändern von Sammlungssatz-Zeitplänen (SQL Server Management Studio)
@@ -99,7 +99,7 @@ ms.locfileid: "62873492"
   
 6.  Klicken Sie auf **OK** , um die Änderungen zu speichern und das Dialogfeld **Eigenschaften für Datensammlungssätze** zu schließen.  
   
-####  <a name="CollectionSet"></a> Eigenschaften für Datensammlungssätze (Dialogfeld)  
+####  <a name="data-collection-set-properties-dialog-box"></a><a name="CollectionSet"></a> Eigenschaften für Datensammlungssätze (Dialogfeld)  
  **Seite Allgemein**  
   
  Auf dieser Seite können Sie konfigurieren, wie Daten aufgelistet und hochgeladen werden. Zudem können Sie Zeitpläne und Aufbewahrungsdauern für Daten im Verwaltungs-Data Warehouse konfigurieren. Darüber hinaus stehen auf dieser Seite Informationen zu Sammlungssätzen, z. B. Sammlertypen und Sammlungshäufigkeiten, sowie die für einen Sammlungssatz verwendeten Eingabeparameter zur Verfügung.  

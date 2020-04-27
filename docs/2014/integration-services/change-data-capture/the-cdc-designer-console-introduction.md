@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fba97c2e348b238702206ebf194c2390f155ad16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62834642"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Einführung in die CDC Designer Console
@@ -37,7 +37,7 @@ ms.locfileid: "62834642"
 ## <a name="database-prerequisites"></a>Erforderliche Komponenten für die Datenbank  
  Bei der Verwendung des Change Data Capture Designer für Oracle von Attunity arbeiten Sie mit einer Oracle-Datenbank. Der Change Data Capture Designer für Oracle von Attunity unterstützt die folgenden Versionen:  
   
- **Oracle-Datenbank**  
+ **Oracle Database**  
   
 -   Oracle-Datenbank 10g Version 2: 10.2.0.1 bis 10.2.0.5 (Patchset ab April 2010)  
   

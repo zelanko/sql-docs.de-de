@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e0e6d6d3ad57726c42556c9ecc2662edce102e57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62844272"
 ---
 # <a name="new-or-edit-server-registration-general-tab-reporting-services"></a>Neue Serverregistrierung und Serverregistrierung bearbeiten (Registerkarte Allgemein) (Reporting Services)
@@ -26,7 +26,7 @@ ms.locfileid: "62844272"
   
 ## <a name="options"></a>Tastatur  
  **Servertyp**  
- Wenn ein Server über registrierte Server registriert ist, ist das Feld **Servertyp** schreibgeschützt und entspricht dem im Bereich **registrierte Server** angezeigten Servertyp. Um einen anderen Servertyp zu registrieren, klicken Sie auf der Symbolleiste **Registrierte Server** auf den gewünschten Server, bevor Sie mit der Registrierung eines neuen Servers beginnen.  
+ Wenn Sie einen Server über Registrierte Server registrieren, ist das Feld **Servertyp** schreibgeschützt, wobei der Feldeintrag mit dem im Bereich **Registrierte Server** angezeigten Servertyp übereinstimmt. Um einen anderen Servertyp zu registrieren, klicken Sie auf der Symbolleiste **Registrierte Server** auf den gewünschten Server, bevor Sie mit der Registrierung eines neuen Servers beginnen.  
   
  **Servername**  
  Geben Sie die Berichtsserverinstanz an, zu der eine Verbindung hergestellt werden soll. In [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]können Sie über den Instanznamen des Berichtsservers auf einen Berichtsserver zugreifen. Für jede SQL Server-Instanz, die Sie installieren, ist eine Berichtsserverinstanz zulässig. Wenn Sie die Standardinstanz verwenden, geben Sie den Namen der SQL Server-Instanz ein. Wenn Sie eine benannte Instanz verwenden, geben Sie zum Verbinden mit dem Berichtsserver die benannte Instanz im Format MSSQL$InstanceName ein.  
@@ -37,23 +37,23 @@ ms.locfileid: "62844272"
  **Windows-Authentifizierungsmodus (Windows-Authentifizierung)**  
  Stellt die Verbindung zur Berichtsserverinstanz mithilfe der Anmeldeinformationen von [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows her.  
   
- **Standardauthentifizierung**  
+ **Standard Authentifizierung**  
  Stellen Sie die Verbindung mit **Standardauthentifizierung** her, wenn die Reporting Services-Installation für die Verwendung der Standardauthentifizierung konfiguriert ist.  
   
- **Formular Authentifizierung**  
+ **Formularauthentifizierung**  
  Stellen Sie die Verbindung mit **Formularauthentifizierung** her, wenn die Reporting Services-Installation für die Verwendung der Formularauthentifizierung konfiguriert ist.  
   
- **Benutzer Name**  
+ **Benutzername**  
  Geben Sie den Benutzernamen ein, der für die Verbindung verwendet werden soll. Diese Option ist nur verfügbar, wenn Sie **Standardauthentifizierung** oder **Formularauthentifizierung**ausgewählt haben.  
   
  **Kennwort**  
- Geben Sie das Kennwort für den Benutzernamen ein, Diese Option kann nur bearbeitet werden, wenn Sie **Standardauthentifizierung** oder **Formularauthentifizierung**ausgewählt haben.  
+ Geben Sie das Kennwort für den Benutzernamen ein. Diese Option kann nur bearbeitet werden, wenn Sie **Standardauthentifizierung** oder **Formularauthentifizierung**ausgewählt haben.  
   
  **Kennwort speichern**  
  Speichert das eingegebene Kennwort. Diese Option ist nur verfügbar, wenn Sie **Standardauthentifizierung** oder **Formularauthentifizierung**ausgewählt haben.  
   
 > [!NOTE]  
->  Wenn Sie das Kennwort gespeichert haben und es nicht mehr speichern möchten, deaktivieren Sie dieses Kontrollkästchen, und klicken Sie dann auf **Speichern**.  
+>   Wenn Sie das Kennwort gespeichert haben und es für die Zukunft nicht mehr speichern möchten, deaktivieren Sie das Kontrollkästchen, und klicken Sie dann auf **Speichern**.  
   
  **Name des registrierten Servers**  
  Der Name, der unter Registrierte Server angezeigt werden soll. Dieser Name muss mit dem Eintrag im Feld **Servername** nicht übereinstimmen.  
@@ -64,7 +64,7 @@ ms.locfileid: "62844272"
  **Test**  
  Klicken Sie hier, um die Verbindung mit dem unter **Servername**ausgewählten Server zu testen.  
   
- **Sicher**  
+ **Speichern**  
  Klicken Sie hier, um die Einstellungen des registrierten Servers zu speichern.  
   
   
