@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d2d0e73d1d9a4058ff63320552604b2bfa1bca8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63249403"
 ---
 # <a name="customizing-and-processing-the-forecasting-model-intermediate-data-mining-tutorial"></a>Anpassen und Verarbeiten des Forecasting-Modells (Data Mining-Lernprogramm für Fortgeschrittene)
@@ -88,7 +88,7 @@ ms.locfileid: "63249403"
   
 #### <a name="to-process-the-forecasting-model"></a>So verarbeiten Sie das Prognosemodell  
   
-1.  Wählen Sie im Menü **Mining Modell** von die Option [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] **Mining Struktur und alle Modelle verarbeiten**aus.  
+1.  Klicken Sie im Menü **Miningmodell** von [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf **Miningstruktur und alle Modelle verarbeiten**.  
   
 2.  Klicken Sie in der Meldung mit der Frage, ob Sie das Projekt erstellen und bereitstellen möchten, auf **Ja**.  
   
@@ -106,6 +106,6 @@ ms.locfileid: "63249403"
 ## <a name="see-also"></a>Weitere Informationen  
  [Technische Referenz für den Microsoft Time Series-Algorithmus](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Microsoft Time Series-Algorithmus](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Verarbeitungsanforderungen und Überlegungen &#40;Data Mining-&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Anforderungen und Überlegungen zur Verarbeitung &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: bf77e36824c05a0f07bc789c380cffbc1518669d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63187827"
 ---
 # <a name="startmode-property-sqlservice-class"></a>StartMode-Eigenschaft (SqlService-Klasse)
@@ -37,8 +37,8 @@ object
 ```  
   
 ## <a name="parts"></a>Bestandteile  
- *Objekt*  
- Ein [SqlService-Klassen](sqlservice-class.md) Objekt, das den Dienst darstellt.  
+ *object*  
+ Ein [SqlService-Klassenobjekt](sqlservice-class.md) , das den Dienst darstellt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein uint32-Wert, der den Modus des Diensts angibt.  
@@ -51,16 +51,16 @@ object
  System  
  Wert = 1. Der Dienst wurde durch die `IoInitSystem`-Methode gestartet. Diese Option ist nur für Treiberdienste gültig.  
   
- Automatisch  
+ Automatische  
  Wert = 2. Der Dienst soll während des Systemstarts automatisch vom Dienstkontroll-Manager gestartet werden.  
   
  Manuell  
  Wert = 3. Der Dienst soll vom Computer-manager gestartet werden, wenn ein Prozess die `StartService`-Methode aufruft.  
   
- Disabled  
+ Deaktiviert  
  Wert = 4. Der Dienst kann nicht gestartet werden.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Starten und Beenden von Diensten](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

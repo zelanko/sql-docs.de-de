@@ -1,5 +1,5 @@
 ---
-title: Ausführen von asynchronen Vorgängen | Microsoft-Dokumentation
+title: Ausführen asynchroner Vorgänge | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -20,14 +20,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 87d961e9613aa390b3001219f88808c8d4ac6ed7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63246148"
 ---
 # <a name="performing-asynchronous-operations"></a>Ausführen asynchroner Vorgänge
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ermöglicht es Anwendungen, asynchrone Datenbankvorgänge auszuführen. Die asynchrone Verarbeitung ermöglicht es Methoden, Rückgaben unverzüglich zu übermitteln, ohne den aufrufenden Thread zu blockieren. Dadurch kann ein Großteil der Leistungsfähigkeit und Flexibilität des Multithreadings genutzt werden, ohne dass Entwickler Threads explizit erstellen oder die Synchronisation durchführen müssen. Anwendungen fordern die asynchrone Verarbeitung an, wenn sie eine Datenbankverbindung oder das Ergebnis einer Befehlsausführung initialisieren.  
   
 ## <a name="opening-and-closing-a-database-connection"></a>Öffnen und Schließen einer Datenbankverbindung  
@@ -35,7 +34,7 @@ ms.locfileid: "63246148"
   
  Außerdem wurde dem DBPROPSET_SQLSERVERROWSET-Eigenschaftensatz die SSPROP_ISSAsynchStatus-Eigenschaft hinzugefügt. Anbieter, die die **ISSAsynchStatus**-Schnittstelle unterstützen, müssen diese Eigenschaft mit dem Wert VARIANT_TRUE implementieren.  
   
- **IDBAsynchStatus:: Abort** oder [ISSAsynchStatus:: Abort](../../native-client-ole-db-interfaces/issasynchstatus-abort-ole-db.md) kann aufgerufen werden, um den asynchronen **Initialize** -Aufruf abzubrechen. Der Consumer muss die asynchrone Datenquellinitialisierung explizit anfordern. Andernfalls erfolgt die Rückgabe durch **IDBInitialize::Initialize** erst, wenn das Datenquellenobjekt vollständig initialisiert wurde.  
+ **IDBAsynchStatus::Abort** oder [ISSAsynchStatus::Abort](../../native-client-ole-db-interfaces/issasynchstatus-abort-ole-db.md) kann aufgerufen werden, um den asynchronen Aufruf von **Initialize** abzubrechen. Der Consumer muss die asynchrone Datenquellinitialisierung explizit anfordern. Andernfalls erfolgt die Rückgabe durch **IDBInitialize::Initialize** erst, wenn das Datenquellenobjekt vollständig initialisiert wurde.  
   
 > [!NOTE]  
 >  Datenquellen Objekte, die für das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Verbindungspooling verwendet werden, können die **ISSAsynchStatus** -Schnittstelle im Native Client-OLE DB Anbieter nicht abrufen. Die **ISSAsynchStatus**-Schnittstelle wird nicht für Datenquellenobjekte aus dem Pool verfügbar gemacht.  
@@ -64,7 +63,7 @@ ms.locfileid: "63246148"
  Wenn die Ausführung des Befehls abgeschlossen ist, kann **IMultipleResults** wie gewohnt verwendet werden. Es gibt jedoch eine Ausnahme für den synchronen Fall: Möglicherweise wird DB_S_ASYNCHRONOUS zurückgegeben; in diesem Fall kann mit **IDBAsynchStatus** oder **ISSAsynchStatus** ermittelt werden, wann der Vorgang abgeschlossen ist.  
   
 ## <a name="examples"></a>Beispiele  
- Im folgenden Beispiel ruft die Anwendung eine nicht blockierende Methode auf, führt andere Verarbeitungsvorgänge aus und kehrt dann zur Verarbeitung der Ergebnisse zurück. **ISSAsynchStatus:: WaitForAsynchCompletion** wartet auf das interne Ereignis Objekt, bis der asynchron ausgeführte Vorgang abgeschlossen ist oder die von *dwMilisecTimeOut* angegebene Zeitspanne überschritten wird.  
+ Im folgenden Beispiel ruft die Anwendung eine nicht blockierende Methode auf, führt andere Verarbeitungsvorgänge aus und kehrt dann zur Verarbeitung der Ergebnisse zurück. **ISSAsynchStatus::WaitForAsynchCompletion** wartet auf das interne Ereignisobjekt, bis der asynchrone Vorgang ausgeführt wurde oder die durch *dwMilisecTimeOut* angegebene Zeit verstrichen ist.  
   
 ```  
 // Set the DBPROPVAL_ASYNCH_INITIALIZE bit in the   
@@ -105,7 +104,7 @@ if (hr == DB_S_ASYNCHRONOUS)
 }  
 ```  
   
- **ISSAsynchStatus:: WaitForAsynchCompletion** wartet auf das interne Ereignis Objekt, bis der asynchron ausgeführte Vorgang abgeschlossen ist oder der *dwMilisecTimeOut* -Wert erfolgreich ist.  
+ **ISSAsynchStatus::WaitForAsynchCompletion** wartet auf das interne Ereignisobjekt, bis der asynchrone Vorgang ausgeführt oder der *dwMilisecTimeOut*-Wert übergeben wurde.  
   
  Im folgenden Beispiel wird die asynchrone Verarbeitung mit mehreren Resultsets veranschaulicht:  
   
@@ -186,7 +185,7 @@ if (hr == DB_S_ASYNCHRONOUS)
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Native Client-Funktionen](sql-server-native-client-features.md)   
+ [SQL Server Native Client Features](sql-server-native-client-features.md)   
  [Eigenschaften und Verhaltensweisen von Rowsets](../../native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)   
  [ISSAsynchStatus &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/issasynchstatus-ole-db.md)  
   

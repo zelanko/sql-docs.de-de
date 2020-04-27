@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a27720408db760604852410d9733983d7d67f18e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63193338"
 ---
 # <a name="use-for-xml-results-in-application-code"></a>Verwenden von FOR XML-Ergebnissen in Anwendungscode
@@ -201,11 +201,9 @@ ms.locfileid: "63193338"
   
  In diesem Beispiel werden jedoch die folgenden verwalteten APIs von Microsoft .NET Framework verwendet, um das Zurückgeben und das Rendering der Ergebnisse der FOR XML-Abfrage zu erzielen.  
   
-1.  
-  `SqlConnection` wird verwendet, um basierend auf dem Inhalt einer angegebenen Verbindungszeichenfolgenvariablen stConn eine Verbindung mit SQL Server zu öffnen.  
+1.  `SqlConnection` wird verwendet, um basierend auf dem Inhalt einer angegebenen Verbindungszeichenfolgenvariablen stConn eine Verbindung mit SQL Server zu öffnen.  
   
-2.  
-  `SqlDataAdapter` wird dann als Datenadapter verwendet, und es verwendet die SQL-Verbindung und eine angegebene SQL-Abfragezeichenfolge, um die FOR XML-Abfrage auszuführen.  
+2.  `SqlDataAdapter` wird dann als Datenadapter verwendet, und es verwendet die SQL-Verbindung und eine angegebene SQL-Abfragezeichenfolge, um die FOR XML-Abfrage auszuführen.  
   
 3.  Nach dem Ausführen der Abfrage wird die `SqlDataAdapter.Fill`-Methode aufgerufen und an eine Instanz eines `DataSet,` MyDataSet übergeben, um das Dataset mit der Ausgabe der FOR XML-Abfrage zu füllen.  
   

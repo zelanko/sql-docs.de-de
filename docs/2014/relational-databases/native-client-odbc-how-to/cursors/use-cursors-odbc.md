@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb3662bbd1bff6c7c7deb3a8eac61108ea93074a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200487"
 ---
 # <a name="use-cursors-odbc"></a>Verwenden von Cursorn (ODBC)
@@ -27,7 +27,7 @@ ms.locfileid: "63200487"
   
      Legen Sie die Attribute SQL_ATTR_CURSOR_TYPE und SQL_ATTR_CONCURRENCY fest (dies ist die bevorzugte Option).  
   
-     oder  
+     Oder  
   
      Legen Sie die Attribute SQL_CURSOR_SCROLLABLE und SQL_CURSOR_SENSITIVITY fest.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "63200487"
   
      Verwenden Sie spaltenbezogene Bindungen.  
   
-     \- oder –  
+     \- oder -  
   
      Verwenden Sie zeilenbezogene Bindungen.  
   

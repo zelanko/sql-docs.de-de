@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ce7e9249ec7ba97fdd159a743be30036847882b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63207067"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Häufig gestellte Fragen für Replikationsadministratoren
@@ -103,7 +103,7 @@ ms.locfileid: "63207067"
   
 -   Die Websynchronisierungsoption für die Mergereplikation. Weitere Informationen finden Sie unter [Web Synchronization for Merge Replication](../web-synchronization-for-merge-replication.md).  
   
- Bei allen Arten der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Replikation können Daten über ein VPN repliziert werden. Falls Sie eine Mergereplikation verwenden, sollten Sie jedoch die Websynchronisierung in Betracht ziehen.  
+ Alle [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replikations Typen können Daten über ein VPN replizieren, aber Sie sollten die Websynchronisierung in Erwägung gezogen, wenn Sie die Mergereplikation verwenden.  
   
 ### <a name="does-replication-resume-if-a-connection-is-dropped"></a>Wird die Replikation fortgesetzt, wenn eine Verbindung getrennt wird?  
  Ja. Die Replikationsverarbeitung wird an der Stelle fortgesetzt, an der sie beim Trennen der Verbindung unterbrochen wurde. Wenn Sie eine Mergereplikation über ein unzuverlässiges Netzwerk ausführen, sollten Sie die Verwendung logischer Datensätze in Betracht ziehen, mit denen sichergestellt wird, dass aufeinander bezogene Änderungen als Einheit verarbeitet werden. Weitere Informationen finden Sie unter [Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen](../merge/group-changes-to-related-rows-with-logical-records.md).  
@@ -121,7 +121,7 @@ ms.locfileid: "63207067"
   
 -   Die Definition eines Objekts, beispielsweise als CREATE TABLE-Anweisung. Bei der Replikation werden standardmäßig die Definitionen aller replizierten Objekte auf den Abonnenten kopiert.  
   
--   Der Namespace, in dem ein Objekt erstellt wird: \<Datenbank>. \<Schema>. \<Objekt>. Schemas werden mit der CREATE SCHEMA-Anweisung definiert.  
+-   Der Namespace, in dem ein Objekt erstellt wird: \<<Database>\<.Schema>.\<Object>. Schemas werden mit der CREATE SCHEMA-Anweisung definiert.  
   
 -   Im Assistenten für neue Veröffentlichung weist die Replikation in Bezug auf Schemas und den Objektbesitz das folgende Standardverhalten auf:  
   
@@ -151,9 +151,9 @@ ms.locfileid: "63207067"
   
 -   Geben Sie an, dass Objekte bei einer erneuten Initialisierung des Abonnements nicht gelöscht werden sollen. Führen Sie vor der erneuten Initialisierung einen der folgenden Vorgänge aus:  
   
-    -   Führen Sie [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) oder [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus. Geben Sie für den Parameter **@property** den Wert ' pre_creation_cmd ' ( **@value****sp_changearticle**) oder ' pre_creation_command ' (**sp_changemergearticle**) und für den Parameter den Wert ' none ', ' delete ' oder ' TRUNCATE ' an.  
+    -   Führen Sie [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) oder [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus. Geben Sie dabei für den**sp_changearticle**-Parameter den Wert 'pre_creation_cmd' (**sp_changemergearticle**) oder 'pre_creation_command' ( **@property** ) und für den **@value**.  
   
-    -   Wählen Sie im Dialogfeld **Artikeleigenschaften – \<Artikel>** im Abschnitt **Zielobjekt** einen Wert von **Vorhandenes Objekt unverändert beibehalten**, **Daten löschen. Wenn ein Artikel einen Zeilenfilter aufweist, nur die dem Filter entsprechenden Daten löschen.** oder **Alle Daten im vorhandenen Objekt abschneiden** für die Option **Action if name is in use** (Aktion, wenn der Name verwendet wird). Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](../publish/view-and-modify-publication-properties.md).  
+    -   Wählen Sie im Dialogfeld **Artikeleigenschaften- \<Artikel>** im Abschnitt **Zielobjekt** einen Wert von **vorhandenes Objekt unverändert beibehalten**, **Daten löschen aus. Wenn der Artikel einen Zeilen Filter aufweist, löschen Sie nur die Daten, die dem Filter entsprechen.** oder **Alle Daten im vorhandenen Objekt abschneiden** für die Option **Action if name is in use** (Aktion, wenn der Name verwendet wird). Weitere Informationen zum Zugreifen auf dieses Dialogfeld finden Sie unter [Anzeigen und Ändern von Veröffentlichungseigenschaften](../publish/view-and-modify-publication-properties.md).  
   
 ## <a name="database-maintenance"></a>Datenbankwartung  
   
@@ -229,7 +229,7 @@ ms.locfileid: "63207067"
  Ja. Da alle Daten auf einem Datenträgersatz im Cluster gespeichert sind, sind keine besonderen Überlegungen erforderlich.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Häufig gestellte Fragen für Replikationsadministratoren](frequently-asked-questions-for-replication-administrators.md)   
- [Best Practices for Replication Administration](best-practices-for-replication-administration.md)  
+ [FAQ zur Replikation](frequently-asked-questions-for-replication-administrators.md)   
+ [Bewährte Methoden für die Replikations Verwaltung](best-practices-for-replication-administration.md)  
   
   

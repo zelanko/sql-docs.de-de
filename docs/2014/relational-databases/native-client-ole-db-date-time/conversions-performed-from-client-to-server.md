@@ -1,5 +1,5 @@
 ---
-title: Vom Client zum Server durchgeführte Konvertierungen | Microsoft-Dokumentation
+title: Konvertierungen von Client zu Server | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f09cf15479060e455811fa4b3ffe6df4f9bd14cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63237967"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Client-/Server-Konvertierungen
@@ -47,8 +47,8 @@ ms.locfileid: "63237967"
   
 |Symbol|Bedeutung|  
 |------------|-------------|  
-|-|Es wird keine Konvertierung unterstützt. Wenn die Bindung überprüft wird, wenn IAccessor:: deateaccessor aufgerufen wird, wird DBBINDSTATUS_UPSUPPORTEDCONVERSION in *rgStatus*zurückgegeben. Bei Verzögerung der Accessorüberprüfung wird DBSTATUS_E_BADACCESSOR festgelegt.|  
-|–|Nicht zutreffend|  
+|-|Es wird keine Konvertierung unterstützt. Wenn beim Aufruf von IAccessor::CreateAccessor die Bindung überprüft wird, wird DBBINDSTATUS_UPSUPPORTEDCONVERSION in *rgStatus* zurückgegeben. Bei Verzögerung der Accessorüberprüfung wird DBSTATUS_E_BADACCESSOR festgelegt.|  
+|–|Nicht zutreffend.|  
 |1|Wenn die bereitgestellten Daten nicht gültig sind, wird DBSTATUS_E_CANTCONVERTVALUE festgelegt. Die Eingabedaten werden überprüft, bevor die Konvertierungen angewendet werden, d. h. auch wenn eine Komponente von einer nachfolgenden Konvertierung ignoriert wird, muss sie gültig sein, damit die Konvertierung ordnungsgemäß durchgeführt werden kann.|  
 |2|Zeitfelder werden ignoriert.|  
 |3|Sekundenbruchteile müssen 0 sein, oder es wird DBSTATUS_E_DATAOVERFLOW festgelegt.|  

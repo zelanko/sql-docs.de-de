@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 289faf0f637e5e4d4d84e7e7150189a37c5f59f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245334"
 ---
 # <a name="target-servers-download-instructions-tab"></a>Zielserver (Registerkarte Anweisungen zum Herunterladen)
   Mithilfe dieser Seite können Sie die Downloadanweisungen für einen oder mehrere Zielserver anzeigen und aktualisieren.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Ziel Server**  
  Wählt den Server aus, für den Anweisungen angezeigt oder geändert werden sollen.  
   
@@ -35,22 +35,22 @@ ms.locfileid: "63245334"
  **Vorgang**  
  Zeigt den Vorgang an, den die Downloadanweisung ausführen wird.  
   
- **Objektnamen**  
+ **Objektname**  
  Zeigt den Namen des Objekts an, auf das sich die Downloadanweisung auswirkt.  
   
- **Datum der Veröffentlichung**  
+ **Bereitstellungsdatum**  
  Zeigt Datum und Uhrzeit (Ortszeit) der Anweisungsbereitstellung an.  
   
- **Download Datum**  
+ **Downloaddatum**  
  Zeigt Datum und Uhrzeit (Ortszeit) an, an dem der Zielserver die Anweisung heruntergeladen hat. Wenn während des Downloads ein Fehler aufgetreten ist, wird dieser angezeigt.  
   
- **Status der Anweisungs Downloads**  
+ **Status für Anweisungsdownload**  
  Zeigt den letzten Status für die ausgewählte Downloadanweisung an.  
   
  **Löschen**  
  Löscht die ausgewählte Downloadanweisung.  
   
- **Clear**  
+ **Klartext**  
  Entfernt den Status der ausgewählten Downloadanweisung.  
   
 ## <a name="see-also"></a>Weitere Informationen  

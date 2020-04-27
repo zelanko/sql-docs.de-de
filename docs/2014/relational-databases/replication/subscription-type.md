@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d936c1a1086f13d43bc38758f86a0ab80f757f7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63249382"
 ---
 # <a name="subscription-type"></a>Abonnementtyp
-  Die Mergereplikation bietet zwei Abonnementtypen: Server und Client (in früheren Versionen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von als Global bzw. lokal bezeichnet). Abonnenten mit einem Serverabonnement können:  
+  Die Mergereplikation bietet zwei Abonnementtypen: Server und Client (in früheren Versionen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] als global bzw. lokal bezeichnet). Abonnenten mit einem Serverabonnement können:  
   
 -   Daten für andere Abonnenten erneut veröffentlichen.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "63249382"
 >  Nach dem Erstellen eines Abonnements kann der Abonnementtyp nicht mehr geändert werden.  
   
 ## <a name="options"></a>Tastatur  
- **Eigenschaften Abonnement**  
+ **Abonnementeigenschaften**  
  Wählen Sie für jeden Abonnenten aus der Dropdownliste in der **Abonnementtyp** -Spalte die Option **Client** oder **Server** aus. Geben Sie für Abonnenten mit Serverabonnements in der **Priorität für Konfliktlösung** -Spalte eine Zahl zwischen 0 und 99,99 ein (je höher die Zahl, desto höher die Priorität des Abonnenten).  
   
 ## <a name="see-also"></a>Weitere Informationen  

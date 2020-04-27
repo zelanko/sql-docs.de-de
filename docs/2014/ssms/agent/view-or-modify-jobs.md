@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 87e5644329742712e112fd3df97f601838f7faea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245523"
 ---
 # <a name="view-or-modify-jobs"></a>Anzeigen oder Ändern von Aufträgen
@@ -59,9 +59,9 @@ EXECUTE sp_post_msx_operation 'INSERT', 'JOB', '<job id>'
   
 |||  
 |-|-|  
-|**Beschreibung**|**Thema**|  
+|**Beschreibung**|**Sonder**|  
 |Beschreibt, wie [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Aufträge angezeigt werden.|[View a Job](view-a-job.md)|  
-|Beschreibt, wie das Auftragsverlaufsprotokoll des [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agents angezeigt wird.|[View the Job History](view-the-job-history.md)|  
+|Beschreibt, wie das Auftragsverlaufsprotokoll des [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agents angezeigt wird.|[Anzeigen des Auftragsverlaufs](view-the-job-history.md)|  
 |Beschreibt, wie der Inhalt des Auftragsverlaufsprotokolls des [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agents gelöscht wird.|[Clear the Job History Log](clear-the-job-history-log.md)|  
 |Beschreibt, wie Größenbeschränkungen für Auftragsverlaufsprotokolle des [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agents festgelegt werden.|[Resize the Job History Log](resize-the-job-history-log.md)|  
 |Beschreibt, wie die Eigenschaften von [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent-Aufträgen geändert werden.|[Ändern eines Auftrags](modify-a-job.md)|  

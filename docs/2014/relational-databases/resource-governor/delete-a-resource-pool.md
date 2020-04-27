@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6e2e9582e8a279be37e05e9ee13a858abb431987
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63205837"
 ---
 # <a name="delete-a-resource-pool"></a>Löschen eines Ressourcenpools
@@ -27,16 +27,16 @@ ms.locfileid: "63205837"
   
 -   **So löschen Sie einen Ressourcenpool mit:** [SQL Server Management Studio](#DelRPSSMS), [Transact-SQL](#DelRPTSQL)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
  Ressourcenpools mit Arbeitsauslastungsgruppen können nicht gelöscht werden.  
   
-###  <a name="LimitationsRestrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Einschränkungen  
  Standardpools oder interne Ressourcenpools der Ressourcenkontrolle können nicht gelöscht werden. Ressourcenpools mit Arbeitsauslastungsgruppen können nicht gelöscht werden. Weitere Informationen finden Sie unter [Delete a Workload Group](delete-a-workload-group.md).  
   
-###  <a name="Permissions"></a> Berechtigungen  
+###  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Zum Löschen eines Ressourcenpools ist die CONTROL SERVER-Berechtigung erforderlich.  
   
-##  <a name="DelRPSSMS"></a> Löschen eines Ressourcenpools im Objekt-Explorer  
+##  <a name="delete-a-resource-pool-using-object-explorer"></a><a name="DelRPSSMS"></a> Löschen eines Ressourcenpools im Objekt-Explorer  
  **So löschen Sie einen Ressourcenpool in SQL Server Management Studio**  
   
 1.  Öffnen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]den Objekt-Explorer, und erweitern Sie den Knoten **Verwaltung** rekursiv, bis **Ressourcenkontrolle**angezeigt wird.  
@@ -48,7 +48,7 @@ ms.locfileid: "63205837"
     > [!NOTE]  
     >  Falls der zu löschende Ressourcenpool eine Arbeitsauslastungsgruppe enthält, schlägt dieser Vorgang fehl.  
   
-##  <a name="DelRPTSQL"></a> Löschen eines Ressourcenpools mit Transact-SQL  
+##  <a name="delete-a-resource-pool-using-transact-sql"></a><a name="DelRPTSQL"></a> Löschen eines Ressourcenpools mit Transact-SQL  
  **So löschen Sie einen Ressourcenpool mit Transact-SQL**  
   
 1.  Führen Sie die `DROP RESOURCE POOL`-Anweisung aus, die den Namen des zu löschenden Ressourcenpools angeben.  

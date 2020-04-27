@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48389a3b537461a89bcf5c8bcbc646d3417939c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200344"
 ---
 # <a name="set-cursor-options-odbc"></a>Festlegen von Cursoroptionen (ODBC)
   Um Cursor Optionen festzulegen, müssen Sie [SQLSetStmtAttr](../../native-client-odbc-api/sqlsetstmtattr.md) aufrufen, um oder [SQLGetStmtAttr](../../native-client-odbc-api/sqlgetstmtattr.md) festzulegen, um die Anweisungs Optionen zu erhalten, die das Cursor Verhalten steuern.  
   
-|*Attribut*|Ziert|  
+|*Versehen*|Bedeutung|  
 |-----------------|---------------|  
 |SQL_ATTR_CURSOR_TYPE|Cursortyp, der einen Vorwärtscursor, einen statischen, dynamischen oder keyset-gesteuerten Cursor bezeichnen kann|  
 |SQL_ATTR_CONCURRENCY|Option zur Steuerung der gleichzeitigen Ausführung, die Schreibschutz, Sperren, vollständige Parallelität mit Timestamps oder vollständige Parallelität mit Werten angeben kann|  

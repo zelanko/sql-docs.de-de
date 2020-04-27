@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae08a79bcfe1e4befcad8559e82bdfba5b347fc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63228566"
 ---
 # <a name="executing-commands-containing-table-valued-parameters"></a>Ausführen von Befehlen, die Tabellenwertparameter enthalten
@@ -29,12 +29,12 @@ ms.locfileid: "63228566"
 ## <a name="table-valued-parameter-specification"></a>Tabellenwertparameter-Spezifikation  
  Der Consumer kann den Typ des Tabellenwertparameters angeben. Diese Angabe enthält den Typnamen des Tabellenwertparameters. Sie umfasst auch den Schemanamen, wenn der benutzerdefinierte Tabellentyp für den Tabellenwertparameter nicht im aktuellen Standardschema für die Verbindung enthalten ist. Je nach Serverunterstützung kann der Consumer auch optionale Metadateninformationen angeben, wie beispielsweise die Sortierreihenfolge der Spalten. Zudem kann er angeben, dass alle Zeilen für bestimmte Spalten Standardwerte aufweisen sollen.  
   
- Um einen Tabellenwert Parameter anzugeben, ruft der Consumer isscommandwithparameter:: SetParameterInfo auf und ruft optional ISSCommandWithParameters:: SetParameterProperties auf. Für einen Tabellenwertparameter verfügt das *pwszDataSourceType*-Feld in der DBPARAMBINDINFO-Struktur über den Wert DBTYPE_TABLE. Das *ulParamSize* -Feld ist auf ~ 0 festgelegt, um anzugeben, dass die Länge unbekannt ist. Bestimmte Eigenschaften für Tabellenwert Parameter (z. b. Schema Name, Typname, Spaltenreihenfolge und Standard Spalten) können mithilfe von ISSCommandWithParameters:: SetParameterProperties festgelegt werden.  
+ Der Consumer ruft ISSCommandWithParameter::SetParameterInfo oder optional ISSCommandWithParameters::SetParameterProperties ab, um einen Tabellenwertparameter anzugeben. Für einen Tabellenwertparameter verfügt das *pwszDataSourceType*-Feld in der DBPARAMBINDINFO-Struktur über den Wert DBTYPE_TABLE. Das *ulParamSize*-Feld wird auf ~0 festgelegt, um anzugeben, dass die Länge unbekannt ist. Spezielle Eigenschaften für Tabellenwertparameter, wie z. B. Schemaname, Typname, Spaltenreihenfolge und Standardspalten, können mit ISSCommandWithParameters::SetParameterProperties festgelegt werden.  
   
 ## <a name="table-valued-parameter-binding"></a>Tabellenwertparameter-Bindung  
  Ein Tabellenwertparameter kann ein beliebiges Rowsetobjekt sein. Während der Ausführung liest der Anbieter beim Senden von Tabellenwertparametern an den Server aus diesem Objekt.  
   
- Um den Tabellenwert Parameter zu binden, ruft der Consumer IAccessor::-accateaccessor auf. Das *wType*-Feld der DBBINDING-Struktur für den Tabellenwertparameter wird auf DBTYPE_TABLE festgelegt. Das *pObject*-Element der DBBINDING-Struktur ist nicht NULL, und das *iid*-Element von *pObject* wird auf IID_IRowset oder jede beliebige andere Rowsetobjekt-Schnittstelle für Tabellenwertparameter festgelegt. Die verbleibenden Felder in der DBBINDING-Struktur können in der gleichen Weise festgelegt werden wie für gestreamte BLOBs.  
+ Der Consumer ruft IAccessor::CreateAccessor auf, um den Tabellenwertparameter zu binden. Das *wType*-Feld der DBBINDING-Struktur für den Tabellenwertparameter wird auf DBTYPE_TABLE festgelegt. Das *pObject*-Element der DBBINDING-Struktur ist nicht NULL, und das *iid*-Element von *pObject* wird auf IID_IRowset oder jede beliebige andere Rowsetobjekt-Schnittstelle für Tabellenwertparameter festgelegt. Die verbleibenden Felder in der DBBINDING-Struktur können in der gleichen Weise festgelegt werden wie für gestreamte BLOBs.  
   
  Für die Bindungen des Tabellenwertparameters und des einem Tabellenwertparameter zugeordneten Rowsetobjekts gelten die folgenden Einschränkungen:  
   
@@ -47,7 +47,7 @@ ms.locfileid: "63228566"
 -   Für Spalten mit DBPROP_COL_AUTOINCREMENT oder SSPROP_COL_COMPUTED werden Daten an den Server gesendet, sofern nicht auch SSPROP_PARAM_TABLE_DEFAULT festgelegt ist.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Tabellenwertparameter &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   
+ [Tabellenwert Parameter &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   
  [Verwenden von Tabellenwertparametern &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

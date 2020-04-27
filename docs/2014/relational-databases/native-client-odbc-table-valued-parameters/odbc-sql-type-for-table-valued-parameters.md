@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 90857b24fb467df0292beeb88fb9751e68204d12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63199988"
 ---
 # <a name="odbc-sql-type-for-table-valued-parameters"></a>ODBC-SQL-Typ für Tabellenwertparameter
   Unterstützung für Tabellenwertparameter wird von einem neuen ODBC-SQL-Typ, SQL_SS_TABLE, bereitgestellt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  SQL_SS_TABLE kann nicht in einen anderen ODBC- oder [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datentyp konvertiert werden.  
   
  Wenn SQL_SS_TABLE im *ValueType* -Parameter von SQLBindParameter als C-Datentyp verwendet wird, oder wenn versucht wird, SQL_DESC_TYPE in einem Anwendungsparameter Deskriptor (APD)-Datensatz auf SQL_SS_TABLE festzulegen, wird SQL_ERROR zurückgegeben, und es wird ein Diagnosedaten Satz mit SQLSTATE = HY003, "Ungültiger Anwendungs Puffertyp", generiert.  
@@ -35,7 +35,7 @@ ms.locfileid: "63199988"
   
  Tabellenwertparameter-Spaltenwerte verfügen über dieselben Datenkonvertierungsoptionen wie Parameter und Ergebnisspalten.  
   
- Bei einem Tabellenwertparameter kann es sich nur um einen Eingabeparameter in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher handeln. Wenn versucht wird, SQL_DESC_PARAMETER_TYPE auf einen anderen Wert als SQL_PARAM_INPUT über SQLBindParameter oder SQLSetDescField festzulegen, wird SQL_ERROR zurückgegeben, und der Anweisung wird ein Diagnosedaten Satz mit SQLSTATE = HY105 und der Meldung "Ungültiger Parameter Geben Sie ein.  
+ Bei einem Tabellenwertparameter kann es sich nur um einen Eingabeparameter in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder höher handeln. Wenn versucht wird, SQL_DESC_PARAMETER_TYPE auf einen anderen Wert als SQL_PARAM_INPUT über SQLBindParameter oder SQLSetDescField festzulegen, wird SQL_ERROR zurückgegeben, und der Anweisung wird mit SQLSTATE = HY105 und der Meldung "Ungültiger Parametertyp" ein Diagnosedaten Satz hinzugefügt.  
   
  Tabellenwertparameter-Spalten können SQL_DEFAULT_PARAM nicht in *StrLen_or_IndPtr*verwenden, da Standardwerte pro Zeile nicht mit Tabellenwertparametern unterstützt werden. Stattdessen kann eine Anwendung das Spaltenattribut SQL_CA_SS_COL_HAS_DEFAULT_VALUE auf 1 festlegen. Dies bedeutet, dass die Spalte Standardwerte für alle Zeilen aufweist. Wenn *StrLen_or_IndPtr* auf SQL_DEFAULT_PARAM festgelegt ist, wird von SQLExecute oder SQLExecDirect SQL_ERROR zurückgegeben, und der Anweisung mit SQLSTATE = HY090 und der Meldung "ungültige Zeichen folgen-oder Pufferlänge" wird ein Diagnosedaten Satz hinzugefügt.  
   

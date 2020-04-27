@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 322120624c612371b56029c2cf29c9ab457c81b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63225502"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>Zuordnen von Handles und Herstellen einer Verbindung mit SQL Server (ODBC)
@@ -41,7 +41,7 @@ ms.locfileid: "63225502"
   
 8.  Verwenden Sie SQLConnect, um eine vorhandene Datenquelle zum Herstellen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]einer Verbindung mit zu verwenden.  
   
-     oder  
+     Oder  
   
      Verwenden Sie [SQLDriverConnect](../native-client-odbc-api/sqldriverconnect.md) , um eine Verbindungs Zeichenfolge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zum Herstellen einer Verbindung mit zu verwenden.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "63225502"
   
      Wenn die Verbindungszeichenfolge nicht vollständig ist, kann `SQLDriverConnect` den Benutzer auffordern, die erforderlichen Informationen einzugeben. Dies wird durch den für den *DriverCompletion* -Parameter angegebenen Wert gesteuert.  
   
-     \- oder –  
+     \- oder -  
   
      Sie können [SQLBrowseConnect](../native-client-odbc-api/sqlbrowseconnect.md) mehrmals auf iterative Weise aufzurufen, um die Verbindungs Zeichenfolge [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu erstellen und eine Verbindung mit herzustellen.  
   

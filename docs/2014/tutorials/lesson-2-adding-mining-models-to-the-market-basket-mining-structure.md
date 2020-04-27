@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b9573d9359983e33cf23533787c26039572710ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204721"
 ---
 # <a name="lesson-2-adding-mining-models-to-the-market-basket-mining-structure"></a>Lektion 2: Hinzufügen von Miningmodellen zur Market Basket-Miningstruktur
@@ -121,7 +121,7 @@ ADD MINING MODEL [<mining model name>]
     <mining structure name>   
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     [Market Basket]  
@@ -133,7 +133,7 @@ ADD MINING MODEL [<mining model name>]
     <mining model name>   
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     [Default Association]  
@@ -149,7 +149,7 @@ ADD MINING MODEL [<mining model name>]
        <nested mining model columns> )  
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     OrderNumber,  
@@ -169,7 +169,7 @@ ADD MINING MODEL [<mining model name>]
     USING <algorithm>( <algorithm parameters> )  
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     Using Microsoft_Association_Rules  
@@ -212,7 +212,7 @@ ADD MINING MODEL [<mining model name>]
     <mining structure name>   
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     Market Basket  
@@ -224,7 +224,7 @@ ADD MINING MODEL [<mining model name>]
     <mining model name>   
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     [Modified Association]  
@@ -239,7 +239,7 @@ ADD MINING MODEL [<mining model name>]
        <nested mining model columns> )  
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     OrderNumber,  
@@ -256,7 +256,7 @@ ADD MINING MODEL [<mining model name>]
     USING <algorithm>( <algorithm parameters> )  
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     USING Microsoft_Association_Rules (Minimum_Probability = 0.1)  

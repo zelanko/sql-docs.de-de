@@ -16,14 +16,13 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 093d40734b88cc370e0c08a8f9a8b86312409e6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63225565"
 ---
 # <a name="sql-server-native-client-features"></a>SQL Server Native Client-Funktionen
-  
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client macht nicht nur Funktionen der Windows (früher Microsoft) Data Access Components (WDAC) verfügbar, sondern implementiert zudem viele weitere Funktionen, um die Funktionalität von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verfügbar zu machen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
@@ -39,7 +38,7 @@ ms.locfileid: "63225565"
  [Verwenden von Multiple Active Result Sets &#40;MARS&#41;](using-multiple-active-result-sets-mars.md)  
  Erläutert, auf welche Weise [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client Multiple Active Result Sets (MARS) unterstützt. MARS ermöglichen es Ihnen, mehrere Resultsets mithilfe einer einzigen Datenbankverbindung auszuführen und zu empfangen.  
   
- [Verwenden von XML-Datentypen](using-xml-data-types.md)  
+ [Using XML Data Types (Verwenden von XML-Datentypen)](using-xml-data-types.md)  
  Erläutert, auf welche Weise [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client den XML-Datentyp unterstützt. Dieser XML-basierte Datentyp kann als Spaltentyp, Variablentyp, Parametertyp oder Funktionsrückgabetyp verwendet werden.  
   
  [Verwenden von benutzerdefinierten Typen](using-user-defined-types.md)  
@@ -85,12 +84,12 @@ ms.locfileid: "63225565"
  Erläutert Verbesserungen der Metadatenermittlung in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
   
  [Unterstützung für UTF-16 in SQL Server Native Client 11.0](utf-16-support-in-sql-server-native-client-11-0.md)  
- Erläutert eine mit [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] eingeführte Verhaltensänderung. Ab `wchar` Native Client wird dem Puffer kein hoher Ersatzzeichencodepunkt hinzugefügt, wenn Sie beim Binden eines Spaltenergebnisses oder Ausgabeparameters einen Puffer fester Länge übergeben und das vor dem abschließenden Zeichen in den Puffer geschriebene `wchar`-Zeichen ein hoher Ersatzzeichencodepunkt eines Ersatzzeichenpaars und das nächste [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Zeichen ein niedriger Ersatzzeichencodepunkt ist.  
+ Erläutert eine mit [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] eingeführte Verhaltensänderung. Ab [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client wird dem Puffer kein hoher Ersatzzeichencodepunkt hinzugefügt, wenn Sie beim Binden eines Spaltenergebnisses oder Ausgabeparameters einen Puffer fester Länge übergeben und das vor dem abschließenden Zeichen in den Puffer geschriebene `wchar`-Zeichen ein hoher Ersatzzeichencodepunkt eines Ersatzzeichenpaars und das nächste `wchar`-Zeichen ein niedriger Ersatzzeichencodepunkt ist.  
   
  [SQL Server Native Client-Unterstützung für hohe Verfügbarkeit, Notfallwiederherstellung](sql-server-native-client-support-for-high-availability-disaster-recovery.md)  
  Erläutert, wie die Anwendung konfiguriert werden kann, um von den Funktionen für Hochverfügbarkeit und Notfallwiederherstellung zu profitieren, die in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] hinzugefügt wurden.  
   
- [Zugreifen auf Diagnoseinformationen im Protokoll der erweiterten Ereignisse](accessing-diagnostic-information-in-the-extended-events-log.md)  
+ [Zugreifen auf Diagnoseinformationen im Protokoll für erweiterte Ereignisse](accessing-diagnostic-information-in-the-extended-events-log.md)  
  Erläutert Erweiterungen zu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client und -Datenablaufverfolgung, die Ihnen Zugriff auf Diagnoseinformationen im Ringpuffer und XEvents-Protokoll geben.  
   
  [SQL Server Native Client-Unterstützung für LocalDB](sql-server-native-client-support-for-localdb.md)  

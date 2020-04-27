@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6e4327de10dd03b3ff8cf034ade64391d18d2a86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192900"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters-sql-server-management-studio"></a>Anzeigen und Ändern von Befehlszeilenparametern des Replikations-Agents (SQL Server Management Studio)
@@ -31,19 +31,19 @@ ms.locfileid: "63192900"
   
 |Agent|Auftragsname|Eine Liste der Parameter finden Sie unter...|  
 |-----------|--------------|------------------------------------|  
-|Momentaufnahme-Agent|**\<Verleger>-\<Veröffentlichungsdatenbank>-\<Veröffentlichung>-\<Ganzzahl>**|[Replication Snapshot Agent](replication-snapshot-agent.md)|  
-|Momentaufnahme-Agent für eine Mergeveröffentlichungspartition|**Dyn_\<Verleger>-\<Veröffentlichungsdatenbank>-\<Veröffentlichung>-\<GUID>**|[Replication Snapshot Agent](replication-snapshot-agent.md)|  
-|Protokolllese-Agent|**\<Verleger>-\<Veröffentlichungsdatenbank>-\<Ganzzahl>**|[Replikationsprotokolllese-Agent](replication-log-reader-agent.md)|  
-|Merge-Agent für Pullabonnements|**\<Verleger>-\<Veröffentlichungsdatenbank>-\<Veröffentlichung>-\<Abonnent>-\<Abonnementdatenbank>-\<Ganzzahl>**|[Replication Merge Agent](replication-merge-agent.md)|  
-|Merge-Agent für Pushabonnements|**\<Verleger>-\<Veröffentlichungsdatenbank>-\<Veröffentlichung>-\<Abonnent>-\<Ganzzahl>**|[Replication Merge Agent](replication-merge-agent.md)|  
-|Verteilungs-Agent für Pushabonnements|**\<\<\<Verleger>-publicationdatabase>-Publication>-Subscriber>-\<Integer>1 \<** <sup></sup>|[Replication Distribution Agent](replication-distribution-agent.md)|  
-|Verteilungs-Agent für Pullabonnements|**\<\<\<\<Verleger>-\<publicationdatabase>-Publication>-Subscriber>-Abonnement Datenbank>-GUID>2 \<** <sup></sup>|[Replication Distribution Agent](replication-distribution-agent.md)|  
-|Verteilungs-Agent für Pushabonnements für Nicht-SQL Server-Abonnenten|**\<Verleger>-\<Veröffentlichungsdatenbank>-\<Veröffentlichung>-\<Abonnent>-\<Ganzzahl>**|[Replication Distribution Agent](replication-distribution-agent.md)|  
-|Warteschlangenlese-Agent|**[\<Verteiler>].\<Ganzzahl>**|[Replication Queue Reader Agent](replication-queue-reader-agent.md)|  
+|Momentaufnahme-Agent|**\<Verleger>-\<publicationdatabase>-\<Publication>-\<Integer>**|[Replikationsmomentaufnahme-Agent](replication-snapshot-agent.md)|  
+|Momentaufnahme-Agent für eine Mergeveröffentlichungspartition|**Dyn_\<Verleger>-\<Veröffentlichungsdatenbank>-\<Veröffentlichung>-\<GUID>**|[Replikationsmomentaufnahme-Agent](replication-snapshot-agent.md)|  
+|Protokolllese-Agent|**\<Verleger>-\<publicationdatabase>-\<Integer->**|[Replikationsprotokolllese-Agent](replication-log-reader-agent.md)|  
+|Merge-Agent für Pullabonnements|**\<Verleger>-\<publicationdatabase>-\<Publication>-\<Subscriber>-\<abonneptiondatabase>-\<Integer>**|[Replication Merge Agent](replication-merge-agent.md)|  
+|Merge-Agent für Pushabonnements|**\<Verleger>-\<publicationdatabase>-\<Publication>-\<Subscriber>-\<Integer>**|[Replication Merge Agent](replication-merge-agent.md)|  
+|Verteilungs-Agent für Pushabonnements|**\<\<\<Verleger>-publicationdatabase>-Publication>-Subscriber>-\<Integer>1 \<** <sup>1</sup>|[Replikationsverteilungs-Agent](replication-distribution-agent.md)|  
+|Verteilungs-Agent für Pullabonnements|**\<\<\<\<Verleger>-\<publicationdatabase>-Publication>-Subscriber>-Abonnement Datenbank>-GUID>2 \<** <sup>2</sup>|[Replikationsverteilungs-Agent](replication-distribution-agent.md)|  
+|Verteilungs-Agent für Pushabonnements für Nicht-SQL Server-Abonnenten|**\<Verleger>-\<publicationdatabase>-\<Publication>-\<Subscriber>-\<Integer>**|[Replikationsverteilungs-Agent](replication-distribution-agent.md)|  
+|Warteschlangenlese-Agent|**[\<Verteiler>]. \<ganzzahlige>**|[Warteschlangenlese-Agent der Microsoft SQL Server-Replikation](replication-queue-reader-agent.md)|  
   
- <sup>1</sup> bei Pushabonnements für Oracle-Veröffentlichungen ist ** \<es Verleger>-\<Verleger**> anstelle von ** \<Verleger>-\<publicationdatabase>**  
+ <sup>1</sup> Bei Pushabonnements für Oracle-Veröffentlichungen heißt es **\<Verleger>-\<Verleger**> anstatt **\<Verleger>-\<Veröffentlichungsdatenbank>**.  
   
- <sup>2</sup> für Pullabonnements für Oracle-Veröffentlichungen ist ** \<es\<Publisher>-DistributionDatabase**> anstelle von ** \<Publisher>-\<publicationdatabase>**  
+ <sup>2</sup> Bei Pullabonnements für Oracle-Veröffentlichungen heißt es **\<Verleger>-\<Verteilungsdatenbank**> anstatt **\<Verleger>-\<Veröffentlichungsdatenbank>**.  
   
 ### <a name="to-view-and-modify-replication-agent-command-line-parameters-from-management-studio"></a>So zeigen Sie Befehlszeilenparameter des Replikations-Agents in SQL Server Management Studio an und ändern Sie die Parameter  
   
@@ -57,7 +57,7 @@ ms.locfileid: "63192900"
   
 3.  Klicken Sie mit der rechten Maustaste auf einen Auftrag, und klicken Sie dann auf **Eigenschaften**.  
   
-4.  Wählen Sie im Dialogfeld **Auftragseigenschaften –** Job> **auf der Seite \<Schritte** den Schritt **Agent ausführen** aus, und klicken Sie dann auf **Bearbeiten**.  
+4.  Wählen Sie im Dialogfeld **Auftragseigenschaften – \<Job>** auf der Seite **Schritte** den Schritt **Agent ausführen** aus, und klicken Sie dann auf **Bearbeiten**.  
   
 5.  Bearbeiten Sie im Dialogfeld **Auftragsschritt-Eigenschaften - Führt den Agent aus** das Feld **Befehl** .  
   
@@ -73,7 +73,7 @@ ms.locfileid: "63192900"
   
 4.  Klicken Sie im Fenster **Abonnement Abonnement \< Name>** auf **Aktion**, und klicken Sie dann auf ** \<Agentname> Auftrags Eigenschaften**.  
   
-5.  Wählen Sie im Dialogfeld **Auftragseigenschaften –** Job> **auf der Seite \<Schritte** den Schritt **Agent ausführen** aus, und klicken Sie dann auf **Bearbeiten**.  
+5.  Wählen Sie im Dialogfeld **Auftragseigenschaften – \<Job>** auf der Seite **Schritte** den Schritt **Agent ausführen** aus, und klicken Sie dann auf **Bearbeiten**.  
   
 6.  Bearbeiten Sie im Dialogfeld **Auftragsschritt-Eigenschaften - Führt den Agent aus** das Feld **Befehl** .  
   
@@ -87,15 +87,15 @@ ms.locfileid: "63192900"
   
 3.  Klicken Sie mit der rechten Maustaste auf einen Agent im Raster, und klicken Sie dann auf **Eigenschaften**.  
   
-4.  Wählen Sie im Dialogfeld **Auftragseigenschaften –** Job> **auf der Seite \<Schritte** den Schritt **Agent ausführen** aus, und klicken Sie dann auf **Bearbeiten**.  
+4.  Wählen Sie im Dialogfeld **Auftragseigenschaften – \<Job>** auf der Seite **Schritte** den Schritt **Agent ausführen** aus, und klicken Sie dann auf **Bearbeiten**.  
   
 5.  Bearbeiten Sie im Dialogfeld **Auftragsschritt-Eigenschaften - Führt den Agent aus** das Feld **Befehl** .  
   
 6.  Klicken Sie in beiden Dialogfeldern auf **OK** .  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwaltung des Replikations-Agents](replication-agent-administration.md)   
+ [Replikations-Agent](replication-agent-administration.md)   
  [Ausführbare Konzepte für den Replikations-Agent](../concepts/replication-agent-executables-concepts.md)   
- [Übersicht über Replikations-Agents](replication-agents-overview.md)  
+ [Replikations-Agents (Übersicht)](replication-agents-overview.md)  
   
   

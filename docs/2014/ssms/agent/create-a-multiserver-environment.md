@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192962"
 ---
 # <a name="create-a-multiserver-environment"></a>Erstellen einer Multiserverumgebung
@@ -58,7 +58,7 @@ ms.locfileid: "63192962"
 ## <a name="related-tasks"></a>Related Tasks  
  In den folgenden Themen werden allgemeine Aufgaben zum Erstellen einer Multiserverumgebung beschrieben.  
   
-|BESCHREIBUNG|Thema|  
+|Beschreibung|Thema|  
 |-----------------|-----------|  
 |Beschreibt, wie ein Masterserver erstellt wird.|[Make a Master Server](make-a-master-server.md)|  
 |Beschreibt, wie ein Zielserver erstellt wird.|[Erstellen eines Zielservers](make-a-target-server.md)|  

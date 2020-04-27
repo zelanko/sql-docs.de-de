@@ -15,14 +15,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 8976b77bf0823c9735e6e6e67fc3159bcb54ecdf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63231273"
 ---
 # <a name="use-explicit-mode-with-for-xml"></a>Verwenden des EXPLICIT-Modus mit FOR XML
-  Wie im Thema [Erstellen von XML mithilfe von for XML](../xml/for-xml-sql-server.md)beschrieben, bieten RAW-und Auto-Modus keine viel Kontrolle über die Form des aus einem Abfrageergebnis generierten XML-Codes. Der EXPLICIT-Modus hingegen ermöglicht größte Flexibilität beim Generieren der gewünschten XML-Ausgabe aus einem Abfrageergebnis.  
+  Wie im Thema [Erstellen von XML mithilfe von FOR XML](../xml/for-xml-sql-server.md)beschrieben wird, bieten die Modi RAW und AUTO kaum Steuerungsmöglichkeiten für die Form des aus einem Abfrageergebnis generierten XML-Codes. Der EXPLICIT-Modus hingegen ermöglicht größte Flexibilität beim Generieren der gewünschten XML-Ausgabe aus einem Abfrageergebnis.  
   
  Die Abfrage im EXPLICIT-Modus muss so geschrieben werden, dass die zusätzlichen Informationen zu der erforderlichen XML-Ausgabe, wie z. B. die erwartete Schachtelung, explizit als Teil der Abfrage angegeben werden. Das Schreiben von Abfragen im EXPLICIT-Modus kann jedoch aufwendig sein, je nachdem, welche XML-Daten erforderlich sind. Möglicherweise ist das [Verwenden des PATH-Modus](../xml/use-path-mode-with-for-xml.md) mit Schachtelung dem Schreiben von Abfragen im EXPLICIT-Modus als einfachere Alternative vorzuziehen.  
   
@@ -116,21 +116,21 @@ ElementName!TagNumber!AttributeName!Directive
  *TagNumber*  
  Ein eindeutiger, einem Element zugewiesener Tagwert. Dieser Wert bestimmt mithilfe der beiden Metadatenspalten **Tag** und **Parent**die Schachtelung der Elemente in der XML-Ausgabe.  
   
- *Attributname*  
+ *AttributeName*  
  Stellt den Namen des zu konstruierenden Attributs im angegebenen *ElementName*-Element bereit. Dieses Verhalten gilt, wenn kein Wert für *Directive* angegeben wird.  
   
  Wenn einer der Werte *xml* , **cdata**oder **element**für **Directive**angegeben wird, wird dieser Wert zum Konstruieren eines untergeordneten Elements von *ElementName*verwendet, und der Wert der Spalte wird diesem hinzugefügt.  
   
  Wenn Sie einen Wert für *Directive*angeben, kann *AttributeName* leer sein. Beispiel: ElementName!TagNumber!!Directive. In diesem Fall ist der Spaltenwert direkt in *ElementName*enthalten.  
   
- *Direktive*  
- Die *Direktive* ist optional, und Sie können Sie verwenden, um zusätzliche Informationen für die XML-Erstellung bereitzustellen. Die *Direktive* hat zwei Zwecke.  
+ *Directive*  
+ *Directive* ist optional und wird zum Bereitstellen zusätzlicher Informationen für das Konstruieren der XML-Ausgabe verwendet. *Directive* hat zwei Aufgaben.  
   
  Die erste besteht darin, Werte als ID, IDREF und IDREFS zu codieren. Sie können die Schlüsselwörter **ID**, **IDREF**und **IDREFS** als Werte für *Directive*angeben. Diese Direktiven überschreiben die Attributtypen. Außerdem ermöglichen sie, dokumentinterne Links zu erstellen.  
   
  Sie können *Directive* auch verwenden, um anzugeben, wie die Zeichenfolgendaten der XML-Ausgabe zugeordnet werden sollen. Als Werte für **Directive**können die Schlüsselwörter **hide**, **element, elementxsinil**, **xml**, **xmltext** und *cdata*verwendet werden. Die **hide** -Direktive blendet den Knoten aus. Dies kann sich als nützlich erweisen, wenn Sie Werte nur zu Sortierzwecken abrufen, jedoch nicht in der resultierenden XML-Ausgabe verwenden möchten.  
   
- Die **element** -Direktive generiert ein enthaltenes Element anstelle eines Attributs. Die enthaltenen Daten sind als Entität codiert. Beispielsweise wird das **<** Zeichen zu &lt;. Bei Spaltenwerten von NULL wird kein Element generiert. Wenn Sie möchten, dass für NULL-Spaltenwerte Elemente generiert werden, können Sie die **elementxsinil** -Direktive angeben. Damit wird ein Element mit dem Attribut xsi:nil=TRUE generiert.  
+ Die **element** -Direktive generiert ein enthaltenes Element anstelle eines Attributs. Die enthaltenen Daten sind als Entität codiert. So wird z. B. das Zeichen **<** zu &lt;. Bei Spaltenwerten von NULL wird kein Element generiert. Wenn Sie möchten, dass für NULL-Spaltenwerte Elemente generiert werden, können Sie die **elementxsinil** -Direktive angeben. Damit wird ein Element mit dem Attribut xsi:nil=TRUE generiert.  
   
  Die **xml** -Direktive ist mit der **element** -Direktive identisch, mit der Ausnahme, dass keine Entitätscodierung vorgenommen wird. Beachten Sie, dass die **element** -Direktive mit **ID**, **IDREF**oder **IDREFS**kombiniert werden kann; die **xml** -Direktive hingegen ist mit keiner anderen Direktive außer **hide**zulässig.  
   
@@ -168,9 +168,9 @@ ElementName!TagNumber!AttributeName!Directive
 -   [Beispiel: Angeben der XMLTEXT-Direktive](../xml/example-specifying-the-xmltext-directive.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwenden des RAW-Modus mit for XML](../xml/use-raw-mode-with-for-xml.md)   
- [Verwenden des Auto-Modus mit for XML](../xml/use-auto-mode-with-for-xml.md)   
- [Verwenden des PATH-Modus mit for XML](../xml/use-path-mode-with-for-xml.md)   
+ [Verwenden des RAW-Modus mit FOR XML](../xml/use-raw-mode-with-for-xml.md)   
+ [Verwenden des AUTO-Modus mit FOR XML](../xml/use-auto-mode-with-for-xml.md)   
+ [Verwenden des PATH-Modus mit FOR XML](../xml/use-path-mode-with-for-xml.md)   
  [SELECT &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-transact-sql)   
  [FOR XML &#40;SQL Server&#41;](../xml/for-xml-sql-server.md)  
   

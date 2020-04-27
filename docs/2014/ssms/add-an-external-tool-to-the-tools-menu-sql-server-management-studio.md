@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cca14f144e442fbe75e41dec6ce652c4603863b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63226172"
 ---
 # <a name="add-an-external-tool-to-the-tools-menu-sql-server-management-studio"></a>Hinzufügen eines externen Tools zum Menü Extras (SQL Server Management Studio)
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Sie können beliebige Fenster [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] oder Anwendungen von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]starten. Externe Anwendungen können dem Menü **Extras** hinzugefügt und über dieses Menü ausgeführt werden.  
+  Sie können eine beliebige [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows- oder [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)]-Anwendung über [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] starten. Externe Anwendungen können dem Menü **Extras** hinzugefügt und über dieses Menü ausgeführt werden.  
   
 ### <a name="to-add-an-external-tool-to-the-tools-menu"></a>So fügen Sie dem Menü 'Extras' ein externes Tool hinzu  
   

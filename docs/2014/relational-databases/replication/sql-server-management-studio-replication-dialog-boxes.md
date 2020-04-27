@@ -11,14 +11,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6c9603994b0a1e2b57334aba836d4322a5d332c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63199120"
 ---
 # <a name="sql-server-management-studio-replication-dialog-boxes"></a>Dialogfelder für die Replikation in SQL Server Management Studio
-  Dieser Abschnitt enthält Informationen zu einer Reihe von Dialogfeldern für die Replikation, die in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verfügbar sind:  
+  Dieser Abschnitt enthält Informationen zu einer Reihe von Dialogfeldern für die Replikation, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]die in verfügbar sind:  
   
 -   [Sicherheit für den Momentaufnahme-Agent](snapshot-agent-security.md)  
   

@@ -14,16 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0f556bfccdd117b23db36bb9551e885f4c38614e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63241207"
 ---
 # <a name="retrieve-and-query-xml-data"></a>Abrufen und Abfragen von XML-Daten
   In diesem Thema werden die Abfrageoptionen beschrieben, die für die Abfrage von XML-Daten anzugeben sind. Es beschreibt auch die Teile der XML-Instanzen, die nicht beibehalten werden, wenn sie in Datenbanken gespeichert werden.  
   
-##  <a name="features"></a> Funktionen einer XML-Instanz, die nicht beibehalten werden  
+##  <a name="features-of-an-xml-instance-that-are-not-preserved"></a><a name="features"></a> Funktionen einer XML-Instanz, die nicht beibehalten werden  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] behält den Inhalt der XML-Instanz bei. Allerdings werden die Aspekte der XML-Instanz nicht beibehalten, die im Hinblick auf das XML-Datenmodell als nicht signifikant betrachtet werden. Das bedeutet, dass eine abgerufene XML-Instanz möglicherweise nicht mit der Instanz identisch ist, die auf dem Server gespeichert wurde, aber die gleichen Informationen enthält.  
   
 ### <a name="xml-declaration"></a>XML-Deklaration  
@@ -86,7 +86,7 @@ GO
 ```  
   
   
-##  <a name="query"></a> Festlegen der erforderlichen Abfrageoptionen  
+##  <a name="setting-required-query-options"></a><a name="query"></a> Festlegen der erforderlichen Abfrageoptionen  
  Beim Abfragen von `xml` Typspalten oder Variablen mithilfe `xml` von-Datentyp Methoden müssen die folgenden Optionen wie dargestellt festgelegt werden.  
   
 |SET-Optionen|Erforderliche Werte|  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b2f425dd955e0c92daeaa0241e7ea01333222b75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63186867"
 ---
 # <a name="banner-element-ssbdiagnose"></a>Banner-Element (ssbdiagnose)
@@ -44,18 +44,18 @@ ms.locfileid: "63186867"
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|BESCHREIBUNG|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
-|**Datentyp und -länge**|Keine.|  
-|**Standardwert**|Keine.|  
-|**Vorkommen**|Einmal pro XML-Ausgabedatei von **ssbdiagnose**|  
+|**Datentyp und -länge**|Keine|  
+|**Standardwert**|Keine|  
+|**Vorkommt**|Einmal pro XML-Ausgabedatei von **ssbdiagnose**|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Elemente|  
 |------------------|--------------|  
 |**Übergeordnetes Element**|[DiagnosticInformation-Element &#40;ssbdiagnose&#41;](diagnosticinformation-element-ssbdiagnose.md)|  
-|**Untergeordnete Elemente**|Keine.|  
+|**Untergeordnete Elemente**|Keine|  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel zeigt ein Banner-Element.  

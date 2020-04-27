@@ -13,23 +13,23 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 00e3643a1beb3f69f8b370715001317e536c42e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245753"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>SQL Server-Agent-Eigenschaften (Seite Warnungssystem)
   Mithilfe dieser Seite können Sie die Einstellungen für Nachrichten anzeigen und ändern [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die von-Agent-Warnungen gesendet werden.  
   
-## <a name="options"></a>Tastatur  
- **Mail Sitzung**  
+## <a name="options"></a>Optionen  
+ **Mailsitzung**  
  Mithilfe der Optionen in diesem Abschnitt wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Mail konfiguriert.  
   
- **Mail Profil aktivieren**  
+ **Mailprofil aktivieren**  
  Aktiviert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Mail. Standardmäßig ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Mail nicht aktiviert.  
   
- **Mail System**  
+ **Mailsystem**  
  Legt das von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent zu verwendende Mailsystem fest. Datenbank-E-Mail  
   
 > [!NOTE]  
@@ -38,13 +38,13 @@ ms.locfileid: "63245753"
  **Mail Profil**  
  Legt das von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent zu verwendende Profil fest. Sie können auch ** \<neu Datenbank-E-Mail Profil... #b0** auswählen, um ein neues Profil zu erstellen.  
   
- **Pager-e-Mails**  
+ **Pager-E-Mails**  
  Mithilfe der Optionen in diesem Abschnitt können Sie die an Pageradressen zu versendenden E-Mail-Nachrichten so konfigurieren, dass eine Kommunikation mit Ihrem Pagingsystem möglich ist.  
   
- **Adress Formatierung für Pager-e-Mails**  
+ **Adressformatierung für Pager-E-Mails**  
  In diesem Abschnitt können Sie das in Pager-E-Mails verwendete Format für Adressen und Betreffzeile angeben.  
   
- **An Zeile**  
+ **An-Zeile**  
  Bestimmt die Optionen für die Zeile **An** der Nachricht.  
   
  **Präfix**  
@@ -56,7 +56,7 @@ ms.locfileid: "63245753"
  **Suffix**  
  Geben Sie einen beliebigen festgelegten Text ein, den das Pagingsystem bei Nachrichten, die an Pager gesendet werden, am Ende der Zeile **An** verlangt.  
   
- **CC-Zeile**  
+ **Cc-Zeile**  
  Bestimmt Optionen für die Zeile **Cc** der Nachricht.  
   
  **Präfix**  
@@ -68,7 +68,7 @@ ms.locfileid: "63245753"
  **Suffix**  
  Geben Sie einen beliebigen festgelegten Text ein, den das Pagingsystem bei Nachrichten, die an Pager gesendet werden, am Ende der Zeile **Cc** verlangt.  
   
- **Betreff**  
+ **Subject**  
  Bestimmt die Optionen für den Betreff der Nachricht.  
   
  **Präfix**  
@@ -77,19 +77,19 @@ ms.locfileid: "63245753"
  **Suffix**  
  Geben Sie einen beliebigen festgelegten Text ein, den das Pagingsystem bei Nachrichten, die an Pager gesendet werden, am Ende der Zeile **Betreff** verlangt.  
   
- **E-Mail-Text in Benachrichtigungs Meldung einschließen**  
+ **E-Mail-Textkörper in Benachrichtigungsmeldung einschließen**  
  Schließt den Textkörper der E-Mail-Nachricht in die an den Pager versendete Nachricht ein.  
   
- **Ausfall Sicherheits Operator**  
+ **Ausfallsicherheitsoperator**  
  In diesem Abschnitt können Sie die Optionen für den Ausfallsicherheitsoperator angeben.  
   
- **Ausfall Sicherheits Operator aktivieren**  
+ **Ausfallsicherheitsoperator aktivieren**  
  Legt einen Ausfallsicherheitsoperator fest.  
   
  **Operator**  
  Legt den Namen des Operators fest, der die Ausfallsicherheitsbenachrichtigungen empfängt.  
   
- **Benachrichtigen mithilfe von**  
+ **Benachrichtigen durch**  
  Legt die Methode zur Benachrichtigung des Ausfallsicherheitsoperators fest.  
   
  **Tokenersetzung**  
@@ -100,7 +100,7 @@ ms.locfileid: "63245753"
 >   
 >  Wenn Sie diese Tokens verwenden müssen, können Sie sie aktivieren. Stellen Sie zuvor jedoch sicher, dass nur Mitglieder von vertrauenswürdigen Windows-Sicherheitsgruppen, wie z. B. die Gruppe Administratoren, über Schreibberechtigungen für das Ereignisprotokoll des Computers verfügen, auf dem sich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] befindet.  
   
- **Token für alle Auftrags Antworten auf Warnungen ersetzen**  
+ **Token für alle Auftragsantworten auf Warnungen ersetzen**  
  Aktivieren Sie dieses Kontrollkästchen, um die Tokenersetzung für Aufträge zu aktivieren, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Warnungen aktiviert werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  

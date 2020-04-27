@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 170cbfffde1b28d60617f0e0166ca9f8e31f5fb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200186"
 ---
 # <a name="data-type-usage"></a>Datentypverwendung
@@ -43,10 +43,8 @@ ms.locfileid: "63200186"
 |Alias Datentypen|Wenn eine Verbindung mit einer Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von 4,2*x*besteht, fügt der ODBC-Treiber einer Spaltendefinition NULL hinzu, die die NULL-Zulässigkeit einer Spalte nicht explizit deklariert. Deshalb wird der NULL-Zulässigkeitsstatus, der in der Definition eines Aliasdatentyps gespeichert ist, ignoriert.<br /><br /> Wenn eine Verbindung mit einer Instanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von 4,2*x*besteht, werden Spalten mit einem Alias Datentyp, der den Basis Datentyp **char** oder **Binary** aufweist und für den keine NULL-Zulässigkeit deklariert ist, als der Datentyp **varchar** oder **varbinary**erstellt. [SQLColAttribute](../native-client-odbc-api/sqlcolattribute.md), [SQLColumns](../native-client-odbc-api/sqlcolumns.md)und [SQLDescribeCol](../native-client-odbc-api/sqldescribecol.md) geben SQL_VARCHAR oder SQL_VARBINARY als Datentyp für diese Spalten zurück. Daten, die von diesen Spalten abgerufen werden, werden nicht aufgefüllt. **Hinweis:**  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das Herstellen einer Verbindung mit 6,5 und früher.|  
 |LONG-Datentypen|*Data-at-Execution-* Parameter sind sowohl für die SQL_LONGVARBINARY-als auch für die SQL_LONGVARCHAR-Datentypen beschränkt.|  
 |Typen für hohe Werte|Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber macht die Typen **varchar (max)**, **varbinary (max)** und **nvarchar (max)** als SQL_VARCHAR, SQL_VARBINARY und SQL_WVARCHAR in APIs verfügbar, die ODBC-SQL-Datentypen akzeptieren oder zurückgeben.|  
-|Benutzerdefinierter Typ (User-defined type, UDT)|UDT-Spalten werden als SQL_SS_UDT zugeordnet. Wenn eine UDT-Spalte unter Verwendung der ToString()- oder der ToXMLString()-Methode des UDT oder über die CAST/CONVERT-Funktionen explizit einem anderen Typ in der SQL-Anweisung zugeordnet wird, gibt der Typ der Spalte im Resultset den tatsächlichen Typ wieder, in den die Spalte konvertiert wurde.<br /><br /> Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber kann nur als Binär an eine UDT-Spalte gebunden werden. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt nur die Konvertierung zwischen den Datentypen SQL_SS_UDT und SQL_C_BINARY.|  
-|XML|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konvertiert XML automatisch zu Unicode-Text. Der XML-Typ wird als SQL_SS_XML zugeordnet.|  
+|Benutzerdefinierter Typ (User-defined type, UDT)|UDT-Spalten werden als SQL_SS_UDT zugeordnet. Wenn eine UDT-Spalte unter Verwendung der ToString()- oder der ToXMLString()-Methode des UDT oder über die CAST/CONVERT-Funktionen explizit einem anderen Typ in der SQL-Anweisung zugeordnet wird, gibt der Typ der Spalte im Resultset den tatsächlichen Typ wieder, in den die Spalte konvertiert wurde.<br /><br /> Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-ODBC-Treiber kann nur als Binär an eine UDT-Spalte gebunden werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt nur die Konvertierung zwischen den Datentypen SQL_SS_UDT und SQL_C_BINARY.|  
+|XML|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konvertiert XML automatisch zu Unicode-Text. Der XML-Typ wird als SQL_SS_XML zugeordnet.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Verarbeitungsergebnisse &#40;ODBC-&#41;](processing-results-odbc.md)  

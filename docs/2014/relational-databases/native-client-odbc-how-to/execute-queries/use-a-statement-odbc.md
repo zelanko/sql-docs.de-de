@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 842e862dff7eca85a05df0222989c6ee6390ab89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200325"
 ---
 # <a name="use-a-statement-odbc"></a>Verwenden einer Anweisung (ODBC)
@@ -35,11 +35,11 @@ ms.locfileid: "63200325"
   
 5.  Führen Sie eine Anweisung direkt mit SQLExecDirect aus.  
   
-     \- oder –  
+     \- oder -  
   
      Wenn die Anweisung vorbereitet wurde, führen Sie sie mehrmals mit [SQLExecute](https://go.microsoft.com/fwlink/?LinkId=58400)aus.  
   
-     \- oder –  
+     \- oder -  
   
      Rufen Sie eine Katalogfunktion auf, die Ergebnisse zurückgibt.  
   
@@ -47,11 +47,11 @@ ms.locfileid: "63200325"
   
      Rufen Sie eine Zeile nach der anderen über das Resultset einer Anweisung ab.  
   
-     \- oder –  
+     \- oder -  
   
      Rufen Sie mehrere Zeilen gleichzeitig über das Resultset mithilfe eines Blockcursors ab.  
   
-     \- oder –  
+     \- oder -  
   
      Rufen Sie [SQLRowCount](../../native-client-odbc-api/sqlrowcount.md) auf, um die Anzahl der Zeilen, die von einer INSERT-, UPDATE- oder DELETE-Anweisung betroffen sind, zu bestimmen.  
   

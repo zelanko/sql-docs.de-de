@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d434df95a26485d4d7795d3ab960b8d2457b8ff6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63185574"
 ---
 # <a name="basic-data-mining-tutorial"></a>Lernprogramm zu Data Mining-Grundlagen
@@ -34,11 +34,11 @@ ms.locfileid: "63185574"
   
  [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Data Mining umfasst die folgenden Funktionen, mit denen Sie problemlos mehrere Vorhersagemodelle entwickeln und vergleichen und anschließend Aktionen für die Ergebnisse durchführen können:  
   
--   Zurück Haltungs *Testsätze:* Wenn Sie eine Mining Struktur erstellen, können Sie die Daten in der Mining Struktur nun in Trainings-und Testsätze aufteilen. Auf diese Weise können Sie Modelle an ähnlichen Datasets testen und die Genauigkeit verwandter Modelle testen.  
+-   *Zurückhaltungstestsätze*– Beim Erstellen einer Miningstruktur können Sie nun die darin enthaltenen Daten in Trainings- und Testsätze aufteilen. Auf diese Weise können Sie Modelle an ähnlichen Datasets testen und die Genauigkeit verwandter Modelle testen.  
   
--   *Mining Modell Filter-* Sie können nun Filter an ein Mining Modell anfügen und den Filter während der Trainings-und Testzwecke anwenden. Dies erleichtert die Erstellung verwandter Modelle für unterschiedliche Teilmengen der Daten.  
+-   *Miningmodellfilter*– Sie können nun Filter an ein Miningmodell anfügen und diese beim Trainieren und Testen anwenden. Dies erleichtert die Erstellung verwandter Modelle für unterschiedliche Teilmengen der Daten.  
   
--   *Drillthrough zu Struktur Fällen und Struktur Spalten-* Sie können jetzt problemlos von den allgemeinen Mustern im Mining Modell zu aussagekräftigen Details in der Datenquelle wechseln.  
+-   *Drillthrough zu Strukturfällen und Strukturspalten* – Sie können nun einfach von allgemeinen Mustern im Miningmodell zu aussagekräftigen Details in der Datenquelle wechseln.  
   
  Dieses Lernprogramm ist in die folgenden Lektionen aufgeteilt:  
   
@@ -51,11 +51,11 @@ ms.locfileid: "63185574"
  [Lektion 3: Hinzufügen und Verarbeiten von Modellen](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  
  In dieser Lektion erfahren Sie, wie einer Struktur Modelle hinzugefügt werden. Die Modelle, die Sie erstellen, werden mit den folgenden Algorithmen erstellt:  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]Entscheidungsbäume  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]Clustering  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering  
   
--   [!INCLUDE[msCoName](../includes/msconame-md.md)]Naive Bayes  
+-   [!INCLUDE[msCoName](../includes/msconame-md.md)] Naive Bayes  
   
  [Lektion 4: Untersuchen der Ziel-Mailing-Modelle &#40;grundlegenden Data Mining-Lernprogramm&#41;](../../2014/tutorials/lesson-4-exploring-the-targeted-mailing-models-basic-data-mining-tutorial.md)  
  In dieser Lektion lernen Sie, die Ergebnisse der einzelnen Modelle mit Viewern zu untersuchen und zu interpretieren.  
@@ -63,10 +63,10 @@ ms.locfileid: "63185574"
  [Lektion 5: Testen von Modellen &#40;Lernprogramm zu Data Mining-Grundlagen&#41;](../../2014/tutorials/lesson-5-testing-models-basic-data-mining-tutorial.md)  
  In dieser Lektion erstellen Sie eine Kopie des Targeted Mailing-Modells, fügen einen Miningmodellfilter hinzu, um die Trainingsdaten auf eine bestimmte Kundengruppe zu beschränken und bewerten anschließend die Verwendbarkeit des Modells.  
   
- [Lektion 6: Erstellen und arbeiten mit Vorhersagen &#40;Lernprogramm zu Data Mining-Grundlagen&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Lektion 6: Erstellen und Verwenden von Vorhersagen &#40;Tutorial zu Data Mining-Grundlagen&#41;](../../2014/tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
  In der Abschlusslektion des Lernprogramms zu Data Mining-Grundlagen sagen Sie anhand des Modells voraus, welche Kunden am wahrscheinlichsten ein Fahrrad kaufen werden. Danach führen Sie einen Drillthrough zu den zugrunde liegenden Fällen durch, um die Kontaktinformationen abzurufen.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
  Stellen Sie sicher, dass Folgendes installiert ist:  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]  
@@ -83,6 +83,6 @@ ms.locfileid: "63185574"
 ## <a name="see-also"></a>Weitere Informationen  
  [Data Mining-Lösungen](../../2014/analysis-services/data-mining/data-mining-solutions.md)   
  [Mining Modell Tasks und Anleitungen](../../2014/analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Erstellen und Abfragen von Data Mining-Modellen mit DMX: Tutorials &#40;Analysis Services Data Mining-&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
+ [Erstellen und Abfragen von Data Mining-Modellen mit DMX: Lernprogramme &#40;Analysis Services – Data Mining&#41;](../../2014/tutorials/create-query-data-mining-models-dmx-tutorials.md)  
   
   

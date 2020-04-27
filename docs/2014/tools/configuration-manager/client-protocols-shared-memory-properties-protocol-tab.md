@@ -14,14 +14,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3d5f15222caab52732dff3d6c5faf37b11d4a057
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192920"
 ---
 # <a name="client-protocols---shared-memory-properties-protocol-tab"></a>Clientprotokolle - Shared Memory-Eigenschaften (Registerkarte Protokoll)
-  Verwenden Sie im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager im Dialogfeld **Shared Memory-Eigenschaften** die Registerkarte **Protokoll** , um die Shared Memory-Eigenschaften anzuzeigen oder zu ändern. Weitere Informationen zu Verbindungszeichenfolgen finden Sie unter [Erstellen einer gültigen Verbindungszeichenfolge mithilfe des Shared Memory-Protokolls](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md).  
+  Im Dialogfeld **Shared Memory Properties** (Eigenschaften von gemeinsam genutztem Speicher) des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Managers können Sie sich auf der Registerkarte **Protokoll** den gemeinsam genutzten Speicher ansehen und Änderungen daran vornehmen. Weitere Informationen zu Verbindungszeichenfolgen finden Sie unter [Erstellen einer gültigen Verbindungszeichenfolge mithilfe des Shared Memory-Protokolls](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md).  
   
 ## <a name="options"></a>Tastatur  
  **Aktiviert**  

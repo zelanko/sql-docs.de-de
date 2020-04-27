@@ -22,17 +22,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: e204a1865c2a928079fcd9b32b31a8ae0c0bd0a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63238134"
 ---
 # <a name="sql-server-audit-action-groups-and-actions"></a>SQL Server Audit-Aktionsgruppen und -Aktionen
   Die Funktion [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Audit ermöglicht Ihnen, Ereignisgruppen und einzelne Ereignisse auf Server- und Datenbankebene zu überwachen. Weitere Informationen finden Sie unter [SQL Server Audit &#40;Datenbank-Engine&#41;](sql-server-audit-database-engine.md).  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachungen bestehen aus null oder mehr Überwachungsaktionselementen. Bei diesen Überwachungsaktionselementen kann es sich entweder um Aktionsgruppen, wie Server_Object_Change_Group, oder um einzelne Aktionen, wie SELECT-Vorgänge in einer Tabelle, handeln.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Überwachungen bestehen aus null oder mehr Überwachungsaktionselementen. Bei diesen Überwachungsaktionselementen kann es sich entweder um Aktionsgruppen, wie Server_Object_Change_Group, oder um einzelne Aktionen, wie SELECT-Vorgänge in einer Tabelle, handeln.  
   
 > [!NOTE]  
 >  Server_Object_Change_Group enthält für jedes Serverobjekt (Datenbank oder Endpunkt) CREATE, ALTER und DROP.  
@@ -128,7 +127,7 @@ ms.locfileid: "63238134"
   
  In der folgenden Tabelle werden die Überwachungsaktionsgruppen auf Datenbankebene beschrieben. Hier finden Sie auch, sofern vorhanden, die entsprechende Ereignisklasse in SQL Server.  
   
-|Aktionsgruppenname|BESCHREIBUNG|  
+|Aktionsgruppenname|Beschreibung|  
 |-----------------------|-----------------|  
 |APPLICATION_ROLE_CHANGE_PASSWORD_GROUP|Das Ereignis wird ausgelöst, wenn ein Kennwort für eine Anwendungsrolle geändert wird. Entspricht der [Audit App Role Change Password Event Class](../../event-classes/audit-app-role-change-password-event-class.md).|  
 |AUDIT_CHANGE_GROUP|Das Ereignis wird ausgelöst, wenn eine Überwachung erstellt, geändert oder gelöscht wird. Das Ereignis wird ausgelöst, wenn eine Überwachungsspezifikation erstellt, geändert oder gelöscht wird. Jede Änderung an einer Überwachung wird in dieser Überwachung überwacht. Entspricht der [Audit Change Audit Event Class](../../event-classes/audit-change-audit-event-class.md).|  
@@ -158,7 +157,7 @@ ms.locfileid: "63238134"
 ## <a name="database-level-audit-actions"></a>Überwachungsaktionen auf Datenbankebene  
  Aktionen auf Datenbankebene unterstützen die direkte Überwachung von spezifischen Aktionen für Datenbankenschema- und Schemaobjekte, z. B. Tabellen, Sichten, gespeicherte Prozeduren, Funktionen, erweiterte gespeicherte Prozeduren, Warteschlangen, Synonyme. Typen, XML-Schemaauflistung, Datenbank und Schema werden nicht überwacht. Die Überwachung von Schemaobjekten kann für Schema und Datenbank konfiguriert werden, d. h., es werden alle Ereignisse für alle Schemaobjekte im angegebenen Schema oder in der angegebenen Datenbank überwacht. In der folgenden Tabelle werden Überwachungsaktionen auf Datenbankebene beschrieben.  
   
-|Action|BESCHREIBUNG|  
+|Aktion|Beschreibung|  
 |------------|-----------------|  
 |SELECT|Dieses Ereignis wird immer dann ausgelöst, wenn SELECT ausgegeben wird.|  
 |UPDATE|Dieses Ereignis wird immer dann ausgelöst, wenn UPDATE ausgegeben wird.|  
@@ -178,20 +177,20 @@ ms.locfileid: "63238134"
 ## <a name="audit-level-audit-action-groups"></a>Überwachungsaktionsgruppen auf Überwachungsebene  
  Sie können auch die Aktionen im Überwachungsprozess überwachen. Dies kann im Serverbereich oder im Datenbankbereich durchgeführt werden. Im Datenbankbereich tritt dies nur bei Datenbank-Überwachungsspezifikationen auf. In der folgenden Tabelle werden Überwachungsaktionsgruppen auf Überwachungsebene beschrieben.  
   
-|Aktionsgruppenname|BESCHREIBUNG|  
+|Aktionsgruppenname|Beschreibung|  
 |-----------------------|-----------------|  
 |AUDIT_ CHANGE_GROUP|Dieses Ereignis wird immer dann ausgelöst, wenn einer der folgenden Befehle ausgegeben wird:<br /><br /> -Server Überwachung erstellen<br />-Alter Server Audit<br />-Server Überwachung löschen<br />-Create Server Audit Specification<br />-Alter Server Audit Specification<br />-Drop Server Audit Specification<br />-Datenbank-Überwachungs Spezifikation erstellen<br />-Alter Database Audit Specification<br />-Datenbank-Überwachungs Spezifikation löschen|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  [Erstellen einer Serverüberwachung und einer Serverüberwachungsspezifikation](create-a-server-audit-and-server-audit-specification.md)  
   
- [Erstellen einer Server Überwachung und einer Daten Bank Überwachungs Spezifikation](create-a-server-audit-and-database-audit-specification.md)  
+ [Erstellen einer Server- und Datenbank-Überwachungsspezifikation](create-a-server-audit-and-database-audit-specification.md)  
   
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-audit-transact-sql)  
   
- [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)  
+ [ALTER SERVER AUDIT  &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-audit-specification-transact-sql)  
   
- [DROP SERVER AUDIT &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-server-audit-transact-sql)  
+ [DROP SERVER AUDIT  &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-server-audit-transact-sql)  
   
  [CREATE SERVER AUDIT SPECIFICATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-server-audit-specification-transact-sql)  
   

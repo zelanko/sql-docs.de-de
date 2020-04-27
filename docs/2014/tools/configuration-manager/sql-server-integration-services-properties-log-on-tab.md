@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bcaa38cd3849f1665d0f31e8d2749730d2494fcc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63217943"
 ---
 # <a name="sql-server-integration-services-properties-log-on-tab"></a>Eigenschaften von SQL Server Integration Services (Registerkarte Anmelden)
-  Verwenden Sie im Dialogfeld **Eigenschaften**[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] **Anmelden** , um das vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Dienst verwendete Konto anzugeben und den Dienst zu starten und zu beenden.  
+  Verwenden Sie im Dialogfeld **Eigenschaften** in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] die Registerkarte **Anmelden**, um das vom [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Dienst verwendete Konto anzugeben und den Dienst zu starten und zu beenden.  
   
 ## <a name="options"></a>Tastatur  
  **Lokales System**  

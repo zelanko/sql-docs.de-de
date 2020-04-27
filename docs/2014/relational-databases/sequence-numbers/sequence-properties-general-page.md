@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 846e7960e9aca4bfb5deea8f50eae3c8a2f58c70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63184433"
 ---
 # <a name="sequence-properties-general-page"></a>Sequenzeigenschaften (Seite "Allgemein")
@@ -41,22 +41,21 @@ ms.locfileid: "63184433"
 |Datentyp|Range|  
 |---------------|-----------|  
 |`tinyint`|0 bis 255|  
-|`smallint`|-32.768 bis 32.767|  
-|`int`|-2.147.483.648 bis 2.147.483.647|  
-|`bigint`|-9.223.372.036.854.775.808 bis 9.223.372.036.854.775.807|  
+|`smallint`|–32.768 bis 32.767|  
+|`int`|-2,147,483,648 bis 2,147,483,647|  
+|`bigint`|-9,223,372,036,854,775,808 bis 9,223,372,036,854,775,807|  
   
--   
-  `decimal` oder `numeric` mit einer Skalierung von 0.  
+-   `decimal` oder `numeric` mit einer Skalierung von 0.  
   
 -   Ein beliebiger benutzerdefinierter Datentyp (Aliastyp), der auf einem dieser Typen basiert.  
   
- **Präziser**  
+ **Genauigkeit**  
  Geben Sie die Genauigkeit für den `decimal`-Datentyp oder den `numeric`-Datentyp an. (Die Skalierung ist stets 0.)  
   
- **Mit Wert beginnen**  
+ **Startwert**  
  Der erste Wert, der vom Sequenzobjekt zurückgegeben wird. Der **START** -Wert muss kleiner oder gleich dem maximalen und größer oder gleich dem minimalen Wert des Sequenzobjekts sein. Der Standardstartwert eines neuen Sequenzobjekts ist gleich dem minimalen Wert eines aufsteigenden Sequenzobjekts und dem maximalen Wert eines absteigenden Sequenzobjekts.  
   
- **Inkrement um**  
+ **Erhöhen um**  
  Der Wert, um den der Wert des Sequenzobjekts bei jedem Aufruf der **NEXT VALUE FOR** -Funktion inkrementiert (oder bei negativem Wert dekrementiert) wird. Wenn als Inkrement ein negativer Wert verwendet wird, ist der Wert des Sequenzobjekts absteigend, andernfalls ist er aufsteigend. Das Inkrement kann nicht 0 sein.  
   
  **Minimalwert**  
@@ -65,21 +64,20 @@ ms.locfileid: "63184433"
  **Maximalwert**  
  Gibt die Grenzen für das Sequenzobjekt an. Der maximale Standardwert eines neuen Sequenzobjekts ist gleich dem maximalen Wert für den Datentyp des Sequenzobjekts.  
   
- **Die Cycle-Sequenz wird beim Erreichen des Limits neu gestartet.**  
+ **Zyklus – Sequenz wird bei Erreichen des Grenzwerts neu gestartet**  
  Wählen Sie aus, ob das Sequenzobjekt ab dem Mindestwert (oder, bei Sequenzobjekten mit absteigendem Wert, ab dem Maximalwert) erneut gestartet wird, wenn der jeweilige Mindest- bzw. Maximalwert überschritten wurde.  
   
 > [!NOTE]  
 >  Der Zyklus wird nicht ab dem Startwert erneut gestartet, sondern ab dem Mindest-/Maximalwert.  
   
- **Cache Optionen**  
+ **Cacheoptionen**  
  Durch Erstellen eines Caches von Sequenzwerten können Sie die Leistung von Anwendungen erhöhen, von denen Sequenzobjekte verwendet werden, da Sie so die Anzahl der zum Erstellen von Sequenznummern erforderlichen Datenträger-E/As senken.  
   
 -   Standardgröße – [!INCLUDE[ssDE](../../includes/ssde-md.md)] wählt eine Größe aus, Benutzer sollten sich jedoch nicht auf die Konsistenz der Auswahl verlassen. [!INCLUDE[msCoName](../../includes/msconame-md.md)] könnte die Methode zur Berechnung der Cachegröße ohne vorherige Ankündigung ändern.  
   
 -   Kein Cache – Von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden keine Sequenznummern zwischengespeichert.  
   
--   Cachegröße – Von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden Sequenzwerte zwischengespeichert. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] speichert lediglich den aktuellen Wert und die Anzahl der im Cache verbleibenden Werte. Daher ist der zum Speichern des Caches erforderliche Arbeitsspeicher immer doppelt so groß wie zwei Instanzen des Sequenzobjekt-Datentyps.  
+-   Cachegröße – Von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] werden Sequenzwerte zwischengespeichert. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] speichert lediglich den aktuellen Wert und die Anzahl der im Cache verbleibenden Werte. Daher ist der zum Speichern des Caches erforderliche Arbeitsspeicher immer doppelt so groß wie zwei Instanzen des Sequenzobjekt-Datentyps.  
   
  Bei Erstellung mit der CACHE-Option können die Sequenznummern im Cache durch unerwartetes Herunterfahren, z. B. bei einem Stromausfall, verloren gehen.  
   
@@ -89,6 +87,6 @@ ms.locfileid: "63184433"
  Erfordert die Berechtigung **CREATE SEQUENCE**, **ALTER**oder **CONTROL** für das SCHEMA.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sys. Sequenzen &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-sequences-transact-sql)  
+ [sys.sequences &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-sequences-transact-sql)  
   
   

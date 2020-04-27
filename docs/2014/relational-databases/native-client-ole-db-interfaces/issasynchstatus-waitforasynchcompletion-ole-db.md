@@ -1,5 +1,5 @@
 ---
-title: 'ISSAsynchStatus:: WaitForAsynchCompletion (OLE DB) | Microsoft-Dokumentation'
+title: ISSAsynchStatus::WaitForAsynchCompletion (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: af77f5f5519a49e2d9a744dceca2857cc88ce8e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192314"
 ---
 # <a name="issasynchstatuswaitforasynchcompletion-ole-db"></a>ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
@@ -35,7 +35,7 @@ HRESULT WaitForAsynchCompletion(
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *dwmilliabctimeout*[in]  
+ *dwMillisecTimeOut*[in]  
  Timeout in Millisekunden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -52,9 +52,9 @@ HRESULT WaitForAsynchCompletion(
  Der Vorgang wurde noch nicht abgeschlossen, obwohl das angegebene Timeout erreicht wurde.  
   
 > [!NOTE]  
->  Zusätzlich zu den oben aufgeführten Rückgabe Codewerten unterstützt die **ISSAsynchStatus:: WaitForAsynchCompletion** -Methode auch die Rückgabe Codewerte, die von den OLE EDB **ICommand:: Execute** -und **IDBInitialize:: Initialize** -Kern Methoden zurückgegeben werden.  
+>  Zusätzlich zu den oben aufgelisteten Rückgabecodewerten unterstützt die **ISSAsynchStatus::WaitForAsynchCompletion** -Methode auch die Rückgabecodewerte, die von der wichtigsten OLEDB **ICommand::Execute** - und **IDBInitialize::Initialize** -Methode zurückgegeben werden.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die **ISSAsynchStatus::WaitForAsynchCompletion** -Methode gibt keine Werte zurück, bis der Timeoutwert (in Millisekunden) erreicht oder der ausstehende Vorgang abgeschlossen wurde. Das **Command** -Objekt verfügt über eine **CommandTimeout** -Eigenschaft, die die Anzahl der Sekunden steuert, die eine Abfrage ausgeführt wird, bevor ein Timeout eintritt. Die **CommandTimeout** -Eigenschaft wird ignoriert, wenn Sie in Verbindung mit der **ISSAsynchStatus:: WaitForAsynchCompletion** -Methode verwendet wird.  
   
  Die Timeouteigenschaft wird für asynchrone Vorgänge ignoriert. Der Timeout-Parameter **ISSAsynchStatus::WaitForAsynchCompletion** gibt die maximale Zeitspanne an, die verstreicht, bevor die Steuerung an den Aufrufer zurückgegeben wird. Wenn dieses Timeout abläuft, wird DB_S_ASYNCHRONOUS zurückgegeben. Timeouts führen nie zum Abbruch asynchroner Vorgänge. Wenn die Anwendung einen asynchronen Vorgang, der nicht innerhalb des Timeouts abgeschlossen wurde, abbrechen muss, muss sie auf das Timeout warten und, falls DB_S_ASYNCHRONOUS zurückgegeben wird, anschließend den Vorgang explizit abbrechen.  

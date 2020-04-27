@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bc810ced25733ce77d80c7bec38b03e3aaf3753a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63233078"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>Neue Funktionen für Datum und Uhrzeit bei früheren SQL Server-Versionen (OLE DB)
@@ -31,7 +31,7 @@ ms.locfileid: "63233078"
   
 |OLE DB-Clienttyp|SQL Server 2005-Typ|SQL Server 2008 (oder höher)-Typ|Ergebniskonvertierung (Server zu Client)|Parameterkonvertierung (Client zu Server)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|Datetime|Date|OK|OK|  
+|DBTYPE_DBDATE|Datetime|Datum|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Zeitfelder werden auf 0 (Null) festgelegt.|IRowsetChange schlägt fehl, weil die Zeichenfolge abgeschnitten wird, wenn das Zeitfeld ungleich 0 (null) ist.|  
 |DBTYPE_DBTIME||Time(0)|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Datumsfelder werden auf das aktuelle Datum festgelegt.|IRowsetChange schlägt fehl, weil die Zeichenfolge abgeschnitten wird, wenn Sekundenbruchteile ungleich 0 (null) sind.<br /><br /> Das Datum wird ignoriert.|  
@@ -39,7 +39,7 @@ ms.locfileid: "63233078"
 |DBTYPE_DBTIMESTAMP|||Schlägt fehl-ungültiges Zeit Literale.|OK|  
 |DBTYPE_DBTIMESTAMP||Datetime2 (3)|OK|OK|  
 |DBTYPE_DBTIMESTAMP||Datetime2 (7)|OK|OK|  
-|DBTYPE_DBDATE|Smalldatetime|Date|OK|OK|  
+|DBTYPE_DBDATE|Smalldatetime|Datum|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Zeitfelder werden auf 0 (Null) festgelegt.|IRowsetChange schlägt fehl, weil die Zeichenfolge abgeschnitten wird, wenn das Zeitfeld ungleich 0 (null) ist.|  
 |DBTYPE_DBTIME||Time(0)|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||Datumsfelder werden auf das aktuelle Datum festgelegt.|IRowsetChange schlägt fehl, weil die Zeichenfolge abgeschnitten wird, wenn Sekundenbruchteile ungleich 0 (null) sind.<br /><br /> Das Datum wird ignoriert.|  
@@ -55,7 +55,7 @@ ms.locfileid: "63233078"
   
 -   Wechseln zu `datetime2`, da dies der bevorzugte Datentyp für Datum und Uhrzeit ist.  
   
- Anwendungen, die Server Metadaten verwenden, die über ICommandWithParameters:: GetParameterInfo oder Schemarowsets abgerufen werden, um Parametertyp Informationen über ICommandWithParameters:: SetParameterInfo festzulegen, schlagen während der Client Konvertierung fehl, wenn die Zeichenfolge die Darstellung eines Quelltyps ist größer als die Zeichen folgen Darstellung des Zieltyps. Wenn eine Client Bindung z. b. DBTYPE_DBTIMESTAMP verwendet und die Server Spalte Date lautet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , konvertiert Native Client den Wert in "yyyy-dd-mm hh: mm: SS. fff", aber Server Metadaten werden als `nvarchar(10)`zurückgegeben. Der resultierende Überlauf löst DBSTATUS_E_CATCONVERTVALUE aus. Ähnliche Probleme treten bei Datenkonvertierungen durch IRowsetChange auf, da die Rowsetmetadaten aus den Resultset-Metadaten festgelegt werden.  
+ Anwendungen, die Server Metadaten verwenden, die über ICommandWithParameters:: GetParameterInfo oder Schemarowsets abgerufen werden, um Parametertyp Informationen über ICommandWithParameters:: SetParameterInfo festzulegen, schlagen bei Client Konvertierungen fehl, wenn die Zeichen folgen Darstellung eines Quell Typs größer als die Zeichen folgen Darstellung des Zieltyps ist. Wenn eine Client Bindung z. b. DBTYPE_DBTIMESTAMP verwendet und die Server Spalte Date lautet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , konvertiert Native Client den Wert in "yyyy-dd-mm hh: mm: SS. fff", aber Server Metadaten werden als `nvarchar(10)`zurückgegeben. Der resultierende Überlauf löst DBSTATUS_E_CATCONVERTVALUE aus. Ähnliche Probleme treten bei Datenkonvertierungen durch IRowsetChange auf, da die Rowsetmetadaten aus den Resultset-Metadaten festgelegt werden.  
   
 ### <a name="parameter-and-rowset-metadata"></a>Metadaten für Parameter und Rowsets  
  In diesem Abschnitt werden Metadaten für Parameter, Ergebnis Spalten und Schemarowsets für Clients beschrieben, die mit einer früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version von Native Client [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]als kompiliert werden.  
@@ -166,6 +166,6 @@ ms.locfileid: "63233078"
  Alle Vergleichsoperatoren sind für die neuen Datums-/Uhrzeittypen zulässig, da Sie als Zeichenfolgetypen anstatt als Datums-/Uhrzeittypen angezeigt werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Datums-und Uhrzeit Verbesserungen &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+ [Date and Time Improvements &#40;OLE DB&#41; (Verbesserungen bei Datum und Uhrzeit &#40;OLE DB&#41;)](date-and-time-improvements-ole-db.md)  
   
   

@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b8f47fec03c992612f0139904bf869db549ec9b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63184560"
 ---
 # <a name="maintenance-plan-design-tab"></a>Wartungsplan (Registerkarte Entwurf)
-  Verwenden Sie den **Wartungsplan (Registerkarte Entwurf)** , um die Eigenschaften eines Wartungsplans und seiner unter Pläne anzugeben. Ziehen Sie Tasks aus der Toolbox in den Wartungsplan-Designer. Klicken Sie mit der rechten Maustaste auf Gruppen von Tasks, um verzweigte Ausführungspfade zu erstellen. Wartungspläne werden als [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete gespeichert, die von Aufträgen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ausgeführt werden.  
+  Verwenden Sie **Wartungsplan (Registerkarte „Entwurf“)** , um die Eigenschaften eines Wartungsplans und seiner Unterpläne anzugeben. Ziehen Sie Tasks aus der Toolbox in den Wartungsplan-Designer. Klicken Sie mit der rechten Maustaste auf Gruppen von Tasks, um verzweigte Ausführungspfade zu erstellen. Wartungspläne werden als [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete gespeichert, die von Aufträgen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ausgeführt werden.  
   
 ## <a name="options"></a>Tastatur  
  **Unterplan hinzufügen**  
@@ -34,7 +34,7 @@ ms.locfileid: "63184560"
  **Ausgewählten Unterplan löschen**  
  Hiermit löschen Sie den ausgewählten Unterplan.  
   
- **Zeitplan des unter Plans**  
+ **Zeitplan des Unterplans**  
  Hiermit zeigen Sie das Dialogfeld **Eigenschaften des Auftragszeitplans** an. Wählen Sie einen Unterplan im Raster aus, und klicken Sie auf dieses Symbol, um einen Zeitplan für den Unterplan zu konfigurieren.  
   
  **Zeitplan entfernen**  
@@ -55,7 +55,7 @@ ms.locfileid: "63184560"
  **Beschreibung**  
  Hier können Sie eine Beschreibung für den Wartungsplan anzeigen oder festlegen. Die maximale Länge für eine Beschreibung beträgt 512 Zeichen.  
   
- **Designer Oberfläche**  
+ **Designeroberfläche**  
  Hiermit können Sie Wartungspläne entwerfen und verwalten. Verwenden Sie die Designeroberfläche, um einem Plan Wartungspläne hinzuzufügen, Tasks aus einem Plan zu entfernen, Rangfolgenlinks zwischen den Tasks anzugeben oder Taskverzweigungen und -parallelausführungen anzuzeigen.  
   
  Ein Rangfolgenlink zwischen zwei Tasks legt eine Beziehung zwischen den Tasks fest. Der zweite Task (der *abhängige Task*) wird nur ausgeführt, wenn das Ausführungsergebnis des ersten Tasks (des *Vorgängertasks*) bestimmte Kriterien erfüllt. Normalerweise ist das angegebene Ausführungsergebnis **Erfolg**, **Fehler**oder **Beendigung**. Die Oberfläche des Wartungsplan-Designers basiert auf der Oberfläche des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers. Weitere Informationen finden Sie unter [Rangfolgeneinschränkungen](../../integration-services/control-flow/precedence-constraints.md).  
@@ -68,7 +68,7 @@ ms.locfileid: "63184560"
   
  Nachdem ein Wartungstask auf der Entwurfsoberfläche platziert ist, können seine Eigenschaften je nach Bedarf bearbeitet werden. So wird beispielsweise die für einen Task Datenbank sichern relevante Datenbank erst angegeben, nachdem der Task dem Plan hinzugefügt wurde. Die Tasks auf der Entwurfsoberfläche, die nicht ordnungsgemäß konfiguriert sind, enthalten ein rotes Symbol mit einem weißen x.  
   
- Wenn Sie einem Plan einen Wartungstask hinzufügen möchten, ziehen Sie das Symbol des Tasks aus der Toolbox **Wartungsplantasks** in die Planentwurfsoberfläche, oder doppelklicken Sie in der Toolbox auf den Task, wodurch dieser Task der derzeit aktiven Designeroberfläche hinzugefügt wird. Wenn die im Menü **Wartungsplantasks** nicht sichtbar ist, wählen Sie in **im Menü** Ansicht [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **Toolbox** aus. Erweitern Sie den Knoten **Wartungsplantasks** im Bereich **Toolbox** .  
+ Wenn Sie einem Plan einen Wartungstask hinzufügen möchten, ziehen Sie das Symbol des Tasks aus der Toolbox **Wartungsplantasks** in die Planentwurfsoberfläche, oder doppelklicken Sie in der Toolbox auf den Task, wodurch dieser Task der derzeit aktiven Designeroberfläche hinzugefügt wird. Klicken Sie im **-Menü** Ansicht**auf**Toolbox[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], wenn die Toolbox **Wartungsplantasks** nicht sichtbar ist. Erweitern Sie den Knoten **Wartungsplantasks** im Bereich **Toolbox** .  
   
  Wenn Sie einen Task aus einem Plan entfernen möchten, wählen Sie den Task in der Designeroberfläche aus, und drücken Sie die **ENTF** -TASTE, oder klicken Sie mit der rechten Maustaste auf den Task, und klicken Sie auf **Löschen**.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "63184560"
  **Bearbeiten**  
  Öffnet das Eigenschaftendialogfeld für den Task.  
   
- **Disable**  
+ **Deaktivieren**  
  Sorgt dafür, dass der Task vorübergehend nicht verfügbar ist.  
   
  **Aktivieren**  
@@ -98,16 +98,16 @@ ms.locfileid: "63184560"
  **Gruppe**  
  Erstellt eine Gruppe, die einen oder mehrere Tasks enthält.  
   
- **Gruppierung**  
+ **Gruppierung aufheben**  
  Entfernt Tasks aus einer Gruppe.  
   
- **AutoSize**  
+ **Automatisch anpassen**  
  Legt die Größe aller Tasks auf das jeweilige Optimum fest.  
   
- **Zerfall**  
+ **Reduzieren**  
  Blendet Tasks innerhalb einer Gruppe aus.  
   
- **Ausgebaut**  
+ **Erweitern**  
  Zeigt die Tasks in einer Gruppe an, die zuvor mithilfe der Option **Reduzieren**ausgeblendet wurden.  
   
  **Zoom**  

@@ -1,5 +1,5 @@
 ---
-title: Aktualisieren von Daten in SQL Server Cursorn | Microsoft-Dokumentation
+title: Aktualisieren von Daten in SQL Server-Cursorn | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b5c0b188d8fd45c1177cab77501bdf80fc550987
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63242920"
 ---
 # <a name="updating-data-in-sql-server-cursors"></a>Aktualisieren von Daten in SQL Server-Cursorn
@@ -34,7 +34,7 @@ ms.locfileid: "63242920"
 ## <a name="immediate-and-delayed-update-modes"></a>Unmittelbarer und verzögerter Updatemodus  
  Im Sofortupdatemodus verursacht jeder Aufruf von **IRowsetChange::SetData** einen Roundtrip zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Wenn der Consumer mehrere Änderungen an einer einzelnen Zeile vornimmt, ist es effizienter, alle Änderungen mit einem einzigen **SetData**-Aufruf zu übergeben.  
   
- Im verzögerten Updatemodus wird für jede im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]cRows *-Parameter und *rghRows *-Parameter von *IRowsetUpdate::Update** angegebene Zeile ein Roundtrip zu ** durchgeführt.  
+ Im verzögerten Updatemodus wird für jede im *cRows*-Parameter und *rghRows*-Parameter von **IRowsetUpdate::Update** angegebene Zeile ein Roundtrip zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] durchgeführt.  
   
  In beiden Modi stellt ein Roundtrip eine separate Transaktion dar, wenn kein Transaktionsobjekt für das Rowset geöffnet ist.  
   

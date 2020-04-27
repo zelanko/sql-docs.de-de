@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfilee
 ms.openlocfilehash: 893067e234d868ae6dde2f93d93bfd50458bfeb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63217743"
 ---
 # <a name="creating-predictions-on-a-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Erstellen von Vorhersagen für ein Sequenzclustermodell (Data Mining-Lernprogramm für Fortgeschrittene)
@@ -65,13 +65,13 @@ ms.locfileid: "63217743"
   
 1.  Klicken Sie in der linken oberen Ecke der Vorhersage Abfrage-Generator auf die Schaltfläche **Entwurf** , um zum Raster für die Abfrage Erstellung zurückzukehren.  
   
-2.  Klicken Sie im Dialogfeld **Singleton-Abfrage Eingabe** auf **** das Feld Wert `Region`für, und wählen Sie **Europa**aus.  
+2.  Klicken Sie im Dialogfeld **Singleton-Abfrage Eingabe** auf **Value** das Feld Wert `Region`für, und wählen Sie **Europa**aus.  
   
 3.  Klicken Sie auf die Schaltfläche **Ergebnis** , um Vorhersagen für Kunden in Europa anzuzeigen.  
   
 4.  Klicken Sie in der linken oberen Ecke der Vorhersage Abfrage-Generator auf die Schaltfläche **Entwurf** , um zum Raster für die Abfrage Erstellung zurückzukehren.  
   
-5.  Klicken Sie im Dialogfeld **Singleton-Abfrage Eingabe** auf **** das Feld Wert `Region`für, und wählen Sie **Nordamerika**aus.  
+5.  Klicken Sie im Dialogfeld **Singleton-Abfrage Eingabe** auf **Value** das Feld Wert `Region`für, und wählen Sie **Nordamerika**aus.  
   
 6.  Klicken Sie auf die Schaltfläche **Ergebnis** , um Vorhersagen für Kunden in Nordamerika anzuzeigen.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "63217743"
   
 3.  Lassen Sie das **Feld** leer.  
   
-4.  Geben **** `t`Sie als Alias ein.  
+4.  Geben **Alias** `t`Sie als Alias ein.  
   
 5.  Geben Sie im Feld **Kriterium/Argument** die gesamte untergeordnete SELECT-Anweisung ein, wie im folgenden Codebeispiel gezeigt. Achten Sie darauf, auch die öffnende und die schließende Klammer einzugeben.  
   
@@ -145,9 +145,9 @@ NATURAL PREDICTION JOIN
   
 1.  Klicken Sie in der linken oberen Ecke der Vorhersage Abfrage-Generator auf die Schaltfläche **Entwurf** , um zum Raster für die Abfrage Erstellung zurückzukehren.  
   
-2.  Klicken Sie im Dialogfeld **Singleton-Abfrage Eingabe** auf **** das Feld Wert `Region`für, und wählen Sie die leere Zeile aus, um die Eingabe für dieses Feld zu löschen.  
+2.  Klicken Sie im Dialogfeld **Singleton-Abfrage Eingabe** auf **Value** das Feld Wert `Region`für, und wählen Sie die leere Zeile aus, um die Eingabe für dieses Feld zu löschen.  
   
-3.  Klicken Sie im Dialogfeld **Singleton-Abfrage Eingabe** auf **** das Feld Wert `vAssocSeqLineItems`für, und klicken Sie dann auf die Schaltfläche (...).  
+3.  Klicken Sie im Dialogfeld **Singleton-Abfrage Eingabe** auf **Value** das Feld Wert `vAssocSeqLineItems`für, und klicken Sie dann auf die Schaltfläche (...).  
   
 4.  Klicken Sie im Dialogfeld **Eingabe der eingefügten Tabelle** auf **Hinzufügen**.  
   
@@ -201,6 +201,6 @@ NATURAL PREDICTION JOIN
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Sequence Clustering-Modell Abfrage Beispiele](../../2014/analysis-services/data-mining/sequence-clustering-model-query-examples.md)   
- [Mining Modell Inhalt von Sequence Clustering-Modellen &#40;Analysis Services Data Mining-&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
+ [Miningmodellinhalt von Sequence Clustering-Modellen &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-sequence-clustering-models.md)  
   
   

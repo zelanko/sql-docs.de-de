@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 065440d834033d1c1c999ea9d38d321be9a6278c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63223329"
 ---
 # <a name="clustered-property-sqlservice-class"></a>Clustered-Eigenschaft (SqlService-Klasse)
@@ -37,13 +37,13 @@ object
 ```  
   
 ## <a name="parts"></a>Bestandteile  
- *Objekt*  
- Ein [SqlService-Klassen](sqlservice-class.md) Objekt, das den Dienst darstellt.  
+ *object*  
+ Ein [SqlService-Klassenobjekt](sqlservice-class.md) , das den Dienst darstellt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein boleescher Wert, der angibt, ob der Dienst Teil einer gruppierten Instanz ist: `true`, wenn der Dienst Teil einer gruppierten Instanz ist, bzw. `false`, wenn der Dienst nicht Teil einer gruppierten Instanz ist.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Starten und Beenden von Diensten](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

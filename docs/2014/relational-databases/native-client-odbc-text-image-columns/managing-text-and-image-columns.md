@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a161b009239db3c17acb64f8d8eeaaa61321cd9f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63195316"
 ---
 # <a name="managing-text-and-image-columns"></a>Verwalten von Text und Imagespalten
@@ -34,13 +34,13 @@ ms.locfileid: "63195316"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Gebundene im Vergleich zu ungebundenen Text- und Image-Spalten](bound-vs-unbound-text-and-image-columns.md)  
+-   [Vergleich von gebundenen und ungebundenen Text- und Image-Spalten](bound-vs-unbound-text-and-image-columns.md)  
   
--   [Protokollierte und nicht protokollierte Änderungen](logged-vs-unlogged-modifications.md)  
+-   [Vergleich von protokollierten und nicht protokollierten Änderungen](logged-vs-unlogged-modifications.md)  
   
 -   [Data-at-Execution und Text-, ntext- oder Imagespalten](data-at-execution-and-text-ntext-or-image-columns.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Native Client &#40;ODBC-&#41;](../native-client/odbc/sql-server-native-client-odbc.md)  
+ [SQL Server Native Client &#40;ODBC&#41;](../native-client/odbc/sql-server-native-client-odbc.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Datums-und Uhrzeit-und Schemarowsets | Microsoft-Dokumentation
+title: Datums-, Uhrzeit- und Schemarowsets | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 710fbfdfd57608c24c56def1f2f9c4ec373f1957
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63238014"
 ---
 # <a name="date-and-time-and-schema-rowsets"></a>Datums-und Uhrzeit-und Schemarowsets
@@ -91,6 +91,6 @@ ms.locfileid: "63238014"
  OLE DB definiert lediglich MINIMUM_SCALE und MAXIMUM_SCALE für numerische und Dezimaltypen, weshalb die Verwendung dieser Spalten für time, datetime2 und datetimeoffset durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client nicht standardmäßig ist.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Metadaten &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
+ [Metadata &#40;OLE DB&#41;](../../database-engine/dev-guide/metadata-ole-db.md)  
   
   

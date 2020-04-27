@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e896f3e04d24becf136b7abefcff9dbe97fa0970
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63240264"
 ---
 # <a name="ibcpsessionbcpcolfmt-ole-db"></a>IBCPSession::BCPColFmt (OLE DB)
@@ -40,7 +40,7 @@ intcbUserDataTerm,
 DBORDINALidxServerCol);  
 ```  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die **BCPColFmt**-Methode wird verwendet, um eine Bindung zwischen BCP-Datendateifeldern und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Spalten zu erstellen. Sie nimmt Länge, Typ, Abschlusszeichen und Präfixlänge einer Spalte als Parameter auf und legt jede dieser Eigenschaften für einzelne Felder fest.  
   
  Wenn der Benutzer die interaktive Methode wählt, wird diese Methode zweimal aufgerufen: einmal zum Festlegen des Spaltenformats den Standardwerten entsprechend (die sich nach dem Typ der Serverspalte richten) und einmal, um das Format für jede Spalte dem Spaltentyp der Wahl des Clients entsprechend festzulegen, der im interaktiven Modus ausgewählt wurde.  
@@ -68,10 +68,10 @@ DBORDINALidxServerCol);
   
  Sie müssen nicht alle Daten in einer Benutzerdatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle kopieren. Um eine Spalte zu überspringen, geben Sie das Format der Daten für die Spalte an, indem Sie den idxServerCol-Parameter auf 0 festlegen. Um ein Feld zu überspringen, sind dennoch alle Informationen erforderlich, damit die Methode ordnungsgemäß funktioniert.  
   
- **Hinweis** Die [IBCPSession:: bcpschreitefmt](ibcpsession-bcpwritefmt-ole-db.md) -Funktion kann verwendet werden, um die über **BCPColFmt**bereitgestellte Format Spezifikation beizubehalten.  
+ **Hinweis:** Mit der [IBCPSession::BCPWriteFmt](ibcpsession-bcpwritefmt-ole-db.md)-Funktion kann die über **BCPColFmt** zur Verfügung gestellte Formatspezifikation permanent gespeichert werden.  
   
 ## <a name="arguments"></a>Argumente  
- *idxuserdatacol*[in]  
+ *idxUserDataCol*[in]  
  Der Feldindex in der Datendatei des Benutzers  
   
  *eUserDataType*[in]  
@@ -95,7 +95,7 @@ DBORDINALidxServerCol);
   
  Der `cbUserData` Wert stellt die Anzahl der Daten Bytes dar. Wenn Zeichendaten durch Unicode-breit Zeichen dargestellt werden, stellt ein `cbUserData` positiver Parameterwert die Anzahl der Zeichen multipliziert mit der Größe (in Bytes) der einzelnen Zeichen dar.  
   
- *pbuserdataterm*[size_is] [in]  
+ *pbUserDataTerm*[size_is] [in]  
  Die Abschlusszeichensequenz, die für das Feld verwendet werden soll. Dieser Parameter ist in erster Linie für Zeichendatentypen nützlich, da alle anderen Typen eine feste Länge besitzen oder, im Falle von Binärdaten, einen Indikator für die Länge erfordern, um die Anzahl der vorhandenen Bytes präzise zu erfassen.  
   
  Legen Sie diesen Parameter auf NULL fest, um zu vermeiden, dass extrahierte Daten terminiert werden, oder um anzugeben, dass Daten in einer Benutzerdatei nicht terminiert werden.  

@@ -16,14 +16,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 076db2370f027b0d7dffeccb294899b48a065c40
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188654"
 ---
 # <a name="understand-sql-server-management-studio-windows-management"></a>Grundlegendes zur SQL Server Management Studio-Fensterverwaltung
-  Die Tool Fenster in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] sind ein äußerst funktionales, flexibles und effizientes System, das Ihnen Folgendes ermöglicht:  
+  Die Toolfenster in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] bilden ein funktionsreiches, flexibles und effizientes System für folgende Aufgaben:  
   
 -   Maximieren des Benutzerarbeitsbereichs für Entwicklungs- und Verwaltungsaufgaben.  
   

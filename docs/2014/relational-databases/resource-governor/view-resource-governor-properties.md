@@ -15,20 +15,20 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 35d4720a8fe8b8c1b404a97e27b36896f36dd5f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63209686"
 ---
 # <a name="view-resource-governor-properties"></a>Anzeigen der Eigenschaften der Ressourcenkontrolle
   Auf der Seite Eigenschaften der Ressourcenkontrolle in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]können Sie Ressourcenkontrollentitäten erstellen oder konfigurieren, z. B. Ressourcenpools und Arbeitsauslastungsgruppen.  
   
-1.  Vorbereitungen **:**[Berechtigungen](#Permissions)    
+1.  **Vorbereitungen:**  [Berechtigungen](#Permissions)  
   
-2.  So zeigen **Sie Resource Governor Eigenschaften an:**[Resource Governor Eigenschaften Seite](#ViewRGProp)    
+2.  **Eigenschaften der Ressourcenkontrolle anzeigen mit:**  [Seite „Eigenschaften der Ressourcenkontrolle“](#ViewRGProp)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
  Neben dem Anzeigen der Eigenschaften von Ressourcenkontrollentitäten können Sie auf der Seite **Eigenschaften der Ressourcenkontrolle** mehrere Konfigurationstasks ausführen. Weitere Informationen finden Sie in den folgenden Themen:  
   
 -   [Aktivieren der Ressourcenkontrolle](enable-resource-governor.md)  
@@ -37,7 +37,7 @@ ms.locfileid: "63209686"
   
 -   [Erstellen eines Ressourcenpools](create-a-resource-pool.md)  
   
--   [Erstellen einer Arbeitsauslastungsgruppe](create-a-workload-group.md)  
+-   [Erstellen einer Arbeits Auslastungs Gruppe](create-a-workload-group.md)  
   
 -   [Ändern der Einstellungen für den Ressourcenpool](change-resource-pool-settings.md)  
   
@@ -51,11 +51,11 @@ ms.locfileid: "63209686"
   
  Sie können feststellen, ob eine ausstehende Konfiguration vorliegt, indem Sie die dynamische Verwaltungssicht [sys.dm_resource_governor_configuration](/sql/relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql) abfragen, um den aktuellen Status von is_configuration_pending zu erhalten.  
   
-###  <a name="Permissions"></a> Berechtigungen  
+###  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Zum Anzeigen der Ressourcenkontrolleigenschaften ist die VIEW SERVER STATER-Berechtigung erforderlich. Für die Konfigurationstasks für die Ressourcenkontrolle ist die CONTROL SERVER-Berechtigung erforderlich.  
   
-##  <a name="ViewRGProp"></a>Anzeigen der Resource Governor Eigenschaften Seite  
- **So zeigen Sie Resource Governor-Eigenschaften auf der Seite „Eigenschaften von Resource Governor“ in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
+##  <a name="view-the-resource-governor-properties-page"></a><a name="ViewRGProp"></a>Anzeigen der Resource Governor Eigenschaften Seite  
+ **So zeigen Sie die Eigenschaften der Ressourcenkontrolle auf der Seite Eigenschaften von Resource Governor in[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**  
   
 1.  Öffnen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]den Objekt-Explorer, und erweitern Sie den Knoten **Verwaltung** rekursiv, bis **Ressourcenkontrolle**angezeigt wird.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "63209686"
   
 4.  Klicken Sie auf **OK**, um Änderungen zu speichern.  
   
-##  <a name="RGProp"></a>Eigenschaften von Resource Governor  
+##  <a name="resource-governor-properties"></a><a name="RGProp"></a>Eigenschaften von Resource Governor  
  **Der Name der Klassifizierungsfunktion**  
  Geben Sie die Klassifizierungsfunktion durch Auswahl aus der Liste an.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "63209686"
  Aktivieren oder deaktivieren Sie die Ressourcenkontrolle, indem Sie das Kontrollkästchen aktivieren oder deaktivieren.  
   
  **Ressourcenpools**  
- Erstellen oder ändern Sie die Konfiguration von Ressourcenpools mithilfe des vorhandenen Rasters. Dieses Raster wird mit Informationen für die vordefinierten internen Pools und Standardpools ausgefüllt. Wählen Sie einen Pool aus, mit dem Sie arbeiten möchten, indem Sie auf die erste Spalte in der Zeile für den Pool klicken. Klicken Sie zur Erstellung eines neuen Ressourcenpools auf die Zeile, der ein Sternchen ( **&#42;** ) vorangestellt ist.  
+ Erstellen oder ändern Sie die Konfiguration von Ressourcenpools mithilfe des vorhandenen Rasters. Dieses Raster wird mit Informationen für die vordefinierten internen Pools und Standardpools ausgefüllt. Wählen Sie einen Pool aus, mit dem Sie arbeiten möchten, indem Sie auf die erste Spalte in der Zeile für den Pool klicken. Klicken Sie zur Erstellung eines neuen Ressourcenpools auf die Zeile, der ein Sternchen (**&#42;**) vorangestellt ist.  
   
  **Name**  
  Geben Sie den Namen des Ressourcenpools an.  
@@ -93,7 +93,7 @@ ms.locfileid: "63209686"
  Weitere Informationen finden Sie unter [Erstellen eines Ressourcenpools &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql).  
   
  **Arbeitsauslastungsgruppen für Ressourcenpool**  
- Erstellen oder ändern Sie die Konfiguration von Arbeitsauslastungsgruppen mithilfe des vorhandenen Rasters. Dieses Raster wird mit Informationen für die vordefinierten internen Gruppen und Standardgruppen ausgefüllt. Wählen Sie eine Gruppe aus, mit der Sie arbeiten möchten, indem Sie auf die erste Spalte in der Zeile für den Pool klicken. Klicken Sie zur Erstellung einer neuen Arbeitsauslastungsgruppe auf die Zeile, der ein Sternchen ( **&#42;** ) vorangestellt ist.  
+ Erstellen oder ändern Sie die Konfiguration von Arbeitsauslastungsgruppen mithilfe des vorhandenen Rasters. Dieses Raster wird mit Informationen für die vordefinierten internen Gruppen und Standardgruppen ausgefüllt. Wählen Sie eine Gruppe aus, mit der Sie arbeiten möchten, indem Sie auf die erste Spalte in der Zeile für den Pool klicken. Klicken Sie zur Erstellung einer neuen Arbeitsauslastungsgruppe auf die Zeile, der ein Sternchen (**&#42;**) vorangestellt ist.  
   
  **Name**  
  Geben Sie den Namen der Arbeitsauslastungsgruppe an.  
@@ -127,9 +127,9 @@ ms.locfileid: "63209686"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Resource Governor](resource-governor.md)   
- [Aktivieren der Ressourcenkontrolle](enable-resource-governor.md)   
- [Ressourcenpool für die Ressourcenkontrolle](resource-governor-resource-pool.md)   
- [Arbeitsauslastungsgruppe der Ressourcenkontrolle](resource-governor-workload-group.md)   
- [Klassifizierungsfunktion der Ressourcenkontrolle](resource-governor-classifier-function.md)  
+ [Aktivieren von Resource Governor](enable-resource-governor.md)   
+ [Ressourcen Pool Resource Governor](resource-governor-resource-pool.md)   
+ [Resource Governor Auslastungs Gruppe](resource-governor-workload-group.md)   
+ [Resource Governor Classifier Function](resource-governor-classifier-function.md)  
   
   

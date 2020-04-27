@@ -15,17 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1ea811151e9c81ed515b774f279297d236c608f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188740"
 ---
 # <a name="sqlspecialcolumns"></a>'SQLSpecialColumns'
   Beim Anfordern von Zeilen bezeichgern (*IdentifierType* SQL_BEST_ROWID) gibt **SQLSpecialColumns** ein leeres Resultset (keine Daten Zeilen) für einen angeforderten Bereich außer SQL_SCOPE_CURROW zurück. Das generierte Resultset gibt an, dass die Spalten nur innerhalb dieses Bereichs gültig sind.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt keine Pseudospalten für Bezeichner. Das **SQLSpecialColumns** -Resultset identifiziert alle Spalten als SQL_PC_NOT_PSEUDO.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt keine Pseudospalten für Bezeichner. Das **SQLSpecialColumns** -Resultset identifiziert alle Spalten als SQL_PC_NOT_PSEUDO.  
   
  **SQLSpecialColumns** kann in einem statischen Cursor ausgeführt werden. Der Versuch, **SQLSpecialColumns** für eine aktualisierbare (keysetgesteuerte oder dynamische) auszuführen, gibt SQL_SUCCESS_WITH_INFO zurück, die angibt, dass der Cursortyp geändert wurde.  
   

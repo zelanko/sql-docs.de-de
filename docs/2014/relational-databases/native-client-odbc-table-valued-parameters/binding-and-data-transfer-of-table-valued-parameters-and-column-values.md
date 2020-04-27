@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26bcf31c2d4e0d188e93587dd9bdec1a9ff382e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63199953"
 ---
 # <a name="binding-and-data-transfer-of-table-valued-parameters-and-column-values"></a>Bindung und Datenübertragung von Tabellenwertparametern und Spaltenwerten
@@ -32,11 +32,11 @@ ms.locfileid: "63199953"
   
 |Parameter|Verknüpftes Attribut für nicht-Tabellenwert Parameter-Typen, einschließlich Spalten|Verknüpftes Attribut für Tabellenwertparameter|  
 |---------------|--------------------------------------------------------------------------------|----------------------------------------------------|  
-|*Inputoutputtype*|SQL_DESC_PARAMETER_TYPE in IPD<br /><br /> Für Tabellenwertparameter-Spalten muss diese Angabe der Angabe für den Tabellenwertparameter selbst entsprechen.|SQL_DESC_PARAMETER_TYPE in IPD<br /><br /> Hier muss SQL_PARAM_INPUT angegeben werden.|  
+|*InputOutputType*|SQL_DESC_PARAMETER_TYPE in IPD<br /><br /> Für Tabellenwertparameter-Spalten muss diese Angabe der Angabe für den Tabellenwertparameter selbst entsprechen.|SQL_DESC_PARAMETER_TYPE in IPD<br /><br /> Hier muss SQL_PARAM_INPUT angegeben werden.|  
 |*ValueType*|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE in APD|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE in APD<br /><br /> Hier muss SQL_C_DEFAULT oder SQL_C_BINARY angegeben werden.|  
 |*Parameter Type*|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE in IPD|SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE in IPD<br /><br /> Hier muss SQL_SS_TABLE angegeben werden.|  
 |*ColumnSize*|SQL_DESC_LENGTH oder SQL_DESC_PRECISION in IPD<br /><br /> Dies hängt vom Wert von *ParameterType*ab.|SQL_DESC_ARRAY_SIZE<br /><br /> Kann auch mit SQL_ATTR_PARAM_SET_SIZE festgelegt werden, wenn der Parameterfokus auf den Tabellenwertparameter festgelegt wurde.<br /><br /> Bei einem Tabellenwertparameter ist dies die Anzahl von Zeilen in den Tabellenwertparameter-Spaltenpuffern.|  
-|*Dezimalstellen*|SQL_DESC_PRECISION oder SQL_DESC_SCALE in IPD|Nicht verwendet. Diese Angabe muss 0 sein.<br /><br /> Wenn dieser Parameter nicht 0 ist, gibt SQLBindParameter SQL_ERROR zurück, und es wird ein Diagnosedaten Satz mit SQLSTATE = HY104 und der Meldung "ungültige Genauigkeit oder Dezimalstellen" generiert.|  
+|*DecimalDigits*|SQL_DESC_PRECISION oder SQL_DESC_SCALE in IPD|Nicht verwendet. Diese Angabe muss 0 sein.<br /><br /> Wenn dieser Parameter nicht 0 ist, gibt SQLBindParameter SQL_ERROR zurück, und es wird ein Diagnosedaten Satz mit SQLSTATE = HY104 und der Meldung "ungültige Genauigkeit oder Dezimalstellen" generiert.|  
 |*ParameterValuePtr*|SQL_DESC_DATA_PTR in APD|SQL_CA_SS_TYPE_NAME<br /><br /> Dies ist ein optionales Attribut für gespeicherte Prozeduren, und NULL kann angegeben werden, wenn es nicht erforderlich ist. Es muss für SQL-Anweisungen angegeben werden, die keine Prozeduraufrufe sind.<br /><br /> Dieser Parameter dient als eindeutiger Wert, anhand dessen die Anwendung den betreffenden Tabellenwertparameter bei Verwendung einer variablen Zeilenbindung identifizieren kann. Weitere Informationen finden Sie im Abschnitt "Variable Tabellenwertparameter-Zeilenbindung" weiter unten in diesem Thema.<br /><br /> Wenn ein Tabellenwert Parameter-Typname für einen SQLBindParameter-Befehl angegeben wird, muss er auch in Anwendungen, die als ANSI-Anwendungen erstellt wurden, als Unicode-Wert angegeben werden. Der für den Parameter *StrLen_or_IndPtr* verwendete Wert muss entweder SQL_NTS oder die Zeichen folgen Länge des Namens multipliziert mit sizeof (WChar) sein.|  
 |*Pufferlänge*|SQL_DESC_OCTET_LENGTH in APD|Die Länge des Typnamens des Tabellenwertparameters in Byte<br /><br /> Kann SQL_NTS sein, wenn der Typname NULL-termininiert ist, oder 0, wenn der Typname des Tabellenwertparameters nicht erforderlich ist.|  
 |*StrLen_or_IndPtr*|SQL_DESC_OCTET_LENGTH_PTR in APD|SQL_DESC_OCTET_LENGTH_PTR in APD<br /><br /> Für Tabellenwertparameter wird hier die Zeilenanzahl statt die Datenlänge angegeben.|  

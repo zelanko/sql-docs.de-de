@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66be53c7b4c145f361c49c0e1611fa2942005ae5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63192464"
 ---
 # <a name="start-and-stop-a-replication-agent-sql-server-management-studio"></a>Starten und Beenden eines Replikations-Agents (SQL Server Management Studio)
-  Starten oder beenden Sie **Agents** in oder im Replikationsmonitor über den Ordner **Aufträge** oder den Ordner [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] and from Aufträge Monitor. Starten oder beenden Sie die folgenden Agents und Aufträge:  
+  Starten oder beenden Sie Agents in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder im Replikationsmonitor über den Ordner **Aufträge** oder den Ordner **Replikation**. Starten oder beenden Sie die folgenden Agents und Aufträge:  
   
 -   Momentaufnahme-Agent, der von allen Veröffentlichungen verwendet wird.  
   
@@ -66,8 +66,8 @@ ms.locfileid: "63192464"
 3.  Klicken Sie mit der rechten Maustaste auf einen Agent, und klicken Sie dann auf **Agent starten** oder **Agent beenden**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Überwachen der Replikation](../monitoring-replication.md)   
+ [Überwachung der Replikation](../monitoring-replication.md)   
  [Ausführbare Konzepte für den Replikations-Agent](../concepts/replication-agent-executables-concepts.md)   
- [Übersicht über Replikations-Agents](replication-agents-overview.md)  
+ [Replikations-Agents (Übersicht)](replication-agents-overview.md)  
   
   

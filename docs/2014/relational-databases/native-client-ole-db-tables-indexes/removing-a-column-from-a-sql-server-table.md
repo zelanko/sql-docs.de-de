@@ -1,5 +1,5 @@
 ---
-title: Entfernen einer Spalte aus einer SQL Server Tabelle | Microsoft-Dokumentation
+title: Entfernen einer Spalte aus einer SQL Server-Tabelle | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 919bd28a82171068349e4019bb1bd5c190d08cd0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63213901"
 ---
 # <a name="removing-a-column-from-a-sql-server-table"></a>Entfernen einer Spalte aus einer SQL Server-Tabelle
@@ -27,7 +27,7 @@ ms.locfileid: "63213901"
   
  Consumer geben den Tabellennamen als Unicode-Zeichenfolge im *pwszName*-Element der *uName*-Vereinigung des *pTableID*-Parameters an. Das *eKind*-Element von *pTableID* muss DBKIND_NAME sein.  
   
- Der Consumer gibt einen Spaltennamen im *pwszName*-Element der *uname* -Vereinigung im *pColumnID* -Parameter an. Der Spaltenname ist eine Unicode-Zeichenfolge. Das *eKind*-Element von *pColumnID* muss DBKIND_NAME sein.  
+ Der Consumer gibt einen Spaltennamen im *pwszName*-Element der *uName*-Vereinigung des *pColumnID*-Parameters an. Der Spaltenname ist eine Unicode-Zeichenfolge. Das *eKind*-Element von *pColumnID* muss DBKIND_NAME sein.  
   
 ## <a name="example"></a>Beispiel  
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 456b9df06540f3708ea231b872a929007b5af329
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63239025"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>Verwenden des ReportViewer-Steuerelements in WinForms
@@ -26,7 +26,7 @@ ms.locfileid: "63239025"
   
 1.  Erstellen Sie eine neue Windows-Anwendung [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] , [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]indem Sie entweder oder verwenden.  
   
-     \-Noch  
+     \- Oder –  
   
      Öffnen Sie ein bestehendes Windows-Anwendungsprojekt, und fügen Sie ein neues Formular hinzu.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "63239025"
   
  Wenn der Bericht, den Sie anzeigen möchten, auf einem Berichts Server bereitgestellt wurde, wählen Sie in der Dropdown Liste **Bericht auswählen** die ** \<Option Server Bericht>** aus. Nachdem die ** \<Option Server Bericht>** ausgewählt wurde, werden zwei weitere Eigenschaften angezeigt: **Berichts Server-URL** und **Berichts Pfad**. Die **Berichtsserver-URL** entspricht der Adresse des Berichtsservers, und der **Berichtspfad** entspricht dem vollen Pfad zu dem Bericht, der gerendert werden soll.  
   
- ![Server Bericht auswählen](../../../2014/reporting-services/media/windowsapp-serverreportsettings.png "Server Bericht auswählen")  
+ ![Auswählen eines Serverberichts](../../../2014/reporting-services/media/windowsapp-serverreportsettings.png "Auswählen eines Serverberichts")  
   
  Wenn der Bericht, den Sie anzeigen möchten, ein Bericht im lokalen Modus ist, aktivieren Sie entweder die Option **Neuen Bericht entwerfen**, um den Berichts-Designer zu starten, oder Sie wählen einen Bericht aus, der bereits Teil eines bestehenden Projekts ist.  
   
@@ -169,7 +169,7 @@ End Class
   
 6.  Wählen Sie nach dem Umbenennen des Berichts die Datei aus, und suchen Sie das Eigenschaftenfenster. Ändern Sie die Eigenschaft **In Ausgabeverzeichnis kopieren** in **Kopieren, wenn neuer**.  
   
-     ![Konfigurieren der Einstellung für das Kopieren in eine Ausgabe](../../../2014/reporting-services/media/windowsapp-copytooutputsetting.png "Konfigurieren der Einstellung für das Kopieren in eine Ausgabe")  
+     ![Konfigurieren der Einstellung „In Ausgabeverzeichnis kopieren“](../../../2014/reporting-services/media/windowsapp-copytooutputsetting.png "Konfigurieren der Einstellung „In Ausgabeverzeichnis kopieren“")  
   
      Wenn das Fenster **Eigenschaften** nicht sichtbar ist, können Sie es im Menü **Ansicht** öffnen, indem Sie auf **Eigenschaftenfenster** klicken.  
   

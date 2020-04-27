@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 38da38f867c6266d25f3b5d4c329a3e18a0e7292
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63223340"
 ---
 # <a name="acceptstop-property-sqlservice-class"></a>AcceptStop-Eigenschaft (SqlService-Klasse)
@@ -37,13 +37,13 @@ object
 ```  
   
 ## <a name="parts"></a>Bestandteile  
- *Objekt*  
- Ein [SqlService-Klassenobjekt](sqlservice-class.md) , das den Dienst darstellt.  
+ *object*  
+ Ein [SqlService-Klassen](sqlservice-class.md) Objekt, das den Dienst darstellt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein boolescher Wert, der angibt, ob der Dienst beendet werden kann: `true`, wenn der Dienst beendet werden kann, bzw. `false`, wenn der Dienst nicht beendet werden kann.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Starten und Beenden von Diensten](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  

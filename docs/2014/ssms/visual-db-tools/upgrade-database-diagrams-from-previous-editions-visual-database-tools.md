@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 311285545abae9ae9f80b264204b88485aac71aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63205704"
 ---
 # <a name="upgrade-database-diagrams-from-previous-editions-visual-database-tools"></a>Aktualisieren von Datenbankdiagrammen aus älteren Versionen (Visual Database Tools)
@@ -40,6 +40,6 @@ ms.locfileid: "63205704"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Grundlegendes zum Besitz des Daten Bank Diagramms &#40;Visual Database Tools&#41;](understand-database-diagram-ownership-visual-database-tools.md)   
- [Einrichten des Daten Bank Diagramm-Designers &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [Einrichten im Datenbankdiagramm-Designer &#40;Visual Database Tools&#41;](visual-database-tools.md)  
   
   

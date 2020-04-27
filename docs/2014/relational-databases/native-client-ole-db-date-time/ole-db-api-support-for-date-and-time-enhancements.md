@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ef6334f6fe4671f2563add857f6dd58ce67a2840
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63237848"
 ---
 # <a name="ole-db-api-support-for-date-and-time-enhancements"></a>OLE DB-API-Unterstützung für Datums- und Uhrzeit-Erweiterungen
@@ -24,17 +24,17 @@ ms.locfileid: "63237848"
   
 |Funktion|BESCHREIBUNG|  
 |--------------|-----------------|  
-|IAccessor::CreateAccessor|In der DBBINDING-Struktur wird ein Flag hinzugefügt, so dass Anwendungen zwischen den Werten `datetime`, `datetime2` und `smalldatetime` unterscheiden können. Weitere Informationen finden Sie unter [Parameter und Rowset-Metadaten](metadata-parameter-and-rowset.md).|  
+|IAccessor::CreateAccessor|In der DBBINDING-Struktur wird ein Flag hinzugefügt, so dass Anwendungen zwischen den Werten `datetime`, `datetime2` und `smalldatetime` unterscheiden können. Weitere Informationen finden Sie unter [Parameter and Rowset Metadata (Parameter- und Rowsetmetadaten)](metadata-parameter-and-rowset.md).|  
 |IBCPSession::BCPColFmt|Weitere Informationen finden Sie unter [Massen Kopier Änderungen für verbesserte Datums-und Uhrzeit Typen &#40;OLE DB und ODBC-&#41;](../native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md).|  
-|ICommandWithParameters::GetParameterInfo|Weitere Informationen finden Sie unter[Parameter und Rowset-Metadaten](metadata-parameter-and-rowset.md).|  
-|ICommandWithParameters::SetParameterinfo|Weitere Informationen finden Sie unter[Parameter und Rowset-Metadaten](metadata-parameter-and-rowset.md).|  
-|IColumnsRowset::GetColumnsRowset|Weitere Informationen finden Sie unter[Parameter und Rowset-Metadaten](metadata-parameter-and-rowset.md).|  
-|IColumnsInfo::GetColumnInfo|Weitere Informationen finden Sie unter[Parameter und Rowset-Metadaten](metadata-parameter-and-rowset.md).|  
-|IDBSchemaRowset::GetRowset|Details zu den betroffenen Schemarowsets finden Sie unter[Datums-und Uhrzeit-und Schemarowsets](../native-client-ole-db-rowsets/rowsets.md).|  
+|ICommandWithParameters::GetParameterInfo|Weitere Informationen finden Sie unter [Parameter and Rowset Metadata (Parameter- und Rowsetmetadaten)](metadata-parameter-and-rowset.md).|  
+|ICommandWithParameters::SetParameterinfo|Weitere Informationen finden Sie unter [Parameter and Rowset Metadata (Parameter- und Rowsetmetadaten)](metadata-parameter-and-rowset.md).|  
+|IColumnsRowset::GetColumnsRowset|Weitere Informationen finden Sie unter [Parameter and Rowset Metadata (Parameter- und Rowsetmetadaten)](metadata-parameter-and-rowset.md).|  
+|IColumnsInfo::GetColumnInfo|Weitere Informationen finden Sie unter [Parameter and Rowset Metadata (Parameter- und Rowsetmetadaten)](metadata-parameter-and-rowset.md).|  
+|IDBSchemaRowset::GetRowset|Ausführliche Informationen zu den betroffenen Schemarowsets finden Sie unter [Date and Time and Schema Rowsets (Datum, Uhrzeit und Schemarowsets)](../native-client-ole-db-rowsets/rowsets.md).|  
 |IRowsetFastLoad|Diese Schnittstelle unterstützt ohne Änderungen die neuen Datums-/Uhrzeit-Typen.|  
-|ITableDefinition::CreateTable|Weitere Informationen finden Sie [unter Datentyp Unterstützung für OLE DB Datums-und Uhrzeit Verbesserungen](data-type-support-for-ole-db-date-and-time-improvements.md).|  
+|ITableDefinition::CreateTable|Weitere Informationen finden Sie unter [Data Type Support for OLE DB Date and Time Improvements (Datentypunterstützung für Verbesserungen von Datum und Uhrzeit in OLE DB)](data-type-support-for-ole-db-date-and-time-improvements.md).|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Datums-und Uhrzeit Verbesserungen &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+ [Date and Time Improvements &#40;OLE DB&#41; (Verbesserungen bei Datum und Uhrzeit &#40;OLE DB&#41;)](date-and-time-improvements-ole-db.md)  
   
   

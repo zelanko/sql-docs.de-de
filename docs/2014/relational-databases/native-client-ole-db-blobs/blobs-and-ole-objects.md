@@ -1,5 +1,5 @@
 ---
-title: BLOB-und OLE-Objekte | Microsoft-Dokumentation
+title: Blobs und OLE-Objekte | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,16 +17,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e459682da63bac8359fa8310233c234e456f4e5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63195217"
 ---
 # <a name="blobs-and-ole-objects"></a>BLOBs und OLE-Objekte
   Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter macht **die ISequentialStream** -Schnittstelle verfügbar, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] um den Consumerzugriff auf die Datentypen **ntext**, **Text**, **Image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)** und XML als Binary Large Objects (BLOB) zu unterstützen. Die Methode **Read** für **ISequentialStream** ermöglicht dem Consumer, große Datenmengen in überschaubaren Abschnitten abzurufen.  
   
- Ein Beispiel für diese Funktion finden Sie unter [Festlegen von großen Daten &#40;OLE DB&#41;](../native-client-ole-db-how-to/set-large-data-ole-db.md).  
+ Ein Beispiel für diese Feature finden Sie unter [Festlegen von großen Daten &#40;OLE DB&#41;](../native-client-ole-db-how-to/set-large-data-ole-db.md).  
   
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter kann eine vom Consumer implementierte **IStorage** -Schnittstelle verwenden, wenn der Consumer den Schnittstellen Zeiger in einem Accessor bereitstellt, der für die Datenänderung gebunden ist.  
   

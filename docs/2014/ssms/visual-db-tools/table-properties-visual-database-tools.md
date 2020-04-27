@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c56aef79df354ee8e355da215a241836f8c7ab45
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63204688"
 ---
 # <a name="table-properties-visual-database-tools"></a>Tabelleneigenschaften (Visual Database Tools)
@@ -46,40 +46,40 @@ ms.locfileid: "63204688"
  **Beschreibung**  
  Zeigt eine Beschreibung der ausgewählten Tabelle an. Klicken Sie auf die Beschreibung, und klicken Sie anschließend auf die Auslassungspunkte **(...)** rechts neben der Eigenschaft, um die ganze Beschreibung anzuzeigen oder sie zu bearbeiten.  
   
- **Chaos**  
+ **Schema**  
  Zeigt den Namen des Schemas an, zu dem die Tabelle gehört. (Gilt nur für Microsoft SQL Server.)  
   
- **Server Name**  
+ **Servername**  
  Zeigt den Namen des Servers für diese Datenquelle an.  
   
  **Kategorie Tabellen-Designer**  
  Wenn die Kategorie erweitert ist, werden Eigenschaften für **Identitätsspalte**, **Ist indizierbar**und **Ist repliziert**angezeigt.  
   
- **Identitäts Spalte**  
+ **Identitätsspalte**  
  Zeigt die Spalte an, die als Identitätsspalte der Tabelle verwendet wird. Wenn Sie die Identitätsspalte ändern möchten, wählen Sie einen Eintrag in der Dropdownliste aus. In der Liste werden nur Spalten mit einem numerischen Datentyp aufgeführt.  
   
  **Ist indizierbar**  
  Zeigt an, ob die Tabelle indiziert werden kann. Wenn die Tabelle nicht indiziert werden kann, liegt dies unter Umständen daran, dass Sie nicht der Besitzer der Tabelle sind, oder dass die Tabelle Spalten mit den Datentypen text, ntext oder image enthält.  
   
- **Wird repliziert**  
+ **Ist repliziert**  
  Zeigt an, ob die Tabelle in einem anderen Speicherort repliziert wird.  
   
- **Kategorie für reguläre Daten Raum Angabe**  
- Wenn die Kategorie erweitert ist, werden Eigenschaften für **(Datenbereichstyp)**, **Schemaname der Dateigruppe oder Partition**und **Partitionsspaltenliste**angezeigt.  
+ **Kategorie Reguläre Datenbereichsspezifikation**  
+ Wenn die Kategorie erweitert ist, werden Eigenschaften für **(Datenbereichstyp)** , **Schemaname der Dateigruppe oder Partition**und **Partitionsspaltenliste**angezeigt.  
   
- **(Daten leertyp)**  
+ **(Datenbereichstyp)**  
  Zeigt an, ob die Tabelle mit einem Dateigruppen- oder einem Partitionsschema gespeichert wird.  
   
- **Schema Name der Datei Gruppe oder Partition**  
+ **Schemaname der Dateigruppe oder Partition**  
  Zeigt den Namen des Dateigruppen- oder Partitionsschemas an.  
   
- **Partitions Spaltenliste**  
+ **Partitionsspaltenliste**  
  Ermöglicht den Zugriff auf das Dialogfeld **Partitionsspaltenliste** .  
   
  **Zeilen-GUID-Spalte**  
  Zeigt die Spalte an, die von Microsoft SQL Server als ROWGUID-Spalte der Tabelle verwendet wird. Wenn Sie die ROWGUID-Spalte ändern möchten, wählen Sie einen Eintrag in der Dropdownliste aus. (Gilt nur für SQL Server 7.0 oder höher.)  
   
- **Text/Image-Datei Gruppe**  
+ **Text/Image-Dateigruppe**  
  Stellt eine Dropdownliste bereit, in der die Dateigruppe für Spalten mit dem Datentyp text oder image ausgewählt werden kann. Wenn die Tabelle mit einem Partitionsschema gespeichert wird, lassen Sie dieses Feld leer.  
   
 ## <a name="see-also"></a>Weitere Informationen  

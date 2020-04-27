@@ -25,10 +25,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 245b844872070ee16104a90ecc0734462bdad3b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63241262"
 ---
 # <a name="requirements-and-limitations-for-xml-schema-collections-on-the-server"></a>Anforderungen und Einschränkungen für XML-Schemaauflistungen auf dem Server
@@ -41,8 +41,7 @@ ms.locfileid: "63241262"
 |**\<xsd:include>**|Zurzeit unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dieses Element nicht. XML-Schemas, die dieses Element enthalten, werden vom Server zurückgewiesen.<br /><br /> Als Lösung können XML-Schemas, die die **\<xsd:include>** -Direktive enthalten, so vorverarbeitet werden, dass die Inhalte aller enthaltenen Schemas kopiert und in einem einzigen Schema für den Upload auf den Server zusammengeführt werden. Weitere Informationen finden Sie unter [Vorverarbeiten eines Schemas zum Zusammenführen eingeschlossener Schemas](preprocess-a-schema-to-merge-included-schemas.md).|  
 |**\<xsd:key>** , **\<xsd: keyref>** und **\<xsd: unique>**|Zurzeit unterstützt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] diese XSD-basierten Einschränkungen zum Erzwingen der Eindeutigkeit oder zum Einrichten von Schlüsseln oder Schlüsselverweisen nicht. XML-Schemas, die diese Elemente enthalten, können nicht registriert werden.|  
 |**\<xsd:redefine>**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dieses Element nicht. Informationen über eine andere Möglichkeit, Schemas zu aktualisieren, finden Sie unter [Das &#60;xsd:redefine&#62;-Element](the-xsd-redefine-element.md)bereit.|  
-|**\<xsd:simpleType>** -Werte|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt nur Millisekundengenauigkeit für simple-Datentypen, die Sekundenkomponenten besitzen (mit Ausnahme von `xs:time` und `xs:dateTime`), und 100-Nanosekundengenauigkeit für `xs:time` und `xs:dateTime`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legt Einschränkungen für alle erkannten XSD-Enumerationen des einfachen Typs fest.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt nicht den „NaN“-Wert in **\<xsd:simpleType>** -Deklarationen.<br /><br /> Weitere Informationen finden Sie unter[Werte für &#60;xsd:simpleType&#62;-Deklarationen](values-for-xsd-simpletype-declarations.md)bereit.|  
+|**\<xsd:simpleType>** -Werte|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt nur Millisekundengenauigkeit für simple-Datentypen, die Sekundenkomponenten besitzen (mit Ausnahme von `xs:time` und `xs:dateTime`), und 100-Nanosekundengenauigkeit für `xs:time` und `xs:dateTime`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legt Einschränkungen für alle erkannten XSD-Enumerationen des einfachen Typs fest.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt nicht den „NaN“-Wert in **\<xsd:simpleType>** -Deklarationen.<br /><br /> Weitere Informationen finden Sie unter[Werte für &#60;xsd:simpleType&#62;-Deklarationen](values-for-xsd-simpletype-declarations.md)bereit.|  
 |**xsi:schemaLocation** und **xsi:noNamespaceSchemaLocation**|In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden diese Attribute ignoriert, wenn sie in den XML-Instanzdaten vorhanden sind, die in eine Spalte oder Variable des `xml`-Datentyps eingefügt werden.|  
 |**xs:QName**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt keine von **xs:QName** abgeleiteten Typen, die ein Beschränkungselement des XML-Schemas verwenden.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt keine union-Typen, die **xs:QName** als Memberelement besitzen.<br /><br /> Weitere Informationen finden Sie unter [Der xs:QName-Typ](the-xs-qname-type.md).|  
 |Hinzufügen von Elementen zu einer vorhandenen Ersetzungsgruppe|Das Hinzufügen von Elementen zu einer vorhandenen Ersetzungsgruppe in einer XML-Schemaauflistung wird nicht unterstützt. Eine Ersetzungsgruppe in einem XML-Schema ist insofern eingeschränkt, als das Headelement und alle seine Memberelemente in der gleichen {CREATE &#124; ALTER} XML SCHEMA COLLECTION-Anweisung definiert werden müssen.|  

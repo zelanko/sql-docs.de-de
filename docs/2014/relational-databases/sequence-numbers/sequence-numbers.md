@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a942136314702d5fe87c1997f20dcb19a74df13d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63184402"
 ---
 # <a name="sequence-numbers"></a>Sequenznummern
@@ -229,7 +229,7 @@ GO
   
  `7        2009-11-02 15:00:51.180  Central feed in bypass mode.`  
   
-### <a name="d-generating-repeating-sequence-numbers-in-a-result-set"></a>D: Generieren von wiederholten Sequenznummern in einem Resultset  
+### <a name="d-generating-repeating-sequence-numbers-in-a-result-set"></a>D. Generieren von wiederholten Sequenznummern in einem Resultset  
  Im folgenden Beispiel werden zwei Eigenschaften von Sequenznummern veranschaulicht: die zyklische Verwendung und das Verwenden von `NEXT VALUE FOR` in einer SELECT-Anweisung.  
   
 ```  
@@ -396,6 +396,6 @@ GO
   
  [DROP SEQUENCE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-sequence-transact-sql)  
   
- [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)  
+ [IDENTITY &#40;Eigenschaft&#41; &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql-identity-property)  
   
   

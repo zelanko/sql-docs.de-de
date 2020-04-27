@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 55da8efd6ee5b330e259ed78bdd152720403f310
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63186903"
 ---
 # <a name="diagnosticinformation-element-ssbdiagnose"></a>DiagnosticInformation-Element (ssbdiagnose)
@@ -41,20 +41,20 @@ ms.locfileid: "63186903"
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|BESCHREIBUNG|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
-|**Datentyp und -länge**|Keine.|  
-|**Standardwert**|Keine.|  
-|**Vorkommen**|Einmal pro **ssbdiagnose** -XML-Ausgabedatei|  
+|**Datentyp und -länge**|Keine|  
+|**Standardwert**|Keine|  
+|**Vorkommt**|Einmal pro **ssbdiagnose** -XML-Ausgabedatei|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   
 |Beziehung|Elemente|  
 |------------------|--------------|  
-|**Übergeordnetes Element**|Keine.|  
+|**Übergeordnetes Element**|Keine|  
 |**Untergeordnete Elemente**|[Banner-Element &#40;ssbdiagnose&#41;](banner-element-ssbdiagnose.md)<br /><br /> [Issue-Element &#40;ssbdiagnose&#41;](issue-element-ssbdiagnose.md)|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Weitere Informationen zu XML-Namespaces finden Sie unter [Namespaces in an XML Document](https://go.microsoft.com/fwlink/?LinkId=7341) (in Englisch) in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] MSDN Library.  
   
 ## <a name="see-also"></a>Weitere Informationen  

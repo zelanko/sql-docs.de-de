@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0fc22cd7489294e8623596c1ce1e4f38c90706aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245714"
 ---
 # <a name="target-servers-target-server-status-tab"></a>Zielserver (Registerkarte Zielserverstatus)
   Mithilfe dieser Seite können Sie den Status der Zielserver für diesen Masterserver anzeigen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Ziel Server**  
  Zeigt den Namen des Zielservers an.  
   
@@ -41,10 +41,10 @@ ms.locfileid: "63245714"
  **Abruf erzwingen**  
  Klicken Sie auf diese Schaltfläche, um das Abrufen des Masterservers durch die ausgewählten Zielserver zu erzwingen.  
   
- **Erzwingen der Ausführung**  
+ **Austritt erzwingen**  
  Klicken Sie auf diese Schaltfläche, um das Austragen der ausgewählten Zielserver beim Masterserver zu erzwingen.  
   
- **Post-Anweisungen**  
+ **Anweisungen bereitstellen**  
  Stellt die Anweisungen den ausgewählten Zielservern bereit.  
   
  **Automatische Aktualisierung aktivieren**  

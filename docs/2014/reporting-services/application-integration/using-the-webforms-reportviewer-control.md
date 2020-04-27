@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa1b5f0cc1e4952523f53f02e219db42aa5b3c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63238216"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Verwenden des ReportViewer-Steuerelements in WebForms
@@ -26,7 +26,7 @@ ms.locfileid: "63238216"
   
 1.  Erstellen Sie eine [!INCLUDE[msCoName](../../includes/msconame-md.md)] neue ASP.NET-Website mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
   
-     \-Noch  
+     \- Oder –  
   
      Öffnen Sie eine bestehende ASP.NET-Website, und fügen Sie eine neue WebForm hinzu.  
   

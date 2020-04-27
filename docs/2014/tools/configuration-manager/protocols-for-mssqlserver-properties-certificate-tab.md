@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ef6e097721cbe0198cf9f9fb916cd53b1be6840
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245010"
 ---
 # <a name="protocols-for-mssqlserver-properties-certificate-tab"></a>Protokolle für MSSQLSERVER-Eigenschaften (Registerkarte Zertifikat)
-  Verwenden Sie im Dialogfeld **Eigenschaften von Protokolle für 'MSSQLSERVER'** die Registerkarte **Zertifikat** , um ein Zertifikat für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]auszuwählen oder die Eigenschaften eines Zertifikats anzuzeigen. Alle Felder sind leer, bis ein Zertifikat ausgewählt wird.  
+  Im Dialogfeld **Protocols for MSSQLSERVER Properties** (Protokolle für MSSQLSERVER-Eigenschaften) auf der Registerkarte **Zertifikat** können Sie ein Zertifikat für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auswählen oder sich die Eigenschaften eines Zertifikats ansehen. Alle Felder sind leer, bis ein Zertifikat ausgewählt wird.  
   
  Zertifikate werden lokal für diesen Benutzer auf dem Computer gespeichert. Um ein Zertifikat zum Verwenden durch [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu laden, müssen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager unter dem gleichen Benutzerkonto ausführen wie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "63245010"
  **Clear**  
  Entfernt die Auswahl aus dem Dialogfeld **Zertifikat** .  
   
- **Stellt**  
+ **Certificate**  
  Durch den Sicherheitsanbieter festgelegter Name des Zertifikats. Wählen Sie ein Zertifikat aus, um die Details im Eigenschaftenraster anzuzeigen.  
   
 ## <a name="options"></a>Tastatur  

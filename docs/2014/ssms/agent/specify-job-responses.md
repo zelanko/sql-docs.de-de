@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9fa238a639321e9464ca3de2cc074b516f7df1e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245996"
 ---
 # <a name="specify-job-responses"></a>Angeben von Auftragsantworten
@@ -41,7 +41,7 @@ ms.locfileid: "63245996"
   
 |||  
 |-|-|  
-|**Beschreibung**|**Thema**|  
+|**Beschreibung**|**Sonder**|  
 |Beschreibt, wie ein Operator über den Auftragsstatus benachrichtigt wird.|[Notify an Operator of Job Status](notify-an-operator-of-job-status.md)|  
 |Beschreibt, wie der Auftragsstatus in das Windows-Anwendungsprotokoll ausgegeben wird.|[Write the Job Status to the Windows Application Log](../../reporting-services/report-server/windows-application-log.md)|  
   

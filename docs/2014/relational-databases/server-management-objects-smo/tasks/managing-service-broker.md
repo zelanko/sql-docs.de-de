@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e74e1530efc8e6000a9edf8882cf37cc60b1f1e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63226190"
 ---
 # <a name="managing-service-broker"></a>Verwalten von Service Broker
@@ -28,24 +28,17 @@ ms.locfileid: "63226190"
   
  Das <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceBroker>-Objekt enthält Auflistungen der folgenden Objekte, die verwendet werden, um die [!INCLUDE[ssSB](../../../includes/sssb-md.md)]-Implementierung zu definieren:  
   
--   
-  <xref:Microsoft.SqlServer.Management.Smo.Broker.MessageType>-Objekte stellen Nachrichtentypen dar, die den Inhalt von Nachrichten definieren.  
+-   <xref:Microsoft.SqlServer.Management.Smo.Broker.MessageType>-Objekte stellen Nachrichtentypen dar, die den Inhalt von Nachrichten definieren.  
   
--   
-  <xref:Microsoft.SqlServer.Management.Smo.Broker.MessageTypeMapping>-Objekte stellen Verträge dar, die die Richtung und den Typ von Nachrichten in einer angegebenen Konversation angeben.  
+-   <xref:Microsoft.SqlServer.Management.Smo.Broker.MessageTypeMapping>-Objekte stellen Verträge dar, die die Richtung und den Typ von Nachrichten in einer angegebenen Konversation angeben.  
   
--   
-  <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceQueue>-Objekte speichern Nachrichten vor dem Senden und nachdem sie empfangen wurden. Sie bieten asynchrone Kommunikation zwischen Diensten sowie andere Vorteile, wie etwa das automatische Sperren von Nachrichten in derselben Konversationsgruppe.  
+-   <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceQueue>-Objekte speichern Nachrichten vor dem Senden und nachdem sie empfangen wurden. Sie bieten asynchrone Kommunikation zwischen Diensten sowie andere Vorteile, wie etwa das automatische Sperren von Nachrichten in derselben Konversationsgruppe.  
   
--   
-  <xref:Microsoft.SqlServer.Management.Smo.Broker.BrokerService>-Objekte stellen [!INCLUDE[ssSB](../../../includes/sssb-md.md)]-Dienste dar, die die adressierbaren Endpunkte für Konversationen bilden. 
-  [!INCLUDE[ssSB](../../../includes/sssb-md.md)]-Meldungen werden von einem Dienst an einen anderen Dienst gesendet. Ein Dienst gibt eine Warteschlange zum Aufbewahren von Nachrichten sowie Verträge an, für die der Dienst das Ziel sein kann.  
+-   <xref:Microsoft.SqlServer.Management.Smo.Broker.BrokerService>-Objekte stellen [!INCLUDE[ssSB](../../../includes/sssb-md.md)]-Dienste dar, die die adressierbaren Endpunkte für Konversationen bilden. [!INCLUDE[ssSB](../../../includes/sssb-md.md)]-Meldungen werden von einem Dienst an einen anderen Dienst gesendet. Ein Dienst gibt eine Warteschlange zum Aufbewahren von Nachrichten sowie Verträge an, für die der Dienst das Ziel sein kann.  
   
--   
-  <xref:Microsoft.SqlServer.Management.Smo.Broker.RemoteServiceBinding>-Objekte stellen die Einstellungen dar, die von [!INCLUDE[ssSB](../../../includes/sssb-md.md)] für die Sicherheit und Authentifizierung bei der Kommunikation mit einem Remotedienst verwendet werden.  
+-   <xref:Microsoft.SqlServer.Management.Smo.Broker.RemoteServiceBinding>-Objekte stellen die Einstellungen dar, die von [!INCLUDE[ssSB](../../../includes/sssb-md.md)] für die Sicherheit und Authentifizierung bei der Kommunikation mit einem Remotedienst verwendet werden.  
   
--   
-  <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceRoute>-Objekte stellen eine [!INCLUDE[ssSB](../../../includes/sssb-md.md)]-Route dar, die die Speicherortinformationen für den Dienst und die Datenbank, in der sie definiert ist, enthält. Eine Route ist für die Nachrichtenübermittlung erforderlich. Standardmäßig enthält jede Datenbank eine Route, die den Speicherort als aktuelle Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]angibt.  
+-   <xref:Microsoft.SqlServer.Management.Smo.Broker.ServiceRoute>-Objekte stellen eine [!INCLUDE[ssSB](../../../includes/sssb-md.md)]-Route dar, die die Speicherortinformationen für den Dienst und die Datenbank, in der sie definiert ist, enthält. Eine Route ist für die Nachrichtenübermittlung erforderlich. Standardmäßig enthält jede Datenbank eine Route, die den Speicherort als aktuelle Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]angibt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  <xref:Microsoft.SqlServer.Management.Smo.Broker>   

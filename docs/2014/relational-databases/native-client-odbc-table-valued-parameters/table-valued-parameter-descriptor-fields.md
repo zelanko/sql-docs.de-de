@@ -13,18 +13,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: bd58bdb611a070c812364baf2fa3e1544c2ffdc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63228965"
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>Deskriptorfelder für Tabellenwertparameter
   Die Unterstützung für Tabellenwertparameter bietet neue, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-spezifische Felder in ODBC-Anwendungsparameterdeskriptoren (Application Parameter Descriptor, APD) und Implementierungsparameterdeskriptoren (Implementation Parameter Descriptor, IPD).  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
-|Name|Location|type|BESCHREIBUNG|  
+|Name|Position|type|Beschreibung|  
 |----------|--------------|----------|-----------------|  
 |SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR*|Der Servertypname des Tabellenwertparameters.<br /><br /> Wenn ein Tabellenwert Parameter-Typname für einen SQLBindParameter-Befehl angegeben wird, muss er immer als Unicode-Wert angegeben werden, auch in Anwendungen, die als ANSI-Anwendungen erstellt werden. Der für den Parameter *StrLen_or_IndPtr* verwendete Wert muss entweder SQL_NTS oder die Zeichen folgen Länge des Namens multipliziert mit sizeof (WChar) sein.<br /><br /> Wenn ein Tabellenwert Parameter-Typname über SQLSetDescField angegeben wird, kann er mit einem Literalwert angegeben werden, der der Art und Weise entspricht, in der die Anwendung erstellt wird. Der ODBC-Treiber-Manager führt die eventuell erforderliche Unicode-Konvertierung aus.|  
 |SQL_CA_SS_TYPE_CATALOG_NAME (schreibgeschützt)|IPD|SQLTCHAR*|Der Katalog, in dem der Typ definiert ist.|  
@@ -34,7 +34,7 @@ ms.locfileid: "63228965"
   
  Die folgenden Anweisungsattribute und Deskriptorheaderfelder gelten für Tabellenwertparameter, wenn der Parameterfokus auf einen Tabellenwertparameter festgelegt ist:  
   
-|Name|Location|type|BESCHREIBUNG|  
+|Name|Position|type|Beschreibung|  
 |----------|--------------|----------|-----------------|  
 |SQL_ATTR_PARAMSET_SIZE<br /><br /> (Dies entspricht SQL_DESC_ARRAY_SIZE im APD.)|APD|SQLUINTEGER|Die Arraygröße der Pufferarrays für einen Tabellenwertparameter. Dies entspricht der maximalen Anzahl an Zeilen, die die Puffer enthalten können, oder der Größe der Puffer in Zeilen ausgedrückt. Der Wert des Tabellenwertparameters selbst kann darüber- oder darunterliegen. Der Standardwert ist 1. **Hinweis:**  Wenn SQL_SOPT_SS_PARAM_FOCUS auf den Standardwert 0 festgelegt ist, verweist SQL_ATTR_PARAMSET_SIZE auf die-Anweisung und gibt die Anzahl der Parametersätze an. Wenn SQL_SOPT_SS_PARAM_FOCUS auf die Ordnungszahl eines Tabellenwertparameters festgelegt ist, verweist das Attribut auf den Tabellenwertparameter und gibt die Anzahl der Zeilen pro Parameterset des Tabellenwertparameters an.|  
 |SQL_ATTR_PARAM _BIND_TYPE|APD|SQLINTEGER|Der Standard ist SQL_PARAM_BIND_BY_COLUMN.<br /><br /> Zum Auswählen der zeilenbezogenen Bindung wird dieses Feld auf die Länge der Struktur oder die Instanz eines Puffers festgelegt, der an einen Satz von Tabellenwert-Parameterzeilen gebunden wird. Die Längenangabe muss Platz für alle gebundenen Spalten und möglicherweise vorhandene Auffüllzeichen der Struktur bzw. des Puffers vorsehen. Auf diese Weise wird sichergestellt, dass bei einer um eine angegebene Länge inkrementierten Adresse einer gebundenen Spalte das Ergebnis auf den Anfang derselben Spalte in der nächsten Zeile zeigt. Wenn Sie den `sizeof`-Operator in ANSI C verwenden, wird dieses Verhalten garantiert.|  

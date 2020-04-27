@@ -1,5 +1,5 @@
 ---
-title: Abrufen eines FAST_FORWARD Cursors | Microsoft-Dokumentation
+title: Abrufen eines FAST_FORWARD-Cursors | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -13,16 +13,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f966d8aa907c6a92f4ac964fd7d937dab94afa95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63225552"
 ---
 # <a name="obtain-a-fast_forward-cursor"></a>Abrufen eines FAST_FORWARD-Cursors
   Zum Abrufen eines schreibgeschützten Vorwärtscursors legen Sie die Rowseteigenschaften DBPROP_SERVERCURSOR, DBPROP_OTHERINSERT, DBPROP_OTHERUPDATEDELETE, DBPROP_OWNINSERT und DBPROP_OWNUPDATEDELETE auf VARIANT_TRUE fest.  
   
- In einem vollständigen Beispiel wird gezeigt, wie Sie die Rowseteigenschaften zum Abrufen eines FAST_FORWARD-Cursors festlegen. Nach dem Festlegen der Eigenschaften wird eine SELECT-Anweisung ausgeführt, um die **Name** -Spalte der **Purchasing.Vendor** -Tabelle in der **AdventureWorks** -Datenbank abzurufen und anzuzeigen.  
+ In einem vollständigen Beispiel wird gezeigt, wie Sie die Rowseteigenschaften zum Abrufen eines FAST_FORWARD-Cursors festlegen. Nachdem die Eigenschaften festgelegt wurden, wird eine SELECT-Anweisung ausgeführt, um die **Name** -Spalte der **Purchasing. Vendor** -Tabelle in der **AdventureWorks** -Datenbank abzurufen und anzuzeigen.  
   
 > [!IMPORTANT]  
 >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung. Wenn die Windows-Authentifizierung nicht verfügbar ist, fordern Sie die Benutzer auf, ihre Anmeldeinformationen zur Laufzeit einzugeben. Die Anmeldeinformationen sollten nicht in einer Datei gespeichert werden. Wenn Sie Anmelde Informationen beibehalten müssen, sollten Sie diese mit der [Win32-kryptografieapi](https://go.microsoft.com/fwlink/?LinkId=64532)verschlüsseln.  

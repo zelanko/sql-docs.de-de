@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 103f461c29e2bd7534ad5cb96836f06c972a6c5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63187259"
 ---
 # <a name="configure-predefined-replication-alerts-sql-server-management-studio"></a>Konfigurieren von vordefinierten Replikationswarnungen (SQL Server Management Studio)
@@ -41,7 +41,7 @@ ms.locfileid: "63187259"
 1.  Stellen Sie in [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]eine Verbindung mit dem Verteiler her, und erweitern Sie dann den Serverknoten.    
 2.  Erweitern Sie den Ordner **SQL Server-Agent** , und erweitern Sie dann den Ordner **Warnungen** .    
 3.  Klicken Sie mit der rechten Maustaste auf eine Replikationswarnung, und klicken Sie dann auf **Eigenschaften**.    
-4.  Legen Sie im Dialogfeld **\<Eigenschaften von Warnung AlertName>** die gewünschten Optionen fest:    
+4.  Legen Sie die ** \<** Optionen im Dialogfeld Warnungs Name> Warnungs Eigenschaften fest:    
     -   Klicken Sie auf der Seite **Allgemein** auf **Aktivieren**, und geben Sie an, für welche Datenbank die Warnung gelten soll.    
     -   Geben Sie auf der Seite **Antwort** an, ob eine E-Mail gesendet und/oder ein Auftrag ausgeführt werden soll.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "63187259"
   
 1.  Klicken Sie auf der Registerkarte **Warnungen** auf **Warnungen konfigurieren**.    
 2.  Wählen Sie im Dialogfeld **Replikationswarnungen konfigurieren** eine Warnung aus, und klicken Sie dann auf **Konfigurieren**.    
-3.  Legen Sie im Dialogfeld **\<Eigenschaften von Warnung AlertName>** die gewünschten Optionen fest:    
+3.  Legen Sie die ** \<** Optionen im Dialogfeld Warnungs Name> Warnungs Eigenschaften fest:    
     -   Klicken Sie auf der Seite **Allgemein** auf **Aktivieren**, und geben Sie an, für welche Datenbank die Warnung gelten soll.    
     -   Geben Sie auf der Seite **Antwort** an, ob eine E-Mail gesendet und/oder ein Auftrag ausgeführt werden soll.    
          Wenn die Warnung **Replikation lautet: der Abonnent hat die Datenüberprüfung nicht bestanden**. Sie können den Antwort Auftrag angeben, den die Replikation für diese Warnung bereitstellt: Wählen Sie **Auftrag ausführen**aus, und klicken Sie dann auf die Schaltfläche zum durch**suchen.** Klicken Sie im Dialogfeld **Auftrag suchen** auf **Durchsuchen**. Wählen Sie im Dialogfeld **Nach Objekten suchen** die Option **Abonnements mit Datenüberprüfungsfehlern neu initialisieren**aus. Klicken Sie in beiden geöffneten Dialogfeldern auf **OK** . Wenn der Auftrag ausgeführt wird, wird ein Remoteprozeduraufruf (Remote Procedure Call, RPC) einer gespeicherten Prozedur verwendet, mit dem das Abonnement erneut initialisiert wird. Wenn der Verleger einen Remoteverteiler verwendet, müssen Sie auf dem Verleger eine Remoteserveranmeldung definieren, damit der RPC des Verteilers an den Verleger ausgeführt werden kann.   

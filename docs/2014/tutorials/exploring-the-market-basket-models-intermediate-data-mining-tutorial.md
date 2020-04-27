@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 8a7b2f97cbda0594698c6cbaa68019a6493f1e74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63224608"
 ---
 # <a name="exploring-the-market-basket-models-intermediate-data-mining-tutorial"></a>Prüfen des Market Basket-Modells (Mittleres Data Mining Tutorial)
@@ -32,7 +32,7 @@ ms.locfileid: "63224608"
   
  In diesem Tutorial beginnen Sie auf der Registerkarte **Abhängigkeits Netzwerk** und verwenden dann die Registerkarte **Regeln** und die Registerkarte **Itemsets** , um das Verständnis der im Viewer angezeigten Beziehungen zu vertiefen. Außerdem verwenden Sie den **Microsoft Generic Content Tree Viewer** , um ausführliche Statistiken für einzelne Regeln oder Itemsets abzurufen.  
   
-##  <a name="bkmk_DepNet"></a>Registerkarte Abhängigkeits Netzwerk  
+##  <a name="dependency-network-tab"></a><a name="bkmk_DepNet"></a>Registerkarte Abhängigkeits Netzwerk  
  Mithilfe der Registerkarte **Abhängigkeits Netzwerk** können Sie die Interaktion der verschiedenen Elemente im Modell untersuchen. Jeder Knoten im Viewer steht für ein Element, und die Linien zwischen diesen Knoten stellen Regeln dar. Wenn Sie einen Knoten auswählen, können Sie feststellen, welcher andere Knoten das ausgewählte Element vorhersagt oder welche Elemente von dem aktuellen Element vorhergesagt werden. In einigen Fällen besteht eine zweiseitige Beziehung zwischen Elementen, was bedeutet, dass sie häufig in der gleichen Transaktion auftreten. Mithilfe der Farblegende am unteren Rand der Registerkarte können Sie die Richtung der Beziehung feststellen.  
   
  Eine Zeile, die zwei Elemente verbindet, zeigt an, dass diese Elemente wahrscheinlich zusammen in einer Transaktion angezeigt werden. Anders ausgedrückt, kaufen Kunden wahrscheinlich beide Elemente. Der Schieberegler ist mit der Wahrscheinlichkeit der Regel verknüpft. Verschieben Sie den Schieberegler nach oben oder unten, um schwache Zuordnungen herauszufilten, das heißt Regeln mit niedriger Wahrscheinlichkeit.  
@@ -77,7 +77,7 @@ ms.locfileid: "63224608"
   
  [Zurück zum Anfang](#bkmk_DepNet)  
   
-##  <a name="bkmk_Itemsets"></a>Registerkarte "Itemsets"  
+##  <a name="itemsets-tab"></a><a name="bkmk_Itemsets"></a>Registerkarte "Itemsets"  
  Nun erfahren Sie mehr über die Regeln und die Itemsets, die vom Modell für die Touring Tire- und Touring Tire Tube-Produkte generiert wurden. Auf der Registerkarte **Itemsets** werden drei wichtige Informationen zu den Itemsets angezeigt, die der [!INCLUDE[msCoName](../includes/msconame-md.md)] Association-Algorithmus ermittelt:  
   
 -   **Unterstützung:** Die Anzahl der Transaktionen, in denen das Itemset auftritt.  
@@ -118,7 +118,7 @@ ms.locfileid: "63224608"
   
 2.  Suchen Sie das Element `Touring Tire` (ohne zweites Element).  
   
-3.  Klicken Sie mit der rechten Maustaste `Touring Tire`auf das Element, und wählen Sie Drillthrough und anschließend **Modell-und Struktur Spalten**aus. ****  
+3.  Klicken Sie mit der rechten Maustaste `Touring Tire`auf das Element, und wählen Sie Drillthrough und anschließend **Modell-und Struktur Spalten**aus. **Drill Through**  
   
      Im Dialogfeld **Drillthrough** werden die einzelnen Transaktionen angezeigt, die als Unterstützung für dieses Itemset verwendet werden.  
   
@@ -134,7 +134,7 @@ ms.locfileid: "63224608"
   
  [Zurück zum Anfang](#bkmk_DepNet)  
   
-##  <a name="bkmk_Rules"></a>Registerkarte Regeln  
+##  <a name="rules-tab"></a><a name="bkmk_Rules"></a>Registerkarte Regeln  
  Die Registerkarte **Regeln** zeigt die folgenden Informationen im Zusammenhang mit den Regeln an, die der Algorithmus findet.  
   
 -   **Wahrscheinlichkeit:** Die *Wahrscheinlichkeit* einer Regel, die als Wahrscheinlichkeit für das Rechte Element definiert wird, wenn das Element auf der linken Seite angegeben ist.  
@@ -171,7 +171,7 @@ ms.locfileid: "63224608"
   
  [Zurück zum Anfang](#bkmk_DepNet)  
   
-##  <a name="bkmk_ContentViewer"></a>Generischer Inhaltsstruktur-Viewer  
+##  <a name="generic-content-tree-viewer"></a><a name="bkmk_ContentViewer"></a>Generischer Inhaltsstruktur-Viewer  
  Dieser Viewer kann für alle Modelle verwendet werden, unabhängig vom Algorithmus oder Modelltyp. Der **Microsoft Generic Content Tree Viewer** ist in der Dropdown Liste **Viewer** verfügbar.  
   
  Eine Inhaltsstruktur ist die Darstellung eines Mining-Modells als eine Reihe von Knoten, in der jeder Knoten das erlangte Wissen über eine Teilmenge der Daten repräsentiert. Der Knoten kann ein Muster, ein Regelsatz, ein Cluster oder die Definition eines Datenbereichs mit gemeinsamen Merkmalen sein. Der genaue Inhalt des Knotens ist je nach Algorithmus und Typ des vorhersagbaren Attributs unterschiedlich, die allgemeine Darstellung des Inhalts ist jedoch gleich. Sie können jeden Knoten erweitern, um zunehmend mehr Details anzuzeigen, und Sie können den Inhalt eines Knotens in die Zwischenablage kopieren.  

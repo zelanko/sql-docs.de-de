@@ -1,5 +1,5 @@
 ---
-title: Verwenden der Daten Bank Spiegelung | Microsoft-Dokumentation
+title: Verwenden der Datenbankspiegelung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d7db93bdbe00b6aa1bc2525c0e8ed47e45aaf15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63225329"
 ---
 # <a name="using-database-mirroring"></a>Verwenden der Datenbankspiegelung
@@ -34,16 +34,16 @@ ms.locfileid: "63225329"
   
  Bei einer Datenbankspiegelung, die für Datenbanken einzeln implementiert wird, befindet sich eine Kopie einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Produktionsdatenbank auf einem Standbyserver. Bei dem Server handelt es sich je nach Konfiguration und Status der Datenbankspiegelungs-Sitzung um einen unmittelbar betriebsbereiten oder einfach betriebsbereiten Standbyserver. Ein unmittelbar betriebsbereiter Standbyserver unterstützt schnelles Failover ohne Verlust von Transaktionen mit ausgeführtem Commit, und ein betriebsbereiter Standbyserver unterstützt das Erzwingen eines Diensts (bei möglichem Datenverlust).  
   
- Die Produktionsdatenbank wird als *Prinzipal Datenbank*bezeichnet, und die Standbykopie wird als *Spiegel Datenbank*bezeichnet. Die Prinzipaldatenbank und die Spiegeldatenbank müssen sich auf unterschiedlichen Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (Serverinstanzen) befinden und sollten sich nach Möglichkeit auch auf unterschiedlichen Computern befinden.  
+ Die Produktionsdatenbank wird *Prinzipaldatenbank* genannt. Die Standbykopie wird *Spiegeldatenbank* genannt. Die Prinzipaldatenbank und die Spiegeldatenbank müssen sich auf unterschiedlichen Instanzen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (Serverinstanzen) befinden und sollten sich nach Möglichkeit auch auf unterschiedlichen Computern befinden.  
   
- Die Produktionsserverinstanz, die als *Prinzipalserver* bezeichnet wird, kommuniziert mit der Standbyserverinstanz, dem so genannten *Spiegelserver*. Der Prinzipal-und der Spiegel Server fungieren als Partner in einer Datenbank-Spiegelungs *Sitzung*. Wenn der Prinzipalserver ausfällt, kann der Spiegelserver seine Datenbank über einen so genannten *Failover* als Prinzipaldatenbank bestimmen. Beispiel: Partner_A und Partner_B sind zwei Partnerserver. Die Prinzipaldatenbank befindet sich anfänglich auf dem Prinzipalserver Partner_A und die Spiegeldatenbank auf dem Spiegelserver Partner_B. Wenn Partner_A offline geht, kann die Datenbank auf Partner_B ein Failover ausführen, um zur aktuellen Prinzipaldatenbank zu werden. Sobald Partner_A wieder mit der Sitzung verbunden ist, übernimmt er wieder die Rolle des Spiegelservers und seine Datenbank wird zur Spiegeldatenbank.  
+ Die Produktionsserverinstanz, die als *Prinzipalserver* bezeichnet wird, kommuniziert mit der Standbyserverinstanz, dem so genannten *Spiegelserver*. Der Prinzipal- und der Spiegelserver agieren in einer Datenbankspiegelungs-*Sitzung* als Partner. Wenn der Prinzipalserver ausfällt, kann der Spiegelserver seine Datenbank über einen so genannten *Failover* als Prinzipaldatenbank bestimmen. Beispiel: Partner_A und Partner_B sind zwei Partnerserver. Die Prinzipaldatenbank befindet sich anfänglich auf dem Prinzipalserver Partner_A und die Spiegeldatenbank auf dem Spiegelserver Partner_B. Wenn Partner_A offline geht, kann die Datenbank auf Partner_B ein Failover ausführen, um zur aktuellen Prinzipaldatenbank zu werden. Sobald Partner_A wieder mit der Sitzung verbunden ist, übernimmt er wieder die Rolle des Spiegelservers und seine Datenbank wird zur Spiegeldatenbank.  
   
  Alternative Konfigurationen für die Datenbankspiegelung bieten unterschiedliche Leistungs- und Datensicherheitsstufen und unterstützen unterschiedliche Formen des Failover. Weitere Informationen finden Sie unter [Datenbankspiegelung &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md).  
   
  Beim Angeben des Spiegeldatenbanknamens ist es möglich, einen Alias zu verwenden.  
   
 > [!NOTE]  
->  Informationen zu anfänglichen Verbindungs versuchen und erneuten Verbindungs versuchen mit einer gespiegelten Datenbank finden Sie unter [Verbinden von Clients mit einer Datenbank-Spiegelungs Sitzung &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
+>  Informationen über Versuche des Erstverbindungsaufbaus sowie Versuche der erneuten Verbindung mit einer Spiegeldatenbank finden Sie unter [Verbinden von Clients mit einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md).  
   
 ## <a name="programming-considerations"></a>Überlegungen zur Programmierung  
  Wenn auf dem Prinzipaldatenbankserver ein Fehler auftritt, empfängt die Clientanwendung als Antwort auf API-Aufrufe Fehlermeldungen. Dadurch wird angezeigt, dass die Verbindung zur Datenbank unterbrochen ist. Wenn dieser Fall eintritt, gehen alle Datenbankänderungen, für die kein Commit ausgeführt wurde, verloren und für die aktuelle Transaktion wird ein Rollback durchgeführt. Dann sollte die Anwendung die Verbindung beenden (oder das Datenquellobjekt freigeben) und erneut herstellen. Die Verbindung wird transparent zur Spiegeldatenbank umgeleitet, die jetzt als Prinzipalserver fungiert.  
@@ -51,8 +51,7 @@ ms.locfileid: "63225329"
  Wenn eine Verbindung hergestellt wurde, teilt der Prinzipalserver die Identität seines Failoverpartners, der bei einem Failover einspringt, dem Client mit. Wenn eine Anwendung versucht, nach dem Failover des Prinzipalservers eine Verbindung aufzubauen, kennt der Client die Identität des Failoverpartners nicht. Um Clients die Möglichkeit zu geben, in dieser Situation Abhilfe zu schaffen, können sie die Identität des Failoverpartners mithilfe einer Initialisierungseigenschaft und eines zugeordneten Schlüsselworts für die Verbindungszeichenfolge selbst angeben. Das Clientattribut wird nur in dieser Situation verwendet; wenn der Prinzipalserver verfügbar ist, wird es nicht verwendet. Wenn der vom Client angegebene Failoverpartnerserver nicht auf einen Server verweist, der als Failoverpartner fungiert, wird die Verbindung vom Server abgewiesen. Um es Anwendungen zu ermöglichen, sich an Konfigurationsänderungen anzupassen, kann die Identität des tatsächlichen Failoverpartners durch Überprüfung des Attributs nach dem Verbindungsaufbau bestimmt werden. Sie sollten die Partnerinformationen zwischenspeichern, um die Verbindungszeichenfolge zu aktualisieren, oder eine Wiederholungsstrategie für den Fall entwerfen, dass der erste Versuch des Verbindungsaufbaus fehlschlägt.  
   
 > [!NOTE]  
->  Sie müssen die von einer Verbindung zu verwendende Datenbank explizit angeben, wenn Sie diese Funktion in einem DSN, einer Verbindungszeichenfolge oder einer/m Verbindungseigenschaft/-attribut verwenden möchten. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client versucht sonst nicht, bei einem Fehler zur Partnerdatenbank zu wechseln.  
+>  Sie müssen die von einer Verbindung zu verwendende Datenbank explizit angeben, wenn Sie diese Funktion in einem DSN, einer Verbindungszeichenfolge oder einer/m Verbindungseigenschaft/-attribut verwenden möchten. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client versucht sonst nicht, bei einem Fehler zur Partnerdatenbank zu wechseln.  
 >   
 >  Die Spiegelung ist eine Funktion der Datenbank. Anwendungen, die mehrere Datenbanken verwenden, sind möglicherweise nicht in der Lage, diese Funktion zu nutzen.  
 >   
@@ -74,7 +73,7 @@ ms.locfileid: "63225329"
 >  Der ODBC-Treiber-Manager wurde verbessert, um die Spezifikation des Failoverservernamens zu unterstützen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Native Client-Funktionen](sql-server-native-client-features.md)   
+ [SQL Server Native Client Features](sql-server-native-client-features.md)   
  [Verbinden von Clients mit einer Datenbank-Spiegelungs Sitzung &#40;SQL Server&#41;](../../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Datenbankspiegelung &#40;SQL Server&#41;](../../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   

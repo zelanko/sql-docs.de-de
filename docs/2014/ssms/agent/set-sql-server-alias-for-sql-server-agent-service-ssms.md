@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e6e3ecc4b125d226fc2cdf6dbe241e0ce017eae6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63245940"
 ---
 # <a name="set-a-trace-filter-transact-sql"></a>Festlegen eines Ablaufverfolgungsfilters (Transact-SQL)
@@ -30,13 +30,13 @@ ms.locfileid: "63245940"
 2.  Führen Sie **sp_trace_setfilter** aus, um den Informationstyp zu konfigurieren, der für das nachzuverfolgende Ereignis abgerufen werden soll.  
   
 > [!IMPORTANT]
->  Im Gegensatz zu regulären gespeicherten Prozeduren werden die Parameter aller gespeicherten Prozeduren von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] (<strong>sp_trace_*xx*</strong>) streng typisiert, und für sie wird keine automatische Datentypkonvertierung unterstützt. Wenn diese Parameter nicht mit den richtigen Datentypen für Eingabeparameter aufgerufen werden, wie in der Argumentbeschreibung angegeben, gibt die gespeicherte Prozedur einen Fehler zurück.  
+>  Im Gegensatz zu regulären gespeicherten Prozeduren [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] werden die Parameter aller gespeicherten Prozeduren (<strong>sp_trace_*xx*</strong>) streng typisiert und unterstützen die automatische Datentyp Konvertierung nicht. Wenn diese Parameter nicht mit den richtigen Datentypen für Eingabeparameter aufgerufen werden, wie in der Argumentbeschreibung angegeben, gibt die gespeicherte Prozedur einen Fehler zurück.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Filtern einer Ablauf Verfolgung](../../relational-databases/sql-trace/filter-a-trace.md)   
- [sp_trace_setfilter &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql)   
- [sp_trace_setstatus &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql)   
- [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)   
+ [sp_trace_setfilter &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql)   
+ [sp_trace_setstatus &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql)   
+ [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/system-stored-procedures-transact-sql)   
  [Gespeicherte Prozeduren von SQL Server Profiler &#40;SQL Server Profiler&#41;](/sql/relational-databases/system-stored-procedures/sql-server-profiler-stored-procedures-transact-sql)  
   
   

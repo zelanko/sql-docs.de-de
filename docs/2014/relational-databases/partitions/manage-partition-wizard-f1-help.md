@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6a19bfa830b8f57d8df891fb2cfea9435c2716b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63249682"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>Assistent zum Verwalten von Partitionen (F1-Hilfe)
@@ -43,26 +43,26 @@ ms.locfileid: "63249682"
   
  Dieser Abschnitt stellt die Informationen bereit, die zum Verwalten, Ändern und Implementieren von Partitionen mit dem **Assistenten zum Verwalten von Partitionen**erforderlich sind.  
   
-##  <a name="Top"></a> In diesem Abschnitt  
- Die folgenden Abschnitte stellen Hilfe für die Seiten des **Assistenten zum Verwalten von Partitionen**bereit.  
+##  <a name="in-this-section"></a><a name="Top"></a> In diesem Abschnitt  
+ Die folgenden Abschnitte stellen Hilfe für die Seiten des **Assistenten zum Verwalten von Partitionen** bereit.  
   
- [Assistent zum Verwalten von Partitionen (Seite ' Partitions Aktion auswählen ')](#SelectPartitionAction)  
+ [Assistent zum Verwalten von Partitionen (Seite 'Partitionsaktion auswählen')](#SelectPartitionAction)  
   
- [Assistent zum Verwalten von Partitionen (Seite wechseln)](#SwitchIn)  
+ [Assistent zum Verwalten von Partitionen (Seite "Einfügen")](#SwitchIn)  
   
  [Assistent zum Verwalten von Partitionen (Seite "Auslagern")](#SwitchOut)  
   
- [Assistent zum Verwalten von Partitionen (Seite ' Stagingtabellenoptionen auswählen ')](#StagingTableOptions)  
+ [Assistent zum Verwalten von Partitionen (Seite 'Stagingtabellenoptionen auswählen')](#StagingTableOptions)  
   
- [Assistent zum Verwalten von Partitionen (Seite ' Ausgabe Option auswählen ')](#OutputOption)  
+ [Assistent zum Verwalten von Partitionen (Seite 'Ausgabeoption auswählen')](#OutputOption)  
   
- [Assistent zum Verwalten von Partitionen (Seite ' neuer Auftrags Zeitplan ')](#NewJob)  
+ [Assistent zum Verwalten von Partitionen (Seite 'Neuer Auftragszeitplan')](#NewJob)  
   
- [Assistent zum Verwalten von Partitionen (Seite ' Zusammenfassung ')](#Summary)  
+ [Assistent zum Verwalten von Partitionen (Seite 'Zusammenfassung')](#Summary)  
   
- [Assistent zum Verwalten von Partitionen (Seite ' Status ')](#Progress)  
+ [Assistent zum Verwalten von Partitionen (Seite 'Status')](#Progress)  
   
-##  <a name="SelectPartitionAction"></a>Seite ' Partitions Aktion auswählen '  
+##  <a name="select-partition-action-page"></a><a name="SelectPartitionAction"></a> Partitionsaktion auswählen (Seite)  
  Auf der Seite **Partitionsaktion auswählen** können Sie die Aktion auswählen, die Sie für die Partition ausführen möchten.  
   
 ### <a name="create-a-staging-table"></a>Erstellen einer Stagingtabelle  
@@ -76,40 +76,40 @@ ms.locfileid: "63249682"
  Um die Partitionen in einem flexiblen Fenster zu verwalten, wählen Sie **Partitionierte Daten in einem Szenario mit gleitendem Fenster verwalten**.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
- **Erstellen einer Stagingtabelle für den Partitions Wechsel**  
+ **Stagingtabelle für den Partitionswechsel erstellen**  
  Erstellt eine Stagingtabelle für die Daten, die Sie aus der vorhandenen partitionierten Tabelle auslagern bzw. darin einfügen.  
   
  **Partition auslagern**  
  Stellt Optionen beim Entfernen einer Partition aus der Tabelle bereit.  
   
- **Partitions Wechsel**  
+ **Partition einfügen**  
  Stellt Optionen beim Hinzufügen einer Partition zur Tabelle bereit.  
   
  **Partitionierte Daten in einem Szenario mit gleitendem Fenster verwalten**  
  Fügt eine leere Partition an die vorhandene Tabelle an, die zum Einfügen und Auslagern von Daten verwendet werden kann. Der Assistent unterstützt derzeit das Einfügen in die letzte Partition und das Auslagern aus der ersten Partition.  
   
- ![Pfeilsymbol mit dem Link "zurück zum Anfang](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") " [in diesem Abschnitt](#Top)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
   
-##  <a name="SwitchIn"></a>Seite "Partitions wechseloptionen auswählen"  
+##  <a name="select-partition-switching-in-options-page"></a><a name="SwitchIn"></a> Partitionseinfügeoptionen auswählen (Seite)  
  Auf der Seite **Partitionseinfügeoptionen auswählen** können Sie die Stagingtabelle erstellen, die Sie in die partitionierte Tabelle einfügen.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
  **Alle Partitionen anzeigen**  
  Wählen Sie diese Option zum Anzeigen aller Partitionen aus, einschließlich der Partitionen, die sich gegenwärtig in der partitionierten Tabelle befinden.  
   
- **Partitions Raster**  
+ **Partitionsschema**  
  Zeigt den Partitionsnamen, **Linke Begrenzung**, **Rechte Begrenzung**, **Dateigruppe**und **Zeilenanzahl** der Partitionen an, die Sie ausgewählt haben.  
   
- **In Tabelle wechseln**  
+ **Einzufügende Tabelle**  
  Wählen Sie die Stagingtabelle aus, die die Partition enthält, die Sie der partitionierten Tabelle hinzufügen möchten. Sie müssen diese Stagingtabelle erstellen, bevor Sie Partitionen mit dem Assistenten zum **Verwalten von Partitionen**einfügen können.  
   
- ![Pfeilsymbol mit dem Link "zurück zum Anfang](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") " [in diesem Abschnitt](#Top)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
   
-##  <a name="SwitchOut"></a>Partitions Auslagerungs Optionen auswählen (Seite)  
+##  <a name="select-partition-switching-out-options-page"></a><a name="SwitchOut"></a> Partitionsauslagerungsoptionen auswählen (Seite)  
  Auf der Seite **Partitionsauslagerungsoptionen auswählen** können Sie die Partition und die Stagingtabelle für die partitionierten Daten auswählen, die aus der partitionierten Tabelle ausgelagert werden.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
- **Partitions Raster**  
+ **Partitionsschema**  
  Zeigt den Partitionsnamen, **Linke Begrenzung**, **Rechte Begrenzung**, **Dateigruppe**und **Zeilenanzahl** der Partitionen an, die Sie ausgewählt haben.  
   
  **Tabelle auslagern**  
@@ -118,12 +118,12 @@ ms.locfileid: "63249682"
  **Neu**  
  Geben Sie einen Namen für die neue Stagingtabelle ein, die zum Auslagern der Partition aus der aktuellen Quelltabelle verwendet werden soll.  
   
- **Ener**  
+ **Vorhanden**  
  Wählen Sie die vorhandene Stagingtabelle aus, die zum Auslagern der Partition aus der aktuellen Quelltabelle verwendet werden soll. Wenn die vorhandene Tabelle Daten enthält, werden diese mit den Daten überschrieben, die Sie auslagern.  
   
- ![Pfeilsymbol mit dem Link "zurück zum Anfang](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") " [in diesem Abschnitt](#Top)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
   
-##  <a name="StagingTableOptions"></a>Optionen für Stagingtabellenoptionen auswählen  
+##  <a name="select-the-staging-table-options-page"></a><a name="StagingTableOptions"></a> Stagingtabellenoptionen auswählen (Seite)  
  Auf der Seite **Stagingtabellenoptionen auswählen** können Sie die Stagingtabelle erstellen, die zum Verschieben der partitionierten Daten verwendet werden soll.  
   
  Stagingtabellen müssen sich in der gleichen Dateigruppe der ausgewählten Partition befinden, in der sich auch die Quelltabelle befindet. Der Entwurf der Stagingtabelle muss dem der Quell- und der Zieltabelle entsprechen.  
@@ -137,15 +137,15 @@ ms.locfileid: "63249682"
  **Partition wechseln**  
  Wählen Sie die Quellpartition aus, die Sie aus der aktuellen Tabelle auslagern möchten.  
   
- **Neuer Begrenzungs Wert**  
+ **Neuer Begrenzungswert**  
  Wählen Sie den gewünschten Begrenzungswert für die Partition in der Stagingtabelle aus, oder geben Sie einen Begrenzungswert ein.  
   
- **Datei Gruppe**  
+ **Dateigruppe**  
  Wählen Sie eine Dateigruppe für die neue Tabelle aus.  
   
- ![Pfeilsymbol mit dem Link "zurück zum Anfang](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") " [in diesem Abschnitt](#Top)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
   
-##  <a name="OutputOption"></a>Ausgabe Option auswählen (Seite)  
+##  <a name="select-output-option-page"></a><a name="OutputOption"></a> Ausgabeoption auswählen (Seite)  
  Geben Sie auf der Seite **Ausgabeoption auswählen** an, wie Sie die Änderungen für Ihre Partitionen abschließen möchten.  
   
 ### <a name="create-script"></a>Erstellen von Skripts  
@@ -161,7 +161,7 @@ ms.locfileid: "63249682"
  Generiert das Skript in einem Abfrage-Editor-Fenster. Wenn kein Editor-Fenster geöffnet ist, wird ein neues Editor-Fenster als Skriptziel geöffnet.  
   
 ### <a name="run-immediately"></a>Sofort ausführen  
- **Sofort ausführen**  
+ **Run immediately**  
  Wenn Sie auf **Weiter** oder **Fertig stellen**klicken, schließt der Assistent die Änderungen an den Partitionen ab.  
   
 ### <a name="schedule"></a>Zeitplan  
@@ -170,9 +170,9 @@ ms.locfileid: "63249682"
  **Zeitplan ändern**  
  Hiermit wird das Dialogfeld **Neuer Auftragszeitplan** geöffnet, in dem Sie die Eigenschaften des geplanten Auftrags auswählen, ändern oder anzeigen können.  
   
- ![Pfeilsymbol mit dem Link "zurück zum Anfang](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") " [in diesem Abschnitt](#Top)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
   
-##  <a name="NewJob"></a>Neuer Auftrags Zeitplan (Seite)  
+##  <a name="new-job-schedule-page"></a><a name="NewJob"></a> Neuer Auftragszeitplan (Seite)  
  Verwenden Sie die Seite **Neuer Auftragszeitplan** , um die Eigenschaften des Zeitplans anzuzeigen und zu ändern.  
   
 ### <a name="options"></a>Tastatur  
@@ -184,7 +184,7 @@ ms.locfileid: "63249682"
  **Aufträge im Zeitplan**  
  Zeigen Sie die vorhandenen Aufträge an, die den Zeitplan verwenden.  
   
- **Zeit Plantyp**  
+ **Zeitplantyp**  
  Wählen Sie den Zeitplantyp aus.  
   
  **Aktiviert**  
@@ -193,40 +193,40 @@ ms.locfileid: "63249682"
 ### <a name="recurring-schedule-types-options"></a>Zeitplantypoptionen für wiederkehrende Aufträge  
  Wählen Sie die Häufigkeit des geplanten Auftrags aus.  
   
- **Vorkommen**  
+ **Tritt auf**  
  Wählen Sie das Intervall aus, nach dem der Zeitplan wiederholt wird.  
   
  **Wiederholen alle**  
  Wählen Sie die Anzahl der Tage oder Wochen aus, die zwischen der wiederholten Ausführung des Zeitplans liegen. Bei monatlichen Zeitplänen ist diese Option nicht verfügbar.  
   
- **Pfingst**  
+ **Montag**  
  Legt fest, dass der Auftrag an einem Montag ausgeführt wird. Nur bei wöchentlichen Zeitplänen verfügbar.  
   
- **Mitteilte**  
+ **Dienstag**  
  Legt fest, dass der Auftrag an einem Dienstag ausgeführt wird. Nur bei wöchentlichen Zeitplänen verfügbar.  
   
  **Mittwoch**  
  Legt fest, dass der Auftrag an einem Mittwoch ausgeführt wird. Nur bei wöchentlichen Zeitplänen verfügbar.  
   
- **Thursday**  
+ **Donnerstag**  
  Legt fest, dass der Auftrag an einem Donnerstag ausgeführt wird Nur bei wöchentlichen Zeitplänen verfügbar.  
   
- **Am**  
+ **Freitag**  
  Legt fest, dass der Auftrag an einem Freitag ausgeführt wird Nur bei wöchentlichen Zeitplänen verfügbar.  
   
  **Samstag**  
  Legt fest, dass der Auftrag an einem Samstag ausgeführt wird Nur bei wöchentlichen Zeitplänen verfügbar.  
   
- **Sunday**  
+ **Sonntag**  
  Legt fest, dass der Auftrag an einem Sonntag ausgeführt wird Nur bei wöchentlichen Zeitplänen verfügbar.  
   
- **Ertag**  
+ **Day**  
  Wählen Sie den Tag des Monats aus, an dem der Zeitplan ausgeführt werden soll. Nur bei monatlichen Zeitplänen verfügbar.  
   
- **Alle**  
+ **alle**  
  Wählen Sie die Anzahl der Monate aus, die zwischen wiederholten Ausführungen des Zeitplans liegen sollen. Nur bei monatlichen Zeitplänen verfügbar.  
   
- **Die**  
+ **Am**  
  Geben Sie einen Zeitplan für den Wochentag einer bestimmten Woche des Monats an. Nur bei monatlichen Zeitplänen verfügbar.  
   
  **Einmalig um**  
@@ -253,19 +253,19 @@ ms.locfileid: "63249682"
  **Time**  
  Wählen Sie die Uhrzeit aus, zu der der Auftrag ausgeführt wird.  
   
- ![Pfeilsymbol mit dem Link "zurück zum Anfang](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") " [in diesem Abschnitt](#Top)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
   
-##  <a name="Summary"></a> Seite "Zusammenfassung"  
+##  <a name="summary-page"></a><a name="Summary"></a> Seite "Zusammenfassung"  
  Mithilfe der Seite **Zusammenfassung** können Sie die Optionen überprüfen, die Sie auf den vorherigen Seiten ausgewählt haben.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
  **Überprüfen Sie Ihre Auswahl**  
  Zeigt die auf den einzelnen Seiten des Assistenten getroffene Auswahl an. Klicken Sie auf einen Knoten, um diesen zu erweitern und die ausgewählten Optionen anzuzeigen.  
   
- ![Pfeilsymbol mit dem Link "zurück zum Anfang](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") " [in diesem Abschnitt](#Top)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
   
-##  <a name="Progress"></a> Status (Seite)  
- Auf der Seite **Status** können Sie Statusinformationen zu den Aktionen im **Assistenten zum Verwalten von Partitionen**anzeigen. Abhängig von den Optionen, die Sie im Assistenten ausgewählt haben, kann **die Seite Status** eine oder mehrere Aktionen enthalten. Im oberen Feld werden der Gesamtstatus des Assistenten und die Anzahl der empfangenen Status-, Fehler- und Warnmeldungen angezeigt.  
+##  <a name="progress-page"></a><a name="Progress"></a> Status (Seite)  
+ Auf der Seite **Status** können Sie Statusinformationen zu den Aktionen im **Assistenten zum Verwalten von Partitionen**anzeigen. Je nach den im Assistenten ausgewählten Optionen enthält die Seite **Status** eine oder mehrere Aktionen. Im oberen Feld werden der Gesamtstatus des Assistenten und die Anzahl der empfangenen Status-, Fehler- und Warnmeldungen angezeigt.  
   
 ### <a name="options"></a>Tastatur  
  **Details**  
@@ -297,10 +297,10 @@ ms.locfileid: "63249682"
  **Bericht anzeigen**  
  Öffnet das Dialogfeld **Bericht anzeigen** . Dieses Dialogfeld enthält einen Textbericht zum Status des **Assistenten zum Verwalten von Partitionen**.  
   
- **Ihrer**  
+ **Close**  
  Schließen Sie den Assistenten.  
   
- ![Pfeilsymbol mit dem Link "zurück zum Anfang](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") " [in diesem Abschnitt](#Top)  
+ ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [In diesem Abschnitt](#Top)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Partitionierte Tabellen und Indizes](partitioned-tables-and-indexes.md)  

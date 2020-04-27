@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 63f46f2d548437a707922bb9cf8b58727061253b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63188146"
 ---
 # <a name="processing-the-sequence-clustering-model"></a>Verarbeiten des Sequenzclustermodells
@@ -24,7 +24,7 @@ ms.locfileid: "63188146"
   
 ### <a name="to-process-the-mining-structure-and-model"></a>So verarbeiten Sie die Miningstruktur und das Miningmodell  
   
-1.  Wählen Sie im Menü **Mining Modell** von die Option [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] **Mining Struktur und alle Modelle verarbeiten**aus.  
+1.  Klicken Sie im Menü **Miningmodell** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]auf **Miningstruktur und alle Modelle verarbeiten**.  
   
 2.  Klicken Sie in der Meldung mit der Frage, ob Sie das Projekt erstellen und bereitstellen möchten, auf **Ja**.  
   
@@ -42,6 +42,6 @@ ms.locfileid: "63188146"
 ## <a name="see-also"></a>Weitere Informationen  
  [Data Mining-Designer](../../2014/analysis-services/data-mining/data-mining-designer.md)   
  [Microsoft Sequence Clustering-Algorithmus](../../2014/analysis-services/data-mining/microsoft-sequence-clustering-algorithm.md)   
- [Verarbeitungsanforderungen und Überlegungen &#40;Data Mining-&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Anforderungen und Überlegungen zur Verarbeitung &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

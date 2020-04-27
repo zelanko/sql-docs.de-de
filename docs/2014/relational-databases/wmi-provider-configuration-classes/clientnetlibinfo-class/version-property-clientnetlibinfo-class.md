@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e7016b056c404d1e60f53bd0d0afd1270fdbb73a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63191091"
 ---
 # <a name="version-property-clientnetlibinfo-class"></a>Version-Eigenschaft (ClientNetLibInfo-Klasse)
@@ -37,13 +37,13 @@ object
 ```  
   
 ## <a name="parts"></a>Bestandteile  
- *Objekt*  
+ *object*  
  Ein Objekt der [ClientNetLibInfo-Klasse](clientnetlibinfo-class.md) , das Informationen über die Clientnetzwerkbibliothek darstellt.  
   
 ## <a name="property-valuereturn-value"></a>Eigenschaftswert/Rückgabewert  
  Ein Zeichenfolgenwert, der die Version der Clientnetzwerk-Bibliotheksdatei angibt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Clientprotokollen](https://technet.microsoft.com/library/ms181035.aspx)  

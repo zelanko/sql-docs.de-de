@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 13cb285396d63f2b06d004afab4a0ec8c7504fb0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63200357"
 ---
 # <a name="log-long-running-queries-odbc"></a>Protokollieren von Abfragen mit langer Ausführungszeit (ODBC)
@@ -43,7 +43,7 @@ ms.locfileid: "63200357"
   
 ### <a name="to-log-long-running-queries-data-programmatically"></a>So protokollieren Sie Abfragen mit langer Ausführungszeit programmgesteuert  
   
-1.  Rufen Sie [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) mit SQL_COPT_SS_PERF_QUERY_LOG und dem vollständigen Pfad und dem Dateinamen der Protokolldatei für Abfragen mit langer Ausführungszeit auf. Beispiel:  
+1.  Rufen Sie [SQLSetConnectAttr](../native-client-odbc-api/sqlsetconnectattr.md) mit SQL_COPT_SS_PERF_QUERY_LOG und dem vollständigen Pfad und dem Dateinamen der Protokolldatei für Abfragen mit langer Ausführungszeit auf. Zum Beispiel:  
   
     ```  
     C:\\Odbcqry.log  
