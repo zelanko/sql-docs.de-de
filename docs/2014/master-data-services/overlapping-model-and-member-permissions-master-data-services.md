@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ca57d34a3dda2880f3882d1940c6852af0729fb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482732"
 ---
 # <a name="overlapping-model-and-member-permissions-master-data-services"></a>Überlappende Modell- und Elementberechtigungen (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "65482732"
   
  Wenn ein Element über eine Berechtigung verfügt, die sich von der des zugehörigen Modellobjekts unterscheidet, gelten die folgenden Regeln:  
   
--   **Deny** überschreibt alle anderen Berechtigungen.  
+-   Mit**Verweigern** werden alle anderen Berechtigungen überschrieben.  
   
 -   Schreib **geschützte über schreibungen** von **Updates**.  
   
@@ -69,6 +69,6 @@ ms.locfileid: "65482732"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Wie Berechtigungen &#40;Master Data Services bestimmt werden&#41;](how-permissions-are-determined-master-data-services.md)   
- [Überlappende Benutzer-und Gruppenberechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
+ [Überlappende Benutzer- und Gruppenberechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-user-and-group-permissions-master-data-services.md)  
   
   

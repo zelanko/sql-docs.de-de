@@ -17,10 +17,10 @@ ms.assetid: 13fe9381-d00b-4f4a-9162-83c3f21b3837
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4d76f239094185af7a3e940201b3f99132c0194a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918195"
 ---
 # <a name="move-method-ado"></a>Move-Methode (ADO)
@@ -37,10 +37,10 @@ recordset.Move NumRecords, Start
  *Numrecords*  
  Ein signed **Long** -Ausdruck, der die Anzahl der Datensätze angibt, die die aktuelle Daten Satz Position verschiebt.  
   
- *Starten*  
+ *Start*  
  Optional. Ein **Zeichen** folgen Wert oder **Variant** , der zu einem Lesezeichen ausgewertet wird. Sie können auch einen [bookmarkenum](../../../ado/reference/ado-api/bookmarkenum.md) -Wert verwenden.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die **Move** -Methode wird für alle **Recordset** -Objekte unterstützt.  
   
  Wenn das *numrecords* -Argument größer als 0 (null) ist, wird die aktuelle Daten Satz Position nach vorne verschoben (am Ende des **Recordsets**). Wenn *numrecords* kleiner als 0 (null) ist, wird die aktuelle Daten Satz Position rückwärts (am Anfang des **Recordsets**) verschoben.  

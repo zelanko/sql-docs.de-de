@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c554215ba716a35f3e2851a5042be1989ee5648c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109606"
 ---
 # <a name="create-delete-or-modify-a-shared-data-source-report-manager"></a>Erstellen, Löschen oder Ändern einer freigegebenen Datenquelle (Berichts-Manager)
@@ -28,14 +28,14 @@ ms.locfileid: "66109606"
   
  Das folgende Symbol bezeichnet eine freigegebene Datenquelle in der Ordnerhierarchie des Berichts-Managers:  
   
- ![Symbol für freigegebene Datenquelle](media/hlp-16datasource.png "Freigegebene Datenquelle (Symbol)")  
+ ![Symbol für freigegebene Datenquelle](media/hlp-16datasource.png "Symbol für freigegebene Datenquelle")  
 Symbol für freigegebene Datenquelle  
   
 ### <a name="to-create-a-shared-data-source"></a>So erstellen Sie eine freigegebene Datenquelle  
   
 1.  Starten Sie den [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md).  
   
-2.  Navigieren Sie im Berichts-Manager zur Seite **Inhalt** .  
+2.  Navigieren Sie in Berichts-Manager zur Seite **Inhalt** .  
   
 3.  Klicken Sie auf **Neue Datenquelle**. Die Seite **Neue Datenquelle** wird geöffnet.  
   
@@ -100,7 +100,7 @@ Symbol für freigegebene Datenquelle
  [Datenverbindungen, Datenquellen und Verbindungs Zeichenfolgen in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
  [Die Inhaltsseite &#40;Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md)   
  [Erstellen, ändern und Löschen von freigegebenen Datenquellen &#40;SSRS-&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)   
- [Verwalten von Berichtsdatenquellen](report-data/manage-report-data-sources.md)   
- [Konfigurieren von Datenquellen Eigenschaften für einen Bericht &#40;Berichts-Manager&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)  
+ [Verwalten von Berichtsdaten Quellen](report-data/manage-report-data-sources.md)   
+ [Konfigurieren von Datenquelleneigenschaften für einen Bericht &#40;Berichts-Manager&#41;](report-data/configure-data-source-properties-for-a-report-report-manager.md)  
   
   

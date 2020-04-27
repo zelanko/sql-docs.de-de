@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 62fd4cd78beaeff479fc7cc9ec3abbd79e227e04
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63273558"
 ---
-# <a name="topologies-for-web-synchronization"></a>Topologien für die Websynchronisierung
-  Sie können aus einer Vielzahl von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Websynchronisierungs-Replikationstopologien auswählen. Hier einige der gängigen Konfigurationsmethoden für die Websynchronisierung:  
+# <a name="topologies-for-web-synchronization"></a>Topologies for Web Synchronization
+  Sie können aus unterschiedlichen Websynchronisierungs-Replikationstopologien von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auswählen. Hier einige der gängigen Konfigurationsmethoden für die Websynchronisierung:  
   
 -   Einzelserver  
   
@@ -57,7 +57,7 @@ ms.locfileid: "63273558"
  ![Websynchronisierung mit Wiederveröffentlichung](media/web-sync05.gif "Websynchronisierung mit Wiederveröffentlichung")  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Websynchronisierung konfigurieren](configure-web-synchronization.md)   
+ [Konfigurieren der Websynchronisierung](configure-web-synchronization.md)   
  [Websynchronisierung für die Mergereplikation](web-synchronization-for-merge-replication.md)  
   
   

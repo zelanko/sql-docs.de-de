@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a9480b0729e7c08117ba5633c6934eca1903a61b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108158"
 ---
 # <a name="new-role-assignment-edit-role-assignment-page-report-manager"></a>Neue Rollenzuweisung: Seite „Rollenzuweisung bearbeiten“ (Berichts-Manager)
@@ -36,16 +36,16 @@ ms.locfileid: "66108158"
 4.  Wenn Sie eine neue Rollenzuweisung hinzufügen möchten, klicken Sie auf der Symbolleiste auf **Neue Rollenzuweisung**. Um eine Rollenzuweisung zu bearbeiten, klicken Sie neben dem Namen der Gruppe bzw. des Benutzers, die oder der bearbeitet werden soll, auf **Bearbeiten** .  
   
     > [!NOTE]  
-    >  Falls ein Element aktuell die Sicherheitseinstellungen eines übergeordneten Elements erbt, klicken Sie auf der Symbolleiste auf **Elementsicherheit bearbeiten** , um die Sicherheitseinstellungen zu ändern.  
+    >   Falls ein Element aktuell die Sicherheitseinstellungen eines übergeordneten Elements erbt, klicken Sie auf der Symbolleiste auf **Elementsicherheit bearbeiten** , um die Sicherheitseinstellungen zu ändern.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Gruppen- oder Benutzername**  
  Geben Sie den Namen eines Gruppen- oder Benutzerkontos ein, für das die Rollenzuweisung erstellt wird. Der Gruppen- oder Benutzername muss ein gültiges Windows-Domänenkonto sein. Geben Sie das Konto im folgenden Format \<ein: \\ Domäne>\><Konto.  
   
 > [!NOTE]  
 >  Dieses Feld ist nur auf der Seite Neue Rollenzuweisung verfügbar.  
   
- **Spielen**  
+ **Rolle**  
  Zeigt alle auf dem Berichtsserver definierten Rollen an, die zum Definieren der Sicherheit für Elemente verwendet werden können. Wenn Sie die Rollenzuweisung für einen Bericht oder Ordner erstellen oder bearbeiten, wählen Sie eine oder mehrere Rollen aus, bis die kombinierten Aufgaben die Aktionen beschreiben, die der Benutzer ausführen darf. Verwenden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]Sie, um den von jeder Rolle unterstützten Satz von Aufgaben anzuzeigen. Sie können im Berichts-Manager keine Rollen anzeigen, erstellen, ändern oder löschen. Anweisungen hierzu finden Sie unter [erstellen, löschen oder Ändern einer Rolle &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md).  
   
  **Beschreibung**  
@@ -58,7 +58,7 @@ ms.locfileid: "66108158"
 >  Diese Schaltfläche ist nur auf der Seite Rollenzuweisung bearbeiten verfügbar.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erstellen, Löschen oder Ändern einer Rolle &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)   
+ [Erstellen, löschen oder Ändern einer Rolle &#40;Management Studio&#41;](security/role-definitions-create-delete-or-modify.md)   
  [Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus](security/granting-permissions-on-a-native-mode-report-server.md)   
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Berichts-Manager F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   

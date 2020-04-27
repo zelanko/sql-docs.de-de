@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 40c623130b02c082b099938823ccc12950333982
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105563"
 ---
 # <a name="multiple-series-on-a-chart-report-builder-and-ssrs"></a>Mehrere Reihen in einem Diagramm (Berichts-Generator und SSRS)
@@ -36,7 +36,7 @@ ms.locfileid: "66105563"
 ## <a name="using-chart-areas"></a>Verwenden von Diagrammflächen  
  Das Diagramm stellt den Container der obersten Ebene dar, der den äußeren Rahmen, den Diagrammtitel und die Legende enthält. Standardmäßig wird im Diagramm eine Diagrammfläche angezeigt. Die Diagrammfläche ist auf der Diagrammoberfläche nicht sichtbar. Sie können sich diese jedoch als Container vorstellen, in dem lediglich die Achsenbezeichnungen, der Achsentitel und der Zeichnungsbereich einer oder mehrerer Reihen enthalten sind. In der folgenden Abbildung wird das Konzept der Diagrammflächen in einem einzelnen Diagramm veranschaulicht.  
   
- ![Zeigt ein Diagramm einer Diagrammfläche](../media/chartareasdiagram.gif "Zeigt ein Diagramm einer Diagrammfläche")  
+ ![Diagramm eines Diagrammbereichs](../media/chartareasdiagram.gif "Diagramm eines Diagrammbereichs")  
   
  Im Dialogfeld **Diagrammflächeneigenschaften** können Sie die 2D- und 3D-Ausrichtung aller auf der Diagrammfläche enthaltenen Reihen angeben, mehrere Diagrammflächen in einem Diagramm ausrichten und die Farben des Zeichnungsbereichs formatieren. Wenn eine neue Diagrammfläche in einem Diagramm definiert wird, das nur eine Standarddiagrammfläche enthält, wird der für eine Diagrammfläche verfügbare Platz horizontal durch 2 dividiert, und die neue Diagrammfläche wird unterhalb der ersten Diagrammfläche platziert.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "66105563"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [Anzeigen einer Reihe mit mehreren Daten Bereichen in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
+ [Anzeigen einer Reihe mit mehreren Datenbereichen in einem Diagramm (Berichts-Generator und SSRS)](displaying-a-series-with-multiple-data-ranges-on-a-chart.md)   
  [Diagrammtypen &#40;Berichts-Generator und SSRS&#41;](chart-types-report-builder-and-ssrs.md)  
   
   

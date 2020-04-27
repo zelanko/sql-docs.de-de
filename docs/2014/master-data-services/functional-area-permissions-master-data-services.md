@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ffa8314e764a814956a7910f93d944294ab7acf7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479407"
 ---
 # <a name="functional-area-permissions-master-data-services"></a>Berechtigungen für Funktionsbereiche (Master Data Services)
@@ -28,11 +28,11 @@ ms.locfileid: "65479407"
   
 -   **Versionsverwaltung**  
   
--   **Integrations Management**  
+-   **Integrationsmanagement**  
   
--   **System Verwaltung**  
+-   **System Administration (Systemverwaltung)**  
   
--   **Benutzer-und Gruppenberechtigungen**  
+-   **Benutzer- und Gruppenberechtigungen**  
   
  Wenn Sie einem Funktionsbereich Berechtigungen zuweisen, wird ein bestimmter Bereich der Benutzeroberfläche für den Benutzer oder die Gruppe sichtbar.  
   
@@ -44,6 +44,6 @@ ms.locfileid: "65479407"
  [&#40;Master Data Services Berechtigungen für Funktionsbereiche zuweisen&#41;](../../2014/master-data-services/assign-functional-area-permissions-master-data-services.md)   
  [Modell Objekt Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)   
  [Hierarchie Element Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [Wie Berechtigungen &#40;Master Data Services bestimmt werden&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
+ [Vorgehensweise: Festlegen von Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27942be9c32d4537f729adbd69df1c64a9c9ff6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109857"
 ---
 # <a name="check-for-updates-or-turn-updates-off-report-builder-and-ssrs"></a>Suchen nach Updates oder Deaktivieren von Updates (Berichts-Generator und SSRS)
@@ -36,7 +36,7 @@ ms.locfileid: "66109857"
 -   Klicken Sie mit der rechten Maustaste auf die Entwurfs Oberfläche außerhalb des Berichts oder im Hauptteil des Berichts, und klicken Sie auf **nach Updates suchen**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Berichtsteile &#40;Berichts-Generator und SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
+ [Berichts Teile &#40;Berichts-Generator und SSRS&#41;](report-parts-report-builder-and-ssrs.md)   
  [Berichts Teile &#40;Berichts-Generator und SSRS veröffentlichen und erneut veröffentlichen&#41;](report-design/publish-and-republish-report-parts-report-builder-and-ssrs.md)   
  [Suchen nach Berichts teilen und Festlegen eines Standard Ordners &#40;Berichts-Generator und SSRS&#41;](report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)   
  [Problembehandlung bei Berichts teilen &#40;Berichts-Generator und SSRS&#41;](../../2014/reporting-services/troubleshoot-report-parts-report-builder-and-ssrs.md)   

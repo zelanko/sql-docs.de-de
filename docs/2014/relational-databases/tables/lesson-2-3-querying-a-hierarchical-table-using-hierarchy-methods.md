@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: be1d0dcd37dba9b1025ba3e4a93aa60d2198b237
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110048"
 ---
 # <a name="querying-a-hierarchical-table-using-hierarchy-methods"></a>Abfragen einer hierarchischen Tabelle mit hierarchischen Methoden
@@ -40,8 +40,7 @@ ms.locfileid: "66110048"
   
      Das Ergebnis listet sowohl Sariya als auch Wanida auf. Sariya wird aufgelistet, weil sie Nachfolger auf Ebene 0 ist. Wanida ist Nachfolger auf Ebene 1.  
   
-2.  Sie können diese Informationen auch mit der [GetAncestor](/sql/t-sql/data-types/getancestor-database-engine) -Methode abfragen. 
-  `GetAncestor` übernimmt ein Argument für die Ebene, die zurückgegeben werden soll. Da Wanida eine Ebene unter Sariya angesiedelt ist, können Sie `GetAncestor(1)` verwenden, wie der folgende Code veranschaulicht:  
+2.  Sie können diese Informationen auch mit der [GetAncestor](/sql/t-sql/data-types/getancestor-database-engine) -Methode abfragen. `GetAncestor` übernimmt ein Argument für die Ebene, die zurückgegeben werden soll. Da Wanida eine Ebene unter Sariya angesiedelt ist, können Sie `GetAncestor(1)` verwenden, wie der folgende Code veranschaulicht:  
   
     ```  
     DECLARE @CurrentEmployee hierarchyid  

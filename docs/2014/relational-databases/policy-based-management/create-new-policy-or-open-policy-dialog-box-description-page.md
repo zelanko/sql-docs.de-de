@@ -11,16 +11,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2905ce39c487a1df04d839b6efe360803674ffb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63255224"
 ---
 # <a name="create-new-policy-or-open-policy-dialog-box-description-page"></a>Dialogfeld 'Neue Richtlinie erstellen' oder 'Richtlinie öffnen', Seite 'Beschreibung'
   Mithilfe dieses Dialogfelds können Sie einer richtlinienbasierten Verwaltungsrichtlinie eine Beschreibung und zusätzliche Informationen hinzufügen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Kategorie**  
  Wenn Sie eine neue Richtlinie erstellen, wählen Sie eine Richtlinienkategorie aus.  
   
@@ -36,13 +36,13 @@ ms.locfileid: "63255224"
  **Zusätzlicher Hilfelink: Testlink**  
  Klicken Sie, um den Link zu öffnen und die Gültigkeit des Links zu testen.  
   
- **Erstellt am**  
+ **Erstellungsdatum**  
  Datum, an dem die Richtlinie erstellt wurde.  
   
  **Erstellt von**  
  Der Anmeldename, der die Richtlinie erstellt hat.  
   
- **Geändert am**  
+ **Änderungsdatum**  
  Datum der letzten Änderung der Richtlinie.  
   
  **Geändert von**  

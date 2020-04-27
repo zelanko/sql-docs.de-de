@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 58373531871a5db8ff859280de52cbe21562bfb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478624"
 ---
 # <a name="users-and-groups-master-data-services"></a>Benutzer und Gruppen (Master Data Services)
@@ -45,6 +45,6 @@ ms.locfileid: "65478624"
  [Benutzer &#40;Master Data Services hinzufügen&#41;](../../2014/master-data-services/add-a-user-master-data-services.md)   
  [Gruppe &#40;Master Data Services hinzufügen&#41;](../../2014/master-data-services/add-a-group-master-data-services.md)   
  [Löschen von Benutzern oder Gruppen &#40;Master Data Services&#41;](../../2014/master-data-services/delete-users-or-groups-master-data-services.md)   
- [Testen Sie die Berechtigungen eines Benutzers &#40;Master Data Services&#41;](../../2014/master-data-services/test-a-user-s-permissions-master-data-services.md)  
+ [Testen der Berechtigungen eines Benutzers &#40;Master Data Services&#41;](../../2014/master-data-services/test-a-user-s-permissions-master-data-services.md)  
   
   

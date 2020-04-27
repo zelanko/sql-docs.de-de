@@ -14,17 +14,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6512f2523b1dc64c1f9505c59b727aad0f15ad2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108098"
 ---
 # <a name="placeholder-properties-dialog-box-general-report-builder-and-ssrs"></a>Platzhaltereigenschaften (Dialogfeld), Allgemein (Berichts-Generator und SSRS)
   Verwenden Sie das Dialogfeld **Eigenschaften von Platzhalter** , um den Wert, die QuickInfo und die Markupoptionen eines Platzhalters innerhalb eines Textfelds zu ändern.  
   
-## <a name="options"></a>Tastatur  
- **ETI**  
+## <a name="options"></a>Optionen  
+ **Bezeichnung**  
  Geben Sie eine Bezeichnung für den Platzhalter ein. Die Bezeichnung wird nur auf der Entwurfsoberfläche angezeigt.  
   
  **Wert**  
@@ -36,16 +36,16 @@ ms.locfileid: "66108098"
  **Markuptyp**  
  Wählen Sie eine Option aus, um anzugeben, wie der Platzhalter gerendert wird.  
   
--   Nur- **Text** Zeigen Sie den Platzhalter als einfachen Text an. HTML wird als Literaltext behandelt.  
+-   **Nur Text:** Zeigt den Platzhalter als einfachen Text an. HTML wird als Literaltext behandelt.  
   
--   **HTML**  Zeigen Sie den Platzhalter als HTML an. Wenn der Ausdruckswert des Platzhalters gültige HTML-Tags enthält, werden diese Tags als HTML gerendert.  
+-   **HTML:**  Zeigt den Platzhalter als HTML-Text an. Wenn der Ausdruckswert des Platzhalters gültige HTML-Tags enthält, werden diese Tags als HTML gerendert.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Formatieren von Text in einem Textfeld (Berichts-Generator und SSRS)](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
+ [Formatieren von Text in einem Textfeld &#40;Berichts-Generator und SSRS&#41;](report-design/format-text-in-a-text-box-report-builder-and-ssrs.md)   
  [Hinzufügen von HTML in einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-design/add-html-into-a-report-report-builder-and-ssrs.md)   
  [Beispiele für Ausdrücke &#40;Berichts-Generator und SSRS&#41;](report-design/expression-examples-report-builder-and-ssrs.md)   
- [Textfelder &#40;Berichts-Generator und SSRS&#41;](report-design/text-boxes-report-builder-and-ssrs.md)   
- [Formatieren von Berichtselementen (Berichts-Generator und SSRS)](report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Text Felder &#40;Berichts-Generator und SSRS&#41;](report-design/text-boxes-report-builder-and-ssrs.md)   
+ [Formatieren von Berichts Elementen &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Formatieren von Text und Platzhaltern &#40;Berichts-Generator und SSRS&#41;](report-design/formatting-text-and-placeholders-report-builder-and-ssrs.md)   
  [Importieren von HTML in einen Bericht &#40;Berichts-Generator und SSRS&#41;](report-design/importing-html-into-a-report-report-builder-and-ssrs.md)  
   

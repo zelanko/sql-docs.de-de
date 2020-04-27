@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 21928cd6637815000983e8a0fe05aa4e77d1c216
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67412971"
 ---
 # <a name="preview-reports-in-sql-server-reporting-services-ssrs"></a>Vorschauberichte in SQL Server Reporting Services (SSRS)
@@ -34,16 +34,16 @@ ms.locfileid: "67412971"
   
 - Wenn Sie im Menü **Debuggen** auf **starten** klicken.  
   
-- Durch Klicken auf **** die Schaltfläche Start [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] auf der Standard Symbolleiste.  
+- Durch Klicken auf **Start** die Schaltfläche Start [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] auf der Standard Symbolleiste.  
   
 - Durch Drücken von F5.  
   
  Falls Sie eine Projektkonfiguration verwenden, die zwar den Bericht erstellt, aber nicht bereitstellt, wird der in der `StartItem`-Eigenschaft angegebene Bericht der aktuellen Konfiguration in einem separaten Vorschaufenster geöffnet. Im Vorschaufenster wird der Bericht genauso und mit derselben Funktionalität angezeigt wie im Vorschaumodus.  
   
 > [!NOTE]  
-> Vor dem Debuggen eines Berichts müssen Sie ein Startelement festlegen. Um ein Start Element festzulegen, klicken Sie in Projektmappen-Explorer mit der rechten Maustaste auf das **** Berichts Projekt, klicken Sie `StartItem`auf Eigenschaften, und wählen Sie dann in den Namen des Berichts aus, der angezeigt werden soll.  
+> Vor dem Debuggen eines Berichts müssen Sie ein Startelement festlegen. Um ein Start Element festzulegen, klicken Sie in Projektmappen-Explorer mit der rechten Maustaste auf das **Properties**Berichts Projekt, klicken Sie `StartItem`auf Eigenschaften, und wählen Sie dann in den Namen des Berichts aus, der angezeigt werden soll.  
   
- Wenn Sie einen bestimmten Bericht in der Vorschau anzeigen möchten, der nicht als Startelement für das Projekt festgelegt ist, wählen Sie eine Konfiguration aus, die den Bericht zwar erstellt, jedoch nicht bereitstellt (z.B. die DebugLocal-Konfiguration). Klicken Sie anschließend mit der rechten Maustaste auf den Bericht, und klicken Sie anschließend auf **Ausführen**. Sie müssen eine Konfiguration auswählen, die den Bericht nicht bereitstellt. Andernfalls wird der Bericht auf dem Berichtsserver veröffentlicht und nicht lokal in einem Vorschaufenster angezeigt.  
+ Wenn Sie einen bestimmten Bericht in der Vorschau anzeigen möchten, der nicht als Startelement für das Projekt festgelegt ist, wählen Sie eine Konfiguration aus, die den Bericht zwar erstellt, jedoch nicht bereitstellt (z.B. die DebugLocal-Konfiguration). Klicken Sie dann mit der rechten Maustaste auf den Bericht, und klicken Sie anschließend auf **Ausführen**. Sie müssen eine Konfiguration auswählen, die den Bericht nicht bereitstellt. Andernfalls wird der Bericht auf dem Berichtsserver veröffentlicht und nicht lokal in einem Vorschaufenster angezeigt.  
   
 ## <a name="print-preview"></a>Seitenansicht
 

@@ -21,10 +21,10 @@ ms.assetid: d7840adf-4a1b-41ac-bc94-102c07ad1c79
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: e817b17de8a8af93a13628334337686abbe66b5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900685"
 ---
 # <a name="sysdm_hadr_auto_page_repair-transact-sql"></a>sys.dm_hadr_auto_page_repair (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "67900685"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|ID der Datenbank, der diese Zeile entspricht.|  
 |**file_id**|**int**|ID der Datei, in der sich diese Seite befindet.|  
-|**page_id**|**BIGINT**|ID der Seite in der Datei.|  
+|**page_id**|**bigint**|ID der Seite in der Datei.|  
 |**error_type**|**int**|Typ des Fehlers. Diese Werte sind möglich:<br /><br /> **-** 1 = alle Hardware 823-Fehler<br /><br /> 1 = Fehler vom Typ 824 außer einer fehlerhaften Prüfsumme oder einer zerrissenen Seite (z. B. eine fehlerhafte Seiten-ID)<br /><br /> 2 = Fehlerhafte Prüfsumme<br /><br /> 3 = Zerrissene Seite|  
 |**page_status**|**int**|Status einer Seitenreparatur:<br /><br /> 2 = In der Warteschlange für Partneranforderung.<br /><br /> 3 = Anforderung an Partner gesendet.<br /><br /> 4 = die Seite wurde erfolgreich repariert.<br /><br /> 5 = die Seite konnte beim letzten Versuch nicht repariert werden. die automatische Seiten Reparatur versucht erneut, die Seite zu reparieren.|  
 |**modification_time**|**datetime**|Zeitpunkt der letzten Seitenstatusänderung.|  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 293bfe1f270d32bc64d4344c5363a0be2cd74b84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105518"
 ---
 # <a name="nested-data-regions-report-builder-and-ssrs"></a>Geschachtelte Datenbereiche (Berichts-Generator und SSRS)
@@ -36,13 +36,13 @@ ms.locfileid: "66105518"
   
  In der unten stehenden Liste wird der Bereich für Zellen in den folgenden Tablix-Bereichen beschrieben:  
   
--   **Tablix-Ecke** Der Bereich entspricht den Daten im Datenbereich, die mit dem Tablix--Datenbereich verknüpft sind, nachdem die Filter-und Sortierungs Ausdrücke für das DataSet und die äußere Tablix-angewendet wurden.  
+-   **Tablix-Ecke:** Der Bereich entspricht den Daten im Datenbereich, die mit dem Tablix-Datenbereich verknüpft sind, nachdem die Filter- und Sortierungsausdrücke für das Dataset und die äußere Tablix angewendet wurden.  
   
--   **Tablix-Spalten Gruppe** Die Daten in der innersten Spalten Gruppe, nachdem die Filter-und Sortierungs Ausdrücke für das DataSet, die äußere Tablix und die Spalten Gruppen angewendet wurden.  
+-   **Tablix-Spaltengruppe:** Der Bereich entspricht den Daten in der innersten Spaltengruppe, nachdem die Filter- und Sortierungsausdrücke für das Dataset, die äußere Tablix und die Spaltengruppen angewendet wurden.  
   
--   **Tablix-Zeilen Gruppe** Die Daten in der innersten Zeilen Gruppe, nachdem die Filter-und Sortierungs Ausdrücke für das DataSet, die äußere Tablix und die Zeilen Gruppen angewendet wurden.  
+-   **Tablix-Zeilengruppe:** Der Bereich entspricht den Daten in der innersten Zeilengruppe, nachdem die Filter- und Sortierungsausdrücke für das Dataset, die äußere Tablix und die Zeilengruppen angewendet wurden.  
   
--   **Tablix-Text** Die Daten in der innersten Gruppe, dargestellt durch die Schnittmenge von Zeilen Gruppen und Spalten Gruppen, nachdem die Filter-und Sortierungs Ausdrücke für das DataSet, die äußere Tablix und die Zeilen-und Spalten Gruppen angewendet wurden.  
+-   **Tablix-Hauptteil:** Der Bereich entspricht den Daten in der innersten Gruppe, dargestellt durch die Schnittmenge von Zeilen- und Spaltengruppen, nachdem die Filter- und Sortierungsausdrücke für das Dataset, die äußere Tablix und die Spaltengruppen angewendet wurden.  
   
  Weitere Informationen finden Sie unter [Zonen des Tablix-Datenbereichs (Berichts-Generator und SSRS)](tablix-data-region-areas-report-builder-and-ssrs.md).  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66105518"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](filter-group-and-sort-data-report-builder-and-ssrs.md)   
- [Listen (Berichts-Generator und SSRS)](tables-matrices-and-lists-report-builder-and-ssrs.md)   
+ [Listet &#40;Berichts-Generator und SSRS&#41;](tables-matrices-and-lists-report-builder-and-ssrs.md)   
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md)   
  [Messgeräte &#40;Berichts-Generator und SSRS&#41;](gauges-report-builder-and-ssrs.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expressions-report-builder-and-ssrs.md)   

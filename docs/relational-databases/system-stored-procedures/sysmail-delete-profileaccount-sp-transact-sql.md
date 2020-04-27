@@ -18,10 +18,10 @@ ms.assetid: b58d06f2-d6c9-4c8e-95bd-027c50f4621a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cf2e5f7e05286da23f4bccc94d1017f00cb7db70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67909193"
 ---
 # <a name="sysmail_delete_profileaccount_sp-transact-sql"></a>sysmail_delete_profileaccount_sp (Transact-SQL)
@@ -42,11 +42,11 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
 ## <a name="arguments"></a>Argumente  
 `[ @profile_id = ] profile_id`Die Profil-ID des Profils, das gelöscht werden soll. *profile_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es kann entweder *profile_id* oder *profile_name* angegeben werden.  
   
-`[ @profile_name = ] 'profile_name'`Der Profilname des Profils, das gelöscht werden soll. *profile_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es kann entweder *profile_id* oder *profile_name* angegeben werden.  
+`[ @profile_name = ] 'profile_name'`Der Profilname des Profils, das gelöscht werden soll. *profile_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es kann entweder *profile_id* oder *profile_name* angegeben werden.  
   
 `[ @account_id = ] account_id`Die zu löschende Konto-ID. *account_id* ist vom Datentyp **int**und hat den Standardwert NULL. Es kann entweder *account_id* oder *account_name* angegeben werden.  
   
-`[ @account_name = ] 'account_name'`Der Name des zu löschenden Kontos. *account_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Es kann entweder *account_id* oder *account_name* angegeben werden.  
+`[ @account_name = ] 'account_name'`Der Name des zu löschenden Kontos. *account_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Es kann entweder *account_id* oder *account_name* angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -54,7 +54,7 @@ sysmail_delete_profileaccount_sp  {   [ @profile_id = ] profile_id | [ @profile_
 ## <a name="result-sets"></a>Resultsets  
  Keine  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Gibt einen Fehler zurück, wenn das angegebene Konto dem angegebenen Profil nicht zugeordnet ist.  
   
  Ist ein Konto angegeben, jedoch kein Profil, entfernt diese gespeicherte Prozedur das angegebene Konto aus allen Profilen. Wenn Sie z. B. das Herunterfahren eines vorhandenen SMTP-Servers vorbereiten, entfernen Sie Konten, die diesen SMTP-Server verwenden, aus allen Profilen, anstatt jedes Konto aus jedem einzelnen Profil zu entfernen.  

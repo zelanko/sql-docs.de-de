@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c7020cacbb8466b1113e514162337befae358549
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67792615"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Hinzufügen eines Zeugen für die Datenbankspiegelung mithilfe der Windows-Authentifizierung (Transact-SQL)
@@ -62,7 +62,7 @@ ms.locfileid: "67792615"
   
      Dabei ist \<*Systemadresse>* eine Zeichenfolge, die das Zielcomputersystem eindeutig identifiziert, und \<*Port>* ist die vom Spiegelungsendpunkt der Partnerserverinstanz verwendete Portnummer. Weitere Informationen finden Sie unter [Angeben einer Servernetzwerkadresse &#40;Datenbankspiegelung&#41;](specify-a-server-network-address-database-mirroring.md).  
   
-     Beispiel: Auf der Prinzipalserverinstanz wird mit folgender ALTER DATABASE-Anweisung der Zeuge festgelegt. Der Datenbankname ist **AdventureWorks**, die Systemadresse lautet DBSERVER3, der Name des Zeugensystems, und der vom Datenbankspiegelungsendpunkt des Zeugen verwendete Port ist `7022`:  
+     Beispiel: Auf der Prinzipalserverinstanz wird mit folgender ALTER DATABASE-Anweisung der Zeuge festgelegt. Der Datenbankname lautet **AdventureWorks**, die System Adresse ist DBSERVER3-der Name des Zeugen Systems, und der Port, der vom Datenbankspiegelungs-Endpunkt des `7022`Zeugen verwendet wird, lautet:  
   
     ```  
     ALTER DATABASE AdventureWorks   
@@ -127,9 +127,9 @@ ms.locfileid: "67792615"
  Ein vollständiges Beispiel für das Einrichten der Sicherheitskomponenten, das Vorbereiten der Spiegeldatenbank, das Einrichten der Partner und das Hinzufügen eines Zeugen finden Sie unter [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Alter Database &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [Ermöglicht den Netzwerk Zugriff auf einen Datenbankspiegelungs-Endpunkt mithilfe der Windows-Authentifizierung &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)   
- [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung (Transact-SQL)](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
+ [Erstellen eines Datenbankspiegelungs-Endpunkts für die Windows-Authentifizierung &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   
  [Einrichten einer Datenbank-Spiegelungs Sitzung mithilfe der Windows-Authentifizierung &#40;Transact-SQL-&#41;](database-mirroring-establish-session-windows-authentication.md)   
  [Entfernen Sie den Zeugen aus einer Datenbank-Spiegelungs Sitzung &#40;SQL Server&#41;](remove-the-witness-from-a-database-mirroring-session-sql-server.md)   
  [Database Mirroring Witness](database-mirroring-witness.md)  

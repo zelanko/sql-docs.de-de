@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1990a5feaf4cbf7c4095b39089efb36fbb393755
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110021"
 ---
 # <a name="add-reference-dialog-box"></a>Verweis hinzufügen (Dialogfeld)
   Verwenden Sie das Dialogfeld **Verweis hinzufügen** , um Verweise auf eine benutzerdefinierte Assembly oder [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] -Komponente zum Bericht hinzuzufügen. Nach dem Hinzufügen eines Assemblyverweises können Sie Ausdrücke oder eingebetteten benutzerdefinierten Code schreiben, der vollqualifizierte Verweise auf Klassen oder Methoden in der Assembly oder Komponente enthält. Weitere Informationen finden Sie unter [Benutzerdefinierter Code und Assemblyverweise in Ausdrücken in Berichts-Designer &#40;SSRS&#41;](report-design/custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs.md) und [Hinzufügen eines Assemblyverweises zu einem Bericht &#40;SSRS&#41;](report-design/add-an-assembly-reference-to-a-report-ssrs.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **.NET**  
  Verwenden Sie die Option zur Auswahl einer [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] -Komponente oder einer Assembly, die im globalen Assemblycache (GAC) installiert ist.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66110021"
 > [!NOTE]  
 >  Wenn Sie einen Bericht veröffentlichen, der einen Verweis auf eine externe Assembly enthält, muss die Assembly auf dem Berichtsserver installiert sein, damit der Bericht erfolgreich verarbeitet werden kann.  
   
- **Jüngste**  
+ **Zuletzt verwendete**  
  Verwenden Sie die Option, um den Namen einer kürzlich verwendeten Assembly auszuwählen.  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 853bc9ce4b2f0432f74e3876f9a6234042fe5b5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479515"
 ---
 # <a name="delete-hierarchy-member-permissions-master-data-services"></a>Löschen von Hierarchieelementberechtigungen (Master Data Services)
@@ -54,6 +54,6 @@ ms.locfileid: "65479515"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Hierarchie Element Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)   
- [Hierarchie Element Berechtigungen &#40;Master Data Services zuweisen&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
+ [Zuweisen von Hierarchieelementberechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)  
   
   

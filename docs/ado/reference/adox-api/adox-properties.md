@@ -14,10 +14,10 @@ ms.assetid: 2ddf19e4-312e-4d21-8053-a6fc4b738ad4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 32a36388b1be6dc7f5bab6bbb0bd9f97b01aac46
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910610"
 ---
 # <a name="adox-properties"></a>ADOX-Eigenschaften
@@ -26,9 +26,9 @@ ms.locfileid: "67910610"
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|Gibt das ADO- **Verbindungs** Objekt an, zu dem der Katalog gehört.|  
 |[Attribute](../../../ado/reference/adox-api/attributes-property-adox.md)|Beschreibt Spalten Eigenschaften.|  
-|[Gruppiert](../../../ado/reference/adox-api/clustered-property-adox.md)|Gibt an, ob der Index gruppiert ist.|  
+|[Gruppierten](../../../ado/reference/adox-api/clustered-property-adox.md)|Gibt an, ob der Index gruppiert ist.|  
 |[Befehl](../../../ado/reference/adox-api/command-property-adox.md)|Gibt ein ADO- **Befehls** Objekt an, das verwendet werden kann, um die Prozedur zu erstellen oder auszuführen.|  
-|[Countdown](../../../ado/reference/ado-api/count-property-ado.md)|Gibt die Anzahl der-Objekte in einer Auflistung an.|  
+|[Count](../../../ado/reference/ado-api/count-property-ado.md)|Gibt die Anzahl der-Objekte in einer Auflistung an.|  
 |[DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md)|Gibt das Datum an, an dem das Objekt erstellt wurde.|  
 |[DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md)|Gibt das Datum an, an dem das Objekt zuletzt geändert wurde.|  
 |[DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)|Gibt die angegebene maximale Größe der Spalte an.|  
@@ -38,7 +38,7 @@ ms.locfileid: "67910610"
 |[Name](../../../ado/reference/adox-api/name-property-adox.md)|Gibt den Namen des Objekts an.|  
 |[NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md)|Gibt die Skala eines numerischen Werts in der Spalte an.|  
 |[ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md)|Gibt den übergeordneten Katalog einer Tabelle oder Spalte an, um Zugriff auf anbieterspezifische Eigenschaften bereitzustellen.|  
-|[Präziser](../../../ado/reference/adox-api/precision-property-adox.md)|Gibt die maximale Genauigkeit der Datenwerte in der Spalte an.|  
+|[Genauigkeit](../../../ado/reference/adox-api/precision-property-adox.md)|Gibt die maximale Genauigkeit der Datenwerte in der Spalte an.|  
 |[PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md)|Gibt an, ob der Index den Primärschlüssel für die Tabelle darstellt.|  
 |[RelatedColumn](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)|Gibt den Namen der verknüpften Spalte in der verknüpften Tabelle an (nur Schlüssel Spalten).|  
 |[RelatedTable](../../../ado/reference/adox-api/relatedtable-property-adox.md)|Gibt den Namen der verknüpften Tabelle an.|  

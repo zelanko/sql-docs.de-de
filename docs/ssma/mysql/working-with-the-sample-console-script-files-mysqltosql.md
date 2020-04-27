@@ -12,10 +12,10 @@ ms.assetid: 7e6aaa8a-5f5c-414d-9fb8-21e56b9ffaef
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 6dacba33ecbaa7bdeb51d0a31438c3cbdb21969f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67904893"
 ---
 # <a name="working-with-the-sample-console-script-files-mysqltosql"></a>Arbeiten mit den Beispiel Konsolen Skriptdateien (mysqltoisql)
@@ -54,7 +54,7 @@ Die folgenden Beispiel-Konsolen Skriptdateien, die verschiedene Szenarien abdeck
   
     Weitere Informationen zum Erstellen von Berichten finden Sie unter [Erstellen von Berichten &#40;mysqldesql&#41;](../../ssma/mysql/generating-reports-mysqltosql.md).  
   
-    **Anmerkungen**  
+    **Hinweise:**  
   
     -   Stellen Sie sicher, dass das Befehlszeilenargument der Variablen Wert Datei an die Konsolenanwendung und "variablevaluefilesample. xml" mit den vom Benutzer angegebenen Werten aktualisiert wird.  
   
@@ -79,7 +79,7 @@ Die folgenden Beispiel-Konsolen Skriptdateien, die verschiedene Szenarien abdeck
   
     Schema Zuordnung der Quelldatenbank zum Ziel Schema.  
   
-    **Attribut**  
+    **Versehen**  
   
     -   `source-schema:`Gibt die Quelldatenbank an, die für die Konvertierung erforderlich ist.  
   
@@ -93,7 +93,7 @@ Die folgenden Beispiel-Konsolen Skriptdateien, die verschiedene Szenarien abdeck
   
     2.  Wenn der Benutzer mehrere Objekte/Datenbanken bewerten muss, kann er mehrere `metabase-object` Knoten angeben, wie im `convert-schema` Beispiel 4 der Beispiel-Konsolen Skriptdatei im Beispiel 4 veranschaulicht.  
   
-    **Attribut**  
+    **Versehen**  
   
     `object-name`: Geben Sie die Quelldatenbank/den Objektnamen an, der für die Konvertierung erforderlich ist. Stellen Sie sicher, `object-type` dass das entsprechende-Objekt basierend auf dem Objekttyp geändert wird, der im`object-name`  
   
@@ -105,7 +105,7 @@ Die folgenden Beispiel-Konsolen Skriptdateien, die verschiedene Szenarien abdeck
   
     2.  Wenn der Benutzer mehrere Objekte/Datenbanken bewerten muss, kann er mehrere `metabase-object` Knoten angeben, wie im `synchronize-target` Beispiel 3 der Beispiel Konsolen Skriptdatei des Befehls dargestellt.  
   
-    **Attribut**  
+    **Versehen**  
   
     `object-name:`Geben Sie den SQL Server-Datenbank-/Objektnamen an, der erstellt werden soll. Stellen Sie sicher, `object-type` dass das entsprechende-Objekt basierend auf dem Objekttyp geändert wird, der im`object-name`  
   
@@ -117,7 +117,7 @@ Die folgenden Beispiel-Konsolen Skriptdateien, die verschiedene Szenarien abdeck
   
     2.  Wenn der Benutzer mehrere Objekte/Datenbanken bewerten muss, kann er mehrere `metabase-object` Knoten angeben, wie in `migrate-data` Beispiel 2 der Beispiel-Konsolen Skriptdatei des Befehls veranschaulicht.  
   
-    **Attribut**  
+    **Versehen**  
   
     `object-name:`Gibt den Namen der Quelldatenbank/-Tabelle an, die für die Migration erforderlich ist. Stellen Sie sicher, `object-type` dass das entsprechende-Objekt basierend auf dem Objekttyp geändert wird, der im`object-name`  
   

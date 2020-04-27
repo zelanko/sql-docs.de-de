@@ -21,10 +21,10 @@ ms.assetid: 2b9e6278-050d-4ffc-8d1a-09606180facc
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9c409581771055e2c6d85d2cdd01937e2f033ba9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046379"
 ---
 # <a name="sysfn_cdc_has_column_changed-transact-sql"></a>sys.fn_cdc_has_column_changed (Transact-SQL)
@@ -49,12 +49,12 @@ sys.fn_cdc_has_column_changed ( 'capture_instance','column_name' , update_mask )
  Die aufgezeichnete Spalte der angegebenen Aufzeichnungsinstanz, für die ein Bericht erstellt werden soll. *column_name* ist vom **Datentyp vom Datentyp sysname**.  
   
  *update_mask*  
- Die Maske zur Identifizierung aktualisierter Spalten in einer zugeordneten Änderungszeile. *update_mask* ist vom Datentyp **varbinary (128)**.  
+ Die Maske zur Identifizierung aktualisierter Spalten in einer zugeordneten Änderungszeile. *update_mask* ist **varbinary(128)**  
   
 ## <a name="return-type"></a>Rückgabetyp  
  **bit**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Sie können diese Funktion zum Extrahieren von Informationen aus einer Updatemaske verwenden, die in einer Abfrage nach Änderungsdaten zurückgegeben wurde. Sie empfiehlt sich besonders dann, wenn Sie eine Updatemaske nachgelagert verarbeiten und wissen müssen, ob eine bestimmte Spalte in der zugeordneten Änderungszeile geändert wurde. Weitere Informationen finden Sie unter [Informationen zu Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md).  
   
  Wenn diese Informationen als Teil einer Änderungs Datenabfrage zurückgegeben werden, empfiehlt es sich, die Funktionen [sys. fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md) und [sys. fn_cdc_is_bit_set](../../relational-databases/system-functions/sys-fn-cdc-is-bit-set-transact-sql.md) anstelle dieser Funktion zu verwenden. Verwenden Sie die Funktion fn_cdc_get_column_ordinal vor dem Abfragen von Änderungs Daten, sodass die gewünschte Spalten Ordnungszahl nur einmal berechnet wird. Verwenden Sie fn_cdc_is_bit_set in der Abfrage, um die Informationen für jede zurückgegebene Zeile aus der Update Maske zu extrahieren.  
@@ -64,6 +64,6 @@ sys.fn_cdc_has_column_changed ( 'capture_instance','column_name' , update_mask )
   
 ## <a name="see-also"></a>Weitere Informationen  
  [CDC. &#60;capture_instance&#62;_CT &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md)   
- [CDC. captured_columns &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/cdc-captured-columns-transact-sql.md)  
+ [cdc.captured_columns &#40;Transact-SQL&#41;](../../relational-databases/system-tables/cdc-captured-columns-transact-sql.md)  
   
   

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aead5d8e5c85b67333f10bee4e73e2bb1a8633ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109365"
 ---
 # <a name="dataset-properties-dialog-box-query"></a>Dataseteigenschaften (Dialogfeld), Abfrage
@@ -31,7 +31,7 @@ ms.locfileid: "66109365"
   
 -   [Dataseteigenschaften (Dialogfeld), Optionen](../../2014/reporting-services/dataset-properties-dialog-box-options.md)  
   
--   [Dataseteigenschaften (Dialogfeld), Filter](report-data/dataset-properties-dialog-box-filters.md)  
+-   [Dataset Properties Dialog Box, Filters (Dataseteigenschaften (Dialogfeld), Filter)](report-data/dataset-properties-dialog-box-filters.md)  
   
 ## <a name="options"></a>Tastatur  
  **Name**  
@@ -41,7 +41,7 @@ ms.locfileid: "66109365"
  Wählen Sie eine Datenquelle als Basis für das Dataset aus. Klicken Sie auf **Neu**, um eine neue Datenquelle zu erstellen.  
   
  **Abfragetyp**  
- Wählen Sie den Typ von Befehl oder Abfrage aus, der für das Dataset verwendet werden soll. Wählen Sie **Text** aus, um eine Abfrage auszuführen und Daten von der Datenbank abzurufen. Wählen Sie **Tabelle** aus, um mit der **TableDirect** -Funktion von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alle Felder innerhalb einer Tabelle auszuwählen. Wählen Sie **Gespeicherte Prozedur** aus, um eine gespeicherte Prozedur nach Namen auszuführen. Standardmäßig ist **Text** ausgewählt, der für die meisten Abfragen verwendet wird. Um die ausgewählte Datenquellenabfrage zu bearbeiten, klicken Sie auf **Abfrage-Designer**.  
+ Wählen Sie den Typ von Befehl oder Abfrage aus, der für das Dataset verwendet werden soll. Wählen Sie **Text** aus, um eine Abfrage auszuführen und Daten von der Datenbank abzurufen. Wählen Sie **Tabelle** aus, um mit der **TableDirect** -Funktion von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] alle Felder innerhalb einer Tabelle auszuwählen. Wählen Sie **Gespeicherte Prozedur** aus, um eine gespeicherte Prozedur nach Namen auszuführen. Standardmäßig ist**Text** ausgewählt. Diese Einstellung wird für einen Großteil der Abfragen verwendet. Um die ausgewählte Datenquellenabfrage zu bearbeiten, klicken Sie auf **Abfrage-Designer**.  
   
 > [!NOTE]  
 >  Nicht alle Abfragetypen werden von allen Datenquellen unterstützt. Zum Beispiel wird **Tabelle** nur von den Datenquellentypen **OLE DB** und **ODBC**unterstützt.  
@@ -55,7 +55,7 @@ ms.locfileid: "66109365"
  **Tabellenname**  
  Geben Sie den Namen der Tabelle ein, die Sie als Dataset verwenden möchten. Diese Option wird angezeigt, wenn Sie **Tabelle**auswählen.  
   
- **Name der gespeicherten Prozedur auswählen oder eingeben**  
+ **Auswählen oder Eingeben des Namens einer gespeicherten Prozedur**  
  Geben Sie den Namen der zu verwendenden gespeicherten Prozedur ein, oder wählen Sie ihn aus. Klicken Sie auf die **Ausdrucks** Schaltfläche (*FX*), um den Ausdruck zu bearbeiten. Diese Option wird angezeigt, wenn Sie die Befehlstypoption Gespeicherte Prozedur auswählen.  
   
  **Timeout (in Sekunden)**  

@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 23c96ae889017eab71378b91eeb1a9ea1881fb25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103499"
 ---
 # <a name="rename-a-report-server-computer"></a>Umbenennen eines Berichtsservercomputers
-  Durch das Umbenennen eines Computers wird eine entsprechende Namensänderung für den Webserver und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz verursacht (falls sie auf demselben Computer installiert ist). In einigen Fällen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] kann nach einer Änderung des Computer namens nicht mehr auf Sie zugegriffen werden. Führen Sie die Schritte in diesem Thema aus, um einen Berichtsserver nach einer Änderung des Computernamens neu zu konfigurieren.  
+  Durch das Umbenennen eines Computers wird eine entsprechende Namensänderung für den Webserver und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz verursacht (falls sie auf demselben Computer installiert ist). In einigen Fällen kann nach einer Computernamensänderung möglicherweise nicht mehr auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] zugegriffen werden. Führen Sie die Schritte in diesem Thema aus, um einen Berichtsserver nach einer Änderung des Computernamens neu zu konfigurieren.  
   
 ## <a name="renaming-a-sql-server-database-engine"></a>Umbenennen einer SQL Server-Datenbank-Engine  
  Führen Sie die folgenden Aktionen aus, wenn Sie die [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz umbenannt haben, in der die Berichtsserver-Datenbank ausgeführt wird:  
@@ -48,8 +48,8 @@ ms.locfileid: "66103499"
 ## <a name="see-also"></a>Weitere Informationen  
  [RSReportServer-Konfigurationsdatei](rsreportserver-config-configuration-file.md)   
  [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
- [Reporting Services Berichts Server &#40;einheitlicher Modus&#41;](reporting-services-report-server-native-mode.md)   
+ [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](reporting-services-report-server-native-mode.md)   
  [Starten und Beenden des Berichtsserverdiensts](start-and-stop-the-report-server-service.md)   
- [rsconfig-Hilfsprogramm &#40;SSRS-&#41;](../tools/rsconfig-utility-ssrs.md)  
+ [rsconfig-Hilfsprogramm (SSRS)](../tools/rsconfig-utility-ssrs.md)  
   
   

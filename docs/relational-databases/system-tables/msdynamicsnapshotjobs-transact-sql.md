@@ -18,10 +18,10 @@ ms.assetid: 4f36a325-0e3c-46c4-aeeb-416346cce0bc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f8822b0e7c56fe109a251365050f5aed9cdef178
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907359"
 ---
 # <a name="msdynamicsnapshotjobs-transact-sql"></a>MSdynamicsnapshotjobs (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67907359"
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**Name**|**int**|Die ID des gefilterten Datenmomentaufnahmeauftrags.|  
+|**id**|**int**|Die ID des gefilterten Datenmomentaufnahmeauftrags.|  
 |**name**|**sysname**|Der Name des gefilterten Datenmomentaufnahmeauftrags.|  
 |**pubid**|**uniqueidentifier**|Die eindeutige ID für diese Veröffentlichung.|  
 |**job_id**|**uniqueidentifier**|Die ID des Auftrags des SQL Server-Agents auf dem Verteiler.|  

@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e58ab5cbee4b039206eec713fe964169c4aecee1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108324"
 ---
 # <a name="map-embedded-point-properties-dialog-box-marker"></a>Eigenschaften für eingebettete Punkte der Karte (Dialogfeld), Marker
@@ -29,9 +29,9 @@ ms.locfileid: "66108324"
   
  Weitere Informationen finden Sie unter [Ändern der Kartenlegenden, Farbskala und zugeordneten Regeln &#40;Berichts-Generator und SSRS&#41;](report-design/change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Markertyp**  
- Geben Sie den Markertyp an. Der Standardwert lautet `Circle`.  
+ Geben Sie den Markertyp an. Der Standardwert ist `Circle`.  
   
  **Markergröße**  
  Geben Sie die Markergröße an. Der Standardwert ist 10pt.  

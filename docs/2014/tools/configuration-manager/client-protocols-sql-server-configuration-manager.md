@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4f51cd7f77d938f806934ffd48ef9c1af9d6e478
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63065558"
 ---
 # <a name="client-protocols-sql-server-configuration-manager"></a>Clientprotokolle (SQL Server-Konfigurations-Manager)
-  Um die Reihenfolge zu konfigurieren, mit der Protokolle von den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clients auf diesem Computer verwendet werden, klicken Sie im Konsolenbereich mit der rechten Maustaste auf **Clientprotokolle** , und klicken Sie dann auf **Eigenschaften**. Sie können auch mit der rechten Maustaste im Detailbereich auf ein Protokoll klicken und dann auf **Reihenfolge**klicken.  
+  Klicken Sie zum Konfigurieren der Reihenfolge, mit der Protokolle von den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Clients auf diesem Computer verwendet werden, im Konsolenbereich mit der rechten Maustaste auf **ClientProtocols**, und klicken Sie dann auf **Eigenschaften**. Sie können auch mit der rechten Maustaste im Detailbereich auf ein Protokoll und dann auf **Reihenfolge** klicken.  
   
  Um die Eigenschaften der von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clients auf diesem Computer verwendeten Clientprotokolle zu konfigurieren, klicken Sie im Konsolenbereich auf **Clientprotokolle**, klicken Sie im Detailbereich mit der rechten Maustaste auf das gewünschte Protokoll, und klicken Sie dann auf **Eigenschaften**.  
   

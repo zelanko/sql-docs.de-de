@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: ee926e04dc5b845be152e96150c99cb17182a7c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68042108"
 ---
 # <a name="rangemid-dmx"></a>RangeMid (DMX)
@@ -33,7 +33,7 @@ RangeMid(<scalar column reference>)
 ## <a name="return-type"></a>Rückgabetyp  
  Ein Skalarwert.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Bei Verwendung mit [Select from &#60;Model&#62; Vorhersage Join &#40;DMX-&#41;](../dmx/select-from-model-prediction-join-dmx.md)werden die tatsächlichen Begrenzungs Werte des angegebenen Bucket von der **RangeMin**-, **RangeMid**-und **RangeMax** -Funktion zurückgegeben. Wenn Sie z. B. eine Vorhersage für eine diskretisierte Spalte ausführen, gibt die Abfrage die vorhergesagte Bucketnummer in der diskretisierten Spalte zurück. Die **RangeMin**-, **RangeMid**-und **RangeMax** -Funktionen beschreiben den Bucket, der in der Vorhersage angegeben wird. Wenn die **RangeMid** -Funktion mit einer Vorhersage JOIN-Anweisung verwendet wird, kann der Verweis auf eine skalare Spalte nur diskrete, vorhersagbare Spalten enthalten.  
   
 ## <a name="examples"></a>Beispiele  

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 637d4e648d4d2b5c64d4635af8f96d0f2258b2f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479936"
 ---
 # <a name="create-a-model-master-data-services"></a>Erstellen eines Modells (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "65479936"
 ## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
--   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
+-   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **System Verwaltung** zuzugreifen.  
   
 ### <a name="to-create-a-model"></a>So erstellen Sie ein Modul  
   
@@ -48,7 +48,7 @@ ms.locfileid: "65479936"
   
 ## <a name="next-steps"></a>Nächste Schritte  
   
--   [Erstellen Sie eine Entität &#40;Master Data Services&#41;](create-an-entity-master-data-services.md)  
+-   [Erstellen einer Entität &#40;Master Data Services&#41;](create-an-entity-master-data-services.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Modelle &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)   

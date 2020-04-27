@@ -21,10 +21,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 17739424bd8963e5b84bf430f84027829366c940
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104620"
 ---
 # <a name="vary-polygon-line-and-point-display-by-rules-and-analytical-data-report-builder-and-ssrs"></a>Unterschiedliche Polygon-, Linien- und Punktanzeigen bei der Verwendung von Regeln und analytischen Daten (Berichts-Generator und SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "66104620"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="Rules"></a> Grundlegendes zu Regeln  
+##  <a name="understanding-rules"></a><a name="Rules"></a> Grundlegendes zu Regeln  
  Sie können vier Typen von Regeln festlegen, mit denen der Berichtsprozessor Anzeigeeigenschaften für Kartenelemente in einer Ebene automatisch anpassen kann. Regeln hängen vom Kartenelementtyp ab: Polygone, Linien oder Punkte.  
   
 -   **Polygone.** Verändern Sie Polygonfarbe.  
@@ -54,7 +54,7 @@ ms.locfileid: "66104620"
   
 -   **Punkte.** Verändern Sie Markerfarbe, Markergröße und Markertyp für Marker, die für die einzelnen Punkt angezeigt werden.  
   
-##  <a name="Color"></a> Grundlegendes zu Farbregeln  
+##  <a name="understanding-color-rules"></a><a name="Color"></a> Grundlegendes zu Farbregeln  
  Farbregeln werden auf Füllfarben für Polygone, Linien und Marker angewendet, die Punkte oder Polygonmittelpunkte darstellen.  
   
  Farbregeln unterstützen vier Optionen:  
@@ -76,28 +76,28 @@ ms.locfileid: "66104620"
   
  Um die Werte zu entfernen, die nicht in der Farbskala enthalten sein sollen, deaktivieren Sie die Farbskalaoption für jede Farbregel auf jeder Ebene.  
   
-##  <a name="Width"></a> Grundlegendes zu Linienstärkenregeln  
+##  <a name="understanding-line-width-rules"></a><a name="Width"></a> Grundlegendes zu Linienstärkenregeln  
  Regeln für die Linienstärke gelten für Linien. Regeln für die Linienstärke unterstützen zwei Optionen:  
   
 -   Standardlinienstärke verwenden. Sie geben die Linienstärke in Punkt an.  
   
 -   Daten mithilfe der Linienstärke anzeigen. Sie legen die minimale und maximale Stärke für die Linie fest, geben das Datenfeld an, das verwendet werden soll, um die Stärke zu verändern, und geben dann die Verteilungsoptionen an, die auf diese Daten angewendet werden sollen.  
   
-##  <a name="Size"></a> Grundlegendes zu Markergrößenregeln  
+##  <a name="understanding-marker-size-rules"></a><a name="Size"></a> Grundlegendes zu Markergrößenregeln  
  Größenregeln gelten für Marker, die Punkte oder Polygonmittelpunkte darstellen. Größenregeln unterstützen zwei Optionen:  
   
 -   Standardmarkergröße verwenden. Sie geben die Größe in Punkt an.  
   
 -   Daten mithilfe der Größe anzeigen. Sie legen die minimale und maximale Größe für den Marker fest, geben das Datenfeld an, das verwendet werden soll, um die Größe zu verändern, und geben dann die Verteilungsoptionen an, die auf diese Daten angewendet werden sollen.  
   
-##  <a name="Marker"></a> Grundlegendes zu Markertypregeln  
+##  <a name="understanding-marker-type-rules"></a><a name="Marker"></a> Grundlegendes zu Markertypregeln  
  Markertypregeln gelten für Marker, die Punkte oder Polygonmittelpunkte darstellen. Markertypregeln unterstützen zwei Optionen:  
   
 -   Standardmarkertyp verwenden. Sie geben einen der verfügbaren Markertypen an.  
   
 -   Daten mithilfe von Markern anzeigen. Sie geben einen Satz von Markern und die Reihenfolge an, in der sie verwendet werden sollen. Markertypen sind: `Circle` (Kreis), `Diamond` (Raute), `Pentagon` (Fünfeck), `PushPin` (Ortsmarke), `Rectangle` (Rechteck), `Star` (Stern), `Triangle` (Dreieck), `Trapezoid` (Trapezoid) und `Wedge` (Sektor).  
   
-##  <a name="Distribution"></a> Grundlegendes zu Verteilungsoptionen  
+##  <a name="understanding-distribution-options"></a><a name="Distribution"></a> Grundlegendes zu Verteilungsoptionen  
  Um eine Verteilung von Werten zu erstellen, können Sie die Daten in Bereiche unterteilen. Sie geben den Verteilungstyp, die Anzahl der Unterbereiche sowie den minimalen und den maximalen Bereichswert an.  
   
  Nehmen Sie in der folgenden Liste an, dass Sie über drei Kartenelement und sechs verwandte analytische Werte verfügen, die zwischen 1 und 9999 liegen, und zwar: 1, 10, 200, 2000, 4777, 8999.  
@@ -112,7 +112,7 @@ ms.locfileid: "66104620"
   
  Die Verteilungswerte werden von den Regeln verwendet, um unterschiedliche Kartenelementanzeigewerte zu verwenden.  
   
-##  <a name="Legends"></a> Grundlegendes zu Legenden und Legendenelementen  
+##  <a name="understanding-legends-and-legend-items"></a><a name="Legends"></a> Grundlegendes zu Legenden und Legendenelementen  
  Legendenelemente werden automatisch aus Regeln erstellt, die Sie für jede Ebene angeben. Mit Regeloptionen wird gesteuert, wie viele Elemente erstellt werden und in welcher Legende sie angezeigt werden. Standardmäßig werden der ersten Legende alle Elemente für alle Regeln hinzugefügt. Um Elemente aus der ersten Legende zu verschieben, erstellen Sie so viele weitere Legenden, wie Sie benötigen, und geben Sie für jede Regel die Legende an, die verwendet werden soll, um die Elemente anzuzeigen, die sich aus der Regel ergeben. Um Elemente auf Grundlage einer Regel auszublenden, geben Sie einen leeren Legendennamen an.  
   
  Um zu steuern, wo eine Legende angezeigt wird, verwenden Sie das Dialogfeld "Legendeneigenschaften", um eine Position relativ zum Kartenviewport anzugeben. Weitere Informationen finden Sie unter [Ändern der Kartenlegenden, Farbskala und zugeordneten Regeln &#40;Berichts-Generator und SSRS&#41;](change-map-legends-color-scale-and-associated-rules-report-builder-and-ssrs.md).  

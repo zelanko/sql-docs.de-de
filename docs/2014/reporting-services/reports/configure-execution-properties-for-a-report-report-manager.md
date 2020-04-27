@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f3de8f9e708149669a65b8abf4114227392aa15a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102711"
 ---
 # <a name="configure-execution-properties-for-a-report--report-manager"></a>Konfigurieren von Ausführungseigenschaften für einen Bericht (Berichts-Manager)
@@ -47,10 +47,10 @@ ms.locfileid: "66102711"
 3.  Klicken Sie auf **Anwenden**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Festlegen von Berichtsverarbeitungseigenschaften](../report-server/set-report-processing-properties.md)   
+ [Festlegen von Berichts Verarbeitungseigenschaften](../report-server/set-report-processing-properties.md)   
  [Öffnen und schließen Sie einen Bericht &#40;Berichts-Manager&#41;](../reports/open-and-close-a-report-report-manager.md)   
- [Die Inhaltsseite &#40;Berichts-Manager&#41;](../contents-page-report-manager.md)   
+ [Inhalt &#40;Seite, Berichts-Manager&#41;](../contents-page-report-manager.md)   
  [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)   
- [Die Eigenschaften Seite "Verarbeitungsoptionen" &#40;Berichts-Manager&#41;](../processing-options-properties-page-report-manager.md)  
+ [Verarbeitungsoptionen (Eigenschaftenseite) (Berichts-Manager)](../processing-options-properties-page-report-manager.md)  
   
   

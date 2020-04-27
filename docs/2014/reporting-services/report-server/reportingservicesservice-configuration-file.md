@@ -15,16 +15,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9fb4893304a17be264a0d5bdcb8add2732c7c271
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103281"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>ReportingServicesService-Konfigurationsdatei
   Die Datei ReportingServicesService.exe.config enthält Einstellungen zum Konfigurieren der Ablaufverfolgung.  
   
-## <a name="file-location"></a>Dateispeicherort  
+## <a name="file-location"></a>Speicherort  
  Diese Datei ist im Ordner \Reporting Services\Report Server\Bin gespeichert.  
   
 ## <a name="editing-guidelines"></a>Bearbeitungsrichtlinien  
@@ -75,14 +75,14 @@ ms.locfileid: "66103281"
 |-------------|-----------------|  
 |**RStrace**|Gibt Namespaces an, die für Fehler und für die Ablaufverfolgung verwendet werden.|  
 |**DefaultTraceSwitch**|Gibt die Ebene der Informationen an, die im Ablaufverfolgungsprotokoll ReportServerService aufgezeichnet werden. Jede Ebene enthält jeweils die Informationen aller niedrigerer Ebenen. Das Deaktivieren der Ablaufverfolgung wird nicht empfohlen. Gültige Werte:<br /><br /> 0= Deaktiviert die Ablaufverfolgung<br /><br /> 1= Ausnahmen und Neustarts<br /><br /> 2= Ausnahmen, Neustarts, Warnungen<br /><br /> 3= Ausnahmen, Neustarts, Warnungen, Statusmeldungen (Standard)<br /><br /> 4= Ausführlicher Modus|  
-|**Einfügen**|Gibt den ersten Teil des Protokolldateinamens an. Der Wert von `Prefix` ergänzt den restlichen Namen. Standardmäßig lautet der Name ReportServerService_.|  
-|**FileSizeLimitMb**|Gibt eine Obergrenze für die Größe des Ablaufverfolgungsprotokolls an. Die Datei wird in Megabytes gemessen. Gültige Werte sind 0 bis zu einer maximalen ganzen Zahl. Der Standardwert lautet %%amp;quot;32%%amp;quot;.|  
+|**FileName**|Gibt den ersten Teil des Protokolldateinamens an. Der Wert von `Prefix` ergänzt den restlichen Namen. Standardmäßig lautet der Name ReportServerService_.|  
+|**FileSizeLimitMb**|Gibt eine Obergrenze für die Größe des Ablaufverfolgungsprotokolls an. Die Datei wird in Megabytes gemessen. Gültige Werte sind 0 bis zu einer maximalen ganzen Zahl. Der Standardwert ist 32.|  
 |**KeepFilesForDays**|Gibt die Anzahl von Tagen an, nach der eine Ablaufverfolgungs-Protokolldatei gelöscht wird. Gültige Werte sind 0 bis zu einer maximalen ganzen Zahl. Der Standardwert ist 14.|  
 |`Prefix`|Gibt einen generierten Wert an, der die Protokollinstanzen voneinander unterscheidet. Standardmäßig werden Timestampwerte an die Dateinamen von Ablaufverfolgungsprotokollen angehängt. Dieser Wert wird auf "tid, time " festgelegt. Ändern Sie diese Einstellung nicht.|  
 |**TraceListeners**|Gibt die Zieladresse für die Ausgabe des Inhalts von Ablaufverfolgungsprotokollen an. Sie können mehrere durch Trennzeichen getrennte Ziele angeben. Gültige Werte:<br /><br /> DebugWindow (Standard)<br /><br /> File (Standard)<br /><br /> StdOut|  
-|**Tracefilemode**|Gibt an, ob Ablaufverfolgungsprotokolle Daten für einen Zeitraum von 24 Stunden enthalten. Für jede Komponente sollte pro Tag ein eindeutiges Ablaufverfolgungsprotokoll erstellt werden. Dieser Wert wird auf "Unique (Standard)" festgelegt. Ändern Sie diesen Wert nicht.|  
-|**Komponenten**|Gibt die Komponenten an, für die Ablaufverfolgungsprotokolle erstellt werden. Standardwert: `all`. Ebenfalls gültige Werte für diese Einstellung sind die Namen interner Komponenten. Ändern Sie diesen Wert nicht.|  
-|**Runtime**|Gibt Konfigurationseinstellungen an, die die Abwärtskompatibilität mit der früheren Version unterstützen. Mit den Runtime-Einstellungen werden Anforderungen, die an die frühere Version von Microsoft.ReportingServices.Interfaces gerichtet sind, an die neue Version umgeleitet.<br /><br /> Alle Konfigurationseinstellungen in diesem Abschnitt sind in der Produktdokumentation zu [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] beschrieben. Weitere Informationen finden Sie, indem Sie auf der MSDN-Website oder in der Dokumentation von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] nach Informationen zum Schema für Laufzeiteinstellungen ("Runtime Schema Settings") suchen.|  
+|**TraceFileMode**|Gibt an, ob Ablaufverfolgungsprotokolle Daten für einen Zeitraum von 24 Stunden enthalten. Für jede Komponente sollte pro Tag ein eindeutiges Ablaufverfolgungsprotokoll erstellt werden. Dieser Wert wird auf "Unique (Standard)" festgelegt. Ändern Sie diesen Wert nicht.|  
+|**Komponenten**|Gibt die Komponenten an, für die Ablaufverfolgungsprotokolle erstellt werden. Der Standardwert ist `all`. Ebenfalls gültige Werte für diese Einstellung sind die Namen interner Komponenten. Ändern Sie diesen Wert nicht.|  
+|**Laufzeit**|Gibt Konfigurationseinstellungen an, die die Abwärtskompatibilität mit der früheren Version unterstützen. Mit den Runtime-Einstellungen werden Anforderungen, die an die frühere Version von Microsoft.ReportingServices.Interfaces gerichtet sind, an die neue Version umgeleitet.<br /><br /> Alle Konfigurationseinstellungen in diesem Abschnitt sind in der Produktdokumentation zu [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] beschrieben. Weitere Informationen finden Sie, indem Sie auf der MSDN-Website oder in der Dokumentation von [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] nach Informationen zum Schema für Laufzeiteinstellungen ("Runtime Schema Settings") suchen.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services-Konfigurationsdateien](reporting-services-configuration-files.md)   

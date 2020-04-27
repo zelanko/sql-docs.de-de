@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bdd616e6eb59a7db1c22b7007e04db91a288a20a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482975"
 ---
 # <a name="associate-a-master-data-services-database-and-web-application"></a>Zuordnen einer Master Data Services-Datenbank und -Webanwendung
@@ -22,8 +22,7 @@ ms.locfileid: "65482975"
   
 ## <a name="prerequisites"></a>Voraussetzungen  
   
--   
-  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] muss auf dem lokalen Computer installiert sein. Weitere Informationen finden Sie unter [Installieren von Master Data Services](install-master-data-services.md).  
+-   [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] muss auf dem lokalen Computer installiert sein. Weitere Informationen finden Sie unter [Installieren von Master Data Services](install-master-data-services.md).  
   
 -   Eine lokale [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung muss vorhanden sein. Weitere Informationen finden Sie unter [Erstellen einer Master Data Manager-Webanwendung &#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md).  
   
@@ -55,6 +54,6 @@ ms.locfileid: "65482975"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Installieren von Master Data Services](install-master-data-services.md)   
- [Die Webkonfigurations Seite &#40;Konfigurations-Manager für Master Data Services&#41;](../web-configuration-page-master-data-services-configuration-manager.md)  
+ [Webkonfiguration &#40;Seite im Konfigurations-Manager für Master Data Sevices&#41;](../web-configuration-page-master-data-services-configuration-manager.md)  
   
   

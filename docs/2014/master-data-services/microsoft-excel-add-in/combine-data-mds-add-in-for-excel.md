@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 67bdfd9b3a8377b05448b73bd41addd4796a9538
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478995"
 ---
 # <a name="combine-data-mds-add-in-for-excel"></a>Kombinieren von Daten (MDS-Add-In für Excel)
@@ -48,6 +48,6 @@ ms.locfileid: "65478995"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Daten &#40;MDS-Add-in für Excel werden geladen&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
- [Data Quality-Abgleich im MDS-Add-in für Excel](data-quality-matching-in-the-mds-add-in-for-excel.md)  
+ [Data Quality-Abgleich im MDS-Add-In für Excel](data-quality-matching-in-the-mds-add-in-for-excel.md)  
   
   

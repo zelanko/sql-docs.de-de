@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ebc5ee51dd32cb999f0e6551bb87c36eda8865c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109226"
 ---
 # <a name="enable-and-disable-rdl-sandboxing"></a>Aktivieren und Deaktivieren von RDL-Sandkasten
@@ -61,16 +61,16 @@ ms.locfileid: "66109226"
   
 |Einstellung|BESCHREIBUNG|  
 |-------------|-----------------|  
-|**Maxexpressionlength**|Maximale Anzahl von Zeichen, die in RDL-Ausdrücken zugelassen sind.<br /><br /> Standard: 1000|  
-|**Maxresourcesize**|Maximale Anzahl von KB, die für eine externe Ressource zugelassen sind.<br /><br /> Standard: 100|  
-|**Maxstrauingresultlength**|Maximale Anzahl von Zeichen, die für einen Rückgabewert für einen RDL-Ausdruck zugelassen sind.<br /><br /> Standard: 1000|  
-|**Maxarrayresultlength**|Maximale Anzahl von Elementen, die für einen Rückgabewert vom Typ "Array" für einen RDL-Ausdruck zugelassen sind.<br /><br /> Standard: 100|  
-|**Solche**|Die Liste der Elemente, die innerhalb von RDL-Ausdrücken zugelassen sind.|  
-|**Ließen**|Ein Typ oder ein Satz von Typen, die in RDL-Ausdrücken zugelassen sind.|  
+|**MaxExpressionLength**|Maximale Anzahl von Zeichen, die in RDL-Ausdrücken zugelassen sind.<br /><br /> Standard: 1000|  
+|**MaxResourceSize**|Maximale Anzahl von KB, die für eine externe Ressource zugelassen sind.<br /><br /> Standard: 100|  
+|**MaxStringResultLength**|Maximale Anzahl von Zeichen, die für einen Rückgabewert für einen RDL-Ausdruck zugelassen sind.<br /><br /> Standard: 1000|  
+|**MaxArrayResultLength**|Maximale Anzahl von Elementen, die für einen Rückgabewert vom Typ "Array" für einen RDL-Ausdruck zugelassen sind.<br /><br /> Standard: 100|  
+|**Typen**|Die Liste der Elemente, die innerhalb von RDL-Ausdrücken zugelassen sind.|  
+|**Allow**|Ein Typ oder ein Satz von Typen, die in RDL-Ausdrücken zugelassen sind.|  
 |**Namespace**|Attribut für **Erlauben** , das den Namespace darstellt, der mindestens einen gültigen Typ für Value enthält. Bei dieser Eigenschaft wird die Groß-/Kleinschreibung nicht beachtet.|  
 |`AllowNew`|Ein boolesches Attribut für **Allow**, mit dem gesteuert wird, ob neue Instanzen des Typs in RDL-Ausdrücken oder einem RDL-**\<Class>**-Element erstellt werden dürfen.<br /><br /> Hinweis: Wenn `RDLSandboxing` aktiviert ist, können in RDL-Ausdrücken keine neuen Arrays erstellt werden, unabhängig von der `AllowNew`Einstellung von.|  
 |**Wert**|Wert für **Allow** , der den Namen des in RDL-Ausdrücken zuzulassenden Typs angibt. Der Wert **\*** gibt an, dass alle Typen im-Namespace zulässig sind. Bei dieser Eigenschaft wird die Groß-/Kleinschreibung nicht beachtet.|  
-|**Mitglieder**|Die Liste der Typen, die in den ** \<Typen>** -Elements enthalten sind, ist die Liste der Elementnamen, die in RDL-Ausdrücken nicht zulässig sind.|  
+|**Members**|Die Liste der Typen, die in den ** \<Typen>** -Elements enthalten sind, ist die Liste der Elementnamen, die in RDL-Ausdrücken nicht zulässig sind.|  
 |**Deny**|Der Name eines Elements, das nicht in RDL-Ausdrücken zugelassen wird. Bei dieser Eigenschaft wird die Groß-/Kleinschreibung nicht beachtet.<br /><br /> Hinweis: Wenn **Deny** für ein Element angegeben wird, werden alle Elemente mit diesem Namen für alle Typen nicht zugelassen.|  
   
 ## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>Arbeiten mit Ausdrücken bei aktiviertem RDL-Sandboxing  

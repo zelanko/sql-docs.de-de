@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3e34f0a34030dab62a876a41043dc4c4f4c86f0c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106304"
 ---
 # <a name="change-the-text-of-a-legend-item-report-builder-and-ssrs"></a>Ändern des Texts eines Legendenelements (Berichts-Generator und SSRS)
@@ -56,6 +56,6 @@ ms.locfileid: "66106304"
 ## <a name="see-also"></a>Weitere Informationen  
  [Formatieren der Legende in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](chart-legend-formatting-report-builder.md)   
  [Formatieren von Reihenfarben in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
- [Ausblenden von Legenden Elementen im Diagramm &#40;Berichts-Generator und SSRS&#41;](chart-legend-hide-items-report-builder.md)  
+ [Ausblenden von Legendenelementen im Diagramm (Berichts-Generator und SSRS)](chart-legend-hide-items-report-builder.md)  
   
   

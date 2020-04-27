@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9106ff624c9a8e50bd292166690fc220eaea527e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108569"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Überprüfen einer Installation von Reporting Services
@@ -34,7 +34,7 @@ ms.locfileid: "66108569"
   
 -   [Überprüfen einer Installation im einheitlichen Modus](#bkmk_nativemode)  
   
-##  <a name="bkmk_sharepointmode"></a>Installation im SharePoint-Modus überprüfen  
+##  <a name="verify-sharepoint-mode-installation"></a><a name="bkmk_sharepointmode"></a> Überprüfen der SharePoint-Modus-Installation  
   
 #### <a name="to-verify-the-reporting-services-service"></a>So überprüfen Sie Reporting Services  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66108569"
   
 2.  Laden Sie die Adventure Works-Beispieldatenbank und die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Beispielberichte von CodePlex herunter. Weitere Informationen finden Sie unter [AdventureWorks-Beispielberichte](https://msftrsprodsamples.codeplex.com/wikipage?title=SS2012!AdventureWorks2012%20Report%20Samples&referringTitle=Home).  
   
-##  <a name="bkmk_nativemode"></a>Überprüfen einer Installation im einheitlichen Modus  
+##  <a name="verify-a-native-mode-installation"></a><a name="bkmk_nativemode"></a> Überprüfen einer Installation im einheitlichen Modus  
  Wenn Sie einen Berichtsserver im einheitlichen Modus anhand der Standardkonfiguration installieren, wird der Server durch das Setup installiert und bereitgestellt. Um festzustellen, ob der Berichtsserver durch das Setup bereitgestellt wurde, führen Sie einige wenige einfache Tests aus. Um diese Schritte ausführen zu können, müssen Sie ein lokaler Administrator sein. Um weitere Benutzer für das Ausführen der Tests zu aktivieren, konfigurieren Sie für diese Benutzer den Berichtsserverzugriff.  
   
 #### <a name="to-verify-that-the-report-server-is-installed-and-running"></a>So überprüfen Sie, ob der Berichtsserver installiert ist und ausgeführt wird  

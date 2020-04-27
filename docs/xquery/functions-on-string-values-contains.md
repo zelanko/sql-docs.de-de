@@ -16,10 +16,10 @@ ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 54b3603c18d814276d700a220fbee5e16ed77502
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899030"
 ---
 # <a name="functions-on-string-values---contains"></a>Funktionen für Zeichenfolgenwerte – contains
@@ -41,15 +41,14 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
  *$Arg 2*  
  Abzurufende Unterzeichenfolge.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn der Wert von *$Arg 2* eine Zeichenfolge der Länge 0 (null) ist, gibt die Funktion **true**zurück. Wenn der Wert von *$arg 1* eine Zeichenfolge der Länge 0 (null) ist und der Wert von *$Arg 2* keine Zeichenfolge der Länge 0 (null) ist, gibt die Funktion **false**zurück.  
   
  Wenn der Wert *$arg 1* oder *$Arg 2* die leere Sequenz ist, wird das Argument als Zeichenfolge der Länge 0 (null) behandelt.  
   
  Die contains()-Funktion verwendet die Unicode-Codepunkt-Standardsortierung von XQuery für den Zeichenfolgenvergleich.  
   
- Der für *$Arg 2* angegebene Teil Zeichenfolgen-Wert muss kleiner oder gleich 4000 Zeichen sein. Wenn der angegebene Wert größer als 4000 Zeichen ist, tritt eine dynamische Fehlerbedingung auf, und die enthält ()-Funktion gibt eine leere Sequenz anstelle eines booleschen Werts von **true** oder **false**zurück. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] löst keine dynamischen Fehler bei XQuery-Ausdrücken aus.  
+ Der für *$Arg 2* angegebene Teil Zeichenfolgen-Wert muss kleiner oder gleich 4000 Zeichen sein. Wenn der angegebene Wert größer als 4000 Zeichen ist, tritt eine dynamische Fehlerbedingung auf, und die enthält ()-Funktion gibt eine leere Sequenz anstelle eines booleschen Werts von **true** oder **false**zurück. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] löst keine dynamischen Fehler bei XQuery-Ausdrücken aus.  
   
  Um Vergleiche ohne Berücksichtigung der Groß-/Kleinschreibung zu erhalten, können die groß [-](../xquery/functions-on-string-values-upper-case.md) oder Kleinbuchstaben verwendet werden.  
   

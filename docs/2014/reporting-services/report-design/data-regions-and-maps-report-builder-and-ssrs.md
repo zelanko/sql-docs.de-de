@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f0b9722ad68107c626f0b4e569ac6e7cbf8c3bf8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106089"
 ---
 # <a name="data-regions-and-maps-report-builder-and-ssrs"></a>Datenbereiche und Karten (Berichts-Generator und SSRS)
-  Ein Datenbereich ist ein Objekt in einem Bericht, der Daten aus einem Berichtsdataset anzeigt. Berichtsdaten können als Zahlen und Text in einer Tabelle, Matrix oder Liste, grafisch in einem Diagramm oder einem Messgerät und vor einem geografischen Hintergrund in einer Karte angezeigt werden. Tabellen, Matrizen und Listen basieren auf dem *Tablix-* -Datenbereich, der bei Bedarf erweitert wird, um alle Daten aus dem Dataset anzuzeigen. Ein Tablix-Datenbereich unterstützt mehrere Zeilen- und Spaltengruppen mit statischen und dynamischen Zeilen und Spalten. In einem Diagramm werden mehrere Reihen und Kategoriegruppen in einer Vielzahl von Diagrammformaten angezeigt. In einem Messgerät wird ein einzelner Wert oder ein aggregierter Wert für ein Dataset angezeigt. In einer Karte werden räumliche Daten in Form von Kartenelementen angezeigt, deren Darstellung abhängig von den aggregierten Daten aus einem Dataset variieren kann.  
+  Ein Datenbereich ist ein Objekt in einem Bericht, der Daten aus einem Berichtsdataset anzeigt. Berichtsdaten können als Zahlen und Text in einer Tabelle, Matrix oder Liste, grafisch in einem Diagramm oder einem Messgerät und vor einem geografischen Hintergrund in einer Karte angezeigt werden. Tabellen, Matrizen und Listen basieren auf dem *Tablix* -Datenbereich, der bei Bedarf erweitert wird, um alle Daten aus dem Dataset anzuzeigen. Ein Tablix-Datenbereich unterstützt mehrere Zeilen- und Spaltengruppen mit statischen und dynamischen Zeilen und Spalten. In einem Diagramm werden mehrere Reihen und Kategoriegruppen in einer Vielzahl von Diagrammformaten angezeigt. In einem Messgerät wird ein einzelner Wert oder ein aggregierter Wert für ein Dataset angezeigt. In einer Karte werden räumliche Daten in Form von Kartenelementen angezeigt, deren Darstellung abhängig von den aggregierten Daten aus einem Dataset variieren kann.  
   
  Sie können einen Datenbereich oder eine Karte als Berichtsteil speichern. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66106089"
  Sie können Datenbereiche ineinander schachteln. Möchten Sie beispielsweise für jeden Vertriebsmitarbeiter in einer Datenbank einen Umsatzdatensatz erstellen, können Sie eine Liste mit Textfeldern und einem Bild zur Anzeige von Informationen zu dem Mitarbeiter erstellen. Anschließend fügen Sie der Liste Tabellen- und Diagrammdatenbereiche hinzu, um den Umsatzdatensatz des Mitarbeiters darzustellen. Weitere Informationen finden Sie unter [Geschachtelte Datenbereiche &#40;Berichts-Generator und SSRS&#41;](nested-data-regions-report-builder-and-ssrs.md).  
   
 ## <a name="multiple-data-regions-linked-to-the-same-dataset"></a>Mehrere mit dem gleichen Dataset verknüpfte Datenbereiche  
- Sie können mehr als einen Datenbereich mit dem gleichen Dataset verknüpfen, um andere Sichten der gleichen Daten bereitzustellen. Zum Beispiel können Sie die gleichen Daten in einer Tabelle und einem Diagramm anzeigen. Sie können den Bericht mit interaktiven Sortierungsschaltflächen in der Tabelle erstellen. Wenn Sie die Tabelle sortieren, wird das Diagramm auf diese Weise ebenfalls automatisch sortiert. Weitere Informationen finden Sie unter [Verknüpfen mehrerer Datenbereiche mit dem gleichen Dataset &#40;Berichts-Generator und SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
+ Sie können mehr als einen Datenbereich mit dem gleichen Dataset verknüpfen, um andere Sichten der gleichen Daten bereitzustellen. Zum Beispiel können Sie die gleichen Daten in einer Tabelle und einem Diagramm anzeigen. Sie können den Bericht mit interaktiven Sortierungsschaltflächen in der Tabelle erstellen. Wenn Sie die Tabelle sortieren, wird das Diagramm auf diese Weise ebenfalls automatisch sortiert. Weitere Informationen finden Sie unter [Verknüpfen mehrerer Datenbereiche mit einem Dataset &#40;Berichts-Generator und SSRS&#41;](linking-multiple-data-regions-to-the-same-dataset-report-builder-and-ssrs.md).  
   
 ## <a name="data-for-a-data-region"></a>Daten für einen Datenbereich  
  Jedes Tablix, Diagramm und Messgerät ist so ausgelegt, dass Daten von einem einzelnen Dataset angezeigt werden. In einer Karten werden räumliche Daten und analytische Daten aus demselben Dataset oder aus unterschiedlichen Datasets angezeigt. Sie können auch Werte aus Datasets einschließen, die nicht mit dem Datenbereich verknüpft sind, indem Sie folgendermaßen vorgehen:  
@@ -65,8 +65,8 @@ ms.locfileid: "66106089"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konzepte der Berichterstellung &#40;Berichts-Generator und SSRS&#41;](report-authoring-concepts-report-builder-and-ssrs.md)   
- [Berichte, Berichtsteile und Berichtsdefinitionen &#40;Berichts-Generator und SSRS&#41;](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Seiten Layout und Rendering &#40;Berichts-Generator und SSRS&#41;](page-layout-and-rendering-report-builder-and-ssrs.md)   
+ [Berichte, Berichts Teile und Berichts Definitionen &#40;Berichts-Generator und SSRS&#41;](reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [Seitenlayout und Rendering (Berichts-Generator und SSRS)](page-layout-and-rendering-report-builder-and-ssrs.md)   
  [Lernprogramme &#40;Berichts-Generator&#41;](../report-builder-tutorials.md)   
  [Reporting Services-Tutorials &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md)  
   

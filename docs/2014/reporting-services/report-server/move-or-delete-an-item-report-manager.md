@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aafd2ff32e8c554186d18a6329649081e8babe6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103726"
 ---
 # <a name="move-or-delete-an-item-report-manager"></a>Verschieben oder Löschen eines Elements (Berichts-Manager)
@@ -30,11 +30,11 @@ ms.locfileid: "66103726"
   
 |Symbol|Verschiebbares Element|  
 |----------|-------------------|  
-|![Berichts Symbol](../media/hlp-16doc.gif "Bericht (Symbol)")|Bericht|  
-|![Verknüpfter Bericht (Symbol)](../media/hlp-16linked.gif "Verknüpfter Bericht (Symbol)")|Verknüpfter Bericht|  
-|![Ordner (Symbol)](../media/hlp-16folder.gif "Ordner (Symbol)")|Ordner|  
-|![Symbol "generische Ressource"](../media/hlp-16file.gif "allgemeines Ressourcensymbol")|Allgemeine Ressource|  
-|![Symbol für freigegebene Datenquelle](../media/hlp-16datasource.png "Freigegebene Datenquelle (Symbol)")|Freigegebene Datenquelle|  
+|![Report icon](../media/hlp-16doc.gif "Berichtssymbol")|Bericht|  
+|![Symbol für einen verknüpften Bericht](../media/hlp-16linked.gif "Symbol für einen verknüpften Bericht")|Verknüpfter Bericht|  
+|![Ordnersymbol](../media/hlp-16folder.gif "Ordnersymbol")|Ordner|  
+|![allgemeines Ressourcensymbol](../media/hlp-16file.gif "allgemeines Ressourcensymbol")|Allgemeine Ressource|  
+|![Shared data source icon](../media/hlp-16datasource.png "Symbol für freigegebene Datenquelle")|Freigegebene Datenquelle|  
 ||Freigegebenes Dataset|  
   
  Nicht alle Elemente, mit denen Sie arbeiten, können verschoben werden. Elemente, die einem Bericht zugeordnet sind, z. B. Abonnements oder ein Berichtsverlauf, können nicht verschoben werden. Diese Elemente werden mit den zugehörigen Berichten verschoben. Auch Elemente wie freigegebene Zeitpläne, die außerhalb der Ordnerhierarchie vorhanden sind, können nicht verschoben werden. Sie können ohne die entsprechende Berechtigung keine Elemente verschieben. Die Berechtigung zum Verschieben eines Elements wird erteilt, wenn folgende Tasks in Ihrer Rollenzuweisung für das entsprechende Element ausgewählt sind: "Berichte verwalten", "Modelle verwalten", "Ordner verwalten" und "Datenquellen verwalten".  

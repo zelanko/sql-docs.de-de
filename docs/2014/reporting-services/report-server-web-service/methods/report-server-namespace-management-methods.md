@@ -16,16 +16,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 64827063e6e406f91307e7db1b33d6b42a196168
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63283978"
 ---
 # <a name="report-server-namespace-management-methods"></a>Methoden zur Berichtsserver-Namespaceverwaltung
   Der Webdienst zur Berichtsserververwaltung enthält Methoden, mit denen Sie Berichte, Ordner und Ressourcen in der Berichtsserver-Datenbank verwalten können.  
   
-|Methode|Action|  
+|Methode|Aktion|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.CancelJob%2A>|Bricht die Ausführung eines Auftrags ab|  
 |<xref:ReportService2010.ReportingService2010.CreateFolder%2A>|Fügt der Berichtsserver-Datenbank oder SharePoint-Bibliothek einen Ordner hinzu.|  

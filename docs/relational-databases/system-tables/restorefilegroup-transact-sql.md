@@ -19,10 +19,10 @@ ms.assetid: 3aa15c55-6b72-4f76-97d7-bd88391d105c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 77d47f620fe7b426f8193138fb3abdf1c403ec87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910166"
 ---
 # <a name="restorefilegroup-transact-sql"></a>restorefilegroup (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67910166"
 |**restore_history_id**|**int**|Eindeutiger Bezeichner, der den entsprechenden Wiederherstellungsvorgang angibt. Verweist auf **restorehistory (restore_history_id)**.|  
 |**filegroup_name**|**nvarchar(128)**|Name der wiederhergestellten Dateigruppe. Kann den Wert NULL haben.<br /><br /> Wird eine Datenbankmomentaufnahme einer Datenbank wiederhergestellt, wird dieser Wert auf die gleiche Weise wie bei einer vollständigen Wiederherstellung aufgefüllt.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Führen Sie die gespeicherte Prozedur [sp_delete_backuphistory](../../relational-databases/system-stored-procedures/sp-delete-backuphistory-transact-sql.md) aus, um die Anzahl der Zeilen in dieser Tabelle und in anderen Sicherungs-und Verlaufs Tabellen zu verringern.  
   
 ## <a name="see-also"></a>Weitere Informationen  

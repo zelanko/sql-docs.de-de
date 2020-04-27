@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 924b450ab138df1cad3afcfa11cb9c0d1cc87a22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105119"
 ---
 # <a name="union-function-report-builder-and-ssrs"></a>Union-Funktion (Berichts-Generator und SSRS)
@@ -38,8 +38,7 @@ Union(expression, scope, recursive)
  (`String`) optional. Der Name eines Datasets, einer Gruppe oder eines Datenbereichs mit den Berichtselementen, auf die die Aggregatfunktion anzuwenden ist. Wenn *scope* nicht angegeben ist, wird der aktuelle Bereich verwendet.  
   
  *recursive*  
- (**Enumerationstyp**) Optional. 
-  `Simple` (Standardwert) oder `RdlRecursive`. Gibt an, ob die Aggregation rekursiv auszuführen ist.  
+ (**Enumerationstyp**) Optional. `Simple` (Standardwert) oder `RdlRecursive`. Gibt an, ob die Aggregation rekursiv auszuführen ist.  
   
 ## <a name="return"></a>Rückgabewert  
  Gibt ein räumliches Objekt zurück. Dies ist je nach Ausdruckstyp vom Typ `SqlGeometry` oder `SqlGeography`. Weitere Informationen zu `SqlGeometry` und `SqlGeography` räumlichen Datentypen finden Sie unter [Übersicht über räumliche Datentypen](../../relational-databases/spatial/spatial-data-types-overview.md).  

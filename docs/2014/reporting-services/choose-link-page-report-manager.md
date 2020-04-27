@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 910b06a5cd7af69cc668fb3054dfdfd98c3ae036
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109887"
 ---
 # <a name="choose-link-page-report-manager"></a>Link auswählen (Seite) (Berichts-Manager)
@@ -35,11 +35,11 @@ ms.locfileid: "66109887"
   
 4.  Klicken Sie auf der Registerkarte **Allgemein** auf der Eigenschaftenseite auf **Link ändern**.  
   
-## <a name="options"></a>Tastatur  
- **Location**  
+## <a name="options"></a>Optionen  
+ **Speicherort**  
  Geben Sie den vollständigen Namen des veröffentlichten Berichts an, einschließlich des Ordnerpfads und des Berichtsnamens. Sie können den vollständigen Namen des Berichts eingeben oder die Strukturansicht verwenden, um zu dem gewünschten Bericht zu wechseln.  
   
- **Baumansicht**  
+ **Strukturansicht**  
  Zeigt alle Ordner in der Berichtsserver-Ordnerhierarchie an. Wenn Sie mithilfe der Strukturansicht einen Wert für das Feld **Speicherort** auswählen möchten, klicken Sie auf den Namen des Berichts.  
   
 ## <a name="see-also"></a>Weitere Informationen  

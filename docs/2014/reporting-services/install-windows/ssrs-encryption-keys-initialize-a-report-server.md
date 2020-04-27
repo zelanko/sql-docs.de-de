@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2f9bcb5e7818c4125b81d715d7e74f120a07449d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108741"
 ---
 # <a name="initialize-a-report-server-ssrs-configuration-manager"></a>Initialisieren eines Berichtsservers (SSRS-Konfigurations-Manager)
@@ -51,7 +51,7 @@ ms.locfileid: "66108741"
   
  Die ersten Schritte zum Initialisieren eines Berichtsservers zur Bereitstellung für horizontales Skalieren stimmen mit den ersten drei Schritten überein, die die Initialisierung einer Kombination aus einem einzelnen Server und einer Datenbank beschreiben.  
   
- Der Initialisierungsprozess für eine Bereitstellung für horizontales Skalieren unterscheidet sich darin, wie der Berichtsserver den symmetrischen Schlüssel abruft. Wenn der erste Server initialisiert ist, ruft er von Windows den symmetrischen Schlüssel ab. Wenn der zweite Server während der Konfiguration der Bereitstellung für horizontales Skalieren initialisiert wird, ruft er den symmetrischen Schlüssel vom Berichtsserverdienst ab, der bereits initialisiert ist. Die erste Berichtsserverinstanz verwendet den öffentlichen Schlüssel der zweiten Instanz, um eine verschlüsselte Kopie des symmetrischen Schlüssels für die zweite Berichtsserverinstanz zu erstellen. Der symmetrische Schlüssel wird an keinem Punkt dieses Prozesses als Nur-Text offen gelegt  
+ Der Initialisierungsprozess für eine Bereitstellung für das Aufskalieren unterscheidet sich darin, wie der Berichtsserver den symmetrischen Schlüssel abruft. Wenn der erste Server initialisiert ist, ruft er von Windows den symmetrischen Schlüssel ab. Wenn der zweite Server während der Konfiguration der Bereitstellung für horizontales Skalieren initialisiert wird, ruft er den symmetrischen Schlüssel vom Berichtsserverdienst ab, der bereits initialisiert ist. Die erste Berichtsserverinstanz verwendet den öffentlichen Schlüssel der zweiten Instanz, um eine verschlüsselte Kopie des symmetrischen Schlüssels für die zweite Berichtsserverinstanz zu erstellen. Der symmetrische Schlüssel wird an keinem Punkt dieses Prozesses als Nur-Text offen gelegt  
   
 ## <a name="how-to-initialize-a-report-server"></a>Initialisieren eines Berichtsservers  
   
@@ -71,6 +71,6 @@ ms.locfileid: "66108741"
  Um die Initialisierung des Berichtsservers zu bestätigen, pingen Sie den Berichtsserver-Webdienst, indem Sie **http://<Servername\</reportserver** in das Befehlsfenster eingeben. Wenn der `RSReportServerNotActivated`-Fehler auftritt, ist die Initialisierung fehlgeschlagen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Speichern verschlüsselter Berichts Server Daten &#40;SSRS-Configuration Manager&#41;](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
+ [SSRS-Verschlüsselungsschlüssel: Speichern verschlüsselter Berichtsserverdaten](ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   
   

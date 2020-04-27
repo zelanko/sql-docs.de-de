@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 815b8594977321ea8223c16fed166e110008a8b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109110"
 ---
 # <a name="general-properties-page-models-report-manager"></a>Allgemein (Eigenschaftenseite) (Modelle, Berichts-Manager)
@@ -45,7 +45,7 @@ ms.locfileid: "66109110"
  **In Listenansicht ausblenden**  
  Aktivieren Sie dieses Kontrollkästchen, um das Element auszublenden, wenn der Ordner auf Listenansicht festgelegt ist. Die Listenansicht ist ein vom Berichts-Manager unterstützter Modus für die Anzeige von Ordnerinhalten. Diese Option können Sie in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] festlegen, um zu definieren, wie das Element im Berichts-Manager angezeigt wird. Weitere Informationen zu den Ansichtsmodi in Berichts-Manager finden Sie unter [Inhaltsseite &#40;Berichts-Manager&#41;](../../2014/reporting-services/contents-page-report-manager.md).  
   
- **Anwenden**  
+ **übernehmen**  
  Klicken Sie auf diese Schaltfläche, um die Änderungen zu speichern.  
   
  **Löschen**  
@@ -54,7 +54,7 @@ ms.locfileid: "66109110"
  **Move**  
  Klicken Sie auf diese Schaltfläche, um ein Modell in der Ordnerhierarchie des Berichtsservers zu verschieben. Durch Klicken auf diese Schaltfläche wird die Seite Elemente verschieben geöffnet, auf der Sie Ordner nach einem neuen Speicherort durchsuchen können. Weitere Informationen finden Sie auf der [Seite zum Verschieben von Elementen &#40;Berichts-Manager&#41;](../../2014/reporting-services/move-items-page-report-manager.md).  
   
- **Sicher**  
+ **Speichern**  
  Klicken Sie auf diese Schaltfläche, um eine schreibgeschützte Kopie der Modelldefinition zu speichern. Abhängig von den auf Ihrem Computer definierten Dateizuordnungen wird die Datei in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] oder einer anderen Anwendung geöffnet. In den meisten Fällen wird das Modell als XML-Datei geöffnet.  
   
  Die von Ihnen geöffnete Kopie ist mit der ursprünglichen Modelldefinition identisch, die auf dem Berichtsserver veröffentlicht wurde. Alle Eigenschaften, die für das Modell nach dessen Veröffentlichung festgelegt wurden (wie Parameter und Datenquelleneigenschaften) sind nicht in der von Ihnen geöffneten Datei enthalten.  

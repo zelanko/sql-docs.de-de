@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1cc957af5596acbf2478d55645b1386283970e33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102528"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>Veröffentlichen eines Berichts in einer SharePoint-Bibliothek
@@ -30,9 +30,9 @@ ms.locfileid: "66102528"
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]öffnen Sie ein vorhandenes oder neues Berichtsserverprojekt.  
   
-2.  Klicken Sie im Menü **Projekt** auf **Eigenschaften**. Das Dialogfeld _\<Projekt>_ **Eigenschaftenseiten** wird geöffnet.  
+2.  Klicken Sie im Menü **Projekt** auf **Eigenschaften**. Das _ \<Dialogfeld Projekt>_ **Eigenschaften Seiten** wird geöffnet.  
   
-3.  Wählen Sie in der Liste **Konfiguration** den Namen einer Projektmappenkonfiguration aus, die Sie zum Erstellen und Veröffentlichen Ihres Berichts verwenden können. Die aktuelle Konfiguration wird als **Active**( *\<Konfiguration>* ) (Aktiv) aufgelistet.  
+3.  Wählen Sie in der Liste **Konfiguration** den Namen einer Projektmappenkonfiguration aus, die Sie zum Erstellen und Veröffentlichen Ihres Berichts verwenden können. Die aktuelle Konfiguration wird als **aktiv**(*\<Konfigurations>*) aufgeführt.  
   
 4.  Wenn Sie die freigegebenen Datenquellen in Ihrem Projekt veröffentlichen und bereits veröffentlichte freigegebene Datenquellen überschreiben möchten, legen Sie **OverwriteDataSources** auf **True**fest.  
   
@@ -49,10 +49,10 @@ ms.locfileid: "66102528"
 9. Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf den Bericht, den Sie veröffentlichen möchten, und klicken Sie auf **Bereitstellen**. Der Bericht wird an dem in **TargetReportFolder**angegebenen Speicherort veröffentlicht. Im Ausgabefenster werden Bereitstellungsfehler angezeigt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Eigenschaftsseiten für Projekt (Dialogfeld)](../tools/project-property-pages-dialog-box.md)   
- [Festlegen von Bereitstellungseigenschaften &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
- [Veröffentlichen von Berichten auf einem Berichtsserver](publishing-reports-to-a-report-server.md)   
- [Beispiele für URLs von veröffentlichten Berichtselementen auf einem Berichtsserver im SharePoint-Modus (SSRS)](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
+ [Eigenschaften Seiten für Projekt (Dialog Feld)](../tools/project-property-pages-dialog-box.md)   
+ [Festlegen der Bereitstellungs Eigenschaften &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
+ [Veröffentlichen von Berichten auf einem Berichts Server](publishing-reports-to-a-report-server.md)   
+ [URL-Beispiele für veröffentlichte Berichts Elemente auf einem Berichts Server im SharePoint-Modus &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
  [Verwenden einer Office Data Connection &#40;.odc&#41; für Berichte &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   

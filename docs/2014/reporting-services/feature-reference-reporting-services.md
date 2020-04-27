@@ -16,14 +16,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 10fcb605ba6040c6d2a44c562af81c658ee26514
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109169"
 ---
 # <a name="feature-reference-reporting-services"></a>Funktionsreferenz (Reporting Services)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] umfasst verschiedene Tools und Anwendungen, die Sie zum Erstellen, verwalten und Anzeigen von Berichten verwenden können. Dieser Abschnitt enthält Themen zu den einzelnen Dialogfeldern, Webseiten und Assistenten dieser Tools und Anwendungen.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] enthält zahlreiche Tools und Anwendungen, die Sie zum Erstellen, Verwalten und Anzeigen von Berichten verwenden können. Dieser Abschnitt enthält Themen zu den einzelnen Dialogfeldern, Webseiten und Assistenten dieser Tools und Anwendungen.  
   
  Um während der Ausführung eines Tools oder einer Anwendung auf ein Thema zur Benutzeroberfläche zuzugreifen, drücken Sie F1. Sie können auch auf **Hilfe** klicken, während das Dialogfeld, die Webseite oder der Assistent geöffnet ist. Weitere Informationen zum Starten der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]-Tools finden Sie unter [Tutorial: So suchen und starten Sie Reporting Services-Tools (SSRS)](tools/tutorial-how-to-locate-and-start-reporting-services-tools-ssrs.md).  
   
@@ -40,14 +40,14 @@ ms.locfileid: "66109169"
  [Berichtsserver im Management Studio (F1-Hilfe)](tools/report-server-in-management-studio-f1-help.md)  
  Stellt Hilfe zu Dialogfeldern bereit, mit denen Berichte und Berichts Server [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]in verwaltet werden.  
   
- [HTML Viewer and the Report Toolbar (HTML-Viewer und die Berichtssymbolleiste)](html-viewer-and-the-report-toolbar.md)  
+ [HTML-Viewer und die Berichtssymbolleiste](html-viewer-and-the-report-toolbar.md)  
  Stellt die Hilfe für die HTML-Viewer-Komponente bereit, die für das Anzeigen von Berichten in einem Webbrowser verwendet wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Konzepte von Reporting Services (SSRS)](reporting-services-concepts-ssrs.md)   
+ [Reporting Services Konzepte &#40;SSRS&#41;](reporting-services-concepts-ssrs.md)   
  [Reporting Services Berichte &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)   
  [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-data/report-datasets-ssrs.md)   
  [Ersten Schritte mit Berichts-Generator](https://www.microsoft.com/download/en/details.aspx?id=29072)   
- [Entwerfen und Implementieren von Berichten mit Berichts-Generator 1,0](https://go.microsoft.com/fwlink/?LinkId=142601)  
+ [Entwerfen und Implementieren von Berichten mit Berichts-Generator 1.0](https://go.microsoft.com/fwlink/?LinkId=142601)  
   
   

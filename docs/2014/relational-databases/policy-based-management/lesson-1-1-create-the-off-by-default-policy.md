@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c96443d7f46dee539fd7d39a91a168b3ed5a0d8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67792928"
 ---
 # <a name="create-the-off-by-default-policy"></a>Erstellen der Richtlinie 'Standardmäßig aus'
@@ -28,7 +28,7 @@ ms.locfileid: "67792928"
   
 3.  Bestätigen Sie im Feld **Facet** , dass das Facet **Oberflächenkonfiguration** ausgewählt ist.  
   
-4.  Wählen Sie im Bereich **Ausdruck** im Feld **Feld** den Eintrag **\@DatabaseMailEnabled**, im Feld **Operator** den Eintrag **=** und im Feld **Wert** den Eintrag **False** aus.  
+4.  Wählen Sie **Expression** **Operator** **=** **Value** **False** **Field** ** \@** im Bereich Ausdruck im Feld Feld die Option databasemailaktivierte aus, wählen Sie im Feld Operator die Option aus, und wählen Sie im Feld Wert false aus.  
   
 5.  Geben Sie auf der Seite **Beschreibung** eine Beschreibung der Bedingung ein, und klicken Sie dann auf **OK** , um die Bedingung zu erstellen.  
   

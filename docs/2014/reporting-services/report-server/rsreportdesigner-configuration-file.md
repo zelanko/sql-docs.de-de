@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f5ba4168f5417260b0857accdb9cf8fb3fa0f3c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103336"
 ---
 # <a name="rsreportdesigner-configuration-file"></a>RSReportDesigner-Konfigurationsdatei
@@ -54,21 +54,16 @@ ms.locfileid: "66103336"
   
 ## <a name="configuration-settings"></a>Konfigurationseinstellungen  
   
-|Einstellung|Beschreibung|  
+|Einstellung|BESCHREIBUNG|  
 |-------------|-----------------|  
 |`SecureConnectionLevel`|Der Sicherheitsgrad der Webdienstverbindung. Gültige Werte sind 0 bis 3, wobei 0 die geringste Sicherheit bietet. Weitere Informationen finden Sie unter [Using Secure Web Service Methods](../report-server-web-service/net-framework/using-secure-web-service-methods.md).|  
 |`InstanceName`|Ein Bezeichner für den Vorschauserver. Ändern Sie diesen Wert nicht.|  
-|`SessionCookies`|Gibt an, ob der Berichtsserver Sitzungsinformationen mithilfe von Browsercookies verwaltet. Beispielsweise können die folgenden Werte verwendet werden: `true` und `false`. Der Standardwert lautet `true`. Wenn Sie diesen Wert auf false festlegen, werden Sitzungsdaten in der **reportservertempdb** -Datenbank gespeichert.|  
+|`SessionCookies`|Gibt an, ob der Berichtsserver Sitzungsinformationen mithilfe von Browsercookies verwaltet. Beispielsweise können die folgenden Werte verwendet werden: `true` und `false`. Der Standardwert ist `true`. Wenn Sie diesen Wert auf false festlegen, werden Sitzungsdaten in der **reportservertempdb** -Datenbank gespeichert.|  
 |`SessionTimeoutMinutes`|Gibt an, für welchen Zeitraum ein Sitzungscookie gültig ist. Der Standardwert ist 3 Minuten.|  
 |`PolicyLevel`|Gibt die Sicherheitsrichtlinien-Konfigurationsdatei an. Der gültige Wert ist rspree viewpolicy. config. Weitere Informationen finden Sie unter [Verwenden von Reporting Services-Sicherheitsrichtlinien Dateien](../extensions/secure-development/using-reporting-services-security-policy-files.md).|  
 |`CacheDataForPreview`|Ist der Wert auf `True` festgelegt, speichert Berichts-Designer Daten in einer Cachedatei auf dem lokalen Computer. Gültige Werte sind `True` (Standard) und `False`. Weitere Informationen finden Sie unter [Previewing Reports](../reports/previewing-reports.md).|  
-|`Render`|Zählt die Renderingerweiterungen auf, die für Berichts-Designer zur Vorschau verfügbar sind. Die für die Vorschau verwendeten Renderingerweiterungen sollten mit den Renderingerweiterungen identisch sein, die mit dem Berichtsserver installiert werden.<br /><br /> 
-  `Name` gibt die Renderingerweiterung an. Wenn Sie eine Renderingerweiterung per Code aufrufen, verwenden Sie diesen Wert zur Angabe einer bestimmten Erweiterung.<br /><br /> 
-  `Type` gibt den vollqualifizierten Namen der Erweiterungsklasse an sowie den Namen der Bibliothek, durch Trennzeichen getrennt.<br /><br /> 
-  `Visible` gibt an, ob der Name auf einer Benutzeroberfläche angezeigt wird. Mögliche Werte sind `True` (Standard) oder `False`. Bei `True` wird der Name auf Benutzeroberflächen angezeigt.|  
-|`Data`|Zählt die Datenverarbeitungserweiterungen auf, die für Berichts-Designer zum Herstellen einer Verbindung zu Datenquellen verfügbar sind, die wiederum Daten für Berichte bereitstellen. Die in Berichts-Designer verwendeten Datenverarbeitungserweiterungen sollten mit den Datenverarbeitungserweiterungen identisch sein, die mit dem Berichtsserver installiert werden. Informationen zum Hinzufügen oder Entfernen benutzerdefinierter Erweiterungen finden Sie unter [Deploying a Data Processing Extension](../extensions/data-processing/deploying-a-data-processing-extension.md).<br /><br /> 
-  `Name` gibt die Datenverarbeitungserweiterung an.<br /><br /> 
-  `Type` gibt den vollqualifizierten Namen der Erweiterungsklasse an sowie den Namen der Bibliothek, durch Trennzeichen getrennt.|  
+|`Render`|Zählt die Renderingerweiterungen auf, die für Berichts-Designer zur Vorschau verfügbar sind. Die für die Vorschau verwendeten Renderingerweiterungen sollten mit den Renderingerweiterungen identisch sein, die mit dem Berichtsserver installiert werden.<br /><br /> `Name` gibt die Renderingerweiterung an. Wenn Sie eine Renderingerweiterung per Code aufrufen, verwenden Sie diesen Wert zur Angabe einer bestimmten Erweiterung.<br /><br /> `Type` gibt den vollqualifizierten Namen der Erweiterungsklasse an sowie den Namen der Bibliothek, durch Trennzeichen getrennt.<br /><br /> `Visible` gibt an, ob der Name auf einer Benutzeroberfläche angezeigt wird. Mögliche Werte sind `True` (Standard) oder `False`. Bei `True` wird der Name auf Benutzeroberflächen angezeigt.|  
+|`Data`|Zählt die Datenverarbeitungserweiterungen auf, die für Berichts-Designer zum Herstellen einer Verbindung zu Datenquellen verfügbar sind, die wiederum Daten für Berichte bereitstellen. Die in Berichts-Designer verwendeten Datenverarbeitungserweiterungen sollten mit den Datenverarbeitungserweiterungen identisch sein, die mit dem Berichtsserver installiert werden. Informationen zum Hinzufügen oder Entfernen benutzerdefinierter Erweiterungen finden Sie unter [Deploying a Data Processing Extension](../extensions/data-processing/deploying-a-data-processing-extension.md).<br /><br /> `Name` gibt die Datenverarbeitungserweiterung an.<br /><br /> `Type` gibt den vollqualifizierten Namen der Erweiterungsklasse an sowie den Namen der Bibliothek, durch Trennzeichen getrennt.|  
 |`Designer`|Zählt die Abfrage-Generatoren auf, die für Berichts-Designer verfügbar sind. Abfrage-Generatoren bieten eine Benutzeroberfläche zum Erstellen von Abfragen, die in Berichten verwendete Daten abrufen. Die Abfrage-Generatoren für verschiedene Datenverarbeitungserweiterungen können voneinander abweichen. Standardmäßig bietet Reporting Services eine grafische Datentool-Benutzeroberfläche für alle Datenverarbeitungserweiterungen, die im Lieferumfang des Produkts enthalten sind. Wenn Sie allerdings Datenverarbeitungsanwendungen erstellen oder Datenverarbeitungsanwendungen von Drittanbietern verwenden, werden möglicherweise andere Abfrage-Generator-Oberflächen angewendet.|  
 |`PreviewProcessingServiceStartupTimeoutSeconds`|Gibt den Zeitraum an, der auf das Starten des Vorschauverarbeitungsdienst gewartet wird, bevor eine Fehlermeldung angezeigt wird. Der Standardwert ist 15 Sekunden.|  
   

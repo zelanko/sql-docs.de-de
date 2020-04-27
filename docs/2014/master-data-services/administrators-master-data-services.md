@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 146834648164e49632a62352d684a6da66a09e12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480008"
 ---
 # <a name="administrators-master-data-services"></a>Administratoren (Master Data Services)
@@ -48,9 +48,9 @@ ms.locfileid: "65480008"
   
 ## <a name="comparing-administrator-types"></a>Vergleichen von Administratortypen  
   
-|Administratortyp|BESCHREIBUNG|  
+|Administratortyp|Beschreibung|  
 |------------------------|-----------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]Systemadministrator|Im [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] zugewiesene Berechtigungen wirken sich nicht auf den Zugriff des Administrators aus.<br /><br /> Verfügt automatisch über die Berechtigung **Aktualisieren** für alle Modelle.<br /><br /> Verfügt automatisch über Zugriff auf alle Funktionsbereiche.<br /><br /> In MDM. tbluser lautet der Wert in der **ID** -Spalte **1**.|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]-Systemadministrator|Im [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] zugewiesene Berechtigungen wirken sich nicht auf den Zugriff des Administrators aus.<br /><br /> Verfügt automatisch über die Berechtigung **Aktualisieren** für alle Modelle.<br /><br /> Verfügt automatisch über Zugriff auf alle Funktionsbereiche.<br /><br /> In MDM. tbluser lautet der Wert in der **ID** -Spalte **1**.|  
 |Modelladministrator|In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] zugewiesene Berechtigungen bestimmen, ob der Benutzer Modelladministrator ist.<br /><br /> Kann je nach den Berechtigungen, die explizit zugewiesen oder von einer Gruppe geerbt wurden, Modelladministrator sein.<br /><br /> Ist nur ein Administrator für Modelle, die über die Berechtigung **Aktualisieren** für das Modell Objekt der obersten Ebene verfügen, und keine weiteren Berechtigungen.<br /><br /> Verfügt nur über Zugriff auf Funktionsbereiche, für die ihm eine Berechtigung gewährt wurde.<br /><br /> In MDM. tbluser lautet der Wert in der **ID** -Spalte nicht **1**.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

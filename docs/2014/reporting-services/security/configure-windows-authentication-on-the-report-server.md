@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a575d2e0f366df452d37615c7d3076027f5c400a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102124"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Konfigurieren der Windows-Authentifizierung auf dem Berichtsserver
@@ -45,7 +45,7 @@ ms.locfileid: "66102124"
  Die folgenden Anweisungen beziehen sich auf Berichtsserver, die im einheitlichen Modus ausgeführt werden. Wenn der Berichtserver im integrierten SharePoint-Modus bereitgestellt wird, müssen die Standardauthentifizierungseinstellungen verwendet werden, welche die integrierte Sicherheit von Windows angeben. Der Berichtsserver verwendet interne Funktionen der standardmäßigen Windows-Authentifizierungserweiterung, um Berichtserver im integrierten SharePoint-Modus zu unterstützen.  
   
 ## <a name="extended-protection-for-authentication"></a>Erweiterter Schutz für die Authentifizierung  
- Der erweiterte Schutz für die Authentifizierung wird ab [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]unterstützt. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktion unterstützt die Verwendung der Kanalbindung und Dienstbindung, um den Authentifizierungsschutz zu verbessern. Die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Funktionen müssen mit einem Betriebssystem verwendet werden, das erweiterten Schutz unterstützt. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]die Konfiguration für erweiterten Schutz wird durch Einstellungen in der Datei RSReportServer. config bestimmt. Die Datei kann entweder durch Bearbeitung oder Verwendung der WMI-APIs aktualisiert werden. Weitere Informationen finden Sie unter [Erweiterter Schutz für die Authentifizierung mit Reporting Services](extended-protection-for-authentication-with-reporting-services.md).  
+ Der erweiterte Schutz für die Authentifizierung wird ab [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]unterstützt. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktion unterstützt die Verwendung der Kanalbindung und Dienstbindung, um den Authentifizierungsschutz zu verbessern. Die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Funktionen müssen mit einem Betriebssystem verwendet werden, das erweiterten Schutz unterstützt. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfiguration für erweiterten Schutz wird durch Einstellungen in der Datei RSReportServer.config bestimmt. Die Datei kann entweder durch Bearbeitung oder Verwendung der WMI-APIs aktualisiert werden. Weitere Informationen finden Sie unter [Extended Protection for Authentication with Reporting Services](extended-protection-for-authentication-with-reporting-services.md).  
   
 ### <a name="to-configure-a-report-server-to-use-windows-integrated-security"></a>So konfigurieren Sie einen Berichtsserver für die Verwendung der integrierten Sicherheit von Windows  
   
@@ -113,7 +113,7 @@ ms.locfileid: "66102124"
   
 8.  Starten Sie den Berichtsserver neu, um alle momentan geöffneten Sitzungen zu beenden.  
   
-##  <a name="proxyfirewallRSWindowsNegotiate"></a>Beheben von Kerberos-Authentifizierungs Fehlern beim Herstellen einer Verbindung mit einem Berichts Server  
+##  <a name="resolving-kerberos-authentication-errors-when-connecting-to-a-report-server"></a><a name="proxyfirewallRSWindowsNegotiate"></a>Beheben von Kerberos-Authentifizierungs Fehlern beim Herstellen einer Verbindung mit einem Berichts Server  
  Bei einem Berichtsserver, der zum Aushandeln oder für die Kerberos-Authentifizierung konfiguriert wurde, kann keine Clientverbindung mit dem Berichtsserver hergestellt werden, wenn ein Kerberos-Authentifizierungsfehler vorliegt. Kerberos-Authentifizierungsfehler treten bekanntermaßen auf, wenn eine der folgende Bedingungen zutrifft:  
   
 -   Der Berichtsserverdienst wird unter einem Domänenbenutzerkonto ausgeführt, für das kein Dienstprinzipalname (SPN) registriert wurde.  

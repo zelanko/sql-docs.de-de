@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c44e1830b1f04b1a7686bf7db1efea4549ae143e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479557"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>Erstellen von Proxyklassen für den Master Data Manager-Webdienst
@@ -52,13 +52,13 @@ svcutil.exe http://<server_name:port>/<virtual_path>/Service/Service.svc
   
  Hierbei gilt:  
   
--   *Server*Name:*Port* sind der Computername und die Portnummer des Computers, auf dem [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]gehostet wird.  
+-   *servername*:*port* entspricht dem Computernamen und der Portnummer des Computers, auf dem [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] gehostet wird.  
   
--   *virtual_path* ist der virtuelle Pfad von [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] in Internetinformationsdienste (IIS).  
+-   *virtual_path* ist der virtuelle Pfad von [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] in den Internetinformationsdiensten (IIS).  
   
--   *proxy_name* ist der Name für die generierte Proxy Datei.  
+-   *proxy_name* ist der Name für die generierte Proxydatei.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Kategorisierte Webdienst Vorgänge &#40;Master Data Services&#41;](categorized-web-service-operations-master-data-services.md)  
+ [Kategorisierte Webdienstvorgänge &#40;Master Data Services&#41;](categorized-web-service-operations-master-data-services.md)  
   
   
