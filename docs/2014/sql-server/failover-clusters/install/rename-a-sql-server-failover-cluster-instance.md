@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4ce98bacfcc5f3aa8814a9253d1796fd18c4a735
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63126007"
 ---
 # <a name="rename-a-sql-server-failover-cluster-instance"></a>Umbenennen einer SQL Server-Failoverclusterinstanz
@@ -29,8 +29,7 @@ ms.locfileid: "63126007"
   
  Bevor Sie den Umbenennungsvorgang beginnen, überprüfen Sie die nachfolgenden Elemente.  
   
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt nicht das Umbenennen von Servern, die an der Replikation beteiligt sind. Eine Ausnahme stellt die Verwendung von Protokollversand mit Replikation dar. Der sekundäre Server beim Protokollversand kann umbenannt werden, wenn der primäre Server dauerhaft verloren ist. Weitere Informationen finden Sie unter [Protokollversand und Replikation &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt nicht das Umbenennen von Servern, die an der Replikation beteiligt sind. Eine Ausnahme stellt die Verwendung von Protokollversand mit Replikation dar. Der sekundäre Server beim Protokollversand kann umbenannt werden, wenn der primäre Server dauerhaft verloren ist. Weitere Informationen finden Sie unter [Protokollversand und Replikation &#40;SQL Server&#41;](../../../database-engine/log-shipping/log-shipping-and-replication-sql-server.md).  
   
 -   Wenn Sie einen virtuellen Server umbenennen, der für die Verwendung von Datenbankspiegelung konfiguriert ist, müssen Sie die Datenbankspiegelung vor dem Umbenennungsvorgang deaktivieren und die Datenbankspiegelung mit dem neuen Namen des virtuellen Servers anschließend neu einrichten. Die Metadaten für die Datenbankspiegelung werden nicht automatisch aktualisiert, um den neuen Namen des virtuellen Servers widerzuspiegeln.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "63126007"
 ## <a name="additional-considerations-after-the-renaming-operation"></a>Weitere Überlegungen nach dem Umbenennungsvorgang  
  Nachdem der Netzwerkname des Failoverclusters geändert wurde, müssen die folgenden Anweisungen überprüft und ausgeführt werden, damit alle Szenarien in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Agent und [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]funktionieren.  
   
- **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Nachdem Sie den Netzwerknamen einer [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] Failoverclusterinstanz mit dem Windows-Cluster Verwaltungs Tool geändert haben, kann der spätere Aktualisierungs-oder Deinstallations Vorgang fehlschlagen. Um dieses Problem zu beheben, aktualisieren Sie den Registrierungs Eintrag " **Clustername** " gemäß den Anweisungen [](https://go.microsoft.com/fwlink/?LinkId=244002) im Abschnitthttps://go.microsoft.com/fwlink/?LinkId=244002)"Resolution" dieses (.  
+ **[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:** Nachdem Sie den Netzwerknamen einer [!INCLUDE[ssASCurrent](../../../includes/ssascurrent-md.md)] Failoverclusterinstanz mit dem Windows-Cluster Verwaltungs Tool geändert haben, kann der spätere Aktualisierungs-oder Deinstallations Vorgang fehlschlagen. Um dieses Problem zu beheben, aktualisieren Sie den Registrierungs Eintrag " **Clustername** " gemäß den Anweisungen [this](https://go.microsoft.com/fwlink/?LinkId=244002) im Abschnitthttps://go.microsoft.com/fwlink/?LinkId=244002)"Resolution" dieses (.  
   
  **-Agent-Dienst: [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ** Überprüfen Sie die folgenden zusätzlichen Aktionen für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] den-Agent-Dienst:  
   
@@ -78,7 +77,7 @@ ms.locfileid: "63126007"
   
 -   Konfigurieren Sie den Protokollversand neu, damit der aktualisierte Servername für die Sicherungs- und Wiederherstellungsprotokolle verwendet wird. Weitere Informationen finden Sie in den folgenden Themen:  
   
-    -   [Konfigurieren des Protokollversands &#40;SQL Server&#41;](../../../database-engine/log-shipping/configure-log-shipping-sql-server.md)  
+    -   [Konfigurieren des Protokollversands (SQL Server)](../../../database-engine/log-shipping/configure-log-shipping-sql-server.md)  
   
     -   [Entfernen des Protokollversands &#40;SQL Server&#41;](../../../database-engine/log-shipping/remove-log-shipping-sql-server.md)  
   

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b66a0c9efc94d648eba2f4d4f8cff779def413fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63131806"
 ---
 # <a name="overview-smo"></a>Übersicht (SMO)
@@ -32,14 +32,11 @@ ms.locfileid: "63131806"
   
 -   Ausführung von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen im Batchmodus. Anweisungen werden im Batchmodus ausgeführt, um die Netzwerkleistung zu verbessern.  
   
--   Aufzeichnen von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen. Ermöglicht die Erfassung eines beliebigen Vorgangs in einem Skript. 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] verwendet diese Fähigkeit, um einen Vorgang in ein Skript aufzunehmen, anstatt ihn sofort auszuführen.  
+-   Aufzeichnen von [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen. Ermöglicht die Erfassung eines beliebigen Vorgangs in einem Skript. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] verwendet diese Fähigkeit, um einen Vorgang in ein Skript aufzunehmen, anstatt ihn sofort auszuführen.  
   
--   Verwaltung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Diensten mit dem WMI-Anbieter. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste können programmgesteuert gestartet, gestoppt und angehalten werden.  
+-   Verwaltung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Diensten mit dem WMI-Anbieter. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Dienste können programmgesteuert gestartet, gestoppt und angehalten werden.  
   
--   Erweiterte Skripterstellung. 
-  [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripts können generiert werden, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekte neu zu erstellen, die Beziehungen zu anderen Objekten auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beschreiben.  
+-   Erweiterte Skripterstellung. [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skripts können generiert werden, um [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Objekte neu zu erstellen, die Beziehungen zu anderen Objekten auf der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] beschreiben.  
   
 -   Verwenden eindeutiger Ressourcennamen (URNs). Ein URN ermöglicht es Ihnen, Instanzen von SMO-Objekten zu erstellen und darauf zu verweisen.  
   
@@ -55,8 +52,7 @@ ms.locfileid: "63131806"
   
 -   Momentaufnahmedatenbanken zur Erstellung schreibgeschützter Datenbankkopien.  
   
--   
-  [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Unterstützung für nachrichtenbasierte Kommunikation. Weitere Informationen finden Sie unter [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md).  
+-   [!INCLUDE[ssSB](../../includes/sssb-md.md)]-Unterstützung für nachrichtenbasierte Kommunikation. Weitere Informationen finden Sie unter [SQL Server Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md).  
   
 -   Synonymunterstützung für mehrere Namen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankobjekten. Weitere Informationen finden Sie unter [Synonyme &#40;Datenbank-Engine&#41;](../synonyms/synonyms-database-engine.md).  
   
@@ -70,7 +66,7 @@ ms.locfileid: "63131806"
   
 -   DDL-Trigger für zusätzliche Funktionalität beim Auftreten von DDL-Ereignissen. Weitere Informationen finden Sie unter [DDL Triggers](../triggers/ddl-triggers.md).  
   
- Der SMO-Namespace lautet <xref:Microsoft.SqlServer.Management.Smo>. SMO wird als [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Assembly implementiert. Das bedeutet, dass die CLR (Common Language Runtime) von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], Version 2.0, installiert werden muss, bevor die SMO-Objekte verwendet werden. Die SMO-Assemblys werden standardmäßig mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-SDK-Option im globalen Assemblycache (GAC) installiert. Die Assemblys befinden sich in [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. Weitere Informationen finden Sie in der Dokumentation zu [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .  
+ Der SMO-Namespace lautet <xref:Microsoft.SqlServer.Management.Smo>. SMO wird als [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]-Assembly implementiert. Das bedeutet, dass die CLR (Common Language Runtime) von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)], Version 2.0, installiert werden muss, bevor die SMO-Objekte verwendet werden. Die SMO-Assemblys werden standardmäßig mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-SDK-Option im globalen Assemblycache (GAC) installiert. Die Assemblys befinden sich in [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)]. Weitere Informationen finden Sie in der Dokumentation zu [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)][!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)].  
   
 ## <a name="smo-classes"></a>SMO-Klassen  
  SMO-Klassen umfassen zwei Kategorien: Instanzklassen und Hilfsprogrammklassen.  
@@ -81,7 +77,7 @@ ms.locfileid: "63131806"
   
  Die SMO-Instanzobjekte bilden eine Hierarchie, die die Hierarchie eines Datenbankservers darstellt. Ganz oben sind die Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], gefolgt von den Datenbanken, gefolgt von den Tabellen, Spalten, Triggern usw. Ist eine 1:n-Beziehung zwischen den über- und untergeordneten Elementen logisch, etwa im Fall einer Tabelle mit mehreren Spalten, wird das untergeordnete Element durch eine Objektauflistung dargestellt. Andernfalls wird das untergeordnete Element nur durch ein Objekt dargestellt.  
   
- **Hilfsklassen**  
+ **Hilfsprogrammklassen**  
   
  Hilfsprogrammklassen sind eine Gruppe von Objekten, die explizit erstellt wurden, um bestimmte Tasks auszuführen. Sie werden auf Grundlage ihrer Funktion in unterschiedliche Objekthierarchien unterteilt:  
   
@@ -161,7 +157,7 @@ ms.locfileid: "63131806"
   
  In SMO werden neue Objekte bereitgestellt, die eine erweiterte Volltextsuche ermöglichen.  
   
- **Seiten Überprüfung**  
+ **Seitenüberprüfung**  
   
  Das <xref:Microsoft.SqlServer.Management.Smo.DatabaseOptions.PageVerify%2A>-Objekt stellt Optionen zur Überprüfung von Datenbankseiten dar.  
   
@@ -171,13 +167,11 @@ ms.locfileid: "63131806"
   
  **Service Broker**  
   
- 
-  [!INCLUDE[ssSB](../../includes/sssb-md.md)] und seine Funktionalität werden durch eine Gruppe von Objekten dargestellt.  
+ [!INCLUDE[ssSB](../../includes/sssb-md.md)] und seine Funktionalität werden durch eine Gruppe von Objekten dargestellt.  
   
  **Indexerweiterungen**  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Indexerweiterungen werden durch neue Eigenschaften im <xref:Microsoft.SqlServer.Management.Smo.Index>-Objekt dargestellt.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Indexerweiterungen werden durch neue Eigenschaften im <xref:Microsoft.SqlServer.Management.Smo.Index>-Objekt dargestellt.  
   
 ## <a name="smo-and-sql-dmo"></a>SMO und SQL-DMO  
  Das SMO-Objektmodell löst SQL-DMO ab und ersetzt dieses. SMO unterstützt [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höhere Versionen. Es unterstützt zusätzliche [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verwaltungsaufgaben und enthält in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zahlreiche neue Funktionen. SMO wurde mit Blick auf größere Effizienz und umfassendere Steuerungsfunktionen entworfen.  

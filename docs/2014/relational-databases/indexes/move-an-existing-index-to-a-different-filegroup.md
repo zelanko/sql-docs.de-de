@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd3c7f0bb394025581e4a2dffc8eb79a43acb498
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63036218"
 ---
 # <a name="move-an-existing-index-to-a-different-filegroup"></a>Verschieben eines vorhandenen Indexes in eine andere Dateigruppe
@@ -34,26 +34,26 @@ ms.locfileid: "63036218"
   
      [Sicherheit](#Security)  
   
--   **So verschieben Sie einen vorhandenen Index in eine andere Datei Gruppe mit:**  
+-   **Verschieben eines vorhandenen Indexes in eine andere Dateigruppe mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Bei Tabellen mit gruppiertem Index wird beim Verschieben des gruppierten Index in eine neue Dateigruppe auch die Tabelle in diese Dateigruppe verschoben.  
   
 -   Mit einer UNIQUE- oder PRIMARY KEY-Einschränkung mit [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]erstellte Indizes können nicht verschoben werden. Verwenden Sie zum Verschieben dieser Indizes die [CREATE INDEX](/sql/t-sql/statements/create-index-transact-sql) -Anweisung mit der Option (DROP_EXISTING=ON) in [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Der Benutzer muss ein Mitglied der festen Serverrolle **sysadmin** bzw. der festen Datenbankrollen **db_ddladmin** und **db_owner** sein.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup-using-table-designer"></a>So verschieben Sie einen vorhandenen Index mit dem Tabellen-Designer in eine andere Dateigruppe  
   
@@ -99,12 +99,12 @@ ms.locfileid: "63036218"
   
 8.  Klicken Sie auf **OK**.  
   
- Die folgenden Informationen sind auf der Seite **Speicher** des Dialogfelds **Indexeigenschaften >** _Indexname_ verfügbar:  
+ Die folgenden Informationen sind auf der Seite **Speicher** des Dialogfelds **Indexeigenschaften –** _Indexname_ verfügbar:  
   
- **Datei Gruppe**  
+ **Dateigruppe**  
  Speichert den Index in der angegebenen Dateigruppe. Diese Liste enthält nur Standarddateigruppen (ROW). Die Standardauswahl in der Liste ist die PRIMARY-Dateigruppe der Datenbank.  
   
- **FILESTREAM-Datei Gruppe**  
+ **FILESTREAM-Dateigruppe**  
  Gibt die Dateigruppe für FILESTREAM-Daten an. Diese Liste zeigt nur FILESTREAM-Dateigruppen an. Die Standardlistenauswahl ist die Dateigruppe PRIMARY FILESTREAM.  
   
  **Partitionsschema**  
@@ -112,24 +112,24 @@ ms.locfileid: "63036218"
   
  Die Option Partitionsschema ist nicht verfügbar, wenn in der Datenbank keine Partitionsschemas vorhanden sind.  
   
- **FILESTREAM-Partitionsschema**  
+ **Dateidatenstrom-Partitionsschema**  
  Gibt das Partitionsschema für FILESTREAM-Daten an. Das Partitionsschema muss mit dem Schema symmetrisch sein, das in der Option **Partitionsschema** angegeben wird.  
   
  Wenn die Tabelle nicht partitioniert ist, ist das Feld leer.  
   
- **Partitionsschema Parameter**  
+ **Partitionsschemaparameter**  
  Zeigt den Namen der Spalte an, die Teil des Partitionsschemas ist.  
   
  **Tabellenspalte**  
  Wählt die Tabelle oder Sicht aus, die dem Partitionsschema zugeordnet werden soll.  
   
- **Spaltendatentyp**  
+ **Datentyp der Spalte**  
  Zeigt Datentypinformationen zu der Spalte an.  
   
 > [!NOTE]  
 >  Wenn die Tabellenspalte eine berechnete Spalte ist, wird unter **Spaltendatentyp** „berechnete Spalte“ angezeigt.  
   
- **Online Verarbeitung von DML-Anweisungen während der Index Verschiebung zulassen**  
+ **Onlineverarbeitung von DML-Anweisungen während der Indexverschiebung zulassen**  
  Ermöglicht Benutzern während des Indexvorgangs den Zugriff auf die zugrunde liegenden Tabellen- bzw. gruppierten Indexdaten und zugehörigen nicht gruppierten Indizes.  
   
 > [!NOTE]  
@@ -141,7 +141,7 @@ ms.locfileid: "63036218"
 > [!NOTE]  
 >  Wird ein Wert angegeben, der über der Anzahl der verfügbaren CPUs liegt, wird die tatsächliche Anzahl der CPUs verwendet.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-move-an-existing-index-to-a-different-filegroup"></a>So verschieben Sie einen vorhandenen Index in eine andere Dateigruppe  
   

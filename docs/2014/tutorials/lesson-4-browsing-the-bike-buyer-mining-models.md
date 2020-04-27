@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 709df371d840d4b24e420b4fcd08750fd31e8075
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63070889"
 ---
 # <a name="lesson-4-browsing-the-bike-buyer-mining-models"></a>Lektion 4: Durchsuchen des Bike Buyer-Miningmodells
@@ -79,7 +79,7 @@ WHERE NODE_SUPPORT > 100
     <select list>   
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     *  
@@ -93,7 +93,7 @@ WHERE NODE_SUPPORT > 100
     [<mining model>]   
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     [Clustering]  
@@ -154,7 +154,7 @@ WHERE IsInNode('<node id>')
     <select list>   
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     *  
@@ -168,7 +168,7 @@ WHERE IsInNode('<node id>')
     [<mining model>]   
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     [Decision Tree]  
@@ -221,7 +221,7 @@ SELECT DISTINCT [<column>]
     [<column,name>   
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     [Bike Buyer]  
@@ -233,7 +233,7 @@ SELECT DISTINCT [<column>]
     [<mining model>]   
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     [Decision Tree]  

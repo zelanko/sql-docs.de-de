@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 869c74a0a739ce95ccb91861d031da1d5d0c6510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151057"
 ---
 # <a name="display-and-save-execution-plans"></a>Anzeigen und Speichern von Ausführungsplänen
@@ -31,7 +31,7 @@ ms.locfileid: "63151057"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Anzeigen des geschätzten Ausführungsplans](display-the-estimated-execution-plan.md)  
+-   [Anzeigen des geschätzten Ausführungs Plans](display-the-estimated-execution-plan.md)  
   
 -   [Anzeigen eines tatsächlichen Ausführungsplans](display-an-actual-execution-plan.md)  
   

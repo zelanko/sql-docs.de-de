@@ -13,24 +13,24 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b2ebcd653adebed5541b1d2cdf814f638d0af683
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144331"
 ---
 # <a name="manage-the-size-of-the-transaction-log-file"></a>Verwalten der Größe der Transaktionsprotokolldatei
   In einigen Fällen kann sich das physische Verkleinern oder Vergrößern der physischen Protokolldatei des Transaktionsprotokolls einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank als nützlich erweisen. Dieses Thema enthält Informationen zum Überwachen der Größe eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Transaktionsprotokolls, Verkleinern des Transaktionsprotokolls, Hinzufügen oder Vergrößern einer Transaktionsprotokolldatei, Optimieren der Wachstumsrate des **tempdb** -Transaktionsprotokolls und Steuern der Vergrößerung einer Transaktionsprotokolldatei.  
   
   
-##  <a name="MonitorSpaceUse"></a>Überwachen des Protokoll Speicherplatzes  
+##  <a name="monitor-log-space-use"></a><a name="MonitorSpaceUse"></a>Überwachen des Protokoll Speicherplatzes  
  Der Protokollspeicherplatz kann mit DBCC SQLPERF (LOGSPACE) überwacht werden. Dieser Befehl gibt Informationen zum derzeit belegten Protokollspeicherplatz zurück und zeigt an, wann das Transaktionsprotokoll abgeschnitten werden muss. Weitere Informationen finden Sie unter [DBCC SQLPERF &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-sqlperf-transact-sql). Informationen zur aktuellen Größe einer Protokolldatei, ihrer maximalen Größe sowie der für die Datei festgelegten automatischen Vergrößerungsoption können Sie auch den Spalten **size**, **max_size**, and **growth** für die betreffende Protokolldatei in **sys.database_files** entnehmen. Weitere Informationen finden Sie unter [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql).  
   
 > [!IMPORTANT]  
 >  Vermeiden Sie das Überlasten des Protokolldatenträgers.  
   
   
-##  <a name="ShrinkSize"></a>Verkleinert die Größe der Protokolldatei.  
+##  <a name="shrink-the-size-of-the-log-file"></a><a name="ShrinkSize"></a>Verkleinert die Größe der Protokolldatei.  
  Sie müssen zum Reduzieren der physischen Größe einer physischen Protokolldatei die Protokolldatei verkleinern. Dies ist nützlich, wenn Sie wissen, dass eine Transaktionsprotokolldatei nicht verwendeten und nicht benötigten Speicherplatz enthält. Das Verkleinern einer Protokolldatei kann nur stattfinden, wenn die Datenbank online und mindestens eine virtuelle Protokolldatei frei ist. In einigen Fällen ist eine Verkleinerung des Protokolls möglicherweise erst nach der nächsten Protokollkürzung möglich.  
   
 > [!NOTE]  
@@ -50,15 +50,15 @@ ms.locfileid: "63144331"
   
  `To monitor log space`  
   
--   [DBCC SQLPERF &#40;Transact-SQL-&#41;](/sql/t-sql/database-console-commands/dbcc-sqlperf-transact-sql)  
+-   [DBCC SQLPERF &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-sqlperf-transact-sql)  
   
--   [sys. database_files &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) (Weitere Informationen finden Sie in den Spalten **size**, **max_size**und **Growth** für die Protokolldateien.)  
+-   [sys.database_files &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-files-transact-sql) (Informationen finden Sie in den Spalten **size**, **max_size** und **growth** für die Protokolldateien.)  
   
 > [!NOTE]  
 >  Für das Verkleinern von Datenbank- und Protokolldateien kann eine automatische Ausführung festgelegt werden. Es wird jedoch von einer automatischen Verkleinerung abgeraten, und die `autoshrink`-Datenbankeigenschaft ist in den Standardeinstellungen auf FALSE festgelegt. Wenn `autoshrink` auf TRUE festgelegt ist, wird die Größe einer Datei nur dann automatisch verkleinert, wenn mehr als 25 Prozent des Speicherplatzes ungenutzt sind. Die Datei wird entweder auf eine Größe verkleinert, bei der 25 Prozent der Datei aus nicht verwendetem Speicherplatz bestehen, oder auf die ursprüngliche Dateigröße, je nachdem, welcher Wert größer ist. Weitere Informationen zum Ändern der Einstellung der- `autoshrink` Eigenschaft finden Sie unter [anzeigen oder Ändern der Eigenschaften einer Datenbank](../databases/view-or-change-the-properties-of-a-database.md): Verwenden Sie die **Automatisches Verkleinern** -Eigenschaft auf der **options** Seite oder [ALTER DATABASE SET-Optionen &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options)-verwenden Sie die AUTO_SHRINK-Option.  
   
   
-##  <a name="AddOrEnlarge"></a>Hinzufügen oder Vergrößern einer Protokolldatei  
+##  <a name="add-or-enlarge-a-log-file"></a><a name="AddOrEnlarge"></a>Hinzufügen oder Vergrößern einer Protokolldatei  
  Alternativ können Sie auch Speicherplatz schaffen, indem Sie entweder die vorhandene Protokolldatei vergrößern (sofern der Speicherplatz dies zulässt) oder der Datenbank eine neue Protokolldatei hinzufügen, wofür normalerweise ein anderer Datenträger verwendet wird.  
   
 -   Sie können der Datenbank eine Protokolldatei hinzufügen, indem Sie die ADD LOG FILE-Klausel der ALTER DATABASE-Anweisung verwenden. Durch das Hinzufügen einer Protokolldatei kann das Protokoll vergrößert werden.  
@@ -66,11 +66,11 @@ ms.locfileid: "63144331"
 -   Sie können die Protokolldatei vergrößern, indem Sie die MODIFY FILE-Klausel der ALTER DATABASE-Anweisung verwenden und die SIZE- und MAXSIZE-Syntax angeben. Weitere Informationen zu dieser Einstellung finden Sie unter [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  
   
   
-##  <a name="tempdbOptimize"></a>Optimieren der Größe des tempdb-Transaktions Protokolls  
+##  <a name="optimize-the-size-of-the-tempdb-transaction-log"></a><a name="tempdbOptimize"></a>Optimieren der Größe des tempdb-Transaktions Protokolls  
  Beim Neustarten einer Serverinstanz wird das Transaktionsprotokoll der **tempdb** -Datenbank auf seine ursprüngliche Größe (vor einer automatischen Größenerweiterung) zurückgesetzt. Dies kann eine Leistungsminderung des **tempdb** -Transaktionsprotokolls zur Folge haben. Der damit verbundene Verwaltungsaufwand lässt sich vermeiden, indem Sie nach dem Starten oder erneuten Starten der Serverinstanz die Größe des **tempdb** -Transaktionsprotokolls erhöhen. Weitere Informationen finden Sie unter [tempdb Database](../databases/tempdb-database.md).  
   
   
-##  <a name="ControlGrowth"></a>Steuern der Vergrößerung einer Transaktionsprotokoll Datei  
+##  <a name="control-the-growth-of-a-transaction-log-file"></a><a name="ControlGrowth"></a>Steuern der Vergrößerung einer Transaktionsprotokoll Datei  
  Sie können die [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)-Anweisung verwenden, um die Vergrößerung einer Transaktionsprotokolldatei zu verwalten. Beachten Sie Folgendes:  
   
 -   Verwenden Sie die Option SIZE, um die aktuelle Dateigröße in KB-, MB-, GB- und TB-Einheiten zu ändern.  

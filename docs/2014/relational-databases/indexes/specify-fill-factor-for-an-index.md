@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d4fe48814f8d707b0feeacf7a9a84c79df0ffe71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63036223"
 ---
 # <a name="specify-fill-factor-for-an-index"></a>Angeben des Füllfaktors für einen Index
@@ -44,9 +44,9 @@ ms.locfileid: "63036223"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Performance"></a> Leistungsaspekte  
+###  <a name="performance-considerations"></a><a name="Performance"></a> Leistungsaspekte  
   
 #### <a name="page-splits"></a>Seitenteilung  
  Mit einem richtig ausgewählten Füllfaktor kann das Risiko von Seitenteilungen verringert werden, indem genug Speicherplatz für Indexerweiterungen bereitgestellt wird, während der dem Index zugrunde liegenden Tabelle Daten hinzugefügt werden. Wenn einer vollen Indexseite eine neue Zeile hinzugefügt wird, verschiebt [!INCLUDE[ssDE](../../includes/ssde-md.md)] ungefähr die Hälfte der Zeilen auf eine neue Seite, um Platz für die neue Zeile bereitzustellen. Diese Neuorganisation wird auch Seitenteilung genannt. Eine Seitenteilung schafft Platz für neue Datensätze, beansprucht jedoch Zeit und Ressourcen. Seitenteilungen können auch Fragmentierungen verursachen, die zu vermehrten E/A-Vorgängen führen. Bei häufigen Seitenteilungen kann der Index neu erstellt und dabei ein neuer oder bereits vorhandener Füllfaktor verwendet werden, um die Daten neu zu verteilen. Weitere Informationen finden Sie unter [Neuorganisieren und Neuerstellen von Indizes](reorganize-and-rebuild-indexes.md).  
@@ -56,12 +56,12 @@ ms.locfileid: "63036223"
 #### <a name="adding-data-to-the-end-of-the-table"></a>Hinzufügen von Daten zum Tabellenende  
  Ein Füllfaktor ungleich 0 oder 100 kann zur Leistungsverbesserung beitragen, wenn die neuen Daten gleichmäßig in der Tabelle verteilt werden. Wenn jedoch alle Daten am Tabellenende hinzugefügt werden, wird der freie Speicherplatz auf den Indexseiten nicht aufgefüllt. Wenn die Indexschlüsselspalte z. B. eine IDENTITY-Spalte ist, wird der Schlüssel für neue Zeilen stets erhöht, und die Indexzeilen werden am Ende des Indexes logisch hinzugefügt. Wenn vorhandene Zeilen mit Daten aktualisiert werden, die die Größe der Zeilen verlängern, verwenden Sie einen Füllfaktor von weniger als 100. Durch die zusätzlichen Bytes auf jeder Seite werden die Seitenteilungen minimiert, die durch die zusätzliche Länge der Zeilen verursach werden.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht. Der Benutzer muss ein Mitglied der festen Serverrolle **sysadmin** bzw. der festen Datenbankrollen **db_ddladmin** und **db_owner** sein.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-specify-a-fill-factor-by-using-table-designer"></a>So geben Sie einen Füllfaktor mit dem Tabellen-Designer an  
   
@@ -99,7 +99,7 @@ ms.locfileid: "63036223"
   
 8.  Klicken Sie auf **OK**.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-specify-a-fill-factor-in-an-existing-index"></a>So geben Sie einen Füllfaktor für einen vorhandenen Index an  
   

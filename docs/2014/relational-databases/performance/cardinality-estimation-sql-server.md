@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f7c3f609bd2b25fcb3e3553497ead2baad476f2f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151046"
 ---
 # <a name="cardinality-estimation-sql-server"></a>Kardinalitätsschätzung (SQL Server)
@@ -45,9 +45,9 @@ ms.locfileid: "63151046"
 ## <a name="new-xevents"></a>Neue XEvents  
  Es gibt zwei neue query_optimizer_estimate_cardinality-XEvents zur Unterstützung der neuen Abfragepläne.  
   
--   *query_optimizer_estimate_cardinality* tritt auf, wenn der Abfrageoptimierer die Kardinalität für einen relationalen Ausdruck schätzt.  
+-   *query_optimizer_estimate_cardinality* wird ausgeführt, wenn der Abfrageoptimierer die Kardinalität für einen relationalen Ausdruck schätzt.  
   
--   *query_optimizer_force_both_cardinality_estimation*_behaviors tritt auf, wenn sowohl Ablaufverfolgungsflags 2312 als auch 9481 aktiviert sind, und versucht, sowohl das alte als auch das neue Verhalten der Kardinalitätsschätzung gleichzeitig zu erzwingen.  
+-   *query_optimizer_force_both_cardinality_estimation*_behaviors wird ausgeführt, wenn die beiden Ablaufverfolgungsflags 2312 und 9481 aktiviert sind und versucht wird, sowohl das alte als auch das neue Verhalten der Kardinalitätsschätzung zu erzwingen.  
   
 ## <a name="examples"></a>Beispiele  
  In den folgenden Beispielen werden einige Änderungen der neuen Kardinalitätsschätzung veranschaulicht. Der Code für die Kardinalitätsschätzung wurde umgeschrieben. Die Logik ist komplex, sodass nicht alle Änderungen detailliert erläutert werden können.  

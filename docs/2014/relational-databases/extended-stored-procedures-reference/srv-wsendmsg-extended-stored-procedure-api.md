@@ -21,17 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 18b166472cff011b3766645dde61f562c766ff2c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63140448"
 ---
 # <a name="srv_wsendmsg-extended-stored-procedure-api"></a>srv_wsendmsg (API für erweiterte gespeicherte Prozeduren)
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
   
  Sendet eine Unicode-Meldung an den Client.  
   
@@ -60,7 +59,7 @@ msglen
  *Msgnum*  
  Eine 4-Byte-Meldungsnummer.  
   
- *severity*  
+ *Schweregrad*  
  Gibt den Schweregrad des Fehlers an. Ein Schweregrad kleiner oder gleich 10 wird als Informationsmeldung betrachtet, bei einem höheren Wert handelt es sich um einen Fehler.  
   
  *Nachricht*  
@@ -72,16 +71,14 @@ msglen
 ## <a name="returns"></a>Rückgabe  
  SUCCEED oder FAIL.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Verwenden Sie diese Funktion, um Meldungen in Unicode zu senden. Sie ähnelt **srv_sendmsg**, jedoch handelt es sich bei der gesendeten Meldung um eine WCHAR-Zeichenfolge und nicht um eine Zeichenfolge des Typs DBCHAR. Beachten Sie, dass die Länge der Meldung in Zeichen und nicht in Byte angegeben wird und dass *msglen* niemals SRV_NULLTERM entspricht.  
   
  In folgenden Fällen gibt die Funktion FAIL zurück:  
   
--   
-  *msglen* befindet sich nicht im Bereich zwischen 0 und 32242.  
+-   *msglen* befindet sich nicht im Bereich zwischen 0 und 32242.  
   
--   
-  *msglen* entspricht 0, der Meldungszeiger ist jedoch NULL.  
+-   *msglen* entspricht 0, der Meldungszeiger ist jedoch NULL.  
   
 -   Beim Versenden der Fehlermeldung über das Netzwerk tritt ein Fehler auf.  
   
@@ -89,6 +86,6 @@ msglen
 >  Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren sorgfältig prüfen, und Sie sollten die kompilierten DLL-Dateien testen, bevor Sie sie auf einem Produktionsserver installieren. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [srv_sendmsg &#40;API für erweiterte gespeicherte Prozeduren&#41;](srv-sendmsg-extended-stored-procedure-api.md)  
+ [srv_sendmsg (API für die erweiterte gespeicherte Prozedur)](srv-sendmsg-extended-stored-procedure-api.md)  
   
   

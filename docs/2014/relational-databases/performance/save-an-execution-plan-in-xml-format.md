@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b2e058eba4e21e5e9060e2315dad3c865c46bb78
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150864"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Speichern eines Ausführungsplans im XML-Format
@@ -65,9 +65,9 @@ ms.locfileid: "63150864"
   
 4.  Klicken Sie im Bereich **Ergebnisse** mit der rechten Maustaste auf den **Microsoft SQL Server XML Showplan** , der den Abfrageplan enthält, und klicken Sie dann auf **Ergebnisse speichern unter**.  
   
-5.  Klicken Sie im Dialogfeld **Rasterergebnisse** \<speichern** bzw. **Ergebnisse** speichern im Feld Dateityp** auf **Alle Dateien (\*.\*)**.  
+5.  Klicken Sie im Dialogfeld Raster-oder Text> **Ergebnisse** **Speichern** \<im Feld **Dateityp** auf **alle Dateien (\*.\*)**.  
   
-6.  Geben Sie in das Feld **Dateiname** einen Namen im Format \<Name **>.sqlplan** ein, und klicken Sie auf **Speichern**.  
+6.  Geben Sie im Feld **Dateiname** einen Namen im Format \<Name **>. sqlplan**ein, und klicken Sie dann auf **Speichern**.  
   
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>So speichern Sie einen Ausführungsplan mithilfe der SQL Server Management Studio-Optionen  
   
@@ -79,7 +79,7 @@ ms.locfileid: "63150864"
   
 3.  Stellen Sie im Dialogfeld **Speichern unter** sicher, dass der **Dateityp** auf **Ausführungsplandateien (\*.sqlplan)** festgelegt ist.  
   
-4.  Geben Sie in das Feld **Dateiname** einen Namen im Format \<Name **>.sqlplan** ein, und klicken Sie auf **Speichern**.  
+4.  Geben Sie im Feld **Dateiname** einen Namen im Format \<Name **>. sqlplan**ein, und klicken Sie dann auf **Speichern**.  
   
 ### <a name="to-open-a-saved-xml-query-plan-in-sql-server-management-studio"></a>So öffnen Sie einen gespeicherten XML-Abfrageplan in SQL Server Management Studio  
   
@@ -92,7 +92,7 @@ ms.locfileid: "63150864"
      Alternativ können Sie im Windows-Explorer auf eine Datei mit der Erweiterung **.sqlplan**doppelklicken. Der Plan wird in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]geöffnet.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SET SHOWPLAN_XML &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-showplan-xml-transact-sql)   
- [SET STATISTICS XML &#40;Transact-SQL-&#41;](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
+ [Festlegen SHOWPLAN_XML &#40;Transact-SQL-&#41;](/sql/t-sql/statements/set-showplan-xml-transact-sql)   
+ [SET STATISTICS XML &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-statistics-xml-transact-sql)  
   
   

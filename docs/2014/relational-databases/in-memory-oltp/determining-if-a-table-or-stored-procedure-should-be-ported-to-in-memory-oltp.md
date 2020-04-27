@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de6a778f9cdbfb7ab916f40a5250ca4f9e20c811
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63072374"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Bestimmen, ob eine Tabelle oder eine gespeicherte Prozedur zu In-Memory OLTP portiert werden soll
@@ -31,7 +31,7 @@ ms.locfileid: "63072374"
   
 -   Generieren von Transaktionsleistungsanalyseberichten, um leistungskritische Tabellen und gespeicherte Prozeduren zu identifizieren  
   
- Weitere Informationen zu Migrationsmethoden finden Sie unter [In-Memory OLTP - Common Workload Patterns and Migration Considerations (In-Memory-OLTP: Allgemeine Workloadmuster und Überlegungen zur Migration)](https://msdn.microsoft.com/library/dn673538.aspx).  
+ Informationen zu Migrationsmethoden finden Sie unter [in-Memory OLTP-allgemeine Arbeits Auslastungs Muster und Überlegungen zur Migration](https://msdn.microsoft.com/library/dn673538.aspx).  
   
  Der Transaktionsleistungssammler und die Transaktionsleistungsanalyseberichte helfen Ihnen, die folgenden Aufgaben auszuführen:  
   
@@ -46,7 +46,7 @@ ms.locfileid: "63072374"
   
  Der Transaktions Leistungs Sammler und die Möglichkeit, einen Transaktions Leistungsanalyse Bericht zu generieren, werden installiert, wenn Sie bei der Installation [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]von die Option **Verwaltungs Tools-einfach** oder **Verwaltungs Tools-erweitert** auswählen.  
   
-## <a name="best-practices"></a>Bewährte Methoden  
+## <a name="best-practices"></a>Empfehlungen  
  Der empfohlene Workflow wird im folgenden Flussdiagramm veranschaulicht. Die gelben Knoten stellen optionale Prozeduren dar:  
   
  ![AMR-Workflow](../../database-engine/media/amr-1.gif "AMR-Workflow")  
@@ -99,7 +99,7 @@ ms.locfileid: "63072374"
   
 7.  Klicken Sie auf dem nächsten Bildschirm auf **Fertig** stellen, um den Assistenten zu beenden.  
   
-### <a name="configure-data-collection-on-a-local-includessnoversionincludesssnoversion-mdmd-instance"></a>Konfigurieren der Datensammlung auf einer lokalen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz  
+### <a name="configure-data-collection-on-a-local-ssnoversion-instance"></a>Konfigurieren der Datensammlung auf einer lokalen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Instanz  
  Für die Datensammlung muss der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent gestartet werden. Sie müssen auf einem Server nur einen Datensammler konfigurieren.  
   
  Ein Datensammler kann auf einem SQL Server 2012 oder einer höheren Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]konfiguriert werden.  
@@ -116,9 +116,9 @@ ms.locfileid: "63072374"
   
 5.  Wählen Sie im Feld mit der Bezeichnung **Datensammler Sätze auswählen, die Sie aktivieren möchten**die Option **Transaktions Leistungsdaten-Sammlungs Sätze**aus. Klicken Sie, sobald Sie fertig sind, auf **Weiter**.  
   
-6.  Überprüfen Sie die Auswahl. Klicken Sie auf **zurück** , um die Einstellungen zu ändern. Klicken Sie **abschließend auf Fertig** stellen.  
+6.  Überprüfen Sie die Auswahl. Klicken Sie auf **zurück** , um die Einstellungen zu ändern. Klicken Sie anschließend auf **Fertig stellen** .  
   
-###  <a name="xxx"></a>Konfigurieren der Datensammlung auf einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Remote Instanz  
+###  <a name="configure-data-collection-on-a-remote-ssnoversion-instance"></a><a name="xxx"></a>Konfigurieren der Datensammlung auf einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Remote Instanz  
  Die Datensammlung erfordert, dass der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Agent für die Instanz gestartet wird, die die Daten sammeln soll.  
   
  Ein Datensammler kann auf einem SQL Server 2012 oder einer höheren Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]konfiguriert werden.  

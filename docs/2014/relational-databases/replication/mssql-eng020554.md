@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 744ab7a10db83cffa098bc97aa0ceb2c615481fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63057120"
 ---
 # <a name="mssql_eng020554"></a>MSSQL_ENG020554
@@ -68,17 +68,17 @@ ms.locfileid: "63057120"
   
     -   [Arbeiten mit Replikations-Agent-Profilen](agents/replication-agent-profiles.md)  
   
-    -   [Anzeigen und Ändern der Befehlszeilenparameter des Replikations-Agents &#40;SQL Server Management Studio&#41;](agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [Anzeigen und Ändern von Befehlszeilenparametern des Replikations-Agents &#40;SQL Server Management Studio&#41;](agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
     -   [Ausführbare Konzepte für den Replikations-Agent](concepts/replication-agent-executables-concepts.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwaltung des Replikations-Agents](agents/replication-agent-administration.md)   
- [Fehler- und Ereignisreferenz &#40;Replikation&#41;](errors-and-events-reference-replication.md)   
+ [Replikations-Agent](agents/replication-agent-administration.md)   
+ [Fehler-und Ereignis Referenz &#40;Replikations&#41;](errors-and-events-reference-replication.md)   
  [Replikations Verteilungs-Agent](agents/replication-distribution-agent.md)   
  [Replikations Protokolllese-Agent](agents/replication-log-reader-agent.md)   
  [Replikations Merge-Agent](agents/replication-merge-agent.md)   
  [Replikations Warteschlangenlese-Agent](agents/replication-queue-reader-agent.md)   
- [Replication Snapshot Agent](agents/replication-snapshot-agent.md)  
+ [Replikationsmomentaufnahme-Agent](agents/replication-snapshot-agent.md)  
   
   

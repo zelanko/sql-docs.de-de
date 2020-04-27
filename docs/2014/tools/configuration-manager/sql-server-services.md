@@ -11,20 +11,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 08b9f31035b2d87ca89154497c90089fb72d0987
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150592"
 ---
 # <a name="sql-server-services"></a>SQL Server-Dienste
-  Dieser Abschnitt enthält die F1-Hilfe Themen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die Dialogfelder [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienste in Configuration Manager.  
+  Dieser Abschnitt enthält die F1-Hilfethemen zu den Dialogfeldern der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste im [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager.  
   
 > [!NOTE]  
 >  Wenn Sie den **SQL Server-Konfigurations-Manager** auf einem Knoten eines Clusters öffnen, der die Ressourcen nicht hostet, werden die Dienste als beendet angezeigt.  
   
 > [!NOTE]  
->  Falls die Knoten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste nicht durch die auf dem Computer verfügbaren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste aufgefüllt werden, haben Sie möglicherweise keine ausreichenden Berechtigungen zum Zugreifen auf die Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI). Informationen zum Konfigurieren von Berechtigungen für WMI finden Sie im Thema "Vorgehensweise: Konfigurieren von WMI zum Anzeigen des Serverstatus in SQL Server-Tools" in der Onlinedokumentation.  
+>  Falls die Knoten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste nicht durch die auf dem Computer verfügbaren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienste aufgefüllt werden, haben Sie möglicherweise keine ausreichenden Berechtigungen zum Zugreifen auf die Windows-Verwaltungsinstrumentation (Windows Management Instrumentation, WMI). Informationen zum Konfigurieren von Berechtigungen für WMI finden Sie in der Online-Dokumentation im Thema "Vorgehensweise: Konfigurieren von WMI zum Anzeigen des Serverstatus in SQL Server-Tools."  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Hilfe zu SQL Server-Konfigurations-Manager](../../../2014/tools/configuration-manager/sql-server-configuration-manager-help.md)  

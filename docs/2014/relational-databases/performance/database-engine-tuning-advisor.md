@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b021cb21df1b3c27e7f43c3ef92650eda4c2cf86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151199"
 ---
 # <a name="database-engine-tuning-advisor"></a>Datenbankoptimierungsratgeber
@@ -63,7 +63,7 @@ ms.locfileid: "63151199"
  Grafische Benutzeroberfläche des Datenbankoptimierungsratgebers  
  Eine benutzerfreundliche Schnittstelle, über die Sie die Arbeitsauslastung angeben und verschiedene Optimierungsoptionen aktivieren können.  
   
- **DTA** Gebrauchs  
+ **dta** -Hilfsprogramm  
  Die Befehlszeilenversion des Datenbankoptimierungsratgebers. Mit dem Hilfsprogramm **dta** soll es Ihnen ermöglicht werden, die Funktionalität des Datenbankoptimierungsratgebers in Anwendungen und Skripts zu verwenden.  
   
  workload  

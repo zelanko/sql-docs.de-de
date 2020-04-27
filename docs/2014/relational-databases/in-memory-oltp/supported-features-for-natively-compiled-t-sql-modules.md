@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155720"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Unterstützte Konstrukte in systemintern kompilierten gespeicherten Prozeduren
@@ -28,7 +28,7 @@ ms.locfileid: "63155720"
   
 -   [Abfrageoberfläche in systemintern kompilierten gespeicherten Prozeduren](#qsancsp)  
   
--   [Überwachung](#auditing)  
+-   [Auditing](#auditing)  
   
 -   [Tabelle, Abfrage und Joinhinweise](#tqh)  
   
@@ -38,7 +38,7 @@ ms.locfileid: "63155720"
   
  Vollständige Informationen zu nicht unterstützten Konstrukten sowie Informationen zu Umgehungslösungen zu einigen der nicht unterstützten Funktionen in systemintern kompilierten gespeicherten Prozeduren finden Sie unter [Migration Issues for Natively Compiled Stored Procedures](migration-issues-for-natively-compiled-stored-procedures.md). Weitere Informationen zu nicht unterstützten Funktionen finden Sie unter [Von In-Memory-OLTP nicht unterstützte Transact-SQL-Konstrukte](transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
   
-##  <a name="pncsp"></a>Programmierbarkeit in System intern kompilierten gespeicherten Prozeduren  
+##  <a name="programmability-in-natively-compiled-stored-procedures"></a><a name="pncsp"></a>Programmierbarkeit in System intern kompilierten gespeicherten Prozeduren  
  Folgende werden unterstützt:  
   
 -   BEGIN ATOMIC (auf der äußeren Ebene der gespeicherten Prozedur), LANGUAGE, ISOLATION LEVEL, DATEFORMAT und DATEFIRST  
@@ -63,7 +63,7 @@ ms.locfileid: "63155720"
   
      Um die Leistung zu verbessern, können Sie einen einzelnen TRY/CATCH-Block für eine gesamte systemintern kompilierte gespeicherte Prozedur verwenden.  
   
-##  <a name="so"></a>Unterstützte Operatoren  
+##  <a name="supported-operators"></a><a name="so"></a>Unterstützte Operatoren  
  Die folgenden Operatoren werden unterstützt.  
   
 -   [Vergleichs Operatoren &#40;Transact-SQL-&#41;](/sql/t-sql/language-elements/comparison-operators-transact-sql) (z. b \<. >,, >= und <=) werden in Bedingungen (While) unterstützt.  
@@ -78,7 +78,7 @@ ms.locfileid: "63155720"
   
 -   Bitweise Operatoren ~, &, |, und ^  
   
-##  <a name="bfncsp"></a>Integrierte Funktionen in nativ kompilierten gespeicherten Prozeduren  
+##  <a name="built-in-functions-in-natively-compiled-stored-procedures"></a><a name="bfncsp"></a>Integrierte Funktionen in nativ kompilierten gespeicherten Prozeduren  
  Die folgenden Funktionen werden in Standardeinschränkungen in speicheroptimierten Tabellen und in systemintern kompilierten gespeicherte Prozeduren unterstützt.  
   
 -   Mathematische Funktionen: ARCCOS, ARCSIN, ARCTAN, ATN2, COS, COT, GRAD, EXP, LOG, LOG10, PI, POTENZ, BOGENMASS, ZUFALLSZAHL, SIN, WURZEL, QUADRAT und TAN  
@@ -99,7 +99,7 @@ ms.locfileid: "63155720"
   
 -   Systemfunktionen: @@rowcount. Durch Anweisungen in nativ kompilierten gespeicherten Prozeduren wird @@rowcount aktualisiert, und Sie können @@rowcount in einer nativ kompilierten gespeicherten Prozedur verwenden, um die Anzahl der Zeilen zu bestimmen, die von der letzten Anweisung betroffen sind, die innerhalb der nativ kompilierten gespeicherten Prozedur ausgeführt wurde. Allerdings wird @@rowcount am Anfang und am Ende der Ausführung einer nativ kompilierten gespeicherten Prozedur auf 0 zurückgesetzt.  
   
-##  <a name="qsancsp"></a>Abfrage Oberfläche in System intern kompilierten gespeicherten Prozeduren  
+##  <a name="query-surface-area-in-natively-compiled-stored-procedures"></a><a name="qsancsp"></a>Abfrage Oberfläche in System intern kompilierten gespeicherten Prozeduren  
  Folgende werden unterstützt:  
   
 -   BETWEEN  
@@ -138,8 +138,7 @@ ms.locfileid: "63155720"
   
 -   Die `WITH TIES`-Klausel bietet keine Unterstützung für `PERCENT` oder `TOP`.  
   
--   
-  `TOP` in Kombination mit `ORDER BY` unterstützt höchstens den Wert 8.192 bei Verwendung einer Konstante in der `TOP`-Klausel. Dieser Grenzwert kann herabgesetzt werden, wenn die Abfrage Joins oder Aggregatfunktionen enthält. (Beispielsweise liegt die Beschränkung bei einem Join mit zwei Tabellen bei 4.096 Zeilen. Bei zwei Joins mit drei Tabellen lautet der Grenzwert 2.730 Zeilen).  
+-   `TOP` in Kombination mit `ORDER BY` unterstützt höchstens den Wert 8.192 bei Verwendung einer Konstante in der `TOP`-Klausel. Dieser Grenzwert kann herabgesetzt werden, wenn die Abfrage Joins oder Aggregatfunktionen enthält. (Beispielsweise liegt die Beschränkung bei einem Join mit zwei Tabellen bei 4.096 Zeilen. Bei zwei Joins mit drei Tabellen lautet der Grenzwert 2.730 Zeilen).  
   
      Sie können Ergebnisse erhalten, die größer als 8.192 sind, indem Sie die Anzahl von Zeilen in einer Variablen speichern:  
   
@@ -152,12 +151,12 @@ ms.locfileid: "63155720"
   
  Diese Einschränkungen gelten nicht für den interpretierten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Zugriff auf speicheroptimierte Tabellen.  
   
-##  <a name="auditing"></a>Sprüfungs  
+##  <a name="auditing"></a><a name="auditing"></a>Sprüfungs  
  Überwachung auf Prozedurebene wird für systemintern kompilierte gespeicherte Prozeduren unterstützt. Überwachung auf Anweisungsebene wird nicht unterstützt.  
   
  Weitere Informationen zur Überwachung finden Sie unter [Erstellen einer Serverüberwachung und Datenbanküberwachungsspezifikation](../security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   
-##  <a name="tqh"></a>Tabellen-, Abfrage-und Joinhinweise  
+##  <a name="table-query-and-join-hints"></a><a name="tqh"></a>Tabellen-, Abfrage-und Joinhinweise  
  Folgende werden unterstützt:  
   
 -   INDEX-, FORCESCAN- und FORCESEEK-Hinweise, entweder in der Tabellenhinweissyntax oder in der [OPTION-Klausel &#40;Transact-SQL&#41;](/sql/t-sql/queries/option-clause-transact-sql) der Abfrage.  
@@ -170,7 +169,7 @@ ms.locfileid: "63155720"
   
  Weitere Informationen finden Sie unter [Hinweise &#40;Transact-SQL-&#41;](/sql/t-sql/queries/hints-transact-sql).  
   
-##  <a name="los"></a>Einschränkungen bei der Sortierung  
+##  <a name="limitations-on-sorting"></a><a name="los"></a>Einschränkungen bei der Sortierung  
  Sie können mehr als 8.000 Zeilen in einer Abfrage sortieren, die [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) und eine [ORDER BY-Klausel &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) verwendet. Ohne die [ORDER BY-Klausel &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) kann [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) eine Sortierung von bis zu 8.000 Zeilen durchführen (weniger Zeilen, falls es Verknüpfungen gibt).  
   
  Wenn die Abfrage jeweils den Operator [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) und eine [ORDER BY-Klausel &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql) verwendet, können Sie bis zu 8192 Zeilen für den TOP-Operator angeben. Wenn Sie mehr als 8192 Zeilen angeben, wird die Fehlermeldung angezeigt: **Msg 41398, Level 16, State 1, Procedure *\<ProzedurName>*, Line *\<ZeilenNummer>* Der Operator TOP kann maximal 8192 Zeilen zurückgeben; *\<Zahl>* wurde angefordert.**  
@@ -221,7 +220,7 @@ WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 GO  
 ```  
   
- **Einschränkungen für zurückgegebene Zeilen:** Es gibt zwei Fälle, in denen möglicherweise die Anzahl der Zeilen reduziert wird, die vom Top-Operator zurückgegeben werden können:  
+ **Einschränkungen für zurückgegebene Zeilen:** Es gibt zwei Fälle, in denen sich die Anzahl der Zeilen, die vom TOP-Operator zurückgegeben werden können, u. U. verringert:  
   
 -   Verwenden von JOINs in der Abfrage  Die Auswirkungen von JOINs auf die Einschränkung sind vom Abfrageplan abhängig.  
   
@@ -231,6 +230,6 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [System intern kompilierte gespeicherte Prozeduren](natively-compiled-stored-procedures.md)   
- [Migrationsprobleme bei nativ kompilierten gespeicherten Prozeduren](migration-issues-for-natively-compiled-stored-procedures.md)  
+ [Migrationsprobleme bei systemintern kompilierten gespeicherten Prozeduren](migration-issues-for-natively-compiled-stored-procedures.md)  
   
   

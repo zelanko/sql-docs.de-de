@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b81d4e1aeb2192e6a32a34bed74b9cd55a1cb9a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63149708"
 ---
 # <a name="review-the-replay-results"></a>Überprüfen der Wiedergabeergebnisse
-  Nachdem die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay Funktion eine verteilte Wiedergabe abgeschlossen hat, kann die Wiedergabe Aktivität für jeden Client aufgezeichnet und in Ergebnisdateien der Ablauf Verfolgung auf jedem Client gespeichert werden. Um diese Aktivität aufzuzeichnen, müssen Sie beim Ausführen des Verwaltungstools mit der **replay** -Option den **-o** -Parameter verwenden. Weitere Informationen zur Wiedergabeoption finden Sie unter [Wiedergabeoption &#40;Verwaltungstool „Distributed Replay“&#41;](replay-option-distributed-replay-administration-tool.md).  
+  Nachdem das [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributed Replay-Feature eine verteilte Wiedergabe abgeschlossen hat, kann die Wiedergabeaktivität für jeden Client aufgezeichnet und in Ergebnis-Ablaufverfolgungsdateien auf jedem Client gespeichert werden. Um diese Aktivität aufzuzeichnen, müssen Sie beim Ausführen des Verwaltungstools mit der **replay** -Option den **-o** -Parameter verwenden. Weitere Informationen zur Wiedergabeoption finden Sie unter [Wiedergabeoption &#40;Verwaltungstool „Distributed Replay“&#41;](replay-option-distributed-replay-administration-tool.md).  
   
  Der Speicherort für die Ergebnisdateien der Ablaufverfolgung wird vom `<ResultDirectory>` -XML-Element in der Clientkonfigurationsdatei `DReplayClient.xml`, die sich auf jedem Client befindet, angegeben. Die Ablaufverfolgungsdateien im Clientergebnisverzeichnis werden bei jeder Wiedergabe überschrieben.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "63149708"
 ## <a name="event-class-column-mapping"></a>Zuordnung von Spalten zu Ereignisklassen  
  In der folgenden Abbildung wird gezeigt, welche Spalten im Ergebnis der Ablaufverfolgung für die einzelnen Typen von Ereignisklassen, die während der Wiedergabe aufgezeichnet werden, verfügbar sind.  
   
- ![Zuordnung von Ereignis Klassen Spalten](../../database-engine/media/eventclassmappings.gif "Zuordnung von Spalten zu Ereignisklassen")  
+ ![Zuordnung von Spalten zu Ereignisklassen](../../database-engine/media/eventclassmappings.gif "Zuordnung von Spalten zu Ereignisklassen")  
   
 ## <a name="column-descriptions-for-result-trace"></a>Beschreibungen der Spalten für das Ergebnis der Ablaufverfolgung  
  In der folgenden Tabelle werden die Spalten der Ergebnisdaten der Ablaufverfolgung beschrieben.  
@@ -78,8 +78,8 @@ ms.locfileid: "63149708"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Distributed Replay](sql-server-distributed-replay.md)   
- [Distributed Replay: Anforderungen](distributed-replay-requirements.md)   
- [Befehlszeilenoptionen für das Verwaltungstool &#40;Distributed Replay Utility&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
+ [Distributed Replay Anforderungen](distributed-replay-requirements.md)   
+ [Befehlszeilenoptionen für das Verwaltungs Tool &#40;Distributed Replay-Hilfsprogramm&#41;](administration-tool-command-line-options-distributed-replay-utility.md)   
  [Konfigurieren von Distributed Replay](configure-distributed-replay.md)  
   
   

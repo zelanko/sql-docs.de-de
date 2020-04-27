@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: afb62458cb76a1187dce06efadeca00fc8a382f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63151448"
 ---
 # <a name="tcp-ip-properties-ip-addresses-tab"></a>TCP/IP-Eigenschaften (Registerkarte IP-Adressen)
@@ -49,8 +49,7 @@ ms.locfileid: "63151448"
  **TCP-Port**  
  Zeigt den Port an, an dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lauscht, oder ändert diesen. Die Standardinstanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] lauscht an Port 1433.  
   
- 
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] kann an mehreren Ports auf derselben IP-Adresse lauschen. Ports werden (durch Trennzeichen getrennt) im Format 1433,1500,1501 aufgelistet. Dieses Feld ist auf 2047 Zeichen begrenzt.  
+ [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] kann an mehreren Ports auf derselben IP-Adresse lauschen. Ports werden (durch Trennzeichen getrennt) im Format 1433,1500,1501 aufgelistet. Dieses Feld ist auf 2047 Zeichen begrenzt.  
   
  Zum Konfigurieren einer einzelnen IP-Adresse zum Lauschen an mehreren Ports muss der Parameter **Auf Alle Lauschen** auch auf **Nein**festgelegt sein. Diesen finden Sie im Dialogfeld **TCP/IP-Eigenschaften** auf der Registerkarte **Protokolle** . Weitere Informationen finden Sie unter "Vorgehensweise: Konfigurieren der Datenbank-Engine zum Lauschen an mehreren TCP-Ports" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  
   
@@ -58,8 +57,8 @@ ms.locfileid: "63151448"
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Manager zeigt die IP-Adressen an, die zum Zeitpunkt der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügbar waren. Die verfügbaren IP-Adressen können sich ändern, wenn Netzwerkkarten hinzugefügt oder entfernt werden, wenn dynamisch zugewiesene IP-Adressen ablaufen, wenn die Netzwerkstruktur neu konfiguriert wird oder wenn der physische Standort des Computers geändert wird, z. B. bei einem Laptop, über das von einem anderen Gebäude aus eine Verbindung mit dem Netzwerk hergestellt wird. Zum Ändern der IP-Adresse bearbeiten Sie das Feld **IP-Adresse**, und starten Sie anschließend [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Auswählen eines Netzwerkprotokolls](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
- [Erstellen einer gültigen Verbindungszeichenfolge mithilfe von TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
- [SQL Server-Browserdienst](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  
+ [Auswählen eines Netzwerk Protokolls](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
+ [Erstellen einer gültigen Verbindungs Zeichenfolge mithilfe von TCP-IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
+ [SQL Server Browser Service](../../../2014/tools/configuration-manager/sql-server-browser-service.md)  
   
   

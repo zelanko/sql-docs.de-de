@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2017defaba74071b1a12bee14a5d8907e4c71cda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067556"
 ---
 # <a name="time-series-predictions-using-updated-data-intermediate-data-mining-tutorial"></a>Erstellen von Zeitreihenvorhersagen mit aktualisierten Daten (Data Mining-Lernprogramm für Fortgeschrittene)
@@ -65,7 +65,7 @@ ms.locfileid: "63067556"
   
     2.  Wählen Sie für **Feld**die Option **prättimeseries**aus.  
   
-    3.  Geben **** Sie als Alias **vorhergesagte Werte**ein.  
+    3.  Geben **Alias**Sie als Alias **vorhergesagte Werte**ein.  
   
     4.  Ziehen Sie die FeldMenge aus dem Bereich **Mining Modell** in die Spalte **Kriterium/Argument** .  
   
@@ -102,6 +102,6 @@ ms.locfileid: "63067556"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Technische Referenz für den Microsoft Time Series-Algorithmus](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
- [Mining Modell Inhalt von Zeitreihen Modellen &#40;Analysis Services Data Mining-&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Miningmodellinhalt von Zeitreihenmodellen &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

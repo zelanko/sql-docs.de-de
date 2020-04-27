@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 26cc445d3bad5c628628353d5c0c84ffa4755e97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63066334"
 ---
 # <a name="comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial"></a>Vergleichen von Vorhersagen für Modelle zur Planungserstellung (Data Mining-Lernprogramm für Fortgeschrittene)
@@ -34,7 +34,7 @@ ms.locfileid: "63066334"
   
  [REPLACE_MODEL_CASES](#bkmk_REPLACE)  
   
-##  <a name="bkmk_EXTEND"></a>Vergleichen der ursprünglichen Ergebnisse mit Ergebnissen nach dem Hinzufügen von Daten  
+##  <a name="comparing-the-original-results-with-results-after-adding-data"></a><a name="bkmk_EXTEND"></a>Vergleichen der ursprünglichen Ergebnisse mit Ergebnissen nach dem Hinzufügen von Daten  
  Sehen wir uns nur die Daten für die M200-Produktlinie in der Pazifikregion an, um zu erfahren, wie sich das Aktualisieren des Modells mit neuen Daten auf die Ergebnisse auswirkt. Erinnern Sie sich, dass die ursprüngliche Datenreihe im Juni 2004 endete und wir neue Daten für Juli, August und September abgerufen haben.  
   
 -   Die erste Spalte zeigt die neu hinzugefügten Daten an.  
@@ -56,7 +56,7 @@ ms.locfileid: "63066334"
   
  Im Allgemeinen gewichtet der Algorithmus die Änderungen in den neuen Daten stärker als Daten vom Anfang der Modelldaten. In diesem Fall geben die neuen Umsatzzahlen im Vergleich zum vorherigen Zeitraum jedoch nur eine Zunahme von 20-30 Prozent an. Die prognostizierten Umsätze verzeichneten also nur einen leichten Anstieg; anschließend gehen die Verkaufsprognosen erneut abwärts und entsprechen eher dem Trend in den Monaten vor den neuen Daten.  
   
-##  <a name="bkmk_REPLACE"></a>Vergleichen der ursprünglichen und Kreuz Vorhersage Ergebnisse  
+##  <a name="comparing-the-original-and-cross-prediction-results"></a><a name="bkmk_REPLACE"></a>Vergleichen der ursprünglichen und Kreuz Vorhersage Ergebnisse  
  Sie werden sich erinnern, dass das ursprüngliche Miningmodell einen großen Unterschied zwischen bestimmten Regionen und Modellreihen herausarbeitete. So waren die Verkäufe für das M200-Modell beispielsweise sehr stark, während sie für das T1000-Modell in allen Regionen ziemlich niedrig waren. Darüber hinaus haben einige Reihen keine großen Daten. Die Reihen waren unregelmäßig, was bedeutet, dass Sie nicht denselben Ausgangspunkt hatten.  
   
  ![Reihenvorhersagen für Mengen M200 und T1000](../../2014/tutorials/media/6series-defaultforecasting.gif "Reihenvorhersagen für Mengen M200 und T1000")  
@@ -69,7 +69,7 @@ ms.locfileid: "63066334"
   
  In diesem Diagramm können Sie erkennen, dass das aggregierte Miningmodell den allgemeinen Wertebereich und -trend beibehält, gleichzeitig jedoch die Schwankungen in den einzelnen Datenreihen minimiert.  
   
-## <a name="conclusion"></a>Zusammenfassung  
+## <a name="conclusion"></a>Schlussbemerkung  
  Sie haben gelernt, ein Zeitreihenmodell zu erstellen und anzupassen, das zur Prognoseerstellung verwendet werden kann.  
   
  Sie haben gelernt, Zeitreihenmodelle ohne erneute Verarbeitung zu aktualisieren, indem Sie neue Daten hinzufügen und Vorhersagen mit dem Parameter EXTEND_MODEL_CASES erstellen.  

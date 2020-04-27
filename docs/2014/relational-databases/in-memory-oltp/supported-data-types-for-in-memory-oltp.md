@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de5f805a9d722974adf7975f713436bc7b1ca4d0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63155151"
 ---
 # <a name="supported-data-types"></a>Unterstützte Datentypen
@@ -49,7 +49,7 @@ ms.locfileid: "63155151"
   
  Weitere Informationen zu unterstützten Sortierungen finden Sie unter [Sortierungen und Codepages](../../database-engine/collations-and-code-pages.md).  
   
- **Datums-und Uhrzeit Datentypen**  
+ **Datums- und Uhrzeitdatentypen:**  
   
 |Datentyp|Weitere Informationen finden Sie unter|  
 |---------------|--------------------------|  
@@ -73,7 +73,7 @@ ms.locfileid: "63155151"
   
 |Datentyp|Weitere Informationen finden Sie unter|  
 |---------------|--------------------------|  
-|UNIQUEIDENTIFIER|[uniqueidentifier &#40;Transact-SQL-&#41;](/sql/t-sql/data-types/uniqueidentifier-transact-sql)|  
+|UNIQUEIDENTIFIER|[uniqueidentifier &#40;Transact-SQL&#41;](/sql/t-sql/data-types/uniqueidentifier-transact-sql)|  
   
  **Nicht unterstützte Datentypen**  
   
@@ -86,7 +86,7 @@ ms.locfileid: "63155151"
 |sql_variant|CLR-Funktionen|Benutzerdefinierte Typen (User-defined types, UDTs)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Transact-SQL-Unterstützung für In-Memory OLTP](transact-sql-support-for-in-memory-oltp.md)   
+ [Transact-SQL-Unterstützung für in-Memory OLTP](transact-sql-support-for-in-memory-oltp.md)   
  [Implementieren von LOB-Spalten in einer Speicher optimierten Tabelle](../../database-engine/implementing-lob-columns-in-a-memory-optimized-table.md)   
  [Implementieren von SQL_VARIANT in einer speicheroptimierten Tabelle](implementing-sql-variant-in-a-memory-optimized-table.md)  
   

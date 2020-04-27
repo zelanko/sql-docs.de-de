@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4cd80e7d999314c549df4ebb5e51aa2a0ca2d3f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63154803"
 ---
 # <a name="group-rows-in-query-results-visual-database-tools"></a>Gruppieren von Zeilen in Abfrageergebnissen (Visual Database Tools)
@@ -26,7 +26,7 @@ ms.locfileid: "63154803"
   
  Angenommen, Sie möchten den durchschnittlichen Preis für ein Buch in der Tabelle `titles` anzeigen lassen, wobei die Ergebnisse nach Herausgeber aufgeteilt werden sollen. Dazu gruppieren Sie die Abfrage nach Herausgeber (z. B. `pub_id`). Hierfür kann folgende Abfrageausgabe formuliert werden:  
   
- ![Abfrageergebnisse: Durchschnittspreis gruppiert nach Verleger](../../database-engine/media//dv3w9e1.gif "Abfrageergebnisse: Durchschnittspreis gruppiert nach Verleger")  
+ ![Abfrageergebnisse: Durchschnittspreis gruppiert nach Verlag](../../database-engine/media//dv3w9e1.gif "Abfrageergebnisse: Durchschnittspreis gruppiert nach Verlag")  
   
  Beim Gruppieren von Daten können nur Daten aus Zusammenfassungen bzw. gruppierte Daten angezeigt werden, z. B.:  
   
@@ -48,7 +48,7 @@ GROUP BY pub_id, type
   
  Die entsprechende Ausgabe könnte folgendermaßen aussehen:  
   
- ![Abfrageergebnisse: Preis gruppiert nach Verleger und Typ](../../database-engine/media//dv3w9e2.gif "Abfrageergebnisse: Preis gruppiert nach Verleger und Typ")  
+ ![Abfrageergebnisse: Preis gruppiert nach Verlag und Art](../../database-engine/media//dv3w9e2.gif "Abfrageergebnisse: Preis gruppiert nach Verlag und Art")  
   
 ### <a name="to-group-rows"></a>So gruppieren Sie Zeilen  
   

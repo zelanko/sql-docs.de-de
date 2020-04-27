@@ -16,17 +16,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 40a621af401b33394b996468c581e85e3635355c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63137601"
 ---
 # <a name="extended-stored-procedures-programmer39s-reference"></a>Programmierer von erweiterten gespeicherten Prozeduren&#39;s
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
   
  Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] API für erweiterte gespeicherte Prozeduren, die bereits Teil von Open Data Services ist, bietet eine serverbasierte Anwendungsprogrammierschnittstelle ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Application Programming Interface, API) zum Erweitern der Funktionalität. Die API besteht aus C-Funktionen, C++-Funktion und Makros, die zum Erstellen von Anwendungen verwendet werden.  
   

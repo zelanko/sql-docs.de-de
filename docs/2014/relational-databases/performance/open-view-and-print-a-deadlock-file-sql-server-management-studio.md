@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3ac5ac362522bed3102da25bff580e317202e0d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150694"
 ---
 # <a name="open-view-and-print-a-deadlock-file-sql-server-management-studio"></a>Öffnen, Anzeigen und Drucken einer Deadlockdatei (SQL Server Management Studio)
@@ -27,13 +27,13 @@ ms.locfileid: "63150694"
   
 ### <a name="to-open-and-view-a-deadlock-file"></a>So öffnen Sie eine Deadlockdatei und zeigen sie an  
   
-1.  Zeigen Sie im Menü **Datei** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]auf **Öffnen**, und klicken Sie dann auf **Datei**.  
+1.  Zeigen Sie **File** im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Menü Datei von auf **Öffnen**, und klicken Sie dann auf **Datei**.  
   
 2.  Wählen Sie im Dialogfeld **Datei öffnen** den Dateityp XDL im Feld **Dateityp** aus. Sie erhalten damit eine gefilterte Liste, die nur aus Deadlockdateien besteht.  
   
 ### <a name="to-print-a-deadlock-file"></a>So drucken Sie eine Deadlockdatei  
   
-1.  Zeigen Sie **** im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Menü Datei von auf **Öffnen,** und klicken Sie dann auf **Datei**.  
+1.  Zeigen Sie im Menü **Datei** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]auf **Öffnen** , und klicken Sie dann auf **Datei**.  
   
 2.  Wählen Sie im Dialogfeld **Datei öffnen** den Dateityp XDL im Feld **Dateityp** aus. Sie erhalten damit eine gefilterte Liste, die nur aus Deadlockdateien besteht.  
   
@@ -42,6 +42,6 @@ ms.locfileid: "63150694"
 4.  Klicken Sie im Menü **Datei** auf **Drucken**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Deadlockdiagramme &#40;SQL Server Profiler speichern&#41;](save-deadlock-graphs-sql-server-profiler.md)  
+ [Speichern von Deadlockdiagrammen &#40;SQL Server Profiler&#41;](save-deadlock-graphs-sql-server-profiler.md)  
   
   

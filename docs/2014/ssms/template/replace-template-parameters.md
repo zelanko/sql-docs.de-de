@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1fa26c1bfec54e4e684bcd7e0967281a6ef3301
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63070971"
 ---
 # <a name="replace-template-parameters"></a>Vorlagenparameter ersetzen
@@ -30,7 +30,7 @@ ms.locfileid: "63070971"
 ## <a name="before-you-begin"></a>Vorbereitungen  
  Das Dialogfeld **Werte für Vorlagenparameter angeben** ist ein Raster mit drei Spalten. Die Spalten **Parameter** und **Typ** sind schreibgeschützt und können nicht geändert werden. Überprüfen Sie den Inhalt der Spalte **Wert** , und ändern Sie die Standardwerte in für die Implementierung geeignete Werte.  
   
- Um das Dialogfeld verwenden zu können, müssen die im Skript enthaltenen Parameter in spitze Klammern (`< >`) gesetzt und in folgendem Format angegeben werden: `<`*Parametername*`,` *Datentyp*`,` *Standardwert*`>`.  
+ Damit Sie dieses Dialogfeld verwenden können, müssen Sie Parameter im folgenden Format in spitzen Klammern (`< >`) in das Skript einfügen: `<`*Parametername*`,` *Datentyp*`,` *Standardwert*`>`.  
   
 ## <a name="replace-template-parameters"></a>Vorlagenparameter ersetzen  
  Nach dem Öffnen der Vorlage in einem Code-Editor-Fenster:  

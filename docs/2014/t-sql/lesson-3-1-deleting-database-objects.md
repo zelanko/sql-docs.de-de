@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a23d307cc33e5b8e59111819b245bc9df1df67df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63063117"
 ---
 # <a name="deleting-database-objects"></a>Löschen von Datenbankobjekten
@@ -100,10 +100,10 @@ ms.locfileid: "63063117"
  Damit ist das Lernprogramm zum Schreiben von [!INCLUDE[tsql](../includes/tsql-md.md)] -Anweisungen beendet. Beachten Sie, dass dieses Lernprogramm nur eine kurze Übersicht bietet und darin nicht alle Optionen der verwendeten Anweisungen beschrieben werden. Das Entwerfen und Erstellen einer effizienten Datenbankstruktur und das Konfigurieren des sicheren Zugriffs auf die Daten erfordern eine komplexere Datenbank als in diesem Lernprogramm gezeigt.  
   
 ## <a name="return-to-sql-server-tools-portal"></a>Zurück zum Portal für SQL Server-Tools  
- [Lernprogramm: Schreiben von Transact-SQL-Anweisungen](tutorial-writing-transact-sql-statements.md)  
+ [Tutorial: Schreiben von Transact-SQL-Anweisungen](tutorial-writing-transact-sql-statements.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql)   
+ [&#40;Transact-SQL-&#41;widerrufen](/sql/t-sql/statements/revoke-transact-sql)   
  [Drop User &#40;Transact-SQL-&#41;](/sql/t-sql/statements/drop-user-transact-sql)   
  [Drop Login &#40;Transact-SQL-&#41;](/sql/t-sql/statements/drop-login-transact-sql)   
  [DROP PROCEDURE &#40;Transact-SQL-&#41;](/sql/t-sql/statements/drop-procedure-transact-sql)   

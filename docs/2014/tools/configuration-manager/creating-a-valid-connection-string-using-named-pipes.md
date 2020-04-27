@@ -17,10 +17,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 12d5cb30217a0580d4da101d614b4930cfd8184b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63065548"
 ---
 # <a name="creating-a-valid-connection-string-using-named-pipes"></a>Erstellen einer gültigen Verbindungszeichenfolge mithilfe von Named Pipes
@@ -32,7 +32,7 @@ ms.locfileid: "63065548"
   
 -   Wählen Sie **Named Pipes** als **Protokoll**aus.  
   
--   Geben Sie den **Pipenamen**ein. Alternativ können Sie den Pipenamen leer **** lassen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Configuration Manager den entsprechenden Pipenamen nach der Angabe des **Protokolls** und **Servers** vervollständigen.  
+-   Geben Sie den **Pipenamen**ein. Alternativ können Sie den Pipenamen leer **Pipe Name** lassen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , Configuration Manager den entsprechenden Pipenamen nach der Angabe des **Protokolls** und **Servers** vervollständigen.  
   
 -   Geben Sie einen **Server**an. Sie können für eine benannte Instanz einen Servernamen und Instanznamen angeben.  
   
@@ -119,8 +119,8 @@ Server             .
 >  Informationen zum Angeben des Netzwerk Protokolls als **sqlcmd** -Parameter finden Sie unter "Vorgehensweise: Herstellen einer Verbindung mit dem Datenbank-Engine mit sqlcmd [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . exe" in der-Online Dokumentation.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erstellen einer gültigen Verbindungszeichenfolge mithilfe des Shared Memory-Protokolls](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
- [Erstellen einer gültigen Verbindungszeichenfolge mithilfe von TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
+ [Erstellen einer gültigen Verbindungs Zeichenfolge mithilfe des Shared Memory-Protokolls](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)   
+ [Erstellen einer gültigen Verbindungs Zeichenfolge mithilfe von TCP-IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)   
  [Auswählen eines Netzwerkprotokolls](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)  
   
   

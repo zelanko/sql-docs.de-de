@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca5b07a0cd6e6282e4d61075d86ca6af6a2abd70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63062148"
 ---
 # <a name="alert-properties-new-alert-general-page"></a>Warnungs Eigenschaften-neue Warnung (Seite "Allgemein")
@@ -32,11 +32,11 @@ ms.locfileid: "63062148"
  **Typ**  
  Wählen Sie den Typ der Warnung aus:  
   
--   **SQL Server Ereignis Warnung** reagiert auf Meldungen im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Ereignisprotokoll.  
+-   **SQL Server-Ereigniswarnung** reagiert auf Meldungen im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Ereignisprotokoll.  
   
--   **SQL Server Leistungs Bedingungs Warnung** antwortet auf eine bestimmte Bedingung in einem Leistungswert.  
+-   **SQL Server-Leistungsstatuswarnung** reagiert auf eine bestimmte Bedingung in einem Leistungsindikator.  
   
--   Die **WMI-Ereignis Warnung** antwortet auf ein Windows-Verwaltungsinstrumentation Ereignis (WMI).  
+-   **WMI-Ereigniswarnung** reagiert auf ein WMI-Ereignis (Windows Management Instrumentation).  
   
 ## <a name="sql-server-event-alert-options"></a>Optionen für die SQL Server-Ereigniswarnung  
  **Datenbankname**  
@@ -45,17 +45,17 @@ ms.locfileid: "63062148"
  **Fehlernummer**  
  Geben Sie an, dass dieses Ereignis auf einen Fehler reagiert, und geben Sie die Fehlernummer an.  
   
- **severity**  
+ **Schweregrad**  
  Geben Sie an, dass dieses Ereignis auf alle Meldungen innerhalb eines bestimmten Schweregrads reagiert, und geben Sie den Schweregrad an.  
   
- **Warnung generieren, wenn die Meldung enthält**  
+ **Warnung auslösen, wenn eine Meldung Folgendes enthält**  
  Filtert Ereignisse nach einer bestimmten Zeichenfolge. Wenn diese Option ausgewählt ist, reagiert die Warnung nur auf Ereignisse, die eine bestimmte Zeichenfolge enthalten.  
   
  **Meldungs Text**  
  Geben Sie die Zeichenfolge ein, die zum Filtern von Ereignissen verwendet werden soll.  
   
 ## <a name="sql-server-performance-condition-alerts"></a>SQL Server-Leistungsstatuswarnungen  
- **Object**  
+ **Objekt**  
  Geben Sie das zu überwachende Leistungsobjekt an.  
   
  **Leistungsindikator**  
@@ -64,7 +64,7 @@ ms.locfileid: "63062148"
  **Instanz**  
  Geben Sie die Instanz des Leistungsindikators an, die überwacht werden soll.  
   
- **Warnung, wenn Counter**  
+ **Warnung, falls Leistungsindikator**  
  Geben Sie das Verhalten des Leistungsindikators an, auf das die Warnung reagiert. Die Warnung könnte beispielsweise auf eine Bedingung reagieren, bei der der Wert des Leistungsindikators **Freier Speicherplatz in 'tempdb' (KB)** unter eine bestimmte Grenze fällt, oder auf eine Bedingung, bei der der Wert für **SQL-Kompilierungen/Sekunde** einen bestimmten Wert übersteigt.  
   
  **Wert**  
@@ -78,7 +78,7 @@ ms.locfileid: "63062148"
  Geben Sie die WQL-Anweisung an, die das Ereignis identifiziert, auf das die Warnung reagiert.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Warnungen](alerts.md)   
+ [Warnt](alerts.md)   
  [Verwenden von WQL mit dem WMI-Anbieter für Server Ereignisse](../../relational-databases/wmi-provider-server-events/using-wql-with-the-wmi-provider-for-server-events.md)   
  [Erstellen einer Warnung mithilfe einer Fehlernummer](create-an-alert-using-an-error-number.md)   
  [Create an Alert Using Severity Level](create-an-alert-using-severity-level.md)  

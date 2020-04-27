@@ -11,37 +11,37 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 19308ee2838238f0dea6cfdaeb228a250591613b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63049336"
 ---
 # <a name="view-and-read-failover-cluster-instance-diagnostics-log"></a>Anzeigen und Lesen des Failoverclusterinstanz-Diagnoseprotokolls
   Alle kritischen Fehler und Warnungsereignisse für die Ressourcen-DLL von SQL Server werden in das Windows-Ereignisprotokoll geschrieben. Ein Ausführungsprotokoll mit für SQL Server spezifischen Diagnoseinformationen wird von der gespeicherten Systemprozedur [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) erfasst und in die Protokolldateien der SQL Server-Failoverclusterdiagnose (auch als *SQLDIAG*-Protokolle bezeichnet) geschrieben.  
   
--   Vorbereitungen **:**[Empfehlungen](#Recommendations), [Sicherheit](#Security)    
+-   **Vorbereitungen:**  [Empfehlungen](#Recommendations), [Sicherheit](#Security)  
   
 -   **Anzeigen des Diagnoseprotokolls mit:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
--   So **Konfigurieren Sie Diagnoseprotokoll Einstellungen mit:** [Transact-SQL](#TsqlConfigure)  
+-   **Konfigurieren der Diagnoseprotokolleinstellungen mit:** [Transact-SQL](#TsqlConfigure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Recommendations"></a> Empfehlungen  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
  Standardmäßig werden die SQLdiag in einem lokalen Protokoll Ordner des SQL Server Instanzverzeichnisses gespeichert, z. b. "c\programme\microsoft SQL server\mssql12.". \<InstanceName> \MSSQL\LOG "des besitzenden Knotens der AlwaysOn-Failoverclusterinstanz (FCI). Die Größe jeder SQLDIAG-Protokolldatei wird auf 100 MB begrenzt. Zehn dieser Protokolldateien werden auf dem Computer gespeichert, bevor sie für neue Protokolle wiederverwendet werden.  
   
  Die Protokolle verwenden das Dateiformat für erweiterte Ereignisse. Mit der Systemfunktion **sys.fn_xe_file_target_read_file** können Sie die Dateien lesen, die durch erweiterte Ereignisse erstellt wurden. Pro Zeile wird ein Ereignis im XML-Format zurückgegeben. Fragen Sie die Systemsicht ab, um die XML-Daten als Resultset zu analysieren. Weitere Informationen finden Sie unter [sys.fn_xe_file_target_read_file &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql).  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Die VIEW SERVER STATE-Berechtigung ist erforderlich, um **fn_xe_file_target_read_file**auszuführen.  
   
  Öffnen von SQL Server Management Studio als Administrator  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
- **So zeigen Sie die Diagnoseprotokoll Dateien an:**  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+ **So zeigen Sie die Diagnoseprotokolldateien an:**  
   
 1.  Wählen Sie im Menü **Datei** die Option **Öffnen**, **Datei**, und wählen Sie die anzuzeigende Diagnoseprotokolldatei an.  
   
@@ -55,8 +55,8 @@ ms.locfileid: "63049336"
   
 4.  Sie können die Ereignisdaten mithilfe des Menüs **ExtendedEvents** und der Option **Filter** filtern und sortieren.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
- **So zeigen Sie die Diagnoseprotokoll Dateien an:**  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+ **So zeigen Sie die Diagnoseprotokolldateien an:**  
   
  Um alle Protokollelemente in der SQLDIAG-Protokolldatei anzuzeigen, verwenden Sie die folgende Abfrage:  
   
@@ -87,17 +87,17 @@ ORDER BY Time;
 > [!NOTE]  
 >  Sie können die Ergebnisse nach bestimmten Komponenten oder Status filtern, indem Sie die WHERE-Klausel verwenden.  
   
-##  <a name="TsqlConfigure"></a> Verwenden von Transact-SQL  
- **So konfigurieren Sie die Diagnoseprotokoll Eigenschaften**  
+##  <a name="using-transact-sql"></a><a name="TsqlConfigure"></a> Verwenden von Transact-SQL  
+ **So konfigurieren Sie die Diagnoseprotokolleigenschaften**  
   
 > [!NOTE]  
 >  Ein Beispiel für diese Prozedur finden Sie weiter unten in diesem Abschnitt unter [Beispiel (Transact-SQL)](#TsqlExample).  
   
  Mithilfe der DDL-Anweisung (Data Definition Language, `ALTER SERVER CONFIGURATION`Datendefinitionssprache) können Sie die Protokollierung von Diagnosedaten starten oder Abbrechen, die von der [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql) -Prozedur erfasst wurden, und SQLdiag-Protokoll Konfigurationsparameter festlegen, wie z. b. die Anzahl der Protokolldatei-Rollover, die Protokolldatei Größe Einzelheiten zur Syntax finden Sie unter [Setting diagnostic log options](/sql/t-sql/statements/alter-server-configuration-transact-sql#Diagnostic).  
   
-###  <a name="ConfigTsqlExample"></a> Beispiele (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="ConfigTsqlExample"></a>Beispiele (Transact-SQL)  
   
-####  <a name="TsqlExample"></a>Festlegen von Diagnoseprotokoll Optionen  
+####  <a name="setting-diagnostic-log-options"></a><a name="TsqlExample"></a>Festlegen von Diagnoseprotokoll Optionen  
  Die Beispiele in diesem Abschnitt veranschaulichen, wie die Werte für die Diagnoseprotokolloption festgelegt werden.  
   
 ##### <a name="a-starting-diagnostic-logging"></a>A. Starten der Diagnoseprotokollierung  
@@ -122,7 +122,7 @@ ALTER SERVER CONFIGURATION
 SET DIAGNOSTICS LOG PATH = 'C:\logs';  
 ```  
   
-##### <a name="d-specifying-the-maximum-size-of-each-diagnostic-log"></a>D: Angeben der maximalen Größe jedes Diagnoseprotokolls  
+##### <a name="d-specifying-the-maximum-size-of-each-diagnostic-log"></a>D. Angeben der maximalen Größe jedes Diagnoseprotokolls  
  Im folgenden Beispiel wird die maximale Größe jedes Diagnoseprotokolls auf 10 Megabytes festgelegt.  
   
 ```  

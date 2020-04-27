@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9525ef65973baa38ae19ba4681e4a93f949c004a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63071818"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Erstellen systemintern kompilierter gespeicherter Prozeduren
@@ -24,8 +24,7 @@ ms.locfileid: "63071818"
   
 -   ATOMIC-Blöcke. Weitere Informationen finden Sie unter [ATOMIC-Blöcke](atomic-blocks-in-native-procedures.md).  
   
--   
-  `NOT NULL`-Einschränkungen für Parameter von systemintern kompilierten gespeicherten Prozeduren und darin enthaltene Variablen. Sie können als `NULL` deklarierten Parametern oder Variablen keine `NOT NULL`-Werte zuweisen. Weitere Informationen finden Sie unter [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql).  
+-   `NOT NULL`-Einschränkungen für Parameter von systemintern kompilierten gespeicherten Prozeduren und darin enthaltene Variablen. Sie können als `NULL` deklarierten Parametern oder Variablen keine `NOT NULL`-Werte zuweisen. Weitere Informationen finden Sie unter [DECLARE @local_variable &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/declare-local-variable-transact-sql).  
   
 -   Schemabindung von systemintern kompilierten gespeicherten Prozeduren.  
   
@@ -54,10 +53,9 @@ go
   
  Im Codebeispiel ist an `NATIVE_COMPILATION` erkennbar, dass diese gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur eine systemintern kompilierte gespeicherte Prozedur ist. Die folgenden Optionen sind erforderlich:  
   
-|Option|BESCHREIBUNG|  
+|Option|Beschreibung|  
 |------------|-----------------|  
-|`SCHEMABINDING`|Systemintern kompilierte gespeicherte Prozeduren müssen an das Schema der Objekte gebunden werden, auf die sie verweisen. Dies bedeutet, dass Tabellenverweise der Prozedur nicht gelöscht werden können. Tabellen, auf die in der Prozedur verwiesen wird, müssen ihren Schema Namen enthalten\*, und Platzhalter Zeichen () sind in Abfragen nicht zulässig. 
-  `SCHEMABINDING` wird nur in dieser Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für systemintern kompilierte gespeicherte Prozeduren unterstützt.|  
+|`SCHEMABINDING`|Systemintern kompilierte gespeicherte Prozeduren müssen an das Schema der Objekte gebunden werden, auf die sie verweisen. Dies bedeutet, dass Tabellenverweise der Prozedur nicht gelöscht werden können. Tabellen, auf die in der Prozedur verwiesen wird, müssen ihren Schema Namen enthalten\*, und Platzhalter Zeichen () sind in Abfragen nicht zulässig. `SCHEMABINDING` wird nur in dieser Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für systemintern kompilierte gespeicherte Prozeduren unterstützt.|  
 |`EXECUTE AS`|Systemintern kompilierte gespeicherte Prozeduren bieten keine Unterstützung für den standardmäßigen Ausführungskontext `EXECUTE AS CALLER`. Daher muss der Ausführungskontext angegeben werden. Die Optionen `EXECUTE AS OWNER`, `EXECUTE AS`der *Benutzer*und `EXECUTE AS SELF` werden unterstützt.|  
 |`BEGIN ATOMIC`|Der Text einer systemintern kompilierten gespeicherten Prozedur muss genau ein ATOMIC-Block sein. ATOMIC-Blöcke gewährleisten die unteilbare Ausführung der gespeicherten Prozedur. Wenn die Prozedur außerhalb des Kontexts einer aktiven Transaktion aufgerufen wird, wird eine neue Transaktion gestartet, für die am Ende des ATOMIC-Blocks ein Commit ausgeführt wird. ATOMIC-Blöcke in systemintern kompilierten gespeicherten Prozeduren weisen zwei erforderliche Optionen auf:<br /><br /> `TRANSACTION ISOLATION LEVEL`. Siehe [Transaktions Isolations Stufen](../../database-engine/transaction-isolation-levels.md) für unterstützte Isolations Stufen.<br /><br /> `LANGUAGE`. Die Sprache der gespeicherten Prozedur muss auf eine der verfügbaren Sprachen bzw. einen der verfügbaren Sprachenaliase festgelegt werden.|  
   
@@ -112,6 +110,6 @@ go
  Der Vorteil dieser Vorgehensweise besteht darin, dass die Anwendung nicht offline geschaltet wird. Allerdings sind mehr Schritte erforderlich, um die Verweise beizubehalten und sicherzustellen, dass sie immer auf die neueste Version der gespeicherten Prozedur zeigen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Nativ kompilierte gespeicherte Prozeduren](natively-compiled-stored-procedures.md)  
+ [System intern kompilierte gespeicherte Prozeduren](natively-compiled-stored-procedures.md)  
   
   

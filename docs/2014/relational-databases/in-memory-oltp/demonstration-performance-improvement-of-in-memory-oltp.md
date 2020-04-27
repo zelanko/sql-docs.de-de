@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 8c9477a318d2cb4f9886d67da8a4f8b5967cc180
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63071785"
 ---
 # <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Demo: Leistungsverbesserungen von In-Memory OLTP
@@ -187,8 +187,8 @@ SELECT CAST(@timems AS VARCHAR(10)) + ' ms (memory-optimized table with natively
  [Speicher optimierte Tabellen](memory-optimized-tables.md)   
  [System intern kompilierte gespeicherte Prozeduren](natively-compiled-stored-procedures.md)   
  [Anforderungen für die Verwendung Speicher optimierter Tabellen](requirements-for-using-memory-optimized-tables.md)   
- [Create Database &#40;SQL Server Transact-SQL-&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
- [ALTER DATABASE-Optionen Datei und Dateigruppe &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)   
+ [ALTER DATABASE-Optionen für Dateien und Dateigruppen &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-transact-sql-file-and-filegroup-options)   
  [Erstellen von Prozeduren und Speicher optimierten Tabellen](/sql/t-sql/statements/create-procedure-transact-sql)  
   
   

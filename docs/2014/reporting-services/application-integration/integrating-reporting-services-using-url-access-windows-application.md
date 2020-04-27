@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb841d187385724ea31b5a7db86fcb323bf10663
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63126238"
 ---
 # <a name="using-url-access-in-a-windows-application"></a>Verwenden des URL-Zugriffs in einer Windows-Anwendung
@@ -89,7 +89,7 @@ private void viewReportButton_Click(object sender, System.EventArgs e)
   
 1.  Erstellen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] Sie entweder in oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]in eine neue Windows-Anwendung.  
   
-2.  Suchen Sie im Dialogfeld <xref:System.Windows.Forms.WebBrowser>Toolbox** das **-Steuerelement.  
+2.  Suchen Sie im Dialogfeld **Toolbox** das <xref:System.Windows.Forms.WebBrowser>-Steuerelement.  
   
      Wenn **Toolbox** nicht sichtbar ist, können Sie darauf zugreifen, indem Sie im Menüelement **Ansicht** auf **Toolbox** klicken.  
   
@@ -118,6 +118,6 @@ webBrowser1.Navigate(url);
  [Integrieren von Reporting Services mithilfe des URL-Zugriffs](integrating-reporting-services-using-url-access.md)   
  [Integrieren von Reporting Services mithilfe von SOAP](integrating-reporting-services-using-soap.md)   
  [Integrieren von Reporting Services mithilfe der Report Viewer-Steuerelemente](integrating-reporting-services-using-reportviewer-controls.md)   
- [URL-Zugriff (SSRS)](../url-access-ssrs.md)  
+ [URL-Zugriff &#40;SSRS&#41;](../url-access-ssrs.md)  
   
   

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d9cb9439dd76c636df46b8ac3d737d79415b5ea5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63067663"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
@@ -26,16 +26,16 @@ ms.locfileid: "63067663"
   
 ## <a name="level-1"></a>Ebene 1  
   
-|Schlüsselwort|Liste zurückgegeben?|Optional?|BESCHREIBUNG|  
+|Schlüsselwort|Liste zurückgegeben?|Optional?|Beschreibung|  
 |-------------|--------------------|---------------|-----------------|  
 |DSN|–|Nein|Der Name der von **SQLDataSources**zurückgegebenen Datenquelle. Das DSN-Schlüsselwort kann nicht verwendet werden, wenn das DRIVER-Schlüsselwort verwendet wird.|  
 |DRIVER|–|Nein|Microsoft? [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Der Name des Native Client-ODBC[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Treibers lautet {Native Client 11}. Das DRIVER-Schlüsselwort kann nicht verwendet werden, wenn das DSN-Schlüsselwort verwendet wird.|  
   
-## <a name="level-2"></a>Ebene 2  
+## <a name="level-2"></a>Ebene 2  
   
-|Schlüsselwort|Liste zurückgegeben?|Optional?|BESCHREIBUNG|  
+|Schlüsselwort|Liste zurückgegeben?|Optional?|Beschreibung|  
 |-------------|--------------------|---------------|-----------------|  
-|SERVER|Ja|Nein|Name des Servers in dem Netzwerk, auf dem die Datenquelle gespeichert ist. Für den Server kann der Begriff "(local)" eingegeben werden. In diesem Fall kann eine lokale Kopie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden, auch wenn dies keine vernetzte Version ist.|  
+|SERVER|Ja|Nein |Name des Servers in dem Netzwerk, auf dem die Datenquelle gespeichert ist. Für den Server kann der Begriff "(local)" eingegeben werden. In diesem Fall kann eine lokale Kopie von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden, auch wenn dies keine vernetzte Version ist.|  
 |UID|Nein|Ja|Benutzeranmelde-ID.|  
 |PWD|Nein|Ja (vom Benutzer abhängig)|Vom Benutzer angegebenes Kennwort.|  
 |APP|Nein|Ja|Der Name der Anwendung, die **sqlbrowseconnetct**aufrufen.|  
@@ -43,7 +43,7 @@ ms.locfileid: "63067663"
   
 ## <a name="level-3"></a>Level 3  
   
-|Schlüsselwort|Liste zurückgegeben?|Optional?|BESCHREIBUNG|  
+|Schlüsselwort|Liste zurückgegeben?|Optional?|Beschreibung|  
 |-------------|--------------------|---------------|-----------------|  
 |DATABASE|Ja|Ja|Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank.|  
 |LANGUAGE|Ja|Ja|Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendete Landessprache.|  
@@ -52,7 +52,7 @@ ms.locfileid: "63067663"
   
  Die folgenden Attribute, die durch den Aufruf von [SQLSetConnectAttr](sqlsetconnectattr.md)festgelegt werden, bestimmen das von **sqlbrowseconnetct**zurückgegebene Resultset.  
   
-|attribute|BESCHREIBUNG|  
+|Attribut|Beschreibung|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|Wenn Sie auf SQL_MORE_INFO_YES festgelegt ist, gibt **sqlbrowseconnetct** eine erweiterte Zeichenfolge mit Server Eigenschaften zurück.<br /><br /> Im folgenden finden Sie ein Beispiel für eine erweiterte Zeichenfolge, die von **sqlbrowseconnetct**zurückgegeben wird: servername\instancename; Gruppiert: Nein; Version: 8.00.131<br /><br /> In dieser Zeichenfolge werden verschiedene durch Semikolons getrennte Informationen zum Server aufgeführt. Informationen zu verschiedenen Serverinstanzen werden durch Kommas getrennt.|  
 |SQL_COPT_SS_BROWSE_SERVER|Wenn ein Servername angegeben wird, gibt **sqlbrowseconnetct** Informationen für den angegebenen Server zurück. Wenn SQL_COPT_SS_BROWSE_SERVER auf NULL festgelegt ist, gibt **sqlbrowseconnetct** Informationen für alle Server in der Domäne zurück.<br /><br /> Aufgrund von Netzwerkproblemen erhält **sqlbrowseconnetct** möglicherweise keine rechtzeitige Antwort von allen Servern. Daher kann die Liste der zurückgegebenen Server bei jeder Anforderung unterschiedlich sein.|  
