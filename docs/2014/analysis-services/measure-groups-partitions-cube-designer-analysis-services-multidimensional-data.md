@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 587b3ef7c784b48c1347276646d366eae5570c97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077910"
 ---
 # <a name="measure-groups-partitions-tab-cube-designer-analysis-services---multidimensional-data"></a>Measuregruppen (Registerkarte 'Partitionen', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich **Measuregruppen** der Registerkarte **Partitionen** des Cube-Designers können Sie die Partitionen verwalten, die mit den einzelnen Measuregruppen verknüpft sind.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Partitionen**  
  Zeigt ein Raster mit einer Liste von Partitionen an, von denen die ausgewählte Measuregruppe unterstützt wird. Das Raster enthält die folgenden Spalten:  
   
@@ -31,10 +31,10 @@ ms.locfileid: "66077910"
   
  Wählen Sie durch Klicken die gesamte Zeile für die Partition aus.  
   
- **Partitions Name**  
+ **Partitionsname**  
  Geben Sie den Namen der ausgewählten Partition ein.  
   
- **`Source`**  
+ **Quelle**  
  Geben Sie den Namen der Tabelle (für Tabellenbindungen) bzw. Abfrage (für Abfragebindungen) ein, in der die Faktentabellendaten für die ausgewählte Partition bereitgestellt werden.  
   
  Klicken Sie auf die Schaltfläche mit den drei Punkten **** , um das Dialogfeld **Partitionsquelle** anzuzeigen und die Quelle für die ausgewählte Partition zu definieren.  
@@ -71,7 +71,7 @@ ms.locfileid: "66077910"
 |**Rück schreibe Einstellungen**|Klicken Sie auf diese Option, um das Dialogfeld **Rückschreiben aktivieren/deaktivieren** anzuzeigen und Rückschreibeeinstellungen für die Measuregruppe anzugeben, in der die ausgewählte Partition enthalten ist.|  
 |**Verwendungsbasierte Optimierung**|Klicken Sie auf diese Option, um das Dialogfeld **Assistent für verwendungsbasierte Optimierung** anzuzeigen und einen Aggregationsentwurf zu erstellen, der auf vorhandenen Verwendungsmustern für die ausgewählte Partition basiert.<br /><br /> Hinweis: Diese Option ist deaktiviert, wenn eine Rückschreibepartition ausgewählt wurde.|  
 |**Prozess**|Klicken Sie auf diese Option, um das Dialogfeld **Verarbeiten** anzuzeigen und die ausgewählte Partition zu verarbeiten.|  
-|**Copy**|Diese Option ist deaktiviert.|  
+|**Kopieren**|Diese Option ist deaktiviert.|  
 |**Einfügen**|Diese Option ist deaktiviert.|  
 |**Eigenschaften**|Wählen Sie diese Option aus, um für die ausgewählte Partition das Fenster **Eigenschaften** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] anzuzeigen.|  
   
