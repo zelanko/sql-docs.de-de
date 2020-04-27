@@ -15,26 +15,26 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8089309c8abe94d392b073fc916b2b0b8fa9292f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011951"
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>Formatdateien zum Importieren oder Exportieren von Daten (SQL Server)
   Beim Massenimportieren bzw. -exportieren von Daten in eine bzw. aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle können Sie eine *Formatdatei* verwenden, um alle für den Massenimport oder -export erforderlichen Informationen zu speichern. Dazu zählen Formatinformationen für jedes Feld einer Datendatei in Bezug auf die betreffende Tabelle.  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt zwei Typen von Formatdateien: XML- und Nicht-XML-Formatdateien. Sowohl Nicht-XML-Formatdateien als auch XML-Formatdateien enthalten Beschreibungen jedes Felds in einer Datendatei. XML-Formatdateien enthalten darüber hinaus auch Beschreibungen der entsprechenden Tabellenspalten. Im Allgemeinen sind XML-Formatdateien und Nicht-XML-Formatdateien austauschbar. Es empfiehlt sich jedoch, für neue Formatdateien die XML-Syntax zu verwenden, weil sich im Vergleich zu Nicht-XML-Formatdateien mehrere Vorteile ergeben. Weitere Informationen finden Sie unter [XML-Formatdateien &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt zwei Typen von Formatdateien: XML-Formatdateien und Nicht-XML-Formatdateien. Sowohl Nicht-XML-Formatdateien als auch XML-Formatdateien enthalten Beschreibungen jedes Felds in einer Datendatei. XML-Formatdateien enthalten darüber hinaus auch Beschreibungen der entsprechenden Tabellenspalten. Im Allgemeinen sind XML-Formatdateien und Nicht-XML-Formatdateien austauschbar. Es empfiehlt sich jedoch, für neue Formatdateien die XML-Syntax zu verwenden, weil sich im Vergleich zu Nicht-XML-Formatdateien mehrere Vorteile ergeben. Weitere Informationen finden Sie unter [XML-Formatdateien &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
  
   
-##  <a name="Benefits"></a> Vorteile von Formatdateien  
+##  <a name="benefits-of-format-files"></a><a name="Benefits"></a> Vorteile von Formatdateien  
   
 -   Formatdateien stellen ein flexibles System für das Schreiben von Datendateien bereit, die für die Kompatibilität mit anderen Datenformaten und zum Lesen von Datendateien aus anderen Softwareprogrammen nur geringfügig oder gar nicht bearbeitet werden müssen.  
   
 -   Durch Verwenden einer Formatdatei ist es möglich, Daten per Massenimport zu kopieren, ohne überflüssige Daten hinzufügen oder löschen oder vorhandene Daten in der Datendatei neu anordnen zu müssen. Formatdateien sind besonders hilfreich, wenn Felder in der Datendatei und Spalten in der Tabelle nicht übereinstimmen.  
   
-##  <a name="ExamplesOfFFs"></a> Beispiele für Formatdateien  
+##  <a name="examples-of-format-files"></a><a name="ExamplesOfFFs"></a> Beispiele für Formatdateien  
  Die folgenden Beispiele zeigen das Layout einer Nicht-XML-Formatdatei und einer XML-Formatdatei. Diese Formatdateien entsprechen der `HumanResources.myTeam` -Tabelle in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] -Beispieldatenbank. Diese Tabelle enthält vier Spalten: `EmployeeID`, `Name`, `Title`und `ModifiedDate`.  
   
 > [!NOTE]  
@@ -88,7 +88,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
 
   
-##  <a name="WhenFFrequired"></a> Wann ist eine Formatdatei erforderlich?  
+##  <a name="when-is-a-format-file-required"></a><a name="WhenFFrequired"></a> Wann ist eine Formatdatei erforderlich?  
  Eine INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung erfordert stets eine Formatdatei.  
   
 -   Für **bcp** oder BULK INSERT ist in einfachen Situationen das Verwenden einer Formatdatei optional und selten notwendig. In komplexen Massenimportsituationen ist jedoch oft eine Formatdatei erforderlich.  
@@ -114,7 +114,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
   
  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Erstellen einer Formatdatei &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   
@@ -129,7 +129,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Nicht-XML-Format Dateien &#40;SQL Server&#41;](non-xml-format-files-sql-server.md)   
+ [Nicht-XML-Formatdateien &#40;SQL Server&#41;](non-xml-format-files-sql-server.md)   
  [XML-Formatdateien &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
  [Datenformate für Massenimport oder Massenexport &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md)  
   

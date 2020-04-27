@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 067f14e857addc5f43a0b17d81d554997adbc09f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010439"
 ---
 # <a name="access-filestream-data-with-transact-sql"></a>ZUgreifen auf FILESTREAM-Daten mit Transact-SQL
@@ -25,7 +25,7 @@ ms.locfileid: "66010439"
 > [!NOTE]  
 >  Für die Beispiele in diesem Thema sind die FILESTREAM-aktivierte Datenbank und die Tabelle erforderlich, die unter [Erstellen einer FILESTREAM-aktivierten Datenbank](create-a-filestream-enabled-database.md) und [Erstellen einer Tabelle zum Speichern von FILESTREAM-Daten](create-a-table-for-storing-filestream-data.md)erstellt werden.  
   
-##  <a name="ins"></a> Einfügen einer Zeile mit FILESTREAM-Daten  
+##  <a name="inserting-a-row-that-contains-filestream-data"></a><a name="ins"></a> Einfügen einer Zeile mit FILESTREAM-Daten  
  Zum Hinzufügen einer Zeile in einer Tabelle, die FILESTREAM-Daten unterstützt, verwenden Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung INSERT. Wenn Sie Daten in eine FILESTREAM-Spalte einfügen, können Sie NULL oder einen`varbinary(max)`-Wert einfügen.  
   
 ### <a name="inserting-null"></a>Einfügen von NULL  
@@ -51,14 +51,14 @@ ms.locfileid: "66010439"
 |`F8F5C314-0559-4927-8FA9-1535EE0BDF50`|`2`|`0x`|  
 |`7F680840-B7A4-45D4-8CD5-527C44D35B3F`|`3`|`0x536569736D69632044617461`|  
   
-##  <a name="upd"></a> Aktualisieren von FILESTREAM-Daten  
+##  <a name="updating-filestream-data"></a><a name="upd"></a>Aktualisieren von FILESTREAM-Daten  
  Sie können [!INCLUDE[tsql](../../includes/tsql-md.md)] zum Aktualisieren der Daten in der Dateisystemdatei verwenden. Dies ist jedoch nicht empfehlenswert, wenn Sie große Datenmengen in eine Datei streamen müssen.  
   
  Im folgenden Beispiel wird der gesamte Text im Dateidatensatz durch den Text `Xray 1`ersetzt.  
   
  [!code-sql[FILESTREAM#FS_UpdateData](../../snippets/tsql/SQL15/tsql/filestream/transact-sql/filestream.sql#fs_updatedata)]  
   
-##  <a name="del"></a> Löschen von FILESTREAM-Daten  
+##  <a name="deleting-filestream-data"></a><a name="del"></a>Löschen von FILESTREAM-Daten  
  Wenn Sie eine Zeile mit einem FILESTREAM-Feld löschen, löschen Sie auch die zugrunde liegenden Dateisystemdateien. Die einzige Möglichkeit zum Löschen einer Zeile, und somit der Datei, ist die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung DELETE.  
   
  Im folgenden Beispiel wird das Löschen einer Zeile und der entsprechenden Dateisystemdateien veranschaulicht.  

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4406eb225002bbf5df93f8c67385694922d7d2c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482763"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>Ändern des Attributtyps (MDS-Add-in für Excel)
@@ -74,6 +74,6 @@ ms.locfileid: "65482763"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Attribute &#40;Master Data Services&#41;](../attributes-master-data-services.md)   
- [Ein Modell &#40;MDS-Add-in für Excel wird&#41;](building-a-model-mds-add-in-for-excel.md)  
+ [Erstellen eines Modells &#40;MDS-Add-In für Excel&#41;](building-a-model-mds-add-in-for-excel.md)  
   
   

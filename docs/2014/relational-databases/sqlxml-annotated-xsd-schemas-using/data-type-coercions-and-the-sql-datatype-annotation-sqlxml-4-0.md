@@ -22,31 +22,30 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d2c4d515540f144052214627b3d6b08211358bb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013951"
 ---
 # <a name="data-type-coercions-and-the-sqldatatype-annotation-sqlxml-40"></a>Datentypumwandlungen und die sql:datatype-Anmerkung (SQLXML 4.0)
   In einem XSD-Schema gibt das `xsd:type`-Attribut den XSD-Datentyp eines Elements oder Attributs an. Wenn Daten anhand eines XSD-Schemas aus der Datenbank extrahiert werden, wird der angegebene Datentyp zur Formatierung der Daten verwendet.  
   
- Darüber hinaus können Sie neben dem XSD-Typ in einem Schema auch über die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmerkung einen Microsoft `sql:datatype`-Datentyp angeben. Die Attribute `xsd:type` und `sql:datatype` steuern die Zuordnung zwischen XSD-Datentypen und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen.  
+ Darüber hinaus können Sie neben dem XSD-Typ in einem Schema auch über die `sql:datatype`-Anmerkung einen Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp angeben. Die Attribute `xsd:type` und `sql:datatype` steuern die Zuordnung zwischen XSD-Datentypen und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen.  
   
 ## <a name="xsdtype-attribute"></a>xsd:type-Attribut  
- Sie können das `xsd:type`-Attribut verwenden, um den XML-Datentyp eines Attributs oder Elements anzugeben, das einer Spalte zugeordnet ist. 
-  `xsd:type` wirkt sich auf das vom Server zurückgegebene Dokument sowie auf die ausgeführte XPath-Abfrage aus. Wenn eine XPath-Abfrage für ein Zuordnungsschema ausgeführt wird, das `xsd:type` enthält, verwendet XPath den angegebenen Datentyp beim Verarbeiten der Abfrage. Weitere Informationen zur Verwendung `xsd:type`von XPath finden Sie unter [Mapping von XSD-Datentypen zu XPath-Datentypen &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md).  
+ Sie können das `xsd:type`-Attribut verwenden, um den XML-Datentyp eines Attributs oder Elements anzugeben, das einer Spalte zugeordnet ist. `xsd:type` wirkt sich auf das vom Server zurückgegebene Dokument sowie auf die ausgeführte XPath-Abfrage aus. Wenn eine XPath-Abfrage für ein Zuordnungsschema ausgeführt wird, das `xsd:type` enthält, verwendet XPath den angegebenen Datentyp beim Verarbeiten der Abfrage. Weitere Informationen zur Verwendung `xsd:type`von XPath finden Sie unter [Mapping von XSD-Datentypen zu XPath-Datentypen &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/xpath-data-types-sqlxml-4-0.md).  
   
  In einem zurückgegebenen Dokument werden alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentypen in Zeichenfolgendarstellungen konvertiert. Einige Datentypen erfordern zusätzliche Konvertierungen. In der folgenden Tabelle sind die Konvertierungen für verschiedene `xsd:type`-Werte aufgelistet.  
   
 |XSD-Datentyp|SQL Server-Konvertierung|  
 |-------------------|---------------------------|  
 |Boolean|CONVERT(bit, COLUMN)|  
-|Date|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
+|Datum|LEFT(CONVERT(nvarchar(4000), COLUMN, 126), 10)|  
 |Decimal|CONVERT(money, COLUMN)|  
 |id/idref/idrefs|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
 |nmtoken/nmtokens|id-prefix + CONVERT(nvarchar(4000), COLUMN, 126)|  
-|Time|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
+|Zeit|SUBSTRING(CONVERT(nvarchar(4000), COLUMN, 126), 1+CHARINDEX(N'T', CONVERT(nvarchar(4000), COLUMN, 126)), 24)|  
 |Alle anderen|Keine zusätzliche Konvertierung|  
   
 > [!NOTE]  

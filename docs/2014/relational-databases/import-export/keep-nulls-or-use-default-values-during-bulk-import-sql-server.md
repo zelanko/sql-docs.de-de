@@ -21,16 +21,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5999a7f3a952cd0392136a96bf3bf166c8e6b155
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011903"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Beibehalten von NULL-Werten oder Verwenden von Standardwerten während des Massenimports (SQL Server)
   Wenn Daten in eine Tabelle importiert werden, werden standardmäßig alle für die Spalten in der Tabelle definierten Standardwerte durch den Befehl **bcp** und die Anweisung BULK INSERT überwacht. Wenn beispielsweise ein NULL-Feld in einem Datenfeld vorkommt, wird stattdessen der Standardwert für die Spalte geladen. Sowohl mit dem Befehl **bcp** als auch mit der Anweisung BULK INSERT können Sie angeben, dass NULL-Werte beibehalten werden sollen.  
   
- Eine reguläre INSERT-Anweisung hingegen behält den NULL-Wert bei, statt einen Standardwert einzufügen. Die INSERT ... SELECT * FROM OPENROWSET(BULK...) -Anweisung zeigt dasselbe grundlegende Verhalten wie eine reguläre INSERT-Anweisung, unterstützt jedoch zusätzlich einen Tabellenhinweis zum Einfügen der Standardwerte.  
+ Eine reguläre INSERT-Anweisung hingegen behält den NULL-Wert bei, statt einen Standardwert einzufügen. Die INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung zeigt dasselbe grundlegende Verhalten wie eine reguläre INSERT-Anweisung, unterstützt jedoch zusätzlich einen Tabellenhinweis zum Einfügen der Standardwerte.  
   
 > [!NOTE]  
 >  Beispielformatdateien, mit denen eine Tabellenspalte übersprungen wird, finden Sie unter [Überspringen einer Tabellenspalte mithilfe einer Formatdatei &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md).  
@@ -171,13 +171,13 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
--   [Behalten Sie Identitäts Werte beim Massen Import von Daten &#40;SQL Server bei&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
+-   [Beibehalten von Identitätswerten beim Massenimport von Daten &#40;SQL Server&#41;](keep-identity-values-when-bulk-importing-data-sql-server.md)  
   
--   [Vorbereiten von Daten für den Massen Export oder-Import &#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md)  
+-   [Vorbereiten von Daten für den Massenexport oder -import &#40;SQL Server&#41;](prepare-data-for-bulk-export-or-import-sql-server.md)  
   
- **So verwenden Sie eine Format Datei**  
+ **So verwenden Sie eine Formatdatei**  
   
 -   [Erstellen einer Formatdatei &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   
@@ -189,7 +189,7 @@ GO
   
 -   [Überspringen einer Tabellenspalte mithilfe einer Formatdatei &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)  
   
- **So verwenden Sie Datenformate für Massen Import oder Massen Export**  
+ **So verwenden Sie Datenformate für Massenimport oder Massenexport**  
   
 -   [Importieren von Daten aus früheren SQL Server-Versionen im nativen Format oder im Zeichenformat](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
@@ -203,11 +203,11 @@ GO
   
  **So geben Sie Datenformate für die Kompatibilität bei Verwendung von bcp an**  
   
--   [Angeben von Feld-und Zeilen Abschluss Zeichen &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
+-   [Angeben von Feld- und Zeilenabschlusszeichen &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)  
   
--   [Geben Sie die Präfix Länge in Datendateien an, indem Sie bcp &#40;SQL Server verwenden&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+-   [Angeben der Präfixlänge in Datendateien mittels bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
--   [Geben Sie File Storage Typ mithilfe von bcp &#40;SQL Server an&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+-   [Angeben des Dateispeichertyps mithilfe von bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   

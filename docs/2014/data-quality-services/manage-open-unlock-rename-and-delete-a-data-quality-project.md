@@ -18,18 +18,18 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d5e3ec1fc7c3c811b588aaf4145aa286d9aa078e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484152"
 ---
 # <a name="manage-open-unlock-rename-and-delete-a-data-quality-project"></a>Verwalten von Data Quality-Projekten (Öffnen, Entsperren, Umbenennen, Löschen)
   In diesem Thema wird beschrieben, wie ein Data Quality-Projekt mithilfe von [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] verwaltet wird, zum Beispiel das Öffnen, Entsperren, Umbenennen und Löschen eines Data Quality-Projekts.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="LimitationsRestrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Einschränkungen  
   
 -   Sie können kein gesperrtes Projekt öffnen, das von einem anderen Benutzer erstellt wurde.  
   
@@ -39,15 +39,15 @@ ms.locfileid: "65484152"
   
 -   Sie können nur ein Data Quality-Projekt entsperren, das von Ihnen erstellt wurde.  
   
-###  <a name="Prerequisites"></a> Voraussetzungen  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
  Sie müssen mindestens ein Data Quality-Projekt verwalten.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Sie müssen über die Rolle „dqs_kb_editor“ oder „dqs_kb_operator“ in der Datenbank DQS_MAIN verfügen, um ein Data Quality-Projekt zu verwalten.  
   
-##  <a name="Open"></a>Öffnen eines Data Quality-Projekts  
+##  <a name="open-a-data-quality-project"></a><a name="Open"></a> Öffnen eines Data Quality-Projekts  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../../2014/data-quality-services/run-the-data-quality-client-application.md)aus.  
   
@@ -59,11 +59,11 @@ ms.locfileid: "65484152"
   
 4.  Das Data Quality-Projekt wird mit demselben Aktivitätsstatus geöffnet, mit dem es zuletzt geschlossen wurde. Ein Data Quality-Projekt hat die folgenden Status:  
   
-    -   Für die **Bereinigungsaktivität** kann ein Data Quality-Projekt die folgenden Status haben: **Bereinigung – Zuordnen**, **Bereinigung – Bereinigen**, **Bereinigung – Ergebnisse verwalten und anzeigen** und **Bereinigung – Export**.  
+    -   Für die Bereinigungs **Aktivität kann** ein Data Quality-Projekt die folgenden Zustände aufweisen: **Bereinigung-** zuordnen, **Bereinigung-** bereinigen, **Bereinigung-Ergebnisse verwalten und anzeigen**und **Bereinigung-Export**.  
   
-    -   Für die **Abgleichsaktivität** kann ein Data Quality-Projekt die folgenden Status haben: **Abgleich – Zuordnung**, **Abgleich – Übereinstimmung**, **Abgleich – Survivorship** und **Abgleich – Export**.  
+    -   Für die **Matching** abgleichsaktivität kann ein Data Quality-Projekt die folgenden Zustände aufweisen: " **Matching-Map**", " **Matching-Matching**", " **Matching-vorship**" und " **Matching-Export**".  
   
-##  <a name="Unlock"></a>Entsperren eines Data Quality-Projekts  
+##  <a name="unlock-a-data-quality-project"></a><a name="Unlock"></a> Entsperren eines Data Quality-Projekts  
  Wenn Sie ein Data Quality-Projekt erstellen, ist es gesperrt, um zu verhindern, dass es von anderen Benutzern verwendet oder geändert wird. Sie müssen das Data Quality-Projekt entsperren, nachdem Sie die Arbeit abgeschlossen haben, wenn Sie möchten, dass andere Benutzer am Data Quality-Projekt arbeiten können. Ein Schlosssymbol wird für gesperrte Projekte angezeigt.  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../../2014/data-quality-services/run-the-data-quality-client-application.md)aus.  
@@ -72,7 +72,7 @@ ms.locfileid: "65484152"
   
 3.  Klicken Sie auf dem Bildschirm **Projekt öffnen** mit der rechten Maustaste auf ein gesperrtes Data Quality-Projekt, das von Ihnen erstellt wurde, und klicken Sie dann im Kontextmenü auf **Entsperren** . Ein grünes Häkchen wird für das Projekt angezeigt, das angibt, dass es entsperrt wurde.  
   
-##  <a name="Rename"></a>Umbenennen eines Data Quality-Projekts  
+##  <a name="rename-a-data-quality-project"></a><a name="Rename"></a>Umbenennen eines Data Quality-Projekts  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../../2014/data-quality-services/run-the-data-quality-client-application.md)aus.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "65484152"
   
 4.  Der Name des Data Quality-Projekts kann in der Spalte **Name** bearbeitet werden. Heben Sie einen neuen Namen ein, und drücken Sie die EINGABETASTE.  
   
-##  <a name="Delete"></a>Löschen eines Data Quality-Projekts  
+##  <a name="delete-a-data-quality-project"></a><a name="Delete"></a>Löschen eines Data Quality-Projekts  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../../2014/data-quality-services/run-the-data-quality-client-application.md)aus.  
   

@@ -11,36 +11,28 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 15b394c836cb24229944f4e0775dfccad847a32b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482883"
 ---
 # <a name="web-application-requirements-master-data-services"></a>Anforderungen für die Webanwendung (Master Data Services)
+  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] ist eine Webanwendung, die von den Internetinformationsdiensten (IIS) gehostet wird. [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] kann nur mit Internet Explorer (IE) 7 oder höher verwendet werden. Internet Explorer 7 und frühere Versionen, Microsoft Edge und Chrome werden nicht unterstützt.  
   
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] ist eine Webanwendung, die von den Internetinformationsdiensten (IIS) gehostet wird. 
-  [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] kann nur mit Internet Explorer (IE) 7 oder höher verwendet werden. Internet Explorer 7 und frühere Versionen, Microsoft Edge und Chrome werden nicht unterstützt.  
-  
- Verwenden Sie [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] zum Erstellen und Konfigurieren der [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung. 
-  [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] konfiguriert IIS auf dem lokalen Computer und eignet sich deshalb besonders für Aufgaben in Verbindung mit der anfänglichen Webkonfiguration. Konfigurieren Sie z.B. eine [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Umgebung mit einer einzelnen [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung, oder konfigurieren Sie die erste Webanwendung in einer [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Bereitstellung für horizontales Skalieren. Verwenden Sie IIS-Tools, um komplexere Aufgaben, z. B. das Konfigurieren mehrerer Webserver in einer Bereitstellung für horizontales Skalieren, auszuführen.  
+ Verwenden Sie [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] zum Erstellen und Konfigurieren der [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung. [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] konfiguriert IIS auf dem lokalen Computer und eignet sich deshalb besonders für Aufgaben in Verbindung mit der anfänglichen Webkonfiguration. Konfigurieren Sie z.B. eine [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Umgebung mit einer einzelnen [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung, oder konfigurieren Sie die erste Webanwendung in einer [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Bereitstellung für horizontales Skalieren. Verwenden Sie IIS-Tools, um komplexere Aufgaben, z. B. das Konfigurieren mehrerer Webserver in einer Bereitstellung für horizontales Skalieren, auszuführen.  
   
 > [!NOTE]  
 >  Jeder Computer, auf dem Sie Komponenten von [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] installieren, muss lizenziert werden. Weitere Informationen finden Sie im Endbenutzerlizenzvertrag (End User License Agreement, EULA).  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
   
 ### <a name="operating-system"></a>Betriebssystem  
  Die folgenden Windows-Betriebssysteme enthalten die Funktionalität der Internetinformationsdienste (IIS), die für die [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Webanwendung und den Webdienst erforderlich ist.  
   
-|
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer (64-Bit) x64|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]Enterprise (64-Bit) x64|
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Business Intelligence (64-Bit) x64|  
+|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Developer (64-Bit) x64|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Enterprise (64-Bit) x64|[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Business Intelligence (64-Bit) x64|  
 |-------------------------------------------------------|--------------------------------------------------------|-------------------------------------------------------------------|  
-|
-  [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows 7 Professional, Enterprise und Ultimate<br /><br /> Windows 8.0 Professional, Enterprise und Ultimate|
-  [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|
-  [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|  
+|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows 7 Professional, Enterprise und Ultimate<br /><br /> Windows 8.0 Professional, Enterprise und Ultimate|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|[!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] SP2<br /><br /> Windows Server 2008 R2 SP1<br /><br /> Windows Server 2012|  
   
  Eine vollständige Liste der Windows-Betriebssysteme, die für Ihre Edition von unter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]stützt werden, finden Sie unter [Hardware-und Software Anforderungen für die Installation von SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md).  
   
@@ -51,7 +43,7 @@ ms.locfileid: "65482883"
  Unter Windows Server 2008 R2 können Sie den **Server-Manager**in der Microsoft Management Console (MMC) verwenden, um die Rolle **Webserver (IIS)** und die folgenden erforderlichen Rollendienste zu installieren.  
   
 > [!NOTE]  
->  Verwenden [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] Sie unter den Betriebssystemen und Windows 7 die Option **Programme und Funktionen** in der Systemsteuerung, um diese Optionen im Dialogfeld **Windows-Funktionen** zu aktivieren.  
+>   Verwenden Sie unter den Betriebssystemen [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] und Windows 7 die Option **Programme und Funktionen** in der Systemsteuerung, um diese Optionen im Dialogfeld **Windows-Funktionen** zu aktivieren.  
   
 ||  
 |-|  
@@ -61,7 +53,7 @@ ms.locfileid: "65482883"
  Unter Windows Server 2012 können Sie den **Server-Manager**in der Microsoft Management Console (MMC) verwenden, um die Rolle **Webserver (IIS)** und die folgenden erforderlichen Rollendienste zu installieren.  
   
 > [!NOTE]  
->  Verwenden Sie unter dem Betriebssystem Windows 8 die Option **Programme und Funktionen** in der Systemsteuerung, um diese Optionen im Dialogfeld **Windows-Funktionen** zu aktivieren.  
+>   Verwenden Sie unter dem Betriebssystem Windows 8 die Option **Programme und Funktionen** in der Systemsteuerung, um diese Optionen im Dialogfeld **Windows-Funktionen** zu aktivieren.  
   
 ||  
 |-|  
@@ -71,25 +63,25 @@ ms.locfileid: "65482883"
  Unter [!INCLUDE[firstref_longhorn](../../includes/firstref-longhorn-md.md)] oder Windows Server 2008 R2 können Sie den **Server-Manager** verwenden, um die folgenden erforderlichen Funktionen zu installieren.  
   
 > [!NOTE]  
->  Verwenden [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] Sie unter den Betriebssystemen und Windows 7 die Option **Programme und Funktionen** in der Systemsteuerung, um diese Optionen im Dialogfeld **Windows-Funktionen** zu aktivieren.  
+>   Verwenden Sie unter den Betriebssystemen [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] und Windows 7 die Option **Programme und Funktionen** in der Systemsteuerung, um diese Optionen im Dialogfeld **Windows-Funktionen** zu aktivieren.  
   
 ||  
 |-|  
-|.NET Framework 3.0-Funktionen<br /><br /> WCF-Aktivierung<br /><br /> HTTP-Aktivierung<br /><br /> Nicht-HTTP-Aktivierung<br /><br /> Aktivierungsdienst für Windows-Prozesse<br /><br /> Prozessmodell<br /><br /> .NET-Umgebung<br /><br /> Konfiguration-APIs|  
+|.NET Framework 3.0-Funktionen<br /><br /> WCF-Aktivierung<br /><br /> HTTP-Aktivierung<br /><br /> Nicht-HTTP-Aktivierung<br /><br /> Windows-Prozessaktivierungsdienst<br /><br /> Prozessmodell<br /><br /> .NET-Umgebung<br /><br /> Konfiguration-APIs|  
   
 ### <a name="features-windows-server-2012-or-windows-8-operating-systems"></a>Funktionen (Betriebssystem Windows Server 2012 oder Windows 8)  
  Unter Windows Server 2012 können Sie den **Server-Manager** verwenden, um die folgenden erforderlichen Funktionen zu installieren.  
   
 > [!NOTE]  
->  Verwenden Sie unter dem Betriebssystem Windows 8 die Option **Programme und Funktionen** in der Systemsteuerung, um diese Optionen im Dialogfeld **Windows-Funktionen** zu aktivieren.  
+>   Verwenden Sie unter dem Betriebssystem Windows 8 die Option **Programme und Funktionen** in der Systemsteuerung, um diese Optionen im Dialogfeld **Windows-Funktionen** zu aktivieren.  
   
 ||  
 |-|  
-|.NET Framework 3.5 (einschließlich .NET 2.0 und 3.0)<br /><br /> .NET Framework 4.5 Advanced Services<br /><br /> ASP.NET 4.5<br /><br /> WCF Services<br /><br /> HTTP-Aktivierung [Hinweis: Dies ist erforderlich.]<br /><br /> TCP-Portfreigabe<br /><br /> Aktivierungsdienst für Windows-Prozesse<br /><br /> Prozessmodell<br /><br /> .NET-Umgebung<br /><br /> Konfiguration-APIs|  
+|.NET Framework 3.5 (einschließlich .NET 2.0 und 3.0)<br /><br /> .NET Framework 4.5 Advanced Services<br /><br /> ASP.NET 4.5<br /><br /> WCF Services<br /><br /> HTTP-Aktivierung [Hinweis: Dies ist erforderlich.]<br /><br /> TCP-Portfreigabe<br /><br /> Windows-Prozessaktivierungsdienst<br /><br /> Prozessmodell<br /><br /> .NET-Umgebung<br /><br /> Konfiguration-APIs|  
   
 ### <a name="accounts-and-permissions"></a>Konten und Berechtigungen  
   
-|type|BESCHREIBUNG|  
+|type|Beschreibung|  
 |----------|-----------------|  
 |Windows-Konto|Sie müssen sich am Webservercomputer mit einem Windows-Konto anmelden, das über die Berechtigung zum Konfigurieren von Windows-Rollen, Rollendiensten und Funktionen sowie zum Erstellen und Verwalten von Anwendungspools, Websites und Webanwendungen in IIS auf dem lokalen Computer verfügt.|  
 |Dienstkonto|Wenn Sie die [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] -Webanwendung in [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]erstellen, müssen Sie eine Identität für den Anwendungspool angeben, in dem die Anwendung ausgeführt wird. Dieses Konto kann sich von dem Konto unterscheiden, das beim Erstellen der [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Datenbank als Dienstkonto angegeben wurde.<br /><br /> Die ID muss einem Domänenbenutzerkonto entsprechen und wird für den Datenbankzugriff zur Datenbankrolle mds_exec in der [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Datenbank hinzugefügt. Weitere Informationen finden Sie unter [Datenbankanmeldenamen, -benutzer und -rollen &#40;Master Data Services&#41;](../database-logins-users-and-roles-master-data-services.md). Darüber hinaus wird dieses Konto einer [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Windows-Gruppe hinzugefügt, z.B. **MDS_ServiceAccounts**, der Berechtigungen für das temporäre Kompilierungsverzeichnis **MDSTempDir**im Dateisystem erteilt wurden. Weitere Informationen finden Sie unter [Ordner- und Dateiberechtigungen &#40;Master Data Services&#41;](../folder-and-file-permissions-master-data-services.md).<br /><br /> Das Anwendungspoolkonto benötigt die VIEW SERVER STATE-Berechtigung, um Serverfehler zu vermeiden. Beispielsweise schlägt der Befehl „MDS-Version überprüfen“ mit einem Serverfehler fehl. Weitere Informationen finden Sie unter [Befehl „MDS-Version überprüfen“ schlägt mit einem Serverfehler in SQL Server 2012 und SQL Server 2014 fehl](https://go.microsoft.com/fwlink/p/?LinkId=526304)|  
@@ -97,6 +89,6 @@ ms.locfileid: "65482883"
 ## <a name="see-also"></a>Weitere Informationen  
  [Installieren von Master Data Services](install-master-data-services.md)   
  [Erstellen Sie eine Master Data Manager-Webanwendung &#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md)   
- [Die Webkonfigurations Seite &#40;Konfigurations-Manager für Master Data Services&#41;](../web-configuration-page-master-data-services-configuration-manager.md)  
+ [Webkonfiguration &#40;Seite im Konfigurations-Manager für Master Data Sevices&#41;](../web-configuration-page-master-data-services-configuration-manager.md)  
   
   

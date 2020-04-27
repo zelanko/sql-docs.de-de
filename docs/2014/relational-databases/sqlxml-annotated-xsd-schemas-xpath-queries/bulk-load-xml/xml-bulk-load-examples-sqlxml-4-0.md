@@ -32,10 +32,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc1618a40585ad1b20d4f59019f1dd3674468da7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013264"
 ---
 # <a name="xml-bulk-load-examples-sqlxml-40"></a>Beispiele für XML-Massenladen (SQLXML 4.0)
@@ -433,7 +433,7 @@ CustOrder(OrderID, CustomerID)
   
 5.  Führen Sie den VBScript-Code aus. XML-Massenladen lädt das XML-Dokument in die Tabellen Ord und Product.  
   
-## <a name="d-bulk-loading-in-identity-type-columns"></a>D: Massenladen in Identitätsspalten  
+## <a name="d-bulk-loading-in-identity-type-columns"></a>D. Massenladen in Identitätsspalten  
  Dieses Beispiel zeigt den Umgang mit Identitätsspalten beim Massenladen. In dem Beispiel werden Daten in einem Massenvorgang in drei Tabellen (Ord, Product und OrderDetail) geladen.  
   
  Tabellen:  

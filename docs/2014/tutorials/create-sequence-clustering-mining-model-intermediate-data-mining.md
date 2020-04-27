@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: b7f4f543952fd86cf6c3c66f9f4b2c51019b1869
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63273476"
 ---
 # <a name="creating-a-sequence-clustering-mining-model-structure-intermediate-data-mining-tutorial"></a>Erstellen einer Sequence Clustering-Miningmodellstruktur (Mittleres Data Mining Tutorial)
@@ -43,7 +43,7 @@ ms.locfileid: "63273476"
 6.  Aktivieren Sie auf der Seite **Tabellentypen angeben** neben der Tabelle **vassoctarqorders** das Kontrollkästchen **Fall** , und aktivieren Sie das Kontrollkästchen **Nested** neben der Tabelle **vassoctarqlineitems** . Klicken Sie auf **Weiter**.  
   
     > [!NOTE]  
-    >  Wenn ein Fehler auftritt, wenn Sie die **Kontrollkästchen für** die Groß-/Kleinschreibung oder die Option aktivieren, ist der Join in der Datenquellen Sicht möglicherweise nicht korrekt. **** Die geschachtelte Table **vassocot qlineitems**muss mit der Fall Tabelle **vassocc-qorders** durch einen n:1-Join verbunden werden. Sie können die Beziehung bearbeiten, indem Sie mit der rechten Maustaste auf die Joinlinie klicken und dann die Richtung des Joins umkehren. Weitere Informationen finden Sie unter [Dialog Feld "Beziehung erstellen oder bearbeiten" &#40;Analysis Services-mehrdimensionalen Daten&#41;](../../2014/analysis-services/create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md).  
+    >  Wenn ein Fehler auftritt, wenn Sie die **Kontrollkästchen für** die Groß-/Kleinschreibung oder die Option aktivieren, ist der Join in der Datenquellen Sicht möglicherweise nicht korrekt. **Case** Die geschachtelte Table **vassocot qlineitems**muss mit der Fall Tabelle **vassocc-qorders** durch einen n:1-Join verbunden werden. Sie können die Beziehung bearbeiten, indem Sie mit der rechten Maustaste auf die Joinlinie klicken und dann die Richtung des Joins umkehren. Weitere Informationen finden Sie unter [Dialog Feld "Beziehung erstellen oder bearbeiten" &#40;Analysis Services-mehrdimensionalen Daten&#41;](../../2014/analysis-services/create-or-edit-relationship-dialog-box-analysis-services-multidimensional-data.md).  
   
 7.  Wählen Sie auf der Seite **Trainingsdaten angeben** die Spalten aus, die im Modell verwendet werden sollen, indem Sie wie folgt ein Kontrollkästchen aktivieren:  
   

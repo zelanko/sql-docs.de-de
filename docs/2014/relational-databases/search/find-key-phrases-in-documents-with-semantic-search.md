@@ -13,18 +13,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cfb769db0de0e962c52d042e19134b849b3c1c3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011347"
 ---
 # <a name="find-key-phrases-in-documents-with-semantic-search"></a>Suchen von Schlüsselausdrücken in Dokumenten mit der semantischen Suche
   Beschreibt, wie Schlüsselausdrücke in Dokumenten oder Textspalten gesucht werden, die für die statistische semantische Indizierung konfiguriert sind.  
   
-##  <a name="BasicsQueryKey"></a>Suchen von Schlüssel Ausdrücken in Dokumenten  
+##  <a name="finding-key-phrases-in-documents"></a><a name="BasicsQueryKey"></a>Suchen von Schlüssel Ausdrücken in Dokumenten  
   
-###  <a name="howtofind"></a>Gewusst wie: Suchen der Schlüssel Ausdrücke in Dokumenten mit semantickeyphraabtable  
+###  <a name="how-to-find-the-key-phrases-in-documents-with-semantickeyphrasetable"></a><a name="howtofind"></a>Gewusst wie: Suchen der Schlüssel Ausdrücke in Dokumenten mit semantickeyphraabtable  
  Um die Schlüsselausdrücke in bestimmten Dokumenten bzw. Dokumente zu identifizieren, die bestimmte Schlüsselausdrücke enthalten, fragen Sie die Funktion [semantickeyphrasetable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semantickeyphrasetable-transact-sql) ab.  
   
  SEMANTICKEYPHRASETABLE gibt eine Tabelle mit keiner, einer oder mehreren Zeilen für die Schlüsselausdrücke zurück, die in der angegebenen Tabelle Spalten zugeordnet sind. Auf diese Rowsetfunktion kann in der FROM-Klausel einer SELECT-Anweisung so verwiesen werden, als handelte es sich dabei um einen regulären Tabellennamen.  
@@ -37,7 +37,7 @@ ms.locfileid: "66011347"
 > [!IMPORTANT]  
 >  Für die Spalten, auf die Sie abzielen, muss die Volltext- und die semantische Indizierung aktiviert sein.  
   
-###  <a name="HowToTopPhrases"></a>Beispiel 1: Suchen der wichtigsten Schlüssel Ausdrücke in einem bestimmten Dokument  
+###  <a name="example-1-find-the-top-key-phrases-in-a-specific-document"></a><a name="HowToTopPhrases"></a>Beispiel 1: Suchen der wichtigsten Schlüssel Ausdrücke in einem bestimmten Dokument  
  Im folgenden Beispiel werden die obersten 10 Schlüsselausdrücke aus dem von der @DocumentId-Variable in der Spalte "Dokument" der Production.Document-Tabelle der AdventureWorks-Beispieldatenbank angegebenen Dokument abgerufen. Die @DocumentId-Variable stellt einen Wert aus der Schlüsselspalte des Volltextindexes dar.  
   
 ```sql  
@@ -54,7 +54,7 @@ GO
   
  Die **SEMANTICKEYPHRASETABLE** -Funktion ruft diese Ergebnisse effizient mithilfe eines Indexsuchvorgangs anstelle eines Tabellenscans ab.  
   
-###  <a name="HowToTopDocuments"></a>Beispiel 2: Suchen der wichtigsten Dokumente, die einen bestimmten Schlüssel Ausdruck enthalten  
+###  <a name="example-2-find-the-top-documents-that-contain-a-specific-key-phrase"></a><a name="HowToTopDocuments"></a>Beispiel 2: Suchen der wichtigsten Dokumente, die einen bestimmten Schlüssel Ausdruck enthalten  
  Im folgenden Beispiel werden die obersten 25 Dokumente mit dem Schlüsselausdruck „Bracket“ in der Spalte „Document“ der Production.Document-Tabelle der AdventureWorks-Beispieldatenbank abgerufen.  
   
 ```sql  

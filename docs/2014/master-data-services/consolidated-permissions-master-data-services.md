@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 66224262c88176fe0d0ddd1f4291b12213aed928
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054111"
 ---
 # <a name="consolidated-permissions-master-data-services"></a>Konsolidierte Berechtigungen (Master Data Services)
@@ -27,7 +27,7 @@ ms.locfileid: "66054111"
   
  Konsolidierte Berechtigungen gelten nur für Entitäten, die für explizite Hierarchien und Auflistungen aktiviert sind.  
   
- **Anmerkungen**  
+ **Hinweise:**  
   
 -   Blattberechtigungen gelten nur für den Funktionsbereich **Explorer** der Benutzeroberfläche.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66054111"
 |Berechtigung|BESCHREIBUNG|  
 |----------------|-----------------|  
 |**Schreibgeschützt**|Konsolidierte Elemente werden zwar angezeigt, Benutzer können jedoch keine Elemente hinzufügen, entfernen oder ändern.|  
-|**Alisierungs**|Konsolidierte Elemente werden angezeigt und können vom Benutzer hinzugefügt, entfernt und geändert werden.|  
+|**Update**|Konsolidierte Elemente werden angezeigt und können vom Benutzer hinzugefügt, entfernt und geändert werden.|  
 |**Deny**|Konsolidierte Elemente für die Entität werden nicht angezeigt.|  
   
 ## <a name="attribute-permissions"></a>Attributberechtigungen  
@@ -45,7 +45,7 @@ ms.locfileid: "66054111"
 |Berechtigung|BESCHREIBUNG|  
 |----------------|-----------------|  
 |**Schreibgeschützt**|Das Attribut wird zwar angezeigt, aber der Benutzer kann keine Attributwerte ändern.|  
-|**Alisierungs**|Das Attribut wird angezeigt, und der Benutzer kann Attributwerte ändern.|  
+|**Update**|Das Attribut wird angezeigt, und der Benutzer kann Attributwerte ändern.|  
 |**Deny**|Das Attribut wird nicht angezeigt.<br /><br /> Hinweis: Der Zugriff auf die Attribute Name und Code kann nicht explizit verweigert werden.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

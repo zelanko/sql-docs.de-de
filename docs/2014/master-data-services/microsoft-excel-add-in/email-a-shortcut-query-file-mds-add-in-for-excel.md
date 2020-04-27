@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8d8e6a882899993ef91659d44456ca95fbb19094
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478891"
 ---
 # <a name="email-a-shortcut-query-file-mds-add-in-for-excel"></a>Senden einer Shortcutabfragedatei (MDS-Add-In für Excel)
@@ -38,6 +38,6 @@ ms.locfileid: "65478891"
 -   Um die Shortcutabfragedatei zu öffnen, muss beim Empfänger der E-Mail MDS [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] installiert sein. Der Empfänger kann auf die Datei doppelklicken, um sie zu öffnen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Die shortcutabfragedateien &#40;MDS-Add-in für Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
+ [Shortcutabfragedateien &#40;MDS-Add-In für Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
   

@@ -14,19 +14,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f327cefbb916bf83f695db40a1d3c3025b7a5d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010934"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Festlegen des Dienstkontos für das Startprogramm des Volltextfilterdaemon
-  In diesem Thema wird beschrieben, wie Sie das Dienstkonto für den SQL-Volltextfilterdaemon-Startprogrammdienst (MSSQLFDLauncher) mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Managers festlegen. Der SQL-Volltextfilterdaemon-Startprogrammdienst wird von der ssNoVersion-Volltextsuche zum Starten des Filterdaemon-Hostprozesses verwendet, der für das Filtern bei der Volltextsuche und die Wörtertrennung verantwortlich ist. Dieser Dienst muss ausgeführt werden, damit die Volltextsuche verwendet werden kann.  
+  In diesem Thema wird beschrieben, wie Sie das Dienstkonto für den SQL-Volltextfilterdaemon-Startprogrammdienst (MSSQLFDLauncher) mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Managers festlegen. Der SQL-Volltextfilterdaemon-Startprogrammdienst wird von der ssNoVersion-Volltextsuche zum Starten des Filterdaemon-Hostprozesses verwendet, der für das Filtern bei der Volltextsuche und die Wörtertrennung verantwortlich ist. Dieser Dienst muss ausgeführt werden, damit die Volltextsuche verwendet werden kann.  
   
  Der SQL-Volltextfilterdaemon-Startprogrammdienst ist ein instanzabhängiger Dienst, dem eine bestimmte Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zugeordnet ist. Das Startprogramm für SQL-Volltextfilterdaemon verteilt die Dienstkontoinformationen an jeden Filterdaemon-Hostprozess.  
   
   
-##  <a name="setting"></a>Festlegen des Dienst Kontos  
+##  <a name="setting-the-service-account"></a><a name="setting"></a>Festlegen des Dienst Kontos  
   
 #### <a name="to-set-the-sql-full-text-filter-daemon-launcher-service-account-for-full-text-search"></a>So legen Sie das Konto des SQL-Volltextfilterdaemon-Startprogrammdiensts für die Volltextsuche fest  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66010934"
 4.  Klicken Sie nach dem Schließen des Dialogfelds auf **Neu starten** , um den SQL-Volltextfilterdaemon-Startprogrammdienst neu zu starten.  
   
   
-##  <a name="error"></a>Wenn der Startprogramm für SQL-Volltextfilterdaemon-Dienst nicht gestartet wird  
+##  <a name="if-the-sql-full-text-filter-daemon-launcher-service-does-not-start"></a><a name="error"></a>Wenn der Startprogramm für SQL-Volltextfilterdaemon-Dienst nicht gestartet wird  
  Wenn der SQL-Volltextfilterdaemon-Startprogrammdienst nicht startet, kann dies durch einen der folgenden Punkte bedingt sein:  
   
 -   Das Kennwort des Kontos für das Konto des SQL-Volltextfilterdaemon-Startprogrammdiensts ist abgelaufen.  

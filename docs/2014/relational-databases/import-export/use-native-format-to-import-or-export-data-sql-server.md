@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a2e91899172dfc6d640df0c33c77e32de3c1c21c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011659"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Verwenden des systemeigenen Formats zum Importieren oder Exportieren von Daten (SQL Server)
@@ -62,7 +62,7 @@ ms.locfileid: "66011659"
     > [!IMPORTANT]  
     >  Wenn der einheitliche Modus verwendet wird, konvertiert das Hilfsprogramm **bcp** standardmäßig Zeichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus in OEM-Zeichen, bevor Sie in eine Datendatei kopiert werden. Das Hilfsprogramm **bcp** konvertiert Zeichen aus einer Datendatei in ANSI-Zeichen, bevor Sie in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle Massen importiert werden. Während dieser Konvertierungen kann es zum Verlust von Daten mit erweiterten Zeichen kommen. Verwenden Sie für erweiterte Zeichen entweder das systemeigene Unicode-Format, oder geben Sie eine Codepage an.  
   
--   `sql_variant`Vorrats  
+-   Daten vom Typ `sql_variant`  
   
      Wenn `sql_variant`-Daten als SQLVARIANT in einer Datendatei im systemeigenen Format gespeichert werden, behalten die Daten alle Merkmale. Die Metadaten, die den Datentyp jedes Datenwerts aufzeichnen, werden zusammen mit dem Datenwert gespeichert. Diese Metadaten werden verwendet, um den Datenwert mit demselben Datentyp in einer `sql_variant`-Zielspalte neu zu erstellen.  
   
@@ -71,18 +71,18 @@ ms.locfileid: "66011659"
      Weitere Informationen zur Datenkonvertierung finden Sie unter [Datentypkonvertierung &#40;Datenbank-Engine&#41;](/sql/t-sql/data-types/data-type-conversion-database-engine).  
   
 ## <a name="command-options-for-native-format"></a>Befehlsoptionen für das systemeigene Format  
- Sie können Daten im nativen Format in eine Tabelle importieren, indem Sie **bcp**, BULK INSERT oder INSERT... Select \* FROM OPENROWSET (BULK...). Bei einem **bcp** -Befehl oder einer BULK INSERT-Anweisung können Sie das Datenformat in der Befehlszeile angeben. Für eine INSERT ...  SELECT * FROM OPENROWSET(BULK...) -Anweisung müssen Sie das Datenformat in einer Formatdatei angeben.  
+ Sie können Daten im nativen Format in eine Tabelle importieren, indem Sie **bcp**, BULK INSERT oder INSERT... Select \* FROM OPENROWSET (BULK...). Bei einem **bcp** -Befehl oder einer BULK INSERT-Anweisung können Sie das Datenformat in der Befehlszeile angeben. Für eine INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung müssen Sie das Datenformat in einer Formatdatei angeben.  
   
  Das systemeigene Format wird durch die folgenden Befehlszeilenoptionen unterstützt:  
   
-|Get-Help|Option|BESCHREIBUNG|  
+|Get-Help|Option|Beschreibung|  
 |-------------|------------|-----------------|  
 |**bcp**|**-n**|Bewirkt, dass das Hilfsprogramm **bcp** die nativen Datentypen der Daten verwendet. <sup>1</sup>|  
 |BULK INSERT|DataFileType **= '** Native **'**|Verwendet die systemeigenen Datentypen (native oder widenative) der Daten. Beachten Sie, dass DATAFILETYPE nicht erforderlich ist, wenn eine Formatdatei die Datentypen angibt.|  
   
  <sup>1</sup> um systemeigene Daten (**-n**) in ein Format zu laden, das mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] früheren Versionen von-Clients kompatibel ist, verwenden Sie den Schalter **-V** . Weitere Informationen finden Sie unter [Importieren von Daten aus früheren SQL Server-Versionen im nativen Format oder im Zeichenformat](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
- Weitere Informationen finden Sie unter [bcp (Hilfsprogramm)](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql), oder [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
+ Weitere Informationen finden Sie unter [bcp (Hilfsprogramm)](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) oder [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
 > [!NOTE]  
 >  Alternativ können Sie die Formatierung pro Feld in einer Formatdatei angeben. Weitere Informationen finden Sie unter [Formatdateien zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)erforderlich.  
@@ -91,7 +91,7 @@ ms.locfileid: "66011659"
  Die folgenden Beispiele zeigen, wie ein Massenexport nativer Daten mithilfe von **bcp** und wie ein Massenimport derselben Daten mithilfe von BULK INSERT ausgeführt wird.  
   
 ### <a name="sample-table"></a>Beispieltabelle  
- Die Beispiele erfordern, dass eine Tabelle mit dem Namen **myTestNativeData** in der **AdventureWorks** -Beispieldatenbank unter dem Schema **dbo** erstellt wird. Vor dem Ausführen dieser Beispiele müssen Sie diese Tabelle erstellen. Führen Sie im [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]-Abfrage-Editor Folgendes aus:  
+ Die Beispiele erfordern, dass eine Tabelle mit dem Namen **myTestNativeData** in der **AdventureWorks** -Beispieldatenbank unter dem Schema **dbo** erstellt wird. Vor dem Ausführen dieser Beispiele müssen Sie diese Tabelle erstellen. Führen Sie im [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] -Abfrage-Editor Folgendes aus:  
   
 ```  
 USE AdventureWorks;  
@@ -123,7 +123,7 @@ SELECT Col1,Col2,Col3 FROM myTestNativeData
 |**-n**|Gibt systemeigene Datentypen an.|  
 |**-T**|Gibt an, dass das Hilfsprogramm **bcp** die Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe integrierter Sicherheit über eine vertrauenswürdige Verbindung herstellt. Wenn **-T** nicht angegeben wird, müssen Sie **-U** und **-P** angeben, um sich erfolgreich anzumelden.|  
   
- Das folgende Beispiel führt einen Massenexport von Daten im systemeigenen Format aus der `myTestNativeData` -Tabelle in eine neue Datendatei namens `myTestNativeData-n.Dat` aus. Geben Sie an der Eingabeaufforderung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Folgendes ein:  
+ Das folgende Beispiel führt einen Massenexport von Daten im systemeigenen Format aus der `myTestNativeData`-Tabelle in eine neue Datendatei namens `myTestNativeData-n.Dat` aus. Geben Sie an der Eingabeaufforderung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Folgendes ein:  
   
 ```  
 bcp AdventureWorks..myTestNativeData out C:\myTestNativeData-n.Dat -n -T  
@@ -131,7 +131,7 @@ bcp AdventureWorks..myTestNativeData out C:\myTestNativeData-n.Dat -n -T
 ```  
   
 ### <a name="using-bulk-insert-to-bulk-import-native-data"></a>Verwenden von BULK INSERT für den Massenimport systemeigener Daten  
- Im folgenden Beispiel wird BULK INSERT verwendet, um die Daten in der Datendatei `myTestNativeData-n.Dat` in die `myTestNativeData` -Tabelle zu importieren. Führen Sie im [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]-Abfrage-Editor Folgendes aus:  
+ Im folgenden Beispiel wird BULK INSERT verwendet, um die Daten in der Datendatei `myTestNativeData-n.Dat` in die `myTestNativeData` -Tabelle zu importieren. Führen Sie im [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] -Abfrage-Editor Folgendes aus:  
   
 ```  
 USE AdventureWorks;  
@@ -145,8 +145,8 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
- **So verwenden Sie Datenformate für Massen Import oder Massen Export**  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
+ **So verwenden Sie Datenformate für Massenimport oder Massenexport**  
   
 -   [Importieren von Daten aus früheren SQL Server-Versionen im nativen Format oder im Zeichenformat](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   
@@ -160,8 +160,8 @@ GO
  [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [Datentypen &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [sql_variant &#40;Transact-SQL-&#41;](/sql/t-sql/data-types/sql-variant-transact-sql)   
- [Importieren von Daten im nativen Format und im Zeichen Format aus früheren Versionen von SQL Server](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)   
+ [sql_variant &#40;Transact-SQL&#41;](/sql/t-sql/data-types/sql-variant-transact-sql)   
+ [Importieren von Daten aus früheren SQL Server-Versionen im nativen Format oder im Zeichenformat](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
  [Verwenden des nativen Unicode-Formats zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md)  
   

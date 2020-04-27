@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d171270a7605c258f9bc347781cd9a4d91c7a348
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014679"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Aktualisieren von Daten mit XML-Updategrams (SQLXML 4.0)
@@ -192,7 +192,7 @@ ms.locfileid: "66014679"
   
      Weitere Informationen finden Sie unter [Verwenden von ADO zum Ausführen von SQLXML 4,0-Abfragen](../../sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
-### <a name="d-specifying-multiple-sync-blocks"></a>D: Angeben mehrerer \<Synchronisierungs> Blöcke  
+### <a name="d-specifying-multiple-sync-blocks"></a>D. Angeben mehrerer \<Synchronisierungs> Blöcke  
  Sie können mehrere ** \<Synchronisierungs>** Blöcke in einem Update Gram angeben. Jeder ** \<angegebene Synchronisierungs>** Block ist eine unabhängige Transaktion.  
   
  Im folgenden Update Gram aktualisiert der erste ** \<Synchronisierungs>** einen Datensatz in der Sales. Customer-Tabelle. Der Einfachheit halber gibt das Updategram nur die erforderlichen Spaltenwerte an, nämlich den Identitätswert (CustomerID) und den zu aktualisierenden Wert (SalesPersonID).  

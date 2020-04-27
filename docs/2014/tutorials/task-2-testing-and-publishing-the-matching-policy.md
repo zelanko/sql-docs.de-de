@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a9957625e09bde8bb733eca6e564dfdcfbb0bd98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484728"
 ---
-# <a name="task-2-testing-and-publishing-the-matching-policy"></a>Aufgabe 2: Testen und Veröffentlichen der Abgleichsrichtlinie
+# <a name="task-2-testing-and-publishing-the-matching-policy"></a>Aufgabe 2: Testen und Veröffentlichen der Abgleichrichtlinie
   In dieser Aufgabe testen und veröffentlichen Sie die abgleichsrichtlinie zum **Entfernen doppelter Lieferanten** .  
   
-1.  Klicken Sie auf der Seite Abgleichsergebnisse auf **starten** , um die gesamte Richtlinie zu testen **** In diesem Fall enthält die Richtlinie nur eine Regel, daher sollten die Testergebnisse für die Regel und die Richtlinie identisch sein.  
+1.  Klicken Sie auf der Seite Abgleichsergebnisse auf **starten** , um die gesamte Richtlinie zu testen **Matching Results** In diesem Fall enthält die Richtlinie nur eine Regel, daher sollten die Testergebnisse für die Regel und die Richtlinie identisch sein.  
   
 2.  Prüfen Sie alle übereinstimmenden Datensätze und ihre Treffergenauigkeit im Listenfeld. Ein Datensatz, dem ein **grünes** Symbol zugeordnet ist, ist ein Duplikat des pivotdatensatz, der ihm vorangestellt ist. Hier einige Beispiele:  
   
@@ -50,6 +50,6 @@ ms.locfileid: "65484728"
 7.  Klicken Sie im Dialogfeld SQL Server Data Quality Services auf **veröffentlichen** , und klicken Sie dann im Meldungs Feld auf **OK** . Nun wird die von Ihnen definierte abgleichsrichtlinie in der Wissensdatenbank **Suppliers** veröffentlicht. Sie können die Wissensdatenbank verwenden, um den Abgleichsprozess für eine Eingabedatei auszuführen, mit dem Ziel, Duplikate zu identifizieren und zu entfernen.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 3: Erstellen und Ausführen eines Data Quality-Projekts für den Abgleich](../../2014/tutorials/task-3-creating-and-running-a-data-quality-project-for-matching.md)  
+ [Aufgabe 3: Erstellen und Ausführen eines Data Quality-Projekts für Abgleiche](../../2014/tutorials/task-3-creating-and-running-a-data-quality-project-for-matching.md)  
   
   

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96a37b1b59043079f52ca922f1ab3e7dfc9cc0ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011269"
 ---
 # <a name="improve-the-performance-of-full-text-queries"></a>Verbessern der Leistung von Volltextabfragen
@@ -26,8 +26,7 @@ ms.locfileid: "66011269"
   
 -   Organisieren Sie den Volltextkatalog mithilfe von [ALTER FULLTEXT CATALOG REORGANIZE](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)neu. Stellen Sie sicher, dass dies vor dem Leistungstest erfolgt, da das Ausführen dieser Anweisung zu einer Masterzusammenführung der Volltextindizes im Katalog führt.  
   
--   Beschränken Sie die Auswahl von Volltextschlüsselspalten auf eine kleine Spalte. Es wird zwar eine 900-Byte-Spalte unterstützt, aber es ist ratsam, in einem Volltextindex eine kleinere Schlüsselspalte zu verwenden. 
-  `int` und `bigint` bieten die beste Leistung.  
+-   Beschränken Sie die Auswahl von Volltextschlüsselspalten auf eine kleine Spalte. Es wird zwar eine 900-Byte-Spalte unterstützt, aber es ist ratsam, in einem Volltextindex eine kleinere Schlüsselspalte zu verwenden. `int` und `bigint` bieten die beste Leistung.  
   
 -   Durch die Verwendung eines Volltextschlüssels mit ganzen Zahlen können Sie einen Join mit der Zuordnungstabelle **docid** vermeiden. Deshalb verbessert ein ganzzahliger Volltextschlüssel die Abfrageleistung erheblich und optimiert außerdem die Durchforstungsleistung. Es können sich weitere Leistungsvorteile ergeben, wenn der Volltextschlüssel auch der Schlüssel des gruppierten Index ist.  
   

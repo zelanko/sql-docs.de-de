@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 113f73bd363ca866f45e439eb5d599b177a910ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054149"
 ---
 # <a name="enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services"></a>Aktivieren einer Entität für explizite Hierarchien und Auflistungen (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "66054149"
 ## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
--   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
+-   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **System Verwaltung** zuzugreifen.  
   
 -   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66054149"
   
 -   [Erstellen einer expliziten Hierarchie &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)  
   
--   [Erstellen Sie eine Sammlung &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)  
+-   [Erstellen einer Sammlung &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-collection-master-data-services.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Entitäten &#40;Master Data Services&#41;](../../2014/master-data-services/entities-master-data-services.md)   

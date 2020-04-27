@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 772dbb86188bf164a2e135f7bb9b71a1cc030745
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011769"
 ---
 # <a name="use-a-format-file-to-bulk-import-data-sql-server"></a>Massenimport von Daten mithilfe einer Formatdatei (SQL Server)
@@ -38,10 +38,10 @@ ms.locfileid: "66011769"
 |INSERT ... SELECT * FROM OPENROWSET(BULK...)|FORMATFILE = '*format_file_path*'|  
 |**bcp** ... **in**|**-f** *format_file*|  
   
- Weitere Informationen finden Sie unter [bcp (Hilfsprogramm)](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql), oder [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
+ Weitere Informationen finden Sie unter [bcp (Hilfsprogramm)](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) oder [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
 > [!NOTE]  
->  Verwenden Sie in Ihrer Formatdatei einen der folgenden Datentypen, um einen Massenexport oder -import von SQLXML-Daten auszuführen: SQLCHAR oder SQLVARYCHAR (die Daten werden in der Clientcodepage oder in der Codepage, die durch die Sortierung impliziert wird, gesendet), SQLNCHAR oder SQLNVARCHAR (die Daten werden als Unicode gesendet) oder SQLBINARY oder SQLVARYBIN (die Daten werden ohne Konvertierung gesendet).  
+>  Verwenden Sie in der Formatdatei einen der folgenden Datentypen für den Massenexport oder -import von SQLXML-Daten: SQLCHAR oder SQLVARYCHAR (die Daten werden in der Clientcodepage oder in der Codepage, die durch die Sortierung impliziert wird, gesendet), SQLNCHAR oder SQLNVARCHAR (die Daten werden als Unicode gesendet) oder SQLBINARY oder SQLVARYBIN (die Daten werden ohne Konvertierung gesendet).  
   
 ## <a name="examples"></a>Beispiele  
  Die Beispiele in diesem Abschnitt veranschaulichen die Verwendung von Format Dateien für den Massen Import von Daten mithilfe des **bcp** -Befehls und des BULK INSERT und einfügen... SELECT * FROM OPENROWSET (BULK...)-Anweisungen. Bevor Sie eines der Beispiele für den Massenimport nachvollziehen können, müssen Sie eine entsprechende Tabelle, eine Datendatei und eine Formatdatei für das Beispiel erstellen.  
@@ -75,7 +75,7 @@ GO
  Bei einigen Beispielen in diesem Abschnitt werden XML-Formatdateien, `myTestFormatFiles-f-x-c.Xml`, verwendet, während in anderen Beispielen Dateien in einem anderen Format verwendet werden. Beide Formatdateitypen verwenden Zeichendatenformate und ein Feldabschlusszeichen (,), das nicht dem Standard entspricht.  
   
 #### <a name="the-sample-non-xml-format-file"></a>Beispieldatei – Nicht im XML-Format  
- Im folgenden Beispiel wird zur Generierung einer XML-Formatdatei aus der **-Tabelle der Befehl **bcp`myTestFormatFiles` verwendet. Die Datei `myTestFormatFiles.Fmt` enthält die folgenden Informationen:  
+ Im folgenden Beispiel wird zur Generierung einer XML-Formatdatei aus der `myTestFormatFiles`-Tabelle der Befehl **bcp** verwendet. Die Datei `myTestFormatFiles.Fmt` enthält die folgenden Informationen:  
   
 ```  
 9.0  
@@ -96,7 +96,7 @@ bcp AdventureWorks2012..MyTestFormatFiles format nul -c -t, -f myTestFormatFiles
  Weitere Informationen zum Erstellen einer Formatdatei finden Sie unter [Erstellen einer Formatdatei &#40;SQL Server&#41;](create-a-format-file-sql-server.md).  
   
 #### <a name="the-sample-xml-format-file"></a>Beispieldatei – Im XML-Format  
- Im folgenden Beispiel wird zur Erstellung einer XML-Formatdatei aus der **-Tabelle der Befehl **bcp`myTestFormatFiles` verwendet. Die Datei `myTestFormatFiles.Xml` enthält die folgenden Informationen:  
+ Im folgenden Beispiel wird zur Erstellung einer XML-Formatdatei aus der `myTestFormatFiles`-Tabelle der Befehl **bcp** verwendet. Die Datei `myTestFormatFiles.Xml` enthält die folgenden Informationen:  
   
 ```  
 <?xml version="1.0"?>  
@@ -137,7 +137,7 @@ bcp AdventureWorks2012..myTestFormatFiles in C:\myTestFormatFiles-c.Dat -f C:\my
 ### <a name="using-bulk-insert"></a>Verwenden von BULK INSERT  
  Im nachfolgenden Beispiel wird BULK INSERT für den Massenimport von Daten aus der `myTestFormatFiles-c.Dat`-Datendatei in die `HumanResources.myTestFormatFiles`-Tabelle in der [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)]-Beispieldatenbank verwendet. Im Beispiel wird die XML-Formatdatei `MyTestFormatFiles.Fmt` verwendet. Vorhandene Tabellenzeilen werden in diesem Beispiel vor dem Import der Datendatei gelöscht.  
   
- Führen Sie im [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]-Abfrage-Editor Folgendes aus:  
+ Führen Sie im [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] -Abfrage-Editor Folgendes aus:  
   
 ```  
 USE AdventureWorks2012;  
@@ -158,7 +158,7 @@ GO
 ### <a name="using-the-openrowset-bulk-rowset-provider"></a>Verwenden des OPENROWSET-Bulk-Rowsetanbieters  
  Im nachfolgenden Beispiel wird `INSERT ... SELECT * FROM OPENROWSET(BULK...)` für den Massenimport von Daten aus der `myTestFormatFiles-c.Dat`-Datendatei in die `HumanResources.myTestFormatFiles`-Tabelle in der `AdventureWorks`-Beispieldatenbank verwendet. In diesem Beispiel wird die XML-Formatdatei `MyTestFormatFiles.Xml` verwendet. Vorhandene Tabellenzeilen werden in diesem Beispiel vor dem Import der Datendatei gelöscht.  
   
- Führen Sie im [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]-Abfrage-Editor Folgendes aus:  
+ Führen Sie im [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] -Abfrage-Editor Folgendes aus:  
   
 ```  
 USE AdventureWorks2012;  
@@ -196,7 +196,7 @@ DROP TABLE myTestFormatFiles
  [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)   
- [Nicht-XML-Format Dateien &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
+ [Nicht-XML-Formatdateien &#40;SQL Server&#41;](xml-format-files-sql-server.md)   
  [XML-Formatdateien &#40;SQL Server&#41;](xml-format-files-sql-server.md)  
   
   

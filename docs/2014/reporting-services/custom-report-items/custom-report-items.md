@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 39860a2b147a2db392219552ebfd18cbbf7b7992
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264776"
 ---
 # <a name="custom-report-items"></a>Custom Report Items
@@ -32,22 +32,22 @@ ms.locfileid: "63264776"
  Möglicherweise möchten einige Entwickler zusätzlich zur Entwicklung von Funktionen, die ursprünglich nicht unterstützt wurden, bestehende Funktionen durch Alternativversionen der Steuerelemente erweitern, die bereits in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthalten sind. In diesem Szenario könnte ein Entwickler drei Komponenten anbieten: eine Laufzeitkomponente, eine Entwurfszeitkomponente und eine Laufzeitkonvertierungskomponente, mit der ein vorhandenes Berichtselement bei Bedarf in ein benutzerdefiniertes Berichtselement umgewandelt wird.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Custom Report Item Architecture (Architektur des benutzerdefinierten Berichtselements)](custom-report-item-architecture.md)  
+ [Architektur des benutzerdefinierten Berichtselements](custom-report-item-architecture.md)  
  Erläutert die Komponenten, aus denen ein benutzerdefiniertes Berichtselement besteht.  
   
- [Custom Report Item Implementation Requirements (Implementierungsanforderungen für benutzerdefinierte Berichtselemente)](custom-report-item-implementation-requirements.md)  
+ [Implementierungsanforderungen für benutzerdefinierte Berichtselemente](custom-report-item-implementation-requirements.md)  
  Beschreibt die Voraussetzungen für die Erstellung eines benutzerdefinierten Berichtselements.  
   
- [Creating a Custom Report Item Run-Time Component (Erstellen einer Laufzeitkomponente für ein benutzerdefiniertes Berichtselement)](creating-a-custom-report-item-run-time-component.md)  
+ [Erstellen einer Laufzeitkomponente für ein benutzerdefiniertes Berichtselement](creating-a-custom-report-item-run-time-component.md)  
  Beschreibt, wie eine benutzerdefinierte Laufzeitkomponente für ein Berichtselement erstellt wird.  
   
- [Creating a Custom Report Item Design-Time Component (Erstellen einer Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement)](creating-a-custom-report-item-design-time-component.md)  
+ [Erstellen einer Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement](creating-a-custom-report-item-design-time-component.md)  
  Beschreibt, wie eine benutzerdefinierte Entwurfszeitkomponente für ein Berichtselement erstellt wird.  
   
  [Vorgehensweise: Bereitstellen eines benutzerdefinierten Berichtselements](how-to-deploy-a-custom-report-item.md)  
  Beschreibt, wie ein benutzerdefiniertes Berichtselement angewendet wird.  
   
- [Custom Report Item Class Libraries (Klassenbibliotheken für ein benutzerdefiniertes Berichtselement)](custom-report-item-class-libraries.md)  
+ [Klassenbibliotheken für ein benutzerdefiniertes Berichtselement](custom-report-item-class-libraries.md)  
  Beschreibt die Infrastrukturklassen benutzerdefinierter Berichtselemente und die verwalteten Wrapperklassen im `Microsoft.ReportDesigner`-Namespace.  
   
 ## <a name="see-also"></a>Weitere Informationen  

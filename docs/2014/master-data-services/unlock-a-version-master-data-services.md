@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8541dec5d64de7e0e98e30bbc48c5a5c4eeea9fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482593"
 ---
 # <a name="unlock-a-version-master-data-services"></a>Entsperren einer Version (Master Data Services)
@@ -44,7 +44,7 @@ ms.locfileid: "65482593"
   
 ## <a name="next-steps"></a>Nächste Schritte  
   
--   [Eine Version &#40;Master Data Services Sperren&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)  
+-   [Sperren einer Version &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Versionen &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)  

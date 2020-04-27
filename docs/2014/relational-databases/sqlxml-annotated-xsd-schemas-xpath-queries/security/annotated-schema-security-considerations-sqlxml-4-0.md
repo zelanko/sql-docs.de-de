@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 635c5c433f583ecad9f8dda1e35e4c981742212e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010581"
 ---
 # <a name="annotated-schema-security-considerations-sqlxml-40"></a>Überlegungen zur Sicherheit von Schemas mit Anmerkungen (SQLXML 4.0)
@@ -34,7 +34,7 @@ ms.locfileid: "66010581"
   
 -   Die mithilfe von Anmerkungen angegebene explizite Zuordnung macht die Datenbankinformationen (wie Tabellennamen und Spaltennamen) verfügbar. Daher werden Sie es möglicherweise vorziehen, diese Schemas nicht öffentlich verfügbar zu machen.  
   
--   Bestimmte Abfragen wie solche, die für ein Zuordnungsschema mit Rekursion angegeben werden (mit auf einen höheren Wert festgelegter `max-depth`-Anmerkung), benötigen eventuell mehr Zeit zur Ausführung. Sie können optional ein Timeout Limit angeben, indem Sie die Eigenschaft Befehls Timeout (in Sekunden) festlegen. Beispiel:  
+-   Bestimmte Abfragen wie solche, die für ein Zuordnungsschema mit Rekursion angegeben werden (mit auf einen höheren Wert festgelegter `max-depth`-Anmerkung), benötigen eventuell mehr Zeit zur Ausführung. Sie können optional ein Timeout Limit angeben, indem Sie die Eigenschaft Befehls Timeout (in Sekunden) festlegen. Zum Beispiel:  
   
     ```  
     cn.Open "Provider=SQLOLEDB;Server=localhost;Database=tempdb;Integrated Security=SSPI;Command Properties='Command Time Out=50';"  

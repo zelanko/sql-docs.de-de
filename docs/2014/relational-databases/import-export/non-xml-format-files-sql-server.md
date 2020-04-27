@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6554691ce8debb96d4b0ee350ef98d2bfc57f02c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011876"
 ---
 # <a name="non-xml-format-files-sql-server"></a>Nicht-XML-Formatdateien (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "66011876"
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Vorteile von Nicht-XML-Formatdateien  
+##  <a name="benefits-of-non-xml-format-files"></a><a name="Benefits"></a> Vorteile von Nicht-XML-Formatdateien  
   
 -   Sie können eine Nicht-XML-Formatdatei automatisch erstellen, indem Sie die **format** -Option in einem **bcp** -Befehl angeben.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66011876"
 > [!NOTE]  
 >  XML-Formatdateien bieten verschiedene Vorteile gegenüber Nicht-XML-Formatdateien. Weitere Informationen finden Sie unter [XML-Formatdateien &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
-##  <a name="Structure"></a> Struktur von Nicht-XML-Formatdateien  
+##  <a name="structure-of-non-xml-format-files"></a><a name="Structure"></a> Struktur von Nicht-XML-Formatdateien  
  Bei einer Nicht-XML-Formatdatei handelt es sich um eine Textdatei mit einer speziellen Struktur. Die Nicht-XML-Formatdatei enthält Informationen zu Dateispeichertyp, Präfixlänge, Feldlänge und Feldabschlusszeichen jeder Tabellenspalte.  
   
  In der folgenden Abbildung werden die Felder der Formatdatei in einem Beispiel einer Nicht-XML-Formatdatei gezeigt.  
@@ -56,9 +56,9 @@ ms.locfileid: "66011876"
   
  Die Felder **Version** und **Anzahl der Spalten** kommen nur einmal vor. Die Bedeutung dieser Felder wird in der folgenden Tabelle beschrieben.  
   
-|Feld in der Formatdatei|BESCHREIBUNG|  
+|Feld in der Formatdatei|Beschreibung|  
 |------------------------|-----------------|  
-|Version|Die Versionsnummer wird nur von **bcp**erkannt, nicht von [!INCLUDE[tsql](../../includes/tsql-md.md)]. Versionsnummer des Hilfsprogramms **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> Hinweis: Die Version des zum Lesen der Formatdatei verwendeten Hilfsprogramms **bcp** (Bcp.exe) muss mit der Version, mit der die Formatdatei erstellt wurde, übereinstimmen oder höher sein. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]**bcp** liest z.B. Formatdateien der Version 10.0, die von [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** generiert wurden, aber [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** liest keine Formatdateien der Version 12.0, die von [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]**bcp** generiert wurden.|  
+|Version|Die Versionsnummer wird nur von **bcp**erkannt, nicht von [!INCLUDE[tsql](../../includes/tsql-md.md)]. Versionsnummer des Hilfsprogramms **bcp** :<br /><br /> 9.0 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 10.0 = [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]<br /><br /> 11.0 = [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]<br /><br /> 12.0 = [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]<br /><br /> Hinweis: Die Version des zum Lesen einer Formatdatei verwendeten Hilfsprogramms **bcp** (Bcp.exe) muss mit der Version, mit der die Formatdatei erstellt wurde, übereinstimmen oder höher sein. [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]**bcp** liest z.B. Formatdateien der Version 10.0, die von [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** generiert wurden, aber [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]**bcp** liest keine Formatdateien der Version 12.0, die von [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]**bcp** generiert wurden.|  
 |Anzahl von Spalten|Anzahl der Felder in der Datendatei. Diese Anzahl muss für alle Zeilen identisch sein.|  
   
  Die anderen Felder der Formatdatei beschreiben die Datenfelder, die massenimportiert bzw. exportiert werden sollen. Jedes Datenfeld nimmt eine eigene Zeile in der Formatdatei ein. Jede Zeile der Formatdatei enthält Werte für die Felder der Formatdatei. Diese Felder werden in der folgenden Tabelle beschrieben.  
@@ -77,7 +77,7 @@ ms.locfileid: "66011876"
 > [!NOTE]  
 >  Sie können eine Formatdatei so ändern, dass Sie einen Massenimport aus einer Datendatei ausführen können, in der die Anzahl oder Reihenfolge der Felder von der Anzahl oder Reihenfolge der Tabellenspalten abweicht. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Verwandte Aufgaben](#RelatedTasks) .  
   
-##  <a name="Examples"></a> Beispiel für eine Nicht-XML-Formatdatei  
+##  <a name="example-of-a-non-xml-format-file"></a><a name="Examples"></a> Beispiel für eine Nicht-XML-Formatdatei  
  Das folgende Beispiel zeigt eine zuvor erstellte Nicht-XML-Formatdatei (`myDepartmentIdentical-f-c.fmt`). Diese Datei beschreibt ein Zeichendatenfeld für jede Spalte in der `HumanResources.Department` -Tabelle der `AdventureWorks2012` -Beispieldatenbank.  
   
  Die generierte Formatdatei `myDepartmentIdentical-f-c.fmt`enthält die folgenden Informationen:  
@@ -94,7 +94,7 @@ ms.locfileid: "66011876"
 > [!NOTE]  
 >  Eine Abbildung der Felder der Formatdatei in Bezug auf diese Nicht-XML-Formatdatei finden Sie unter [Struktur von Nicht-XML-Formatdateien](#Structure)weiter oben in diesem Thema.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Erstellen einer Formatdatei &#40;SQL Server&#41;](create-a-format-file-sql-server.md)  
   

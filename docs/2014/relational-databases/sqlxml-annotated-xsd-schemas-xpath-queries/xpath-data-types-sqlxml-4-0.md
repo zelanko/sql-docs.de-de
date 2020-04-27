@@ -28,10 +28,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3e4a0c3d8b7a01f43b03d3f94b48d5bba800b64f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014557"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>XPath-Datentypen (SQLXML 4.0)
@@ -69,10 +69,9 @@ ms.locfileid: "66014557"
  Konvertierungen von Knotensätzen sind nicht immer intuitiv. Die Konvertierung eines Knotensatzes in den Typ `string` erfolgt anhand des Zeichenkettenwerts des ersten Knotens des Satzes. Bei der Konvertierung eines Knotensatzes in den Typ `number` wird dieser zunächst in den Typ `string` und anschließend der Typ `string` in den Typ `number` konvertiert. Ein Knotensatz wird in den Typ `boolean` konvertiert, indem sein Vorhandensein überprüft wird.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt bei Knotensätzen keine Positionalauswahl durch: Die XPath-Abfrage `Customer[3]` beispielsweise bezieht sich auf den dritten Kunden; eine solche Positionalauswahl wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht unterstützt. Aus diesem Grund wurden die Konvertierungen, bei denen gemäß XPath-Spezifikation ein Knotensatz in den Typ `string` oder in den Typ `number` konvertiert wird, nicht implementiert. Die Semantik von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bezieht sich auf "ein" Vorkommnis, während die XPath-Spezifikation "das erste" Vorkommnis bezeichnet. Beispielsweise wählt die XPath-Abfrage `Order[OrderDetail/@UnitPrice > 10.0]` basierend auf der W3C-XPath-Spezifikation diese Bestellungen mit dem ersten **OrderDetail** aus, das einen **UnitPrice** größer als 10,0 hat. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wählt diese XPath-Abfrage diese Bestellungen mit allen **OrderDetails** aus, deren **UnitPrice** größer als 10,0 ist.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] führt bei Knotensätzen keine Positionalauswahl durch: Die XPath-Abfrage `Customer[3]` beispielsweise bezieht sich auf den dritten Kunden; eine solche Positionalauswahl wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nicht unterstützt. Aus diesem Grund wurden die Konvertierungen, bei denen gemäß XPath-Spezifikation ein Knotensatz in den Typ `string` oder in den Typ `number` konvertiert wird, nicht implementiert. Die Semantik von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bezieht sich auf "ein" Vorkommnis, während die XPath-Spezifikation "das erste" Vorkommnis bezeichnet. Beispielsweise wählt die XPath-Abfrage `Order[OrderDetail/@UnitPrice > 10.0]` basierend auf der W3C-XPath-Spezifikation diese Bestellungen mit dem ersten **OrderDetail** aus, das einen **UnitPrice** größer als 10,0 hat. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wählt diese XPath-Abfrage diese Bestellungen mit allen **OrderDetails** aus, deren **UnitPrice** größer als 10,0 ist.  
   
- Bei Konvertierungen in den Typ `boolean` wird das Vorhandensein überprüft; aus diesem Grund entspricht die XPath-Abfrage `Products[@Discontinued=true()]` dem SQL-Ausdruck "Products.Discontinued is not null", nicht dem SQL-Ausdruck "Products.Discontinued = 1". Damit die Abfrage dem letztgenannten SQL-Ausdruck entspricht, konvertierten Sie den Knotensatz zunächst in einen anderen Typ als `boolean`, etwa `number`. Beispiel: `Products[number(@Discontinued) = true()]`.  
+ Bei Konvertierungen in den Typ `boolean` wird das Vorhandensein überprüft; aus diesem Grund entspricht die XPath-Abfrage `Products[@Discontinued=true()]` dem SQL-Ausdruck "Products.Discontinued is not null", nicht dem SQL-Ausdruck "Products.Discontinued = 1". Damit die Abfrage dem letztgenannten SQL-Ausdruck entspricht, konvertierten Sie den Knotensatz zunächst in einen anderen Typ als `boolean`, etwa `number`. Beispielsweise `Products[number(@Discontinued) = true()]`.  
   
  Da die meisten Operatoren gemäß Definition als TRUE gelten, wenn sie für einen beliebigen oder einen einzigen der Knoten im Knotensatz TRUE sind, ergeben diese Operationen stets FALSE, wenn der Knotensatz leer ist. Wenn also A leer ist, gilt sowohl für `A = B` als auch `A != B` FALSE, für `not(A=B)` und `not(A!=B)` hingegen gilt TRUE.  
   
@@ -91,12 +90,12 @@ ms.locfileid: "66014557"
 |Nonebin.base64bin.hex|–|KeineEmployeeID|  
 |boolean|boolean|CONVERT(bit, EmployeeID)|  
 |number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|number|CONVERT(float(53), EmployeeID)|  
-|id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|string|CONVERT(nvarchar(4000), EmployeeID, 126)|  
+|id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|Zeichenfolge|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|– (es gibt keinen Datentyp in XPath, der dem fixed14.4 XDR-Datentyp entspricht)|CONVERT(money, EmployeeID)|  
-|date|string|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
-|time<br /><br /> time.tz|string|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
+|date|Zeichenfolge|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
+|time<br /><br /> time.tz|Zeichenfolge|SUBSTRING(CONVERT(nvarchar(4000), EmployeeID, 126), 1 + CHARINDEX(N'T', CONVERT(nvarchar(4000), EmployeeID, 126)), 24)|  
   
- Die Datums-und Uhrzeit Konvertierungen sind so konzipiert, dass Sie funktionieren, ob der Wert in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` der Datenbank mithilfe des `string`-Datentyps oder einer gespeichert wird. Beachten Sie, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` dass der-Datentyp `timezone` nicht verwendet und eine geringere Genauigkeit aufweist als `time` der XML-Datentyp. Um den `timezone`-Datentyp aufzunehmen oder eine höhere Genauigkeit zu gewährleisten, speichern Sie die Daten mithilfe eines [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Typs in `string`.  
+ Die Datums-und Uhrzeit Konvertierungen sind so konzipiert, dass Sie funktionieren, ob der Wert in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` der Datenbank mithilfe des `string`-Datentyps oder einer gespeichert wird. Beachten Sie, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `datetime` dass der-Datentyp `timezone` nicht verwendet und eine geringere Genauigkeit aufweist als `time` der XML-Datentyp. Um den `timezone`-Datentyp aufzunehmen oder eine höhere Genauigkeit zu gewährleisten, speichern Sie die Daten mithilfe eines `string`-Typs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Wenn ein Knoten vom XDR-Datentyp in den XPath-Datentyp konvertiert wird, müssen mitunter weitere Konvertierungen vorgenommen werden (von einem XPath-Datentyp in einen anderen XPath-Datentyp). Ein Beispiel ist die folgende XPath-Abfrage:  
   

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a41f11b200ffe5dfc91479ea54095fd24c90699a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011546"
 ---
 # <a name="create-and-manage-full-text-indexes"></a>Erstellen und Verwalten von Volltextindizes
@@ -31,7 +31,7 @@ ms.locfileid: "66011546"
   
  Der Vorgang, bei dem ein Volltextindex erstellt und verwaltet wird, wird als *Auffüllung* (oder *Durchforstung*) bezeichnet. Es gibt drei Auffüllungstypen für Volltextindizes: vollständige Auffüllungen, Auffüllungen mithilfe der Änderungsnachverfolgung sowie inkrementelle, auf Timestamps basierende Auffüllungen. Weitere Informationen finden Sie unter [Auffüllen von Volltextindizes](populate-full-text-indexes.md).  
   
-##  <a name="tasks"></a>Allgemeine Aufgaben  
+##  <a name="common-tasks"></a><a name="tasks"></a>Allgemeine Aufgaben  
  **So erstellen Sie einen Volltextindex**  
   
 -   [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)  
@@ -46,7 +46,7 @@ ms.locfileid: "66011546"
   
  [In diesem Thema](#top)  
   
-##  <a name="structure"></a>Voll Text Index-Struktur  
+##  <a name="full-text-index-structure"></a><a name="structure"></a>Voll Text Index-Struktur  
  Die Kenntnis der Struktur eines Volltextindex hilft Ihnen dabei, die Funktionsweise der Volltext-Engine zu verstehen. In diesem Thema wird der folgende Auszug der Tabelle **Dokument** in [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] als Beispieltabelle verwendet. Der Auszug enthält nur zwei Spalten, **DocumentID** und **Title** , und drei Zeilen der Tabelle.  
   
  Für dieses Beispiel wird davon ausgegangen, dass ein Volltextindex für die **Title** -Spalte erstellt wurde.  
@@ -92,7 +92,7 @@ ms.locfileid: "66011546"
   
  [In diesem Thema](#top)  
   
-##  <a name="fragments"></a>Voll Text Index Fragmente  
+##  <a name="full-text-index-fragments"></a><a name="fragments"></a>Voll Text Index Fragmente  
  Der logische Volltextindex wird normalerweise auf mehrere interne Tabellen aufgeteilt. Jede interne Tabelle wird als Volltextindexfragment bezeichnet. Einige dieser Fragmente enthalten ggf. aktuellere Daten als andere. Wenn Benutzer z. B. die folgende Zeile aktualisieren, deren DocId den Wert 3 hat, und für die Tabelle die automatische Änderungsnachverfolgung verwendet wird, wird ein neues Fragment erstellt.  
   
 |DocumentID|Titel|  

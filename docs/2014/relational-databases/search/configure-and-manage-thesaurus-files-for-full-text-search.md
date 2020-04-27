@@ -15,16 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e52399dc77fce220bf33939b7c7921e32cd2438c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011474"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann bei Volltextabfragen ein Thesaurus verwendet werden, um nach Synonymen der vom Benutzer angegebenen Begriffe zu suchen. Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Thesaurus* definiert Synonyme für eine bestimmte Sprache. Systemadministratoren können zwei Formen von Synonymen definieren: Erweiterungssätze und Ersetzungssätze. Indem Sie einen Thesaurus entwickeln, der genau auf Ihre Volltextdaten abgestimmt ist, können Sie den Bereich der Volltextabfragen für diese Daten effektiv erweitern. Der Thesaurusvergleich erfolgt für alle [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) - und [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) -Abfragen sowie für alle [CONTAINS](/sql/t-sql/queries/contains-transact-sql) - und [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) -Abfragen, in denen die FORMSOF THESAURUS-Klausel angegeben ist.  
+  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]kann bei Volltextabfragen ein Thesaurus verwendet werden, um nach Synonymen der vom Benutzer angegebenen Begriffe zu suchen. Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Thesaurus* definiert Synonyme für eine bestimmte Sprache. Systemadministratoren können zwei Formen von Synonymen definieren: Erweiterungssätze und Ersetzungssätze. Indem Sie einen Thesaurus entwickeln, der genau auf Ihre Volltextdaten abgestimmt ist, können Sie den Bereich der Volltextabfragen für diese Daten effektiv erweitern. Der Thesaurusvergleich erfolgt für alle [FREETEXT](/sql/t-sql/queries/freetext-transact-sql) - und [FREETEXTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) -Abfragen sowie für alle [CONTAINS](/sql/t-sql/queries/contains-transact-sql) - und [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) -Abfragen, in denen die FORMSOF THESAURUS-Klausel angegeben ist.  
   
-##  <a name="tasks"></a>Grundlegende Aufgaben zum Einrichten einer Thesaurusdatei  
+##  <a name="basic-tasks-for-setting-up-a-thesaurus-file"></a><a name="tasks"></a>Grundlegende Aufgaben zum Einrichten einer Thesaurusdatei  
  Bevor bei Volltextsuchabfragen auf der Serverinstanz nach Synonymen in einer bestimmten Sprache gesucht werden kann, müssen Sie Thesauruszuordnungen (Synonyme) für diese Sprache definieren. Jeder Thesaurus muss manuell konfiguriert werden, um Folgendes zu definieren:  
   
 -   Einstellung für diakritische Zeichen  
@@ -42,7 +42,7 @@ ms.locfileid: "66011474"
      Ein Ersetzungssatz enthält ein durch einen Substitutionssatz zu ersetzendes Textmuster. Ein Beispiel dafür finden Sie im Abschnitt "XML-Struktur eines Ersetzungssatzes" weiter unten in diesem Thema.  
   
   
-##  <a name="initial_thesaurus_files"></a>Ursprünglicher Inhalt der Thesaurusdateien  
+##  <a name="initial-content-of-the-thesaurus-files"></a><a name="initial_thesaurus_files"></a>Ursprünglicher Inhalt der Thesaurusdateien  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt einen Satz von XML-Thesaurusdateien bereit, und zwar eine für jede unterstützte Sprache. Diese Dateien sind im Wesentlichen leer. Sie enthalten nur die XML-Hauptstruktur, die alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Thesaurusdateien aufweisen, sowie einen auskommentierten Beispielthesaurus.  
   
  Alle im Lieferumfang von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthaltenen Thesaurusdateien enthalten folgenden XML-Code:  
@@ -74,7 +74,7 @@ ms.locfileid: "66011474"
 ```  
   
   
-##  <a name="location"></a>Speicherort der Thesaurusdateien  
+##  <a name="location-of-the-thesaurus-files"></a><a name="location"></a>Speicherort der Thesaurusdateien  
  Der Standardspeicherort der Thesaurusdateien lautet folgendermaßen:  
   
  *<SQL_Server_data_files_path>* \mssql12. mssqlserver\mssql\ftdata\  
@@ -102,18 +102,18 @@ ms.locfileid: "66011474"
  Die globale Thesaurusdatei entspricht der neutralen Sprache mit LCID 0. Dieser Wert kann nur von Administratoren geändert werden.  
   
   
-##  <a name="how_queries_use_tf"></a>Verwenden von Thesaurusdateien in Abfragen  
+##  <a name="how-queries-use-thesaurus-files"></a><a name="how_queries_use_tf"></a>Verwenden von Thesaurusdateien in Abfragen  
  Für jede Thesaurusabfrage wird zuerst ein sprachspezifischer Thesaurus und dann der globale Thesaurus verwendet. Zuerst wird die sprachspezifische Datei gesucht und (falls erforderlich) zur Verarbeitung geladen. Die Abfrage wird um die durch die Erweiterungssatz- und Ersetzungssatz-Regeln in der Thesaurusdatei angegebenen Synonyme erweitert. Anschließend werden diese Schritte für den globalen Thesaurus wiederholt. Wenn für einen Begriff in der sprachspezifischen Thesaurusdatei bereits eine Übereinstimmung gefunden wurde, werden die globalen Synonyme des Begriffs ignoriert.  
   
   
-##  <a name="structure"></a>Grundlegendes zur Struktur einer Thesaurusdatei  
+##  <a name="understanding-the-structure-of-a-thesaurus-file"></a><a name="structure"></a>Grundlegendes zur Struktur einer Thesaurusdatei  
  Jede Thesaurusdatei definiert einen XML-Container, dessen ID `Microsoft Search Thesaurus` lautet, sowie einen Kommentar, `<!--` … `-->`, der einen Beispielthesaurus enthält. Der Thesaurus wird in einem \<Thesaurus> Element definiert, das Beispiele für die untergeordneten Elemente enthält, die die Einstellung für diakritische Zeichen, Erweiterungs Sätze und Ersetzungs Sätze definieren, wie im folgenden dargestellt:  
   
 -   XML-Struktur der Einstellung für diakritische Zeichen  
   
      Die Einstellung eines Thesaurus für diakritische Zeichen wird in einem einzelnen <diacritics_sensitive>-Element angegeben. Dieses Element enthält einen ganzzahligen Wert, der die Unterscheidung nach Akzent folgendermaßen steuert:  
   
-    |Einstellung für diakritische Zeichen|value|XML|  
+    |Einstellung für diakritische Zeichen|Wert|XML|  
     |------------------------|-----------|---------|  
     |keine Unterscheidung nach Akzent|0|`<diacritics_sensitive>0</diacritics_sensitive>`|  
     |Unterscheidung nach Akzent|1|`<diacritics_sensitive>1</diacritics_sensitive>`|  
@@ -173,7 +173,7 @@ ms.locfileid: "66011474"
     ```  
   
   
-##  <a name="working_with_thesaurus_files"></a>Arbeiten mit Thesaurusdateien  
+##  <a name="working-with-thesaurus-files"></a><a name="working_with_thesaurus_files"></a>Arbeiten mit Thesaurusdateien  
  **So bearbeiten Sie eine Thesaurusdatei**  
   
 -   [Bearbeiten einer Thesaurusdatei](#editing)  
@@ -184,10 +184,10 @@ ms.locfileid: "66011474"
   
  **So zeigen Sie das Tokenisierungsergebnis einer Kombination aus Wörtertrennung, Thesaurus und Stoplisten an**  
   
--   [sys.dm_fts_parser &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
+-   [sys. dm_fts_parser &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-parser-transact-sql)  
   
   
-##  <a name="editing"></a>Bearbeiten einer Thesaurusdatei  
+##  <a name="editing-a-thesaurus-file"></a><a name="editing"></a>Bearbeiten einer Thesaurusdatei  
  Der Thesaurus für eine bestimmte Sprache kann durch Bearbeiten der zugehörigen Thesaurusdatei (einer XML-Datei) konfiguriert werden. Beim Setup werden leere Thesaurusdateien installiert, die \<nur den XML-> Container und ein auskommentiertes Beispiel \<Thesaurus>-Element enthalten. Damit voll Text Such Abfragen, bei denen nach Synonymen gesucht wird, ordnungsgemäß funktionieren, müssen Sie ein \<tatsächliches Thesaurus> Element erstellen, das eine Gruppe von Synonymen definiert. Sie können zwei Formen von Synonymen definieren, nämlich Erweiterungssätze und Ersetzungssätze.  
   
  **Einschränkungen für Thesaurusdateien**  
@@ -235,10 +235,10 @@ ms.locfileid: "66011474"
   
   
 ## <a name="see-also"></a>Weitere Informationen  
- [CONTAINS &#40;Transact-SQL&#41;](/sql/t-sql/queries/contains-transact-sql)   
+ [Enthält &#40;Transact-SQL-&#41;](/sql/t-sql/queries/contains-transact-sql)   
  [CONTAINSTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/containstable-transact-sql)   
  [FREETEXT &#40;Transact-SQL&#41;](/sql/t-sql/queries/freetext-transact-sql)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/freetexttable-transact-sql)   
- [Volltextsuche](full-text-search.md)  
+ [Voll Text Suche](full-text-search.md)  
   
   

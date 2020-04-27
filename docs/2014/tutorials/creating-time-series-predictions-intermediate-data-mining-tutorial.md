@@ -11,15 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ca1aa4022931c78f6139a8058c05adc707af5e77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63313889"
 ---
 # <a name="creating-time-series-predictions-intermediate-data-mining-tutorial"></a>Erstellen von Zeitreihenvorhersagen (Data Mining-Lernprogramm für Fortgeschrittene)
-  In den vorherigen Aufgaben dieser Lektion haben Sie ein Zeitreihenmodell erstellt und die Ergebnisse untersucht. 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erstellt standardmäßig immer einen Satz von fünf (5) Vorhersagen für ein Zeitreihenmodell und zeigt die vorhergesagten Werte in einem Prognosediagramm an. Sie können Prognosen jedoch auch mithilfe von Data Mining Extensions (DMX)-Vorhersageabfragen erzeugen.  
+  In den vorherigen Aufgaben dieser Lektion haben Sie ein Zeitreihenmodell erstellt und die Ergebnisse untersucht. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erstellt standardmäßig immer einen Satz von fünf (5) Vorhersagen für ein Zeitreihenmodell und zeigt die vorhergesagten Werte in einem Prognosediagramm an. Sie können Prognosen jedoch auch mithilfe von Data Mining Extensions (DMX)-Vorhersageabfragen erzeugen.  
   
  In dieser Aufgabe erstellen Sie eine Vorhersageabfrage, mit der die gleichen Vorhersagen wie im Viewer generiert werden. Diese Aufgabe geht davon aus, dass Sie die Lektionen im Lernprogramm zu den Data Mining-Grundlagen bereits abgeschlossen haben und dass Sie mit der Verwendung des Generators für Vorhersageabfragen vertraut sind. Im Folgenden lernen Sie, wie Sie Abfragen für Zeitreihenmodelle erstellen.  
   
@@ -178,7 +177,7 @@ ms.locfileid: "63313889"
     > [!NOTE]  
     >  Stellen Sie eine Verbindung zur Instanz der Datenbank-Engine her, in der Sie die Daten gespeichert haben, und erstellen Sie eine Abfrage, um die Tabelle anzuzeigen, die Sie erstellt haben.  
   
-## <a name="conclusion"></a>Zusammenfassung  
+## <a name="conclusion"></a>Schlussbemerkung  
  Sie können nun ein grundlegendes Zeitreihenmodell erstellen, Prognosen interpretieren und Vorhersagen erstellen.  
   
  Die verbleibenden Aufgaben in diesem Lernprogramm sind optional und beschreiben erweiterte Zeitreihenvorhersagen. Wenn Sie dieses Thema weiter verfolgen, lernen Sie, wie Sie dem Modell neue Daten hinzufügen und Vorhersagen zur erweiterten Reihe erstellen können. Sie lernen zudem, Kreuzvorhersagen durchzuführen, indem Sie den Trend im Modell verwenden und die Daten durch eine neue Datenreihe ersetzen.  

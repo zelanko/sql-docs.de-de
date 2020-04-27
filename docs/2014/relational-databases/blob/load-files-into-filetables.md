@@ -15,16 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43e5a9a6adcca7504aa90825ecd10e53e669c7e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010008"
 ---
 # <a name="load-files-into-filetables"></a>Laden von Dateien in FileTables
   Beschreibt, wie Dateien in FileTables geladen und migriert werden.  
   
-##  <a name="BasicsLoadNew"></a> Laden oder Migrieren von Dateien in FileTables  
+##  <a name="loading-or-migrating-files-into-a-filetable"></a><a name="BasicsLoadNew"></a> Laden oder Migrieren von Dateien in FileTables  
  Die Methode, die Sie zum Laden oder Migrieren von Dateien in eine FileTable auswählen, ist davon abhängig, wo die Dateien aktuell gespeichert sind.  
   
 |Aktueller Speicherort von Dateien|Optionen für die Migration|  
@@ -32,7 +32,7 @@ ms.locfileid: "66010008"
 |Dateien sind derzeit im Dateisystem gespeichert.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hat keine Informationen über die Dateien.|Da eine FileTable im Windows-Dateisystem als Ordner angezeigt wird, können Sie Dateien mithilfe einer der verfügbaren Methoden zum Verschieben oder Kopieren von Dateien ganz einfach in eine neue FileTable laden. Zu diesen Methoden gehören Windows-Explorer, Befehlszeilenoptionen, einschließlich xcopy und robocopy, sowie benutzerdefinierte Skripts oder Anwendungen.<br /><br /> Sie können einen vorhandenen Ordner nicht in eine FileTable konvertieren.|  
 |Dateien sind derzeit im Dateisystem gespeichert.<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält eine Tabelle von Metadaten, die Zeiger auf die Dateien enthält.|Der erste Schritt besteht darin, die Dateien mithilfe einer der oben erwähnten Methoden zu verschieben oder zu kopieren.<br /><br /> Der zweite Schritt besteht darin, die vorhandene Tabelle von Metadaten so zu aktualisieren, dass diese auf den neuen Speicherort der Dateien zeigt.<br /><br /> Weitere Informationen finden Sie unter [Beispiel: Migrieren von Dateien aus dem Dateisystem in eine FileTable](#HowToMigrateFiles) .|  
   
-###  <a name="HowToLoadNew"></a> Vorgehensweise: Laden von Dateien in eine Dateitabelle  
+###  <a name="how-to-load-files-into-a-filetable"></a><a name="HowToLoadNew"></a> Vorgehensweise: Laden von Dateien in eine Dateitabelle  
  Zu den Methoden, über die Sie Dateien in eine FileTable laden können, gehören die folgenden:  
   
 -   Drag & Drop von Dateien aus den Quellordnern in den neuen FileTable-Ordner in Windows-Explorer.  
@@ -41,7 +41,7 @@ ms.locfileid: "66010008"
   
 -   Schreiben Sie eine benutzerdefinierte Anwendung in C# oder Visual Basic .NET, die Methoden aus dem **System.IO** -Namespace verwendet, um die Dateien zu verschieben oder zu kopieren.  
   
-###  <a name="HowToMigrateFiles"></a>Beispiel: Migrieren von Dateien aus dem Datei System in eine FILETABLE  
+###  <a name="example-migrating-files-from-the-file-system-into-a-filetable"></a><a name="HowToMigrateFiles"></a> Beispiel: Migrieren von Dateien aus dem Dateisystem in eine FileTable  
  In diesem Szenario werden die Dateien im Dateisystem gespeichert, und Sie verfügen in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über eine Tabelle mit Metadaten, die Zeiger auf die Dateien enthält. Sie möchten die Dateien in eine FileTable verschieben und den ursprünglichen UNC-Pfad für jede Datei in den Metadaten durch den FileTable-UNC-Pfad ersetzen. Die Funktion [GetPathLocator &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/getpathlocator-transact-sql) hilft Ihnen, dieses Ziel zu erreichen.  
   
  Nehmen Sie für dieses Beispiel an, dass eine Datenbanktabelle `PhotoMetadata`vorhanden ist, die Daten zu Fotos enthält. Diese Tabelle hat eine Spalte `UNCPath` des Typs `varchar`(512), der den tatsächlichen UNC-Pfad zu einer JPG-Datei enthält.  
@@ -76,7 +76,7 @@ UPDATE PhotoMetadata
     SET pathlocator = GetPathLocator(UNCPath);  
 ```  
   
-##  <a name="BasicsBulkLoad"></a>Massen Laden von Dateien in eine FILETABLE  
+##  <a name="bulk-loading-files-into-a-filetable"></a><a name="BasicsBulkLoad"></a>Massen Laden von Dateien in eine FILETABLE  
  Eine FileTable verhält sich bei Massenvorgängen wie eine normale Tabelle, jedoch mit den folgenden Charakteristiken.  
   
  Eine FileTable weist systemdefinierte Einschränkungen auf, durch die sichergestellt wird, dass die Namespaceintegrität der Datei und des Verzeichnisses erhalten bleibt. Diese Einschränkungen müssen für die Daten überprüft werden, die mit einem Massenvorgang in die FileTable geladen wurden. Da einige Masseneinfügungsvorgänge das Ignorieren der Tabelleneinschränkungen zulassen, werden folgende Anforderungen erzwungen.  
@@ -97,7 +97,7 @@ UPDATE PhotoMetadata
   
     -   Einfügen in... SELECT * FROM OPENROWSET (BULK...) with IGNORE_CONSTRAINTS-Klausel.  
   
-###  <a name="HowToBulkLoad"></a>Gewusst wie: Massen Laden von Dateien in eine FILETABLE  
+###  <a name="how-to-bulk-load-files-into-a-filetable"></a><a name="HowToBulkLoad"></a>Gewusst wie: Massen Laden von Dateien in eine FILETABLE  
  Sie können verschiedene Methoden zum Massenladen von Dateien in eine FileTable verwenden:  
   
 -   **bcp**  
@@ -120,7 +120,7 @@ UPDATE PhotoMetadata
   
  Informationen zum Deaktivieren der FileTable-Einschränkungen finden Sie unter [Verwalten von FileTables](manage-filetables.md).  
   
-###  <a name="disabling"></a>Vorgehensweise: Deaktivieren von FILETABLE-Einschränkungen für das Massen laden  
+###  <a name="how-to-disable-filetable-constraints-for-bulk-loading"></a><a name="disabling"></a> Vorgehensweise: Deaktivieren von FileTable-Einschränkungen zum Massenladen  
  Um Dateien in einem Massenvorgang in eine FileTable zu laden und dabei den Aufwand zu vermeiden, die systemdefinierten Einschränkungen zu erzwingen, können Sie die Einschränkungen vorübergehend deaktivieren. Weitere Informationen finden Sie unter [Verwalten von FileTables](manage-filetables.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

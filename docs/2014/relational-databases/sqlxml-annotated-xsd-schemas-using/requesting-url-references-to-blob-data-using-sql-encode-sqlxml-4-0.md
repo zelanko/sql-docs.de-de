@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 153a88bcb31f65d4e6aff007cfbee7d1f7afc6df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013732"
 ---
 # <a name="requesting-url-references-to-blob-data-using-sqlencode-sqlxml-40"></a>Anfordern von URL-Verweisen auf BLOB-Daten mit 'sql:encode' (SQLXML 4.0)
@@ -31,8 +31,7 @@ ms.locfileid: "66013732"
   
  Wenn ein Verweis auf die Daten (ein URI) zurückgegeben werden soll, der später zum Abrufen der BLOB-Daten in einem binären Format verwendet werden kann, geben Sie die `sql:encode`-Anmerkung an. Sie können `sql:encode` für ein Attribut oder Element des einfachen Typs angeben.  
   
- Geben Sie die `sql:encode`-Anmerkung an, um anzugeben, dass anstatt des Feldwerts eine URL zum Feld zurückgegeben werden soll. 
-  `sql:encode` verwendet den Primärschlüssel, um eine Singleton-Auswahl in der URL zu generieren. Der Primärschlüssel kann mithilfe der `sql:key-fields` -Anmerkung angegeben werden.  
+ Geben Sie die `sql:encode`-Anmerkung an, um anzugeben, dass anstatt des Feldwerts eine URL zum Feld zurückgegeben werden soll. `sql:encode` verwendet den Primärschlüssel, um eine Singleton-Auswahl in der URL zu generieren. Der Primärschlüssel kann mithilfe der `sql:key-fields` -Anmerkung angegeben werden.  
   
  Der `sql:encode`-Anmerkung kann der Wert "url" oder "default" zugewiesen werden. Mit dem Wert "default" werden die Daten im codierten Base-64-Format zurückgegeben.  
   

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5fdcf6fbc7a7c9eb325d87a5eec838a5854664c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010132"
 ---
 # <a name="filestream-ddl-functions-stored-procedures-and-views"></a>FILESTREAM-DDL, Funktionen, gespeicherte Prozeduren und Sichten
@@ -22,7 +22,7 @@ ms.locfileid: "66010132"
   
  Die Liste der Datenbankobjekte, die die FileTable-Funktion unterstützen, finden Sie unter [FileTable DDL, Functions, Stored Procedures, and Views](../views/views.md).  
   
-##  <a name="ddl"></a> Transact-SQL-DDL-Anweisungen (Data Definition Language, Datendefinitionssprache)  
+##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a> Transact-SQL-DDL-Anweisungen (Data Definition Language, Datendefinitionssprache)  
   
 -   [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  
   
@@ -34,31 +34,31 @@ ms.locfileid: "66010132"
   
 -   [CREATE INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-index-transact-sql)  
   
--   [Drop Index &#40;Transact-SQL-&#41;](/sql/t-sql/statements/drop-index-transact-sql) DROP INDEX  
+-   [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)DROP INDEX  
   
-##  <a name="func"></a> Systemfunktionen  
+##  <a name="system-functions"></a><a name="func"></a> Systemfunktionen  
   
 -   [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;Transact-SQL&#41;](/sql/t-sql/functions/get-filestream-transaction-context-transact-sql)  
   
 -   [PathName &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/pathname-transact-sql)  
   
-##  <a name="proc"></a> Gespeicherte Systemprozeduren  
+##  <a name="system-stored-procedures"></a><a name="proc"></a> Gespeicherte Systemprozeduren  
   
 -   [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)  
   
 -   [sp_filestream_force_garbage_collection &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/filestream-and-filetable-sp-filestream-force-garbage-collection)  
   
-##  <a name="cat"></a> Systemsichten: Katalogsichten  
+##  <a name="system-views---catalog-views"></a><a name="cat"></a> Systemsichten: Katalogsichten  
   
 -   [sys.database_filestream_options &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql)  
   
-##  <a name="dmv"></a> Systemsichten: Dynamische Verwaltungssichten  
+##  <a name="system-views---dynamic-management-views"></a><a name="dmv"></a> Systemsichten: Dynamische Verwaltungssichten  
   
 -   [sys.dm_filestream_file_io_handles &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-file-io-handles-transact-sql)  
   
 -   [sys.dm_filestream_file_io_requests &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-filestream-file-io-requests-transact-sql)  
   
-##  <a name="api"></a> Programmieren von APIs  
+##  <a name="programming-apis"></a><a name="api"></a> Programmieren von APIs  
   
 -   [ZUgreifen auf FILESTREAM-Daten mit OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)  
   

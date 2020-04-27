@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 28ab36c2f9f500df89b1d936ec60871c0904bc1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012821"
 ---
 # <a name="back-up-and-restore-full-text-catalogs-and-indexes"></a>Sichern und Wiederherstellen von Volltextkatalogen und Indizes
@@ -30,9 +30,9 @@ ms.locfileid: "66012821"
 > [!IMPORTANT]  
 >  Beim Aktualisieren einer [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Datenbank ist es möglich, Volltextkataloge zu importieren. Jeder importierte Volltextkatalog ist eine Datenbankdatei in einer eigenen Dateigruppe. Um einen importierten Katalog zu sichern, können Sie einfach die entsprechende Dateigruppe sichern. Weitere Informationen finden Sie unter [Sichern und Wiederherstellen von Volltextkatalogen](https://go.microsoft.com/fwlink/?LinkID=121052)in der [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Onlinedokumentation.  
   
-##  <a name="backingup"></a> Sichern der Volltextindizes eines Volltextkatalogs  
+##  <a name="backing-up-the-full-text-indexes-of-a-full-text-catalog"></a><a name="backingup"></a> Sichern der Volltextindizes eines Volltextkatalogs  
   
-###  <a name="Find_FTIs_of_a_Catalog"></a> Suchen der Volltextindizes eines Volltextkatalogs  
+###  <a name="finding-the-full-text-indexes-of-a-full-text-catalog"></a><a name="Find_FTIs_of_a_Catalog"></a> Suchen der Volltextindizes eines Volltextkatalogs  
  Sie können die Eigenschaften der Volltextindizes abrufen, indem Sie die folgende [SELECT](/sql/t-sql/queries/select-transact-sql) -Anweisung verwenden. Diese Anweisung wählt Spalten aus den Katalogsichten [sys.fulltext_indexes](/sql/relational-databases/system-catalog-views/sys-fulltext-indexes-transact-sql) und [sys.fulltext_catalogs](/sql/relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql) aus.  
   
 ```  
@@ -49,7 +49,7 @@ GO
   
 
   
-###  <a name="Find_FG_of_FTI"></a> Suchen der Dateigruppe oder der Datei, die einen Volltextindex enthält  
+###  <a name="finding-the-filegroup-or-file-that-contains-a-full-text-index"></a><a name="Find_FG_of_FTI"></a> Suchen der Dateigruppe oder der Datei, die einen Volltextindex enthält  
  Wenn ein Volltextindex erstellt wird, wird dieser an einem der folgenden Speicherorte gespeichert:  
   
 -   In einer vom Benutzer angegebenen Dateigruppe  
@@ -73,7 +73,7 @@ GO
   
 
   
-###  <a name="Back_up_FTIs_of_FTC"></a> Sichern der Dateigruppen, die Volltextindizes enthalten  
+###  <a name="backing-up-the-filegroups-that-contain-full-text-indexes"></a><a name="Back_up_FTIs_of_FTC"></a> Sichern der Dateigruppen, die Volltextindizes enthalten  
  Nachdem Sie die Dateigruppen gefunden haben, die die Indizes eines Volltextkatalogs enthalten, müssen Sie die einzelnen Dateigruppen sichern. Während der Sicherung können Volltextkataloge nicht gelöscht oder hinzugefügt werden.  
   
  Die erste Sicherung einer Dateigruppe muss eine vollständige Dateisicherung sein. Nachdem Sie eine vollständige Dateisicherung für eine Dateigruppe erstellt haben, können Sie bei Bedarf nur die Änderungen in einer Dateigruppe sichern, indem Sie eine oder mehrere differenzielle Dateisicherungen erstellen, die auf dieser vollständigen Dateisicherung basieren.  
@@ -86,7 +86,7 @@ GO
   
 
   
-##  <a name="Restore_FTI"></a> Wiederherstellen eines Volltextindexes  
+##  <a name="restoring-a-full-text-index"></a><a name="Restore_FTI"></a> Wiederherstellen eines Volltextindexes  
  Beim Wiederherstellen einer gesicherten Dateigruppe werden die Volltextindexdateien und die anderen Dateien der Dateigruppe wiederhergestellt. Standardmäßig wird die Dateigruppe an dem Speicherort auf einem Datenträger wiederhergestellt, an dem die Dateigruppe gesichert wurde.  
   
  Wenn bei der Erstellung der Sicherung eine Tabelle mit Volltextindizierung online war und eine Auffüllung ausgeführt wurde, wird die Auffüllung nach der Wiederherstellung fortgesetzt.  

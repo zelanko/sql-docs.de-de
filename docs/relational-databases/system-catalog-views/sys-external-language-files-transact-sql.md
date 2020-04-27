@@ -20,16 +20,16 @@ ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 0d1325311ef0b708f5a3abd5f4494e099863efc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65995088"
 ---
 # <a name="sysexternal_language_files-transact-sql"></a>sys. external_language_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Diese Katalog Sicht enthält eine Liste der externen sprach Erweiterungs Dateien in der Datenbank. **R** und **python** sind reservierte Namen, und es kann keine externe Sprache mit diesen spezifischen Namen erstellt werden.
+Diese Katalog Sicht enthält eine Liste der externen sprach Erweiterungs Dateien in der Datenbank. **R** und **Python** sind reservierte Namen, und es kann keine externe Sprache mit diesen Namen erstellt werden.
 
 Wenn eine externe Sprache aus einem file_spec erstellt wird, werden die Erweiterung selbst und ihre Eigenschaften in dieser Ansicht aufgeführt. Diese Ansicht enthält einen Eintrag pro Sprache und Betriebssystem.
 
@@ -47,7 +47,7 @@ In der Katalog Sicht sys. external_language_files wird eine Zeile für jede exte
 |parameters|nvarchar(4000)|Externe Sprachen-Prameter|
 |environment_variables |nvarchar(4000)|Umgebungsvariablen für externe Sprache|
 
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 
 + [sys.external_languages](sys-external-languages-transact-sql.md)  
 + [externe Sprache erstellen](../../t-sql/statements/create-external-language-transact-sql.md)  

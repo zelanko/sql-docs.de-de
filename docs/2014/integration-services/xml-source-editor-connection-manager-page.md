@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5965c48f91387944f223e1d0cfe666b19aba0e63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054298"
 ---
 # <a name="xml-source-editor-connection-manager-page"></a>Quellen-Editor für XML (Seite Verbindungs-Manager)
@@ -27,16 +27,16 @@ ms.locfileid: "66054298"
  Weitere Informationen zur XML-Quelle finden Sie unter [XML Source](data-flow/xml-source.md).  
   
 ## <a name="static-options"></a>Statische Optionen  
- **Datenzugriffsmodus**  
+ **Datenzugriffs Modus**  
  Geben Sie die Methode für die Auswahl von Daten aus der Quelle an.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |XML-Dateispeicherort|Ruft Daten aus einer XML-Datei ab.|  
-|XML-Datei aus Variable|Gibt den XML-Dateinamen in einer Variablen an.<br /><br /> **Verwandte Informationen**: [Verwenden von Variablen in Paketen](../../2014/integration-services/use-variables-in-packages.md)|  
+|XML-Datei aus Variable|Gibt den XML-Dateinamen in einer Variablen an.<br /><br /> **Verwandte Informationen:**[Verwenden von Variablen in Paketen](../../2014/integration-services/use-variables-in-packages.md)|  
 |XML-Daten aus Variable|Ruft XML-Daten aus einer Variablen ab.|  
   
- **Inline Schema verwenden**  
+ **Inlineschema verwenden**  
  Gibt an, ob die XML-Quelldaten das XSD-Schema enthalten, mit dem die Struktur und die Daten definiert und überprüft werden.  
   
  **XSD-Speicherort**  
@@ -45,7 +45,7 @@ ms.locfileid: "66054298"
  **Durchsuchen**  
  Mithilfe des Dialogfelds **Öffnen** können Sie die XSD-Schemadatei suchen.  
   
- **Generieren von XSD**  
+ **XSD-Code generieren**  
  Mithilfe des Dialogfelds **Speichern unter** können Sie einen Speicherort für die automatisch generierte XSD-Schemadatei auswählen. Der Editor leitet das Schema aus der Struktur der XML-Daten ab.  
   
 ## <a name="data-access-mode-dynamic-options"></a>Dynamische Optionen (Datenzugriffsmodus)  
@@ -66,7 +66,7 @@ ms.locfileid: "66054298"
  Wählt die Variable aus, die die XML-Daten enthält.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Der Quellen-Editor für XML-&#40;Spalten&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
  [Quellen-Editor für XML-&#40;Seite Fehlerausgabe&#41;](../../2014/integration-services/xml-source-editor-error-output-page.md)   
  [Extrahieren von Daten mithilfe der XML-Quelle](data-flow/extract-data-by-using-the-xml-source.md)  

@@ -20,16 +20,16 @@ ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 1cef52f066a07032240d17f88297b02ba3f7e5fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65995118"
 ---
 # <a name="sysexternal_languages-transact-sql"></a>sys. external_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Diese Katalog Sicht enthält eine Liste der externen Sprachen in der Datenbank. **R** und **python** sind reservierte Namen, und es kann keine externe Sprache mit diesen spezifischen Namen erstellt werden.
+Diese Katalog Sicht enthält eine Liste der externen Sprachen in der Datenbank. **R** und **Python** sind reservierte Namen, und es kann keine externe Sprache mit diesen Namen erstellt werden.
 
 ## <a name="sysexternal_languages"></a>sys.external_languages
 
@@ -42,7 +42,7 @@ In der Katalog Sicht sys. external_languages wird eine Zeile für jede externe S
 |create_date |datetime2 |Datum und Uhrzeit der Erstellung|
 |principal_id |INT |ID des Prinzipals, der diese externe Bibliothek besitzt.|
 
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Siehe auch  
 
 + [sys.external_language_files](sys-external-language-files-transact-sql.md)  
 + [externe Sprache erstellen](../../t-sql/statements/create-external-language-transact-sql.md) 

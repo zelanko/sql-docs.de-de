@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 63b88aa365139c4d22d7a074f2a30e64947158b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054516"
 ---
 # <a name="web-service-task-editor-input-page"></a>Editor für den Task 'Webdienst' (Seite Eingabe)
@@ -26,14 +26,14 @@ ms.locfileid: "66054516"
   
  Weitere Informationen zu diesem Task finden Sie unter [Webdienst (Task)](control-flow/web-service-task.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Leistungs**  
  Wählen Sie aus der Liste einen Webdienst aus, der zum Ausführen der Webmethode verwendet werden soll.  
   
  **Methode**  
  Wählen Sie für den auszuführenden Task eine Webmethode aus der Liste aus.  
   
- **Webmethoddocumentation**  
+ **WebMethodDocumentation**  
  Geben Sie eine Beschreibung der Webmethode ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(…)**, und geben Sie anschließend in das Dialogfeld **Dokumentation der Webmethode** die Beschreibung ein.  
   
  **Name**  
@@ -52,7 +52,7 @@ ms.locfileid: "66054516"
  Wenn die Kontrollkästchen für die Variablen aktiviert sind, wählen Sie die Variablen in der Liste aus, um die Eingaben bereitzustellen. Andernfalls geben Sie die Werte ein, die in den Eingaben verwendet werden sollen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor für den Task ' Webdienst ' &#40;Seite Allgemein&#41;](general-page-of-integration-services-designers-options.md)   
  [Editor für den Task ' Webdienst ' &#40;Ausgabe Seite&#41;](../../2014/integration-services/web-service-task-editor-output-page.md)   
  [Seite Ausdrücke](expressions/expressions-page.md)  

@@ -25,16 +25,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d6f871fabba547268736dca990215b89ae84e9eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011179"
 ---
 # <a name="populate-full-text-indexes"></a>Auffüllen von Volltextindizes
   Das Erstellen und Verwalten eines Volltextindexes umfasst das Auffüllen des Indexes mithilfe eines Prozesses, der als *Auffüllung* (oder auch als *Crawl*) bezeichnet wird.  
   
-##  <a name="types"></a>Auffüllungs Typen  
+##  <a name="types-of-population"></a><a name="types"></a>Auffüllungs Typen  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]unterstützt die folgenden auffüllungs Typen: vollständige Auffüllung, auf Änderungs Nachverfolgung basierende automatische oder manuelle Auffüllung sowie inkrementelle Zeitstempel basierte Auffüllung.  
   
 ### <a name="full-population"></a>Vollständige Auffüllung  
@@ -70,7 +70,7 @@ ms.locfileid: "66011179"
   
      Wenn Sie CHANGE_TRACKING MANUAL angeben, verwendet die Volltext-Engine die manuelle Auffüllung für den Volltextindex. Nachdem die ursprüngliche vollständige Auffüllung abgeschlossen wurde, werden Änderungen nachverfolgt, wenn Daten in der Basistabelle geändert werden. Sie werden jedoch erst dann an den Volltextindex weitergegeben, wenn Sie einen ALTER FULLTEXT Index... Start Update Population-Anweisung. Sie können den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent verwenden, um die [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung in regelmäßigen Abständen aufzurufen.  
   
-     **So beginnen Sie, Änderungen mit manueller Auffüllung zu verfolgen**  
+     **So beginnen Sie die Änderungsnachverfolgung mit manueller Auffüllung**  
   
     -   [voll Text Index erstellen](/sql/t-sql/statements/create-fulltext-index-transact-sql) ... mit CHANGE_TRACKING manuell  
   
@@ -91,8 +91,7 @@ ms.locfileid: "66011179"
   
  Voraussetzung für die inkrementelle Auffüllung ist, dass die indizierte Tabelle eine Spalte vom `timestamp`-Datentyp aufweist. Ist keine `timestamp`-Spalte vorhanden, kann die inkrementelle Auffüllung nicht ausgeführt werden. Eine Anforderung für eine inkrementelle Auffüllung für eine Tabelle ohne `timestamp`-Spalte führt zu einer vollständigen Auffüllung. Anforderungen für eine inkrementelle Auffüllung werden als vollständige Auffüllung implementiert, wenn sich Metadaten, die sich auf den Volltextindex für die Tabelle auswirken, seit der letzten Auffüllung geändert haben. Dies umfasst Metadatenänderungen durch Spalten-, Index- oder Volltextindexdefinitionen.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet die `timestamp`-Spalte, um Zeilen zu identifizieren, die sich seit der letzten Auffüllung geändert haben. Bei der inkrementellen Auffüllung wird der Volltextindex bezüglich der Zeilen aktualisiert, die seit der letzten Auffüllung oder während des letzten Auffüllungsvorgangs hinzugefügt, gelöscht oder geändert wurden. Wenn in einer Tabelle sehr viele Einfügungen stattfinden, ist die inkrementelle Auffüllung ggf. effizienter als die manuelle Auffüllung.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet die `timestamp`-Spalte, um Zeilen zu identifizieren, die sich seit der letzten Auffüllung geändert haben. Bei der inkrementellen Auffüllung wird der Volltextindex bezüglich der Zeilen aktualisiert, die seit der letzten Auffüllung oder während des letzten Auffüllungsvorgangs hinzugefügt, gelöscht oder geändert wurden. Wenn in einer Tabelle sehr viele Einfügungen stattfinden, ist die inkrementelle Auffüllung ggf. effizienter als die manuelle Auffüllung.  
   
  Am Ende einer Auffüllung wird von der Volltext-Engine ein neuer `timestamp`-Wert aufgezeichnet. Dieser Wert entspricht dem größten in SQL Gatherer aufgetretenen `timestamp`-Wert. Der Wert wird verwendet, wenn eine nachfolgende inkrementelle Auffüllung gestartet wird.  
   
@@ -100,7 +99,7 @@ ms.locfileid: "66011179"
   
 
   
-##  <a name="examples"></a>Beispiele für das Auffüllen von voll Text Indizes  
+##  <a name="examples-of-populating-full-text-indexes"></a><a name="examples"></a>Beispiele für das Auffüllen von voll Text Indizes  
   
 > [!NOTE]  
 >  In den Beispielen in diesem Abschnitt wird die `Production.Document` -Tabelle oder die `HumanResources.JobCandidate` -Tabelle der `AdventureWorks` -Beispieldatenbank verwendet.  
@@ -146,7 +145,7 @@ CREATE FULLTEXT INDEX ON HumanResources.JobCandidate(Resume)
 GO  
 ```  
   
-### <a name="d-running-a-manual-population"></a>D: Ausführen einer manuellen Auffüllung  
+### <a name="d-running-a-manual-population"></a>D. Ausführen einer manuellen Auffüllung  
  Im folgenden Beispiel wird eine manuelle Auffüllung des Volltextindexes mit Änderungsnachverfolgung für die `HumanResources.JobCandidate` -Tabelle der `AdventureWorks` -Beispieldatenbank ausgeführt.  
   
 ```  
@@ -168,7 +167,7 @@ GO
   
 
   
-##  <a name="create"></a>Erstellen oder Ändern eines Zeitplans für inkrementelle Auffüllung  
+##  <a name="creating-or-changing-a-schedule-for-incremental-population"></a><a name="create"></a>Erstellen oder Ändern eines Zeitplans für inkrementelle Auffüllung  
   
 #### <a name="to-create-or-change-a-schedule-for-incremental-population-in-management-studio"></a>So erstellen oder ändern Sie einen Zeitplan für inkrementelle Auffüllung in Management Studio  
   
@@ -209,7 +208,7 @@ GO
   
 
   
-##  <a name="crawl"></a>Problembehandlung bei Fehlern in einer voll Text Auffüllung (durch Forstung)  
+##  <a name="troubleshooting-errors-in-a-full-text-population-crawl"></a><a name="crawl"></a>Problembehandlung bei Fehlern in einer voll Text Auffüllung (durch Forstung)  
  Tritt während eines Durchforstungsvorgangs ein Fehler auf, wird von der Durchforstungsprotokollfunktion der Volltextsuche ein Durchforstungsprotokoll erstellt und gewartet. Dabei handelt es sich um eine Nur-Text-Datei. Jedes Durchforstungsprotokoll gehört zu einem bestimmten Volltextkatalog. Standardmäßig befinden sich Durchforstungsprotokolle für eine bestimmte Instanz, in diesem Fall die erste Instanz, im Ordner %ProgramFiles%\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\LOG. Das Benennungsschema für Durchforstungsprotokolldateien lautet folgendermaßen:  
   
  Sqlft\<DatabaseID>\<FullTextCatalogID>. Protokoll [\<n>]  
@@ -229,8 +228,8 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sys. dm_fts_index_population &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-index-population-transact-sql)   
- [Beginnen Sie mit der voll Text Suche](get-started-with-full-text-search.md)   
- [Erstellen und Verwalten von voll Text Indizes](create-and-manage-full-text-indexes.md)   
+ [Erste Schritte mit der Volltextsuche](get-started-with-full-text-search.md)   
+ [Erstellen und Verwalten von Volltextindizes](create-and-manage-full-text-indexes.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)   
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)  
   

@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f6b90a36238cd4a02e86d49125ee662f07d32882
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489094"
 ---
-# <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>Aufgabe 6: Importieren von Werten aus dem Cleanse Supplier List-Projekt
+# <a name="task-6-importing-values-from-the-cleanse-supplier-list-project"></a>Aufgabe 6: Importieren von Werten aus dem Cleanse Supplier List-Projekt
   In dieser Aufgabe importieren Sie während des Bereinigungsprozesses gesammeltes Data Quality-Wissen. Weitere Informationen finden Sie im Thema Importieren von Bereinigungs [Projekt Werten in eine Domäne](https://msdn.microsoft.com/library/hh479581.aspx) . Sie exportieren die Wissensdatenbank auch in eine DQS-Datei, bevor Sie die aktualisierte Wissensdatenbank **Suppliers** veröffentlichen.  
   
 1.  Klicken Sie auf der **DQS-Client**-Hauptseite auf den **Pfeil nach rechts** neben **Suppliers** unter **zuletzt verwendete Wissensdatenbanken** , und klicken Sie dann auf **Domänen Verwaltung**.  
@@ -32,14 +32,14 @@ ms.locfileid: "65489094"
   
 5.  Beachten Sie, dass alle E-Mails zusammen mit den beiden Korrekturen importiert werden, die Sie während der interaktiven Bereinigung durchgeführt haben. Führen Sie einen Bildlauf durch, um die beiden Korrekturen anzuzeigen.  
   
-    |value|Korrigieren in|  
+    |Wert|Korrigieren in|  
     |-----------|----------------|  
     |bobby0@adventure-work.com|bobby0@adventure-works.com|  
     |tad0@adventure-work.com|tad0@adventure-works.com|  
   
 6.  Wiederholen Sie den vorherigen Schritt zum Importieren von Projekt Werten für die Domäne **Country** , und beachten Sie, dass ein neuer Eintrag für die Korrektur von **United State** in **USA** (mit "s") hinzugefügt wurde.  
   
-    |value|Korrigieren in|  
+    |Wert|Korrigieren in|  
     |-----------|----------------|  
     |United State|USA|  
   
@@ -65,6 +65,6 @@ ms.locfileid: "65489094"
 14. Klicken Sie im Meldungs Feld auf **OK** .  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Lektion 3: Abgleich von Daten, um Duplikate aus der Lieferantenliste zu entfernen](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)  
+ [Lektion 3: Abgleich von Daten zur Entfernung von Duplikaten aus der Lieferantenliste](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)  
   
   

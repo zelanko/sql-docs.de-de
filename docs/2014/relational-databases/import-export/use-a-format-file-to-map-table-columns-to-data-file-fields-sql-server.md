@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd08aaa50f307d107a55c838395677e5692914ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011741"
 ---
 # <a name="use-a-format-file-to-map-table-columns-to-data-file-fields-sql-server"></a>Verwenden einer Formatdatei zum Zuordnen von Tabellenspalten zu Datendateifeldern (SQL Server)
@@ -56,7 +56,7 @@ DataField3,DataField2,1,DataField4
   
 ```  
   
- Zum Massenimportieren der Daten von `myTestSkipCol2-c.dat` in die Tabelle `myTestSkipCol` muss in der Formatdatei das erste Datenfeld der Spalte `Col3`, das zweite Datenfeld der Spalte `Col2`, das dritte Datenfeld der Spalte `Col1`und das vierte Datenfeld der Spalte `Col4`zugeordnet werden.  
+ Zum Massenimportieren der Daten von `myTestSkipCol2-c.dat` in die Tabelle `myTestSkipCol` muss in der Formatdatei das erste Datenfeld der Spalte `Col3`, das zweite Datenfeld der Spalte `Col2`, das dritte Datenfeld der Spalte `Col1` und das vierte Datenfeld der Spalte `Col4` zugeordnet werden.  
   
 ## <a name="using-a-non-xml-format-file"></a>Verwenden einer Nicht-XML-Formatdatei  
  Sie können die Reihenfolge einer Spaltenzuordnung ändern, indem Sie zur Positionsangabe des entsprechenden Datenfelds den Reihenfolgenwert der Spalte ändern.  
@@ -81,7 +81,7 @@ DataField3,DataField2,1,DataField4
 ### <a name="example"></a>Beispiel  
  Im folgenden Beispiel wird eine `BULK INSERT`-Anweisung verwendet, um mithilfe der Nicht-XML-Formatdatei `myTestOrder-c.txt` einen Massenimport der Daten aus der Datendatei `myTestOrder` in die `myTestOrder.fmt`-Beispieltabelle auszuführen.  
   
- Führen Sie im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Abfrage-Editor Folgendes aus:  
+ Führen Sie im [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Abfrage-Editor Folgendes aus:  
   
 ```  
 USE AdventureWorks2012;  
@@ -139,7 +139,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwenden Sie eine Format Datei, um eine Tabellenspalte &#40;SQL Server zu überspringen&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
+ [Überspringen einer Tabellenspalte mithilfe einer Formatdatei &#40;SQL Server&#41;](use-a-format-file-to-skip-a-table-column-sql-server.md)   
  [Auslassen eines Datenfelds mithilfe einer Formatdatei &#40;SQL Server&#41;](use-a-format-file-to-skip-a-data-field-sql-server.md)  
   
   

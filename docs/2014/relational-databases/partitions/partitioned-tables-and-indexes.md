@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5f96f82919b9f4a130ce8a533e6ffcf31e765f5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65092042"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
@@ -37,8 +37,7 @@ ms.locfileid: "65092042"
   
 -   Die Abfrageleistung lässt sich, abhängig von den am häufigsten ausgeführten Abfragetypen sowie der Hardwarekonfiguration, möglicherweise verbessern. So kann der Abfrageoptimierer zum Beispiel Gleichheitsjoin-Abfragen zwischen zwei oder mehr partitionierten Tabellen schneller verarbeiten, wenn die Partitionierungsspalten in den Tabellen identisch sind, da die Partitionen selbst verbunden sein können.  
   
-     Beim Sortieren von Daten nach E-A-Operationen geht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zunächst nach Partitionen vor. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] greift jeweils auf ein Laufwerk zu, wodurch sich die Leistung möglicherweise verringert. Um die Leistung beim Sortieren von Daten zu verbessern, verteilen Sie die Datendateien der Partitionen über mehrere Datenträger, d. h. durch das Einrichten eines RAID (Redundant Array of Independent Disks). Auf diese Weise kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , obwohl die Daten dabei weiterhin nach Partitionen sortiert werden, auf alle Laufwerke der einzelnen Partitionen gleichzeitig zugreifen.  
+     Beim Sortieren von Daten nach E-A-Operationen geht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zunächst nach Partitionen vor. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] greift jeweils auf ein Laufwerk zu, wodurch sich die Leistung möglicherweise verringert. Um die Leistung beim Sortieren von Daten zu verbessern, verteilen Sie die Datendateien der Partitionen über mehrere Datenträger, d. h. durch das Einrichten eines RAID (Redundant Array of Independent Disks). Auf diese Weise kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , obwohl die Daten dabei weiterhin nach Partitionen sortiert werden, auf alle Laufwerke der einzelnen Partitionen gleichzeitig zugreifen.  
   
      Darüber hinaus kann die Leistung verbessert werden, indem eine Sperrenausweitung auf Partitionsebene statt auf die gesamte Tabelle angewendet wird. Dies kann Sperrenkonflikte für die Tabelle reduzieren.  
   
@@ -103,21 +102,21 @@ ms.locfileid: "65092042"
   
 |||  
 |-|-|  
-|**Aufgaben**|**Thema**|  
+|**Aufgaben**|**Sonder**|  
 |Beschreibt das Erstellen von Partitionsfunktionen und Partitionsschemas sowie deren Anwendung auf eine Tabelle und einen Index.|[Erstellen partitionierter Tabellen und Indizes](create-partitioned-tables-and-indexes.md)|  
 |||  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
  Die folgenden Whitepaper zu partitionierten Tabellen und Indexstrategien sowie Implementierungen sind möglicherweise für Sie interessant.  
   
--   [Partitionierte Tabellen-und Index Strategien mit SQL Server 2008](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
+-   [Partitionierte Tabellen- und Indexstrategien für SQL Server 2008](https://msdn.microsoft.com/library/dd578580\(SQL.100\).aspx)  
   
--   [Implementieren eines automatischen gleitenden Fensters](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
+-   [So implementieren Sie ein automatisch gleitendes Fenster](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
   
--   [Massen laden in eine partitionierte Tabelle](https://msdn.microsoft.com/library/cc966380.aspx)  
+-   [Massenladen in eine partitionierte Tabelle](https://msdn.microsoft.com/library/cc966380.aspx)  
   
--   [Verbesserungen bei der Abfrage Verarbeitung bei partitionierten Tabellen und Indizes](https://msdn.microsoft.com/library/ms345599.aspx)  
+-   [Verbesserte Abfrageverarbeitung bei partitionierten Tabellen und Indizes](https://msdn.microsoft.com/library/ms345599.aspx)  
   
--   [Top 10 Best Practices für das Entwickeln eines umfassenden relationalen Data Warehouse](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
+-   [Top 10 Best Practices zum Erstellen von einem umfassenden relationalen Data Warehouse](http://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)  
   
   

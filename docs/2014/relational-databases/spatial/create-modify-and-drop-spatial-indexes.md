@@ -17,10 +17,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 7e5dcd71dec0a2189e9f3b51bb7a68b50b070416
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014270"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Erstellen, Ändern und Löschen von räumlichen Indizes
@@ -31,13 +31,13 @@ ms.locfileid: "66014270"
 > [!NOTE]  
 >  Weitere Informationen zur Beziehung zwischen räumlichen Indizes und Partitionen und Dateigruppen finden Sie im Abschnitt mit Hinweisen unter [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-spatial-index-transact-sql).  
   
-##  <a name="creating"></a>Erstellen, ändern und löschen räumlicher Indizes  
+##  <a name="creating-modifying-and-dropping-spatial-indexes"></a><a name="creating"></a> Erstellen, Ändern und Löschen von räumlichen Indizes  
   
-###  <a name="create"></a>So erstellen Sie einen räumlichen Index  
+###  <a name="to-create-a-spatial-index"></a><a name="create"></a> So erstellen Sie einen räumlichen Index  
  **So erstellen Sie einen räumlichen Index mit Transact-SQL**  
  [CREATE SPATIAL INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-spatial-index-transact-sql)  
   
- **So erstellen Sie einen räumlichen Index mit dem Dialogfeld "neuer Index" in Management Studio**  
+ **So erstellen Sie mit dem Dialogfeld "Neuer Index" in Management Studio einen räumlichen Index**  
  ##### <a name="to-create-a-spatial-index-in-management-studio"></a>So erstellen Sie einen räumlichen Index in Management Studio  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] her, und erweitern Sie dann diese Instanz.  
@@ -76,7 +76,7 @@ ms.locfileid: "66014270"
 >  Um einen weiteren räumlichen Index für die gleiche oder eine andere räumliche Spalte zu erstellen, wiederholen Sie die gerade beschriebenen Schritte.  
   
   
- **So erstellen Sie einen räumlichen Index mithilfe Tabellen-Designer in Management Studio**  
+ **So erstellen Sie mit dem Tabellen-Designer in Management Studio einen räumlichen Index**  
  ##### <a name="to-create-a-spatial-index-in-table-designer"></a>So erstellen Sie einen räumlichen Index im Tabellen-Designer  
   
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Tabelle, für die Sie einen räumlichen Index erstellen möchten, und klicken Sie anschließend auf **Entwerfen**.  
@@ -92,7 +92,7 @@ ms.locfileid: "66014270"
 5.  Wählen Sie den neuen Index aus der Liste **Ausgewählter räumlicher Index** aus, und legen Sie im Raster rechts die Eigenschaften für den räumlichen Index fest. Informationen zu den Eigenschaften finden Sie unter [Dialogfeld 'Räumliche Indizes' &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/visual-database-tools.md).  
   
   
-###  <a name="alter"></a>So ändern Sie einen räumlichen Index  
+###  <a name="to-alter-a-spatial-index"></a><a name="alter"></a> So ändern Sie einen räumlichen Index  
   
 -   [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql)  
   
@@ -104,14 +104,14 @@ ms.locfileid: "66014270"
 -   [Verschieben eines vorhandenen Indexes in eine andere Dateigruppe](../indexes/move-an-existing-index-to-a-different-filegroup.md)  
   
   
-###  <a name="drop"></a>So löschen Sie einen räumlichen Index  
+###  <a name="to-drop-a-spatial-index"></a><a name="drop"></a> So löschen Sie einen räumlichen Index  
  **So löschen Sie einen räumlichen Index mit Transact-SQL**  
  [DROP INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-index-transact-sql)  
   
- **So löschen Sie einen Index mithilfe von Management Studio**  
- [Löschen eines Indexes](../indexes/delete-an-index.md)  
+ **So löschen Sie einen Index mit Management Studio**  
+ [Index löschen](../indexes/delete-an-index.md)  
   
- **So löschen Sie einen räumlichen Index mithilfe Tabellen-Designer in Management Studio**  
+ **So löschen Sie mit dem Tabellen-Designer in Management Studio einen räumlichen Index**  
  ##### <a name="to-drop-a-spatial-index-in-table-designer"></a>So löschen Sie einen räumlichen Index im Tabellen-Designer  
   
 1.  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf die Tabelle mit dem räumlichen Index, den Sie löschen möchten, und klicken Sie anschließend auf **Entwerfen**.  
@@ -127,7 +127,7 @@ ms.locfileid: "66014270"
 4.  Klicken Sie auf **Löschen**.  
   
   
-##  <a name="restrictions"></a>Einschränkungen für räumliche Indizes  
+##  <a name="restrictions-on-spatial-indexes"></a><a name="restrictions"></a> Erstellen, Ändern und Löschen von räumlichen Indizes  
  Ein räumlicher Index kann nur für eine Spalte des Typs `geometry` oder `geography` erstellt werden.  
   
 ### <a name="table-and-view-restrictions"></a>Einschränkungen für Tabellen und Sichten  

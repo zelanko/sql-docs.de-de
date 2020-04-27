@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aa4b0d73d1cba3d612da9f666bb548dfbc54102f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054117"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Schätzen der Größe eines nicht gruppierten Index
@@ -181,7 +181,7 @@ ms.locfileid: "66054117"
   
 5.  Berechnen Sie die Länge der Indexzeile:  
   
-     ***Leaf_Row_Size***  = ****** Fixed_Leaf_Size + ****** Variable_Leaf_Size + ***Leaf_Null_Bitmap*** + 1 (für Zeilen Überschriften Aufwand einer Index Zeile) + 6 (für den ID-Zeiger der untergeordneten Seite)  
+     ***Leaf_Row_Size***  = ***Fixed_Leaf_Size***Fixed_Leaf_Size + ***Variable_Leaf_Size***Variable_Leaf_Size + ***Leaf_Null_Bitmap*** + 1 (für Zeilen Überschriften Aufwand einer Index Zeile) + 6 (für den ID-Zeiger der untergeordneten Seite)  
   
 6.  Berechnen Sie die Anzahl der Indexzeilen pro Seite (8096 freie Byte pro Seite):  
   

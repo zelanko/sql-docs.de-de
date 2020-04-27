@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 567888d7dae14108e595c76f45f0ab7b95619cca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63283449"
 ---
 # <a name="report-parameters-methods"></a>Melden von Parametermethoden
   Mit diesen Methoden können Sie Parameter für Berichte festlegen und abrufen.  
   
-|Methode|Action|  
+|Methode|Aktion|  
 |------------|------------|  
 |<xref:ReportService2010.ReportingService2010.GetItemParameters%2A>|Gibt Parametereigenschaften für ein angegebenes Element zurück. Diese Methode kann auch verwendet werden, um Parameterwerte anhand von Parametern für ein angegebenes Element zu überprüfen.|  
 |<xref:ReportService2010.ReportingService2010.ListParameterStates%2A>|Gibt eine Liste unterstützter Parameterzustände zurück.|  

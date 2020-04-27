@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 19ebeac45f7596de42add894922838864f62546e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054312"
 ---
 # <a name="xml-source-editor-error-output-page"></a>Quellen-Editor für XML (Seite Fehlerausgabe)
@@ -26,11 +26,11 @@ ms.locfileid: "66054312"
   
  Weitere Informationen zur XML-Quelle finden Sie unter [XML Source](data-flow/xml-source.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   
- **Spalte**  
+ **Column**  
  Zeigt die externen (Quell-)Spalten an, die im Dialogfeld **Quellen-Editor für XML** auf der Seite **Verbindungs-Manager**ausgewählt wurden.  
   
  **Fehler**  
@@ -47,11 +47,11 @@ ms.locfileid: "66054312"
  **Diesen Wert für ausgewählte Zellen festlegen**  
  Gibt an, was im Falle eines Fehlers oder einer Kürzung mit den ausgewählten Zellen geschehen soll: den Fehler ignorieren, die Zeile umleiten oder die Komponente mit einem Fehler abbrechen.  
   
- **Anwenden**  
+ **übernehmen**  
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Quellen-Editor für XML-&#40;&#41;Seite Verbindungs-Manager](../../2014/integration-services/xml-source-editor-connection-manager-page.md)   
  [Der Quellen-Editor für XML-&#40;Spalten&#41;](../../2014/integration-services/xml-source-editor-columns-page.md)   
  [Extrahieren von Daten mithilfe der XML-Quelle](data-flow/extract-data-by-using-the-xml-source.md)  

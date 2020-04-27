@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 277b5ff1e575f223b78f958e26801e7b209d05d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478933"
 ---
 # <a name="filter-data-before-loading-mds-add-in-for-excel"></a>Filtern von Daten vor dem Laden (MDS-Add-In für Excel)
@@ -53,6 +53,6 @@ ms.locfileid: "65478933"
 ## <a name="see-also"></a>Weitere Informationen  
  [Daten &#40;MDS-Add-in für Excel werden geladen&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)   
  [Dialog Feld "Filter" &#40;MDS-Add-in für Excel&#41;](filter-dialog-box-mds-add-in-for-excel.md)   
- [Spalten &#40;MDS-Add-in für Excel neu anordnen&#41;](reorder-columns-mds-add-in-for-excel.md)  
+ [Neuanordnen von Spalten &#40;MDS-Add-In für Excel&#41;](reorder-columns-mds-add-in-for-excel.md)  
   
   

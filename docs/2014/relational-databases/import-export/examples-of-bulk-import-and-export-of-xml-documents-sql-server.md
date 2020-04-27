@@ -19,15 +19,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d60518f64bd44b9b2498c9d27711d47753b04cf9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011970"
 ---
 # <a name="examples-of-bulk-import-and-export-of-xml-documents-sql-server"></a>Beispiele für den Massenimport und -export von XML-Dokumenten (SQL Server)
     
-##  <a name="top"></a>Sie können XML-Dokumente per Massen Import [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine-Datenbank importieren oder aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einer-Datenbank exportieren. Dieses Thema bietet Beispiele für diese beiden Situationen.  
+##  <a name="you-can-bulk-import-xml-documents-into-a-ssnoversion-database-or-bulk-export-them-from-a-ssnoversion-database-this-topic-provides-examples-of-both"></a><a name="top"></a>Sie können XML-Dokumente per Massen Import [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine-Datenbank importieren oder aus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einer-Datenbank exportieren. Dieses Thema bietet Beispiele für diese beiden Situationen.  
   
  Verwenden Sie für den Massenimport von Daten aus einer Datendatei in eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle oder eine nicht partitionierte Sicht Folgendes:  
   
@@ -50,11 +50,11 @@ ms.locfileid: "66011970"
   
 -   C. [Massen Import von XML-Daten aus einer Datei, die eine DTD enthält](#file_contains_dtd)  
   
--   D: [Explizites Angeben des Feld Abschluss Zeichens mithilfe einer Format Datei](#field_terminator_in_format_file)  
+-   D. [Explizites Angeben des Feld Abschluss Zeichens mithilfe einer Format Datei](#field_terminator_in_format_file)  
   
 -   E. [Massen Export von XML-Daten](#bulk_export_xml_data)  
   
-###  <a name="binary_byte_stream"></a> A. Massenimport von XML-Daten als binärer Bytedatenstrom  
+###  <a name="a-bulk-importing-xml-data-as-a-binary-byte-stream"></a><a name="binary_byte_stream"></a> A. Massenimport von XML-Daten als binärer Bytedatenstrom  
  Geben Sie beim Massenimportieren von XML-Daten aus einer Datei mit einer Codierungsdeklaration, die Sie anwenden möchten, die Option SINGLE_BLOB in der OPENROWSET(BULK...)-Klausel an. Mit der Option SINGLE_BLOB stellen Sie sicher, dass der XML-Parser in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Daten gemäß dem in der XML-Deklaration angegebenen Codierungsschema importiert.  
   
 #### <a name="sample-table"></a>Beispieltabelle  
@@ -99,9 +99,9 @@ SELECT * FROM OPENROWSET(
   
 -   Stellen Sie eine Übereinstimmung oder Auflösung zwischen den Einstellungen der Datenbanksortierung und einem Nicht-Unicode-XML-Codierungsschema her.  
   
- [&#91;Anfang&#93;](#top)  
+ [&#91;Nach oben&#93;](#top)  
   
-###  <a name="existing_row"></a> B. Massenimport von XML-Daten in eine vorhandene Zeile  
+###  <a name="b-bulk-importing-xml-data-in-an-existing-row"></a><a name="existing_row"></a> B. Massenimport von XML-Daten in eine vorhandene Zeile  
  In diesem Beispiel wird der `OPENROWSET` -Massenrowsetanbieter verwendet, um eine XML-Instanz einer vorhandenen Zeile bzw. vorhandenen Zeilen in der Beispieltabelle `T`hinzuzufügen.  
   
 > [!NOTE]  
@@ -134,9 +134,9 @@ WHERE IntCol = 1;
 GO  
 ```  
   
- [&#91;Anfang&#93;](#top)  
+ [&#91;Nach oben&#93;](#top)  
   
-###  <a name="file_contains_dtd"></a> C. Massenimport von XML-Daten aus einer Datei, die eine DTD enthält  
+###  <a name="c-bulk-importing-xml-data-from-a-file-that-contains-a-dtd"></a><a name="file_contains_dtd"></a> C. Massenimport von XML-Daten aus einer Datei, die eine DTD enthält  
   
 > [!IMPORTANT]  
 >  Es wird nicht empfohlen, die Unterstützung für DTDs (Document Type Definitions) zu aktivieren, es sei denn, dies ist in Ihrer XML-Umgebung erforderlich. Das Aktivieren der DTD-Unterstützung erhöht die Angriffsfläche Ihres Servers, und kann ihn einem Denial-of-Service-Angriff aussetzen. Wenn Sie die Unterstützung von DTDs aktivieren müssen, können Sie dieses Sicherheitsrisiko reduzieren, indem Sie ausschließlich vertrauenswürdige XML-Dokumente verarbeiten.  
@@ -180,9 +180,9 @@ INSERT T1
   
  Nach dem Ausführen der `INSERT` -Anweisung wird die DTD aus der XML-Datei entfernt und in der Tabelle `T1` gespeichert.  
   
- [&#91;Anfang&#93;](#top)  
+ [&#91;Nach oben&#93;](#top)  
   
-###  <a name="field_terminator_in_format_file"></a>D. Explizites Angeben des Feldabschlusszeichens mithilfe einer Formatdatei  
+###  <a name="d-specifying-the-field-terminator-explicitly-using-a-format-file"></a><a name="field_terminator_in_format_file"></a> D. Explizites Angeben des Feldabschlusszeichens mithilfe einer Formatdatei  
  Im folgenden Beispiel wird gezeigt, wie das XML-Dokument `Xmltable.dat`per Massenimport importiert wird.  
   
 #### <a name="sample-data-file"></a>Beispieldatendatei  
@@ -212,7 +212,7 @@ B7 EF BA B7 EF BF B8 C3-B8 3C 2F 72 6F 6F 74 3E  *.........</root>*
 ```  
   
 #### <a name="sample-table"></a>Beispieltabelle  
- Beim Massen Import oder-Export eines XML-Dokuments sollten Sie ein [Feld](specify-field-and-row-terminators-sql-server.md) Abschluss Zeichen verwenden, das in keinem der Dokumente vorkommen darf. beispielsweise eine Reihe von vier Nullen (`\0`) gefolgt vom Buchstaben `z`:. `\0\0\0\0z`  
+ Beim Massenimport oder -export eines XML-Dokuments sollten Sie ein [Feldabschlusszeichen](specify-field-and-row-terminators-sql-server.md) verwenden, das keinesfalls in einem der Dokumente auftritt, beispielsweise eine Reihe von vier Nullen (`\0`) gefolgt vom Buchstaben `z`: `\0\0\0\0z`.  
   
  In diesem Beispiel wird gezeigt, wie Sie dieses Feldabschlusszeichen in der Beispieltabelle `xTable` verwenden. Verwenden Sie zum Erstellen dieser Beispieltabelle die folgende `CREATE TABLE` -Anweisung:  
   
@@ -243,9 +243,9 @@ WITH (FORMATFILE = 'C:\Xmltable.fmt');
 GO  
 ```  
   
- [&#91;Anfang&#93;](#top)  
+ [&#91;Nach oben&#93;](#top)  
   
-###  <a name="bulk_export_xml_data"></a>Fresser. Massenexport von XML-Daten  
+###  <a name="e-bulk-exporting-xml-data"></a><a name="bulk_export_xml_data"></a> E. Massenexport von XML-Daten  
  Im folgenden Beispiel werden XML-Daten mithilfe von `bcp` per Massenexport aus der im vorherigen Beispiel erstellten Tabelle exportiert. Dabei wird dieselbe XML-Formatdatei verwendet. Im folgenden `bcp` -Befehl stellen `<server_name>` und `<instance_name>` Platzhalter dar, die durch die entsprechenden Werte ersetzt werden müssen:  
   
 ```  
@@ -253,17 +253,15 @@ bcp bulktest..xTable out a-wn.out -N -T -S<server_name>\<instance_name>
 ```  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] speichert die XML-Codierung nicht, wenn XML-Daten in der Datenbank persistent gespeichert werden. Die ursprüngliche Codierung der XML-Felder ist also nicht mehr verfügbar, wenn die XML-Daten exportiert werden. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet für den Export von XML-Daten die UTF-16-Codierung.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] speichert die XML-Codierung nicht, wenn XML-Daten in der Datenbank persistent gespeichert werden. Die ursprüngliche Codierung der XML-Felder ist also nicht mehr verfügbar, wenn die XML-Daten exportiert werden. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet für den Export von XML-Daten die UTF-16-Codierung.  
   
- [&#91;Anfang&#93;](#top)  
+ [&#91;Nach oben&#93;](#top)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/insert-transact-sql)   
- [SELECT-Klausel &#40;Transact-SQL-&#41;](/sql/t-sql/queries/select-clause-transact-sql)   
+ [FOR-Klausel &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-clause-transact-sql)   
  [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
- [Massen Import und-Export von Daten &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
+ [Massenimport und -export von Daten &#40;SQL Server&#41;](bulk-import-and-export-of-data-sql-server.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql)  
   

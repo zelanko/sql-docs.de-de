@@ -18,16 +18,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 42aa89a111697f17f23613761eeeb462494bdd27
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011261"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Verbessern der Leistung von Volltextindizes
   Die Leistung für Volltextindizes und Volltextabfragen wird von den Hardwareressourcen wie Arbeitsspeicher, Datenträgergeschwindigkeit, CPU-Geschwindigkeit und Computerarchitektur beeinflusst.  
   
-##  <a name="causes"></a>Häufige Ursachen für Leistungsprobleme  
+##  <a name="common-causes-of-performance-issues"></a><a name="causes"></a>Häufige Ursachen für Leistungsprobleme  
  Der Hauptgrund für eine eingeschränkte Leistung beim Erstellen von Volltextindizes sind Einschränkungen bei den Hardwareressourcen:  
   
 -   Wenn die CPU-Nutzung des Filterdaemon-Hostprozesses (fdhost.exe) oder des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozesses (sqlservr.exe) fast 100 % beträgt, dann ist die CPU der Engpass.  
@@ -55,7 +55,7 @@ ms.locfileid: "66011261"
   
   
   
-##  <a name="tuning"></a>Optimieren der Leistung von voll Text Indizes  
+##  <a name="tuning-the-performance-of-full-text-indexes"></a><a name="tuning"></a>Optimieren der Leistung von voll Text Indizes  
  Sie können die Leistung Ihrer Volltextindizes mit den folgenden bewährten Methoden maximieren:  
   
 -   Um alle Prozessoren oder Kerne maximal zu verwenden, legen Sie [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)'`max full-text crawl ranges`' auf die Anzahl der CPUs im System fest. Informationen zu dieser Konfigurationsoption finden Sie unter [Max. Bereich für Volltextdurchforstung (Serverkonfigurationsoption)](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md).  
@@ -70,7 +70,7 @@ ms.locfileid: "66011261"
   
   
   
-##  <a name="full"></a>Problembehandlung bei vollständigen Auffüllungen  
+##  <a name="troubleshooting-the-performance-of-full-populations"></a><a name="full"></a>Problembehandlung bei vollständigen Auffüllungen  
  Leistungsprobleme diagnostizieren Sie, indem Sie die Protokolle für den Volltextcrawl überprüfen. Informationen zu Durchforstungsprotokollen finden Sie unter [Auffüllen von Volltextindizes](../indexes/indexes.md).  
   
  Es ist ratsam, bei der Problembehandlung die folgende Reihenfolge einzuhalten, falls die Leistung der vollständigen Auffüllungen nicht zufriedenstellend ist.  
@@ -117,9 +117,9 @@ ms.locfileid: "66011261"
   
  Die folgende Tabelle enthält Richtlinien zum Schätzen der Arbeitsspeicheranforderungen von fdhost.exe. Die Formeln in dieser Tabelle verwenden die folgenden Werte:  
   
--   *F*, eine Schätzung des Arbeitsspeichers, der von "sdhost. exe" (in MB) benötigt wird.  
+-   *F*, eine Schätzung des Arbeitsspeichers, den „fdhost.exe“ (in MB) benötigt.  
   
--   *T*, der gesamte physische Speicher, der auf dem System verfügbar ist (in MB).  
+-   *T*, der gesamte physische Speicher, der für das System (in MB) verfügbar ist.  
   
 -   *M*, die optimale `max server memory` Einstellung.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "66011261"
 |Plattform|Schätzen der Arbeitsspeicher Anforderungen von "f. exe" in MB-*F*<sup>1</sup>|Formel zum Berechnen des maximalen Server Arbeitsspeichers-*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
 |x86|_F_ **=** _Anzahl der_ Durchforstungs Bereiche **&#42;** 50|_M_ **= minimal (** _T_ **,** 2000 **)-*`F`* ** 500|  
-|x64|_F_ **=** _Anzahl der_ Durchforstungs Bereiche **&#42;** 10 **&#42;** 8|_M_ **=** __ T **-** __ F **-** 500|  
+|x64|_F_ **=** _Anzahl der_ Durchforstungs Bereiche **&#42;** 10 **&#42;** 8|_M_ **=** _T_ T **-** _F_ F **-** 500|  
   
  <sup>1</sup> wenn mehrere vollständige Auffüllungen ausgeführt werden, berechnen Sie die Arbeitsspeicher Anforderungen von "sdhost. exe" separat, als *F1*, *F2*usw. Berechnen Sie anschließend *M* als _T_**-** sigma **(**_F_i **)**.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "66011261"
   
  `F = 8*10*8=640`  
   
- Die nächste Berechnung erhält den optimalen Wert für `max server memory` - *M*. ** Der gesamte auf diesem System verfügbare physische Arbeitsspeicher in MB-*T*- `8192`ist.  
+ Die nächste Berechnung erhält den optimalen Wert für `max server memory` - *M*. *T*Der gesamte auf diesem System verfügbare physische Arbeitsspeicher in MB-*T*- `8192`ist.  
   
  `M = 8192-640-500=7052`  
   
@@ -179,7 +179,7 @@ GO
   
      In der folgenden Tabelle sind die relevanten Wartetypen aufgeführt.  
   
-    |Wartetyp|BESCHREIBUNG|Mögliche Lösung|  
+    |Wartetyp|Beschreibung|Mögliche Lösung|  
     |---------------|-----------------|-------------------------|  
     |PAGEIO_LATCH_SH (_EX oder _UP)|Dies kann auf einen E/A-Engpass hinweisen. In diesem Fall ist normalerweise auch eine hohe durchschnittliche Warteschlangenlänge des Datenträgers zu erkennen.|Sie können den E/A-Engpass ggf. reduzieren, indem Sie den Volltextindex in eine andere Dateigruppe auf einem anderen Datenträger verschieben.|  
     |PAGELATCH_EX (oder _UP)|Dies kann auf eine hohe Zahl von Konflikten zwischen Threads hinweisen, die versuchen, in dieselbe Datenbankdatei zu schreiben.|Diese Konflikte können ggf. verringert werden, indem Sie Dateien der Dateigruppe hinzufügen, auf der sich der Volltextindex befindet.|  
@@ -198,7 +198,7 @@ GO
   
   
   
-##  <a name="filters"></a>Problembehandlung bei langsamer Indizierungs Leistung aufgrund von Filtern  
+##  <a name="troubleshooting-slow-indexing-performance-due-to-filters"></a><a name="filters"></a>Problembehandlung bei langsamer Indizierungs Leistung aufgrund von Filtern  
  Beim Auffüllen eines Volltextindexes werden von der Volltext-Engine zwei Arten von Filtern verwendet: Multithread-Filter und Filter mit einem einzigen Thread. Einige Dokumente, wie z. B. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Word-Dokumente, werden mit einem Multithreadfilter gefiltert. Andere Dokumente, wie z. B. Adobe Acrobat PDF-Dokumente (Portable Document Format), werden hingegen mit einem Filter mit einem einzigen Thread gefiltert.  
   
  Aus Sicherheitsgründen werden Filter mit Filterdaemon-Hostprozessen geladen. Eine Serverinstanz verwendet einen Multithreadprozess für alle Multithreadfilter und einen Singlethreadprozess für alle Filter mit einem einzigen Thread. Wenn in einem Dokument, für das ein Multithreadfilter verwendet wird, ein Dokument eingebettet ist, für das ein Filter mit einem einzigen Thread verwendet wird, startet die Volltext-Engine einen Singlethreadprozess für das eingebettete Dokument. Beispiel: Bei einem Word-Dokument, das ein PDF-Dokument enthält, verwendet die Volltext-Engine einen Multithreadprozess für den Inhalt des Word-Dokuments und einen Singlethreadprozess für den Inhalt des PDF-Dokuments. Ein Filter mit einem einzigen Thread funktioniert in dieser Umgebung jedoch möglicherweise nicht ordnungsgemäß und kann die Stabilität des Filterprozesses gefährden. Unter bestimmten Umständen mit vielen eingebetteten Dokumenten kann dies zum Absturz des Filterprozesses führen. In diesem Fall verbindet die Volltext-Engine alle Dokumente, bei denen Fehler auftraten (z. B. ein Word-Dokument mit eingebettetem PDF-Inhalt), erneut mit dem Singlethread-Filterprozess. Kommt dies häufig vor, hat das eine Leistungsminderung des Volltextindizierungsprozesses zur Folge.  
@@ -211,8 +211,8 @@ GO
  [Server Konfigurationsoptionen für den Server Arbeitsspeicher](../../database-engine/configure-windows/server-memory-server-configuration-options.md)   
  [Max. Volltext-Durchforstungs Bereich (Server Konfigurations Option)](../../database-engine/configure-windows/max-full-text-crawl-range-server-configuration-option.md)   
  [Auffüllen von voll Text Indizes](populate-full-text-indexes.md)   
- [Erstellen und Verwalten von voll Text Indizes](create-and-manage-full-text-indexes.md)   
- [sys.dm_fts_memory_buffers &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   
+ [Erstellen und Verwalten von Volltextindizes](create-and-manage-full-text-indexes.md)   
+ [sys. dm_fts_memory_buffers &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-buffers-transact-sql)   
  [sys. dm_fts_memory_pools &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-fts-memory-pools-transact-sql)   
  [Behandeln von Problemen mit der Volltextindizierung](troubleshoot-full-text-indexing.md)  
   

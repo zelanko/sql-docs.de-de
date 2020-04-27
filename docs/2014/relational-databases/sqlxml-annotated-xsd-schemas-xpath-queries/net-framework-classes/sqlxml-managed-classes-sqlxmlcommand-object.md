@@ -31,10 +31,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d002208a83b58a4c8547bc6ce85db073ced70974
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010736"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>SqlXmlCommand-Objekt (Verwaltete SQLXML-Klassen)
@@ -106,7 +106,7 @@ public SqlXmlCommand(string cnString)
  CommandType  
  Gibt den Befehlstyp an. Diese Eigenschaft wird zum Angeben des Typs des Befehls verwendet, den Sie ausführen möchten. Die Werte in der folgenden Tabelle bestimmen den Typ des Befehls. Ein funktionierendes Beispiel finden Sie unter [zugreifen auf die SQLXML-Funktionalität in der .NET-Umgebung](accessing-sqlxml-functionality-in-the-net-environment.md).  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |SqlXmlCommandType. SQL|Führt einen SQL-Befehl aus (z. B. `SELECT * FROM Employees FOR XML AUTO`).|  
 |SqlXmlCommandType. XPath|Führt einen XPath-Befehl aus (z. B. `Employees[@EmployeeID=1]`).|  

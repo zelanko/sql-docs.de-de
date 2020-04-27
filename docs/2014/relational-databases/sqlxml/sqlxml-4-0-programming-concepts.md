@@ -14,17 +14,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 03d6069358c1591233aa892a723b7367a21be569
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012225"
 ---
 # <a name="sqlxml-40-programming-concepts"></a>SQLXML 4.0-Programmierkonzepte
   SQLXML 3.0 wurde als Webversion angeboten, um zusätzliche clientseitige XML-Funktionalitäten und Erweiterungen zu bestehenden Funktionen wie XSD-Schemas mit Anmerkungen, XML-Massenladen, Unterstützung für Webdienste (SOAP) und Updategrams bereitzustellen.  
   
- 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] führt Version 4.0 von SQLXML ein, die dieselbe Funktionalität wie SQLXML 3.0 bereitstellt. Darüber hinaus bietet sie zusätzliche Updates, um mit neuen Funktionen, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] eingeführt wurden, zu funktionieren.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] führt Version 4.0 von SQLXML ein, die dieselbe Funktionalität wie SQLXML 3.0 bereitstellt. Darüber hinaus bietet sie zusätzliche Updates, um mit neuen Funktionen, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] eingeführt wurden, zu funktionieren.  
   
  Dieser Abschnitt enthält Informationen zur SQLXML 4.0.  
   
@@ -55,7 +54,7 @@ ms.locfileid: "66012225"
  [Verwenden von Updategrams zum Ändern von Daten in SQLXML 4.0](../sqlxml-annotated-xsd-schemas-xpath-queries/updategrams/using-updategrams-to-modify-data-in-sqlxml-4-0.md)  
  Stellt Informationen über Updategrams bereit, die Daten in einer Datenbank ändern, indem sie mit den XML-Sichten verwendet werden, die von den mit Anmerkungen versehenen XSD- oder XDR-Schemas erzeugt wurden.  
   
- [Ausführen von Massen Laden von XML-Daten &#40;SQLXML 4,0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [Ausführen von Massenladen von XML-Daten &#40;SQLXML 4.0&#41;](../sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
  Beschreibt den XML-Massenladevorgang in SQLXML 4.0.  
   
  [SQLXML 4.0 Data Access Components](../sqlxml-annotated-xsd-schemas-xpath-queries/data-access-components-provider/sqlxml-4-0-data-access-components-sqlxmloledb-provider.md)  

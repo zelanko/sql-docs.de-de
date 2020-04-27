@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 48b54c71aff65c72af1f69554a6e049958044c31
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013019"
 ---
 # <a name="introduction-to-diffgrams-in-sqlxml-40"></a>Einführung in DiffGrams für SQLXML 4.0
@@ -59,7 +59,7 @@ ms.locfileid: "66013019"
 ## <a name="diffgram-annotations"></a>DiffGram-Anmerkungen  
  Diese Anmerkungen werden im DiffGram-Namespace **"urn: Schemas-Microsoft-com: XML-DiffGram-01"** definiert:  
   
- **Name**  
+ **id**  
  Dieses Attribut wird verwendet, um die Elemente im zu koppeln, ** \<bevor>** und die ** \<DataInstance->** Blöcke.  
   
  **hasChanges**  
@@ -74,7 +74,7 @@ ms.locfileid: "66013019"
 |Vorgang|BESCHREIBUNG|  
 |---------------|-----------------|  
 |Einfügen|Ein DiffGram zeigt einen Einfügevorgang an, wenn ein Element in der ** \<DataInstance->** Block, jedoch nicht im entsprechenden ** \<vor>** Block angezeigt wird, und das **diffgr: hasChanges** -Attribut (**diffgr: hasChanges = eingefügt**) für das Element angegeben wird. In diesem Fall fügt das DiffGram die Daten Satz Instanz, die im ** \<DataInstance->** Block angegeben ist, in die Datenbank ein.<br /><br /> Wenn das **diffgr: hasChanges** -Attribut nicht angegeben wird, wird das-Element von der Verarbeitungslogik ignoriert, und es wird kein INSERT-Vorgang ausgeführt. Arbeitsbeispiele finden Sie unter [DiffGram-Beispiele &#40;SQLXML 4,0&#41;](diffgram-examples-sqlxml-4-0.md).|  
-|Aktualisieren|Das DiffGram zeigt einen Update Vorgang an, wenn ein Element im- \<Element vor>-Block vorhanden ist, für das ein entsprechendes-Element im ** \<DataInstance->** Block vorhanden ist (d. h. beide Elemente verfügen über ein **diffgr: ID** -Attribut mit demselben Wert) und das **diffgr: hasChanges** -Attribut mit **dem Wert,** der für das-Element im ** \<Data>instance**<br /><br /> Wenn das **diffgr: hasChanges** -Attribut für das-Element in der ** \<DataInstance->** Block nicht angegeben wird, wird von der Verarbeitungslogik ein Fehler zurückgegeben. Arbeitsbeispiele finden Sie unter [DiffGram-Beispiele &#40;SQLXML 4,0&#41;](diffgram-examples-sqlxml-4-0.md).<br /><br /> Wenn **diffgr: parameted** im ** \<before>** -Block angegeben wird, wird die über-/Unterordnungsbeziehung der von der **parameentid** angegebenen Elemente verwendet, um die Reihenfolge zu bestimmen, in der die Datensätze aktualisiert werden.|  
+|Update/Aktualisieren|Das DiffGram zeigt einen Update Vorgang an, wenn ein Element im- \<Element vor>-Block vorhanden ist, für das ein entsprechendes-Element im ** \<DataInstance->** Block vorhanden ist (d. h. beide Elemente verfügen über ein **diffgr: ID** -Attribut mit demselben Wert) und das **diffgr: hasChanges** -Attribut mit **dem Wert,** der für das-Element im ** \<Data>instance**<br /><br /> Wenn das **diffgr: hasChanges** -Attribut für das-Element in der ** \<DataInstance->** Block nicht angegeben wird, wird von der Verarbeitungslogik ein Fehler zurückgegeben. Arbeitsbeispiele finden Sie unter [DiffGram-Beispiele &#40;SQLXML 4,0&#41;](diffgram-examples-sqlxml-4-0.md).<br /><br /> Wenn **diffgr: parameted** im ** \<before>** -Block angegeben wird, wird die über-/Unterordnungsbeziehung der von der **parameentid** angegebenen Elemente verwendet, um die Reihenfolge zu bestimmen, in der die Datensätze aktualisiert werden.|  
 |Löschen|Ein DiffGram gibt einen Löschvorgang an, wenn ein Element im ** \<vor>** Block, jedoch nicht in der entsprechenden ** \<DataInstance>** Block angezeigt wird. In diesem Fall löscht das DiffGram die Daten Satz Instanz, die im ** \<vor>** Block aus der Datenbank angegeben wird. Arbeitsbeispiele finden Sie unter [DiffGram-Beispiele &#40;SQLXML 4,0&#41;](diffgram-examples-sqlxml-4-0.md).<br /><br /> Wenn **diffgr: parameted** im ** \<before>** -Block angegeben wird, wird die über-/Unterordnungsbeziehung der von der **parameentid** angegebenen Elemente verwendet, um die Reihenfolge zu bestimmen, in der Datensätze gelöscht werden.|  
   
 > [!NOTE]  

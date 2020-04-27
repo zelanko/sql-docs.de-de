@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f131dc8fa36ad8ab8d9284012e25b44ecd209dcd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014895"
 ---
 # <a name="using-sqlxml-bulk-load-in-the-net-environment"></a>Verwenden von SQLXML-Massenladen in der .NET-Umgebung
@@ -139,7 +139,7 @@ ms.locfileid: "66014895"
 9. Um das XML in die erstellte Tabelle zu laden, erstellen Sie das Projekt, und führen Sie es aus.  
   
     > [!NOTE]  
-    >  Die Referenz zur Massenladenkomponente (xblkld4.dll) kann auch mithilfe des Tools tlbimp.exe hinzugefügt werden, das als Teil von .NET Framework zur Verfügung steht. Dieses Tool erstellt einen verwalteten Wrapper für die systemeigene DLL (xblkld4.dll), der in allen .NET-Projekten verwendet werden kann. Beispiel:  
+    >  Die Referenz zur Massenladenkomponente (xblkld4.dll) kann auch mithilfe des Tools tlbimp.exe hinzugefügt werden, das als Teil von .NET Framework zur Verfügung steht. Dieses Tool erstellt einen verwalteten Wrapper für die systemeigene DLL (xblkld4.dll), der in allen .NET-Projekten verwendet werden kann. Zum Beispiel:  
   
     ```  
     c:\>tlbimp xblkld4.dll  
@@ -148,6 +148,6 @@ ms.locfileid: "66014895"
      Dies erstellt die verwaltete Wrapper-DLL (SQLXMLBULKLOADLib.dll), die Sie im .NET Framework-Projekt verwenden können. In .NET Framework fügen Sie der neu erstellten DLL Projektverweise hinzu.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Ausführen von Massen Laden von XML-Daten &#40;SQLXML 4,0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
+ [Ausführen von Massenladen von XML-Daten &#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md)  
   
   

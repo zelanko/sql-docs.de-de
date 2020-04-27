@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 43ef487dc2049d3ca95f4cddff72a005c98a5d19
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010961"
 ---
 # <a name="upgrade-full-text-search"></a>Upgrade der Volltextsuche
@@ -40,7 +40,7 @@ ms.locfileid: "66010961"
   
 -   [Anfügen einer SQL Server 2005-Datenbank an SQL Server 2014](#Attaching_2005_ft_catalogs)  
   
-##  <a name="Upgrade_Server"></a>Aktualisieren einer Server Instanz  
+##  <a name="upgrading-a-server-instance"></a><a name="Upgrade_Server"></a>Aktualisieren einer Server Instanz  
  Bei einem direkten Upgrade wird eine Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] parallel zur alten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installiert, und die Daten werden migriert. Wenn die Volltextsuche in der alten Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert war, wird automatisch eine neue Version der Volltextsuche installiert. Eine parallele Installation bedeutet, dass jede der folgenden Komponenten auf der Instanzebene von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vorhanden ist.  
   
  Wörtertrennung, Wortstammerkennung und Filter  
@@ -50,15 +50,14 @@ ms.locfileid: "66010961"
  Bei Volltext-Filterdaemonhosts handelt es sich um Prozesse, die erweiterbare externe Komponenten für Indizierung und Abfragen wie Wörtertrennung, Wortstammerkennung und Filter auf sichere Weise laden und ausführen, ohne die Integrität der Volltext-Engine zu gefährden. Eine Serverinstanz verwendet einen Multithreadprozess für alle Multithreadfilter und einen Singlethreadprozess für alle Filter mit einem einzigen Thread.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Mit wurde ein Dienstkonto für den FDHOST-Startdienst (MSSQLFDLauncher) eingeführt. Dieser Dienst gibt die Dienstkontoinformationen an die Filterdaemonhost-Prozesse einer bestimmten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]weiter. Informationen zum Festlegen des Dienstkontos finden Sie unter [Festlegen des Dienstkontos für das Startprogramm des Volltextfilterdaemons](set-the-service-account-for-the-full-text-filter-daemon-launcher.md).  
+>  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] Mit wurde ein Dienstkonto für den FDHOST-Startdienst (MSSQLFDLauncher) eingeführt. Dieser Dienst gibt die Dienstkontoinformationen an die Filterdaemonhost-Prozesse einer bestimmten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]weiter. Informationen zum Festlegen des Dienstkontos finden Sie unter [Festlegen des Dienstkontos für das Startprogramm des Volltextfilterdaemons](set-the-service-account-for-the-full-text-filter-daemon-launcher.md).  
   
  In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]befindet sich jeder Volltextindex in einem Volltextkatalog, der einer Dateigruppe angehört, über einen physischen Pfad verfügt und als Datenbankdatei behandelt wird. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und späteren Versionen ist ein Volltextkatalog ein logisches oder virtuelles Objekt, das eine Gruppe von Volltextindizes enthält. Deshalb wird ein neuer Volltextkatalog nicht als Datenbankdatei mit einem physischen Pfad behandelt. Wenn jedoch ein Volltextkatalog aktualisiert wird, der Datendateien enthält, wird auf demselben Datenträger jeweils eine neue Dateigruppe erstellt. Auf diese Weise wird nach dem Upgrade das alte Datenträger-E/A-Verhalten beibehalten. Jeder Volltextindex aus diesem Katalog wird in die neue Dateigruppe eingefügt, wenn der Stammpfad vorhanden ist. Falls der alte Volltextkatalogpfad ungültig ist, wird beim Upgrade der Volltextindex in derselben Dateigruppe wie die Basistabelle bzw. bei einer partitionierten Tabelle in der primären Dateigruppe beibehalten.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)][!INCLUDE[tsql](../../includes/tsql-md.md)] DDL-Anweisungen, die voll Text Kataloge angeben, funktionieren weiterhin ordnungsgemäß.  
   
-##  <a name="FT_Upgrade_Options"></a>Volltext-Upgradeoptionen  
+##  <a name="full-text-upgrade-options"></a><a name="FT_Upgrade_Options"></a>Volltext-Upgradeoptionen  
  Beim Aktualisieren einer Serverinstanz auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]können Sie auf der Benutzeroberfläche eine der folgenden Volltextupgrade-Optionen wählen.  
   
  Importieren  
@@ -77,13 +76,12 @@ ms.locfileid: "66010961"
  Reset  
  Volltextkataloge werden zurückgesetzt. Beim Aktualisieren von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]werden Volltextkatalogdateien entfernt. Die Metadaten für die Volltextkataloge und die Volltextindizes bleiben jedoch erhalten. Nach der Upgrade wird die Änderungsnachverfolgung für alle Volltextindizes deaktiviert, und Durchforstungen werden nicht automatisch gestartet. Der Katalog bleibt leer, bis Sie ihn nach Beendigung des Upgrades manuell vollständig auffüllen.  
   
-##  <a name="Choosing_Upgade_Option"></a>Überlegungen zum Auswählen einer voll Text Upgrade-Option  
+##  <a name="considerations-for-choosing-a-full-text-upgrade-option"></a><a name="Choosing_Upgade_Option"></a>Überlegungen zum Auswählen einer voll Text Upgrade-Option  
  Beachten Sie beim Auswählen der Aktualisierungsoption Folgendes:  
   
 -   Ist die Konsistenz in Abfrageergebnissen erforderlich?  
   
-     
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installiert neue Wörtertrennungen, die von der Volltextsuche und semantischen Suche verwendet werden. Die Wörtertrennungen werden sowohl bei der Indizierung als auch bei Abfragen verwendet. Wenn Sie die Volltextkataloge nicht neu erstellen, sind die Suchergebnisse möglicherweise inkonsistent. Wenn Sie eine Volltextabfrage senden, die nach einem Ausdruck sucht, der von der Wörtertrennung in einer früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version und der aktuellen Wörtertrennung unterschiedlich getrennt wird, können Dokumente oder Zeilen, in denen der Ausdruck enthalten ist, möglicherweise nicht abgerufen werden. Das liegt daran, dass die indizierten Ausdrücke anhand einer anderen Logik getrennt wurden als der von der Abfrage verwendeten Logik. Die Lösung besteht darin, die Volltextkataloge mit den neuen Wörtertrennungen aufzufüllen (neu zu erstellen), damit das Verhalten bei der Indizierung und bei Abfragen gleich ist. Sie können dafür die Option zur Neuerstellung auswählen oder nach dem Auswählen der Option "Importieren" die Kataloge manuell neu erstellen.  
+     [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installiert neue Wörtertrennungen, die von der Volltextsuche und semantischen Suche verwendet werden. Die Wörtertrennungen werden sowohl bei der Indizierung als auch bei Abfragen verwendet. Wenn Sie die Volltextkataloge nicht neu erstellen, sind die Suchergebnisse möglicherweise inkonsistent. Wenn Sie eine Volltextabfrage senden, die nach einem Ausdruck sucht, der von der Wörtertrennung in einer früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version und der aktuellen Wörtertrennung unterschiedlich getrennt wird, können Dokumente oder Zeilen, in denen der Ausdruck enthalten ist, möglicherweise nicht abgerufen werden. Das liegt daran, dass die indizierten Ausdrücke anhand einer anderen Logik getrennt wurden als der von der Abfrage verwendeten Logik. Die Lösung besteht darin, die Volltextkataloge mit den neuen Wörtertrennungen aufzufüllen (neu zu erstellen), damit das Verhalten bei der Indizierung und bei Abfragen gleich ist. Sie können dafür die Option zur Neuerstellung auswählen oder nach dem Auswählen der Option "Importieren" die Kataloge manuell neu erstellen.  
   
 -   Wurden Volltextindizes basierend auf ganzzahligen Volltextschlüsselspalten erstellt?  
   
@@ -106,8 +104,7 @@ ms.locfileid: "66010961"
  Weitere Informationen zur Wörtertrennung finden Sie unter [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
 ## <a name="upgrading-noise-word-files-to-stoplists"></a>Aktualisieren von Füllwortdateien auf Stoplisten  
- 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Füllwörter wurden in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen durch Stoppwörter ersetzt. Wenn eine Datenbank von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auf [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]aktualisiert wird, werden die Füllwortdateien nicht mehr verwendet. Die alten Füllwortdateien werden jedoch im Ordner "FTDATA\FTNoiseThesaurusBak" gespeichert, und Sie können sie später beim Aktualisieren oder Erstellen der entsprechenden [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Stopplisten verwenden.  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]-Füllwörter wurden in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen durch Stoppwörter ersetzt. Wenn eine Datenbank von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] auf [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]aktualisiert wird, werden die Füllwortdateien nicht mehr verwendet. Die alten Füllwortdateien werden jedoch im Ordner "FTDATA\FTNoiseThesaurusBak" gespeichert, und Sie können sie später beim Aktualisieren oder Erstellen der entsprechenden [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Stopplisten verwenden.  
   
  Nach dem Upgrade von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]:  
   
@@ -131,19 +128,18 @@ ms.locfileid: "66010961"
   
  Bei Volltextkatalogen, die aus [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]importiert werden, ist der Volltextkatalog immer noch eine Datenbankdatei in einer eigenen Dateigruppe. Der Sicherungsprozess von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] für Volltextkataloge gilt weiterhin, jedoch mit der Ausnahme, dass der MSFTESQL-Dienst in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]nicht vorhanden ist. Weitere Informationen zum [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Prozess finden Sie unter [Sichern und Wiederherstellen von Volltextkatalogen](https://go.microsoft.com/fwlink/?LinkId=209154) in der SQL Server 2005-Onlinedokumentation.  
   
-##  <a name="Upgrade_Db"></a>Migrieren von voll Text Indizes beim Aktualisieren einer Datenbank auf[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
- Datenbankdateien und Volltextkataloge einer vorherigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können durch Anfügen, Wiederherstellen oder mithilfe des Assistenten zum Kopieren von Datenbanken auf eine vorhandene [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Serverinstanz aktualisiert werden. 
-  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Volltextindizes werden, falls vorhanden, importiert, zurückgesetzt oder neu erstellt. Die Servereigenschaft **upgrade_option** steuert, welche Volltextupgrade-Option die Serverinstanz während dieser Datenbankupgrades verwendet.  
+##  <a name="migrating-full-text-indexes-when-upgrading-a-database-to-sscurrent"></a><a name="Upgrade_Db"></a>Migrieren von voll Text Indizes beim Aktualisieren einer Datenbank auf[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ Datenbankdateien und Volltextkataloge einer vorherigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können durch Anfügen, Wiederherstellen oder mithilfe des Assistenten zum Kopieren von Datenbanken auf eine vorhandene [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Serverinstanz aktualisiert werden. [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Volltextindizes werden, falls vorhanden, importiert, zurückgesetzt oder neu erstellt. Die Servereigenschaft **upgrade_option** steuert, welche Volltextupgrade-Option die Serverinstanz während dieser Datenbankupgrades verwendet.  
   
  Nachdem Sie eine [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Datenbank in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]angehängt, wiederhergestellt oder kopiert haben, ist die Datenbank sofort verfügbar und wird automatisch aktualisiert. Je nach Menge der indizierten Daten kann der Importvorgang mehrere Stunden dauern; die Neuerstellung sogar bis zu zehnmal länger. Wenn die Upgradeoption auf "Importieren" festgelegt und kein Volltextkatalog verfügbar ist, werden die zugehörigen Volltextindizes neu erstellt.  
   
- **So ändern Sie das Verhalten des voll Text Upgrades für eine Serverinstanz**  
+ **So ändern Sie das Verhalten des Volltextupgrades für eine Serverinstanz**  
   
 -   [!INCLUDE[tsql](../../includes/tsql-md.md)]: Verwenden Sie **die\_Upgradeoption** " [\_SP FULLTEXT\_Service](/sql/relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql) ".  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]**:** Verwenden Sie im Dialogfeld **Server Eigenschaften** die **Option voll Text Upgrade** . Weitere Informationen finden Sie unter [Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz](manage-and-monitor-full-text-search-for-a-server-instance.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **:** Verwenden Sie im Dialogfeld **Servereigenschaften** die **Volltextupgrade-Option** . Weitere Informationen finden Sie unter [Verwalten und Überwachen der Volltextsuche auf einer Serverinstanz](manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
-##  <a name="Considerations_for_Restore"></a>Überlegungen zum wieder [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Herstellen eines voll Text Katalogs in[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="considerations-for-restoring-a-ssversion2005-full-text-catalog-to-sscurrent"></a><a name="Considerations_for_Restore"></a> Überlegungen zum Wiederherstellen eines [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Volltextkatalogs auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  Eine Möglichkeit zum Aktualisieren der Volltextdaten einer [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Datenbank auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] besteht darin, eine vollständige Datenbanksicherung für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]wiederherzustellen.  
   
  Beim Importieren eines [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Volltextkatalogs können Sie die Datenbank und die Katalogdatei sichern und wiederherstellen. Das Verhalten entspricht dem Verhalten in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]:  
@@ -162,9 +158,9 @@ ms.locfileid: "66010961"
   
 -   [Vollständige Datenbanksicherungen &#40;SQL Server&#41;](../backup-restore/full-database-backups-sql-server.md)  
   
--   [Transaktionsprotokoll Sicherungen &#40;SQL Server&#41;](../backup-restore/transaction-log-backups-sql-server.md) (nur vollständiges Wiederherstellungs Modell)  
+-   [Transaktionsprotokollsicherungen &#40;SQL Server&#41;](../backup-restore/transaction-log-backups-sql-server.md) (nur vollständiges Wiederherstellungsmodell)  
   
- **Wiederherstellen einer Datenbanksicherung**  
+ **So stellen Sie eine Datenbanksicherung wieder her**  
   
 -   [Vollständige Datenbankwiederherstellungen &#40;einfaches Wiederherstellungsmodell&#41;](../backup-restore/complete-database-restores-simple-recovery-model.md)  
   
@@ -186,7 +182,7 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
     MOVE N'sysft_cat90' TO N'C:\temp';  
 ```  
   
-##  <a name="Attaching_2005_ft_catalogs"></a>Anfügen einer SQL Server 2005-Datenbank an[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+##  <a name="attaching-a-sql-server-2005-database-to-sscurrent"></a><a name="Attaching_2005_ft_catalogs"></a>Anfügen einer SQL Server 2005-Datenbank an[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
  In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen ist ein Volltextkatalog ein logisches Konzept, bei dem eine Gruppe von Volltextindizes verwendet wird. Ein Volltextkatalog ist ein virtuelles Objekt und gehört keiner Dateigruppe an. Wenn Sie jedoch eine [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] -Datenbank mit Volltextkatalogdateien an eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Serverinstanz anfügen, werden die Katalogdateien von ihrem vorherigen Speicherort aus zusammen mit den anderen Datenbankdateien angefügt. Dies entspricht der Vorgehensweise für [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
  Der Status der einzelnen angefügten Volltextkataloge von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] entspricht dem Status beim Trennen der Datenbank von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Wenn beim Trennvorgang eine Auffüllung des Volltextindex unterbrochen wurde, wird die Auffüllung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]wieder aufgenommen, und der Volltextindex ist für die Volltextsuche verfügbar.  
@@ -196,7 +192,7 @@ RESTORE DATABASE [ftdb1] FROM  DISK = N'C:\temp\ftdb1.bak' WITH  FILE = 1,
  Weitere Informationen zum Trennen oder Anfügen einer Datenbank finden Sie unter [Anfügen und Trennen von Datenbanken &#40;SQL Server&#41;](../databases/database-detach-and-attach-sql-server.md), [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql), [sp_attach_db](/sql/relational-databases/system-stored-procedures/sp-attach-db-transact-sql), und [sp_detach_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-detach-db-transact-sql).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Beginnen Sie mit der voll Text Suche](get-started-with-full-text-search.md)   
+ [Erste Schritte mit der Volltextsuche](get-started-with-full-text-search.md)   
  [Konfigurieren und Verwalten von Wörter Trennungen und Wort Stamm Erkennungen für die Suche](configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Konfigurieren und Verwalten von Filtern für die Suche](configure-and-manage-filters-for-search.md)  
   

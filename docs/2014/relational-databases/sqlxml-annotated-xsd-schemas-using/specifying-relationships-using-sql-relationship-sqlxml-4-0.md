@@ -29,10 +29,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f27b47ae8216fa64b537d4c8b22b612c535a1869
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013670"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Angeben von Beziehungen mit 'sql:relationship' (SQLXML 4.0)
@@ -53,13 +53,13 @@ ms.locfileid: "66013670"
  **Name**  
  Gibt den eindeutigen Namen der Beziehung an.  
   
- **Parent**  
+ **Übergeordneten**  
  Gibt die übergeordnete Beziehung (Tabelle) an. Dieses Attribut ist optional. Wird es nicht angegeben, wird der Name der übergeordneten Tabelle aus den Informationen in der untergeordneten Hierarchie des Dokuments abgerufen. Wenn das Schema zwei über-/unterordnungshierarchien angibt, die dieselbe ** \<SQL: Relationship->** , aber unterschiedliche übergeordnete Elemente verwenden, geben Sie das übergeordnete Attribut in ** \<SQL: Relationship>** nicht an. Diese Informationen werden aus der Hierarchie im Schema abgerufen.  
   
  **parent-key**  
  Gibt den übergeordneten Schlüssel des übergeordneten Elements an. Wenn der übergeordnete Schlüssel aus mehreren Spalten besteht, werden Werte mit einer Leerstelle angegeben. Es besteht eine positionelle Zuordnung zwischen den Werten, die für den mehrspaltigen Schlüssel und für den entsprechenden untergeordneten Schlüssel festgelegt wurden.  
   
- **Untergeordnet**  
+ **Idee**  
  Gibt die untergeordnete Beziehung (Tabelle) an.  
   
  **child-key**  
@@ -381,7 +381,7 @@ ms.locfileid: "66013670"
 </ROOT>  
 ```  
   
-### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>D: Angeben von "sql:relationship" für mehrere Elemente  
+### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>D. Angeben von "sql:relationship" für mehrere Elemente  
  In diesem Beispiel enthält das mit Anmerkungen versehene XSD-Schema ** \< **die>Elemente Customer>, ** \<Order>** und ** \<Order Detail** .  
   
  Das ** \<Order>** -Element ist ein untergeordnetes Element des ** \<Customer>** -Elements. ** \<** **SQL: Relationship>ist für die Order>unter \<** geordnete Element angegeben; Daher werden Aufträge, die zu einem Kunden gehören, als untergeordnete Elemente der ** \<Customer->** angezeigt.  

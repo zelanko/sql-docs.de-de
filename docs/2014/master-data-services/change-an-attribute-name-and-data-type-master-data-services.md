@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: de5cc28bfd034001c7bc18da9d934277e01935a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484052"
 ---
 # <a name="change-an-attribute-name-master-data-services"></a>Ändern eines Attributnamens (Master Data Services)
@@ -25,7 +25,7 @@ ms.locfileid: "65484052"
 ## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
--   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
+-   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **System Verwaltung** zuzugreifen.  
   
 -   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
@@ -45,7 +45,7 @@ ms.locfileid: "65484052"
   
 7.  Klicken Sie auf **ausgewähltes Attribut bearbeiten**.  
   
-8.  Geben Sie im Feld **Name** den aktualisierten Namen für das Attribut ein. Eine Liste von Wörtern, die nicht als Attributnamen verwendet werden sollten, finden Sie unter [Reservierte Wörter &#40;Master Data Services&#41;](reserved-words-master-data-services.md).  
+8.  Geben Sie im Feld **Name** den aktualisierten Namen für das Attribut ein. Eine Liste von Wörtern, die nicht als Attributnamen verwendet werden sollten, finden Sie unter [reservierte Wörter &#40;Master Data Services&#41;](reserved-words-master-data-services.md).  
   
 9. Klicken Sie auf **Attribut speichern**.  
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 696a114c74ecb6d4b8f4cfe6b2d16b33869e1602
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478905"
 ---
 # <a name="data-quality-matching-in-the-mds-add-in-for-excel"></a>Data Quality-Abgleich im MDS-Add-In für Excel
@@ -48,8 +48,8 @@ ms.locfileid: "65478905"
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Kombinieren Sie als Vorbereitung eines Vergleichs externe Daten mit von MDS verwalteten Daten.|[Kombinieren von Daten &#40;MDS-Add-in für Excel&#41;](combine-data-mds-add-in-for-excel.md)|  
-|Verwenden Sie DQS-Erkenntnisse zum Ermitteln von ähnlichen Elementen in Ihren Daten.|[Ähnliche Daten &#40;MDS-Add-in für Excel vergleichen&#41;](match-similar-data-mds-add-in-for-excel.md)|  
+|Kombinieren Sie als Vorbereitung eines Vergleichs externe Daten mit von MDS verwalteten Daten.|[Kombinieren von Daten &#40;MDS-Add-In für Excel&#41;](combine-data-mds-add-in-for-excel.md)|  
+|Verwenden Sie DQS-Erkenntnisse zum Ermitteln von ähnlichen Elementen in Ihren Daten.|[Abgleichen ähnlicher Daten (MDS-Add-In für Excel)](match-similar-data-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   

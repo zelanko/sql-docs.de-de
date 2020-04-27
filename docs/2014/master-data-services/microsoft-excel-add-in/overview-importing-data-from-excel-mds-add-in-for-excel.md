@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dd5046c9a307f498ffb585c99cba8044c7b18b3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479030"
 ---
 # <a name="publishing-data-mds-add-in-for-excel"></a>Veröffentlichen von Daten (MDS-Add-In für Excel)
@@ -52,11 +52,11 @@ ms.locfileid: "65479030"
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
 |Veröffentlichen Sie Daten vom aktiven Arbeitsblatt zurück zum MDS-Repository.|[Daten aus Excel in MDS &#40;MDS-Add-in für Excel veröffentlichen&#41;](import-data-from-excel-to-master-data-services-mds-add-in-for-excel.md)|  
-|Löschen Sie eine Zeile aus dem MDS-Repository und vom Arbeitsblatt zur gleichen Zeit.|[Zeilen &#40;MDS-Add-in für Excel löschen&#41;](delete-a-row-mds-add-in-for-excel.md)|  
+|Löschen Sie eine Zeile aus dem MDS-Repository und vom Arbeitsblatt zur gleichen Zeit.|[Löschen einer Zeile &#40;MDS-Add-In für Excel&#41;](delete-a-row-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   [Aktualisieren von Daten &#40;MDS-Add-in für Excel&#41;](refreshing-data-mds-add-in-for-excel.md)  
+-   [Aktualisieren von Daten &#40;MDS-Add-In für Excel&#41;](refreshing-data-mds-add-in-for-excel.md)  
   
 -   [Master Data Services-Add-In für Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   

@@ -13,23 +13,23 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd43f430f43f31435df6fff71687136f4bd5f9e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010359"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Zugreifen auf FileTables mit Datei-E/A-APIs
   Beschreibt, wie Dateisystem-E/A in einer FileTable funktioniert.  
   
-##  <a name="accessing"></a> Erste Schritte mit Datei-E/A-APIs mit FileTables  
+##  <a name="get-started-using-file-io-apis-with-filetables"></a><a name="accessing"></a> Erste Schritte mit Datei-E/A-APIs mit FileTables  
  Die primäre Verwendung von FileTables wird durch das Windows-Dateisystem und Datei-E/A-APIs erwartet. FileTables unterstützt den nicht transaktionalen Zugriff durch den umfangreichen Satz verfügbarer Datei-E/A-APIs.  
   
 1.  Datei-E/A-API-Zugriff beginnt in der Regel, indem er einen logischen UNC-Pfad für die Datei oder das Verzeichnis anfordert. Anwendungen können eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung mit der [GetFileNamespacePath](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)-Funktion &#40;Transact-SQL&#41; verwenden, um den logischen Pfad für eine Datei oder ein Verzeichnis abzurufen. Weitere Informationen finden Sie unter [Work with Directories and Paths in FileTables](work-with-directories-and-paths-in-filetables.md).  
   
 2.  Von der Anwendung wird dieser logische Pfad anschließend verwendet, um ein Handle für die Datei oder das Verzeichnis abzurufen und etwas mit dem Objekt auszuführen. Der Pfad kann an jede unterstützte Dateisystem-API-Funktion, z. B. CreateFile() oder CreateDirectory(), übergeben werden, um eine Datei zu erstellen oder zu öffnen und ein Handle abzurufen. Das Handle kann verwendet werden, um dann Daten zu streamen, aufzuzählen oder Verzeichnisse zu organisieren oder um Dateiattribute zu erhalten bzw. festzulegen oder umd Dateien oder Verzeichnisse usw. zu löschen.  
   
-##  <a name="create"></a> Erstellen von Dateien und Verzeichnissen in einer FileTable  
+##  <a name="creating-files-and-directories-in-a-filetable"></a><a name="create"></a> Erstellen von Dateien und Verzeichnissen in einer FileTable  
  Eine Datei oder ein Verzeichnis kann in einer FileTable mithilfe von Datei-E/A-APIs, beispielsweise CreateFile oder CreateDirectory, erstellt werden.  
   
 -   Sämtliche CREATION_DISPOSITION-Flags, Freigabemodi und Zugriffsmodi werden unterstützt. Dies schließt die Erstellung, Löschung und direkte Änderung von Dateien ein. Aktualisierungen von Dateinamespaces (z. B. Erstellen und Löschen von Verzeichnissen, Umbenennungs- und Verschiebevorgänge) werden ebenfalls unterstützt.  
@@ -42,10 +42,10 @@ ms.locfileid: "66010359"
   
 -   Freigabe und Parallelität des Zugriffs werden erzwungen, wenn sich mehrere gleichzeitige Datei-E/A-Vorgänge oder [!INCLUDE[tsql](../../includes/tsql-md.md)] -Vorgänge in die Hierarchie auf die gleiche Datei oder das Verzeichnis auswirken.  
   
-##  <a name="read"></a> Lesen von Dateien und Verzeichnissen in einer FileTable  
+##  <a name="reading-files-and-directories-in-a-filetable"></a><a name="read"></a> Lesen von Dateien und Verzeichnissen in einer FileTable  
  Alle Datei-E/A-Zugriffsvorgänge (für Datenstrom- und Attributdaten) verfügen über eine Read Committed-Isolationssemantik für diese Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-##  <a name="write"></a> Schreiben und Aktualisieren von Dateien und Verzeichnissen in einer FileTable  
+##  <a name="writing-and-updating-files-and-directories-in-a-filetable"></a><a name="write"></a> Schreiben und Aktualisieren von Dateien und Verzeichnissen in einer FileTable  
   
 -   Alle Datei-E/A-Schreib-/Updatevorgänge auf einer FileTable sind nicht transaktional. Das heißt, keine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Transaktion wird an diese Vorgänge gebunden, und es werden keine ACID-Garantien bereitgestellt.  
   
@@ -53,14 +53,14 @@ ms.locfileid: "66010359"
   
 -   Updates der FILESTREAM-Daten oder -attribute über die Datei-E/A-APIs haben Updates der entsprechenden **file_stream** - und Dateiattributspalten in der FileTable zur Folge.  
   
-##  <a name="delete"></a> Löschen von Dateien und Verzeichnissen in einer FileTable  
+##  <a name="deleting-files-and-directories-in-a-filetable"></a><a name="delete"></a> Löschen von Dateien und Verzeichnissen in einer FileTable  
  Jede Windows-Datei-E/A-API-Semantik wird erzwungen, wenn Sie eine Datei oder ein Verzeichnis löschen.  
   
 -   Beim Löschen eines Verzeichnisses tritt ein Fehler auf, wenn das Verzeichnis Unterverzeichnisse mit Dateien enthält.  
   
 -   Durch Löschen einer Datei oder eines Verzeichnisses wird die entsprechende Zeile aus der FileTable entfernt. Dies entspricht dem Löschen dieser Zeile durch einen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Vorgang.  
   
-##  <a name="supported"></a> Unterstützte Dateisystemvorgänge  
+##  <a name="supported-file-system-operations"></a><a name="supported"></a> Unterstützte Dateisystemvorgänge  
  FileTables unterstützen die Dateisystem-APIs, die sich auf die folgenden Dateisystemvorgänge beziehen:  
   
 -   Verzeichnisverwaltung  
@@ -75,15 +75,15 @@ ms.locfileid: "66010359"
   
 -   Transaktions-NTFS  
   
-##  <a name="considerations"></a> Weitere Überlegungen für Datei-E/A-Zugriff auf FileTables  
+##  <a name="additional-considerations-for-file-io-access-to-filetables"></a><a name="considerations"></a> Weitere Überlegungen für Datei-E/A-Zugriff auf FileTables  
   
-###  <a name="vnn"></a>Verwenden von Virtual Network Namen (vnns) mit AlwaysOn-Verfügbarkeitsgruppen  
+###  <a name="using-virtual-network-names-vnns-with-alwayson-availability-groups"></a><a name="vnn"></a>Verwenden von Virtual Network Namen (vnns) mit AlwaysOn-Verfügbarkeitsgruppen  
  Wenn die Datenbank, die FILESTREAM oder FileTable-Daten enthält, zu einer AlwaysOn-Verfügbarkeitsgruppe gehört, dann sollten bei allen Zugriffen auf FILESTREAM oder FileTable-Daten über die Dateisystem-APIs VNNs statt der Computernamen verwendet werden. Weitere Informationen finden Sie unter [FILESTREAM und FileTable bei Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/filestream-and-filetable-with-always-on-availability-groups-sql-server.md).  
   
-###  <a name="partial"></a> Teilupdates  
+###  <a name="partial-updates"></a><a name="partial"></a> Teilupdates  
  Ein überschreibbares Handle, das Daten in einer FileTable mit der [GetFileNamespacePath](/sql/relational-databases/system-functions/getfilenamespacepath-transact-sql)-Funktion &#40;Transact-SQL&#41; abruft, kann verwendet werden, um auf den FILESTREAM-Inhalt direkte Teilupdates auszuführen. Dies steht im Gegensatz zu dem transaktiven FILESTREAM-Zugriff über ein Handle, das durch den **OpenSQLFILESTREAM()** -Befehl und durch das Übergeben eines expliziten Transaktionskontexts abgerufen wurde.  
   
-###  <a name="trans"></a> Transaktionssemantik  
+###  <a name="transactional-semantics"></a><a name="trans"></a> Transaktionssemantik  
  Wenn Sie mit Datei-E/A-APIs auf die Dateien in einer FileTable zugreifen, sind diese Vorgänge keinen Benutzertransaktionen zugeordnet und haben die folgenden zusätzlichen Eigenschaften:  
   
 -   Nicht transaktiver Zugriff auf FILESTREAM-Daten in einer FileTable ist keinen Transaktionen zugeordnet und verfügt daher nicht über eine spezifische Isolationssemantik. Von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird jedoch möglicherweise Sperren- oder Parallelitätssemantik mithilfe von internen Transaktionen auf den FileTable-Daten erzwungen. Alle internen Transaktionen dieses Typs werden mit Read Committed-Isolation ausgeführt.  
@@ -94,13 +94,13 @@ ms.locfileid: "66010359"
   
  Auf die Spalte FILESTREAM in einer FileTable kann jedoch auch mit Transaktions-FILESTREAM-Zugriff zugegriffen werden, indem **OpenSqlFileStream()** aufgerufen wird. Diese Art von Zugriff kann vollständig transaktionsgebunden sein und berücksichtigt alle derzeit einheitlich unterstützten Transaktionen.  
   
-###  <a name="concurrency"></a> Parallelitätssteuerung  
+###  <a name="concurrency-control"></a><a name="concurrency"></a> Parallelitätssteuerung  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erzwingt die Parallelitätssteuerung für den FileTable-Zugriff unter Dateisystemanwendungen sowie zwischen Dateisystemanwendungen und [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anwendungen. Diese Parallelitätssteuerung wird durch entsprechende Sperren in den FileTable-Zeilen erreicht.  
   
-###  <a name="triggers"></a> Trigger  
+###  <a name="triggers"></a><a name="triggers"></a> Trigger  
  Das Erstellen/Ändern/Löschen von Dateien/Verzeichnissen oder deren Attributen über das Dateisystem führt zu entsprechenden Einfüge-/Update-/Löschvorgängen in der FileTable. Alle zugeordneten [!INCLUDE[tsql](../../includes/tsql-md.md)] -DML-Trigger werden als Teil dieser Vorgänge ausgelöst.  
   
-##  <a name="funclist"></a> In FileTables unterstützte Dateisystemfunktionalität  
+##  <a name="file-system-functionality-supported-in-filetables"></a><a name="funclist"></a> In FileTables unterstützte Dateisystemfunktionalität  
   
 |Funktion|Unterstützt|Kommentare|  
 |----------------|---------------|--------------|  

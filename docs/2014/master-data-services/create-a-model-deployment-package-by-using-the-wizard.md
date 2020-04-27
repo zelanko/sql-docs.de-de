@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c88e5ac59730eede7c252261d7509ee77de9cd6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483600"
 ---
 # <a name="create-a-model-deployment-package-by-using-the-wizard"></a>Erstellen eines Modellbereitstellungspakets mithilfe des Assistenten
@@ -45,11 +45,11 @@ ms.locfileid: "65483600"
   
 5.  Klicken Sie auf **Weiter**.  
   
-6.  Klicken Sie auf **Herunterladen**.  
+6.  Klicken Sie auf **Download**.  
   
-7.  Speichern Sie die Datei .  
+7.  Speichern Sie die Datei.  
   
-8.  Klicken Sie auf **Schließen** , um den Assistenten zu schließen.  
+8.  Klicken Sie auf **Schließen**, um den Assistenten zu schließen.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
   

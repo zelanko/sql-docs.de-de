@@ -11,21 +11,19 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3f1eb85cb05c8284990d46241ed752515ef5504b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479445"
 ---
 # <a name="discontinued-master-data-services-features-in-sql-server-2014"></a>Eingestellte Master Data Services-Funktionen in SQL Server 2014
   In diesem Thema werden die Funktionen von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] beschrieben, die in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]nicht mehr verfügbar sind.  
   
-## <a name="includesssql14includessssql14-mdmd-discontinued-features"></a>
-  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] nicht mehr unterstützte Funktionen  
+## <a name="sssql14-discontinued-features"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] nicht mehr unterstützte Funktionen  
  Bestimmte Funktionen werden in dieser Version nicht mehr unterstützt.  
   
-## <a name="includesssql11includessssql11-mdmd-discontinued-features"></a>
-  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] nicht mehr unterstützte Funktionen  
+## <a name="sssql11-discontinued-features"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] nicht mehr unterstützte Funktionen  
   
 ### <a name="security"></a>Sicherheit  
  Um das Zuweisen der Sicherheit einfacher zu machen, können Sie der abgeleiteten Hierarchie, der expliziten Hierarchie und den Attributgruppenobjekten keine Modellobjektberechtigungen mehr zuweisen.  
@@ -55,7 +53,7 @@ ms.locfileid: "65479445"
  Außerdem können Pakete nur in der Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] bereitgestellt werden, in der sie erstellt wurden. Dies bedeutet, dass in [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] erstellte Pakete nicht in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]bereitgestellt werden können. Sie müssen das Paket in einer [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]-Umgebung bereitstellen und dann die Datenbank auf [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] aktualisieren.  
   
 ### <a name="code-generation-business-rules"></a>Geschäftsregeln zur Codegenerierung  
- Geschäftsregeln, die automatisch Werte für das Code-Attribut generieren, werden jetzt anders verwaltet. Zuvor haben Sie zum Generieren von Werten für das Code-Attribut im Funktionsbereich **System Verwaltung** unter **Geschäftsregeln**das **default-Attribut für eine generierte Wert** Aktion verwendet. Nun müssen Sie in der **System Verwaltung**die Entität bearbeiten, um automatisch generierte Codewerte zu aktivieren. Weitere Informationen finden Sie unter [Automatische Codeerstellung &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).  
+ Geschäftsregeln, die automatisch Werte für das Code-Attribut generieren, werden jetzt anders verwaltet. Zuvor haben Sie zum Generieren von Werten für das Code-Attribut im Funktionsbereich **System Verwaltung** unter **Geschäftsregeln**das **default-Attribut für eine generierte Wert** Aktion verwendet. Nun müssen Sie in der **System Verwaltung**die Entität bearbeiten, um automatisch generierte Codewerte zu aktivieren. Weitere Informationen finden Sie unter [automatische Code Erstellung &#40;Master Data Services&#41;](automatic-code-creation-master-data-services.md).  
   
  Wenn Sie bei einem [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]-Modellbereitstellungspaket, das eine Regel dieses Typs enthält, die Datenbank auf [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] aktualisieren, wird die Geschäftsregel ausgeschlossen.  
   

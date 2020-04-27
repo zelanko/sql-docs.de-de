@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6c5c6cf2953de3b23e55cf75b0287750a4abbb86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480560"
 ---
 # <a name="grant-dqs-roles-to-users"></a>Zuweisen von DQS-Rollen an Benutzer
@@ -50,6 +50,6 @@ ms.locfileid: "65480560"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Installieren von Data Quality Services](install-data-quality-services.md)   
- [Erstellen eines Anmeldenamens](../../relational-databases/security/authentication-access/create-a-login.md)  
+ [Erstellen eines Anmelde namens](../../relational-databases/security/authentication-access/create-a-login.md)  
   
   

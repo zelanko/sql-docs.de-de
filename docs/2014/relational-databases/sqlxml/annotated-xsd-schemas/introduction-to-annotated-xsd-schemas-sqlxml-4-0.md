@@ -22,10 +22,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d8813d34f2c669e9646b899230388fca649e4488
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66014457"
 ---
 # <a name="introduction-to-annotated-xsd-schemas-sqlxml-40"></a>Einführung in XSD-Schemas mit Anmerkungen (SQLXML 4.0)
@@ -52,7 +52,7 @@ ms.locfileid: "66014457"
 > [!NOTE]  
 >  In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 unterstützt die XSD-Schemasprache die Anmerkungen, die in der XDR-Schemasprache (XML-Data Reduced) mit Anmerkungen in [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] eingeführt wurden. XDR-Anmerkungen sind in SQLXML 4.0 veraltet.  
   
- Im Kontext relationaler Datenbanken ist es nützlich, das beliebige XSD-Schema einem relationalen Datenspeicher zuzuordnen. Dies lässt sich beispielsweise erreichen, indem das XSD-Schema mit Anmerkungen versehen wird. Ein XSD-Schema mit Anmerkungen wird als Zuordnungsschema ** bezeichnet, das Informationen dazu bereitstellt, wie XML-Daten dem relationalen Speicher zugeordnet werden. Ein Zuordnungsschema ist im Grunde eine XML-Sicht der relationalen Daten. Diese Zuordnungen können verwendet werden, um relationale Daten als XML-Dokument abzurufen.  
+ Im Kontext relationaler Datenbanken ist es nützlich, das beliebige XSD-Schema einem relationalen Datenspeicher zuzuordnen. Dies lässt sich beispielsweise erreichen, indem das XSD-Schema mit Anmerkungen versehen wird. Ein XSD-Schema mit Anmerkungen wird als Zuordnungsschema *mapping schema*bezeichnet, das Informationen dazu bereitstellt, wie XML-Daten dem relationalen Speicher zugeordnet werden. Ein Zuordnungsschema ist im Grunde eine XML-Sicht der relationalen Daten. Diese Zuordnungen können verwendet werden, um relationale Daten als XML-Dokument abzurufen.  
   
 ## <a name="namespace-for-annotations"></a>Namespace für Anmerkungen  
  In einem XSD-Schema werden Anmerkungen mithilfe des Namespace **urn: Schemas-Microsoft-com: Mapping-Schema**angegeben. Wie im folgenden Beispiel gezeigt, besteht die einfachste Möglichkeit, den Namespace anzugeben, darin, ihn im ** \<XSD: Schema->** -Tag anzugeben.  

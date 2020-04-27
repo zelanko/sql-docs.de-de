@@ -24,14 +24,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5625e65b1da45e05002b540774f441f2deabd3f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63260950"
 ---
 # <a name="create-a-user-defined-event"></a>Erstellen eines benutzerdefinierten Ereignisses
-  Sie können benutzerdefinierte Ereignisse erstellen, wenn Sie zusätzlich zu den von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]vordefinierten Ereignissen weitere Ereignisse überwachen möchten. Sie können allen benutzerdefinierten Ereignissen auch einen Schweregrad zuweisen.  
+  Sie können benutzerdefinierte Ereignisse erstellen, wenn Sie zusätzlich zu den von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vordefinierten Ereignissen weitere Ereignisse überwachen möchten. Sie können allen benutzerdefinierten Ereignissen auch einen Schweregrad zuweisen.  
   
 > [!NOTE]  
 >  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]sollten Sie für die Meldungen aller benutzerdefinierten Ereignisse die Option **In Windows-Anwendungsereignisprotokoll schreiben** auswählen, um sicherzustellen, dass die Meldungen protokolliert werden. Benutzerdefinierte Meldungen mit einem Schweregrad kleiner als 19 werden standardmäßig nicht im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anwendungsereignisprotokoll protokolliert. Benutzerdefinierte Meldungen mit einem Schweregrad kleiner als 19 lösen daher keine Warnungen des SQL Server-Agents aus.  
@@ -42,7 +42,7 @@ ms.locfileid: "63260950"
   
  In den folgenden Aufgaben werden Informationen bereitgestellt, wie Sie benutzerdefinierte Ereignisse und die dazugehörigen Warnungen erstellen:  
   
- **So erstellen Sie eine Warnung auf der Grundlage einer Nachrichtennummer**  
+ **So erstellen Sie eine Warnung auf der Grundlage einer Meldungsnummer**  
   
 -   [SQL Server Management Studio](create-an-alert-using-an-error-number.md)  
   
@@ -60,15 +60,15 @@ ms.locfileid: "63260950"
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-add-notification-transact-sql)  
   
- **So erstellen Sie eine benutzerdefinierte Ereignis Fehlermeldung**  
+ **So erstellen Sie eine benutzerdefinierte Ereignisfehlermeldung**  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-addmessage-transact-sql)  
   
- **So ändern Sie eine benutzerdefinierte Ereignis Fehlermeldung**  
+ **So ändern Sie eine benutzerdefinierte Ereignisfehlermeldung**  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-altermessage-transact-sql)  
   
- **So löschen Sie eine benutzerdefinierte Ereignis Fehlermeldung**  
+ **So löschen Sie eine benutzerdefinierte Ereignisfehlermeldung**  
   
 -   [Transact-SQL](/sql/relational-databases/system-stored-procedures/sp-dropmessage-transact-sql)  
   

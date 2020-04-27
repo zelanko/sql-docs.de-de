@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e33526df02cff22adbd56bfbfc2f25cef1c1c052
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482310"
 ---
 # <a name="validate-a-version-against-business-rules-master-data-services"></a>Überprüfen einer Version anhand von Geschäftsregeln (Master Data Services)
@@ -58,13 +58,13 @@ ms.locfileid: "65482310"
   
 ## <a name="next-steps"></a>Nächste Schritte  
   
--   [Eine Version &#40;Master Data Services Sperren&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)  
+-   [Sperren einer Version &#40;Master Data Services&#41;](../../2014/master-data-services/lock-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Der Überprüfungs Status &#40;Master Data Services&#41;](../../2014/master-data-services/validation-statuses-master-data-services.md)   
  [Die gespeicherte Überprüfungs Prozedur &#40;Master Data Services&#41;](validation-stored-procedure-master-data-services.md)   
  [Versionen &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
  [Master Data Services von Geschäftsregeln &#40;&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
- [Überprüfen bestimmter Mitglieder anhand von Geschäftsregeln &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+ [Überprüfen von bestimmten Elementen auf Geschäftsregeln &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
   

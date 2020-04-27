@@ -17,17 +17,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: abb451611f7e102e9167561ef2c3a4b64e00fb12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011842"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Angeben der Feldlänge mithilfe von bcp (SQL Server)
   Die Feldlänge weist auf die maximale Anzahl von Zeichen hin, die zum Darstellen der Daten im Zeichenformat benötigt werden. Die Feldlänge ist bereits bekannt, wenn die Daten im systemeigenen Format gespeichert werden (z. B. der `int`-Datentyp, der 4 Bytes benötigt). Wenn Sie für die Präfix Länge 0 angegeben haben, werden Sie vom **bcp** -Befehl zur Eingabe der Feldlänge, der Standardfeld Längen und der Auswirkung der Feldlänge auf die Datenspeicherung in Daten `char` Dateien aufgefordert, die Daten enthalten.  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>Die bcp-Eingabeaufforderung für die Feldlänge  
- Wenn ein interaktiver **bcp** -Befehl die Option **in** oder **out** , jedoch keinen Formatdateischalter (**-f**) bzw. keinen Datenformatschalter (**-n**, **-c**, **-w**oder **-N**) enthält, fordert der Befehl wie folgt zur Eingabe der Feldlänge für jedes Datenfeld auf:  
+ Wenn ein interaktiver **bcp**-Befehl die Option **in** oder **out**, jedoch keinen Formatdateischalter ( **-f**) bzw. keinen Datenformatschalter ( **-n**, **-c**, **-w** oder **-N**) enthält, fordert der Befehl wie folgt zur Eingabe der Feldlänge für jedes Datenfeld auf:  
   
  `Enter length of field <field_name> [<default>]:`  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66011842"
   
 -   Wenn **bcp** Daten, die nicht auf Zeichen basieren, in Zeichen konvertiert, schlägt das Hilfsprogramm eine Standardfeldlänge vor, die groß genug zum Speichern der Daten ist.  
   
--   Wenn der Dateispeichertyp Daten enthält, die nicht auf Zeichen basieren, fordert **bcp** nicht zur Eingabe einer Feldlänge auf. Die Daten werden in der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nativen Datendarstellung (System eigenes Format) gespeichert.  
+-   Wenn der Dateispeichertyp Daten enthält, die nicht auf Zeichen basieren, fordert **bcp** nicht zur Eingabe einer Feldlänge auf. Die Daten werden in der nativen Datendarstellung (natives Format) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert.  
   
 ## <a name="using-default-field-lengths"></a>Verwenden der Standardfeldlängen  
  Im Allgemeinen empfiehlt [!INCLUDE[msCoName](../../includes/msconame-md.md)] , dass Sie die von **bcp**für die Feldlänge vorgeschlagenen Standardwerte übernehmen. Wenn Sie beim Erstellen einer Datendatei im Zeichenmodus die Standardfeldlänge verwenden, können Sie sicherstellen, dass die Daten nicht abgeschnitten werden und auch keine numerischen Überlauffehler auftreten.  
@@ -123,9 +123,9 @@ ms.locfileid: "66011842"
 ## <a name="see-also"></a>Weitere Informationen  
  [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [Datentypen &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [Angeben von Feld-und Zeilen Abschluss Zeichen &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
- [Geben Sie die Präfix Länge in Datendateien an, indem Sie bcp &#40;SQL Server verwenden&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
- [Geben Sie File Storage Typ mithilfe von bcp &#40;SQL Server an&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)   
+ [Angeben von Feld- und Zeilenabschlusszeichen &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
+ [Angeben der Präfixlänge in Datendateien mittels bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)   
+ [Angeben des Dateispeichertyps mithilfe von bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)   
  [Beibehalten von NULL-Werten oder Verwenden von Standardwerten während des Massenimports &#40;SQL Server&#41;](keep-nulls-or-use-default-values-during-bulk-import-sql-server.md)  
   
   

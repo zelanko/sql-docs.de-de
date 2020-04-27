@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bebddfcb9f6dc433831e2649428bd9c99646628f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482865"
 ---
 # <a name="save-a-shortcut-query-file-mds-add-in-for-excel"></a>Speichern einer Shortcutabfragedatei (MDS-Add-In für Excel)
@@ -35,9 +35,9 @@ ms.locfileid: "65482865"
   
 -   Klicken Sie auf den Pfeil unter **Abfrage speichern** , um die Shortcutabfrage anzuzeigen und zu öffnen.  
   
--   [Senden einer shortcutabfragedatei &#40;MDS-Add-in für Excel&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)  
+-   [Senden einer Shortcutabfragedatei &#40;MDS-Add-In für Excel&#41;](email-a-shortcut-query-file-mds-add-in-for-excel.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Die shortcutabfragedateien &#40;MDS-Add-in für Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
+ [Shortcutabfragedateien &#40;MDS-Add-In für Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
   

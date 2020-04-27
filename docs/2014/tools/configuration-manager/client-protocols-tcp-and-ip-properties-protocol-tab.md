@@ -14,16 +14,16 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: ec3c433c1ce16e35f064910083e7ab9959e4c3bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63253784"
 ---
 # <a name="client-protocols---tcp-and-ip-properties-protocol-tab"></a>Clientprotokolle – TCP- und IP-Eigenschaften (Registerkarte „Protokoll“)
-  Verwenden Sie im Konfigurations-Manager von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Dialogfeld **Eigenschaften von TCP/IP** die Registerkarte **Protokoll** , um die folgenden Optionen anzuzeigen oder anzugeben. Zum Herstellen einer Verbindung mit einem anderen Port geben Sie die Portnummer im Dialogfeld **Standardport** ein. Weitere Informationen zu Verbindungszeichenfolgen finden Sie unter [Erstellen einer gültigen Verbindungszeichenfolge mithilfe von TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md).  
+  Verwenden Sie die Registerkarte **Protokoll** im Dialogfeld **TCP/IP-Eigenschaften** des [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfigurations-Managers, um die folgenden Optionen anzuzeigen oder festzulegen. Zum Herstellen einer Verbindung mit einem anderen Port geben Sie die Portnummer im Dialogfeld **Standardport** ein. Weitere Informationen zu Verbindungszeichenfolgen finden Sie unter [Erstellen einer gültigen Verbindungszeichenfolge mithilfe von TCP/IP](../../../2014/tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Standardport**  
  Gibt den Standardport an, der von der TCP/IP-Netzwerkbibliothek zum Herstellen einer Verbindung mit der Zielinstanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet wird. Der Standardport ist 1433.  
   
@@ -34,15 +34,15 @@ ms.locfileid: "63253784"
  **Aktiviert**  
  Mögliche Werte sind **Yes** und **No**.  
   
- **Keep Alive**  
+ **Keep-Alive**  
  Dieser Parameter steuert, wie oft (in Millisekunden) TCP durch das Senden eines **KEEPALIVE** -Pakets zu überprüfen versucht, ob eine Verbindung im Leerlauf noch reagiert. Der Standardwert beträgt 30000 Millisekunden.  
   
- **Keep-Alive-Intervall**  
+ **Erhaltungsintervall**  
  Dieser Parameter bestimmt das Intervall (in Millisekunden), das **KEEPALIVE** -Pakete voneinander trennt, bis eine Antwort erhalten wird. Der Standardwert beträgt 1.000 Millisekunden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Auswählen eines Netzwerkprotokolls](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
+ [Auswählen eines Netzwerk Protokolls](../../../2014/tools/configuration-manager/choosing-a-network-protocol.md)   
  [Neuer Alias &#40;Registerkarte "Alias"&#41;](../../../2014/tools/configuration-manager/new-alias-alias-tab.md)   
- [&#60;Alias&#62; Eigenschaften &#40;Registerkarte "Alias"&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
+ [&#60;Alias&#62;-Eigenschaften &#40;Registerkarte „Alias“&#41;](../../../2014/tools/configuration-manager/alias-properties-alias-tab.md)  
   
   

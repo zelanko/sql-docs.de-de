@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5d6c941283f02fd83e873d51e300add886ba5d73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479921"
 ---
 # <a name="create-a-version-flag-master-data-services"></a>Erstellen eines Versionsflags (Master Data Services)
@@ -55,6 +55,6 @@ ms.locfileid: "65479921"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Versionen &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   
- [Ändern Sie den Namen eines versionsflags &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)  
+ [Ändern des Namens eines Versionsflags &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-version-flag-name-master-data-services.md)  
   
   

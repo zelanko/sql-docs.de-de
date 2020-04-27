@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d0a3dd41259bcbf2567d34a86527865de011faf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012666"
 ---
 # <a name="specifying-a-node-test-in-the-location-path-sqlxml-40"></a>Angeben eines Knotentests unter dem Speicherortpfad (SQLXML 4.0)
@@ -44,17 +44,14 @@ ms.locfileid: "66012666"
 ## <a name="abbreviated-syntax-for-the-axes"></a>Abgekürzte Syntax für die Achsen  
  Es wird die folgende abgekürzte Syntax für den Speicherortpfad unterstützt:  
   
--   
-  `attribute::` kann als `@` abgekürzt werden.  
+-   `attribute::` kann als `@` abgekürzt werden.  
   
      Der Speicherortpfad `Customer[@CustomerID="ALFKI"]` entspricht `child::Customer[attribute::CustomerID="ALFKI"]`.  
   
--   
-  `child::` kann von einem Speicherortschritt ausgelassen werden.  
+-   `child::` kann von einem Speicherortschritt ausgelassen werden.  
   
      Daher ist `child` die Standardachse. Der Speicherortpfad `Customer/Order` entspricht `child::Customer/child::Order`.  
   
--   
-  `self::node()` kann zu einem Punkt (.) abgekürzt werden, und `parent::node()` kann zu zwei Punkten (..) abgekürzt werden.  
+-   `self::node()` kann zu einem Punkt (.) abgekürzt werden, und `parent::node()` kann zu zwei Punkten (..) abgekürzt werden.  
   
   

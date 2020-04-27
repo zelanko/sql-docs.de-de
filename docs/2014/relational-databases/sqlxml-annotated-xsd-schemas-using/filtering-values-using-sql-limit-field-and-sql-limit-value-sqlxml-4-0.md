@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: f93a60e7b6c1dfa2a0c7577aafbbb68d5068c629
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66013809"
 ---
 # <a name="filtering-values-using-sqllimit-field-and-sqllimit-value-sqlxml-40"></a>Filtern von Werten mit 'sql:limit-field' und 'sql:limit-value' (SQLXML 4.0)
@@ -170,7 +170,7 @@ ms.locfileid: "66013809"
   
 -   OrderDetails (OrderID, ProductID, UnitPrice, Quantity, Price, Discount)  
   
- Dies ist das Zuordnungs Schema, in dem das **OrderID** -Attribut in den Bestelldetails der OrderID-Spalte in der Orders-Beziehung zugeordnet wird. Die Werte, die für dieses Attribut zurückgegeben werden, sind auf die Werte beschränkt, die den Wert 0000000e e-001 (0,2) aufweisen, **** wie für das Discount `sql:limit-field` - `sql:limit-value` Attribut mithilfe der-und-Anmerkungen angegeben.  
+ Dies ist das Zuordnungs Schema, in dem das **OrderID** -Attribut in den Bestelldetails der OrderID-Spalte in der Orders-Beziehung zugeordnet wird. Die Werte, die für dieses Attribut zurückgegeben werden, sind auf die Werte beschränkt, die den Wert 0000000e e-001 (0,2) aufweisen, **Discount** wie für das Discount `sql:limit-field` - `sql:limit-value` Attribut mithilfe der-und-Anmerkungen angegeben.  
   
  Das ist das Schema:  
   

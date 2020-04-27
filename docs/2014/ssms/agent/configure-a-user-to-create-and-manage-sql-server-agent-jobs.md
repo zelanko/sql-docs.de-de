@@ -16,31 +16,31 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a62f6c2e1ef86a6fcd5e532b2ef413d8142698e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63253561"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Configure a User to Create and Manage SQL Server Agent Jobs
   In diesem Thema wird beschrieben, wie Sie einen Benutzer zum Erstellen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Ausführen von-Agent-Aufträgen konfigurieren.  
   
--   Vorbereitungen **:**[Sicherheit](#Security)    
+-   **Vorbereitungen:**  [Sicherheit](#Security)  
   
--   So **Konfigurieren Sie einen Benutzer zum Erstellen und Verwalten von SQL Server-Agent Aufträgen mit:**[SQL Server Management Studio](#SSMS)    
+-   **Konfigurieren eines Benutzers zum Erstellen und Verwalten von SQL Server-Agent-Aufträgen mit:**  [SQL Server Management Studio](#SSMS)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
  Wenn Sie einen Benutzer zum Erstellen oder Ausführen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von-Agent-Aufträgen konfigurieren möchten, müssen Sie zunächst eine vorhandene SQL Server-Anmeldung oder eine msdb [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Rolle einer der folgenden Fixed-Agent-Daten bankrollen in der msdb-Datenbank hinzufügen: SQLAgentUserRole, SQLAgentReaderRole oder SQLAgentOperatorRole.  
   
  Standardmäßig können Mitglieder dieser Datenbankrollen ihre eigenen Auftragsschritte erstellen, die unter ihrem Konto ausgeführt werden. Falls Benutzer, die keine Administratoren sind, Aufträge ausführen möchten, mit denen andere Arten von Auftragsschritten ausgeführt werden (z. B. [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Pakete), benötigen sie Zugriff auf ein Proxykonto. Alle Mitglieder der festen Serverrolle sysadmin haben die Berechtigung zum Erstellen, Ändern und Löschen von Proxykonten. Weitere Informationen zu den Berechtigungen, die jeder dieser festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen zugeordnet sind, finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](sql-server-agent-fixed-database-roles.md).  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
- **So fügen Sie einer SQL Server-Agent Fixed-Daten Bank Rolle eine SQL-Anmeldung oder eine msdb-Rolle hinzu**  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Verwenden von SQL Server Management Studio  
+ **So fügen Sie einer festen Datenbankrolle des SQL Server-Agents einen SQL-Anmeldenamen oder eine msdb-Rolle hinzu**  
   
 1.  Erweitern Sie im **Objekt-Explorer**einen Server.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "63253561"
   
 5.  Aktivieren Sie unter **Mitgliedschaft in Datenbankrolle für: msdb**das Kontrollkästchen für die entsprechende feste Datenbankrolle des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents.  
   
- **So konfigurieren Sie ein Proxy Konto zum Erstellen und Verwalten von SQL Server-Agent Auftrags Schritten**  
+ **So konfigurieren Sie ein Proxykonto zum Erstellen und Verwalten von Auftragsschritten des SQL Server-Agents**  
   
 1.  Erweitern Sie im **Objekt-Explorer**einen Server.  
   

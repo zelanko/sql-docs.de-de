@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 47534b08e32f9e8fe585e4ad7fe2e36f6c6e8c8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484009"
 ---
 # <a name="collection-permissions-master-data-services"></a>Auflistungsberechtigungen (Master Data Services)
@@ -29,12 +29,12 @@ ms.locfileid: "65484009"
 |Berechtigung|BESCHREIBUNG|  
 |----------------|-----------------|  
 |**Schreibgeschützt**|Alle Auflistungen und Sammelelemente werden angezeigt.<br /><br /> Der Benutzer kann keine Auflistungen hinzufügen oder entfernen und auch der Auflistung keine Elemente hinzufügen bzw. Elemente daraus entfernen.|  
-|**Alisierungs**|Alle Auflistungen werden angezeigt, und der Benutzer kann Auflistungen hinzufügen und entfernen.<br /><br /> Darüber hinaus kann der Benutzer der Auflistung Elemente hinzufügen bzw. Elemente daraus entfernen.|  
+|**Update**|Alle Auflistungen werden angezeigt, und der Benutzer kann Auflistungen hinzufügen und entfernen.<br /><br /> Darüber hinaus kann der Benutzer der Auflistung Elemente hinzufügen bzw. Elemente daraus entfernen.|  
 |**Deny**|Es werden keine Auflistungen für die Entität angezeigt.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Zuweisen von Berechtigungen für Modell Objekte &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)   
  [Sammlungen &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)   
- [Modell Objekt Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)  
+ [Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)  
   
   

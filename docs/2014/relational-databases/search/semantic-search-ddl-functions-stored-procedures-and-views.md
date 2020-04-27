@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ee5cf7136739b012615121e00d8b8d3ed7c7c6ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011038"
 ---
 # <a name="semantic-search-ddl-functions-stored-procedures-and-views"></a>Semantische Such-DDL, Funktionen, gespeicherte Prozeduren und Sichten
@@ -24,14 +24,14 @@ ms.locfileid: "66011038"
   
  Eine Liste der Anweisungen und Datenbankobjekte, die die Volltextsuche unterstützen, finden Sie unter [DDL, Funktionen, gespeicherte Prozeduren und Sichten für Volltextsuche](../views/views.md).  
   
-##  <a name="ddl"></a> Transact-SQL-DDL-Anweisungen (Data Definition Language, Datendefinitionssprache)  
+##  <a name="transact-sql-data-definition-language-ddl-statements"></a><a name="ddl"></a>Transact-SQL-DDL-Anweisungen (Data Definition Language, Datendefinitionssprache)  
   
 |Object|Weitere Informationen|  
 |------------|----------------------|  
 |[ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-index-transact-sql)|[Aktivieren der semantischen Suche in Tabellen und Spalten](enable-semantic-search-on-tables-and-columns.md)|  
 |[CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-index-transact-sql)|[Aktivieren der semantischen Suche in Tabellen und Spalten](enable-semantic-search-on-tables-and-columns.md)|  
   
-##  <a name="func"></a> Systemfunktionen  
+##  <a name="system-functions"></a><a name="func"></a> Systemfunktionen  
   
 |Object|Weitere Informationen|  
 |------------|----------------------|  
@@ -39,7 +39,7 @@ ms.locfileid: "66011038"
 |[semanticsimilaritydetailstable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritydetailstable-transact-sql)|[Suchen von ähnlichen und verwandten Dokumenten mit semantischer Suche](find-similar-and-related-documents-with-semantic-search.md)|  
 |[semanticsimilaritytable &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/semanticsimilaritytable-transact-sql)|[Suchen von ähnlichen und verwandten Dokumenten mit semantischer Suche](find-similar-and-related-documents-with-semantic-search.md)|  
   
-##  <a name="meta"></a> Systemmetadatenfunktionen  
+##  <a name="system-metadata-functions"></a><a name="meta"></a> Systemmetadatenfunktionen  
   
 |Object|Weitere Informationen|  
 |------------|----------------------|  
@@ -50,14 +50,14 @@ ms.locfileid: "66011038"
 |[OBJECTPROPERTYEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/objectproperty-transact-sql)|[Aktivieren der semantischen Suche in Tabellen und Spalten](enable-semantic-search-on-tables-and-columns.md)|  
 |[SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)|[Installieren und Konfigurieren der semantischen Suche](install-and-configure-semantic-search.md)|  
   
-##  <a name="sproc"></a> Gespeicherte Systemprozeduren  
+##  <a name="system-stored-procedures"></a><a name="sproc"></a> Gespeicherte Systemprozeduren  
   
 |Object|Weitere Informationen|  
 |------------|----------------------|  
 |[sp_fulltext_semantic_register_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-register-language-statistics-db-transact-sql)|[Installieren und Konfigurieren der semantischen Suche](install-and-configure-semantic-search.md)|  
 |[sp_fulltext_semantic_unregister_language_statistics_db &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-fulltext-semantic-unregister-language-statistics-db-transact-sql)|[Installieren und Konfigurieren der semantischen Suche](install-and-configure-semantic-search.md)|  
   
-##  <a name="cv"></a> Systemsichten: Katalogsichten  
+##  <a name="system-views---catalog-views"></a><a name="cv"></a>System Sichten-Katalog Sichten  
   
 |Object|Weitere Informationen|  
 |------------|----------------------|  
@@ -65,7 +65,7 @@ ms.locfileid: "66011038"
 |[sys.fulltext_semantic_language_statistics_database &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-language-statistics-database-transact-sql)|[Installieren und Konfigurieren der semantischen Suche](install-and-configure-semantic-search.md)|  
 |[sys.fulltext_semantic_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-semantic-languages-transact-sql)|[Installieren und Konfigurieren der semantischen Suche](install-and-configure-semantic-search.md)|  
   
-##  <a name="dmv"></a> Systemsichten: Dynamische Verwaltungssichten  
+##  <a name="system-views---dynamic-management-views"></a><a name="dmv"></a> Systemsichten: Dynamische Verwaltungssichten  
   
 |Object|Weitere Informationen|  
 |------------|----------------------|  

@@ -17,23 +17,23 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a3646aa6ef61c820ca5512203b0ff1e36894cab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011819"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Angeben des Dateispeichertyps mithilfe von bcp (SQL Server)
-  Der *Datei Speichertyp* beschreibt, wie Daten in der Datendatei gespeichert werden. Daten können in eine Datendatei als Typ der Datenbanktabelle (systemeigenes Format), als Zeichendarstellung (Zeichenformat) oder als beliebiger Datentyp, bei dem die implizite Konvertierung unterstützt wird, exportiert werden. Beispielsweise kann ein `smallint` als ein `int` kopiert werden. Benutzerdefinierte Datentypen werden als Basistypen exportiert.  
+  Der *Dateispeichertyp* beschreibt, wie Daten in der Datendatei gespeichert werden. Daten können in eine Datendatei als Typ der Datenbanktabelle (systemeigenes Format), als Zeichendarstellung (Zeichenformat) oder als beliebiger Datentyp, bei dem die implizite Konvertierung unterstützt wird, exportiert werden. Beispielsweise kann ein `smallint` als ein `int` kopiert werden. Benutzerdefinierte Datentypen werden als Basistypen exportiert.  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>Die bcp-Eingabeaufforderung für den Dateispeichertyp  
- Wenn ein interaktiver **bcp** -Befehl die Option **in** oder **out** , jedoch keinen Formatdateischalter (**-f**) bzw. keinen Datenformatschalter (**-n**, **-c**, **-w**oder **-N**) enthält, fordert der Befehl wie folgt zur Eingabe des Dateispeichertyps für jedes Datenfeld auf:  
+ Wenn ein interaktiver **bcp** -Befehl die Option **in** oder **out** , jedoch keinen Formatdateischalter ( **-f**) bzw. keinen Datenformatschalter ( **-n**, **-c**, **-w**oder **-N**) enthält, fordert der Befehl wie folgt zur Eingabe des Dateispeichertyps für jedes Datenfeld auf:  
   
  `Enter the file storage type of field <field_name> [<default>]:`  
   
  Ihre Eingabe hängt dann von der Aufgabe ab, die Sie ausführen möchten (siehe folgende Liste).  
   
--   Wenn Sie Daten von einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine Datendatei der kompaktesten Speicherform, die möglich ist (systemeigenes Datenformat), massenexportieren möchten, nehmen Sie die Standard-Dateispeichertypen an, die von **bcp**bereitgestellt werden. Eine Liste der systemeigenen Dateispeichertypen finden Sie unter "Systemeigene Dateispeichertypen" weiter unten in diesem Thema.  
+-   Nehmen Sie die von **bcp** bereitgestellten Standarddateispeichertypen an, wenn Sie einen Massenexport für Daten aus einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine Datendatei in der kompaktesten Speicherform (natives Datenformat) durchführen möchten. Eine Liste der systemeigenen Dateispeichertypen finden Sie unter "Systemeigene Dateispeichertypen" weiter unten in diesem Thema.  
   
 -   Für das Massenexportieren von Daten aus einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in eine Datendatei im Zeichenformat geben Sie `char` als Dateispeichertyp für alle Spalten in der Tabelle an.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66011819"
     |`binary`|`x`|  
     |`varbinary`|`x`|  
     |`image`<sup>2</sup>|`I`[`mage`]|  
-    |`datetime`|**d [Ate]**|  
+    |`datetime`|**d[ate]**|  
     |`smalldatetime`|`D`|  
     |`time`|`te`|  
     |`date`|`de`|  
@@ -58,19 +58,19 @@ ms.locfileid: "66011819"
     |`datetimeoffset`|`do`|  
     |`decimal`|`n`|  
     |`numeric`|`n`|  
-    |`float`|**f [Loat]**|  
+    |`float`|**f[loat]**|  
     |`real`|`r`|  
-    |`Int`|**i [NT]**|  
+    |`Int`|**i[nt]**|  
     |`bigint`|`B[igint]`|  
-    |`smallint`|**s [mallint]**|  
-    |`tinyint`|**t [inyint]**|  
-    |`money`|**m [Oney]**|  
+    |`smallint`|**s[mallint]**|  
+    |`tinyint`|**t[inyint]**|  
+    |`money`|**m[oney]**|  
     |`smallmoney`|`M`|  
     |`bit`|`b[it]`|  
     |`uniqueidentifier`|`u`|  
     |`sql_variant`|`V[ariant]`|  
     |`timestamp`|`x`|  
-    |`UDT`(ein benutzerdefinierter Datentyp)|`U`|  
+    |`UDT` (ein benutzerdefinierter Datentyp)|`U`|  
     |`XML`|`X`|  
   
      <sup>1</sup> die Interaktion von Feldlänge, Präfix Länge und Abschluss Zeichen bestimmt die Menge an Speicherplatz, die in einer Datendatei für nicht auf Zeichen basierende Daten zugeordnet wird, die `char` als Datei Speichertyp exportiert werden.  
@@ -128,8 +128,8 @@ ms.locfileid: "66011819"
 ## <a name="see-also"></a>Weitere Informationen  
  [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [Datentypen &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [Geben Sie die Feldlänge mithilfe von bcp &#40;SQL Server an&#41;](specify-field-length-by-using-bcp-sql-server.md)   
- [Angeben von Feld-und Zeilen Abschluss Zeichen &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
- [Geben Sie die Präfix Länge in Datendateien an, indem Sie bcp &#40;SQL Server verwenden&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
+ [Angeben der Feldlänge mithilfe von bcp &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   
+ [Angeben von Feld- und Zeilenabschlusszeichen &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
+ [Angeben der Präfixlänge in Datendateien mittels bcp &#40;SQL Server&#41;](specify-prefix-length-in-data-files-by-using-bcp-sql-server.md)  
   
   

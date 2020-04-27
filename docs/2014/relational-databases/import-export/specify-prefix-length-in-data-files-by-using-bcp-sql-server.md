@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e5d91c82d892888d2e6edde5615ba05a2a9ebf3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011755"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>Angeben der Präfixlänge in Datendateien mittels bcp (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "66011755"
 > [!IMPORTANT]  
 >  Beim Verwenden des systemeigenen Formats sollten Sie anstelle von Feldabschlusszeichen eher Längenpräfixe verwenden. Systemeigene Formatdaten können zu Konflikten mit Abschlusszeichen führen, weil eine Datendatei im systemeigenen Format im internen binären Datenformat von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeichert wird.  
   
-##  <a name="PrefixLengthsExport"></a> Präfixlängen für den Massenexport  
+##  <a name="prefix-lengths-for-bulk-export"></a><a name="PrefixLengthsExport"></a> Präfixlängen für den Massenexport  
   
 > [!NOTE]  
 >  Der Standardwert, der beim Exportieren eines Felds an der Eingabeaufforderung für die Präfixlänge bereitgestellt wird, bezeichnet die effizienteste Präfixlänge für das Feld.  
@@ -83,17 +83,17 @@ ms.locfileid: "66011755"
   
  <sup>1</sup> die `ntext`Daten `text`Typen, `image` und werden in einer zukünftigen Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Vermeiden Sie die Verwendung dieser Datentypen bei neuen Entwicklungen, und planen Sie die Änderung von Anwendungen, in denen sie aktuell verwendet werden. Verwenden `nvarchar(max)`Sie `varchar(max)`stattdessen, `varbinary(max)` und.  
   
-##  <a name="PrefixLengthsImport"></a>Präfix Längen für den Massen Import  
+##  <a name="prefix-lengths-for-bulk-import"></a><a name="PrefixLengthsImport"></a> Präfixlängen für den Massenimport  
  Wenn Daten massenimportiert werden, entspricht die Präfixlänge dem Wert, der beim ursprünglichen Erstellen der Datendatei angegeben wurde. Wenn die Datendatei nicht mit einem **bcp** -Befehl erstellt wurde, sind wahrscheinlich keine Längenpräfixzeichen vorhanden. In diesem Fall sollten Sie 0 als Präfixlänge angeben.  
   
 > [!NOTE]  
->  Verwenden Sie die weiter oben in diesem Thema unter **Präfixlängen für den Massenexport**bereitgestellten Präfixlängen, um die Präfixlänge in einer Datendatei anzugeben, die nicht mithilfe von [bcp](#PrefixLengthsExport)erstellt wurde.  
+>  Verwenden Sie die weiter oben in diesem Thema unter **Präfixlängen für den Massenexport** bereitgestellten Präfixlängen, um die Präfixlänge in einer Datendatei anzugeben, die nicht mithilfe von [bcp](#PrefixLengthsExport) erstellt wurde.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [Datentypen &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [Geben Sie die Feldlänge mithilfe von bcp &#40;SQL Server an&#41;](specify-field-length-by-using-bcp-sql-server.md)   
- [Angeben von Feld-und Zeilen Abschluss Zeichen &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
- [Geben Sie File Storage Typ mithilfe von bcp &#40;SQL Server an&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
+ [Angeben der Feldlänge mithilfe von bcp &#40;SQL Server&#41;](specify-field-length-by-using-bcp-sql-server.md)   
+ [Angeben von Feld- und Zeilenabschlusszeichen &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md)   
+ [Angeben des Dateispeichertyps mithilfe von bcp &#40;SQL Server&#41;](specify-file-storage-type-by-using-bcp-sql-server.md)  
   
   

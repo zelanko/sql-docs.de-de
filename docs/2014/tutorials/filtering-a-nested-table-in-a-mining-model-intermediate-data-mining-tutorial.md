@@ -11,17 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: f57d691587d658e968cd79cf4f4ab4731db29915
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63267480"
 ---
 # <a name="filtering-a-nested-table-in-a-mining-model-intermediate-data-mining-tutorial"></a>Filtern einer geschachtelten Tabelle in einem Miningmodell (Data Mining-Lernprogramm für Fortgeschrittene)
   Nachdem Sie das Modell erstellt und sich damit vertraut gemacht haben, möchten Sie sich mit einer Teilmenge der Kundendaten näher beschäftigen. Dazu können Sie beispielsweise nur die Einkaufskörbe betrachten, die ein bestimmtes Element enthalten, oder die demografischen Daten von Kunden analysieren, die über einen bestimmten Zeitraum keine Einkäufe getätigt haben.  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bietet die Möglichkeit, die in einem Miningmodell verwendeten Daten zu filtern. Diese Funktion ist nützlich, da Sie keine neue Datenquellen Sicht einrichten müssen, um unterschiedliche Daten zu verwenden. Im Lernprogramm zu Data Mining-Grundlagen haben Sie gelernt, Daten in einer flachen Tabelle anhand von Bedingungen für die Falltabelle zu filtern. In dieser Aufgabe erstellen Sie einen Filter für eine geschachtelte Tabelle.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bietet die Möglichkeit, die in einem Miningmodell verwendeten Daten zu filtern. Diese Funktion ist nützlich, da Sie keine neue Datenquellen Sicht einrichten müssen, um unterschiedliche Daten zu verwenden. Im Lernprogramm zu Data Mining-Grundlagen haben Sie gelernt, Daten in einer flachen Tabelle anhand von Bedingungen für die Falltabelle zu filtern. In dieser Aufgabe erstellen Sie einen Filter für eine geschachtelte Tabelle.  
   
 ## <a name="filters-on-nested-vs-case-tables"></a>Filter für geschachtelte Tabellen und Filter für Falltabellen  
  Wenn die Datenquellenansicht wie im Modell Association eine Falltabelle und eine geschachtelte Tabelle enthält, können Sie einen Filter für Werte in der Falltabelle, einen Filter für vorhandene oder nicht vorhandene Werte in der geschachtelten Tabelle oder eine Kombination aus beiden verwenden.  
@@ -92,7 +91,7 @@ ms.locfileid: "63267480"
   
  Im Microsoft Generic Content Tree Viewer können Sie anhand des Werts für NODE_SUPPORT feststellen, dass das gefilterte Modell weniger Fälle als das ursprüngliche Modell enthält.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Mit dem Filter für eine geschachtelte Tabelle, den Sie gerade erstellt haben, wird nur überprüft, ob mindestens eine Zeile in der geschachtelten Tabelle enthalten ist. Sie können jedoch Filterbedingungen erstellen, mit denen das Vorhandensein bestimmter Produkte überprüft wird.  Beispielsweise können Sie folgenden Filter erstellen:  
   
 ```  
@@ -112,6 +111,6 @@ ms.locfileid: "63267480"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Modell Filter Syntax und Beispiele &#40;Analysis Services Data Mining-&#41;](../../2014/analysis-services/data-mining/model-filter-syntax-and-examples-analysis-services-data-mining.md)   
- [Filter für Mining Modelle &#40;Analysis Services Data Mining-&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
+ [Filter für Miningmodelle &#40;Analysis Services – Data Mining&#41;](../../2014/analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)  
   
   

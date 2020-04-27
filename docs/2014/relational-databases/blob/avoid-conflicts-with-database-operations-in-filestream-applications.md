@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fafb116e1e5c02d27ad3242edd27064ffae6e401
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66010373"
 ---
 # <a name="avoid-conflicts-with-database-operations-in-filestream-applications"></a>Vermeiden von Konflikten mit Datenbankvorgängen in FILESTREAM-Anwendungen
@@ -110,7 +110,7 @@ CloseHandle(dstHandle1);
 //SELECT statements will be allowed.  
 ```  
   
-### <a name="d-failing-to-close-a-cursor"></a>D: Fehler beim Schließen eines Cursors  
+### <a name="d-failing-to-close-a-cursor"></a>D. Fehler beim Schließen eines Cursors  
  Das folgende Beispiel zeigt, wie ein nicht geschlossener Anweisungscursor verhindern kann, dass `OpenSqlFilestream()` den BLOB für den Schreibzugriff öffnen kann.  
   
 ```  
@@ -141,7 +141,7 @@ HANDLE srcHandle =  OpenSqlFilestream(srcFilePath,
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [ZUgreifen auf FILESTREAM-Daten mit OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)   
+ [Zugreifen auf FILESTREAM-Daten mit OpenSqlFilestream](access-filestream-data-with-opensqlfilestream.md)   
  [Verwenden von Multiple Active Result Sets &#40;MARS&#41;](../native-client/features/using-multiple-active-result-sets-mars.md)  
   
   

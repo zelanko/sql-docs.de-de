@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 69b9e356fcaf4b5abd97b56c69ecdd9881aaaee2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63285769"
 ---
 # <a name="issue-element-ssbdiagnose"></a>Issue-Element (ssbdiagnose)
@@ -42,7 +42,7 @@ ms.locfileid: "63285769"
   
 |attribute|BESCHREIBUNG|  
 |---------------|-----------------|  
-|`type`|Identifiziert die Kategorie des vom Issue-Element gemeldeten Problems:<br /><br /> **"Diagnose"** Meldet ein Konfigurationsproblem, das beim Analysieren einer [!INCLUDE[ssSB](../../includes/sssb-md.md)] Konfiguration gefunden wurde.<br /><br /> **"Problem"** Meldet ein Problem, das das Abschließen der Analyse durch **ssbdiagnose** verhindert hat. Beheben Sie das Problem, und führen Sie **ssbdiagnose**erneut aus.<br /><br /> **"Ereignis"** Meldet ein [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -Ereignis, das beim Ausführen einer **-Runtime-** Überprüfung gefunden wurde. Ereignisse werden nur gemeldet, wenn **-SHOWEVENTS** angegeben ist.|  
+|`type`|Identifiziert die Kategorie des vom Issue-Element gemeldeten Problems:<br /><br /> **„Diagnose“** meldet ein bei der Analyse einer [!INCLUDE[ssSB](../../includes/sssb-md.md)] -Konfiguration „gefundenes Konfigurationsproblem.<br /><br /> **„Problem“** meldet ein Problem, aufgrund dessen **ssbdiagnose** die Analyse nicht abschließen konnte. Beheben Sie das Problem, und führen Sie **ssbdiagnose**erneut aus.<br /><br /> **„Event“** meldet ein [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] -Ereignis, das bei der Ausführung einer **-RUNTIME** -Überprüfung gefunden wurde. Ereignisse werden nur gemeldet, wenn **-SHOWEVENTS** angegeben ist.|  
 |`code`|Gibt die Fehlernummer für die Meldung an.|  
 |`server`|Identifiziert die Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] , in der das Problem gefunden wurde. Wenn das Problem in einer Standardinstanz gefunden wurde, enthält das Serverattribut nur den Computernamen. Wenn das Problem in einer benannten Instanz gefunden wurde, weist das Serverattribut das Format Computername\Instanzname auf.|  
 |`database`|Identifiziert den Namen der Datenbank, in der das Problem gefunden wurde.|  
@@ -50,11 +50,11 @@ ms.locfileid: "63285769"
   
 ## <a name="element-characteristics"></a>Elementmerkmale  
   
-|Merkmal|BESCHREIBUNG|  
+|Merkmal|Beschreibung|  
 |--------------------|-----------------|  
 |**Datentyp und -länge**|`string`, die Länge ist unbegrenzt.|  
 |**Wert**|Gibt den Text der Fehlermeldung zurück.|  
-|**Vorkommen**|Einmal pro gemeldeten Fehler.|  
+|**Vorkommt**|Einmal pro gemeldeten Fehler.|  
   
 ## <a name="element-relationships"></a>Elementbeziehungen  
   

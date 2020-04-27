@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ab658be26dc8ccbdd4e760d0b1bc835ace3b2c38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66011668"
 ---
 # <a name="use-character-format-to-import-or-export-data-sql-server"></a>Verwenden des Zeichenformats zum Importieren und Exportieren von Daten (SQL Server)
@@ -47,18 +47,18 @@ ms.locfileid: "66011668"
 -   Das Hilfsprogramm **bcp** exportiert `money` Werte als Datendateien im Zeichenformat mit vier Ziffern nach dem Dezimaltrennzeichen und ohne Symbole für die Ziffern Gruppierung, wie z. b. Komma Trennzeichen. So wird z. B. eine `money`-Spalte mit dem Wert 1,234,567.123456 beim Massenkopieren in eine Datendatei als die Zeichenfolge 1234567.1235 massenexportiert.  
   
 ## <a name="command-options-for-character-format"></a>Befehlsoptionen für das Zeichenformat  
- Sie können Daten im Zeichenformat in eine Tabelle importieren, indem Sie **bcp**, BULK INSERT oder INSERT... Select \* FROM OPENROWSET (BULK...). Bei einem **bcp** -Befehl oder einer BULK INSERT-Anweisung können Sie das Datenformat in der Befehlszeile angeben. Für eine INSERT ...  SELECT * FROM OPENROWSET(BULK...) -Anweisung müssen Sie das Datenformat in einer Formatdatei angeben.  
+ Sie können Daten im Zeichenformat in eine Tabelle importieren, indem Sie **bcp**, BULK INSERT oder INSERT... Select \* FROM OPENROWSET (BULK...). Bei einem **bcp** -Befehl oder einer BULK INSERT-Anweisung können Sie das Datenformat in der Befehlszeile angeben. Für eine INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung müssen Sie das Datenformat in einer Formatdatei angeben.  
   
  Das Zeichenformat wird von den folgenden Befehlszeilenoptionen unterstützt:  
   
-|Get-Help|Option|BESCHREIBUNG|  
+|Get-Help|Option|Beschreibung|  
 |-------------|------------|-----------------|  
 |**bcp**|**-c**|Bewirkt, dass das Hilfsprogramm **bcp** Zeichendaten verwendet. <sup>1</sup>|  
-|BULK INSERT|DataFileType **= ' char '**|Verwendet das Zeichenformat beim Massenimport von Daten.|  
+|BULK INSERT|DATAFILETYPE **='char'**|Verwendet das Zeichenformat beim Massenimport von Daten.|  
   
  <sup>1</sup> um Zeichendaten (**-c**) in ein Format zu laden, das mit früheren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Versionen von-Clients kompatibel ist, verwenden Sie den Schalter **-V** . Weitere Informationen finden Sie unter [Importieren von Daten aus früheren SQL Server-Versionen im nativen Format oder im Zeichenformat](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
- Weitere Informationen finden Sie unter [bcp (Hilfsprogramm)](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql), oder [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
+ Weitere Informationen finden Sie unter [bcp (Hilfsprogramm)](../../tools/bcp-utility.md), [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql) oder [OPENROWSET &#40;Transact-SQL&#41;](/sql/t-sql/functions/openrowset-transact-sql).  
   
 > [!NOTE]  
 >  Alternativ können Sie die Formatierung pro Feld in einer Formatdatei angeben. Weitere Informationen finden Sie unter [Formatdateien zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](format-files-for-importing-or-exporting-data-sql-server.md)erforderlich.  
@@ -97,7 +97,7 @@ SELECT Col1,Col2,Col3 FROM myTestCharData
 |Qualifizierer|BESCHREIBUNG|  
 |----------------|-----------------|  
 |**-c**|Gibt das Zeichenformat an.|  
-|**-t**`,`|Gibt ein Komma (`,`) als Feldabschlusszeichen an.<br /><br /> Hinweis: Das Standard-Feldabschlusszeichen ist das Tabstoppzeichen (\t). Weitere Informationen finden Sie unter [Angeben von Feld- und Zeilenabschlusszeichen &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
+|**-t** `,`|Gibt ein Komma (`,`) als Feldabschlusszeichen an.<br /><br /> Hinweis: Das Standard-Feldabschlusszeichen ist das Tabstoppzeichen (\t). Weitere Informationen finden Sie unter [Angeben von Feld- und Zeilenabschlusszeichen &#40;SQL Server&#41;](specify-field-and-row-terminators-sql-server.md).|  
 |**-T**|Gibt an, dass das Hilfsprogramm **bcp** die Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe integrierter Sicherheit über eine vertrauenswürdige Verbindung herstellt. Wenn **-T** nicht angegeben wird, müssen Sie **-U** und **-P** angeben, um sich erfolgreich anzumelden.|  
   
  Im folgenden Beispiel wird ein Massenexport von Daten im Zeichenformat aus der `myTestCharData`-Tabelle in eine neue Datendatei ausgeführt. Diese Datendatei heißt `myTestCharData-c.Dat` und verwendet das Komma (,) als Feldabschlusszeichen. Geben Sie an der Eingabeaufforderung von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Folgendes ein:  
@@ -108,7 +108,7 @@ bcp AdventureWorks..myTestCharData out C:\myTestCharData-c.Dat -c -t, -T
 ```  
   
 ### <a name="using-bulk-insert-to-bulk-import-character-data"></a>Verwenden von BULK INSERT für den Massenimport von Zeichendaten  
- Im folgenden Beispiel wird BULK INSERT verwendet, um die Daten in der Datendatei `myTestCharData-c.Dat` in die `myTestCharData` -Tabelle zu importieren. Führen Sie im [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]-Abfrage-Editor Folgendes aus:  
+ Im folgenden Beispiel wird BULK INSERT verwendet, um die Daten in der Datendatei `myTestCharData-c.Dat` in die `myTestCharData` -Tabelle zu importieren. Führen Sie im [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] -Abfrage-Editor Folgendes aus:  
   
 ```  
 USE AdventureWorks;  
@@ -125,8 +125,8 @@ GO
   
 ```  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
- **So verwenden Sie Datenformate für Massen Import oder Massen Export**  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
+ **So verwenden Sie Datenformate für Massenimport oder Massenexport**  
   
 -   [Importieren von Daten aus früheren SQL Server-Versionen im nativen Format oder im Zeichenformat](import-native-and-character-format-data-from-earlier-versions-of-sql-server.md)  
   

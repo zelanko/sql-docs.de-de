@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6b631686e9daf716bb124ce5fadaf7575420a114
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483141"
 ---
 # <a name="deploying-models-master-data-services"></a>Bereitstellen von Modellen (Master Data Services)
@@ -29,11 +29,11 @@ ms.locfileid: "65483141"
 ## <a name="tools-for-deploying-models"></a>Tools zum Bereitstellen von Modellen  
  Sie können je nach Anforderungen mithilfe eines der drei Tools mit Modellpaketen arbeiten.  
   
--   **Mdsmodelbereitstellungs-Tool**: zum Erstellen und Bereitstellen von Modell Objekten und-Daten verwenden Sie das Tool "mdsmodelbereitstellungs. exe". Wenn Sie bei der Installation von MDS den Standardpfad ausgewählt haben, befindet sich dieses Tool unter *Laufwerk*: \Programme\Microsoft SQL server\120\master Data services\configuration.  
+-   **MDSModelDeploy-Tool**: Zum Erstellen und Bereitstellen von Modellobjekten und -daten verwenden Sie das Tool MDSModelDeploy.exe. Wenn Sie bei der Installation von MDS den Standardpfad ausgewählt haben, befindet sich dieses Tool unter *Laufwerk*: \Programme\Microsoft SQL server\120\master Data services\configuration.  
   
--   **Modellbereitstellungs-Assistent**: zum Erstellen und Bereitstellen von Paketen der Modellstruktur verwenden Sie den Assistenten [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] in der-Webanwendung. Sie können diesen Assistenten nicht zur Bereitstellung von Daten verwenden.  
+-   **Modellbereitstellungs-Assistent**: Zum Erstellen und Bereitstellen von Paketen, die nur die Modellstruktur enthalten, verwenden Sie den Assistenten in der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung. Sie können diesen Assistenten nicht zur Bereitstellung von Daten verwenden.  
   
--   **Modell Paket-Editor**: um ein Modell Paket zu bearbeiten, verwenden Sie "modelpackageeditor. exe", mit dem der modellpaketeditor-Assistent gestartet wird. Sie verwenden diesen Assistenten, um ein Paket zu bearbeiten, das vom MDSModelDeploy-Tool oder dem Modellbereitstellungs-Assistenten erstellt wurde. Wenn Sie bei der Installation von MDS den Standardpfad ausgewählt haben, befindet sich dieses Tool unter *Laufwerk*: \Programme\Microsoft SQL server\120\master Data services\configuration.  
+-   **Modellpaket-Editor**: Um ein Modellpaket zu bearbeiten, verwenden Sie „ModelPackageEditor.exe“, womit der Assistent für den Modellpaket-Editor gestartet wird. Sie verwenden diesen Assistenten, um ein Paket zu bearbeiten, das vom MDSModelDeploy-Tool oder dem Modellbereitstellungs-Assistenten erstellt wurde. Wenn Sie bei der Installation von MDS den Standardpfad ausgewählt haben, befindet sich dieses Tool unter *Laufwerk*: \Programme\Microsoft SQL server\120\master Data services\configuration.  
   
 > [!IMPORTANT]  
 >  Sie können das MDSDeployModel verwenden, um ein neues Modell oder einen Modellklon zu erstellen oder um ein vorhandenes Modell einschließlich Daten zu aktualisieren. Wenn Sie das MDSModelDeploy-Tool verwenden, um ein vorhandenes Modell inklusive Daten zu aktualisieren, und das Paket keine Entität, kein Attribut oder kein Element enthält, die bzw. das im Zielmodell enthalten ist, wird diese Entität bzw. dieses Attribut oder Element von MDSModelDeploy nicht aus dem Modell gelöscht.  
@@ -45,7 +45,7 @@ ms.locfileid: "65483141"
   
 -   Entitäten  
   
--   Attributes  
+-   Attribute  
   
 -   Attributgruppen  
   
@@ -76,6 +76,6 @@ ms.locfileid: "65483141"
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   [Modell Bereitstellungs Optionen &#40;Master Data Services&#41;](model-deployment-options-master-data-services.md)  
+-   [Optionen für Modellbereitstellung &#40;Master Data Services&#41;](model-deployment-options-master-data-services.md)  
   
   

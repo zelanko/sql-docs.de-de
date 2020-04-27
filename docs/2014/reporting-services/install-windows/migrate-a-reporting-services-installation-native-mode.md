@@ -10,10 +10,10 @@ ms.technology: database-engine
 ms.topic: conceptual
 ms.date: 08/10/2017
 ms.openlocfilehash: c359f709b2c0a1ba779111a007843dd249b5d7b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63261303"
 ---
 # <a name="migrate-a-reporting-services-installation-native-mode"></a>Migrieren einer Reporting Services-Installation (einheitlicher Modus)
@@ -42,7 +42,7 @@ ms.locfileid: "63261303"
   
 -   Es ist ein Problem aufgetreten, das Upgrades blockiert.  
   
-##  <a name="bkmk_nativemode_migration_overview"></a>Übersicht über die Migration im einheitlichen Modus  
+##  <a name="native-mode-migration-overview"></a><a name="bkmk_nativemode_migration_overview"></a> Übersicht über die Migration im einheitlichen Modus  
  Der Migrationsprozess für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] umfasst manuelle und automatisierte Schritte. Die Migration eines Berichtsservers besteht aus den folgenden Teilaufgaben:  
   
 -   Sichern Sie Datenbank-, Anwendungs- und Konfigurationsdateien.  
@@ -68,9 +68,9 @@ ms.locfileid: "63261303"
   
  Es gelten Beschränkungen bezüglich der Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , auf denen die Berichtsserver-Datenbank gehostet wird. Lesen Sie das folgende Thema, wenn Sie eine Berichtsserver-Datenbank, die in einer früheren Installation erstellt wurde, erneut verwenden.  
   
--   [Erstellen einer Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
+-   [Erstellen einer Berichtsserver-Datenbank](../../sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)  
   
-##  <a name="bkmk_fixed_database_name"></a>Fester Datenbankname  
+##  <a name="fixed-database-name"></a><a name="bkmk_fixed_database_name"></a> Fester Datenbankname  
  Sie können die Berichtsserver-Datenbank nicht umbenennen. Die Identität der Datenbank wird bei der Datenbankerstellung in auf dem Berichtsserver gespeicherten Prozeduren aufgezeichnet. Wenn die primären oder temporären Berichtsserver-Datenbanken umbenannt werden, treten während der Ausführung der Prozeduren Fehler auf, sodass die Berichtsserverinstallation ungültig wird.  
   
  Wenn der Datenbankname der vorhandenen Installation für die neue Installation ungeeignet ist, sollten Sie eine neue Datenbank mit dem Namen erstellen und die vorhandenen Anwendungsdaten mithilfe der in der folgenden Liste beschriebenen Verfahren laden:  
@@ -81,7 +81,7 @@ ms.locfileid: "63261303"
   
 -   Wenn nur wenige Elemente vorliegen, können Sie die Berichte, Berichtsmodelle und freigegebenen Datenquellen vom Berichts-Designer, Modell-Designer und Berichts-Generator aus erneut auf dem neuen Berichtsserver veröffentlichen. Sie müssen Rollenzuweisungen, Abonnements, freigegebene Zeitpläne, Zeitpläne für Berichtmomentaufnahmen, benutzerdefinierte Eigenschaften, die Sie für Berichte und andere Elemente festlegen, Modellelementsicherheit und Eigenschaften, die Sie auf dem Berichtsserver festlegen, erneut erstellen. Die Protokolldaten über Berichtsverlauf und Berichtsausführung gehen verloren.  
   
-##  <a name="bkmk_before_you_start"></a>Bevor Sie beginnen  
+##  <a name="before-you-start"></a><a name="bkmk_before_you_start"></a> Vorbereitungen  
  Auch wenn Sie die Installation nicht aktualisieren, sondern migrieren, sollten Sie die Ausführung von Upgrade Advisor für die vorhandene Installation in Erwägung ziehen, um mögliche Probleme zu ermitteln, die sich auf die Migration auswirken könnten. Dieser Schritt ist besonders dann nützlich, wenn Sie einen Berichtsserver migrieren, den Sie nicht selbst installiert oder konfiguriert haben. Wenn Sie Upgrade Advisor ausführen, können Sie benutzerdefinierte Einstellungen ausfindig machen, die ggf. in einer neuen [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Installation nicht unterstützt werden.  
   
  Zudem müssen Sie sich mehrerer wichtiger Änderungen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] bewusst sein, die sich auf Ihre Vorgehensweise beim Migrieren der Installation auswirken:  
@@ -94,17 +94,17 @@ ms.locfileid: "63261303"
   
 -   ISAPI-Filter werden in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und höheren Versionen nicht unterstützt. Wenn Sie ISAPI-Filter verwenden, müssen Sie Ihre Berichtslösung vor der Migration umgestalten.  
   
--   IP-Adress Einschränkungen werden in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und höheren Versionen nicht unterstützt. Wenn Sie IP-Adresseinschränkungen verwenden, müssen Sie Ihre Berichtslösung vor der Migration umgestalten oder eine Technologie wie z. B. eine Firewall, einen Router oder NAT (Network Address Translation) verwenden, um Adressen zu konfigurieren, die nur eingeschränkt auf den Berichtsserver zugreifen dürfen.  
+-   IP-Adresseinschränkungen werden in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und höheren Versionen nicht unterstützt. Wenn Sie IP-Adresseinschränkungen verwenden, müssen Sie Ihre Berichtslösung vor der Migration umgestalten oder eine Technologie wie z. B. eine Firewall, einen Router oder NAT (Network Address Translation) verwenden, um Adressen zu konfigurieren, die nur eingeschränkt auf den Berichtsserver zugreifen dürfen.  
   
 -   Client Secure Sockets Layer (SSL)-Zertifikate werden in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und höheren Versionen nicht unterstützt. Wenn Sie Client-SSL-Zertifikate verwenden, müssen Sie Ihre Berichtslösung vor der Migration umgestalten.  
   
--   Wenn Sie einen anderen Authentifizierungstyp als die integrierte Windows-Authentifizierung verwenden, müssen Sie das Element `<AuthenticationTypes>` in der Datei **RSReportServer.config** anhand eines unterstützten Authentifizierungstyps aktualisieren. Die unterstützten Authentifizierungstypen sind NTLM, Kerberos, Negotiate und Standard. Anonyme, .NET Passport-und Digest-Authentifizierung werden in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und höheren Versionen nicht unterstützt.  
+-   Wenn Sie einen anderen Authentifizierungstyp als die integrierte Windows-Authentifizierung verwenden, müssen Sie das Element `<AuthenticationTypes>` in der Datei **RSReportServer.config** anhand eines unterstützten Authentifizierungstyps aktualisieren. Die unterstützten Authentifizierungstypen sind NTLM, Kerberos, Negotiate und Standard. Die anonyme, die .NET Passport- und die Digestauthentifizierung werden in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und höheren Versionen nicht unterstützt.  
   
 -   Wenn Sie benutzerdefinierte Cascading Stylesheets in der Berichterstellungsumgebung verwenden, werden sie nicht migriert. Sie müssen sie nach der Migration manuell verschieben.  
   
  Weitere Informationen zu Änderungen in finden [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Sie in der Dokumentation des Upgrade Advisors und in den [Neuerungen &#40;Reporting Services&#41;](../what-s-new-reporting-services.md).  
   
-##  <a name="bkmk_backup"></a>Sicherungsdateien und-Daten  
+##  <a name="backup-files-and-data"></a><a name="bkmk_backup"></a> Sichern von Dateien und Daten  
  Vor dem Installieren einer neuen Instanz von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]müssen Sie alle Dateien der aktuellen Installation sichern.  
   
 1.  Sichern Sie den Verschlüsselungsschlüssel für die Berichtsserver-Datenbank. Dieser Schritt ist für den Erfolg der Migration entscheidend. Im weiteren Verlauf des Migrationsprozesses müssen Sie den Schlüssel wiederherstellen, damit der Berichtsserver wieder auf verschlüsselte Daten zugreifen kann. Verwenden Sie den Reporting Services-Konfigurations-Manager, um den Schlüssel zu sichern.  
@@ -127,7 +127,7 @@ ms.locfileid: "63261303"
   
     7.  Machine.config für [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] , wenn Sie die Datei für Berichtsservervorgänge geändert haben  
   
-##  <a name="bkmk_install_ssrs"></a>Installieren von SQL Server Reporting Services  
+##  <a name="install-sql-server-reporting-services"></a><a name="bkmk_install_ssrs"></a> Installieren von SQL Server Reporting Services  
  Installieren Sie eine neue Berichtsserverinstanz im Dateimodus, um sie so konfigurieren zu können, dass Nichtstandardwerte verwendet werden. Verwenden Sie bei der Befehlszeileninstallation das `FilesOnly`-Argument. Wählen Sie im Installations-Assistenten die Option **Server installieren, jedoch nicht konfigurieren**aus.  
   
  Klicken Sie auf einen der folgenden Links, um Anweisungen zum Installieren einer neuen Instanz von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]anzuzeigen.  
@@ -136,7 +136,7 @@ ms.locfileid: "63261303"
   
 -   [Installieren von SQL Server 2014 von der Eingabeaufforderung](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
   
-##  <a name="bkmk_move_database"></a>Verschieben der Berichts Server-Datenbank  
+##  <a name="move-the-report-server-database"></a><a name="bkmk_move_database"></a> Verschieben der Berichtsserver-Datenbank  
  Die Berichtsserver-Datenbank enthält veröffentlichte Berichte, Modelle, freigegebene Datenquellen, Zeitpläne, Ressourcen, Abonnements und Ordner. Außerdem enthält sie System- und Elementeigenschaften sowie Berechtigungen für den Zugriff auf den Berichtsserverinhalt.  
   
  Wenn die Migration den Wechsel zu einer anderen [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz einschließt, müssen Sie die Berichtsserver-Datenbank in die neue [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz verschieben. Wenn Sie dieselbe [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz verwenden, gehen Sie zum Abschnitt [Verschieben von benutzerdefinierten Assemblys oder Erweiterungen](#bkmk_move_custom).  
@@ -155,13 +155,13 @@ ms.locfileid: "63261303"
   
 2.  Starten Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , und stellen Sie eine Verbindung mit [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
   
-3.  Wenn `RSExecRole` noch keine Berichtsserver-Datenbank gehostet hat, erstellen Sie [!INCLUDE[ssDE](../../includes/ssde-md.md)] in den Systemdatenbanken. Weitere Informationen finden Sie unter [Erstellen der Rolle RSExecRole](../security/create-the-rsexecrole.md).  
+3.  Wenn [!INCLUDE[ssDE](../../includes/ssde-md.md)] noch keine Berichtsserver-Datenbank gehostet hat, erstellen Sie `RSExecRole` in den Systemdatenbanken. Weitere Informationen finden Sie unter [Erstellen der Rolle RSExecRole](../security/create-the-rsexecrole.md).  
   
 4.  Befolgen Sie die Anweisungen unter [Verschieben von Berichtsserver-Datenbanken auf einen anderen Computer (einheitlicher SSRS-Modus)](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).  
   
  Denken Sie daran, dass die Berichtsserver-Datenbank und die temporäre Datenbank voneinander abhängig sind und gemeinsam verschoben werden müssen. Kopieren Sie die Datenbanken nicht; durch das Kopieren werden nicht alle Sicherheitseinstellungen auf die neue Installation übertragen. Verschieben Sie keine SQL Server-Agent-Aufträge für geplante Berichtsservervorgänge. Der Berichtsserver erstellt diese Aufträge automatisch neu.  
   
-##  <a name="bkmk_move_custom"></a>Verschieben benutzerdefinierter Assemblys oder Erweiterungen  
+##  <a name="move-custom-assemblies-or-extensions"></a><a name="bkmk_move_custom"></a> Verschieben von benutzerdefinierten Assemblys oder Erweiterungen  
  Wenn die Installation benutzerdefinierte Berichtselemente, Assemblys oder Erweiterungen umfasst, müssen Sie die benutzerdefinierten Komponenten erneut bereitstellen. Wenn Sie keine benutzerdefinierten Komponenten verwenden, fahren Sie mit dem Abschnitt [Konfigurieren des Berichtsservers](#bkmk_configure_reportserver)fort.  
   
  Gehen Sie zum erneuten Bereitstellen der benutzerdefinierten Komponenten wie folgt vor:  
@@ -170,9 +170,9 @@ ms.locfileid: "63261303"
   
     -   Für die Version [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] erstellte benutzerdefinierte Authentifizierungserweiterungen müssen neu kompiliert werden.  
   
-    -   Benutzerdefinierte Renderingerweiterungen für [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] müssen mithilfe des Renderingobjektmodells (Rom) umgeschrieben werden  
+    -   Benutzerdefinierte Renderingerweiterungen für [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] müssen mithilfe des Renderingobjektmodells (ROM) umgeschrieben werden.  
   
-    -   HTML 3,2-und HTML OWC-Renderer werden in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und höheren Versionen nicht unterstützt.  
+    -   HTML 3.2- und HTML OWC-Renderer werden in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und höheren Versionen nicht unterstützt.  
   
     -   Andere benutzerdefinierte Assemblys müssen normalerweise nicht neu kompiliert werden.  
   
@@ -194,7 +194,7 @@ ms.locfileid: "63261303"
   
     6.  [Implementieren von Sicherheitserweiterungen](../extensions/security-extension/implementing-a-security-extension.md)  
   
-##  <a name="bkmk_configure_reportserver"></a>Konfigurieren des Berichts Servers  
+##  <a name="configure-the-report-server"></a><a name="bkmk_configure_reportserver"></a> Konfigurieren des Berichtsservers  
  Konfigurieren Sie URLs für den Report Server-Webdienst und den Berichts-Manager, und konfigurieren Sie die Verbindung mit der Berichtsserver-Datenbank.  
   
  Wenn Sie eine Bereitstellung für horizontales Skalieren migrieren, müssen Sie alle Berichtsserverknoten offline schalten und jeden Server einzeln migrieren. Nach der Migration des ersten Berichtsservers und einem erfolgreichen Verbindungsaufbau mit der Berichtsserver-Datenbank, wird die Version der Berichtsserver-Datenbank automatisch auf die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Datenbankversion aktualisiert.  
@@ -217,29 +217,29 @@ ms.locfileid: "63261303"
   
 4.  Stellen Sie die Verschlüsselungsschlüssel wieder her. Dieser Schritt ist erforderlich, um die umkehrbare Verschlüsselung für vorhandene Verbindungszeichenfolgen und Anmeldeinformationen, die sich bereits in der Berichtsserver-Datenbank befinden, zu aktivieren. Weitere Informationen finden Sie unter [Back Up and Restore Reporting Services Encryption Keys](ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).  
   
-5.  Wenn Sie den Berichtsserver auf einem neuen Computer installiert haben und die Windows-Firewall verwenden, muss der TCP-Port, auf dem der Berichtsserver lauscht, geöffnet sein. Standardmäßig ist dies der Port 80. Weitere Informationen finden Sie unter [Konfigurieren einer Firewall für den Zugriff auf den Berichts Server](../report-server/configure-a-firewall-for-report-server-access.md).  
+5.  Wenn Sie den Berichtsserver auf einem neuen Computer installiert haben und die Windows-Firewall verwenden, muss der TCP-Port, auf dem der Berichtsserver lauscht, geöffnet sein. Standardmäßig ist dies der Port 80. Anweisungen finden Sie unter [Konfigurieren einer Firewall für den Zugriff auf den Berichtsserver](../report-server/configure-a-firewall-for-report-server-access.md).  
   
 6.  Wenn Sie den Berichtsserver im einheitlichen Modus lokal verwalten möchten, müssen Sie das Betriebssystem konfigurieren, um die lokale Verwaltung mit dem Berichts-Manager zuzulassen. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung &#40;SSRS&#41;](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
-##  <a name="bkmk_copy_custom_config"></a>Kopieren der benutzerdefinierten Konfigurationseinstellungen in die Datei "RSReportServer. config"  
+##  <a name="copy-custom-configuration-settings-to-rsreportserverconfig-file"></a><a name="bkmk_copy_custom_config"></a> Kopieren von benutzerdefinierten Konfigurationseinstellungen in die Datei "RSReportServer.config"  
  Wenn Sie die Datei RSReportServer.config oder RSWebApplication.config in der vorherigen Installation geändert haben, sollten Sie dieselben Änderungen in der neuen Datei RSReportServer.config vornehmen. In der folgenden Liste sind einige der Gründe aufgeführt, aus denen Sie die vorherige Konfigurationsdatei möglicherweise geändert haben. Außerdem sind Links aufgeführt, die zu zusätzlichen Informationen zum Konfigurieren derselben Einstellungen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]führen.  
   
 |Anpassung|Information|  
 |-------------------|-----------------|  
 |Berichtsserver-E-Mail-Übermittlung mit benutzerdefinierten Einstellungen|[Konfigurieren eines Berichts Servers für die e-Mail-Übermittlung &#40;SSRS-Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md) und [e-Mail-Einstellungen-Configuration Manager &#40;SSRS im einheitlichen Modus&#41;](e-mail-settings-reporting-services-native-mode-configuration-manager.md).|  
 |Geräteinformationseinstellungen|[Anpassen der Parameter für Renderingerweiterungen in der Datei RSReportServer.config](../customize-rendering-extension-parameters-in-rsreportserver-config.md)|  
-|Berichts-Manager für eine Remoteinstanz|[Konfigurieren Sie Berichts-Manager &#40;einheitlichen Modus&#41;](../report-server/configure-web-portal.md)|  
+|Berichts-Manager für eine Remoteinstanz|[Konfigurieren des Berichts-Managers (einheitlicher Modus)](../report-server/configure-web-portal.md)|  
   
-##  <a name="bkmk_windowsservice_group"></a>Windows-Dienstgruppe und Sicherheits-ACLs  
- In [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]gibt es eine Dienstgruppe, die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows-Dienstgruppe, die verwendet wird, um Sicherheits-ACLs für alle Registrierungsschlüssel, Dateien und Ordner zu erstellen, die mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]installiert werden. Dieser Windows-Gruppenname wird im Format SQLServerReportServerUser $\<*computer_name*>$\<*instance_name*> angezeigt. Diese Gruppe nutzt die beiden Windows-Dienstgruppen in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Wenn Sie über benutzerdefinierte ACLs verfügen, die [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] einer der Windows-Gruppen zugeordnet sind, müssen Sie diese ACLs auf die neue Gruppe für die neue Berichts Serverinstanz [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]in anwenden.  
+##  <a name="windows-service-group-and-security-acls"></a><a name="bkmk_windowsservice_group"></a> Windows-Dienstgruppe und Sicherheits-ACLs  
+ In [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)]gibt es eine Dienstgruppe, die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Windows-Dienstgruppe, die verwendet wird, um Sicherheits-ACLs für alle Registrierungsschlüssel, Dateien und Ordner zu erstellen, die mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]installiert werden. Dieser Windows-Gruppenname wird im Format SQLServerReportServerUser$\<*Computer_Name*>$\<*Instanz_Name*> angezeigt. Diese Gruppe nutzt die beiden Windows-Dienstgruppen in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Wenn Sie über benutzerdefinierte ACLs verfügen, die [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] einer der Windows-Gruppen zugeordnet sind, müssen Sie diese ACLs auf die neue Gruppe für die neue Berichts Serverinstanz [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]in anwenden.  
   
-##  <a name="bkmk_verify"></a>Überprüfen der Bereitstellung  
+##  <a name="verify-your-deployment"></a><a name="bkmk_verify"></a> Überprüfen der Bereitstellung  
   
 1.  Testen Sie die virtuellen Verzeichnisse für den Berichtsserver und den Berichts-Manager, indem Sie einen Browser öffnen und die URL-Adresse eingeben. Weitere Informationen finden Sie unter [Überprüfen einer Installation von Reporting Services](verify-a-reporting-services-installation.md).  
   
 2.  Testen Sie Berichte, und überprüfen Sie, ob sie die erwarteten Daten enthalten. Überprüfen Sie, ob in den Datenquelleninformationen noch immer die Datenquellen-Verbindungsinformationen angegeben sind. Der Berichtsserver verwendet beim Verarbeiten und Rendern von Berichten das [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Berichtsobjektmodell. [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]- oder [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]-Konstrukte werden jedoch nicht durch neue Report Definition Language-Elemente ersetzt. Weitere Informationen zu vorhandenen Berichten, die auf einem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Berichtsserver ausgeführt werden, finden Sie unter [Aktualisieren von Berichten](upgrade-reports.md).  
   
-##  <a name="bkmk_remove_unused"></a>Entfernen nicht verwendeter Programme und Dateien  
+##  <a name="remove-unused-programs-and-files"></a><a name="bkmk_remove_unused"></a> Entfernen nicht verwendeter Programme und Dateien  
  Wenn Sie Ihren Berichts Server erfolgreich zu einer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Instanz migriert haben, können Sie die folgenden Schritte ausführen, um nicht mehr benötigte Programme und Dateien zu entfernen.  
   
 1.  Deinstallieren Sie die vorherige Version von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , wenn diese nicht mehr benötigt wird. Mit diesem Schritt werden die folgenden Elemente nicht gelöscht, aber Sie können sie manuell entfernen, wenn Sie sie nicht mehr benötigen:  
@@ -260,7 +260,7 @@ ms.locfileid: "63261303"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Migrieren einer Reporting Services-Installation &#40;SharePoint-Modus&#41;](migrate-a-reporting-services-installation-sharepoint-mode.md)   
- [Berichtsserver-Datenbank &#40;einheitlicher SSRS-Modus&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
+ [Berichts Server-Datenbank &#40;einheitlicher SSRS-Modus&#41;](../report-server/report-server-database-ssrs-native-mode.md)   
  [Aktualisieren und Migrieren Reporting Services](upgrade-and-migrate-reporting-services.md)   
  [Reporting Services Abwärtskompatibilität](../reporting-services-backward-compatibility.md)   
  [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  

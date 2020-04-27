@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4379e0ff3ca534acd6ae130cbdf0f8acd2b6a81f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66009850"
 ---
 # <a name="remote-blob-store-rbs-sql-server"></a>Remote Blob Store (RBS) (SQL Server)
@@ -55,7 +55,7 @@ ms.locfileid: "66009850"
 ## <a name="rbs-security"></a>RSB-Sicherheit  
  Wenn Sie einen benutzerdefinierten Anbieter verwenden, um BLOBs außerhalb von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu speichern, stehen diese möglicherweise auch anderen Prozessen, die das[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherheitssystem umgehen, zur Verfügung. Stellen Sie sicher, dass die gespeicherten BLOBs anhand von Berechtigungen und Verschlüsselungsoptionen geschützt sind, die für das vom benutzerdefinierten Anbieter verwendete Speichermedium geeignet sind.  
   
-##  <a name="rbsresources"></a>RSB-Ressourcen  
+##  <a name="rbs-resources"></a><a name="rbsresources"></a>RSB-Ressourcen  
  **RBS-Dokumentation**  
  Die RBS-Dokumentation ist im Windows Installer-Paket enthalten. Wenn Sie die RBS-Dokumentation durchlesen möchten, ohne RBS zu installieren, können Sie die [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] -Version der Dokumentation auch [online in der MSDN Library](https://go.microsoft.com/fwlink/?LinkId=210192)anzeigen.  
   

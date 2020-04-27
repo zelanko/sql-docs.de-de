@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Debuggen von benutzerdefinierten Assemblys | Microsoft-Dokumentation'
+title: 'Gewusst wie: Debuggen von benutzerdefinierten Assemblys | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -15,13 +15,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 64a61e044c7ff6efe051eb316cb9f653f0993b68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265060"
 ---
-# <a name="how-to-debug-custom-assemblies"></a>Vorgehensweise: Debuggen von benutzerdefinierten Assemblys
+# <a name="how-to-debug-custom-assemblies"></a>Gewusst wie: Debuggen von benutzerdefinierten Assemblys
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Bietet mehrere Debuggingtools, mit denen Sie den benutzerdefinierten Assemblycode analysieren und Fehler darin suchen [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] können. Welches Tool dafür am besten geeignet ist, hängt von Ihrer Zielsetzung ab. In diesem Beispiel wird [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] verwendet.  
   
  Am besten können Sie benutzerdefinierte Assemblys für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] entwerfen, entwickeln und testen, wenn Sie eine Projektmappe erstellen, die sowohl Ihre Testberichte als auch Ihre benutzerdefinierte Assembly enthält.  
@@ -50,7 +50,7 @@ ms.locfileid: "63265060"
   
      Das Dialogfeld der **Eigenschaftenseite des Projekts** wird geöffnet.  
   
-9. Klicken Sie in einem C#-Projekt auf die Registerkarte **Erstellen** und in einem **-Projekt auf die Registerkarte **Kompilieren[!INCLUDE[vbprvb](../../includes/vbprvb-md.md)].  
+9. Klicken Sie in einem C#-Projekt auf die Registerkarte **Erstellen** und in einem [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]-Projekt auf die Registerkarte **Kompilieren**.  
   
 10. Geben Sie auf der Seite **Build**/**Compile (buildkompilierung** ) den Pfad zum Berichts-Designer Ordner ein. Standardmäßig ist dies C:\Programme\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE) im Textfeld **Ausgabepfad**. Damit wird eine aktualisierte Version der benutzerdefinierten Assembly erstellt und direkt im Berichts-Designer bereitgestellt, bevor der Bericht ausgeführt wird.  
   

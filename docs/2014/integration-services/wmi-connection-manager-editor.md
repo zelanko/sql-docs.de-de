@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 918c0ecd3a1ac1d0f1821ee8f19df291f9a5fa33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054482"
 ---
 # <a name="wmi-connection-manager-editor"></a>WMI-Verbindungs-Manager-Editor
@@ -52,7 +52,7 @@ ms.locfileid: "66054482"
  Testen Sie die Verbindungs-Manager-Einstellungen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Konzepte des WMI-Anbieters für die Konfigurations Verwaltung](../relational-databases/wmi-provider-configuration/wmi-provider-for-configuration-management.md)   
  [Konzepte des WMI-Anbieters für Serverereignisse](../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   

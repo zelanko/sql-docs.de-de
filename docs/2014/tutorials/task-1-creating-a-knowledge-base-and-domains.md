@@ -11,20 +11,20 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 79edd8566f2b3c9b586bc8c8815e1d9bc586fb05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481244"
 ---
-# <a name="task-1-creating-a-knowledge-base-and-domains"></a>Aufgabe 1: Erstellen einer Wissensdatenbank und von Domänen
+# <a name="task-1-creating-a-knowledge-base-and-domains"></a>Aufgabe 1: Erstellen von Wissensdatenbanken und Domänen
   In dieser Aufgabe erstellen Sie die Wissensdatenbank **Suppliers** und erstellen Domänen, die zum Bereinigen von Daten und zum Abgleichen von Daten verwendet werden, um Duplikate zu entfernen.  
   
 1.  Starten Sie **Data Quality-Client**. Klicken Sie auf **Start**, zeigen Sie auf **Alle Programme**, klicken Sie auf **Microsoft SQL Server 2012**und dann auf **Data Quality Services**, und klicken Sie dann auf **Data Quality-Client**.  
   
 2.  Wählen Sie im Dialogfeld **Verbindung mit Server herstellen** die Daten Bank Server Instanz aus, auf der DQS installiert ist, und klicken Sie auf **verbinden**.  
   
-     ![Dialog Feld "Verbindung mit Server herstellen"](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-01.jpg "Verbindung mit Server herstellen (Dialogfeld)")  
+     ![Dialog Feld "Verbindung mit Server herstellen"](../../2014/tutorials/media/et-creatingaknowledgebaseanddomains-01.jpg "Dialogfeld „Verbindung mit dem Server herstellen“")  
   
 3.  Klicken Sie auf der Startseite Data Quality-Client im Bereich **Wissensdatenbank-Verwaltung** auf **neue Wissensdatenbank**.  
   
@@ -63,6 +63,6 @@ ms.locfileid: "65481244"
     -   Zip  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 2: Manuelles Hinzufügen von Domänenwerten](../../2014/tutorials/task-2-adding-domain-values-manually.md)  
+ [Aufgabe 2: Manuelles Hinzufügen von Domänenwerten](../../2014/tutorials/task-2-adding-domain-values-manually.md)  
   
   

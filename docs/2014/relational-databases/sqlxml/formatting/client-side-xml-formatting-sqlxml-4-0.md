@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 89f1327a7672d7de5b480bf3b8757b0c85ff138f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66012320"
 ---
 # <a name="client-side-xml-formatting-sqlxml-40"></a>Clientseitige XML-Formatierung (SQLXML 4.0)
@@ -52,7 +52,7 @@ FROM   Person.Contact
   
  Die folgende Tabelle zeigt die Modi, die Sie mit clientseitigem FOR XML angeben können.  
   
-|Clientseitiger FOR XML-Modus|Comment|  
+|Clientseitiger FOR XML-Modus|Anmerkungen|  
 |-------------------------------|-------------|  
 |RAW|Erzeugt bei Festlegung in clientseitigem oder serverseitigem FOR XML identische Ergebnisse.|  
 |NESTED|Ist dem serverseitigen FOR XML AUTO-Modus ähnlich.|  
