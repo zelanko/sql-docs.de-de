@@ -29,10 +29,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2d1e804282459972b21303cf795a9c3a88ea93d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107040"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen
@@ -126,17 +126,15 @@ ms.locfileid: "66107040"
   
  Unter diesen Bedingungen stellt der Berichtsserver eine Verbindung zu einer Remotedatenquelle mithilfe des Kontos für die unbeaufsichtigte Ausführung her, das Sie vorher definieren müssen. Da der Berichtsserver die Verbindung zu einem Remoteserver nicht mit seinen Dienstanmeldeinformationen herstellt, müssen Sie ein Konto angeben, mit dem der Berichtsserver die Verbindung herstellen kann. Weitere Informationen zum Erstellen dieses Kontos finden Sie unter [Konfigurieren des unbeaufsichtigten Ausführungskontos (SSRS-Konfigurations-Manager)](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md).  
   
-##  <a name="DataSourceConfigurationConnections"></a>Datenquellen Konfiguration und Netzwerkverbindungen  
+##  <a name="data-source-configuration-and-network-connections"></a><a name="DataSourceConfigurationConnections"></a> Datenquellenkonfiguration und Netzwerkverbindungen  
  Die folgende Tabelle zeigt, wie bei bestimmten Kombinationen von Anmeldeinformationstypen und Datenverarbeitungserweiterungen Verbindungen hergestellt werden. Wenn Sie eine benutzerdefinierte Datenverarbeitungserweiterung verwenden, lesen Sie unter [Angeben von Verbindungen für benutzerdefinierte Datenverarbeitungserweiterungen](specify-connections-for-custom-data-processing-extensions.md)nach.  
   
-|**Typ**|**Kontext für Netzwerkverbindung**|**Datenquellen Typen**<br /><br /> **(SQL Server, Oracle, ODBC, OLE DB, Analysis Services, XML, SAP NetWeaver BI, Hyperion ESS Base)**|  
+|**Typ**|**Kontext für Netzwerkverbindung**|**Datenquellentypen**<br /><br /> **(SQL Server, Oracle, ODBC, OLE DB, Analysis Services, XML, SAP NetWeaver BI, Hyperion Essbase)**|  
 |--------------|----------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|  
 |Integrierte Sicherheit|Annehmen der Identität des aktuellen Benutzers|Stellen Sie für alle Datenquellentypen die Verbindung mithilfe des aktuellen Benutzerkontos her.|  
 |Windows-Anmeldeinformationen|Annehmen der Identität des angegebenen Benutzers|Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Oracle, ODBC und OLE DB: Herstellen von Verbindungen mithilfe des Benutzerkontos, dessen Identität angenommen wurde.|  
-|Datenbank-Anmeldeinformationen|Nehmen Sie die Identität des Kontos für die unbeaufsichtigte Ausführung oder des Dienstkontos an.<br /><br /> (Reporting Services entfernt die Administratorberechtigungen, wenn die Verbindungsanforderung mit der Dienstidentität gesendet wird.)|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Oracle, ODBC und OLE DB:<br /><br /> Fügen Sie den Benutzernamen und das Kennwort an die Verbindungszeichenfolge an.<br /><br /> Für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> Die Verbindung wird nur bei Verwendung des TCP/IP-Protokolls hergestellt, andernfalls wird ein Fehler erzeugt.<br /><br /> Für XML:<br /><br /> Lassen Sie bei Verwendung von Datenbank-Anmeldeinformationen die Verbindung auf dem Berichtsserver fehlschlagen.|  
-|Keine|Nehmen Sie die Identität des Kontos für die unbeaufsichtigte Ausführung an.|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Oracle, ODBC und OLE DB:<br /><br /> Verwenden Sie die in der Verbindungszeichenfolge definierten Anmeldeinformationen. Wenn das Konto für die unbeaufsichtigte Ausführung nicht definiert ist, schlägt die Verbindung auf dem Berichtsserver fehl.<br /><br /> Für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> Lassen Sie die Verbindung immer fehlschlagen, wenn keine Anmeldeinformationen angegeben werden, und zwar auch dann, wenn das Konto für die unbeaufsichtigte Ausführung definiert ist.<br /><br /> Für XML:<br /><br /> Stellen Sie die Verbindung als anonymer Benutzer her, wenn das Konto für die unbeaufsichtigte Ausführung definiert ist; lassen Sie andernfalls die Verbindung fehlschlagen.|  
+|Datenbank-Anmeldeinformationen|Nehmen Sie die Identität des Kontos für die unbeaufsichtigte Ausführung oder des Dienstkontos an.<br /><br /> (Reporting Services entfernt die Administratorberechtigungen, wenn die Verbindungsanforderung mit der Dienstidentität gesendet wird.)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Oracle, ODBC und OLE DB:<br /><br /> Fügen Sie den Benutzernamen und das Kennwort an die Verbindungszeichenfolge an.<br /><br /> Für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> Die Verbindung wird nur bei Verwendung des TCP/IP-Protokolls hergestellt, andernfalls wird ein Fehler erzeugt.<br /><br /> Für XML:<br /><br /> Lassen Sie bei Verwendung von Datenbank-Anmeldeinformationen die Verbindung auf dem Berichtsserver fehlschlagen.|  
+|Keine|Nehmen Sie die Identität des Kontos für die unbeaufsichtigte Ausführung an.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: Oracle, ODBC und OLE DB:<br /><br /> Verwenden Sie die in der Verbindungszeichenfolge definierten Anmeldeinformationen. Wenn das Konto für die unbeaufsichtigte Ausführung nicht definiert ist, schlägt die Verbindung auf dem Berichtsserver fehl.<br /><br /> Für [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:<br /><br /> Lassen Sie die Verbindung immer fehlschlagen, wenn keine Anmeldeinformationen angegeben werden, und zwar auch dann, wenn das Konto für die unbeaufsichtigte Ausführung definiert ist.<br /><br /> Für XML:<br /><br /> Stellen Sie die Verbindung als anonymer Benutzer her, wenn das Konto für die unbeaufsichtigte Ausführung definiert ist; lassen Sie andernfalls die Verbindung fehlschlagen.|  
   
 ## <a name="setting-credentials-programmatically"></a>Programmgesteuertes Festlegen von Anmeldeinformationen  
  Sie können Anmeldeinformationen im Code festlegen, um den Zugriff auf Berichte und den Berichtsserver zu steuern. Weitere Informationen finden Sie unter [Data Sources and Connection Methods](../report-server-web-service/methods/data-sources-and-connection-methods.md).  
@@ -144,9 +142,9 @@ ms.locfileid: "66107040"
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenquellen, die von Reporting Services &#40;SSRS unterstützt werden&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)   
  [Datenverbindungen, Datenquellen und Verbindungs Zeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)   
- [Verwalten von Berichtsdatenquellen](../../integration-services/connection-manager/data-sources.md)   
+ [Verwalten von Berichtsdaten Quellen](../../integration-services/connection-manager/data-sources.md)   
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md)   
  [Erstellen, löschen oder Ändern einer freigegebenen Datenquelle &#40;Berichts-Manager&#41;](../create-delete-or-modify-a-shared-data-source-report-manager.md)   
- [Konfigurieren von Datenquellen Eigenschaften für einen Bericht &#40;Berichts-Manager&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
+ [Konfigurieren von Datenquelleneigenschaften für einen Bericht &#40;Berichts-Manager&#41;](configure-data-source-properties-for-a-report-report-manager.md)  
   
   

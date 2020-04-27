@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e21b1c9e48dcccf8b72a60fbd381aac3d878c0dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107628"
 ---
 # <a name="saving-reports-report-builder"></a>Speichern von Berichten (Berichts-Generator)
@@ -30,7 +30,7 @@ ms.locfileid: "66107628"
   
  Weitere Informationen zum Anzeigen und Verwalten von Berichten direkt auf dem Berichtsserver finden Sie unter [Suchen, Anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS&#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md) und [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](../report-server/reporting-services-report-server-native-mode.md) in der -[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Onlinedokumentation](https://go.microsoft.com/fwlink/?LinkId=154888) auf msdn.microsoft.com.  
   
-##  <a name="SavingReportDefinitions"></a>Speichern von Berichts Definitionen  
+##  <a name="saving-report-definitions"></a><a name="SavingReportDefinitions"></a>Speichern von Berichts Definitionen  
  Auch wenn Sie Berichte auf dem Computer speichern können, hat das Speichern der Berichte auf einem Berichtsserver viele Vorteile.  
   
  Das Speichern eines Berichts auf einem Berichtsserver hat die folgenden Vorteile:  
@@ -51,22 +51,22 @@ ms.locfileid: "66107628"
   
 
   
-##  <a name="ExportingAndSavingReports"></a> Exportieren und Speichern von Berichten  
+##  <a name="exporting-and-saving-reports"></a><a name="ExportingAndSavingReports"></a> Exportieren und Speichern von Berichten  
  Falls Sie nur wenige Berichte archivieren müssen, sollten Sie einen Bericht exportieren und als Datei speichern. Nachdem Sie einen Bericht in eine Anwendung exportiert haben (z. B. PDF oder Excel), können Sie ihn als Datei speichern und in einem geschützten freigegebenen Verzeichnis im Netzwerk platzieren. Oder Sie laden eine gespeicherte PDF- oder Excel-Datei als Ressourcenelement hoch, falls Sie alle Kopien eines Berichts unabhängig vom Format in der Berichtsserver-Datenbank speichern möchten. Weitere Informationen zum Exportieren eines Berichts finden Sie unter [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](export-reports-report-builder-and-ssrs.md) und [Hochladen einer Datei oder eines Berichts &#40;Berichts-Manager&#41;](../reports/upload-a-file-or-report-report-manager.md).  
   
 
   
-##  <a name="UsingFileShareDelivery"></a> Verwenden der Dateifreigabeübermittlung  
+##  <a name="using-file-share-delivery"></a><a name="UsingFileShareDelivery"></a> Verwenden der Dateifreigabeübermittlung  
  Falls Sie viele Berichte archivieren müssen, erstellen Sie ein Abonnement, das den Bericht direkt an das Dateisystem übermittelt. Bei dieser Vorgehensweise müssen Sie für jeden Bericht ein Abonnement erstellen, einen freigegebenen Ordner zum Speichern der Berichte auswählen und einen Zeitplan definieren, der bestimmt, wann die Datei erstellt wird. Sobald Sie ein Abonnement definiert haben, kann der Berichtsserver mithilfe des bereitgestellten Zeitplanes den Bericht unbeaufsichtigt ausführen und Berichtsdateien zum Archiv hinzufügen. Darüber hinaus können Sie Zeitpläne für die einmalige Verwendung erstellen, falls Sie Berichte gelegentlich archivieren möchten. Weitere Informationen über Abonnements und die Dateifreigabeübermittlung finden Sie unter "Dateiübermittlung in Reporting Services" in der [Reporting Services-Dokumentation](https://go.microsoft.com/fwlink/?linkid=121312) in der SQL Server-Onlinedokumentation.  
   
 
   
-##  <a name="UsingReportHistory"></a> Verwenden des Berichtsverlaufs  
+##  <a name="using-report-history"></a><a name="UsingReportHistory"></a> Verwenden des Berichtsverlaufs  
  Mit der Funktion zum Berichtsverlauf können ebenfalls Verlaufskopien erstellt werden. Anschließend können Sie die Berichtsserver-Datenbank sichern und die Sicherungskopie für die spätere Verwendung an einem sicheren Ort aufbewahren. Alle Berichtsverläufe (zusammen mit Berichten, freigegebenen Datenquellenelementen, Ordnern, Abonnements und freigegebenen Zeitplänen) werden in der Berichtsserver-Datenbank gespeichert. Sie können eine Sicherungskopie erstellen, um eine permanente Kopie des Berichtsverlaufs und der Metadaten zu verwalten, wie z. B. Abonnementinformationen, die die Empfänger eines Berichts bezeichnen. Weitere Informationen finden Sie unter "Verwalten des Berichtsverlaufs" in der [Reporting Services-Dokumentation](https://go.microsoft.com/fwlink/?linkid=121312) in der SQL Server-Onlinedokumentation.  
   
 
   
-##  <a name="HowTo"></a> Themen zur Vorgehensweise  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Themen zur Vorgehensweise  
   
 -   [Speichern von Berichten auf einem Berichtsserver &#40;Berichts-Generator&#41;](save-reports-to-a-report-server-report-builder.md)  
   
@@ -77,9 +77,9 @@ ms.locfileid: "66107628"
 
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Berichte, Berichtsteile und Berichtsdefinitionen &#40;Berichts-Generator und SSRS&#41;](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [Berichte, Berichts Teile und Berichts Definitionen &#40;Berichts-Generator und SSRS&#41;](../report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
  [Unterstützung für Installation, Deinstallation und Berichts-Generator](../install-uninstall-and-report-builder-support.md)   
- [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
+ [Suchen, anzeigen und Verwalten von Berichten &#40;Berichts-Generator und SSRS &#41;](finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](export-reports-report-builder-and-ssrs.md)   
  [Drucken von Berichten (Berichts-Generator und SSRS)](print-reports-report-builder-and-ssrs.md)  
   

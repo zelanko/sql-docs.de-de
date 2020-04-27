@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1a57fe5449deeb4445dff3853335b19a62dbc589
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265141"
 ---
 # <a name="creating-a-custom-report-item-design-time-component"></a>Erstellen einer Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement
@@ -86,7 +86,7 @@ public override void InitializeNewComponent()
 ```  
   
 ### <a name="modifying-component-properties"></a>Ändern von Komponenteneigenschaften  
- Sie können `CustomData`-Eigenschaften auf verschiedene Arten in der Entwurfsumgebung ändern. Mit dem <xref:System.ComponentModel.BrowsableAttribute>-Eigenschaftenbrowser können Sie jede Eigenschaft ändern, die von der Entwurfszeitkomponente verfügbar gemacht wurde und die mit dem [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-Attribut gekennzeichnet sind. Außerdem können Sie Eigenschaften ändern, indem Sie Elemente auf die Entwurfsoberfläche des benutzerdefinierten Berichtselements ziehen oder mit der rechten Maustaste auf die Steuerung in der Entwurfsumgebung klicken und im Kontextmenü **Eigenschaften** auswählen, um ein benutzerdefiniertes Eigenschaftenfenster aufzurufen.  
+ Sie können `CustomData`-Eigenschaften auf verschiedene Arten in der Entwurfsumgebung ändern. Mit dem [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-Eigenschaftenbrowser können Sie jede Eigenschaft ändern, die von der Entwurfszeitkomponente verfügbar gemacht wurde und die mit dem <xref:System.ComponentModel.BrowsableAttribute>-Attribut gekennzeichnet sind. Außerdem können Sie Eigenschaften ändern, indem Sie Elemente auf die Entwurfsoberfläche des benutzerdefinierten Berichtselements ziehen oder mit der rechten Maustaste auf die Steuerung in der Entwurfsumgebung klicken und im Kontextmenü **Eigenschaften** auswählen, um ein benutzerdefiniertes Eigenschaftenfenster aufzurufen.  
   
  Im folgenden Codebeispiel wird eine `Microsoft.ReportDesigner.CustomReportItemDesigner.CustomData`-Eigenschaft gezeigt, auf die das <xref:System.ComponentModel.BrowsableAttribute>-Attribut angewendet wird:  
   
@@ -196,7 +196,7 @@ private void OnProportionalScaling(object sender, EventArgs e)
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Architektur des benutzerdefinierten Berichts Elements](custom-report-item-architecture.md)   
- [Erstellen einer Laufzeitkomponente für ein benutzerdefiniertes Berichtselement](creating-a-custom-report-item-run-time-component.md)   
+ [Erstellen einer Laufzeitkomponente für ein benutzerdefiniertes Berichts Element](creating-a-custom-report-item-run-time-component.md)   
  [Klassenbibliotheken für benutzerdefinierte Berichts Elemente](custom-report-item-class-libraries.md)   
  [Vorgehensweise: Bereitstellen eines benutzerdefinierten Berichtselements](how-to-deploy-a-custom-report-item.md)  
   

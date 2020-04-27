@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f372bd5bcc538d861ddd556b3bb420c181d59717
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104649"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Zellen, Zeilen und Spalten des Tablix-Datenbereichs (Berichts-Generator und SSRS)
@@ -38,12 +38,12 @@ ms.locfileid: "66104649"
 ### <a name="row-and-column-handles"></a>Zeilen- und Spaltenhandles  
  Wenn Sie einen Tablix-Datenbereich auswählen, geben die Grafiken der Zeilen- und Spaltenhandles den Zweck der jeweiligen Zeile bzw. Spalte an. Handles geben Zeilen und Spalten an, die sich in einer Gruppe oder außerhalb einer Gruppe befinden. In der folgenden Tabelle wird eine Vielzahl angezeigter Handles aufgelistet.  
   
-|Symbol|BESCHREIBUNG|  
+|Symbol|Beschreibung|  
 |----------|-----------------|  
-|![Zeilenziehpunkt mit 3 parallelen Linien für Detailzeile](../media/rs-icontablix-detailsrow.gif "Zeilenziehpunkt mit 3 parallelen Linien für Detailzeile")|Nur die Detailgruppe in der Zeilengruppenhierarchie|  
-|![Zeilenziehpunkt mit Detailzeile und einer äußeren Gruppe](../media/rs-icontablix-groupwithdetails.gif "Zeilenziehpunkt mit Detailzeile und einer äußeren Gruppe")|Eine äußere Gruppe und die untergeordnete Detailgruppe|  
-|![Zwei parallele Klammern, die geschachtelte Gruppen darstellen](../media/rs-icontablix-nestedgroupnodetails.gif "Zwei parallele Klammern, die geschachtelte Gruppen darstellen")|Eine äußere Gruppe, eine innere Gruppe, keine Detailgruppe|  
-|![2 eckige Klammern & 3 gestapelte Linien für Details zu den &.](../media/rs-icontablix-nestedgroupwithdetails.gif "2 Klammern & 3 gestapelte Linien für Schachtelung & Details")|Eine äußere Gruppe, eine innere Gruppe und die untergeordnete Detailgruppe|  
+|![Zeilenhandle mit 3 parallelen Linien für Detailzeile](../media/rs-icontablix-detailsrow.gif "Zeilenhandle mit 3 parallelen Linien für Detailzeile")|Nur die Detailgruppe in der Zeilengruppenhierarchie|  
+|![Zeilenhandle für die Detailzeile und eine äußeren Gruppe](../media/rs-icontablix-groupwithdetails.gif "Zeilenhandle für die Detailzeile und eine äußeren Gruppe")|Eine äußere Gruppe und die untergeordnete Detailgruppe|  
+|![Zwei gleiche Klammern, die für geschachtelte Gruppen stehen](../media/rs-icontablix-nestedgroupnodetails.gif "Zwei gleiche Klammern, die für geschachtelte Gruppen stehen")|Eine äußere Gruppe, eine innere Gruppe, keine Detailgruppe|  
+|![2 Klammern und 3 gestapelte Linien, die für Schachtelung und Details stehen](../media/rs-icontablix-nestedgroupwithdetails.gif "2 Klammern und 3 gestapelte Linien, die für Schachtelung und Details stehen")|Eine äußere Gruppe, eine innere Gruppe und die untergeordnete Detailgruppe|  
 |![Eine äußere Gruppe mit Fußzeile, eine innere Gruppe](../media/rs-icontablix-nestedgroupwithparentfooter.gif "Eine äußere Gruppe mit Fußzeile, eine innere Gruppe")|Eine äußere Gruppe mit einer Fußzeile für Gesamtergebnisse und eine innere Gruppe|  
 |![Klammer für äußere Gruppe, Klammer für innere Gruppe, Details](../media/rs-icontablix-nestedgroupwithdetailsandtotals.gif "Klammer für äußere Gruppe, Klammer für innere Gruppe, Details")|Eine äußere Gruppe mit einer Fußzeile für Gesamtergebnisse, eine innere Gruppe mit einer Fußzeile für Gesamtergebnisse und eine Detailzeile|  
 |![Übergeordnete Kopf- und Fußzeile und untergeordnete Gruppe](../media/rs-icontablix-nestedgroupwithparentheaderandfooter.gif "Übergeordnete Kopf- und Fußzeile und untergeordnete Gruppe")|Eine äußere Gruppe mit einer Kopfzeile für Bezeichnungen und einer Fußzeile für Gesamtergebnisse, eine innere Gruppe, keine Detailgruppe|  

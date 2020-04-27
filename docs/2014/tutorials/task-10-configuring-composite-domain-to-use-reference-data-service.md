@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 525e0286d8d82f501981c9e936caca581886b9b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481231"
 ---
-# <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>Aufgabe 10: Konfigurieren der Verbunddomäne, um Reference Data Service zu verwenden
+# <a name="task-10-configuring-composite-domain-to-use-reference-data-service"></a>Aufgabe 10: Konfigurieren der Verbunddomäne für die Verwendung von Verweisdatendiensten
   In dieser Aufgabe konfigurieren Sie die Verbund Domäne für die **Adressvalidierung** so, dass Sie den Dienst **Melissa-Daten Adressüberprüfung** verwendet. Zur Laufzeit während der Bereinigungsaktivität gibt DQS die Werte der Domänen in der Domäne "Address Validation" zur Bereinigung an den Dienst weiter. Weitere Informationen finden [Sie unterzuordnen einer Domäne/Verbund Domäne zu Verweis Daten](https://msdn.microsoft.com/library/hh213030.aspx) .  
   
 1.  Klicken Sie auf der Hauptseite des **DQS-Clients**unter **zuletzt verwendete Wissensdatenbanken** auf **Suppliers (Domänen Verwaltung)** , um die Seite **Domänen Verwaltung** zu starten.  
@@ -49,6 +49,6 @@ ms.locfileid: "65481231"
 9. Klicken Sie auf **OK** , um das Dialogfeld zu schließen.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 11: Veröffentlichen der Wissensdatenbank](../../2014/tutorials/task-11-publishing-the-knowledge-base.md)  
+ [Aufgabe 11: Veröffentlichen der Wissensdatenbank](../../2014/tutorials/task-11-publishing-the-knowledge-base.md)  
   
   

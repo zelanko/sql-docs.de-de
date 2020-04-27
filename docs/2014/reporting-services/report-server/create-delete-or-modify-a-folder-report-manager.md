@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef4aa341c8f89afbd099cd26fc8352425e6ac8ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103917"
 ---
 # <a name="create-delete-or-modify-a-folder-report-manager"></a>Erstellen, Löschen oder Ändern eines Ordners (Berichts-Manager)
@@ -76,6 +76,6 @@ ms.locfileid: "66103917"
 ## <a name="see-also"></a>Weitere Informationen  
  [Die Seite "neuer Ordner" &#40;Berichts-Manager&#41;](../new-folder-page-report-manager.md)   
  [Die Inhaltsseite &#40;Berichts-Manager&#41;](../contents-page-report-manager.md)   
- [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS )](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
+ [Suchen, Anzeigen und Verwalten von Berichten (Berichts-Generator und SSRS)](../report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

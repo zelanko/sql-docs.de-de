@@ -11,18 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 4987e3497b7d52ff11f8f52bc403105340f7f508
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63301371"
 ---
 # <a name="modifying-and-processing-the-market-basket-model-intermediate-data-mining-tutorial"></a>Ändern und Verarbeiten des Market Basket-Modells (Data Mining-Lernprogramm für Fortgeschrittene)
   Bevor Sie das von Ihnen erstellte Association-Miningmodell verarbeiten, müssen Sie die Standardwerte von zwei der Parameter ändern: *Support* und *Probability*.  
   
--   *Unterstützung* definiert den Prozentsatz der Fälle, in denen eine Regel vorhanden sein muss, bevor Sie als gültig eingestuft wird. Geben Sie an, dass bei mindestens 1 Prozent der Fälle eine Regel vorhanden sein muss.  
+-   *Support* definiert den Prozentsatz von Fällen, in denen eine Regel vorhanden sein muss, um als gültig betrachtet zu werden. Geben Sie an, dass bei mindestens 1 Prozent der Fälle eine Regel vorhanden sein muss.  
   
--   *Wahrscheinlichkeit* definiert, wie wahrscheinlich eine Zuordnung sein muss, bevor Sie als gültig eingestuft wird. Berücksichtigen Sie alle Zuordnungen mit einer Wahrscheinlichkeit von mindestens 10 Prozent.  
+-   *Probability* definiert, wie wahrscheinlich eine Zuordnung sein muss, um als gültig betrachtet zu werden. Berücksichtigen Sie alle Zuordnungen mit einer Wahrscheinlichkeit von mindestens 10 Prozent.  
   
  Weitere Informationen zu den Auswirkungen der Erhöhung oder Verringerung der Unterstützung und der Wahrscheinlichkeit finden Sie unter [Technische Referenz für den Microsoft Association-Algorithmus](../../2014/analysis-services/data-mining/microsoft-association-algorithm-technical-reference.md).  
   
@@ -44,7 +44,7 @@ ms.locfileid: "63301371"
   
 ### <a name="to-process-the-mining-model"></a>So wird das Miningmodell verarbeitet  
   
-1.  Klicken Sie im Menü **Miningmodell** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]auf **Miningstruktur und alle Modelle verarbeiten**.  
+1.  Wählen Sie im Menü **Mining Modell** von die Option [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] **Mining Struktur und alle Modelle verarbeiten aus.**  
   
 2.  Klicken Sie in der Meldung mit der Frage, ob Sie das Projekt erstellen und bereitstellen möchten, auf **Ja**.  
   
@@ -62,6 +62,6 @@ ms.locfileid: "63301371"
  [Erkunden des Market Basket-Modells &#40;Data Mining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/exploring-the-market-basket-models-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verarbeitungsanforderungen und Überlegungen &#40;Data Mining-&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
+ [Anforderungen und Überlegungen zur Verarbeitung &#40;Data Mining&#41;](../../2014/analysis-services/data-mining/processing-requirements-and-considerations-data-mining.md)  
   
   

@@ -14,16 +14,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a5c71344fe45df4265db72e9fd6dc41ac13bd98
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108292"
 ---
 # <a name="map-viewport-properties-dialog-box-center-and-zoom"></a>Eigenschaften des Kartenviewports (Dialogfeld), Zentrieren und zoomen
   Wählen Sie **Zentrieren und zoomen** aus, um im Dialogfeld **Viewporteigenschaften der Karte** die Mittelpunktsicht und den Zoomfaktor für eine Karte festzulegen. Nachdem Sie eine Kartendatenquelle und die Begrenzungen der Karte angegeben haben, die Sie in den Bericht einschließen möchten, können Sie den Ansichtmittelpunkt und den Zoomfaktor angeben, um die Kartenanzeige weiter zu steuern. Die Optionen hängen von der Methode ab, die Sie verwenden, um Werte für Mittelpunkt und Zoom anzugeben. Klicken Sie auf die Schaltfläche **Ausdruck** (*fx*), um einen Ausdruck zu bearbeiten, der den Wert der Option festlegt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Festlegen eines Ansichtmittelpunktes und einer Zoomstufe**  
  Wählen Sie diese Option aus, um benutzerdefinierte Werte für den Ansichtmittelpunkt und die Zoomstufe anzugeben.  
   

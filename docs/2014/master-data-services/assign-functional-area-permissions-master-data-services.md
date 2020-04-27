@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5df56444fd5a7835a6ac4f13493a4aa33e4b42ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480102"
 ---
 # <a name="assign-functional-area-permissions-master-data-services"></a>Zuweisen von Berechtigungen für Funktionsbereiche (Master Data Services)
@@ -46,10 +46,10 @@ ms.locfileid: "65480102"
   
 ## <a name="next-steps"></a>Nächste Schritte  
   
--   [Zuweisen von Berechtigungen für Modell Objekte &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)  
+-   [Zuweisen von Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](assign-model-object-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen Sie einen Modell Administrator &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)   
- [Sicherheits &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
+ [Sicherheit &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
   
   

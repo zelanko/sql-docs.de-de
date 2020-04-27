@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8810377a7e676d4376fca3cc52e73d6c507dbd21
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63255429"
 ---
 # <a name="view-and-resolve-data-conflicts-for-merge-publications-sql-server-management-studio"></a>Anzeigen und Lösen von Datenkonflikten für Mergeveröffentlichungen (SQL Server Management Studio)
@@ -77,6 +77,6 @@ ms.locfileid: "63255429"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erweiterte Konflikterkennung und-Lösung bei der Mergereplikation](merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [Angeben eines mergeartikelresolvers](publish/specify-a-merge-article-resolver.md)  
+ [Angeben eines Mergeartikelkonfliktlösers](publish/specify-a-merge-article-resolver.md)  
   
   

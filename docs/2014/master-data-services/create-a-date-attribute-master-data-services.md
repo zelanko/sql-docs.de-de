@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1284a15e16465962e2ce2c286bfb2897bb297622
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483352"
 ---
 # <a name="create-a-date-attribute-master-data-services"></a>Erstellen eines Datenattributs (Master Data Services)
@@ -29,7 +29,7 @@ ms.locfileid: "65483352"
 ## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
--   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
+-   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **System Verwaltung** zuzugreifen.  
   
 -   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
@@ -57,7 +57,7 @@ ms.locfileid: "65483352"
   
 7.  Aktivieren Sie die Option **Freiform** auf der Seite **Attribut hinzufügen** .  
   
-8.  Geben Sie im Feld **Name** einen Namen für das Attribut ein. Eine Liste von Wörtern, die nicht als Attributnamen verwendet werden sollten, finden Sie unter [Reservierte Wörter &#40;Master Data Services&#41;](../../2014/master-data-services/reserved-words-master-data-services.md).  
+8.  Geben Sie im Feld **Name** einen Namen für das Attribut ein. Eine Liste von Wörtern, die nicht als Attributnamen verwendet werden sollten, finden Sie unter [reservierte Wörter &#40;Master Data Services&#41;](../../2014/master-data-services/reserved-words-master-data-services.md).  
   
 9. Geben Sie im Feld **Pixelbreite anzeigen** die Breite der Attributspalte ein, die im **Explorerraster** angezeigt werden soll.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "65483352"
 |Seq|19|  
 |List Option|dd/MM/yyyy hh:mm:ss tt|  
 |Option ID|19|  
-|IsVisible|1|  
+|Sichtbar|1|  
 |Group_ID|3|  
   
  Nachdem Sie in die Tabelle „mdm.tblList“ eine Zeile mit den oben angegebenen Werten eingegeben haben, steht im Eingabeformat-Listenfeld die Maske „dd/MM/yyyy hh:mm:ss tt“ zur Verfügung. Anschließend können Sie diese Maske auswählen, um das Datum und die Uhrzeit in einer datetime-Attributspalte einer Entität im MDS-Explorer anzuzeigen.  
@@ -92,6 +92,6 @@ ms.locfileid: "65483352"
  [Attribute &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)   
  [Ändern eines Attribut namens &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)   
  [Erstellen eines domänenbasierten Attributs &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)   
- [Erstellen Sie ein Datei Attribut &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
+ [Erstellen eines Dateiattributs &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)  
   
   

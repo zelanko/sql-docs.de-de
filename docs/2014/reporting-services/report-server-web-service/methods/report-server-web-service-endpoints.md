@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 976e8452e50d293fb8125bfbdde1bd17a8f3be07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63283489"
 ---
 # <a name="report-server-web-service-endpoints"></a>Report Server-Webdienst-Endpunkte
@@ -63,7 +63,7 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportExecution2005.asmx?
 ## <a name="sharepoint-proxy-endpoints"></a>SharePoint-Proxyendpunkte  
  Wenn ein Berichtsserver für den integrierten SharePoint-Modus konfiguriert und das [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Add-In installiert ist, wird ein Satz von Proxyendpunkten auf dem SharePoint-Server installiert. Bei den Proxyendpunkten handelt es sich um die primäre API für das Entwickeln von Berichtslösungen, wenn ein Berichtsserver für den integrierten SharePoint-Modus konfiguriert ist. Wenn Sie für die Proxyendpunkte entwickeln, verwaltet das [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Add-In den Austausch der Anmeldeinformationen zwischen dem SharePoint-Server und dem Berichtsserver im Authentifizierungsmodus Vertrauenswürdiges Konto. Wenn Sie für die Berichtsserverendpunkte entwickeln, muss die aufrufende Anwendung den Austausch der Anmeldeinformationen im Authentifizierungsmodus Vertrauenswürdiges Konto behandeln. In der folgenden Tabelle sind die Endpunkte aufgeführt, die mit dem [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Add-In installiert werden.  
   
-|Proxyendpunkt|BESCHREIBUNG|  
+|Proxyendpunkt|Beschreibung|  
 |--------------------|-----------------|  
 |<xref:ReportService2006>|Stellt die APIs für das Verwalten eines Berichtsservers bereit, der für den integrierten SharePoint-Modus konfiguriert ist. **Hinweis:**  Dieser Endpunkt ist in [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]veraltet.|  
 |<xref:ReportService2010>|Stellt die APIs für das Verwalten eines Berichtsservers bereit, der entweder für den einheitlichen Modus oder für den integrierten SharePoint-Modus konfiguriert ist.|  
@@ -85,6 +85,6 @@ http://<Server Name>/<Site Name>/_vti_bin/ReportServer/ReportServiceAuthenticati
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Building Applications Using the Web Service and the .NET Framework (Erstellen von Anwendungen mit dem Webdienst und .NET Framework)](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
+ [Erstellen von Anwendungen mit dem Webdienst und .NET Framework](../net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
   
   

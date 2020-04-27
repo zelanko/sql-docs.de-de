@@ -11,14 +11,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 271be9656aa7fabc1edbece16f18ae7a60ba3978
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312617"
 ---
 # <a name="set-the-startup-options"></a>Festlegen der Startoptionen
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]kann so konfiguriert werden, dass die Entwurfs Oberfläche für die von Ihnen bevorzugte [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] Konfiguration geöffnet wird, wenn gestartet wird. Wenn Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] so einstellen, dass es mit der gewünschten Konfiguration geöffnet wird, können Sie Zeit sparen.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] kann so konfiguriert werden, dass die Entwurfsoberfläche beim Starten von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] mit der von Ihnen bevorzugten Konfiguration geöffnet wird. Wenn Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] so einstellen, dass es mit der gewünschten Konfiguration geöffnet wird, können Sie Zeit sparen.  
   
 ## <a name="configuring-startup-options"></a>Konfigurieren von Startoptionen  
   
@@ -30,11 +30,11 @@ ms.locfileid: "63312617"
   
     -   **Öffnen Sie Objekt-Explorer**. Dies ist die Standardoption.  
   
-    -   **Öffnen Sie ein neues Abfragefenster**.  
+    -   **Neues Abfragefenster öffnen**.  
   
-    -   **Öffnen Sie Objekt-Explorer und eine neue Abfrage**.  
+    -   **Objekt-Explorer und neue Abfrage öffnen**.  
   
-    -   **Öffnen Sie Objekt-Explorer und Aktivitäts Monitor**.  
+    -   **Objekt-Explorer und Aktivitätsmonitor öffnen**.  
   
     -   **Leere Umgebung öffnen**.  
   

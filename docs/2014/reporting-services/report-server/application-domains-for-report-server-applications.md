@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b3d7d2545cf22d17e947e29c7fe9963bc8ffa616
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104229"
 ---
 # <a name="application-domains-for-report-server-applications"></a>Anwendungsdomänen für Berichtsserveranwendungen
@@ -32,7 +32,7 @@ ms.locfileid: "66104229"
   
 -   Konfigurationsänderungen des Berichtsservers.  
   
--   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]Konfigurationsänderungen.  
+-   [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] -Konfigurationsänderungen.  
   
 -   Fehler bei der Speicherbelegung.  
   
@@ -40,16 +40,10 @@ ms.locfileid: "66104229"
   
 |Ereignis|Ereignisbeschreibung|Anwendungsbereich|Konfigurierbar|Beschreibung des Wiederverwendungsvorgangs|  
 |-----------|-----------------------|----------------|------------------|-----------------------------------|  
-|Geplante Wiederverwendungsvorgänge, die in vordefinierten Intervallen auftreten|Standardmäßig werden Anwendungsdomänen alle 12 Stunden wiederverwendet.<br /><br /> Geplante Wiederverwendungsvorgänge finden in [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] -Anwendungen, die dem Gesamtprozesszustand dienen, sehr häufig statt.|Report Server-Webdienst<br /><br /> Berichts-Manager<br /><br /> Hintergrundverarbeitungsanwendung|Ja. Das Wiederverwendungsintervall wird durch die Konfigurationseinstellung `RecycleTime` in der Datei RSReportServer.config festgelegt.<br /><br /> 
-  `MaxAppDomainUnloadTime` legt die Wartezeit fest, während der die Hintergrundverarbeitung abgeschlossen werden kann.|
-  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] verwaltet den Wiederverwendungsvorgang für den Webdienst und den Berichts-Manager.<br /><br /> Für die Hintergrundverarbeitungsanwendung erstellt der Berichtsserver eine neue Anwendungsdomäne für neue Aufträge, die durch Zeitpläne initialisiert werden. Bereits ausgeführte Aufträge können in der aktuellen Anwendungsdomäne zu Ende verarbeitet werden, bis die Wartezeit abläuft.|  
-|Konfigurationsänderungen des Berichtsservers|
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet Anwendungsdomänen als Reaktion auf Änderungen in der Datei RSReportServer.config wieder.|Report Server-Webdienst<br /><br /> Berichts-Manager<br /><br /> Hintergrundverarbeitungsanwendung|Nein.|Sie können das Auftreten von Wiederverwendungsvorgängen nicht verhindern. Wiederverwendungsvorgänge, die als Reaktion auf Änderungen der Konfigurationseinstellungen auftreten, werden jedoch auf die gleiche Weise behandelt wie geplante Wiederverwendungsvorgänge. Für neue Anforderungen werden neue Anwendungsdomänen erstellt, während aktuelle Anforderungen und Aufträge in der aktuellen Anwendungsdomäne abgeschlossen werden.|  
-|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]Konfigurationsänderungen|
-  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] verwendet Anwendungsdomänen dann wieder, wenn Änderungen der überwachten Dateien auftreten (z.B. „machine.config“- und „Web.config“-Dateien sowie [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] -Programmdateien).|Report Server-Webdienst<br /><br /> Berichts-Manager|Nein.|
-  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] verwaltet den Vorgang.<br /><br /> Wiederverwendungsvorgänge, die von [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] initiiert werden, beeinflussen die Hintergrundverarbeitungs-Anwendungsdomäne nicht.|  
-|Ungenügender Arbeitsspeicher und Fehler bei der Speicherbelegung|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR verwendet Anwendungsdomänen sofort wieder, wenn es zu Fehlern bei der Speicherbelegung kommt oder der Arbeitsspeicher des Servers extrem ausgelastet ist.|Report Server-Webdienst<br /><br /> Berichts-Manager<br /><br /> Hintergrundverarbeitungsanwendung|Nein.|Bei hoher Arbeitsspeicherauslastung akzeptiert der Berichtsserver keine neuen Anforderungen in der aktuellen Anwendungsdomäne. Während des Zeitraums, in dem der Server neue Anforderungen verweigert, treten HTTP 503-Fehler auf. Neue Anwendungsdomänen werden erst dann erstellt, wenn die alte Anwendungsdomäne entladen wird. Wenn Sie daher bei einer hohen Arbeitsspeicherauslastung des Servers Änderungen an Konfigurationsdateien vornehmen, werden ausgeführte Anforderungen und Aufträge möglicherweise nicht gestartet oder abgeschlossen.<br /><br /> Im Fall eines Fehlers bei der Speicherbelegung werden alle Anwendungsdomänen sofort neu gestartet. Gerade ausgeführte Aufträge und Anforderungen werden gelöscht. Sie müssen diese Aufträge und Anforderungen manuell neu starten.|  
+|Geplante Wiederverwendungsvorgänge, die in vordefinierten Intervallen auftreten|Standardmäßig werden Anwendungsdomänen alle 12 Stunden wiederverwendet.<br /><br /> Geplante Wiederverwendungsvorgänge finden in [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] -Anwendungen, die dem Gesamtprozesszustand dienen, sehr häufig statt.|Report Server-Webdienst<br /><br /> Berichts-Manager<br /><br /> Hintergrundverarbeitungsanwendung|Ja. Das Wiederverwendungsintervall wird durch die Konfigurationseinstellung `RecycleTime` in der Datei RSReportServer.config festgelegt.<br /><br /> `MaxAppDomainUnloadTime` legt die Wartezeit fest, während der die Hintergrundverarbeitung abgeschlossen werden kann.|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] verwaltet den Wiederverwendungsvorgang für den Webdienst und den Berichts-Manager.<br /><br /> Für die Hintergrundverarbeitungsanwendung erstellt der Berichtsserver eine neue Anwendungsdomäne für neue Aufträge, die durch Zeitpläne initialisiert werden. Bereits ausgeführte Aufträge können in der aktuellen Anwendungsdomäne zu Ende verarbeitet werden, bis die Wartezeit abläuft.|  
+|Konfigurationsänderungen des Berichtsservers|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] verwendet Anwendungsdomänen als Reaktion auf Änderungen in der Datei RSReportServer.config wieder.|Report Server-Webdienst<br /><br /> Berichts-Manager<br /><br /> Hintergrundverarbeitungsanwendung|Nein.|Sie können das Auftreten von Wiederverwendungsvorgängen nicht verhindern. Wiederverwendungsvorgänge, die als Reaktion auf Änderungen der Konfigurationseinstellungen auftreten, werden jedoch auf die gleiche Weise behandelt wie geplante Wiederverwendungsvorgänge. Für neue Anforderungen werden neue Anwendungsdomänen erstellt, während aktuelle Anforderungen und Aufträge in der aktuellen Anwendungsdomäne abgeschlossen werden.|  
+|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] -Konfigurationsänderungen|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] verwendet Anwendungsdomänen dann wieder, wenn Änderungen der überwachten Dateien auftreten (z.B. „machine.config“- und „Web.config“-Dateien sowie [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] -Programmdateien).|Report Server-Webdienst<br /><br /> Berichts-Manager|Nein.|[!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] verwaltet den Vorgang.<br /><br /> Wiederverwendungsvorgänge, die von [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] initiiert werden, beeinflussen die Hintergrundverarbeitungs-Anwendungsdomäne nicht.|  
+|Ungenügender Arbeitsspeicher und Fehler bei der Speicherbelegung|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR verwendet Anwendungsdomänen sofort wieder, wenn es zu Fehlern bei der Speicherbelegung kommt oder der Arbeitsspeicher des Servers extrem ausgelastet ist.|Report Server-Webdienst<br /><br /> Berichts-Manager<br /><br /> Hintergrundverarbeitungsanwendung|Nein.|Bei hoher Arbeitsspeicherauslastung akzeptiert der Berichtsserver keine neuen Anforderungen in der aktuellen Anwendungsdomäne. Während des Zeitraums, in dem der Server neue Anforderungen verweigert, treten HTTP 503-Fehler auf. Neue Anwendungsdomänen werden erst dann erstellt, wenn die alte Anwendungsdomäne entladen wird. Wenn Sie daher bei einer hohen Arbeitsspeicherauslastung des Servers Änderungen an Konfigurationsdateien vornehmen, werden ausgeführte Anforderungen und Aufträge möglicherweise nicht gestartet oder abgeschlossen.<br /><br /> Im Fall eines Fehlers bei der Speicherbelegung werden alle Anwendungsdomänen sofort neu gestartet. Gerade ausgeführte Aufträge und Anforderungen werden gelöscht. Sie müssen diese Aufträge und Anforderungen manuell neu starten.|  
   
 ## <a name="planned-and-unplanned-recycle-operations"></a>Geplante und ungeplante Wiederverwendungsvorgänge  
  Wiederverwendungsvorgänge sind entweder geplant oder ungeplant, je nachdem, wie der jeweilige Vorgang herbeigeführt wird:  
@@ -64,8 +58,7 @@ ms.locfileid: "66104229"
   
  Die Anwendungsdomänen für den Report Server-Webdienst, den Berichts-Manager und die Hintergrundverarbeitungsanwendung werden entweder zusammen oder einzeln wiederverwendet, je nachdem wodurch die Wiederverwendung ausgelöst wird:  
   
--   Von initiierte Wiederverwendungs [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] Vorgänge wirken sich [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] nur auf die Anwendungen aus: Report Server-Webdienst und Berichts-Manager. 
-  [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] verwendet zugrunde liegende Anwendungsdomänen wieder, wenn Änderungen an den überwachten Dateien vorgenommen werden. Wiederverwendungsvorgänge, die von [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] initiiert werden, sind in der Regel unabhängig von Wiederverwendungsvorgängen für die Hintergrundverarbeitungsanwendung.  
+-   Von [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] gestartete Wiederverwendungsvorgänge wirken sich nur auf die folgenden [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)]-Anwendungen aus: Berichtsserver-Webdienst und Berichts-Manager. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] verwendet zugrunde liegende Anwendungsdomänen wieder, wenn Änderungen an den überwachten Dateien vorgenommen werden. Wiederverwendungsvorgänge, die von [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] initiiert werden, sind in der Regel unabhängig von Wiederverwendungsvorgängen für die Hintergrundverarbeitungsanwendung.  
   
 -   Vom Berichtsserver initiierte Wiederverwendungsvorgänge wirken sich in der Regel auf den Report Server-Webdienst, den Berichts-Manager und die Hintergrundverarbeitungsanwendung aus. Wiederverwendungsvorgänge treten als Reaktion auf Änderungen an den Konfigurationseinstellungen und Neustart von Diensten auf.  
   
@@ -88,7 +81,7 @@ ms.locfileid: "66104229"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [RSReportServer-Konfigurationsdatei](rsreportserver-config-configuration-file.md)   
- [Ändern Sie eine Reporting Services Konfigurationsdatei &#40;RSReportServer. config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
- [Configure Available Memory for Report Server Applications (Konfigurieren von verfügbarem Speicher für Berichtsserveranwendungen)](../report-server/configure-available-memory-for-report-server-applications.md)  
+ [Ändern einer Reporting Services-Konfigurationsdatei &#40;RSreportserver.config&#41;](modify-a-reporting-services-configuration-file-rsreportserver-config.md)   
+ [Konfigurieren von verfügbarem Speicher für Berichtsserveranwendungen](../report-server/configure-available-memory-for-report-server-applications.md)  
   
   

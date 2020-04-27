@@ -21,17 +21,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 00645f619a89010bb4e2b112d50e00cbc6f40dce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127156"
 ---
 # <a name="srv_paramset-extended-stored-procedure-api"></a>srv_paramset (API für erweiterte gespeicherte Prozeduren)
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
   
  Legt den Wert eines Aufrufrückgabeparameters für eine remote gespeicherte Prozedur fest. Diese Funktion wurde durch die **srv_paramsetoutput**-Funktion ersetzt.  
   
@@ -62,7 +61,7 @@ len
  *n*  
  Gibt die Nummer des festzulegenden Parameters an. Der erste Parameter ist 1.  
   
- *data*  
+ *Daten*  
  Ist ein Zeiger auf den Datenwert, der als Rückgabeparameter der remote gespeicherten Prozedur zurück an den Client gesendet werden soll.  
   
  *Nest*  
@@ -71,38 +70,37 @@ len
 ## <a name="returns"></a>Rückgabe  
  SUCCEED, wenn der Parameterwert erfolgreich festgelegt wurde; andernfalls FAIL. Es wird FAIL zurückgegeben, wenn es keine aktuelle remote gespeicherte Prozedur oder keinen *n*-ten Parameter für die remote gespeicherte Prozedur gibt, oder wenn der Parameter kein Rückgabeparameter oder das *len*-Argument ungültig ist.  
   
- Wenn *len* 0 ist, wird NULL zurückgegeben. 
-  *len* auf 0 festzulegen ist die einzige Möglichkeit, NULL an den Client zurückzugeben.  
+ Wenn *len* 0 ist, wird NULL zurückgegeben. *len* auf 0 festzulegen ist die einzige Möglichkeit, NULL an den Client zurückzugeben.  
   
  Diese Funktion gibt die folgenden Werte zurück, wenn der-Parameter einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] der-Datentypen entspricht.  
   
 |Neue Datentypen|Länge der Rückgabedaten|  
 |--------------------|------------------------|  
-|`BITN`|**Null:** *len* = 0, Data = IG, ret = 0<br /><br /> **Null:** nicht zutreffend<br /><br /> **>= 255:** nicht zutreffend<br /><br /> **<255:** nicht zutreffend|  
-|`BIGVARCHAR`|**Null:** *len* = 0, Data = IG, ret = 1<br /><br /> **Null:** *len* = IG, Data = IG, ret = 0<br /><br /> **>= 255:** *len* = max8k, Data = gültig, ret = 0<br /><br /> **<255:** *len* = <8K, Data = gültig, ret = 1|  
-|`BIGCHAR`|**Null:** *len* = 0, Data = IG, ret = 1<br /><br /> **Null:** *len* = IG, Data = IG, ret = 0<br /><br /> **>= 255:** *len* = max8k, Data = gültig, ret = 0<br /><br /> **<255:** *len* = <8K, Data = gültig, ret = 1|  
-|`BIGBINARY`|**Null:** *len* = 0, Data = IG, ret = 1<br /><br /> **Null:** *len* = IG, Data = IG, ret = 0<br /><br /> **>= 255:** *len* = max8k, Data = gültig, ret = 0<br /><br /> **<255:** *len* = <8K, Data = gültig, ret = 1|  
-|`BIGVARBINARY`|**Null:** *len* = 0, Data = IG, ret = 1<br /><br /> **Null:** *len* = IG, Data = IG, ret = 0<br /><br /> **>= 255:** *len* = max8k, Data = gültig, ret = 0<br /><br /> **<255:** *len* = <8K, Data = gültig, ret = 1|  
-|NCHAR|**Null:** *len* = 0, Data = IG, ret = 1<br /><br /> **Null:** *len* = IG, Data = IG, ret = 0<br /><br /> **>= 255:** *len* = max8k, Data = gültig, ret = 0<br /><br /> **<255:** *len* = <8K, Data = gültig, ret = 1|  
-|NVARCHAR|**Null:** *len* = 0, Data = IG, ret = 1<br /><br /> **Null:** *len* = IG, Data = IG, ret = 0<br /><br /> **>= 255:** *len* = max8k, Data = gültig, ret = 0<br /><br /> **<255:** *len* = <8K, Data = gültig, ret = 1|  
-|`NTEXT`|**Null:** *len* = IG, Data = IG, ret = 0<br /><br /> **Null:** *len* = IG, Data = IG, ret = 0<br /><br /> **>= 255:** *len* = IG, Data = IG, ret = 0<br /><br /> 255: *len* = IG, Data = IG, ret = 0 ** \<**|  
+|`BITN`|**NULL: ** *len* = 0, data = IG, RET = 0<br /><br /> **ZERO**: NICHT ZUTREFFEND<br /><br /> **>= 255:** nicht zutreffend<br /><br /> **<255:** nicht zutreffend|  
+|`BIGVARCHAR`|**NULL: ** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO: ** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
+|`BIGCHAR`|**NULL: ** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO: ** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
+|`BIGBINARY`|**NULL: ** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO: ** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
+|`BIGVARBINARY`|**NULL: ** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO: ** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
+|NCHAR|**NULL: ** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO: ** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
+|NVARCHAR|**NULL: ** *len* = 0, data = IG, RET = 1<br /><br /> **ZERO: ** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = max8k, data = valid, RET = 0<br /><br /> **<255:** *len* = <8k, data = valid, RET = 1|  
+|`NTEXT`|**NULL: ** *len* = IG, data = IG, RET = 0<br /><br /> **ZERO: ** *len* = IG, data = IG, RET = 0<br /><br /> **>=255:** *len* = IG, data = IG, RET = 0<br /><br /> 255: *len* = IG, Data = IG, ret = 0 ** \<**|  
 |RET = Rückgabewert von srv_paramset||  
 |IG = Wert wird ignoriert||  
 |valid = ein beliebiger gültiger Zeiger auf Daten||  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Parameter enthalten die zwischen Clients und der Anwendung mit remote gespeicherten Prozeduren übergebenen Daten. Der Client kann bestimmte Parameter als Rückgabeparameter angeben. Diese Rückgabeparameter können Werte enthalten, die die Open Data Services-Anwendung wieder an den Client übergibt. Die Verwendung von Rückgabeparametern entspricht der Übergabe von Parametern nach Verweis.  
   
  Sie können den Rückgabewert für einen Parameter nicht festlegen, der nicht als Rückgabeparameter aufgerufen wurde. Verwenden Sie **srv_paramstatus**, um zu bestimmen, wie der Parameter aufgerufen wurde.  
   
  Diese Funktion legt zwar den Rückgabewert für einen Parameter fest, sendet den Rückgabewert jedoch nicht an den Client. Alle Rückgabeparameter werden unabhängig davon, ob die Rückgabewerte mit **srv_paramset** festgelegt wurden, automatisch an den Client gesendet, wenn **srv_senddone** mit dem festgelegtem Statusflag „SRV_DONE_FINAL“ aufgerufen wird.  
   
- Wenn eine remote gespeicherte Prozedur mit Parametern aufgerufen wird, werden die Parameter entweder mit ihrem Namen oder mit ihrer Position übergeben (unbenannt). Werden beim Aufruf einer remote gespeicherten Prozedur einige Parameter über ihren Namen und andere über ihre Position übergeben, so tritt ein Fehler auf. Der SRV_RPC Handler wird weiterhin aufgerufen, wird jedoch so angezeigt, als ob keine Parameter vorhanden wären und **srv_rpcparams** 0 zurückgibt.  
+ Wenn eine remote gespeicherte Prozedur mit Parametern aufgerufen wird, werden die Parameter entweder mit ihrem Namen oder mit ihrer Position übergeben (unbenannt). Werden beim Aufruf einer remote gespeicherten Prozedur einige Parameter über ihren Namen und andere über ihre Position übergeben, so tritt ein Fehler auf. Der SRV_RPC-Handler wird trotzdem aufgerufen, scheinbar jedoch ohne Parameter, und **srv_rpcparams** gibt 0 (null) zurück.  
   
 > [!IMPORTANT]  
 >  Sie sollten den Quellcode der erweiterten gespeicherten Prozeduren sorgfältig prüfen, und Sie sollten die kompilierten DLL-Dateien testen, bevor Sie sie auf einem Produktionsserver installieren. Weitere Informationen zum Überprüfen und Testen der Sicherheit finden Sie auf dieser [Microsoft-Website](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [srv_paramsetoutput &#40;API für erweiterte gespeicherte Prozeduren&#41;](srv-paramsetoutput-extended-stored-procedure-api.md)  
+ [srv_paramsetoutput (API für erweiterte gespeicherte Prozeduren)](srv-paramsetoutput-extended-stored-procedure-api.md)  
   
   

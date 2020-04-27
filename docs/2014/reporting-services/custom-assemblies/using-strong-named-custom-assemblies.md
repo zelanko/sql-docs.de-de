@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5e685ecda39e0487eb4b469920820fa6e4a10daa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264897"
 ---
 # <a name="using-strong-named-custom-assemblies"></a>Verwenden von benutzerdefinierten Assemblys mit starken Namen
@@ -37,7 +37,7 @@ ms.locfileid: "63264897"
 [assembly:AllowPartiallyTrustedCallers]  
 ```  
   
- **Allowpartiallytreuhänder dcallersattribute** ist nur wirksam, wenn es von einer Assembly mit starkem Namen auf Assemblyebene angewendet wird. Weitere Informationen zum Anwenden von Attributen auf Assemblyebene finden Sie unter "Anwenden von Attributen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] " in der SDK-Dokumentation.  
+ **AllowPartiallyTrustedCallersAttribute** ist nur dann wirksam, wenn es von einer Assembly mit starkem Namen auf der Assemblyebene angewandt wird. Weitere Informationen zum Anwenden von Attributen auf Assemblyebene finden Sie unter "Anwenden von Attributen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] " in der SDK-Dokumentation.  
   
 > [!CAUTION]  
 >  Wenn **AllowPartiallyTrustedCallersAttribute** vorhanden ist, werden die Standardsicherheitsprüfungen von **FullTrustLinkDemand** verhindert. Dadurch kann die Assembly von einer anderen zum Teil vertrauenswürdigen Assembly aufgerufen werden. Alle Sicherheitsprüfungen, einschließlich der Attribute für die deklarative Sicherheit auf Klassen- oder Methodenebene, müssen explizit angegeben werden.  

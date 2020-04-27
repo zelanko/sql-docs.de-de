@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3bbd3ac1bf97530d64760d1434b9e7e8f6a81d34
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482803"
 ---
 # <a name="loading-data-mds-add-in-for-excel"></a>Laden von Daten (MDS-Add-In für Excel)
@@ -42,16 +42,16 @@ ms.locfileid: "65482803"
 |----------------------|-----------|  
 |Filtern Sie MDS-Daten, bevor Sie sie in Excel laden.|[Daten vor dem Laden &#40;MDS-Add-in für Excel Filtern&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)|  
 |Laden Sie MDS-Daten in Excel.|[Laden von Daten aus MDS in Excel](export-data-to-excel-from-master-data-services.md)|  
-|Ändern Sie die Reihenfolge der Spalten, bevor Sie Daten herunterladen.|[Spalten &#40;MDS-Add-in für Excel neu anordnen&#41;](reorder-columns-mds-add-in-for-excel.md)|  
+|Ändern Sie die Reihenfolge der Spalten, bevor Sie Daten herunterladen.|[Neuanordnen von Spalten &#40;MDS-Add-In für Excel&#41;](reorder-columns-mds-add-in-for-excel.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   [Verbindungen &#40;MDS-Add-in für Excel&#41;](connections-mds-add-in-for-excel.md)  
+-   [Verbindungen &#40;MDS-Add-In für Excel&#41;](connections-mds-add-in-for-excel.md)  
   
--   [Die shortcutabfragedateien &#40;MDS-Add-in für Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
+-   [Shortcutabfragedateien &#40;MDS-Add-In für Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
 -   [Master Data Services-Add-In für Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   
--   [Sicherheits &#40;Master Data Services&#41;](../security-master-data-services.md)  
+-   [Sicherheit &#40;Master Data Services&#41;](../security-master-data-services.md)  
   
   

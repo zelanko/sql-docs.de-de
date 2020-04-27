@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1d1b2e20347cafb4717880de8fd224950f76b036
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480733"
 ---
 # <a name="export-a-knowledge-base-to-a-dqs-file"></a>Exportieren einer Wissensdatenbank in eine DQS-Datei
@@ -24,17 +24,17 @@ ms.locfileid: "65480733"
   
  Die durch den Exportvorgang erstellte DQS-Datendatei wird verschlüsselt, damit der Inhalt nicht angezeigt werden kann.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a> Voraussetzungen  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
  Um eine Wissensdatenbank in eine DQS-Datendatei zu exportieren, müssen Sie zuvor eine Wissensdatenbank erstellt und geöffnet haben. Sie benötigen für den Export keine DQS-Datei. Eine DQS-Datei wird für Sie erstellt.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Sie müssen über die Rolle „dqs_kb_editor“ oder „dqs_administrator“ in der DQS_MAIN-Datenbank verfügen, um eine Wissensdatenbank in eine DQS-Datendatei zu exportieren.  
   
-##  <a name="Export"></a>Exportieren einer Wissensdatenbank in eine DQS-Datei  
+##  <a name="export-a-knowledge-base-to-a-dqs-file"></a><a name="Export"></a>Exportieren einer Wissensdatenbank in eine DQS-Datei  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../../2014/data-quality-services/run-the-data-quality-client-application.md)aus.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "65480733"
   
 5.  Überprüfen Sie im Dialogfeld **Wissensdatenbank exportieren** , ob die Statuszeile angibt, dass der Exportvorgang abgeschlossen wurde. Klicken Sie auf **OK**.  
   
-##  <a name="FollowUp"></a>Nachverfolgung: nach dem Exportieren einer Domäne in eine DQS-Datei  
+##  <a name="follow-up-after-exporting-a-domain-to-a-dqs-file"></a><a name="FollowUp"></a> Nachverfolgung: Nach dem Exportieren einer Domäne in eine DQS-Datei  
  Nachdem Sie eine Wissensdatenbank in eine DQS-Datei exportiert haben, können Sie die Wissensdatenbank in den gleichen [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)] (unter einem neuen Namen) oder in einen anderen [!INCLUDE[ssDQSServer](../includes/ssdqsserver-md.md)]importieren.  
   
   

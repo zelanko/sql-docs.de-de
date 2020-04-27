@@ -22,16 +22,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 5ed0a510a6b74e3c33e9cb7ed9d789ad8242a499
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63270226"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Verwenden der Änderungsnachverfolgung (SQL Server)
   Anwendungen, die die Änderungsnachverfolgung verwenden, müssen in der Lage sein,  Überarbeitungen abzurufen, diese auf einen anderen Datenspeicher anzuwenden und die Quelldatenbank zu aktualisieren. In diesem Thema wird beschrieben, wie diese Tasks ausgeführt werden. Zudem wird beschrieben, welche Rolle die Änderungsnachverfolgung spielt, wenn ein Failover auftritt und eine Datenbank von einer Sicherung wiederhergestellt werden muss.  
   
-##  <a name="Obtain"></a> Abrufen von Änderungen mithilfe der Änderungsnachverfolgungsfunktionen  
+##  <a name="obtain-changes-by-using-change-tracking-functions"></a><a name="Obtain"></a> Abrufen von Änderungen mithilfe der Änderungsnachverfolgungsfunktionen  
  Beschreibt, wie mithilfe der Änderungsnachverfolgungsfunktionen Änderungen und Informationen zu den in einer Datenbank vorgenommenen Änderungen abgerufen werden können.  
   
 ### <a name="about-the-change-tracking-functions"></a>Informationen zu Änderungsnachverfolgungsfunktionen  
@@ -285,7 +285,7 @@ COMMIT TRAN
 > [!NOTE]  
 >  Zur Auswahl des richtigen Ansatzes für die Anwendung, wenn Sie die Änderungsnachverfolgung (oder benutzerdefinierte Nachverfolgungsmechanismen) verwenden, sind umfangreiche Analysen erforderlich. Aus diesem Grund ist es viel einfacher, die Momentaufnahmeisolation zu verwenden.  
   
-##  <a name="Handles"></a> Handhabung der Änderungen an einer Datenbank durch die Änderungsnachverfolgung  
+##  <a name="how-change-tracking-handles-changes-to-a-database"></a><a name="Handles"></a>So verarbeitet Änderungsnachverfolgung Änderungen an einer Datenbank  
  Einige Anwendungen, die die Änderungsnachverfolgung verwenden, führen die bidirektionale Synchronisierung mit einem anderen Datenspeicher aus. Das heißt, der andere Datenspeicher wird mit den in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank vorgenommenen Änderungen aktualisiert, und die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank wird mit den in dem anderen Datenspeicher vorgenommenen Änderungen aktualisiert.  
   
  Zur Aktualisierung der lokalen Datenbank mit Änderungen von einem anderen Datenspeicher muss die Anwendung die folgenden Vorgänge ausführen:  
@@ -404,7 +404,7 @@ COMMIT TRAN
 > [!NOTE]  
 >  Es besteht die Möglichkeit, dass die bei der Momentaufnahmetransaktion aktualisierte Zeile bereits in einer anderen Transaktion aktualisiert wurde, nachdem die Momentaufnahmetransaktion gestartet wurde. In diesem Fall tritt ein Momentaufnahmeisolations-Updatekonflikt auf und bewirkt, dass die Transaktion beendet wird. Wiederholen Sie in diesem Fall das Update. Dies führt dann dazu, dass ein Änderungsnachverfolgungskonflikt erkannt wird und keine Zeilen geändert werden.  
   
-##  <a name="DataRestore"></a> Änderungsnachverfolgung und Datenwiederherstellung  
+##  <a name="change-tracking-and-data-restore"></a><a name="DataRestore"></a>Änderungsnachverfolgung und Datenwiederherstellung  
  Bei Anwendungen, für die eine Synchronisierung erforderlich ist, muss der Fall berücksichtigt werden, dass eine für die Änderungsnachverfolgung aktivierte Datenbank eine frühere Version der Daten wiederherstellt. Dies kann auftreten, wenn eine Datenbank aus einer Sicherung wiederhergestellt wird, wenn ein Failover zu einer asynchronen Spiegeldatenbank besteht oder wenn beim Protokollversand ein Fehler auftritt. Das folgende Beispiel veranschaulicht dieses Szenario:  
   
 1.  Für Tabelle T1 werden Änderungen nachverfolgt, und die minimal gültige Version für die Tabelle ist 50.  
@@ -433,12 +433,12 @@ COMMIT TRAN
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Nachverfolgen von Datenänderungen &#40;SQL Server&#41;](../track-changes/track-data-changes-sql-server.md)   
- [Informationen zur Änderungsnachverfolgung &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md)   
- [Verwalten der Änderungsnachverfolgung &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
- [Aktivieren und Deaktivieren der Änderungsnachverfolgung &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
- [CHANGETABLE &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/changetable-transact-sql)   
- [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-tracking-min-valid-version-transact-sql)   
- [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/change-tracking-current-version-transact-sql)   
+ [Informationen zu Änderungsnachverfolgung &#40;SQL Server&#41;](../track-changes/about-change-tracking-sql-server.md)   
+ [Verwalten Sie Änderungsnachverfolgung &#40;SQL Server&#41;](../track-changes/manage-change-tracking-sql-server.md)   
+ [Aktivieren und deaktivieren Sie Änderungsnachverfolgung &#40;SQL Server&#41;](../track-changes/enable-and-disable-change-tracking-sql-server.md)   
+ [CHANGETABLE &#40;Transact-SQL-&#41;](/sql/relational-databases/system-functions/changetable-transact-sql)   
+ [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL-&#41;](/sql/relational-databases/system-functions/change-tracking-min-valid-version-transact-sql)   
+ [CHANGE_TRACKING_CURRENT_VERSION &#40;Transact-SQL-&#41;](/sql/relational-databases/system-functions/change-tracking-current-version-transact-sql)   
  [WITH CHANGE_TRACKING_CONTEXT &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/with-change-tracking-context-transact-sql)  
   
   

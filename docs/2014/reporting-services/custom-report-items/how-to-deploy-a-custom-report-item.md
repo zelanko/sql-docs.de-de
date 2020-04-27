@@ -1,5 +1,5 @@
 ---
-title: 'Vorgehensweise: Bereitstellen eines benutzerdefinierten Berichtselements | Microsoft-Dokumentation'
+title: 'Gewusst wie: Bereitstellen eines benutzerdefinierten Berichtselements | Microsoft-Dokumentation'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,18 +13,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2b41519ee6a6d31be33d92c8fbdf2ab503c93ec1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63265078"
 ---
-# <a name="how-to-deploy-a-custom-report-item"></a>Vorgehensweise: Bereitstellen eines benutzerdefinierten Berichtselements
+# <a name="how-to-deploy-a-custom-report-item"></a>Gewusst wie: Bereitstellen eines benutzerdefinierten Berichtselements
   Zum Bereitstellen eines benutzerdefinierten Berichtselements in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] müssen Sie die Konfigurationsdateien des Berichtsservers ändern und die Entwurfszeit- und die Laufzeitkomponentenassemblys in die entsprechenden Anwendungsordner für den Berichts-Designer und den Berichtsserver kopieren.  
   
 ### <a name="to-deploy-a-custom-report-item"></a>So stellen Sie ein benutzerdefiniertes Berichtselement bereit  
   
-1.  Bearbeiten Sie die Datei Rsreportdesigner.config, um die Laufzeit- und Entwurfszeitkomponenten für ein benutzerdefiniertes Berichtselement für die Verwendung im Designer zu konfigurieren. Beachten Sie dabei, dass der `ReportItemName`-Eintrag mit dem in der `CustomReportItemAttribute`-Klasse verwendeten `CustomReportItemDesigner`-Attribut übereinstimmen muss. Beispiel:  
+1.  Bearbeiten Sie die Datei Rsreportdesigner.config, um die Laufzeit- und Entwurfszeitkomponenten für ein benutzerdefiniertes Berichtselement für die Verwendung im Designer zu konfigurieren. Beachten Sie dabei, dass der `ReportItemName`-Eintrag mit dem in der `CustomReportItemAttribute`-Klasse verwendeten `CustomReportItemDesigner`-Attribut übereinstimmen muss. Zum Beispiel:  
   
     ```  
     <ReportItems>  
@@ -67,6 +67,6 @@ ms.locfileid: "63265078"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services-Konfigurationsdateien](../report-server/reporting-services-configuration-files.md)   
- [Custom Report Item Class Libraries (Klassenbibliotheken für ein benutzerdefiniertes Berichtselement)](custom-report-item-class-libraries.md)  
+ [Klassenbibliotheken für ein benutzerdefiniertes Berichtselement](custom-report-item-class-libraries.md)  
   
   

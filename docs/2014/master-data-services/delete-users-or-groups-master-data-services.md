@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0114aa3ca6f6744303c3053003a622185d33f547
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479898"
 ---
 # <a name="delete-users-or-groups-master-data-services"></a>Löschen von Benutzern oder Gruppen (Master Data Services)
@@ -53,6 +53,6 @@ ms.locfileid: "65479898"
 5.  Klicken Sie im Bestätigungsdialogfeld auf **OK**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Sicherheits &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
+ [Sicherheit &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
   
   

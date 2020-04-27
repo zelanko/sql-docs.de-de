@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5891e3010645d17d08b13abf30f8fe46594fc1fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478871"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>Abonnementsichtformate (Master Data Services)
@@ -22,15 +22,15 @@ ms.locfileid: "65478871"
   
 ## <a name="subscription-view-formats"></a>Abonnementsichtformate  
   
-|Name|BESCHREIBUNG|  
+|Name|Beschreibung|  
 |----------|-----------------|  
-|**Blatt Elemente**|Enthält Blattelemente und ihre zugeordneten Attributwerte.|  
+|**Blattelemente**|Enthält Blattelemente und ihre zugeordneten Attributwerte.|  
 |**Konsolidierte Elemente**|Enthält konsolidierte Elemente und ihre zugeordneten Attributwerte.|  
-|**Sammlungs Mitgliedschaften**|Enthält eine Liste von Auflistungen und ihre zugeordneten Attributwerte.|  
-|**Auflistungen**|Enthält eine Liste von Auflistungen und die zugehörigen Elemente sowie Gewichtungswerte und Sortierreihenfolge.|  
-|**Explizit übergeordnetes Element**|Enthält Strukturen expliziter Hierarchien für eine Entität im Format über- und untergeordneter Elemente.|  
+|**Zugehörigkeit zu Sammlungen**|Enthält eine Liste von Auflistungen und ihre zugeordneten Attributwerte.|  
+|**Sammlungen**|Enthält eine Liste von Auflistungen und die zugehörigen Elemente sowie Gewichtungswerte und Sortierreihenfolge.|  
+|**Explizite Strukturen über- und untergeordneter Elemente**|Enthält Strukturen expliziter Hierarchien für eine Entität im Format über- und untergeordneter Elemente.|  
 |**Explizite Ebenen**|Enthält Strukturen expliziter Hierarchien für eine Entität im Ebenenformat.|  
-|**Abgeleitetes übergeordnetes Element (abgeleitete Hierarchie Ansicht**|Enthält die Struktur einer abgeleiteten Hierarchie im Format über- und untergeordneter Elemente.|  
+|**Abgeleitete Hierarchie über- und untergeordneter Elemente (Sicht der abgeleiteten Hierarchie)**|Enthält die Struktur einer abgeleiteten Hierarchie im Format über- und untergeordneter Elemente.|  
 |**Abgeleitete Ebenen (Sicht der abgeleiteten Hierarchie)**|Enthält die Struktur einer abgeleiteten Hierarchie im Ebenenformat.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

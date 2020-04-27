@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 10e4a4befd8300863d8637a87e8c9bd03622d0af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104070"
 ---
 # <a name="configure-a-report-server-reporting-services-native-mode"></a>Konfigurieren eines Berichtsservers (einheitlicher Reporting Services-Modus)
@@ -59,10 +59,10 @@ ms.locfileid: "66104070"
  Überprüfen Sie die Installation durch das Erstellen von Ordnern, das Hochladen von Elementen und das Ausführen von Berichten. Befolgen Sie die Anweisungen in [Überprüfen einer Installation von Reporting Services](../install-windows/verify-a-reporting-services-installation.md) , um Ihre Installation zu überprüfen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwalten eines Reporting Services Berichts Servers im einheitlichen Modus](manage-a-reporting-services-native-mode-report-server.md)   
- [Konfigurieren einer Firewall für den Zugriff auf den Berichts Server](configure-a-firewall-for-report-server-access.md)   
- [Konfigurieren eines Berichts Servers im einheitlichen Modus für die lokale Verwaltung &#40;SSRS&#41;](configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
- [Konfigurieren eines Berichts Servers für die Remote Verwaltung](configure-a-report-server-for-remote-administration.md)   
+ [Verwalten eines Berichtsservers von Reporting Services im einheitlichen Modus](manage-a-reporting-services-native-mode-report-server.md)   
+ [Konfigurieren einer Firewall für den Zugriff auf den Berichtsserver](configure-a-firewall-for-report-server-access.md)   
+ [Konfigurieren eines Berichtsservers im einheitlichen Modus für die lokale Verwaltung (SSRS)](configure-a-native-mode-report-server-for-local-administration-ssrs.md)   
+ [Konfigurieren eines Berichtsservers für die Remoteverwaltung](configure-a-report-server-for-remote-administration.md)   
  [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)  
   
   

@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f92a74caa74c5cf15e917cd6c15aef9506a60180
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482841"
 ---
 # <a name="exporting-data-master-data-services"></a>Exportieren von Daten (Master Data Services)
@@ -40,18 +40,18 @@ ms.locfileid: "65482841"
 -   Elemente in allen expliziten Hierarchien für eine Entität in einem Format mit über- und untergeordneten Elementen oder Ebenen  
   
 ## <a name="subscription-views-can-become-out-of-date"></a>Abonnementsichten können ihre Aktualität verlieren  
- Nachdem Sie für eine Entität oder eine Hierarchie eine Abonnementsicht erstellt haben, werden Änderungen an den zugeordneten Modellobjekten nicht automatisch in der Sicht widergespiegelt. Sie müssen eine Abonnementsicht in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ggf. erneut generieren, um Änderungen an den Modellobjekten widerzuspiegeln. Die Spalte **Geändert** auf der Seite **Exportieren** wird bei einer Änderung der Modellobjekte in **True** geändert. **True** gibt an, dass Sie die Abonnement Sicht bearbeiten und speichern sollten, um die Sicht erneut zu generieren.  
+ Nachdem Sie für eine Entität oder eine Hierarchie eine Abonnementsicht erstellt haben, werden Änderungen an den zugeordneten Modellobjekten nicht automatisch in der Sicht widergespiegelt. Sie müssen eine Abonnementsicht in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ggf. erneut generieren, um Änderungen an den Modellobjekten widerzuspiegeln. Die Spalte **Geändert** auf der Seite **Exportieren** wird bei einer Änderung der Modellobjekte in **True** geändert. Der Wert**True** gibt an, dass Sie die Abonnementsicht bearbeiten und speichern sollten, um die Sicht erneut zu generieren.  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
 |Erstellen Sie eine Abonnementsicht der Masterdaten.|[Erstellen Sie eine Abonnement Sicht &#40;Master Data Services&#41;](create-a-subscription-view-to-export-data-master-data-services.md)|  
-|Löschen Sie eine vorhandene Abonnementsicht.|[&#40;Master Data Services eine Abonnement Sicht löschen&#41;](../../2014/master-data-services/delete-a-subscription-view-master-data-services.md)|  
+|Löschen Sie eine vorhandene Abonnementsicht.|[Löschen einer Abonnementsicht &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-subscription-view-master-data-services.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   [Abonnement Sicht Formate &#40;Master Data Services&#41;](../../2014/master-data-services/subscription-view-formats-master-data-services.md)  
+-   [Abonnementsichtformate &#40;Master Data Services&#41;](../../2014/master-data-services/subscription-view-formats-master-data-services.md)  
   
 -   [Ansichten](../relational-databases/views/views.md)  
   

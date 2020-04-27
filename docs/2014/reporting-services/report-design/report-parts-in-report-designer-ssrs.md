@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2c696b87a8c8cf4688e24a0e3177948d339d7443
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105062"
 ---
 # <a name="report-parts-in-report-designer-ssrs"></a>Berichtsteile im Berichts-Designer (SSRS)
@@ -26,7 +26,7 @@ ms.locfileid: "66105062"
   
  Bei der Arbeit mit Berichtsteilen im Berichts-Designer gibt es grundlegende Unterschiede. Ein Hauptunterschied ist der Workflow. Der Berichts-Generator unterstützt die gemeinsame Erstellung: Sie erstellen einen Berichtsteil und veröffentlichen ihn. Ein anderer Benutzer kann ihn wiederverwenden, ändern und erneut veröffentlichen. In Berichts-Designer sind Veröffentlichungen unidirektional: Ein Berichtsteil kann in Berichts-Designer veröffentlicht und erneut verwendet werden. Ein vorhandener Berichtsteil kann jedoch nicht in einem Bericht in Berichts-Designer wiederverwendet werden. In diesem Thema werden die Unterschiede nach einer kurzen Übersicht über Berichtsteile näher erläutert.  
   
-##  <a name="ComponentWorkflow"></a>Lebenszyklus der Berichts Teil Veröffentlichung  
+##  <a name="life-cycle-of-report-part-publishing"></a><a name="ComponentWorkflow"></a> Lebenszyklus der Berichtsteilveröffentlichung  
  ![rs_ComponentCreation](../media/rs-componentcreation.gif "rs_ComponentCreation")  
   
 1.  Person A erstellt im Berichts-Designer ein Projekt, das einen Bericht mit einem Diagramm enthält, das von einem eingebetteten Dataset abhängig ist.  
@@ -43,7 +43,7 @@ ms.locfileid: "66105062"
   
 6.  Person B akzeptiert im Berichts-Generator das aktualisierte Diagramm vom Server. Dadurch werden die Änderungen, die Person B am Diagramm im Bericht von Person B vorgenommen hatte, überschrieben.  
   
-##  <a name="PublishingComponents"></a>Veröffentlichen von Berichts teilen  
+##  <a name="publishing-report-parts"></a><a name="PublishingComponents"></a> Veröffentlichen von Berichtsteilen  
  Beim Veröffentlichen wird einem Berichtsteil vom Berichts-Designer eine eindeutige ID zugewiesen. Diese ID wird, unabhängig von sonstigen Änderungen, die Sie am Berichtsteil vornehmen, von diesem Zeitpunkt an beibehalten. Durch die ID wird das ursprüngliche Berichtselement im Bericht mit dem Berichtsteil verknüpft. Wird der Berichtsteil von anderen Berichtsautoren im Berichts-Generator wiederverwendet, wird auch der Berichtsteil in deren Berichten durch die ID mit dem Berichtsteil verknüpft.  
   
  Die folgenden Berichtselemente können als Berichtsteile veröffentlicht werden:  
@@ -77,12 +77,12 @@ ms.locfileid: "66105062"
  Wenn Sie den Bericht bereitstellen, wird der Berichtsteil auf einer SharePoint-Website oder einem Berichtsserver veröffentlicht und kann von anderen Benutzern wiederverwendet werden. Zum Veröffentlichen eines Berichtsteils benötigen Sie eine Verbindung mit einem [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Berichtsserver sowie ausreichende Berechtigungen für den Server, wenn Sie den Bericht bereitstellen.  
   
   
-##  <a name="SearchReuseComponents"></a>Wieder verwenden von Berichts teilen  
+##  <a name="reusing-report-parts"></a><a name="SearchReuseComponents"></a> Wiederverwenden von Berichtsteilen  
  Im Gegensatz zum Berichts-Generator können Sie keine Berichtsteile in einem anderen Projekt als dem suchen und wiederverwenden, in dem er erstellt wurde.  
   
  Berichtsautoren, die im Berichts-Generator arbeiten, können Berichtsteile suchen und wiederverwenden, die Sie in Berichten veröffentlichen, die diese Autoren erstellen.  
   
-##  <a name="RepublishingComponents"></a>Neuveröffentlichen von Berichts teilen  
+##  <a name="republishing-report-parts"></a><a name="RepublishingComponents"></a> Erneutes Veröffentlichen von Berichtsteilen  
  Im Berichts-Designer sollten Sie einen vorhandenen Berichtsteil innerhalb des Berichts aktualisieren, in dem Sie den Berichtsteil erstellt haben. Im Berichts-Generator können Berichtsautoren den Berichtsteil wiederverwenden und als neuen Berichtsteil veröffentlichen, ohne den von Ihnen veröffentlichten Berichtsteil zu ersetzen. Sofern ausreichende Berechtigungen vorhanden sind, kann der von Ihnen veröffentlichte Berichtsteil auch aktualisiert werden. Jeder Benutzer mit ausreichenden Berechtigungen für einen Ordner auf einer Website oder einem Server kann die dort gespeicherten Berichtsteile aktualisieren. Vorherige Updates werden durch das letzte Update überschrieben.  
   
  Sie können den Berichtsteil ändern und dann auf der Website oder dem Server erneut veröffentlichen. Berichtsautoren im Berichts-Generator, die diesen Berichtsteil einem Bericht hinzugefügt haben, werden über die Änderung informiert, wenn sie diesen Bericht das nächste Mal öffnen. Sie können die Änderungen annehmen oder ablehnen.  
@@ -91,6 +91,6 @@ ms.locfileid: "66105062"
   
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwalten von Berichtsteilen](managing-report-parts.md)  
+ [Managing Report Parts (Verwalten von Berichtsteilen)](managing-report-parts.md)  
   
   

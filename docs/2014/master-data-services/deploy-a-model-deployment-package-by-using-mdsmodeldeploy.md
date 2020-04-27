@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 81c87a7990c6c7125cbccbe99050cd5ee477e6d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483074"
 ---
 # <a name="deploy-a-model-deployment-package-by-using-mdsmodeldeploy"></a>Bereitstellen eines Modellbereitstellungspakets mit MDSModelDeploy
@@ -38,7 +38,7 @@ ms.locfileid: "65483074"
   
 -   Sie müssen Administrator in der Umgebung sein, in der Sie das Modell bereitstellen. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
--   Wenn Sie ein Modell mit Daten aktualisieren, kann die von Ihnen bereitgestellte Version nicht den Status **Gesperrt** oder **Commit wurde ausgeführt** aufweisen.  
+-   Wenn Sie ein Modell mit Daten aktualisieren, kann die Version, für die Sie **bereit**stellen, nicht **gesperrt** oder übertragen werden.  
   
 ### <a name="to-deploy-a-model-deployment-package"></a>So stellen Sie ein Modellbereitstellungspaket bereit  
   
@@ -91,7 +91,7 @@ ms.locfileid: "65483074"
   
 6.  Nach der erfolgreichen Bereitstellung des Pakets wird eine Meldung angezeigt, die angibt, dass der MDSModelDeploy-Vorgang erfolgreich abgeschlossen wurde.  
   
- **Anmerkungen**  
+ **Hinweise:**  
   
 -   Wenn eine Abonnement Sicht im Paket denselben Namen wie eine Abonnement Sicht in einem vorhandenen Modell aufweist, wird die Sicht als *modelname. abonnementviewname*erstellt. Wenn dieser Name bereits verwendet wird, wird die Abonnementsicht nicht erstellt.  
   
@@ -110,11 +110,11 @@ ms.locfileid: "65483074"
      Falls bei der Aktualisierung eines Modells der Prozess während der ersten drei Schritte fehlschlägt, wird sie nicht fortgesetzt. Für bereits vorgenommene Änderungen wird jedoch kein Rollback durchgeführt. Wenn der Prozess in Schritt 4 fehlschlägt, werden Elemente, die aktualisiert werden können, aktualisiert.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- Benutzerdefinierte Metadaten, Dateiattribute sowie Benutzer- und Gruppenberechtigungen sind nicht in den Modellbereitstellungspaketen enthalten. Nachdem Sie ein Modell bereitgestellt haben, müssen diese manuell aktualisiert werden. Weitere Informationen finden Sie unter  
+ Benutzerdefinierte Metadaten, Dateiattribute sowie Benutzer- und Gruppenberechtigungen sind nicht in den Modellbereitstellungspaketen enthalten. Nachdem Sie ein Modell bereitgestellt haben, müssen diese manuell aktualisiert werden. Weitere Informationen finden Sie unter:  
   
 -   [Metadaten &#40;Master Data Services hinzufügen&#41;](../../2014/master-data-services/add-metadata-master-data-services.md)  
   
--   [Zuweisen von Berechtigungen für Modell Objekte &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
+-   [Zuweisen von Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Bereitstellen von Modellen &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  

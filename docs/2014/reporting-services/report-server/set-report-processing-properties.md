@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a793fa513ef13c9cafc210a411971a0363f5976d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103243"
 ---
 # <a name="set-report-processing-properties"></a>Festlegen von Berichtsverarbeitungseigenschaften
@@ -56,9 +56,9 @@ ms.locfileid: "66103243"
  Bei dieser Bedingung deaktiviert der Berichtsserver das Abonnement zu dem Zeitpunkt, zu dem die nächste Ausführung des Abonnements geplant ist. Um das Abonnement erneut zu aktivieren, öffnen und speichern Sie das Abonnement. Beim Öffnen des Abonnements aktualisiert der Berichtsserver die für die Momentaufnahme definierten Werte für die Abonnementparameter. Weitere Informationen zu Abonnements finden Sie unter [Abonnements und Übermittlung (Reporting Services)](../subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Festlegen von Verarbeitungsoptionen &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Legen Sie Verarbeitungsoptionen &#40;Reporting Services im integrierten SharePoint-Modus fest&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Konfigurieren von Ausführungs Eigenschaften für einen Bericht &#40;Berichts-Manager&#41;](../reports/configure-execution-properties-for-a-report-report-manager.md)   
- [Konzepte von Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md)   
+ [Reporting Services Konzepte &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md)   
  [Gewusst wie: Hinzufügen einer Momentaufnahme zum Berichts Verlauf](add-a-snapshot-to-report-history-report-manager.md)   
  [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](../report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
   

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dacfbba3ea17a46f68745850f2d51b3e016a2e08
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483768"
 ---
 # <a name="add-a-user-master-data-services"></a>Hinzufügen eines Benutzers (Master Data Services)
@@ -42,9 +42,9 @@ ms.locfileid: "65483768"
   
 ## <a name="next-steps"></a>Nächste Schritte  
   
--   [&#40;Master Data Services Berechtigungen für Funktionsbereiche zuweisen&#41;](assign-functional-area-permissions-master-data-services.md)  
+-   [Zuweisen von Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](assign-functional-area-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Sicherheits &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
+ [Sicherheit &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
   
   

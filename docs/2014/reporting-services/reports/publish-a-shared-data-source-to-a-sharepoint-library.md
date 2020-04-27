@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2866b0b8a72e48dbb6c93b37b2a1a83e20e12821
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102543"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>Veröffentlichen einer freigegebenen Datenquelle in einer SharePoint-Bibliothek
@@ -30,13 +30,13 @@ ms.locfileid: "66102543"
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das vorhandene bzw. ein neues Berichtsserverprojekt.  
   
-2.  Klicken Sie im Menü **Projekt** auf **Eigenschaften**. Das Dialogfeld _\<Projekt>_ **Eigenschaftenseiten** wird geöffnet.  
+2.  Klicken Sie im Menü **Projekt** auf **Eigenschaften**. Das _ \<Dialogfeld Projekt>_ **Eigenschaften Seiten** wird geöffnet.  
   
 3.  Wählen Sie die **Konfiguration** aus, die Sie zum Veröffentlichen auf einer SharePoint-Website verwenden.  
   
 4.  Wenn Sie die freigegebenen Datenquellen in Ihrem Projekt veröffentlichen und bereits veröffentlichte freigegebene Datenquellen überschreiben möchten, legen Sie **OverwriteDataSources** auf **True**fest.  
   
-5.  (Optional) Geben Sie für **TargetDataSourceFolder**eine URL zu einer SharePoint-Bibliothek oder zu einem Bibliotheksordner ein. Beispiel: *http://TestServer/TestSite/Documents/DataSources*.  
+5.  (Optional) Geben Sie für **TargetDataSourceFolder**eine URL zu einer SharePoint-Bibliothek oder zu einem Bibliotheksordner ein. Beispiel: *http://TestServer/TestSite/Documents/DataSources*  
   
      Wenn Sie keinen Wert angeben, wird der Wert **TargetReportFolder** verwendet.  
   
@@ -53,10 +53,10 @@ ms.locfileid: "66102543"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Veröffentlichen eines Berichts in einer SharePoint-Bibliothek](publish-a-report-to-a-sharepoint-library.md)   
- [Beispiele für URLs von veröffentlichten Berichtselementen auf einem Berichtsserver im SharePoint-Modus (SSRS)](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
- [Eigenschaftsseiten für Projekt (Dialogfeld)](../tools/project-property-pages-dialog-box.md)   
- [Festlegen von Bereitstellungseigenschaften &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
- [Veröffentlichen von Berichten auf einem Berichtsserver](publishing-reports-to-a-report-server.md)   
+ [URL-Beispiele für veröffentlichte Berichts Elemente auf einem Berichts Server im SharePoint-Modus &#40;SSRS&#41;](../tools/url-examples-for-items-on-a-report-server-sharepoint-mode.md)   
+ [Eigenschaften Seiten für Projekt (Dialog Feld)](../tools/project-property-pages-dialog-box.md)   
+ [Festlegen der Bereitstellungs Eigenschaften &#40;Reporting Services&#41;](../tools/set-deployment-properties-reporting-services.md)   
+ [Veröffentlichen von Berichten auf einem Berichts Server](publishing-reports-to-a-report-server.md)   
  [Verwenden einer Office Data Connection &#40;.odc&#41; für Berichte &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../report-data/use-an-office-data-connection-odc-with-reports.md)  
   
   

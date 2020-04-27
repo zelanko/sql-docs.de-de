@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63273737"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Exemplarische Vorgehensweise: Hinzufügen und Ändern von Datenbankdiagrammen
@@ -44,7 +44,7 @@ ms.locfileid: "63273737"
   
 3.  Klicken Sie mit der rechten Maustaste auf den Knoten Datenbankdiagramme, und wählen Sie **Neues Datenbankdiagramm** aus.  
   
-     Wenn die Datenbank nicht über die zum Erstellen von Diagrammen erforderlichen Objekte verfügt, wird folgende Meldung angezeigt: **Dieser Datenbank fehlt mindestens eines der Unterstützungsobjekte, die erforderlich sind, damit Diagramme für die Datenbank erstellt werden können. Möchten Sie es erstellen?** Klicken Sie auf **Ja**.  
+     Wenn die Datenbank nicht über die zum Erstellen von Diagrammen erforderlichen Objekte verfügt, wird folgende Meldung angezeigt: **Dieser Datenbank fehlt mindestens eines der Unterstützungsobjekte, die erforderlich sind, damit Diagramme für die Datenbank erstellt werden können. Möchten Sie es erstellen?** Wählen Sie die Option **Ja** aus.  
   
      Das Dialogfeld **Tabelle hinzufügen** wird angezeigt.  
   
@@ -78,8 +78,8 @@ ms.locfileid: "63273737"
   
     |**Spaltenname**|**Datentyp**|**NULL-Werte zulassen**|  
     |---------------------|-------------------|---------------------|  
-    |`T1col1`|`int`|Aktiviert|  
-    |`T1col2`|`varchar(50)`|Aktiviert|  
+    |`T1col1`|`int`|checked|  
+    |`T1col2`|`varchar(50)`|checked|  
     |`T1col3`|`float`|Aktiviert|  
   
 4.  Klicken Sie mit der rechten Maustaste auf `T1col1` , und wählen Sie **Primärschlüssel festlegen**aus.  
@@ -111,8 +111,7 @@ ms.locfileid: "63273737"
   
 4.  Geben Sie `T1col3 > 5` ein und klicken Sie dann auf **OK**.  
   
-     
-  `Table1` verfügt jetzt über die Einschränkung, dass alle in `T1col3` eingegebenen Werte größer als 5 sein müssen.  
+     `Table1` verfügt jetzt über die Einschränkung, dass alle in `T1col3` eingegebenen Werte größer als 5 sein müssen.  
   
 5.  Klicken Sie auf **Schließen**.  
   
@@ -120,11 +119,11 @@ ms.locfileid: "63273737"
   
 1.  Erstellen Sie im Datenbank-Designer eine neue Tabelle mit dem Namen `Table2` und mit folgenden Spalten:  
   
-    |**Spalten Name**|**Datentyp**|**NULL-Werte zulassen**|  
+    |**Spalten Name**|**Datentyp**|**NULL-Werten zulassen**|  
     |---------------------|-------------------|---------------------|  
     |`T2col1`|`int`|nicht aktiviert|  
-    |`T2col2`|`varchar(50)`|Aktiviert|  
-    |`T2col3`|`xml`|Aktiviert|  
+    |`T2col2`|`varchar(50)`|checked|  
+    |`T2col3`|`xml`|checked|  
   
     > [!NOTE]  
     >  Die Spalten in einer Fremdschlüsselbeziehung, die sich auf der Seite des Primärschlüssels befinden, müssen Teil eines Primärschlüssels oder einer Unique-Einschränkung sein.  

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: fdbca5818e3430c0445444f3fb98b426e5f8a79c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103212"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Festlegen von Timeoutwerten für die Verarbeitung von Berichten und freigegebenen Datasets (SSRS)
@@ -55,9 +55,9 @@ ms.locfileid: "66103212"
 >  Sie können die Einstellung `RunningRequestsDbCycle` in der Datei RSReportServer.config festlegen, um die Häufigkeit zu ändern, mit der Aufträge, die ausgeführt werden, ausgewertet werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Festlegen von Verarbeitungsoptionen &#40;Reporting Services im integrierten SharePoint-Modus&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Reporting Services Berichts Server &#40;einheitlicher Modus&#41;](reporting-services-report-server-native-mode.md)   
- [Verwalten eines ausgeführten Prozesses](../subscriptions/manage-a-running-process.md)   
- [Berichts-Manager (einheitlicher SSRS-Modus)](../report-manager-ssrs-native-mode.md)  
+ [Legen Sie Verarbeitungsoptionen &#40;Reporting Services im integrierten SharePoint-Modus fest&#41;](../set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
+ [Reporting Services-Berichtsserver &#40;einheitlicher Modus&#41;](reporting-services-report-server-native-mode.md)   
+ [Verwalten eines laufenden Prozesses](../subscriptions/manage-a-running-process.md)   
+ [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md)  
   
   

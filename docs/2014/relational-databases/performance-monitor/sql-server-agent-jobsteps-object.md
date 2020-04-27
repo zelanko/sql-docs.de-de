@@ -14,22 +14,22 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 323bf0c943d12a2d05e5fde80194d35d9ab733cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68206563"
 ---
 # <a name="sql-server-agent-jobsteps-object"></a>SQL Server-Agent, Auftragsschritte-Objekt
-  Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Auftrags **Schritte** -Leistungs Objekt enthält Leistungsindikatoren, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Informationen zu Auftrags Schritten des-Agents melden. In der nachfolgenden Tabelle sind die in diesem Objekt enthaltenen Indikatoren aufgelistet.  
+  Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent: **Auftragsschritte** -Leistungsobjekt enthält Leistungsindikatoren, die Informationen zu den Auftragsschritten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents angeben. In der nachfolgenden Tabelle sind die in diesem Objekt enthaltenen Indikatoren aufgelistet.  
   
  Die folgende Tabelle enthält die Leistungsindikatoren von **SQLAgent:Auftragsschritte** .  
   
 |Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |**Aktive Schritte**|Dieser Indikator gibt die Anzahl der aktuell ausgeführten Auftragsschritte an.|  
-|**Schritte in der Warteschlange**|Dieser Indikator gibt die Anzahl der Auftragsschritte an, die für das Ausführen durch den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent bereitstehen, deren Ausführung jedoch noch nicht gestartet wurde.|  
-|**Wiederholungs Versuche Gesamt**|Dieser Wert gibt an, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wie oft seit dem letzten Server Neustart ein Auftrags Schritt wiederholt wurde.|  
+|**Schritte in Warteschlange**|Dieser Indikator gibt die Anzahl der Auftragsschritte an, die für das Ausführen durch den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent bereitstehen, deren Ausführung jedoch noch nicht gestartet wurde.|  
+|**Wiederholungen von Schritten gesamt**|Dieser Indikator gibt an, wie oft [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] seit dem letzten Serverneustart insgesamt versucht hat, einen Auftragsschritt neu zu starten.|  
   
  Jeder Leistungsindikator in dem Objekt enthält die folgenden Instanzen:  
   
@@ -41,16 +41,16 @@ ms.locfileid: "68206563"
 |**ANALYSISQUERY**|Informationen für Auftragsschritte, die das ANALYSISQUERY-Subsystem verwenden.|  
 |**CmdExec**|Informationen für Auftragsschritte, die das **CmdExec** -Subsystem verwenden.|  
 |**Distribution**|Informationen für Auftragsschritte, die das **Distribution** -Subsystem verwenden.|  
-|**Dt**|Informationen für Auftragsschritte, die das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Subsystem verwenden.|  
-|**Protokoll Leser**|Informationen für Auftragsschritte, die das **LogReader** -Subsystem verwenden.|  
+|**Dts**|Informationen für Auftragsschritte, die das [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Subsystem verwenden.|  
+|**LogReader**|Informationen für Auftragsschritte, die das **LogReader** -Subsystem verwenden.|  
 |**Merge** (Zusammenführen)|Informationen für Auftragsschritte, die das **Merge** -Subsystem verwenden.|  
 |**PowerShell**|Informationen für Auftragsschritte, die das **PowerShell** -Subsystem verwenden.|  
-|**Queue Reader**|Informationen für Auftragsschritte, die das **QueueReader** -Subsystem verwenden.|  
-|**Überblick**|Informationen für Auftragsschritte, die das **Momentaufnahme** -Subsystem verwenden.|  
+|**QueueReader**|Informationen für Auftragsschritte, die das **QueueReader** -Subsystem verwenden.|  
+|**Momentaufnahme**|Informationen für Auftragsschritte, die das **Momentaufnahme** -Subsystem verwenden.|  
 |**TSQL**|Informationen für Auftragsschritte, die [!INCLUDE[tsql](../../includes/tsql-md.md)]ausführen.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwalten von Auftrags Schritten](../../ssms/agent/manage-job-steps.md)   
+ [Verwalten von Auftragsschritten](../../ssms/agent/manage-job-steps.md)   
  [Verwenden von Leistungsobjekten](../../ssms/agent/use-performance-objects.md)   
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](monitor-resource-usage-system-monitor.md)  
   

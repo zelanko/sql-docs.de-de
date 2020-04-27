@@ -14,14 +14,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96229c151957cd0b0bf91c248b4d96a294864181
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63251112"
 ---
 # <a name="sql-server-access-methods-object"></a>SQL Server, Zugriffsmethoden-Objekt
-  Das **Access Methods** -Objekt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in stellt Leistungsindikatoren bereit, um zu überwachen, wie auf die logischen Daten in der Datenbank zugegriffen wird. Der physische Zugriff auf die Datenbankseiten auf dem Datenträger wird mithilfe der **Puffer-Manager** -Leistungsindikatoren überwacht. Durch die Überwachung der Methoden, die für den Zugriff auf in der Datenbank gespeicherte Daten verwendet werden, können Sie leichter bestimmen, ob die Abfrageleistung verbessert werden kann, indem Sie Indizes hinzufügen oder ändern, Partitionen hinzufügen oder verschieben, Dateien oder Dateigruppen hinzufügen, Indizes defragmentieren oder Abfragen neu schreiben. Die **Zugriffsmethoden** -Leistungsindikatoren können auch zum Überwachen des Umfangs der Daten, Indizes und des freien Speicherplatzes in der Datenbank verwendet werden und dadurch einen Hinweis auf das Datenvolumen und die Fragmentierung der einzelnen Serverinstanzen geben. Eine zu starke Fragmentierung kann die Leistung beeinträchtigen.  
+  Das **Zugriffsmethoden** -Objekt in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt Leistungsindikatoren zum Überwachen des Zugriffs auf die logischen Daten in der Datenbank bereit. Der physische Zugriff auf die Datenbankseiten auf dem Datenträger wird mithilfe der **Puffer-Manager** -Leistungsindikatoren überwacht. Durch die Überwachung der Methoden, die für den Zugriff auf in der Datenbank gespeicherte Daten verwendet werden, können Sie leichter bestimmen, ob die Abfrageleistung verbessert werden kann, indem Sie Indizes hinzufügen oder ändern, Partitionen hinzufügen oder verschieben, Dateien oder Dateigruppen hinzufügen, Indizes defragmentieren oder Abfragen neu schreiben. Die **Zugriffsmethoden** -Leistungsindikatoren können auch zum Überwachen des Umfangs der Daten, Indizes und des freien Speicherplatzes in der Datenbank verwendet werden und dadurch einen Hinweis auf das Datenvolumen und die Fragmentierung der einzelnen Serverinstanzen geben. Eine zu starke Fragmentierung kann die Leistung beeinträchtigen.  
   
  Einzelheiten über Datenmengen, Fragmentierung und Auslastung finden Sie in den folgenden dynamischen Verwaltungssichten:  
   
@@ -29,64 +29,64 @@ ms.locfileid: "63251112"
   
 -   [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql)  
   
--   [sys. dm_db_partition_stats &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql)  
+-   [sys.dm_db_partition_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql)  
   
--   [sys. dm_db_index_usage_stats &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql)  
+-   [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql)  
   
  Verwenden Sie für den Speicherplatzverbrauch in **tempdb** auf der Dateiebene, der Aufgabenebene und der Sitzungsebene die folgenden dynamischen Verwaltungssichten:  
   
--   [sys. dm_db_file_space_usage &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql)  
+-   [sys.dm_db_file_space_usage &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql)  
   
--   [sys. dm_db_task_space_usage &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql)  
+-   [sys.dm_db_task_space_usage &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql)  
   
--   [sys. dm_db_session_space_usage &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql)  
+-   [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql)  
   
- Diese Tabelle enthält eine Beschreibung der Indikatoren für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Zugriffsmethoden** -Leistungsindikatoren überwacht.  
+ Diese Tabelle enthält eine Beschreibung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Access Methods **-Zähler in** .  
   
 |Zugriffsmethoden-Leistungsindikatoren von SQL Server|BESCHREIBUNG|  
 |----------------------------------------|-----------------|  
-|**Au-Bereinigungs Batches/Sek.**|Anzahl der Batches pro Sekunde, die durch den Hintergrundtask für den Cleanup von zurückgestellten gelöschten Zuordnungseinheiten erfolgreich ausgeführt wurden.|  
-|**Au-Cleanups/Sek.**|Anzahl der Zuordnungseinheiten pro Sekunde, die durch den Hintergrundtask für den Cleanup zurückgestellter gelöschter Zuordnungseinheiten erfolgreich gelöscht wurden. Für jeden Einheitenlöschvorgang sind mehrere Batches erforderlich.|  
-|**Anzahl der als Verweis erstellten LOB-Anzahl**|Anzahl der LOB-Werte, die als Verweis ausgegeben wurden. Als Verweis erstellte LOB-Werte werden in bestimmten Massenvorgängen verwendet, um die Kosten einer Übergabe nach Wert zu vermeiden.|  
-|**Anzahl der als Verweis verwendeten Lob-Verwendung**|Anzahl der LOB-Werte, die als Verweis verwendet wurden. Als Verweis erstellte LOB-Werte werden in bestimmten Massenvorgängen verwendet, um die Kosten einer Übergabe nach Wert zu vermeiden.|  
-|**Lob-Read-Ahead zählen**|Anzahl der LOB-Seiten, für die ein Read-Ahead ausgegeben wurde.|  
-|**Anzahl von Pull in Zeile**|Anzahl der Werte, die durch Ausführen eines Pulls aus Außerhalb Zeile in Innerhalb Zeile verschoben wurden.|  
-|**Anzahl von Push aus Zeile**|Anzahl der Werte, die durch Ausführen eines Pushs von innerhalb einer Zeile außerhalb von Zeilen verschoben wurden.|  
-|**Zurück gestellte gelöschte aus**|Anzahl der Zuordnungseinheiten, die durch den Hintergrundtask für den Cleanup zurückgestellter gelöschter Zuordnungen gelöscht werden sollen.|  
-|**Zurück gestellte gelöschte Rowsets**|Anzahl der erstellten Rowsets im Ergebnis abgebrochener Vorgänge zur Onlineindexerstellung, die durch den Hintergrundtask für den Cleanup von zurückgestellten gelöschten Rowsets gelöscht werden sollen.|  
-|**Gelöschte rowsetbereinigungen/Sek.**|Anzahl der erstellten Rowsets im Ergebnis abgebrochener Vorgänge zur Onlineindexerstellung, die durch den Hintergrundtask für den Cleanup von zurückgestellten gelöschten Rowsets pro Sekunde erfolgreich gelöscht wurden.|  
-|**Übersprungen gelöschte Rowsets/Sekunde**|Anzahl der Rowsets im Ergebnis abgebrochener Vorgänge zur Onlineindexerstellung, die durch den Hintergrundtask für den Cleanup von zurückgestellten gelöschten Rowsets ausgelassen wurden.|  
-|**Block Belegungen/Sek.**|Anzahl der Blöcke, deren Zuordnung in allen Datenbanken pro Sekunde in dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aufgehoben wurde.|  
+|**Cleanupbatches für AUs/Sekunde**|Anzahl der Batches pro Sekunde, die durch den Hintergrundtask für den Cleanup von zurückgestellten gelöschten Zuordnungseinheiten erfolgreich ausgeführt wurden.|  
+|**Cleanups für AUs/Sekunde**|Anzahl der Zuordnungseinheiten pro Sekunde, die durch den Hintergrundtask für den Cleanup zurückgestellter gelöschter Zuordnungseinheiten erfolgreich gelöscht wurden. Für jeden Einheitenlöschvorgang sind mehrere Batches erforderlich.|  
+|**Anzahl der als Verweis erstellten LOB-Werte**|Anzahl der LOB-Werte, die als Verweis ausgegeben wurden. Als Verweis erstellte LOB-Werte werden in bestimmten Massenvorgängen verwendet, um die Kosten einer Übergabe nach Wert zu vermeiden.|  
+|**Anzahl der als Verweis verwendeten LOB-Werte**|Anzahl der LOB-Werte, die als Verweis verwendet wurden. Als Verweis erstellte LOB-Werte werden in bestimmten Massenvorgängen verwendet, um die Kosten einer Übergabe nach Wert zu vermeiden.|  
+|**Anzahl der LOB-Read-Aheads**|Anzahl der LOB-Seiten, für die ein Read-Ahead ausgegeben wurde.|  
+|**Anzahl für Pull in Zeile**|Anzahl der Werte, die durch Ausführen eines Pulls aus Außerhalb Zeile in Innerhalb Zeile verschoben wurden.|  
+|**Anzahl für Push aus Zeile**|Anzahl der Werte, die durch Ausführen eines Pushs von innerhalb einer Zeile außerhalb von Zeilen verschoben wurden.|  
+|**Zurückgestellte gelöschte AUs**|Anzahl der Zuordnungseinheiten, die durch den Hintergrundtask für den Cleanup zurückgestellter gelöschter Zuordnungen gelöscht werden sollen.|  
+|**Zurückgestellte gelöschte Rowsets**|Anzahl der erstellten Rowsets im Ergebnis abgebrochener Vorgänge zur Onlineindexerstellung, die durch den Hintergrundtask für den Cleanup von zurückgestellten gelöschten Rowsets gelöscht werden sollen.|  
+|**Cleanup für gelöschte Rowsets/Sekunde**|Anzahl der erstellten Rowsets im Ergebnis abgebrochener Vorgänge zur Onlineindexerstellung, die durch den Hintergrundtask für den Cleanup von zurückgestellten gelöschten Rowsets pro Sekunde erfolgreich gelöscht wurden.|  
+|**Gelöschte Rowsets ausgelassen/Sekunde**|Anzahl der Rowsets im Ergebnis abgebrochener Vorgänge zur Onlineindexerstellung, die durch den Hintergrundtask für den Cleanup von zurückgestellten gelöschten Rowsets ausgelassen wurden.|  
+|**Aufgehobene Blockzuordnungen/Sekunde**|Anzahl der Blöcke, deren Zuordnung in allen Datenbanken pro Sekunde in dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aufgehoben wurde.|  
 |**Zugeordnete Blöcke/Sekunde**|Anzahl der Blöcke, die in allen Datenbanken pro Sekunde in dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zugeordnet wurden.|  
-|**Fehler bei Bereinigungs Batches für au/Sek.**|Anzahl der Batches pro Sekunde, die fehlgeschlagen sind und für die ein erneuter Versuch durch den Hintergrundtask für den Cleanup von zurückgestellten gelöschten Zuordnungseinheiten erforderlich war. Der Fehler kann auf nicht genügend Arbeits- oder Datenträgerspeicher zurückzuführen sein, aber auch auf Hardwarefehler und andere Gründe.|  
-|**Fehler bei Blattseiten Cookie**|Häufigkeit, mit der ein Blattseitencookie während einer Indexsuche nicht verwendet werden konnte, da Änderungen auf der Blattseite vorgenommen wurden. Der Cookie wird verwendet, um die Indexsuche zu beschleunigen.|  
-|**Fehler bei Struktur Seiten Cookie**|Häufigkeit, mit der ein Strukturseitencookie während einer Indexsuche nicht verwendet werden konnte, da Änderungen auf den übergeordneten Seiten dieser Strukturseiten vorgenommen wurden. Der Cookie wird verwendet, um die Indexsuche zu beschleunigen.|  
-|**Weitergeleitete Datensätze/Sek.**|Anzahl der Datensätze pro Sekunde, die über Zeiger auf weitergeleitete Datensätze abgerufen wurden.|  
-|**Seiten Abruf Vorgänge/Sek.**|Anzahl der Seiten, die pro Sekunde von Scans nach freiem Speicherplatz abgerufen werden. Diese Scans suchen nach freiem Speicherplatz in Seiten, die bereits einer Zuordnungseinheit zugeordnet wurden, um Anforderungen zum Einfügen oder Bearbeiten von Datensatzfragmenten zu erfüllen.|  
-|**Überprüfungen von Überprüfungen/Sek.**|Anzahl der Scans pro Sekunde, die gestartet werden, um in bereits einer Zuordnungseinheit zugeordneten Seiten freien Speicherplatz zum Einfügen oder Bearbeiten eines Datensatzfragments zu suchen. Pro Scan können mehrere Seiten gefunden werden.|  
-|**Vollständige Scans/Sek.**|Anzahl der unbeschränkten, vollständigen Scans pro Sekunde. Hierbei kann es sich entweder um Scans der Basistabelle oder um vollständige Indexscans handeln.|  
-|**Index suchen/Sek.**|Anzahl der Indexsuchen pro Sekunde. Diese werden verwendet, um einen Bereichsscan zu starten, die Position eines Bereichsscans neu festzulegen, einzelne Indexdatensätze abzurufen sowie um den Index nach einer Einfügeposition für eine neue Zeile zu durchsuchen.|  
-|**LobHandle-Erstellungs Anzahl**|Anzahl der temporären LOBs, die erstellt wurden.|  
-|**LobHandle-zerstörungsanzahl**|Anzahl der temporären LOBs, die gelöscht wurden.|  
-|**Anzahl erstellter LobSS-Anbieter**|Anzahl der LOB-Speicherdienstanbieter (LobSSP), die erstellt wurden. Pro LobSSP wird eine Arbeitstabelle erstellt.|  
+|**Fehler in Cleanupbatches von AUs/Sekunde**|Anzahl der Batches pro Sekunde, die fehlgeschlagen sind und für die ein erneuter Versuch durch den Hintergrundtask für den Cleanup von zurückgestellten gelöschten Zuordnungseinheiten erforderlich war. Der Fehler kann auf nicht genügend Arbeits- oder Datenträgerspeicher zurückzuführen sein, aber auch auf Hardwarefehler und andere Gründe.|  
+|**Fehler beim Verwenden des Blattseitencookies**|Häufigkeit, mit der ein Blattseitencookie während einer Indexsuche nicht verwendet werden konnte, da Änderungen auf der Blattseite vorgenommen wurden. Der Cookie wird verwendet, um die Indexsuche zu beschleunigen.|  
+|**Fehler beim Verwenden von Strukturseitencookie**|Häufigkeit, mit der ein Strukturseitencookie während einer Indexsuche nicht verwendet werden konnte, da Änderungen auf den übergeordneten Seiten dieser Strukturseiten vorgenommen wurden. Der Cookie wird verwendet, um die Indexsuche zu beschleunigen.|  
+|**Weitergeleitete Datensätze/Sekunde**|Anzahl der Datensätze pro Sekunde, die über Zeiger auf weitergeleitete Datensätze abgerufen wurden.|  
+|**Seitenabrufvorgänge für freien Speicher/Sekunde**|Anzahl der Seiten, die pro Sekunde von Scans nach freiem Speicherplatz abgerufen werden. Diese Scans suchen nach freiem Speicherplatz in Seiten, die bereits einer Zuordnungseinheit zugeordnet wurden, um Anforderungen zum Einfügen oder Bearbeiten von Datensatzfragmenten zu erfüllen.|  
+|**Scans für freien Speicherplatz/Sekunde**|Anzahl der Scans pro Sekunde, die gestartet werden, um in bereits einer Zuordnungseinheit zugeordneten Seiten freien Speicherplatz zum Einfügen oder Bearbeiten eines Datensatzfragments zu suchen. Pro Scan können mehrere Seiten gefunden werden.|  
+|**Vollständige Scans/Sekunde**|Anzahl der unbeschränkten, vollständigen Scans pro Sekunde. Hierbei kann es sich entweder um Scans der Basistabelle oder um vollständige Indexscans handeln.|  
+|**Indexsuchen/Sekunde**|Anzahl der Indexsuchen pro Sekunde. Diese werden verwendet, um einen Bereichsscan zu starten, die Position eines Bereichsscans neu festzulegen, einzelne Indexdatensätze abzurufen sowie um den Index nach einer Einfügeposition für eine neue Zeile zu durchsuchen.|  
+|**Anzahl der erstellten LobHandle-Elemente**|Anzahl der temporären LOBs, die erstellt wurden.|  
+|**Anzahl der gelöschten LobHandle-Elemente**|Anzahl der temporären LOBs, die gelöscht wurden.|  
+|**Anzahl der erstellten LobSS-Anbieter**|Anzahl der LOB-Speicherdienstanbieter (LobSSP), die erstellt wurden. Pro LobSSP wird eine Arbeitstabelle erstellt.|  
 |**Anzahl der gelöschten LobSS-Anbieter**|Anzahl der LobSS-Anbieter, die gelöscht wurden.|  
 |**Anzahl der abgeschnittenen LobSS-Anbieter**|Anzahl der LobSS-Anbieter, die abgeschnitten wurden.|  
-|**Zuordnungen gemischter Seiten/Sek.**|Anzahl der Seiten, die in gemischten Blöcken pro Sekunde zugeordnet wurden. Diese können verwendet werden, um die IAM-Seiten und die ersten acht einer Zuordnungseinheit zugeordneten Seiten zu speichern.|  
-|**Seiten Komprimierungs Versuche/Sekunde**|Anzahl an Seiten, die zur Komprimierung auf Seitenebene ausgewertet werden. Dies schließt Seiten ein, die nicht komprimiert wurden, da beträchtliche Einsparungen erreicht werden konnten. Enthält alle Objekte in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz. Informationen zu bestimmten Objekten finden Sie unter [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql)aufgehoben wurde.|  
-|**Zuordnung von Seiten Zuordnungen/Sekunde**|Anzahl der Seiten, deren Zuordnung pro Sekunde in allen Datenbanken in dieser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz aufgehoben wurde. Darin enthalten sind Seiten aus sowohl gemischten als auch gleichartigen Blöcken.|  
-|**Seiten Teilungen/Sekunde**|Anzahl der Seitenteilungen pro Sekunde, die das Ergebnis eines Überlaufs von Indexseiten sind.|  
+|**Zuordnungen gemischter Seiten/Sekunde**|Anzahl der Seiten, die in gemischten Blöcken pro Sekunde zugeordnet wurden. Diese können verwendet werden, um die IAM-Seiten und die ersten acht einer Zuordnungseinheit zugeordneten Seiten zu speichern.|  
+|**Seitenkomprimierungsversuche/Sekunde**|Anzahl an Seiten, die zur Komprimierung auf Seitenebene ausgewertet werden. Dies schließt Seiten ein, die nicht komprimiert wurden, da beträchtliche Einsparungen erreicht werden konnten. Enthält alle Objekte in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz. Informationen zu bestimmten Objekten finden Sie unter [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql)aufgehoben wurde.|  
+|**Aufgehobene Seitenzuordnungen/Sekunde**|Anzahl der Seiten, deren Zuordnung pro Sekunde in allen Datenbanken in dieser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz aufgehoben wurde. Darin enthalten sind Seiten aus sowohl gemischten als auch gleichartigen Blöcken.|  
+|**Seitenteilungen/Sekunde**|Anzahl der Seitenteilungen pro Sekunde, die das Ergebnis eines Überlaufs von Indexseiten sind.|  
 |**Zugeordnete Seiten/Sekunde**|Anzahl der Seiten, die in allen Datenbanken pro Sekunde in dieser Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zugeordnet wurden. Hierzu zählen auch Seitenzuordnungen aus gemischten sowie aus einheitlichen Blöcken.|  
 |**Komprimierte Seiten/Sekunde**|Anzahl an Datenseiten, die mit PAGE-Komprimierung komprimiert werden. Enthält alle Objekte in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz. Informationen zu bestimmten Objekten finden Sie unter [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql)aufgehoben wurde.|  
-|**Überprüfungs Scans/Sek.**|Anzahl der Untersuchungsscans pro Sekunde, mit denen höchstens eine einzelne gekennzeichnete Zeile in einem Index oder einer Basistabelle gesucht wird.|  
-|**Bereichs Scans/Sekunde**|Anzahl der eingeschränkten Bereichsscans mithilfe von Indizes pro Sekunde.|  
-|**Überprüfungs Punkt-neuvalidierungen/Sekunde**|Häufigkeit pro Sekunde, mit der der Scanpunkt erneut überprüft werden musste, um den Scan fortsetzen zu können.|  
-|**Übersprungene Datensätze/Sek.**|Anzahl der inaktiv gesetzten Datensätze pro Sekunde, die im Laufe von Scans ausgelassen wurden.|  
+|**Untersuchungsscans/Sekunde**|Anzahl der Untersuchungsscans pro Sekunde, mit denen höchstens eine einzelne gekennzeichnete Zeile in einem Index oder einer Basistabelle gesucht wird.|  
+|**Bereichsscans/Sekunde**|Anzahl der eingeschränkten Bereichsscans mithilfe von Indizes pro Sekunde.|  
+|**Scanpunktüberprüfungen/Sekunde**|Häufigkeit pro Sekunde, mit der der Scanpunkt erneut überprüft werden musste, um den Scan fortsetzen zu können.|  
+|**Ausgelassene inaktive Datensätze/Sekunde**|Anzahl der inaktiv gesetzten Datensätze pro Sekunde, die im Laufe von Scans ausgelassen wurden.|  
 |**Ausweitungen von Tabellensperren/Sekunde**|Häufigkeit, mit der Sperren in einer Tabelle auf die TABLE- bzw. HoBT-Granularität ausgeweitet wurden.|  
-|**Verwendetes Blattseiten Cookie**|Häufigkeit, mit der ein Blattseitencookie während einer Indexsuche erfolgreich verwendet wurde, da keine Änderungen am Blatt aufgetreten sind. Der Cookie wird verwendet, um die Indexsuche zu beschleunigen.|  
-|**Verwendetes Struktur Seiten Cookie**|Häufigkeit, mit der ein Strukturseitencookie während einer Indexsuche erfolgreich verwendet wurde, da keine Änderungen an der übergeordneten Seite der Strukturseite aufgetreten sind. Der Cookie wird verwendet, um die Indexsuche zu beschleunigen.|  
-|**Erstellte Arbeitsdateien/Sek.**|Anzahl der pro Sekunde erstellten Arbeitsdateien. Arbeitsdateien können beispielsweise verwendet werden, um temporäre Ergebnisse für Hashjoins und Hashaggregate zu speichern.|  
-|**Erstellte Arbeits Tabellen/Sekunde**|Anzahl der pro Sekunde erstellten Arbeitstabellen. Arbeitstabellen können beispielsweise verwendet werden, um temporäre Ergebnisse von Spoolvorgängen für Abfragen, von LOB-Variablen, XML-Variablen und vom Cursor zu speichern.|  
-|**Verhältnis von Arbeits Tabellen aus Cache**|Prozentsatz der erstellten Arbeitstabellen, bei denen die ersten zwei Seiten der Arbeitstabelle nicht zugeordnet wurden, sondern im Arbeitstabellencache verfügbar waren. (Wenn eine Arbeitstabelle gelöscht wird, kann die Zuordnung von zwei Seiten beibehalten werden, die an den Arbeitstabellencache zurückgegeben werden. Hierdurch wird die Leistung erhöht.)|  
+|**Blattseitencookie verwendet**|Häufigkeit, mit der ein Blattseitencookie während einer Indexsuche erfolgreich verwendet wurde, da keine Änderungen am Blatt aufgetreten sind. Der Cookie wird verwendet, um die Indexsuche zu beschleunigen.|  
+|**Strukturseitencookie verwendet**|Häufigkeit, mit der ein Strukturseitencookie während einer Indexsuche erfolgreich verwendet wurde, da keine Änderungen an der übergeordneten Seite der Strukturseite aufgetreten sind. Der Cookie wird verwendet, um die Indexsuche zu beschleunigen.|  
+|**Erstellte Arbeitsdateien/Sekunde**|Anzahl der pro Sekunde erstellten Arbeitsdateien. Arbeitsdateien können beispielsweise verwendet werden, um temporäre Ergebnisse für Hashjoins und Hashaggregate zu speichern.|  
+|**Erstellte Arbeitstabellen/Sekunde**|Anzahl der pro Sekunde erstellten Arbeitstabellen. Arbeitstabellen können beispielsweise verwendet werden, um temporäre Ergebnisse von Spoolvorgängen für Abfragen, von LOB-Variablen, XML-Variablen und vom Cursor zu speichern.|  
+|**Quote der Arbeitstabellen aus Cache**|Prozentsatz der erstellten Arbeitstabellen, bei denen die ersten zwei Seiten der Arbeitstabelle nicht zugeordnet wurden, sondern im Arbeitstabellencache verfügbar waren. (Wenn eine Arbeitstabelle gelöscht wird, kann die Zuordnung von zwei Seiten beibehalten werden, die an den Arbeitstabellencache zurückgegeben werden. Hierdurch wird die Leistung erhöht.)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](monitor-resource-usage-system-monitor.md)  

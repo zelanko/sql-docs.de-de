@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ef049b4ded6408e651d5ec2c3db99c10bf7c27b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108765"
 ---
 # <a name="reporting-services-sharepoint-mode-installation-sharepoint-2010-and-sharepoint-2013"></a>Reporting Services-Installation im SharePoint-Modus (SharePoint 2010 und SharePoint 2013)
@@ -26,10 +26,9 @@ ms.locfileid: "66108765"
   
  Bei Ausführung von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus werden [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]- und Datenwarnungsfunktionen bereitgestellt. Weitere Informationen zu Funktionen im SharePoint-Modus finden Sie im Abschnitt "Funktions Unterstützung und Verhaltensunterschiede nach Server Modus" in [Reporting Services Berichts Servers](../reporting-services-report-server.md) .  
   
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus erfordert zwei grundlegende Installationen:  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus erfordert zwei grundlegende Installationen:  
   
-|Installation|BESCHREIBUNG|  
+|Installation|Beschreibung|  
 |------------------|-----------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Add-in für SharePoint-Produkte.|Durch das Add-In werden die Seiten und Funktionen der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Benutzeroberfläche auf einem SharePoint-Web-Front-End-Server installiert. Die Benutzeroberflächenfunktionen umfassen [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], Verwaltungsseiten in der SharePoint-Zentraladministration, innerhalb der SharePoint-Dokumentbibliotheken verwendete Funktionsseiten sowie Seiten für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Datenwarnungen.|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus installierte Berichts Server|Der Berichtsserver ist für die Daten- und Berichtsverarbeitung, das Rendern von Berichten sowie für die Verarbeitung von Abonnements und Datenwarnungen zuständig. Der im SharePoint-Modus ausgeführte Berichtsserver ist als gemeinsamer SharePoint-Dienst konzipiert und wird in dieser Form installiert.|  
@@ -47,13 +46,13 @@ ms.locfileid: "66108765"
   
  [Installieren oder Deinstallieren des Reporting Services-Add-Ins für SharePoint &#40;SharePoint 2010 und SharePoint 2013&#41;](install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  
   
- [Wo Sie das Reporting Services-Add-in für SharePoint-Produkte finden](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
+ [Verfügbarkeit des Reporting Services-Add-Ins für SharePoint-Produkte](where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)  
   
- [Hinzufügen eines zusätzlichen Berichts Servers zu einer Farm &#40;horizontale Skalierung von SSRS&#41;](add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
+ [Hinzufügen eines zusätzlichen Berichtsservers zu einer Farm &#40;Horizontales Skalieren für SSRS&#41;](add-an-additional-report-server-to-a-farm-ssrs-scale-out.md)  
   
  [Hinzufügen eines zusätzlichen Reporting Services-Web-Front-Ends zu einer Farm](add-an-additional-reporting-services-web-front-end-to-a-farm.md)  
   
- [Konfigurieren Sie E-Mail für eine Reporting Services-Dienst Anwendung &#40;SharePoint 2010 und SharePoint 2013&#41;](configure-e-mail-for-a-reporting-services-service-application.md)  
+ [Konfigurieren von E-Mail für eine Reporting Services-Dienstanwendung &#40;SharePoint 2010 und SharePoint 2013&#41;](configure-e-mail-for-a-reporting-services-service-application.md)  
   
  [Bereitstellen von Abonnements und Warnungen für SSRS-Dienstanwendungen](provision-subscriptions-and-alerts-for-ssrs-service-applications.md)  
   

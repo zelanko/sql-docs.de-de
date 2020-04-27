@@ -14,26 +14,26 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0e9f04742bbfabcfa0e351f25e9475a8022689e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481033"
 ---
 # <a name="create-a-domain-rule"></a>Erstellen einer Domänenregel
   In diesem Thema wird beschrieben, wie Sie eine Domänenregel in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) erstellen. Eine Domänenregel ist eine Bedingung, mit der Domänenwerte validiert, korrigiert und standardisiert werden. Eine Domänenregel muss über eine Domäne hinweg wahr sein, damit Domänenwerte als genau betrachtet werden und den Geschäftsanforderungen entsprechen. Domänenregeln können Überprüfungsregeln enthalten, die für die Überprüfung von Domänenwerten, aber nicht für die Korrektur von Daten in Data Quality-Projekten verwendet werden. Regeln umfassen auch Standardisierungsregeln, die auf gültige Daten angewendet und in der Datenkorrektur verwendet werden.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a> Voraussetzungen  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
  Um eine Domänenregel zu erstellen, müssen Sie eine Wissensdatenbank und eine Domäne in der Domänenverwaltungsaktivität geöffnet haben.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Sie müssen über die dqs_kb_editor- oder dqs_administrator-Rolle in der DQS_MAIN-Datenbank verfügen, um eine Domänenregel zu erstellen.  
   
-##  <a name="Build"></a>Erstellen von Domänen Regeln  
+##  <a name="build-domain-rules"></a><a name="Build"></a> Erstellen von Domänenregeln  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../../2014/data-quality-services/run-the-data-quality-client-application.md)aus.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "65481033"
   
 6.  Wählen Sie **Aktiv** aus, um anzugeben, dass die Regel ausgeführt wird (Standard), oder deaktivieren Sie Option, um zu verhindern, dass die Regel ausgeführt wird.  
   
-7.  Wählen Sie im Bereich **Regel erstellen** aus der Dropdownliste im Feld der Regelklausel eine Bedingung aus.  
+7.  Wählen Sie im Bereich **Regel erstellen** eine Bedingung aus der Dropdown Liste im Feld Klausel der Regel aus.  
   
 8.  Falls die Bedingung einen Wert erfordert, geben Sie den Wert im zugeordneten Textfeld ein.  
   
@@ -70,13 +70,13 @@ ms.locfileid: "65481033"
   
 16. Fahren Sie mit der nachfolgenden Testprozedur fort.  
   
-##  <a name="Test"></a>Testen von Domänen Regeln  
+##  <a name="test-domain-rules"></a><a name="Test"></a>Testen von Domänen Regeln  
   
 1.  Wählen Sie eine Regel aus, und klicken Sie auf das Symbol **Ausgewählte Domänenregel für Testdaten ausführen** .  
   
 2.  Klicken Sie im Dialogfeld Domänenregel testen auf das Symbol **Fügt einen neuen Testbegriff für die Domänenregel hinzu** . Geben Sie einen Wert ein, um diesen zu testen. Geben Sie ggf. andere Werte ein. Wählen Sie einen Wert aus, und klicken Sie dann auf das Symbol **Entfernt den ausgewählten Testbegriff** , wenn erforderlich.  
   
-3.  Klicken Sie **auf das Symbol Domänen Regel für alle Begriffe testen** .  
+3.  Klicken Sie auf das Symbol **Testet die Domänenregeln für alle Begriffe** .  
   
 4.  Überprüfen Sie die Gültigkeit der einzelnen Begriffe. Eine Häkchen bedeutet „richtig“, ein Kreuz bedeutet „Fehler“ und ein Dreieck bedeutet „ungültig“.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "65481033"
   
 7.  Fahren Sie mit der nachfolgenden Anwendungsprozedur fort.  
   
-##  <a name="Apply"></a>Anwenden von Domänen Regeln  
+##  <a name="apply-domain-rules"></a><a name="Apply"></a>Anwenden von Domänen Regeln  
   
 1.  Klicken Sie auf **Alle Regeln anwenden** , um die Regeln auf die Werte in der Domäne anzuwenden. Nachdem Sie auf **Alle Regeln anwenden**geklickt haben, wird ein Popupfenster angezeigt, in dem angegeben ist, wie viele Werte in bestimmten Status von der Regel betroffen sind. Klicken Sie auf **Ja** , wenn Sie die Regel trotzdem anwenden möchten, oder auf **Nein** , um sie nicht anzuwenden. Wenn Sie auf **Ja**klicken, klicken Sie anschließend auf **OK** , um das Popupfenster mit den Ergebnissen zu schließen.  
   
@@ -97,10 +97,10 @@ ms.locfileid: "65481033"
   
 3.  Klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [Beenden der Domänenverwaltungsaktivität](../../2014/data-quality-services/end-the-domain-management-activity.md)beschrieben.  
   
-##  <a name="FollowUp"></a>Nachverfolgung: nach dem Erstellen einer Domänen Regel  
+##  <a name="follow-up-after-creating-a-domain-rule"></a><a name="FollowUp"></a>Nachverfolgung: nach dem Erstellen einer Domänen Regel  
  Nachdem Sie eine Domänenregel erstellt haben, können Sie andere Domänenverwaltungsaufgaben in der Domäne ausführen. Sie können die Wissensermittlung durchführen, um der Domäne Wissen hinzuzufügen, oder Sie können der Domäne eine Abgleichsrichtlinie hinzufügen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../../2014/data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../../2014/data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../../2014/data-quality-services/create-a-matching-policy.md).  
   
-##  <a name="Conditions"></a>Domänen Regel Bedingungen  
+##  <a name="domain-rule-conditions"></a><a name="Conditions"></a>Domänen Regel Bedingungen  
  In der nachfolgenden Tabelle werden die Bedingungen beschrieben, die in der Domänenregel angewendet werden können. Die Tabelle enthält außerdem ein Beispiel zur Veranschaulichung, wie die Bedingungen angewendet werden können.  
   
  Wenn eine Domänenregel angewendet wird und ein Domänenwert nicht der Regel entspricht, wird der Wert auf Ungültig festgelegt. Ein Wert, für den Ungültig angegeben ist, wird in Richtig geändert, wenn die Regel, wegen der er ungültig ist, gelöscht oder deaktiviert wird bzw. so geändert wird, dass der Wert jetzt der Regel entspricht. Wenn Sie für einen Wert manuell Ungültig angegeben haben (auf der Registerkarte Domänenwerte der Aktivität Domänenverwaltung) und eine Regel, der der Wert nicht entspricht, gelöscht, deaktiviert oder geändert wird, bleibt der Wert trotzdem gemäß der manuellen Festlegung ungültig.  
@@ -109,7 +109,7 @@ ms.locfileid: "65481033"
   
  Beim Erstellen einer Domänenregel stehen verschiedene Alternativen zur Auswahl. Um beispielsweise zu überprüfen, ob Werte mit dem Buchstaben A, B oder C beginnen, können Sie eine einfache Regel mit einer komplexen Bedingung (z. B. ein regulärer Ausdruck mit Pipezeichen) erstellen, oder Sie können eine komplexe Regel erstellen, die mehrere einfache Bedingungen enthält. Beispiel für die erste Regel: „Wert enthält regulären Ausdruck (^A|^B|^C)“. Beispiel für die zweite Regel: „'Wert beginnt mit A' OR 'Wert beginnt mit B' OR 'Wert beginnt mit C'“.  
   
-|Bedingung|BESCHREIBUNG|Beispiel|  
+|Bedingung|Beschreibung|Beispiel|  
 |---------------|-----------------|-------------|  
 |Länge ist gleich|Nur die Werte, die die vom Operanden festgelegte Anzahl an Zeichen enthalten, sind gültig.|Beispieloperand: 3<br /><br /> Gültiger Wert: BB1<br /><br /> Ungültiger Wert: AA|  
 |Länge ist größer als oder gleich|Nur die Werte, die mindestens die vom Operanden festgelegte Anzahl an Zeichen enthalten, sind gültig.|Beispieloperand: 3<br /><br /> Gültige Werte: BB1, BBAA<br /><br /> Ungültiger Wert: AA|  

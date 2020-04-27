@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 93b160b6e513ad866126df8b401b82ee1270be84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489655"
 ---
-# <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>Aufgabe 9: Hinzufügen der Transformation UNION ALL, um richtige und korrigierte Datensätze zu kombinieren
+# <a name="task-9-adding-union-all-transform-to-combine-correct-and-corrected-records"></a>Aufgabe 9: Hinzufügen der Transformation UNION ALL zur Kombination richtiger und korrigierter Datensätze
   In dieser Aufgabe fügen Sie dem Datenfluss die Transformation UNION ALL hinzu. Die Transformation für UNION ALL kombiniert mehrere Eingaben zu einer einzigen Ausgabe. In Ihrem Szenario kombiniert sie richtige und korrigierte Datensätze zu einem Datenstrom.  
   
 1.  Ziehen Sie die Transformation **Union all** Transform aus **Common** section der **SSIS-Toolbox** auf die Registerkarte **Datenfluss** , und platzieren Sie Sie unter **richtige und korrigierte Datensätze auswählen**.  
@@ -43,6 +43,6 @@ ms.locfileid: "65489655"
 7.  Dieser **Connector** sollte mit dem Titel **korrigiert**versehen werden. Da nur zwei Bedingungen **korrekt** und **korrigiert**sind und bereits eine Bedingung verwendet wurde, wird das Dialogfeld Eingabe- **/ausgabeauswahl** nicht angezeigt. Wenn sich die Konnektoren überlappen, verschieben Sie einen nach links und den anderen nach rechts, indem Sie den Konnektor nach links bzw. rechts ziehen.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 10: Hinzufügen der Transformation für Fuzzygruppierung, um Duplikate zu identifizieren](../../2014/tutorials/task-10-adding-fuzzy-group-transform-to-identify-duplicates.md)  
+ [Aufgabe 10: Hinzufügen der Transformation für Fuzzygruppierung zur Identifizierung von Duplikaten](../../2014/tutorials/task-10-adding-fuzzy-group-transform-to-identify-duplicates.md)  
   
   

@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0a72a030e504fca472596fd8e98faec0b98e5803
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211878"
 ---
 # <a name="delete-statistics"></a>Löschen von Statistiken
@@ -37,20 +37,20 @@ ms.locfileid: "68211878"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Gehen Sie vorsichtig vor, wenn Sie Statistiken löschen. Dieser Vorgang kann sich auf den vom Abfrageoptimierer ausgewählten Ausführungsplan auswirken.  
   
 -   Statistiken für Indizes können mit DROP STATISTICS nicht gelöscht werden. Die Statistiken bleiben so lange vorhanden wie der Index.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung in der Tabelle oder Sicht.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-drop-statistics-from-a-table-or-view"></a>So löschen Sie Statistiken aus einer Tabelle oder einer Sicht  
   
@@ -66,7 +66,7 @@ ms.locfileid: "68211878"
   
 6.  Stellen Sie im Dialogfeld **Objekt löschen** sicher, dass die richtige Statistik ausgewählt ist, und klicken Sie auf **OK**.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-drop-statistics-from-a-table-or-view"></a>So löschen Sie Statistiken aus einer Tabelle oder einer Sicht  
   

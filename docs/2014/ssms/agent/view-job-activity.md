@@ -16,16 +16,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3fc6099fa9f523b351489ce4301596aeb90c1509
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211306"
 ---
 # <a name="view-job-activity"></a>Auftragsaktivitäten anzeigen
   In diesem Thema wird beschrieben, wie Sie den Laufzeitstatus von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Aufträgen in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)]anzeigen können.  
   
- Wenn der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst startet, wird eine neue Sitzung erstellt und die **sysjobactivity** -Tabelle in der **msdb** -Datenbank wird mit allen vorhandenen definierten Aufträgen aufgefüllt. In dieser Tabelle werden die aktuelle Auftragsaktivität und der aktuelle Auftragsstatus aufgezeichnet. Mithilfe des Auftragsaktivitätsmonitors im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent können Sie den aktuellen Status von Aufträgen anzeigen. Falls der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst unerwartet beendet wird, ersehen Sie aus der **sysjobactivity** -Tabelle, welche Aufträge ausgeführt wurden, als der Dienst beendet wurde.  
+ Wenn der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Dienst startet, wird eine neue Sitzung erstellt, und die **sysjobactivity**-Tabelle in der **msdb**-Datenbank wird mit allen vorhandenen definierten Aufträgen aufgefüllt. In dieser Tabelle werden die aktuelle Auftragsaktivität und der aktuelle Auftragsstatus aufgezeichnet. Mithilfe des Auftragsaktivitätsmonitors im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent können Sie den aktuellen Status von Aufträgen anzeigen. Falls der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienst unerwartet beendet wird, ersehen Sie aus der **sysjobactivity** -Tabelle, welche Aufträge ausgeführt wurden, als der Dienst beendet wurde.  
   
  **In diesem Thema**  
   
@@ -33,7 +33,7 @@ ms.locfileid: "68211306"
   
      [Sicherheit](#Security)  
   
--   **So zeigen Sie die Auftrags Aktivität an mit:**  
+-   **So zeigen Sie die Auftragsaktivität an mit**  
   
      [SQL Server Management Studio](#SSMS)  
   
@@ -41,10 +41,10 @@ ms.locfileid: "68211306"
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
  Ausführliche Informationen finden Sie unter [Implementieren der SQL Server-Agent-Sicherheit](implement-sql-server-agent-security.md).  
   
-##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-view-job-activity"></a>So zeigen Sie die Auftragsaktivität an  
   
@@ -60,7 +60,7 @@ ms.locfileid: "68211306"
   
 6.  Klicken Sie auf **Aktualisieren**, um den Auftragsaktivitätsmonitor zu aktualisieren. Um weniger Zeilen anzuzeigen, klicken Sie auf **Filter** , und geben Sie Filterparameter ein.  
   
-##  <a name="TSQL"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-view-job-activity"></a>So zeigen Sie die Auftragsaktivität an  
   

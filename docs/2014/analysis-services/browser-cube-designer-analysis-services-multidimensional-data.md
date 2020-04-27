@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 902d35dfc20973dbbad5e6608d5934b31245d9d2
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174299"
 ---
 # <a name="browser-cube-designer-analysis-services---multidimensional-data"></a>Browser (Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
@@ -30,7 +30,7 @@ ms.locfileid: "78174299"
 
  ![MDX-Abfrage-Designer für Analysis Services, Entwurfsansicht](media/rsqd-dsawas-mdx-designmode.gif "MDX-Abfrage-Designer für Analysis Services, Entwurfsansicht")
 
- Wenn Sie im grafischen Entwurfs Modus arbeiten und die UMSCHALT Fläche **autoExecute** (![autoExecute the Query](media/rsqdicon-autoexecute.gif "Automatisches Ausführen der Abfrage")) auf der Symbolleiste aktiviert ist, führt der **Browser** jedes Mal eine Abfrage aus, wenn Sie ein Metadatenobjekt im Datenbereich ablegen. Sie können die Abfrage auch manuell mithilfe der Schaltfläche **Abfrage ausführen** (![Abfrage ausführen](media/rsqdicon-run.gif "Abfrage ausführen")) auf der Symbolleiste ausführen.
+ Wenn Sie im grafischen Entwurfs Modus arbeiten und die UMSCHALT Fläche **autoExecute** (![autoExecute the Query](media/rsqdicon-autoexecute.gif "Abfrage automatisch ausführen")) auf der Symbolleiste aktiviert ist, führt der **Browser** jedes Mal eine Abfrage aus, wenn Sie ein Metadatenobjekt im Datenbereich ablegen. Sie können die Abfrage auch manuell mithilfe der Schaltfläche **Abfrage ausführen** (![Abfrage ausführen](media/rsqdicon-run.gif "Abfrage ausführen")) auf der Symbolleiste ausführen.
 
  Um vom grafischen Abfrage-Designer in den **Abfragemodus** zu wechseln und mit dem Text der MDX-Anweisungen zu arbeiten, klicken Sie auf der Symbolleiste auf die Schaltfläche **Entwurfsmodus** .
 
@@ -46,16 +46,16 @@ ms.locfileid: "78174299"
 
  Im Bereich **Metadaten** werden Registerkarten für **Metadaten** und **Funktionen**angezeigt. Auf der Registerkarte **Metadaten** können Sie Dimensionen, Hierarchien, KPIs und Measures in den Abfrageentwurfsbereich ziehen. Auf der Registerkarte **Funktionen** können Sie Funktionen in den Abfrageentwurfsbereich ziehen. Wenn Sie die Abfrage ausführen, werden im Abfrageentwurfsbereich die Ergebnisse für die MDX-Abfrage angezeigt. Sie können auch auf der **Symbolleiste** auf **In Excel analysieren** klicken, um die Daten nach Microsoft Office Excel zu exportieren und die Ergebnisse wie normale Benutzer in einer PivotTable anzuzeigen. In den folgenden Abschnitten werden die Symbolleiste und die jeweiligen Bereiche für die einzelnen **Browsermodi** ausführlicher beschrieben.
 
- Beachten Sie, dass während der Arbeit im Textmodus die UMSCHALT Fläche **autoExecute** (![autoExecute the Query](media/rsqdicon-autoexecute.gif "Automatisches Ausführen der Abfrage")) auf der Symbolleiste nicht verfügbar ist. Sie können Abfragen jedoch manuell mithilfe der Schaltfläche **Abfrage ausführen** (![Abfrage ausführen](media/rsqdicon-run.gif "Abfrage ausführen")) auf der Symbolleiste ausführen.
+ Beachten Sie, dass während der Arbeit im Textmodus die UMSCHALT Fläche **autoExecute** (![autoExecute the Query](media/rsqdicon-autoexecute.gif "Abfrage automatisch ausführen")) auf der Symbolleiste nicht verfügbar ist. Sie können Abfragen jedoch manuell mithilfe der Schaltfläche **Abfrage ausführen** (![Abfrage ausführen](media/rsqdicon-run.gif "Abfrage ausführen")) auf der Symbolleiste ausführen.
 
 ## <a name="sections"></a>Abschnitte
- **Symbolleiste** Die Symbolleiste enthält ein Tool, das in der Entwurfs Ansicht oder der Abfrage Ansicht verwendet werden kann. Weitere Informationen zur Symbolleiste und zur Verwendung der Funktionen finden Sie unter [Symbolleiste &#40;Registerkarte „Browser“, Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md).
+ **In Excel analysieren** Die Symbolleiste enthält ein Tool, das in der Entwurfsansicht oder der Abfrageansicht verwendet werden kann. Weitere Informationen zur Symbolleiste und zur Verwendung der Funktionen finden Sie unter [Symbolleiste &#40;Registerkarte „Browser“, Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md).
 
- **In Excel analysieren** Verwenden Sie die Funktion **in Excel analysieren** , um die aktuelle Auswahl der Cubedaten an Excel zu senden, damit Sie die Daten in einer Pivottabelle in einer Vorschau anzeigen können. Die aktuelle Auswahl der Daten basiert auf den Elementen, die Sie aus dem Bereich **Metadaten** hinzugefügt haben, und beliebigen Filtern, die Sie möglicherweise mithilfe der Filter- und Abfrageerstellungsfunktionen definiert haben. Weitere Informationen finden Sie unter [Analysieren in Excel &#40;Registerkarte „Browser“, Cube-Designer, Analysis Services – mehrdimensionale Daten&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md).
+ **Symbolleiste** Untersuchen Sie im Cube-Designer auf der Registerkarte **Symbolleiste** , um die aktuelle Auswahl der Cubedaten an Excel zu senden, damit Sie die Daten in einer PivotTable in der Vorschau anzeigen können. Die aktuelle Auswahl der Daten basiert auf den Elementen, die Sie aus dem Bereich **Metadaten** hinzugefügt haben, und beliebigen Filtern, die Sie möglicherweise mithilfe der Filter- und Abfrageerstellungsfunktionen definiert haben. Weitere Informationen finden Sie unter [Analysieren in Excel &#40;Registerkarte „Browser“, Cube-Designer, Analysis Services – mehrdimensionale Daten&#41;](analyze-in-excel-browser-cube-designer-analysis-services-multidimensional-data.md).
 
- **Metadaten** Verwenden Sie den Bereich **Metadaten** , um im Cube enthaltene Objekte anzuzeigen, einen Drilldown in Hierarchien auszuführen und Measures zu untersuchen und zu verwenden. Nach dem Auswählen und zum Anzeigen der Daten, die ihnen im Bereich **Bericht** zugeordnet sind. Weitere Informationen zu diesem Bereich finden Sie unter [Metadaten &#40;Registerkarte „Browser“, Cube-Designer, Analysis Services – mehrdimensionale Daten&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md).
+ **Metadaten** Untersuchen Sie im Cube-Designer auf der Registerkarte **Metadaten** , um im Cube enthaltene Objekte anzuzeigen, einen Drilldown in Hierarchien auszuführen und Measures zu untersuchen und zu verwenden. Nach dem Auswählen und zum Anzeigen der Daten, die ihnen im Bereich **Bericht** zugeordnet sind. Weitere Informationen zu diesem Bereich finden Sie unter [Metadaten &#40;Registerkarte „Browser“, Cube-Designer, Analysis Services – mehrdimensionale Daten&#41;](metadata-browser-tab-cube-designer-analysis-services-multidimensional-data.md).
 
- **Filter und Abfrage** Verwenden Sie diesen Bereich der Entwurfs Oberfläche, um MDX-Abfragen zu erstellen, indem Sie Objekte aus dem **Metadatenbereich** ziehen und ablegen und Filterkriterien für den Quellcube oder die Dimension angeben. Weitere Informationen finden Sie unter [Abfrage und Daten &#40;Registerkarte „Browser“, Cube-Designer, Analysis Services – mehrdimensionale Daten&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md).
+ **Filter und Abfrage** Verwenden Sie diesen Bereich der Entwurfsoberfläche, um MDX-Abfragen zu erstellen, indem Sie Objekte per Drag & Drop aus dem Bereich **Metadaten** verschieben und Filterkriterien auf dem Quellcube oder der Dimension angeben. Weitere Informationen finden Sie unter [Abfrage und Daten &#40;Registerkarte „Browser“, Cube-Designer, Analysis Services – mehrdimensionale Daten&#41;](query-filter-browser-cube-designer-analysis-services-multidimensional-data.md).
 
 ## <a name="see-also"></a>Weitere Informationen
  [Cubeobjekte &#40;Analysis Services Mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md) [Cubes in mehrdimensionalen Modellen](multidimensional-models/cubes-in-multidimensional-models.md) [Cube-Designer &#40;Analysis Services Mehrdimensionale Daten&#41;](cube-designer-analysis-services-multidimensional-data.md)

@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dd4b9edc8c054a7fa2ec84bdc8d892e5b5a903a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316010"
 ---
 # <a name="lesson-2-adding-a-web-reference"></a>Lektion 2: Hinzufügen eines Webverweises
@@ -34,7 +34,7 @@ ms.locfileid: "63316010"
   
 4.  Geben Sie im Dialogfeld **Webverweis hinzufügen** im Feld **URL** die URL ein, um die Dienst Beschreibung des Report Server-Webdiensts zu erhalten http://localhost/reportserver/reportservice2010.asmx, z. b.. Klicken Sie dann auf die Schaltfläche " **go** ", um Informationen zum Webdienst abzurufen.  
   
-     \- oder –  
+     \- oder -  
   
      Wenn der Report Server-Webdienst auf dem lokalen Computer vorhanden ist, klicken Sie im Browser **Bereich auf den Link Webdienste auf dem lokalen Computer** . Klicken Sie dann in der angezeigten Liste auf den Link für den ReportService2010-Webdienst.  
   
@@ -42,8 +42,7 @@ ms.locfileid: "63316010"
   
 6.  Klicken Sie auf **Verweis hinzufügen** , um einen Webverweis für den Zielweb Dienst hinzuzufügen.  
   
-     
-  [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] lädt die Dienstbeschreibung herunter und generiert eine Proxyklasse als Schnittstelle zwischen der Anwendung und dem Berichtsserver-Webdienst. Damit der Webverweis funktionsfähig ist, muss auch dem <xref:System.Web.Services>-Namespace ein Verweis hinzugefügt werden.  
+     [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] lädt die Dienstbeschreibung herunter und generiert eine Proxyklasse als Schnittstelle zwischen der Anwendung und dem Berichtsserver-Webdienst. Damit der Webverweis funktionsfähig ist, muss auch dem <xref:System.Web.Services>-Namespace ein Verweis hinzugefügt werden.  
   
 7.  Klicken Sie im Menü Projekt auf **Verweis hinzufügen**.  
   

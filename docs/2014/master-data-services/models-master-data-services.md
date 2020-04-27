@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d202c04a41553b934c175edb7c0afcd907e846e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482540"
 ---
 # <a name="models-master-data-services"></a>Modelle (Master Data Services)
@@ -70,9 +70,9 @@ ms.locfileid: "65482540"
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Erstellen Sie ein Modell, um die Masterdaten zu organisieren.|[Erstellen Sie ein Modell &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)|  
+|Erstellen Sie ein Modell, um die Masterdaten zu organisieren.|[Erstellen eines Modells &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-master-data-services.md)|  
 |Ändern Sie den Namen eines vorhandenen Modells.|[Ändern eines Modell namens &#40;Master Data Services&#41;](../../2014/master-data-services/change-a-model-name-master-data-services.md)|  
-|Löschen Sie ein vorhandenes Modell.|[&#40;Master Data Services eines Modells löschen&#41;](../../2014/master-data-services/delete-a-model-master-data-services.md)|  
+|Löschen Sie ein vorhandenes Modell.|[Löschen eines Modells &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-model-master-data-services.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
@@ -84,6 +84,6 @@ ms.locfileid: "65482540"
   
 -   [Bereitstellen von Modellen &#40;Master Data Services&#41;](../../2014/master-data-services/deploying-models-master-data-services.md)  
   
--   [Modell Objekt Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)  
+-   [Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../../2014/master-data-services/model-object-permissions-master-data-services.md)  
   
   

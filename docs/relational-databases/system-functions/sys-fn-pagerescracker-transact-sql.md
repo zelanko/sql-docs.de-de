@@ -26,10 +26,10 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 ms.openlocfilehash: 6d8203979a0afdca1ae78b9bd51723c906c40ea2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68267075"
 ---
 # <a name="sysfn_pagerescracker-transact-sql"></a>sys. fn_PageResCracker (Transact-SQL)
@@ -56,7 +56,7 @@ Das 8-Byte-Hexadezimal Format einer Datenbankseiten Ressource.
 |file_id|**int**|Datei-ID|  
 |page_id|**int**|Seiten-ID|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
 `sys.fn_PageResCracker`wird verwendet, um die hexadezimale 8-Byte-Darstellung einer Datenbankseite in ein Rowset zu konvertieren, das die Datenbank-ID, die Datei-ID und die Seiten-ID der Seite enthält.   
 
 Sie können eine gültige Seiten Ressource aus der `page_resource` Spalte der [sys. dm_exec_requests &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) dynamische Verwaltungs Sicht oder [sys. sysprocesses &#40;Transact-SQL-&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md) Systemsicht abrufen. Wenn eine ungültige Seiten Ressource verwendet wird, ist die Rückgabe NULL.  

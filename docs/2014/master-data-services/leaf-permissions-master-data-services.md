@@ -17,10 +17,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ee587881b95821c2ae23580b54d298fa496cec15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479172"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Blattberechtigungen (Master Data Services)
@@ -28,7 +28,7 @@ ms.locfileid: "65479172"
   
  Bei Entitäten, für die keine expliziten Hierarchien aktiviert wurden, erfolgen die Zuweisung einer Berechtigung zu einem **Blatt** und die Zuweisung einer Berechtigung zur Entität auf die gleiche Weise.  
   
- **Anmerkungen**  
+ **Hinweise:**  
   
 -   Blattberechtigungen gelten nur für den Funktionsbereich **Explorer** der Benutzeroberfläche.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "65479172"
 |Berechtigung|BESCHREIBUNG|  
 |----------------|-----------------|  
 |**Schreibgeschützt**|Blattelemente werden zwar angezeigt, können vom Benutzer jedoch nicht hinzufügt, entfernt oder geändert werden.<br /><br /> Wenn konsolidierte Elemente vorhanden sind, werden die Namen und Codes zwar angezeigt, können vom Benutzer jedoch nicht hinzufügt, entfernt oder geändert werden.|  
-|**Alisierungs**|Blattelemente werden angezeigt und können vom Benutzer hinzugefügt, entfernt und geändert werden.<br /><br /> Wenn konsolidierte Elemente vorhanden sind, werden die Namen und Codes zwar angezeigt, können vom Benutzer jedoch nicht hinzufügt, entfernt oder geändert werden.|  
+|**Update**|Blattelemente werden angezeigt und können vom Benutzer hinzugefügt, entfernt und geändert werden.<br /><br /> Wenn konsolidierte Elemente vorhanden sind, werden die Namen und Codes zwar angezeigt, können vom Benutzer jedoch nicht hinzufügt, entfernt oder geändert werden.|  
 |**Deny**|Blattelemente für die Entität werden nicht angezeigt.|  
   
 ## <a name="attribute-permissions"></a>Attributberechtigungen  
@@ -46,13 +46,13 @@ ms.locfileid: "65479172"
 |Berechtigung|BESCHREIBUNG|  
 |----------------|-----------------|  
 |**Schreibgeschützt**|Das Attribut wird zwar angezeigt, aber der Benutzer kann keine Attributwerte ändern.|  
-|**Alisierungs**|Das Attribut wird angezeigt, und der Benutzer kann Attributwerte ändern.|  
+|**Update**|Das Attribut wird angezeigt, und der Benutzer kann Attributwerte ändern.|  
 |**Deny**|Das Attribut wird nicht angezeigt.<br /><br /> Hinweis: Der Zugriff auf die Attribute Name und Code kann nicht explizit verweigert werden.|  
   
 ### <a name="example"></a>Beispiel  
  Weisen Sie dem Attribut „Subcategory“ der Entität „Product“ die Berechtigung **Aktualisieren** zu. Verweigern Sie die Berechtigung für alle anderen Attribute.  
   
-|Name|Code|Subcategory (Aktualisiert)|  
+|name|Code|Subcategory (Aktualisiert)|  
 |----------|----------|----------------------------|  
 |Mountain-100|BK-M101|{5}Mountain Bikes|  
 |Mountain-100|BK-M201|{5}Mountain Bikes|  

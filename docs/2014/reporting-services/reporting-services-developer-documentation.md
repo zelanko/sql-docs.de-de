@@ -15,14 +15,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e8c555d853fd791bed29a06f561021b138526ea1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63255099"
 ---
 # <a name="developer39s-guide-reporting-services"></a>Entwickler&#39;s Guide (Reporting Services)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] bietet verschiedene Programmierschnittstellen, die Sie in ihren eigenen Anwendungen nutzen können. Sie können die vorhandenen Funktionen und Funktionen von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] verwenden, um benutzerdefinierte Berichts- und Verwaltungstools in Websites und Windows-Anwendungen zu erstellen, oder Sie können die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Plattform erweitern.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] enthält mehrere Programmierschnittstellen, die Sie in Ihre eigenen Anwendungen einbauen können. Sie können die vorhandenen Funktionen und Funktionen von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] verwenden, um benutzerdefinierte Berichts- und Verwaltungstools in Websites und Windows-Anwendungen zu erstellen, oder Sie können die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Plattform erweitern.  
   
  Das Erweitern der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Plattform umfasst die Erstellung neuer Komponenten und Ressourcen, die für den Datenzugriff, die Berichtsübermittlung und vieles mehr verwendet werden können. Sie können diese Komponenten und Ressourcen in den Unternehmen vermarkten, die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in ihrer Organisation verwenden.  
   
@@ -33,9 +33,8 @@ ms.locfileid: "63255099"
  [Report Server Web Service (Report Server-Webdienst)](report-server-web-service/report-server-web-service.md)  
  Über den Berichtsserver-Webdienst erhalten Sie Zugriff auf die kompletten Funktionen des Berichtsservers. Der Webdienst verwendet SOAP über HTTP und wurde als Kommunikationsschnittstelle zwischen den Clientprogrammen und dem Berichtsserver konzipiert. Der Webdienst und seine Methoden stellen die Funktionen des Berichtsservers zur Verfügung und ermöglichen die Erstellung benutzerdefinierter Tools für jeden Teil des gesamten Berichtslebenszyklus, von der Verwaltung bis zur Ausführung.  
   
- [URL-Zugriff (SSRS)](url-access-ssrs.md)  
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] unterstützt einen vollständige Satz URL-basierter Anforderungen, über die Sie schnell und problemlos auf die Berichtsnavigation und -anzeige zugreifen können. Sie können diese Technologie zusammen mit dem Berichtsserver-Webdienst verwenden, um eine vollständige Berichtslösung in Ihre vorhandenen Geschäftsanwendungen zu integrieren. Der URL-Zugriff ist dann besonders sinnvoll, wenn Sie Berichte als Teil eines Internetportals integrieren oder wenn Sie Berichte über einen Webbrowser anzeigen.  
+ [URL-Zugriff &#40;SSRS&#41;](url-access-ssrs.md)  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] unterstützt einen vollständige Satz URL-basierter Anforderungen, über die Sie schnell und problemlos auf die Berichtsnavigation und -anzeige zugreifen können. Sie können diese Technologie zusammen mit dem Berichtsserver-Webdienst verwenden, um eine vollständige Berichtslösung in Ihre vorhandenen Geschäftsanwendungen zu integrieren. Der URL-Zugriff ist dann besonders sinnvoll, wenn Sie Berichte als Teil eines Internetportals integrieren oder wenn Sie Berichte über einen Webbrowser anzeigen.  
   
  [Erweiterungen für Reporting Services](extensions/reporting-services-extensions.md)  
  Die modulare Architektur von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ermöglicht Erweiterungen. Eine verwaltete Code-API steht zur Verfügung, sodass Sie problemlos Erweiterungen entwickeln, installieren und verwalten können, die von vielen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Komponenten benötigt werden. Sie können Assemblys mithilfe [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] von erstellen und [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] neue Funktionen für Rendering, Sicherheit, Übermittlung und Datenverarbeitung hinzufügen, um die sich entwickelnden geschäftlichen Anforderungen zu erfüllen.  
@@ -50,9 +49,9 @@ ms.locfileid: "63255099"
  Beschreibt, wie Sie den [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -WMI-Anbieter zum Verwalten von Berichtsserverbereitstellungen verwenden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
- [Berichtsdefinitionssprache (SSRS)](reports/report-definition-language-ssrs.md)   
- [Technische Referenz (SSRS)](technical-reference-ssrs.md)   
- [Sichere Entwicklungs &#40;Reporting Services&#41;](extensions/secure-development/secure-development-reporting-services.md)  
+ [Reporting Services &#40;SSRS-&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)   
+ [Berichts Definitions Sprache &#40;SSRS&#41;](reports/report-definition-language-ssrs.md)   
+ [Technische Referenz &#40;SSRS&#41;](technical-reference-ssrs.md)   
+ [Sichere Entwicklung (Reporting Services)](extensions/secure-development/secure-development-reporting-services.md)  
   
   

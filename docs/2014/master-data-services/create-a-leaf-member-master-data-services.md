@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a113803c9d6e5c688ea6eddca9446d96d79e82be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483414"
 ---
 # <a name="create-a-leaf-member-master-data-services"></a>Erstellen eines Blattelements (Master Data Services)
@@ -52,6 +52,6 @@ ms.locfileid: "65483414"
 ## <a name="see-also"></a>Weitere Informationen  
  [Laden oder Aktualisieren von Elementen in Master Data Services mithilfe des Stagingprozesses](add-update-and-delete-data-master-data-services.md)   
  [Erstellen Sie ein konsolidiertes Element &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)   
- [Mitglieder &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
+ [Elemente &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
   

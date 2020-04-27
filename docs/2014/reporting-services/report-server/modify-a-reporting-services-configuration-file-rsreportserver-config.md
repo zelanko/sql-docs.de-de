@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2c77ae94a7b8c5760d14dcb3fed2af40573549d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103761"
 ---
 # <a name="modify-a-reporting-services-configuration-file-rsreportserverconfig"></a>Ändern einer Reporting Services-Konfigurationsdatei (RSreportserver.config)
@@ -35,7 +35,7 @@ ms.locfileid: "66103761"
   
 -   [So bearbeiten Sie eine Reporting Services-Konfigurationsdatei](#bkmk_edit_configuation_file)  
   
-##  <a name="bkmk_read_values"></a> Lesen und Verwenden von Konfigurationswerten  
+##  <a name="reading-and-using-configuration-values"></a><a name="bkmk_read_values"></a> Lesen und Verwenden von Konfigurationswerten  
  Ein Berichtsserver liest die Konfigurationsdateien beim Starten des Diensts und bei jedem Speichern der Konfigurationsdatei. Neue und überarbeitete Werte werden in einer neuen Anwendungsdomäne wirksam, nachdem die aktuelle Anwendungsdomäne abgelaufen ist. Wenn möglich werden Anforderungen, die in der aktuellen Anwendungsdomäne noch verarbeitet werden, noch abgeschlossen. Einige Einstellungen erfordern jedoch einen unmittelbaren Wiederverwendungsvorgang der Anwendungsdomäne. In diesem Fall werden alle Anforderungen, die gerade verarbeitet werden, in einer neuen Anwendungsdomäne neu gestartet.  
   
  Wenn der Berichtsserver einen ungültigen Wert entdeckt, schreibt er einen Fehler in das Windows-Anwendungsprotokoll und startet dann nicht oder verwendet den Standardwert, abhängig vom Fehler.  
@@ -46,13 +46,13 @@ ms.locfileid: "66103761"
   
  Alle Konfigurationsdateiänderungen werden einschließlich erfolgreicher Änderungen im Ablaufverfolgungsprotokoll des Berichtsservers aufgezeichnet. Nur Fehler werden im Ereignisprotokolldatei der Anwendung protokolliert.  
   
-##  <a name="bkmk_default_values"></a> Informationen zu Standardwerten  
+##  <a name="about-default-values"></a><a name="bkmk_default_values"></a> Informationen zu Standardwerten  
  Die meisten Konfigurationseinstellungen haben Standardwerte, die intern im Berichtsserver festgelegt sind. Der Berichtsserver verwendet diese Werte, wenn ein benutzerdefinierter Wert ungültig oder nicht angegeben ist. Wenn ein Standardwert wegen einer fehlerhaften Konfigurationseinstellung verwendet werden muss, wird ein Fehler in das Ablaufverfolgungsprotokoll geschrieben.  
   
-##  <a name="bkmk_delete_config_settings"></a> Löschen von Konfigurationseinstellungen  
+##  <a name="deleting-configuration-settings"></a><a name="bkmk_delete_config_settings"></a> Löschen von Konfigurationseinstellungen  
  Bei Konfigurationseinstellungen, die Standardwerte aufweisen, hat die Löschung der Einstellung aus der Konfigurationsdatei keinerlei Auswirkungen. Die meisten Konfigurationseinstellungen werden tatsächlich intern definiert und konfiguriert. Wenn Sie ein Element aus der Konfigurationsdatei löschen, ist die interne Kopie nach wie vor vorhanden, und es wird der dafür definierte Standardwert verwendet.  
   
-##  <a name="bkmk_edit_configuation_file"></a> So bearbeiten Sie eine Reporting Services-Konfigurationsdatei  
+##  <a name="to-edit-a-reporting-services-configuration-file"></a><a name="bkmk_edit_configuation_file"></a> So bearbeiten Sie eine Reporting Services-Konfigurationsdatei  
   
 1.  Suchen Sie die Konfigurationsdatei, die Sie bearbeiten möchten:  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66103761"
   
     -   [Anpassen der Parameter für Renderingerweiterungen in der Datei RSReportServer.config](../customize-rendering-extension-parameters-in-rsreportserver-config.md)  
   
-5.  Speichern Sie die Datei .  
+5.  Speichern Sie die Datei.  
   
 6.  Überprüfen Sie die Ablaufverfolgungs-Protokolldateien, um zu überprüfen, dass keine Fehler aufgetreten sind. Wenn Fehlerbedingungen auftreten, wurde eine Einstellung oder ihr Wert falsch angegeben. Gültige Werte für die Einstellungen finden Sie unter [RSReportServer Configuration File](rsreportserver-config-configuration-file.md) . Weitere Informationen zum Anzeigen von Ablaufverfolgungsprotokollen finden Sie unter [Berichtsserverdienst-Ablaufverfolgungsprotokoll](report-server-service-trace-log.md).  
   
@@ -94,9 +94,9 @@ ms.locfileid: "66103761"
  [RSReportServer-Konfigurationsdatei](rsreportserver-config-configuration-file.md)   
  [ReportingServicesService-Konfigurationsdatei](reportingservicesservice-configuration-file.md)   
  [RSReportDesigner-Konfigurationsdatei](rsreportdesigner-configuration-file.md)   
- [Bereitstellen von Datenverarbeitungserweiterungen](../extensions/data-processing/deploying-a-data-processing-extension.md)   
- [Bereitstellen von Übermittlungserweiterungen](../extensions/delivery-extension/deploying-a-delivery-extension.md)   
- [Bereitstellen von Renderingerweiterungen](../extensions/rendering-extension/deploying-a-rendering-extension.md)   
+ [Bereitstellen einer Datenverarbeitungs Erweiterung](../extensions/data-processing/deploying-a-data-processing-extension.md)   
+ [Bereitstellen einer Übermittlungs Erweiterung](../extensions/delivery-extension/deploying-a-delivery-extension.md)   
+ [Bereitstellen einer Renderingerweiterung](../extensions/rendering-extension/deploying-a-rendering-extension.md)   
  [Vorgehensweise: Bereitstellen eines benutzerdefinierten Berichts Elements](../custom-report-items/how-to-deploy-a-custom-report-item.md)   
  [Reporting Services-Konfigurationsdateien](reporting-services-configuration-files.md)  
   

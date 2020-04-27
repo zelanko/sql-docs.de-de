@@ -31,10 +31,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44fd6a97cd355ab9bcdd5481fe4ebaa5d13d17c4
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174726"
 ---
 # <a name="microsoft-association-algorithm"></a>Microsoft Association-Algorithmus
@@ -59,11 +59,11 @@ ms.locfileid: "78174726"
 
  Für Zuordnungsmodelle gelten folgende Anforderungen:
 
--   **Eine einzelne Schlüssel Spalte** Jedes Modell muss eine numerische Spalte oder Text Spalte enthalten, die jeden Datensatz eindeutig identifiziert. Verbundschlüssel sind nicht zulässig.
+-   **Nur eine Schlüsselspalte:** Jedes Modell muss eine numerische Spalte oder Textspalte enthalten, die jeden Datensatz eindeutig identifiziert. Verbundschlüssel sind nicht zulässig.
 
--   **Eine einzelne vorhersagbare Spalte** Ein Zuordnungs Modell kann nur eine vorhersagbare Spalte aufweisen. In der Regel handelt es sich hierbei um die Schlüsselspalte der geschachtelten Tabelle, beispielsweise das Feld, in dem die gekauften Produkte verzeichnet werden. Die Werte müssen diskret sein oder diskretisiert werden.
+-   **Eine einzelne vorhersagbare Spalte** Zuordnungsmodelle können jeweils nur eine vorhersagbare Spalte enthalten. In der Regel handelt es sich hierbei um die Schlüsselspalte der geschachtelten Tabelle, beispielsweise das Feld, in dem die gekauften Produkte verzeichnet werden. Die Werte müssen diskret sein oder diskretisiert werden.
 
--   **Eingabe Spalten** . Die Eingabespalten müssen diskret sein. Die Eingabedaten für ein Association-Modell sind häufig auf zwei Tabellen verteilt. Eine Tabelle kann beispielsweise Kundendaten enthalten, während in einer anderen Tabelle die Einkäufe der Kunden verzeichnet werden. Diese Daten können mithilfe einer geschachtelten Tabelle in das Modell eingegeben werden. Weitere Informationen zu geschachtelten Tabellen finden Sie unter [Geschachtelte Tabellen &#40;Analysis Services – Data Mining&#41;](nested-tables-analysis-services-data-mining.md).
+-   **Eingabespalten** Die Eingabespalten müssen diskret sein. Die Eingabedaten für ein Association-Modell sind häufig auf zwei Tabellen verteilt. Eine Tabelle kann beispielsweise Kundendaten enthalten, während in einer anderen Tabelle die Einkäufe der Kunden verzeichnet werden. Diese Daten können mithilfe einer geschachtelten Tabelle in das Modell eingegeben werden. Weitere Informationen zu geschachtelten Tabellen finden Sie unter [Geschachtelte Tabellen &#40;Analysis Services – Data Mining&#41;](nested-tables-analysis-services-data-mining.md).
 
  Ausführliche Informationen zu den in Assoziationsmodellen unterstützten Inhaltstypen und Datentypen finden Sie im Abschnitt „Anforderungen“ unter [Technische Referenz für den Microsoft Association-Algorithmus](microsoft-association-algorithm-technical-reference.md).
 
@@ -86,7 +86,7 @@ ms.locfileid: "78174726"
 
  Um die Verarbeitungszeit zu minimieren und die Komplexität der Itemsets zu reduzieren, können Sie verwandte Elemente nach Kategorien gruppieren, bevor Sie die Daten analysieren.
 
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 -   Unterstützt nicht die Verwendung von PMML (Predictive Model Markup Language) zum Erstellen von Miningmodellen.
 

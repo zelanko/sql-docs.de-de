@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f7ea763aa9c0bd187b2207dc50a1f678c295f3b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483391"
 ---
 # <a name="create-a-collection-master-data-services"></a>Erstellen einer Auflistung (Master Data Services)
@@ -54,7 +54,7 @@ ms.locfileid: "65483391"
   
 ## <a name="next-steps"></a>Nächste Schritte  
   
--   [Hinzufügen von Mitgliedern zu einer Sammlung &#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)  
+-   [Hinzufügen von Elementen zu einer Sammlung &#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Sammlungen &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)   

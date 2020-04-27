@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f47529726445cf52d280df78a6a96f18889fcd2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63272813"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>Veröffentlichen der Ausführung von gespeicherten Prozeduren in der Transaktionsreplikation
@@ -94,6 +94,6 @@ COMMIT TRANSACTION T2
  Wenn für XACT_ABORT OFF angegeben werden muss, geben Sie den **-SkipErrors** -Parameter für den Verteilungs-Agent an. Auf diese Weise kann der Agent auch dann die Änderungen auf den Abonnenten anwenden, wenn es zu einem Fehler kommt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Article Options for Transactional Replication](article-options-for-transactional-replication.md)  
+ [Artikeloptionen für die Transaktionsreplikation](article-options-for-transactional-replication.md)  
   
   

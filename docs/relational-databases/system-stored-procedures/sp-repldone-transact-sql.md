@@ -16,10 +16,10 @@ ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3df1b991f160aafdfcfd71818c8bd3e7cbd10ffa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72798389"
 ---
 # <a name="sp_repldone-transact-sql"></a>sp_repldone (Transact-SQL)
@@ -56,7 +56,7 @@ sp_repldone [ @xactid= ] xactid
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_repldone** wird bei der Transaktions Replikation verwendet.  
   
  **sp_repldone** wird vom Protokoll Leseprozess verwendet, um zu verfolgen, welche Transaktionen verteilt wurden.  
@@ -79,7 +79,7 @@ EXEC sp_repldone @xactid = NULL, @xact_seqno = NULL, @numtrans = 0, @time = 0, @
 >  Diese Prozedur kann in Notsituationen verwendet werden, damit das Transaktionsprotokoll abgeschnitten werden kann, wenn Transaktionen mit ausstehender Replikation vorhanden sind.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [sp_replcmds &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [sp_replflush &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
  [sp_repltrans &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

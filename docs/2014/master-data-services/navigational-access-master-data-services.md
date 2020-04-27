@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1d190d55c45530adde1b41658c975bbfc19c0b91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482634"
 ---
 # <a name="navigational-access-master-data-services"></a>Navigationszugriff (Master Data Services)
@@ -37,11 +37,11 @@ ms.locfileid: "65482634"
   
  Wenn Sie einem Attribut Berechtigungen zuweisen, bedeutet Navigationszugriff, dass Sie den Namen und den Code für alle Elemente in der Entität lesen oder aktualisieren können. Sie können auch den Modellnamen lesen.  
   
- **Auflistungen**  
+ **Sammlungen**  
   
  Wenn Sie Auflistungen Berechtigungen zuweisen, können Sie den Namen, Code, die Beschreibung und Besitzer-ID lesen oder aktualisieren. Sie können auch den Modellnamen lesen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Wie Berechtigungen &#40;Master Data Services bestimmt werden&#41;](how-permissions-are-determined-master-data-services.md)  
+ [Vorgehensweise: Festlegen von Berechtigungen &#40;Master Data Services&#41;](how-permissions-are-determined-master-data-services.md)  
   
   

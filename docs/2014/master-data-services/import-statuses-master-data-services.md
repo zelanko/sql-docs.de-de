@@ -11,16 +11,16 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d2b4fbb59c21c66c7b6157a1ed06ce5bf040858a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479374"
 ---
 # <a name="import-statuses-master-data-services"></a>Importstatus (Master Data Services)
   Auf der Seite **Stagingbatches** im Funktionsbereich **Integrationsmanagement** sind die folgenden Status möglich.  
   
-|Status|BESCHREIBUNG|Status_ID|  
+|Status|Beschreibung|Status_ID|  
 |------------|-----------------|----------------|  
 |Zur Ausführung vorgemerkt|Die Verarbeitung des Batches wurde nicht gestartet.|1|  
 |Wird ausgeführt|Der Batch wird verarbeitet.|2|  

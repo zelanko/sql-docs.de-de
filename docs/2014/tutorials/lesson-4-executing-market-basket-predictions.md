@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3b49fc242eb8b2242269c5af33cc094937bbe0de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312110"
 ---
 # <a name="lesson-4-executing-market-basket-predictions"></a>Lektion 4: Ausführen von Warenkorbvorhersagen
@@ -88,7 +88,7 @@ SELECT <select list> FROM [<mining model>]
     <select list>   
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     PREDICT([Default Association].[Products],INCLUDE_STATISTICS,3)  
@@ -102,7 +102,7 @@ SELECT <select list> FROM [<mining model>]
     [<mining model>]   
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     [Default Association]  
@@ -117,7 +117,7 @@ SELECT <select list> FROM [<mining model>]
         AS [<nested table>])  
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     (SELECT (SELECT 'Mountain Bottle Cage' AS [Model]  
@@ -162,7 +162,7 @@ SELECT <select list> FROM [<mining model>]
     <select list>   
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     PREDICT([Modified Association].[Products],INCLUDE_STATISTICS,3)  
@@ -174,7 +174,7 @@ SELECT <select list> FROM [<mining model>]
     [<mining model>]   
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     [Modified Association]  
@@ -189,7 +189,7 @@ SELECT <select list> FROM [<mining model>]
         AS [<nested table>])  
     ```  
   
-     durch:  
+     Durch:  
   
     ```  
     (SELECT (SELECT 'Mountain Bottle Cage' AS [Model]  

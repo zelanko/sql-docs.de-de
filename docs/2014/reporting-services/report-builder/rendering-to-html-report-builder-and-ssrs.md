@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 26f2b31728fec77a6b94a64f35d0fb37096a1b41
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107720"
 ---
 # <a name="rendering-to-html-report-builder-and-ssrs"></a>Rendern in das HTML-Format (Berichts-Generator und SSRS)
@@ -31,10 +31,10 @@ ms.locfileid: "66107720"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="RenderingMHTML"></a>Rendering in MHTML  
+##  <a name="rendering-in-mhtml"></a><a name="RenderingMHTML"></a> Rendern in das MHTML-Format  
  Die HTML-Renderingerweiterung kann Berichte im MHTML-Format (MIME Encapsulation of Aggregate HTML Documents) rendern. MHTML erweitert HTML, um codierte Objekte in das HTML-Dokument einzubetten, z. B. Bilder. Mit der MHTML-Renderingerweiterung können Sie Ressourcen wie Bilder, Dokumente oder andere Binärdateien als MIME-Strukturen (Multipurpose Internet Mail Extensions) in den Berichts-HTML-Code in einer einzelnen Datei einbetten. Daneben sind MHTML-Berichte zur Einbettung in E-Mail-Nachrichten geeignet, da alle Ressourcen in den Bericht eingeschlossen sind. Zwar rendert eigentlich die HTML-Renderingerweiterung MHTML, aber diese Funktion kann auch als MHTML-Renderingerweiterung bezeichnet werden.  
   
-##  <a name="BrowserSupport"></a>Browser Unterstützung  
+##  <a name="browser-support"></a><a name="BrowserSupport"></a>Browser Unterstützung  
  Diese Renderingerweiterung unterstützt die folgenden Browserversionen:  
   
 -   Internet Explorer 5.5 und höher  
@@ -45,7 +45,7 @@ ms.locfileid: "66107720"
   
  Aufgrund von browserübergreifenden Überlegungen kann der gerenderte Bericht je nach Browser leicht unterschiedlich ausfallen. So enthält z. B. das Textfeld die Eigenschaft „WritingMode“. Diese Eigenschaft wird in Firefox nicht unterstützt.  
   
-##  <a name="HTMLSpecificRenderingRules"></a>HTML-spezifische Renderingerweiterungen  
+##  <a name="html-specific-rendering-rules"></a><a name="HTMLSpecificRenderingRules"></a>HTML-spezifische Renderingerweiterungen  
  Die folgenden HTML-spezifischen Regeln werden beim Rendern angewendet:  
   
 -   Der Renderer erstellt eine HTML-Tabellenstruktur mit allen Elementen in jeder `ReportItems`-Auflistung, falls mehr als eine vorhanden ist.  
@@ -62,7 +62,7 @@ ms.locfileid: "66107720"
   
 -   Alle Koordinaten und Berichtselementgrößen werden in Millimeter konvertiert. Alle anderen Größen, einschließlich der Stileigenschaften, behalten ihre ursprünglichen Einheiten bei. Größen- und Positionsunterschiede, die kleiner als 0,2 mm sind, werden als 0 mm behandelt.  
   
-##  <a name="Interactivity"></a> Interaktivität  
+##  <a name="interactivity"></a><a name="Interactivity"></a>Interaktivität  
  Einige interaktive Elemente werden in HTML unterstützt. Im Folgenden werden spezifische Funktionsweisen beschrieben.  
   
 ### <a name="show-and-hide"></a>Einblenden und Ausblenden  
@@ -85,12 +85,12 @@ ms.locfileid: "66107720"
   
  Zusätzliche Suchfunktionen werden vom ReportViewer Web Forms-Steuerelement bereitgestellt.  
   
-##  <a name="DeviceInfo"></a> Geräteinformationseinstellungen  
+##  <a name="device-information-settings"></a><a name="DeviceInfo"></a>Geräte Informationseinstellungen  
  Sie können einige Standardeinstellungen für diesen Renderer ändern, einschließlich des Modus für das Rendern. Ändern Sie dazu die Geräteinformationseinstellungen. Weitere Informationen finden Sie unter [HTML Device Information Settings](../html-device-information-settings.md).  
 
 ## <a name="see-also"></a>Weitere Informationen  
  [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](../report-design/pagination-in-reporting-services-report-builder-and-ssrs.md)   
- [Renderingverhalten (Berichts-Generator und SSRS)](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
+ [Renderingverhaltensweisen &#40;Berichts-Generator und SSRS&#41;](../report-design/rendering-behaviors-report-builder-and-ssrs.md)   
  [Interaktive Funktionalität für verschiedene Berichtsrenderingerweiterungen &#40;Berichts-Generator und SSRS&#41;](interactive-functionality-different-report-rendering-extensions.md)   
- [Rendern von Berichtselementen (Berichts-Generator und SSRS)](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
+ [Rendern von Berichts Elementen &#40;Berichts-Generator und SSRS&#41;](../report-design/rendering-report-items-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)  

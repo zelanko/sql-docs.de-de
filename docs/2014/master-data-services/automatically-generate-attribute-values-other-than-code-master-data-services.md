@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: fb58fdf9666abcb01c19da65dbc6c31622343657
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480056"
 ---
 # <a name="automatically-generate-attribute-values-other-than-code-master-data-services"></a>Automatisches Generieren von anderen Attributwerten als Code (Master Data Services)
@@ -23,7 +23,7 @@ ms.locfileid: "65480056"
 ## <a name="prerequisites"></a>Voraussetzungen  
  So führen Sie diese Prozedur aus  
   
--   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **Systemverwaltung** zuzugreifen.  
+-   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich **System Verwaltung** zuzugreifen.  
   
 -   Sie müssen ein Modelladministrator sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](administrators-master-data-services.md).  
   
@@ -67,13 +67,13 @@ ms.locfileid: "65480056"
   
 ## <a name="next-steps"></a>Nächste Schritte  
   
--   [Überprüfen bestimmter Mitglieder anhand von Geschäftsregeln &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+-   [Überprüfen von bestimmten Elementen auf Geschäftsregeln &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
 -   [Überprüfen einer Version anhand von Geschäftsregeln &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Automatische Code Erstellung &#40;Master Data Services&#41;](../../2014/master-data-services/automatic-code-creation-master-data-services.md)   
  [Master Data Services von Geschäftsregeln &#40;&#41;](../../2014/master-data-services/business-rules-master-data-services.md)   
- [Master Data Services der Überprüfung &#40;&#41;](../../2014/master-data-services/validation-master-data-services.md)  
+ [Überprüfung &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)  
   
   

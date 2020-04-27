@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 661ae0cafe5b484839bbee2531f82f3b62f72c75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108131"
 ---
 # <a name="new-system-role-assignments-edit-system-role-assignments-page-report-manager"></a>Neue Systemrollenzuweisung: Systemrollenzuweisung bearbeiten (Seite, Berichts-Manager)
@@ -41,7 +41,7 @@ ms.locfileid: "66108131"
   
 4.  Um eine neue Rollenzuweisung zu erstellen, klicken Sie auf der Symbolleiste auf **Neue Rollenzuweisung** . Um eine vorhandene Rollenzuweisung zu bearbeiten, klicken Sie neben einer Gruppe oder einem Benutzer auf der Eigenschaftenseite Sicherheit auf **Bearbeiten** .  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Gruppe oder Benutzer**  
  Geben Sie den Namen eines Gruppen- oder Benutzerkontos in der Domäne ein. Wenn der Berichtsserver unter einem lokalen Konto ausgeführt wird, müssen Sie lokale Gruppen oder Benutzer angeben. Wenn der Berichtsserver unter einem Domänenkonto ausgeführt wird, müssen Sie Domänengruppen oder -benutzer angeben. Geben Sie das Konto im folgenden Format \<ein: \\ Domäne>\><Konto.  
   

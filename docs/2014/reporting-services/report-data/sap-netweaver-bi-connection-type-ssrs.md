@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1ccdd085b4beb757e0f16e973ad02c9e27a3dafb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107112"
 ---
 # <a name="sap-netweaver-bi-connection-type-ssrs"></a>SAP NetWeaver BI-Verbindungstyp (SSRS)
@@ -24,7 +24,7 @@ ms.locfileid: "66107112"
   
  Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstellen. Schritt-für-Schritt-Anweisungen finden [Sie unter Hinzufügen und Überprüfen einer Datenverbindung oder einer Datenquelle &#40;Berichts-Generator und SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-##  <a name="support"></a>Unterstützte Versionen  
+##  <a name="supported-versions"></a><a name="support"></a>Unterstützte Versionen  
  Der Datenanbieter wurde für SAP BW 3.5 und 7.0 entwickelt und damit getestet.  
   
 -   Support Package 20 für SAP BW 3.5 und 7.0  
@@ -37,7 +37,7 @@ ms.locfileid: "66107112"
   
 -   SAP Duet 1.0  
   
-##  <a name="Connection"></a>Verbindungs Zeichenfolge  
+##  <a name="connection-string"></a><a name="Connection"></a>Verbindungs Zeichenfolge  
  Erfragen Sie die Verbindungsinformationen und die Anmeldeinformationen zum Herstellen einer Verbindung mit der Datenquelle bei Ihrem Datenbankadministrator. In der Verbindungszeichenfolge im folgenden Beispiel wird eine [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] -Datenquelle auf einem Server mit Port 8000 und XML für Analysis Services (XMLA) über das Internet mit SOAP angegeben:  
   
 ```  
@@ -48,7 +48,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
   
   
-##  <a name="Credentials"></a>Daten  
+##  <a name="credentials"></a><a name="Credentials"></a>Daten  
  Anmeldeinformationen sind erforderlich, um Abfragen auszuführen und den Bericht lokal oder vom Berichtsserver aus in der Vorschau anzuzeigen.  
   
  Nachdem Sie den Bericht veröffentlicht haben, müssen Sie eventuell die Anmeldeinformationen für die Datenquelle ändern, sodass die Berechtigungen zum Abrufen der Daten beim Ausführen des Berichts auf dem Berichtsserver gültig sind.  
@@ -57,7 +57,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
   
   
-##  <a name="Query"></a>Fragt  
+##  <a name="queries"></a><a name="Query"></a>Fragt  
  Verwenden Sie den grafischen Abfrage-Designer im Entwurfs- oder Abfragemodus, um eine MDX-Abfrage (Multidimensional Expression) zu erstellen, indem Sie die zugrunde liegenden Datenstrukturen in der Datenquelle durchsuchen. Sie können eine Abfrage aus dem Abfrage-Designer interaktiv zur Laufzeit ausführen, um die Ergebnisse anzuzeigen. Die von Ihnen erstelle Abfrage definiert Felder im Dataset. Die eigentlichen Daten werden zur Laufzeit von der Datenquelle zurückgegeben. Mit dem grafischen Abfrage-Designer können Sie die folgenden Aktionen ausführen:  
   
 -   Sie können im Entwurfsmodus Dimensionen, Elemente, Elementeigenschaften und Kennzahlen aus der Datenquelle in den Datenbereich ziehen, um eine MDX-Abfrage (Multidimensional Expression) zu erstellen. Ziehen Sie berechnete Elemente aus dem Bereich "Berechnete Elemente" in den Bereich "Daten", um zusätzliche Datasetfelder zu definieren.  
@@ -70,7 +70,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
   
   
-##  <a name="Extended"></a>Erweiterte Feldeigenschaften  
+##  <a name="extended-field-properties"></a><a name="Extended"></a> Erweiterte Feldeigenschaften  
  Die [!INCLUDE[SAP_DPE_BW_1](../../includes/sap-dpe-bw-1-md.md)] -Datenquelle unterstützt erweiterte Feldeigenschaften. Erweiterte Feldeigenschaften sind zusätzlich zu `Value` und `IsMissing` verwendete Eigenschaften, die von der Datenverarbeitungserweiterung für ein Datasetfeld definiert werden. Erweiterte Eigenschaften umfassen vordefinierte Eigenschaften und benutzerdefinierte Eigenschaften. Bei vordefinierten Eigenschaften handelt es sich um Eigenschaften, die von mehreren Datenquellen gemeinsam verwendet werden. Benutzerdefinierte Eigenschaften gelten jeweils nur für eine Datenquelle.  
   
 ### <a name="working-with-field-properties"></a>Arbeiten mit Feldeigenschaften  
@@ -85,7 +85,7 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
  Verwenden Sie eine der folgenden Syntaxen, um in einem Ausdruck auf vordefinierte erweiterte Eigenschaften zu verweisen.  
   
--   *Feld! FieldName. PropertyName*  
+-   *Fields!FieldName.PropertyName*  
   
 -   *Feld! FieldName ("PropertyName")*  
   
@@ -114,25 +114,25 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
   
   
   
-##  Hinweise zu <a name="Remarks"></a>  
+##  <a name="remarks"></a>Hinweise zu <a name="Remarks"></a>  
  Nicht alle Berichtsübermittlungsmodi werden von diesem Datenanbieter unterstützt. Die Übermittlung von Berichten über datengesteuerte Abonnements wird für diese Datenverarbeitungserweiterung nicht unterstützt. Weitere Informationen finden Sie unter [Verwenden einer externen Datenquelle für Abonnentendaten &#40;datengesteuertes Abonnement&#41;](../subscriptions/use-an-external-data-source-for-subscriber-data-data-driven-subscription.md).  
   
  Weitere Informationen finden Sie im Thema zur [Verwendung von SQL Server 2008 Reporting Services with SAP NetWeaver Business Intelligence](https://go.microsoft.com/fwlink/?LinkId=167352).  
   
   
   
-##  <a name="HowTo"></a> Themen zur Vorgehensweise  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Themen zur Vorgehensweise  
  Dieser Abschnitt enthält schrittweise Anweisungen zum Arbeiten mit Datenverbindungen, Datenquellen und Datasets.  
   
  [Hinzufügen und Überprüfen einer Datenverbindung oder Datenquelle &#40;Berichts-Generator und SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Erstellen eines freigegebenen Datasets oder eingebetteten Datasets &#40;Berichts-Generator und SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
- [Hinzufügen eines Filters zu einem DataSet &#40;Berichts-Generator und SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
+ [Hinzufügen eines Filters zu einem Dataset &#40;Berichts-Generator und SSRS&#41;](add-a-filter-to-a-dataset-report-builder-and-ssrs.md)  
   
   
   
-##  <a name="Related"></a>Verwandte Abschnitte  
+##  <a name="related-sections"></a><a name="Related"></a> Verwandte Abschnitte  
  Diese Abschnitte der Dokumentation enthalten umfassende grundlegende Informationen zu Berichtsdaten sowie Informationen zum Definieren, Anpassen und Verwenden der mit Daten zusammenhängenden Teile eines Berichts.  
   
  [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-datasets-ssrs.md)  
@@ -141,20 +141,20 @@ DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla
  [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
  Enthält Informationen zu Datenverbindungen und Datenquellen.  
   
- [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Melden Sie eingebettete Datasets und freigegebene Datasets &#40;Berichts-Generator und SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  Enthält Informationen zu eingebetteten und freigegebenen Datasets.  
   
  [Datasetfeld-Sammlung &#40;Berichts-Generator und SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Enthält Informationen zur von der Abfrage generierten Datasetfeldauflistung.  
   
- [Datenquellen, die von Reporting Services &#40;SSRS unterstützt werden&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
+ [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md)  
  Enthält ausführliche Informationen zur Plattform- und Versionsunterstützung für die einzelnen Datenerweiterungen.  
   
  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)   
- [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Berichts Parameter &#40;Berichts-Generator und Berichts-Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Filtern, gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

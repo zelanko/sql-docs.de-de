@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: e38a4c75ad6cf8c65d7120e0eb98163f7ee0fccc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482875"
 ---
 # <a name="lock-a-version-master-data-services"></a>Sperren einer Version (Master Data Services)
@@ -49,7 +49,7 @@ ms.locfileid: "65482875"
   
 -   [Überprüfen einer Version anhand von Geschäftsregeln &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
--   [Commit für eine Version &#40;Master Data Services durch&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)  
+-   [Durchführen eines Commits für eine Version &#40;Master Data Services&#41;](../../2014/master-data-services/commit-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Versionen &#40;Master Data Services&#41;](../../2014/master-data-services/versions-master-data-services.md)   

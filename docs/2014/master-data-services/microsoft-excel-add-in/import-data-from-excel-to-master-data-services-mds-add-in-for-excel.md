@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ffb122b96182b1079c95adf13d26c9a4949f6ddf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478803"
 ---
 # <a name="publish-data-from-excel-to-mds-mds-add-in-for-excel"></a>Veröffentlichen von Daten von Excel nach MDS (MDS-Add-In für Excel)
@@ -31,7 +31,7 @@ ms.locfileid: "65478803"
   
 -   Das aktive Arbeitsblatt muss von MDS verwaltete Daten enthalten, und Sie müssen Änderungen oder Hinzufügungen zu den von MDS verwalteten Daten vorgenommen haben.  
   
--   Wenn Sie Elemente hinzufügen, müssen Sie keinen **Code** -Wert angeben, wenn Codes für die Entität automatisch generiert werden. Weitere Informationen finden Sie unter [Automatische Codeerstellung &#40;Master Data Services&#41;](../automatic-code-creation-master-data-services.md).  
+-   Wenn Sie Elemente hinzufügen, müssen Sie keinen **Code** -Wert angeben, wenn Codes für die Entität automatisch generiert werden. Weitere Informationen finden Sie unter [automatische Code Erstellung &#40;Master Data Services&#41;](../automatic-code-creation-master-data-services.md).  
   
 ### <a name="to-publish-data-to-the-mds-repository"></a>So veröffentlichen Sie Daten im MDS-Repository  
   
@@ -47,10 +47,10 @@ ms.locfileid: "65478803"
 >  Wenn Sie dem Arbeitsblatt neue Elemente (Zeilen) hinzufügen, sie aber nicht erfolgreich im MDS-Repository veröffentlichen können, verfügen Sie möglicherweise nicht für alle Attribute im Arbeitsblatt über die Berechtigung **Aktualisieren** . Klicken Sie auf der Registerkarte **Überprüfen** in der Gruppe **Änderungen** auf **Blattschutz aufheben** , und versuchen Sie, erneut zu veröffentlichen.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- [Anwenden von Geschäftsregeln &#40;MDS-Add-in für Excel&#41;](apply-business-rules-mds-add-in-for-excel.md)  
+ [Anwenden von Geschäftsregeln &#40;MDS-Add-In für Excel&#41;](apply-business-rules-mds-add-in-for-excel.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Veröffentlichen von Daten &#40;MDS-Add-in für Excel&#41;](overview-importing-data-from-excel-mds-add-in-for-excel.md)   
- [Die Daten &#40;MDS-Add-in für Excel werden überprüft&#41;](validating-data-mds-add-in-for-excel.md)  
+ [Überprüfen von Daten &#40;MDS-Add-In für Excel&#41;](validating-data-mds-add-in-for-excel.md)  
   
   

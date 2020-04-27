@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b88c78a1a7f4244afe220585919a50ed06cd0ad9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110140"
 ---
 # <a name="examining-the-current-structure-of-the-employee-table"></a>Untersuchen der aktuellen Struktur der Mitarbeitertabelle
-  Die Beispiel [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] Datenbank enthält eine **Employee** -Tabelle im **HumanResources** -Schema. Um Änderungen an der ursprünglichen Tabelle zu vermeiden, wird in diesem Schritt eine Kopie der Tabelle **Employee** mit dem Namen **EmployeeDemo**erstellt. Um das Beispiel zu vereinfachen, kopieren Sie nur fünf Spalten aus der ursprünglichen Tabelle. Anschließend Fragen Sie die **HumanResources. Mitarbeiter Demo** -Tabelle ab, um zu überprüfen, wie die Daten in einer Tabelle strukturiert `hierarchyid` sind, ohne den-Datentyp zu verwenden.  
+   Die Beispieldatenbank [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] enthält im Schema **HumanResources** die Tabelle **Employee**. Um Änderungen an der ursprünglichen Tabelle zu vermeiden, wird in diesem Schritt eine Kopie der Tabelle **Employee** mit dem Namen **EmployeeDemo**erstellt. Um das Beispiel zu vereinfachen, kopieren Sie nur fünf Spalten aus der ursprünglichen Tabelle. Anschließend Fragen Sie die **HumanResources. Mitarbeiter Demo** -Tabelle ab, um zu überprüfen, wie die Daten in einer Tabelle strukturiert `hierarchyid` sind, ohne den-Datentyp zu verwenden.  
   
 ### <a name="to-copy-the-employee-table"></a>So kopieren Sie die Mitarbeitertabelle  
   

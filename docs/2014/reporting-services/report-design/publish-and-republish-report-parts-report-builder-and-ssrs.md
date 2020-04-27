@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9178caad90bff142996247b1c5befe6dd47c4933
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105405"
 ---
 # <a name="publish-and-republish-report-parts-report-builder-and-ssrs"></a>Veröffentlichen und erneutes Veröffentlichen von Berichtsteilen (Berichts-Generator und SSRS)
@@ -57,8 +57,8 @@ ms.locfileid: "66105405"
 >  Wenn Sie diesen als neuen Berichtsteil veröffentlichen, verfügt er über eine neue eindeutige ID. Er wird nicht mehr aktualisiert, wenn sich der ursprüngliche Berichtsteil ändert.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Berichtsteile &#40;Berichts-Generator und SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
- [Berichtsteile und Datasets in Berichts-Generator](../report-data/report-parts-and-datasets-in-report-builder.md)   
+ [Berichts Teile &#40;Berichts-Generator und SSRS&#41;](../report-parts-report-builder-and-ssrs.md)   
+ [Berichts Teile und Datasets in Berichts-Generator](../report-data/report-parts-and-datasets-in-report-builder.md)   
  [Problembehandlung bei Berichts teilen &#40;Berichts-Generator und SSRS&#41;](../troubleshoot-report-parts-report-builder-and-ssrs.md)   
  [Suchen nach Updates oder Deaktivieren von Updates &#40;Berichts-Generator und SSRS&#41;](../check-for-updates-or-turn-updates-off-report-builder-and-ssrs.md)   
  [Suchen nach Berichtsteilen und Festlegen eines Standardordners &#40;Berichts-Generator und SSRS&#41;](browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  

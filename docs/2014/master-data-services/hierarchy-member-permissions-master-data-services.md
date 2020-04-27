@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 371c7c605b5415654c01f3faa66fbd0801202785
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482951"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>Berechtigungen für Hierarchieelemente (Master Data Services)
@@ -37,7 +37,7 @@ ms.locfileid: "65482951"
 |Berechtigung|BESCHREIBUNG|  
 |----------------|-----------------|  
 |**Schreibgeschützt**|Die Elemente werden zwar angezeigt, können vom Benutzer jedoch nicht geändert werden. Darüber hinaus kann der Benutzer keine Elemente in expliziten Hierarchien oder Auflistungen verschieben, denen die Elemente angehören.<br /><br /> Hinweis: Wenn Sie **root**die Schreib **geschützte Berechtigung zuweisen** , sind die Elemente unter **root** schreibgeschützt. in expliziten Hierarchien und Auflistungen kann der Benutzer jedoch **Elemente in den Stamm verschieben und dem** Stamm neue **Member hinzufügen.**|  
-|**Alisierungs**|Die Elemente werden angezeigt und können vom Benutzer geändert werden. Der Benutzer kann die Elemente außerdem in beliebigen expliziten Hierarchien oder Auflistungen verschieben, denen die Elemente angehören.|  
+|**Update**|Die Elemente werden angezeigt und können vom Benutzer geändert werden. Der Benutzer kann die Elemente außerdem in beliebigen expliziten Hierarchien oder Auflistungen verschieben, denen die Elemente angehören.|  
 |**Deny**|Die Elemente werden nicht angezeigt.|  
   
  Auf der Registerkarte **Hierarchieelemente** werden die zugewiesenen Berechtigungen nicht sofort wirksam. Wie häufig die Berechtigungen angewendet werden, hängt von der Einstellung **Member security processing interval setting** (Intervall für die Verarbeitung der Mitgliedersicherheit) ab, die Sie in der Tabelle „Systemeinstellungen“ der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank vornehmen. Eine Anleitung für die sofortige Anwendung von Elementberechtigungen finden Sie unter [Sofortiges Anwenden von Elementberechtigungen &#40;Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md)neue Elemente hinzufügen.  
@@ -60,6 +60,6 @@ ms.locfileid: "65482951"
  [Wie Berechtigungen &#40;Master Data Services bestimmt werden&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)   
  [Mitglieder &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)   
  [Hierarchien &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchies-master-data-services.md)   
- [Sofortiges Anwenden von Element Berechtigungen &#40;Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md)  
+ [Sofortiges Anwenden von Elementberechtigungen &#40;Master Data Services&#41;](immediately-apply-member-permissions-master-data-services.md)  
   
   

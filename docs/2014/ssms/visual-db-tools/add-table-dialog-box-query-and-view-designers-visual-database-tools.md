@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 374014ee4ccdd783cee3eeb7bad5c5e728906299
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63460166"
 ---
 # <a name="add-table-dialog-box-query-and-view-designers-visual-database-tools"></a>Tabelle hinzufügen (Dialogfeld) (Abfrage- und Sicht-Designer) (Visual Database Tools)
@@ -31,13 +31,13 @@ ms.locfileid: "63460166"
  Listet die Tabellen auf, die dem Bereich **Diagramm** hinzugefügt werden können. Um eine Tabelle hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen**. Um mehrere Tabellen gleichzeitig hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen**.  
   
  **Ansichten**  
- Listet die Ansichten auf, die dem Bereich **Diagramm** hinzugefügt werden können. Um eine Sicht hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen**. Um mehrere Sichten gleichzeitig hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen**.  
+ Listet die Sichten auf, die dem Bereich **Diagramm** hinzugefügt werden können. Um eine Sicht hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen**. Um mehrere Sichten gleichzeitig hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen**.  
   
  **Funktionen**  
  Listet die benutzerdefinierten Funktionen auf, die dem Bereich **Diagramm** hinzugefügt werden können. Um eine Funktion hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen**. Um mehrere Funktionen gleichzeitig hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen**.  
   
  **Synonyme**  
- Listet die Synonyme auf, die dem **Diagramm** Bereich hinzugefügt werden können. Um ein Synonym hinzuzufügen, wählen Sie es aus, und klicken Sie auf **Hinzufügen**. Um mehrere Synonyme gleichzeitig hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen**.  
+ Listet die Synonyme auf, die dem Bereich **Diagramm** hinzugefügt werden können. Um ein Synonym hinzuzufügen, wählen Sie es aus, und klicken Sie auf **Hinzufügen**. Um mehrere Synonyme gleichzeitig hinzuzufügen, wählen Sie sie aus, und klicken Sie auf **Hinzufügen**.  
   
  **Aktualisieren**  
  Aktualisieren Sie die Liste, sodass alle Änderungen an der Datenbank in die Liste aufgenommen werden, die seit dem letzten Abrufen der Liste vorgenommen wurden.  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 49ba35fb0ecb5ed70fe737a10ce9a700d4e4c816
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106587"
 ---
 # <a name="add-move-or-delete-a-text-box-report-builder-and-ssrs"></a>Hinzufügen, Verschieben oder Löschen von Textfeldern (Berichts-Generator und SSRS)
@@ -73,7 +73,7 @@ ms.locfileid: "66106587"
     >  Wenn Sie im Bearbeitungsmodus in das Textfeld klicken, drücken Sie ESC, um das Textfeld zu wählen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Textfelder &#40;Berichts-Generator und SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
+ [Text Felder &#40;Berichts-Generator und SSRS&#41;](text-boxes-report-builder-and-ssrs.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expressions-report-builder-and-ssrs.md)   
  [Tastenkombinationen &#40;Berichts-Generator&#41;](../report-builder/keyboard-shortcuts-report-builder.md)  
   

@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5435c2a48417156abd6d4f831bf61c9ba6440fab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65482573"
 ---
 # <a name="reserved-words-master-data-services"></a>Reservierte Wörter (Master Data Services)
@@ -34,35 +34,34 @@ ms.locfileid: "65482573"
   
 -   [Attribute](#attributes)  
   
--   [Mitglieder](#members)  
+-   [Members](#members)  
   
-##  <a name="models"></a>Bilder  
+##  <a name="models"></a><a name="models"></a>Bilder  
  Wenn Sie ein Modell erstellen, dessen Name auf **Name**festgelegt ist, wählen Sie **Entität mit gleichem Namen wie Modell erstellen** nicht aus, da **Name** nicht für den Namen einer Entität verwendet werden kann.  
   
-##  <a name="entities"></a>Kleinstunternehmen  
- 
-  **Name** oder **Code**kann für Entitätsnamen nicht verwendet werden.  
+##  <a name="entities"></a><a name="entities"></a>Kleinstunternehmen  
+ **Name** oder **Code**kann für Entitätsnamen nicht verwendet werden.  
   
-##  <a name="exhierarchies"></a>Explizite Hierarchien  
+##  <a name="explicit-hierarchies"></a><a name="exhierarchies"></a>Explizite Hierarchien  
  Für explizite Hierarchienamen können Sie **Name** oder **Code**verwenden.  
   
-##  <a name="attributes"></a>Legt  
+##  <a name="attributes"></a><a name="attributes"></a>Legt  
   
--   **id**  
+-   **ID**  
   
 -   **Code**  
   
 -   **Name**  
   
--   **Enterdtm**  
+-   **EnterDTM**  
   
--   **Enteruserid**  
+-   **EnterUserID**  
   
--   **Enter username**  
+-   **EnterUserName**  
   
--   **Lastchgdtm**  
+-   **LastChgDTM**  
   
--   **Lastchguserid**  
+-   **LastChgUserID**  
   
 -   **Status_ID**  
   
@@ -70,7 +69,7 @@ ms.locfileid: "65482573"
   
 -   **Version_ID**  
   
-##  <a name="members"></a>Parlamentariern  
+##  <a name="members"></a><a name="members"></a>Parlamentariern  
  Für Member können Sie **mdmmembership Status** oder **root** nicht für den **Code** Attribut Wert verwenden.  
   
 ## <a name="see-also"></a>Weitere Informationen  

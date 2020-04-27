@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0d86c9bb07a52aba0cd93b006fc33edf4d1aa885
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109929"
 ---
 # <a name="breaking-changes-in-sql-server-reporting-services-in-sql-server-2014"></a>Aktuelle Änderungen in SQL Server Reporting Services in SQL Server 2014
@@ -32,13 +32,13 @@ ms.locfileid: "66109929"
   
 -   [Wichtige Änderungen in SQL Server 2008 R2 Reporting Services](#bkmk_kj)  
   
-##  <a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services wichtige Änderungen  
+##  <a name="sssql14-reporting-services-breaking-changes"></a><a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Reporting Services wichtige Änderungen  
  Es gibt keine wesentlichen Änderungen in Bezug auf [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Funktionen in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
-##  <a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services wichtige Änderungen  
+##  <a name="sssql11-reporting-services-breaking-changes"></a><a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Reporting Services wichtige Änderungen  
   
 ### <a name="sharepoint-mode-server-references-require-the-sharepoint-site"></a>Serververweise im SharePoint-Modus erfordern die SharePoint-Website  
- Sie können nicht direkt über den Namen des virtuellen Verzeichnisses im URL-Pfad zum Berichtsserver navigieren oder auf diesen verweisen. Beispiel:  
+ Sie können nicht direkt über den Namen des virtuellen Verzeichnisses im URL-Pfad zum Berichtsserver navigieren oder auf diesen verweisen. Zum Beispiel:  
   
  `http://<Server name>/ReportServer`  
   
@@ -65,11 +65,10 @@ ms.locfileid: "66109929"
 -   SQL Server Management Studio: Kunden können nicht auf einen Server mit einer ähnlichen Syntax wie <machine_name>/<instance_name> verweisen. Ab der [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] -Version war die empfohlene Methode, eine SharePoint-Website-URL zu verwenden. Beispiel: **http://<sharepoint_server>/<sharePoint_site>**. Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]ist die einzige unterstützte Syntax eine SharePoint-Website-URL.  
   
 ### <a name="report-model-designer-is-not-available-in-sql-server-data-tools"></a>Der Berichtsmodell-Designer ist in SQL Server-Datentools nicht verfügbar  
- 
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] unterstützt Berichtsmodellprojekte nicht mehr. Der Berichtsmodell-Designer steht in [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]nicht zur Verfügung. Sie können keine neuen Berichtsmodellprojekte erstellen oder vorhandene Projekte in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] öffnen, und Sie können keine Berichtsmodelle erstellen oder aktualisieren. Um Berichtsmodelle zu aktualisieren, können Sie [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] oder frühere Tools verwenden. Sie können Berichtsmodelle weiterhin als Datenquellen in Berichten verwenden, die in [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] -Tools, wie z. B. Berichts-Generator und Berichts-Designer, erstellt wurden. Der Abfrage-Designer, den Sie zum Erstellen von Abfragen zum Extrahieren von Berichtsdaten aus Berichts Modellen verwenden, [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]ist weiterhin in verfügbar.  
+ [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] unterstützt Berichtsmodellprojekte nicht mehr. Der Berichtsmodell-Designer steht in [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]nicht zur Verfügung. Sie können keine neuen Berichtsmodellprojekte erstellen oder vorhandene Projekte in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] öffnen, und Sie können keine Berichtsmodelle erstellen oder aktualisieren. Um Berichtsmodelle zu aktualisieren, können Sie [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] oder frühere Tools verwenden. Sie können Berichtsmodelle weiterhin als Datenquellen in Berichten verwenden, die in [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] -Tools, wie z. B. Berichts-Generator und Berichts-Designer, erstellt wurden. Der Abfrage-Designer, den Sie zum Erstellen von Abfragen zum Extrahieren von Berichtsdaten aus Berichts Modellen verwenden, [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]ist weiterhin in verfügbar.  
   
-##  <a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services wichtige Änderungen  
- In diesem Abschnitt werden neueste Änderungen in [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]beschrieben.  
+##  <a name="sql-server-2008-r2-reporting-services-breaking-changes"></a><a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services wichtige Änderungen  
+ In diesem Abschnitt werden wichtige Änderungen [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]in beschrieben.  
   
 > [!NOTE]  
 >  Da SQL Server 2008 R2 ein kleineres Versionsupgrade von SQL Server 2008 darstellt, wird empfohlen, auch den Inhalt im Abschnitt zu SQL Server 2008 zu lesen.  

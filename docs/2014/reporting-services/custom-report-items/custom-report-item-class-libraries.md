@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b7fc20f857f42c854fcf01947c39ea88206bb5b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63264890"
 ---
 # <a name="custom-report-item-class-libraries"></a>Klassenbibliotheken für ein benutzerdefiniertes Berichtselement
@@ -131,8 +131,8 @@ ms.locfileid: "63264890"
 |`Fields`|Die Auflistung von Feldern (`Microsoft.ReportDesigner.Field`), die abgelegt werden sollen.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Berichtsdefinitionssprache (SSRS)](../reports/report-definition-language-ssrs.md)   
- [Erstellen einer Laufzeitkomponente für ein benutzerdefiniertes Berichtselement](creating-a-custom-report-item-run-time-component.md)   
- [Creating a Custom Report Item Design-Time Component (Erstellen einer Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement)](creating-a-custom-report-item-design-time-component.md)  
+ [Berichts Definitions Sprache &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md)   
+ [Erstellen einer Laufzeitkomponente für ein benutzerdefiniertes Berichts Element](creating-a-custom-report-item-run-time-component.md)   
+ [Erstellen einer Entwurfszeitkomponente für ein benutzerdefiniertes Berichtselement](creating-a-custom-report-item-design-time-component.md)  
   
   

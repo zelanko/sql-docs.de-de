@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b0ea6e215b5192d1b9e84ed252708b188d5c5a59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483953"
 ---
 # <a name="configure-business-rules-to-send-notifications-master-data-services"></a>Konfigurieren von Geschäftsregeln für das Senden von Benachrichtigungen (Master Data Services)
@@ -59,16 +59,16 @@ ms.locfileid: "65483953"
   
 -   Führen Sie zum Anwenden von Geschäftsregeln auf Daten eine der folgenden Prozeduren aus:  
   
-    -   [Überprüfen bestimmter Mitglieder anhand von Geschäftsregeln &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+    -   [Überprüfen von bestimmten Elementen auf Geschäftsregeln &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
     -   [Überprüfen einer Version anhand von Geschäftsregeln &#40;Master Data Services&#41;](../../2014/master-data-services/validate-a-version-against-business-rules-master-data-services.md)  
   
 -   Konfigurieren Sie das E-Mail-Protokoll wie folgt:  
   
-    -   [Konfigurieren von e-Mail-Benachrichtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md)  
+    -   [Konfigurieren von E-Mail-Benachrichtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Benachrichtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/notifications-master-data-services.md)   
- [Konfigurieren von e-Mail-Benachrichtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md)  
+ [Konfigurieren von E-Mail-Benachrichtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/configure-email-notifications-master-data-services.md)  
   
   

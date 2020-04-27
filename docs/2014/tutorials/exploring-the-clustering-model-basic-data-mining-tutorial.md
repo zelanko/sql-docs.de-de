@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 9bb2c6457122a5ea49824ca178b6950d88f75563
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63280429"
 ---
 # <a name="exploring-the-clustering-model-basic-data-mining-tutorial"></a>Untersuchen des Clustering-Modells (Lernprogramm zu Data Mining-Grundlagen)
@@ -24,7 +24,7 @@ ms.locfileid: "63280429"
   
 
   
-##  <a name="ClusterDiagramTab"></a>Registerkarte Cluster Diagramm  
+##  <a name="cluster-diagram-tab"></a><a name="ClusterDiagramTab"></a>Registerkarte Cluster Diagramm  
  Auf der Registerkarte Clusterdiagramm werden alle Cluster in einem Miningmodell angezeigt. Die Linien zwischen den Clustern geben die jeweilige "Nähe" an. Ihre Schattierung hängt davon ab, wie groß die Ähnlichkeit zwischen den Clustern ist. Die tatsächliche Farbe der einzelnen Cluster gibt die Häufigkeit der Variablen und den Status im Cluster an.  
   
 #### <a name="to-explore-the-model-in-the-cluster-diagram-tab"></a>So untersuchen Sie das Modell auf der Registerkarte "Clusterdiagramm"  
@@ -57,7 +57,7 @@ ms.locfileid: "63280429"
   
 
   
-##  <a name="ClusterProfilesTab"></a>Registerkarte Cluster profile  
+##  <a name="cluster-profiles-tab"></a><a name="ClusterProfilesTab"></a>Registerkarte Cluster profile  
  Die Registerkarte **Cluster profile** bietet eine allgemeine Ansicht des `TM_Clustering` Modells. Die Registerkarte **Cluster profile** enthält eine Spalte für jeden Cluster im Modell. In der ersten Spalte werden die Attribute aufgelistet, die mit mindestens einem Cluster verknüpft sind. Der Rest des Viewers umfasst die Verteilung der Status eines Attributs für jeden Cluster. Die Verteilung einer diskreten Variablen wird als farbiger Balken mit der maximalen Anzahl von Balken in der Liste der **Histogrammbalken** angezeigt. Kontinuierliche Attribute werden in einem Rautendiagramm angezeigt, das die mittlere und die Standardabweichung in jedem Cluster angibt.  
   
 #### <a name="to-explore-the-model-in-the-cluster-profiles-tab"></a>So untersuchen Sie das Modell auf der Registerkarte "Profile"  
@@ -84,7 +84,7 @@ ms.locfileid: "63280429"
   
 
   
-##  <a name="ClusterCharacteristicsTab"></a>Registerkarte Cluster Merkmale  
+##  <a name="cluster-characteristics-tab"></a><a name="ClusterCharacteristicsTab"></a>Registerkarte Cluster Merkmale  
  Auf der Registerkarte **Cluster Merkmale** können Sie die Merkmale eines Clusters ausführlicher untersuchen. Anstatt die Merkmale aller Cluster (wie auf der Registerkarte Clusterprofile) zu vergleichen, können Sie auch einen Cluster nach dem anderen betrachten. Wenn Sie z. b. **Bike Buyers High** aus der Liste **Cluster** auswählen, können Sie die Merkmale der Kunden in diesem Cluster sehen. Die Anzeige unterscheidet sich zwar vom Viewer für Clusterprofile, die Ergebnisse sind jedoch gleich.  
   
 > [!NOTE]  
@@ -92,7 +92,7 @@ ms.locfileid: "63280429"
   
 
   
-##  <a name="ClusterDiscriminationTab"></a>Registerkarte Cluster Unterscheidung  
+##  <a name="cluster-discrimination-tab"></a><a name="ClusterDiscriminationTab"></a>Registerkarte Cluster Unterscheidung  
  Mithilfe der Registerkarte **Cluster Unterscheidung** können Sie die Merkmale unterscheiden, die einen Cluster von einem anderen Cluster unterscheiden. Nachdem Sie zwei Cluster ausgewählt haben, eine aus der Liste **Cluster 1** und eine aus der Liste **Cluster 2** , berechnet der Viewer die Unterschiede zwischen den Clustern und zeigt eine Liste der Attribute an, die die Cluster am meisten unterscheiden.  
   
 #### <a name="to-explore-the-model-in-the-cluster-discrimination-tab"></a>So untersuchen Sie das Modell auf der Registerkarte "Clusterunterscheidung"  

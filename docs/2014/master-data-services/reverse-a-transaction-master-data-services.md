@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3a7e3496d005ded5fa935db828501a71c922c261
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478836"
 ---
 # <a name="reverse-a-transaction-master-data-services"></a>Umkehren einer Transaktion (Master Data Services)
@@ -46,6 +46,6 @@ ms.locfileid: "65478836"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Transaktionen &#40;Master Data Services&#41;](../../2014/master-data-services/transactions-master-data-services.md)   
- [Erneutes Aktivieren eines Elements oder einer Sammlung &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
+ [Reaktivieren eines Elements oder einer Sammlung &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
   
   

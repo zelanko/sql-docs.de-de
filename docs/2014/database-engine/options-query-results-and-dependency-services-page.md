@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: b9200880a9581b3903985c16fc2af129d19aceec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65481203"
 ---
 # <a name="options-query-results-and-dependency-services-page"></a>Optionen (Abfrageergebnisse und Seite „Abhängigkeitsdienste“)
@@ -28,15 +28,15 @@ ms.locfileid: "65481203"
   
 2.  [Konfigurieren der Optionen](#options)  
   
-##  <a name="open_dialog"></a>Öffnen Sie das Dialog Feld Optionen (Seite Abfrageergebnisse/Abhängigkeits Dienste).  
+##  <a name="open-the-options-query-resultsdependency-services-page-dialog-box"></a><a name="open_dialog"></a>Öffnen Sie das Dialog Feld Optionen (Seite Abfrageergebnisse/Abhängigkeits Dienste).  
   
 1.  Klicken [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]Sie in **im Menü Extras** auf **Optionen** .  
   
 2.  Erweitern Sie **Abfrageergebnisse**, und klicken Sie dann auf **Abhängigkeitsdienste**.  
   
-##  <a name="options"></a> Konfigurieren der Optionen  
+##  <a name="configure-the-options"></a><a name="options"></a>Konfigurieren der Optionen  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Dependency Services-Server**  
  Geben Sie den Server an, auf dem die Abhängigkeitsdienste installiert sind.  
   

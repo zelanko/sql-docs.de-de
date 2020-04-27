@@ -14,25 +14,25 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a6d0d9249a5cfb801e07a85132060bb4d1781346
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63251101"
 ---
 # <a name="sql-server-latches-object"></a>SQL Server, Latches-Objekt
-  Das **SQLServer: Latches** -Objekt in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft bietet Leistungsindikatoren zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] überwachen interner Ressourcen sperren, die als Latches bezeichnet werden. Das Überwachen der Latches für die Ermittlung der Benutzeraktivität und der Ressourcennutzung kann Ihnen dabei helfen, Leistungsengpässe zu erkennen.  
+  Das **SQLServer:Latches** -Objekt in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält Leistungsindikatoren zur Überwachung interner [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressourcensperren, die als Latches bezeichnet werden. Das Überwachen der Latches für die Ermittlung der Benutzeraktivität und der Ressourcennutzung kann Ihnen dabei helfen, Leistungsengpässe zu erkennen.  
   
- In dieser Tabelle werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **Batches** -Leistungsindikatoren beschrieben.  
+ In dieser Tabelle werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Leistungsindikatoren **Latches** beschrieben.  
   
 |Batches-Leistungsindikatoren von SQL Server|BESCHREIBUNG|  
 |---------------------------------|-----------------|  
-|**Durchschnittliche Latchwartezeit (MS)**|Durchschnittliche Latchwartezeit (in Millisekunden) für wartende Latchanforderungen.|  
-|**Latchwartevorgänge/Sek.**|Anzahl der Latchanforderungen, für die Batches nicht sofort erteilt werden konnten.|  
-|**Anzahl der SuperLatches**|Anzahl der Batches, die zurzeit SuperLatches-Objekte sind.|  
-|**SuperLatch-Herabstufungen/Sekunde**|Anzahl der SuperLatches-Objekte, die in der letzten Sekunde zu normalen Batches herabgestuft wurden.|  
-|**SuperLatch-herauf stufungen/Sekunde**|Anzahl der Batches, die in der letzten Sekunde zu SuperLatches-Objekten heraufgestuft wurden.|  
-|**Latchwartezeit Gesamt (MS)**|Gesamtwartezeit (in Millisekunden) für Latchanforderungen, die in der vergangenen Sekunde warten mussten.|  
+|**Durchschnittliche Wartezeit für Latch (in Millisekunden)**|Durchschnittliche Latchwartezeit (in Millisekunden) für wartende Latchanforderungen.|  
+|**Latchwartezeit/Sekunde**|Anzahl der Latchanforderungen, für die Batches nicht sofort erteilt werden konnten.|  
+|**Anzahl der SuperLatches-Objekte**|Anzahl der Batches, die zurzeit SuperLatches-Objekte sind.|  
+|**SuperLatches-Heraufstufungen/Sekunde**|Anzahl der SuperLatches-Objekte, die in der letzten Sekunde zu normalen Batches herabgestuft wurden.|  
+|**SuperLatches-Höherstufungen/Sekunde**|Anzahl der Batches, die in der letzten Sekunde zu SuperLatches-Objekten heraufgestuft wurden.|  
+|**Gesamtwartezeit für Latch (in Millisekunden)**|Gesamtwartezeit (in Millisekunden) für Latchanforderungen, die in der vergangenen Sekunde warten mussten.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Überwachen der Ressourcenverwendung &#40;Systemmonitor&#41;](monitor-resource-usage-system-monitor.md)  

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5118ebcb3da31b97859ca0b2b38e3ad552604990
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68212001"
 ---
 # <a name="create-and-test-a-classifier-user-defined-function"></a>Erstellen und Testen einer benutzerdefinierten Klassifizierungsfunktion
@@ -118,8 +118,7 @@ ms.locfileid: "68212001"
 4.  Erstellen Sie die Klassifizierungsfunktion, die Zeitfunktionen und -werte verwendet, die bezüglich der Zeiten in der Suchtabelle ausgewertet werden können. Informationen zum Verwenden von Nachschlagetabellen in einer Klassifizierungsfunktion finden Sie in diesem Artikel unter „Best Practices für die Verwendung von Nachschlagetabellen in Klassifizierungsfunktionen“.  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] wurde ein erweiterter Satz von Datums- und Uhrzeitdatentypen und zugehörigen Funktionen eingeführt. Weitere Informationen finden Sie unter [Datums- und Uhrzeitdatentypen und zugehörige Funktionen &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql).  
+    >  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] wurde ein erweiterter Satz von Datums- und Uhrzeitdatentypen und zugehörigen Funktionen eingeführt. Weitere Informationen finden Sie unter [Datums- und Uhrzeitdatentypen und zugehörige Funktionen &#40;Transact-SQL&#41;](/sql/t-sql/functions/date-and-time-data-types-and-functions-transact-sql).  
   
     ```  
     CREATE FUNCTION fnTimeClassifier()  
@@ -265,9 +264,9 @@ ms.locfileid: "68212001"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Resource Governor](resource-governor.md)   
- [Aktivieren der Ressourcenkontrolle](enable-resource-governor.md)   
- [Ressourcenpool für die Ressourcenkontrolle](resource-governor-resource-pool.md)   
- [Arbeitsauslastungsgruppe der Ressourcenkontrolle](resource-governor-workload-group.md)   
+ [Aktivieren von Resource Governor](enable-resource-governor.md)   
+ [Ressourcen Pool Resource Governor](resource-governor-resource-pool.md)   
+ [Resource Governor Auslastungs Gruppe](resource-governor-workload-group.md)   
  [Konfigurieren von Resource Governor mithilfe einer Vorlage](configure-resource-governor-using-a-template.md)   
  [Anzeigen von Resource Governor Eigenschaften](view-resource-governor-properties.md)   
  [Alter Resource Governor &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql)   

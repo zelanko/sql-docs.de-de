@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 657116e00b6905964f8cc65c28dff383c3cc9ad0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63261684"
 ---
 # <a name="queue-reader-agent-security"></a>Sicherheit für den Warteschlangenlese-Agent
@@ -34,7 +34,7 @@ ms.locfileid: "63261684"
  In diese Felder geben Sie das Kennwort für das Windows-Konto ein.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwalten von Anmeldeinformationen und Kennwörtern bei der Replikation](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
+ [Verwalten von Anmeldungen und Kenn Wörtern in der Replikation](security/identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication)   
  [Sicherheitsmodell des Replikations-Agents](security/replication-agent-security-model.md)   
  [Replikations-Agents (Übersicht)](agents/replication-agents-overview.md)   
  [Bewährte Methoden für die Replikationssicherheit](security/replication-security-best-practices.md)  

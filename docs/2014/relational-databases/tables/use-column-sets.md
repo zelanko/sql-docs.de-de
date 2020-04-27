@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 89dd59aeff7a02f57ac0d34d347496cc97174e2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63298634"
 ---
 # <a name="use-column-sets"></a>Verwenden von Spaltensätzen
@@ -121,8 +121,7 @@ GO
 |`money`, `smallmoney`|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|  
 |`time`|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|7|  
   
- 
-  \*  „localeID -1“ ist das Standardgebietsschema. Das englischsprachige Gebietsschema ist 1033.  
+ \*  „localeID -1“ ist das Standardgebietsschema. Das englischsprachige Gebietsschema ist 1033.  
   
  **  Nicht zutreffend = Bei einem SELECT-Vorgang für den Spaltensatz werden für diese Attribute keine Werte ausgegeben. Gibt eine Fehlermeldung zurück, wenn für dieses Attribut von dem Aufrufer in der für einen Spaltensatz in einem INSERT- oder UPDATE-Vorgang bereitgestellten XML-Darstellung ein Wert angegeben wird.  
   
@@ -183,7 +182,7 @@ VALUES (3, 'Tire Spec 2', '<ProductionSpecification>AXW9R411</ProductionSpecific
 GO  
 ```  
   
-### <a name="d-observing-the-results-of-a-column-set-when-select--is-used"></a>D: Prüfen der Ergebnisse eines Spaltensatzes bei Verwendung von SELECT *  
+### <a name="d-observing-the-results-of-a-column-set-when-select--is-used"></a>D. Prüfen der Ergebnisse eines Spaltensatzes bei Verwendung von SELECT *  
  Im folgenden Beispiel werden alle Spalten der Tabelle ausgewählt, die einen Spaltensatz enthält. Es wird eine XML-Spalte mit den kombinierten Werten der Sparsespalten zurückgegeben. Die Sparsespalten werden nicht einzeln zurückgegeben.  
   
 ```  

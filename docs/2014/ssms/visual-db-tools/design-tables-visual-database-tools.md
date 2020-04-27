@@ -14,20 +14,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: becfebbfe57e00b9abcc3cec29364f6b65fb1dfc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316149"
 ---
 # <a name="design-tables-visual-database-tools"></a>Entwerfen von Tabellen (Visual Database Tools)
   Im Tabellen-Designer ist ein Fenster zur Gestaltung individuell angepasster Tabellen verfügbar. In den Themen dieses Abschnitts wird erläutert, wie Datenbanktabellen mit dem Tabellen-Designer erstellt und geändert werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Öffnen Sie Tabellen-Designer &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [Öffnen des Tabellen-Designers &#40;Visual Database Tools&#41;](visual-database-tools.md)  
  Öffnen einer neuen oder vorhandenen Datenbanktabelle.  
   
- [Speichern Sie Ihre Arbeit in Tabellen-Designer &#40;Visual Database Tools&#41;](../../database-engine/save-your-work-in-table-designer-visual-database-tools.md)  
+ [Speichern Ihrer Arbeit im Tabellen-Designer &#40;Visual Database Tools&#41;](../../database-engine/save-your-work-in-table-designer-visual-database-tools.md)  
  Speichern von Änderungen an bestimmten Tabellen oder an allen Tabellen, die im Tabellen-Designer geöffnet sind.  
   
   

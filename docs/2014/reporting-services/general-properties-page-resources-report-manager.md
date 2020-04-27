@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 23c920f436ae48c8eb4abd8ccd69097a06557907
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66109114"
 ---
 # <a name="general-properties-page-resources-report-manager"></a>Allgemein (Eigenschaftenseite, Ressourcen) (Berichts-Manager)
@@ -46,7 +46,7 @@ ms.locfileid: "66109114"
  **Typ**  
  Gibt den MIME-Typ der Ressource an. Diese Eigenschaft ist schreibgeschützt.  
   
- **Anwenden**  
+ **übernehmen**  
  Klicken Sie auf diese Schaltfläche, um die Änderungen zu speichern.  
   
  **Löschen**  
@@ -62,6 +62,6 @@ ms.locfileid: "66109114"
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Anzeigen der Seite, Ressourcen &#40;Berichts-Manager&#41;](../../2014/reporting-services/view-page-resources-report-manager.md)   
  [Berichts-Manager F1-Hilfe](../../2014/reporting-services/report-manager-f1-help.md)   
- [Sicherheit (Eigenschaften Seite), Elemente &#40;Berichts-Manager&#41;](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
+ [Sicherheit (Eigenschaftenseite), Elemente, (Berichts-Manager)](../../2014/reporting-services/security-properties-page-items-report-manager.md)  
   
   

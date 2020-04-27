@@ -18,10 +18,10 @@ ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 21fe2a05c87caf5270967381e9ebeefc1069729f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "70810396"
 ---
 # <a name="sp_add_schedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
@@ -60,7 +60,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_type = ] freq_type`Ein Wert, der angibt, wann ein Auftrag ausgeführt werden soll. *freq_type* ist vom Datentyp **int**und hat den Standardwert **0**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
 |**4**|Täglich|  
@@ -84,7 +84,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_subday_type = ] freq_subday_type`Gibt die Einheiten für die *freq_subday_interval*an. *freq_subday_type* ist vom Datentyp **int**und hat den Standardwert **0**. die folgenden Werte sind möglich:  
   
-|value|Beschreibung (Einheit)|  
+|Wert|Beschreibung (Einheit)|  
 |-----------|--------------------------|  
 |**0x1**|Zum angegebenen Zeitpunkt|  
 |**0x2**|Sekunden|  
@@ -95,7 +95,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 `[ @freq_relative_interval = ] freq_relative_interval`Das Vorkommen eines Auftrags *freq_interval* in jedem Monat, wenn *freq_interval* 32 (monatlich, relativ) ist. *freq_relative_interval* ist vom Datentyp **int**und hat den Standardwert **0**. die folgenden Werte sind möglich: *freq_relative_interval* wird in den Fällen ignoriert, in denen *freq_type* nicht gleich 32 ist.  
   
-|value|Beschreibung (Einheit)|  
+|Wert|Beschreibung (Einheit)|  
 |-----------|--------------------------|  
 |**1**|First (Erster)|  
 |**2**|Sekunde|  
@@ -103,7 +103,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**88**|Vierter|  
 |**Uhr**|Last (Letzter)|  
   
-`[ @freq_recurrence_factor = ] freq_recurrence_factor`Die Anzahl der Wochen oder Monate zwischen der geplanten Ausführung eines Auftrags. *freq_recurrence_factor* wird nur verwendet, ** wenn freq_type **8**, **16**oder **32**ist. *freq_recurrence_factor* ist vom Datentyp **int**und hat den Standardwert **0**.  
+`[ @freq_recurrence_factor = ] freq_recurrence_factor`Die Anzahl der Wochen oder Monate zwischen der geplanten Ausführung eines Auftrags. *freq_recurrence_factor* wird nur verwendet, *freq_type* wenn freq_type **8**, **16**oder **32**ist. *freq_recurrence_factor* ist vom Datentyp **int**und hat den Standardwert **0**.  
   
 `[ @active_start_date = ] active_start_date`Das Datum, an dem die Ausführung eines Auftrags beginnen kann. *active_start_date* ist vom Datentyp **int**und hat den Standardwert NULL, der das heutige Datum angibt. Das Datum wird als YYYYMMDD formatiert. Wenn *active_start_date* nicht NULL ist, muss das Datum größer oder gleich 19900101 sein.  
   
@@ -131,9 +131,8 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 ## <a name="result-sets"></a>Resultsets  
  Keine  
   
-## <a name="remarks"></a>Bemerkungen  
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Aufträge problemlos mithilfe einer grafischen Oberfläche verwaltet werden. Dies ist die empfohlene Vorgehensweise für die Erstellung und Verwaltung der Auftragsinfrastruktur.  
+## <a name="remarks"></a>Hinweise  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Aufträge problemlos mithilfe einer grafischen Oberfläche verwaltet werden. Dies ist die empfohlene Vorgehensweise für die Erstellung und Verwaltung der Auftragsinfrastruktur.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Standardmäßig können Mitglieder der festen Server Rolle **sysadmin** diese gespeicherte Prozedur ausführen. Andere Benutzer müssen Mitglieder der festen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Datenbankrollen in der **msdb** -Datenbank sein:  
@@ -200,6 +199,6 @@ GO
  [sp_update_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_help_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
+ [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   

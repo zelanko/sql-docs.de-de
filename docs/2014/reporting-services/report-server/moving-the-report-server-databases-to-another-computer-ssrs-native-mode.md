@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a92fea73d84bc28f09951120e763b602586e7069
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103721"
 ---
 # <a name="moving-the-report-server-databases-to-another-computer-ssrs-native-mode"></a>Verschieben von Berichtsserver-Datenbanken auf einen anderen Computer (einheitlicher SSRS-Modus)
@@ -26,15 +26,13 @@ ms.locfileid: "66103721"
   
 -   Zeitpläne werden beim ersten Neustart des Berichtsserverdiensts neu erstellt.  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Aufträge, die verwendet werden, um einen Zeitplan auszulösen, werden auf der neuen Datenbankinstanz neu erstellt. Sie müssen die Aufträge nicht auf den neuen Computer verschieben, Sie möchten jedoch möglicherweise nicht mehr benötigte Aufträge auf dem Computer löschen.  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Aufträge, die verwendet werden, um einen Zeitplan auszulösen, werden auf der neuen Datenbankinstanz neu erstellt. Sie müssen die Aufträge nicht auf den neuen Computer verschieben, Sie möchten jedoch möglicherweise nicht mehr benötigte Aufträge auf dem Computer löschen.  
   
 -   Abonnements, zwischengespeicherte Berichte und Momentaufnahmen bleiben in der verschobenen Datenbank erhalten. Wenn eine Momentaufnahme nach der Verschiebung der Datenbank keine aktualisierten Daten bezieht, löschen Sie die Momentaufnahmeoptionen im Berichts-Manager, und klicken Sie auf **Anwenden** , um die vorgenommenen Änderungen zu speichern. Erstellen Sie den Zeitplan neu, und klicken Sie nochmals auf **Anwenden** , um die vorgenommenen Änderungen wieder zu speichern.  
   
 -   Temporäre Berichts- und Benutzersitzungsdaten, die in reportservertempdb gespeichert sind, bleiben beim Verschieben dieser Datenbank persistent.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet verschiedene Vorgehensweisen zum Verschieben von Datenbanken (einschließlich Sichern und Wiederherstellen, Anfügen und Trennen sowie Kopieren). Nicht alle Vorgehensweisen sind zum Verschieben einer vorhandenen Datenbank in eine neue Serverinstanz geeignet. Die zum Verschieben der Berichtsserver-Datenbank zu verwendende Vorgehensweise ist je nach Verfügbarkeitsanforderungen Ihres Systems unterschiedlich. Die einfachste Möglichkeit zum Verschieben der Berichtsserver-Datenbanken besteht darin, sie anzufügen und zu trennen. Bei dieser Vorgehensweise muss der Berichtsserver jedoch offline geschaltet werden, während Sie die Datenbank trennen. Sicherungen und Wiederherstellungen sind jedoch besser geeignet, wenn Sie Störungen des Diensts vermeiden möchten. Sie müssen für diese Vorgänge jedoch [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehle ausführen. Das Kopieren der Datenbank wird nicht empfohlen (insbesondere nicht mithilfe des Assistenten zum Kopieren von Datenbanken), da hierbei Berechtigungseinstellungen in der Datenbank verloren gehen.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bietet verschiedene Vorgehensweisen zum Verschieben von Datenbanken (einschließlich Sichern und Wiederherstellen, Anfügen und Trennen sowie Kopieren). Nicht alle Vorgehensweisen sind zum Verschieben einer vorhandenen Datenbank in eine neue Serverinstanz geeignet. Die zum Verschieben der Berichtsserver-Datenbank zu verwendende Vorgehensweise ist je nach Verfügbarkeitsanforderungen Ihres Systems unterschiedlich. Die einfachste Möglichkeit zum Verschieben der Berichtsserver-Datenbanken besteht darin, sie anzufügen und zu trennen. Bei dieser Vorgehensweise muss der Berichtsserver jedoch offline geschaltet werden, während Sie die Datenbank trennen. Sicherungen und Wiederherstellungen sind jedoch besser geeignet, wenn Sie Störungen des Diensts vermeiden möchten. Sie müssen für diese Vorgänge jedoch [!INCLUDE[tsql](../../includes/tsql-md.md)] -Befehle ausführen. Das Kopieren der Datenbank wird nicht empfohlen (insbesondere nicht mithilfe des Assistenten zum Kopieren von Datenbanken), da hierbei Berechtigungseinstellungen in der Datenbank verloren gehen.  
   
 > [!IMPORTANT]  
 >  Die in diesem Thema vorgestellten Schritte sind geeignet, wenn das Verschieben der Berichtsserver-Datenbank die einzige Änderung ist, die Sie an der vorhandenen Installation vornehmen. Wenn eine vollständige [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Installation migriert wird (d.h. wenn die Datenbank verschoben und die Identität des Berichtsserver-Windows-Diensts, der die Datenbank verwendet, geändert wird), müssen die Verbindung neu konfiguriert und der Verschlüsselungsschlüssel zurückgesetzt werden.  
@@ -225,7 +223,7 @@ GO
  [Konfigurieren des Kontos für die unbeaufsichtigte Ausführung &#40;SSRS-Configuration Manager&#41;](../install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)   
  [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [rsconfig-Hilfsprogramm &#40;SSRS-&#41;](../tools/rsconfig-utility-ssrs.md)   
- [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Configuration Manager&#41;](../install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
  [Berichtsserver-Datenbank &#40;einheitlicher SSRS-Modus&#41;](report-server-database-ssrs-native-mode.md)  
   
   

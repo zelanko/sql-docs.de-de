@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6dab6158ba2d0854868bf60f2a73efce594b2cc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66101442"
 ---
 # <a name="select-the-data-source"></a>Auswählen der Datenquelle
   Auf dieser Seite des Berichts-Assistenten können Sie eine Datenquelle für den Bericht definieren.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Freigegebene Datenquelle**  
  Wählen Sie **Freigegebene Datenquelle** aus, um eine vordefinierte Datenquelle zu verwenden, die bereits über die zu verwendenden Datenquellen-Verbindungsinformationen verfügt. Die Liste enthält alle freigegebenen Datenquellen, die in dem Projekt enthalten sind.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66101442"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Eingebettete und freigegebene Datenverbindungen oder Datenquellen &#40;Berichts-Generator und SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md)   
- [Angeben von Anmelde Informationen und Verbindungsinformationen für Berichtsdaten Quellen](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
+ [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Reporting Services Berichts Server](../../2014/reporting-services/reporting-services-report-server.md)   
  [RSReportDesigner-Konfigurationsdatei](report-server/rsreportdesigner-configuration-file.md)   
  [Datenverbindungen, Datenquellen und Verbindungs Zeichenfolgen in Reporting Services](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-reporting-services.md)   

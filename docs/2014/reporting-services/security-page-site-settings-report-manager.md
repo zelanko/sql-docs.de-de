@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6c0b0cc68c73c66dabb237d859aba641fb234647
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102183"
 ---
 # <a name="security-page-site-settings-report-manager"></a>Sicherheit (Seite) (Siteeinstellungen, Berichts-Manager)
@@ -35,7 +35,7 @@ ms.locfileid: "66102183"
   
 3.  Wählen Sie die Registerkarte **Sicherheit** aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Löschen**  
  Klicken Sie auf diese Schaltfläche, um eine vorhandene Rollenzuweisung zu löschen. Ehe Sie auf **Löschen**klicken, aktivieren Sie das Kontrollkästchen neben dem zu entfernenden Gruppen- oder Benutzernamen. Sie können keine Rollenzuweisung löschen, wenn sie die letzte und einzige Zuweisung ist. Durch das Löschen einer Rollenzuweisung werden weder Gruppen- oder Benutzerkonten noch Rollendefinitionen gelöscht.  
   

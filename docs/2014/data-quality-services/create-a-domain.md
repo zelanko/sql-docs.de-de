@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 54c1a720f34a7cce978371a6794f41e8af5f3b24
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480961"
 ---
 # <a name="create-a-domain"></a>Erstellen einer Domäne
@@ -24,17 +24,17 @@ ms.locfileid: "65480961"
   
  Es gibt zwei Möglichkeiten, eine neue Domäne zu erstellen. Erstens während des Strukturschritts der Wissensermittlungsaktivität, wenn Sie gerade ein Datenbeispiel analysieren, um einer neuen oder vorhandenen Wissensdatenbank Wissen hinzuzufügen. Zweitens während der Domänenverwaltungsaktivität, wenn Sie eine neue Domäne erstellen, anstatt eine vorhandene zu ändern.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a> Voraussetzungen  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
  Um eine Domäne zu erstellen, müssen Sie eine Wissensdatenbank erstellt und geöffnet haben.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Sie müssen über die dqs_kb_editor- oder dqs_administrator-Rolle in der DQS_MAIN-Datenbank verfügen, um eine Domäne zu erstellen.  
   
-##  <a name="Discovery"></a>Erstellen einer Domäne in der Wissens Ermittlungs Aktivität  
+##  <a name="create-a-domain-in-the-knowledge-discovery-activity"></a><a name="Discovery"></a>Erstellen einer Domäne in der Wissens Ermittlungs Aktivität  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../../2014/data-quality-services/run-the-data-quality-client-application.md)aus.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "65480961"
   
 5.  Wählen Sie in der Tabelle **Zuordnungen** eine Quellspalte aus der Dropdownliste für die Spalte **Quellspalte** einer leeren Zeile aus. Wenn keine entsprechenden Domänen vorhanden ist, klicken Sie auf das Symbol **Domäne erstellen** .  
   
-##  <a name="DomainManagement"></a>Erstellen einer Domäne in der Domänen Verwaltungs Aktivität  
+##  <a name="create-a-domain-in-the-domain-management-activity"></a><a name="DomainManagement"></a>Erstellen einer Domäne in der Domänen Verwaltungs Aktivität  
   
 1.  Klicken Sie im [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] -Startbildschirm auf **Wissensdatenbank öffnen** , und wählen Sie dann eine Wissensdatenbank aus, oder klicken Sie auf **Neue Wissensdatenbank** , und geben Sie Eigenschaften für die neue Wissensdatenbank ein.  
   
@@ -54,12 +54,12 @@ ms.locfileid: "65480961"
   
 3.  Klicken Sie auf der Seite **Domänenverwaltung** über der Domänenliste auf das Symbol **Domäne erstellen** .  
   
-##  <a name="Properties"></a>Festlegen von Domänen Eigenschaften  
+##  <a name="set-domain-properties"></a><a name="Properties"></a>Festlegen von Domänen Eigenschaften  
   
 1.  Geben Sie im Dialogfeld **Domäne erstellen** einen eindeutigen Namen für die Wissensdatenbank und eine Beschreibung mit maximal 256 Zeichen ein.  
   
     > [!NOTE]  
-    >  Weitere Informationen zu den Domäneneigenschaften finden Sie unter [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
+    >   Weitere Informationen zu den Domäneneigenschaften finden Sie unter [Set Domain Properties](../../2014/data-quality-services/set-domain-properties.md).  
   
 2.  Wählen Sie in der Liste **Datentyp** einen Datentyp für die Werte in der Domäne aus. Der Datentyp kann **Zeichenfolge** (Standard), **Datum**, **Ganze Zahl**oder **Dezimal**sein.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "65480961"
   
 10. Klicken Sie auf **Fertig stellen** , um die Domänenverwaltungsaktivität abzuschließen, wie in [Beenden der Domänenverwaltungsaktivität](../../2014/data-quality-services/end-the-domain-management-activity.md)beschrieben.  
   
-##  <a name="FollowUp"></a>Nachverfolgung: nach dem Erstellen einer Domäne  
+##  <a name="follow-up-after-creating-a-domain"></a><a name="FollowUp"></a>Nachverfolgung: nach dem Erstellen einer Domäne  
  Nachdem Sie eine Domäne erstellt haben, können Sie andere Domänenverwaltungsaufgaben in der Domäne ausführen. Sie können die Wissensermittlung durchführen, um der Domäne Wissen hinzuzufügen, oder Sie können der Domäne eine Abgleichsrichtlinie hinzufügen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../../2014/data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../../2014/data-quality-services/managing-a-domain.md) oder [Erstellen einer Abgleichsrichtlinie](../../2014/data-quality-services/create-a-matching-policy.md).  
   
   

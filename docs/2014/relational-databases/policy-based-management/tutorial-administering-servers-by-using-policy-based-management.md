@@ -14,13 +14,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 58757aa0de2b13c68926cf596a8da702b972edf3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63256061"
 ---
-# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Lernprogramm: Verwalten von Servern mit der richtlinienbasierten Verwaltung
+# <a name="tutorial-administering-servers-by-using-policy-based-management"></a>Tutorial: Verwalten von Servern mit der richtlinienbasierten Verwaltung
   Willkommen beim Lernprogramm zum Verwalten von Servern mit richtlinienbasierten Verwaltungsrichtlinien. Dieses Lernprogramm richtet sich an Benutzer, die mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vertraut sind, die richtlinienbasierte Verwaltung jedoch noch nicht kennen.  
   
 ## <a name="what-you-will-learn"></a>Lernziele  
@@ -28,19 +28,19 @@ ms.locfileid: "63256061"
   
  Dieses Lernprogramm ist in zwei Lektionen aufgeteilt:  
   
- [Lektion 1: Erstellen und Anwenden einer Richtlinie 'Standardmäßig aus'](lesson-1-create-and-apply-an-off-by-default-policy.md)  
+ [Lektion 1: Erstellen und Anwenden der Richtlinie „Standardmäßig deaktiviert“](lesson-1-create-and-apply-an-off-by-default-policy.md)  
  In dieser Lektion wird eine Richtlinie erstellt, die festlegt, dass Datenbank-E-Mail nicht auf dem Server aktiviert ist. Anschließend überprüft die Richtlinie, ob der Server diese Richtlinie einhält, und konfiguriert den Server, indem Datenbank-E-Mail deaktiviert wird.  
   
  [Lektion 2: Erstellen und Anwenden einer Richtlinie für Benennungsstandards](lesson-2-create-and-apply-a-naming-standards-policy.md)  
  In dieser Lektion wird eine Richtlinie erstellt, die einen Benennungsstandard für Tabellen definiert und erzwingt.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
  Für diese Lektion benötigen Sie grundlegende Datenbankkenntnisse und grundlegende Kenntnisse von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  Um das Lernprogramm verwenden zu können, muss auf Ihrem System [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] installiert sein.  
   
 ## <a name="start-the-tutorial"></a>Lernprogramm starten  
- [Lektion 1: Erstellen und Anwenden einer Richtlinie 'Standardmäßig aus'](lesson-1-create-and-apply-an-off-by-default-policy.md)  
+ [Lektion 1: Erstellen und Anwenden der Richtlinie „Standardmäßig deaktiviert“](lesson-1-create-and-apply-an-off-by-default-policy.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von Servern mit der richtlinienbasierten Verwaltung](administer-servers-by-using-policy-based-management.md)  

@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 37d0031ebfb4ec6d31da6aad9a8842c0623cb75b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63283478"
 ---
 # <a name="report-server-web-service-methods"></a>Webdienstmethoden für Berichtsserver
@@ -30,7 +30,7 @@ ms.locfileid: "63283478"
 ## <a name="endpoints-and-methods"></a>Endpunkte und Methoden  
  In der folgenden Tabelle sind die Endpunkte des Berichtsserver-Webdiensts und die vom <xref:ReportService2010.ReportingService2010>-Endpunkt bereitgestellten Methodenkategorien aufgeführt. Informationen zu den in den anderen Endpunkten verfügbaren Methoden finden Sie unter [Technische Referenz (SSRS)](../../technical-reference-ssrs.md).  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Report Server-Webdienst-Endpunkte](report-server-web-service-endpoints.md)|Beschreibt die Verwaltungs- und Ausführungsendpunkte des Berichtsserver-Webdiensts.|  
 |[Methoden zur Berichtsserver-Namespaceverwaltung](report-server-namespace-management-methods.md)|Beschreibt Methoden, mit denen Sie die Berichtsserver-Datenbank verwalten können. Insbesondere können Sie Ordner und Ressourcen verwalten und Elementeigenschaften festlegen.|  

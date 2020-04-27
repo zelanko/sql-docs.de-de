@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27a03aaf94d518caa6b649b7ccd826e08798dacb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284881"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence-ssas-tabular"></a>Angeben von "Als Datumstabelle markieren" zur Verwendung mit Zeitintelligenz (SSAS – tabellarisch)
@@ -36,11 +36,11 @@ ms.locfileid: "67284881"
   
 1.  Klicken Sie im Modell-Designer auf die Datumstabelle.  
   
-2.  Klicken Sie im Menü **Tabelle** auf **Datum**, und klicken Sie dann auf **als Datums Tabelle markieren** .  
+2.  Klicken Sie im Menü **Tabelle** auf **Datum**, und klicken Sie dann auf **Als Datumstabelle markieren**  
   
-3.  Wählen Sie im Dialogfeld **Als Datumstabelle markieren** im Listenfeld **Datum** eine Spalte aus, die als eindeutiger Bezeichner verwendet wird. Diese Spalte muss eindeutige Werte enthalten und sollte den Date-Datentyp aufweisen. Beispiel:  
+3.  Wählen Sie im Dialogfeld **Als Datumstabelle markieren** im Listenfeld **Datum** eine Spalte aus, die als eindeutiger Bezeichner verwendet wird. Diese Spalte muss eindeutige Werte enthalten und sollte den Date-Datentyp aufweisen. Zum Beispiel:  
   
-    |Date|  
+    |Datum|  
     |----------|  
     |7/1/2010 12:00:00 AM|  
     |7/2/2010 12:00:00 AM|  

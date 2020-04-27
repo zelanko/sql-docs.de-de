@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 0cf56e718b2d17b2b2a1f44088b05226ef86388d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479425"
 ---
 # <a name="explorer-functional-area-master-data-manager"></a>Funktionsbereich "Explorer" (Master Data Manager)
@@ -23,15 +23,15 @@ ms.locfileid: "65479425"
 ## <a name="data-management"></a>Datenverwaltung  
  [Attribute &#40;Master Data Services&#41;](attributes-master-data-services.md)  
   
- [Ändern Sie den Attributtyp &#40;MDS-Add-in für Excel&#41;](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)  
+ [Ändern des Attributtyps &#40;MDS-Add-In für Excel&#41;](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)  
   
- [Mitglieder &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
+ [Elemente &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
- [Blatt Element &#40;Master Data Services erstellen&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)  
+ [Erstellen eines Blattelements &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)  
   
  [Löschen eines Elements oder einer Sammlung &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)  
   
- [Erneutes Aktivieren eines Elements oder einer Sammlung &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
+ [Reaktivieren eines Elements oder einer Sammlung &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
   
  [Anmerkungen &#40;Master Data Services&#41;](../../2014/master-data-services/annotations-master-data-services.md)  
   
@@ -41,9 +41,9 @@ ms.locfileid: "65479425"
   
  [Umkehren einer Transaktion &#40;Master Data Services&#41;](../../2014/master-data-services/reverse-a-transaction-master-data-services.md)  
   
- [Master Data Services von Geschäftsregeln &#40;&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
+ [Geschäftsregeln &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)  
   
- [Überprüfen bestimmter Mitglieder anhand von Geschäftsregeln &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
+ [Überprüfen von bestimmten Elementen auf Geschäftsregeln &#40;Master Data Services&#41;](../../2014/master-data-services/validate-specific-members-against-business-rules-master-data-services.md)  
   
 ## <a name="hierarchies-and-collections"></a>Hierarchien und Auflistungen  
  [Hierarchien &#40;Master Data Services&#41;](../../2014/master-data-services/hierarchies-master-data-services.md)  
@@ -52,11 +52,11 @@ ms.locfileid: "65479425"
   
  [Sammlungen &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)  
   
- [Hinzufügen von Mitgliedern zu einer Sammlung &#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)  
+ [Hinzufügen von Elementen zu einer Sammlung &#40;Master Data Services&#41;](../../2014/master-data-services/add-members-to-a-collection-master-data-services.md)  
   
  [Löschen eines Elements oder einer Sammlung &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)  
   
- [Erneutes Aktivieren eines Elements oder einer Sammlung &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
+ [Reaktivieren eines Elements oder einer Sammlung &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Master Data Manager-Webanwendung [Master Data Services]](../../2014/master-data-services/master-data-manager-web-application.md)  

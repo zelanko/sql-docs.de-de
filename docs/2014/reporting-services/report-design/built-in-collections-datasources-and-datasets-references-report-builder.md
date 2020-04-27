@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b47503e9a7a2b09ea6e4d9f7f3ce309fd1b99f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106426"
 ---
 # <a name="datasources-and-datasets-collection-references-report-builder-and-ssrs"></a>Verweise auf DataSources- und DataSets-Auflistungen (Berichts-Generator und SSRS)
@@ -29,7 +29,7 @@ ms.locfileid: "66106426"
 |**Variable**|`Type`|**Beschreibung**|  
 |------------------|--------------|---------------------|  
 |`DataSourceReference`|`String`|Der vollständige Pfad der Datenquellendefinition auf dem Berichtsserver. Sie können eine Liste der von einem Bericht verwendeten Datenquellen im Rahmen eines Berichtsverlaufs mit einbeziehen. Im folgenden Beispiel wird der vollständige Pfad für die Datenquelle mit dem Namen AdventureWorks2012 angezeigt:<br /><br /> `/DataSources/AdventureWorks2012`.|  
-|`Type`|`String`|Der Typ des Datenanbieters für die Datenquelle. Beispiel: `SQL`.|  
+|`Type`|`String`|Der Typ des Datenanbieters für die Datenquelle. Beispielsweise `SQL`.|  
   
 ## <a name="datasets"></a>DataSets  
  Die `DataSets`-Auflistung stellt die Datasets dar, auf die in einer Berichtsdefinition verwiesen wird. Sie können die Abfrage in einem Textfeld in den Bericht einschließen, sodass ein Benutzer, der wissen möchte, welche Daten in dem Bericht enthalten sind, den ursprünglichen Befehlstext sehen kann. Diese Auflistung ist im **Vorschaumodus** nicht verfügbar. In der folgenden Tabelle sind die Elemente der `DataSets`-Auflistung beschrieben.  

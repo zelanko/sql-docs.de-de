@@ -11,18 +11,18 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0aada3a83a29a921584a204f51695e6598131e0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63312569"
 ---
 # <a name="select-the-keyboard-shortcut-scheme"></a>Auswählen des Schemas für Tastenkombinationen
   Anstelle des [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] -Standardtastaturschemas können Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zur Verwendung eines Tastaturschemas konfigurieren, das mit [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)]kompatibel ist.  
   
-## <a name="changing-to-the-includevs_dev10_longincludesvs-dev10-long-mdmd-keyboard-scheme"></a>Wechseln zum [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] -Tastaturschema  
+## <a name="changing-to-the-vs_dev10_long-keyboard-scheme"></a>Wechseln zum [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] -Tastaturschema  
   
-#### <a name="to-apply-includevs_dev10_longincludesvs-dev10-long-mdmd-compatible-keyboard-scheme"></a>So wenden Sie das [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] -kompatible Tastaturschema an  
+#### <a name="to-apply-vs_dev10_long-compatible-keyboard-scheme"></a>So wenden Sie das [!INCLUDE[vs_dev10_long](../../includes/vs-dev10-long-md.md)] -kompatible Tastaturschema an  
   
 1.  Klicken Sie im Menü **Extras** auf **Optionen**.  
   

@@ -11,16 +11,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3f97834b5df61df836b7cfd4cc4d890877f8855a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108533"
 ---
 # <a name="lesson-1-creating-a-report-server-project-reporting-services"></a>Lektion 1: Erstellen eines Berichtsserverprojekts (Reporting Services)
   Zum Erstellen eines Berichts in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] muss zuerst ein Berichtsserverprojekt erstellt werden, in dem Sie Ihre Berichtsdefinitionsdatei (*.rdl) und alle anderen Ressourcendateien speichern können, die für Ihren Bericht erforderlich sind. Anschließend erstellen Sie die tatsächliche Berichtsdefinitionsdatei, und Sie definieren eine Datenquelle für Ihren Bericht, ein Dataset sowie das Berichtslayout. Beim Ausführen des Berichts werden die tatsächlichen Daten abgerufen und mit dem Layout kombiniert. Anschließend werden die Daten auf dem Bildschirm gerendert. Dort können Sie sie exportieren, drucken und speichern.  
   
- In dieser Lektion wird erläutert, wie Sie ein Berichtsserverprojekt in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] erstellen. In einem Berichtsserverprojekt werden Berichte erstellt, die auf einem Berichtsserver ausgeführt werden.  
+ In dieser Lektion wird erläutert, wie Sie ein Berichtsserverprojekt in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]erstellen. In einem Berichtsserverprojekt werden Berichte erstellt, die auf einem Berichtsserver ausgeführt werden.  
   
 ### <a name="to-create-a-report-server-project"></a>So erstellen Sie ein Berichtsserverprojekt  
   

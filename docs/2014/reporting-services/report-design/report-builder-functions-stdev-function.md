@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1763b417f381293eb9f9535cc5ef317cff268588
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105146"
 ---
 # <a name="stdev-function-report-builder-and-ssrs"></a>StDev-Funktion (Berichts-Generator und SSRS)
@@ -38,8 +38,7 @@ StDev(expression, scope, recursive)
  (`String`) optional. Der Name eines Datasets, einer Gruppe oder eines Datenbereichs mit den Berichtselementen, auf die die Aggregatfunktion anzuwenden ist. Wenn *scope* nicht angegeben ist, wird der aktuelle Bereich verwendet.  
   
  *recursive*  
- (**Enumerationstyp**) Optional. 
-  `Simple` (Standardwert) oder `RdlRecursive`. Gibt an, ob die Aggregation rekursiv auszuführen ist.  
+ (**Enumerationstyp**) Optional. `Simple` (Standardwert) oder `RdlRecursive`. Gibt an, ob die Aggregation rekursiv auszuführen ist.  
   
 ## <a name="return-type"></a>Rückgabetyp  
  Gibt für Dezimalausdrücke einen Wert vom Typ `Decimal` und für alle anderen Ausdrücke einen Wert vom Typ `Double` zurück.  

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: df28762c61f548b47c4da4a31fe1d1fd42fbf65a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66105512"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Seitenlayout und Rendering (Berichts-Generator und SSRS)
@@ -31,21 +31,21 @@ ms.locfileid: "66105512"
 > [!NOTE]  
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]  
   
-##  <a name="PageLayout"></a>Seiten Layout und Berichts Elemente  
+##  <a name="page-layout-and-report-items"></a><a name="PageLayout"></a>Seiten Layout und Berichts Elemente  
  Berichtselemente sind Layoutelemente, die verschiedenen Typen von Berichtsdaten zugeordnet werden. Tabelle, Matrix, Liste, Diagramm und Messgerät sind Datenbereichsberichtselemente, die jeweils mit einem Berichtsdataset verknüpft sind. Wenn der Bericht verarbeitet wird, wird der Datenbereich auf der Berichtsseite zur Seite und nach unten erweitert, um Daten anzuzeigen. Andere Berichtselemente sind mit einem einzelnen Element verknüpft und zeigen dieses an. Ein **Bildberichtselement** ist mit einem Bild verknüpft. Ein **Textfeld** -Berichtselement enthält entweder einfachen Text wie einen Titel oder einen Ausdruck, der Verweise auf integrierte Felder, Berichtsparameter oder Datasetfelder enthalten kann. Die Berichtselemente **Zeile** und **Rechteck** stellen einfache grafische Elemente auf der Berichtsseite bereit. Das **Rechteck** kann auch als Container für andere Berichtselemente verwendet werden. Ein Bericht kann Unterberichte enthalten.  
   
  Mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]können Sie Berichtselemente an einer beliebigen Stelle auf der Entwurfsoberfläche platzieren. Sie können die ursprüngliche Form des Berichtselements mithilfe von Ausrichtungslinien und Ziehpunkten zum Ändern der Größe interaktiv positionieren, erweitern und verkleinern. Sie können Datenbereiche mit unterschiedlichen Datasets oder den gleichen Daten in unterschiedlichen Formaten nebeneinander platzieren. Wenn Sie ein Berichtselement auf der Entwicklungsoberfläche platzieren, weist es eine Standardgröße und -form sowie eine ursprüngliche Beziehung mit allen anderen Berichtselementen auf. Sie können viele Berichtselemente nebeneinander platzieren, um komplexere Berichtsentwürfe zu erstellen. Zum Beispiel Diagramme oder Bilder in Tabellenzellen, Tabellen in Tabellenzellen und mehrere Bilder in einem Rechteck. Neben der gewünschten Organisation und Gestaltung des Berichts ermöglicht das Platzieren von Berichtselementen in Formen wie Rechtecken die Anzeige von Berichtselementen auf der Berichtsseite zu steuern.  
   
  Ein Bericht kann mehrere Seiten umfassen, wobei Kopf- und Fußzeile auf jeder Seite wiederholt werden. Ein Bericht kann grafische Elemente wie Bilder und Linien sowie eine Reihe von Schriftarten, Farben und Formaten enthalten, die auf Ausdrücken basieren können.  
   
-##  <a name="ReportSections"></a> Berichtsabschnitte  
+##  <a name="report-sections"></a><a name="ReportSections"></a> Berichtsabschnitte  
  Ein Bericht besteht aus drei Hauptabschnitten: einer optionalen Kopfzeile, einer optionalen Fußzeile und einem Berichtshauptteil. Die Kopf- und die Fußzeile des Berichts stellen keine separaten Abschnitte dar, sondern bestehen aus den Berichtselementen, die am Anfang und am Ende des Berichts stehen. Die Kopf- und die Fußzeile wiederholen denselben Inhalt oben und unten auf jeder Seite des Berichts. Sie können Bilder, Textfelder und Linien in Kopf- und Fußzeilen einfügen. Im Hauptteil des Berichts können Sie alle verfügbaren Typen von Berichtselementen einfügen.  
   
  Sie können Eigenschaften für Berichtselemente festlegen, um sie anfänglich auf der Seite auszublenden oder anzuzeigen. Sie können Sichtbarkeitseigenschaften für Zeilen, Spalten oder Gruppen für Datenbereiche erstellen und Umschaltflächen einrichten, über die die Benutzer interaktiv Berichtsdaten anzeigen und ausblenden können. Sie können Sichtbarkeit oder ursprüngliche Sichtbarkeit mit Ausdrücken festlegen, einschließlich Ausdrücke, die auf Berichtsparametern basieren.  
   
  Wenn ein Bericht verarbeitet wird, werden die Berichtsdaten mit den Berichtslayoutelementen kombiniert, und die kombinierten Daten werden an einen Berichtsrenderer gesendet. Der Renderer folgt vordefinierten Regeln für die Berichtselementerweiterung und bestimmt, wie viele Daten auf jede Seite passen. Um einen übersichtlichen Bericht zu entwerfen, der für den Renderer, den Sie verwenden möchten, optimiert ist, müssen Sie die Regeln zur Steuerung der Paginierung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]kennen. Weitere Informationen finden Sie unter [Paginierung in Reporting Services &#40;Berichts-Generator und SSRS&#41;](pagination-in-reporting-services-report-builder-and-ssrs.md).  
   
-##  <a name="RenderingExtensions"></a> Renderer  
+##  <a name="renderers"></a><a name="RenderingExtensions"></a>Renderer  
  Reporting Services schließt einen Satz von Renderern ein, die auch als Renderingerweiterungen bezeichnet werden, mit denen Sie Berichte in andere Formate exportieren können. Es stehen drei Arten von Renderern zur Verfügung:  
   
 -   **Datenrenderer** : Datenrenderer entfernen alle Formatierungs- und Layoutinformationen aus dem Bericht und zeigen nur die Daten an. Die mithilfe dieser Option erstellte Datei kann zum Importieren der Rohberichtsdaten in einen anderen Dateityp verwendet werden, z. B. Excel, eine andere Datenbank, eine XML-Datennachricht oder eine benutzerdefinierte Anwendung. Die verfügbaren Datenrenderer sind: CSV und XML.  
@@ -61,7 +61,7 @@ ms.locfileid: "66105512"
   
   
   
-##  <a name="RenderingBehaviors"></a> Renderingverhalten  
+##  <a name="rendering-behaviors"></a><a name="RenderingBehaviors"></a>Renderingverhalten  
  Abhängig vom Renderer, den Sie auswählen, werden bestimmte Regeln beim Rendern des Berichts angewendet. Wie sich Berichtselemente auf einer Seite zusammenfügen, wird durch die Kombination folgender Faktoren bestimmt:  
   
 -   Renderingregeln.  
@@ -80,7 +80,7 @@ ms.locfileid: "66105512"
   
   
   
-##  <a name="Pagination"></a> Paginierung  
+##  <a name="pagination"></a><a name="Pagination"></a>Paginierung  
  Paginierung bezieht sich auf die Anzahl der Seiten in einem Bericht und wie Berichtselemente auf diesen Seiten angeordnet werden. Die Paginierung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ändert sich abhängig von der Renderingerweiterung, die Sie zum Anzeigen und Übermitteln des Berichts verwenden, sowie von den Seitenumbruchseinstellungen, die Sie für den Bericht konfiguriert haben.  
   
  Um einen übersichtlichen Bericht für Ihre Benutzer zu entwerfen, der für den Renderer, mit dem Sie den Bericht übermitteln möchten, optimiert ist, müssen Sie die Regeln zur Steuerung der Paginierung in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]kennen. Die Paginierung hat typischerweise keine Auswirkungen auf Berichte, die mit den Erweiterungen für Datenrenderer und Renderer mit weichem Seitenumbruch exportiert werden. Wenn Sie eine Datenrenderingerweiterung verwenden, wird der Bericht als Tabellenrowset in einem XML- oder CSV-Format gerendert. Um sicherzustellen, dass die exportierten Berichtsdaten verwendet werden können, müssen Sie die Regeln für das Rendering eines vereinfachten Tabellenrowsets verstehen.  
@@ -91,12 +91,12 @@ ms.locfileid: "66105512"
   
   
   
-##  <a name="HowTo"></a> Themen zur Vorgehensweise  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Themen zur Vorgehensweise  
  In diesem Abschnitt werden Prozeduren aufgelistet, die Ihnen Schritt für Schritt das Arbeiten mit der Paginierung in Berichten erklären.  
   
 -   [Hinzufügen eines Seitenumbruchs &#40;Berichts-Generator und SSRS&#41;](add-a-page-break-report-builder-and-ssrs.md)  
   
--   [Anzeigen von Zeilen- und Spaltenüberschriften auf mehreren Seiten &#40;Berichts-Generator und SSRS&#41;](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
+-   [Anzeigen von Zeilen- und Spaltenüberschriften auf mehreren Seiten (Berichts-Generator und SSRS)](display-row-and-column-headers-on-multiple-pages-report-builder-and-ssrs.md)  
   
 -   [Hinzufügen oder Entfernen einer Seitenkopf- oder Seitenfußzeile &#40;Berichts-Generator und SSRS&#41;](add-or-remove-a-page-header-or-footer-report-builder-and-ssrs.md)  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66105512"
   
   
   
-##  <a name="InThisSection"></a> In diesem Abschnitt  
+##  <a name="in-this-section"></a><a name="InThisSection"></a>In diesem Abschnitt  
  Die folgenden Themen enthalten weitere Informationen zu Seitenlayout und Rendering.  
   
  [Seitenkopf- und Seitenfußzeilen &#40;Berichts-Generator und SSRS&#41;](page-headers-and-footers-report-builder-and-ssrs.md)  

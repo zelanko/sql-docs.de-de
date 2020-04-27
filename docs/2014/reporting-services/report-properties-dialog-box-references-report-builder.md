@@ -13,16 +13,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 99fe80a22f380bbe1406d357846c4103eeb0083e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66104390"
 ---
 # <a name="report-properties-dialog-box-references-report-builder"></a>Berichtseigenschaften (Dialogfeld), Verweise (Berichts-Generator)
   Wählen Sie die Registerkarte **Verweise** im Dialogfeld **Berichtseigenschaften** , um Verweise auf benutzerdefinierte oder andere externe Assemblys sowie benutzerdefinierte Klasseninstanzen hinzuzufügen oder zu entfernen, die von Ausdrücken in der Berichtsdefinition verwendet werden. Benutzerdefinierte Assemblys werden im lokalen Modus in Berichts-Generator nicht unterstützt. Verwenden Sie Berichts-Designer in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], um Berichte zu erstellen, die benutzerdefinierte Assemblys verwenden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Assemblys hinzufügen oder entfernen**  
  Führt die Assemblys auf, auf die der Bericht verweist. Die Assembly muss auf dem Computer, auf dem das Tool zum Entwerfen des Berichts installiert ist, und auf dem Berichtsserver verfügbar sein. Der Name des Verweises muss mit dem Inhalt von ** \<Codemodule->** Tags in der RDL-Datei (Report Definition Language) exakt übereinstimmen.  
   
@@ -41,10 +41,10 @@ ms.locfileid: "66104390"
  **Remove**  
  Um die Klasseninstanz zu löschen, wählen Sie sie aus, und klicken Sie auf die Schaltfläche **Entfernen** .  
   
- **Up**  
+ **Nach oben**  
  Für Klassen mit Abhängigkeiten können Sie diesen Verweis in der Liste nach oben verschieben.  
   
- **Auf**  
+ **Nach unten**  
  Für Klassen mit Abhängigkeiten können Sie diesen Verweis in der Liste nach unten verschieben.  
   
 ## <a name="see-also"></a>Weitere Informationen  

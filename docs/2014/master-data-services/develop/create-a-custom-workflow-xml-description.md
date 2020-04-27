@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a71ee85fc4dce4abd7d8ef91a8f22529ce8d5a0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483014"
 ---
 # <a name="custom-workflow-xml-description-master-data-services"></a>Benutzerdefinierte Workflow-XML-Beschreibung (Master Data Services)
@@ -64,12 +64,11 @@ ms.locfileid: "65483014"
   
 |Tag|BESCHREIBUNG|  
 |---------|-----------------|  
-|\<> eingeben|Der von Ihnen im Textfeld **Workflowtyp** in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] eingegebene Text, der zum Identifizieren der zu ladenden benutzerdefinierten Workflowassembly dient.|  
-|\<SendData->|Ein boolescher Wert, der mithilfe des Kontrollkästchens **Elementdaten in die Meldung einschließen** in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] gesteuert wird. Der Wert 1 bedeutet, dass der Abschnitt \<MemberData> gesendet wird. Andernfalls wird der Abschnitt \<MemberData> nicht gesendet.|  
+|\<Type>|Der von Ihnen im Textfeld **Workflowtyp** in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] eingegebene Text, der zum Identifizieren der zu ladenden benutzerdefinierten Workflowassembly dient.|  
+|\<SendData>|Ein boolescher Wert, der mithilfe des Kontrollkästchens **Elementdaten in die Meldung einschließen** in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] gesteuert wird. Der Wert 1 bedeutet, dass der Abschnitt \<MemberData> gesendet wird. Andernfalls wird der Abschnitt \<MemberData> nicht gesendet.|  
 |<Server_URL>|Der Text, den Sie im Textfeld **Workflowsite** in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] eingegeben haben.|  
 |<Action_ID>|Der Text, den Sie im Textfeld **Workflowname** in [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] eingegeben haben.|  
-|
-  \<MemberData>|Enthält die Daten des Elements, das die Workflowaktion ausgelöst hat. Dies ist nur enthalten, wenn der Wert von \<SendData> 1 ist.|  
+|\<MemberData>|Enthält die Daten des Elements, das die Workflowaktion ausgelöst hat. Dies ist nur enthalten, wenn der Wert von \<SendData> 1 ist.|  
 |\<*Xxx* eingeben>|Dieser Tagsatz enthält Metadaten zur Erstellung des Elements, beispielsweise den Zeitpunkt der Erstellung und den Ersteller.|  
 |\<Lastchg*xxx*>|Dieser Tagsatz enthält Metadaten zur letzten Änderung des Elements, beispielsweise den Zeitpunkt und Autor.|  
 |\<Name>|Das erste Attribut des Elements, das geändert wurde. Dieses Beispielelement enthält nur Namens- und Codeattribute.|  

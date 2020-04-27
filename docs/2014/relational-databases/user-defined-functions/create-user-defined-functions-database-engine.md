@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 37a6846d8c185549bd6c54f32cb5ab02eb564d1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68211713"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Erstellen von benutzerdefinierten Funktionen (Datenbank-Engine)
@@ -40,9 +40,9 @@ ms.locfileid: "68211713"
   
      [Erstellen einer Tabellenwertfunktion](#TVF)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Mit benutzerdefinierten Funktionen können keine Aktionen ausgeführt werden, die den Status einer Datenbank ändern.  
   
@@ -76,12 +76,12 @@ ms.locfileid: "68211713"
   
     -   SEND  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die CREATE FUNCTION-Berechtigung in der Datenbank und die ALTER-Berechtigung für das Schema, in dem die Funktion erstellt wird. Wenn die Funktion einen benutzerdefinierten Typ angibt, wird die EXECUTE-Berechtigung für den Typ benötigt.  
   
-##  <a name="Scalar"></a>Skalarfunktionen  
+##  <a name="scalar-functions"></a><a name="Scalar"></a>Skalarfunktionen  
  Im folgenden Beispiel wird eine Skalarfunktion mit mehreren Anweisungen in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank erstellt. Die Funktion nimmt einen Eingabewert ( `ProductID`) an und gibt einen einzelnen Datenwert zurück, der die aggregierte Menge des Lagerbestands für das angegebene Produkt darstellt.  
   
 ```  
@@ -115,7 +115,7 @@ WHERE ProductModelID BETWEEN 75 and 80;
   
 ```  
   
-##  <a name="TVF"></a>Tabellenwert Funktionen  
+##  <a name="table-valued-functions"></a><a name="TVF"></a>Tabellenwert Funktionen  
  Im folgenden Beispiel wird eine Inline-Tabellenwertfunktion in der [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Datenbank erstellt. Die Funktion nimmt einen Eingabeparameter (eine Kunden-ID (Geschäfts-ID)) an und gibt die Spalten `ProductID`, `Name`sowie das Aggregat der bisherigen Verkaufseinnahmen dieses Jahres als `YTD Total` für jedes Produkt zurück, das an das Geschäft verkauft wurde.  
   
 ```  

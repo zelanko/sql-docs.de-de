@@ -15,32 +15,32 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1578bbefc9ae17baae56799d943e5ae6186628ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63033631"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>Set the Polling Interval for Target Servers
   In diesem Thema wird beschrieben, wie die Häufigkeit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] festgelegt wird, mit der-Agent Informationen von der Master-auf den Ziel Servern aktualisiert. Ein Auftrag ist eine festgelegte Reihe von Aktionen, die der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent ausführt. Ein Multiserverauftrag ist ein Auftrag, der von einem Masterserver auf mindestens einem Zielserver ausgeführt wird.  
   
--   Vorbereitungen **:**[Sicherheit](#Security)    
+-   **Vorbereitungen:**  [Sicherheit](#Security)  
   
--   **So legen Sie das Abruf Intervall für Zielserver fest mit:**  [SQL Server Management Studio](#SSMS), [Transact-SQL](#TSQL)  
+-   **Festlegen des Abrufintervalls für Zielserver mit:**  [SQL Server Management Studio](#SSMS), [Transact-SQL](#TSQL)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
  Auf jedem Server kann gleichzeitig eine Instanz des gleichen Auftrags ausgeführt werden. Jeder Zielserver ruft in regelmäßigen Abständen den Masterserver ab, lädt eine Kopie aller neuen Aufträge herunter, die dem Zielserver zugewiesen wurden, und trennt dann die Verbindung. Der Zielserver führt den Auftrag lokal aus und stellt dann erneut eine Verbindung mit dem Masterserver her, um den Auftragsergebnisstatus hochzuladen.  
   
 > [!NOTE]  
 >  Wenn der Zielserver versucht, den Auftragsstatus durch Hochladen zu übertragen, und dabei nicht auf den Masterserver zugreifen kann, bleibt der Auftragsstatus so lange im Spooler (in der Warteschlange), bis der Masterserver wieder zur Verfügung steht.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
  Ausführliche Informationen finden Sie unter [Implement SQL Server Agent Security](implement-sql-server-agent-security.md) und [Choose the Right SQL Server Agent Service Account for Multiserver Environments](choose-the-right-sql-server-agent-service-account-for-multiserver-environments.md).  
   
-##  <a name="SSMS"></a> Verwenden von SQL Server Management Studio  
- **So legen Sie das Abruf Intervall für Zielserver fest**  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMS"></a> Verwenden von SQL Server Management Studio  
+ **So legen Sie das Abrufintervall für Zielserver fest**  
   
-1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer Instanz von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]her, und erweitern Sie dann diese Instanz.  
+1.  Stellen Sie im **Objekt-Explorer** eine Verbindung mit einer [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]-Instanz her, und erweitern Sie dann die Instanz.  
   
 2.  Klicken Sie mit der rechten Maustaste auf **SQL Server-Agent**, zeigen Sie auf **Multiserververwaltung**, und klicken Sie dann auf **Zielserver verwalten**.  
   
@@ -56,12 +56,12 @@ ms.locfileid: "63033631"
   
     2.  Klicken Sie auf **Diese Zielserver** , wenn nicht für alle Zielserver dasselbe Abrufintervall gilt, und wählen Sie dann die Zielserver aus, für die dieses Abrufintervall verwendet werden soll.  
   
-##  <a name="TSQL"></a> Verwenden von Transact-SQL  
- **So legen Sie das Abruf Intervall für Zielserver fest**  
+##  <a name="using-transact-sql"></a><a name="TSQL"></a> Verwenden von Transact-SQL  
+ **So legen Sie das Abrufintervall für Zielserver fest**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit einer Instanz von Database Engine (Datenbankmodul) her, und erweitern Sie dann diese Instanz.  
   
-2.  Klicken Sie in der Symbolleiste auf **Neue Abfrage**.  
+2.  Klicken Sie auf der Symbolleiste auf **Neue Abfrage**.  
   
 3.  Verwenden Sie im Abfragefenster die gespeicherte System Prozedur [sp_post_msx_operation &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-post-msx-operation-transact-sql) , um das Abruf Intervall für Zielserver festzulegen.  
   

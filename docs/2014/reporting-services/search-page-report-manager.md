@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 12413c103230d8c085a9701e3fb83db15135895a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66102263"
 ---
 # <a name="search-page-report-manager"></a>Suchen (Seite) (Berichts-Manager)
@@ -33,7 +33,7 @@ ms.locfileid: "66102263"
   
 2.  Geben Sie oben auf der Seite im Feld **Suchen** die Suchkriterien ein. Drücken Sie dann die EINGABETASTE, oder klicken Sie auf den Suchpfeil.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Löschen**  
  Klicken Sie auf diese Schaltfläche, um ein Element aus einer Berichtsserver-Datenbank zu löschen.  
   

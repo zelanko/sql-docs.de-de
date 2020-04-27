@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 97fa6d01fc4a06825814c8494268ecb668f1da7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66108108"
 ---
 # <a name="pass-a-report-parameter-within-a-url"></a>Übergeben von Berichtsparametern innerhalb einer URL
@@ -26,7 +26,7 @@ ms.locfileid: "66108108"
 > [!IMPORTANT]  
 >  Es ist wichtig, dass die URL die `_vti_bin` -Proxysyntax zur Weiterleitung der Anforderung über SharePoint sowie den [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -HTTP-Proxy enthält. Durch den Proxy wird der HTTP-Anforderung Kontext hinzugefügt. Dieser ist erforderlich, damit der Bericht auf Berichtsservern im SharePoint-Modus ordnungsgemäß ausgeführt wird.  
 >   
->  Wenn Sie keine Proxysyntax einschließen, müssen Sie dem Parameter *rp:* voranstellen.  
+>  Wenn Sie die Proxy Syntax nicht einschließen, müssen Sie den Parameter mit *RP:* versehen.  
   
  Alle Abfrageparameter können über entsprechende Berichtsparameter verfügen. Sie übergeben einen Abfrageparameter an einen Bericht, indem Sie den entsprechenden Berichtsparameter übergeben. Weitere Informationen finden Sie unter [Erstellen einer Abfrage im Relationalen Abfrage-Designer (Berichts-Generator und SSRS)](report-data/build-a-query-in-the-relational-query-designer-report-builder-and-ssrs.md).  
   
@@ -69,7 +69,7 @@ parameter
   
 ```  
   
- Beispiel:  
+ Ein auf ein Objekt angewendeter  
   
 ```  
 SalesOrderNumber:isnull=true  
@@ -80,7 +80,7 @@ SalesOrderNumber:isnull=true
 > [!NOTE]  
 >  Wenn Ihr Bericht einen Berichtsparameter enthält, der einen Standardwert besitzt, und der Wert der `Prompt`-Eigenschaft `false` ist (dies bedeutet, dass die PromptUser-Eigenschaft im Berichts-Manager nicht ausgewählt ist), können Sie keinen Wert für diesen Berichtsparameter innerhalb einer URL übergeben. Dies ermöglicht Administratoren, Benutzer daran zu hindern, die Werte bestimmter Berichtsparameter hinzuzufügen oder zu ändern.  
   
-##  <a name="bkmk_examples"></a> Zusätzliche Beispiele  
+##  <a name="additional-examples"></a><a name="bkmk_examples"></a> Zusätzliche Beispiele  
  Die URL im folgenden Beispiel enthält Leerzeichen und mehrere Parameter.  
   
 -   Der Ordnername „SQL Server User Education Team“ enthält Leerzeichen; daher wird jedes Leerzeichen durch das Pluszeichen (+) ersetzt.  
@@ -99,14 +99,14 @@ https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/fold
 https://myserver/Reportserver?/SQL+Server+User+Education+Team/_ContentTeams/folder123/team+project+report&teamgrouping2=xgroup&teamgrouping1=ygroup&OrderID=747&OrderID=787&OrderID=12  
 ```  
   
- Im folgenden Beispiel für eine URL wird der einzelne *SellStartDate*-Parameter mit dem Wert „7/1/2005“ für einen Berichtsserver im nativen Modus übergeben.  
+ Im folgenden URL-Beispiel wird ein einzelner Parameter von *SellStartDate* mit dem Wert "7/1/2005" für einen Berichts Server im einheitlichen Modus übergeben.  
   
 ```  
 http://myserver/ReportServer/Pages/ReportViewer.aspx?%2fProduct_and_Sales_Report_AdventureWorks&SellStartDate=7/1/2005  
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [URL-Zugriff &#40;SSRS&#41;](url-access-ssrs.md)   
- [URL Access Parameter Reference (URL-Zugriffsparameterverweis)](url-access-parameter-reference.md)  
+ [URL-Zugriff &#40;SSRS-&#41;](url-access-ssrs.md)   
+ [URL-Zugriffsparameterreferenz](url-access-parameter-reference.md)  
   
   

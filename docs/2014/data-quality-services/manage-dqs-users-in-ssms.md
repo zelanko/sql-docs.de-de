@@ -11,23 +11,23 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: eccb3ea2ec046a84a2735c310c8b80c5e88cf96e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480346"
 ---
 # <a name="manage-dqs-users-in-ssms"></a>Verwalten von DQS-Benutzern in SSMS
   In diesem Thema wird beschrieben, wie mit SQL Server Management Studio zusätzliche Benutzer in der SQL Server-Instanz erstellt werden und wie ihnen entsprechende [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)-Rollen für die DQS_MAIN-Datenbank gewährt werden.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Ihr Windows-Benutzerkonto muss Mitglied der entsprechenden festen Serverrolle (z. B. securityadmin, serveradmin oder sysadmin) sein, um eine SQL-Anmeldung zu erstellen und ihr entsprechende DQS-Rollen zuzuweisen.  
   
-##  <a name="GrantRoles"></a>Erstellen einer SQL-Anmeldung und erteilen der DQS-Rolle  
+##  <a name="create-a-sql-login-and-grant-dqs-role"></a><a name="GrantRoles"></a>Erstellen einer SQL-Anmeldung und erteilen der DQS-Rolle  
   
 1.  Starten Sie Microsoft SQL Server Management Studio.  
   

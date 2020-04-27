@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6dd54475ee63b2f6ef5e1b56b94c11aafd5996ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65484682"
 ---
-# <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Aufgabe 12: Ermitteln von Wissen (Wissensermittlung)
+# <a name="task-12-discovering-knowledge-knowledge-discovery"></a>Aufgabe 12: Wissensermittlung
   In dieser Aufgabe führen Sie die **Wissens** Ermittlungs Aktivität für die Domänen **Supplier ID** und **Supplier Name** aus. In diesem Szenario importiert der Wissensermittlungsprozess hauptsächlich Werte für diese zwei Domänen.  
   
  In diesem Lernprogramm haben Sie eine Wissensdatenbank von Grund auf neu erstellt. Sie können eine Wissensdatenbank auch durch Ausführen einer Wissensermittlungsaktivität erstellen. Wenn Sie auf der Hauptseite auf **Wissensdatenbank erstellen** klicken, führt der DQS-Client Sie zu einer Seite, auf der die **Domänen Verwaltungs** Aktivität für die Aktivität ausgewählt ist. Sie können die **Aktivität** in **Wissens** Ermittlung ändern und dann auf der nächsten Seite Domänen als Teil des Wissens Ermittlungs Prozesses erstellen. Weitere Informationen finden Sie unter [Durchführen der Wissens](https://msdn.microsoft.com/library/hh510398.aspx) Ermittlung.  
@@ -67,6 +67,6 @@ ms.locfileid: "65484682"
      Sie haben die erste Lektion des Lernprogramms abgeschlossen.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 2: Bereinigung von Lieferantendaten mithilfe der Wissensdatenbank 'Suppliers'](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)  
+ [Lektion 2: Bereinigung von Lieferantendaten mithilfe der Wissensdatenbank „Suppliers“](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)  
   
   

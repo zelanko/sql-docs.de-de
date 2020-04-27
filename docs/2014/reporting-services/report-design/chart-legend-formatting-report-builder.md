@@ -28,10 +28,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a658eeca1646488212ee8ecdf48c99818e3f9e6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106287"
 ---
 # <a name="formatting-the-legend-on-a-chart-report-builder-and-ssrs"></a>Formatieren der Legende in einem Diagramm (Berichts-Generator und SSRS)
@@ -79,12 +79,12 @@ ms.locfileid: "66106287"
  Standardmäßig wird der Legendentext nicht optimiert, damit er dem Legendenbereich entspricht. Legen Sie die autofittextdeaktivierte Eigenschaft auf `False` fest, und legen Sie für die MinFontSize-Eigenschaft einen minimalen Schrift Grad fest, damit der Legenden Text automatisch an den zugeordneten Bereich angepasst wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dialog Feld "Legenden Eigenschaften", "allgemeine &#40;Berichts-Generator und SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
+ [Legendeneigenschaften (Dialogfeld), Allgemein &#40;Berichts-Generator und SSRS&#41;](../legend-properties-dialog-box-general-report-builder-and-ssrs.md)   
  [Ändern des Texts eines Legendenelements (Berichts-Generator und SSRS)](chart-legend-change-item-text-report-builder.md)   
  [Formatieren eines Diagramms &#40;Berichts-Generator und SSRS&#41;](formatting-a-chart-report-builder-and-ssrs.md)   
  [Formatieren von Reihenfarben in einem Diagramm &#40;Berichts-Generator und SSRS&#41;](formatting-series-colors-on-a-chart-report-builder-and-ssrs.md)   
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](charts-report-builder-and-ssrs.md)   
- [Ausblenden von Legenden Elementen im Diagramm &#40;Berichts-Generator und SSRS&#41;](chart-legend-hide-items-report-builder.md)   
+ [Ausblenden von Legendenelementen im Diagramm (Berichts-Generator und SSRS)](chart-legend-hide-items-report-builder.md)   
  [Definieren von Farben in einem Diagramm mit einer Palette &#40;Berichts-Generator und SSRS&#41;](define-colors-on-a-chart-using-a-palette-report-builder-and-ssrs.md)  
   
   

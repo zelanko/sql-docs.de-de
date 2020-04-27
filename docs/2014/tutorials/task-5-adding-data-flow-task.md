@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: aaccdd5d4f84f5bdba240fadc7d4d0729476f215
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489143"
 ---
-# <a name="task-5-adding-data-flow-task"></a>Aufgabe 5: Hinzufügen eines Datenflusstasks
+# <a name="task-5-adding-data-flow-task"></a>Aufgabe 5: Hinzufügen eines Datenflusstasks
   In dieser Aufgabe fügen Sie der Ablaufsteuerung des SSIS-Pakets einen Datenflusstask hinzu.  
   
 1.  Ziehen Sie den **Datenfluss Task** aus der **SSIS-Toolbox** auf die Registerkarte **Ablauf Steuerung** im SSIS-Designer. Wenn die **SSIS-Toolbox**nicht angezeigt wird, klicken Sie auf eine beliebige Stelle auf der Registerkarte **Ablauf Steuerung** , klicken Sie auf der Menüleiste auf **SSIS** , und klicken Sie auf **SSIS-Toolbox**.  
@@ -31,6 +31,6 @@ ms.locfileid: "65489143"
 4.  Doppelklicken Sie auf den **Datenfluss Task** , um zur Registerkarte **Datenfluss** zu wechseln.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 6: Hinzufügen der Excel-Quelle zum Datenfluss](task-6-adding-excel-source-to-the-data-flow.md)  
+ [Aufgabe 6: Hinzufügen der Excel-Quelle zum Datenfluss](task-6-adding-excel-source-to-the-data-flow.md)  
   
   

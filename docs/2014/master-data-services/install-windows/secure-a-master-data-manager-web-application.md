@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2bcbdacd6d08a6139975c20bb8f1d5010195375b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65479353"
 ---
 # <a name="secure-a-master-data-manager-web-application"></a>Schützen einer Master Data Manager-Webanwendung
@@ -60,6 +60,6 @@ ms.locfileid: "65479353"
 12. Speichern und schließen Sie die Datei. Wenn Sie einen Fehler erhalten, kann dies daran liegen, dass Sie die Benutzerkontensteuerung aktiviert haben. Weitere Informationen finden Sie unter [Deaktivieren der Benutzerkontensteuerung](https://technet.microsoft.com/library/cc709691\(WS.10\).aspx). Benutzer sollten jetzt per HTTPS auf die Website zugreifen können.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erstellen Sie eine Master Data Manager-Webanwendung &#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md)  
+ [Erstellen einer Master Data Manager-Webanwendung &#40;Master Data Services&#41;](create-a-master-data-manager-web-application-master-data-services.md)  
   
   

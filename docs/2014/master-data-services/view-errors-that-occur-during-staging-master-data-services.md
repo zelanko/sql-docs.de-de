@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 75b7fb5a1b98f599a07e47101f93268779ca39b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478559"
 ---
 # <a name="view-errors-that-occur-during-the-staging-process-master-data-services"></a>Anzeigen von Fehlern, die während des Stagingprozesses auftreten (Master Data Services)
@@ -50,6 +50,6 @@ ms.locfileid: "65478559"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Daten Import &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
- [Problembehandlung beim Stagingprozess (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
+ [Problembehandlung des Stagingprozesses (Master Data Services)](https://social.technet.microsoft.com/wiki/contents/articles/troubleshooting-the-staging-process-master-data-services.aspx)  
   
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cc7ac8634ab77d7648326e5a7e2762d758fb78c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66106702"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Hinzufügen von kaskadierenden Parametern zu einem Bericht (Berichts-Generator und SSRS)
@@ -45,7 +45,7 @@ ms.locfileid: "66106702"
   
     2.  Einen Abfrageparameter für jeden kaskadierenden Parameter. Ein Abfrageparameter beschränkt die von der Datenquelle abgerufenen Daten, indem bestimmte Werte angegeben werden, die in die Abfrage eingebunden bzw. von dieser ausgeschlossen werden sollen. Typischerweise sind Abfrageparameter in einer Einschränkungsklausel in der Abfrage enthalten. In einer [!INCLUDE[tsql](../../includes/tsql-md.md)] -SELECT-Anweisung sind Abfrageparameter beispielsweise in der WHERE-Klausel enthalten. Weitere Informationen finden Sie unter "Filtern von Zeilen mithilfe von WHERE und HAVING" in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dokumentation in der [SQL Server-Onlinedokumentation](https://go.microsoft.com/fwlink/?linkid=120955).  
   
-6.  Klicken Sie auf **Ausführen** ( **!** ). Nachdem Sie die Abfrageparameter eingebunden und anschließend die Abfrage ausgeführt haben, werden automatisch Berichtsparameter erstellt, die den Abfrageparametern entsprechen.  
+6.  Klicken Sie auf **Ausführen** (**!**). Nachdem Sie die Abfrageparameter eingebunden und anschließend die Abfrage ausgeführt haben, werden automatisch Berichtsparameter erstellt, die den Abfrageparametern entsprechen.  
   
     > [!NOTE]  
     >  Die Reihenfolge von Abfrageparametern beim erstmaligen Ausführen einer Abfrage bestimmt die Reihenfolge, in der sie im Bericht erstellt werden. Informationen zum Ändern der Reihenfolge finden Sie unter [Ändern der Reihenfolge von Berichtsparametern (Berichts-Generator und SSRS)](change-the-order-of-a-report-parameter-report-builder-and-ssrs.md).  
@@ -72,7 +72,7 @@ ms.locfileid: "66106702"
   
      Der SELECT DISTINCT-Befehl entfernt doppelte Werte aus dem Resultset, sodass Sie die einzelnen eindeutigen Werte aus der angegebenen Spalte in der angegebenen Tabelle abrufen.  
   
-     Klicken Sie auf **Ausführen** ( **!** ). Im Resultset werden die Werte angezeigt, die für diesen ersten Parameter verfügbar sind.  
+     Klicken Sie auf **Ausführen** (**!**). Im Resultset werden die Werte angezeigt, die für diesen ersten Parameter verfügbar sind.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -154,11 +154,11 @@ ms.locfileid: "66106702"
 4.  Klicken Sie auf **Bericht anzeigen**. Die Anzeige des Berichts wird mit den ausgewählten Parametern aktualisiert.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Hinzufügen, Ändern oder Löschen von Berichtsparametern &#40;Berichts-Generator und SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
- [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](report-parameters-report-builder-and-report-designer.md)   
- [Tutorial: Add a Parameter to Your Report (Report Builder) (Tutorial: Hinzufügen eines Parameters zu einem Bericht (Berichts-Generator))](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
+ [Hinzufügen, ändern oder Löschen eines Berichts Parameters &#40;Berichts-Generator und SSRS&#41;](add-change-or-delete-a-report-parameter-report-builder-and-ssrs.md)   
+ [Berichts Parameter &#40;Berichts-Generator und Berichts-Designer&#41;](report-parameters-report-builder-and-report-designer.md)   
+ [Tutorial: Hinzufügen eines Parameters zu einem Bericht &#40;Berichts-Generator&#41;](../tutorial-add-a-parameter-to-your-report-report-builder.md)   
  [Lernprogramme &#40;Berichts-Generator&#41;](../report-builder-tutorials.md)   
- [Hinzufügen von Datasetfiltern, Datenbereichsfiltern und Gruppenfiltern &#40;Berichts-Generator und SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
- [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Hinzufügen von datasetfiltern, Datenbereichs Filtern und Gruppen Filtern &#40;Berichts-Generator und SSRS&#41;](add-dataset-filters-data-region-filters-and-group-filters.md)   
+ [Melden Sie eingebettete Datasets und freigegebene Datasets &#40;Berichts-Generator und SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

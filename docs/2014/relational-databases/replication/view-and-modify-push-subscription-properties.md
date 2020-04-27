@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5dc55cc688f4e40d188492636c3653556f88b1c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68212017"
 ---
 # <a name="view-and-modify-push-subscription-properties"></a>Anzeigen und Ändern der Eigenschaften von Pushabonnements
@@ -37,7 +37,7 @@ ms.locfileid: "68212017"
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Sie können die Eigenschaften von Pushabonnements vom Verleger an den folgenden Stellen anzeigen und ändern:  
   
 -   Im Dialogfeld **Abonnementeigenschaften – \<Verleger>: \<Verlegerdatenbank>** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -64,7 +64,7 @@ ms.locfileid: "68212017"
   
 4.  Ändern Sie die Eigenschaften nach Bedarf, und klicken Sie dann auf **OK**.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Pushabonnements können geändert und auf ihre Eigenschaften kann mithilfe gespeicherter Replikationsprozeduren programmgesteuert zugegriffen werden. Welche gespeicherten Prozeduren verwendet werden, hängt vom Typ der Veröffentlichung ab, zu der das Abonnement gehört.  
   
 #### <a name="to-view-the-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>So zeigen Sie die Eigenschaften eines Pushabonnements für eine Momentaufnahme- oder eine Transaktionsveröffentlichung an  
@@ -96,15 +96,15 @@ ms.locfileid: "68212017"
   
 1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_helpmergesubscription](/sql/relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql)aus. Geben **@publication** Sie **@subscriber**und an.  
   
-2.  Führen Sie [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)auf dem Verleger aus, **@subscriber**und geben Sie an.  
+2.  Führen Sie auf dem Verleger [sp_helpsubscriberinfo](/sql/relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql)aus, und geben Sie **@subscriber**verfügbar ist.  
   
 #### <a name="to-change-the-properties-of-a-push-subscription-to-a-merge-publication"></a>So ändern Sie die Eigenschaften eines Pushabonnements für eine Mergeveröffentlichung  
   
 1.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_changemergesubscription](/sql/relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql)aus. Geben **@publication**Sie **@subscriber**, **@subscriber_db**,, die zu ändernde Abonnement **@property**Eigenschaft als und den neuen Wert **@value**als.  
   
-###  <a name="TsqlExample"></a> Beispiel (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Beispiel (Transact-SQL)  
   
-##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
  Die RMO-Klassen, mit denen Sie die Eigenschaften von Pushabonnements anzeigen oder ändern, hängen vom Typ der Veröffentlichung ab, für die das Pushabonnement abonniert wird.  
   
 #### <a name="to-view-or-modify-properties-of-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>So zeigen Sie die Eigenschaften eines Pushabonnements für eine Momentaufnahme- oder eine Transaktionsveröffentlichung an oder ändern sie  
@@ -140,8 +140,8 @@ ms.locfileid: "68212017"
 7.  (Optional) Um die neuen Einstellungen anzuzeigen, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.Refresh%2A> -Methode auf, um die Eigenschaften für das Abonnement erneut zu laden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [View information and perform tasks using Replication Monitor (Anzeigen von Informationen und Ausführen von Aufgaben mit dem Replikationsmonitor)](monitor/view-information-and-perform-tasks-replication-monitor.md)   
- [Replication Security Best Practices](security/replication-security-best-practices.md)   
+ [Anzeigen von Informationen und Ausführen von Aufgaben mithilfe des Replikations](monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Bewährte Sicherheitsmethoden für die Replikation](security/replication-security-best-practices.md)   
  [Abonnieren von Veröffentlichungen](subscribe-to-publications.md)  
   
   

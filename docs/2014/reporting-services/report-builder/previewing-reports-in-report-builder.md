@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cdb19ba96bc6c324614b7b24ccd77d66213fed3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66107788"
 ---
 # <a name="previewing-reports-in-report-builder"></a>Anzeigen einer Berichtsvorschau in Berichts-Generator
@@ -77,7 +77,7 @@ ms.locfileid: "66107788"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](../report-data/report-datasets-ssrs.md)   
- [Formatieren von Berichtselementen (Berichts-Generator und SSRS)](../report-design/formatting-report-items-report-builder-and-ssrs.md)   
+ [Formatieren von Berichts Elementen &#40;Berichts-Generator und SSRS&#41;](../report-design/formatting-report-items-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   
  [Diagramme &#40;Berichts-Generator und SSRS&#41;](../report-design/charts-report-builder-and-ssrs.md)   
  [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)   

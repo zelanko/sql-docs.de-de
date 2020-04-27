@@ -18,10 +18,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 88f1f0909e667db38c3b9b5d13bf11a2262b405b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65480157"
 ---
 # <a name="attributes-master-data-services"></a>Attribute (Master Data Services)
@@ -78,25 +78,25 @@ ms.locfileid: "65480157"
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Erstellen Sie ein neues Freiformtextattribut.|[Erstellen Sie ein Text Attribut &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)|  
-|Erstellen Sie ein neues numerisches Freiformattribut.|[Erstellen Sie ein numerisches Attribut &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md)|  
-|Erstellen Sie ein neues Freiformlinkattribut.|[Erstellen Sie ein Link Attribut &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)|  
-|Erstellen Sie ein neues Dateiattribut.|[Erstellen Sie ein Datei Attribut &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|  
+|Erstellen Sie ein neues Freiformtextattribut.|[Erstellen eines Textattributs &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-text-attribute-master-data-services.md)|  
+|Erstellen Sie ein neues numerisches Freiformattribut.|[Erstellen eines numerischen Attributs &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-numeric-attribute-master-data-services.md)|  
+|Erstellen Sie ein neues Freiformlinkattribut.|[Erstellen eines Linkattributs &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-link-attribute-master-data-services.md)|  
+|Erstellen Sie ein neues Dateiattribut.|[Erstellen eines Dateiattributs &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-file-attribute-master-data-services.md)|  
 |Erstellen Sie ein neues domänenbasiertes Attribut.|[Erstellen eines domänenbasierten Attributs &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-domain-based-attribute-master-data-services.md)|  
 |Ändern Sie den Namen eines vorhandenen Attributs.|[Ändern eines Attribut namens &#40;Master Data Services&#41;](change-an-attribute-name-and-data-type-master-data-services.md)|  
-|Fügen Sie einer Änderungsnachverfolgungsgruppe vorhandene Attribute hinzu.|[Hinzufügen von Attributen zu einer Änderungsnachverfolgung Gruppe &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
+|Fügen Sie einer Änderungsnachverfolgungsgruppe vorhandene Attribute hinzu.|[Hinzufügen von Attributen zu einer Änderungsnachverfolgungsgruppe &#40;Master Data Services&#41;](../../2014/master-data-services/add-attributes-to-a-change-tracking-group-master-data-services.md)|  
 |Löschen Sie ein vorhandenes Attribut.|[Löschen eines Attributs &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-attribute-master-data-services.md)|  
 |Ändern Sie die Reihenfolge der Attribute.|[Ändern der Reihenfolge von Attributen](../../2014/master-data-services/change-the-order-of-attributes.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
--   [Domänen basierte Attribute &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
+-   [Domänenbasierte Attribute &#40;Master Data Services&#41;](../../2014/master-data-services/domain-based-attributes-master-data-services.md)  
   
--   [Attribut Gruppen &#40;Master Data Services&#41;](attribute-groups-master-data-services.md)  
+-   [Attributgruppen &#40;Master Data Services&#41;](attribute-groups-master-data-services.md)  
   
--   [Mitglieder &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
+-   [Elemente &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
--   [Blatt Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
+-   [Blattberechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)  
   
 -   [Konsolidierte Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)  
   

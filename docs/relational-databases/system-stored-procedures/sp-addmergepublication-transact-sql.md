@@ -16,10 +16,10 @@ ms.assetid: 28a629a1-7374-4614-9b04-279d290a942a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a296f5b4cb20768d5aa244646e584bede110d26a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72278351"
 ---
 # <a name="sp_addmergepublication-transact-sql"></a>sp_addmergepublication (Transact-SQL)
@@ -86,7 +86,7 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @sync_mode = ] 'sync_mode'`Der Modus der erst Synchronisierung der Abonnenten mit der Veröffentlichung. *sync_mode* ist vom Datentyp **nvarchar (10)**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**native** (Standard)|Erstellt eine Massenkopierprogramm-Ausgabe aller Tabellen im einheitlichen Modus.|  
 |**Art**|Erstellt eine Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus. Erforderlich, um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssEW](../../includes/ssew-md.md)] und nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten zu unterstützen.|  
@@ -162,17 +162,17 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @use_partition_groups = ] 'use_partition_groups'`Gibt an, dass Voraus berechnete Partitionen verwendet werden sollen, um den Synchronisierungs Prozess zu optimieren. *use_partition_groups* ist vom Datentyp **nvarchar (5)**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**Fall**|Die Veröffentlichung verwendet vorausberechnete Partitionen.|  
-|**Alarm**|Die Veröffentlichung verwendet keine vorausberechneten Partitionen.|  
+|**true**|Die Veröffentlichung verwendet vorausberechnete Partitionen.|  
+|**false**|Die Veröffentlichung verwendet keine vorausberechneten Partitionen.|  
 |NULL (Standard)|Die Partitionierungsstrategie wird vom System festgelegt.|  
   
  Standardmäßig werden vorausberechnete Partitionen verwendet. Um die Verwendung Voraus berechneter Partitionen zu vermeiden, müssen *use_partition_groups* auf **false**festgelegt werden. Wird NULL festgelegt, entscheidet das System, ob vorausberechnete Partitionen verwendet werden können. Wenn Voraus berechnete Partitionen nicht verwendet werden können, wird dieser Wert effektiv zu " **false** ", ohne Fehler zu erzeugen. In solchen Fällen können *keep_partition_changes* auf " **true** " festgelegt werden, um eine Optimierung bereitzustellen. Weitere Informationen finden Sie unter [parametrisierte Zeilen Filter](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md) und [Optimieren der Leistung parametrisierter Filter mit voraus berechneten Partitionen](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).  
   
 `[ @publication_compatibility_level = ] backward_comp_level`Gibt die Abwärtskompatibilität der Veröffentlichung an. *backward_comp_level* ist vom Datentyp **nvarchar (6)**. die folgenden Werte sind möglich:  
   
-|value|Version|  
+|Wert|Version|  
 |-----------|-------------|  
 |**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
 |**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
@@ -200,10 +200,10 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @retention_period_unit = ] 'retention_period_unit'`Gibt die Einheiten für die *Beibehaltungs*Dauer an. *retention_period_unit* ist vom Datentyp **nvarchar (10)**. die folgenden Werte sind möglich:  
   
-|value|Version|  
+|Wert|Version|  
 |-----------|-------------|  
 |**Tag** (Standard)|Die Beibehaltungsdauer wird in Tagen angegeben.|  
-|**Mitte**|Die Beibehaltungsdauer wird in Wochen angegeben.|  
+|**week**|Die Beibehaltungsdauer wird in Wochen angegeben.|  
 |**month**|Die Beibehaltungsdauer wird in Monaten angegeben.|  
 |**year**|Die Beibehaltungsdauer wird in Jahren angegeben.|  
   
@@ -216,17 +216,17 @@ sp_addmergepublication [ @publication = ] 'publication'
   
 `[ @conflict_logging = ] 'conflict_logging'`Gibt an, wo Konflikt Datensätze gespeichert werden. *conflict_logging* ist vom Datentyp **nvarchar (15)**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Gebers**|Die Konfliktdatensätze werden auf dem Verleger gespeichert.|  
 |**Abonnenten**|Die Konfliktdatensätze werden auf dem Abonnenten gespeichert, der den Konflikt verursacht hat. Wird für [!INCLUDE[ssEW](../../includes/ssew-md.md)] Abonnenten nicht unterstützt.|  
-|**beide**|Die Konfliktdatensätze werden auf dem Verleger und auf dem Abonnenten gespeichert.|  
+|**zwar**|Die Konfliktdatensätze werden auf dem Verleger und auf dem Abonnenten gespeichert.|  
 |NULL (Standard)|Bei der Replikation werden *conflict_logging* automatisch auf festgelegt **, wenn der** Wert *backward_comp_level* **90RTM** und in allen anderen Fällen auf **Herausgeber** festgelegt ist.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **sp_addmergepublication** wird bei der Mergereplikation verwendet.  
   
  Zum Auflisten von Veröffentlichungs Objekten für die Active Directory mithilfe des ** \@add_to_active_directory** -para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] meters muss das Objekt bereits in der Active Directory erstellt werden.  

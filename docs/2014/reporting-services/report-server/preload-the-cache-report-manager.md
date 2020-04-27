@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 98ce4f723c0b4c04b166b01d17e8014567253518
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66103590"
 ---
 # <a name="preload-the-cache-report-manager"></a>Vorabladen des Caches (Berichts-Manager)
@@ -86,7 +86,7 @@ ms.locfileid: "66103590"
   
 8.  Klicken Sie auf **Weiter**.  
   
-9. Geben Sie die Abfrage oder den Befehl an, die bzw. der Abonnentendaten abruft. Sie können auch den Timeoutzeitraum für Abfragen erhöhen, deren Verarbeitung lange dauert. Beispiel:  
+9. Geben Sie die Abfrage oder den Befehl an, die bzw. der Abonnentendaten abruft. Sie können auch den Timeoutzeitraum für Abfragen erhöhen, deren Verarbeitung lange dauert. Zum Beispiel:  
   
     ```  
     Select * from UserInfo  
@@ -121,9 +121,9 @@ ms.locfileid: "66103590"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Data-Driven Subscriptions](../subscriptions/data-driven-subscriptions.md)   
- [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Lernprogramm&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
+ [Erstellen eines datengesteuerten Abonnements &#40;SSRS-Tutorial&#41;](../create-a-data-driven-subscription-ssrs-tutorial.md)   
  [Leistung, Momentaufnahmen, Zwischenspeichern &#40;Reporting Services&#41;](performance-snapshots-caching-reporting-services.md)   
- [Festlegen von Berichtsverarbeitungseigenschaften](set-report-processing-properties.md)   
+ [Festlegen von Berichts Verarbeitungseigenschaften](set-report-processing-properties.md)   
  [Zwischenspeichern von Berichten &#40;SSRS&#41;](caching-reports-ssrs.md)  
   
   

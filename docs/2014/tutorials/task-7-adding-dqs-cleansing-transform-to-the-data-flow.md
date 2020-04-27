@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 209659609c2cf19196cc35050fb32e39e079d1c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65488945"
 ---
-# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Aufgabe 7: Hinzufügen der Transformation für DQS-Bereinigung zum Datenfluss
+# <a name="task-7-adding-dqs-cleansing-transform-to-the-data-flow"></a>Aufgabe 7: Hinzufügen der Transformation für DQS-Bereinigung zum Datenfluss
   In dieser Aufgabe fügen Sie dem Datenfluss eine DQS-Bereinigungstransformation hinzu, um die Eingabelieferantendaten mithilfe von DQS zu bereinigen. Weitere Informationen zur Transformation finden Sie unter **[DQS](https://msdn.microsoft.com/library/ee677619.aspx)** -Bereinigungs Transformation.  
   
 1.  Klicken Sie **mit der rechten** Maustaste auf **DQS-Bereinigung** , und klicken Sie auf **Umbenennen**. Geben Sie Hersteller **Daten**bereinigen ein, und drücken **Sie Eingabe**Taste.  
@@ -48,7 +48,7 @@ ms.locfileid: "65488945"
   
 11. Ordnen Sie diese Spalten im unteren Bereich mithilfe von Dropdown Listen in der Spalte **Domäne** zu:  
   
-    |Column|Domain|  
+    |Column|Domäne|  
     |------------|------------|  
     |Supplier Name|Supplier Name|  
     |ContactEmailAddress|Kontakt-E-Mail|  
@@ -61,6 +61,6 @@ ms.locfileid: "65488945"
 12. Klicken Sie zum Schließen des Dialog Felds **Transformations-Editor für DQS-Bereinigung** auf **OK** .  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 8: Hinzufügen einer Transformation 'Bedingtes Teilen', um die Bereinigungsausgabe zu teilen](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
+ [Aufgabe 8: Hinzufügen der Transformation „Bedingtes Teilen“ zur Teilung der Bereinigungsausgabe](../../2014/tutorials/task-8-adding-conditional-split-transform-to-split-cleansing-output.md)  
   
   

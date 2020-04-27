@@ -21,20 +21,20 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca92258bb764014b6f985ea08aa1a2606037a019
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63316068"
 ---
 # <a name="design-queries-and-views-how-to-topics-visual-database-tools"></a>Themen zur Vorgehensweise: Entwerfen von Abfragen und Sichten (Visual Database Tools)
   Mithilfe des Abfrage- und Sicht-Designers können Sie die Datenempfangs- und Datenmanipulationsteile einer Anwendung erstellen und verwalten.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Öffnen Sie den Abfrage-und Sicht-Designer &#40;Visual Database Tools&#41;](visual-database-tools.md)  
+ [Öffnen des Abfrage- und Sicht-Designers &#40;Visual Database Tools&#41;](visual-database-tools.md)  
  Erläutert schrittweise, wie Sie eine neue oder eine vorhandene Abfrage oder Sicht im Abfrage- und Sicht-Designer öffnen.  
   
- [Navigieren Sie im Abfrage-und Sicht-Designer &#40;Visual Database Tools&#41;](navigate-in-the-query-and-view-designer-visual-database-tools.md)  
+ [Navigieren im Abfrage- und Sicht-Designer &#40;Visual Database Tools&#41;](navigate-in-the-query-and-view-designer-visual-database-tools.md)  
  Bietet eine Liste mit Tastenkombinationen und Mausoperationen, die im Abfrage- und Sicht-Designer verwendet werden können.  
   
  [Tools im Abfrage- und Sicht-Designer &#40;Visual Database Tools&#41;](query-and-view-designer-tools-visual-database-tools.md)  

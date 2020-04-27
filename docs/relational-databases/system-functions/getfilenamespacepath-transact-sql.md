@@ -18,10 +18,10 @@ ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 42e3cd2c0431a1d23f3d67f7f1e983421b9b1e9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "72278331"
 ---
 # <a name="getfilenamespacepath-transact-sql"></a>GetFileNamespacePath (Transact-SQL)
@@ -45,7 +45,7 @@ ms.locfileid: "72278331"
  *is_full_path*  
  Ein ganzzahliger Ausdruck, der angibt, ob ein relativer oder ein absoluter Pfad zurückgegeben werden soll. *is_full_path* kann einen der folgenden Werte aufweisen:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**0**|Gibt den relativen Pfad innerhalb des Verzeichnisses auf Datenbankebene zurück.<br /><br /> Dies ist der Standardwert.|  
 |**1**|Gibt den vollständigen UNC-Pfad zurück, der mit `\\computer_name`beginnt.|  
@@ -53,11 +53,11 @@ ms.locfileid: "72278331"
  *\@andere*  
  Ein ganzzahliger Ausdruck, der definiert, wie die Serverkomponente des Pfads formatiert werden soll. die Option kann einen der folgenden Werte aufweisen: * \@*  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**0**|Gibt den in ein NetBIOS-Format konvertierten Servernamen zurück. Beispiel:<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> Dies ist der Standardwert.|  
 |**1**|Gibt den Servernamen ohne Konvertierung zurück. Beispiel:<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
-|**2**|Gibt den vollständigen Serverpfad zurück, z. B.:<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDatabase`|  
+|**2**|Gibt den vollständigen Serverpfad zurück. Beispiel:<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDatabase`|  
   
 ## <a name="return-type"></a>Rückgabetyp  
  **nvarchar(max)**  
@@ -73,7 +73,7 @@ ms.locfileid: "72278331"
   
  Dieser logische Pfad ist keine direkte Entsprechung eines physischen NTFS-Pfads. Er wird vom Dateisystem-Filtertreiber von FILESTREAM und vom FileStream-Agent in den physischen Pfad übersetzt. Durch diese Unterscheidung zwischen dem logischen und dem physischen Pfad kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Daten intern neu organisieren, ohne die Gültigkeit des Pfads zu beeinträchtigen.  
   
-## <a name="best-practices"></a>Bewährte Methoden  
+## <a name="best-practices"></a>Empfehlungen  
  Um Code und Anwendungen vom aktuellen Computer und von der Datenbank unabhängig zu halten, sollten Sie keinen Code schreiben, der auf absoluten Dateipfaden basiert. Rufen Sie stattdessen den vollständigen Pfad für eine Datei mit der Funktion **FileTableRootPath** und der Funktion **GetFileNamespacePath** zur Laufzeit ab, wie im folgenden Beispiel gezeigt. Die **GetFileNamespacePath** -Funktion gibt standardmäßig den relativen Pfad der Datei unter dem Stammpfad der Datenbank zurück.  
   
 ```sql  
@@ -86,7 +86,7 @@ SELECT @fullPath = @root + file_stream.GetFileNamespacePath() FROM DocumentStore
 WHERE Name = N'document.docx';  
 ```  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 ## <a name="examples"></a>Beispiele  
  In den folgenden Beispielen wird gezeigt, wie die **GetFileNamespacePath** -Funktion aufgerufen wird, um den UNC-Pfad für eine Datei oder ein Verzeichnis in einer FileTable abzurufen.  
@@ -102,6 +102,6 @@ WHERE Name = N'document.docx';
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwenden von Verzeichnissen und Pfaden in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
+ [Arbeiten mit Verzeichnissen und Pfaden in FileTables](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   
