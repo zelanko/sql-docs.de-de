@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7cb19e3ba2f58a39ffd87bdabc6eb1ad18a1d18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061190"
 ---
 # <a name="bulk-insert-task-editor-options-page"></a>Masseneinfügungstask-Editor (Seite Optionen)
@@ -26,7 +26,7 @@ ms.locfileid: "66061190"
   
  Weitere Informationen zum Arbeiten mit Masseneinfügungen finden Sie unter [Masseneinfügungstask](control-flow/bulk-insert-task.md) und [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Codepage**  
  Geben Sie die Codepage für die in der Datendatei enthaltenen Daten an.  
   
@@ -36,23 +36,23 @@ ms.locfileid: "66061190"
  **BatchSize**  
  Geben Sie die Anzahl der Zeilen in einem Batch an. Der Standardwert ist die gesamte Datendatei. Wenn Sie **BatchSize** auf null festlegen, werden die Daten in einem Batch geladen.  
   
- **LASTROW**  
+ **LastRow**  
  Geben Sie die letzte zu kopierende Zeile an.  
   
- **FIRSTROW**  
+ **FirstRow**  
  Geben Sie die erste zu kopierende Zeile an.  
   
  **Optionen**  
  |Begriff|Definition|  
 |----------|----------------|  
 |**Check-Einschränkungen**|Wählen Sie diese Option aus, um die Einschränkungen für Tabelle und Spalte zu überprüfen.|  
-|**NULL-Werten beibehalten**|Wählen Sie diese Option aus, um NULL-Werte während des Masseneinfügungsvorgangs beizubehalten, statt für leere Spalten Standardwerte einzufügen.|  
-|**Aktivieren der Identitäts Einfügung**|Wählen Sie diese Option aus, um vorhandene Werte in eine Identitätsspalte einzufügen.|  
+|**NULL-Werte beibehalten**|Wählen Sie diese Option aus, um NULL-Werte während des Masseneinfügungsvorgangs beizubehalten, statt für leere Spalten Standardwerte einzufügen.|  
+|**IDENTITY_INSERT aktivieren**|Wählen Sie diese Option aus, um vorhandene Werte in eine Identitätsspalte einzufügen.|  
 |**Tabellensperre**|Wählen Sie diese Option aus, um die Tabelle während des Masseneinfügungsvorgangs zu sperren.|  
 |**Trigger auslösen**|Wählen Sie diese Option aus, um das Einfügen, Aktualisieren oder Löschen von Triggern für die Tabelle auszulösen.|  
   
- **Sorteddata**  
- Geben Sie die ORDER BY-Klausel in der BULK INSERT-Anweisung an. Der Name der angegebenen Spalte muss eine gültige Spalte in der Zieltabelle sein. Der Standardwert lautet `false`. Das bedeutet, dass die Daten nicht durch eine ORDER BY-Klausel sortiert werden.  
+ **SortedData**  
+ Geben Sie die ORDER BY-Klausel in der BULK INSERT-Anweisung an. Der Name der angegebenen Spalte muss eine gültige Spalte in der Zieltabelle sein. Der Standardwert ist `false`. Das bedeutet, dass die Daten nicht durch eine ORDER BY-Klausel sortiert werden.  
   
  **MaxErrors**  
  Geben Sie an, wie viele Fehler maximal auftreten müssen, bevor der Masseneinfügungsvorgang abgebrochen wird. Durch den Wert 0 wird gekennzeichnet, dass eine unendliche Anzahl von Fehlern zulässig ist.  
@@ -61,10 +61,10 @@ ms.locfileid: "66061190"
 >  Jede Zeile, die beim Massenladevorgang nicht importiert werden kann, zählt als ein Fehler.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Massen Einfügungs Task-Editor &#40;Seite Allgemein&#41;](general-page-of-integration-services-designers-options.md)   
  [Massen Einfügungs Task-Editor &#40;Verbindungs Seite&#41;](../../2014/integration-services/bulk-insert-task-editor-connection-page.md)   
- [Seite Ausdrücke](expressions/expressions-page.md)   
+ [Ausdrucks Seite](expressions/expressions-page.md)   
  [Ablaufsteuerung](control-flow/control-flow.md)  
   
   

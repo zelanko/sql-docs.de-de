@@ -11,21 +11,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4114610833d9e661e72e80db4bbe529e0ec39493
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066192"
 ---
 # <a name="toolbar-aggregations-tab-cube-designer"></a>Symbolleiste (Registerkarte 'Aggregationen', Cube-Designer)
   Mit den Schaltflächen im Bereich **Symbolleiste** können Sie häufig verwendete Aktionen auf der Registerkarte **Aggregationen** des Cube-Designers ausführen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
-|Option|BESCHREIBUNG|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |**Aggregationen entwerfen**|Klicken Sie, um den **Aggregationsentwurfs-Assistenten**anzuzeigen.<br /><br /> Hinweis: Diese Option wird nur in der Standardsicht des Aggregations-Designers angezeigt.|  
-|**Verwendungsbasierte Optimierung**|Klicken Sie hierauf, um den **Assistenten für Verwendungs basierte Optimierung**anzuzeigen.<br /><br /> Hinweis: Diese Option wird nur in der Standardsicht des Aggregations-Designers angezeigt.|  
+|**Verwendungsbasierte Optimierung**|Klicken Sie, um den **Verwendungsbasierte Optimierung-Assistenten**anzuzeigen.<br /><br /> Hinweis: Diese Option wird nur in der Standardsicht des Aggregations-Designers angezeigt.|  
 |**Aggregationsentwurf zuweisen**|Klicken Sie, um das Dialogfeld **Aggregationsentwurf zuweisen** anzuzeigen.|  
 |**Standard Ansicht**|Klicken Sie, um die **Standardsicht** des Aggregations-Designers anzuzeigen, in der Sie Aggregationsentwürfe mit dem **Aggregationsentwurfs-Assistenten** oder dem **Verwendungsbasierte Optimierung-Assistenten**erstellen und ändern können.|  
 |**Erweiterte Sicht**|Klicken Sie, um die **Erweiterte Sicht** des Aggregations-Designers anzuzeigen, in der Sie Aggregationsentwürfe und einzelne Aggregationen manuell erstellen und ändern können. Diese Sicht sollte nur von fortgeschrittenen Benutzern verwendet werden.<br /><br /> Hinweis: der **Aggregations Entwurfs-Assistent** und der **Verwendungs basierte Optimierungs-Assistent** sind in dieser Ansicht nicht verfügbar.|  

@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 242c6451cc6dc018e4972be7a16305b676845687
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069267"
 ---
 # <a name="select-table-dialog-box-mining-accuracy-chart-view"></a>Tabelle auswählen (Dialogfeld) (Mininggenauigkeitsdiagramm)
   Verwenden Sie das Dialogfeld **Tabelle auswählen** , um für das Testen der Genauigkeit der Miningmodelle, die die ausgewählte Miningstruktur enthalten, eine Tabelle auszuwählen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Data Source**  
  Die Datenquelle, die die Tabelle enthält, die Sie zum Testen der Miningmodelle verwenden möchten. Die Liste enthält alle Datenquellen, die im aktuellen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt definiert sind.  
   
@@ -34,6 +34,6 @@ ms.locfileid: "66069267"
 ## <a name="see-also"></a>Weitere Informationen  
  [Mining Genauigkeits Diagramm-Designer &#40;Data Mining-&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Test-und validierungsaufgaben und Anleitungen &#40;Data Mining-&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Testen und validieren &#40;Data Mining-&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Tests und Überprüfung &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

@@ -15,16 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 649c972b001a0627a568f0bd9e1ac2b42d5175ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056321"
 ---
 # <a name="save-copy-of-package"></a>Kopie des Pakets speichern
   Verwenden Sie das in **verfügbare Dialogfeld** Kopie des Pakets speichern [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], um eine Kopie eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakets aus [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] an einem anderen Speicherort zu speichern und dabei optional die Schutzebene des Pakets zu ändern.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Paketspeicherort**  
  Wählen Sie den Typ des Speicherortes aus, an dem das Paket gespeichert werden soll. Die folgenden Optionen sind verfügbar:  
   
@@ -32,7 +32,7 @@ ms.locfileid: "66056321"
   
  **Dateisystem**  
   
- **SSIS-Paketspeicher**  
+ **SSIS-Paket Speicher**  
   
  **Server**  
  Geben Sie einen Servernamen ein, oder wählen Sie einen Server aus der Liste aus. Diese Option ist nur verfügbar, wenn der Speicherort **SQL Server** oder **SSIS-Paketspeicher**ist.  
@@ -55,13 +55,13 @@ ms.locfileid: "66056321"
  **Paketpfad**  
  Geben Sie den Paketpfad ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** , und suchen Sie den Ordner, in dem das Paket gespeichert  
   
- **Schutz Ebene**  
+ **Schutzebene**  
  Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** , und aktualisieren Sie im Dialogfeld **Paket Schutz Ebene** die Schutz Ebene. Weitere Informationen finden Sie unter [Dialogfeld „Paket- und Projektschutzebene“](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Referenz zur Benutzeroberfläche des Dialog Felds Paket importieren](../../2014/integration-services/import-package-dialog-box-ui-reference.md)   
  [Referenz zur Benutzeroberfläche des Dialog Felds Paket exportieren](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
- [Speichern von Paketen](save-packages.md)   
+ [Pakete speichern](save-packages.md)   
  [Importieren und Exportieren von Paketen &#40;SSIS-Dienst&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

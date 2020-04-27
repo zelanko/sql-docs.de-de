@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8d3492cce19906322ef9b420718aae0ae9e0e62d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061113"
 ---
 # <a name="catalog-properties-dialog-box"></a>Katalogeigenschaften (Dialogfeld)
@@ -29,11 +29,11 @@ ms.locfileid: "66061113"
   
  **Was möchten Sie tun?**  
   
--   [Dialog Feld "Katalog Eigenschaften" öffnen](#open_dialog)  
+-   [Öffnen des Dialogfelds "Katalogeigenschaften"](#open_dialog)  
   
 -   [Konfigurieren der Optionen](#options)  
   
-##  <a name="open_dialog"></a>Dialog Feld "Katalog Eigenschaften" öffnen  
+##  <a name="open-the-catalog-properties-dialog-box"></a><a name="open_dialog"></a>Dialog Feld "Katalog Eigenschaften" öffnen  
   
 1.  Öffnen Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
   
@@ -41,12 +41,12 @@ ms.locfileid: "66061113"
   
 3.  Erweitern Sie im Objekt-Explorer den Knoten **Integration Services** , klicken Sie mit der rechten Maustaste auf den Knoten **SSISDB**, und klicken Sie anschließend auf **Eigenschaften**.  
   
-##  <a name="options"></a> Konfigurieren der Optionen  
+##  <a name="configure-the-options"></a><a name="options"></a>Konfigurieren der Optionen  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  In der folgenden Tabelle werden spezifische Eigenschaften in dem Dialogfeld und die entsprechenden Eigenschaften in der catalog.catalog_property-Sicht beschrieben.  
   
-|Eigenschaftsname (Dialogfeld Katalogeigenschaften)|Eigenschaftsname (catalog.catalog_property-Sicht)|BESCHREIBUNG|  
+|Eigenschaftsname (Dialogfeld Katalogeigenschaften)|Eigenschaftsname (catalog.catalog_property-Sicht)|Beschreibung|  
 |-----------------------------------------------------|------------------------------------------------------|-----------------|  
 |Name des Verschlüsselungsalgorithmus|ENCRYPTION_CLEANUP_ENABLED|Gibt den Verschlüsselungstyp an, der zur Verschlüsselung der sensiblen Parameterwerte im Katalog verwendet wird. Folgende Werte sind möglich:<br /><br /> **DES**<br /><br /> **TRIPLE_DES**<br /><br /> **TRIPLE_DES_3KEY**<br /><br /> **DESPX**<br /><br /> **AES_128**<br /><br /> **AES_192**<br /><br /> **AES_256** (Standard)|  
 |Überprüfungstimeout (Sekunden)|VALIDATION_TIMEOUT|Geben Sie die maximale Ausführungsdauer in Sekunden ab, bevor eine Projektüberprüfung oder Paketüberprüfung beendet wird. Der Standardwert beträgt 300 Sekunden.<br /><br /> Die Validierung ist ein asynchroner Vorgang. Je größer das Projekt oder das Paket ist, desto länger dauert die Validierung.<br /><br /> Informationen zum Überprüfen von Projekten und Paketen finden Sie unter [Integration Services Data Types in Expressions](expressions/integration-services-data-types-in-expressions.md).|  

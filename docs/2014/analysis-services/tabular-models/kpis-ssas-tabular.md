@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bcb160a3468d2d135d63c5184b7e07d097d5050
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067003"
 ---
 # <a name="kpis-ssas-tabular"></a>KPIs (SSAS – tabellarisch)
@@ -30,7 +30,7 @@ ms.locfileid: "66067003"
   
 -   [Verwandte Aufgaben](#bkmk_related_tasks)  
   
-##  <a name="bkmk_benefits"></a> Vorteile  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>Davon  
  Key Performance Indicator (KPI) ist ein Begriff aus der Wirtschaft, der eine quantifizierbare Maßeinheit zur Messung der Umsetzung von Geschäftszielen darstellt. KPIs werden im Lauf der Zeit häufig ausgewertet. Die Vertriebsabteilung eines Unternehmens könnte KPIs beispielsweise verwenden, um den monatlichen Bruttogewinn mit dem vorausgesagten Bruttogewinn zu vergleichen. Die Buchhaltung könnte die monatlichen Ausgaben und Einnahmen gegenüberstellen, um eine Kostenauswertung vorzunehmen, und die Personalabteilung könnte den Quartalsumsatz pro Mitarbeiter ermitteln. Beides sind Beispiele für KPIs. Um eine schnelle und genaue Verlaufsübersicht ihrer Geschäftserfolge zu erhalten und Trends zu erkennen, greifen Fachanwender oft auf KPIs zurück, die in geschäftlichen Kennzahlensystemen gruppiert werden.  
   
  Ein KPI in einem Tabellenmodell enthält:  
@@ -41,10 +41,10 @@ ms.locfileid: "66067003"
  **Zielwert**  
  Ein Zielwert wird entweder durch ein Measure definiert, das zu einem Wert aufgelöst wird, oder durch einen absoluten Wert. Ein Zielwert könnte beispielsweise der Betrag sein, um den die Führungskräfte einer Organisation die Verkaufszahlen oder Gewinne steigern möchten.  
   
- **Status Schwellenwerte**  
+ **Statusschwellenwerte**  
  Ein Statusschwellenwert wird durch den Bereich zwischen einem niedrigen und hohen Schwellenwert oder durch einen festen Wert definiert. Der Statusschwellenwert wird anhand einer Grafik dargestellt, damit Benutzer problemlos den Status des Basiswerts im Vergleich zum Zielwert ermitteln können.  
   
-##  <a name="bkmk_example"></a>Beispiel  
+##  <a name="example"></a><a name="bkmk_example"></a>Beispiel  
  Der Vertriebsleiter von Adventure Works möchte eine PivotTable erstellen, in der schnell angezeigt wird, ob Vertriebsmitarbeiter ihre Umsatzvorgaben in einem bestimmten Zeitraum (Jahr) erfüllen. Für jeden Vertriebsmitarbeiter möchte Sie, dass die Pivottabelle den tatsächlichen Umsatz in Dollar, den Umsatz Kontingent Betrag in Dollar und eine einfache Grafik Anzeige anzeigt, in der der Status der einzelnen Vertriebsmitarbeiter unter, at oder oberhalb des Vertriebs Kontingents angezeigt wird. Zudem möchte der Vertriebsleiter die Daten nach Jahr unterteilen.  
   
  Zu diesem Zweck trägt der Vertriebsleiter die Hilfe des BI-Lösungs Entwicklers der Organisation ein, um dem tabellarischen AdventureWorks-Modell einen Sales-KPI hinzuzufügen. Anschließend stellt er mithilfe von [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] eine Verbindung mit dem tabellarischen Adventure Works-Modell als Datenquelle her und erstellt eine PivotTable mit den Feldern (Measures und KPI) und Slicern, um zu analysieren, ob die Vertriebsmannschaft ihre Vorgaben erfüllt.  
@@ -74,19 +74,19 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
   
  Der Vertriebsleiter kann die tatsächlichen Umsatzzahlen, die Vertriebsvorgaben und den Status jedes Vertriebsmitarbeiters jetzt nach Jahr unterteilen. So lassen sich Vertriebstrends über Jahre analysieren, um zu ermitteln, ob die Vertriebsvorgaben für einen Vertriebsmitarbeiter angepasst werden müssen.  
   
-##  <a name="bkmk_create"></a>Erstellen und Bearbeiten von KPIs  
+##  <a name="create-and-edit-kpis"></a><a name="bkmk_create"></a>Erstellen und Bearbeiten von KPIs  
  Zum Erstellen von KPIs im Modell-Designer verwenden Sie das Dialogfeld Key Performance Indicator. Da KPIs einem Measure zugeordnet werden müssen, erstellen Sie einen KPI, indem Sie ein Measure erweitern, das einen Basiswert ergibt, und dann entweder ein Measure erstellen, das einen Zielwert ergibt, oder einen absoluten Wert eingeben. Nachdem Basismeasure (Wert) und Zielwert definiert wurden, können Sie die Parameter für den Statusschwellenwert zwischen dem Basis- und Zielwert definieren. Der Status wird in einem grafischen Format mit auswählbaren Symbolen, Balken, Diagrammen oder Farben angezeigt. Anschließend können Basiswert, Zielwert und Status einem Bericht oder einer PivotTable als Werte hinzugefügt werden, die für andere Datenfelder in Slices aufgeteilt werden können.  
   
  Um das Dialogfeld **Key Performance Indicator**im Measureraster für eine Tabelle anzuzeigen, klicken Sie mit der rechten Maustaste auf ein Measure, das als Basiswert dient, und klicken Sie dann auf KPI erstellen. Nachdem ein Measure als Basiswert zu einem KPI erweitert wurde, wird im Measureraster neben dem Measurenamen ein Symbol angezeigt, das angibt, dass das Measure einem KPI zugeordnet ist.  
   
-##  <a name="bkmk_related_tasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> Verwandte Aufgaben  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
-|[Erstellen und Verwalten von KPIs &#40;tabellarischen SSAS-&#41;](kpis-ssas-tabular.md)|Beschreibt das Erstellen eines KPIs mit einem Basismeasure, einem Zielmeasure und Statusschwellenwerten.|  
+|[Erstellen und Verwalten von KPIs &#40;SSAS – tabellarisch&#41;](kpis-ssas-tabular.md)|Beschreibt das Erstellen eines KPIs mit einem Basismeasure, einem Zielmeasure und Statusschwellenwerten.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Measures &#40;tabellarischen SSAS-&#41;](measures-ssas-tabular.md)   
- [Perspektiven &#40;tabellarischen SSAS-&#41;](perspectives-ssas-tabular.md)  
+ [Perspektiven &#40;SSAS – tabellarisch&#41;](perspectives-ssas-tabular.md)  
   
   

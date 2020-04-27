@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b44fe16f89e154c1008c73400a6815e9e548bb69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057498"
 ---
 # <a name="multiple-flat-files-connection-manager-editor-columns-page"></a>Verbindungs-Manager-Editor für mehrere Flatfiles (Seite Spalten)
@@ -31,44 +31,44 @@ ms.locfileid: "66057498"
  Geben Sie einen eindeutigen Namen für die Verbindung für mehrere Flatfiles im Workflow an. Der angegebene Name wird im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer angezeigt.  
   
  **Beschreibung**  
- Beschreiben Sie die Verbindung. Die bewährte Methode ist hierbei, die Verbindung zweckbezogen zu beschreiben, sodass Pakete selbsterklärend und leichter zu verwalten sind.  
+ Beschreiben Sie die Verbindung. Es ist eine bewährte Methode, die Verbindung zweckbezogen zu beschreiben, sodass Pakete selbsterklärend und einfacher zu verwalten sind.  
   
 ## <a name="flat-file-format-dynamic-options"></a>Flatfileformat (dynamische Optionen)  
   
 ### <a name="format--delimited"></a>Format = Mit Trennzeichen  
- **Zeilen Trennzeichen**  
+ **Zeilentrennzeichen**  
  Wählen Sie aus der Liste verfügbarer Zeilentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**Programmiert Verlangt**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
+|**{CR}{LF}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**Programmiert**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf.|  
-|**Verlangt**|Als Trennzeichen für Zeilen dient ein Zeilenvorschub.|  
+|**{LF}**|Als Trennzeichen für Zeilen dient ein Zeilenvorschub.|  
 |**Semikolon {;}**|Als Trennzeichen für Zeilen dient ein Semikolon.|  
 |**Doppelpunkt {:}**|Als Trennzeichen für Zeilen dient ein Doppelpunkt.|  
 |**Komma{,}**|Als Trennzeichen für Zeilen dient ein Komma.|  
-|**Tab {t}**|Als Trennzeichen für Zeilen dient ein Tabulator.|  
+|**Tabulator {t}**|Als Trennzeichen für Zeilen dient ein Tabulator.|  
 |**Senkrechter Strich {&#124;}**|Als Trennzeichen für Zeilen dient ein senkrechter Strich.|  
   
- **Spalten Trennzeichen**  
+ **Spaltentrennzeichen**  
  Wählen Sie aus der Liste verfügbarer Spaltentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**Programmiert Verlangt**|Als Trennzeichen für Spalten dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
+|**{CR}{LF}**|Als Trennzeichen für Spalten dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**Programmiert**|Als Trennzeichen für Spalten dient ein Wagenrücklauf.|  
-|**Verlangt**|Als Trennzeichen für Spalten dient ein Zeilenvorschub.|  
+|**{LF}**|Als Trennzeichen für Spalten dient ein Zeilenvorschub.|  
 |**Semikolon {;}**|Als Trennzeichen für Spalten dient ein Semikolon.|  
 |**Doppelpunkt {:}**|Als Trennzeichen für Spalten dient ein Doppelpunkt.|  
 |**Komma{,}**|Als Trennzeichen für Spalten dient ein Komma.|  
-|**Tab {t}**|Als Trennzeichen für Spalten dient ein Tabulator.|  
+|**Tabulator {t}**|Als Trennzeichen für Spalten dient ein Tabulator.|  
 |**Senkrechter Strich {&#124;}**|Als Trennzeichen für Spalten dient ein senkrechter Strich.|  
   
  **Spalten zurücksetzen**  
  Entfernt alle bis auf die ursprünglichen Spalten, wenn Sie auf **Spalten zurücksetzen**klicken.  
   
 ### <a name="format--fixed-width"></a>Format = Feste Breite  
- **Raster**  
+ **Schriftart**  
  Wählen Sie die Schriftart aus, in der die Vorschaudaten angezeigt werden sollen.  
   
  **Quelldatenspalten**  
@@ -85,33 +85,33 @@ ms.locfileid: "66057498"
 > [!NOTE]  
 >  Bei Dateien mit rechtem Flatterrand haben die Spalten mit Ausnahme der letzten Spalte eine feste Breite. Die Trennung der letzten Spalte erfolgt mit einem Zeilentrennzeichen.  
   
- **Raster**  
+ **Schriftart**  
  Wählen Sie die Schriftart aus, in der die Vorschaudaten angezeigt werden sollen.  
   
  **Quelldatenspalten**  
  Passen Sie die Zeilenbreite an, indem Sie die vertikale Zeilenmarkierungslinie verschieben, und passen Sie die Spaltenbreite an, indem Sie auf das Lineal am oberen Rand des Vorschaufensters klicken.  
   
- **Zeilen Trennzeichen**  
+ **Zeilentrennzeichen**  
  Wählen Sie aus der Liste verfügbarer Zeilentrennzeichen ein Trennzeichen aus, oder geben Sie den Trennzeichentext ein.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**Programmiert Verlangt**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
+|**{CR}{LF}**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf in Kombination mit einem Zeilenvorschub.|  
 |**Programmiert**|Als Trennzeichen für Zeilen dient ein Wagenrücklauf.|  
-|**Verlangt**|Als Trennzeichen für Zeilen dient ein Zeilenvorschub.|  
+|**{LF}**|Als Trennzeichen für Zeilen dient ein Zeilenvorschub.|  
 |**Semikolon {;}**|Als Trennzeichen für Zeilen dient ein Semikolon.|  
 |**Doppelpunkt {:}**|Als Trennzeichen für Zeilen dient ein Doppelpunkt.|  
 |**Komma{,}**|Als Trennzeichen für Zeilen dient ein Komma.|  
-|**Tab {t}**|Als Trennzeichen für Zeilen dient ein Tabulator.|  
+|**Tabulator {t}**|Als Trennzeichen für Zeilen dient ein Tabulator.|  
 |**Senkrechter Strich {&#124;}**|Als Trennzeichen für Zeilen dient ein senkrechter Strich.|  
   
  **Spalten zurücksetzen**  
  Entfernt alle bis auf die ursprünglichen Spalten, wenn Sie auf **Spalten zurücksetzen**klicken.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Verbindungs-Manager-Editor für mehrere Flatfiles &#40;Seite "Allgemein"&#41;](general-page-of-integration-services-designers-options.md)   
  [Verbindungs-Manager-Editor für mehrere Flatfiles &#40;Seite "Erweitert"&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-advanced-page.md)   
- [Verbindungs-Manager-Editor für mehrere Flatfiles &#40;Vorschau Seite&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
+ [Verbindungs-Manager-Editor für mehrere Flatfiles &#40;Seite „Vorschau“&#41;](../../2014/integration-services/multiple-flat-files-connection-manager-editor-preview-page.md)  
   
   

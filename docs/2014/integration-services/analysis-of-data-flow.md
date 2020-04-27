@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e67c5448a6625b37c7fb17bc24ea6bdd7cb879ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061598"
 ---
 # <a name="analysis-of-data-flow"></a>Analyse des Datenflusses
@@ -36,7 +36,7 @@ order by source_component_name, destination_component_name
   
  Im folgenden Beispiel wird die Anzahl der Zeilen pro Millisekunde berechnet, die von jeder Komponente für eine bestimmte Ausführung gesendet wurden. Die berechneten Werte lauten wie folgt:  
   
--   **total_rows** : die Summe aller von der Komponente gesendeten Zeilen.  
+-   **total_rows** : Die Summe aller von der Komponente gesendeten Zeilen  
   
 -   **wall_clock_time_ms** -die insgesamt verstrichene Ausführungszeit (in Millisekunden) für jede Komponente.  
   

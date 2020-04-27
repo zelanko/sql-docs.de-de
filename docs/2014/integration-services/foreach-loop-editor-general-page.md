@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 804e8ddca760be8734dd4862aed5c2edd6fc8caa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058522"
 ---
 # <a name="foreach-loop-editor-general-page"></a>Foreach-Schleifen-Editor (Seite Allgemein)
@@ -35,11 +35,11 @@ ms.locfileid: "66058522"
  Geben Sie eine Beschreibung für den Foreach-Schleifencontainer an.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Foreach-Schleifen-Editor &#40;Sammlungs Seite&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
  [Foreach-Schleifen-Editor &#40;Seite Variablen Zuordnungen&#41;](../../2014/integration-services/foreach-loop-editor-variable-mappings-page.md)   
- [Seite Ausdrücke](expressions/expressions-page.md)   
- [Foreach Loop Container](control-flow/foreach-loop-container.md)  (Foreach-Schleifencontainer)  
+ [Ausdrucks Seite](expressions/expressions-page.md)   
+ [Foreach-Schleifen Container](control-flow/foreach-loop-container.md)   
  [For-Schleifencontainer](control-flow/for-loop-container.md)  
   
   

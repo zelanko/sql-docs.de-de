@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ad2605902cb523c0147888e4aedee0df3c9f936e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058433"
 ---
 # <a name="ftp-task-editor-general-page"></a>Editor für den FTP-Task (Seite Allgemein)
@@ -26,16 +26,16 @@ ms.locfileid: "66058433"
   
  Informationen zu diesem Task finden Sie unter [FTP-Task](control-flow/ftp-task.md).  
   
-## <a name="options"></a>Tastatur  
- **Ftpconnection**  
+## <a name="options"></a>Optionen  
+ **FtpConnection**  
  Wählen Sie einen vorhandenen FTP-Verbindungs-Manager \<aus, oder klicken Sie auf **neue Verbindung**>, um einen Verbindungs-Manager zu erstellen.  
   
 > [!IMPORTANT]  
 >  Der FTP-Verbindungs-Manager unterstützt nur die anonyme Authentifizierung und die Standardauthentifizierung. Er unterstützt keine Windows-Authentifizierung.  
   
- **Verwandte Themen**: [FTP-Verbindungs-Manager](connection-manager/ftp-connection-manager.md), [FTP-Verbindungs-Manager-Editor](../../2014/integration-services/ftp-connection-manager-editor.md)  
+ **Verwandte Themen:**[FTP Connection Manager](connection-manager/ftp-connection-manager.md), [FTP Connection Manager Editor](../../2014/integration-services/ftp-connection-manager-editor.md)  
   
- **Stoponfailure**  
+ **StopOnFailure**  
  Geben Sie an, ob der FTP-Task beendet wird, wenn ein FTP-Vorgang fehlschlägt.  
   
  **Name**  
@@ -48,7 +48,7 @@ ms.locfileid: "66058433"
  Geben Sie eine Beschreibung des FTP-Tasks ein.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [FTP-Task-Editor &#40;Seite "Dateiübertragung"&#41;](../../2014/integration-services/ftp-task-editor-file-transfer-page.md)   
  [Seite Ausdrücke](expressions/expressions-page.md)  
   

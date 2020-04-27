@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 090b4d990a516b412ae5f7cc4e4d6e766e8d02e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058490"
 ---
 # <a name="ftp-connection-manager-editor"></a>FTP-Verbindungs-Manager-Editor
@@ -29,7 +29,7 @@ ms.locfileid: "66058490"
   
  Weitere Informationen zum FTP-Verbindungs-Manager finden Sie unter [FTP Connection Manager](connection-manager/ftp-connection-manager.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Servername**  
  Geben Sie den Namen des FTP-Servers an.  
   
@@ -45,16 +45,16 @@ ms.locfileid: "66058490"
  **Timeout (in Sekunden)**  
  Geben Sie die Anzahl von Sekunden an, die der Task vor einem Timeout dauert. Der Wert **0** gibt einen unbegrenzten Zeitraum an. Der Standardwert dieser Eigenschaft ist **60**.  
   
- **Passiven Modus verwenden**  
+ **Passivmodus verwenden**  
  Geben Sie an, ob die Verbindung durch den Server oder durch den Client initiiert wird. Die Initiierung der Verbindung durch den Server erfolgt im Aktivmodus; der Client aktiviert die Verbindung im Passivmodus. Der Standardwert dieser Eigenschaft ist der **Aktivmodus**.  
   
- **Wiederholungen**  
+ **Wiederholungsversuche**  
  Geben Sie die Häufigkeit an, mit der der Task versucht, eine Verbindung herzustellen. Der Wert **0** gibt eine unbegrenzte Anzahl von Versuchen an.  
   
  **Segmentgröße (in KB)**  
  Geben Sie eine Segmentgröße in KB für das Übertragen von Daten an.  
   
- **Verbindung testen**  
+ **Testen der Verbindung**  
  Nachdem die Konfiguration des FTP-Verbindungs-Managers abgeschlossen ist, bestätigen Sie die Gültigkeit der Verbindung, indem Sie auf **Verbindung testen**klicken.  
   
 ## <a name="see-also"></a>Weitere Informationen  

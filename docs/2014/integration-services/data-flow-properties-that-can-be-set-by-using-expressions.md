@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f70a956834108c21dd7b17bb9f3e04db38f29bfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059940"
 ---
 # <a name="data-flow-properties-that-can-be-set-by-using-expressions"></a>Data Flow-Eigenschaften, die mithilfe von Ausdrücken festgelegt werden können
@@ -70,8 +70,8 @@ ms.locfileid: "66059940"
 |----------------------|--------------|  
 |ADO NET-Ziel|TableOrViewName-Eigenschaft<br /><br /> BatchSize-Eigenschaft<br /><br /> CommandTimeout-Eigenschaft|  
 |Flatfileziel|Header-Eigenschaft|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Compact-Ziel|TableName-Eigenschaft|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]entwickelt|BulkInsertTableName-Eigenschaft<br /><br /> BulkInsertFirstRow-Eigenschaft<br /><br /> BulkInsertLastRow-Eigenschaft<br /><br /> BulkInsertOrder-Eigenschaft<br /><br /> Timeout-Eigenschaft|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact-Ziel|TableName-Eigenschaft|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Ziel|BulkInsertTableName-Eigenschaft<br /><br /> BulkInsertFirstRow-Eigenschaft<br /><br /> BulkInsertLastRow-Eigenschaft<br /><br /> BulkInsertOrder-Eigenschaft<br /><br /> Timeout-Eigenschaft|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
@@ -81,7 +81,7 @@ ms.locfileid: "66059940"
  Technischer Artikel, [SSIS Expression Cheat Sheet](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet), auf pragmaticworks.com  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwenden von Eigenschaftsausdrücken in Paketen](expressions/use-property-expressions-in-packages.md)   
+ [Verwenden von Eigenschafts Ausdrücken in Paketen](expressions/use-property-expressions-in-packages.md)   
  [Allgemeine Eigenschaften](../../2014/integration-services/common-properties.md)   
  [Benutzerdefinierte Eigenschaften der Transformation](data-flow/transformations/transformation-custom-properties.md)   
  [Pfadeigenschaften](../../2014/integration-services/path-properties.md)  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de31c9c5aae35b07cee0574730e12e51726921e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068549"
 ---
 # <a name="specify-a-connection-string-ssas"></a>Verbindungszeichenfolge angeben (SSAS)
@@ -31,10 +31,10 @@ ms.locfileid: "66068549"
  **Verbindungs Zeichenfolge**  
  Geben Sie eine Verbindungszeichenfolge ein, mit der eine Verbindung zu einer OLE DB- oder ODBC-Datenquelle hergestellt werden soll.  
   
- **Entwickeln**  
+ **Build**  
  Geben Sie die Eigenschaften für eine Verbindungszeichenfolge im Dialogfeld **Datenverknüpfungseigenschaften** an. Weitere Informationen finden Sie in der Hilfe zum Microsoft-Datenlink, die in diesem Dialogfeld verfügbar ist.  
   
- **Verbindung testen**  
+ **Testen der Verbindung**  
  Stellen Sie unter Verwendung der angegebenen Verbindungszeichenfolge eine Verbindung zur Datenquelle her. Eine Meldung gibt Aufschluss darüber, ob die Verbindungsherstellung erfolgreich war.  
   
   

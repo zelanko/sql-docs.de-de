@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1172143ebfa44deb19d15bf596db1df0e9399ed0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055733"
 ---
 # <a name="set-the-properties-of-a-path-by-using-the-data-flow-path-editor"></a>Festlegen der Eigenschaften eines Pfads mithilfe des Datenflusspfad-Editors
@@ -37,7 +37,7 @@ ms.locfileid: "66055733"
 6.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Integration Services-Pfade](data-flow/integration-services-paths.md)   
+ [Integration Services Pfade](data-flow/integration-services-paths.md)   
  [Datenfluss](data-flow/data-flow.md)  
   
   

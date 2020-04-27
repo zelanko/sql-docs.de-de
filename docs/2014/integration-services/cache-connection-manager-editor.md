@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0802ed589813a43ffac516c05a3a52de382d36c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061078"
 ---
 # <a name="cache-connection-manager-editor"></a>Editor für den Cacheverbindungs-Manager
@@ -29,16 +29,16 @@ ms.locfileid: "66061078"
   
  Das Dialogfeld **Editor für den Cacheverbindungs-Manager** schließt die folgenden Registerkarten ein:  
   
--   [Registerkarte Allgemein](#generaltab)  
+-   [Registerkarte "Allgemein"](#generaltab)  
   
--   [Registerkarte Spalten](#columnstab)  
+-   [Registerkarte "Spalten"](#columnstab)  
   
  Weitere Informationen zum Cacheverbindungs-Manager finden Sie unter [Cache Connection Manager](connection-manager/cache-connection-manager.md).  
   
-##  <a name="generaltab"></a>Registerkarte Allgemein  
+##  <a name="general-tab"></a><a name="generaltab"></a>Registerkarte Allgemein  
  Geben Sie auf der Registerkarte **Allgemein** des Dialogfelds **Editor für den Cacheverbindungs-Manager** an, ob der Cache aus einer Datei gelesen werden soll oder ob der Cache in einer Datei gespeichert werden soll.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Name des Verbindungs-Managers**  
  Geben Sie einen eindeutigen Namen für die Cacheverbindung im Workflow an. Der angegebene Name wird im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer angezeigt.  
   
@@ -66,14 +66,14 @@ ms.locfileid: "66061078"
  **Metadaten aktualisieren**  
  Löschen Sie die Spaltenmetadaten im Cacheverbindungsmanager, und füllen Sie den Cacheverbindungs-Manager erneut mit Spaltenmetadaten aus einer bestimmten Cachedatei auf.  
   
-##  <a name="columnstab"></a>Registerkarte Spalten  
+##  <a name="columns-tab"></a><a name="columnstab"></a>Registerkarte Spalten  
  Auf der Registerkarte **Spalten** des Dialogfelds **Editor für den Cacheverbindungs-Manager** können Sie die Eigenschaften jeder Spalte im Cache konfigurieren.  
   
-### <a name="options"></a>Tastatur  
- **Spalte**  
+### <a name="options"></a>Optionen  
+ **Column**  
  Geben Sie den Spaltennamen an.  
   
- **Index Position**  
+ **Indexposition**  
  Geben Sie an, welche Spalten Indexspalten sind, indem Sie die Indexposition jeder Spalte angeben. Der Index ist eine Auflistung einer oder mehrerer Spalten.  
   
  Für Nicht-Index-Spalten ist die Indexposition 0.  
@@ -99,6 +99,6 @@ ms.locfileid: "66061078"
  Gibt die Codepage für den Spaltentyp an. Wenn für den Datentyp zutreffend, können Sie den Wert von `Code Page` aktualisieren.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Suchtransformation](data-flow/transformations/lookup-transformation.md)  
+ [Transformation für Suche](data-flow/transformations/lookup-transformation.md)  
   
   

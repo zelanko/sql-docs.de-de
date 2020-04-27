@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d224a321ed78f89a798966bd28c0ff7f16d55134
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068469"
 ---
 # <a name="specify-column-content-and-data-type-data-mining-wizard"></a>Inhalt und Datentyp der Spalten angeben (Data Mining-Assistent)
@@ -24,9 +24,9 @@ ms.locfileid: "66068469"
   
  Der Datentyp gibt zusätzliche Details zum Typ der in der Spalte enthaltenen Daten und zur Verwendung der Daten während des Trainings an. Einige Inhaltstypen erfordern einen bestimmten Datentyp und umgekehrt. Je nach Algorithmus, den Sie beim Erstellen eines Miningmodells verwenden, müssen Sie unter Umständen einen bestimmten Datentyp angeben. Informationen zu den Inhalts- und Datentypen in Miningmodellen und -strukturen finden Sie unter [Inhaltstypen &#40;Data Mining&#41;](data-mining/content-types-data-mining.md).  
   
- **Weitere Informationen finden** Sie unter [Mining Strukturen &#40;Analysis Services-Data Mining-&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [Mining Modell Spalten](data-mining/mining-model-columns.md), [Data Mining-Assistent &#40;Analysis Services-Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Mining Struktur](data-mining/create-a-relational-mining-structure.md) .  
+ **Weitere Informationen:** [Miningstrukturen &#40;Analysis Services - Data Mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md), [Miningmodellspalten](data-mining/mining-model-columns.md), [Data Mining-Assistent &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Miningmodellstruktur**  
  Zeigt die Spalten aus den Ansichten und geschachtelte Tabellen an, die Sie auf der vorherigen Seite des Assistenten ausgewählt haben.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66068469"
  **Inhaltstyp**  
  Geben Sie den Inhaltstyp für die Spalte an. Wenn Sie auf der vorherigen Seite des Assistenten angegeben haben, dass die Spalte ein Schlüssel ist, sind die folgenden Werte verfügbar:  
   
-|Option|BESCHREIBUNG|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |Key|Geben Sie an, dass die Spalte einen eindeutigen Bezeichner für die Fallreihe enthält.|  
 |Key Sequence|Geben Sie an, dass die Spalte einen Sequenzbezeichner enthält.|  
@@ -44,7 +44,7 @@ ms.locfileid: "66068469"
   
  Wenn Sie die Spalte als Nicht-Schlüsselspalte ausgewählt haben, sind je nach Datentyp die folgenden Werte verfügbar:  
   
-|Option|BESCHREIBUNG|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |Fortlaufend|Geben Sie an, dass die Spalte fortlaufende numerische Werte enthält.|  
 |Discretized|Geben Sie an, dass die Spalte numerische Werte enthält, die diskretisiert wurden oder als diskrete Werte behandelt werden können.|  
@@ -53,7 +53,7 @@ ms.locfileid: "66068469"
  **Datentyp**  
  Geben Sie den Datentyp für die Spalte an.  
   
- Folgende Werte sind verfügbar:  
+ Die folgenden Werte sind verfügbar:  
   
 -   `Boolean`  
   

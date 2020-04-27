@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9c077fdb85612c5e3f574d9d0236b07f149b9c3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057975"
 ---
 # <a name="integration-services-project-conversion-wizard"></a>Assistent für die Konvertierung von Integration Services-Projekten
@@ -27,7 +27,7 @@ ms.locfileid: "66057975"
   
  **Was möchten Sie tun?**  
   
--   [Assistent zum Konvertieren von Integration Services Projekten öffnen](#open_dialog)  
+-   [Öffnen des Assistenten für die Konvertierung von Integration Services-Projekten](#open_dialog)  
   
 -   [Festlegen von Optionen auf der Seite "Pakete suchen"](#locate)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66057975"
   
 -   [Festlegen von Optionen auf der Seite "Projekteigenschaften angeben"](#projectProperties)  
   
--   [Festlegen von Optionen auf der Seite "Task ' Paket ausführen ' aktualisieren"](#executePackage)  
+-   [Festlegen von Optionen auf der Seite "Task 'Paket ausführen' aktualisieren"](#executePackage)  
   
 -   [Festlegen von Optionen auf der Seite "Konfigurationen auswählen"](#configurations)  
   
@@ -45,11 +45,11 @@ ms.locfileid: "66057975"
   
 -   [Festlegen von Optionen auf der Seite "Parameter konfigurieren"](#configureParameters)  
   
--   [Festlegen der Optionen auf der Seite "überprüfen"](#review)  
+-   [Festlegen der Optionen auf der Seite zum Überprüfen](#review)  
   
--   [Festlegen der Optionen für die Konvertierung ausführen](#conversion)  
+-   [Festlegen der Optionen unter "Konvertierung ausführen"](#conversion)  
   
-##  <a name="open_dialog"></a>Assistent zum Konvertieren von Integration Services Projekten öffnen  
+##  <a name="open-the-integration-services-project-conversion-wizard"></a><a name="open_dialog"></a>Assistent zum Konvertieren von Integration Services Projekten öffnen  
  Führen Sie einen der folgenden Schritte aus, um den Assistenten zum Konvertieren von **Integration Services-Projekten** zu öffnen.  
   
 -   Öffnen Sie das Projekt in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], und klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt. Klicken Sie anschließend auf **In Projektbereitstellungsmodell konvertieren**.  
@@ -58,10 +58,10 @@ ms.locfileid: "66057975"
   
  Abhängig davon, ob Sie den Assistenten zum Konvertieren von **Integration Services-Projekten** von [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] oder von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]ausführen, führt der Assistent unterschiedliche Konvertierungstasks aus. Weitere Informationen finden Sie unter [Deploy Projects to Integration Services Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md).  
   
-##  <a name="locate"></a>Festlegen von Optionen auf der Seite "Pakete suchen"  
+##  <a name="set-options-on-the-locate-packages-page"></a><a name="locate"></a>Festlegen von Optionen auf der Seite "Pakete suchen"  
   
 > [!NOTE]  
->  Die Seite **Pakete suchen** ist nur verfügbar, wenn Sie den Assistenten über [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]ausführen.  
+>   Die Seite **Pakete suchen** ist nur verfügbar, wenn Sie den Assistenten über [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]ausführen.  
   
  Die folgende Option wird auf der Seite angezeigt, wenn Sie **Dateisystem** in der Dropdownliste **Quelle** auswählen. Wählen Sie diese Option, wenn das Paket im Dateisystem gespeichert ist.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "66057975"
  **Windows-Authentifizierung verwenden**  
  Der Microsoft Windows-Authentifizierungsmodus ermöglicht Benutzern das Herstellen einer Verbindung über ein Windows-Benutzerkonto. Wenn Sie die Windows-Authentifizierung verwenden, müssen Sie keinen Benutzernamen und kein Kennwort angeben.  
   
- **SQL Server Authentifizierung verwenden**  
+ **SQL Server-Authentifizierung verwenden**  
  Wenn ein Benutzer eine Verbindung mit einem angegebenen Benutzernamen und einem Kennwort von einer nicht vertrauenswürdigen Verbindung herstellt, authentifiziert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Verbindung, indem überprüft wird, ob ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anmeldekonto eingerichtet wurde und ob das angegebene Kennwort mit dem zuvor aufgezeichneten übereinstimmt. Wenn kein Anmeldekonto in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] eingerichtet wurde, schlägt die Authentifizierung fehl, und der Benutzer erhält eine Fehlermeldung.  
   
  **Benutzername**  
@@ -96,7 +96,7 @@ ms.locfileid: "66057975"
  **Ordner**  
  Geben Sie den Paketpfad ein, oder navigieren Sie zum Paket, indem Sie auf **Durchsuchen**klicken.  
   
-##  <a name="selectPackages"></a>Festlegen von Optionen auf der Seite "Pakete auswählen"  
+##  <a name="set-options-on-the-select-packages-page"></a><a name="selectPackages"></a>Festlegen von Optionen auf der Seite "Pakete auswählen"  
  **Paketname**  
  Listet die Paketdatei auf.  
   
@@ -115,11 +115,11 @@ ms.locfileid: "66057975"
  **Aktualisieren**  
  Aktualisiert die Liste der Pakete.  
   
-##  <a name="destination"></a>Festlegen von Optionen auf der Seite "Ziel auswählen"  
+##  <a name="set-options-on-the-select-destination-page"></a><a name="destination"></a>Festlegen von Optionen auf der Seite "Ziel auswählen"  
  Geben Sie auf dieser Seite den Namen und den Pfad für eine neue Projektbereitstellungsdatei (.ispac) an, oder wählen Sie eine vorhandene Datei aus.  
   
 > [!NOTE]  
->  Die Seite **Ziel auswählen** ist nur verfügbar, wenn Sie den Assistenten über [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]ausführen.  
+>   Die Seite **Ziel auswählen** ist nur verfügbar, wenn Sie den Assistenten über [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]ausführen.  
   
  **Ausgabepfad**  
  Geben Sie den Pfad für die Bereitstellungsdatei ein, oder navigieren Sie zur Datei, indem Sie auf **Durchsuchen**klicken.  
@@ -127,33 +127,33 @@ ms.locfileid: "66057975"
  **Projektname**  
  Geben Sie den Projektnamen ein.  
   
- **Schutz Ebene**  
+ **Schutzebene**  
  Wählen Sie die Schutzebene aus. Weitere Informationen finden Sie unter [Access Control for Sensitive Data in Packages](security/access-control-for-sensitive-data-in-packages.md).  
   
  **Projektbeschreibung**  
  Geben Sie eine optionale Beschreibung für das Projekt ein.  
   
-##  <a name="projectProperties"></a>Festlegen von Optionen auf der Seite "Projekteigenschaften angeben"  
+##  <a name="set-options-on-the-specify-project-properties-page"></a><a name="projectProperties"></a> Festlegen von Optionen auf der Seite "Projekteigenschaften angeben"  
   
 > [!NOTE]  
->  Die Seite **Projekteigenschaften angeben** ist nur verfügbar, wenn Sie den Assistenten über [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]ausführen.  
+>   Die Seite **Projekteigenschaften angeben** ist nur verfügbar, wenn Sie den Assistenten über [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]ausführen.  
   
  **Projektname**  
  Listet den Projektnamen auf.  
   
- **Schutz Ebene**  
+ **Schutzebene**  
  Wählen Sie eine Schutzebene für die im Projekt enthaltenen Pakete aus. Weitere Informationen zu Schutzebenen finden Sie unter [Access Control for Sensitive Data in Packages](security/access-control-for-sensitive-data-in-packages.md).  
   
  **Projektbeschreibung**  
  Geben Sie eine optionale Beschreibung für das Projekt ein.  
   
-##  <a name="executePackage"></a>Festlegen von Optionen auf der Seite "Task ' Paket ausführen ' aktualisieren"  
+##  <a name="set-options-on-the-update-execute-package-task-page"></a><a name="executePackage"></a>Festlegen von Optionen auf der Seite "Task ' Paket ausführen ' aktualisieren"  
  Aktualisieren Sie die in den Paketen enthaltenen Tasks "Paket ausführen", um einen projektbasierten Verweis zu verwenden. Weitere Informationen finden Sie unter [Execute Package Task Editor](../../2014/integration-services/execute-package-task-editor.md).  
   
  **Übergeordnetes Paket**  
  Listet den Namen eines Pakets auf, das ein untergeordnetes Paket mithilfe des Tasks "Paket ausführen" ausführt.  
   
- **Taskname**  
+ **Aufgabenname**  
  Listet den Namen des Tasks "Paket ausführen" auf.  
   
  **Ursprünglicher Verweis**  
@@ -162,10 +162,10 @@ ms.locfileid: "66057975"
  **Verweis zuweisen**  
  Wählen Sie ein untergeordnetes im Projekt gespeichertes Paket aus.  
   
-##  <a name="configurations"></a>Festlegen von Optionen auf der Seite "Konfigurationen auswählen"  
+##  <a name="set-options-on-the-select-configurations-page"></a><a name="configurations"></a> Festlegen von Optionen auf der Seite "Konfigurationen auswählen"  
  Wählen Sie die Paketkonfigurationen aus, die Sie durch Parameter ersetzen möchten.  
   
- **Paket**  
+ **Pakete**  
  Listet die Paketdatei auf.  
   
  **Typ**  
@@ -183,28 +183,28 @@ ms.locfileid: "66057975"
  **Aktualisieren**  
  Klicken Sie auf die Option, um die Liste der Konfigurationen zu aktualisieren.  
   
- **Konfigurationen aus allen Paketen nach der Konvertierung entfernen**  
+ **Option zum Entfernen der Konfigurationen von allen Paketen nach der Konvertierung**  
  Es wird empfohlen, durch Aktivierung dieser Option alle Konfigurationen vom Projekt zu entfernen.  
   
  Wenn Sie diese Option nicht auswählen, werden nur die Konfigurationen entfernt, die durch Parameter ersetzt werden sollen.  
   
-##  <a name="createParameters"></a>Festlegen von Optionen auf der Seite "Parameter erstellen"  
+##  <a name="set-options-on-the-create-parameters-page"></a><a name="createParameters"></a> Festlegen von Optionen auf der Seite "Parameter erstellen"  
  Wählen Sie den Parameternamen und den Bereich für jede Konfigurationseigenschaft aus.  
   
- **Paket**  
+ **Pakete**  
  Listet die Paketdatei auf.  
   
  **Parameter Name**  
  Listet den Namen des Parameters auf.  
   
- **`Scope`**  
+ **Scope**  
  Wählen Sie den Bereich des Parameters aus, und zwar entweder Paket oder Projekt.  
   
-##  <a name="configureParameters"></a>Festlegen von Optionen auf der Seite "Parameter konfigurieren"  
+##  <a name="set-options-on-the-configure-parameters-page"></a><a name="configureParameters"></a>Festlegen von Optionen auf der Seite "Parameter konfigurieren"  
  **Name**  
  Listet den Namen des Parameters auf.  
   
- **`Scope`**  
+ **Scope**  
  Listet den Bereich des Parameters auf.  
   
  **Wert**  
@@ -218,16 +218,16 @@ ms.locfileid: "66057975"
   
  Das Dialogfeld **Parameterdetails festlegen** listet auch den Datentyp des Parameterwerts und den Ursprung des Parameters auf.  
   
-##  <a name="review"></a>Festlegen der Optionen auf der Seite "überprüfen"  
+##  <a name="set-the-options-on-the-review-page"></a><a name="review"></a>Festlegen der Optionen auf der Seite "überprüfen"  
  Verwenden Sie die Seite für die **Überprüfung**, um die Optionen zu bestätigen, die Sie für die Konvertierung des Projekts ausgewählt haben.  
   
- **Previous**  
+ **Vorherige**  
  Klicken Sie, um eine Option zu ändern.  
   
  **Umgebaut**  
  Klicken Sie, um das Projekt in das Projektbereitstellungsmodell zu konvertieren.  
   
-##  <a name="conversion"></a>Festlegen der Optionen für die Konvertierung ausführen  
+##  <a name="set-the-options-on-the-perform-conversion"></a><a name="conversion"></a>Festlegen der Optionen für die Konvertierung ausführen  
  Die Seite "Konvertierung ausführen" zeigt den Status der Projektkonvertierung an.  
   
  **Aktion**  

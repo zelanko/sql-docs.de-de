@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9fdbc707a26c9cebae33c0dd432572cde3157c2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056423"
 ---
 # <a name="run-a-package-in-sql-server-data-tools"></a>Ausführen eines Pakets in SQL Server Data Tools
@@ -27,11 +27,11 @@ ms.locfileid: "66056423"
   
  Während ein Paket ausgeführt wird, [!INCLUDE[ssIS](../includes/ssis-md.md)] zeigt der-Designer den Fortschritt der Paket Ausführung **auf der Register** Karte Status an. Sie können die Start-und Abschlusszeit des Pakets und dessen Tasks und Container sowie Informationen zu allen Tasks oder Containern im Paket anzeigen, bei denen ein Fehler aufgetreten ist. Nachdem die Ausführung des Pakets abgeschlossen ist, sind die Laufzeitinformationen auf der Registerkarte **Ausführungs Ergebnisse** weiterhin verfügbar. Weitere Informationen finden Sie im Abschnitt "Progress Reporting" im Thema [Debuggen der Ablauf Steuerung](control-flow/control-flow.md).  
   
- **Entwurfszeit Bereitstellung**. Wenn Sie ein Paket in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]ausführen, wird das Paket erstellt und dann in einem Ordner bereitgestellt. Vor dem Ausführen des Pakets können Sie den Ordner angeben, in dem das Paket bereitgestellt wird. Wenn Sie keinen Ordner angeben, wird standardmäßig der Ordner **bin** verwendet. Dieser Bereitstellungstyp wird als Entwurfszeitbereitstellung bezeichnet.  
+ **Entwurfszeitbereitstellung**. Wenn Sie ein Paket in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]ausführen, wird das Paket erstellt und dann in einem Ordner bereitgestellt. Vor dem Ausführen des Pakets können Sie den Ordner angeben, in dem das Paket bereitgestellt wird. Wenn Sie keinen Ordner angeben, wird standardmäßig der Ordner **bin** verwendet. Dieser Bereitstellungstyp wird als Entwurfszeitbereitstellung bezeichnet.  
   
 ### <a name="to-run-a-package-in-sql-server-data-tools"></a>So führen Sie ein Paket in SQL Server-Datentools aus  
   
-1.  Wenn die Projektmappe mehrere Projekte enthält, klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt mit dem Paket, und klicken Sie anschließend auf **Als Startobjekt festlegen**, um das Startprojekt festzulegen.  
+1.  Wenn die Projektmappe mehrere Projekte enthält, klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt mit dem Paket, und klicken Sie anschließend auf **Als Startobjekt festlegen** , um das Startprojekt festzulegen.  
   
 2.  Wenn das Projekt mehrere Pakete enthält, klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Paket, und klicken Sie anschließend auf **Als Startobjekt** festlegen, um das Startpaket festzulegen.  
   

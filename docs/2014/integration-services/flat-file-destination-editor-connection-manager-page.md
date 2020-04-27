@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 429ba1f8a12a4bd574a8304d18311a6e6e4efc79
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058697"
 ---
 # <a name="flat-file-destination-editor-connection-manager-page"></a>Ziel-Editor für Flatfiles (Seite Verbindungs-Manager)
@@ -26,7 +26,7 @@ ms.locfileid: "66058697"
   
  Weitere Informationen zum Flatfileziel finden Sie unter [Flat File Destination](data-flow/flat-file-destination.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verbindungs-Manager für Flatfiles**  
  Wählen Sie einen vorhandenen Verbindungs-Manager aus dem Listenfeld aus, oder erstellen Sie durch Klicken auf **Neu**eine neue Verbindung.  
   
@@ -40,14 +40,14 @@ ms.locfileid: "66058697"
  **Daten in der Datei überschreiben**  
  Gibt an, ob eine vorhandene Datei überschrieben, oder ob Daten angehängt werden sollen.  
   
- **Header**  
+ **Kopfzeile**  
  Geben Sie einen in die Datei einzufügenden Textblock ein, bevor Daten geschrieben werden. Mithilfe dieser Option können Sie zusätzliche Informationen wie Spaltenüberschriften hinzufügen.  
   
  **Vorschau**  
- Zeigt mithilfe des Dialogfelds **Datenansicht** eine Vorschau der Ergebnisse an. In der Vorschau können bis zu 200 Zeilen angezeigt werden.  
+ Zeigen Sie mithilfe des Dialogfelds **Datenansicht** eine Vorschau der Ergebnisse an. In der Vorschau können bis zu 200 Zeilen angezeigt werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Ziel-Editor für Flatfiles &#40;Seite Zuordnungen&#41;](../../2014/integration-services/flat-file-destination-editor-mappings-page.md)  
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Ziel-Editor für Flatfiles &#40;Seite „Zuordnungen“&#41;](../../2014/integration-services/flat-file-destination-editor-mappings-page.md)  
   
   

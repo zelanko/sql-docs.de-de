@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa9df7d84a793c6825ba82b22c3b0cf567f42c3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060818"
 ---
 # <a name="configure-an-error-output-in-a-data-flow-component"></a>Konfigurieren einer Fehlerausgabe in einer Datenflusskomponente
@@ -82,12 +82,12 @@ ms.locfileid: "66060818"
   
 4.  Klicken Sie mit der rechten Maustaste auf die Komponente, deren Fehlerausgabespalten Sie konfigurieren möchten, und klicken Sie auf **Erweiterten Editor anzeigen**.  
   
-5.  Klicken Sie auf die Registerkarte **Eingabe- und Ausgabeeigenschaften**, und erweitern Sie **\<Komponentenname> Fehlerausgabe** und dann **Ausgabespalten**.  
+5.  Klicken Sie auf die Registerkarte **Eingabe-und Ausgabe Eigenschaften** , und erweitern ** \<Sie Komponenten Name> Fehlerausgabe** und dann **Ausgabespalten**.  
   
 6.  Klicken Sie auf eine Spalte, und aktualisieren Sie ihre Eigenschaften.  
   
     > [!NOTE]  
-    >  Die Liste mit den Spalten enthält die Spalten in der Komponenteneingabe, die durch vorherige Fehlerausgaben hinzugefügten Spalten **ErrorCode** und **ErrorColumn** sowie die von dieser Komponente hinzugefügten Spalten **ErrorCode** und **ErrorColumn** .  
+    >   Die Liste mit den Spalten enthält die Spalten in der Komponenteneingabe, die durch vorherige Fehlerausgaben hinzugefügten Spalten **ErrorCode** und **ErrorColumn** sowie die von dieser Komponente hinzugefügten Spalten **ErrorCode** und **ErrorColumn** .  
   
 7.  Klicken Sie auf **OK**.  
   

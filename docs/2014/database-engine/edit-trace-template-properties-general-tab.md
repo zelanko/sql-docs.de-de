@@ -15,16 +15,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 20f4376d6cd2eee3702596f5db60ae501d0ecc33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064901"
 ---
 # <a name="edit-trace-template-properties-general-tab"></a>Bearbeiten der Eigenschaften der Ablaufverfolgungsvorlage (Registerkarte Allgemein)
-  Mithilfe der Registerkarte **Allgemein** des Dialogfelds **Eigenschaften der Ablaufverfolgungsvorlage** können Sie vorhandene Ablaufverfolgungsvorlagen mithilfe der folgenden Optionen anzeigen oder bearbeiten. Um auf dieses Dialogfeld zuzugreifen, zeigen Sie in [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **Datei** auf **Vorlagen**, und klicken Sie dann auf **Vorlage bearbeiten**.  
+  Mithilfe der Registerkarte **Allgemein** des Dialogfelds **Eigenschaften der Ablaufverfolgungsvorlage** können Sie vorhandene Ablaufverfolgungsvorlagen mithilfe der folgenden Optionen anzeigen oder bearbeiten. Sie können dieses Dialogfeld aufrufen, indem Sie erst im Menü  **Datei** von [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] auf **Vorlagen** und dann auf **Vorlage bearbeiten** klicken.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Servertyp auswählen**  
  Geben Sie den Servertyp an, für den die Vorlage verwendet wird.  
   
@@ -35,8 +35,8 @@ ms.locfileid: "66064901"
  Verwenden Sie diese Vorlage standardmäßig für alle Ablaufverfolgungen, die für diesen Servertyp erstellt werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Modify a Trace Template &#40;SQL Server Profiler&#41; (Ändern einer Ablaufverfolgungsvorlage &#40;SQL Server Profiler&#41)](modify-a-trace-template-sql-server-profiler.md)   
- [Vorlagen und Berechtigungen in SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Ändern einer Ablauf Verfolgungs Vorlage &#40;SQL Server Profiler&#41;](modify-a-trace-template-sql-server-profiler.md)   
+ [SQL Server Profiler Vorlagen und Berechtigungen](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

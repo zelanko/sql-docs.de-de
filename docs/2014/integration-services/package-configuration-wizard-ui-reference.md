@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 72909e812418d26d9f9f2905b41e686c36f6b670
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056937"
 ---
 # <a name="package-configuration-wizard-ui-reference"></a>Referenz zur Benutzeroberfläche des Paketkonfigurations-Assistenten
@@ -33,11 +33,11 @@ ms.locfileid: "66056937"
 ## <a name="welcome-to-the-package-configuration-wizard-page"></a>Willkommensseite des Paketkonfigurationsassistenten  
  Mithilfe des **SSIS-Konfigurations-Assistenten** können Sie Konfigurationen erstellen, durch die die Eigenschaften eines Paketes und seiner Objekte zur Laufzeit aktualisiert werden.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Diese Seite nicht wieder anzeigen**  
  Die Willkommensseite beim nächsten Öffnen des Assistenten auslassen.  
   
- **Weiter**  
+ **Nächste**  
  Mit dieser Option können Sie zur nächsten Seite des Assistenten wechseln.  
   
 ## <a name="select-configuration-type-page"></a>Seite "Konfigurationstyp" auswählen  
@@ -49,15 +49,15 @@ ms.locfileid: "66056937"
  **Konfigurationstyp**  
  Wählen Sie mithilfe folgender Optionen den Typ der Quelle aus, in der die Konfiguration gespeichert werden soll:  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**XML-Konfigurationsdatei**|Speichert die Konfiguration als XML-Datei. Wenn Sie diesen Wert auswählen, werden die dynamischen Optionen im Abschnitt **Konfigurationstyp**angezeigt.|  
 |**Umgebungsvariable**|Speichert die Konfiguration in einer der Umgebungsvariablen. Wenn Sie diesen Wert auswählen, werden die dynamischen Optionen im Abschnitt **Konfigurationstyp**angezeigt.|  
 |**Registrierungs Eintrag**|Speichert die Konfiguration in der Registrierung. Wenn Sie diesen Wert auswählen, werden die dynamischen Optionen im Abschnitt **Konfigurationstyp**angezeigt.|  
-|**Variable des übergeordneten Pakets**|Speichert die Konfiguration als Variable in dem Paket, das den Task enthält.  Wenn Sie diesen Wert auswählen, werden die dynamischen Optionen im Abschnitt **Konfigurationstyp**angezeigt.|  
+|**Variable für das übergeordnete Paket**|Speichert die Konfiguration als Variable in dem Paket, das den Task enthält.  Wenn Sie diesen Wert auswählen, werden die dynamischen Optionen im Abschnitt **Konfigurationstyp**angezeigt.|  
 |**SQL Server**|Speichert die Konfiguration in einer Tabelle in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Wenn Sie diesen Wert auswählen, werden die dynamischen Optionen im Abschnitt **Konfigurationstyp**angezeigt.|  
   
- **Weiter**  
+ **Nächste**  
  Zeigt die nächste Seite in der Sequenz des Assistenten an.  
   
 ### <a name="dynamic-options"></a>Dynamische Optionen  
@@ -66,15 +66,15 @@ ms.locfileid: "66056937"
  **Konfigurationseinstellungen direkt angeben**  
  Verwenden Sie diese Option, um die Einstellungen direkt anzugeben.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**Name der Konfigurationsdatei**|Geben Sie den Pfad der Konfigurationsdatei ein, die der Assistent generiert.|  
+|**Konfigurationsdateiname**|Geben Sie den Pfad der Konfigurationsdatei ein, die der Assistent generiert.|  
 |**Durchsuchen**|Im Dialogfeld **Speicherort der Konfigurationsdatei auswählen** können Sie den Pfad für die Konfigurationsdatei angeben, die der Assistent generiert. Wenn die Datei nicht vorhanden ist, wird sie durch den Assistenten erstellt.|  
   
- **Der Konfigurations Speicherort ist in einer Umgebungsvariablen gespeichert.**  
+ **Konfigurationsspeicherort ist in einer Umgebungsvariablen gespeichert**  
  Verwenden Sie diese Option, um die Umgebungsvariable anzugeben, in der die Konfiguration gespeichert werden soll.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Umgebungsvariable**|Wählen Sie eine Umgebungsvariable aus der Liste aus.|  
   
@@ -86,14 +86,14 @@ ms.locfileid: "66056937"
  **Konfigurationseinstellungen direkt angeben**  
  Verwenden Sie diese Option, um die Einstellungen direkt anzugeben.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Registrierungs Eintrag**|Geben Sie den Registrierungsschlüssel ein, der die Konfigurationsinformationen enthält. Das Format lautet: \<Registrierungsschlüssel>.<br /><br /> Der Registrierungsschlüssel muss bereits in HKEY_CURRENT_USER vorhanden sein und einen Wert mit dem Namen "Value" aufweisen. Bei diesem Wert kann es sich um einen Wert vom Typ DWORD oder um eine Zeichenfolge handeln.<br /><br /> Wenn Sie einen Registrierungsschlüssel verwenden möchten, der nicht im Stamm von HKEY_CURRENT_USER gespeichert ist, verwenden Sie das Format \<Registrierungsschlüssel\Registrierungsschlüssel\\...>, um den Schlüssel zu identifizieren.|  
   
- **Der Konfigurations Speicherort ist in einer Umgebungsvariablen gespeichert.**  
+ **Konfigurationsspeicherort ist in einer Umgebungsvariablen gespeichert**  
  Verwenden Sie diese Option, um die Umgebungsvariable anzugeben, in der die Konfiguration gespeichert werden soll.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Umgebungsvariable**|Wählen Sie eine Umgebungsvariable aus der Liste aus.|  
   
@@ -101,14 +101,14 @@ ms.locfileid: "66056937"
  **Konfigurationseinstellungen direkt angeben**  
  Verwenden Sie diese Option, um die Einstellungen direkt anzugeben.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Übergeordnete Variable**|Geben Sie die Variable im übergeordneten Paket an, die die Konfigurationsinformationen enthält.|  
   
- **Der Konfigurations Speicherort ist in einer Umgebungsvariablen gespeichert.**  
+ **Konfigurationsspeicherort ist in einer Umgebungsvariablen gespeichert**  
  Verwenden Sie diese Option, um die Umgebungsvariable anzugeben, in der die Konfiguration gespeichert wird.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Umgebungsvariable**|Wählen Sie eine Umgebungsvariable aus der Liste aus.|  
   
@@ -116,36 +116,36 @@ ms.locfileid: "66056937"
  **Konfigurationseinstellungen direkt angeben**  
  Verwenden Sie diese Option, um die Einstellungen direkt anzugeben.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**Verbindung**|Wählen Sie eine Verbindung aus der Liste aus, oder klicken Sie auf **Neu** , um eine neue Verbindung herzustellen.|  
-|**Konfigurations Tabelle**|Wählen Sie eine vorhandene Tabelle aus, oder klicken Sie auf **Neu** , um eine SQL-Anweisung zu schreiben, die eine neue Tabelle erstellt.|  
-|**Konfigurations Filter**|Wählen Sie einen vorhandenen Konfigurationsnamen aus, oder geben Sie einen neuen Namen ein.<br /><br /> Viele SQL Server-Konfigurationen können in derselben Tabelle gespeichert werden, und jede Konfiguration kann mehrere Konfigurationselemente enthalten.<br /><br /> Dieser benutzerdefinierte Wert wird in der Tabelle gespeichert, um Konfigurationselemente zu identifizieren, die zu einer bestimmten Konfiguration gehören.|  
+|**Connection**|Wählen Sie eine Verbindung aus der Liste aus, oder klicken Sie auf **Neu** , um eine neue Verbindung herzustellen.|  
+|**Konfigurationstabelle**|Wählen Sie eine vorhandene Tabelle aus, oder klicken Sie auf **Neu** , um eine SQL-Anweisung zu schreiben, die eine neue Tabelle erstellt.|  
+|**Konfigurationsfilter**|Wählen Sie einen vorhandenen Konfigurationsnamen aus, oder geben Sie einen neuen Namen ein.<br /><br /> Viele SQL Server-Konfigurationen können in derselben Tabelle gespeichert werden, und jede Konfiguration kann mehrere Konfigurationselemente enthalten.<br /><br /> Dieser benutzerdefinierte Wert wird in der Tabelle gespeichert, um Konfigurationselemente zu identifizieren, die zu einer bestimmten Konfiguration gehören.|  
   
- **Der Konfigurations Speicherort ist in einer Umgebungsvariablen gespeichert.**  
+ **Konfigurationsspeicherort ist in einer Umgebungsvariablen gespeichert**  
  Verwenden Sie diese Option, um die Umgebungsvariable anzugeben, in der die Konfiguration gespeichert ist.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Umgebungsvariable**|Wählen Sie eine Umgebungsvariable aus der Liste aus.|  
   
 ## <a name="select-objects-to-export-page"></a>Seite "Eigenschaften für den Exportvorgang auswählen"  
  Verwenden Sie die Seite **Zieleigenschaft auswählen** oder die Seite Eigenschaften für den Exportvorgang auswählen, um die in der Konfiguration enthaltenen Objekteigenschaften anzugeben. Mehrere Eigenschaften können nur ausgewählt werden, wenn Sie als Konfigurationstyp XML auswählen.  
   
-### <a name="options"></a>Tastatur  
- **Objekte**  
+### <a name="options"></a>Optionen  
+ **erzwingen**  
  Erweitern Sie die Pakethierarchie, und wählen Sie die zu exportierenden Eigenschaften aus.  
   
- **Eigenschafts Attribute**  
+ **Eigenschaftsattribute**  
  Zeigen Sie die Attribute einer Eigenschaft an.  
   
- **Weiter**  
+ **Nächste**  
  Mit dieser Option können Sie zur nächsten Seite des Assistenten wechseln.  
   
 ## <a name="completing-the-wizard-page"></a>Seite "Assistenten abschließen"  
  Mithilfe der Seite **Assistenten abschließen** können Sie einen Namen für die Konfiguration und die Einstellungen der Sicht angeben, die der Assistent zum Erstellen der Konfiguration verwendet. Nach dem Abschließen des Assistenten wird der **Paketkonfigurationsplaner** angezeigt, in dem alle Konfigurationen für das Paket aufgeführt werden.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Konfigurations Name**  
  Geben Sie den Namen der Konfiguration ein.  
   

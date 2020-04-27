@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c13cdec19ac961a3126b4220895498c7c7a049f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065542"
 ---
 # <a name="user-interface-reference-analysis-services"></a>Benutzeroberflächenreferenz (Analysis Services)
@@ -22,7 +22,7 @@ ms.locfileid: "66065542"
   
 ## <a name="topic-list"></a>Themenliste  
   
-|`Section`|Enthält|  
+|Abschnitt|Enthält|  
 |-------------|--------------|  
 |[Analysis Services Assistenten &#40;Mehrdimensionale Daten&#41;](analysis-services-wizards-multidimensional-data.md)|Hilfethemen zu [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Assistenten (mehrdimensional)|  
 |[Designer und Dialogfelder für Data Mining](data-mining-designers-and-dialog-boxes.md)|Hilfethemen zum [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Assistenten (Data Mining)|  

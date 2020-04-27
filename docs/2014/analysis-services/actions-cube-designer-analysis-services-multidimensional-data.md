@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 67c2def091fe6e1282e00c65c23e8d98544e970f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062895"
 ---
 # <a name="actions-cube-designer-analysis-services---multidimensional-data"></a>Aktionen (Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe der Registerkarte **Aktionen** des Cube-Designers können Sie Aktionen für den ausgewählten Cube anzeigen und bearbeiten, einschließlich Drillthrough- und Berichtsaktionen.  
   
 ## <a name="panes"></a>Bereiche  
- **Symbolleiste**  
+ **Suchfeld**  
  Verwenden Sie die Symbolleiste, um allgemeine Aktionen auf dieser Registerkarte auszuführen. Weitere Informationen zu diesem Bereich finden Sie unter [Symbolleiste &#40;Registerkarte "Aktionen", Cube-Designer&#41; &#40;Analysis Services-mehrdimensionaler Daten&#41;](toolbar-actions-tab-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Aktionsplaner**  

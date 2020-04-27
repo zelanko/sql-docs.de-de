@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 88dbc58a205a87f1b4c2e187537eef9d9c493cf1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059770"
 ---
 # <a name="data-mining-query-transformation-editor-mining-model-tab"></a>Transformations-Editor für Data Mining-Abfragen (Registerkarte Miningmodell)
@@ -26,8 +26,8 @@ ms.locfileid: "66059770"
   
  Weitere Informationen zur Transformation für Data Mining-Abfragen finden Sie unter [Data Mining Query Transformation](data-flow/transformations/data-mining-query-transformation.md).  
   
-## <a name="options"></a>Tastatur  
- **Verbindung**  
+## <a name="options"></a>Optionen  
+ **Connection**  
  Wählen Sie mithilfe des Listenfelds eine vorhandene Analysis Services-Verbindung aus, oder erstellen Sie mit der Schaltfläche **Neu** wie nachstehend beschrieben eine neue Verbindung.  
   
  **Neu**  
@@ -40,7 +40,7 @@ ms.locfileid: "66059770"
  Zeigen Sie die Liste der mit der ausgewählten Datenminingstruktur verknüpften Miningmodelle an.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Transformations-Editor für Data Mining-Abfragen &#40;Abfrage Registerkarte&#41;](../../2014/integration-services/data-mining-query-transformation-editor-query-tab.md)  
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Transformations-Editor für Data Mining-Abfragen &#40;Registerkarte Abfrage&#41;](../../2014/integration-services/data-mining-query-transformation-editor-query-tab.md)  
   
   

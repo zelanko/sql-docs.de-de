@@ -15,17 +15,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 436b758abdde0c05539bc17aabd2c11b240642df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057137"
 ---
 # <a name="ole-db-destination-editor-connection-manager-page"></a>Ziel-Editor für OLE DB (Seite Verbindungs-Manager)
   Mithilfe der Seite **Verbindungs-Manager** des Dialogfelds **Ziel-Editor für OLE DB** können Sie die OLE DB-Verbindung für das Ziel auswählen. Außerdem können Sie auf dieser Seite eine Tabelle oder Sicht aus der Datenbank auswählen.  
   
 > [!NOTE]  
->  Die `CommandTimeout` -Eigenschaft des OLE DB Ziels ist nicht im Ziel- **Editor für OLE DB**verfügbar, kann jedoch mit dem **Erweiterter Editor**festgelegt werden. Darüber hinaus sind bestimmte Optionen für schnelles Laden nur im Dialogfeld **Erweiterter Editor**verfügbar. Weitere Informationen zu diesen Eigenschaften finden Sie im Abschnitt OLE DB-Ziel von [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md).  
+>  Die `CommandTimeout` -Eigenschaft des OLE DB Ziels ist nicht im Ziel- **Editor für OLE DB**verfügbar, kann jedoch mit dem **Erweiterter Editor**festgelegt werden. Außerdem sind bestimmte Optionen für schnelles Laden nur in der **Erweiterter Editor**verfügbar. Weitere Informationen zu diesen Eigenschaften finden Sie im Abschnitt OLE DB-Ziel von [OLE DB Custom Properties](data-flow/ole-db-custom-properties.md).  
   
  Weitere Informationen zum OLE DB-Ziel finden Sie unter [OLE DB Destination](data-flow/ole-db-destination.md).  
   
@@ -36,14 +36,14 @@ ms.locfileid: "66057137"
  **Neu**  
  Erstellen Sie mithilfe des Dialogfelds **OLE DB-Verbindungs-Manager konfigurieren** einen neuen Verbindungs-Manager.  
   
- **Datenzugriffsmodus**  
+ **Datenzugriffs Modus**  
  Gibt das Verfahren für das Laden von Daten in das Ziel an. Für das Laden von Doppelbyte-Zeichensatzdaten (Double-Byte Character Set oder DBCS) ist die Verwendung einer der Optionen für schnelles Laden erforderlich. Weitere Informationen zu Datenzugriffsmodi für schnelles Laden, die für Masseneinfügungen optimiert sind, finden Sie unter [OLE DB Destination](data-flow/ole-db-destination.md).  
   
-|Option|BESCHREIBUNG|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |Tabelle oder Sicht|Lädt Daten in eine Tabelle oder Sicht im OLE DB-Ziel.|  
 |Tabelle oder Sicht - schnelles Laden|Lädt Daten in eine Tabelle oder Sicht im OLE DB-Ziel und verwendet die Option für das schnelle Laden. Weitere Informationen zu Datenzugriffsmodi für schnelles Laden, die für Masseneinfügungen optimiert sind, finden Sie unter [OLE DB Destination](data-flow/ole-db-destination.md).|  
-|Variable für Tabellenname oder Sichtname|Gibt den Namen der Tabelle oder Sicht in einer Variablen an.<br /><br /> **Verwandte Informationen**: [Verwenden von Variablen in Paketen](../../2014/integration-services/use-variables-in-packages.md)|  
+|Variable für Tabellenname oder Sichtname|Gibt den Namen der Tabelle oder Sicht in einer Variablen an.<br /><br /> **Verwandte Informationen:**[Verwenden von Variablen in Paketen](../../2014/integration-services/use-variables-in-packages.md)|  
 |Variable für Tabellenname oder Sichtname - schnelles Laden|Gibt den Namen der Tabelle oder Sicht in einer Variablen an und verwendet zum Laden der Daten die Option für das schnelle Laden. Weitere Informationen zu Datenzugriffsmodi für schnelles Laden, die für Masseneinfügungen optimiert sind, finden Sie unter [OLE DB Destination](data-flow/ole-db-destination.md).|  
 |SQL-Befehl|Lädt Daten mithilfe einer SQL-Abfrage in das OLE DB-Ziel.|  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66057137"
  **Identität beibehalten**  
  Gibt an, ob beim Laden von Daten Identitätswerte kopiert werden sollen. Diese Eigenschaft ist nur für die Option für das schnelle Laden verfügbar. Der Standardwert dieser Eigenschaft ist `false`.  
   
- **NULL-Werten beibehalten**  
+ **NULL-Werte beibehalten**  
  Gibt an, ob beim Laden von Daten NULL-Werte kopiert werden sollen. Diese Eigenschaft ist nur für die Option für das schnelle Laden verfügbar. Der Standardwert dieser Eigenschaft ist `false`.  
   
  **Tabellensperre**  
@@ -89,7 +89,7 @@ ms.locfileid: "66057137"
  Geben Sie die Anzahl der Zeilen in einem Batch an. Der Standardwert dieser Eigenschaft ist **-1**und gibt an, dass kein Wert zugewiesen wurde.  
   
 > [!NOTE]  
->  Löschen Sie im Dialogfeld **Ziel-Editor für OLE DB** den Inhalt des Textfelds, um anzugeben, dass für diese Eigenschaft kein benutzerdefinierter Wert zugewiesen werden soll.  
+>   Löschen Sie im Dialogfeld **Ziel-Editor für OLE DB** den Inhalt des Textfelds, um anzugeben, dass für diese Eigenschaft kein benutzerdefinierter Wert zugewiesen werden soll.  
   
  **Maximale Einfügungscommitgröße**  
  Gibt die Batchgröße an, für die das OLE DB-Ziel bei schnellen Ladevorgängen die Durchführung eines Commits versucht. Der Wert **0** gibt an, dass nach dem Verarbeiten aller Zeilen für alle Daten in einem einzelnen Batch ein Commit ausgeführt wird.  
@@ -100,7 +100,7 @@ ms.locfileid: "66057137"
  Wenn Sie für diese Eigenschaft einen Wert bereitstellen, führt das Ziel für Zeilen in Batches, die kleiner sind als (a) die **Maximale Einfügungscommitgröße**oder (b) die verbleibenden Zeilen im Puffer, der gerade verarbeitet wird, einen Commit durch.  
   
 > [!NOTE]  
->  Einschränkungsfehler am Ziel bewirken, dass der gesamte Batch mit Zeilen, die durch **Maximale Einfügungscommitgröße** definiert sind, fehlschlägt.  
+>   Einschränkungsfehler am Ziel bewirken, dass der gesamte Batch mit Zeilen, die durch **Maximale Einfügungscommitgröße** definiert sind, fehlschlägt.  
   
 ### <a name="data-access-mode--table-name-or-view-name-variable"></a>Datenzugriffsmodus = Variable für Tabellenname oder Sichtname  
  **Variablenname**  
@@ -119,7 +119,7 @@ ms.locfileid: "66057137"
  **Identität beibehalten**  
  Gibt an, ob beim Laden von Daten Identitätswerte kopiert werden sollen. Diese Eigenschaft ist nur für die Option für das schnelle Laden verfügbar. Der Standardwert dieser Eigenschaft ist `false`.  
   
- **NULL-Werten beibehalten**  
+ **NULL-Werte beibehalten**  
  Gibt an, ob beim Laden von Daten NULL-Werte kopiert werden sollen. Diese Eigenschaft ist nur für die Option für das schnelle Laden verfügbar. Der Standardwert dieser Eigenschaft ist `false`.  
   
  **Tabellensperre**  
@@ -132,7 +132,7 @@ ms.locfileid: "66057137"
  Geben Sie die Anzahl der Zeilen in einem Batch an. Der Standardwert dieser Eigenschaft ist **-1**und gibt an, dass kein Wert zugewiesen wurde.  
   
 > [!NOTE]  
->  Löschen Sie im Dialogfeld **Ziel-Editor für OLE DB** den Inhalt des Textfelds, um anzugeben, dass für diese Eigenschaft kein benutzerdefinierter Wert zugewiesen werden soll.  
+>   Löschen Sie im Dialogfeld **Ziel-Editor für OLE DB** den Inhalt des Textfelds, um anzugeben, dass für diese Eigenschaft kein benutzerdefinierter Wert zugewiesen werden soll.  
   
  **Maximale Einfügungscommitgröße**  
  Gibt die Batchgröße an, für die das OLE DB-Ziel bei schnellen Ladevorgängen die Durchführung eines Commits versucht. Der Standardwert **2147483647** zeigt an, dass nach dem Verarbeiten aller Zeilen für alle Daten in einem einzelnen Batch ein Commit durchgeführt wird.  
@@ -141,7 +141,7 @@ ms.locfileid: "66057137"
 >  Der Wert **0** bewirkt möglicherweise, dass das Paket bei der Ausführung nicht mehr reagiert, wenn das OLE DB-Ziel und andere Datenflusskomponenten dieselbe Quelltabelle aktualisieren. Um zu verhindern, dass die Paketausführung beendet wird, legen Sie die Option **Maximale Einfügungscommitgröße** auf **2147483647**fest.  
   
 ### <a name="data-access-mode--sql-command"></a>Datenzugriffsmodus = SQL-Befehl  
- **SQL-Befehls Text**  
+ **SQL-Befehlstext**  
  Geben Sie den Text einer SQL-Abfrage ein, und erstellen Sie die Abfrage, indem Sie auf **Abfrage erstellen**klicken, oder suchen Sie nach der Datei, die den Abfragetext enthält, indem Sie auf **Durchsuchen**klicken.  
   
 > [!NOTE]  
@@ -157,7 +157,7 @@ ms.locfileid: "66057137"
  Überprüft die Syntax des Abfragetexts.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [OLE DB Ziel-Editor &#40;Seite Zuordnungen&#41;](../../2014/integration-services/ole-db-destination-editor-mappings-page.md)   
  [OLE DB Ziel-Editor &#40;Seite Fehlerausgabe&#41;](../../2014/integration-services/ole-db-destination-editor-error-output-page.md)   
  [Laden von Daten mithilfe des OLE DB-Ziels](data-flow/load-data-by-using-the-ole-db-destination.md)  

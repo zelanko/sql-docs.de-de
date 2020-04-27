@@ -13,18 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4416a51ea32500d56c209d745065da20bf8010c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068421"
 ---
 # <a name="specify-column-mapping-dialog-box-mining-accuracy-chart"></a>Spaltenzuordnung angeben (Dialogfeld, Mininggenauigkeitsdiagramm)
   Auf der Registerkarte **Spaltenzuordnung angeben** können Sie Tabellen aus einer externen Datenquelle auswählen und die Spalten einem Data Mining-Modell zuordnen. Mithilfe der externen Daten können Sie dann die Genauigkeit eines Miningmodells testen und die Ergebnisse im Genauigkeitsdiagramm anzeigen.  
   
- **Weitere Informationen finden Sie unter:** [Testen und validieren &#40;Data Mining-&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **Weitere Informationen:** [Tests und Überprüfung &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Miningstruktur**  
  Zeigt die ausgewählte Miningstruktur mit dem zu testenden Modell an.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66068421"
  Zeigt die zum Generieren des Prognosegütediagramms ausgewählten Eingabetabellen an. Wählen Sie die Tabelle mit den Testdaten aus, die Sie zum Testen der Genauigkeit des Modells verwenden möchten.  
   
 > [!NOTE]  
->  Klicken Sie auf **Falltabelle auswählen** , wenn der Bereich keine Tabellen enthält, um Tabellen aus einer Datenquellensicht hinzuzufügen.  
+>   Klicken Sie auf **Falltabelle auswählen** , wenn der Bereich keine Tabellen enthält, um Tabellen aus einer Datenquellensicht hinzuzufügen.  
   
  **Tabelle entfernen**  
  Entfernt die ausgewählte Tabelle. Diese Schaltfläche ist deaktiviert, wenn keine Tabelle ausgewählt wurde oder in der Liste **Eingabetabelle(n) auswählen** keine Tabellen angezeigt werden.  
@@ -43,7 +43,7 @@ ms.locfileid: "66068421"
  **Falltabelle auswählen**  
  Klicken Sie auf diese Option, um das Dialogfeld **Tabelle auswählen** zu öffnen und eine Datenquellensicht auszuwählen.  
   
- **Hinweis** Diese Schaltfläche wird nur angezeigt, wenn keine Fall Tabelle ausgewählt wurde. Löschen Sie die Liste, indem Sie alle vorhandenen Tabellen auswählen und anschließend auf **Tabelle entfernen**klicken, um die Schaltfläche zu aktivieren und eine andere Falltabelle auswählen zu können.  
+ **Hinweis** Diese Schaltfläche wird nur angezeigt, wenn noch keine Falltabelle ausgewählt wurde. Löschen Sie die Liste, indem Sie alle vorhandenen Tabellen auswählen und anschließend auf **Tabelle entfernen**klicken, um die Schaltfläche zu aktivieren und eine andere Falltabelle auswählen zu können.  
   
  **Geschachtelte Tabelle auswählen**  
  Öffnet das Dialogfeld **Tabelle auswählen** . Diese Schaltfläche wird nur angezeigt, wenn eine Falltabelle ausgewählt wurde. Wenn die entsprechende Miningstruktur keine geschachtelte Tabelle enthält, ist diese Schaltfläche deaktiviert.  

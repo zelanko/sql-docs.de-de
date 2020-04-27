@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4828d1d3f509dc40e6a8f818f24ba5a7881783e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061072"
 ---
 # <a name="cache-transformation-editor-connection-manager-page"></a>Cachetransformations-Editor (Seite 'Verbindungs-Manager')
@@ -26,7 +26,7 @@ ms.locfileid: "66061072"
   
  Weitere Informationen zum Cacheverbindungs-Manager finden Sie unter [Cache Connection Manager](connection-manager/cache-connection-manager.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Cacheverbindungs-Manager**  
  Wählen Sie einen vorhandenen Cacheverbindungs-Manager aus dem Listenfeld aus, oder erstellen Sie mithilfe der Schaltfläche **Neu** eine neue Verbindung.  
   
@@ -37,6 +37,6 @@ ms.locfileid: "66061072"
  Ändern einer vorhandenen Verbindung.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Cache Transformations-Editor &#40;Seite "Zuordnungen"&#41;](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
+ [Cachetransformations-Editor &#40;Seite „Zuordnungen“&#41;](../../2014/integration-services/cache-transformation-editor-mappings-page.md)  
   
   

@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e97c9ba15aab664e9f0c77f9eb84152f75c3e3d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065878"
 ---
 # <a name="translations-analysis-services"></a>Übersetzungen (Analysis Services)
@@ -53,7 +53,7 @@ ms.locfileid: "66065878"
   
  Formate für Datum, Uhrzeit und Währung werden nicht durch Übersetzungen implementiert. Um kulturspezifische Formate basierend auf dem Gebietsschema des Clients dynamisch bereitzustellen, verwenden Sie den Währungsumrechnungs-Assistenten und die `FormatString`-Eigenschaft. Weitere Einzelheiten finden Sie unter [Währungsumrechnungen &#40;Analysis Services&#41;](currency-conversions-analysis-services.md) und [FormatString-Element &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/formatstring-element-assl).  
   
- [Lektion 9: Definieren von Perspektiven und Übersetzungen](lesson-9-defining-perspectives-and-translations.md) im Analysis Services Tutorial führt Sie durch die Schritte zum Erstellen und Testen von Übersetzungen.  
+ [Lesson 9: Defining Perspectives and Translations](lesson-9-defining-perspectives-and-translations.md) im Analysis Services-Lernprogramm führt Sie durch die Schritte zum Erstellen und Testen von Übersetzungen.  
   
 ## <a name="defining-translations"></a>Definieren von Übersetzungen  
  Durch Definieren einer Übersetzung wird ein `Translation`-Objekt als untergeordnetes Element des [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbank-, -Dimensions- oder -Cubeobjekts erstellt. Öffnen Sie mit [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] die Projektmappe, und definieren Sie Übersetzungen.  
@@ -119,7 +119,7 @@ ms.locfileid: "66065878"
 ## <a name="see-also"></a>Weitere Informationen  
  [Globalisierungs Szenarien für Analysis Services-multidimensionalen](globalization-scenarios-for-analysis-services-multiidimensional.md)   
  [Sprachen und Sortierungen &#40;Analysis Services&#41;](languages-and-collations-analysis-services.md)   
- [Festlegen oder Ändern der Spaltensortierung](../relational-databases/collations/set-or-change-the-column-collation.md)   
- [Globalisierungs Tipps und bewährte Methoden &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
+ [Festlegen oder Ändern der Spalten Sortierung](../relational-databases/collations/set-or-change-the-column-collation.md)   
+ [Tipps und Best Practices für die Globalisierung &#40;Analysis Services&#41;](globalization-tips-and-best-practices-analysis-services.md)  
   
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3a9121129ab0f7e4e185e35418132a4f1aa663f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069166"
 ---
 # <a name="sequence-clustering-cluster-characteristics-tab-mining-model-viewer"></a>Registerkarte "Sequenzcluster/Clustermerkmale" (Miningmodell-Viewer)
@@ -24,9 +24,9 @@ ms.locfileid: "66069166"
   
  Mit dieser Sicht eines Sequenzclustermodells können Sie einen Drilldown in den Clusterinhalt ausführen und die Sequenzen anzeigen, die für einen Cluster repräsentativ sind.  
   
- **Weitere Informationen finden Sie unter:** [Microsoft Sequence Clustering-Algorithmus](data-mining/microsoft-sequence-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Sequence Cluster-Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Weitere Informationen:** [Microsoft Sequence Clustering-Algorithmus](data-mining/microsoft-sequence-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Sequenzcluster-Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66069166"
  **Viewer**  
  Wählen Sie den Viewer aus, der zum Durchsuchen des ausgewählten Miningmodells verwendet werden soll. Sie können den benutzerdefinierten Viewer oder den **Microsoft Generic Content Tree Viewer**verwenden. Sie können auch Plug-In-Viewer verwenden, falls diese verfügbar sind.  
   
- **Cluster**  
+ **Kombi**  
  Wählen Sie den Cluster aus, den Sie anzeigen möchten.  
   
  **Merkmale für \<Cluster>**  
@@ -44,11 +44,11 @@ ms.locfileid: "66069166"
   
  In einem Sequenzclustermodell auf Grundlage einer Warenkorbanalyse könnte ein Cluster z. B. als oberstes Merkmal einen Kunden aufweisen, der das Verkaufselement auswählt und dann die Transaktion beendet, ohne etwas anderes zu kaufen. In einem Sequenzclustermodell, mit dem Serverfehler analysiert werden sollen, könnten die primären Eigenschaften eines Clusters eine Reihe von häufig vorkommenden Fehlerereignissen sein.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Variable**|In dieser Spalte wird angegeben, ob es sich bei der Eigenschaft um einen Wert oder einen Übergang handelt.<br /><br /> Wenn das Merkmal ein Wert ist, enthält die Spalte **Variable** den Attributnamen.<br /><br /> Wenn das Merkmal einen Status Übergang darstellt, enthält die Spalte **Variable** den Text "Übergänge".|  
 |**Werte**|Der Wert dieser Spalte hängt davon ab, ob das Merkmal ein einfaches Attribut/Wert-Paar oder ein Zustandsübergang ist, der eine häufige Sequenz von Elementen oder Ereignissen darstellt.<br /><br /> Wenn das Merkmal ein Wert ist, enthält die Spalte **Wert** den Status.<br /><br /> Wenn das Merkmal einen Status Übergang darstellt, enthält die Spalte **Wert** die Beschreibung des Status Übergangs.|  
-|**Probability**|In dieser Spalte wird ein Balken angezeigt, der die relative Wahrscheinlichkeit angibt, dass dieses Merkmal (entweder ein einfaches Attribut/Wert-Paar oder eine Kombination von Status) Element des aktuellen Clusters ist.<br /><br /> Sie können mit der Maus auf den Balken zeigen, um den Frequenzwert für das Merkmal anzuzeigen.|  
+|**Besteht**|In dieser Spalte wird ein Balken angezeigt, der die relative Wahrscheinlichkeit angibt, dass dieses Merkmal (entweder ein einfaches Attribut/Wert-Paar oder eine Kombination von Status) Element des aktuellen Clusters ist.<br /><br /> Sie können mit der Maus auf den Balken zeigen, um den Frequenzwert für das Merkmal anzuzeigen.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md)   

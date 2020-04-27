@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc9f6c28e775cdbd21806172d7074e655fdd1545
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054817"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>Verwenden eines Ausdrucks in einer Datenflusskomponente
@@ -57,7 +57,7 @@ ms.locfileid: "66054817"
     -   Ziehen Sie im Dialogfeld **Transformations-Editor für abgeleitete Spalten** die Variablen, Spalten, Funktionen, Operatoren und Umwandlungen in die Spalte **Ausdruck** . Sie können den Ausdruck aber auch direkt in die Spalte **Ausdruck** eingeben.  
   
         > [!NOTE]  
-        >  Wenn Sie den Fokus von der Spalte **Bedingung** oder **Ausdruck** entfernen, kann der Ausdruckstext hervorgehoben dargestellt werden, was auf eine falsche Ausdruckssyntax hinweist.  
+        >   Wenn Sie den Fokus von der Spalte **Bedingung** oder **Ausdruck** entfernen, kann der Ausdruckstext hervorgehoben dargestellt werden, was auf eine falsche Ausdruckssyntax hinweist.  
   
 10. Klicken Sie auf **OK**, um das Dialogfeld zu schließen.  
   
@@ -65,10 +65,10 @@ ms.locfileid: "66054817"
     >  Wenn der Ausdruck ungültig ist, wird eine Warnung angezeigt, die die Syntaxfehler im Ausdruck beschreibt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Integration Services-Ausdrücke &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)   
- [Conditional Split Transformation](data-flow/transformations/conditional-split-transformation.md)   
- [Derived Column Transformation](data-flow/transformations/derived-column-transformation.md)   
- [Datenflusstask](control-flow/data-flow-task.md)   
+ [Integration Services &#40;SSIS-&#41; Ausdrücke](expressions/integration-services-ssis-expressions.md)   
+ [Transformation für bedingtes Teilen](data-flow/transformations/conditional-split-transformation.md)   
+ [Transformation für abgeleitete Spalten](data-flow/transformations/derived-column-transformation.md)   
+ [Datenfluss Task](control-flow/data-flow-task.md)   
  [Datenfluss](data-flow/data-flow.md)  
   
   

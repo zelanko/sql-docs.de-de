@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cab36a851c5ef50f0690e9bc0a1a18676d335e50
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054918"
 ---
 # <a name="transfer-master-stored-procedures-task-editor-general-page"></a>Editor für den Task 'In 'master' gespeicherte Prozeduren übertragen' (Seite Allgemein)
@@ -38,9 +38,9 @@ ms.locfileid: "66054918"
  Geben Sie eine Beschreibung für den Task 'In 'master' gespeicherte Prozeduren übertragen ein.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Integration Services-Tasks](control-flow/integration-services-tasks.md)   
- [Editor für den Task „In master gespeicherte Prozeduren übertragen“ &#40;Seite „Gespeicherte Prozeduren“&#41;](../../2014/integration-services/transfer-master-stored-procedures-task-editor-stored-procedures-page.md)   
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Aufgaben Integration Services](control-flow/integration-services-tasks.md)   
+ [Editor für den Task "Master gespeicherter Prozeduren übertragen" &#40;&#41;Seite](../../2014/integration-services/transfer-master-stored-procedures-task-editor-stored-procedures-page.md)   
  [Seite Ausdrücke](expressions/expressions-page.md)  
   
   

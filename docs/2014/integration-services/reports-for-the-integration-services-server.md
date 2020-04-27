@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: aa53c012649f983953b61a21901763b9bdd02c8b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056443"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Berichte für den Integration Services-Server
@@ -74,7 +74,7 @@ ms.locfileid: "66056443"
  Sie können dem **SSISDB** -Katalogknoten unter dem Knoten **Integration Services-Kataloge** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]einen benutzerdefinierten Bericht (RDL-Datei) hinzufügen. Stellen Sie vor dem Hinzufügen des Berichts sicher, dass Sie eine Konvention für dreiteilige Namen verwenden, um die Objekte, auf die Sie verweisen, z. B. eine Quelltabelle, vollständig zu qualifizieren. Andernfalls meldet [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] einen Fehler. Die Namenskonvention ist \<Datenbank>.\<Besitzer>.\<Objekt>. Ein Beispiel wäre SSISDB.internal.executions.  
   
 > [!NOTE]  
->  Wenn Sie dem **SSISDB** -Knoten unter dem Knoten **Datenbanken** benutzerdefinierte Berichte hinzufügen, ist das SSISDB-Präfix nicht erforderlich.  
+>   Wenn Sie dem **SSISDB** -Knoten unter dem Knoten **Datenbanken** benutzerdefinierte Berichte hinzufügen, ist das SSISDB-Präfix nicht erforderlich.  
   
  Anweisungen zum Erstellen und Hinzufügen eines benutzerdefinierten Berichts finden Sie unter [Add a Custom Report to Management Studio](../ssms/object/add-a-custom-report-to-management-studio.md).  
   

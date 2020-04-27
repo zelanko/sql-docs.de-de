@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c901c3f10198a1516279b9e93d9c5ddb6a9c49ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055076"
 ---
 # <a name="transfer-error-messages-task-editor-general-page"></a>Editor für den Task Fehlermeldungen übertragen (Seite Allgemein)
@@ -35,8 +35,8 @@ ms.locfileid: "66055076"
  Geben Sie eine Beschreibung für den Task Fehlermeldungen übertragen ein.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Integration Services-Tasks](control-flow/integration-services-tasks.md)   
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Aufgaben Integration Services](control-flow/integration-services-tasks.md)   
  [Editor für den Task Fehlermeldungen übertragen &#40;Seite Meldungen&#41;](../../2014/integration-services/transfer-error-messages-task-editor-messages-page.md)   
  [Seite Ausdrücke](expressions/expressions-page.md)  
   

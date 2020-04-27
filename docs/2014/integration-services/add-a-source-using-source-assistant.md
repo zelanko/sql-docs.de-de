@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b162ebfa6d888460b49f0877d634c88bba47464a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062139"
 ---
 # <a name="add-a-source-using-source-assistant"></a>Hinzufügen einer Quelle mit dem Quellen-Assistenten
@@ -28,7 +28,7 @@ ms.locfileid: "66062139"
   
 3.  Wählen Sie den Zieltyp in der Liste **Typ** aus.  
   
-4.  Wählen Sie in der Liste **Verbindungs-Manager** einen vorhandenen Verbindungs-Manager aus. Wählen Sie alternativ **\<Neu>** aus, um einen neuen Verbindungs-Manager zu erstellen.  
+4.  Wählen Sie in der Liste Verbindungs- **Manager** einen vorhandenen Verbindungs-Manager aus, oder wählen Sie ** \<neu>** , um einen neuen Verbindungs-Manager zu erstellen  
   
 5.  Wenn Sie einen vorhandenen Verbindungs-Manager auswählen, klicken Sie auf **OK** , um das Dialogfeld **Neues Ziel hinzufügen** zu schließen. Sie sollten nun das Ziel und die Verbindungs-Manager sehen, die dem Datenfluss hinzugefügt wurden.  
   

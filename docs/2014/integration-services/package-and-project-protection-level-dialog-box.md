@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 53c909caebfd6502b021a9a1abb4e1ecb29e3bb7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056944"
 ---
 # <a name="package-and-project-protection-level-dialog-box"></a>Dialogfeld "Paket- und Projektschutzebene"
@@ -27,8 +27,8 @@ ms.locfileid: "66056944"
   
  Informationen zum besseren Verständnis der Anforderungen und Optionen für die Paketsicherheit finden Sie unter [Zugriffssteuerung für vertrauliche Daten in Paketen](security/access-control-for-sensitive-data-in-packages.md) und [Sicherheitsübersicht &#40;Integration Services&#41;](security/security-overview-integration-services.md).  
   
-## <a name="options"></a>Tastatur  
- **Paket Schutz Ebene**  
+## <a name="options"></a>Optionen  
+ **Paketschutzebene**  
  Wählen Sie eine Schutzebene aus der Liste aus.  
   
  **Kennwort**  

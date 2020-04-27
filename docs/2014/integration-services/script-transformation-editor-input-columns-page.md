@@ -15,21 +15,21 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9e321507e8531f9732ae1096ebfc9c0d31031ec8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056091"
 ---
 # <a name="script-transformation-editor-input-columns-page"></a>Transformations-Editor für Skripterstellung (Seite Eingabespalten)
   Legen Sie mithilfe der Seite **Eingabespalten** des Dialogfelds **Transformations-Editor für Skripterstellung** die Eigenschaften für Eingabespalten fest.  
   
 > [!NOTE]  
->  Für Quellkomponenten, die Ausgaben, aber keine Eingaben haben, wird die Seite **Eingabespalten** nicht angezeigt.  
+>   Für Quellkomponenten, die Ausgaben, aber keine Eingaben haben, wird die Seite **Eingabespalten** nicht angezeigt.  
   
  Weitere Informationen zur Skriptkomponente finden Sie unter [Script Component](data-flow/transformations/script-component.md) und [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Erweitern des Datenflusses mit der Skriptkomponente](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Eingabename**  
  Wählen Sie eine Option aus der Liste der verfügbaren Eingaben aus.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66056091"
  Geben Sie an, ob die Skripttransformation jede Spalte als `ReadOnly` oder `ReadWrite` behandeln soll.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Skript Komponententyp auswählen](../../2014/integration-services/select-script-component-type.md)   
  [Transformations-Editor für Skripterstellung &#40;Seite "Eingaben und Ausgaben"&#41;](../../2014/integration-services/script-transformation-editor-inputs-and-outputs-page.md)   
  [Transformations-Editor für Skripterstellung &#40;Skript Seite&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   

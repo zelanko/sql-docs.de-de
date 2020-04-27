@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 403100ddfbd78609ac0d98dd3ee387d2ecdeec61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059899"
 ---
 # <a name="data-flow-tab"></a>Datenfluss (Registerkarte)
@@ -35,8 +35,8 @@ ms.locfileid: "66059899"
  Um diese [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designerfunktionen hinzuzufügen, klicken Sie mit der rechten Maustaste auf die Entwurfoberfläche, und wählen Sie dann die gewünschte Option.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Integration Services-Pfade](data-flow/integration-services-paths.md)   
- [Datenflusstask](control-flow/data-flow-task.md)   
+ [Integration Services Pfade](data-flow/integration-services-paths.md)   
+ [Datenfluss Task](control-flow/data-flow-task.md)   
  [SSIS-Designer](ssis-designer.md)   
  [Datenfluss](data-flow/data-flow.md)  
   

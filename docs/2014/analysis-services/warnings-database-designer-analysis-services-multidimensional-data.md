@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90eeca203c672c21551b8aff2e24feb164d8fda5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065425"
 ---
 # <a name="warnings-database-designer-analysis-services---multidimensional-data"></a>Warnungen (Datenbank-Designer) (Analysis Services – Mehrdimensionale Daten)
@@ -39,7 +39,7 @@ ms.locfileid: "66065425"
  **Wichtigkeit**  
  Zeigt die der Regel zugewiesene Wichtigkeit an.  
   
- **Iny**  
+ **Kommentare**  
  (Optional) Ermöglicht es dem Benutzer, einen Kommentar einzugeben, der erklärt, warum die Warnung verworfen wurde.  
   
 ## <a name="dismissed-warnings-grid"></a>Raster Verworfene Warnungen  
@@ -47,7 +47,7 @@ ms.locfileid: "66065425"
   
  Das Raster **Verworfene Warnungen** umfasst folgende Elemente:  
   
- **Object**  
+ **Objekt**  
  Zeigt ein Symbol an, das den Objekttyp und den Objektnamen darstellt.  
   
  **Typ**  
@@ -59,7 +59,7 @@ ms.locfileid: "66065425"
  **Wichtigkeit**  
  Zeigt die der Regel zugewiesene Wichtigkeit an.  
   
- **Iny**  
+ **Kommentare**  
  Zeigt den Kommentar an, der eingegeben wurde, als die Warnung verworfen wurde. Sie können hier einen Kommentar hinzufügen oder ändern.  
   
  **Erneut aktivieren**  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 33ad9ddda5b40abaafddbd6e31272ece1f8edaee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056065"
 ---
 # <a name="script-transformation-editor-inputs-and-outputs-page"></a>Transformations-Editor für Skripterstellung (Seiten Eingaben und Ausgaben)
@@ -29,13 +29,13 @@ ms.locfileid: "66056065"
   
  Weitere Informationen zur Skriptkomponente finden Sie unter [Script Component](data-flow/transformations/script-component.md) und [Configuring the Script Component in the Script Component Editor](extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md). Weitere Informationen zur Programmierung der Skriptkomponente finden Sie unter [Erweitern des Datenflusses mit der Skriptkomponente](extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Eingaben und Ausgaben**  
  Wählen Sie auf der linken Seite eine Eingabe oder Ausgabe, um die entsprechenden Eigenschaften in der Tabelle auf der rechten Seite anzuzeigen. Welche Eigenschaften bearbeitet werden können, ist von der getroffenen Auswahl abhängig. Viele dieser Eigenschaften sind schreibgeschützt. Weitere Informationen zu den einzelnen Eigenschaften finden Sie unter den folgenden Themen.  
   
- [Common Properties](../../2014/integration-services/common-properties.md)  
+ [Allgemeine Eigenschaften](../../2014/integration-services/common-properties.md)  
   
- [Benutzerdefinierte Eigenschaften von Transformationen](data-flow/transformations/transformation-custom-properties.md)  
+ [Transformation Custom Properties](data-flow/transformations/transformation-custom-properties.md)  
   
  **Ausgabe hinzufügen**  
  Fügen Sie der Liste eine weitere Ausgabe hinzu.  
@@ -46,11 +46,11 @@ ms.locfileid: "66056065"
  **Ausgabe entfernen**  
  Wählen Sie eine Ausgabe aus, und entfernen Sie sie dann, indem Sie auf **Ausgabe entfernen**klicken.  
   
- **Spalte entfernen**  
+ **Remove Column (Spalte entfernen)**  
  Wählen Sie eine Spalte aus, und entfernen Sie sie dann, indem Sie auf **Spalte entfernen**klicken.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Skript Komponententyp auswählen](../../2014/integration-services/select-script-component-type.md)   
  [Transformations-Editor für Skripterstellung &#40;Seite Eingabe Spalten&#41;](../../2014/integration-services/script-transformation-editor-input-columns-page.md)   
  [Transformations-Editor für Skripterstellung &#40;Skript Seite&#41;](../../2014/integration-services/script-transformation-editor-script-page.md)   

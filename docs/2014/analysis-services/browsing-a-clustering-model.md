@@ -16,29 +16,29 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b2662a08974c0eee0eed58b21d77421b3b75749
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064681"
 ---
 # <a name="browsing-a-clustering-model"></a>Durchsuchen eines Clustermodells
   Wenn Sie ein Clustering-Modell mithilfe von **Durchsuchen**öffnen, wird das Modell in einem interaktiven Viewer angezeigt, der dem Clustering [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Viewer in ähnelt. Die Viewer unterstützt Sie dabei, die erstellten Cluster zu untersuchen und die Clustermerkmale zu verstehen. Darüber hinaus können Sie einzelne Segmente mit anderen Segmenten oder mit der Grundgesamtheit vergleichen und die Unterschiede untersuchen.  
   
-##  <a name="BKMK_Tabs"></a>Untersuchen des Modells  
+##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>Untersuchen des Modells  
  Das Fenster **Durchsuchen** enthält die folgenden Tools, die Ihnen helfen, Ihr Clustering-Modell zu verstehen und die Attribute der zugrunde liegenden Datengruppen zu untersuchen:  
   
--   [Cluster Diagramm](#BKMK_ClusterDiagram)  
+-   [Clusterdiagramm](#BKMK_ClusterDiagram)  
   
--   [Cluster profile](#BKMK_ClusterProfiles)  
+-   [Clusterprofile](#BKMK_ClusterProfiles)  
   
 -   [Cluster Merkmale](#BKMK_ClusterCharacteristics)  
   
--   [Cluster Unterscheidung](#BKMK_ClusterDiscrimination)  
+-   [Clusterunterscheidung](#BKMK_ClusterDiscrimination)  
   
  Um mit einem Clustering-Modell zu experimentieren, können Sie die Beispiel Daten auf der Registerkarte Training der Beispiel Daten-Arbeitsmappe verwenden und ein Clustering-Modell mithilfe des [Cluster-Assistenten &#40;Data Mining-Add-Ins für Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md) und alle Standardeinstellungen erstellen.  
   
-###  <a name="BKMK_ClusterDiagram"></a>Cluster Diagramm  
+###  <a name="cluster-diagram"></a><a name="BKMK_ClusterDiagram"></a>Cluster Diagramm  
  Auf der Registerkarte **Cluster Diagramm** werden alle Cluster in einem Mining Modell angezeigt. Hier sehen Sie, wie viele verschiedene Gruppierungen im Dataset enthalten sind und wie nah oder weit sie voneinander entfernt liegen.  
   
 ##### <a name="explore-the-cluster-diagram"></a>Untersuchen des Clusterdiagramms  
@@ -85,7 +85,7 @@ ms.locfileid: "66064681"
   
  [Zurück zum Anfang](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterProfiles"></a>Cluster profile  
+###  <a name="cluster-profiles"></a><a name="BKMK_ClusterProfiles"></a>Cluster profile  
  Auf der Registerkarte **Cluster profile** können Sie die Zusammensetzung aller Cluster auf einen Blick vergleichen. Dies ist ein guter Ausgangspunkt, um sich mit dem Modell vertraut zu machen. Diese Ansicht ist auch später hilfreich, wenn Sie einen bestimmten Cluster untersuchen und zu dem Schluss kommen, dass Sie verwandte Cluster suchen müssen.  
   
  **Cluster profile** bieten Ihnen außerdem einen guten Überblick darüber, wie sich die Cluster voneinander unterscheiden. Daher kann es praktisch sein, jedem Cluster mithilfe dieser Ansicht einen aussagekräftigen Namen zu geben.  
@@ -132,7 +132,7 @@ ms.locfileid: "66064681"
   
      ![Umbenennen von Clusters zur einfacheren Verwendung des Diagramms](media/dm13-cluster-rename.gif "Umbenennen von Clusters zur einfacheren Verwendung des Diagramms")  
   
- **Chti**  
+ **Tipps**  
   
 -   Klicken Sie auf eine Spaltenüberschrift, um die Attribute nach der Reihenfolge der Wichtigkeit für diesen Cluster zu sortieren.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "66064681"
   
  [Zurück zum Anfang](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterCharacteristics"></a>Cluster Merkmale  
+###  <a name="cluster-characteristics"></a><a name="BKMK_ClusterCharacteristics"></a> Clustermerkmale  
  In der Ansicht Clustermerkmale können Sie einen einzelnen Cluster gründlich untersuchen, um herauszufinden, durch welche Attribute diese Datengruppe am stärksten charakterisiert wird.  
   
 ##### <a name="explore-the-cluster-characteristics"></a>Untersuchen der Clustermerkmale  
@@ -177,7 +177,7 @@ ms.locfileid: "66064681"
   
      Das neue Clustermerkmaldiagramm wird auf einem eigenen Arbeitsblatt hinzugefügt. Sie können Sie auf das gleiche Arbeitsblatt wie das andere Profil verschieben, um Sie leichter vergleichen zu können, was Sie im nächsten Schritt tun werden.  
   
- **Chti**  
+ **Tipps**  
   
 -   Beachten Sie, dass das primäre Merkmal des Kunden im over 65-Cluster darin besteht, dass Sie Ihr Produkt nicht kaufen! Wenn Sie wissen möchten, warum das so ist, können Sie die Cluster durchsuchen und Gruppen vergleichen. Oder Sie erstellen ein verwandtes Modell mithilfe eines Algorithmus, der sich für die Untersuchung von Ursachen und Ergebnissen eignet, z. B. ein Entscheidungsstrukturmodell oder ein Naïve Bayes-Modell.  
   
@@ -185,7 +185,7 @@ ms.locfileid: "66064681"
   
  [Zurück zum Anfang](#BKMK_Tabs)  
   
-###  <a name="BKMK_ClusterDiscrimination"></a>Cluster Unterscheidung  
+###  <a name="cluster-discrimination"></a><a name="BKMK_ClusterDiscrimination"></a>Cluster Unterscheidung  
  Sie können die Registerkarte **Cluster Unterscheidung** verwenden, um Attribute zwischen zwei Clustern oder zwischen einem Cluster und allen anderen Fällen im DataSet zu vergleichen.  
   
  Um die Features dieses Viewers hervorzuheben, vergleichen wir ihn mit den parallelen Tabellen in Excel, die Sie basierend auf der Ansicht **Cluster Merkmale** erstellt haben.  
@@ -216,7 +216,7 @@ ms.locfileid: "66064681"
   
      Zusätzlich zur Verwendung von Excel wird empfohlen, den Cluster-Viewer für Visio auszuprobieren, mit dem Sie nicht nur Datenpunkte anzeigen, sondern die Grafik auch umfassend ändern und verbessern können. Weitere Informationen finden Sie unter Exemplarische Vorgehensweise für das [Cluster Diagramm &#40;Data Mining-Add-ins&#41;](cluster-diagram-walkthrough-data-mining-add-ins.md).  
   
- **Chti**  
+ **Tipps**  
   
  Nachdem Sie einige Einblicke in Kundengruppen erhalten haben, verwenden Sie das [Was-wäre-wenn-Szenario &#40;Tabellenanalyse Tools für Excel&#41;](what-if-scenario-table-analysis-tools-for-excel.md) oder das [zielsuchszenario &#40;Tabellenanalyse Tools für Excel-&#41;](goal-seek-scenario-table-analysis-tools-for-excel.md) Tools, um Faktoren im Modell zu untersuchen, die möglicherweise geändert werden, um das Ergebnis zu beeinflussen.  
   

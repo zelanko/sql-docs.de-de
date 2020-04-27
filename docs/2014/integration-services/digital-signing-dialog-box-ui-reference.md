@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e7e676368ccdd28a195f3a50208e3ca1c0703214
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059450"
 ---
 # <a name="digital-signing-dialog-box-ui-reference"></a>Digitale Signatur (Dialogfeld, Referenz zur Benutzeroberfläche)
@@ -26,7 +26,7 @@ ms.locfileid: "66059450"
   
  Weitere Informationen finden Sie unter [Identifizieren der Quelle von Paketen mit digitalen Signaturen](security/identify-the-source-of-packages-with-digital-signatures.md) und [Signieren eines Pakets mit einem digitalen Zertifikat](../../2014/integration-services/sign-a-package-by-using-a-digital-certificate.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Gebärden**  
  Klicken Sie auf diese Option, um das Dialogfeld **Zertifikat auswählen** zu öffnen und das zu verwendende Zertifikat auszuwählen.  
   

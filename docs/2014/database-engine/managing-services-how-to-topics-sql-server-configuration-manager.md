@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e376b59404b6666a142c66cb96265fd66076ea3d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064642"
 ---
 # <a name="managing-services-how-to-topics-sql-server-configuration-manager"></a>Verwalten von Diensten: Themen zur Vorgehensweise (SQL Server-Konfigurations-Manager)
@@ -24,17 +24,17 @@ ms.locfileid: "66064642"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Herstellen einer Verbindung mit einem anderen Computer (SQL Server-Konfigurations-Manager)](configure-windows/scm-services-connect-to-another-computer.md)  
+-   [Herstellen einer Verbindung mit einem anderen Computer &#40;SQL Server-Konfigurations-Manager&#41;](configure-windows/scm-services-connect-to-another-computer.md)  
   
 -   [Festlegen des automatischen Starts einer Instanz von SQL Server &#40;SQL Server-Konfigurations-Manager&#41;](configure-windows/scm-services-set-an-instance-to-start-automatically.md)  
   
 -   [Verhindern des automatischen Starts einer Instanz von SQL Server &#40;SQL Server-Konfigurations-Manager&#41;](configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)  
   
--   [Ändern Sie das Dienst Start Konto für SQL Server &#40;SQL Server-Konfigurations-Manager&#41;](configure-windows/scm-services-change-the-service-startup-account.md)  
+-   [Ändern des Dienststartkontos für SQL Server &#40;SQL Server-Konfigurations-Manager&#41;](configure-windows/scm-services-change-the-service-startup-account.md)  
   
--   [Konfigurieren von Server Startoptionen &#40;SQL Server-Konfigurations-Manager&#41;](configure-windows/scm-services-configure-server-startup-options.md)  
+-   [Konfigurieren von Serverstartoptionen &#40;SQL Server-Konfigurations-Manager&#41;](configure-windows/scm-services-configure-server-startup-options.md)  
   
--   [Ändern Sie das Kennwort der von SQL Server &#40;SQL Server-Konfigurations-Manager verwendeten Konten&#41;](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
+-   [Ändern des Kennworts der von SQL Server verwendeten Konten &#40;SQL Server-Konfigurations-Manager&#41;](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
   
 -   [Konfigurieren von SQL Server-Fehlerprotokollen](configure-windows/scm-services-configure-sql-server-error-logs.md)  
   

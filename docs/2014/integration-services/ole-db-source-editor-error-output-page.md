@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ddadfc3ab85afbecdff9b9969f7835c749a92bf7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057010"
 ---
 # <a name="ole-db-source-editor-error-output-page"></a>Quellen-Editor für OLE DB (Seite Fehlerausgabe)
@@ -26,11 +26,11 @@ ms.locfileid: "66057010"
   
  Weitere Informationen zur OLE DB-Quelle finden Sie unter [OLE DB Source](data-flow/ole-db-source.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   
- **Spalte**  
+ **Column**  
  Zeigt die externen (Quell-)Spalten an, die im Dialogfeld **Quellen-Editor für OLE DB** auf der Seite **Verbindungs-Manager**ausgewählt wurden.  
   
  **Fehler**  
@@ -47,11 +47,11 @@ ms.locfileid: "66057010"
  **Diesen Wert für ausgewählte Zellen festlegen**  
  Gibt an, was im Falle eines Fehlers oder einer Kürzung mit den ausgewählten Zellen geschehen soll: den Fehler ignorieren, die Zeile umleiten oder die Komponente mit einem Fehler abbrechen.  
   
- **Anwenden**  
+ **übernehmen**  
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [OLE DB Quellen-Editor &#40;Seite Verbindungs-Manager&#41;](../../2014/integration-services/ole-db-source-editor-connection-manager-page.md)   
  [OLE DB &#40;Seite "Spalten" des Quellen-Editors&#41;](../../2014/integration-services/ole-db-source-editor-columns-page.md)   
  [Extrahieren von Daten mithilfe der OLE DB Quelle](data-flow/extract-data-by-using-the-ole-db-source.md)   

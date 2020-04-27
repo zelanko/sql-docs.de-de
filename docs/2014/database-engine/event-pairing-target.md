@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39e444077c3dbe27ae243e4292b7a047e21de2b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064850"
 ---
 # <a name="event-pairing-target"></a>Ziel 'Ereignispaarbildung'
@@ -30,7 +30,7 @@ ms.locfileid: "66064850"
   
  In der folgenden Tabelle werden die verfügbaren Optionen für das Konfigurieren der Ereignispaarbildung beschrieben.  
   
-|Option|Zulässige Werte|BESCHREIBUNG|  
+|Option|Zulässige Werte|Beschreibung|  
 |------------|--------------------|-----------------|  
 |begin_event|Ein beliebiger Ereignisname, der in der aktuellen Sitzung vorhanden ist.|Der Ereignisname, der das Startereignis in einer paarweise zugeordneten Sequenz angibt.|  
 |end_event|Ein beliebiger Ereignisname, der in der aktuellen Sitzung vorhanden ist.|Der Ereignisname, der das Endereignis in einer paarweise zugeordneten Sequenz angibt.|  
@@ -90,9 +90,9 @@ WHERE xe.name = 'session_name'
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Ziele für erweiterte Ereignisse von SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)   
- [sys.dm_xe_session_targets &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [Ziele für erweiterte Ereignisse SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)   
+ [sys. dm_xe_session_targets &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-xe-session-targets-transact-sql)   
+ [Erstellen einer Ereignis Sitzung &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql)  
   
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8ef64ee84a90a74d2206fa8cc766e45b1a691566
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059280"
 ---
 # <a name="enable-package-logging-in-sql-server-data-tools"></a>Aktivieren der Paketprotokollierung in SQL Server Data Tools
@@ -37,14 +37,13 @@ ms.locfileid: "66059280"
   
 4.  Wählen Sie in der Spalte **Konfiguration** einen Verbindungs-Manager aus, oder klicken Sie auf **\<Neue Verbindung>**, um einen neuen Verbindungs-Manager des entsprechenden Typs für den Protokollanbieter zu erstellen. Verwenden Sie je nach ausgewähltem Anbieter einen der folgenden Verbindungs-Manager.  
   
-    -   Verwenden Sie für Textdateien einen Dateiverbindungs-Manager. Weitere Informationen finden Sie unter [File Connection Manager](connection-manager/file-connection-manager.md).  
+    -   Verwenden Sie für Textdateien einen Dateiverbindungs-Manager. Weitere Informationen finden Sie unter [Dateiverbindungs-Manager](connection-manager/file-connection-manager.md) .  
   
     -   Verwenden Sie für [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)]einen Dateiverbindungs-Manager.  
   
     -   Verwenden Sie für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]einen OLE DB-Verbindungs-Manager. Weitere Informationen finden Sie unter [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md).  
   
-    -   Führen Sie für das Windows-Ereignisprotokoll keine Aktion durch. 
-  [!INCLUDE[ssIS](../includes/ssis-md.md)] erstellt das Protokoll automatisch.  
+    -   Führen Sie für das Windows-Ereignisprotokoll keine Aktion durch. [!INCLUDE[ssIS](../includes/ssis-md.md)] erstellt das Protokoll automatisch.  
   
     -   Verwenden Sie für XML-Dateien einen Dateiverbindungs-Manager.  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66059280"
     > [!NOTE]  
     >  Standardmäßig werden alle Informationen protokolliert.  
   
-9. Klicken Sie auf der Registerkarte **Details** auf **Speichern**. Das Dialogfeld **Speichern unter** wird angezeigt. Suchen Sie den Ordner, in dem Sie die Protokollierungskonfiguration speichern möchten, geben Sie einen Dateinamen für die neue Protokollkonfiguration ein, und klicken Sie dann auf **Speichern**.  
+9. Klicken Sie auf der Registerkarte **Details** auf **Speichern**. Das Dialogfeld **Speichern unter** wird geöffnet. Suchen Sie den Ordner, in dem Sie die Protokollierungskonfiguration speichern möchten, geben Sie einen Dateinamen für die neue Protokollkonfiguration ein, und klicken Sie dann auf **Speichern**.  
   
 10. Klicken Sie auf **OK**.  
   

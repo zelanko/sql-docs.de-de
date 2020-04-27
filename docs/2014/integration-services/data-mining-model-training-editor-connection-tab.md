@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 64b31656796c1875d11c6ab1aa9524f4b149d7ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059881"
 ---
 # <a name="data-mining-model-training-editor-connection-tab"></a>Trainings-Editor für Data Mining-Modelle (Registerkarte Verbindung)
@@ -26,8 +26,8 @@ ms.locfileid: "66059881"
   
  Weitere Informationen zum Ziel des Data Mining-Modelltrainings finden Sie unter [Data Mining Model Training Destination](data-flow/data-mining-model-training-destination.md).  
   
-## <a name="options"></a>Tastatur  
- **Connection manager**  
+## <a name="options"></a>Optionen  
+ **Verbindungs-Manager**  
  Wählen Sie eine Verbindung aus der Liste der vorhandenen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Verbindungen aus, oder erstellen Sie wie im Folgenden beschrieben über die Schaltfläche [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Neu **eine neue** -Verbindung.  
   
  **Neu**  
@@ -43,7 +43,7 @@ ms.locfileid: "66059881"
  Zeigt die Liste der mit der ausgewählten Miningstruktur verknüpften Miningmodelle an.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Trainings-Editor für Data Mining-Modelle &#40;Registerkarte Spalten&#41;](../../2014/integration-services/data-mining-model-training-editor-columns-tab.md)  
   
   

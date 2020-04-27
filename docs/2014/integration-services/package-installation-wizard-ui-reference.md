@@ -22,16 +22,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f907127ff9863b696843a7d17e8df9950cd99c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056827"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>Referenz zur Benutzeroberfläche des Paketinstallations-Assistenten
   Mit dem **Paketinstallations-Assistenten** können Sie ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt einschließlich der enthaltenen Pakete, verschiedenen Dateien und Paketabhängigkeiten bereitstellen.  
   
- Bevor Sie Pakete bereitstellen, können Sie Konfigurationen erstellen und diese dann mit den Paketen bereitstellen. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]verwendet Konfigurationen, um die Eigenschaften von Paketen und Paket Objekten zur Laufzeit dynamisch zu aktualisieren. Beispielsweise kann die Verbindungszeichenfolge einer OLE DB-Verbindung zur Laufzeit dynamisch festgelegt werden, indem Sie eine Konfiguration erstellen, die der Eigenschaft, die die Verbindungszeichenfolge enthält, einen Wert zuordnet.  
+ Bevor Sie Pakete bereitstellen, können Sie Konfigurationen erstellen und diese dann mit den Paketen bereitstellen. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] verwendet Konfigurationen, um Eigenschaften von Paketen und Paketobjekten zur Laufzeit dynamisch zu aktualisieren. Beispielsweise kann die Verbindungszeichenfolge einer OLE DB-Verbindung zur Laufzeit dynamisch festgelegt werden, indem Sie eine Konfiguration erstellen, die der Eigenschaft, die die Verbindungszeichenfolge enthält, einen Wert zuordnet.  
   
  Der Paketinstallations-Assistent kann erst ausgeführt werden, nachdem Sie ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt und ein Bereitstellungshilfsprogramm erstellt haben. Weitere Informationen finden Sie unter [Deploy Packages by Using the Deployment Utility](../../2014/integration-services/deploy-packages-by-using-the-deployment-utility.md).  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66056827"
  **Diese anfangs Seite nicht mehr anzeigen**  
  Wählen Sie diese Option aus, um die Startseite bei der nächsten Ausführung des Assistenten auszulassen.  
   
- **Weiter**  
+ **Nächste**  
  Mit dieser Option können Sie zur nächsten Seite des Assistenten wechseln.  
   
  **Fertig stellen**  
@@ -52,13 +52,13 @@ ms.locfileid: "66056827"
 ## <a name="configure-packages-page"></a>Seite "Pakete konfigurieren"  
  Mithilfe der Seite **Pakete konfigurieren** können Sie Paketkonfigurationen bearbeiten.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Konfigurationsdatei**  
  Bearbeiten Sie die Inhalte einer Konfigurationsdatei, indem Sie die Datei aus der Liste auswählen.  
   
- **Verwandte Themen:** [Erstellen von Paket Konfigurationen](../../2014/integration-services/create-package-configurations.md)  
+ **Related Topics:** [Create Package Configurations](../../2014/integration-services/create-package-configurations.md)  
   
- **Path**  
+ **Pfad**  
  Zeigen Sie den Pfad der zu konfigurierenden Eigenschaft an.  
   
  **Typ**  
@@ -67,7 +67,7 @@ ms.locfileid: "66056827"
  **Wert**  
  Geben Sie den Wert der Konfiguration an.  
   
- **Weiter**  
+ **Nächste**  
  Mit dieser Option können Sie zur nächsten Seite des Assistenten wechseln.  
   
  **Fertig stellen**  
@@ -76,7 +76,7 @@ ms.locfileid: "66056827"
 ## <a name="confirm-installation-page"></a>Seite "Installation bestätigen"  
  Mithilfe der Seite **Installation bestätigen** können Sie die Installation von Paketen starten und den Status sowie die Informationen anzeigen, die der Assistent zum Installieren von Dateien aus dem angegebenen Projekt verwendet.  
   
- **Weiter**  
+ **Nächste**  
  Installiert die Pakete und die dazugehörigen Abhängigkeiten und wechselt nach Abschluss der Installation zur nächsten Seite des Assistenten.  
   
  **Status**  
@@ -88,7 +88,7 @@ ms.locfileid: "66056827"
 ## <a name="deploy-ssis-packages-page"></a>Seit "SSIS-Paket bereitstellen"  
  Mithilfe der Seite **SSIS-Pakete bereitstellen** können Sie angeben, an welcher Stelle [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Pakete und ihre Abhängigkeiten installiert werden sollen.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Bereitstellung im Dateisystem**  
  Stellen Sie Pakete und Abhängigkeiten in einem bestimmten Ordner im Dateisystem bereit.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66056827"
  **Pakete nach der Installation überprüfen**  
  Geben Sie an, ob Pakete nach der Installation überprüft werden sollen.  
   
- **Weiter**  
+ **Nächste**  
  Mit dieser Option können Sie zur nächsten Seite des Assistenten wechseln.  
   
  **Fertig stellen**  
@@ -107,20 +107,20 @@ ms.locfileid: "66056827"
 ## <a name="packages-validation-page"></a>Seite "Paketüberprüfung"  
  Auf der Seite **Paketüberprüfung** können Sie den Fortschritt und die Ergebnisse der Paketüberprüfung anzeigen.  
   
- **Weiter**  
+ **Nächste**  
  Mit dieser Option können Sie zur nächsten Seite des Assistenten wechseln.  
   
 ## <a name="select-installation-folder-page"></a>Seite "Installationsordner auswählen"  
  Mithilfe der Seite **Installationsordner auswählen** können Sie den Dateisystemordner angeben, in dem die Pakete und deren Abhängigkeiten installiert werden sollen.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Ordner**  
  Geben Sie den Pfad und den Ordner an, in den das Paket und seine Abhängigkeiten kopiert werden sollen.  
   
  **Durchsuchen**  
  Suchen Sie den Zielordner im Dialogfeld **Ordner suchen** .  
   
- **Weiter**  
+ **Nächste**  
  Mit dieser Option können Sie zur nächsten Seite des Assistenten wechseln.  
   
  **Fertig stellen**  
@@ -129,7 +129,7 @@ ms.locfileid: "66056827"
 ## <a name="specify-target-sql-server-page"></a>Seite "Zielserver mit SQL Server angeben"  
  Auf der Seite **Zielserver mit SQL Server angeben** können Sie Optionen zur Bereitstellung des Pakets für eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz angeben.  
   
-### <a name="options"></a>Tastatur  
+### <a name="options"></a>Optionen  
  **Servername**  
  Geben Sie den Namen des Servers an, auf dem die Pakete bereitgestellt werden sollen.  
   
@@ -156,7 +156,7 @@ ms.locfileid: "66056827"
  **Serverspeicher für die Verschlüsselung verwenden**  
  Wählen Sie diese Option aus, um die Pakete mithilfe von Sicherheitsfunktionen von [!INCLUDE[ssDE](../includes/ssde-md.md)] zu sichern.  
   
- **Weiter**  
+ **Nächste**  
  Mit dieser Option können Sie zur nächsten Seite des Assistenten wechseln.  
   
  **Fertig stellen**  

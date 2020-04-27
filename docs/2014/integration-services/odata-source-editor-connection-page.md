@@ -13,17 +13,17 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e36c0a3449566db9a2acee360243c77ee548f92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057315"
 ---
 # <a name="odata-source-editor-connection-page"></a>Quellen-Editor für OData (Seite 'Verbindung')
   Auf der Seite **Verbindung** des Dialogfelds **Quellen-Editor für OData** wählen Sie den OData-Verbindungs-Manager für die OData-Quelle aus. Auf dieser Seite können Sie außerdem eine Auflistung oder einen Ressourcenpfad sowie beliebige Abfrageoptionen angeben, mit denen die aus der OData-Quelle abzurufenden Daten bestimmt werden. Weitere Informationen zur OData-Quelle finden Sie unter [OData Source](data-flow/odata-source.md).  
   
 ## <a name="static-options"></a>Statische Optionen  
- **OData-Verbindungs-Manager**  
+ **Odata-Verbindungs-Manager**  
  Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
   
  **Neu**  
@@ -32,12 +32,12 @@ ms.locfileid: "66057315"
  **Auflistung oder Ressourcenpfad verwenden**  
  Geben Sie die Methode für die Auswahl von Daten aus der Quelle an.  
   
-|Option|BESCHREIBUNG|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |Collection|Rufen Sie mithilfe eines Auflistungsnamens Daten aus der OData-Quelle ab.|  
 |Ressourcenpfad|Rufen Sie mithilfe eines Ressourcenpfads Daten aus der OData-Quelle ab.|  
   
- **Abfrageoptionen**  
+ **Abfrage Optionen**  
  Geben Sie Optionen für die Abfrage an.  Beispiel: $top=5  
   
  **Feed-URL**  
@@ -49,12 +49,12 @@ ms.locfileid: "66057315"
 ## <a name="dynamic-options"></a>Dynamische Optionen  
   
 ### <a name="use-collection-or-resource-path--collection"></a>Auflistung oder Ressourcenpfad verwenden = Auflistung  
- **Sammlung**  
+ **Collection**  
  Wählen Sie eine Auflistung aus dem Dropdownlistenfeld aus.  
   
 ### <a name="use-collection-or-resource-path--resource-path"></a>Auflistung oder Ressourcenpfad verwenden = Ressourcenpfad  
  **Resource path**  
- Geben Sie einen Ressourcenpfad ein. Beispiel:  Employees  
+ Geben Sie einen Ressourcenpfad ein. Beispiel: Mitarbeiter  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Der Quellen-Editor für odata &#40;Spalten Seite&#41;](../../2014/integration-services/odata-source-editor-columns-page.md)   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 907caaa37c429dd2f788d0123f7f8ee0bbf8a27a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059656"
 ---
 # <a name="debug-a-package-by-setting-breakpoints-on-a-task-or-a-container"></a>Debuggen eines Pakets durch Festlegen von Breakpoints auf einem Task oder Container
@@ -38,14 +38,14 @@ ms.locfileid: "66059656"
   
     -   Um Breakpoints in einem Ereignishandler festzulegen, klicken Sie auf die Registerkarte **Ereignishandler** , klicken mit der rechten Maustaste auf einen Task, einen For-Schleifencontainer, einen Foreach-Schleifencontainer oder einen Sequenzcontainer und dann auf **Breakpoints bearbeiten**.  
   
-4.  Wählen Sie im Dialogfeld **Breakpoints festlegen \<Containername>** die zu aktivierenden Breakpoints aus.  
+4.  Wählen Sie im Dialogfeld " **Breakpoints \<-Container Name>festlegen** " die zu Aktivier Haltepunkte aus.  
   
 5.  Ändern Sie wahlweise den Typ der Trefferanzahl und die Trefferanzahl für jeden Breakpoint.  
   
 6.  Klicken Sie im Menü **Datei** auf **Ausgewählte Elemente speichern** , um das aktualisierte Paket zu speichern.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Tools zur Problembehandlung für die Paketentwicklung](troubleshooting/troubleshooting-tools-for-package-development.md)   
+ [Tools zur Problembehandlung für die Paket Entwicklung](troubleshooting/troubleshooting-tools-for-package-development.md)   
  [Debuggen eines Skripts durch Festlegen von Breakpoints in einem Skript Task und einer Skript Komponente](data-flow/transformations/script-component.md)   
  [Codieren und Debuggen des Skript Tasks](control-flow/script-task.md)   
  [Codieren und Debuggen der Skriptkomponente](extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md)  

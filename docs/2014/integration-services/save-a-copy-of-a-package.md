@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bdd8754ac3d4a63e038218c054d064f20485344b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056267"
 ---
 # <a name="save-a-copy-of-a-package"></a>Speichern einer Kopie eines Pakets
@@ -64,7 +64,7 @@ ms.locfileid: "66056267"
 9. Klicken Sie auf **OK**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Integration Services-Pakete &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md)   
- [Konfigurieren des Integration Services Service &#40;SSIS-Dienst&#41;](service/integration-services-service-ssis-service.md)  
+ [Integration Services &#40;SSIS-&#41; Paketen](../../2014/integration-services/integration-services-ssis-packages.md)   
+ [Konfigurieren des Integration Services-Diensts &#40;SSIS-Dienst&#41;](service/integration-services-service-ssis-service.md)  
   
   

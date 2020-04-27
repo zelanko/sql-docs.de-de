@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8fbd67f8a6fcc88a3821583d1e06ec3e8a75ab91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66063102"
 ---
 # <a name="attribute-relationship-diagram-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Attributbeziehungsdiagramm (Registerkarte Attributbeziehungs-Designer, Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
@@ -35,9 +35,9 @@ ms.locfileid: "66063102"
  Um das Kontextmenü für das Attributbeziehungsdiagramm zu öffnen, klicken Sie mit der rechten Maustaste auf den Hintergrund des Diagramms. Das Kontextmenü für das Diagramm enthält die folgenden Befehle:  
   
  **Neue Attributbeziehung**  
- Öffnet das Dialogfeld **Attributbeziehung erstellen**, in dem Sie eine neue Attributbeziehung erstellen können.  
+ Öffnet das Dialogfeld **Attributbeziehung erstellen** , in dem Sie eine neue Attributbeziehung erstellen können.  
   
- Weitere Informationen finden Sie unter [Dialogfelder „Attributbeziehung erstellen“ und „Attributbeziehung bearbeiten“ &#40;Registerkarte „Attributbeziehungs-Designer“, Dimensions-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) und [Definieren von Attributbeziehungen](multidimensional-models/attribute-relationships-define.md).  
+ Weitere Informationen finden Sie unter [Dialogfelder „Attributbeziehung erstellen“ und „Attributbeziehung bearbeiten“ &#40;Registerkarte „Attributbeziehungs-Designer“ im Dimensions-Designer&#41; &#40;Analysis Services – Mehrdimensionale Daten&#41;](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) und [Definieren von Attributbeziehungen](multidimensional-models/attribute-relationships-define.md).  
   
  **Formen anordnen**  
  Ordnet die Formen nach dem Layoutalgorithmus an, den der Dimensions-Designer verwendet.  
@@ -67,9 +67,9 @@ ms.locfileid: "66063102"
  Um das Attributkontextmenü zu öffnen, klicken Sie im Attributbeziehungsdiagramm mit der rechten Maustaste auf das Attribut. Das Attributkontextmenü enthält die folgenden Befehle:  
   
  **Neue Attributbeziehung**  
- Öffnet das Dialogfeld **Attributbeziehung erstellen**, in dem Sie eine neue Attributbeziehung erstellen können.  
+ Öffnet das Dialogfeld **Attributbeziehung erstellen** , in dem Sie eine neue Attributbeziehung erstellen können.  
   
- Weitere Informationen finden Sie unter [Dialogfelder „Attributbeziehung erstellen“ und „Attributbeziehung bearbeiten“ &#40;Registerkarte „Attributbeziehungs-Designer“, Dimensions-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) und [Definieren von Attributbeziehungen](multidimensional-models/attribute-relationships-define.md).  
+ Weitere Informationen finden Sie unter [Dialogfelder „Attributbeziehung erstellen“ und „Attributbeziehung bearbeiten“ &#40;Registerkarte „Attributbeziehungs-Designer“ im Dimensions-Designer&#41; &#40;Analysis Services – Mehrdimensionale Daten&#41;](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) und [Definieren von Attributbeziehungen](multidimensional-models/attribute-relationships-define.md).  
   
  **Eigenschaften**  
  Zeigt die Eigenschaften des Attributs im Fenster **Eigenschaften** an.  
@@ -80,7 +80,7 @@ ms.locfileid: "66063102"
  **Attributbeziehung bearbeiten**  
  Öffnet das Dialogfeld **Attributbeziehung bearbeiten**, in dem Sie die Attributbeziehung bearbeiten können.  
   
- Weitere Informationen finden Sie unter [Dialogfelder „Attributbeziehung erstellen“ und „Attributbeziehung bearbeiten“ &#40;Registerkarte „Attributbeziehungs-Designer“, Dimensions-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) und [Definieren von Attributbeziehungen](multidimensional-models/attribute-relationships-define.md).  
+ Weitere Informationen finden Sie unter [Dialogfelder „Attributbeziehung erstellen“ und „Attributbeziehung bearbeiten“ &#40;Registerkarte „Attributbeziehungs-Designer“ im Dimensions-Designer&#41; &#40;Analysis Services – Mehrdimensionale Daten&#41;](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) und [Definieren von Attributbeziehungen](multidimensional-models/attribute-relationships-define.md).  
   
  **Beziehungstyp**  
  Legt den Beziehungstyp entweder auf **Flexibel** oder **Fest**fest. In einer flexiblen Beziehung ändern sich die Beziehungen zwischen Elementen. In einer festen Beziehung ändern sich die Beziehungen zwischen Elementen nicht.  

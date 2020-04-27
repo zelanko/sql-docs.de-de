@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cbd45caac75d4fac3b5fffc305a9f359193191a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062087"
 ---
 # <a name="add-a-data-viewer-to-a-data-flow"></a>Hinzufügen eines Daten-Viewers zu einem Datenfluss
@@ -54,8 +54,8 @@ ms.locfileid: "66062087"
 10. Klicken Sie auf **OK**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Integration Services-Transformationen](data-flow/transformations/integration-services-transformations.md)   
- [SQL Server Integration Services-Pfade](data-flow/integration-services-paths.md)   
+ [Integration Services Transformationen](data-flow/transformations/integration-services-transformations.md)   
+ [Integration Services Pfade](data-flow/integration-services-paths.md)   
  [Datenfluss](data-flow/data-flow.md)   
  [Debuggen des Datenflusses](troubleshooting/debugging-data-flow.md)  
   

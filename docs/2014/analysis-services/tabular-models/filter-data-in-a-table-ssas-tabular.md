@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 869185e56db9a4ffb07282d3ce51ced191a6bac8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067128"
 ---
 # <a name="filter-data-in-a-table-ssas-tabular"></a>Filtern von Daten in einer Tabelle (SSAS – tabellarisch)
@@ -33,7 +33,7 @@ ms.locfileid: "66067128"
   
 2.  Führen Sie im Menü AutoFilter einen der folgenden Schritte aus:  
   
-    -   Wählen Sie in der Liste der Spaltenwerte mindestens einen Wert aus, nach dem gefiltert werden soll, oder löschen Sie ihn, und klicken Sie dann auf **OK**.  
+    -   Wählen Sie in der Liste der Spaltenwerte mindestens einen Wert aus, nach dem gefiltert werden soll, bzw. heben Sie die Auswahl auf, und klicken Sie auf **OK**.  
   
          Wenn die Anzahl der Werte sehr groß ist, kann es sein, dass einzelne Elemente nicht in der Liste angezeigt werden. Stattdessen wird eine Meldung angezeigt, dass zu viele Elemente zum Anzeigen vorhanden sind.  
   
@@ -54,6 +54,6 @@ ms.locfileid: "66067128"
 ## <a name="see-also"></a>Weitere Informationen  
  [Filtern und Sortieren von Daten &#40;tabellarischen SSAS-&#41;](../filter-and-sort-data-ssas-tabular.md)   
  [Perspektiven &#40;tabellarischen SSAS-&#41;](perspectives-ssas-tabular.md)   
- [Rollen &#40;tabellarischen SSAS-&#41;](roles-ssas-tabular.md)  
+ [Rollen &#40;SSAS – tabellarisch&#41;](roles-ssas-tabular.md)  
   
   

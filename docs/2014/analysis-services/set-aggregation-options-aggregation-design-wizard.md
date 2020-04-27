@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d82d19836147514a4a03296ebc40a047b80410b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068811"
 ---
 # <a name="set-aggregation-options-aggregation-design-wizard"></a>Aggregationsoptionen festlegen (Aggregationsentwurfs-Assistent)
   Mithilfe der Seite **Aggregationsoptionen festlegen** können Sie den Aggregationsentwurf starten und Speicher- sowie Leistungslimits für die generierten Aggregationen angeben.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Geschätzter Speicherplatz erreicht**  
  Legen Sie ein Limit für den Aggregationsentwurf fest, indem Sie die maximale Anzahl von Megabytes (MB) oder Gigabytes (GB) angeben, die zum Generieren der Aggregationen verwendet werden kann.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66068811"
  **Keine Aggregationen entwerfen (0 %)**  
  Geben Sie an, dass der Aggregationsentwurf keine Aggregationen enthält. Mithilfe dieser Option können Sie den vorhandenen Aggregationsentwurf einer Partition, Measuregruppe oder eines Cubes löschen.  
   
- **Starten**  
+ **Start**  
  Startet den Aggregationsentwurf.  
   
  **Beenden**  

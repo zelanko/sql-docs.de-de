@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23b0125ab578ebb4fb8837c95ec61db900880ec6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064531"
 ---
 # <a name="browse-for-remote-folder-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Nach Remoteordner suchen' (Analysis Services – Mehrdimensionale Daten)
@@ -30,7 +30,7 @@ ms.locfileid: "66064531"
   
 -   Wechseln Sie zur Seite **Speicherorte für lokale Partitionen angeben** oder zur Seite **Speicherorte für Remotepartitionen angeben** des Assistenten zum Synchronisieren einer Datenbank, und klicken Sie dort in der **Zielordner** -Spalte unter der Option **Speicherorte** auf die Schaltfläche mit den Auslassungspunkten (**...**).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Ordner auswählen**  
  Wählen Sie einen Ordner aus, um für **Ausgewählter Pfad** den gewünschten Pfad festzulegen.  
   

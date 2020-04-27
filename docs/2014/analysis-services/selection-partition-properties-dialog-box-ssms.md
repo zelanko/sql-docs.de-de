@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7cfc9890bda35f1574c83b339495b996782b79b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069215"
 ---
 # <a name="selection-partition-properties-dialog-box-ssms"></a>Auswahl (Dialogfeld Partitionseigenschaften, SSMS)
   Mithilfe der Seite **Auswahl** des Dialogfelds **Partitionseigenschaften** können Sie in SQL Server Management Studio eine Partition einer Measuregruppe auswählen, für die Sie die Eigenschaften in den Bereichen **Allgemein**, **Proaktives Zwischenspeichern**oder **Fehlerkonfiguration** anzeigen oder ändern können.  
   
-## <a name="options"></a>Tastatur  
- **Netz**  
+## <a name="options"></a>Optionen  
+ **Raster**  
  Zeigt die Partitionen der Measuregruppe mit der ausgewählten Partition an.  
   
  Wählen Sie die Partition aus, für die Sie die Eigenschaften auf den Seiten **Allgemein**, **Proaktives Zwischenspeichern**oder **Fehlerkonfiguration** anzeigen möchten.  
@@ -33,7 +33,7 @@ ms.locfileid: "66069215"
 |Column|BESCHREIBUNG|  
 |------------|-----------------|  
 |**Name**|Zeigt den Namen der Partition an.|  
-|**`Source`**|Zeigt die Tabelle oder die Abfrage an, durch die Quelldaten für die Partition bereitgestellt werden.|  
+|**Quelle**|Zeigt die Tabelle oder die Abfrage an, durch die Quelldaten für die Partition bereitgestellt werden.|  
 |**Aggregationen**|Zeigt eine Zeichenfolge an, die den von der Partition verwendeten Aggregationsentwurf beschreibt.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8905a7fbb075826f37b9d362fe82def3e9664109
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065860"
 ---
 # <a name="translation-details-translations-tab-cube-designer-analysis-services---multidimensional-data"></a>Übersetzungsdetails (Registerkarte Übersetzungen, Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Bereichs für Transaktionsdetails **** auf der Registerkarte **Transaktionen** in Cube-Designer können Sie Transaktionen für den aktuell ausgewählten Cube definieren und verwalten.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Standardsprache**  
  Legt die Namen der Cube-Objekte in der Standardsprache fest.  
   
@@ -31,37 +31,35 @@ ms.locfileid: "66065860"
   
 -   Measuregruppe  
   
-     `Caption`Property  
+     `Caption`-Eigenschaft  
   
 -   "Measure"  
   
-     
-  `Caption`- und `DisplayFolder`-Eigenschaften  
+     `Caption`- und `DisplayFolder`-Eigenschaften  
   
 -   Dimension  
   
-     `Caption`Property  
+     `Caption`-Eigenschaft  
   
 -   Perspektive  
   
-     `Caption`Property  
+     `Caption`-Eigenschaft  
   
 -   Key Performance Indicator (KPI)  
   
-     
-  `Caption`- `Description`-Eigenschaft und `DisplayFolder`-Eigenschaft  
+     `Caption`- `Description`-Eigenschaft und `DisplayFolder`-Eigenschaft  
   
--   Action  
+-   Aktion  
   
-     `Caption`Property  
+     `Caption`-Eigenschaft  
   
 -   Benannte Menge  
   
-     `Caption`Property  
+     `Caption`-Eigenschaft  
   
 -   berechnetes Element  
   
-     `Caption`Property  
+     `Caption`-Eigenschaft  
   
  **\<Sprach>**  
  Geben Sie den Wert der Eigenschaft für das Cube-Objekt in der ausgewählten Sprache ein.  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 03488e4cfd3a0cc905a58166f381f68eb3292c49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058524"
 ---
 # <a name="foreach-loop-editor-variable-mappings-page"></a>Foreach-Schleifen-Editor (Seite Variablenzuordnungen)
@@ -26,31 +26,31 @@ ms.locfileid: "66058524"
   
  Das [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Tutorial zum Erstellen eines einfachen ETL-Pakets enthält eine Lektion, in der Sie eine foreach-Schleife hinzufügen und konfigurieren können.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Variable**  
  Wählen Sie eine vorhandene Variable aus, \<oder klicken Sie auf **neue Variable...**>, um eine neue Variable zu erstellen.  
   
 > [!NOTE]  
->  Nachdem Sie eine Variable zugeordnet haben, wird der Liste **Variable** automatisch eine neue Zeile hinzugefügt.  
+>   Nachdem Sie eine Variable zugeordnet haben, wird der Liste **Variable** automatisch eine neue Zeile hinzugefügt.  
   
  **Verwandte Themen**: [Integration Services &#40;SSIS-&#41; Variablen](integration-services-ssis-variables.md), [Variable hinzufügen](../../2014/integration-services/add-variable.md)  
   
- **Sin**  
+ **Index**  
  Geben Sie bei Verwendung des Foreach-Element-Enumerators den Index der Spalte im Sammlungswert an, der der Variable zugeordnet werden soll. Bei anderen Enumeratortypen ist der Index schreibgeschützt.  
   
 > [!NOTE]  
 >  Der Index basiert auf 0.  
   
- **Verwandte Themen**: [Schleife durch Excel-Dateien und-Tabellen mit einem Foreach-Schleifen Container](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
+ **Verwandte Themen**: [Schleife durch Excel-Dateien und Tabellen mit einem Foreach-Schleifencontainer](control-flow/loop-through-excel-files-and-tables-by-using-a-foreach-loop-container.md)  
   
  **Löschen**  
  Wählen Sie eine Variable aus, und klicken Sie auf **Löschen**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Foreach-Schleifen-Editor &#40;Seite "Allgemein"&#41;](general-page-of-integration-services-designers-options.md)   
  [Foreach-Schleifen-Editor &#40;Sammlungs Seite&#41;](../../2014/integration-services/foreach-loop-editor-collection-page.md)   
- [Seite Ausdrücke](expressions/expressions-page.md)   
+ [Ausdrucks Seite](expressions/expressions-page.md)   
  [For-Schleifencontainer](control-flow/for-loop-container.md)  
   
   

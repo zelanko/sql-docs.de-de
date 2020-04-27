@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d3bf33d52b380e1ac05864c6e7402567b42df54a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061041"
 ---
 # <a name="cdc-source-editor-error-output-page"></a>Quellen-Editor für CDC (Seite Fehlerausgabe)
@@ -25,7 +25,7 @@ ms.locfileid: "66061041"
  Weitere Informationen zur CDC-Quelle finden Sie unter [CDC Source](data-flow/cdc-source.md).  
   
 ## <a name="task-list"></a>Aufgabenliste  
- **So öffnen Sie die Seite "Fehlerausgabe" des Quellen-Editors**  
+ **So öffnen Sie die Seite "Fehlerausgabe" des Quellen-Editors für CDC**  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]das [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] -Paket, das die CDC-Quelle enthält.  
   
@@ -33,11 +33,11 @@ ms.locfileid: "66061041"
   
 3.  Klicken Sie im **Quellen-Editor für CDC**auf **Fehlerausgabe**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Datenquelle an.  
   
- **Spalte**  
+ **Column**  
  Zeigt die externen Spalten (Quellspalten) an, die im Dialogfeld **Quellen-Editor für CDC** auf der Seite **Verbindungs-Manager** ausgewählt wurden.  
   
  **Fehler**  
@@ -52,7 +52,7 @@ ms.locfileid: "66061041"
  **Diesen Wert für ausgewählte Zellen festlegen**  
  Wählen Sie aus, wie die CDC-Quelle im Fall eines Fehlers oder einer Kürzung mit den ausgewählten Zellen verfahren soll: Fehler ignorieren, Zeile umleiten oder Komponente mit einem Fehler abbrechen.  
   
- **Anwenden**  
+ **übernehmen**  
  Wendet die Fehlerbehandlungsoptionen auf die ausgewählten Zellen an.  
   
 ## <a name="error-handling-options"></a>Fehlerbehandlungsoptionen  
@@ -68,7 +68,7 @@ ms.locfileid: "66061041"
  Der Fehler oder die Kürzung wird an die Fehlerausgabe der CDC-Quelle umgeleitet. In diesem Fall wird die Fehlerbehandlung der CDC-Quelle verwendet. Weitere Informationen finden Sie unter [CDC Source](data-flow/cdc-source.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Quellen-Editor für CDC &#40;Seite „Verbindungs-Manager“&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
+ [Der Quellen-Editor für CDC &#40;Seite Verbindungs-Manager&#41;](../../2014/integration-services/cdc-source-editor-connection-manager-page.md)   
  [Quellen-Editor für CDC &#40;Seite „Spalten“&#41;](../../2014/integration-services/cdc-source-editor-columns-page.md)  
   
   

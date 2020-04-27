@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 21bda8729c30df9493c4f969c5af05b6dd80386f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058221"
 ---
 # <a name="implement-a-signing-policy-by-setting-a-registry-value"></a>Implementieren einer Signaturrichtlinie durch Festlegen eines Registrierungswerts
@@ -34,7 +34,7 @@ ms.locfileid: "66058221"
   
  In der folgenden Tabelle werden die gültigen Werte der DWORD-Daten und ihre verbundenen Richtlinien aufgelistet.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |0|Keine administrative Einschränkung.|  
 |1|Blockieren von ungültigen Signaturen.<br /><br /> Bei dieser Einstellung werden nicht signierte Pakete nicht blockiert.|  
@@ -46,7 +46,7 @@ ms.locfileid: "66058221"
   
 ### <a name="to-implement-a-signing-policy-for-packages"></a>So implementieren Sie eine Signaturrichtlinie für ein Paket  
   
-1.  Klicken Sie im Menü **Start** auf **Ausführen**.  
+1.  Klicken Sie im **Startmenü** auf **Ausführen**.  
   
 2.  Geben `Regedit`Sie im Dialogfeld Ausführen ein, und klicken Sie dann auf **OK**.  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 098d9b589396ebd6a9c622f921efd97d0b000929
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067037"
 ---
 # <a name="manage-roles-by-using-ssms-ssas-tabular"></a>Verwalten von Rollen mit SSMS (SSAS – tabellarisch)
@@ -36,7 +36,7 @@ ms.locfileid: "66067037"
 > [!CAUTION]  
 >  Wenn Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwenden, um eine Arbeitsbereichsdatenbank für tabellarische Modelle zu verwalten, während das Modellprojekt in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] geöffnet ist, kann die Datei Model.bim beschädigt werden. Wenn Sie Rollen für eine Arbeitsbereichsdatenbank für tabellarische Modelle erstellen und verwalten, verwenden Sie den Rollen-Manager in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
   
-###  <a name="bkmk_new_role"></a>So erstellen Sie eine neue Rolle  
+###  <a name="to-create-a-new-role"></a><a name="bkmk_new_role"></a>So erstellen Sie eine neue Rolle  
   
 1.  Erweitern Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]die tabellarische Modelldatenbank, für die Sie eine neue Rolle erstellen möchten, klicken Sie mit der rechten Maustaste auf **Rollen**, und klicken Sie dann auf **Neue Rolle**.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66067037"
     |Berechtigung|BESCHREIBUNG|  
     |----------------|-----------------|  
     |**Vollzugriff (Administrator)**|Mitglieder können Änderungen am Modellschema vornehmen und alle Daten anzeigen.|  
-    |**Datenbank verarbeiten**|Mitglieder können Prozesse ausführen und alle Vorgänge verarbeiten. Sie können weder das Modellschema ändern noch Daten anzeigen.|  
+    |**Datenbank verarbeiten**|Mitglieder können die Vorgänge Verarbeiten und Alles verarbeiten ausführen. Sie können weder das Modellschema ändern noch Daten anzeigen.|  
     |**Lesen**|Mitglieder dürfen Daten (basierend auf Zeilenfiltern) anzeigen, doch sie können keine Änderungen am Modellschema vornehmen.|  
   
 5.  Klicken Sie im Dialogfeld **Rolle erstellen** im Fenster "Seite auswählen" auf **Mitgliedschaft**.  
@@ -67,21 +67,21 @@ ms.locfileid: "66067037"
   
 9. Klicken Sie auf **OK** , um die Rolle zu speichern.  
   
-###  <a name="bkmk_copy_role"></a>So kopieren Sie eine Rolle  
+###  <a name="to-copy-a-role"></a><a name="bkmk_copy_role"></a> So kopieren Sie eine Rolle  
   
 1.  Erweitern Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]die tabellarische Modelldatenbank, die die Rolle enthält, die Sie kopieren möchten, und erweitern Sie dann **Rollen**. Klicken Sie mit der rechten Maustaste auf die Rolle, und klicken Sie dann auf **Duplizieren**.  
   
-###  <a name="bkmk_edit_role"></a>So bearbeiten Sie eine Rolle  
+###  <a name="to-edit-a-role"></a><a name="bkmk_edit_role"></a>So bearbeiten Sie eine Rolle  
   
 -   Erweitern Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]die tabellarische Modelldatenbank, die die Rolle enthält, die Sie bearbeiten möchten, und erweitern Sie dann **Rollen**. Klicken Sie mit der rechten Maustaste auf die Rolle, und klicken Sie dann auf **Eigenschaften**.  
   
      Im Dialogfeld **Rollen Eigenschaften** \<"roleName>" können Sie Berechtigungen ändern, Mitglieder hinzufügen oder entfernen und Zeilen Filter hinzufügen/bearbeiten.  
   
-###  <a name="bkmk_deletet_role"></a>So löschen Sie eine Rolle  
+###  <a name="to-delete-a-role"></a><a name="bkmk_deletet_role"></a>So löschen Sie eine Rolle  
   
 -   Erweitern Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]die tabellarische Modelldatenbank, die die Rolle enthält, die Sie löschen möchten, und erweitern Sie dann **Rollen**. Klicken Sie mit der rechten Maustaste auf die Rolle, und klicken Sie dann auf **Löschen**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Rollen &#40;tabellarischen SSAS-&#41;](roles-ssas-tabular.md)  
+ [Rollen &#40;SSAS – tabellarisch&#41;](roles-ssas-tabular.md)  
   
   

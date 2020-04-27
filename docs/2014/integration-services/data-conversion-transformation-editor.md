@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5346c808c7d724ae630bb3dd25016a9977af363e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060053"
 ---
 # <a name="data-conversion-transformation-editor"></a>Transformations-Editor für Datenkonvertierung
@@ -29,7 +29,7 @@ ms.locfileid: "66060053"
   
  Weitere Informationen zur Transformation für Datenkonvertierung finden Sie unter [Data Conversion Transformation](data-flow/transformations/data-conversion-transformation.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verfügbare Eingabespalten**  
  Wählen Sie mithilfe der Kontrollkästchen die zu konvertierenden Spalten aus. Durch Ihre Auswahl werden der nachfolgenden Tabelle Eingabespalten hinzugefügt.  
   
@@ -40,15 +40,15 @@ ms.locfileid: "66060053"
  Geben Sie einen Alias für jede neue Spalte ein. Der Standard lautet `Copy of`, gefolgt vom Namen der Eingabespalte. Sie können jedoch auch einen eindeutigen, beschreibenden Namen auswählen.  
   
  **Datentyp**  
- Wählen Sie einen verfügbaren Datentyp aus der Liste aus. Weitere Informationen finden Sie unter [Integration Services Datentypen](data-flow/integration-services-data-types.md).  
+ Wählen Sie einen verfügbaren Datentyp aus der Liste aus. Weitere Informationen finden Sie unter [Integration Services-Datentypen](data-flow/integration-services-data-types.md).  
   
  **Länge**  
  Legt für Zeichenfolgendaten die Spaltenlänge fest.  
   
- **Präziser**  
+ **Genauigkeit**  
  Legt für numerische Daten die Genauigkeit fest.  
   
- **Migen**  
+ **Skalieren**  
  Legt für numerische Daten die Dezimalstellen fest.  
   
  **Codepage**  
@@ -58,7 +58,7 @@ ms.locfileid: "66060053"
  Geben Sie mithilfe des Dialogfelds [Fehlerausgabe konfigurieren](../../2014/integration-services/configure-error-output.md) an, wie Fehler auf Zeilenebene behandelt werden sollen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Konvertieren von Daten in einen anderen Datentyp mithilfe der Transformation für Datenkonvertierung](data-flow/transformations/convert-data-type-by-using-data-conversion-transformation.md)  
   
   

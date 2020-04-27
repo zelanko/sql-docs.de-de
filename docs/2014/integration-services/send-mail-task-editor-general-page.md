@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 50a054bbe83c7873d1da93909bc57331fcf4a635
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055861"
 ---
 # <a name="send-mail-task-editor-general-page"></a>Editor für den Task 'Mail senden' (Seite Allgemein)
@@ -30,13 +30,13 @@ ms.locfileid: "66055861"
  **Name**  
  Geben Sie einen eindeutigen Namen für den Task 'Mail senden' an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
- **Hinweis** Aufgaben Namen müssen innerhalb eines Pakets eindeutig sein.  
+ **Hinweis** Der Taskname muss innerhalb eines Pakets eindeutig sein.  
   
  **Beschreibung**  
  Geben Sie eine Beschreibung des Tasks 'Mail senden' ein.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor für den Task ' Mail senden ' &#40;Seite e-Mail&#41;](../../2014/integration-services/send-mail-task-editor-mail-page.md)   
  [Seite Ausdrücke](expressions/expressions-page.md)  
   

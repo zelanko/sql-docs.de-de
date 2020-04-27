@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8efb049292caecf21f38ef5bc5a7392138bdcf5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056430"
 ---
 # <a name="result-sets-in-the-execute-sql-task"></a>Resultsets im Task „SQL ausführen“
@@ -33,7 +33,7 @@ ms.locfileid: "66056430"
   
 -   [Konfigurieren von Resultsets im Editor für den Task „SQL ausführen“.](#Configure_result_sets)  
   
-##  <a name="Result_set_type"></a>Angeben eines Resultsettyps  
+##  <a name="specifying-a-result-set-type"></a><a name="Result_set_type"></a>Angeben eines Resultsettyps  
  Der Task SQL ausführen unterstützt die folgenden Resultsettypen:  
   
 -   Das Resultset **Keine** wird verwendet, wenn die Abfrage keine Ergebnisse zurückgibt. Beispielsweise wird dieses Resultset für Abfragen verwendet, die Datensätze in einer Tabelle hinzufügen, ändern und löschen.  
@@ -46,7 +46,7 @@ ms.locfileid: "66056430"
   
  Wenn der Task SQL ausführen das Resultset **Vollständiges Resultset** verwendet und die Abfrage mehrere Rowsets zurückgibt, gibt der Task nur das erste Rowset zurück. Generiert dieses Rowset einen Fehler, wird der Fehler vom Task gemeldet. Von anderen Rowsets generierte Fehler werden vom Task nicht gemeldet.  
   
-##  <a name="Populate_variable_with_result_set"></a>Auffüllen einer Variablen mit einem Resultset  
+##  <a name="populating-a-variable-with-a-result-set"></a><a name="Populate_variable_with_result_set"></a>Auffüllen einer Variablen mit einem Resultset  
  Sie können das von einer Abfrage zurückgegebene Resultset an eine benutzerdefinierte Variable binden, falls der Resultsettyp eine einzelne Zeile, ein Rowset oder XML ist.  
   
  Ist der Resultsettyp **Einzelne Zeile**, können Sie eine Spalte im Rückgabeergebnis an eine Variable binden, indem Sie den Spaltennamen als Resultsetnamen verwenden. Sie können auch die Ordnungsposition der Spalte in der Spaltenliste als Resultsetnamen verwenden. Der Resultsetnamen für die Abfrage `SELECT Color FROM Production.Product WHERE ProductID = ?` könnte beispielsweise **Color** oder **0**sein. Gibt die Abfrage mehrere Spalten zurück, und Sie möchten auf die Werte in allen Spalten zugreifen, müssen Sie jede Spalte an eine andere Variable binden. Wenn Sie Spalten mithilfe von Zahlen als Resultsetnamen zu Variablen zuordnen, geben die Zahlen die Reihenfolge wieder, in der die Spalten in der Spaltenliste der Abfrage erscheinen. In der Abfrage `SELECT Color, ListPrice, FROM Production.Product WHERE ProductID = ?`verwenden Sie beispielsweise 0 für die Spalte **Color** und 1 für die Spalte **ListPrice** . Ob ein Spaltenname als Namen eines Resultsets verwendet werden kann, hängt davon ab, für welchen Anbieter der Task konfiguriert ist. Nicht alle Anbieter machen Spaltennamen verfügbar.  
@@ -72,7 +72,7 @@ ms.locfileid: "66056430"
   
  Die Variable kann im Bereich des Tasks SQL ausführen oder des Pakets definiert werden. Falls die Variable einen Paketbereich aufweist, ist das Resultset für andere Tasks und Container innerhalb des Pakets verfügbar sowie für alle Pakete, die von den Tasks "Paket ausführen" oder "DTS 2000-Paket ausführen" ausgeführt werden.  
   
- Wenn Sie einem **Single row**-Resultset eine Variable zuordnen, könnten von der SQL-Anweisung zurückgegebene Werte, die noch keine Zeichenfolgen sind, in Zeichenfolgen konvertiert werden. Dazu müssen die folgenden Bedingungen erfüllt sein:  
+ Wenn Sie einem **Single row** -Resultset eine Variable zuordnen, könnten von der SQL-Anweisung zurückgegebene Werte, die noch keine Zeichenfolgen sind, in Zeichenfolgen konvertiert werden. Dazu müssen die folgenden Bedingungen erfüllt sein:  
   
 -   Die Eigenschaft **TypeConversionMode** ist auf "True" festgelegt. Sie haben den Eigenschaftswert im Eigenschaftenfenster oder mit dem **Editor für den Task "SQL ausführen"** festgelegt.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66056430"
   
  Informationen zum Laden eines Resultsets in eine Variable finden Sie unter [Zuordnen von Resultsets zu Variablen in einem Task „SQL ausführen“](control-flow/execute-sql-task.md).  
   
-##  <a name="Configure_result_sets"></a>Konfigurieren von Resultsets im Task "SQL ausführen"  
+##  <a name="configuring-result-sets-in-the-execute-sql-task"></a><a name="Configure_result_sets"></a>Konfigurieren von Resultsets im Task "SQL ausführen"  
  Klicken Sie auf das folgende Thema, um weitere Informationen zu den Eigenschaften von Resultsets zu erhalten, die Sie im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer festlegen können:  
   
 -   [Editor für den Task "SQL ausführen" &#40;resultsetseite&#41;](../../2014/integration-services/execute-sql-task-editor-result-set-page.md)  

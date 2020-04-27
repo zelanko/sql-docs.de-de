@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc333bae08cd9ec658b6e8050b869d1232dbe629
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055272"
 ---
 # <a name="term-extraction-transformation-editor-advanced-tab"></a>Transformations-Editor für Ausdrucksextrahierung (Registerkarte Erweitert)
@@ -26,17 +26,17 @@ ms.locfileid: "66055272"
   
  Weitere Informationen zur Transformation für Ausdrucksextrahierung finden Sie unter [Term Extraction Transformation](data-flow/transformations/term-extraction-transformation.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Nomen**  
  Gibt an, dass durch die Transformation nur einzelne Nomen extrahiert werden.  
   
  **Substantiv Phrase**  
  Gibt an, dass durch die Transformation nur nominale Ausdrücke extrahiert werden.  
   
- **Substantiv und Substantiv Phrase**  
+ **Nomen und nominaler Ausdruck**  
  Gibt an, dass durch die Transformation sowohl Nomen als auch nominale Ausdrücke extrahiert werden.  
   
- **Häufig**  
+ **Frequency**  
  Gibt an, dass es sich bei dem Ergebnis um die Häufigkeit des Begriffs handelt.  
   
  **TFIDF**  
@@ -45,17 +45,17 @@ ms.locfileid: "66055272"
  **Schwellenwert für Häufigkeit**  
  Gibt in Form eines Zahlenwertes an, wie oft ein Wort oder ein Ausdruck vorkommen muss, bevor die Extrahierung erfolgt. Der Standardwert ist 2.  
   
- **Maximale Länge der Laufzeit**  
+ **Maximale Ausdruckslänge**  
  Gibt die maximale Länge des Ausdrucks in Worten an. Diese Option bezieht sich nur auf nominale Ausdrücke. Der Standardwert ist 12.  
   
- **Verwenden der Ausdrucksextrahierung mit Berücksichtigung**  
- Gibt an, ob bei der Extrahierung nach Groß-/Kleinschreibung unterschieden wird. Der Standardwert lautet `False`.  
+ **Ausdrucksextrahierung mit Unterscheidung nach Groß-/Kleinschreibung verwenden**  
+ Gibt an, ob bei der Extrahierung nach Groß-/Kleinschreibung unterschieden wird. Der Standardwert ist `False`.  
   
- **Konfigurieren der Fehlerausgabe**  
+ **Fehlerausgabe konfigurieren**  
  Geben Sie mit dem Dialogfeld [Fehlerausgabe konfigurieren](../../2014/integration-services/configure-error-output.md) die Fehlerbehandlung für Zeilen an, die Fehler verursachen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Transformations-Editor für Ausdrucksextrahierung &#40;Registerkarten&#41;](../../2014/integration-services/term-extraction-transformation-editor-term-extraction-tab.md)   
  [Transformations-Editor für Ausdrucksextrahierung &#40;&#41;Register](../../2014/integration-services/term-extraction-transformation-editor-exclusion-tab.md)   
  [Transformation für Ausdruckssuche](data-flow/transformations/lookup-transformation.md)  

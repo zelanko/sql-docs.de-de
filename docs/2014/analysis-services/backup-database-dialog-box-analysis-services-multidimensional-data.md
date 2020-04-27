@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a99ce67c4b42cc1def10127c8b1862a859d20723
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064383"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld Sicherungsdatenbank (Analysis Services – Mehrdimensionale Daten)
@@ -29,7 +29,7 @@ ms.locfileid: "66064383"
   
 -   Klicken Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]mit der rechten Maustaste entweder auf den Ordner **Datenbanken** einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz oder auf eine Datenbank im **Objekt-Explorer**, und klicken Sie dann auf **Sichern**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Skript**  
  Erstellt ein Sicherungsskript, das auf den im Dialogfeld aktivierten Optionen basiert. Das Wiederherstellungsskript wird in der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Skriptsprache (ASSL) geschrieben.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66064383"
  Wählen Sie diese Option aus, um eine gegebenenfalls vorhandene Sicherungsdatei oder eine Remotesicherungsdatei zu überschreiben.  
   
 > [!NOTE]  
->  Wenn diese Option nicht ausgewählt ist und die in einem der Felder **Sicherungsdatei** oder **Remotesicherungsdatei** angegebene Sicherungsdatei vorhanden ist, wird ein Fehler gemeldet.  
+>   Wenn diese Option nicht ausgewählt ist und die in einem der Felder **Sicherungsdatei** oder **Remotesicherungsdatei** angegebene Sicherungsdatei vorhanden ist, wird ein Fehler gemeldet.  
   
  **Komprimierung anwenden**  
  Wählen Sie diese Option aus, um den Inhalt der Sicherungsdatei und gegebenenfalls vorhandener Remotesicherungsdateien zu komprimieren.  
@@ -70,13 +70,13 @@ ms.locfileid: "66064383"
  Geben Sie das Kennwort ein, das beim Verschlüsseln der Sicherungsdatei und gegebenenfalls vorhandener Remotesicherungsdateien verwendet werden soll.  
   
 > [!NOTE]  
->  Diese Option ist nur bei Auswahl von **Sicherungsdatei verschlüsseln** aktiviert.  
+>   Diese Option ist nur bei Auswahl von **Sicherungsdatei verschlüsseln** aktiviert.  
   
  **Kennwort bestätigen**  
  Geben Sie das im Feld **Kennwort** eingegebene Kennwort ein, um das Kennwort für die Sicherungsdatei und für gegebenenfalls vorhandene Remotesicherungsdateien zu bestätigen.  
   
 > [!NOTE]  
->  Diese Option ist nur bei Auswahl von **Sicherungsdatei verschlüsseln** aktiviert.  
+>   Diese Option ist nur bei Auswahl von **Sicherungsdatei verschlüsseln** aktiviert.  
   
  **Remotepartition(en) sichern**  
  Wählen Sie diese Option aus, um Informationen zum Speicherort sowie die Daten der Remotepartitionen in der Sicherungsdatei zu sichern.  

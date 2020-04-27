@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cbb5ca8c048b42313b4776b4a2e4b99e44eec406
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059416"
 ---
 # <a name="dqs-cleansing-transformation-editor-dialog-box"></a>Transformations-Editor für die DQS-Bereinigung (Dialogfeld)
@@ -31,29 +31,29 @@ ms.locfileid: "66059416"
   
 -   [Festlegen der Optionen auf der Registerkarte "Verbindungs-Manager"](#connection)  
   
--   [Festlegen der Optionen auf der Registerkarte "Zuordnung"](#mapping)  
+-   [Festlegen von Optionen auf der Registerkarte "Zuordnung"](#mapping)  
   
 -   [Festlegen der Optionen auf der Registerkarte "Erweitert"](#advanced)  
   
 -   [Festlegen der Optionen im Dialogfeld "Verbindungs-Manager für DQS-Bereinigung"](#manager)  
   
-##  <a name="open"></a> Öffnen des Transformations-Editors für die DQS-Bereinigung  
+##  <a name="open-the-dqs-cleansing-transformation-editor"></a><a name="open"></a> Öffnen des Transformations-Editors für die DQS-Bereinigung  
   
 1.  Fügen Sie die DQS-Bereinigungstransformation dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]hinzu.  
   
 2.  Klicken Sie mit der rechten Maustaste auf die Komponente, und klicken Sie anschließend auf **Bearbeiten**.  
   
-##  <a name="connection"></a> Festlegen der Optionen auf der Registerkarte "Verbindungs-Manager"  
+##  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a>Festlegen von Optionen auf der Registerkarte "Verbindungs-Manager"  
  **Data Quality Services-Verbindungs-Manager**  
  Wählen Sie in der Liste einen vorhandenen DQS-Verbindungs-Manager aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
   
  **Neu**  
- Erstellen Sie mithilfe des Dialogfelds **Verbindungs-Manager für DQS-Bereinigung** einen neuen Verbindungs-Manager. Siehe [Festlegen der Optionen im Dialogfeld „Verbindungs-Manager für DQS-Bereinigung“](#manager)  
+ Erstellen Sie mithilfe des Dialogfelds **Verbindungs-Manager für DQS-Bereinigung** einen neuen Verbindungs-Manager. Siehe [Festlegen der Optionen im Dialogfeld Verbindungs-Manager für DQS-Bereinigung](#manager)  
   
  **Data Quality-Wissensdatenbank**  
  Wählen Sie eine vorhandene DQS-Wissensdatenbank für die verbundene Datenquelle aus. Weitere Informationen zur DQS-Wissensdatenbank finden Sie unter [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
- **Verschlüsseln der Verbindung**  
+ **Verbindung verschlüsseln**  
  Geben Sie an, ob die Verbindung verschlüsselt werden soll, um die Datenübertragung zwischen dem DQS- [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]Server und zu verschlüsseln.  
   
  **Verfügbare Domänen**  
@@ -63,7 +63,7 @@ ms.locfileid: "66059416"
   
  Weitere Informationen zu Domänen finden Sie unter [DQS Knowledge Bases and Domains](../../2014/data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
- **Konfigurieren der Fehlerausgabe**  
+ **Fehlerausgabe konfigurieren**  
  Gibt an, wie Fehler auf Zeilenebene verarbeitet werden. Wenn durch die Transformation Daten aus der verbundenen Datenquelle korrigiert werden, können aufgrund unerwarteter Datenwerte oder Überprüfungseinschränkungen Fehler auftreten.  
   
  Folgende Werte sind gültig:  
@@ -72,7 +72,7 @@ ms.locfileid: "66059416"
   
 -   **Zeile umleiten**gibt an, dass die Eingabedaten nicht in die Data Quality Services-Datenbank eingefügt und an die Fehlerausgabe umgeleitet werden.  
   
-##  <a name="mapping"></a> Festlegen der Optionen auf der Registerkarte "Zuordnung"  
+##  <a name="set-options-on-the-mapping-tab"></a><a name="mapping"></a> Festlegen der Optionen auf der Registerkarte "Zuordnung"  
  Weitere Informationen zum Zuordnen von Spalten zu Verbunddomänen finden Sie unter [Map Columns to Composite Domains](data-flow/transformations/map-columns-to-composite-domains.md).  
   
  **Verfügbare Eingabespalten**  
@@ -97,14 +97,14 @@ ms.locfileid: "66059416"
  **Alias – Status**  
  Zeigt die Spalte an, die Statusinformationen für die korrigierten Daten enthält. Klicken Sie in das Feld, um den Spaltennamen zu ändern.  
   
-##  <a name="advanced"></a> Festlegen der Optionen auf der Registerkarte "Erweitert"  
+##  <a name="set-options-on-the-advanced-tab"></a><a name="advanced"></a>Festlegen von Optionen auf der Registerkarte "Erweitert"  
  **Ausgabe standardisieren**  
  Gibt an, ob die Daten im standardisierten Format auf Grundlage des für Domänen definierten Ausgabeformats ausgegeben werden. Weitere Informationen zum standardisierten Format finden Sie unter [Datenbereinigung](../../2014/data-quality-services/data-cleansing.md).  
   
  **Confidence**  
  Gibt an, ob der Vertrauensgrad für korrigierte Daten eingeschlossen wird. Der Vertrauensgrad gibt die DQS-Sicherheitsstufe der Korrektur oder des Vorschlags an. Weitere Informationen zu Vertrauensgraden finden Sie unter [Datenbereinigung](../../2014/data-quality-services/data-cleansing.md).  
   
- **Reason**  
+ **Grund**  
  Gibt an, ob der Grund für die Datenkorrektur eingeschlossen wird.  
   
  **Angefügte Daten**  
@@ -113,11 +113,11 @@ ms.locfileid: "66059416"
  **Angefügtes Datenschema**  
  Gibt an, ob das Datenschema ausgegeben wird. Weitere Informationen finden Sie unter [Anfügen einer Domäne oder Verbund Domäne an Verweis Daten](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).  
   
-##  <a name="manager"></a> Festlegen der Optionen im Dialogfeld "Verbindungs-Manager für DQS-Bereinigung"  
+##  <a name="set-the-options-in-the-dqs-cleansing-connection-manager-dialog-box"></a><a name="manager"></a>Festlegen der Optionen im Dialogfeld "Verbindungs-Manager für DQS-Bereinigung"  
  **Servername**  
  Wählen Sie den Namen des DQS-Servers aus, mit dem Sie eine Verbindung herstellen möchten, oder geben Sie ihn ein. Weitere Informationen zum Server finden Sie unter [DQS Administration](../../2014/data-quality-services/dqs-administration.md).  
   
- **Verbindung testen**  
+ **Testen der Verbindung**  
  Klicken Sie auf diese Schaltfläche, um zu überprüfen, ob die angegebene Verbindung gültig ist.  
   
  Sie können das Dialogfeld **Verbindungs-Manager für DQS-Bereinigung** auch wie folgt über den Verbindungsbereich öffnen:  

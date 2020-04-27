@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b62fb5e33311f1011911c40fc858723b218bac55
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054830"
 ---
 # <a name="union-all-transformation-editor"></a>Transformations-Editor für UNION ALL
@@ -26,8 +26,8 @@ ms.locfileid: "66054830"
   
  Weitere Informationen zur Transformation für UNION ALL finden Sie unter [Union All Transformation](data-flow/transformations/union-all-transformation.md).  
   
-## <a name="options"></a>Tastatur  
- **Name der Ausgabespalte**  
+## <a name="options"></a>Optionen  
+ **Name der Ausgabe Spalte**  
  Geben Sie einen Alias für jede Spalte ein. Standardmäßig wird der Name der Eingabespalte von der ersten (Referenz-)Eingabe verwendet. Sie können jedoch auch einen beschreibenden Namen angeben, sofern dieser eindeutig ist.  
   
  **Eingabe 1 für UNION ALL**  
@@ -37,9 +37,9 @@ ms.locfileid: "66054830"
  Wählen Sie eine Eingabespalte aus der Liste der verfügbaren Eingabespalten in den folgenden Eingaben aus. Die Metadaten der zugeordneten Spalten müssen übereinstimmen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Zusammenführen von Daten mithilfe der Transformation für Union all](data-flow/transformations/merge-data-by-using-the-union-all-transformation.md)   
  [Transformation für Zusammenführen](data-flow/transformations/merge-transformation.md)   
- [Transformation für Zusammenführungsjoin](data-flow/transformations/merge-join-transformation.md)  
+ [Merge Join Transformation](data-flow/transformations/merge-join-transformation.md)  
   
   

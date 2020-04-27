@@ -15,16 +15,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c9dfc99a05b4da5d8ba5537529db4d25f6771038
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064547"
 ---
 # <a name="browse-data-source-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld zum Durchsuchen der Datenquellen (Analysis Services – Mehrdimensionale Daten)
   Im Dialogfeld zum Durchsuchen der Datenquelle **** können Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] die ersten 1.000 Datensätze der ausgewählten Tabelle durchsuchen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Datenquellentabelle**  
  Zeigt die ersten 1.000 Datensätze der ausgewählten Tabelle an. Die Daten sind schreibgeschützt.  
   

@@ -15,16 +15,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3e36fae15f6f4220565bcc3d14c0e125ca6818f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058081"
 ---
 # <a name="import-package-dialog-box-ui-reference"></a>Referenz zur Benutzeroberfläche für Dialogfeld "Paket importieren"
   Verwenden Sie das in **verfügbare Dialogfeld** Paket importieren [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], um ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket zu importieren und die Schutzebene des Pakets festzulegen oder zu ändern.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Paketspeicherort**  
  Wählen Sie den Typ des Speicherortes, an den das Paket importiert werden soll. Die folgenden Optionen sind verfügbar:  
   
@@ -32,7 +32,7 @@ ms.locfileid: "66058081"
   
  **Dateisystem**  
   
- **SSIS-Paketspeicher**  
+ **SSIS-Paket Speicher**  
   
  **Server**  
  Geben Sie einen Servernamen ein, oder wählen Sie einen Server aus der Liste aus.  
@@ -53,18 +53,18 @@ ms.locfileid: "66058081"
  Geben Sie ein Kennwort an, falls Sie die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung verwenden.  
   
  **Paketpfad**  
- Geben Sie den Paketpfad ein, oder klicken Sie auf die Schaltfläche „Durchsuchen“ **(…)**, und suchen Sie das Paket.  
+ Geben Sie den Paketpfad ein, oder klicken Sie auf die Schaltfläche Durchsuchen **(...)** , und suchen Sie das Paket  
   
  **Paketname**  
  Sie können das Paket auch umbenennen. Der Standardname ist der Name des zu importierenden Pakets.  
   
- **Schutz Ebene**  
+ **Schutzebene**  
  Klicken Sie auf die Schaltfläche „Durchsuchen“ **(…)**, und aktualisieren Sie im Dialogfeld **Paketschutzebene** die Schutzebene. Weitere Informationen finden Sie unter [Dialogfeld „Paket- und Projektschutzebene“](../../2014/integration-services/package-and-project-protection-level-dialog-box.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Kopie des Pakets speichern](../../2014/integration-services/save-copy-of-package.md)   
  [Referenz zur Benutzeroberfläche des Dialog Felds Paket exportieren](../../2014/integration-services/export-package-dialog-box-ui-reference.md)   
- [Speichern von Paketen](save-packages.md)   
+ [Pakete speichern](save-packages.md)   
  [Importieren und Exportieren von Paketen &#40;SSIS-Dienst&#41;](../../2014/integration-services/import-and-export-packages-ssis-service.md)  
   
   

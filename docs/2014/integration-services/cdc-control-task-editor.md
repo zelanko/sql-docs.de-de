@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a87af3febdab1e98dac0b1546b8b2b8939b739d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061117"
 ---
 # <a name="cdc-control-task-editor"></a>Task-Editor für CDC-Steuerelement
@@ -30,7 +30,7 @@ ms.locfileid: "66061117"
   
 2.  Doppelklicken Sie auf der Registerkarte **Ablaufsteuerung** auf den CDC-Steuerungstask.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **ADO.NET-Verbindungs-Manager für die SQL Server-CDC-Datenbank**  
  Wählen Sie in der Liste einen vorhandenen Verbindungs-Manager aus, oder klicken Sie auf **Neu** , um eine neue Verbindung zu erstellen. Die Verbindung muss zu einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Datenbank hergestellt werden, die für CDC aktiviert ist und in der sich die ausgewählte Änderungstabelle befindet.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66061117"
   
  Dieses Option ist nur verfügbar, wenn **Automatische Statuspersistenz** ausgewählt ist, und ist ein erforderlicher Parameter.  
   
- **Statusname**  
+ **Name des Zustands**  
  Geben Sie einen Namen ein, der dem beständigen CDC-Status zugeordnet werden soll. In den Paketen für das vollständige Laden und den CDC-Paketen, die denselben CDC-Kontext verwenden, wird ein gemeinsamer Statusname angegeben. Dieser Name wird verwendet, um in der Statustabelle nach der Statuszeile zu suchen.  
   
 ## <a name="see-also"></a>Weitere Informationen  

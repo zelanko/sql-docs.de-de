@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1a36537f8ca122a6fe9ae9521aa2f0713c94d01
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061771"
 ---
 # <a name="ado-net-destination-editor-error-output-page"></a>ADO.NET-Ziel-Editor (Seite 'Fehlerausgabe')
@@ -28,15 +28,15 @@ ms.locfileid: "66061771"
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket, das ADO.NET als Ziel hat.  
   
-2.  Doppelklicken Sie auf der Registerkarte **Datenfluss** auf das ADO.NET-Ziel.  
+2.  Doppelklicken Sie auf der Registerkarte **Datenfluss** auf das ADO NET-Ziel.  
   
 3.  Klicken Sie im **ADO.NET-Ziel-Editor**auf **Fehlerausgabe**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Eingabe oder Ausgabe**  
  Zeigt den Namen der Eingabe an.  
   
- **Spalte**  
+ **Column**  
  Wird nicht verwendet.  
   
  **Fehler**  
@@ -53,11 +53,11 @@ ms.locfileid: "66061771"
  **Diesen Wert für ausgewählte Zellen festlegen**  
  Gibt an, was im Falle eines Fehlers oder einer Kürzung mit den ausgewählten Zellen geschehen soll: den Fehler ignorieren, die Zeile umleiten oder die Komponente mit einem Fehler abbrechen.  
   
- **Anwenden**  
+ **übernehmen**  
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Der ADO.NET-Ziel-Editor &#40;Seite "Verbindungs-Manager"&#41;](../../2014/integration-services/ado-net-destination-editor-connection-manager-page.md)   
- [Der ADO.NET-Ziel-Editor &#40;Seite "Zuordnungen"&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
+ [ADO.NET-Ziel-Editor &#40;Seite „Zuordnungen“&#41;](../../2014/integration-services/ado-net-destination-editor-mappings-page.md)  
   
   

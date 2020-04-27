@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ce68071f27897e181063299e561dfaa7d9f8aab7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062874"
 ---
 # <a name="add-model-to-structure-data-mining-add-ins-for-excel"></a>Hinzufügen eines Modells zu einer Struktur (Data Mining-Add-Ins für Excel)
@@ -82,19 +82,18 @@ ms.locfileid: "66062874"
   
          Weitere Informationen finden Sie unter [Drillthrough für Mining Modelle](data-mining/drillthrough-on-mining-models.md).  
   
-10. Klicken Sie auf **Fertig** stellen, um die Änderungen zu speichern. Danach wird das neue Modell auf dem Server bereitgestellt und verarbeitet.  
+10. Klicken Sie auf **Fertig stellen**, um Ihre Änderungen zu speichern. Danach wird das neue Modell auf dem Server bereitgestellt und verarbeitet.  
   
 ### <a name="related-options"></a>Zugehörige Optionen  
   
 |Option|Kommentare|  
 |------------|--------------|  
 |**Struktur oder Modell auswählen** (Dialogfeld)|Wählen Sie eine vorhandene Miningstruktur aus, um sie als Grundlage für ein neues Modell zu verwenden.  Die ausgewählte Struktur muss für die aktive Verbindung verfügbar sein. Wenn dies nicht der Grund ist, ändern Sie die Verbindungen mithilfe des Tools [Verbindung mit Quelldaten &#40;Data Mining-Client für Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md) .|  
-|**Mining Algorithmus auswählen** (Dialogfeld)|Die Liste der Data Mining-Algorithmen hängt davon ab, mit welchem Server Sie verbunden sind. 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stellt in der Standard und Enterprise Edition verschiedene Algorithmen bereit. Ihr Administrator verfügt möglicherweise auch über zusätzliche benutzerdefinierte Algorithmen.<br /><br /> Wenn keine Algorithmen angezeigt werden, vergewissern Sie sich, dass Sie mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]verbunden sind.|  
+|**Mining Algorithmus auswählen** (Dialogfeld)|Die Liste der Data Mining-Algorithmen hängt davon ab, mit welchem Server Sie verbunden sind. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stellt in der Standard und Enterprise Edition verschiedene Algorithmen bereit. Ihr Administrator verfügt möglicherweise auch über zusätzliche benutzerdefinierte Algorithmen.<br /><br /> Wenn keine Algorithmen angezeigt werden, vergewissern Sie sich, dass Sie mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]verbunden sind.|  
 |**Algorithmusparameter** Dialog Feld|Mithilfe dieser Einstellungen können Sie die einzelnen Algorithmen mit Parametern anpassen, die spezifisch für die analytische Methode sind. Sie können auch einen Ausgangswert festlegen, um sicherzustellen, dass die Ergebnisse des Modells in mehreren Trainingsdurchläufen reproduziert werden können.<br /><br /> Weitere Informationen finden Sie unter [Algorithmusparameter &#40;SQL Server Data Mining-Add-ins&#41;](algorithm-parameters-sql-server-data-mining-add-ins.md).|  
 |**Spalten modellflags festlegen** Dialog Feld|Mithilfe von Modellierungsflags können Sie ein Modell verbessern, indem Sie angeben, wie fehlende Daten behandelt werden sollen. Weitere Informationen finden Sie unter [Modellierungsflags &#40;Data Mining&#41;](data-mining/modeling-flags-data-mining.md).|  
   
-###  <a name="Bkmk_mdlcolumn"></a>Festlegen der Spalten Verwendung  
+###  <a name="setting-column-usage"></a><a name="Bkmk_mdlcolumn"></a>Festlegen der Spalten Verwendung  
  Wenn Sie einer vorhandenen Struktur ein neues Miningmodell hinzufügen, müssen Sie angeben, wie das Modell die einzelnen Datenspalten in der Miningstruktur verwendet. Sie werden wahrscheinlich bemerken, dass die Optionen in diesem Assistenten weitaus ausführlicher sind als die Optionen in der Mining Struktur. Warum?  
   
  Dies hat folgende Ursache: Wenn Sie ein Modell zusammen mit einer Struktur unter Verwendung eines Assistenten erstellen, werden zahlreiche Optionen, die steuern, wie Daten vom Algorithmus verwendet werden, automatisch festgelegt. Wenn Sie einem vorhandenen Modell jedoch ein neues Modell hinzufügen, müssen Sie diese Optionen manuell überprüfen und angeben, ob Daten für die Analyse verwendet werden sollen, ob der Datentyp richtig ist usw.  
@@ -113,7 +112,7 @@ ms.locfileid: "66062874"
   
      Einige Analysetypen erfordern Daten, die entsprechend eindeutigen Regeln sorgfältig strukturiert sind. Dies gilt beispielsweise für Vorhersagemodelle und Zuordnungsmodelle. Sie können einfach neue Modelle desselben Typs hinzufügen, die über Anpassungen verfügen können, möglicherweise funktionieren die Daten jedoch nicht mit anderen Algorithmen.  
   
-### <a name="requirements"></a>Requirements (Anforderungen)  
+### <a name="requirements"></a>Anforderungen  
  Zum Erstellen von Data Mining-Modellen müssen Sie eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] hergestellt haben. Weitere Informationen zum Erstellen oder Ändern einer Verbindung finden Sie unter Herstellen einer Verbindung [mit Quelldaten &#40;Data Mining-Client für Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
  Falls die gewünschte Data Mining-Struktur nicht angezeigt wird, kann dies daran liegen, dass die betreffende Struktur in einer anderen Instanz oder einer anderen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbank gespeichert wurde. Weitere Informationen zum Wechseln zu einer anderen Data Mining Verbindung finden Sie unter Herstellen einer Verbindung [mit einem Data Mining-Server](connect-to-a-data-mining-server.md).  

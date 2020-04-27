@@ -15,23 +15,23 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3b9166e26129710a342411ab1da71b1c44c76239
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055953"
 ---
 # <a name="select-smo-enumeration-dialog-box"></a>SMO-Enumeration auswählen (Dialogfeld)
   Im Dialogfeld **SMO-Enumeration auswählen** geben Sie das aufzuzählende SMO-Objekt ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Objects) für die angegebene [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz an und wählen den Enumerationstyp aus.  
   
-## <a name="options"></a>Tastatur  
- **Auflisten**  
+## <a name="options"></a>Optionen  
+ **Aufzählen**  
  Hiermit erweitern Sie den Server und wählen ein SMO-Objekt aus.  
   
- **Objekte**  
+ **erzwingen**  
  Verwenden Sie den Enumerationstyp „Objekte“.  
   
- **Vorab aufzufüllen**  
+ **Vorauffüllen**  
  Verwenden Sie die Option **Vorauffüllen** mit dem Enumerationstyp „Objekte“.  
   
  **Zeichen**  
@@ -40,11 +40,11 @@ ms.locfileid: "66055953"
  **URNs**  
  Hiermit verwenden Sie den Enumerationstyp „URNs“.  
   
- **Orten**  
+ **Standorte**  
  Hiermit verwenden Sie den Enumerationstyp „Speicherorte“. Diese Option ist nur für Dateien verfügbar.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Foreach Loop Container](control-flow/foreach-loop-container.md)  (Foreach-Schleifencontainer)  
+ [Foreach-Schleifen Container](control-flow/foreach-loop-container.md)   
  [Programmierungshandbuch für SQL Server Management Objects &#40;SMO&#41;](../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 91b448a87408a830464b50f641e6eefa8cf3f12c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057641"
 ---
 # <a name="msmq-connection-manager-editor"></a>MSMQ-Verbindungs-Manager-Editor
@@ -36,15 +36,13 @@ ms.locfileid: "66057641"
  **Beschreibung**  
  Beschreiben Sie den Verbindungs-Manager. Die bewährte Methode ist hierbei, den Verbindungs-Manager zweckbezogen zu beschreiben, sodass Pakete selbsterklärend und leichter zu verwalten sind.  
   
- **Path**  
+ **Pfad**  
  Geben Sie den vollständigen Pfad der Meldungswarteschlange ein. Das Format des Pfades ist vom Typ der Warteschlange abhängig.  
   
 |Warteschlangentyp|Beispielpfad|  
 |----------------|-----------------|  
-|Public|
-  \<Computername>\\<Name der Warteschlange\>|  
-|Private|
-  \<Computername>\Private$\\<Name der Warteschlange\>|  
+|Public|\<Computername>\\<Name der Warteschlange\>|  
+|Private|\<Computername>\Private$\\<Name der Warteschlange\>|  
   
  Sie können "." verwenden, um den lokalen Computer darzustellen.  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8a236805ac047b351aa49c2486b8acac84818017
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069080"
 ---
 # <a name="sequence-clustering-cluster-transition-tab-mining-model-viewer"></a>Registerkarte "Sequenzcluster/Clusterübergang" (Miningmodell-Viewer)
@@ -24,9 +24,9 @@ ms.locfileid: "66069080"
   
  Mit dieser Sicht eines Sequenzclustermodells können Sie Muster anzeigen. In diesem Diagramm stellt ein Link die Wahrscheinlichkeit eines Übergangs dar und ein Knoten den Sequenzstatus.  
   
- **Weitere Informationen finden Sie unter:** [Microsoft Sequence Clustering-Algorithmus](data-mining/microsoft-sequence-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Sequence Cluster-Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Weitere Informationen:** [Microsoft Sequence Clustering-Algorithmus](data-mining/microsoft-sequence-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Sequenzcluster-Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66069080"
  **Gesamtes Diagramm kopieren**  
  Kopiert das gesamte Diagramm in die Zwischenablage.  
   
- **Cluster**  
+ **Kombi**  
  Wählen Sie den Cluster aus, der im Viewer angezeigt werden soll. Standardmäßig ist **Auffüllung (Alle)** ausgewählt, d.h., dass das Diagramm Status und Übergänge aus dem gesamten Modell enthält. Wenn Sie einen bestimmten Cluster auswählen, werden nur die Status und Übergänge in diesem Cluster angezeigt.  
   
  **Tipp:** Sie können Cluster mithilfe der Registerkarte **Cluster Diagramm** umbenennen. Wählen Sie einfach einen Cluster aus, klicken Sie mit der rechten Maustaste, und wählen Sie **Umbenennen** Wenn Sie Cluster mit einer aussagekräftigeren Bezeichnung umbenennen, können Sie sie leichter auf der Registerkarte **Statusübergänge** vergleichen.  

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 12f1a73c1d21986d2089878bfe9d29dd4450f222
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057858"
 ---
 # <a name="lookup-transformation-editor-error-output-page"></a>Transformations-Editor für Suche (Seite 'Fehlerausgabe')
@@ -24,11 +24,11 @@ ms.locfileid: "66057858"
   
  Weitere Informationen zur Transformation für Suche finden Sie unter [Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Eingabe/Ausgabe**  
  Zeigt den Namen der Eingabe an.  
   
- **Spalte**  
+ **Column**  
  Wird nicht verwendet.  
   
  **Fehler**  
@@ -56,7 +56,7 @@ ms.locfileid: "66057858"
  **Beschreibung**  
  Zeigt die Beschreibung des Vorgangs an.  
   
- **Ausgewählte Zellen auf diesen Wert festlegen**  
+ **Diesen Wert für ausgewählte Zellen festlegen**  
  Geben Sie an, was bei einem Fehler oder beim Abschneiden von Daten mit allen ausgewählten Zellen geschehen soll:  
   
 -   Den Fehler ignorieren.  
@@ -65,7 +65,7 @@ ms.locfileid: "66057858"
   
 -   Die Komponente mit einem Fehler abbrechen.  
   
- **Anwenden**  
+ **übernehmen**  
  Wendet die Fehlerbehandlungsoption auf die ausgewählten Zellen an.  
   
 ## <a name="see-also"></a>Weitere Informationen  

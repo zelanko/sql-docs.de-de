@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5bfda61e5a57dabd62289f32d04d6367695b070b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057170"
 ---
 # <a name="odbc-source-editor-columns-page"></a>Quellen-Editor für ODBC (Seite Spalten)
@@ -33,7 +33,7 @@ ms.locfileid: "66057170"
   
 3.  Klicken Sie im **Quellen-Editor für ODBC**auf **Spalten**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 ### <a name="available-external-columns"></a>Verfügbare externe Spalten  
  Eine Liste der in der Datenquelle verfügbaren externen Spalten. Mit der Tabelle können keine Spalten hinzugefügt oder gelöscht werden. Wählen Sie die zu verwendenden Spalten aus der Datenquelle aus. Die ausgewählten Spalten werden der Liste **Externe Spalte** in der Reihenfolge hinzugefügt, in der Sie sie auswählen.  
@@ -47,7 +47,7 @@ ms.locfileid: "66057170"
  Geben Sie für jede Ausgabespalte einen eindeutigen Namen ein. Standardmäßig wird der Name der ausgewählten externen (Quell-)Spalte verwendet. Sie können jedoch auch einen beschreibenden Namen angeben, sofern dieser eindeutig ist. Der eingegebene Name wird im SSIS-Designer angezeigt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Quellen-Editor für ODBC &#40;Seite Verbindungs-Manager&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
+ [Der Quellen-Editor für ODBC &#40;Verbindungs-Manager-Seite&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
  [Quellen-Editor für ODBC &#40;Seite „Fehlerausgabe“&#41;](../../2014/integration-services/odbc-source-editor-error-output-page.md)  
   
   

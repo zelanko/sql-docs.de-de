@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e1a32dcbcee6704cb4fecef7b58cbff8354b910a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057896"
 ---
 # <a name="lookup-transformation-editor-columns-page"></a>Transformations-Editor für Suche (Seite 'Spalten')
@@ -26,7 +26,7 @@ ms.locfileid: "66057896"
   
  Weitere Informationen zur Transformation für Suche finden Sie unter [Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Die Eingabespalten sind die Spalten im Datenfluss aus einer verbundenen Quelle. Die Datentypen der Eingabe- und Suchspalte müssen übereinstimmen.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66057896"
   
  Sie können auch mithilfe der Tastatur Eingabespalten bestimmten Suchspalten zuordnen. Dazu heben Sie eine Spalte in der Tabelle **Verfügbare Eingabespalten** hervor, drücken die Anwendungstaste und klicken dann auf **Zuordnungen bearbeiten**.  
   
- **Verfügbare Such Spalten**  
+ **Verfügbare Suchspalten**  
  Zeigt die Liste der Suchspalten an. Die Suchspalten sind Spalten in der Verweistabelle, in denen nach Werten gesucht werden soll, die mit den Eingabespalten übereinstimmen.  
   
  Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Suchspalten bestimmten Eingabespalten zuordnen.  

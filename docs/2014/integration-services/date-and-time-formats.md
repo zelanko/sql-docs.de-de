@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 26bd117cb63ccc623ee54f3370e1d07237de9c52
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059648"
 ---
 # <a name="date-and-time-formats"></a>Datums- und Zeitformate
@@ -52,7 +52,7 @@ ms.locfileid: "66059648"
   
  Die schnelle Analyse gibt die Daten als DT_DBDATE aus. Datumswerte in abgeschnittenen Formaten werden aufgefüllt. Beispielsweise wird YYYY zu YYYY0101.  
   
- Weitere Informationen finden Sie unter [Integration Services Datentypen](data-flow/integration-services-data-types.md).  
+ Weitere Informationen finden Sie unter [Integration Services-Datentypen](data-flow/integration-services-data-types.md).  
   
 ## <a name="time-data-type"></a>Zeitdatentyp  
  Die schnelle Analyse unterstützt die folgenden Zeichenfolgenformate für Zeitdaten:  
@@ -80,7 +80,7 @@ ms.locfileid: "66059648"
     |-HH|Abgeschnittene Formate, die die Anzahl von Stunden angeben, die von der koordinierten Weltzeit (UTC) subtrahiert werden, um die lokale Zeit zu ermitteln.|  
     |Z|Ein Wert von 0, der angibt, dass die Zeit in UTC dargestellt wird.|  
   
-     Die Formate für alle Zeit- und Datums-/Zeitdaten können ein Zeitzonenelement enthalten. Das System ignoriert jedoch den Zeitzonenwert, außer wenn die Daten vom Typ DT_DBTIMESTAMPOFFSET sind. Weitere Informationen finden Sie unter [Integration Services Datentypen](data-flow/integration-services-data-types.md).  
+     Die Formate für alle Zeit- und Datums-/Zeitdaten können ein Zeitzonenelement enthalten. Das System ignoriert jedoch den Zeitzonenwert, außer wenn die Daten vom Typ DT_DBTIMESTAMPOFFSET sind. Weitere Informationen finden Sie unter [Integration Services-Datentypen](data-flow/integration-services-data-types.md).  
   
      Bei Formaten, die ein Zeitzonenelement enthalten, gibt es kein Leerzeichen zwischen dem Zeitelement und dem Zeitzonenelement, wie das folgende Beispiel zeigt:  
   
@@ -107,7 +107,7 @@ ms.locfileid: "66059648"
   
  Die schnelle Analyse gibt die Zeichenfolgen als DT_DBTIME und DT_DBTIME2 aus. Zeitwerte in abgeschnittenen Formaten werden aufgefüllt. Beispielsweise wird HH:MI als HH:MM:00.000 ausgegeben.  
   
- Weitere Informationen finden Sie unter [Integration Services Datentypen](data-flow/integration-services-data-types.md).  
+ Weitere Informationen finden Sie unter [Integration Services-Datentypen](data-flow/integration-services-data-types.md).  
   
 ## <a name="datetime-data-type"></a>Datums-/Zeitdatentyp  
  Die schnelle Analyse unterstützt die folgenden Zeichenfolgenformate für Datums-/Zeitdaten:  
@@ -126,8 +126,8 @@ ms.locfileid: "66059648"
 |Minuten|00:00 hinzufügen.|  
 |Hour|00:00:00 hinzufügen.|  
 |Day (Tag)|01 für den Tag des Monats hinzufügen.|  
-|Month (Monat)|01 für den Monat des Jahres hinzufügen.|  
+|Monat|01 für den Monat des Jahres hinzufügen.|  
   
- Weitere Informationen finden Sie unter [Integration Services Datentypen](data-flow/integration-services-data-types.md).  
+ Weitere Informationen finden Sie unter [Integration Services-Datentypen](data-flow/integration-services-data-types.md).  
   
   

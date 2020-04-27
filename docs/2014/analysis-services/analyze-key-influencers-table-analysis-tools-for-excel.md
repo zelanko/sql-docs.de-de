@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: df6622abc3a507d917aefd2a8a5a1bf9505a2622
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062261"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>Wichtige Einflussfaktoren analysieren (Tabellenanalysetools für Excel)
@@ -100,7 +100,7 @@ ms.locfileid: "66062261"
   
 -   Erstellt einen Bericht, der die wichtigen Einflussfaktoren beschreibt, die nach dem Vertrauensergebnis sortiert sind.  
   
-### <a name="requirements"></a>Requirements (Anforderungen)  
+### <a name="requirements"></a>Anforderungen  
  Wenn die Zielspalte kontinuierliche numerische Werte enthält, werden die numerischen Werte vom Tool automatisch in Gruppen unterteilt. Diese Gruppierungen stellen Cluster von Fällen mit ähnlichen Merkmalen dar. Numerische Werte können jedoch nicht in benutzerfreundliche Gruppen aufgeteilt werden. Der Bericht kann z. b. eine Gruppierung wie z.\<b. "12,85701" enthalten, während Berichts Benutzer in der Regel Gruppierungen mit ganzen Zahlen, wie z. b. 10-19, 20-29 usw., sehen.  
   
  Wenn Sie numerische Daten anders gruppieren möchten, müssen Sie die Daten vor der Analyse entsprechend segmentieren. Beispielsweise können Sie [das Tool neu](relabel-sql-server-data-mining-add-ins.md) bezeichnen im Data Mining-Client für Excel verwenden, um eine neue Gruppierungs Bezeichnung in einer separaten Spalte zu erstellen, und dann nur diese neue Spalte in der Analyse verwenden.  

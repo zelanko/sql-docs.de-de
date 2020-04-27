@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bdc8434673d9220f22d31f1736bd67012653dc88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069069"
 ---
 # <a name="server-configuration-utility-data-mining-add-ins-for-excel"></a>Serverkonfigurations-Hilfsprogramm (Data Mining-Add-Ins für Excel)
@@ -22,7 +22,7 @@ ms.locfileid: "66069069"
   
 
   
-##  <a name="bkmk_step1"></a>Schritt 1: Herstellen einer Verbindung mit Analysis Services  
+##  <a name="step-1-connect-to-analysis-services"></a><a name="bkmk_step1"></a>Schritt 1: Herstellen einer Verbindung mit Analysis Services  
  Wählen Sie den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Server aus, der die Data Mining-Algorithmen bereitstellt und auf dem die Data Mining-Modelle gespeichert werden.  
   
  Beim Erstellen einer Verbindung zum Ermöglichen des Data Mining sollten Sie einen Server auswählen, auf dem Sie mit Data Mining-Modellen experimentieren können. Es empfiehlt sich, dass Sie eine neue Datenbank auf dem Server erstellen und die neue Datenbank für das Data Mining reservieren. Sie können sich auch an Ihren Administrator wenden, damit dieser einen Data Mining-Server für Sie vorbereitet. Auf diese Weise können Sie Modelle erstellen, ohne dass die Leistung anderer Dienste beeinträchtigt wird.  
@@ -35,7 +35,7 @@ ms.locfileid: "66069069"
  **Authentifizierung**  
  Geben Sie die Authentifizierungsmethoden an. Die Windows-Authentifizierung ist für Verbindungen mit [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erforderlich, es sei denn, der Administrator hat den Zugriff auf den Server über die HTTPPump konfiguriert.  
   
-##  <a name="bkmk_step2"></a>Schritt 2: temporäre Modelle zulassen  
+##  <a name="step-2-allow-temporary-models"></a><a name="bkmk_step2"></a>Schritt 2: temporäre Modelle zulassen  
  Bevor Sie die Add-Ins verwenden können, muss eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Servereigenschaft geändert werden, um das Erstellen temporärer Miningmodelle zuzulassen.  
   
  Temporäre Mining Modelle werden auch als *Sitzungs Modelle*bezeichnet. Das liegt daran, dass die Modelle nur gespeichert werden, solange die aktuelle Sitzung geöffnet ist. Wenn Sie die Verbindung mit dem Server schließen, wird die Sitzung beendet, und alle während der Sitzung verwendeten Modelle werden gelöscht.  
@@ -44,7 +44,7 @@ ms.locfileid: "66069069"
   
  Der Assistent erkennt zuerst die Einstellungen auf dem Server, den Sie angegeben haben. Wenn der Server temporäre Mining Modelle bereits zulässt, klicken Sie auf **weiter, um** den Vorgang fortzusetzen. Der Assistent bietet zudem Anweisungen zum Aktivieren temporärer Miningmodelle auf dem angegebenen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Server sowie zum Senden von Anforderungen an den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Administrator.  
   
-##  <a name="bkmk_step3"></a>Schritt 3: Erstellen einer Datenbank für Add-in-Benutzer  
+##  <a name="step-3-create-database-for-add-in-users"></a><a name="bkmk_step3"></a>Schritt 3: Erstellen einer Datenbank für Add-in-Benutzer  
  Auf dieser Seite des Setup- und Konfigurations-Assistenten können Sie eine neue Datenbank erstellen, die für das Data Mining reserviert ist. Sie können aber auch eine vorhandene [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbank auswählen.  
   
 > [!WARNING]  
@@ -66,7 +66,7 @@ ms.locfileid: "66069069"
  **Datenbank**  
  Wenn Sie die Option zum Verwenden einer vorhandenen Datenbank ausgewählt haben, müssen Sie den Datenbanknamen in der Liste auswählen.  
   
-##  <a name="bkmk_step4"></a>Schritt 4: Add-in-Benutzern entsprechende Berechtigungen geben  
+##  <a name="step-4-give-add-in-users-appropriate-permissions"></a><a name="bkmk_step4"></a>Schritt 4: Add-in-Benutzern entsprechende Berechtigungen geben  
  Sie müssen sicherstellen, dass Sie (und alle anderen Benutzer, die die Add-Ins verwenden) über die erforderlichen Berechtigungen zum Durchsuchen, Bearbeiten, Verarbeiten oder Erstellen von Data Mining-Strukturen und -Modellen verfügen.  
   
  Standardmäßig ist die integrierte Windows-Authentifizierung erforderlich, um die Add-Ins zu verwenden.  

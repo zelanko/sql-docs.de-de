@@ -13,18 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 279302423cfe6c1fb9ecf28128b48c153e694e72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069207"
 ---
 # <a name="select-the-definition-method-data-mining-wizard"></a>Auswählen der Definitionsmethode (Data Mining-Assistent)
   Verwenden Sie die Seite **Definitionsmethode auswählen** , um die Quelle zum Erstellen des neuen Miningmodells auszuwählen. Die Menüführung im Assistenten ist abhängig von Ihrer Auswahl unterschiedlich, weil eine Miningstruktur, die auf einem Cube basiert, andere Erstellungsschritte als eine Miningstruktur erfordert, die auf einer relationalen Datenquelle basiert.  
   
- **Weitere Informationen finden** Sie unter [Erstellen einer relationalen Mining Struktur](data-mining/create-a-relational-mining-structure.md), [Data Mining-Assistent &#40;Analysis Services Data Mining-&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
+ **Weitere Informationen:** [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md), [Data Mining-Assistent &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Aus vorhandener relationaler Datenbank oder vorhandenem Data Warehouse**  
  Aktivieren Sie diese Option, um das Miningmodell aus einer vorhandenen relationalen Datenbank oder einem Data Warehouse zu erstellen.  
   

@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4e260825532f66205e301628f60d68d93f8e7c04
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059579"
 ---
 # <a name="deploy-projects-to-integration-services-server"></a>Deploy Projects to Integration Services Server
@@ -50,29 +50,29 @@ ms.locfileid: "66059579"
   
      Weitere Informationen zum Upgraden von Paketen finden Sie unter [Upgraden von Integration Services-Paketen](install-windows/upgrade-integration-services-packages.md) und [Upgraden von Integration Services-Paketen mit dem SSIS-Paketupgrade-Assistenten](install-windows/upgrade-integration-services-packages-using-the-ssis-package-upgrade-wizard.md).  
   
-3.  Stellen Sie das Projekt auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server bereit. Weitere Informationen finden Sie in den folgenden Anweisungen: [So stellen Sie ein Projekt auf dem Integration Services-Server bereit](#deploy).  
+3.  Stellen Sie das Projekt auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Server bereit. Weitere Informationen finden Sie in den folgenden Anweisungen: So stellen Sie [ein Projekt auf dem Integration Services Server](#deploy)bereit.  
   
 4.  (Optional) Erstellen Sie eine Umgebung für das bereitgestellte Projekt. Weitere Informationen finden Sie unter [Erstellen und Zuordnen einer Serverumgebung](../../2014/integration-services/create-and-map-a-server-environment.md).  
   
-##  <a name="convert"></a>So konvertieren Sie ein Projekt in das Projekt Bereitstellungs Modell  
+##  <a name="to-convert-a-project-to-the-project-deployment-model"></a><a name="convert"></a>So konvertieren Sie ein Projekt in das Projekt Bereitstellungs Modell  
   
 1.  Öffnen Sie das Projekt in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], und klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf das Projekt. Klicken Sie anschließend auf **In Projektbereitstellungsmodell konvertieren**.  
   
-     Oder  
+     - oder -  
   
      Klicken Sie im Objekt-Explorer in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]mit der rechten Maustaste auf den Knoten **Projekte** , und wählen Sie anschließend die Option **Pakete importieren**aus.  
   
 2.  Schließen Sie den Assistenten ab. Weitere Informationen finden Sie unter [Integration Services Project Conversion Wizard](../../2014/integration-services/integration-services-project-conversion-wizard.md).  
   
-##  <a name="deploy"></a>So stellen Sie ein Projekt auf dem Integration Services Server bereit  
+##  <a name="to-deploy-a-project-to-the-integration-services-server"></a><a name="deploy"></a>So stellen Sie ein Projekt auf dem Integration Services Server bereit  
   
 1.  Öffnen Sie das Projekt in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)], und wählen Sie dann im Menü **Projekt** die Option **Bereitstellen** aus, um den **Bereitstellungs-Assistent für Integration Services**zu starten.  
   
-     Oder  
+     - oder -  
   
-     Erweitern Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] den Knoten [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] > **SSISDB** im Objekt-Explorer, und navigieren Sie anschließend zum Projektordner des bereitzustellenden Projekts. Klicken Sie mit der rechten Maustaste auf den Ordner **Projekte** , und klicken Sie anschließend auf **Projekt bereitstellen**.  
+     Erweitern [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]Sie in Objekt-Explorer [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]  > den Knoten **ssisdb** , und suchen Sie den Ordner Projekte für das Projekt, das Sie bereitstellen möchten. Klicken Sie mit der rechten Maustaste auf den Ordner **Projekte** , und klicken Sie anschließend auf **Projekt bereitstellen**.  
   
-     Oder  
+     - oder -  
   
      Führen Sie an der Eingabeaufforderung **isdeploymentwizard.exe** unter dem Pfad **%ProgramFiles%\Microsoft SQL Server\110\DTS\Binn**aus. Auf 64-Bit-Computern steht auch eine 32-Bit-Version des Tools unter **%ProgramFiles(x86)%\Microsoft SQL Server\100\DTS\Binn**zur Verfügung.  
   

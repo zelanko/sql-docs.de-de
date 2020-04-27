@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f277abea585715f6a3656fffe7672f347233507
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069096"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>Registerkarte "Clusterprofile des Sequenzclustermodells" (Miningmodell-Viewer)
@@ -24,9 +24,9 @@ ms.locfileid: "66069096"
   
  Mit dieser Sicht eines Sequenzclustermodells erhalten Sie einen schnellen Überblick über die Gruppierung der vom Modell gefundenen Sequenzen. Sie können auf einen Blick sehen, wie viele Sequenzen lang bzw. kurz sind. Sie können auch auf einen Cluster klicken und die **Mininglegende** anzeigen, um genau sehen zu können, welche Status die Farben in den Sequenzen angeben.  
   
- **Weitere Informationen finden Sie unter:**  [Microsoft Sequence Clustering-Algorithmus](data-mining/microsoft-sequence-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Sequence Cluster-Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
+ **Weitere Informationen:**  [Microsoft Sequence Clustering-Algorithmus](data-mining/microsoft-sequence-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Sequenzcluster-Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "66069096"
  **Histogrammbalken**  
  Mit dieser Option können Sie die Anzahl der farbigen Balken im Histogramm ändern. Sind mehr Balken vorhanden, als Sie zum Anzeigen ausgewählt haben, werden die wichtigsten Balken beibehalten. Die restlichen Balken werden unter **Sonstige**gruppiert.  
   
- **Attribute** und **Cluster profile**  
+ **Attribute** und **Clusterprofile**  
  In diesem Abschnitt des Diagramms werden die Cluster von Sequenzen aufgeführt, die im Modell gefunden wurden.  
   
  Jeder Sequenzcluster wird mit der Anzahl der Status angezeigt, die Sie in der Option **Histogrammbalken**ausgewählt haben.  

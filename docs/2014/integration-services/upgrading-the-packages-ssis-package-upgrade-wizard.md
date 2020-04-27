@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 686354531b89a43cb2e9ddc669ff136ef7b87216
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054734"
 ---
 # <a name="upgrading-the-packages-ssis-package-upgrade-wizard"></a>Pakete werden aktualisiert (SSIS Paketupgrade-Assistent)
@@ -30,8 +30,8 @@ ms.locfileid: "66054734"
   
 -   Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]im Projektmappen-Explorer das [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt, und erweitern Sie dann den Knoten **SSIS-Pakete** , um die aktualisierten Pakete anzuzeigen.  
   
-## <a name="options"></a>Tastatur  
- **Meldungs Bereich**  
+## <a name="options"></a>Optionen  
+ **Bereich „Meldung“**  
  Zeigt während der Aktualisierung Statusmeldungen und Zusammenfassungsinformationen an.  
   
  **Aktion**  
@@ -46,7 +46,7 @@ ms.locfileid: "66054734"
  **Beenden**  
  Beenden Sie die Paketaktualisierung.  
   
- **Report**  
+ **Bericht**  
  Wählen Sie aus, wie Sie mit dem Bericht, der die Ergebnisse der Paketaktualisierung enthält, verfahren möchten:  
   
 -   Den Bericht online anzeigen  

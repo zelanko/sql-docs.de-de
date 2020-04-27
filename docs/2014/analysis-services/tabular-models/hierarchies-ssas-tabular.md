@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ed315372dce4b6de69da389e88bbcb95166e6e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067081"
 ---
 # <a name="hierarchies-ssas-tabular"></a>Hierarchien (SSAS – tabellarisch)
@@ -28,7 +28,7 @@ ms.locfileid: "66067081"
   
 -   [Verwandte Aufgaben](#bkmk_related_tasks)  
   
-##  <a name="bkmk_benefits"></a> Vorteile  
+##  <a name="benefits"></a><a name="bkmk_benefits"></a>Davon  
  Tabellen können Dutzende oder sogar Hunderte Spalten mit ungewöhnlichen Spaltennamen und ohne erkennbare Reihenfolge enthalten. Dies kann dazu führen, dass die Spalten in den Feldlisten von Berichterstellungsclients ungeordnet dargestellt werden, und es Benutzern erschweren, Daten zu finden und in einen Bericht einzuschließen. Hierarchien können eine übersichtliche und intuitive Ansicht einer andernfalls komplexen Datenstruktur bereitstellen.  
   
  Beispielsweise können Sie in einer Datumstabelle eine Kalenderhierarchie erstellen. Calendar Year wird als übergeordnetes Element oberster Ebene verwendet und verfügt über die untergeordneten Ebenen Month, Week und Day (Calendar Year->Month->Week->Day). In dieser Hierarchie wird eine logische Beziehung zwischen Kalenderjahr und Tag dargestellt. Anschließend kann ein Clientbenutzer das Kalenderjahr aus einer Feldliste auswählen, um alle Ebenen in eine PivotTable einzuschließen, oder die Hierarchie erweitern und nur bestimmte Ebenen auswählen, die in die PivotTable eingeschlossen werden sollen.  
@@ -39,7 +39,7 @@ ms.locfileid: "66067081"
   
  Hierarchien sollen nicht als Sicherheitsmechanismus verwendet werden, sondern als Tool zur Verbesserung der Benutzerfreundlichkeit. Die gesamte Sicherheit einer bestimmten Hierarchie wird vom zugrunde liegenden Modell geerbt. Hierarchien gewähren keinen Zugriff auf Modellobjekte, auf die ein Benutzer nicht bereits Zugriff hat. Die Sicherheit der Modelldatenbank muss geklärt werden, damit der Zugriff auf Objekte im Modell durch eine Hierarchie ermöglicht werden kann. Sicherheitsrollen können verwendet werden, um Modellmetadaten und Daten zu sichern. Weitere Informationen finden Sie unter [Rollen &#40;SSAS – tabellarisch&#41;](roles-ssas-tabular.md)erstellte tabellarische Modellprojekte.  
   
-##  <a name="bkmk_define"></a>Definieren von Hierarchien  
+##  <a name="defining-hierarchies"></a><a name="bkmk_define"></a>Definieren von Hierarchien  
  Hierarchien werden mit dem Modell-Designer in der Diagrammsicht erstellt und verwaltet. Das Erstellen und Verwalten von Hierarchien in der Datensicht des Modell-Designers wird nicht unterstützt. Um den Modell-Designer in der Diagrammsicht anzuzeigen, klicken Sie auf das Menü **Modell** , zeigen auf **Modellansicht**und klicken dann auf **Diagrammsicht**.  
   
  Um eine Hierarchie zu erstellen, klicken Sie mit der rechten Maustaste auf eine Spalte, die Sie als übergeordnete Ebene angeben möchten, und klicken Sie dann auf **Hierarchie erstellen**. Sie können eine beliebige Anzahl von Spalten (innerhalb einer einzelnen Tabelle) mithilfe einer Mehrfachauswahl einschließen oder später Spalten als untergeordnete Ebenen hinzufügen, indem Sie auf die Spalten klicken und sie in die übergeordnete Ebene ziehen. Bei der Auswahl mehrerer Spalten werden sie automatisch entsprechend ihrer Kardinalität angeordnet. Sie können die Reihenfolge ändern, indem Sie auf eine Spalte (Ebene) klicken und sie an eine andere Position ziehen, oder indem Sie die Navigationssteuerelemente Nach oben und Nach unten im Kontextmenü verwenden. Wenn Sie eine Spalte als untergeordnete Ebene hinzufügen, können Sie die automatische Erkennung nutzen, indem Sie die Spalte ziehen und auf der übergeordneten Ebene ablegen.  
@@ -50,15 +50,15 @@ ms.locfileid: "66067081"
   
  Nachdem Sie Hierarchien erstellt haben, können Sie deren Wirksamkeit mit der Funktion In Excel analysieren testen. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Analysieren in Excel &#40;SSAS – tabellarisch&#41;](analyze-in-excel-ssas-tabular.md)definieren.  
   
-##  <a name="bkmk_related_tasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="bkmk_related_tasks"></a> Verwandte Aufgaben  
   
-|Aufgabe|BESCHREIBUNG|  
+|Aufgabe|Beschreibung|  
 |----------|-----------------|  
-|[Erstellen und Verwalten von Hierarchien &#40;tabellarischen SSAS-&#41;](hierarchies-ssas-tabular.md)|Beschreibt, wie Hierarchien mit dem Modell-Designer in der Diagrammsicht erstellt und verwaltet werden.|  
+|[Erstellen und Verwalten von Hierarchien &#40;SSAS – tabellarisch&#41;](hierarchies-ssas-tabular.md)|Beschreibt, wie Hierarchien mit dem Modell-Designer in der Diagrammsicht erstellt und verwaltet werden.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Tabellen Modell-Designer &#40;tabellarischen SSAS-&#41;](../tabular-model-designer-ssas-tabular.md)   
  [Perspektiven &#40;tabellarischen SSAS-&#41;](perspectives-ssas-tabular.md)   
- [Rollen &#40;tabellarischen SSAS-&#41;](roles-ssas-tabular.md)  
+ [Rollen &#40;SSAS – tabellarisch&#41;](roles-ssas-tabular.md)  
   
   

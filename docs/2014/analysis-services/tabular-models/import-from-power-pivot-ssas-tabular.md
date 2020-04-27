@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 941155a5e434457cdf9c79bd25c653c7207937a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067018"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>Aus Power Pivot importieren (SSAS-tabellarisch)
@@ -42,12 +42,12 @@ ms.locfileid: "66067018"
   
 2.  Klicken Sie im Dialogfeld **Neues Projekt** unter **installierte Vorlagen**auf **Business Intelligence**, und klicken Sie dann auf **aus Power Pivot importieren**.  
   
-3.  Geben Sie unter **Name**einen Namen für das Projekt ein, geben Sie dann einen Speicherort und einen Projektmappennamen an, und klicken Sie dann auf **OK**.  
+3.  Geben Sie unter  **Name**einen Namen für das Projekt ein. Geben Sie dann einen Speicherort und einen Projektmappennamen an, und klicken Sie auf **OK**.  
   
 4.  Wählen Sie im Dialogfeld **Öffnen** die [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] -Datei aus, die die zu importierenden Modellmetadaten und -daten enthält, und klicken Sie dann auf **Öffnen**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Arbeitsbereichs Datenbank &#40;tabellarischen SSAS-&#41;](workspace-database-ssas-tabular.md)   
- [Kopieren und Einfügen von Daten &#40;tabellarischen SSAS-&#41;](../copy-and-paste-data-ssas-tabular.md)  
+ [Kopieren und Einfügen von Daten &#40;SSAS – tabellarisch&#41;](../copy-and-paste-data-ssas-tabular.md)  
   
   

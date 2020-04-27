@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1880ceffb03389bc87ee8f25d1817a5e4f593566
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056641"
 ---
 # <a name="query-builder"></a>Abfrage-Generator
@@ -26,13 +26,13 @@ ms.locfileid: "66056641"
   
  Mit dem Abfrage-Generator können die folgenden Aufgaben ausgeführt werden:  
   
--   **Arbeiten mit einer grafischen Darstellung einer Abfrage oder mit SQL-Befehlen** Abfrage-Generator enthält einen Bereich, in dem die Abfrage grafisch angezeigt wird, und einen Bereich, in dem der SQL-Text der Abfrage angezeigt wird. Sie können entweder im grafischen oder im Textfensterbereich arbeiten. Der Abfrage-Generator synchronisiert die Sichten, damit sie immer aktuell sind.  
+-   **Arbeiten mit einer grafischen Darstellung einer Abfrage oder mit SQL-Befehlen** Der Abfrage-Generator enthält einen Bereich, in dem eine Abfrage grafisch dargestellt wird, und einen Bereich, in dem der SQL-Text der Abfrage angezeigt wird. Sie können entweder im grafischen oder im Textfensterbereich arbeiten. Der Abfrage-Generator synchronisiert die Sichten, damit sie immer aktuell sind.  
   
--   Verknüpfte **Tabellen miteinander verbinden** Wenn Sie der Abfrage mehrere Tabellen hinzufügen, bestimmt Abfrage-Generator automatisch, wie die Tabellen verknüpft sind, und erstellt den entsprechenden Joinbefehl.  
+-   **Verbinden verknüpfter Tabellen** Wenn Sie der Abfrage mehrere Tabellen hinzufügen, bestimmt der Abfrage-Generator automatisch, wie die Tabellen miteinander in Beziehung stehen, und erstellt den geeigneten Joinbefehl.  
   
--   **Abfragen oder Aktualisieren von Datenbanken** Sie können Abfrage-Generator verwenden, um Daten mithilfe von Transact-SQL-SELECT-Anweisungen zurückzugeben und um Abfragen zu erstellen, mit denen Datensätze in einer Datenbank aktualisiert, hinzugefügt oder gelöscht werden.  
+-   **Abfragen oder Aktualisieren von Datenbanken** Sie können den Abfrage-Generator verwenden, um mithilfe von SELECT-Anweisungen von Transact-SQL Daten zurückzugeben und um Abfragen zu erstellen, die Datensätze einer Datenbank aktualisieren, einer Datenbank hinzufügen oder aus einer Datenbank löschen.  
   
--   **Sofortiges Anzeigen und Bearbeiten von Ergebnissen** Sie können die Abfrage ausführen und mit einem Recordset in einem Raster arbeiten, das es Ihnen ermöglicht, einen Bildlauf durchzuführen und Datensätze in der Datenbank zu bearbeiten.  
+-   **Sofortiges Anzeigen und Bearbeiten der Ergebnisse** Sie können die Abfrage ausführen und ein Recordset in einem Raster verwenden, das Ihnen das Durchführen eines Bildlaufs und Bearbeiten der Datensätze in der Datenbank ermöglicht.  
   
  Mit den grafischen Tools im Dialogfeld **Abfrage-Generator** können Sie Abfragen mithilfe von Drag &amp; Drop konstruieren. Standardmäßig erstellt der Abfrage-Generator SELECT-Abfragen. Sie können jedoch auch INSERT-, UPDATE- oder DELETE-Abfragen erstellen. Alle Typen von SQL-Anweisungen können im Dialogfeld **Abfrage-Generator** analysiert und ausgeführt werden. Weitere Informationen zu SQL-Anweisungen in Paketen finden Sie unter [Integration Services-Abfragen &#40;SSIS&#41;](integration-services-ssis-queries.md).  
   
@@ -42,14 +42,14 @@ ms.locfileid: "66056641"
   
  Die Transformationen für Suche und Fuzzysuche können ebenfalls Variablen mit Parametern und Rückgabecodes verwenden. Die Informationen zur OLE DB-Quelle gelten auch für diese beiden Transformationen.  
   
-## <a name="options"></a>Tastatur  
- **Symbolleiste**  
+## <a name="options"></a>Optionen  
+ **Suchfeld**  
  Mithilfe der Symbolleiste können Sie Datasets verwalten, Bereiche zur Anzeige auswählen und Abfragefunktionen steuern.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**Diagrammbereich ein-/ausblenden**|Blendet den **Diagramm** Bereich ein oder aus.|  
-|**Raster Bereich ein-/ausblenden**|Blendet den **Raster** Bereich ein oder aus.|  
+|**Diagrammbereich ein-/ausblenden**|Blendet den Bereich **Diagramm** ein oder aus.|  
+|**Rasterbereich ein-/ausblenden**|Blendet den Bereich **Raster** ein oder aus.|  
 |**SQL-Bereich ein-/ausblenden**|Blendet den **SQL** -Bereich ein oder aus.|  
 |**Ergebnisbereich ein-/ausblenden**|Blendet den Bereich **Ergebnisse** ein oder aus.|  
 |**Ausführen**|Führt die Abfrage aus. Ergebnisse werden im Ergebnisbereich angezeigt.|  
@@ -57,13 +57,13 @@ ms.locfileid: "66056641"
 |**Aufsteigend sortieren**|Sortiert die Ausgabezeilen der ausgewählten Spalte des Rasterbereichs in aufsteigender Reihenfolge.|  
 |**Absteigend sortieren**|Sortiert die Ausgabezeilen der ausgewählten Spalte des Rasterbereichs in absteigender Reihenfolge.|  
 |**Filter entfernen**|Wählen Sie einen Spaltennamen im Rasterbereich aus, und klicken Sie auf **Filter entfernen** , um die Sortierungskriterien aus der Spalte zu entfernen.|  
-|**Verwenden von Group by**|Fügt der Abfrage die GROUP BY-Funktionalität hinzu.|  
+|**GROUP BY verwenden**|Fügt der Abfrage die GROUP BY-Funktionalität hinzu.|  
 |**Tabelle hinzufügen**|Fügt der Abfrage eine neue Tabelle hinzu.|  
   
  **Abfrage Definition**  
  Die Abfragedefinition stellt eine Symbolleiste und Bereiche bereit, mit deren Hilfe die Abfrage definiert und getestet werden kann.  
   
-|Bereich|BESCHREIBUNG|  
+|Bereich|Beschreibung|  
 |----------|-----------------|  
 |**Diagramm** Bereich|Zeigt die Abfrage in einem Diagramm an. Das Diagramm zeigt die in der Abfrage enthaltenen Tabellen sowie die Art, wie diese miteinander verknüpft sind. Aktivieren oder deaktivieren Sie das Kontrollkästchen neben einer Spalte in einer Tabelle, um die entsprechende Spalte der Abfrageausgabe hinzuzufügen bzw. sie daraus zu entfernen.<br /><br /> Wenn Sie der Abfrage Tabellen hinzufügen, erstellt der Abfrage-Generator auf der Grundlage der Tabellen Joins zwischen Tabellen, abhängig von den Schlüsseln in der Tabelle. Um einen Join hinzuzufügen, ziehen Sie ein Feld aus einer Tabelle auf ein Feld in einer anderen Tabelle. Sie können den Join verwalten, indem Sie mit der rechten Maustaste auf den Join klicken und Optionen aus einem Menü wählen.<br /><br /> Klicken Sie mit der rechten Maustaste auf den Bereich **Diagramm** , um Tabellen hinzuzufügen oder zu entfernen, alle Tabellen auszuwählen und Bereiche anzuzeigen oder auszublenden.|  
 |**Raster** Bereich|Zeigt die Abfrage in einem Raster an. Sie können diesen Bereich verwenden, um der Abfrage Spalten hinzuzufügen bzw. Spalten daraus zu entfernen, sowie um die Einstellungen der einzelnen Spalten zu ändern.|  
@@ -72,8 +72,8 @@ ms.locfileid: "66056641"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL ausführen (Task)](control-flow/execute-sql-task.md)   
- [OLE DB-Quelle](data-flow/ole-db-source.md)   
- [OLE DB-Ziel](data-flow/ole-db-destination.md)   
+ [OLE DB Quelle](data-flow/ole-db-source.md)   
+ [OLE DB Ziel](data-flow/ole-db-destination.md)   
  [Transformation für Suche](data-flow/transformations/lookup-transformation.md)   
  [Integration Services &#40;SSIS-&#41; Abfragen](integration-services-ssis-queries.md)   
  [MERGE in Integration Services-Paketen](control-flow/merge-in-integration-services-packages.md)  

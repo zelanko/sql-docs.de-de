@@ -16,21 +16,20 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9a1d50afde56843942c470017a8534ffa797eb69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058153"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>Import und Export von Paketen (SSIS-Dienst)
     
 > [!IMPORTANT]  
->  In diesem Thema wird der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst beschrieben, ein Windows-Dienst zur Verwaltung von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen. 
-  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] unterstützt den Dienst für die Abwärtskompatibilität mit früheren Versionen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]können Sie Objekte, z. B. Pakete, auf dem Integration Services-Server verwalten.  
+>  In diesem Thema wird der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst beschrieben, ein Windows-Dienst zur Verwaltung von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] unterstützt den Dienst für die Abwärtskompatibilität mit früheren Versionen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]können Sie Objekte, z. B. Pakete, auf dem Integration Services-Server verwalten.  
   
  Pakete können in der sysssispackages-Tabelle in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -msdb-Datenbank oder im Dateisystem gespeichert werden.  
   
- Der Paketspeicher, bei dem es sich um den logischen Speicherort handelt, der vom [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Dienst überwacht und verwaltet wird, kann sowohl die msdb-Datenbank als auch die in der Konfigurationsdatei für den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Dienst angegebenen Dateisystemordner einschließen.  
+ Der Paketspeicher, bei dem es sich um den logischen Speicherort handelt, der vom [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst überwacht und verwaltet wird, kann sowohl die msdb-Datenbank als auch die in der Konfigurationsdatei für den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst angegebenen Dateisystemordner einschließen.  
   
  Sie können Pakete zwischen den folgenden Speichertypen importieren und exportieren:  
   
@@ -40,16 +39,14 @@ ms.locfileid: "66058153"
   
 -   Die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -msdb-Datenbank.  
   
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ermöglicht Ihnen das Importieren und Exportieren von Paketen. Damit können Sie das Speicherformat und den Speicherort der Pakete ändern. Mit den Import- und Export-Features können Sie Pakete zum Dateisystem, zum Paketspeicher oder zur msdb-Datenbank hinzufügen und Pakete aus einem Speicherformat in ein anderes Format kopieren. So können z.B. in msdb gespeicherte Pakete in das Dateisystem kopiert werden und umgekehrt.  
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ermöglicht Ihnen das Importieren und Exportieren von Paketen. Damit können Sie das Speicherformat und den Speicherort der Pakete ändern. Mit den Import- und Export-Features können Sie Pakete zum Dateisystem, zum Paketspeicher oder zur msdb-Datenbank hinzufügen und Pakete aus einem Speicherformat in ein anderes Format kopieren. So können z.B. in msdb gespeicherte Pakete in das Dateisystem kopiert werden und umgekehrt.  
   
  Zum Kopieren eines Pakets in ein anderes Format können Sie auch das Eingabeaufforderungs-Hilfsprogramm **dtutil** („dtutil.exe“) verwenden. Weitere Informationen finden Sie unter [dtutil Utility](dtutil-utility.md).  
   
 ## <a name="to-import-or-export-a-package"></a>So importieren oder exportieren Sie ein Paket  
   
 > [!IMPORTANT]  
->  In diesem Thema wird der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst erläutert, der Teil von [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]ist. 
-  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] unterstützt den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst aus Gründen der Abwärtskompatibilität mit [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Informationen zum Verwalten von Paketen in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] finden Sie unter [Integration Services-Server &#40;SSIS&#41;](catalog/integration-services-ssis-server-and-catalog.md).  
+>  In diesem Thema wird der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst erläutert, der Teil von [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]ist. [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] unterstützt den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst aus Gründen der Abwärtskompatibilität mit [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Informationen zum Verwalten von Paketen in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] finden Sie unter [Integration Services-Server &#40;SSIS&#41;](catalog/integration-services-ssis-server-and-catalog.md).  
   
  Sie können ein [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paket aus folgenden Speicherorten importieren bzw. in folgende Speicherorte exportieren:  
   
@@ -73,27 +70,27 @@ ms.locfileid: "66058153"
   
     -   Wählen Sie im Feld **Servertyp** die Option **Integration Services**aus.  
   
-    -   Geben Sie im Feld **Servername** einen Servernamen an, oder klicken Sie auf **\<Suche fortsetzen...>**, um nach dem zu verwendenden Server zu suchen.  
+    -   Geben Sie im Feld **Servername** einen Servernamen an, oder klicken Sie auf ** \<durchsuchen... >** , und suchen Sie den Server, der verwendet werden soll.  
   
 3.  Wenn der Objekt-Explorer nicht geöffnet ist, klicken Sie im Menü **Ansicht** auf **Objekt-Explorer**.  
   
-4.  Erweitern Sie in Objekt-Explorer den Ordner **gespeicherte Pakete** .  
+4.  Erweitern Sie im Objekt-Explorer den Ordner **Gespeicherte Pakete** .  
   
 5.  Erweitern Sie die Unterordner, um den Ordner zu suchen, in den Sie ein Paket importieren möchten.  
   
-6.  Klicken Sie mit der rechten Maustaste auf den Ordner, und wählen Sie **Paket importieren** aus. Führen Sie dann eine der folgenden Aktionen aus:  
+6.  Klicken Sie mit der rechten Maustaste auf den Ordner, und wählen Sie **Paket importieren**aus. Führen Sie dann eine der folgenden Aktionen aus:  
   
     -   Zum Importieren aus einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]wählen Sie die Option **SQL Server** aus, geben Sie den Server an, und wählen Sie den Authentifizierungsmodus aus. Wenn Sie die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Authentifizierung auswählen, geben Sie einen Benutzernamen und ein Kennwort ein.  
   
-         Klicken Sie auf die Schaltfläche mit den drei Punkten **(…)**, wählen Sie das zu importierende Paket aus, und klicken Sie auf **OK**.  
+         Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**, wählen Sie das zu importierende Paket aus, und klicken Sie auf **OK**  
   
     -   Zum Importieren aus dem Dateisystem wählen Sie die Option **Dateisystem** aus.  
   
-         Klicken Sie auf die Schaltfläche mit den drei Punkten **(…)**, wählen Sie das zu importierende Paket aus, und klicken Sie auf **Öffnen**.  
+         Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**, wählen Sie das zu importierende Paket aus, und klicken Sie auf **Öffnen**  
   
     -   Zum Importieren aus dem [!INCLUDE[ssIS](../includes/ssis-md.md)] -Paketspeicher wählen Sie die Option **SSIS-Paketspeicher** aus, und geben Sie den Server an.  
   
-         Klicken Sie auf die Schaltfläche mit den drei Punkten **(…)**, wählen Sie das zu importierende Paket aus, und klicken Sie auf **OK**.  
+         Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)**, wählen Sie das zu importierende Paket aus, und klicken Sie auf **OK**  
   
 7.  Aktualisieren Sie optional den Paketnamen.  
   
@@ -109,11 +106,11 @@ ms.locfileid: "66058153"
   
     -   Wählen Sie im Feld **Servertyp** die Option **Integration Services**aus.  
   
-    -   Geben Sie im Feld **Servername** einen Servernamen an, oder klicken Sie auf **\<Suche fortsetzen...>**, um nach dem zu verwendenden Server zu suchen.  
+    -   Geben Sie im Feld **Servername** einen Servernamen an, oder klicken Sie auf ** \<durchsuchen... >** , und suchen Sie den Server, der verwendet werden soll.  
   
 3.  Wenn der Objekt-Explorer nicht geöffnet ist, klicken Sie im Menü **Ansicht** auf **Objekt-Explorer**.  
   
-4.  Erweitern Sie in Objekt-Explorer den Ordner **gespeicherte Pakete** .  
+4.  Erweitern Sie im Objekt-Explorer den Ordner **Gespeicherte Pakete** .  
   
 5.  Erweitern Sie die Unterordner, um das Paket zu suchen, das Sie exportieren möchten.  
   

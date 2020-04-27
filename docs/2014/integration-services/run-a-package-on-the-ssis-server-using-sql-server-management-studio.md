@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9a598030000e5764cecc8ababa75ef2bdd8598ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056377"
 ---
 # <a name="run-a-package-on-the-ssis-server-using-sql-server-management-studio"></a>Ausführen eines Pakets auf dem SSIS-Server mit SQL Server Management Studio
@@ -30,11 +30,11 @@ ms.locfileid: "66056377"
   
 3.  Klicken Sie mit der rechten Maustaste auf den Paketnamen, und wählen Sie **Ausführen**aus.  
   
-4.  Konfigurieren Sie die Paket Ausführung, indem Sie die Einstellungen auf den Registerkarten **Parameter**, **Verbindungs-Manager**und **erweitert** im Dialogfeld **Paket ausführen** verwenden.  
+4.  Konfigurieren Sie die Paketausführung mit den Einstellungen im Dialogfeld **Paket ausführen**auf den Registerkarten **Parameter**, **Verbindungs-Managern** und **Erweitert** .  
   
 5.  Klicken Sie auf **OK** , um das Paket auszuführen.  
   
-     Oder  
+     - oder -  
   
      Verwenden Sie gespeicherte Prozeduren zum Ausführen des Pakets. Klicken Sie auf **Skript** , um die Transact-SQL-Anweisung zu generieren, die eine Instanz der Ausführung erstellt und startet. Die Anweisung enthält einen Aufruf der gespeicherten Prozeduren catalog.create_execution, catalog.set_execution_parameter_value und catalog.start_execution. Weitere Informationen zu diesen gespeicherten Prozeduren finden Sie unter [catalog.create_execution &#40;SSISDB-Datenbank&#41;](/sql/integration-services/system-stored-procedures/catalog-create-execution-ssisdb-database), [catalog.set_execution_parameter_value &#40;SSISDB-Datenbank&#41;](/sql/integration-services/system-stored-procedures/catalog-set-execution-parameter-value-ssisdb-database) und [catalog.start_execution &#40;SSISDB-Datenbank&#41;](/sql/integration-services/system-stored-procedures/catalog-start-execution-ssisdb-database).  
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f1399b14ec9345b9ca312db463ba5e508d9b9bbe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058047"
 ---
 # <a name="import-project-wizard"></a>Assistent zum Importieren von Projekten
@@ -46,6 +46,6 @@ ms.locfileid: "66058047"
   
 8.  Die Seite **Ergebnisse** sollte die Ergebnisse des Importvorgangs anzeigen, den der Assistent ausgeführt hat. Klicken Sie auf **Bericht speichern** , um den Bericht in einer XML-Datei zu speichern.  
   
-9. Klicken Sie auf **Schließen** , um den Assistenten zu schließen.  
+9. Klicken Sie auf **Schließen**, um den Assistenten zu schließen.  
   
   

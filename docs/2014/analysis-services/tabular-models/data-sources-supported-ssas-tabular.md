@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 345e733e5c1e90f637efab02a9942e307c2fb9f4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067378"
 ---
 # <a name="data-sources-supported-ssas-tabular"></a>Data Sources Supported (SSAS Tabular)
@@ -28,7 +28,7 @@ ms.locfileid: "66067378"
   
 -   [Tipps zum Auswählen von Datenquellen](#bkmk_tips)  
   
-##  <a name="bkmk_supported_ds"></a>Unterstützte Datenquellen  
+##  <a name="supported-data-sources"></a><a name="bkmk_supported_ds"></a>Unterstützte Datenquellen  
  Sie können Daten aus den Datenquellen in der folgenden Tabelle importieren. Bei der Installation von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]werden die für die einzelnen Datenquellen aufgelisteten Anbieter nicht von Setup installiert. Einige Anbieter wurden möglicherweise bereits mit anderen Anwendungen auf dem Computer installiert. In anderen Fällen müssen Sie den Anbieter herunterladen und installieren.  
   
 |||||  
@@ -45,10 +45,10 @@ ms.locfileid: "66067378"
 |Andere relationale Datenbanken|(–)|(–)|OLE DB-Anbieter oder ODBC-Treiber|  
 |Textdateien|(–)|.txt, .tab, .csv|ACE 14 OLE DB-Anbieter für Microsoft Access|  
 |Microsoft Excel-Dateien|Excel 97-2003, 2007, 2010|.xlsx, xlsm, .xlsb, .xltx, .xltm|ACE 14 OLE DB-Anbieter|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]Arbeitsmappe|Microsoft SQL Server 2008 R2 Analysis Services|XLSX, XLSM, XLSB, XLTX, XLTM|ASOLEDB 10.5<br /><br /> (wird nur für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen verwendet, die in SharePoint-Farmen veröffentlicht werden, in denen [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installiert ist)|  
+|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe|Microsoft SQL Server 2008 R2 Analysis Services|XLSX, XLSM, XLSB, XLTX, XLTM|ASOLEDB 10.5<br /><br /> (wird nur für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen verwendet, die in SharePoint-Farmen veröffentlicht werden, in denen [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] installiert ist)|  
 |Analysis Services-Cube|Microsoft SQL Server 2005, 2008, 2008 R2 Analysis Services|(–)|ASOLEDB 10|  
 |Datenfeeds<br /><br /> (wird verwendet, um Daten aus Reporting Services-Berichten, Atom-Dienstdokumenten, Microsoft Azure Marketplace DataMarket und einem einzelnen Datenfeed zu importieren)|Atom 1.0-Format<br /><br /> Sämtliche Datenbanken oder Dokumente, die als Windows Communication Foundation (WCF) Data Service (früher ADO.NET Data Services) verfügbar gemacht werden.|".atomsvc" für ein Dienstdokument, das einen oder mehrere Feeds definiert<br /><br /> ".atom" für ein Atom-Webfeeddokument|Microsoft-Datenfeedanbieter für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]<br /><br /> .NET Framework-Datenfeedanbieter für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
-|Office Database Connection-Dateien||.odc||  
+|Office Database Connection-Dateien||ODC||  
   
  <sup>1</sup> Sie können auch den OLE DB Anbieter für ODBC verwenden.  
   
@@ -58,12 +58,12 @@ ms.locfileid: "66067378"
   
  <sup>4</sup> in einigen Fällen kann die Verwendung des MSDAORA-OLE DB Anbieters zu Verbindungsfehlern führen, insbesondere bei neueren Versionen von Oracle. Treten Fehler auf, empfiehlt es sich, einen der anderen für Oracle aufgeführten Anbieter zu verwenden.  
   
-##  <a name="bkmk_unsupported_ds"></a>Nicht unterstützte Quellen  
+##  <a name="unsupported-sources"></a><a name="bkmk_unsupported_ds"></a>Nicht unterstützte Quellen  
  Die folgende Datenquelle wird derzeit nicht unterstützt:  
   
 -   Serverdokumente, wie bereits in SharePoint veröffentlichte Access-Datenbanken, können nicht importiert werden.  
   
-##  <a name="bkmk_tips"></a>Tipps zum Auswählen von Datenquellen  
+##  <a name="tips-for-choosing-data-sources"></a><a name="bkmk_tips"></a>Tipps zum Auswählen von Datenquellen  
   
 1.  Durch das Importieren von Tabellen aus relationalen Datenbanken ersparen Sie sich Schritte, da beim Import *Fremdschlüssel* beziehungen verwendet werden, um Beziehungen zwischen den Tabellen im Modell-Designer zu erstellen.  
   
@@ -75,6 +75,6 @@ ms.locfileid: "66067378"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenquellen &#40;tabellarischen SSAS-&#41;](../data-sources-ssas-tabular.md)   
- [Importieren von Daten &#40;tabellarischen SSAS-&#41;](../import-data-ssas-tabular.md)  
+ [Importieren von Daten &#40;SSAS – tabellarisch&#41;](../import-data-ssas-tabular.md)  
   
   

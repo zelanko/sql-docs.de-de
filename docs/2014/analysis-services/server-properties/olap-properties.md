@@ -96,14 +96,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4b26323f99d0b31cdb31e12b64eabdd2a855d907
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068872"
 ---
 # <a name="olap-properties"></a>OLAP-Eigenschaften
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt die in den folgenden Tabellen aufgeführten OLAP-Servereigenschaften. Weitere Informationen zu zusätzlichen Servereigenschaften und zum Festlegen dieser Eigenschaften finden Sie unter [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
   
  **Gilt für:** Nur mehrdimensionaler Server Modus  
@@ -328,7 +327,7 @@ ms.locfileid: "66068872"
   
      Der von diesen Cachespeichern genutzte Arbeitsspeicher gilt als nicht verkleinerbar und wird bei der Berechnung von **TotalMemoryLimit**berücksichtigt.  
   
--   Wirkt sich auf alle Datenbanken auf dem Server aus. **Dimensionpropertycachesize** ist eine Server weite Eigenschaft. Wenn Sie diese Eigenschaft ändern, wirkt sich dies auf alle Datenbanken aus, die auf der aktuellen Instanz ausgeführt werden.  
+-   Wirkt sich auf alle Datenbanken auf dem Server aus. **DimensionPropertyCachesize** ist eine serverweite Eigenschaft. Wenn Sie diese Eigenschaft ändern, wirkt sich dies auf alle Datenbanken aus, die auf der aktuellen Instanz ausgeführt werden.  
   
  Schätzen der Anforderungen für den Dimensionscache:  
   
@@ -480,6 +479,6 @@ ms.locfileid: "66068872"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Server Eigenschaften in Analysis Services](server-properties-in-analysis-services.md)   
- [Bestimmen des Server Modus einer Analysis Services Instanz](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+ [Bestimmen des Servermodus einer Analysis Services-Instanz](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
   

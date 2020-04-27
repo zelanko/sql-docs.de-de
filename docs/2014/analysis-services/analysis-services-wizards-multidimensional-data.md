@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b922581c657bc45a1bb404a1f803e7a525bb8d42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062389"
 ---
 # <a name="analysis-services-wizards-multidimensional-data"></a>Analysis Services-Assistenten (mehrdimensionale Daten)
@@ -24,7 +24,7 @@ ms.locfileid: "66062389"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Aggregationsentwurfs-Assistent (F1-Hilfe)](aggregation-design-wizard-f1-help.md)|Mithilfe des Aggregationsentwurfs-Assistenten können Sie Aggregationen entwerfen, die zum Erstellen von Aggregationsinstanzen für Partitionen in einer Measuregruppe verwendet werden.|  
 |[Business Intelligence-Assistent (F1-Hilfe)](business-intelligence-wizard-f1-help.md)|Mithilfe des Business Intelligence-Assistenten können Sie Cubes und Dimensionen erweiterte Business Intelligence-Funktionen hinzufügen, z. B. Kontointelligenz oder Währungsumrechnung.|  
@@ -37,7 +37,7 @@ ms.locfileid: "66062389"
 |[Assistent für verknüpfte Objekte (F1-Hilfe)](linked-object-wizard-f1-help.md)|Mithilfe des Assistenten für verknüpfte Objekte können Sie verknüpfte Dimensionen oder Measuregruppen definieren und verbundene Objekte optional importieren.|  
 |[Partitions-Assistent (F1-Hilfe &#40;Analysis Services-mehrdimensionalen Daten&#41;](partition-wizard-f1-help-analysis-services-multidimensional-data.md)|Mithilfe des Partitions-Assistenten können Sie Partitionen und Remotepartitionen definieren.|  
 |[Schemagenerierungs-Assistent F1-Hilfe &#40;Analysis Services-mehrdimensionalen Daten&#41;](schema-generation-wizard-f1-help-analysis-services-multidimensional-data.md)|Mithilfe des Schemagenerierungs-Assistenten können Sie Datenquellensichten definieren und optional Skripts für die relationalen Schemas der Datenquellensichten aus einem vorhandenen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekt in einer Datenquelle erstellen.|  
-|[Assistent für verwendungsbasierte Optimierung (F1-Hilfe)](usage-based-optimization-wizard-f1-help.md)|Mithilfe des Assistenten für verwendungsbasierte Optimierung können Sie Aggregationen für einen Aggregationsentwurf definieren, der auf Abfragen basiert, die im Abfrageprotokoll für eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbank gespeichert sind.|  
+|[Assistent für verwendungsbasierte Optimierung (F1-Hilfe)](usage-based-optimization-wizard-f1-help.md)|Mithilfe des Assistenten für verwendungsbasierte Optimierung können Sie Aggregationen für einen Aggregationsentwurf definieren, der auf Abfragen basiert, die im Abfrageprotokoll für eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank gespeichert sind.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Analysis Services Designer und Dialog Felder &#40;Mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

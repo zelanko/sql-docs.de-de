@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 23dee8cac6046223bf22ea52d1ceb4013a408050
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059058"
 ---
 # <a name="execute-package-task-editor"></a>Editor für den Task 'Paket ausführen'
@@ -26,21 +26,21 @@ ms.locfileid: "66059058"
   
  **Was möchten Sie tun?**  
   
--   [Editor für den Task ' Paket ausführen ' öffnen](#open)  
+-   [Öffnen des Editors für den Task "Paket ausführen"](#open)  
   
--   [Festlegen der Optionen auf der Seite "Allgemein"](#general)  
+-   [Festlegen der Optionen auf der Seite „Allgemein“](#general)  
   
 -   [Festlegen der Optionen auf der Seite "Paket"](#package)  
   
--   [Festlegen der Optionen auf der Seite "Parameter Bindungen"](#parameter)  
+-   [Festlegen der Optionen auf der Seite "Parameterbindungen"](#parameter)  
   
-##  <a name="open"></a>Editor für den Task ' Paket ausführen ' öffnen  
+##  <a name="open-the-execute-package-task-editor"></a><a name="open"></a>Editor für den Task ' Paket ausführen ' öffnen  
   
 1.  Öffnen Sie in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ein [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] -Projekt, das einen Task „Paket ausführen“ enthält.  
   
 2.  Klicken Sie im SSIS-Designer mit der rechten Maustaste auf den Task, und klicken Sie dann auf **Bearbeiten**.  
   
-##  <a name="general"></a>Festlegen der Optionen auf der Seite "Allgemein"  
+##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a>Festlegen der Optionen auf der Seite "Allgemein"  
  **Name**  
  Geben Sie einen eindeutigen Namen für den Task "Paket ausführen" an. Dieser Name wird im Tasksymbol als Bezeichnung verwendet.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66059058"
  **Beschreibung**  
  Geben Sie eine Beschreibung des Tasks "Paket ausführen" ein.  
   
-##  <a name="package"></a>Festlegen der Optionen auf der Seite "Paket"  
+##  <a name="set-the-options-on-the-package-page"></a><a name="package"></a>Festlegen der Optionen auf der Seite "Paket"  
  **ReferenceType**  
  Wählen Sie **Projektverweis** für untergeordnete Pakete im Projekt aus. Wählen Sie **Externer Verweis** für untergeordnete Pakete aus, die sich außerhalb des Pakets befinden.  
   
@@ -66,18 +66,18 @@ ms.locfileid: "66059058"
 ### <a name="referencetype-dynamic-options"></a>Dynamische Optionen für ReferenceType  
   
 #### <a name="referencetype--external-reference"></a>ReferenceType = Externer Verweis  
- **Location**  
+ **Speicherort**  
  Wählen Sie den Speicherort des untergeordneten Pakets aus. Diese Eigenschaft besitzt die in der folgenden Tabelle aufgeführten Optionen.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**SQL Server**|Legt den Speicherort als Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]fest.|  
 |**Dateisystem**|Legen Sie als Speicherort das Dateisystem fest.|  
   
- **Verbindung**  
+ **Connection**  
  Wählen Sie den Typ des Speicherorts für das untergeordnete Paket aus.  
   
- **Packagenamereadonly**  
+ **PackageNameReadOnly**  
  Zeigt den Paketnamen an.  
   
 #### <a name="referencetype--project-reference"></a>ReferenceType = Projektverweis  
@@ -87,32 +87,32 @@ ms.locfileid: "66059058"
 ### <a name="location-dynamic-options"></a>Dynamische Optionen für Location  
   
 #### <a name="location--sql-server"></a>Location = SQL Server  
- **Verbindung**  
- Wählen Sie in der Liste einen OLE DB-Verbindungs-Manager aus, oder klicken Sie auf \<**Neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
+ **Connection**  
+ Wählen Sie einen OLE DB Verbindungs-Manager aus der Liste aus \<, oder klicken Sie auf **neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
- **Verwandte Themen:** [OLE DB-Verbindungs-Manager](connection-manager/ole-db-connection-manager.md), [Konfigurieren von OLE DB-Verbindungs-Manager](../../2014/integration-services/configure-ole-db-connection-manager.md)  
+ **Verwandte Themen:** [OLE DB-Verbindungs-Manager](connection-manager/ole-db-connection-manager.md), [OLE DB-Verbindungs-Manager konfigurieren](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
  **PackageName**  
  Geben Sie den Namen des untergeordneten Pakets an, oder klicken Sie auf die Schaltfläche mit den drei Auslassungspunkten (...), um nach dem Paket zu suchen.  
   
 #### <a name="location--file-system"></a>Location = File system  
- **Verbindung**  
+ **Connection**  
  Wählen Sie einen Dateiverbindungs-Manager aus der Liste \<aus, oder klicken Sie auf **neue Verbindung...**>, um einen neuen Verbindungs-Manager zu erstellen.  
   
- **Verwandte Themen:** [Dateiverbindungs-Manager](connection-manager/file-connection-manager.md), [Dateiverbindungs-Manager-Editor](../../2014/integration-services/file-connection-manager-editor.md)  
+ **Verwandte Themen:** [File Connection Manager](connection-manager/file-connection-manager.md), [File Connection Manager Editor](../../2014/integration-services/file-connection-manager-editor.md)  
   
- **Packagenamereadonly**  
+ **PackageNameReadOnly**  
  Zeigt den Paketnamen an.  
   
-##  <a name="parameter"></a>Festlegen der Optionen auf der Seite "Parameter Bindungen"  
+##  <a name="set-the-options-on-the-parameter-bindings-page"></a><a name="parameter"></a>Festlegen der Optionen auf der Seite "Parameter Bindungen"  
  Sie können Werte aus dem übergeordneten Paket oder dem Projekt an das untergeordnete Paket übergeben. Das Projekt muss das Projektbereitstellungsmodell verwenden, und das untergeordnete Paket muss im gleichen Projekt enthalten sein wie das übergeordnete Paket.  
   
  Weitere Informationen zum Konvertieren eines Projekts in das Projektbereitstellungsmodell finden Sie unter [Bereitstellen von Projekten auf dem Integration Services-Server](../../2014/integration-services/deploy-projects-to-integration-services-server.md).  
   
- **Parameter des untergeordneten Pakets**  
+ **Untergeordneter Paketparameter**  
  Geben Sie einen Namen für den untergeordneten Paketparameter ein, oder wählen Sie diesen aus.  
   
- **Bindungs Parameter oder Variable**  
+ **Bindungsparameter oder Variable**  
  Wählen Sie den Parameter oder die Variable mit dem Wert aus, den Sie an das untergeordnete Paket übergeben möchten.  
   
  **Add (Hinzufügen)**  

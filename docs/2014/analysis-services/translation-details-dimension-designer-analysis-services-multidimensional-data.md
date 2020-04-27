@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f8debb50a798ba46457942e0e79a9d45ab392c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065845"
 ---
 # <a name="translation-details-translations-tab-dimension-designer-analysis-services---multidimensional-data"></a>Übersetzungsdetails (Registerkarte Übersetzungen, Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
@@ -28,7 +28,7 @@ ms.locfileid: "66065845"
   
 2.  Klicken Sie auf die Registerkarte **Übersetzungen** .  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Standardsprache**  
  Legt die Namen der Dimensionsobjekte in der Standardsprache fest.  
   
@@ -37,35 +37,31 @@ ms.locfileid: "66065845"
   
 -   Dimension  
   
-     
-  `Caption`- und `AttributeAllMember`-Eigenschaften  
+     `Caption`- und `AttributeAllMember`-Eigenschaften  
   
--   attribute  
+-   Attribut  
   
-     
-  `Caption`- `AttributeHierarchyDisplayFolder`-Eigenschaft und `NamingTemplate`-Eigenschaft  
+     `Caption`- `AttributeHierarchyDisplayFolder`-Eigenschaft und `NamingTemplate`-Eigenschaft  
   
     > [!NOTE]  
     >  Die `NamingTemplate`-Eigenschaft ist nur für übergeordnete Attribute verfügbar.  
   
 -   Hierarchy  
   
-     
-  `Caption`- und `AllMemberName`-Eigenschaften  
+     `Caption`- und `AllMemberName`-Eigenschaften  
   
 -   Ebene  
   
-     `Caption`Property  
+     `Caption`-Eigenschaft  
   
  **\<Sprach>**  
  Geben Sie den Eigenschaftswert des Dimensionsobjekts in der ausgewählten Sprache an, oder wählen Sie ihn aus. In Abhängigkeit von der bearbeiteten Eigenschaft werden zusätzliche Dialogfelder geöffnet, wenn Sie auf die Schaltfläche mit den Auslassungspunkten (**...**) klicken:  
   
--   `NamingTemplate`Property  
+-   `NamingTemplate`-Eigenschaft  
   
      Zeigt das [Dialogfeld „Vorlage zur Ebenenbenennung“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](level-naming-template-dialog-box-analysis-services-multidimensional-data.md) an.  
   
--   
-  `Caption`-Eigenschaft (für Attribute)  
+-   `Caption`-Eigenschaft (für Attribute)  
   
      Zeigt das [Dialogfeld „Attributdatenübersetzung“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](attribute-data-translation-dialog-box-analysis-services-multidimensional-data.md).  
   
@@ -87,13 +83,13 @@ ms.locfileid: "66065845"
 > [!NOTE]  
 >  Diese Option ist nur aktiviert, wenn Sie mit der rechten Maustaste auf eine Zelle geklickt haben, um die Übersetzungsspalte eines Attributs zu löschen.  
   
- **Beschriftungs Spalte bearbeiten**  
+ **Beschriftungsspalte bearbeiten**  
  Wählen Sie diese Option aus, um das Dialogfeld **Attributdatenübersetzung** anzuzeigen und um eine vorhandene Beschriftungsspalte zu bearbeiten, wenn Sie im Raster **Übersetzungsdetails** ein Attribut ändern.  
   
 > [!NOTE]  
->  Die Option ist nur aktiviert, wenn im Raster **Übersetzungs Details** eine Zelle in einer Übersetzungs Spalte ausgewählt werden muss, die eine Beschriftungs Spalte für ein Attribut enthält.  
+>   Die Option ist nur aktiviert, wenn im Raster der Übersetzungsdetails eine Zelle in einer Übersetzungsspalte ausgewählt werden muss, die eine Beschriftungsspalte für ein **** Attribut enthält.  
   
- **Beschriftungs Spalte löschen**  
+ **Beschriftungsspalte löschen**  
  Wählen Sie diese Option aus, um im Raster **Übersetzungsdetails** die Beschriftungsspalte für das ausgewählte Attribut zu löschen.  
   
 > [!NOTE]  

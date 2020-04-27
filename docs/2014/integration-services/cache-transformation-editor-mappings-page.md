@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e236fc3fd55d156dbe9dbf7aebe840541e1bee1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66061174"
 ---
 # <a name="cache-transformation-editor-mappings-page"></a>Cachetransformations-Editor (Seite 'Zuordnungen')
@@ -29,7 +29,7 @@ ms.locfileid: "66061174"
   
  Weitere Informationen zum Cacheverbindungs-Manager finden Sie unter [Cache Connection Manager](connection-manager/cache-connection-manager.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Eingabespalten den Zielspalten zuordnen.  
   
@@ -47,6 +47,6 @@ ms.locfileid: "66061174"
  Zeigt jede verfügbare Zielspalte an.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Cache Transformations-Editor &#40;Seite "Verbindungs-Manager"&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
+ [Cachetransformations-Editor &#40;Seite „Verbindungs-Manager“&#41;](../../2014/integration-services/cache-transformation-editor-connection-manager-page.md)  
   
   

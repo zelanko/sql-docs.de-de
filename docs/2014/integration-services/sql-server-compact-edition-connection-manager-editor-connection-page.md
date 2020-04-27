@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6e78e65bbc3f7503dbe4c49b2e45dc07e870e6bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055426"
 ---
 # <a name="sql-server-compact-edition-connection-manager-editor-connection-page"></a>Verbindungs-Manager-Editor für SQL Server Compact Edition (Seite Verbindung)
@@ -26,18 +26,18 @@ ms.locfileid: "66055426"
   
  Weitere Informationen zum [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact Edition-Verbindungs-Manager finden Sie unter [Verbindungs-Manager-Editor für SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md).  
   
-## <a name="options"></a>Tastatur  
- **Name und Pfad der Datenbankdatei eingeben**  
+## <a name="options"></a>Optionen  
+ **Name und Pfad der Datenbankdatei**  
  Geben Sie den Pfad und Dateinamen der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact-Datenbank ein.  
   
  **Durchsuchen**  
  Suchen Sie die gewünschte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact-Datenbankdatei über das Dialogfeld **Select SQL Server Compact Edition database** (SQL Server Compact Edition-Datenbankdatei auswählen).  
   
- **Daten Bank Kennwort eingeben**  
+ **Datenbankkennwort**  
  Geben Sie das Kennwort für die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact-Datenbank ein.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [SQL Server Compact Editions Verbindungs-Manager-Editor &#40;Seite alle&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)  
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Verbindungs-Manager-Editor für SQL Server Compact Edition &#40;Seite „Alle“&#41;](../../2014/integration-services/sql-server-compact-edition-connection-manager-editor-all-page.md)  
   
   

@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 05d48f3d23ce9e8c3eca83396d9413d82717fa3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062929"
 ---
 # <a name="action-organizer-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Aktionsplaner (Registerkarte 'Aktionen', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich **Aktionsplaner** der Registerkarte **Aktionen** im Cube-Designer können Sie auf die Aktionen zugreifen, die im angegebenen Cube enthalten sind.  
   
-## <a name="options"></a>Tastatur  
- **List**  
+## <a name="options"></a>Optionen  
+ **Liste**  
  Zeigt den Namen der Aktion an.  
   
  Wählen Sie eine Aktion aus, die im **Aktionsformular-Editor**angezeigt wird, eine Drillthroughaktion, die im **Drillthroughaktionsformular-Editor**angezeigt wird, oder eine Berichtsaktion, die im **Berichtsaktionsformular-Editor**angezeigt wird.  

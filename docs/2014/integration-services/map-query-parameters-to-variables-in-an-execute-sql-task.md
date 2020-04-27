@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8863de6fc0418dbf502492ac20f7c5c846696aea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057797"
 ---
 # <a name="map-query-parameters-to-variables-in-an-execute-sql-task"></a>Zuordnen von Abfrageparametern zu Variablen in einem Task SQL ausführen
@@ -58,7 +58,7 @@ ms.locfileid: "66057797"
     |Verbindungstyp|Parametermarkierung|  
     |---------------------|----------------------|  
     |ADO|?|  
-    |ADO.NET und SQLMOBILE|@\<Parameter Name>|  
+    |ADO.NET und SQLMOBILE|@\<Parametername>|  
     |ODBC|?|  
     |EXCEL und OLE DB|?|  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66057797"
     |Verbindungstyp|Parametername|  
     |---------------------|--------------------|  
     |ADO|Param1, Param2, …|  
-    |ADO.NET und SQLMOBILE|@\<Parameter Name>|  
+    |ADO.NET und SQLMOBILE|@\<Parametername>|  
     |ODBC|1, 2, 3, ...|  
     |EXCEL und OLE DB|0, 1, 2, 3, ...|  
   

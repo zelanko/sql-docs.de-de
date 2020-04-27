@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0f7921844b5d2281bd6ba9e51855ef37b816cc17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056579"
 ---
 # <a name="raw-file-destination-editor-columns-page"></a>Ziel-Editor für Rohdatendateien (Seite Spalten)
@@ -30,13 +30,13 @@ ms.locfileid: "66056579"
   
 -   [Festlegen von Optionen auf der Registerkarte "Spalten"](#mapping)  
   
-##  <a name="open"></a> Öffnen des Ziel-Editors für Rohdatendateien  
+##  <a name="open-the-raw-file-destination-editor"></a><a name="open"></a>Öffnen des Ziel-Editors für Rohdatendateien  
   
 1.  Fügen Sie das Rohdatendatei-Ziel in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] einem [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]-Paket hinzu.  
   
 2.  Klicken Sie mit der rechten Maustaste auf die Komponente, und klicken Sie anschließend auf **Bearbeiten**.  
   
-##  <a name="connection"></a> Festlegen der Optionen auf der Registerkarte "Verbindungs-Manager"  
+##  <a name="set-options-on-the-connection-manager-tab"></a><a name="connection"></a>Festlegen von Optionen auf der Registerkarte "Verbindungs-Manager"  
  **Zugriffsmodus**  
  Wählen Sie aus, wie der Dateiname angegeben wird. Wählen Sie **Dateiname** aus, um den Dateinamen und Pfad direkt einzugeben, oder **Dateiname aus Variable** , um eine Variable anzugeben, die den Dateinamen enthält.  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66056579"
   
  Wenn Sie auf die Schaltfläche klicken, wird eine Liste der Spalten angezeigt. Sie können auf "Abbrechen" klicken und die Spalten ändern, oder klicken Sie auf "OK", um das Erstellen der Datei fortzusetzen.  
   
-##  <a name="mapping"></a> Festlegen von Optionen auf der Registerkarte "Spalten"  
+##  <a name="set-options-on-the-columns-tab"></a><a name="mapping"></a>Festlegen von Optionen auf der Registerkarte "Spalten"  
  **Verfügbare Eingabespalten**  
  Wählen Sie mindestens eine Eingabespalte aus, die in die Rohdatendatei geschrieben werden soll.  
   

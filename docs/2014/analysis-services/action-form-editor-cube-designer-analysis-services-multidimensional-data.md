@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7c0a9b232a30fbaa4358bf9b23eb28ff16d79b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062959"
 ---
 # <a name="action-form-editor-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Aktionsformular-Editor (Registerkarte 'Aktionen', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
@@ -26,13 +26,13 @@ ms.locfileid: "66062959"
  **Name**  
  Geben Sie den Namen der Aktion ein.  
   
- **Aktions Ziel**  
+ **Aktionsziel**  
  Erweitern Sie diese Option, um die Optionen **Zieltyp** und **Zielobjekt** anzuzeigen.  
   
  **Zieltyp**  
  Wählen Sie den Typ des Objekts aus, dem die Aktion zugeordnet werden soll. Der Server gibt nur jene Aktionen an den Client zurück, die auf das Objekt vom angegebenen Typ angewendet werden. Die Aktion ist für den Client verfügbar, wenn die **Bedingung** erfüllt ist und die in der folgenden Tabelle angegebenen Objekte ausgewählt sind.  
   
-|value|Ausgewähltes Objekt|  
+|Wert|Ausgewähltes Objekt|  
 |-----------|---------------------|  
 |Attributelemente|Ein Element wird aus einer Ebene ausgewählt, die auf dem Attribut unter **Zielobjekt**basiert.|  
 |Zellen|Die benannte Menge in **Zielobjekt** wird ausgewählt. Wählen Sie **Alle Zellen** aus, um alle Zellen im Cube auszuwählen.|  
@@ -46,18 +46,18 @@ ms.locfileid: "66062959"
  **Zielobjekt**  
  Wählen Sie das Objekt aus, dem die Aktion zugeordnet werden soll. Die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz gibt nur die Aktionen an den Client zurück, die auf das ausgewählte Objekt angewendet werden. Die Liste der verfügbaren Objekte wird durch die Auswahl unter **Zieltyp**eingeschränkt.  
   
- **Bedingung (optional)**  
+ **Bedingung (Optional)**  
  Geben Sie einen MDX-Ausdruck (Multidimensional Expressions) ein, der eine optionale Bedingung für das Verwenden in Verbindung mit **Zielobjekt**beschreibt, wodurch die Verfügbarkeit der Aktion weiter eingeschränkt wird. Der Ausdruck muss einen booleschen Wert zurückgeben, der mit "True" anzeigt, dass die Aktion verfügbar ist.  
   
  Ziehen Sie ausgewählte Elemente aus dem Bereich **Berechnungstools** auf diese Option, um die MDX-Syntax für das ausgewählte Element einzuschließen.  
   
- **Aktions Inhalt**  
+ **Aktionsinhalt**  
  Erweitern Sie diese Option, um die Optionen **Typ** und **Aktionsausdruck** anzuzeigen.  
   
  **Typ**  
  Wählen Sie den Typ der Aktion aus, der verwendet werden soll, wenn die Aktion ausgeführt wird. Folgende Aktionstypen sind verfügbar:  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |Dataset|Gibt einen MDX-Ausdruck (Multidimensional Expressions) zurück, der ein mehrdimensionales Dataset darstellt, das von der Clientanwendung ausgeführt und angezeigt wird.|  
 |Proprietär|Gibt eine proprietäre Zeichenfolge zurück, die von Clientanwendungen interpretiert werden kann, die der Einstellung **Anwendung** für diese Aktion zugeordnet sind.|  
@@ -81,13 +81,13 @@ ms.locfileid: "66062959"
   
  Die folgende Tabelle beschreibt die verfügbaren Einstellungen.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |Batch|Die Aktion sollte als Teil eines Batchvorgangs oder eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Tasks ausgeführt werden.|  
-|Interactive|Die Aktion wird ausgeführt, wenn der Benutzer die Aktion aufruft.|  
+|Interactive (Interaktiv)|Die Aktion wird ausgeführt, wenn der Benutzer die Aktion aufruft.|  
 |Beim Öffnen|Die Aktion wird ausgeführt, wenn der Cube erstmalig geöffnet wird.|  
   
- **Anwendung**  
+ **Application**  
  Geben Sie den Namen der Anwendung ein, die die Zeichenfolge interpretieren kann, die von **Aktionsausdruck**zurückgegeben wurde.  
   
  Sie können diese Option auch verwenden, um zu ermitteln, welche Clientanwendung diese Aktion am häufigsten verwendet, oder um entsprechende Symbole neben der Aktion in einem Popupmenü anzuzeigen.  
@@ -98,7 +98,7 @@ ms.locfileid: "66062959"
  **Beschreibung**  
  Geben Sie die optionale Beschreibung der Aktion ein.  
   
- **Caption**  
+ **Unter**  
  Geben Sie die Beschriftung ein, die für die Aktion in der Clientanwendung angezeigt wird, wenn **Beschriftung ist MDX** auf **FALSE**festgelegt ist.  
   
  Geben Sie den MDX-Ausdruck (Multidimensional Expressions) ein, der eine Zeichenfolge für die Beschriftung zurückgibt, wenn **Beschriftung ist MDX** auf **TRUE**festgelegt ist.  

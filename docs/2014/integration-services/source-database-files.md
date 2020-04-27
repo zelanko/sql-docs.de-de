@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ac7d4b590fa5c3efccd16deebf3bafab83b74f6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66055538"
 ---
 # <a name="source-database-files"></a>Quelldatenbankdateien
@@ -24,14 +24,14 @@ ms.locfileid: "66055538"
   
  Um dieses Dialogfeld mit den Datenbankdateinamen und -speicherorten des Quellservers aufzufüllen, geben Sie zuerst auf der Seite **Datenbanken** des Dialogfelds **Editor für den Task 'Datenbanken übertragen'** die Parameter **SourceConnection** und **SourceDatabaseName** an.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Quelldatei**  
- Die Namen der zu übertragenden Datenbankdateien auf dem Quellserver. Die **Quelldatei** ist schreibgeschützt.  
+ Die Namen der zu übertragenden Datenbankdateien auf dem Quellserver. **Quelldatei** ist schreibgeschützt.  
   
  **Quellordner**  
- Der Ordner auf dem Quellserver, in dem sich die zu übertragenden Datenbankdateien befinden. Der **Quellordner** ist schreibgeschützt.  
+ Der Ordner auf dem Quellserver, in dem sich die zu übertragenden Datenbankdateien befinden. **Quellordner** ist schreibgeschützt.  
   
- **Netzwerkdatei Freigabe**  
+ **Netzwerkdateifreigabe**  
  Der auf dem Netzwerk freigegebene Ordner auf dem Quellserver, aus dem die Datenbankdateien übertragen werden sollen. Verwenden Sie die **Netzwerkdatei Freigabe** , wenn Sie eine Datenbank im Offline Modus übertragen, indem **Sie auf der** Seite **Datenbanken** des Dialog Felds Editor für den Task ' Datenbanken **übertragen** ' **DatabaseOffline** angeben.  
   
  Geben Sie den Speicherort der Netzwerkdateifreigabe ein, oder klicken Sie auf die Schaltfläche zum Durchsuchen **(…)**, um zu dieser Netzwerkdateifreigabe zu navigieren.  
@@ -39,8 +39,8 @@ ms.locfileid: "66055538"
  Beim Übertragen einer Datenbank im Offlinemodus werden die Datenbankdateien zunächst in den als **Netzwerkdateifreigabe** angegebenen Speicherort auf dem Quellserver kopiert, bevor sie auf den Zielserver übertragen werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor für den Task Datenbanken übertragen &#40;Seite Allgemein&#41;](general-page-of-integration-services-designers-options.md)   
- [Editor für den Task "Datenbanken übertragen" &#40;&#41;Seite](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
+ [Editor für den Task Datenbanken übertragen &#40;Seite Datenbanken&#41;](../../2014/integration-services/transfer-database-task-editor-databases-page.md)  
   
   

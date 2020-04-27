@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e044d001c88edef9d1e8d4ab453b85853994cf7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059956"
 ---
 # <a name="data-flow-path-editor-general-page"></a>Datenflusspfad-Editor (Seite Allgemein)
@@ -30,7 +30,7 @@ ms.locfileid: "66059956"
  **Name**  
  Geben Sie einen eindeutigen Namen für den Pfad an.  
   
- **id**  
+ **ID**  
  Der Herkunftsbezeichner des Pfads. Diese Eigenschaft ist schreibgeschützt.  
   
  **IdentificationString**  
@@ -42,7 +42,7 @@ ms.locfileid: "66059956"
  **PathAnnotation**  
  Geben Sie den Typ der zu verwendenden Anmerkung ein. Wählen Sie **Never** , um Anmerkungen zu deaktivieren, **AsNeeded** , um Anmerkungen bei Bedarf zu aktivieren, **SourceName** , um eine Anmerkung automatisch anhand des Werts der Option **SourceName** zu erzeugen, oder **PathName** , um eine Anmerkung automatisch aus dem Wert der **Name** -Eigenschaft zu erzeugen.  
   
- **Destinationname**  
+ **DestinationName**  
  Zeigt die Eingabe an, die das Ende des Pfads angibt.  
   
  **SourceName**  

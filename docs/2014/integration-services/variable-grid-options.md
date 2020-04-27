@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7b9da99cb8d88c3e01b034db50e67e02a2d125f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66054677"
 ---
 # <a name="variable-grid-options"></a>Variable Rasteroptionen
@@ -38,7 +38,7 @@ ms.locfileid: "66054677"
 ## <a name="options-for-columns"></a>Optionen für Spalten  
  Wählen Sie die Spalten aus, die im Fenster **Variablen** angezeigt werden sollen.  
   
--   **`Scope`**  
+-   **Scope**  
   
 -   **Datentyp**  
   
@@ -46,15 +46,15 @@ ms.locfileid: "66054677"
   
 -   **Namespace**  
   
--   **Ereignis bei Änderung des Variablen Werts aufschlagen**  
+-   **Ereignis bei Änderung des Variablenwertes auslösen**  
   
 -   **Beschreibung**  
   
--   **Ausdruck**  
+-   **expression**  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Fenster "Variablen"](../../2014/integration-services/variables-window.md)   
- [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS-&#41; Variablen](integration-services-ssis-variables.md)   
  [Verwenden von Variablen in Paketen](../../2014/integration-services/use-variables-in-packages.md)   
  [Integration Services-Ereignishandler &#40;SSIS&#41;](integration-services-ssis-event-handlers.md)  
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c7ff5b4488eaa4563a2415d754853bc8e33803bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057679"
 ---
 # <a name="merge-transformation-editor"></a>Transformations-Editor für Zusammenführen
@@ -29,8 +29,8 @@ ms.locfileid: "66057679"
   
  Weitere Informationen zur Transformation für Zusammenführen finden Sie unter [Merge Transformation](data-flow/transformations/merge-transformation.md).  
   
-## <a name="options"></a>Tastatur  
- **Name der Ausgabespalte**  
+## <a name="options"></a>Optionen  
+ **Name der Ausgabe Spalte**  
  Geben Sie den Namen der Ausgabespalte an.  
   
  **Eingabe 1 für Zusammenführen**  
@@ -40,9 +40,9 @@ ms.locfileid: "66057679"
  Wählen Sie die Spalte aus, die als Eingabe 2 für Zusammenführen zusammengeführt werden soll.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md)   
- [Transformation für Zusammenführungsjoin](data-flow/transformations/merge-join-transformation.md)   
+ [Merge Join-Transformation](data-flow/transformations/merge-join-transformation.md)   
  [Transformation für UNION ALL](data-flow/transformations/union-all-transformation.md)  
   
   

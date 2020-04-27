@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4c9fb11308ae60cf061f184ade467d814d6a10fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66058304"
 ---
 # <a name="fuzzy-lookup-transformation-editor-reference-table-tab"></a>Transformations-Editor für Fuzzysuche (Registerkarte Verweistabelle)
@@ -32,7 +32,7 @@ ms.locfileid: "66058304"
   
  Weitere Informationen zur Transformation für Fuzzysuche finden Sie unter [Fuzzy Lookup Transformation](data-flow/transformations/lookup-transformation.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **OLE DB Verbindungs-Manager**  
  Wählen Sie einen vorhandenen OLE DB-Verbindungs-Manager aus der Liste aus, oder erstellen Sie eine neue Verbindung, indem Sie auf **Neu**klicken.  
   
@@ -42,13 +42,13 @@ ms.locfileid: "66058304"
  **Neuen Index generieren**  
  Geben Sie an, dass die Transformation einen neuen Index erstellen soll, der für die Suche verwendet wird.  
   
- **Name der Verweis Tabelle**  
+ **Name der Verweistabelle**  
  Wählen Sie die vorhandene Tabelle aus, die als Verweis-(Such-)Tabelle verwendet werden soll.  
   
  **Neuen Index speichern**  
  Wählen Sie diese Option aus, wenn Sie den neuen Suchindex speichern möchten.  
   
- **Neuer Indexname**  
+ **Name des neuen Indexes**  
  Wenn Sie den neuen Suchindex speichern möchten, geben Sie einen beschreibenden Namen für den Index ein.  
   
  **Gespeicherten Index beibehalten**  
@@ -66,8 +66,8 @@ ms.locfileid: "66058304"
  Wählen Sie einen zu einem früheren Zeitpunkt erstellten Index aus der Liste aus.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
- [Transformations-Editor für Fuzzysuche &#40;Registerkarte „Spalten“&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-columns-tab.md)   
- [Transformations-Editor für Fuzzysuche &#40;Registerkarte Erweitert&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Transformations-Editor für Fuzzysuche &#40;Registerkarte Spalten&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-columns-tab.md)   
+ [Transformations-Editor für Fuzzysuche &#40;Registerkarte „Erweitert“&#41;](../../2014/integration-services/fuzzy-lookup-transformation-editor-advanced-tab.md)  
   
   

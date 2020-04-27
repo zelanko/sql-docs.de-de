@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3211a79c21f4c180590b53e869f9a19939b0dd19
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059457"
 ---
 # <a name="development-of-an-integration-services-project"></a>Entwicklung eines Integration Services-Projekts
@@ -35,7 +35,7 @@ ms.locfileid: "66059457"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
--   [Erstellen eines neuen Integration Services Projekts](../../2014/integration-services/create-a-new-integration-services-project.md)  
+-   [Erstellen eines neuen SQL Server Integration Services-Projekts](../../2014/integration-services/create-a-new-integration-services-project.md)  
   
 -   [Hinzufügen eines Elements zu einem Integration Services-Projekt](../../2014/integration-services/add-an-item-to-an-integration-services-project.md)  
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b19a94e71eaef45184c1777ce299809b2b2d7f8d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66057131"
 ---
 # <a name="odbc-source-editor-error-output-page"></a>Quellen-Editor für ODBC (Seite Fehlerausgabe)
@@ -33,7 +33,7 @@ ms.locfileid: "66057131"
   
 -   Klicken Sie im **Quellen-Editor für ODBC**auf **Fehlerausgabe**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 ### <a name="inputoutput"></a>Eingabe/Ausgabe  
  Zeigt den Namen der Datenquelle an.  
@@ -47,7 +47,7 @@ ms.locfileid: "66057131"
 ### <a name="truncation"></a>Abschneiden  
  Wählen Sie aus, wie die ODBC-Quelle Kürzungen in einem Fluss behandeln soll: Fehler ignorieren, Zeile umleiten oder Komponente mit einem Fehler abbrechen.  
   
-### <a name="description"></a>BESCHREIBUNG  
+### <a name="description"></a>Beschreibung  
  Wird nicht verwendet.  
   
 ### <a name="set-this-value-to-selected-cells"></a>Diesen Wert für ausgewählte Zellen festlegen  
@@ -69,7 +69,7 @@ ms.locfileid: "66057131"
  Die Zeile, die den Fehler oder die Kürzung verursacht, wird an die Fehlerausgabe der ODBC-Quelle umgeleitet. Weitere Informationen finden Sie unter [ODBC Source](data-flow/odbc-source.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Quellen-Editor für ODBC &#40;Seite Verbindungs-Manager&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
+ [Der Quellen-Editor für ODBC &#40;Verbindungs-Manager-Seite&#41;](../../2014/integration-services/odbc-source-editor-connection-manager-page.md)   
  [Quellen-Editor für ODBC &#40;Seite „Spalten“&#41;](../../2014/integration-services/odbc-source-editor-columns-page.md)  
   
   

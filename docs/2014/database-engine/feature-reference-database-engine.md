@@ -14,14 +14,13 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 408b6b605e14fd5e7aa52cd0df7fba13b225c20c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66064832"
 ---
 # <a name="feature-reference-database-engine"></a>Funktionsreferenz (Datenbank-Engine)
-  
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] enthält zahlreiche Tools und Anwendungen, die Sie zum Erstellen, Verwalten und Anzeigen von Datenbankobjekten und Daten verwenden können. Daneben stehen Tools zur Verfügung, mit denen Sie die Server- und die Datenbankleistung überwachen und etwaige Fehler beheben sowie Funktionen, Dienste und Netzwerkprotokolle aktivieren und deaktivieren können. Dieser Abschnitt enthält Themen zu den einzelnen Dialogfeldern dieser Tools und Anwendungen.  
   
  Um während der Ausführung eines Tools oder einer Anwendung auf ein Thema zur Benutzeroberfläche zuzugreifen, drücken Sie F1. Sie können auch auf <localizedText>Hilfe</localizedText> klicken, während das Dialogfeld, die Webseite oder der Assistent geöffnet ist.  

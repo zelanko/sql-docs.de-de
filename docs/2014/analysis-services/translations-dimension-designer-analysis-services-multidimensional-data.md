@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7d879ffb8f02b41c4cc6c070946c737f9aea2c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065729"
 ---
 # <a name="translations-dimension-designer-analysis-services---multidimensional-data"></a>Übersetzungen (Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
@@ -25,7 +25,7 @@ ms.locfileid: "66065729"
 ## <a name="panes"></a>Bereiche  
  Die Registerkarte **Übersetzungen** enthält die folgenden Bereiche:  
   
- [Symbolleiste](toolbar-translations-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Suchfeld](toolbar-translations-dimension-designer-analysis-services-multidimensional-data.md)  
  Mithilfe der Symbolleiste können Sie gängige Aktionen auf der Registerkarte **Übersetzungen** des Dimensions-Designers ausführen.  
   
  [Übersetzungsdetails](translation-details-dimension-designer-analysis-services-multidimensional-data.md)  

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5e889c4da9e20a547f5a512f4aab1ee823bde5f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66056181"
 ---
 # <a name="script-task-editor-general-page"></a>Skripttask-Editor (Seite Allgemein)
@@ -37,9 +37,9 @@ ms.locfileid: "66056181"
  Geben Sie eine Beschreibung des Skripttasks ein.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Skript Task-Editor &#40;Skript Seite&#41;](../../2014/integration-services/script-task-editor-script-page.md)   
- [Seite Ausdrücke](expressions/expressions-page.md)   
+ [Ausdrucks Seite](expressions/expressions-page.md)   
  [Skripttask-Beispiele](extending-packages-scripting-task-examples/script-task-examples.md)  
   
   

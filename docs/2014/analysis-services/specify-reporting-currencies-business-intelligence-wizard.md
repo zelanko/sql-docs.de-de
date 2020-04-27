@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1be12aae3f4b4907fe7464aab1ea4bef6ff5f8dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068211"
 ---
 # <a name="specify-reporting-currencies-business-intelligence-wizard"></a>Währungen für die Berichterstellung angeben (Business Intelligence-Assistent)
@@ -25,7 +25,7 @@ ms.locfileid: "66068211"
 > [!NOTE]  
 >  Diese Seite wird nicht angezeigt, wenn der Business Intelligence-Assistent vom Dimensions-Designer aus oder durch Klicken mit der rechten Maustaste auf eine Dimension im Projektmappen-Explorer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]gestartet wurde. Des Weiteren wird diese Seite nicht angezeigt, wenn auf der Seite **Umrechnungstyp auswählen** die Option **m:1** ausgewählt wurde.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Berichts Währungen**  
  Wählen Sie **Berichtswährungen** aus, um alle in der Währungsdimension aufgeführten Elemente in die Berichtswährungsdimension einzuschließen. Deaktivieren Sie **Berichtswährungen** , um alle aufgeführten Elemente auszuschließen.  
   

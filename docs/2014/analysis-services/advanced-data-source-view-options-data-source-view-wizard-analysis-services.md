@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 40a1c9ab87a608aa9d39f77fb4693acdc1b57efa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062846"
 ---
 # <a name="advanced-data-source-view-options-dialog-box-data-source-view-wizard-analysis-services"></a>Erweiterte Optionen für Datenquellensicht (Dialogfeld) (Datenquellensicht-Assistent) (Analysis Services)
@@ -24,7 +24,7 @@ ms.locfileid: "66062846"
   
  Zum Öffnen des Dialogfelds **Erweiterte Optionen für Datenquellensicht** klicken Sie im Datenquellensicht-Assistenten auf der Seite **Datenquelle auswählen** auf **Erweitert**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Beziehungen abrufen**  
  Zeigt an, ob Details zu Beziehungen von der Datenquelle abgerufen und auf die Datenquellensicht angewendet werden sollen. Wenn Sie diese Option nach dem Erstellen der Beziehungen ändern, werden keine vorhandenen Beziehungen aus der Datenquellensicht entfernt.  
   

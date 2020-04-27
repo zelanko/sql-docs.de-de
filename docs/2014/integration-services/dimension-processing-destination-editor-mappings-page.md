@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6eaf39005e6c5d1d5cf401738fe82f3c97cdf693
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66059411"
 ---
 # <a name="dimension-processing-destination-editor-mappings-page"></a>Ziel-Editor für Dimensionsverarbeitung (Seite Zuordnungen)
@@ -26,7 +26,7 @@ ms.locfileid: "66059411"
   
  Weitere Informationen zum Ziel für Dimensionsverarbeitung finden Sie unter [Dimension Processing Destination](data-flow/dimension-processing-destination.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verfügbare Eingabespalten**  
  Zeigt die Liste der verfügbaren Eingabespalten an. Mithilfe eines Drag-und-Drop-Vorgangs können Sie verfügbare Eingabespalten in der Tabelle Zielspalten zuordnen.  
   
@@ -40,8 +40,8 @@ ms.locfileid: "66059411"
  Zeigt alle verfügbaren Zielspalten unabhängig davon an, ob sie zugeordnet sind oder nicht.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Ziel-Editor für Dimensions Verarbeitung &#40;Seite Verbindungs-Manager&#41;](../../2014/integration-services/dimension-processing-destination-editor-connection-manager-page.md)   
- [Ziel-Editor für Dimensions Verarbeitung &#40;Seite "Erweitert"&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
+ [Ziel-Editor für Dimensionsverarbeitung &#40;Seite „Erweitert“&#41;](../../2014/integration-services/dimension-processing-destination-editor-advanced-page.md)  
   
   

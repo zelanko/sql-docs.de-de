@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4a541c86029be9a438492a851c0eb16d18120f75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66065032"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>Erstellen einer Sitzung für erweiterte Ereignisse mit dem Abfrage-Editor
@@ -35,7 +35,7 @@ ms.locfileid: "66065032"
   
  Informationen dazu, wie Sie eine Extended Events-Sitzung mit dem Assistenten für neue Sitzung erstellen, finden Sie unter [Erstellen einer Sitzung für erweiterte Ereignisse mithilfe des Assistenten &#40;Objekt-Explorer&#41;](../ssms/object/object-explorer.md). Informationen dazu, wie Sie eine Extended Events-Sitzung mit dem Assistenten für neue Sitzung erstellen, finden Sie unter [Quick Start: Extended events in SQL Server](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md) (Schnellstart: Erweiterte Ereignisse in SQL Server).  
   
-##  <a name="BeforeYouBegin"></a> Berechtigungen  
+##  <a name="permissions"></a><a name="BeforeYouBegin"></a> Berechtigungen  
  Zum Erstellen einer Sitzung für erweiterte Ereignisse müssen Sie über die ALTER ANY EVENT SESSION-Berechtigung verfügen.  
   
 ## <a name="creating-an-extended-events-session-using-query-editor"></a>Erstellen einer Sitzung für erweiterte Ereignisse mit dem Abfrage-Editor  
@@ -47,7 +47,7 @@ ms.locfileid: "66065032"
      Bestimmen Sie, welche Ereignisse Sie in der Sitzung verwenden möchten. Um alle verfügbaren Ereignisse zusammen mit dem Schlüsselwort und dem Kanal anzuzeigen, verwenden Sie die folgende Abfrage:  
   
     > [!NOTE]  
-    >  Weitere Informationen zu Schlüsselwörtern und Kanälen finden Sie unter [SQL Server Paketen für erweiterte Ereignisse](../relational-databases/extended-events/sql-server-extended-events-packages.md).  
+    >  Informationen zu Schlüsselwörtern und Kanälen finden Sie unter [Pakete für erweiterte Ereignisse von SQL Server](../relational-databases/extended-events/sql-server-extended-events-packages.md).  
   
     ```  
     SELECT p.name, c.event, k.keyword, c.channel, c.description FROM  
@@ -92,7 +92,7 @@ ms.locfileid: "66065032"
     ADD EVENT package_name.event_name  
     ```  
   
-     Beispiel:  
+     Zum Beispiel:  
   
     ```  
     ADD EVENT sqlserver.file_read_completed,  
@@ -129,7 +129,7 @@ ms.locfileid: "66065032"
         AND column_type = 'data'  
         ```  
   
-         Beispiel:  
+         Zum Beispiel:  
   
         ```  
         SELECT *   
@@ -184,14 +184,14 @@ ms.locfileid: "66065032"
     ```  
   
     > [!NOTE]  
-    >  Weitere Informationen zu den unterschiedlichen Zieltypen finden Sie unter [SQL Server Ziele für erweiterte Ereignisse](../../2014/database-engine/sql-server-extended-events-targets.md).  
+    >  Informationen zu den unterschiedlichen Zieltypen finden Sie unter [Ziele für erweiterte Ereignisse von SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md).  
   
 6.  Überprüfen Sie alle zusätzlichen Konfigurationsoptionen, und fügen Sie sie hinzu. Sie können Optionen konfigurieren, beispielsweise den Ereignisbeibehaltungsmodus, wie lange Ereignisse im Arbeitsspeicher gepuffert werden, oder ob die Ereignissitzung automatisch gestartet werden soll, wenn [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] gestartet wird. In diesem Thema werden die Optionen beschrieben: [ALTER EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-event-session-transact-sql). Beachten Sie, dass Standardwerte zugewiesen werden, wenn diese Optionen nicht angegeben werden.  
   
 7.  Starten Sie die Sitzung.  
   
     > [!NOTE]  
-    >  Weitere Informationen zum Anzeigen der Sitzungs Ergebnisse finden Sie im entsprechenden Thema für den Zieltyp, den Sie im Knoten [SQL Server Ziele für erweiterte Ereignisse](../../2014/database-engine/sql-server-extended-events-targets.md) der-Online Dokumentation verwendet haben.  
+    >  Weitere Informationen zum Anzeigen der Sitzungsergebnisse finden Sie im entsprechenden Thema für den verwendeten Zieltyp im Knoten [Ziele für erweiterte Ereignisse von SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md) der Onlinedokumentation.  
   
  Im folgenden Beispiel wird eine Sitzung für erweiterte Ereignisse mit dem Namen "IOActivity" erstellt, die die folgenden Informationen aufzeichnet:  
   
@@ -219,8 +219,8 @@ ADD TARGET package0.asynchronous_file_target
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [CREATE EVENT SESSION &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
- [Ziele für erweiterte Ereignisse von SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)   
+ [Erstellen einer Ereignis Sitzung &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-event-session-transact-sql)   
+ [Ziele für erweiterte Ereignisse SQL Server](../../2014/database-engine/sql-server-extended-events-targets.md)   
  [Pakete für erweiterte Ereignisse von SQL Server](../relational-databases/extended-events/sql-server-extended-events-packages.md)  
   
   

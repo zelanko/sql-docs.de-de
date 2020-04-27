@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: cef2c37c2775b1b5bd46e04f214d8ae77ee7b56d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060549"
 ---
 # <a name="configure-ole-db-connection-manager"></a>OLE DB-Verbindungs-Manager konfigurieren
@@ -26,7 +26,7 @@ ms.locfileid: "66060549"
   
  Weitere Informationen zum OLE DB-Verbindungs-Manager finden Sie unter [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Datenverbindungen**  
  Wählen Sie aus der Liste eine vorhandene OLE DB-Datenverbindung aus.  
   
