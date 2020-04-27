@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 4cd8788d19b06329d0280efc43a13a9a218e056c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899369"
 ---
 # <a name="sysdm_pdw_node_status-transact-sql"></a>sys. dm_pdw_node_status (Transact-SQL)
@@ -24,18 +24,18 @@ ms.locfileid: "67899369"
 
   Enthält zusätzliche Informationen zur Leistung und zum Status aller Geräteknoten (über [sys. dm_pdw_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md)). Es wird eine Zeile pro Knoten in der Appliance aufgelistet.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|Range|  
+|Spaltenname|Datentyp|Beschreibung|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**|Eindeutige numerische ID, die dem Knoten zugeordnet ist.<br /><br /> Der Schlüssel für diese Ansicht.|In der gesamten Appliance eindeutig, unabhängig vom Typ.|  
 |process_id|**int**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
 |process_name|**nvarchar(255)**|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]||  
-|allocated_memory|**BIGINT**|Insgesamt zugeordneter Arbeitsspeicher auf diesem Knoten.||  
-|available_memory|**BIGINT**|Gesamter verfügbarer Arbeitsspeicher auf diesem Knoten.||  
-|process_cpu_usage|**BIGINT**|Gesamte Prozess-CPU-Auslastung in Ticks.||  
-|total_cpu_usage|**BIGINT**|Gesamte CPU-Auslastung in Ticks.||  
-|thread_count|**BIGINT**|Die Gesamtanzahl der Threads, die auf diesem Knoten verwendet werden.||  
-|handle_count|**BIGINT**|Die Gesamtanzahl von Handles, die auf diesem Knoten verwendet werden.||  
-|total_elapsed_time|**BIGINT**|Gesamtzeit seit dem Start oder Neustart des Systems.|Gesamtzeit seit dem Start oder Neustart des Systems. Wenn total_elapsed_time den maximalen Wert für eine ganze Zahl (24,8 Tage in Millisekunden) überschreitet, führt dies zu einem Materialisierungs Fehler aufgrund eines Überlaufs.<br /><br /> Der maximale Wert in Millisekunden entspricht 24,8 Tagen.|  
+|allocated_memory|**bigint**|Insgesamt zugeordneter Arbeitsspeicher auf diesem Knoten.||  
+|available_memory|**bigint**|Gesamter verfügbarer Arbeitsspeicher auf diesem Knoten.||  
+|process_cpu_usage|**bigint**|Gesamte Prozess-CPU-Auslastung in Ticks.||  
+|total_cpu_usage|**bigint**|Gesamte CPU-Auslastung in Ticks.||  
+|thread_count|**bigint**|Die Gesamtanzahl der Threads, die auf diesem Knoten verwendet werden.||  
+|handle_count|**bigint**|Die Gesamtanzahl von Handles, die auf diesem Knoten verwendet werden.||  
+|total_elapsed_time|**bigint**|Gesamtzeit seit dem Start oder Neustart des Systems.|Gesamtzeit seit dem Start oder Neustart des Systems. Wenn total_elapsed_time den maximalen Wert für eine ganze Zahl (24,8 Tage in Millisekunden) überschreitet, führt dies zu einem Materialisierungs Fehler aufgrund eines Überlaufs.<br /><br /> Der maximale Wert in Millisekunden entspricht 24,8 Tagen.|  
 |is_available|**bit**|Flag zum angeben, ob dieser Knoten verfügbar ist.||  
 |sent_time|**datetime**|Der letzte Zeitpunkt, zu dem ein Netzwerk Paket von diesem Knoten gesendet wurde.||  
 |received_time|**datetime**|Der letzte Zeitpunkt, zu dem ein Netzwerk Paket von diesem Knoten empfangen wurde.||  

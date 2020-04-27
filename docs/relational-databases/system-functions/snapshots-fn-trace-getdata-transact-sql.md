@@ -17,10 +17,10 @@ ms.assetid: ac28ef48-f4f4-4bf2-ba22-d44e1be88172
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a85a911d4c9f5cd4565e9839f3be44a4e2366079
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68067751"
 ---
 # <a name="snapshotsfn_trace_getdata-transact-sql"></a>snapshots.fn_trace_getdata (Transact-SQL)
@@ -39,13 +39,13 @@ snapshots.fn_trace_gettable ( trace_info_id, start_time, end_time )
   
 ## <a name="arguments"></a>Argumente  
  *trace_info_id*  
- Der eindeutige Bezeichner für den Primärschlüssel in der Momentaufnahme. trace_info Tabelle in der Verwaltungs Data Warehouse Datenbank. *trace_info_id* ist vom Datentyp **int**.  
+ Der eindeutige Bezeichner für den Primärschlüssel in der Momentaufnahme. trace_info Tabelle in der Verwaltungs Data Warehouse Datenbank. *trace_info_id* ist **int**  
   
  *start_time*  
- Die Zeit, zu der die Ablaufverfolgung gestartet wurde. *start_time* ist vom **Datentyp DateTime**.  
+ Die Zeit, zu der die Ablaufverfolgung gestartet wurde. *start_time* ist **datetime**  
   
  *end_time*  
- Die Zeit, zu der die Ablaufverfolgung beendet wurde. *end_time* ist vom **Datentyp DateTime**.  
+ Die Zeit, zu der die Ablaufverfolgung beendet wurde. *end_time* ist **datetime**  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   

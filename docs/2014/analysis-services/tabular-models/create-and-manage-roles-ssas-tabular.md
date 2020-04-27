@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 10e5e26142cd1819e4f2c5f884af9c2f2af10812
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284905"
 ---
 # <a name="create-and-manage-roles-ssas-tabular"></a>Erstellen und Verwalten von Rollen (SSAS – tabellarisch)
@@ -28,7 +28,7 @@ ms.locfileid: "67284905"
 ## <a name="tasks"></a>Aufgaben  
  Zum Erstellen, Bearbeiten, Kopieren und Löschen von Rollen verwenden Sie das Dialogfeld **Rollen-Manager** . Klicken Sie zum Anzeigen des Dialogfelds **Rollen-Manager** in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]auf das Menü **Modell** und anschließend auf **Rollen-Manager**.  
   
-###  <a name="bkmk_new_role"></a>So erstellen Sie eine neue Rolle  
+###  <a name="to-create-a-new-role"></a><a name="bkmk_new_role"></a>So erstellen Sie eine neue Rolle  
   
 1.  Klicken Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]auf das Menü **Modell** und dann auf **Rollen-Manager**.  
   
@@ -44,10 +44,10 @@ ms.locfileid: "67284905"
   
     |Berechtigung|BESCHREIBUNG|  
     |----------------|-----------------|  
-    |**Keine**|Mitglieder können keine Änderungen am Modellschema vornehmen und keine Daten abfragen.|  
+    |**None**|Mitglieder können keine Änderungen am Modellschema vornehmen und keine Daten abfragen.|  
     |**Lesen**|Mitglieder dürfen Daten (basierend auf Zeilenfiltern) abfragen, doch sie können keine Änderungen am Modellschema vornehmen.|  
     |**Lesen und Verarbeiten**|Mitglieder können Daten (basierend auf Filtern auf Zeilenebene) abfragen und die Vorgänge Verarbeiten und Alles verarbeiten ausführen, jedoch keine Änderungen am Modellschema vornehmen.|  
-    |**Prozess**|Mitglieder können Prozesse ausführen und alle Vorgänge verarbeiten. Sie können das Modellschema nicht ändern und keine Daten abfragen.|  
+    |**Prozess**|Mitglieder können die Vorgänge Verarbeiten und Alles verarbeiten ausführen. Sie können weder das Modellschema ändern noch Daten abfragen.|  
     |**Administrator**|Mitglieder können Änderungen am Modellschema vornehmen und alle Daten abfragen.|  
   
 5.  Um eine Beschreibung für die Rolle einzugeben, klicken Sie auf das Feld **Beschreibung** und geben dann eine Beschreibung ein.  

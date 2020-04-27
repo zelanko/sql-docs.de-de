@@ -21,10 +21,10 @@ ms.assetid: e53b6703-358b-4c9a-912a-8f7c7331069b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: a482acb22ad535e44d6ceb06a20474945a477e58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046367"
 ---
 # <a name="sysfn_cdc_increment_lsn-transact-sql"></a>sys.fn_cdc_increment_lsn (Transact-SQL)
@@ -43,12 +43,12 @@ sys.fn_cdc_increment_lsn ( lsn_value )
   
 ## <a name="arguments"></a>Argumente  
  *lsn_value*  
- LSN-Wert. *lsn_value* ist **Binär (10)**.  
+ LSN-Wert. *lsn_value* ist **binary(10)**  
   
 ## <a name="return-type"></a>Rückgabetyp  
- **Binär (10)**  
+ **binary(10)**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Der von der Funktion zurückgegebene LSN-Wert ist immer größer als der angegebene Wert. Zwischen den beiden Werten befinden sich keine LSN-Werte.  
   
  Wenn Sie einen Änderungsdatenstrom systematisch im Verlauf der Zeit abfragen möchten, können Sie den Abfragefunktionsaufruf immer dann periodisch wiederholen, wenn ein neues Abfrageintervall zum Begrenzen der Änderungen in der Abfrage zurückgegeben wird. Um sicherzustellen, dass keine Daten verloren gehen, wird häufig die obere Grenze der vorherigen Abfrage verwendet, um die untere Grenze der nachfolgenden Abfrage zu generieren. Da es sich beim Abfrageintervall um ein geschlossenes Intervall handelt, muss die neue untere Grenze höher als die vorherige obere Grenze liegen, während sie zugleich niedrig genug liegen muss, um sicherzustellen, dass keine Änderungen mit LSN-Werten zwischen diesem Wert und der alten oberen Grenze vorhanden sind. Es wird die Funktion sys.fn_cdc_increment_lsn verwendet, um diesen Wert zu erhalten.  

@@ -18,16 +18,16 @@ ms.assetid: 7c371474-b88f-4730-afa5-44163a0488d5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9c9216ee655e371633837c5653ebac56fac1a782
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918714"
 ---
 # <a name="fields-collection-ado"></a>Fields-Collection (ADO)
 Enthält alle [Feld](../../../ado/reference/ado-api/field-object.md) Objekte eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) oder eines [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) -Objekts.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Ein **Recordset** -Objekt verfügt über eine **Fields** -Auflistung, die aus **Feld** Objekten besteht. Jedes **Feld** Objekt entspricht einer Spalte im **Recordset**. Sie können die **Fields** -Auflistung vor dem Öffnen des **Recordsets** auffüllen, indem Sie die [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) -Methode für die Auflistung aufrufen.  
   
 > [!NOTE]

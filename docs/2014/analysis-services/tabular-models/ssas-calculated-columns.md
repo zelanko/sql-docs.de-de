@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e9a93fffba5c34d26cdb0305b0f6a97369e51b3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284893"
 ---
 # <a name="calculated-columns-ssas-tabular"></a>Berechnete Spalten (SSAS – tabellarisch)
@@ -33,7 +33,7 @@ ms.locfileid: "67284893"
   
 -   [Verwandte Aufgaben](#bkmk_rel_tasks)  
   
-##  <a name="bkmk_understanding"></a> Vorteile  
+##  <a name="benefits"></a><a name="bkmk_understanding"></a>Davon  
  Formeln in berechneten Spalten sind mit Formeln in Excel vergleichbar. Anders als in Excel können Sie jedoch für verschiedene Zeilen einer Tabelle keine unterschiedlichen Formeln erstellen. Stattdessen wird die DAX-Formel automatisch auf die gesamte Spalte angewendet.  
   
  Enthält eine Spalte eine Formel, wird für jede Zeile der entsprechende Wert berechnet. Die Ergebnisse werden für die Spalte berechnet, wenn Sie eine gültige Formel eingeben. Spaltenwerte werden dann bei Bedarf neu berechnet, z. B. wenn die zugrunde liegenden Daten aktualisiert werden.  
@@ -51,7 +51,7 @@ ms.locfileid: "67284893"
   
  Mit dieser Formel wird der Monat aus der Spalte "StartDate" extrahiert. Anschließend wird für jede Zeile in der Tabelle der Wert für das Monatsende berechnet. Der zweite Parameter gibt die Anzahl der Monate vor oder nach dem Monat in "StartDate" an. In diesem Fall entspricht 0 dem gleichen Monat. Wenn der Wert in der Spalte "StartDate" z. B. "01.06.2001" beträgt, beträgt der Wert in der berechneten Spalte "30.06.2001".  
   
-##  <a name="bkmk_naming"></a>Benennen einer berechneten Spalte  
+##  <a name="naming-a-calculated-column"></a><a name="bkmk_naming"></a>Benennen einer berechneten Spalte  
  Neue berechnete Spalten werden standardmäßig rechts neben anderen Spalten in einer Tabelle hinzugefügt, und die Spalten werden standardmäßig und automatisch **CalculatedColumn1**, **CalculatedColumn2**usw. genannt. Sie können auch mit der rechten Maustaste auf eine Spalte und dann auf Spalte einfügen klicken, um zwischen zwei vorhandenen Spalten eine neue Spalte zu erstellen. Sie können Spalten innerhalb der gleichen Tabelle durch Klicken und Ziehen neu anordnen und Spalten umbenennen, nachdem sie erstellt wurden. Folgende Einschränkungen beim Ändern von berechneten Spalten sollten jedoch beachtet werden:  
   
 -   Jeder Spaltenname muss innerhalb einer Tabelle eindeutig sein.  
@@ -62,7 +62,7 @@ ms.locfileid: "67284893"
   
 -   Einige Zeichen können innerhalb von Spaltennamen nicht verwendet werden. Weitere Informationen finden Sie unter „Benennungsanforderungen“ in der [DAX-Syntaxspezifikation für PowerPivot](/dax/dax-syntax-reference).  
   
-##  <a name="bkmk_perf"></a>Leistung berechneter Spalten  
+##  <a name="performance-of-calculated-columns"></a><a name="bkmk_perf"></a>Leistung berechneter Spalten  
  Die Formel für eine berechnete Spalte kann ressourcenintensiver als die für ein Measure verwendete Formel sein. Ein Grund hierfür ist, dass das Ergebnis für eine berechnete Spalte immer für jede Zeile in einer Tabelle berechnet wird, wohingegen ein Measure nur für die vom Filter definierten Zellen berechnet wird, die in einem Bericht, in der PivotTable oder im PivotChart verwendet werden. Zum Beispiel enthält eine Tabelle mit einer Million Zeilen immer eine berechnete Spalte mit einer Million Ergebnissen, was sich entsprechend auf die Leistung auswirkt. Eine PivotTable filtert Daten jedoch im Allgemeinen, indem eine Zeilen- und Spaltenüberschrift angewendet wird. Daher wird ein Measure nur für die Teilmenge der Daten in jeder Zelle der PivotTable berechnet.  
   
  Eine Formel weist Abhängigkeiten für die Objekte auf, auf die in der Formel verwiesen wird, z. B. andere Spalten oder Ausdrücke, die Werte auswerten. Eine berechnete Spalte, die auf einer anderen Spalte basiert, oder eine Berechnung, die einen Ausdruck mit einem Spaltenverweis enthält, kann beispielsweise erst ausgewertet werden, wenn die andere Spalte ausgewertet wurde. Standardmäßig ist die automatische Aktualisierung in Arbeitsmappen aktiviert, daher können diese Abhängigkeiten die Leistung beeinträchtigen, während Werte und Formeln aktualisiert werden.  
@@ -77,15 +77,15 @@ ms.locfileid: "67284893"
   
 -   Wenn Sie eine Formel erstellen, die eine Ring- oder auf sich selbst verweisende Abhängigkeit enthält, tritt ein Fehler auf.  
   
-##  <a name="bkmk_rel_tasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="bkmk_rel_tasks"></a> Verwandte Aufgaben  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
-|[Erstellen einer berechneten Spalte &#40;tabellarischen SSAS-&#41;](ssas-calculated-columns-create-a-calculated-column.md)|In den Tasks in diesem Thema wird beschrieben, wie einer Tabelle eine neue berechnete Spalte hinzugefügt wird.|  
+|[Erstellen einer berechneten Spalte &#40;SSAS – tabellarisch&#41;](ssas-calculated-columns-create-a-calculated-column.md)|In den Tasks in diesem Thema wird beschrieben, wie einer Tabelle eine neue berechnete Spalte hinzugefügt wird.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Tabellen und Spalten &#40;tabellarischen SSAS-&#41;](tables-and-columns-ssas-tabular.md)   
  [Measures &#40;tabellarischen SSAS-&#41;](measures-ssas-tabular.md)   
- [Berechnungen &#40;tabellarischen SSAS-&#41;](calculations-ssas-tabular.md)  
+ [Berechnungen &#40;SSAS – tabellarisch&#41;](calculations-ssas-tabular.md)  
   
   

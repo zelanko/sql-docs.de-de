@@ -28,10 +28,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 730508fca6b6f9d3e9515e9ec496971a4b758279
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046522"
 ---
 # <a name="sysfn_builtin_permissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
@@ -68,18 +68,18 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
  Entspricht der Option DEFAULT.  
   
  **"**<securable_class>**"**  
- Wenn er mit dem Namen einer Sicherungs fähigen Klasse aufgerufen wird, gibt sys. fn_builtin_permissions alle Berechtigungen zurück, die auf die Klasse angewendet werden. <securable_class> ist eine Zeichenfolgenliterale, die Anführungszeichen erfordert. **nvarchar (60)**  
+ Wenn er mit dem Namen einer Sicherungs fähigen Klasse aufgerufen wird, gibt sys. fn_builtin_permissions alle Berechtigungen zurück, die auf die Klasse angewendet werden. <securable_class> ist eine Zeichenfolgenliterale, die Anführungszeichen erfordert. **nvarchar(60)**  
   
 ## <a name="tables-returned"></a>Zurückgegebene Tabellen  
   
-|Spaltenname|Datentyp|Sortierung|BESCHREIBUNG|  
+|Spaltenname|Datentyp|Sortierreihenfolge|Beschreibung|  
 |-----------------|---------------|---------------|-----------------|  
-|class_desc|**nvarchar (60)**|Sortierung des Servers.|Beschreibung der sicherbaren Klasse.|  
-|permission_name|**nvarchar (60)**|Sortierung des Servers.|Berechtigungsname.|  
-|type|**varchar(4)**|Sortierung des Servers.|Kompakter Berechtigungstypcode. Siehe Tabelle weiter unten.|  
-|covering_permission_name|**nvarchar (60)**|Sortierung des Servers.|Falls ungleich NULL, gibt dieser Wert den Namen der Berechtigung für diese Klasse an, die die anderen Berechtigungen für diese Klasse impliziert.|  
-|parent_class_desc|**nvarchar (60)**|Sortierung des Servers.|Falls ungleich NULL, gibt dieser Wert den Namen der übergeordneten Klasse an, in der die aktuelle Klasse enthalten ist.|  
-|parent_covering_permission_name|**nvarchar (60)**|Sortierung des Servers.|Falls ungleich NULL, gibt dieser Wert den Namen der Berechtigung für die übergeordnete Klasse an, die alle anderen Berechtigungen für diese Klasse impliziert.|  
+|class_desc|**nvarchar(60)**|Sortierung des Servers.|Beschreibung der sicherbaren Klasse.|  
+|permission_name|**nvarchar(60)**|Sortierung des Servers.|Berechtigungsname.|  
+|Typ|**varchar(4)**|Sortierung des Servers.|Kompakter Berechtigungstypcode. Siehe Tabelle weiter unten.|  
+|covering_permission_name|**nvarchar(60)**|Sortierung des Servers.|Falls ungleich NULL, gibt dieser Wert den Namen der Berechtigung für diese Klasse an, die die anderen Berechtigungen für diese Klasse impliziert.|  
+|parent_class_desc|**nvarchar(60)**|Sortierung des Servers.|Falls ungleich NULL, gibt dieser Wert den Namen der übergeordneten Klasse an, in der die aktuelle Klasse enthalten ist.|  
+|parent_covering_permission_name|**nvarchar(60)**|Sortierung des Servers.|Falls ungleich NULL, gibt dieser Wert den Namen der Berechtigung für die übergeordnete Klasse an, die alle anderen Berechtigungen für diese Klasse impliziert.|  
   
 ### <a name="permission-types"></a>Berechtigungs Typen  
   
@@ -322,15 +322,12 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |XA|EXTERNAL ACCESS ASSEMBLY|SERVER|  
 |XU|UNSAFE ASSEMBLY|SERVER|  
   
-## <a name="remarks"></a>Bemerkungen  
- 
-  `sys.fn_builtin_permissions` ist eine Tabellenwertfunktion, die eine Kopie der vordefinierten Berechtigungshierarchie ausgibt. Diese Hierarchie schließt die abdeckenden Berechtigungen ein. Das `DEFAULT` Resultset beschreibt ein gerichtetes azyklisches Diagramm der Berechtigungs Hierarchie, von dem der Stamm ist (Class = Server, Berechtigung = Control Server).  
+## <a name="remarks"></a>Hinweise  
+ `sys.fn_builtin_permissions` ist eine Tabellenwertfunktion, die eine Kopie der vordefinierten Berechtigungshierarchie ausgibt. Diese Hierarchie schließt die abdeckenden Berechtigungen ein. Das `DEFAULT` Resultset beschreibt ein gerichtetes azyklisches Diagramm der Berechtigungs Hierarchie, von dem der Stamm ist (Class = Server, Berechtigung = Control Server).  
   
- 
-  `sys.fn_builtin_permissions` nimmt keine korrelierten Parameter an.  
+ `sys.fn_builtin_permissions` nimmt keine korrelierten Parameter an.  
   
- 
-  `sys.fn_builtin_permissions` gibt ein leeres Resultset zurück, wenn beim Aufruf ein ungültiger Klassenname angegeben wird.  
+ `sys.fn_builtin_permissions` gibt ein leeres Resultset zurück, wenn beim Aufruf ein ungültiger Klassenname angegeben wird.  
  
 [!INCLUDE[database-engine-permissions](../../includes/paragraph-content/database-engine-permissions.md)]
   
@@ -361,11 +358,11 @@ SELECT * FROM sys.fn_builtin_permissions(DEFAULT)
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenbank-Engine der Berechtigungs Hierarchie &#40;&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
- [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
- [CREATE SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
- [DROP SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
+ [Grant &#40;Transact-SQL-&#41;](../../t-sql/statements/grant-transact-sql.md)   
+ [Create Schema &#40;Transact-SQL-&#41;](../../t-sql/statements/create-schema-transact-sql.md)   
+ [Drop Schema &#40;Transact-SQL-&#41;](../../t-sql/statements/drop-schema-transact-sql.md)   
  [Berechtigungen &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
- [sys.fn_my_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
+ [sys. fn_my_permissions &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md)   
  [HAS_PERMS_BY_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/has-perms-by-name-transact-sql.md)  
   
   

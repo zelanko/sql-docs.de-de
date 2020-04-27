@@ -16,10 +16,10 @@ ms.assetid: 11ca8825-765e-4bb4-a6ce-3f6564ad8755
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ee7a94a06aa574c84c01cb8b9d05ebfcdf327d44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917589"
 ---
 # <a name="prepared-property-ado"></a>Prepared-Eigenschaft (ADO)
@@ -28,7 +28,7 @@ Gibt an, ob eine kompilierte Version eines [Befehls](../../../ado/reference/ado-
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
  Legt einen **booleschen** Wert fest, der, wenn er auf **true**festgelegt ist, angibt, dass der Befehl vorbereitet werden soll, oder gibt ihn zurück.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Verwenden Sie die **vorbereitete** Eigenschaft, damit der Anbieter eine vorbereitete (oder kompilierte) Version der Abfrage speichert, die in der [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) -Eigenschaft vor der ersten Ausführung eines [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Objekts angegeben ist. Dadurch kann die erste Ausführung eines Befehls verlangsamt werden. Nachdem der Anbieter jedoch einen Befehl kompiliert hat, verwendet der Anbieter die kompilierte Version des Befehls für alle nachfolgenden Ausführungen, was zu einer verbesserten Leistung führt.  
   
  Wenn die Eigenschaft auf **false**gesetzt ist, führt der Anbieter das **Befehls** Objekt direkt aus, ohne eine kompilierte Version zu erstellen.  

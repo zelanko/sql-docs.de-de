@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7b2614d090bce0ecf0c61db5c9a5222ec6b10951
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110168"
 ---
 # <a name="populating-a-table-with-existing-hierarchical-data"></a>Auffüllen einer Tabelle mit vorhandenen hierarchischen Daten
-  Diese Aufgabe erstellt eine neue Tabelle und füllt sie mit den Daten in der Tabelle "Mitarbeiter **Demo** ". Diese Aufgabe umfasst die folgenden Schritte:  
+   In dieser Aufgabe wird eine neue Tabelle erstellt und mit den Daten aus der Tabelle **EmployeeDemo** aufgefüllt. Diese Aufgabe umfasst die folgenden Schritte:  
   
 -   Erstellen Sie eine neue Tabelle, die eine `hierarchyid`-Spalte enthält. Diese Spalte könnte die vorhandenen Spalten **EmployeeID** und **ManagerID** ersetzen. Sie behalten diese Spalten jedoch bei, weil bestehende Anwendungen möglicherweise auf diese Spalten verweisen und weil dann die Daten nach der Übertragung leichter verständlich sind. Gemäß der Tabellendefinition ist **OrgNode** der Primärschlüssel, so dass diese Spalte eindeutige Werte enthalten muss. Der gruppierte Index der Spalte **OrgNode** speichert das Datum in **OrgNode** -Sequenz.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "66110168"
   
      `10        4         2`  
   
-3.  Füllt die Tabelle " **networg** " auf. Verwenden Sie die GetRoot-Methode und die ToString-Methode **** , um die Num `hierarchyid` -Werte im Format zu verketten, und aktualisieren Sie dann die Spalte **OrgNode** mit den resultierenden hierarchischen Werten:  
+3.  Füllt die Tabelle " **networg** " auf. Verwenden Sie die GetRoot-Methode und die ToString-Methode **Num** , um die Num `hierarchyid` -Werte im Format zu verketten, und aktualisieren Sie dann die Spalte **OrgNode** mit den resultierenden hierarchischen Werten:  
   
     ```  
     WITH paths(path, EmployeeID)   

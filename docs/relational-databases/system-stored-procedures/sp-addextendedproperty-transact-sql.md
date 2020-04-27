@@ -19,10 +19,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2600543715bffaba36e29305b0893a9f17cca59c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68072692"
 ---
 # <a name="sp_addextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
@@ -57,8 +57,7 @@ sp_addextendedproperty
  Der Name der hinzu zufügenden Eigenschaft. *property_name* ist vom **Datentyp vom Datentyp sysname** und darf nicht NULL sein. Namen können auch leere oder nicht alphanumerische Zeichenfolgen sowie binäre Werte sein.  
   
  [ @value= ] {'*value*'}  
- Der Wert, der der Eigenschaft zugeordnet werden soll. der Wert ist **sql_variant**. der Standard *Wert* ist NULL. 
-  *value* kann nicht größer als 7.500 Bytes sein.  
+ Der Wert, der der Eigenschaft zugeordnet werden soll. der Wert ist **sql_variant**. der Standard *Wert* ist NULL. *value* kann nicht größer als 7.500 Bytes sein.  
   
  [ @level0type= ] {'*level0_object_type*'}  
  Der Typ des Objekts der Ebene 0. *level0_object_type* ist vom Datentyp **varchar (128)** und hat den Standardwert NULL.  
@@ -85,7 +84,7 @@ sp_addextendedproperty
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Für das Angeben erweiterter Eigenschaften werden die Objekte in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank in drei Ebenen unterteilt: 0, 1 und 2. Ebene 0 ist die höchste Ebene und als im Datenbankbereich enthaltene Objekte definiert. Objekte der Ebene 1 sind in einem Schema- oder Benutzerbereich enthalten, und Objekte der Ebene 2 sind in Objekten der Ebene 1 enthalten. Erweiterte Eigenschaften können für Objekte auf einer dieser Ebenen definiert werden.  
   
  Verweise auf ein Objekt einer Ebene müssen mit den Namen der Objekte der höheren Ebene gekennzeichnet werden, die diese besitzen oder enthalten. Wenn Sie beispielsweise einer Tabellenspalte (Ebene 2) eine erweiterte Eigenschaft hinzufügen, müssen Sie auch den Tabellenamen (Ebene 1) angeben, der die Spalte und das Schema (Ebene 0) enthält, in dem die Tabelle enthalten ist.  
@@ -150,7 +149,7 @@ EXEC sp_addextendedproperty
 GO  
 ```  
   
-### <a name="d-adding-an-extended-property-to-a-filegroup"></a>D: Hinzufügen einer erweiterten Eigenschaft zu einer Dateigruppe  
+### <a name="d-adding-an-extended-property-to-a-filegroup"></a>D. Hinzufügen einer erweiterten Eigenschaft zu einer Dateigruppe  
  Im folgenden Beispiel wird der `PRIMARY` -Dateigruppe eine erweiterte Eigenschaft hinzugefügt.  
   
 ```  

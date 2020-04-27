@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: aade9e02515e0d18e4edae188d72e5edafebbd3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68059182"
 ---
 # <a name="sysfn_virtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
@@ -54,19 +54,19 @@ fn_virtualfilestats ( { database_id | NULL } , { file_id | NULL } )
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**DbId**|**smallint**|Datenbank-ID|  
-|**FileId**|**smallint**|Die Datei-ID|  
-|**Zeitstempel**|**BIGINT**|Datenbanktimestamp für den Zeitpunkt, zu dem die Daten erhoben wurden **int** in Versionen vor [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. |  
-|**Nummerier Vorgänge**|**BIGINT**|Die Anzahl der Lesevorgänge, die für die Datei ausgegeben wurden.|  
-|**BytesRead**|**BIGINT**|Anzahl der Bytes, die aus der Datei gelesen wurden|  
-|**Iostallread MS**|**BIGINT**|Gesamtzeit in Millisekunden, die die Benutzer darauf gewartet haben, dass E/A-Leseoperationen für die Datei abgeschlossen wurden|  
-|**NumberWrites**|**BIGINT**|Anzahl der Schreibvorgänge, die für die Datei ausgeführt wurden|  
-|**BytesWritten**|**BIGINT**|Anzahl der Bytes, die in die Datei geschrieben wurden|  
-|**Iostallschreitems**|**BIGINT**|Gesamtzeit in Millisekunden, die die Benutzer darauf gewartet haben, dass E/A-Schreiboperationen für die Datei abgeschlossen wurden|  
-|**Iostallms**|**BIGINT**|Summe von **iostallread MS** und **iostallwrite tems**.|  
-|**File handle**|**BIGINT**|Wert des Dateihandles|  
-|**Bytesondisk**|**BIGINT**|Die physische Dateigröße (Anzahl der Bytes) auf dem Datenträger.<br /><br /> Bei Datenbankdateien entspricht dies dem gleichen Wert wie die **Größe** in **sys. database_files**, wird jedoch in Bytes und nicht in Seiten ausgedrückt.<br /><br /> Bei Sparsedateien von Datenbankmomentaufnahmen ist dies der Speicherplatz, den das Betriebssystem für die Datei in Anspruch nimmt.|  
+|**FileID**|**smallint**|Die Datei-ID|  
+|**TimeStamp**|**bigint**|Datenbanktimestamp für den Zeitpunkt, zu dem die Daten erhoben wurden **int** in Versionen vor [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)]. |  
+|**NumberReads**|**bigint**|Die Anzahl der Lesevorgänge, die für die Datei ausgegeben wurden.|  
+|**BytesRead**|**bigint**|Anzahl der Bytes, die aus der Datei gelesen wurden|  
+|**IoStallReadMS**|**bigint**|Gesamtzeit in Millisekunden, die die Benutzer darauf gewartet haben, dass E/A-Leseoperationen für die Datei abgeschlossen wurden|  
+|**NumberWrites**|**bigint**|Anzahl der Schreibvorgänge, die für die Datei ausgeführt wurden|  
+|**BytesWritten**|**bigint**|Anzahl der Bytes, die in die Datei geschrieben wurden|  
+|**IoStallWriteMS**|**bigint**|Gesamtzeit in Millisekunden, die die Benutzer darauf gewartet haben, dass E/A-Schreiboperationen für die Datei abgeschlossen wurden|  
+|**IoStallMS**|**bigint**|Summe von **iostallread MS** und **iostallwrite tems**.|  
+|**File handle**|**bigint**|Wert des Dateihandles|  
+|**BytesOnDisk**|**bigint**|Die physische Dateigröße (Anzahl der Bytes) auf dem Datenträger.<br /><br /> Bei Datenbankdateien entspricht dies dem gleichen Wert wie die **Größe** in **sys. database_files**, wird jedoch in Bytes und nicht in Seiten ausgedrückt.<br /><br /> Bei Sparsedateien von Datenbankmomentaufnahmen ist dies der Speicherplatz, den das Betriebssystem für die Datei in Anspruch nimmt.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  **fn_virtualfilestats** ist eine System-Tabellenwert Funktion, die statistische Informationen, z. b. die Gesamtzahl der e/a-Vorgänge, die für eine Datei ausgeführt werden, enthält. Diese Funktion hilft beim Verfolgen der Zeitdauer, die Benutzer warten müssen, um eine Datei zu lesen oder darin zu schreiben. Diese Funktion hilft außerdem beim Identifizieren der Dateien mit hoher E/A-Aktivität.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -103,8 +103,8 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [DB_ID &#40;Transact-SQL-&#41;](../../t-sql/functions/db-id-transact-sql.md)   
- [FILE_IDEX &#40;Transact-SQL&#41;](../../t-sql/functions/file-idex-transact-sql.md)   
- [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
+ [FILE_IDEX &#40;Transact-SQL-&#41;](../../t-sql/functions/file-idex-transact-sql.md)   
+ [sys. database_files &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   
  [sys.master_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-master-files-transact-sql.md)  
   
   

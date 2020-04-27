@@ -13,10 +13,10 @@ ms.assetid: 21f67a7d-6273-4648-9abd-2236650efa4c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3a0f281d1bce5e75b9158a18e1ea97256ba85625
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917510"
 ---
 # <a name="property-object-properties-methods-and-events"></a>Eigenschafts Objekteigenschaften, Methoden und Ereignisse
@@ -30,9 +30,9 @@ ms.locfileid: "67917510"
  [Value-Eigenschaft](../../../ado/reference/ado-api/value-property-ado.md)  
   
 ## <a name="methods"></a>Methoden  
- Keine.  
+ Keine  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Ereignisse  
  Keine.  
   
 ## <a name="see-also"></a>Weitere Informationen  

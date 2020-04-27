@@ -18,10 +18,10 @@ ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5c138f2e97bf80f00f77c519bb4b9467c715f95b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907414"
 ---
 # <a name="msdistribution_agents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
@@ -31,7 +31,7 @@ ms.locfileid: "67907414"
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**Name**|**int**|Die ID des Verteilungs-Agents.|  
+|**id**|**int**|Die ID des Verteilungs-Agents.|  
 |**name**|**nvarchar (100)**|Der Name des Verteilungs-Agents.|  
 |**publisher_database_id**|**int**|Die ID der Verlegerdatenbank.|  
 |**publisher_id**|**smallint**|Die ID des Verlegers|  
@@ -58,7 +58,7 @@ ms.locfileid: "67907414"
 |**dts_package_location**|**int**|Der Speicherort des Pakets. Der Speicherort des Pakets kann **Distributor** oder **Subscriber**sein.|  
 |**sid**|**varbinary(85)**|Die Sicherheits-ID (SID) für den Verteilungs-Agent oder Merge-Agent, während er das erste Mal ausgeführt wird.|  
 |**queue_server**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**subscriber_security_mode**|**smallint**|Der Sicherheitsmodus, der vom Agent beim Herstellen einer Verbindung mit dem Abonnenten verwendet wird, wobei die folgenden Werte möglich sind:<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server Authentifizierung<br /><br /> **** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Authentifizierung.|  
+|**subscriber_security_mode**|**smallint**|Der Sicherheitsmodus, der vom Agent beim Herstellen einer Verbindung mit dem Abonnenten verwendet wird, wobei die folgenden Werte möglich sind:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server Authentifizierung<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Authentifizierung.|  
 |**subscriber_login**|**sysname**|Der Anmeldename, der verwendet wird, um eine Verbindung mit dem Abonnenten herzustellen.|  
 |**subscriber_password**|**nvarchar (524)**|Der verschlüsselte Wert des Kennworts, das beim Herstellen einer Verbindung mit dem Abonnenten verwendet wird|  
 |**reset_partial_snapshot_progress**|**bit**|Gibt an, ob eine teilweise heruntergeladene Momentaufnahme verworfen wird, damit der gesamte Momentaufnahmeprozess erneut gestartet werden kann|  

@@ -13,10 +13,10 @@ ms.assetid: 4295a6e5-112d-4595-b18a-57728893ac2d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f84faca18ad1f4f4bf7e036fa4ccbe0335154a63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917332"
 ---
 # <a name="recordset-object-properties-methods-and-events"></a>Recordset-Objekteigenschaften,-Methoden und-Ereignisse
@@ -92,7 +92,7 @@ ms.locfileid: "67917332"
   
  [Delete-Methode (ADO-Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)  
   
- [Find-Methode](../../../ado/reference/ado-api/find-method-ado.md)  
+ [Find (Methode)](../../../ado/reference/ado-api/find-method-ado.md)  
   
  [GetRows-Methode](../../../ado/reference/ado-api/getrows-method-ado.md)  
   
@@ -104,7 +104,7 @@ ms.locfileid: "67917332"
   
  [NextRecordset-Methode](../../../ado/reference/ado-api/nextrecordset-method-ado.md)  
   
- [Open-Methode (ADO-Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+ [Open-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
   
  [Requery-Methode](../../../ado/reference/ado-api/requery-method.md)  
   
@@ -120,7 +120,7 @@ ms.locfileid: "67917332"
   
  [UpdateBatch-Methode](../../../ado/reference/ado-api/updatebatch-method.md)  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Ereignisse  
  [EndOf Recordset-Ereignis](../../../ado/reference/ado-api/endofrecordset-event-ado.md)  
   
  [FetchComplete-Ereignis](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)  

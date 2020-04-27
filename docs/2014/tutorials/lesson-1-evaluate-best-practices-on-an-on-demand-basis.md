@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dc8da3880afe5cf107c7e6df260957e3df6ddc9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68185744"
 ---
 # <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>Lektion 1: Bedarfsgesteuertes Auswerten von Best Practices
@@ -32,6 +32,6 @@ ms.locfileid: "68185744"
  [Ausführen einer bedarfsgesteuerten Auswertung mit dem Objekt-Explorer](../ssms/object/object-explorer.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Lektion 2: Auswerten von Best Practices-Richtlinien auf der Basis eines Zeitplans](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [Lektion 2: Auswerten von Best Practices-Richtlinien auf Basis eines Zeitplans](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
   
   

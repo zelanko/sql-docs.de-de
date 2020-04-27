@@ -18,10 +18,10 @@ ms.assetid: 2be631bf-de09-4e7a-9ccb-d6c37b81c237
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2cd44c5154668513d695071c23619e650497c8a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907486"
 ---
 # <a name="msdbms-transact-sql"></a>MSdbms (Transact-SQL)
@@ -33,10 +33,10 @@ ms.locfileid: "67907486"
 |-----------------|---------------|-----------------|  
 |**dbms_id**|**int**|Identifiziert jedes einzelne DBMS und die jeweilige Version.|  
 |**DBMS**|**sysname**|Der Name des DBMS.<br /><br /> MSSQLSERVER<br /><br /> DB2<br /><br /> ORACLE<br /><br /> SYBASE|  
-|**Version**|**varchar (10)**|Die DBMS-Version.|  
+|**version**|**varchar (10)**|Die DBMS-Version.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Heterogene Datenbankreplikation](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Heterogene Replikation](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikationssichten &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

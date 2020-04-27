@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c395bb74e8bde83bc2f89fa07f541183297300b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67284928"
 ---
 # <a name="data-types-supported-ssas-tabular"></a>Unterstützte Datentypen (SSAS – tabellarisch)
@@ -24,11 +24,11 @@ ms.locfileid: "67284928"
   
 -   [In tabellarischen Modellen verwendete Datentypen](#bkmk_data_types)  
   
--   [Implizite und explizite Datentyp Konvertierungen in DAX-Formeln](#bkmk_implicit)  
+-   [Implizite und explizite Datentypkonvertierungen in DAX-Formeln](#bkmk_implicit)  
   
--   [Behandlung von Leerzeichen, leeren Zeichen folgen und NULL-Werten](#bkmk_hand_blanks)  
+-   [Behandeln von Leerzeichen, leeren Zeichenfolgen und Nullwerten](#bkmk_hand_blanks)  
   
-##  <a name="bkmk_data_types"></a>In tabellarischen Modellen verwendete Datentypen  
+##  <a name="data-types-used-in-tabular-models"></a><a name="bkmk_data_types"></a>In tabellarischen Modellen verwendete Datentypen  
  Die folgenden Datentypen werden unterstützt. Wenn Sie Daten importieren oder einen Wert in einer Formel verwenden, werden die Daten in einen der folgenden Datentypen konvertiert, auch wenn die ursprüngliche Datenquelle einen anderen Datentyp enthält. Werte, die sich aus Formeln ergeben, verwenden ebenfalls diese Datentypen.  
   
  Im Allgemeinen werden diese Datentypen implementiert, um genaue Berechnungen in berechneten Spalten zu ermöglichen. Die gleichen Einschränkungen gelten aus Konsistenzgründen auch für den Rest der Daten in Modellen.  
@@ -37,13 +37,13 @@ ms.locfileid: "67284928"
   
 ||||  
 |-|-|-|  
-|Datentyp im Modell|Datentyp in DAX|BESCHREIBUNG|  
+|Datentyp im Modell|Datentyp in DAX|Beschreibung|  
 |Ganze Zahl|Ein ganzzahliger 64-Bit-Wert (acht Byte) <sup>1, 2</sup>|Zahlen ohne Dezimalstellen. Ganze Zahlen können positiv oder negativ sein, aber müssen ganze Zahlen zwischen -9 223 372 036 854 775 808 (-2^63) und 9 223 372 036 854 775 807 (2^63-1) sein.|  
-|Dezimalzahl|Eine reelle 64-Bit-Zahl (acht Byte) <sup>1, 2</sup>|Reelle Zahlen sind Zahlen, die Dezimalstellen aufweisen können. Reelle Zahlen decken viele Werte ab:<br /><br /> Negative Werte von -1,79E +308 bis -2,23E -308<br /><br /> Null<br /><br /> Positive Werte von 2,23E -308 bis -1,79E +308<br /><br /> Die Anzahl der relevanten Stellen wird jedoch auf siebzehn Dezimalstellen beschränkt.|  
+|Decimal Number|Eine reelle 64-Bit-Zahl (acht Byte) <sup>1, 2</sup>|Reelle Zahlen sind Zahlen, die Dezimalstellen aufweisen können. Reelle Zahlen decken viele Werte ab:<br /><br /> Negative Werte von -1,79E +308 bis -2,23E -308<br /><br /> Null<br /><br /> Positive Werte von 2,23E -308 bis -1,79E +308<br /><br /> Die Anzahl der relevanten Stellen wird jedoch auf siebzehn Dezimalstellen beschränkt.|  
 |Boolean|Boolean|Entweder ein True oder ein False-Wert.|  
-|Text|String|Eine Unicodezeichen-Datenzeichenfolge. Dies können Zeichenfolgen, Zahlen oder Datumsangaben im Textformat sein.|  
-|Date|Datum/Uhrzeit|Datumsangaben und Uhrzeiten in einer akzeptierten Form für die Darstellung von Datum und Uhrzeit.<br /><br /> Gültig sind alle Datumsangaben nach dem 1. März 1900.|  
-|Currency|Currency|Der Währungsdatentyp lässt Werte zwischen -922 337 203 685 477,5808 und 922 337 203 685 477,5807 mit vier Dezimalstellen unveränderlicher Genauigkeit zu.|  
+|Text|Zeichenfolge|Eine Unicodezeichen-Datenzeichenfolge. Dies können Zeichenfolgen, Zahlen oder Datumsangaben im Textformat sein.|  
+|Datum|Datum/Uhrzeit|Datumsangaben und Uhrzeiten in einer akzeptierten Form für die Darstellung von Datum und Uhrzeit.<br /><br /> Gültig sind alle Datumsangaben nach dem 1. März 1900.|  
+|Währung|Währung|Der Währungsdatentyp lässt Werte zwischen -922 337 203 685 477,5808 und 922 337 203 685 477,5807 mit vier Dezimalstellen unveränderlicher Genauigkeit zu.|  
 |–|Leer|Ein leerer Datentyp in DAX, der SQL-NULLEN darstellt und ersetzt. Sie können mit der BLANK-Funktion ein Leerzeichen erstellen und mit der logischen ISBLANK-Funktion nach Leerzeichen suchen.|  
   
  <sup>1</sup> DAX-Formeln unterstützen keine Datentypen, die kleiner sind als die in der Tabelle aufgeführten.  
@@ -56,7 +56,7 @@ ms.locfileid: "67284928"
   
 ||  
 |-|  
-|value|  
+|Wert|  
 |9223372036854775807|  
 |-9223372036854775808|  
 |1,7976931348623158e+308|  
@@ -68,12 +68,12 @@ ms.locfileid: "67284928"
 >  Sie können keine Elemente aus einer **varchar(max)** -Spalte importieren, die eine Zeichenfolgenlänge von mehr als 131.072 Zeichen enthält.  
   
 ### <a name="table-data-type"></a>Table-Datentyp  
- Außerdem verwendet DAX einen *table* -Datentyp. Dieser Datentyp wird von DAX in vielen Funktionen verwendet, z. B. in Aggregationen und Zeitintelligenzberechnungen. Einige Funktionen erfordern einen Verweis auf eine Tabelle, während andere Funktionen eine Tabelle zurückgeben, die als Eingabe für andere Funktionen verwendet werden kann. In einigen Funktionen, die eine Tabelle als Eingabe erfordern, können Sie einen Ausdruck angeben, der eine Tabelle ergibt. Bei einigen Funktionen ist ein Verweis auf eine Basistabelle erforderlich. Informationen zu den Anforderungen bestimmter Funktionen finden Sie in der [DAX-Funktionsreferenz](/dax/dax-function-reference).  
+ Außerdem verwendet DAX einen *table* -Datentyp. Dieser Datentyp wird von DAX in vielen Funktionen verwendet, z. B. in Aggregationen und Zeitintelligenzberechnungen. Einige Funktionen erfordern einen Verweis auf eine Tabelle, während andere Funktionen eine Tabelle zurückgeben, die als Eingabe für andere Funktionen verwendet werden kann. In einigen Funktionen, die eine Tabelle als Eingabe erfordern, können Sie einen Ausdruck angeben, der eine Tabelle ergibt. Bei einigen Funktionen ist ein Verweis auf eine Basistabelle erforderlich. Informationen zu den Anforderungen bestimmter Funktionen finden Sie unter [DAX-Funktionsreferenz](/dax/dax-function-reference).  
   
-##  <a name="bkmk_implicit"></a>Implizite und explizite Datentyp Konvertierungen in DAX-Formeln  
+##  <a name="implicit-and-explicit-data-type-conversion-in-dax-formulas"></a><a name="bkmk_implicit"></a>Implizite und explizite Datentyp Konvertierungen in DAX-Formeln  
  Jede DAX-Funktion verfügt über bestimmte Anforderungen im Hinblick auf die Datentypen, die als Eingaben und Ausgaben verwendet werden. Einige Funktionen erfordern z. B. ganze Zahlen für einige Argumente und Daten für andere, während für andere Funktionen Text oder Tabellen erforderlich sind.  
   
- Wenn die Daten in der Spalte, die Sie als Argument angeben, nicht mit dem erforderlichen Datentyp kompatibel sind, gibt DAX in vielen Fällen einen Fehler zurück. Sofern möglich, versucht DAX die Daten jedoch implizit in den erforderlichen Datentyp zu konvertieren. Beispiel:  
+ Wenn die Daten in der Spalte, die Sie als Argument angeben, nicht mit dem erforderlichen Datentyp kompatibel sind, gibt DAX in vielen Fällen einen Fehler zurück. Sofern möglich, versucht DAX die Daten jedoch implizit in den erforderlichen Datentyp zu konvertieren. Zum Beispiel:  
   
 -   Sie können eine Zahl, z. b. "123", als Zeichenfolge eingeben. DAX analysiert die Zeichenfolge und versucht, diese als Zahlendatentyp anzugeben.  
   
@@ -164,7 +164,7 @@ ms.locfileid: "67284928"
 |real|real|real|real|real|  
 |Datum/Uhrzeit|real|real|real|Datum/Uhrzeit|  
   
-##  <a name="bkmk_hand_blanks"></a>Behandlung von Leerzeichen, leeren Zeichen folgen und NULL-Werten  
+##  <a name="handling-of-blanks-empty-strings-and-zero-values"></a><a name="bkmk_hand_blanks"></a>Behandlung von Leerzeichen, leeren Zeichen folgen und NULL-Werten  
  DAX behandelt Nullwerte (0), Null und leere Zeichenfolgen anders als Microsoft Excel und SQL Server. In diesem Abschnitt werden die Unterschiede beschrieben, und es wird erläutert, wie diese Datentypen behandelt werden.  
   
  Dabei ist wichtig zu beachten, dass ein leerer Wert, eine leere Zelle oder ein fehlender Wert alle durch den gleichen neuen Werttyp (BLANK) dargestellt werden. Wie Leerzeichen in Vorgängen gehandhabt werden (z. B. Hinzufügen oder Verketten), hängt von der jeweiligen Funktion ab. Sie können auch Leerzeichen mit der BLANK-Funktion generieren oder mit der ISBLANK-Funktion nach Leerzeichen suchen. Datenbank-NULLEN werden innerhalb eines Semantikmodells nicht unterstützt, und NULLEN werden implizit in Leerzeichen konvertiert, wenn in einer DAX-Formel auf eine Spalte mit einem Nullwert verwiesen wird.  
@@ -174,7 +174,7 @@ ms.locfileid: "67284928"
   
 ||||  
 |-|-|-|  
-|Ausdruck|DAX|Excel|  
+|expression|DAX|Excel|  
 |BLANK + BLANK|BLANK|0 (Null)|  
 |BLANK +5|5|5|  
 |BLANK * 5|BLANK|0 (Null)|  
@@ -192,6 +192,6 @@ ms.locfileid: "67284928"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenquellen &#40;tabellarischen SSAS-&#41;](../data-sources-ssas-tabular.md)   
- [Importieren von Daten &#40;tabellarischen SSAS-&#41;](../import-data-ssas-tabular.md)  
+ [Importieren von Daten &#40;SSAS – tabellarisch&#41;](../import-data-ssas-tabular.md)  
   
   

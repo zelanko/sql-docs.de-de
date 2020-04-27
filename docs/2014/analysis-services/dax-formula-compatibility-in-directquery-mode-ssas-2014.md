@@ -11,20 +11,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e588630b4bc9b2dd72e1fb54362b9b024c17bdb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67343895"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>DAX-Formelkompatibilität im DirectQuery-Modus (SSAS 2014)
-Die Data Analysis Expression Language (DAX) kann verwendet werden, um Measures und andere benutzerdefinierte Formeln für die Verwendung in Analysis Services tabellarischen Modellen, [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Datenmodellen in Excel-Arbeitsmappen und Power BI Desktop Datenmodellen zu erstellen. In den meisten Fällen sind die Modelle, die Sie in diesen Umgebungen erstellen, identisch, und Sie können dieselben Measures, Beziehungen und KPIs usw. verwenden. Wenn Sie jedoch ein Analysis Services tabellarisches Modell erstellen und im directquery-Modus bereitstellen, gibt es einige Einschränkungen für die Formeln, die Sie verwenden können. Dieses Thema bietet einen Überblick über diese Unterschiede und listet die Funktionen auf, die in SQL Server 2014 Analysis Services tabulars-Modell mit Kompatibilitäts Grad 1100 oder 1103 und im directquery-Modus nicht unterstützt werden, und listet die Funktionen auf, die unterstützt werden, aber möglicherweise gibt andere Ergebnisse zurück.  
+Die Data Analysis Expression Language (DAX) kann verwendet werden, um Measures und andere benutzerdefinierte Formeln für die Verwendung in Analysis Services tabellarischen Modellen, [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Datenmodellen in Excel-Arbeitsmappen und Power BI Desktop Datenmodellen zu erstellen. In den meisten Fällen sind die Modelle, die Sie in diesen Umgebungen erstellen, identisch, und Sie können dieselben Measures, Beziehungen und KPIs usw. verwenden. Wenn Sie jedoch ein Analysis Services tabellarisches Modell erstellen und im directquery-Modus bereitstellen, gibt es einige Einschränkungen für die Formeln, die Sie verwenden können. Dieses Thema bietet einen Überblick über diese Unterschiede und listet die Funktionen auf, die in SQL Server 2014 Analysis Services tabulars-Modell mit Kompatibilitäts Grad 1100 oder 1103 und im directquery-Modus nicht unterstützt werden, und listet die Funktionen auf, die unterstützt werden, aber möglicherweise andere Ergebnisse zurückgeben.  
   
 In diesem Thema verwenden wir den Begriff *Modell im Arbeitsspeicher* , um auf tabellarische Modelle zu verweisen, bei denen es sich um vollständig gehostete in-Memory-zwischengespeicherte Daten auf einem Analysis Services Server im tabellarischen Modus handelt. Wir verwenden *directquery-Modelle* , um auf tabellarische Modelle zu verweisen, die im directquery-Modus erstellt und/oder bereitgestellt wurden. Weitere Informationen zum directquery-Modus finden Sie unter [directquery-Modus (SSAS-tabellarisch)](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5).  
   
   
-## <a name="bkmk_SemanticDifferences"></a>Unterschiede zwischen dem speicherinternen und DirectQuery-Modus  
-Abfragen eines Modells, das im DirectQuery-Modus bereitgestellt wird, können andere Ergebnisse zurückgeben als bei der Bereitstellung desselben Modells im Arbeitsspeicher. Dies liegt daran, dass bei directquery Daten direkt aus einem relationalen Datenspeicher abgefragt werden und dass für Formeln erforderliche Aggregationen mithilfe der relevanten relationalen Engine durchgeführt werden, anstatt die xvelocity-Engine für Datenanalyse im Arbeitsspeicher (vertipq) für den Speicher zu verwenden. und Berechnung.  
+## <a name="differences-between-in-memory-and-directquery-mode"></a><a name="bkmk_SemanticDifferences"></a>Unterschiede zwischen dem speicherinternen und DirectQuery-Modus  
+Abfragen eines Modells, das im DirectQuery-Modus bereitgestellt wird, können andere Ergebnisse zurückgeben als bei der Bereitstellung desselben Modells im Arbeitsspeicher. Dies liegt daran, dass bei directquery Daten direkt aus einem relationalen Datenspeicher abgefragt werden und dass für Formeln erforderliche Aggregationen mithilfe der relevanten relationalen Engine durchgeführt werden, anstatt die xvelocity-Engine für Datenanalyse im Arbeitsspeicher (vertipq) für Speicherung und Berechnung zu verwenden.  
   
 Beispielsweise behandeln bestimmte relationale Datenspeicher numerische Werte, Daten, NULL-Werte usw. auf unterschiedliche Weise.  
   
@@ -35,7 +35,7 @@ Darüber hinaus können einige Funktionen nicht im directquery-Modus verwendet w
 ## <a name="semantic-differences"></a>Semantische Unterschiede  
 Dieser Abschnitt listet die Typen der üblichen semantischen Unterschiede auf. Zudem werden Einschränkungen beschrieben, die u. U. für die Verwendung von Funktionen oder für Abfrageergebnisse gelten.  
   
-### <a name="bkmk_Comparisons"></a>Vergleiche  
+### <a name="comparisons"></a><a name="bkmk_Comparisons"></a>Vergleiche  
 Die DAX-Programmiersprache in speicherinternen Modellen unterstützt Vergleiche von zwei Ausdrücken, die in Skalarwerte verschiedener Datentypen aufgelöst werden. Modelle, die im DirectQuery-Modus bereitgestellt werden, verwenden jedoch die Datentypen und Vergleichsoperatoren der relationalen Engine und geben daher u. U. unterschiedliche Ergebnisse zurück.  
   
 Die folgenden Vergleiche geben immer einen Fehler zurück, wenn sie in einer Berechnung in einer DirectQuery-Datenquelle verwendet werden:  
@@ -48,7 +48,7 @@ Die folgenden Vergleiche geben immer einen Fehler zurück, wenn sie in einer Ber
   
 Im Allgemeinen toleriert die DAX-Programmiersprache mehr Datentypkonflikte in speicherinternen Modellen und versucht bis zu zweimal, eine implizite Umwandlung von Werten durchzuführen (wie in diesem Abschnitt beschrieben). An einen relationalen Datenspeicher im DirectQuery-Modus gesendete Formeln werden jedoch strenger ausgewertet, wobei die Regeln der relationalen Engine berücksichtigt werden und mit höherer Wahrscheinlichkeit ein Fehlschlag auftritt.  
   
-**Vergleiche von Zeichen folgen und Zahlen**  
+**Vergleiche von Zeichenfolgen und Zahlen**  
 BEISPIEL: `"2" < 3`  
   
 Die Formel vergleicht eine Textzeichenfolge mit einer Zahl. Der Ausdruck ist sowohl bei Modellen im DirectQuery-Modus als auch bei speicherinternen Modellen **true** .  
@@ -62,71 +62,71 @@ BEISPIEL: `"VERDADERO" = TRUE`
   
 Dieser Ausdruck vergleicht eine Textzeichenfolge mit einem booleschen Wert. Im Allgemeinen führt der Vergleich von einem Zeichenfolgenwert mit einem booleschen Wert bei DirectQuery-Modellen bzw. speicherinternen Modellen zu einem Fehler. Diese Regel gilt jedoch nicht, wenn die Zeichenfolge das Wort **true** oder **false**enthält. Wenn die Zeichenfolge Werte des Typs „true“ oder „false“ enthält, erfolgt eine Umwandlung in einen booleschen Wert. Daraufhin wird der Vergleich ausgeführt und ein logisches Ergebnis zurückgegeben.  
   
-**Vergleich der Nullen**  
+**Vergleich von NULL-Werten**  
 BEISPIEL: `EVALUATE ROW("X", BLANK() = BLANK())`  
   
 Diese Formel vergleicht die SQL-Entsprechung eines NULL-Werts mit einem NULL-Wert. Sie gibt für speicherinterne Modelle sowie DirectQuery-Modelle **true** zurück. Eine Bereitstellung erfolgt im DirectQuery-Modell, um ein ähnliches Verhalten beim speicherinternen Modell zu gewährleisten.  
   
 Beachten Sie, dass ein NULL-Wert in Transact-SQL niemals gleich einem NULL-Wert ist. In der DAX-Programmiersprache jedoch ist ein Leerzeichen gleich einem anderen Leerzeichen. Dieses Verhalten gilt für alle speicherinternen Modelle. Im DirectQuery-Modus wird hauptsächlich die Semantik von SQL Server verwendet. In diesem Fall wird jedoch von der Semantik abgewichen, indem ein neues Verhalten für Vergleiche von NULL-Werten verwendet wird.  
   
-### <a name="bkmk_Casts"></a>Würfen  
+### <a name="casts"></a><a name="bkmk_Casts"></a>Umwandlungen  
   
-Es gibt in der DAX-Programmiersprache keine Umwandlungsfunktion als solche, aber implizite Umwandlungen werden bei vielen Vergleichsvorgängen sowie arithmetischen Vorgängen ausgeführt. Anhand des Vergleichsvorgangs bzw. arithmetischen Vorgangs wird der Datentyp des Ergebnisses bestimmt. Beispiel:  
+Es gibt in der DAX-Programmiersprache keine Umwandlungsfunktion als solche, aber implizite Umwandlungen werden bei vielen Vergleichsvorgängen sowie arithmetischen Vorgängen ausgeführt. Anhand des Vergleichsvorgangs bzw. arithmetischen Vorgangs wird der Datentyp des Ergebnisses bestimmt. Ein auf ein Objekt angewendeter  
   
 -   Boolesche Werte werden bei arithmetischen Vorgängen als numerisch betrachtet, beispielsweise als TRUE + 1. Alternativ wird die Funktion MIN für eine Spalte mit booleschen Werten angewendet. Ein NOT-Vorgang gibt ebenfalls einen numerischen Wert zurück.  
   
 -   Boolesche Werte werden stets als logische Werte in Vergleichen sowie bei Verwendung mit EXACT, AND, OR, &amp;&amp;oder || betrachtet.  
   
-**Umwandlung von einer Zeichenfolge in einen booleschen Wert**  
+**Umwandeln einer Zeichenfolge in einen booleschen Wert**  
 Bei in-Memory-und directquery-Modellen sind Umwandlungen nur boolesche Werte aus diesen Zeichen folgen zulässig: **""** (leere Zeichenfolge), **"true"**, **"false"**; , wenn eine leere Zeichenfolge in einen false-Wert umgewandelt wird.  
   
 Umwandlungen anderer Zeichenfolgen in den booleschen Datentyp führen zu einem Fehler.  
   
-**Umwandlung von einer Zeichenfolge in ein Datum/eine Uhrzeit**  
+**Umwandeln einer Zeichenfolge in ein Datum/eine Uhrzeit**  
 Umwandlungen von Zeichenfolgendarstellungen für Daten und Uhrzeiten in tatsächliche **datetime** -Werte verhalten sich im DirectQuery-Modus auf die gleiche Weise wie bei SQL Server.  
   
 Informationen zu den Regeln, die Umwandlungen von Zeichen folgen in **DateTime** - [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] Datentypen in Modellen Regeln, finden Sie in der [DAX-Syntax Referenz](/dax/dax-syntax-reference).
   
 Modelle, die den speicherinternen Datenspeicher verwenden, unterstützen weniger Textformate für Datumsangaben als die entsprechenden von SQL Server unterstützten Zeichenfolgenformate. Die DAX-Programmiersprache unterstützt jedoch benutzerdefinierte Datums- und Uhrzeitformate.  
   
-**Umwandlung von Zeichen folgen in andere nicht-boolesche Werte**  
+**Umwandeln von Zeichenfolgen in andere nicht-boolesche Werte**  
 Bei der Umwandlung von Zeichenfolgen in nicht-boolesche Werte verhält sich der DirectQuery-Modus auf die gleiche Weise wie SQL Server. Weitere Informationen finden Sie unter [CAST und CONVERT (Transact-SQL)](https://msdn.microsoft.com/a87d0850-c670-4720-9ad5-6f5a22343ea8).  
   
-**Umwandlung von Zahlen in Zeichen folgen nicht zulässig**  
+**Umwandlung von Zahlen in Zeichenfolgen nicht zulässig**  
 BEISPIEL: `CONCATENATE(102,",345")`  
   
 Die Umwandlung von Zahlen in Zeichenfolgen ist bei SQL Server nicht zulässig.  
   
 Diese Formel gibt einen Fehler in Tabellenmodellen und im DirectQuery-Modus zurück. Die Formel erzeugt allerdings in [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]ein Ergebnis.  
   
-**Keine Unterstützung für Umwandlungen mit zwei versuchen in directquery**  
+**Keine Unterstützung für Umwandlungen mit zwei Versuchen in DirectQuery**  
 Bei speicherinternen Modellen erfolgt oftmals ein zweiter Umwandlungsversuch, wenn der erste fehlgeschlagen ist. Dies geschieht nicht im DirectQuery-Modus.  
   
 BEISPIEL: `TODAY() + "13:14:15"`  
   
-In diesem Ausdruck weist der erste Parameter den Typ **datetime** und der zweite Parameter den Typ **string**auf. Die Umwandlungen werden jedoch im Fall der Kombination der Operanden unterschiedlich gehandhabt. DAX führt eine implizite Umwandlung von **string** in **double**aus. Bei speicherinternen Modellen versucht die Formel-Engine, eine direkte Umwandlung in **double**vorzunehmen. Missling dieser Vorgang, wird versucht, die Zeichenfolge in **datetime**umzuwandeln.  
+In diesem Ausdruck weist der erste Parameter den Typ **datetime** und der zweite Parameter den Typ **string**auf. Die Umwandlungen werden jedoch im Fall der Kombination der Operanden unterschiedlich gehandhabt. DAX führt eine implizite Umwandlung von **string** in **double**aus. Bei speicherinternen Modellen versucht die Formel-Engine, eine direkte Umwandlung in **double** vorzunehmen. Missling dieser Vorgang, wird versucht, die Zeichenfolge in **datetime** umzuwandeln.  
   
 Im DirectQuery-Modus wird nur die direkte Umwandlung von **string** in **double** übernommen. Schlägt diese Umwandlung fehl, gibt die Formel einen Fehler zurück.  
   
-### <a name="bkmk_Math"></a>Mathematische Funktionen und arithmetische Vorgänge  
+### <a name="math-functions-and-arithmetic-operations"></a><a name="bkmk_Math"></a>Mathematische Funktionen und arithmetische Vorgänge  
 Einige mathematische Funktionen geben im DirectQuery-Modus andere Ergebnisse zurück. Dies ist auf Unterschiede des zugrunde liegenden Datentyps oder der Umwandlungen zurückzuführen, die in Vorgängen übernommen werden können. Zudem können sich die zuvor beschriebenen Einschränkungen der zulässigen Werte auf das Ergebnis von arithmetischen Vorgängen auswirken.  
   
-**Reihenfolge der Addition**  
+**Reihenfolge der Hinzufügung**  
 Wenn Sie eine Formel erstellen, die eine Reihe von Zahlen hinzufügt, verarbeitet ein speicherinternes Modell die Zahlen u. U. in einer anderen Reihenfolge als ein DirectQuery-Modell.  Liegen demnach viele sehr hohe positive Zahlen und sehr hohe negative Zahlen vor, wird möglicherweise ein Fehler in einem Vorgang zurückgegeben, und ein weiterer Vorgang wird ausgelöst.  
   
-**Verwendung der Power-Funktion**  
+**Verwendung der POWER-Funktion**  
 BEISPIEL: `POWER(-64, 1/3)`  
   
 Im DirectQuery-Modus kann die POWER-Funktion keine negativen Werte als Basis für Berechnungen mit Bruchexponenten verwenden. Dies ist das erwartete Verhalten in SQL Server.  
   
 Bei einem speicherinternen Modell gibt die Formel den Wert "-4" zurück.  
   
-**Numerische Überlauf Vorgänge**  
+**Numerische Überlaufvorgänge**  
 In Transact-SQL geben Vorgänge, die zu einem numerischen Überlauf führen, einen Überlauffehler zurück. Daher geben auch Formeln, die zu einem Überlauf führen, einen Fehler im DirectQuery-Modus zurück.  
   
 Die gleiche Formel gibt allerdings bei Verwendung in einem speicherinternen Modell eine ganze Zahl mit einer Länge von acht Byte zurück. Das liegt daran, dass die Formel-Engine keine Überprüfungen für numerische Überläufe ausführt.  
   
-**Protokollfunktionen mit Leerzeichen geben andere Ergebnisse zurück.**  
+**LOG-Funktionen mit Leerzeichen geben andere Ergebnisse zurück.**  
 SQL Server behandelt NULL-Werte und Leerzeichen anders als die xVelocity-Engine. Daher gibt die folgende Formel einen Fehler im directquery-Modus zurück, gibt jedoch unendlich (-INF) im in-Memory-Modus zurück.  
   
 `EXAMPLE: LOG(blank())`  
@@ -154,7 +154,7 @@ Die folgenden Ausdrücke sind in speicherinternen Modellen gültig, schlagen jed
   
 Der Ausdruck `BLANK/BLANK` ist ein besonderer Fall, der `BLANK` sowohl in speicherinternen Modellen als auch im DirectQuery-Modus zurückgibt.  
   
-### <a name="bkmk_Ranges"></a>Unterstützte numerische und Datums-/Uhrzeitbereiche  
+### <a name="supported-numeric-and-date-time-ranges"></a><a name="bkmk_Ranges"></a>Unterstützte numerische und Datums-/Uhrzeitbereiche  
 Formeln in [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] und tabellarischen Modellen im Arbeitsspeicher unterliegen den gleichen Einschränkungen wie Excel in Bezug auf die maximal zulässigen Werte für reelle Zahlen und Datumsangaben. Unterschiede können jedoch entstehen, wenn der maximale Wert von einer Berechnung oder einer Abfrage zurückgegeben wird, oder wenn Werte konvertiert, umgewandelt, gerundet oder gekürzt werden.  
   
 -   Werden Werte der Typen **Currency** und **Real** multipliziert, und ist das Ergebnis größer als der maximal mögliche Wert, wird im DirectQuery-Modus kein Fehler ausgelöst. Zudem wird ein NULL-Wert zurückgegeben.  
@@ -169,12 +169,12 @@ Da die zulässigen Datumsbereiche für Excel und SQL Server unterschiedlich sind
   
 Wenn in Formeln verwendete Datumsangaben außerhalb dieses Bereichs liegen, führt entweder die Formel zu einem Fehler, oder die Ergebnisse stimmen nicht überein.  
   
-**Von Ceiling unterstützte Gleit Komma Werte**  
+**Von CEILING unterstützte Gleitkommawerte**  
 BEISPIEL: `EVALUATE ROW("x", CEILING(-4.398488E+30, 1))`  
   
 Die Transact-SQL-Entsprechung für die DAX-CEILING-Funktion unterstützt nur Werte mit einer Größe von maximal 10^19. Als Faustregel gilt, dass Gleitkommawerte in **bigint**passen sollten.  
   
-**Datepart-Funktionen mit Datumsangaben außerhalb des gültigen Bereichs**  
+**Datepart-Funktionen mit Datumsangaben außerhalb des Bereichs**  
 Bei Ergebnissen im DirectQuery-Modus wird gewährleistet, dass diese den Ergebnissen von speicherinternen Modellen nur entsprechen, wenn sich das als Argument verwendete Datum innerhalb des gültigen Datumsbereichs befindet. Werden diese Bedingungen nicht erfüllt, wird entweder ein Fehler ausgelöst, oder die Formel gibt in DirectQuery andere Ergebnisse zurück als im speicherinternen Modus.  
   
 BEISPIEL: `MONTH(0)` oder `YEAR(0)`  
@@ -191,7 +191,7 @@ BEISPIEL: `EOMONTH(blank(), blank())` oder `EDATE(blank(), blank())`
   
 Die Ergebnisse dieses Ausdrucks sollten im DirectQuery-Modus sowie im speicherinternen Modus gleich sein.  
   
-**Abschneiden von Uhrzeitwerten**  
+**Kürzen von Zeitwerten**  
 BEISPIEL: `SECOND(1231.04097222222)`  
   
 Im DirectQuery-Modus wird das Ergebnis auf Basis der Regeln für SQL Server gekürzt. Zudem ergibt der Ausdruck den Wert "59".  
@@ -212,36 +212,36 @@ Im folgenden Beispiel wird veranschaulicht, wie dieser Wert berechnet wird:
   
 6.  60 entspricht 0.  
   
-**SQL-Zeit Datentyp wird nicht unterstützt.**  
+**SQL-Zeitdatentyp nicht unterstützt**  
 Bei speicherinternen Modellen wird die Verwendung des neuen **Time** -Datentyps nicht unterstützt. Im DirectQuery-Modus geben Formeln, die mit diesem Datentyp auf Spalten verweisen, einen Fehler zurück. Zeitdatenspalten können nicht in ein speicherinternes Modell importiert werden.  
   
 In [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] und in zwischengespeicherten Modellen wandelt die Engine den Zeitwert jedoch manchmal in einen akzeptablen Datentyp um, und die Formel gibt ein Ergebnis zurück.  
   
 Dieses Verhalten beeinflusst alle Funktionen, die eine Datumsspalte als Parameter verwenden.  
   
-### <a name="bkmk_Currency"></a>Währungs  
+### <a name="currency"></a><a name="bkmk_Currency"></a>Währung  
 Im DirectQuery-Modus muss der Wert innerhalb des folgenden Bereichs liegen, wenn das Ergebnis eines arithmetischen Vorgangs den Typ **Currency**aufweist:  
   
 -   Minimum: -922337203685477,5808  
   
 -   Maximum: 922337203685477,5807  
   
-**Kombinieren von Währungs-und Real-Datentypen**  
+**Kombinieren von Währungs- und REAL-Datentypen**  
 BEISPIEL: `Currency sample 1`  
   
 Wenn die Typen **Currency** und **Real** multipliziert werden und das Ergebnis größer als 9223372036854774784 (0x7ffffffffffffc00) ist, wird im DirectQuery-Modus kein Fehler ausgelöst.  
   
 Bei einem speicherinternen Modell wird ein Fehler ausgelöst, wenn der absolute Wert des Ergebnisses größer als 922337203685477,4784 ist.  
   
-**Der Vorgang führt zu einem Wert außerhalb des gültigen Bereichs.**  
+**Vorgang führt zu einem Wert außerhalb des Bereichs**  
 BEISPIEL: `Currency sample 2`  
   
 Wenn Vorgänge zu zwei Währungswerten einen Wert ergeben, der sich außerhalb des angegebenen Bereichs befindet, wird bei speicherinternen Modellen ein Fehler ausgegeben, jedoch nicht bei DirectQuery-Modellen.  
   
-**Kombinieren von Währung mit anderen Datentypen**  
+**Kombinieren von Währungsdatentypen mit anderen Datentypen**  
 Die Division von Währungswerten durch Werte anderer numerischer Typen kann zu unterschiedlichen Ergebnissen führen.  
   
-### <a name="bkmk_Aggregations"></a>Aggregationsfunktionen  
+### <a name="aggregation-functions"></a><a name="bkmk_Aggregations"></a>Aggregationsfunktionen  
 Statistische Funktionen in einer Tabelle mit einer Zeile geben andere Ergebnisse zurück. Aggregationsfunktionen für leere Tabellen verhalten sich zudem bei speicherinternen Modellen anders als im DirectQuery-Modus.  
   
 **Statistische Funktionen für eine Tabelle mit einer einzelnen Zeile**  
@@ -249,14 +249,14 @@ Wenn die als Argument verwendete Tabelle eine einzelne Zeile enthält, geben sta
   
 In einem speicherinternen Modell gibt eine Formel, die STDEV oder VAR für eine Tabelle mit einer einzelnen Zeile verwendet, einen Fehler wegen einer Division durch 0 zurück.  
   
-### <a name="bkmk_Text"></a>Text Funktionen  
+### <a name="text-functions"></a><a name="bkmk_Text"></a>Textfunktionen  
 Da relationale Datenspeicher andere Textdatentypen bereitstellen als Excel, werden bei der Suche nach Zeichenfolgen oder bei der Arbeit mit Teilzeichenfolgen möglicherweise andere Ergebnisse zurückgegeben. Die Länge der Zeichenfolgen kann auch unterschiedlich sein.  
   
 Im Allgemeinen funktioniert jede Zeichenfolgenbearbeitung, die Spalten mit fester Größe verwendet, wie Argumente über andere Ergebnisse verfügen können.  
   
 Darüber hinaus unterstützen einige Textfunktionen in SQL Server zusätzliche Argumente, die nicht in Excel bereitgestellt werden. Wenn die Formel das fehlende Argument erfordert, können andere Ergebnisse oder Fehler im speicherinternen Modell zurückgegeben werden.  
   
-**Vorgänge, die ein Zeichen mithilfe von Left, Right usw. zurückgeben, können das richtige Zeichen, aber in einem anderen Fall oder keine Ergebnisse zurückgeben.**  
+**Vorgänge, die ein Zeichen mit LEFT, RIGHT usw. zurückgeben, geben möglicherweise das richtige Zeichen zurück – allerdings in einer anderen Schreibweise. Alternativ werden keine Ergebnisse zurückgegeben.**  
 BEISPIEL: `LEFT(["text"], 2)`  
   
 Im DirectQuery-Modus entspricht die Schreibweise des Zeichens, das zurückgegeben wird, stets dem Buchstaben, der in der Datenbank gespeichert wird. Das xVelocity-Engine verwendet jedoch aus Leistungsgründen einen anderen Algorithmus für die Komprimierung und Indizierung von Werten.  
@@ -267,7 +267,7 @@ Standardmäßig wird die Latin1_General-Sortierung verwendet (ohne Berücksichti
   
 Dieses Verhalten gilt auch für andere Textfunktionen, einschließlich RIGHT, MID usw.  
   
-**Zeichen folgen Länge beeinflusst Ergebnisse**  
+**Zeichenfolgenlänge wirkt sich auf Ergebnisse aus**  
 BEISPIEL: `SEARCH("within string", "sample target  text", 1, 1)`  
   
 Wenn Sie mit der SEARCH-Funktion nach einer Zeichenfolge suchen und die Zielzeichenfolge länger ist als die WITHIN-Zeichenfolge, löst der DirectQuery-Modus einen Fehler aus.  
@@ -280,19 +280,19 @@ Wenn die Ersatzzeichenfolge länger ist als die Originalzeichenfolge, gibt die F
   
 Bei speicherinternen Modellen entspricht das Verhalten der Formel dem von Excel. Dabei werden die Quellzeichenfolge und Ersatzzeichenfolge verkettet, wodurch CACalifornia zurückgegeben wird.  
   
-**Implizites kürzen in der Mitte von Zeichen folgen**  
+**TRIM (implizit) in der Mitte von Zeichenfolgen**  
 BEISPIEL: `TRIM(" A sample sentence with leading white space")`  
   
 Der DirectQuery-Modus übersetzt die DAX-TRIM-Funktion in die SQL-Anweisung `LTRIM(RTRIM(<column>))`. Folglich werden nur führende und nachfolgende Leerstellen entfernt.  
   
 Im Gegensatz dazu entfernt die gleiche Formel in einem speicherinternen Modell Leerzeichen innerhalb der Zeichenfolge – gemäß dem Verhalten von Excel.  
   
-**Impliziter RTrim mit Verwendung der Len-Funktion**  
+**RTRIM (implizit) mit Verwendung der LEN-Funktion**  
 BEISPIEL: `LEN('string_column')`  
   
 Wie bei SQL Server entfernt auch der DirectQuery-Modus Leerstellen am Ende der Zeichenfolgenspalten automatisch (Ausführung der impliziten RTRIM-Funktion). Daher können Formeln, die die LEN-Funktion verwenden, andere Werte zurückgeben, wenn die Zeichenfolge nachfolgende Leerzeichen aufweist.  
   
-**In-Memory unterstützt zusätzliche Parameter für den Ersatz.**  
+**Der speicherinterne Modus unterstützt zusätzliche Parameter für SUBSTITUTE.**  
 BEISPIEL: `SUBSTITUTE([Title],"Doctor","Dr.")`  
   
 BEISPIEL: `SUBSTITUTE([Title],"Doctor","Dr.", 2)`  
@@ -301,12 +301,12 @@ Im DirectQuery-Modus können Sie nur die Version dieser Funktion verwenden, die 
   
 Bei speicherinternen Modellen können Sie einen optionalen vierten Parameter verwenden, um die Instanznummer der zu ersetzenden Zeichenfolge anzugeben. Beispielsweise können Sie nur die zweite Instanz ersetzen usw.  
   
-**Einschränkungen für Zeichen folgen Längen für rept-Vorgänge**  
+**Einschränkungen der Zeichenfolgenlänge für REPT-Vorgänge**  
 Bei speicherinternen Modellen muss die Länge einer Zeichenfolge, die sich aus einem REPT-Vorgang ergibt, weniger als 32.767 Zeichen umfassen.  
   
 Diese Einschränkung gilt nicht für den DirectQuery-Modus.  
   
-**Substring-Vorgänge geben abhängig vom Zeichentyp andere Ergebnisse zurück**  
+**Vorgänge für Teilzeichenfolgen geben abhängig von Zeichentyp andere Ergebnisse zurück**  
 BEISPIEL: `MID([col], 2, 5)`  
   
 Wenn der Eingabetext **varchar** oder **nvarchar**lautet, ist das Ergebnis der Formel immer gleich.  
@@ -315,7 +315,7 @@ Wenn der Text jedoch ein Zeichen mit fester Länge ist und der Wert für * &lt;n
   
 Bei einem speicherinternen Modell endet das Ergebnis beim letzten Zeichenfolgenzeichen (ohne Auffüllung).  
   
-## <a name="bkmk_SupportedFunc"></a>Im directquery-Modus unterstützte Funktionen  
+## <a name="functions-supported-in-directquery-mode"></a><a name="bkmk_SupportedFunc"></a>Im directquery-Modus unterstützte Funktionen  
 Die folgenden DAX-Funktionen können im DirectQuery-Modus verwendet werden, allerdings mit den im vorherigen Abschnitt beschriebenen Qualifikationen.  
   
 **Text Funktionen**  
@@ -392,7 +392,7 @@ Es gibt einige Einschränkungen, wenn Sie Formeln anhand eines DirectQuery-Model
   
 Bei einem speicherinternen Modell hat das Wiederholen der ORDER BY-Klausel keine Auswirkung auf die Ergebnisse.  
   
-## <a name="bkmk_NotSupportedFunc"></a>Im directquery-Modus nicht unterstützte Funktionen  
+## <a name="functions-not-supported-in-directquery-mode"></a><a name="bkmk_NotSupportedFunc"></a>Im directquery-Modus nicht unterstützte Funktionen  
 Einige DAX-Funktionen werden nicht in Modellen unterstützt, die im DirectQuery-Modus bereitgestellt werden. Wird eine bestimmte Funktion nicht unterstützt, kann dies auf mindestens einen der folgenden Gründe zurückgeführt werden:  
   
 -   Die zugrunde liegende relationale Engine kann keine Berechnungen ausführen, die gleichwertig mit denen der xVelocity-Engine sind.  
@@ -503,7 +503,7 @@ LASTDATE
   
 DATEADD  
   
-## <a name="see-also"></a>Weitere Informationen  
-[Directquery-Modus (SSAS-tabellarisch)](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
+## <a name="see-also"></a>Siehe auch  
+[DirectQuery-Modus (SSAS – tabellarisch)](https://msdn.microsoft.com/45ad2965-05ec-4fb1-a164-d8060b562ea5)  
   
 

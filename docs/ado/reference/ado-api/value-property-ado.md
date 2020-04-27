@@ -17,10 +17,10 @@ ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e35dd93e6d90a81934d8f272ea79c5eb7c8a97c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67913924"
 ---
 # <a name="value-property-ado"></a>Value-Eigenschaft (ADO)
@@ -31,7 +31,7 @@ Gibt den Wert an, der einem [Feld](../../../ado/reference/ado-api/field-object.m
 
 Legt einen **Variant** -Wert fest, der den Wert des-Objekts angibt, oder gibt diesen zurück. Der Standardwert hängt von der [Type](../../../ado/reference/ado-api/type-property-ado.md) -Eigenschaft ab.
   
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Verwenden Sie die **value** -Eigenschaft zum Festlegen oder Zurückgeben von Daten aus **Feld** Objekten, zum Festlegen oder Zurückgeben von Parameterwerten mit **Parameter** Objekten oder zum Festlegen oder Zurückgeben von Eigenschafts Einstellungen mit **Eigenschafts** Objekten. Ob die **value** -Eigenschaft Lese-/Schreibzugriff hat oder schreibgeschützt ist, hängt von zahlreichen Faktoren ab. Weitere Informationen finden Sie in den jeweiligen Objekt Themen.
 

@@ -10,10 +10,10 @@ ms.assetid: 8c06420a-533b-4de0-948d-a0c6b368c544
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e4cf080d7a3bcb2d121a58a57be9f3fd41a4c18a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908821"
 ---
 # <a name="project-settings-azure-sql-db-mysqltosql"></a>Projekteinstellungen (Azure SQL-DB) (MySqlToSql)
@@ -25,7 +25,7 @@ Der SQL Azure Bereich ist in den Dialogfeldern **Projekteinstellungen** und **St
   
 -   Verwenden Sie das Dialogfeld Standard Projekteinstellungen, um Konfigurationsoptionen für alle Projekte festzulegen. Um auf die SQL Azure Einstellungen zuzugreifen, wählen Sie **im Menü Extras** die Option **defaultproject Settings**aus, wählen Sie in der Dropdown Liste **Migrations Ziel Version** die Option Migrations projekttSQL Azure YP aus, um auf die Einstellungen in SQL Azure Bereich zuzugreifen, klicken Sie unten im linken Bereich auf **Allgemein** , und wählen Sie dann **SQL Azure**aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 ## <a name="connectivity"></a>Konnektivität  
 **Taktintervall**  

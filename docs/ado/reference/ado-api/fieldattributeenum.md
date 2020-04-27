@@ -16,16 +16,16 @@ ms.assetid: 6e34d886-005a-40dc-bd5c-6adcbf81e5cd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0d375ed3dd4ea7ae7e2e5405d1feec962c5f56ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918704"
 ---
 # <a name="fieldattributeenum"></a>FieldAttributeEnum
 Gibt ein oder mehrere Attribute eines [Feld](../../../ado/reference/ado-api/field-object.md) Objekts an.  
   
-|Dauerhaft|value|BESCHREIBUNG|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adfldcachedeferred**|0x1000|Gibt an, dass der Anbieter Feldwerte zwischenspeichert und nachfolgende Lesevorgänge aus dem Cache durchgeführt werden.|  
 |**adfldfixed**|0x10|Gibt an, dass das Feld Daten fester Länge enthält.|  
@@ -48,7 +48,7 @@ Gibt ein oder mehrere Attribute eines [Feld](../../../ado/reference/ado-api/fiel
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Dauerhaft|  
+|Konstante|  
 |--------------|  
 |Adoumums. fieldattribute. cachedeferred|  
 |Adoumums. fieldattribute. Fixed|  

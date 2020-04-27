@@ -10,10 +10,10 @@ ms.assetid: 2a3cba9e-cd54-4a8b-b858-8fc4cf2580d9
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2f3c989626f36c003937723869b5e17d1a405ea9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908867"
 ---
 # <a name="project-settings-migration-mysqltosql"></a>Projekteinstellungen (Migration) (MySqlToSql)
@@ -25,17 +25,17 @@ Der Bereich Migration ist in den Dialogfeldern **Projekteinstellungen** und **St
   
 -   Um Einstellungen für das aktuelle Projekt anzugeben, wählen Sie **im Menü Extras** die **Option Projekteinstellungen**aus, klicken Sie unten im linken Bereich auf **Allgemein** , und klicken Sie dann auf **Migration**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 ### <a name="bulk-copy"></a>Massen kopieren  
   
 |Begriff|Definition|  
 |--------|--------------|  
-|**Batch Größe**|Gibt die Batch Größe an, die während der Datenmigration verwendet wird.<br /><br />**Standardmodus**: 1000<br /><br />**Optimistischer Modus**: 1000<br /><br />**Vollständiger Modus**: 1000|  
+|**Batch Size**|Gibt die Batch Größe an, die während der Datenmigration verwendet wird.<br /><br />**Standardmodus**: 1000<br /><br />**Optimistischer Modus**: 1000<br /><br />**Vollständiger Modus**: 1000|  
 |**Check-Einschränkungen**|Gibt an, ob SSMA Einschränkungen überprüfen soll, wenn Daten in SQL Server Tabellen eingefügt werden.<br /><br />**Standardmodus**: false<br /><br />**Optimistischer Modus**: false<br /><br />**Vollständiger Modus**: false|  
 |**Trigger auslösen**|Gibt an, ob SSMA Einfügetrigger auslösen soll, wenn Daten SQL Server Tabellen hinzugefügt werden.<br /><br />**Standardmodus**: false<br /><br />**Optimistischer Modus**: false<br /><br />**Vollständiger Modus**: false|  
 |**Identität beibehalten**|Gibt an, ob SSMA beim Hinzufügen von Daten zu SQL Server MySQL-Identitäts Werte beibehält. Der Wert false bewirkt, dass Identitäts Werte vom Ziel zugewiesen werden.<br /><br />**Standardmodus**: true<br /><br />**Optimistischer Modus**: true<br /><br />**Vollständiger Modus**: true|  
-|**NULL-Werten beibehalten**|Gibt an, ob SSMA beim Hinzufügen von Daten zu SQL Server NULL-Werte in den Quelldaten beibehält, unabhängig von den in SQL Server angegebenen Standardwerten.<br /><br />**Standardmodus**: true<br /><br />**Optimistischer Modus**: true<br /><br />**Vollständiger Modus**: true|  
+|**NULL-Werte beibehalten**|Gibt an, ob SSMA beim Hinzufügen von Daten zu SQL Server NULL-Werte in den Quelldaten beibehält, unabhängig von den in SQL Server angegebenen Standardwerten.<br /><br />**Standardmodus**: true<br /><br />**Optimistischer Modus**: true<br /><br />**Vollständiger Modus**: true|  
 |**Tabellensperre**|Gibt an, ob SSMA Tabellen sperrt, wenn während der Datenmigration Daten zu Tabellen hinzugefügt werden. Erhält eine Massen Aktualisierungs Sperre für die Dauer des Massen Kopiervorgangs. Wenn der Wert false ist, wird auf Zeilenebene eine Sperre festgelegt.<br /><br />**Standardmodus**: false<br /><br />**Optimistischer Modus**: false<br /><br />**Vollständiger Modus**: false|  
   
 ### <a name="data-modification"></a>Datenänderung  
@@ -79,6 +79,6 @@ Der Bereich Migration ist in den Dialogfeldern **Projekteinstellungen** und **St
   
 |Begriff|Definition|  
 |--------|--------------|  
-|**Behandlung von Fehlern**|Gibt an, wie Fehler bei der Migration von Werten räumlicher Datentypen behandelt werden. Wenn ' Replace with NULL ' angegeben ist, werden alle räumlichen Werte, die Fehler verursachen, durch Null ersetzt. Andernfalls wird kein Ersatz ausgeführt.<br /><br />**Standardmodus**: Fehler generieren<br /><br />**Optimistischer Modus**: Fehler generieren<br /><br />**Vollständiger Modus**: Fehler generieren|  
+|**Behandeln von Fehlern**|Gibt an, wie Fehler bei der Migration von Werten räumlicher Datentypen behandelt werden. Wenn ' Replace with NULL ' angegeben ist, werden alle räumlichen Werte, die Fehler verursachen, durch Null ersetzt. Andernfalls wird kein Ersatz ausgeführt.<br /><br />**Standardmodus**: Fehler generieren<br /><br />**Optimistischer Modus**: Fehler generieren<br /><br />**Vollständiger Modus**: Fehler generieren|  
 |**Wert Validierung**|Gibt an, wie ungültige räumliche Werte behandelt werden. Wenn "try Make valid" angegeben ist, wird versucht, ungültige Werte zu ändern, damit Sie gültig sind.<br /><br />**Standardmodus**: als gültig festlegen<br /><br />**Optimistischer Modus**: nicht ändern<br /><br />**Vollständiger Modus**: als gültig festlegen|  
   

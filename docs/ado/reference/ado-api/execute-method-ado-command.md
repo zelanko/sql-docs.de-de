@@ -17,10 +17,10 @@ ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4ef42c04944f39e0b2d1930cc6520df2b6c5fa5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918850"
 ---
 # <a name="execute-method-ado-command"></a>Execute-Methode (ADO-Befehl)
@@ -40,7 +40,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
  *RecordsAffected*  
  Optional. Eine **lange** Variable, in der der Anbieter die Anzahl der Datensätze zurückgibt, auf die sich der Vorgang ausgewirkt hat. Der *recordsafffiziert* -Parameter gilt nur für Aktions Abfragen oder gespeicherte Prozeduren. *Recordsaff.* gibt nicht die Anzahl von Datensätzen zurück, die von einer Ergebnis Rückgabe Abfrage oder gespeicherten Prozedur zurückgegeben werden. Um diese Informationen zu erhalten, verwenden Sie die [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) -Eigenschaft. Die **Execute** -Methode gibt bei der Verwendung mit **adAsyncExecute**nicht die richtigen Informationen zurück, weil die Anzahl der betroffenen Datensätze möglicherweise noch nicht bekannt ist, wenn ein Befehl asynchron ausgeführt wird.  
   
- *Parameter*  
+ *Parameters*  
  Optional. Ein **Variant** -Array von Parameterwerten, das in Verbindung mit der in **CommandText** oder **CommandStream**angegebenen Eingabe Zeichenfolge oder dem Stream verwendet wird. (Ausgabeparameter geben bei der Übergabe in dieses Argument keine korrekten Werte zurück.)  
   
  *Optionen*  
@@ -49,7 +49,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
 > [!NOTE]
 >  Verwenden Sie den **ExecuteOptionEnum** -Wert **adExecuteNoRecords** , um die Leistung zu verbessern, indem die interne Verarbeitung minimiert wird. Wenn " **adExecuteStream** " angegeben wurde, werden die Optionen " **adasyncfetch** " und " **adAsynchFetchNonBlocking** " ignoriert. Verwenden Sie den **commandtypeenumum** -Wert von **adcmdfile** oder **adCmdTableDirect** nicht mit **Execute**. Diese Werte können nur als Optionen mit den [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) -und [Requery](../../../ado/reference/ado-api/requery-method.md) -Methoden eines **Recordsets**verwendet werden.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn Sie die **Execute** -Methode für ein **Command** -Objekt verwenden, wird die in der **CommandText** -Eigenschaft oder der **CommandStream** -Eigenschaft des-Objekts angegebene Abfrage ausgeführt.  
   
  Ergebnisse werden in einem **Recordset** (standardmäßig) oder als Datenstrom binärer Informationen zurückgegeben. Zum Abrufen eines binären Streams geben Sie **adExecuteStream** in *Optionen*an, und geben Sie dann einen Stream durch Festlegen von **Command. Properties ("Ausgabestream")** an. Zum Empfangen der Ergebnisse kann ein ADO- **Stream** -Objekt angegeben werden, oder es kann ein anderes Datenstrom Objekt angegeben werden, z. b. das IIS-Antwortobjekt. Wenn kein Stream vor dem Aufruf von **Execute** with **adExecuteStream**angegeben wurde, tritt ein Fehler auf. Die Position des Streams bei der Rückgabe von **Execute** ist Anbieter spezifisch.  

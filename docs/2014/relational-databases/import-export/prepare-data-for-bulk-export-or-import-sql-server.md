@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c1c423bad8742b0a9760945e3823d6ef159c1e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67046702"
 ---
 # <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>Vorbereiten von Daten für den Massenexport oder -import (SQL Server)
@@ -36,7 +36,7 @@ ms.locfileid: "67046702"
   
 -   Zum Massenexportieren aus einer Tabelle oder Sicht in eine Datendatei ist die SELECT-Berechtigung für die massenkopierte Tabelle oder Sicht erforderlich.  
   
--   [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann parallele Scans verwenden, um Daten abzurufen. Daher ist normalerweise nicht sichergestellt, dass die Tabellenzeilen, die aus einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] massenexportiert werden, sich in der Datendatei in einer bestimmten Reihenfolge befinden. Verwenden Sie die Option **queryout** für den Massenexport aus einer Abfrage, um sicherzustellen, dass massenexportierte Tabellenzeilen in der Datendatei in einer bestimmten Reihenfolge angezeigt werden, und geben Sie eine ORDER BY-Klausel an.  
+-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann parallele Scans verwenden, um Daten abzurufen. Daher ist normalerweise nicht sichergestellt, dass die Tabellenzeilen, die aus einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] massenexportiert werden, sich in der Datendatei in einer bestimmten Reihenfolge befinden. Verwenden Sie die Option **queryout** für den Massenexport aus einer Abfrage, um sicherzustellen, dass massenexportierte Tabellenzeilen in der Datendatei in einer bestimmten Reihenfolge angezeigt werden, und geben Sie eine ORDER BY-Klausel an.  
   
 ## <a name="data-file-format-requirements-for-bulk-import"></a>Anforderungen an das Datendateiformat für den Massenexport  
  Zum Importieren von Daten in eine Datendatei muss die Datei die folgenden grundlegenden Anforderungen erfüllen:  
@@ -50,7 +50,7 @@ ms.locfileid: "67046702"
   
 -   Die Daten können ein Zeichenformat oder ein systemeigenes binäres Format, einschließlich Unicode, aufweisen.  
   
--   Zum Importieren von Daten mithilfe des Befehls **bcp** , einer BULK INSERT-Anweisung oder einer INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung muss die Zieltabelle bereits vorhanden sein.  
+-   Zum Importieren von Daten mithilfe des Befehls **bcp**, einer BULK INSERT-Anweisung oder einer INSERT ... SELECT * FROM OPENROWSET(BULK...)-Anweisung muss die Zieltabelle bereits vorhanden sein.  
   
 -   Jedes Feld in der Datendatei muss mit der entsprechenden Spalte in der Zieltabelle kompatibel sein. Ein `int`-Feld kann z. B. nicht in eine `datetime`-Spalte geladen werden. Weitere Informationen finden Sie unter [Datenformate für Massenimport oder Massenexport &#40;SQL Server&#41;](data-formats-for-bulk-import-or-bulk-export-sql-server.md) und [Angeben von Datenformaten für die Kompatibilität bei Verwendung von bcp &#40;SQL Server&#41;](specify-data-formats-for-compatibility-when-using-bcp-sql-server.md).  
   
@@ -67,13 +67,13 @@ ms.locfileid: "67046702"
   
      Für den Massenimport von Daten aus einer [!INCLUDE[msCoName](../../includes/msconame-md.md)] FoxPro- oder Visual FoxPro-Tabellendatei (.dbf) oder einer [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] -Arbeitsblattdatei (.xls), müssen die Daten in eine CSV-Datei umgewandelt werden, die den vorangehenden Einschränkungen entspricht. Die Dateierweiterung lautet normalerweise .csv. Anschließend kann die Datei mit der Dateinamenerweiterung .csv als Datendatei in einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Massenimportvorgang verwendet werden.  
   
-     In 32-Bit-Systemen ist es jedoch möglich, CSV-Daten mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET [mit dem OLE DB-Anbieter für Jet in eine](/sql/t-sql/functions/openrowset-transact-sql) -Tabelle ohne Massenimportoptimierungen zu importieren. Jet behandelt Textdateien als Tabellen mit dem durch eine schema.ini-Datei, die sich im gleichen Verzeichnis wie die Datenquelle befindet, festgelegten Schema.  Für CSV-Daten ist einer der Parameter in der Datei schema.ini "FORMAT=CSVDelimited". Für diese Lösung Kenntnisse über die Jet Test IISAMm-Vorgänge, die zugehörige Verbindungszeichenfolgensyntax, die Verwendung von „schema.ini“, die Einstellungsoptionen für die Registrierung usw., erforderlich.  Die besten Informationsquellen hierfür sind die Microsoft Access-Hilfe und Knowledge Base (KB)-Artikel. Weitere Informationen finden Sie unter [Initializing the Text Data Source Driver](https://docs.microsoft.com/office/client-developer/access/desktop-database-reference/initializing-the-text-data-source-driver), [Verwendung eine verteilten Abfrage von SQLServer 7.0 mit einem verknüpften Server gesicherten Access-Datenbanken](https://go.microsoft.com/fwlink/?LinkId=128504)(maschinell übersetzter Artikel), [Verwendung von Jet OLE DB-Provider 4.0 an ISAM-Datenbanken](https://go.microsoft.com/fwlink/?LinkId=128505)(maschinell übersetzter Artikel) und [Gewusst wie: Öffnen Sie getrennte Textdateien mit der Jet-Provider Text IIsam (maschinell übersetzter Artikel)](https://go.microsoft.com/fwlink/?LinkId=128501).  
+     In 32-Bit-Systemen ist es jedoch möglich, CSV-Daten mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET [mit dem OLE DB-Anbieter für Jet in eine](/sql/t-sql/functions/openrowset-transact-sql) -Tabelle ohne Massenimportoptimierungen zu importieren. Jet behandelt Textdateien als Tabellen mit dem durch eine schema.ini-Datei, die sich im gleichen Verzeichnis wie die Datenquelle befindet, festgelegten Schema.  Für CSV-Daten ist einer der Parameter in der Datei schema.ini "FORMAT=CSVDelimited". Für diese Lösung Kenntnisse über die Jet Test IISAMm-Vorgänge, die zugehörige Verbindungszeichenfolgensyntax, die Verwendung von „schema.ini“, die Einstellungsoptionen für die Registrierung usw., erforderlich.  Die besten Informationsquellen hierfür sind die Microsoft Access-Hilfe und Knowledge Base (KB)-Artikel. Weitere Informationen finden Sie unter [Initializing the Text Data Source Driver (Initialisieren des Text-Datenquellentreibers)](https://docs.microsoft.com/office/client-developer/access/desktop-database-reference/initializing-the-text-data-source-driver), [How To Use a SQL Server 7.0 Distributed Query with a Linked Server to Secured Access Databases (Verwenden einer verteilten SQL Server 7.0-Abfrage mit einem Verbindungsserver zu Datenbanken mit gesichertem Zugriff)](https://go.microsoft.com/fwlink/?LinkId=128504), [HOW TO: Use Jet OLE DB Provider 4.0 to Connect to ISAM Databases (Vorgehensweise: Verwenden von Jet OLE DB 4.0 zum Herstellen einer Verbindung mit ISAM-Datenbanken)](https://go.microsoft.com/fwlink/?LinkId=128505) und [How To Open Delimited Text Files Using the Jet Provider's Text IIsam (Öffnen durch Trennzeichen getrennter Textdateien mit Text-IISAM des Jet-Anbieters)](https://go.microsoft.com/fwlink/?LinkId=128501).  
   
  Darüber hinaus ist Folgendes für den Massenimport von Daten aus einer Datendatei in eine Tabelle erforderlich:  
   
 -   Benutzer müssen über INSERT- und SELECT-Berechtigungen für die Tabelle verfügen. Benutzer müssen auch über eine ALTER TABLE-Berechtigung verfügen, wenn sie Optionen wie das Deaktivieren von Einschränkungen verwenden, für die DLL-Vorgänge (Data Definition Language) erforderlich sind.  
   
--   Wenn Sie für das Massenimportieren von Daten BULK INSERT oder INSERT ... SELECT * FROM OPENROWSET(BULK...) verwenden, muss entweder das Sicherheitsprofil des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozesses (wenn sich der Benutzer mit dem bereitgestellten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen anmeldet) oder die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldung, die beim Delegieren der Sicherheit verwendet wird, über Zugriff für Lesevorgänge auf die Datendatei verfügen. Darüber hinaus muss der Benutzer zum Lesen der Datei über die ADMINISTER BULK OPERATIONS-Berechtigung verfügen.  
+-   Wenn Sie für das Massenimportieren von Daten BULK INSERT oder INSERT ... SELECT * FROM OPENROWSET(BULK...) verwenden, muss entweder das Sicherheitsprofil des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Prozesses (wenn sich der Benutzer mit dem bereitgestellten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen anmeldet) oder die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Anmeldung, die beim Delegieren der Sicherheit verwendet wird, über Zugriff für Lesevorgänge auf die Datendatei verfügen. Darüber hinaus muss der Benutzer zum Lesen der Datei über die ADMINISTER BULK OPERATIONS-Berechtigung verfügen.  
   
 > [!NOTE]  
 >  Das Massenimportieren in eine partitionierte Sicht wird nicht unterstützt, und Versuche, einen Massenimport von Daten in eine partitionierte Sicht auszuführen, schlagen fehl.  
@@ -91,7 +91,7 @@ ms.locfileid: "67046702"
  [bcp (Hilfsprogramm)](../../tools/bcp-utility.md)   
  [BULK INSERT &#40;Transact-SQL&#41;](/sql/t-sql/statements/bulk-insert-transact-sql)   
  [Datentypen &#40;Transact-SQL&#41;](/sql/t-sql/data-types/data-types-transact-sql)   
- [Verwenden Sie das Zeichen Format, um Daten &#40;SQL Server zu importieren oder zu exportieren&#41;](use-character-format-to-import-or-export-data-sql-server.md)   
+ [Verwenden des Zeichenformats zum Importieren und Exportieren von Daten &#40;SQL Server&#41;](use-character-format-to-import-or-export-data-sql-server.md)   
  [Verwenden des nativen Formats zum Importieren oder Exportieren von Daten &#40;SQL Server&#41;](use-native-format-to-import-or-export-data-sql-server.md)  
   
   

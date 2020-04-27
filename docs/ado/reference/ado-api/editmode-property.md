@@ -16,10 +16,10 @@ ms.assetid: a1b04bb2-8c8b-47f9-8477-bfd0368b6f68
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c0ffc6fb258799b0ab0bb03e7acbd922f6a67d1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918984"
 ---
 # <a name="editmode-property"></a>EditMode-Eigenschaft
@@ -28,7 +28,7 @@ Gibt den Bearbeitungsstatus des aktuellen Datensatzes an.
 ## <a name="return-value"></a>Rückgabewert  
  Gibt einen [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md) -Wert zurück.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  ADO verwaltet einen Bearbeitungs Puffer, der dem aktuellen Datensatz zugeordnet ist. Diese Eigenschaft gibt an, ob an diesem Puffer Änderungen vorgenommen wurden oder ob ein neuer Datensatz erstellt wurde. Verwenden Sie die **EditMode** -Eigenschaft, um den Bearbeitungsstatus des aktuellen Datensatzes zu bestimmen. Sie können auf ausstehende Änderungen testen, wenn ein Bearbeitungsvorgang unterbrochen wurde, und feststellen, ob Sie die [Update](../../../ado/reference/ado-api/update-method.md) -oder [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) -Methode verwenden müssen.  
   
  Im *sofort Update Modus* wird die **EditMode** -Eigenschaft auf " **adEditNone** " zurückgesetzt, nachdem ein erfolgreicher Aufruf der **Update** -Methode aufgerufen wurde. Wenn durch einen [Delete-DELETE](../../../ado/reference/ado-api/delete-method-ado-recordset.md) -Vorgang der Datensatz oder die Datensätze in der Datenquelle (z. b. aufgrund von Verletzungen der referenziellen Integrität) nicht erfolgreich gelöscht werden, verbleibt das [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) im Bearbeitungsmodus (**EditMode** = **adEditInProgress**). Daher muss **CancelUpdate** aufgerufen werden, bevor der aktuelle Datensatz (z. b. [Move](../../../ado/reference/ado-api/move-method-ado.md), [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)oder [Close](../../../ado/reference/ado-api/close-method-ado.md) ) verschoben wird.  

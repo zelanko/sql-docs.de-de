@@ -16,10 +16,10 @@ ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d3ad005a4c26a033f6c97d97def4cd55d867c14e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918665"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
@@ -27,7 +27,7 @@ Gibt den [Status](../../../ado/reference/ado-api/status-property-ado-field.md) e
   
  Die **adfieldpending\* ** -Werte geben den Vorgang an, der bewirkt hat, dass der Status festgelegt wurde, und können mit anderen Status Werten kombiniert werden.  
   
-|Dauerhaft|value|BESCHREIBUNG|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adfieldalread yexistiert**|26|Gibt an, dass das angegebene Feld bereits vorhanden ist.|  
 |**adfieldbadstatus**|12|Gibt an, dass ein ungültiger Statuswert von ADO an den OLE DB-Anbieter gesendet wurde. Zu den möglichen Ursachen gehören ein OLE DB 1,0-oder 1,1-Anbieter oder eine falsche Kombination aus [Wert](../../../ado/reference/ado-api/value-property-ado.md) und [Status](../../../ado/reference/ado-api/status-property-ado-field.md).|  
@@ -42,7 +42,7 @@ Gibt den [Status](../../../ado/reference/ado-api/status-property-ado-field.md) e
 |**adfieldintegrityverletzungs**|10|Gibt an, dass das Feld nicht geändert werden kann, da es eine berechnete oder abgeleitete Entität ist.|  
 |**adfieldinvalidurl**|17|Gibt an, dass die Datenquellen-URL ungültige Zeichen enthält.|  
 |**adfieldisnull**|3|Gibt an, dass der Anbieter einen Variant-Wert vom Typ VT_NULL zurückgegeben hat und dass das Feld nicht leer ist.|  
-|**adFieldOK**|0|Default. Gibt an, dass das Feld erfolgreich hinzugefügt oder gelöscht wurde.|  
+|**adFieldOK**|0|Standard. Gibt an, dass das Feld erfolgreich hinzugefügt oder gelöscht wurde.|  
 |**adfieldouesleerraum**|22|Gibt an, dass der Anbieter nicht genügend Speicherplatz zum Durchführen eines verschiebe-oder Kopiervorgangs abrufen kann.|  
 |**adfieldpdingchange**|0x40000|Gibt an, dass das Feld gelöscht und anschließend erneut hinzugefügt wurde, möglicherweise mit einem anderen Datentyp, oder dass sich der Wert des Felds, das zuvor den Status **adFieldOK** enthielt, geändert hat. In der endgültigen Form des Felds wird die [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) -Auflistung geändert, nachdem die [Update](../../../ado/reference/ado-api/update-method.md) -Methode aufgerufen wurde.|  
 |**adfieldpdingdelete**|0x20000|Gibt an, dass der **Lösch** Vorgang bewirkt hat, dass der Status festgelegt wurde. Nachdem die **Update** -Methode aufgerufen wurde, wurde das Feld zum Löschen aus der **Fields** -Auflistung markiert.|  

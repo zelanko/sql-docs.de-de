@@ -19,10 +19,10 @@ ms.assetid: 0d70184f-baa2-411b-a32d-a4c5af890edd
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: feaf2a222df364a41e51969a2c95a978f2d0a289
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900957"
 ---
 # <a name="sysdm_fts_index_keywords_position_by_document-transact-sql"></a>sys. dm_fts_index_keywords_position_by_document (Transact-SQL)
@@ -51,13 +51,13 @@ OBJECT_ID('table_name')
   
 |Column|Datentyp|BESCHREIBUNG|  
 |------------|---------------|-----------------|  
-|Schlüsselwort (keyword)|**varbinary (128)**|Binäre Zeichenfolge, die das Schlüsselwort darstellt.|  
+|Schlüsselwort (keyword)|**varbinary(128)**|Binäre Zeichenfolge, die das Schlüsselwort darstellt.|  
 |display_term|**nvarchar(4000)**|Die Klartextform des Schlüsselworts. Dieses Format wird vom internen Format abgeleitet, das im Volltextindex gespeichert ist.|  
 |column_id|**int**|Die ID der Spalte für die Volltextindizierung des aktuellen Schlüsselworts.|  
-|document_id|**BIGINT**|Die ID des Dokuments bzw. der Zeile für die Volltextindizierung des aktuellen Ausdrucks. Diese ID entspricht dem Volltextschlüsselwert dieses Dokuments bzw. dieser Zeile.|  
+|document_id|**bigint**|Die ID des Dokuments bzw. der Zeile für die Volltextindizierung des aktuellen Ausdrucks. Diese ID entspricht dem Volltextschlüsselwert dieses Dokuments bzw. dieser Zeile.|  
 |position|**int**|Die Position des Schlüssel Worts im Dokument.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Verwenden Sie die DMV, um den Speicherort von indizierten Wörtern in indizierten Dokumenten zu identifizieren. Diese DMV kann verwendet werden, um Probleme zu beheben, wenn **sys. dm_fts_index_keywords_by_document** angibt, dass sich die Wörter im Volltextindex befinden, aber wenn Sie eine Abfrage mit diesen Wörtern ausführen, wird das Dokument nicht zurückgegeben.  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -90,12 +90,12 @@ WHERE document_id = 7 AND display_term = 'performance';
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Voll Text Suche](../../relational-databases/search/full-text-search.md)   
+ [Volltextsuche](../../relational-databases/search/full-text-search.md)   
  [Verbessern der Leistung von voll Text Indizes](../../relational-databases/search/improve-the-performance-of-full-text-indexes.md)   
  [Funktionen für die voll Text Suche und die semantische Suche &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/full-text-search-and-semantic-search-functions-transact-sql.md)   
  [Dynamische Verwaltungs Sichten und Funktionen für die voll Text Suche und die semantische Suche &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [Gespeicherte Prozeduren für die voll Text Suche und die semantische Suche &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
- [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
+ [Durchsuchen von Dokumenteigenschaften mithilfe von Such Eigenschaften Listen](../../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)  
   
   

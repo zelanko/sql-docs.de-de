@@ -18,10 +18,10 @@ ms.assetid: 2e399fa1-3591-4c1c-96b7-7964fe82c7c4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9fbd2240bdeba50d8ae41bce8d3a8d58b28de036
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907293"
 ---
 # <a name="mslogreader_history-transact-sql"></a>MSlogreader_history (Transact-SQL)
@@ -35,8 +35,8 @@ ms.locfileid: "67907293"
 |**RunStatus**|**int**|Der Ausführungsstatus:<br /><br /> 1 = Start<br /><br /> 2 = Erfolgreich<br /><br /> 3 = Wird ausgeführt<br /><br /> 4 = Im Leerlauf<br /><br /> 5 = Wiederholung<br /><br /> 6 = Fehler|  
 |**start_time**|**datetime**|Der Zeitpunkt, zu dem mit der Ausführung des Auftrags begonnen wird.|  
 |**time**|**datetime**|Der Zeitpunkt der Protokollierung der Meldung.|  
-|**auf**|**int**|Die Dauer der Meldungssitzung in Sekunden.|  
-|**iny**|**nvarchar(255)**|Der Meldungstext.|  
+|**duration**|**int**|Die Dauer der Meldungssitzung in Sekunden.|  
+|**Kommentare**|**nvarchar(255)**|Der Meldungstext.|  
 |**xact_seqno**|**varbinary(16)**|Die Sequenznummer der zuletzt verarbeiteten Transaktion.|  
 |**delivery_time**|**int**|Die Zeit, zu der die erste Transaktion übermittelt wird.|  
 |**delivered_transactions**|**int**|Die Gesamtzahl der in der Sitzung übermittelten Transaktionen.|  

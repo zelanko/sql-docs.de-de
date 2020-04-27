@@ -17,10 +17,10 @@ ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6549fd10b173a8e133c941ea4315634badb3f35f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917835"
 ---
 # <a name="open-method-ado-stream"></a>Open-Methode (ADO-Datenstrom)
@@ -34,7 +34,7 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *`Source`*  
+ *Quelle*  
  Optional. Ein **Variant** -Wert, der die Datenquelle für den Daten **Strom**angibt. Die *Quelle* kann eine absolute URL Zeichenfolge enthalten, die auf einen vorhandenen Knoten in einer bekannten Struktur verweist, wie z. b. eine e-Mail oder ein Dateisystem. Eine URL sollte mithilfe des URL-Schlüssel Worts ("URL =*Schema*://*Server*/*Ordner*") angegeben werden. Alternativ kann die *Quelle* einen Verweis auf ein bereits geöffnetes [Daten Satz](../../../ado/reference/ado-api/record-object-ado.md) Objekt enthalten, das den dem **Datensatz**zugeordneten Standardstream öffnet. Wenn *Source* nicht angegeben wird, wird ein **Stream** instanziiert und geöffnet, der standardmäßig keiner zugrunde liegenden Quelle zugeordnet ist. Weitere Informationen zu URL-Schemas und den zugehörigen Anbietern finden Sie unter [absolute und relative URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
  *Mode*  
@@ -49,7 +49,7 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
  *Kennwort*  
  Optional. Ein **Zeichen** folgen Wert, der das Kennwort enthält, das bei Bedarf auf das **Stream** -Objekt zugreift.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn ein **Datensatz** -Objekt als Quellparameter übergeben wird, werden die Parameter " *UserID* " und " *Password* " nicht verwendet, da der Zugriff auf das **Daten Satz** Objekt bereits verfügbar ist. Entsprechend wird der [Modus](../../../ado/reference/ado-api/mode-property-ado.md) des **Datensatz** -Objekts an das **Stream** -Objekt übertragen. Wenn *Source* nicht angegeben wird, enthält der geöffnete **Stream** keine Daten und hat die [Größe](../../../ado/reference/ado-api/size-property-ado-stream.md) 0 (null). Um den Verlust von Daten zu vermeiden, die in diesen **Stream** geschrieben werden, wenn der **Stream** geschlossen wird, speichern Sie den **Stream** mit den [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) -oder [savedefile](../../../ado/reference/ado-api/savetofile-method.md) -Methoden, oder speichern Sie ihn an einem anderen Speicherort.  
   
  Der Wert *openoptions* von **adopenstreamfromrecord** identifiziert den Inhalt des *Quell* Parameters als bereits geöffnetes **Daten Satz** Objekt. Standardmäßig wird *Source* als URL behandelt, die direkt auf einen Knoten in einer Baumstruktur verweist, z. b. auf eine Datei. Der Standarddaten Strom, der diesem Knoten zugeordnet ist, wird geöffnet.  

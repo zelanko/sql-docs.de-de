@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 514774acc7255f2f499bfe7fdd6e731944ab67fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67285047"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>Gleichzeitiges Installieren von Reporting Services und Internetinformationsdiensten (einheitlicher SSRS-Modus)
@@ -51,23 +51,23 @@ ms.locfileid: "67285047"
   
  Ein Zeichen für einen Portkonflikt ist die folgende Fehlermeldung: 'System.IO.FileLoadException: Der Prozess kann nicht auf die Datei zugreifen, da sie von einem anderen Prozess verwendet wird. (Ausnahme von HRESULT: 0x80070020).  
   
-## <a name="url-reservations-for-iis-60-70-80-85-with-includesssql14includessssql14-mdmd-reporting-services"></a>URL-Reservierungen für IIS 6.0, 7.0, 8.0, 8.5 mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services  
+## <a name="url-reservations-for-iis-60-70-80-85-with-sssql14-reporting-services"></a>URL-Reservierungen für IIS 6.0, 7.0, 8.0, 8.5 mit [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Reporting Services  
  Anhand der im vorherigen Abschnitt beschriebenen Rangfolgeregeln wird deutlich, wie die für Reporting Services und IIS definierten URL-Reservierungen zur Interoperabilität beitragen. Reporting Services empfängt Anforderungen, die die Namen der virtuellen Verzeichnisse seiner Anwendungen explizit angeben; IIS empfängt alle verbleibenden Anforderungen, die dann an Anwendungen umgeleitet werden können, die innerhalb des IIS-Verarbeitungsmodells ausgeführt werden.  
   
-|Application|URL-Reservierung|BESCHREIBUNG|Anforderungsempfang|  
+|Application|URL-Reservierung|Beschreibung|Anforderungsempfang|  
 |-----------------|---------------------|-----------------|---------------------|  
 |Berichtsserver|http://+:80/ReportServer|Starker Platzhalter an Port 80, mit virtuellem Verzeichnis "ReportServer".|Empfängt alle Anforderungen an Port 80, die das virtuelle Verzeichnis "ReportServer" angeben. Der Berichtsserver-Webdienst empfängt alle Anforderungen an http://\<Computername>/reportserver.|  
 |Berichts-Manager|http://+:80/Reports|Starker Platzhalter an Port 80, mit virtuellem Verzeichnis "Reports".|Empfängt alle Anforderungen an Port 80, die das virtuelle Verzeichnis "reports" angeben. Berichts-Manager empfängt alle Anforderungen an http://\<Computername>/Reports.|  
 |IIS|http://*:80/|Schwacher Platzhalter an Port 80.|Empfängt an Port 80 alle verbleibenden Anforderungen, die nicht von einer anderen Anwendung empfangen wurden.|  
   
-## <a name="side-by-side-deployments-of-includesscurrentincludessscurrent-mdmd-and-sql-server-2005-reporting-services-on-iis-60-70-80-85"></a>Parallele Bereitstellungen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und SQL Server 2005 Reporting Services auf IIS 6.0, 7.0, 8.0, 8.5  
+## <a name="side-by-side-deployments-of-sscurrent-and-sql-server-2005-reporting-services-on-iis-60-70-80-85"></a>Parallele Bereitstellungen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und SQL Server 2005 Reporting Services auf IIS 6.0, 7.0, 8.0, 8.5  
  Interoperabilitätsprobleme zwischen IIS und Reporting Services treten auf, wenn IIS-Websites und Reporting Services identische Namen virtueller Verzeichnisse aufweisen. Gehen wir beispielsweise von folgender Konfiguration aus:  
   
 -   Eine Website in IIS, die Port 80 und einem virtuellen Verzeichnis mit dem Namen "Reports" zugewiesen ist.  
   
 -   Eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] in der Standardkonfiguration installierte Berichts Serverinstanz, bei der die URL-Reservierung auch Port 80 angibt, und die Berichts-Manager Anwendung verwendet auch "Reports" als Namen des virtuellen Verzeichnisses.  
   
- Bei dieser Konfiguration wird eine an http://\<Computername>:80/reports gesendete Anforderung von Berichts-Manager empfangen. Die Anwendung, auf die über das virtuelle Verzeichnis „Reports“ in IIS zugegriffen wird, empfängt nach der Installation der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Berichtsserverinstanz keine Anforderungen mehr.  
+ Bei dieser Konfiguration wird eine an http://\<Computername>:80/reports gesendete Anforderung von Berichts-Manager empfangen. Die Anwendung, auf die über das virtuelle Verzeichnis „Reports“ in IIS zugegriffen wird, empfängt nach der Installation der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Berichtsserverinstanz keine Anforderungen mehr.  
   
  Wenn Sie die Bereitstellungen älterer und neuerer Versionen von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]gleichzeitig ausführen, tritt unter Umständen das gerade beschriebene Routingproblem auf. Dies liegt daran, dass alle [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Versionen "ReportServer" und "Reports" als Namen der virtuellen Verzeichnisse für den Berichtsserver und den Berichts-Manager verwenden und damit die Wahrscheinlichkeit erhöht wird, dass in IIS die virtuellen Verzeichnisse "reports" und "reportserver" vorhanden sind.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "67285047"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Berichtsserver-URLs &#40;SSRS-Konfigurations-Manager&#41;](configure-report-server-urls-ssrs-configuration-manager.md)   
- [Konfigurieren einer URL &#40;SSRS-Konfigurations-Manager&#41;](configure-a-url-ssrs-configuration-manager.md)   
+ [Konfigurieren einer URL &#40;SSRS-Configuration Manager&#41;](configure-a-url-ssrs-configuration-manager.md)   
  [Installieren des Reporting Services-Berichtsservers im einheitlichen Modus](install-reporting-services-native-mode-report-server.md)  
   
   

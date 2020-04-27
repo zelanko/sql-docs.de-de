@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 456aec6c6b9d0d1a5d0ee1d9949507a37577130c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67597533"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>Erstellen von Vorhersagen (Lernprogramm zu Data Mining-Grundlagen)
@@ -65,7 +65,7 @@ ms.locfileid: "67597533"
   
 6.  Geben `calcAge`Sie im Dialogfeld **benannte Berechnung erstellen** im Feld **Spaltenname den Namen**ein.  
   
-7.  Geben **** Sie als Beschreibung **Age date based on BirthDate**ein.  
+7.  Geben **Description**Sie als Beschreibung **Age date based on BirthDate**ein.  
   
 8.  Geben `DATEDIFF(YYYY,[BirthDate],getdate())` Sie im Feld **Ausdruck** ein, und klicken Sie dann auf **OK**.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "67597533"
   
      Ermöglicht das Entfernen von Klauseln aus der Abfrage, ohne sie aus dem Designer zu löschen. Diese Funktion kann bei komplexen Abfragen hilfreich sein, wenn Sie die Syntax beibehalten und keine DMX kopieren und in das Fenster einfügen möchten.  
   
--   **Gruppe**  
+-   **Kreis**  
   
      Fügt eine öffnende (linke) Klammer am Anfang der ausgewählten Zeile oder eine schließende (rechte) Klammer am Ende der aktuellen Zeile ein.  
   

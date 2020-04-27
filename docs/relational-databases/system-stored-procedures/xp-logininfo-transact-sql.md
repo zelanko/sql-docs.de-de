@@ -18,10 +18,10 @@ ms.assetid: ee7162b5-e11f-4a0e-a09c-1878814dbbbd
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 2b3af47a1c09160faab97494d9749fd67c051cd4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67898411"
 ---
 # <a name="xp_logininfo-transact-sql"></a>xp_logininfo (Transact-SQL)
@@ -41,12 +41,12 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @acctname = ] 'account_name'`Der Name eines Windows-Benutzers oder einer Windows-Gruppe, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dem der Zugriff gewährt wird. *account_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *account_name* nicht angegeben wird, werden alle Windows-Gruppen und Windows-Benutzer ausgegeben, denen explizit Anmeldeberechtigungen gewährt wurden. *account_name* muss voll qualifiziert sein. Beispiel: 'ADVWKS4\macraes' oder 'VORDEFINIERT\Administratoren'.  
+`[ @acctname = ] 'account_name'`Der Name eines Windows-Benutzers oder einer Windows-Gruppe, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dem der Zugriff gewährt wird. *account_name* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *account_name* nicht angegeben wird, werden alle Windows-Gruppen und Windows-Benutzer ausgegeben, denen explizit Anmeldeberechtigungen gewährt wurden. *account_name* muss vollqualifiziert sein. Beispiel: 'ADVWKS4\macraes' oder 'VORDEFINIERT\Administratoren'.  
   
  **' all '** | **' Members '**  
  Gibt an, ob für das Konto die Informationen zu allen Berechtigungspfaden oder nur die Informationen zu den Mitgliedern der Windows-Gruppe ausgegeben werden sollen. die Option ist vom Datentyp **varchar (10)** und hat den Standardwert NULL. ** \@** Sofern nicht **all** angegeben wurde, wird nur der erste Berechtigungspfad angezeigt.  
   
-`[ @privilege = ] variable_name`Ist ein Ausgabeparameter, der die Berechtigungsstufe des angegebenen Windows-Kontos zurückgibt. *variable_name* ist vom Datentyp **varchar (10)** und hat den Standardwert "Not Wanted". Die zurückgegebene Privilegstufe ist **user**, **admin**oder **null**.  
+`[ @privilege = ] variable_name`Ist ein Ausgabeparameter, der die Berechtigungsstufe des angegebenen Windows-Kontos zurückgibt. *variable_name* ist vom Datentyp **varchar(10)**. Der Standardwert ist "Not wanted". Die zurückgegebene Privilegstufe ist **user**, **admin**oder **null**.  
   
  OUTPUT  
  Wenn dieser Parameter angegeben wird, wird *variable_name* in den Ausgabeparameter platziert.  
@@ -60,19 +60,18 @@ xp_logininfo [ [ @acctname = ] 'account_name' ]
 |-----------------|---------------|-----------------|  
 |**Kontoname**|**sysname**|Der vollqualifizierte Windows-Kontoname.|  
 |**type**|**char (8)**|Der Windows-Kontotyp. Gültige Werte sind **user** oder **group**.|  
-|**Ehre**|**char (9)**|Das Zugriffsprivileg für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gültige Werte sind **admin**, **user**oder **null**.|  
+|**Ehre**|**char(9)**|Das Zugriffsprivileg für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Gültige Werte sind **admin**, **user**oder **null**.|  
 |**mapped login name**|**sysname**|Für Benutzerkonten mit Benutzerprivileg wird mit **mapped login name** der zugeordnete Anmeldename angezeigt, den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bei der Anmeldung mit diesem Konto zu verwenden versucht. Dabei werden die Zuordnungsregeln mit Voranstellung des Domänennamens verwendet.|  
 |**permission path**|**sysname**|Die Gruppenmitgliedschaft, die dem Konto den Zugriff ermöglicht hat.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wird *account_name* angegeben, meldet **xp_logininfo** die höchste Privilegstufe des angegebenen Windows-Benutzers bzw. der angegebenen Windows-Gruppe. Wenn ein Windows-Benutzer Zugriff als Systemadministrator und als Domänenbenutzer hat, wird er nur als Systemadministrator gemeldet. Gehört der Benutzer mehreren Windows-Gruppen derselben Privilegstufe an, wird nur die Gruppe gemeldet, der zuerst Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erteilt wurde.  
   
  Wenn *account_name* ein gültiger Windows-Benutzer oder eine gültige Windows-Gruppe ist, dem bzw. der kein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldename zugeordnet ist, wird ein leeres Resultset zurückgegeben. Wenn *account_name* nicht als gültiger Windows-Benutzer oder als gültige Windows-Gruppe identifiziert werden kann, wird ein Fehler gemeldet.  
   
  Werden *account_name* und **all** angegeben, werden sämtliche Berechtigungspfade für den Windows-Benutzer oder die Windows-Gruppe zurückgegeben. Wenn *account_name* mehreren Gruppen angehört, denen allen Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erteilt wurde, werden mehrere Zeilen zurückgegeben. Die Zeilen für das **admin** -Privileg werden vor den Zeilen für das **user** -Privileg zurückgegeben. Innerhalb einer Privilegstufe werden die Zeilen in der Reihenfolge zurückgegeben, in der die entsprechenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen erstellt wurden.  
   
- Wenn *account_name* und **members** angegeben werden, wird eine Liste der Gruppenmitglieder der nächsten Ebene zurückgegeben. Ist *account_name* der Name einer lokalen Gruppe, kann die Liste lokale Benutzer, Domänenbenutzer und Gruppen enthalten. Wenn *account_name* ein Domänenkonto ist, besteht die Liste aus Domänenbenutzern. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss eine Verbindung mit dem Domänencontroller herstellen, um Informationen zu Gruppenmitgliedschaften abzurufen. Falls der Server keine Verbindung mit dem Domänencontroller herstellen kann, werden keine Informationen zurückgegeben.  
+ Wenn *account_name* und **members** angegeben werden, wird eine Liste der Gruppenmitglieder der nächsten Ebene zurückgegeben. Ist *account_name* der Name einer lokalen Gruppe, kann die Liste lokale Benutzer, Domänenbenutzer und Gruppen enthalten. Wenn *account_name* ein Domänenkonto ist, besteht die Liste aus Domänenbenutzern. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss eine Verbindung mit dem Domänencontroller herstellen, um Informationen zu Gruppenmitgliedschaften abzurufen. Falls der Server keine Verbindung mit dem Domänencontroller herstellen kann, werden keine Informationen zurückgegeben.  
   
  **xp_logininfo** gibt nur Informationen von Active Directory globalen Gruppen zurück, nicht für universelle Gruppen.  
   
@@ -90,7 +89,7 @@ EXEC xp_logininfo 'BUILTIN\Administrators';
  [sp_denylogin &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [sp_grantlogin &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_revokelogin &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   
- [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Allgemeine erweiterte gespeicherte Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)  
   
   

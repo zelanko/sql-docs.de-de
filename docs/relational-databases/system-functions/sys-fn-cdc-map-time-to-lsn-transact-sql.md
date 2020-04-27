@@ -21,10 +21,10 @@ ms.assetid: 6feb051d-77ae-4c93-818a-849fe518d1d4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7f4f6820aeeca8b600631810ed35933d2519b495
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046333"
 ---
 # <a name="sysfn_cdc_map_time_to_lsn-transact-sql"></a>sys.fn_cdc_map_time_to_lsn (Transact-SQL)
@@ -52,15 +52,15 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
  **"**<relational_operator>**"** {größte kleiner als | größte kleiner als oder gleich | kleinste größer als | kleinste größer als oder gleich}  
  Wird verwendet, um einen eindeutigen LSN-Wert in der **cdc.lsn_time_mapping** -Tabelle mit zugeordnetem **tran_end_time** -Wert zu identifizieren, der der Beziehung entspricht, wenn er mit dem Wert *tracking_time* verglichen wird.  
   
- *relational_operator* ist vom Datentyp **nvarchar (30)**.  
+ *relational_operator* ist **nvarchar(30)**  
   
  *tracking_time*  
- Der datetime-Wert, mit dem verglichen werden soll. *tracking_time* ist vom **Datentyp DateTime**.  
+ Der datetime-Wert, mit dem verglichen werden soll. *tracking_time* ist **datetime**  
   
 ## <a name="return-type"></a>Rückgabetyp  
- **Binär (10)**  
+ **binary(10)**  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Das folgende Szenario veranschaulicht, wie **sys.fn_cdc_map_time_lsn** verwendet werden kann, um datetime-Bereiche LSN-Bereichen zuzuordnen. Angenommen, ein Consumer möchte täglich Änderungsdaten extrahieren. In diesem Fall interessiert sich der Consumer nur für die Änderungen an einem bestimmten Tag bis einschließlich Mitternacht. Die Untergrenze des Zeitbereichs wäre bis Mitternacht des vorangehenden Tags (nicht einschließlich Mitternacht). Die Obergrenze wäre bis einschließlich Mitternacht des bestimmten Tags. Im folgenden Beispiel wird gezeigt, wie Sie die Funktion **sys.fn_cdc_map_time_to_lsn** verwenden können, um diesen zeitbasierten Bereich dem LSN-basierten Bereich zuzuordnen, der von den Change Data Capture-Enumerationsfunktionen benötigt wird, um alle Änderungen innerhalb dieses Bereichs zurückzugeben.  
   
  `DECLARE @begin_time datetime, @end_time datetime, @begin_lsn binary(10), @end_lsn binary(10);`  
@@ -97,6 +97,6 @@ END
  [CDC. lsn_time_mapping &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md)   
  [sys. fn_cdc_map_lsn_to_time &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-cdc-map-lsn-to-time-transact-sql.md)   
  [CDC. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)   
- [CDC. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
+ [cdc.fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)  
   
   

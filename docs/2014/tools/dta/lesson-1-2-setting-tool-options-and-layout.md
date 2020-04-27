@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: de7918c382187fe4af361146bd182eecd7e30b80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66110202"
 ---
 # <a name="setting-tool-options-and-layout"></a>Festlegen von Optionen und Layout
@@ -36,7 +36,7 @@ ms.locfileid: "66110202"
   
     -   Für **Anzahl der Elemente in der Liste zuletzt verwendeter Objekte** kann ein Wert von **1** bis **10**festgelegt werden. Damit wird die maximale Anzahl von Elementen in der Liste festgelegt, die angezeigt wird, wenn Sie im Menü **Datei** auf **Zuletzt geöffnete Sitzungen** oder **Zuletzt geöffnete Dateien** klicken. Standardmäßig ist der Wert **4**festgelegt.  
   
-    -   Wenn das Kontrollkästchen **Die letzten Optimierungsoptionen speichern** aktiviert ist, verwendet der Datenbankoptimierungsratgeber standardmäßig die Optimierungsoptionen, die Sie bei der letzten Sitzung angegeben haben, auch für die nächste Optimierungssitzung. Deaktivieren Sie das Kontrollkästchen, wenn Sie die Standardeinstellungen für den Datenbankoptimierungsratgeber verwenden möchten. Standardmäßig ist diese Option ausgewählt.  
+    -   Wenn das Kontrollkästchen **Die letzten Optimierungsoptionen speichern** aktiviert ist, verwendet der Datenbankoptimierungsratgeber standardmäßig die Optimierungsoptionen, die Sie bei der letzten Sitzung angegeben haben, auch für die nächste Optimierungssitzung. Deaktivieren Sie das Kontrollkästchen, wenn Sie die Standardeinstellungen für den Datenbankoptimierungsratgeber verwenden möchten. Diese Option ist standardmäßig ausgewählt.  
   
     -   Standardmäßig ist das Kontrollkästchen **Dauerhaftes Löschen von Sitzungen bestätigen** aktiviert, um ein versehentliches Löschen von Optimierungssitzungen zu vermeiden.  
   

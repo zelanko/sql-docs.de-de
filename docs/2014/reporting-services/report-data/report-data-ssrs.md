@@ -11,45 +11,45 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: be36e61a44a416283e77638f01005f1b3e16883b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67413059"
 ---
 # <a name="report-data-in-sql-server-reporting-services-ssrs"></a>Berichtsdaten in SQL Server Reporting Services (SSRS)
 
   Berichtsdaten können aus mehreren Datenquellen in Ihrer Organisation stammen. Der erste Schritt beim Entwerfen eines Berichts ist das Erstellen von Datenquellen und Datasets, die die zugrunde liegenden Berichtsdaten darstellen. Jede Datenquelle enthält Datenverbindungsinformationen. Jedes Dataset enthält einen Abfragebefehl, der den Satz von Feldern definiert, der als Daten aus einer Datenquelle verwendet werden soll. Sie können die Daten jedes Datasets visuell darstellen, indem Sie einen Datenbereich hinzufügen, z. B. eine Tabelle, eine Matrix, ein Diagramm oder eine Karte. Wenn der Bericht verarbeitet wird, wird Datenquelle abgefragt, und jeder Datenbereich nach Bedarf erweitert, um die Abfrageergebnisse für das Dataset anzuzeigen.  
   
-##  <a name="BkMk_ReportDataTerms"></a>Bedingungen
+##  <a name="terms"></a><a name="BkMk_ReportDataTerms"></a>Bedingungen
 
  Wenn Sie mit [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] den Konzepten nicht vertraut sind, überprüfen Sie die folgenden Begriffe in [Reporting Services Konzepten &#40;SSRS&#41;](../reporting-services-concepts-ssrs.md): *Datenverbindung*, *eingebettete Datenquellen*, frei *gegebene Datenquellen*, *eingebettete Datasets*, frei *gegebene Datasets*, *Datasetabfragen*, *Berichts Teile*und *Daten Warnungen*.  
   
-##  <a name="BkMk_ReportDataTips"></a>Tipps zum Angeben von Berichtsdaten
+##  <a name="tips-for-specifying-report-data"></a><a name="BkMk_ReportDataTips"></a>Tipps zum Angeben von Berichtsdaten
 
  Die folgenden Informationen helfen Ihnen beim Entwerfen Ihrer Berichtsdaten-Strategie.  
   
-- **Datenquellen** Datenquellen können unabhängig von Berichten auf einem Berichts Server oder einer SharePoint-Website veröffentlicht und verwaltet werden. Für jede Datenquelle können Sie oder der Datenbankbesitzer Verbindungsinformationen an einem Ort verwalten. Anmeldeinformationen für Datenquellen werden sicher auf dem Berichtsserver gespeichert; Kennwörter werden nicht in die Verbindungszeichenfolge aufgenommen. Sie können eine Datenquelle von einem Testserver an einen Produktionsserver umleiten. Sie können eine Datenquelle deaktivieren, um alle Berichte anzuhalten, die sie verwenden. Eine Liste der unterstützten Datenquellen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungs](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)Zeichenfolgen in Reporting Services.  
+- **Datenquellen** Datenquellen können veröffentlicht werden und unabhängig von Berichten auf einem Berichtsserver oder einer SharePoint-Website verwaltet werden. Für jede Datenquelle können Sie oder der Datenbankbesitzer Verbindungsinformationen an einem Ort verwalten. Anmeldeinformationen für Datenquellen werden sicher auf dem Berichtsserver gespeichert; Kennwörter werden nicht in die Verbindungszeichenfolge aufgenommen. Sie können eine Datenquelle von einem Testserver an einen Produktionsserver umleiten. Sie können eine Datenquelle deaktivieren, um alle Berichte anzuhalten, die sie verwenden. Eine Liste der unterstützten Datenquellen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungs](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)Zeichenfolgen in Reporting Services.  
   
-- **DataSets** Datasets können unabhängig von Berichten oder freigegebenen Datenquellen, von denen Sie abhängen, veröffentlicht und verwaltet werden. Sie oder der Datenbankbesitzer können optimierte Abfragen zur Verfügung stellen, die die Berichtsautoren dann verwenden können. Wenn Sie die Abfrage ändern, verwenden alle Berichte, die das freigegebene Dataset nutzen, die aktualisierte Abfrage. Zur Steigerung der Leistung können Sie die Zwischenspeicherung von Datasets aktivieren. Sie können die Zwischenspeicherung von Abfragen für eine bestimmte Zeit planen oder einen freigegebenen Zeitplan verwenden.  
+- **Datasets** Datasets können veröffentlicht werden und unabhängig von Berichten oder den freigegebenen Datenquellen, von denen sie abhängen, verwaltet werden. Sie oder der Datenbankbesitzer können optimierte Abfragen zur Verfügung stellen, die die Berichtsautoren dann verwenden können. Wenn Sie die Abfrage ändern, verwenden alle Berichte, die das freigegebene Dataset nutzen, die aktualisierte Abfrage. Zur Steigerung der Leistung können Sie die Zwischenspeicherung von Datasets aktivieren. Sie können die Zwischenspeicherung von Abfragen für eine bestimmte Zeit planen oder einen freigegebenen Zeitplan verwenden.  
   
-- **Daten, die von Berichts Teilen verwendet werden** Berichts Teile können die Daten enthalten, von denen Sie abhängen. Weitere Informationen zu Berichtsteilen finden Sie unter [Berichtsteile im Berichts-Designer (SSRS)](../report-design/report-parts-in-report-designer-ssrs.md).  
+- **Daten, die von Berichtsteilen verwendet werden** Berichtsteile können Daten einbeziehen, von denen sie abhängen. Weitere Informationen zu Berichtsteilen finden Sie unter [Berichtsteile im Berichts-Designer (SSRS)](../report-design/report-parts-in-report-designer-ssrs.md).  
   
 - **Filtern von Daten** Berichtsdaten können in der Abfrage oder im Bericht gefiltert werden. Sie können kaskadierende Parameter mithilfe von Datasets und Abfragevariablen erstellen und so den Benutzern die Möglichkeit geben, die Auswahl von Tausenden von Möglichkeiten auf eine überschaubare Zahl einzugrenzen. Sie können Daten in einer Tabelle oder in einem Diagramm auf Grundlage von Parameterwerten oder anderen Werten, die Sie angeben, filtern.  
   
-- **Parameter** Datasetabfragebefehle, die Abfrage Variablen einschließen, erstellen automatisch übereinstimmende Berichts Parameter. Parameter können aber auch manuell erstellt werden. Wenn Sie einen Bericht anzeigen, zeigt die Berichtssymbolleiste die Parameter an. Benutzer können Werte auswählen, um Berichtsdaten zu überprüfen oder deren Auftreten zu melden. Sie können Berichtsdaten für bestimmte Zielgruppen anpassen, indem Sie Sätze von Berichtsparametern mit anderen Standardwerten erstellen, die mit derselben Berichtsdefinition verknüpft sind, oder das integrierte `UserID`-Feld verwenden. Weitere Informationen finden Sie unter [Berichtsparameter (Berichts-Generator und Berichts-Designer)](../report-design/report-parameters-report-builder-and-report-designer.md) und [Integrierte Sammlungen in Ausdrücken (Berichts-Generator und SSRS)](../report-design/built-in-collections-in-expressions-report-builder.md).  
+- **Parameter** Dataset-Abfragebefehle, die Abfragevariablen einschließen, erstellen automatisch übereinstimmende Berichtsparameter. Parameter können aber auch manuell erstellt werden. Wenn Sie einen Bericht anzeigen, zeigt die Berichtssymbolleiste die Parameter an. Benutzer können Werte auswählen, um Berichtsdaten zu überprüfen oder deren Auftreten zu melden. Sie können Berichtsdaten für bestimmte Zielgruppen anpassen, indem Sie Sätze von Berichtsparametern mit anderen Standardwerten erstellen, die mit derselben Berichtsdefinition verknüpft sind, oder das integrierte `UserID`-Feld verwenden. Weitere Informationen finden Sie unter [Berichtsparameter (Berichts-Generator und Berichts-Designer)](../report-design/report-parameters-report-builder-and-report-designer.md) und [Integrierte Sammlungen in Ausdrücken (Berichts-Generator und SSRS)](../report-design/built-in-collections-in-expressions-report-builder.md).  
   
-- **Daten Warnungen** Nachdem ein Bericht veröffentlicht wurde, können Sie Warnungen auf der Grundlage von Berichtsdaten erstellen und e-Mail-Nachrichten empfangen, wenn er die von Ihnen angegebenen Regeln erfüllt.  
+- **Datenwarnungen** Nach der Veröffentlichung eines Berichts können Sie Warnungen auf Grundlage der Berichtsdaten erstellen, und die Zusendung einer E-Mail veranlassen, wenn die Daten den angegebenen Regeln entsprechen.  
   
-- **Gruppieren und Aggregieren von Daten** Berichtsdaten können in der Abfrage oder im Bericht gruppiert und aggregiert werden. Wenn Sie Werte in der Abfrage aggregieren, können Sie weiterhin im Rahmen des Sinnvollen Werte im Bericht kombinieren.  Weitere Informationen finden Sie unter [Filtern, Gruppieren und Sortieren von Daten (Berichts-Generator und SSRS)](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) und [Aggregate-Funktion (Berichts-Generator und SSRS)](../report-design/report-builder-functions-aggregate-function.md).  
+- **Daten gruppieren und aggregieren** Berichtsdaten können in der Abfrage oder im Bericht gruppiert oder aggregiert werden. Wenn Sie Werte in der Abfrage aggregieren, können Sie weiterhin im Rahmen des Sinnvollen Werte im Bericht kombinieren.  Weitere Informationen finden Sie unter [Filtern, Gruppieren und Sortieren von Daten (Berichts-Generator und SSRS)](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md) und [Aggregate-Funktion (Berichts-Generator und SSRS)](../report-design/report-builder-functions-aggregate-function.md).  
   
-- **Sortieren von Daten** Berichtsdaten können in der Abfrage oder im Bericht sortiert werden. In Tabellen können Sie zudem eine interaktive Sortierschaltfläche hinzufügen, mit der die Benutzer selbst über die Sortierreihenfolge entscheiden können.  
+- **Daten sortieren** Berichtsdaten können in der Abfrage oder im Bericht sortiert werden. In Tabellen können Sie zudem eine interaktive Sortierschaltfläche hinzufügen, mit der die Benutzer selbst über die Sortierreihenfolge entscheiden können.  
   
-- **Ausdrucks basierte Daten** Da die meisten Berichts Eigenschaften Ausdrucks basiert sein können und Ausdrücke Verweise auf Datasetfelder und Berichts Parameter enthalten können, können Sie leistungsstarke Ausdrücke schreiben, um die Berichtsdaten und die Darstellung zu steuern. Sie können einem Benutzer die Möglichkeit geben, die Datenanzeige durch Definieren von Parametern zu steuern.  
+- **Ausdrucksbasierte Daten:** Da die meisten Berichtseigenschaften ausdrucksbasiert sein und Ausdrücke Verweise auf Datasetfelder und Berichtsparameter enthalten können, können Sie leistungsstarke Ausdrücke schreiben, um die Berichtsdaten und ihre Darstellung zu steuern. Sie können einem Benutzer die Möglichkeit geben, die Datenanzeige durch Definieren von Parametern zu steuern.  
   
-- **Anzeigen von Daten aus einem DataSet** Daten aus einem Dataset werden in der Regel in einem oder mehreren Daten Bereichen angezeigt, z. b. in einer Tabelle und einem Diagramm.  
+- **Daten aus einem Dataset anzeigen** Daten aus einem Dataset werden in der Regel in einem oder mehreren Datenbereichen angezeigt, z. B. einer Tabelle und einem Diagramm.  
   
-- **Anzeigen von Daten aus mehreren Datasets**  Sie können Ausdrücke in einem Datenbereich auf Grundlage eines Datasets schreiben, das nach Werten oder Aggregaten in anderen Datasets sucht. Sie können Unterberichte auf Grundlage eines Datasets in eine Tabelle aufnehmen, um Daten aus einer anderen Datenquelle anzuzeigen.  
+- **Daten aus mehreren Datasets anzeigen**  . Sie können Ausdrücke in einem Datenbereich auf Grundlage eines Datasets schreiben, die nach Werten oder Aggregaten in anderen Datasets suchen. Sie können Unterberichte auf Grundlage eines Datasets in eine Tabelle aufnehmen, um Daten aus einer anderen Datenquelle anzuzeigen.  
   
 ## <a name="data-connections-data-sources-and-datasets"></a>Datenverbindungen, Datenquellen und Datensets
 
@@ -75,7 +75,7 @@ ms.locfileid: "67413059"
 |-|-|  
 |**Allgemeine Aufgaben**|**Links**|  
 |Erstellen von Datenverbindungen|[Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md)|  
-|Erstellen von Datasets und Abfragen|[Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|  
+|Erstellen von Datasets und Abfragen|[Melden Sie eingebettete Datasets und freigegebene Datasets &#40;Berichts-Generator und SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|  
 |Verwalten von Datenquellen nach der Veröffentlichung|[Verwalten von Berichtsdatenquellen](manage-report-data-sources.md)|  
 |Verwalten von freigegebenen Datasets nach der Veröffentlichung|[Verwalten von freigegebenen Datasets](manage-shared-datasets.md)|  
 |Erstellen und Verwalten von Datenwarnungen|[Reporting Services-Datenwarnungen](../tutorial-creating-a-basic-table-report-report-builder.md)|  

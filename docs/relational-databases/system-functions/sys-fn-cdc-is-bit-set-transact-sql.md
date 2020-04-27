@@ -21,10 +21,10 @@ ms.assetid: 792fe7cf-b3b8-4f25-8329-78d63f0e6921
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7d14e4e85d6ee52955ba17f42d288e0c770a183a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68046356"
 ---
 # <a name="sysfn_cdc_is_bit_set-transact-sql"></a>sys.fn_cdc_is_bit_set (Transact-SQL)
@@ -42,17 +42,17 @@ sys.fn_cdc_is_bit_set ( position , update_mask )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *gebracht*  
- Die Ordnungsposition in der zu überprüfenden Maske. *Position* ist **int**.  
+ *position*  
+ Die Ordnungsposition in der zu überprüfenden Maske. *position* ist **int**  
   
  *update_mask*  
- Die Maske, die aktualisierte Spalten identifiziert. *update_mask* ist vom Datentyp **varbinary (128)**.  
+ Die Maske, die aktualisierte Spalten identifiziert. *update_mask* ist **varbinary(128)**  
   
 ## <a name="return-type"></a>Rückgabetyp  
  **bit**  
   
-## <a name="remarks"></a>Bemerkungen  
- Diese Funktion wird in der Regel als Teil einer Änderungsdatenabfrage verwendet, um anzuzeigen, ob eine Spalte geändert wurde. In diesem Szenario wird die Funktion [sys.fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md) vor der Abfrage verwendet, um die erforderliche Spaltenordnungszahl abzurufen. **sys. fn_cdc_is_bit_set** wird dann auf jede Zeile mit zurückgegebenen Änderungs Daten angewendet und stellt die Spalten spezifischen Informationen als Teil des zurückgegebenen Resultsets bereit.  
+## <a name="remarks"></a>Hinweise  
+ Diese Funktion wird in der Regel als Teil einer Änderungsdatenabfrage verwendet, um anzuzeigen, ob eine Spalte geändert wurde. In diesem Szenario wird die Funktion [sys.fn_cdc_get_column_ordinal](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md) vor der Abfrage verwendet, um die erforderliche Spaltenordnungszahl abzurufen. **sys.fn_cdc_is_bit_set** wird dann auf jede Zeile von abgerufenen Änderungsdaten angewendet und stellt die spaltenspezifischen Informationen als Teil des zurückgegebenen Resultsets bereit.  
   
  Die Verwendung dieser Funktion statt der [sys.fn_cdc_has_column_changed](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md) -Funktion wird empfohlen, wenn bestimmt wird, ob sich Spalten für alle Zeilen eines zurückgegebenen Resultsets geändert haben.  
   
@@ -77,7 +77,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Change Data Capture-Funktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
+ [Change Data Capture-Funktionen &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)   
  [sys. fn_cdc_get_column_ordinal &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-cdc-get-column-ordinal-transact-sql.md)   
  [sys. fn_cdc_has_column_changed &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-cdc-has-column-changed-transact-sql.md)   
  [CDC. fn_cdc_get_all_changes_&#60;capture_instance&#62;  &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-all-changes-capture-instance-transact-sql.md)   

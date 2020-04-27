@@ -17,10 +17,10 @@ ms.assetid: 707c18ca-6a56-4970-bbd6-ae1fb86a0b8a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 357778765f0c7ac59d924518340ca34226853fc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67916930"
 ---
 # <a name="seteos-method"></a>SetEOS-Methode
@@ -33,7 +33,7 @@ Legt die Position fest, die das Ende des Streams ist.
 Stream.SetEOS  
 ```  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Der Wert der [EOS](../../../ado/reference/ado-api/eos-property.md) -Eigenschaft wird durch die aktuelle [Position](../../../ado/reference/ado-api/position-property-ado.md) am Ende des **Streams aktualisiert.** Alle Bytes oder Zeichen, die der aktuellen Position folgen, werden abgeschnitten.  
   
  Da [Write](../../../ado/reference/ado-api/write-method.md), Write- [Text](../../../ado/reference/ado-api/writetext-method.md)und [CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md) keine zusätzlichen Werte in vorhandenen **Streamobjekten** kürzen, können Sie diese Bytes oder Zeichen abschneiden, indem Sie die neue Streamende-Position mit **SetEOS**festlegen.  

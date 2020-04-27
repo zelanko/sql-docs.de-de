@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1853281863fe3d1e6f4fcc6b36f228f7df523bda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68189282"
 ---
 # <a name="job-properties-new-job-alerts-page"></a>Auftragseigenschaften: Neuer Auftrag (Seite „Warnungen“)
   Verwenden Sie diese Seite, um die Warnungen für einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agentauftrag anzuzeigen und zu organisieren.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Warnungs Liste**  
  Führt die Warnungen für diesen Auftrag auf.  
   
@@ -36,7 +36,7 @@ ms.locfileid: "68189282"
  Entfernt die ausgewählte Warnung von dem Auftrag und löscht die Warnung.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Warnungen](alerts.md)   
+ [Warnt](alerts.md)   
  [Implementieren von Aufträgen](implement-jobs.md)  
   
   

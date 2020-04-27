@@ -21,10 +21,10 @@ ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 556518a5fc2950ff69e6a872df5387b4c8367c6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68122567"
 ---
 # <a name="sysfn_net_changes_ltcapture_instancegt-transact-sql"></a>sys. fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)
@@ -61,12 +61,11 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
  Dieser Parameter kann eine der beiden Bedeutungen annehmen, abhängig von dem für @closed_high_end_point ausgewählten Wert, wenn sys. sp_cdc_generate_wrapper_function aufgerufen wird, um das Skript zum Erstellen der Wrapper Funktion zu generieren:  
   
--   @closed_high_end_point= 1  
+-   @closed_high_end_point = 1  
   
      Im Resultset sind nur Zeilen in der Tabelle cdc. <capture_instance>_CT Änderungs \_ \_Tabelle enthalten, die einen Wert in $Start _lsn und eine entsprechende comdzeit aufweisen, die kleiner oder gleich **start_time** ist.  
   
--   
-  @closed_high_end_point = 0  
+-   @closed_high_end_point = 0  
   
      Im Resultset sind nur Zeilen in der CDC. <capture_instance>_CT Änderungs Tabelle \_ \_enthalten, die einen Wert in $Start _lsn und eine entsprechende comdtzeit aufweisen, die streng kleiner als **start_time** ist.  
   
@@ -75,7 +74,7 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
  *<row_filter_option>* :: = {all | all with mask | all with Merge}  
  Eine Option, die den Inhalt der Metadatenspalten sowie die im Resultset zurückgegebenen Zeilen bestimmt. Eine der folgenden Optionen ist möglich:  
   
- alle  
+ all  
  Gibt den endgültigen Inhalt einer geänderten Zeile in den Inhaltsspalten zurück sowie den erforderlichen Vorgang zum Anwenden der Zeile in der Metadatenspalte __CDC_OPERATION.  
   
  all with mask  
@@ -94,13 +93,13 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
-|Spaltenname|Spaltentyp|BESCHREIBUNG|  
+|Spaltenname|Spaltentyp|Beschreibung|  
 |-----------------|-----------------|-----------------|  
 |\<Spalten aus @column_list>|**variiert**|Die Spalten, die im **column_list** -Argument für die sp_cdc_generate_wrapper_function identifiziert werden, wenn Sie aufgerufen wird, um das Skript zum Erstellen des Wrappers zu generieren. Wenn *column_list* NULL ist, werden alle nach verfolgten Quell Spalten im Resultset angezeigt.|  
 |__CDC_OPERATION|**nvarchar (2)**|Ein Vorgangscode, der angibt, welcher Vorgang auf die Zeile der Zielumgebung angewendet werden muss. Der Vorgang variiert basierend auf dem Wert des Argument *row_filter_option* , das im folgenden-Befehl bereitgestellt wird:<br /><br /> *row_filter_option* = ' all ', ' all with mask '<br /><br /> 'D' - Löschvorgang<br /><br /> 'I' - Einfügevorgang<br /><br /> 'UN' - Aktualisierungsvorgang<br /><br /> *row_filter_option* = ' all with merge '<br /><br /> 'D' - Löschvorgang<br /><br /> 'M' - Einfüge- oder Aktualisierungsvorgang|  
 |\<Spalten aus @update_flag_list>|**bit**|Ein Bitflag, das durch Anhängen von _uflag an den Spaltennamen benannt wird. Das Flag nimmt nur dann einen Wert ungleich NULL an, wenn *row_filter_option* **= ' all with mask '** und \__CDC_OPERATION **= ' un '**. Es wird auf 1 eingestellt, wenn die entsprechende Spalte innerhalb des Abfragefensters geändert wurde. Andernfalls ist es 0.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die fn_net_changes_<capture_instance> Funktion dient als Wrapper für die Abfragefunktion CDC. fn_cdc_get_net_changes_<capture_instance>. Die gespeicherte Prozedur sys. sp_cdc_generate_wrapper wird zum Erstellen des Skripts für den Wrapper verwendet.  
   
  Wrapperfunktionen werden nicht automatisch erstellt. Es gibt zwei Dinge, die Sie tun müssen, um Wrapper Funktionen zu erstellen:  
@@ -121,6 +120,6 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sys. sp_cdc_generate_wrapper_function &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-generate-wrapper-function-transact-sql.md)   
- [CDC. fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
+ [cdc.fn_cdc_get_net_changes_&#60;capture_instance&#62; &#40;Transact-SQL&#41;](../../relational-databases/system-functions/cdc-fn-cdc-get-net-changes-capture-instance-transact-sql.md)  
   
   

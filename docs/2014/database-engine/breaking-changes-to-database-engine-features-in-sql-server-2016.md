@@ -14,30 +14,30 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d7b5bf6ff2324c8e63b030d03e36794faf0ec9d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67419034"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2014"></a>Fehlerhafte Änderungen an Funktionen der Datenbank-Engine in SQL Server 2014
   In diesem Thema werden wichtige Änderungen in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] und früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]beschrieben. Diese Änderungen können u. U. zur Funktionsunfähigkeit von Anwendungen, Skripts oder Funktionen führen, die auf früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]basieren. Diese Probleme können nach einem Upgrade auftreten. Weitere Informationen finden Sie unter [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
   
-##  <a name="SQL14"></a> Wichtige Änderungen in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+##  <a name="breaking-changes-in-sssql14"></a><a name="SQL14"></a> Wichtige Änderungen in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  Keine neuen Probleme.  
   
-##  <a name="Denali"></a>Wichtige Änderungen in[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+##  <a name="breaking-changes-in-sssql11"></a><a name="Denali"></a> Wichtige Änderungen in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
   
 ### <a name="transact-sql"></a>Transact-SQL  
   
-|Funktion|BESCHREIBUNG|  
+|Funktion|Beschreibung|  
 |-------------|-----------------|  
 |Auswählen aus Spalten oder Tabellen mit dem Namen NEXT|In Sequenzen wird die ANSI-Standardfunktion NEXT VALUE FOR verwendet. Wenn eine Tabelle oder eine Spalte als Next benannt wird und für die Tabelle oder Spalte der Wert Alias gilt und der ANSI-Standard wie weggelassen wird, kann die resultierende Anweisung einen Fehler verursachen. Schließen Sie das ANSI-Standardschlüsselwort AS ein, um das Problem zu umgehen. Beispielsweise müssen `SELECT NEXT VALUE FROM Table` als `SELECT NEXT AS VALUE FROM Table` und `SELECT Col1 FROM NEXT VALUE` als `SELECT Col1 FROM NEXT AS VALUE` umgeschrieben werden.|  
 |PIVOT-Operator|Der PIVOT-Operator ist nicht in Abfragen für einen rekursiven allgemeinen Tabellenausdruck zugelassen, wenn der Datenbank-Kompatibilitätsgrad auf 110 festgelegt wird. Schreiben Sie die Abfrage um, oder ändern Sie den Kompatibilitätsgrad in 100 oder niedriger. Die Verwendung von PIVOT in einer rekursiven CTE-Abfrage erzeugt falsche Ergebnisse, wenn mehrere Zeilen pro Gruppierung vorhanden sind.|  
 |sp_setapprole und sp_unsetapprole|Der `OUTPUT`-Parameter des Cookies für `sp_setapprole` ist zurzeit als `varbinary(8000)` dokumentiert, was der korrekten maximalen Länge entspricht. Die aktuelle Implementierung gibt jedoch `varbinary(50)` zurück. Anwendungen müssen weiterhin `varbinary(8000)` reservieren, damit die Anwendung weiterhin ordnungsgemäß ausgeführt wird, falls die Rückgabegröße des Cookies in einer zukünftigen Version erhöht wird. Weitere Informationen finden Sie unter [sp_setapprole &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-setapprole-transact-sql).|  
 |EXECUTE AS|Der OUTPUT-Parameter des Cookies für EXECUTE AS ist zurzeit als `varbinary(8000)` dokumentiert, was der korrekten maximalen Länge entspricht. Die aktuelle Implementierung gibt jedoch `varbinary(100)` zurück. Anwendungen müssen weiterhin `varbinary(8000)` reservieren, damit die Anwendung weiterhin ordnungsgemäß ausgeführt wird, falls die Rückgabegröße des Cookies in einer zukünftigen Version erhöht wird. Weitere Informationen finden Sie unter [EXECUTE AS &#40;Transact-SQL&#41;](/sql/t-sql/statements/execute-as-transact-sql).|  
 |sys.fn_get_audit_file-Funktion|Es wurden zwei zusätzliche Spalten (**user_defined_event_id** und **user_defined_information**) hinzugefügt, um benutzerdefinierte Überwachungs Ereignisse zu unterstützen. Anwendungen, bei denen keine Spalten nach Name ausgewählt werden, geben möglicherweise mehr Spalten zurück als erwartet. Wählen Sie entweder Spalten nach Name aus, oder passen Sie die Anwendung so an, dass sie diese zusätzlichen Spalten zulässt.|  
-|Reserviertes Schlüsselwort WITHIN|WITHIN ist jetzt ein reserviertes Schlüsselwort. Verweise auf Objekte oder Spalten mit der Bezeichnung "within" schlagen fehl. Benennen Sie das Objekt oder die Spalte um, oder schränken Sie den Namen mit Klammern oder Anführungszeichen ein.  Beispiel: `SELECT * FROM [within]`.|  
+|Reserviertes Schlüsselwort WITHIN|WITHIN ist jetzt ein reserviertes Schlüsselwort. Verweise auf Objekte oder Spalten mit der Bezeichnung "within" schlagen fehl. Benennen Sie das Objekt oder die Spalte um, oder schränken Sie den Namen mit Klammern oder Anführungszeichen ein.  Beispielsweise `SELECT * FROM [within]`.|  
 |CAST- und CONVERT-Vorgänge in berechneten Spalten des Typs `time` oder `datetime2`|In früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ist das Standardformat für CAST- und CONVERT-Vorgänge bei den Datentypen `time` und `datetime2` 121, sofern keiner der Typen im Ausdruck einer berechneten Spalte verwendet wird. Für berechnete Spalten ist das Standardformat 0. Dieses Verhalten wirkt sich auf berechnete Spalten aus, wenn sie erstellt werden und in Abfragen mit automatischer Parametrisierung oder in Einschränkungsdefinitionen verwendet werden.<br /><br /> Unter dem Kompatibilitätsgrad 110 ist das Standardformat für CAST- und CONVERT-Vorgänge im Fall der Datentypen `time` und `datetime2` immer 121. Basiert die Abfrage auf dem alten Verhalten, verwenden Sie einen Kompatibilitätsgrad unter 110, oder geben Sie in der betroffenen Abfrage explizit das Format 0 an.<br /><br /> Ein Update der Datenbank auf Kompatibilitätsgrad 110 ändert keine Benutzerdaten, die auf dem Datenträger gespeichert wurden. Sie müssen diese Daten entsprechend manuell korrigieren. Haben Sie beispielsweise SELECT INFO zum Erstellen einer Tabelle von einer Quelle verwendet, die einen Ausdruck für eine berechnete Spalte (oben beschrieben) beinhaltete, werden die Daten mit dem Format 0 anstelle der Definition der berechneten Spalte an sich gespeichert. Sie müssen diese Daten manuell aktualisieren, um sie an das Format 121 anzupassen.|  
 |ALTER TABLE|Die ALTER TABLE-Anweisung lässt nur zweiteilige Tabellennamen (schema.object) zu. Das Angeben eines Tabellennamens mit den folgenden Formaten schlägt nun zum Zeitpunkt der Kompilierung mit Fehler 117 fehl:<br /><br /> server.database.schema.table<br /><br /> .database.schema.table<br /><br /> ..schema.table<br /><br /> Bei früheren Versionen wurde durch die Angabe des Formats "server.database.schema.table" der Fehler 4902 zurückgegeben. Die Angabe des Formats ".database.schema.table" oder "..schema.table" war erfolgreich. Um das Problem zu beheben, vermeiden Sie die Verwendung eines vierteiligen Präfixes.|  
 |Durchsuchen von Metadaten|Abfragen einer Sicht mit FOR BROWSE oder SET NO_BROWSETABLE ON geben jetzt die Metadaten der Sicht zurück, jedoch nicht die Metadaten des zugrunde liegenden Objekts. Dieses Verhalten entspricht jetzt anderen Methoden zum Durchsuchen von Metadaten.|  
@@ -49,7 +49,7 @@ ms.locfileid: "67419034"
   
 ### <a name="dynamic-management-views"></a>Dynamische Verwaltungssichten  
   
-|Sicht|BESCHREIBUNG|  
+|Sicht|Beschreibung|  
 |----------|-----------------|  
 |sys.dm_exec_requests|Die Befehlsspalte wird von `nvarchar(16)` in `nvarchar(32)` geändert.|  
 |sys.dm_os_memory_cache_counters|Die folgenden Spalten wurden umbenannt:<br /><br /> single_pages_kb ist jetzt: <br />                          pages_kb<br /><br /> multi_pages_kb<br />                           ist nun: pages_in_use_kb|  
@@ -62,7 +62,7 @@ ms.locfileid: "67419034"
   
 ### <a name="catalog-views"></a>Katalogsichten  
   
-|Sicht|BESCHREIBUNG|  
+|Sicht|Beschreibung|  
 |----------|-----------------|  
 |sys.data_spaces<br /><br /> sys.partition_schemes<br /><br /> sys.filegroups<br /><br /> sys.partition_functions|"sys.data_spaces" und "sys.partition_functions" wurde eine neue Spalte (is_system) hinzugefügt. ("sys.partition_schemes" und "sys.filegroups" erben die Spalten von "sys.data_spaces".)<br /><br /> Der Wert 1 in dieser Spalte gibt an, dass das Objekt für Volltextindexfragmente verwendet wird.<br /><br /> In "sys.partition_functions", "sys.partition_schemes" und "sys.filegroups" ist die neue Spalte nicht die letzte Spalte. Überarbeiten Sie vorhandene Abfragen, die auf der Reihenfolge der Spalten basieren, die von diesen Katalogsichten zurückgegeben wurden.|  
   
@@ -75,16 +75,13 @@ ms.locfileid: "67419034"
   
 -   Wenn Sie von einer benutzerdefinierten Anwendung, die auf .NET 3,5, 4 oder 4,5 ausgerichtet ist, auf die **SqlTypes** -Assemblyversion 11,0 verweisen, schlägt die Anwendung fehl, da SqlClient nach dem Entwurf Version 10,0 der Assembly lädt. Dieser Fehler tritt auf, wenn die Anwendung eine der folgenden Methoden aufruft:  
   
-    -   
-  `GetValue`-Methode der `SqlDataReader`-Klasse  
+    -   `GetValue`-Methode der `SqlDataReader`-Klasse  
   
-    -   
-  `GetValues`-Methode der `SqlDataReader`-Klasse  
+    -   `GetValues`-Methode der `SqlDataReader`-Klasse  
   
     -   Klammerindexoperator [] der `SqlDataReader`-Klasse  
   
-    -   
-  `ExecuteScalar`-Methode der `SqlCommand`-Klasse  
+    -   `ExecuteScalar`-Methode der `SqlCommand`-Klasse  
   
  Sie können dieses Problem mithilfe einer der folgenden Methoden umgehen:  
   
@@ -135,8 +132,7 @@ ms.locfileid: "67419034"
  AWE (Address Windowing Extensions, 32-Bit-Version) wird nicht mehr unterstützt. Dies könnte bei 32-Bit-Betriebssystemen zu geringerer Leistungsstärke führen. Migrieren Sie bei Installationen mit großem Arbeitsspeichervolumen zu einem 64-Bit-Betriebssystem.  
   
 ### <a name="xquery-functions-are-surrogate-aware"></a>XQuery-Funktionen sind ersatzzeichenabhängig  
- Die W3C-Empfehlung für XQuery-Funktionen und -Operatoren erfordert die Berücksichtigung eines Ersatzzeichenpaares, das ein Unicode-Zeichen für den oberen Bereich als einzelnes Symbol in UTF-16-Codierung darstellt. In Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vor [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] erkannten Zeichenfolgenfunktionen Ersatzzeichenpaare jedoch nicht als einzelnes Zeichen. Einige Zeichen folgen Operationen, z. b. Zeichen folgen Längen Berechnungen und Teil zeichenfolgenextraktionen, haben falsche Ergebnisse zurückgegeben 
-  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] unterstützt jetzt vollständig UTF-16 sowie die richtige Verarbeitung von Ersatzzeichenpaaren.  
+ Die W3C-Empfehlung für XQuery-Funktionen und -Operatoren erfordert die Berücksichtigung eines Ersatzzeichenpaares, das ein Unicode-Zeichen für den oberen Bereich als einzelnes Symbol in UTF-16-Codierung darstellt. In Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] vor [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] erkannten Zeichenfolgenfunktionen Ersatzzeichenpaare jedoch nicht als einzelnes Zeichen. Einige Zeichen folgen Operationen, z. b. Zeichen folgen Längen Berechnungen und Teil zeichenfolgenextraktionen, haben falsche Ergebnisse zurückgegeben [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] unterstützt jetzt vollständig UTF-16 sowie die richtige Verarbeitung von Ersatzzeichenpaaren.  
   
  Der XML-Datentyp in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] lässt nur wohlgeformte Ersatzzeichenpaare zu. Einige Funktionen können jedoch unter bestimmten Umständen nicht definierte oder unerwartete Ergebnisse zurückgeben, da ungültige oder partielle Ersatzzeichenpaare an XQuery-Funktionen als Zeichenfolgenwerte übergeben werden können. Ziehen Sie die folgenden Methoden zum Generieren von Zeichenfolgenwerten in Betracht, wenn Sie XQuery in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwenden:  
   
@@ -160,7 +156,7 @@ ms.locfileid: "67419034"
 -   Vergleichs Operatoren und die **Order by** -Klausel. Vergleichs Operatoren umfassen + \<,, > \<, =, >= `eq`, `lt`, `gt`, `le`, und `ge`.  
   
 #### <a name="distributed-query-calls-to-a-system-procedure"></a>Aufrufe von verteilten Abfragen an eine Systemprozedur  
- Aufrufe von verteilten Abfragen über `OPENQUERY` an einige Systemprozeduren schlagen fehl, wenn sie von einem [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]-Server für einen anderen aufgerufen werden. Dies tritt auf, wenn das [!INCLUDE[ssDE](../includes/ssde-md.md)] keine Metadaten für eine Prozedur ermitteln kann. Beispiel: `SELECT * FROM OPENQUERY(..., 'EXEC xp_loginfo')`.  
+ Aufrufe von verteilten Abfragen über `OPENQUERY` an einige Systemprozeduren schlagen fehl, wenn sie von einem [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]-Server für einen anderen aufgerufen werden. Dies tritt auf, wenn das [!INCLUDE[ssDE](../includes/ssde-md.md)] keine Metadaten für eine Prozedur ermitteln kann. Beispielsweise `SELECT * FROM OPENQUERY(..., 'EXEC xp_loginfo')`.  
   
 #### <a name="isolation-level-and-sp_reset_connection"></a>Isolationsstufe und sp_reset_connection  
  Die Isolationsstufe für Verbindungen wird von Client-Treibern wie folgt behandelt:  
@@ -196,47 +192,46 @@ ms.locfileid: "67419034"
   
 -   **FN: Teil Zeichenfolge**  
   
-##  <a name="KJKatmai"></a>Wichtige Änderungen in SQL Server 2008/SQL Server 2008R2  
+##  <a name="breaking-changes-in-sql-server-2008sql-server-2008r2"></a><a name="KJKatmai"></a>Wichtige Änderungen in SQL Server 2008/SQL Server 2008R2  
  Dieser Abschnitt enthält die in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] eingeführten wichtigen Änderungen. In [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] wurden keine Änderungen eingeführt.  
   
 ### <a name="collations"></a>Sortierungen  
   
-|Funktion|BESCHREIBUNG|  
+|Funktion|Beschreibung|  
 |-------------|-----------------|  
 |Neue Sortierungen|In [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] werden neue Sortierungen eingeführt, die vollständig an die Sortierungen von Windows Server 2008 angepasst sind. Durch die 80 neuen Sortierungen wurde die linguistische Genauigkeit verbessert; sie sind mit dem Versionshinweis "* _100" gekennzeichnet. Beachten Sie, dass eine neue Sortierung für den Server oder die Datenbank möglicherweise von Clients mit älteren Treibern nicht erkannt wird. Unbekannte Sortierungen können zu Anwendungsfehlern führen. Ziehen Sie die folgenden Lösungen in Betracht:<br /><br /> Aktualisieren Sie das Clientbetriebssystem, um die zugrunde liegenden Systemsortierungen zu aktualisieren.<br /><br /> Wenn auf dem Client Datenbankclient-Software installiert ist, sollten Sie ein Dienstupdate der Datenbankclient-Software in Erwägung ziehen.<br /><br /> Wählen Sie eine vorhandene Sortierung aus, die einer Codepage auf dem Client zugeordnet wird.|  
   
 ### <a name="common-language-runtime-clr"></a>Common Language Runtime (CLR)  
   
-|Funktion|BESCHREIBUNG|  
+|Funktion|Beschreibung|  
 |-------------|-----------------|  
 |CLR-Assemblys|Wenn eine Datenbank auf [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] aktualisiert wird, wird die `Microsoft.SqlServer.Types`-Assembly zur Unterstützung neuer Datentypen automatisch installiert. Upgrade Advisor-Regeln erkennen alle Benutzertypen oder Assemblys mit in Konflikt stehenden Namen. Der Upgrade Advisor schlägt im Fall von in Konflikt stehenden Assemblys das Umbenennen vor, und bei in Konflikt stehenden Typen das Umbenennen oder das Verwenden von zweiteiligen Namen im Code, um auf diesen bereits vorhandenen Benutzertypen zu verweisen.<br /><br /> Wenn bei einem Datenbankupgrade eine Benutzerassembly mit in Konflikt stehendem Namen entdeckt wird, wird diese Assembly automatisch umbenannt und die Datenbank in den Fehlerverdachtmodus versetzt.<br /><br /> Sollte während des Upgrades ein Benutzertyp mit in Konflikt stehendem Namen vorhanden sein, werden keine speziellen Schritte ausgeführt. Nach dem Upgrade sind sowohl der alte Benutzertyp als auch der neue Systemtyp vorhanden. Der Benutzertyp steht nur bei Verwendung von zweiteiligen Namen zur Verfügung.|  
-|CLR-Assemblys|
-  [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] installiert .NET Framework 3.5 SP1, wodurch Bibliotheken im globalen Assemblycache (Global Assembly Cache, GAC) aktualisiert werden. Wenn die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank nicht unterstützte Bibliotheken enthält, kann die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Anwendung nach einem Upgrade auf [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] möglicherweise nicht mehr verwendet werden. Das liegt daran, dass durch Warten oder Aktualisieren von Bibliotheken im GAC die entsprechenden Assemblys in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nicht aktualisiert werden. Wenn eine Assembly sowohl in einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank als auch im GAC vorhanden ist, müssen die beiden Kopien der Assembly genau übereinstimmen. Stimmen sie nicht überein, tritt ein Fehler auf, wenn die Assembly von der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] CLR-Integration verwendet wird. Weitere Informationen finden Sie [unter Supported .NET Framework Libraries](../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).<br /><br /> Bedienen oder aktualisieren Sie nach dem Upgrade der Datenbank die Kopie der Assembly in den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbanken mit der ALTER ASSEMBLY-Anweisung. Weitere Informationen finden Sie im [Knowledge Base-Artikel 949080](https://go.microsoft.com/fwlink/?LinkId=154563).<br /><br /> Sie können auch die folgende Abfrage in Ihrer Datenbank ausführen, um festzustellen, ob in der Anwendung nicht unterstützte .NET Framework-Bibliotheken verwendet werden.<br /><br /> `SELECT name FROM sys.assemblies WHERE clr_name LIKE '%publickeytoken=b03f5f7f11d50a3a,%';`|  
+|CLR-Assemblys|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] installiert .NET Framework 3.5 SP1, wodurch Bibliotheken im globalen Assemblycache (Global Assembly Cache, GAC) aktualisiert werden. Wenn die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank nicht unterstützte Bibliotheken enthält, kann die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Anwendung nach einem Upgrade auf [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] möglicherweise nicht mehr verwendet werden. Das liegt daran, dass durch Warten oder Aktualisieren von Bibliotheken im GAC die entsprechenden Assemblys in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nicht aktualisiert werden. Wenn eine Assembly sowohl in einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbank als auch im GAC vorhanden ist, müssen die beiden Kopien der Assembly genau übereinstimmen. Stimmen sie nicht überein, tritt ein Fehler auf, wenn die Assembly von der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] CLR-Integration verwendet wird. Weitere Informationen finden Sie [unter Supported .NET Framework Libraries](../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).<br /><br /> Bedienen oder aktualisieren Sie nach dem Upgrade der Datenbank die Kopie der Assembly in den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Datenbanken mit der ALTER ASSEMBLY-Anweisung. Weitere Informationen finden Sie im [Knowledge Base-Artikel 949080](https://go.microsoft.com/fwlink/?LinkId=154563).<br /><br /> Sie können auch die folgende Abfrage in Ihrer Datenbank ausführen, um festzustellen, ob in der Anwendung nicht unterstützte .NET Framework-Bibliotheken verwendet werden.<br /><br /> `SELECT name FROM sys.assemblies WHERE clr_name LIKE '%publickeytoken=b03f5f7f11d50a3a,%';`|  
 |CLR-Routinen|Durch Identitätswechsel innerhalb der benutzerdefinierten CLR-Funktionen, benutzerdefinierten Aggregate oder benutzerdefinierten Typen (User-Defined Types, UDTs) können kann nach dem Upgrade auf [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] bei der Anwendung der Fehler 6522 auftreten. Die folgenden Szenarios können in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] erfolgreich ausgeführt werden, nicht jedoch in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]. Für jedes Szenario werden Auflösungen bereitgestellt.<br /><br /> Eine CLR-benutzerdefinierte Funktion, ein benutzerdefiniertes Aggregat oder eine UDT-Methode, die einen Identitätswechsel verwendet, `nvarchar(max)`verfügt `varchar(max)`über `varbinary(max)`einen `ntext`Parameter `text`vom `image`Typ,,,,, oder einen großen UDT und weist nicht das **DataAccessKind. Read** -Attribut für die Methode auf. Um dieses Problem zu beheben, fügen Sie das **DataAccessKind. Read** -Attribut der Methode hinzu, kompilieren Sie die Assembly erneut, und stellen Sie die Routine und die Assembly erneut bereit.<br /><br /> Eine CLR-Tabellenwert Funktion, die über eine **Init** -Methode verfügt, die Identitätswechsel ausführt. Um dieses Problem zu beheben, fügen Sie das **DataAccessKind. Read** -Attribut der Methode hinzu, kompilieren Sie die Assembly erneut, und stellen Sie die Routine und die Assembly erneut bereit.<br /><br /> Eine CLR-Tabellenwert Funktion, die über eine **FillRow** -Methode verfügt, die Identitätswechsel ausführt. Um dieses Problem zu beheben, entfernen Sie den Identitätswechsel von der **FillRow** -Methode. Greifen Sie nicht mit der **FillRow** -Methode auf externe Ressourcen zu. Greifen Sie stattdessen über die **Init** -Methode auf externe Ressourcen zu.|  
   
 ### <a name="dynamic-management-views"></a>Dynamische Verwaltungssichten  
   
-|Sicht|BESCHREIBUNG|  
+|Sicht|Beschreibung|  
 |----------|-----------------|  
 |sys.dm_os_sys_info|Entfernt die Spalte cpu_ticks_in_ms- und die sqlserver_start_time_cpu_ticks.|  
 |sys. dm_exec_query_resource_semaphoressys. dm_exec_query_memory_grants|Die Spalte resource_semaphore_id-Spalte stellt keine eindeutige ID in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] dar. Diese Änderung kann die Abfrageausführung bei der Problembehandlung beeinflussen. Weitere Informationen finden Sie unter [sys. dm_exec_query_resource_semaphores &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-exec-query-resource-semaphores-transact-sql).|  
   
 ### <a name="errors-and-events"></a>Fehler und Ereignisse  
   
-|Funktion|BESCHREIBUNG|  
+|Funktion|Beschreibung|  
 |-------------|-----------------|  
 |Fehler beim Anmelden|In [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] wird der Fehler 18452 zurückgegeben, wenn versucht wird, mit einem SQL-Anmeldenamen eine Verbindung zu einem Server herzustellen, der nur die Windows-Authentifizierung verwendet. In [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] wird stattdessen der Fehler 18456 zurückgegeben.|  
   
 ### <a name="showplan"></a>Showplan  
   
-|Funktion|BESCHREIBUNG|  
+|Funktion|Beschreibung|  
 |-------------|-----------------|  
 |Showplan (XML-Schema)|Ein neues **seekpredikatenew** -Element wird dem Showplan-XML-Schema hinzugefügt, und die einschließende XSD-Sequenz (**sqlpredikatestype**) wird in ein ** \<XSD: Choice->** Element konvertiert. Anstelle von mindestens einem **SeekPredicate** -Element kann jetzt mindestens ein **seekpredikatenew** -Element in der Showplan-XML-Datei angezeigt werden. Die beiden Elemente schließen sich gegenseitig aus. **SeekPredicate** wird im Showplan-XML-Schema für die Abwärtskompatibilität beibehalten. Abfrage Pläne, die in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] erstellt wurden, können jedoch das **seekpredierenew** -Element enthalten. Anwendungen, die nur das untergeordnete **SeekPredicate** -Element aus dem Knoten ShowPlanXML/BatchSequence/Batch/Statements/StmtSimple/QueryPlan/RelOp/Indexscan/seekprediates abrufen, schlagen möglicherweise fehl, wenn das **SeekPredicate** -Element nicht vorhanden ist. Schreiben Sie die Anwendung neu, um entweder das **SeekPredicate** -oder das **seekpredikatenew** -Element in diesem Knoten zu erwarten. Weitere Informationen finden Sie unter .|  
 |Showplan (XML-Schema)|Ein neues **IndexKind** -Attribut wird dem komplexen **ObjectType** -Typ im Showplan-XML-Schema hinzugefügt. Anwendungen, die eine strenge Validierung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Plänen anhand des [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]-Schemas durchführen, generieren einen Fehler.|  
   
 ### <a name="transact-sql"></a>Transact-SQL  
   
-|Funktion|BESCHREIBUNG|  
+|Funktion|Beschreibung|  
 |-------------|-----------------|  
 |ALTER_AUTHORIZATION_DATABASE DDL-Ereignis|Wenn [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]in das DDL-Ereignis ALTER_AUTHORIZATION_DATABASE ausgelöst wird, wird der Wert "Object" im **ObjectType** -Element der EventData-XML für dieses Ereignis zurückgegeben, wenn der Entitätstyp des Sicherungs fähigen Elements im DDL-Vorgang (Data Definition Language, Datendefinitionssprache) ein Objekt ist. In [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] wird der tatsächliche Typ (z. B. "table" oder "function") zurückgegeben.|  
 |CONVERT|Wenn ein ungültiges Format an die CONVERT-Funktion übergeben wird und eine Konvertierung vom Binärformat ins Zeichenformat oder vom Zeichenformat ins Binärformat ausgeführt werden soll, wird ein Fehler zurückgegeben. In früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] wurde das ungültige Format bei Konvertierungen vom Binärformat ins Zeichenformat oder vom Zeichenformat ins Binärformat auf das Standardformat festgelegt.|  
@@ -252,21 +247,20 @@ ms.locfileid: "67419034"
   
 ### <a name="xquery"></a>XQuery  
   
-|Funktion|BESCHREIBUNG|  
+|Funktion|Beschreibung|  
 |-------------|-----------------|  
-|Datetime-Unterstützung|Die Datentypen [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)], `xs:time` und `xs:date` in `xs:dateTime` unterstützen keine Zeitzonen. Zeitzonendaten werden der UTC-Zeitzone zugeordnet. 
-  [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] stellt standardkonformes Verhalten bereit. Dies führt zu folgenden Änderungen:<br /><br /> Werte ohne Zeitzone werden überprüft.<br /><br /> Die bereitgestellte Zeitzone wird beibehalten; wenn keine Zeitzone bereitgestellt wird, wird diese Einstellung ebenfalls beibehalten.<br /><br /> Die interne Speicherdarstellung wird geändert.<br /><br /> Die Auflösung von gespeicherten Werten wird erhöht.<br /><br /> Negative Jahre sind nicht zulässig.<br /><br /> <br /><br /> Hinweis: Ändern Sie Anwendungen und XQuery-Ausdrücke, um die neuen Typwerte zu berücksichtigen.|  
+|Datetime-Unterstützung|Die Datentypen `xs:time`, `xs:date` und `xs:dateTime` in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] unterstützen keine Zeitzonen. Zeitzonendaten werden der UTC-Zeitzone zugeordnet. [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] stellt standardkonformes Verhalten bereit. Dies führt zu folgenden Änderungen:<br /><br /> Werte ohne Zeitzone werden überprüft.<br /><br /> Die bereitgestellte Zeitzone wird beibehalten; wenn keine Zeitzone bereitgestellt wird, wird diese Einstellung ebenfalls beibehalten.<br /><br /> Die interne Speicherdarstellung wird geändert.<br /><br /> Die Auflösung von gespeicherten Werten wird erhöht.<br /><br /> Negative Jahre sind nicht zulässig.<br /><br /> <br /><br /> Hinweis: Ändern Sie Anwendungen und XQuery-Ausdrücke, um die neuen Typwerte zu berücksichtigen.|  
 |XQuery und Xpath-Ausdrücke|In [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]sind Schritte in einem XQuery-oder XPath-Ausdruck zulässig, die mit einem Doppelpunkt (': ') beginnen. Die folgende Anweisung enthält zum Beispiel einen Namenstest (`CTR02)`) innerhalb des Pfadausdrucks, der mit einem Doppelpunkt beginnt.<br /><br /> `SELECT FileContext.query('for n$ in //CTR return <C>{data )(n$/:CTR02)} </C>) AS Files FROM dbo.MyTable;`<br /><br /> In [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] ist diese Verwendung nicht zulässig, da sie nicht den XML-Standards entspricht. Der Fehler 9341 wird zurückgegeben. Entfernen Sie den führenden Doppelpunkt, oder geben Sie ein Präfix für den Namenstest an, z. B. (n$/p1:CTR02) oder (n$/CTR02).|  
   
-### <a name="connecting"></a>Herstellen einer Verbindung  
+### <a name="connecting"></a>Verbindung  
   
-|Funktion|BESCHREIBUNG|  
+|Funktion|Beschreibung|  
 |-------------|-----------------|  
 |Herstellen einer Verbindung von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client mithilfe von SSL|Aufgrund der weniger strengen Überprüfung wurde in der Vergangenheit für Anwendungen, die "SERVER=shortname; FORCE ENCRYPTION=true" mit Zertifikat verwendeten, in dessen Betreff vollqualifizierte Domänennamen (FQDNs) enthalten waren, eine Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Native Client hergestellt. SQL Server 2008 R2 erhöht die Sicherheit, indem ein FQDN-Betreff für Zertifikate erzwungen wird. Anwendungen, die auf einer weniger strengen Überprüfung basieren, müssen eine der folgenden Aktionen ausführen:<br /><br /> Verwenden des FQDNs in der Verbindungszeichenfolge<br /><br /> : Diese Option erfordert kein Neukompilieren der Anwendung, wenn das Server Schlüsselwort der Verbindungs Zeichenfolge außerhalb der Anwendung konfiguriert wird.<br /><br /> Diese Option funktioniert nicht für Anwendungen, deren Verbindungs Zeichenfolgen hart codiert sind.<br /><br /> Diese Option funktioniert nicht für Anwendungen, die die Daten Bank Spiegelung verwenden, da der gespiegelte Server mit einem einfachen Namen antwortet.|  
 ||Hinzufügen eines Alias für den Kurznamen, um eine Zuordnung mit dem FQDN herzustellen<br /><br /> Diese Option funktioniert auch für Anwendungen, deren Verbindungs Zeichenfolgen hart codiert sind.<br /><br /> Diese Option funktioniert nicht für Anwendungen, die die Daten Bank Spiegelung verwenden, da die Anbieter keine Aliase für empfangene Failoverpartnernamen suchen.|  
 ||Für den Kurznamen muss ein Zertifikat ausgestellt werden.<br /><br /> Diese Option funktioniert für alle Anwendungen.|  
 
-## <a name="Yukon"></a>Wichtige Änderungen in SQL Server 2005  
+## <a name="breaking-changes-in-sql-server-2005"></a><a name="Yukon"></a>Wichtige Änderungen in SQL Server 2005  
 
 [!INCLUDE[Archived documentation for very old versions of SQL Server](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
 
@@ -274,7 +268,7 @@ ms.locfileid: "67419034"
  [Veraltete Datenbank-Engine Features in SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)   
  [Verhaltensänderungen an Datenbank-Engine Features in SQL Server 2014](../../2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014.md?view=sql-server-2014)   
  [Nicht mehr unterstützte Datenbank-Engine Funktionen in SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md?view=sql-server-2014)   
- [SQL Server Datenbank-Engine Abwärtskompatibilität](sql-server-database-engine-backward-compatibility.md)   
+ [Abwärtskompatibilität der SQL Server-Datenbank-Engine](sql-server-database-engine-backward-compatibility.md)   
  [ALTER DATABASE-Kompatibilitätsgrad &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
  [Wichtige Änderungen an Funktionen der Verwaltungstools in SQL Server 2014](breaking-changes-to-management-tools-features-in-sql-server-2014.md?view=sql-server-2014)  
   

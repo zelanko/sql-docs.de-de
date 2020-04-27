@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 24e15602593f9116d499345ffca093f86ecfa135
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67905646"
 ---
 # <a name="levels-mdx"></a>Levels (MDX)
@@ -41,7 +41,7 @@ Hierarchy_Expression.Levels( Level_Name )
  *Level_Name*  
  Ein gültiger Zeichenfolgenausdruck, der einen Ebenennamen angibt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn eine Ebenennummer angegeben wird, gibt die **Levels** -Funktion die Ebene zurück, die der angegebenen Null basierten Position zugeordnet ist.  
   
  Wenn ein Ebenen-Name angegeben wird, gibt die **Levels** -Funktion die angegebene Ebene zurück.  
@@ -60,7 +60,7 @@ SELECT [Geography].[Geography].Levels(1) ON 0
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>String  
+### <a name="string"></a>Zeichenfolge  
  Im folgenden Beispiel wird die Country-Ebene zurückgegeben:  
   
 ```  
@@ -69,6 +69,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

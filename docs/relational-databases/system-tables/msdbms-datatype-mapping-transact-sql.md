@@ -18,10 +18,10 @@ ms.assetid: 13289a0b-dfb0-4771-ad80-4c5f83cded99
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9a1042bb3aa7b6113121693cc66440ebbf81ce1b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67907546"
 ---
 # <a name="msdbms_datatype_mapping-transact-sql"></a>MSdbms_datatype_mapping (Transact-SQL)
@@ -34,14 +34,14 @@ ms.locfileid: "67907546"
 |**datatype_mapping_id**|**int**|Identifiziert jede eindeutige Datentypzuordnung.|  
 |**map_id**|**int**|Identifiziert den Quelldatentyp.|  
 |**dest_datatype_id**|**int**|Identifiziert den Zieldatentyp.|  
-|**dest_precision**|**BIGINT**|Definiert die Genauigkeit des Ziel Datentyps, wobei der Wert NULL bedeutet, dass die Genauigkeit nicht verwendet wird, und der Wert **-1** bedeutet, dass die Genauigkeit des Quell Datentyps verwendet wird.|  
+|**dest_precision**|**bigint**|Definiert die Genauigkeit des Ziel Datentyps, wobei der Wert NULL bedeutet, dass die Genauigkeit nicht verwendet wird, und der Wert **-1** bedeutet, dass die Genauigkeit des Quell Datentyps verwendet wird.|  
 |**dest_scale**|**int**|Definiert die Skala des Ziel Datentyps, wobei der Wert NULL bedeutet, dass die Skala nicht verwendet wird, und der Wert **-1** bedeutet, dass die Skala des Quell Datentyps verwendet wird.|  
-|**dest_length**|**BIGINT**|Definiert die Länge des Ziel Datentyps, wobei der Wert NULL bedeutet, dass die Länge nicht verwendet wird, und der Wert **-1** bedeutet, dass die Länge des Quell Datentyps verwendet wird.|  
+|**dest_length**|**bigint**|Definiert die Länge des Ziel Datentyps, wobei der Wert NULL bedeutet, dass die Länge nicht verwendet wird, und der Wert **-1** bedeutet, dass die Länge des Quell Datentyps verwendet wird.|  
 |**dest_nullable**|**bit**|Gibt an, ob die Zielspalte in der Zuordnung NULL-Werte zulässt. Ein Wert von NULL bedeutet, dass diese Definition nicht erforderlich ist.|  
 |**dest_createparams**|**int**|Die Bitmap, die beschreibt, welche Kombination aus Länge, Genauigkeit und Dezimalstellen für den jeweiligen Datentyp anwendbar sind. Sie beinhaltet Folgendes:<br /><br /> **0x1** = Genauigkeit.<br /><br /> **0x2** = skalieren.<br /><br /> **0x4** = Länge.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Heterogene Datenbankreplikation](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Heterogene Replikation](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Angeben von Datentyp Zuordnungen für einen Oracle-Verleger](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
  [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikationssichten &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  

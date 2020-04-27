@@ -18,10 +18,10 @@ ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 630c2f90085cedfbb5c59ba395c7d0d9ae9d9643
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67906105"
 ---
 # <a name="sp_help_notification-transact-sql"></a>sp_help_notification (Transact-SQL)
@@ -50,7 +50,7 @@ sp_help_notification
   
 `[ @enum_type = ] 'enum_type'`Die *object_type*Informationen, die zurückgegeben werden. *enum_type* ist in den meisten Fällen tatsächlich. *enum_type*ist vom Typ **char (10)** und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |ACTUAL|Listet nur die *object_types* auf, die dem *Namen*zugeordnet sind.|  
 |ALL|Listet alle*object_types* auf, einschließlich derjenigen, die nicht mit dem *Namen*verknüpft sind.|  
@@ -58,12 +58,12 @@ sp_help_notification
   
 `[ @notification_method = ] notification_method`Ein numerischer Wert, der die zurück zugebende Benachrichtigungs Methoden Spalten bestimmt. *notification_method* ist vom Datentyp **tinyint**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**1**|E-Mail: gibt nur die **use_email** Spalte zurück.|  
 |**2**|Pager: gibt nur die **use_pager** Spalte zurück.|  
 |**4**|Nettsend: gibt nur die **use_netsend** Spalte zurück.|  
-|**19.00**|Alle: Alle Spalten werden zurückgegeben.|  
+|**7**|Alle: Alle Spalten werden zurückgegeben.|  
   
 `[ @target_name = ] 'target_name'`Ein Warnungs Name, nach dem gesucht werden soll (wenn *object_type* Warnungen ist), oder ein Operator Name, nach dem gesucht werden soll (wenn *object_type* Operator ist). *target_name* ist nur erforderlich, wenn *enum_type* Ziel ist. *target_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
@@ -97,7 +97,7 @@ sp_help_notification
 |**has_pager**|**int**|Operator besitzt eine Pageradresse:<br /><br /> **1** = ja<br /><br /> **0** = Nein|  
 |**has_netsend**|**int**|Für den Operator wurde eine net send-Benachrichtigung konfiguriert.<br /><br /> **1** = ja<br /><br /> **0** = Nein|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese gespeicherte Prozedur muss von der **msdb** -Datenbank aus ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  

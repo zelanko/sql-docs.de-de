@@ -18,10 +18,10 @@ ms.assetid: 8bdd22f7-c268-49b6-820c-3fe603feb128
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d88db9492489175ab12e2f808b846899a1bf4a5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67910113"
 ---
 # <a name="sysextendedarticlesview-transact-sql"></a>sysextendedarticlesview (Transact-SQL)
@@ -36,18 +36,18 @@ ms.locfileid: "67910113"
 |**del_cmd**|**nvarchar(255)**|Der bei einer DELETE-Anweisung auszuführende Befehl, wird sonst aus dem Protokoll konstruiert|  
 |**Beschreibung**|**nvarchar(255)**|Der Beschreibungseintrag für den Artikel.|  
 |**dest_table**|**nvarchar(128)**|Der Name der Zieltabelle|  
-|**Filter**|**int**|Der Objektbezeichner der gespeicherten Prozedur, die für horizontale Partitionen verwendet wird|  
+|**filter**|**int**|Der Objektbezeichner der gespeicherten Prozedur, die für horizontale Partitionen verwendet wird|  
 |**filter_clause**|**ntext**|Die WHERE-Klausel des Artikels, die für horizontales Filtern verwendet wird.|  
 |**ins_cmd**|**nvarchar(255)**|Der bei einer INSERT-Anweisung auszuführende Befehl|  
 |**name**|**nvarchar(128)**|Der mit dem Artikel verknüpfte Name, der innerhalb der Veröffentlichung eindeutig ist.|  
 |**objid**|**int**|Die Objekt-ID der veröffentlichten Tabelle.|  
 |**pubid**|**int**|Die ID der Veröffentlichung, zu der der Artikel gehört.|  
-|**pre_creation_cmd**|**tinyint**|Der Voraberstellungsbefehl für DROP TABLE, DELETE TABLE oder TRUNCATE:<br /><br /> **0** = keine.<br /><br /> **1** = Drop.<br /><br /> **2** = löschen.<br /><br /> **3** = abschneiden.|  
-|**Stands**|**int**|Die Bitmaske der Artikeloptionen und der Status, die das Ergebnis des bitweisen logischen OR von mindestens einem der folgenden Werte sein können:<br /><br /> **1** = Artikel ist aktiv.<br /><br /> **8** = schließen Sie den Spaltennamen in INSERT-Anweisungen ein.<br /><br /> **16** = parametrisierte Anweisungen verwenden.<br /><br /> **24** = beide enthalten den Spaltennamen in INSERT-Anweisungen und verwenden parametrisierte Anweisungen.<br /><br /> Ein aktiver Artikel, der parametrisierte Anweisungen verwendet, würde in dieser Spalte beispielsweise den Wert 17 anzeigen. Der Wert 0 gibt an, dass der Artikel inaktiv ist und keine zusätzlichen Eigenschaften definiert wurden.|  
+|**pre_creation_cmd**|**tinyint**|Der Voraberstellungsbefehl für DROP TABLE, DELETE TABLE oder TRUNCATE:<br /><br /> **0** = keine.<br /><br /> **1** = DROP.<br /><br /> **2** = DELETE.<br /><br /> **3** = TRUNCATE.|  
+|**status**|**int**|Die Bitmaske der Artikeloptionen und der Status, die das Ergebnis des bitweisen logischen OR von mindestens einem der folgenden Werte sein können:<br /><br /> **1** = Artikel ist aktiv.<br /><br /> **8** = Den Spaltennamen in INSERT-Anweisungen einschließen.<br /><br /> **16** = Parametrisierte Anweisungen verwenden.<br /><br /> **24** = Sowohl den Spaltennamen in INSERT-Anweisungen einschließen als auch parametrisierte Anweisungen verwenden.<br /><br /> Ein aktiver Artikel, der parametrisierte Anweisungen verwendet, würde in dieser Spalte beispielsweise den Wert 17 anzeigen. Der Wert 0 gibt an, dass der Artikel inaktiv ist und keine zusätzlichen Eigenschaften definiert wurden.|  
 |**sync_objid**|**int**|Die ID der Tabelle oder Sicht, die die Artikeldefinition darstellt.|  
-|**type**|**tinyint**|Der Artikeltyp:<br /><br /> **1** = Protokoll basierter Artikel.<br /><br /> **3** = Protokoll basierter Artikel mit manuellem Filter.<br /><br /> **5** = Protokoll basierter Artikel mit manueller Sicht.<br /><br /> **7** = Protokoll basierter Artikel mit manuellem Filter und manueller Ansicht.|  
+|**type**|**tinyint**|Der Artikeltyp:<br /><br /> **1** = Protokollbasierter Artikel.<br /><br /> **3** = Protokollbasierter Artikel mit manuell erstelltem Filter.<br /><br /> **5** = Protokollbasierter Artikel mit manuell erstellter Sicht.<br /><br /> **7** = Protokollbasierter Artikel mit manuell erstelltem Filter und manuell erstellter Sicht.|  
 |**upd_cmd**|**nvarchar(255)**|Der bei einer UPDATE-Anweisung auszuführende Befehl, wird sonst aus dem Protokoll konstruiert|  
-|**schema_option**|**BINARY**|Gibt an, welche Eigenschaften des veröffentlichten Objekts in der Momentaufnahme ausgegeben wurden.  Eine Liste der unterstützten Schema Optionen finden Sie unter [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).|  
+|**schema_option**|**binary**|Gibt an, welche Eigenschaften des veröffentlichten Objekts in der Momentaufnahme ausgegeben wurden.  Eine Liste der unterstützten Schema Optionen finden Sie unter [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).|  
 |**dest_owner**|**nvarchar(128)**|Der Besitzer der Tabelle in der Zieldatenbank|  
 |**ins_scripting_proc**|**int**|Der Objektbezeichner der benutzerdefinierten gespeicherten Prozedur oder des Skripts, die bzw. das beim Replizieren einer INSERT-Anweisung ausgeführt wird|  
 |**del_scripting_proc**|**int**|Der Objektbezeichner der benutzerdefinierten gespeicherten Prozedur oder des Skripts, die bzw. das beim Replizieren einer DELETE-Anweisung ausgeführt wird|  

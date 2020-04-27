@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: b333af29e3d39c0f4ce59ea68602f652c042003f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899419"
 ---
 # <a name="sysdm_pdw_exec_connections-transact-sql"></a>sys. dm_pdw_exec_connections (Transact-SQL)
@@ -28,9 +28,9 @@ ms.locfileid: "67899419"
 |-----------------|---------------|-----------------|  
 |session_id|**int**|Identifiziert die Sitzung, die dieser Verbindung zugeordnet ist. Verwenden `SESSION_ID()` Sie, um `session_id` den der aktuellen Verbindung zurückzugeben.|  
 |connect_time|**datetime**|Zeitstempel, der angibt, wann die Verbindung eingerichtet wurde. Lässt keine NULL-Werte zu.|  
-|encrypt_option|**nvarchar (40)**|Gibt true (die Verbindung ist verschlüsselt) oder false (die Verbindung ist nicht "tctypred").|  
-|auth_scheme|**nvarchar (40)**|Gibt das mit dieser Verbindung verwendete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-/Windows-Authentifizierungsschema an. Lässt keine NULL-Werte zu.|  
-|client_id|**varchar (48)**|Die IP-Adresse des Clients, der eine Verbindung mit diesem Server herstellt. Lässt NULL-Werte zu.|  
+|encrypt_option|**nvarchar(40)**|Gibt true (die Verbindung ist verschlüsselt) oder false (die Verbindung ist nicht "tctypred").|  
+|auth_scheme|**nvarchar(40)**|Gibt das mit dieser Verbindung verwendete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-/Windows-Authentifizierungsschema an. Lässt keine NULL-Werte zu.|  
+|client_id|**varchar(48)**|Die IP-Adresse des Clients, der eine Verbindung mit diesem Server herstellt. Lässt NULL-Werte zu.|  
 |sql_spid|**int**|Die Server Prozess-ID der Verbindung. Verwenden `@@SPID` Sie, um `sql_spid` den der aktuellen Verbindung zurückzugeben. Verwenden Sie für den spezifischsten Zweck `session_id` stattdessen den.|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -43,7 +43,7 @@ ms.locfileid: "67899419"
 |dm_pdw_exec_sessions. session_id|dm_pdw_exec_connections. session_id|1:1|  
 |dm_pdw_exec_requests. connection_id|dm_pdw_exec_connections. connection_id|n:1|  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Typische Abfrage zum Sammeln von Informationen über die eigene Verbindung einer Abfrage.  
   
 ```  

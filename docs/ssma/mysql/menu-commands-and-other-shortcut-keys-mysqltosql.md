@@ -10,10 +10,10 @@ ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 585243f46296808a5ed190c3e6d9448eec1c63da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67908799"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>Menübefehle und andere Tastenkombinationen (MySqlToSql)
@@ -87,7 +87,7 @@ Um auf das Menü Extras zuzugreifen, wird die Tastenkombination ALT + T verwende
 |Zeigen Sie das Dialogfeld Projekteinstellungen an.|Alt + T + P|  
 |Zeigt das Dialogfeld Standard Projekteinstellungen an.|Alt + T + J|  
   
-## <a name="help-menu-commands"></a>Hilfe Menübefehle  
+## <a name="help-menu-commands"></a>Befehle im Menü "Hilfe"  
 Um auf das Menü "Hilfe" zuzugreifen, wird die Tastenkombination ALT + H verwendet. In der folgenden Tabelle werden die Tastenkombinationen beschrieben, die für den Zugriff auf Menü Elemente im Menü Hilfe verwendet werden.  
   
 |zu diesem Zweck|Drückt|  

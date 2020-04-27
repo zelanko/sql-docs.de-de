@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 482e4ebbd467f3bc8946d90b9ad77bb892e85504
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67624342"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>Dimensionsattribute auswählen (Dimensions-Assistent)
@@ -29,7 +29,7 @@ ms.locfileid: "67624342"
   
 -   Klicken Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]im **Projektmappen-Explorer**mit der rechten Maustaste auf den Ordner **Dimensionen** eines [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekts, und klicken Sie anschließend auf **Neue Dimension**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  (Spalte mit Kontrollkästchen)  
  Wählen Sie diese Option aus, um ein Attribut in die Dimension einzuschließen.  
   
@@ -40,13 +40,13 @@ ms.locfileid: "67624342"
 > [!NOTE]  
 >  Das Kontrollkästchen für das Schlüsselattribut kann nicht deaktiviert werden.  
   
- **Attribut Name**  
+ **Attributname**  
  Listet die verfügbaren Attribute auf.  
   
  Wenn Sie den Namen eines Attributs ändern möchten, klicken Sie auf den Attributnamen, und geben Sie einen neuen Namen ein.  
   
  **Durchsuchen aktivieren**  
- Wählen Sie diese Option aus, damit der Endbenutzer das Attribut durchsuchen und filtern kann. Das **Aktivieren des Browsens** muss für das Schlüssel Attribut ausgewählt werden. In der Standardeinstellung ist die Option **Durchsuchen aktivieren** bei Attributen, die keine Schlüsselattribut sind, nicht aktiviert, sodass diese nur als Elementeigenschaften dargestellt werden.  
+ Wählen Sie diese Option aus, damit der Endbenutzer das Attribut durchsuchen und filtern kann. Die Option**Durchsuchen aktivieren** muss für das Schlüsselattribut aktiviert werden. In der Standardeinstellung ist die Option **Durchsuchen aktivieren** bei Attributen, die keine Schlüsselattribut sind, nicht aktiviert, sodass diese nur als Elementeigenschaften dargestellt werden.  
   
  In den meisten Fällen wird das Durchsuchen eines Attributs ermöglicht oder unterbunden, indem die `AttributeHierarchyEnabled`-Eigenschaft auf `True` bzw. `False` festgelegt wird. In den folgenden drei Fällen verwendet der Assistent jedoch andere Einstellungen.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "67624342"
 |----------|--------------|  
 |Eine Dimension enthält eine Über-/Unterordnungshierarchie, und die Option **Durchsuchen aktivieren** ist nicht aktiviert.|Der Assistent behält für die `AttributeHierarchyEnabled`-Eigenschaft die Einstellung `True` bei und legt das `AttributeHierarchyVisible`-Attribut für das Schlüsselattribut auf `False` fest.|  
 |Eine Tabelle in einer Dimension enthält einen Fremdschlüssel für eine Tabelle, die nicht in der Dimension enthalten ist.|Der Assistent wählt den Fremdschlüssel als aufzunehmendes Attribut aus, aktiviert die Option **Durchsuchen aktivieren**aber nicht. Wenn Sie diese Einstellungen beibehalten, dann ist die `AttributeHiearchyEnabled`-Eigenschaft des Attributs auf `True` festgelegt, und die `AttributeHierarchyVisible`Eigenschaft ist auf `False` festgelegt.|  
-|Eine Dimension enthält Schneeflockentabellen, die durch auf NULL festlegbare Fremdschlüsselspalten erreicht werden<br /><br /> -und-<br /><br /> Die Option Durchsuchen aktivieren wird für das Attribut, das auf dem Schlüssel der Schneeflockentabelle basiert, nicht aktiviert.|Der Assistent erstellt das neue Attribut, dessen `AttributeHiearchyEnabled`-Eigenschaft auf `True` und dessen `AttributeHierarchyVisible`-Eigenschaft auf `False` festgelegt ist.|  
+|Eine Dimension enthält Schneeflockentabellen, die durch auf NULL festlegbare Fremdschlüsselspalten erreicht werden<br /><br /> - und -<br /><br /> Die Option Durchsuchen aktivieren wird für das Attribut, das auf dem Schlüssel der Schneeflockentabelle basiert, nicht aktiviert.|Der Assistent erstellt das neue Attribut, dessen `AttributeHiearchyEnabled`-Eigenschaft auf `True` und dessen `AttributeHierarchyVisible`-Eigenschaft auf `False` festgelegt ist.|  
   
  **Attributtyp**  
  (Optional) Legen Sie den Typ des Attributs fest. Der Standardwert ist **Regulär**. Der Attributtyp stellt Clientanwendungen Hinweise dazu bereit, welche Informationen das Attribut enthält.  

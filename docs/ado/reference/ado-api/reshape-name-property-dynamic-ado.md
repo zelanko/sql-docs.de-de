@@ -14,10 +14,10 @@ ms.assetid: 690229d1-46cc-42e6-a57d-4438251fe248
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ec72b2b1908f967caee4610e27315acaab787ac9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917170"
 ---
 # <a name="reshape-name-property-dynamic-ado"></a>Reshape Name – dynamische Eigenschaft (ADO)
@@ -26,7 +26,7 @@ Gibt einen Namen für das [Recordset](../../../ado/reference/ado-api/recordset-o
 ## <a name="return-values"></a>Rückgabewerte  
  Gibt einen **Zeichen** folgen Wert zurück, der dem Namen des **Recordsets**entspricht.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Namen bleiben für die Dauer der Verbindung oder bis zum Schließen des **Recordsets** erhalten.  
   
  Die Eigenschaft " **Name Umformen** " ist hauptsächlich für die Verwendung mit der Umgestaltung der Funktion des Microsoft-Daten Strukturierungs [Dienstanbieters für OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md) Dienstanbieter vorgesehen. Namen müssen eindeutig sein, um an der Umgestaltung beteiligt werden zu können.  

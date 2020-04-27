@@ -21,10 +21,10 @@ ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68122632"
 ---
 # <a name="sysfn_my_permissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
@@ -42,8 +42,8 @@ fn_my_permissions ( securable , 'securable_class' )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Sicherungs fähigen*  
- Der Name des sicherungsfähigen Elements. Wenn das sicherungsfähige Element der Server oder eine Datenbank ist, sollte dieser Wert auf NULL festgelegt werden. *Sicherungs fähigen* ist ein Skalarausdruck vom Typ **vom Datentyp sysname**. *Sicherungs fähigen* kann ein mehrteilige Name sein.  
+ *securable*  
+ Der Name des sicherungsfähigen Elements. Wenn das sicherungsfähige Element der Server oder eine Datenbank ist, sollte dieser Wert auf NULL festgelegt werden. *securable* ist ein Skalarausdruck vom Typ **sysname**. *Sicherungs fähigen* kann ein mehrteilige Name sein.  
   
  "*securable_class*"  
  Der Name der Klasse des sicherungsfähigen Elements, für das Berechtigungen aufgelistet werden. *securable_class* ist ein **vom Datentyp sysname**. *securable_class* muss einer der folgenden sein: Anwendungs Rolle, Assembly, asymmetrischer Schlüssel, Zertifikat, Vertrag, Datenbank, Endpunkt, voll Text Katalog, Anmeldung, Nachrichtentyp, Objekt, Remote Dienst Bindung, Rolle, Route, Schema, Server, Dienst, symmetrischer Schlüssel, Typ, Benutzer, XML-Schema Auflistung.  
@@ -51,13 +51,13 @@ fn_my_permissions ( securable , 'securable_class' )
 ## <a name="columns-returned"></a>Zurückgegebene Spalten  
  In der folgenden Tabelle werden die Spalten aufgelistet, die **fn_my_permissions** zurückgibt. Jede zurückgegebene Zeile beschreibt eine Berechtigung, über die der aktuelle Sicherheitskontext für das sicherungsfähige Element verfügt. Gibt NULL zurück, wenn die Abfrage einen Fehler erzeugt.  
   
-|Spaltenname|type|BESCHREIBUNG|  
+|Spaltenname|type|Beschreibung|  
 |-----------------|----------|-----------------|  
 |Entitätsname|**sysname**|Der Name des sicherungsfähigen Elements, für das die aufgelisteten Berechtigungen effektiv gewährt wurden.|  
 |subentity_name|**sysname**|Der Spaltenname, sofern das sicherungsfähige Element über Spalten verfügt; andernfalls NULL.|  
 |permission_name|**nvarchar**|Der Name der Berechtigung.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Diese Tabellenwertfunktion gibt eine Liste der gültigen Berechtigungen zurück, über die der aufrufende Prinzipal für ein bestimmtes sicherungsfähiges Element verfügt. Eine gültige Berechtigung ist eine der folgenden:  
   
 -   Eine Berechtigung, die dem Prinzipal direkt gewährt und nicht verweigert wurde.  
@@ -111,7 +111,7 @@ SELECT * FROM fn_my_permissions('Sales.vIndividualCustomer', 'OBJECT')
 GO   
 ```  
   
-### <a name="d-listing-effective-permissions-of-another-user"></a>D: Auflisten der gültigen Berechtigungen eines anderen Benutzers  
+### <a name="d-listing-effective-permissions-of-another-user"></a>D. Auflisten der gültigen Berechtigungen eines anderen Benutzers  
  Das folgende Beispiel gibt eine Liste der gültigen Berechtigungen des Datenbankbenutzers `Wanida` für die `Employee`-Tabelle im `HumanResources`-Schema der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank zurück. Der Aufrufer benötigt die IMPERSONATE-Berechtigung für den Benutzer `Wanida`.  
   
 ```  
@@ -164,8 +164,8 @@ GO
  [Berechtigungen &#40;Datenbank-Engine&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Sicherungs fähige Elemente](../../relational-databases/security/securables.md)   
  [Datenbank-Engine der Berechtigungs Hierarchie &#40;&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   
- [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
- [Sicherheitskatalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
+ [sys. fn_builtin_permissions &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
+ [Sicherheits Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/security-catalog-views-transact-sql.md)   
  [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md)  
   
   

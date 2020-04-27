@@ -16,10 +16,10 @@ ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0538a3afae1e4c0bf4159d8ef6a42872f21ff6ed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67916870"
 ---
 # <a name="stat-method"></a>Stat-Methode
@@ -42,28 +42,28 @@ Long stream.Stat(StatStg, StatFlag)
  *STATFLAG*  
  Gibt an, dass diese Methode nicht einige der Member in der Statuslisten Struktur zurückgibt, wodurch eine Speicher Belegungs Operation gespeichert wird. Werte werden aus der STATFLAG-Enumeration entnommen. Die STATFLAG-Enumeration weist zwei Werte auf.  
   
-|Dauerhaft|value|  
+|Konstante|Wert|  
 |--------------|-----------|  
 |STATFLAG_DEFAULT|0|  
 |STATFLAG_NONAME|1|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die Version der für das ADO-Stream-Objekt implementierten Stat-Methode füllt die folgenden Felder der STATSTG-Struktur aus:  
   
  *pwcsName*  
  Eine Zeichenfolge, die den Namen des Streams enthält, wenn ein solcher verfügbar ist und der STATFLAG-Wert STATFLAG_NONAME nicht angegeben wurde.  
   
  *CBSIZE*  
- Gibt die Größe des Streams oder Byte Arrays in Bytes an.  
+ Gibt die Größe des Streams oder Bytearrays in Bytes an.  
   
  *mtime*  
- Gibt den Zeitpunkt der letzten Änderung für diesen Speicher, diesen Stream oder dieses Bytearray an.  
+ Gibt für diesen Speicher, diesen Stream oder dieses Bytearray den Zeitpunkt der letzten Änderung an.  
   
  *CTime*  
- Gibt die Erstellungszeit für diesen Speicher, diesen Stream oder dieses Bytearray an.  
+ Gibt für diesen Speicher, diesen Stream oder dieses Bytearray den Erstellungszeitpunkt an.  
   
  *atime*  
- Gibt den Zeitpunkt des letzten Zugriffs auf diesen Speicher, diesen Stream oder dieses Bytearray an.  
+ Gibt für diesen Speicher, diesen Stream oder dieses Bytearray den Zeitpunkt des letzten Zugriffs an.  
   
  Wenn STATFLAG_NONAME im STATFLAG-Parameter angegeben wird, wird der Name des Streams nicht zurückgegeben.  
   

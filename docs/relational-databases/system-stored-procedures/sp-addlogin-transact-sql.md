@@ -18,10 +18,10 @@ ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 5868120af1e98c4b2f3be78f2cf7927df53b42d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68072663"
 ---
 # <a name="sp_addlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
@@ -52,7 +52,7 @@ sp_addlogin [ @loginame = ] 'login'
   
 ## <a name="arguments"></a>Argumente  
  [ @loginame= ] "*Login*"  
- Der Name der Anmeldung. *Login* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+ Der Name der Anmeldung. *login* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
  [ @passwd= ] '*Kennwort*'  
  Das Anmelde Kennwort. *Password* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
@@ -64,7 +64,7 @@ sp_addlogin [ @loginame = ] 'login'
  Ist die Standarddatenbank des Anmeldenamens (die Datenbank, mit der der Anmeldename nach dem Anmelden zuerst verbunden wird). *Database* ist vom **Datentyp vom Datentyp sysname**. der Standardwert ist **Master**.  
   
  [ @deflanguage= ] "*Sprache*"  
- Die Standardsprache der Anmeldung. *Language* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *Language* nicht angegeben wird, wird die Standard *Sprache* des neuen Anmelde namens auf die aktuelle Standardsprache des Servers festgelegt.  
+ Die Standardsprache der Anmeldung. *language* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *Language* nicht angegeben wird, wird die Standard *Sprache* des neuen Anmelde namens auf die aktuelle Standardsprache des Servers festgelegt.  
   
  [ @sid= ] '*sid*'  
  Die Sicherheits-ID (SID). *sid* ist vom Datentyp **varbinary (16)** und hat den Standardwert NULL. Wenn *sid* den Wert NULL hat, generiert das System eine sid für den neuen Anmelde Namen. Trotz der Verwendung eines **varbinary** -Datentyps müssen andere Werte als NULL genau 16 Byte lang sein und dürfen nicht bereits vorhanden sein. Die Angabe von *sid* ist beispielsweise nützlich, wenn Sie Skripts von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einem Server auf einen anderen übertragen oder die Anmelde Namen von einem Server auf einen anderen verschieben, und Sie möchten, dass die Anmeldungen auf verschiedenen Servern dieselbe SID haben.  
@@ -72,20 +72,17 @@ sp_addlogin [ @loginame = ] 'login'
  [ @encryptopt= ] "*encryption_option*"  
  Gibt an, ob das Kennwort als Klartext oder als Hash des Klartextkennworts weitergegeben wird. Dabei ist zu beachten, dass keine Verschlüsselung stattfindet. Der Begriff "verschlüsseln" wird in diesem Zusammenhang aus Gründen der Abwärtskompatibilität verwendet. Wenn ein Klartextkennwort übergeben wird, geschieht dies in Form eines Hashs. Der Hash wird gespeichert. *encryption_option* ist vom Datentyp **varchar (20)**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |NULL|Das Kennwort wird als Klartext übergeben. Dies ist die Standardoption.|  
-|**skip_encryption**|Es wurde bereits ein Hashwert aus dem Kennwort erstellt. 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] sollte den Wert ohne erneutes Hashing speichern.|  
-|**skip_encryption_old**|Es wurde ein Hashwert des bereitgestellten Kennworts von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt. 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] sollte den Wert ohne erneutes Hashing speichern. Diese Option dient lediglich Upgradezwecken.|  
+|**skip_encryption**|Es wurde bereits ein Hashwert aus dem Kennwort erstellt. [!INCLUDE[ssDE](../../includes/ssde-md.md)] sollte den Wert ohne erneutes Hashing speichern.|  
+|**skip_encryption_old**|Es wurde ein Hashwert des bereitgestellten Kennworts von einer früheren Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erstellt. [!INCLUDE[ssDE](../../includes/ssde-md.md)] sollte den Wert ohne erneutes Hashing speichern. Diese Option dient lediglich Upgradezwecken.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
-## <a name="remarks"></a>Bemerkungen  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen können zwischen 1 und 128 Zeichen (einschließlich Buchstaben, Sonderzeichen und Ziffern) enthalten. Anmeldungen dürfen keinen umgekehrten Schrägstrich (\\) enthalten. Sie müssen ein reservierter Anmelde Name sein, z. b. SA oder Public, oder Sie sind bereits vorhanden. oder NULL oder eine leere Zeichenfolge (`''`) sein.  
+## <a name="remarks"></a>Hinweise  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldenamen können zwischen 1 und 128 Zeichen (einschließlich Buchstaben, Sonderzeichen und Ziffern) enthalten. Anmeldungen dürfen keinen umgekehrten Schrägstrich (\\) enthalten. Sie müssen ein reservierter Anmelde Name sein, z. b. SA oder Public, oder Sie sind bereits vorhanden. oder NULL oder eine leere Zeichenfolge (`''`) sein.  
   
  Wenn der Name einer Standarddatenbank angegeben wird, ist die Verbindung mit dieser Datenbank ohne das Ausführen der USE-Anweisung möglich. Es ist jedoch nicht möglich, die Standarddatenbank zu verwenden, bis Sie vom Datenbankbesitzer (mithilfe von [sp_adduser](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md) oder [sp_addrolemember](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)) oder [sp_addrole](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)Zugriff auf diese Datenbank erhalten.  
   
@@ -99,7 +96,7 @@ sp_addlogin [ @loginame = ] 'login'
   
  In der folgenden Tabelle werden verschiedene gespeicherte Prozeduren angezeigt, die mit sp_addlogin verwendet werden.  
   
-|Gespeicherte Prozedur|BESCHREIBUNG|  
+|Gespeicherte Prozedur|Beschreibung|  
 |----------------------|-----------------|  
 |[sp_grantlogin](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)|Fügt einen Windows-Benutzer oder eine Windows-Gruppe hinzu.|  
 |[sp_password](../../relational-databases/system-stored-procedures/sp-password-transact-sql.md)|Ändert das Kennwort eines Benutzers.|  
@@ -134,7 +131,7 @@ GO
 EXEC sp_addlogin 'TzTodorov', '709hLKH7chjfwv', 'AdventureWorks2012', N'български'  
 ```  
   
-### <a name="d-creating-a-sql-server-login-that-has-a-specific-sid"></a>D: Erstellen einer SQL Server-Anmeldung mit einer bestimmten SID  
+### <a name="d-creating-a-sql-server-login-that-has-a-specific-sid"></a>D. Erstellen einer SQL Server-Anmeldung mit einer bestimmten SID  
  Im folgenden Beispiel wird ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldename für den Benutzer `Michael` mit dem Kennwort `B548bmM%f6` erstellt; dabei werden `AdventureWorks2012` als Standarddatenbank, `us_english` als Standardsprache und `0x0123456789ABCDEF0123456789ABCDEF` als SID angegeben.  
   
 ```  

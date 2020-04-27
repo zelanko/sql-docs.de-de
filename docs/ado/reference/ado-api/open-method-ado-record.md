@@ -17,10 +17,10 @@ ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 97c7f1c143c83dd35ca5ff17e9776d79fb734ff9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67917927"
 ---
 # <a name="open-method-ado-record"></a>Open-Methode (ADO Record)
@@ -34,7 +34,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *`Source`*  
+ *Quelle*  
  Optional. Eine **Variante** , die die URL der Entität darstellt, die durch dieses **Daten Satz** Objekt dargestellt werden soll, einen **Befehl**, ein offenes [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) oder ein anderes **Datensatz** -Objekt, eine Zeichenfolge, die eine SQL-SELECT-Anweisung oder einen Tabellennamen enthält.  
   
  *ActiveConnection*  
@@ -55,7 +55,7 @@ Open Source, ActiveConnection, Mode, CreateOptions, Options, UserName, Password
  *Kennwort*  
  Optional. Ein **Zeichen** folgen Wert, der das Kennwort enthält, das bei Bedarf den *Benutzernamen*überprüft.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die *Quelle* kann Folgendes sein:  
   
 -   Eine URL. Wenn das Protokoll für die URL http lautet, wird standardmäßig der Internet Anbieter aufgerufen. , Wenn die URL auf einen Knoten verweist, der ein ausführbares Skript enthält (z. b.). ASP-Seite). Standardmäßig wird ein **Datensatz** geöffnet, der die Quelle anstelle des ausgeführten Inhalts enthält. Verwenden Sie das *options* -Argument, um dieses Verhalten zu ändern.  

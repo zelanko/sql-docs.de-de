@@ -17,10 +17,10 @@ ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9f394d5e3b3021ca240675d6979152c63b903190
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918620"
 ---
 # <a name="find-method-ado"></a>Find-Methode (ADO)
@@ -43,10 +43,10 @@ Find (Criteria, SkipRows, SearchDirection, Start)
  *Suchrichtung*  
  Optional. Ein [SearchDirectionEnum](../../../ado/reference/ado-api/searchdirectionenum.md) -Wert, der angibt, ob die Suche mit der aktuellen Zeile oder der nächsten verfügbaren Zeile in der Suchrichtung beginnen soll. Eine fehlgeschlagene Suche wird am Ende des **Recordsets** angehalten, wenn der Wert **adsearchforward**lautet. Eine nicht erfolgreiche Suche wird am Anfang des **Recordsets** angehalten, wenn der Wert **adsearchrückwärts**lautet.  
   
- *Starten*  
+ *Start*  
  Optional. Ein **Variant** -Lesezeichen, das als Startposition für die Suche fungiert.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  In den *Kriterien*kann nur ein einspaltige Name angegeben werden. Diese Methode unterstützt keine Suchvorgänge mit mehreren Spalten.  
   
  Der Vergleichs Operator in den *Kriterien* kann "**>**" (größer als), "**\<**" (kleiner als), "=" (gleich), ">=" (größer als oder gleich), "<=" (kleiner als oder gleich), "<>" (nicht gleich) oder "like" (Muster Vergleich) sein.  

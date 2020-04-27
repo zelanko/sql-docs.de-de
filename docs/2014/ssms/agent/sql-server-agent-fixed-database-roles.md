@@ -20,14 +20,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a8067aaa2133648c1a1ea4fff81db08c139d5278
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67793403"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Feste Datenbankrollen des SQL Server-Agents
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verfügt über die folgenden Fixed **msdb** -Daten bankrollen, mit denen Administratoren den Zugriff auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den-Agent besser steuern können. In der folgenden Auflistung sind die Rollen von den niedrigsten bis hin zu den höchsten Zugriffsberechtigungen enthalten:  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügt über die folgenden festen **msdb** -Datenbankrollen, mit denen Administratoren den Zugriff auf den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent besser steuern können. In der folgenden Auflistung sind die Rollen von den niedrigsten bis hin zu den höchsten Zugriffsberechtigungen enthalten:  
   
 -   **SQLAgentUserRole**  
   
@@ -41,22 +41,21 @@ ms.locfileid: "67793403"
  Die Datenbankrollen-Berechtigungen des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents stehen konzentrisch zueinander in Beziehung: Rollen mit höheren Berechtigungen erben die Berechtigungen der Rollen mit niedrigeren Berechtigungen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Objekte (einschließlich Warnungen, Operatoren, Aufträge, Zeitpläne und Proxys). Wenn z. B. Mitglieder der Rolle **SQLAgentUserRole** mit den niedrigsten Berechtigungen Zugriff auf „proxy_A“ haben, haben die Mitglieder von **SQLAgentReaderRole** und **SQLAgentOperatorRole** automatisch Zugriff auf diesen Proxy, selbst wenn ihnen der Zugriff auf „proxy_A“ nicht ausdrücklich erteilt wurde. Dies kann zu Sicherheitsrisiken führen, die in den folgenden Abschnitten zu den einzelnen Rollen erläutert werden.  
   
 ### <a name="sqlagentuserrole-permissions"></a>SQLAgentUserRole-Berechtigungen  
- **SQLAgentUserRole** ist das niedrigste Privileg der fixierten Daten bankrollen des- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agents. Sie hat lediglich Berechtigungen für Operatoren, lokale Aufträge und Auftragszeitpläne. Die Mitglieder von **SQLAgentUserRole** haben lediglich Berechtigungen für lokale Aufträge und Auftragszeitpläne, deren Besitzer sie sind. Sie können keine Multiserveraufträge (Master- und Zielserveraufträge) verwenden, und sie können den Auftragsbesitz nicht ändern, um Zugriff auf Aufträge zu erhalten, deren Besitzer sie nicht bereits sind. Die Mitglieder von **SQLAgentUserRole** können nur im Dialogfeld **Auftrags Schritt-Eigenschaften** von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Liste der verfügbaren Proxys anzeigen. Nur der Knoten **Aufträge** in Objekt-Explorer von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ist für die Mitglieder von **SQLAgentUserRole** sichtbar.  
+ **SQLAgentUserRole** ist die feste Datenbankrolle des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents mit den niedrigsten Berechtigungen. Sie hat lediglich Berechtigungen für Operatoren, lokale Aufträge und Auftragszeitpläne. Die Mitglieder von **SQLAgentUserRole** haben lediglich Berechtigungen für lokale Aufträge und Auftragszeitpläne, deren Besitzer sie sind. Sie können keine Multiserveraufträge (Master- und Zielserveraufträge) verwenden, und sie können den Auftragsbesitz nicht ändern, um Zugriff auf Aufträge zu erhalten, deren Besitzer sie nicht bereits sind. Die Mitglieder von**SQLAgentUserRole** können lediglich im Dialogfeld **Auftragsschritt-Eigenschaften** von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Liste mit vorhandenen Proxys anzeigen. Nur der Knoten **Aufträge** in Objekt-Explorer von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ist für die Mitglieder von **SQLAgentUserRole** sichtbar.  
   
 > [!IMPORTANT]  
->  Berücksichtigen Sie die Auswirkungen auf die Sicherheit, bevor **Sie den Mitgliedern der**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**agentdatabaseroles**Proxy Zugriff erteilen. 
-  **SQLAgentReaderRole** und **SQLAgentOperatorRole** sind automatisch Mitglieder von **SQLAgentUserRole**. Dies bedeutet, dass die Mitglieder von **SQLAgentReaderRole** und **SQLAgentOperatorRole** Zugriff auf alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxys haben, die **SQLAgentUserRole** erteilt wurden und diese Proxys verwenden können.  
+>  Berücksichtigen Sie die Auswirkungen auf die Sicherheit, bevor **Sie den Mitgliedern der**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**agentdatabaseroles**Proxy Zugriff erteilen. **SQLAgentReaderRole** und **SQLAgentOperatorRole** sind automatisch Mitglieder von **SQLAgentUserRole**. Dies bedeutet, dass die Mitglieder von **SQLAgentReaderRole** und **SQLAgentOperatorRole** Zugriff auf alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxys haben, die **SQLAgentUserRole** erteilt wurden und diese Proxys verwenden können.  
   
  Die folgende Tabelle enthält einen Überblick über die **SQLAgentUserRole** -Berechtigungen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Objekte.  
   
-|Action|Operatoren|Lokale Aufträge<br /><br /> (nur Aufträge mit Besitzern)|Auftragszeitpläne<br /><br /> (nur Zeitpläne mit Besitzern)|Proxys|  
+|Aktion|Operatoren|Lokale Aufträge<br /><br /> (nur Aufträge mit Besitzern)|Auftragszeitpläne<br /><br /> (nur Zeitpläne mit Besitzern)|Proxys|  
 |------------|---------------|----------------------------------------|------------------------------------------------|-------------|  
-|Erstellen/Ändern/Löschen|Nein|Ja<sup>1</sup>|Ja|Nein|  
-|Liste anzeigen (aufzählen)|Ja<sup>2</sup>|Ja|Ja|Ja<sup>3</sup>|  
+|Erstellen/Ändern/Löschen|Nein|Ja <sup>1</sup>|Ja|Nein|  
+|Liste anzeigen (aufzählen)|Ja <sup>2</sup>|Ja|Ja|Ja<sup>3</sup>|  
 |Aktivieren/Deaktivieren|Nein|Ja|Ja|Nicht verfügbar|  
 |Eigenschaften anzeigen|Nein|Ja|Ja|Nein|  
 |Ausführen/Beenden/Starten|Nicht verfügbar|Ja|Nicht verfügbar|Nicht verfügbar|  
-|Anzeige des Auftragsverlaufs|Nicht verfügbar|Ja|Nicht verfügbar|Nicht verfügbar|  
+|Auftragsverlauf anzeigen|Nicht verfügbar|Ja|Nicht verfügbar|Nicht verfügbar|  
 |Auftragsverlauf löschen|Nicht verfügbar|Nein <sup>4</sup>|Nicht verfügbar|Nicht verfügbar|  
 |Anfügen/Trennen|Nicht verfügbar|Nicht verfügbar|Ja|Nicht verfügbar|  
   
@@ -69,22 +68,22 @@ ms.locfileid: "67793403"
  <sup>4</sup> Mitgliedern von **SQLAgentUserRole** muss explizit die EXECUTE-Berechtigung für **sp_purge_jobhistory** erteilt werden, um den Auftrags Verlauf für Aufträge zu löschen, deren Besitzer Sie sind. Sie können den Auftragsverlauf für keine anderen Aufträge löschen.  
   
 ### <a name="sqlagentreaderrole-permissions"></a>SQLAgentReaderRole-Berechtigungen  
- **SQLAgentReaderRole** enthält alle **SQLAgentUserRole** -Berechtigungen sowie Berechtigungen zum Anzeigen der Liste der verfügbaren Multiserveraufträge, ihrer Eigenschaften und ihres Verlaufs. Die Mitglieder dieser Rolle können auch die Liste aller verfügbaren Aufträge und Auftragszeitpläne sowie ihre Eigenschaften anzeigen, nicht nur die Aufträge und Auftragszeitpläne, deren Besitzer sie sind. Die Mitglieder von **SQLAgentReaderRole** können den Auftrags Besitz nicht ändern, um Zugriff auf Aufträge zu erhalten, die Sie nicht bereits besitzen. Nur der Knoten **Aufträge** in Objekt-Explorer von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ist für die Mitglieder von **SQLAgentReaderRole** sichtbar.  
+ **SQLAgentReaderRole** enthält alle **SQLAgentUserRole** -Berechtigungen sowie die Berechtigungen zum Anzeigen der Liste verfügbarer Multiserveraufträge, ihrer Eigenschaften und ihres Verlaufs. Die Mitglieder dieser Rolle können auch die Liste aller verfügbaren Aufträge und Auftragszeitpläne sowie ihre Eigenschaften anzeigen, nicht nur die Aufträge und Auftragszeitpläne, deren Besitzer sie sind. Die Mitglieder von**SQLAgentReaderRole** können den Auftragsbesitz nicht ändern, um Zugriff auf Aufträge zu erhalten, deren Besitzer sie nicht bereits sind. Nur der Knoten **Aufträge** in Objekt-Explorer von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ist für die Mitglieder von **SQLAgentReaderRole**sichtbar.  
   
 > [!IMPORTANT]  
 >  Berücksichtigen Sie die Auswirkungen auf die Sicherheit, bevor **Sie den Mitgliedern der**[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**agentdatabaseroles**Proxy Zugriff erteilen. Die Mitglieder von **SQLAgentReaderRole** sind automatisch auch Mitglieder von **SQLAgentUserRole**. Dies bedeutet, dass die Mitglieder von **SQLAgentReaderRole** Zugriff auf alle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Proxys haben, die **SQLAgentUserRole** erteilt wurden und diese Proxys verwenden können.  
   
  Die folgende Tabelle enthält einen Überblick über die **SQLAgentReaderRole** -Berechtigungen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Objekte.  
   
-|Action|Operatoren|Lokale Aufträge|Multiserveraufträge|Auftragszeitpläne|Proxys|  
+|Aktion|Operatoren|Lokale Aufträge|Multiserveraufträge|Auftragszeitpläne|Proxys|  
 |------------|---------------|----------------|----------------------|-------------------|-------------|  
 |Erstellen/Ändern/Löschen|Nein|Ja <sup>1</sup> (nur Aufträge im Besitz)|Nein|Ja (nur Zeitpläne mit Besitzer)|Nein|  
-|Liste anzeigen (aufzählen)|Ja<sup>2</sup>|Ja|Ja|Ja|Ja<sup>3</sup>|  
+|Liste anzeigen (aufzählen)|Ja <sup>2</sup>|Ja|Ja|Ja|Ja<sup>3</sup>|  
 |Aktivieren/Deaktivieren|Nein|Ja (nur Aufträge mit Besitzer)|Nein|Ja (nur Zeitpläne mit Besitzer)|Nicht verfügbar|  
-|Eigenschaften anzeigen|Nein |Ja|Ja|Ja|Nein|  
+|Eigenschaften anzeigen|Nein|Ja|Ja|Ja|Nein|  
 |Eigenschaften bearbeiten|Nein|Ja (nur Aufträge mit Besitzer)|Nein|Ja (nur Zeitpläne mit Besitzer)|Nein|  
 |Ausführen/Beenden/Starten|Nicht verfügbar|Ja (nur Aufträge mit Besitzer)|Nein|Nicht verfügbar|Nicht verfügbar|  
-|Anzeige des Auftragsverlaufs|Nicht verfügbar|Ja|Ja|Nicht verfügbar|Nicht verfügbar|  
+|Auftragsverlauf anzeigen|Nicht verfügbar|Ja|Ja|Nicht verfügbar|Nicht verfügbar|  
 |Auftragsverlauf löschen|Nicht verfügbar|Nein <sup>4</sup>|Nein|Nicht verfügbar|Nicht verfügbar|  
 |Anfügen/Trennen|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Ja (nur Zeitpläne mit Besitzer)|Nicht verfügbar|  
   
@@ -97,9 +96,9 @@ ms.locfileid: "67793403"
  <sup>4</sup> Mitgliedern von **SQLAgentReaderRole** muss explizit die EXECUTE-Berechtigung für **sp_purge_jobhistory** erteilt werden, um den Auftrags Verlauf für Aufträge zu löschen, deren Besitzer Sie sind. Sie können den Auftragsverlauf für keine anderen Aufträge löschen.  
   
 ### <a name="sqlagentoperatorrole-permissions"></a>SQLAgentOperatorRole-Berechtigungen  
- **SQLAgentOperatorRole** ist das privilegierteste der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fixierten Daten bankrollen des-Agents. Sie enthält alle Berechtigungen von **SQLAgentUserRole** und **SQLAgentReaderRole**. Die Mitglieder dieser Rolle können auch die Eigenschaften für Operatoren und Proxys anzeigen und die verfügbaren Proxys und Warnungen auf dem Server aufzählen.  
+ **SQLAgentOperatorRole** ist die feste Datenbankrolle des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents mit den höchsten Berechtigungen. Sie enthält alle Berechtigungen von **SQLAgentUserRole** und **SQLAgentReaderRole**. Die Mitglieder dieser Rolle können auch die Eigenschaften für Operatoren und Proxys anzeigen und die verfügbaren Proxys und Warnungen auf dem Server aufzählen.  
   
- Die Mitglieder von **SQLAgentOperatorRole** verfügen über zusätzliche Berechtigungen für lokale Aufträge und Zeitpläne. Sie können alle lokalen Aufträge ausführen, beenden oder starten, und sie können den Auftragsverlauf eines lokalen Auftrags auf dem Server löschen. Sie können auch alle lokalen Aufträge und Zeitpläne auf dem Server aktivieren und deaktivieren. Um lokale Aufträge oder Zeitpläne zu aktivieren oder zu deaktivieren, müssen die Mitglieder dieser Rolle die gespeicherten Prozeduren **sp_update_job** und **sp_update_schedule**verwenden. Nur die Parameter, die den Namen oder Bezeichner des Auftrags oder Zeitplans und den ** \@aktivierten** Parameter angeben, können von den Mitgliedern von **SQLAgentOperatorRole**angegeben werden. Wenn sie andere Parameter angeben, erzeugt die Ausführung dieser gespeicherten Prozeduren einen Fehler. Die Mitglieder von **SQLAgentOperatorRole** können den Auftrags Besitz nicht ändern, um Zugriff auf Aufträge zu erhalten, die Sie nicht bereits besitzen.  
+ Die Mitglieder von**SQLAgentOperatorRole** haben zusätzliche Berechtigungen für lokale Aufträge und Zeitpläne. Sie können alle lokalen Aufträge ausführen, beenden oder starten, und sie können den Auftragsverlauf eines lokalen Auftrags auf dem Server löschen. Sie können auch alle lokalen Aufträge und Zeitpläne auf dem Server aktivieren und deaktivieren. Um lokale Aufträge oder Zeitpläne zu aktivieren oder zu deaktivieren, müssen die Mitglieder dieser Rolle die gespeicherten Prozeduren **sp_update_job** und **sp_update_schedule**verwenden. Nur die Parameter, die den Namen oder Bezeichner des Auftrags oder Zeitplans und den ** \@aktivierten** Parameter angeben, können von den Mitgliedern von **SQLAgentOperatorRole**angegeben werden. Wenn sie andere Parameter angeben, erzeugt die Ausführung dieser gespeicherten Prozeduren einen Fehler. Die Mitglieder von**SQLAgentOperatorRole** können den Auftragsbesitz nicht ändern, um Zugriff auf Aufträge zu erhalten, deren Besitzer sie nicht bereits sind.  
   
  Die Knoten **Aufträge**, **Warnungen**, **Operatoren**und **Proxys** in Objekt-Explorer von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sind für die Mitglieder von **SQLAgentOperatorRole**sichtbar. Nur der Knoten **Fehlerprotokolle** ist für die Mitglieder dieser Rolle nicht sichtbar.  
   
@@ -108,15 +107,15 @@ ms.locfileid: "67793403"
   
  Die folgende Tabelle enthält einen Überblick über die **SQLAgentOperatorRole** -Berechtigungen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Objekte.  
   
-|Action|Alerts|Operatoren|Lokale Aufträge|Multiserveraufträge|Auftragszeitpläne|Proxys|  
+|Aktion|Alerts|Operatoren|Lokale Aufträge|Multiserveraufträge|Auftragszeitpläne|Proxys|  
 |------------|------------|---------------|----------------|----------------------|-------------------|-------------|  
-|Erstellen/Ändern/Löschen|Nein|Nein|Ja <sup>2</sup> (nur Aufträge im Besitz)|Nein|Ja (nur Zeitpläne mit Besitzer)|Nein|  
-|Liste anzeigen (aufzählen)|Ja|Ja<sup>1</sup>|Ja|Ja|Ja|Ja|  
-|Aktivieren/Deaktivieren|Nein|Nein|Ja<sup>3</sup>|Nein|Ja <sup>4</sup>|Nicht verfügbar|  
+|Erstellen/Ändern/Löschen|Nein |Nein|Ja <sup>2</sup> (nur Aufträge im Besitz)|Nein|Ja (nur Zeitpläne mit Besitzer)|Nein|  
+|Liste anzeigen (aufzählen)|Ja|Ja <sup>1</sup>|Ja|Ja|Ja|Ja|  
+|Aktivieren/Deaktivieren|Nein |Nein|Ja<sup>3</sup>|Nein|Ja <sup>4</sup>|Nicht verfügbar|  
 |Eigenschaften anzeigen|Ja|Ja|Ja|Ja|Ja|Ja|  
-|Eigenschaften bearbeiten|Nein|Nein|Ja (nur Aufträge mit Besitzer)|Nein|Ja (nur Zeitpläne mit Besitzer)|Nein|  
+|Eigenschaften bearbeiten|Nein |Nein|Ja (nur Aufträge mit Besitzer)|Nein|Ja (nur Zeitpläne mit Besitzer)|Nein|  
 |Ausführen/Beenden/Starten|Nicht verfügbar|Nicht verfügbar|Ja|Nein|Nicht verfügbar|Nicht verfügbar|  
-|Anzeige des Auftragsverlaufs|Nicht verfügbar|Nicht verfügbar|Ja|Ja|Nicht verfügbar|Nicht verfügbar|  
+|Auftragsverlauf anzeigen|Nicht verfügbar|Nicht verfügbar|Ja|Ja|Nicht verfügbar|Nicht verfügbar|  
 |Auftragsverlauf löschen|Nicht verfügbar|Nicht verfügbar|Ja|Nein|Nicht verfügbar|Nicht verfügbar|  
 |Anfügen/Trennen|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Nicht verfügbar|Ja (nur Zeitpläne mit Besitzer)|Nicht verfügbar|  
   
@@ -136,6 +135,6 @@ ms.locfileid: "67793403"
  [sp_update_job &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-update-job-transact-sql)   
  [sp_update_schedule &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-update-schedule-transact-sql)   
  [sp_notify_operator &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-notify-operator-transact-sql)   
- [sp_purge_jobhistory &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql)  
+ [sp_purge_jobhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql)  
   
   

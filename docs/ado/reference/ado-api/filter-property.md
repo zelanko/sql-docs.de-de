@@ -16,10 +16,10 @@ ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ff06bc27e765945d1cca74b5f8401e0caadf6b17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67918628"
 ---
 # <a name="filter-property"></a>Filter-Eigenschaft
@@ -35,7 +35,7 @@ Legt einen **Variant** -Wert fest oder gibt einen Wert zurück, der eines der fo
   
 -   Ein [filtergroupum](../../../ado/reference/ado-api/filtergroupenum.md) -Wert.  
   
-## <a name="remarks"></a>Bemerkungen
+## <a name="remarks"></a>Hinweise
 
 Verwenden Sie die **Filter** -Eigenschaft, um Datensätze in einem **Recordset** -Objekt selektiv auszulagern. Das gefilterte **Recordset** wird zum aktuellen Cursor. Andere Eigenschaften, die Werte auf Grundlage des aktuellen **Cursors** zurückgeben, sind betroffen, wie z. b. die [AbsolutePosition-Eigenschaft (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md), die [AbsolutePage-Eigenschaft (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md), die [RecordCount-Eigenschaft (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)und die [PageCount-Eigenschaft (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md). Wenn die **Filter** -Eigenschaft auf einen bestimmten neuen Wert festgelegt wird, wird der aktuelle Datensatz in den ersten Datensatz verschoben, der den neuen Wert erfüllt.
   
@@ -56,7 +56,7 @@ Die Kriterienzeichenfolge besteht aus Klauseln in der Form *FieldName-Operator-V
 -   Stattdessen erstellen Sie diesen Filter als  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   In einer **like** -Klausel können Sie am Anfang und am Ende des Musters einen Platzhalter verwenden. Beispielsweise können Sie verwenden `LastName Like '*mit*'`. Oder mit **like** können Sie einen Platzhalter nur am Ende des Musters verwenden. Beispiel: `LastName Like 'Smit*'`.  
+-   In einer **like** -Klausel können Sie am Anfang und am Ende des Musters einen Platzhalter verwenden. Sie können z. B. `LastName Like '*mit*'` verwenden. Oder mit **like** können Sie einen Platzhalter nur am Ende des Musters verwenden. Beispielsweise `LastName Like 'Smit*'`.  
   
  Die Filter Konstanten vereinfachen das Auflösen einzelner Daten Satz Konflikte im Batch Aktualisierungs Modus, da Sie z. b. nur die Datensätze anzeigen können, die während des letzten [UpdateBatch-Methoden](../../../ado/reference/ado-api/updatebatch-method.md) Aufrufes aufgetreten sind.  
   
@@ -66,7 +66,7 @@ Wenn die **Filter** -Eigenschaft auf eine Zeichenfolge der Länge 0 (null) festg
   
 Wenn die **Filter** -Eigenschaft festgelegt ist, wechselt die aktuelle Daten Satz Position zum ersten Datensatz in der gefilterten Teilmenge der Datensätze im **Recordset**. Wenn die **Filter** -Eigenschaft gelöscht wird, wechselt die aktuelle Daten Satz Position entsprechend in den ersten Datensatz im **Recordset**.
 
-Angenommen, ein **Recordset** wird anhand eines Felds eines Varianten Typs gefiltert, z. b. vom Typ sql_variant. Ein Fehler (DISP_E_TYPEMISMATCH oder 80020005) tritt auf, wenn die Untertypen der Feld-und Filter Werte, die in der Kriterienzeichenfolge verwendet werden, nicht übereinstimmen. Nehmen Sie z. b. an:
+Angenommen, ein **Recordset** wird anhand eines Felds eines Varianten Typs gefiltert, z. b. vom Typ sql_variant. Ein Fehler (DISP_E_TYPEMISMATCH oder 80020005) tritt auf, wenn die Untertypen der Feld-und Filter Werte, die in der Kriterienzeichenfolge verwendet werden, nicht übereinstimmen. Nehmen Sie beispielsweise Folgendes an:
 
 - Ein **Recordset** -Objekt (RS) enthält eine Spalte (C) des sql_variant Typs.
 - Und einem Feld dieser Spalte wurde der Wert 1 des I4-Typs zugewiesen. Die Kriterienzeichenfolge `rs.Filter = "C='A'"` ist für das Feld auf festgelegt.

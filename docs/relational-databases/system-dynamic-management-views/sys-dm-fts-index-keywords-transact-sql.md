@@ -21,10 +21,10 @@ ms.assetid: fce7b2a1-7e74-4769-86a8-c77c7628decd
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: e2b5631443603ea111c3ba154726ec3e6b39e0df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900950"
 ---
 # <a name="sysdm_fts_index_keywords-transact-sql"></a>sys.dm_fts_index_keywords (Transact-SQL)
@@ -55,12 +55,12 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**Schlüsselwort**|**nvarchar(4000)**|Die hexadezimale Darstellung des Schlüssel Worts, das im Volltextindex gespeichert ist.<br /><br /> Hinweis: OxFF stellt das Sonderzeichen dar, das das Ende einer Datei oder eines Datasets angibt.|  
+|**keyword**|**nvarchar(4000)**|Die hexadezimale Darstellung des Schlüssel Worts, das im Volltextindex gespeichert ist.<br /><br /> Hinweis: OxFF stellt das Sonderzeichen dar, das das Ende einer Datei oder eines Datasets angibt.|  
 |**display_term**|**nvarchar(4000)**|Die Klartextform des Schlüsselworts. Dieses Format wird vom Hexadezimalformat abgeleitet.<br /><br /> Hinweis: der **display_term** Wert für OxFF ist "Dateiende".|  
 |**column_id**|**int**|Die ID der Spalte für die Volltextindizierung des aktuellen Schlüsselworts.|  
 |**document_count**|**int**|Die Anzahl der Dokumente bzw. Zeilen, die den aktuellen Begriff enthalten.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die Informationen, die von **sys. dm_fts_index_keywords** zurückgegeben werden, sind unter anderem nützlich, um Folgendes zu ermitteln:  
   
 -   Ob ein Schlüsselwort ein Teil des Volltextindexes ist  
@@ -77,7 +77,7 @@ sys.dm_fts_index_keywords( DB_ID('database_name'), OBJECT_ID('table_name') )
 >  Der von **sys. dm_fts_index_keywords** zurückgegebene **document_count** kann für ein bestimmtes Dokument weniger genau sein als die von **sys. dm_fts_index_keywords_by_document** oder einer **enthält** -Abfrage zurückgegebene Anzahl. Die mögliche Ungenauigkeit liegt bei ca. 1 %. Diese ingenauigkeit kann auftreten, wenn eine **document_id** zweimal gezählt werden kann, wenn Sie über mehr als eine Zeile im Index Fragment hinweg fortgesetzt wird, oder wenn Sie mehrmals in derselben Zeile angezeigt wird. Um einen genaueren Zähler für ein bestimmtes Dokument zu erhalten, verwenden Sie **sys. dm_fts_index_keywords_by_document** oder eine **enthält** -Abfrage.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
+ Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** .  
   
 ## <a name="examples"></a>Beispiele  
   
@@ -91,7 +91,7 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Dynamische Verwaltungs Sichten und Funktionen für die voll Text Suche und die semantische Suche &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
- [Voll Text Suche](../../relational-databases/search/full-text-search.md)   
+ [Volltextsuche](../../relational-databases/search/full-text-search.md)   
  [sys.dm_fts_index_keywords_by_document &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)  
   
   

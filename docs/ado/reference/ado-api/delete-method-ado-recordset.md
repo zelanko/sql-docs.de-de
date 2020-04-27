@@ -17,10 +17,10 @@ ms.assetid: 1eb9209c-602c-4507-b0c2-6527a599b67d
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b978e3d885e3ff06dda18859384f88eb4c564254
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67919122"
 ---
 # <a name="delete-method-ado-recordset"></a>Delete-Methode (ADO-Recordset)
@@ -34,13 +34,13 @@ recordset.Delete AffectRecords
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Affectrecords*  
+ *AffectRecords*  
  Ein [affectenum](../../../ado/reference/ado-api/affectenum.md) -Wert, der bestimmt, wie viele Datensätze von der **Delete** -Methode betroffen sind. Der Standardwert ist **adaffectcurrent**.  
   
 > [!NOTE]
 >  " **adaffectall** " und " **adaffectallchapters** " sind keine gültigen Argumente zum **Löschen**.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Mithilfe der **Delete** -Methode wird der aktuelle Datensatz oder eine Gruppe von Datensätzen in einem [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt zum Löschen markiert. Wenn das **Recordset** -Objekt das Löschen von Datensätzen nicht zulässt, tritt ein Fehler auf. Wenn Sie sich im sofortigen Update Modus befinden, werden Löschungen sofort in der Datenbank ausgeführt. Wenn ein Datensatz nicht erfolgreich gelöscht werden kann (z. b. aufgrund von Daten Bank Integritäts Verstößen), verbleibt der Datensatz nach dem [Update Update](../../../ado/reference/ado-api/update-method.md)im Bearbeitungsmodus. Dies bedeutet, dass Sie das Update mit [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) abbrechen müssen, bevor Sie den aktuellen Datensatz verschieben (z. b. mit " [Close](../../../ado/reference/ado-api/close-method-ado.md)", " [Move](../../../ado/reference/ado-api/move-method-ado.md)" oder " [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)").  
   
  Wenn Sie sich im Batch Aktualisierungs Modus befinden, werden die Datensätze zum Löschen aus dem Cache markiert, und der tatsächliche Löschvorgang erfolgt, wenn Sie die [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) -Methode aufrufen. Verwenden Sie die [Filter](../../../ado/reference/ado-api/filter-property.md) -Eigenschaft, um die gelöschten Datensätze anzuzeigen.  

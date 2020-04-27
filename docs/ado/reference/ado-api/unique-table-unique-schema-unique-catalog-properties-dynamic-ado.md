@@ -16,10 +16,10 @@ ms.assetid: d0e775d8-e353-46a1-ad10-ed4cc240dfaa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1b70920cd223223d5efb14925a6808168ca9cc16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67911684"
 ---
 # <a name="unique-table-unique-schema-unique-catalog-properties-dynamic-ado"></a>Unique Table, Unique Schema, Unique Catalog Properties-Dynamic (ADO)
@@ -34,7 +34,7 @@ Ermöglicht es Ihnen, Änderungen an einer bestimmten Basistabelle in einem [Rec
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
  Legt einen **Zeichen** folgen Wert fest, der den Namen einer Tabelle, eines Schemas oder eines Katalogs angibt, oder gibt ihn zurück.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die gewünschte Basistabelle wird durch die Katalog-, Schema-und Tabellennamen eindeutig identifiziert. Wenn die **Unique Table** -Eigenschaft festgelegt ist, werden die Werte der Eigenschaften des **eindeutigen Schemas** oder des **eindeutigen Katalogs** verwendet, um nach der Basistabelle zu suchen. Es ist beabsichtigt, aber nicht erforderlich, dass entweder oder sowohl die **eindeutigen Schema** -als auch die **eindeutigen Katalog** Eigenschaften festgelegt werden, bevor die **Unique Table** -Eigenschaft festgelegt wird.  
   
  Der Primärschlüssel der **eindeutigen Tabelle** wird als Primärschlüssel des gesamten **Recordsets**behandelt. Dies ist der Schlüssel, der für jede Methode verwendet wird, die einen Primärschlüssel erfordert.  

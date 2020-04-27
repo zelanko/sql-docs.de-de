@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: e31f36624e8923722612810836df5d2a57b6b686
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67624407"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Beheben von OOM-Problemen (nicht genügend Arbeitsspeicher)
@@ -41,7 +41,7 @@ ms.locfileid: "67624407"
   
     > [!IMPORTANT]  
     >  Wenn der Server auf einem virtuellen Computer ausgeführt wird und nicht dediziert ist, legen Sie den Wert von MIN_MEMORY_PERCENT auf denselben Wert wie MAX_MEMORY_PERCENT fest.   
-    > Weitere Informationen finden Sie im Thema [Bewährte Methoden: Verwenden von In-Memory OLTP in einer Umgebung mit virtuellen Computern](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) .  
+    > Weitere Informationen finden [Sie im Thema bewährte Methoden: Verwenden von in-Memory-OLTP in einer VM-Umgebung](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) .  
   
     ```sql  
   
@@ -69,9 +69,9 @@ ms.locfileid: "67624407"
 ## <a name="resolve-impact-of-low-memory-or-oom-conditions-on-the-workload"></a>Beheben von Beeinträchtigungen der Arbeitsauslastung durch wenig oder unzureichenden Arbeitsspeicher  
  Grundsätzlich sind Situationen mit wenig oder unzureichendem Arbeitsspeicher zu vermeiden. Häufig lassen sich OOM-Situationen durch eine durchdachte Planung und Überwachung vermeiden. Aber auch die beste Planung schützt nicht vor unvorhersehbaren Ereignissen, die zu knappem oder unzureichendem Arbeitsspeicher führen können. Eine OOM-Bedingung kann in zwei Schritten behoben werden:  
   
-1.  [Öffnen einer DAC (dedizierte Administrator Verbindung)](#open-a-dac-dedicated-administrator-connection) 
+1.  [Öffnen einer DAC (dedizierte Administratorverbindung)](#open-a-dac-dedicated-administrator-connection) 
   
-2.  [Korrekturmaßnahmen ergreifen](#take-corrective-action) 
+2.  [Korrekturmaßnahme](#take-corrective-action) 
   
 ### <a name="open-a-dac-dedicated-administrator-connection"></a>Öffnen einer DAC (dedizierte Administratorverbindung)  
  Microsoft SQL Server bietet eine dedizierte Administratorverbindung (Dedicated Administrator Connection, DAC). Mit der DAC können Administratoren auf eine ausgeführte Instanz der SQL Server-Datenbank-Engine zugreifen, um Probleme auf dem Server zu beheben, selbst wenn der Server auf andere Clientverbindungen nicht reagiert. Die DAC ist über das `sqlcmd` -Hilfsprogramm und SQL Server Management Studio (SSMS) verfügbar.  
@@ -105,7 +105,7 @@ In diesem Codeausschnitt wird MAX_MEMORY_PERCENT für den PoolHk-Ressourcenpool 
   
 > [!IMPORTANT]  
 >  Wenn der Server auf einem virtuellen Computer ausgeführt wird und nicht dediziert ist, legen Sie den Wert von MIN_MEMORY_PERCENT und MAX_MEMORY_PERCENT auf denselben Wert fest.   
-> Weitere Informationen finden Sie im Thema [Bewährte Methoden: Verwenden von In-Memory OLTP in einer Umgebung mit virtuellen Computern](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) .  
+> Weitere Informationen finden [Sie im Thema bewährte Methoden: Verwenden von in-Memory-OLTP in einer VM-Umgebung](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) .  
   
 ```sql  
   
@@ -128,11 +128,11 @@ GO
  Weitere Informationen zu maximalen Werten für MAX_MEMORY_PERCENT finden Sie im Themenabschnitt [Prozentsatz des für speicheroptimierte Tabellen und Indizes verfügbaren Arbeitsspeichers](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#percent-of-memory-available-for-memory-optimized-tables-and-indexes).  
   
 ##### <a name="install-additional-memory"></a>Installieren zusätzlichen Arbeitsspeichers  
- Die beste Lösung besteht letztendlich darin, falls möglich, zusätzlichen physischen Arbeitsspeicher zu installieren. In diesem Fall sollten Sie bedenken, dass Sie möglicherweise auch den Wert von MAX_MEMORY_PERCENT erhöhen können (siehe Unterabschnitt [Ändern von MIN_MEMORY_PERCENT und MAX_MEMORY_PERCENT für einen vorhandenen Pool](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)), da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wahrscheinlich nicht mehr Arbeitsspeicher benötigen wird, und Sie einen großen bzw. den gesamten Teil des neu installierten Arbeitsspeichers dem Ressourcenpool zur Verfügung stellen können.  
+ Die beste Lösung besteht letztendlich darin, falls möglich, zusätzlichen physischen Arbeitsspeicher zu installieren. Beachten Sie in diesem Fall, dass Sie wahrscheinlich auch den Wert von MAX_MEMORY_PERCENT erhöhen können (siehe untergeordnete [Änderungs MIN_MEMORY_PERCENT und MAX_MEMORY_PERCENT in einem vorhandenen Pool](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md#change-min-memory-percent-and-max-memory-percent-on-an-existing-pool)), da [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wahrscheinlich nicht mehr Arbeitsspeicher benötigt, sodass Sie den meisten, wenn nicht der neu installierte Arbeitsspeicher für den Ressourcenpool verfügbar machen.  
   
 > [!IMPORTANT]  
 >  Wenn der Server auf einem virtuellen Computer ausgeführt wird und nicht dediziert ist, legen Sie den Wert von MIN_MEMORY_PERCENT und MAX_MEMORY_PERCENT auf denselben Wert fest.   
-> Weitere Informationen finden Sie im Thema [Bewährte Methoden: Verwenden von In-Memory OLTP in einer Umgebung mit virtuellen Computern](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) .  
+> Weitere Informationen finden [Sie im Thema bewährte Methoden: Verwenden von in-Memory-OLTP in einer VM-Umgebung](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) .  
   
 ## <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a>Beheben von Seitenzuordnungsfehlern aufgrund von unzureichendem Arbeitsspeicher, obwohl ausreichend Arbeitsspeicher verfügbar ist  
  Wenn Sie die Fehlermeldung "Seiten Zuordnungen für die Datenbank '*\<DatabaseName>*' aufgrund von unzureichendem Arbeitsspeicher im Ressourcenpool '*\<ResourcePoolName>*'" erhalten, erhalten Sie eine Fehlermeldung. <https://go.microsoft.com/fwlink/?LinkId=330673>Weitere Informationen finden Sie unter "". im Fehlerprotokoll erhalten, obwohl der verfügbare physische Arbeitsspeicher zum Zuordnen der Seite ausreichend ist, kann dies daran liegen, dass die Ressourcenkontrolle deaktiviert ist. Wenn die Ressourcenkontrolle deaktiviert ist, führt MEMORYBROKER_FOR_RESERVE zu einem künstlichen Mangel an Arbeitsspeicher.  
@@ -144,7 +144,7 @@ GO
 ## <a name="see-also"></a>Weitere Informationen  
  [Verwalten des Arbeitsspeichers für in-Memory OLTP](../../database-engine/managing-memory-for-in-memory-oltp.md)   
  [Überwachen und behandeln von Problemen mit der Speicherauslastung](monitor-and-troubleshoot-memory-usage.md)   
- [Binden einer Datenbank mit speicheroptimierten Tabellen an einen Ressourcenpool](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
- [Bewährte Methoden: Verwenden von in-Memory-OLTP in einer VM-Umgebung](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)  
+ [Binden einer Datenbank mit Speicher optimierten Tabellen an einen Ressourcen Pool](bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   
+ [Bewährte Methoden: Verwenden von In-Memory OLTP in einer Umgebung mit virtuellen Computern](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md)  
   
   

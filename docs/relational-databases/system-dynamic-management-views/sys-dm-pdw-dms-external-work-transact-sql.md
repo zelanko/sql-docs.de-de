@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: a1778cbb88fcd6a4142e800cd45109602509125d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899509"
 ---
 # <a name="sysdm_pdw_dms_external_work-transact-sql"></a>sys. dm_pdw_dms_external_work (Transact-SQL)
@@ -24,19 +24,19 @@ ms.locfileid: "67899509"
 
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]Systemsicht, die Informationen zu allen DMS-Schritten (Data Movement Service) für externe Vorgänge enthält.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|Range|  
+|Spaltenname|Datentyp|Beschreibung|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar (32)**|Die Abfrage, die diesen DMS-Worker verwendet.<br /><br /> request_id, step_index und dms_step_index bilden den Schlüssel für diese Ansicht.|Identisch mit request_id in [sys. dm_pdw_exec_requests &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|request_id|**nvarchar(32)**|Die Abfrage, die diesen DMS-Worker verwendet.<br /><br /> request_id, step_index und dms_step_index bilden den Schlüssel für diese Ansicht.|Identisch mit request_id in [sys. dm_pdw_exec_requests &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |step_index|**int**|Abfrage Schritt, der diesen DMS-Worker aufruft.<br /><br /> request_id, step_index und dms_step_index bilden den Schlüssel für diese Ansicht.|Identisch mit step_index in [sys. dm_pdw_request_steps &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |dms_step_index|**int**|Aktueller Schritt im DMS-Plan.<br /><br /> request_id, step_index und dms_step_index bilden den Schlüssel für diese Ansicht.|Identisch mit dms___step_index in [sys. dm_pdw_dms_workers &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-dms-workers-transact-sql.md).|  
 |pdw_node_id|**int**|Knoten, auf dem der DMS-Worker ausgeführt wird.|Identisch mit node_id in [sys. dm_pdw_nodes &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-nodes-transact-sql.md).|  
-|type|**nvarchar (60)**|Der Typ des externen Vorgangs, der von diesem Knoten ausgeführt wird.<br /><br /> Beim Aufteilen von Dateien handelt es sich um einen Vorgang in einer externen Hadoop-Datei, der in mehrere kleinere Fälle aufgeteilt wurde.|' Datei Teilung '|  
+|Typ|**nvarchar(60)**|Der Typ des externen Vorgangs, der von diesem Knoten ausgeführt wird.<br /><br /> Beim Aufteilen von Dateien handelt es sich um einen Vorgang in einer externen Hadoop-Datei, der in mehrere kleinere Fälle aufgeteilt wurde.|' Datei Teilung '|  
 |work_id|**int**|Die ID der Datei Aufteilung.|Größer oder gleich 0 (null).<br /><br /> Eindeutig pro Computeknoten.|  
-|input_name|**nvarchar (60)**|Der Zeichen folgen Name für die gelesene Eingabe.|Bei einer Hadoop-Datei ist dies der Hadoop-Dateiname.|  
-|read_location|**BIGINT**|Offset des Lese Speicher Orts.||  
-|estimated_bytes_processed|**BIGINT**|Anzahl von Bytes, die von diesem Worker verarbeitet werden.|Größer oder gleich 0 (null).|  
-|Länge|**BIGINT**|Anzahl der Bytes in der Datei Aufteilung.<br /><br /> Für Hadoop ist dies die Größe des HDFS-Blocks.|Benutzer definiert. Der Standardwert ist 64 MB.|  
-|status|**nvarchar (32)**|Der Zustand des Workers.|Ausstehend, verarbeitet, abgeschlossen, fehlgeschlagen, abgebrochen|  
+|input_name|**nvarchar(60)**|Der Zeichen folgen Name für die gelesene Eingabe.|Bei einer Hadoop-Datei ist dies der Hadoop-Dateiname.|  
+|read_location|**bigint**|Offset des Lese Speicher Orts.||  
+|estimated_bytes_processed|**bigint**|Anzahl von Bytes, die von diesem Worker verarbeitet werden.|Größer oder gleich 0 (null).|  
+|length|**bigint**|Anzahl der Bytes in der Datei Aufteilung.<br /><br /> Für Hadoop ist dies die Größe des HDFS-Blocks.|Benutzer definiert. Der Standardwert ist 64 MB.|  
+|status|**nvarchar(32)**|Der Zustand des Workers.|Ausstehend, verarbeitet, abgeschlossen, fehlgeschlagen, abgebrochen|  
 |start_time|**datetime**|Der Zeitpunkt, zu dem die Ausführung dieses Workers gestartet wurde.|Die Startzeit ist größer als oder gleich der Startzeit des Abfrage Schritts, zu dem dieser Worker gehört. Weitere Informationen finden Sie unter [sys. dm_pdw_request_steps &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md).|  
 |end_time|**datetime**|Der Zeitpunkt, zu dem die Ausführung beendet wurde, fehlgeschlagen ist oder abgebrochen wurde.|NULL für laufende oder in der Warteschlange eingereihte Worker. Andernfalls größer als start_time.|  
 |total_elapsed_time|**int**|Gesamtzeit für die Ausführung in Millisekunden.|Größer oder gleich 0 (null).<br /><br /> Wenn total_elapsed_time den maximalen Wert für eine ganze Zahl überschreitet, ist total_elapsed_time weiterhin der Höchstwert. Mit dieser Bedingung wird die Warnung "der Höchstwert wurde überschritten" generiert.<br /><br /> Der maximale Wert in Millisekunden entspricht 24,8 Tagen.|  

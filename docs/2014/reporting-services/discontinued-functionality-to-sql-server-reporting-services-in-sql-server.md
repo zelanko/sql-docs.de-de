@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 14a5a6e38d4c9fcf306436374d80dd1c1c08b27e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67413040"
 ---
 # <a name="discontinued-functionality-in-sql-server-reporting-services-ssrs"></a>Nicht mehr unterstützte Funktion in SQL Server Reporting Services (SSRS)
@@ -29,17 +29,17 @@ ms.locfileid: "67413040"
   
 - [Nicht mehr unterstützte Funktionen in SQL Server 2008 R2 Reporting Services](#bkmk_kj)  
   
-##  <a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Nicht mehr unterstützte Funktionen Reporting Services
+##  <a name="sssql14-reporting-services-discontinued-functionality"></a><a name="bkmk_sql14"></a>[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Nicht mehr unterstützte Funktionen Reporting Services
 
  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] werden alle [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]-Funktionen weiterhin unterstützt.  
   
-##  <a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Nicht mehr unterstützte Funktionen Reporting Services
+##  <a name="sssql11-reporting-services-discontinued-functionality"></a><a name="bkmk_rc0"></a>[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Nicht mehr unterstützte Funktionen Reporting Services
 
  In diesem Abschnitt werden in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] nicht mehr unterstützte [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]-Funktionen beschrieben.  
   
  In [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] werden alle [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]-Funktionen weiterhin unterstützt.  
   
-##  <a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services nicht mehr unterstützte Funktionalität
+##  <a name="sql-server-2008-r2-reporting-services-discontinued-functionality"></a><a name="bkmk_kj"></a>SQL Server 2008 R2 Reporting Services nicht mehr unterstützte Funktionalität
 
  In diesem Abschnitt wird in [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]nicht mehr unterstützt.  
   

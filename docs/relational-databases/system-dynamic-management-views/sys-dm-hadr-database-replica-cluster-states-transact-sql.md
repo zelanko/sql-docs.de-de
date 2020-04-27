@@ -21,10 +21,10 @@ ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 2fbd066113f5ad4394b83e0151643ab9ea3b7b82
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67900668"
 ---
 # <a name="sysdm_hadr_database_replica_cluster_states-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
@@ -48,8 +48,8 @@ ms.locfileid: "67900668"
 |**is_failover_ready**|**bit**|Gibt an, ob die sekundäre Datenbank mit der entsprechenden primären Datenbank synchronisiert ist. eine der folgenden:<br /><br /> 0 = Die Datenbank ist im Cluster nicht als synchronisiert gekennzeichnet. Die Datenbank ist nicht zu einem Failover bereit.<br /><br /> 1 = Die Datenbank ist im Cluster als synchronisiert gekennzeichnet. Die Datenbank ist zu einem Failover bereit.|  
 |**is_pending_secondary_suspend**|**bit**|Gibt an, ob das Anhalten der Datenbank nach einem erzwungenen Failover ansteht. Die möglichen Werte sind:<br /><br /> 0 = Beliebiger Status außer HADR_SYNCHRONIZED_ SUSPENDED.<br /><br /> 1 = HADR_SYNCHRONIZED_ SUSPENDED. Wenn ein erzwungenes Failover abgeschlossen wird, wird jede der sekundären Datenbanken auf HADR_SYNCHONIZED_SUSPENDED festgelegt und bleibt in diesem Status, bis das neue primäre Replikat von dieser sekundären Datenbank eine Bestätigung für die SUSPEND-Meldung empfängt.<br /><br /> NULL = Unbekannt (kein Quorum)|  
 |**is_database_joined**|**bit**|Gibt an, ob die Datenbank auf diesem Verfügbarkeitsreplikat mit der Verfügbarkeitsgruppe verknüpft wurde. Die möglichen Werte sind:<br /><br /> 0 = Die Datenbank ist nicht mit der Verfügbarkeitsgruppe auf diesem Verfügbarkeitsreplikat verknüpft.<br /><br /> 1 = Die Datenbank ist mit der Verfügbarkeitsgruppe auf diesem Verfügbarkeitsreplikat verknüpft.<br /><br /> NULL = unbekannt (Das Verfügbarkeitsreplikat hat kein Quorum.)|  
-|**recovery_lsn**|**numerisch (25, 0)**|Bei einem primären Replikat das Ende des Transaktionsprotokolls, bevor das Replikat nach einer Wiederherstellung oder einem Failover neue Protokolldatensätze schreibt. Auf dem primären Replikat verfügt die Zeile für eine bestimmte sekundäre Datenbank über den Wert, in den das primäre Replikat das sekundäre Replikat synchronisieren soll (also der Wert für die Wiederherstellung und erneute Initialisierung).<br /><br /> Auf sekundären Replikaten ist dieser Wert NULL. Beachten Sie, dass jedes sekundäre Replikat entweder den MAX-Wert oder einen niedrigeren Wert aufweist, auf den das sekundäre Replikat auf Aufweisung des primären Replikats zurückgesetzt werden soll.|  
-|**truncation_lsn**|**numerisch (25, 0)**|Der [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]-Protokollkürzungswert, der höher als die lokale Kürzungs-LSN sein kann, wenn die lokale Protokollkürzung blockiert wird (z. B. durch einen Sicherungsvorgang).|  
+|**recovery_lsn**|**numeric(25,0)**|Bei einem primären Replikat das Ende des Transaktionsprotokolls, bevor das Replikat nach einer Wiederherstellung oder einem Failover neue Protokolldatensätze schreibt. Auf dem primären Replikat verfügt die Zeile für eine bestimmte sekundäre Datenbank über den Wert, in den das primäre Replikat das sekundäre Replikat synchronisieren soll (also der Wert für die Wiederherstellung und erneute Initialisierung).<br /><br /> Auf sekundären Replikaten ist dieser Wert NULL. Beachten Sie, dass jedes sekundäre Replikat entweder den MAX-Wert oder einen niedrigeren Wert aufweist, auf den das sekundäre Replikat auf Aufweisung des primären Replikats zurückgesetzt werden soll.|  
+|**truncation_lsn**|**numeric(25,0)**|Der [!INCLUDE[ssHADR](../../includes/sshadr-md.md)]-Protokollkürzungswert, der höher als die lokale Kürzungs-LSN sein kann, wenn die lokale Protokollkürzung blockiert wird (z. B. durch einen Sicherungsvorgang).|  
   
 ## <a name="security"></a>Sicherheit  
   
@@ -58,9 +58,9 @@ ms.locfileid: "67900668"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Always on Verfügbarkeits gruppendynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/always-on-availability-groups-dynamic-management-views-functions.md)   
- [Katalogsichten Always On-Verfügbarkeitsgruppen &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
- [Überwachen von Verfügbarkeitsgruppen (Transact-SQL)](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
- [Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [sys. dm_hadr_database_replica_states &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
+ [Katalog Sichten für Always on-Verfügbarkeits Gruppen &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/always-on-availability-groups-catalog-views-transact-sql.md)   
+ [Überwachen von Verfügbarkeits Gruppen &#40;Transact-SQL-&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [Always on Verfügbarkeits Gruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)  
   
   

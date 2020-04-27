@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f567da3318c7b8fff799475c638c1086613f45b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67826333"
 ---
 # <a name="powerpivot-authentication-and-authorization"></a>PowerPivot-Authentifizierung und -Autorisierung
@@ -24,7 +24,7 @@ ms.locfileid: "67826333"
   
  Klicken Sie auf die folgenden Links, um bestimmte Abschnitte in diesem Thema zu lesen:  
   
- [Windows-Authentifizierung unter Verwendung der Anmeldungsanforderung im klassischen Modus](power-pivot-authentication-and-authorization.md#bkmk_auth)  
+ [Windows-Authentifizierung mithilfe der Anmelde Anforderung im klassischen Modus](power-pivot-authentication-and-authorization.md#bkmk_auth)  
   
  [PowerPivot-Vorgänge, die eine Benutzerautorisierung erfordern](#UserConnections)  
   
@@ -32,7 +32,7 @@ ms.locfileid: "67826333"
   
  [Excel Services – Sicherheitsüberlegungen für PowerPivot-Arbeitsmappen](#excel)  
   
-##  <a name="bkmk_auth"></a>Windows-Authentifizierung mithilfe der Anmelde Anforderung im klassischen Modus  
+##  <a name="windows-authentication-using-classic-mode-sign-in-requirement"></a><a name="bkmk_auth"></a> Windows-Authentifizierung unter Verwendung der Anmeldungsanforderung im klassischen Modus  
  PowerPivot für SharePoint unterstützt eine eingeschränkte Anzahl der Authentifizierungsoptionen, die in SharePoint verfügbar sind. Von den verfügbaren Authentifizierungsoptionen wird nur die Windows-Authentifizierung für eine PowerPivot für SharePoint-Bereitstellung unterstützt. Außerdem muss die Webanwendung, über die die Anmeldung erfolgt, für den klassischen Modus konfiguriert sein.  
   
  Die Windows-Authentifizierung ist erforderlich, weil die Analysis Services-Daten-Engine in einer PowerPivot für SharePoint-Bereitstellung nur die Windows-Authentifizierung unterstützt. Excel Services stellt über den MSOLAP OLE DB-Anbieter Verbindungen mit Analysis Services her. Dabei wird die Identität eines Windows-Benutzers verwendet, der über NTLM oder das Kerberos-Protokoll authentifiziert wurde.  
@@ -52,7 +52,7 @@ ms.locfileid: "67826333"
   
  Für vorhandene Webanwendungen befolgen Sie die folgenden Anweisungen, um sicherzustellen, dass die Webanwendung für die Verwendung der Windows-Authentifizierung konfiguriert sind.  
   
-1.  Klicken Sie in der Zentraladministration unter Anwendungsverwaltung auf **Webanwendungen verwalten**.  
+1.  Klicken Sie in der zentral Administration unter Anwendungs Verwaltung auf **Webanwendungen verwalten**.  
   
 2.  Wählen Sie die Webanwendung aus.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "67826333"
   
 4.  Überprüfen Sie, ob es einen Anbieter für jede Zone gibt und die Standardzone auf Windows festgelegt ist.  
   
-##  <a name="UserConnections"></a>Power Pivot-Vorgänge, die Benutzer Autorisierung erfordern  
+##  <a name="powerpivot-operations-requiring-user-authorization"></a><a name="UserConnections"></a>Power Pivot-Vorgänge, die Benutzer Autorisierung erfordern  
  Die SharePoint-Autorisierung wird ausschließlich für alle Zugriffsebenen für die PowerPivot-Abfrage- und -Datenverarbeitung verwendet.  
   
  Das rollenbasierte Analysis Services-Autorisierungsmodell wird nicht unterstützt. Für PowerPivot-Daten steht keine rollenbasierte Autorisierung auf Zellen-, Zeilen- oder Tabellenebene zur Verfügung. Sie können nicht verschiedene Teile der Arbeitsmappe sichern, um ausgewählten Benutzern Zugriff auf vertrauliche Daten in der Datenquelle zu gewähren oder zu verweigern. Eingebettete PowerPivot-Daten sind für Benutzer mit Anzeigeberechtigungen für die Excel-Arbeitsmappe in einer SharePoint-Bibliothek uneingeschränkt verfügbar.  
@@ -73,7 +73,7 @@ ms.locfileid: "67826333"
   
 -   Datenaktualisierungsvorgänge, bei denen eine aktualisierte Kopie der Datenquelle in der Arbeitsmappe in einer Inhaltsbibliothek gespeichert wird. In diesem Fall wird ein aktuelles Protokoll für den Vorgang unter Verwendung des Benutzernamens und des Kennworts ausgeführt, der/das aus einer Zielanwendung in Secure Store Service abgerufen wird. Die Anmeldeinformationen können das Konto der unbeaufsichtigten PowerPivot-Datenaktualisierung oder die Anmeldeinformationen sein, die zusammen mit dem Datenaktualisierungszeitplan bei seiner Erstellung gespeichert wurden. Weitere Informationen finden Sie unter [Konfigurieren gespeicherter Anmelde Informationen für die Power Pivot-Datenaktualisierung &#40;PowerPivot für SharePoint&#41;](../configure-stored-credentials-data-refresh-powerpivot-sharepoint.md) und [Konfigurieren des unbeaufsichtigten Power Pivot-Daten Aktualisierungs Kontos &#40;PowerPivot für SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md).  
   
-##  <a name="Permissions"></a>SharePoint-Berechtigungen für Power Pivot-Datenzugriff  
+##  <a name="sharepoint-permissions-for-powerpivot-data-access"></a><a name="Permissions"></a>SharePoint-Berechtigungen für Power Pivot-Datenzugriff  
  Die Veröffentlichung, Verwaltung und Sicherung einer PowerPivot-Arbeitsmappe wird nur durch die SharePoint-Integration unterstützt. SharePoint-Server bieten Authentifizierungs- und Autorisierungssubsysteme an, die den berechtigten Zugang zu Daten sicherstellen. Szenarien für die sichere Bereitstellung einer PowerPivot-Arbeitsmappe außerhalb einer SharePoint-Farm werden nicht unterstützt.  
   
  Der Benutzerzugriff auf PowerPivot-Daten ist auf dem Server schreibgeschützt und erfordert mindestens Anzeigeberechtigungen. Über Teilnahmeberechtigungen wird das Hinzufügen und Bearbeiten der Datei erlaubt. Änderungen an PowerPivot-Daten erfordern, dass Sie die Arbeitsmappe in eine Excel-Desktopanwendung herunterladen, in der PowerPivot für Excel installiert ist. Über die Teilnahmeberechtigungen für die Datei wird ermittelt, ob der Benutzer berechtigt ist, die Datei lokal herunterzuladen und Änderungen in SharePoint zurückzuspeichern.  
@@ -90,7 +90,7 @@ ms.locfileid: "67826333"
 |Lesen|Greifen Sie auf Power Pivot-Arbeitsmappen als externe Datenquelle zu, wobei die arbeitsmappenurl explizit in einem Verbindungs Dialogfeld eingegeben wird (z. b. im Datenverbindungs-Assistenten von Excel).|  
 |Nur anzeigen|Anzeigen von PowerPivot-Arbeitsmappen<br /><br /> Anzeigen des Datenaktualisierungsverlaufs<br /><br /> Herstellen einer Verbindung mit einer PowerPivot-Arbeitsmappe auf einer SharePoint-Website, um die Daten auf andere Weise erneut zu nutzen<br /><br /> Laden Sie eine Momentaufnahme der Arbeitsmappe herunter. Die Momentaufnahme ist eine statische Kopie der Daten, ohne Slicer, Filter, Formeln oder Datenverbindungen. Der Inhalt der Momentaufnahme entspricht den Zellenwerten im Browserfenster.|  
   
-##  <a name="excel"></a>Überlegungen zur Sicherheit von Excel Services für Power Pivot-Arbeitsmappen  
+##  <a name="excel-services-security-considerations-for-powerpivot-workbooks"></a><a name="excel"></a>Überlegungen zur Sicherheit von Excel Services für Power Pivot-Arbeitsmappen  
  Die serverseitige Verarbeitung von PowerPivot-Abfragen ist eng mit Excel Services verbunden. Die Produktintegration beginnt auf Dokumentebene, auf der PowerPivot-Arbeitsmappen als Excel-Arbeitsmappendateien (.xlsx) angesehen werden, die PowerPivot-Daten enthalten oder darauf verweisen. Es gibt keine separate Dateierweiterung für eine PowerPivot-Arbeitsmappe.  
   
  Wenn eine PowerPivot-Arbeitsmappe auf einer SharePoint-Website geöffnet wird, liest Excel Services die eingebettete PowerPivot-Datenverbindungszeichenfolge und leitet die Anforderung an den lokalen OLE DB-Anbieter für SQL Server Analysis Services weiter. Der Anbieter übergibt die Verbindungsinformationen daraufhin an einen PowerPivot-Server in der Farm. Damit die Anforderungen ungehindert zwischen den zwei Servern ausgetauscht werden können, muss Excel Services so konfiguriert werden, dass die für PowerPivot für SharePoint erforderlichen Einstellungen verwendet werden.  
@@ -108,7 +108,7 @@ ms.locfileid: "67826333"
 ||Beim Aktualisieren warnen|Dieser Wert sollte deaktiviert werden, wenn Sie Arbeitsmappen und Berichte mithilfe des PowerPivot-Katalogs speichern. Der PowerPivot-Katalog umfasst eine Dokumentvorschaufunktion, die am besten funktioniert, wenn Beim Öffnen aktualisieren und Beim Aktualisieren warnen deaktiviert sind.|  
 |Vertrauenswürdige Datenanbieter|MSOLAP.4<br /><br /> MSOLAP.5|MSOLAP.4 ist standardmäßig eingeschlossen, aber der Zugriff auf PowerPivot-Daten erfordert, dass der MSOLAP.4-Anbieter der SQL Server 2008 R2-Version entspricht.<br /><br /> MSOLAP.5 wird mit der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Version von PowerPivot für SharePoint installiert.<br /><br /> Entfernen Sie diese Anbieter nicht aus der Liste vertrauenswürdiger Datenanbieter. In einigen Fällen kann es erforderlich sein, zusätzliche Kopien dieses Anbieters auf weiteren SharePoint-Servern in der Farm zu installieren. Weitere Informationen finden Sie unter [Installieren des OLE DB-Anbieters für Analysis Services auf SharePoint-Servern](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md).|  
 |Vertrauenswürdige Datenverbindungsbibliotheken|Optional.|Sie können Office Data Connection (ODC)-Dateien in PowerPivot-Arbeitsmappen verwenden. Wenn Sie Verbindungsinformationen mithilfe von ODC-Dateien für lokale PowerPivot-Arbeitsmappen bereitstellen, können Sie der Bibliothek die gleichen ODC-Dateien hinzufügen.|  
-|Benutzerdefinierte Funktionsassembly|Nicht zutreffend|Benutzerdefinierte Funktionsassemblys, die Sie für Excel Services erstellen und bereitstellen, werden von PowerPivot für SharePoint ignoriert. Wenn Sie benutzerdefinierte Assemblys für ein bestimmtes Verhalten benötigen, beachten Sie, dass die von Ihnen erstellten benutzerdefinierten Funktionen bei der Verarbeitung von PowerPivot-Abfragen nicht verwendet werden.|  
+|Benutzerdefinierte Funktionsassembly|Nicht zutreffend.|Benutzerdefinierte Funktionsassemblys, die Sie für Excel Services erstellen und bereitstellen, werden von PowerPivot für SharePoint ignoriert. Wenn Sie benutzerdefinierte Assemblys für ein bestimmtes Verhalten benötigen, beachten Sie, dass die von Ihnen erstellten benutzerdefinierten Funktionen bei der Verarbeitung von PowerPivot-Abfragen nicht verwendet werden.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren von Power Pivot-Dienst Konten](configure-power-pivot-service-accounts.md)   

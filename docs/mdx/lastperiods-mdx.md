@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6a9337e925da40f148bbe0d2c77fb1cf4f5f1a99
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67905785"
 ---
 # <a name="lastperiods-mdx"></a>LastPeriods (MDX)
@@ -28,13 +28,13 @@ LastPeriods(Index [ ,Member_Expression ] )
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Sin*  
+ *Index*  
  Ein gültiger numerischer Ausdruck, der eine Anzahl von Zeiträumen angibt.  
   
  *Member_Expression*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der ein Element zurückgibt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn die angegebene Anzahl von Zeiträumen positiv ist, gibt die **Last Zeiträume** -Funktion eine Menge von Membern zurück, die mit dem Element beginnen, das *Index* -1 aus dem angegebenen Element Ausdruck verzögert und mit dem angegebenen Element endet. Die Anzahl der von der Funktion zurückgegebenen Member ist gleich dem *Index*.  
   
  Wenn die angegebene Anzahl von Zeiträumen negativ ist, gibt die **Last Zeiträume** -Funktion eine Menge von Membern zurück, die mit dem angegebenen Element beginnen und mit dem Member endet, der (- *Index* -1) aus dem angegebenen Element führt. Die Anzahl der von der Funktion zurückgegebenen Member ist gleich dem absoluten Wert des *Indexes*.  
@@ -66,6 +66,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

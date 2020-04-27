@@ -18,10 +18,10 @@ ms.assetid: b0924094-c0cc-49c1-869a-65be0d0465a0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 045f9ab13b701b8dbd5e0895531932c21767853f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67909058"
 ---
 # <a name="msmerge_replinfo-transact-sql"></a>MSmerge_replinfo (Transact-SQL)
@@ -34,9 +34,9 @@ ms.locfileid: "67909058"
 |**repid**|**uniqueidentifier**|Die eindeutige ID für das Replikat.|  
 |**use_interactive_resolver**|**bit**|Gibt an, ob der interaktive Konfliktlöser während der Abgleichung verwendet wird.<br /><br /> **0** = der interaktive Konflikt Löser wird nicht verwendet.<br /><br /> **1** = verwenden Sie den interaktiven Konflikt Löser.|  
 |**validation_level**|**int**|Überprüfungstyp, der für das Abonnement durchgeführt wird. Die angegebene Überprüfungsebene kann einen der folgenden Werte haben:<br /><br /> **0** = keine Validierung.<br /><br /> **1** = nur Überprüfung der Zeilen Anzahl.<br /><br /> **2** = Überprüfung der Zeilen Anzahl und der Prüfsumme.<br /><br /> **3** = Überprüfung der Zeilen Anzahl und der binären Prüfsumme.|  
-|**resync_gen**|**BIGINT**|Die Generierungsnummer, die für die erneute Synchronisierung des Abonnements verwendet wird. Der Wert **-1** gibt an, dass das Abonnement nicht für die erneute Synchronisierung markiert ist.|  
+|**resync_gen**|**bigint**|Die Generierungsnummer, die für die erneute Synchronisierung des Abonnements verwendet wird. Der Wert **-1** gibt an, dass das Abonnement nicht für die erneute Synchronisierung markiert ist.|  
 |**login_name**|**sysname**|Der Name des Benutzers, der das Abonnement erstellt hat.|  
-|**Hostname**|**sysname**|Der Wert, der beim Generieren der Partition für das Abonnement von den parametrisierten Zeilenfiltern verwendet wird.|  
+|**hostname**|**sysname**|Der Wert, der beim Generieren der Partition für das Abonnement von den parametrisierten Zeilenfiltern verwendet wird.|  
 |**merge_jobid**|**Binary (16)**|Die ID des Mergeauftrags für dieses Abonnement.|  
 |**sync_info**|**int**|Nur intern verwendet.|  
   

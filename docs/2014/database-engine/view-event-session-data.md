@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e2fecf8a71854d7f8df160ba3ff63912086a34e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67131792"
 ---
 # <a name="view-event-session-data"></a>Anzeigen von Ereignissitzungsdaten
@@ -145,9 +145,9 @@ ms.locfileid: "67131792"
 ### <a name="aggregate-results"></a>Aggregieren der Ergebnisse  
  Sie können die Ablaufverfolgungsergebnisse anzeigen und dann die Ereignisdaten weiter analysieren, indem Sie Spalten in den Ergebnissen aggregieren. Erweiterte Ereignisse unterstützen fünf Aggregationsfunktionen:  
   
--   sum  
+-   Sum  
   
--   min  
+-   Min  
   
 -   max  
   

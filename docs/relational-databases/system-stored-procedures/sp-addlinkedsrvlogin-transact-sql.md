@@ -18,10 +18,10 @@ ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 1bf39a9a1262f30e3c0bbd6fd2ea5892a55540dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "68072668"
 ---
 # <a name="sp_addlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
@@ -62,7 +62,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn sich ein Benutzer beim lokalen Server anmeldet und eine verteilte Abfrage ausführt, die auf eine Tabelle auf dem Verbindungsserver zugreift, muss sich der lokale Server beim Verbindungsserver im Auftrag des Benutzers anmelden, um auf diese Tabelle zugreifen zu können. Geben Sie mithilfe von sp_addlinkedsrvlogin die Anmeldeinformationen an, die der lokale Server zum Anmelden beim Verbindungsserver verwendet.  
   
 > [!NOTE]  
@@ -97,7 +97,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
 EXEC sp_addlinkedsrvlogin 'Accounts';  
 ```  
   
- oder  
+ Oder  
   
 ```  
 EXEC sp_addlinkedsrvlogin 'Accounts', 'true';  
