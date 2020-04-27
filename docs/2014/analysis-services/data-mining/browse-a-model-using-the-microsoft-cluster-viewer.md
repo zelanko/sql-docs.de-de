@@ -23,10 +23,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e13882cf6186632b893b18369aef263e6cdd6445
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086052"
 ---
 # <a name="browse-a-model-using-the-microsoft-cluster-viewer"></a>Durchsuchen eines Modells mit dem Microsoft Cluster-Viewer
@@ -35,18 +35,18 @@ ms.locfileid: "66086052"
 > [!NOTE]  
 >  Wenn Sie detaillierte Informationen über die im Modell verwendeten Formeln und die entdeckten Muster sehen möchten, verwenden Sie den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree-Viewer. Weitere Informationen finden Sie unter [Durchsuchen eines Modells mit dem Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) oder [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
-##  <a name="BKMK_ViewerTabs"></a>Viewer-Registerkarten  
+##  <a name="viewer-tabs"></a><a name="BKMK_ViewerTabs"></a>Viewer-Registerkarten  
  Wenn Sie ein Miningmodell in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]durchsuchen, wird das Modell im Data Mining-Designer auf der Registerkarte **Miningmodell-Viewer** mit dem jeweils geeigneten Viewer für das Modell angezeigt. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster-Viewer bietet die folgenden Registerkarten zum Durchsuchen von Clusteringminingmodellen:  
   
--   [Cluster Diagramm](#BKMK_Diagram)  
+-   [Clusterdiagramm](#BKMK_Diagram)  
   
--   [Cluster profile](#BKMK_Profile)  
+-   [Clusterprofile](#BKMK_Profile)  
   
 -   [Cluster Merkmale](#BKMK_Characteristics)  
   
--   [Cluster Unterscheidung](#BKMK_Discrimination)  
+-   [Clusterunterscheidung](#BKMK_Discrimination)  
   
-###  <a name="BKMK_Diagram"></a>Cluster Diagramm  
+###  <a name="cluster-diagram"></a><a name="BKMK_Diagram"></a>Cluster Diagramm  
  Die Registerkarte **Clusterdiagramm** des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Cluster-Viewers zeigt alle in einem Miningmodell enthaltenen Cluster an. Die Schattierung der Linie, die einen Cluster mit einem anderen verbindet, stellt die Ähnlichkeit der Cluster dar. Ist die Schattierung schwach oder ist keine Schattierung vorhanden, sind sich die Cluster kaum ähnlich. Je stärker die Linie wird, umso mehr ähneln sich die Links. Sie können die Anzahl der im Viewer angezeigten Linien mithilfe des Schiebereglers rechts neben den Clustern anpassen. Wenn Sie den Schieberegler nach unten ziehen, werden nur die stärksten Links angezeigt.  
   
  Standardmäßig stellt die Schattierung die Auffüllung des Clusters dar. Mithilfe der Optionen " **shadingvariable** " und " **State** " können Sie auswählen, welches Attribut-und Status paar die Schattierung darstellt. Je stärker die Schattierung ist, umso größer ist die Attributverteilung für einen bestimmten Status. Die Verteilung wird geringer, wenn die Schattierung schwächer wird.  
@@ -57,7 +57,7 @@ ms.locfileid: "66086052"
   
  [Zurück zum Anfang](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Profile"></a>Cluster profile  
+###  <a name="cluster-profiles"></a><a name="BKMK_Profile"></a>Cluster profile  
  Die Registerkarte **Clusterprofile** bietet eine Übersicht der Cluster, die der Algorithmus in Ihrem Modell erstellt. Diese Ansicht zeigt die einzelnen Attribute zusammen mit der Verteilung des Attributs in jedem Cluster an. Die Verteilungsstatistiken der einzelnen Zellen sowie die Clusterauffüllung jeder Spaltenüberschrift werden jeweils mit einem InfoTipp angezeigt. Diskrete Attribute werden als farbige Balken angezeigt; und kontinuierliche Attribute werden als Rautendiagramm angezeigt, das die mittlere und die Standardabweichung in jedem Cluster darstellt. Mit der Option **Histogrammbalken** wird die Anzahl der im Histogramm sichtbaren Balken gesteuert. Sind mehr Balken vorhanden, als Sie zum Anzeigen ausgewählt haben, werden die wichtigsten Balken beibehalten. Die restlichen Balken werden dabei in einem grauen Bucket zusammengruppiert.  
   
  Sie können die Standardnamen der Cluster ändern, um aussagekräftige Namen bereitzustellen. Benennen Sie einen Cluster um, indem Sie mit der rechten Maustaste auf die Spaltenüberschrift des Clusters klicken und **Cluster umbenennen**auswählen. Sie können auch Cluster ausblenden, indem Sie **Spalte ausblenden**auswählen.  
@@ -68,12 +68,12 @@ ms.locfileid: "66086052"
   
  [Zurück zum Anfang](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Characteristics"></a>Cluster Merkmale  
+###  <a name="cluster-characteristics"></a><a name="BKMK_Characteristics"></a> Clustermerkmale  
  Wählen Sie zum Verwenden der Registerkarte **Clustermerkmale** in der Liste **Cluster** einen Cluster aus. Nachdem Sie einen Cluster ausgewählt haben, können Sie die Merkmale dieses bestimmten Clusters überprüfen. Die im Cluster enthaltenen Attribute werden in den **Variablen** -Spalten und der Status der aufgelisteten Attribute in der **Werte** -Spalte aufgelistet. Attributstatus werden in der Reihenfolge ihrer Wichtigkeit aufgelistet und durch die Wahrscheinlichkeit, dass sie im Cluster angezeigt werden, beschrieben. Die Wahrscheinlichkeit wird in der Spalte **Wahrscheinlichkeit** angezeigt.  
   
  [Zurück zum Anfang](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Discrimination"></a>Cluster Unterscheidung  
+###  <a name="cluster-discrimination"></a><a name="BKMK_Discrimination"></a>Cluster Unterscheidung  
  Sie können die Registerkarte **Clusterunterscheidung** verwenden, um Attribute zwischen zwei Clustern zu vergleichen. Verwenden Sie die Listen **Cluster 1** und **Cluster 2** , um die zu vergleichenden Cluster auszuwählen. Der Viewer bestimmt die wichtigsten Unterschiede zwischen den Clustern und zeigt die Attributstatus, die den Unterschieden zugeordnet sind, nach der Reihenfolge der Wichtigkeit an. Ein Balken rechts neben dem Attribut zeigt an, welchen Cluster der Status bevorzugt; die Größe des Balkens zeigt dabei an, wie stark der Status den Cluster bevorzugt.  
   
  [Zurück zum Anfang](#BKMK_ViewerTabs)  

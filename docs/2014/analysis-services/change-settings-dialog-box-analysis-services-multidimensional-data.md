@@ -13,23 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 43dfc1dca2e60fe2f5e467556ee36c3add1a9da3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088251"
 ---
 # <a name="change-settings-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Einstellungen ändern' (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des in **und** bereitgestellten Dialogfelds [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] Einstellungen ändern [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie die Einstellungen ändern, mit denen die Verarbeitung der im Dialogfeld **Verarbeiten** aufgeführten Objekte gesteuert wird. Zum Anzeigen des Dialogfelds **Einstellungen ändern** klicken Sie im Dialogfeld **Verarbeiten** auf **Einstellungen ändern** .  
   
 > [!NOTE]  
->  Mit den in diesem Dialogfeld angegebenen Einstellungen werden die Standardeinstellungen überschrieben, die von der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank an die im Dialogfeld **Verarbeiten** aufgeführten Objekte vererbt wurden.  
+>   Mit den in diesem Dialogfeld angegebenen Einstellungen werden die Standardeinstellungen überschrieben, die von der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank an die im Dialogfeld **Verarbeiten** aufgeführten Objekte vererbt wurden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verarbeitungsoptionen**  
  Auf dieser Registerkarte können Sie Einstellungen zu Verarbeitungsreihenfolge, Rückschreibetabelle und den vom Verarbeitungsvorgang betroffenen Objekten ändern. Die Registerkarte enthält die folgenden Optionen:  
   
- **Parallel**  
+ **Zeitige**  
  Klicken Sie hier, um Objekte parallel zu verarbeiten.  
   
  **Maximal auszuführende parallele Tasks**  
@@ -41,21 +41,21 @@ ms.locfileid: "66088251"
  **Transaktionsmodus**  
  Wählen Sie den Transaktionsmodus für die sequenzielle Verarbeitung von Objekten aus:  
   
--   **Eine Transaktion** verarbeitet alle Objekte in derselben Transaktion.  
+-   Bei Auswahl von**Eine Transaktion** werden alle Objekte in ein und derselben Transaktion verarbeitet.  
   
--   Bei **separaten Transaktionen** werden alle Objekte, einschließlich abhängiger Objekte, in separaten Transaktionen verarbeitet.  
+-   Bei Auswahl von**Separate Transaktionen** werden alle Objekte, einschließlich abhängiger Objekte, in separaten Transaktionen verarbeitet.  
   
 > [!NOTE]  
->  Diese Option ist nur aktiviert, wenn **Sequenziell** ausgewählt wird.  
+>   Diese Option ist nur aktiviert, wenn **Sequenziell** ausgewählt wird.  
   
- **Rück schreibe Tabellen Option**  
+ **Rückschreibetabellenoption**  
  Wählen Sie die Option zum Verwalten der Rückschreibetabelle aus.  
   
--   **Create** erstellt eine Rück schreibe Tabelle, wenn Sie nicht vorhanden ist. Wenn bereits eine Rückschreibetabelle vorhanden ist, wird ein Fehler gemeldet.  
+-   Mit**Erstellen** wird eine Rückschreibetabelle erstellt, sofern noch keine vorhanden ist. Wenn bereits eine Rückschreibetabelle vorhanden ist, wird ein Fehler gemeldet.  
   
--   **Create erstellt immer** eine Rück schreibe Tabelle, wenn Sie nicht vorhanden ist, oder überschreibt die vorhandene Rück schreibe Tabelle, wenn Sie vorhanden ist.  
+-   Mit**Immer erstellen** wird eine Rückschreibetabelle erstellt, sofern noch keine vorhanden ist. Eine bereits vorhandene Rückschreibetabelle wird dabei überschrieben.  
   
--   **Vorhandene verwenden** verwendet die vorhandene Rück schreibe Tabelle, sofern vorhanden. Wenn keine Rückschreibetabelle vorhanden ist, wird ein Fehler gemeldet.  
+-   Bei**Vorhandene verwenden** wird eine bereits vorhandene Rückschreibetabelle verwendet. Wenn keine Rückschreibetabelle vorhanden ist, wird ein Fehler gemeldet.  
   
  **Betroffene Objekte verarbeiten**  
  Aktivieren Sie diese Option, um Objekte aufzunehmen und zu verarbeiten, die von Objekten im Verarbeitungsvorgang abhängig sind.  
@@ -72,9 +72,9 @@ ms.locfileid: "66088251"
  **Schlüsselfehler Aktion**  
  Wählen Sie eine der folgenden Aktionen aus, die ausgeführt werden soll, wenn während der Verarbeitung ein neuer Schlüssel erkannt wird, der nicht ermittelt werden kann:  
   
--   In " **Unknown konvertieren** " aggregiert die Informationen für den Datensatz in das unbekannte Element.  
+-   Mit**In unbekanntes Element konvertieren** werden die Informationen für den Datensatz im unbekannten Element zusammengesetzt.  
   
--   Der **Datensatz verwerfen** schließt die Informationen für den Datensatz von der Verarbeitung mit dem-Objekt aus.  
+-   Mit**Datensatz verwerfen** werden die Informationen für den Datensatz von der Verarbeitung mit dem Objekt ausgeschlossen.  
   
  **Fehler Anzahl ignorieren**  
  Klicken Sie hier, um bei der Verarbeitung auftretende Fehler grundsätzlich zu ignorieren.  
@@ -88,47 +88,47 @@ ms.locfileid: "66088251"
  **Aktion bei Fehler**  
  Wählen Sie eine der folgenden Aktionen aus, die ausgeführt wird, wenn die Anzahl der Fehler den in **Anzahl von Fehlern**angegebenen Wert überschreitet:  
   
--   Durch die **Verarbeitung beenden** wird der Verarbeitungsvorgang beendet.  
+-   Mit**Verarbeitung beenden** wird der Verarbeitungsvorgang beendet.  
   
--   Wenn die **Protokollierung beendet** wird, werden Fehler protokolliert, der Verarbeitungsvorgang wird jedoch fortgesetzt  
+-   Mit**Protokollierung beenden** werden Protokollierungsfehler beendet, während der Verarbeitungsvorgang weiter ausgeführt wird.  
   
  **Schlüssel nicht gefunden**  
  Geben Sie eine der folgenden Aktionen an, die ausgeführt wird, wenn ein Schlüssel bei der Verarbeitung eines Objekts nicht gefunden wird:  
   
--   **Fehler ignorieren** ignoriert den Fehler.  
+-   Mit**Fehler ignorieren** wird der Fehler ignoriert.  
   
 -   **Melden und Fortfahren** meldet den Fehler und setzt den Verarbeitungsvorgang fort.  
   
--   **Melden und beenden** meldet den Fehler und beendet den Verarbeitungsvorgang.  
+-   Mit**Melden und Vorgang beenden** wird der Fehler gemeldet und der Verarbeitungsvorgang beendet.  
   
  **Doppelter Schlüssel**  
  Geben Sie eine der folgenden Aktionen an, die ausgeführt wird, wenn bei der Verarbeitung eines Objekts ein doppelter Schlüssel gefunden wird:  
   
--   **Fehler ignorieren** ignoriert den Fehler.  
+-   Mit**Fehler ignorieren** wird der Fehler ignoriert.  
   
 -   **Melden und Fortfahren** meldet den Fehler und setzt den Verarbeitungsvorgang fort.  
   
--   **Melden und beenden** meldet den Fehler und beendet den Verarbeitungsvorgang.  
+-   Mit**Melden und Vorgang beenden** wird der Fehler gemeldet und der Verarbeitungsvorgang beendet.  
   
  **NULL-Schlüssel in unbekanntes konvertiert**  
  Geben Sie eine der folgenden Aktionen an, die ausgeführt wird, wenn dem unbekannten Element bei der Verarbeitung des Objekts ein Elementschlüssel NULL hinzugefügt wird:  
   
--   **Fehler ignorieren** ignoriert den Fehler.  
+-   Mit**Fehler ignorieren** wird der Fehler ignoriert.  
   
 -   **Melden und Fortfahren** meldet den Fehler und setzt den Verarbeitungsvorgang fort.  
   
--   **Melden und beenden** meldet den Fehler und beendet den Verarbeitungsvorgang.  
+-   Mit**Melden und Vorgang beenden** wird der Fehler gemeldet und der Verarbeitungsvorgang beendet.  
   
  **NULL-Schlüssel nicht zulässig**  
  Geben Sie eine der folgenden Aktionen an, die ausgeführt wird, wenn bei der Verarbeitung eines Objekts ein unzulässiger NULL-Schlüssel gefunden wird:  
   
--   **Fehler ignorieren** ignoriert den Fehler.  
+-   Mit**Fehler ignorieren** wird der Fehler ignoriert.  
   
 -   **Melden und Fortfahren** meldet den Fehler und setzt den Verarbeitungsvorgang fort.  
   
--   **Melden und beenden** meldet den Fehler und beendet den Verarbeitungsvorgang.  
+-   Mit**Melden und Vorgang beenden** wird der Fehler gemeldet und der Verarbeitungsvorgang beendet.  
   
- **Fehlerprotokoll Pfad**  
+ **Fehlerprotokollpfad**  
  Geben Sie den vollständigen Pfad und Dateinamen für die Fehlerprotokolldatei ein.  
   
  **Durchsuchen**  

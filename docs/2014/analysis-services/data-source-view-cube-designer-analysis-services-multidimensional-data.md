@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b5c5f1389e0761ba0665e37e842b23b58c70cfe2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082529"
 ---
 # <a name="data-source-view-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Datenquellensicht (Registerkarte 'Cubestruktur', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich **Datenquellensicht** können Sie Tabellen und Spalten aus der Datenquellensicht anzeigen, die dem ausgewählten Cube zugeordnet ist. In diesem Bereich können Sie Measuregruppen und Measures erstellen, indem Sie Spalten aus dem Bereich **Datenquellensicht** in den Bereich **Measures** ziehen.  
   
-## <a name="options"></a>Tastatur  
- **Datenquellen Sicht**  
+## <a name="options"></a>Optionen  
+ **Datenquellensicht**  
  Zeigt die dem ausgewählten Cube zugeordnete Datenquellensicht an.  
   
  **(Viewpoint verschieben)**  
@@ -32,7 +32,7 @@ ms.locfileid: "66082529"
 ## <a name="diagram-context-menu"></a>Diagramm (Kontextmenü)  
  Wenn Sie mit der rechten Maustaste auf den Diagrammhintergrund im Bereich **Datenquellensicht** klicken, wird ein Kontextmenü angezeigt, das die folgenden Optionen enthält:  
   
- **Tabellen anzeigen**  
+ **Anzeigen von Tabellen**  
  Zeigt das Dialogfeld **Tabelle anzeigen** an. Weitere Informationen zum Dialogfeld **Tabelle anzeigen** finden Sie unter [Dialogfeld „Tabelle anzeigen“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](show-table-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Alle Tabellen anzeigen**  
@@ -44,7 +44,7 @@ ms.locfileid: "66082529"
  **Anzeigen Amen anzeigen**  
  Wählen Sie diese Option aus, um für die Objekte im Bereich die Anzeigenamen anzuzeigen.  
   
- **Alles markieren**  
+ **Alle auswählen**  
  Wählt alle Objekte im Bereich aus.  
   
  **Tabelle suchen**  
@@ -57,13 +57,13 @@ ms.locfileid: "66082529"
  Mit dieser Option werden die Objekte diagonal angeordnet.  
   
 > [!NOTE]  
->  Diese Option wird nur angezeigt **, wenn zu rechteckigem Layout wechseln** ausgewählt ist.  
+>  Diese Option wird nur angezeigt, wenn **Zu rechteckigem Layout wechseln** ausgewählt ist.  
   
  **Zu rechteckigem Layout wechseln**  
  Mit dieser Option werden die Objekte in einem Rechteckmuster angeordnet.  
   
 > [!NOTE]  
->  Diese Option wird nur angezeigt **, wenn zu diagonalem Layout wechseln** ausgewählt ist.  
+>  Diese Option wird nur angezeigt, wenn **Zu diagonalem Layout wechseln** ausgewählt ist.  
   
  **Datenquellensicht bearbeiten**  
  Zeigt den Datenquellensicht-Designer für die dem Objekt zugeordnete Datenquellensicht an. Weitere Informationen zum Datenquellensicht-Designer finden Sie unter [Datenquellensicht-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](data-source-view-designer-analysis-services-multidimensional-data.md).  

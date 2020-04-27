@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d09f32cb21762ca56eab156701ee013ef2c03ec3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083779"
 ---
 # <a name="mining-model-content-analysis-services---data-mining"></a>Miningmodellinhalt (Analysis Services &ndash;</ph> Data Mining)
@@ -36,24 +36,24 @@ ms.locfileid: "66083779"
   
  In diesem Abschnitt wird die grundlegende Inhaltsstruktur, die für alle Miningmodelltypen bereitgestellt wird, beschrieben. Es werden die Knotentypen beschrieben, die allen Miningmodellinhalten gemeinsam sind, und Richtlinien zur Interpretation der Daten vorgestellt.  
   
- [Struktur des Mining Modell Inhalts](#bkmk_Structure)  
+ [Struktur des Miningmodellinhalts](#bkmk_Structure)  
   
- [Knoten im Modell Inhalt](#bkmk_Nodes)  
+ [Knoten im Modellinhalt](#bkmk_Nodes)  
   
  [Mining Modell Inhalt nach Algorithmustyp](#bkmk_AlgoType)  
   
- [Tools zum Anzeigen von Mining Modell Inhalten](#bkmk_Viewing)  
+ [Miningmodellinhalt-Anzeigetools](#bkmk_Viewing)  
   
- [Tools zum Abfragen von Mining Modell Inhalten](#bkmk_Querying)  
+ [Miningmodellinhalt-Abfragetools](#bkmk_Querying)  
   
-##  <a name="bkmk_Structure"></a>Struktur des Mining Modell Inhalts  
+##  <a name="structure-of-mining-model-content"></a><a name="bkmk_Structure"></a>Struktur des Mining Modell Inhalts  
  Der Inhalt jedes Modells wird als Reihe von *Knoten*dargestellt. Ein Knoten ist ein Objekt innerhalb eines Miningmodells, das Metadaten und Informationen über einen Teil des Modells enthält. Knoten werden in einer Hierarchie angeordnet. Die genaue Anordnung der Knoten in der Hierarchie und die Bedeutung der Hierarchie ist vom verwendeten Algorithmus abhängig. Wenn Sie z. B. ein Entscheidungsstrukturmodell verwenden, kann das Modell mehrere Strukturen enthalten, die alle mit dem Modellstamm verbunden sind. Wenn Sie ein neuronales Netzwerkmodell erstellen, kann das Modell ein oder mehrere Netzwerke enthalten sowie einen Statistikknoten.  
   
  Der erste Knoten in jedem Modell wird *Stammknoten*oder *übergeordneter* Modellknoten genannt. Jedes Modell hat einen Stammknoten (NODE_TYPE = 1). Der Stammknoten enthält in der Regel einige Metadaten über das Modell sowie die Anzahl der untergeordneten Knoten, jedoch wenige Informationen über die Muster, die vom Modell erkannt wurden.  
   
  Je nachdem mit welchem Algorithmus Sie das Modell erstellt haben, verfügt der Stammknoten über eine unterschiedliche Anzahl von untergeordneten Knoten. Untergeordnete Knoten haben eine andere Bedeutung und unterscheiden sich im Inhalt, je nach Algorithmus und Datentiefe bzw. Datenkomplexität.  
   
-##  <a name="bkmk_Nodes"></a>Knoten im Mining Modell Inhalt  
+##  <a name="nodes-in-mining-model-content"></a><a name="bkmk_Nodes"></a> Knoten im Miningmodellinhalt  
  In einem Miningmodell ist ein Knoten ein universell einsetzbarer Container, in dem Informationen zum gesamten Modell oder zu einem Teil des Modells gespeichert werden. Die Struktur der Knoten ist immer dieselbe und enthält die Spalten, die im Data Mining-Schemarowset definiert sind. Weitere Informationen finden Sie unter [DMSCHEMA_MINING_MODEL_CONTENT-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
   
  Jeder Knoten enthält Metadaten über den Knoten. Dazu gehört eine ID, die für jedes Modell einzigartig ist, die ID des übergeordneten Knotens und die Anzahl der untergeordneten Knoten, über die ein Knoten verfügt. Aus den Metadaten geht das Modell hervor, zu dem der Knoten gehört, sowie der Datenbankkatalog, in dem dieses spezielle Modell gespeichert ist. Welche weiteren Informationen im Knoten angegeben sind, hängt vom Algorithmus ab, den Sie zur Erstellung des Modells verwendet haben. Dazu gehören:  
@@ -81,14 +81,14 @@ ms.locfileid: "66083779"
 |3|Interior|Innerer geteilter Knoten einer Struktur. Gilt für Entscheidungsstrukturmodelle.|  
 |4|Distribution|Endknoten einer Struktur. Gilt für Entscheidungsstrukturmodelle.|  
 |5|Cluster|Vom Algorithmus erkanntes Cluster. Gilt für Clusteringmodelle und Sequenzclustermodelle.|  
-|6|Unknown|Unbekannter Knotentyp.|  
+|6|Unbekannt|Unbekannter Knotentyp.|  
 |7|ItemSet|Vom Algorithmus erkanntes Itemset. Gilt für Zuordnungsmodelle und Sequenzclustermodelle.|  
 |8|AssociationRule|Vom Algorithmus erkannte Zuordnungsregel. Gilt für Zuordnungsmodelle und Sequenzclustermodelle.|  
 |9|PredictableAttribute|Vorhersagbares Attribut. Gilt für alle Modelltypen.|  
 |10|InputAttribute|Eingabeattribut. Gilt für Entscheidungsstrukturen und Naïve Bayes-Modelle.|  
 |11|InputAttributeState|Statistik über die Status eines Eingabeattributs. Gilt für Entscheidungsstrukturen und Naïve Bayes-Modelle.|  
 |13|Sequenz|Oberster Knoten für die Markov-Modell-Komponente eines Sequenzclusters. Gilt für alle Sequenzclustermodelle.|  
-|14|Transition|Markov-Übergangsmatrix. Gilt für alle Sequenzclustermodelle.|  
+|14|Umstellung|Markov-Übergangsmatrix. Gilt für alle Sequenzclustermodelle.|  
 |15|TimeSeries|Nicht-Stammknoten einer Zeitreihenstruktur. Gilt nur für Zeitreihenmodelle.|  
 |16|TsTree|Stammknoten einer Zeitreihenstruktur, die sich auf eine vorhersagbare Zeitreihe bezieht. Gilt für Zeitreihenmodelle, aber nur, wenn das Modell mit dem MIXED-Parameter erstellt wurde.|  
 |17|NNetSubnetwork|Ein Subnetzwerk. Gilt für neuronale Netzwerkmodelle.|  
@@ -117,8 +117,7 @@ ms.locfileid: "66083779"
 > [!NOTE]  
 >  Mit dem Microsoft Clustering-Algorithmus können Benutzer jedem Cluster einen Anzeigenamen zuweisen. Diese Anzeigenamen werden jedoch nicht auf dem Server persistent gespeichert, und wenn Sie das Modell erneut verarbeiten, werden vom Algorithmus neue Clusternamen erstellt.  
   
- 
-  *Beschriftung* und *Beschreibung* für jeden Knoten werden automatisch vom Algorithmus erstellt und dienen als Beschreibungshilfe, um den Inhalt eines Knotens besser verstehen zu können. Der für jedes Feld generierte Text hängt vom Modelltyp ab. In einigen Fällen können der Name, die Beschriftung und die Beschreibung genau dieselbe Zeichenfolge enthalten. In anderen Modellen wiederum kann die Beschreibung jedoch zusätzliche Informationen enthalten. Details zur Implementierung finden Sie im Abschnitt zu den einzelnen Modelltypen.  
+ *Beschriftung* und *Beschreibung* für jeden Knoten werden automatisch vom Algorithmus erstellt und dienen als Beschreibungshilfe, um den Inhalt eines Knotens besser verstehen zu können. Der für jedes Feld generierte Text hängt vom Modelltyp ab. In einigen Fällen können der Name, die Beschriftung und die Beschreibung genau dieselbe Zeichenfolge enthalten. In anderen Modellen wiederum kann die Beschreibung jedoch zusätzliche Informationen enthalten. Details zur Implementierung finden Sie im Abschnitt zu den einzelnen Modelltypen.  
   
 > [!NOTE]  
 >  Der Analysis Services-Server unterstützt die Umbenennung von Knoten nur dann, wenn Sie die Knoten mit einem benutzerdefinierten Plug-In-Algorithmus erstellen, der die Möglichkeit zur Umbenennung implementiert. Um das Umbenennung zu aktivieren, müssen Sie die Methoden überschreiben, wenn Sie den Plug-In-Algorithmus erstellen.  
@@ -132,7 +131,7 @@ ms.locfileid: "66083779"
   
 -   Sie können Funktionen innerhalb einer Data Mining-Erweiterung (DMX)-Abfrage verwenden, um unter- oder übergeordnete Knoten eines bestimmten Knotens zu finden. Weitere Informationen zur Verwendung von Funktionen in Abfragen finden Sie unter [Data Mining-Abfragen](data-mining-queries.md).  
   
- *Kardinalität* bezieht sich auf die Anzahl der Elemente in einer Menge. Im Kontext eines verarbeiteten Miningmodells sagt die Kardinalität aus, wie viele direkt untergeordnete Elemente ein bestimmter Knoten hat. Wenn z. B. ein Entscheidungsstrukturmodell über einen Knoten für [Jahreseinkommen] und dieser Knoten wiederum über zwei untergeordnete Knoten verfügt, einen für die Bedingung [Jahreseinkommen] = Hoch und einen für die Bedingung [Jahreseinkommen] = Niedrig, dann wäre der Wert von CHILDREN_CARDINALITY für den Knoten [Jahreseinkommen] 2.  
+ *Kardinalität* verweist auf die Anzahl der Elemente in einem Satz. Im Kontext eines verarbeiteten Miningmodells sagt die Kardinalität aus, wie viele direkt untergeordnete Elemente ein bestimmter Knoten hat. Wenn z. B. ein Entscheidungsstrukturmodell über einen Knoten für [Jahreseinkommen] und dieser Knoten wiederum über zwei untergeordnete Knoten verfügt, einen für die Bedingung [Jahreseinkommen] = Hoch und einen für die Bedingung [Jahreseinkommen] = Niedrig, dann wäre der Wert von CHILDREN_CARDINALITY für den Knoten [Jahreseinkommen] 2.  
   
 > [!NOTE]  
 >  In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]werden nur die unmittelbar untergeordneten Knoten beim Berechnen der Kardinalität eines Knoten gezählt. Wenn Sie jedoch einen benutzerdefinierten Plug-In-Algorithmus erstellen, können Sie CHILDREN_CARDINALITY überladen, um die Kardinalität anders zu zählen. Die ist beispielsweise dann sinnvoll, wenn Sie die Gesamtzahl der untergeordneten Knoten bestimmten möchten und nicht nur die direkt untergeordneten Knoten.  
@@ -164,7 +163,7 @@ ms.locfileid: "66083779"
   
  In einem Modell, das z. B. dazu dient, Kunden ausfindig zu machen, die ein bestimmtes Produkt mindestens einmal gekauft haben, kann die ATTRIBUTE_NAME-Spalte das Attribut-Wert-Paar enthalten, das das gewünschte Element definiert, z. B. `Model = 'Water bottle'`. Die ATTRIBUTE_VALUE-Spalte würde nur das Schlüsselwort `Existing` bzw. `Missing` enthalten.  
   
- SUPPORT  
+ Alias  
  Anzahl der Fälle, die über dieses Attribut-Wert-Paar verfügen oder dieses Itemset bzw. diese Regel enthalten.  
   
  In der Regel gibt der Unterstützungswert eines Knotens Aufschluss darüber, wie viele Fälle aus dem Trainingssatz im aktuellen Knoten enthalten sind. In den meisten Modelltypen gibt der Unterstützungswert eine genaue Anzahl von Fällen an. Unterstützungswerte sind insofern nützlich, als dass sie Einsicht in die Verteilung der Daten innerhalb Ihrer Trainingsfälle erlauben, ohne dass dazu die Trainingsdaten abgefragt werden müssen. Der Analysis Services-Server verwendet diese gespeicherten Daten außerdem für einen Vergleich der gespeicherten Wahrscheinlichkeit mit der vorherigen Wahrscheinlichkeit, um so festzustellen, ob die Inferenz stark oder schwach ist.  
@@ -217,7 +216,7 @@ ms.locfileid: "66083779"
 |1|Missing|Gibt an, dass die Falldaten keinen Wert für dieses Attribut enthalten haben. Der `Missing`-Zustand wird getrennt von Attributen berechnet, die über Werte verfügen.|  
 |2|Vorhanden|Gibt an, dass die Falldaten einen Wert für dieses Attribut enthalten.|  
 |3|Fortlaufend|Gibt an, dass es sich bei dem Wert des Attributs um einen fortlaufenden numerischen Wert handelt, der deshalb als Mittelwert dargestellt werden kann (gemeinsam mit der Varianz und der Standardabweichung).|  
-|4|Discrete|Gibt einen Wert an, entweder numerisch oder Text, der als diskret behandelt wird.<br /><br /> **Hinweis** Diskrete Werte können auch fehlen. Sie werden jedoch anders behandelt, wenn Berechnungen durchgeführt werden. Informationen finden Sie unter [Fehlende Werte &#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md).|  
+|4|Discrete|Gibt einen Wert an, entweder numerisch oder Text, der als diskret behandelt wird.<br /><br /> **Hinweis** Diskrete Werte können auch fehlen; bei Berechnungen wird jedoch anders mit ihnen umgegangen. Informationen finden Sie unter [Fehlende Werte &#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md).|  
 |5|Discretized|Gibt an, dass das Attribut numerische Werte enthält, die diskretisiert wurden. Der Wert ist eine formatierte Zeichenfolge, die die Diskretisierungsbuckets beschreibt.|  
 |6|Vorhanden|Gibt an, dass das Attribut über fortlaufende numerische Werte verfügt und dass Werte in den Daten vorliegen, im Gegensatz zu Werten, die fehlen oder abgeleitet sind.|  
 |7|Koeffizient|Gibt einen numerischen Wert an, der einen Koeffizienten darstellt.<br /><br /> Ein Koeffizient ist ein Wert, der beim Berechnen des Werts der abhängigen Variable verwendet wird. Beispielsweise wird in einem Modell, das Regressionsformeln erstellt, um das Einkommen auf der Grundlage des Alters vorauszuberechnen, der Koeffizient in der Formel verwendet, die Alter und Einkommen miteinander in Beziehung setzt.|  
@@ -243,18 +242,18 @@ ms.locfileid: "66083779"
   
  In den Knoten, die Wahrscheinlichkeitsergebnisse bereitstellen, wird zwischen Knotenwahrscheinlichkeit und marginaler Wahrscheinlichkeit unterschieden.  
   
--   **Marginale Wahrscheinlichkeit** ist die Wahrscheinlichkeit, dass der Knoten von seinem übergeordneten Element erreicht wird.  
+-   **Marginale Wahrscheinlichkeit** ist die Wahrscheinlichkeit für das Erreichen des Knotens vom übergeordneten Knoten aus.  
   
--   **Knoten Wahrscheinlichkeit** ist die Wahrscheinlichkeit für das Erreichen des Knotens vom Stamm.  
+-   **Knotenwahrscheinlichkeit** ist die Wahrscheinlichkeit für das Erreichen des Knotens vom Stamm aus.  
   
--   Die **Knoten Wahrscheinlichkeit** ist immer kleiner oder gleich der **marginalen Wahrscheinlichkeit**.  
+-   Die**Knotenwahrscheinlichkeit** ist immer kleiner oder gleich der **marginalen Wahrscheinlichkeit**.  
   
  Wenn z. B. die Gesamtheit aller Kunden in einer Entscheidungsstruktur gleichmäßig nach Geschlecht unterteilt ist (ohne dass irgendwelche Werte fehlen), sollte die Wahrscheinlichkeit der untergeordneten Knoten .5 betragen. Nehmen Sie jedoch an, dass jeder Knoten für das Geschlecht gleichmäßig nach Einkommensstufen (hoch, Mittel und niedrig) aufgeteilt ist. sollte in diesem Fall das MARGINAL_PROBABILITY-Ergebnis für jeden untergeordneten Knoten immer .33 betragen. Der NODE_PROBABILTY-Wert hingegen ist das Produkt aller Wahrscheinlichkeiten, die zu diesem Knoten führen, und ist deswegen immer kleiner als der MARGINAL_PROBABILITY-Wert.  
   
 |Ebene von Knoten/Attribut und Wert|Marginale Wahrscheinlichkeit|Knotenwahrscheinlichkeit|  
 |----------------------------------------|--------------------------|----------------------|  
 |Modellstamm<br /><br /> Alle Zielkunden|1|1|  
-|Zielkunden unterteilt nach Geschlecht|0,5|0,5|  
+|Zielkunden unterteilt nach Geschlecht|.5|.5|  
 |Zielkunden unterteilt nach Geschlecht und in der Folge wiederum dreifach unterteilt nach Einkommen|.33|0,5 x 0,33 = 0,165|  
   
 ### <a name="node-rule-and-marginal-rule"></a>Knotenregel und marginale Regel  
@@ -262,33 +261,33 @@ ms.locfileid: "66083779"
   
  Zwei Arten von XML-Regeln werden bereitgestellt, die den zwei Arten von Wahrscheinlichkeitswerten sehr ähnlich sind. Das XML-Fragment in MARGINAL_RULE definiert das Attribut und den Wert für den aktuellen Knoten, das XML-Fragment in NODE_RULE beschreibt den Pfad vom Modellstamm zum aktuellen Knoten.  
   
-##  <a name="bkmk_AlgoType"></a>Mining Modell Inhalt nach Algorithmustyp  
+##  <a name="mining-model-content-by-algorithm-type"></a><a name="bkmk_AlgoType"></a> Miningmodellinhalt nach Algorithmustyp  
  Jeder Algorithmus speichert andere Arten von Informationen als Teil des Inhaltsschemas. Zum Beispiel generiert der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Clustering-Algorithmus viele untergeordnete Knoten, von denen jeder ein mögliches Cluster darstellt. Jeder Clusterknoten enthält Regeln, die Eigenschaften beschreiben, die den Elementen im Cluster gemeinsam sind. Im Gegensatz dazu enthält der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Linear Regression-Algorithmus überhaupt keine untergeordneten Knoten, sondern der übergeordnete Knoten des Modells enthält die Gleichung, die die lineare Beziehung beschreibt, die von der Analyse aufgedeckt wurde.  
   
  In der folgenden Tabelle finden Sie Links zu weiterführenden Informationen zum jeweiligen Algorithmustyp.  
   
--   **Themen zu Modell Inhalten:** Erläutern der Bedeutung der einzelnen Knoten Typen für jeden Algorithmustyp und Bereitstellen von Anleitungen, welche Knoten für einen bestimmten Modelltyp von Interesse sind.  
+-   **Themen zu Modellinhalten:** Hier wird die Bedeutung der verschiedenen Knotentypen für die verschiedenen Algorithmen erklärt, und Sie erhalten Hilfestellung bei der Frage, welche Knoten für einen bestimmten Modelltyp am besten geeignet sind.  
   
--   **Themen zum Abfragen:** Stellen Sie Beispiele für Abfragen für einen bestimmten Modelltyp und Anleitungen für die Interpretation der Ergebnisse bereit.  
+-   **Themen zu Abfragen:** Enthalten Beispiele von Abfragen an einen bestimmten Modelltyp und Hilfestellungen zur Auswertung der Ergebnisse.  
   
 |Algorithmus oder Modelltyp|Modellinhalt|Abfragen von Mining-Modellen|  
 |-----------------------------|-------------------|----------------------------|  
-|Modelle für Zuordnungsregeln|[Mining Modell Inhalt von Zuordnungs Modellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)|[Beispiele für Zuordnungsmodellabfragen](association-model-query-examples.md)|  
-|Clustering-Modelle|[Mining Modell Inhalt von Entscheidungsstruktur Modellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Beispiele für Clustermodellabfragen](clustering-model-query-examples.md)|  
-|Entscheidungsstrukturmodell|[Mining Modell Inhalt von Entscheidungsstruktur Modellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Beispiele für Entscheidungsstruktur-Modellabfragen](decision-trees-model-query-examples.md)|  
-|Lineare Regressionsmodelle|[Mining Modell Inhalt von linearen Regressionsmodellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[Beispiele für lineare Regressionsmodellabfrage](linear-regression-model-query-examples.md)|  
-|Logistische Regressionsmodelle|[Mining Modell Inhalt von logistischen Regressionsmodellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-logistic-regression-models.md)|[Beispiele für lineare Regressionsmodellabfrage](linear-regression-model-query-examples.md)|  
-|Naïve Bayes-Modelle|[Mining Modell Inhalt von Naive Bayes-Modellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Beispiele für Naive Bayes-Modellabfrage](naive-bayes-model-query-examples.md)|  
-|Neuronale Netzwerkmodelle|[Mining Modell Inhalt von neuronalen Netzwerkmodellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Neuronale Beispiele für Netzwerkmodellabfragen](neural-network-model-query-examples.md)|  
-|Sequenzclustering|[Mining Modell Inhalt von Sequence Clustering-Modellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-sequence-clustering-models.md)|[Sequenzclusteringmodellabfragebeispiele](sequence-clustering-model-query-examples.md)|  
-|Zeitreihenmodelle|[Mining Modell Inhalt von Zeitreihen Modellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Abfragebeispiel Zeitreihenmodell](time-series-model-query-examples.md)|  
+|Modelle für Zuordnungsregeln|[Miningmodellinhalt von Zuordnungsmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)|[Beispiele für Zuordnungsmodellabfragen](association-model-query-examples.md)|  
+|Clustermodelle|[Miningmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Beispiele für Clustermodellabfragen](clustering-model-query-examples.md)|  
+|Entscheidungsstrukturmodell|[Miningmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)|[Beispiele für Entscheidungsstruktur-Modellabfragen](decision-trees-model-query-examples.md)|  
+|Lineare Regressionsmodelle|[Miningmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)|[Beispiele für lineare Regressionsmodellabfrage](linear-regression-model-query-examples.md)|  
+|Logistische Regressionsmodelle|[Miningmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-logistic-regression-models.md)|[Beispiele für lineare Regressionsmodellabfrage](linear-regression-model-query-examples.md)|  
+|Naïve Bayes-Modelle|[Miningmodellinhalt von Naive Bayes-Modellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)|[Beispiele für Naive Bayes-Modellabfrage](naive-bayes-model-query-examples.md)|  
+|Neuronale Netzwerkmodelle|[Miningmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)|[Neuronale Beispiele für Netzwerkmodellabfragen](neural-network-model-query-examples.md)|  
+|Sequenzclustering|[Miningmodellinhalt von Sequence Clustering-Modellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-sequence-clustering-models.md)|[Sequenzclusteringmodellabfragebeispiele](sequence-clustering-model-query-examples.md)|  
+|Zeitreihenmodelle|[Miningmodellinhalt von Zeitreihenmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|[Abfragebeispiel Zeitreihenmodell](time-series-model-query-examples.md)|  
   
-##  <a name="bkmk_Viewing"></a>Tools zum Anzeigen von Mining Modell Inhalten  
+##  <a name="tools-for-viewing-mining-model-content"></a><a name="bkmk_Viewing"></a>Tools zum Anzeigen von Mining Modell Inhalten  
  Wenn Sie ein Modell in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]durchsuchen möchten, können Sie die Informationen im **Microsoft Generic Content Tree Viewer**anzeigen. Dieser ist sowohl in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] als auch in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verfügbar.  
   
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Viewer zeigt die Spalten, Regeln, Eigenschaften, Attribute, Knoten sowie andere Inhalte des Modells an, indem er auf die Informationen im Inhalts-Schemarowset des Miningmodells zurückgreift. Das Schemarowset für den Inhalt ist ein allgemeines Framework zum Darstellen detaillierter Informationen über den Inhalt eines Data Mining-Modells. Sie können Modellinhalt in jedem Client anzeigen, der hierarchische Rowsets unterstützt. Der Viewer in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] stellt diese Informationen in einem HTML-Tabellen-Viewer dar, der alle Modelle in einem einheitlichen Format anzeigt, sodass Sie die Struktur der Modelle, die Sie erstellen, leichter nachvollziehen können. Weitere Informationen finden Sie unter [Durchsuchen eines Modells mit dem Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md).  
   
-##  <a name="bkmk_Querying"></a>Tools zum Abfragen von Mining Modell Inhalten  
+##  <a name="tools-for-querying-mining-model-content"></a><a name="bkmk_Querying"></a>Tools zum Abfragen von Mining Modell Inhalten  
  Um Mining-Modellinhalt abzurufen, müssen Sie eine Abfrage für das Data Mining-Modell erstellen.  
   
  Die einfachste Möglichkeit, eine Inhaltsabfrage zu erstellen, ist, die folgende DMX-Anweisung in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]auszuführen:  
@@ -305,6 +304,6 @@ SELECT * FROM [<mining model name>].CONTENT
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Microsoft Generic Content Tree Viewer &#40;Data Mining-&#41;](../microsoft-generic-content-tree-viewer-data-mining.md)   
- [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+ [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
   

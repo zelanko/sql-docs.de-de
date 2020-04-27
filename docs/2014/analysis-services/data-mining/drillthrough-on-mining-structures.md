@@ -11,17 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 71212f81a2f42fbbff28e04b4632bc2120362089
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084581"
 ---
 # <a name="drillthrough-on-mining-structures"></a>Drillthrough in Miningstrukturen
-  *Drillthrough* bezeichnet die Möglichkeit, ein Mining Modell oder eine Mining Struktur abzufragen und ausführliche Daten zu erhalten, die nicht im Modell verfügbar gemacht werden.  
+  *Drillthrough* beschreibt die Fähigkeit, entweder ein Miningmodell oder eine Miningstruktur abzufragen und ausführliche Daten zu erhalten, die im Modell nicht verfügbar sind.  
   
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] bietet zwei verschiedene Optionen für Drillthroughs in Falldaten. Sie können einen Drillthrough zu den Daten ausführen, die für die Erstellung des Miningmodells verwendet wurden, oder Sie führen einen Drillthrough zu den Quelldaten in der Miningstruktur aus.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] bietet zwei verschiedene Optionen für Drillthroughs in Falldaten. Sie können einen Drillthrough zu den Daten ausführen, die für die Erstellung des Miningmodells verwendet wurden, oder Sie führen einen Drillthrough zu den Quelldaten in der Miningstruktur aus.  
   
 ## <a name="drillthrough-to-model-cases-vs-drillthrough-to-structure"></a>Drillthrough zu Modellfällen im Vergleich zu Drillthrough zu Strukturen  
  Ein Drillthrough zu **Modellfällen** ist hilfreich für die Suche nach weiteren Details zu Regeln, Mustern oder Clustern in einem Modell.  
@@ -56,7 +55,7 @@ ms.locfileid: "66084581"
 |-|-|  
 |Verwenden von Drillthrough zu Struktur von den Miningmodell-Viewern|[Verwenden von Drillthrough mit den Modell-Viewern](use-drillthrough-from-the-model-viewers.md)|  
 |In Beispielen von Drillthroughabfragen finden Sie Informationen zu bestimmten Modelltypen.|[Data Mining-Abfragen](data-mining-queries.md)|  
-|Informationen über Berechtigungen, die für bestimmte Miningstrukturen und Miningmodelle gelten.|[Erteilen von Berechtigungen für Data Mining Strukturen und Modelle &#40;Analysis Services&#41;](../multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
+|Informationen über Berechtigungen, die für bestimmte Miningstrukturen und Miningmodelle gelten.|[Erteilen von Berechtigungen für Data Mining-Strukturen und -Modelle &#40;Analysis Services&#41;](../multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Miningmodell-Drillthrough](drillthrough-on-mining-models.md)  

@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d60e8cae564886109409eed2595a7ce1247b61a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089840"
 ---
 # <a name="server-properties-f1-help"></a>Servereigenschaften (F1-Hilfe)
@@ -34,7 +34,7 @@ ms.locfileid: "66089840"
   
  [Server Eigenschaften &#40;Seite "Prozessoren"&#41;](configure-windows/server-properties-processors-page.md)  
   
- [Server Eigenschaften &#40;Seite "Sicherheit"&#41;](configure-windows/server-properties-security-page.md)  
+ [Servereigenschaften &#40;Seite „Sicherheit“&#41;](configure-windows/server-properties-security-page.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](configure-windows/server-configuration-options-sql-server.md)  

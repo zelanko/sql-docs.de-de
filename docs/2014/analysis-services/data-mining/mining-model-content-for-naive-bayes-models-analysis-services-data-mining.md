@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9b899ef4daba73237490d06df58c3447f6b2356d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083649"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Miningmodellinhalt von Naive Bayes-Modellen (Analysis Services - Data Mining)
@@ -49,15 +49,15 @@ ms.locfileid: "66083649"
  ATTRIBUTE_NAME  
  Die Namen der Attribute, die diesem Knoten entsprechen.  
   
- **Modell** Stamm Der Name des vorhersagbaren Attributs.  
+ **Modellstamm** Der Name des vorhersagbaren Attributs.  
   
- **Rand Statistik** Nicht zutreffend  
+ **Randstatistik** Nicht verfügbar  
   
- **Vorhersagbares Attribut** Der Name des vorhersagbaren Attributs.  
+ **Vorhersagbares Attribut** Name des vorhersagbaren Attributs.  
   
- **Eingabe Attribut** Der Name des Eingabe Attributs.  
+ **Eingabeattribut** Name des Eingabeattributs.  
   
- **Eingabe Attribut Status** Nur der Name des Eingabe Attributs. Um den Status abzufragen, verwenden Sie MSOLAP_NODE_SHORT_CAPTION.  
+ **Eingabeattributstatus** Nur der Name des Eingabeattributs. Um den Status abzufragen, verwenden Sie MSOLAP_NODE_SHORT_CAPTION.  
   
  NODE_NAME  
  Der Name des Knotens.  
@@ -72,7 +72,7 @@ ms.locfileid: "66083649"
  NODE_TYPE  
  Ein Naive Bayes-Modell gibt die folgenden Knotentypen aus:  
   
-|Knotentyp-ID|BESCHREIBUNG|  
+|Knotentyp-ID|Beschreibung|  
 |------------------|-----------------|  
 |26 (NaiveBayesMarginalStatNode)|Enthält Statistiken, die den ganzen Satz von Trainingsfällen für das Modell beschreiben.|  
 |9 (vorhersagbares Attribut)|Enthält den Namen des vorhersagbaren Attributs.|  
@@ -82,32 +82,32 @@ ms.locfileid: "66083649"
  NODE_CAPTION  
  Die Bezeichnung oder Beschriftung, die dem Knoten zugeordnet ist. Diese Eigenschaft dient hauptsächlich zu Anzeigezwecken.  
   
- **Modell** Stamm leer  
+ **Modellstamm** leer  
   
  **Rand Statistik** leer  
   
- **Vorhersagbares Attribut** Der Name des vorhersagbaren Attributs.  
+ **Vorhersagbares Attribut** Name des vorhersagbaren Attributs.  
   
- **Eingabe Attribut** Der Name des vorhersagbaren Attributs und des aktuellen Eingabe Attributs. Beispiel:  
+ **Eingabeattribut** Der Name des vorhersagbaren Attributs und des aktuellen Eingabeattributs. Beispiel:  
   
  Bike Buyer -> Age  
   
- **Eingabe Attribut Status** Der Name des vorhersagbaren Attributs und des aktuellen Eingabe Attributs sowie der Wert der Eingabe. Beispiel:  
+ **Eingabeattributstatus** Der Name des vorhersagbaren Attributs und des aktuellen Eingabeattributs und der Wert der Eingabe. Beispiel:  
   
  Bike Buyer -> Age = Fehlt  
   
  CHILDREN_CARDINALITY  
  Die Anzahl der untergeordneten Elemente des Knotens.  
   
- **Modell** Stamm Anzahl der vorhersagbaren Attribute im Modell plus 1 für den Knoten für Rand Statistik.  
+ **Modellstamm** Anzahl der vorhersagbaren Attribute im Modell plus 1 für den Knoten für Randstatistik.  
   
- **Rand Statistik** Definitionsgemäß hat keine untergeordneten Elemente.  
+ **Randstatistik** Hat definitionsgemäß keine untergeordneten Elemente.  
   
- **Vorhersagbares Attribut**  Anzahl der Eingabe Attribute, die mit dem aktuellen vorhersagbaren Attribut verknüpft sind.  
+ **Vorhersagbares Attribut**  Anzahl der Eingabeattribute, die dem aktuellen vorhersagbaren Attribut zugewiesen wurden.  
   
- **Eingabe Attribut** Anzahl der diskreten oder diskretisierten Werte für das aktuelle Eingabe Attribut.  
+ **Eingabeattribut** Anzahl der diskreten oder diskretisierten Werte für das aktuellen Eingabeattribut.  
   
- **Eingabe Attribut Status** Immer 0.  
+ **Eingabeattributstatus** Immer 0.  
   
  PARENT_UNIQUE_NAME  
  Der eindeutige Name des übergeordneten Knotens. Weitere Informationen über die Zuordnung von über- und untergeordneten Knoten finden Sie unter [Verwenden von Knotennamen und IDs](#bkmk_nodenames).  
@@ -124,15 +124,15 @@ ms.locfileid: "66083649"
  NODE_PROBABILITY  
  Die diesem Knoten zugeordnete Wahrscheinlichkeit.  
   
- **Modell** Stamm Immer 0.  
+ **Modellstamm** Immer 0.  
   
- **Rand Statistik** Immer 0.  
+ **Randstatistik** Immer 0.  
   
- **Vorhersagbares Attribut**  Immer 1.  
+ **Predictable-Attribut**  Immer 1.  
   
- **Eingabe Attribut** Immer 1.  
+ **Eingabeattribut** Immer 1.  
   
- **Eingabe Attribut Status** Eine Dezimalzahl, die die Wahrscheinlichkeit des aktuellen Werts darstellt. Die Werte für alle Eingabeattributstatus unter dem übergeordneten Eingabeattributknoten ergeben die Summe 1.  
+ **Eingabeattributstatus** Eine Dezimalzahl, die die Wahrscheinlichkeit des aktuellen Werts darstellt. Die Werte für alle Eingabeattributstatus unter dem übergeordneten Eingabeattributknoten ergeben die Summe 1.  
   
  MARGINAL_PROBABILITY  
  Entspricht der Knotenwahrscheinlichkeit.  
@@ -143,15 +143,15 @@ ms.locfileid: "66083649"
  NODE_SUPPORT  
  Die Anzahl der Fälle, die diesen Knoten unterstützen.  
   
- **Modell** Stamm Anzahl aller Fälle in den Trainingsdaten.  
+ **Modellstamm** Anzahl aller Fälle in den Trainingsdaten.  
   
- **Rand Statistik** Immer 0.  
+ **Randstatistik** Immer 0.  
   
  **Vorhersagbares Attribut** Anzahl aller Fälle in den Trainingsdaten.  
   
- **Eingabe Attribut** Anzahl aller Fälle in den Trainingsdaten.  
+ **Eingabeattribut** Anzahl aller Fälle in den Trainingsdaten.  
   
- **Eingabe Attribut Status** Anzahl der Fälle in den Trainingsdaten, die nur diesen bestimmten Wert enthalten.  
+ **Eingabeattributstatus** Anzahl aller Fälle in den Trainingsdaten, die nur diesen bestimmten Wert enthalten.  
   
  MSOLAP_MODEL_COLUMN  
  Eine zu Anzeigezwecken verwendete Beschriftung. Normalerweise identisch mit ATTRIBUTE_NAME.  
@@ -159,30 +159,30 @@ ms.locfileid: "66083649"
  MSOLAP_NODE_SCORE  
  Stellt die Wichtigkeit des Attributs oder Werts innerhalb des Modells dar.  
   
- **Modell** Stamm Immer 0.  
+ **Modellstamm** Immer 0.  
   
- **Rand Statistik** Immer 0.  
+ **Randstatistik** Immer 0.  
   
  **Vorhersagbares Attribut**  Immer 0.  
   
- **Eingabe Attribut** Interessantheits Grad für das aktuelle Eingabe Attribut in Relation zum aktuellen vorhersagbaren Attribut.  
+ **Eingabeattribut** Interessantheitsgrad für das aktuelle Eingabeattribut relativ zum aktuellen vorhersagbaren Attribut.  
   
- **Eingabe Attribut Status** Immer 0.  
+ **Eingabeattributstatus** Immer 0.  
   
  MSOLAP_NODE_SHORT_CAPTION  
  Eine Textzeichenfolge, die den Namen oder den Wert einer Spalte darstellt.  
   
  **Modell** Stamm Blitz  
   
- **Rand Statistik** Blitz  
+ **Randstatistik** Leer  
   
  **Vorhersagbares Attribut**  Der Name des vorhersagbaren Attributs.  
   
- **Eingabe Attribut** Der Name des Eingabe Attributs.  
+ **Eingabeattribut** Name des Eingabeattributs.  
   
- **Eingabe Attribut Status** Der Wert oder diskretisierte Wert des Eingabe Attributs.  
+ **Eingabeattributstatus** Der Wert oder diskretisierte Wert des Eingabeattributs.  
   
-##  <a name="bkmk_nodenames"></a>Verwenden von Knoten Namen und IDs  
+##  <a name="using-node-names-and-ids"></a><a name="bkmk_nodenames"></a> Verwenden von Knotennamen und IDs  
  Die Benennung der Knoten in einem Naive Bayes-Modell bietet zusätzliche Informationen über den Knotentyp. So werden die Beziehungen zwischen den Informationen im Modell deutlicher. In der folgenden Tabelle wird die Konvention für die IDs dargestellt, die anderen Knotentypen zugewiesen werden.  
   
 |Knotentyp|Konvention für Knoten-ID|  
@@ -233,7 +233,7 @@ AND [PARENT_UNIQUE_NAME] = '20000000000000009'
 |3000000000000000900000001|Bike Buyer -> Marital Status = S|0.457504004|  
 |3000000000000000900000002|Bike Buyer -> Marital Status = M|0.542495996|  
   
-##  <a name="bkmk_nodedist"></a>NODE_DISTRIBUTION Tabelle  
+##  <a name="node_distribution-table"></a><a name="bkmk_nodedist"></a>NODE_DISTRIBUTION Tabelle  
  Die verschachtelte Tabellenspalte NODE_DISTRIBUTION enthält in der Regel Statistiken über die Verteilung der Werte im Knoten. In einem Naive Bayes-Modell wird diese Tabelle nur für die folgenden Knoten aufgefüllt:  
   
 |Knotentyp|Inhalt der geschachtelten Tabelle|  
@@ -265,10 +265,10 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  Bei diesen Ergebnissen gibt der Wert der SUPPORT-Spalte Aufschluss über die Anzahl der Kunden mit dem festgelegten Familienstand, die ein Fahrrad gekauft haben. Die Spalte PROBABILITY enthält die ausschließlich für diesen Knoten berechnete Wahrscheinlichkeit eines jeden Attributwerts. Allgemeine Definitionen von Begriffen, die in der NODE_DISTRIBUTION-Tabelle verwendet werden, finden Sie unter [Miningmodellinhalt &#40;Analysis Services – Data Mining&#41;](mining-model-content-analysis-services-data-mining.md).  
   
-###  <a name="bkmk_margstats"></a>Informationen im Knoten für Rand Statistik  
+###  <a name="information-in-the-marginal-statistics-node"></a><a name="bkmk_margstats"></a> Informationen im Knoten für Randstatistik  
  In einem Naive Bayes-Modell enthält die geschachtelte Tabelle für den Knoten für die Randstatistik die Verteilung der Werte für den gesamten Satz an Trainingsdaten. Beispielsweise enthält die folgende Tabelle eine Teilliste der Statistiken in der geschachtelten NODE_DISTRIBUTION-Tabelle für das Modell `TM_NaiveBayes`:  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|Varianz|VALUETYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Alias|PROBABILITY|Varianz|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
 |Bike Buyer|Missing|0|0|0|1|  
 |Bike Buyer|0|8869|0.507263784|0|4|  

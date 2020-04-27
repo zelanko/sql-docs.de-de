@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d156a8f015a45ca257bf4f988cf69d229eafe5f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084229"
 ---
 # <a name="logistic-regression-model-query-examples"></a>Logistische Regressionsmodell-Abfragebeispiele
@@ -29,15 +29,15 @@ ms.locfileid: "66084229"
   
  [Abrufen von Modellparametern mithilfe des Data Mining-Schemarowsets](#bkmk_Query1)  
   
- [Auffinden weiterer Details zum Modell mithilfe von DMX](#bkmk_Query2)  
+ [Ermittlung weiterer Details des Modells mit DMX](#bkmk_Query2)  
   
  **Vorhersageabfragen**  
   
- [Treffen von Vorhersagen für einen kontinuierlichen Wert](#bkmk_Query3)  
+ [Erstellen von Vorhersagen für einen kontinuierlichen Wert](#bkmk_Query3)  
   
- [Treffen von Vorhersagen für einen diskreten Wert](#bkmk_Query4)  
+ [Erstellen von Vorhersagen für einen diskreten Wert](#bkmk_Query4)  
   
-##  <a name="bkmk_top"></a>Informationen zum logistischen Regressionsmodell erhalten  
+##  <a name="getting-information-about-the-logistic-regression-model"></a><a name="bkmk_top"></a>Informationen zum logistischen Regressionsmodell erhalten  
  Logistische Regressionsmodelle werden mithilfe des Microsoft Neural Network-Algorithmus mit einer speziellen Menge von Parametern erstellt. Daher verfügt das logistische Regressionsmodell über einige der Informationen, die auch das neuronale Netzwerk enthält, ist jedoch weniger komplex. Weitere Informationen zur Struktur des Inhaltsmodells und dazu, in welchen Knotentypen welche Arten von Informationen gespeichert sind, finden Sie unter [Miningmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-logistic-regression-models.md).  
   
  Für die Abfrageszenarios können Sie ein logistisches Regressionsmodell erstellen, wie im folgenden Abschnitt des Data Mining-Tutorials für Fortgeschrittene beschrieben: [Lektion 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen &#40;Data Mining-Tutorial für Fortgeschrittene&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md).  
@@ -64,7 +64,7 @@ Gender,
 USING Microsoft_Logistic_Regression  
 ```  
   
-###  <a name="bkmk_Query1"></a>Beispiel Abfrage 1: Abrufen von Modellparametern mithilfe des Data Mining-Schemarowsets  
+###  <a name="sample-query-1-retrieving-model-parameters-by-using-the-data-mining-schema-rowset"></a><a name="bkmk_Query1"></a>Beispiel Abfrage 1: Abrufen von Modellparametern mithilfe des Data Mining-Schemarowsets  
  Durch Abfrage des Data Mining-Schemarowsets können Sie Metadaten zum Modell ermitteln, wie das Datum der Modellerstellung, das Datum der letzten Modellverarbeitung, den Namen der Miningstruktur, auf der das Modell basiert, und den Namen der als vorhersagbares Attribut verwendeten Spalte. Mit dem folgenden Beispiel werden die Parameter zurückgegeben, die beim Erstellen des Modells verwendet wurden, sowie Name und Typ des Modells und das Datum, an dem es erstellt wurde.  
   
 ```  
@@ -79,7 +79,7 @@ WHERE MODEL_NAME = 'Call Center_LR'
 |-----------------|-------------------|-------------------|------------------------|  
 |Call Center_LR|Microsoft_Logistic_Regression|04/07/2009 20:38:33|HOLDOUT_PERCENTAGE=30, HOLDOUT_SEED=1, MAXIMUM_INPUT_ATTRIBUTES=255, MAXIMUM_OUTPUT_ATTRIBUTES=255, MAXIMUM_STATES=100, SAMPLE_SIZE=10000|  
   
-###  <a name="bkmk_Query2"></a>Beispiel Abfrage 2: Suchen zusätzlicher Details zum Modell mithilfe von DMX  
+###  <a name="sample-query-2-finding-additional-detail-about-the-model-by-using-dmx"></a><a name="bkmk_Query2"></a>Beispiel Abfrage 2: Suchen zusätzlicher Details zum Modell mithilfe von DMX  
  Die folgende Abfrage gibt einige grundlegende Informationen über das logistische Regressionsmodell zurück. Ein logistisches Regressionsmodell ähnelt in vielerlei Hinsicht einem neuronalen Netzwerkmodell. Dazu gehört das Vorhandensein eines Knotens für Randstatistik (NODE_TYPE = 24), der die als Eingaben verwendeten Werte beschreibt. in dieser Beispielabfrage wird das Targeted Mailing-Modell verwendet, und die Werte aller Eingaben werden aus der geschachtelten Tabelle NODE_DISTRIBUTION abgerufen.  
   
 ```  
@@ -91,8 +91,8 @@ FROM [TM_Logistic Regression].CONTENT
   
 |T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VARIANCE|t.VALUETYPE|  
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
-|Alter|Missing|0|0|0|1|  
-|Alter|45.43491192|17484|1|126.9544114|3|  
+|Age|Missing|0|0|0|1|  
+|Age|45.43491192|17484|1|126.9544114|3|  
 |Bike Buyer|Missing|0|0|0|1|  
 |Bike Buyer|0|8869|0.507263784|0|4|  
 |Bike Buyer|1|8615|0.492736216|0|4|  
@@ -107,7 +107,7 @@ FROM [TM_Logistic Regression].CONTENT
 ## <a name="prediction-queries-on-a-logistic-regression-model"></a>Vorhersageabfragen eines logistischen Regressionsmodells  
  Sie können die Funktion [Predict &#40;DMX&#41;](/sql/dmx/predict-dmx) mit jeder Art von Miningmodell verwenden, um neue Daten für das Modell zur Verfügung zu stellen und Vorhersagen anhand der neuen Werte zu treffen. Außerdem können Sie mithilfe von Funktionen weitere Informationen über die Vorhersage zurückgeben, z. B. die Wahrscheinlichkeit, dass eine Vorhersage zutrifft. Dieser Abschnitt enthält einige Beispiele für Vorhersageabfragen für ein logistisches Regressionsmodell.  
   
-###  <a name="bkmk_Query3"></a>Beispiel Abfrage 3: Erstellen von Vorhersagen für einen kontinuierlichen Wert  
+###  <a name="sample-query-3-making-predictions-for-a-continuous-value"></a><a name="bkmk_Query3"></a>Beispiel Abfrage 3: Erstellen von Vorhersagen für einen kontinuierlichen Wert  
  Da die logistische Regression die Verwendung kontinuierlicher Attribute sowohl für die Eingabe als auch die Vorhersage unterstützt, können ganz einfach Modelle erstellt werden, die verschiedene Faktoren in Ihren Daten korrelieren. Sie können Vorhersageabfragen verwenden, um das Beziehungsgefüge dieser Faktoren zu erforschen.  
   
  Das folgende Abfragebeispiel basiert auf dem Callcentermodell aus dem Lernprogramm für Fortgeschrittene. Darin wird eine SINGLETON-Abfrage erstellt, die die Dienstqualität für die Schicht "Friday AM" vorhersagt. Die Funktion [PredictHistogram (DMX)](/sql/dmx/predicthistogram-dmx) gibt eine geschachtelte Tabelle mit statistischen Daten zurück, die für das Verständnis der Gültigkeit des vorhergesagten Werts relevant sind.  
@@ -136,7 +136,7 @@ NATURAL PREDICTION JOIN
   
  Weitere Informationen zu Wahrscheinlichkeit, Unterstützung und Standardabweichung der Werte in der geschachtelten NODE_DISTRIBUTION-Tabelle finden Sie unter [Miningmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-logistic-regression-models.md).  
   
-###  <a name="bkmk_Query4"></a>Beispiel Abfrage 4: Erstellen von Vorhersagen für einen diskreten Wert  
+###  <a name="sample-query-4-making-predictions-for-a-discrete-value"></a><a name="bkmk_Query4"></a>Beispiel Abfrage 4: Erstellen von Vorhersagen für einen diskreten Wert  
  Die logistische Regression wird normalerweise in Szenarien verwendet, in denen die Faktoren analysiert werden sollen, die zu einem binären Ergebnis beitragen. Obwohl das im Tutorial verwendete Modell den kontinuierlichen Wert **ServiceGrade**in einem realistischen Szenario vorhersagt, möchten Sie möglicherweise das Modell für die Vorhersage einrichten, ob die Dienstqualität einem bestimmten diskretisierten Zielwert entsprochen hat. Alternativ könnten Sie die Vorhersagen mit einem kontinuierlichen Wert ausgeben, später jedoch die vorhergesagten Ergebnisse in **Gut**, **Durchschnittlich**oder **Schlecht**gruppieren.  
   
  Das folgende Beispiel veranschaulicht, wie die Methode zum Gruppieren des vorhersagbaren Attributs geändert wird. Erstellen Sie hierzu eine Kopie der Miningstruktur, und ändern Sie dann die Diskretisierungsmethode der Zielspalte, damit die Werte gruppiert werden anstatt kontinuierlich sind.  
@@ -194,13 +194,13 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |Vorhersagefunktion|Verwendung|  
-|[Isnachfolger &#40;DMX-&#41;](/sql/dmx/isdescendant-dmx)|Bestimmt, ob ein Knoten ein untergeordnetes Element eines anderen Knotens im Modell ist.|  
-|[Der prätadjustedwahrscheinlichkeits-&#40;DMX-&#41;](/sql/dmx/predictadjustedprobability-dmx)|Gibt die angepasste Wahrscheinlichkeit für einen bestimmten Status zurück.|  
-|[Prädistogram &#40;DMX-&#41;](/sql/dmx/predicthistogram-dmx)|Gibt einen vorhergesagten Wert oder eine Gruppe von Werten für eine angegebene Spalte zurück.|  
-|[Prätwahrscheinlichkeit &#40;DMX-&#41;](/sql/dmx/predictprobability-dmx)|Gibt die Wahrscheinlichkeit für einen bestimmten Status zurück.|  
-|[Prätstdev &#40;DMX-&#41;](/sql/dmx/predictstdev-dmx)|Gibt die Standardabweichung für den prognostizierten Wert zurück.|  
-|[Prätsupport &#40;DMX-&#41;](/sql/dmx/predictsupport-dmx)|Gibt den Unterstützungswert für einen bestimmten Status zurück.|  
-|[Prävarianz &#40;DMX-&#41;](/sql/dmx/predictvariance-dmx)|Gibt die Varianz einer angegebenen Spalte zurück.|  
+|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Bestimmt, ob ein Knoten ein untergeordnetes Element eines anderen Knotens im Modell ist.|  
+|[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Gibt die angepasste Wahrscheinlichkeit für einen bestimmten Status zurück.|  
+|[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Gibt einen vorhergesagten Wert oder eine Gruppe von Werten für eine angegebene Spalte zurück.|  
+|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|Gibt die Wahrscheinlichkeit für einen bestimmten Status zurück.|  
+|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|Gibt die Standardabweichung für den prognostizierten Wert zurück.|  
+|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|Gibt den Unterstützungswert für einen bestimmten Status zurück.|  
+|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|Gibt die Varianz einer angegebenen Spalte zurück.|  
   
  Eine Liste der Funktionen, die von allen [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Algorithmen verwendet werden, finden Sie unter [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx). Die Syntax einzelner Funktionen finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; – Funktionsreferenz](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
@@ -212,6 +212,6 @@ NATURAL PREDICTION JOIN
  [Microsoft Logistic Regression-Algorithmus](microsoft-logistic-regression-algorithm.md)   
  [Technische Referenz für den Microsoft Logistic Regression-Algorithmus](microsoft-logistic-regression-algorithm-technical-reference.md)   
  [Mining Modell Inhalt von logistischen Regressionsmodellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-logistic-regression-models.md)   
- [Lektion 5: aufbauen von neuronalen Netzwerk-und logistischen Regressionsmodellen &#40;Data&#41;Mining-Lernprogramms](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
+ [Lektion 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen &#40;Data Mining-Tutorial für Fortgeschrittene&#41;](../../tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)  
   
   

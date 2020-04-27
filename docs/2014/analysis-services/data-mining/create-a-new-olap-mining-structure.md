@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 62f8fc247986609e3822168bff5aace34f3d1aa9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085460"
 ---
 # <a name="create-a-new-olap-mining-structure"></a>Erstellen einer neuen OLAP-Miningstruktur
@@ -87,7 +87,7 @@ ms.locfileid: "66085460"
 10. Legen Sie auf der Seite **Inhalt und Datentyp der Spalten angeben** unter **Miningmodellstruktur**den Inhalts- und den Datentyp für jede Spalte fest.  
   
     > [!NOTE]  
-    >  OLAP-Miningmodelle unterstützen nicht die **Erkennen** -Funktion, mit der automatisch erkannt wird, ob eine Spalte kontinuierliche oder diskrete Daten enthält.  
+    >   OLAP-Miningmodelle unterstützen nicht die **Erkennen** -Funktion, mit der automatisch erkannt wird, ob eine Spalte kontinuierliche oder diskrete Daten enthält.  
   
      Klicken Sie auf **Weiter**.  
   
@@ -95,17 +95,17 @@ ms.locfileid: "66085460"
   
      Durch Aufteilen des Cubes können Sie die Daten für die Erstellung des Modells beschränken. Zum Beispiel können Sie separate Modelle für jeden Bereich erstellen, indem Sie die Hierarchien "Geografie" und  
   
-    -   **Dimension**: Wählen Sie eine verknüpfte Dimension aus der Dropdown Liste aus.  
+    -   **Dimension**aufteilen. Wählen Sie eine verknüpfte Dimension in der Dropdownliste aus.  
   
-    -   **Hierarchie**: Wählen Sie die Ebene der Dimensions Hierarchie aus, auf die Sie den Filter anwenden möchten. Beispiel: Wenn Sie die Aufteilung bei der Dimension [Geography] vornehmen, würden Sie z.B. eine Hierarchieebene wie [Region Country Name] auswählen.  
+    -   **Hierarchie**: Wählen Sie die Ebene der Dimensionshierarchie aus, auf der Sie den Filter anwenden möchten. Beispiel: Wenn Sie die Aufteilung bei der Dimension [Geography] vornehmen, würden Sie z.B. eine Hierarchieebene wie [Region Country Name] auswählen.  
   
-    -   **Operator**: Wählen Sie einen Operator aus der Liste aus.  
+    -   **Operator**: Wählen Sie einen Operator in der Liste aus.  
   
-    -   **Filter Ausdruck**: Geben Sie einen Wert oder Ausdruck ein, der als Filter Bedingung dienen soll, oder verwenden Sie die Dropdown Liste, um einen Wert aus der Liste der Elemente auf der angegebenen Ebene der Hierarchie auszuwählen.  
+    -   **Filterausdruck**: Geben Sie einen Wert oder Ausdruck ein, den Sie als Filterbedingung festlegen möchten, oder wählen Sie in der Dropdownliste einen Wert in der Liste der Elemente auf der angegebenen Ebene der Hierarchie aus.  
   
          Beispiel: Wenn Sie als Dimension [Geography] und [Region Country Name] als Hierarchieebene ausgewählt haben, enthält die Dropdownliste alle gültigen Länder, die Sie als Filterbedingung verwenden können. Sie können mehrere Optionen auswählen. Infolgedessen werden die Daten in der Miningstruktur auf Cubedaten aus diesen geografischen Bereichen beschränkt.  
   
-    -   **Parameter**: dieses Kontrollkästchen wird ignoriert. Dieses Dialogfeld unterstützt mehrere Cubefilteszenarien, und diese Option ist nicht für die Erstellung einer Miningstruktur relevant.  
+    -   **Parameter**: Ignorieren Sie dieses Kontrollkästchen. Dieses Dialogfeld unterstützt mehrere Cubefilteszenarien, und diese Option ist nicht für die Erstellung einer Miningstruktur relevant.  
   
      Klicken Sie auf **Weiter**.  
   
@@ -125,9 +125,9 @@ ms.locfileid: "66085460"
   
     -   Microsoft Association Rules-Algorithmus  
   
-     **Mining Modell Dimension erstellen**: Aktivieren Sie dieses Kontrollkästchen, und geben Sie einen Typnamen für die Mining Modell Dimension an. Wenn Sie diese Option verwenden, wird eine neue Dimension innerhalb des ursprünglichen Cubes erstellt, mit dem die Miningstruktur erstellt wurde. Sie können diese Dimension verwenden, um einen Drilldown und weitere Analysen auszuführen. Da sich die Dimension innerhalb des Cubes befindet, wird die Dimension automatisch der Falldatendimension zugeordnet.  
+     **Miningmodelldimension erstellen**: Aktivieren Sie dieses Kontrollkästchen, und geben Sie einen Namen für die Miningmodelldimension an. Wenn Sie diese Option verwenden, wird eine neue Dimension innerhalb des ursprünglichen Cubes erstellt, mit dem die Miningstruktur erstellt wurde. Sie können diese Dimension verwenden, um einen Drilldown und weitere Analysen auszuführen. Da sich die Dimension innerhalb des Cubes befindet, wird die Dimension automatisch der Falldatendimension zugeordnet.  
   
-     **Cube mithilfe der Mining Modell Dimension erstellen**: Aktivieren Sie dieses Kontrollkästchen, und geben Sie einen Namen für den neuen Cube an. Wenn Sie diese Option verwenden, wird ein neuer Cube erstellt, der sowohl die vorhandenen Dimensionen, die beim Erstellen der Struktur verwendet wurden, als auch die neue Data Mining-Dimension mit den Ergebnissen aus dem Modell beinhaltet.  
+     **Cube mithilfe der Miningmodelldimension erstellen**: Aktivieren Sie dieses Kontrollkästchen, und geben Sie einen Namen für den neuen Cube an. Wenn Sie diese Option verwenden, wird ein neuer Cube erstellt, der sowohl die vorhandenen Dimensionen, die beim Erstellen der Struktur verwendet wurden, als auch die neue Data Mining-Dimension mit den Ergebnissen aus dem Modell beinhaltet.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Tasks und Anweisungen für Miningstrukturen](mining-structure-tasks-and-how-tos.md)  

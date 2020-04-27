@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 997d637d109c04dbecb3105538f51fa6ece0518f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092440"
 ---
 # <a name="running-upgrade-advisor-command-prompt"></a>Ausführen des Upgrade Advisors (Eingabeaufforderung)
@@ -42,7 +42,7 @@ where <server_info> is any combination of the following:
  **-?**  
  Zeigt die Befehlssyntax an.  
   
- **-Configfile Dateiname** __  
+ **-Configfile Dateiname** _filename_  
  Der Pfadname und der Dateiname einer XML-Datei, die Einstellungen enthält, die beim Ausführen des Hilfsprogramms **upgradeadvisorwizardcmd** verwendet werden sollen.  
   
  *<server_info>*  
@@ -74,13 +74,13 @@ where <server_info> is any combination of the following:
 ## <a name="return-values"></a>Rückgabewerte  
  In der folgenden Tabelle sind die Werte aufgeführt, die von " **upgradebug advisorwizardcmd** " zurückgegeben werden  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |0|Die Analyse war erfolgreich, keine Upgradeprobleme gefunden.|  
-|Positive ganze Zahl|Die Analyse war erfolgreich, es wurden Upgradeprobleme gefunden.|  
+|Positive Ganzzahl|Die Analyse war erfolgreich, es wurden Upgradeprobleme gefunden.|  
 |Negative Ganzzahl|Die Analyse ist fehlgeschlagen.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Alle Informationen, die zur Ausführung der Analyse erforderlich sind, mit Ausnahme der Benutzernamen und Kennwörter für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung, können in einer XML-Konfigurationsdatei bereitgestellt werden. Diese XML-Konfigurationsdatei wird in der Vorlage dokumentiert. Wenn Sie keine Konfigurationsdatei verwenden, können Sie alle installierten Komponenten in einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] analysieren. Verwenden Sie hierzu die Standardeinstellungen, indem Sie die Computer- und Instanznamen angeben. Eine Beschreibung der Standardeinstellungen der Konfigurationsdatei finden Sie in der Tabelle "Elementbeschreibungen" weiter unten in diesem Thema.  
   
 ## <a name="configuration-file-template"></a>Konfigurationsdateivorlage  
@@ -128,10 +128,8 @@ where <server_info> is any combination of the following:
 |`Instance`|Name der zu analysierenden [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz.|Optional einmal pro Konfigurationsdatei. Der Standardwert ist die Standardinstanz.<br /><br /> Erforderlich einmal pro Konfigurationsdatei, wenn ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Element oder ein `IntegrationServices`-Element auf dem Server vorhanden ist.|  
 |`Components`|Enthält Elemente, die angeben, welche Komponenten analysiert werden sollen.|Ist einmal pro Konfigurationsdatei erforderlich.|  
 |`SQLServer`|Enthält Analyseeinstellungen für eine [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz.|Optional einmal pro Konfigurationsdatei. Wenn das Element nicht angegeben ist, werden [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Datenbanken nicht analysiert.|  
-|
-  `Databases` für `SQLServer`-Element|Enthält eine Liste der zu analysierenden Datenbanken.|Optional einmal pro `SQLServer` Element. Wenn dieses Element nicht vorhanden ist, werden alle Datenbanken in der Instanz analysiert.|  
-|
-  `Database` für `SQLServer`-Element|Gibt den Namen einer zu analysierenden Datenbank an.|Einmal erforderlich, oder mehrmals, wenn das `Databases`-Element vorhanden ist. Wenn ein `Database`-Element den Wert "*" enthält, werden alle Datenbanken in der Instanz analysiert. Es gibt keinen Standardwert.|  
+|`Databases` für `SQLServer`-Element|Enthält eine Liste der zu analysierenden Datenbanken.|Optional einmal pro `SQLServer` Element. Wenn dieses Element nicht vorhanden ist, werden alle Datenbanken in der Instanz analysiert.|  
+|`Database` für `SQLServer`-Element|Gibt den Namen einer zu analysierenden Datenbank an.|Einmal erforderlich, oder mehrmals, wenn das `Databases`-Element vorhanden ist. Wenn ein `Database`-Element den Wert "*" enthält, werden alle Datenbanken in der Instanz analysiert. Es gibt keinen Standardwert.|  
 |`TraceFiles`|Enthält eine Liste der zu analysierenden Ablaufverfolgungsdateien.|Optional einmal pro `SQLServer` Element.|  
 |`TraceFile`|Gibt den Pfad und Namen einer zu analysierenden Ablaufverfolgungsdatei an.|Einmal erforderlich, oder mehrmals, wenn das `TraceFiles`-Element vorhanden ist. Es gibt keinen Standardwert.|  
 |`BatchFiles`|Enthält eine Liste der zu analysierenden Batchdateien.|Optional einmal pro `SQLServer` Element.|  
@@ -139,10 +137,8 @@ where <server_info> is any combination of the following:
 |`BatchSeparator`|Gibt das in den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Batchdateien verwendete Batchtrennzeichen an.|Optional einmal pro `SQLServer` Element. Der Standardwert ist GO.|  
 |`AnalysisServices`|Enthält Analyseeinstellungen für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].|Optional einmal pro Konfigurationsdatei. Wenn das Element nicht angegeben ist, werden [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbanken nicht analysiert.|  
 |`ASInstance`|Gibt den Namen einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]an.|Einmal pro `AnalysisServices`-Element erforderlich. Es gibt keinen Standardwert.|  
-|
-  `Databases` für `Analysis Services`-Element|Enthält eine Liste der zu analysierenden Datenbanken.|Optional einmal pro `AnalysisServices` Element. Wenn dieses Element nicht vorhanden ist, werden alle Datenbanken in der Instanz analysiert.|  
-|
-  `Database` für `AnalysisServices`-Element|Gibt den Namen einer zu analysierenden Datenbank an.|Einmal erforderlich, oder mehrmals, wenn das `Databases`-Element vorhanden ist. Wenn ein `Database`-Element den Wert "*" enthält, werden alle Datenbanken in der Instanz analysiert. Es gibt keinen Standardwert.|  
+|`Databases` für `Analysis Services`-Element|Enthält eine Liste der zu analysierenden Datenbanken.|Optional einmal pro `AnalysisServices` Element. Wenn dieses Element nicht vorhanden ist, werden alle Datenbanken in der Instanz analysiert.|  
+|`Database` für `AnalysisServices`-Element|Gibt den Namen einer zu analysierenden Datenbank an.|Einmal erforderlich, oder mehrmals, wenn das `Databases`-Element vorhanden ist. Wenn ein `Database`-Element den Wert "*" enthält, werden alle Datenbanken in der Instanz analysiert. Es gibt keinen Standardwert.|  
 |`ReportingServices`|Gibt an, dass eine Analyse für [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ausgeführt wird.|Optional einmal pro Konfigurationsdatei. Wenn dieses Element nicht angegeben ist, wird [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nicht analysiert.|  
 |`RSInstance`|Gibt den Namen einer Instanz von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]an.|Einmal pro `ReportingServices`-Element erforderlich. Es gibt keinen Standardwert.|  
 |`IntegrationServices`|Enthält Analyseeinstellungen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|Optional einmal pro Konfigurationsdatei. Wenn dieses Element nicht angegeben ist, wird [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] nicht analysiert.|  
@@ -164,7 +160,7 @@ UpgradeAdvisorWizardCmd -ConfigFile "C:\My Documents\UpgradeConfig1.xml"
 UpgradeAdvisorWizardCmd -Server MyServer -Instance MyInst   
 ```  
   
-### <a name="c-run-upgrade-advisor-using-includessnoversionincludesssnoversion-mdmd-authentication"></a>C. Ausführen des Upgrade Advisors mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung  
+### <a name="c-run-upgrade-advisor-using-ssnoversion-authentication"></a>C. Ausführen des Upgrade Advisors mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung  
  Im folgenden Beispiel wird gezeigt, wie der Upgrade Advisor von der Eingabeaufforderung aus mithilfe einer Konfigurationsdatei ausgeführt wird. In diesem Beispiel werden ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Benutzername und ein Kennwort angegeben, um eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herzustellen.  
   
 ```  

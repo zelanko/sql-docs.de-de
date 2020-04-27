@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6ebe206d4f4942e9a9456ba10b00d33514ef6212
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086396"
 ---
 # <a name="data-mining-shapes-for-visio"></a>Data Mining-Shapes für Visio
@@ -59,7 +59,7 @@ ms.locfileid: "66086396"
   
  Weitere Informationen zum Arbeiten mit und verbessern von Visio-Modell Diagrammen finden [Sie unter Anzeigen von Data Mining-Modellen in Visio &#40;Data Mining-Add-ins&#41;](viewing-data-mining-models-in-visio-data-mining-add-ins.md)  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
   
 -   Zum Verwenden der Vorlagen müssen Sie zuerst eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] herstellen.  
   

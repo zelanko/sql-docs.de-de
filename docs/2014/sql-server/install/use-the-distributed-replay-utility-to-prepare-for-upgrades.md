@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e00d749fc222becacc3e84ddb7051a3fbe65f641
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091276"
 ---
 # <a name="use-the-distributed-replay-utility-to-prepare-for-upgrades"></a>Vorbereiten von Upgrades mit dem Distributed Replay-Hilfsprogramm

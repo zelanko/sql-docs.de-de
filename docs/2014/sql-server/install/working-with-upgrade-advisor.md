@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8b80e11ffdf12037b466531b0d5b10a2b9f3a2e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66090957"
 ---
 # <a name="working-with-upgrade-advisor"></a>Arbeiten mit dem Upgrade Advisor
@@ -39,7 +39,7 @@ ms.locfileid: "66090957"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Übersicht über den Upgrade Advisor](../../../2014/sql-server/install/overview-of-upgrade-advisor.md)|Liefert eine Überblick über den Upgradeprozess, den Analyse-Assistenten und den Berichts-Viewer des Upgrade Advisors.|  
 |[Themen zur Vorgehensweise für den Upgrade Advisor](../../../2014/sql-server/install/upgrade-advisor-how-to-topics.md)|Enthält Anweisungen zur Durchführung allgemeiner Upgrade Advisor-Prozeduren.|  

@@ -21,10 +21,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c78630764a26bb8fe281446c1bb997f18d965db7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091597"
 ---
 # <a name="upgrade-advisor-overview"></a>Übersicht über den Upgrade Advisor
@@ -73,8 +73,7 @@ ms.locfileid: "66091597"
 ## <a name="upgrade-advisor-report-viewer"></a>Berichts-Viewer des Upgrade Advisors  
  Um einen Upgrade Advisor-Bericht anzuzeigen, klicken Sie auf der Startseite des Upgrade Advisors auf **Upgrade Advisor Report Viewer starten** . Wenn der Berichts-Viewer des Upgrade Advisors gestartet wird, werden die Berichte im Standardverzeichnis geladen. Berichte werden nicht angezeigt, wenn der Berichts-Viewer des Upgrade Advisors keine Berichte im Standardverzeichnis findet. Wenn das Standardverzeichnis keine Berichte enthält, können Sie entweder den Analyse-Assistenten des Upgrade Advisors ausführen, um einen Bericht zu erstellen, oder einen vorhandenen Bericht eines anderen Servers oder Unterverzeichnisses laden.  
   
- 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor überschreibt keine vorhandenen Berichte. Der Berichts-Viewer zeigt jedoch nur die letzten fünf Berichte an. Um einen früheren Bericht anzuzeigen, wählen Sie den Bericht im Dropdown-Listenfeld **Bericht** aus. Der Zeitstempel gibt das Datum und die Uhrzeit an, an denen der Bericht generiert wurde.  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor überschreibt keine vorhandenen Berichte. Der Berichts-Viewer zeigt jedoch nur die letzten fünf Berichte an. Um einen früheren Bericht anzuzeigen, wählen Sie den Bericht im Dropdown-Listenfeld **Bericht** aus. Der Zeitstempel gibt das Datum und die Uhrzeit an, an denen der Bericht generiert wurde.  
   
  Wenn XML-Dateien aus dem Analyse-Assistenten des Upgrade Advisors in den Berichts-Viewer des Upgrade Advisors geladen werden, wird für jede Komponente ein Bericht angezeigt. Der Bericht enthält alle bekannten Probleme, d. h. sowohl die auffindbaren als auch die nicht auffindbaren Probleme, die Sie beheben müssen. Für jedes Problem gibt es ein Symbol zur Angabe der Wichtigkeit, eine Bezeichnung, die Sie über den Zeitpunkt der Problembehebung informiert, und eine kurze Beschreibung. Wenn Sie ein Problem erweitern, sehen Sie ein längere Beschreibung, einen Link zu Problemdetails und einen Link zur Hilfedatei. Die Angaben für jedes Problem bieten genug Informationen, um das Problem beheben zu können.  
   

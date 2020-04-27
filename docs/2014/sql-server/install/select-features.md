@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 92c9ebe68f92a652e8f713ca73dedce6b54443c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092367"
 ---
 # <a name="select-features"></a>Auswählen von Features
-  Verwenden Sie die Seite Funktionsauswahl, um zu aktualisierende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Komponenten und -Funktionen auszuwählen.  
+  Verwenden Sie die Seite Funktionsauswahl, um zu aktualisierende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten und -Funktionen auszuwählen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Klicken Sie auf einen Funktionsnamen im linken Bereich, und zeigen Sie so die Sprache, das Betriebssystem, die Edition und die Statusdetails an.  
   
  Aktivieren Sie zum Aktualisieren einer Komponente oder einer Funktion das Kontrollkästchen neben dem Funktionsnamen. Deaktivieren Sie zum Ausschließen einer Komponente oder einer Funktion von diesem Update das Kontrollkästchen neben dem Funktionsnamen.  

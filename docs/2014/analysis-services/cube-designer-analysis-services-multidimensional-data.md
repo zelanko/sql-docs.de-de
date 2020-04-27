@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0c52d2598c2fff79d9d7dd6cb99468871f12639
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086608"
 ---
 # <a name="cube-designer-analysis-services---multidimensional-data"></a>Cube-Designer (Analysis Services &ndash; Mehrdimensionale Daten)
@@ -26,12 +26,11 @@ ms.locfileid: "66086608"
   
 -   Doppelklicken Sie auf einen Cube im **Projektmappen-Explorer**.  
   
- 
-  **Cube-Designer** enthält folgende Registerkarten:  
+ **Cube-Designer** enthält folgende Registerkarten:  
   
 ## <a name="tabs"></a>Registerkarten  
   
-|TAB|Definition|  
+|Registerkarte|Definition|  
 |---------|----------------|  
 |**Cubestruktur**|Mithilfe dieser Registerkarte können Sie Measuregruppen und Measures erstellen und ändern, Cubedimensionen hinzufügen und die im Cube eingeschlossenen Objekte in der zugeordneten Datenquellensicht anzeigen. Weitere Informationen zu dieser Registerkarte finden Sie unter [Cubestruktur &#40;Cube-Designer&#41; &#40;Analysis Services – Mehrdimensionale Daten&#41;](cube-structure-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Dimensionsverwendung**|Mithilfe dieser Registerkarte können Sie Beziehungen zwischen den im Cube enthaltenen Cubedimensionen und Measuregruppen erstellen und ändern. Weitere Informationen zu dieser Registerkarte finden Sie unter [Dimensionsverwendung &#40;Cube-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](dimension-usage-cube-designer-analysis-services-multidimensional-data.md).|  

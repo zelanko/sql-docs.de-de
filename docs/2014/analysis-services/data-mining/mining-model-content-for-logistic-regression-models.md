@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b463035cc83fafd2b283d85a577616fa962fcd1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083615"
 ---
 # <a name="mining-model-content-for-logistic-regression-models-analysis-services---data-mining"></a>Miningmodellinhalt von logistischen Regressionsmodellen (Analysis Services – Data Mining)
@@ -51,7 +51,7 @@ ms.locfileid: "66083615"
  ATTRIBUTE_NAME  
  Die Namen des Attributs, das diesem Knoten entspricht.  
   
-|Node|Inhalt|  
+|Knoten|Inhalt|  
 |----------|-------------|  
 |Modellstamm|Leer|  
 |Randstatistik|Leer|  
@@ -72,7 +72,7 @@ ms.locfileid: "66083615"
  NODE_TYPE  
  Ein logistisches Regressionsmodell gibt die folgenden Knotentypen aus:  
   
-|Knotentyp-ID|BESCHREIBUNG|  
+|Knotentyp-ID|Beschreibung|  
 |------------------|-----------------|  
 |1|Modell.|  
 |17|Planerknoten für das Subnetzwerk.|  
@@ -89,7 +89,7 @@ ms.locfileid: "66083615"
  CHILDREN_CARDINALITY  
  Eine Schätzung der Anzahl untergeordneter Elemente des Knotens.  
   
-|Node|Inhalt|  
+|Knoten|Inhalt|  
 |----------|-------------|  
 |Modellstamm|Gibt die Anzahl der untergeordneten Knoten an; enthält mindestens 1 Netzwerk, 1 erforderlichen Knoten für Randstatistik und 1 erforderliche Eingabeebene. Beispiel: Bei einem Wert von 5 sind 3 Subnetzwerke vorhanden.|  
 |Randstatistik|Immer 0.|  
@@ -107,7 +107,7 @@ ms.locfileid: "66083615"
  NODE_DESCRIPTION  
  Eine benutzerfreundliche Beschreibung des Knotens.  
   
-|Node|Inhalt|  
+|Knoten|Inhalt|  
 |----------|-------------|  
 |Modellstamm|Leer|  
 |Randstatistik|Leer|  
@@ -120,7 +120,7 @@ ms.locfileid: "66083615"
  NODE_RULE  
  Eine XML-Beschreibung der Regel, die in den Knoten eingebettet ist.  
   
-|Node|Inhalt|  
+|Knoten|Inhalt|  
 |----------|-------------|  
 |Modellstamm|Leer|  
 |Randstatistik|Leer|  
@@ -151,7 +151,7 @@ ms.locfileid: "66083615"
  Informationen über die Unterstützung in Trainingsfällen für spezifische Werte finden Sie über den Knoten für Randstatistik.  
   
  MSOLAP_MODEL_COLUMN  
- |Node|Inhalt|  
+ |Knoten|Inhalt|  
 |----------|-------------|  
 |Modellstamm|Leer|  
 |Randstatistik|Leer|  
@@ -167,7 +167,7 @@ ms.locfileid: "66083615"
  MSOLAP_NODE_SHORT_CAPTION  
  In logistischen Regressionsmodellen immer Leerzeichen.  
   
-##  <a name="bkmk_NodeIDs"></a>Verwenden von Knoten Namen und IDs  
+##  <a name="using-node-names-and-ids"></a><a name="bkmk_NodeIDs"></a> Verwenden von Knotennamen und IDs  
  Die Benennung der Knoten in einem logistischen Regressionsmodell bietet zusätzliche Informationen über die Beziehungen zwischen den Knoten im Modell. In der folgenden Tabelle werden die Konventionen für die IDs dargestellt, die den Knoten in jeder Ebene zugewiesen werden.  
   
 |Knotentyp|Konvention für Knoten-ID|  

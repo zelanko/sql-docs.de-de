@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3df71a2facc01abcb3ebdec57aaf243c0b7fda7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083831"
 ---
 # <a name="microsoft-sequence-clustering-algorithm"></a>Microsoft Sequence Clustering-Algorithmus
@@ -48,11 +48,11 @@ ms.locfileid: "66083831"
   
  Für Sequenzclustermodelle gelten folgende Anforderungen:  
   
--   **Eine einzelne Schlüssel Spalte** Für ein Sequence Clustering-Modell ist ein Schlüssel erforderlich, der Datensätze identifiziert.  
+-   **Eine einzelne Schlüsselspalte:** Für ein Sequenzclustermodell ist ein Schlüssel erforderlich, der Datensätze identifiziert.  
   
--   **Eine Sequenz Spalte** Für Sequenzdaten muss das Modell über eine Tabelle verfügen, die eine Sequenz-ID-Spalte enthält. Die Sequenz-ID kann ein beliebiger sortierbarer Datentyp sein. Sie können beispielsweise eine Webseiten-ID, eine Ganzzahl oder eine Textzeichenfolge verwenden, solange die Spalte die Ereignisse in einer Sequenz identifiziert. Für jede Sequenz ist nur ein Sequenzbezeichner zulässig, und jedes Modell darf nur einen Sequenztyp enthalten.  
+-   **Eine Sequenzspalte** : Für Sequenzdaten muss das Modell über eine geschachtelte Tabelle verfügen, die eine Sequenz-ID-Spalte enthält. Die Sequenz-ID kann ein beliebiger sortierbarer Datentyp sein. Sie können beispielsweise eine Webseiten-ID, eine Ganzzahl oder eine Textzeichenfolge verwenden, solange die Spalte die Ereignisse in einer Sequenz identifiziert. Für jede Sequenz ist nur ein Sequenzbezeichner zulässig, und jedes Modell darf nur einen Sequenztyp enthalten.  
   
--   **Optionale nicht-Sequenz Attribute** Der Algorithmus unterstützt das Hinzufügen anderer Attribute, die nicht mit der Sequenzierung verknüpft sind. Diese Attribute können geschachtelte Spalten einschließen.  
+-   **Optionale nicht sequenzielle Attribute** : Der Algorithmus unterstützt das Hinzufügen anderer Attribute, die nicht mit dem Sequenzieren verknüpft sind. Diese Attribute können geschachtelte Spalten einschließen.  
   
  In dem zuvor erwähnten Beispiel der Website von [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] kann ein Sequenzclustermodell beispielsweise Auftragsinformationen als Falltabelle, demografische Daten über den Kunden des entsprechenden Auftrags als nicht sequenzielle Attribute und eine geschachtelte Tabelle mit der Sequenz, in der der Kunde die Website durchsucht hat oder Artikel in einen Einkaufswagen gelegt hat, als Sequenzinformationen beinhalten.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66083831"
   
  Informationen zum Erstellen von Abfragen für ein Data Mining-Modell finden Sie unter [Data Mining-Abfragen](data-mining-queries.md). Beispiele zur Verwendung von Abfragen in Verbindung mit einem Sequenzclustermodell finden Sie unter [Sequenz Clustering-Modellabfragebeispiele](clustering-model-query-examples.md).  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 -   Unterstützt nicht die Verwendung von PMML (Predictive Model Markup Language) zum Erstellen von Miningmodellen.  
   

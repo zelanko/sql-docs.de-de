@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 377ca16075a86c366fcfa8d9d96bcfa989efec4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089906"
 ---
 # <a name="options-text-editor---all-languages--tabs-page"></a>Optionen (Text-Editor – Alle Sprachen – Seite „Tabstopps “)
@@ -29,7 +29,7 @@ ms.locfileid: "66089906"
  Wenn für einen bestimmten Editor verschiedene Einstellungen ausgewählt wurden, wird die Meldung "Die Einzugs- (oder Tabstopp-)Einstellungen für einzelne Textformate stehen miteinander im Konflikt" angezeigt. Diese Erinnerung wird beispielsweise dann angezeigt, wenn für **Nur-Text** die Einzugsoption **Block**, für **XML** jedoch die Option **Keiner** ausgewählt wurde.  
   
 ## <a name="indenting"></a>Einzug  
- **Keine**  
+ **None**  
  Wenn diese Option ausgewählt ist, wird die neue Zeile, die nach dem Drücken der EINGABETASTE erstellt wird, nicht eingerückt. Der Cursor wird in der ersten Spalte der neuen Zeile platziert.  
   
  **Baustein**  
@@ -46,7 +46,7 @@ ms.locfileid: "66089906"
  Legt die Größe des automatischen Einzugs in Leerzeichen fest. Der Standardwert ist vier Leerzeichen. Es werden entweder Tabstopps, Leerzeichen oder beides verwendet, um den angegebenen Raum zu füllen.  
   
  **Leerzeichen einfügen**  
- Wenn diese Option ausgewählt ist, werden bei Einzugsfunktionen nur Leerzeichen eingefügt, keine Tabulatorzeichen. Wenn die **Einzugsgröße** z.B. auf 5 festgelegt ist, werden fünf Leerzeichen eingefügt, wenn Sie die TABULATORTASTE drücken oder im Hauptfenster von ** auf der Symbolleiste auf die Schaltfläche **Einzug vergrößern[!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] klicken.  
+ Wenn diese Option ausgewählt ist, werden bei Einzugsfunktionen nur Leerzeichen eingefügt, keine Tabulatorzeichen. Wenn die **Einzugsgröße** z.B. auf 5 festgelegt ist, werden fünf Leerzeichen eingefügt, wenn Sie die TABULATORTASTE drücken oder im Hauptfenster von [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] auf der Symbolleiste auf die Schaltfläche **Einzug vergrößern** klicken.  
   
  **Tabulatoren beibehalten**  
  Wenn diese Option ausgewählt ist, werden bei Einzugsfunktionen so viele Tabulatorzeichen wie möglich eingefügt. Jedes Tabulatorzeichen nimmt den Platz so vieler Leerzeichen ein, wie im Feld **Tabulatorgröße**definiert wurden. Wenn die **Einzugsgröße** kein ganzes Vielfaches der **Tabulatorgröße**ist, werden zum Auffüllen der Differenz Leerzeichen verwendet.  

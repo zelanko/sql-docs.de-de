@@ -27,10 +27,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1cf75c9f6fc12ea84d15aebff5c50d11dd0fd924
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085662"
 ---
 # <a name="content-types-data-mining"></a>Inhaltstypen (Data Mining)
@@ -45,21 +45,21 @@ ms.locfileid: "66085662"
  In der folgenden Liste werden die Inhaltstypen beschrieben, die Sie beim Data Mining verwenden. Außerdem erfahren Sie hier, von welchen Datentypen die einzelnen Inhaltstypen unterstützt werden.  
   
 ## <a name="discrete"></a>Discrete  
- *Diskret* bedeutet, dass die Spalte eine endliche Anzahl von Werten ohne Kontinuum zwischen Werten enthält. Eine Spalte mit der Angabe des Geschlechts ist ein Beispiel für eine typische diskrete Attributspalte, da die Daten eine bestimmte Anzahl von Kategorien darstellen.  
+ *Discrete* (Diskret) bedeutet, dass die Spalte eine endliche Anzahl von Werten enthält, wobei sich die Werte nicht durch eine kontinuierliche Größe unterscheiden. Eine Spalte mit der Angabe des Geschlechts ist ein Beispiel für eine typische diskrete Attributspalte, da die Daten eine bestimmte Anzahl von Kategorien darstellen.  
   
  Selbst wenn die Werte einer diskreten Attributspalte numerisch sind, können sie keine Reihenfolge beinhalten. Auch wenn für die diskrete Spalte numerische Werte verwendet werden, können keine Bruchzahlen berechnet werden. Ortskennzahlen sind ein anschauliches Beispiel für numerische diskrete Daten.  
   
  Der Inhaltstyp `Discrete` wird von allen Data Mining-Typen unterstützt.  
   
 ## <a name="continuous"></a>Fortlaufend  
- *Continuous* bedeutet, dass die Spalte Werte enthält, die numerische Daten auf einer Skala darstellen, die Zwischenwerte zulässt. Im Gegensatz zu diskreten Spalten, die endliche, zählbare Daten darstellen, stellt eine kontinuierliche Spalte skalierbare Messdaten dar. Diese Spalten können unendliche viele Bruchzahlen enthalten. Eine Temperaturspalte stellt ein Beispiel für eine kontinuierliche Attributspalte dar.  
+ *Continuous* (Kontinuierlich) bedeutet, dass die Spalte Werte enthält, die numerische Daten auf einer Skala darstellen, die Zwischenwerte zulässt. Im Gegensatz zu diskreten Spalten, die endliche, zählbare Daten darstellen, stellt eine kontinuierliche Spalte skalierbare Messdaten dar. Diese Spalten können unendliche viele Bruchzahlen enthalten. Eine Temperaturspalte stellt ein Beispiel für eine kontinuierliche Attributspalte dar.  
   
  Wenn eine Spalte kontinuierliche numerische Daten enthält und Sie wissen, wie die Daten verteilt werden sollen, können Sie die Genauigkeit der Analyse möglicherweise erhöhen, indem Sie die erwartete Verteilung der Werte angeben. Die Spaltenverteilung wird auf Ebene der Miningstruktur festgelegt. Daher bezieht sich die Einstellung auf alle Modelle, die auf der Struktur basieren. Weitere Informationen finden Sie unter [Spaltenverteilungen &#40;Data Mining&#41;](column-distributions-data-mining.md).  
   
  Der Inhaltstyp `Continuous` wird von den folgenden Datentypen unterstützt: `Date`, `Double` und `Long`.  
   
 ## <a name="discretized"></a>Discretized  
- *Diskretisierung* ist der Prozess, bei dem Werte eines kontinuierlichen Satzes von Daten in Bucket-Werte versetzt werden, sodass eine begrenzte Anzahl möglicher Werte vorhanden ist. Nur numerische Daten können diskretisiert werden.  
+ Unter*Diskretisierung* wird der Prozess verstanden, Werte eines kontinuierlichen Satzes an Daten in Buckets zu platzieren, sodass sich eine begrenzte Anzahl an möglichen Werten ergibt. Nur numerische Daten können diskretisiert werden.  
   
  Der Inhaltstyp *Discretized* gibt an, dass die Spalte Werte enthält, die Gruppen bzw. Buckets von Werten darstellen, die von einer kontinuierlichen Spalte abgeleitet sind. Die Buckets werden als sortierte und diskrete Werte behandelt.  
   

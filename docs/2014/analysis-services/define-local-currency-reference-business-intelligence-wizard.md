@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 558e2c7d62edcb9fb314b49d41fd7bd15413218d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082180"
 ---
 # <a name="define-local-currency-reference-business-intelligence-wizard"></a>Verweis auf lokale Währung definieren (Business Intelligence-Assistent)
@@ -25,7 +25,7 @@ ms.locfileid: "66082180"
 > [!NOTE]  
 >  Diese Seite wird nicht angezeigt, wenn der Business Intelligence-Assistent vom Dimensions-Designer aus oder durch Klicken mit der rechten Maustaste auf eine Dimension im Projektmappen-Explorer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]gestartet wurde. Des Weiteren wird diese Seite nicht angezeigt, wenn auf der Seite **Umrechnungstyp auswählen** die Option **1:n** ausgewählt wurde.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Bezeichner in der Faktentabelle**  
  Wählen Sie diese Option aus, um ein Attribut anzugeben, durch das Währungsbezeichner für lokale Währungen in einer Währungsdimension bereitgestellt werden, auf die die Faktentabelle verweist, in der die auf der Seite **Measures auswählen** ausgewählten Measures enthalten sind. (Eine Währungs Dimension in einer Dimension `Type` , deren-Eigenschaft auf *Currency*festgelegt ist.)  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66082180"
  Wählen Sie das Währungsattribut innerhalb einer Währungsdimension aus, deren Mitglieder die Währungsbezeichner für lokale Währungen darstellen. (Ein Währungs Attribut ist eines, `Type` dessen-Eigenschaft auf *Currency*festgelegt ist.)  
   
 > [!NOTE]  
->  Diese Option ist nicht verfügbar, wenn die Option Bezeichner **in der Fakten Tabelle** nicht ausgewählt ist.  
+>   Diese Option ist nicht verfügbar, wenn die Option **Bezeichner in der Faktentabelle** nicht ausgewählt ist.  
   
  **Attribute in der Dimensionstabelle**  
  Mithilfe dieser Option können Sie ein Attribut aus einer Dimension angeben, die sich auf die Measuregruppe bezieht, in der Währungsbezeichner für lokale Währungen enthalten sind.  
@@ -46,7 +46,7 @@ ms.locfileid: "66082180"
  Wählen Sie das Attribut innerhalb einer Dimension aus, deren Mitglieder auf die Währungsbezeichner für lokale Währungen verweisen.  
   
 > [!NOTE]  
->  Diese Option ist nicht verfügbar, wenn die Option **Attribute in der Dimensions Tabelle** nicht ausgewählt ist.  
+>   Diese Option ist nicht verfügbar, wenn die Option **Attribute in der Dimensionstabelle** nicht ausgewählt ist.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Business Intelligence Wizard (F1-Hilfe)](business-intelligence-wizard-f1-help.md)   

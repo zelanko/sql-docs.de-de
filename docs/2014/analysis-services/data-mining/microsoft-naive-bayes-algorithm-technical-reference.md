@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d3623e9cd841feb3a82828c12ba32e2e691482a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083900"
 ---
 # <a name="microsoft-naive-bayes-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Naive Bayes-Algorithmus
@@ -79,12 +79,12 @@ ms.locfileid: "66083900"
 ### <a name="modeling-flags"></a>Modellierungsflags  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Tree-Algorithmus unterstützt die folgenden Modellierungsflags. Wenn Sie die Miningstruktur oder das Miningmodell erstellen, definieren Sie Modellierungsflags, die angeben, wie die Werte in den einzelnen Spalten während der Analyse behandelt werden. Weitere Informationen finden Sie unter [Modellierungsflags &#40;Data Mining&#41;](modeling-flags-data-mining.md).  
   
-|Modellierungsflag|BESCHREIBUNG|  
+|Modellierungsflag|Beschreibung|  
 |-------------------|-----------------|  
 |MODEL_EXISTENCE_ONLY|Dies bedeutet, dass die Spalte zwei mögliche Statuswerte haben kann: Missing und Existing. Ein NULL-Wert ist ein fehlender Wert.<br /><br /> Gilt für die Miningmodellspalte.|  
 |NOT NULL|Gibt an, dass die Spalte keinen NULL-Wert enthalten kann. Ein Fehler tritt auf, wenn Analysis Services während des Modelltrainings einen NULL-Wert erkennt.<br /><br /> Gilt für die Miningstrukturspalte.|  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
  Ein Naive Bayes-Strukturmodell muss eine Schlüsselspalte, mindestens ein vorhersagbares Attribut und mindestens ein Eingabeattribut enthalten. Kein Attribut darf kontinuierlich sein. Wenn die Daten kontinuierliche numerische Daten enthalten, werden sie ignoriert oder diskretisiert.  
   
 ### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten  
@@ -101,6 +101,6 @@ ms.locfileid: "66083900"
 ## <a name="see-also"></a>Weitere Informationen  
  [Microsoft Naive Bayes-Algorithmus](microsoft-naive-bayes-algorithm.md)   
  [Naive Bayes-Modell Abfrage Beispiele](naive-bayes-model-query-examples.md)   
- [Mining Modell Inhalt von Naive Bayes-Modellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
+ [Miningmodellinhalt von Naive Bayes-Modellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)  
   
   

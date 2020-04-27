@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39d3c0dbd23499072ddd0ca2cd21748d92103c8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093559"
 ---
 # <a name="overview-of-sql-server-setup-documentation"></a>Übersicht über die SQL Server-Setupdokumentation
@@ -23,7 +23,7 @@ ms.locfileid: "66093559"
 ## <a name="documentation-available-during-setup"></a>Während des Setups verfügbare Dokumentation  
  Klicken Sie während der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]im Setup-Assistenten auf die Schaltfläche **Hilfe** , oder drücken Sie F1 auf der Tastatur, um die zum Ausführen des Vorgangs unmittelbar erforderlichen Informationen zu erhalten.  
   
-## <a name="overview-of-includessnoversionincludesssnoversion-mdmd-installation-topics"></a>Übersicht über die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationsthemen  
+## <a name="overview-of-ssnoversion-installation-topics"></a>Übersicht über die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationsthemen  
  Unabhängig davon, ob Sie für die Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installations-Assistenten oder die Eingabeaufforderung verwenden, sollten Sie zur Vorbereitung die folgenden Abschnitte lesen:  
   
 -   [Planen einer SQL Server-Installation](../../../2014/sql-server/install/planning-a-sql-server-installation.md)  
@@ -38,7 +38,7 @@ ms.locfileid: "66093559"
   
      Beschreibt die Installationsoptionen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen, die Teil der Microsoft BI-Plattform sind und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]sowie mehrere Clientanwendungen beinhalten, die zum Erstellen von oder Arbeiten mit analytischen Daten verwendet werden.  
   
--   [Aktualisieren auf SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
+-   [Upgrade auf SQL Server 2014](../../database-engine/install-windows/upgrade-sql-server.md)  
   
      Beschreibt die Optionen zum Aktualisieren auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

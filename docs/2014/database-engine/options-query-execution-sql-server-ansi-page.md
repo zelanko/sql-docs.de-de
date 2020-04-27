@@ -13,17 +13,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e075de106a66ffee63c02ead06a3fc68548111a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089382"
 ---
 # <a name="options-query-execution-sql-server-ansi-page"></a>Optionen (Abfrage Ausführung-SQL Server-ANSI-Seite)
-  Diese SET-Optionen nach ANSI (ISO)-Standard definieren zusammen die Abfrageverarbeitungsumgebung für die Dauer der Abfrage des Benutzers bzw. der Ausführung eines Triggers oder einer gespeicherten Prozedur. Die aufgeführten SET-Optionen schließen jedoch nicht alle Optionen ein, die erforderlich wären, um dem ISO-Standard vollständig zu entsprechen. Verwenden Sie diese Seite, um [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] anzugeben, dass die Abfragen mithilfe aller oder eines Teils der im ISO-Standard angegebenen Einstellungen ausgeführt werden soll. Die an diesen Optionen vorgenommenen Änderungen werden nur für neue Abfragen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet. Wenn Sie diese Optionen für die aktuellen Abfragen ändern möchten, klicken Sie entweder im Menü **Abfrage** auf **Abfrageoptionen**, oder klicken Sie mit der rechten Maustaste in das Abfragefenster von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], und wählen Sie **Abfrageoptionen**. Klicken Sie im Dialogfeld **Abfrageoptionen** unter **Ausführung** auf **ANSI**.  
+  Diese SET-Optionen nach ANSI (ISO)-Standard definieren zusammen die Abfrageverarbeitungsumgebung für die Dauer der Abfrage des Benutzers bzw. der Ausführung eines Triggers oder einer gespeicherten Prozedur. Die aufgeführten SET-Optionen schließen jedoch nicht alle Optionen ein, die erforderlich wären, um dem ISO-Standard vollständig zu entsprechen. Verwenden Sie diese Seite, um [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] anzugeben, dass die Abfragen mithilfe aller oder eines Teils der im ISO-Standard angegebenen Einstellungen ausgeführt werden soll. Die an diesen Optionen vorgenommenen Änderungen werden nur für neue Abfragen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet. Um die Optionen für die aktuellen Abfragen zu ändern, klicken Sie im Menü **Abfrage** auf **Abfrage Optionen** , oder klicken Sie mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] der rechten Maustaste in das Abfragefenster, und wählen Sie **Abfrage Optionen**aus. Klicken Sie im Dialogfeld **Abfrageoptionen** unter **Ausführung** auf **ANSI**.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
- **ANSI_DEFAULTS festlegen**  
+ **SET ANSI_DEFAULTS**  
  Aktivieren Sie dieses Kontrollkästchen, um alle ISO-Standardeinstellungen auszuwählen. Nicht alle ISO-Optionen sind standardmäßig ausgewählt.  
   
  **SET QUOTED_IDENTIFIER**  
@@ -53,7 +53,7 @@ ms.locfileid: "66089382"
  **SET ANSI_NULLS**  
  -   Gibt an, dass sich die Vergleichsoperatoren gleich (=) und ungleich (<>) bei Verwendung mit NULL-Werten ISO-konform verhalten müssen. Wenn SET ANSI_NULLS ausgewählt ist, werden alle Vergleiche mit null in Übereinstimmung mit dem Verhalten nach ISO als UNKNOWN ausgewertet. Wenn SET ANSI_NULLS nicht ausgewählt ist, werden Vergleiche aller Daten mit einem NULL-Wert als TRUE ausgewertet. Dieses Kontrollkästchen ist standardmäßig aktiviert.  
   
- **Auf Standard zurücksetzen**  
+ **Standard wiederherstellen**  
  Setzt alle auf dieser Seite verfügbaren Werte auf die ursprünglichen Standardwerte zurück.  
   
   

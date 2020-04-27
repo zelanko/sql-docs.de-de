@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23f35c8998b204182f25f85f8f7694fb60d042b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087456"
 ---
 # <a name="configure-stored-credentials-for-powerpivot-data-refresh-powerpivot-for-sharepoint"></a>Konfigurieren gespeicherter Anmeldeinformationen für die PowerPivot-Datenaktualisierung (PowerPivot für SharePoint)
@@ -36,7 +36,7 @@ ms.locfileid: "66087456"
   
  Wenn beim Konfigurieren oder verwenden der Datenaktualisierung Probleme auftreten, finden Sie im TechNet wiki auf der Seite Problembehandlung bei der [Power Pivot-Datenaktualisierung](https://go.microsoft.com/fwlink/?LinkID=223279) Informationen zu möglichen Lösungen.  
   
-##  <a name="configAny"></a>Konfigurieren eines Windows-Kontos für die Datenaktualisierung  
+##  <a name="configure-any-windows-account-for-data-refresh"></a><a name="configAny"></a>Konfigurieren eines Windows-Kontos für die Datenaktualisierung  
  Wenn ein SharePoint-Benutzer einen Datenaktualisierungszeitplan definiert, muss die Benutzeridentität angegeben werden, unter der die Datenaktualisierung durchgeführt wird. Zu den Optionen gehören das Eingeben des Windows-Domänenbenutzerkontos, das Auswählen des unbeaufsichtigten Datenaktualisierungskontos für PowerPivot oder das Eingeben eines anderen Windows-Benutzerkontos für Datenaktualisierungszwecke. Die Schritte in diesem Abschnitt sind für die letzte Option: Angeben eines anderen Windows-Kontos.  
   
  Sie können diesen Ansatz wählen, wenn Sie eine Alternative zum Konto für unbeaufsichtigte PowerPivot-Datenaktualisierungen (verfügbar für alle PowerPivot-Benutzer auf SharePoint) oder der Anmeldeinformationen des Arbeitsmappenbesitzers verwenden möchten. Sie möchten z. B. anderen Arbeitsgruppen eine Reihe von Datenaktualisierungskonten verfügbar machen, um die Protokollierung und Verwaltung von Datenaktualisierungsaktivität auf organisatorischer Ebene zu vereinfachen.  
@@ -101,7 +101,7 @@ ms.locfileid: "66087456"
   
 17. Klicken Sie auf **OK**.  
   
-###  <a name="bkmk_grant"></a>Schritt 2: Erteilen von Teilnahme Berechtigungen für das Konto  
+###  <a name="step-2-grant-contribute-permissions-to-the-account"></a><a name="bkmk_grant"></a>Schritt 2: Erteilen von Teilnahme Berechtigungen für das Konto  
  Bevor die gespeicherten Anmeldeinformationen verwendet werden können, müssen allen PowerPivot-Arbeitsmappen, für die sie verwendet werden sollen, Teilnahmeberechtigungen zugewiesen werden. Die Berechtigungsebene ist erforderlich, um die Arbeitsmappe von einer Bibliothek zu öffnen und anschließend nach der Aktualisierung der Daten erneut in der Bibliothek zu speichern.  
   
  Das Zuweisen von Berechtigungen ist ein Schritt, der vom Websitesammlungsadministrator durchgeführt werden muss. SharePoint-Berechtigungen können an der Stammwebsitesammlung oder einer beliebigen darunterliegenden Ebene zugewiesen werden, einschließlich individueller Dokumente und Elemente. Die Art der Festlegung von Berechtigungen variiert je nach erforderlichem Genauigkeitsgrad. Die folgenden Schritte stellen eine Art der Erteilung von Berechtigungen dar.  
@@ -116,7 +116,7 @@ ms.locfileid: "66087456"
   
 5.  Wählen Sie **mitwirken**aus, und klicken Sie dann auf **OK**.  
   
-###  <a name="bkmk_dbread"></a>Schritt 3: Erteilen von Leseberechtigungen für den Zugriff auf externe Datenquellen, die bei der Datenaktualisierung verwendet werden  
+###  <a name="step-3-grant-read-permissions-to-access-external-data-sources-used-in-data-refresh"></a><a name="bkmk_dbread"></a>Schritt 3: Erteilen von Leseberechtigungen für den Zugriff auf externe Datenquellen, die bei der Datenaktualisierung verwendet werden  
  Wenn sie Daten in eine PowerPivot-Arbeitsmappe importieren, basieren Verbindungen zu externen Daten häufig auf vertrauenswürdigen oder personifizierten Verbindungen, die die Identität des aktuellen Benutzers verwenden, um eine Verbindung mit der Datenquelle herzustellen. Diese Typen von Verbindungen funktionieren nur, wenn der aktuelle Benutzer über die Berechtigung verfügt, die Daten zu lesen, die er importiert.  
   
  In einem Datenaktualisierungsszenario wird die gleiche Verbindungszeichenfolge, die zum Importieren von Daten verwendet wurde, jetzt erneut verwendet, um die Daten zu aktualisieren. Wenn die Verbindungszeichenfolge den aktuellen Benutzer voraussetzt (z. B. eine Zeichenfolge, die Integrated_Security=SSPI einschließt), dann übergibt der PowerPivot-Systemdienst die in der Zielanwendung angegebene Benutzeridentität als den aktuellen Benutzer. Diese Verbindung ist nur erfolgreich, wenn das Konto über Leseberechtigungen für die externe Datenquelle verfügt.  
@@ -125,7 +125,7 @@ ms.locfileid: "66087456"
   
  Wenn Sie Administrator für die in der Organisation verwendeten Datenquellen sind, können Sie eine Anmeldung erstellen und die erforderlichen Berechtigungen zuweisen. Andernfalls müssen Sie sich an die Besitzer der Daten wenden und die Kontoinformationen angeben. Sie müssen das Windows-Domänenbenutzerkonto angeben, das der Zielanwendung zugeordnet wird. Dies ist das Konto, das Sie in "Schritt 1: Erstellen einer Zielanwendung" in diesem Thema angegeben haben.  
   
-###  <a name="bkmk_verify"></a>Schritt 4: Überprüfen der Konto Verfügbarkeit in den Daten Aktualisierungs Konfigurationsseiten  
+###  <a name="step-4-verify-account-availability-in-data-refresh-configuration-pages"></a><a name="bkmk_verify"></a>Schritt 4: Überprüfen der Konto Verfügbarkeit in den Daten Aktualisierungs Konfigurationsseiten  
   
 1.  Öffnen Sie die Seite zum Konfigurieren der Datenaktualisierung für eine veröffentlichte Arbeitsmappe, die PowerPivot-Daten enthält. Anweisungen zum Öffnen der Seite finden Sie unter [Planen einer Datenaktualisierung &#40;PowerPivot für SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
   
@@ -139,7 +139,7 @@ ms.locfileid: "66087456"
   
  Weitere Informationen zur Problembehandlung finden Sie unter Problembehandlung bei der [Power Pivot-Datenaktualisierung](https://go.microsoft.com/fwlink/p/?LinkID=223279) im TechNet-wiki.  
   
-##  <a name="config3rd"></a>Konfigurieren eines vordefinierten Kontos für den Zugriff auf externe Datenquellen oder Datenquellen von Drittanbietern  
+##  <a name="configure-a-predefined-account-for-accessing-external-or-third-party-data-sources"></a><a name="config3rd"></a>Konfigurieren eines vordefinierten Kontos für den Zugriff auf externe Datenquellen oder Datenquellen von Drittanbietern  
  Datenbankserver werden oft mit eigenen Authentifizierungsmethoden ausgeliefert. Wenn Sie über eine PowerPivot-Arbeitsmappe verfügen, die für den Zugriff auf eine externe Datenquelle während der Datenaktualisierung Datenbank-Anmeldeinformationen erfordert, können Sie eine Zielanwendungs-ID für die Anmeldeinformationen erstellen und dieser Zielanwendung dann Datenbank-Anmeldeinformationen zuordnen.   
   
  Dieser Schritt ist nur notwendig, wenn Sie Benutzer mit einer Option zur Überschreibung der Datenbank-Anmeldeinformationen, die bereits in die Arbeitsmappe PowerPivot eingebettet sind, versehen möchten.  

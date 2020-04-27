@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 161e2cb9dd9eeae4f2ed369b77ab0799ae12a33a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082003"
 ---
 # <a name="define-semiadditive-behavior-business-intelligence-wizard"></a>Semiadditives Verhalten definieren (Business Intelligence-Assistent)
@@ -25,7 +25,7 @@ ms.locfileid: "66082003"
 > [!NOTE]  
 >  Mit Ausnahme von LastChild, das in der Standard Edition verfügbar ist, ist semiadditives Verhalten nur in der Business Intelligence Edition oder der Enterprise Edition verfügbar. Da semiadditives Verhalten darüber hinaus nur für Measures und nicht für Dimensionen definiert wird, wird diese Seite im Business Intelligence-Assistenten nicht angezeigt, wenn er über den Dimensions-Designer oder durch Klicken mit der rechten Maustaste auf eine Dimension im Projektmappen-Explorer von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]gestartet wird.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Semiadditives Verhalten deaktivieren**  
  Deaktiviert das semiadditive Verhalten in allen Measures, die im Cube enthalten sind.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "66082003"
  **Semiadditive Funktion**  
  Wählen Sie die Aggregatfunktion für das ausgewählte Measure aus. In der folgenden Tabelle sind die verfügbaren Aggregatfunktionen aufgelistet.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**AverageOfChildren**|Wird durch Zurückgeben des Durchschnitts der dem Measure untergeordneten Elemente aggregiert.|  
 |`ByAccount`|Wird durch die Aggregatfunktion aggregiert, die dem angegebenen Kontotyp des Attributs in der Kontodimension zugeordnet ist.|  
@@ -55,11 +55,11 @@ ms.locfileid: "66082003"
 |**LastNonEmpty**|Wird durch Zurückgeben des letzten nicht leeren Elements des Measures über eine Zeitdimension aggregiert.|  
 |`Max`|Wird mit der `Max`-Funktion aggregiert.|  
 |`Min`|Wird mit der `Min`-Funktion aggregiert.|  
-|**Keine**|Aggregation wird nicht ausgeführt.|  
+|**None**|Aggregation wird nicht ausgeführt.|  
 |`Sum`|Wird mit der `Sum`-Funktion aggregiert.|  
   
 > [!NOTE]  
->  Die für diese Option getroffene Auswahl gilt nur, wenn **Semiadditives Verhalten für einzelne Member definieren** ausgewählt ist.  
+>  Die für diese Option getroffene Auswahl gilt nur, wenn **Semiadditives Verhalten für einzelne Measures definieren** ausgewählt wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Business Intelligence Wizard (F1-Hilfe)](business-intelligence-wizard-f1-help.md)   

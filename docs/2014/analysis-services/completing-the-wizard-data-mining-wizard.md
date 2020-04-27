@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95b1e9822296e26a187b333140ea89c47cb05466
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087711"
 ---
 # <a name="completing-the-wizard-data-mining-wizard"></a>Abschließen des Assistenten (Data Mining-Assistent)
@@ -27,9 +27,9 @@ ms.locfileid: "66087711"
 > [!NOTE]  
 >  Diese Seite ändert sich je nachdem, ob Sie **Aus vorhandener relationaler Datenbank oder vorhandenem Data Warehouse** oder **Aus vorhandenem Cube** auf der Seite **Definitionsmethode auswählen** des Assistenten ausgewählt haben.  
   
- **Weitere Informationen:** [Data Mining-Assistent &#40;Analysis Services Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Data Mining-Designer](data-mining/data-mining-designer.md), [Erstellen einer relationalen Mining Struktur](data-mining/create-a-relational-mining-structure.md)  
+ **Weitere Informationen:** [Data Mining-Assistent &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Data Mining-Designer](data-mining/data-mining-designer.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Miningstrukturname**  
  Geben Sie den Namen der Miningstruktur ein, der vom **Data Mining-Assistenten**definiert wurde.  
   
@@ -47,13 +47,13 @@ ms.locfileid: "66087711"
  **Vorschau**  
  Zeigt die zu erstellende Miningstruktur an.  
   
- **Mining Modell Dimension erstellen**  
+ **Miningmodelldimension erstellen**  
  Wählen Sie diese Option aus, um basierend auf dem zu erstellenden Miningmodell eine Dimension zu erstellen. Geben Sie, nachdem Sie diese Option ausgewählt haben, den Namen der zu erstellenden Dimension ein. Durch das Auswählen dieser Option wird die Option **Cube mithilfe der Miningmodelldimension erstellen**ausgewählt.  
   
 > [!NOTE]  
 >  Diese Option ist verfügbar, wenn Sie **Aus vorhandenem Cube** auf der Seite **Definitionsmethode auswählen** des Assistenten ausgewählt haben.  
   
- **Cube mithilfe der Mining Modell Dimension erstellen**  
+ **Cube mithilfe der Miningmodelldimension erstellen**  
  Wählen Sie diese Option aus, um basierend auf dem zu erstellenden Miningmodell einen Cube zu erstellen. Geben Sie, nachdem Sie diese Option ausgewählt haben, den Namen des zu erstellenden Cubes ein.  
   
 > [!NOTE]  

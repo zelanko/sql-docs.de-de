@@ -13,18 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ebed4b2b7cc5c6496ab0c681450897a477e4707a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087872"
 ---
 # <a name="cluster-profiles-tab-mining-model-viewer"></a>Registerkarte "Clusterprofile" (Miningmodell-Viewer)
   Auf der Registerkarte **Clusterprofile** erhalten Sie einen Überblick über die vom Algorithmus in einem Clustermodell erkannten Cluster. Die Registerkarte zeigt jedes Attribut zusammen mit der Verteilung des Attributs in jedem Cluster an.  
   
- **Weitere Informationen finden Sie unter:** [Microsoft Clustering-Algorithmus](data-mining/microsoft-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Cluster-Viewer](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
+ **Weitere Informationen:** [Microsoft Clustering-Algorithmus](data-mining/microsoft-clustering-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Cluster-Viewer](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66087872"
  **Zustände**  
  Stellt einen Schlüssel bereit, der angibt, durch welche Farben die einzelnen Status in der entsprechenden Clusterreihe dargestellt werden, oder einen Schieberegler mit einer Raute, mit dem die Verteilung von kontinuierlichen numerischen Werten angegeben wird. Sie können diese Spalte mit dem Kontrollkästchen **Legende anzeigen** ein- und ausblenden.  
   
- **Cluster profile**  
+ **Clusterprofile**  
  Dieser Abschnitt enthält eine Spalte für jeden Cluster im Modell. Für jedes Attribut wird im Histogramm die Verteilung der Werte im Attribut nur für diesen Cluster angezeigt. Das Diagramm enthält auch eine Spalte für **Auffüllung**, bei der ebenfalls mit Histogrammen die Verteilung der Werte für jedes Attribut angezeigt wird, dies jedoch für alle Fälle im Modell.  
   
 ## <a name="see-also"></a>Weitere Informationen  

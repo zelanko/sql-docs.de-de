@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d871ba87147f24fdd60c9effe5f279d9ea355db1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082923"
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Sequenzclusteringmodellabfragebeispiele
@@ -32,18 +32,18 @@ ms.locfileid: "66082923"
   
  [Verwenden des Data Mining-Schemarowsets zur Rückgabe von Modellparametern](#bkmk_Query1)  
   
- [Eine Liste von Sequenzen für einen Status wird angezeigt.](#bkmk_Query2)  
+ [Abrufen einer Liste von Sequenzen für einen Status](#bkmk_Query2)  
   
  [Verwenden gespeicherter System Prozeduren](#bkmk_Query3)  
   
  **Vorhersageabfragen**  
   
- [Vorhersagen des nächsten Zustands oder der Zustände](#bkmk_Query4)  
+ [Vorhersagen des bzw. der nächsten Statuswerte](#bkmk_Query4)  
   
-##  <a name="bkmk_ContentQueries"></a>Suchen nach Informationen über das Sequence Clustering-Modell  
+##  <a name="finding-information-about-the-sequence-clustering-model"></a><a name="bkmk_ContentQueries"></a>Suchen nach Informationen über das Sequence Clustering-Modell  
  Um aussagekräftige Abfragen für den Inhalt eines Miningmodells zu erstellen, müssen Sie die Struktur des Inhaltsmodells kennen und wissen, in welchen Knotentypen welche Arten von Informationen gespeichert sind. Weitere Informationen finden Sie unter [Miningmodellinhalt von Sequence Clustering-Modellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-sequence-clustering-models.md).  
   
-###  <a name="bkmk_Query1"></a>Beispiel Abfrage 1: Verwenden des Data Mining-Schemarowsets zur Rückgabe von Modellparametern  
+###  <a name="sample-query-1-using-the-data-mining-schema-rowset-to-return-model-parameters"></a><a name="bkmk_Query1"></a>Beispiel Abfrage 1: Verwenden des Data Mining-Schemarowsets zur Rückgabe von Modellparametern  
  Durch Abfrage des Data Mining-Schemarowsets können Sie verschiedene Arten von Informationen über das Modell ermitteln, wie grundlegende Metadaten, Datum und Uhrzeit der Modellerstellung und der letzten Modellverarbeitung, den Namen der Miningstruktur, auf der das Modell basiert, und die als vorhersagbares Attribut verwendete Spalte.  
   
  Die folgende Abfrage gibt die Parameter zurück, die verwendet wurden, um das Modell `[Sequence Clustering]`zu erstellen und zu trainieren. Sie können dieses Modell in Lektion 5 vom [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md)erstellen.  
@@ -66,7 +66,7 @@ WHERE MODEL_NAME = 'Sequence Clustering'
   
  Standardmäßig wird der Wert 10 verwendet, da eine geringere Anzahl an Clustern den Benutzern erleichtert, die Daten zu durchsuchen und Gruppierungen der Daten zu verstehen. Jedes Modell und jeder Datensatz ist jedoch anders. Sie können mit verschiedenen Anzahlen von Clustern experimentieren, um zu sehen, welcher Parameterwert das präziseste Modell liefert.  
   
-###  <a name="bkmk_Query2"></a>Beispiel Abfrage 2: erhalten einer Liste von Sequenzen für einen Status  
+###  <a name="sample-query-2-getting-a-list-of-sequences-for-a-state"></a><a name="bkmk_Query2"></a>Beispiel Abfrage 2: erhalten einer Liste von Sequenzen für einen Status  
  Der Miningmodellinhalt speichert die in den Trainingsdaten gefundenen Sequenzen als ersten Status verbunden mit einer Liste aller zugehörigen zweiten Status. Der erste Status wird als Bezeichnung für die Sequenz verwendet. Die zugehörigen zweiten Status werden als Übergänge bezeichnet.  
   
  Die folgende Abfrage gibt beispielsweise die vollständige Liste der ersten Status im Modell zurück, bevor die Sequenzen in Cluster gruppiert werden.  Zum Abrufen dieser Liste geben Sie die Liste der Sequenzen (NODE_TYPE = 13) zurück, deren übergeordneter Knoten der Modellstammknoten ist (PARENT_UNIQUE_NAME = 0). Das FLATTENED-Schlüsselwort erleichtert die Lesbarkeit der Ergebnisse.  
@@ -142,7 +142,7 @@ WHERE NODE_UNIQUE_NAME = '1081365'
   
  Wenn beispielsweise vier Cluster vorliegen, beträgt die Chance, dass eine bestimmte Sequenz zu Cluster 1 gehört, 40 Prozent, dass sie zu Cluster 2 gehört, 30 Prozent, zu Cluster 3 20 Prozent und zu Cluster 4 10 Prozent. Nachdem der Algorithmus den Cluster ermittelt hat, zu dem der Übergang am wahrscheinlichsten gehört, gewichtet er die Wahrscheinlichkeiten innerhalb des Clusters anhand der Cluster-A-priori-Wahrscheinlichkeiten.  
   
-###  <a name="bkmk_Query3"></a>Beispiel Abfrage 3: Verwenden von gespeicherten System Prozeduren  
+###  <a name="sample-query-3-using-system-stored-procedures"></a><a name="bkmk_Query3"></a>Beispiel Abfrage 3: Verwenden von gespeicherten System Prozeduren  
  Sie können aus diesen Abfragebeispielen ersehen, dass die im Modell gespeicherten Informationen komplex sind und Sie gegebenenfalls mehrere Abfragen erstellen müssen, um die gewünschten Informationen abzurufen. Der Microsoft Sequence Clustering-Viewer bietet jedoch einen Satz leistungsstarker Tools, mit denen die in einem Sequenzclustermodell enthaltenen Informationen grafisch durchsucht werden können. Mit dem Viewer können Sie außerdem eine Abfrage und einen Drilldown für das Modell durchführen.  
   
  In den meisten Fällen werden die im Microsoft Sequence Clustering-Viewer dargestellten Informationen erstellt, indem das Modell anhand der Analysis Services-gespeicherten Systemprozeduren abgefragt wird. Die gleichen Informationen können Sie auch abrufen, indem Sie DMX (Data Mining-Erweiterungen)-Abfragen für den Modellinhalt schreiben. Die Analysis Services-gespeicherten Systemprozeduren bieten eine schnelle und einfache Möglichkeiten, Modelle zu erforschen und zu testen.  
@@ -155,11 +155,9 @@ WHERE NODE_UNIQUE_NAME = '1081365'
 #### <a name="cluster-profiles-and-sample-cases"></a>Clusterprofile und Beispielfälle  
  Die Registerkarte Clusterprofile enthält eine Liste der Cluster im Modell, die Größe der einzelnen Cluster und ein Histogramm, das die im Cluster enthaltenen Statuswerte angibt. Es gibt zwei gespeicherte Systemprozeduren, die Sie in Abfragen verwenden können, um ähnliche Informationen abzurufen:  
   
--   
-  `GetClusterProfile` gibt die Merkmale des Clusters mit allen Informationen zurück, die in der Tabelle NODE_DISTRIBUTION für den Cluster gefunden werden.  
+-   `GetClusterProfile` gibt die Merkmale des Clusters mit allen Informationen zurück, die in der Tabelle NODE_DISTRIBUTION für den Cluster gefunden werden.  
   
--   
-  `GetNodeGraph` gibt Knoten und Kanten zurück, mit denen eine mathematische Grafikdarstellung der Cluster erstellt werden kann. Diese hängen von der ersten Registerkarte der Sequenzclustersicht ab. Die Knoten entsprechen Clustern, und die Kanten stellen die Gewichtung oder Stärke dar.  
+-   `GetNodeGraph` gibt Knoten und Kanten zurück, mit denen eine mathematische Grafikdarstellung der Cluster erstellt werden kann. Diese hängen von der ersten Registerkarte der Sequenzclustersicht ab. Die Knoten entsprechen Clustern, und die Kanten stellen die Gewichtung oder Stärke dar.  
   
  Im folgenden Beispiel wird veranschaulicht, wie anhand der gespeicherten Systemprozedur `GetClusterProfiles`alle Cluster im Modell mit den entsprechenden Profilen zurückgegeben werden. Diese gespeicherte Prozedur führt eine Reihe von DMX-Anweisungen aus, die die Gesamtmenge der Profile im Modell zurückgeben. Um diese gespeicherte Prozedur zu verwenden, müssen Sie jedoch die Adresse des Modells kennen.  
   
@@ -216,7 +214,7 @@ CALL System.Microsoft.AnalysisServices.System.DataMining.Clustering.GetClusterDi
 ## <a name="using-the-model-to-make-predictions"></a>Treffen von Vorhersagen mit dem Modell  
  Vorhersageabfragen für ein Sequenzclustermodell können viele der Vorhersagefunktionen integrieren, die von anderen Clustermodellen verwendet werden. Darüber hinaus können Sie die spezielle Vorhersagefunktion [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx)verwenden, um Empfehlungen oder Vorhersagen zu den nächsten Statuswerten vorzunehmen.  
   
-###  <a name="bkmk_Query4"></a>Beispiel Abfrage 4: Vorhersagen des nächsten Zustands oder der Zustände  
+###  <a name="sample-query-4-predict-next-state-or-states"></a><a name="bkmk_Query4"></a>Beispiel Abfrage 4: Vorhersagen des nächsten Zustands oder der Zustände  
  Mit der [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx) -Funktion können Sie anhand eines Werts den wahrscheinlich nächsten Status vorhersagen. Außerdem können Sie mehrere nächste Statuswerte vorhersagen: Sie können beispielsweise eine Liste mit den drei wahrscheinlichsten Produkten zurückgeben, die der Kunde kaufen wird, um ihm eine Liste mit Empfehlungen zu präsentieren.  
   
  Bei der folgenden Beispielabfrage handelt es sich um eine SINGLETON-Abfrage, die die fünf besten Vorhersagen mit den entsprechenden Wahrscheinlichkeiten zurückgibt. Da das Modell eine geschachtelte Tabelle enthält, müssen Sie bei der Erstellung von Vorhersagen die geschachtelte Tabelle `[v Assoc Seq Line Items]`als Spaltenverweis verwenden. Wenn Sie außerdem Werte als Eingaben bereitstellen, müssen Sie die Spalten sowohl der Falltabelle als auch der geschachtelten Tabelle verknüpfen, wie in den geschachtelten SELECT-Anweisungen gezeigt.  
@@ -256,20 +254,20 @@ AS t
 |||  
 |-|-|  
 |Vorhersagefunktion|Verwendung|  
-|[Cluster &#40;DMX-&#41;](/sql/dmx/cluster-dmx)|Gibt den Cluster zurück, der mit der höchsten Wahrscheinlichkeit den Eingabefall enthält.|  
-|[ClusterDistance &#40;DMX-&#41;](/sql/dmx/clusterdistance-dmx)|Gibt den Abstand des Eingabefalls von dem angegebenen Cluster zurück, beziehungsweise, wenn kein Cluster angegeben wurde, den Abstand des Eingabefalls von dem wahrscheinlichsten Cluster.<br /><br /> Diese Funktion kann mit jedem Clusteringmodell verwendet werden (EM, K-Means usw.), die Ergebnisse unterscheiden sich jedoch in Abhängigkeit von dem Algorithmus.|  
-|[Clusterwahrscheinlichkeit &#40;DMX-&#41;](/sql/dmx/clusterprobability-dmx)|Gibt die Wahrscheinlichkeit zurück, mit der der Eingabefall zum angegebenen Cluster gehört.|  
-|[IsInNode &#40;DMX-&#41;](/sql/dmx/isinnode-dmx)|Zeigt an, ob der angegebene Knoten den aktuellen Fall enthält.|  
-|[Der prätadjustedwahrscheinlichkeits-&#40;DMX-&#41;](/sql/dmx/predictadjustedprobability-dmx)|Gibt die angepasste Wahrscheinlichkeit für einen bestimmten Status zurück.|  
-|[Prätassociation &#40;DMX-&#41;](/sql/dmx/predictassociation-dmx)|Sagt eine assoziative Mitgliedschaft voraus.|  
-|[Prätcaselikelihood &#40;DMX-&#41;](/sql/dmx/predictcaselikelihood-dmx)|Gibt die Wahrscheinlichkeit zurück, mit der ein Eingabefall in ein vorhandenes Modell passt.|  
-|[Prädistogram &#40;DMX-&#41;](/sql/dmx/predicthistogram-dmx)|Gibt eine Tabelle zurück, die einem Histogramm für die Vorhersage einer bestimmten Spalte entspricht.|  
-|[Prätnodeid &#40;DMX-&#41;](/sql/dmx/predictnodeid-dmx)|Gibt die Knoten-ID des Knotens zurück, für den der Fall klassifiziert ist.|  
-|[Prätwahrscheinlichkeit &#40;DMX-&#41;](/sql/dmx/predictprobability-dmx)|Gibt die Wahrscheinlichkeit für einen bestimmten Status zurück.|  
-|[Prätsequence &#40;DMX-&#41;](/sql/dmx/predictsequence-dmx)|Sagt zukünftige Sequenzwerte für eine angegebene Gruppe von Sequenzdaten voraus.|  
-|[Prätstdev &#40;DMX-&#41;](/sql/dmx/predictstdev-dmx)|Gibt die vorhergesagte Standardabweichung für die angegebene Spalte zurück.|  
-|[Prätsupport &#40;DMX-&#41;](/sql/dmx/predictsupport-dmx)|Gibt den Unterstützungswert für einen bestimmten Status zurück.|  
-|[Prävarianz &#40;DMX-&#41;](/sql/dmx/predictvariance-dmx)|Gibt die Varianz einer angegebenen Spalte zurück.|  
+|[Cluster &#40;DMX&#41;](/sql/dmx/cluster-dmx)|Gibt den Cluster zurück, der mit der höchsten Wahrscheinlichkeit den Eingabefall enthält.|  
+|[ClusterDistance &#40;DMX&#41;](/sql/dmx/clusterdistance-dmx)|Gibt den Abstand des Eingabefalls von dem angegebenen Cluster zurück, beziehungsweise, wenn kein Cluster angegeben wurde, den Abstand des Eingabefalls von dem wahrscheinlichsten Cluster.<br /><br /> Diese Funktion kann mit jedem Clusteringmodell verwendet werden (EM, K-Means usw.), die Ergebnisse unterscheiden sich jedoch in Abhängigkeit von dem Algorithmus.|  
+|[ClusterProbability &#40;DMX&#41;](/sql/dmx/clusterprobability-dmx)|Gibt die Wahrscheinlichkeit zurück, mit der der Eingabefall zum angegebenen Cluster gehört.|  
+|[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|Zeigt an, ob der angegebene Knoten den aktuellen Fall enthält.|  
+|[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Gibt die angepasste Wahrscheinlichkeit für einen bestimmten Status zurück.|  
+|[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|Sagt eine assoziative Mitgliedschaft voraus.|  
+|[PredictCaseLikelihood &#40;DMX&#41;](/sql/dmx/predictcaselikelihood-dmx)|Gibt die Wahrscheinlichkeit zurück, mit der ein Eingabefall in ein vorhandenes Modell passt.|  
+|[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Gibt eine Tabelle zurück, die einem Histogramm für die Vorhersage einer bestimmten Spalte entspricht.|  
+|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|Gibt die Knoten-ID des Knotens zurück, für den der Fall klassifiziert ist.|  
+|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|Gibt die Wahrscheinlichkeit für einen bestimmten Status zurück.|  
+|[PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx)|Sagt zukünftige Sequenzwerte für eine angegebene Gruppe von Sequenzdaten voraus.|  
+|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|Gibt die vorhergesagte Standardabweichung für die angegebene Spalte zurück.|  
+|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|Gibt den Unterstützungswert für einen bestimmten Status zurück.|  
+|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|Gibt die Varianz einer angegebenen Spalte zurück.|  
   
  Eine Liste der Funktionen, die von allen [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Algorithmen verwendet werden, finden Sie unter [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx). Die Syntax einzelner Funktionen finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; – Funktionsreferenz](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
@@ -277,6 +275,6 @@ AS t
  [Data Mining-Abfragen](data-mining-queries.md)   
  [Technische Referenz für den Microsoft Sequence Clustering-Algorithmus](microsoft-sequence-clustering-algorithm-technical-reference.md)   
  [Microsoft Sequence Clustering-Algorithmus](microsoft-sequence-clustering-algorithm.md)   
- [Mining Modell Inhalt von Sequence Clustering-Modellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-sequence-clustering-models.md)  
+ [Miningmodellinhalt von Sequence Clustering-Modellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

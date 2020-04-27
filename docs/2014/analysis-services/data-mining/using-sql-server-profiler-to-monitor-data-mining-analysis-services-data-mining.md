@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3aa29cede2849158162aba27332d5fe7f8f5fae5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082703"
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>Verwenden von SQL Server Profiler zum Überwachen von Data Mining (Analysis Services – Data Mining)
@@ -29,14 +29,14 @@ ms.locfileid: "66082703"
 ## <a name="using-traces-to-monitor-data-mining"></a>Verwenden von Ablaufverfolgungen zum Überwachen von Data Mining  
  Wenn Sie Daten in einer Ablaufverfolgung aufzeichnen, können Sie festlegen, ob die Daten in einer Datei, einer Tabelle oder einer Instanz von SQL Server gespeichert werden sollen. Unabhängig davon, welche Methode Sie zum Speichern der Daten wählen, können Sie die Ablaufverfolgung mithilfe von SQL Server Profiler anzeigen und nach Ereignissen filtern. In der folgenden Tabellen werden einige Ereignisse und Unterklassen der Standard-Ablaufverfolgung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] aufgeführt, die beim Data Mining von Interesse sind.  
   
-|EventClass|EventSubclass|BESCHREIBUNG|  
+|EventClass|EventSubclass|Beschreibung|  
 |----------------|-------------------|-----------------|  
-|**Query Begin**<br /><br /> **Query End**|**0-MdxQuery**|Enthält den Text aller Aufrufe an von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gespeicherten Prozeduren.|  
-|**Query Begin**<br /><br /> **Query End**|**1-dmxquery**|Enthält den Text und die Ergebnisse von Data Mining Extension (DMX)-Anweisungen.|  
-|**Progress Report Begin**<br /><br /> **Progress Report End**|**34-dataminingprogress**|Liefert Informationen über den Status des Data Mining-Algorithmus: Wenn Sie beispielsweise ein Clustering-Modell erstellen, erhalten Sie eine Statusmeldung, die besagt, welcher Kandidaten-Cluster gerade erstellt wird.|  
-|**Query Begin**<br /><br /> **Query End**|EXECUTESQL|Enthält den Text der Transact-SQL-Abfrage, die gerade ausgeführt wird.|  
-|**Query Begin**<br /><br /> **Query End**|**2-sqlQuery**|Enthält den Text beliebiger Abfragen für Schemarowsets in Form von Systemtabellen.|  
-|**Anfang ermitteln**<br /><br /> **Ende ermitteln**|Mehrere|Enthält den Text der DMX-Funktionsaufrufe oder der in XMLA gekapselten DISCOVER-Anweisungen.|  
+|**Beginn der Abfrage**<br /><br /> **Ende der Abfrage**|**0 - MDXQuery**|Enthält den Text aller Aufrufe an von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gespeicherten Prozeduren.|  
+|**Beginn der Abfrage**<br /><br /> **Ende der Abfrage**|**1 - DMXQuery**|Enthält den Text und die Ergebnisse von Data Mining Extension (DMX)-Anweisungen.|  
+|**Fortschrittsberichts Beginn**<br /><br /> **Progress Report End**|**34 - DataMiningProgress**|Liefert Informationen über den Status des Data Mining-Algorithmus: Wenn Sie beispielsweise ein Clustering-Modell erstellen, erhalten Sie eine Statusmeldung, die besagt, welcher Kandidaten-Cluster gerade erstellt wird.|  
+|**Beginn der Abfrage**<br /><br /> **Ende der Abfrage**|EXECUTESQL|Enthält den Text der Transact-SQL-Abfrage, die gerade ausgeführt wird.|  
+|**Beginn der Abfrage**<br /><br /> **Ende der Abfrage**|**2-sqlQuery**|Enthält den Text beliebiger Abfragen für Schemarowsets in Form von Systemtabellen.|  
+|**Anfang ermitteln**<br /><br /> **DISCOVER End**|Mehrere|Enthält den Text der DMX-Funktionsaufrufe oder der in XMLA gekapselten DISCOVER-Anweisungen.|  
 |**Fehler**|(none)|Enthält den Text von Fehlern, die vom Server an den Client gesendet werden.<br /><br /> Fehlermeldungen, die das Präfix **Fehler (Data Mining):** oder **Information (Data Mining):** aufweisen, werden spezifisch als Antwort auf DMX-Anforderungen erstellt. Es reicht jedoch nicht aus, nur diese Fehlermeldungen anzuzeigen. Andere Fehler, die zum Beispiel vom Parser erzeugt worden sind, können ebenfalls mit Data Mining zu tun haben, verfügen jedoch nicht über ein derartiges Präfix.|  
   
  Durch die Anzeige der Befehlsanweisungen im Ablaufverfolgungsprotokoll können Sie auch die Syntax komplexer Anweisungen überprüfen, die vom Client an den [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server gesendet werden – darunter auch Aufrufe an vom System gespeicherten Prozeduren. Diese Informationen können Ihnen bei der Fehlerbehebung helfen. Sie haben auch die Möglichkeit, gültige Anweisungen als Vorlage zum Erstellen neuer Vorhersageabfragen oder Modelle zu verwenden. Einige Beispiele für gespeicherte Prozeduraufrufe, die Sie über eine Ablaufverfolgung aufzeichnen können, finden Sie unter [Beispiele für Clusteringmodellabfragen](clustering-model-query-examples.md).  

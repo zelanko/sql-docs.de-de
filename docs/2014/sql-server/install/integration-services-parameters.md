@@ -13,18 +13,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 100e796bb27d1e60db000a364a0432273dd5cafb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094234"
 ---
 # <a name="integration-services-parameters"></a>Integration Services-Parameter
   Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]können Sie sich entscheiden, Pakete [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] auf dem Computer zu analysieren, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] oder Paketdateien im Dateisystem. Wenn Sie sich dafür entscheiden, Dateien im Dateisystem zu analysieren, müssen Sie einen Pfad zum Ordner angeben, der die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete enthält.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **SSIS-Pakete auf dem Computer analysieren**  
- Wählen Sie diese Option aus [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , um Pakete auf dem Computer zu analysieren. Standardmäßig ist diese Option ausgewählt.  
+ Wählen Sie diese Option aus [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] , um Pakete auf dem Computer zu analysieren. Diese Option ist standardmäßig ausgewählt.  
   
  **SSIS-Paketdateien analysieren**  
  Wählen Sie diese Option aus, um [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Pakete im Dateisystem zu analysieren.  

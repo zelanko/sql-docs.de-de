@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 78f8581839b6b4bdd761c25a1a207e942ae37f62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087970"
 ---
 # <a name="classification-matrix-sql-server-data-mining-add-ins"></a>Klassifikationsmatrix (SQL Server Data Mining-Add-Ins)
@@ -74,7 +74,7 @@ ms.locfileid: "66087970"
   
      Vom Assistenten wird ein Bericht erstellt, der die Klassifikationsmatrix und andere Details der Analyse enthält. Der Bericht wird als Tabelle in Excel gespeichert. Oberhalb des Berichts befindet sich eine Zusammenfassung, die angibt, wie viele Fälle richtig vorhergesagt wurden und wie viele Vorhersagen falsch waren.  
   
-### <a name="requirements"></a>Requirements (Anforderungen)  
+### <a name="requirements"></a>Anforderungen  
   
 -   Zum Erstellen einer Klassifikationsmatrix benötigen Sie Zugriff auf ein vorhandenes Miningmodell, das Genauigkeitsmessungen unterstützt. Vorhersagemodelle und Zuordnungsmodelle können nicht mithilfe dieses Tools ausgewertet werden.  
   

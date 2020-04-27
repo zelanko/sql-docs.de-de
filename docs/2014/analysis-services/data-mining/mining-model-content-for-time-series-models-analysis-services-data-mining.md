@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73539ddcf9162cbedabfc0bad82da1fd9788d241
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083528"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Miningmodellinhalt von Zeitreihenmodellen (Analysis Services &ndash; Data Mining)
@@ -101,11 +101,11 @@ ms.locfileid: "66083528"
  NODE_UNIQUE_NAME  
  Der eindeutige Name des Knotens. Dem übergeordneten Knoten des Modells wird stets der Name **TS**zugewiesen.  
   
- **ARTxp:** Jeder Knoten wird durch TS gefolgt von einem hexadezimalen numerischen Wert dargestellt. Die Reihenfolge der Knoten ist hierbei nicht von Bedeutung.  
+ **ARTXP:** Jeder Knoten wird durch TS gefolgt von einem hexadezimalen numerischen Wert dargestellt. Die Reihenfolge der Knoten ist hierbei nicht von Bedeutung.  
   
  Die der TS-Struktur direkt untergeordneten ARTXP-Knoten können beispielsweise die Bezeichnung TS00000001-TS0000000b aufweisen.  
   
- **ARIMA:** Jeder Knoten in einer ARIMA-Struktur wird durch TA gefolgt von einem hexadezimalen numerischen Wert dargestellt. Die untergeordneten Knoten weisen den eindeutigen Namen des übergeordneten Knotens gefolgt von einer weiteren Hexadezimalzahl auf, mit der die Reihenfolge innerhalb des Knotens angegeben wird.  
+ **ARIMA:** Jeder Knoten in der ARIMA-Struktur wird durch TA gefolgt von einem hexadezimalen numerischen Wert dargestellt. Die untergeordneten Knoten weisen den eindeutigen Namen des übergeordneten Knotens gefolgt von einer weiteren Hexadezimalzahl auf, mit der die Reihenfolge innerhalb des Knotens angegeben wird.  
   
  Alle ARIMA-Strukturen sind genau gleich strukturiert. Jedes Stammelement enthält die in der folgenden Tabelle dargestellten Knoten und Benennungskonvention:  
   
@@ -121,7 +121,7 @@ ms.locfileid: "66083528"
   
  **ARTxp**  
   
-|Knotentyp-ID|BESCHREIBUNG|  
+|Knotentyp-ID|Beschreibung|  
 |------------------|-----------------|  
 |1 (Model)|Zeitreihe|  
 |3 (Innen)|Stellt eine Verzweigung innerhalb einer ARTXP-Zeitreihenstruktur dar.|  
@@ -130,7 +130,7 @@ ms.locfileid: "66083528"
   
  **ARIMA**  
   
-|Knotentyp-ID|BESCHREIBUNG|  
+|Knotentyp-ID|Beschreibung|  
 |------------------|-----------------|  
 |27 (ARIMA-Stamm)|Der oberste Knoten einer ARIMA-Struktur.|  
 |28 (ARIMA Periodische Struktur)|Komponente einer ARIMA-Struktur, die eine einzelne periodische Struktur beschreibt.|  
@@ -142,9 +142,9 @@ ms.locfileid: "66083528"
   
  Diese Eigenschaft dient hauptsächlich zu Anzeigezwecken.  
   
- **ARTxp:** Enthält die Split-Bedingung für den Knoten, die als Kombination aus Attribut und Wertebereich angezeigt wird.  
+ **ARTXP:** Enthält die Teilungsbedingung für den Knoten, die als Kombination aus Attribut und Wertebereich angezeigt wird.  
   
- **ARIMA:** Enthält die Kurzform der ARIMA-Gleichung.  
+ **ARIMA:** Enthält die Kurzform der ARIMA-Formel.  
   
  Informationen über das Format der ARIMA-Formel finden Sie unter [Mininglegende für die ARIMA-Formel](#bkmk_ARIMA_2).  
   
@@ -157,31 +157,31 @@ ms.locfileid: "66083528"
  NODE_DESCRIPTION  
  Eine Textbeschreibung der Regeln, Teilungen bzw. Formeln im aktuellen Knoten.  
   
- **ARTxp:** Weitere Informationen finden Sie Untergrund Legendes [zur ARTxp](#bkmk_ARTXP_1)-Struktur.  
+ **ARTXP:** Weitere Informationen finden Sie unter [Grundlegendes zur ARTXP-Struktur](#bkmk_ARTXP_1).  
   
- **ARIMA:** Weitere Informationen finden Sie Untergrund Legendes [zur ARIMA](#bkmk_ARIMA_1)-Struktur.  
+ **ARIMA:** Weitere Informationen finden Sie unter [Grundlegendes zur ARIMA-Struktur](#bkmk_ARIMA_1).  
   
  NODE_RULE  
  Eine XML-Beschreibung der Regeln, Teilungen bzw. Formeln im aktuellen Knoten.  
   
- **ARTxp:** Der NODE_RULE entspricht im Allgemeinen dem NODE_CAPTION.  
+ **ARTXP:** NODE_RULE entspricht im Allgemeinen NODE_CAPTION.  
   
- **ARIMA:** Weitere Informationen finden Sie Untergrund Legendes [zur ARIMA](#bkmk_ARIMA_1)-Struktur.  
+ **ARIMA:** Weitere Informationen finden Sie unter [Grundlegendes zur ARIMA-Struktur](#bkmk_ARIMA_1).  
   
  MARGINAL_RULE  
  Eine XML-Beschreibung der knotenspezifischen Teilung bzw. des knotenspezifischen Inhalts.  
   
- **ARTxp:** Der MARGINAL_RULE entspricht im Allgemeinen dem NODE_DESCRIPTION.  
+ **ARTXP:** MARGINAL_RULE entspricht im Allgemeinen NODE_DESCRIPTION.  
   
- **ARIMA:** Immer leer. Verwenden Sie stattdessen NODE_RULE.  
+ **ARIMA:** Immer leer; verwenden Sie stattdessen NODE_RULE.  
   
  NODE_PROBABILITY  
- **ARTxp:** Für Struktur Knoten immer 1. Für Blattknoten die Wahrscheinlichkeit für das Erreichen des Knotens vom Modellstammknoten aus.  
+ **ARTXP:** Für Strukturknoten immer 1. Für Blattknoten die Wahrscheinlichkeit für das Erreichen des Knotens vom Modellstammknoten aus.  
   
  **ARIMA:** Immer 0.  
   
  MARGINAL_PROBABILITY  
- **ARTxp:** Für Struktur Knoten immer 1. Für Blattknoten die Wahrscheinlichkeit für das Erreichen des Knotens vom direkt übergeordneten Knoten aus.  
+ **ARTXP:** Für Strukturknoten immer 1. Für Blattknoten die Wahrscheinlichkeit für das Erreichen des Knotens vom direkt übergeordneten Knoten aus.  
   
  **ARIMA:** Immer 0.  
   
@@ -197,7 +197,7 @@ ms.locfileid: "66083528"
  NODE_SUPPORT  
  Die Anzahl der Fälle, die diesen Knoten unterstützen.  
   
- **ARTxp:** Gibt für den Knoten **(alle)** die Gesamtzahl der in der Verzweigung enthaltenen Zeit Scheiben an.  
+ **ARTXP:** Gibt für den Knoten **(Alle)** die Gesamtzahl der in der Verzweigung enthaltenen Zeitscheiben an.  
   
  Gibt für Endknoten die Anzahl der Zeitscheiben an, die in dem mit NODE_CAPTION angegebenen Bereich enthalten sind. Die Anzahl der Zeitscheiben in den Endknoten wird stets zu dem NODE_SUPPORT-Wert des Knotens **(Alle)** addiert.  
   
@@ -209,18 +209,18 @@ ms.locfileid: "66083528"
  MSOLAP_NODE_SCORE  
  Ein numerischer Wert, der den Informationswert der Struktur bzw. der Teilung kennzeichnet.  
   
- **ARTxp:** Der Wert ist für Knoten ohne Teilung immer 0,0. Für Knoten mit einer Teilung stellt der Wert den Interessantheitsgrad der Teilung dar.  
+ **ARTXP:** Für Knoten ohne eine Teilung ist der Wert immer 0.0. Für Knoten mit einer Teilung stellt der Wert den Interessantheitsgrad der Teilung dar.  
   
  Weitere Informationen zu Bewertungsmethoden finden Sie unter [Featureauswahl &#40;Data Mining&#41;](feature-selection-data-mining.md).  
   
- **ARIMA:**  Das "bayyesian Information Kriterium"-Ergebnis (BIC) des ARIMA-Modells. Dieser Wert wird für alle auf die Formel bezogenen ARIMA-Knoten festgelegt.  
+ **ARIMA:**  Der BIC-Wert (Bayesian Information Criterion) des ARIMA-Modells. Dieser Wert wird für alle auf die Formel bezogenen ARIMA-Knoten festgelegt.  
   
  MSOLAP_NODE_SHORT_CAPTION  
- **ARTxp:**  Die gleichen Informationen wie die NODE_DESCRIPTION.  
+ **ARTXP:**  Dieselben Informationen wie bei NODE_DESCRIPTION.  
   
- **ARIMA:** Die gleichen Informationen wie die NODE_CAPTION: das heißt, die Kurzform der ARIMA-Gleichung.  
+ **ARIMA:** Dieselben Informationen wie bei NODE_CAPTION, d.h. die Kurzform der ARIMA-Formel.  
   
-##  <a name="bkmk_ARTXP_1"></a>Grundlegendes zur ARTxp-Struktur  
+##  <a name="understanding-the-artxp-tree"></a><a name="bkmk_ARTXP_1"></a>Grundlegendes zur ARTxp-Struktur  
  Das ARTXP-Modell dient zur klaren Trennung der linearen Datenbereiche von den Datenbereichen, die nach anderen Faktoren unterteilt werden. Wenn die Änderungen im vorhersagbaren Attribut direkt als Funktion der unabhängigen Variablen dargestellt werden können, wird stets eine Regressionsformel zur Darstellung dieser Beziehung berechnet.  
   
  Beispiel: Wenn für die meisten Datenreihen eine direkte Korrelation zwischen Zeit- und Verkaufswerten besteht, ist jede Reihe in einer Zeitreihenstruktur (NODE_TYPE =16) enthalten, die keine untergeordneten Knoten für die einzelnen Datenreihen aufweist, sondern lediglich eine Regressionsformel. Wenn die Beziehung jedoch nicht linear ist, kann eine ARTXP-Zeitreihenstruktur anhand von Bedingungen in untergeordnete Knoten unterteilt werden wie bei einem Entscheidungsstrukturmodell. Wenn Sie den Modellinhalt im **Microsoft Generic Content Tree Viewer** anzeigen, sehen Sie, wo die Teilungen auftreten und welche Auswirkungen sie auf die Trendlinien haben.  
@@ -246,7 +246,7 @@ ms.locfileid: "66083528"
 ### <a name="elements-of-the-artxp-time-series-formula"></a>Elemente der ARTXP-Zeitreihenformel  
  Verwenden Sie zur Anzeige der kompletten Formel für eine ARTXP-Struktur oder -Verzweigung die **Mininglegende** im [Microsoft Time Series-Viewer](browse-a-model-using-the-microsoft-time-series-viewer.md), in der alle Konstanten im lesbaren Format dargestellt werden.  
   
--   [Anzeigen der Formel für ein Zeitreihen Modell &#40;Data Mining-&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [Anzeigen der Formel für ein Zeitreihenmodell &#40;Data Mining&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
   
  Im folgenden Abschnitt werden eine Beispielformel und die grundlegenden Begriffe vorgestellt.  
   
@@ -272,7 +272,7 @@ ms.locfileid: "66083528"
 #### <a name="model-content-for-an-artxp-formula"></a>Modellinhalt einer ARTXP-Formel  
  In der folgenden Tabelle werden dieselben Informationen für die Formel angezeigt und der Inhalt des relevanten Knotens verwendet, wie im [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md) angezeigt.  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|Varianz|VALUETYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Alias|PROBABILITY|Varianz|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
 |Quantity(R250 Europe,y-intercept)|21.3223433563772|11|0|1.65508795539661|11 (Intercept)|  
 |Quantity(R250 Europe,-1)|0.0691694140876526|0|0|0|7 (Koeffizient)|  
@@ -308,7 +308,7 @@ FROM Forecasting.CONTENT
 WHERE NODE_TYPE = 15  
 ```  
   
-##  <a name="bkmk_ARIMA_1"></a>Grundlegendes zur ARIMA-Struktur  
+##  <a name="understanding-the-arima-tree"></a><a name="bkmk_ARIMA_1"></a> Grundlegendes zur ARIMA-Struktur  
  Jede Struktur in einem ARIMA-Modell entspricht einer *Periodizität* oder *periodischen Struktur*. Eine periodische Struktur ist ein Datenmuster, das sich durch die gesamte Datenreihe zieht. Geringfügige Abweichungen in diesem Muster sind innerhalb statistischer Grenzen erlaubt. Die Periodizität wird nach den Standardzeiteinheiten gemessen, die in den Trainingsdaten verwendet wurden. Beispiel: Wenn die Trainingsdaten Verkaufsdaten für jeden Tag enthalten, ist die Standardzeiteinheit ein Tag, und alle periodischen Strukturen werden als Anzahl von Tagen definiert.  
   
  Jede periodische Struktur, die vom Algorithmus erkannt wird, erhält einen eigenen Strukturknoten. Wenn Sie z. B. Verkaufsdaten auf Tagesbasis analysieren, können periodische Strukturen erkannt werden, die Wochen darstellen. In diesem Fall erstellt der Algorithmus zwei periodische Strukturen im fertigen Modell: einen für den standardmäßigen täglichen Zeitraum, der als {1}bezeichnet wird, und einen für Wochen, der durch {7}angegeben wird.  
@@ -325,17 +325,17 @@ WHERE NODE_TYPE = 27
   
 |MODEL_NAME|ATTRIBUTE_NAME|NODE_NAME|NODE_TYPE|NODE_CAPTION|  
 |-----------------|---------------------|----------------|----------------|-------------------|  
-|Vorhersagen|M200 Europe: Quantity|TA00000000|27|ARIMA (1,0,1)|  
-|Vorhersagen|M200 North America:Quantity|TA00000001|27|ARIMA (1,0,4) X (1,1,4)(6)|  
-|Vorhersagen|M200 Pacific:Quantity|TA00000002|27|ARIMA (2,0,8) X (1,0,0)(4)|  
-|Vorhersagen|M200 Pacific:Quantity|TA00000002|27|ARIMA (2,0,8) X (1,0,0)(4)|  
-|Vorhersagen|R250 Europe:Quantity|TA00000003|27|ARIMA (1,0,7)|  
-|Vorhersagen|R250 North America:Quantity|TA00000004|27|ARIMA (1,0,2)|  
-|Vorhersagen|R250 Pacific:Quantity|TA00000005|27|ARIMA (2,0,2) X (1,1,2)(12)|  
-|Vorhersagen|R750 Europe:Quantity|TA00000006|27|ARIMA (2,1,1) X (1,1,5)(6)|  
-|Vorhersagen|T1000 Europe:Quantity|TA00000009|27|ARIMA (1,0,1)|  
-|Vorhersagen|T1000 North America:Quantity|TA0000000a|27|ARIMA (1,1,1)|  
-|Vorhersagen|T1`000 Pacific:Quantity|TA0000000b|27|ARIMA (1,0,3)|  
+|Vorhersage|M200 Europe: Quantity|TA00000000|27|ARIMA (1,0,1)|  
+|Vorhersage|M200 North America:Quantity|TA00000001|27|ARIMA (1,0,4) X (1,1,4)(6)|  
+|Vorhersage|M200 Pacific:Quantity|TA00000002|27|ARIMA (2,0,8) X (1,0,0)(4)|  
+|Vorhersage|M200 Pacific:Quantity|TA00000002|27|ARIMA (2,0,8) X (1,0,0)(4)|  
+|Vorhersage|R250 Europe:Quantity|TA00000003|27|ARIMA (1,0,7)|  
+|Vorhersage|R250 North America:Quantity|TA00000004|27|ARIMA (1,0,2)|  
+|Vorhersage|R250 Pacific:Quantity|TA00000005|27|ARIMA (2,0,2) X (1,1,2)(12)|  
+|Vorhersage|R750 Europe:Quantity|TA00000006|27|ARIMA (2,1,1) X (1,1,5)(6)|  
+|Vorhersage|T1000 Europe:Quantity|TA00000009|27|ARIMA (1,0,1)|  
+|Vorhersage|T1000 North America:Quantity|TA0000000a|27|ARIMA (1,1,1)|  
+|Vorhersage|T1`000 Pacific:Quantity|TA0000000b|27|ARIMA (1,0,3)|  
   
  Anhand dieser Ergebnisse, die Sie auch mit dem [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md) anzeigen können, erkennen Sie unmittelbar, welche Reihen vollständig linear sind, welche mehrere periodische Strukturen aufweisen und um welche Periodizitäten es sich handelt.  
   
@@ -365,21 +365,21 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
 |MODEL_NAME|ATTRIBUTE_NAME|NODE_UNIQUE_NAME|NODE_TYPE|NODE_CAPTION|  
 |-----------------|---------------------|------------------------|----------------|-------------------|  
-|Vorhersagen|M200 North America:Quantity|TA00000001000000010|29|ARIMA {1,0.961832044807041}|  
-|Vorhersagen|M200 North America:Quantity|TA00000001000000011|30|ARIMA {1,-3.51073103693271E-02,2.15731642954099,-0.220314343327742,-1.33151478258758}|  
-|Vorhersagen|M200 North America:Quantity|TA00000001000000000|29|ARIMA {1,0.643565911081657}|  
-|Vorhersagen|M200 North America:Quantity|TA00000001000000001|30|ARIMA {1,1.45035399809581E-02,-4.40489283927752E-02,-0.19203901352577,0.242202497643993}|  
+|Vorhersage|M200 North America:Quantity|TA00000001000000010|29|ARIMA {1,0.961832044807041}|  
+|Vorhersage|M200 North America:Quantity|TA00000001000000011|30|ARIMA {1,-3.51073103693271E-02,2.15731642954099,-0.220314343327742,-1.33151478258758}|  
+|Vorhersage|M200 North America:Quantity|TA00000001000000000|29|ARIMA {1,0.643565911081657}|  
+|Vorhersage|M200 North America:Quantity|TA00000001000000001|30|ARIMA {1,1.45035399809581E-02,-4.40489283927752E-02,-0.19203901352577,0.242202497643993}|  
   
  Diese Beispiele veranschaulichen, dass bei jedem weiteren Drilldown in der ARIMA-Struktur mehr Details aufgerufen werden, die wichtigen Informationen werden jedoch kombiniert und auch im übergeordneten Knoten angezeigt.  
   
 ### <a name="time-series-formula-for-arima"></a>Zeitreihenformel für ARIMA  
  Verwenden Sie zur Anzeige der kompletten Formel für einen ARIMA-Knoten die **Mininglegende** im [Microsoft Time Series-Viewer](browse-a-model-using-the-microsoft-time-series-viewer.md), in der die autoregressive Reihenfolge, der gleitende Durchschnitt und andere Elemente der Formel in einem konsistenten und lesbaren Format dargestellt werden.  
   
--   [Anzeigen der Formel für ein Zeitreihen Modell &#40;Data Mining-&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
+-   [Anzeigen der Formel für ein Zeitreihenmodell &#40;Data Mining&#41;](view-the-formula-for-a-time-series-model-data-mining.md)  
   
  Dieser Abschnitt enthält eine Beispielformel sowie Erläuterungen zu den grundlegenden Begriffen.  
   
-####  <a name="bkmk_ARIMA_2"></a>Mining Legende für ARIMA-Formel  
+####  <a name="mining-legend-for-arima-formula"></a><a name="bkmk_ARIMA_2"></a> Mininglegende für ARIMA-Formel  
  Das folgende Beispiel zeigt die ARIMA-Formel für einen Teil des Modells, wie sie in der Mininglegende dargestellt wird. So zeigen Sie diese Formel an: Öffnen Sie das **Forecasting** -Modell im **Microsoft Time Series-Viewer**, und klicken Sie auf die Registerkarte **Modell** . Wählen Sie dann die Struktur für die Datenreihe **R250: Europe** aus, und klicken Sie auf den Knoten, der die Datenreihe am oder nach dem 5.7.2003 darstellt. In der Mininglegende werden alle Konstanten in einem lesbaren Format angezeigt, wie im folgenden Beispiel:  
   
  ARIMA-Formel:  
@@ -396,11 +396,11 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  Das ARIMA-Modell für eine Datenreihe enthält die grundlegende periodische Formel in vier verschiedenen Formaten, aus denen Sie das für Ihre Anwendung am besten geeignete Format auswählen können.  
   
- **NODE_CAPTION:** Zeigt das Kurzformat der Gleichung an. Aus der Kurzform ersehen Sie, wie viele periodische Strukturen dargestellt werden und wie viele Koeffizienten diese aufweisen. Wenn das Kurzformat der Formel z. B. {4,0,6}lautet, stellt der Knoten eine periodische Struktur mit 6 Koeffizienten dar. Wenn das Kurzformat etwas wie {2,0,8} x {1,0,0}(4) ist, enthält der Knoten zwei periodische Strukturen.  
+ **NODE_CAPTION:** zeigt die Kurzform der Formel an. Aus der Kurzform ersehen Sie, wie viele periodische Strukturen dargestellt werden und wie viele Koeffizienten diese aufweisen. Wenn das Kurzformat der Formel z. B. {4,0,6}lautet, stellt der Knoten eine periodische Struktur mit 6 Koeffizienten dar. Wenn das Kurzformat etwas wie {2,0,8} x {1,0,0}(4) ist, enthält der Knoten zwei periodische Strukturen.  
   
- **Knoten Beschreibung:** Zeigt das lange Format der Gleichung an, bei der es sich auch um die Form der Gleichung handelt, die in der **Mining Legende**angezeigt wird. Die Langform entspricht der Kurzform, mit dem Unterschied, dass die Istwerte der Koeffizienten angezeigt werden.  
+ **NODE DESCRIPTION:** Zeigt die Langform der Formel an, die dem Format der Formel in der **Mininglegende**entspricht. Die Langform entspricht der Kurzform, mit dem Unterschied, dass die Istwerte der Koeffizienten angezeigt werden.  
   
- **NODE_RULE:** Zeigt eine XML-Darstellung der Gleichung an. Abhängig vom Knotentyp kann die XML-Darstellung einzelne oder mehrere periodische Strukturen enthalten. Die folgende Tabelle zeigt, wie ein Rollup der XML-Knoten auf höhere Ebenen des ARIMA-Modells durchgeführt wird.  
+ **NODE_RULE:** zeigt eine XML-Darstellung der Formel an. Abhängig vom Knotentyp kann die XML-Darstellung einzelne oder mehrere periodische Strukturen enthalten. Die folgende Tabelle zeigt, wie ein Rollup der XML-Knoten auf höhere Ebenen des ARIMA-Modells durchgeführt wird.  
   
 |Knotentyp|XML-Inhalt|  
 |---------------|-----------------|  
@@ -409,9 +409,9 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
 |29 (ARIMA Autoregressiv)|Listet die Ausdrücke für eine einzelne periodische Struktur auf.|  
 |30 (ARIMA Gleitender Durchschnitt)|Listet die Koeffizienten für eine einzelne periodische Struktur auf.|  
   
- **NODE_DISTRIBUTION:** Zeigt die Begriffe der Gleichung in einer Tabelle an, die Sie Abfragen können, um bestimmte Begriffe zu erhalten. Die NODE_DISTRIBUTION-Tabelle weist dieselbe hierarchische Struktur auf wie die XML-Regeln. Das heißt, der Stammknoten der ARIMA-Reihe (NODE_TYPE = 27) enthält den Wert des konstanten Glieds und der Periodizitäten für die gesamte Formel, wobei es sich um mehrere Periodizitäten handeln kann, und die untergeordneten Knoten enthalten lediglich spezifische Informationen zu einer bestimmten periodischen Struktur bzw. die untergeordneten Knoten dieser periodischen Struktur.  
+ **NODE_DISTRIBUTION:** zeigt die Ausdrücke der Formel in einer geschachtelten Tabelle an, die Sie nach bestimmten Ausdrücken abfragen können. Die NODE_DISTRIBUTION-Tabelle weist dieselbe hierarchische Struktur auf wie die XML-Regeln. Das heißt, der Stammknoten der ARIMA-Reihe (NODE_TYPE = 27) enthält den Wert des konstanten Glieds und der Periodizitäten für die gesamte Formel, wobei es sich um mehrere Periodizitäten handeln kann, und die untergeordneten Knoten enthalten lediglich spezifische Informationen zu einer bestimmten periodischen Struktur bzw. die untergeordneten Knoten dieser periodischen Struktur.  
   
-|Knotentyp|attribute|Werttyp|  
+|Knotentyp|Attribut|Werttyp|  
 |---------------|---------------|----------------|  
 |27 (ARIMA-Stamm)|Konstantes Glied<br /><br /> Periodizität|11|  
 |28 (ARIMA Periodische Struktur)|Periodizität<br /><br /> Autoregressive Reihenfolge<br /><br /> Differenzreihenfolge<br /><br /> Reihenfolge für gleitenden Durchschnitt|12<br /><br /> 13<br /><br /> 15<br /><br /> 14|  
@@ -437,7 +437,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
 -   XML-Darstellung: XML-Abfrage  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Die Abfrage von Informationen aus einer ARTXP-Struktur kann kompliziert sein, da sich die Informationen für jede Teilung innerhalb der Struktur an einer anderen Position befinden. Wenn Sie mit einem ARTXP-Modell arbeiten, müssen Sie aus diesem Grund alle Teile abrufen und dann einige Verarbeitungsvorgänge ausführen, um die vollständige Formel wieder zusammenzusetzen. Das Abrufen einer Formel aus einem ARIMA-Modell ist einfacher, da die Formel strukturweit verfügbar gemacht wird. Informationen zum Erstellen einer Abfrage zum Abrufen dieser Informationen finden Sie unter [Abfragebeispiel Zeitreihenmodell](time-series-model-query-examples.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -29,10 +29,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 94c36ba87310c5dc86b7a1f70efab5a3ef97bf61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083862"
 ---
 # <a name="microsoft-neural-network-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Neural Network-Algorithmus
@@ -88,13 +88,13 @@ ms.locfileid: "66083862"
   
 |Algorithmus|Analysemethode|Kommentare|  
 |---------------|------------------------|--------------|  
-|Neuronale Netzwerke|Interessantheitsgrad<br /><br /> Shannon-Entropie<br /><br /> Bayes-Methode mit K2-A-priori-Verteilung<br /><br /> Bayes-Dirichlet mit uniformer A-priori-Verteilung (Standard)|Der Neural Networks-Algorithmus kann sowohl die Entropie- als auch die Bayes-basierte Bewertungsmethode verwenden, sofern die Daten kontinuierliche Spalten enthalten.<br /><br /> Default.|  
+|Neuronale Netzwerke|Interessantheitsgrad<br /><br /> Shannon-Entropie<br /><br /> Bayes-Methode mit K2-A-priori-Verteilung<br /><br /> Bayes-Dirichlet mit uniformer A-priori-Verteilung (Standard)|Der Neural Networks-Algorithmus kann sowohl die Entropie- als auch die Bayes-basierte Bewertungsmethode verwenden, sofern die Daten kontinuierliche Spalten enthalten.<br /><br /> Standard.|  
 |Logistische Regression|Interessantheitsgrad<br /><br /> Shannon-Entropie<br /><br /> Bayes-Methode mit K2-A-priori-Verteilung<br /><br /> Bayes-Dirichlet mit uniformer A-priori-Verteilung (Standard)|Weil diesem Algorithmus kein Parameter zur Steuerung des Funktionsauswahlverhaltens übergeben werden kann, werden die Standardwerte verwendet. Wenn alle Attribute diskret oder diskretisiert sind, wird als Standardmethode Bayes-Dirichlet mit uniformer A-priori-Verteilung eingesetzt.|  
   
  Die Algorithmusparameter, die die Funktionsauswahl für ein neuronales Netzwerkmodell steuern, sind MAXIMUM_INPUT_ATTRIBUTES, MAXIMUM_OUTPUT_ATTRIBUTES und MAXIMUM_STATES. Sie können auch die Anzahl von verborgenen Ebenen kontrollieren, indem Sie den HIDDEN_NODE_RATIO-Parameter festlegen.  
   
 ### <a name="scoring-methods"></a>Bewertungsmethoden  
- Bei der *Bewertung* handelt es sich um eine Art Normalisierung, bei der im Zusammenhang mit dem trainieren eines neuronalen Netzwerk Modells ein Wert, z. b. eine diskrete Text Bezeichnung, in einen Wert umgewandelt wird, der mit anderen Typen von Eingaben verglichen und im Netzwerk gewichtet werden kann. Wenn ein Eingabeattribut beispielsweise Gender ist und die möglichen Werte Male und Female sind, während ein anderes Eingabeattribut Income lautet mit einem variablen Wertebereich, sind die Werte für jedes Attribut nicht direkt vergleichbar und müssen auf eine gemeinsame Skalierung codiert werden, sodass die Gewichtungen berechnet werden können. Bei der Bewertung werden diese Eingaben zu numerischen Werten normalisiert, insbesondere zu einem Wahrscheinlichkeitsbereich. Die für die Normalisierung verwendeten Funktionen tragen auch zu einer gleichmäßigeren Verteilung des Eingabewerts auf einer einheitlichen Skala bei, sodass Extremwerte die Analyseergebnisse nicht beeinträchtigen.  
+ Bei der*Bewertung* handelt es sich um eine Form der Normalisierung, was im Trainingskontext eines neuronalen Netzwerks den Prozess bezeichnet, mit dem ein Wert, z. B. eine diskrete Textbeschriftung, in einen Wert konvertiert wird, der mit anderen Eingaben verglichen und im Netzwerk gewichtet werden kann. Wenn ein Eingabeattribut beispielsweise Gender ist und die möglichen Werte Male und Female sind, während ein anderes Eingabeattribut Income lautet mit einem variablen Wertebereich, sind die Werte für jedes Attribut nicht direkt vergleichbar und müssen auf eine gemeinsame Skalierung codiert werden, sodass die Gewichtungen berechnet werden können. Bei der Bewertung werden diese Eingaben zu numerischen Werten normalisiert, insbesondere zu einem Wahrscheinlichkeitsbereich. Die für die Normalisierung verwendeten Funktionen tragen auch zu einer gleichmäßigeren Verteilung des Eingabewerts auf einer einheitlichen Skala bei, sodass Extremwerte die Analyseergebnisse nicht beeinträchtigen.  
   
  Ausgaben des neuronalen Netzwerks werden ebenfalls codiert. Wenn es ein einzelnes Ziel für die Ausgabe (d. h. Vorhersage) gibt oder mehrere Ziele vorhanden sind, die nur für die Vorhersage und nicht für die Eingabe verwendet werden, erstellt das Modell ein einzelnes Netzwerk, und eine Normalisierung der Werte erscheint nicht erforderlich. Wenn mehrere Attribute für die Eingabe und die Vorhersage verwendet werden, muss das Modell mehrere Netzwerke erstellen. Daher müssen alle Werte normalisiert sein, und die Ausgaben müssen beim Verlassen des Netzwerks codiert werden.  
   
@@ -186,7 +186,7 @@ ms.locfileid: "66083862"
  Log Normal  
  Gibt an, dass die Werte innerhalb der Spalte so behandelt werden sollen, als wären sie entlang der *Protokollnormalkurve* verteilt. Dies bedeutet, dass der Logarithmus der Werte normal verteilt ist.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
  Ein neuronales Netzwerkmodell muss mindestens eine Eingabespalte und eine Ausgabespalte enthalten.  
   
 ### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten  

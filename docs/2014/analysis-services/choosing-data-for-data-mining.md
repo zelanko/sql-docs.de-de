@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9bec249e483c5736ee7cf0e66f4aff0af98e08c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088025"
 ---
 # <a name="choosing-data-for-data-mining"></a>Auswählen von Daten für das Data Mining
@@ -38,7 +38,7 @@ ms.locfileid: "66088025"
   
  [Sonstige Datenanforderungen](#bkmk_OtherRequirements)  
   
-##  <a name="bkmk_ChoosingData"></a>Auswählen von Daten  
+##  <a name="choosing-data"></a><a name="bkmk_ChoosingData"></a>Auswählen von Daten  
  Die Auswahl der zu analysierenden Daten ist möglicherweise der wichtigste Schritt im Data Mining-Prozess, sogar wichtiger als die Auswahl eines Algorithmus. Der Grund hierfür ist, dass sich Data Mining im Allgemeinen nicht auf eine Hypothese, sondern auf Daten stützt. Im Unterschied zur herkömmlichen statistischen Modellierung, bei der Variablen im voraus ausgewählt und getestet werden, ermittelt das Data Mining auf der Basis der Daten neue Korrelationen (es kann jedoch vorkommen, dass überhaupt keine Muster gefunden werden). Qualität und Menge der Daten können erhebliche Auswirkungen auf die Ergebnisse haben.  
   
  Die folgenden grundsätzlichen Regeln sollten beachtet werden:  
@@ -109,7 +109,7 @@ ms.locfileid: "66088025"
   
 -   Annähern der Werte an einen zentralen Mittelwert oder repräsentativen Wert.  
   
-##  <a name="bkmk_CommonDataProblems"></a>Häufige Daten Probleme  
+##  <a name="common-data-problems"></a><a name="bkmk_CommonDataProblems"></a>Häufige Daten Probleme  
   
 ### <a name="excel-number-formats"></a>Excel-Zahlenformate  
  Excel ist ein einfach zu verwendende Tool, da es sich um einen forout-Vorgang handelt. Wenn Sie jedoch nach Mustern suchen und Korrelationen analysieren, müssen Sie für die Daten eine bestimmte Struktur bzw. Einschränkungen festlegen.  
@@ -145,7 +145,7 @@ ms.locfileid: "66088025"
   
  Wenn Sie Schwierigkeiten bei der Arbeit mit Datumswerten haben und Sie Datumswerte mit solch allgemein gebräuchlichen Gruppierungen wie Monat oder Tag analysieren möchten, können Sie die DATE-Funktionen in Excel verwenden, um das Jahr, den Monat oder den Tag in einer separaten Spalte zu extrahieren und diese Spalte stattdessen für die Klassifizierung zu verwenden.  
   
-##  <a name="bkmk_OtherRequirements"></a>Weitere Datenanforderungen  
+##  <a name="other-data-requirements"></a><a name="bkmk_OtherRequirements"></a>Weitere Datenanforderungen  
   
 ### <a name="requirements-by-algorithm-type"></a>Anforderungen nach Algorithmustyp  
  Einige in den Add-Ins verwendete Algorithmen erfordern bestimmte Daten- oder Inhaltstypen für die Modellerstellung.  
@@ -219,7 +219,7 @@ ms.locfileid: "66088025"
   
  Dieser Inhaltstyp wird von den folgenden Datentypen unterstützt: `Double`, `Long` und `Date`.  
   
- **Table**  
+ **Glaub**  
  Dieser Inhaltstyp wird ebenfalls nur verwendet, wenn Daten aus einer externen Datenquelle abgerufen werden, die als [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenquellensicht definiert wurde.  
   
  Dies bedeutet, dass jede Datenzeile tatsächlich eine geschachtelte Datentabelle mit mindestens einer Spalte und mindestens einer Zeile enthält.  

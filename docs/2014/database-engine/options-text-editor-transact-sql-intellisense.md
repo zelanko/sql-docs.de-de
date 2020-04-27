@@ -16,17 +16,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: fd2cf2be2102aeed1c853ce1b9a198c2b196d26a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089819"
 ---
 # <a name="options-text-editor-transact-sql-intellisense"></a>Optionen (Text-Editor-Transact-SQL-IntelliSense)
-  Im Dialogfeld **Optionen** können Sie die IntelliSense-Einstellungen für den [!INCLUDE[ssDE](../includes/ssde-md.md)] -Abfrage-Editor ändern. Diese Einstellungen sind verfügbar, wenn Sie im Menü **Extras** auf **Optionen** klicken. Erweitern Sie den Ordner **Text-Editor**, erweitern Sie den Ordner **Transact-SQL**, und klicken Sie anschließend auf **Erweitert**.  
+  Im Dialogfeld **Optionen** können Sie die IntelliSense-Einstellungen für den [!INCLUDE[ssDE](../includes/ssde-md.md)]-Abfrage-Editor ändern. Diese Einstellungen sind verfügbar, wenn Sie im Menü **Extras** auf **Optionen** klicken. Erweitern Sie den Ordner **Text-Editor**, erweitern Sie den Ordner **Transact-SQL**, und klicken Sie anschließend auf **Erweitert**.  
   
 ## <a name="transact-sql-intellisense-settings"></a>IntelliSense-Einstellungen für Transact-SQL  
- Gibt die IntelliSense-Optionen für den [!INCLUDE[ssDE](../includes/ssde-md.md)] -Abfrage-Editor an.  
+ Gibt die IntelliSense-Optionen für den [!INCLUDE[ssDE](../includes/ssde-md.md)]-Abfrage-Editor an.  
   
 ### <a name="enable-intellisense"></a>IntelliSense aktivieren  
  Aktiviert die IntelliSense-Funktionen. Wenn dieses Kontrollkästchen nicht aktiviert ist, sind die angegebenen IntelliSense-Optionen nicht verfügbar. Standardmäßig ist dieses Kontrollkästchen aktiviert.  
@@ -38,7 +38,7 @@ ms.locfileid: "66089819"
  Aktiviert die Gliederungsfunktion beim Öffnen von Dateien. Dadurch werden reduzierbare Blöcke von [!INCLUDE[tsql](../includes/tsql-md.md)] -Code erstellt. Standardmäßig ist dieses Kontrollkästchen aktiviert.  
   
  **Maximale Skriptgröße**  
- Gibt die Größe an, bei der IntelliSense-Funktionalität deaktiviert wird. Wenn ein Skript die angegebene Größe überschreitet, wird eine Warnmeldung ausgegeben. Alle IntelliSense-Funktionen mit Ausnahme von Farbcodierung werden für dieses Editorfenster deaktiviert. IntelliSense wird erneut aktiviert, wenn genug Text gelöscht wurde, um die Skriptgröße auf die maximale Größe zu reduzieren. Das Aktivieren von IntelliSense für große Skripts kann bei langsamen Computern zu Leistungseinbußen führen. Die zulässigen Größen sind 100 KB, 500 KB, 1 MB, 2 MB und Unbegrenzt. Die Standardeinstellung ist 1 MB.  
+ Gibt die Größe an, bei der IntelliSense-Funktionalität deaktiviert wird. Wenn ein Skript die angegebene Größe überschreitet, wird eine Warnmeldung ausgegeben. Alle IntelliSense-Funktionen mit Ausnahme von Farbcodierung werden für dieses Editorfenster deaktiviert. IntelliSense wird erneut aktiviert, wenn genug Text gelöscht wurde, um die Skriptgröße auf die maximale Größe zu reduzieren. Das Aktivieren von IntelliSense für große Skripts kann bei langsamen Computern zu Leistungseinbußen führen. Die zulässigen Größen sind 100 KB, 500 KB, 1 MB, 2 MB und Unbegrenzt. Die Standardeinstellung ist 1 MB.  
   
  **Schreibweise für integrierte Funktionsnamen**  
  Gibt an, ob die Namen integrierter [!INCLUDE[tsql](../includes/tsql-md.md)]-Funktionen, die in Vervollständigungslisten enthalten sind, Großbuchstaben verwenden, wie z.B. DATEADD, oder Kleinbuchstaben, wie z.B. dateadd. Wählen Sie die Option aus, die mit den von Ihnen verwendeten [!INCLUDE[tsql](../includes/tsql-md.md)] -Codierungskonventionen am besten übereinstimmt.  

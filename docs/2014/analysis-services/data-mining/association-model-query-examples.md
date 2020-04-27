@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a31052c0d239010407941141997fca8fc343f9cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086123"
 ---
 # <a name="association-model-query-examples"></a>Beispiele für Zuordnungsmodellabfragen
@@ -30,9 +30,9 @@ ms.locfileid: "66086123"
   
  **Inhaltsabfragen**  
   
- [Erhalten von modellmetadatendaten mithilfe von DMX](#bkmk_Query1)  
+ [Abrufen von Modellmetadaten-Daten mithilfe von DMX](#bkmk_Query1)  
   
- [Metadaten aus dem Schemarowset werden abgerufen](#bkmk_Query2)  
+ [Abrufen von Metadaten aus dem Schemarowset](#bkmk_Query2)  
   
  [Abrufen der ursprünglichen Parameter für das Modell](#bkmk_Query3)  
   
@@ -42,14 +42,14 @@ ms.locfileid: "66086123"
   
  **Vorhersageabfragen**  
   
- [Vorhersagen von zugehörigen Elementen](#bkmk_Query6)  
+ [Vorhersagen von verknüpften Elementen](#bkmk_Query6)  
   
  [Bestimmen von Vertrauen für verwandte Itemsets](#bkmk_Query7)  
   
-##  <a name="bkmk_top2"></a>Suchen nach Informationen über das Modell  
+##  <a name="finding-information-about-the-model"></a><a name="bkmk_top2"></a>Suchen nach Informationen über das Modell  
  Alle Miningmodelle machen den vom Algorithmus erfassten Inhalt nach einem standardisierten Schema verfügbar. Dieses Schema wird als Miningmodell-Schemarowset bezeichnet. Abfragen für das Miningmodell-Schemarowset können Sie entweder mithilfe von DMX-Anweisungen oder mit gespeicherten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Prozeduren erstellen. In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]können Sie die Schemarowsets mit einer SQL-ähnlichen Syntax auch direkt als Systemtabellen abfragen.  
   
-###  <a name="bkmk_Query1"></a>Beispiel Abfrage 1: erhalten von Modell Metadaten mithilfe von DMX  
+###  <a name="sample-query-1-getting-model-metadata-by-using-dmx"></a><a name="bkmk_Query1"></a>Beispiel Abfrage 1: erhalten von Modell Metadaten mithilfe von DMX  
  Die folgende Abfrage gibt grundlegende Metadaten über das Zuordnungsmodell `Association`zurück, wie Name des Modells, die Datenbank, in der das Modell gespeichert ist, und die Anzahl der untergeordneten Knoten im Modell. Diese Abfrage ruft die Metadaten mithilfe einer DMX-Inhaltsabfrage vom übergeordneten Knoten des Modells ab:  
   
 ```  
@@ -77,7 +77,7 @@ WHERE NODE_TYPE = 1
   
  [Zurück zum Anfang](#bkmk_top2)  
   
-###  <a name="bkmk_Query2"></a>Beispiel Abfrage 2: erhalten zusätzlicher Metadaten aus dem Schemarowset  
+###  <a name="sample-query-2-getting-additional-metadata-from-the-schema-rowset"></a><a name="bkmk_Query2"></a>Beispiel Abfrage 2: erhalten zusätzlicher Metadaten aus dem Schemarowset  
  Durch Abfragen des Data Mining-Schemarowsets erhalten Sie dieselben Informationen wie bei einer DMX-Inhaltsabfrage. Das Schemarowset bietet jedoch einige zusätzliche Spalten, wie das Datum der letzten Modellverarbeitung, die Miningstruktur und den Namen der als vorhersagbares Attribut verwendeten Spalte.  
   
 ```  
@@ -100,7 +100,7 @@ WHERE MODEL_NAME = 'Association'
   
  [Zurück zum Anfang](#bkmk_top2)  
   
-###  <a name="bkmk_Query3"></a>Beispiel Abfrage 3: Abrufen von ursprünglichen Parametern für das Modell  
+###  <a name="sample-query-3-retrieving-original-parameters-for-model"></a><a name="bkmk_Query3"></a>Beispiel Abfrage 3: Abrufen von ursprünglichen Parametern für das Modell  
  Die folgende Abfrage gibt eine einzelne Spalte mit Details über die Parametereinstellungen zurück, die beim Erstellen des Modells verwendet wurden.  
   
 ```  
@@ -118,7 +118,7 @@ WHERE MODEL_NAME = 'Association'
 ## <a name="finding-information-about-rules-and-itemsets"></a>Suchen nach Informationen über Regeln und Itemsets  
  Ein Zuordnungsmodell dient im Wesentlichen zwei Zwecken: dem Finden von Informationen über häufig vorhandene Itemsets und dem Extrahieren von Details über bestimmte Regeln und Itemsets. Sie können beispielsweise eine Liste der Regeln extrahieren, die als besonders interessant eingestuft wurden, oder eine Liste mit den gängigsten Itemsets erstellen. Diese Informationen rufen Sie mit einer DMX-Inhaltsabfrage ab. Sie können auch mithilfe des **Microsoft Association Viewer**nach diesen Informationen suchen.  
   
-###  <a name="bkmk_Query4"></a>Beispiel Abfrage 4: Abrufen der Liste von Itemsets und Produkten  
+###  <a name="sample-query-4-retrieving-list-of-itemsets-and-products"></a><a name="bkmk_Query4"></a> Beispiel Abfrage 4: Abrufen der Liste von Itemsets und Produkten  
  Mit folgender Abfrage werden alle Itemsets sowie eine geschachtelte Tabelle abgerufen, in der die in den einzelnen Itemsets enthaltenen Produkte aufgeführt sind. Die Spalte NODE_NAME enthält die eindeutige ID des Itemsets innerhalb des Modells, während die Spalte NODE_CAPTION eine Textbeschreibung der Elemente zur Verfügung stellt. In diesem Beispiel wird die geschachtelte Tabelle vereinfacht, sodass ein Itemset, das zwei Produkte enthält, zwei Zeilen in den Ergebnissen generiert. Sie können das FLATTENED-Schlüsselwort auslassen, wenn der Client hierarchische Daten unterstützt.  
   
 ```  
@@ -141,7 +141,7 @@ WHERE NODE_TYPE = 7
   
  [Zurück zum Anfang](#bkmk_top2)  
   
-###  <a name="bkmk_Query5"></a>Beispiel Abfrage 5: Zurückgeben der obersten 10 Itemsets  
+###  <a name="sample-query-5-returning-top-10-itemsets"></a><a name="bkmk_Query5"></a>Beispiel Abfrage 5: Zurückgeben der obersten 10 Itemsets  
  Dieses Beispiel zeigt, wie einige der Gruppierungs- und Anordnungsfunktionen, die von DMX standardmäßig bereitgestellt werden, verwendet werden. Die Abfrage gibt die obersten 10 Itemsets zurück, wenn diese entsprechend der Unterstützung für jeden Knoten angeordnet sind. Die Ergebnisse müssen nicht explizit wie in Transact-SQL gruppiert werden. Sie können in jeder Abfrage nur eine Aggregatfunktion verwenden.  
   
 ```  
@@ -161,11 +161,11 @@ WHERE NODE_TYPE = 7
  [Zurück zum Anfang](#bkmk_top2)  
   
 ## <a name="making-predictions-using-the-model"></a>Treffen von Vorhersagen mit dem Modell  
- Ein Zuordnungsregelnmodell wird häufig zum Generieren von Empfehlungen verwendet, die auf in den Itemsets gefundenen Korrelationen basieren. Wenn Sie eine Vorhersageabfrage auf Basis eines Modells für Zuordnungsregeln erstellen, werden die Regeln im Modell üblicherweise verwendet, um Vermutungen basierend auf neuen Daten zu erstellen.  Der [prätassociation-&#40;DMX-&#41;](/sql/dmx/predictassociation-dmx) ist die Funktion, die Empfehlungen zurückgibt, und verfügt über mehrere Argumente, mit denen Sie die Abfrageergebnisse anpassen können.  
+ Ein Zuordnungsregelnmodell wird häufig zum Generieren von Empfehlungen verwendet, die auf in den Itemsets gefundenen Korrelationen basieren. Wenn Sie eine Vorhersageabfrage auf Basis eines Modells für Zuordnungsregeln erstellen, werden die Regeln im Modell üblicherweise verwendet, um Vermutungen basierend auf neuen Daten zu erstellen.  [PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx) werden Empfehlungen zurückgegeben. Diese Funktion besitzt mehrere Argumente, mit denen Sie Abfrageergebnisse anpassen können.  
   
  Ein anderes Beispiel für den sinnvollen Einsatz von Abfragen bei einem Zuordnungsmodell ist die Rückgabe des Vertrauenswerts für verschiedene Regeln und Itemsets, sodass Sie die Effektivität verschiedener Cross-Selling-Strategien vergleichen können. In den folgenden Beispielen wird gezeigt, wie derartige Abfragen erstellt werden.  
   
-###  <a name="bkmk_Query6"></a>Beispiel Abfrage 6: Vorhersagen von zugeordneten Elementen  
+###  <a name="sample-query-6-predicting-associated-items"></a><a name="bkmk_Query6"></a>Beispiel Abfrage 6: Vorhersagen von zugeordneten Elementen  
  In diesem Beispiel wird das im [Data Mining-Tutorial für Fortgeschrittene &#40;Analysis Services – Data Mining&#41;](../../tutorials/intermediate-data-mining-tutorial-analysis-services-data-mining.md) erstellte Zuordnungsmodell verwendet. Es zeigt, wie Sie eine Vorhersageabfrage erstellen, die Aufschluss darüber gibt, welche Produkte Sie einem Kunden empfehlen sollten, der ein bestimmtes Produkt gekauft hat. Dieser Abfragetyp, bei dem Sie mithilfe einer `SELECT...UNION`-Anweisung Werte für das Modell bereitstellen, wird als SINGLETON-Abfrage bezeichnet. Da es sich bei der vorhersagbaren Spalte des Modells, die den neuen Werten entspricht, um eine geschachtelte Tabelle handelt, müssen Sie eine `SELECT`-Klausel verwenden, um den neuen Wert der geschachtelten Tabellenspalte zuzuordnen, `[Model]` und eine weitere `SELECT`-Klausel, um die geschachtelte Tabellenspalte der Spalte auf Fallebene `[v Assoc Seq Line Items]` zuzuordnen. Durch Hinzufügen des Schlüsselworts INCLUDE-STATISTICS zur Abfrage können Sie die Wahrscheinlichkeit und die Unterstützung für die Empfehlungen sehen.  
   
 ```  
@@ -188,7 +188,7 @@ AS t
   
  [Zurück zum Anfang](#bkmk_top2)  
   
-###  <a name="bkmk_Query7"></a>Beispiel Abfrage 7: Bestimmen von Vertrauen für verwandte Itemsets  
+###  <a name="sample-query-7-determining-confidence-for-related-itemsets"></a><a name="bkmk_Query7"></a>Beispiel Abfrage 7: Bestimmen von Vertrauen für verwandte Itemsets  
  Während Regeln nützlich sind, um Empfehlungen zu generieren, sind Itemsets eher für eine tiefer gehende Analyse der Muster im Dataset interessant. Wenn Sie beispielsweise mit den Empfehlungen, die von der vorherigen Beispielabfrage zurückgegeben wurden, nicht zufrieden sind, können Sie andere Itemsets, die das Produkt A enthalten, prüfen. So können Sie sich ein Bild machen, ob Produkt A ein Zubehör ist, das eher zusammen mit beliebigen anderen Produkten gekauft wird, oder ob Produkt A eng mit dem Kauf bestimmter Produkte verknüpft ist. Die einfachste Möglichkeit zur Prüfung dieser Beziehungen besteht darin, die Itemsets im [!INCLUDE[msCoName](../../includes/msconame-md.md)] Association Viewer zu filtern. Sie können die gleichen Informationen jedoch auch mit einer Abfrage abrufen.  
   
  Mit der folgenden Beispielabfrage werden alle Itemsets zurückgegeben, die das Element "Water Bottle" enthalten, einschließlich des einzelnen Elements "Water bottle".  
@@ -225,19 +225,19 @@ ORDER BY NODE_SUPPORT DESC
 |||  
 |-|-|  
 |Vorhersagefunktion|Verwendung|  
-|[Isnachfolger &#40;DMX-&#41;](/sql/dmx/isdescendant-dmx)|Bestimmt, ob ein Knoten ein untergeordnetes Element eines anderen Knotens im Diagramm für neuronale Netzwerke ist.|  
-|[IsInNode &#40;DMX-&#41;](/sql/dmx/isinnode-dmx)|Zeigt an, ob der angegebene Knoten den aktuellen Fall enthält.|  
-|[Der prätadjustedwahrscheinlichkeits-&#40;DMX-&#41;](/sql/dmx/predictadjustedprobability-dmx)|Gibt die gewichtete Wahrscheinlichkeit zurück.|  
-|[Prätassociation &#40;DMX-&#41;](/sql/dmx/predictassociation-dmx)|Sagt eine Mitgliedschaft in einem assoziativen Dataset voraus.|  
-|[Prädistogram &#40;DMX-&#41;](/sql/dmx/predicthistogram-dmx)|Gibt eine Tabelle mit Werten zurück, die sich auf den aktuellen vorhergesagten Wert beziehen.|  
-|[Prätnodeid &#40;DMX-&#41;](/sql/dmx/predictnodeid-dmx)|Gibt "Node_ID" für jeden Fall zurück.|  
-|[Prätwahrscheinlichkeit &#40;DMX-&#41;](/sql/dmx/predictprobability-dmx)|Gibt die Wahrscheinlichkeit für den vorhergesagten Wert zurück.|  
-|[Prätsupport &#40;DMX-&#41;](/sql/dmx/predictsupport-dmx)|Gibt den Unterstützungswert für einen bestimmten Status zurück.|  
-|[Prävarianz &#40;DMX-&#41;](/sql/dmx/predictvariance-dmx)|Gibt die Varianz für den vorhergesagten Wert zurück.|  
+|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Bestimmt, ob ein Knoten ein untergeordnetes Element eines anderen Knotens im Diagramm für neuronale Netzwerke ist.|  
+|[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|Zeigt an, ob der angegebene Knoten den aktuellen Fall enthält.|  
+|[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Gibt die gewichtete Wahrscheinlichkeit zurück.|  
+|[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|Sagt eine Mitgliedschaft in einem assoziativen Dataset voraus.|  
+|[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Gibt eine Tabelle mit Werten zurück, die sich auf den aktuellen vorhergesagten Wert beziehen.|  
+|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|Gibt "Node_ID" für jeden Fall zurück.|  
+|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|Gibt die Wahrscheinlichkeit für den vorhergesagten Wert zurück.|  
+|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|Gibt den Unterstützungswert für einen bestimmten Status zurück.|  
+|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|Gibt die Varianz für den vorhergesagten Wert zurück.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Microsoft Association-Algorithmus](microsoft-association-algorithm.md)   
  [Technische Referenz für den Microsoft Association-Algorithmus](microsoft-association-algorithm-technical-reference.md)   
- [Mining Modell Inhalt von Zuordnungs Modellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Miningmodellinhalt von Zuordnungsmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

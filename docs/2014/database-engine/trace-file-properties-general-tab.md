@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf665b0ea1cae89257d6368af9b307845a2cb3c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089610"
 ---
 # <a name="trace-file-properties-general-tab"></a>Eigenschaften der Ablaufverfolgungsdatei (Registerkarte Allgemein)
@@ -26,31 +26,31 @@ ms.locfileid: "66089610"
   
  Öffnen Sie eine Ablaufverfolgungsdatei, um dieses Fenster anzuzeigen. Klicken Sie dann im Menü **Datei** auf **Eigenschaften**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Dateiname**  
  Der Pfad und der Name der angezeigten Ablaufverfolgungsdatei.  
   
- **Name des Ablauf Verfolgungs Anbieters**  
+ **Name des Ablaufverfolgungsanbieters**  
  Zeigt den Namen der Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] an, für die die Ablaufverfolgung ausgeführt wurde.  
   
- **Typ des Ablauf Verfolgungs Anbieters**  
+ **Typ des Ablaufverfolgungsanbieters**  
  Zeigt den Servertyp an, der die Ablaufverfolgung bereitgestellt hat.  
   
- **Version**  
+ **version**  
  Zeigt die Version des Servers an, der die Ablaufverfolgung bereitgestellt hat.  
   
  **Dateigröße (KB)**  
  Die Größe der Ablaufverfolgungsdatei in Kilobyte (KB).  
   
- **Erstellt**  
+ **Schaff**  
  Datum und Uhrzeit der Erstellung der Ablaufverfolgungsdatei.  
   
- **Modified**  
+ **Geändert**  
  Datum und Uhrzeit der Änderungen der Ablaufverfolgungsdatei.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Öffnen einer Ablaufverfolgungsdatei &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
+ [Öffnen Sie eine Ablauf Verfolgungs Datei &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)   
- [Vorlagen und Berechtigungen in SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
+ [Vorlagen und Berechtigungen in SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)  
   
   

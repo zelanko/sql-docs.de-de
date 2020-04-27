@@ -15,18 +15,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64896beeb2e815f22662cd7d16aaf263135f8122
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089581"
 ---
 # <a name="trace-properties-events-selection-tab"></a>Ablaufverfolgungseigenschaften (Registerkarte 'Ereignisauswahl')
   Mithilfe der Registerkarte **Ereignisauswahl** im Dialogfeld **Ablaufverfolgungseigenschaften** können Sie die Ablaufverfolgung von Ereignissen oder Datenspalten anzeigen und angeben.  
   
-## <a name="options"></a>Tastatur  
- **Ereignis** Spalte  
- Gibt die Ereignisse an, für die eine Ablaufverfolgung ausgeführt wird, indem das betreffende Kontrollkästchen in der Ereignisspalte aktiviert bzw. deaktiviert werden. **Ereignisse** werden nach Ereignis Kategorie organisiert. In der Vorlage angegebene Ereignisklassen werden automatisch ausgewählt. Weitere Informationen finden Sie unter [Ereignisklassen in SQL Server – Referenz](../relational-databases/event-classes/sql-server-event-class-reference.md).  
+## <a name="options"></a>Optionen  
+ Spalte**Ereignisse**  
+ Gibt die Ereignisse an, für die eine Ablaufverfolgung ausgeführt wird, indem das betreffende Kontrollkästchen in der Ereignisspalte aktiviert bzw. deaktiviert werden. Die**Ereignisse** sind nach Ereigniskategorien angeordnet. In der Vorlage angegebene Ereignisklassen werden automatisch ausgewählt. Weitere Informationen finden Sie unter [Ereignisklassen in SQL Server – Referenz](../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Datenspalten  
  Gibt die Datenspalten an, für die eine Ablaufverfolgung ausgeführt wird, indem das Kontrollkästchen für das Ereignis und die benötigte Datenspalte aktiviert wird. Alle relevanten Ereignisspalten sind für die in der Ablaufverfolgung enthaltenen Ereignisse standardmäßig aktiviert.  
@@ -39,10 +39,10 @@ ms.locfileid: "66089581"
  **Alle Spalten anzeigen**  
  Zeigt alle verfügbaren Datenspalten an. Standardmäßig werden nur ausgewählte Datenspalten angezeigt. Deaktivieren Sie dieses Kontrollkästchen, um alle nicht ausgewählten Datenspalten im Raster **Ereignisauswahl** auszublenden.  
   
- **Spalten Filter**  
+ **Spaltenfilter**  
  Öffnet das Dialogfeld **Filter bearbeiten** . Mithilfe dieses Dialogfelds können Sie Datenspaltenfilter bearbeiten.  
   
- **Organisieren von Spalten**  
+ **Spalten organisieren**  
  Ändert die Reihenfolge der Spalten in der Ablaufverfolgung und gruppiert die Ergebnisse in einer oder mehreren Spalten.  
   
 ## <a name="see-also"></a>Weitere Informationen  
@@ -51,7 +51,7 @@ ms.locfileid: "66089581"
  [Ereignisse in einer Ablauf Verfolgung &#40;SQL Server Profiler Filtern&#41;](../tools/sql-server-profiler/filter-events-in-a-trace-sql-server-profiler.md)   
  [Filter Informationen &#40;SQL Server Profiler anzeigen&#41;](../tools/sql-server-profiler/view-filter-information-sql-server-profiler.md)   
  [Ändern eines Filters &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/modify-a-filter-sql-server-profiler.md)   
- [Vorlagen und Berechtigungen in SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [SQL Server Profiler Vorlagen und Berechtigungen](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

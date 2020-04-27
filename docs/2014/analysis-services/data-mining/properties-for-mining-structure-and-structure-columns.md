@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: daa647673653280bfc4cf52398751aedfd65b9c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083060"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Eigenschaften für Miningstrukturen und Strukturspalten
@@ -37,37 +37,37 @@ ms.locfileid: "66083060"
   
 ### <a name="properties-of-the-mining-structure"></a>Eigenschaften der Miningstruktur  
   
-|Eigenschaft|BESCHREIBUNG|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |**CacheMode**|Gibt an, ob die beim Trainieren verwendeten Fälle nach Abschluss des Trainings zwischengespeichert oder verworfen werden sollen.<br /><br /> Hinweis: Diese Eigenschaft muss auf `KeepTrainingCases` festgelegt werden, um Drillthrough und zurück gehaltene Daten zu aktivieren.|  
 |**Sortierung**|Gibt die Standardsortierung für die Spalte an. Wird keine Sortierung angegeben, wird die Sortierung des Servers verwendet.|  
 |**Beschreibung**|Beschreibt die Miningstruktur. Die Beschreibung sollte den Zweck und die Zusammensetzung der Daten in der Struktur beinhalten.|  
 |**ErrorConfiguration (Standard)**|Legt Optionen für die spezielle Behandlung möglicher Fehler fest.|  
 |**HoldoutMaxCases**|Gibt die maximale Anzahl von Strukturfällen an, die als Testdataset reserviert werden können.  Werden Werte sowohl für **HoldoutMaxCases** als auch für **HoldoutPercent**angegeben, werden die Bedingungen miteinander kombiniert.<br /><br /> Hinweis: zum Festlegen dieser Eigenschaft <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> muss auf `KeepTrainingCases`festgelegt werden.|  
-|**HoldoutPercent angegeben**|Gibt die Prozentzahl der Strukturfälle an, die als Testdataset reserviert werden sollen. Werden Werte sowohl für **HoldoutMaxCases** als auch für **HoldoutPercent**angegeben, werden die Bedingungen miteinander kombiniert.<br /><br /> Hinweis: zum Festlegen dieser Eigenschaft <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> muss auf `KeepTrainingCases`festgelegt werden.|  
+|**HoldoutPercent**|Gibt die Prozentzahl der Strukturfälle an, die als Testdataset reserviert werden sollen. Werden Werte sowohl für **HoldoutMaxCases** als auch für **HoldoutPercent**angegeben, werden die Bedingungen miteinander kombiniert.<br /><br /> Hinweis: zum Festlegen dieser Eigenschaft <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> muss auf `KeepTrainingCases`festgelegt werden.|  
 |**HoldoutSeed**|Gibt einen Ausgangswert zum Initialisieren der Partitionierung des Zurückhaltungstestdatasets an, um sicherzustellen, dass das Dataset erneut erstellt werden kann.<br /><br /> Hinweis: zum Festlegen dieser Eigenschaft <xref:Microsoft.AnalysisServices.MiningStructure.CacheMode%2A> muss auf `KeepTrainingCases`festgelegt werden.|  
-|**id**|Zeigt den eindeutigen Bezeichner der Miningstruktur an.<br /><br /> Der Name, den Sie der Miningstruktur bei deren Erstellung zugewiesen haben, wird als ID verwendet. Wenn Sie den Namen später ändern, indem Sie einen neuen Wert für die `Name`-Eigenschaft eingeben, wird der neue Name nur als Alias verwendet. Die ID wird nicht geändert.|  
+|**ID**|Zeigt den eindeutigen Bezeichner der Miningstruktur an.<br /><br /> Der Name, den Sie der Miningstruktur bei deren Erstellung zugewiesen haben, wird als ID verwendet. Wenn Sie den Namen später ändern, indem Sie einen neuen Wert für die `Name`-Eigenschaft eingeben, wird der neue Name nur als Alias verwendet. Die ID wird nicht geändert.|  
 |**Sprache**|Gibt die Sprache für die Beschriftungen in der Miningstruktur an.|  
 |`Name`|Gibt den Namen oder Alias der Miningstruktur an.<br /><br /> Wenn Sie den Wert für die Name-Eigenschaft ändern, wird der neue Name nur als Beschriftung oder Alias verwendet. Der Bezeichner für die Miningstruktur wird nicht geändert.|  
-|**`Source`**|Zeigt den Namen und den Typ der Datenquelle an.|  
+|**Quelle**|Zeigt den Namen und den Typ der Datenquelle an.|  
   
 ### <a name="properties-of-the-mining-structure-columns"></a>Eigenschaften der Miningstrukturspalten  
   
-|Eigenschaft|BESCHREIBUNG|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |**ClassifiedColumns**|Identifiziert die Spalte, die eine klassifizierte Spalte beschreibt.|  
-|**Inhaltliche**|Der Inhaltstyp der Spalte.|  
+|**Inhalt**|Der Inhaltstyp der Spalte.|  
 |**Beschreibung**|Beschreibt die Spalte. Die Beschreibung der Spalte sollte Informationen darüber enthalten, wie die Daten in der Spalte für Data Mining abgeleitet oder bearbeitet wurden.|  
 |**DiscretizationBucketCount**|Zeigt die Anzahl der Buckets in der diskretisierten Spalte an.<br /><br /> Nur verfügbar, wenn der Inhaltstyp auf `Discretized` festgelegt ist.<br /><br /> Diese Eigenschaft ist schreibgeschützt.|  
 |**DiscretizationMethod**|Zeigt die Methode an, die zur Diskretisierung der Spalte verwendet wurde.<br /><br /> Nur verfügbar, wenn der Inhaltstyp auf `Discretized` festgelegt ist.<br /><br /> Diese Eigenschaft ist schreibgeschützt.|  
 |**Distribution**|Gibt die Verteilung von Inhalten in der Spalte an.|  
-|**id**|Zeigt den Bezeichner der Spalte an.<br /><br /> Der Wert der ID-Eigenschaft wird beim Ändern des Werts der Name-Eigenschaft für die Spalte nicht beeinflusst.|  
+|**ID**|Zeigt den Bezeichner der Spalte an.<br /><br /> Der Wert der ID-Eigenschaft wird beim Ändern des Werts der Name-Eigenschaft für die Spalte nicht beeinflusst.|  
 |**IsKey**|Gibt an, ob es sich bei der Spalte um eine Schlüsselspalte handelt.|  
 |**KeyColumns**|Enthält die Definition einer Spalte, die der Schlüssel oder Teil eines Schlüssels für ein Attribut ist.|  
 |**ModelingFlags**|Legt weitere Parameter fest, die vom Algorithmus verfügbar gemacht werden.|  
 |`Name`|Name der Spalte.|  
 |**NameColumn**|Identifiziert die Spalte, die den Namen des übergeordneten Elements bereitstellt.|  
-|**`Source`**|Zeigt die Quelle der Spalte an.<br /><br /> Für relationale Datenquellen ist der Wert immer **(none)**.<br /><br /> Bei auf einem OLAP-Cube basierenden Strukturen entspricht der Wert der MDX-Anweisung, die den Slice definiert, der als Quelle für die geschachtelte Tabelle verwendet wird.|  
+|**Quelle**|Zeigt die Quelle der Spalte an.<br /><br /> Für relationale Datenquellen ist der Wert immer **(none)**.<br /><br /> Bei auf einem OLAP-Cube basierenden Strukturen entspricht der Wert der MDX-Anweisung, die den Slice definiert, der als Quelle für die geschachtelte Tabelle verwendet wird.|  
 |**SourceMeasureGroup**|Zeigt die Quelle der Measuregruppe an.<br /><br /> Für relationale Datenquellen ist der Wert immer **(none)**.<br /><br /> Bei auf einem OLAP-Cube basierenden Strukturen entspricht der Wert der MDX-Anweisung, die den Slice definiert, der als Quelle für die geschachtelte Tabelle verwendet wird.|  
 |**Typ**|Der Datentyp für den Inhalt der Spalte.|  
   

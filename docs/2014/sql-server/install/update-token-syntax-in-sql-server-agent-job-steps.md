@@ -14,19 +14,19 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b69d3e84938f93828a908141a4a05365bd0f07a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091667"
 ---
 # <a name="update-token-syntax-in-sql-server-agent-job-steps"></a>Die Tokensyntax in den Auftragsschritten des SQL Server-Agent wurde aktualisiert.
   Die für Token in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent-Auftragsschritte verwendete Syntax wurde geändert.  
   
 ## <a name="component"></a>Komponente  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Büros  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent  
   
-## <a name="description"></a>BESCHREIBUNG  
+## <a name="description"></a>Beschreibung  
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der-Agent Klammern, wie z. b. $ (Date), anstelle von Klammern, wie z. b. [Date].  
   
  Weitere Informationen finden Sie unter "Verwenden von Token in Auftragsschritten" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.  

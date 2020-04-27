@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e528b94e51238a06a9776e58693c3093f4bfb831
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091879"
 ---
 # <a name="sql-server-parameters"></a>SQL Server-Parameter
@@ -28,7 +28,7 @@ ms.locfileid: "66091879"
 > [!NOTE]  
 >  Einige Upgradeprobleme können nur erkannt werden, wenn Sie Ablaufverfolgungsdateien oder SQL-Batchdateien zur Analyse übermitteln.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Zu analysierende Datenbank(en)**  
  Um alle Datenbanken zu analysieren, aktivieren Sie das Kontrollkästchen **alle Datenbanken** . Um eine Auswahl von Datenbanken zu analysieren, aktivieren Sie die Kontrollkästchen neben den Datenbanken, die überprüft werden sollen.  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7976b3a6711425aa9f0e0a454eee74cdfdfaf526
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082171"
 ---
 # <a name="define-account-intelligence-dimension-business-intelligence-wizard"></a>Kontointelligenz definieren (Dimension) (Business Intelligence-Assistent)
@@ -25,7 +25,7 @@ ms.locfileid: "66082171"
 > [!NOTE]  
 >  Diese Seite wird nicht angezeigt, wenn der Business Intelligence-Assistent vom Dimensions-Designer aus oder durch Klicken mit der rechten Maustaste auf eine Dimension im Projektmappen-Explorer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]gestartet wurde.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Dimension**  
  Wählen Sie die Dimension aus, auf die die Kontointelligenz angewendet wird.  
   

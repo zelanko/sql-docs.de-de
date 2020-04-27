@@ -15,17 +15,17 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: f32377fffb26ac622dc4045d108e491adc2b0342
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089171"
 ---
 # <a name="options-text-editor---transact-sql--general-page"></a>Optionen (Text-Editor-Transact-SQL-Seite "Allgemein")
   Mit den Optionen im Dialogfeld **Allgemein** können Sie das allgemeine Bearbeitungsverhalten des [!INCLUDE[ssDE](../includes/ssde-md.md)] -Abfrageeditors beim Bearbeiten von [!INCLUDE[tsql](../includes/tsql-md.md)] -Skripts ändern. Sie können diese Einstellungen anzeigen, indem Sie im Menü **Extras** auf **Optionen** klicken. Erweitern Sie dann den Unterordner **Transact-SQL**, und klicken Sie auf **Allgemein**.  
   
 ## <a name="setting-options-in-multiple-locations"></a>Festlegen der Optionen an mehreren Stellen  
- Die Optionen für den [!INCLUDE[ssDE](../includes/ssde-md.md)] -Abfrageeditor können auch unter **Alle Sprachen** im Dialogfeld Allgemein eingestellt werden. Wenn Sie die Dialogfelder unter **Alle Sprachen** verwenden, um verschiedene Optionen für die anderen [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Editoren wie z. B. die DMX- oder MDX-Editoren einzustellen, müssen Sie die Optionen des [!INCLUDE[ssDE](../includes/ssde-md.md)] -Abfrage-Editors mithilfe dieses Dialogfelds zurücksetzen.  
+ Die Optionen für den [!INCLUDE[ssDE](../includes/ssde-md.md)] -Abfrageeditor können auch unter **Alle Sprachen** im Dialogfeld Allgemein eingestellt werden. Wenn Sie die Dialogfelder **alle Sprachen** verwenden, um verschiedene Optionen für die [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] anderen Editoren festzulegen, z. b. den DMX-oder MDX-Editoren, müssen Sie die [!INCLUDE[ssDE](../includes/ssde-md.md)] Abfrage-Editor-Optionen mithilfe dieses Dialog Felds zurücksetzen  
   
 ## <a name="statement-completion"></a>Anweisungsabschluss  
  **Elemente automatisch auflisten**  
@@ -34,7 +34,7 @@ ms.locfileid: "66089171"
  **Erweiterte Member ausblenden**  
  Dieses Kontrollkästchen ist nicht verfügbar.  
   
- **Parameter Informationen**  
+ **Parameterinformationen**  
  Wenn dieses Kontrollkästchen aktiviert ist, werden Parameterinformationen für eine gespeicherte Prozedur oder Funktion angezeigt, die sich unmittelbar links von der Einfügemarke (Cursor) befindet. Die Informationen umfassen eine Liste der verfügbaren Parameter mit ihren Namen und Datentypen.  
   
 ## <a name="settings"></a>Einstellungen  

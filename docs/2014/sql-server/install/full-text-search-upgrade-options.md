@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 575105d61446f2fd272e4087457e7762c1abb2e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095089"
 ---
 # <a name="full-text-search-upgrade-options"></a>Upgradeoptionen für die Volltextsuche
@@ -25,7 +25,7 @@ ms.locfileid: "66095089"
   
  In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] befindet sich jeder Volltextindex in einem Volltextkatalog, der einer Dateigruppe angehört, über einen physischen Pfad verfügt und als Datenbankdatei behandelt wird. Nun ist ein voll Text Katalog ein logisches Konzept, ein virtuelles Objekt, das auf eine Gruppe von Volltextindizes verweist. Deshalb wird ein neuer Volltextkatalog nicht als Datenbankdatei mit einem physischen Pfad behandelt. Wenn jedoch ein Volltextkatalog aktualisiert wird, der Datendateien enthält, wird auf demselben Datenträger jeweils eine neue Dateigruppe erstellt. Auf diese Weise wird nach dem Upgrade das alte Datenträger-E/A-Verhalten beibehalten. Jeder Volltextindex aus diesem Katalog wird in die neue Dateigruppe eingefügt, wenn der Stammpfad vorhanden ist. Falls der alte Volltextkatalogpfad ungültig ist, wird beim Upgrade der Volltextindex in derselben Dateigruppe als Basistabelle &ndash; bzw. bei einer partitionierten Tabelle in der primären Dateigruppe &ndash; beibehalten.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Wenn Sie auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]aktualisieren, wählen Sie eine der folgenden Upgradeoptionen für die Volltextsuche aus.  
   
  **Importieren**  
@@ -68,5 +68,5 @@ ms.locfileid: "66095089"
   
      Das Importieren bzw. das Neuerstellen während eines Upgrades belegt viele CPU-Ressourcen. Dies führt zu Verzögerungen beim Aktualisieren und Herstellen der Onlineverfügbarkeit des Rests der Serverinstanz. Wenn die schnellstmögliche Onlineverfügbarkeit der Serverinstanz wichtig und das manuelle Auffüllen nach dem Upgrade akzeptabel ist, eignet sich die Option **Zurücksetzen** .  
   
-## <a name="additional-resources"></a>Weitere Ressourcen  
+## <a name="additional-resources"></a>Zusätzliche Ressourcen  
   

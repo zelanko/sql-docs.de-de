@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 920cc72a9d99da61575249559661c01826b0e89b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088959"
 ---
 # <a name="ring-buffer-target"></a>Ringpufferziel
@@ -29,7 +29,7 @@ ms.locfileid: "66088959"
   
  In der folgenden Tabelle werden die verfügbaren Optionen für das Konfigurieren des Ringpufferziels beschrieben.  
   
-|Option|Zulässige Werte|BESCHREIBUNG|  
+|Option|Zulässige Werte|Beschreibung|  
 |------------|--------------------|-----------------|  
 |max_memory|Eine beliebige 32-Bit-Ganzzahl. Dieser Wert ist optional.|Die Höchstmenge des verfügbaren Arbeitsspeichers in Kilobyte (KB). Vorhandene Ereignisse werden auf Grundlage der Grenze gelöscht, die zuerst erreicht wird: max_event_limit oder max_memory. Der Höchstwert beträgt 4194303 KB. Es muss sorgfältig vorgegangen werden, bevor die Ringpuffer Größe auf Limits im GB-Bereich festgelegt wird, da dies Auswirkungen auf andere Arbeitsspeicherconsumer in SQL Server|  
 |max_event_limit|Eine beliebige 32-Bit-Ganzzahl. Dieser Wert ist optional.|Die maximale Anzahl von Ereignissen, die in ring_buffer behalten wurden. Vorhandene Ereignisse werden auf Grundlage der Grenze gelöscht, die zuerst erreicht wird: max_event_limit oder max_memory. Standardeinstellung = 1000.|  

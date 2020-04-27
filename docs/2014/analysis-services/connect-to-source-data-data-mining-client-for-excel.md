@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 468686314bb2446415a6883c6233708f9cbd1d2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087101"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>Herstellen von Verbindungen mit Quelldaten (Data Mining-Client für Excel)
@@ -28,12 +28,12 @@ ms.locfileid: "66087101"
   
  **Verbindungen mit externen Datenquellen.** Sie können Verbindungen mit externen Daten auch herstellen, während Sie Modelle erstellen oder Ergebnisse speichern. So können Sie beispielsweise ein Data Mining-Modell auf einem Server erstellen und anschließend mit diesem Data Mining-Modell eine Vorhersage auf der Grundlage von Daten ausführen, die in einer anderen Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], in einer Excel-Datentabelle oder einer externen Datenquelle wie [!INCLUDE[msCoName](../includes/msconame-md.md)] Access gespeichert sind. Bei jedem Zugriff auf eine neue Datenquelle werden Sie in einem Dialogfeld aufgefordert, eine Verbindung zu erstellen.  
   
-##  <a name="bkmk_prereq2"></a> Voraussetzungen  
+##  <a name="prerequisites"></a><a name="bkmk_prereq2"></a> Voraussetzungen  
  Bei dieser Version des Add-Ins muss die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Instanz die Version SQL Server 2012 aufweisen. Eine separate Version der Add-Ins ist verfügbar, wenn Sie eine Verbindung mit einer früheren Version von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] herstellen möchten. Es gibt Add-In-Versionen, die SQL Server 2005, SQL Server 2008 und SQL Server 2008 R2 unterstützen.  
   
  Um eine Verbindung mit einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbank herzustellen, benötigen Sie Zugriffsrechte für den Datenbankserver. Außerdem müssen Data Mining-Sitzungen aktiviert sein, und Sie benötigen Lese- oder Lese-/Schreibberechtigungen für die Datenbankobjekte, die auf dem Server gespeichert sind.  
   
-##  <a name="bkmk_connect"></a>Erstellen von Data Mining-Server Verbindungen  
+##  <a name="creating-data-mining-server-connections"></a><a name="bkmk_connect"></a>Erstellen von Data Mining-Server Verbindungen  
  Die Gruppe **Verbindungen** im Data Mining-Client für Excel und die Tabellenanalyse Tools für Excel bieten Tools zum Verwalten von Verbindungen mit einer Instanz [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]von.  
   
 -   Sie können die Verbindung beim Installieren des Add-Ins erstellen oder später hinzufügen.  
@@ -66,7 +66,7 @@ ms.locfileid: "66087101"
   
 7.  Klicken Sie auf **Verbindung testen** , um sicherzustellen, dass der Server und die Datenbank verfügbar sind.  
   
-8.  Klicken Sie auf **OK**, und klicken Sie dann auf **Schließen**.  
+8.  Klicken Sie auf **OK** und dann auf **Schließen**.  
   
 ### <a name="connections-using-a-web-service"></a>Konfigurieren von Verbindungen mithilfe eines Webdiensts  
  Wenn Sie eine Thin-Client-Architektur verwenden, um das Durchsuchen von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Cubes und -Daten zu ermöglichen, können Sie eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Serververbindung auch über Webdienste konfigurieren. Informationen zum Definieren eines webbasierten Clients finden Sie in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Onlinedokumentation.  
@@ -96,7 +96,7 @@ ms.locfileid: "66087101"
   
 4.  Wenn Sie **neu**auswählen, befolgen Sie das zuvor beschriebene Verfahren, um einen Server-und Katalognamen anzugeben oder um eine Verbindung über einen Webdienst herzustellen.  
   
-##  <a name="bkmk_change"></a>Ändern von Verbindungen  
+##  <a name="changing-connections"></a><a name="bkmk_change"></a>Ändern von Verbindungen  
  Sie können mehrere Verbindungen in einem Arbeitsblatt erstellen, aber es kann jeweils nur eine Verbindung aktiv sein. Der Name der aktuellen Verbindung wird in der **Verbindungs** Schaltfläche angezeigt.  
   
  Im Data Mining-Client für Excel können Sie auch die Verbindungs Zeichenfolge und den Status der aktuellen Verbindung überprüfen, indem Sie auf Ablauf **Verfolgung** und dann auf **aktuelle Verbindung**klicken.  
@@ -119,7 +119,7 @@ ms.locfileid: "66087101"
   
      \<Laufwerk: > \Users\\<MyUserName\>\appdata\local\microsoft\data Mining-Add-in  
   
-##  <a name="bkmk_extconnections"></a>Herstellen einer Verbindung mit externen Datenquellen  
+##  <a name="connecting-to-external-data-sources"></a><a name="bkmk_extconnections"></a>Herstellen einer Verbindung mit externen Datenquellen  
  Während die Tools im Menüband **analysieren** ausschließlich mit Daten in Excel funktionieren, können Sie mit den Tools im **Data Mining** -Menüband direkt eine Verbindung mit externen Datenquellen herstellen, die als Eingaben für das Modell verwendet werden sollen, oder für die Stichprobenentnahme.  
   
  Die Add-Ins enthalten folgende Tools, die die Verwendung externer Daten für das Data Mining unterstützen:  

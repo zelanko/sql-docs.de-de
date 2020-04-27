@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c96ee3cbaa5ae25404d61054dccd1860c6596f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085689"
 ---
 # <a name="classified-columns-data-mining"></a>Klassifizierte Spalten [Data Mining]
@@ -40,7 +40,7 @@ ms.locfileid: "66085689"
   
  In der folgenden Liste werden die Inhaltstypen beschrieben, die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für klassifizierte Spalten unterstützt.  
   
- **Besteht**  
+ **PROBABILITY**  
  Der Wert in der Spalte entspricht der Wahrscheinlichkeit des zugeordneten Wertes und ist eine Zahl zwischen 0 und 1.  
   
  **Varianten**  
@@ -61,6 +61,6 @@ ms.locfileid: "66085689"
 ## <a name="see-also"></a>Weitere Informationen  
  [Inhaltstypen &#40;Data Mining-&#41;](content-types-data-mining.md)   
  [Mining Strukturen &#40;Analysis Services Data Mining-&#41;](mining-structures-analysis-services-data-mining.md)   
- [Datentypen &#40;Data Mining-&#41;](data-types-data-mining.md)  
+ [Datentypen &#40;Data Mining&#41;](data-types-data-mining.md)  
   
   

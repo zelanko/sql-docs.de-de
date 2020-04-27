@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e7c3764d18d26d739023bbbb744236273e5cfd1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086160"
 ---
 # <a name="browse-a-model-using-the-microsoft-association-rules-viewer"></a>Modell mit dem Microsoft-Viewer für Zuordnungsregeln durchsuchen
@@ -41,23 +41,23 @@ ms.locfileid: "66086160"
   
  Eine exemplarische Vorgehensweise zum Erstellen, Erkunden und Verwenden eines Zuordnungsminingmodells finden Sie unter [Lektion 3: Erstellen eines Warenkorbszenarios &#40;Data Mining-Tutorial für Fortgeschrittene&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md).  
   
-##  <a name="BKMK_ViewerTabs"></a>Viewer-Registerkarten  
+##  <a name="viewer-tabs"></a><a name="BKMK_ViewerTabs"></a>Viewer-Registerkarten  
  Wenn Sie ein Miningmodell in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]durchsuchen, wird das Modell im Data Mining-Designer auf der Registerkarte **Miningmodell-Viewer** mit dem jeweils geeigneten Viewer für das Modell angezeigt. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Zuordnungsregeln-Viewer enthält die folgenden Registerkarten:  
   
 -   [Itemsets](#BKMK_Itemsets)  
   
--   [Werks](#BKMK_Rules)  
+-   [Regeln](#BKMK_Rules)  
   
--   [Abhängigkeits Netzwerk](#BKMK_Dependency)  
+-   [Abhängigkeitsnetzwerk](#BKMK_Dependency)  
   
  Jede Registerkarte enthält das Kontrollkästchen **Langen Namen anzeigen** , mit dem Sie die Tabelle, aus der das Itemset in der Regel oder im Itemset stammt, anzeigen oder ausblenden können.  
   
-###  <a name="BKMK_Itemsets"></a>Itemsets  
+###  <a name="itemsets"></a><a name="BKMK_Itemsets"></a>Itemsets  
  Die Registerkarte **Itemsets** zeigt die Liste der Itemsets an, die das Modell häufig gemeinsam identifiziert hat. Die Registerkarte zeigt ein Raster mit den folgenden Spalten an: **Unterstützungswert**, **Größe**und **Itemset**. Weitere Informationen zum Unterstützungswert finden Sie unter [Microsoft Association Algorithm](microsoft-association-algorithm.md). Die Spalte **Größe** zeigt die im Itemset enthaltene Anzahl an Elementen an. Die **Itemset** -Spalte zeigt das eigentliche, vom Modell erkannte Itemset an. Sie können das Format des Itemsets mithilfe der Liste **Anzeigen** steuern. Dabei können Sie das Format auf die folgenden Optionen festlegen:  
   
 -   **Attributnamen und Wert anzeigen**  
   
--   **Nur Attribut Wert anzeigen**  
+-   **Nur Attributwert anzeigen**  
   
 -   **Nur Attributnamen anzeigen**  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66086160"
   
  [Zurück zum Anfang](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Rules"></a>Werks  
+###  <a name="rules"></a><a name="BKMK_Rules"></a>Werks  
  Die Registerkarte **Regeln** zeigt die vom Zuordnungsalgorithmus erkannten Regeln an. Die Registerkarte **Regeln** enthält ein Raster mit den folgenden Spalten: **Wahrscheinlichkeit**, **Wichtigkeit**und **Regel**. Die Wahrscheinlichkeit beschreibt, wie wahrscheinlich das Ergebnis einer Regel auftreten kann. Mit der Wichtigkeit wird die Nützlichkeit einer Regel gemessen. Obwohl die Wahrscheinlichkeit, dass eine Regel auftritt, hoch sein kann, kann die Nützlichkeit der Regel an sich unwichtig sein. Dies wird in der Wichtigkeitsspalte berücksichtigt. Wenn z. B. jedes Itemset einen bestimmten Attributstatus hat, ist die Regel, die den Status vorhersagt, unbedeutend, auch wenn die Wahrscheinlichkeit sehr hoch ist. Je größer die Wichtigkeit ist, umso wichtiger ist die Regel.  
   
  Sie können die **Minimale Wahrscheinlichkeit** und **minimale Wichtigkeit** zum Filtern der Regeln verwenden, ähnlich wie bei der Filterung auf der Registerkarte **Itemsets** . Sie können auch die **Filterregel** verwenden, um eine Regel basierend auf den Zuständen der in ihr enthaltenen Attribute zu filtern.  
@@ -76,7 +76,7 @@ ms.locfileid: "66086160"
   
  [Zurück zum Anfang](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Dependency"></a>Abhängigkeits Netzwerk  
+###  <a name="dependency-net"></a><a name="BKMK_Dependency"></a>Abhängigkeits Netzwerk  
  Die Registerkarte **Abhängigkeitsnetzwerk** enthält einen Abhängigkeitsnetzwerk-Viewer. Jeder Knoten im Viewer stellt ein Element dar, wie z. B. "state = WA". Der Pfeil zwischen den Knoten stellt die Zuordnung zwischen den Elementen dar. Die Richtung des Pfeils schreibt die Zuordnung zwischen den Elementen gemäß den vom Algorithmus erkannten Regeln vor. Wenn der Viewer z. b. die drei Elemente a, B und c und c von A und b vorhergesagt wird, wenn Sie Knoten C auswählen, zeigen zwei Pfeile auf den Knoten c-A und c und b auf c.  
   
  Der Schieberegler auf der linken Seite des Viewers fungiert als Filter, der an die Wahrscheinlichkeit der Regeln gebunden ist. Wenn Sie den Schieberegler nach unten ziehen, werden nur die stärksten Links angezeigt.  

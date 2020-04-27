@@ -16,13 +16,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59936989a63e702eba78bca834498f530efdae17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094908"
 ---
-# <a name="how-to-launch-upgrade-advisor"></a>Vorgehensweise: Starten des Upgrade Advisors
+# <a name="how-to-launch-upgrade-advisor"></a>Gewusst wie: Starten des Upgrade Advisors
   Upgrade Advisor stellt eine zentrale Konsole bereit, von der aus Sie den Analyse-Assistenten von Upgrade Advisor und den Berichts-Viewer von Upgrade Advisor starten können. In diesem Thema wird beschrieben, wie der Upgrade Advisor gestartet wird.  
   
 ### <a name="to-launch-upgrade-advisor"></a>So starten Sie den Upgrade Advisor  

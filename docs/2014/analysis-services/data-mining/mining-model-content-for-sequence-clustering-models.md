@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 12aad369e9a8614041bccaa08ee507d723c6c51f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083566"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models-analysis-services---data-mining"></a>Mingingmodellinhalt von Sequence Clustering-Modellen (Analysis Services – Data Mining)
@@ -53,7 +53,7 @@ ms.locfileid: "66083566"
  NODE_TYPE  
  Ein Sequence Clustering-Modell gibt die folgenden Knotentypen aus:  
   
-|Knotentyp-ID|BESCHREIBUNG|  
+|Knotentyp-ID|Beschreibung|  
 |------------------|-----------------|  
 |1 (Model)|Stammknoten für das Modell|  
 |5 (Cluster)|Enthält die Anzahl der im Cluster enthaltenen Übergänge, eine Liste der Attribute und die Statistik, die die Werte im Cluster beschreibt.|  
@@ -71,11 +71,11 @@ ms.locfileid: "66083566"
  CHILDREN_CARDINALITY  
  Eine Schätzung der Anzahl untergeordneter Elemente des Knotens.  
   
- **Modell** Stamm Der Kardinalitätswert ist größer als die Anzahl der Cluster Plus 1. Weitere Informationen finden Sie unter [Kardinalität](#bkmk_cardinality).  
+ **Modellstamm** Kardinalitätswert, der der Anzahl der Cluster plus 1 entspricht. Weitere Informationen finden Sie unter [Kardinalität](#bkmk_cardinality).  
   
- **Cluster Knoten** Kardinalität ist immer 1, da jeder Cluster über einen einzelnen untergeordneten Knoten verfügt, der die Liste der Sequenzen im Cluster enthält.  
+ **Clusterknoten** Kardinalität beträgt immer 1, da jeder Cluster über einen einzelnen untergeordneten Knoten verfügt, der die Liste der Sequenzen im Cluster enthält.  
   
- **Sequenz Knoten** Kardinalität gibt die Anzahl von Übergängen an, die in diesem Cluster enthalten sind. Beispielsweise gibt die Kardinalität des Sequenzknotens für den Modellstamm Aufschluss darüber, wie viele Übergänge im gesamten Modell gefunden wurden.  
+ **Sequenzknoten** Kardinalität gibt die Anzahl von Übergängen an, die in diesem Cluster enthalten sind. Beispielsweise gibt die Kardinalität des Sequenzknotens für den Modellstamm Aufschluss darüber, wie viele Übergänge im gesamten Modell gefunden wurden.  
   
  PARENT_UNIQUE_NAME  
  Der eindeutige Name des dem Knoten übergeordneten Elements.  
@@ -92,22 +92,22 @@ ms.locfileid: "66083566"
  Immer leer.  
   
  NODE_PROBABILITY  
- **Modell** Stamm Immer 0.  
+ **Modellstamm** Immer 0.  
   
- **Cluster Knoten** Die angepasste Wahrscheinlichkeit des Clusters im Modell. Die angepassten Wahrscheinlichkeiten ergeben als Summe nicht 1, da die beim Sequence Clustering verwendete Clustermethode die partielle Mitgliedschaft in mehreren Clustern erlaubt.  
+ **Clusterknoten** Die angepasste Wahrscheinlichkeit des Clusters im Modell. Die angepassten Wahrscheinlichkeiten ergeben als Summe nicht 1, da die beim Sequence Clustering verwendete Clustermethode die partielle Mitgliedschaft in mehreren Clustern erlaubt.  
   
- **Sequenz Knoten** Immer 0.  
+ **Sequenzknoten** Immer 0.  
   
- **Übergangs Knoten** Immer 0.  
+ **Übergangsknoten** Immer 0.  
   
  MARGINAL_PROBABILITY  
- **Modell** Stamm Immer 0.  
+ **Modellstamm** Immer 0.  
   
- **Cluster Knoten** Derselbe Wert wie NODE_PROBABILITY.  
+ **Clusterknoten** Der gleiche Wert wie NODE_PROBABILITY.  
   
- **Sequenz Knoten** Immer 0.  
+ **Sequenzknoten** Immer 0.  
   
- **Übergangs Knoten** Immer 0.  
+ **Übergangsknoten** Immer 0.  
   
  NODE_DISTRIBUTION  
  Eine Tabelle, die Wahrscheinlichkeiten und andere Informationen enthält. Weitere Informationen finden Sie unter [NODE_DISTRIBUTION-Tabelle](#bkmk_NODEDIST).  
@@ -115,21 +115,21 @@ ms.locfileid: "66083566"
  NODE_SUPPORT  
  Die Anzahl der Übergänge, die diesen Knoten unterstützen. Sind daher 30 Beispiele der Sequenz "Produkt A gefolgt von Produkt B" in den Trainingsdaten vorhanden, ist die Gesamtunterstützung 30.  
   
- **Modell** Stamm Die Gesamtanzahl der Übergänge im Modell.  
+ **Modellstamm** Gesamtanzahl der Übergänge im Modell.  
   
- **Cluster Knoten** Unformatierte Unterstützung für den Cluster, d. h. die Anzahl der Trainings Fälle, die Fälle zu diesem Cluster beitragen.  
+ **Clusterknoten** Rohunterstützung für den Cluster, d. h. Anzahl der Trainingsfälle, die Fälle zu diesem Cluster beitragen.  
   
- **Sequenz Knoten** Immer 0.  
+ **Sequenzknoten** Immer 0.  
   
- **Übergangs Knoten** Prozentsatz der Fälle im Cluster, die einen bestimmten Übergang darstellen. Kann 0 sein oder einen positiven Wert haben. Wird berechnet durch die Rohunterstützung für den Clusterknoten multipliziert mit der Wahrscheinlichkeit des Clusters.  
+ **Übergangsknoten** Prozentzahl der Fälle im Cluster, die einen spezifischen Übergang darstellen. Kann 0 sein oder einen positiven Wert haben. Wird berechnet durch die Rohunterstützung für den Clusterknoten multipliziert mit der Wahrscheinlichkeit des Clusters.  
   
  Dieser Wert gibt Aufschluss darüber, wie viele Trainingsfälle zum Übergang beigetragen haben.  
   
  MSOLAP_MODEL_COLUMN  
- Nicht zutreffend  
+ Nicht zutreffend.  
   
  MSOLAP_NODE_SCORE  
- Nicht zutreffend  
+ Nicht zutreffend.  
   
  MSOLAP_NODE_SHORT_CAPTION  
  Identisch mit NODE_DESCRIPTION.  
@@ -143,7 +143,7 @@ ms.locfileid: "66083566"
   
  Die folgende Tabelle fasst zusammen, wie Informationen im Modell gespeichert werden, und wie die Knoten in Beziehung stehen.  
   
-|Node|Verfügt über untergeordneten Knoten|NODE_DISTRIBUTION-Tabelle|  
+|Knoten|Verfügt über untergeordneten Knoten|NODE_DISTRIBUTION-Tabelle|  
 |----------|--------------------|------------------------------|  
 |Modellstamm|Mehrere Clusterknoten<br /><br /> Knoten mit Sequenzen für gesamtes Modell|Listet alle Produkte im Modell auf, mit Unterstützung und Wahrscheinlichkeit.<br /><br /> Da die Clustermethode die partielle Mitgliedschaft in mehreren Clustern erlaubt, können Unterstützung und Wahrscheinlichkeit über Bruchzahlen verfügen. Dies bedeutet, dass nicht ein einzelner Fall einmal gezählt wird, sondern jeder Fall potenziell zu mehreren Clustern gehören kann. Daher wird bei der Bestimmung der endgültigen Clustermitgliedschaft der Wert durch die Wahrscheinlichkeit des Clusters angepasst.|  
 |Sequenzknoten für Modell|Mehrere Übergangsknoten|Listet alle Produkte im Modell auf, mit Unterstützung und Wahrscheinlichkeit.<br /><br /> Da die Anzahl der Sequenzen für das Modell auf dieser Ebene bekannt ist, sind die Berechnungen für Unterstützung und Wahrscheinlichkeit unkompliziert:<br /><br /> Unterstützung = Anzahl von Fällen<br /><br /> Wahrscheinlichkeit = interne Wahrscheinlichkeit jeder Sequenz im Modell. Alle Wahrscheinlichkeiten sollten eine Summe von 1 ergeben.|  
@@ -151,14 +151,14 @@ ms.locfileid: "66083566"
 |Sequenzknoten für einzelne Cluster|Mehrere Knoten mit Übergängen für Sequenzen nur in diesem Cluster|Genau die gleichen Informationen wie in einzelnen Clusterknoten.|  
 |Transitions|Keine untergeordneten Elemente|Listet Übergänge für den verwandten ersten Status auf.<br /><br /> Die Unterstützung ist ein angepasster Unterstützungswert, der die Fälle angibt, die an jedem Übergang teilnehmen. Bei der Wahrscheinlichkeit handelt es sich um eine angepasste Wahrscheinlichkeit, die als Prozentzahl angegeben wird.|  
   
-###  <a name="bkmk_NODEDIST"></a>NODE_DISTRIBUTION Tabelle  
+###  <a name="node_distribution-table"></a><a name="bkmk_NODEDIST"></a>NODE_DISTRIBUTION Tabelle  
  Die NODE_DISTRIBUTION-Tabelle bietet detaillierte Informationen über Wahrscheinlichkeit und Unterstützung für die Übergänge und Sequenzen eines spezifischen Clusters.  
   
  Der Übergangstabelle wird immer eine Zeile hinzugefügt, um mögliche `Missing`-Werte darzustellen. Informationen dazu, was der `Missing` Wert bedeutet und wie er sich auf Berechnungen auswirkt, finden Sie unter [fehlende Werte &#40;Analysis Services Data Mining-&#41;](missing-values-analysis-services-data-mining.md).  
   
  Die Berechnungen für Unterstützung und Wahrscheinlichkeit unterscheiden sich in Abhängigkeit davon, ob die Berechnung für die Trainingsfälle oder das fertige Modell gilt. Grund hierfür ist, dass die Standard-Clusteringmethode, Expectation Maximization (EM), davon ausgeht, dass jeder Fall zu mehr als einem Cluster gehören kann. Bei der Berechnung der Unterstützung für Fälle im Modell können unformatierte Zähler und interne Wahrscheinlichkeiten verwendet werden. Allerdings müssen die Wahrscheinlichkeiten für jede Sequenz in einem Cluster durch die Summe aller möglichen Sequenz- und Clusterkombinationen gewichtet werden.  
   
-###  <a name="bkmk_cardinality"></a>Kardinalität  
+###  <a name="cardinality"></a><a name="bkmk_cardinality"></a>Kardinalität  
  In einem Clustering-Modell sagt die Kardinalität des übergeordneten Knotens üblicherweise aus, wie viele Cluster im Modell vorhanden sind. Allerdings verfügt ein Sequence Clustering-Modell über zwei Arten von Knoten auf der Clusterebene: die eine Art Knoten enthält Cluster, die andere Art Knoten enthält eine Liste der Sequenzen für das Modell insgesamt.  
   
  Um also die Anzahl der Cluster im Modell zu bestimmen, nehmen Sie den Wert von NODE_CARDINALITY für den Knoten (Alle) und ziehen 1 ab. Wenn das Modell zum Beispiel 9 Cluster erstellt hat, ist die Kardinalität des Modellstamms 10. Dies liegt daran, dass das Modell 9 Clusterknoten enthält, die jeweils über einen eigenen Sequenzknoten verfügen. Hinzu kommt ein Sequenzknoten mit der Beschriftung 10, der die Sequenzen für das Modell darstellt.  

@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 082241af377c8817c3adbc394a46f1ebc7d6a4e3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085140"
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>Data Mining-Algorithmen (Analysis Services - Data Mining)
@@ -49,16 +49,15 @@ ms.locfileid: "66085140"
  Es kann schwierig sein, den besten Algorithmus für einen bestimmten analytischen Task auszuwählen. Während verschiedene Algorithmen zum Ausführen derselben Geschäftsaufgabe verwendet werden können, liefert jeder Algorithmus ein anderes Ergebnis, und einige Algorithmen können mehr als eine Ergebnisart ergeben. Sie können z. B. den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus nicht nur für Vorhersagen verwenden, sondern auch als Möglichkeit, die Anzahl der Spalten in einem Dataset zu reduzieren, weil die Entscheidungsstruktur Spalten identifizieren kann, die sich nicht auf das endgültige Miningmodell auswirken.  
   
 ### <a name="choosing-an-algorithm-by-type"></a>Auswählen eines Algorithmus nach Typ  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] enthält die folgenden Algorithmentypen:  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] enthält die folgenden Algorithmentypen:  
   
--   **Klassifizierungs Algorithmen** prognostizieren eine oder mehrere diskrete Variablen basierend auf den anderen Attributen im DataSet.  
+-   **Klassifikationsalgorithmen** sagen basierend auf den anderen Attributen im Dataset mindestens eine diskrete Variable voraus.  
   
 -   **Regressions Algorithmen** prognostizieren basierend auf anderen Attributen im DataSet mindestens eine kontinuierliche Variable, z. b. Gewinn oder Verlust.  
   
--   **Segmentierungsalgorithmen** teilen Daten in Gruppen oder Cluster von Elementen mit ähnlichen Eigenschaften.  
+-   **Segmentierungsalgorithmen** teilen Daten in Gruppen oder Cluster aus Elementen auf, die ähnliche Eigenschaften haben.  
   
--   **Assoziations Algorithmen** finden Korrelationen zwischen verschiedenen Attributen in einem DataSet. Die häufigste Anwendung dieser Algorithmusart besteht im Erstellen von Zuordnungsregeln, die für eine Warenkorbanalyse verwendet werden können.  
+-   **Zuordnungsalgorithmen** suchen nach Korrelationen zwischen verschiedenen Attributen in einem Dataset. Die häufigste Anwendung dieser Algorithmusart besteht im Erstellen von Zuordnungsregeln, die für eine Warenkorbanalyse verwendet werden können.  
   
 -   **Sequenzanalyse Algorithmen** fassen häufige Sequenzen oder folgen in Daten zusammen, wie z. b. einen Webpfad Fluss.  
   
@@ -84,20 +83,20 @@ ms.locfileid: "66085140"
 ||[Microsoft Association-Algorithmus](microsoft-association-algorithm.md)<br /><br /> [Microsoft Clustering-Algorithmus](microsoft-clustering-algorithm.md)<br /><br /> [Microsoft Decision Trees-Algorithmus](microsoft-decision-trees-algorithm.md)<br /><br /> [Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm.md)<br /><br /> [Microsoft Logistic Regression-Algorithmus](microsoft-logistic-regression-algorithm.md)<br /><br /> [Microsoft Naive Bayes Algorithm](microsoft-naive-bayes-algorithm.md)<br /><br /> [Microsoft Neural Network Algorithm](microsoft-neural-network-algorithm.md)<br /><br /> [Microsoft Sequence Clustering-Algorithmus](microsoft-sequence-clustering-algorithm.md)<br /><br /> [Microsoft Time Series-Algorithmus](microsoft-time-series-algorithm.md)|  
 |**Technische Referenz**|Stellt technische Details zur Implementierung des Algorithmus ggf. mit Verweisen auf wissenschaftliche Artikel bereit. Listet die Parameter auf, die Sie festlegen können, um das Verhalten des Algorithmus zu steuern und die Ergebnisse im Modell anzupassen. Beschreibt Datenanforderungen sowie Leistungstipps, falls möglich.|  
 ||[Technische Referenz für den Microsoft Association-Algorithmus](microsoft-association-algorithm-technical-reference.md)<br /><br /> [Technische Referenz für den Microsoft Clustering-Algorithmus](microsoft-clustering-algorithm-technical-reference.md)<br /><br /> [Technische Referenz für den Microsoft Decision Trees-Algorithmus](microsoft-decision-trees-algorithm-technical-reference.md)<br /><br /> [Technische Referenz für den Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm-technical-reference.md)<br /><br /> [Technische Referenz für den Microsoft Logistic Regression-Algorithmus](microsoft-logistic-regression-algorithm-technical-reference.md)<br /><br /> [Technische Referenz für den Microsoft Naive Bayes-Algorithmus](microsoft-naive-bayes-algorithm-technical-reference.md)<br /><br /> [Technische Referenz für den Microsoft Neural Network-Algorithmus](microsoft-neural-network-algorithm-technical-reference.md)<br /><br /> [Technische Referenz für den Microsoft Sequence Clustering-Algorithmus](microsoft-sequence-clustering-algorithm-technical-reference.md)<br /><br /> [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)|  
-|**Modell Inhalt**|Beschreibt die Strukturierung der Informationen innerhalb der einzelnen Data Mining-Modelltypen und erläutert, wie die in den einzelnen Knoten gespeicherten Informationen interpretiert werden.|  
-||[Mining Modell Inhalt von Zuordnungs Modellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)<br /><br /> [Mining Modell Inhalt für Clustering-Modelle &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)<br /><br /> [Mining Modell Inhalt von Entscheidungsstruktur Modellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)<br /><br /> [Mining Modell Inhalt von linearen Regressionsmodellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)<br /><br /> [Mining Modell Inhalt von logistischen Regressionsmodellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-logistic-regression-models.md)<br /><br /> [Mining Modell Inhalt von Naive Bayes-Modellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)<br /><br /> [Mining Modell Inhalt von neuronalen Netzwerkmodellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)<br /><br /> [Mining Modell Inhalt von Sequence Clustering-Modellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-sequence-clustering-models.md)<br /><br /> [Mining Modell Inhalt von Zeitreihen Modellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|  
+|**Modellinhalt**|Beschreibt die Strukturierung der Informationen innerhalb der einzelnen Data Mining-Modelltypen und erläutert, wie die in den einzelnen Knoten gespeicherten Informationen interpretiert werden.|  
+||[Miningmodellinhalt von Zuordnungsmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)<br /><br /> [Mingingmodellinhalt von Clustermodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)<br /><br /> [Miningmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)<br /><br /> [Miningmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)<br /><br /> [Miningmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services - Data Mining&#41;](mining-model-content-for-logistic-regression-models.md)<br /><br /> [Miningmodellinhalt von Naive Bayes-Modellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-naive-bayes-models-analysis-services-data-mining.md)<br /><br /> [Miningmodellinhalt von neuronalen Netzwerkmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-neural-network-models-analysis-services-data-mining.md)<br /><br /> [Miningmodellinhalt von Sequence Clustering-Modellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-sequence-clustering-models.md)<br /><br /> [Miningmodellinhalt von Zeitreihenmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)|  
 |**Data Mining-Abfragen**|Stellt mehrere Abfragen bereit, die mit jedem Modelltyp verwendet werden können. Zu den Beispielen gehören Inhaltsabfragen, die Aufschluss über die im Modell enthaltenen Muster geben, und Vorhersageabfragen, die Sie beim Generieren von Vorhersagen auf Grundlage dieser Muster unterstützen.|  
 ||[Beispiele für Zuordnungsmodellabfragen](association-model-query-examples.md)<br /><br /> [Beispiele für Clustermodellabfragen](clustering-model-query-examples.md)<br /><br /> [Beispiele für Entscheidungsstruktur-Modellabfragen](decision-trees-model-query-examples.md)<br /><br /> [Beispiele für lineare Regressionsmodellabfrage](linear-regression-model-query-examples.md)<br /><br /> [Logistische Regressionsmodell-Abfragebeispiele](logistic-regression-model-query-examples.md)<br /><br /> [Beispiele für Naive Bayes-Modellabfrage](naive-bayes-model-query-examples.md)<br /><br /> [Neuronale Beispiele für Netzwerkmodellabfragen](neural-network-model-query-examples.md)<br /><br /> [Sequenzclusteringmodellabfragebeispiele](sequence-clustering-model-query-examples.md)<br /><br /> [Abfragebeispiel Zeitreihenmodell](time-series-model-query-examples.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|**Thema**|**Beschreibung**|  
+|**Sonder**|**Beschreibung**|  
 |---------------|---------------------|  
 |Bestimmen des von einem Data Mining-Modell verwendeten Algorithmus|[Abfragen der Parameter, mit denen ein Miningmodell erstellt wird](query-the-parameters-used-to-create-a-mining-model.md)|  
 |Erstellen eines benutzerdefinierten Plug-In-Algorithmus|[Plug-In-Algorithmen](plugin-algorithms.md)|  
 |Durchsuchen eines Modells mit einem algorithmusspezifischen Viewer|[Data Mining-Modell-Viewer](data-mining-model-viewers.md)|  
 |Anzeigen des Inhalts eines Modells unter Verwendung eines generischen Tabellenformats|[Durchsuchen eines Modells mit dem Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)|  
-|Hier erfahren Sie, wie die Daten eingerichtet und Algorithmen zum Erstellen von Modellen verwendet werden|[Mining Strukturen &#40;Analysis Services Data Mining-&#41;](mining-structures-analysis-services-data-mining.md)<br /><br /> [Mining Modelle &#40;Analysis Services Data Mining-&#41;](mining-models-analysis-services-data-mining.md)|  
+|Hier erfahren Sie, wie die Daten eingerichtet und Algorithmen zum Erstellen von Modellen verwendet werden|[Miningstrukturen &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md)<br /><br /> [Miningmodelle &#40;Analysis Services – Data Mining&#41;](mining-models-analysis-services-data-mining.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Data Mining-Tools](data-mining-tools.md)  

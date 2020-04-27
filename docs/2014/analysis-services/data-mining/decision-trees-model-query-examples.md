@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 009e8d203d9262ee14702b99ad7d0e31d8a16dbb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084754"
 ---
 # <a name="decision-trees-model-query-examples"></a>Beispiele für Entscheidungsstruktur-Modellabfragen
@@ -30,22 +30,22 @@ ms.locfileid: "66084754"
   
  [Abrufen von Modellparametern aus dem Data Mining-Schemarowset](#bkmk_Query1)  
   
- [Erhalten von Details zu Strukturen im Modell mit DMX](#bkmk_Query2)  
+ [Abrufen von Details zu Strukturen im Modell mit DMX](#bkmk_Query2)  
   
- [Abrufen von Teil Strukturen aus dem Modell](#bkmk_Query3)  
+ [Abrufen von Teilstrukturen aus dem Modell](#bkmk_Query3)  
   
  **Vorhersageabfragen**  
   
  [Zurückgeben von Vorhersagen mit Wahrscheinlichkeiten](#bkmk_Query4)  
   
- [Vorhersagen von Zuordnungen aus einem Entscheidungsstruktur Modell](#bkmk_Query5)  
+ [Vorhersagen von Zuordnungen aus einem Entscheidungsstrukturmodell](#bkmk_Query5)  
   
- [Abrufen einer Regressions Formel aus einem Entscheidungsstruktur Modell](#bkmk_Query6)  
+ [Abrufen einer Regressionsformel aus einem Entscheidungsstrukturmodell](#bkmk_Query6)  
   
-##  <a name="bkmk_top2"></a>Suchen nach Informationen über ein Entscheidungsstruktur Modell  
+##  <a name="finding-information-about-a-decision-trees-model"></a><a name="bkmk_top2"></a>Suchen nach Informationen über ein Entscheidungsstruktur Modell  
  Um aussagekräftige Abfragen des Inhalts eines Entscheidungsstrukturmodells zu erstellen, müssen Sie die Struktur des Inhaltsmodells kennen und wissen, in welchem Knotentyp welche Art von Informationen gespeichert ist. Weitere Informationen finden Sie unter [Miningmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md).  
   
-###  <a name="bkmk_Query1"></a>Beispiel Abfrage 1: Abrufen von Modellparametern aus dem Data Mining-Schemarowset  
+###  <a name="sample-query-1-retrieving-model-parameters-from-the-data-mining-schema-rowset"></a><a name="bkmk_Query1"></a>Beispiel Abfrage 1: Abrufen von Modellparametern aus dem Data Mining-Schemarowset  
  Durch Abfrage des Data Mining-Schemarowsets können Sie Metadaten zum Modell ermitteln, wie das Datum der Modellerstellung, das Datum der letzten Modellverarbeitung, den Namen der Miningstruktur, auf der das Modell basiert, und den Namen der als vorhersagbares Attribut verwendeten Spalte. Sie können auch die Parameter zurückgeben, die beim ersten Erstellen des Modells verwendet wurden.  
   
 ```  
@@ -60,7 +60,7 @@ WHERE MODEL_NAME = 'TM_Decision Tree'
   
  COMPLEXITY_PENALTY=0.5, MAXIMUM_INPUT_ATTRIBUTES=255, MAXIMUM_OUTPUT_ATTRIBUTES=255, MINIMUM_SUPPORT=10, SCORE_METHOD=4, SPLIT_METHOD=3, FORCE_REGRESSOR=  
   
-###  <a name="bkmk_Query2"></a>Beispiel Abfrage 2: Zurückgeben von Details zum Modell Inhalt mit DMX  
+###  <a name="sample-query-2-returning-details-about-the-model-content-by-using-dmx"></a><a name="bkmk_Query2"></a>Beispiel Abfrage 2: Zurückgeben von Details zum Modell Inhalt mit DMX  
  Die folgende Abfrage gibt einige grundlegende Informationen über die Entscheidungsstrukturen zurück, die beim Erstellen des Modells im [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md)erstellt wurden. Jede Struktur wird in einem eigenen Knoten gespeichert. Da dieses Modell nur ein einziges vorhersagbares Attribut enthält, gibt es nur einen Strukturknoten. Wenn Sie jedoch ein Zuordnungsmodell unter Verwendung des Decision Trees-Algorithmus erstellen, können Hunderte von Strukturen vorhanden sein, eine für jedes Produkt.  
   
  Diese Abfrage gibt alle Knoten vom Typ 2 zurück, die die Knoten auf oberster Ebene einer Struktur sind, welche ein bestimmtes vorhersagbares Attribut darstellt.  
@@ -98,7 +98,7 @@ WHERE [PARENT_UNIQUE_NAME] = '000000001'
   
  Beispielergebnisse:  
   
-|NODE_NAME|NODE_CAPTION|T.ATTRIBUTE_NAME|T.ATTRIBUTE_VALUE|SUPPORT|  
+|NODE_NAME|NODE_CAPTION|T.ATTRIBUTE_NAME|T.ATTRIBUTE_VALUE|Alias|  
 |----------------|-------------------|-----------------------|------------------------|-------------|  
 |00000000100|Number Cars Owned = 0|Bike Buyer|Missing|0|  
 |00000000100|Number Cars Owned = 0|Bike Buyer|0|1067|  
@@ -109,7 +109,7 @@ WHERE [PARENT_UNIQUE_NAME] = '000000001'
   
  Aus diesen Ergebnissen können Sie herausfinden, dass Kunden, die ein Fahrrad gekauft haben`[Bike Buyer]` (= 1), 1067 Kunden 0 Autos und 473 Kunden drei Autos hatten.  
   
-###  <a name="bkmk_Query3"></a>Beispiel Abfrage 3: Abrufen von Teil Strukturen aus dem Modell  
+###  <a name="sample-query-3-retrieving-subtrees-from-the-model"></a><a name="bkmk_Query3"></a>Beispiel Abfrage 3: Abrufen von Teil Strukturen aus dem Modell  
  Angenommen, Sie möchten mehr über die Kunden in Erfahrung bringen, die ein Fahrrad gekauft haben. Sie können zusätzliche Details für jede Teilstruktur über die Funktion [IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx) in der Abfrage anzeigen, wie im folgenden Beispiel dargestellt. Die Abfrage gibt die Anzahl der Fahrradkäufer zurück, indem die Blattknoten (NODE_TYPE = 4) aus der Struktur abgerufen werden, die Kunden im Alter von über 42 Jahren enthält. Die Abfrage beschränkt die Zeilen aus der geschachtelten Tabelle auf die Zeilen, in denen Bike Buyer = 1 ist.  
   
 ```  
@@ -139,7 +139,7 @@ AND NODE_TYPE = 4
   
 -   Abrufen der Regressionsformel für einen Teil der Entscheidungsstruktur, in dem die Beziehung zwischen Eingabe und Ausgabe linear ist  
   
-###  <a name="bkmk_Query4"></a>Beispiel Abfrage 4: Zurückgeben von Vorhersagen mit Wahrscheinlichkeiten  
+###  <a name="sample-query-4-returning-predictions-with-probabilities"></a><a name="bkmk_Query4"></a>Beispiel Abfrage 4: Zurückgeben von Vorhersagen mit Wahrscheinlichkeiten  
  In der folgenden Beispielabfrage wird das Entscheidungsstrukturmodell verwendet, das im [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md)erstellt wurde. Die Abfrage gibt einen neuen Satz von Beispieldaten aus der Tabelle dbo.ProspectiveBuyers in [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] DW weiter, um vorauszusagen, welche Kunden im neuen Dataset ein Fahrrad kaufen werden.  
   
  Die Abfrage verwendet die Vorhersagefunktion [PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx), die eine geschachtelte Tabelle mit nützlichen Informationen über die in dem Modell erkannten Wahrscheinlichkeiten zurückgibt. Die Ergebnisse werden durch die letzte WHERE-Klausel der Abfrage so gefiltert, dass nur die Kunden zurückgegeben werden, für die die Wahrscheinlichkeit, dass sie ein Fahrrad kaufen, über 0 Prozent liegt.  
@@ -191,7 +191,7 @@ AND PredictProbability([Bike Buyer]) >'.05'
   
  Wenn Ihr Anbieter keine hierarchischen Rowsets wie die hier dargestellten unterstützt, können unter Verwendung des FLATTENED-Schlüsselworts in der Abfrage die Ergebnisse als Tabelle zurückgeben lassen, die NULL-Werte anstelle der wiederholten Spaltenwerte enthält. Weitere Informationen finden Sie unter [Geschachtelte Tabellen &#40;Analysis Services – Data Mining&#41;](nested-tables-analysis-services-data-mining.md) oder [Grundlegendes zur SELECT-Anweisung (DMX)](/sql/dmx/understanding-the-dmx-select-statement).  
   
-###  <a name="bkmk_Query5"></a>Beispiel Abfrage 5: Vorhersagen von Zuordnungen aus einem Entscheidungsstruktur Modell  
+###  <a name="sample-query-5-predicting-associations-from-a-decision-trees-model"></a><a name="bkmk_Query5"></a>Beispiel Abfrage 5: Vorhersagen von Zuordnungen aus einem Entscheidungsstruktur Modell  
  Die folgende Beispielabfrage basiert auf der Association-Miningstruktur. Darüber hinaus können Sie in dem Beispiel dieser Miningstruktur ein neues Modell hinzufügen und Microsoft Decision Trees als Algorithmus auswählen. Weitere Informationen zum Erstellen der Association-Miningstruktur finden Sie unter [Lektion 3: Erstellen eines Warenkorbszenarios &#40;Data Mining-Tutorial für Fortgeschrittene&#41;](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md).  
   
  Die folgende Beispielabfrage ist eine SINGLETON-Abfrage, die Sie mühelos in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] erstellen können, indem Sie Felder wählen und anschließend Werte für diese Felder in einer Dropdownliste auswählen.  
@@ -231,7 +231,7 @@ NATURAL PREDICTION JOIN
 |Mountain-400-W|  
 |Classic Vest|  
   
-###  <a name="bkmk_Query6"></a>Beispiel Abfrage 6: Abrufen einer Regressions Formel aus einem Entscheidungsstruktur Modell  
+###  <a name="sample-query-6-retrieving-a-regression-formula-from-a-decision-trees-model"></a><a name="bkmk_Query6"></a>Beispiel Abfrage 6: Abrufen einer Regressions Formel aus einem Entscheidungsstruktur Modell  
  Wenn Sie ein Entscheidungsstrukturmodell erstellen, das eine Regression für ein kontinuierliches Attribut enthält, können Sie die Regressionsformel verwenden, um Vorhersagen zu treffen, oder Sie können Informationen über die Regressionsformel extrahieren. Weitere Informationen zu Abfragen für Regressionsmodelle finden Sie unter [Beispiele für lineare Regressionsmodellabfragen](linear-regression-model-query-examples.md).  
   
  Wenn ein Entscheidungsstrukturmodell eine Mischung aus Regressionsknoten und Knoten enthält, die nach diskreten Attributen oder Bereichen unterteilt sind, können Sie eine Abfrage erstellen, die nur den Regressionsknoten zurückgibt. Die Tabelle NODE_DISTRIBUTION enthält Einzelheiten der Regressionsformel. In diesem Beispiel werden die Spalten vereinfacht, und für die NODE_DISTRIBUTION-Tabelle wird ein Alias verwendet, um sie übersichtlicher anzuzeigen. In diesem Modell wurden jedoch keine Regressoren gefunden, die „Income“ mit anderen kontinuierlichen Attributen in Beziehung setzen. In solchen Fällen gibt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] den Mittelwert des Attributs und die Gesamtvarianz im Modell für dieses Attribut zurück.  
@@ -258,16 +258,16 @@ WHERE NODE_TYPE = 25
 |||  
 |-|-|  
 |Vorhersagefunktion|Verwendung|  
-|[Isnachfolger &#40;DMX-&#41;](/sql/dmx/isdescendant-dmx)|Bestimmt, ob ein Knoten ein untergeordnetes Element eines anderen Knotens im Modell ist.|  
-|[IsInNode &#40;DMX-&#41;](/sql/dmx/isinnode-dmx)|Zeigt an, ob der angegebene Knoten den aktuellen Fall enthält.|  
-|[Der prätadjustedwahrscheinlichkeits-&#40;DMX-&#41;](/sql/dmx/predictadjustedprobability-dmx)|Gibt die gewichtete Wahrscheinlichkeit zurück.|  
-|[Prätassociation &#40;DMX-&#41;](/sql/dmx/predictassociation-dmx)|Sagt eine Mitgliedschaft in einem assoziativen Dataset voraus.|  
-|[Prädistogram &#40;DMX-&#41;](/sql/dmx/predicthistogram-dmx)|Gibt eine Tabelle mit Werten zurück, die sich auf den aktuellen vorhergesagten Wert beziehen.|  
-|[Prätnodeid &#40;DMX-&#41;](/sql/dmx/predictnodeid-dmx)|Gibt "Node_ID" für jeden Fall zurück.|  
-|[Prätwahrscheinlichkeit &#40;DMX-&#41;](/sql/dmx/predictprobability-dmx)|Gibt die Wahrscheinlichkeit für den vorhergesagten Wert zurück.|  
-|[Prätstdev &#40;DMX-&#41;](/sql/dmx/predictstdev-dmx)|Gibt die vorhergesagte Standardabweichung für die angegebene Spalte zurück.|  
-|[Prätsupport &#40;DMX-&#41;](/sql/dmx/predictsupport-dmx)|Gibt den Unterstützungswert für einen bestimmten Status zurück.|  
-|[Prävarianz &#40;DMX-&#41;](/sql/dmx/predictvariance-dmx)|Gibt die Varianz einer angegebenen Spalte zurück.|  
+|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Bestimmt, ob ein Knoten ein untergeordnetes Element eines anderen Knotens im Modell ist.|  
+|[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|Zeigt an, ob der angegebene Knoten den aktuellen Fall enthält.|  
+|[PredictAdjustedProbability &#40;DMX&#41;](/sql/dmx/predictadjustedprobability-dmx)|Gibt die gewichtete Wahrscheinlichkeit zurück.|  
+|[PredictAssociation &#40;DMX&#41;](/sql/dmx/predictassociation-dmx)|Sagt eine Mitgliedschaft in einem assoziativen Dataset voraus.|  
+|[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Gibt eine Tabelle mit Werten zurück, die sich auf den aktuellen vorhergesagten Wert beziehen.|  
+|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|Gibt "Node_ID" für jeden Fall zurück.|  
+|[PredictProbability &#40;DMX&#41;](/sql/dmx/predictprobability-dmx)|Gibt die Wahrscheinlichkeit für den vorhergesagten Wert zurück.|  
+|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|Gibt die vorhergesagte Standardabweichung für die angegebene Spalte zurück.|  
+|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|Gibt den Unterstützungswert für einen bestimmten Status zurück.|  
+|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|Gibt die Varianz einer angegebenen Spalte zurück.|  
   
  Eine Liste der Funktionen, die von allen [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Algorithmen verwendet werden, finden Sie unter [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx). Die Syntax einzelner Funktionen finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; – Funktionsreferenz](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
@@ -275,6 +275,6 @@ WHERE NODE_TYPE = 25
  [Data Mining-Abfragen](data-mining-queries.md)   
  [Microsoft Decision Trees-Algorithmus](microsoft-decision-trees-algorithm.md)   
  [Technische Referenz für den Microsoft Decision Trees-Algorithmus](microsoft-decision-trees-algorithm-technical-reference.md)   
- [Mining Modell Inhalt von Entscheidungsstruktur Modellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [Miningmodellinhalt von Entscheidungsstrukturmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

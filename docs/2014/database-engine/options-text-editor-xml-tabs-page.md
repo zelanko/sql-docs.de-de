@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: ae595b42274e012032e79754650b573b5d80053b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089132"
 ---
 # <a name="options-text-editorxmltabs-page"></a>Optionen (Text-Editor: XML: Seite „Tabstopps“)
@@ -26,7 +26,7 @@ ms.locfileid: "66089132"
  Optionen für den XML-Editor können auch im Dialogfeld **Alle Sprachen/Allgemein** festgelegt werden. Wenn Sie die Dialogfelder **alle Sprachen** verwenden, um verschiedene Optionen für die [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] anderen Editoren festzulegen, z. b. den DMX-oder MDX-Editoren, müssen Sie die XML-Editor-Optionen mithilfe dieses Dialog Felds zurücksetzen  
   
 ## <a name="indenting"></a>Einzug  
- **Keine**  
+ **None**  
  Wenn diese Option ausgewählt ist, wird die neue Zeile, die nach dem Drücken der EINGABETASTE erstellt wird, nicht eingerückt. Der Cursor wird in der ersten Spalte der neuen Zeile platziert.  
   
  **Baustein**  

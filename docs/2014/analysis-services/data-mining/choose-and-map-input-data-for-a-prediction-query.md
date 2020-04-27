@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 89eaf3b59f6d779a01168b00d51acbee1e96ca7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085848"
 ---
 # <a name="choose-and-map-input-data-for-a-prediction-query"></a>Auswählen und Zuordnen von Eingabedaten für eine Vorhersageabfrage
@@ -118,6 +118,6 @@ ms.locfileid: "66085848"
      Falls bereits eine Beziehung besteht, werden die Spalten des Miningmodells automatisch den gleichnamigen Spalten der Eingabetabelle zugeordnet. Die Beziehung zwischen der geschachtelten Tabelle und der Falltabelle können Sie ändern, indem Sie auf **Join ändern**klicken und damit das Dialogfeld **Beziehung erstellen** öffnen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Vorhersage Abfragen &#40;Data Mining-&#41;](prediction-queries-data-mining.md)  
+ [Vorhersageabfragen &#40;Data Mining&#41;](prediction-queries-data-mining.md)  
   
   

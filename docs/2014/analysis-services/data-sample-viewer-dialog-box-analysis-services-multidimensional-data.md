@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f406885d607827c4ed29102164c6fe89ea621508
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082621"
 ---
 # <a name="data-sample-viewer-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Datenstichproben-Viewer' (Analysis Services – Mehrdimensionale Daten)
@@ -26,7 +26,7 @@ ms.locfileid: "66082621"
   
  Um das Dialogfeld **Datenstichproben-Viewer** zu öffnen, klicken Sie mit der rechten Maustaste auf ein Measure, das im **Cube-Assistenten** auf der Seite **Measures auswählen** im Raster **Verfügbare Measures**aufgeführt ist, und klicken Sie anschließend auf **Beispieldaten anzeigen**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Tabellenraster  
  Zeigt die Zeilen und Spalten für die ersten 1000 Zeilen der Faktentabelle an, die die ausgewählte Zielspalte enthält.  
   

@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f095429070a16cb4a99dabd84ffe99d169ce35a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66095330"
 ---
 # <a name="feature-review"></a>Überprüfung der Funktionen
@@ -26,13 +26,8 @@ ms.locfileid: "66095330"
   
 |Komponentengruppe|Komponenten und Funktionen|  
 |---------------------|-----------------------------|  
-|[!INCLUDE[ssDE](../../includes/ssde-md.md)] -Dienste|
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] ist der Kerndienst zum Speichern, Verarbeiten und Sichern von Daten. 
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] schließt die folgenden Komponenten ein:<br /><br /> Replikation: (Optional) Bei der Replikation handelt es sich um eine Reihe von Technologien zum Kopieren und Verteilen von Daten und Datenbankobjekten aus einer Datenbank in eine andere und das anschließende Synchronisieren der Datenbanken, um die Konsistenz der Daten sicherzustellen.<br /><br /> Volltextsuche: (Optional) Die Volltextsuche enthält die Funktionalität zum Ausführen von Volltextabfragen für rein zeichenbasierte Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen.<br /><br /> 
-  [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (Optional): Bei [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) handelt es sich um eine Datenbereinigungslösung, die die Ermittlung inkonsistenter und falscher Daten in Ihrer Datenquelle ermöglicht und automatisierte und interaktive Methoden zur Datenbereinigung bereitstellt.|  
-|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält Server- und Clientkomponenten, mit denen Berichte in Form einer Tabelle, Matrix, Grafik oder Freiform erstellt, verwaltet und bereitgestellt werden können. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ist gleichzeitig eine erweiterbare Plattform, die Sie zum Entwickeln von Berichtsanwendungen verwenden können.|  
+|[!INCLUDE[ssDE](../../includes/ssde-md.md)] -Dienste|[!INCLUDE[ssDE](../../includes/ssde-md.md)] ist der Kerndienst zum Speichern, Verarbeiten und Sichern von Daten. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] schließt die folgenden Komponenten ein:<br /><br /> Replikation: (Optional) Bei der Replikation handelt es sich um eine Reihe von Technologien zum Kopieren und Verteilen von Daten und Datenbankobjekten aus einer Datenbank in eine andere und das anschließende Synchronisieren der Datenbanken, um die Konsistenz der Daten sicherzustellen.<br /><br /> Volltextsuche: (Optional) Die Volltextsuche enthält die Funktionalität zum Ausführen von Volltextabfragen für rein zeichenbasierte Daten in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabellen.<br /><br /> [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (Optional): Bei [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) handelt es sich um eine Datenbereinigungslösung, die die Ermittlung inkonsistenter und falscher Daten in Ihrer Datenquelle ermöglicht und automatisierte und interaktive Methoden zur Datenbereinigung bereitstellt.|  
+|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält Server- und Clientkomponenten, mit denen Berichte in Form einer Tabelle, Matrix, Grafik oder Freiform erstellt, verwaltet und bereitgestellt werden können. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ist gleichzeitig eine erweiterbare Plattform, die Sie zum Entwickeln von Berichtsanwendungen verwenden können.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Installieren von SQL Server 2014 mit SysPrep](../../database-engine/install-windows/install-sql-server-using-sysprep.md)  

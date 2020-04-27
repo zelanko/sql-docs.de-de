@@ -21,16 +21,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5e984fe2ea57ab175e3224d099f5392f96287c74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084636"
 ---
 # <a name="discretization-methods-data-mining"></a>Diskretisierungsmethoden (Data Mining)
   Einige Algorithmen, die verwendet werden, um Data Mining Modelle [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in zu erstellen, benötigen bestimmte Inhaltstypen, um ordnungsgemäß zu funktionieren. Beispielsweise kann der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus kontinuierliche Spalten nicht als Eingabe verwenden und keine kontinuierlichen Werte vorhersagen. Außerdem können einige Spalten so viele Werte enthalten, dass der Algorithmus interessante Muster in Daten, aus denen ein Modell erstellt wird, nur schwer identifizieren kann.  
   
- In diesen Fällen können Sie die Daten in den Spalten diskretisieren, sodass Sie die Algorithmen verwenden können, um ein Miningmodell zu erstellen. *Diskretisierung* ist der Prozess, Werte in Bucket zu platzieren, sodass eine begrenzte Anzahl möglicher Zustände vorliegt. Die Buckets selbst werden als sortierte und diskrete Werte behandelt. Sie können sowohl numerische als auch Zeichenfolgenspalten diskretisieren.  
+ In diesen Fällen können Sie die Daten in den Spalten diskretisieren, sodass Sie die Algorithmen verwenden können, um ein Miningmodell zu erstellen. Unter*Diskretisierung* wird der Prozess verstanden, Werte in Buckets zu platzieren, sodass sich eine begrenzte Anzahl an möglichen Statuswerten ergibt. Die Buckets selbst werden als sortierte und diskrete Werte behandelt. Sie können sowohl numerische als auch Zeichenfolgenspalten diskretisieren.  
   
  Es gibt verschiedene Methoden für das Diskretisieren von Daten. Wenn Ihre Data Mining-Projektmappe relationale Daten verwendet, können Sie die Anzahl der Buckets für das Gruppieren von Daten steuern, indem Sie den Wert der <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> -Eigenschaft festlegen. Die Standardanzahl von Buckets beträgt 5.  
   
@@ -42,14 +42,13 @@ ms.locfileid: "66084636"
   
  Die folgende Tabelle beschreibt die Methoden, mit denen Sie Daten in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]diskretisieren können.  
   
-|Diskretisierungsmethode|BESCHREIBUNG|  
+|Diskretisierungsmethode|Beschreibung|  
 |---------------------------|-----------------|  
-|`AUTOMATIC`|
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bestimmt, welche Diskretisierungsmethode verwendet werden muss.|  
+|`AUTOMATIC`|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bestimmt, welche Diskretisierungsmethode verwendet werden muss.|  
 |`CLUSTERS`|Der Algorithmus unterteilt die Daten in Gruppen, indem er Stichproben der Schulungsdaten nimmt, diese als Initialisierungswerte eine Reihe von zufällig gewählten Punkten verwendet und anschließend mehrere Iterationen des Microsoft Clustering-Algorithmus anhand der Expectation-Maximization (EM)-Clusteringmethode ausführt. Die `CLUSTERS`-Methode ist von Vorteil, da sie für jede Verteilungskurve verwendet werden kann. Allerdings ist sie zeitaufwändiger als andere Diskretisierungsmethoden.<br /><br /> Diese Methode kann nur für numerische Spalten verwendet werden.|  
 |`EQUAL_AREAS`|Der Algorithmus teilt die Daten in Gruppen auf, die die gleiche Anzahl von Werten enthalten. Diese Methode eignet sich vor allem für Normalverteilungskurven, jedoch nicht in Fällen, bei denen die Verteilung viele Werte umfasst, die sich in einer engen Gruppe der kontinuierlichen Daten befinden. Wenn beispielsweise die Hälfte der Artikel einen Kostenwert von "0" aufweisen, befindet sich die Hälfte der Daten unterhalb eines einzigen Punktes der Kurve. In einer solchen Verteilung trennt diese Methode die Daten, um gleiche Diskretisierungen in verschiedenen Bereichen zu erstellen. Dadurch wird eine ungenaue Darstellung der Daten erzeugt.|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 -   Sie können die `EQUAL_AREAS`-Methode verwenden, um Strings zu diskretisieren.  
   
@@ -64,6 +63,6 @@ ms.locfileid: "66084636"
  [Mining Strukturen &#40;Analysis Services Data Mining-&#41;](mining-structures-analysis-services-data-mining.md)   
  [Datentypen &#40;Data Mining-&#41;](data-types-data-mining.md)   
  [Mining Struktur Spalten](mining-structure-columns.md)   
- [Spalten Verteilungen &#40;Data Mining-&#41;](column-distributions-data-mining.md)  
+ [Spaltenverteilungen &#40;Data Mining&#41;](column-distributions-data-mining.md)  
   
   

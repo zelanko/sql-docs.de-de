@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0217d959759a59e49ce76e4a841c5d52e958e9ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091218"
 ---
 # <a name="verify-autogrow-is-turned-on-for-all-data-and-log-files-during-the-upgrade-process"></a>Überprüfen, ob für alle Daten- und Protokolldateien die automatische Vergrößerung während des Upgradeprozesses aktiviert ist
@@ -35,18 +35,17 @@ ms.locfileid: "66091218"
   
  In der folgenden Tabelle sind Änderungen an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktionen aufgelistet, die zusätzlichen Speicherplatz für benutzerdefinierte Datendateien erforderlich machen.  
   
-|Funktion|In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingeführte Änderungen|  
+|Feature|In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingeführte Änderungen|  
 |-------------|-----------------------------------------------------|  
 |Volltext|Die Zuordnung der Dokument-ID (DOCID) wird in der Datendatei statt im Volltextkatalog gespeichert.|  
-|
-  `text`-, `ntext`- und `image`-Spalten|LOB-Spalten (Large Object), die als Datentypen `text`, `ntext` oder `image` definiert sind, erfordern 40 Byte zusätzlichen Speicherplatz pro Spalte. Diese einmalige Speicherplatzerweiterung erfolgt beim ersten Update der jeweiligen LOB-Spalte.|  
+|`text`-, `ntext`- und `image`-Spalten|LOB-Spalten (Large Object), die als Datentypen `text`, `ntext` oder `image` definiert sind, erfordern 40 Byte zusätzlichen Speicherplatz pro Spalte. Diese einmalige Speicherplatzerweiterung erfolgt beim ersten Update der jeweiligen LOB-Spalte.|  
 |metadata|Für Datenbankobjekte und Benutzerberechtigungen werden zusätzliche Systemmetadaten in der PRIMARY-Dateigruppe der einzelnen Benutzerdatenbanken erstellt und verwaltet. In früheren Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden die Berechtigungen, die mit einem Berechtigenden (GRANTOR) oder einer Empfängerliste verknüpft sind, in einer einzigen Zeile als Bitmap gespeichert. Die Bitmap wird auf mehrere Zeilen ausgedehnt.<br /><br /> Während des Updateprozesses muss ausreichend Speicherplatz zur Verfügung stehen, um sowohl die alten als auch die neuen Metadaten zu speichern. Die alten Metadaten werden nach dem Upgrade gelöscht.|  
   
  **Transaktionsprotokolldateien**  
   
  In der folgenden Tabelle sind Änderungen an [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Funktionen aufgelistet, die zusätzlichen Speicherplatz für Transaktionsprotokolldateien erforderlich machen.  
   
-|Funktion|In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingeführte Änderungen|  
+|Feature|In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingeführte Änderungen|  
 |-------------|-----------------------------------------------------|  
 |Wiederherstellung|Während der Rollbackphase einer Wiederherstellung nach einem Systemabsturz ermöglicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es Benutzern, auf die Datenbank zuzugreifen. Dies ist möglich, weil die Transaktionen, für die zum Zeitpunkt des Systemabsturzes noch kein Commit durchgeführt wurde, alle Sperren erneut abrufen, die sie vor dem Crash aufrechterhalten haben. Während für diese Transaktionen ein Rollback durchgeführt wird, schützen ihre Sperren sie vor Eingriffen seitens der Benutzer. Diese zusätzlichen Sperrinformationen müssen im Transaktionsprotokoll verwaltet werden.|  
   
@@ -62,7 +61,7 @@ ms.locfileid: "66091218"
   
  Zusätzliche Objekte verwenden auch die **tempdb** -Datenbank. In der folgenden Tabelle sind Änderungen oder Erweiterungen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von Features aufgeführt, die zu zusätzlichen Speicherplatzanforderungen für **tempdb** -Daten-und-Protokolldateien führen.  
   
-|Funktion|In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingeführte Änderungen|  
+|Feature|In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eingeführte Änderungen|  
 |-------------|-----------------------------------------------------|  
 |Zeilenversionsverwaltung|Die Zeilenversionsverwaltung ist ein allgemeines Framework in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es wird für folgende Aufgaben verwendet:<br /><br /> Unterstützungs Trigger: Erstellen Sie die eingefügten und gelöschten Tabellen in Triggern. Für alle durch den Trigger geänderten Zeilen wird die Versionsverwaltung verwendet. Das schließt die Zeilen ein, die durch die Anweisung geändert wurden, mit der der Start des Triggers erfolgte, sowie alle vom Trigger bewirkten Datenänderungen. AFTER-Trigger verwenden den Versionsspeicher von **tempdb** , um die before-Bilder der vom Trigger geänderten Zeilen zu speichern. Beim Massenladen von Daten mit aktivierten Triggern wird dem Versionsspeicher eine Kopie jeder Zeile hinzugefügt.<br /><br /> Unterstützen von Multiple Active Result Sets (MARS). Wenn eine MARS-Sitzung eine Datenänderungsanweisung (z. B. INSERT, UPDATE oder DELETE) ausgibt, während es ein aktives Resultset gibt, wird für die von der Änderungsanweisung betroffenen Zeilen die Versionsverwaltung verwendet.<br /><br /> Unterstützen von Indexvorgängen, die die ONLINE-Option angeben. Onlineindexvorgänge verwenden die Zeilenversionsverwaltung, um den Indexvorgang von den Auswirkungen der Änderungen zu isolieren, die von anderen Transaktionen vorgenommen wurden. Auf diese Weise ist es nicht erforderlich, freigegebene Sperren für Zeilen anzufordern, die gelesen wurden. Außerdem erfordern gleichzeitige benutzeraktualisierungs-und Löschvorgänge während Online Index Vorgängen Speicherplatz für Versionsdaten Sätze in **tempdb**.<br /><br /> Unterstützung von auf Zeilen Versionsverwaltung basierenden Transaktions Isolations Stufen: eine neue Implementierung der Isolationsstufe "Read Commit", die die Zeilen Versionsverwaltung verwendet, um Lese Konsistenz auf Anweisungs Ebene bereitzustellen Eine neue Isolationsstufe – Momentaufnahme, um die Lesekonsistenz auf der Transaktionsebene zu gewährleisten.<br /><br /> <br /><br /> Zeilen Versionen werden im **tempdb** -Versionsspeicher lange genug aufbewahrt, um den Anforderungen von Transaktionen gerecht zu werden, die unter auf Zeilen Versionsverwaltung basierenden Isolations Stufen ausgeführt werden.<br /><br /> Weitere Informationen über die Zeilenversionsverwaltung und den Versionsspeicher finden Sie im Thema "Grundlegendes zu zeilenversionsbasierten Isolationsstufen" in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Onlinedokumentation.|  
 |Zwischenspeichern von Metadaten temporärer Tabellen und temporärer Variablen|Für alle Metadaten temporärer Tabellen und temporärer Variablen, die im Metadatencache von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zwischengespeichert werden, werden zwei zusätzliche Seiten für **tempdb**zugeordnet.<br /><br /> Wenn eine gespeicherte Prozedur oder ein Trigger eine temporäre Tabelle oder eine temporäre Variable erstellt, wird das temporäre Objekt nach Ausführung der Prozedur bzw. des Triggers nicht gelöscht. Stattdessen wird das temporäre Objekt auf eine Seite gekürzt und wiederverwendet, wenn die Prozedur oder der Trigger das nächste Mal ausgeführt wird.|  

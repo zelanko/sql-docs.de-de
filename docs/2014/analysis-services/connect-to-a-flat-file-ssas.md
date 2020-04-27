@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b6eeb17662c0cac290a7a455d0925cd05560e5e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087361"
 ---
 # <a name="connect-to-a-flat-file-ssas"></a>Mit einer Flatfile verbinden (SSAS)
@@ -40,7 +40,7 @@ ms.locfileid: "66087361"
  **Spalten Trennzeichen**  
  Wählen Sie eine Option aus der Liste der verfügbaren Spaltentrennzeichen aus. Dabei sollten Sie ein Spaltentrennzeichen auswählen, dessen Auftreten als Zeichen im Text unwahrscheinlich ist.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |Tabulator (t)|Als Trennzeichen für Spalten dient ein Tabulator (t).|  
 |Komma (,)|Als Trennzeichen für Spalten dient ein Komma (,).|  
@@ -55,13 +55,13 @@ ms.locfileid: "66087361"
  **Erste Zeile als Spaltenüberschriften verwenden**  
  Geben Sie an, ob die erste Datenzeile für die Spaltenüberschriften der Zieltabelle verwendet werden soll.  
   
- **Daten Vorschau**  
+ **Datenvorschau**  
  Zeigen Sie die Daten in der ausgewählten Datei in einer Vorschau an, und verwenden Sie die folgenden Optionen zum Ändern des Datenimports.  
   
 > [!NOTE]  
 >  Nur die ersten 50 Zeilen in der Datei werden in dieser Vorschau angezeigt.  
   
-|Option|Beschreibung|  
+|Option|BESCHREIBUNG|  
 |------------|-----------------|  
 |**Kontrollkästchen in der Spaltenüberschrift**|Aktivieren Sie das Kontrollkästchen, um die Spalte in den Datenimport einzuschließen. Deaktivieren Sie das Kontrollkästchen, um die Spalte aus dem Datenimport zu entfernen.|  
 |**Schaltfläche mit Abwärtspfeil in der Spaltenüberschrift**|Sortieren und filtern Sie die Daten in der Spalte.|  

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0370d4fceada5c0a287c4a071691ea20d5a28f6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086220"
 ---
 # <a name="apply-a-filter-to-a-mining-model"></a>Anwenden eines Filters auf ein Miningmodell
@@ -46,7 +46,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 3.  Wählen Sie das Modell aus, und klicken Sie mit der rechten Maustaste, um das Kontextmenü zu öffnen.  
   
-     Oder  
+     - oder -  
   
      Wählen Sie das Modell aus. Wählen Sie dann im Menü **Miningmodell** die Funktion **Modellfilter festlegen**aus.  
   
@@ -70,7 +70,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 9. Klicken Sie auf die nächste Zeile im Raster.  
   
-     Die erstellte Filterbedingung wird automatisch zum Textfeld Ausdruck hinzugefügt. Zum Beispiel, `[Income] > '30000'`  
+     Die erstellte Filterbedingung wird automatisch zum Textfeld Ausdruck hinzugefügt. Beispiel: `[Income] > '30000'`  
   
 10. Klicken Sie in der nächsten Zeile des Rasters auf das Textfeld **AND/OR** , um eine Bedingung hinzuzufügen.  
   
@@ -106,7 +106,7 @@ WHERE [Model] <> 'Water Bottle' )
   
 7.  Klicken Sie auf **Wert** , und geben Sie einen Wert ein.  
   
-     Wählen Sie `Model`z. b. für **Mining Struktur Spalte** die Option aus. Wählen **** Sie für Operator `<>`die Option aus, und `Water Bottle`geben Sie den Wert ein. Diese Bedingung erstellt den folgenden Filterausdruck:  
+     Wählen Sie `Model`z. b. für **Mining Struktur Spalte** die Option aus. Wählen **Operator**Sie für Operator `<>`die Option aus, und `Water Bottle`geben Sie den Wert ein. Diese Bedingung erstellt den folgenden Filterausdruck:  
   
 ```  
 EXISTS (SELECT * FROM [<nested table name>] WHERE [Model] <> 'Water Bottle' )   

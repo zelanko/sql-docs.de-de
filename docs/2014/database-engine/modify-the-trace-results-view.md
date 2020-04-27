@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 780772f7703e4499c13eb9373ccad4252097b536
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089441"
 ---
 # <a name="modify-the-trace-results-view"></a>Ändern der Sicht der Ablaufverfolgungsergebnisse
@@ -36,12 +36,12 @@ ms.locfileid: "66089441"
   
 8.  [Ändern der Anzeigeeinstellungen](#ChangeDisplay)  
   
-##  <a name="AddRemoveColumns"></a>Hinzufügen oder Entfernen von Spalten  
+##  <a name="add-or-remove-columns"></a><a name="AddRemoveColumns"></a>Hinzufügen oder Entfernen von Spalten  
   
 1.  Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen.  
   
     > [!NOTE]  
-    >  Sie können auch mit der rechten Maustaste auf den Sitzungs Namen klicken und dann **Livedaten ansehen**auswählen.  
+    >   Sie können auch mit der rechten Maustaste auf den Sitzungsnamen klicken, und dann **Livedaten ansehen**auswählen.  
   
 2.  Klicken Sie im Fenster für die Ablaufverfolgungsergebnisse mit der rechten Maustaste auf den Spaltenheader, und wählen Sie dann **Spalten auswählen**aus.  
   
@@ -56,14 +56,14 @@ ms.locfileid: "66089441"
   
 5.  Klicken Sie auf **OK**.  
   
-##  <a name="ChangeColumns"></a>Erstellen, bearbeiten oder löschen zusammen geführter Spalten  
+##  <a name="create-edit-or-delete-merged-columns"></a><a name="ChangeColumns"></a>Erstellen, bearbeiten oder löschen zusammen geführter Spalten  
   
 #### <a name="to-create-merged-columns"></a>So erstellen Sie zusammengeführte Spalten  
   
 1.  Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen.  
   
     > [!NOTE]  
-    >  Sie können auch mit der rechten Maustaste auf den Sitzungs Namen klicken und dann **Livedaten ansehen**auswählen.  
+    >   Sie können auch mit der rechten Maustaste auf den Sitzungsnamen klicken, und dann **Livedaten ansehen**auswählen.  
   
 2.  Klicken Sie im Fenster für die Ablaufverfolgungsergebnisse mit der rechten Maustaste auf den Spaltenheader, und klicken Sie dann auf **Spalten auswählen**.  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66089441"
 1.  Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen.  
   
     > [!NOTE]  
-    >  Sie können auch mit der rechten Maustaste auf den Sitzungs Namen klicken und dann **Livedaten ansehen**auswählen.  
+    >   Sie können auch mit der rechten Maustaste auf den Sitzungsnamen klicken, und dann **Livedaten ansehen**auswählen.  
   
 2.  Klicken Sie im Fenster für die Ablaufverfolgungsergebnisse mit der rechten Maustaste auf den Spaltenheader, und klicken Sie dann auf **Spalten auswählen**.  
   
@@ -98,33 +98,33 @@ ms.locfileid: "66089441"
 1.  Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen.  
   
     > [!NOTE]  
-    >  Sie können auch mit der rechten Maustaste auf den Sitzungs Namen klicken und dann **Livedaten ansehen**auswählen.  
+    >   Sie können auch mit der rechten Maustaste auf den Sitzungsnamen klicken, und dann **Livedaten ansehen**auswählen.  
   
 2.  Klicken Sie im Fenster für die Ablaufverfolgungsergebnisse mit der rechten Maustaste auf den Spaltenheader, und klicken Sie dann auf **Spalten auswählen**.  
   
 3.  Wählen Sie im Dialogfeld **Spalten auswählen** den Namen der zusammengeführten Spalte aus, die Sie löschen möchten, und klicken Sie dann auf **Löschen**.  
   
-##  <a name="SortResults"></a>Sortieren der Ergebnisse  
+##  <a name="sort-the-results"></a><a name="SortResults"></a>Sortieren der Ergebnisse  
   
 #### <a name="to-sort-the-results-in-ascending-or-descending-order"></a>So sortieren Sie die Ergebnisse in aufsteigender oder absteigender Reihenfolge  
   
 -   Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen.  
   
     > [!NOTE]  
-    >  Sie können auch mit der rechten Maustaste auf den Sitzungs Namen klicken, **Livedaten ansehen**auswählen und dann auf der Symbolleiste auf die Schaltfläche **Datenfeed Abbrechen** klicken.  
+    >   Sie können auch mit der rechten Maustaste auf den Sitzungsnamen klicken, **Livedaten ansehen**auswählen und dann auf der Symbolleiste auf die Schaltfläche **Datenfeed beenden** klicken.  
   
 -   Klicken Sie im Fenster für die Ablaufverfolgungsergebnisse mit der rechten Maustaste auf die Spaltenüberschrift, nach der die Sortierung erfolgen soll. Klicken Sie auf **Aufsteigend sortieren** oder **Absteigend sortieren** , um die Spalte in aufsteigender bzw. absteigender Reihenfolge zu sortieren.  
   
      Bei gruppierten Spalten werden bei Sortierung der Spalte nur die Daten innerhalb der Gruppe sortiert.  
   
-##  <a name="GroupResults"></a>Gruppieren von Ergebnissen  
+##  <a name="group-results"></a><a name="GroupResults"></a>Gruppieren von Ergebnissen  
   
 #### <a name="to-group-the-results-by-a-single-column"></a>So gruppieren Sie die Ergebnisse nach einer einzelnen Spalte  
   
 1.  Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen.  
   
     > [!NOTE]  
-    >  Sie können auch mit der rechten Maustaste auf den Sitzungs Namen klicken, **Livedaten ansehen**auswählen und dann auf der Symbolleiste erweiterte Ereignisse auf die Schaltfläche **Datenfeed Abbrechen** klicken.  
+    >   Sie können auch mit der rechten Maustaste auf den Sitzungsnamen klicken, **Livedaten ansehen**auswählen und dann auf der Symbolleiste für erweiterte Ereignisse auf die Schaltfläche **Datenfeed beenden** klicken.  
   
 2.  Klicken Sie im Fenster für die Ablaufverfolgungsergebnisse mit der rechten Maustaste auf den Spaltenheader, den Sie gruppieren möchten, und klicken Sie dann auf **Nach dieser Spalte gruppieren**.  
   
@@ -133,7 +133,7 @@ ms.locfileid: "66089441"
 1.  Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen.  
   
     > [!NOTE]  
-    >  Sie können auch mit der rechten Maustaste auf den Sitzungs Namen klicken, **Livedaten ansehen**auswählen und dann auf der Symbolleiste auf die Schaltfläche **Datenfeed Abbrechen** klicken.  
+    >   Sie können auch mit der rechten Maustaste auf den Sitzungsnamen klicken, **Livedaten ansehen**auswählen und dann auf der Symbolleiste auf die Schaltfläche **Datenfeed beenden** klicken.  
   
 2.  Klicken Sie auf der Symbolleiste für erweiterte Ereignisse auf die Schaltfläche **Gruppierung** .  
   
@@ -145,7 +145,7 @@ ms.locfileid: "66089441"
   
 4.  Klicken Sie auf **OK**.  
   
-##  <a name="AggregateResults"></a>Aggregat Ergebnisse  
+##  <a name="aggregate-results"></a><a name="AggregateResults"></a>Aggregat Ergebnisse  
  Erweiterte Ereignisse unterstützen fünf Aggregationsfunktionen:  
   
 -   SUM  
@@ -156,7 +156,7 @@ ms.locfileid: "66089441"
   
 -   Average  
   
--   Count  
+-   Anzahl  
   
  Sum, Min, Max und Average können nur mit verfügbaren numerischen Spalten verwendet werden. Count ist die Anzahl von Werten ungleich NULL, die für die ausgewählte Spalte in der Gruppe vorhanden sind.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "66089441"
 1.  Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen.  
   
     > [!NOTE]  
-    >  Sie können auch mit der rechten Maustaste auf den Sitzungs Namen klicken, **Livedaten ansehen**auswählen und dann auf der Symbolleiste auf die Schaltfläche **Datenfeed Abbrechen** klicken.  
+    >   Sie können auch mit der rechten Maustaste auf den Sitzungsnamen klicken, **Livedaten ansehen**auswählen und dann auf der Symbolleiste auf die Schaltfläche **Datenfeed beenden** klicken.  
   
     > [!NOTE]  
     >  Die Aggregation wird für eine Gruppe ausgeführt, deshalb müssen Sie die Ergebnisse gruppieren, bevor Sie die Aggregation ausführen können.  
@@ -184,7 +184,7 @@ ms.locfileid: "66089441"
   
 7.  Klicken Sie auf **OK**.  
   
-##  <a name="Filter"></a>Filter Ergebnisse  
+##  <a name="filter-results"></a><a name="Filter"></a>Filter Ergebnisse  
  Sie können Filter auf Ablaufverfolgungsergebnisse anwenden, um die Ablaufverfolgungsergebnisse einzugrenzen, die im Ablaufverfolgungsfenster angezeigt werden. Der Anzeigefilter umfasst einen Zeitfilter und einen erweiterten Filter. Sie filtern mithilfe des Zeitfilters die Ablaufverfolgungsergebnisse nach Ereigniszeitstempel und erstellen mithilfe des erweiterten Filters Filterbedingungen mit Ereignisfeldern und -aktionen. Zwischen Zeit- und erweitertem Filter besteht eine logische UND-Beziehung.  
   
 #### <a name="to-create-a-filter"></a>So erstellen Sie einen Filter  
@@ -192,7 +192,7 @@ ms.locfileid: "66089441"
 1.  Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen.  
   
     > [!NOTE]  
-    >  Sie können auch mit der rechten Maustaste auf den Sitzungs Namen klicken und dann **Livedaten ansehen**auswählen.  
+    >   Sie können auch mit der rechten Maustaste auf den Sitzungsnamen klicken, und dann **Livedaten ansehen**auswählen.  
   
 2.  Wählen Sie im Fenster mit den Ablaufverfolgungsergebnissen die Ergebnisse aus, die Sie filtern möchten, und klicken Sie dann auf der Symbolleiste Erweiterte Ereignisse auf die Schaltfläche **Filter** .  
   
@@ -210,12 +210,12 @@ ms.locfileid: "66089441"
   
 -   Wenn weder eine Aktion noch ein Feld vorhanden ist, wird NULL angezeigt.  
   
-##  <a name="Search"></a>In Spalten nach Text suchen  
+##  <a name="search-for-text-in-columns"></a><a name="Search"></a>In Spalten nach Text suchen  
   
 1.  Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen.  
   
     > [!NOTE]  
-    >  Sie können auch mit der rechten Maustaste auf den Sitzungs Namen klicken und dann **Livedaten ansehen**auswählen.  
+    >   Sie können auch mit der rechten Maustaste auf den Sitzungsnamen klicken, und dann **Livedaten ansehen**auswählen.  
   
 2.  Klicken Sie auf der Symbolleiste für erweiterte Ereignisse auf die Schaltfläche **Suchen** .  
   
@@ -243,7 +243,7 @@ ms.locfileid: "66089441"
   
 6.  Klicken Sie auf **Weitersuchen** , um nach dem nächsten Vorkommen des Texts zu suchen, den Sie im Feld **Suchen nach** eingegeben haben.  
   
-##  <a name="ChangeDisplay"></a>Ändern der Anzeigeeinstellungen  
+##  <a name="change-the-display-settings"></a><a name="ChangeDisplay"></a>Ändern der Anzeigeeinstellungen  
  Sie können Spalteninformationen (Spaltenreihenfolge, Mergespalte und Spaltenbreite) und Filterinformationen eines Ablaufverfolgungsergebnisses in einer Anzeigeeinstellungsdatei (VIEWSETTING-Datei) für erweiterte Ereignisse speichern. Nach dem Speichern der Datei können Sie sie auf die Ablaufverfolgungsergebnisse anwenden, um die Ansicht zu ändern.  
   
 #### <a name="to-change-the-display-settings"></a>So ändern Sie die Anzeigeeinstellungen  
@@ -251,7 +251,7 @@ ms.locfileid: "66089441"
 1.  Öffnen Sie eine XEL-Datei, um die Ablaufverfolgungsergebnisse anzuzeigen.  
   
     > [!NOTE]  
-    >  Sie können auch mit der rechten Maustaste auf den Sitzungs Namen klicken und dann **Livedaten ansehen**auswählen.  
+    >   Sie können auch mit der rechten Maustaste auf den Sitzungsnamen klicken, und dann **Livedaten ansehen**auswählen.  
   
 2.  Wählen Sie im Fenster mit den Ablaufverfolgungsergebnissen auf der Symbolleiste für erweiterte Ereignisse oder im Menü **Anzeigeeinstellungen**aus.  
   

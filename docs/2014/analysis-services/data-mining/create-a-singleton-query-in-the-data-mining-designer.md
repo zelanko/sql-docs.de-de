@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 795347e0ef2bdee226daff57e85e2b02f8b00c9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085310"
 ---
 # <a name="create-a-singleton-query-in-the-data-mining-designer"></a>Erstellen einer SINGLETON-Abfrage im Data Mining-Designer
@@ -69,17 +69,17 @@ AS [t]
   
 7.  Klicken Sie in der Zeile **PredictProbability** auf **Kriterium/Argument** , und geben Sie den Namen der vorherzusagenden Spalte ein und optional einen bestimmten vorherzusagenden Wert.  
   
-     Geben Sie beispielsweise `[Bike Buyer], 1` ein.  
+     Geben Sie beispielsweise `[Bike Buyer], 1`.  
   
 8.  Klicken Sie in der Zeile **PredictProbability** auf das Feld **Alias** , und geben Sie einen Verweisnamen für die neue Spalte ein.  
   
-     Geben Sie beispielsweise `ProbableBuyer` ein.  
+     Geben Sie beispielsweise `ProbableBuyer`.  
   
 9. Klicken Sie auf der Symbolleiste der Registerkarte **Miningmodellvorhersage** auf **Zur Abfragergebnissicht wechseln** .  
   
      Ein neuer Bildschirm wird geöffnet, der das Ergebnis der Abfrage anzeigt. Um die DMX-Anweisung anzuzeigen, die Sie gerade erstellt haben, klicken Sie auf **SQL**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Vorhersage Abfragen &#40;Data Mining-&#41;](prediction-queries-data-mining.md)  
+ [Vorhersageabfragen &#40;Data Mining&#41;](prediction-queries-data-mining.md)  
   
   

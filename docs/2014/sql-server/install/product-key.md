@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5a7a59c14cbc5fc3bf3742d8a53e8cf3f92076a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093379"
 ---
 # <a name="product-key"></a>Product Key
   Auf der Seite Product Key können Sie Ihre Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]validieren, oder Sie können angeben, welche kostenlose Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie installieren möchten.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Wenn Sie eine kostenlose Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installieren möchten, aktivieren Sie die Optionsschaltfläche für kostenlose Installationen, und wählen Sie aus dem Dropdownfeld die gewünschte Edition aus.  
   
  Aktivieren Sie die Optionsschaltfläche für den Product Key, und geben Sie diesen in die dafür vorgesehenen Felder ein, um eine bezahlte Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu validieren.  

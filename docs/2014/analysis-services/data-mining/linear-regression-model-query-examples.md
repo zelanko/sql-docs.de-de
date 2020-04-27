@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 917e41f6053aa499c7d3d7ca51a32b033591bdc1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084299"
 ---
 # <a name="linear-regression-model-query-examples"></a>Beispiele für lineare Regressionsmodellabfrage
@@ -33,9 +33,9 @@ ms.locfileid: "66084299"
   
  [Verwenden des Data Mining-Schemarowsets zur Ermittlung der für ein Modell verwendeten Parameter](#bkmk_Query1)  
   
- [Verwenden von DMX zum Zurückgeben der Regressions Formel für das Modell](#bkmk_Query2)  
+ [Verwenden von DMX zur Ermittlung der Regressionsformel für das Modell](#bkmk_Query2)  
   
- [Rückgabe des Koeffizienten für das Modell](#bkmk_Query3)  
+ [Zurückgeben des Koeffizienten für das Modell](#bkmk_Query3)  
   
  **Vorhersage Abfragen**  
   
@@ -43,12 +43,12 @@ ms.locfileid: "66084299"
   
  [Verwenden von Vorhersagefunktionen mit einem Regressionsmodell](#bkmk_Query5)  
   
-##  <a name="bkmk_top"></a>Suchen nach Informationen über das lineare Regressionsmodell  
+##  <a name="finding-information-about-the-linear-regression-model"></a><a name="bkmk_top"></a> Suchen nach Informationen über das lineare Regressionsmodell  
  Die Struktur eines linearen Regressionsmodells ist äußerst einfach. Das Miningmodell repräsentiert die Daten als einzelnen Knoten, der die Regressionsformel definiert. Weitere Informationen finden Sie unter [Miningmodellinhalt von logistischen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-logistic-regression-models.md).  
   
  [Zurück zum Anfang](#bkmk_top)  
   
-###  <a name="bkmk_Query1"></a>Beispiel Abfrage 1: Verwenden des Data Mining-Schemarowsets zum Ermitteln der für ein Modell verwendeten Parameter  
+###  <a name="sample-query-1-using-the-data-mining-schema-rowset-to-determine-parameters-used-for-a-model"></a><a name="bkmk_Query1"></a> Beispielabfrage 1: Verwenden des Data Mining-Schemarowsets zur Ermittlung der für ein Modell verwendeten Parameter  
  Metadaten für das Modell finden Sie, indem Sie das Data Mining-Schemarowset abfragen. Dazu gehören beispielsweise das Erstellungsdatum des Modells, das Datum der letzten Verarbeitung, der Name der Miningstruktur, auf der das Modell basiert, und der Name der als vorhersagbares Attribut verwendeten Spalte. Sie können auch die Parameter zurückgeben, die beim ersten Erstellen des Modells verwendet wurden.  
   
 ```  
@@ -68,10 +68,10 @@ WHERE MODEL_NAME = 'TM_PredictIncome'
   
  [Zurück zum Anfang](#bkmk_top)  
   
-###  <a name="bkmk_Query2"></a>Beispiel Abfrage 2: Abrufen der Regressions Formel für das Modell  
+###  <a name="sample-query-2-retrieving-the-regression-formula-for-the-model"></a><a name="bkmk_Query2"></a> Beispielabfrage 2: Abrufen der Regressionsformel für das Modell  
  Die folgende Abfrage gibt den Miningmodellinhalt für ein lineares Regressionsmodell zurück, das mit der Targeted Mailing-Datenquelle erstellt wurde, die bereits im [Basic Data Mining Tutorial](../../tutorials/basic-data-mining-tutorial.md)verwendet wurde. Dieses Modell sagt das Kundeneinkommen basierend auf dem Alter vorher.  
   
- Die Abfrage gibt den Inhalt des Knotens zurück, der die Regressionsformel enthält. Jede Variable und jeder Koeffizient wird in einer separaten Zeile der geschachtelten NODE_DISTRIBUTION-Tabelle gespeichert. Wenn Sie die vollständige Regressionsformel anzeigen möchten, verwenden Sie den [Microsoft Tree-Viewer](browse-a-model-using-the-microsoft-tree-viewer.md), klicken Sie auf den Knoten **(Alle)** , und öffnen Sie die **Mininglegende**.  
+ Die Abfrage gibt den Inhalt des Knotens zurück, der die Regressionsformel enthält. Jede Variable und jeder Koeffizient wird in einer separaten Zeile der geschachtelten NODE_DISTRIBUTION-Tabelle gespeichert. Wenn Sie die vollständige Regressions Formel anzeigen möchten, verwenden Sie den [Microsoft Tree-Viewer](browse-a-model-using-the-microsoft-tree-viewer.md), klicken Sie auf den Knoten **(alle)** , und öffnen Sie die **Mining Legende**.  
   
 ```  
 SELECT FLATTENED NODE_DISTRIBUTION as t  
@@ -87,9 +87,9 @@ FROM LR_PredictIncome.CONTENT
 |-----------------------|------------------------|---------------|-------------------|----------------|-----------------|  
 |Yearly Income|Missing|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
-|Alter|471.687717702463|0|0|126.969442359327|7|  
-|Alter|234.680904692439|0|0|0|8|  
-|Alter|45.4269617936399|0|0|126.969442359327|9|  
+|Age|471.687717702463|0|0|126.969442359327|7|  
+|Age|234.680904692439|0|0|0|8|  
+|Age|45.4269617936399|0|0|126.969442359327|9|  
 ||35793.5477381267|0|0|1012968919.28372|11|  
   
  In Vergleich dazu wird die Regressionsformel in der **Mininglegende**wie folgt angezeigt:  
@@ -116,7 +116,7 @@ FROM LR_PredictIncome.CONTENT
   
  [Zurück zum Anfang](#bkmk_top)  
   
-###  <a name="bkmk_Query3"></a>Beispiel Abfrage 3: Zurückgeben des Koeffizienten für das Modell  
+###  <a name="sample-query-3-returning-only-the-coefficient-for-the-model"></a><a name="bkmk_Query3"></a> Beispielabfrage 3: Zurückgeben des Koeffizienten für das Modell  
  Mit der VALUETYPE-Enumeration können Sie nur den Koeffizienten für die Regressionsgleichung zurückgeben, wie in der folgenden Abfrage veranschaulicht:  
   
 ```  
@@ -145,7 +145,7 @@ FROM LR_PredictIncome.CONTENT
   
  [Zurück zum Anfang](#bkmk_top)  
   
-###  <a name="bkmk_Query4"></a>Beispiel Abfrage 4: Vorhersagen von Einkommen mit einer SINGLETON-Abfrage  
+###  <a name="sample-query-4-predicting-income-using-a-singleton-query"></a><a name="bkmk_Query4"></a> Beispielabfrage 4: Vorhersagen von Einkommen mit einer SINGLETON-Abfrage  
  Die einfachste Möglichkeit zum Erstellen einer einzelnen Abfrage für ein Regressionsmodell bietet das Dialogfeld **SINGLETON-Abfrageeingabe** . Beispielsweise können Sie die folgende DMX-Abfrage erstellen, indem Sie das entsprechende Regressionsmodell auswählen, **Singleton-Abfrage**auswählen `20` und dann als Wert für **Age**eingeben.  
   
 ```  
@@ -163,7 +163,7 @@ NATURAL PREDICTION JOIN
   
  [Zurück zum Anfang](#bkmk_top)  
   
-###  <a name="bkmk_Query5"></a>Beispiel Abfrage 5: Verwenden von Vorhersagefunktionen mit einem Regressionsmodell  
+###  <a name="sample-query-5-using-prediction-functions-with-a-regression-model"></a><a name="bkmk_Query5"></a> Beispielabfrage 5: Verwenden von Vorhersagefunktionen mit einem Regressionsmodell  
  Sie können viele der Standardvorhersagefunktionen mit linearen Regressionsmodellen verwenden. Im folgenden Beispiel wird veranschaulicht, wie den Vorhersageabfrageergebnissen einige aussagekräftige statistische Daten hinzugefügt werden. Aus diesen Ergebnissen ist ersichtlich, dass es eine beträchtliche Abweichung vom Mittelwert für dieses Modell gibt.  
   
 ```  
@@ -190,13 +190,13 @@ NATURAL PREDICTION JOIN
 |||  
 |-|-|  
 |Vorhersagefunktion|Verwendung|  
-|[Isnachfolger &#40;DMX-&#41;](/sql/dmx/isdescendant-dmx)|Bestimmt, ob ein Knoten ein untergeordnetes Element eines anderen Knotens im Modell ist.|  
-|[IsInNode &#40;DMX-&#41;](/sql/dmx/isinnode-dmx)|Zeigt an, ob der angegebene Knoten den aktuellen Fall enthält.|  
-|[Prädistogram &#40;DMX-&#41;](/sql/dmx/predicthistogram-dmx)|Gibt einen vorhergesagten Wert oder eine Gruppe von Werten für eine angegebene Spalte zurück.|  
-|[Prätnodeid &#40;DMX-&#41;](/sql/dmx/predictnodeid-dmx)|Gibt "Node_ID" für jeden Fall zurück.|  
-|[Prätstdev &#40;DMX-&#41;](/sql/dmx/predictstdev-dmx)|Gibt die Standardabweichung für den prognostizierten Wert zurück.|  
-|[Prätsupport &#40;DMX-&#41;](/sql/dmx/predictsupport-dmx)|Gibt den Unterstützungswert für einen bestimmten Status zurück.|  
-|[Prävarianz &#40;DMX-&#41;](/sql/dmx/predictvariance-dmx)|Gibt die Varianz einer angegebenen Spalte zurück.|  
+|[IsDescendant &#40;DMX&#41;](/sql/dmx/isdescendant-dmx)|Bestimmt, ob ein Knoten ein untergeordnetes Element eines anderen Knotens im Modell ist.|  
+|[IsInNode &#40;DMX&#41;](/sql/dmx/isinnode-dmx)|Zeigt an, ob der angegebene Knoten den aktuellen Fall enthält.|  
+|[PredictHistogram &#40;DMX&#41;](/sql/dmx/predicthistogram-dmx)|Gibt einen vorhergesagten Wert oder eine Gruppe von Werten für eine angegebene Spalte zurück.|  
+|[PredictNodeId &#40;DMX&#41;](/sql/dmx/predictnodeid-dmx)|Gibt "Node_ID" für jeden Fall zurück.|  
+|[PredictStdev &#40;DMX&#41;](/sql/dmx/predictstdev-dmx)|Gibt die Standardabweichung für den prognostizierten Wert zurück.|  
+|[PredictSupport &#40;DMX&#41;](/sql/dmx/predictsupport-dmx)|Gibt den Unterstützungswert für einen bestimmten Status zurück.|  
+|[PredictVariance &#40;DMX&#41;](/sql/dmx/predictvariance-dmx)|Gibt die Varianz einer angegebenen Spalte zurück.|  
   
  Eine Liste der Funktionen, die allen [!INCLUDE[msCoName](../../includes/msconame-md.md)]-Algorithmen gemeinsam sind, finden Sie unter [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md). Weitere Informationen zum Verwenden dieser Funktionen finden Sie unter [Data Mining-Erweiterungen &#40;DMX&#41; – Funktionsreferenz](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
@@ -204,6 +204,6 @@ NATURAL PREDICTION JOIN
  [Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm.md)   
  [Data Mining-Abfragen](data-mining-queries.md)   
  [Technische Referenz für den Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm-technical-reference.md)   
- [Mining Modell Inhalt von linearen Regressionsmodellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Miningmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

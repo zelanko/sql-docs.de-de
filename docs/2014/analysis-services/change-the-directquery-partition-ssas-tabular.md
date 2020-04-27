@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1eb0b6349eac28bbd2abc22b9483ef74edf1bf33
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088191"
 ---
 # <a name="change-the-directquery-partition-ssas-tabular"></a>Ändern der DirectQuery-Partition (SSAS – tabellarisch)
@@ -45,6 +45,6 @@ ms.locfileid: "66088191"
 4.  Wählen Sie eine andere Partition in der Dropdownliste **Partitionsname** aus, und ändern Sie ggf. die Verarbeitungsoptionen für die Partition.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Partitionen &#40;tabellarischen SSAS-&#41;](tabular-models/partitions-ssas-tabular.md)  
+ [Partitionen &#40;SSAS – tabellarisch&#41;](tabular-models/partitions-ssas-tabular.md)  
   
   

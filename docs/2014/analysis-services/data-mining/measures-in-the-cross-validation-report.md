@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30f8daab91172863ba18c6b75529063555b61afc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084159"
 ---
 # <a name="measures-in-the-cross-validation-report"></a>Measures im Kreuzvalidierungsbericht
@@ -28,8 +28,7 @@ ms.locfileid: "66084159"
   
  Der Bericht enthält einige grundlegende Informationen über die Anzahl der Folds in den Daten sowie die Menge der Daten in jeder Aufteilung sowie einen Satz allgemeiner Metriken zur Beschreibung der Datenverteilung. Sie können die Zuverlässigkeit der Struktur oder des Modells bewerten, indem Sie die allgemeinen Metriken für jeden Querschnitt vergleichen.  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] wird auch ein Satz detaillierter Measures für Miningmodelle angezeigt. Diese Measures hängen vom Modelltyp und dem Typ des analysierten Attributs ab, beispielsweise davon, ob es sich um ein diskretes oder kontinuierliches Attribut handelt.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] wird auch ein Satz detaillierter Measures für Miningmodelle angezeigt. Diese Measures hängen vom Modelltyp und dem Typ des analysierten Attributs ab, beispielsweise davon, ob es sich um ein diskretes oder kontinuierliches Attribut handelt.  
   
  Dieser Abschnitt enthält eine Liste der im **Kreuzvalidierungsbericht** aufgeführten Measures sowie Erläuterungen zu deren Bedeutung. Ausführliche Informationen zur Berechnung der einzelnen Measures finden Sie unter [Kreuzvalidierungsformeln](cross-validation-formulas.md).  
   
@@ -46,6 +45,6 @@ ms.locfileid: "66084159"
 |Aggregate|Aggregat Measures geben Aufschluss über die Varianz in den Ergebnissen für jede Partition:<br /><br /> **Mittelwert**: Durchschnitt der Partitionswerte für ein bestimmtes Measure.<br /><br /> **Standard Abweichung**: Durchschnitt der Abweichung vom Mittelwert für ein bestimmtes Measure für alle Partitionen in einem Modell. Bei der Kreuzvalidierung impliziert ein höherer Wert für dieses Ergebnis eine erhebliche Variation zwischen den Folds.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Testen und validieren &#40;Data Mining-&#41;](testing-and-validation-data-mining.md)  
+ [Tests und Überprüfung &#40;Data Mining&#41;](testing-and-validation-data-mining.md)  
   
   

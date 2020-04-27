@@ -15,29 +15,28 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 521129056d4513af2f86fb7b70b26621cb881b80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092291"
 ---
 # <a name="server-configuration---collation"></a>Serverkonfiguration – Sortierung
   Auf der Seite Serverkonfiguration - Sortierung des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installations-Assistenten können Sie die Sortierungseinstellungen von [!INCLUDE[ssDE](../../includes/ssde-md.md)] und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für die Sortierung ändern. Wählen Sie die entsprechende Option aus, um die Sortierungseinstellungen von verschiedenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installationen oder verschiedenen Computern abzugleichen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Anpassen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt zwei Gruppen von Sortierungen bereit: Windows-Sortierungen und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sortierungen. Sie können die Sortierungseinstellungen für [!INCLUDE[ssDE](../../includes/ssde-md.md)] und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]entweder getrennt oder die gleiche Sortierung für beide Programme angeben.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt zwei Gruppen von Sortierungen bereit: Windows-Sortierungen und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sortierungen. Sie können die Sortierungseinstellungen für [!INCLUDE[ssDE](../../includes/ssde-md.md)] und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]entweder getrennt oder die gleiche Sortierung für beide Programme angeben.  
   
  Bei englischsprachigen (USA) Systemgebietsschemas wird die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sortierung standardmäßig automatisch ausgewählt. Die Standardsortierung für lokalisierte Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird durch das Systemgebietsschema von Windows für den Computer bestimmt.  
   
  Sie sollten die Standardeinstellungen nur ändern, wenn die Sortierungseinstellungen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation mit den Sortierungseinstellungen einer anderen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanz oder mit dem Windows-Systemgebietsschema eines anderen Computers übereinstimmen muss.  
   
- **Beachten Sie** [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , dass nur Windows-Sortierungen verwendet werden. Wenn Sie [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]installieren möchten, wählen Sie während des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setups eine Windows-Sortierung aus, um einheitliche Ergebnisse zwischen [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]sicherzustellen.  
+ **Hinweis** [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet ausschließlich Windows-Sortierungen. Wenn Sie [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]installieren möchten, wählen Sie während des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setups eine Windows-Sortierung aus, um einheitliche Ergebnisse zwischen [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]sicherzustellen.  
   
  Weitere Informationen finden Sie unter [Sortierungseinstellungen im Setup-Programm](https://go.microsoft.com/fwlink/?LinkId=190977).  
   
-## <a name="best-practices"></a>Bewährte Methoden  
+## <a name="best-practices"></a>Empfehlungen  
  Weitere Informationen zu einer Tabelle von Windows-Systemgebietsschemas und den entsprechenden Standardsortierungen, die von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup verwendet werden, finden Sie unter [Sortierungseinstellungen im Setup-Programm](https://go.microsoft.com/fwlink/?LinkId=190977).  
   
  Wenn möglich, sollte in Unternehmen eine Sortierung verwendet werden. Auf diese Weise müssen Sie die Sortierung nicht explizit für jede Datenbank, jede Spalte, jeden Ausdruck oder jeden Bezeichner angeben. Wenn Sie mit mehreren Sortierungen und Codepageeinstellungen arbeiten müssen, codieren Sie Ihre Abfragen so, dass diese den Regeln der Sortierungspriorität entsprechen. Weitere Informationen finden Sie in der Onlinedokumentation im Thema [Rangfolge von Sortierungen &#40;Transact-SQL&#41;](/sql/t-sql/statements/collation-precedence-transact-sql).  

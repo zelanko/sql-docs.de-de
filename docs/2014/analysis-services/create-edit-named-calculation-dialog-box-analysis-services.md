@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a53db9413ce7877182ca5f9c768bb1e1ef71e383
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086844"
 ---
 # <a name="create-edit-named-calculation-dialog-box-analysis-services"></a>Benannte Berechnung erstellen/bearbeiten (Dialog Feld) (Analysis Services)
@@ -30,14 +30,14 @@ ms.locfileid: "66086844"
   
 -   Klicken Sie im Bereich **Diagramm** des **Datenquellensicht-Designers** mit der rechten Maustaste auf den Namen einer benannten Berechnung, und wählen Sie **Benannte Berechnung bearbeiten** aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Spalten Name**  
  Geben Sie den Namen der benannten Berechnung ein.  
   
  **Beschreibung**  
  Geben Sie die optionale Beschreibung der benannten Berechnung ein.  
   
- **Ausdruck**  
+ **expression**  
  Geben Sie einen gültigen SQL-Ausdruck ein, der einen skalaren Wert zurückgibt. Der Ausdruck wird an den Anbieter gesendet und im folgenden Ausdruck überprüft:  
   
 ```  
@@ -48,6 +48,6 @@ SELECT <Table Name in Data Source>.* , <Expression> AS <Column Name> FROM <Table
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Analysis Services Designer und Dialog Felder &#40;Mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Der Datenquellen Sicht-Designer &#40;Analysis Services Mehrdimensionale Daten&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Datenquellensicht-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

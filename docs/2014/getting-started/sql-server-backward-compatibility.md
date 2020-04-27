@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dd93707ef139b1751d918af43efed72574d58aa5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088509"
 ---
 # <a name="sql-server-backward-compatibility"></a>SQL Server-Abwärtskompatibilität
@@ -22,7 +22,7 @@ ms.locfileid: "66088509"
   
  Zu den Funktionen, auf die in diesem Themenbereich eingegangen wird, gehören Datenprogrammierbarkeit, Oberflächen-Konfigurationstools, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Setup, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Dienste und andere umfassendere Änderungen der Funktionalität.  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Als veraltet markierte SQL Server-Funktionen in SQL Server 2014](../../2014/getting-started/deprecated-sql-server-features-in-sql-server-2014.md)|Als veraltet markierte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Funktionen in dieser Version. In diesem Thema werden die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfiguration und die Setupfunktionen erläutert.|  
 |[Nicht mehr unterstützte SQL Server-Funktionen in SQL Server 2014](../../2014/getting-started/discontinued-sql-server-features-in-sql-server-2014.md)|Nicht mehr unterstützte [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Funktionalität in dieser Version. In diesem Thema werden die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Konfiguration und die Setupfunktionen erläutert.|  

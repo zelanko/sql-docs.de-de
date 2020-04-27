@@ -13,14 +13,14 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 43e35c5de15aeeab5351b4d262db846840e5f6a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66090022"
 ---
 # <a name="options-query-results-sql-server-results-to-text-page"></a>Optionen (Abfrageergebnisse-SQL Server-Ergebnisse in Textseite)
-  Mithilfe dieser Seite können Sie die Anzeigeoptionen für Abfrageergebnisse bestimmen, die im Textformat ausgegeben werden. Änderungen an diesen Optionen werden nur auf neue [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Abfragen angewendet. Um die Optionen für die aktuellen Abfragen zu ändern, klicken Sie im Menü **Abfrage** auf **Abfrage Optionen** , oder klicken Sie mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] der rechten Maustaste in das Abfragefenster, und wählen Sie **Abfrage Optionen**aus. Klicken Sie im Dialogfeld **Abfrageoptionen** unter **Ergebnisse**auf **Text**.  
+  Mithilfe dieser Seite können Sie die Optionen für die Anzeige eines Abfrageresultsets im Textformat angeben. Die an diesen Optionen vorgenommenen Änderungen werden nur für neue Abfragen in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet. Um die Optionen für die aktuellen Abfragen zu ändern, klicken Sie im Menü **Abfrage** auf **Abfrage Optionen** , oder klicken Sie mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] der rechten Maustaste in das Abfragefenster, und wählen Sie **Abfrage Optionen**aus. Klicken Sie im Dialogfeld **Abfrageoptionen** unter **Ergebnisse**auf **Text**.  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
  **Ausgabeformat**  
@@ -35,25 +35,25 @@ ms.locfileid: "66090022"
  **Abfrage in das Resultset einschließen**  
  Aktivieren Sie dieses Kontrollkästchen, um den Text der ausgeführten Abfrage im Ergebnisbereich vor den Ergebnissen anzuzeigen.  
   
- **Scrollen beim Empfangen von Ergebnissen**  
+ **Durchführen eines Bildlaufs beim Empfangen von Ergebnissen**  
  Aktivieren Sie dieses Kontrollkästchen, um die Anzeige der zuletzt zurückgegebenen Datensätze am Ende der Ergebnisliste zu forcieren. Deaktivieren Sie dieses Kontrollkästchen, wenn zunächst die ersten empfangenen Zeilen angezeigt werden sollen.  
   
- **Numerische Werte rechtsbündig ausrichten**  
+ **Numerische Werte rechts ausrichten**  
  Aktivieren Sie dieses Kontrollkästchen, um numerische Werte an der Spalte rechts auszurichten. Das kann die Überprüfung von Zahlen mit einer festen Anzahl von Dezimalstellen erleichtern.  
   
- **Ergebnis nach Ausführung der Abfrage verwerfen**  
+ **Ergebnisse nach der Ausführung der Abfrage verwerfen**  
  Aktivieren Sie dieses Kontrollkästchen, um die Abfrageergebnisse nach der Anzeige im Ergebnisbereich des Abfragefensters zu verwerfen.  
   
  **Ergebnisse auf separater Registerkarte anzeigen**  
  Aktivieren Sie dieses Kontrollkästchen, um das Resultset in einem neuen Dokumentfenster anzuzeigen statt im unteren Bereich des Dokumentfensters der Abfrage.  
   
- **Nach Ausführung der Abfrage zur Ergebnisregister Karte wechseln**  
+ **Nach Ausführung der Abfrage zur Ergebnisregisterkarte wechseln**  
  Aktivieren Sie dieses Kontrollkästchen, um mit der Anzeige automatisch zum Resultset zu wechseln.  
   
- **Maximale Anzahl von Zeichen, die in jeder Spalte angezeigt werden**  
+ **Pro Spalte angezeigte maximale Anzahl von Zeichen**  
  Dieser Wert liegt standardmäßig bei 256. Erhöhen Sie diesen Wert, wenn Sie größere Resultsets ohne Kürzungen anzeigen möchten. Der Maximalwert ist 8.192.  
   
- **Auf Standard zurücksetzen**  
+ **Standard wiederherstellen**  
  Setzt alle auf dieser Seite verfügbaren Werte auf die ursprünglichen Standardwerte zurück.  
   
   

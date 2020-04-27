@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a6e6d0ade60dbb42fca9bda9ee78f4dbb50064a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082731"
 ---
 # <a name="using-nested-table-data-as-an-input-for-an-accuracy-chart"></a>Verwenden von geschachtelten Tabellendaten als Eingabe für ein Genauigkeitsdiagramm
@@ -41,7 +41,7 @@ ms.locfileid: "66082731"
   
 2.  Wählen Sie die Registerkarte **Mininggenauigkeitsdiagramm** und anschließend die Registerkarte **Eingabeauswahl** aus.  
   
-3.  Wählen Sie unter DataSet **auswählen, das für das Genauigkeits Diagramm verwendet werden soll**die Option anderes DataSet **angeben**aus.  
+3.  Wählen Sie unter **Dataset auswählen, das für das Genauigkeitsdiagramm verwendet werden soll**die Option **Anderes Dataset verwenden**aus.  
   
 4.  Klicken Sie auf die Schaltfläche zum Durchsuchen **(...)** , um das externe DataSet aus einer Liste mit Datenquellen Sichten auf dem aktuellen Server auszuwählen.  
   

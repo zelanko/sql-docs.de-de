@@ -13,18 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cee721aca66f5266a29d3bf61babf9060e9aef32
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082299"
 ---
 # <a name="decision-tree-tab-mining-model-viewer"></a>Registerkarte "Entscheidungsstruktur" (Miningmodell-Viewer)
   Im Bereich **Entscheidungsstruktur** wird eine visuelle Darstellung der Entscheidungsregeln angezeigt, die in einem Entscheidungsstrukturmodell erstellt werden. Entscheidungsregeln beschreiben Pfade zu einem bestimmten Ergebnis.  
   
- **Weitere Informationen finden** Sie unter [Microsoft Decision Trees-Algorithmus](data-mining/microsoft-decision-trees-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Tree Viewer](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md) .  
+ **Weitere Informationen:** [Microsoft Decision Trees-Algorithmus](data-mining/microsoft-decision-trees-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Struktur-Viewer](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   

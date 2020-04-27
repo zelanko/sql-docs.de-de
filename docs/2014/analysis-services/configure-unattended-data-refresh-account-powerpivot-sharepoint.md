@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 894e7d4fb5a0234643cf237e767a8ae999e67496
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087418"
 ---
 # <a name="configure-the-powerpivot-unattended-data-refresh-account-powerpivot-for-sharepoint"></a>Konfigurieren des unbeaufsichtigten Daten Aktualisierungs Kontos für Power Pivot (PowerPivot für SharePoint)
@@ -46,7 +46,7 @@ ms.locfileid: "66087418"
   
  [Aktualisieren der von einem vorhandenen PowerPivot-Konto für die unbeaufsichtigte Datenaktualisierung verwendeten Anmeldeinformationen](#bkmk_editUA)  
   
-##  <a name="bkmk_prereq"></a> Voraussetzungen  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> Voraussetzungen  
  Zur Verwendung der Datenaktualisierung muss Secure Store Service aktiviert und konfiguriert sein, und für die Farm muss ein Hauptschlüssel generiert werden. Anweisungen hierzu finden Sie unter [Power Pivot-Datenaktualisierung mit SharePoint 2010](powerpivot-data-refresh-with-sharepoint-2010.md) .  
   
  Sie müssen im Vorfeld entscheiden, welches Windows-Domänenbenutzerkonto als unbeaufsichtigtes Datenaktualisierungskonto für PowerPivot verwendet werden soll. Dies sollte ein speziell für diesen Zweck erstelltes Konto sein, damit die Verwendung überwacht werden kann.  
@@ -71,7 +71,7 @@ ms.locfileid: "66087418"
   
 -   Überprüfen Sie, ob das Konto auf der Seite für die Verwaltung des Datenaktualisierungszeitplans für eine veröffentlichte PowerPivot-Arbeitsmappe verfügbar ist.  
   
-###  <a name="bkmk_create"></a>Schritt 1: Erstellen einer Zielanwendung und Festlegen der Anmelde Informationen  
+###  <a name="step-1-create-a-target-application-and-set-the-credentials"></a><a name="bkmk_create"></a>Schritt 1: Erstellen einer Zielanwendung und Festlegen der Anmelde Informationen  
   
 1.  Klicken Sie in der zentral Administration unter Anwendungs Verwaltung auf **Dienst Anwendungen verwalten**.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66087418"
   
 16. Klicken Sie auf **OK**.  
   
-###  <a name="bkmk_specifyUA"></a>Schritt 2: Angeben des unbeaufsichtigten Kontos auf den Power Pivot-Server Konfigurationsseiten  
+###  <a name="step-2-specify-the-unattended-account-in-powerpivot-server-configuration-pages"></a><a name="bkmk_specifyUA"></a>Schritt 2: Angeben des unbeaufsichtigten Kontos auf den Power Pivot-Server Konfigurationsseiten  
   
 1.  Klicken Sie in der zentral Administration unter Anwendungs Verwaltung auf **Dienst Anwendungen verwalten**.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66087418"
   
 6.  Klicken Sie auf **OK**.  
   
-###  <a name="bkmk_grant"></a>Schritt 3: Erteilen von Teilnahme Berechtigungen für das Konto  
+###  <a name="step-3-grant-contribute-permissions-to-the-account"></a><a name="bkmk_grant"></a>Schritt 3: Erteilen von Teilnahme Berechtigungen für das Konto  
  Bevor das unbeaufsichtigte Datenaktualisierungskonto für PowerPivot verwendet werden kann, müssen allen PowerPivot-Arbeitsmappen, für die es verwendet werden soll, Teilnahmeberechtigungen zugewiesen werden. Die Berechtigungsebene ist erforderlich, um die Arbeitsmappe von einer Bibliothek zu öffnen und anschließend nach der Aktualisierung der Daten erneut in der Bibliothek zu speichern.  
   
  Das Zuweisen von Berechtigungen ist ein Schritt, der vom Websitesammlungsadministrator durchgeführt werden muss. SharePoint-Berechtigungen können an der Stammwebsitesammlung oder einer beliebigen darunterliegenden Ebene zugewiesen werden, einschließlich individueller Dokumente und Elemente. Die Art der Festlegung von Berechtigungen variiert je nach erforderlichem Genauigkeitsgrad. Die folgenden Schritte stellen eine Art der Erteilung von Berechtigungen dar.  
@@ -137,7 +137,7 @@ ms.locfileid: "66087418"
   
 5.  Wählen Sie **mitwirken**aus, und klicken Sie dann auf **OK**.  
   
-###  <a name="bkmk_dbread"></a>Schritt 4: Erteilen von Leseberechtigungen für den Zugriff auf externe Datenquellen, die bei der Datenaktualisierung verwendet werden  
+###  <a name="step-4-grant-read-permissions-to-access-external-data-sources-used-in-data-refresh"></a><a name="bkmk_dbread"></a>Schritt 4: Erteilen von Leseberechtigungen für den Zugriff auf externe Datenquellen, die bei der Datenaktualisierung verwendet werden  
  Wenn sie Daten in eine PowerPivot-Arbeitsmappe importieren, basieren Verbindungen zu externen Daten häufig auf vertrauenswürdigen oder personifizierten Verbindungen, die die Identität des aktuellen Benutzers verwenden, um eine Verbindung mit der Datenquelle herzustellen. Diese Typen von Verbindungen funktionieren nur, wenn der aktuelle Benutzer über die Berechtigung verfügt, die Daten zu lesen, die er importiert.  
   
  In einem Datenaktualisierungsszenario wird die gleiche Verbindungszeichenfolge, die zum Importieren von Daten verwendet wurde, jetzt erneut verwendet, um die Daten zu aktualisieren. Wenn die Verbindungszeichenfolge den aktuellen Benutzer voraussetzt (z. B. eine Zeichenfolge, die Integrated_Security=SSPI einschließt), dann übergibt der PowerPivot-Systemdienst die Benutzeridentität des PowerPivot-Kontos für die unbeaufsichtigte Datenaktualisierung als den aktuellen Benutzer. Diese Verbindung ist nur erfolgreich, wenn das PowerPivot-Konto für die unbeaufsichtigte Datenaktualisierung über Leseberechtigungen für die externe Datenquelle verfügt.  
@@ -146,7 +146,7 @@ ms.locfileid: "66087418"
   
  Wenn Sie Administrator für die in der Organisation verwendeten Datenquellen sind, können Sie eine Anmeldung erstellen und die erforderlichen Berechtigungen zuweisen. Andernfalls müssen Sie sich an die Besitzer der Daten wenden und die Kontoinformationen angeben. Sie müssen das Windows-Domänenbenutzerkonto angeben, das dem PowerPivot-Konto für die unbeaufsichtigte Datenaktualisierung zugeordnet wird. Dies ist das Konto, das Sie in "(Schritt 1): Erstellen einer Zielanwendung und Festlegen der Anmelde Informationen" in diesem Thema angegeben haben.  
   
-###  <a name="bkmk_verify"></a>Schritt 5: Überprüfen der Konto Verfügbarkeit auf den Daten Aktualisierungs Konfigurationsseiten  
+###  <a name="step-5-verify-account-availability-in-data-refresh-configuration-pages"></a><a name="bkmk_verify"></a>Schritt 5: Überprüfen der Konto Verfügbarkeit auf den Daten Aktualisierungs Konfigurationsseiten  
   
 1.  Öffnen Sie die Seite zum Konfigurieren der Datenaktualisierung für eine veröffentlichte Arbeitsmappe, die PowerPivot-Daten enthält. Anweisungen zum Öffnen der Seite finden Sie unter [Planen einer Datenaktualisierung &#40;PowerPivot für SharePoint&#41;](schedule-a-data-refresh-powerpivot-for-sharepoint.md).  
   
@@ -160,14 +160,14 @@ ms.locfileid: "66087418"
   
  Weitere Informationen zur Problembehandlung finden Sie unter Problembehandlung bei der [Power Pivot-Datenaktualisierung](https://go.microsoft.com/fwlink/p/?LinkID=223279) im TechNet-wiki.  
   
-##  <a name="bkmk_use"></a>Verwenden des unbeaufsichtigten Daten Aktualisierungs Kontos für Power Pivot  
+##  <a name="using-the-powerpivot-unattended-data-refresh-account"></a><a name="bkmk_use"></a>Verwenden des unbeaufsichtigten Daten Aktualisierungs Kontos für Power Pivot  
  Nur die erste der drei Anmeldeinformationsoptionen auf der Seite zum Planen der PowerPivot-Datenaktualisierung entspricht dem unbeaufsichtigten Datenaktualisierungskonto. Stellen Sie beim Einrichten des Datenaktualisierungszeitplan sicher, dass diese Option ausgewählt ist.  
   
  ![SSAS_PowerpivotKJ_DataRefreshCreds](media/ssas-powerpivotkj-datarefreshcreds.gif "SSAS_PowerpivotKJ_DataRefreshCreds")  
   
  Verwenden Sie nicht die dritte Anmeldeinformationsoption (für die eine Zielanwendungs-ID eingegeben werden muss), um auf das unbeaufsichtigte Datenaktualisierungskonto für PowerPivot zuzugreifen. Bei Auswahl der dritten Option wird eine zusätzliche Identitätswechselprüfung ausgeführt. Wenn versucht wird, diese für ein unbeaufsichtigtes Datenaktualisierungskonto für PowerPivot (oder für eine Zielanwendung auf Basis des Kontotyps Individuell) zu verwenden, tritt ein Überprüfungsfehler auf. Weitere Informationen zur Verwendung der dritten Option finden Sie unter [Konfigurieren gespeicherter Anmelde Informationen für die Power Pivot-Datenaktualisierung &#40;PowerPivot für SharePoint&#41;](configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  
   
-##  <a name="bkmk_editUA"></a>Aktualisieren der von einem vorhandenen Power Pivot-Konto für die unbeaufsichtigten Datenaktualisierung verwendeten Anmelde Informationen  
+##  <a name="update-the-credentials-used-by-an-existing-powerpivot-unattended-data-refresh-account"></a><a name="bkmk_editUA"></a>Aktualisieren der von einem vorhandenen Power Pivot-Konto für die unbeaufsichtigten Datenaktualisierung verwendeten Anmelde Informationen  
  Wenn das unbeaufsichtigte Datenaktualisierungskonto bereits beim Setup oder von einem Administrator konfiguriert wurde, können Benutzername und Kennwort durch Bearbeiten der Zielanwendung, von der die Anmeldeinformationen gespeichert werden, aktualisiert werden. Beachten Sie, dass die Windows-Originalidentität, die zuvor mit dem unbeaufsichtigten Datenaktualisierungskonto für PowerPivot verknüpft war, beim Bearbeiten der Anmeldeinformationen in Secure Store Service nicht sichtbar ist. Sie müssen immer sowohl den Benutzernamen als auch das Kennwort für diese Zielanwendung erneut in Secure Store Service eingeben, ganz gleich, ob Sie ein abgelaufenes Kennwort aktualisieren oder ein anderes Konto angeben.  
   
 1.  Klicken Sie in der zentral Administration unter Anwendungs Verwaltung auf **Dienst Anwendungen verwalten**.  

@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc2df250b0728934f258c8217d29adfb91e66ff5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087911"
 ---
 # <a name="cluster-diagram-walkthrough-data-mining-add-ins"></a>Exemplarische Vorgehensweise für das Clusterdiagramm (Data Mining-Add-Ins)
@@ -107,7 +107,7 @@ ms.locfileid: "66087911"
   
 4.  Klicken Sie auf das Menüband **Add-ins** , und zeigen Sie dann eine der benutzerdefinierten Symbolleisten an, die für die Arbeit mit Data Mining Diagrammen verwendet werden:  
   
-     **Layout **  
+     **Layout**  
      Optimiert die Anordnung der Cluster, sodass sie auf die aktuelle Seite passen.  
   
      **Größe der Seite ändern**  
@@ -123,7 +123,7 @@ ms.locfileid: "66087911"
   
      Wenn Sie eine spezielle Formatierung anwenden, die von der standardmäßig generierten Formatierung des Assistenten abweicht (einschließlich einiger Hintergründe), sind diese Zahlen u. U. nicht sichtbar.  
   
-     **Keits**  
+     **Slider**  
      Filtert die Linien zwischen den Clustern. Wenn Sie den Schieberegler verschieben, werden alle Zuordnungen bis auf die wichtigsten entfernt.  
   
      **Schattierung**  

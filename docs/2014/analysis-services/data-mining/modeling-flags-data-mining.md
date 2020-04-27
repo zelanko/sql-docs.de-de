@@ -23,14 +23,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 37263c42e4e9f37b1b782dc07b8df03f77092b14
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083311"
 ---
 # <a name="modeling-flags-data-mining"></a>Modellierungsflags (Data Mining)
-  Sie können mithilfe der Modellierungsflags in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] einem Data Mining-Algorithmus zusätzliche Informationen zu den Daten zur Verfügung stellen, die in einer Falltabelle definiert sind. Der Algorithmus kann diese Informationen verwenden, um ein genaueres Data Mining-Modell zu erstellen.  
+  Mit Modellierungsflags können [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Sie in zusätzliche Informationen zu den in einer Fall Tabelle definierten Daten für einen Data Mining Algorithmus bereitstellen. Der Algorithmus kann diese Informationen verwenden, um ein genaueres Data Mining-Modell zu erstellen.  
   
  Einige Modellierungsflags werden auf der Ebene der Miningstruktur definiert, während andere auf der Ebene der Miningmodellspalte definiert werden. Beispielsweise wird das `NOT NULL`-Modellierungsflag für Miningstrukturspalten verwendet. Sie können zusätzliche Modellierungsflags für die Miningmodellspalten definieren, abhängig vom Algorithmus, den Sie zur Erstellung des Modells verwenden.  
   
@@ -71,7 +71,7 @@ WHERE STRUCTURE_NAME = '<structure name>'
   
  Sie können Modellierungsflags in einer neuen Miningstruktur oder einem Miningmodell mithilfe von DMX oder AMO- oder XMLA-Skripts angeben. Die in einem vorhandenen Miningmodell und einer Struktur mit DMX verwendeten Modellierungsflags können jedoch nicht geändert werden. Sie müssen unter Verwendung der `ALTER MINING STRUCTURE....ADD MINING MODEL`-Syntax ein neues Miningmodell erstellen.  
   
-##  <a name="bkmk_UseRegressors"></a>Verwendung des Regressor-Modellierungsflags  
+##  <a name="uses-of-the-regressor-modeling-flag"></a><a name="bkmk_UseRegressors"></a>Verwendung des Regressor-Modellierungsflags  
  Wenn Sie das REGRESSOR-Modellierungsflag für eine Spalte festlegen, zeigen Sie dem Algorithmus damit an, dass die Spalte potenzielle Regressoren enthält. Die tatsächlich im Modell verwendeten Regressoren werden vom Algorithmus bestimmt. Ein potenzieller Regressor kann verworfen werden, wenn er das vorhersagbare Attribut nicht modelliert.  
   
  Wenn Sie mit dem Data Mining-Assistenten ein Modell erstellen, werden alle kontinuierlichen Eingabespalten als potenzielle Regressoren gekennzeichnet. Daher kann eine Spalte im Modell auch dann als Regressor verwendet werden, wenn für diese Spalte nicht explizit das REGRESSOR-Flag festgelegt wurde.  
@@ -84,7 +84,7 @@ FROM $system.DMSCHEMA_MINING_COLUMNS
 WHERE MODEL_NAME = '<model name>'  
 ```  
   
- **Hinweis** Wenn Sie ein Mining Modell ändern und den Inhaltstyp einer Spalte von kontinuierlich in diskret ändern, müssen Sie das Flag für die Mining Spalte manuell ändern und dann das Modell erneut verarbeiten.  
+ **Hinweis** Wenn Sie ein Miningmodell verändern und den Inhaltstyp einer Spalte von kontinuierlich in diskret ändern, müssen Sie das Flag für die Miningspalte von Hand ändern und das Modell dann erneut verarbeiten.  
   
 ### <a name="regressors-in-linear-regression-models"></a>Regressoren in linearen Regressionsmodellen  
  Lineare Regressionsmodelle basieren auf dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus. Auch wenn Sie den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus nicht verwenden, kann jedes Entscheidungsstrukturmodell eine Struktur oder Knoten enthalten, die eine Regression für ein kontinuierliches Attribut darstellt bzw. darstellen.  
@@ -104,13 +104,13 @@ WHERE MODEL_NAME = '<model name>'
   
 |Aufgabe|Thema|  
 |----------|-----------|  
-|Bearbeiten von Modellierungsflags mit dem Data Mining-Designer|[Anzeigen oder Ändern von Modellierungsflags &#40;Data Mining-&#41;](modeling-flags-data-mining.md)|  
+|Bearbeiten von Modellierungsflags mit dem Data Mining-Designer|[Anzeigen oder Ändern von Modellierungsflags &#40;Data Mining&#41;](modeling-flags-data-mining.md)|  
 |Angeben eines Tipps für den Algorithmus, um wahrscheinliche Regressoren zu empfehlen|[Bestimmen einer in einem Modell als Regressor zu verwendenden Spalte](specify-a-column-to-use-as-regressor-in-a-model.md)|  
-|Siehe die von bestimmten Algorithmen (im Abschnitt "Modellierungsflags" für jedes Algorithmusreferenzthema) unterstützten Modellierungsflags|[Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
+|Siehe die von bestimmten Algorithmen (im Abschnitt "Modellierungsflags" für jedes Algorithmusreferenzthema) unterstützten Modellierungsflags|[Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)|  
 |Weitere Informationen zu Miningstrukturspalten und den Eigenschaften, die Sie festlegen können|[Miningstrukturspalten](mining-structure-columns.md)|  
 |Weitere Informationen zu Miningmodellspalten und Modellierungsflags, die für die Modellebene übernommen werden können|[Miningmodellspalten](mining-model-columns.md)|  
-|Siehe Syntax zum Arbeiten mit Modellierungsflags in DMX-Anweisungen|[Modellierungsflags &#40;DMX-&#41;](/sql/dmx/modeling-flags-dmx)|  
-|Verstehen von fehlenden Werten und wie mit diesen gearbeitet wird|[Fehlende Werte &#40;Analysis Services Data Mining-&#41;](missing-values-analysis-services-data-mining.md)|  
+|Siehe Syntax zum Arbeiten mit Modellierungsflags in DMX-Anweisungen|[Modellierungsflags &#40;DMX&#41;](/sql/dmx/modeling-flags-dmx)|  
+|Verstehen von fehlenden Werten und wie mit diesen gearbeitet wird|[Fehlende Werte &#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md)|  
 |Weitere Informationen zum Verwalten von Modellen und Strukturen sowie Festlegen von Verwendungseigenschaften|[Verschieben von Data Mining-Objekten](moving-data-mining-objects.md)|  
   
   

@@ -13,17 +13,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbfbcdae5d16ac631dddda9aa79c85a359afefb0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087747"
 ---
 # <a name="completing-the-wizard-business-intelligence-wizard"></a>Assistenten abschließen (Business Intelligence-Assistent)
   Überprüfen Sie mithilfe der Seite **Assistenten abschließen** die Änderungen, die beim Beenden des Business Intelligence-Assistenten vorgenommen werden.  
   
-## <a name="options"></a>Tastatur  
- **Erd**  
+## <a name="options"></a>Optionen  
+ **Änderungen**  
  Zeigt die an Objekten im [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Projekt vorgenommenen Änderungen an.  
   
 ## <a name="see-also"></a>Weitere Informationen  

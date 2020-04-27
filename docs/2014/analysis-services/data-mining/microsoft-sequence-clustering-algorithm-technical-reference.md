@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6ae48fe00fb9c24e2d6d0ddde61302cff3ceba0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083835"
 ---
 # <a name="microsoft-sequence-clustering-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Sequence Clustering-Algorithmus
@@ -81,7 +81,7 @@ ms.locfileid: "66083835"
  CLUSTER_COUNT  
  Gibt die ungefähre Anzahl der vom Algorithmus zu erstellenden Cluster an. Falls die ungefähre Anzahl von Clustern nicht aus den Daten erstellt werden kann, erstellt der Algorithmus so viele Cluster wie möglich. Durch Festlegen des CLUSTER_COUNT-Parameters auf 0 wird der Algorithmus zum Verwenden heuristischer Methoden veranlasst, um die Anzahl von zu erstellenden Clustern so gut wie möglich zu bestimmen.  
   
- (Standardwert: 10.)  
+ Der Standardwert ist 10.  
   
 > [!NOTE]  
 >  Eine festgelegte Zahl ungleich null dient als Hinweis für den Algorithmus, der daraufhin mit dem Ziel fortfährt, die angegebene Zahl zu finden, am Ende jedoch eine höhere oder niedrigere Zahl finden kann.  
@@ -89,7 +89,7 @@ ms.locfileid: "66083835"
  MINIMUM_SUPPORT  
  Gibt die Mindestzahl an Fällen an, die als Unterstützung eines Attributs zum Erstellen eines Clusters erforderlich ist.  
   
- (Standardwert: 10.)  
+ Der Standardwert ist 10.  
   
  MAXIMUM_SEQUENCE_STATES  
  Gibt die maximale Anzahl von Status an, die eine Sequenz annehmen kann.  
@@ -118,7 +118,7 @@ ms.locfileid: "66083835"
   
  Weitere Informationen zur Verwendung fehlender Werte in Miningmodellen und zu den Auswirkungen fehlender Werte auf die Wahrscheinlichkeitsergebnisse finden Sie unter [ Fehlende Werte &#40;Analysis Services – Data Mining&#41;](missing-values-analysis-services-data-mining.md).  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
  Die Falltabelle muss eine case ID-Spalte aufweisen. Optional kann die Falltabelle andere Spalten enthalten, die Attribute über den Fall speichern.  
   
  Der Microsoft Sequence Clustering-Algorithmus erfordert als geschachtelte Tabelle gespeicherte Sequenzinformationen. Die geschachtelte Tabelle muss eine einzelne Key Sequence-Spalte enthalten. Eine `Key Sequence`-Spalte kann jeden Datentyp enthalten, der sortiert werden kann, einschließlich Zeichenfolgen-Datentypen. Die Spalte muss jedoch eindeutige Werte für jeden Fall enthalten. Darüber hinaus müssen Sie vor dem Verarbeiten des Modells sicherstellen, dass sowohl die Falltabelle als auch die geschachtelte Tabelle in aufsteigender Reihenfolge nach dem Schlüssel, der die Tabellen verknüpft, sortiert wird.  
@@ -134,7 +134,7 @@ ms.locfileid: "66083835"
 |Eingabeattribut|Continuous, Cyclical, Discrete, Discretized, Key, Key Sequence, Table und Ordered|  
 |Vorhersagbares Attribut|Continuous, Cyclical, Discrete, Discretized, Table und Ordered|  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 -   Verwenden Sie die [PredictSequence &#40;DMX&#41;](/sql/dmx/predictsequence-dmx)-Funktion, um Voraussagen über Sequenzen zu treffen. Weitere Informationen zu den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die die Sequenz Vorhersage unterstützen, finden Sie unter [von den-Editionen unterstützte Funktionen SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)).  
   
@@ -145,6 +145,6 @@ ms.locfileid: "66083835"
 ## <a name="see-also"></a>Weitere Informationen  
  [Microsoft Sequence Clustering-Algorithmus](microsoft-sequence-clustering-algorithm.md)   
  [Sequence Clustering-Modell Abfrage Beispiele](clustering-model-query-examples.md)   
- [Mining Modell Inhalt von Sequence Clustering-Modellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-sequence-clustering-models.md)  
+ [Miningmodellinhalt von Sequence Clustering-Modellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-sequence-clustering-models.md)  
   
   

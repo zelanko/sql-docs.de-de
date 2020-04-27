@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: db8b36fbccc4139071f54ddf9f73f876e9517799
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084062"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Linear Regression-Algorithmus
@@ -36,7 +36,7 @@ ms.locfileid: "66084062"
   
 |Algorithmus|Analysemethode|Kommentare|  
 |---------------|------------------------|--------------|  
-|Linear Regression|Interessantheitsgrad|Default.<br /><br /> Andere Funktionsauswahlmethoden, die für den Decision Trees-Algorithmus verfügbar sind, sind nur für diskrete Variablen gültig und gelten daher nicht für lineare Regressionsmodelle.|  
+|Lineare Regression|Interessantheitsgrad|Standard.<br /><br /> Andere Funktionsauswahlmethoden, die für den Decision Trees-Algorithmus verfügbar sind, sind nur für diskrete Variablen gültig und gelten daher nicht für lineare Regressionsmodelle.|  
 |Entscheidungsstrukturen|Interessantheitsgrad<br /><br /> Shannon-Entropie<br /><br /> Bayes-Methode mit K2-A-priori-Verteilung<br /><br /> Bayes-Dirichlet mit uniformer A-priori-Verteilung (Standard)|Wenn irgendeine Spalte nicht binäre kontinuierliche Werte enthält, wird der Interessantheitsgrad für alle Spalten verwendet, um die Konsistenz zu gewährleisten. Andernfalls wird die Standardmethode oder die angegebene Methode verwendet.|  
   
  Die Algorithmusparameter, die die Funktionsauswahl für ein Entscheidungsstrukturmodell steuern, sind MAXIMUM_INPUT_ATTRIBUTES und MAXIMUM_OUTPUT.  
@@ -47,7 +47,7 @@ ms.locfileid: "66084062"
 ### <a name="setting-algorithm-parameters"></a>Festlegen von Algorithmusparametern  
  In der folgenden Tabelle werden die Parameter, die für den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus bereitgestellt werden, aufgelistet.  
   
-|Parameter|BESCHREIBUNG|  
+|Parameter|Beschreibung|  
 |---------------|-----------------|  
 |*MAXIMUM_INPUT_ATTRIBUTES*|Definiert die Anzahl von Eingabeattributen, die der Algorithmus verarbeiten kann, bevor die Funktionsauswahl aufgerufen wird. Legen Sie diesen Wert auf 0 fest, um die Funktionsauswahl zu deaktivieren.<br /><br /> Der Standardwert ist 255.|  
 |*MAXIMUM_OUTPUT_ATTRIBUTES*|Definiert die Anzahl von Ausgabeattributen, die der Algorithmus verarbeiten kann, bevor die Funktionsauswahl aufgerufen wird. Legen Sie diesen Wert auf 0 fest, um die Funktionsauswahl zu deaktivieren.<br /><br /> Der Standardwert ist 255.|  
@@ -56,7 +56,7 @@ ms.locfileid: "66084062"
 ### <a name="modeling-flags"></a>Modellierungsflags  
  Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus unterstützt die folgenden Modellierungsflags. Wenn Sie die Miningstruktur oder das Miningmodell erstellen, definieren Sie Modellierungsflags, die angeben, wie die Werte in den einzelnen Spalten während der Analyse behandelt werden. Weitere Informationen finden Sie unter [Modellierungsflags &#40;Data Mining&#41;](modeling-flags-data-mining.md).  
   
-|Modellierungsflag|BESCHREIBUNG|  
+|Modellierungsflag|Beschreibung|  
 |-------------------|-----------------|  
 |NOT NULL|Gibt an, dass die Spalte keinen NULL-Wert enthalten kann. Ein Fehler tritt auf, wenn Analysis Services während des Modelltrainings einen NULL-Wert erkennt.<br /><br /> Gilt für die Miningstrukturspalten.|  
 |REGRESSOR|Gibt an, dass die Spalte kontinuierliche numerische Werte enthält, die bei der Analyse als potenzielle unabhängige Variablen behandelt werden sollen.<br /><br /> Hinweis: Das Kennzeichnen einer Spalte als Regressor gewährleistet nicht, dass die Spalte im fertigen Modell als Regressor verwendet wird.<br /><br /> Gilt für die Miningmodellspalten.|  
@@ -70,7 +70,7 @@ ms.locfileid: "66084062"
   
  Sie können durch Einsatz des FORCED_REGRESSOR-Parameters gewährleisten, dass der Algorithmus einen bestimmten Regressor verwendet. Dieser Parameter kann mit dem Microsoft Decision Trees-Algorithmus und dem Microsoft Linear Regression-Algorithmus verwendet werden.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
  Ein lineares Regressionsmodell muss eine Schlüsselspalte, Eingabespalten und mindestens eine vorhersagbare Spalte enthalten.  
   
 ### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten  
@@ -87,6 +87,6 @@ ms.locfileid: "66084062"
 ## <a name="see-also"></a>Weitere Informationen  
  [Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm.md)   
  [Beispiele für lineare Regressionsmodell Abfragen](linear-regression-model-query-examples.md)   
- [Mining Modell Inhalt von linearen Regressionsmodellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Miningmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

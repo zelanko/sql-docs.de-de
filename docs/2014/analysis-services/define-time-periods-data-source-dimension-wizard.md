@@ -13,19 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23e40c9500a2d8c571e10fdddb09f2de289cd714
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082011"
 ---
 # <a name="define-time-periods-data-source-dimension-wizard"></a>Zeiträume definieren (Datenquelle) (Dimensions-Assistent)
   Auf der Seite **Zeiträume definieren** definieren Sie Attribute, durch die die Zeiträume in der Zeitdimension in den Spalten der Tabelle dargestellt werden, die auf der Seite **Dimensionstyp auswählen** angegeben wurden.  
   
 > [!NOTE]  
->  Diese Seite wird nur angezeigt, wenn Sie auf **der Seite** Dimensionstyp auswählen die Option **Dimension mithilfe einer Datenquelle erstellen** und auf der Seite **Dimensionstyp auswählen** die Option **Zeitdimension** ausgewählt haben.  
+>  Diese Seite wird nur angezeigt, wenn Sie auf der Seite **Dimensionsdefinition** die Option **Dimension mithilfe einer Datenquelle erstellen** und auf der Seite **Dimensionstyp auswählen** die Option **Zeitdimension** ausgewählt haben.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Zeiteigenschaftsname**  
  Zeigt die Attributtypen an, die zum Kennzeichnen der Zeiträume in Zeitdimensionen verwendet werden. Weitere Informationen zu Attributtypen finden Sie unter [Type-Element &#40;DimensionAttribute&#41; &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-dimensionattribute-assl).  
   

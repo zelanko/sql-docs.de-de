@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97f01b0bbf3d1ddc54ea4db2b771723e12d168d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086811"
 ---
 # <a name="create-or-edit-named-query-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld "Benannte Abfrage erstellen oder bearbeiten" (Analysis Services – Mehrdimensionale Daten)
@@ -50,27 +50,27 @@ ms.locfileid: "66086811"
  **Data Source**  
  Gibt die Datenquelle für die Abfrage an.  
   
- **Abfrage Definition**  
+ **Abfragedefinition**  
  Durch die Abfragedefinition werden eine Symbolleiste und Bereiche bereitgestellt, die der ausgewählten Sicht entsprechend zum Definieren der Abfrage verwendet werden.  
   
- **Symbolleiste**  
+ **Suchfeld**  
  Mithilfe der Symbolleiste können Sie Datasets verwalten, Bereiche zur Anzeige auswählen und unterschiedliche Abfragefunktionen steuern.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**Zum Standardabfrage-Generator wechseln**|Wählen Sie diese Option aus, um nur die Optionen anzuzeigen, die in der Sicht des Standardabfrage-Generators verfügbar sind. Es werden nur die folgenden Optionen angezeigt:<br />**SQL-Bereich**<br />**Ergebnisbereich**<br />**Symbolleiste**, nur **zu VDT Abfrage-Generator wechseln** und **Ausführen**<br /><br /> <br /><br /> Hinweis: diese Option wird nur angezeigt **, wenn zu VDT wechseln Abfrage-Generator** ausgewählt ist.|  
+|**Zum Standardabfrage-Generator wechseln**|Wählen Sie diese Option aus, um nur die Optionen anzuzeigen, die in der Sicht des Standardabfrage-Generators verfügbar sind. Es werden nur die folgenden Optionen angezeigt:<br />**SQL-Bereich**<br />**Ergebnisbereich**<br />**Symbolleiste**, nur mit den Schaltflächen **Zum VDT-Abfrage-Generator wechseln** und **Ausführen**<br /><br /> <br /><br /> Hinweis: Diese Option wird nur angezeigt, wenn **Zum VDT-Abfrage-Generator wechseln** ausgewählt ist.|  
 |**Zum VDT-Abfrage-Generator wechseln**|Wählen Sie diese Option aus, um alle Optionen anzuzeigen, die in der Sicht VDT-Abfrage-Generator (Visual Database Tools) verfügbar sind.<br /><br /> Hinweis: Die Option ist nur verfügbar, wenn **Zum Standardabfrage-Generator wechseln** ausgewählt ist.|  
-|**Diagrammbereich ein-/ausblenden**|Blendet den **Diagrammbereich**ein oder aus.<br /><br /> **Hinweis** Diese Option wird nur angezeigt **, wenn zu VDT wechseln Abfrage-Generator** ausgewählt ist.|  
-|**Raster Bereich ein-/ausblenden**|Blendet den **Rasterbereich**ein oder aus.<br /><br /> Hinweis: diese Option wird nur angezeigt **, wenn zu VDT wechseln Abfrage-Generator** ausgewählt ist.|  
-|**SQL-Bereich ein-/ausblenden**|Blendet den **SQL-Bereich**ein oder aus.<br /><br /> Hinweis: diese Option wird nur angezeigt **, wenn zu VDT wechseln Abfrage-Generator** ausgewählt ist.|  
-|**Ergebnisbereich ein-/ausblenden**|Blendet den **Ergebnisbereich**ein oder aus.<br /><br /> Hinweis: diese Option wird nur angezeigt **, wenn zu VDT wechseln Abfrage-Generator** ausgewählt ist.|  
+|**Diagrammbereich ein-/ausblenden**|Blendet den **Diagramm**Bereich ein oder aus.<br /><br /> **Hinweis** Diese Option wird nur angezeigt **, wenn zu VDT wechseln Abfrage-Generator** ausgewählt ist.|  
+|**Rasterbereich ein-/ausblenden**|Blendet den **Raster**Bereich ein oder aus.<br /><br /> Hinweis: Diese Option wird nur angezeigt, wenn **Zum VDT-Abfrage-Generator wechseln** ausgewählt ist.|  
+|**SQL-Bereich ein-/ausblenden**|Blendet den **SQL-Bereich**ein oder aus.<br /><br /> Hinweis: Diese Option wird nur angezeigt, wenn **Zum VDT-Abfrage-Generator wechseln** ausgewählt ist.|  
+|**Ergebnisbereich ein-/ausblenden**|Blendet den **Ergebnisbereich**ein oder aus.<br /><br /> Hinweis: Diese Option wird nur angezeigt, wenn **Zum VDT-Abfrage-Generator wechseln** ausgewählt ist.|  
 |**Ausführen**|Führt die Abfrage aus. Ergebnisse werden im **Ergebnisbereich**angezeigt.|  
-|**SQL überprüfen**|Überprüft die SQL-Anweisung in der Abfrage.<br /><br /> Hinweis: diese Option wird nur angezeigt **, wenn zu VDT wechseln Abfrage-Generator** ausgewählt ist.|  
-|**Aufsteigend sortieren**|Sortiert die Ausgabezeilen der ausgewählten Spalte im **Rasterbereich**in aufsteigender Reihenfolge.<br /><br /> Hinweis: diese Option wird nur angezeigt **, wenn zu VDT wechseln Abfrage-Generator** ausgewählt ist.|  
-|**Absteigend sortieren**|Sortiert die Ausgabezeilen der ausgewählten Spalte im **Rasterbereich**in absteigender Reihenfolge.<br /><br /> Hinweis: diese Option wird nur angezeigt **, wenn zu VDT wechseln Abfrage-Generator** ausgewählt ist.|  
-|**Filter entfernen**|Entfernt die Sortierkriterien ggf. für die ausgewählte Zeile im **Rasterbereich**.<br /><br /> Hinweis: diese Option wird nur angezeigt **, wenn zu VDT wechseln Abfrage-Generator** ausgewählt ist.|  
-|**Verwenden von Group by**|Fügt der Abfrage die Gruppierungsfunktionalität hinzu.<br /><br /> Hinweis: diese Option wird nur angezeigt **, wenn zu VDT wechseln Abfrage-Generator** ausgewählt ist.|  
-|**Tabelle hinzufügen**|Zeigt das Dialogfeld **Tabelle hinzufügen** an, in dem der Abfrage eine neue Tabelle oder Sicht hinzugefügt werden kann. Weitere Informationen zum Dialogfeld **Tabelle hinzufügen** finden Sie unter [Tabelle hinzufügen &#40;Dialogfeld, Analysis Services – Mehrdimensionale Daten&#41;](add-table-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Hinweis: diese Option wird nur angezeigt **, wenn zu VDT wechseln Abfrage-Generator** ausgewählt ist.|  
+|**SQL überprüfen**|Überprüft die SQL-Anweisung in der Abfrage.<br /><br /> Hinweis: Diese Option wird nur angezeigt, wenn **Zum VDT-Abfrage-Generator wechseln** ausgewählt ist.|  
+|**Aufsteigend sortieren**|Sortiert die Ausgabezeilen der ausgewählten Spalte im **Rasterbereich**in aufsteigender Reihenfolge.<br /><br /> Hinweis: Diese Option wird nur angezeigt, wenn **Zum VDT-Abfrage-Generator wechseln** ausgewählt ist.|  
+|**Absteigend sortieren**|Sortiert die Ausgabezeilen der ausgewählten Spalte im **Rasterbereich**in absteigender Reihenfolge.<br /><br /> Hinweis: Diese Option wird nur angezeigt, wenn **Zum VDT-Abfrage-Generator wechseln** ausgewählt ist.|  
+|**Filter entfernen**|Entfernt die Sortierkriterien ggf. für die ausgewählte Zeile im **Rasterbereich**.<br /><br /> Hinweis: Diese Option wird nur angezeigt, wenn **Zum VDT-Abfrage-Generator wechseln** ausgewählt ist.|  
+|**GROUP BY verwenden**|Fügt der Abfrage die Gruppierungsfunktionalität hinzu.<br /><br /> Hinweis: Diese Option wird nur angezeigt, wenn **Zum VDT-Abfrage-Generator wechseln** ausgewählt ist.|  
+|**Tabelle hinzufügen**|Zeigt das Dialogfeld **Tabelle hinzufügen** an, in dem der Abfrage eine neue Tabelle oder Sicht hinzugefügt werden kann. Weitere Informationen zum Dialogfeld **Tabelle hinzufügen** finden Sie unter [Tabelle hinzufügen &#40;Dialogfeld, Analysis Services – Mehrdimensionale Daten&#41;](add-table-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Hinweis: Diese Option wird nur angezeigt, wenn **Zum VDT-Abfrage-Generator wechseln** ausgewählt ist.|  
   
  **Diagrammbereich**  
  Zeigt die Objekte an, auf die durch die Abfrage als Diagramm verwiesen wird. Das Diagramm zeigt die in der Abfrage enthaltenen Tabellen sowie die Art, wie diese miteinander verknüpft sind. Aktivieren oder deaktivieren Sie das Kontrollkästchen neben einer Spalte in einer Tabelle, um die entsprechende Spalte der Abfrageausgabe hinzuzufügen bzw. sie daraus zu entfernen.  
@@ -80,28 +80,28 @@ ms.locfileid: "66086811"
  Klicken Sie mit der rechten Maustaste auf den Bereich **Diagramm** , um Tabellen hinzuzufügen oder zu entfernen, alle Tabellen auszuwählen oder Bereiche ein- oder auszublenden.  
   
 > [!NOTE]  
->  Die Inhalte von **Diagramm**Bereich, **Raster**Bereich und **SQL** -Bereich werden synchronisiert, sodass sich Änderungen in einem Bereich in den anderen beiden Bereichen widerspiegeln.  
+>   Die Inhalte von **Diagrammbereich**, **Rasterbereich**und **SQL-Bereich** werden synchronisiert, sodass sich Änderungen in einem Bereich sofort auch auf die anderen beiden Bereiche auswirken.  
   
 > [!IMPORTANT]  
 >  Das Ändern von Abfragetypen wird in dem Dialogfeld nicht unterstützt.  
   
- **Raster Bereich**  
+ **Rasterbereich**  
  Zeigt die Objekte an, auf die durch die Abfrage in einem Raster verwiesen wird. In diesem Bereich können Sie der Abfrage Spalten hinzufügen oder Spalten aus der Abfrage entfernen sowie die Einstellungen für die einzelnen Spalten ändern.  
   
 > [!NOTE]  
->  Die Inhalte von **Diagramm**Bereich, **Raster**Bereich und **SQL** -Bereich werden synchronisiert, sodass sich Änderungen in einem Bereich in den anderen beiden Bereichen widerspiegeln.  
+>   Die Inhalte von **Diagrammbereich**, **Rasterbereich**und **SQL-Bereich** werden synchronisiert, sodass sich Änderungen in einem Bereich sofort auch auf die anderen beiden Bereiche auswirken.  
   
  **SQL-Bereich**  
  Zeigt die Abfrage als SQL-Anweisung an. Geben Sie die entsprechenden Werte ein, um die SQL-Anweisung für die Abfrage zu ändern.  
   
 > [!NOTE]  
->  Die Inhalte von **Diagramm**Bereich, **Raster**Bereich und **SQL** -Bereich werden synchronisiert, sodass sich Änderungen in einem Bereich in den anderen beiden Bereichen widerspiegeln.  
+>   Die Inhalte von **Diagrammbereich**, **Rasterbereich**und **SQL-Bereich** werden synchronisiert, sodass sich Änderungen in einem Bereich sofort auch auf die anderen beiden Bereiche auswirken.  
   
  **Ergebnisbereich**  
  Zeigt die Ergebnisse der Abfrage an, wenn Sie im Bereich **Symbolleiste** auf **Ausführen** klicken.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Analysis Services Designer und Dialog Felder &#40;Mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Definieren Sie benannte Abfragen in einer Datenquellen Sicht &#40;Analysis Services&#41;](multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
+ [Definieren von benannten Abfragen in einer Datenquellensicht &#40;Analysis Services&#41;](multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

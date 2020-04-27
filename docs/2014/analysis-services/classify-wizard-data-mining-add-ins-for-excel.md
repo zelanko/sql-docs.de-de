@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a62d937a733ea41b85a83224a043ff4ad7ecdd29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087929"
 ---
 # <a name="classify-wizard-data-mining-add-ins-for-excel"></a>Assistent zum Klassifizieren (Data Mining-Add-Ins für Excel)
@@ -78,7 +78,7 @@ ms.locfileid: "66087929"
   
  [Technische Referenz für den Microsoft Neural Network-Algorithmus](data-mining/microsoft-neural-network-algorithm-technical-reference.md)  
   
-### <a name="requirements"></a>Requirements (Anforderungen)  
+### <a name="requirements"></a>Anforderungen  
  Wenn Sie den **klassifizier** enden Assistenten verwenden möchten, müssen Sie [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] mit einer-Datenbank verbunden sein. Weitere Informationen zum Erstellen einer Verbindung finden Sie unter Herstellen einer Verbindung [mit Quelldaten &#40;Data Mining-Client für Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

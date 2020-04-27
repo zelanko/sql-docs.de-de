@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 812a08d00fca0b3a61f5cb038e1585fee08c06d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086761"
 ---
 # <a name="create-the-data-mining-structure-data-mining-wizard"></a>Data Mining-Struktur erstellen (Data Mining-Assistent)
@@ -24,9 +24,9 @@ ms.locfileid: "66086761"
   
  Wenn Sie ein Miningmodell erstellen, müssen Sie auch den Data Mining-Algorithmus angeben, den Sie verwenden möchten. Wenn Sie jetzt nur die Struktur erstellen, können Sie der Struktur später ein Miningmodell hinzufügen.  
   
- **Weitere Informationen finden** Sie unter [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md), [Data Mining-Assistent &#40;Analysis Services-Data Mining-&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Mining Struktur](data-mining/create-a-relational-mining-structure.md) .  
+ **Weitere Informationen:** [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-algorithms-analysis-services-data-mining.md), [Data Mining-Assistent &#40;Analysis Services – Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Miningstruktur mit einem Miningmodell erstellen**  
  Aktivieren Sie diese Option, um eine Miningstruktur zu erstellen und dann ein zugeordnetes Modell zu erstellen.  
   

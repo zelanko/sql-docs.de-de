@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e8fea8d2a7b92ccca9b139b62d429fafe3a9bc4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083369"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>Modellfiltersyntax und Beispiele (Analysis Services - Data Mining)
@@ -27,7 +27,7 @@ ms.locfileid: "66083369"
   
  
   
-##  <a name="bkmk_Syntax"></a>Filter Syntax  
+##  <a name="filter-syntax"></a><a name="bkmk_Syntax"></a>Filter Syntax  
  Filterausdrücke entsprechen im Allgemeinen dem Inhalt einer WHERE-Klausel. Sie können mehrere Bedingungen mithilfe der logischen Operatoren `AND`, `OR` und `NOT` verbinden.  
   
  In geschachtelten Tabellen können Sie auch die Operatoren `EXISTS` und `NOT EXISTS` verwenden. Eine `EXISTS`-Bedingung ergibt `true`, wenn die Unterabfrage mindestens eine Zeile zurückgibt. Dies ist hilfreich, wenn Sie das Modell auf Fälle beschränken möchten, die in der geschachtelten Tabelle einen bestimmten Wert enthalten: beispielsweise Kunden, die einen Artikel mindestens ein Mal gekauft haben.  
@@ -47,13 +47,13 @@ ms.locfileid: "66083369"
 <subquery>::=SELECT * FROM <columnName>[ WHERE  <predicate list> ]  
 ```  
   
- *Filter*  
+ *filter*  
  Enthält ein oder mehrere Prädikate, die durch logische Operatoren verbunden werden.  
   
- *Prädikat Liste*  
+ *predicate list*  
  Ein oder mehrere gültige Filterausdrücke, die durch logische Operatoren getrennt werden.  
   
- *columnName*  
+ *ColumnName*  
  Der Name einer Miningstrukturspalte.  
   
  logical operator  
@@ -111,7 +111,7 @@ ms.locfileid: "66083369"
 ## <a name="examples-of-filters"></a>Beispiele für Filter  
  In den folgenden Beispielen wird die Anwendung von Filtern auf ein Miningmodell veranschaulicht. Wenn Sie den Filterausdruck unter Verwendung von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellen, sehen Sie im Fenster **Eigenschaft** und im Bereich **Ausdruck** des Dialogfelds Filter nur die Zeichenfolge, die nach den WITH FILTER-Schlüsselwörtern angezeigt wird. Hier wird die Definition der Miningstruktur eingefügt, um den Spaltentyp und die Spaltenverwendung verständlicher zu machen.  
   
-###  <a name="bkmk_Ex1"></a>Beispiel 1: typische Filterung auf Fallebene  
+###  <a name="example-1-typical-case-level-filtering"></a><a name="bkmk_Ex1"></a> Beispiel 1: Typische Filterung auf Fallebene  
  Dieses Beispiel zeigt einen einfachen Filter, der die im Modell verwendeten Fälle auf Kunden mit dem Beruf Architekt und einem Alter von über 30 Jahren einschränkt.  
   
 ```  
@@ -127,7 +127,7 @@ WITH FILTER (Age > 30 AND Occupation='Architect')
   
 
   
-###  <a name="bkmk_Ex2"></a>Beispiel 2: Filterung auf Fallebene mit Attributen von Attributen in einer Tabelle  
+###  <a name="example-2-case-level-filtering-using-nested-table-attributes"></a><a name="bkmk_Ex2"></a> Beispiel 2: Filterung auf Fallebene unter Verwendung von Attributen in geschachtelten Tabellen  
  Wenn Ihre Miningstruktur geschachtelte Tabellen enthält, können Sie entweder auf das Vorhandensein eines Werts in einer geschachtelten Tabelle filtern oder auf Zeilen in der geschachtelten Tabelle, die einen bestimmten Wert enthalten. Dieses Beispiel schränkt die für das Modell verwendeten Fälle auf Kunden ein, die über 30 Jahre alt sind und mindestens einen Einkauf getätigt haben, der Milch enthielt.  
   
  Dieses Beispiel zeigt, dass der Filter nicht nur Spalten zu verwenden braucht, die im Modell enthalten sind. Die geschachtelte Tabelle **Products** ist Bestandteil der Miningstruktur, ist jedoch nicht im Miningmodell enthalten. Sie können jedoch auf Werte und Attribute in der geschachtelten Tabelle filtern. Um die Details dieser Fälle anzuzeigen, muss Drillthrough aktiviert werden.  
@@ -147,7 +147,7 @@ FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk')
   
  
   
-###  <a name="bkmk_Ex3"></a>Beispiel 3: Filterung auf Fallebene für mehrere Attribute von Attributen in einer Tabelle  
+###  <a name="example-3-case-level-filtering-on-multiple-nested-table-attributes"></a><a name="bkmk_Ex3"></a> Beispiel 3: Filterung auf Fallebene unter Verwendung von mehreren Attributen in geschachtelten Tabellen  
  Dieses Beispiel zeigt einen dreiteiligen Filter: Eine Bedingung gilt für die Falltabelle, eine andere Bedingung für ein Attribut in der geschachtelten Tabelle und eine weitere Bedingung für einen bestimmten Wert in einer der geschachtelten Tabellenspalten.  
   
  Die erste Bedingung im Filter, `Age > 30`, gilt für eine Spalte in der Falltabelle. Die übrigen Bedingungen gelten für die geschachtelte Tabelle.  
@@ -173,7 +173,7 @@ FILTER (Age > 30 AND EXISTS (SELECT * FROM Products WHERE ProductName='Milk'  AN
   
 
   
-###  <a name="bkmk_Ex4"></a>Beispiel 4: Filterung auf Fallebene nach Abwesenheit von Attributen in einer Tabelle  
+###  <a name="example-4-case-level-filtering-on-absence-of-nested-table-attributes"></a><a name="bkmk_Ex4"></a> Beispiel 4: Filterung auf Fallebene unter Verwendung der Abwesenheit von Attributen in der geschachtelten Tabelle  
  Dieses Beispiel zeigt, wie Fälle auf Kunden beschränkt werden, die einen bestimmten Artikel nicht gekauft haben, indem auf das Nichtvorhandensein eines Attributs in der geschachtelten Tabelle gefiltert wird. In diesem Beispiel wird das Modell so eingerichtet, dass damit Kunden ermittelt werden können, die älter als 30 Jahre sind und noch nie Milch gekauft haben.  
   
 ```  
@@ -193,7 +193,7 @@ FILTER (Age > 30 AND NOT EXISTS (SELECT * FROM Products WHERE ProductName='Milk'
   
 
   
-###  <a name="bkmk_Ex5"></a>Beispiel 5: Filtern nach mehreren Werten von Tabellen Tabellen  
+###  <a name="example-5-filtering-on-multiple-nested-table-values"></a><a name="bkmk_Ex5"></a> Beispiel 5: Filterung unter Verwendung von mehreren Werten in geschachtelten Tabellen  
  Dieses Beispiel soll das Filtern von geschachtelten Tabellen veranschaulichen. Der Filter für geschachtelte Tabellen wird nach dem Fallfilter angewendet und schränkt nur Zeilen in geschachtelten Tabellen ein.  
   
  Dieses Modell kann mehrere Fälle mit leeren geschachtelten Tabellen enthalten, da EXISTS nicht angegeben ist.  
@@ -216,7 +216,7 @@ WITH DRILLTHROUGH
   
 
   
-###  <a name="bkmk_Ex6"></a>Beispiel 6: Filtern von Attributen in der Tabellen Tabelle und vorhanden  
+###  <a name="example-6-filtering-on-nested-table-attributes-and-exists"></a><a name="bkmk_Ex6"></a> Beispiel 6: Filterung unter Verwendung von Attributen in geschachtelten Tabellen und EXISTS  
  In diesem Beispiel beschränkt der Filter für die geschachtelte Tabelle die Zeilen auf solche, die entweder Milch oder Wasser in Flaschen enthalten. Anschließend werden die Fälle im Modell mithilfe einer `EXISTS`-Anweisung eingeschränkt. Dies stellt sicher, dass die geschachtelte Tabelle nicht leer ist.  
   
 ```  
@@ -237,7 +237,7 @@ FILTER (EXISTS (Products))
   
 
   
-###  <a name="bkmk_Ex7"></a>Beispiel 7: komplexe Filter Kombinationen  
+###  <a name="example-7-complex-filter-combinations"></a><a name="bkmk_Ex7"></a> Beispiel 7: Komplexe Filterkombinationen  
  Das Szenario für dieses Modell ähnelt dem von Beispiel 4, ist jedoch wesentlich komplexer. Die in der Tabelle **ProductsOnSale**angezeigte Tabelle enthält die Filter `(OnSale)` Bedingung, was bedeutet, dass der Wert von `true` **OnSale** für das in **ProductName**aufgelistete Produkt lauten muss. Hier ist **OnSale** eine Strukturspalte.  
   
  Der zweite Teil des Filters für **ProductsNotOnSale**wiederholt diese Syntax, filtert jedoch nach Produkten, bei denen der Wert von **OnSale** ist `not true``(!OnSale)`.  
@@ -280,7 +280,7 @@ FILTER (EXISTS (Products))
   
   
   
-###  <a name="bkmk_Ex8"></a>Beispiel 8: Filtern nach Datumsangaben  
+###  <a name="example-8-filtering-on-dates"></a><a name="bkmk_Ex8"></a> Beispiel 8: Filtern unter Verwendung von Datumsangaben  
  Sie können Eingabespalten genau wie alle anderen Daten nach Datumsangaben filtern. In einer Spalte des Typs Datum/Uhrzeit enthaltene Datumsangaben sind kontinuierliche Werte. Sie können daher mit Operatoren wie Größer als (>) oder Kleiner als (<) einen Datumsbereich festlegen. Wenn die Datenquelle Datumsangaben nicht durch einen kontinuierlichen Datentyp, sondern als Einzel- oder Textwerte darstellt, können Sie nicht nach einem Datumsbereich filtern, sondern müssen einzelne Werte angeben.  
   
  Sie können jedoch keinen Filter für die Datumsspalte in einem Zeitreihenmodell erstellen, wenn die für den Filter verwendete Datumsspalte gleichzeitig die Schlüsselspalte für das Modell ist. Dies liegt daran, dass die Datumsspalte in Zeitreihenmodellen und Sequenzclustermodellen als eine Spalte vom Typ `KeyTime` oder `KeySequence` verarbeitet werden kann.  
@@ -305,6 +305,6 @@ FILTER (EXISTS (Products))
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Filter für Mining Modelle &#40;Analysis Services Data Mining-&#41;](mining-models-analysis-services-data-mining.md)   
- [Testen und validieren &#40;Data Mining-&#41;](testing-and-validation-data-mining.md)  
+ [Tests und Überprüfung &#40;Data Mining&#41;](testing-and-validation-data-mining.md)  
   
   

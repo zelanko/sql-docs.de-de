@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f7ab4ad7a819c18056ab5901f95caf1b74b23a25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087526"
 ---
 # <a name="completing-the-wizard-partition-wizard"></a>Assistenten abschließen (Partitions-Assistent)
@@ -31,16 +31,16 @@ ms.locfileid: "66087526"
   
  In der folgenden Tabelle sind die verfügbaren Aggregationsoptionen aufgelistet.  
   
-|Option|BESCHREIBUNG|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |**Aggregationen für die Partition jetzt entwerfen**|Entwirft Aggregationen für die neue Partition, nachdem der Partitions-Assistent die neue Partition erstellt hat. Bei Auswahl dieser Option wird der Aggregationsentwurfs-Assistent gestartet, nachdem Sie im Partitions-Assistenten auf **Fertig stellen** geklickt haben. Weitere Informationen zum Aggregationsentwurfs-Assistenten finden Sie unter [Aggregationsentwurfs-Assistent (F1-Hilfe)](aggregation-design-wizard-f1-help.md).|  
 |**Aggregationen später entwerfen**|Erstellt die Partition, ohne gleichzeitig Aggregationen zu entwerfen.|  
 |**Aggregationsentwurf aus einer vorhandenen Partition kopieren**|Kopiert den Aggregationsentwurf aus einer vorhandenen Partition der Measuregruppe in die neue Partition. Wenn Sie auf diese Option klicken, ist auch die Option **Kopieren von** verfügbar. Wählen Sie mithilfe der Option **Kopieren von** die Partition aus, aus der der Aggregationsentwurf kopiert werden soll.<br /><br /> Beachten Sie, dass Partitionen, die in Zukunft zusammengeführt werden können, dieselbe Tabellenstruktur und denselben Aggregations Entwurf aufweisen müssen. Wenn Sie die neue Partition mit einer vorhandenen Partition in der Measuregruppe zusammenführen möchten, sollten Sie den Aggregationsentwurf der vorhandenen Partition in die neue Partition kopieren.|  
   
  **Jetzt bereitstellen und verarbeiten**  
- Wählen Sie diese Option aus, um die Partition auf der [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Instanz, die auf der Seite **Speicherorte zum Verarbeiten und Speichern** angegebenen ist, bereitzustellen und zu verarbeiten. Wenn Sie auf dieser Seite auf **Fertig stellen** klicken, führt der Assistent die Bereitstellung und Verarbeitung der Partition aus.  
+ Wählen Sie diese Option aus, um die Partition auf der [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz, die auf der Seite **Speicherorte zum Verarbeiten und Speichern** angegebenen ist, bereitzustellen und zu verarbeiten. Wenn Sie auf dieser Seite auf **Fertig stellen** klicken, führt der Assistent die Bereitstellung und Verarbeitung der Partition aus.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Partitionen &#40;Analysis Services Mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Partitionen &#40;Analysis Services – mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

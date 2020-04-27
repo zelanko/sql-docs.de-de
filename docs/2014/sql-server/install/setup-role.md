@@ -11,10 +11,10 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: b1cf8c6f8442fc69669c10106f671040733e48ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092233"
 ---
 # <a name="setup-role"></a>Setuprolle
@@ -22,7 +22,7 @@ ms.locfileid: "66092233"
   
  Eine `setup role` ist eine unveränderliche Auswahl aller Funktionen und freigegebenen Komponenten, die zur Implementierung einer vordefinierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Konfiguration erforderlich sind.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Funktions Installation**  
  Verwenden Sie diese Option, um einzelne Funktionen und freigegebene Komponenten auszuwählen. Die Instanzfunktionen beinhalten Datenbank-Engine-Dienste, Analysis Services (einheitlicher Modus) und Reporting Services.  
   

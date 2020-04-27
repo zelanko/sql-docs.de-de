@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d48dd57d71d04611947e0ec6158b29c97a6b7646
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084030"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Clustering-Algorithmus
@@ -35,7 +35,7 @@ ms.locfileid: "66084030"
   
  Weitere Informationen zum Verwenden von Clustermodellen finden Sie in folgenden Themen:  
   
--   [Mining Modell Inhalt für Clustering-Modelle &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [Mingingmodellinhalt von Clustermodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
 -   [Beispiele für Clustermodellabfragen](clustering-model-query-examples.md)  
   
@@ -94,7 +94,7 @@ ms.locfileid: "66084030"
  CLUSTERING_METHOD  
  Gibt an, welche Clustermethode vom Algorithmus verwendet wird. Die folgenden Clustermethoden stehen zur Verfügung:  
   
-|id|Methode|  
+|Id|Methode|  
 |--------|------------|  
 |1|EM skalierbar|  
 |2|EM nicht skalierbar|  
@@ -106,14 +106,14 @@ ms.locfileid: "66084030"
  CLUSTER_COUNT  
  Gibt die ungefähre Anzahl der vom Algorithmus zu erstellenden Cluster an. Falls die ungefähre Anzahl von Clustern nicht aus den Daten erstellt werden kann, erstellt der Algorithmus so viele Cluster wie möglich. Durch Festlegen des CLUSTER_COUNT-Parameters auf 0 wird der Algorithmus zur Verwendung heuristischer Methoden veranlasst, um die Anzahl von zu erstellenden Clustern so gut wie möglich zu bestimmen.  
   
- (Standardwert: 10.)  
+ Der Standardwert ist 10.  
   
  CLUSTER_SEED  
  Gibt den numerischen Ausgangswert für die zufällige Clustergenerierung in der Anfangsphase der Modellerstellung an.  
   
  Durch Ändern dieses Werts können Sie die Art und Weise ändern, wie Anfangscluster erstellt werden, und anschließend Modelle vergleichen, die mit unterschiedlichen Anfangswerten erstellt wurden. Wenn der Anfangswert geändert wird, die gefundenen Cluster sich jedoch nicht erheblich ändern, kann das Modell als relativ stabil betrachtet werden.  
   
- Die Standardeinstellung ist 0.  
+ Der Standardwert ist 0.  
   
  MINIMUM_SUPPORT  
  Gibt die Mindestanzahl von Fällen an, die erforderlich sind, um einen Cluster zu erstellen. Wenn die Zahl der Fälle im Cluster kleiner als dieser Wert ist, gilt der Cluster als leer und wird verworfen.  
@@ -130,12 +130,12 @@ ms.locfileid: "66084030"
   
  Eine Reduzierung der Anzahl von Kandidatenmodellen kann zwar zur Verbesserung der Leistung führen, beinhaltet jedoch das Risiko, einige gute Kandidatenmodelle zu verpassen.  
   
- (Standardwert: 10.)  
+ Der Standardwert ist 10.  
   
  STOPPING_TOLERANCE  
  Gibt den Wert an, mit dem bestimmt wird, wann Konvergenz erreicht ist und die Modellerstellung mit dem Algorithmus abgeschlossen ist. Konvergenz ist erreicht, wenn die Gesamtänderung der Clusterwahrscheinlichkeiten kleiner als das Verhältnis des STOPPING_TOLERANCE-Parameters geteilt durch die Modellgröße ist.  
   
- (Standardwert: 10.)  
+ Der Standardwert ist 10.  
   
  SAMPLE_SIZE  
  Gibt die Anzahl von Fällen an, die bei jedem Durchlauf des Algorithmus verwendet werden, wenn der CLUSTERING_METHOD-Parameter auf eine der skalierbaren Clustermethoden festgelegt ist. Das Festlegen des SAMPLE_SIZE-Parameters auf 0 bewirkt eine Clustererstellung für das gesamte Dataset in einem einzelnen Durchlauf. Das gesamte Dataset in einem einzelnen Durchlauf zu laden, kann zu Problemen mit dem Arbeitsspeicher und der Leistung führen.  
@@ -159,12 +159,12 @@ ms.locfileid: "66084030"
 ### <a name="modeling-flags"></a>Modellierungsflags  
  Der Algorithmus unterstützt die folgenden Modellierungsflags. Modellierungsflags werden beim Erstellen der Miningstruktur oder des Miningmodells definiert. Die Modellierungsflags geben an, wie die Werte in den einzelnen Spalten während der Analyse behandelt werden.  
   
-|Modellierungsflag|BESCHREIBUNG|  
+|Modellierungsflag|Beschreibung|  
 |-------------------|-----------------|  
 |MODEL_EXISTENCE_ONLY|Die Spalte kann zwei mögliche Statuswerte haben: Missing und Existing. Ein NULL-Wert ist ein fehlender Wert.<br /><br /> Gilt für die Miningmodellspalte.|  
 |NOT NULL|Die Spalte darf keinen NULL-Wert enthalten. Ein Fehler tritt auf, wenn Analysis Services während des Modelltrainings einen NULL-Wert erkennt.<br /><br /> Gilt für die Miningstrukturspalte.|  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
  Ein Clustermodell muss eine Schlüsselspalte und Eingabespalten enthalten. Sie können Eingabespalten auch als vorhersagbar definieren. Auf `Predict Only` festgelegte Spalten werden nicht verwendet, um Cluster zu erstellen. Die Verteilung dieser Werte in den Clustern wird berechnet, nachdem die Cluster erstellt sind.  
   
 ### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten  
@@ -181,6 +181,6 @@ ms.locfileid: "66084030"
 ## <a name="see-also"></a>Weitere Informationen  
  [Microsoft Clustering-Algorithmus](microsoft-clustering-algorithm.md)   
  [Clustering-Modell Abfrage Beispiele](clustering-model-query-examples.md)   
- [Mining Modell Inhalt für Clustering-Modelle &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Mingingmodellinhalt von Clustermodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 06249aa1849a1be9af40e183724e85b0f318f3dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093148"
 ---
 # <a name="remove-references-to-undocumented-system-tables"></a>Entfernen von Verweisen auf nicht dokumentierte Systemtabellen
@@ -80,7 +80,7 @@ ms.locfileid: "66093148"
 ## <a name="corrective-action"></a>Korrekturmaßnahme  
  Ändern Sie die Anwendungen entsprechend der folgenden Tabelle.  
   
-|Statt|Zweck|  
+|Statt|Verwendung|  
 |----------------|---------|  
 |**sysfulltextnotify**|Die **tablefulltextpdingchanges** -Eigenschaft der OBJECTPROPERTYEX-Funktion.|  
 |**syslocks**|dynamische Verwaltungs Sicht **sys. dm_tran_locks** oder sp_lock oder die **sys. syslockinfo** -Kompatibilitäts Sicht.|  

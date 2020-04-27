@@ -14,22 +14,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 06ce3967bf9258e9b8f6cd4a28cb28a29a1e0588
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084540"
 ---
 # <a name="enable-drillthrough-for-a-mining-model"></a>Aktivieren von Drillthrough für ein Miningmodell
   Wenn Sie Drillthrough für ein Miningmodell aktiviert haben, können Sie beim Durchsuchen des Modells detaillierte Informationen über die Fälle abrufen, die für die Erstellung des Modells verwendet wurden. Zum Anzeigen dieser Informationen benötigen Sie die erforderlichen Berechtigungen. Außerdem muss die Struktur bereits verarbeitet worden sein.  
   
- **Berechtigungen** Damit ein Benutzer einen Drillthrough zu Modell-oder Strukturdaten ausführen kann, muss der Benutzer Mitglied einer Rolle sein, die über [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) -Berechtigungen für das Mining Modell oder die Mining Struktur verfügt. Drillthroughberechtigungen werden getrennt für die Struktur und das Modell festgelegt.  
+ **Berechtigungen:** Damit ein Benutzer einen Drillthrough in Modell- oder Strukturdaten ausführen kann, muss er Mitglied einer Rolle sein, die über [AllowDrillThrough](https://docs.microsoft.com/bi-reference/assl/properties/allowdrillthrough-element-assl) -Berechtigungen für das Miningmodell oder die Miningstruktur verfügt. Drillthroughberechtigungen werden getrennt für die Struktur und das Modell festgelegt.  
   
 -   Mit Drillthrough-Berechtigungen für das Modell können Sie einen Drillthrough des Modells durchführen, auch wenn Sie keine Berechtigungen für die Struktur besitzen.  
   
 -   Mit Drillthroughberechtigungen für die Struktur können Sie außerdem mit der Funktion [StructureColumn &#40;DMX&#41;](/sql/dmx/structurecolumn-dmx) Strukturspalten in Drillthroughabfragen für das Modell einbeziehen. Sie können auch die Trainings-und Testfälle in der Struktur Abfragen, indem Sie die Option Select... Aus \<Struktur>. Fälle-Syntax.  
   
- Zwischen **Speichern von Trainings Fällen** Drillthrough funktioniert, indem Informationen über die Trainings Fälle in der Mining Struktur abgerufen werden. Diese Informationen werden zwischengespeichert, wenn die Struktur verarbeitet wird. Wenn Sie alle zwischengespeicherten Daten durch Ändern der <xref:Microsoft.AnalysisServices.MiningStructureCacheMode>-Eigenschaft in `ClearAfterProcessing` löschen, funktioniert der Drillthrough nicht.  
+ **Zwischenspeichern von Trainingsfällen:** Beim Drillthrough werden Informationen über die Trainingsfälle in der Miningstruktur abgerufen. Diese Informationen werden zwischengespeichert, wenn die Struktur verarbeitet wird. Wenn Sie alle zwischengespeicherten Daten durch Ändern der <xref:Microsoft.AnalysisServices.MiningStructureCacheMode>-Eigenschaft in `ClearAfterProcessing` löschen, funktioniert der Drillthrough nicht.  
   
 > [!NOTE]  
 >  Wenn die Trainingsfälle nicht zwischengespeichert wurden, müssen Sie die <xref:Microsoft.AnalysisServices.MiningStructureCacheMode> -Eigenschaft in **KeepTrainingCases** ändern und das Modell anschließend erneut verarbeiten, bevor Sie die Falldaten anzeigen können.  
@@ -40,9 +40,9 @@ ms.locfileid: "66084540"
   
 1.  Klicken Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]im Data Mining-Designer auf der Registerkarte **Miningmodelle** mit der rechten Maustaste auf den Namen des Miningmodells, für das Sie Drillthrough aktivieren möchten, und wählen Sie anschließend **Eigenschaften**aus.  
   
-2.  Klicken Sie im Fenster **Eigenschaften** auf **AllowDrillthrough**, und wählen Sie **True**aus.  
+2.  Klicken Sie im Fenster **Eigenschaften** auf **AllowDrillThrough**, und wählen Sie **true**aus.  
   
-3.  Klicken Sie auf der Registerkarte **Miningmodelle** mit der rechten Maustaste auf das Modell, und wählen Sie **Modell verarbeiten**aus.  
+3.  Klicken Sie auf der Registerkarte **Mining Modelle** mit der rechten Maustaste auf das Modell, und wählen Sie **Modell verarbeiten**aus.  
   
 ### <a name="to-enable-caching-for-a-mining-structure"></a>So aktivieren Sie das Zwischenspeichern für eine Miningstruktur  
   
@@ -55,6 +55,6 @@ ms.locfileid: "66084540"
 4.  Aktivieren Sie im Menü **Datenbank** die Option **Verarbeiten**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Drillthrough-Abfragen &#40;Data Mining-&#41;](drillthrough-queries-data-mining.md)  
+ [Drillthroughabfragen &#40;Data Mining&#41;](drillthrough-queries-data-mining.md)  
   
   

@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b94fef660128637ebeb01ea1290ec24ed11b3278
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088077"
 ---
 # <a name="choose-time-calculations-business-intelligence-wizard"></a>Zielhierarchie und Berechnungen auswählen (Business Intelligence-Assistent)
   Auf der Seite **Zeitberechnungen auswählen** können Sie die Auflösung der neuen Zeitberechnungen definieren, die für eine vorhandene Zeithierarchie erstellt werden sollen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verwenden Sie die folgende Hierarchie zum Analysieren von Zeitberechnungen**  
  Wählen Sie die Hierarchie der Zeitdimension aus, die verwendet werden soll, um die neuen Zeitberechnungen zu erstellen.  
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9c2f11ecbdf90aeeb5e0e5a3ef097152898042d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086431"
 ---
 # <a name="data-mining-client-for-excel-sql-server-data-mining-add-ins"></a>Data Mining-Client für Excel (SQL Server Data Mining-Add-Ins)
@@ -48,7 +48,7 @@ ms.locfileid: "66086431"
   
      Der Data Mining-Client für Excel verfügt über eine aktive Verbindung mit dem Server, sodass Sie das Data Mining-Modell auf dem Server speichern können, um es weiteren Tests zu unterziehen oder um es für größere Skalierbarkeit auf einem Produktionsserver bereitzustellen.  
   
-##  <a name="bkmk_Data"></a>Arbeiten mit Daten  
+##  <a name="work-with-data"></a><a name="bkmk_Data"></a>Arbeiten mit Daten  
  Die Gruppe **Daten Vorbereitung** enthält die folgenden Assistenten, mit denen Sie Daten in Vorbereitung auf Data Mining Aufgaben überprüfen und bereinigen. Darüber hinaus können Sie mit den meisten Assistenten Daten in Trainings- und Testsätze trennen.  
   
  [Durchsuchen von Daten &#40;SQL Server Data Mining-Add-ins&#41;](explore-data-sql-server-data-mining-add-ins.md)  
@@ -70,7 +70,7 @@ ms.locfileid: "66086431"
  [Vorhersagerechner &#40;Tabellenanalyse Tools für Excel&#41;](prediction-calculator-table-analysis-tools-for-excel.md)  
  Der **Assistent zum** neubezeichnen von Daten unterstützt Sie beim Erstellen neuer Bezeichnungen für Daten, damit die Ergebnisse der Analyse leichter verständlich werden. Beispielsweise können Sie einem Datenbereich einen aussagekräftigeren Namen geben oder einen repräsentativen Wert aus der Liste auswählen.  
   
-##  <a name="bkmk_Model"></a>Erstellen von Modellen und analysieren  
+##  <a name="build-models-and-analyze"></a><a name="bkmk_Model"></a>Erstellen von Modellen und analysieren  
  Mithilfe der Optionen im Abschnitt " **Datenmodellierung** " der Symbolleiste können Sie Muster aus Daten ableiten. Gruppieren Sie Daten Zeilen basierend auf Attributen, oder untersuchen Sie Zuordnungen. Die Assistenten auf diesem Menüband basieren auf den leistungsfähigen Data Mining-Algorithmen von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Anders als mit den vergleichbaren Tabellenanalysetools für Excel können Sie mit diesen Assistenten das Verhalten der Algorithmen anpassen und eine Vielzahl von Datenquellen nutzen.  
   
  [Assistent zum Klassifizieren &#40;Data Mining-Add-Ins für Excel&#41;](classify-wizard-data-mining-add-ins-for-excel.md)  
@@ -101,7 +101,7 @@ ms.locfileid: "66086431"
  [Erweiterte Modellierung &#40;Data Mining-Add-Ins für Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md)  
  Sind Sie bereits vertraut mit dem Data Mining? Mithilfe der **erweiterten** Daten Modellierungs Optionen können Sie benutzerdefinierte Datenstrukturen erstellen und Modelle mithilfe von Anpassungen erstellen, die nicht in den anderen Tools und Assistenten enthalten sind.  
   
-##  <a name="bkmk_Validate"></a>Testen, Abfragen und Validieren von Modellen  
+##  <a name="test-query-and-validate-models"></a><a name="bkmk_Validate"></a>Testen, Abfragen und Validieren von Modellen  
  Verwenden Sie die Assistenten auf der Symbolleiste " **Genauigkeit und Validierung** ", um nach Industriestandard Tests zum Überprüfen der Genauigkeit ihrer Modelle und zur Bewertung der Daten Fähigkeit des Datasets zum Erstellen von Modellen zu verwenden.  
   
  [Wichtige Einflussfaktoren &#40;Tabellenanalyse Tools für Excel analysieren&#41;](analyze-key-influencers-table-analysis-tools-for-excel.md)  
@@ -124,7 +124,7 @@ ms.locfileid: "66086431"
  [Erweiterter Data Mining-Abfrage-Editor](advanced-data-mining-query-editor.md)  
  Für fortgeschrittene Benutzer bietet das Tool eine Drag &amp; Drop-Schnittstelle zu DMX. Sie können auf einfache Weise Vorhersageabfragen oder neue Modelle erstellen, ohne dass Sie sich Gedanken über die Syntax machen müssen.  
   
-##  <a name="bkmk_ViewModels"></a>Modelle anzeigen  
+##  <a name="view-models"></a><a name="bkmk_ViewModels"></a>Modelle anzeigen  
  Modelle, die Sie erstellen, werden zum Durchsuchen automatisch geöffnet. Sie können Modelle trotzdem auch auf dem Server durchsuchen und neue Visualisierungen generieren. Verwenden Sie die [Visio-Formen](viewing-data-mining-models-in-visio-data-mining-add-ins.md) , um Modell Diagramme in eine anpassbare Canvas zu exportieren.  
   
  [Durchsuchen von Modellen in Excel &#40;SQL Server Data Mining-Add-ins&#41;](browsing-models-in-excel-sql-server-data-mining-add-ins.md)  
@@ -133,7 +133,7 @@ ms.locfileid: "66086431"
  [Dokumentieren von Mining Modellen &#40;Data Mining-Add-Ins für Excel&#41;](documenting-mining-models-data-mining-add-ins-for-excel.md)  
  Dieser Assistent erstellt Berichte mit einer statistischen Zusammenfassung des Datasets und Metadaten zum Modell, die die Untersuchung und Interpretation erleichtern.  
   
-##  <a name="bkmk_UsageMgmt"></a>Verwalten, dokumentieren und bereitstellen  
+##  <a name="manage-document-and-deploy"></a><a name="bkmk_UsageMgmt"></a>Verwalten, dokumentieren und bereitstellen  
  Mithilfe dieser Tools können Sie eine Verbindung mit einem Data Mining-Server herstellen. Zudem ermöglichen sie das Verwalten und Exportieren von Modellen sowie das Überwachen von Data Mining-Aktivitäten.  
   
  [Verwalten von Modellen &#40;SQL Server Data Mining-Add-ins&#41;](manage-models-sql-server-data-mining-add-ins.md)  

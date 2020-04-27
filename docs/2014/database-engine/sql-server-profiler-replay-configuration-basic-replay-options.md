@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6ea9517047321f54734b3ccd8d072ba8f3f23152
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089720"
 ---
 # <a name="sql-server-profiler---replay-configuration-basic-replay-options"></a>SQL Server Profiler-Wiedergabekonfiguration (Grundlegende Wiedergabeoptionen)
@@ -26,7 +26,7 @@ ms.locfileid: "66089720"
   
  Zum Anzeigen dieses Fensters öffnen Sie mithilfe von [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] eine Ablaufverfolgungsdatei oder -tabelle, die die zur Wiedergabe vorgesehenen Ereignisse enthält. Weitere Informationen finden Sie unter [Replay Requirements](../tools/sql-server-profiler/replay-requirements.md). Wenn die Ablaufverfolgungsdatei oder -tabelle geöffnet ist, klicken Sie im Menü **Wiedergeben** auf **Start**, und stellen Sie dann eine Verbindung mit der Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] her, auf der die Ablaufverfolgung wiedergegeben werden soll.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Wiedergabeserver**  
  Zeigt die Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] an, mit der eine Verbindung für die Wiedergabe hergestellt wird.  
   
@@ -34,12 +34,10 @@ ms.locfileid: "66089720"
  Öffnet das Dialogfeld **Verbindung mit Server herstellen** , um eine Verbindung mit einem anderen Server herzustellen.  
   
  **In Datei speichern**  
- Speichert die Wiedergabeergebnisse in einer Datei. 
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] zeigt das Standarddialogfeld zum Speichern von Dateien an, in dem Sie einen Speicherort für die Datei angeben können.  
+ Speichert die Wiedergabeergebnisse in einer Datei. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] zeigt das Standarddialogfeld zum Speichern von Dateien an, in dem Sie einen Speicherort für die Datei angeben können.  
   
  **In Tabelle speichern**  
- Speichert die Wiedergabeergebnisse in einer Tabelle. 
-  [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] wird ein Dialogfeld zum Auswählen der Tabelle angezeigt, in dem Sie einen Speicherort für die Tabelle angeben können.  
+ Speichert die Wiedergabeergebnisse in einer Tabelle. [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] wird ein Dialogfeld zum Auswählen der Tabelle angezeigt, in dem Sie einen Speicherort für die Tabelle angeben können.  
   
  **Anzahl von Wiedergabethreads**  
  Gibt die Anzahl der Threads an, die gleichzeitig verwendet werden können. Bei einer höheren Anzahl werden zwar mehr Ressourcen beansprucht, dafür erfolgt die Wiedergabe schneller und in höherem Maße gleichzeitig.  

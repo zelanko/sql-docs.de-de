@@ -13,18 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57efea3fb5134312ac1ec3e7e9c719bb49872c5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088177"
 ---
 # <a name="chart-tab-mining-model-viewers"></a>Registerkarte "Diagramm" (Miningmodell-Viewer)
   Im Bereich **Diagramm** können Sie die Vergangenheitsdaten, die beim Trainieren eines Zeitreihenmodells verwendet wurden, zusammen mit den vorhergesagten Werten anzeigen. Die vertikale Achse des Diagramms stellt die Werte der Zeitreihe dar, und die horizontale Achse stellt die Zeit dar. Zukünftige Vorhersagen werden durch eine gestrichelte Linie dargestellt.  
   
- **Weitere Informationen:** [Microsoft Time Series-Algorithmus](data-mining/microsoft-time-series-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Time Series-Viewer](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
+ **Weitere Informationen:** [Microsoft Time Series-Algorithmus](data-mining/microsoft-time-series-algorithm.md), [Durchsuchen eines Modells mit Microsoft Time Series-Viewer](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   

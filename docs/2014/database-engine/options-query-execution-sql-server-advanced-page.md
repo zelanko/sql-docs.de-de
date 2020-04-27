@@ -13,35 +13,35 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 5323054b77ed26a3ada816f44c1bf6764ded931d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089373"
 ---
 # <a name="options-query-executionsql-serveradvanced-page"></a>Optionen (Abfrageausführung > SQL Server > Seite „Erweitert“)
-  Bei Verwendung des SET-Befehls stehen mehrere Optionen zur Verfügung. Geben Sie mithilfe dieser Seite eine **set** -Option zur Ausführung von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Abfragen im Abfrage-Editor von SQL Server an. Auswirkungen auf andere Code-Editoren bestehen nicht. Die an diesen Optionen vorgenommenen Änderungen werden nur auf neue [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Abfragen angewendet. Um die Optionen für die aktuellen Abfragen zu ändern, klicken Sie im Menü **Abfrage** oder im Kontextmenü des Abfragefensters von **auf** Abfrageoptionen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Klicken Sie unter **Ausführung**auf **Erweitert**. Weitere Informationen hierzu finden Sie in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation.  
+  Bei Verwendung des SET-Befehls stehen mehrere Optionen zur Verfügung. Geben Sie mithilfe dieser Seite eine **set** -Option zur Ausführung von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Abfragen im Abfrage-Editor von SQL Server an. Auswirkungen auf andere Code-Editoren bestehen nicht. Die an diesen Optionen vorgenommenen Änderungen werden nur auf neue [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Abfragen angewendet. Um die Optionen für die aktuellen Abfragen zu ändern, klicken Sie im Menü **Abfrage** oder im Kontextmenü des Abfragefensters von **auf** Abfrageoptionen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Klicken Sie unter **Ausführung**auf **Erweitert**. Weitere Informationen hierzu finden Sie in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Onlinedokumentation.  
   
-## <a name="options"></a>Tastatur  
- **NOCOUNT festlegen**  
+## <a name="options"></a>Optionen  
+ **SET NOCOUNT**  
  Es wird nicht die Anzahl der Zeilen als Meldung mit dem Resultset zurückgegeben. Dieses Kontrollkästchen ist standardmäßig deaktiviert.  
   
- **noexec festlegen**  
+ **SET NOEXEC**  
  Die Abfrage wird nicht ausgeführt. Dieses Kontrollkästchen ist standardmäßig deaktiviert.  
   
- **Festlegen von "parameseonly"**  
+ **SET PARSEONLY**  
  Prüft die Syntax der einzelnen Abfragen, führt die Abfragen aber nicht aus. Dieses Kontrollkästchen ist standardmäßig deaktiviert.  
   
- **CONCAT_NULL_YIELDS_NULL festlegen**  
+ **SET CONCAT_NULL_YIELDS_NULL**  
  Wenn dieses Kontrollkästchen aktiviert ist, geben Abfragen, von denen ein vorhandener Wert mit einer NULL verkettet wird, als Ergebnis immer eine NULL zurück. Wenn dieses Kontrollkästchen deaktiviert ist, gibt ein vorhandener, mit einer NULL verketteter Wert, den vorhandenen Wert zurück. Dieses Kontrollkästchen ist standardmäßig aktiviert.  
   
- **ARITHABORT festlegen**  
+ **SET ARITHABORT**  
  Wenn dieses Kontrollkästchen aktiviert ist und eine INSERT-, DELETE- oder UPDATE-Anweisung bei der Auswertung des Ausdrucks einen arithmetischer Fehler (Überlauf, Division durch null oder Domänenfehler) findet, wird die Abfrage bzw. der Batch beendet. Wenn dieses Kontrollkästchen deaktiviert ist, wird für diesen Wert nach Möglichkeit eine NULL bereitgestellt, die Abfrage fortgesetzt und in das Ergebnis eine Meldung eingeschlossen. Weitere Informationen finden Sie unter [SET ARITHABORT &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-arithabort-transact-sql). Dieses Kontrollkästchen ist standardmäßig aktiviert.  
   
- **SHOWPLAN_TEXT festlegen**  
+ **SET SHOWPLAN_TEXT**  
  Wenn dieses Kontrollkästchen aktiviert ist, wird bei jeder Abfrage der Abfrageplan im Textformat zurückgegeben. Dieses Kontrollkästchen ist standardmäßig deaktiviert.  
   
- **Statistik Zeit festlegen**  
+ **SET STATISTICS TIME**  
  Wenn dieses Kontrollkästchen aktiviert ist, wird bei jeder Abfrage die Zeitstatistik zurückgegeben. Dieses Kontrollkästchen ist standardmäßig deaktiviert.  
   
  **SET STATISTICS IO**  
@@ -70,7 +70,7 @@ GO
  **Verbindung nach Ausführung der Abfrage trennen**  
  Wenn dieses Kontrollkästchen aktiviert ist, wird die Verbindung zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] nach Ausführung der Abfrage getrennt. Dieses Kontrollkästchen ist standardmäßig deaktiviert.  
   
- **Auf Standard zurücksetzen**  
+ **Standard wiederherstellen**  
  Setzt alle auf dieser Seite verfügbaren Werte auf die ursprünglichen Standardwerte zurück.  
   
   

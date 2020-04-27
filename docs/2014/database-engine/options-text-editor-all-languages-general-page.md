@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 385380e6e51c3b8519e7dbc6ec3d934e1ef14846
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089250"
 ---
 # <a name="options-text-editor---all-languages---general-page"></a>Optionen (Text-Editor – Alle Sprachen – Seite „Allgemein“)
@@ -35,7 +35,7 @@ ms.locfileid: "66089250"
  **Erweiterte Member ausblenden**  
  Popuplisten für die Anweisungsvervollständigung kürzen, indem nur die am häufigsten verwendeten Member angezeigt werden. Die anderen Elemente werden aus der Liste gefiltert. Diese Option ist nicht verfügbar, wenn keine Member als erweiterte Member gekennzeichnet sind.  
   
- **Parameter Informationen**  
+ **Parameterinformationen**  
  Im Editor an allen verfügbaren Parametern links von der Einfügemarke die vollständige Syntax für die aktuelle Deklaration bzw. Prozedur anzeigen. Der nächste zuweisbare Parameter ist fett hervorgehoben.  
   
 ## <a name="settings"></a>Einstellungen  

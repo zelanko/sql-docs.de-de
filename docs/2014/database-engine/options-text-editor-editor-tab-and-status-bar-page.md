@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 01098f2181085f17788429608afb7bdda15fb504
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089241"
 ---
 # <a name="options-text-editor-editor-tab-and-status-bar-page"></a>Optionen (Text-Editor: Registerkarte "Editor" und Statusleiste)
@@ -34,10 +34,10 @@ ms.locfileid: "66089241"
  **Ausführungszeit anzeigen**  
  Schließt die Skriptausführungszeit ein. Die Einstellungen lauten wie folgt:  
   
- **Keine**  
+ **None**  
  Die Statusleiste zeigt keine Zeitinformationen an.  
   
- **Ende**  
+ **Schließlich**  
  Auf der Statusleiste wird während der Skriptausführung die aktuelle Uhrzeit angezeigt. Bei Abschluss des Skripts wird die Uhrzeit angezeigt, zu der das Skript abgeschlossen wurde.  
   
  **Verstrichene**  

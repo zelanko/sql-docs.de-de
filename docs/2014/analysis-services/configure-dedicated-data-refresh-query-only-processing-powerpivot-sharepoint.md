@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eaf62d2bbe6e6becc21bbf5e870c9fe442c96f74
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087511"
 ---
 # <a name="configure-dedicated-data-refresh-or-query-only-processing-powerpivot-for-sharepoint"></a>Konfigurieren der dedizierten Datenaktualisierung oder reinen Abfrage Verarbeitung (PowerPivot für SharePoint)
@@ -31,9 +31,9 @@ ms.locfileid: "66087511"
   
  [Ändern der Anzahl von Datenaktualisierungsaufträgen, die gleichzeitig ausgeführt werden können](#change)  
   
-##  <a name="config"></a>Konfigurieren eines Verarbeitungsmodus  
+##  <a name="configure-a-processing-mode"></a><a name="config"></a>Konfigurieren eines Verarbeitungsmodus  
   
-1.  Klicken Sie in der zentral Administration unter System Einstellungen auf **Dienste auf dem Server verwalten**.  
+1.  Klicken Sie in der Zentraladministration unter Systemeinstellungen auf **Dienste auf dem Server verwalten**.  
   
 2.  Klicken Sie oben auf der Seite unter Server auf den Pfeil nach unten und dann auf **Server ändern**.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66087511"
   
 7.  Speichern Sie die Änderungen. Der Server überprüft Ihre Eingaben erst nach Auftreten eines Verarbeitungsereignisses. Wenn Sie für die gleichzeitigen Aufträge einen ungültigen Wert eingeben, wird der Fehler erkannt und bei der Verarbeitung der nächsten Anforderung protokolliert.  
   
-##  <a name="change"></a>Ändern der Anzahl der Daten Aktualisierungs Aufträge, die parallel ausgeführt werden können  
+##  <a name="change-the-number-of-data-refresh-jobs-that-can-run-in-parallel"></a><a name="change"></a>Ändern der Anzahl der Daten Aktualisierungs Aufträge, die parallel ausgeführt werden können  
  Ein Datenaktualisierungsauftrag ist ein geplanter Task, der einer von einer PowerPivot-Dienstanwendung verwalteten und überwachten Verarbeitungswarteschlange hinzugefügt wird. Ein Auftrag besteht aus Zeitplaninformationen für eine oder mehrere Datenquellen in einer PowerPivot-Arbeitsmappe. Für jeden definierten Zeitplan wird ein separater Auftrag erstellt. Wenn ein Arbeitsmappenbesitzer einen Zeitplan für alle Datenquellen definiert, wird nur ein Auftrag für den gesamten Datenaktualisierungsvorgang erstellt. Wenn ein Arbeitsmappenbesitzer individuelle Zeitpläne für externe Datenquellen erstellt, werden mehrere Aufträge erstellt und ausgeführt, um eine vollständige Datenaktualisierung für diese Arbeitsmappe durchzuführen.  
   
  Sie können die Anzahl gleichzeitig ausführbarer Datenaktualisierungsaufträge erhöhen, sofern die zusätzliche Last vom System unterstützt wird.  

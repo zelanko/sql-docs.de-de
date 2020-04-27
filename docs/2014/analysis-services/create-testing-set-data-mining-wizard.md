@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9f0e4d1a384995c0c49c346102f8fddbcdf47f68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086792"
 ---
 # <a name="create-testing-set-data-mining-wizard"></a>Erstellen eines Testsatzes (Data Mining-Assistent)
@@ -34,9 +34,9 @@ ms.locfileid: "66086792"
   
 -   Sie können Daten nicht partitionieren, wenn Sie versuchen, einen Wert vorherzusagen, der in einer geschachtelten Tabelle gespeichert ist.  
   
- **Weitere Informationen finden** Sie unter [Testen und validieren &#40;Data Mining-&#41;](data-mining/testing-and-validation-data-mining.md), [Erstellen einer relationalen Mining Struktur](data-mining/create-a-relational-mining-structure.md), [Tutorial zu Data Mining-Grundlagen](../../2014/tutorials/basic-data-mining-tutorial.md)  
+ **Weitere Informationen: ** [Tests und Überprüfung &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md), [Tutorial zu Data Mining-Grundlagen](../../2014/tutorials/basic-data-mining-tutorial.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Prozentsatz der Testdaten**  
  Klicken Sie auf die Nach-oben- und Nach-unten-Pfeile, um den Prozentsatz der Daten, die als Trainingssatz verwendet werden sollen, herauf- oder herabzusetzen, oder geben Sie einen Wert zwischen 0 und 100 in das Textfeld ein.  
   

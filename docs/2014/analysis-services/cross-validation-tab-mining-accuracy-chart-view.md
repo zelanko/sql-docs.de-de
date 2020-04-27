@@ -13,15 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5a8508218ed6a2b4407943fe962959e3cd4f97d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086620"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>Übergreifende Überprüfung (Registerkarte, Mininggenauigkeitsdiagramm-Sicht)
-  Mithilfe der übergreifenden Überprüfung können Sie eine Miningstruktur in Querschnitte partitionieren und Modelle anhand der einzelnen Querschnitte iterativ trainieren und testen. Sie geben eine Anzahl von Aufteilungen für die Daten an. Die einzelnen Aufteilungen werden der Reihe nach als Testdaten verwendet, während mit den jeweils verbleibenden Daten ein neues Modell trainiert wird. 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] generiert dann eine Gruppe vorgegebener Genauigkeitsmetriken für jedes Modell. Durch den Vergleich der Metriken für die für die einzelnen Querschnitte generierten Modelle erhalten Sie Aufschluss über die Zuverlässigkeit des Miningmodells für das ganze Dataset.  
+  Mithilfe der übergreifenden Überprüfung können Sie eine Miningstruktur in Querschnitte partitionieren und Modelle anhand der einzelnen Querschnitte iterativ trainieren und testen. Sie geben eine Anzahl von Aufteilungen für die Daten an. Die einzelnen Aufteilungen werden der Reihe nach als Testdaten verwendet, während mit den jeweils verbleibenden Daten ein neues Modell trainiert wird. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] generiert dann eine Gruppe vorgegebener Genauigkeitsmetriken für jedes Modell. Durch den Vergleich der Metriken für die für die einzelnen Querschnitte generierten Modelle erhalten Sie Aufschluss über die Zuverlässigkeit des Miningmodells für das ganze Dataset.  
   
  Weitere Informationen finden Sie unter [Kreuzvalidierung &#40;Analysis Services – Data Mining&#41;](data-mining/cross-validation-analysis-services-data-mining.md).  
   
@@ -75,7 +74,7 @@ ms.locfileid: "66086620"
   
  Bei Clustermodellen deaktiviert.  
   
- **Ziel**  **Schwellenwert**  
+ **Zielschwellenwert**  ****  
  Geben Sie einen Wert zwischen 0 und 1 an, mit dem die Vorhersagewahrscheinlichkeit angegeben wird, oberhalb derer ein vorhergesagter Status als richtig gewertet wird. Der Wert kann in Schritten von 0,1 festgelegt werden.  
   
  Der Standardwert ist `null`. Dieser gibt an, dass die wahrscheinlichste Vorhersage als richtig gewertet wird.  
@@ -103,6 +102,6 @@ ms.locfileid: "66086620"
  [Testen und validieren &#40;Data Mining-&#41;](data-mining/testing-and-validation-data-mining.md)   
  [Übergreifende Überprüfung &#40;Analysis Services Data Mining-&#41;](data-mining/cross-validation-analysis-services-data-mining.md)   
  [Measures im Kreuz Validierungsbericht](data-mining/measures-in-the-cross-validation-report.md)   
- [Data Mining-gespeicherte Prozeduren &#40;Analysis Services Data Mining-&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
+ [Data Mining-gespeicherte Prozeduren &#40;Analysis Services – Data Mining&#41;](/sql/analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining)  
   
   

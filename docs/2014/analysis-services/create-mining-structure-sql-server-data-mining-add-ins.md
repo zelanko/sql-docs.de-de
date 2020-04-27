@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ae5244110e6b95434f9008fd7dc99cee259acf8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086819"
 ---
 # <a name="create-mining-structure-sql-server-data-mining-add-ins"></a>Miningstruktur erstellen (SQL Server Data Mining-Add-Ins)
@@ -89,7 +89,7 @@ ms.locfileid: "66086819"
 |**Daten in Trainings- und Testsätze aufteilen**|Ein empfohlener Wert für Trainings-und Testsätze ist 70 Prozent für das Training und 30 Prozent für Tests. Wenn Sie jedoch viele Daten haben, können Sie eine maximale Anzahl von Zeilen für das Testen angeben.|  
 |Dialogfeld Fertig stellen|Die Optionen für Drillthroughfunktionen sind in einigen Modelltypen verfügbar und sehr hilfreich, wenn Sie Detailspalten in die Miningstruktur eingeschlossen haben. Wenn Sie beispielsweise ein Clustermodell erstellen, können Sie Details wie den Namen oder die E-Mail-Adresse zwar für Drillthroughs, aber nicht für Analysen einschließen, um die Kontaktaufnahme mit Kunden in einem bestimmten Cluster zu vereinfachen.|  
   
-###  <a name="Bkmk_strctcolumn"></a>Festlegen der Spalten Verwendung im Assistenten zum Erstellen von Mining Strukturen  
+###  <a name="setting-column-usage-in-the-create-mining-structure-wizard"></a><a name="Bkmk_strctcolumn"></a>Festlegen der Spalten Verwendung im Assistenten zum Erstellen von Mining Strukturen  
  Wenn Sie eine neue Miningstruktur erstellen, können Sie festlegen, welche Spalten in der Datenquelle in die Miningstruktur aufgenommen und wie diese Spalten verwendet werden sollen. Denken Sie daran, dass eine Miningstruktur mehrere Miningmodelle unterstützen kann.  
   
 |Werte|BESCHREIBUNG|  
@@ -111,7 +111,7 @@ ms.locfileid: "66086819"
   
 -   Alle Algorithmen erfordern eine **Schlüssel** Spalte. Die Werte in der Schlüsselspalte müssen eindeutig sein. Eine **Key Time** -Spalte ist nur für Vorhersage-oder Zeitreihen Modelle erforderlich. .  
   
-### <a name="requirements"></a>Requirements (Anforderungen)  
+### <a name="requirements"></a>Anforderungen  
  Zum Erstellen einer Data Mining-Struktur müssen Sie über eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verfügen. Eine Verbindung ist auch erforderlich, wenn Sie mit temporären Strukturen arbeiten. Weitere Informationen zum Erstellen oder Ändern einer Verbindung finden Sie unter Herstellen einer Verbindung [mit Quelldaten &#40;Data Mining-Client für Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0305b7d205b6de84ef72edd481df01e725df826b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087183"
 ---
 # <a name="connect-to-a-sybase-database-ssas"></a>Mit einer Sybase-Datenbank verbinden (SSAS)
@@ -45,13 +45,13 @@ ms.locfileid: "66087183"
  **Kennwort speichern**  
  Geben Sie an, ob das Kennwort, das Sie im Feld **Kennwort** eingegeben haben, gespeichert werden soll.  
   
- **Database Name**  
+ **Datenbankname**  
  Wählen Sie aus der Liste der Datenbanken eine Datenbank aus.  
   
  **Erweitert**  
  Legen Sie zusätzliche Verbindungseigenschaften im Dialogfeld **Erweiterte Eigenschaften festlegen** fest. Weitere Informationen finden Sie unter [Festlegen von erweiterten Eigenschaften &#40;SSAS&#41;](set-advanced-properties-ssas.md).  
   
- **Verbindung testen**  
+ **Testen der Verbindung**  
  Stellen Sie unter Verwendung der aktuellen Einstellungen eine Verbindung mit der Datenquelle her. Eine Meldung gibt Aufschluss darüber, ob die Verbindungsherstellung erfolgreich war.  
   
   

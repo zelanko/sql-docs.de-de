@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 404b1d5d8467fe5840a6f53007bd55bc58cdf19f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089542"
 ---
 # <a name="trace-table-properties-events-selection-tab"></a>Eigenschaften der Ablaufverfolgungstabelle (Registerkarte Ereignisauswahl)
@@ -26,8 +26,8 @@ ms.locfileid: "66089542"
   
  Öffnen Sie mit [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] eine Ablaufverfolgungstabelle, um dieses Fenster anzuzeigen. Klicken Sie dann im Menü **Datei** auf **Eigenschaften**, und klicken Sie dann auf die Registerkarte **Ereignis Auswahl** .  
   
-## <a name="options"></a>Tastatur  
- **Ereignis** Spalte  
+## <a name="options"></a>Optionen  
+ Spalte**Ereignisse**  
  Zeigt verfolgte Ereignisse an, die nach Ereigniskategorien geordnet sind. Die Ereignisse können ausgewählt werden, indem das Kontrollkästchen oder eine Datenspalte für ein Ereignis aktiviert wird. Wenn das Ereigniskästchen aktiviert ist, werden alle für dieses Ereignis verfügbaren Datenspalten ausgewählt. Wenn die Datenspalte für ein Ereignis aktiviert ist, wird das Ereignis automatisch aktiviert und mit ihm alle weiteren erforderlichen Spalten. Wenn Sie eine Ablaufverfolgungsdatei oder -tabelle anzeigen, können Sie per Deaktivierung von Ereignissen oder Datenspalten die Menge der angezeigten Daten im Ablaufverfolgungsfenster zur besseren Übersicht reduzieren. Sie können auch Spaltenfilter ändern, um die Menge der sichtbaren Daten im Ablaufverfolgungsfenster zu reduzieren. Weitere Informationen zu Ereignisklassen finden Sie unter [Ereignisklassen in SQL Server – Referenz](../relational-databases/event-classes/sql-server-event-class-reference.md).  
   
  Sonstige Datenspalten  
@@ -41,15 +41,15 @@ ms.locfileid: "66089542"
  **Alle Spalten anzeigen**  
  Zeigt alle verfügbaren Datenspalten an. Standardmäßig werden nur ausgewählte Datenspalten angezeigt. Deaktivieren Sie dieses Kontrollkästchen, um alle nicht ausgewählten Datenspalten im Raster **Ereignisauswahl** auszublenden.  
   
- **Spalten Filter**  
+ **Spaltenfilter**  
  Öffnet das Dialogfeld **Filter** bearbeiten, in dem links neben der Spaltenbezeichnung ein Filtersymbol angezeigt wird. Mithilfe dieses Dialogfelds können Sie Datenspaltenfilter bearbeiten.  
   
- **Organisieren von Spalten**  
+ **Spalten organisieren**  
  Klicken Sie nach der Auswahl der zu verfolgenden **Ereignisse** und Datenspalten auf **Spalten organisieren**, um eine Reorganisation der Spalten im Raster des Fensters mit den Ablaufverfolgungsergebnissen zu erzwingen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Öffnen einer Ablaufverfolgungstabelle &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
- [Vorlagen und Berechtigungen in SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
+ [Öffnen Sie eine Ablauf Verfolgungs Tabelle &#40;SQL Server Profiler&#41;](../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
+ [SQL Server Profiler Vorlagen und Berechtigungen](../tools/sql-server-profiler/sql-server-profiler-templates-and-permissions.md)   
  [SQL Server Profiler](../tools/sql-server-profiler/sql-server-profiler.md)  
   
   

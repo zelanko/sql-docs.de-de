@@ -15,22 +15,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7bc06d5ece0b81ff3da9d41abb31e2c864a29f5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083133"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>Anforderungen und Überlegungen zur Verarbeitung (Data Mining)
   In diesem Thema werden in einige technische Überlegungen behandelt, die beim Verarbeiten von Data Mining-Objekten berücksichtigt werden sollten. Eine allgemeine Erklärung der Verarbeitung und deren Anwendung auf Data Mining finden Sie unter [Verarbeiten von Data Mining-Objekten](processing-data-mining-objects.md).  
   
- [Abfragen für relationalen Speicher](#bkmk_QueryReqs)  
+ [Abfragen an relationalen Speicher](#bkmk_QueryReqs)  
   
- [Verarbeiten von Mining Strukturen](#bkmk_ProcessStructures)  
+ [Verarbeiten von Miningstrukturen](#bkmk_ProcessStructures)  
   
  [Verarbeiten von Mining Modellen](#bkmk_ProcessModels)  
   
-##  <a name="bkmk_QueryReqs"></a>Abfragen im relationalen Speicher während der Verarbeitung  
+##  <a name="queries-on-the-relational-store-during-processing"></a><a name="bkmk_QueryReqs"></a> Abfragen an den relationalen Speicher während der Verarbeitung  
  Für Data Mining besteht der Verarbeitungsprozess aus drei Phasen: Abfragen der Quelldaten, Bestimmen der statistischen Rohdaten und Trainieren des Miningmodells mit der Modelldefinition und dem Modellalgorithmus.  
   
  Der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server gibt Abfragen an die Datenbank aus, die die Rohdaten bereitstellt. Bei dieser Datenbank kann es sich um eine Instanz von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] oder einer früheren Version der SQL Server-Datenbank-Engine handeln. Beim Verarbeiten einer Data Mining-Struktur werden die Daten der Quelle an die Miningstruktur übertragen und in einem neuen komprimierten Format auf dem Datenträger gespeichert. Es werden nicht alle Spalten der Datenquelle verarbeitet: Es werden nur die Spalten verarbeitet, die gemäß der Definition durch die Bindungen in der Miningstruktur enthalten sind.  
@@ -41,7 +41,7 @@ ms.locfileid: "66083133"
   
  Weitere Informationen zu den Editionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die die parallele Modell Verarbeitung unterstützen, finden Sie unter [von den-Editionen unterstützte Funktionen SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473) (https://go.microsoft.com/fwlink/?linkid=232473)).  
   
-##  <a name="bkmk_ProcessStructures"></a>Verarbeiten von Mining Strukturen  
+##  <a name="processing-mining-structures"></a><a name="bkmk_ProcessStructures"></a>Verarbeiten von Mining Strukturen  
  Eine Miningstruktur kann zusammen mit allen abhängigen Modellen oder getrennt verarbeitet werden. Die Verarbeitung einer Miningstruktur getrennt von Modellen kann nützlich sein, wenn manche Modelle voraussichtlich eine lange Verarbeitungszeit benötigen und Sie diesen Vorgang aufschieben möchten.  
   
  Weitere Informationen finden Sie unter [Process a Mining Structure](process-a-mining-structure.md).  
@@ -50,7 +50,7 @@ ms.locfileid: "66083133"
   
  Wenn Sie den Cache löschen, können Sie außerdem nicht den Zurückhaltungstestsatz verwenden, wenn Sie einen solchen definiert haben, und die Definition der Testsatzpartition geht verloren. Weitere Informationen zu Zurückhaltungstestsätzen finden Sie unter [Trainings- und Testdatasets](training-and-testing-data-sets.md).  
   
-##  <a name="bkmk_ProcessModels"></a>Verarbeiten von Mining Modellen  
+##  <a name="processing-mining-models"></a><a name="bkmk_ProcessModels"></a> Verarbeiten von Miningmodellen  
  Sie können ein Miningmodell getrennt von seiner zugeordnete Miningstruktur verarbeiten, oder Sie können alle Modelle, die auf der Struktur basieren, zusammen mit der Struktur verarbeiten.  
   
  Weitere Informationen finden Sie unter [Verarbeiten eines Miningmodells](process-a-mining-model.md).  
@@ -62,13 +62,13 @@ ms.locfileid: "66083133"
   
  Miningmodelle werden auch in folgenden Szenarien verarbeitet:  
   
- **Bereitstellung eines Projekts**: abhängig von den Projekteinstellungen und dem aktuellen Projektstatus werden die Mining Modelle im Projekt in der Regel vollständig verarbeitet, wenn das Projekt bereitgestellt wird.  
+ **Bereitstellung eines Projekts**: Abhängig von den Projekteinstellungen und dem aktuellen Projektstatus werden die Miningmodelle im Projekt in der Regel zum Zeitpunkt der Bereitstellung des Projekts vollständig verarbeitet.  
   
  Beim Initiieren der Bereitstellung beginnt die Verarbeitung automatisch, es sei denn, auf dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server befindet sich eine zu einem früheren Zeitpunkt verarbeitete Version und es gibt keine strukturellen Änderungen. Wählen Sie in der Dropdownliste **Projektmappe bereitstellen** aus, oder drücken Sie F5, um ein Projekt bereitzustellen. Sie haben folgende Möglichkeiten:  
   
  Weitere Informationen zum Festlegen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Bereitstellungseigenschaften, die steuern, wie Miningmodelle bereitgestellt werden, finden Sie unter [Bereitstellen von Data Mining-Lösungen](deployment-of-data-mining-solutions.md).  
   
- **Verschieben eines Mining Modells**: Wenn Sie ein Mining Modell mit dem Export-Befehl Verschieben, wird nur die Definition des Modells exportiert. dazu gehört der Name der Mining Struktur, der die Daten für das Modell bereitgestellt werden sollen.  
+ **Verschieben eines Miningmodells**: Wenn Sie mit dem EXPORT-Befehl ein Miningmodell verschieben, wird nur die Definition des Modells exportiert. Dazu gehört der Name der Miningstruktur, die Daten an das Modell bereitstellen soll.  
   
  Neuverarbeitungsanforderungen für die folgenden Szenarien, die die Befehle EXPORT und IMPORT verwenden:  
   

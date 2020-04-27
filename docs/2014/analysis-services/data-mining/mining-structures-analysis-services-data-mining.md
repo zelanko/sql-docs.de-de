@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1cfc630ffc943a989348e350c3668452a2777298
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083378"
 ---
 # <a name="mining-structures-analysis-services---data-mining"></a>Miningstrukturen (Analysis Services - Data Mining)
@@ -35,11 +35,11 @@ ms.locfileid: "66083378"
   
  Die Miningstruktur in der Abbildung basiert auf einer Datenquelle, die mehrere Tabellen oder Sichten enthält, die über das Feld CustomerID verknüpft sind. Eine Tabelle enthält Informationen zu Kunden, wie geografische Region, Alter, Einkommen und Geschlecht, während die dazugehörige geschachtelte Tabelle mehrere Zeilen mit Zusatzinformationen zu den einzelnen Kunden enthält, z. B. vom Kunden gekaufte Produkte. Die Abbildung zeigt, dass mehrere Modelle für eine Miningstruktur erstellt werden können und dass die Modelle unterschiedliche Spalten der Struktur verwenden können.  
   
- **Modell 1** Verwendet CustomerID, Einkommen, Alter, Region und filtert die Daten in der Region.  
+ **Modell 1** Verwendet CustomerID, Einkommen, Alter, Region und filtert die Daten nach der Region.  
   
  **Modell 2** Verwendet CustomerID, Einkommen, Alter, Region und filtert die Daten nach dem Alter.  
   
- **Modell 3** Verwendet CustomerID, Alter, Geschlecht und die-Tabelle ohne Filter.  
+ **Model 3** Verwendet CustomerID, Alter, Geschlecht und die geschachtelte Tabelle ohne Filter.  
   
  Da die Modelle unterschiedliche Spalten als Eingabe verwenden und zwei Modelle die im Modell verwendeten Daten mithilfe von Filtern zusätzlich beschränken, können die Modelle stark unterschiedliche Ergebnisse aufweisen, obwohl sie auf denselben Daten basieren. Beachten Sie, dass die Spalte CustomerID in allen Modellen erforderlich ist, da es sich um die einzige Spalte handelt, die als Fallschlüssel verwendet werden kann.  
   
@@ -58,7 +58,7 @@ ms.locfileid: "66083378"
   
 -   Verarbeiten Sie die Struktur.  
   
- Diese Schritte werden in den folgenden Abschnitten genauer beschrieben.  
+ Diese Schritte werden in den folgenden Abschnitten ausführlicher beschrieben.  
   
 ### <a name="data-sources-for-mining-structures"></a>Datenquellen für Miningstrukturen  
  Beim Definieren einer Miningstruktur können Sie Spalten verwenden, die in einer vorhandenen Datenquellensicht verfügbar sind. Eine Datenquellensicht ist ein freigegebenes Objekt, mit dem Sie mehrere Datenquellen kombinieren und als einzelne Quelle verwenden können. Die ursprünglichen Datenquellen sind für Clientanwendungen nicht sichtbar, und Sie können die Eigenschaften der Datenquellensicht verwenden, um Datentypen zu ändern und um Aggregationen oder Aliase für Spalten zu erstellen.  
@@ -107,7 +107,7 @@ ms.locfileid: "66083378"
 ## <a name="using-data-mining-models-with-mining-structures"></a>Verwenden von Data Mining-Modellen mit Miningstrukturen  
  Ein Data Mining-Modell wendet einen Miningmodellalgorithmus für die Daten an, welcher durch eine Miningstruktur dargestellt wird. Ein Miningmodell ist ein Objekt, das einer bestimmten Miningstruktur angehört. Es erbt alle Werte der durch die Miningstruktur definierten Eigenschaften. Das Modell kann alle Spalten aus der Miningstruktur oder nur eine Teilmenge der Spalten verwenden. Sie können einer Struktur mehrere Kopien einer Strukturspalte hinzufügen. Außerdem können Sie einem Modell mehrere Kopien einer Strukturspalte hinzufügen und dann den einzelnen Strukturspalten im Modell verschiedene Namen, so genannte *Aliase*, zuweisen. Weitere Informationen zu Alias von Strukturspalten finden Sie unter [Erstellen eines Alias für eine Modellspalte](create-an-alias-for-a-model-column.md) und [Miningmodelleigenschaften](mining-model-properties.md).  
   
- Weitere Informationen zur Architektur von Data Mining-Modellen finden Sie unter [Mining Models &#40;Analysis Services - Data Mining&#41;](mining-models-analysis-services-data-mining.md).  
+ Weitere Informationen zur Architektur von Data Mining-Modellen finden Sie unter [Miningmodelle &#40;Analysis Services – Data Mining&#41;](mining-models-analysis-services-data-mining.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Verwenden Sie die im Folgenden angegebenen Links, um weitere Informationen zum Definieren, Verwalten und Verwenden von Miningstrukturen zu erhalten.  
@@ -122,6 +122,6 @@ ms.locfileid: "66083378"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenbankobjekte &#40;Analysis Services Mehrdimensionale Daten&#41;](../multidimensional-models/olap-logical/database-objects-analysis-services-multidimensional-data.md)   
- [Mining Modelle &#40;Analysis Services Data Mining-&#41;](mining-models-analysis-services-data-mining.md)  
+ [Miningmodelle &#40;Analysis Services – Data Mining&#41;](mining-models-analysis-services-data-mining.md)  
   
   

@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 28b623333adaced772f85572091543f124894f4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084815"
 ---
 # <a name="data-mining-ssas"></a>Data Mining (SSAS)
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt eine integrierte Plattform für Lösungen bereit, die Data Mining integrieren. Sie können entweder relationale oder Cubedaten verwenden, um Business Intelligence-Lösungen mit Vorhersageanalysen zu erstellen.  
   
 ## <a name="benefits-of-data-mining"></a>Vorteile des Data Minings  
@@ -52,13 +51,13 @@ ms.locfileid: "66084815"
   
 -   [Data Mining-Konzepte](data-mining-concepts.md)  
   
--   [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
+-   [Data Mining-Algorithmen &#40;Analysis Services – Data Mining&#41;](data-mining-algorithms-analysis-services-data-mining.md)  
   
--   [Mining Strukturen &#40;Analysis Services Data Mining-&#41;](mining-structures-analysis-services-data-mining.md)  
+-   [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md)  
   
--   [Mining Modelle &#40;Analysis Services Data Mining-&#41;](mining-models-analysis-services-data-mining.md)  
+-   [Miningmodelle &#40;Analysis Services – Data Mining&#41;](mining-models-analysis-services-data-mining.md)  
   
--   [Testen und validieren &#40;Data Mining-&#41;](testing-and-validation-data-mining.md)  
+-   [Tests und Überprüfung &#40;Data Mining&#41;](testing-and-validation-data-mining.md)  
   
 -   [Data Mining-Abfragen](data-mining-queries.md)  
   
@@ -68,6 +67,6 @@ ms.locfileid: "66084815"
   
 -   [Data Mining-Architektur](data-mining-architecture.md)  
   
--   [Sicherheitsübersicht &#40;Data Mining-&#41;](security-overview-data-mining.md)  
+-   [Sicherheitsübersicht &#40;Data Mining&#41;](security-overview-data-mining.md)  
   
   

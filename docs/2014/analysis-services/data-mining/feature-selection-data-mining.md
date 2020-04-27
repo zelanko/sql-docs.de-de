@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a1d79bb3810a56e8a1769845131312eab306f223
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084414"
 ---
 # <a name="feature-selection-data-mining"></a>Funktionsauswahl (Data Mining)
@@ -44,8 +44,7 @@ ms.locfileid: "66084414"
 ## <a name="feature-selection-in-analysis-services-data-mining"></a>Die Funktionsauswahl bei Analysis Services Data Mining  
  Normalerweise wird die Funktionsauswahl in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] automatisch ausgeführt. Jeder Algorithmus verfügt über eine Reihe von Standardtechniken für die intelligente Anwendung der Funktionsreduzierung. Die Funktionsauswahl wird stets durchgeführt, bevor das Modell trainiert wird, um automatisch die Attribute in einem Dataset auszuwählen, die im Modell am wahrscheinlichsten Verwendung finden. Sie können jedoch auch manuell Parameter festlegen, um das Verhalten der Funktionsauswahl zu beeinflussen.  
   
- Im Allgemeinen wird bei der Funktionsauswahl ein Wert für jedes Attribut berechnet, und dann werden nur diejenigen Attribute ausgewählt, die über die besten Werte verfügen. Sie können den Schwellenwert für die besten Ergebnisse auch anpassen. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet mehrere Methoden zum Berechnen dieser Ergebnisse. Welche spezifische Methode auf das jeweilige Modell angewendet wird, hängt von folgenden Faktoren ab:  
+ Im Allgemeinen wird bei der Funktionsauswahl ein Wert für jedes Attribut berechnet, und dann werden nur diejenigen Attribute ausgewählt, die über die besten Werte verfügen. Sie können den Schwellenwert für die besten Ergebnisse auch anpassen. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet mehrere Methoden zum Berechnen dieser Ergebnisse. Welche spezifische Methode auf das jeweilige Modell angewendet wird, hängt von folgenden Faktoren ab:  
   
 -   Im Modell verwendeter Algorithmus  
   
@@ -63,7 +62,7 @@ ms.locfileid: "66084414"
   
  Die Bewertung des *Interessantheitsgrads* wird zum Festlegen der Rangfolge und zum Sortieren von Attributen in Spalten verwendet, die nicht binäre, kontinuierliche, numerische Daten enthalten.  
   
- Für Spalten, die diskrete und ** diskretisierte Daten enthalten, stehen *die Shannon-Entropie und zwei Bayes* -Werte zur Verfügung. Wenn das Modell jedoch kontinuierliche Spalten enthält, wird der Interessantheitsgrad zur Bewertung aller Eingabespalten herangezogen, um die Konsistenz sicherzustellen.  
+ Für Spalten, die diskrete und diskretisierte Daten enthalten, sind die*Shannon-Entropie* und zwei *Bayes* -Werte verfügbar. Wenn das Modell jedoch kontinuierliche Spalten enthält, wird der Interessantheitsgrad zur Bewertung aller Eingabespalten herangezogen, um die Konsistenz sicherzustellen.  
   
  Im folgenden Abschnitt werden die Methoden der Funktionsauswahl einzeln beschrieben.  
   

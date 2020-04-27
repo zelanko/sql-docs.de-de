@@ -20,16 +20,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 57edb1b92459b2e66f53895c20ead6f3e95cea59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091491"
 ---
 # <a name="upgrade-advisor-user-interface-reference"></a>Benutzeroberflächenreferenz des Upgrade Advisors
   Dieser Abschnitt enthält Hilfe Themen für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] den Upgrade Advisor. Diese Themen sind im Upgrade Advisor-Assistenten verfügbar, indem Sie die F1-Taste drücken oder auf den Seiten des Assistenten und in den Dialogfeldern auf **Hilfe** klicken.  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[SQL Server-Komponenten](../../../2014/sql-server/install/sql-server-components.md)|Gibt den Server und den geeigneten Satz von Servertypen und Komponenten an, die zum Zweck der Upgradeanalyse übermittelt werden.|  
 |[Verbindungsparameter](../../../2014/sql-server/install/connection-parameters.md)|Damit eine Upgradeanalyse bestimmter Servertypen, wie z. B. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] durchgeführt wird, müssen Sie eine bestimmte Serverinstanz zur Analyse auswählen. Geben Sie auf dieser Seite Informationen ein, um dem Upgrade Advisor die Herstellung einer Verbindung mit der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankinstanz zu ermöglichen, die Sie analysieren möchten.|  

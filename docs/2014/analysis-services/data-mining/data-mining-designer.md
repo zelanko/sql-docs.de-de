@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b0a54a0ae2bab2c8019b706a51b94f0338dcb3cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085109"
 ---
 # <a name="data-mining-designer"></a>Data Mining Designer
@@ -39,7 +39,7 @@ ms.locfileid: "66085109"
 ## <a name="mining-structure-tab"></a>Miningstruktur (Registerkarte)  
  Verwenden Sie die Registerkarte **Miningstruktur** , um Spalten hinzuzufügen und die Eigenschaften einer vorhandenen Miningstruktur zu ändern. Die folgenden Tasks und Themen enthalten weitere Informationen zum Arbeiten mit Miningstrukturen:  
   
- [Mining Strukturen &#40;Analysis Services Data Mining-&#41;](mining-structures-analysis-services-data-mining.md)  
+ [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md)  
   
  [Tasks und Anweisungen für Miningstrukturen](mining-structure-tasks-and-how-tos.md)  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66085109"
   
  In den folgenden Themen finden Sie weitere Informationen zum Arbeiten mit Miningmodellen:  
   
- [Mining Modelle &#40;Analysis Services Data Mining-&#41;](mining-models-analysis-services-data-mining.md)  
+ [Miningmodelle &#40;Analysis Services – Data Mining&#41;](mining-models-analysis-services-data-mining.md)  
   
  [Miningmodelltasks und Anweisungen](mining-model-tasks-and-how-tos.md)  
   
@@ -68,9 +68,9 @@ ms.locfileid: "66085109"
   
  Weitere Informationen zum Testen und Überprüfen von Miningmodellen finden Sie in den folgenden Themen:  
   
- [Testen und validieren &#40;Data Mining-&#41;](testing-and-validation-data-mining.md)  
+ [Tests und Überprüfung &#40;Data Mining&#41;](testing-and-validation-data-mining.md)  
   
- [Test-und validierungsaufgaben und Anleitungen &#40;Data Mining-&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
+ [Tasks und Anweisungen für Test und Überprüfung &#40;Data Mining&#41;](testing-and-validation-tasks-and-how-tos-data-mining.md)  
   
 ## <a name="mining-model-prediction-tab"></a>Miningmodellvorhersage (Registerkarte)  
  Die Registerkarte **Miningmodellvorhersage** enthält den Generator für Vorhersageabfragen, mit dem Sie eine DMX-Vorhersageabfrage (Data Mining Extensions; Data Mining-Erweiterungen) erstellen können. Die Registerkarte enthält Tools zum Angeben von Miningmodellen und Eingabetabellen, zum Zuordnen der Spalten des Miningmodells mit Spalten in der Eingabetabelle, zum Hinzufügen von Funktionen zu einer Abfrage und zum Angeben von Kriterien für jede Spalte.  

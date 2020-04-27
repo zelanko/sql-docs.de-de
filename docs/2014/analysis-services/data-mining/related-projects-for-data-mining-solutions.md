@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: af175693a93535b21b399cf4916ca4291fc94dfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082989"
 ---
 # <a name="related-projects-for-data-mining-solutions"></a>Verwandte Projekte für Data Mining-Lösungen
@@ -30,19 +30,18 @@ ms.locfileid: "66082989"
   
  In diesem Thema werden die anderen Funktionen von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] beschrieben, die oftmals Teil einer vorhersagenden Analytiklösung sind, um entweder die Prozesse der Datenvorbereitung und Data Mining zu unterstützen oder um Benutzer beim Bereitstellen von Tools für Analysen und Aktionen zu unterstützen.  
   
- [Integration Services](#bkmk_SSIS)  
+ [Integrationsdienste](#bkmk_SSIS)  
   
  [Reporting Services](#bkmk_SSRS)  
   
- [Data Quality-Dienst](#bkmk_DQSetc)  
+ [Data Quality Services](#bkmk_DQSetc)  
   
- [Volltextsuche](#bkmk_FTSetc)  
+ [Voll Text Suche](#bkmk_FTSetc)  
   
  [Semantische Indizierung](#bkmk_SemSearch)  
   
-##  <a name="bkmk_SSIS"></a>SQL Server Integration Services  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt Komponenten und Funktionen bereit, die für die Datenvorbereitung und die Trainingsphasen eines Data Mining-Projekts erforderlich sind. Obwohl Sie mit anderen Tools viele Datenbereinigungs- oder Vorbereitungsaufgaben ausführen können (beispielsweise Skripte), bietet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] zahlreiche Vorteile für Data Mining.  
+##  <a name="sql-server-integration-services"></a><a name="bkmk_SSIS"></a>SQL Server Integration Services  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt Komponenten und Funktionen bereit, die für die Datenvorbereitung und die Trainingsphasen eines Data Mining-Projekts erforderlich sind. Obwohl Sie mit anderen Tools viele Datenbereinigungs- oder Vorbereitungsaufgaben ausführen können (beispielsweise Skripte), bietet [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] zahlreiche Vorteile für Data Mining.  
   
 -   Stellt Aufgaben als Teil eines Workflows dar, die wiederholt, automatisiert, verzweigt und erweitert werden können.  
   
@@ -56,7 +55,7 @@ ms.locfileid: "66082989"
   
  Die folgenden Listen stellen Links für die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Komponenten bereit, die am häufigsten in Bezug auf die Unterstützung von Data Mining verwendet werden.  
   
- **Ablauf Steuerungskomponenten**  
+ **Ablaufsteuerungskomponenten**  
   
 -   [DDL ausführen (Analysis Services-Task)](../../integration-services/control-flow/analysis-services-execute-ddl-task.md)  
   
@@ -70,7 +69,7 @@ ms.locfileid: "66082989"
   
 -   [Datenprofilerstellungs-Task](../../integration-services/control-flow/data-profiling-task.md)  
   
- **Datenfluss Komponenten**  
+ **Datenflusskomponenten**  
   
 -   [CDC-Flusskomponenten](../../integration-services/data-flow/cdc-flow-components.md)  
   
@@ -90,7 +89,7 @@ ms.locfileid: "66082989"
   
 -   [Transformation für Ausdruckssuche](../../integration-services/data-flow/transformations/lookup-transformation.md)  
   
-##  <a name="bkmk_SSRS"></a>SQL Server Reporting Services  
+##  <a name="sql-server-reporting-services"></a><a name="bkmk_SSRS"></a> SQL Server Reporting Services  
  Obwohl [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] normalerweise nicht als wichtige Komponente von Data Mining-Projektmappen gesehen wird, stellt es die folgenden Funktionen bereit, die für Präsentation von Data Mining-Projektmappen nützlich sind.  
   
 -   Integration der Daten von mehreren Quellen in komplexen Berichten. Erstellen von Abfragen des Modellinhalts für Analytiker und von Berichten, die Endbenutzern Vorhersagen und Trends anzeigen.  
@@ -103,22 +102,22 @@ ms.locfileid: "66082989"
   
  Weitere Informationen zum Verwenden von Reporting Services mit DMX-Abfragen als Datenquelle sind diesen Links zu entnehmen:  
   
- [Abrufen von Daten aus einem Data Mining-Modell &#40;DMX-&#41; &#40;SSRS&#41;](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
+ [Abrufen von Daten aus einem Data Mining-Modell (DMX) (SSRS)](../../reporting-services/report-data/retrieve-data-from-a-data-mining-model-dmx-ssrs.md)  
   
  [Benutzeroberfläche des DMX-Abfrage-Designers für Analysis Services](../../reporting-services/report-data/analysis-services-dmx-query-designer-user-interface.md)  
   
- [Analysis Services Verbindungstyp für DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
+ [Analysis Services-Verbindungstyp für DMX &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)  
   
  Es ist jedoch nicht notwendig, DMX als Datenquelle zu verwenden. Die [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Komponenten für Data Mining unterstützen auch das Speichern der Ergebnisse einer Vorhersageabfrage in einer relationalen Datenbank. Wenn Sie zum Aktualisieren von Modellen mithilfe von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]einen bewährten Workflow erstellt haben, können Sie mit beibehaltenen Vorhersagen und anderen Data Mining-Abfrageergebnissen für SQL Server [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] und andere Tools für die Berichterstellung verwenden, die nicht mit DMX verbunden sind.  
   
  Weitere Informationen über die Verwendung von Reporting Services als Darstellungsschicht für Datenquellen finden Sie unter [Integrating Reporting Services into Applications](../../reporting-services/application-integration/integrating-reporting-services-into-applications.md).  
   
-##  <a name="bkmk_DQSetc"></a>Data Quality Services  
+##  <a name="data-quality-services"></a><a name="bkmk_DQSetc"></a>Data Quality Services  
  Data Quality Services (DQS) ist ein neuer Dienst in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Da Datenprobleme Data Mining unmöglich machen können, erachten Data Mining-Benutzer, die wiederholte Analysen ausführen oder in großen Organisationen mit komplexen Datenquellen arbeiten, ein gut geplantes Datenprojekt unter Verwendung von DQS als verlässlichere Lösung für die Unterstützung von Data Mining als Ad-hoc-Bereinigungen von Daten unter Verwendung von [!INCLUDE[tsql](../../includes/tsql-md.md)] oder anderen Skripten.  
   
  Die folgenden Funktionen von DQS sollten für Datenvorbereitung und Datenintegrität in einer Data Mining-Projektmappe in Betracht gezogen werden.  
   
- **Ein Computer unterstützter Daten Bereinigungs Prozess, der Quelldaten analysiert und Änderungen vorschlägt.**  
+ **Ein computerunterstützter Datenbereinigungsprozess, der Quelldaten analysiert und Änderungen vorschlägt.**  
  DQS kann Quelldaten mit Cloud-basierten Verweisdaten vergleichen, die von Datenqualitätsanbietern gewartet und garantiert werden.  
   
  DQS kann auch unformatierte Quelldaten analysieren und eine Wissensdatenbank aus Benutzerdaten erstellen. Die verarbeiteten Daten werden kategorisiert und werden dem Benutzer dann zur weiteren Verarbeitung angezeigt. Der Bereinigungsprozess ist interaktiv. Der Data Steward kann demzufolge die vom computerunterstützten Datenbereinigungsprozess vorgeschlagenen Daten genehmigen, ablehnen oder ändern.  
@@ -127,7 +126,7 @@ ms.locfileid: "66082989"
   
  Weitere Informationen finden Sie unter [Data Cleansing](../../data-quality-services/data-cleansing.md).  
   
- **Ein Computer unterstützter Abgleichsprozess, der Quelldaten analysiert und Änderungen vorschlägt.**  
+ **Ein computerunterstützter Abgleichungsprozess, der Quelldaten analysiert und Änderungen vorschlägt.**  
  Zum Verhindern von Datenverdoppelung können Sie eine zusätzliche Bereinigung der Datenquelle ausführen, um genaue und ungefähre Übereinstimmungen zu identifizieren. Mit diesen Komponenten können Sie die Abgleichsregeln bestimmen sowie die Schwellenwerte, ab wann sie angewendet werden sollen.  
   
  Indem Sie Datenübereinstimmungen suchen, können Sie Duplikate entfernen, die ein Problem für Data Mining sein können. Die Datendeduplizierung erfolgt nicht automatisch. Sowohl der Data Steward als auch der IT-Spezialist müssen die Informationen in der Wissensdatenbank und die vorzunehmenden Änderungen an den Daten überprüfen.  
@@ -138,7 +137,7 @@ ms.locfileid: "66082989"
   
  Beim Ausführen der Bereinigungs- und Abgleichsaktivitäten in einem Data Quality-Projekt können Sie Statistiken und Informationen über die von DQS verarbeiteten Daten in Echtzeit abrufen. Mithilfe der Datenprofilerstellung können Sie das Ausmaß bewerten, inwiefern die Datenbereinigung oder der -abgleich dabei behilflich waren, die Datenqualität zu verbessern und um die vorgenommenen Änderungen zu verstehen. Weitere Informationen zur Datenprofilerstellung und zu Benachrichtigungen finden Sie unter [Data Profiling and Notifications in DQS](../../data-quality-services/data-profiling-and-notifications-in-dqs.md).  
   
- **Eine Wissensdatenbank, die drei Arten von Kenntnissen darstellt: standardkenntnisse, vom DQS-Server generierte Informationen und vom benutzergenerierte Informationen.**  
+ **Eine Wissensdatenbank, die drei Typen an Informationen darstellt: Standardinformationen, vom DQS-Server generierte Informationen und vom Benutzer generierte Informationen.**  
  Wenn Sie eine Wissensdatenbank erstellt haben, können Sie sie iterativ für die Bereinigung und Überprüfung anderer Daten verwenden.  
   
  Sie können neue Daten in die Wissensdatenbankdaten von mehreren Quellen importieren, und zwar entweder in Form bekannter bereinigter Daten von Verweisanbietern oder in Form von Rohdaten, die in der Wissensdatenbank mit vorhandenen Daten abgeglichen werden.  
@@ -149,7 +148,7 @@ ms.locfileid: "66082989"
   
  Weitere Informationen finden Sie unter [DQS Knowledge Bases and Domains](../../data-quality-services/dqs-knowledge-bases-and-domains.md).  
   
-##  <a name="bkmk_FTSetc"></a>Voll Text Suche  
+##  <a name="full-text-search"></a><a name="bkmk_FTSetc"></a>Voll Text Suche  
  Mit der Volltextsuche in SQL Server können von Anwendungen und Benutzern Volltextabfragen für zeichenbasierte Daten in SQL Server-Tabellen ausgeführt werden. Wenn die Volltextsuche aktiviert ist, können Sie Suchvorgänge für Textdaten ausführen, die durch sprachspezifische Regeln über mehrere Formen eines Worts oder Ausdrucks erweitert werden. Sie können auch Suchbedingungen konfigurieren, beispielsweise die Abweichung zwischen mehreren Begriffen, und Funktionen verwenden, um die Ergebnisse einzuschränken, die in Reihenfolge der Wahrscheinlichkeit zurückgegeben werden.  
   
  Da Volltextabfragen eine von der SQL Server-Engine bereitgestellte Funktion sind, können Sie parametrisierte Abfragen erstellen, benutzerdefinierte Datasets generieren oder Vektoren benennen, indem Sie Funktionen für die Volltextsuche für eine Textdatenquelle und diese Quellen in Data Mining verwenden.  
@@ -176,7 +175,7 @@ ms.locfileid: "66082989"
   
 -   Die Volltextindizierung wird nur für Spalten mit den folgenden Datentypen unterstützt: „char“, „varchar“, „nchar“, „nvarchar“, „text“, „ntext“, „image“, „xml“, „varbinary“ und „varbinary(max)“. Wenn die Spalte „varbinary“, „varbinary(max)“, „image“ oder „xml“ ist, müssen Sie die Dateierweiterung des indizierbaren Dokuments (DOC-, PDF-, XLS-Datei usw.) in einer separaten Typspalte angeben.  
   
-##  <a name="bkmk_SemSearch"></a>Semantische Indizierung  
+##  <a name="semantic-indexing"></a><a name="bkmk_SemSearch"></a>Semantische Indizierung  
  Die semantische Suche basiert auf der vorhandenen Volltextsuchfunktion in SQL Server, verwendet aber zusätzliche Funktionalitäten und Statistiken, um Szenarien wie die automatische Schlüsselwortextraktion und die Ermittlung verwandter Dokumente zu ermöglichen. Sie könnten beispielsweise mithilfe der semantischen Suche eine Basistaxonomie für eine Organisation erstellen oder einen Dokumentenkorpus klassifizieren. Sie könnten die Kombination von extrahierten Begriffen und Dokumentähnlichkeitsergebnissen alternativ in Cluster- oder Entscheidungsstrukturmodellen verwenden.  
   
  Nachdem Sie die semantische Suche erfolgreich aktiviert und Ihre Datenspalten indiziert haben, können Sie die nativ bereitgestellten Funktionen mit der semantischen Indizierung verwenden, um wie folgt vorzugehen:  
@@ -203,6 +202,6 @@ ms.locfileid: "66082989"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Mehrdimensionale Modelllösungen &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Tabellarische Modelllösungen &#40;tabellarischen SSAS-&#41;](../tabular-model-solutions-ssas-tabular.md)  
+ [Tabellenmodelllösungen &#40;SSAS – tabellarisch&#41;](../tabular-model-solutions-ssas-tabular.md)  
   
   

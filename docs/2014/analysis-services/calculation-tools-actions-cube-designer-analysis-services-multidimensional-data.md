@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 087f5f5e3383fd66244541fea35160946936bc1c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088336"
 ---
 # <a name="calculation-tools-actions-tab-cube-designer-analysis-services---multidimensional-data"></a>Berechnungstools (Registerkarte 'Aktionen', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Bereichs **Berechnungstools** auf der Registerkarte **Aktionen** im Cube-Designer können Sie Metadaten, Funktionen und Vorlagen durchsuchen, die zum Verwenden in Aktionen, Drillthroughaktionen und Berichtsaktionen verfügbar sind.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Metadaten**  
  Zeigt die Metadaten für den ausgewählten Cube an.  
   
- Ziehen Sie ein ausgewähltes Element in den Bereich des **Aktionsformular-Editors**, **Drillthroughaktionsformular-Editors** oder **Berichtsaktionsformular-Editors**, um die MDX-Syntax (Multidimensional Expressions) für dieses Element am ausgewählten Speicherort in dem Bereich einzuschließen.  
+ Ziehen Sie ein ausgewähltes Element in den Bereich des **Aktionsformular-Editors**, **Drillthroughaktionsformular-Editors**oder **Berichtsaktionsformular-Editors** , um die MDX-Syntax (Multidimensional Expressions) für dieses Element am ausgewählten Speicherort in dem Bereich einzuschließen.  
   
- **Funktionen**  
+ **Functions**  
  Zeigt die verfügbaren Funktionen für Ausdrücke und Bedingungen an.  
   
  Ziehen Sie ein ausgewähltes Element in den Bereich des **Aktionsformular-Editors**, **Drillthroughaktionsformular-Editors**oder **Berichtsaktionsformular-Editors** , um die MDX-Syntax für dieses Element am ausgewählten Speicherort in dem Bereich einzuschließen.  
@@ -36,7 +36,7 @@ ms.locfileid: "66088336"
 > [!NOTE]  
 >  Im Projektmodus liest das Dialogfeld **Berechnungstools** Informationen für diese Option aus einer XML-Datei mit dem Namen "MDXFunctions.xml", die in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]enthalten ist. Im Onlinemodus werden die Information für diese Optionen aus dem MDSCHEMA_FUNCTIONS-Schemarowset für die Instanz abgerufen.  
   
- **Betrachtet**  
+ **Vorlagen**  
  Zeigt die vordefinierten Vorlagen an, die für Aktionen verfügbar sind.  
   
  Ziehen Sie ein ausgewähltes Element in den Bereich des **Aktionsformular-Editors**, **Drillthroughaktionsformular-Editors**oder **Berichtsaktionsformular-Editors** , um die MDX-Syntax für dieses Element am ausgewählten Speicherort in dem Bereich einzuschließen.  
@@ -46,7 +46,7 @@ ms.locfileid: "66088336"
   
 |Option|Definition|  
 |------------|----------------|  
-|**Copy**|Wählen Sie diese Option aus, um das in **Metadaten** oder **Funktionen** ausgewählte Element in die Zwischenablage zu kopieren.<br /><br /> Beachten Sie, dass diese Option nicht angezeigt wird, wenn **Vorlagen** ausgewählt ist. Beachten Sie auch, dass diese Option deaktiviert ist, wenn das ausgewählte Element nicht kopiert werden kann, z. b. der Ordner **Sets** einer in den **Metadaten** angezeigten Dimension oder der Funktionsgruppen Ordner für eine Funktion, die in **Functions**angezeigt wird.|  
+|**Kopieren**|Wählen Sie diese Option aus, um das in **Metadaten** oder **Funktionen** ausgewählte Element in die Zwischenablage zu kopieren.<br /><br /> Beachten Sie, dass diese Option nicht angezeigt wird, wenn **Vorlagen** ausgewählt ist. Beachten Sie auch, dass diese Option deaktiviert ist, wenn das ausgewählte Element nicht kopiert werden kann, z. b. der Ordner **Sets** einer in den **Metadaten** angezeigten Dimension oder der Funktionsgruppen Ordner für eine Funktion, die in **Functions**angezeigt wird.|  
 |**Elemente filtern**|Wählen Sie diese Option aus, um das Dialogfeld **Elemente filtern** anzuzeigen und die angezeigten Elemente nach dem ausgewählten Element in **Metadaten**zu filtern. Weitere Informationen zum Dialogfeld **Elemente filtern** finden Sie unter [Dialogfeld „Elemente filtern“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](filter-members-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Beachten Sie, dass diese Option nur angezeigt wird, wenn **Metadaten** ausgewählt wird. Beachten Sie auch, dass diese Option nur aktiviert ist, wenn eine Ebene für ein Attribut in den **Metadaten**ausgewählt ist.|  
 |**Vorlage hinzufügen**|Wählen Sie diese Option aus, um dem Cube eine neue Aktion, Drillthroughaktion oder Berichtsaktion auf der Grundlage der ausgewählten Vorlage hinzuzufügen und dementsprechend den **Aktionsformular-Editor**, **Drillthroughaktionsformular-Editor**oder **Berichtsaktionsformular-Editor**anzuzeigen.<br /><br /> Hinweis: diese Option wird nur angezeigt, wenn **Metadaten** ausgewählt wird.|  
   

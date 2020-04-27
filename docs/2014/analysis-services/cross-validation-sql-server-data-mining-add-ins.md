@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0cc3a132792cca8ecdf5a33a2fe4e4d40116c497
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086649"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>Kreuzvalidierung (SQL Server Data Mining-Add-Ins)
@@ -67,7 +67,7 @@ ms.locfileid: "66086649"
     > [!NOTE]  
     >  Microsoft Excel wird möglicherweise vorübergehend nicht reagieren, während das Modell in Folds partitioniert und jeder Fold getestet wird.  
   
-### <a name="requirements"></a>Requirements (Anforderungen)  
+### <a name="requirements"></a>Anforderungen  
  Um einen Kreuzvalidierungsbericht zu erstellen, müssen Sie bereits eine Data Mining-Struktur und verwandte Modelle erstellt haben. Der Assistent stellt ein Dialogfeld bereit, in dem Sie eine vorhandene Struktur oder ein vorhandendes Modell auswählen können.  
   
  Wenn Sie eine Miningstruktur auswählen, die mehrere Miningmodelle unterstützt, und die Modelle unterschiedliche vorhersagbare Attribute verwenden, testet der Kreuzvalidierung-Assistent nur die Modelle, die das gleiche vorhersagbare Attribut verwenden.  
@@ -103,7 +103,7 @@ ms.locfileid: "66086649"
 #### <a name="classification-true-or-false-positives-and-negatives"></a>Klassifikation: Richtig oder falsch positiv und negativ  
  Dieser Test wird für alle Klassifizierungsmodelle verwendet, die ein festgelegtes Ziel haben. Das Measure gibt an, wie die einzelnen Fälle entsprechend folgender Fragen klassifiziert werden: was hat das Modell vorhergesagt und wie lautete das tatsächliche Ergebnis.  
   
-|"Measure"|BESCHREIBUNG|  
+|"Measure"|Beschreibung|  
 |-------------|-----------------|  
 |Richtig positiv|Anzahl der Fälle, die diese Bedingungen erfüllen:<br /><br /> Fall enthält den Zielwert.<br /><br /> Modell hat vorhergesagt, dass der Fall den Zielwert enthält.|  
 |Falsch positiv|Anzahl der Fälle, die diese Bedingungen erfüllen:<br /><br /> Tatsächlicher Wert ist gleich dem Zielwert.<br /><br /> Modell hat vorhergesagt, dass der Fall den Zielwert enthält.|  

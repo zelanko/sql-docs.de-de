@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 85968aef6452acb6aac75c5c6d4a093964e8d923
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083358"
 ---
 # <a name="missing-values-analysis-services---data-mining"></a>Fehlende Werte (Analysis Services - Data Mining)
@@ -48,7 +48,7 @@ ms.locfileid: "66083358"
   
  Beispielsweise enthält die folgende Tabelle die Verteilung der Werte für den Knoten (Alle) des Entscheidungsstrukturmodells, das für das Bike Buyer-Lernprogramms erstellt wurde. In diesem Beispielszenario enthält die Spalte [Bike Buyer] das vorhersagbare Attribut, wobei 1 für "Ja" und 0 für "Nein" steht.  
   
-|value|Fälle|  
+|Wert|Fälle|  
 |-----------|-----------|  
 |0|9296|  
 |1|9098|  
@@ -62,10 +62,9 @@ ms.locfileid: "66083358"
 >  Für Attribute in einer geschachtelten Tabelle sind fehlende Werte nicht informativ. Wenn ein Kunde beispielsweise kein Produkt gekauft hat, dann enthält die geschachtelte **Products** -Tabelle keine Zeile für das Produkt, und im Mining-Modell würde kein Attribut für das fehlende Produkt erstellt. Wenn Sie jedoch an den Kunden interessiert sind, die bestimmte Produkte nicht gekauft haben, können Sie ein Modell erstellen, das durch Verwendung einer NOT EXISTS-Anweisung im Modellfilter nach dem Nichtvorhandensein der Produkte in der geschachtelten Tabelle gefiltert wird. Weitere Informationen finden Sie unter [Anwenden eines Filters auf ein Miningmodell](apply-a-filter-to-a-mining-model.md).  
   
 ## <a name="adjusting-probability-for-missing-states"></a>Anpassen der Wahrscheinlichkeit für den Status "Missing"  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zählt nicht nur die Werte, sondern berechnet auch die Wahrscheinlichkeit der einzelnen Werte im Dataset. Das gilt auch für den `Missing`-Wert. In der nachfolgenden Tabelle werden beispielsweise die Wahrscheinlichkeiten der Fälle aus dem vorigen Beispiel dargestellt:  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] zählt nicht nur die Werte, sondern berechnet auch die Wahrscheinlichkeit der einzelnen Werte im Dataset. Das gilt auch für den `Missing`-Wert. In der nachfolgenden Tabelle werden beispielsweise die Wahrscheinlichkeiten der Fälle aus dem vorigen Beispiel dargestellt:  
   
-|value|Fälle|Probability|  
+|Wert|Fälle|Probability|  
 |-----------|-----------|-----------------|  
 |0|9296|50.55%|  
 |1|9098|49.42%|  
@@ -109,13 +108,13 @@ ms.locfileid: "66083358"
   
 |Aufgaben|Links|  
 |-----------|-----------|  
-|Hinzufügen von Flags zu einzelnen Modellspalten, um die Behandlung fehlender Werte zu steuern|[Anzeigen oder Ändern von Modellierungsflags &#40;Data Mining-&#41;](modeling-flags-data-mining.md)|  
+|Hinzufügen von Flags zu einzelnen Modellspalten, um die Behandlung fehlender Werte zu steuern|[Anzeigen oder Ändern von Modellierungsflags &#40;Data Mining&#41;](modeling-flags-data-mining.md)|  
 |Festlegen von Eigenschaften für ein Miningmodell, um die Behandlung fehlender Werte zu steuern|[Ändern der Eigenschaften eines Miningmodells](change-the-properties-of-a-mining-model.md)|  
-|Informationen zum Angeben der Modellierungsflags in DMX|[Modellierungsflags &#40;DMX-&#41;](/sql/dmx/modeling-flags-dmx)|  
+|Informationen zum Angeben der Modellierungsflags in DMX|[Modellierungsflags &#40;DMX&#41;](/sql/dmx/modeling-flags-dmx)|  
 |Ändern der Methode, die von der Miningstruktur zur Behandlung fehlender Werte verwendet wird|[Ändern der Eigenschaften einer Miningstruktur](change-the-properties-of-a-mining-structure.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Mining Modell Inhalt &#40;Analysis Services Data Mining-&#41;](mining-model-content-analysis-services-data-mining.md)   
- [Modellierungsflags &#40;Data Mining-&#41;](modeling-flags-data-mining.md)  
+ [Modellierungsflags &#40;Data Mining&#41;](modeling-flags-data-mining.md)  
   
   

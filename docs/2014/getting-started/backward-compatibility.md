@@ -26,10 +26,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4619eeea35df4de16c3b980ecc0ea685488970eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088576"
 ---
 # <a name="backward-compatibility"></a>Backward Compatibility
@@ -37,18 +37,18 @@ ms.locfileid: "66088576"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[SQL Server-Abwärtskompatibilität](../../2014/getting-started/sql-server-backward-compatibility.md)|Enthält Themen zu den Änderungen in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die gegebenenfalls Änderungen an vorhandenen Anwendungen erfordern. Zu den Funktionen, auf die in diesem Themenbereich eingegangen wird, gehören Datenprogrammierbarkeit, Oberflächen-Konfigurationstools, Setup, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Dienste und andere umfassendere Änderungen der Funktionalität.|  
 |[Abwärtskompatibilität der SQL Server-Datenbank-Engine](../database-engine/sql-server-database-engine-backward-compatibility.md)|Enthält Themen zu den Änderungen von [!INCLUDE[ssDE](../includes/ssde-md.md)] in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die gegebenenfalls Änderungen an Ihren Anwendungen erfordern.|  
 |[Analysis Services Backward Compatibility](../../2014/analysis-services/analysis-services-backward-compatibility.md)|Enthält Themen zu den Änderungen von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die gegebenenfalls Änderungen an Ihren Anwendungen erfordern.|  
 |[Integration Services – Abwärtskompatibilität](../integration-services/integration-services-backward-compatibility.md)|Beschreibt die Änderungen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die gegebenenfalls Änderungen an den vorhandenen Anwendungen von Data Transformation Services erfordern.|  
-|[Abwärtskompatibilität von Reporting Services](../reporting-services/reporting-services-backward-compatibility.md)|Enthält Themen zu den Änderungen von [!INCLUDE[ssRS](../includes/ssrs.md)] in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die gegebenenfalls Änderungen an den vorhandenen Lösungen von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] erfordern.|  
+|[Reporting Services-Abwärtskompatibilität](../reporting-services/reporting-services-backward-compatibility.md)|Enthält Themen zu den Änderungen von [!INCLUDE[ssRS](../includes/ssrs.md)] in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die gegebenenfalls Änderungen an den vorhandenen Lösungen von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] erfordern.|  
 |[Abwärtskompatibilität &#40;Master Data Services&#41;](../master-data-services/backward-compatibility-master-data-services.md)|Enthält Themen zu den Änderungen von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die gegebenenfalls Änderungen an den vorhandenen Lösungen von [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] erfordern.|  
 |[Abwärtskompatibilität von Replikationen](../../2014/relational-databases/replication/replication-backward-compatibility.md)|Enthält Themen zu den Änderungen von [!INCLUDE[ssDE](../includes/ssde-md.md)] in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], die gegebenenfalls Änderungen an den vorhandenen Replikationslösungen erfordern.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Installieren von SQL Server 2014](../database-engine/install-windows/install-sql-server.md)   
- [Aktualisieren auf SQL Server 2014](../database-engine/install-windows/upgrade-sql-server.md)  
+ [Upgrade auf SQL Server 2014](../database-engine/install-windows/upgrade-sql-server.md)  
   
   

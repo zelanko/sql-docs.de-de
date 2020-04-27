@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4faff8420e318f7250cfc67dda173197d8028f0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66092760"
 ---
 # <a name="replace-usage-of-the-xp_sqlagent_proxy_account-extended-stored-procedure-with-new-stored-procedures"></a>Ersetzen der erweiterten gespeicherten Prozedur xp_sqlagent_proxy_account durch neue gespeicherte Prozeduren
@@ -48,7 +48,7 @@ ms.locfileid: "66092760"
 >  Nachdem Sie auf [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]aktualisiert haben, funktionieren alle-Anweisungen, die die **xp_sqlagent_proxy_account** erweiterten gespeicherten Prozeduren verwenden, nicht. Verwenden Sie **sp_xp_cmdshell_proxy_account** anstelle von **xp_sqlagent_proxy_account** , um den Proxy für **xp_cmdshell**festzulegen.  
   
 ## <a name="component"></a>Komponente  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Büros  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Probleme beim Aktualisieren des SQL Server-Agents](../../../2014/sql-server/install/sql-server-agent-upgrade-issues.md)  

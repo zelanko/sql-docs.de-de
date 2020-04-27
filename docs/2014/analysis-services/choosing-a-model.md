@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd75efa13d6761c058b9e3b1f1878036d3d3e928
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088093"
 ---
 # <a name="choosing-a-model"></a>Auswählen eines Modells
@@ -77,7 +77,7 @@ ms.locfileid: "66088093"
   
  Die von den SQL Server Data Mining-Add-Ins für Office verwendeten Algorithmen basieren auf den von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bereitgestellten Algorithmen. Sie können auch Algorithmen von Drittanbietern verwenden, die der OLE DB für die Data Mining-Spezifikation entsprechen, wenn die [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Instanz von, mit der Sie verbunden sind, so konfiguriert wurde, dass Sie Drittanbieter Algorithmen zulässt.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
  Jeder Algorithmus unterscheidet sich in Bezug auf die Daten, die er verarbeiten kann.  
   
 -   In einem linearen Regressionsmodell können nur numerische Werte modelliert werden. Sowohl die Eingabevariablen als auch die Zielergebnisse müssen Typen fortlaufender Zahlen sein. Verwenden Sie eine Entscheidungsstruktur oder ein Schätzmodell, wenn Sie diskrete und kontinuierliche Variablen kombinieren müssen.  
@@ -104,7 +104,7 @@ ms.locfileid: "66088093"
 ## <a name="list-of-supported-algorithms"></a>Liste der unterstützten Algorithmen  
  Die folgenden Algorithmen werden standardmäßig bereitgestellt.  
   
-|Algorithmusname|BESCHREIBUNG|Verwendet für|  
+|Algorithmusname|Beschreibung|Verwendung in|  
 |--------------------|-----------------|-------------|  
 |Microsoft Association Rules|Erstellt Regeln, die beschreiben, welche Elemente voraussichtlich zusammen in einer Transaktion angezeigt werden.|[Assistenten &#40;Data Mining-Client für Excel zuordnen&#41;](associate-wizard-data-mining-client-for-excel.md)<br /><br /> [Waren Korb Analyse &#40;Tabellenanalyse für Excel&#41;](shopping-basket-analysis-table-analysistools-for-excel.md)|  
 |Microsoft Clustering|Identifiziert Beziehungen in einem Dataset, die bei einer einfachen Betrachtung der Daten nicht unbedingt zu erkennen sind. Verwendet iterative Techniken, um Datensätze in Clustern zu gruppieren, die ähnliche Merkmale enthalten.|[Erkennen von Kategorien &#40;Tabellenanalyse Tools für Excel&#41;](detect-categories-table-analysis-tools-for-excel.md)<br /><br /> [Cluster-Assistent &#40;Data Mining-Add-Ins für Excel&#41;](cluster-wizard-data-mining-add-ins-for-excel.md)|  

@@ -11,31 +11,31 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65b8bb26a72903644b5985d69efc8adb362fe412
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088482"
 ---
 # <a name="browsing-a-naive-bayes-model"></a>Durchsuchen eines Naive Bayes-Modells
   Wenn Sie ein Naive Bayes-Modell mithilfe von **Durchsuchen**öffnen, wird das Modell in einem interaktiven Viewer mit vier verschiedenen Bereichen angezeigt. Verwenden Sie den Viewer, um Korrelationen zu untersuchen sowie um Informationen zum Modell und den zugrunde liegenden Daten abzurufen.  
   
--   [Abhängigkeits Netzwerk](#bkmk_DepNet)  
+-   [Abhängigkeitsnetzwerk](#bkmk_DepNet)  
   
 -   [Attribut profile](#bkmk_AttProf)  
   
--   [Attribut Merkmale](#bkmk_AttChar)  
+-   [Attributmerkmale](#bkmk_AttChar)  
   
--   [Attribut Unterscheidung](#bkmk_AttDisc)  
+-   [Attributunterscheidung](#bkmk_AttDisc)  
   
-##  <a name="BKMK_Tabs"></a>Untersuchen des Modells  
+##  <a name="explore-the-model"></a><a name="BKMK_Tabs"></a>Untersuchen des Modells  
  Der Zweck des Viewers besteht darin, die Interaktion zwischen Eingabe- und Ausgabeattributen (Eingaben und abhängigen Variablen) zu untersuchen, die vom [!INCLUDE[msCoName](../includes/msconame-md.md)] Naïve Bayes-Modell ermittelt wurden.  
   
  Wenn Sie mit dem Naive Bayes-Viewer experimentieren möchten, verwenden Sie den Assistenten zum [klassifizieren &#40;Data Mining-Add-Ins für Excel&#41;](classify-wizard-data-mining-add-ins-for-excel.md) auf dem Menüband Data Mining, klicken Sie auf die Option **erweitert** , und ändern Sie den Algorithmus so, dass er den Naive Bayes-Algorithmus verwendet.  
   
  In diesen Beispielen haben wir die Quelldaten in der Beispiel Arbeitsmappe verwendet und die Spalte " **Jahreseinkommen**" in fünf Einkommensgruppen gruppiert (von **sehr niedrig** bis **sehr hoch**). Anhand des Naïve Bayes-Modells wurden anschließend die Faktoren analysiert, die mit den einzelnen Einkommenskategorien korrelierten.  
   
-###  <a name="bkmk_DepNet"></a>Abhängigkeits Netzwerk  
+###  <a name="dependency-network"></a><a name="bkmk_DepNet"></a>Abhängigkeits Netzwerk  
  Das erste Fenster, das Sie verwenden, ist das **Abhängigkeits Netzwerk**. Es zeigt auf einen Blick, welche Eingaben eng mit dem ausgewählten Ergebnis korrelieren.  
   
  ![Abhängigkeitsnetzwerk in Naive Bayes-Viewer](media/dm13-nb.gif "Abhängigkeitsnetzwerk in Naive Bayes-Viewer")  
@@ -56,7 +56,7 @@ ms.locfileid: "66088482"
   
  [Zurück zum Anfang](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttProf"></a>Attribut profile  
+###  <a name="attribute-profiles"></a><a name="bkmk_AttProf"></a> Attributprofile  
  Die Fenster " **Attribut profile** " geben Ihnen einen visuellen Hinweis darauf, wie alle anderen Variablen mit den einzelnen Ergebnissen verknüpft sind.  
   
 ##### <a name="explore-the-profiles"></a>Untersuchen der Profile  
@@ -73,7 +73,7 @@ ms.locfileid: "66088482"
   
  [Zurück zum Anfang](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttChar"></a>Attribut Merkmale  
+###  <a name="attribute-characteristics"></a><a name="bkmk_AttChar"></a>Attribut Merkmale  
  Die Ansicht " **Attribut Merkmale** " ist nützlich für eine ausführliche Untersuchung einer bestimmten Ergebnis Variablen und der zugehörigen Faktoren.  
   
  ![Attributmerkmale in Naive Bayes-Viewer](media/dm13-nb-viewer.gif "Attributmerkmale in Naive Bayes-Viewer")  
@@ -90,7 +90,7 @@ ms.locfileid: "66088482"
   
  [Zurück zum Anfang](#BKMK_Tabs)  
   
-###  <a name="bkmk_AttDisc"></a>Attribut Unterscheidung  
+###  <a name="attribute-discrimination"></a><a name="bkmk_AttDisc"></a>Attribut Unterscheidung  
  Die Ansicht " **Attribut Unterscheidung** " unterstützt das Vergleichen zweier Ergebnisse oder eines Ergebnisses im Vergleich zu allen anderen Ergebnissen.  
   
  ![Attributunterscheidung in Naive Bayes-Viewer](media/dm13-nb-attdisc.gif "Attributunterscheidung in Naive Bayes-Viewer")  

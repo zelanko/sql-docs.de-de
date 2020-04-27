@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1c843a74b831315c98deda9a9d6fb0c3a463bc5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083404"
 ---
 # <a name="mining-structure-columns"></a>Miningstrukturspalten
@@ -32,17 +32,17 @@ ms.locfileid: "66083404"
   
  Die Definition einer Miningstrukturspalte muss die folgenden Informationen enthalten:  
   
--   **ID**: der eindeutige Name der Spalte, der häufig dem Namen entspricht. Dies kann nicht geändert werden, nachdem Sie die Miningstruktur erstellt haben, wohingegen der Name geändert werden kann.  
+-   **ID**: Der eindeutige Name der Spalte, der häufig dem Namen entspricht. Dies kann nicht geändert werden, nachdem Sie die Miningstruktur erstellt haben, wohingegen der Name geändert werden kann.  
   
--   **Name**: ein Name oder Alias für die Spalte.  
+-   **Name**: Der Name oder Alias der Spalte.  
   
--   **Content**: eine Enumeration, die beschreibt, ob die Daten diskret oder kontinuierlich sind.  
+-   **Inhalt**: Eine Enumeration, die beschreibt, ob es sich um einzelne oder fortlaufende Daten handelt.  
   
--   **Type**: eine Enumeration, die den allgemeinen Datentyp angibt.  
+-   **Typ**: Eine Enumeration, die den allgemeinen Datentyp angibt.  
   
--   **Distribution**: eine Enumeration, die die erwartete Verteilung der Werte beschreibt. Eine Verteilung liegt vor, wenn die Spalte kontinuierlich ist.  
+-   **Verteilung**: Eine Enumeration, die die erwartete Verteilung der Werte beschreibt. Eine Verteilung liegt vor, wenn die Spalte kontinuierlich ist.  
   
--   **Modellierungsflags**: eine Enumeration, die angibt, wie fehlende Werte behandelt werden usw. Modellierungsflags können auch im Miningmodell definiert werden, aber die Modellflags unterscheiden sich von den für Strukturspalten verwendeten Flags.  
+-   **Modellierungsflags**: Eine Enumeration, die angibt, wie fehlende Werte usw. gehandhabt werden. Modellierungsflags können auch im Miningmodell definiert werden, aber die Modellflags unterscheiden sich von den für Strukturspalten verwendeten Flags.  
   
 -   **Bindungen**: Eigenschaften, die die Quelldaten angeben.  
   
@@ -55,13 +55,13 @@ ms.locfileid: "66083404"
   
 |Thema|Links|  
 |-----------|-----------|  
-|Beschreibt die Datentypen, mit der Sie eine Miningstrukturspalte definieren können.|[Datentypen &#40;Data Mining-&#41;](data-types-data-mining.md)|  
-|Beschreibt die Inhaltstypen, die für jeden Datentyp in einer Miningstrukturspalte verfügbar sind. Inhaltstypen sind vom Datentyp abhängig. Der Inhaltstyp wird auf Modellebene zugewiesen und bestimmt, wie die Spaltendaten vom Modell verwendet werden.|[Inhaltstypen &#40;Data Mining-&#41;](content-types-data-mining.md)|  
-|Führt das Konzept geschachtelter Tabellen ein und erklärt, wie geschachtelte Tabellen der Datenquelle als Miningstrukturspalten hinzugefügt werden können.|[Klassifizierte Spalten &#40;Data Mining-&#41;](classified-columns-data-mining.md)|  
-|Nennt und erklärt die Verteilungseigenschaften, die Sie für eine Miningstrukturspalte festlegen können, um die erwartete Verteilung der Werte in der Spalte anzugeben.|[Spalten Verteilungen &#40;Data Mining-&#41;](column-distributions-data-mining.md)|  
-|Erklärt das Konzept der Diskretisierung (manchmal auch als *Klasseneinteilung* bezeichnet) und beschreibt die Methoden, die Analysis Services zum Diskretisieren von kontinuierlichen numerischen Daten bereitstellt.|[Diskretisierungsmethoden &#40;Data Mining-&#41;](discretization-methods-data-mining.md)|  
-|Beschreibt die Modellierungsflags, mit denen Sie für eine Miningstrukturspalte festlegen können.|[Modellierungsflags &#40;Data Mining-&#41;](modeling-flags-data-mining.md)|  
-|Beschreibt klassifizierte Spalten, bei denen es sich um einen speziellen Spaltentyp handelt, mit dem Sie eine Miningstrukturspalte mit einer anderen verbinden können.|[Klassifizierte Spalten &#40;Data Mining-&#41;](classified-columns-data-mining.md)|  
+|Beschreibt die Datentypen, mit der Sie eine Miningstrukturspalte definieren können.|[Datentypen &#40;Data Mining&#41;](data-types-data-mining.md)|  
+|Beschreibt die Inhaltstypen, die für jeden Datentyp in einer Miningstrukturspalte verfügbar sind. Inhaltstypen sind vom Datentyp abhängig. Der Inhaltstyp wird auf Modellebene zugewiesen und bestimmt, wie die Spaltendaten vom Modell verwendet werden.|[Inhaltstypen &#40;Data Mining&#41;](content-types-data-mining.md)|  
+|Führt das Konzept geschachtelter Tabellen ein und erklärt, wie geschachtelte Tabellen der Datenquelle als Miningstrukturspalten hinzugefügt werden können.|[Klassifizierte Spalten &#40;Data Mining&#41;](classified-columns-data-mining.md)|  
+|Nennt und erklärt die Verteilungseigenschaften, die Sie für eine Miningstrukturspalte festlegen können, um die erwartete Verteilung der Werte in der Spalte anzugeben.|[Spaltenverteilungen &#40;Data Mining&#41;](column-distributions-data-mining.md)|  
+|Erklärt das Konzept der Diskretisierung (manchmal auch als *Klasseneinteilung* bezeichnet) und beschreibt die Methoden, die Analysis Services zum Diskretisieren von kontinuierlichen numerischen Daten bereitstellt.|[Diskretisierungsmethoden &#40;Data Mining&#41;](discretization-methods-data-mining.md)|  
+|Beschreibt die Modellierungsflags, mit denen Sie für eine Miningstrukturspalte festlegen können.|[Modellierungsflags &#40;Data Mining&#41;](modeling-flags-data-mining.md)|  
+|Beschreibt klassifizierte Spalten, bei denen es sich um einen speziellen Spaltentyp handelt, mit dem Sie eine Miningstrukturspalte mit einer anderen verbinden können.|[Klassifizierte Spalten &#40;Data Mining&#41;](classified-columns-data-mining.md)|  
 |Erfahren Sie, wie Sie Miningstrukturspalten hinzufügen und ändern.|[Tasks und Anweisungen für Miningstrukturen](mining-structure-tasks-and-how-tos.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  

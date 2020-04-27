@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98ed499f4f2b751ef092a4091076478338173e17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081978"
 ---
 # <a name="define-time-periods-dimension-wizard"></a>Zeiträume definieren (Dimensions-Assistent)
   Auf der Seite **Zeiträume definieren** können Sie Informationen zum Kalenderjahr sowie Zeithäufigkeiten für die Zeitdimension oder die Serverzeitdimension definieren.  
   
 > [!NOTE]  
->  Diese Seite wird nur angezeigt, wenn Sie auf der Seite **Dimensionstyp auswählen** die Option **Serverzeitdimension** ausgewählt haben, oder wenn Sie auf der Seite **Erstellungsmethode auswählen** die Option **Dimension ohne eine Datenquelle erstellen** und auf der Seite **Dimensionstyp auswählen** die Option **Zeitdimension** ausgewählt haben.  
+>   Diese Seite wird nur angezeigt, wenn Sie auf der Seite **Dimensionstyp auswählen** die Option **Serverzeitdimension** ausgewählt haben, oder wenn Sie auf der Seite **Erstellungsmethode auswählen** die Option **Dimension ohne eine Datenquelle erstellen** und auf der Seite **Dimensionstyp auswählen** die Option **Zeitdimension** ausgewählt haben.  
   
 > [!IMPORTANT]  
 >  Auf dieser Seite können Sie das Kalenderjahr für eine Zeitdimension definieren. Auf der Seite **Kalender auswählen** können Sie für die Zeitdimension ein Geschäfts-, Produktions-, Berichts- oder ISO 8601-Jahr definieren.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Erster Kalendertag**  
  Geben Sie den ersten Tag des aktuellen Jahres ein, oder wählen Sie den Tag aus.  
   

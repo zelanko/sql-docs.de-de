@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 524400e9c9420fb54447220215d4660874ec6d69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66091090"
 ---
 # <a name="warning-about-client-side-usage-of-geometry-geography-and-hierarchyid"></a>Warnung zur clientseitigen Verwendung von GEOMETRY, GEOGRAPHY und HIERARCHYID
@@ -32,16 +32,13 @@ ms.locfileid: "66091090"
   
 -   Wenn Sie von einer benutzerdefinierten Anwendung, die auf .NET 3,5, 4 oder 4,5 ausgerichtet ist, auf die **SqlTypes** -Assemblyversion 11,0 verweisen, schlägt die Anwendung fehl, da SqlClient nach dem Entwurf Version 10,0 der Assembly lädt. Dieser Fehler tritt auf, wenn die Anwendung eine der folgenden Methoden aufruft:  
   
-    -   
-  `GetValue`-Methode der `SqlDataReader`-Klasse  
+    -   `GetValue`-Methode der `SqlDataReader`-Klasse  
   
-    -   
-  `GetValues`-Methode der `SqlDataReader`-Klasse  
+    -   `GetValues`-Methode der `SqlDataReader`-Klasse  
   
     -   Klammerindexoperator [] der `SqlDataReader`-Klasse  
   
-    -   
-  `ExecuteScalar`-Methode der `SqlCommand`-Klasse  
+    -   `ExecuteScalar`-Methode der `SqlCommand`-Klasse  
   
 ## <a name="corrective-action"></a>Korrekturmaßnahme  
  Sie können dieses Problem mithilfe einer der folgenden Methoden umgehen:  

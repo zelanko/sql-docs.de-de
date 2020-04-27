@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cf035895142ae48cb59f6256e7249710d9709b92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082912"
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>Bestimmen einer in einem Modell als Regressor zu verwendenden Spalte
@@ -63,6 +63,6 @@ ms.locfileid: "66082912"
  [Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm.md)   
  [Data Mining-Abfragen](data-mining-queries.md)   
  [Technische Referenz für den Microsoft Linear Regression-Algorithmus](microsoft-linear-regression-algorithm-technical-reference.md)   
- [Mining Modell Inhalt von linearen Regressionsmodellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [Miningmodellinhalt von linearen Regressionsmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

@@ -13,20 +13,20 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 687f7fb96ee5a2b96d80562c20d536eeeb308379
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088117"
 ---
 # <a name="choose-enhancement-business-intelligence-wizard"></a>Erweiterung auswählen (Business Intelligence-Assistent)
   Auf der Seite **Erweiterung auswählen** wählen Sie die Business Intelligence-Erweiterung aus, die dem Cube oder der Dimension hinzugefügt werden soll.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verfügbare Erweiterungen**  
  Wählen Sie die hinzuzufügende Business Intelligence-Erweiterung aus. In der folgenden Tabelle sind die verfügbaren Erweiterungen aufgelistet.  
   
-|Erweiterung|BESCHREIBUNG|  
+|Erweiterung|Beschreibung|  
 |-----------------|-----------------|  
 |**Zeitintelligenz definieren**|Fügen Sie einer ausgewählten Hierarchie zusätzliche Zeitsichten hinzu. Zu diesen Sichten gehören Zeitraum bis Datum, gleitender Durchschnitt und Zeitraumvergleich.<br /><br /> Hinweis: Diese Option ist nur für Cubes verfügbar.|  
 |**Kontointelligenz definieren**|Weisen Sie Elementen eines Kontoattributs Standardbuchhaltungsklassifikationen, z. B. Einnahmen und Ausgaben, zu.<br /><br /> Wenn die Aggregationsfunktion des Measures auf *ByAccount*festgelegt ist, verwendet die [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz die Buchhaltungsklassifikationen, um über einen Zeitraum ein Measure für die Elemente eines Kontoattributs zu aggregieren.|  

@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 865eea502ecc7e807533b75501634fb6d3356583
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083249"
 ---
 # <a name="nested-tables-analysis-services---data-mining"></a>Geschachtelte Tabellen (Analysis Services - Data Mining)
-  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]müssen Daten als eine Reihe von Fällen, die in einer Fall Tabelle enthalten sind, in einen Data Mining Algorithmus eingespeist werden. Nicht alle Fälle lassen sich jedoch durch eine einzelne Datenzeile beschreiben. So kann sich ein Fall z.&nbsp;B. aus zwei Tabellen ableiten: einer Tabelle mit Kundeninformationen und einer anderen Tabelle mit den von Kunden getätigten Käufen. Ein einzelner Kunde in der Kundeninformationstabelle könnte über mehrere Elemente in der Kundenkäufe-Tabelle verfügen, weshalb es schwierig ist, die Daten in einer einzelnen Zeile zu beschreiben. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]stellt eine eindeutige Methode zum Verarbeiten dieser Fälle mithilfe von- *Tabellen*dar. Das Konzept von geschachtelten Tabellen wird in der folgenden Abbildung veranschaulicht.  
+  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]müssen Daten als eine Reihe von Fällen, die in einer Fall Tabelle enthalten sind, in einen Data Mining Algorithmus eingespeist werden. Nicht alle Fälle lassen sich jedoch durch eine einzelne Datenzeile beschreiben. So kann sich ein Fall z.&nbsp;B. aus zwei Tabellen ableiten: einer Tabelle mit Kundeninformationen und einer anderen Tabelle mit den von Kunden getätigten Käufen. Ein einzelner Kunde in der Kundeninformationstabelle könnte über mehrere Elemente in der Kundenkäufe-Tabelle verfügen, weshalb es schwierig ist, die Daten in einer einzelnen Zeile zu beschreiben. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt eine eindeutige Methode zum Verarbeiten dieser Fälle bereit, indem *geschachtelte Tabellen*verwendet werden. Das Konzept von geschachtelten Tabellen wird in der folgenden Abbildung veranschaulicht.  
   
  ![Zwei Tabellen, die mithilfe einer geschachtelten Tabelle kombiniert sind](../media/nested-tables.gif "Zwei Tabellen, die mithilfe einer geschachtelten Tabelle kombiniert sind")  
   
@@ -67,6 +67,6 @@ ms.locfileid: "66083249"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Data Mining-Algorithmen &#40;Analysis Services Data Mining-&#41;](data-mining-algorithms-analysis-services-data-mining.md)   
- [Mining Strukturen &#40;Analysis Services Data Mining-&#41;](mining-structures-analysis-services-data-mining.md)  
+ [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](mining-structures-analysis-services-data-mining.md)  
   
   

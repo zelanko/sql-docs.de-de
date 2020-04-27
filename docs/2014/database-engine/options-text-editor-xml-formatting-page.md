@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: f96625c9658c3bd9864f0928e738357b6e14311e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089847"
 ---
 # <a name="options-text-editor---xml---formatting-page"></a>Optionen (Text-Editor – XML – Seite „Formatierung“)
@@ -24,7 +24,7 @@ In diesem Dialogfeld können Sie die Formatierungseinstellungen für den XML-Edi
 > [!NOTE]  
 > Zum Anzeigen dieser Einstellungen wählen Sie zunächst den Ordner **Text-Editor** und anschließend den Ordner **XML** aus. Wählen Sie dann im Dialogfeld **Optionen** die Option **Formatierung** aus.  
   
-## <a name="attributes"></a>Attributes  
+## <a name="attributes"></a>Attribute  
  **Manuelle Attributformatierung beibehalten**  
  Nimmt keine Neuformatierung von Attributen vor. Dies ist die Standardoption.  
   
@@ -63,4 +63,4 @@ In diesem Dialogfeld können Sie die Formatierungseinstellungen für den XML-Edi
  \</dir>  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Der XML-Editor &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)  
+ [XML-Editor &#40;SQL Server Management Studio&#41;](../ssms/sql-server-management-studio-ssms.md)  

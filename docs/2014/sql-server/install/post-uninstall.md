@@ -11,14 +11,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 44a1ce794c70da1b64010a7e045447cfe44b6184
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66093502"
 ---
 # <a name="post-uninstall"></a>Nach der Deinstallation
   Verwenden Sie die Seite Nach der Deinstallation, um sich zu überzeugen, dass der Vorgang erfolgreich abgeschlossen wurde.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   

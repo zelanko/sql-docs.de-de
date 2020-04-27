@@ -16,29 +16,29 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30ff9705949be3fb9bf99d985d0db1aa17d93ab1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088469"
 ---
 # <a name="browsing-an-association-rules-model"></a>Durchsuchen eines Association Rules-Modells
   Wenn Sie ein Zuordnungs Modell mithilfe von **Durchsuchen**öffnen, wird das Modell in einem interaktiven Viewer angezeigt, der dem Association Rules [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Viewer in ähnelt.  Im Viewer sehen Sie auf einen Blick, welche Elemente untereinander korreliert wurden. Außerdem können Sie Regeln anzeigen, die Sie für Vorhersagen oder Empfehlungen verwenden können.  
   
-##  <a name="BKMK_ViewerTabs"></a>Untersuchen des Modells  
+##  <a name="explore-the-model"></a><a name="BKMK_ViewerTabs"></a>Untersuchen des Modells  
  Wenn Sie ein Mining Modell öffnen, das mithilfe des [!INCLUDE[msCoName](../includes/msconame-md.md)] Association Rules-Algorithmus erstellt wurde, enthält das Fenster **Durchsuchen** die folgenden Sichten, mit denen Sie einen anderen Aspekt des Modells untersuchen können:  
   
 -   [Itemsets](#BKMK_Itemsets)  
   
--   [Werks](#BKMK_Rules)  
+-   [Regeln](#BKMK_Rules)  
   
--   [Abhängigkeits Netzwerk](#BKMK_Dependency)  
+-   [Abhängigkeitsnetzwerk](#BKMK_Dependency)  
   
  Notieren Sie sich die Option auf den einzelnen Registerkarten, **langen Namen anzeigen** . Wenn Sie diese Option auswählen, können Sie die Tabelle, aus der das Itemset stammt, anzeigen oder ausblenden. Darüber hinaus können Sie den Namen der Regel oder des Itemsets verkürzen oder verlängern. Diese Option ist insbesondere dann sinnvoll, wenn die Fall- und Attributdaten aus verschiedenen Datenquellen stammen.  
   
  Um mit einem Zuordnungsmodell zu experimentieren, können Sie die Beispieldaten auf der Registerkarte "Zuordnen" der Beispieldatenarbeitsmappe verwenden und ein Zuordnungsmodell mit allen Standardeinstellungen erstellen. Sie können auch ein Einkaufskorb Analysemodell erstellen und es mithilfe von **Durchsuchen**öffnen.  
   
-###  <a name="BKMK_Itemsets"></a>Itemsets  
+###  <a name="itemsets"></a><a name="BKMK_Itemsets"></a>Itemsets  
  Die Registerkarte **Itemsets** ist ein guter Ausgangspunkt für das Untersuchen eines Zuordnungs Modells. Auf dieser Registerkarte wird eine Liste der Elemente angezeigt, die das Modell als häufig zusammen auftretend identifiziert hat.  
   
  ![Liste der Elemente in einem Zuordnungsmodell](media/dm13-association-itemsets.gif "Liste der Elemente in einem Zuordnungsmodell")  
@@ -71,7 +71,7 @@ ms.locfileid: "66088469"
   
     -   **Attributnamen und Wert anzeigen**  
   
-    -   **Nur Attribut Wert anzeigen**  
+    -   **Nur Attributwert anzeigen**  
   
     -   **Nur Attributnamen anzeigen**  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66088469"
   
  [Zurück zum Anfang](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Rules"></a>Werks  
+###  <a name="rules"></a><a name="BKMK_Rules"></a>Werks  
  Auf der Registerkarte **Regeln** werden Informationen zu den Itemsets und deren relativer Wert kombiniert.  
   
  ![Liste der von einem Zuordnungsmodell erstellten Regeln](media/dm13-association-rules.gif "Liste der von einem Zuordnungsmodell erstellten Regeln")  
@@ -114,7 +114,7 @@ ms.locfileid: "66088469"
   
  [Zurück zum Anfang](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Dependency"></a>Abhängigkeits Netzwerk  
+###  <a name="dependency-network"></a><a name="BKMK_Dependency"></a>Abhängigkeits Netzwerk  
  Die Registerkarte **Abhängigkeits Netzwerk** ist eine visuelle Zuordnung der Korrelationen zwischen Elementen. Jedes Oval im Diagramm (als *Knoten*bezeichnet) stellt ein Attribut-Wert-Paar dar, z. b. "Vest = vorhandenes" oder "Age = 1-30".  Jede Zeile, die die ovale (als *Edge*bezeichnet) verbindet, stellt einen Korrelationstyp dar.  
   
  ![Abhängigkeitsnetzwerkdiagramm für ein Zuordnungsmodell](media/dm13-association-dependencynetwork.gif "Abhängigkeitsnetzwerkdiagramm für ein Zuordnungsmodell")  

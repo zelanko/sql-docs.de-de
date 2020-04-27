@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: de19592ec5a94e99cc87c40dac476e75546c7968
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086778"
 ---
 # <a name="create-or-edit-relationship-dialog-box-analysis-services---multidimensional-data"></a>Beziehung erstellen oder bearbeiten (Dialogfeld) (Analysis Services – Mehrdimensionale Daten)
@@ -33,7 +33,7 @@ ms.locfileid: "66086778"
 > [!NOTE]  
 >  Sie können im **Datenquellen Sicht-Designer** Beziehungen erstellen, die in der zugrunde liegenden Datenquelle nicht vorhanden sind, und vom **Datenquellen Sicht-Designer** erstellte Beziehungen aus vorhandenen Fremdschlüssel Beziehungen in der zugrunde liegenden Datenquelle entfernen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Quelltabelle (Fremdschlüsseltabelle)**  
  Wählen Sie die Tabelle oder die benannte Abfrage aus, die den Verweis auf eine oder mehrere Spalten in der Zieltabelle enthält.  
   
@@ -54,6 +54,6 @@ ms.locfileid: "66086778"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Analysis Services Designer und Dialog Felder &#40;Mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Der Datenquellen Sicht-Designer &#40;Analysis Services Mehrdimensionale Daten&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Datenquellensicht-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

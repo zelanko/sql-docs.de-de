@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1628eff6e5c440071126ce3508b977f9f7508ba5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086057"
 ---
 # <a name="browse-a-model-using-the-microsoft-neural-network-viewer"></a>Modell mit dem Microsoft-Viewer für neuronale Netzwerke durchsuchen
@@ -43,16 +43,16 @@ ms.locfileid: "66086057"
   
  Wenn Sie ausführlichere Informationen benötigen, z. B. die Formeln, die jedes erkannte Muster darstellen, können Sie die Ansichten wechseln und den [!INCLUDE[msCoName](../../includes/msconame-md.md)] Generic Content Tree Viewer verwenden. Weitere Informationen finden Sie unter [Durchsuchen eines Modells mit dem Microsoft Generic Content Tree Viewer](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md) oder [Microsoft Generic Content Tree Viewer &#40;Data Mining&#41;](../microsoft-generic-content-tree-viewer-data-mining.md).  
   
-##  <a name="BKMK_ViewerTabs"></a>Viewer-Registerkarten  
+##  <a name="viewer-tabs"></a><a name="BKMK_ViewerTabs"></a>Viewer-Registerkarten  
  Wenn Sie ein Miningmodell in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]durchsuchen, wird das Modell im Data Mining-Designer auf der Registerkarte **Miningmodell-Viewer** mit dem jeweils geeigneten Viewer für das Modell angezeigt. Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Viewer für neuronale Netzwerke stellt die folgenden Registerkarten zum Durchsuchen von Miningmodellen in neuronalen Netzwerken bereit:  
   
--   [Eingaben](#BKMK_Inputs)  
+-   [Ungs](#BKMK_Inputs)  
   
 -   [Ausgaben](#BKMK_Outputs)  
   
 -   [Variablen](#BKMK_Characteristics)  
   
-###  <a name="BKMK_Inputs"></a>Ungs  
+###  <a name="inputs"></a><a name="BKMK_Inputs"></a>Ungs  
  Wählen Sie auf der Registerkarte **Eingaben** die Attribute und Werte aus, die vom Modell als Eingaben verwendet wurden. Standardmäßig wird der Viewer mit allen enthaltenen Daten bzw. Attributen geöffnet. In dieser Standardansicht wählt das Modell aus, welche Attributwerte beim Anzeigen Priorität besitzen.  
   
  Um ein Eingabeattribut auszuwählen, klicken Sie in der Spalte **Attribut** auf das Raster **Eingabe** , und wählen Sie aus der Dropdownliste ein Attribut aus. (Nur Attribute, die im Modell eingeschlossen sind, werden in die Liste aufgenommen.)  
@@ -61,14 +61,14 @@ ms.locfileid: "66086057"
   
  [Zurück zum Anfang](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Outputs"></a>Ausgaben  
+###  <a name="outputs"></a><a name="BKMK_Outputs"></a>Ausgaben  
  Wählen Sie auf der Registerkarte **Ausgaben** das zu überprüfende Ergebnisattribut aus. Sie können zwei beliebige Ergebnisstatuswerte auswählen, die Sie vergleichen möchten, vorausgesetzt, dass die Spalten beim Erstellen des Modells als prognostizierbare Attribute definiert wurden.  
   
  Verwenden Sie die Liste **Ausgabeattribut** , um ein Attribut auszuwählen. Sie können zwei Status auswählen, die mit dem Attribut aus den Listen **Wert 1** und **Wert 2** verknüpft sind. Diese beiden Status der Ausgabeattribute werden im Bereich **Variablen** verglichen.  
   
  [Zurück zum Anfang](#BKMK_ViewerTabs)  
   
-###  <a name="BKMK_Characteristics"></a>Instan  
+###  <a name="variables"></a><a name="BKMK_Characteristics"></a>Instan  
  Das Raster auf der Registerkarte **Variablen** enthält die folgenden Spalten: **Attribut**, **Wert**, **Begünstigt [value 1]** und **Begünstigt [value 2]**. Standardmäßig werden die Spalten nach der Stärke von **Begünstigt [value 1]** sortiert. Durch Klicken auf die Spaltenkopfzeilen wird die Reihenfolge der Inhalte der ausgewählten Spalte verändert.  
   
  Ein Balken rechts neben dem Attribut zeigt an, welchen Status des Ausgabeattributs der angegebene Eingabeattributstatus bevorzugt. Die Größe des Balkens zeigt an, wie stark der Ausgabestatus den Eingabestatus bevorzugt.  

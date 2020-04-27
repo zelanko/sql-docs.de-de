@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: adf29f6f73020ddc265072b3b9f3f67042200506
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085251"
 ---
 # <a name="create-an-olap-mining-structure"></a>Erstellen einer OLAP-Miningstruktur
@@ -22,7 +22,7 @@ ms.locfileid: "66085251"
   
  In diesem Thema wird beschrieben, wie Sie eine OLAP-Miningstruktur auf Grundlage einer Dimension und verwandter Measures in einer vorhandenen mehrdimensionalen Lösung erstellen.  
   
- [Requirements (Anforderungen)](#bkmk_Reqs)  
+ [Anforderungen](#bkmk_Reqs)  
   
  [Übersicht über den OLAP Data Mining-Prozess](#bkmk_Overview)  
   
@@ -30,32 +30,32 @@ ms.locfileid: "66085251"
   
  [Filter](#bkmk_Filters)  
   
- [Verwenden von Netz Tabellen](#bkmk_Nested)  
+ [Verwenden von geschachtelten Tabellen](#bkmk_Nested)  
   
  [Data Mining-Dimensionen](#bkmk_DMDimension)  
   
-##  <a name="bkmk_Reqs"></a>Anforderungen für OLAP-Mining Struktur und-Modelle  
+##  <a name="requirements-for-olap-mining-structure-and-models"></a><a name="bkmk_Reqs"></a>Anforderungen für OLAP-Mining Struktur und-Modelle  
  Wenn Sie ein OLAP-Miningmodell entwerfen, ist die Datenquelle bereits in der Datenbank vorhanden, die zum Erstellen des Cubes verwendet wurde. Sie können keine Verbindung mit einem Remotecube herstellen und Data Mining-Objekte erstellen. Die Cubeobjekte müssen innerhalb der gleichen Lösung wie die Datenbank und die Miningstruktur verfügbar sein, die Sie erstellen.  
   
  Wenn Sie die ursprünglichen Projektdateien nicht haben oder diese nicht ändern möchte, können Sie die Option **Von Server importieren (mehrdimensional und Data Mining)** Visual Studio verwenden, um eine Kopie der Metadaten- und Lösungsobjekte abzurufen. Sie können dann das Bereitstellungsziel ändern, die Datenquellen bearbeiten und mit den Cubeobjekten arbeiten, ohne dass sich dies auf die vorhandenen Objekte auswirkt.  
   
  Weitere Informationen finden Sie unter [Importieren eines Data Mining-Projekts mithilfe des Analysis Services-Import-Assistenten](import-a-data-mining-project-using-the-analysis-services-import-wizard.md).  
   
-##  <a name="bkmk_Overview"></a>Übersicht über den OLAP Data Mining-Prozess  
+##  <a name="overview-of-olap-data-mining-process"></a><a name="bkmk_Overview"></a>Übersicht über den OLAP Data Mining-Prozess  
  Starten Sie den Data Mining-Assistenten, indem Sie im Projektmappen-Explorer mit der rechten Maustaste auf den Knoten **Miningstrukturen** klicken und  **Neue Miningstruktur**auswählen. Der Assistent führt Sie zum Erstellen der Struktur für eine neue Struktur und ein neues Modell durch folgende Schritte:  
   
-1.  **Definitions Methode auswählen**: Hier wählen Sie einen Daten Quellentyp aus und wählen **aus vorhandenem Cube**.  
+1.  **Definitionsmethode auswählen**: Hier wählen Sie einen Datenquellentyp aus, in diesem Fall **Aus vorhandenem Cube**.  
   
     > [!NOTE]  
     >  Der OLAP-Cube, den Sie als Quelle verwenden, muss sich in der gleichen Datenbank wie die Miningstruktur befinden (siehe oben). Sie können außerdem keinen Cube verwenden, der vom PowerPivot für Excel-Add-In als Data Mining-Quelle erstellt wurde.  
   
-2.  **Data Mining-Struktur erstellen**: bestimmen Sie, ob Sie nur eine Struktur oder eine Struktur mit einem Mining Modell erstellen.  
+2.  **Data Mining-Struktur erstellen**: Bestimmen Sie, ob Sie nur eine Struktur oder eine Struktur mit einem Miningmodell erstellen.  
   
      Sie müssen des weiteren zum Analysieren der Daten einen geeigneten Algorithmus auswählen. Hinweise darauf, welcher Algorithmus am besten für bestimmte Aufgaben geeignet ist, finden Sie unter HYPERLINK "ms-help://SQL111033/as_1devconc/html/ed1fc83b-b98c-437e-bf53-4ff001b92d64.htm" Data Mining-Algorithmen (Analysis Services - Data Mining).  
   
-3.  **Quellcubedimension auswählen**: dieser Schritt entspricht der Auswahl einer Datenquelle. Sie müssen eine einzelne Dimension auswählen, die die wichtigsten Daten zum Trainieren des Modells enthält. Sie können später Daten aus anderen Dimensionen hinzufügen oder die Dimension filtern.  
+3.  **Quellcubedimension auswählen**: Dieser Schritt entspricht der Auswahl einer Datenquelle. Sie müssen eine einzelne Dimension auswählen, die die wichtigsten Daten zum Trainieren des Modells enthält. Sie können später Daten aus anderen Dimensionen hinzufügen oder die Dimension filtern.  
   
-4.  **Fall Schlüssel auswählen**: Wählen Sie innerhalb der soeben ausgewählten Dimension ein Attribut (Spalte) aus, das als eindeutiger Bezeichner für die Falldaten fungiert.  
+4.  **Fallschlüssel auswählen**: Wählen Sie innerhalb der soeben ausgewählten Dimension ein Attribut (Spalte) aus, das als eindeutige ID für die Falldaten verwendet werden soll.  
   
      In der Regel wird eine Spalte vorab ausgewählt, Sie können die Spalte jedoch ändern, wenn mehrere Schlüssel vorhanden sind.  
   
@@ -65,9 +65,9 @@ ms.locfileid: "66085251"
   
      Wenn der Cube beispielsweise ein Measure enthält, das Frachtkosten auf Grundlage des geografischen Standorts des Kunden berechnet, und Sie die Customer-Dimension als Hauptdaten Quelle für die Modellierung ausgewählt haben, wird das Measure als Kandidat zum Hinzufügen zum Modell vorgeschlagen. Fügen Sie nicht zu viele Measures hinzu, die direkt auf Attributen basieren. Es besteht bereits eine implizite Beziehung zwischen den Spalten, wie in der Measureformel definiert, und die Stärke dieser (erwarteten) Korrelation kann andere Beziehungen verdecken, die Sie andernfalls erkennen würden.  
   
-6.  **Verwendung der Mining Modell Spalte angeben**: für jedes Attribut oder Measure, das Sie der Struktur hinzugefügt haben, müssen Sie angeben, ob das Attribut für Vorhersagen verwendet oder als Eingabe verwendet werden soll. Wenn Sie keine dieser Optionen auswählen, werden die Daten zwar verarbeitet, aber nicht für die Analyse verwendet. Sie sind jedoch als Hintergrunddaten verfügbar, falls Sie später Drillthrough aktivieren.  
+6.  **Verwendung der Miningmodellspalte angeben**: Für jedes Attribut oder Measure, das Sie der Struktur hinzugefügt haben, müssen Sie angeben, ob das Attribut für Vorhersagen oder als Eingabe verwendet werden soll. Wenn Sie keine dieser Optionen auswählen, werden die Daten zwar verarbeitet, aber nicht für die Analyse verwendet. Sie sind jedoch als Hintergrunddaten verfügbar, falls Sie später Drillthrough aktivieren.  
   
-7.  **Tabellen hinzufügen**: Klicken Sie hierauf, um verknüpfte Tabellen hinzuzufügen. Im Dialogfeld **Wählen Sie eine Measuregruppendimension aus** können Sie von unter den Dimensionen, die sich auf die aktuelle Dimension beziehen, eine einzelne Dimension auswählen.  
+7.  **Geschachtelte Tabellen hinzufügen**: Klicken Sie hierauf, um verwandte Tabellen hinzuzufügen. Im Dialogfeld **Wählen Sie eine Measuregruppendimension aus** können Sie von unter den Dimensionen, die sich auf die aktuelle Dimension beziehen, eine einzelne Dimension auswählen.  
   
      Anschließend definieren Sie im Dialogfeld **Schlüssel der geschachtelten Tabelle auswählen** , wie sich die neue Dimension auf die Dimension bezieht, die die Falldaten enthält.  
   
@@ -75,21 +75,21 @@ ms.locfileid: "66085251"
   
      Nachdem Sie alle geschachtelten Attribute hinzugefügt haben, die Sie benötigen, kehren Sie zur Seite **Verwendung der Miningmodellspalte angeben**zurück, und klicken Sie auf **Weiter**.  
   
-8.  **Inhalt und Datentyp der Spalten angeben**: an diesem Punkt haben Sie alle Daten hinzugefügt, die für die Analyse verwendet werden, und müssen den *Datentyp* und den *Inhaltstyp* für jedes Attribut angeben.  
+8.  **Inhalt und Datentyp der Spalten angeben**: Sie haben nun alle Daten hinzugefügt, die für die Analyse verwendet werden, und müssen jetzt den *Datentyp* und *Inhaltstyp* für jedes Attribut angeben.  
   
      In einem OLAP-Modell besteht keine Möglichkeit, Datentypen automatisch zu erkennen, da der Datentyp bereits von der mehrdimensionalen Lösung definiert wird und nicht geändert werden kann. Schlüssel werden auch automatisch identifiziert. Weitere Informationen finden Sie unter [Datentypen &#40;Data Mining&#41;](data-types-data-mining.md).  
   
      Der *Inhaltstyp* , den Sie für jede im Modell verwendete Spalte auswählen, teilt den Algorithmus mit, wie die Daten verarbeitet werden sollen. Weitere Informationen finden Sie unter [Inhaltstypen &#40;Data Mining&#41;](content-types-data-mining.md).  
   
-9. Aufteilen **des Quellcubes**: Hier können Sie Filter in einem Cube definieren, um nur eine Teilmenge der Daten auszuwählen und Modelle zu trainieren, die besser ausgerichtet sind.  
+9. **Quellcube in Slices aufteilen**: Hier können Sie Filter in einem Cube definieren, um nur eine Teilmenge der Daten auszuwählen und präzisere Modelle zu trainieren.  
   
      Sie filtern einen Cube, indem Sie die Dimension, nach der gefiltert wird, und die Hierarchieebene, die die gewünschten Kriterien enthält, auswählen und dann Bedingung eingeben, die als Filter verwendet werden soll.  
   
-10. **Testsatz erstellen**: auf dieser Seite können Sie dem Assistenten mitteilen, wie viele Daten für die Verwendung beim Testen des Modells reserviert werden sollen. Wenn die Daten mehrere Modelle unterstützen, empfiehlt es sich, ein zurückgehaltenes Dataset zu erstellen, sodass alle Modelle basierend auf den gleichen Daten getestet werden können.  
+10. **Testsatz erstellen**: Auf dieser Seite können Sie dem Assistenten mitteilen, wie viele Daten zum Testen des Modells verwendet werden sollen. Wenn die Daten mehrere Modelle unterstützen, empfiehlt es sich, ein zurückgehaltenes Dataset zu erstellen, sodass alle Modelle basierend auf den gleichen Daten getestet werden können.  
   
      Weitere Informationen finden Sie unter [Tests und Überprüfung &#40;Data Mining&#41;](testing-and-validation-data-mining.md).  
   
-11. **Assistenten abschließen**: auf dieser Seite übergeben Sie einen Namen für die neue Mining Struktur und das zugehörige Mining Modell und speichern die Struktur und das Modell.  
+11. **Assistenten abschließen**: Auf dieser Seite geben Sie einen Namen für die neue Miningstruktur und das zugeordnete Miningmodell an und speichern die Struktur und das Modell.  
   
      Auf dieser Seite können Sie außerdem die folgenden Optionen festlegen:  
   
@@ -97,27 +97,23 @@ ms.locfileid: "66085251"
   
     -   **Mining Modell Dimension erstellen**  
   
-    -   **Cube mithilfe der Mining Modell Dimension erstellen**  
+    -   **Cube mithilfe der Miningmodelldimension erstellen**  
   
      Weitere Informationen zu diesen Optionen finden Sie weiter unten in diesem Thema im Abschnitt [Grundlegendes zu Data Mining-Dimensionen und Drillthrough](#bkmk_DMDimension).  
   
  Zu diesem Zeitpunkt sind die Miningstruktur und das zugeordnete Modell nur Metadaten. Sie müssen beide verarbeiten, um Ergebnisse zu erhalten.  
   
-##  <a name="bkmk_OLAP_Scenarios"></a>Szenarien für die Verwendung von Data Mining mit OLAP-Daten  
+##  <a name="scenarios-for-use-of-data-mining-with-olap-data"></a><a name="bkmk_OLAP_Scenarios"></a>Szenarien für die Verwendung von Data Mining mit OLAP-Daten  
  OLAP-Cubes enthalten häufig zahlreiche Elemente und Dimensionen, sodass es schwierig sein kann, zu entscheiden, wo mit dem Data Mining begonnen werden soll. Um die Muster in den Cubes leichter zu identifizieren, identifizieren Sie normalerweise zuerst eine Dimension von Interesse und durchsuchen dann Muster, die mit dieser Dimension verknüpft sind. In der folgenden Tabelle werden mehrere allgemeine Data Mining-Aufgaben von OLAP aufgelistet, Beispielszenarien zur Anwendung der einzelnen Aufgaben beschrieben und der Data Mining-Algorithmus zum Verwenden für die jeweilige Aufgabe identifiziert.  
   
 |Aufgabe|Beispielszenario|Algorithmus|  
 |----------|---------------------|---------------|  
-|Gruppieren Sie Elemente in Clustern|Segmentieren Sie eine Kundendimension auf Basis der Kundenelementeigenschaften, der Produkte, die die Kunden kaufen, und des Geldbetrags, den die Kunden ausgeben.|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering-Algorithmus|  
-|Finden Sie interessante oder ungewöhnliche Elemente|Identifizieren Sie interessante oder ungewöhnliche Läden in einer Speicherdimension, basierend auf Nettoumsatz, Gewinn, Ort und Größe des Ladens.|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus|  
-|Finden Sie interessante oder ungewöhnliche Zellen|Identifizieren Sie Umsätze in Läden, die nicht den allgemeinen Trends im Verlauf der Zeit entsprechen.|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus|  
-|Suchen von Korrelationen|Identifizieren Sie Faktoren im Zusammenhang mit Serverausfallzeiten, einschließlich Bereich, Computertyp, Betriebssystem oder Kaufdatum.|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus|  
+|Gruppieren Sie Elemente in Clustern|Segmentieren Sie eine Kundendimension auf Basis der Kundenelementeigenschaften, der Produkte, die die Kunden kaufen, und des Geldbetrags, den die Kunden ausgeben.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Clustering-Algorithmus|  
+|Finden Sie interessante oder ungewöhnliche Elemente|Identifizieren Sie interessante oder ungewöhnliche Läden in einer Speicherdimension, basierend auf Nettoumsatz, Gewinn, Ort und Größe des Ladens.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees-Algorithmus|  
+|Finden Sie interessante oder ungewöhnliche Zellen|Identifizieren Sie Umsätze in Läden, die nicht den allgemeinen Trends im Verlauf der Zeit entsprechen.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Algorithmus|  
+|Suchen von Korrelationen|Identifizieren Sie Faktoren im Zusammenhang mit Serverausfallzeiten, einschließlich Bereich, Computertyp, Betriebssystem oder Kaufdatum.|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes-Algorithmus|  
   
-##  <a name="bkmk_Filters"></a>Aufteilen eines Cubes und Filtern von Modellen  
+##  <a name="slicing-a-cube-vs-filtering-models"></a><a name="bkmk_Filters"></a>Aufteilen eines Cubes und Filtern von Modellen  
  Das Aufteilen des Cubes in Slices, während Sie ein Modell erstellen, entspricht dem Erstellen eines Filters für ein relationales Miningmodell. In einem relationalen Modell wird der Filter für die Datenquelle als WHERE-Klausel in einer SQL-Anweisung definiert. In einem Cube verwenden Sie den Editor, um Filteranweisungen mit MDX zu erstellen.  
   
  Ein Cube kann beispielsweise Informationen zu Produktkäufen weltweit enthalten. Für eine Marketingkampagne möchten Sie jedoch ein Modell auf Grundlage der Analyse weiblicher Kunden über 30 erstellen, die in Großbritannien leben.  
@@ -137,7 +133,7 @@ ms.locfileid: "66085251"
   
  Sie können dem Cube so viele Filter hinzufügen, wie notwendig sind, um die für das Miningmodell erforderlichen Daten zurückzugeben. Sie können zudem Slices für einzelne Cubeslices definieren. Beispiel: Wenn Ihre Struktur zwei geschachtelte Tabellen enthält, die auf Produkten basieren, können Sie eine Tabelle am Segment für März 2004 und die andere am Segment für April 2004 in Slices teilen. Mit dem resultierenden Modell lassen sich dann, basierend auf den Verkaufszahlen für März, Vorhersagen für die Verkäufe im April tätigen.  
   
-##  <a name="bkmk_Nested"></a>Verwenden von in einem OLAP-Mining Modell verwendeten Tabellen  
+##  <a name="using-nested-tables-in-an-olap-mining-model"></a><a name="bkmk_Nested"></a>Verwenden von in einem OLAP-Mining Modell verwendeten Tabellen  
  Als Sie mithilfe des Data Mining-Assistenten ein Modell auf Grundlage von Cubedaten erstellen, können Sie geschachtelte Tabellen hinzufügen, indem Sie die Namen verwandter Dimensionen angeben und die Attribute oder Measures, auswählen, die dem Modell hinzugefügt werden sollen.  
   
  Wenn zum Beispiel die für Falldaten verwendete Hauptdimension „Customer“ ist, können Sie „Products“ als verwandte Dimension hinzufügen, da Sie davon ausgehen können, dass ein Kunde im Laufe der Zeit mehrere Produkte bestellt hat und der Cube jeden Kunden über die Reihenfolgenfaktentabellen mit verschiedenen Produkten verknüpft.  
@@ -152,7 +148,7 @@ ms.locfileid: "66085251"
   
  Die Möglichkeit, geschachtelte Tabellendaten wie diese zu verwenden, ist eine besonders leistungsstarke Funktion von SQL Server Data Mining. In einem Cube bestehen nahezu unbegrenzte Möglichkeiten, verwandte Datenteilmengen zu verwenden.  
   
-##  <a name="bkmk_DMDimension"></a>Grundlegendes zu Data Mining-Dimensionen und Drillthrough  
+##  <a name="understanding-data-mining-dimensions-and-drillthrough"></a><a name="bkmk_DMDimension"></a>Grundlegendes zu Data Mining-Dimensionen und Drillthrough  
  Beim Durchsuchen des Modells können Sie mithilfe der Option **Drillthrough zulassen**Abfragen in den zugrunde liegenden Cubedaten ausführen. Die Daten sind nicht in der neuen Data Mining-Dimension enthalten, aber die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank kann mithilfe der Datenbindungen Informationen aus dem Quellcube abrufen.  
   
  Mit der Option **Miningmodelldimension erstellen**können Sie eine neue Dimension innerhalb des vorhandenen Cubes generieren, die die vom Algorithmus ermittelten Muster enthält. Die Hierarchie innerhalb der neuen Dimension wird zu einem Großteil durch den Modelltyp bestimmt. Die Darstellung eines Clusteringmodells ist beispielsweise recht flach. Dabei befindet sich der Knoten "(Alle)" auf der ersten Hierarchieebene und die einzelnen Cluster in der nächsten Ebene. Im Gegensatz dazu kann die Dimension, die für ein Entscheidungsstrukturmodell erstellt wird, über eine sehr tiefe Hierarchie verfügen und die Verzweigung der Struktur darstellen.  

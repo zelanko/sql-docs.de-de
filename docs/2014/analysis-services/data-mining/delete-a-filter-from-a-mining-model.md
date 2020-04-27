@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a8b19c9c23857013796885eb8d2d3469607eae17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084730"
 ---
 # <a name="delete-a-filter-from-a-mining-model"></a>Löschen eines Filters aus einem Miningmodell
@@ -32,7 +32,7 @@ ms.locfileid: "66084730"
   
 3.  Wählen Sie das Modell aus, und klicken Sie mit der rechten Maustaste, um das Kontextmenü zu öffnen.  
   
-     Oder  
+     - oder -  
   
      Wählen Sie das Modell aus. Wählen Sie im Menü **Miningmodell** die Option **Modellfilter festlegen**aus.  
   
@@ -61,6 +61,6 @@ ms.locfileid: "66084730"
 ## <a name="see-also"></a>Weitere Informationen  
  [Drillthrough zu Falldaten aus einem Mining Modell](drill-through-to-case-data-from-a-mining-model.md)   
  [Mining Modell Tasks und Anleitungen](mining-model-tasks-and-how-tos.md)   
- [Filter für Mining Modelle &#40;Analysis Services Data Mining-&#41;](mining-models-analysis-services-data-mining.md)  
+ [Filter für Miningmodelle &#40;Analysis Services – Data Mining&#41;](mining-models-analysis-services-data-mining.md)  
   
   

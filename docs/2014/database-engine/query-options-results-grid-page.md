@@ -13,20 +13,20 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 7c50957f59ef4e4743ca1667d6eb7a97869bec18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089008"
 ---
 # <a name="query-options-results-grid-page"></a>Abfrageergebnis (Seite Ergebnisse in Raster)
   Mithilfe dieser Seite können Sie die Anzeigeoptionen für Abfrageresultsets angeben, die im Rasterformat ausgegeben werden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Abfrage in das Resultset einschließen**  
  Gibt den Text der Abfrage als Teil des Resultsets zurück.  
   
- **Einschließen von Spalten Headern beim Kopieren oder Speichern der Ergebnisse**  
+ **Spaltenheader beim Kopieren oder Speichern der Ergebnisse einschließen**  
  Schließt Spaltenheader (Titel) ein, wenn Ergebnisse in die Zwischenablage kopiert oder in einer Datei gespeichert werden. Deaktivieren Sie dieses Kontrollkästchen, wenn Sie nur die Ergebnisdaten und nicht die Spaltenheader speichern oder kopieren möchten.  
   
  **Ergebnisse nach der Ausführung verwerfen**  
@@ -35,10 +35,10 @@ ms.locfileid: "66089008"
  **Ergebnisse auf separater Registerkarte anzeigen**  
  Zeigt das Resultset statt unten im Dokumentfenster der Abfrage in einem neuen Dokumentfenster an.  
   
- **Nach Ausführung der Abfrage zur Ergebnisregister Karte wechseln**  
+ **Nach Ausführung der Abfrage zur Ergebnisregisterkarte wechseln**  
  Verschiebt den Fokus automatisch auf das Resultset.  
   
- **Maximal abgerufene Zeichen**  
+ **Maximale Anzahl von abgerufenen Zeichen**  
  **Nicht-XML-Daten**:  
   
  Geben Sie eine Zahl zwischen 1 und 65.535 ein, um die maximale Anzahl der in einer Zelle angezeigten Zeichen anzugeben.  
@@ -50,7 +50,7 @@ ms.locfileid: "66089008"
   
  Wählen Sie **1 MB**, **2 MB**oder **5 MB**aus. Wählen Sie **Unbegrenzt** aus, um alle Zeichen abzurufen.  
   
- **Auf Standard zurücksetzen**  
+ **Standard wiederherstellen**  
  Setzt alle auf dieser Seite verfügbaren Werte auf die ursprünglichen Standardwerte zurück.  
   
   

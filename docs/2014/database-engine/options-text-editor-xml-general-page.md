@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 784032205f081e340e30203314e96a3b2dbf640e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089200"
 ---
 # <a name="options-text-editor---xml---general-page"></a>Optionen (Text-Editor – XML – Seite „Allgemein“)
@@ -30,7 +30,7 @@ ms.locfileid: "66089200"
  **Erweiterte Member ausblenden**  
  Dieses Kontrollkästchen ist nicht verfügbar.  
   
- **Parameter Informationen**  
+ **Parameterinformationen**  
  Wenn dieses Kontrollkästchen aktiviert ist, wird im Editor an allen verfügbaren Parametern links von der Einfügemarke die vollständige Syntax für die aktuelle Deklaration bzw. Prozedur angezeigt. Der nächste zuweisbare Parameter ist fett hervorgehoben.  
   
 ## <a name="settings"></a>Einstellungen  

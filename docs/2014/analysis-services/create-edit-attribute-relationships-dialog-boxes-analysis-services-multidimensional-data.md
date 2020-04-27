@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 544fc09037c0670c7ba44adf7b270e46899621a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086942"
 ---
 # <a name="create-attribute-relationship-and-edit-attribute-relationship-dialog-boxes-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Dialogfelder Attributbeziehung erstellen und Attributbeziehung bearbeiten (Registerkarte Attributbeziehungs-Designer, Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
@@ -28,7 +28,7 @@ ms.locfileid: "66086942"
   
 2.  Klicken Sie auf der Symbolleiste auf das Symbol Neue Attributbeziehung.  
   
-     Oder  
+     - oder -  
   
      Klicken Sie im Attributbeziehungsdiagramm oder in der Liste **Attribute** mit rechten Maustaste auf ein Attribut, und klicken Sie dann auf **Neue Attributbeziehung**.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "66086942"
  **Elementanzahl**  
  Gibt die Anzahl der geschätzten Elemente im angegebenen Attribut an.  
   
- **Schlüssel Spalten**  
+ **Schlüsselspalten**  
  Gibt die Schlüsselspalten an, die für das Attribut definiert werden.  
   
  **Beziehungstyp**  

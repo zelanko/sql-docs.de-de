@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 14e86ac2dd32f2a3e1384e08aca597794ee4bc71
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083958"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Microsoft Logistic Regression-Algorithmus
@@ -46,11 +46,11 @@ ms.locfileid: "66083958"
   
  Für ein logistisches Regressionsmodell gelten folgende Anforderungen:  
   
- **Eine einzelne Schlüssel Spalte** Jedes Modell muss eine numerische Spalte oder Text Spalte enthalten, die jeden Datensatz eindeutig identifiziert. Verbundschlüssel sind nicht zulässig.  
+ **Nur eine Schlüsselspalte:** Jedes Modell muss eine numerische Spalte oder Textspalte enthalten, die jeden Datensatz eindeutig identifiziert. Verbundschlüssel sind nicht zulässig.  
   
- **Eingabe Spalten** Jedes Modell muss mindestens eine Eingabe Spalte enthalten, die die Werte enthält, die in der Analyse als Faktoren verwendet werden. Sie können beliebig viele Eingabespalten verwenden. Abhängig von der Anzahl von Werten in jeder Spalte, kann sich der zum Trainieren des Modells erforderliche Zeitaufwand durch das Hinzufügen zusätzlicher Spalten jedoch erhöhen.  
+ **Eingabespalten:** Jedes Modell muss mindestens eine Eingabespalte für die Werte enthalten, die bei der Analyse als Faktoren verwendet werden. Sie können beliebig viele Eingabespalten verwenden. Abhängig von der Anzahl von Werten in jeder Spalte, kann sich der zum Trainieren des Modells erforderliche Zeitaufwand durch das Hinzufügen zusätzlicher Spalten jedoch erhöhen.  
   
- Mindestens **eine vorhersagbare Spalte** Das Modell muss mindestens eine vorhersagbare Spalte eines beliebigen Datentyps enthalten, einschließlich fortlaufender numerischer Daten. Die Werte der vorhersagbaren Spalte können auch als Eingaben für das Modell behandelt werden. Alternativ dazu können Sie angeben, dass diese Werte nur für Vorhersagen verwendet werden sollen. Geschachtelte Tabellen sind für vorhersagbare Spalten nicht zulässig, können aber als Eingaben verwendet werden.  
+ **Mindestens eine vorhersagbare Spalte:** Das Modell muss mindestens eine vorhersagbare Spalte eines beliebigen Datentyps enthalten, einschließlich fortlaufender numerischer Daten. Die Werte der vorhersagbaren Spalte können auch als Eingaben für das Modell behandelt werden. Alternativ dazu können Sie angeben, dass diese Werte nur für Vorhersagen verwendet werden sollen. Geschachtelte Tabellen sind für vorhersagbare Spalten nicht zulässig, können aber als Eingaben verwendet werden.  
   
  Ausführliche Informationen zu den in logistischen Regressionsmodellen unterstützten Inhaltstypen und Datentypen finden Sie im Abschnitt über Anforderungen unter [Technische Referenz für den Microsoft Logistic Regression-Algorithmus](microsoft-logistic-regression-algorithm-technical-reference.md).  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66083958"
   
 -   Beispiele für Abfragen in Verbindung mit einem logistischen Regressionsmodell finden Sie unter [Beispiele für Clusteringmodellabfragen](clustering-model-query-examples.md).  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 -   Unterstützt keine Drillthroughs. Der Grund hierfür ist, dass die Struktur der Knoten im Miningmodell nicht zwangsläufig direkt den zugrunde liegenden Daten entspricht.  
   

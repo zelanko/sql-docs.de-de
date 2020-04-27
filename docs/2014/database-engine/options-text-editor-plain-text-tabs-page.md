@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 0e060f1bccb544edd4e82c759b737e05c4bb980b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089861"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>Optionen (Text-Editor – Unverschlüsselter Text – Seite „Registerkarten“)
@@ -26,7 +26,7 @@ ms.locfileid: "66089861"
  Optionen für den Nur-Text-Editor können auch im Dialogfeld **Alle Sprachen/Allgemein** festgelegt werden. Wenn Sie die Dialogfelder **Alle Sprachen** verwenden, um unterschiedliche Optionen für die anderen [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] -Editoren, z. B. den DMX- oder den MDX-Editor, festzulegen, müssen Sie die Optionen des Nur-Text-Editors mithilfe dieses Dialogfelds zurücksetzen.  
   
 ## <a name="indenting"></a>Einzug  
- **Keine**  
+ **None**  
  Rückt die nach dem Drücken der Eingabetaste erstellte neue Zeile nicht ein. Der Cursor wird in der ersten Spalte der neuen Zeile platziert.  
   
  **Baustein**  

@@ -16,15 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 34aefc2895057c499e54c572340ca63dc28ed68f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082739"
 ---
 # <a name="training-and-testing-data-sets"></a>Trainings- und Testdatasets
-  Das Aufteilen von Daten in Trainings- und Testsätze ist ein wichtiger Bestandteil der Auswertung von Data Mining-Modellen. Wenn Sie ein Dataset in einen Trainings- und einen Testsatz unterteilen, wird der Großteil der Daten in der Regel für das Training und die restlichen Daten zum Testen verwendet. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prüft die Daten nach dem Zufallsprinzip, um sicherzustellen, dass sich die Test- und Trainingssets ähneln. Durch die Verwendung der gleichen Daten für das Training und das Testen können Sie mögliche Datendiskrepanzen weitgehend ausschließen und die Eigenschaften des Modells leichter verstehen.  
+  Das Aufteilen von Daten in Trainings- und Testsätze ist ein wichtiger Bestandteil der Auswertung von Data Mining-Modellen. Wenn Sie ein Dataset in einen Trainings- und einen Testsatz unterteilen, wird der Großteil der Daten in der Regel für das Training und die restlichen Daten zum Testen verwendet. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] prüft die Daten nach dem Zufallsprinzip, um sicherzustellen, dass sich die Test- und Trainingssets ähneln. Durch die Verwendung der gleichen Daten für das Training und das Testen können Sie mögliche Datendiskrepanzen weitgehend ausschließen und die Eigenschaften des Modells leichter verstehen.  
   
  Nachdem ein Modell durch die Verwendung des Trainingssatzes bearbeitet wurde, können Sie das Modell testen, indem Sie Vorhersagen für den Testsatz erstellen. Da die Daten im Testsatz bereits bekannte Werte für das Attribut enthalten, das Sie vorhersagen möchten, ist es einfach, die Vorhersagegenauigkeit des Modells zu bestimmen.  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66082739"
 ### <a name="modifying-structure-properties-to-create-a-test-data-set"></a>Ändern von Struktureigenschaften zum Erstellen eines Testdatasets  
  Wenn Sie eine Miningstruktur erstellen und verarbeiten und zu einem späteren Zeitpunkt ein Testdataset separieren möchten, können Sie die Eigenschaften der Miningstruktur ändern. Um die Methode zu ändern, mit der die Daten partitioniert werden, bearbeiten Sie die folgenden Eigenschaften:  
   
-|Eigenschaft|BESCHREIBUNG|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |`HoldoutMaxCases`|Gibt die maximale Anzahl der Fälle an, die in dem Testsatz enthalten sein soll.|  
 |`HoldoutMaxPercent`|Gibt die Anzahl der Fälle, die in dem Testsatz enthalten sein soll, als Prozentsatz des gesamten Datasets an. Um kein Dataset zu verwenden, geben Sie 0 an.|  
@@ -63,11 +62,11 @@ ms.locfileid: "66082739"
 ### <a name="specifying-holdout-programmatically"></a>Programmgesteuertes Festlegen zurückgehaltener Daten  
  Test- und Trainingsdatasets für eine Miningstruktur können mithilfe von DMX-Anweisungen, AMO oder XML DDL definiert werden. Die ALTER MINING STRUCTURE-Anweisung unterstützt nicht die Verwendung von Zurückhaltungsparametern.  
   
--   **DMX** in der Sprache Data Mining-Erweiterungen (DMX) wurde die CREATE MINING STRUCTURE-Anweisung um eine WITH HOLDOUT-Klausel erweitert.  
+-   **DMX** In der Sprache Data Mining-Erweiterungen (Data Mining Extensions, DMX) wurde die CREATE MINING STRUCTURE-Anweisung um eine WITH HOLDOUT-Klausel erweitert.  
   
--   **ASSL** Sie können entweder eine neue Mining Struktur erstellen oder einer vorhandenen Mining Struktur mithilfe der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Skriptsprache (ASSL) ein Test Dataset hinzufügen.  
+-   **ASSL** Sie können entweder eine neue Miningstruktur erstellen oder einer vorhandenen Miningstruktur mithilfe von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ASSL (Analysis Services Scripting Language) ein Testdataset hinzufügen.  
   
--   **AMO** Sie können mithilfe von AMO auch zurück gehaltene Datasets anzeigen und ändern.  
+-   **AMO** Sie können mithilfe von AMO auch zurückgehaltene Datasets anzeigen und ändern.  
   
  Sie können Informationen über zurückgehaltene Datasets in einer bestehenden Miningstruktur anzeigen. Dazu wird das Data Mining-Schemarowset abgefragt. Führen Sie hierzu einen DISCOVER ROWSET-Aufruf aus, oder verwenden Sie eine DMX-Abfrage.  
   
@@ -92,8 +91,7 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 -   Aus einem Zeitreihenmodell können keine Daten entfernt werden; deshalb ist es nicht möglich, Quelldaten in Trainings- und Testsätze zu unterteilen. Wenn Sie mit der Erstellung einer Miningstruktur und eines Modells beginnen und den [!INCLUDE[msCoName](../../includes/msconame-md.md)] -Time Series-Algorithmus auswählen, wird die Option zum Erstellen eines zurückgehaltenen Datasets deaktiviert. Die Verwendung zurückgehaltener Daten ist ebenfalls deaktiviert, wenn die Miningstruktur auf der Fallebene oder auf der Ebene geschachtelter Tabellen eine KEY TIME-Spalte enthält.  
   
--   Manchmal wird das zurückgehaltene Dataset auch versehentlich erstellt. In diesem Fall wird das gesamte Dataset für Tests verwendet, und es bleiben keine Daten für Trainingszwecke übrig. Sollte dies passieren, gibt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] jedoch eine Fehlermeldung aus, und Sie können das Problem beheben. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] außerdem eine Warnung aus, wenn mehr als 50 Prozent der Daten für Testzwecke zurückgehalten wurden.  
+-   Manchmal wird das zurückgehaltene Dataset auch versehentlich erstellt. In diesem Fall wird das gesamte Dataset für Tests verwendet, und es bleiben keine Daten für Trainingszwecke übrig. Sollte dies passieren, gibt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] jedoch eine Fehlermeldung aus, und Sie können das Problem beheben. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] außerdem eine Warnung aus, wenn mehr als 50 Prozent der Daten für Testzwecke zurückgehalten wurden.  
   
 -   In den meisten Fällen stellt der Wert von 30 Prozent für zurückgehaltene Daten ein gutes Gleichgewicht zwischen Trainings- und Testdaten dar. Es lässt sich schwer sagen, wie groß das Dataset sein soll, um ein ausreichendes Training zu gewährleisten, oder wie gering die Dichte des Trainingssatzes sein und trotzdem eine Überanpassung vermieden werden kann. Nach der Erstellung eines Modells können Sie jedoch eine Kreuzvalidierung durchführen, um das Dataset im Hinblick auf ein bestimmtes Modell zu testen.  
   
@@ -103,16 +101,16 @@ SELECT * from <structure>.CASES WHERE IsTestCase() AND <structure column name> =
   
 |Themen|Links|  
 |------------|-----------|  
-|Beschreibt die Interaktion der Modellfilter mit Trainings- und Testdatasets.|[Filter für Mining Modelle &#40;Analysis Services Data Mining-&#41;](mining-models-analysis-services-data-mining.md)|  
-|Beschreibt, wie sich die Verwendung der Trainings- und Testdaten auf die Kreuzvalidierung auswirkt.|[Übergreifende Überprüfung &#40;Analysis Services Data Mining-&#41;](cross-validation-analysis-services-data-mining.md)|  
-|Enthält Informationen über die programmgesteuerten Schnittstellen, die beim Arbeiten mit Trainings- und Testsätzen in einer Miningstruktur verwendet werden.|[AMO-Konzepte und -Objektmodell](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [MiningStructure-Element &#40;ASSL-&#41;](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
-|Stellt DMX-Syntax zum Erstellen zurückgehaltener Datasets bereit.|[Mining Struktur &#40;DMX-&#41;erstellen](/sql/dmx/create-mining-structure-dmx)|  
+|Beschreibt die Interaktion der Modellfilter mit Trainings- und Testdatasets.|[Filter für Miningmodelle &#40;Analysis Services – Data Mining&#41;](mining-models-analysis-services-data-mining.md)|  
+|Beschreibt, wie sich die Verwendung der Trainings- und Testdaten auf die Kreuzvalidierung auswirkt.|[Kreuzvalidierung &#40;Analysis Services – Data Mining&#41;](cross-validation-analysis-services-data-mining.md)|  
+|Enthält Informationen über die programmgesteuerten Schnittstellen, die beim Arbeiten mit Trainings- und Testsätzen in einer Miningstruktur verwendet werden.|[AMO-Konzepte und -Objektmodell](https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model)<br /><br /> [MiningStructure-Element &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/objects/miningstructure-element-assl)|  
+|Stellt DMX-Syntax zum Erstellen zurückgehaltener Datasets bereit.|[CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx)|  
 |Hier erhalten Sie Informationen zu Fällen in Trainings- und Testsätzen.|[Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)<br /><br /> [Abfragen der Data Mining-Schemarowsets &#40;Analysis Services Data Mining-&#41;](data-mining-schema-rowsets-ssas.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Data Mining-Tools](data-mining-tools.md)   
  [Data Mining-Konzepte](data-mining-concepts.md)   
  [Data Mining-Lösungen](data-mining-solutions.md)   
- [Testen und validieren &#40;Data Mining-&#41;](testing-and-validation-data-mining.md)  
+ [Tests und Überprüfung &#40;Data Mining&#41;](testing-and-validation-data-mining.md)  
   
   

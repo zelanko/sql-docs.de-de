@@ -11,16 +11,16 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b8812bba6d87e29ed8a4533bb87e645f42120015
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66094292"
 ---
 # <a name="installation-type"></a>Installationstyp
   Auf der Seite Installationstyp des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installations-Assistenten können Sie angeben, ob Sie eine neue Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]installieren oder einer vorhandenen Instanz Funktionen hinzufügen möchten.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Aktivieren Sie das Optionsfeld für Ihre Auswahl:  
   
 -   Neuinstallation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausführen  
@@ -31,6 +31,6 @@ ms.locfileid: "66094292"
   
  Sie können einem vorbereiteten Image von nur die von[!INCLUDE[ssDE](../../includes/ssde-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]syunp unterstützten Features und-hinzufügen. Andere Funktionen, die nicht von SysPrep unterstützt werden, können hinzugefügt werden, nachdem die vorbereitete Instanz abgeschlossen wurde.  
   
- **Hinweis** Sie können einer-Failoverclusterinstanz nach der Installation keine Funktionen hinzufügen. Wenn Sie einer vorhandenen Failoverclusterinstanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen hinzufügen möchten, müssen Sie eine Neuinstallation vornehmen, um eine separate Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu installieren.  
+ **Hinweis** Nach der Installation einer Failoverclusterinstanz können keine Funktionen mehr hinzugefügt werden. Wenn Sie einer vorhandenen Failoverclusterinstanz [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen hinzufügen möchten, müssen Sie eine Neuinstallation vornehmen, um eine separate Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu installieren.  
   
   

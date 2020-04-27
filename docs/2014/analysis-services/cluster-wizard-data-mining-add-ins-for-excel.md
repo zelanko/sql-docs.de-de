@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d93f676aec67b5d791924cbbda8f71a966d5bbc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087809"
 ---
 # <a name="cluster-wizard-data-mining-add-ins-for-excel"></a>Cluster-Assistent (Data Mining-Add-Ins für Excel)
@@ -65,7 +65,7 @@ ms.locfileid: "66087809"
   
  Mit dem Parameter CLUSTER_SEED können Sie den Anfangswert festlegen und sicherstellen, dass wiederholte Modelle, die dasselbe Dataset verwenden, die gleichen Ergebnisse liefern.  
   
-### <a name="requirements"></a>Requirements (Anforderungen)  
+### <a name="requirements"></a>Anforderungen  
  Zum Verwenden des Cluster-Assistenten muss eine Verbindung mit einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbank bestehen. Weitere Informationen finden Sie unter [Herstellen einer Verbindung mit Quelldaten &#40;Data Mining-Client für Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

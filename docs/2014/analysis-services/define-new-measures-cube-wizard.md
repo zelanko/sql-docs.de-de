@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f526c1327f67bdcf84dce44e670eb195de9a96a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66082111"
 ---
 # <a name="define-new-measures-cube-wizard"></a>Neue Measures definieren (Cube-Assistent)
   Auf der Seite **Neue Measures definieren** können Sie neue Measures für einen Cube erstellen, der ohne Datenquelle erstellt wird.  
   
 > [!NOTE]  
->  Diese Seite wird nur angezeigt, wenn Sie auf der Seite **Erstellungs Methode auswählen** **die Option Tabellen in der Datenquelle generieren** ausgewählt haben.  
+>  Diese Seite wird nur angezeigt, wenn Sie auf der Seite **Erstellungsmethode auswählen** die Option **Tabellen in der Datenquelle generieren** ausgewählt haben.  
   
 ## <a name="select-measures-from-template-options"></a>Measures aus der Vorlage auswählen (Optionen)  
   
 > [!NOTE]  
->  Die in diesem Abschnitt aufgeführten Optionen werden nur angezeigt, wenn Sie auf der Seite **Erstellungs Methode auswählen** eine Vorlage aus **Vorlage** ausgewählt haben.  
+>  Die in diesem Abschnitt aufgeführten Optionen werden nur angezeigt, wenn Sie auf der Seite **Erstellungsmethode auswählen** unter **Vorlage** eine Vorlage ausgewählt haben.  
   
  **Measures aus der Vorlage auswählen**  
  Zeigt die Measures der Cubevorlage an, die für den Cube verwendet werden soll.  
@@ -88,7 +88,7 @@ ms.locfileid: "66082111"
   
  Zum Ändern der Aggregation klicken Sie auf die Aggregation, und wählen Sie dann einen Datentyp aus der Liste aus.  
   
- **Stuben**  
+ **X**  
  Entfernt das neue Measure aus dem Cube.  
   
  Wenn Sie ein neu hinzugefügtes Measure aus dem Cube entfernen möchten, klicken Sie auf die Schaltfläche **X** des betreffenden Measures.  

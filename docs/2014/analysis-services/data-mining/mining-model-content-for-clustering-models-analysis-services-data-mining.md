@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a733b434e428f7486c235f4efc923adfa4b14949
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083682"
 ---
 # <a name="mining-model-content-for-clustering-models-analysis-services---data-mining"></a>Mingingmodellinhalt von Clustermodellen (Analysis Services - Data Mining)
@@ -37,10 +37,10 @@ ms.locfileid: "66083682"
   
  Der übergeordnete Knoten enthält nützliche statistische Daten, die die tatsächliche Verteilung aller Trainingsfälle beschreiben. Diese statistischen Daten befinden sich in der geschachtelten Tabellenspalte NODE_DISTRIBUTION. Beispielsweise enthält die folgende Tabelle einige Zeilen der Tabelle NODE_DISTRIBUTION, die die Verteilung der demografischen Kundendaten aus dem Clustermodell `TM_Clustering`beschreibt, das Sie im [Tutorial zu Data Mining-Grundlagen](../../tutorials/basic-data-mining-tutorial.md)erstellen:  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|Varianz|VALUE_TYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Alias|PROBABILITY|Varianz|VALUE_TYPE|  
 |---------------------|---------------------|-------------|-----------------|--------------|-----------------|  
-|Alter|Missing|0|0|0|1 (Missing)|  
-|Alter|44.9016152716593|12939|1|125.663453102554|3 (Continuous)|  
+|Age|Missing|0|0|0|1 (Missing)|  
+|Age|44.9016152716593|12939|1|125.663453102554|3 (Continuous)|  
 |Geschlecht|Missing|0|0|0|1 (Missing)|  
 |Geschlecht|F|6350|0.490764355823479|0|4 (Discrete)|  
 |Geschlecht|M|6589|0.509235644176521|0|4 (Discrete)|  
@@ -75,7 +75,7 @@ ms.locfileid: "66083682"
  NODE_TYPE  
  Ein Clusteringmodell gibt die folgenden Knotentypen aus:  
   
-|Knoten-ID und Name|BESCHREIBUNG|  
+|Knoten-ID und Name|Beschreibung|  
 |----------------------|-----------------|  
 |1 (Model)|Stammknoten des Modells|  
 |5 (Cluster)|Enthält die Anzahl der im Cluster enthaltenen Fälle, die Merkmale der im Cluster enthaltenen Fälle und Statistiken, welche die Werte des Clusters beschreiben.|  
@@ -89,23 +89,23 @@ ms.locfileid: "66083682"
  CHILDREN_CARDINALITY  
  Eine Schätzung der Anzahl untergeordneter Elemente des Knotens.  
   
- Über **geordneter Knoten** Gibt die Anzahl der Cluster im Modell an.  
+ **Übergeordneter Knoten** Gibt die Anzahl von Clustern im Modell an.  
   
- **Cluster Knoten** Immer 0.  
+ **Clusterknoten** Stets 0.  
   
  PARENT_UNIQUE_NAME  
  Der eindeutige Name des dem Knoten übergeordneten Elements.  
   
- Über **geordneter Knoten** Immer NULL  
+ **Übergeordneter Knoten** Stets NULL.  
   
- **Cluster Knoten** Normalerweise 000.  
+ **Clusterknoten** In der Regel 000.  
   
  NODE_DESCRIPTION  
  Eine Beschreibung des Knotens.  
   
- Über **geordneter Knoten** Immer **(alle)**.  
+ **Übergeordneter Knoten** Stets **(Alle)**.  
   
- **Cluster Knoten** Eine durch Trennzeichen getrennte Liste der primären Attribute, die den Cluster von anderen Clustern unterscheiden.  
+ **Clusterknoten** Eine durch Trennzeichen getrennte Liste der primären Attribute, durch die sich der Cluster von anderen Clustern unterscheidet.  
   
  NODE_RULE  
  Wird für Clusteringmodelle nicht verwendet.  
@@ -114,9 +114,9 @@ ms.locfileid: "66083682"
  Wird für Clusteringmodelle nicht verwendet.  
   
  NODE_PROBABILITY  
- Die diesem Knoten zugeordnete Wahrscheinlichkeit. Über **geordneter Knoten** Immer 1.  
+ Die diesem Knoten zugeordnete Wahrscheinlichkeit. **Übergeordneter Knoten** Stets 1.  
   
- **Cluster Knoten** Die Wahrscheinlichkeit repräsentiert die zusammengesetzte Wahrscheinlichkeit der Attribute, wobei einige Anpassungen vorgenommen werden, abhängig vom Algorithmus, der zum Erstellen des Clustering-Modells verwendet wird.  
+ **Clusterknoten** Die Wahrscheinlichkeit repräsentiert die zusammengesetzte Wahrscheinlichkeit der Attribute, wobei einige Anpassungen vorgenommen werden, die von dem zur Erstellung des Clusteringmodells verwendeten Algorithmus abhängen.  
   
  MARGINAL_PROBABILITY  
  Die Wahrscheinlichkeit für das Erreichen des Knotens vom übergeordneten Knoten aus. In einem Clusteringmodell entspricht die marginale Wahrscheinlichkeit immer der Knotenwahrscheinlichkeit.  
@@ -124,16 +124,16 @@ ms.locfileid: "66083682"
  NODE_DISTRIBUTION  
  Eine Tabelle, die das Wahrscheinlichkeitshistogramm des Knotens enthält.  
   
- Über **geordneter Knoten** Weitere Informationen finden Sie in der Einführung zu diesem Thema.  
+ **Übergeordneter Knoten** Siehe die Einführung zu diesem Thema.  
   
- **Cluster Knoten** Stellt die Verteilung von Attributen und Werten für Fälle dar, die in diesem Cluster enthalten sind.  
+ **Clusterknoten** Stellt die Verteilung der Attribute und Werte für die Fälle dar, die zu diesem Cluster gehören.  
   
  NODE_SUPPORT  
- Die Anzahl der Fälle, die diesen Knoten unterstützen. Über **geordneter Knoten** Gibt die Anzahl der Trainings Fälle für das gesamte Modell an.  
+ Die Anzahl der Fälle, die diesen Knoten unterstützen. **Übergeordneter Knoten** Gibt die Anzahl der Trainingsfälle für das gesamte Modell an.  
   
- **Cluster Knoten** Gibt die Größe des Clusters als Anzahl von Fällen an.  
+ **Clusterknoten** Gibt die Größe des Clusters als Anzahl von Fällen an.  
   
- **Hinweis** Wenn das Modell K-Means-Clustering verwendet, kann jeder Fall nur zu einem Cluster gehören. Verwendet das Modell dagegen die EM-Clusteringmethode, kann jeder Fall zu verschiedenen Clustern gehören, und jedem Fall wird für jedes Cluster, zu dem er gehört, ein gewichteter Abstand zugewiesen. Daher ist bei EM-Modellen die Summe der Unterstützungswerte für ein einzelnes Cluster größer als der Unterstützungswert für das Gesamtmodell.  
+ **Hinweis** Wenn das Modell die K-Means-Clusteringmethode verwendet, kann jeder Fall nur zu einem Cluster gehören. Verwendet das Modell dagegen die EM-Clusteringmethode, kann jeder Fall zu verschiedenen Clustern gehören, und jedem Fall wird für jedes Cluster, zu dem er gehört, ein gewichteter Abstand zugewiesen. Daher ist bei EM-Modellen die Summe der Unterstützungswerte für ein einzelnes Cluster größer als der Unterstützungswert für das Gesamtmodell.  
   
  MSOLAP_MODEL_COLUMN  
  Wird für Clusteringmodelle nicht verwendet.  
@@ -141,20 +141,19 @@ ms.locfileid: "66083682"
  MSOLAP_NODE_SCORE  
  Zeigt die dem Knoten zugeordnete Bewertung an.  
   
- Über **geordneter Knoten** Die BIC-Bewertung (bayyesian Information Kriterium) für das Clustering-Modell.  
+ **Übergeordneter Knoten** Der BIC-Wert (Bayesian Information Criterion) des Clustermodells.  
   
- **Cluster Knoten** Immer 0.  
+ **Clusterknoten** Stets 0.  
   
  MSOLAP_NODE_SHORT_CAPTION  
  Eine zu Anzeigezwecken verwendete Beschriftung. Diese Beschriftung kann nicht geändert werden.  
   
- Über **geordneter Knoten** Der Modelltyp: Cluster Modell  
+ **Übergeordneter Knoten** Der Typ des Modells: Clusteringmodell.  
   
- **Cluster Knoten** Der Name des Clusters. Beispiel: Cluster 1.  
+ **Clusterknoten** Der Name des Clusters. Beispiel: Cluster 1.  
   
-## <a name="remarks"></a>Bemerkungen  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt mehrere Methoden zum Erstellen eines Clusteringmodells bereit. Wenn Sie nicht wissen, mithilfe welcher Methode das Modell, mit dem Sie arbeiten, erstellt wurde, können Sie die Modellmetadaten entweder programmgesteuert über einen ADOMD-Client oder über AMO oder durch Abfragen des Data Mining-Schemarowsets abrufen. Weitere Informationen finden Sie unter [Abfragen der Parameter, mit denen ein Miningmodell erstellt wird](query-the-parameters-used-to-create-a-mining-model.md).  
+## <a name="remarks"></a>Hinweise  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt mehrere Methoden zum Erstellen eines Clusteringmodells bereit. Wenn Sie nicht wissen, mithilfe welcher Methode das Modell, mit dem Sie arbeiten, erstellt wurde, können Sie die Modellmetadaten entweder programmgesteuert über einen ADOMD-Client oder über AMO oder durch Abfragen des Data Mining-Schemarowsets abrufen. Weitere Informationen finden Sie unter [Abfragen der Parameter, mit denen ein Miningmodell erstellt wird](query-the-parameters-used-to-create-a-mining-model.md).  
   
 > [!NOTE]  
 >  Struktur und Inhalt des Modells werden weder durch die verwendete Clusteringmethode noch die Parameter beeinflusst.  

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 933b56aaa6e364ce55cac8832fc577acc061d510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083640"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Miningmodellinhalt von linearen Regressionsmodellen (Analysis Services – Data Mining)
@@ -45,9 +45,9 @@ ms.locfileid: "66083640"
  Name des Modells.  
   
  ATTRIBUTE_NAME  
- Stamm **Knoten:** Blitz  
+ **Stammknoten:** Leer  
   
- **Regressions Knoten:** Der Name des vorhersagbaren Attributs.  
+ **Regressionsknoten:** Der Name des vorhersagbaren Attributs.  
   
  NODE_NAME  
  Entspricht immer NODE_UNIQUE_NAME.  
@@ -58,23 +58,23 @@ ms.locfileid: "66083640"
  NODE_TYPE  
  Ein lineares Regressionsmodell gibt die folgenden Knotentypen aus:  
   
-|Knotentyp-ID|type|BESCHREIBUNG|  
+|Knotentyp-ID|type|Beschreibung|  
 |------------------|----------|-----------------|  
 |25|Regressionsstrukturstamm|Enthält die Formel, die die Beziehung zwischen der Eingabe- und der Ausgabevariablen beschreibt.|  
   
  NODE_CAPTION  
  Eine Bezeichnung oder Beschriftung, die dem Knoten zugeordnet ist. Diese Eigenschaft dient hauptsächlich zu Anzeigezwecken.  
   
- Stamm **Knoten:** Blitz  
+ **Stammknoten:** Leer  
   
- **Regressions Knoten:** Allen.  
+ **Regressionsknoten:** Alle.  
   
  CHILDREN_CARDINALITY  
  Eine Schätzung der Anzahl untergeordneter Elemente des Knotens.  
   
- Stamm **Knoten:** Gibt die Anzahl der Regressions Knoten an. Ein Regressionsknoten wird für jedes vorhersagbare Attribut im Modell erstellt.  
+ **Stammknoten:** Weist auf die Anzahl der Regressionsknoten hin. Ein Regressionsknoten wird für jedes vorhersagbare Attribut im Modell erstellt.  
   
- **Regressions Knoten:** Immer 0.  
+ **Regressionsknoten:** Immer 0.  
   
  PARENT_UNIQUE_NAME  
  Der eindeutige Name des dem Knoten übergeordneten Elements. Für Knoten auf der Stammebene wird NULL zurückgegeben.  
@@ -82,9 +82,9 @@ ms.locfileid: "66083640"
  NODE_DESCRIPTION  
  Eine Beschreibung des Knotens.  
   
- Stamm **Knoten:** Blitz  
+ **Stammknoten:** Leer  
   
- **Regressions Knoten:** Allen.  
+ **Regressionsknoten:** Alle.  
   
  NODE_RULE  
  Wird für lineare Regressionsmodelle nicht verwendet.  
@@ -95,23 +95,23 @@ ms.locfileid: "66083640"
  NODE_PROBABILITY  
  Die diesem Knoten zugeordnete Wahrscheinlichkeit.  
   
- Stamm **Knoten:** 0  
+ **Stammknoten:** 0  
   
- **Regressions Knoten:** 1  
+ **Regressionsknoten:** 1  
   
  MARGINAL_PROBABILITY  
  Die Wahrscheinlichkeit für das Erreichen des Knotens vom übergeordneten Knoten aus.  
   
- Stamm **Knoten:** 0  
+ **Stammknoten:** 0  
   
- **Regressions Knoten:** 1  
+ **Regressionsknoten:** 1  
   
  NODE_DISTRIBUTION  
  Eine geschachtelte Tabelle, die Statistiken über die Werte im Knoten bereitstellt.  
   
- Stamm **Knoten:** 0  
+ **Stammknoten:** 0  
   
- **Regressions Knoten:** Eine Tabelle, die die Elemente enthält, die zum Erstellen der Regressions Formel verwendet werden. Ein Regressionsknoten enthält die folgenden Werttypen:  
+ **Regressionsknoten:** Eine Tabelle, die die Elemente enthält, die verwendet werden, um die Regressionsformel zu erstellen. Ein Regressionsknoten enthält die folgenden Werttypen:  
   
 |VALUETYPE|  
 |---------------|  
@@ -125,9 +125,9 @@ ms.locfileid: "66083640"
  NODE_SUPPORT  
  Die Anzahl der Fälle, die diesen Knoten unterstützen.  
   
- Stamm **Knoten:** 0  
+ **Stammknoten:** 0  
   
- **Regressions Knoten:** Anzahl der Trainings Fälle.  
+ **Regressionsknoten:** Anzahl der Trainingsfälle.  
   
  MSOLAP_MODEL_COLUMN  
  Name des vorhersagbaren Attributs.  
@@ -138,23 +138,23 @@ ms.locfileid: "66083640"
  MSOLAP_NODE_SHORT_CAPTION  
  Eine zu Anzeigezwecken verwendete Beschriftung.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Wenn Sie ein Modell mit dem [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression-Algorithmus erstellen, generiert die Data Mining-Engine eine besondere Instanz eines Entscheidungsstrukturmodells und liefert Parameter, die die Struktur darauf beschränkt, alle Trainingsdaten in einem einzelnen Knoten zu enthalten. Alle kontinuierlichen Eingaben werden als potenzielle Regressoren gekennzeichnet und als solche bewertet, aber nur diejenigen Regressoren, die den Daten entsprechen, werden als Regressoren in das endgültige Modell übernommen. Die Analyse erzeugt entweder eine einzelne Regressionsformel für jeden Regressor oder keine Regressionsformel.  
   
  Sie können die vollständige Regressionsformel unter **Mininglegende**einsehen, indem Sie auf den Knoten **(Alle)** im [Microsoft Struktur-Viewer](browse-a-model-using-the-microsoft-tree-viewer.md)klicken.  
   
  Wenn Sie ein Entscheidungsstrukturmodell erstellen, das ein kontinuierliches, vorhersagbares Attribut enthält, verfügt die Struktur zuweilen über Regressionsknoten, die die Eigenschaften von Regressionsstrukturknoten aufweisen.  
   
-##  <a name="NodeDist_Regression"></a>Knoten Verteilung für kontinuierliche Attribute  
+##  <a name="node-distribution-for-continuous-attributes"></a><a name="NodeDist_Regression"></a> Knotenverteilung für kontinuierliche Attribute  
  Die meisten der wichtigen Informationen in einem Regressionsknoten sind in der NODE_DISTRIBUTION-Tabelle enthalten. Im folgenden Beispiel wird das Layout der NODE_DISTRIBUTION-Tabelle veranschaulicht. In diesem Beispiel wurde die Targeted Mailing-Miningstruktur verwendet, um ein lineares Regressionsmodell zu erstellen, das basierend auf dem Alter das Kundeneinkommen vorhersagt. Das Modell dient lediglich Anschauungszwecken, da es mithilfe der bestehenden [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] -Beispieldaten und -Miningstruktur leicht erstellt werden kann.  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|Varianz|VALUETYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Alias|PROBABILITY|Varianz|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
 |Yearly Income|Missing|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  
-|Alter|471.687717702463|0|0|126.969442359327|7|  
-|Alter|234.680904692439|0|0|0|8|  
-|Alter|45.4269617936399|0|0|126.969442359327|9|  
+|Age|471.687717702463|0|0|126.969442359327|7|  
+|Age|234.680904692439|0|0|0|8|  
+|Age|45.4269617936399|0|0|126.969442359327|9|  
 ||35793.5477381267|0|0|1012968919.28372|11|  
   
  Die NODE_DISTRIBUTION-Tabelle enthält mehrere Zeilen, die jeweils durch eine Variable gruppiert sind. Die ersten zwei Zeilen sind immer die Werttypen 1 und 3 und beschreiben das Zielattribut. Die folgenden Zeilen stellen Details über die Formel für einen besonderen *Regressor*bereit. Ein Regressor ist eine Eingangsvariable, die eine lineare Beziehung mit der Ausgabevariablen hat. Es sind mehrere Regressoren möglich und jeder Regressor verfügt über eine separate Zeile für den Koeffizienten (VALUETYPE = 7), den Ergebnisgewinn (VALUETYPE = 8) und die Statistik (VALUETYPE = 9). Schließlich verfügt die Tabelle über eine Zeile, die das konstante Glied der Gleichung (VALUETYPE = 11) enthält.  
@@ -162,8 +162,7 @@ ms.locfileid: "66083640"
 ### <a name="elements-of-the-regression-formula"></a>Elemente der Regressionsformel  
  Die geschachtelte NODE_DISTRIBUTION-Tabelle enthält jedes Element der Regressionsformel in einer separaten Zeile. Die ersten beiden Zeilen von Daten in den Beispielergebnissen enthalten Informationen über das vorhersagbare Attribut **Yearly Income**, das die unabhängige Variable modelliert. In der Spalte SUPPORT wird die Anzahl der Fälle gezeigt, die die beiden Status dieses Attributs unterstützen: entweder stand ein Wert **Yearly Income** zur Verfügung oder der Wert **Yearly Income** fehlte.  
   
- Die Spalte VARIANCE gibt Aufschluss über die berechnete Varianz des vorhersagbaren Attributs. *Varianz* ist ein Maß für die Verteilung der Werte in einem Beispiel, angesichts der erwarteten Verteilung. Die Varianz wird berechnet, indem der durchschnittliche Wert der quadratischen Abweichung vom Mittelwert genommen wird. Die Quadratwurzel der Varianz wird auch als Standardabweichung bekannt. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt die Standardabweichung nicht bereit; Sie können diese jedoch leicht berechnen.  
+ Die Spalte VARIANCE gibt Aufschluss über die berechnete Varianz des vorhersagbaren Attributs. *Varianz* ist ein Maß dafür, wie zerstreut die Werte in einem Beispiel angesichts einer erwarteten Verteilung sind. Die Varianz wird berechnet, indem der durchschnittliche Wert der quadratischen Abweichung vom Mittelwert genommen wird. Die Quadratwurzel der Varianz wird auch als Standardabweichung bekannt. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt die Standardabweichung nicht bereit; Sie können diese jedoch leicht berechnen.  
   
  Für jeden Regressor werden drei Zeilen ausgegeben. Sie enthalten den Koeffizienten, den Ergebnisgewinn und die Regressorstatistik.  
   

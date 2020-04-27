@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73a3058b0e7836c96f15e876f5cf4b5f2cf8bedc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085352"
 ---
 # <a name="create-a-prediction-query-using-the-prediction-query-builder"></a>erstellt eine Vorhersage mithilfe des Generators für Vorhersageabfragen
@@ -31,9 +31,9 @@ ms.locfileid: "66085352"
   
 -   **Ergebnis**  
   
- Im **Entwurfs** Modus können Sie eine Vorhersage Abfrage erstellen, indem Sie Eingabedaten auswählen, dem Modell die Daten zuordnet und dann Vorhersagefunktionen in Anweisungen hinzufügen, die Sie mithilfe des Rasters erstellt haben. Der Entwurfsbereich enthält diese Bausteine:  
+ Mit dem**Entwurfsmodus** können Sie eine Vorhersageabfrage erstellen, indem Sie die Eingabedaten auswählen, dem Modell die Daten zuordnen und anschließend die Vorhersagefunktionen den Anweisungen hinzufügen, die Sie durch die Verwendung des Rasters erstellt haben. Der Entwurfsbereich enthält diese Bausteine:  
   
- **`Source`**  
+ **Quelle**  
  Wählen Sie die Quelle der neuen Spalte aus. Sie können Spalten aus dem Miningmodell, in der Datenquellenansicht enthaltene Eingabetabellen, eine Vorhersagefunktion oder einen benutzerdefinierten Ausdruck verwenden.  
   
  **Feld**  
@@ -45,7 +45,7 @@ ms.locfileid: "66085352"
  **Anzeigen**  
  Bestimmt, ob die Auswahl in der Spalte **Quelle** in den Ergebnissen angezeigt wird.  
   
- **Gruppe**  
+ **Kreis**  
  Verwendet die Spalte **Und/Oder** , um Ausdrücke mithilfe von Klammern zu gruppieren. Beispielsweise (expr1 oder expr2) und expr3.  
   
  **Und/oder**  
@@ -54,9 +54,9 @@ ms.locfileid: "66085352"
  **Kriterium/Argument**  
  Gibt eine Bedingung oder einen benutzerdefinierten Ausdruck an, der auf die Spalte angewendet wird. Sie können Spalten aus den Tabelle in die Zelle ziehen.  
   
- Der **Abfrage** Modus bietet einen Text-Editor, der Ihnen direkten Zugriff auf die Sprache der Data Mining-Erweiterungen (Data Mining Extensions, DMX) sowie eine Ansicht der Eingabedaten und Modell Spalten ermöglicht. Wenn Sie den **Abfragemodus** auswählen, wird das Raster, mit dessen Hilfe Sie die Abfrage definiert haben, durch einen einfachen Texteditor ersetzt. Sie können diesen Editor verwenden, um von Ihnen erstellte Abfragen zu kopieren und zu speichern oder um sie in vorhandene DMX-Abfragen aus der Zwischenablage einzufügen und sie auszuführen.  
+ Im**Abfragemodus** steht ein Text-Editor bereit, mit dem Sie direkt auf die Data Mining-Erweiterungssprache (DMX) zugreifen können, und mit dem Sie Eingabedaten und Modellspalten anzeigen können. Wenn Sie den **Abfragemodus** auswählen, wird das Raster, mit dessen Hilfe Sie die Abfrage definiert haben, durch einen einfachen Texteditor ersetzt. Sie können diesen Editor verwenden, um von Ihnen erstellte Abfragen zu kopieren und zu speichern oder um sie in vorhandene DMX-Abfragen aus der Zwischenablage einzufügen und sie auszuführen.  
   
- Die **Ergebnis** Ansicht führt die aktuelle Abfrage aus und zeigt die Ergebnisse in einem Raster an. Wenn sich die zugrunde liegenden Daten geändert haben und Sie die Abfrage erneut ausführen möchten, klicken Sie auf der Statusleiste auf die Schaltfläche zum Abspielen.  
+ In der**Ergebnissicht** werden die aktuelle Abfrage ausgeführt und die Ergebnisse in einem Raster angezeigt. Wenn sich die zugrunde liegenden Daten geändert haben und Sie die Abfrage erneut ausführen möchten, klicken Sie auf der Statusleiste auf die Schaltfläche zum Abspielen.  
   
  Sie können eine Data Mining-Abfrage entwerfen, indem Sie die visuellen Tools und den Texteditor zusammen verwenden. Wenn Sie im Texteditor Änderungen an der Abfrage vornehmen und zurück zur **Entwurfsansicht** wechseln, gehen alle Änderungen verloren. Die Abfragen werden dann zur ursprünglichen Abfrage zurückgesetzt, die mit dem Generator für Vorhersageabfragen erstellt wurde.  
   

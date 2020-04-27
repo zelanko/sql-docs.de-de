@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6857ece2f81ffdba839ec1a7f0ef420ec5d0acdf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086603"
 ---
 # <a name="cube-or-model-properties-dialog-box-ssas"></a>Dialogfeld für Cube- oder Modelleigenschaften (SSAS)
@@ -30,20 +30,20 @@ ms.locfileid: "66086603"
   
 -   [Dialog Feld "proaktives Zwischenspeichern &#40;Partitions Eigenschaften&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 |Begriff|Definition|  
 |----------|----------------|  
 |**Name**|Zeigt den Namen vom Cube oder Modell an.|  
-|**id**|Zeigt den Bezeichner vom Cube oder Modell an.|  
+|**ID**|Zeigt den Bezeichner vom Cube oder Modell an.|  
 |**Beschreibung**|Zeigt die Beschreibung vom Cube oder Modell an.|  
 |**Timestamp erstellen**|Zeigt den Zeitpunkt (Datum und Uhrzeit) an, zu dem der Cube oder das Modell erstellt wurde.|  
-|**Letzte Schema Aktualisierung**|Zeigt den Zeitpunkt (Datum und Uhrzeit) an, zu dem die Metadaten des Cubes oder Modells zuletzt aktualisiert wurden.|  
+|**Letztes Schemaupdate**|Zeigt den Zeitpunkt (Datum und Uhrzeit) an, zu dem die Metadaten des Cubes oder Modells zuletzt aktualisiert wurden.|  
 |**Verarbeitungsmodus des Skriptcaches**|Wählen Sie den Verarbeitungsmodus aus, der für den Skriptcache vom Cube oder Modell verwendet werden soll. Weitere Informationen zu den Werten für diese Eigenschaft finden Sie unter <xref:Microsoft.AnalysisServices.Cube.ScriptCacheProcessingMode%2A>.|  
 |**Verarbeitungsmodus**|Wählen Sie den Verarbeitungsmodus aus, der für den Cube oder das Modell zu verwenden ist. Weitere Informationen zu den Werten für diese Eigenschaft finden Sie unter <xref:Microsoft.AnalysisServices.Cube.ProcessingMode%2A>.|  
 |**Speicherort**|Geben Sie den Ordner ein, der als Standardspeicherort für Measuregruppen und Partitionen zu verwenden ist, die dem Cube oder Modell zugewiesen sind. Klicken Sie alternativ auf die Schaltfläche mit den Auslassungszeichen (**...**), um zur Auswahl eines Ordners das Dialogfeld **Nach Remoteordner suchen** anzuzeigen. Weitere Informationen zum Dialogfeld **Nach Remoteordner suchen** finden Sie unter [Dialogfeld „Nach Remoteordner suchen“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).<br /><br /> Weitere Informationen zu den Werten für diese Eigenschaft finden Sie unter <xref:Microsoft.AnalysisServices.Cube.StorageLocation%2A>.|  
 |**State**|Zeigt den Verarbeitungsstatus vom Cube oder Modell an. Weitere Informationen zu den Werten für diese Eigenschaft finden Sie unter <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
-|**Zuletzt verarbeitet**|Zeigt den Zeitpunkt (Datum und Uhrzeit) an, zu dem der Cube oder das Modell zuletzt verarbeitet wurde.|  
+|**LastProcessed**|Zeigt den Zeitpunkt (Datum und Uhrzeit) an, zu dem der Cube oder das Modell zuletzt verarbeitet wurde.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Analysis Services Designer und Dialog Felder &#40;Mehrdimensionale Daten&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

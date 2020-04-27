@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97132ff64405df19c56c080cc5a1baa704a700d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083766"
 ---
 # <a name="microsoft-time-series-algorithm"></a>Microsoft Time Series-Algorithmus
@@ -80,11 +80,11 @@ ms.locfileid: "66083766"
   
  Für Zeitreihenmodelle gelten folgende Anforderungen:  
   
--   **Eine einzelne Schlüsselzeit Spalte** Jedes Modell muss eine numerische Spalte oder Datums Spalte enthalten, die als Fallreihe verwendet wird. diese definiert die Zeit Scheiben, die vom Modell verwendet werden. Beim Datentyp der Schlüsselzeitspalte kann es sich entweder um einen datetime-Datentyp oder um einen numerischen Datentyp handeln. Die Spalte muss jedoch fortlaufende Werte enthalten, und die Werte müssen für jede Reihe eindeutig sein. Die Fallreihe für ein Zeitreihenmodell kann nicht in zwei Spalten gespeichert sein, beispielsweise in einer Jahres- und in einer Monatsspalte.  
+-   **Eine einzelne Schlüsselzeitspalte** Jedes Modell muss eine numerische oder Datumsspalte enthalten, die als Fallserie verwendet wird. Diese definiert die Zeitscheiben, die das Modell verwendet. Beim Datentyp der Schlüsselzeitspalte kann es sich entweder um einen datetime-Datentyp oder um einen numerischen Datentyp handeln. Die Spalte muss jedoch fortlaufende Werte enthalten, und die Werte müssen für jede Reihe eindeutig sein. Die Fallreihe für ein Zeitreihenmodell kann nicht in zwei Spalten gespeichert sein, beispielsweise in einer Jahres- und in einer Monatsspalte.  
   
--   **Vorhersagbare Spalte** Jedes Modell muss mindestens eine vorhersagbare Spalte enthalten, um die der Algorithmus das Zeitreihen Modell erstellt. Der Datentyp der vorhersagbaren Spalte muss fortlaufende Werte enthalten. Sie können beispielsweise vorhersagen, wie sich numerische Attribute, z. B. Einkommen, Verkäufe oder Temperatur, im Laufe der Zeit ändern. Sie können als vorhersagbare Spalte jedoch keine Spalte mit diskreten Werten wie Kaufstatus oder Bildungsgrad verwenden.  
+-   **Eine vorhersagbare Spalte** Jedes Modell muss mindestens eine vorhersagbare Spalte enthalten, auf deren Grundlage der Algorithmus das Zeitreihenmodell erstellt. Der Datentyp der vorhersagbaren Spalte muss fortlaufende Werte enthalten. Sie können beispielsweise vorhersagen, wie sich numerische Attribute, z. B. Einkommen, Verkäufe oder Temperatur, im Laufe der Zeit ändern. Sie können als vorhersagbare Spalte jedoch keine Spalte mit diskreten Werten wie Kaufstatus oder Bildungsgrad verwenden.  
   
--   **Eine optionale Reihen Schlüssel Spalte** Jedes Modell kann eine zusätzliche Schlüssel Spalte mit eindeutigen Werten enthalten, die eine Reihe identifizieren. Die optionale Reihenschlüsselspalte muss eindeutige Werte enthalten. Ein einzelnes Modell kann z. B. Verkaufszahlen für viele Produktmodelle enthalten, solange für jeden Produktnamen in jeder Zeitscheibe nur ein Datensatz vorhanden ist.  
+-   **Eine optionale Reihenschlüsselspalte** Jedes Modell kann eine zusätzliche Schlüsselspalte mit eindeutigen Werten aufweisen, die eine Reihe identifizieren. Die optionale Reihenschlüsselspalte muss eindeutige Werte enthalten. Ein einzelnes Modell kann z. B. Verkaufszahlen für viele Produktmodelle enthalten, solange für jeden Produktnamen in jeder Zeitscheibe nur ein Datensatz vorhanden ist.  
   
  Es gibt verschiedene Methoden, Eingabedaten für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series-Modell zu definieren. Da das Format der Eingabefälle jedoch die Definition des Miningmodells beeinflusst, müssen Sie die Anforderungen Ihres Unternehmens berücksichtigen und die Daten entsprechend aufbereiten. Die beiden folgenden Beispiele zeigen, wie die Eingabedaten das Modell beeinflussen. In beiden Beispielen enthält das vollständige Miningmodell Muster für vier unterschiedliche Reihen:  
   
@@ -142,7 +142,7 @@ ms.locfileid: "66083766"
   
 -   Ein Zeitreihenmodell kann gelegentlich auch stark abweichende Vorhersagen erstellen; dies hängt vom 64-Bit-Betriebssystem des Servers ab. Grund für diese Abweichungen ist die unterschiedliche Darstellung und Verarbeitung von Gleitkommazahlen in einem [!INCLUDE[vcpritanium](../../includes/vcpritanium-md.md)]-basierten System, die sich von der Berechnung durch ein [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]-basiertes System unterscheiden. Da die Vorhersageergebnisse für das Betriebssystem spezifisch sein können, empfiehlt es sich, Modelle auf dem gleichen Betriebssystem auszuwerten, das Sie in der Produktion verwenden.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
   
 -   Unterstützt nicht die Verwendung von PMML (Predictive Model Markup Language) zum Erstellen von Miningmodellen.  
   
@@ -157,6 +157,6 @@ ms.locfileid: "66083766"
  [Durchsuchen eines Modells mit dem Microsoft Time Series-Viewer](browse-a-model-using-the-microsoft-time-series-viewer.md)   
  [Technische Referenz für den Microsoft Time Series-Algorithmus](microsoft-time-series-algorithm-technical-reference.md)   
  [Abfrage Beispiele für Zeitreihen Modelle](time-series-model-query-examples.md)   
- [Mining Modell Inhalt von Zeitreihen Modellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
+ [Miningmodellinhalt von Zeitreihenmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-time-series-models-analysis-services-data-mining.md)  
   
   

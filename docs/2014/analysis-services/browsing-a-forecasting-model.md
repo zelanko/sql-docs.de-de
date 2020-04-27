@@ -17,25 +17,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 830aea002e8000feeda061f42af9084696ed6fe8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088491"
 ---
 # <a name="browsing-a-forecasting-model"></a>Durchsuchen eines Planungsmodells
   Wenn Sie ein Vorhersagemodell mithilfe von **Durchsuchen**öffnen, wird das Modell in einem interaktiven Viewer angezeigt, der dem Zeitreihen Modell [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Viewer in ähnelt. Mithilfe des Viewers können Sie Trends untersuchen, Reihen vergleichen, Vorhersagen erstellen und Informationen zum Modell und zu den zugrunde liegenden Daten abrufen.  
   
-##  <a name="bkmk_Top"></a>Untersuchen des Modells  
+##  <a name="explore-the-model"></a><a name="bkmk_Top"></a>Untersuchen des Modells  
  Der **Such Viewer für** Vorhersagemodelle bietet eine Diagramm Ansicht, in der die Trends im Laufe der Zeit angezeigt werden, und Sie können Vorhersagen erstellen, und eine Modell Ansicht, die die Zeitreihe als Entscheidungsstruktur oder Regressions Struktur darstellt.  
   
--   [Diagramm Ansicht](#bkmk_charts)  
+-   [Diagrammansicht](#bkmk_charts)  
   
 -   [Modell Ansicht](#bkmk_Model)  
   
  Um mit einem Vorhersagemodell zu experimentieren, können Sie die Beispiel Daten auf der Registerkarte "vorhersagen" der Beispiel Daten-Arbeitsmappe verwenden und ein Zeitreihen Modell mithilfe des Planungs- [Assistenten &#40;Data Mining-Add-Ins für Excel&#41;](forecast-wizard-data-mining-add-ins-for-excel.md) im **Data Mining** -Menüband erstellen oder [&#40;Tabellenanalyse Tools für Excel&#41;](forecast-table-analysis-tools-for-excel.md) auf dem Menüband **analysieren** erstellen.  
   
-###  <a name="bkmk_charts"></a>Fluss  
+###  <a name="chart"></a><a name="bkmk_charts"></a>Fluss  
  Die Registerkarte **Diagramm** zeigt den Trend in der Datenreihe im Laufe der Zeit sowie die vorhergesagten Werte an. Die vertikale Achse des Diagramms stellt die Werte der Reihe dar, und die horizontale Achse stellt die Zeit dar.  
   
 ##### <a name="explore-the-forecasting-chart"></a>Untersuchen des Prognosediagramms  
@@ -66,7 +66,7 @@ ms.locfileid: "66088491"
   
      Mithilfe der Fehlerindikatoren können Sie die Variabilität der Vorhersagen visuell bewerten. Die Qualität der Vorhersagen hängt von den Quelldaten ab. Wenn Sie die Anzahl der Vorhersageschritte erhöhen, sollten Sie jedoch einen stetigen Anstieg der Abweichungen feststellen.  
   
- **Chti**  
+ **Tipps**  
   
 -   Zum Umschalten der Anzeige der **Mining Legende**klicken Sie mit der rechten Maustaste auf einen beliebigen Punkt im Diagramm.  
   
@@ -86,7 +86,7 @@ ms.locfileid: "66088491"
   
  [Untersuchen des Modells](#bkmk_Top)  
   
-###  <a name="bkmk_Model"></a>Modells  
+###  <a name="model"></a><a name="bkmk_Model"></a>Modells  
  Ein Planungsmodell kann auch als Entscheidungsstruktur oder, bei einer größtenteils linearen Reihe, als Regressionsmodell dargestellt werden.  
   
  In diesem Modell liegt zum Beispiel basierend auf einer bestimmten Bedingung ein Unterschied in der Regressionsformel vor, sodass die Struktur in zwei Verzweigungen mit einer jeweils unterschiedlichen Regressionsformel aufgeteilt wird.  

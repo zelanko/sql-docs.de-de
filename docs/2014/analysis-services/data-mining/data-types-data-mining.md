@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc810f56d552fa17cb027598a25bde114a696375
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084801"
 ---
 # <a name="data-types-data-mining"></a>Datentypen (Data Mining)
@@ -28,8 +28,7 @@ ms.locfileid: "66084801"
   
  Wenn beispielsweise numerische Daten in einer Spalte enthalten sind, können Sie entscheiden, diese als numerischen Datentyp oder als Textdatentyp zu behandeln. Wenn Sie den numerischen Datentyp wählen, können Sie mehrere Inhaltstypen festlegen: Sie können die Zahlen diskretisieren oder als kontinuierliche Werte behandeln. Eine Liste aller Inhaltstypen finden Sie unter [Inhaltstypen &#40;Data Mining&#41;](content-types-data-mining.md).  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt die folgenden Datentypen für Miningstrukturspalten:  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] unterstützt die folgenden Datentypen für Miningstrukturspalten:  
   
 |Datentyp|Unterstützte Inhaltstypen|  
 |---------------|-----------------------------|  

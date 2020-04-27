@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e4d9b0eaa65eada55fec398b058d8e17aaa53a03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084368"
 ---
 # <a name="import-a-data-mining-project-using-the-analysis-services-import-wizard"></a>Importieren eines Data Mining-Projekts mithilfe des Analysis Services-Import-Assistenten
@@ -54,11 +54,11 @@ ms.locfileid: "66084368"
   
      Klicken Sie auf **Weiter**.  
   
-5.  Die Seite **Assistenten abschließen**zeigt den Fortschritt beim Import an. Sie können den Vorgang nicht abbrechen oder die Objekte ändern, die importiert werden. Klicken Sie **abschließend auf Fertig** stellen.  
+5.  Die Seite **Assistenten abschließen**zeigt den Fortschritt beim Import an. Sie können den Vorgang nicht abbrechen oder die Objekte ändern, die importiert werden. Klicken Sie anschließend auf **Fertig stellen** .  
   
      Das neue Projekt wird automatisch mit [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]geöffnet.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Projekteigenschaften &#40;tabellarischen SSAS-&#41;](../tabular-models/properties-ssas-tabular.md)  
+ [Projekteigenschaften &#40;SSAS – tabellarisch&#41;](../tabular-models/properties-ssas-tabular.md)  
   
   

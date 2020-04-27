@@ -19,17 +19,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 48bbb9eeacc1e3ba2bd31ef10b47b058f0f57239
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66086548"
 ---
 # <a name="currency-conversions-analysis-services"></a>Währungsumrechnungen (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]** Nur mehrdimensional  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verwendet eine Kombination von Funktionen, die durch MDX-Skripts (Multidimensional Expressions) bestimmt werden, um für Cubes, die mehrere Währungen unterstützen, Währungsumrechnungen bereitzustellen.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verwendet eine Kombination von Funktionen, die durch MDX-Skripts (Multidimensional Expressions) bestimmt werden, um für Cubes, die mehrere Währungen unterstützen, Währungsumrechnungen bereitzustellen.  
   
 ## <a name="currency-conversion-terminology"></a>Terminologie zur Währungsumrechung  
  Die folgende Terminologie wird in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verwendet, um die Funktionen zur Währungsumrechnung zu beschreiben:  
@@ -106,9 +105,9 @@ ms.locfileid: "66086548"
   
 |||||  
 |-|-|-|-|  
-|Wechselkursrichtung|**N:1**|**1: n**|**n:n**|  
-|**n Pivotwährung zu 1 Beispiel Währung**|Multiplizieren Sie das umzurechnende Measure mit dem Wechselkursmeasure für die lokale Währung, um das Measure in die Pivotwährung umzurechnen.|Dividieren Sie das umzurechnende Measure durch das Wechselkursmeasure für die Berichtswährung, um das Measure in die Berichtswährung umzurechnen.|Multiplizieren Sie das umzurechnende Measure mit dem Wechselkursmeasure für die lokale Währung, um das Measure in die Pivotwährung umzurechnen. Dividieren Sie anschließend das umgerechnete Measure durch das Wechselkursmeasure für die Berichtswährung, um das Measure in die Berichtswährung umzurechnen.|  
-|**n Beispiel Währung zu 1 Pivotwährung**|Dividieren Sie das umzurechnende Measure durch das Wechselkursmeasure für die lokale Währung, um das Measure in die Pivotwährung umzurechnen.|Multiplizieren Sie das umzurechnende Measure mit dem Wechselkursmeasure für die Berichtswährung, um das Measure in die Berichtswährung umzurechnen.|Dividieren Sie das umzurechnende Measure durch das Wechselkursmeasure für die lokale Währung, um das Measure in die Pivotwährung umzurechnen. Multiplizieren Sie anschließend das umgerechnete Measure mit dem Wechselkursmeasure für die Berichtswährung, um das Measure in die Berichtswährung umzurechnen.|  
+|Wechselkursrichtung|**n:1**|**1:n**|**n:n**|  
+|**n Pivotwährung zu 1 Beispielwährung**|Multiplizieren Sie das umzurechnende Measure mit dem Wechselkursmeasure für die lokale Währung, um das Measure in die Pivotwährung umzurechnen.|Dividieren Sie das umzurechnende Measure durch das Wechselkursmeasure für die Berichtswährung, um das Measure in die Berichtswährung umzurechnen.|Multiplizieren Sie das umzurechnende Measure mit dem Wechselkursmeasure für die lokale Währung, um das Measure in die Pivotwährung umzurechnen. Dividieren Sie anschließend das umgerechnete Measure durch das Wechselkursmeasure für die Berichtswährung, um das Measure in die Berichtswährung umzurechnen.|  
+|**n Beispielwährung zu 1 Pivotwährung**|Dividieren Sie das umzurechnende Measure durch das Wechselkursmeasure für die lokale Währung, um das Measure in die Pivotwährung umzurechnen.|Multiplizieren Sie das umzurechnende Measure mit dem Wechselkursmeasure für die Berichtswährung, um das Measure in die Berichtswährung umzurechnen.|Dividieren Sie das umzurechnende Measure durch das Wechselkursmeasure für die lokale Währung, um das Measure in die Pivotwährung umzurechnen. Multiplizieren Sie anschließend das umgerechnete Measure mit dem Wechselkursmeasure für die Berichtswährung, um das Measure in die Berichtswährung umzurechnen.|  
   
  Wählen Sie die Wechselkursrichtung im Business Intelligence-Assistenten auf der Seite **Optionen für die Währungsumrechnung festlegen** aus. Weitere Informationen zum Festlegen der Umrechnungsrichtung finden Sie unter [Optionen für die Währungsumrechnung festlegen &#40;Business Intelligence-Assistent&#41;](set-currency-conversion-options-business-intelligence-wizard.md).  
   
@@ -126,13 +125,13 @@ ms.locfileid: "66086548"
 ### <a name="conversion-types"></a>Umrechnungstypen  
  Der Business Intelligence-Assistent unterstützt drei verschiedene Währungsumrechnungstypen:  
   
--   **1: n**  
+-   **1:n**  
   
      Transaktionen, die in der Faktentabelle in der Pivotwährung gespeichert sind und dann in mindestens eine Berichtswährung umgerechnet werden.  
   
      Die Pivotwährung kann z.&#160;B. auf US-Dollar (USD) festgelegt werden, und die Transaktionen werden in der Faktentabelle in USD gespeichert. Dieser Umrechnungstyp rechnet diese Transaktionen von der Pivotwährung in die angegebenen Berichtswährungen um. Daraus resultiert, dass die Transaktionen in der angegebenen Pivotwährung gespeichert und entweder in der Pivotwährung oder in einer der Berichtswährungen, die in der für die Währungsumrechnung definierten Berichtswährungsdimension angegeben wurden, angezeigt werden.  
   
--   **N:1**  
+-   **n:1**  
   
      Transaktionen, die in der Faktentabelle in der lokalen Währung gespeichert werden und anschließend in die Pivotwährung umgerechnet werden. Die Pivotwährung dient als die einzige angegebene Berichtswährung in der Berichtswährungsdimension.  
   

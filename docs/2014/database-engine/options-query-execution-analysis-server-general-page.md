@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 9d299e8ffc5faceb86bcccd6bd508f09ef3c80b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089414"
 ---
 # <a name="options-query-execution-analysis-server-general-page"></a>Optionen (Abfrage Ausführung-Analysis-Server Seite "Allgemein")
@@ -26,7 +26,7 @@ ms.locfileid: "66089414"
  **Ausführungs Timeout**  
  Legt den Standardwert im Dialogfeld **Neue Verbindung** fest. Dieses Feld enthält die Zeit (in Sekunden), nach der die Abfrage abgebrochen wird. Der Wert 0 gibt eine unbegrenzte Wartezeit oder kein Timeout an. Dieser Wert ist bei einer neuen Installation 0 (null).  
   
- **Auf Standard zurücksetzen**  
+ **Standard wiederherstellen**  
  Setzt alle auf dieser Seite verfügbaren Werte auf die ursprünglichen Standardwerte zurück.  
   
   

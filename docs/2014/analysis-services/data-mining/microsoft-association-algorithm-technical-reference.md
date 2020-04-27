@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 30310cf891d8b5e7ef9a32b5a8e7254cbca2ecd0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084127"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Technische Referenz für den Microsoft Association-Algorithmus
@@ -42,11 +42,11 @@ ms.locfileid: "66084127"
  Zuordnungsmodelle können auch für numerische Attribute verwendet werden. Wenn die Attribute fortlaufend sind, können die Zahlen *diskretisiert* oder in Buckets gruppiert werden. Die diskretisierten Werte können dann entweder als boolesche Werte oder Attribut/Wert-Paare behandelt werden.  
   
 ### <a name="support-probability-and-importance"></a>Unterstützung, Wahrscheinlichkeit und Wichtigkeit  
- Die *Unterstützung*, bei der issometimes als *Frequency*bezeichnet wird, gibt die Anzahl der Fälle an, die das Ziel Element oder die gewünschte Kombination von Elementen enthalten. Nur Elemente, die mindestens die angegebene Menge an Unterstützung haben, können im Modell enthalten sein.  
+ *Unterstützung*, mitunter auch als *Häufigkeit*bezeichnet, steht für die Anzahl der Fälle, in denen das entsprechende Element oder die entsprechende Elementkombination enthalten ist. Nur Elemente, die mindestens die angegebene Menge an Unterstützung haben, können im Modell enthalten sein.  
   
  Ein *häufig enthaltenes Itemset* bezieht sich auf eine Sammlung von Elementen, bei denen die Elementkombination Unterstützung über dem durch den Parameter MINIMUM_SUPPORT definierten Schwellenwert erhält. Wenn das Itemset beispielsweise {A,B,C} lautet und der Wert MINIMUM_SUPPORT 10 beträgt, muss jedes einzelne Element A, B und C in mindestens 10 Fällen vorhanden sein, um in das Modell aufgenommen zu werden. Die Elementkombination {A,B,C} muss ebenfalls in mindestens 10 Fällen enthalten sein.  
   
- **Hinweis** Sie können die Anzahl der Itemsets in einem Mining Modell auch steuern, indem Sie die maximale Länge eines Itemsets angeben, wobei length die Anzahl der Elemente angibt.  
+ **Hinweis** : Sie können die Anzahl der Itemsets in einem Miningmodell auch steuern, indem Sie die maximale Länge eines Itemsets angeben, wobei Länge in diesem Fall für die Anzahl der Elemente steht.  
   
  Standardmäßig stellt die Unterstützung für ein bestimmtes Element oder Itemset die Anzahl der Fälle dar, die das Element bzw. die Elemente enthalten. Sie können den Wert MINIMUM_SUPPORT auch als prozentualen Anteil der Gesamtfälle im Dataset ausdrücken, indem Sie die Zahl als eine Dezimalzahl kleiner als 1 eingeben. Wenn Sie für MINIMUM_SUPPORT einen Wert von 0,03 angeben, bedeutet dies, dass mindestens 3 Prozent der Gesamtfälle im Dataset dieses Element oder Itemset enthalten müssen, damit es in das Modell aufgenommen wird. Experimentieren Sie mit dem Modell, um festzustellen, ob die Angabe der Anzahl oder des prozentualen Anteils sinnvoller ist.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "66084127"
   
  Gilt für die Miningmodellspalte.  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
  Ein Associationmodell muss eine Schlüsselspalte, Eingabespalten und eine einzelne vorhersagbare Spalte enthalten.  
   
 ### <a name="input-and-predictable-columns"></a>Eingabespalten und vorhersagbare Spalten  
@@ -164,6 +164,6 @@ ms.locfileid: "66084127"
 ## <a name="see-also"></a>Weitere Informationen  
  [Microsoft Association-Algorithmus](microsoft-association-algorithm.md)   
  [Beispiele für Zuordnungs Modell Abfragen](association-model-query-examples.md)   
- [Mining Modell Inhalt von Zuordnungs Modellen &#40;Analysis Services Data Mining-&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
+ [Miningmodellinhalt von Zuordnungsmodellen &#40;Analysis Services – Data Mining&#41;](mining-model-content-for-association-models-analysis-services-data-mining.md)  
   
   

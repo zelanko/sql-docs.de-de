@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 07138beba90f3f863d81a24c7c92b2d9fd4a4276
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66088287"
 ---
 # <a name="calculations-cube-designer-analysis-services---multidimensional-data"></a>Berechnungen (Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
@@ -34,7 +34,7 @@ ms.locfileid: "66088287"
      Diese Ansicht zeigt für fortgeschrittene Benutzer das gesamte MDX-Skript an, das dem Cube zugeordnet ist. Außerdem werden Metadaten, Funktionen und Tools angezeigt, die für den Cube verfügbar sind.  
   
 ## <a name="panes"></a>Bereiche  
- **Symbolleiste**  
+ **Suchfeld**  
  Mithilfe der Symbolleiste in der Formular-und der Skript Ansicht können Sie allgemeine Vorgänge auf dieser Registerkarte ausführen. Weitere Informationen zu diesem Bereich finden Sie unter [Symbolleiste &#40;Registerkarte "Berechnungen", Cube-Designer&#41; &#40;Analysis Services-Multidimensional Data&#41;](toolbar-calculations-tab-cube-designer-analysis-services-multidimensional-data.md).  
   
  **Skriptplaner**  

@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4bf6c8146e8f3b5f6222affb3709439c37fc5023
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66089939"
 ---
 # <a name="options-text-editor---file-extension-page"></a>Optionen (Text-Editor – Seite „Dateierweiterung“)
@@ -22,8 +22,8 @@ ms.locfileid: "66089939"
   
  Wenn Sie aus der Dropdownliste **Editor** eine Option „mit Codierung“ auswählen, wird ein Dialogfeld angezeigt, sobald Sie ein Dokument dieses Typs öffnen. In diesem Dialogfeld können Sie für dieses Dokument ein Codierungsschema auswählen. Das kann hilfreich sein, wenn Sie Versionen Ihrer Skripts für die Verwendung in einem anderen Betriebssystem oder in verschiedenen Zielsprachen vorbereiten.  
   
-## <a name="options"></a>Tastatur  
- **Durchwahl**  
+## <a name="options"></a>Optionen  
+ **Erweiterung**  
  Geben Sie eine Dateierweiterung ein.  
   
  **Editor**  
@@ -35,7 +35,7 @@ ms.locfileid: "66089939"
  **Remove**  
  Löst den ausgewählten Eintrag aus der Liste **Erweiterung**.  
   
- **Durchwahl**  
+ **Erweiterung**  
  Führt alle Erweiterung auf, für die ein Editor angegeben wurde.  
   
  **Bearbeitungsart**  

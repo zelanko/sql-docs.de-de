@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ce2086e998704e893beaa92aabd2e51129a0450f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66084211"
 ---
 # <a name="manually-edit-a-prediction-query"></a>Manuelles Bearbeiten eine Vorhersageabfrage
@@ -45,6 +45,6 @@ ms.locfileid: "66084211"
 ## <a name="see-also"></a>Weitere Informationen  
  [Data Mining-Abfragen](data-mining-queries.md)   
  [Vorhersage Abfrage-Generator &#40;Data Mining-&#41;](../prediction-query-builder-data-mining.md)   
- [Lektion 6: Erstellen und arbeiten mit Vorhersagen &#40;Lernprogramm zu Data Mining-Grundlagen&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
+ [Lektion 6: Erstellen und Verwenden von Vorhersagen &#40;Tutorial zu Data Mining-Grundlagen&#41;](../../tutorials/lesson-6-creating-and-working-with-predictions-basic-data-mining-tutorial.md)  
   
   

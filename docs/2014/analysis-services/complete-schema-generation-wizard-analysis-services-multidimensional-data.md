@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6491d0a73aa28d8dd396bf1befa321ed6f1cb9b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087742"
 ---
 # <a name="completing-the-wizard-schema-generation-wizard-analysis-services---multidimensional-data"></a>Assistenten abschließen (Schemagenerierungs-Assistent) (Analysis Services – Mehrdimensionale Daten)
   Auf der Seite **Assistenten abschließen** können Sie die getroffene Auswahl bestätigen und das neue Projekt sowie die Datenquellensichten erstellen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Zusammenfassung**  
  Zeigt die festgelegten Optionen an.  
   

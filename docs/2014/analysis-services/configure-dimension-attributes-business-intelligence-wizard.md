@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5fe43b53878744586c3d0d8ec5719d6241b0a302
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66087448"
 ---
 # <a name="configure-dimension-attributes-business-intelligence-wizard"></a>Dimensionsattribute konfigurieren (Business Intelligence-Assistent)
   Mithilfe der Seite **Dimensionsattribute konfigurieren** können Sie die Dimensionsattribute den Typen von Attributen zuordnen, die von [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verwendet werden, um Attribute für Kontodimensionen zu identifizieren.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Dimensionstyp**  
  Zeigt den ausgewählten Dimensionstyp an.  
   

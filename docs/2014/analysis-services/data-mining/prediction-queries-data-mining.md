@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a1026597a0ae000b91e088d2457b3c9dd607044b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083120"
 ---
 # <a name="prediction-queries-data-mining"></a>Vorhersageabfragen (Data Mining)
@@ -32,15 +32,15 @@ ms.locfileid: "66083120"
   
  [Grundlegender Entwurf von Vorhersage Abfragen](#bkmk_PredQuery)  
   
--   [Fügen von Vorhersagefunktionen](#bkmk_PredFunc)  
+-   [Hinzufügen von Vorhersagefunktionen](#bkmk_PredFunc)  
   
 -   [SINGLETON-Abfragen](#bkmk_SingletonQuery)  
   
 -   [Batch Vorhersage Abfragen](#bkmk_BatchQuery)  
   
- [Arbeiten mit den Ergebnissen von Abfragen](#bkmk_WorkResults)  
+ [Arbeiten mit den Abfrageergebnissen](#bkmk_WorkResults)  
   
-##  <a name="bkmk_PredQuery"></a>Grundlegender Entwurf von Vorhersage Abfragen  
+##  <a name="basic-prediction-query-design"></a><a name="bkmk_PredQuery"></a> Grundentwurf von Vorhersageabfragen  
  Wenn Sie eine Vorhersage erstellen, geben Sie in der Regel neue Daten an und lassen das Modell auf Basis dieser neuen Daten eine Vorhersage erstellen.  
   
 -   Bei einer Batchvorhersageabfrage ordnen Sie das Modell mit einem *PREDICTION JOIN*einer externen Datenquelle zu.  
@@ -55,12 +55,12 @@ ms.locfileid: "66083120"
   
  Bei Zeitreihenmodellen sind nicht immer Eingabedaten erforderlich. Es ist auch möglich, Vorhersagen ausschließlich anhand der bereits im Modell enthaltenen Daten zu generieren. Wenn Sie jedoch neue Eingabedaten angeben, müssen Sie entscheiden, ob Sie die neuen Daten zum Aktualisieren und Erweitern des Modells verwenden möchten, oder ob die Daten die ursprüngliche Datenreihe im Modell ersetzen sollen.  Weitere Informationen zu diesen Optionen finden Sie unter [Time Series Model Query Examples](time-series-model-query-examples.md).  
   
-###  <a name="bkmk_PredFunc"></a>Fügen von Vorhersagefunktionen  
+###  <a name="adding-prediction-functions"></a><a name="bkmk_PredFunc"></a>Fügen von Vorhersagefunktionen  
  Sie können nicht nur einen Wert vorhersagen, sondern eine Vorhersageabfrage anpassen, um verschiedene Arten von Informationen, die mit der Vorhersage verknüpft sind, zurückzugeben. Wenn durch die Vorhersage z. B. eine Liste mit Produktempfehlungen für einen Kunden erstellt wird, können Sie auch die Wahrscheinlichkeit für jede Vorhersage ermitteln, eine Rangfolge erstellen und dem Benutzer nur die besten Empfehlungen präsentieren.  
   
  Dazu müssen Sie der Abfrage *Vorhersagefunktionen* hinzufügen. Jedes Modell oder jeder Abfragetyp unterstützt bestimmte Funktionen. Clustermodelle unterstützen beispielsweise spezielle Vorhersagefunktionen, die zusätzliche Details über die vom Modell vorgenommenen Cluster bereitstellen, wohingegen Zeitreihenmodelle über Funktionen zur Berechnung der Unterschiede im zeitlichen Verlauf verfügen. Es gibt auch allgemeine Vorhersagefunktionen, die mit fast allen Modelltypen funktionieren. Eine Liste der Vorhersagefunktionen, die in verschiedenen Abfragen unterstützt werden, finden Sie unter folgendem Thema in der DMX-Referenz: [Allgemeine Vorhersagefunktionen &#40;DMX&#41;](/sql/dmx/general-prediction-functions-dmx).  
   
-###  <a name="bkmk_SingletonQuery"></a>Erstellen von SINGLETON-Vorhersage Abfragen  
+###  <a name="creating-singleton-prediction-queries"></a><a name="bkmk_SingletonQuery"></a>Erstellen von SINGLETON-Vorhersage Abfragen  
  Eine SINGLETON-Vorhersageabfrage ist nützlich, wenn Sie schnelle Vorhersagen in Echtzeit erstellen möchten. Ein häufiges Szenario sind z. B. Informationen vom Kunden, die etwa über ein Formular auf einer Website abgerufen wurden und als Eingabedaten für eine SINGLETON-Vorhersageabfrage verwendet werden. Wenn ein Kunde z. B. ein Produkt aus einer Liste auswählt, können Sie diese Auswahl als Eingabe für eine Abfrage verwenden, die eine Liste geeigneter Produktempfehlungen erstellt.  
   
  SINGLETON-Vorhersageabfragen erfordern keine separate Tabelle mit Eingaben. Sie stellen stattdessen eine oder mehrere Zeilen mit Werten als Eingabe für das Modell bereit, und die Vorhersagen werden in Echtzeit zurückgegeben.  
@@ -70,7 +70,7 @@ ms.locfileid: "66083120"
   
  Beim Erstellen einer SINGLETON-Vorhersageabfrage müssen Sie die neuen Daten in Form einer PREDICTION JOIN-Anweisung für das Modell bereitstellen. Dies bedeutet, dass Sie zwar keine Zuordnung zu einer tatsächlichen Tabelle vornehmen, jedoch dennoch sicherstellen müssen, dass die neuen Daten mit den vorhandenen Spalten des Miningmodells übereinstimmen. Wenn die neuen Datenspalten und die neuen Daten genau übereinstimmen, übernimmt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Zuordnung der Spalten. Dies wird als *NATURAL PREDICTION JOIN*bezeichnet. Wenn die Spalten jedoch nicht übereinstimmen oder die neuen Daten nicht dieselbe Art und Menge von Daten enthalten wie das Modell, müssen Sie angeben, welche Spalten im Modell den neuen Daten zuzuordnen sind, oder Sie legen die fehlenden Werte fest.  
   
-###  <a name="bkmk_BatchQuery"></a>Batch Vorhersage Abfragen  
+###  <a name="batch-prediction-queries"></a><a name="bkmk_BatchQuery"></a> Batchvorhersageabfragen  
  Eine Batchvorhersageabfrage ist nützlich, wenn Sie externe Daten vorliegen haben, die Sie für Vorhersagen verwenden möchten. Angenommen, Sie haben ein Modell erstellt, das Kunden anhand ihrer Onlineaktivität und Kaufhistorie kategorisiert. Sie können dieses Modell auf eine Liste neu abgerufener Werte anwenden, um Projektionen für Verkäufe zu erstellen oder Ziele für vorgeschlagene Kampagnen zu identifizieren.  
   
  Wenn Sie einen PREDICTION JOIN ausführen, müssen Sie die Spalten im Modell den Spalten in der neuen Datenquelle zuordnen. Daher muss die Datenquelle, die Sie für die Eingabe auswählen, Daten enthalten, die denen im Modell zumindest ähneln. Die neuen Informationen müssen nicht exakt übereinstimmen und dürfen unvollständig sein. Beispiel: Angenommen, das Modell wurde mit Informationen zu Einkommen und Alter trainiert, doch die Kundenliste, die Sie für Vorhersagen verwenden, enthält nur Angaben zum Alter und nicht zum Einkommen. In diesem Szenario können die neuen Daten immer noch dem Modell zugeordnet werden, und es kann eine Vorhersage für jeden Kunden erstellt werden. Wenn das Einkommen jedoch ein wichtiger Vorhersagefaktor für das Modell sein sollte, würde das Fehlen vollständiger Informationen die Qualität der Vorhersagen beeinflussen.  
@@ -84,14 +84,14 @@ ms.locfileid: "66083120"
   
  Wenn Sie einen PREDICTION JOIN mit DMX erstellen, können Sie die externe Datenquelle anhand der Befehle OPENQUERY, OPENROWSET oder SHAPE angeben. Die Standard-Datenzugriffsmethode in den DMX-Vorlagen ist OPENQUERY. Informationen zu diesen Methoden finden Sie unter [Quelldatenabfrage &#60;source data query&#62;](/sql/dmx/source-data-query).  
   
-###  <a name="bkmk_TSQuery"></a>Vorhersagen in Zeitreihen-Mining Modellen  
+###  <a name="predictions-in-time-series-mining-models"></a><a name="bkmk_TSQuery"></a> Vorhersagen für Zeitreihenminingmodelle  
  Zeitreihenmodelle unterscheiden sich von anderen Modelltypen. Sie können entweder das unveränderte Modell verwenden, um Vorhersagen zu treffen, oder Sie können neue Daten für das Modell bereitstellen, um das Modell zu aktualisieren und Vorhersagen auf Grundlage der aktuellen Trends zu erstellen. Wenn Sie neue Daten hinzufügen, können Sie angeben, wie die neuen Daten verwendet werden sollen.  
   
--   Das *Erweitern der Modell Fälle* bedeutet, dass Sie die neuen Daten der vorhandenen Datenreihe im Zeitreihen Modell hinzufügen. Damit basieren alle nachfolgenden Vorhersagen auf der neuen, kombinierten Reihe. Diese Option empfiehlt sich, wenn Sie einem vorhandenen Modell lediglich einige Datenpunkte hinzufügen möchten.  
+-   Beim*Erweitern der Modellfälle* werden die neuen Daten der vorhandenen Datenreihe im Zeitreihenmodell hinzugefügt. Damit basieren alle nachfolgenden Vorhersagen auf der neuen, kombinierten Reihe. Diese Option empfiehlt sich, wenn Sie einem vorhandenen Modell lediglich einige Datenpunkte hinzufügen möchten.  
   
      Angenommen, es ist ein Zeitreihenmodell vorhanden, das mit Umsatzdaten vom vergangenen Jahr trainiert wurde. Nachdem Sie einige Monate neue Umsatzdaten gesammelt haben, möchten Sie Ihre Verkaufsprognosen für das laufende Jahr aktualisieren. Sie können einen PREDICTION JOIN erstellen, der das Modell durch Hinzufügen neuer Daten aktualisiert und es um neue Vorhersagen erweitert.  
   
--   Das *Ersetzen der Modell Fälle* bedeutet, dass Sie das trainierte Modell beibehalten, aber die zugrunde liegenden Fälle durch einen neuen Satz von Falldaten ersetzen. Diese Option ist nützlich, wenn Sie den Trend im Modell behalten, diesen aber auf einen anderen Satz von Daten anwenden möchten.  
+-   Beim*Ersetzen der Modellfälle* behalten Sie das trainierte Modell bei, ersetzen jedoch die zugrunde liegenden Fälle durch einen Satz neuer Falldaten. Diese Option ist nützlich, wenn Sie den Trend im Modell behalten, diesen aber auf einen anderen Satz von Daten anwenden möchten.  
   
      Das ursprüngliche Modell könnte z. B. mit einem Satz von Daten mit sehr hohen Verkaufsvolumen trainiert worden sein. Wenn Sie die zugrunde liegenden Daten durch eine neue Reihe (vielleicht aus einer Filiale mit niedrigerem Verkaufsvolumen) ersetzen, wird der Trend beibehalten, aber die Vorhersagen beginnen mit den Werten der neuen ersetzten Reihe.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66083120"
   
  Weitere Informationen zum Erstellen von PREDICTION JOINS für Zeitreihenmodelle finden Sie unter [Abfragebeispiel Zeitreihenmodell](time-series-model-query-examples.md) oder [PredictTimeSeries &#40;DMX&#41;](/sql/dmx/predicttimeseries-dmx).  
   
-##  <a name="bkmk_WorkResults"></a>Arbeiten mit den Ergebnissen einer Vorhersage Abfrage  
+##  <a name="working-with-the-results-of-a-prediction-query"></a><a name="bkmk_WorkResults"></a> Arbeiten mit den Ergebnissen einer Vorhersageabfrage  
  Die Optionen zum Speichern der Ergebnisse einer Data Mining-Vorhersageabfrage unterscheiden sich abhängig von der Methode der Abfragenerstellung.  
   
 -   Wenn Sie mit dem Vorhersage-Abfrage-Generator entweder in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]eine Abfrage erstellen, können Sie die Ergebnisse einer Vorhersageabfrage in einer vorhandenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenquelle speichern. Weitere Informationen finden Sie unter [Anzeigen und Speichern der Ergebnisse einer Vorhersageabfrage](view-and-save-the-results-of-a-prediction-query.md).  
@@ -123,7 +123,7 @@ FROM
   
  Die Ergebnisse dieser Abfrage sind zwei Spalten, und zwar jeweils eine Spalte für jede vorhergesagte Reihe, wobei jede Zeile eine geschachtelte Tabelle mit den vorhergesagten Werten enthält:  
   
- **Vorhersagen**  
+ **PredictedAmount**  
   
 |$TIME|Amount|  
 |-----------|------------|  
@@ -133,7 +133,7 @@ FROM
 |-----------|------------|  
 |201102|363390.68|  
   
- **Prätedqty**  
+ **PredictedQty**  
   
 |$TIME|Menge|  
 |-----------|--------------|  
@@ -147,6 +147,6 @@ FROM
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Inhalts Abfragen &#40;Data Mining-&#41;](content-queries-data-mining.md)   
- [Daten Definitions Abfragen &#40;Data Mining-&#41;](data-definition-queries-data-mining.md)  
+ [Datendefinitionsabfragen &#40;Data Mining&#41;](data-definition-queries-data-mining.md)  
   
   

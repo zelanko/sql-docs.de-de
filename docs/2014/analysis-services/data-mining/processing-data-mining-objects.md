@@ -18,18 +18,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65c61f6e4b571880b6607bb647d2629a3b6864f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66083148"
 ---
 # <a name="processing-data-mining-objects"></a>Verarbeiten von Data Mining-Objekten
-  Ein Data Mining-Objekt ist vor seiner Verarbeitung nur ein leerer Container. Die *Verarbeitung* eines Data Mining Modells wird auch als *Training*bezeichnet.  
+  Ein Data Mining-Objekt ist vor seiner Verarbeitung nur ein leerer Container. Die*Verarbeitung* eines Data Mining-Modells wird auch als *Training*bezeichnet.  
   
- **Verarbeiten von Mining Strukturen:** Eine Mining Struktur Ruft Daten aus einer externen Datenquelle ab, wie Sie durch die Spalten Bindungen und Verwendungs Metadaten definiert ist, und liest die Daten. Diese Daten werden vollständig gelesen und anschließend analysiert, um verschiedene statistische Informationen zu extrahieren. Analysis Services speichert eine kurze Darstellung der Daten, die für die Analyse durch Data Mining-Algorithmen geeignet ist, in einem lokalen Cache. Sie können diesen Cache entweder beibehalten oder löschen, nachdem die Modelle verarbeitet wurden. Standardmäßig wird der Cache gespeichert. Weitere Informationen finden Sie unter [Process a Mining Structure](process-a-mining-structure.md).  
+ **Verarbeiten von Miningstrukturen:** Eine Miningstruktur ruft Daten von einer externen Datenquelle ab, die über die Spaltenbindungen und Verwendungsmetadaten definiert ist, und liest die Daten. Diese Daten werden vollständig gelesen und anschließend analysiert, um verschiedene statistische Informationen zu extrahieren. Analysis Services speichert eine kurze Darstellung der Daten, die für die Analyse durch Data Mining-Algorithmen geeignet ist, in einem lokalen Cache. Sie können diesen Cache entweder beibehalten oder löschen, nachdem die Modelle verarbeitet wurden. Standardmäßig wird der Cache gespeichert. Weitere Informationen finden Sie unter [Process a Mining Structure](process-a-mining-structure.md).  
   
- **Verarbeiten von Mining Modellen:** Ein Mining Modell ist leer und enthält nur Definitionen, bis es verarbeitet wird. Um ein Miningmodell verarbeiten zu können, muss zuerst die zugrunde liegende Miningstruktur verarbeitet werden. Das Miningmodell erhält die Daten aus dem Cache der Miningstruktur, wendet die Filter an, die ggf. für das Modell erstellt wurden, und übergibt dann das Dataset über den Algorithmus, um Muster zu ermitteln. Nachdem das Modell verarbeitet wurde, speichert das Modell nur die Ergebnisse der Verarbeitung, nicht die Daten selbst. Weitere Informationen finden Sie unter [Verarbeiten eines Miningmodells](process-a-mining-model.md).  
+ **Verarbeiten von Miningmodellen:** Bis zu seiner Verarbeitung ist ein Miningmodell leer und enthält nur Definitionen. Um ein Miningmodell verarbeiten zu können, muss zuerst die zugrunde liegende Miningstruktur verarbeitet werden. Das Miningmodell erhält die Daten aus dem Cache der Miningstruktur, wendet die Filter an, die ggf. für das Modell erstellt wurden, und übergibt dann das Dataset über den Algorithmus, um Muster zu ermitteln. Nachdem das Modell verarbeitet wurde, speichert das Modell nur die Ergebnisse der Verarbeitung, nicht die Daten selbst. Weitere Informationen finden Sie unter [Verarbeiten eines Miningmodells](process-a-mining-model.md).  
   
  In der folgenden Abbildung ist jeweils der Datenfluss für die Verarbeitung einer Miningstruktur und für die Verarbeitung eines Miningmodells dargestellt.  
   
@@ -59,6 +59,6 @@ ms.locfileid: "66083148"
  [Drillthrough-Abfragen &#40;Data Mining-&#41;](drillthrough-queries-data-mining.md)   
  [Mining Strukturen &#40;Analysis Services Data Mining-&#41;](mining-structures-analysis-services-data-mining.md)   
  [Mining Modelle &#40;Analysis Services Data Mining-&#41;](mining-models-analysis-services-data-mining.md)   
- [Logische Architektur &#40;Analysis Services Data Mining-&#41;](logical-architecture-analysis-services-data-mining.md)  
+ [Logische Architektur &#40;Analysis Services – Data Mining&#41;](logical-architecture-analysis-services-data-mining.md)  
   
   

@@ -19,14 +19,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef1595ff322979a150c8854a73db5088cd8e0139
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66085471"
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>Erstellen einer DMX-Abfrage in SQL Server Management Studio
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt einen Satz von Funktionen bereit, um Sie bei der Erstellung von Vorhersage-, Inhalts- und Datendefinitionsabfragen gegen Miningmodelle und Miningstrukturen zu unterstützen.  
   
 -   Der grafische Generator für Vorhersageabfragen ist sowohl über [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] als auch [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verfügbar, um den Prozess des Schreibens von Vorhersageabfragen und des Zuordnens von Datasets zu Modellen zu vereinfachen.  
@@ -37,7 +36,7 @@ ms.locfileid: "66085471"
   
  In diesem Thema wird beschrieben, wie eine DMX-Abfrage erstellt wird, indem der Metadaten-Explorer und der DMX-Abfrage-Editor verwendet werden.  
   
-##  <a name="BKMK_Templates"></a>DMX-Abfrage Vorlagen  
+##  <a name="dmx-query-templates"></a><a name="BKMK_Templates"></a> DMX-Abfragevorlagen  
  Zum Erstellen von grundlegenden DMX-Abfragen stehen Vorlagen im Vorlagen-Explorer zur Verfügung. Der **DMX** -Ordner enthält Data Mining-Vorlagen, die in die folgenden Kategorien unterteilt sind:  
   
 -   **Modell Inhalt**  
@@ -46,19 +45,18 @@ ms.locfileid: "66085471"
   
 -   **Vorhersageabfragen**  
   
--   **Struktur Inhalt**  
+-   **Strukturieren von Inhalt**  
   
  Sie können auch benutzerdefinierte Vorlagen für jene Abfragen oder Befehle erstellen, die Sie häufig ausführen.  
   
 ## <a name="xmla-query-templates"></a>XMLA-Abfragevorlagen  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt auch Vorlagen für XMLA-Abfragen bereit.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt auch Vorlagen für XMLA-Abfragen bereit.  
   
  Zwischen den Typen der Abfragen, die Sie mit XMLA oder DMX ausführen können, tritt ein gewisses Maß an Überschneidung auf. Sie können z. B. einige Modellinhaltsabfragen erstellen, indem Sie entweder DMX oder die Data Mining-Schemarowsets verwenden. Die Schemarowsets enthalten allerdings gelegentlich Informationen, die in DMX-Inhaltsabfragen nicht verfügbar gemacht werden.  
   
  Außerdem gibt es einige wesentliche Unterschiede bezüglich der Art, wie Vorgänge in DMX oder in XMLA verarbeitet werden. Sie können XMLA z.B. verwenden, um Administratorvorgänge wie etwa die Sicherung einer gesamten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbank auszuführen. Wenn Sie jedoch ein einzelnes Miningmodell sichern möchten, stellt DMX einen einfachen Befehl bereit ([EXPORT &#40;DMX&#41;](/sql/dmx/export-dmx)), der zu diesem Zweck besser geeignet ist.  
   
-##  <a name="BKMK_Building_Queries"></a>Erstellen und Ausführen einer DMX-Abfrage  
+##  <a name="build-and-run-a-dmx-query"></a><a name="BKMK_Building_Queries"></a> Erstellen und Ausführen einer DMX-Abfrage  
   
 #### <a name="open-a-new-dmx-query-window"></a>Öffnen eines neuen DMX-Abfragefensters  
   
@@ -88,6 +86,6 @@ ms.locfileid: "66085471"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Schnittstellen für Data Mining-Abfragen](data-mining-query-tools.md)   
- [Data Mining-Erweiterungen &#40;DMX-&#41; Referenz](/sql/dmx/data-mining-extensions-dmx-reference)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   
