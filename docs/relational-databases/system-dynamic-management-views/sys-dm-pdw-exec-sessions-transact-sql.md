@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 4d559f7fb03b632fc5cfca573b2fedc72506fead
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "67899406"
 ---
 # <a name="sysdm_pdw_exec_sessions-transact-sql"></a>sys. dm_pdw_exec_sessions (Transact-SQL)
@@ -24,11 +24,11 @@ ms.locfileid: "67899406"
 
   Enthält Informationen zu allen Sitzungen, die aktuell oder zuletzt auf dem Gerät geöffnet sind. Es wird eine Zeile pro Sitzung aufgelistet.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|Range|  
+|Spaltenname|Datentyp|Beschreibung|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
-|session_id|**nvarchar (32)**|Die ID der aktuellen Abfrage oder der letzten Abfrage Ausführung (wenn die Sitzung beendet wird und die Abfrage zum Zeitpunkt der Beendigung ausgeführt wurde). Der Schlüssel für diese Ansicht.|Eindeutig in allen Sitzungen im System.|  
+|session_id|**nvarchar(32)**|Die ID der aktuellen Abfrage oder der letzten Abfrage Ausführung (wenn die Sitzung beendet wird und die Abfrage zum Zeitpunkt der Beendigung ausgeführt wurde). Der Schlüssel für diese Ansicht.|Eindeutig in allen Sitzungen im System.|  
 |status|**nvarchar (10)**|Gibt bei aktuellen Sitzungen an, ob die Sitzung zurzeit aktiv ist oder sich im Leerlauf befindet. Für vergangene Sitzungen wird der Sitzungs Status möglicherweise als geschlossen oder abgebrochen angezeigt (wenn die Sitzung zwangsweise geschlossen wurde).|"Active", "Closed", "idle", "beendet"|  
-|request_id|**nvarchar (32)**|Die ID der aktuellen Abfrage oder der letzten Abfrage.|Eindeutig für alle Anforderungen im System. NULL, wenn kein Wert ausgeführt wurde.|  
+|request_id|**nvarchar(32)**|Die ID der aktuellen Abfrage oder der letzten Abfrage.|Eindeutig für alle Anforderungen im System. NULL, wenn kein Wert ausgeführt wurde.|  
 |security_id|**varbinary(85)**|Sicherheits-ID des Prinzipals, der die Sitzung ausgeführt hat.||  
 |login_name|**nvarchar(128)**|Der Anmelde Name des Prinzipals, der die Sitzung ausgeführt hat.|Eine beliebige Zeichenfolge, die den Benennungs Konventionen für Benutzer entspricht.|  
 |login_time|**datetime**|Datum und Uhrzeit, zu denen der Benutzer angemeldet und diese Sitzung erstellt wurde.|Gültiger **DateTime** -Wert vor der aktuellen Uhrzeit.|  

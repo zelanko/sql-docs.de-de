@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 16fa57c35c2c40d307b73809c21ccfbedc54f705
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62917090"
 ---
 # <a name="move-a-database-using-detach-and-attach-transact-sql"></a>Verschieben einer Datenbank durch Trennen und Anfügen (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "62917090"
     > [!NOTE]  
     >  Wenn Sie versuchen, die Datenbank ohne Angabe der Protokolldatei anzufügen, wird die Protokolldatei an ihrem ursprünglichen Speicherort gesucht. Falls noch eine Kopie der Protokolldatei im ursprünglichen Speicherort vorhanden ist, wird diese Kopie angefügt. Wenn Sie die Verwendung der ursprünglichen Protokolldatei verhindern möchten, geben Sie entweder den Pfad der neuen Protokolldatei an, oder entfernen Sie die ursprüngliche Kopie der Protokolldatei (nachdem Sie sie an einen neuen Speicherort kopiert haben).  
   
-3.  Fügen Sie die kopierten Dateien an. Weitere Informationen finden Sie unter [Anfügen einer Datenbank](attach-a-database.md).  
+3.  Fügen Sie die kopierten Dateien an. Weitere Informationen finden Sie unter [Attach a Database](attach-a-database.md).  
   
 ## <a name="example"></a>Beispiel  
  Das folgende Beispiel erstellt eine Kopie der- [!INCLUDE[ssSampleDBnormal](../../includes/tsql-md.md)] Anweisungen, die in einem Abfrage-Editor-Fenster ausgeführt werden, das mit der Serverinstanz verbunden ist, an die angefügt ist.  
