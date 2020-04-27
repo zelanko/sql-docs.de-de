@@ -15,24 +15,23 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 0d3bf42ec031415d16ea45bc8241c85c6d937c35
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62813193"
 ---
 # <a name="behavior-changes-to-full-text-search"></a>Verhaltensänderungen der Volltextsuche
   In diesem Thema werden Verhaltensänderungen der Volltextsuche beschrieben. Ein verändertes Programmverhalten wirkt sich darauf aus, wie Funktionen in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] im Vergleich zu früheren Versionen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]funktionieren oder zusammenwirken.  
   
-## <a name="behavior-changes-in-full-text-search-in-includesssql14includessssql14-mdmd"></a>Verändertes Programmverhalten in der Volltextsuche in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="behavior-changes-in-full-text-search-in-sssql14"></a>Verändertes Programmverhalten in der Volltextsuche in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  Informationen werden später bereitgestellt.  
   
-## <a name="behavior-changes-in-full-text-search-in-includesssql11includessssql11-mdmd"></a>Verändertes Programmverhalten in der Volltextsuche in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="behavior-changes-in-full-text-search-in-sssql11"></a>Verändertes Programmverhalten in der Volltextsuche in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  Von [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] wird eine neue Version der Wörtertrennungen und der Wortstammerkennungen für amerikanisches Englisch (LCID 1033) und britisches Englisch (LCID 2057) installiert. Sie können jedoch zur früheren Version dieser Komponenten wechseln, wenn Sie das vorherige Verhalten beibehalten möchten. Weitere Informationen finden Sie unter [Ändern der für Englisch (USA) und Englisch (Vereinigtes Königreich) verwendeten Wörtertrennung](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
 ### <a name="new-word-breakers-and-stemmers-installed"></a>Neue Wörtertrennungen und Wortstammerkennungen wurden installiert  
- 
-  [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] aktualisiert alle Wörtertrennungen und Wortstammerkennungen, die von der Volltextsuche und der semantischen Suche verwendet werden. Aus Gründen der Konsistenz zwischen dem Inhalt von Indizes und den Ergebnissen von Abfragen empfiehlt es sich, dass Sie vorhandene Volltextindizes wieder auffüllen.  
+ [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] aktualisiert alle Wörtertrennungen und Wortstammerkennungen, die von der Volltextsuche und der semantischen Suche verwendet werden. Aus Gründen der Konsistenz zwischen dem Inhalt von Indizes und den Ergebnissen von Abfragen empfiehlt es sich, dass Sie vorhandene Volltextindizes wieder auffüllen.  
   
 1.  Es gibt neue Wörtertrennungen für Englisch. Informationen zum Beibehalten des vorherigen Verhaltens finden Sie unter [Change the Word Breaker Used for US English and UK English](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md).  
   
@@ -45,7 +44,7 @@ ms.locfileid: "62813193"
   
  Wenn Sie das vorherige Verhalten der Wörtertrennungen und der Wortstammerkennungen beibehalten müssen, finden Sie weitere Informationen in den folgenden Themen:  
   
--   [Ändern der für Englisch (USA) und Englisch (Vereinigtes Königreich) verwendeten Wörtertrennung](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)  
+-   [Ändern der für Englisch (USA) und Englisch (Großbritannien) verwendeten Wörtertrennung](../relational-databases/search/change-the-word-breaker-used-for-us-english-and-uk-english.md)  
   
 -   [Wiederherstellen der von der Suche verwendeten Wörtertrennungen auf die vorherige Version](../relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md)  
   
@@ -95,8 +94,7 @@ ms.locfileid: "62813193"
   
 -   Füllwörter und Füllwortdateien sind durch Stoppwörter und Stoplisten ersetzt worden. Eine Stoppliste ist ein Datenbankobjekt, das für Stoppwörter Verwaltbarkeitstasks bereitstellt und die Integrität zwischen verschiedenen Serverinstanzen und -umgebungen verbessert. Weitere Informationen finden sie unter [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).  
   
--   
-  [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] und höhere Versionen enthalten für viele in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] vorhandene Sprachen neue Wörtertrennungen. Nur die Wörtertrennungen für Englisch, Koreanisch, Thailändisch und Chinesisch (alle Formen) bleiben gleich. Wenn für andere Sprachen beim Upgrade einer [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]-Datenbank auf [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] oder eine höhere Version ein Volltextkatalog importiert wurde, ist mindestens eine Sprache, die von den Volltextindizes im Volltextkatalog verwendet wird, jetzt ggf. neuen Wörtertrennungen zugeordnet. Diese Wörtertrennungen verhalten sich ggf. etwas anders als die importierten Wörtertrennungen. Weitere Informationen zur Gewährleistung der Konsistenz zwischen Abfragen und dem Inhalt des Volltextindexes finden Sie unter [Upgrade der Volltextsuche](../relational-databases/search/upgrade-full-text-search.md).  
+-   [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] und höhere Versionen enthalten für viele in [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)] vorhandene Sprachen neue Wörtertrennungen. Nur die Wörtertrennungen für Englisch, Koreanisch, Thailändisch und Chinesisch (alle Formen) bleiben gleich. Wenn für andere Sprachen beim Upgrade einer [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]-Datenbank auf [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] oder eine höhere Version ein Volltextkatalog importiert wurde, ist mindestens eine Sprache, die von den Volltextindizes im Volltextkatalog verwendet wird, jetzt ggf. neuen Wörtertrennungen zugeordnet. Diese Wörtertrennungen verhalten sich ggf. etwas anders als die importierten Wörtertrennungen. Weitere Informationen zur Gewährleistung der Konsistenz zwischen Abfragen und dem Inhalt des Volltextindexes finden Sie unter [Upgrade der Volltextsuche](../relational-databases/search/upgrade-full-text-search.md).  
   
 -   Es wurde ein neuer FDHOST-Startprogrammdienst (MSSQLFDLauncher) hinzugefügt. Weitere Informationen finden Sie unter [Erste Schritte mit der Volltextsuche](../relational-databases/search/get-started-with-full-text-search.md).  
   
@@ -105,7 +103,7 @@ ms.locfileid: "62813193"
      Die Volltext-Engine indiziert den Inhalt der FILESTREAM-BLOBs. Dateien wie beispielsweise Images zu indizieren, ist möglicherweise nicht nützlich. Wenn ein FILESTREAM BLOB aktualisiert wird, wird er neu indiziert.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Voll Text Suche](../relational-databases/search/full-text-search.md)   
+ [Volltextsuche](../relational-databases/search/full-text-search.md)   
  [Abwärtskompatibilität der voll Text Suche](../../2014/database-engine/full-text-search-backward-compatibility.md)   
  [Upgrade der voll Text Suche](../relational-databases/search/upgrade-full-text-search.md)   
  [Erste Schritte mit der Volltextsuche](../relational-databases/search/get-started-with-full-text-search.md)  

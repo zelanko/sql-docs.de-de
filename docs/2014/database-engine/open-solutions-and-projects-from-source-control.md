@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: dc6e728ff40d61f2139115c642e0841a3685207f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774778"
 ---
 # <a name="open-solutions-and-projects-from-source-control"></a>Öffnen von Projektmappen und Projekten aus der Quellcodeverwaltung
@@ -27,7 +27,7 @@ ms.locfileid: "62774778"
   
  In der folgenden Tabelle werden die Themen in diesem Abschnitt beschrieben.  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Öffnen von Projektmappen aus der Quellcodeverwaltung](../../2014/database-engine/open-solutions-from-source-control.md)|Beschreibt, wie Sie mithilfe der [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]-Umgebung Projektmappen direkt aus der Quellcodeverwaltung öffnen.|  
 |[Öffnen von Projekten aus der Quellcodeverwaltung](../../2014/database-engine/open-projects-from-source-control.md)|Beschreibt, wie Sie ein Projekt aus der Quellcodeverwaltung öffnen, um die Projektdateien auszuchecken und zu ändern.|  

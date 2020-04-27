@@ -13,14 +13,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8795d9ea157857c38f1c9a6aa452114947fa5760
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781791"
 ---
 # <a name="open-objects-server-configuration-option"></a>Geöffnete Objekte (Serverkonfigurationsoption)
-  Diese Option ist in **sp_configure**weiterhin vorhanden, obwohl die zugehörige Funktionalität in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]deaktiviert wurde. (Die Einstellung hat keine Auswirkungen.) In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wird die Anzahl von geöffneten Datenbankobjekten dynamisch verwaltet und nur durch den verfügbaren Arbeitsspeicher beschränkt. Die Option **Geöffnete Objekte** wurde in **sp_configure** belassen, um die Abwärtskompatibilität mit vorhandenen Skripts sicherzustellen.  
+  Diese Option ist in **sp_configure** weiterhin vorhanden, obwohl die zugehörige Funktionalität in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deaktiviert wurde. (Die Einstellung hat keine Auswirkungen.) In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]wird die Anzahl von geöffneten Datenbankobjekten dynamisch verwaltet und nur durch den verfügbaren Arbeitsspeicher beschränkt. Die Option **Geöffnete Objekte** wurde in **sp_configure** belassen, um die Abwärtskompatibilität mit vorhandenen Skripts sicherzustellen.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  

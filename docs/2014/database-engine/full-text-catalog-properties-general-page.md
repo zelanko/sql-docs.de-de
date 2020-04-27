@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: be73ed98700ef261ccee026469dddd22017998e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779663"
 ---
 # <a name="full-text-catalog-properties-general-page"></a>Volltextkatalog-Eigenschaften (Seite 'Allgemein')
@@ -25,14 +25,14 @@ ms.locfileid: "62779663"
 > [!NOTE]  
 >  Im Zusammenhang mit [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] -Datenbanken ist ein Volltextkatalog ein logisches Konzept, das auf eine Gruppe von Volltextindizes verweist. Ein Volltextkatalog ist ein virtuelles Objekt und gehört keiner Dateigruppe an.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 ### <a name="properties"></a>Eigenschaften  
  **Standardkatalog**  
  Zeigt an, ob es sich bei dem Katalog um den Standardkatalog der Datenbank handelt.  
   
  **Auffüllungsstatus**  
- Zeigt den Status des Katalogs an. Die folgenden Werte sind möglich:  
+ Zeigt den Status des Katalogs an. Mögliche Werte:  
   
 -   **Idle**  
   
@@ -42,9 +42,9 @@ ms.locfileid: "62779663"
   
 -   **Gedrosselt**  
   
--   **Meer**  
+-   **Wiederherstellen**  
   
--   **Abschlusses**  
+-   **Shutdown**  
   
 -   **Inkrementelles Auffüllen wird ausgeführt**  
   
@@ -63,7 +63,7 @@ ms.locfileid: "62779663"
  **Name**  
  Name des Volltextkatalogs.  
   
- **Akzent**  
+ **Unterscheidung nach Akzent**  
  Anzeigen oder ändern, ob der Katalog von diakritischen Zeichen unterschieden wird, z. b.**~** eine Tilde (), ein akritisches Akzentzeichen (.**) oder Umlaut ("**.**").** Gültige Werte sind:  
   
 -   **Nein**  
@@ -85,7 +85,7 @@ ms.locfileid: "62779663"
   
 |||  
 |-|-|  
-|**Keine**|Führt keinen der folgenden Vorgänge aus: **Katalog optimieren**, **Katalog neu erstellen**und **Katalog neu auffüllen** .|  
+|**None**|Führt keinen der folgenden Vorgänge aus: **Katalog optimieren**, **Katalog neu erstellen**und **Katalog neu auffüllen** .|  
 |**Katalog optimieren**|Optimiert die Speicherplatzausnutzung des Katalogs und verbessert die Abfrageleistung. Erhöht außerdem die Genauigkeit der Relevanzbewertung von Suchergebnissen.<br /><br /> Diese Aktion führt ALTER FULLTEXT CATALOG *catalog_name* REORGANIZE aus.|  
 |**Katalog neu erstellen**|Löscht den Volltextkatalog und erstellt ihn neu. Dieser Vorgang muss bei der Änderung einer grundlegenden Katalogeigenschaft, z. B. der Akzentunterscheidung, ausgeführt werden.<br /><br /> Damit die Neuerstellung erfolgreich ist, muss die Dateigruppe, in der sich der Volltextkatalog befindet, online oder les- und beschreibbar sein. Nach der Neuerstellung wird der Volltextindex neu aufgefüllt.<br /><br /> Diese Aktion führt ALTER FULLTEXT CATALOG *catalog_name* REBUILD aus.|  
 |**Katalog neu auffüllen**|Aktualisiert den Katalog entsprechend den kürzlich vorgenommenen Datenänderungen. Diese Option hat keine Katalogausfallzeit zur Folge.|  

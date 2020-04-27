@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 156a8e765812c14da0888148505311d52c267916
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62782383"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Herstellen einer Verbindung mit SQL Server, wenn Systemadministratoren gesperrt sind
@@ -116,7 +116,7 @@ ms.locfileid: "62782383"
  Jetzt sollten Sie in der Lage sein, mit einem der Konten, das jetzt Mitglied der Rolle " `sysadmin` fester Server" ist, eine Verbindung herzustellen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Starten von SQL Server im Einzelbenutzermodus](start-sql-server-in-single-user-mode.md)   
+ [Starten SQL Server im Einzelbenutzermodus](start-sql-server-in-single-user-mode.md)   
  [Startoptionen für den Datenbank-Engine-Dienst](database-engine-service-startup-options.md)  
   
   

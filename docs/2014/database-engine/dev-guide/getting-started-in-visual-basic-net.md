@@ -15,14 +15,13 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bfaf73d82eaa61753d958941cb1b633f8098e975
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62781563"
 ---
 # <a name="getting-started-in-visual-basic-net"></a>Erste Schritte in Visual Basic .NET
-  
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET ist eine der verwalteten Programmiersprachen, die von der CRL (Common Runtime Library) in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET unterstützt werden. Viele der Beispiele in dieser Dokumentation werden in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET geschrieben. Sie können [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] und [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] verwenden, um SMO-Anwendungen zu entwickeln.  
   
 ## <a name="references-and-imports"></a>Verweise und Importe  
@@ -31,6 +30,6 @@ ms.locfileid: "62781563"
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]befinden sich die SMO-Assemblys im Ordner [!INCLUDE[ssSampPathSDK](../../includes/sssamppathsdk-md.md)] .  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erstellen eines Visual Basic-SMO-Projekts in Visual Studio .NET](../../../2014/database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)  
+ [Vorgehensweise: Erstellen eines Visual Basic-SMO-Projekts in Visual Studio .NET](../../../2014/database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md)  
   
   

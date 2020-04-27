@@ -15,22 +15,22 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bdec432699b7d0a6152509ec6a53ddf452376d5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62788026"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>Anzeigen von Eigenschaften des Verfügbarkeitsgruppenlisteners (SQL Server)
   In diesem Thema wird beschrieben, wie die Eigenschaften eines AlwaysOn- *Verfügbarkeitsgruppenlisteners* mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../../includes/tsql-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]angezeigt werden.  
   
--   **Anzeigen von Listenereigenschaften mit:**  
+-   **Anzeigen der Eigenschaften des Listeners mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So zeigen Sie die Eigenschaften des Listeners an**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit einer Serverinstanz her, die die Verfügbarkeitsreplikate der Verfügbarkeitsgruppe hostet, deren Listener Sie anzeigen möchten. Klicken Sie auf den Servernamen, um die Serverstruktur zu erweitern.  
@@ -43,7 +43,7 @@ ms.locfileid: "62788026"
   
 5.  Das Dialogfeld **Eigenschaften des Verfügbarkeitsgruppenlisteners** wird geöffnet. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Eigenschaften des Verfügbarkeitsgruppenlisteners (Dialogfeld)](#AgListenerPropertiesDialog).  
   
-###  <a name="AgListenerPropertiesDialog"></a> Eigenschaften des Verfügbarkeitsgruppenlisteners (Dialogfeld)  
+###  <a name="availability-group-listener-properties-dialog-box"></a><a name="AgListenerPropertiesDialog"></a> Eigenschaften des Verfügbarkeitsgruppenlisteners (Dialogfeld)  
  **DNS-Name des Listeners**  
  Der Netzwerkname des Verfügbarkeitsgruppenlisteners.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "62788026"
  **Netzwerkmodus**  
  Gibt das vom Listener verwendete TCP-Protokoll an. Folgende Werte sind möglich:  
   
- **DHCP**  
+ **Konfiguriert**  
  Der Listener verwendet eine dynamische IP-Adresse, die von einem Server mit dem Dynamic Host Configuration-Protokoll (DHCP) zugewiesen wird.  
   
  **Statische IP**  
@@ -64,7 +64,7 @@ ms.locfileid: "62788026"
   
  Im Raster werden alle Subnetze, auf die der Listener lauscht, und die den einzelnen Subnetzen zugeordneten IP-Adressen angezeigt.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **So zeigen Sie die Eigenschaften des Listeners an**  
   
  Um die Verfügbarkeitsgruppenlistener zu überwachen, verwenden Sie die folgenden Sichten:  
@@ -87,15 +87,15 @@ ms.locfileid: "62788026"
 > [!NOTE]  
 >  Weitere Informationen zum Verwenden von [!INCLUDE[tsql](../../../includes/tsql-md.md)] zum Überwachen der [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Umgebung finden Sie unter [Überwachen von Verfügbarkeitsgruppen &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)angezeigt werden.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
--   [Erstellen oder Konfigurieren eines Verfügbarkeitsgruppenlisteners &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
+-   [Erstellen oder konfigurieren Sie einen verfügbarkeitsgruppenlistener &#40;SQL Server&#41;](create-or-configure-an-availability-group-listener-sql-server.md)  
   
 -   [Entfernen eines Verfügbarkeitsgruppenlisteners &#40;SQL Server&#41;](remove-an-availability-group-listener-sql-server.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
+ [Verfügbarkeitsgruppenlistener, Client Konnektivität und Anwendungs Failover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Überwachen von Verfügbarkeitsgruppen &#40;Transact-SQL&#41;](monitor-availability-groups-transact-sql.md)  
   
   

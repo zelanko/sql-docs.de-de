@@ -15,14 +15,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4b38fddc5ddd29ae354a7f53a4e448867f31f912
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809343"
 ---
 # <a name="server-properties-general-page---sql-server-management-studio"></a>Servereigenschaften (Seite Allgemein) - SQL Server Management Studio
-  Verwenden Sie diese Seite, um schreibgeschützte Informationen zu Ihrer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installation anzuzeigen.  
+  Auf dieser Seite können Sie sich schreibgeschützte Informationen zu Ihrer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installation anzeigen lassen.  
   
 ## <a name="property-grid"></a>Eigenschaftsraster  
  Zeigt die Eigenschaften des ausgewählten Servers an, z. B. Servername, Betriebssystem des Servers oder Anzahl der Prozessoren.  

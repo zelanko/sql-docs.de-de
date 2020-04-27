@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b27a3cc8a768f60a5e2d430fe04ca514aafe1f37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771651"
 ---
 # <a name="project-properties-dialog-box"></a>Projekteigenschaften (Dialogfeld)
@@ -33,7 +33,7 @@ ms.locfileid: "62771651"
   
 -   [Festlegen der Optionen auf der Seite "Berechtigungen"](#permissions)  
   
-##  <a name="open_dialog"></a> Öffnen des Dialogfelds "Projekteigenschaften"  
+##  <a name="open-the-project-properties-dialog-box"></a><a name="open_dialog"></a> Öffnen des Dialogfelds "Projekteigenschaften"  
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung zum [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server her.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62771651"
   
 5.  Klicken Sie mit der rechten Maustaste auf das Projekt, und klicken Sie dann auf **Eigenschaften**.  
   
-##  <a name="general"></a> Festlegen der Optionen auf der Seite "Allgemein"  
+##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> Festlegen der Optionen auf der Seite "Allgemein"  
  Verwenden Sie die Seite "Allgemein", um Projekteigenschaften anzuzeigen.  
   
  **Name**  
@@ -65,7 +65,7 @@ ms.locfileid: "62771651"
  **Bereitstellungsdatum**  
  Listet das Datum und die Uhrzeit der Bereitstellung oder erneuten Bereitstellung des Projekts auf.  
   
-##  <a name="permissions"></a> Festlegen der Optionen auf der Seite "Berechtigungen"  
+##  <a name="set-the-options-on-the-permissions-page"></a><a name="permissions"></a> Festlegen der Optionen auf der Seite "Berechtigungen"  
  Auf der Seite **Berechtigungen** können die expliziten Berechtigungen für das Projekt angezeigt oder festgelegt werden.  
   
  Durchsuchen  

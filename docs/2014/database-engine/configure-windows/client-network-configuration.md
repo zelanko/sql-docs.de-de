@@ -19,19 +19,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 862c13e61513b46b44ce55df9e66170bbb1ac219
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62787103"
 ---
 # <a name="client-network-configuration"></a>Client-Netzwerkkonfiguration
-  Mithilfe der-Client Software können Client Computer eine Verbindung mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einer Instanz von in einem Netzwerk herstellen. Ein "Client" ist eine Front-End-Anwendung, die die von einem Server bereitgestellten Dienste verwendet, wie z. B. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Der Computer, auf dem sich diese Anwendung befindet, wird als *Clientcomputer*bezeichnet.  
+  Clientsoftware ermöglicht Clientcomputern das Herstellen einer Verbindung mit einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einem Netzwerk. Ein "Client" ist eine Front-End-Anwendung, die die von einem Server bereitgestellten Dienste verwendet, wie z. B. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Der Computer, auf dem sich diese Anwendung befindet, wird als *Clientcomputer*bezeichnet.  
   
  Auf der einfachsten Ebene kann sich ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Client auf demselben Computer wie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]befinden. In der Regel stellt jedoch ein Client eine Verbindung mit mindestens einem Remoteserver über ein Netzwerk her. Die Client/Server-Architektur von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ermöglicht die problemlose Verwaltung mehrerer Clients und Server in einem Netzwerk. Die Standardclientkonfigurationen sind in den meisten Situationen ausreichend.  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Anwendungen der unterschiedlichsten Typen gehören, beispielsweise folgende Anwendungen:  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] können Anwendungen der unterschiedlichsten Typen gehören, beispielsweise folgende Anwendungen:  
   
 -   OLE DB-Consumer  
   
@@ -43,22 +42,20 @@ ms.locfileid: "62787103"
   
 -   DB-Library-Clients  
   
-     Zu diesen Anwendungen zählen das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **isql** command prompt utility and clients written to DB-Library. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]die Unterstützung für Client Anwendungen, die DB-Library [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwenden, ist auf 7,0-Features beschränkt.  
+     Diese Anwendungen enthalten das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Eingabeaufforderungs-Hilfsprogramm **isql** und die in DB-Library geschriebenen Clients. Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Unterstützung für Anwendungen mit DB-Library ist auf [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0-Features beschränkt.  
   
 > [!NOTE]  
->  Zwar werden Verbindungen von vorhandenen Anwendungen, die die DB-Library- und Embedded SQL-APIs verwenden, weiterhin von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] unterstützt, aber die zum Programmieren von Anwendungen, die diese APIs verwenden, erforderlichen Dateien bzw. die Dokumentation sind nicht mehr eingeschlossen. In zukünftigen Versionen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] werden Verbindungen von DB-Library- oder Embedded SQL-Anwendungen nicht mehr unterstützt. Verwenden Sie DB-Library bzw. Embedded SQL nicht zum Entwickeln neuer Anwendungen. Entfernen Sie alle Abhängigkeiten von DB-Library bzw. Embedded SQL, wenn Sie vorhandene Anwendungen ändern. Verwenden Sie anstelle dieser APIs den SQLClient-Namespace oder eine API wie OLE DB oder ODBC. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält die DB-Library-DLL nicht, die zum Ausführen dieser Anwendungen erforderlich ist. Zum Ausführen von DB-Library- oder Embedded SQL-Anwendungen muss die DB-Library-DLL von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 6.5, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 oder [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]verfügbar sein.  
+>  Zwar werden Verbindungen von vorhandenen Anwendungen, die die DB-Library- und Embedded SQL-APIs verwenden, weiterhin von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] unterstützt, aber die zum Programmieren von Anwendungen, die diese APIs verwenden, erforderlichen Dateien bzw. die Dokumentation sind nicht mehr eingeschlossen. In zukünftigen Versionen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] werden Verbindungen von DB-Library- oder Embedded SQL-Anwendungen nicht mehr unterstützt. Verwenden Sie DB-Library bzw. Embedded SQL nicht zum Entwickeln neuer Anwendungen. Entfernen Sie alle Abhängigkeiten von DB-Library bzw. Embedded SQL, wenn Sie vorhandene Anwendungen ändern. Verwenden Sie anstelle dieser APIs den SQLClient-Namespace oder eine API wie OLE DB oder ODBC. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält die DB-Library-DLL nicht, die zum Ausführen dieser Anwendungen erforderlich ist. Zum Ausführen von DB-Library- oder Embedded SQL-Anwendungen muss die DB-Library-DLL von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 6.5, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 oder [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]verfügbar sein.  
   
  Unabhängig vom Anwendungstyp besteht die Verwaltung eines Clients in erster Linie darin, seine Verbindungen mit den Serverkomponenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu konfigurieren. Abhängig von den Anforderungen des Standorts reichen die Aufgaben der Clientverwaltung vom bloßen Eingeben des Namens für den Servercomputer bis zum Erstellen einer Bibliothek mit benutzerdefinierten Konfigurationseinträgen, um ein Einbinden in eine komplexe Multiserverumgebung zu ermöglichen.  
   
  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client-DLL enthält die Netzwerkbibliotheken und wird vom Setupprogramm installiert. Die Netzwerkprotokolle werden während der Installation für neue Installationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nicht aktiviert. Aktualisierte Installationen aktivieren die zuvor aktivierten Protokolle. Die zugrunde liegenden Netzwerkprotokolle werden als Teil von Windows Setup installiert (oder über die Anwendung Netzwerk in der Systemsteuerung). Die folgenden Tools können für die Verwaltung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clients verwendet werden:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager  
   
-     Client- und Server-Netzwerkkomponenten werden mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager verwaltet, der die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Netzwerkkonfiguration, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clientkonfiguration und den Dienst-Manager aus früheren Versionen enthält. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager ist ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] -MMC-Snap-In (Microsoft Management Console). Er wird auch als Knoten im Windows Computer Manager-Snap-In angezeigt. Einzelne Netzwerkbibliotheken können aktiviert, deaktiviert und konfiguriert werden. Außerdem kann ihnen mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager eine Priorität zugewiesen werden.  
+     Client- und Server-Netzwerkkomponenten werden mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager verwaltet, der die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Netzwerkkonfiguration, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Clientkonfiguration und den Dienst-Manager aus früheren Versionen enthält. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager ist ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] -MMC-Snap-In (Microsoft Management Console). Er wird auch als Knoten im Windows Computer Manager-Snap-In angezeigt. Einzelne Netzwerkbibliotheken können aktiviert, deaktiviert und konfiguriert werden. Außerdem kann ihnen mit dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Konfigurations-Manager eine Priorität zugewiesen werden.  
   
--   Setup  
+-   Einrichten  
   
      Führen Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup aus, um die Netzwerkkomponenten auf einem Clientcomputer zu installieren. Einzelne Netzwerkbibliotheken können während des Setups aktiviert bzw. deaktiviert werden, wenn das Setup an der Eingabeaufforderung gestartet wird.  
   

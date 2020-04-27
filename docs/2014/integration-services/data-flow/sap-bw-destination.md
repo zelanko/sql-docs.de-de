@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1cac8403327ecf3888439290554f059bb00bce2c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770867"
 ---
 # <a name="sap-bw-destination"></a>SAP BW-Ziel
@@ -33,7 +33,7 @@ ms.locfileid: "62770867"
   
 -   [Konfigurieren des SAP BW-Ziels](#bkmk_Configure_Destination)  
   
-##  <a name="bkmk_Prepare_Objects"></a> Vorbereiten der SAP NetWeaver BW-Objekte, die für das Ziel erforderlich sind  
+##  <a name="preparing-the-sap-netweaver-bw-objects-that-the-destination-requires"></a><a name="bkmk_Prepare_Objects"></a> Vorbereiten der SAP NetWeaver BW-Objekte, die für das Ziel erforderlich sind  
  Das SAP BW-Ziel erfordert, dass sich bestimmte Objekte im SAP NetWeaver BW-System befinden, damit das Ziel funktionsfähig ist. Wenn diese Objekte noch nicht vorhanden sind, müssen Sie diese Schritte ausführen, um die Objekte im SAP NetWeaver BW-System zu erstellen und zu konfigurieren.  
   
 > [!NOTE]  
@@ -55,12 +55,12 @@ ms.locfileid: "62770867"
   
  Sie können zusätzliche InfoObjects, InfoCubes, InfoSources und InfoPackages erstellen, die erforderlich sind, um den Ladevorgang der Daten in das SAP NetWeaver BW-System zu unterstützen.  
   
-##  <a name="bkmk_Connect_Database"></a> Herstellen einer Verbindung mit dem SAP NetWeaver BW-System  
+##  <a name="connecting-to-the-sap-netweaver-bw-system"></a><a name="bkmk_Connect_Database"></a> Herstellen einer Verbindung mit dem SAP NetWeaver BW-System  
  Um eine Verbindung mit dem SAP NetWeaver BW-System, Version 7, herzustellen, verwendet das SQL BW-Ziel den SAP BW-Verbindungs-Manager, der im Lieferumfang des [!INCLUDE[msCoName](../../includes/msconame-md.md)] Connector 1.1 for SAP BW-Pakets enthalten ist. Der SAP BW-Verbindungs-Manager ist der einzige [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Verbindungs-Manager, der vom SAP BW-Ziel verwendet werden kann.  
   
  Weitere Informationen zum SAP BW-Verbindungs-Manager finden Sie unter [SAP BW Connection Manager](../connection-manager/sap-bw-connection-manager.md).  
   
-##  <a name="bkmk_Configure_Destination"></a> Konfigurieren des SAP BW-Ziels  
+##  <a name="configuring-the-sap-bw-destination"></a><a name="bkmk_Configure_Destination"></a> Konfigurieren des SAP BW-Ziels  
  Es gibt folgende Möglichkeiten, um das SAP BW-Ziel zu konfigurieren:  
   
 -   Suchen Sie das InfoPackage, das zum Laden von Daten verwendet werden soll, und wählen Sie es aus.  

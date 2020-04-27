@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 741ea39f6a60d7c9f52fb901a1b038a352e948b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770417"
 ---
 # <a name="merge-transformation"></a>Transformation für Zusammenführen
@@ -60,9 +60,9 @@ ms.locfileid: "62770417"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu anzuzeigen, die Sie programmgesteuert festlegen können:  
   
--   [Common Properties](../../common-properties.md)  
+-   [Allgemeine Eigenschaften](../../common-properties.md)  
   
--   [Benutzerdefinierte Eigenschaften von Transformationen](transformation-custom-properties.md)  
+-   [Transformation Custom Properties](transformation-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Nähere Informationen zum Festlegen von Eigenschaften finden Sie in den folgenden Themen:  
@@ -72,8 +72,8 @@ ms.locfileid: "62770417"
 -   [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Transformation für Zusammenführungsjoin](merge-join-transformation.md)   
- [Transformation für UNION ALL](union-all-transformation.md)   
+ [Merge Join-Transformation](merge-join-transformation.md)   
+ [Transformation für Union all](union-all-transformation.md)   
  [Datenfluss](../data-flow.md)   
  [SQL Server Integration Services-Transformationen](integration-services-transformations.md)  
   

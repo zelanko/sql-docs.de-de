@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 290aff0bfcb01e098ae87b48cf582cdf999314c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807424"
 ---
 # <a name="cross-container-transactions"></a>Containerübergreifende Transaktionen
@@ -24,7 +24,7 @@ ms.locfileid: "62807424"
   
  Jede interpretierte Abfrage, die auf speicheroptimierte Tabellen verweist, wird als Teil einer containerübergreifenden Transaktion angesehen. Dies gilt unabhängig davon, ob die Abfrage über eine explizite oder implizite Transaktion oder im Autocommitmodus ausgeführt wurde.  
   
-##  <a name="isolation"></a>Isolierung einzelner Vorgänge  
+##  <a name="isolation-of-individual-operations"></a><a name="isolation"></a>Isolierung einzelner Vorgänge  
  Jede [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Transaktion hat eine Isolationsstufe. Die Standardisolationsstufe ist Read Committed. Wenn Sie eine andere Isolationsstufe verwenden möchten, können Sie die Isolationsstufe mithilfe von [Set Transaction Isolation Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql)festlegen.  
   
  Häufig ist es notwendig, Vorgänge in speicheroptimierten Tabellen auf einer anderen Isolationsstufe als Vorgänge in datenträgerbasierten Tabellen auszuführen. In einer Transaktion ist es möglich, eine andere Isolationsstufe für eine Auflistung von Anweisungen oder für einen einzelnen Lesevorgang festzulegen.  
@@ -99,7 +99,7 @@ commit
  Für die gelesenen Daten wird garantiert ein Commit ausgeführt, und die Stabilität wird zur logischen Beendigungszeit der Transaktion erhöht.  
   
  SERIALIZABLE  
- Alle Garantien von Repeatable Read zuzüglich Phantom Vermeidung und Transaktions Konsistenz in Bezug auf alle serialisierbaren Lesevorgänge, die von t. Phantom Vermeidung durchgeführt werden, bedeutet, dass der Scanvorgang nur zusätzliche Zeilen zurückgeben kann, die von t geschrieben wurden, aber Nein Zeilen, die von anderen Transaktionen geschrieben wurden.  
+ Alle Garantien von Repeatable Read zuzüglich Phantom Vermeidung und Transaktions Konsistenz in Bezug auf alle serialisierbaren Lesevorgänge, die von t. Phantom Vermeidung durchgeführt werden, bedeutet, dass der Scanvorgang nur zusätzliche Zeilen zurückgeben kann, die von t geschrieben wurden, aber keine Zeilen, die von anderen Transaktionen geschrieben wurden.  
   
  Beachten Sie die folgende Transaktion:  
   
@@ -172,7 +172,7 @@ commit
   
  Speicheroptimierte Tabellen unterstützen die Isolationsstufen SNAPSHOT, REPEATABLE READ und SERIALIZABLE. Bei Autocommittransaktionen unterstützen speicheroptimierte Tabellen die Isolationsstufe READ COMMITTED.  
   
- Folgende Szenarios werden unterstützt:  
+ Die folgenden Szenarien werden unterstützt:  
   
 -   Containerübergreifende READ UNCOMMITTED-, READ COMMITTED- und READ_COMMITTED_SNAPSHOT-Transaktionen können mit SNAPSHOT-, REPEATABLE READ- und SERIALIZABLE-Isolation auf speicheroptimierte Tabellen zugreifen. Die READ COMMITTED-Garantie bedeutet für die Transaktion, dass für alle Zeilen, die von der Transaktion gelesen wurden, ein Commit in der Datenbank ausgeführt wurde.  
   

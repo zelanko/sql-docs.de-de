@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 536dce64880c1e70b1b8a0c4b419811c1b32a975
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62772126"
 ---
 # <a name="azure-feature-pack"></a>Azure Feature Pack
@@ -29,9 +29,9 @@ Das SQL Server Integration Services-Feature Pack (SSIS) für Azure ist eine Erwe
   
     -   [Azure Storage-Verbindungs-Manager](connection-manager/azure-storage-connection-manager.md)  
   
-    -   [Azure-Abonnementverbindungs-Manager](connection-manager/azure-subscription-connection-manager.md)  
+    -   [Verbindungs-Manager für Azure-Abonnements](connection-manager/azure-subscription-connection-manager.md)  
     
-    -   [Azure Data Lake Store-Verbindungsmanager](../../2014/integration-services/azure-data-lake-store-connection-manager.md)
+    -   [Azure Data Lake Store Connection Manager (Azure Data Lake Store-Verbindungs-Manager)](../../2014/integration-services/azure-data-lake-store-connection-manager.md)
     
     -   [Azure Resource Manager-Verbindungs-Manager](../../2014/integration-services/azure-resource-manager-connection-manager.md)
     
@@ -43,7 +43,7 @@ Das SQL Server Integration Services-Feature Pack (SSIS) für Azure ist eine Erwe
   
     -   [Azure Blob-Download-Task](control-flow/azure-blob-download-task.md)  
   
-    -   [Azure HDInsight Hive-Task](control-flow/azure-hdinsight-hive-task.md)  
+    -   [Hive-Aufgabe in Azure HDInsight](control-flow/azure-hdinsight-hive-task.md)  
   
     -   [Azure HDInsight Pig-Task](https://msdn.microsoft.com/library/mt146781(v=sql.120).aspx)
   
@@ -53,7 +53,7 @@ Das SQL Server Integration Services-Feature Pack (SSIS) für Azure ist eine Erwe
     
     -   [Azure SQL DW-Uploadtask](../../2014/integration-services/azure-sql-dw-upload-task.md)    
     
-    -   [Azure Data Lake Store-Task „Dateisystem“](control-flow/file-system-task.md)    
+    -   [Azure Data Lake Store-Dateisystemtask](control-flow/file-system-task.md)    
   
 -   Datenflusskomponenten  
   

@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 646d15dc3091323e6e7db2af757640122fb2f0fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779778"
 ---
 # <a name="xml-serialization-from-clr-database-objects"></a>XML-Serialisierung auf Grundlage von CLR-Datenbankobjekten
@@ -33,7 +33,7 @@ ms.locfileid: "62779778"
   
 1.  Führen Sie das Tool **Sgen. exe** aus, das mit dem .NET Framework SDK bereitgestellt wird, um die Assembly zu erstellen, die die XML-Serialisierer für die Quellassembly enthält.  
   
-2.  Registrieren Sie die generierte Assembly mithilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anweisung in `CREATE ASSEMBLY`.  
+2.  Registrieren Sie die generierte Assembly mithilfe der `CREATE ASSEMBLY`-Anweisung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Informationen zu Fehlern, die beim Ausführen der XML-Serialisierung auftreten können, finden Sie im folgenden Microsoft-Support Artikel: ["kann dynamisch generierte Serialisierungsassembly nicht laden"](https://support.microsoft.com/kb/913668).  
   

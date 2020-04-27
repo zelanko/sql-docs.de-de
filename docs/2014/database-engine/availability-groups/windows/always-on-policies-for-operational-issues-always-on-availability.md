@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 815f549cf9ab6dd7fe748c08ae7f32683c9d8551
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815752"
 ---
 # <a name="always-on-policies-for-operational-issues-with-always-on-availability-groups-sql-server"></a>Always On-Richtlinien für Betriebsprobleme mit Always On-Verfügbarkeitsgruppen (SQL Server)
@@ -25,7 +25,7 @@ ms.locfileid: "62815752"
   
  
   
-##  <a name="TermsAndDefinitions"></a>Begriffe und Definitionen  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a>Begriffe und Definitionen  
  Vordefinierte AlwaysOn-Richtlinien  
  Ein Satz integrierter Richtlinien, die es Datenbankadministratoren ermöglichen, eine Verfügbarkeitsgruppe und die zugehörigen Verfügbarkeitsreplikate und -datenbanken auf Konformität mit den Zuständen zu prüfen, die durch die AlwaysOn-Richtlinien definiert werden.  
   
@@ -43,7 +43,7 @@ ms.locfileid: "62815752"
  AlwaysOn-Dashboard  
  Ein [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] -Dashboard, das eine Übersicht über die Integrität einer Verfügbarkeitsgruppe bereitstellt. Weitere Informationen hierzu finden Sie unter [AlwaysOn-Dashboard](#Dashboard)weiter unten in diesem Thema.  
   
-##  <a name="AlwaysOnPBM"></a>Vordefinierte Richtlinien und Probleme  
+##  <a name="predefined-policies-and-issues"></a><a name="AlwaysOnPBM"></a>Vordefinierte Richtlinien und Probleme  
  In der folgenden Tabelle sind die vordefinierten Richtlinien zusammengefasst.  
   
 |Richtlinienname|Problem|Kategorie**<sup>*</sup>**|Facet|  
@@ -66,7 +66,7 @@ ms.locfileid: "62815752"
 > [!IMPORTANT]  
 >  **<sup>*</sup>** Für AlwaysOn-Richtlinien werden die Kategorien Amen als IDs verwendet. Durch die Änderung des Namens einer AlwaysOn-Kategorie wird die Funktion zur Integritätsüberprüfung unterbrochen. Ändern Sie die Namen von AlwaysOn-Kategorien daher nicht.  
   
-##  <a name="Dashboard"></a>AlwaysOn-Dashboard  
+##  <a name="alwayson-dashboard"></a><a name="Dashboard"></a>AlwaysOn-Dashboard  
  Das AlwaysOn-Dashboard bietet eine Übersicht über die Integrität einer Verfügbarkeitsgruppe. Das AlwaysOn-Dashboard umfasst die folgenden Funktionen:  
   
 -   Ermöglicht Ihnen, Details zu einer angegebenen Verfügbarkeitsgruppe, zu deren Verfügbarkeitsreplikaten und Datenbanken leicht anzuzeigen.  
@@ -81,28 +81,28 @@ ms.locfileid: "62815752"
   
 -   Wenn die Ausführung eines Failovers für die Verfügbarkeitsgruppe eine mögliche Problembehebung ist, wird ein Startpunkt für die Links[Assistent für das Failover von Verfügbarkeitsgruppen](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)bereitgestellt. Dieser Assistent führt den Datenbankadministrator durch den manuellen Failoverprozess.  
   
-##  <a name="ExtendHealthModel"></a>Erweitern des AlwaysOn-Integritäts Modells  
+##  <a name="extending-the-alwayson-health-model"></a><a name="ExtendHealthModel"></a>Erweitern des AlwaysOn-Integritäts Modells  
  Die Erweiterung des [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Zustandsmodells bezieht sich darauf, dass Sie eigene benutzerdefinierte Richtlinien erstellen und diese je nach überwachtem Objekttyp bestimmten Kategorien zuweisen können.  Nachdem Sie einige Einstellungen geändert haben, wertet das AlwaysOn-Dashboard automatisch eigene benutzerdefinierte Richtlinien sowie vordefinierte AlwaysOn-Richtlinien aus.  
   
- Eine benutzerdefinierte Richtlinie kann beliebige der verfügbaren PBM-Facets verwenden, einschließlich der von vordefinierten AlwaysOn-Richtlinien verwendeten Facets (siehe [Vordefinierte Richtlinien und Probleme](#AlwaysOnPBM) weiter oben in diesem Thema). Das Serverfacet stellt die folgenden Eigenschaften zum Überwachen des [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-Zustands bereit: (`IsHadrEnabled` und `HadrManagerStatus`). Das Serverfacet stellt auch Eigenschaften der folgenden Richtlinien zum Überwachen der WSFC-Clusterkonfiguration bereit: `ClusterQuorumType` und `ClusterQuorumState`.  
+ Eine benutzerdefinierte Richtlinie kann beliebige der verfügbaren PBM-Facets verwenden, einschließlich der von vordefinierten AlwaysOn-Richtlinien verwendeten Facets (siehe [Vordefinierte Richtlinien und Probleme](#AlwaysOnPBM)weiter oben in diesem Thema). Das Serverfacet stellt die folgenden Eigenschaften zum Überwachen des [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]-Zustands bereit: (`IsHadrEnabled` und `HadrManagerStatus`). Das Serverfacet stellt auch Eigenschaften der folgenden Richtlinien zum Überwachen der WSFC-Clusterkonfiguration bereit: `ClusterQuorumType` und `ClusterQuorumState`.  
   
  Weitere Informationen finden Sie unter [Das AlwaysOn-Zustandsmodell Teil 2 – Erweitern des Zustandsmodells](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx) (ein SQL Server AlwaysOn-Teamblog).  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Verwenden Sie AlwaysOn-Richtlinien, um die Integrität einer Verfügbarkeits Gruppe &#40;SQL Server anzuzeigen&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
--   [Verwenden Sie das AlwaysOn-Dashboard &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Verwenden des AlwaysOn-Dashboards &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 -   [WSFC-Notfallwiederherstellung durch erzwungenes Quorum &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-disaster-recovery-through-forced-quorum-sql-server.md)  
   
 -   [Erzwingen des Starts eines Clusters ohne Quorum](../../../sql-server/failover-clusters/windows/force-a-wsfc-cluster-to-start-without-a-quorum.md)  
   
--   [Ausführen eines erzwungenen manuellen Failovers einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
+-   [Führen Sie ein erzwungenes manuelles Failover einer Verfügbarkeits Gruppe &#40;SQL Server aus&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
   
 -   [Problembehandlung bei einem fehlgeschlagenen Vorgang zum Hinzufügen einer Datei &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](troubleshoot-a-failed-add-file-operation-always-on-availability-groups.md)  
   
-##  <a name="RelatedContent"></a> Verwandte Inhalte  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Verwandte Inhalte  
   
 -   [Das AlwaysOn-Zustandsmodell Teil 1 – Zustandsmodellarchitektur](https://blogs.msdn.com/b/sqlalwayson/archive/2012/02/13/extending-the-alwayson-health-model.aspx)  
   
@@ -113,7 +113,7 @@ ms.locfileid: "62815752"
 ## <a name="see-also"></a>Weitere Informationen  
  [AlwaysOn-Verfügbarkeitsgruppen (SQL Server)](always-on-availability-groups-sql-server.md)   
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [Verwaltung einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)   
+ [Verwaltung einer Verfügbarkeits Gruppe &#40;SQL Server&#41;](administration-of-an-availability-group-sql-server.md)   
  [Überwachen von Verfügbarkeitsgruppen (SQL Server)](monitoring-of-availability-groups-sql-server.md)  
   
   

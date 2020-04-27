@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 14de3fa15fa5a648c2d41824d237040b5aa085e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771576"
 ---
 # <a name="ssis-catalog"></a>SSIS-Katalog
@@ -41,14 +41,13 @@ ms.locfileid: "62771576"
 >  Wenn für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ressourcen ein Failover als Teil eines Clusterfailovers durchgeführt wird, werden die ausgeführten Pakete nicht neu gestartet. Sie können Prüfpunkte verwenden, um Pakete neu zu starten. Weitere Informationen finden Sie unter [Neustarten von Paketen mit Prüfpunkten](../packages/restart-packages-by-using-checkpoints.md).  
   
 ## <a name="catalog-object-identifiers"></a>Katalogobjektbezeichner  
- Wenn Sie im Katalog ein neues Objekt erstellen, weisen Sie dem Objekt einen Namen zu. Der Objektname ist der Bezeichner. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bestimmt Regeln, welche Zeichen in einem Bezeichner verwendet werden können. Namen für die folgenden Objekte müssen den Regeln für Bezeichner entsprechen.  
+ Wenn Sie im Katalog ein neues Objekt erstellen, weisen Sie dem Objekt einen Namen zu. Der Objektname ist der Bezeichner. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bestimmt Regeln, welche Zeichen in einem Bezeichner verwendet werden können. Namen für die folgenden Objekte müssen den Regeln für Bezeichner entsprechen.  
   
 -   Ordner  
   
--   Project  
+-   Projekt  
   
--   Environment  
+-   Umgebung  
   
 -   Parameter  
   
@@ -61,8 +60,7 @@ ms.locfileid: "62771576"
   
 -   Der Name darf keine führenden oder nachgestellten Leerzeichen enthalten.  
   
--   
-  \@ ist nicht als erstes Zeichen zulässig. Allerdings kann \@ für nachfolgende Zeichen verwendet werden.  
+-   \@ ist nicht als erstes Zeichen zulässig. Allerdings kann \@ für nachfolgende Zeichen verwendet werden.  
   
 -   Die Länge des Namens muss größer als oder gleich 0 und kleiner als oder gleich 128 sein.  
   
@@ -80,8 +78,7 @@ ms.locfileid: "62771576"
   
 -   Der Name darf keine führenden oder nachgestellten Leerzeichen enthalten.  
   
--   
-  \@ ist nicht als erstes Zeichen zulässig. Allerdings kann \@ für nachfolgende Zeichen verwendet werden.  
+-   \@ ist nicht als erstes Zeichen zulässig. Allerdings kann \@ für nachfolgende Zeichen verwendet werden.  
   
 -   Die Länge des Namens muss größer als oder gleich 0 und kleiner als oder gleich 128 sein.  
   
@@ -102,7 +99,7 @@ ms.locfileid: "62771576"
  **Protokolle regelmäßig bereinigen**  
  Der Auftragsschritt für die Vorgangsbereinigung wird ausgeführt, wenn diese Eigenschaft auf `True` festgelegt ist.  
   
- **Beibehaltungs Dauer (Tage)**  
+ **Beibehaltungsdauer (Tage)**  
  Definiert das maximale Alter von zulässigen Vorgangsdaten (in Tagen). Ältere Daten werden entfernt.  
   
  Der Mindestwert ist ein Tag. Der Höchstwert wird nur durch den maximalen Wert der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `int` Daten beschränkt. Informationen zu diesem Datentyp finden Sie unter [int, bigint, smallint und tinyint &#40;Transact-SQL&#41;](/sql/t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql).  
@@ -110,7 +107,7 @@ ms.locfileid: "62771576"
  **Alte Versionen regelmäßig entfernen**  
  Der Auftragsschritt für die Projektversionsbereinigung wird ausgeführt, wenn diese Eigenschaft auf `True` festgelegt ist.  
   
- **Maximale Anzahl von Versionen pro Projekt**  
+ **Maximale Anzahl der Versionen pro Projekt**  
  Definiert, wie viele Versionen eines Projekts im Katalog gespeichert sind. Frühere Versionen von Projekten werden entfernt.  
   
 ### <a name="encryption-algorithm"></a>Verschlüsselungsalgorithmus  
@@ -134,7 +131,7 @@ ms.locfileid: "62771576"
   
  Eine Änderung des Verschlüsselungsalgorithmus ist sehr aufwändig. Der Server muss zuerst alle Konfigurationswerte mithilfe des zuvor angegebenen Algorithmus entschlüsseln. Anschließend müssen die Werte vom Server mithilfe des neuen Algorithmus wieder verschlüsselt werden. In diesem Zeitraum können keine anderen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Vorgänge auf dem Server ausgeführt werden. Damit [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Vorgänge weiterhin ohne Unterbrechung ausgeführt werden können, ist der Wert für den Verschlüsselungsalgorithmus im [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]-Dialogfeld schreibgeschützt.  
   
- Um die Eigenschaften Einstellung **Verschlüsselungsalgorithmus** zu ändern, legen `SSISDB` Sie die Datenbank auf den Einzelbenutzermodus fest, und nennen Sie dann die gespeicherte Prozedur catalog. configure_catalog. Verwenden Sie ENCRYPTION_ALGORITHM für das *property_name*-Argument. Die unterstützten Eigenschaftswerte finden Sie unter [catalog.catalog_properties &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Weitere Informationen zur gespeicherten Prozedur finden Sie unter [catalog.configure_catalog &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
+ Um die Eigenschaften Einstellung **Verschlüsselungsalgorithmus** zu ändern, legen `SSISDB` Sie die Datenbank auf den Einzelbenutzermodus fest, und nennen Sie dann die gespeicherte Prozedur catalog. configure_catalog. Verwenden Sie ENCRYPTION_ALGORITHM für das *property_name* -Argument. Die unterstützten Eigenschaftswerte finden Sie unter [catalog.catalog_properties &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-catalog-properties-ssisdb-database). Weitere Informationen zur gespeicherten Prozedur finden Sie unter [catalog.configure_catalog &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-configure-catalog-ssisdb-database).  
   
  Weitere Informationen zum Einzelbenutzermodus finden Sie unter [Festlegen des Einzelbenutzermodus für eine Datenbank](../../relational-databases/databases/set-a-database-to-single-user-mode.md). Informationen zur Verschlüsselung sowie zu Algorithmen für die Verschlüsselung in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]finden Sie in den Themen im Abschnitt [SQL Server-Verschlüsselung](../../relational-databases/security/encryption/sql-server-encryption.md).  
   
@@ -142,7 +139,7 @@ ms.locfileid: "62771576"
   
  In der folgenden Tabelle sind die im Dialogfeld **Katalogeigenschaften** aufgeführten Eigenschaftsnamen und die zugehörigen Eigenschaften in der Datenbanksicht aufgelistet.  
   
-|Eigenschaftsname (Dialogfeld**Katalogeigenschaften** )|Eigenschaftsname (Datenbanksicht)|  
+|Eigenschafts Name (Dialogfeld**Katalog Eigenschaften** )|Eigenschaftsname (Datenbanksicht)|  
 |---------------------------------------------------------|-------------------------------------|  
 |Name des Verschlüsselungsalgorithmus|ENCRYPTION_ALGORITHM|  
 |Protokolle regelmäßig bereinigen|OPERATION_CLEANUP_ENABLED|  
@@ -171,7 +168,7 @@ ms.locfileid: "62771576"
   
 -   Verwenden Sie für ein Projekt die Seite **Berechtigungen** im [Project Properties Dialog Box](project-properties-dialog-box.md).  
   
- Um Berechtigungen mithilfe von Transact-SQL zu verwalten, nennen Sie [catalog. grant_permission &#40;ssisdb-Daten Bank&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database), [catalog. deny_permission &#40;ssisdb-Datenbank&#41;](/sql/integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database) und [catalog. revoke_permission &#40;&#41;ssisdb-Datenbank ](/sql/integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database). Fragen Sie [catalog.effective_object_permissions &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-effective-object-permissions-ssisdb-database) ab, um effektive Berechtigungen für das aktuelle Prinzipal für alle Objekte anzuzeigen. Dieses Thema enthält Beschreibungen der verschiedenen Berechtigungstypen. Fragen Sie [catalog.explicit_object_permissions &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database) ab, um Berechtigungen anzuzeigen, die explizit dem Benutzer zugewiesen wurden.  
+ Rufen Sie zum Verwalten von Berechtigungen mithilfe von Transact-SQL [catalog.grant_permission &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-grant-permission-ssisdb-database), [catalog.deny_permission &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-deny-permission-ssisdb-database) und [catalog.revoke_permission &#40;SSISDB Database&#41;](/sql/integration-services/system-stored-procedures/catalog-revoke-permission-ssisdb-database) auf. Fragen Sie [catalog.effective_object_permissions &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-effective-object-permissions-ssisdb-database) ab, um effektive Berechtigungen für das aktuelle Prinzipal für alle Objekte anzuzeigen. Dieses Thema enthält Beschreibungen der verschiedenen Berechtigungstypen. Fragen Sie [catalog.explicit_object_permissions &#40;SSISDB Database&#41;](/sql/integration-services/system-views/catalog-explicit-object-permissions-ssisdb-database) ab, um Berechtigungen anzuzeigen, die explizit dem Benutzer zugewiesen wurden.  
   
 ## <a name="folders"></a>Ordner  
  Ein Ordner enthält ein oder mehrere Projekte und Umgebungen im- `SSISDB` Katalog. Sie können die Ansicht [catalog.folders &#40;SSISDB-Datenbank&#41;](/sql/integration-services/system-views/catalog-folders-ssisdb-database) verwenden, um auf Informationen über Ordner im Katalog zuzugreifen. Sie können folgende gespeicherte Prozeduren zum Verwalten von Ordnern verwenden.  

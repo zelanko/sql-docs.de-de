@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 316afc6d5f3a87ff7431240681066ac5ee66ede6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62780695"
 ---
 # <a name="program-exception-message-box"></a>Programmieren eines Ausnahmemeldungsfelds
@@ -61,8 +61,7 @@ ms.locfileid: "62780695"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Buttons%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons>Enumeration, die die Schaltflächen angibt, die im Ausnahme Meldungs Feld angezeigt werden sollen.  
   
-    -   
-  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Caption%2A> - Dialogfeldbeschriftung des Ausnahmemeldungsfelds.  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Caption%2A> - Dialogfeldbeschriftung des Ausnahmemeldungsfelds.  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.DefaultButton%2A> - <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxDefaultButton>-Enumeration, die die Standard Schaltfläche für das Dialogfeld des Ausnahme Meldungs Felds angibt.  
   
@@ -90,8 +89,7 @@ ms.locfileid: "62780695"
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.AbortRetryIgnore>-zeigt die Schaltflächen **Abbrechen**, **wiederholen**und **ignorieren** an.  
   
-    -   
-  <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.Custom> - zeigt benutzerdefinierte Schaltflächen an.  
+    -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.Custom> - zeigt benutzerdefinierte Schaltflächen an.  
   
     -   <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBoxButtons.OK>-zeigt die Schaltfläche **OK** an.  
   
@@ -121,7 +119,7 @@ ms.locfileid: "62780695"
   
     -   Übergeben Sie den Meldungstext als <xref:System.String>-Wert.  
   
-4.  Setzen Sie die <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.ShowCheckbox%2A>-Eigenschaft auf `true`.  
+4.  Legen Sie die <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.ShowCheckbox%2A> -Eigenschaft auf `true`fest.  
   
 5.  (Optional) Geben Sie den Text an, mit dem der Benutzer aufgefordert wird, zu entscheiden, ob das Ausnahmemeldungsfeld für <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxText%2A> erneut angezeigt werden soll. Der Standardtext lautet: "Diese Meldung nicht mehr anzeigen."  
   
@@ -133,7 +131,7 @@ ms.locfileid: "62780695"
   
     2.  Legen Sie <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryValue%2A> auf den Namen des verwendeten Registrierungswerts fest.  
   
-    3.  Setzen Sie <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryMeansDoNotShowDialog%2A> auf `true`.  
+    3.  Legen Sie <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.CheckboxRegistryMeansDoNotShowDialog%2A> auf `true` fest.  
   
     4.  Rufen Sie die <xref:Microsoft.SqlServer.MessageBox.ExceptionMessageBox.Show%2A> -Methode auf. Der angegebene Registrierungsschlüssel wird ausgewertet, und das Ausnahmemeldungsfeld wird nur angezeigt, wenn die im Registrierungsschlüssel gespeicherten Daten 0 sind. Wenn das Dialogfeld angezeigt wird und der Benutzer das Kontrollkästchen aktiviert, bevor er auf eine Schaltfläche klickt, werden die Daten im Registrierungsschlüssel auf 1 gesetzt.  
   

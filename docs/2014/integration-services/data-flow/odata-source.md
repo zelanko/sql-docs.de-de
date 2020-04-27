@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b6b4aeb4059ba659a3188712b1ce76f10efd030
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771036"
 ---
 # <a name="odata-source"></a>OData-Quelle
@@ -45,11 +45,11 @@ ms.locfileid: "62771036"
   
 -   [Ändern einer OData-Quellabfrage zur Laufzeit](modify-odata-source-query-at-runtime.md)  
   
--   [Quellen-Editor für odata &#40;Verbindungs Seite&#41;](../odata-source-editor-connection-page.md)  
+-   [Quellen-Editor für OData &#40;Seite „Verbindung“&#41;](../odata-source-editor-connection-page.md)  
   
--   [Der Quellen-Editor für odata &#40;Spalten Seite&#41;](../odata-source-editor-columns-page.md)  
+-   [Quellen-Editor für OData &#40;Seite „Spalten“&#41;](../odata-source-editor-columns-page.md)  
   
--   [Quellen-Editor für odata &#40;Seite "Fehlerausgabe"&#41;](../odata-source-editor-error-output-page.md)  
+-   [Quellen-Editor für OData &#40;Seite „Fehlerausgabe“&#41;](../odata-source-editor-error-output-page.md)  
   
 -   [OData-Quelleneigenschaften](odata-source-properties.md)  
   

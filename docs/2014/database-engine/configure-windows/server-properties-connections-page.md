@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c9d58fb2a5702a2a6c3f5ac74ae970411d887b62
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809349"
 ---
 # <a name="server-properties-connections-page"></a>Servereigenschaften (Seite Verbindungen)
@@ -33,7 +33,7 @@ ms.locfileid: "62809349"
  **Default connection options**  
  Gibt die Standardverbindungsoptionen an, die in der folgenden Tabelle beschrieben werden.  
   
-|Konfigurationsoption|Beschreibung|  
+|Konfigurationsoption|BESCHREIBUNG|  
 |--------------------------|-----------------|  
 |**Verzögerte Einschränkungsüberprüfung deaktivieren**|Steuert die zwischenzeitliche oder verzögerte Einschränkungsüberprüfung.|  
 |**Implizite Transaktionen**|Steuert den impliziten Start einer Transaktion, wenn eine Anweisung ausgeführt wird.|  

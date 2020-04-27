@@ -13,18 +13,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 34e4c29cb28f76c930f1f04152528ca1a8a89dfc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775233"
 ---
 # <a name="validate-a-sql-server-installation"></a>Überprüfen einer SQL Server-Installation
   Mithilfe des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Ermittlungsberichts können Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Version sowie die auf dem Computer installierten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen überprüfen. Der **Bericht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zur Ermittlung installierter Funktionen** zeigt einen Bericht [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]aller [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-,-,- [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] ,-,-und-Produkte und-Funktionen an, die auf dem lokalen Server installiert sind. Der Bericht zur Ermittlung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen steht im **-Installationscenter auf der Seite** Tools [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bereit.  
   
- **So führen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie den Bericht zur Funktions Ermittlung aus:**  
+ **So führen Sie den Bericht zur Ermittlung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Funktionen aus**  
   
- Rufen Sie das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installationscenter auf. Zeigen Sie dazu im **Startmenü** auf **Alle Programme**, **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \<Versionsname>**, **Konfigurationstools**, und klicken Sie auf **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Installationscenter**. Klicken Sie im linken Navigationsbereich des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**-Installationscenter** auf **Tools[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und anschließend auf **Bericht zur Ermittlung installierter **-Funktionen[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um den Bericht zur Ermittlung der **-Funktionen auszuführen.  
+ Rufen Sie das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Installationscenter auf. Klicken Sie dazu im **Startmenü** auf **Alle Programme**, **[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] \<Versionsname>** > **Konfigurationstools**, und klicken Sie auf **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installationscenter**. Klicken Sie im linken Navigationsbereich des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **-Installationscenter** auf **Tools[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und anschließend auf** Bericht zur Ermittlung installierter **-Funktionen[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], um den Bericht zur Ermittlung der** -Funktionen auszuführen.  
   
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ermittlungsbericht wird unter% Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\setup Bootstrap\LOG\\<letzte Setup Sitzung\>gespeichert.  
   

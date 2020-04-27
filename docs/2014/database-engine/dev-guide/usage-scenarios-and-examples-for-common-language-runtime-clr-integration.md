@@ -18,19 +18,18 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3718a084211e7c3b2b7a14973e195a4b1c3b6b1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62780723"
 ---
 # <a name="usage-scenarios-and-examples-for-common-language-runtime-clr-integration"></a>Verwendungsszenarien und Beispiele für Common Language Runtime (CLR)-Integration
-  
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enthält Beispielanwendungen, Paketbeispiele und zahlreiche Codebeispiele, die Sie zum Erlernen der CLR (Common Language Runtime)-Programmierbarkeitsfunktionen verwenden können.  
   
  Umfassende Visual Studio-Projekte, die diese Beispiele und zusätzlichen Materialien implementieren, finden Sie unter [Microsoft SQL Server Community Projects & Beispiele auf CodePlex](https://go.microsoft.com/fwlink/?LinkID=193935).  
   
-|Name|BESCHREIBUNG|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |[Zugreifen auf systemeigenen Code von einer CLR-UDF](../../../2014/database-engine/dev-guide/accessing-native-code-from-a-clr-udf.md)|Zeigt, wie eine Funktion in systemeigenem (nicht verwaltetem) C++-Code in der Datenbank von einer benutzerdefinierten Funktion in einer Assembly aufgerufen wird.|  
 |[Beispiel für einen Arrayparameter](../../../2014/database-engine/dev-guide/array-parameter-sample.md)|Zeigt, wie Sie eine Gruppe von Zeilen in einer Datenbank durch Übergeben eines Arrays mit Informationen von einem Client an eine CLR-gespeicherte Prozedur auf dem Server erstellen, aktualisieren oder löschen können. Zu diesem Zweck wird ein UDT verwendet.|  

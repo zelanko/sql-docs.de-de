@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9268f0d06e0bf960ce3fb8879dfc219232ea822e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807459"
 ---
 # <a name="database-mirroring-and-replication-sql-server"></a>Datenbankspiegelung und Replikation (SQL Server)
@@ -85,16 +85,15 @@ ms.locfileid: "62807459"
   
     -   Merge-Agent (für Mergeabonnements)  
   
-    -   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replikationsüberwachung (replisapi.dll: für Mergeabonnements, die per Websynchronisierung synchronisiert werden)  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replikationsüberwachung (replisapi.dll: für Mergeabonnements, die per Websynchronisierung synchronisiert werden)  
   
     -   SQL Merge-ActiveX-Steuerelement (für Mergeabonnements, die über dieses Steuerelement synchronisiert werden)  
   
      Der Verteilungs-Agent und das Verteilungs-ActiveX-Steuerelement weisen diesen Parameter nicht auf, weil sie keine Verbindung mit dem Verleger herstellen.  
   
-     Die Änderungen der Agentparameter treten in Kraft, wenn der Agent das nächste Mal gestartet wird. Wenn der Agent ständig ausgeführt wird, müssen Sie den Agent beenden und neu starten. Parameter können in Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie unter  
+     Die Änderungen der Agentparameter treten in Kraft, wenn der Agent das nächste Mal gestartet wird. Wenn der Agent ständig ausgeführt wird, müssen Sie den Agent beenden und neu starten. Parameter können in Agentprofilen und in der Befehlszeile angegeben werden. Weitere Informationen finden Sie unter:  
   
-    -   [Anzeigen und Ändern der Befehlszeilenparameter des Replikations-Agents &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
+    -   [Anzeigen und Ändern von Befehlszeilenparametern des Replikations-Agents &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/view-and-modify-replication-agent-command-prompt-parameters.md)  
   
     -   [Ausführbare Konzepte für die Programmierung von Replikations-Agent](../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
@@ -163,6 +162,6 @@ ms.locfileid: "62807459"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server-Replikation](../../relational-databases/replication/sql-server-replication.md)   
- [Protokoll Versand und Replikations &#40;SQL Server&#41;](../log-shipping/log-shipping-and-replication-sql-server.md)  
+ [Protokollversand und Replikation &#40;SQL Server&#41;](../log-shipping/log-shipping-and-replication-sql-server.md)  
   
   

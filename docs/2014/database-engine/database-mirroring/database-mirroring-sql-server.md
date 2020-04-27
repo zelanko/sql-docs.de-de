@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d97a3132099a6007f99f6a0119fc3df63a58b9b4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807918"
 ---
 # <a name="database-mirroring-sql-server"></a>Datenbankspiegelung (SQL Server)
@@ -35,14 +35,14 @@ ms.locfileid: "62807918"
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Verwenden Sie stattdessen [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   
- Die *Daten Bank Spiegelung* ist eine Lösung zur Erhöhung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verfügbarkeit einer Datenbank. Die Datenbankspiegelung wird auf Datenbankbasis implementiert und ist nur für Datenbanken mit dem vollständigen Wiederherstellungsmodell geeignet.  
+ Die*Datenbankspiegelung* ist eine Lösung zum Verbessern der Verfügbarkeit einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank. Die Datenbankspiegelung wird auf Datenbankbasis implementiert und ist nur für Datenbanken mit dem vollständigen Wiederherstellungsmodell geeignet.  
   
 > [!IMPORTANT]  
->  Informationen zur Unterstützung der Datenbankspiegelung, zu Einschränkungen, zu Voraussetzungen und zu Empfehlungen für die Konfiguration von Partnerservern sowie für die Bereitstellung der Datenbankspiegelung finden Sie unter [Voraussetzungen, Einschränkungen und Empfehlungen für die Datenbankspiegelung](prerequisites-restrictions-and-recommendations-for-database-mirroring.md).  
+>   Informationen zur Unterstützung der Datenbankspiegelung, zu Einschränkungen, Voraussetzungen, Empfehlungen für die Konfiguration von Partnerservern sowie für die Bereitstellung der Datenbankspiegelung finden Sie unter [Prerequisites, Restrictions, and Recommendations for Database Mirroring](prerequisites-restrictions-and-recommendations-for-database-mirroring.md).  
   
 
   
-##  <a name="Benefits"></a>Vorteile der Daten Bank Spiegelung  
+##  <a name="benefits-of-database-mirroring"></a><a name="Benefits"></a>Vorteile der Daten Bank Spiegelung  
  Die Datenbankspiegelung ist eine einfache Strategie, die folgende Vorteile bietet:  
   
 -   Erhöht die Verfügbarkeit einer Datenbank.  
@@ -59,7 +59,7 @@ ms.locfileid: "62807918"
   
      Um Ausfallzeiten für eine gespiegelte Datenbank zu minimieren, können Sie sequenziell die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanzen aktualisieren, die die Failoverpartner hosten. Auf diese Weise kommt es nur bei einem Failover zu einer Ausfallzeit. Diese Art des Upgrades wird als *paralleles Upgrade*bezeichnet. Weitere Informationen finden Sie unter [Installieren eines Service Packs auf einem System mit minimalen Ausfallzeiten für gespiegelte Datenbanken](../install-a-service-pack-on-a-system-with-minimal-downtime-for-mirrored-databases.md).  
   
-##  <a name="TermsAndDefinitions"></a>Begriffe und Definitionen zur Daten Bank Spiegelung  
+##  <a name="database-mirroring-terms-and-definitions"></a><a name="TermsAndDefinitions"></a>Begriffe und Definitionen zur Daten Bank Spiegelung  
  Automatisches Failover  
  Entspricht dem Prozess, bei dem im Fall eines Ausfalls des Prinzipalservers der Spiegelserver die Rolle des Prinzipalservers übernimmt und die zugehörige Kopie der Datenbank als Prinzipaldatenbank online zur Verfügung gestellt wird.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "62807918"
  Zeuge  
  Ist nur für den Modus mit hoher Sicherheit bestimmt und entspricht einer optionalen SQL Server-Instanz, durch die der Spiegelserver den Zeitpunkt für die Initiierung eines automatischen Failovers erkennen kann. Im Gegensatz zu den zwei Failoverpartnern bedient der Zeuge nicht die Datenbank. Die Unterstützung des automatischen Failovers ist die einzige Aufgabe des Zeugen.  
   
-##  <a name="HowWorks"></a>Übersicht über die Daten Bank Spiegelung  
+##  <a name="overview-of-database-mirroring"></a><a name="HowWorks"></a>Übersicht über die Daten Bank Spiegelung  
  Die Datenbankspiegelung verwaltet zwei Kopien einer Datenbank, die sich auf verschiedenen Serverinstanzen von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]befinden müssen. In der Regel befinden sich diese Serverinstanzen auf Computern an verschiedenen Standorten. Durch das Starten einer Datenbankspiegelung auf einer Datenbank wird eine Beziehung zwischen den beiden Serverinstanzen initiiert, die als *Datenbank-Spiegelungssitzung*bekannt ist.  
   
  Eine Serverinstanz liefert die Daten der Datenbank an Clients. Dies ist der *Prinzipalserver*. Die andere Instanz fungiert je nach Konfiguration und Status der Spiegelungssitzung als (unmittelbar) betriebsbereiter Standbyserver ( *Spiegelserver*). Wird eine Datenbankspiegelungssitzung synchronisiert, stellt die Datenbankspiegelung einen unmittelbar betriebsbereiten Standbyserver bereit, der schnelle Failover unterstützt, ohne dass Daten aus Transaktionen, für die ein Commit ausgeführt wurde, verloren gehen. Wird die Sitzung nicht synchronisiert, steht der Spiegelserver in der Regel als betriebsbereiter Standbyserver zur Verfügung (bei möglichem Datenverlust).  
@@ -130,7 +130,7 @@ ms.locfileid: "62807918"
   
  
   
-###  <a name="OperatingModes"></a>Betriebsmodi  
+###  <a name="operating-modes"></a><a name="OperatingModes"></a>Betriebsmodi  
  Eine Datenbank-Spiegelungssitzung wird entweder im synchron oder asynchron ausgeführt. Im asynchronen Betrieb wird für die Transaktionen ein Commit ausgeführt, ohne darauf zu warten, dass der Spiegelserver das Protokoll auf den Datenträger schreibt, wodurch die Leistung maximiert wird. Im synchronen Betrieb wird für eine Transaktion auf beiden Partnern ein Commit ausgeführt, jedoch mit dem Risiko einer erhöhten Transaktionslatenzzeit.  
   
  Es existieren zwei Betriebsmodi für die Datenbankspiegelung. Einer der Modi, der *Modus für hohe Sicherheit* unterstützt synchrone Vorgänge. Zu Beginn einer Sitzung im Modus für hohe Sicherheit synchronisiert der neue Spiegelserver die neue Spiegeldatenbank so schnell wie möglich mit der Prinzipaldatenbank. Sobald die Datenbanken synchronisiert wurden, wird für eine Transaktion auf beiden Partnern ein Commit ausgeführt, jedoch mit dem Risiko einer erhöhten Transaktionslatenzzeit.  
@@ -141,7 +141,7 @@ ms.locfileid: "62807918"
   
  Alle Datenbank-Spiegelungssitzungen unterstützen nur einen Prinzipalserver und einen Spiegelserver. Diese Konfiguration wird in der folgenden Abbildung dargestellt.  
   
- ![Partner in einer Datenbank-Spiegelungssitzung](../media/dbm-2-way-session-intro.gif "Partner in einer Datenbank-Spiegelungssitzung")  
+ ![Partner in einer Datenbankspiegelungssitzung](../media/dbm-2-way-session-intro.gif "Partner in einer Datenbankspiegelungssitzung")  
   
  Der Modus für hohe Sicherheit mit automatischem Failover erfordert eine dritte Serverinstanz, die als *Zeuge*bezeichnet wird. Im Gegensatz zu den beiden Partnern stellt der Zeuge die Datenbank nicht bereit. Der Zeuge unterstützt das automatische Failover dadurch, dass er überprüft, ob der Prinzipalserver aktiv und funktionsfähig ist. Der Spiegelserver initiiert das automatische Failover nur, wenn der Spiegel und der Zeuge miteinander verbunden bleiben, nachdem beide vom Prinzipalserver getrennt wurden.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "62807918"
 > [!NOTE]  
 >  Damit eine neue Spiegelungssitzung eingerichtet bzw. einer bestehenden Spiegelungskonfiguration ein Zeuge hinzugefügt werden kann, muss auf allen beteiligten Serverinstanzen dieselbe Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ausgeführt werden. Nach dem Upgrade auf [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] oder eine spätere Version können sich die Versionen der beteiligten Instanzen jedoch unterscheiden. Weitere Informationen finden Sie unter [Minimize Downtime for Mirrored Databases When Upgrading Server Instances](upgrading-mirrored-instances.md).  
   
-####  <a name="TxnSafety"></a>Transaktionssicherheit und Betriebsmodi  
+####  <a name="transaction-safety-and-operating-modes"></a><a name="TxnSafety"></a> Transaktionssicherheit und Betriebsmodi  
  Ob ein Betriebsmodus asynchron oder synchron ist, hängt von der Transaktionssicherheitseinstellung ab. Wenn Sie ausschließlich [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zum Konfigurieren der Datenbankspiegelung verwenden, werden die Transaktionssicherheitseinstellungen automatisch konfiguriert, wenn Sie den Betriebsmodus auswählen.  
   
  Wenn Sie die Datenbankspiegelung mit [!INCLUDE[tsql](../../includes/tsql-md.md)] konfigurieren, müssen Sie wissen, wie die Transaktionssicherheit eingestellt wird. Die Transaktionssicherheit wird durch die SAFETY-Eigenschaft der ALTER DATABASE-Anweisung gesteuert. Für eine Datenbank, die gespiegelt wird, ist SAFETY auf FULL oder OFF festgelegt.  
@@ -165,8 +165,8 @@ ms.locfileid: "62807918"
   
  Weitere Informationen finden Sie unter [Database Mirroring Operating Modes](database-mirroring-operating-modes.md).  
   
-###  <a name="RoleSwitching"></a>Rollenwechsel  
- Innerhalb des Kontexts einer Datenbank-Spiegelungs Sitzung sind die Prinzipal-und Spiegel Rollen in der Regel in einem Prozess austauschbar, der als *Rollenwechsel*bezeichnet wird. Beim Rollenwechsel wird die Prinzipalrolle auf den Spiegelserver übertragen. Der Spiegelserver dient beim Rollenwechsel als *Failoverpartner* für den Prinzipalserver. Wenn ein Rollenwechsel stattfindet, übernimmt der Spiegelserver die Prinzipalrolle und schaltet seine Kopie der Datenbank als neue Prinzipaldatenbank online. Der ehemalige Prinzipalserver übernimmt, falls er verfügbar ist, die Spiegelrolle, und die zugehörige Datenbank wird zur neuen Spiegeldatenbank. Potenziell können die Rollen wiederholt hin- und hergewechselt werden.  
+###  <a name="role-switching"></a><a name="RoleSwitching"></a>Rollenwechsel  
+ Im Kontext einer Datenbank-Spiegelungssitzung können die Prinzipal- und Spiegelrollen normalerweise im Rahmen des so genannten *Rollenwechsels*ausgetauscht werden. Beim Rollenwechsel wird die Prinzipalrolle auf den Spiegelserver übertragen. Der Spiegelserver dient beim Rollenwechsel als *Failoverpartner* für den Prinzipalserver. Wenn ein Rollenwechsel stattfindet, übernimmt der Spiegelserver die Prinzipalrolle und schaltet seine Kopie der Datenbank als neue Prinzipaldatenbank online. Der ehemalige Prinzipalserver übernimmt, falls er verfügbar ist, die Spiegelrolle, und die zugehörige Datenbank wird zur neuen Spiegeldatenbank. Potenziell können die Rollen wiederholt hin- und hergewechselt werden.  
   
  Es stehen die folgenden drei Arten des Rollenwechsels zur Verfügung:  
   
@@ -189,7 +189,7 @@ ms.locfileid: "62807918"
   
  In einem Rollenwechselszenario können die Clientanwendungen schnell wiederhergestellt werden, nachdem die neue Prinzipaldatenbank online geschaltet wurde, indem erneut eine Verbindung mit der Datenbank hergestellt wird.  
   
-###  <a name="ConcurrentSessions"></a>Gleichzeitige Sitzungen  
+###  <a name="concurrent-sessions"></a><a name="ConcurrentSessions"></a>Gleichzeitige Sitzungen  
  Eine Serverinstanz kann an mehreren gleichzeitigen Datenbank-Spiegelungssitzungen (eine pro gespiegelter Datenbank) mit denselben oder mit anderen Serverinstanzen teilnehmen. Häufig dient eine Serverinstanz ausschließlich als Partner oder als Zeuge in allen Datenbank-Spiegelungssitzungen. Da jedoch jede Sitzung von den anderen Sitzungen unabhängig ist, kann eine Serverinstanz in einigen Sitzungen als Partner und in anderen Sitzungen als Zeuge fungieren. Betrachten Sie beispielsweise die folgenden vier Sitzungen zwischen drei Serverinstanzen (`SSInstance_1`, `SSInstance_2`und `SSInstance_3`). Jede Serverinstanz dient in manchen Sitzungen als Partner und in anderen Sitzungen wiederum als Zeuge.  
   
 |Serverinstanz|Sitzung für Datenbank A|Sitzung für Datenbank B|Sitzung für Datenbank C|Sitzung für Datenbank D|  
@@ -211,21 +211,21 @@ ms.locfileid: "62807918"
 > [!NOTE]  
 >  Da gespiegelte Datenbanken voneinander unabhängig sind, ist für die Datenbanken kein Failover als Gruppe möglich.  
   
-###  <a name="ClientConnections"></a> Clientverbindungen  
- Unterstützung für Clientverbindungen wird vom [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bereitgestellt. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Verbinden von Clients mit einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md).  
+###  <a name="client-connections"></a><a name="ClientConnections"></a>Client Verbindungen  
+ Unterstützung für Clientverbindungen wird vom [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET-Datenanbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bereitgestellt. Weitere Informationen finden Sie unter [Verbinden von Clients mit einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)ausgetauscht werden.  
   
-###  <a name="ImpactOfPausing"></a>Auswirkungen des Anhaltens einer Sitzung auf das Prinzipal Transaktionsprotokoll  
+###  <a name="impact-of-pausing-a-session-on-the-principal-transaction-log"></a><a name="ImpactOfPausing"></a>Auswirkungen des Anhaltens einer Sitzung auf das Prinzipal Transaktionsprotokoll  
  Der Datenbankbesitzer kann eine Sitzung jederzeit anhalten. Durch Anhalten bleibt der Sitzungsstatus erhalten, während die Spiegelung entfernt wird. Wenn eine Sitzung angehalten wird, sendet der Prinzipalserver keine neuen Protokolldatensätze an den Spiegelserver. Alle diese Datensätze bleiben aktiv und werden im Transaktionsprotokoll der Prinzipaldatenbank gesammelt. Während eine Datenbank-Spiegelungssitzung angehalten wird, kann das Transaktionsprotokoll nicht abgeschnitten werden. Wird die Datenbank-Spiegelungssitzung zu lange angehalten, kann es somit sein, dass das Protokoll vollständig aufgefüllt wird.  
   
  Weitere Informationen finden Sie weiter unten in diesem Thema unter [Anhalten und Fortsetzen der Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md).  
   
-##  <a name="SettingUpDbmSession"></a>Einrichten der Datenbank-Spiegelungs Sitzung  
+##  <a name="setting-up-database-mirroring-session"></a><a name="SettingUpDbmSession"></a>Einrichten der Datenbank-Spiegelungs Sitzung  
  Vor dem Beginn einer Spiegelungssitzung muss der Datenbankbesitzer oder Systemadministrator die Spiegeldatenbank erstellen, Endpunkte und Anmeldungen einrichten und in einigen Fällen Zertifikate erstellen und einrichten. Weitere Informationen finden Sie weiter unten in diesem Thema unter [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md).  
   
-##  <a name="InterOp"></a>Interoperabilität und Koexistenz mit anderen Datenbank-Engine Features  
+##  <a name="interoperability-and-coexistence-with-other-database-engine-features"></a><a name="InterOp"></a>Interoperabilität und Koexistenz mit anderen Datenbank-Engine Features  
  Die Datenbankspiegelung kann mit den folgenden Funktionen oder Komponenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet werden:  
   
--   [Protokoll Versand](database-mirroring-and-log-shipping-sql-server.md)  
+-   [Protokollversand](database-mirroring-and-log-shipping-sql-server.md)  
   
 -   [Voll Text Kataloge](database-mirroring-and-full-text-catalogs-sql-server.md)  
   
@@ -233,11 +233,11 @@ ms.locfileid: "62807918"
   
 -   [Replikation](database-mirroring-and-replication-sql-server.md)  
   
-##  <a name="InThisSection"></a> In diesem Abschnitt  
+##  <a name="in-this-section"></a><a name="InThisSection"></a>In diesem Abschnitt  
  [Voraussetzungen, Einschränkungen und Empfehlungen für die Datenbankspiegelung](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)  
  Beschreibt die Voraussetzungen und Empfehlungen zum Einrichten der Datenbankspiegelung.  
   
- [Database Mirroring Operating Modes](database-mirroring-operating-modes.md)  
+ [Betriebsmodi der Datenbankspiegelung](database-mirroring-operating-modes.md)  
  Enthält Informationen zu den synchronen und asynchronen Betriebsmodi für Datenbank-Spiegelungssitzungen sowie zum Wechseln von Partnerrollen während einer Datenbank-Spiegelungssitzung.  
   
  [Database Mirroring Witness](database-mirroring-witness.md)  
@@ -255,10 +255,10 @@ ms.locfileid: "62807918"
  [Einrichten der Datenbankspiegelung &#40;SQL Server&#41;](setting-up-database-mirroring-sql-server.md)  
  Enthält Themen zu den Voraussetzungen, Empfehlungen und Schritten zum Einrichten der Datenbankspiegelung.  
   
- [Verbinden von Clients mit einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)  
+ [Verbinden von Clients mit einer Datenbank-Spiegelungssitzung (SQL Server)](connect-clients-to-a-database-mirroring-session-sql-server.md)  
  Enthält Themen zu Attributen von Clientverbindungszeichenfolgen und den Algorithmen für die Verbindung bzw. die Wiederherstellung der Verbindung eines Clients mit einer gespiegelten Datenbank.  
   
- [Anhalten und Fortsetzen der Daten Bank Spiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
+ [Anhalten und Fortsetzen der Datenbankspiegelung &#40;SQL Server&#41;](database-mirroring-sql-server.md)  
  Erläutert die Vorgänge im Fall einer angehaltenen Datenbankspiegelung, einschließlich der Auswirkungen auf Kürzungen von Transaktionsprotokollen. Zudem sind Beschreibungen zum Anhalten und Fortsetzen der Datenbankspiegelung enthalten.  
   
  [Entfernen der Datenbankspiegelung &#40;SQL Server&#41;](removing-database-mirroring-sql-server.md)  
@@ -267,41 +267,41 @@ ms.locfileid: "62807918"
  [Überwachen der Datenbankspiegelung &#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md)  
  Enthält Informationen zum Verwenden des Datenbankspiegelungs-Monitors bzw. der gespeicherten Prozeduren von **dbmmonitor** zum Überwachen der Datenbankspiegelung bzw. von Datenbank-Spiegelungssitzungen.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 ### <a name="configuration-tasks"></a>Konfigurationstasks  
  **Verwenden von SQL Server Management Studio**  
   
 -   [Starten des Assistenten zum Konfigurieren der Sicherheit für die Datenbankspiegelung &#40;SQL Server Management Studio&#41;](start-the-configuring-database-mirroring-security-wizard.md)  
   
--   [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;SQL Server Management Studio&#41;](establish-database-mirroring-session-windows-authentication.md)  
+-   [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung (SQL Server Management Studio)](establish-database-mirroring-session-windows-authentication.md)  
   
  **Verwenden von Transact-SQL**  
   
 -   [Ermöglicht den Netzwerk Zugriff auf einen Datenbankspiegelungs-Endpunkt mithilfe der Windows-Authentifizierung &#40;SQL Server&#41;](../database-mirroring-allow-network-access-windows-authentication.md)  
   
--   [Ermöglicht einem Datenbankspiegelungs-Endpunkt die Verwendung von Zertifikaten für ausgehende Verbindungen &#40;Transact-SQL-&#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
+-   [Ermöglichen des Verwendens von Zertifikaten für ausgehende Verbindungen für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-outbound-connections.md)  
   
--   [Ermöglicht einem Datenbankspiegelungs-Endpunkt die Verwendung von Zertifikaten für eingehende Verbindungen &#40;Transact-SQL-&#41;](database-mirroring-use-certificates-for-inbound-connections.md)  
+-   [Ermöglichen des Verwendens von Zertifikaten für eingehende Verbindungen für einen Datenbankspiegelungs-Endpunkt &#40;Transact-SQL&#41;](database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung (Transact-SQL)](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
+-   [Erstellen eines Endpunkts der Datenbankspiegelung für Windows-Authentifizierung &#40;Transact-SQL&#41;](create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)  
   
--   [Einrichten einer Datenbank-Spiegelungs Sitzung mithilfe der Windows-Authentifizierung &#40;Transact-SQL-&#41;](database-mirroring-establish-session-windows-authentication.md)  
+-   [Einrichten einer Datenbank-Spiegelungssitzung mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](database-mirroring-establish-session-windows-authentication.md)  
   
--   [Hinzufügen eines Datenbankspiegelungs-Zeugen mithilfe der Windows-Authentifizierung &#40;Transact-SQL&#41;](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
+-   [Hinzufügen eines Zeugen für die Datenbankspiegelung mithilfe der Windows-Authentifizierung (Transact-SQL)](add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
--   [Einrichten der TRUSTWORTHY-Eigenschaft für eine Spiegeldatenbank (Transact-SQL)](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
+-   [Einrichten der TRUSTWORTHY-Eigenschaft für eine Spiegeldatenbank &#40;Transact-SQL&#41;](set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
   
  **Verwenden von Transact-SQL oder SQL Server Management Studio**  
   
--   [Minimieren der Ausfallzeit von gespiegelten Datenbanken beim Aktualisieren von Serverinstanzen](upgrading-mirrored-instances.md)  
+-   [Vorgehensweise: Minimieren der Ausfallzeit von gespiegelten Datenbanken beim Aktualisieren von Serverinstanzen](upgrading-mirrored-instances.md)  
   
--   [Vorbereiten einer Spiegeldatenbank auf die Spiegelung &#40;SQL Server&#41;](prepare-a-mirror-database-for-mirroring-sql-server.md)  
+-   [Vorbereiten einer Spiegeldatenbank auf die Spiegelung (SQL Server)](prepare-a-mirror-database-for-mirroring-sql-server.md)  
   
 ### <a name="administrative-tasks"></a>Administrative Tasks  
  **Transact-SQL**  
   
--   [Ändern der Transaktionssicherheit in einer Datenbank-Spiegelungssitzung &#40;Transact-SQL&#41;](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
+-   [Ändern der Transaktionssicherheit in einer Datenbank-Spiegelungssitzung (Transact-SQL)](change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
 -   [Ausführen des manuellen Failovers einer Datenbank-Spiegelungssitzung &#40;Transact-SQL&#41;](manually-fail-over-a-database-mirroring-session-transact-sql.md)  
   
@@ -328,7 +328,7 @@ ms.locfileid: "62807918"
 ## <a name="see-also"></a>Weitere Informationen  
  [Der Datenbankspiegelungs-Endpunkt &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)   
  [Automatische Seiten Reparatur &#40;für Verfügbarkeits Gruppen und Daten Bank Spiegelung&#41;](../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md)   
- [Problembehandlung für die Datenbankspiegelungskonfiguration (SQL Server)](troubleshoot-database-mirroring-configuration-sql-server.md)   
+ [Problembehandlung bei der Daten Bank Spiegelungs Konfiguration &#40;SQL Server&#41;](troubleshoot-database-mirroring-configuration-sql-server.md)   
  [Daten Bank Spiegelung: Interoperabilität und Koexistenz &#40;SQL Server&#41;](database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Voraussetzungen, Einschränkungen und Empfehlungen für die Daten Bank Spiegelung](prerequisites-restrictions-and-recommendations-for-database-mirroring.md)   
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 26f0193d40a01858bc3fe651a23b389a4ffcb6ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779155"
 ---
 # <a name="guidelines-for-transaction-isolation-levels-with-memory-optimized-tables"></a>Richtlinien für Transaktionsisolationsstufen mit speicheroptimierten Tabellen
@@ -56,7 +56,7 @@ ms.locfileid: "62779155"
   
  Die Garantie, welche die SNAPSHOT-Isolationsstufe (die unterste Ebene der Isolation, die für speicheroptimierte Tabellen unterstützt wird) bietet, umfasst die READ COMMITTED-Garantien. Jede Anweisung in der Transaktion liest die gleiche, konsistente Version der Datenbank. Er werden nicht nur alle von der Transaktion gelesenen Zeilen an die Datenbank übergeben, sondern bei allen Lesevorgängen wird auch der Satz von Änderungen angezeigt, die durch den gleichen Transaktionssatz ausgeführt wurden.  
   
- **Richtlinie**: Wenn nur die schreibgeschützte Isolations Garantie für den Lesezugriff erforderlich ist, verwenden Sie die Momentaufnahme Isolation mit System intern kompilierten gespeicherten [!INCLUDE[tsql](../includes/tsql-md.md)]Prozeduren und für den Zugriff auf Speicher optimierte Tabellen  
+ **Richtlinie**: Wenn nur die READ COMMITTED-Isolationsgarantie erforderlich ist, verwenden Sie die SNAPSHOT-Isolation mit systemintern kompilierten gespeicherten Prozeduren und für den Zugriff auf speicheroptimierte Tabellen über interpretiertes [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
  Bei speicheroptimierten Tabellen wird für Autocommittransaktionen die Isolationsstufe READ COMMITTED implizit SNAPSHOT zugeordnet. Wenn die Sitzungseinstellung TRANSACTION ISOLATION LEVEL auf READ COMMITTED festgelegt wird, ist es daher nicht notwendig, die Isolationsstufe durch einen Tabellenhinweis anzugeben, wenn Sie auf speicheroptimierte Tabellen zugreifen.  
   
@@ -97,7 +97,7 @@ COMMIT
   
      Ein Tabellenabruf mithilfe einer WHILE-Schleife, bis eine neue Zeile gefunden wurde, ist ein Beispiel für ein Anwendungsmuster, das diese Annahme verwendet. Bei jeder Iteration der Schleife werden der Abfrage die neuesten Updates in der Datenbank angezeigt.  
   
-     **Richtlinie:** Wenn eine Anwendung eine Speicher optimierte Tabelle abrufen muss, um die aktuellsten Zeilen abzurufen, die in die Tabelle geschrieben wurden, verschieben Sie die Abruf Schleife außerhalb des Bereichs der Transaktion.  
+     **Richtlinie:** Wenn eine Anwendung eine speicheroptimierte Tabelle abrufen muss, um die neuesten Zeilen zu erhalten, die in die Tabelle geschrieben wurden, verschieben Sie die Abrufschleife aus der Transaktion heraus.  
   
      Es folgt ein Beispiel für ein Anwendungsmuster, das die folgende Annahme verwendet: Abrufen einer Tabelle mithilfe einer WHILE-Schleife, bis eine neue Zeile gefunden wird. In jeder Schleifeniteration greift die Abfrage auf die neuesten Updates in der Datenbank zu.  
   

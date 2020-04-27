@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7a799707dc57e07528afb29c135a5ee394c56354
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770216"
 ---
 # <a name="tutorial-using-the-odata-source-ssis"></a>Lernprogramm: Verwenden der OData-Quelle [SSIS]
@@ -46,7 +46,7 @@ ms.locfileid: "62770216"
   
 6.  Geben Sie die OData-Dienst-URL als **Speicherort des Dienstdokuments**ein. Hierbei kann es sich um die URL zum Dienstdokument oder zu einem bestimmten Feed oder einer bestimmten Entität handeln. Geben [http://services.odata.org/V3/Northwind/Northwind.svc/](http://services.odata.org/V3/Northwind/Northwind.svc/)Sie für dieses Tutorial den Namen ein.  
   
-7.  Vergewissern Sie sich, dass als **Authentifizierung** der Typ **Windows-Authentifizierung** für den Zugriff auf den OData-Dienst ausgewählt ist. Standardmäßig ist die **Windows-Authentifizierung** ausgewählt. Wenn Sie die Standardauthentifizierung verwenden möchten, wählen Sie **Diesen Benutzernamen und dieses Kennwort verwenden**aus.  
+7.  Vergewissern Sie sich, dass als **Authentifizierung** der Typ **Windows-Authentifizierung** für den Zugriff auf den OData-Dienst ausgewählt ist. **Windows-Authentifizierung** ist standardmäßig ausgewählt. Wenn Sie die Standardauthentifizierung verwenden möchten, wählen Sie **Diesen Benutzernamen und dieses Kennwort verwenden**aus.  
   
 8.  Klicken Sie für die Verbindung auf **Verbindung testen** , und klicken Sie auf **OK** , um eine Instanz des OData-Verbindungs-Managers zu erstellen.  
   

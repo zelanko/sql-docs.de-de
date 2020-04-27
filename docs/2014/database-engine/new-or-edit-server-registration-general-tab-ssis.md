@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 72de91ffa2dc7f52a1cce5192d4aab0ff258cbc8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774159"
 ---
 # <a name="new-or-edit-server-registration-general-tab-ssis"></a>Neue Serverregistrierung und Serverregistrierung bearbeiten (Registerkarte Allgemein) (SSIS)
@@ -26,7 +26,7 @@ ms.locfileid: "62774159"
   
 ## <a name="options"></a>Tastatur  
  **Servertyp**  
- Wenn Sie einen Server über „Registrierte Server“ registrieren, ist das Feld **Servertyp** schreibgeschützt, wobei der Feldeintrag mit dem im Bereich für registrierte Server angezeigten Servertyp übereinstimmt. Um einen anderen Servertyp zu registrieren, bevor Sie mit dem Registrieren eines neuen Servers beginnen, klicken Sie auf der Symbolleiste **Registrierte Server**, **Datenbank-Engine**, **Analysis-Server**, **Analysis-Server** **SQL Server Compact****Registrierte Server** auf **Integration Services**.  
+ Wenn Sie einen Server über „Registrierte Server“ registrieren, ist das Feld **Servertyp** schreibgeschützt, wobei der Feldeintrag mit dem im Bereich für registrierte Server angezeigten Servertyp übereinstimmt. Wenn Sie einen anderen Servertyp registrieren möchten, klicken Sie, bevor Sie mit dem Registrieren eines neuen Servers beginnen, auf der Symbolleiste **Registrierte Server** auf **Datenbank-Engine**, **Analysis-Server**, **Reporting Services**, **SQL Server Compact** **Edition** oder **Integration Services**.  
   
  **Servername**  
  Wählen Sie den Server aus, mit dem eine Verbindung hergestellt werden soll. Standardmäßig wird der Server angezeigt, mit dem zuletzt eine Verbindung hergestellt wurde.  
@@ -52,7 +52,7 @@ ms.locfileid: "62774159"
  **Test**  
  Klicken Sie hier, um die Verbindung mit dem unter **Servername**ausgewählten Server zu testen.  
   
- **Sicher**  
+ **Speichern**  
  Klicken Sie hier, um die Einstellungen für die registrierten Server zu speichern.  
   
   

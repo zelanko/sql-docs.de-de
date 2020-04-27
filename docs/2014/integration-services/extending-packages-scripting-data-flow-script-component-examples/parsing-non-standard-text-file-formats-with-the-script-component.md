@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 381f616ec0732616a7c9c1a5d181e5d1ea002ce6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62769006"
 ---
 # <a name="parsing-non-standard-text-file-formats-with-the-script-component"></a>Analysieren von nicht standardmäßigen Textdateiformaten mit der Skriptkomponente
@@ -32,7 +32,7 @@ ms.locfileid: "62769006"
 > [!NOTE]  
 >  Wenn Sie eine Komponente erstellen möchten, die Sie einfacher in mehreren Datenflusstasks und Paketen wiederverwenden können, empfiehlt es sich, den Code in diesem Skriptkomponentenbeispiel als Ausgangspunkt für eine benutzerdefinierte Datenflusskomponente zu verwenden. Weitere Informationen finden Sie unter [Entwickeln einer benutzerdefinierten Datenflusskomponente](../extending-packages-custom-objects/data-flow/developing-a-custom-data-flow-component.md).  
   
-##  <a name="example1"></a> Beispiel 1: Analysieren von nach Zeilen getrennten Datensätzen  
+##  <a name="example-1-parsing-row-delimited-records"></a><a name="example1"></a> Beispiel 1: Analysieren von nach Zeilen getrennten Datensätzen  
  In diesem Beispiel wird gezeigt, wie eine Textdatei, in der sich jede Datenspalte auf einer separaten Zeile befindet, mithilfe der Skriptkomponente in eine Zieltabelle konvertiert werden kann.  
   
  Weitere Informationen zum Konfigurieren der Skript Komponente für die Verwendung als Transformation im Datenfluss finden Sie unter [Erstellen einer synchronen Transformation mit der Skript Komponente](../extending-packages-scripting-data-flow-script-component-types/creating-a-synchronous-transformation-with-the-script-component.md)und [Erstellen einer asynchronen Transformation mit der Skript Komponente](../extending-packages-scripting-data-flow-script-component-types/creating-an-asynchronous-transformation-with-the-script-component.md).  
@@ -187,7 +187,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
     }  
 ```  
   
-##  <a name="example2"></a> Beispiel 2: Teilen von übergeordneten und untergeordneten Datensätzen  
+##  <a name="example-2-splitting-parent-and-child-records"></a><a name="example2"></a> Beispiel 2: Teilen von übergeordneten und untergeordneten Datensätzen  
  In diesem Beispiel wird gezeigt, wie eine Textdatei, in der eine Trennzeichenzeile einer übergeordneten Datenzeile vorausgeht, auf die eine endlose Anzahl an untergeordneten Datenzeilen folgt, mithilfe der Skriptkomponente in ordnungsgemäß normalisierte übergeordnete und untergeordnete Zieltabellen konvertiert werden kann. Dieses einfache Beispiel kann in abgewandelter Form problemlos auf Quelldateien angewendet werden, die mehr als eine Zeile oder Spalte für jeden über- und untergeordneten Datensatz verwenden, vorausgesetzt, der Anfang und das Ende jedes Datensatzes kann bestimmt werden.  
   
 > [!CAUTION]  
@@ -259,8 +259,7 @@ public override void Input0_ProcessInputRow(Input0Buffer Row)
   
     -   ParentRecord vom Typ String [DT_STR] mit einer Länge von 32.  
   
-13. Erstellen Sie eine zweite Ausgabe, und nennen Sie sie ChildRecords. 
-  `SynchronousInputID` der neuen Ausgabe ist bereits auf Keine festgelegt. Erstellen Sie 3 Ausgabespalten:  
+13. Erstellen Sie eine zweite Ausgabe, und nennen Sie sie ChildRecords. `SynchronousInputID` der neuen Ausgabe ist bereits auf Keine festgelegt. Erstellen Sie 3 Ausgabespalten:  
   
     -   ChildID (der Primärschlüssel) vom Typ 4-Byte-Ganzzahl mit Vorzeichen [DT_I4]  
   

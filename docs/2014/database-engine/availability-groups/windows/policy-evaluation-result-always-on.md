@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 99f32a970ee8cc3c68da6f4fb150ec36e17bcea1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789080"
 ---
 # <a name="policy-evaluation-result-alwayson"></a>Richtlinienauswertungsergebnis (AlwaysOn)
@@ -25,14 +25,14 @@ ms.locfileid: "62789080"
   
 
   
-##  <a name="Options"></a>Dialog Feld Optionen  
+##  <a name="dialog-box-options"></a><a name="Options"></a>Dialog Feld Optionen  
  **Erkanntes Problem**  
  Zeigt eine Zeile für jedes erkannte Problem an. Das einem Problem zugeordnete Symbol ist ein visueller Indikator, womit der Schweregrad des Problems wie folgt angegeben wird:  
   
 |Symbol|severity|  
 |----------|--------------|  
-|![UI-Symbol: Fehler](../../../relational-databases/replication/media/repl-icon-error.gif "UI-Symbol: Fehler")|Kritisch|  
-|![UI-Symbol: Warnung](../../../relational-databases/replication/media/repl-icon-warn.gif "UI-Symbol: Warnung")|Warnung|  
+|![Benutzeroberflächensymbol: Fehler](../../../relational-databases/replication/media/repl-icon-error.gif "Benutzeroberflächensymbol: Fehler")|Kritisch|  
+|![Benutzeroberflächensymbol: Warnung](../../../relational-databases/replication/media/repl-icon-warn.gif "Benutzeroberflächensymbol: Warnung")|Warnung|  
   
  **Beschreibung**  
  In diesem Raster wird eine kurze Beschreibung des ausgewählten Problems angezeigt.  
@@ -40,9 +40,9 @@ ms.locfileid: "62789080"
  **Weitere Informationen**  
  Klicken Sie auf diesen Link, um das Hilfethema für das ausgewählte Problem zu öffnen.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
--   [Verwenden Sie das AlwaysOn-Dashboard &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Verwenden des AlwaysOn-Dashboards &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 -   [Verwenden Sie AlwaysOn-Richtlinien, um die Integrität einer Verfügbarkeits Gruppe &#40;SQL Server anzuzeigen&#41;](use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   

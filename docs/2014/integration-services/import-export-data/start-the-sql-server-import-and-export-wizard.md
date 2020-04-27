@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 824642cf50923aa7ec879bfedbbb8f4ceaa6d9f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768032"
 ---
 # <a name="run-the-sql-server-import-and-export-wizard"></a>Ausführen des SQL Server-Import/Export-Assistenten
@@ -31,19 +31,19 @@ ms.locfileid: "62768032"
   
 -   Zeigen Sie im Menü **Start** auf **Alle Programme**, zeigen Sie auf**Microsoft SQL Server** , und klicken Sie dann auf **Daten importieren und exportieren**.  
   
-     Oder  
+     - oder -  
   
      Klicken [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Sie in mit der rechten Maustaste auf den Ordner **SSIS-Pakete** , und klicken Sie dann auf **ssisimport und Export-Assistent**.  
   
-     Oder  
+     - oder -  
   
      Klicken [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]Sie in im Menü **Projekt** auf **ssisimport und Export-Assistent**.  
   
-     Oder  
+     - oder -  
   
      Stellen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Sie in eine Verbindung [!INCLUDE[ssDE](../../includes/ssde-md.md)] mit dem Servertyp her, erweitern **Sie Datenbanken**, klicken Sie mit der rechten Maustaste auf eine Datenbank, zeigen Sie auf **Tasks**, und klicken Sie dann auf **Daten importieren** bzw  
   
-     Oder  
+     - oder -  
   
      Führen Sie in einem Eingabeaufforderungsfenster DTSWizard.exe aus. Diese Datei ist im Verzeichnis C:\Programme\Microsoft SQL Server\100\DTS\Binn gespeichert.  
   
@@ -69,9 +69,9 @@ ms.locfileid: "62768032"
   
     -   Geben Sie an, ob eine neue Datenbank erstellt werden soll, und legen Sie die Datenbankeigenschaften fest. Die folgenden Eigenschaften können nicht konfiguriert werden, und der Assistent verwendet die angegebenen Standardwerte:  
   
-        |Eigenschaft|value|  
+        |Eigenschaft|Wert|  
         |--------------|-----------|  
-        |Sortierung|Latin1_General_CS_AS_KS_WS|  
+        |Sortierreihenfolge|Latin1_General_CS_AS_KS_WS|  
         |Wiederherstellungsmodell|Vollständig|  
         |Volltextindizierung verwenden|True|  
   

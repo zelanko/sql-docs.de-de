@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4bf9e58296b70f29e3e328782b463ecbbf7f6aab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770342"
 ---
 # <a name="pivot-transformation"></a>Transformation für Pivot
@@ -45,7 +45,7 @@ ms.locfileid: "62770342"
   
  Die Eingabedaten können doppelte Zeilen enthalten. Diese bewirken, dass die Transformation für Pivot einen Fehler erzeugt. "Doppelte Zeilen" bedeutet Zeilen, die in den festgelegten Schlüsselspalten und Pivotspalten die gleichen Werte aufweisen. Zur Vermeidung von Fehlern können Sie entweder die Transformation so konfigurieren, dass Fehlerzeilen in eine Fehlerausgabe umgeleitet werden, oder Sie können Werte vorab aggregieren, um sicherzustellen, dass keine doppelten Zeilen vorhanden sind.  
   
-##  <a name="options"></a> Optionen im Dialogfeld "Pivot"  
+##  <a name="options-in-the-pivot-dialog-box"></a><a name="options"></a> Optionen im Dialogfeld "Pivot"  
  Sie konfigurieren den Pivotvorgang, indem Sie die Optionen im Dialogfeld **Pivot** festlegen. Um das Dialogfeld **Pivot** zu öffnen, fügen Sie dem Paket die Pivottransformation in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]hinzu. Klicken Sie anschließend mit der rechten Maustaste auf die Komponente, und klicken Sie dann auf **Bearbeiten**.  
   
  In der folgenden Liste werden die Optionen des Dialogfelds **Pivot** beschrieben.  

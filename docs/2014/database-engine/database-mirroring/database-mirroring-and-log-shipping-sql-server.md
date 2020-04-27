@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ca584a81b8ba70073ee833d8033cd5f664747741
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807469"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Datenbankspiegelung und Protokollversand (SQL Server)
@@ -61,11 +61,11 @@ ms.locfileid: "62807469"
  Wenn Sie eine lokale Protokollversandüberwachung verwenden, müssen für dieses Szenario keine besonderen Aspekte beachtet werden. Informationen zum Verwenden einer Remoteüberwachungsinstanz für dieses Szenario finden Sie weiter unten im Abschnitt "Auswirkungen der Datenbankspiegelung auf eine Remoteüberwachungsinstanz".  
   
 ## <a name="failing-over-from-the-principal-to-the-mirror-database"></a>Failover von der Prinzipaldatenbank zur Spiegeldatenbank  
- Die folgende Abbildung veranschaulicht die Interaktion von Protokollversand und Datenbankspiegelung, wenn die Spiegelung im Modus für hohe Sicherheit mit automatischem Failover ausgeführt wird. Zunächst ist **Server_A** sowohl der Prinzipalserver für die Spiegelung als auch der primäre Server für den Protokollversand. **Server_B** ist der Spiegel Server und ist auch als primärer Server konfiguriert, der derzeit inaktiv ist. **Server_C** und **Server_D** sind sekundäre Protokoll Versand Server. Zur Optimierung der Verfügbarkeit der Protokollversandsitzung befindet sich der Sicherungsspeicherort in einem Freigabeverzeichnis auf einem separaten Hostcomputer.  
+ Die folgende Abbildung veranschaulicht die Interaktion von Protokollversand und Datenbankspiegelung, wenn die Spiegelung im Modus für hohe Sicherheit mit automatischem Failover ausgeführt wird. Zunächst ist **Server_A** sowohl der Prinzipalserver für die Spiegelung als auch der primäre Server für den Protokollversand. **Server_B** ist der Spiegelserver und ist auch als primärer Server konfiguriert, der derzeit inaktiv ist. **Server_C** und **Server_D** sind sekundäre Protokollversandserver. Zur Optimierung der Verfügbarkeit der Protokollversandsitzung befindet sich der Sicherungsspeicherort in einem Freigabeverzeichnis auf einem separaten Hostcomputer.  
   
  ![Protokollversand und Datenbankspiegelung](../media/logshipping-and-dbm-automatic-failover.gif "Protokollversand und Datenbankspiegelung")  
   
- Nach einem Spiegelungsfailover ist der auf dem sekundären Server definierte Name des primären Servers unverändert. .  
+ Nach einem Spiegelungsfailover ist der auf dem sekundären Server definierte Name des primären Servers unverändert. erforderlich.  
   
 ## <a name="the-impact-of-database-mirroring-on-a-remote-monitoring-instance"></a>Auswirkungen der Datenbankspiegelung auf eine Remoteüberwachungsinstanz  
  Wenn der Protokollversand mit einer Remoteüberwachungsinstanz verwendet wird, hat das Kombinieren der Protokollversandsitzung und der Datenbankspiegelung Auswirkungen auf die Informationen in den Überwachungstabellen. Die Informationen zum primären Server sind eine Kombination der Informationen, die auf dem Prinzipalserver bzw. primären Server konfiguriert sind, und der auf jedem sekundären Server konfigurierten Überwachung.  

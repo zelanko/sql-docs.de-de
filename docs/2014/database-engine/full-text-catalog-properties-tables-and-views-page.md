@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 78d7dc111bc0b6eb10e80f32785beeda710e52bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779191"
 ---
 # <a name="full-text-catalog-properties-tables-and-views-page"></a>Volltextkatalog-Eigenschaften (Seite „Tabellen und Sichten“)
@@ -44,7 +44,7 @@ ms.locfileid: "62779191"
 |||  
 |-|-|  
 |**Verfügbare Spalten**|Zeigt alle volltextindizierten Spalten an. Aktivieren Sie ein Kontrollkästchen, um eine Spalte zum Volltextindex hinzuzufügen.|  
-|**Sprache für die Wörter Trennung**|Zeigt die Sprache des Worttrennmoduls an.|  
+|**Sprache für die Wörtertrennung**|Zeigt die Sprache des Worttrennmoduls an.|  
 |**Datentypspalte**|Listet den Namen der Spalte in der Tabelle auf, die den Dokumenttyp der Spalte enthält, die in **Verfügbare Spalten** aufgelistet ist, `varbinary(max)` Wenn `image` die Spalte eine-oder-Spalte ist.|  
 |**Statistische Semantik**|Wählen Sie aus, ob die semantische Indizierung für die ausgewählte Spalte aktiviert werden soll. Weitere Informationen finden Sie unter [Semantische Suche &#40;SQL Server&#41;](../relational-databases/search/semantic-search-sql-server.md).<br /><br /> Wenn Sie eine **Sprache** vor der Option **Statistische Semantik**auswählen und die ausgewählte Sprache über kein zugeordnetes semantisches Sprachmodell verfügt, ist das Kontrollkästchen **Statistische Semantik** deaktiviert. Wenn Sie **Statistische Semantik** vor einer **Sprache**auswählen, werden im Dropdown-Kombinationsfeld nur die Sprachen angezeigt, für die das semantische Sprachmodell unterstützt wird.|  
   
@@ -57,8 +57,8 @@ ms.locfileid: "62779191"
 |**Änderungen nicht nachverfolgen**|Wenn diese Option aktiviert ist, werden Änderungen an den indizierten Daten im Katalog nicht aufgezeichnet. Ein Administrator muss den Index mithilfe von ALTER FULLTEXT INDEX mit FULL POPULATION oder INCREMENTAL POPULATION erstellen.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erstellen eines voll Text Katalogs &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
- [ALTER FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)   
+ [CREATE FULLTEXT CATALOG &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-catalog-transact-sql)   
+ [ALTER FULLTEXT CATALOG &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-fulltext-catalog-transact-sql)   
  [Auffüllen von Volltextindizes](../relational-databases/indexes/indexes.md)  
   
   

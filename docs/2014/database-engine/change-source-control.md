@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 939e3befd0cbec87dbba7046761637c4b7655e22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62812746"
 ---
 # <a name="change-source-control"></a>Quellcodeverwaltung ändern
@@ -30,8 +30,8 @@ ms.locfileid: "62812746"
 > [!NOTE]  
 >  Als Alternative können Sie auch im Projektmappen-Explorer mit der rechten Maustaste auf das entsprechende Element klicken, um das Dialogfeld aufzurufen.  
   
-## <a name="options"></a>Tastatur  
- **Bind**  
+## <a name="options"></a>Optionen  
+ **Zwick**  
  Ordnet ausgewählte Elemente einem angegebenen Speicherort auf dem Quellcode-Verwaltungsserver zu. So können Sie mit dieser Schaltfläche beispielsweise den letzten bekannten Ordner und die Datenbank auf dem Quellcode-Verwaltungsserver binden. Wenn kein zuletzt verwendeter Serverordner bzw. eine Serverdatenbank gefunden wird, werden Sie aufgefordert einen anderen bzw. eine andere anzugeben.  
   
  **Durchsuchen**  
@@ -43,7 +43,7 @@ ms.locfileid: "62812746"
  **Herstellen einer Verbindung**  
  Erstellt eine Verbindung zwischen ausgewählten Elementen und dem Quellcode-Verwaltungsserver.  
   
- **Hängt**  
+ **Verbunden**  
  Zeigt den Verbindungsstatus einer ausgewählten Projektmappe bzw. eines Projekts an.  
   
  **Verschluss**  
@@ -71,16 +71,16 @@ ms.locfileid: "62812746"
  Sortiert die Reihenfolge der angezeigten Spalten.  
   
  **Status**  
- Identifiziert den Bindungs- und Verbindungsstatus eines Elements. Mögliche Optionen:  
+ Identifiziert den Bindungs- und Verbindungsstatus eines Elements. Folgende Optionen sind möglich:  
   
 |**Option**|**Beschreibung**|  
 |----------------|---------------------|  
 |Gültig|Das Element ist ordnungsgemäß an den Serverordner, zu dem es gehört, gebunden und mit ihm verbunden.|  
 |Ungültig|Das Element ist ordnungsgemäß an den Serverordner, zu dem es gehört, gebunden bzw. von ihm getrennt. Verwenden Sie den Befehl **zur Quell Code Verwaltung hinzufügen** anstelle von **Bind** für dieses Element.|  
-|Unknown|Der Status des Elements, das sich unter Quellcodeverwaltung befindet, wurde noch nicht ermittelt.|  
+|Unbekannt|Der Status des Elements, das sich unter Quellcodeverwaltung befindet, wurde noch nicht ermittelt.|  
 |Nicht gesteuert|Das Element wurde nicht unter Quellcodeverwaltung gestellt.|  
   
- **Unbind**  
+ **Bindung**  
  Zeigt das Dialogfeld **Quell** Code Verwaltung an, in dem Sie ausgewählte Elemente aus der Quell Code Verwaltung entfernen und die Zuordnung der Elemente zu Ihren aktuellen Ordnern dauerhaft aufheben können.  
   
 ## <a name="see-also"></a>Weitere Informationen  

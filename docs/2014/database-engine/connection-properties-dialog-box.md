@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 350e48c225814052655e4fced89d2f934efa188f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62808398"
 ---
 # <a name="connection-properties-dialog-box"></a>Verbindungseigenschaften (Dialogfeld)
@@ -28,13 +28,13 @@ ms.locfileid: "62808398"
   
  Hinweis: Das Abfragetimeout für SQL Azure liegt bei 30 Minuten.  
   
-## <a name="authentication"></a>Authentication  
+## <a name="authentication"></a>Authentifizierung  
  Zeigt die Authentifizierungseigenschaften für die aktuelle Verbindung an. Zu den Authentifizierungseigenschaften zählen der Anmeldename und die Authentifizierungsmethode, die beim Herstellen der Verbindung verwendet wurden. Zum Ändern der Authentifizierungs Eigenschaften trennen [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Sie die Verbindung mit, und verbinden Sie Objekt-Explorer mit dem Server, indem Sie die gewünschten Verbindungsoptionen verwenden.  
   
  **Authentifizierungsmethode**  
  Für die aktuelle Verbindung verwendete Authentifizierungsmethode.  
   
- **Benutzer Name**  
+ **Benutzername**  
  Bei der Verbindungsauthentifizierung für die Anmeldung verwendeter Benutzername.  
   
 ## <a name="connection-category"></a>Verbindungskategorie  
@@ -52,7 +52,7 @@ ms.locfileid: "62808398"
  **Netzwerk Paketgröße**  
  Bei der Kommunikation mit dem Server verwendete Netzwerkpaketgröße. Zum Ändern dieser Größe stellen Sie mithilfe der gewünschten Verbindungseigenschaften die Verbindung erneut her.  
   
- **Verbindungstimeout**  
+ **Verbindungs Timeout**  
  Die beim Herstellen einer Verbindung zu [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] abzuwartende Zeitdauer (in Sekunden), bevor ein Timeout eintritt und eine Fehlermeldung an den Benutzer ausgegeben wird. Zum Ändern dieser Größe stellen Sie mithilfe der gewünschten Verbindungseigenschaften die Verbindung erneut her.  
   
  **Ausführungs Timeout**  
@@ -97,11 +97,11 @@ ms.locfileid: "62808398"
  **Prozessoren**  
  Anzahl der Prozessoren auf dem Server.  
   
- **Betriebs System Arbeitsspeicher**  
+ **Arbeitsspeicher für das Betriebssystem**  
  Der gesamte auf dem Server vorhandene physische Arbeitsspeicher in Megabytes.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Eigenschaften Seiten in SQL Server Management Studio](../ssms/property-pages-in-sql-server-management-studio.md)   
- [Verbindung mit Server herstellen &#40;Anmeldeseite&#41; Datenbank-Engine](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
+ [Verbindung mit Server herstellen &#40;Seite Anmeldung in der Datenbank-Engine&#41;](../ssms/f1-help/connect-to-server-login-page-database-engine.md)  
   
   

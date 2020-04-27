@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 45c72bc5b811fec8e5532d5d03d4552cc2e0d319
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62786680"
 ---
 # <a name="clr-enabled-server-configuration-option"></a>CLR-fähig (Serverkonfigurationsoption)
@@ -47,7 +47,7 @@ RECONFIGURE;
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Lightweightpooling (Serverkonfigurationsoption)](lightweight-pooling-server-configuration-option.md)   
+ [Lightweightpooling (Server Konfigurations Option)](lightweight-pooling-server-configuration-option.md)   
  [Serverkonfigurationsoptionen &#40;SQL Server&#41;](server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql)   
  [Lightweightpooling (Serverkonfigurationsoption)](lightweight-pooling-server-configuration-option.md)  

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4305438285ae5f3b51ab8ac51ec2b1d0699aee64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62810348"
 ---
 # <a name="connect-to-another-computer-sql-server-configuration-manager"></a>Herstellen einer Verbindung mit einem anderen Computer (SQL Server-Konfigurations-Manager)
@@ -59,7 +59,7 @@ ms.locfileid: "62810348"
   
 8.  Klicken Sie im Fenster **Snap-In hinzufügen/entfernen** auf **OK**.  
   
-9. Erweitern Sie **Computer Verwaltung (***\<Computername>***)** und **Dienste und Anwendungen**.  
+9. Erweitern Sie **Computerverwaltung (***\<Computername>***)** und **Dienste und Anwendungen**.  
   
 10. Klicken Sie mit der rechten Maustaste auf **SQL Server-Konfigurations-Manager**, und klicken Sie dann auf **Neues Fenster**.  
   

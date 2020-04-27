@@ -13,35 +13,35 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aae800226a585f7a29334887829be2a09277a004
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809276"
 ---
 # <a name="server-properties-processors-page"></a>Servereigenschaften (Seite Prozessoren)
   Auf dieser Seite können Sie die Prozessoroptionen anzeigen und ändern. Prozessoraffinitätsoptionen sind nur aktiviert, wenn mehr als ein Prozessor installiert ist.  
   
 ## <a name="options"></a>Tastatur  
- **Prozessor Affinität**  
+ **Prozessoraffinität**  
  Weist Prozessoren bestimmte Threads zu, um ein Neuladen des Prozessors zu verhindern und die Threadmigration zwischen Prozessoren zu reduzieren. Weitere Informationen finden Sie unter [Affinitätsmaske (Serverkonfigurationsoption)](affinity-mask-server-configuration-option.md).  
   
- **E/a-Affinität**  
- Bindet [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenträger-e/a-Vorgänge an eine angegebene Teilmenge von CPUs. Weitere Informationen finden Sie unter [Affinity I/O Mask (Serverkonfigurationsoption)](affinity-input-output-mask-server-configuration-option.md).  
+ **E/A-Affinität**  
+ Verbindet die Datenträger-E/A von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit einer angegebenen Teilmenge von CPUs. Weitere Informationen finden Sie unter [Affinity I/O Mask (Serverkonfigurationsoption)](affinity-input-output-mask-server-configuration-option.md).  
   
- **Prozessor-Affinitäts Maske für alle Prozessoren automatisch festlegen**  
+ **Prozessor-Affinitätsmaske für alle Prozessoren automatisch festlegen**  
  Ermöglicht es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die Prozessoraffinität festzulegen.  
   
- **E/a-Affinitäts Maske für alle Prozessoren automatisch festlegen**  
+ **E/A-Affinitätsmaske für alle Prozessoren automatisch festlegen**  
  Ermöglicht es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die E/A-Affinität festzulegen.  
   
- **Maximale Anzahl von Arbeitsthreads**  
+ **Maximale Arbeitsthreadanzahl**  
  0 ermöglicht es [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die Anzahl der Arbeitsthreads dynamisch festzulegen. Diese Einstellung ist für die meisten Systeme am besten geeignet. In Abhängigkeit von der Systemkonfiguration kann jedoch durch Festlegen dieser Option auf einen bestimmten Wert manchmal die Leistung verbessert werden. Weitere Informationen finden Sie unter [konfigurieren Sie die max Worker Threads Server Configuration Option](configure-the-max-worker-threads-server-configuration-option.md).  
   
- **Erhöhung SQL Server Priorität**  
+ **SQL Server-Priorität höher stufen**  
  Gibt an, ob [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unter [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows mit höherer Planungspriorität als andere Prozesse auf dem gleichen Computer ausgeführt werden soll. Weitere Informationen finden Sie unter [Configure the priority boost Server Configuration Option](configure-the-priority-boost-server-configuration-option.md).  
   
- **Verwenden von Windows Fibers (Lightweightpooling)**  
+ **Windows-Fibers verwenden ('Lightweightpooling')**  
  Verwendet Windows-Fibers für den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst statt Threads. Beachten Sie, dass diese Option nur unter Windows 2003 Server Edition verfügbar ist. Weitere Informationen finden Sie unter [Lightweightpooling (Serverkonfigurationsoption)](lightweight-pooling-server-configuration-option.md).  
   
  **Konfigurierte Werte**  

@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d726e1e79b1a3e24aea074c0821e1f8773b233c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809330"
 ---
 # <a name="server-properties-misc-server-settings-page"></a>Servereigenschaften (Seite Sonstige Servereinstellungen)
@@ -26,14 +26,14 @@ ms.locfileid: "62809330"
  **Standardsprache für Benutzer**  
  Gibt die Standardsprache für alle neu erstellten Benutzernamen an.  
   
- **Zulassen, dass Trigger andere Trigger auslösen**  
+ **Zulassen, dass Trigger weitere Trigger auslösen**  
  Steuert, ob ein Trigger eine Aktion ausführen kann, die weitere Trigger auslöst. Wenn das Kontrollkästchen deaktiviert ist, können Trigger nicht von einem anderen Trigger ausgelöst werden. Wenn das Kontrollkästchen aktiviert ist, können Trigger über 32 Ebenen jeweils von einem anderen Trigger ausgelöst werden.  
   
- **Verwenden der Abfrage Kontrolle, um Abfragen mit langer Ausführungszeit zu verhindern**  
+ **Abfragekontrolle verwenden, um Abfragen mit langer Ausführungszeit zu verhindern**  
  Gibt eine zeitliche Obergrenze für die Ausführung einer Abfrage an. Die Abfragekosten beziehen sich auf eine geschätzte Zeit in Sekunden, die für das Ausführen einer Abfrage bei einer bestimmten Hardwarekonfiguration benötigt wird. Die Abfragekontrolle ist standardmäßig deaktiviert, und alle Abfragen können ausgeführt werden. Wenn diese Option ausgewählt ist, müssen Sie in das Textfeld unten ein Zeitlimit eingeben. Wenn Sie einen nicht negativen Wert ungleich null angeben, lässt die Abfragekontrolle die Ausführung von Abfragen, deren geschätzte Kosten über diesem Wert liegen, nicht zu.  
   
- **Interpretieren einer zweistelligen Jahres Angabe zwischen**  
- Gibt den 100-Jahre-Datumsbereich zum Interpretieren von zweistelligen Jahreszahlenwerten an. [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpretiert zweistellige Datumswerte so, dass Sie auf das Jahr verweisen, das auf die Ziffern endet, die innerhalb des angegebenen Bereichs liegen.  
+ **Zweistellige Jahresangaben als Jahre in diesem Bereich interpretieren**  
+ Gibt den 100-Jahre-Datumsbereich zum Interpretieren von zweistelligen Jahreszahlenwerten an. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interpretiert zweistellige Datumswerte so, dass auf das mit diesen Ziffern endende Jahr verwiesen wird, das in den angegebenen Bereich fällt.  
   
  Legen Sie im rechten Feld das Endjahr fest. Nach dem Speichern des Endjahres wird von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] das linke Feld automatisch mit dem Startjahr aufgefüllt.  
   

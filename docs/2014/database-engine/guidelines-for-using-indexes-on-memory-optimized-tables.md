@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779224"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>Richtlinien für die Verwendung von Indizes für speicheroptimierte Tabellen
@@ -70,8 +70,8 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
 |Vorgang|Speicheroptimierter, nicht gruppierter Hashindex|Speicheroptimierter, nicht gruppierter Index|Datenträgerbasierter Index|  
 |---------------|-------------------------------------------------|------------------------------------------|-----------------------|  
 |Indexscan, alle Tabellenzeilen abrufen.|Ja|Ja|Ja|  
-|Indexsuche auf Gleichheitsprädikaten (=).|Ja<br /><br /> (Vollständiger Schlüssel erforderlich.)|Ja<sup>1</sup>|Ja|  
-|Index Suche auf Ungleichheits Prädikaten (>, \<<, =, >=, between).|Nein (führt zu einem Indexscan)|Ja<sup>1</sup>|Ja|  
+|Indexsuche auf Gleichheitsprädikaten (=).|Ja<br /><br /> (Vollständiger Schlüssel erforderlich.)|Ja <sup>1</sup>|Ja|  
+|Index Suche auf Ungleichheits Prädikaten (>, \<<, =, >=, between).|Nein (führt zu einem Indexscan)|Ja <sup>1</sup>|Ja|  
 |Abrufen der Zeilen in einer Sortierreihenfolge, die der Indexdefinition entspricht.|Nein |Ja|Ja|  
 |Abrufen der Zeilen in einer Sortierreihenfolge, die der Umkehrung der Indexdefinition entspricht.|Nein|Nein |Ja|  
   

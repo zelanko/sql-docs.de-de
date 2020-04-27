@@ -11,18 +11,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: da78f21c6346281dc23332f40e8e6f46ff07aa06
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774654"
 ---
 # <a name="upgrade-master-data-services"></a>Aktualisieren von Master Data Services
   Es gibt vier Szenarien zum Aktualisieren auf Microsoft [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2. Wählen Sie das Szenario aus, das der Situation entspricht.  
   
--   [Upgrade ohne Datenbank-Engine Upgrade](#noengine)  
+-   [Upgrade ohne Datenbank-Engine-Upgrade](#noengine)  
   
--   [Upgrade mit Datenbank-Engine Upgrade](#engine)  
+-   [Upgrade mit Datenbank-Engine-Upgrade](#engine)  
   
 -   [Upgrade in einem Szenario mit zwei Computern](#twocomputer)  
   
@@ -35,7 +35,7 @@ ms.locfileid: "62774654"
 > -   Modellbereitstellungspakete können nur in der Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet werden, in der sie erstellt wurden. Sie können [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] keine in erstellten Modell Bereitstellungs Pakete [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]für bereitstellen.  
 > -   Sie können weiterhin die Version [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 des Master Data Services-Add-Ins für Excel verwenden, nachdem Sie für Master Data Services und Data Quality Services ein Upgrade auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2 ausgeführt haben. Frühere Versionen des Master Data Services-Add-Ins für Excel sind nach einem Upgrade auf SQL Server 2014 CTP2 jedoch nicht funktionsfähig. Sie können die [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1-Version des Master Data Services-Add-Ins für Excel [hier](https://go.microsoft.com/fwlink/?LinkId=328664)herunterladen.  
   
-##  <a name="noengine"></a>Upgrade ohne Datenbank-Engine Upgrade  
+##  <a name="upgrade-without-database-engine-upgrade"></a><a name="noengine"></a>Upgrade ohne Datenbank-Engine Upgrade  
  Dieses Szenario kann als parallele Installation betrachtet werden [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] / [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] , da sowohl als auch [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] parallel auf demselben Computer oder auf separaten Computern installiert sind.  
   
  In diesem Szenario hosten Sie weiterhin die MDS-Datenbank mithilfe von [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]. Sie müssen jedoch das Schema der MDS-Datenbank aktualisieren und dann eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Webanwendung erstellen, um auf die MDS-Datenbank zuzugreifen. Die MDS-Datenbank kann nicht mehr von der [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]- oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-Webanwendung aus aufgerufen werden.  
@@ -83,9 +83,9 @@ ms.locfileid: "62774654"
   
     3.  Wählen Sie im rechten Bereich aus der Liste **Website** eine der folgenden Optionen aus:  
   
-        -   **Standard Website**, und klicken Sie dann auf **Anwendung erstellen**.  
+        -   **Standardwebsite**, klicken Sie dann auf **Anwendung erstellen**.  
   
-        -   **Erstellen Sie eine neue Website**. Beim Erstellen der Website wird automatisch eine neue Webanwendung erstellt.  
+        -   **Neue Website erstellen**. Beim Erstellen der Website wird automatisch eine neue Webanwendung erstellt.  
   
         > [!IMPORTANT]  
         >  Die vorhandene MDS-Webanwendung aus einer früheren SQL Server-Version ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) kann in der SQL Server 2014-Version des Konfigurations-Managers für Master Data Services ausgewählt werden. Sie dürfen nicht die vorhandene Webanwendung auswählen, sondern müssen stattdessen eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Webanwendung für MDS erstellen. Andernfalls wird beim Versuch, die Webanwendung der aktualisierten MDS-Datenbank zuzuordnen, eine Fehlermeldung mit dem Hinweis ausgegeben, dass auf die angeforderte Seite nicht zugegriffen werden kann, da die zugehörigen Konfigurationsdaten für die Seite ungültig sind.  
@@ -100,12 +100,12 @@ ms.locfileid: "62774654"
   
     3.  Klicken Sie auf **Anwenden**.  
   
-##  <a name="engine"></a>Upgrade mit Datenbank-Engine Upgrade  
+##  <a name="upgrade-with-database-engine-upgrade"></a><a name="engine"></a> Upgrade mit Datenbankmodulupgrade  
  In diesem Szenario aktualisieren Sie sowohl die Datenbank-Engine als auch die [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]-Anwendung von [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder SQL Server 2012 auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Führen Sie die folgenden Schritte aus, um diese Aufgabe auszuführen.  
   
-1.  **Nur [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] für**: Öffnen Sie **Systemsteuerung** > **Programme und Funktionen** , und [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]deinstallieren Sie Microsoft.  
+1.  **Nur für [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]** : Öffnen Sie **Systemsteuerung** > **Programme und Funktionen**, und deinstallieren Sie Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
 2.  Aktualisieren Sie die Datenbank-Engine auf [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -154,9 +154,9 @@ ms.locfileid: "62774654"
   
     3.  Wählen Sie im rechten Bereich aus der Liste **Website** eine der folgenden Optionen aus:  
   
-        -   **Standard Website**, und klicken Sie dann auf **Anwendung erstellen**.  
+        -   **Standardwebsite**, klicken Sie dann auf **Anwendung erstellen**.  
   
-        -   **Erstellen Sie eine neue Website**. Beim Erstellen der Website wird automatisch eine neue Webanwendung erstellt.  
+        -   **Neue Website erstellen**. Beim Erstellen der Website wird automatisch eine neue Webanwendung erstellt.  
   
         > [!IMPORTANT]  
         >  Die vorhandene MDS-Webanwendung aus einer früheren SQL Server-Version ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) kann in der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Version des Konfigurations-Managers für Master Data Services ausgewählt werden. Sie dürfen nicht die vorhandene Webanwendung auswählen, sondern müssen stattdessen eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Webanwendung für MDS erstellen. Andernfalls wird beim Versuch, die Webanwendung der aktualisierten MDS-Datenbank zuzuordnen, eine Fehlermeldung mit dem Hinweis ausgegeben, dass auf die angeforderte Seite nicht zugegriffen werden kann, da die zugehörigen Konfigurationsdaten für die Seite ungültig sind.  
@@ -171,7 +171,7 @@ ms.locfileid: "62774654"
   
     3.  Klicken Sie auf **Anwenden**.  
   
-##  <a name="twocomputer"></a>Upgrade in einem Szenario mit zwei Computern  
+##  <a name="upgrade-in-two-computer-scenario"></a><a name="twocomputer"></a> Upgrade in einem Szenario mit zwei Computern  
  In diesem Szenario wird ein System aktualisiert, in dem SQL Server auf zwei Computern installiert ist: einer mit [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] und der andere mit SQL Server 2008 R2 oder SQL Server 2012.  
   
  Wenn [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] installiert ist, verwenden Sie weiterhin [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] bzw. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] zum Hosten der MDS-Datenbank auf einem Computer. Sie müssen jedoch das Schema der MDS-Datenbank aktualisieren und dann die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Webanwendung verwenden, um auf die MDS-Datenbank zuzugreifen. Die MDS-Datenbank kann nicht mehr von der [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]- oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]-Webanwendung aus aufgerufen werden.  
@@ -217,9 +217,9 @@ ms.locfileid: "62774654"
   
     3.  Wählen Sie im rechten Bereich aus der Liste **Website** eine der folgenden Optionen aus:  
   
-        -   **Standard Website**, und klicken Sie dann auf **Anwendung erstellen**.  
+        -   **Standardwebsite**, klicken Sie dann auf **Anwendung erstellen**.  
   
-        -   **Erstellen Sie eine neue Website**. Beim Erstellen der Website wird automatisch eine neue Webanwendung erstellt.  
+        -   **Neue Website erstellen**. Beim Erstellen der Website wird automatisch eine neue Webanwendung erstellt.  
   
         > [!IMPORTANT]  
         >  Die vorhandene MDS-Webanwendung aus einer früheren SQL Server-Version ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) kann in der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Version des Konfigurations-Managers für Master Data Services ausgewählt werden. Sie dürfen nicht die vorhandene Webanwendung auswählen, sondern müssen stattdessen eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Webanwendung für MDS erstellen. Andernfalls wird beim Versuch, die Webanwendung der aktualisierten MDS-Datenbank zuzuordnen, eine Fehlermeldung mit dem Hinweis ausgegeben, dass auf die angeforderte Seite nicht zugegriffen werden kann, da die zugehörigen Konfigurationsdaten für die Seite ungültig sind.  
@@ -234,7 +234,7 @@ ms.locfileid: "62774654"
   
     3.  Klicken Sie auf **Anwenden**.  
   
-##  <a name="restore"></a>Upgrade mit Wiederherstellung einer Datenbank aus einer Sicherung  
+##  <a name="upgrade-with-restoring-a-database-from-backup"></a><a name="restore"></a> Upgrade mithilfe einer Wiederherstellung einer Datenbank aus einer Sicherung  
  In diesem Szenario wird [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] zusammen mit SQL Server 2008 R2 oder SQL Server 2012 auf demselben Computer oder auf zwei unterschiedlichen Computern installiert. Vor dem Upgrade wurde außerdem eine Datenbank in einer Version vor [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] CTP2 gesichert und muss wiederhergestellt werden.  
   
 -   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]werden die Dateien standardmäßig in *Laufwerk*:\Programme\Microsoft SQL Server\120\Master Data Services installiert.  
@@ -280,9 +280,9 @@ ms.locfileid: "62774654"
   
     3.  Wählen Sie im rechten Bereich aus der Liste **Website** eine der folgenden Optionen aus:  
   
-        -   **Standard Website**, und klicken Sie dann auf **Anwendung erstellen**.  
+        -   **Standardwebsite**, klicken Sie dann auf **Anwendung erstellen**.  
   
-        -   **Erstellen Sie eine neue Website**. Beim Erstellen der Website wird automatisch eine neue Webanwendung erstellt.  
+        -   **Neue Website erstellen**. Beim Erstellen der Website wird automatisch eine neue Webanwendung erstellt.  
   
         > [!IMPORTANT]  
         >  Die vorhandene MDS-Webanwendung aus einer früheren SQL Server-Version ([!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] oder [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]) kann in der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]-Version des Konfigurations-Managers für Master Data Services ausgewählt werden. Sie dürfen nicht die vorhandene Webanwendung auswählen, sondern müssen stattdessen eine [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Webanwendung für MDS erstellen. Andernfalls wird beim Versuch, die Webanwendung der aktualisierten MDS-Datenbank zuzuordnen, eine Fehlermeldung mit dem Hinweis ausgegeben, dass auf die angeforderte Seite nicht zugegriffen werden kann, da die zugehörigen Konfigurationsdaten für die Seite ungültig sind.  

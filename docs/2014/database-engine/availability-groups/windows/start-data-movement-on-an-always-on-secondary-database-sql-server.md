@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0626ce7dee34ed21aad3e902e3c3f555f27ab97
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62813555"
 ---
 # <a name="start-data-movement-on-an-alwayson-secondary-database-sql-server"></a>Starten der Datenverschiebung auf einer sekundären AlwaysOn-Datenbank (SQL Server)
@@ -31,16 +31,16 @@ ms.locfileid: "62813555"
   
     -   Stellen Sie manuell mit RESTORE WITH NORECOVERY eine aktuelle Datenbanksicherung der primären Datenbank wieder her, und stellen Sie dann jede nachfolgende Protokollsicherung mit RESTORE WITH NORECOVERY wieder her. Führen Sie diese Wiederherstellungssequenz auf jeder Serverinstanz aus, die ein sekundäres Replikat für die Verfügbarkeitsgruppe hostet.  
   
-         **Weitere Informationen:**  
+         **Weitere Informationen finden Sie unter:**  
   
-         [Manuelles Vorbereiten einer sekundären Datenbank auf eine Verfügbarkeitsgruppe &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
+         [Manuelles Vorbereiten einer sekundären Datenbank auf eine Verfügbarkeitsgruppe (SQL Server)](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)  
   
     -   Wenn Sie einer Verfügbarkeitsgruppe eine oder mehrere primäre Datenbanken für den Protokollversand hinzufügen, können Sie möglicherweise eine oder mehrere der entsprechenden sekundären Datenbanken für den Protokollversand zu AlwaysOn-Verfügbarkeitsgruppen migrieren. Das Migrieren einer sekundären Datenbank für den Protokollversand erfordert, dass sie den gleichen Datenbanknamen wie die primäre Datenbank verwendet und dass sie sich auf einer Serverinstanz befindet, die ein sekundäres Replikat für die Verfügbarkeitsgruppe hostet. Weiterhin muss die Verfügbarkeitsgruppe so konfiguriert sein, dass das primäre Replikat für Sicherungen bevorzugt wird und ein Kandidat zum Ausführen von Sicherungen ist (das heißt, eine Sicherungspriorität, die >0 hat). Nachdem der Sicherungsauftrag auf der primären Datenbank ausgeführt wurde, müssen Sie den Sicherungsauftrag deaktivieren, und sobald der Wiederherstellungsauftrag auf einer angegebenen sekundären Datenbank ausgeführt wurde, müssen Sie den Wiederherstellungsauftrag deaktivieren.  
   
         > [!NOTE]  
         >  Nachdem Sie alle sekundären Datenbanken für die Verfügbarkeitsgruppe erstellt haben, sofern Sie Sicherungen auf sekundären Replikaten ausführen möchten, müssen Sie die Voreinstellung zur automatisierten Sicherung der Verfügbarkeitsgruppe neu konfigurieren.  
   
-         **Weitere Informationen:**  
+         **Weitere Informationen finden Sie unter:**  
   
          [Voraussetzungen für das Migrieren vom Protokoll Versand zu AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
@@ -48,11 +48,11 @@ ms.locfileid: "62813555"
   
 2.  Verknüpfen Sie jede neu vorbereitete sekundäre Datenbank sofort mit der Verfügbarkeitsgruppe.  
   
-     **Weitere Informationen:**  
+     **Weitere Informationen finden Sie unter:**  
   
      [Verknüpfen einer sekundären Datenbank mit einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](join-a-secondary-database-to-an-availability-group-sql-server.md)  
   
-##  <a name="LaunchWiz"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="LaunchWiz"></a> Verwandte Aufgaben  
   
 -   [Verwenden des Dialogfelds Neue Verfügbarkeitsgruppe &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

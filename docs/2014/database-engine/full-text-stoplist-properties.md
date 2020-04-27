@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 4cfdd308ab7488633721ddaac55d3d926a276b0d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779407"
 ---
 # <a name="full-text-stoplist-properties"></a>Volltext-Stopplisten-Eigenschaften
@@ -27,7 +27,7 @@ ms.locfileid: "62779407"
   
 -   [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](../relational-databases/search/full-text-search.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Aktion**  
  Gibt die Aktion an, die Sie durchführen möchten.  
   
@@ -50,11 +50,11 @@ ms.locfileid: "62779407"
  Wenn Sie **Stoppwort hinzufügen**, **Stoppwort löschen**oder **Alle Stoppwörter löschen**ausgewählt haben, wählen Sie die Sprache des Stoppworts bzw. der Stoppwörter aus der Liste aus. Diese Liste umfasst alle Volltextsprachen, die von der Serverinstanz unterstützt werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sys.fulltext_stopwords &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)   
- [sys.fulltext_stoplists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql)   
- [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](../relational-databases/search/full-text-search.md)   
- [ALTER FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)   
- [CREATE FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
+ [sys. fulltext_stopwords &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stopwords-transact-sql)   
+ [sys. fulltext_stoplists &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-stoplists-transact-sql)   
+ [Konfigurieren und Verwalten von Stopp Wörtern und Stopp Listen für die voll Text Suche](../relational-databases/search/full-text-search.md)   
+ [ALTER FULLTEXT STOPLIST &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-fulltext-stoplist-transact-sql)   
+ [CREATE FULLTEXT STOPLIST &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-fulltext-stoplist-transact-sql)   
  [DROP FULLTEXT STOPLIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-fulltext-stoplist-transact-sql)  
   
   

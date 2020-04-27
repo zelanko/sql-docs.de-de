@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 818f78cd0b38aba0a7201eb28f49eb573ba32672
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770709"
 ---
 # <a name="sql-server-destination"></a>SQL Server-Ziel
@@ -91,15 +91,15 @@ ms.locfileid: "62770709"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Ziel-Editor für SQL** festlegen können:  
   
--   [Der Ziel-Editor für SQL &#40;Seite Verbindungs-Manager&#41;](../sql-destination-editor-connection-manager-page.md)  
+-   [Ziel-Editor für SQL &#40;Seite „Verbindungs-Manager“&#41;](../sql-destination-editor-connection-manager-page.md)  
   
--   [Ziel-Editor für SQL &#40;Seite "Zuordnungen"&#41;](../sql-destination-editor-mappings-page.md)  
+-   [Ziel-Editor für SQL &#40;Seite „Zuordnungen“&#41;](../sql-destination-editor-mappings-page.md)  
   
--   [Ziel-Editor für SQL &#40;Seite "Erweitert"&#41;](../sql-destination-editor-advanced-page.md)  
+-   [Ziel-Editor für SQL &#40;Seite „Erweitert“&#41;](../sql-destination-editor-advanced-page.md)  
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Common Properties](../common-properties.md)  
+-   [Allgemeine Eigenschaften](../common-properties.md)  
   
 -   [Benutzerdefinierte Eigenschaften des SQL Server-Ziels](sql-server-destination-custom-properties.md)  
   

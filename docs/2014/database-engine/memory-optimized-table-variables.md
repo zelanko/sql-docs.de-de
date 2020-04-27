@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 485f481819a9712f822f969c04d8e7050ad43bae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774414"
 ---
 # <a name="memory-optimized-table-variables"></a>Speicheroptimierte Tabellenvariablen
@@ -60,8 +60,7 @@ WITH ( MEMORY_OPTIMIZED = ON );
   
  Das Beispiel zeigt, dass die Syntax von speicheroptimierten Tabellentypen der von datenträgerbasierten Tabellentypen ähnelt, mit folgenden Ausnahmen:  
   
--   
-  `MEMORY_OPTIMIZED=ON` gibt an, dass der Tabellentyp speicheroptimiert ist.  
+-   `MEMORY_OPTIMIZED=ON` gibt an, dass der Tabellentyp speicheroptimiert ist.  
   
 -   Der Typ muss mindestens einen Index aufweisen. Wie bei speicheroptimierten Tabellen können Sie nicht gruppierte und Hashindizes verwenden.  
   
@@ -188,6 +187,6 @@ GO
  Arbeitsspeicher wird als Teil des einzelnen PGPOOL-Arbeitsspeicherconsumers der Datenbank behandelt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Transact-SQL-Unterstützung für OLTP im Arbeitsspeicher](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
+ [Transact-SQL-Unterstützung für In-Memory OLTP](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)  
   
   

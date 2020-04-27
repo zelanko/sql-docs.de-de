@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a01524acf4fc72cb50732650f1f2e6f58b4ff74d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771526"
 ---
 # <a name="change-data-capture-service-for-oracle-by-attunity"></a>Change Data Capture Service für Oracle von Attunity
@@ -36,9 +36,9 @@ ms.locfileid: "62771526"
   
 -   Windows 7 32 Bit (x86) und 64 Bit (x64)  
   
--   Windows Server 2012  
+-   Windows Server 2012  
   
--   Windows Server 2008 R2 mit Service Pack 1  
+-   Windows Server 2008 R2 mit Service Pack 1  
   
 -   Windows Server 2008 32 Bit (x86) und 64 Bit (x64) mit Service Pack 2  
   
@@ -80,7 +80,7 @@ ms.locfileid: "62771526"
   
 -   [Oracle CDC Service](the-oracle-cdc-service.md)  
   
--   [Change Data Capture Service für Oracle von Attunity F1 Hilfe](change-data-capture-service-for-oracle-by-attunity-f1-help.md)  
+-   [Change Data Capture Service für Oracle von Attunity – F1-Hilfe](change-data-capture-service-for-oracle-by-attunity-f1-help.md)  
   
 -   [Change Data Capture Service für Oracle von Attunity – Anleitung](change-data-capture-service-for-oracle-by-attunity-how-to-guide.md)  
   

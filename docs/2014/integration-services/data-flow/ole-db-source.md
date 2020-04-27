@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a89632ad5502cee9599d1eea6e1cd0a0bebe7d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62770996"
 ---
 # <a name="ole-db-source"></a>OLE DB-Quelle
@@ -36,7 +36,7 @@ ms.locfileid: "62770996"
 -   Die Ergebnisse einer SQL-Anweisung, die in einer Variablen gespeichert werden.  
   
 > [!NOTE]  
->  Wenn Sie mithilfe einer SQL-Anweisung eine gespeicherte Prozedur aufrufen, die Ergebnisse von einer temporären Tabelle zurückgibt, verwenden Sie die WITH RESULT SETS-Option, um Metadaten für das Resultset zu definieren.  
+>  Wenn Sie mithilfe einer SQL-Anweisung eine gespeicherte Prozedur aufrufen, die Ergebnisse von einer temporären Tabelle zurückgibt, verwenden Sie die Option WITH RESULT SETS, um Metadaten für das Resultset zu definieren.  
   
  Wenn Sie eine parametrisierte Abfrage verwenden, können Sie Parametern Variablen zuordnen, um die Werte einzelner Parameter in SQL-Anweisungen anzugeben.  
   
@@ -90,15 +90,15 @@ ms.locfileid: "62770996"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Quellen-Editor für OLE DB** festlegen können:  
   
--   [OLE DB Quellen-Editor &#40;Seite Verbindungs-Manager&#41;](../ole-db-source-editor-connection-manager-page.md)  
+-   [Quellen-Editor für OLE DB &#40;Seite „Verbindungs-Manager“&#41;](../ole-db-source-editor-connection-manager-page.md)  
   
--   [OLE DB &#40;Seite "Spalten" des Quellen-Editors&#41;](../ole-db-source-editor-columns-page.md)  
+-   [Quellen-Editor für OLE DB &#40;Seite „Spalten“&#41;](../ole-db-source-editor-columns-page.md)  
   
--   [OLE DB Quellen-Editor &#40;Seite Fehlerausgabe&#41;](../ole-db-source-editor-error-output-page.md)  
+-   [Quellen-Editor für OLE DB &#40;Seite „Fehlerausgabe“&#41;](../ole-db-source-editor-error-output-page.md)  
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Common Properties](../common-properties.md)  
+-   [Allgemeine Eigenschaften](../common-properties.md)  
   
 -   [Benutzerdefinierte Eigenschaften für OLE DB](ole-db-custom-properties.md)  
   
@@ -113,11 +113,11 @@ ms.locfileid: "62770996"
 -   [Sortieren von Daten für die Transformationen für Zusammenführen und Zusammenführungsjoin](transformations/sort-data-for-the-merge-and-merge-join-transformations.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- Wiki-Artikel, [SSIS with Oracle Connectors](https://go.microsoft.com/fwlink/?LinkId=220670), auf social.technet.microsoft.com.  
+ Wiki-Artikel, [SSIS mit Oracle-Connectors](https://go.microsoft.com/fwlink/?LinkId=220670), auf Social.technet.Microsoft.com.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [OLE DB-Ziel](ole-db-destination.md)   
- [Integration Services-Variablen &#40;SSIS&#41;](../integration-services-ssis-variables.md)   
+ [OLE DB Ziel](ole-db-destination.md)   
+ [Integration Services &#40;SSIS-&#41; Variablen](../integration-services-ssis-variables.md)   
  [Datenfluss](data-flow.md)  
   
   

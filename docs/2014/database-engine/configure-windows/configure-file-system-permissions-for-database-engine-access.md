@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b23ed3a3a1f128d24bfec2a0066e63b09753311a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62811324"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>Konfigurieren von Dateisystemberechtigungen für den Datenbank-Engine-Zugriff
@@ -47,8 +47,8 @@ ms.locfileid: "62811324"
 9. Klicken Sie auf **Anwenden**und dann zweimal auf **OK** , um das Dialogfeld zu schließen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwalten der Datenbank-Engine Dienste](manage-the-database-engine-services.md)   
- [Verschieben von System Datenbanken](../../relational-databases/databases/system-databases.md)   
+ [Verwalten der Datenbank-Engine-Dienste](manage-the-database-engine-services.md)   
+ [Verschieben von Systemdatenbanken](../../relational-databases/databases/system-databases.md)   
  [Verschieben von Benutzerdatenbanken](../../relational-databases/databases/move-user-databases.md)  
   
   

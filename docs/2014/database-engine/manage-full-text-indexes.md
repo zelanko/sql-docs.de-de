@@ -11,15 +11,15 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 459bdc20c9698a8b6271092c57ed0de936c4d7f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775042"
 ---
 # <a name="manage-full-text-indexes"></a>Verwalten von Volltextindizes
      
-##  <a name="view"></a>Anzeigen und Ändern der Eigenschaften eines voll Text Indexes  
+##  <a name="viewing-and-changing-the-properties-of-a-full-text-index"></a><a name="view"></a>Anzeigen und Ändern der Eigenschaften eines voll Text Indexes  
   
 #### <a name="to-view-or-change-the-properties-of-a-full-text-index-in-management-studio"></a>So zeigen Sie die Eigenschaften eines Volltextindexes in Management Studio an oder ändern sie  
   
@@ -41,12 +41,12 @@ ms.locfileid: "62775042"
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)] um vorgenommene Änderungen zu speichern und das Dialogfeld **Volltextindexeigenschaften** zu schließen.  
   
-##  <a name="props"></a>Anzeigen der Eigenschaften von indizierten Tabellen und Spalten  
+##  <a name="viewing-the-properties-of-indexed-tables-and-columns"></a><a name="props"></a>Anzeigen der Eigenschaften von indizierten Tabellen und Spalten  
  Mehrere [!INCLUDE[tsql](../includes/tsql-md.md)]-Funktionen, z. B. OBJECTPROPERTYEX, können verwendet werden, um den Wert verschiedener Eigenschaften der Volltextindizierung abzurufen. Diese Informationen sind für die Verwaltung und Problembehandlung der Volltextsuche hilfreich.  
   
  Die folgende Tabelle enthält die Volltexteigenschaften, die sich auf indizierte Tabellen und Spalten beziehen, sowie die zugehörigen [!INCLUDE[tsql](../includes/tsql-md.md)]-Funktionen.  
   
-|Eigenschaft|BESCHREIBUNG|Funktion|  
+|Eigenschaft|Beschreibung|Funktion|  
 |--------------|-----------------|--------------|  
 |`FullTextTypeColumn`|TYPE COLUMN in der Tabelle, die die Dokumenttypinformationen der Spalte enthält.|[COLUMNPROPERTY](/sql/t-sql/functions/columnproperty-transact-sql)|  
 |`IsFulltextIndexed`|Gibt an, ob eine Spalte für die Volltextindizierung aktiviert wurde.|COLUMNPROPERTY|  
@@ -63,7 +63,7 @@ ms.locfileid: "62775042"
 |`TableFulltextPopulateStatus`|Der Auffüllungsstatus einer Volltexttabelle.|OBJECTPROPERTYEX|  
 |`TableHasActiveFulltextIndex`|Gibt an, ob eine Tabelle über einen aktiven Volltextindex verfügt.|OBJECTPROPERTYEX|  
   
-##  <a name="key"></a>Informationen zur voll Text Schlüssel Spalte erhalten  
+##  <a name="getting-information-about-the-full-text-key-column"></a><a name="key"></a>Informationen zur voll Text Schlüssel Spalte erhalten  
  Normalerweise müssen die Ergebnisse von CONTAINSTABLE- oder FREETEXTTABLE-Rowsetwertfunktionen mit der Basistabelle verknüpft werden. In solchen Fällen müssen Sie den Namen der eindeutigen Schlüsselspalte kennen. Sie können abfragen, ob ein bestimmter eindeutiger Index als Volltextschlüssel verwendet wird, und anschließend den Bezeichner der Volltextschlüsselspalte abrufen.  
   
 #### <a name="to-inquire-whether-a-given-unique-index-is-used-as-the-full-text-key-column"></a>So überprüfen Sie, ob ein bestimmter eindeutiger Index als Volltextschlüsselspalte verwendet wird  
@@ -125,7 +125,7 @@ GO
   
  Dieses Beispiel gibt eine Resultsetspalte mit dem Namen `Unique Key Column`zurück, die eine einzelne Zeile mit dem Namen der eindeutigen Schlüsselspalte (DocumentID) der Document-Tabelle enthält. Beachten Sie, dass diese Abfrage NULL zurückgibt, wenn ein ungültiger Indexname verwendet wird, der Indexname der Tabelle nicht zugeordnet werden kann, die Tabelle nicht vorhanden ist oder eine andere Fehlerbedingung vorliegt.  
   
-##  <a name="disable"></a>Deaktivieren oder erneutes Aktivieren einer Tabelle für die voll Text Indizierung  
+##  <a name="disabling-or-re-enabling-a-table-for-full-text-indexing"></a><a name="disable"></a>Deaktivieren oder erneutes Aktivieren einer Tabelle für die voll Text Indizierung  
  In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sind standardmäßig alle von Benutzern erstellten Datenbanken volltextfähig. Zudem wird eine einzelne Tabelle automatisch für die Volltextindizierung aktiviert, sobald ein Volltextindex für die Tabelle erstellt wird und dem Index eine Spalte hinzugefügt wird. Eine Tabelle wird für die Volltextindizierung automatisch deaktiviert, wenn die letzte Spalte aus dem Volltextindex der Tabelle entfernt wird.  
   
  Für eine Tabelle mit einem Volltextindex können Sie mit [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] eine Tabelle für die Volltextindizierung manuell deaktivieren und erneut aktivieren.  
@@ -138,7 +138,7 @@ GO
   
 3.  Wählen Sie **Volltextindex**aus, und klicken Sie anschließend auf **Volltextindizierung deaktivieren** oder **Volltextindizierung aktivieren**.  
   
-##  <a name="remove"></a>Entfernen eines voll Text Indexes aus einer Tabelle  
+##  <a name="removing-a-full-text-index-from-a-table"></a><a name="remove"></a>Entfernen eines voll Text Indexes aus einer Tabelle  
   
 #### <a name="to-remove-a-full-text-index-from-a-table"></a>So entfernen Sie einen Volltextindex einer Tabelle  
   

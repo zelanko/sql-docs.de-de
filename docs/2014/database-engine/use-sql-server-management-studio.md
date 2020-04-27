@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 544d4b40c66f345aa563cbc96380639c729ae1d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773886"
 ---
 # <a name="use-sql-server-management-studio"></a>Verwenden von SQL Server Management Studio
@@ -44,7 +44,7 @@ ms.locfileid: "62773886"
  [Herstellen einer Verbindung mit einer beliebigen SQL Server-Komponente aus SQL Server Management Studio](../ssms/f1-help/connect-to-any-sql-server-component-from-sql-server-management-studio.md)  
  Beschreibt, wie eine Verbindung mit Instanzen von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] hergestellt wird und bestimmte Aufgaben ohne bestehende Verbindung ausgeführt werden.  
   
- [Objekt-Explorers](../ssms/object/object-explorer.md)  
+ [Objekt-Explorer](../ssms/object/object-explorer.md)  
  Beschreibt die Funktionen des Objekt-Explorers.  
   
  [Benutzerunterstützung in SQL Server Management Studio](../ssms/user-assistance-in-sql-server-management-studio.md)  
@@ -65,7 +65,7 @@ ms.locfileid: "62773886"
  [Anpassen von Menüs und Tastenkombinationen](../ssms/customize-menus-and-shortcut-keys.md)  
  Beschreibt das Erstellen von benutzerdefinierten Menüs und Tastenkombinationen.  
   
- [Projektmappen &#40;SQL Server Management Studio&#41;](../ssms/solution/solutions-sql-server-management-studio.md)  
+ [Projektmappen (SQL Server Management Studio)](../ssms/solution/solutions-sql-server-management-studio.md)  
  Beschreibt das Entwickeln von Skriptprojekten und Projektmappen.  
   
  [Template Explorer](../ssms/template/template-explorer.md)  
@@ -78,6 +78,6 @@ ms.locfileid: "62773886"
  Beschreibt die Visual Database Tools, die Sie zum Erstellen von Abfragen, zum Entwerfen oder Ändern einer Datenbankstruktur oder zum Aktualisieren von Daten verwenden können.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Anzeigen oder Ändern von Server Eigenschaften &#40;SQL Server&#41;](configure-windows/view-or-change-server-properties-sql-server.md)  
+ [Anzeigen oder Ändern von Servereigenschaften &#40;SQL Server&#41;](configure-windows/view-or-change-server-properties-sql-server.md)  
   
   

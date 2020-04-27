@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 345d92c6d0d276a24a3d7d7abbc7c633205bc972
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62792010"
 ---
 # <a name="connect-to-existing-secondary-replicas-page-add-replica-wizard-and-add-databases-wizard"></a>Seite „Mit vorhandenen sekundären Replikaten verbinden“ (Assistent zum Hinzufügen von Replikaten und Assistent zum Hinzufügen von Datenbanken)
-  In diesem Hilfethema werden die Optionen auf der Seite **Mit vorhandenen sekundären Replikaten verbinden** beschrieben. Dieses Thema wird unter [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] sowohl von [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] als auch von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]verwendet.  
+   In diesem Hilfethema werden die Optionen auf der Seite **Mit vorhandenen sekundären Replikaten verbinden** beschrieben. Dieses Thema wird unter [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)] sowohl von [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] als auch von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]verwendet.  
   
- **Rasterspalten:**  
+ **Raster Spalten:**  
  **Serverinstanz**  
  Zeigt den Namen der Serverinstanz an, die als Host für das Verfügbarkeitsreplikat fungiert.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "62792010"
   
 
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Verwenden des Assistenten zum Hinzufügen von Replikaten zu Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md)  
   

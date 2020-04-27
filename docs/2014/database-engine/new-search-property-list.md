@@ -13,16 +13,16 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 2aff15a42c8bffeb5a54e92b9ce7a09ace282ce4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774500"
 ---
 # <a name="new-search-property-list"></a>Neue Sucheigenschaftenliste
   In diesem Dialogfeld können Sie eine Sucheigenschaftenliste erstellen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Name der Sucheigenschaftenliste**  
  Geben Sie den Namen der Sucheigenschaftenliste ein.  
   
@@ -51,8 +51,8 @@ ms.locfileid: "62774500"
  Informationen zum Erstellen, Anzeigen, Ändern oder Löschen einer Sucheigenschaftenliste und zum Konfigurieren eines Volltextindexes für die Eigenschaftensuche finden Sie unter [Search Document Properties with Search Property Lists](../relational-databases/search/search-document-properties-with-search-property-lists.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [CREATE SEARCH PROPERTY LIST &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)   
- [Suchen von Dokumenteigenschaften mithilfe von Sucheigenschaftenlisten](../relational-databases/search/search-document-properties-with-search-property-lists.md)   
+ [Erstellen einer Such Eigenschaften Liste &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-search-property-list-transact-sql)   
+ [Durchsuchen von Dokumenteigenschaften mithilfe von Such Eigenschaften Listen](../relational-databases/search/search-document-properties-with-search-property-lists.md)   
  [sys.registered_search_property_lists &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql)  
   
   

@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d6a81258e87bf2422f3ae5a55afc5eb6429856b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774322"
 ---
 # <a name="view-and-read-sql-server-setup-log-files"></a>Lesen und Anzeigen der Setupprotokolldateien von SQL Server
@@ -48,7 +48,7 @@ ms.locfileid: "62774322"
   
  In den folgenden Abschnitten werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setupprotokolldateien beschrieben.  
   
-## <a name="summary-text"></a>Zusammenfassung  
+## <a name="summary-text"></a>Zusammenfassungstext  
   
 ### <a name="overview"></a>Übersicht  
  In dieser Datei werden die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten, die beim Setup entdeckt wurden, die Betriebssystemumgebung, die Parameterwerte für die Befehlszeile, wenn diese angegeben wurden, und der allgemeine Status jeder MSI-/MSP-Datei, die ausgeführt wurde, angegeben.  
@@ -59,8 +59,7 @@ ms.locfileid: "62774322"
   
 -   Eigenschaften und Konfiguration des Computers, auf dem das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Setup ausgeführt wurde  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Produktfeatures  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Produktfeatures  
   
 -   Die Beschreibung der Installationsversion und der Installationspaketeigenschaften  
   
@@ -78,7 +77,7 @@ ms.locfileid: "62774322"
   
 -   Speicherort der Regelberichtdatei  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>Speicherort  
  Der Speicherort lautet% Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\setup Bootstrap\LOG\\.  
   
  Um Fehler in der Textdatei zu finden, die die Zusammenfassung enthält, durchsuchen Sie die Datei nach den Schlüsselwörtern "error" oder "failed".  
@@ -88,7 +87,7 @@ ms.locfileid: "62774322"
 ### <a name="overview"></a>Übersicht  
  Die summary_engine-Basisdatei ähnelt der Zusammenfassungsdatei und wird während des Hauptworkflows generiert.  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>Speicherort  
  Der Speicherort lautet% Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\setup Bootstrap\LOG\\<YYYYMMDD_HHMM>\\.  
   
 ## <a name="summary_engine-base_yyyymmdd_hhmmss_componentupdatetxt"></a>Summary_engine-base_JJJJMMTT_HHMMss_ComponentUpdate.txt  
@@ -96,7 +95,7 @@ ms.locfileid: "62774322"
 ### <a name="overview"></a>Übersicht  
  Die Komponentenupdate-Zusammenfassungsprotokolldatei ähnelt der Zusammenfassungsdatei und wird während des Komponentenupdateworkflows generiert.  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>Speicherort  
  Der Speicherort lautet% Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\setup Bootstrap\LOG\\<YYYYMMDD_HHMM>\\.  
   
 ## <a name="summary_engine-base_versionnumbermmdd_hhmmss_globalrulestxt"></a>Summary_engine-base_\<VersionNumber>MMDD_HHMMss_GlobalRules.txt  
@@ -104,7 +103,7 @@ ms.locfileid: "62774322"
 ### <a name="overview"></a>Übersicht  
  Die Zusammenfassungsprotokolldatei für die globalen Regeln ähnelt der Zusammenfassungsdatei und wird während des Workflows für allgemeine Regeln generiert.  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>Speicherort  
  Der Speicherort lautet% Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\setup Bootstrap\LOG\\<YYYYMMDD_HHMM>\\.  
   
 ## <a name="detailtxt"></a>Detail.txt  
@@ -112,7 +111,7 @@ ms.locfileid: "62774322"
 ### <a name="overview"></a>Übersicht  
  Die Datei Detail.txt wird für den Hauptworkflow wie Installation oder Upgrade generiert und liefert Einzelheiten zur Ausführung. Die Protokolle in der Datei werden basierend auf dem Zeitpunkt generiert, zu dem die Installationsaktionen aufgerufen wurden. Sie zeigen die Reihenfolge, in der die Aktionen ausgeführt wurden, und ihre Abhängigkeiten.  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>Speicherort  
  Der Speicherort lautet% Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\setup.  
   
  Bootstrap\Log\\<YYYYMMDD_HHMM>\Detail.txt.  
@@ -124,7 +123,7 @@ ms.locfileid: "62774322"
 ### <a name="overview"></a>Übersicht  
  Die Datei Detail_ComponentUpdate.txt wird für den Komponentenupdateworkflow generiert und ähnelt der Datei Detail.txt.  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>Speicherort  
  Der Speicherort lautet% Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\setup Bootstrap\LOG\\<YYYYMMDD_HHMM>\\.  
   
 ## <a name="detail_globalrulestxt"></a>Detail_GlobalRules.txt  
@@ -132,7 +131,7 @@ ms.locfileid: "62774322"
 ### <a name="overview"></a>Übersicht  
  Die Datei Detail_GlobalRules.txt wird für die Ausführung der globalen Regeln generiert und ähnelt der Datei Detail.txt.  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>Speicherort  
  Der Speicherort lautet% Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\setup Bootstrap\LOG\\<YYYYMMDD_HHMM>\\.  
   
 ## <a name="msi-log-files"></a>MSI-Protokolldateien  
@@ -142,16 +141,13 @@ ms.locfileid: "62774322"
   
  Typen von MSI-Protokolldateien:  
   
--   
-  \<Feature>_\<Architektur>\_\<Interaktion>.log  
+-   \<Feature>_\<Architektur>\_\<Interaktion>.log  
   
--   
-  \<Feature>_\<Architektur>\_\<Sprache>\_\<Interaktion>.log  
+-   \<Feature>_\<Architektur>\_\<Sprache>\_\<Interaktion>.log  
   
--   
-  \<Feature>_\<Architecture>\_\<Interaktion>\_\<Workflow>.log  
+-   \<Feature>_\<Architecture>\_\<Interaktion>\_\<Workflow>.log  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>Speicherort  
  Die MSI-Protokolldateien befinden sich unter% Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]% \120\setup Bootstrap\LOG\\<YYYYMMDD_HHMM \\><\>Name. log.  
   
  Am Ende der Datei ist eine Zusammenfassung der Ausführung zu finden, die Aufschluss über eventuelle Fehler gibt. Um die Fehler in der MSI-Datei zu finden, suchen Sie nach "value 3". In der Regel sind die Fehler in der Nähe dieser Zeichenfolge zu finden.  
@@ -161,7 +157,7 @@ ms.locfileid: "62774322"
 ### <a name="overview"></a>Übersicht  
  Die Konfigurationsdatei enthält die Eingabeeinstellungen, die während der Installation angegeben werden. Sie kann verwendet werden, um eine Installation neu zu starten, ohne die Einstellungen manuell eingeben zu müssen. Kennwörter für die Konten, die PID und einige Parameter werden jedoch nicht in der Konfigurationsdatei gespeichert. Diese Einstellungen können der Datei entweder hinzugefügt oder über die Befehlszeile oder die Setupbenutzeroberfläche angegeben werden. Weitere Informationen finden Sie unter [Installieren von SQL Server 2014 mithilfe einer Konfigurationsdatei](install-sql-server-using-a-configuration-file.md).  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>Speicherort  
  Der Speicherort lautet% Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\setup Bootstrap\LOG\\<YYYYMMDD_HHMM>\\.  
   
 ## <a name="systemconfigurationcheck_reporthtm"></a>SystemConfigurationCheck_Report.htm  
@@ -169,7 +165,7 @@ ms.locfileid: "62774322"
 ### <a name="overview"></a>Übersicht  
  Im Bericht zur Systemkonfigurationsprüfung sind eine kurze Beschreibung für jede ausgeführte Regel sowie der Ausführungsstatus enthalten.  
   
-### <a name="location"></a>Location  
+### <a name="location"></a>Speicherort  
  Der Speicherort lautet% Program Files%\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\120\setup Bootstrap\LOG\\<YYYYMMDD_HHMM>\\.  
   
 ## <a name="see-also"></a>Weitere Informationen  

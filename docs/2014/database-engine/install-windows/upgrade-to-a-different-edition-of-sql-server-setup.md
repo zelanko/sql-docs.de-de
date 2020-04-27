@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b0b77ad5bb11b659e9f68eb7ff219b7844ad252
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774574"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-2014-setup"></a>Aktualisieren auf eine andere Edition von SQL Server 2014 (Setup)
@@ -39,7 +39,7 @@ ms.locfileid: "62774574"
   
 ## <a name="procedure"></a>Verfahren  
   
-#### <a name="to-upgrade-to-a-different-edition-of-includesscurrentincludessscurrent-mdmd"></a>So führen Sie ein Upgrade auf eine andere Edition von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] durch  
+#### <a name="to-upgrade-to-a-different-edition-of-sscurrent"></a>So führen Sie ein Upgrade auf eine andere Edition von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] durch  
   
 1.  Legen Sie das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationsmedium ein. Doppelklicken Sie im Stammordner auf setup.exe, oder starten Sie das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationscenter über die Konfigurationstools. Wenn Sie eine Installation über eine Netzwerkfreigabe vornehmen möchten, suchen Sie den Stammordner in der Freigabe, und doppelklicken Sie auf setup.exe.  
   

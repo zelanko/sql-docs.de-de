@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 263fdcd4b09c4acc6c2bba4d67629f867d64c6b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779486"
 ---
 # <a name="hash-indexes"></a>Hashindizes
@@ -26,8 +26,7 @@ ms.locfileid: "62779486"
   
  Die Hashfunktion, die für Hashindizes verwendet wird, weist die folgenden Merkmale auf:  
   
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] hat eine Hashfunktion, die für alle Hashindizes verwendet wird.  
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] hat eine Hashfunktion, die für alle Hashindizes verwendet wird.  
   
 -   Die Hashfunktion ist deterministisch. Der gleiche Indexschlüssel wird immer dem gleichen Bucket im Hashindex zugeordnet.  
   

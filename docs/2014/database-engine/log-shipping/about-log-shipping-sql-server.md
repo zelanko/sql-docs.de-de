@@ -26,14 +26,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a66125c6e241c75d473fa170d3de5ef9755b28e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774549"
 ---
 # <a name="about-log-shipping-sql-server"></a>Informationen zum Protokollversand (SQL Server)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Mithilfe des Protokoll Versands können Sie Transaktionsprotokoll Sicherungen von einer *primären Datenbank* auf einer *primären Server* Instanz automatisch an eine oder mehrere *sekundäre Datenbanken* auf separaten *sekundären Server* Instanzen senden. Die Transaktionsprotokollsicherungen werden einzeln auf jede der sekundären Datenbanken angewendet. Eine optionale dritte Serverinstanz, die als *Überwachungsserver*bezeichnet wird, zeichnet den Verlauf und den Status von Sicherungs- und Wiederherstellungsvorgängen auf und löst optional Warnungen aus, falls diese Vorgänge nicht wie geplant ausgeführt werden können.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Protokollversand können Sie automatisch Transaktionsprotokollsicherungen von einer *primären Datenbank* auf einer Instanz eines *primären Servers* an eine oder mehrere *sekundäre Datenbanken* auf separaten Instanzen eines *sekundären Servers* senden. Die Transaktionsprotokollsicherungen werden einzeln auf jede der sekundären Datenbanken angewendet. Eine optionale dritte Serverinstanz, die als *Überwachungsserver*bezeichnet wird, zeichnet den Verlauf und den Status von Sicherungs- und Wiederherstellungsvorgängen auf und löst optional Warnungen aus, falls diese Vorgänge nicht wie geplant ausgeführt werden können.  
   
  **In diesem Thema:**  
   
@@ -41,13 +41,13 @@ ms.locfileid: "62774549"
   
 -   [Begriffe und Definitionen](#TermsAndDefinitions)  
   
--   [Übersicht über den Protokoll Versand](#ComponentsAndConcepts)  
+-   [Übersicht über den Protokollversand](#ComponentsAndConcepts)  
   
 -   [Interoperabilität](#Interoperability)  
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="Benefits"></a> Vorteile  
+##  <a name="benefits"></a><a name="Benefits"></a> Vorteile  
   
 -   Stellt eine Lösung für die Wiederherstellung im Notfall für eine einzelne primäre Datenbank und eine oder mehrere sekundäre Datenbanken bereit, jede auf einer separaten Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62774549"
   
 -   Ermöglicht eine vom Benutzer angegebene Verzögerung zwischen dem Zeitpunkt, zu dem der primäre Server das Protokoll der primären Datenbank sichert, und dem Zeitpunkt, zu dem die sekundären Server die Protokollsicherung wiederherstellen (anwenden) müssen. Eine längere Verzögerung kann nützlich sein, wenn z. B. versehentlich Daten in der primären Datenbank geändert werden. Wenn die versehentliche Änderung schnell bemerkt wird, kann eine Verzögerung es Ihnen ermöglichen, die noch unveränderten Daten von einer sekundären Datenbank abzurufen, bevor die Änderung dort widergespiegelt wird.  
   
-##  <a name="TermsAndDefinitions"></a>Begriffe und Definitionen  
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefinitions"></a> Begriffe und Definitionen  
  primären Servers  
  Die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , die der Produktionsserver ist.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "62774549"
 > [!TIP]  
 >  Für jede Warnung müssen Sie eine Warnungsnummer angeben. Stellen Sie sicher auch sicher, dass die Warnung zum Benachrichtigen eines Bedieners konfiguriert ist, wenn eine Warnung ausgelöst wird.  
   
-##  <a name="ComponentsAndConcepts"></a>Übersicht über den Protokoll Versand  
+##  <a name="log-shipping-overview"></a><a name="ComponentsAndConcepts"></a> Übersicht über den Protokollversand  
  Der Protokollversand besteht aus drei Vorgängen:  
   
 1.  Sichern des Transaktionsprotokolls auf der primären Serverinstanz.  
@@ -123,22 +123,21 @@ ms.locfileid: "62774549"
   
  Die primäre Serverinstanz und die sekundäre Serverinstanz senden ihre eigenen Verlaufs- und Statusinformationen an die Überwachungsserverinstanz.  
   
- ![Konfiguration, die Sicherungs-, Kopier-und & Wiederherstellungs Aufträge anzeigt](../media/ls-typical-configuration.gif "Die Konfiguration zeigt Sicherungs-, Kopier- & Wiederherstellungsaufträge")  
+ ![Konfiguration, die Sicherungs-, Kopier- & Wiederherstellungsaufträge anzeigt](../media/ls-typical-configuration.gif "Konfiguration, die Sicherungs-, Kopier- & Wiederherstellungsaufträge anzeigt")  
   
-##  <a name="Interoperability"></a>Interoper  
+##  <a name="interoperability"></a><a name="Interoperability"></a> Interoperabilität  
  Der Protokollversand kann mit den folgenden Funktionen oder Komponenten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]verwendet werden:  
   
 -   [Voraussetzungen für das Migrieren vom Protokoll Versand zu AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../availability-groups/windows/prereqs-migrating-log-shipping-to-always-on-availability-groups.md)  
   
--   [Daten Bank Spiegelung und Protokoll Versand &#40;SQL Server&#41;](../database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
+-   [Datenbankspiegelung und Protokollversand &#40;SQL Server&#41;](../database-mirroring/database-mirroring-and-log-shipping-sql-server.md)  
   
--   [Protokoll Versand und Replikations &#40;SQL Server&#41;](log-shipping-and-replication-sql-server.md)  
+-   [Protokollversand und Replikation &#40;SQL Server&#41;](log-shipping-and-replication-sql-server.md)  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] und Datenbankspiegelung schließen sich gegenseitig aus. Eine Datenbank, die für eine dieser Funktionen konfiguriert ist, kann nicht für die andere konfiguriert werden.  
+>  [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] und Datenbankspiegelung schließen sich gegenseitig aus. Eine Datenbank, die für eine dieser Funktionen konfiguriert ist, kann nicht für die andere konfiguriert werden.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Aktualisieren des Protokoll Versands auf SQL Server 2014 &#40;Transact-SQL-&#41;](upgrading-log-shipping-to-sql-server-2016-transact-sql.md)  
   

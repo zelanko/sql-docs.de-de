@@ -11,14 +11,13 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1969a3e30b31a21c380559a3e8898f87eb8848b1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62786735"
 ---
 # <a name="collations-and-code-pages"></a>Sortierungen und Codepages
-  
   [!INCLUDE[hek_2](../includes/hek-2-md.md)] weist Einschränkungen bei unterstützten Codepages für (var)char-Spalten in speicheroptimierten Tabellen und unterstützten Sortierungen auf, die in Indizes und in systemintern kompilierten gespeicherten Prozeduren verwendet werden.  
   
  Die Codepage für einen (var)char-Wert bestimmt die Zuordnung zwischen Zeichen und der Bytedarstellung, die in der Tabelle gespeichert ist. So entspricht z. B. bei der Windows Latin 1-Codepage (1252; der[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Standard) das Zeichen „a“ dem Byte 0x61.  

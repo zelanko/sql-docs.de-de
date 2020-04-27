@@ -16,20 +16,20 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b0bdeebb2d064bd647c19ea143474ef7738a4ab5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62814066"
 ---
 # <a name="summary-page-alwayson-availability-group-wizards"></a>Seite 'Zusammenfassung' (AlwaysOn-Verfügbarkeitsgruppen-Assistenten)
   In diesem Hilfethema werden die Optionen der Seite **Zusammenfassung** beschrieben. Dieses Thema gilt für den [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] und [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Verwenden Sie das Raster auf dieser Seite zum Überprüfen der Auswahl für die neue Verfügbarkeitsgruppe. Klicken Sie zum Vornehmen von Änderungen auf **Zurück** , um zu den relevanten Seiten zurückzukehren. Wenn Sie fertig sind, klicken Sie auf **Weiter** , um zur Seite **Zusammenfassung** zurückzukehren. Wenn Sie mit der Auswahl zufrieden sind, klicken Sie auf **Fertig stellen**.  
   
-##  <a name="PageOptions"></a> Optionen auf der Seite "Zusammenfassung"  
+##  <a name="summary-page-options"></a><a name="PageOptions"></a> Optionen auf der Seite "Zusammenfassung"  
  **Skript**  
  Klicken Sie, um ein [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Skript für die im Zusammenfassungsraster aufgeführten Aktionen zu generieren. Sie werden aufgefordert, ein Ziel für das Skript anzugeben.  
   
- **Previous**  
+ **Vorherige**  
  Klicken Sie, um zur Seite zurückzukehren, die der aktuellen Seite unmittelbar vorausgeht. Sie können die Schaltfläche **Zurück** verwenden, um zurück zu einer vorausgehenden Seiten zu navigieren und optional einen angegebenen Wert ändern.  
   
  **Fertig stellen**  
@@ -40,7 +40,7 @@ ms.locfileid: "62814066"
   
 
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Verwenden des Dialogfelds Neue Verfügbarkeitsgruppe &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

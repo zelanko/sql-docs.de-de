@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6da38b25ca23302c8b683a5c9b54ed2b6f88f6b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773752"
 ---
 # <a name="utility-administration-sql-server-utility"></a>Hilfsprogrammverwaltung (SQL Server-Hilfsprogramm)
@@ -62,7 +62,7 @@ ms.locfileid: "62773752"
 -   Der minimale Standardwert für die Auslastung des Volumespeicherplatzes auf einem Computer beträgt 0 %.  
   
  Reduzieren von Informationsrauschen aufgrund von Richtlinienverstößen bei stark veränderlichen Ressourcen. Um weitere Steuerelemente für diese Funktion anzuzeigen, klicken Sie rechts in der Anzeige auf den nach unten weisenden Pfeil.  
- Weitere Informationen finden Sie unter [ Reduzieren von Informationsrauschen bei Richtlinien zur CPU-Auslastung &#40;SQL Server-Hilfsprogramm&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md).  
+ Weitere Informationen finden Sie unter [reduzieren von Rauschen in Richtlinien zur CPU-Auslastung &#40;SQL Server-Hilfsprogramm&#41;](../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
  Registerkarte Sicherheit – Zeigt Anmeldenamen mit Berechtigungen zum Verwalten oder Lesen von Informationen aus dem UCP an.  
@@ -104,7 +104,7 @@ ms.locfileid: "62773752"
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server-Hilfsprogramm des Utility-Dashboards &#40;&#41;](../../2014/database-engine/utility-dashboard-sql-server-utility.md)   
  [Details zu bereitgestellten Datenebenenanwendungen &#40;SQL Server-Hilfsprogramm&#41;](../../2014/database-engine/deployed-data-tier-application-details-sql-server-utility.md)   
- [Details zu verwalteten Instanzen &#40;SQL Server-Hilfsprogramm&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
+ [Verwaltete Instanz Details &#40;SQL Server-Hilfsprogramm&#41;](../../2014/database-engine/managed-instance-details-sql-server-utility.md)   
  [Überwachen von SQL Server-Instanzen im SQL Server-Hilfsprogramm](../relational-databases/manage/monitor-instances-of-sql-server-in-the-sql-server-utility.md)  
   
   

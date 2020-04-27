@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3c643ad9a84c6afe5b6ff08fd6716753ef42f79e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807255"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>Datenbankspiegelung und Datenbankmomentaufnahmen (SQL Server)
@@ -69,7 +69,7 @@ ms.locfileid: "62807255"
   
      Die neuen Clientverbindungen können nun programmgesteuert an die zuletzt erstellte Momentaufnahme weitergeleitet werden.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Erstellen einer Datenbankmomentaufnahme &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md)  
   
@@ -79,7 +79,7 @@ ms.locfileid: "62807255"
 
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Datenbank-Momentaufnahmen &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
- [Verbinden von Clients mit einer Datenbank-Spiegelungssitzung &#40;SQL Server&#41;](connect-clients-to-a-database-mirroring-session-sql-server.md)  
+ [Daten Bank Momentaufnahmen &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
+ [Verbinden von Clients mit einer Datenbank-Spiegelungssitzung (SQL Server)](connect-clients-to-a-database-mirroring-session-sql-server.md)  
   
   

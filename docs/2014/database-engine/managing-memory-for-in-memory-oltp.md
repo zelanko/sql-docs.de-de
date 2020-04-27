@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: db1f62b6562d794cf35a7bca680e523401c4c8cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774834"
 ---
 # <a name="managing-memory-for-in-memory-oltp"></a>Verwalten des Arbeitsspeichers für In-Memory OLTP
@@ -26,7 +26,7 @@ ms.locfileid: "62774834"
 |-------------|-----------------|  
 |[Schätzen der Arbeitsspeicheranforderungen speicheroptimierter Tabellen](../relational-databases/in-memory-oltp/memory-optimized-tables.md)|Schätzen der Arbeitsspeicher Anforderungen einer Tabelle.|  
 |[Binden einer Datenbank mit speicheroptimierten Tabellen an einen Ressourcenpool](../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)|Exemplarische Vorgehensweise, in der das Binden einer Datenbank an einen Ressourcenpool schrittweise erläutert wird.|  
-|[Überwachung und Fehlerbehebung für die Arbeitsspeicherauslastung](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)|Tools, die zur Überwachung der Arbeitsspeichernutzung verwendet werden können. Zusätzlich werden Probleme bei zu hoher Speicherauslastung behandelt.|  
+|[Überwachung und Problembehebung bei der Arbeitsspeichernutzung](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)|Tools, die zur Überwachung der Arbeitsspeichernutzung verwendet werden können. Zusätzlich werden Probleme bei zu hoher Speicherauslastung behandelt.|  
 |[Beheben von OOM-Problemen (nicht genügend Arbeitsspeicher)](../relational-databases/in-memory-oltp/resolve-out-of-memory-issues.md)|Schritte zum Beheben von OOM-Situationen (Out of Memory, nicht genügend Arbeitsspeicher).|  
 |[Wiederherstellen einer Datenbank und Binden der Datenbank an einen Ressourcenpool](../relational-databases/in-memory-oltp/restore-a-database-and-bind-it-to-a-resource-pool.md)|Schritte, durch die eine [!INCLUDE[hek_2](../includes/hek-2-md.md)] -Datenbank wiederhergestellt und an einen benannten Ressourcenpool gebunden wird.|  
 |[In-Memory OLTP-Garbage Collection](../relational-databases/in-memory-oltp/in-memory-oltp-garbage-collection.md)|Grundlegendes zur Funktionsweise der Garbage Collection bei gelöschten Zeilen.|  

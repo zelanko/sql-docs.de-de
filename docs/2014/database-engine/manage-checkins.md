@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 767e89a777fc530d4622a32f31c984d0e48004ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62774292"
 ---
 # <a name="manage-checkins"></a>Verwalten von Eincheckvorgängen
@@ -28,7 +28,7 @@ ms.locfileid: "62774292"
   
  In der folgenden Tabelle werden die Themen in diesem Abschnitt beschrieben.  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Einchecken von Dateien](../../2014/database-engine/check-in-files.md)|Enthält Anweisungen zum Einchecken einer Datei, die Sie geändert haben.|  
 |[Anzeigen einer Liste geänderter Dateien](../../2014/database-engine/view-a-list-of-modified-files.md)|Erläutert, wie Sie eine Liste der geänderten Dateien anzeigen, die Sie nach dem Arbeiten zusammen einchecken können.|  

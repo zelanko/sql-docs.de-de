@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8aefce0d5afe7bec37c5fe49ba63c3fec61f3747
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771541"
 ---
 # <a name="project-versions-dialog-box"></a>Projektversionen (Dialogfeld)
@@ -30,7 +30,7 @@ ms.locfileid: "62771541"
   
 -   [Wiederherstellen einer Projektversion](#restore)  
   
-##  <a name="open_dialog"></a> Öffnen des Dialogfelds "Projektversionen"  
+##  <a name="open-the-project-versions-dialog-box"></a><a name="open_dialog"></a> Öffnen des Dialogfelds "Projektversionen"  
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung zum [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Server her.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "62771541"
   
  Im Dialogfeld **Projektversionen** wird in der Tabelle **Versionen** die Liste der Versionen des Projekts angezeigt, die auf dem Server bereitgestellt wurden, und zwar mit Bereitstellungsdatum und -zeit der Version, Wiederherstellungsdatum und -zeit der Version (wenn eine Wiederherstellung stattgefunden hat), der Versionsbeschreibung und einem Versionsbezeichner. Die derzeit aktive Version wird durch ein Häkchen in der **aktuellen** Spalte der Tabelle angegeben.  
   
-##  <a name="restore"></a> Wiederherstellen einer Projektversion  
+##  <a name="restore-a-project-version"></a><a name="restore"></a> Wiederherstellen einer Projektversion  
  Um eine frühere Version eines Projekts wiederherzustellen, wählen Sie die Version in der Tabelle **Versionen** aus, und klicken Sie dann auf **Ausgewählte Version wiederherstellen**. Das Projekt wird in der ausgewählten Version wiederhergestellt, und diese Version wird mit einem Häkchen in der **aktuellen** Spalte der Tabelle **Versionen** angegeben.  
   
   

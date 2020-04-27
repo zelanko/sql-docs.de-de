@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 051e3b93761511db07a2f381be5c94ea3247e76a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62779007"
 ---
 # <a name="get-dialog-box-source-control"></a>Abrufen (Dialogfeld der Quellcodeverwaltung)
@@ -30,7 +30,7 @@ ms.locfileid: "62779007"
 > [!NOTE]  
 >  Als Alternative können Sie auch im Projektmappen-Explorer mit der rechten Maustaste auf das entsprechende Element klicken, um das Dialogfeld aufzurufen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Aktion**  
  Gibt die Aktion an, die für die abzurufenden Elemente ausgeführt wird.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "62779007"
  **Flache Ansicht**  
  Zeigt die Dateien, die abgerufen werden, als flache Listen unter der entsprechenden Verbindung mit der Quellcodeverwaltung an.  
   
- **Änderungszeit**  
+ **Zeitpunkt der Änderung**  
  Zeigt den Zeitpunkt an, zu dem ein Element zuletzt geändert wurde.  
   
  **Name**  

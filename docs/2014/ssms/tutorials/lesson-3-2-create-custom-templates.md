@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62805579"
 ---
 # <a name="create-custom-templates"></a>Erstellen von benutzerdefinierten Vorlagen
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]enthält Vorlagen für viele gängige Aufgaben, aber die tatsächliche Leistungsfähigkeit von Vorlagen liegt darin, dass Sie eine benutzerdefinierte Vorlage für ein komplexes Skript erstellen können, das Sie häufig erstellen müssen. Sie werden nun ein einfaches Skript mit wenigen Parametern erstellen. Vorlagen sind jedoch auch bei umfangreichen Skripts mit vielen Wiederholungen nützlich.  
+  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] kommt mit einer Reihe von Vorlagen für viele häufig ausgeführten Aufgaben. Der größte Vorteil von Vorlagen besteht jedoch darin, dass Sie für ein komplexes Skript, das Sie häufig erstellen müssen, eine benutzerdefinierte Vorlage anlegen können. Sie werden nun ein einfaches Skript mit wenigen Parametern erstellen. Vorlagen sind jedoch auch bei umfangreichen Skripts mit vielen Wiederholungen nützlich.  
   
 ## <a name="using-custom-templates"></a>Verwenden benutzerdefinierter Vorlagen  
   

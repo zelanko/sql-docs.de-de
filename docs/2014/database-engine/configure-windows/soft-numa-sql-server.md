@@ -14,10 +14,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6ad0e30c0db83daf7e0cae4f7353d1f0a96a96d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809034"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>Konfigurieren von SQL Server zur Verwendung von Soft-NUMA (SQL Server)
@@ -57,7 +57,7 @@ Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die manu
   
  Instanz A, auf der ein hohes Maß an E/A-Aktivität stattfindet, verfügt nun über zwei E/A-Threads und einen Thread für LAZY WRITER-Prozesse (verzögertes Schreiben), während Instanz B, auf der prozessorintensive Vorgänge ausgeführt werden, nur über einen E/A-Thread und einen Thread für LAZY WRITER-Prozesse verfügt. Den Instanzen können zwar unterschiedliche Mengen an Arbeitsspeicher zugewiesen werden, aber im Unterschied zu Hardware-NUMA erhalten beide Instanzen den Arbeitsspeicher aus demselben Betriebssystem-Speicherblock und es ist keine Speicher-Prozessor-Affinität vorhanden.  
   
- Der LAZY WRITER-Thread ist an die SQL OS-Sicht der physischen NUMA-Arbeitsspeicherknoten gebunden. Daher entsprechen die physischen NUMA-Knoten der Hardware der Anzahl der erstellten LAZY WRITER-Threads. Weitere Informationen finden Sie unter [How It Works: Soft NUMA, I/O Completion Thread, Lazy Writer Workers and Memory Nodes](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx)(Vorgehensweise: Soft-NUMA, E/A-Abschlussthreads, LAZY WRITER-Worker- und Arbeitsspeicherknoten).  
+ Der LAZY WRITER-Thread ist an die SQL OS-Sicht der physischen NUMA-Arbeitsspeicherknoten gebunden. Daher entsprechen die physischen NUMA-Knoten der Hardware der Anzahl der erstellten LAZY WRITER-Threads. Weitere Informationen finden Sie unter [How It Works: Soft NUMA, I/O Completion Thread, Lazy Writer Workers and Memory Nodes](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
   
 > [!NOTE]  
 >  Die **Soft-NUMA** -Registrierungsschlüssel werden nicht kopiert, wenn Sie eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -157,7 +157,7 @@ Wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für die manu
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Zuordnen von TCP/IP-Ports zu NUMA-Knoten &#40;SQL Server&#41;](map-tcp-ip-ports-to-numa-nodes-sql-server.md)   
- [Affinitätsmaske (Serverkonfigurationsoption)](affinity-mask-server-configuration-option.md)   
- [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)  
+ [Affinitäts Maske (Server Konfigurations Option)](affinity-mask-server-configuration-option.md)   
+ [Alter Server Configuration &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)  
   
   

@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: a240ed4e3788d65ab795d8680dc93f253cfde059
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62778941"
 ---
 # <a name="full-text-index-properties-general-page"></a>Volltextindex-Eigenschaften (Seite 'Allgemein')
@@ -31,7 +31,7 @@ ms.locfileid: "62778941"
  **Datenbank**  
  Zeigt den Namen der Datenbank an, in der sich der Volltextindex befindet.  
   
- **Table**  
+ **Glaub**  
  Zeigt den Namen der Tabelle an, für die der Volltextindex definiert wurde.  
   
  **Volltext-Indexschlüssel**  
@@ -86,7 +86,7 @@ ms.locfileid: "62778941"
  **Volltext-Elementanzahl-Tabelle**  
  Gibt die Anzahl der Zeilen an, die erfolgreich volltextindiziert wurden.  
   
- Diese Eigenschaft entspricht der von der OBJECTPROPERTYEX-Funktion von `TableFulltextItemCount` zurückgegebenen [!INCLUDE[tsql](../includes/tsql-md.md)]-Eigenschaft.  
+ Diese Eigenschaft entspricht der von der OBJECTPROPERTYEX-Funktion von [!INCLUDE[tsql](../includes/tsql-md.md)] zurückgegebenen `TableFulltextItemCount`-Eigenschaft.  
   
  **Tabelle für verarbeitete Volltextdokumente**  
  Zeigt die Anzahl der seit dem Start der Volltextindizierung verarbeiteten Zeilen an. In einer Tabelle, die für die Volltextsuche indiziert wird, werden alle Spalten einer Zeile als Teil eines zu indizierenden Dokuments betrachtet. Gelöschte Zeilen werden nicht gezählt.  
@@ -120,7 +120,7 @@ ms.locfileid: "62778941"
 |||  
 |-|-|  
 |**Fall**|Enabled|  
-|**Alarm**|Disabled|  
+|**Alarm**|Deaktiviert|  
   
  **Änderungsnachverfolgung**  
  Gibt an, ob die Volltext-Änderungsnachverfolgung für die Tabelle aktiviert ist, und wenn dies der Fall ist, deren Typ. Bei der Volltext-Änderungsnachverfolgung werden die Zeilen aufgezeichnet, die in einer Tabelle oder indizierten Sicht geändert wurden, die für die Volltextindizierung eingerichtet wurde. Diese Änderungen können an den Volltextindex weitergegeben werden.  
@@ -129,7 +129,7 @@ ms.locfileid: "62778941"
   
 |||  
 |-|-|  
-|**Abgeschrieben**|Der Volltextindex wird nicht mit Änderungen an den zugrunde liegenden Daten aktualisiert.|  
+|**Deaktiviert**|Der Volltextindex wird nicht mit Änderungen an den zugrunde liegenden Daten aktualisiert.|  
 |**Manuell**|Der Volltextindex wird bei Änderungen zu den zugrunde liegenden Daten nicht automatisch aktualisiert. Änderungen an den zugrunde liegenden Daten werden jedoch beibehalten, und Sie können sie an den Volltextindex weitergeben, entweder nach einem Zeitplan unter Verwendung des SQL-Server-Agents oder manuell.|  
 |**Automatisch**|Der Volltextindex wird bei Änderungen zu den zugrunde liegenden Daten in der Basistabelle automatisch aktualisiert.|  
   
@@ -139,8 +139,8 @@ ms.locfileid: "62778941"
 |||  
 |-|-|  
 |**Vollständig**|Während einer vollständigen Auffüllung einer Tabelle werden Indexeinträge für alle Zeilen erstellt.|  
-|**Inkrementelle**|Bei der inkrementellen Auffüllung wird der Volltextindex bezüglich der Zeilen aktualisiert, die seit der letzten Auffüllung oder während des letzten Auffüllungsvorgangs hinzugefügt, gelöscht oder geändert wurden. Für eine inkrementelle Auffüllung muss die Basistabelle eine Spalte des Datentyps `timestamp` enthalten.|  
-|**Alisierungs**|Der Volltextindex wird stets aktualisiert, wenn die Daten in der Basistabelle geändert werden.|  
+|**Inkrementell**|Bei der inkrementellen Auffüllung wird der Volltextindex bezüglich der Zeilen aktualisiert, die seit der letzten Auffüllung oder während des letzten Auffüllungsvorgangs hinzugefügt, gelöscht oder geändert wurden. Für eine inkrementelle Auffüllung muss die Basistabelle eine Spalte des Datentyps `timestamp` enthalten.|  
+|**Update**|Der Volltextindex wird stets aktualisiert, wenn die Daten in der Basistabelle geändert werden.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erste Schritte mit der Volltextsuche](../relational-databases/search/get-started-with-full-text-search.md)  

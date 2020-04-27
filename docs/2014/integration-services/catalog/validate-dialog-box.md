@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8380b3ff1502088e0131b182149e90e31d2be42c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771650"
 ---
 # <a name="validate-dialog-box"></a>Dialogfeld 'Überprüfen'
@@ -31,7 +31,7 @@ ms.locfileid: "62771650"
   
 -   [Festlegen der Optionen auf der Seite "Allgemein"](#general)  
   
-##  <a name="open_dialog"></a> Öffnen des Dialogfelds "Überprüfen"  
+##  <a name="open-the-validate-dialog-box"></a><a name="open_dialog"></a> Öffnen des Dialogfelds "Überprüfen"  
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung zum [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server her.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62771650"
   
 5.  Klicken Sie mit der rechten Maustaste auf das Projekt oder Paket, und wählen Sie **Überprüfen**aus.  
   
-##  <a name="general"></a> Festlegen der Optionen auf der Seite "Allgemein"  
+##  <a name="set-the-options-on-the-general-page"></a><a name="general"></a> Festlegen der Optionen auf der Seite "Allgemein"  
  **Umgebung**  
  Wählen Sie die Umgebung aus, die Sie verwenden möchten, um das Projekt oder Paket zu überprüfen.  
   

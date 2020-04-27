@@ -14,15 +14,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bd2040199aa2f24f0ae794bda9d13255a4e1d583
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62807504"
 ---
 # <a name="create-history-and-status-reports"></a>Erstellen von Verlaufs- und Statusberichten
-  Sie können für die Versionsgeschichte oder den aktuellen Status von Dateien in der derzeit geladenen Projektmappe einen Bericht erstellen. Außerdem können Sie eine Vorschau des Berichts anzeigen und den Bericht anschließend an einen Drucker oder eine Datei senden oder in der Zwischenablage ablegen. Diese Berichte werden nicht von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] generiert. 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe generiert den Bericht.  
+  Sie können für die Versionsgeschichte oder den aktuellen Status von Dateien in der derzeit geladenen Projektmappe einen Bericht erstellen. Außerdem können Sie eine Vorschau des Berichts anzeigen und den Bericht anschließend an einen Drucker oder eine Datei senden oder in der Zwischenablage ablegen. Diese Berichte werden nicht von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] generiert. [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual SourceSafe generiert den Bericht.  
   
 ### <a name="to-create-a-history-report"></a>So erstellen Sie einen Bericht über die Versionsgeschichte  
   

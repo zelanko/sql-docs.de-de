@@ -15,10 +15,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bde4d7fa738bdc952abc936ea13caa7225887ad6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62786745"
 ---
 # <a name="check-out-files"></a>Auschecken von Dateien
@@ -45,7 +45,7 @@ ms.locfileid: "62786745"
      **Spalten**  
      Bestimmt die anzuzeigenden Spalten und die Reihenfolge, in der sie angezeigt werden.  
   
-     **Iny**  
+     **Kommentare**  
      Hier können Sie einen Kommentar für den Auscheckvorgang eingeben.  
   
      **Dialogfeld "Auschecken" beim Auschecken von Elementen nicht anzeigen**  

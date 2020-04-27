@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ffa52839c20a34574423e3b123da79f734fb69ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62786687"
 ---
 # <a name="browse-for-servers-network-servers"></a>Nach Servern suchen (Netzwerkserver)
@@ -32,8 +32,8 @@ ms.locfileid: "62786687"
   
  Um eine Verbindung mit einer Instanz herzustellen, die nicht in der Liste angezeigt wird, geben Sie eine vollständige Verbindungszeichenfolge für die Instanz ein, einschließlich der TCP/IP-Portnummer oder des Pipenamens der Named Pipes.  
   
-## <a name="options"></a>Tastatur  
- **Wählen Sie eine SQL Server Instanz im Netzwerk für Ihre Verbindung aus.**  
+## <a name="options"></a>Optionen  
+ **Wählen Sie für Ihre Verbindung eine SQL Server-Instanz im Netzwerk aus**  
  Legen Sie den Server fest, zu dem eine Verbindung hergestellt werden soll, indem Sie auf die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz klicken, die in der Baumstruktur angezeigt wird. Sie können Teile der Strukturansicht ein-oder ausblenden, indem Sie auf die Knoten klicken, **+** die **-** mit einem-oder-Symbol gekennzeichnet sind.  
   
   

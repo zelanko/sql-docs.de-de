@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a356a6bad7b0756f148b43ed0cbf35e8d2ce9cc9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62775319"
 ---
 # <a name="upgrade-replicated-databases"></a>Aktualisieren von replizierten Datenbanken
@@ -63,11 +63,11 @@ ms.locfileid: "62775319"
   
  Die Agents werden in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], im Replikationsmonitor oder in der Befehlszeile ausgeführt. Weitere Informationen zum Ausführen des Momentaufnahme-Agents finden Sie unter den folgenden Themen:  
   
--   [Erstellen und Anwenden der Anfangs Momentaufnahme](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
+-   [Erstellen und Anwenden der Anfangsmomentaufnahme](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
 -   [Starten und Beenden eines Replikations-Agents &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)  
   
--   [Erstellen und Anwenden der Anfangs Momentaufnahme](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
+-   [Erstellen und Anwenden der Anfangsmomentaufnahme](../../../2014/relational-databases/replication/create-and-apply-the-initial-snapshot.md)  
   
 -   [Ausführbare Konzepte für die Programmierung von Replikations-Agent](../../../2014/relational-databases/replication/concepts/replication-agent-executables-concepts.md)  
   
@@ -89,9 +89,9 @@ ms.locfileid: "62775319"
  Um sicherzustellen, dass die Replikationseinstellungen beibehalten werden, wenn die Sicherung einer replizierten Datenbank mithilfe einer früheren Version wiederhergestellt wird, stellen Sie die Sicherung auf einem Server und in einer Datenbank wieder her, deren Namen mit den Namen des Servers und der Datenbank übereinstimmen, von dem bzw. der die Sicherung erstellt wurde.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Häufig gestellte Fragen für Replikationsadministratoren](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
+ [FAQ zur Replikation](../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)   
  [Abwärtskompatibilität von Replikationen](../../../2014/relational-databases/replication/replication-backward-compatibility.md)   
- [Unterstützte Versions- und Editionsupgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
- [Aktualisieren auf SQL Server 2014](upgrade-sql-server.md)  
+ [Unterstützte Versions-und Editions Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
+ [Upgrade auf SQL Server 2014](upgrade-sql-server.md)  
   
   

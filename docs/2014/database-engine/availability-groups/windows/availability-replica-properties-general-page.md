@@ -13,21 +13,21 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 07652cec7b3b7a17c4b994eb68afd939e15244a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62791904"
 ---
 # <a name="availability-replica-properties-general-page"></a>Eigenschaften des Verfügbarkeitsreplikats (Seite Allgemein)
   Verwenden Sie dieses Dialogfeld, um die Eigenschaften eines Verfügbarkeitsreplikats anzuzeigen.  
   
 ## <a name="task-list"></a>Aufgabenliste  
- **Anzeigen von Verfügbarkeits Replikat Eigenschaften**  
+ **So zeigen Sie Verfügbarkeitsreplikateigenschaften an**  
   
 -   [Anzeigen von Verfügbarkeitsreplikateigenschaften &#40;SQL Server&#41;](view-availability-replica-properties-sql-server.md)  
   
--   [Verwenden Sie das AlwaysOn-Dashboard &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Verwenden des AlwaysOn-Dashboards &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
  **Name der Verfügbarkeits Gruppe**  
@@ -36,17 +36,17 @@ ms.locfileid: "62791904"
  **Server Instanz**  
  Entspricht dem Servernamen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz, die dieses Replikat hostet, sowie bei einer nicht standardmäßigen Instanz dem Instanznamen.  
   
- **Spielen**  
- **Primärer Server/verwaltete Instanz**  
+ **Rolle**  
+ **Primär**  
  Derzeit das primäre Replikat.  
   
  **Secondary**  
  Derzeit ein sekundäres Replikat.  
   
- **Legen**  
+ **Wird aufgelöst**  
  Die Replikatrolle wird derzeit zur primären oder sekundären Rolle aufgelöst.  
   
- **Verfügbarkeits Modus**  
+ **Verfügbarkeitsmodus**  
  Der Verfügbarkeitsmodus des Replikats. Folgende Werte sind möglich:  
   
  **Asynchroner Commit**  
@@ -72,8 +72,8 @@ ms.locfileid: "62791904"
  **Alle Verbindungen zulassen**  
  Für die Datenbanken im primären Replikat sind alle Verbindungen zugelassen. Dies ist die Standardeinstellung.  
   
- **Lese-/Schreibverbindungen zulassen**  
- Verbindungen, bei denen die Verbindungseigenschaft für die Anwendungsabsicht auf **ReadOnly** festgelegt ist, werden nicht zugelassen. Wenn die Eigenschaft für die Anwendungs Absicht auf "read **Write** " festgelegt ist oder die Verbindungs Eigenschaft für die Anwendungs Absicht nicht festgelegt ist, wird die Verbindung zugelassen.  
+ **Verbindungen mit Lese-/Schreibzugriff zulassen**  
+ Verbindungen **, bei** denen die Verbindungs Eigenschaft für die Anwendungs Absicht auf "schreibgeschützt" festgelegt ist, sind unzulässig. Wenn die Eigenschaft für die Anwendungs Absicht auf "read **Write** " festgelegt ist oder die Verbindungs Eigenschaft für die Anwendungs Absicht nicht festgelegt ist, wird die Verbindung zugelassen.  
   
  **Lesbare sekundäre Datenbank**  
  Gibt an, ob ein Verfügbarkeitsreplikat, das die sekundäre Rolle ausführt (also einem sekundären Replikat entspricht), Verbindungen von Clients zulassen kann. Folgende Werte sind möglich:  

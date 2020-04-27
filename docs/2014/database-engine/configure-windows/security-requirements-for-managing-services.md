@@ -19,14 +19,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cf42651f256a2fb1e3c72e7bb7ff312486ea2472
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62810057"
 ---
 # <a name="security-requirements-for-managing-services"></a>Sicherheitsanforderungen für das Verwalten von Diensten
-  Verwenden Sie zum [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwalten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der-und-Agent-Dienste [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]entweder SQL Server-Konfigurations-Manager oder. Auf gruppierten Servern verwalten Sie die Dienste mit der Clusterverwaltung.  
+  Verwenden Sie entweder den SQL Server-Konfigurations-Manager oder [!INCLUDE[msCoName](../../includes/msconame-md.md)], um den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-und den [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]-Agent-Dienst zu verwalten. Auf gruppierten Servern verwalten Sie die Dienste mit der Clusterverwaltung.  
   
  Um den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst zu verwalten und die Konfigurationsoptionen für den Server festzulegen, müssen Sie Mitglied der festen Serverrolle **serveradmin** oder der festen Serverrolle **sysadmin** sein. Mitglieder der Windows-Gruppe **Administratoren** können Dienste starten und beenden und die unter Windows verfügbaren Serveroptionen konfigurieren.  
   

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9de91ba98533e82fbf63376ed6d9c56ad73a000c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62771026"
 ---
 # <a name="odbc-destination"></a>ODBC-Ziel
@@ -26,7 +26,7 @@ ms.locfileid: "62771026"
   
  Das ODBC-Ziel weist eine reguläre Ausgabe und eine Fehlerausgabe auf.  
   
-##  <a name="BKMK_odbcdestination_loadoptions"></a> Ladeoptionen  
+##  <a name="load-options"></a><a name="BKMK_odbcdestination_loadoptions"></a> Ladeoptionen  
  Das ODBC-Ziel kann eines von zwei Zugriffslademodulen verwenden. Sie legen den Modus im [Quellen-Editor für ODBC &#40;Seite „Verbindungs-Manager“&#41;](../odbc-source-editor-connection-manager-page.md) fest. Die beiden Modi sind:  
   
 -   **Batch**: In diesem Modus versucht das ODBC-Ziel, basierend auf den erkannten Funktionen des ODBC-Anbieters die effizienteste Einfügemethode zu verwenden. Für die meisten modernen ODBC-Anbieter umfasst dies das Vorbereiten einer INSERT-Anweisung mit Parametern und das anschließende Verwenden einer Arrayparameterbindung pro Zeile (wobei die Arraygröße über die **BatchSize** -Eigenschaft gesteuert wird). Wenn Sie **Batch** auswählen und der Anbieter diese Methode nicht unterstützt, wechselt das ODBC-Ziel automatisch zum Modus **Zeile für Zeile** .  
@@ -83,6 +83,6 @@ ms.locfileid: "62771026"
   
 -   [Laden von Daten mithilfe des ODBC-Ziels](odbc-destination.md)  
   
--   [Benutzerdefinierte Eigenschaften von ODBC-Zielen](odbc-destination-custom-properties.md)  
+-   [ODBC Destination Custom Properties](odbc-destination-custom-properties.md)  
   
   

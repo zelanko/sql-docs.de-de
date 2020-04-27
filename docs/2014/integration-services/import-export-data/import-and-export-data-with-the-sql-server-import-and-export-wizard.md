@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f3ce90e2670357d0842b0a6ac7838f396465bab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768163"
 ---
 # <a name="sql-server-import-and-export-wizard"></a>SQL Server-Import/Export-Assistent
@@ -81,8 +81,7 @@ ms.locfileid: "62768163"
   
  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Import/Export-Assistent verwendet die in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bereitgestellten Zuordnungsdateien zum Zuordnen der Datentypen einer Datenbankversion bzw. eines Systems zu den Datentypen einer anderen Datenbankversion bzw. eines anderen Systems. Zum Beispiel kann eine Zuordnung von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu Oracle erfolgen. Standardmäßig werden die Zuordnungsdateien im XML-Format unter C:\Programme\Microsoft SQL Server\100\DTS\MappingFiles installiert. Wenn Ihr Unternehmen verschiedene Zuordnungen zwischen Datentypen erfordert, können Sie die Zuordnungen aktualisieren, um die vom Assistenten durchgeführten Zuordnungen zu beeinflussen. Wenn Sie z. b. möchten, dass der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **NCHAR** -Datentyp beim Übertragen von Daten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in DB2 **dem DB2-Datentyp** und nicht dem DB2-Datentyp " **VARGRAPHIC** " zugeordnet wird, ändern Sie die **NCHAR** -Zuordnung in der Zuordnungs Datei SqlClientToIBMDB2. XML so, dass anstelle von **VARGRAPHIC** eine **Grafik** verwendet wird.  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält Zuordnungen zwischen vielen häufig verwendeten Quellen- und Zielkombinationen. Darüber hinaus können Sie dem Ordner mit den Zuordnungsdateien neue Zuordnungsdateien hinzufügen, um zusätzliche Quellen und Ziele zu unterstützen. Die neuen Zuordnungsdateien müssen dem veröffentlichten XSD-Schema entsprechen und einer eindeutigen Kombination aus Quelle und Ziel zugeordnet sein.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält Zuordnungen zwischen vielen häufig verwendeten Quellen- und Zielkombinationen. Darüber hinaus können Sie dem Ordner mit den Zuordnungsdateien neue Zuordnungsdateien hinzufügen, um zusätzliche Quellen und Ziele zu unterstützen. Die neuen Zuordnungsdateien müssen dem veröffentlichten XSD-Schema entsprechen und einer eindeutigen Kombination aus Quelle und Ziel zugeordnet sein.  
   
 > [!NOTE]  
 >  Wenn Sie eine vorhandene Zuordnungsdatei bearbeiten oder dem Ordner eine neue Zuordnungsdatei hinzufügen, müssen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Import/Export-Assistenten bzw. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] schließen und anschließend erneut öffnen, damit die neuen oder geänderten Dateien erkannt werden.  

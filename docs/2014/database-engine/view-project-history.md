@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8be44100e733833c0982f46965544f8e34e57db0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62773496"
 ---
 # <a name="view-project-history"></a>Anzeigen der Projektversionsgeschichte
@@ -36,7 +36,7 @@ ms.locfileid: "62773496"
   
 2.  Zeigen Sie im Menü **Datei** auf **Quell** Code Verwaltung, und klicken Sie auf **Verlauf anzeigen**.  
   
-3.  Führen Sie **** \<im Dialogfeld Projekt> Verlauf eine der folgenden Aktionen aus:  
+3.  Führen Sie **History of** \<im Dialogfeld Projekt> Verlauf eine der folgenden Aktionen aus:  
   
     -   Zeigen Sie für eine ausgewählte Datei die Kopie des Quellcodeverwaltungssystems an.  
   

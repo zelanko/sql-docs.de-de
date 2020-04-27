@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e4791e826adccb925241b02312900ea524f228e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62768466"
 ---
 # <a name="sending-to-a-remote-private-message-queue-with-the-script-task"></a>Senden mit dem Skripttask an eine private Remotemeldungswarteschlange
@@ -42,9 +42,9 @@ ms.locfileid: "62768466"
   
 2.  Erstellen Sie [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] eine Variable namens **MessageText** des `String` Typs, um den Meldungs Text an das Skript zu übergeben. Geben Sie eine Standardmeldung als Wert der Variablen ein.  
   
-3.  Fügen Sie der Entwurfsoberfläche einen Skripttask hinzu, und bearbeiten Sie ihn. Um die Variable im Skript verfügbar zu machen, fügen Sie die **-Variable im **Scripttask-Editor** auf der Registerkarte **Skript`MessageText` der **ReadOnlyVariables**-Eigenschaft hinzu.  
+3.  Fügen Sie der Entwurfsoberfläche einen Skripttask hinzu, und bearbeiten Sie ihn. Um die Variable im Skript verfügbar zu machen, fügen Sie die **-Variable im** Scripttask-Editor**auf der Registerkarte**Skript`MessageText` der **ReadOnlyVariables**-Eigenschaft hinzu.  
   
-4.  Klicken Sie auf **Skript bearbeiten**, um den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications-Skript-Editor (VSTA) zu öffnen.  
+4.  Klicken Sie auf **Skript bearbeiten**, um den [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)]-Tools für Anwendungen-Skript-Editor (VSTA) zu öffnen.  
   
 5.  Fügen Sie zum `System.Messaging`-Namespace einen Verweis im Skriptprojekt hinzu.  
   

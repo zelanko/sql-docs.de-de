@@ -13,27 +13,27 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 248ffe57906052c0d7dafcd187bb1b2b34cd6e64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62815653"
 ---
 # <a name="availability-group-properties-and-new-availability-group-general-page"></a>„Eigenschaften der Verfügbarkeitsgruppe“ und „Neue Verfügbarkeitsgruppe“ (Seite „Allgemein“)
-  Dieses Thema gilt für die Registerkarte **Allgemein** des Dialog Felds **neue Verfügbarkeits Gruppe** und des Dialog Felds **Eigenschaften der Verfügbarkeits Gruppe** .  Das Dialogfeld **Neue Verfügbarkeitsgruppe** ermöglicht es Ihnen, eine neue Verfügbarkeitsgruppe zu erstellen, ohne den [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]zu verwenden. Das Dialogfeld **Eigenschaften der Verfügbarkeitsgruppe** ermöglicht es Ihnen, die Konfiguration einer vorhandenen Verfügbarkeitsgruppe anzuzeigen und zu ändern.  
+   Dieses Thema gilt für die Registerkarte **Allgemein** des Dialogfelds **Neue Verfügbarkeitsgruppe** und des Dialogfelds **Eigenschaften der Verfügbarkeitsgruppe**.  Das Dialogfeld **Neue Verfügbarkeitsgruppe** ermöglicht es Ihnen, eine neue Verfügbarkeitsgruppe zu erstellen, ohne den [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]zu verwenden. Das Dialogfeld **Eigenschaften der Verfügbarkeitsgruppe** ermöglicht es Ihnen, die Konfiguration einer vorhandenen Verfügbarkeitsgruppe anzuzeigen und zu ändern.  
   
  **So zeigen Sie Verfügbarkeitsgruppeneigenschaften an**  
   
 -   [Anzeigen von Verfügbarkeitsgruppeneigenschaften &#40;SQL Server&#41;](view-availability-group-properties-sql-server.md)  
   
--   [Verwenden Sie das AlwaysOn-Dashboard &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
+-   [Verwenden des AlwaysOn-Dashboards &#40;SQL Server Management Studio&#41;](use-the-always-on-dashboard-sql-server-management-studio.md)  
   
 ## <a name="uielement-list"></a>Liste der Benutzeroberflächenelemente  
  **Name der Verfügbarkeits Gruppe**  
  Der Name der Verfügbarkeitsgruppe. Dies ist ein vom Benutzer angegebener Name, der innerhalb des Windows Server-Failoverclusters (WSFC) eindeutig sein muss.  
   
 ## <a name="availability-databases"></a>Verfügbarkeitsdatenbanken  
- **Database Name**  
+ **Datenbankname**  
  Name einer Datenbank, die der Verfügbarkeitsgruppe hinzugefügt wurde.  
   
  **Add (Hinzufügen)**  
@@ -46,17 +46,17 @@ ms.locfileid: "62815653"
  **Server Instanz**  
  Entspricht dem Servernamen der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz, die dieses Replikat hostet, sowie bei einer nicht standardmäßigen Instanz dem Instanznamen.  
   
- **Spielen**  
- **Primärer Server/verwaltete Instanz**  
+ **Rolle**  
+ **Primär**  
  Derzeit das primäre Replikat.  
   
  **Secondary**  
  Derzeit ein sekundäres Replikat.  
   
- **Legen**  
+ **Wird aufgelöst**  
  Die Replikatrolle wird derzeit zur primären oder sekundären Rolle aufgelöst.  
   
- **Verfügbarkeitsmodus**  
+ **Verfügbarkeits Modus**  
  Der Verfügbarkeitsmodus des Replikats. Folgende Werte sind möglich:  
   
  **Asynchroner Commit**  
@@ -82,8 +82,8 @@ ms.locfileid: "62815653"
  **Alle Verbindungen zulassen**  
  Für die Datenbanken im primären Replikat sind alle Verbindungen zugelassen. Dies ist die Standardeinstellung.  
   
- **Lese-/Schreibverbindungen zulassen**  
- Verbindungen, bei denen die Verbindungseigenschaft für die Anwendungsabsicht auf **ReadOnly** festgelegt ist, werden nicht zugelassen. Wenn die Eigenschaft für die Anwendungs Absicht auf "read **Write** " festgelegt ist oder die Verbindungs Eigenschaft für die Anwendungs Absicht nicht festgelegt ist, wird die Verbindung zugelassen. Weitere Informationen zur Verbindungseigenschaft für die Anwendungsabsicht finden Sie unter [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
+ **Verbindungen mit Lese-/Schreibzugriff zulassen**  
+ Verbindungen **, bei** denen die Verbindungs Eigenschaft für die Anwendungs Absicht auf "schreibgeschützt" festgelegt ist, sind unzulässig. Wenn die Eigenschaft für die Anwendungs Absicht auf "read **Write** " festgelegt ist oder die Verbindungs Eigenschaft für die Anwendungs Absicht nicht festgelegt ist, wird die Verbindung zugelassen. Weitere Informationen zur Verbindungseigenschaft für die Anwendungsabsicht finden Sie unter [Using Connection String Keywords with SQL Server Native Client](../../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md).  
   
  **Lesbare sekundäre Datenbank**  
  Gibt an, ob ein Verfügbarkeitsreplikat, das die sekundäre Rolle ausführt (also einem sekundären Replikat entspricht), Verbindungen von Clients zulassen kann. Folgende Werte sind möglich:  
@@ -97,7 +97,7 @@ ms.locfileid: "62815653"
  **Ja**  
  Alle Verbindungen zu sekundären Datenbanken dieses Replikats sind zugelassen, aber nur für Lesezugriff. Die sekundären Datenbanken sind alle für Lesezugriff verfügbar.  
   
- **Sitzungs Timeout (Sekunden)**  
+ **Sitzungstimeout (Sekunden)**  
  Die Anzahl der Sekunden für das Sitzungstimeout auf diesem Replikat.  
   
  **Endpunkt-URL**  

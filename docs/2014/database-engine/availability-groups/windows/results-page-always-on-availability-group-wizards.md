@@ -16,16 +16,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7a76c87b38dc333f55745c61620398f086a3db5d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62789011"
 ---
 # <a name="results-page-alwayson-availability-group-wizards"></a>Seite 'Ergebnisse' (AlwaysOn-Verfügbarkeitsgruppen-Assistenten)
   In diesem Hilfethema werden die Optionen der Seite **Ergebnisse** beschrieben. Dieses Thema gilt für den [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)], [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)]und [!INCLUDE[ssAoFoAgWiz](../../../includes/ssaofoagwiz-md.md)] von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Verwenden Sie diese Seite, um die Ergebnisse des Assistenten anzuzeigen.  
   
-##  <a name="PageOptions"></a> Optionen auf der Seite "Ergebnisse"  
+##  <a name="results-page-options"></a><a name="PageOptions"></a> Optionen auf der Seite "Ergebnisse"  
  Das Raster **Zusammenfassung** enthält die folgenden Spalten:  
   
  **Name**  
@@ -34,14 +34,14 @@ ms.locfileid: "62789011"
  **Ergebnis**  
  Ziegt für jeden ausgeführten Schritt einen der folgenden Linktexte an.  
   
-|Ergebnis|BESCHREIBUNG|  
+|Ergebnis|Beschreibung|  
 |------------|-----------------|  
 |**Fehler**|Gibt an, dass der Überprüfungsschritt fehlgeschlagen ist. Klicken Sie auf den Link, um die Fehlermeldung anzuzeigen.|  
-|**Erfolgreich**|Gibt an, dass der Überprüfungsschritt erfolgreich abgeschlossen wurde.|  
+|**Success**|Gibt an, dass der Überprüfungsschritt erfolgreich abgeschlossen wurde.|  
   
 
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Verwenden des Dialogfelds Neue Verfügbarkeitsgruppe &#40;SQL Server Management Studio&#41;](use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   

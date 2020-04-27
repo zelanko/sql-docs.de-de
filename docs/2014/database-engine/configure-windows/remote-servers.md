@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e8fd1464857b77139ca0bef310eee8be949d77cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62809758"
 ---
 # <a name="remote-servers"></a>Remoteserver
@@ -33,10 +33,9 @@ ms.locfileid: "62809758"
 ## <a name="remote-server-details"></a>Einzelheiten zu Remoteservern  
  Remoteserver werden paarweise eingerichtet. Wenn Sie ein Remoteserverpaar einrichten möchten, sollten Sie beide Server so konfigurieren, dass sie sich gegenseitig als Remoteserver erkennen.  
   
- In den meisten Fällen ist es nicht erforderlich, Konfigurationsoptionen für Remoteserver festzulegen. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legt die Standardeinstellungen auf den lokalen und Remotecomputern für Remoteserververbindungen fest.  
+ In den meisten Fällen ist es nicht erforderlich, Konfigurationsoptionen für Remoteserver festzulegen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] legt die Standardeinstellungen auf den lokalen und Remotecomputern für Remoteserververbindungen fest.  
   
- Damit der Zugriff auf Remoteserver funktioniert, muss die Konfigurationsoption **Remotezugriff** auf den lokalen und den Remotecomputern auf 1 festgelegt werden. (Dies ist die Standardeinstellung.)  **Remotezugriff** steuert Anmeldungen von Remoteservern. Diese Konfigurationsoption können Sie entweder mit der gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)] **sp_configure** stored procedure or [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Wenn Sie die Option in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]festlegen möchten, verwenden Sie auf der Seite **Verbindungen** die Option **Remoteverbindungen mit diesem Server zulassen**. Um auf die Seite **Verbindungen** zu gelangen, klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Servernamen, und klicken Sie auf **Eigenschaften**. Klicken Sie auf der Seite **Servereigenschaften** auf die Seite **Verbindungen** .  
+ Damit der Zugriff auf Remoteserver funktioniert, muss die Konfigurationsoption **Remotezugriff** auf den lokalen und den Remotecomputern auf 1 festgelegt werden. (Dies ist die Standardeinstellung.)  **Remotezugriff** steuert Anmeldungen von Remoteservern. Diese Konfigurationsoption können Sie entweder mit der gespeicherten Prozedur [!INCLUDE[tsql](../../includes/tsql-md.md)]sp_configure**von** oder mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zurücksetzen. Wenn Sie die Option in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]festlegen möchten, verwenden Sie auf der Seite **Verbindungen** die Option **Remoteverbindungen mit diesem Server zulassen**. Um auf die Seite **Verbindungen** zu gelangen, klicken Sie im Objekt-Explorer mit der rechten Maustaste auf den Servernamen, und klicken Sie auf **Eigenschaften**. Klicken Sie auf der Seite **Servereigenschaften** auf die Seite **Verbindungen** .  
   
  Sie können eine Remoteserverkonfiguration von einem lokalen Server aus deaktivieren, um den Zugriff auf diesen lokalen Server durch Benutzer des diesem zugeordneten Remoteservers zu verhindern.  
   
@@ -50,8 +49,7 @@ ms.locfileid: "62809758"
 >  Die **trusted** -Option von  **sp_remoteoption** wird in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]nicht unterstützt.  
   
 ### <a name="setting-up-the-local-server"></a>Einrichten des lokalen Servers  
- Für die lokale Anmeldung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung müssen Sie keine Anmeldungszuordnung auf dem lokalen Server einrichten. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet den Anmeldenamen und das Kennwort der lokalen Anmeldung, um die Verbindung mit dem Remoteserver herzustellen. Bei Windows-authentifizierten Anmeldungen richten Sie eine lokale Anmeldungszuordnung auf einem lokalen Server ein, über die definiert wird, welche Anmeldung und welches Kennwort von einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz verwendet werden, wenn eine RPC-Verbindung mit einem Remoteserver hergestellt wird.  
+ Für die lokale Anmeldung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung müssen Sie keine Anmeldungszuordnung auf dem lokalen Server einrichten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet den Anmeldenamen und das Kennwort der lokalen Anmeldung, um die Verbindung mit dem Remoteserver herzustellen. Bei Windows-authentifizierten Anmeldungen richten Sie eine lokale Anmeldungszuordnung auf einem lokalen Server ein, über die definiert wird, welche Anmeldung und welches Kennwort von einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz verwendet werden, wenn eine RPC-Verbindung mit einem Remoteserver hergestellt wird.  
   
  Bei durch die Windows-Authentifizierung erstellten Anmeldungen müssen Sie eine Anmeldungs- und Kennwortzuordnung über die gespeicherte Prozedur **sp_addlinkedservlogin** erstellen. Diese mithilfe von **sp_addremotelogin**erstellte Anmeldung und dieses Kennwort müssen mit der eingehenden Anmeldung bzw. dem eingehenden Kennwort übereinstimmen.  
   
@@ -59,7 +57,7 @@ ms.locfileid: "62809758"
 >  Verwenden Sie nach Möglichkeit die Windows-Authentifizierung.  
   
 ### <a name="remote-server-security-example"></a>Beispiel für die Sicherheit von Remoteservern  
- Betrachten Sie diese beiden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationen: **serverSend** und **serverReceive**. **serverReceive** ist so konfiguriert, dass eine eingehende Anmeldung von **serverSend**namens **Sales_Mary**zu einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentifizierten Anmeldung in **serverReceive**namens **Alice**zugeordnet wird. Eine weitere eingehende Anmeldung von **serverSend**namens **Joe**wird einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -authentifizierten Anmeldung auf **serverReceive**_,_ namens **Joe**zugeordnet.  
+ Betrachten Sie diese beiden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Installationen: **serverSend** und **serverReceive**. **serverReceive** ist so konfiguriert, dass eine eingehende Anmeldung von **serverSend**namens **Sales_Mary**einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -authentifizierten Anmeldung bei **serverReceive**namens **Alice**zugeordnet wird. Eine weitere eingehende Anmeldung von **serverSend**namens **Joe**wird einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -authentifizierten Anmeldung auf **serverReceive** _,_ namens **Joe**zugeordnet.  
   
  Der folgende Transact-SQL-Beispielcode konfiguriert `serverSend` so, dass Remoteprozeduraufrufe auf `serverReceive`ausgeführt werden können.  
   
