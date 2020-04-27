@@ -14,10 +14,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 43f71d7dc73239b240b841e14a11f3f28f755b61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874352"
 ---
 # <a name="disallowed-types-and-members-in-mscorlibdll"></a>Unzulässige Typen und Elemente in "mscorlib.dll"
@@ -35,22 +35,22 @@ ms.locfileid: "62874352"
 |System.Collections.Queue.Synchronized()|Synchronization|  
 |System.Collections.SortedList.Synchronized()|Synchronization|  
 |System.Collections.Stack.Synchronized()|Synchronization|  
-|System.Console.Beep()|Benutzeroberfläche|  
-|System.Console.get_Error()|Benutzeroberfläche|  
-|System.Console.get_In()|Benutzeroberfläche|  
-|System.Console.get_KeyAvailable()|Benutzeroberfläche|  
-|System.Console.get_Out()|Benutzeroberfläche|  
-|System.Console.OpenStandardError()|Benutzeroberfläche|  
-|System.Console.OpenStandardInput()|Benutzeroberfläche|  
-|System.Console.OpenStandardOutput()|Benutzeroberfläche|  
-|System.Console.Read()|Benutzeroberfläche|  
-|System.Console.ReadKey()|Benutzeroberfläche|  
-|System.Console.ReadLine()|Benutzeroberfläche|  
-|System.Console.SetError()|Benutzeroberfläche|  
-|System.Console.SetIn()|Benutzeroberfläche|  
-|System.Console.SetOut()|Benutzeroberfläche|  
-|System.Console.Write()|Benutzeroberfläche|  
-|System.Console.WriteLine()|Benutzeroberfläche|  
+|System.Console.Beep()|UI|  
+|System.Console.get_Error()|UI|  
+|System.Console.get_In()|UI|  
+|System.Console.get_KeyAvailable()|UI|  
+|System.Console.get_Out()|UI|  
+|System.Console.OpenStandardError()|UI|  
+|System.Console.OpenStandardInput()|UI|  
+|System.Console.OpenStandardOutput()|UI|  
+|System.Console.Read()|UI|  
+|System.Console.ReadKey()|UI|  
+|System.Console.ReadLine()|UI|  
+|System.Console.SetError()|UI|  
+|System.Console.SetIn()|UI|  
+|System.Console.SetOut()|UI|  
+|System.Console.Write()|UI|  
+|System.Console.WriteLine()|UI|  
 |System.Diagnostics.LogMessageEventHandler|ExternalThreading, Synchronization|  
 |System.IO.FileStream.BeginRead()|ExternalThreading|  
 |System.IO.FileStream.BeginWrite()|ExternalThreading|  
