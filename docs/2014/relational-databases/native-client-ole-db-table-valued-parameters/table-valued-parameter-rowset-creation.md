@@ -1,5 +1,5 @@
 ---
-title: Erstellung eines Tabellenwert Parameter-Rowsets | Microsoft-Dokumentation
+title: Tabellenwertparameter für die Rowseterstellung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de130ef821551383ada1a6df3574404cd3518e88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046515"
 ---
 # <a name="table-valued-parameter-rowset-creation"></a>Tabellenwertparameter-Rowseterstellung
@@ -25,11 +25,11 @@ ms.locfileid: "63046515"
  Tabellenwertparameter-Rowsetobjekte werden explizit vom Consumer für Eingabeparameter durch mehrere Schnittstellen auf Sitzungsebene erstellt. Es steht eine Instanz des Tabellenwertparameter-Rowsetobjekts pro Tabellenwertparameter zur Verfügung. Der Consumer kann die Tabellenwertparameter-Rowsetobjekte entweder durch Bereitstellen der Metadateninformationen, die bereits bekannt sind (statisches Szenario), oder durch Ermitteln über Anbieterschnittstellen (dynamisches Szenario) erstellen. In den folgenden Abschnitten werden diese beiden Szenarien beschrieben.  
   
 ## <a name="static-scenario"></a>Statisches Szenario  
- Wenn die Typinformationen bekannt sind, verwendet der Consumer ITableDefinitionWithConstraints:: kreatetablewitheinschränkungen, um ein Tabellenwert Parameter-Rowsetobjekt zu instanziieren, das einem Tabellenwert Parameter entspricht.  
+ Wenn die Typinformationen bekannt sind, verwendet der Consumer ITableDefinitionWithConstraints::CreateTableWithConstraints, um einen Tabellenwertparameter für Rowsetobjekte zu instanziieren, die einem Tabellenwertparameter entsprechen.  
   
- Das *GUID* -Feld (*pTableID* -Parameter) enthält die besondere GUID (CLSID_ROWSET_TVP). Das Element *pwszName* enthält den Namen des Tabellenwertparameter-Typs, den der Consumer instanziieren möchte. Das Feld *eKin* wird auf DBKIND_GUID_NAME festgelegt. Der Name ist erforderlich, wenn es sich um eine Ad-hoc-SQL-Anweisung handelt; bei einem Prozeduraufruf ist die Angabe des Namens optional.  
+ Das *guid*-Feld (*pTableID*-Parameter) enthält die besondere GUID (CLSID_ROWSET_TVP). Das Element *pwszName* enthält den Namen des Tabellenwertparameter-Typs, den der Consumer instanziieren möchte. Das Feld *eKin* wird auf DBKIND_GUID_NAME festgelegt. Der Name ist erforderlich, wenn es sich um eine Ad-hoc-SQL-Anweisung handelt; bei einem Prozeduraufruf ist die Angabe des Namens optional.  
   
- Bei der Aggregation übergibt der Consumer den Parameter " *pUnkOuter* " mit dem steuernden "IUnknown".  
+ Bei der Aggregation übergibt der Consumer den *pUnkOuter*-Parameter mit dem kontrollierenden IUnknown-Element.  
   
  Die Eigenschaften des Tabellenwert Parameter-Rowsetobjekts sind schreibgeschützt, sodass der Consumer keine Eigenschaften in *rgPropertySets*festlegen soll.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "63046515"
  Die Parameter *pTableID* und *pUnkOuter* sollten wie im statischen Szenario festgelegt werden. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter ruft dann die Typinformationen (Spalten Informationen und Einschränkungen) vom Server ab und gibt ein Tabellenwert Parameter-Rowsetobjekt über den *ppRowset* -Parameter zurück. Für diesen Vorgang ist eine Kommunikation mit dem Server notwendig, sodass die Leistung nicht so gut ist wie beim statischen Szenario. Das dynamische Szenario funktioniert nur mit parametrisierten Prozeduraufrufen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Tabellenwertparameter &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   
+ [Tabellenwert Parameter &#40;OLE DB&#41;](table-valued-parameters-ole-db.md)   
  [Verwenden von Tabellenwertparametern &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-table-valued-parameters-ole-db.md)  
   
   

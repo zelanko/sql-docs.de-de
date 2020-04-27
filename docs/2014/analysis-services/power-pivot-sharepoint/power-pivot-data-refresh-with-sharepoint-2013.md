@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4076e27a800f9c9653e8a191c1fd53467cba9f75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071225"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2013"></a>PowerPivot-Datenaktualisierung mit SharePoint 2013
@@ -26,11 +26,11 @@ ms.locfileid: "66071225"
   
  **In diesem Thema:**  
   
--   [interaktive Datenaktualisierung](#bkmk_interactive_refresh)  
+-   [Interaktive Datenaktualisierung](#bkmk_interactive_refresh)  
   
--   [Windows-Authentifizierung mit Arbeitsmappen-Datenverbindungen und interaktiver Datenaktualisierung](#bkmk_windows_auth_interactive_data_refresh)  
+-   [Windows-Authentifizierung mit arbeitsmappendatenverbindungen und interaktiver Datenaktualisierung](#bkmk_windows_auth_interactive_data_refresh)  
   
--   [planmäßige Datenaktualisierung](#bkmk_scheduled_refresh)  
+-   [Geplante Datenaktualisierung](#bkmk_scheduled_refresh)  
   
 -   [Architektur der geplante Datenaktualisierung in SharePoint 2013](#bkmk_refresh_architecture)  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66071225"
 |Datenmodell in Analysis Services-Instanz laden|SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
 |Verarbeitungsbefehle an Analysis Services-Instanz senden|SharePoint 2013 Excel Services|PowerPivot-Systemdienst|  
 |Arbeitsmappendaten aktualisieren|SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
-|Arbeitsmappe und Datenmodell in Inhaltsdatenbank speichern|**Interaktiv:** nicht zutreffend<br /><br /> **Geplant:** SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
+|Arbeitsmappe und Datenmodell in Inhaltsdatenbank speichern|**Interaktiv:** N/V<br /><br /> **Geplant:** SharePoint 2013 Excel Services|SharePoint 2013 Excel Services|  
   
  In der folgenden Tabelle werden die unterstützten Aktualisierungsfunktionen in einer SharePoint 2013-Farm zusammengefasst, die für die Verwendung eines [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Analysis-Servers im SharePoint-Modus konfiguriert ist:  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66071225"
   
  **(\*)** Weitere Informationen zu arbeitsmappenupgrades finden Sie unter Aktualisieren von Arbeitsmappen [und planmäßige Datenaktualisierung &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
-##  <a name="bkmk_interactive_refresh"></a>Interaktive Datenaktualisierung  
+##  <a name="interactive-data-refresh"></a><a name="bkmk_interactive_refresh"></a> Interactive Data Refresh  
  Bei der interaktiven oder manuellen Datenaktualisierung in SharePoint Server 2013 Excel Services können Datenmodelle mit Daten aus der ursprünglichen Datenquelle aktualisiert werden. Die interaktive Datenaktualisierung ist verfügbar, nachdem Sie eine Excel Services-Anwendung konfiguriert haben, indem Sie einen im SharePoint-Modus ausgeführten [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server registrieren. Weitere Informationen finden Sie unter [Verwalten von Excel Services-Datenmodelleinstellungen (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx).  
   
 > [!NOTE]  
@@ -71,9 +71,9 @@ ms.locfileid: "66071225"
   
 -   Bei der interaktiven Datenaktualisierung werden nur die Daten in der aktuellen Benutzersitzung aktualisiert. Die Daten werden nicht automatisch wieder im Arbeitsmappenelement in der SharePoint-Inhaltsdatenbank gespeichert.  
   
--   **Anmelde Informationen:** Die interaktive Datenaktualisierung kann die Identität des aktuell angemeldeten Benutzers als Anmelde Informationen oder gespeicherte Anmelde Informationen verwenden, um eine Verbindung mit der Datenquelle herzustellen. Welche Anmeldeinformationen verwendet werden, hängt von den Excel Services-Authentifizierungseinstellungen ab, die für die Verbindung der Arbeitsmappe mit der externen Datenquelle definiert sind.  
+-   **Anmeldeinformationen:** Die interaktive Datenaktualisierung kann die Identität des aktuell angemeldeten Benutzers als Anmeldeinformationen oder gespeicherte Anmeldeinformationen verwenden, um eine Verbindung mit der Datenquelle herzustellen. Welche Anmeldeinformationen verwendet werden, hängt von den Excel Services-Authentifizierungseinstellungen ab, die für die Verbindung der Arbeitsmappe mit der externen Datenquelle definiert sind.  
   
--   **Unterstützte Arbeits** Mappen:  Arbeitsmappen, die in Excel 2013 erstellt wurden.  
+-   **Unterstützte Arbeitsmappen:**  In Excel 2013 erstellte Arbeitsmappen.  
   
  **So aktualisieren Sie Daten:**  
   
@@ -89,12 +89,12 @@ ms.locfileid: "66071225"
   
  ![interaktive Datenaktualisierung](../media/as-interactive-datarefresh-sharepoint2013.gif "interaktive Datenaktualisierung")  
   
-###  <a name="bkmk_windows_auth_interactive_data_refresh"></a>Windows-Authentifizierung mit arbeitsmappendatenverbindungen und interaktiver Datenaktualisierung  
+###  <a name="windows-authentication-with-workbook-data-connections-and-interactive-data-refresh"></a><a name="bkmk_windows_auth_interactive_data_refresh"></a> Windows-Authentifizierung mit Arbeitsmappen-Datenverbindungen und interaktiver Datenaktualisierung  
  Excel Services sendet dem Analysis Services-Server einen Verarbeitungsbefehl, der den Server anweist, die Identität eines Benutzerkontos anzunehmen. Um ausreichende Systemrechte zum Delegieren des Benutzeridentitätswechsels zu erhalten, benötigt das Analysis Services-Dienstkonto die Berechtigung **Einsetzen als Teil des Betriebssystems** auf dem lokalen Server. Der Analysis Services-Server muss auch in der Lage sein, die Anmeldeinformationen des Benutzers für Datenquellen zu delegieren. Das Abfrageergebnis wird an Excel Services gesendet.  
   
  Typische Benutzerfreundlichkeit: Wenn ein Kunde "alle Verbindungen aktualisieren" in einer Excel 2013-Arbeitsmappe auswählt, die ein Power Pivot-Modell enthält, wird eine Fehlermeldung ähnlich der folgenden angezeigt:  
   
--   Fehler beim **Aktualisieren der externen Daten:** Beim Arbeiten am Datenmodell in der Arbeitsmappe ist ein Fehler aufgetreten. Wiederholen Sie den Vorgang. Eine oder mehrere Datenverbindungen in dieser Arbeitsmappe können nicht aktualisiert werden.  
+-   **Fehler bei der Aktualisierung der externen Daten:** Beim Arbeiten am Datenmodell in der Arbeitsmappe ist ein Fehler aufgetreten. Wiederholen Sie den Vorgang. Eine oder mehrere Datenverbindungen in dieser Arbeitsmappe können nicht aktualisiert werden.  
   
  Abhängig vom jeweiligen Datenanbieter werden im ULS-Protokoll Meldungen ähnlich den folgenden angezeigt.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "66071225"
   
 -   Fehler beim Erstellen einer externen Verbindung oder beim Ausführen einer Abfrage. Anbietermeldung: Das Out-of-Line-Objekt 'DataSource', das auf die ID(s) 'f5fb916c-3eac-4d07-a542-531524c0d44a' verweist, wurde angegeben, jedoch nicht verwendet.  Fehler in der relationalen Engine. Ausnahme bei der Verwendung der verwalteten IDbConnection-Schnittstelle: Die Datei oder Assembly 'System.Transactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089' oder eine Abhängigkeit davon wurde nicht gefunden. Entweder wurde eine geforderte Identitätswechselebene nicht geliefert, oder die gelieferte Identitätswechselebene ist unzulässig. (Ausnahme von HRESULT: 0x80070542).  , Verbindungsname: ThisWorkbookDataModel, Arbeitsmappe: NETProvider.xlsx.  
   
- **Zusammenfassung der Konfigurationsschritte** So konfigurieren Sie **Act als Teil der Betriebssystem** Berechtigung auf dem lokalen Server:  
+ **Zusammenfassung der Konfigurationsschritte** zum Konfigurieren der Berechtigung **Einsetzen als Teil des Betriebssystems** auf dem lokalen Server:  
   
 1.  Fügen Sie auf dem Analysis Services Server, der im SharePoint-Modus ausgeführt wird, das Analysis Services Dienst Konto der Berechtigung "**als Teil des Betriebssystems agieren**" hinzu:  
   
@@ -128,8 +128,8 @@ ms.locfileid: "66071225"
   
  Weitere Informationen finden Sie unter [agieren als Teil des Betriebssystems](https://technet.microsoft.com/library/cc784323\(WS.10\).aspx).  
   
-##  <a name="bkmk_scheduled_refresh"></a>Geplante Datenaktualisierung  
- **Wichtige Punkte für die geplante Datenaktualisierung:**  
+##  <a name="scheduled-data-refresh"></a><a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
+ **Wichtige Punkte zur geplanten Datenaktualisierung:**  
   
 -   Erfordert die Bereitstellung des PowerPivot für SharePoint-Add-Ins. Weitere Informationen finden Sie unter [installieren oder Deinstallieren des PowerPivot für SharePoint-Add-ins &#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).  
   
@@ -141,9 +141,9 @@ ms.locfileid: "66071225"
   
     -   Erneutes Speichern der Arbeitsmappe in der Inhaltsdatenbank  
   
--   **Anmelde Informationen:** Verwendet gespeicherte Anmelde Informationen. Verwendet nicht die Identität des aktuellen Benutzers.  
+-   **Anmeldeinformationen:** Verwendet gespeicherte Anmeldeinformationen. Verwendet nicht die Identität des aktuellen Benutzers.  
   
--   **Unterstützte Arbeits** Mappen: Arbeitsmappen, die [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] mithilfe des Power Pivot-Add-Ins für Excel 2010 oder mithilfe von Excel 2013 erstellt wurden. In Excel 2010 mit dem [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot-Add-In erstellte Arbeitsmappen werden nicht unterstützt. Aktualisieren Sie die Arbeitsmappe mindestens auf das [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot-Format. Weitere Informationen zum Upgraden von Arbeitsmappen finden Sie unter [Upgraden von Arbeitsmappen und planmäßige Datenaktualisierungen &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
+-   **Unterstützte Arbeitsmappen:** Mit dem [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot-Add-In für Excel 2010 oder mit Excel 2013 erstellte Arbeitsmappen. In Excel 2010 mit dem [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] PowerPivot-Add-In erstellte Arbeitsmappen werden nicht unterstützt. Aktualisieren Sie die Arbeitsmappe mindestens auf das [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] PowerPivot-Format. Weitere Informationen zum Upgraden von Arbeitsmappen finden Sie unter [Upgraden von Arbeitsmappen und planmäßige Datenaktualisierungen &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
  So zeigen Sie die Seite **Datenaktualisierung verwalten** an:  
   
@@ -168,27 +168,27 @@ ms.locfileid: "66071225"
 > [!TIP]  
 >  Weitere Informationen zum Aktualisieren von Arbeitsmappen aus SharePoint Online finden Sie unter Aktualisieren [von Excel-Arbeitsmappen mit eingebetteten Power Pivot-Modellen aus SharePoint Online (Whitepaper)](https://technet.microsoft.com/library/jj992650.aspx) (https://technet.microsoft.com/library/jj992650.aspx).  
   
-##  <a name="bkmk_refresh_architecture"></a>Geplante Daten Aktualisierungs Architektur in SharePoint 2013  
+##  <a name="scheduled-data-refresh-architecture-in-sharepoint-2013"></a><a name="bkmk_refresh_architecture"></a>Geplante Daten Aktualisierungs Architektur in SharePoint 2013  
  In der folgenden Abbildung wird die Datenaktualisierungsarchitektur in SharePoint 2013 und SQL Server 2012 SP1 zusammengefasst dargestellt.  
   
  ![Architektur von SQL Server 2012 SP1 Datenaktualisierung](../media/as-scheduled-data-refresh2012sp1-architecture.gif "Architektur von SQL Server 2012 SP1 Datenaktualisierung")  
   
-||BESCHREIBUNG||  
+||Beschreibung||  
 |-|-----------------|-|  
-|**1**|Analysis Services-Engine|Ein [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server, der im SharePoint-Modus ausgeführt wird. Der Server wird außerhalb der SharePoint-Farm ausgeführt.|  
+|**(1)**|Analysis Services-Engine|Ein [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server, der im SharePoint-Modus ausgeführt wird. Der Server wird außerhalb der SharePoint-Farm ausgeführt.|  
 |**2,2**|Benutzeroberfläche|Die Benutzeroberfläche besteht aus zwei Seiten. Auf einer Seite wird der Zeitplan definiert, auf der zweiten Seite wird der Aktualisierungsverlauf angezeigt. Die Seiten greifen nicht direkt auf die PowerPivot-Dienstanwendungsdatenbanken zu, sondern über den PowerPivot-Systemdienst.|  
 |**€**|PowerPivot-Systemdienst|Der Dienst wird installiert, wenn Sie das PowerPivot für SharePoint-Add-In bereitstellen. Der Dienst wird für Folgendes verwendet:<br /><br /> Dieser Dienst hostet die Aktualisierungsplanungs-Engine, die Excel Services-APIs für die Datenaktualisierung von Excel 2013-Arbeitsmappen aufruft. Für Excel 2010-Arbeitsmappen führt der Dienst die Datenmodellverarbeitung direkt aus, verwendet für das Laden des Datenmodells und das Aktualisieren der Arbeitsmappe jedoch weiterhin Excel Services.<br /><br /> Dieser Dienst stellt Methoden für Komponenten bereit, wie z. B. die Benutzeroberflächenseiten, um mit dem Systemdienst zu kommunizieren.<br /><br /> Der Dienst verwaltet Anforderungen für den externen Zugriff auf Arbeitsmappen als Datenquelle, die vom PowerPivot-Webdienst empfangen werden.<br /><br /> Verwaltung geplanter Datenaktualisierungsanforderungen für Zeitgeberaufträge und Konfigurationsseiten. Der Dienst verwaltet Anforderungen zum Lesen von Daten in die und aus der Datenbank und zum Auslösen der Datenaktualisierung mit Excel Services.<br /><br /> Verwendungsanalyse und verwandter Zeitgeberauftrag.|  
 |**0:**|Dienste für Excel-Berechnungen|Zuständig für das Laden der Datenmodelle.|  
 |**5**|Secure Store Service|Wenn die Authentifizierungs Einstellungen in der Arbeitsmappe für **die Verwendung des Kontos des authentifizierten Benutzers** oder " **keine**" konfiguriert sind, werden die in der Secure Store-Zielanwendungs-ID gespeicherten Anmelde Informationen für die Datenaktualisierung verwendet. Weitere Informationen finden Sie im Abschnitt [Zusätzliche Überlegungen zur Authentifizierung](#datarefresh_additional_authentication) in diesem Thema.|  
 |**6**|Zeitgeberauftrag für PowerPivot-Datenaktualisierung|Weist den PowerPivot-Systemdienst an, eine Verbindung mit Excel Services herzustellen, um Datenmodelle zu aktualisieren.|  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erfordert geeignete Datenanbieter und Client Bibliotheken, damit der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server im SharePoint-Modus auf Datenquellen zugreifen kann.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] benötigt entsprechende Datenanbieter und Clientbibliotheken, damit der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server im SharePoint-Modus auf Datenquellen zugreifen kann.  
   
 > [!NOTE]  
 >  Da der PowerPivot-Systemdienst keine PowerPivot-Modelle mehr lädt oder speichert, gelten die meisten Einstellungen zum Zwischenspeichern von Modellen auf einem Anwendungsserver nicht für eine SharePoint 2013-Farm.  
   
 ## <a name="data-refresh-log-data"></a>Protokolldaten der Datenaktualisierung  
- **Verwendungs Daten:** Sie können Verwendungs Daten zur Datenaktualisierung im Power Pivot-Management-Dashboard anzeigen. So zeigen Sie die Verwendungsdaten an:  
+ **Verwendungsdaten:** Sie können Verwendungsdaten zur Datenaktualisierung im PowerPivot-Management-Dashboard anzeigen. So zeigen Sie die Verwendungsdaten an:  
   
 1.  Klicken Sie in der SharePoint-Zentraladministration in der Gruppe **Allgemeine Anwendungseinstellungen** auf **PowerPivot-Management-Dashboard** .  
   
@@ -196,7 +196,7 @@ ms.locfileid: "66071225"
   
 3.  Weitere Informationen zu Verwendungsdaten und wie Sie diese aktivieren finden Sie unter [PowerPivot Management Dashboard and Usage Data](power-pivot-management-dashboard-and-usage-data.md).  
   
- **Diagnoseprotokoll Daten:** Sie können SharePoint-Diagnoseprotokoll Daten im Zusammenhang mit der Datenaktualisierung anzeigen. Überprüfen Sie die Konfiguration der Diagnoseprotokollierung für den **PowerPivot-Dienst** auf der Seite **Überwachung** der SharePoint-Zentraladministration. Möglicherweise müssen Sie die Protokollierungs Stufe für das "unwichtigste Ereignis" erhöhen, das protokolliert werden soll. Legen Sie beispielsweise vorübergehend den Wert auf **Ausführlich** fest, und führen Sie dann die Datenaktualisierungsvorgänge erneut aus.  
+ **Diagnoseprotokolldaten:** Sie können SharePoint-Diagnoseprotokolldaten zur Datenaktualisierung anzeigen. Überprüfen Sie die Konfiguration der Diagnoseprotokollierung für den **PowerPivot-Dienst** auf der Seite **Überwachung** der SharePoint-Zentraladministration. Möglicherweise müssen Sie die Protokollierungs Stufe für das "unwichtigste Ereignis" erhöhen, das protokolliert werden soll. Legen Sie beispielsweise vorübergehend den Wert auf **Ausführlich** fest, und führen Sie dann die Datenaktualisierungsvorgänge erneut aus.  
   
  Die Protokolleinträge enthalten Folgendes:  
   
@@ -206,14 +206,14 @@ ms.locfileid: "66071225"
   
  Überprüfen Sie die **Konfiguration der Diagnoseprotokollierung**. Weitere Informationen finden Sie unter [Konfigurieren und Anzeigen von SharePoint-Protokolldateien und Diagnoseprotokollierung &#40;PowerPivot für SharePoint&#41;](configure-and-view-sharepoint-and-diagnostic-logging.md).  
   
-##  <a name="datarefresh_additional_authentication"></a>Weitere Überlegungen zur Authentifizierung  
+##  <a name="additional-authentication-considerations"></a><a name="datarefresh_additional_authentication"></a>Weitere Überlegungen zur Authentifizierung  
  Die Einstellungen im Dialogfeld **Excel Services-Authentifizierungseinstellungen** in Excel 2013 bestimmen die Windows-Identität, die Excel Services und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für die Datenaktualisierung verwenden.  
   
 -   **Das Konto des authentifizierten Benutzers verwenden**: Excel Services führt die Datenaktualisierung unter der Identität des aktuell angemeldeten Benutzers aus.  
   
--   **Ein gespeichertes Konto verwenden**: geht von einer SharePoint-einmaliges Anmelden Anwendungs-ID aus, die Excel Services zum Abrufen des Benutzernamens und Kennworts zum Authentifizieren der Daten Aktualisierungs Authentifizierung verwendet.  
+-   **Ein gespeichertes Konto verwenden**: Geht von einer SharePoint Secure Store Service-Anwendungs-ID aus, die Excel Services verwendet, um den Benutzernamen und das Kennwort abzurufen, um die Datenaktualisierung zu authentifizieren.  
   
--   **Keine**: das **unbeaufsichtigte Dienst Konto** von Excel Services wird verwendet. Das Dienstkonto ist einem Secure Store Service-Proxy zugeordnet. Konfigurieren Sie die Einstellungen auf der Seite **Excel Services-Anwendungseinstellungen** im Abschnitt **Externe Daten** .  
+-   **Keine**: Das **unbeaufsichtigte Dienstkonto** von Excel Services wird verwendet. Das Dienstkonto ist einem Secure Store Service-Proxy zugeordnet. Konfigurieren Sie die Einstellungen auf der Seite **Excel Services-Anwendungseinstellungen** im Abschnitt **Externe Daten** .  
   
  So öffnen Sie das Dialogfeld mit Authentifizierungseinstellungen:  
   
@@ -229,13 +229,13 @@ ms.locfileid: "66071225"
   
  Weitere Informationen zur Authentifizierung der Datenaktualisierung und zur Verwendung von Anmeldeinformationen finden Sie im Blogbeitrag [Refreshing PowerPivot Data in SharePoint 2013](https://blogs.msdn.com/b/analysisservices/archive/2012/12/21/refreshing-powerpivot-data-in-sharepoint-2013.aspx).  
   
-##  <a name="bkmk_moreinformation"></a> Weitere Informationen  
- Problembehandlung bei der [Power Pivot-Datenaktualisierung](https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
+##  <a name="more-information"></a><a name="bkmk_moreinformation"></a> Weitere Informationen  
+ [Problembehandlung von PowerPivot-Daten](https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx).  
   
  [Excel Services in SharePoint 2013](https://www.enjoysharepoint.com/configure-excel-service-application-in-sharepoint-2013/). 
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Aktualisieren von Arbeitsmappen und planmäßige Datenaktualisierung &#40;SharePoint 2013&#41;](../instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)   
- [PowerPivot for SharePoint 2013 Installation](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
+ [PowerPivot für SharePoint 2013 Installation](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
   
   

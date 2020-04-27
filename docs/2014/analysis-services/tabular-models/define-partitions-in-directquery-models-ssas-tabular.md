@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fe22de3cc0718647de84345260017a4dd4e477e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067310"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>Partitionen und DirectQuery-Modus (SSAS – tabellarisch)
@@ -42,12 +42,12 @@ ms.locfileid: "66067310"
   
  Zwei Verarbeitungsoptionen stehen für die DirectQuery-Partition zur Verfügung. Um diese Eigenschaft festzulegen, verwenden Sie den **Partitions-Manager** in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], und wählen Sie die Eigenschaft **Verarbeitungsoption** aus. In der folgenden Tabelle sind die Werte dieser Eigenschaft aufgeführt. Außerdem sind die Effekte jedes einzelnen Werts für den Fall beschrieben, dass ein Wert mit der DirectQueryUsage-Eigenschaft zur Verbindungszeichenfolge kombiniert wird:  
   
-|**Directqueryusage** (Eigenschaft)|**Verarbeitungs Option** (Eigenschaft)|Notizen|  
+|**Directqueryusage** (Eigenschaft)|Eigenschaft**Verarbeitungsoption**|Notizen|  
 |-----------------------------------|------------------------------------|-----------|  
-|direkte Verbindung|Kein Verarbeiten dieser Partition|Wenn das Modell ausschließlich DirectQuery verwendet, ist eine Verarbeitung niemals notwendig.<br /><br /> In Hybridmodellen können Sie die DirectQuery-Partition so konfigurieren, dass sie niemals verarbeitet wird. Beispiel: Wenn Sie ein sehr großes Dataset verwenden und dem Cache nicht die vollständigen Ergebnisse hinzufügen möchten, können Sie angeben, dass die DirectQuery-Partition die Vereinigung der Ergebnisse für alle anderen Partitionen in der Tabelle enthalten und dass niemals eine Verarbeitung stattfinden soll. Abfragen, die an die relationale Quelle gerichtet werden, sind nicht betroffen, und in Abfragen für zwischengespeicherte Daten werden Daten aus den anderen Partitionen kombiniert.|  
+|DirectQuery|Kein Verarbeiten dieser Partition|Wenn das Modell ausschließlich DirectQuery verwendet, ist eine Verarbeitung niemals notwendig.<br /><br /> In Hybridmodellen können Sie die DirectQuery-Partition so konfigurieren, dass sie niemals verarbeitet wird. Beispiel: Wenn Sie ein sehr großes Dataset verwenden und dem Cache nicht die vollständigen Ergebnisse hinzufügen möchten, können Sie angeben, dass die DirectQuery-Partition die Vereinigung der Ergebnisse für alle anderen Partitionen in der Tabelle enthalten und dass niemals eine Verarbeitung stattfinden soll. Abfragen, die an die relationale Quelle gerichtet werden, sind nicht betroffen, und in Abfragen für zwischengespeicherte Daten werden Daten aus den anderen Partitionen kombiniert.|  
 |InMemory mit directquery|Verarbeitung von Partitionen zulassen|Wenn beim Modell der hybride Modus verwendet wird, sollten Sie für Abfragen für die speicherinterne Datenquelle und für Abfragen für die DirectQuery-Datenquelle die gleiche Partition verwenden.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Partitionen &#40;tabellarischen SSAS-&#41;](partitions-ssas-tabular.md)  
+ [Partitionen &#40;SSAS – tabellarisch&#41;](partitions-ssas-tabular.md)  
   
   

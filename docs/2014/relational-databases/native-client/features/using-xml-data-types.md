@@ -31,14 +31,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9e640f495d216495141131519e0b9aa51d48de4d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63136663"
 ---
 # <a name="using-xml-data-types"></a>Verwenden von XML-Datentypen
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]in wurde ein **XML** -Datentyp eingeführt, mit dem Sie XML-Dokumente und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Fragmente in einer-Datenbank speichern können. Der **XML**-Datentyp ist ein integrierter Datentyp in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und ähnelt in einigen Punkten anderen integrierten Typen wie **int** und **varchar**. Wie andere integrierte Typen können Sie den **XML**-Datentyp beim Erstellen von Tabellen als Variablen-, Parameter- oder Funktionsrückgabespaltentyp oder in CAST- und CONVERT-Funktionen verwenden.  
+  In [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] wurde ein **XML**-Datentyp eingeführt, der das Speichern von XML-Dokumenten und -Fragmenten in einer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank unterstützt. Der **XML**-Datentyp ist ein integrierter Datentyp in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und ähnelt in einigen Punkten anderen integrierten Typen wie **int** und **varchar**. Wie andere integrierte Typen können Sie den **XML**-Datentyp beim Erstellen von Tabellen als Variablen-, Parameter- oder Funktionsrückgabespaltentyp oder in CAST- und CONVERT-Funktionen verwenden.  
   
 ## <a name="programming-considerations"></a>Überlegungen zur Programmierung  
  XML kann selbstbeschreibend sein, da optional ein XML-Header eingefügt werden kann, der die Codierung des Dokuments angibt, zum Beispiel:  
@@ -58,13 +58,12 @@ ms.locfileid: "63136663"
   
 -   Textzeichenfolge  
   
--   
-  **ISequentialStream**  
+-   **ISequentialStream**  
   
 > [!NOTE]  
 >  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter enthält keinen SAX-Reader, aber **ISequentialStream** kann problemlos an Sax-und DOM-Objekte in MSXML übermittelt werden.  
   
- **ISequentialStream** sollte zum Abrufen großer XML-Dokumente verwendet werden. Die für andere große Werttypen verwendeten Techniken gelten auch für XML. Weitere Informationen finden Sie unter [Verwenden von großen Werttypen](using-large-value-types.md).  
+ **ISequentialStream** sollte zum Abrufen großer XML-Dokumente verwendet werden. Die für andere große Werttypen verwendeten Techniken gelten auch für XML. Weitere Informationen finden Sie im Abschnitt [Verwenden von Datentypen für umfangreiche Werte](using-large-value-types.md).  
   
  Daten, die in XML-Spaltentypen in einem Rowset gespeichert sind, können über die bekannten Schnittstellen wie **IRow::GetColumns**, **IRowChange::SetColumns** und **ICommand::Execute** abgerufen, eingefügt oder aktualisiert werden. Ähnlich wie beim Abruf Fall kann ein Anwendungsprogramm entweder eine Text Zeichenfolge oder einen **ISequentialStream** an den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter übergeben.  
   
@@ -78,40 +77,40 @@ ms.locfileid: "63136663"
  Wenn die XML-Eingabe als DBTYPE_WSTR gebunden ist, muss die Anwendung sicherstellen, dass sie bereits in Unicode codiert wurde, um mögliche Beschädigungen durch Datenkonvertierung zu verhindern.  
   
 ### <a name="data-bindings-and-coercions"></a>Datenbindungen und -umwandlungen  
- Die folgende Tabelle veranschaulicht die Bindung und Umwandlung bei Verwendung der aufgeführten Datentypen mit einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **xml**-Datentyp.  
+ Die folgende Tabelle veranschaulicht die Bindung und erzwungene Umwandlung bei Verwendung der aufgeführten Datentypen mit dem -Datentyp [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **xml**.  
   
 |Datentyp|Zu Server<br /><br /> **XML**|Zu Server<br /><br /> **Nicht-XML**|Von Server<br /><br /> **XML**|Von Server<br /><br /> **Nicht-XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_XML|Pass-Through<sup>6,7</sup>|Fehler<sup>1</sup>|OK<sup>11, 6</sup>|Error<sup>8</sup>|  
-|DBTYPE_BYTES|Pass-Through<sup>6,7</sup>|N/V<sup>2</sup>|OK<sup>11, 6</sup>|– <sup>2</sup>|  
-|DBTYPE_WSTR|Pass-Through<sup>6,10</sup>|– <sup>2</sup>|OK<sup>4, 6, 12</sup>|– <sup>2</sup>|  
-|DBTYPE_BSTR|Pass-Through<sup>6,10</sup>|– <sup>2</sup>|OK<sup>3</sup>|– <sup>2</sup>|  
-|DBTYPE_STR|OK<sup>6, 9, 10</sup>|– <sup>2</sup>|OK<sup>5, 6, 12</sup>|– <sup>2</sup>|  
-|DBTYPE_IUNKNOWN|Bytedatenstrom über **ISequentialStream**<sup>7</sup>|– <sup>2</sup>|Bytedatenstrom über **ISequentialStream**<sup>11</sup>|– <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Pass-Through<sup>6,7</sup>|– <sup>2</sup>|–|– <sup>2</sup>|  
-|DBTYPE_VARIANT (VT_BSTR)|Pass-Through<sup>6,10</sup>|– <sup>2</sup>|OK<sup>3</sup>|– <sup>2</sup>|  
+|DBTYPE_BYTES|Pass-Through<sup>6,7</sup>|Nicht zutreffend<sup>2</sup>|OK<sup>11, 6</sup>|Nicht zutreffend<sup>2</sup>|  
+|DBTYPE_WSTR|Pass-Through<sup>6,10</sup>|Nicht zutreffend<sup>2</sup>|OK<sup>4, 6, 12</sup>|Nicht zutreffend<sup>2</sup>|  
+|DBTYPE_BSTR|Pass-Through<sup>6,10</sup>|Nicht zutreffend<sup>2</sup>|OK<sup>3</sup>|Nicht zutreffend<sup>2</sup>|  
+|DBTYPE_STR|OK<sup>6, 9, 10</sup>|Nicht zutreffend<sup>2</sup>|OK<sup>5, 6, 12</sup>|Nicht zutreffend<sup>2</sup>|  
+|DBTYPE_IUNKNOWN|Bytedatenstrom über **ISequentialStream**<sup>7</sup>|Nicht zutreffend<sup>2</sup>|Bytedatenstrom über **ISequentialStream**<sup>11</sup>|Nicht zutreffend<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Pass-Through<sup>6,7</sup>|Nicht zutreffend<sup>2</sup>|–|Nicht zutreffend<sup>2</sup>|  
+|DBTYPE_VARIANT (VT_BSTR)|Pass-Through<sup>6,10</sup>|Nicht zutreffend<sup>2</sup>|OK<sup>3</sup>|Nicht zutreffend<sup>2</sup>|  
   
  <sup>1</sup> Wenn ein anderer Servertyp als DBTYPE_XML mit **ICommandWithParameters:: SetParameterInfo** angegeben wird und der Accessortyp DBTYPE_XML ist, tritt ein Fehler auf, wenn die Anweisung ausgeführt wird (DB_E_ERRORSOCCURRED der Parameter Status DBSTATUS_E_BADACCESSOR); Andernfalls werden die Daten an den Server gesendet, der Server gibt jedoch eine Fehlermeldung zurück, die darauf hinweist, dass keine implizite Konvertierung von XML in den Datentyp des Parameters vorliegt.  
   
  <sup>2</sup> Über den Rahmen dieses Themas hinaus.  
   
- <sup>3</sup> Format ist UTF-16, keine Bye-Order-Markierung (BOM), keine Codierungs Spezifikation, keine NULL-Beendigung.  
+ <sup>3</sup>Format ist UTF-16, keine Bytereihenfolge-Marke (Byte Order Mark, BOM), keine Codierungsspezifikation, keine NULL-Terminierung.  
   
- <sup>4</sup> Format ist UTF-16, keine BOM, keine Codierungs Spezifikation, NULL-Beendigung.  
+ <sup>4</sup>Format ist UTF-16, keine BOM, keine Codierungsspezifikation, NULL-Terminierung.  
   
- <sup>5</sup> Format ist Multibytezeichen, die in der Client Codepage mit null-Terminator codiert sind Konvertierung aus vom Server bereitgestelltem Unicode verursacht möglicherweise Datenbeschädigung, daher wird diese Bindung nicht empfohlen.  
+ <sup>5</sup>Format enthält Mehrbytezeichen, die auf der Clientcodepage mit NULL-Abschlusszeichen codiert sind. Konvertierung aus vom Server bereitgestelltem Unicode verursacht möglicherweise Datenbeschädigung, daher wird diese Bindung nicht empfohlen.  
   
- <sup>6</sup> BY_REF können verwendet werden.  
+ <sup>6</sup>BY_REF wird möglicherweise verwendet.  
   
- <sup>7</sup> UTF-16-Daten müssen mit einer BOM beginnen. Wenn nicht, wird die Codierung möglicherweise nicht ordnungsgemäß vom Server erkannt.  
+ <sup>7</sup>UTF-16-Daten müssen mit einer BOM starten. Wenn nicht, wird die Codierung möglicherweise nicht ordnungsgemäß vom Server erkannt.  
   
- <sup>8</sup> Die Validierung kann zum Zeitpunkt der Erstellung oder zum Abrufen erfolgen. Der Fehler ist DB_E_ERRORSOCCURRED, Bindungsstatus ist auf DBBINDSTATUS_UNSUPPORTEDCONVERSION festgelegt.  
+ <sup>8</sup>Überprüfung kann beim Erstellen des Accessors oder beim Abrufen erfolgen. Der Fehler ist DB_E_ERRORSOCCURRED, Bindungsstatus ist auf DBBINDSTATUS_UNSUPPORTEDCONVERSION festgelegt.  
   
- <sup>9</sup> Daten werden mithilfe der Client Codepage in Unicode konvertiert, bevor Sie an den Server gesendet werden. Falls die Dokumentcodierung nicht mit der Clientcodepage übereinstimmt, kann es zu Datenbeschädigungen kommen, daher wird diese Bindung nicht empfohlen.  
+ <sup>9</sup>Daten werden über die Clientcodepage in Unicode konvertiert, bevor sie an den Server gesendet werden. Falls die Dokumentcodierung nicht mit der Clientcodepage übereinstimmt, kann es zu Datenbeschädigungen kommen, daher wird diese Bindung nicht empfohlen.  
   
- <sup>10</sup> Der an den Server gesendeten Daten wird immer eine BOM hinzugefügt. Falls die Daten bereits mit einer BOM begonnen haben, stehen dann zwei BOMs am Beginn des Puffers. Der Server verwendet die erste BOM, um die Codierung als UTF-16 zu erkennen, und verwirft sie dann. Die zweite BOM wird als geschütztes Leerzeichenzeichen mit Nullbreite interpretiert.  
+ <sup>10</sup>Zum Server gesendeten Daten wird immer eine BOM hinzugefügt. Falls die Daten bereits mit einer BOM begonnen haben, stehen dann zwei BOMs am Beginn des Puffers. Der Server verwendet die erste BOM, um die Codierung als UTF-16 zu erkennen, und verwirft sie dann. Die zweite BOM wird als geschütztes Leerzeichenzeichen mit Nullbreite interpretiert.  
   
- <sup>11</sup> Das Format ist UTF-16, keine Codierungs Spezifikation, und Daten, die vom Server empfangen werden, werden hinzugefügt. Wenn eine leere Zeichenfolge vom Server zurückgegeben wird, wird trotzdem eine BOM an die Anwendung zurückgegeben. Wenn die Pufferlänge eine ungerade Anzahl von Bytes ist, werden die Daten ordnungsgemäß abgeschnitten. Wenn der ganze Wert in Abschnitten zurückgegeben wird, können diese verkettet werden, um wieder den richtigen Wert zusammenzusetzen.  
+ <sup>11</sup>Format ist UTF-16, keine Codierungsspezifikation, zu den vom Server empfangenen Daten wird eine BOM hinzugefügt. Wenn eine leere Zeichenfolge vom Server zurückgegeben wird, wird trotzdem eine BOM an die Anwendung zurückgegeben. Wenn die Pufferlänge eine ungerade Anzahl von Bytes ist, werden die Daten ordnungsgemäß abgeschnitten. Wenn der ganze Wert in Abschnitten zurückgegeben wird, können diese verkettet werden, um wieder den richtigen Wert zusammenzusetzen.  
   
  <sup>12</sup> Wenn die Pufferlänge weniger als zwei Zeichen beträgt, d. h. nicht genügend Speicherplatz für die NULL-Beendigung, wird ein Überlauf Fehler gemeldet.  
   
@@ -136,7 +135,7 @@ ms.locfileid: "63136663"
 #### <a name="the-columns-and-procedure_parameters-schema-rowsets"></a>Die COLUMNS- und PROCEDURE_PARAMETERS-Schemarowsets  
  Den COLUMNS- und PROCEDURE_PARAMETERS-Schemarowsets wurden unter anderem die folgenden Spalten hinzugefügt.  
   
-|Spaltenname|type|BESCHREIBUNG|  
+|Spaltenname|type|Beschreibung|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Der Name des Katalogs, in dem eine XML-Schemaauflistung definiert ist. NULL für eine Nicht-XML-Spalte oder nicht typisierte XML-Spalte.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Der Name eines Schemas, in dem eine XML-Schemaauflistung definiert ist. NULL für eine Nicht-XML-Spalte oder nicht typisierte XML-Spalte.|  
@@ -148,7 +147,7 @@ ms.locfileid: "63136663"
 #### <a name="the-ss_xmlschema-schema-rowset"></a>Das SS_XMLSCHEMA-Schemarowset  
  Ein neues Schemarowset SS_XMLSCHEMA wird eingeführt, mit dem Clients XML-Schema-Informationen abrufen können. Das SS_XMLSCHEMA-Rowset enthält folgende Spalten.  
   
-|Spaltenname|type|BESCHREIBUNG|  
+|Spaltenname|type|Beschreibung|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Der Katalog, zu dem eine XML-Auflistung gehört.|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Das Schema, zu dem eine XML-Auflistung gehört.|  
@@ -168,7 +167,7 @@ ms.locfileid: "63136663"
 #### <a name="the-dbpropset_sqlserverparameter-property-set"></a>Die DBPROPSET_SQLSERVERPARAMETER-Eigenschaftengruppe  
  Um den **XML** -Datentyp durch OLE DB zu unterstützen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , implementiert Native Client den neuen DBPROPSET_SQLSERVERPARAMETER-Eigenschaften Satz, der die folgenden Werte enthält.  
   
-|Name|type|BESCHREIBUNG|  
+|Name|type|Beschreibung|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Der Name des Katalogs (Datenbank), in dem eine XML-Schemaauflistung definiert ist. Teil des dreiteiligen SQL-Namensbezeichners.|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Der Name eines XML-Schemas in der Schemaauflistung. Teil des dreiteiligen SQL-Namensbezeichners.|  
@@ -177,7 +176,7 @@ ms.locfileid: "63136663"
 #### <a name="the-dbpropset_sqlservercolumn-property-set"></a>Die DBPROPSET_SQLSERVERCOLUMN-Eigenschaftengruppe  
  Um die Erstellung von Tabellen in der **ITableDefinition** -Schnittstelle [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zu unterstützen, fügt Native Client dem DBPROPSET_SQLSERVERCOLUMN-Eigenschaften Satz drei neue Spalten hinzu.  
   
-|Name|type|BESCHREIBUNG|  
+|Name|type|Beschreibung|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|Bei typisierten XML-Spalten ist diese Eigenschaft eine Zeichenfolge, die den Namen des Katalogs angibt, in dem das XML-Schema gespeichert ist. Für andere Spaltentypen gibt diese Eigenschaft eine leere Zeichenfolge zurück.|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|Bei typisierten XML-Spalten ist diese Eigenschaft eine Zeichenfolge, die den Namen des XML-Schemas angibt, das diese Spalte definiert.|  
@@ -197,7 +196,7 @@ ms.locfileid: "63136663"
 #### <a name="the-icolumnsrowset-interface"></a>Die IDBColumnsRowset-Schnittstelle  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client fügt dem Rowset, das von der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **IColumnRowset:: GetColumnsRowset** -Methode zurückgegeben wird, die folgenden-spezifischen Spalten hinzu. Diese Spalten enthalten den dreiteiligen Namen einer XML-Schemaauflistung. Für Nicht-XML-Spalten oder nicht typisierte XML-Spalten nehmen alle drei Spalten den Standardwert von NULL an.  
   
-|Spaltenname|type|BESCHREIBUNG|  
+|Spaltenname|type|Beschreibung|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Der Katalog, zu dem eine XML-Schemaauflistung gehört.<br /><br /> Andernfalls NULL.|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Das Schema, zu dem eine XML-Schemaauflistung gehört. Andernfalls NULL.|  
@@ -206,7 +205,7 @@ ms.locfileid: "63136663"
 #### <a name="the-irowset-interface"></a>Die IRowset-Schnittstelle  
  Eine XML-Instanz in einer XML-Spalte wird über die **IRowset::GetData**-Methode abgerufen. Je nach Bindung, die vom Client angegeben ist, kann eine XML-Instanz als DBTYPE_BSTR, DBTYPE_WSTR, DBTYPE_VARIANT, DBTYPE_XML, DBTYPE_STR, DBTYPE_BYTES oder als Schnittstelle über DBTYPE_IUNKNOWN abgerufen werden. Falls der Consumer DBTYPE_BSTR, DBTYPE_WSTR oder DBTYPE_VARIANT angibt, konvertiert der Anbieter die XML-Instanz in den vom Benutzer angeforderten Typ und legt ihn an dem in der zugehörigen Bindung angegebenen Speicherort ab.  
   
- Falls der Consumer DBTYPE_IUNKNOWN angibt und das *pObject*-Argument auf NULL oder das *pObject*-Argument auf IID_IsequentialStream festlegt, gibt der Anbieter eine **ISequentialStream**-Schnittstelle an den Consumer zurück, damit er den XML-Datenstrom aus der Spalte übertragen kann. **ISequentialStream** gibt dann die XML-Daten als Unicode-Zeichendaten Strom zurück.  
+ Falls der Consumer DBTYPE_IUNKNOWN angibt und das *pObject*-Argument auf NULL oder das *pObject*-Argument auf IID_IsequentialStream festlegt, gibt der Anbieter eine **ISequentialStream**-Schnittstelle an den Consumer zurück, damit er den XML-Datenstrom aus der Spalte übertragen kann. **ISequentialStream** gibt die XML-Daten anschließend als Unicode-Zeichendatenstrom zurück.  
   
  Wenn ein an DBTYPE_IUNKNOWN gebundener XML-Wert zurückgegeben wird, meldet der Anbieter einen Größenwert von `sizeof (IUnknown *)`. Dies stimmt mit der Vorgehensweise für Spalten überein, die als DBTYPE_IUnknown oder DBTYPE_IDISPATCH gebunden sind, sowie für DBTYPE_IUNKNOWN/ISequentialStream, wenn die genaue Spaltengröße nicht bestimmt werden kann.  
   
@@ -220,7 +219,7 @@ ms.locfileid: "63136663"
  Im Fall von DBTYPE_IUNKNOWN/ISequentialStream, wenn der Consumer kein Speicher Objekt angibt, muss der Consumer ein **ISequentialStream** -Objekt im Voraus erstellen, das XML-Dokument an das Objekt binden und dann das Objekt über die **IRowsetChange:: SetData** -Methode an den Anbieter übergeben. Der Consumer kann auch ein Speicherobjekt erstellen, das pObject-Argument auf IID_ISequentialStream festlegen, ein **ISequentialStream**-Objekt erstellen und anschließend das **ISequentialStream**-Objekt an die **IRowsetChange::SetData**-Methode übergeben. In beiden Fällen kann der Anbieter das XML-Objekt über das **ISequentialStream**-Objekt abrufen und es in die entsprechende Spalte einfügen.  
   
 #### <a name="the-irowsetupdate-interface"></a>Die IRowsetUpdate-Schnittstelle  
- Die **IRowsetUpdate** -Schnittstelle stellt Funktionen für verzögerte Updates bereit. Die Daten, die für die Rowsets verfügbar gemacht werden, werden erst dann anderen Transaktionen zur Verfügung gestellt, wenn der Consumer die **IRowsetUpdate: Update** -Methode aufruft.  
+ Die **IRowsetUpdate**-Schnittstelle stellt die Funktionen für verzögerte Updates bereit. Die Daten, die für die Rowsets verfügbar gemacht werden, werden erst dann anderen Transaktionen zur Verfügung gestellt, wenn der Consumer die **IRowsetUpdate: Update** -Methode aufruft.  
   
 #### <a name="the-irowsetfind-interface"></a>Die IRowsetFind-Schnittstelle  
  Die **IRowsetFind::FindNextRow**-Methode funktioniert nicht mit dem **XML**-Datentyp. Wenn **IRowsetFind::FindNextRow** aufgerufen wird und das *hAccessor*-Argument eine Spalte von DBTYPE_XML angibt, wird DB_E_BADBINDINFO zurückgegeben. Dies tritt unabhängig vom Typ der Spalte auf, die durchsucht wird. Für alle anderen Bindungstypen schlägt **FindNextRow** mit DB_E_BADCOMPAREOP fehl, wenn die zu durchsuchende Spalte vom Datentyp **XML** ist.  
@@ -269,7 +268,7 @@ ms.locfileid: "63136663"
  Der XML-Standard erfordert, dass UTF-16-codiertes XML mit einer Bytereihenfolge-Marke (BOM), UTF-16-Zeichencode 0xFEFF beginnt. Wenn Sie mit einer SQL_C_BINARY Bindung arbeiten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , benötigt Native Client keine BOM, da die Codierung durch die Bindung impliziert wird. Das Hauptaugenmerk liegt auf der einfachen Zusammenarbeit mit anderen XML-Prozessoren und Speichersystemen. In diesem Fall sollte für UTF-16-codiertes XML eine BOM vorhanden sein, und die Anwendung sollte sich nicht um die eigentliche Codierung kümmern, da die Mehrheit der XML-Prozessoren (einschließlich [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) die Codierung nach Überprüfen des ersten Bytes des Wertes ableitet. XML-Daten, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die von Native Client mithilfe von SQL_C_BINARY Bindungen empfangen werden, werden immer in UTF-16 mit einer BOM und ohne eingebettete Codierdeklaration codiert.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server Native Client-Funktionen](sql-server-native-client-features.md)   
- [' ISSCommandWithParameters ' &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
+ [SQL Server Native Client Features](sql-server-native-client-features.md)   
+ [ISSCommandWithParameters &#40;OLE DB&#41;](../../native-client-ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   
   

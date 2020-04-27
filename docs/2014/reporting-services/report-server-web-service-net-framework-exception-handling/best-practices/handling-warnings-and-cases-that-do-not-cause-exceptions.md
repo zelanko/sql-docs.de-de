@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4c2c58a5edf42966ba828288c2aa8b84dbb49967
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046102"
 ---
 # <a name="handling-warnings-and-cases-that-do-not-cause-exceptions"></a>Behandeln von Warnungen und Fällen, die keine Ausnahmen verursachen
@@ -67,7 +67,7 @@ catch (SoapException ex)
   
 ## <a name="see-also"></a>Weitere Informationen  
  <xref:ReportService2010.CatalogItem>   
- [Introducing Exception Handling in Reporting Services (Einführung in die Ausnahmebehandlung in Reporting Services)](../introducing-exception-handling-in-reporting-services.md)   
- [Reporting Services SoapException Class (Reporting Services-SoapException-Klasse)](../soapexception-class/reporting-services-soapexception-class.md)  
+ [Einführung in die Ausnahmebehandlung in Reporting Services](../introducing-exception-handling-in-reporting-services.md)   
+ [Reporting Services-SoapException-Klasse](../soapexception-class/reporting-services-soapexception-class.md)  
   
   

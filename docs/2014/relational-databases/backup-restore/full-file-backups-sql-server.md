@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 14ead76661b6818ac2daf6a3aa250dddb348745d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876135"
 ---
 # <a name="full-file-backups-sql-server"></a>Vollständige Dateisicherungen (SQL Server)
@@ -40,15 +40,15 @@ ms.locfileid: "62876135"
   
  **In diesem Thema:**  
   
--   [Vorteile von Datei Sicherungen](#Benefits)  
+-   [Vorteile von Dateisicherungen](#Benefits)  
   
--   [Nachteile von Datei Sicherungen](#Disadvantages)  
+-   [Nachteile von Dateisicherungen](#Disadvantages)  
   
--   [Übersicht über Datei Sicherungen](#Overview)  
+-   [Übersicht zu Dateisicherungen](#Overview)  
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="Benefits"></a>Vorteile von Datei Sicherungen  
+##  <a name="benefits-of-file-backups"></a><a name="Benefits"></a> Vorteile von Dateisicherungen  
  Dateisicherungen bieten gegenüber Datenbanksicherungen folgende Vorteile:  
   
 -   Durch das Verwenden von Dateisicherungen kann die Wiederherstellung beschleunigt werden, da Sie nicht die gesamte Datenbank, sondern nur die beschädigten Dateien wiederherstellen.  
@@ -57,13 +57,13 @@ ms.locfileid: "62876135"
   
 -   Dateisicherungen ermöglichen im Vergleich zu vollständigen Datenbanksicherungen eine höhere Flexibilität bei der Zeitplanung und beim Umgang mit Medien. Beispielsweise kann es vorkommen, dass bei sehr umfangreichen Datenbanken vollständige Datenbanksicherungen nicht mehr zu bewältigen sind. Die höhere Flexibilität von Datei- oder Dateigruppensicherungen ist auch für umfangreiche Datenbanken hilfreich, die Daten mit unterschiedlichen Updatemerkmalen enthalten.  
   
-##  <a name="Disadvantages"></a>Nachteile von Datei Sicherungen  
+##  <a name="disadvantages-of-file-backups"></a><a name="Disadvantages"></a> Nachteile von Dateisicherungen  
   
 -   Der wichtigste Nachteil von Dateisicherungen im Vergleich zu vollständigen Datenbanksicherungen ist der zusätzliche Verwaltungsaufwand. Das Verwalten und Nachverfolgen eines vollständigen Sicherungssatzes kann sehr zeitaufwändig sein, wodurch die Speicherplatzanforderungen von vollständigen Datenbanksicherungen möglicherweise aufgehoben werden.  
   
 -   Durch einen Medienfehler wird möglicherweise eine gesamte Datenbank nicht mehr wiederherstellbar, wenn keine Sicherung der beschädigten Datei vorhanden ist. Sie müssen deshalb einen vollständigen Dateisicherungssatz verwalten sowie – für das vollständige und massenprotokollierte Wiederherstellungsmodell – eine oder mehrere Protokollsicherungen, die mindestens das Intervall zwischen der ersten vollständigen Dateisicherung und der letzten vollständigen Dateisicherung abdecken.  
   
-##  <a name="Overview"></a>Übersicht über Datei Sicherungen  
+##  <a name="overview-of-file-backups"></a><a name="Overview"></a> Übersicht zu Dateisicherungen  
  Mit einer vollständigen Dateisicherung werden alle Daten in einer oder mehreren Dateien oder Dateigruppen gesichert. Standardmäßig beinhalten Dateisicherungen genügend Protokolldatensätze, um einen Rollforward der Datei bis zum Ende des Sicherungsvorgangs auszuführen.  
   
  Das Sichern einer schreibgeschützte Datei oder Dateigruppe ist bei jedem Wiederherstellungsmodell gleich. Beim vollständigen Wiederherstellungsmodell entspricht ein vollständiger Satz vollständiger Dateisicherungen zusammen mit ausreichend vielen Protokollsicherungen, die alle Dateisicherungen umfassen, einer vollständigen Datenbanksicherung.  
@@ -86,8 +86,8 @@ ms.locfileid: "62876135"
 > [!NOTE]  
 >  Beim vollständigen Wiederherstellungsmodell müssen Sie beim Wiederherstellen einer Dateisicherung mit Lese-/Schreibzugriff einen Rollforward für das Transaktionsprotokoll ausführen, um die Konsistenz der Datei mit dem Rest der Datenbank sicherzustellen. Um einen Rollforward für viele Transaktionsprotokollsicherungen zu vermeiden, sollten Sie differenzielle Dateisicherungen verwenden. Weitere Informationen finden Sie unter [Differenzielle Sicherungen &#40;SQL Server&#41;](differential-backups-sql-server.md).  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
- **So erstellen Sie eine Datei-oder Dateigruppen Sicherung**  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
+ **So erstellen Sie eine Datei- oder Dateigruppensicherung**  
   
 -   [Sichern von Dateien und Dateigruppen &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)  
   

@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 6c3bdb745d836959f563d19dc9897b718a2c9b16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478885"
 ---
 # <a name="overlapping-user-and-group-permissions-master-data-services"></a>Überlappende Benutzer- und Gruppenberechtigungen (Master Data Services)
@@ -30,7 +30,7 @@ ms.locfileid: "65478885"
   
  Wenn ein Benutzer mehreren Gruppen angehört und diese Gruppen Zugriff auf Master Data Manager haben, gelten die folgenden Regeln:  
   
--   **Deny** überschreibt alle anderen Berechtigungen.  
+-   Mit**Verweigern** werden alle anderen Berechtigungen überschrieben.  
   
 -   Das **Update** über **schreibt schreibgeschützt.**  
   
@@ -80,6 +80,6 @@ ms.locfileid: "65478885"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Wie Berechtigungen &#40;Master Data Services bestimmt werden&#41;](how-permissions-are-determined-master-data-services.md)   
- [Überlappende Modell-und Element Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
+ [Überlappende Modell- und Elementberechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/overlapping-model-and-member-permissions-master-data-services.md)  
   
   

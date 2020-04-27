@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e94a9dc0530aa84914bb6ccfb1ecb1fb39464bb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63127237"
 ---
 # <a name="localdb_error_version_requested_not_installed"></a>LOCALDB_ERROR_VERSION_REQUESTED_NOT_INSTALLED
@@ -29,7 +29,7 @@ ms.locfileid: "63127237"
 |Komponente|Laufzeit-API der lokalen Datenbank|  
 |Meldungstext|Die Version der lokalen Datenbank auf dieser Arbeitsstation ist niedriger als die angeforderte Version der lokalen Datenbank.|  
   
-## <a name="explanation"></a>Erklärung  
+## <a name="explanation"></a>Erläuterung  
  Die angegebene Patchebene ist nicht installiert.  
   
 ## <a name="user-action"></a>Benutzeraktion  

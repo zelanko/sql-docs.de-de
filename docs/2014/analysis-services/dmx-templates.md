@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3bf7682ce42422efb0e47e4272e53933eba92a4e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081563"
 ---
 # <a name="dmx-templates"></a>DMX-Vorlagen
@@ -72,7 +72,7 @@ ms.locfileid: "66081563"
   
 -   TOP-Vorhersageabfrage für geschachtelte Tabelle  
   
- **Stelle**  
+ **Erstellen**  
   
  Erstellen Sie mit diesen Vorlagen benutzerdefinierte Modelle oder Datenstrukturen. Sie sind nicht auf die Modelle beschränkt, die von den Assistenten unterstützt werden. Sie können jeden beliebigen Data Mining Algorithmus verwenden [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , der von der Instanz von unterstützt wird, mit der Sie verbunden sind, einschließlich Plug-in-Algorithmen.  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66081563"
   
 -   Miningstruktur trainieren  
   
-### <a name="requirements"></a>Requirements (Anforderungen)  
+### <a name="requirements"></a>Anforderungen  
  In Abhängigkeit der von Ihnen verwendeten Vorlage benötigen Sie möglicherweise Administratorrechte, um auf den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Server zugreifen und eine Abfrage ausführen zu können.  
   
 ## <a name="see-also"></a>Weitere Informationen  

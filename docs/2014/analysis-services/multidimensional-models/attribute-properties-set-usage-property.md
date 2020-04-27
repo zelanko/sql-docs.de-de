@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: def616b09e6d5378257c3e5c377f2724c9d09676
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077167"
 ---
 # <a name="set-usage-property"></a>Festlegen der Verwendungseigenschaft
@@ -33,11 +33,11 @@ ms.locfileid: "66077167"
   
 2.  Klicken Sie unter **Attribute**mit der rechten Maustaste auf das Attribut, dessen Verwendung Sie festlegen möchten, zeigen Sie auf **Attributverwendung festlegen**, und klicken Sie dann auf eine der folgenden Optionen:  
   
-    -   **Mäßiger**  
+    -   **Regulär**  
   
     -   **Schlüssel**  
   
-    -   **Parent**  
+    -   **Übergeordneten**  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Attribute und Attribut Hierarchien](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   

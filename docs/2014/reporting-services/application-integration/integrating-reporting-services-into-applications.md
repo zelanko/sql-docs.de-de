@@ -17,14 +17,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9ad6d24495bb44a7bd1013dbc822eefe346f02d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63126148"
 ---
 # <a name="integrating-reporting-services-into-applications"></a>Integration von Reporting Services in Anwendungen
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt eine offene und erweiterbare Berichtsplattform dar, die Entwicklern eine umfangreiche Reihe von APIs zur Entwicklung von Lösungen zur Verfügung stellt.  
   
  Es gibt drei Optionen für die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Integration in benutzerdefinierte Anwendungen: den Report Server-Webdienst, auch [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] als SOAP-API bezeichnet, die Report Viewer [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)]-Steuerelemente für und den URL-Zugriff. Jede Option hat einen anderen Ansatz zur Integration von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in die Anwendungen.  
@@ -39,19 +38,19 @@ ms.locfileid: "63126148"
  Der URL-Zugriff ist eine weitere Option für die Integration der Berichtsanzeige in Ihren Anwendungen, wenn die ReportViewer-Steuerelemente nicht zur Verfügung stehen. Darüber hinaus ist der URL-Zugriff hilfreich, wenn Links zu Berichten per E-Mail an Benutzer gesendet werden sollen.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Integrieren von Reporting Services mithilfe von SOAP](../application-integration/integrating-reporting-services-using-soap.md)  
+ [Integrieren von Reporting Services mit SOAP](../application-integration/integrating-reporting-services-using-soap.md)  
  Beschreibt, wie Sie die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsnavigation und -verwaltung mithilfe des Berichtsserver-Webdiensts in Ihre vorhandenen Geschäftsanwendungen integrieren.  
   
  [Integrieren von Reporting Services mit den ReportViewer-Steuerelementen](../application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
  Beschreibt, wie Sie die Berichtsanzeige mithilfe der ReportViewer-Steuerelemente in Ihre vorhandenen Anwendungen integrieren.  
   
- [Integrieren von Reporting Services mithilfe des URL-Zugriffs](../application-integration/integrating-reporting-services-using-url-access.md)  
+ [Integrieren von Reporting Services mit URL-Zugriff](../application-integration/integrating-reporting-services-using-url-access.md)  
  Beschreibt, wie Sie die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichtsnavigation mithilfe des URL-Zugriffs in Ihre vorhandenen Geschäftsanwendungen integrieren.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../../../2014/reporting-services/report-manager-ssrs-native-mode.md)   
  [Auswählen zwischen URL-Zugriff und SOAP](../../../2014/reporting-services/application-integration/choosing-between-url-access-and-soap.md)   
- [Technische Referenz (SSRS)](../../../2014/reporting-services/technical-reference-ssrs.md)   
+ [Technische Referenz &#40;SSRS&#41;](../../../2014/reporting-services/technical-reference-ssrs.md)   
  [Report Server Web Service (Report Server-Webdienst)](../report-server-web-service/report-server-web-service.md)  
   
   

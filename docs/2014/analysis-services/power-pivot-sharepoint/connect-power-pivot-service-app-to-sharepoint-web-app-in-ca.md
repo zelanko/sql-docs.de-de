@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: da816635ab978e7baadfb810aed78fa0f3258dd8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071680"
 ---
 # <a name="connect-a-powerpivot-service-application-to-a-sharepoint-web-application-in-central-administration"></a>Verbinden einer Power Pivot-Dienst Anwendung mit einer SharePoint-Webanwendung in der zentral Administration
@@ -29,7 +29,7 @@ ms.locfileid: "66071680"
   
  [Hinzufügen einer PowerPivot-Dienstanwendung zu einer benutzerdefinierten Dienstzuordnungsliste](#custom)  
   
-##  <a name="default"></a>Power Pivot-Dienst Anwendung zur Standardgruppe hinzufügen  
+##  <a name="add-powerpivot-services-application-to-the-default-group"></a><a name="default"></a>Power Pivot-Dienst Anwendung zur Standardgruppe hinzufügen  
  Eine Dienstanwendungsliste ist eine Liste freigegebener Dienste, die Ressourcen für andere SharePoint-Webanwendungen in der Farm bereitstellen. Es gibt eine Standardgruppe von Dienstzuordnungen für die Farm.  
   
  Eine PowerPivot-Dienstanwendung kann der Liste entweder hinzugefügt werden, wenn Sie die Anwendung erstellen oder im Anschluss daran mithilfe folgender Schritte.  
@@ -42,10 +42,10 @@ ms.locfileid: "66071680"
   
 4.  Klicken Sie auf **OK**.  
   
-##  <a name="custom"></a>Power Pivot-Dienst Anwendung zu einer benutzerdefinierten Dienst Zuordnungs Liste hinzufügen  
+##  <a name="add-powerpivot-services-application-a-custom-service-association-list"></a><a name="custom"></a>Power Pivot-Dienst Anwendung zu einer benutzerdefinierten Dienst Zuordnungs Liste hinzufügen  
  Die Standardgruppe kann durch eine benutzerdefinierte Liste ersetzt werden. Eine benutzerdefinierte Liste wird speziell für eine einzelne SharePoint-Webanwendung erstellt. Dabei wird die Standardgruppe überschrieben und durch vom Farm- oder Dienstadministrator angegebene Dienstzuordnungen ersetzt. Wenn Sie mehrere PowerPivot-Dienstanwendungen erstellt haben, müssen Sie die zu verwendende Anwendung mithilfe einer benutzerdefinierten Liste angeben. Eine benutzerdefinierte Liste kann nicht von anderen Webanwendungen wiederverwendet werden. Sie gilt nur für die Webanwendung, für die sie erstellt wurde.  
   
-1.  Klicken Sie in der zentral Administration unter **Anwendungs Verwaltung**auf **Webanwendungen verwalten**.  
+1.  Klicken Sie in der Zentraladministration unter **Anwendungsverwaltung**auf **Webanwendungen verwalten**.  
   
 2.  Wählen Sie die Anwendung (z. B. SharePoint -80) aus.  
   

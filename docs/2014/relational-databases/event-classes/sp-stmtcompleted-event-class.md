@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 056f9adb309f4f65ed1553efa80db597e7598e02
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63050956"
 ---
 # <a name="spstmtcompleted-event-class"></a>SP:StmtCompleted-Ereignisklasse
@@ -26,9 +26,9 @@ ms.locfileid: "63050956"
   
 ## <a name="spstmtcompleted-event-class-data-columns"></a>Datenspalten der SP:StmtCompleted-Ereignisklasse  
   
-|Datenspaltenname|`Data type`|BESCHREIBUNG|Column ID|Filterbar|  
+|Datenspaltenname|`Data type`|Beschreibung|Column ID|Filterbar|  
 |----------------------|-------------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
+|ApplicationName|`nvarchar`|Der Name der Client Anwendung, die die Verbindung mit einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|10|Ja|  
 |ClientProcessID|`int`|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn der Client die Clientprozess-ID angibt.|9|Ja|  
 |CPU|`int`|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|18|Ja|  
 |DatabaseID|`int`|ID der Datenbank, in der die gespeicherte Prozedur ausgeführt wird. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|Ja|  
@@ -55,7 +55,7 @@ ms.locfileid: "63050956"
 |Lesevorgänge|`bigint`|Die Anzahl der logischen Lesevorgänge auf dem Datenträger, die vom Server aufgrund dieses Ereignisses ausgeführt werden.|16|Ja|  
 |RequestID|`int`|Die ID der Anforderung, die die Anweisung enthält.|49|Ja|  
 |RowCounts|`bigint`|Die Anzahl der von einem Ereignis betroffenen Zeilen.|48|Ja|  
-|Servername|`nvarchar`|Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, für die eine Ablaufverfolgung ausgeführt wird.|26|Nein|  
+|ServerName|`nvarchar`|Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, für die eine Ablaufverfolgung ausgeführt wird.|26|Nein|  
 |SessionLoginName|`nvarchar`|Der Anmeldename des Benutzers, der die Sitzung gestartet hat. Wenn Sie beispielsweise mithilfe von Login1 eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen und eine Anweisung als Login2 ausführen, zeigt SessionLoginName den Wert Login1 an und LoginName den Wert Login2. Diese Spalte zeigt sowohl den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch den Windows-Anmeldenamen an.|64|Ja|  
 |SourceDatabaseID|`int`|Die ID der Datenbank, in der das Objekt vorhanden ist.|62|Ja|  
 |SPID|`int`|Die ID der Sitzung, in der das Ereignis aufgetreten ist.|12|Ja|  

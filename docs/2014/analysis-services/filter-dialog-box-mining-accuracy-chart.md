@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 554c7c0f375d63710c86e37666ee98c6dac6daf6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081173"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>Filter (Dialogfeld, Mininggenauigkeitsdiagramm)
@@ -32,13 +32,13 @@ ms.locfileid: "66081173"
   
  Wenn Sie den Filter auf das neue Dataset anwenden, werden zum Auswerten des vorhandenen Data Mining-Modells nur die Fälle in den Daten verwendet, die die Bedingungen erfüllen. Wenn Sie den Filter jedoch auf das Miningmodell anwenden, wird die Genauigkeit des Modells nur für die Fälle im Miningmodell bewertet, die diese Bedingungen erfüllen.  
   
- **Weitere Informationen finden Sie unter:** [Testen und validieren &#40;Data Mining-&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **Weitere Informationen:** [Tests und Überprüfung &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
   
-## <a name="options"></a>Tastatur  
- **Voraus**  
+## <a name="options"></a>Optionen  
+ **Bedingungen**  
  Ein Raster mit Spalten, in denen die Bedingungen für die Spalten aus der Tabelle festgelegt werden, die im Dialogfeld **Datasetfilter** ausgewählt wurden.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Und/oder**|Klicken Sie auf diese Option, um anzugeben, ob der AND-Operator oder der OR-Operator auf die Bedingung in dieser Zeile angewendet werden soll. Diese Werte sind nur dann verfügbar, wenn Sie eine Spalte aus der Liste **Miningstrukturspalte** ausgewählt haben.|  
 |**Miningstrukturspalte**|Klicken Sie auf diese Option, um eine Spalte aus der Liste mit den Spalten der Tabelle auszuwählen, die Sie aus den Datenquellen im Dialogfeld **Datasetfilter** ausgewählt haben.|  

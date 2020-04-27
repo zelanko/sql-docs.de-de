@@ -13,24 +13,24 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9cb0f104d1555b18d18df38027c240a392d2ac66
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62918701"
 ---
 # <a name="view-collation-information"></a>Anzeigen von Sortierungsinformationen
     
-##  <a name="Top"></a> Sie können die Sortierung eines Servers, einer Datenbank oder Spalte in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mithilfe der Menüoptionen des Objekt-Explorers oder mit [!INCLUDE[tsql](../../includes/tsql-md.md)] anzeigen.  
+##  <a name="you-can-view-the-collation-of-a-server-database-or-column-in-ssmanstudiofull-using-object-explorer-menu-options-or-by-using-tsql"></a><a name="Top"></a> Sie können die Sortierung eines Servers, einer Datenbank oder Spalte in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mithilfe der Menüoptionen des Objekt-Explorers oder mit [!INCLUDE[tsql](../../includes/tsql-md.md)] anzeigen.  
   
-##  <a name="Procedures"></a> So zeigen Sie eine Sortierungseinstellung an  
+##  <a name="how-to-view-a-collation-setting"></a><a name="Procedures"></a> So zeigen Sie eine Sortierungseinstellung an  
  Sie können eine der folgenden Anwendungen verwenden:  
   
 -   [SQL Server Management Studio](#SSMSProcedure)  
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+###  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  **So zeigen Sie eine Sortierungseinstellung für einen Server (Instanz von SQL Server) im Objekt-Explorer an**  
   
 1.  Stellen Sie mithilfe des Objekt-Explorers eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)]her.  
@@ -53,7 +53,7 @@ ms.locfileid: "62918701"
   
 4.  Klicken Sie mit der rechten Maustaste auf die Spalte, und wählen Sie **Eigenschaften**aus. Wenn die Sortierungseigenschaft leer ist, ist die Spalte nicht vom Zeichendatentyp.  
   
-###  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+###  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  **So zeigen Sie die Sortierungseinstellung eines Servers an**  
   
 1.  Stellen Sie im Objekt-Explorer eine Verbindung mit einer Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] her, und klicken Sie auf der Symbolleiste auf **Neue Abfrage**.  
@@ -107,11 +107,11 @@ ms.locfileid: "62918701"
     ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)   
- [sys. fn_helpcollations &#40;Transact-SQL-&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)   
+ [ServerProperty &#40;Transact-SQL-&#41;](/sql/t-sql/functions/serverproperty-transact-sql)   
+ [sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
  [sys. Columns &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-columns-transact-sql)   
- [Sortierungs Rangfolge &#40;Transact-SQL-&#41;](/sql/t-sql/statements/collation-precedence-transact-sql)   
- [sp_helpsort &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsort-transact-sql)  
+ [Rangfolge von Sortierungen &#40;Transact-SQL&#41;](/sql/t-sql/statements/collation-precedence-transact-sql)   
+ [sp_helpsort &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsort-transact-sql)  
   
   

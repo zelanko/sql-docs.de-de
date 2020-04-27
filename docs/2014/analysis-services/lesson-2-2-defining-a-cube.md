@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 167121188939bcf82ed359ac3f8cf7e3aae47635
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079061"
 ---
 # <a name="defining-a-cube"></a>Definieren eines Cubes
@@ -22,7 +22,7 @@ ms.locfileid: "66079061"
   
 ### <a name="to-define-a-cube-and-its-properties"></a>So definieren Sie einen Cube und seine Eigenschaften  
   
-1.  Klicken Sie in Projektmappen-Explorer mit der rechten Maustaste auf **Cubes**, und klicken Sie dann auf **Neuer Cube**. Der Cube-Assistent wird angezeigt.  
+1.  Klicken Sie im Projektmappen-Explorer mit der rechten Maustaste auf **Cubes**, und klicken Sie anschließend auf **Neuer Cube**. Der Cube-Assistent wird angezeigt.  
   
 2.  Klicken Sie auf der Seite **Willkommen beim Cube-Assistenten** auf **Weiter**.  
   
@@ -38,13 +38,13 @@ ms.locfileid: "66079061"
   
 7.  Überprüfen Sie auf der Seite **Measures auswählen** die ausgewählten Measures in der Measuregruppe **Internetverkäufe** , und deaktivieren Sie anschließend die Kontrollkästchen für die folgenden Measures:  
   
-    -   **Promotionschlüssel**  
+    -   **Promotion Key**  
   
-    -   **Währungs Schlüssel**  
+    -   **Currency Key**  
   
     -   **Sales Territory Key**  
   
-    -   **Revisionsnummer**  
+    -   **Revision Number**  
   
      Vom Assistenten werden standardmäßig als Measures alle numerischen Spalten in der Faktentabelle ausgewählt, die nicht mit Dimensionen verknüpft sind. Bei diesen vier Spalten handelt es sich allerdings nicht um tatsächliche Measures. Die ersten drei sind Schlüsselwerte, die die Faktentabelle mit Dimensionstabellen verknüpfen, die nicht in der anfänglichen Version dieses Cubes verwendet werden.  
   

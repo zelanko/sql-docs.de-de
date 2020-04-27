@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0d80a58d33cd6475940afaf08de2d251c5646bec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075401"
 ---
 # <a name="defining-a-data-source-view-analysis-services"></a>Definieren einer Datenquellensicht (Analysis Services)
@@ -37,15 +37,15 @@ ms.locfileid: "66075401"
   
  Dieses Thema enthält die folgenden Abschnitte:  
   
- [Komposition der Datenquellen Sicht](#bkmk_dsvdef)  
+ [Zusammenstellung der Datenquellensicht](#bkmk_dsvdef)  
   
- [Erstellen einer Datenquellen Sicht mithilfe des Datenquellen Sicht-Assistenten](#bkmk_startWiz)  
+ [Erstellen einer Datenquellensicht mithilfe des Datenquellensicht-Assistenten](#bkmk_startWiz)  
   
- [Angeben von namens Übereinstimmungs Kriterien für Beziehungen](#bkmk_NameMatch)  
+ [Angeben von Namensübereinstimmungskriterien für Beziehungen](#bkmk_NameMatch)  
   
  [Hinzufügen einer sekundären Datenquelle](#bkmk_secondaryDS)  
   
-##  <a name="bkmk_dsvdef"></a>Komposition der Datenquellen Sicht  
+##  <a name="data-source-view-composition"></a><a name="bkmk_dsvdef"></a>Komposition der Datenquellen Sicht  
  Eine Datenquellensicht enthält die folgenden Elemente:  
   
 -   Einen Namen und eine Beschreibung.  
@@ -78,7 +78,7 @@ ms.locfileid: "66075401"
   
     -   Logische Primärschlüssel-Fremdschlüssel-Beziehungen zwischen Tabellen, Sichten und benannten Abfragen.  
   
-##  <a name="bkmk_startWiz"></a>Erstellen einer Datenquellen Sicht mithilfe des Datenquellen Sicht-Assistenten  
+##  <a name="create-a-dsv-using-the-data-source-view-wizard"></a><a name="bkmk_startWiz"></a>Erstellen einer Datenquellen Sicht mithilfe des Datenquellen Sicht-Assistenten  
  Um eine Datenquellensicht zu erstellen, führen Sie den Datenquellensicht-Assistenten im Projektmappen-Explorer in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]aus.  
   
 > [!NOTE]  
@@ -98,20 +98,20 @@ ms.locfileid: "66075401"
   
      Sie können Informationen zu Tabellenbeziehungen absichtlich weglassen, indem Sie im Dialogfeld Erweiterte Optionen für Datenquellensicht das Kontrollkästchen **Beziehungen abrufen** deaktivieren. Nun können Sie manuell Beziehungen zwischen den Tabellen im Datenquellensicht-Designer erstellen.  
   
-4.  **Verfügbare Objekte Filtern**  
+4.  **Filtern verfügbarer Objekte**  
   
      Wenn in der Liste Verfügbare Objekte eine Vielzahl von Objekten enthalten ist, können Sie die Liste durch einen einfachen Filter reduzieren, der eine Zeichenfolge als Auswahlkriterium angibt. Wenn Sie z. B. **dbo** eingeben und anschließend auf die Schaltfläche **Filter** klicken, werden nur die Elemente in der Liste **Verfügbare Objekte** angezeigt, die mit "dbo" beginnen. Der Filter kann eine partielle Zeichenfolge sein (z. b. "SAL" gibt Verkäufe und Gehalt zurück), kann aber nicht mehrere Zeichen folgen oder Operatoren enthalten.  
   
 5.  Bei relationalen Datenquellen, für die keine Tabellenbeziehungen definiert sind, wird die Seite **Namensübereinstimmung** angezeigt, auf der Sie die geeignete Methode zum Abgleich von Namen auswählen können. Weitere Informationen finden Sie im Abschnitt [Angeben von Namensübereinstimmungskriterien für Beziehungen](#bkmk_NameMatch) in diesem Thema.  
   
-##  <a name="bkmk_secondaryDS"></a>Hinzufügen einer sekundären Datenquelle  
+##  <a name="add-a-secondary-data-source"></a><a name="bkmk_secondaryDS"></a>Hinzufügen einer sekundären Datenquelle  
  Wenn Sie eine Datenquellensicht definieren, die Tabellen, Sichten oder Spalten aus mehreren Datenquellen enthält, wird die erste Datenquelle, aus der Sie Objekte zur Datenquellensicht hinzufügen, als primäre Datenquelle festgelegt (nach der Definition der primären Datenquelle kann diese Festlegung nicht mehr geändert werden). Nachdem Sie eine Datenquellensicht basierend auf Objekten aus einer einzelnen Datenquelle definiert haben, können Sie Objekte aus anderen Datenquellen hinzufügen.  
   
  Wenn für eine OLAP-Verarbeitungs- oder eine Data Mining-Abfrage Daten aus mehreren Datenquellen in einer einzelnen Abfrage erforderlich sind, muss die primäre Datenquelle Remoteabfragen mithilfe von `OpenRowset` unterstützen. In der Regel handelt es sich dabei um eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenquelle. Wenn Sie beispielsweise eine OLAP-Dimension entwerfen, die Attribute enthält, die an Spalten aus mehreren Datenquellen gebunden sind, wird in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine `OpenRowset`-Abfrage erstellt, um diese Dimension währen der Verarbeitung aufzufüllen. Wenn die Auffüllung eines OLAP-Objekts oder die Auflösung einer Data Mining-Abfrage jedoch mithilfe einer einzelnen Datenquelle möglich ist, wird keine `OpenRowset`-Abfrage erstellt. In bestimmten Situationen kann es möglich sein, Attributbeziehungen zwischen Attributen zu definieren, sodass keine `OpenRowset`-Abfrage mehr erforderlich ist. Weitere Informationen zu Attributbeziehungen finden Sie unter [Attributbeziehungen](../multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md), [Hinzufügen oder Entfernen von Tabellen oder Sichten in einer Datenquellensicht &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md) und [Definieren von Attributbeziehungen](attribute-relationships-define.md)aus.  
   
  Um Tabellen und Spalten aus einer zweiten Datenquelle hinzuzufügen, doppelklicken Sie im Projektmappen-Explorer auf die Datenquellensicht, um sie im Datenquellensicht-Designer zu öffnen und verwenden dann das Dialogfeld Tabellen hinzufügen/entfernen, um Objekte aus anderen im Projekt definierten Datenquellen einzuschließen. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen von Tabellen oder Sichten in einer Datenquellensicht &#40;Analysis Services&#41;](adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)aus.  
   
-##  <a name="bkmk_NameMatch"></a>Angeben von namens Übereinstimmungs Kriterien für Beziehungen  
+##  <a name="specify-name-matching-criteria-for-relationships"></a><a name="bkmk_NameMatch"></a>Angeben von namens Übereinstimmungs Kriterien für Beziehungen  
  Wenn Sie eine Datenquellensicht erstellen, werden Beziehungen zwischen Tabellen erstellt, die auf FOREIGN KEY-Einschränkungen in der Datenquelle basieren. Diese Beziehungen sind erforderlich, damit die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Engine die geeigneten OLAP-Verarbeitungs- und Data Mining-Abfragen erstellen kann. Manchmal hat eine Datenquelle mit mehreren Tabellen keine FOREIGN KEY-Einschränkungen. Wenn eine Datenquelle nicht über FOREIGN KEY-Einschränkungen verfügt, werden Sie vom Datenquellensicht-Assistenten aufgefordert zu definieren, wie der Assistent Spaltennamen verschiedener Tabellen vergleichen soll.  
   
 > [!NOTE]  
@@ -119,11 +119,11 @@ ms.locfileid: "66075401"
   
  Der Datenquellensicht-Assistent verwendet Ihre Antwort, um Spaltennamen zu vergleichen und Beziehungen zwischen verschiedenen Tabellen in der Datenquellensicht zu erstellen. Sie können jedes beliebige Kriterium angeben, das in der folgenden Tabelle aufgeführt ist.  
   
-|Namensübereinstimmungskriterien|BESCHREIBUNG|  
+|Namensübereinstimmungskriterien|Beschreibung|  
 |----------------------------|-----------------|  
 |**Gleicher Name wie Primärschlüssel**|Der Name der Fremdschlüsselspalte in der Quelltabelle stimmt mit dem Namen der Primärschlüsselspalte in der Zieltabelle überein. Beispielsweise ist die Fremdschlüsselspalte `Order.CustomerID` identisch mit der Primärschlüsselspalte `Customer.CustomerID`.|  
-|**Gleicher Name wie Ziel Tabellenname**|Der Name der Fremdschlüsselspalte in der Quelltabelle ist mit dem Namen der Zieltabelle identisch. Beispielsweise ist die Fremdschlüsselspalte `Order.Customer` identisch mit der Primärschlüsselspalte `Customer.CustomerID`.|  
-|**Ziel Tabellenname und Primärschlüssel Name**|Der Name der Fremdschlüsselspalte in der Quelltabelle ist identisch mit dem Zieltabellennamen, der mit dem Namen der Primärschlüsselspalte verkettet ist. Ein Leerzeichen oder Unterstrich als Trennzeichen ist zulässig. Beispielsweise stimmen die folgenden FOREIGN KEY-Primärschlüssel alle überein:<br /><br /> `Order.CustomerID` und `Customer.ID`<br /><br /> `Order.Customer ID` und `Customer.ID`<br /><br /> `Order.Customer_ID` und `Customer.ID`|  
+|**Gleicher Name wie Zieltabelle**|Der Name der Fremdschlüsselspalte in der Quelltabelle ist mit dem Namen der Zieltabelle identisch. Beispielsweise ist die Fremdschlüsselspalte `Order.Customer` identisch mit der Primärschlüsselspalte `Customer.CustomerID`.|  
+|**Zieltabellenname und Primärschlüsselname**|Der Name der Fremdschlüsselspalte in der Quelltabelle ist identisch mit dem Zieltabellennamen, der mit dem Namen der Primärschlüsselspalte verkettet ist. Ein Leerzeichen oder Unterstrich als Trennzeichen ist zulässig. Beispielsweise stimmen die folgenden FOREIGN KEY-Primärschlüssel alle überein:<br /><br /> `Order.CustomerID` und `Customer.ID`<br /><br /> `Order.Customer ID` und `Customer.ID`<br /><br /> `Order.Customer_ID` und `Customer.ID`|  
   
  Durch die ausgewählten Kriterien wird die Einstellung der **NameMatchingCriteria** -Eigenschaft der Datenquellensicht geändert. Mit dieser Einstellung wird bestimmt, wie der Assistent verknüpfte Tabellen hinzufügt. Wenn Sie die Datenquellensicht mit dem Datenquellensicht-Designer ändern, legen Sie fest, wie die Spalten vom Designer abgeglichen werden, um Beziehungen zwischen Tabellen in der Datenquellensicht herzustellen. Sie können die Einstellung der **NameMatchingCriteria** -Eigenschaft im Datenquellensicht-Designer ändern. Weitere Informationen finden Sie unter [Ändern von Eigenschaften in einer Datenquellensicht &#40;Analysis Services&#41;](change-properties-in-a-data-source-view-analysis-services.md).  
   
@@ -139,6 +139,6 @@ ms.locfileid: "66075401"
  [Arbeiten mit Diagrammen im Datenquellen Sicht-Designer &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
  [Durchsuchen von Daten in einer Datenquellen Sicht &#40;Analysis Services&#41;](explore-data-in-a-data-source-view-analysis-services.md)   
  [Löschen Sie eine Datenquellen Sicht &#40;Analysis Services&#41;](delete-a-data-source-view-analysis-services.md)   
- [Aktualisieren Sie das Schema in einer Datenquellen Sicht &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
+ [Aktualisieren des Schemas in einer Datenquellensicht &#40;Analysis Services&#41;](refresh-the-schema-in-a-data-source-view-analysis-services.md)  
   
   

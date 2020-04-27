@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 18cc4dfd6f1d17340cc06803367737b841bade70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075610"
 ---
 # <a name="define-database-dimensions"></a>Definieren von Datenbankdimensionen
@@ -40,16 +40,16 @@ ms.locfileid: "66075610"
   
  Der Dimensions-Designer besitzt drei Registerkarten, die in der folgenden Tabelle beschrieben werden.  
   
-|TAB|BESCHREIBUNG|  
+|Registerkarte|BESCHREIBUNG|  
 |---------|-----------------|  
-|**Dimensions Struktur**|Verwenden Sie diese Registerkarte, um mit der Struktur einer Dimension zu arbeiten, um das Schema der Datenquellen Sicht für eine Dimension zu überprüfen oder zu erstellen, um Attribute zu verwenden und um Attribute in benutzerdefinierten Hierarchien zu organisieren.|  
+|**Dimensionsstruktur**|Verwenden Sie diese Registerkarte, um mit der Struktur einer Dimension zu arbeiten, um das Schema der Datenquellen Sicht für eine Dimension zu überprüfen oder zu erstellen, um Attribute zu verwenden und um Attribute in benutzerdefinierten Hierarchien zu organisieren.|  
 |**Attributbeziehungen**|Verwenden Sie diese Registerkarte, um die Attributbeziehungen einer Dimension zu erstellen, zu ändern oder zu löschen.|  
 |**Translations**|Auf dieser Registerkarte können Sie Übersetzungen von Dimensionsmetadaten in unterschiedliche Sprachen hinzufügen und bearbeiten.|  
 |**Browser**|Auf dieser Registerkarte können Sie die Elemente einer verarbeiteten Dimension sowie die Übersetzungen von Dimensionsmetadaten überprüfen.|  
   
  In den folgenden Themen werden die Aufgaben beschrieben, die Sie im Dimensions-Designer ausführen können.  
   
- [Dimensionsattributeigenschaftenverweis](dimension-attribute-properties-reference.md)  
+ [Dimensionsattributeigenschaften-Verweis](dimension-attribute-properties-reference.md)  
  Beschreibt das Definieren und Konfigurieren eines Dimensionsattributs.  
   
  [Erstellen von benutzerdefinierten Hierarchien](user-defined-hierarchies-create.md)  

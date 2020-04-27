@@ -25,16 +25,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2478f1605b7fb67d8328be905956cbaae8e3c243
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62889810"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services-Protokollierung (SSIS)
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält Protokoll Anbieter, mit denen Sie die Protokollierung in Paketen, Containern und Tasks implementieren können. Mit der Protokollierung können Sie Laufzeitinformationen zu einem Paket aufzeichnen, damit Sie ein Paket bei jeder Ausführung überwachen und Probleme behandeln können. Beispielsweise können in einem Protokoll der Name des Operators, der das Paket ausgeführt hat, und der Zeitpunkt, zu dem die Paketausführung begann und endete, aufgezeichnet werden.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] umfasst Protokollanbieter, mit denen Sie die Protokollierung in Paketen, Containern und Tasks implementieren können. Mit der Protokollierung können Sie Laufzeitinformationen zu einem Paket aufzeichnen, damit Sie ein Paket bei jeder Ausführung überwachen und Probleme behandeln können. Beispielsweise können in einem Protokoll der Name des Operators, der das Paket ausgeführt hat, und der Zeitpunkt, zu dem die Paketausführung begann und endete, aufgezeichnet werden.  
   
- Sie können den Protokollierungsbereich konfigurieren, der während einer Paketausführung auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server auftritt. Weitere Informationen finden Sie unter [Enable Logging for Package Execution on the SSIS Server](../enable-logging-for-package-execution-on-the-ssis-server.md).  
+ Sie können den Protokollierungsbereich konfigurieren, der während einer Paketausführung auf dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Server auftritt. Weitere Informationen finden Sie unter [Aktivieren der Protokollierung für die Paketausführung auf dem SSIS-Server](../enable-logging-for-package-execution-on-the-ssis-server.md).  
   
  Sie können die Protokollierung auch einschließen, wenn Sie ein Paket mit dem Eingabeaufforderungs-Hilfsprogramm **dtecex** ausführen. Weitere Informationen zu den Befehlszeilenargumenten, die die Protokollierung unterstützen, finden Sie unter [dtexec Utility](../packages/dtexec-utility.md).  
   
@@ -43,8 +43,7 @@ ms.locfileid: "62889810"
   
  Wenn Sie das Protokoll einem Paket hinzufügen, wählen Sie den Protokollanbieter und den Speicherort des Protokolls aus. Der Protokollanbieter gibt das Format für die Protokolldaten an, z. B. eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank oder eine Textdatei.  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält die folgenden Protokollanbieter:  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enthält die folgenden Protokollanbieter:  
   
 -   Den Textdatei-Protokollanbieter, der Protokolleinträge in ASCII-Textdateien durch Trennzeichen getrennt im CSV-Format schreibt. Die standardmäßige Dateinamenerweiterung für diesen Anbieter ist LOG.  
   
@@ -110,8 +109,7 @@ ms.locfileid: "62889810"
 |DataCode|Ein optionaler ganzzahliger Wert, der typischerweise einen Wert aus der <xref:Microsoft.SqlServer.Dts.Runtime.DTSExecResult> -Enumeration enthält, der das Ergebnis des aktuell ausgeführten Containers oder Tasks angibt:<br /><br /> 0 – Erfolg<br /><br /> 1 – Fehlschlag<br /><br /> 2 – Abgeschlossen<br /><br /> 3 – Abgebrochen|  
   
 ##### <a name="log-entries"></a>Protokolleinträge  
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützt Protokolleinträge für vordefinierte Ereignisse und stellt für viele [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Objekte benutzerdefinierte Protokolleinträge bereit. Im Dialogfeld **SSIS-Protokolle konfigurieren** des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers werden diese Ereignisse und benutzerdefinierten Protokolleinträge aufgelistet.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] unterstützt Protokolleinträge für vordefinierte Ereignisse und stellt für viele [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Objekte benutzerdefinierte Protokolleinträge bereit. Im Dialogfeld **SSIS-Protokolle konfigurieren** des [!INCLUDE[ssIS](../../includes/ssis-md.md)] -Designers werden diese Ereignisse und benutzerdefinierten Protokolleinträge aufgelistet.  
   
  In der folgenden Tabelle werden die vordefinierten Ereignisse beschrieben, die beim Auftreten von Laufzeitereignissen zum Schreiben von Protokolleinträgen aktiviert werden können. Diese Protokolleinträge gelten für ausführbare Dateien, das Paket sowie die im Paket enthaltenen Tasks und Container. Der Name des Protokolleintrags entspricht dem Namen des ausgelösten Laufzeitereignisses, mit dem das Schreiben des Protokolleintrags verursacht wurde.  
   
@@ -130,7 +128,7 @@ ms.locfileid: "62889810"
 |**OnVariableValueChanged**|Schreibt einen Protokolleintrag, wenn sich der Wert einer Variablen ändert.|  
 |**OnWarning**|Schreibt einen Protokolleintrag, wenn eine Warnung auftritt.|  
 |**PipelineComponentTime**|Schreibt für jede Datenflusskomponente einen Protokolleintrag für jede Phase der Überprüfung und der Ausführung. Der Protokolleintrag gibt die Verarbeitungszeit für jede Phase an.|  
-|**Diagnostics**|Schreibt einen Protokolleintrag, der Diagnoseinformationen enthält.<br /><br /> Sie können zum Beispiel vor und nach jedem Aufruf eines externen Datenanbieters eine Meldung protokollieren. Weitere Informationen finden Sie unter [Behandeln von Problemen mit Paketausführungstools](../troubleshooting/troubleshooting-tools-for-package-execution.md).|  
+|**Diagnostic**|Schreibt einen Protokolleintrag, der Diagnoseinformationen enthält.<br /><br /> Sie können zum Beispiel vor und nach jedem Aufruf eines externen Datenanbieters eine Meldung protokollieren. Weitere Informationen finden Sie unter [Behandeln von Problemen mit Paketausführungstools](../troubleshooting/troubleshooting-tools-for-package-execution.md).|  
   
  Das Paket und viele Tasks verfügen über benutzerdefinierte Protokolleinträge, die für die Protokollierung aktiviert werden können. Der Task „Mail senden“ stellt z.B. den benutzerdefinierten Protokolleintrag **SendMailTaskBegin** bereit, mit dem im Zeitraum zwischen dem Beginn der Ausführung des Tasks „Mail senden“ und dem Senden einer E-Mail-Nachricht Informationen protokolliert werden. Weitere Informationen finden Sie unter [Custom Messages for Logging](../custom-messages-for-logging.md).  
   
@@ -166,8 +164,7 @@ ms.locfileid: "62889810"
  Der Datenflusstask stellt eine Reihe von benutzerdefinierten Protokolleinträge bereit, die zum Überwachen und Anpassen der Leistung verwendet werden können. Sie können beispielsweise Komponenten überwachen, die möglicherweise Arbeitsspeicherverluste verursachen, oder nachverfolgen, wie lange das Ausführen einer bestimmten Komponente dauert. Eine Liste dieser benutzerdefinierten Protokolleinträge sowie Beispiele für Protokollausgaben finden Sie unter [Data Flow Task](../control-flow/data-flow-task.md).  
   
 #### <a name="use-the-pipelinecomponenttime-event"></a>Verwenden des PipelineComponentTime-Ereignisses  
- Das PipelineComponentTime-Ereignis stellt möglicherweise den nützlichsten benutzerdefinierten Protokolleintrag dar. Dieser Protokolleintrag meldet den Zeitaufwand in Millisekunden, den jede Komponente im Datenfluss für die fünf Hauptverarbeitungsschritte jeweils aufbringt. In der folgenden Tabelle werden diese Verarbeitungsschritte beschrieben. 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Entwickler kennen diese Schritte als Hauptmethoden einer <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>.  
+ Das PipelineComponentTime-Ereignis stellt möglicherweise den nützlichsten benutzerdefinierten Protokolleintrag dar. Dieser Protokolleintrag meldet den Zeitaufwand in Millisekunden, den jede Komponente im Datenfluss für die fünf Hauptverarbeitungsschritte jeweils aufbringt. In der folgenden Tabelle werden diese Verarbeitungsschritte beschrieben. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Entwickler kennen diese Schritte als Hauptmethoden einer <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent>.  
   
 |Schritt|BESCHREIBUNG|  
 |----------|-----------------|  
@@ -215,7 +212,7 @@ ms.locfileid: "62889810"
 -   [Anzeigen der Protokolleinträge im Fenster „Protokollereignisse“](../view-log-entries-in-the-log-events-window.md)  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
- [DTLoggedExec-Tool für vollständige und Detail Protokollierung (CodePlex-Projekt)](https://go.microsoft.com/fwlink/?LinkId=150579)  
+ [DTLoggedExec-Tool für vollständige und Detailprotokollierung (CodePlex-Projekt)](https://go.microsoft.com/fwlink/?LinkId=150579)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen der Protokolleinträge im Fenster „Protokollereignisse“](../view-log-entries-in-the-log-events-window.md)  

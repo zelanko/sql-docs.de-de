@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 237838d4d9780c6180adebcae264949b10af94e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63061241"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile (Ereignisklasse)
@@ -28,7 +28,7 @@ ms.locfileid: "63061241"
   
 |Datenspaltenname|Datentyp|BESCHREIBUNG|Column ID|Filterbar|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|ApplicationName|`nvarchar`|Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den von der Anwendung übergebenen Werten und nicht mit dem angezeigten Programmnamen aufgefüllt.|10|Ja|  
+|ApplicationName|`nvarchar`|Der Name der Client Anwendung, die die Verbindung mit einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den von der Anwendung übergebenen Werten und nicht mit dem angezeigten Programmnamen aufgefüllt.|10|Ja|  
 |ClientProcessID|`int`|Die ID, die der Hostcomputer dem Prozess zuweist, in dem die Clientanwendung ausgeführt wird. Diese Datenspalte wird aufgefüllt, wenn die Prozess-ID durch den Client bereitgestellt wird.|9|Ja|  
 |DatabaseID|`int`|ID der Datenbank, in der die gespeicherte Prozedur ausgeführt wird. Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion ermittelt werden.|3|Ja|  
 |DatabaseName|`nvarchar`|Name der Datenbank, in der die gespeicherte Prozedur ausgeführt wird.|35|Ja|  
@@ -49,7 +49,7 @@ ms.locfileid: "63061241"
 |ObjektType|`int`|Der Wert, der den Typ des am Ereignis beteiligten Objekts darstellt. Weitere Informationen finden Sie unter [ObjectType Trace Event Column](objecttype-trace-event-column.md).|28|Ja|  
 |Offset|`int`|Startoffset der Anweisung innerhalb der gespeicherten Prozedur oder des Batches, die bzw. der die Neukompilierung verursacht hat.|61|Ja|  
 |RequestID|`int`|Die ID der Anforderung, die die Anweisung enthält.|49|Ja|  
-|Servername|`nvarchar`|Name des Computers mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , für den die Ablaufverfolgung vorgenommen wird.|26|Nein|  
+|ServerName|`nvarchar`|Name des Computers mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , für den die Ablaufverfolgung vorgenommen wird.|26|Nein|  
 |SessionLoginName|`nvarchar`|Der Anmeldename des Benutzers, der die Sitzung gestartet hat. Wenn Sie beispielsweise mithilfe von Login1 eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellen und eine Anweisung als Login2 ausführen, zeigt SessionLoginName den Wert Login1 an und LoginName den Wert Login2. Diese Spalte zeigt sowohl den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - als auch den Windows-Anmeldenamen an.|64|Ja|  
 |SPID|`int`|Serverprozess-ID der Verbindung.|12|Ja|  
 |SqlHandle|`varbinary`|64-Bit-Hash, der auf dem Text einer Ad-hoc-Abfrage oder der Datenbank- und Objekt-ID eines SQL-Objekts basiert. Dieser Wert kann an sys.dm_exec_sql_text übergeben werden, um den zugehörigen SQL-Text abzurufen.|63|Nein|  

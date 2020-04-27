@@ -18,16 +18,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e5223444f58326b7530388f3fe2fc06d72488a5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077412"
 ---
 # <a name="configure-attribute-types"></a>Konfigurieren von Attributtypen
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]tragen Attributtypen zur Klassifizierung eines Attributs im Hinblick auf die Geschäfts Funktionalität bei. Es gibt viele Attributtypen. Die meisten werden von Clientanwendungen verwendet, um ein Attribut anzuzeigen oder zu unterstützen. Einige Attributtypen haben jedoch auch eine besondere Bedeutung für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. So identifizieren manche Attributtypen Attribute, die in verschiedenen Kalendern für Zeitdimensionen die Zeiträume darstellen.  
   
-##  <a name="setting_attibute_types"></a>Festlegen von Attributtypen  
+##  <a name="setting-attribute-types"></a><a name="setting_attibute_types"></a>Festlegen von Attributtypen  
  Der Wert der `Type`-Eigenschaft für ein Attribut bestimmt den Attributtyp des entsprechenden Attributs. Verschiedene Assistenten in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] legen die Attributtypen fest, wenn Dimensionen oder Attribute definiert werden. Diese [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Assistenten legen auch dann Attributtypen fest, wenn den Dimensionen mit den Assistenten Funktionen hinzugefügt werden. Der Business Intelligence-Assistent wendet auf Attribute in einer Dimension mehrere Attributtypen an, wenn der Assistent Kontointelligenz zur Identifizierung von Attributen hinzufügt, die die Namen, Codes, Nummern und Struktur von Konten in der Dimension enthalten. Der Business Intelligence-Assistent verarbeitet auch Attributtypen, z. B. für die Währungsumrechnung. Weitere Informationen finden Sie unter [Erstellen einer Währungstypdimension](database-dimensions-create-a-currency-type-dimension.md).  
   
  Die folgenden Tabellen enthalten eine Liste der in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]verfügbaren Attributtypen. Diese Tabellen teilen die Attributtypen in die folgenden Kategorien auf:  
@@ -36,13 +36,13 @@ ms.locfileid: "66077412"
 |----------|----------------|  
 |[Allgemeine Attributtypen](#general_attribute_types)|Diese Werte stehen allen Attributen zur Verfügung und sind nur vorhanden, um eine Klassifizierung der Attribute für Clientanwendungszwecke zu ermöglichen.|  
 |[Attributtypen der Konto Dimension](#account_dimension_attribute_types)|Diese Werte identifizieren ein Attribut, das einer Kontodimension angehört. Weitere Informationen zur Kontodimension finden Sie unter [Erstellen eines Finanzkontos des über- und untergeordneten Typs Dimension](database-dimensions-finance-account-of-parent-child-type.md).|  
-|[Currency-Dimensions Attributtyp](#currency_dimension_attribute_types)|Diese Werte identifizieren ein Attribut, das einer Währungsdimension angehört. Weitere Informationen zu Währungsdimensionen finden Sie unter [Erstellen einer Währungstypdimension](database-dimensions-create-a-currency-type-dimension.md).|  
-|[Attribute für langsam veränderliche Dimensionen](#slowly_changing_dimension_attribute_types)|Diese Werte identifizieren ein Attribut, das einer langsam veränderlichen Dimension angehört.|  
-|[Zeit Dimensions Attribute](#time_dimension_attribute_types)|Diese Werte identifizieren ein Attribut, das einer Zeitdimension angehört. Weitere Informationen zu Zeitdimensionen finden Sie unter [Erstellen einer Datentypdimension](database-dimensions-create-a-date-type-dimension.md).|  
+|[Attributtyp der Währungsdimension](#currency_dimension_attribute_types)|Diese Werte identifizieren ein Attribut, das einer Währungsdimension angehört. Weitere Informationen zu Währungsdimensionen finden Sie unter [Erstellen einer Währungstypdimension](database-dimensions-create-a-currency-type-dimension.md).|  
+|[Langsam veränderliche Dimensionsattribute](#slowly_changing_dimension_attribute_types)|Diese Werte identifizieren ein Attribut, das einer langsam veränderlichen Dimension angehört.|  
+|[Attribute der Zeitdimension](#time_dimension_attribute_types)|Diese Werte identifizieren ein Attribut, das einer Zeitdimension angehört. Weitere Informationen zu Zeitdimensionen finden Sie unter [Erstellen einer Datentypdimension](database-dimensions-create-a-date-type-dimension.md).|  
   
-###  <a name="general_attribute_types"></a>Allgemeine Attributtypen  
+###  <a name="general-attribute-types"></a><a name="general_attribute_types"></a>Allgemeine Attributtypen  
   
-|Wert des Attributtyps|BESCHREIBUNG|  
+|Wert des Attributtyps|Beschreibung|  
 |--------------------------|-----------------|  
 |`Address`|Stellt eine Adresse dar.|  
 |`AddressBuilding`|Stellt einen Gebäudebezeichner für eine Adresse dar.|  
@@ -152,36 +152,36 @@ ms.locfileid: "66077412"
 |`WebUrl`|Stellt eine URL-Adresse dar.|  
 |`WebXmlOrXsl`|Stellt XML- oder XSL-Inhalte dar.|  
   
-###  <a name="account_dimension_attribute_types"></a>Attributtypen der Konto Dimension  
+###  <a name="account-dimension-attribute-types"></a><a name="account_dimension_attribute_types"></a> Account Dimension Attribute Types  
   
-|Wert des Attributtyps|BESCHREIBUNG|  
+|Wert des Attributtyps|Beschreibung|  
 |--------------------------|-----------------|  
 |`Account`|Stellt das übergeordnete Element eines Kontos dar. Dieser Attributtyp wird in der Regel auf das übergeordnete Attribut einer Kontodimension angewendet.|  
 |`AccountName`|Stellt den Namen eines Kontos dar. Dieser Attributtyp wird in der Regel auf die Schlüsselattribute einer Kontodimension angewendet.|  
 |`AccountNumber`|Stellt die Nummer eines Kontos dar.|  
 |`AccountType`|Stellt den Typ eines Kontos dar. Dieser Attributtyp identifiziert die Aggregationsfunktion eines Kontomitglieds in einer Kontotypdimension der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank.|  
   
-###  <a name="currency_dimension_attribute_types"></a>Attributtypen der Währungs Dimension  
+###  <a name="currency-dimension-attribute-types"></a><a name="currency_dimension_attribute_types"></a> Attributtypen der Währungsdimension  
   
-|Wert des Attributtyps|BESCHREIBUNG|  
+|Wert des Attributtyps|Beschreibung|  
 |--------------------------|-----------------|  
 |`CurrencyDestination`|Stellt die Zielwährung einer Währungsumrechnung dar. Dieser Attributtyp wird in der Regel auf das Schlüsselattribut einer Berichtsdimension zum Verwenden bei der Währungsumrechnung angewendet. Weitere Informationen zu Währungsumrechnungen finden Sie unter [Währungsumrechnungen &#40;Analysis Services&#41;](../currency-conversions-analysis-services.md).|  
 |`CurrencyIsoCode`|Stellt den ISO-Code einer Währung dar. Weitere Informationen zu Währungsumrechnungen finden Sie unter [Währungsumrechnungen &#40;Analysis Services&#41;](../currency-conversions-analysis-services.md).|  
 |`CurrencyName`|Stellt den Namen einer Währung dar. Weitere Informationen zu Währungsumrechnungen finden Sie unter [Währungsumrechnungen &#40;Analysis Services&#41;](../currency-conversions-analysis-services.md).|  
 |`CurrencySource`|Stellt die Ausgangswährung einer Währungsumrechnung dar. Dieser Attributtyp wird in der Regel auf das Schlüsselattribut einer Währungsdimension zum Verwenden bei der Währungsumrechnung verwendet. Weitere Informationen zu Währungsumrechnungen finden Sie unter [Währungsumrechnungen &#40;Analysis Services&#41;](../currency-conversions-analysis-services.md).|  
   
-###  <a name="slowly_changing_dimension_attribute_types"></a>Attributtypen für langsam veränderliche Dimensionen  
+###  <a name="slowly-changing-dimension-attribute-types"></a><a name="slowly_changing_dimension_attribute_types"></a> Attributtypen für langsam veränderliche Dimension  
   
-|Wert des Attributtyps|BESCHREIBUNG|  
+|Wert des Attributtyps|Beschreibung|  
 |--------------------------|-----------------|  
-|**ScdEndDate**|Stellt das effektive Enddatum für ein Element einer langsam veränderlichen Dimension dar.|  
-|**ScdOriginalID**|Stellt den ursprünglichen Bezeichner für ein Element einer langsam veränderlichen Dimension dar.|  
-|**ScdStartDate**|Stellt das effektive Startdatum für ein Element einer langsam veränderlichen Dimension dar.|  
+|**SCDEndDate**|Stellt das effektive Enddatum für ein Element einer langsam veränderlichen Dimension dar.|  
+|**SCDOriginalID**|Stellt den ursprünglichen Bezeichner für ein Element einer langsam veränderlichen Dimension dar.|  
+|**SCDStartDate**|Stellt das effektive Startdatum für ein Element einer langsam veränderlichen Dimension dar.|  
 |`ScdStatus`|Stellt den effektiven Status für ein Element einer langsam veränderlichen Dimension dar.|  
   
-###  <a name="time_dimension_attribute_types"></a>Zeit Dimensions Attributtypen  
+###  <a name="time-dimension-attribute-types"></a><a name="time_dimension_attribute_types"></a> Attributtypen der Zeitdimension  
   
-|Wert des Attributtyps|BESCHREIBUNG|  
+|Wert des Attributtyps|Beschreibung|  
 |--------------------------|-----------------|  
 |`Date`|Stellt ein Datum dar. Dieser Attributtyp wird in der Regel auf das Schlüsselattribut einer Zeitdimension oder einer Serverzeitdimension angewendet.|  
 |`DayOfHalfYear`|Stellt die Ordnungszahl für einen Tag eines Halbjahres dar.|  
@@ -307,6 +307,6 @@ ms.locfileid: "66077412"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Attribute und Attribut Hierarchien](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)   
- [Dimensionsattributeigenschaftenverweis](dimension-attribute-properties-reference.md)  
+ [Dimensionsattributeigenschaften-Verweis](dimension-attribute-properties-reference.md)  
   
   

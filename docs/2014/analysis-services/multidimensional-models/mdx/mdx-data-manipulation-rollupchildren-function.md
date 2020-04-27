@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 45db581de7b7aef2822597ef60d3b43ebad3acbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074267"
 ---
 # <a name="working-with-the-rollupchildren-function-mdx"></a>Arbeiten mit der RollupChildren-Funktion (MDX)
@@ -73,6 +73,6 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
  Die MDX-Anweisung wertet den unären Operator des untergeordneten Elements aus. Wird der unäre Operator zur Subtraktion verwendet (wie dies bei den Elementen der in- und ausländischen Rücknahmen der Fall ist), wird der unäre Tildeoperator (~) durch die `IIf`-Funktion ersetzt. Andernfalls verwendet die `IIf`-Funktion den unären Operator des untergeordneten Elements. Schließlich wird der zurückgegebene Rollupgesamtwert mit 1,1 multipliziert, um die Vorhersage der in- und ausländischen Bruttoumsätze bereitzustellen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Bearbeiten von Daten &#40;MDX-&#41;](mdx-data-manipulation-manipulating-data.md)  
+ [Bearbeiten von Daten &#40;MDX&#41;](mdx-data-manipulation-manipulating-data.md)  
   
   

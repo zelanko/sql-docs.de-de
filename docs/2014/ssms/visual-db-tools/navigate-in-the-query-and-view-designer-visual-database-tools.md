@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a9c21d6bff4b30ad73d9653d51f2a49629985fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63066258"
 ---
 # <a name="navigate-in-the-query-and-view-designer-visual-database-tools"></a>Navigieren im Abfrage- und Sicht-Designer (Visual Database Tools)
@@ -27,7 +27,7 @@ ms.locfileid: "63066258"
   
 ## <a name="any-pane"></a>Alle Bereiche  
   
-|**An**|**Drücken Sie**|**Sie**|  
+|**An**|**Tastenkombination**|**Mausaktion**|  
 |------------|---------------|---------------|  
 |Wechseln zwischen den Bereichen des Abfrage- und Sicht-Designers|F6, UMSCHALT+F6|Klicken Sie auf eine beliebige Stelle im Zielbereich.|  
   
@@ -36,7 +36,7 @@ ms.locfileid: "63066258"
   
 ## <a name="diagram-pane"></a>Diagrammbereich  
   
-|**An**|**Drücken Sie**|**Sie**|  
+|**An**|**Tastenkombination**|**Mausaktion**|  
 |------------|---------------|---------------|  
 |Wechseln zwischen Tabellen, anderen tabellenähnlich strukturierten Objekten und zu Joinlinien, sofern verfügbar|TAB oder UMSCHALT+TAB|Klicken Sie auf die Tabelle, das tabellenähnlich strukturierte Objekt oder die Joinlinie, um zu diesem Element zu wechseln.|  
 |Wechseln zwischen den Spalten in einer Tabelle oder einem tabellenähnlich strukturierten Objekt|Pfeiltasten|Klicken Sie auf die Spalte, zu der Sie wechseln möchten.|  
@@ -51,7 +51,7 @@ ms.locfileid: "63066258"
   
 ## <a name="criteria-pane"></a>Kriterienbereich  
   
-|To|Drücken Sie|Klicken Sie auf |  
+|To|Tastenkombination|Klicken Sie auf|  
 |--------|-----------|-----------|  
 |Wechseln zwischen Zellen|Pfeiltasten, TAB oder UMSCHALT+TAB|Klicken Sie auf die gewünschte Zelle.|  
 |Wechseln in die letzte Zeile der aktuellen Spalte|STRG+NACH-UNTEN||  
@@ -61,7 +61,7 @@ ms.locfileid: "63066258"
 |Wechseln in eine Dropdownliste|NACH-OBEN oder NACH-UNTEN|Klicken Sie auf die Schaltfläche in der Zelle.|  
 |Markieren einer gesamten Spalte eines Datenblatts|STRG+LEERTASTE|Die Spaltenüberschrift.|  
 |Wechseln zwischen dem Bearbeitungsmodus und dem Modus für die Zellenauswahl|F2||  
-|Kopieren des markierten Texts in der Zelle in die Zwischenablage (im Bearbeitungsmodus)|STRG + C||  
+|Kopieren des markierten Texts in der Zelle in die Zwischenablage (im Bearbeitungsmodus)|STRG+C||  
 |Ausschneiden des markierten Texts in der Zelle in die Zwischenablage (im Bearbeitungsmodus)|STRG+X||  
 |Einfügen von Text aus der Zwischenablage (im Bearbeitungsmodus)|STRG+V||  
 |Wechseln zwischen dem Einfüge- und dem Überschreibmodus beim Bearbeiten in einer Zelle|EINFG||  
@@ -86,7 +86,7 @@ ms.locfileid: "63066258"
   
 ## <a name="results-pane"></a>Ergebnisbereich  
   
-|**An**|**Drücken Sie**|**Sie**|  
+|**An**|**Tastenkombination**|**Mausaktion**|  
 |------------|---------------|---------------|  
 |Bewegen zwischen Zellen|Pfeiltasten, TAB oder UMSCHALT+TAB|Klicken Sie auf die gewünschte Zelle.|  
 |Wechseln zur ersten oder letzten Zelle in der aktuellen Zeile|POS1 oder ENDE||  
@@ -101,8 +101,8 @@ ms.locfileid: "63066258"
 |Rückgängig machen von Änderungen an der aktuellen Zelle|ESC in der geänderten Zelle||  
 |Rückgängig machen von Änderungen an der aktuellen Zeile|ESC in einer nicht geänderten Zelle||  
 |Eingeben von Null in eine Zelle|STRG+0||  
-|Kopieren von markierten Spalten oder Zeilen in die Zwischenablage|STRG + C||  
-|Kopieren des markierten Texts in der Zelle in die Zwischenablage (im Bearbeitungsmodus)|STRG + C||  
+|Kopieren von markierten Spalten oder Zeilen in die Zwischenablage|STRG+C||  
+|Kopieren des markierten Texts in der Zelle in die Zwischenablage (im Bearbeitungsmodus)|STRG+C||  
 |Ausschneiden des markierten Texts in der Zelle in die Zwischenablage (im Bearbeitungsmodus)|STRG+X||  
 |Einfügen von Text aus der Zwischenablage (im Bearbeitungsmodus)|STRG+V||  
   

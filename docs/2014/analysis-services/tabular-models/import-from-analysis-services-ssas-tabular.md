@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9d864b2f8256bdd33cd2f595274a7894b4ea5e89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067048"
 ---
 # <a name="import-from-analysis-services-ssas-tabular"></a>Importieren aus Analysis Services (SSAS – tabellarisch)
@@ -29,13 +29,13 @@ ms.locfileid: "66067048"
   
 2.  Klicken Sie im Dialogfeld **Neues Projekt** unter **Installierte Vorlagen**auf **Business Intelligence**und dann auf **Von Server importieren**.  
   
-3.  Geben Sie unter **Name**einen Namen für das Projekt ein. Geben Sie dann einen Speicherort und einen Projektmappennamen an, und klicken Sie auf **OK**.  
+3.  Geben Sie unter **Name**einen Namen für das Projekt ein, geben Sie dann einen Speicherort und einen Projektmappennamen an, und klicken Sie dann auf **OK**.  
   
 4.  Geben Sie im Dialogfeld **Aus Analysis Services importieren** im Feld **Servername**den Namen des Analysis Services-Servers ein, auf dem sich die zu importierenden Modellmetadaten befinden.  
   
 5.  Wählen Sie im Feld **Datenbankname**die Datenbank für das tabellarische Modell aus, die die Modellmetadaten enthält, die Sie importieren möchten, und klicken Sie dann auf **OK**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Projekteigenschaften &#40;tabellarischen SSAS-&#41;](properties-ssas-tabular.md)  
+ [Projekteigenschaften &#40;SSAS – tabellarisch&#41;](properties-ssas-tabular.md)  
   
   

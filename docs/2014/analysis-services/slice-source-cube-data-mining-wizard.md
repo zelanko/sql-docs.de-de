@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bcb156d5c0a3c1332e748878ddebda1772b80696
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068597"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>Quellcube in Slices aufteilen (Data Mining-Assistent)
@@ -37,9 +37,9 @@ ms.locfileid: "66068597"
 >   
 >  Wenn Sie ein komplexes Slice definieren müssen, empfiehlt sich das Definieren der Tupel im Slice mithilfe eines XMLA-Alter-Skripts. Anschließend können Sie das Befehlszeilentool „Ascmd“ oder die SSIS- [Analysis Services Execute DDL Task](../integration-services/control-flow/analysis-services-execute-ddl-task.md) verwenden, um unmittelbar vor dem Verarbeiten der Partition das Skript auszuführen und den bestimmten Satz an Elementen zu erstellen.  
   
- **Weitere Informationen finden Sie unter:** [Data Mining-Assistent &#40;Analysis Services Data Mining-&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Mining Struktur](data-mining/create-a-relational-mining-structure.md)  
+ **Weitere Informationen:** [Data Mining-Assistent &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Dimension**  
  Wählen Sie die Dimension aus, die Sie in Slices aufteilen möchten.  
   
@@ -53,10 +53,10 @@ ms.locfileid: "66068597"
   
  Wenn Sie z. b. geography als Hierarchie ausgewählt haben, können Sie den Operator = auswählen und dann "Europe" als Filter eingeben, um nur die Cube-Daten für Europa zu erhalten.  
   
- **Filter Ausdruck**  
+ **Filterausdruck**  
  Geben Sie einen Ausdruck ein, der beim Filtern des Cubes nach der ausgewählten Dimension als Kriterium verwendet werden soll.  
   
- **Parameter**  
+ **Parameters**  
  Diese Option wird nicht für Data Mining-Modelle verwendet.  
   
 ## <a name="see-also"></a>Weitere Informationen  

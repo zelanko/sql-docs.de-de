@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4ff5758d465703800cd4f847b03f87e1dd762043
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077663"
 ---
 # <a name="mining-structure-properties-dialog-analysis-services---data-mining"></a>Allgemein (Dialogfeld "Miningstruktureigenschaften") (Analysis Services &ndash; Data Mining)
@@ -34,6 +34,6 @@ ms.locfileid: "66077663"
 |**Fehlerkonfiguration**|Mithilfe der Seite **Fehlerkonfiguration** können Sie die Fehlerkonfigurationseinstellungen für die Miningstruktur anzeigen und ändern. Weitere Informationen zu dieser Seite finden Sie unter [Fehlerkonfiguration &#40;Dialogfeld „Miningstruktur“&#41; &#40;Analysis Services – Mehrdimensionale Daten&#41;](error-configuration-mining-structure-dialog-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Mining Strukturen &#40;Analysis Services Data Mining-&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
+ [Miningstrukturen &#40;Analysis Services – Data Mining&#41;](data-mining/mining-structures-analysis-services-data-mining.md)  
   
   

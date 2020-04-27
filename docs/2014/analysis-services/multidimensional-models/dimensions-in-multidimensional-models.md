@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 520d6f11e5a472d5337a3747cc73c1d3656171c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075179"
 ---
 # <a name="dimensions-in-multidimensional-models"></a>Dimensionen in mehrdimensionalen Modellen
@@ -43,7 +43,7 @@ ms.locfileid: "66075179"
  [Definieren von Datenbankdimensionen](define-database-dimensions.md)  
  Beschreibt das Ändern und Konfigurieren einer Datenbankdimension mithilfe des Dimensions-Designers.  
   
- [Dimensionsattributeigenschaftenverweis](dimension-attribute-properties-reference.md)  
+ [Dimensionsattributeigenschaften-Verweis](dimension-attribute-properties-reference.md)  
  Beschreibt das Definieren, Ändern und Konfigurieren eines Datenbankdimensionsattributs mithilfe des Dimensions-Designers.  
   
  [Definieren von Attributbeziehungen](attribute-relationships-define.md)  

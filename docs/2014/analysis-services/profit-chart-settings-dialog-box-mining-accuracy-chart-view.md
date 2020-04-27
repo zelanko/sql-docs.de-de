@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c9c44aa6060a9b626b3de0cde5a3c82e1e55b1dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070687"
 ---
 # <a name="profit-chart-settings-dialog-box-mining-accuracy-chart-view"></a>Dialogfeld Gewinndiagrammeinstellungen (Mininggenauigkeitsdiagrammsicht)
   Mit dem Dialogfeld **Gewinndiagrammeinstellungen** können Sie die Einstellungen für das Generieren eines Gewinndiagramms konfigurieren. Weitere Informationen zu Gewinndiagrammen finden Sie unter [Prognosegütediagramm &#40;Analysis Services – Data Mining&#41;](data-mining/lift-chart-analysis-services-data-mining.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Bevölkerungs**  
  Geben Sie die Anzahl von Fällen im Dataset ein, die zum Erstellen des Gewinndiagramms verwendet werden.  
   
@@ -38,6 +38,6 @@ ms.locfileid: "66070687"
 ## <a name="see-also"></a>Weitere Informationen  
  [Mining Genauigkeits Diagramm-Designer &#40;Data Mining-&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Test-und validierungsaufgaben und Anleitungen &#40;Data Mining-&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Testen und validieren &#40;Data Mining-&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Tests und Überprüfung &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

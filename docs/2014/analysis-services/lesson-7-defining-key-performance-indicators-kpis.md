@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 51fe8dc2a7ec38c9e2a71d9b2678e7c3e4ba6f95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078288"
 ---
 # <a name="lesson-7-defining-key-performance-indicators-kpis"></a>Lektion 7: Definieren von KPIs (Key Performance Indicator)
   In dieser Lektion erfahren Sie, wie Sie KPIs (Key Performance Indicator) in Ihrem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt definieren können. KPIs stellen ein Gerüst für die Definition serverseitiger Berechnungen bereit, die Measures für Ihr Unternehmen bereitstellen und die Darstellung der resultierenden Informationen in Standardform wiedergeben. KPIs können in Berichten, Portalen und Dashboards mithilfe von Datenzugriffs-APIs sowie [!INCLUDE[msCoName](../includes/msconame-md.md)] -Tools und Drittanbietertools angezeigt werden. KPIs sind Metadatenwrapper um reguläre Measures und andere MDX-Ausdrücke (Multidimensional Expressions). Weitere Informationen finden Sie unter [Leistungskennzahlen &#40;Key Performance Indicators, KPIs&#41; in mehrdimensionalen Modellen](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md).  
   
 > [!NOTE]  
->  Für alle Lektionen in diesem Lernprogramm sind abgeschlossene Projekte online verfügbar. Sie können jede Lektion aufrufen, indem Sie ein abgeschlossenes Projekt aus der vorherigen Lektion als Ausgangspunkt verwenden. [Klicken Sie hier](https://go.microsoft.com/fwlink/?LinkID=221866) , um die Beispiel Projekte für dieses Tutorial herunterzuladen.  
+>  Für alle Lektionen in diesem Lernprogramm sind abgeschlossene Projekte online verfügbar. Sie können jede Lektion aufrufen, indem Sie ein abgeschlossenes Projekt aus der vorherigen Lektion als Ausgangspunkt verwenden. [Klicken Sie hier](https://go.microsoft.com/fwlink/?LinkID=221866) , um die Beispielprojekte für dieses Lernprogramm herunterzuladen.  
   
  Diese Lektion beinhaltet die folgende Aufgabe:  
   
@@ -34,6 +34,6 @@ ms.locfileid: "66078288"
 ## <a name="see-also"></a>Weitere Informationen  
  [Analysis Services Tutorial-Szenario](analysis-services-tutorial-scenario.md)   
  [Mehrdimensionale Modellierung &#40;Adventure Works-Tutorial&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
- [Wichtige Leistungsindikatoren &#40;KPIs&#41; in mehrdimensionalen Modellen](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)  
+ [Leistungskennzahlen &#40;Key Performance Indicators, KPIs&#41; in mehrdimensionalen Modellen](multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)  
   
   

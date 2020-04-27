@@ -22,14 +22,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b283f179a6d9ad79e90e4abdfc2e5af0c199d4dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900292"
 ---
 # <a name="integration-services-transformations"></a>SQL Server Integration Services-Transformationen
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] bei Transformationen handelt es sich um die Komponenten im Datenfluss eines Pakets, mit denen Daten aggregiert, zusammengeführt, verteilt und geändert werden. Mit Transformationen können auch Suchvorgänge ausgeführt und Stichprobendatasets generiert werden. In diesem Abschnitt werden die Transformationen von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] beschrieben. Darüber hinaus wird deren Funktionsweise erklärt.  
+  Bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Transformationen handelt es sich um die Komponenten im Datenfluss eines Pakets, mit denen Daten aggregiert, zusammengeführt, verteilt und geändert werden. Mit Transformationen können auch Suchvorgänge ausgeführt und Stichprobendatasets generiert werden. In diesem Abschnitt werden die Transformationen von [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] beschrieben. Darüber hinaus wird deren Funktionsweise erklärt.  
   
 ## <a name="business-intelligence-transformations"></a>Business Intelligence-Transformationen  
  Die folgenden Transformationen führen Business Intelligence-Vorgänge aus, wie z. B. das Bereinigen von Daten, Text Mining und das Ausführen von Data Mining-Vorhersageabfragen.  
@@ -50,7 +50,7 @@ ms.locfileid: "62900292"
 |Transformation|BESCHREIBUNG|  
 |--------------------|-----------------|  
 |[Transformation zum Zuordnen der Zeichen](character-map-transformation.md)|Diese Transformation wendet Zeichenfolgenfunktionen auf Zeichendaten an.|  
-|[Spalten-Kopieren-Transformation](copy-column-transformation.md)|Diese Transformation fügt der Transformationsausgabe Kopien von Eingabespalten hinzu.|  
+|[Transformation für das Kopieren von Spalten](copy-column-transformation.md)|Diese Transformation fügt der Transformationsausgabe Kopien von Eingabespalten hinzu.|  
 |[Transformation für Datenkonvertierung](data-conversion-transformation.md)|Diese Transformation konvertiert den Datentyp einer Spalte in einen anderen Datentyp.|  
 |[Transformation für abgeleitete Spalten](derived-column-transformation.md)|Diese Transformation füllt Spalten mit den Ergebnissen von Ausdrücken auf.|  
 |[Transformation für das Exportieren von Spalten](export-column-transformation.md)|Diese Transformation fügt Daten aus einem Datenfluss in eine Datei ein.|  
@@ -79,14 +79,13 @@ ms.locfileid: "62900292"
 |[Transformation für Multicast](multicast-transformation.md)|Diese Transformation verteilt Datasets an mehrere Ausgaben.|  
 |[Transformation für UNION ALL](union-all-transformation.md)|Diese Transformation führt mehrere Datasets zusammen.|  
 |[Transformation für Zusammenführen](merge-transformation.md)|Diese Transformation führt zwei sortierte Datasets zusammen.|  
-|[Merge Join Transformation](merge-join-transformation.md)|Diese Transformation verknüpft zwei Datasets mithilfe eines FULL-, LEFT- oder INNER-Joins.|  
+|[Transformation für Zusammenführungsjoin](merge-join-transformation.md)|Diese Transformation verknüpft zwei Datasets mithilfe eines FULL-, LEFT- oder INNER-Joins.|  
 |[Suchtransformation](lookup-transformation.md)|Diese Transformation sucht Werte in einer Verweistabelle mithilfe einer genauen Übereinstimmung.|  
 |[Cachetransformation](cache-transform.md)|Die Transformation, die Daten aus einer verbundenen Datenquelle im Datenfluss in einen Cacheverbindungs-Manager schreibt, der die Daten in einer Cachedatei speichert. Die Transformation für Suche führt Suchvorgänge in den Daten der Cachedatei aus.|  
-|[Balanced Data Distributor (BDD)-Transformation](balanced-data-distributor-transformation.md)|Die Transformation verteilt Puffer mit eingehenden Zeilen gleichmäßig auf Ausgaben für separate Threads, um die Leistung von SSIS-Paketen zu verbessern, die auf Mehrkern- und Mehrprozessorservern ausgeführt werden.|  
+|[Balanced Data Distributor-Transformation](balanced-data-distributor-transformation.md)|Die Transformation verteilt Puffer mit eingehenden Zeilen gleichmäßig auf Ausgaben für separate Threads, um die Leistung von SSIS-Paketen zu verbessern, die auf Mehrkern- und Mehrprozessorservern ausgeführt werden.|  
   
 ## <a name="auditing-transformations"></a>Überwachen von Transformationen  
- 
-  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] enthält die folgenden Transformationen, um Überwachungsinformationen hinzuzufügen und Zeilen zu zählen.  
+ [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] enthält die folgenden Transformationen, um Überwachungsinformationen hinzuzufügen und Zeilen zu zählen.  
   
 |Transformation|BESCHREIBUNG|  
 |--------------------|-----------------|  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 64997cb3db784ea78a72a7c812c8f88034c2358d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071575"
 ---
 # <a name="create-and-configure-a-powerpivot-service-application-in-central-administration"></a>Erstellen und Konfigurieren von PowerPivot-Dienstanwendungen in der Zentraladministration
@@ -32,7 +32,7 @@ ms.locfileid: "66071575"
   
  [Bearbeiten von Eigenschaften der Dienst Anwendung](#EditGSA)  
   
-##  <a name="determine"></a>Bestimmen, ob eine neue Power Pivot-Dienst Anwendung erstellt werden soll  
+##  <a name="determine-whether-to-create-a-new-powerpivot-service-application"></a><a name="determine"></a>Bestimmen, ob eine neue Power Pivot-Dienst Anwendung erstellt werden soll  
  Eine PowerPivot für SharePoint-Installation muss mindestens eine PowerPivot-Dienstanwendung in der Farm enthalten. Eine Dienstanwendung wird automatisch erstellt, wenn Sie das PowerPivot-Konfigurationstool zum Konfigurieren des Servers verwendet haben. Andernfalls müssen Sie in der Zentraladministration manuell eine PowerPivot-Dienstanwendung erstellen.  
   
  Beim Erstellen einer Dienstanwendung wird der Dienst verfügbar gemacht und die Datenbank der Dienstanwendung generiert. Abhängig von den beim Erstellen der Dienstanwendung ausgewählten Optionen wird der Standard-Dienstverbindungsgruppe eine PowerPivot-Dienstverbindung hinzugefügt. Alle SharePoint-Webanwendungen, die die Standard-Dienstverbindungsgruppe abonnieren, erhalten automatisch direkten Zugriff auf die PowerPivot-Dienstanwendung.  
@@ -49,7 +49,7 @@ ms.locfileid: "66071575"
   
  Wenn kein bestimmter Grund für eine zusätzliche PowerPivot-Dienstanwendung vorliegt, sollten Sie eine einzige Dienstanwendung für alle Webanwendungen in der Farm verwenden.  
   
-##  <a name="CreateApp"></a>Erstellen einer Power Pivot-Dienst Anwendung  
+##  <a name="create-a-powerpivot-service-application"></a><a name="CreateApp"></a>Erstellen einer Power Pivot-Dienst Anwendung  
   
 1.  Klicken Sie in der zentral Administration unter Anwendungs Verwaltung auf **Dienst Anwendungen verwalten**.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66071575"
   
 10. Klicken Sie auf **OK**. Der Dienst wird zusammen mit anderen verwalteten Diensten in der Dienstanwendungsliste der Farm angezeigt.  
   
-##  <a name="ConfigApp"></a>Power Pivot-Dienst Anwendung konfigurieren  
+##  <a name="configure-powerpivot-service-application"></a><a name="ConfigApp"></a>Power Pivot-Dienst Anwendung konfigurieren  
  Eine PowerPivot-Dienstanwendung wird unter Verwendung einer Standardkonfiguration erstellt. Für die meisten Szenarien werden die Standardeinstellungen empfohlen. Sie sollten nur geändert werden, falls Antwortzeiten zu lang sind oder Verbindungen getrennt werden oder wenn Sie unterschiedliche PowerPivot-Dienstkonfigurationen für bestimmte SharePoint-Webanwendungen verwenden.  
   
 1.  Klicken Sie in der zentral Administration unter Anwendungs Verwaltung auf **Dienst Anwendungen verwalten**.  
@@ -118,12 +118,12 @@ ms.locfileid: "66071575"
   
 15. Geben Sie unter Sammlung von Verwendungsdaten für jeden Abfrageantwort-Schwellenwert eine Obergrenze an, die bestimmt, wo eine Kategorie aufhört und die nächste beginnt. Durch diese Kategorien wird eine Basislinie festgelegt, auf deren Grundlage das Abfrageverhalten gemessen wird. Sie können diese Kategorien verwenden, um Trends in den Abfrageantwortzeiten Ihres Systems zu überwachen. Diese Informationen werden im PowerPivot-Management-Dashboard angezeigt.  
   
-16. Klicken Sie auf **OK**, um die Änderungen zu speichern.  
+16. Klicken Sie auf **OK** , um die Änderungen zu speichern.  
   
      Änderungen am Timeout für Ladevorgänge oder an der Zuordnungsmethode werden nur auf neu eingehende Anforderungen angewendet. Für Anforderungen, die bereits ausgeführt werden, gelten die Werte, die beim Empfang der Anforderung gültig waren.  
   
-##  <a name="AssignGSA"></a>Zuweisen einer Power Pivot-Dienst Anwendung zu einer Webanwendung  
- Nachdem Sie eine PowerPivot-Dienstanwendung konfiguriert haben, können Sie sie einer Webanwendung zuweisen, indem Sie sie der Liste der Dienstanwendungsverbindungen für die jeweilige Webanwendung hinzufügen. Dies kann auf zwei Arten erreicht werden:  
+##  <a name="assign-a-powerpivot-service-application-to-a-web-application"></a><a name="AssignGSA"></a>Zuweisen einer Power Pivot-Dienst Anwendung zu einer Webanwendung  
+ Nachdem Sie eine PowerPivot-Dienstanwendung konfiguriert haben, können Sie sie einer Webanwendung zuweisen, indem Sie sie der Liste der Dienstanwendungsverbindungen für die jeweilige Webanwendung hinzufügen. Hierfür gibt es zwei Möglichkeiten:  
   
 -   Fügen Sie die Anwendung der Standardverbindungsgruppe **** hinzu. Die *Standardverbindungsgruppe* ist eine Sammlung von Dienstanwendungsverbindungen, die jeder Webanwendung zur Verfügung stehen, die darauf verweist. Sie müssen dieser Liste eine PowerPivot-Dienstanwendung hinzufügen.  
   
@@ -131,19 +131,19 @@ ms.locfileid: "66071575"
   
  Die Standardverbindungsgruppe kann mehr als eine Dienstanwendung des gleichen Typs enthalten. Beachten Sie jedoch, dass das Hinzufügen von mehr als einer PowerPivot-Dienstanwendung zu dieser Liste keine unterstützte Konfiguration ist.  
   
-1.  Klicken Sie in der zentral Administration unter **Anwendungs Verwaltung**auf **Webanwendungen verwalten**.  
+1.  Klicken Sie in der Zentraladministration unter **Anwendungsverwaltung**auf **Webanwendungen verwalten**.  
   
 2.  Wählen Sie die Anwendung aus, für die Sie eine Verbindung zuweisen möchten (z. B. SharePoint -80).  
   
 3.  Klicken Sie auf **Dienstverbindungen**.  
   
-4.  Wählen Sie unter **Folgende Zuordnungsgruppe bearbeiten**entweder **default** oder **[custom]** aus.  
+4.  Wählen Sie unter folgende Zuordnungs **Gruppe bearbeiten die**Option **Standard** oder **[Benutzer definiert]** aus.  
   
-5.  Aktivieren Sie für **[custom]** das Kontrollkästchen neben jeder Dienstanwendungsverbindung, die Sie verwenden möchten. Wenn Sie über mehrere Power Pivot-Dienst Anwendungen verfügen (angezeigt durch den `PowerPivot Service Application Proxy`Typ auf festgelegt), achten Sie darauf, nur eine zu wählen.  
+5.  Aktivieren Sie für **[Custom]** das Kontrollkästchen neben jeder Dienst Anwendungs Verbindung, die Sie verwenden möchten. Wenn Sie über mehrere Power Pivot-Dienst Anwendungen verfügen (angezeigt durch den `PowerPivot Service Application Proxy`Typ auf festgelegt), achten Sie darauf, nur eine zu wählen.  
   
 6.  Klicken Sie auf **OK**.  
   
-##  <a name="EditGSA"></a>Bearbeiten von Eigenschaften der Dienst Anwendung  
+##  <a name="edit-service-application-properties"></a><a name="EditGSA"></a>Bearbeiten von Eigenschaften der Dienst Anwendung  
  Verwenden Sie die folgenden Anweisungen, um die Eigenschaftenseite erneut zu öffnen, die den Dienstanwendungsnamen, den Anwendungspool sowie die Datenbankeinstellungen und Dienstzuordnungen enthält.  
   
 1.  Klicken Sie in der zentral Administration unter Anwendungs Verwaltung auf **Dienst Anwendungen verwalten**.  

@@ -13,27 +13,27 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d40c0397b0a43f8cd17a53ee9be3f738bbe8500c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63283315"
 ---
 # <a name="options-environment-help-online-page"></a>Optionen (Umgebung-Hilfe-Online Seite)
-  Im Dialogfeld **Optionen** können Sie die für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Suchvorgänge zu verwendenden Hilfe Quellen angeben, einschließlich der F1-Hilfe. Klicken Sie im Menü **Extras** auf **Optionen**, erweitern Sie den Ordner **Umgebung** , wählen Sie **Hilfe**, und klicken Sie anschließend auf **Online**. Wenn die Seite **Online** in der Liste nicht angezeigt wird, aktivieren Sie im Dialogfeld **Optionen** das Kontrollkästchen **Alle Einstellungen anzeigen** .  
+  Im Dialogfeld **Optionen** können Sie die bei Suchvorgängen in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zu verwendenden Hilfequellen einschließlich der F1-Hilfe angeben. Klicken Sie im Menü **Extras** auf **Optionen**, erweitern Sie den Ordner **Umgebung** , wählen Sie **Hilfe**, und klicken Sie anschließend auf **Online**. Wenn die Seite **Online** in der Liste nicht angezeigt wird, aktivieren Sie im Dialogfeld **Optionen** das Kontrollkästchen **Alle Einstellungen anzeigen** .  
   
- **Beim Laden von Hilfe Inhalten**  
+ **Beim Laden von Hilfeinhalten**  
  Legt die Reihenfolge fest, in der Hilfequellen für die F1-Hilfe verwendet werden, und gibt an, welche Hilfequellen verwendet werden.  
   
--   **Zuerst online versuchen, dann lokal**  
+-   **Erst online versuchen, dann lokal**  
   
 -   Zuerst wird nach Hilfeinformationen aus den Onlinequellen gesucht, anschließend nach Hilfeinformationen auf dem lokalen Computer.  
   
--   **Zuerst lokal versuchen, dann online**  
+-   **Erst lokal versuchen, dann online**  
   
 -   Zuerst wird nach Hilfeinformationen auf dem lokalen Computer gesucht, anschließend nach Onlinequellen.  
   
--   **Nur lokal ausprobieren, nicht online**  
+-   **Nur lokal versuchen, nicht online**  
   
      Nur die auf dem Computer installierte Hilfe wird für die F1-Hilfe verwendet.  
   

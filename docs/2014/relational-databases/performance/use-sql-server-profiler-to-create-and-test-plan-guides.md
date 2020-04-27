@@ -23,14 +23,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fcdbfe9f9289ab9cc529d4d37eb27d877dfff3ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63150491"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>Verwenden von SQL Server Profiler zum Erstellen und Testen von Planhinweislisten
-  Wenn Sie eine Planhinweisliste erstellen, können Sie durch Verwenden von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] den genauen Abfragetext aufzeichnen, um diesen im *statement_text* -Argument der gespeicherten Prozedur **sp_create_plan_guide** zu verwenden. Damit kann sichergestellt werden, dass die Planhinweisliste zum Zeitpunkt der Kompilierung mit der Abfrage in Übereinstimmung gebracht wird. Nach dem Erstellen der Planhinweisliste kann [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] auch verwendet werden, um zu testen, ob die Planhinweisliste tatsächlich in Übereinstimmung mit der Abfrage gebracht wird. Im Allgemeinen sollten Sie Planhinweislisten mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] testen, um zu überprüfen, dass Ihre Abfrage mit Ihrer Planhinweisliste übereinstimmt.  
+   Wenn Sie eine Planhinweisliste erstellen, können Sie durch Verwenden von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] den genauen Abfragetext aufzeichnen, um diesen im *statement_text*-Argument der gespeicherten Prozedur **sp_create_plan_guide** zu verwenden. Damit kann sichergestellt werden, dass die Planhinweisliste zum Zeitpunkt der Kompilierung mit der Abfrage in Übereinstimmung gebracht wird. Nach dem Erstellen der Planhinweisliste kann [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] auch verwendet werden, um zu testen, ob die Planhinweisliste tatsächlich in Übereinstimmung mit der Abfrage gebracht wird. Im Allgemeinen sollten Sie Planhinweislisten mithilfe von [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] testen, um zu überprüfen, dass Ihre Abfrage mit Ihrer Planhinweisliste übereinstimmt.  
   
 ## <a name="capturing-query-text-by-using-sql-server-profiler"></a>Aufzeichnen von Abfragetext mithilfe von SQL Server Profiler  
  Wenn Sie eine Abfrage ausführen und den Text mithilfe von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genau so aufzeichnen, wie er an [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]übermittelt wurde, können Sie eine Planhinweisliste des Typs SQL oder TEMPLATE erstellen, die genau mit dem Abfragetext übereinstimmt. Damit wird sichergestellt, dass die Planhinweisliste vom Abfrageoptimierer verwendet wird.  
@@ -94,7 +94,7 @@ EXEC sp_create_plan_guide
     > [!NOTE]  
     >  Das Ereignis **Showplan XML for Query Compile** kann nicht verwendet werden. **PlanGuideDB** ist in diesem Ereignis nicht vorhanden.  
   
-5.  Wenn die Planhinweisliste vom Typ OBJECT oder SQL ist, überprüfen Sie, ob das **Showplan XML** -Ereignis die Attribute **PlanGuideDB** und **PlanGuideName** für die Planhinweisliste enthält, die mit der Abfrage übereinstimmen soll. Handelt es sich um eine Planhinweisliste vom Typ TEMPLATE, überprüfen Sie, ob das **Showplan XML** -Ereignis die Attribute **TemplatePlanGuideDB** und **TemplatePlanGuideName** für die erwartete Planhinweisliste enthält. Damit wird die Funktionsfähigkeit der Planhinweisliste überprüft. Diese Attribute sind im **\<<StmtSimple**-Element der Planhinweisliste enthalten.  
+5.  Wenn die Planhinweisliste vom Typ OBJECT oder SQL ist, überprüfen Sie, ob das **Showplan XML** -Ereignis die Attribute **PlanGuideDB** und **PlanGuideName** für die Planhinweisliste enthält, die mit der Abfrage übereinstimmen soll. Handelt es sich um eine Planhinweisliste vom Typ TEMPLATE, überprüfen Sie, ob das **Showplan XML** -Ereignis die Attribute **TemplatePlanGuideDB** und **TemplatePlanGuideName** für die erwartete Planhinweisliste enthält. Damit wird die Funktionsfähigkeit der Planhinweisliste überprüft. Diese Attribute sind unter dem ** \<StmtSimple->** Element des Plans enthalten.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_create_plan_guide &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql)  

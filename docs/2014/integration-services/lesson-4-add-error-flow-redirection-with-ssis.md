@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 636c199e84eae9bd141bcb33fc5c06f35eac760b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891328"
 ---
 # <a name="lesson-4-adding-error-flow-redirection"></a>Lektion 4: Hinzufügen der Fehlerflussumleitung
@@ -34,17 +34,17 @@ ms.locfileid: "62891328"
 ## <a name="tasks-in-lesson"></a>Aufgaben in der Lektion  
  Diese Lektion enthält die folgenden Aufgaben:  
   
--   [Schritt 1: Kopieren des Pakets aus Lektion 3](lesson-4-1-copying-the-lesson-3-package.md)  
+-   [Schritt 1: Kopieren des Pakets aus Lektion 3](lesson-4-1-copying-the-lesson-3-package.md)  
   
 -   [Schritt 2: Erstellen einer beschädigten Datei](lesson-4-2-creating-a-corrupted-file.md)  
   
--   [Schritt 3: Hinzufügen von Fehlerflussumleitungen](lesson-4-3-adding-error-flow-redirection.md)  
+-   [Schritt 3: Hinzufügen der Fehlerflussumleitung](lesson-4-3-adding-error-flow-redirection.md)  
   
 -   [Schritt 4: Hinzufügen eines Flatfileziels](lesson-4-4-adding-a-flat-file-destination.md)  
   
--   [Schritt 5: Testen des Lektion 4-Lernprogrammpakets](lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
+-   [Schritt 5: Testen des Tutorialpakets aus Lektion 4](lesson-4-5-testing-the-lesson-4-tutorial-package.md)  
   
 ## <a name="start-the-lesson"></a>Lektion beginnen  
- [Schritt 1: Kopieren des Pakets aus Lektion 3](lesson-4-1-copying-the-lesson-3-package.md)  
+ [Schritt 1: Kopieren des Pakets aus Lektion 3](lesson-4-1-copying-the-lesson-3-package.md)  
   
   

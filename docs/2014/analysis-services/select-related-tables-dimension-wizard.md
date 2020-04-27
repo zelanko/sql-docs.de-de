@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a135df3d3850aebdb9ac6dda08561a7fae21793f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069289"
 ---
 # <a name="select-related-tables-dimension-wizard"></a>Verknüpfte Tabellen auswählen (Dimensions-Assistent)
@@ -26,7 +26,7 @@ ms.locfileid: "66069289"
   
 -   Klicken Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]im **Projektmappen-Explorer**mit der rechten Maustaste auf den Ordner **Dimensionen** eines [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekts, und klicken Sie anschließend auf **Neue Dimension**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verknüpfte Tabellen**  
  Wählen Sie eine Tabelle aus, um die verknüpfte Tabelle in die Dimension einzuschließen.  
   

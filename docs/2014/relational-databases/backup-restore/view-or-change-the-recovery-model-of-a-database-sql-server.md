@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4bc7254d8a3eafa3c7c7d152d323051a3c5bea94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62875079"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Anzeigen oder Ändern des Wiederherstellungsmodells einer Datenbank (SQL Server)
@@ -34,7 +34,7 @@ ms.locfileid: "62875079"
   
      [Empfehlungen](#Recommendations)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **Anzeigen oder Ändern des Wiederherstellungsmodells einer Datenbank mit:**  
   
@@ -42,13 +42,13 @@ ms.locfileid: "62875079"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Empfehlungen zur Nachverfolgung:**  [nach dem Ändern des Wiederherstellungs Modells](#FollowUp)  
+-   **Empfehlungen zur Nachverfolgung:**  [Nach dem Ändern des Wiederherstellungsmodells](#FollowUp)  
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Recommendations"></a> Empfehlungen  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
   
 -   Bevor Sie vom vollständigen oder massenprotokollierten Wiederherstellungsmodell umschalten, sichern Sie das Transaktionsprotokoll.  
   
@@ -63,12 +63,12 @@ ms.locfileid: "62875079"
 > [!NOTE]  
 >  Wenn Sie während eines Massenvorgangs auf das vollständige Wiederherstellungsmodell umstellen, sollten Sie beachten, dass sich die Protokollierung des Massenvorgangs von der minimalen Protokollierung in die vollständige Protokollierung ändert und umgekehrt.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Datenbank.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-view-or-change-the-recovery-model"></a>So zeigen Sie das Wiederherstellungsmodell an oder ändern es  
   
@@ -86,7 +86,7 @@ ms.locfileid: "62875079"
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-view-the-recovery-model"></a>So zeigen Sie das Wiederherstellungsmodell an  
   
@@ -117,9 +117,9 @@ USE master ;
 ALTER DATABASE model SET RECOVERY FULL ;  
 ```  
   
-##  <a name="FollowUp"></a>Empfehlungen zur Nachverfolgung: nach dem Ändern des Wiederherstellungs Modells  
+##  <a name="follow-up-recommendations-after-you-change-the-recovery-model"></a><a name="FollowUp"></a>Empfehlungen zur Nachverfolgung: nach dem Ändern des Wiederherstellungs Modells  
   
--   **Nach dem Wechseln zwischen dem vollständigen und dem Massen protokollierten Wiederherstellungs Modell**  
+-   **Nach dem Umschalten zwischen dem vollständigen und massenprotokollierten Wiederherstellungsmodell**  
   
     -   Wechseln Sie nach der Ausführung der Massenvorgänge sofort wieder zum vollständigen Wiederherstellungsmodus.  
   
@@ -128,7 +128,7 @@ ALTER DATABASE model SET RECOVERY FULL ;
         > [!NOTE]  
         >  Ihre Sicherungsstrategie ändert sich nicht. Führen Sie weiterhin regelmäßige Datenbanksicherungen, Protokollsicherungen und differenzielle Sicherungen aus.  
   
--   **Nach dem Wechsel vom einfachen Wiederherstellungs Modell**  
+-   **Nach dem Umschalten vom einfachen Wiederherstellungsmodell**  
   
     -   Erstellen Sie sofort nach der Umstellung auf das vollständige Wiederherstellungsmodell bzw. das massenprotokollierte Wiederherstellungsmodell eine vollständige oder eine differenzielle Datenbanksicherung, um die Protokollkette zu starten.  
   
@@ -140,13 +140,13 @@ ALTER DATABASE model SET RECOVERY FULL ;
         > [!IMPORTANT]  
         >  Wenn Sie das Transaktionsprotokoll nicht oft genug sichern, kann das Protokoll so stark vergrößert werden, bis kein Speicherplatz mehr verfügbar ist.  
   
--   **Nach dem Wechsel zum einfachen Wiederherstellungs Modell**  
+-   **Nach dem Umschalten zum einfachen Wiederherstellungsmodell**  
   
     -   Unterbrechen Sie alle geplanten Aufträge, um das Transaktionsprotokoll zu sichern.  
   
     -   Stellen Sie sicher, dass regelmäßige Datenbanksicherungen stattfinden. Datenbanksicherungen müssen regelmäßig durchgeführt werden, damit Ihre Daten geschützt sind und der inaktive Teil des Transaktionsprotokolls abgeschnitten werden kann.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md)  
   
@@ -154,16 +154,16 @@ ALTER DATABASE model SET RECOVERY FULL ;
   
 -   [Erstellen eines Auftrags](../../ssms/agent/create-a-job.md)  
   
--   [Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)  
+-   [Deaktivieren oder Aktivieren eines Auftrags](../../ssms/agent/disable-or-enable-a-job.md)  
   
-##  <a name="RelatedContent"></a> Verwandte Inhalte  
+##  <a name="related-content"></a><a name="RelatedContent"></a> Verwandte Inhalte  
   
--   [Datenbank-Wartungspläne](../maintenance-plans/maintenance-plans.md) ( [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] in der-Online Dokumentation)  
+-   [Datenbankwartungspläne](../maintenance-plans/maintenance-plans.md) (in der [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] -Onlinedokumentation)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Wiederherstellungs Modelle &#40;SQL Server&#41;](recovery-models-sql-server.md)   
+ [Wiederherstellungsmodelle &#40;SQL Server&#41;](recovery-models-sql-server.md)   
  [Das Transaktionsprotokoll &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
- [Alter Database &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)   
  [sys.databases &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql)   
  [Wiederherstellungsmodelle &#40;SQL Server&#41;](recovery-models-sql-server.md)  
   

@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4be1c196adbe21635c1339da3d5ec7ca519001fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62876599"
 ---
 # <a name="create-a-differential-database-backup-sql-server"></a>Erstellen einer differenziellen Datenbanksicherung (SQL Server)
@@ -43,28 +43,28 @@ ms.locfileid: "62876599"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Die BACKUP-Anweisung ist nicht in einer expliziten oder implizierten Transaktion zulässig.  
   
-###  <a name="Prerequisites"></a> Voraussetzungen  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
   
 -   Eine differenzielle Datenbanksicherung kann nur erstellt werden, wenn bereits eine frühere vollständige Datenbanksicherung vorhanden ist. Wenn die ausgewählte Datenbank noch nie gesichert wurde, führen Sie vor dem Erstellen differenzieller Sicherungen zunächst eine vollständige Datenbanksicherung aus. Weitere Informationen finden Sie unter [Erstellen einer vollständigen Datenbanksicherung &#40;SQL Server&#41;](create-a-full-database-backup-sql-server.md).  
   
-###  <a name="Recommendations"></a> Empfehlungen  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
   
 -   Mit zunehmender Größe der differenziellen Sicherungen kann das Wiederherstellen einer differenziellen Sicherung den Zeitaufwand zum Wiederherstellen einer Datenbank erheblich erhöhen. Daher sollten Sie in regelmäßigen Abständen neue vollständige Sicherungen ausführen, um eine neue differenzielle Basis für die Daten zu erstellen. Sie können z. B. einmal wöchentlich eine vollständige Sicherung der gesamten Datenbank (also eine vollständige Datenbanksicherung) und während der Woche eine regelmäßige Serie von differenziellen Datenbanksicherungen ausführen.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Mitglieder der festen Serverrolle **sysadmin** und der festen Datenbankrollen **db_owner** und **db_backupoperator** verfügen standardmäßig über BACKUP DATABASE- und BACKUP LOG-Berechtigungen.  
   
  Besitz- und Berechtigungsprobleme im Zusammenhang mit der physischen Datei des Sicherungsmediums können den Sicherungsvorgang beeinträchtigen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] muss über Lese- und Schreibberechtigungen für das Medium verfügen. Das Konto, unter dem der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Dienst ausgeführt wird, muss Schreibberechtigungen haben. Allerdings prüft die gespeicherte Prozedur [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql), die den Systemtabellen einen Eintrag für ein Sicherungsmedium hinzufügt, nicht die Dateizugriffsberechtigungen. Solche Probleme mit der physischen Datei des Sicherungsmediums treten möglicherweise erst auf, wenn auf die physische Ressource zugegriffen wird, um einen Sicherungs- oder Wiederherstellungsvorgang auszuführen.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-create-a-differential-database-backup"></a>So erstellen Sie eine differenzielle Datenbanksicherung  
   
@@ -135,7 +135,7 @@ ms.locfileid: "62876599"
     > [!NOTE]  
     >  Alternativ können Sie den Wartungsplanungs-Assistenten zum Erstellen differenzieller Datenbanksicherungen verwenden.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-create-a-differential-database-backup"></a>So erstellen Sie eine differenzielle Datenbanksicherung  
   
@@ -151,7 +151,7 @@ ms.locfileid: "62876599"
   
      BACKUP DATABASE *database_name* TO <backup_device> WITH DIFFERENTIAL  
   
-###  <a name="TsqlExample"></a> Beispiel (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Beispiel (Transact-SQL)  
  In diesem Beispiel werden eine vollständige und eine differenzielle Datenbanksicherung für die `MyAdvWorks` -Datenbank erstellt  
   
 ```sql  

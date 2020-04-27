@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 43ee3cc999d227931e53c6faa89465315f52e4e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066343"
 ---
 # <a name="tabular-model-projects-ssas-tabular"></a>Tabellenmodellprojekte (SSAS – tabellarisch)
@@ -22,10 +22,10 @@ ms.locfileid: "66066343"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Erstellen eines neu tabellarischen Modellprojekts &#40;tabellarischen SSAS-&#41;](create-a-new-tabular-model-project-analysis-services.md)|In diesem Thema wird beschrieben, wie ein neues, leeres Projekt für tabellarische Modelle erstellt wird.|  
-|[Aus Analysis Services &#40;tabellarischen SSAS-&#41;importieren](import-from-analysis-services-ssas-tabular.md)|In diesem Thema wird beschrieben, wie ein neues Projekt für tabellarische Modelle auf der Grundlage eines bereits in Analysis Services enthaltenen Modells erstellt wird. Metadaten aus dem vorhandenen Modell werden extrahiert und für das neue Modell verwendet.|  
+|[Importieren aus Analysis Services &#40;SSAS – tabellarisch&#41;](import-from-analysis-services-ssas-tabular.md)|In diesem Thema wird beschrieben, wie ein neues Projekt für tabellarische Modelle auf der Grundlage eines bereits in Analysis Services enthaltenen Modells erstellt wird. Metadaten aus dem vorhandenen Modell werden extrahiert und für das neue Modell verwendet.|  
 |[Aus Power Pivot &#40;tabellarischen SSAS-&#41;importieren](import-from-power-pivot-ssas-tabular.md)|In diesem Thema wird beschrieben, wie ein neues Projekt für tabellarische Modelle erstellt wird, indem Metadaten und Daten aus einer PowerPivot für Excel-Datei (.xlsx) extrahiert werden.|  
   
   

@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4c583ffad2267a82c39d4ab6c7cd71a1852c7cb2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63065458"
 ---
 # <a name="bcp_colfmt"></a>bcp_colfmt
@@ -126,7 +126,7 @@ idxServerCol
 ## <a name="returns"></a>Rückgabe  
  SUCCEED oder FAIL.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Mit der **bcp_colfmt** -Funktion können Sie das Benutzerdatei Format für Massen Kopien angeben. Für Massenkopieren besteht ein Format aus folgenden Bestandteilen:  
   
 -   Eine Zuordnung von Benutzerdateispalten zu Datenbankspalten  

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f0717d8a81cc89897de005144dd631d23da42137
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081025"
 ---
 # <a name="forecast-wizard-data-mining-add-ins-for-excel"></a>Planungs-Assistent (Data Mining-Add-Ins für Excel)
@@ -65,7 +65,7 @@ ms.locfileid: "66081025"
   
     -   **Temporäres Modell verwenden**. Wenn Sie diese Option auswählen, wird das Modell nicht auf dem Server gespeichert. Temporäre Modelle werden beim Schließen von Excel gelöscht.  
   
-### <a name="requirements"></a>Requirements (Anforderungen)  
+### <a name="requirements"></a>Anforderungen  
  Die Daten sollten mindestens eine Spalte umfassen, die als Zeitreihe verwendet werden kann. Die Werte in dieser Spalte sollten eindeutig und fortlaufend sein, d. h., es sollten keine Lücken vorhanden sein. Bevor Sie den Assistenten ausführen, sortieren Sie die Daten nach der Zeitreihenspalte in aufsteigender Reihenfolge.  
   
  Falls Ihre Daten keine Zeit- oder Datumsspalte enthalten, können Sie eine beliebige numerische Reihe zuweisen oder die Spalte vom Assistenten erstellen lassen. Wenn der Assistent die Reihensortierspalte erstellen soll, vergewissern Sie sich, dass die anderen Spalten in der gewünschten Reihenfolge sortiert sind, bevor Sie den Assistenten starten.  

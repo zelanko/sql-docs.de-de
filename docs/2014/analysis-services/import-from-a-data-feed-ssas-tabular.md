@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bcb3a1cbcabc66492bbd780be4716ce69f15de37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080572"
 ---
 # <a name="import-from-a-data-feed-ssas-tabular"></a>Importieren von Daten aus einem Datenfeed (SSAS – tabellarisch)
@@ -24,21 +24,21 @@ ms.locfileid: "66080572"
   
 -   [Grundlegendes zum Importieren aus einem Datenfeed](#prereq)  
   
--   [Importieren von Daten aus einem Azure datamarket-DataSet](#azure)  
+-   [Importieren von Daten aus einem Azure DataMarket-Dataset](#azure)  
   
--   [Importieren von Datenfeeds aus öffentlichen oder Unternehmensdaten Quellen](#importdata)  
+-   [Importieren von Datenfeeds aus öffentlichen oder Unternehmensdatenquellen](#importdata)  
   
 -   [Importieren von Datenfeeds aus SharePoint-Listen](#importlist)  
   
--   [Importieren von Datenfeeds aus Reporting Services Berichten](#importreport)  
+-   [Importieren von Datenfeeds aus Reporting Services-Berichten](#importreport)  
   
-##  <a name="prereq"></a>Grundlegendes zum Importieren aus einem Datenfeed  
+##  <a name="understanding-import-from-a-data-feed"></a><a name="prereq"></a>Grundlegendes zum Importieren aus einem Datenfeed  
  Sie können Daten aus den folgenden Arten von Datenfeeds in ein tabellarisches Modell importieren:  
   
- **Reporting Services Bericht**  
+ **Reporting Services-Bericht**  
  Sie können auf einer SharePoint-Website oder einem Berichtsserver veröffentlichte Reporting Services-Berichte als Datenquelle in einem Modell verwenden. Beim Importieren von Daten aus einem Reporting Services-Bericht müssen Sie eine Berichtsdefinitionsdatei (.rdl) als Datenquelle angeben.  
   
- **Azure datamarket-DataSet**  
+ **Azure DataMarket-Dataset**  
  Azure DataMarket ist ein Dienst, der im Rahmen von Clouddiensten einen Marketplace und einen Übermittlungskanal für Informationen bereitstellt. Azure DataMarket-Datasets erfordern anstelle eines Windows-Benutzerkontos einen Kontoschlüssel.  
   
  **Atom-Feeds**  
@@ -46,7 +46,7 @@ ms.locfileid: "66080572"
   
  Daten aus einem Datenfeed werden einem Modell während des Imports einmal hinzugefügt. Um aktualisierte Daten aus dem Feed zu erhalten, können Sie entweder die Daten aus dem Modell-Designer aktualisieren oder einen Datenaktualisierungszeitplan für das Modell konfigurieren, nachdem es auf einer Produktionsinstanz von Analysis Services bereitgestellt wurde. Weitere Informationen finden Sie unter [Verarbeiten von Daten &#40;SSAS – tabellarisch&#41;](process-data-ssas-tabular.md).  
   
-##  <a name="azure"></a>Importieren von Daten aus einem Azure datamarket-DataSet  
+##  <a name="import-data-from-an-azure-datamarket-dataset"></a><a name="azure"></a>Importieren von Daten aus einem Azure datamarket-DataSet  
  Sie können Daten aus einem Azure DataMarket als Tabelle in Ihr Modell importieren.  
   
 #### <a name="to-import-data-from-an-azure-datamarket-dataset"></a>So importieren Sie Daten aus einem Azure DataMarket-Dataset  
@@ -73,7 +73,7 @@ ms.locfileid: "66080572"
   
 11. Klicken Sie auf der Seite **Tabellen und Sichten auswählen** auf **Fertig stellen**.  
   
-##  <a name="importdata"></a>Importieren von Datenfeeds aus öffentlichen oder Unternehmensdaten Quellen  
+##  <a name="import-data-feeds-from-public-or-corporate-data-sources"></a><a name="importdata"></a>Importieren von Datenfeeds aus öffentlichen oder Unternehmensdaten Quellen  
  Sie können auf öffentliche Feeds zugreifen oder benutzerdefinierte Datendienste erstellen, die Atom-Feeds aus proprietären oder Legacydatenbanksystemen generieren.  
   
 #### <a name="to-import-data-from-public-or-corporate-data-feeds"></a>So importieren Sie Daten aus öffentlichen oder Unternehmensdatenfeeds  
@@ -111,7 +111,7 @@ ms.locfileid: "66080572"
   
 10. Klicken Sie auf der Seite **Tabellen und Sichten auswählen** auf **Fertig stellen**.  
   
-##  <a name="importlist"></a>Importieren von Datenfeeds aus SharePoint-Listen  
+##  <a name="import-data-feeds-from-sharepoint-lists"></a><a name="importlist"></a>Importieren von Datenfeeds aus SharePoint-Listen  
  Es können alle SharePoint-Listen importiert werden, für die im Menüband (SharePoint) die Schaltfläche **Als Datenfeed exportieren** angezeigt wird. Sie können auf diese Schaltfläche klicken, um die Liste als Feed zu exportieren.  
   
 #### <a name="to-import-data-feeds-from-a-sharepoint-list"></a>So importieren Sie Datenfeeds aus einer SharePoint-Liste  
@@ -143,7 +143,7 @@ ms.locfileid: "66080572"
   
 10. Klicken Sie auf der Seite **Tabellen und Sichten auswählen** auf **Fertig stellen**.  
   
-##  <a name="importreport"></a>Importieren von Datenfeeds aus Reporting Services Berichten  
+##  <a name="import-data-feeds-from-reporting-services-reports"></a><a name="importreport"></a>Importieren von Datenfeeds aus Reporting Services Berichten  
  Wenn Sie über eine [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Reporting Services-Bereitstellung verfügen, können Sie einen Datenfeed mithilfe der Atom-Renderingerweiterung aus einem vorhandenen Bericht generieren.  
   
 #### <a name="to-import-report-data-from-a-published-reporting-services-report"></a>So importieren Sie Berichtsdaten aus einem veröffentlichten Reporting Services-Bericht  
@@ -194,6 +194,6 @@ ms.locfileid: "66080572"
  [Unterstützte Datentypen &#40;tabellarischen SSAS-&#41;](tabular-models/data-types-supported-ssas-tabular.md)   
  [Identitätswechsel &#40;tabellarischen SSAS-&#41;](tabular-models/impersonation-ssas-tabular.md)   
  [Verarbeiten von Daten &#40;tabellarischen SSAS-&#41;](process-data-ssas-tabular.md)   
- [Importieren von Daten &#40;tabellarischen SSAS-&#41;](import-data-ssas-tabular.md)  
+ [Importieren von Daten &#40;SSAS – tabellarisch&#41;](import-data-ssas-tabular.md)  
   
   

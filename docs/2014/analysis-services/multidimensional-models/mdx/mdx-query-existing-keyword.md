@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6c5e8dbe3e1b1ad44286bcbb79132010cad618a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073967"
 ---
 # <a name="existing-keyword-mdx"></a>EXISTING-Schlüsselwort (MDX)
@@ -35,7 +35,7 @@ Existing Set_Expression
  *Set_Expression*  
  Ein gültiger MDX-Mengenausdruck (Multidimensional Expressions).  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Standardmäßig werden Mengen im Kontext des Cubes ausgewertet, der die Elemente der Menge enthält. Das `Existing`-Schlüsselwort erzwingt dagegen die Auswertung einer angegebenen Menge im aktuellen Kontext.  
   
 ## <a name="example"></a>Beispiel  
@@ -84,6 +84,6 @@ WHERE
  [Eigenschaften &#40;MDX-&#41;](/sql/mdx/properties-mdx)   
  [DrilldownLevel-&#40;MDX-&#41;](/sql/mdx/drilldownlevel-mdx)   
  [Hierarchize &#40;MDX-&#41;](/sql/mdx/hierarchize-mdx)   
- [MDX-Funktionsreferenz &#40;MDX-&#41;](/sql/mdx/mdx-function-reference-mdx)  
+ [MDX-Funktionsreferenz &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

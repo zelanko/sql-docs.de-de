@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a869d2033adaa57be0ace522787332c03a69bcb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075002"
 ---
 # <a name="grant-permissions-on-a-data-source-object-analysis-services"></a>Erteilen von Berechtigungen für ein Datenquellenobjekt (Analysis Services)
@@ -36,18 +36,18 @@ ms.locfileid: "66075002"
 ## <a name="set-read-permissions-to-a-data-source"></a>Festlegen von Leseberechtigungen für eine Datenquelle  
  Einer Datenbankrolle können entweder keine Zugriffsberechtigungen für ein Datenquellenobjekt oder Leseberechtigungen erteilt werden.  
   
-1.  Stellen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Sie in eine Verbindung mit der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Instanz von her, erweitern Sie im Objekt-Explorer **Rollen** für die entsprechende Datenbank, und klicken Sie dann auf eine Daten Bank Rolle (oder erstellen Sie eine neue Daten Bank Rolle).  
+1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]her, erweitern Sie im Objekt-Explorer das **Rollen** -Element für die entsprechende Datenbank, und klicken Sie dann auf eine Datenbankrolle (oder erstellen Sie eine neue Datenbankrolle).  
   
 2.  Suchen Sie im Bereich **Datenquellenzugriff** das Datenquellenobjekt in der Liste **Datenquelle** , und wählen Sie dann in der Liste **Zugriff** für die Datenquelle die Option **Lesen** aus. Wenn diese Option nicht verfügbar ist, überprüfen Sie im Bereich **Allgemein** , ob "Vollzugriff" ausgewählt ist. Vollzugriff enthält bereits Berechtigungen. Sie können die Berechtigungen für die Datenquelle nicht überschreiben.  
   
 ## <a name="working-with-the-connection-string-used-by-a-data-source-object"></a>Arbeiten mit der Verbindungszeichenfolge, die von einem Datenquellenobjekt verwendet wird  
  Das Datenquellenobjekt enthält die Verbindungszeichenfolge, die zum Verbindungsaufbau mit der zugrunde liegenden Datenquelle verwendet wird. Diese Verbindungszeichenfolge kann die folgenden Angaben enthalten:  
   
--   **Geben Sie einen Benutzernamen und ein Kennwort an**  
+-   **Angabe eines Benutzernamens und eines Kennworts**  
   
      Wenn die von einem Datenquellenobjekt verwendete Verbindungszeichenfolge einen Benutzernamen und ein Kennwort angibt, kann es sinnvoll sein, mehrere Datenquellenobjekte zu erstellen, von denen jedes unterschiedliche Benutzerkonten hat. Durch das Erstellen mehrerer Datenquellenobjekte können Benutzer auf bestimmte Datenquellenobjekte zugreifen, während der Zugriff auf andere Datenquellenobjekte verhindert wird. Diese anderen Datenquellenobjekte können von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] selbst zum Verarbeiten von Objekten wie z. B. Cubes und Miningmodellen verwendet werden.  
   
--   **Windows-Authentifizierung angeben**  
+-   **Angabe der Windows-Authentifizierung**  
   
      Wenn die von einem Datenquellenobjekt verwendete Verbindungszeichenfolge die Windows-Authentifizierung angibt, muss [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] in der Lage sein, die Identität des Clients anzunehmen. Wenn sich die Datenquelle auf einem Remotecomputer befindet, müssen die beiden Computer mithilfe der Kerberos-Authentifizierung als vertrauenswürdig für den Identitätswechsel eingestuft werden, weil ansonsten die Abfrage zumeist fehlschlägt. Weitere Informationen finden Sie unter [Configure Analysis Services for Kerberos constrained delegation](../instances/configure-analysis-services-for-kerberos-constrained-delegation.md) .  
   
@@ -59,6 +59,6 @@ ms.locfileid: "66075002"
  [Von Analysis Services unterstützte Authentifizierungsmethoden](../instances/authentication-methodologies-supported-by-analysis-services.md)   
  [Gewähren von benutzerdefiniertem Zugriff auf Dimensions Daten &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
  [Erteilen von Cube-oder Modell Berechtigungen &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
- [Gewähren von benutzerdefiniertem Zugriff auf Zellen Daten &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+ [Erteilen von benutzerdefiniertem Zugriff auf Zellendaten &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

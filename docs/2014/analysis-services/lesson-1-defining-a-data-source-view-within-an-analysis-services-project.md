@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 08d4d24f9049c2fd68e827664ecb07393262d8bf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079210"
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Lektion 1: Definieren einer Datenquellensicht innerhalb eines Analysis Services-Projekts

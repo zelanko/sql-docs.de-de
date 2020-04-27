@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 743eefc1bd13dec480ec8773a8602773ded7ca6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081852"
 ---
 # <a name="design-pane-mining-model-prediction-view"></a>Entwurfsbereich (Miningmodell-Vorhersageansicht)
@@ -29,9 +29,9 @@ ms.locfileid: "66081852"
 > [!NOTE]  
 >  Wenn Sie die Abfrage manuell ändern, gehen diese Änderungen bei Rückkehr zur Entwurfssicht verloren. Wenn Sie die DMX-Abfrage speichern möchten, können Sie die Abfrage in die Windows-Zwischenablage kopieren und dann in eine Textdatei einfügen.  
   
- **Weitere Informationen:** [Data Mining-Abfragen](data-mining/data-mining-queries.md)  
+ **Weitere Informationen finden Sie unter** [Data Mining-Abfrage](data-mining/data-mining-queries.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Zur Abfrageergebnissicht wechseln**  
  Klicken Sie hier, um zwischen den Bereichen **Entwurf**, **Abfrage**und **Ergebnis** zu wechseln. Der Wechsel zum Bereich **Ergebnis** führt die Abfrage aus.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66081852"
  Öffnet das Dialogfeld **Ergebnis der Data Mining-Abfrage speichern** .  
   
  **SINGLETON-Abfrage**  
- Ermöglicht das Erstellen einer SINGLETON-Abfrage, in der Sie die Werte direkt für die Abfrage bereitstellen können, statt eine Tabelle als Quelle der bekannten Daten bereitzustellen. Die Tabelle **Eingabetabelle(n) auswählen** wird durch die Tabelle **SINGLETON-Abfrageeingabe** ersetzt.  
+ Ermöglicht das Erstellen einer SINGLETON-Abfrage, in der Sie die Werte direkt für die Abfrage bereitstellen können, statt eine Tabelle als Quelle der bekannten Daten bereitzustellen. Die Tabelle **Eingabetabelle(n) auswählen** wird durch die Tabelle **Singleton-Abfrageeingabe** ersetzt.  
   
  **Abfrageergebnis aktualisieren**  
  Verarbeitet die Vorhersageabfrage erneut. Diese Option ist nur im Bereich **Ergebnis** aktiviert.  
@@ -68,12 +68,12 @@ ms.locfileid: "66081852"
  **SINGLETON-Abfrageeingabe**  
  Aktiviert, wenn Sie die Schaltfläche **SINGLETON-Abfrage** auswählen. Enthält die folgenden Spalten:  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Miningmodellspalte**|Listet die Miningmodellspalten auf, die in dem Miningmodell enthalten sind, das in der **Miningmodelle** -Spalte enhalten ist.|  
 |**Wert**|Wählen Sie einen Wert aus der Liste, die die verschiedenen Statusmöglichkeiten der ausgewählten Miningmodellspalte enthält.<br /><br /> Wenn es sich bei der Spalte um eine geschachtelte Tabellenspalte handelt, klicken Sie auf die Wertzelle, um das Dialogfeld **Eingabe für geschachtelte Tabelle** zu öffnen.|  
   
- **`Source`**  
+ **Quelle**  
  Wählen Sie die Quelle aus, die das Feld enthält, das Sie für die Spalte verwenden wollen. Sie können entweder das in der Tabelle **Miningmodell** ausgewählte Miningmodell, die in der Tabelle **Eingabetabelle(n) auswählen** ausgewählte(n) Eingabetabelle(n), eine Vorhersagefunktion oder einen benutzerdefinierten Ausdruck verwenden.  
   
  Spalten können aus den das Miningmodell enthaltenden Tabellen und den Eingabetabellen auf die Zelle gezogen werden.  
@@ -81,11 +81,11 @@ ms.locfileid: "66081852"
  **Feld**  
  Wählen Sie eine Spalte aus der Liste der aus der Quelltabelle abgeleiteten Spalten aus. Wenn Sie unter **Quelle** die **Vorhersagefunktion**ausgewählt haben, enthält diese Liste die für das ausgewählte Miningmodell verfügbare Vorhersagefunktion.  
   
- **Gruppe**  
- Wird mit der **Und/Oder** -Spalte verwendet, um Ausdrücke zu gruppieren. Beispiel: `(expr1 Or expr2) And expr3`.  
+ **Kreis**  
+ Wird mit der **Und/Oder** -Spalte verwendet, um Ausdrücke zu gruppieren. Beispielsweise `(expr1 Or expr2) And expr3`.  
   
  **Und/oder**  
- Wird zum Erstellen einer logischen Abfrage verwendet. Beispiel: `(expr1 Or expr2) And expr3`.  
+ Wird zum Erstellen einer logischen Abfrage verwendet. Beispielsweise `(expr1 Or expr2) And expr3`.  
   
  **Kriterium/Argument**  
  Geben Sie eine Bedingung oder einen benutzerdefinierten Ausdruck an, der auf die Spalte angewendet wird. Spalten können aus den das Miningmodell enthaltenden Tabellen und den Eingabetabellen auf die Zelle gezogen werden.  
@@ -93,6 +93,6 @@ ms.locfileid: "66081852"
 ## <a name="see-also"></a>Weitere Informationen  
  [Data Mining-Erweiterungen &#40;DMX-&#41;-Anweisungs Referenz](/sql/dmx/data-mining-extensions-dmx-statements)   
  [Schnittstellen für Data Mining-Abfragen](data-mining/data-mining-query-tools.md)   
- [Vorhersage Abfrage-Generator &#40;Data Mining-&#41;](prediction-query-builder-data-mining.md)  
+ [Generator für Vorhersageabfragen &#40;Data Mining&#41;](prediction-query-builder-data-mining.md)  
   
   

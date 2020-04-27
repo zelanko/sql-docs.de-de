@@ -13,19 +13,19 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 95ff2c99f01361f82b0ec29ee404958ca076d6ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068392"
 ---
 # <a name="specify-dimension-key-and-type-dimension-wizard"></a>Dimensionsschlüssel und -typ angeben (Dimensions-Assistent)
   Auf der Seite **Dimensionsschlüssel und -typ angeben** können Sie das Schlüsselattribut der Dimension definieren und kennzeichnen, ob es sich um eine langsam veränderliche Dimension (Slowly Changing Dimension, SCD) handelt.  
   
 > [!NOTE]  
->  Diese Seite wird nur angezeigt, wenn Sie auf der Seite Erstellungs **Methode auswählen** **die Option Dimension ohne eine Datenquelle erstellen** und auf der Seite **Dimensionstyp auswählen die** Option **Standard Dimension** ausgewählt haben.  
+>   Diese Seite wird nur angezeigt, wenn Sie auf der Seite **Erstellungsmethode auswählen** die Option **Dimension ohne eine Datenquelle erstellen** und auf der Seite **Dimensionstyp auswählen** die Option **Standarddimension** ausgewählt haben.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Schlüsselattribut**  
  Wählen Sie das Attribut aus, das als Schlüsselattribut der Dimension dienen soll.  
   

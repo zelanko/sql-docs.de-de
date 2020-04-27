@@ -13,23 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aca14c9462d847d91ae2b51dfdf179650ee06732
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068170"
 ---
 # <a name="specify-source-information-partition-wizard"></a>Quellinformationen angeben (Partitions-Assistent)
   Auf der Seite **Quellinformationen angeben** können Sie die Measuregruppe, in der die Partition erstellt werden soll, und die Datenquellensicht und die Filtertabellen für die Partition auswählen.  
   
 > [!CAUTION]  
->  Wenn Sie in **Verfügbare Tabellen** eine Tabelle angeben, die von einer anderen Partition verwendet wird, müssen Sie auf der Seite **Zeilen einschränken** eine Abfrage bereitstellen, oder es besteht die Gefahr, dass die Daten im Cube dupliziert werden.  
+>   Wenn Sie unter **Verfügbare Tabellen** eine Tabelle angeben, die auch von einer anderen Partition verwendet wird, müssen Sie auf der Seite **Zeilen einschränken** eine Abfrage bereitstellen, da andernfalls die Gefahr besteht, dass die Daten im Cube dupliziert werden.  
   
-## <a name="options"></a>Tastatur  
- **Measure-Gruppe**  
+## <a name="options"></a>Optionen  
+ **Measuregruppe**  
  Wählen Sie für die Partition eine Measuregruppe aus.  
   
- **Look in**  
+ **Suchen in**  
  Wählen Sie die Datenquelle oder Datenquellensicht mit den Quelltabellen für die Partition aus. Die durch die Measuregruppe verwendete Datenquellensicht wird standardmäßig ausgewählt.  
   
  **Tabellenfilter**  
@@ -49,6 +49,6 @@ ms.locfileid: "66068170"
 >  Wenn mehrere Tabellen ausgewählt werden, kann die Seite **Zeilen einschränken** nicht angezeigt werden, und die Zeilen können nicht für die von den ausgewählten Tabellen erstellten Partitionen eingeschränkt werden. Um die Zeilen für die einzelnen Partitionen einzuschränken, führen Sie den Partitions-Assistenten einmal für jede Tabelle aus, von der eine Partition erstellt werden soll.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Partitionen &#40;Analysis Services Mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Partitionen &#40;Analysis Services – mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

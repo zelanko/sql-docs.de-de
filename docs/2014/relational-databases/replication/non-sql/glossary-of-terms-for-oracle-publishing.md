@@ -13,17 +13,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fa1959a4f0fa6a2afa2fdf585d0c82d1238a019b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022392"
 ---
 # <a name="glossary-of-terms-for-oracle-publishing"></a>Begriffe im Zusammenhang mit dem Veröffentlichen von Oracle-Daten
   Beim Konfigurieren und Verwalten der Veröffentlichung von Oracle-Daten sollten Sie mit den im Folgenden genannten Oracle-Begriffen vertraut sein. Eine vollständige Liste der Oracle-Begriffe finden Sie in der Oracle-Onlinedokumentation.  
   
  Indexorganisierte Tabelle (Index Organized Table, IOT)  
- Eine Tabelle, deren Daten auf dem Datenträger physisch in der Index Reihenfolge sortiert sind. Sie ähnelt einer [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Tabelle mit einem gruppierten Index. IOTs werden als Tabellen mit gruppiertem Index auf die Abonnenten repliziert.  
+ Dies ist eine Tabelle, deren Daten auf dem Datenträger physisch in der Indexreihenfolge sortiert sind. Sie entspricht damit einer [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Tabelle mit einem gruppierten Index. IOTs werden als Tabellen mit gruppiertem Index auf die Abonnenten repliziert.  
   
  Instanz  
  Einer Oracle-Datenbank wird eine Instanz zugeordnet. Die Instanz umfasst die Speicher- und Hintergrundprozesse, die die Datenbank unterstützen. Oracle-Instanzen sind immer mit einer einzelnen Datenbank verknüpft, während [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanzen viele Datenbanken enthalten können. Unter bestimmten Umständen können aber auch Oracle-Datenbanken mehrere Instanzen besitzen.  
@@ -57,7 +57,7 @@ ms.locfileid: "63022392"
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren eines Oracle-Verlegers](configure-an-oracle-publisher.md)   
  [Auf dem Oracle-Verleger erstellte Objekte](objects-created-on-the-oracle-publisher.md)   
- [Nicht SQL Server Verleger](non-sql-server-publishers.md)   
+ [Nicht-SQL Server-Verleger](non-sql-server-publishers.md)   
  [Veröffentlichungen mit Oracle (Übersicht)](oracle-publishing-overview.md)  
   
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 61f7e509b715b1156b06362f8e9bcd4a634de0c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63020866"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Erstellen einer Veröffentlichung aus einer Oracle-Datenbank
@@ -35,13 +35,13 @@ ms.locfileid: "63020866"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a> Voraussetzungen  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
   
--   Vor dem Erstellen einer Veröffentlichung müssen Sie Oracle-Software auf dem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Verteiler installieren, und Sie müssen die Oracle-Datenbank konfigurieren. Weitere Informationen finden Sie unter [Konfigurieren eines Oracle-Verlegers](../non-sql/configure-an-oracle-publisher.md).  
+-   Voraussetzung für das Erstellen einer Veröffentlichung aus einer Oracle-Datenbank ist, dass die Oracle-Software auf dem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verteiler installiert ist und die Oracle-Datenbank konfiguriert wurde. Weitere Informationen finden Sie unter [Konfigurieren eines Oracle-Verlegers](../non-sql/configure-an-oracle-publisher.md).  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Sie können mithilfe des Assistenten für neue Veröffentlichung eine Momentaufnahme- bzw. eine Transaktionsveröffentlichung aus einer Oracle-Datenbank erstellen.  
   
  Wenn Sie zum ersten Mal eine Veröffentlichung aus einer Oracle-Datenbank erstellen, müssen Sie den Oracle-Verleger auf dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler identifizieren (für nachfolgende Veröffentlichungen aus derselben Datenbank ist dies nicht mehr erforderlich). Der Oracle-Verleger kann über den Assistenten für neue Veröffentlichung oder das Dialogfeld **Verteilereigenschaften - \<Distributor>** identifiziert werden. Im Folgenden wird das Identifizieren anhand der Vorgehensweise im Dialogfeld **Verteilereigenschaften - \<Distributor>** beschrieben.  
@@ -68,7 +68,7 @@ ms.locfileid: "63020866"
   
 6.  Wählen Sie auf der Registerkarte **Verbindungseigenschaften** als Verlegertyp **Gateway** oder **Vollständig**aus.  
   
-     Die **Complete** -Option ist so konzipiert, dass Momentaufnahme-und Transaktions Veröffentlichungen mit dem kompletten Satz unterstützter Funktionen für die Veröffentlichung von Oracle bereitgestellt werden. Die Option **Gateway** bietet spezielle Designoptimierungen, um die Leistung in Fällen zu verbessern, in denen die Replikation als Gateway zwischen Systemen verwendet wird. Sie können die Option **Gateway** nicht verwenden, wenn Sie planen, dieselbe Tabelle in mehreren Transaktionsveröffentlichungen zu veröffentlichen. Wenn Sie **Gateway**auswählen, kann eine Tabelle höchstens in einer Transaktionsveröffentlichung und in einer beliebigen Zahl an Momentaufnahmeveröffentlichungen erscheinen.  
+     Mithilfe der Option **Vollständig** kann für Momentaufnahme- und Transaktionsveröffentlichungen der vollständige Satz an unterstützten Funktionen für Oracle-Veröffentlichungen verfügbar gemacht werden. Die Option **Gateway** bietet spezielle Designoptimierungen, um die Leistung in Fällen zu verbessern, in denen die Replikation als Gateway zwischen Systemen verwendet wird. Sie können die Option **Gateway** nicht verwenden, wenn Sie planen, dieselbe Tabelle in mehreren Transaktionsveröffentlichungen zu veröffentlichen. Wenn Sie **Gateway**auswählen, kann eine Tabelle höchstens in einer Transaktionsveröffentlichung und in einer beliebigen Zahl an Momentaufnahmeveröffentlichungen erscheinen.  
   
 7.  Klicken Sie auf **Verbinden**. Es wird eine Verbindung mit dem Oracle-Verleger hergestellt, und die Verbindung wird für die Replikation konfiguriert. Das Dialogfeld **Verbindung mit Server herstellen** wird geschlossen, und es wird wieder das Dialogfeld **Verteilereigenschaften - \<Distributor>** angezeigt.  
   
@@ -105,8 +105,8 @@ ms.locfileid: "63020866"
   
 11. Geben Sie auf der Seite **Assistenten abschließen** einen Namen für die Veröffentlichung an.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
- Nachdem die Oracle-Datenbank als Verleger konfiguriert wurde, können Sie eine Transaktions-oder Momentaufnahme Veröffentlichung auf die gleiche Weise wie auf einem [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Verleger erstellen, indem Sie gespeicherte System Prozeduren verwenden.  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+ Nachdem eine Oracle-Datenbank als Verleger konfiguriert wurde, können Sie mit gespeicherten Systemprozeduren auf die gleiche Weise wie bei Verwendung eines [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Verlegers eine Transaktions- oder Momentaufnahmenveröffentlichung erstellen.  
   
 #### <a name="to-create-an-oracle-publication"></a>So erstellen Sie eine Oracle-Veröffentlichung  
   
@@ -114,8 +114,7 @@ ms.locfileid: "63020866"
   
 2.  Wenn kein Remoteverteiler vorhanden ist, konfigurieren Sie den Remoteverteiler. Weitere Informationen finden Sie unter [Configure Publishing and Distribution](../configure-publishing-and-distribution.md).  
   
-3.  Führen Sie auf dem Remoteverteiler, der vom Oracle-Verleger verwendet wird, [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) aus. Geben Sie den TNS-Namen (transparent Network Substrat) der Oracle-Daten **@publisher** Bank Instanz für und `ORACLE` den `ORACLE GATEWAY` Wert **@publisher_type**oder für an. 
-  `Specify` : Geben Sie den beim Herstellen der Verbindung vom Oracle-Verleger zum Remote- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler verwendeten Sicherheitsmodus auf eine der folgenden Arten an:  
+3.  Führen Sie auf dem Remoteverteiler, der vom Oracle-Verleger verwendet wird, [sp_adddistpublisher &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql) aus. Geben Sie den TNS-Namen (transparent Network Substrat) der Oracle-Daten **@publisher** Bank Instanz für und `ORACLE` den `ORACLE GATEWAY` Wert **@publisher_type**oder für an. `Specify` : Geben Sie den beim Herstellen der Verbindung vom Oracle-Verleger zum Remote- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler verwendeten Sicherheitsmodus auf eine der folgenden Arten an:  
   
     -   Um die Standardeinstellung Oracle-Standardauthentifizierung zu verwenden, geben Sie den Wert **0** für **@security_mode**, den Anmeldenamen für das Schema des administrativen Replikationsbenutzers, das Sie während der Konfiguration auf dem Oracle-Verleger erstellt haben, für **@login**und das Kennwort für **@password**eine Veröffentlichung aus einer Oracle-Datenbank erstellt wird.  
   
@@ -145,8 +144,8 @@ ms.locfileid: "63020866"
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurieren eines Oracle-Verlegers](../non-sql/configure-an-oracle-publisher.md)   
  [Veröffentlichen von Daten und Datenbankobjekten](publish-data-and-database-objects.md)   
- [Konfigurieren des Transaktions Satz-Auftrags für einen Oracle-Verleger &#40;Replikations Programmierung mit Transact-SQL&#41;](../administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
- [Oracle-Veröffentlichungs Übersicht](../non-sql/oracle-publishing-overview.md)   
+ [Konfigurieren des Transaktionssatz-Auftrags für einen Oracle-Verleger &#40;Replikationsprogrammierung mit Transact-SQL&#41;](../administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
+ [Oracle Publishing Overview](../non-sql/oracle-publishing-overview.md)   
  [Skript zum Erteilen von Oracle-Berechtigungen](../non-sql/script-to-grant-oracle-permissions.md)  
   
   

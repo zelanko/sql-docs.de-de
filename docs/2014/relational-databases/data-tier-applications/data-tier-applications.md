@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b9731a25633b5bc127039ae81a31df8c69bb8ccb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62873101"
 ---
 # <a name="data-tier-applications"></a>Datenebenenanwendungen
@@ -118,16 +118,16 @@ ms.locfileid: "62873101"
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
 |Beschreibt, wie eine DAC-Paketdatei zum Erstellen einer neuen DAC-Instanz verwendet wird.|[Bereitstellen einer Datenebenenanwendung](deploy-a-data-tier-application.md)|  
-|Beschreibt, wie eine neue DAC-Paketdatei zum Aktualisieren einer Instanz auf eine neue Version der DAC verwendet wird.|[Upgrade einer Datenebenenanwendung](upgrade-a-data-tier-application.md)|  
+|Beschreibt, wie eine neue DAC-Paketdatei zum Aktualisieren einer Instanz auf eine neue Version der DAC verwendet wird.|[Aktualisieren einer Datenebenenanwendung](upgrade-a-data-tier-application.md)|  
 |Beschreibt, wie eine DAC-Instanz entfernt wird. Sie können auswählen, ob Sie die zugeordnete Datenbank auch trennen oder löschen möchten, oder ob die Datenbank intakt bleiben soll.|[Löschen einer Datenebenenanwendung](delete-a-data-tier-application.md)|  
 |Beschreibt, wie die Integrität derzeit bereitgestellter DACs mithilfe des SQL Server-Hilfsprogramms angezeigt wird.|[Überwachen von Datenebenenanwendungen](data-tier-applications.md)|  
 |Beschreibt, wie eine BACPAC-Datei erstellt wird, die ein Archiv der Daten und Metadaten einer DAC enthält.|[Exportieren einer Datenebenenanwendung](export-a-data-tier-application.md)|  
 |Beschreibt, wie mit einer DAC-Archivdatei (.bacpac) entweder eine logische Wiederherstellung einer DAC ausgeführt wird oder die DAC auf einer anderen Instanz von [!INCLUDE[ssDE](../../includes/ssde-md.md)] oder [!INCLUDE[ssSDS](../../includes/sssds-md.md)] migriert wird.|[Importieren einer BACPAC-Datei zum Erstellen einer neuen Benutzerdatenbank](import-a-bacpac-file-to-create-a-new-user-database.md)|  
 |Beschreibt, wie eine BACPAC-Datei importiert wird, um eine neue Benutzerdatenbank innerhalb einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu erstellen.|[Extrahieren einer DAC aus einer Datenbank](extract-a-dac-from-a-database.md)|  
-|Beschreibt, wie eine vorhandene Datenbank auf eine DAC-Instanz heraufgestuft wird. Eine DAC-Definition wird in der Systemdatenbank erstellt und gespeichert.|[Registrieren einer Datenbank als eine DAC](register-a-database-as-a-dac.md)|  
+|Beschreibt, wie eine vorhandene Datenbank auf eine DAC-Instanz heraufgestuft wird. Eine DAC-Definition wird in der Systemdatenbank erstellt und gespeichert.|[Registrieren einer Datenbank als DAC](register-a-database-as-a-dac.md)|  
 |Beschreibt, wie vor der Verwendung eines DAC-Pakets in einem Produktionssystem sein Inhalt und die Aktionen überprüft werden, die bei einem DAC-Upgrade ausgeführt werden.|[Überprüfen eines DAC-Pakets](validate-a-dac-package.md)|  
 |Beschreibt, wie der Inhalt eines DAC-Pakets in einem Ordner abgelegt wird, in dem ein Datenbankadministrator vor der Bereitstellung auf einem Produktionsserver überprüfen kann, was die DAC bewirkt.|[Entpacken eines DAC-Pakets](unpack-a-dac-package.md)|  
-|Beschreibt die Verwendung eines Assistenten, um eine vorhandene Datenbank bereitzustellen. Der Assistent führt die Bereitstellung mithilfe von DACs aus.|[Bereitstellen einer Datenbank mit DAC](deploy-a-database-by-using-a-dac.md)|  
+|Beschreibt die Verwendung eines Assistenten, um eine vorhandene Datenbank bereitzustellen. Der Assistent führt die Bereitstellung mithilfe von DACs aus.|[Bereitstellen einer Datenbank mithilfe einer DAC](deploy-a-database-by-using-a-dac.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [DAC-Unterstützung für SQL Server-Objekte und -Versionen](dac-support-for-sql-server-objects-and-versions.md)  

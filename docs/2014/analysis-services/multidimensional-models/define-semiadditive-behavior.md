@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c72cc6b3798d790b4787cb5fcfe3e560b6580fc2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075539"
 ---
 # <a name="define-semiadditive-behavior"></a>Semiadditives Verhalten definieren
@@ -66,11 +66,11 @@ ms.locfileid: "66075539"
   
  Für die einzelnen Measures können Sie einen der Typen der semiadditiven Funktionalität auswählen, die in der folgenden Tabelle beschrieben sind.  
   
-|Semiadditive Funktion|BESCHREIBUNG|  
+|Semiadditive Funktion|Beschreibung|  
 |---------------------------|-----------------|  
 |Average of Children|Die Aggregation eines Elements ist der Durchschnitt seiner untergeordneten Elemente.|  
 |ByAccount|Das System liest das für den Kontotyp angegebene semiadditive Verhalten.|  
-|Count|Die Aggregation ist eine Anzahl von Elementen.|  
+|Anzahl|Die Aggregation ist eine Anzahl von Elementen.|  
 |Distinct Count|Die Aggregation ist eine Anzahl von eindeutigen Elementen.|  
 |First Child|Der Elementwert wird als der Wert seines ersten untergeordneten Elements in der Zeitdimension ausgewertet.|  
 |FirstNonEmpty|Der Elementwert wird als der Wert seines ersten untergeordneten Elements in der Zeitdimension ausgewertet, das Daten enthält.|  

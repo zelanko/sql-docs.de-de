@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: db069b243a0d06c142651ab4dcadd68e1e06657f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081967"
 ---
 # <a name="dependency-network-diagram-walkthrough-data-mining-add-ins"></a>Exemplarische Vorgehensweise für das Abhängigkeitsnetzwerkdiagramm (Data Mining-Add-Ins)
@@ -96,7 +96,7 @@ ms.locfileid: "66081967"
   
 3.  Klicken Sie auf das Menüband **Add-ins** , und zeigen Sie dann eine der benutzerdefinierten Symbolleisten an, die für die Arbeit mit Data Mining Diagrammen verwendet werden:  
   
-     **Layout **  
+     **Layout**  
      Optimiert das Layout von Knoten auf dem Zeichenblatt und ändert die Anzeige so, dass alle Knoten sichtbar sind.  
   
      **Größe der Seite ändern**  
@@ -105,7 +105,7 @@ ms.locfileid: "66081967"
      **Kantenstärke**  
      Blendet die Anzeige der Kantenstärke für das gesamte Diagramm ein/aus. Eine Kante ist eine Verbindung zwischen Knoten. Sie können das Schieberegler-Steuerelement verwenden, um schwache Verbindungen herauszufiltern.  
   
-     **Keits**  
+     **Slider**  
      Mit dem **Schieberegler** können Sie die Stärke der Beziehungen steuern, die im Abhängigkeits Netzwerkdiagramm angezeigt werden.  
   
      Jeder Knoten im Diagramm stellt einen Status dar. Ein Pfeil stellt einen Übergang zwischen zwei Status dar, und die Wahrscheinlichkeit, dass dieser einem Übergang zugeordnet ist. Zum Verringern der Anzahl von Knoten im Diagramm bewegen Sie die Schiebereglerleiste nach oben.  

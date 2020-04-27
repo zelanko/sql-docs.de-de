@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0c28420d711fd009dfc2b1e36ef4a613b3ecfaf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072106"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Partitionen (Dialogfeld Datenbank wiederherstellen) (Analysis Services – Mehrdimensionale Daten)
@@ -32,7 +32,7 @@ ms.locfileid: "66072106"
   
 -   Klicken Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]mit der rechten Maustaste entweder auf den Ordner **Datenbanken** einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz oder auf eine Datenbank im **Objekt-Explorer**, klicken Sie auf **Wiederherstellen**, und klicken Sie anschließend unter **Seite auswählen**auf **Partitionen**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Skript**  
  Erstellt ein Wiederherstellungsskript, das auf den im Dialogfeld aktivierten Optionen basiert. Das Wiederherstellungsskript wird in der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Skriptsprache (ASSL) geschrieben.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66072106"
 |Column|BESCHREIBUNG|  
 |------------|-----------------|  
 |**Cube**|Zeigt den Namen des Cubes mit der lokalen Partition an.|  
-|**MeasureGroup**|Zeigt den Namen der Measuregruppe mit der lokalen Partition an.|  
+|**Measuregruppe**|Zeigt den Namen der Measuregruppe mit der lokalen Partition an.|  
 |**Spaltet**|Zeigt den Namen der lokalen Partition an.|  
 |**Größe (MB)**|Zeigt die Größe der lokalen Partition in Megabytes an.|  
 |**Ursprünglicher Ordner**|Zeigt den Namen des Ordners an, in dem die lokale Partition ursprünglich gespeichert war.|  

@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5da033881d2a993ea4be6674dcf8b228cad80bf8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073520"
 ---
 # <a name="multidimensional-model-databases-ssas"></a>Mehrdimensionale Modelldatenbanken (SSAS)
@@ -36,8 +36,7 @@ ms.locfileid: "66073520"
   
 -   Erstellen Sie eine leere [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank innerhalb einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], entweder mit [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder mit [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Anschließend können Sie mithilfe von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] eine direkte Verbindung mit dieser Datenbank herstellen und Objekte in dieser Datenbank (anstatt in einem Projekt) erstellen. Wenn Sie eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank auf diese Weise verwenden, werden Änderungen an den Objekten erst dann in der Datenbank, mit der Sie eine Verbindung herstellen, wirksam, wenn das geänderte Objekt gespeichert wird.  
   
- 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] dient die Einbindung der Quellcodeverwaltung dazu, die gleichzeitige Bearbeitung unterschiedlicher Objekte innerhalb eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts durch mehrere Entwickler zu unterstützen. Ein Entwickler kann eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank auch direkt bearbeiten und muss nicht den Umweg über ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt gehen. Hierbei besteht jedoch die Gefahr, dass die Objekte in einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank nicht mehr mit dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt synchron sind, das für die Bereitstellung der Datenbank verwendet wurde. Nach der Bereitstellung können Sie eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verwalten. Bestimmte Änderungen an einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank können auch mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]vorgenommen werden, z. B. Änderungen an Partitionen und Rollen, was ebenfalls dazu führen kann, dass Objekte in einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank nicht mehr mit dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt synchron sind, das für ihre Bereitstellung verwendet wurde.  
+ [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] dient die Einbindung der Quellcodeverwaltung dazu, die gleichzeitige Bearbeitung unterschiedlicher Objekte innerhalb eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts durch mehrere Entwickler zu unterstützen. Ein Entwickler kann eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank auch direkt bearbeiten und muss nicht den Umweg über ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt gehen. Hierbei besteht jedoch die Gefahr, dass die Objekte in einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank nicht mehr mit dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt synchron sind, das für die Bereitstellung der Datenbank verwendet wurde. Nach der Bereitstellung können Sie eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]verwalten. Bestimmte Änderungen an einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank können auch mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]vorgenommen werden, z. B. Änderungen an Partitionen und Rollen, was ebenfalls dazu führen kann, dass Objekte in einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank nicht mehr mit dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt synchron sind, das für ihre Bereitstellung verwendet wurde.  
   
 ## <a name="related-tasks"></a>Related Tasks  
  [Anfügen und Trennen von Analysis Services-Datenbanken](attach-and-detach-analysis-services-databases.md)  
@@ -54,11 +53,11 @@ ms.locfileid: "66073520"
   
  [Legen Sie den Kompatibilitäts Grad einer mehrdimensionalen Datenbank &#40;Analysis Services fest&#41;](compatibility-level-of-a-multidimensional-database-analysis-services.md)  
   
- [&#40;Analysis Services Eigenschaften für mehrdimensionale Datenbanken festlegen&#41;](set-multidimensional-database-properties-analysis-services.md)  
+ [Festlegen von Eigenschaften für mehrdimensionale Datenbanken &#40;Analysis Services&#41;](set-multidimensional-database-properties-analysis-services.md)  
   
  [Synchronisieren von Analysis Services-Datenbanken](synchronize-analysis-services-databases.md)  
   
- [Wechseln einer Analysis Services Datenbank zwischen Schreib geschütztem Modus und Lese-/Schreibmodus](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
+ [Umschalten einer Analysis Services-Datenbank zwischen schreibgeschütztem Modus und Lese-/Schreibmodus](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Herstellen einer Verbindung im Online Modus mit einer Analysis Services Datenbank](connect-in-online-mode-to-an-analysis-services-database.md)   

@@ -1,5 +1,5 @@
 ---
-title: Datenquellen Objekte (OLE DB) | Microsoft-Dokumentation
+title: Datenquellenobjekte (OLE DB) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6b602695720e0d6567e44e4fbe8fd06b6d496a6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63130589"
 ---
 # <a name="data-source-objects-ole-db"></a>Datenquellenobjekte (OLE DB)
@@ -75,9 +75,9 @@ else
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Datenquellen Eigenschaften &#40;OLE DB&#41;](data-source-properties-ole-db.md)  
+-   [Datenquelleneigenschaften &#40;OLE DB&#41;](data-source-properties-ole-db.md)  
   
--   [Eigenschaften für Datenquelleninformationen](data-source-information-properties.md)  
+-   [Eigenschaften von Datenquelleninformationen](data-source-information-properties.md)  
   
 -   [Initialisierungs- und Autorisierungseigenschaften](initialization-and-authorization-properties.md)  
   

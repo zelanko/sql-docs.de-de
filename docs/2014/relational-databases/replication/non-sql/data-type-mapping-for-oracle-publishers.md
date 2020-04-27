@@ -15,18 +15,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 463dd08cfa9434396a1afea1e4851549f16496cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63022642"
 ---
-# <a name="data-type-mapping-for-oracle-publishers"></a>Datentypzuordnung für Oracle-Verleger
-  Oracle-Datentypen [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und-Datentypen stimmen nicht immer exakt überein. Wenn möglich, wird beim Veröffentlichen einer Oracle-Tabelle der übereinstimmende Datentyp automatisch ausgewählt. In Fällen, in denen eine einzelne Datentypzuordnung unklar ist, werden alternative Datentypzuordnungen bereitgestellt. Informationen dazu, wie alternative Zuordnungen ausgewählt werden, finden Sie im Abschnitt "Angeben alternativer Datentypzuordnungen" weiter unten in diesem Thema.  
+# <a name="data-type-mapping-for-oracle-publishers"></a>Data Type Mapping for Oracle Publishers
+  Oracle-Datentypen und [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datentypen stimmen nicht immer exakt überein. Wenn möglich, wird beim Veröffentlichen einer Oracle-Tabelle der übereinstimmende Datentyp automatisch ausgewählt. In Fällen, in denen eine einzelne Datentypzuordnung unklar ist, werden alternative Datentypzuordnungen bereitgestellt. Informationen dazu, wie alternative Zuordnungen ausgewählt werden, finden Sie im Abschnitt "Angeben alternativer Datentypzuordnungen" weiter unten in diesem Thema.  
   
  Die folgende Tabelle zeigt die standardmäßige Zuordnung von Datentypen zwischen Oracle und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , die für den Datenfluss von einem Oracle-Verleger zu einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verteiler gültig ist. Die Spalte Alternativen gibt an, ob alternative Zuordnungen verfügbar sind.  
   
-|Datentyp "Oracle"|SQL Server-Datentyp|Alternativen|  
+|Oracle-Datentyp|SQL Server-Datentyp|Alternativen|  
 |----------------------|--------------------------|------------------|  
 |BFILE|VARBINARY(MAX)|Ja|  
 |BLOB|VARBINARY(MAX)|Ja|  

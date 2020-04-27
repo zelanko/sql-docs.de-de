@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e8d81a1df5e574c2ae4821176634e439f4ab6b07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075099"
 ---
 # <a name="error-configuration-for-cube-partition-and-dimension-processing-ssas---multidimensional"></a>Fehlerkonfiguration für die Verarbeitung von Cubes, Partitionen und Dimensionen (SSAS - mehrdimensional)
@@ -32,29 +32,29 @@ ms.locfileid: "66075099"
   
 -   [Fehlerkonfigurationseigenschaften](#bkmk_props)  
   
--   [Wo Fehlerkonfigurationseigenschaften festgelegt werden](#bkmk_tools)  
+-   [Festlegen der Fehler Konfigurations Eigenschaften](#bkmk_tools)  
   
 -   [Fehlende Schlüssel (KeyNotFound)](#bkmk_missing)  
   
--   [NULL-Fremdschlüssel in einer Faktentabelle (KeyNotFound)](#bkmk_nullfact)  
+-   [NULL-Fremdschlüssel in einer Fakten Tabelle (KeyNotFound)](#bkmk_nullfact)  
   
 -   [NULL-Schlüssel in einer Dimension](#bkmk_nulldim)  
   
 -   [Doppelte Schlüssel, die zu inkonsistenten Beziehungen führen (KeyDuplicate)](#bkmk_dupe)  
   
--   [Ändern der Fehlergrenze oder der Aktion, die bei Erreichen der Fehlergrenze ausgeführt wird](#bkmk_limit)  
+-   [Ändern der Fehlergrenze oder der Fehler Limit-Aktion](#bkmk_limit)  
   
 -   [Festlegen des Fehlerprotokollpfads](#bkmk_log)  
   
 -   [Nächster Schritt](#bkmk_next)  
   
-##  <a name="bkmk_exec"></a>Ausführungsreihenfolge  
+##  <a name="execution-order"></a><a name="bkmk_exec"></a>Ausführungsreihenfolge  
  Der Server führt für jeden Datensatz immer `NullProcessing`-Regeln vor `ErrorConfiguration`-Regeln aus. Dieses Verhalten sollte berücksichtigt werden, da Eigenschaften für das Verarbeiten von NULL-Werten, durch die NULL-Werte in Nullen (0) konvertiert werden, Fehler aufgrund doppelter Schlüssel verursachen können, wenn mindestens zwei Fehlerdatensätze in einer Schlüsselspalte den Wert 0 aufweisen.  
   
-##  <a name="bkmk_default"></a>Standardverhalten  
+##  <a name="default-behaviors"></a><a name="bkmk_default"></a>Standardverhalten  
  Standardmäßig wird die Verarbeitung beim ersten Fehler beendet, der eine Schlüsselspalte betrifft. Dieses Verhalten wird durch eine Fehlergrenze gesteuert, für die die Anzahl zulässiger Fehler auf 0 (null) festgelegt ist, sowie durch die Direktive Verarbeitung beenden, die den Server anweist, die Verarbeitung bei Erreichen der Fehlergrenze zu beenden.  
   
- Datensätze, die einen Fehler aufgrund von fehlenden, doppelten oder NULL-Werten auslösen, werden entweder in das unbekannte Element konvertiert oder verworfen. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Daten, die gegen Daten Integritäts Einschränkungen verstoßen, werden nicht importiert.  
+ Datensätze, die einen Fehler aufgrund von fehlenden, doppelten oder NULL-Werten auslösen, werden entweder in das unbekannte Element konvertiert oder verworfen. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] nicht importiert.  
   
 -   Aufgrund der `ConvertToUnknown`-Einstellung für `KeyErrorAction` erfolgt standardmäßig eine Konvertierung in das unbekannte Element. Datensätze, die dem unbekannten Element zugeordnet sind und auf ein potenzielles Problem hindeuten, werden in der Datenbank unter Quarantäne gestellt und können nach Abschluss der Verarbeitung untersucht werden.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66075099"
   
  Fehler werden im Dialogfeld Verarbeiten protokolliert, aber nicht gespeichert. Sie können eine Protokolldatei für Schlüsselfehler benennen, um Fehler in einer Textdatei zu sammeln.  
   
-##  <a name="bkmk_props"></a>Fehler Konfigurations Eigenschaften  
+##  <a name="error-configuration-properties"></a><a name="bkmk_props"></a>Fehler Konfigurations Eigenschaften  
  Es gibt neun Fehlerkonfigurationseigenschaften. Mithilfe von fünf Eigenschaften wird bestimmt, wie der Server auf bestimmte Fehler reagiert. Die übrigen vier Eigenschaften beziehen sich auf Arbeitsauslastungen im Rahmen der Fehlerkonfiguration, also beispielsweise darauf, wie viele Fehler zulässig sind, welche Maßnahmen bei Erreichen des Grenzwerts getroffen werden und ob Fehler in einer Protokolldatei gesammelt werden.  
   
  **Reaktion des Servers auf bestimmte Fehler**  
@@ -98,7 +98,7 @@ ms.locfileid: "66075099"
 |`KeyErrorLimit`|Dies ist die maximale Anzahl von Datenintegritätsfehlern, die der Server toleriert, bevor die Verarbeitung fehlschlägt. Der Wert -1 steht für eine unbegrenzte Anzahl. Der Standardwert ist 0 und bewirkt, dass die Verarbeitung nach Auftreten des ersten Fehlers beendet wird. Sie können ihn auch auf eine ganze Zahl festlegen.|  
 |`KeyErrorLimitAction`|Dies ist die Aktion, die vom Server ausgeführt wird, nachdem die Obergrenze von Schlüsselfehlern erreicht wurde. Bei **Verarbeitung beenden**wird die Verarbeitung sofort beendet. Mit **Protokollierung beenden**wird der Verarbeitungsvorgang weiter ausgeführt; allerdings werden keine Fehler mehr gemeldet oder gezählt.|  
   
-##  <a name="bkmk_tools"></a>Festlegen der Fehler Konfigurations Eigenschaften  
+##  <a name="where-to-set-error-configuration-properties"></a><a name="bkmk_tools"></a> Wo Fehlerkonfigurationseigenschaften festgelegt werden  
  Verwenden Sie die Eigenschaftenseiten in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , nachdem die Datenbank bereitgestellt wurde, oder im Modellprojekt in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Beide Tools enthalten dieselben Eigenschaften. Sie können Fehlerkonfigurationseigenschaften auch in der Datei msmdrsrv.ini festlegen, um Serverstandardeinstellungen für die Fehlerkonfiguration zu ändern, sowie im `Batch`-Befehl und im `Process`-Befehl, wenn die Verarbeitung skriptbasiert ausgeführt wird.  
   
  Sie können die Fehlerkonfiguration für jedes Objekt festlegen, das in einem eigenständigen Vorgang verarbeitet werden kann.  
@@ -115,14 +115,14 @@ ms.locfileid: "66075099"
   
 2.  Wenn Sie nur eine einzelne Dimension auswählen, klicken Sie mit der rechten Maustaste auf die Dimension `Process`in Projektmappen-Explorer, wählen Sie aus, und wählen Sie dann im Dialogfeld Dimension verarbeiten die Option **Einstellungen ändern** aus. Optionen für die Fehlerkonfiguration werden auf der Registerkarte Dimensionsschlüsselfehler angezeigt.  
   
-##  <a name="bkmk_missing"></a>Fehlende Schlüssel (KeyNotFound)  
+##  <a name="missing-keys-keynotfound"></a><a name="bkmk_missing"></a>Fehlende Schlüssel (KeyNotFound)  
  Datensätze mit einem fehlenden Schlüsselwert können der Datenbank auch dann nicht hinzugefügt werden, wenn Fehler ignoriert werden oder eine unbegrenzte Fehleranzahl festgelegt wurde.  
   
  Der Server generiert den `KeyNotFound`-Fehler während der Partitionsverarbeitung, wenn eine Tabelle in einem Faktendatensatz einen Fremdschlüsselwert enthält, der Fremdschlüssel aber keinen entsprechenden Datensatz in einer verknüpften Dimensionstabelle aufweist. Dieser Fehler tritt auch bei der Verarbeitung von verknüpften oder Schneeflocken-Dimensionstabellen auf, wenn von einem Datensatz in einer Dimension ein Fremdschlüssel angegeben wird, der in der verknüpften Dimension nicht vorhanden ist.  
   
  Wenn ein `KeyNotFound`-Fehler auftritt, wird der problematische Datensatz dem unbekannten Element zugeordnet. Dieses Verhalten wird durch die **Schlüsselaktion**gesteuert, die auf `ConvertToUnknown`festgelegt ist, sodass Sie die zugeordneten Datensätze zur weiteren Untersuchung anzeigen können.  
   
-##  <a name="bkmk_nullfact"></a>NULL-Fremdschlüssel in einer Fakten Tabelle (KeyNotFound)  
+##  <a name="null-foreign-keys-in-a-fact-table-keynotfound"></a><a name="bkmk_nullfact"></a> NULL-Fremdschlüssel in einer Faktentabelle (KeyNotFound)  
  Ein NULL-Wert in einer Fremdschlüsselspalte einer Faktentabelle wird standardmäßig in 0 konvertiert. In der Annahme, dass 0 kein gültiger Fremdschlüsselwert ist, wird der `KeyNotFound`-Fehler protokolliert und auf die Fehlergrenze, die standardmäßig 0 ist, angerechnet.  
   
  Damit die Verarbeitung fortgesetzt werden kann, können Sie den NULL-Wert behandeln, bevor er konvertiert und auf Fehler überprüft wird. Legen Sie zu diesem Zweck `NullProcessing` auf `Error`fest.  
@@ -133,11 +133,11 @@ ms.locfileid: "66075099"
   
 2.  Klicken Sie im Bereich „Measures“ mit der rechten Maustaste auf ein Measure, und wählen Sie **Eigenschaften**aus.  
   
-3.  Erweitern Sie in Eigenschaften **** den Eintrag Quelle `NullProcessing` zum Anzeigen der Eigenschaft. Die Eigenschaft ist standardmäßig auf **Automatic** festgelegt. Bei OLAP-Elementen bewirkt diese Einstellung, dass NULL-Werte für Felder mit numerischen Daten in Nullen (0) konvertiert werden.  
+3.  Erweitern Sie in Eigenschaften **Source** den Eintrag Quelle `NullProcessing` zum Anzeigen der Eigenschaft. Die Eigenschaft ist standardmäßig auf **Automatic** festgelegt. Bei OLAP-Elementen bewirkt diese Einstellung, dass NULL-Werte für Felder mit numerischen Daten in Nullen (0) konvertiert werden.  
   
 4.  Ändern Sie den Wert `Error` in, um alle Datensätze mit einem NULL-Wert auszuschließen, wodurch die Konvertierung von NULL zu numerisch (null) vermieden wird. Mit dieser Änderung können Sie doppelte Schlüsselfehler vermeiden, die sich auf mehrere Datensätze in der Schlüssel Spalte beziehen. `KeyNotFound` Außerdem können Sie Fehler vermeiden, wenn ein Fremdschlüssel mit dem Wert 0 (null) in einer verknüpften Dimensions Tabelle keinen Primärschlüssel aufweist.  
   
-##  <a name="bkmk_nulldim"></a>NULL-Schlüssel in einer Dimension  
+##  <a name="null-keys-in-a-dimension"></a><a name="bkmk_nulldim"></a> NULL-Schlüssel in einer Dimension  
  Um die Verarbeitung fortzusetzen, wenn in Fremdschlüsseln in einer Schneeflockendimension NULL-Werte gefunden werden, behandeln Sie zunächst die NULL-Werte, indem Sie für die `NullProcessing` des Dimensionsattributs `KeyColumn` festlegen. Dadurch wird der Datensatz verworfen oder konvertiert, bevor der `KeyNotFound`-Fehler auftreten kann.  
   
  NULL-Werte können für das Dimensionsattribut auf zwei Weisen behandelt werden:  
@@ -154,28 +154,28 @@ ms.locfileid: "66075099"
   
 2.  Klicken Sie im Bereich „Attribute“ mit der rechten Maustaste auf ein Attribut, und wählen Sie **Eigenschaften**aus.  
   
-3.  Erweitern Sie in Eigenschaften den Eintrag **KeyColumns** , um die Eigenschaft anzuzeigen `NullProcessing` . Die Eigenschaft ist standardmäßig auf **Automatic** festgelegt, wodurch NULL-Werte für Felder mit numerischen Daten in Nullen (0) konvertiert werden. Ändern Sie den Wert entweder `Error` in `UnknownMember`oder.  
+3.  Erweitern Sie in Eigenschaften den Eintrag **KeyColumns** , um die Eigenschaft anzuzeigen `NullProcessing` . Die Eigenschaft ist standardmäßig auf **Automatic** festgelegt, wodurch NULL-Werte für Felder mit numerischen Daten in Nullen (0) konvertiert werden. Ändern Sie den Wert entweder in `Error` oder `UnknownMember`.  
   
      `KeyNotFound` Durch diese Änderung werden die zugrunde liegenden Bedingungen entfernt, durch die der Datensatz entweder verworfen oder umgerechnet wird, bevor er auf Fehler geprüft wird.  
   
      Abhängig von der Fehlerkonfiguration kann eine dieser Aktionen zu einem Fehler führen, der gemeldet und gezählt wird. Möglicherweise müssen Sie zusätzliche Eigenschaften anpassen, z. b `KeyNotFound` . `ReportAndContinue` das `KeyErrorLimit` Festlegen von auf oder auf einen Wert ungleich 0 (null), damit die Verarbeitung fortgesetzt werden kann, wenn diese Fehler gemeldet und gezählt werden.  
   
-##  <a name="bkmk_dupe"></a>Doppelte Schlüssel, die zu inkonsistenten Beziehungen führen (KeyDuplicate)  
+##  <a name="duplicate-keys-resulting-inconsistent-relationships-keyduplicate"></a><a name="bkmk_dupe"></a> Doppelte Schlüssel, die zu inkonsistenten Beziehungen führen (KeyDuplicate)  
  Standardmäßig führt ein doppelter Schlüssel nicht dazu, dass die Verarbeitung beendet wird; allerdings wird der Fehler ignoriert und der doppelte Datensatz aus der Datenbank ausgeschlossen.  
   
  Um dieses Verhalten zu ändern, legen Sie `KeyDuplicate` auf `ReportAndContinue` oder auf `ReportAndStop` fest, damit der Fehler gemeldet wird. Anschließend können Sie den Fehler untersuchen, um mögliche Fehler im Dimensionsentwurf zu ermitteln.  
   
-##  <a name="bkmk_limit"></a>Ändern der Fehlergrenze oder der Fehler Limit-Aktion  
+##  <a name="change-the-error-limit-or-error-limit-action"></a><a name="bkmk_limit"></a> Ändern der Fehlergrenze oder der Aktion, die bei Erreichen der Fehlergrenze ausgeführt wird  
  Sie können die Fehlergrenze heraufsetzen, damit während der Verarbeitung mehr Fehler toleriert werden. Es gibt keine allgemeinen Vorgaben zum Erhöhen der Fehlergrenze, da sich der geeignete Wert nach dem jeweiligen Szenario richtet. `KeyErrorLimit` Fehler Limits werden als in `ErrorConfiguration` Eigenschaften in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]oder als **Anzahl von Fehlern** auf der Registerkarte Fehler Konfiguration für Eigenschaften von Dimensionen, Cubes oder Measure-Gruppen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angegeben.  
   
  Sie können festlegen, dass die Verarbeitung oder Protokollierung bei Erreichen der Fehlergrenze beendet wird. Gehen wir z. B. davon aus, dass bei einer Fehlergrenze von 100 die Aktion `StopLogging` ausgeführt wird. Bei Fehler Nummer 101 wird die Verarbeitung fortgesetzt, während Fehler jedoch nicht mehr protokolliert oder gezählt werden. Fehler Limit-Aktionen werden als `KeyErrorLimitAction` in `ErrorConfiguration` Eigenschaften in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]oder als **On Error Action** auf der Registerkarte Fehler Konfiguration für Eigenschaften von Dimensionen, Cubes oder Measure-Gruppen in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angegeben.  
   
-##  <a name="bkmk_log"></a>Festlegen des Fehlerprotokoll Pfads  
+##  <a name="set-the-error-log-path"></a><a name="bkmk_log"></a>Festlegen des Fehlerprotokoll Pfads  
  Sie können eine Datei angeben, in der schlüsselspezifische Fehlermeldungen gespeichert werden, die während der Verarbeitung gemeldet werden. Fehler werden während der interaktiven Verarbeitung standardmäßig im Verarbeitungsfenster angezeigt und verworfen, wenn Sie das Fenster oder die Sitzung schließen. Das Protokoll enthält nur Fehlerinformationen zu Schlüsseln, die sich direkt auf die Fehler beziehen, die in den Verarbeitungsdialogfeldern angezeigt werden.  
   
  Fehler werden in einer Textdatei mit der Dateierweiterung .log protokolliert. Die Datei ist leer, bis Fehler auftreten. Standardmäßig wird eine Datei im Ordner DATA erstellt. Sie können einen anderen Ordner angeben, solange das Analysis Services-Dienstkonto eine Schreibberechtigung für diesen Speicherort besitzt.  
   
-##  <a name="bkmk_next"></a>Nächster Schritt  
+##  <a name="next-step"></a><a name="bkmk_next"></a>Nächster Schritt  
  Entscheiden Sie, ob Fehler zu einer Beendigung der Verarbeitung führen oder ignoriert werden. Beachten Sie, dass nur der Fehler ignoriert wird. Der Datensatz, der den Fehler verursacht hat, wird nicht ignoriert und entweder verworfen oder in ein unbekanntes Element konvertiert. Datensätze, die gegen die Regeln der Datenintegrität verstoßen, werden der Datenbank niemals hinzugefügt. Die Verarbeitung wird standardmäßig beim ersten Fehler beendet. Sie können diese Einstellung jedoch ändern, indem Sie die Fehlergrenze heraufsetzen. Bei der Cubeentwicklung kann es von Nutzen sein, die Regeln für die Fehlerkonfiguration zu lockern und die Verarbeitung fortzusetzen, um Testdaten zu sammeln.  
   
  Entscheiden Sie, ob das Standardverhalten für die Verarbeitung von NULL-Werten geändert werden soll. NULL-Werte in einer Zeichenfolgenspalte werden standardmäßig als leere Werte verarbeitet, während NULL-Werte in einer numerischen Spalte als Nullen (0) verarbeitet werden. Anweisungen dazu, wie Sie die Verarbeitung von NULL-Werten für ein Attribut festlegen, finden Sie unter [Defining the Unknown Member and Null Processing Properties](../lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md) .  

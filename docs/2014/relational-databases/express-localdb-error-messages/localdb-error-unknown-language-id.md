@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: bfad881fb77bd17bbf91bfbcb34ec6ee3cea46aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63126064"
 ---
 # <a name="localdb_error_unknown_language_id"></a>LOCALDB_ERROR_UNKNOWN_LANGUAGE_ID
@@ -29,7 +29,7 @@ ms.locfileid: "63126064"
 |Komponente|Laufzeit-API der lokalen Datenbank|  
 |Meldungstext|Fehler beim Abrufen der lokalisierten Fehlermeldung. Die im LanguageID-Parameter angegebene Sprache ist unbekannt.|  
   
-## <a name="explanation"></a>Erklärung  
+## <a name="explanation"></a>Erläuterung  
  Die angeforderte Sprache für die Laufzeitfehlermeldung der lokalen Datenbank ist unbekannt oder wird nicht unterstützt.  
   
 ## <a name="user-action"></a>Benutzeraktion  

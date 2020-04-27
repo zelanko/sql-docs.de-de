@@ -11,18 +11,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e4205cc3a99e5ce5fb9e4309813531a451e7bd92
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066014"
 ---
 # <a name="toolbar-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>Symbolleiste (Registerkarte 'Dimensionsverwendung', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Verwenden Sie den Bereich **Symbolleiste** zur Ausführung von Aktionen wie dem Hinzufügen einer Cubedimension oder der Verarbeitung eines Cubes, die im Cube-Designer auf der Registerkarte **Dimensionsverwendung** häufig verwendet werden.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
-|Option|BESCHREIBUNG|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |**Business Intelligence hinzufügen**|Klicken Sie auf diese Option, um **Businesss Intelligence-Assistent** anzuzeigen und dem Cube Business Intelligence-Funktionen hinzuzufügen.|  
 |**Prozess**|Klicken Sie auf diese Option, um das Dialogfeld **Verarbeiten** anzuzeigen und den Cube zu verarbeiten.|  

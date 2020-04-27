@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 0d1c0312acfcd2e5dbb17d740fe2659cb8c91bbe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63032004"
 ---
 # <a name="open-activity-monitor-sql-server-management-studio"></a>Öffnen des Aktivitätsmonitors (SQL Server Management Studio)
@@ -35,19 +35,19 @@ ms.locfileid: "63032004"
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
--   So **legen Sie das Aktualisierungs Intervall fest mit:**[SQL Server Management Studio](#Refresh)    
+-   **Festlegen des Aktualisierungsintervalls mit:**  [SQL Server Management Studio](#Refresh)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
  Der Aktivitätsmonitor führt Abfragen auf der überwachten Instanz aus, um Informationen für die Anzeigebereiche des Aktivitätsmonitors abzurufen. Wenn für das Intervall für die automatische Aktualisierung weniger als 10 Sekunden festgelegt sind, kann die für die Ausführung der Abfragen benötigte Zeit die Serverleistung beeinträchtigen.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Zum Anzeigen des Aktivitätsmonitors muss ein Benutzer über die VIEW SERVER STATE-Berechtigung verfügen. Sie müssen zum Anzeigen des Abschnitts "Datendatei-E/A" des Aktivitätsmonitors neben VIEW SERVER STATE über die CREATE DATABASE-, ALTER ANY DATABASE- oder VIEW ANY DEFINITION-Berechtigung verfügen.  
   
  Zum Ausführen von KILL für einen Prozess muss ein Benutzer Mitglied der festen Serverrolle sysadmin oder processadmin sein.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-open-activity-monitor-in-sql-server-management-studio"></a>So öffnen Sie den Aktivitätsmonitor in SQL Server Management Studio  
   
@@ -71,7 +71,7 @@ ms.locfileid: "63032004"
   
 4.  Damit diese Änderungen aktiv werden, müssen Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]schließen und erneut öffnen.  
   
-###  <a name="Refresh"></a>So legen Sie das Aktualisierungs Intervall für den Aktivitäts Monitor fest  
+###  <a name="to-set-the-activity-monitor-refresh-interval"></a><a name="Refresh"></a>So legen Sie das Aktualisierungs Intervall für den Aktivitäts Monitor fest  
   
 -   Öffnen Sie Aktivitätsmonitor.  
   

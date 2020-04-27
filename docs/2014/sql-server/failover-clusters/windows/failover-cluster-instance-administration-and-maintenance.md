@@ -24,10 +24,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 402e9e0d787d6f60e069625e908faee4fbecaeca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63049439"
 ---
 # <a name="failover-cluster-instance-administration-and-maintenance"></a>Verwaltung und Wartung von Failoverclusterinstanzen
@@ -37,8 +37,7 @@ ms.locfileid: "63049439"
  Nachdem Sie eine FCI installiert haben, können Sie sie mithilfe des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setupprogramms ändern oder reparieren. Beispielsweise können Sie einer FCI zusätzliche Knoten hinzufügen, eine FCI als eigenständige Instanz ausführen oder einen Knoten aus einer FCI-Konfiguration entfernen.  
   
 ### <a name="adding-a-node-to-an-existing-failover-cluster-instance"></a>Hinzufügen eines Knotens zu einer vorhandenen Failoverclusterinstanz  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup bietet Ihnen die Möglichkeit, eine vorhandene FCI zu warten. Bei Auswahl dieser Option können Sie der FCI weitere Knoten hinzufügen, indem Sie das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup auf dem Computer ausführen, den Sie der FCI hinzufügen möchten. Weitere Informationen finden Sie unter [Erstellen eines neuen SQL Server-Failoverclusters &#40;Setup&#41;](../install/create-a-new-sql-server-failover-cluster-setup.md) und [Hinzufügen oder Entfernen von Knoten in einem SQL Server-Failovercluster &#40;Setup&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup bietet Ihnen die Möglichkeit, eine vorhandene FCI zu warten. Bei Auswahl dieser Option können Sie der FCI weitere Knoten hinzufügen, indem Sie das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup auf dem Computer ausführen, den Sie der FCI hinzufügen möchten. Weitere Informationen finden Sie unter [Erstellen eines neuen SQL Server-Failoverclusters &#40;Setup&#41;](../install/create-a-new-sql-server-failover-cluster-setup.md) und [Hinzufügen oder Entfernen von Knoten in einem SQL Server-Failovercluster &#40;Setup&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
 ### <a name="removing-a-node-from-an-existing-failover-cluster-instance"></a>Entfernen eines Knotens aus einer vorhandenen Failoverclusterinstanz  
  Sie können einen Knoten aus einer FCI entfernen, indem Sie das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup auf dem Computer ausführen, den Sie aus der FCI entfernen möchten. Jeder Knoten in einer FCI wird als Peer ohne Abhängigkeiten von anderen Knoten in der FCI angesehen und kann beliebig entfernt werden. Ein beschädigter Knoten muss nicht verfügbar sein, um entfernt zu werden. Beim Entfernen werden keine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Binärdateien von dem nicht verfügbaren Knoten deinstalliert. Ein entfernter Knoten kann einer FCI jederzeit wieder hinzugefügt werden. Weitere Informationen finden Sie unter [Hinzufügen oder Entfernen von Knoten in einem SQL Server-Failovercluster &#40;Setup&#41;](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
@@ -51,7 +50,7 @@ ms.locfileid: "63049439"
 > [!IMPORTANT]  
 >  Verwenden Sie nicht dasselbe Konto für das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonto und das WSFC-Dienstkonto. Wenn das Kennwort für das WSFC-Dienstkonto geändert wird, verursacht die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Installation einen Fehler.  
   
- Unter [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]werden Dienst-SIDs für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonten verwendet. Weitere Informationen finden Sie unter [Konfigurieren von Windows-Dienst Konten und-Berechtigungen](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+ Unter [!INCLUDE[nextref_longhorn](../../../includes/nextref-longhorn-md.md)]werden Dienst-SIDs für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Dienstkonten verwendet. Weitere Informationen finden Sie unter [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)betreffen.  
   
 ## <a name="administering-a-failover-cluster-instance"></a>Verwalten einer Failoverclusterinstanz  
   

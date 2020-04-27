@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9b7ffc1b77d90946a119dc462da2057cf3fe4988
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081246"
 ---
 # <a name="estimate-wizard-data-mining-add-ins-for-excel"></a>Assistent zum Schätzen von Daten (Data Mining-Add-Ins für Excel)
@@ -25,7 +25,7 @@ ms.locfileid: "66081246"
   
  Der Assistent für die **Schätzung** unterstützt Sie beim Erstellen eines Schätz Modells. Ein Schätzmodell extrahiert Datenmuster und verwendet diese Muster, um die Faktoren vorherzusagen, die sich auf Ergebnisse auswirken.  
   
- Die Schätzung wird für die Vorhersage von numerischen Ergebnissen verwendet. Wenn die Ziel Spalte z. b. die Abschluss Raten für Schulen enthält und die Abschluss Sätze als Prozentsätze ausgedrückt werden, können Sie Faktoren analysieren, die die Abschluss Raten potenziell erhöhen oder verringern, wie z. b. die Anzahl der Schüler/Studenten pro Schule, das Quote für Schüler und Studenten und die Anzahl der Lehrkräfte.  
+ Die Schätzung wird für die Vorhersage von numerischen Ergebnissen verwendet. Wenn die Ziel Spalte z. b. die Abschluss Raten für Schulen enthält und die Abschluss Sätze als Prozentsätze ausgedrückt werden, können Sie Faktoren analysieren, die die Abschluss Raten potenziell erhöhen oder verringern, wie z. b. die Anzahl der Schüler/Studenten pro Schule, das Verhältnis des Studenten Lehrers und die Anzahl der Lehrkräfte.  
   
 ## <a name="using-the-estimate-data-wizard"></a>Verwenden des Assistenten zum Schätzen von Daten  
   
@@ -89,7 +89,7 @@ ms.locfileid: "66081246"
   
  [Technische Referenz für den Microsoft Neural Network-Algorithmus](data-mining/microsoft-neural-network-algorithm-technical-reference.md)  
   
-### <a name="requirements"></a>Requirements (Anforderungen)  
+### <a name="requirements"></a>Anforderungen  
  Zum Verwenden des Assistenten zum Schätzen von Daten muss eine Verbindung mit einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbank bestehen.  
   
  Weitere Informationen zum Erstellen einer Verbindung finden Sie unter Herstellen einer Verbindung [mit Quelldaten &#40;Data Mining-Client für Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  

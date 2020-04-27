@@ -15,14 +15,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7c1f4792d97ae82561f0d05fe9754daae0a2bf3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62890166"
 ---
 # <a name="load-balancing-packages-on-remote-servers-by-using-sql-server-agent"></a>Lastenausgleich von Paketen auf Remoteservern mithilfe des SQL Server-Agents
-  Müssen viele Pakete ausgeführt werden, ist es praktisch, hierfür andere verfügbare Server zu verwenden. Diese Methode, bei der zum Ausführen von Paketen andere Server verwendet werden, während die Steuerung der Pakete über ein übergeordnetes Paket erfolgt, wird als Lastenausgleich bezeichnet. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]handelt es sich um eine manuelle Prozedur für den Lastenausgleich, die von den Besitzern der Pakete entworfen werden muss. Dabei wird der Lastenausgleich nicht automatisch von den Servern ausgeführt. Des Weiteren müssen die auf den Remoteservern ausgeführten Pakete vollständige Pakete sein. Einzelne Tasks anderer Pakete sind dabei nicht zulässig.  
+  Müssen viele Pakete ausgeführt werden, ist es praktisch, hierfür andere verfügbare Server zu verwenden. Diese Methode, bei der zum Ausführen von Paketen andere Server verwendet werden, während die Steuerung der Pakete über ein übergeordnetes Paket erfolgt, wird als Lastenausgleich bezeichnet. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] wird der Lastenausgleich manuell ausgeführt, wobei die Struktur des Verfahrens von den Besitzern der Pakete festgelegt werden muss. Dabei wird der Lastenausgleich nicht automatisch von den Servern ausgeführt. Des Weiteren müssen die auf den Remoteservern ausgeführten Pakete vollständige Pakete sein. Einzelne Tasks anderer Pakete sind dabei nicht zulässig.  
   
  Der Lastenausgleich ist in den folgenden Szenarien nützlich:  
   
@@ -54,7 +54,7 @@ ms.locfileid: "62890166"
   
  In der folgenden Tabelle werden Links zu Themen bereitgestellt, mit denen Sie durch den Prozess begleitet werden.  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Implementierung von untergeordneten Paketen](../implementation-of-child-packages.md)|Beschreibt die Installation von Paketen und die Erstellung der SQL Server-Agent-Aufträge zum Ausführen der Pakete.|  
 |[Implementierung des übergeordneten Pakets](../implementation-of-the-parent-package.md)|Beschreibt die Erstellung des übergeordneten Pakets, in dem viele Tasks "Auftrag des SQL Server-Agents ausführen" enthalten sind. Mit jedem dieser Tasks wird jeweils ein untergeordnetes Paket ausgeführt.|  

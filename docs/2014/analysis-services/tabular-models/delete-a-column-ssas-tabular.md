@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f0a95e8580aa30ce34ada1c77e198eb40d767304
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66067269"
 ---
 # <a name="delete-a-column-ssas-tabular"></a>Löschen einer Spalte (SSAS – tabellarisch)
@@ -39,6 +39,6 @@ ms.locfileid: "66067269"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Hinzufügen von Spalten zu einer Tabelle &#40;tabellarischen SSAS-&#41;](add-columns-to-a-table-ssas-tabular.md)   
- [Partitionen &#40;tabellarischen SSAS-&#41;](partitions-ssas-tabular.md)  
+ [Partitionen &#40;SSAS – tabellarisch&#41;](partitions-ssas-tabular.md)  
   
   

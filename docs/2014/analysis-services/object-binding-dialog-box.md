@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9cc86a5712dae9c231fa6e03d86a82d7dc172a75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072187"
 ---
 # <a name="object-binding-dialog-box"></a>Objektbindung (Dialogfeld)
@@ -34,7 +34,7 @@ ms.locfileid: "66072187"
   
 -   UnaryOperatorColumn  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Bindungstyp**  
  Wählen Sie die Bindung aus, die für das [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekt verwendet werden soll. Folgende Bindungstypen können verwendet werden:  
   
@@ -45,12 +45,12 @@ ms.locfileid: "66072187"
  Zeigt an, dass eine neue Spalte in der Datenquellensicht definiert wird, der dann eine Spaltenbindung zugeordnet wird.  
   
 > [!NOTE]  
->  Wenn diese Option ausgewählt ist, müssen Sie **Schemagenerierungs-Assistent** ausführen, bevor Sie das [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekt bereitstellen.  
+>   Wenn diese Option ausgewählt ist, müssen Sie **Schemagenerierungs-Assistent** ausführen, bevor Sie das [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekt bereitstellen.  
   
  Zeilenbindung  
  Bindet das Objekt an eine Zeile in einer Faktentabelle und wird verwendet, um die Zählung von Measures anhand der Anzahl der in der Faktentabelle verarbeiteten Zeilen zu vereinfachen.  
   
- **Quell Tabelle**  
+ **Quelltabelle**  
  Zeigt eine Liste von Tabellen in der Datenquellensicht an, die dem [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Objekt zugeordnet sind.  
   
  **Quell Spalte**  

@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 31c05bbc1be8376144eb191ff28a9cdc6eebdd8a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66068902"
 ---
 # <a name="configure-server-properties-in-analysis-services"></a>Konfigurieren von Servereigenschaften in Analysis Services
@@ -36,7 +36,7 @@ ms.locfileid: "66068902"
   
  [Referenz zu Server Eigenschaften](#bkmk_ref)  
   
-##  <a name="bkmk_config"></a>Konfigurieren von Server Eigenschaften (Instanz)  
+##  <a name="configure-server-instance-properties"></a><a name="bkmk_config"></a>Konfigurieren von Server Eigenschaften (Instanz)  
  Die Eigenschaftenseiten in SQL Server Management Studio enthalten eine Teilmenge der verfügbaren Eigenschaften. Es werden nur die Eigenschaften angezeigt, die mit größerer Wahrscheinlichkeit geändert werden. Den vollständigen Eigenschaftensatz finden Sie in der Datei msmdsrv.ini.  
   
 > [!NOTE]  
@@ -72,12 +72,12 @@ ms.locfileid: "66068902"
   
 4.  Nach dem Speichern der Datei muss der Dienst neu gestartet werden.  
   
-##  <a name="bkmk_ref"></a>Referenz zu Server Eigenschaften  
+##  <a name="server-property-reference"></a><a name="bkmk_ref"></a> Referenz zu Servereigenschaften  
  Die Konfigurationseigenschaften von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] spielen bei der Optimierung des Systems eine wichtige Rolle. Wenn Sie z. B. das Verhalten des Abfrageprotokolls an Ihre Anforderungen anpassen möchten, können Sie entsprechende Eigenschaften festlegen.  
   
  In den folgenden Themen werden die verschiedenen Konfigurationseigenschaften von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erläutert:  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Allgemeine Eigenschaften](general-properties.md)|Bei den allgemeinen Eigenschaften handelt es sich sowohl um grundlegende als auch um erweiterte Eigenschaften. Hierzu zählen Eigenschaften zum Definieren des Datenverzeichnisses, Sicherungsverzeichnisses und anderem Serververhalten.|  
 |[Data Mining-Eigenschaften](data-mining-properties.md)|Die Data Mining-Eigenschaften steuern, welche Data Mining-Algorithmen aktiviert und welche deaktiviert sind. Standardmäßig sind alle Algorithmen aktiviert.|  
@@ -87,7 +87,7 @@ ms.locfileid: "66068902"
 |[Eigenschaften des Sperren-Managers](lock-manager-properties.md)|Die Sperren-Manager-Eigenschaften definieren das Serververhalten in Bezug auf Sperrvorgänge und Timeouts. Die meisten dieser Eigenschaften sind nur für fortgeschrittene Benutzer gedacht.|  
 |[Protokolleigenschaften](log-properties.md)|Die Protokolleigenschaften steuern, ob, wann und wie Ereignisse auf dem Server protokolliert werden. Hierzu zählen die Fehlerprotokollierung, die Ausnahmeprotokollierung, der Flight Recorder, die Abfrageprotokollierung und Ablaufverfolgungen.|  
 |[Speichereigenschaften](memory-properties.md)|Die Speichereigenschaften steuern die Speicherverwendung durch den Server. Sie sind in erster Linie für fortgeschrittene Benutzer gedacht.|  
-|[Netzwerkeigenschaften](network-properties.md)|Die Netzwerkeigenschaften steuern das Serververhalten in Bezug auf die Vernetzung und beinhalten Eigenschaften zum Steuern der Komprimierung und binärem XML. Die meisten dieser Eigenschaften sind nur für fortgeschrittene Benutzer gedacht.|  
+|[Netzwerk Eigenschaften](network-properties.md)|Die Netzwerkeigenschaften steuern das Serververhalten in Bezug auf die Vernetzung und beinhalten Eigenschaften zum Steuern der Komprimierung und binärem XML. Die meisten dieser Eigenschaften sind nur für fortgeschrittene Benutzer gedacht.|  
 |[OLAP-Eigenschaften](olap-properties.md)|Die OLAP-Eigenschaften steuern die Cube- und Dimensionsverarbeitung, die verzögerte Verarbeitung, die Datenzwischenspeicherung und das Abfrageverhalten. Hierzu zählen sowohl grundlegende als auch erweiterte Eigenschaften.|  
 |[Sicherheitseigenschaften](security-properties.md)|Im Abschnitt Sicherheit sind sowohl grundlegende als auch erweiterte Eigenschaften zum Definieren von Zugriffsberechtigungen enthalten. Hierzu zählen Einstellungen für Administratoren und Benutzer.|  
 |[Threadpooleigenschaften](thread-pool-properties.md)|Die Threadpooleigenschaften steuern, wie viele Threads der Server erstellt. Hierbei handelt es sich vor allem um erweiterte Eigenschaften.|  

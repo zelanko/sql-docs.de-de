@@ -23,10 +23,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 800b3e43129bba36db0836f9a58a3ad1e47b40c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63046286"
 ---
 # <a name="using-the-sql-server-native-client-header-and-library-files"></a>Verwenden der SQL Server Native Client-Header- und Bibliotheksdateien
@@ -98,7 +98,7 @@ include "sqlncli.h";
   
  Wenn Sie beispielsweise eine Anwendung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client und der zugeordneten Bibliotheksdatei (sqlncli11.lib) und Headerdatei (sqlncli.h) aus \Programme\Microsoft SQL Server\110\SDK kompilieren, sollten Sie (als Beispiel wird ODBC verwendet) in der Verbindungszeichenfolge unbedingt "DRIVER={SQL Server Native Client 11.0}" angeben.  
   
- Weitere Informationen finden Sie unter Ausführen von [Massen Kopier Vorgängen](../features/performing-bulk-copy-operations.md).  
+ Weitere Informationen finden Sie unter [Durchführen von Massenkopiervorgängen](../features/performing-bulk-copy-operations.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von Anwendungen mit SQL Server Native Client](building-applications-with-sql-server-native-client.md)  

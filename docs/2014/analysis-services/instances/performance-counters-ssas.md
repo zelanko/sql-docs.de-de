@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: aa9d5a5352afd10617358a032824d275b14b6c5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079712"
 ---
 # <a name="performance-counters-ssas"></a>Leistungsindikatoren (SSAS)
@@ -30,26 +30,26 @@ ms.locfileid: "66079712"
   
 ## <a name="counters-by-groups"></a>Leistungsindikatoren nach Gruppen  
   
-|Group|BESCHREIBUNG|  
+|Group|Beschreibung|  
 |-----------|-----------------|  
-|[Speichern](#bkmk_Cache)|Statistik zum Analysis Services-Aggregationscache.|  
-|[Verbindung](#bkmk_Connection)|Statistik zu Microsoft Analysis Services-Verbindungen.|  
+|[Cache](#bkmk_Cache)|Statistik zum Analysis Services-Aggregationscache.|  
+|[Connection](#bkmk_Connection)|Statistik zu Microsoft Analysis Services-Verbindungen.|  
 |[Data Mining-Vorhersage](#bkmk_DataMiningPrediction)|Statistik zur Verarbeitung von Data Mining-Modellen.|  
-|[Data Mining-Modell Verarbeitung](#bkmk_DataMiningModelProcessing)|Statistik zur Erstellung von Vorhersagen aus Data Mining-Modellen.|  
+|[Data Mining-Modellverarbeitung](#bkmk_DataMiningModelProcessing)|Statistik zur Erstellung von Vorhersagen aus Data Mining-Modellen.|  
 |[Locks](#bkmk_Locks)|Statistik zu internen Microsoft Analysis Services-Serversperren.|  
 |[MDX](#bkmk_MDX)|Statistik zu Microsoft Analysis Services-MDX-Berechnungen.|  
 |[Memory](#bkmk_Memory)|Statistik zu internem Microsoft Analysis Services-Serverspeicher.|  
 |[Proaktives Zwischenspeichern](#bkmk_ProactiveCaching)|Statistik zur proaktiven Microsoft Analysis Services-Zwischenspeicherung.|  
 |[Verarbeiten von Aggregationen](#bkmk_ProcAggregations)|Statistik zur Verarbeitung der Aggregationen in MOLAP-Datendateien.|  
 |[Verarbeiten von Indizes](#bkmk_ProcIndexes)|Statistik zur Verarbeitung von Indizes für MOLAP-Datendateien.|  
-|[Aufbereitungs](#bkmk_Processing)|Statistik zur Verarbeitung von Daten.|  
+|[Verarbeitung](#bkmk_Processing)|Statistik zur Verarbeitung von Daten.|  
 |[Speicher-Engine-Abfrage](#bkmk_StorageEngineQuery)|Statistik zu Microsoft Analysis Services-Speicher-Engine-Abfragen.|  
 |[Threads](#bkmk_Threads)|Statistik zu Microsoft Analysis Services-Threads.|  
   
-###  <a name="bkmk_Cache"></a>Speichern  
+###  <a name="cache"></a><a name="bkmk_Cache"></a>Speichern  
  Statistik zum Microsoft Analysis Services-Aggregationscache.  
   
-|Leistungsindikator|BESCHREIBUNG|  
+|Leistungsindikator|Beschreibung|  
 |-------------|-----------------|  
 |KB aktuell|Aktueller vom Aggregationscache verwendeter Arbeitsspeicher (in KB).|  
 |Pro Sekunde hinzugefügte KB|Menge des Arbeitsspeichers, die dem Cache hinzugefügt wird (in KB/s).|  
@@ -68,32 +68,32 @@ ms.locfileid: "66079712"
 |Gesamte gefilterte Iteratorcachetreffer|Gesamtzahl der Cachetreffer in den gefilterten Ergebnissen, bei denen ein indizierter Iterator zurückgegeben wurde.|  
 |Gesamtanzahl der gefilterten fehlgeschlagenen Zugriffe auf den Iteratorcache|Gesamtzahl der Cachetreffer, mit denen anhand der gefilterten Ergebnisse kein indizierter Iterator erstellt werden konnte. Stattdessen musste mit den gefilterten Ergebnissen ein neuer Cache erstellt werden.|  
   
-###  <a name="bkmk_Connection"></a>Diesem  
+###  <a name="connection"></a><a name="bkmk_Connection"></a>Diesem  
  Statistik zu Microsoft Analysis Services-Verbindungen.  
   
-|Leistungsindikator|BESCHREIBUNG|  
+|Leistungsindikator|Beschreibung|  
 |-------------|-----------------|  
 |Aktuelle Verbindungen|Aktuelle Anzahl hergestellter Clientverbindungen.|  
 |Anforderungen/Sek.|Rate der Verbindungsanforderungen.  Dies sind erhaltene Anforderungen.|  
-|Gesamte Anforderungen|Gesamtanzahl von Verbindungsanforderungen.  Dies sind erhaltene Anforderungen.|  
+|Anforderungen gesamt|Gesamtanzahl von Verbindungsanforderungen.  Dies sind erhaltene Anforderungen.|  
 |Erfolgreiche Vorgänge/s|Rate der erfolgreichen Verbindungsabschlüsse|  
 |Gesamte erfolgreiche Vorgänge|Gesamte erfolgreiche Verbindungen.|  
 |Fehler/s|Rate der Verbindungsfehler.|  
 |Gesamte Fehler|Gesamtanzahl von fehlerhaften Verbindungsversuchen|  
 |Aktuelle Benutzersitzungen|Aktuelle Anzahl von eingerichteten Benutzersitzungen|  
   
-###  <a name="bkmk_DataMiningModelProcessing"></a>Data Mining-Modell Verarbeitung  
+###  <a name="data-mining-model-processing"></a><a name="bkmk_DataMiningModelProcessing"></a>Data Mining-Modell Verarbeitung  
  Statistiken zur Microsoft Analysis Services Data Mining-Modellverarbeitung.  
   
-|Leistungsindikator|BESCHREIBUNG|  
+|Leistungsindikator|Beschreibung|  
 |-------------|-----------------|  
 |Fälle/s|Rate, mit der Fälle verarbeitet werden.|  
 |Verarbeitung aktueller Modelle|Aktuelle Anzahl der Modelle, die verarbeitet werden.|  
   
-###  <a name="bkmk_DataMiningPrediction"></a>Data Mining-Vorhersage  
+###  <a name="data-mining-prediction"></a><a name="bkmk_DataMiningPrediction"></a>Data Mining-Vorhersage  
  Statistiken zu Microsoft Analysis Services Data Mining-Vorhersagen.  
   
-|Leistungsindikator|BESCHREIBUNG|  
+|Leistungsindikator|Beschreibung|  
 |-------------|-----------------|  
 |Gleichzeitige Data Mining-Abfragen|Aktuelle Anzahl der Data Mining-Abfragen, an denen aktiv gearbeitet wird.|  
 |Vorhersagen/s|Anzahl der Vorhersagen, die in Data Mining-Abfragen generiert werden|  
@@ -103,10 +103,10 @@ ms.locfileid: "66079712"
 |Ergebniszeilen|Gesamtanzahl der Zeilen, die von Data Mining-Abfragen zurückgegeben wurden.|  
 |Gesamte Vorhersagen|Gesamte vom Server empfangene Vorhersageabfragen.|  
   
-###  <a name="bkmk_Locks"></a>Schleusen  
+###  <a name="locks"></a><a name="bkmk_Locks"></a>Schleusen  
  Statistik zu internen Microsoft Analysis Services-Serversperren.  
   
-|Leistungsindikator|BESCHREIBUNG|  
+|Leistungsindikator|Beschreibung|  
 |-------------|-----------------|  
 |Aktuelle Latchwartevorgänge|Aktuelle Anzahl von Threads, die auf einen Latch warten.  Dies sind Latchanforderungen, die nicht unmittelbar genehmigt werden konnten und sich im Wartezustand befinden.|  
 |Latchwartevorgänge/s|Rate der Latchwartevorgänge, die nicht umgehend genehmigt werden konnten und vor der Genehmigung in einen Wartezustand versetzt wurden.|  
@@ -119,10 +119,10 @@ ms.locfileid: "66079712"
 |Sperraufhebungsanforderungen/s|Anzahl der Sperraufhebungsanforderungen pro Sekunde.|  
 |Gesamte erkannte Deadlocks|Gesamtzahl der erkannten Deadlocks.|  
   
-###  <a name="bkmk_MDX"></a>MDX  
+###  <a name="mdx"></a><a name="bkmk_MDX"></a>MDX  
  Statistik zu Microsoft Analysis Services-MDX-Berechnungen.  
   
-|Leistungsindikator|BESCHREIBUNG|  
+|Leistungsindikator|Beschreibung|  
 |-------------|-----------------|  
 |Anzahl der abdeckenden Berechnungen|Gesamtzahl von Auswertungsknoten, die von MDX-Ausführungsplänen erstellt wurden, einschließlich aktiver und zwischengespeicherter Knoten.|  
 |Aktuelle Anzahl der Auswertungsknoten|Aktuelle (ungefähre) Anzahl der Auswertungsknoten, die von MDX-Ausführungsplänen erstellt wurden, einschließlich aktiver und zwischengespeicherter Knoten.|  
@@ -152,10 +152,10 @@ ms.locfileid: "66079712"
 |Autoexist gesamt|Häufigkeit, mit der Autoexist ausgeführt wurde.|  
 |EXISTING gesamt|Häufigkeit, mit der EXISTING-Satz ausgeführt wurde.|  
   
-###  <a name="bkmk_Memory"></a>Gedenkens  
+###  <a name="memory"></a><a name="bkmk_Memory"></a>Gedenkens  
  Statistik zu internem Microsoft Analysis Services-Serverspeicher.  
   
-|Leistungsindikator|BESCHREIBUNG|  
+|Leistungsindikator|Beschreibung|  
 |-------------|-----------------|  
 |Seitenpool 64 KB zugeordnet|Von System geliehener Arbeitsspeicher in KB.  Dieser Speicher wird anderen Teilen des Servers zugewiesen.|  
 |Seitenpool 64 KB Lookaside|Aktueller Speicher in 64 KB-Lookaside-Liste (in KB).  (Zur Verwendung bereite Speicherseiten.)|  
@@ -169,7 +169,7 @@ ms.locfileid: "66079712"
 |Bereinigung - verkleinerbarer Arbeitsspeicher in KB|Umfang des Arbeitsspeichers in KB, der mit dem Hintergrundbereinigungsprozess bereinigt wird.|  
 |Bereinigung - nicht verkleinerbarer Arbeitsspeicher in KB|Umfang des Arbeitsspeichers in KB, der nicht mit dem Hintergrundbereinigungsprozess bereinigt wird.|  
 |Bereinigung - Arbeitsspeicher in KB|Umfang des Arbeitsspeichers in KB, der mit dem Hintergrundbereinigungsprozess bereinigt wird.  (Verkleinerbarer Arbeitsspeicher für Bereinigungsprozess + Nicht verkleinerbarer Arbeitsspeicher für Bereinigungsprozess.)|  
-|Speicherauslastung in KB|Speicherauslastung des Serverprozesses, wie bei der Berechnung des Arbeitsspeicherpreises für die Bereinigung verwendet.  Entspricht dem Indikator „Process\PrivateBytes“ zuzüglich der Größe der im Speicher abgebildeten Daten. Von der xVelocity-In-Memory-Analyse-Engine (VertiPaq) abgebildeter oder belegter Arbeitsspeicher, der über die Arbeitsspeichergrenze der xVelocity-Engine hinausgeht, wird dabei ignoriert.|  
+|Speicherauslastung in KB|Speicherauslastung des Serverprozesses, wie bei der Berechnung des Arbeitsspeicherpreises für die Bereinigung verwendet.  Entspricht dem Indikator "Process\PrivateBytes" zuzüglich der Größe der im Speicher abgebildeten Daten. Von der xVelocity-Engine für Datenanalyse im Arbeitsspeicher (VertiPaq) abgebildeter oder belegter Arbeitsspeicher, der über die xVelocity-Arbeitsspeichergrenze hinausgeht, wird dabei ignoriert.|  
 |Untere Arbeitsspeichergrenze in KB|Unterer Grenzwert für den Arbeitsspeicher gemäß Konfigurationsdatei.|  
 |Obere Arbeitsspeichergrenze in KB|Oberer Grenzwert für den Arbeitsspeicher gemäß Konfigurationsdatei.|  
 |AggCacheKB|Vom Aggregationscache aktuell belegter Arbeitsspeicher in KB.|  
@@ -229,20 +229,20 @@ ms.locfileid: "66079712"
 |Grenzwert für den festen Speicher (KB)|Grenzwert für den festen Speicher gemäß Konfigurationsdatei.|  
 |VertiPaq-Arbeitsspeichergrenze (KB)|In-Memory-Grenzwert gemäß Konfigurationsdatei.|  
   
-###  <a name="bkmk_ProactiveCaching"></a>Proaktives Zwischenspeichern  
+###  <a name="proactive-caching"></a><a name="bkmk_ProactiveCaching"></a>Proaktives Zwischenspeichern  
  Statistik zur proaktiven Microsoft Analysis Services-Zwischenspeicherung.  
   
-|Leistungsindikator|BESCHREIBUNG|  
+|Leistungsindikator|Beschreibung|  
 |-------------|-----------------|  
 |Benachrichtigungen/s|Rate der Benachrichtigungen von der relationalen Datenbank.|  
 |Verarbeitungsabbrüche/s|Rate der Verarbeitungsabbrüche, die durch Benachrichtigungen verursacht werden.|  
 |Start des proaktiven Zwischenspeicherns/s|Rate der Starts des proaktiven Zwischenspeicherns.|  
 |Abschluss für proaktives Zwischenspeichern/s|Abschlussrate für proaktives Zwischenspeichern.|  
   
-###  <a name="bkmk_ProcAggregations"></a>Verarbeiten von Aggregationen  
+###  <a name="processing-aggregations"></a><a name="bkmk_ProcAggregations"></a>Verarbeiten von Aggregationen  
  Statistik zur Verarbeitung von Aggregationen in MOLAP-Datendateien in Microsoft Analysis Services.  
   
-|Leistungsindikator|BESCHREIBUNG|  
+|Leistungsindikator|Beschreibung|  
 |-------------|-----------------|  
 |Aktuelle Partitionen|Aktuelle Anzahl der Partitionen, die verarbeitet werden.|  
 |Gesamte Partitionen|Gesamtanzahl der verarbeiteten Partitionen (unabhängig vom Erfolg).|  
@@ -253,20 +253,20 @@ ms.locfileid: "66079712"
 |In temporäre Datei geschriebene Zeilen/s|Rate des Schreibens von Zeilen in eine temporäre Datei.  Temporäre Dateien werden geschrieben, wenn Aggregationen das Arbeitsspeichergrenze überschreiten.|  
 |In temporäre Datei geschriebene Bytes/s|Rate des Schreibens von Bytes in eine temporäre Datei.  Temporäre Dateien werden geschrieben, wenn Aggregationen das Arbeitsspeichergrenze überschreiten.|  
   
-###  <a name="bkmk_ProcIndexes"></a>Verarbeiten von Indizes  
+###  <a name="processing-indexes"></a><a name="bkmk_ProcIndexes"></a>Verarbeiten von Indizes  
  Statistik zur Verarbeitung von Indizes für MOLAP-Datendateien in Microsoft Analysis Services.  
   
-|Leistungsindikator|BESCHREIBUNG|  
+|Leistungsindikator|Beschreibung|  
 |-------------|-----------------|  
 |Aktuelle Partitionen|Aktuelle Anzahl der Partitionen, die verarbeitet werden.|  
 |Gesamte Partitionen|Gesamtanzahl der verarbeiteten Partitionen (unabhängig vom Erfolg).|  
 |Zeilen/s|Rate der Zeilen aus MOLAP-Dateien, die zum Erstellen von Indizes verwendet wurden.|  
 |Ergebniszeilen|Gesamte Zeilen aus MOLAP-Dateien, die zum Erstellen von Indizes verwendet wurden.|  
   
-###  <a name="bkmk_Processing"></a>Aufbereitungs  
+###  <a name="processing"></a><a name="bkmk_Processing"></a>Aufbereitungs  
  Statistiken zur Microsoft Analysis Services-Datenverarbeitung.  
   
-|Leistungsindikator|BESCHREIBUNG|  
+|Leistungsindikator|Beschreibung|  
 |-------------|-----------------|  
 |Zeilen lasen/s|Rate der aus allen relationalen Datenbanken gelesenen Zeilen.|  
 |Gelesene Zeilen gesamt|Anzahl der aus allen relationalen Datenbanken gelesenen Zeilen.|  
@@ -275,10 +275,10 @@ ms.locfileid: "66079712"
 |Geschriebene Zeilen/s|Rate der Zeilen, die bei der Verarbeitung geschrieben werden.|  
 |Geschriebene Zeilen gesamt|Anzahl der bei der Verarbeitung geschriebenen Zeilen.|  
   
-###  <a name="bkmk_StorageEngineQuery"></a>Speicher-Engine-Abfrage  
+###  <a name="storage-engine-query"></a><a name="bkmk_StorageEngineQuery"></a>Speicher-Engine-Abfrage  
  Statistik zu Microsoft Analysis Services-Speicher-Engine-Abfragen.  
   
-|Leistungsindikator|BESCHREIBUNG|  
+|Leistungsindikator|Beschreibung|  
 |-------------|-----------------|  
 |Aktuelle Measuregruppenabfragen|Aktuelle Anzahl der Measuregruppenabfragen, die aktiv bearbeitet werden.|  
 |Measuregruppenabfragen/s|Rate der Measuregruppenabfragen|  
@@ -318,10 +318,10 @@ ms.locfileid: "66079712"
 |Aggregationssuchvorgänge/s|Rate der Aggregationssuchvorgänge.|  
 |Aggregationstreffer/s|Rate der Aggregationstreffer.|  
   
-###  <a name="bkmk_Threads"></a>Threads  
+###  <a name="threads"></a><a name="bkmk_Threads"></a>Threads  
  Statistik zu Microsoft Analysis Services-Threads.  
   
-|Leistungsindikator|BESCHREIBUNG|  
+|Leistungsindikator|Beschreibung|  
 |-------------|-----------------|  
 |Kurze Analysethreads im Leerlauf|Anzahl von Leerlaufthreads im Pool für kurze Analysethreads.|  
 |Ausgelastete kurze Analysethreads|Anzahl ausgelasteter Threads im Pool für kurze Analysethreads.|  

@@ -11,31 +11,31 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 58ba761f3e32f13ddcf81dc9875057195298c705
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078562"
 ---
 # <a name="lesson-6-create-calculated-columns"></a>Lektion 6: Erstellen von berechneten Spalten
-  In dieser Lektion erstellen Sie neue Daten in Ihrem Modell, indem Sie berechnete Spalten hinzufügen. Eine berechnete Spalte basiert auf Daten, die bereits im Modell vorhanden sind. Weitere Informationen finden Sie unter [Berechnete Spalten &#40;SSAS – tabellarisch&#41;](tabular-models/ssas-calculated-columns.md).  
+  In dieser Lektion erstellen Sie neue Daten in Ihrem Modell durch Hinzufügen von berechneten Spalten. Eine berechnete Spalte basiert auf Daten, die bereits im Modell vorhanden sind. Weitere Informationen finden Sie unter [Berechnete Spalten &#40;SSAS – tabellarisch&#41;](tabular-models/ssas-calculated-columns.md).  
   
- Sie erstellen fünf neue berechnete Spalten in drei verschiedenen Tabellen. Die Schritte sind für jede Aufgabe etwas anders. Hierdurch werden Sie sehen, dass es verschiedene Möglichkeiten gibt, neue Spalten zu erstellen, sie umzubenennen und an verschiedenen Positionen in einer Tabelle zu platzieren.  
+ Sie erstellen fünf neue berechnete Spalten in drei verschiedenen Tabellen. Die Schritte sind für jede Aufgabe etwas anders. Damit sollen Ihnen verschiedene Methoden zum Erstellen neuer Spalten, zum Umbenennen der Spalten und zum Platzieren der Spalten an verschiedenen Positionen in einer Tabelle aufgezeigt werden.  
   
  Geschätzte Zeit zum Bearbeiten dieser Lektion: **15 Minuten**  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
- Dieses Thema ist Teil eines Tutorials zur Tabellenmodellierung, das in der vorgegebenen Reihenfolge durchgeführt werden sollte. Sie sollten vor dem Ausführen der Aufgaben in dieser Lektion die vorherige Lektion abgeschlossen haben: [Lektion 5: Erstellen von Beziehungen](lesson-4-create-relationships.md).  
+ Dieses Thema ist Teil eines Tutorials zur Tabellenmodellierung, das in der richtigen Reihenfolge absolviert werden sollte. Sie sollten vor dem Ausführen der Aufgaben in dieser Lektion die vorherige Lektion abgeschlossen haben: [Lektion 5: Erstellen von Beziehungen](lesson-4-create-relationships.md).  
   
 ## <a name="create-calculated-columns"></a>Erstellen von berechneten Spalten  
   
 #### <a name="create-a-month-calendar-calculated-column-in-the-date-table"></a>Erstellen einer berechneten Spalte "Month Calendar" in der Date-Tabelle  
   
-1.  Klicken Sie in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] auf das Menü **Modell**, zeigen Sie auf **Modellansicht**, und klicken Sie anschließend auf **Datensicht**.  
+1.  Klicken Sie in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf das Menü **Modell** , zeigen Sie auf **Modellansicht**, und klicken Sie anschließend auf **Datensicht**.  
   
-     Berechnete Spalten können nur mithilfe des Modell-Designers in der Datensicht erstellt werden.  
+     Berechnete Spalten können nur mit dem Modell-Designer in der Datensicht erstellt werden.  
   
-2.  Klicken Sie im Modell-Designer auf die Tabelle (Registerkarte) **Date**.  
+2.  Klicken Sie im Modell-Designer auf die Tabelle (Registerkarte) **Date** .  
   
 3.  Klicken Sie mit der rechten Maustaste auf die Spalte **Calendar Quarter** , und klicken Sie dann auf **Spalte einfügen**.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66078562"
      Anschließend werden Werte für alle Zeilen in der berechneten Spalte aufgefüllt. Wenn Sie durch die Tabelle scrollen, werden Sie sehen, dass die Zeilen über verschiedene Werte für diese Spalte verfügen, basierend auf den Daten in jeder Zeile.  
   
     > [!NOTE]  
-    >  Wenn Sie einen Fehler erhalten, überprüfen Sie, ob die Spaltennamen in der Formel mit den von Ihnen in [Lektion 3: Umbenennen von Spalten](rename-columns.md) geänderten Spaltennamen übereinstimmen.  
+    >  Wenn Sie einen Fehler erhalten, überprüfen Sie, ob die Spaltennamen in der Formel mit den von Ihnen in [Lektion 3: Umbenennen von Spalten](rename-columns.md)geänderten Spaltennamen übereinstimmen.  
   
 5.  Benennen Sie diese Spalte `Month Calendar`in um.  
   
@@ -70,10 +70,10 @@ ms.locfileid: "66078562"
   
 3.  Benennen Sie die Spalte `Day of Week`in um.  
   
-4.  Klicken Sie auf die Spaltenüberschrift und ziehen Sie die Spalte zwischen die Spalte **Day Name** und die Spalte **Day of Month**.  
+4.  Klicken Sie auf die Spaltenüberschrift und ziehen Sie die Spalte zwischen die Spalte **Day Name** und die Spalte **Day of Month** .  
   
     > [!TIP]  
-    >  Das Verschieben von Spalten in der Tabelle erleichtert die Navigation.  
+    >  Durch das Verschieben von Spalten in der Tabelle wird die Navigation vereinfacht.  
   
  Die berechnete Spalte "Day of Week" bietet einen sortierbaren Namen für den Wochentag.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "66078562"
   
 4.  Benennen Sie die Spalte `Margin`in um.  
   
-5.  Ziehen Sie die Spalte zwischen die Spalte **Sales Amount** und die Spalte **Tax Amt**.  
+5.  Ziehen Sie die Spalte zwischen die Spalte **Sales Amount** und die Spalte **Tax Amt** .  
   
  Die berechnete Spalte "Margin" dient zur Analyse von Gewinnspannen für jede Zeile (Produktzeile).  
   

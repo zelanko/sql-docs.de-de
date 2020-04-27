@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f2c16e66c03eee8c5e1616fdaa0f0d1b154b85e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63143584"
 ---
 # <a name="profiling-odbc-driver-performance"></a>Leistungsprofilerstellung des ODBC-Treibers
@@ -68,13 +68,13 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 -   Netzwerk  
   
--   Time  
+-   Zeit  
   
  In der folgenden Tabelle gelten die Beschreibungen der Felder in der SQLPERF-Datenstruktur auch für die in der Leistungsprotokolldatei erfassten Statistiken.  
   
 ### <a name="application-profile-statistics"></a>Anwendungsprofilstatistiken  
   
-|SQLPERF-Feld|BESCHREIBUNG|  
+|SQLPERF-Feld|Beschreibung|  
 |-------------------|-----------------|  
 |TimerResolution|Minimale Auflösung der Uhrzeit des Servers in Millisekunden. Dies wird gewöhnlich als 0 (null) angegeben und sollte nur verwendet werden, wenn die angegebene Zahl sehr groß ist. Wenn die minimale Auflösung der Serveruhrzeit größer als das wahrscheinliche Intervall einiger der zeitgeberbasierten Statistikwerte ist, könnte die Statistikdatenmenge unnötig größer werden.|  
 |SQLidu|Anzahl der INSERT-Anweisungen, DELETE-Anweisungen oder UPDATE-Anweisungen nach SQL_PERF_START|  
@@ -112,7 +112,7 @@ ErrorMsg: [Microsoft][SQL Server Native Client]
   
 ### <a name="time-statistics"></a>Zeitstatistiken  
   
-|SQLPERF-Feld|BESCHREIBUNG|  
+|SQLPERF-Feld|Beschreibung|  
 |-------------------|-----------------|  
 |msExecutionTime|Die kumulierte Verarbeitungszeit des Treibers nach SQL_PERF_START, einschließlich der Wartezeit des Treibers auf Antworten vom Server|  
 |msNetworkServerTime|Die kumulierte Wartezeit des Treibers auf Antworten vom Server|  

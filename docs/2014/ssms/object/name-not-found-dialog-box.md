@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9274157d5a57e04b03e1a9c71d29c7f46e0a1dec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62999545"
 ---
 # <a name="name-not-found-dialog-box"></a>Name nicht gefunden (Dialogfeld)
@@ -28,16 +28,16 @@ ms.locfileid: "62999545"
  **Diese Informationen korrigieren und die Suche wiederholen**  
  Bei Auswahl dieser Option kann der Bereich **Wählen Sie den Objekttyp aus**, **Objekttyp**und **Geben Sie den Objektnamen ein** verwendet werden.  
   
- **Diesen Objekttyp auswählen**  
+ **Wählen Sie den Objekttyp aus**  
  Zeigt die Typen von Objekten an, die mit der Schaltfläche **Objekttypen** ausgewählt wurden.  
   
  **Objekttypen**  
  Klicken Sie auf diese Schaltfläche, um das Dialogfeld **Objekttypen auswählen** anzuzeigen, und wählen Sie die Objekttypen aus einer Liste aus.  
   
- **Geben Sie den Objektnamen ein.**  
+ **Geben Sie den Objektnamen ein**  
  Enthält den Namen des Objekts, das nicht gefunden wurde. Korrigieren Sie den Namen des Objekts, oder geben Sie einen neuen Objektnamen ein.  
   
- *****\<Objektnamen>* **aus Auswahl** entfernen      
+ **Remove***\<Objektnamen>* **aus Auswahl** entfernen      
  Wählen Sie diese Option aus, um das Dialogfeld **Name nicht gefunden** zu schließen und das Element aus dem Dialogfeld **Objekte auswählen** zu entfernen.  
   
   

@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6051f62caac2878b689a50e5773b047cb8df7afe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076850"
 ---
 # <a name="enable-dimension-writeback"></a>Rückschreiben von Dimensionen aktivieren
@@ -40,7 +40,7 @@ ms.locfileid: "66076850"
 ## <a name="setting-dimension-writeback-capability"></a>Festlegen des Features zum Rückschreiben von Dimensionen  
  Auf der zweiten Seite **Rückschreiben von Dimensionen aktivieren** des Assistenten findet das eigentliche Festlegen der Option **Rückschreiben in der Dimension aktivieren** statt. Durch Auswählen dieser Option wird die `WriteEnabled`-Eigenschaft der Dimension automatisch auf `True` festgelegt. Durch Deaktivieren dieser Option wird die Eigenschaft automatisch auf `False` festgelegt.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Beim Erstellen eines neuen Elements müssen Sie jedes Attribut in einer Dimension angeben. Sie können kein Element einfügen, ohne dabei einen Wert für das Schlüsselattribut der Dimension anzugeben. Deshalb unterliegt das Erstellen von Elementen allen Beschränkungen (z.&#160;B. von NULL verschiedene Schlüsselwerte), die für die Dimensionstabelle definiert sind. Sie sollten auch Spalten berücksichtigen, die optional durch Dimensionseigenschaften angegeben werden, z. B. Spalten, die in den Dimensionseigenschaften `CustomRollupColumn`, `CustomRollupPropertiesColumn` oder `UnaryOperatorColumn` angegeben werden.  
   
 > [!WARNING]  

@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5db12886384089afe87ffb5fa659c34b09a9fe23
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074982"
 ---
 # <a name="grant-custom-access-to-cell-data-analysis-services"></a>Erteilen von benutzerdefiniertem Zugriff auf Zellendaten (Analysis Services)
@@ -102,6 +102,6 @@ AND (NOT Measures.CurrentMember IS [Measures].[Reseller Total Product Cost])
  [&#40;Analysis Services Prozess Berechtigungen erteilen&#41;](grant-process-permissions-analysis-services.md)   
  [Erteilen von Berechtigungen für eine Dimension &#40;Analysis Services&#41;](grant-permissions-on-a-dimension-analysis-services.md)   
  [Gewähren von benutzerdefiniertem Zugriff auf Dimensions Daten &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [Erteilen von Cube-oder Modell Berechtigungen &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
+ [Erteilen von Cube- oder Modellberechtigungen &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)  
   
   

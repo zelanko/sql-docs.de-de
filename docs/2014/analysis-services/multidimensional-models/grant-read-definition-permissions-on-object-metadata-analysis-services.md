@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e03e55451c2340b5f0773e2873127c3551a82aab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074897"
 ---
 # <a name="grant-read-definition-permissions-on-object-metadata-analysis-services"></a>Erteilen von Berechtigungen zum Lesen von Definitionen für Objektmetadaten (Analysis Services)
@@ -32,9 +32,9 @@ ms.locfileid: "66074897"
   
  Wir empfehlen, dass Sie die `Read Definition` -Berechtigung auf Datenbankebene einschließen, wenn Sie Rollen für die dedizierte Verarbeitung einrichten. `Read Definition` Ermöglicht es nicht-Administratoren, die Objekthierarchie eines Modells in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] anzuzeigen und für nachfolgende Verarbeitung zu einzelnen Objekten zu navigieren.  
   
-1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]her, erweitern Sie im Objekt-Explorer das **Rollen** -Element für die entsprechende Datenbank, und klicken Sie dann auf eine Datenbankrolle (oder erstellen Sie eine neue Datenbankrolle).  
+1.  Stellen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Sie in eine Verbindung mit der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Instanz von her, erweitern Sie in Objekt-Explorer **Rollen** für die entsprechende Datenbank, und klicken Sie dann auf eine Daten Bank Rolle (oder erstellen Sie eine neue Daten Bank Rolle).  
   
-2.  Wählen Sie **** auf der Registerkarte Allgemein `Read Definition` die Option aus.  
+2.  Wählen Sie **General** auf der Registerkarte Allgemein `Read Definition` die Option aus.  
   
 3.  Geben Sie im **Mitgliedschaft** sbereich die Windows-Konten von Benutzern und Gruppen ein, die mit dieser Rolle eine Verbindung zu Analysis Services herstellen.  
   
@@ -60,6 +60,6 @@ ms.locfileid: "66074897"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erteilen von Daten Bank Berechtigungen &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
- [&#40;Analysis Services Prozess Berechtigungen erteilen&#41;](grant-process-permissions-analysis-services.md)  
+ [Erteilen von Verarbeitungsberechtigungen &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md)  
   
   

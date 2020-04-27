@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c6cd41be722d80baf442db907d6fdab9f334859
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62891789"
 ---
 # <a name="step-2-adding-and-configuring-a-flat-file-connection-manager"></a>Schritt 2: Hinzufügen und Konfigurieren eines Verbindungs-Managers für Flatfiles
@@ -24,9 +24,9 @@ ms.locfileid: "62891789"
   
  Für dieses Lernprogramm konfigurieren Sie die folgenden Eigenschaften in Ihrem Verbindungs-Manager für Flatfiles:  
   
--   **Spaltennamen:** Da die Flatfile keine Spaltennamen hat, erstellt der Verbindungs-Manager für Flatfiles Standard Spaltennamen. Diese Standardnamen sind nicht sinnvoll, wenn der Zweck jeder Spalte identifiziert werden soll. Damit diese Standardnamen nützlicher werden, müssen Sie die Standardnamen so ändern, dass sie mit der Faktentabelle übereinstimmen, in die die Flatfiledaten geladen werden.  
+-   **Spaltennamen:** Weil die Flatfile keine Spaltennamen aufweist, werden vom Verbindungs-Manager für Flatfiles Standardspaltennamen erstellt. Diese Standardnamen sind nicht sinnvoll, wenn der Zweck jeder Spalte identifiziert werden soll. Damit diese Standardnamen nützlicher werden, müssen Sie die Standardnamen so ändern, dass sie mit der Faktentabelle übereinstimmen, in die die Flatfiledaten geladen werden.  
   
--   **Daten** Zuordnungen: Die Datentyp Zuordnungen, die Sie für den Verbindungs-Manager für Flatfiles angeben, werden von allen Flatfile-Datenquellen Komponenten verwendet, die auf den Verbindungs-Manager verweisen. Sie können diese Datentypen entweder mithilfe des Verbindungs-Managers für Flatfiles manuell zuordnen oder das Dialogfeld **Spaltentypen vorschlagen** verwenden. In diesem Tutorial werden die vorgeschlagenen Zuordnungen im Dialogfeld **Spaltentypen vorschlagen** angezeigt. Sie nehmen dann manuell die erforderlichen Zuordnungen im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** vor.  
+-   **Datenzuordnungen:** Die Datentypenzuordnungen, die Sie für den Verbindungs-Manager für Flatfiles angeben, werden von allen Flatfile-Datenquellenkomponenten verwendet, die auf den Verbindungs-Manager verweisen. Sie können diese Datentypen entweder mithilfe des Verbindungs-Managers für Flatfiles manuell zuordnen oder das Dialogfeld **Spaltentypen vorschlagen** verwenden. In diesem Tutorial werden die vorgeschlagenen Zuordnungen im Dialogfeld **Spaltentypen vorschlagen** angezeigt. Sie nehmen dann manuell die erforderlichen Zuordnungen im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** vor.  
   
  Der Verbindungs-Manager für Flatfiles stellt Gebietsschemainformationen zur Datendatei bereit. Wenn Ihr Computer nicht für die Verwendung der regionalen Option Englisch (USA) konfiguriert ist, müssen Sie zusätzliche Eigenschaften im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** festlegen.  
   
@@ -77,8 +77,7 @@ ms.locfileid: "62891789"
   
 1.  Klicken Sie im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** auf **Typen vorschlagen**.  
   
-     
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] schlägt automatisch die am besten geeigneten Datentypen auf Basis der ersten 200 Datenzeilen vor. Sie können diese Vorschlagsoptionen auch ändern, um mehr oder weniger Daten auszuwerten, den Standarddatentyp für ganzzahlige oder boolesche Daten anzugeben oder Leerstellen zum Auffüllen von Zeichenfolgenspalten hinzuzufügen.  
+     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] schlägt automatisch die am besten geeigneten Datentypen auf Basis der ersten 200 Datenzeilen vor. Sie können diese Vorschlagsoptionen auch ändern, um mehr oder weniger Daten auszuwerten, den Standarddatentyp für ganzzahlige oder boolesche Daten anzugeben oder Leerstellen zum Auffüllen von Zeichenfolgenspalten hinzuzufügen.  
   
      Nehmen Sie vorerst keine Änderungen an den Optionen im Dialogfeld **Spaltentypen vorschlagen** vor und klicken Sie auf **OK** , damit von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Datentypen für Spalten vorgeschlagen werden. Anschließend kehren Sie zum Bereich **Erweitert** im Dialogfeld **Verbindungs-Manager-Editor für Flatfiles** zurück, in dem Sie die von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]vorgeschlagenen Spaltendatentypen anzeigen können. (Wenn Sie auf **Abbrechen**klicken, werden keine Vorschläge zu Spaltenmetadaten gemacht und wird der Standardtyp für Zeichenfolgendaten (DT_STR) verwendet.)  
   

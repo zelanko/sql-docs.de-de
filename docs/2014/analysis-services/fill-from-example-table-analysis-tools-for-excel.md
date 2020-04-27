@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d1e09e439469f23412c84ea7bab65c0aa748f286
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081318"
 ---
 # <a name="fill-from-example-table-analysis-tools-for-excel"></a>Aus Beispiel füllen (Tabellenanalysetools für Excel)
@@ -49,7 +49,7 @@ ms.locfileid: "66081318"
   
      Durch das Tool wird der ursprünglichen Datentabelle außerdem automatisch eine Spalte hinzugefügt, die die neuen Werte enthält. Sie können diese Werte überprüfen und mit den ursprünglichen Werten vergleichen.  
   
-### <a name="requirements"></a>Requirements (Anforderungen)  
+### <a name="requirements"></a>Anforderungen  
  Sie können nur Daten verwenden, die sich in Spalten befinden. Verwenden Sie die Einfügen/Transponieren-Funktion in Excel, um aufzufüllende Datenreihen, die in einer Zeile gespeichert sind, in das Spaltenformat umzuwandeln.  
   
 ## <a name="understanding-the-pattern-report"></a>Grundlegendes zum Musterbericht  
@@ -59,7 +59,7 @@ ms.locfileid: "66081318"
   
  Wenn Sie beispielsweise ein Arbeitsblatt mit den Entfernungen zu Lieferadressen für Bestellungen ausfüllen möchten, dann nehmen Sie logischerweise an, dass die Lieferadresse einen großen Einfluss auf die Entfernung hat. In diesem Fall enthält der Bericht möglicherweise folgende Zeile:  
   
-|Column|value|Begünstigt|Relative Auswirkung|  
+|Column|Wert|Begünstigt|Relative Auswirkung|  
 |------------|-----------|------------|---------------------|  
 |Bundesland/Kanton/PLZ|AB|>500-Kilometer|80 %|  
   

@@ -11,32 +11,31 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2f05edb30344b63781a89540ade8de4743bb715e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071845"
 ---
 # <a name="configure-and-view-sharepoint-log-files--and-diagnostic-logging-powerpivot-for-sharepoint"></a>Konfigurieren und Anzeigen der SharePoint-Protokolldateien und -Diagnoseprotokollierung (PowerPivot für SharePoint)
-  
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Server-Vorgänge, Ereignisse und Meldungen werden in SharePoint-Protokolldateien aufgezeichnet. Verwenden Sie die Informationen in diesem Thema, um Protokolliergrade zu konfigurieren und Protokolldatei-Informationen anzuzeigen. Sie können steuern, welche [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Serverereignisse in einer Datei protokolliert werden. Sie können auch den Schweregrad von Meldungen steuern, die protokolliert werden. Weitere Informationen finden Sie unter [Konfigurieren der Sammlung von Verwendungs Daten für &#40;PowerPivot für SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md).  
   
  Inhalte dieses Themas:  
   
--   [Speicherort der Protokolldatei](#bkmk_filelocation)  
+-   [Protokolldatei-Speicherort](#bkmk_filelocation)  
   
--   [Ändern der Diagnose Protokollierungs Grade für einzelne Ereignis Kategorien](#bkmk_modifyloglevels)  
+-   [Ändern diagnostischer Protokolliergrade für einzelne Ereigniskategorien](#bkmk_modifyloglevels)  
   
--   [Anzeigen von SharePoint-Protokolldateien](#bkmk_how2viewlogfiles)  
+-   [So zeigen Sie die SharePoint-Protokolldateien an](#bkmk_how2viewlogfiles)  
   
-##  <a name="bkmk_filelocation"></a>Speicherort der Protokolldatei  
+##  <a name="log-file-location"></a><a name="bkmk_filelocation"></a>Speicherort der Protokolldatei  
  Standardmäßig werden SharePoint-Protokolldateien am folgenden Speicherort gespeichert:  
   
  `C:\Program files\Common Files\Microsoft Shared\Web Server Extensions\14\LOGS`  
   
  Der Ordner LOGS enthält Protokolldateien (`.log`), Datendateien (`.txt`) und Verwendungsdateien (`.usage`). Die Dateinamenskonvention für ein SharePoint-Ablaufverfolgungsprotokoll ist der von einem Datum und einem Zeitstempel gefolgte Servername. SharePoint-Ablaufverfolgungsprotokolle werden in regelmäßigen Abständen erstellt, sowie immer dann, wenn ein IISRESET erfolgt. Im Allgemeinen gibt es viele Ablaufverfolgungsprotokolle innerhalb eines 24 Stundenzeitraums.  
   
-##  <a name="bkmk_modifyloglevels"></a>Ändern der Diagnose Protokollierungs Grade für einzelne Ereignis Kategorien  
+##  <a name="modify-diagnostic-logging-levels-for-individual-event-categories"></a><a name="bkmk_modifyloglevels"></a>Ändern der Diagnose Protokollierungs Grade für einzelne Ereignis Kategorien  
  Standardmäßig wird die ULS-Protokollierung von PowerPivot-Ereignissen auf *Medium*festgelegt. Diese Einstellung ist für SQL Server 2012 neu. Wenn Sie einen Server von der vorherigen Version aktualisieren, könnte der Protokolliergrad immer noch auf *Ausführlich*festgelegt sein, der Standardebene in SQL Server 2008 R2. Wenn Sie daran gewöhnt sind, die ULS-Protokolle für die PowerPivot-Serverauslastung anzuzeigen, werden Sie feststellen, dass aufgrund der Änderung weniger Informationen über die PowerPivot-Servervorgänge zur Verfügung stehen.  
   
  eingeordnet. Abgesehen von Ausnahmen vom Typ *Hoch*sind alle PowerPivot-Meldungen der Kategorie Ausführlich zuzuordnen. Wenn Sie Einträge für routinemäßige Servervorgänge, beispielsweise Verbindungen, Anforderungen oder Abfrageerstellung, protokollieren möchten, müssen Sie den Protokolliergrad auf Ausführlich festlegen.  
@@ -51,11 +50,11 @@ ms.locfileid: "66071845"
   
 4.  Erweitern Sie die Kategorie, und wählen Sie einzelne Kategorien aus:  
   
-     **Anwendungsseitenanforderung** gibt Ereignisse an, die von der Dienst Anwendung ausgelöst [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] werden, wenn ein zum Laden einer Power Pivot-Datenquelle und zum kommunizieren mit anderen Servern in der Farm gesucht wird.  
+     Unter**Anwendungsseitenanforderung** werden Ereignisse angegeben, die beim Suchen eines [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] s zum Laden einer PowerPivot-Datenquelle und Kommunizieren mit anderen Servern in der Farm von der Dienstanwendung ausgelöst werden.  
   
-     Bei der **Anforderungs Verarbeitung** werden Ereignisse angegeben, die durch Abfrage Anforderungen für eine Power Pivot-Datenbank ausgelöst werden, die auf einem Server in der Farm geladen wird.  
+     Unter**Anforderungsverarbeitung** werden Ereignisse angegeben, die durch Abfrageanforderungen für eine auf einem Server in der Farm geladene PowerPivot-Datenbank ausgelöst wurden.  
   
-     **Verwendung** gibt ein Ereignis im Zusammenhang mit der Power Pivot-Verwendungs Datensammlung an.  
+     **Verwendung** gibt ein auf die Sammlung von PowerPivot-Verwendungsdaten bezogenes Ereignis an.  
   
 5.  Wählen Sie unter Unwichtigstes, im Ereignisprotokoll aufzuzeichnendes Ereignis die Option **Keine** aus, um die Ereignisprotokollierung für die Kategorie zu deaktivieren, oder **Fehler** , um die Protokollierung auf Fehler zu beschränken.  
   
@@ -67,7 +66,7 @@ ms.locfileid: "66071845"
   
 9. Klicken Sie auf **OK**.  
   
-##  <a name="bkmk_how2viewlogfiles"></a>Anzeigen von SharePoint-Protokolldateien  
+##  <a name="how-to-view-sharepoint-log-files"></a><a name="bkmk_how2viewlogfiles"></a>Anzeigen von SharePoint-Protokolldateien  
  Protokolldateien sind Textdateien. Sie können sie in jedem Text-Editor öffnen. Sie können auch Protokoll-Viewer-Anwendungen von Drittanbietern verwenden.  
   
 #### <a name="use-a-text-editor"></a>Verwenden eines Text-Editors  
@@ -127,7 +126,7 @@ ms.locfileid: "66071845"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Sammlung von Power Pivot-Verwendungs Daten](power-pivot-usage-data-collection.md)   
- [Lesen und Anzeigen der Setupprotokolldateien von SQL Server](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
+ [Anzeigen und Lesen von SQL Server Setup-Protokolldateien](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)   
  [Konfigurieren der Sammlung von Verwendungs Daten für &#40;PowerPivot für SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
   

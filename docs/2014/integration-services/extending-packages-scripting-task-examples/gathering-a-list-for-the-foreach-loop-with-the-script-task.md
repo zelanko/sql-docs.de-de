@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9d06a2ec19b4a84dcd0d69fb70389d68974813be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62894979"
 ---
 # <a name="gathering-a-list-for-the-foreach-loop-with-the-script-task"></a>Erfassen einer Liste für die ForEach-Schleife mit dem Skripttask
@@ -40,7 +40,7 @@ ms.locfileid: "62894979"
   
 1.  Erstellen Sie eine Paketvariable vom Typ integer mit dem Namen `FileAge`, und geben Sie einen positiven oder negativen ganzzahligen Wert ein. Ist der Wert positiv, sucht der Code nach Dateien, die neuer als die angegebene Anzahl von Tagen ist. Bei negativen Werten wird nach Dateien gesucht, die älter als die genannte Anzahl von Tagen sind.  
   
-2.  Erstellen Sie eine Paketvariable vom Typ `FileList` mit dem Namen `Object`, um zur späteren Verwendung mit dem Foreach-Enumerator für Daten aus Variable die Liste der Dateien aufzunehmen, die vom Skripttask erfasst wurden.  
+2.  Erstellen Sie eine Paketvariable vom Typ `Object` mit dem Namen `FileList`, um zur späteren Verwendung mit dem Foreach-Enumerator für Daten aus Variable die Liste der Dateien aufzunehmen, die vom Skripttask erfasst wurden.  
   
 3.  Fügen Sie die `FileAge`-Variable der `ReadOnlyVariables`-Eigenschaft des Skripttasks sowie die `FileList`-Variable der `ReadWriteVariables`-Eigenschaft hinzu.  
   
@@ -248,7 +248,7 @@ MessageBoxButtons.OK, MessageBoxIcon.Information);
 ![Integration Services Symbol (klein)](../media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Foreach Loop Container](../control-flow/foreach-loop-container.md)  (Foreach-Schleifencontainer)  
+ [Foreach-Schleifen Container](../control-flow/foreach-loop-container.md)   
  [Konfigurieren eines Foreach-Schleifencontainers](../configure-a-foreach-loop-container.md)  
   
   

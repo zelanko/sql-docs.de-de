@@ -11,14 +11,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ed38e8f28894143fd32b233870bc3aab2b24c464
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078987"
 ---
 # <a name="deploying-an-analysis-services-project"></a>Bereitstellen eines Analysis Services-Projekts
-  Zum Anzeigen von Cube- und Dimensionsdaten für die Objekte im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Projekt müssen Sie das Projekt auf einer bestimmten Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bereitstellen und dann den Cube und seine Dimensionen verarbeiten. Beim bereit [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] *Stellen eines-* Projekts werden die definierten Objekte in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]einer Instanz von erstellt. Durch das *verarbeiten* der Objekte in einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Instanz von werden die Daten aus den zugrunde liegenden Datenquellen in die Cubeobjekte kopiert. Weitere Informationen finden Sie unter [Bereitstellen von Analysis Services-Projekten &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md) und [Konfigurieren von Analysis Services-Projekteigenschaften &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)erstellt.  
+  Zum Anzeigen von Cube- und Dimensionsdaten für die Objekte im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Projekt müssen Sie das Projekt auf einer bestimmten Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bereitstellen und dann den Cube und seine Dimensionen verarbeiten. Beim bereit [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] *Stellen eines-* Projekts werden die definierten Objekte in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]einer Instanz von erstellt. Durch das*Verarbeiten* der Objekte in einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] werden Daten von den zugrunde liegenden Datenquellen in die Cubeobjekte kopiert. Weitere Informationen finden Sie unter [Bereitstellen von Analysis Services-Projekten &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md) und [Konfigurieren von Analysis Services-Projekteigenschaften &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)erstellt.  
   
  An diesem Punkt des Entwicklungsprozesses stellen Sie den Cube im Allgemeinen für eine Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] auf einem Entwicklungsserver bereit. Sobald Sie die Entwicklung Ihres Business Intelligence-Projekts abgeschlossen haben, verwenden Sie im Allgemeinen den Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , um Ihr Projekt statt auf dem Entwicklungsserver auf einem Produktionsserver bereitzustellen. Weitere Informationen finden Sie unter [Mehrdimensionale Modelllösungsbereitstellung](multidimensional-models/multidimensional-model-solution-deployment.md) und [Bereitstellen von Modelllösungen mithilfe des Bereitstellungs-Assistenten](multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md).  
   
@@ -32,7 +32,7 @@ ms.locfileid: "66078987"
   
 2.  Klicken Sie im Knoten **Konfigurationseigenschaften** im linken Bereich auf **Bereitstellung**.  
   
-     Überprüfen Sie die Bereitstellungseigenschaften für das Projekt. Standardmäßig wird von der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projektvorlage ein [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt so konfiguriert, dass alle Projekte inkrementell für die Standardinstanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] auf dem lokalen Computer bereitgestellt werden, um eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank mit dem gleichen Namen wie das Projekt zu erstellen und die Objekte nach der Bereitstellung zu verarbeiten, indem die Standardverarbeitungsoption verwendet wird. Weitere Informationen finden Sie unter [Konfigurieren von Analysis Services-Projekteigenschaften &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
+     Überprüfen Sie die Bereitstellungseigenschaften für das Projekt. Standardmäßig wird von der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projektvorlage ein [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekt so konfiguriert, dass alle Projekte inkrementell für die Standardinstanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] auf dem lokalen Computer bereitgestellt werden, um eine [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank mit dem gleichen Namen wie das Projekt zu erstellen und die Objekte nach der Bereitstellung zu verarbeiten, indem die Standardverarbeitungsoption verwendet wird. Weitere Informationen finden Sie unter [Konfigurieren von Analysis Services-Projekteigenschaften &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)erstellt.  
   
     > [!NOTE]  
     >  Wenn Sie das Projekt für eine benannte [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Instanz von auf dem lokalen Computer oder für eine Instanz auf einem Remote Server bereitstellen möchten, ändern Sie die **Server** -Eigenschaft in den entsprechenden Instanznamen, \<z. b. Server *Name**>\\**instanceName * * >*.  
@@ -44,8 +44,7 @@ ms.locfileid: "66078987"
     > [!NOTE]  
     >  Wenn während der Bereitstellung Fehler auftreten, überprüfen Sie die Datenbankberechtigungen mithilfe von SQL Server Management Studio. Das Konto, das Sie für die Datenquellenverbindung angegeben haben, muss über einen Anmeldenamen in der SQL Server-Instanz verfügen. Doppelklicken Sie auf den Anmeldenamen, um Eigenschaften für die Benutzerzuordnung anzuzeigen. Dieses Konto muss in der **AdventureWorksDW2012** -Datenbank über db_datareader-Berechtigungen verfügen.  
   
-     
-  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] stellt nun das [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Projekt erstellt und mit einem Bereitstellungsskript für die angegebene Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bereit. Der Fortschritt der Bereitstellung wird in zwei Fenstern angezeigt: dem Fenster **Ausgabe** und dem Fenster **Bereitstellungs Fortschritt-Analysis Services Tutorial** .  
+     [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] stellt nun das [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Projekt erstellt und mit einem Bereitstellungsskript für die angegebene Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] bereit. Der Fortschritt der Bereitstellung wird in zwei Fenstern angezeigt: dem Fenster **Ausgabe** und dem Fenster **Bereitstellungs Fortschritt-Analysis Services Tutorial** .  
   
      Öffnen Sie gegebenenfalls das Ausgabefenster, indem Sie im Menü **Ansicht** auf **Ausgabe** klicken. Im Fenster **Ausgabe** wird der allgemeine Bereitstellungsstatus angezeigt. Im Fenster **Bereitstellungs Fortschritt-Analysis Services Tutorial** werden die Details zu jedem Schritt angezeigt, der während der Bereitstellung ausgeführt wird. Weitere Informationen finden Sie unter [Erstellen von Analysis Services-Projekten &#40;SSDT&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md) und [Bereitstellen von Analysis Services-Projekten &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md).  
   
@@ -62,6 +61,6 @@ ms.locfileid: "66078987"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Bereitstellen von Analysis Services Projekten &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md)   
- [Konfigurieren von Analysis Services Projekteigenschaften &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
+ [Konfigurieren von Analysis Services-Projekteigenschaften &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)  
   
   

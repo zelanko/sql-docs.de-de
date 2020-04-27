@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d6e79a86b4438eeacf5c1184b73a5edf0e9ea9d7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069408"
 ---
 # <a name="select-mining-model-dialog-box-mining-model-prediction-view"></a>Miningmodell auswählen-Dialogfeld (Miningmodellvorhersage-Sicht)
@@ -29,6 +29,6 @@ ms.locfileid: "66069408"
 ## <a name="see-also"></a>Weitere Informationen  
  [Vorhersage Abfrage-Generator &#40;Data Mining-&#41;](prediction-query-builder-data-mining.md)   
  [Schnittstellen für Data Mining-Abfragen](data-mining/data-mining-query-tools.md)   
- [Data Mining-Erweiterungen &#40;DMX-&#41;-Anweisungs Referenz](/sql/dmx/data-mining-extensions-dmx-statements)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

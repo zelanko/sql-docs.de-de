@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c5eedfb396b33d33ceb9fbfad0245c4eb730997
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076690"
 ---
 # <a name="set-the-compatibility-level-of-a-multidimensional-database-analysis-services"></a>Festlegen des Kompatibilitätsgrads einer mehrdimensionalen Datenbank (Analysis Services)
@@ -25,7 +25,7 @@ ms.locfileid: "66076690"
 > [!NOTE]  
 >  Tabellarische Modelle verfügen über zusätzliche Datenbank-Kompatibilitätsgrade, die für mehrdimensionale Modelle nicht gelten. Bei mehrdimensionalen Modellen gibt es keinen Kompatibilitätsgrad `1103`. Weitere Informationen `1103` zu tabellarischen Lösungen finden Sie [unter Neuerungen beim tabellarischen Modell in SQL Server 2012 SP1 und Kompatibilitäts Grad](https://go.microsoft.com/fwlink/?LinkId=301727) .  
   
- **Kompatibilitäts Grade für mehrdimensionale Datenbanken**  
+ **Kompatibilitätsgrade für mehrdimensionale Datenbanken**  
   
  Das einzige Verhalten mehrdimensionaler Datenbanken, das derzeit im Hinblick auf die Funktionsebene abweicht, ist die Zeichenfolgenspeicherarchitektur. Wenn Sie den Kompatibilitätsgrad einer Datenbank erhöhen, können Sie den Höchstwert von 4 GB für den Zeichenfolgenspeicher überschreiben, in dem Measures und Dimensionen gespeichert sind.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "66076690"
     <Language>1033</Language>  
     ```  
   
-6.  Speichern Sie die Datei .  
+6.  Speichern Sie die Datei.  
   
 7.  Klicken Sie zum Ausführen des Skripts im Menü Abfrage auf **Ausführen** , oder drücken Sie F5.  
   
@@ -92,6 +92,6 @@ ms.locfileid: "66076690"
  Nachdem Sie den Datenbank-Kompatibilitätsgrad erhöht haben, können Sie die `StringStoresCompatibilityLevel`-Eigenschaft in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] festlegen. Dadurch wird der Zeichenfolgenspeicher für Measures und Dimensionen vergrößert. Weitere Informationen zu dieser Funktion finden Sie unter [Konfigurieren des Zeichenfolgenspeichers für Dimensionen und Partitionen](configure-string-storage-for-dimensions-and-partitions.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Sichern, wiederherstellen und Synchronisieren von Datenbanken &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
+ [Sichern, Wiederherstellen und Synchronisieren von Datenbanken &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md)  
   
   

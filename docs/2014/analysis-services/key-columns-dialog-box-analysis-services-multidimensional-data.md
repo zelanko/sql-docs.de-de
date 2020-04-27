@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 26eb85c97c970f9fe1cfaf63ca9861c2be0b4695
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079466"
 ---
 # <a name="key-columns-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld Schlüsselspalten (Analysis Services – Mehrdimensionale Daten)
@@ -28,8 +28,8 @@ ms.locfileid: "66079466"
   
 -   Wählen Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]ein Attribut aus, und klicken Sie dann im Fenster **Eigenschaften** in der**KeyColumns**-Eigenschaftszelle auf die Schaltfläche mit den drei Punkten ( **...** ).  
   
-## <a name="options"></a>Tastatur  
- **Quell Tabelle**  
+## <a name="options"></a>Optionen  
+ **Quelltabelle**  
  Wählen Sie die Quelltabelle aus, für die Sie die Schlüsselspalten auswählen möchten. Sie können die Quelltabelle in der Datenquellensicht in einer Liste aller Tabellen auswählen.  
   
  **Verfügbare Spalten**  
@@ -37,18 +37,18 @@ ms.locfileid: "66079466"
   
  Sie fügen die ausgewählten Spalten der Liste **Schlüsselspalten** hinzu, indem Sie auf die Schaltfläche **>** klicken.  
   
- **Schlüssel Spalten**  
+ **Schlüsselspalten**  
  Definieren Sie die Reihenfolge der ausgewählten Schlüsselspalten. Die Reihenfolge der Schlüsselspalten ist wichtig für die Definition des richtigen zusammengesetzten Schlüssels. Um die Reihenfolge von Schlüsselspalten zu ändern, wählen Sie eine Spalte aus und klicken dann auf die Schaltfläche **Nach oben** oder **Nach unten** .  
   
  Um eine Spalte aus der Liste **Schlüsselspalten** zu entfernen, wählen Sie die Spalte aus, und klicken Sie anschließend auf die Schaltfläche **\<** klicken.  
   
- **Up**  
+ **Nach oben**  
  Klicken Sie auf diese Schaltfläche, um die in der Liste **Schlüsselspalten** ausgewählte Spalte um eine Position nach oben zu verschieben.  
   
 > [!NOTE]  
 >  Diese Option ist nur dann aktiviert, wenn die Liste mehrere Spalten umfasst und eine Spalte ausgewählt ist.  
   
- **Auf**  
+ **Nach unten**  
  Klicken Sie auf diese Schaltfläche, um die in der Liste **Schlüsselspalten** ausgewählte Spalte um eine Position nach unten zu verschieben.  
   
 > [!NOTE]  

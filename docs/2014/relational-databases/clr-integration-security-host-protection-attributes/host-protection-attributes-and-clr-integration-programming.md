@@ -18,23 +18,20 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 68f1f114002ab0ef38c7565a523723a06958048d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874344"
 ---
 # <a name="host-protection-attributes-and-clr-integration-programming"></a>Hostschutzattribute und Programmierung der CLR-Integration
   Die CLR (Common Language Runtime) stellt Mechanismen zur Verfügung, um verwaltete Anwendungsprogrammierschnittstellen (Application Programming Interfaces, APIs), die Teil von .NET Framework sind, mit Anmerkungen in Form von bestimmten Attributen zu versehen, die für einen Host der CLR, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], von Interesse sein können. Beispiele für solche Hostschutzattribute sind:  
   
--   
-  `SharedState`, das angibt, ob die API die Fähigkeit zur Verfügung stellt, einen Freigabezustand (z. B. statische Klassenfelder) zu erstellen oder zu verwalten.  
+-   `SharedState`, das angibt, ob die API die Fähigkeit zur Verfügung stellt, einen Freigabezustand (z. B. statische Klassenfelder) zu erstellen oder zu verwalten.  
   
--   
-  `Synchronization`, das angibt, ob die API die Fähigkeit zur Verfügung stellt, die Synchronisierung zwischen Threads auszuführen.  
+-   `Synchronization`, das angibt, ob die API die Fähigkeit zur Verfügung stellt, die Synchronisierung zwischen Threads auszuführen.  
   
--   
-  `ExternalProcessMgmt`, das angibt, ob die API eine Möglichkeit zur Kontrolle des Hostprozesses zur Verfügung stellt.  
+-   `ExternalProcessMgmt`, das angibt, ob die API eine Möglichkeit zur Kontrolle des Hostprozesses zur Verfügung stellt.  
   
  Anhand dieser Attribute gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Liste mit Hostschutzattributen an, die in der gehosteten Umgebung von der Codezugriffssicherheit (CAS) nicht zugelassen werden. Die CAS-Anforderungen werden von einem von drei [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Berechtigungssätzen angegeben: `SAFE`, `EXTERNAL_ACCESS` oder `UNSAFE`. Eine dieser drei Sicherheitsebenen wird beim Registrieren der Asssembly auf dem Server mit der `CREATE ASSEMBLY`-Anweisung festgelegt. Bei der Codeausführung innerhalb der Berechtigungssätze `SAFE` oder `EXTERNAL_ACCESS` müssen bestimmte Typen oder Elemente, auf die das `System.Security.Permissions.HostProtectionAttribute`-Attribut angewendet wurde, vermieden werden. Weitere Informationen finden Sie unter [Erstellen einer Assembly](../clr-integration/assemblies/creating-an-assembly.md) und [Einschränkungen für das Programmiermodell von CLR-Integration](../clr-integration/database-objects/clr-integration-programming-model-restrictions.md).  
   

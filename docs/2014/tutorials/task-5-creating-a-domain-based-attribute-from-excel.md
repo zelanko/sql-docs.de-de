@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f7e88065ff66ea953d0a91ed080fc3d7159ab794
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65489104"
 ---
-# <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Aufgabe 5: Erstellen eines domänenbasierten Attributs aus Excel
+# <a name="task-5-creating-a-domain-based-attribute-from-excel"></a>Aufgabe 5: Erstellen eines domänenbasierten Attributs aus Excel
   In dieser Aufgabe konvertieren Sie das Attribut **State** der Entität **Supplier** in ein **domänenbasiertes Attribut**. Nachdem Sie das State-Attribut als domänenbasiertes Verzeichnis konfiguriert und in MDS veröffentlicht haben, wird eine neue Entität mit dem Namen **State** auf dem MDS-Server mit allen Werten in der Spalte erstellt, und das **State** -Attribut der Entität " **Supplier** " wird mit Werten aus der Entität " **State** " aufgefüllt. Das Modell **Suppliers** sollte nun über zwei Entitäten verfügen: **Supplier** und **State** , wobei das **State** -Attribut der Entität **Supplier** ein domänenbasiertes Attribut ist, das von der **State** -Entität abhängt.  
   
 1.  Wechseln Sie in das **Excel** -Fenster, in dem die Option **Suppliers. xlsx** geöffnet ist, und entspricht.  
@@ -41,6 +41,6 @@ ms.locfileid: "65489104"
      ![Excel – Dropdownliste mit Bundesstaaten](../../2014/tutorials/media/et-creatingadomainbasedattributefromexcel-03.jpg "Excel – Dropdownliste mit Bundesstaaten")  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 6: Überprüfen, ob das domänenbasierte Attribut mithilfe von Master Data Manager erstellt wird](../../2014/tutorials/task-6-verify-domain-based-attribute-master-data-manager.md)  
+ [Aufgabe 6: Überprüfen, ob das domänenbasierte Attribut mithilfe von Master Data Manager erstellt wurde](../../2014/tutorials/task-6-verify-domain-based-attribute-master-data-manager.md)  
   
   

@@ -10,15 +10,14 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/10/2018
 ms.openlocfilehash: cb867bfdfc8d9ecb686d3ecc52c48c80bc60d9cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63261072"
 ---
 # <a name="configure-the-report-server-service-account-ssrs-configuration-manager"></a>Konfigurieren des Berichtsserver-Dienstkontos (SSRS-Konfigurations-Manager)
 
-  
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] wird als Einzeldienst mit einem Report Server-Webdienst (Berichts-Manager) und einer Hintergrundverarbeitungsanwendung implementiert, die für die geplante Berichtsverarbeitung und die Abonnementübermittlung verwendet wird. In diesem Thema wird erläutert, wie das Dienstkonto zu Beginn konfiguriert wird. Außerdem wird beschrieben, wie das Konto oder das Kennwort mit dem Reporting Services-Konfigurationstool geändert wird.  
   
 ## <a name="initial-configuration"></a>Anfängliche Konfiguration
@@ -34,7 +33,7 @@ ms.locfileid: "63261072"
   
 - Das neue Konto wird automatisch der auf dem lokalen Computer erstellten Berichtsservergruppe hinzugefügt. Diese Gruppe wird in den Zugriffssteuerungslisten (Access Control Lists, ACLs) angegeben, die [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Dateien schützen.  
   
-- Aktualisiert automatisch die Anmelde Berechtigungen für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz, die zum Hosten der Berichts Server-Datenbank verwendet wird. Das neue Konto wird der **RSExecRole**hinzugefügt.  
+- Die Anmeldeberechtigungen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]-Instanz, die als Host für die Berichtsserver-Datenbank fungiert, werden automatisch aktualisiert. Das neue Konto wird der **RSExecRole**hinzugefügt.  
   
      Die Datenbankanmeldung für das alte Konto wird nicht automatisch entfernt. Stellen Sie sicher, dass nicht mehr benötigte Konten entfernt werden. Weitere Informationen finden Sie unter [Verwalten einer Berichtsserver-Datenbank (einheitlicher SSRS-Modus)](../report-server/report-server-database-ssrs-native-mode.md) in der SQL Server-Onlinedokumentation.  
   
@@ -65,9 +64,9 @@ ms.locfileid: "63261072"
   
 - Das [Dienst Konto &#40;SSRS im einheitlichen Modus&#41;](../../sql-server/install/service-account-ssrs-native-mode.md).  
   
-- [Konfigurieren Sie Windows-Dienst Konten und-Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) in SQL Server-Onlinedokumentation.  
+- [Konfigurieren von Windows-Dienstkonten und -Berechtigungen](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md) in SQL Server-Onlinedokumentation.  
   
-- [Das Sicherheits Planungs Handbuch für Dienst-und Dienst Konten](http://usergroup.doubletake.com/file_cabinet/download/0x000021733).  
+- [The Services and Service Accounts Security Planning Guide (Handbuch zur Planung der Sicherheit von Diensten und Dienstkonten)](http://usergroup.doubletake.com/file_cabinet/download/0x000021733)  
   
 ## <a name="updating-an-expired-password"></a>Aktualisieren eines abgelaufenen Kennworts
 

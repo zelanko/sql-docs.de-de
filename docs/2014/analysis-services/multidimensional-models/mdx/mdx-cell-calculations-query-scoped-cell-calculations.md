@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 575bac6ba111259fe20540fd0b40f193f0a54b38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074415"
 ---
 # <a name="creating-query-scoped-cell-calculations-mdx"></a>Erstellen von Zellenberechnungen im Bereich einer Abfrage (MDX)
@@ -54,6 +54,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  Andererseits verarbeitet MDX die Berechnungsformel immer dann, wenn eine MDX-Abfrage für den Cube ausgegeben wird, bei der Zellen aus der Definition berechneter Zellen betroffen sind. Diese Verarbeitung erfolgt unabhängig vom Gültigkeitsbereich bei der Erstellung.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Create Cell Berechnung-Anweisung &#40;MDX-&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
+ [CREATE CELL CALCULATION-Anweisung &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)  
   
   

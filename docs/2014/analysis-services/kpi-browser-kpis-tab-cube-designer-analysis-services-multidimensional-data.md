@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41000c78c4ff3a68e1d3acd107ce57c221a16e28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079503"
 ---
 # <a name="kpi-browser-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI-Browser (Registerkarte 'KPIs', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
@@ -25,7 +25,7 @@ ms.locfileid: "66079503"
 > [!NOTE]  
 >  Der Bereich wird nur in der Browseransicht angezeigt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Teilcuberaster**  
  Definieren Sie mithilfe dieser Option einen Teilcube, und schränken Sie die im Bereich **Ergebnisse** angezeigten Ergebnisse der KPIs ein. Das Raster enthält die folgenden Spalten:  
   
@@ -38,9 +38,9 @@ ms.locfileid: "66079503"
  **Operator**  
  Wählen Sie den Operator aus, der definiert, wie der Ausdruck in **Filterausdruck** auf die ausgewählte Hierarchie angewendet wird. Die folgende Tabelle beschreibt die verfügbaren Operatoren.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**Hoch**|Die Ergebnisse sind auf die in **Filterausdruck**definierte Menge beschränkt.|  
+|**Gleich**|Die Ergebnisse sind auf die in **Filterausdruck**definierte Menge beschränkt.|  
 |**Ungleich**|Die Ergebnisse sind auf die Elemente beschränkt, die durch die in **Filterausdruck**definierte Menge ausgeschlossen werden.|  
 |**In**|Die Ergebnisse sind auf die in **Filterausdruck**gewählte benannte Menge beschränkt.|  
 |**Not In**|Die Ergebnisse sind auf die Elemente beschränkt, die durch die in **Filterausdruck**gewählte benannte Menge ausgeschlossen werden.|  
@@ -50,7 +50,7 @@ ms.locfileid: "66079503"
 |**Bereich (exklusiv)**|Die Ergebnisse sind auf die Elemente beschränkt, die durch den in **Filterausdruck**ausgewählten Bereich ausgeschlossen werden.|  
 |**MDX**|Die Ergebnisse sind auf den in **Filterausdruck**festgelegten MDX-Ausdruck (Multidimensional Expressions) beschränkt.|  
   
- **Filter Ausdruck**  
+ **Filterausdruck**  
  Geben Sie den Ausdruck ein, der durch **Operator**ausgewertet werden soll, um die zu durchsuchenden KPI-Ergebnisse einzuschränken.  
   
 > [!NOTE]  
@@ -65,16 +65,16 @@ ms.locfileid: "66079503"
  **Wert**  
  Zeigt den Wert des KPIs an.  
   
- **Ziel**  
+ **Zielsetzung**  
  Zeigt den Zielwert des KPIs an.  
   
  **Status**  
  Zeigt die Statusgrafik des KPIs an.  
   
- **Trend**  
+ **Trends**  
  Zeigt die Trendgrafik des KPIs an.  
   
- **Gewicht**  
+ **Weight**  
  Zeigt den Gewichtungungsfaktor des KPIs an.  
   
  **Beschreibung**  

@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66c32615b3fd9f417eab27f156b2645c2c89593b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63020976"
 ---
 # <a name="automatically-generate-a-set-of-join-filters-between-merge-articles-sql-server-management-studio"></a>Automatisches Generieren einer Reihe von Joinfiltern zwischen Mergeartikeln (SQL Server Management Studio)
-  Auf der Seite **Tabellenzeilen filtern** des Assistenten für neue Veröffentlichung oder auf der Seite **Zeilen filtern** im Dialogfeld **Veröffentlichungs Eigenschaften- \<Veröffentlichungs>** werden automatisch eine Reihe von Joinfiltern generiert. Weitere Informationen zum Verwenden des Assistenten sowie Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](view-and-modify-publication-properties.md).  
+  Mithilfe des Assistenten für neue Veröffentlichung auf der Seite **Tabellenzeilen filtern** oder des Dialogfelds **Veröffentlichungseigenschaften - \<Veröffentlichung>** auf der Seite **Zeilen filtern** können Sie eine Reihe von Joinfiltern automatisch generieren. Weitere Informationen zum Verwenden des Assistenten sowie Zugriff auf das Dialogfeld finden Sie unter [Erstellen einer Veröffentlichung](create-a-publication.md) und [Anzeigen und Ändern von Veröffentlichungseigenschaften](view-and-modify-publication-properties.md).  
   
 > [!NOTE]  
 >  Wenn Sie nach dem Initialisieren von Abonnements für die Veröffentlichung automatisch eine Reihe von Joinfiltern im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** generieren, müssen Sie eine neue Momentaufnahme generieren und nach der Änderung alle Abonnements erneut initialisieren. Weitere Informationen zum Ändern von Eigenschaften finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](change-publication-and-article-properties.md).  
@@ -80,7 +80,7 @@ ms.locfileid: "63020976"
 1.  Wählen Sie auf der Seite **Tabellenzeilen filtern** des Assistenten für neue Veröffentlichung oder der Seite **Filterzeilen** von **Veröffentlichungseigenschaften - \<Veröffentlichung>** einen Filter im Bereich **gefilterte Tabellen**, und klicken Sie dann auf **Löschen**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Join Filters](../merge/join-filters.md)   
- [Parameterized Row Filters](../merge/parameterized-filters-parameterized-row-filters.md)  
+ [Joinfilter](../merge/join-filters.md)   
+ [Parametrisierte Zeilenfilter](../merge/parameterized-filters-parameterized-row-filters.md)  
   
   

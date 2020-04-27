@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2bf1a8ee0d5dd3dde585a027fd08fd833fb40304
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079912"
 ---
 # <a name="install-analysis-services-in-tabular-mode"></a>Installieren von Analysis Services im Tabellenmodus
@@ -45,8 +45,7 @@ ms.locfileid: "66079912"
 Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVERMODE=TABULAR /INSTANCENAME=ASTabular /INDICATEPROGRESS/ASSVCACCOUNT=<DomainName\UserName> /ASSVCPASSWORD=<StrongPassword> /ASSYSADMINACCOUNTS=<DomainName\UserName>   
 ```  
   
- 
-  `INSTANCENAME` muss kürzer als 17 Zeichen sein.  
+ `INSTANCENAME` muss kürzer als 17 Zeichen sein.  
   
  Alle Platzhalterkontowerte müssen durch gültige Konten und Kennwörter ersetzt werden.  
   
@@ -54,7 +53,7 @@ Setup.exe /q /IAcceptSQLServerLicenseTerms /ACTION=install /FEATURES=AS /ASSERVE
   
  Bei `ASSERVERMODE` wird die Groß- und Kleinschreibung beachtet.  Alle Werte müssen in Großbuchstaben angegeben werden. In der folgenden Tabelle werden die gültigen Werte für `ASSERVERMODE` beschrieben.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |MULTIDIMENSIONAL|Dies ist der Standardwert. Wenn Sie `ASSERVERMODE` nicht festlegen, wird der Server im multidimensionalen Servermodus installiert.|  
 |POWERPIVOT|Dieser Wert ist optional. Wenn Sie den `ROLE`-Parameter festlegen, wird der Servermodus automatisch auf 1 festgelegt. Hierdurch wird `ASSERVERMODE` für eine PowerPivot für SharePoint-Installation optional. Weitere Informationen finden Sie unter [Installieren von Power Pivot über die Eingabeaufforderung](../../../sql-server/install/install-powerpivot-from-the-command-prompt.md).|  

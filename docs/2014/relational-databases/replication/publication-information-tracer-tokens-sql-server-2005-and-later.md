@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 287d565947a13621fd3ba39cff6437ff76894c03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021696"
 ---
 # <a name="publication-information-tracer-tokens-transactional-publication-sql-server-2005-and-later"></a>Veröffentlichungsinformationen, Überwachungstoken (Transaktionsveröffentlichung, SQL Server 2005 und höher)
@@ -32,7 +32,7 @@ ms.locfileid: "63021696"
   
 -   Welcher der Abonnenten, die Überwachungstoken empfangen sollten, hat keine empfangen?  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Wenn Sie die Anzeige der Daten im Raster ändern möchten, klicken Sie mit der rechten Maustaste auf das Raster, und klicken Sie anschließend auf eine der folgenden Optionen:  
   
 -   **Sortieren**: Sortieren Sie nach einer oder mehreren Spalten im Dialogfeld **Spalten sortieren** .  
@@ -63,15 +63,15 @@ ms.locfileid: "63021696"
  **Verteiler zu Abonnent**  
  Die verstrichene Zeit zwischen dem Einfügen eines Befehls in die Verteilungsdatenbank und dem zugehörigen Commit einer Transaktion auf dem Abonnenten. Der Wert **Ausstehend** zeigt an, dass der Token noch nicht beim Abonnenten angekommen ist. Überprüfen Sie, ob der Verteilungs-Agent ausgeführt wird, wenn der Status Ausstehend fortdauert.  
   
- **Gesamtlatenzzeit**  
+ **Gesamtlatenz**  
  Die verstrichene Zeit zwischen dem Commit für eine Transaktion auf dem Verleger und dem zugehörigen Commit für die Transaktion auf dem Abonnenten. Dieser Zeitraum stellt die End-to-End-Latenzzeit des Replikationssystems für diesen Abonnenten zu diesem Zeitpunkt dar. Der Wert **Ausstehend** zeigt an, dass der Token noch nicht beim Abonnenten angekommen ist.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Starten und Beenden eines Replikations-Agents &#40;SQL Server Management Studio&#41;](agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
- [Starten des Replikationsmonitors](monitor/start-the-replication-monitor.md)   
- [Messen der Latenzzeit und Überprüfen der Verbindungen bei Transaktionsreplikationen](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
- [Überwachen der Leistung mit dem Replikationsmonitor](monitor/monitor-performance-with-replication-monitor.md)   
- [Überwachen der Replikation](monitoring-replication.md)   
- [Übersicht über Replikations-Agents](agents/replication-agents-overview.md)  
+ [Starten und Abbrechen eines Replikations-Agents &#40;SQL Server Management Studio&#41;](agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
+ [Starten des Replikations Monitors](monitor/start-the-replication-monitor.md)   
+ [Messen der Latenzzeit und Überprüfen der Verbindungen für die Transaktions Replikation](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
+ [Leistungsüberwachung mit dem Replikations Monitor](monitor/monitor-performance-with-replication-monitor.md)   
+ [Überwachung der Replikation](monitoring-replication.md)   
+ [Replikations-Agents (Übersicht)](agents/replication-agents-overview.md)  
   
   

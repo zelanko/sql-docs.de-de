@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbaf5c82f386330fc632c55aab3cd3ec5a3d07b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066705"
 ---
 # <a name="properties-ssas-tabular"></a>Eigenschaften (SSAS – tabellarisch)
@@ -22,13 +22,13 @@ ms.locfileid: "66066705"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
-|[Power View Bericht Erstellungs Eigenschaften &#40;tabellarischen SSAS-&#41;](power-view-reporting-properties-ssas-tabular.md)|Themen in diesem Abschnitt stellen Beschreibungen und Konfigurationsoptionen für tabellarische Modelle bereit, die mit [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]verbunden und durchsucht werden.|  
-|[Projekteigenschaften &#40;tabellarischen SSAS-&#41;](project-properties-ssas-tabular.md)|Stellt Beschreibungen für Projekteigenschaften bereit. Projekteigenschaften schließen Einstellungen für Projektdateien und Bereitstellungsoptionen ein.|  
-|[Modell Eigenschaften &#40;tabellarischen SSAS-&#41;](model-properties-ssas-tabular.md)|Stellt Beschreibungen für Modelleigenschaften bereit. Modelleigenschaften wirken sich auf Buildvorgänge, die Sicherung und die Arbeitsbereichsdatenbank des Modellprojekts während der Modellerstellung aus.|  
-|[Tabellen Eigenschaften &#40;tabellarischen SSAS-&#41;](table-properties-ssas-tabular.md)|Stellt Beschreibungen für grundlegende Tabelleneigenschaften bereit. Hier beschriebene Tabelleneigenschaften unterscheiden sich von jenen im Dialogfeld Tabelleneigenschaften bearbeiten, das die Anzeige, Auswahl und Filterung der Spalten aus der Quelle zulässt.|  
-|[Spalten Eigenschaften &#40;tabellarischen SSAS-&#41;](column-properties-ssas-tabular.md)|Stellt Beschreibungen für Spalteneigenschaften bereit. Spalten Eigenschaften definieren den Datentyp, das Format und die Ausblenden einer Spalte.|  
-|[Konfigurieren von Standarddaten Modellierung und Bereitstellungs Eigenschaften &#40;tabellarischen SSAS-&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)|Enthält Beschreibungen und Konfigurationsschritte für standardmäßige Modellierungs- und Bereitstellungseigenschaften. Standardeigenschaften werden auf neue Projekte für tabellarische Modelle angewendet. Nachdem ein Projekt erstellt wurde, können diese Eigenschaften abhängig von den Anforderungen für ein bestimmtes Modellprojekt geändert werden.|  
+|[Power View-Berichterstellungseigenschaften &#40;SSAS – tabellarisch&#41;](power-view-reporting-properties-ssas-tabular.md)|Themen in diesem Abschnitt stellen Beschreibungen und Konfigurationsoptionen für tabellarische Modelle bereit, die mit [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]verbunden und durchsucht werden.|  
+|[Projekteigenschaften &#40;SSAS – tabellarisch&#41;](project-properties-ssas-tabular.md)|Stellt Beschreibungen für Projekteigenschaften bereit. Projekteigenschaften schließen Einstellungen für Projektdateien und Bereitstellungsoptionen ein.|  
+|[Modelleigenschaften &#40;SSAS – tabellarisch&#41;](model-properties-ssas-tabular.md)|Stellt Beschreibungen für Modelleigenschaften bereit. Modelleigenschaften wirken sich auf Buildvorgänge, die Sicherung und die Arbeitsbereichsdatenbank des Modellprojekts während der Modellerstellung aus.|  
+|[Tabelleneigenschaften &#40;SSAS – tabellarisch&#41;](table-properties-ssas-tabular.md)|Stellt Beschreibungen für grundlegende Tabelleneigenschaften bereit. Hier beschriebene Tabelleneigenschaften unterscheiden sich von jenen im Dialogfeld Tabelleneigenschaften bearbeiten, das die Anzeige, Auswahl und Filterung der Spalten aus der Quelle zulässt.|  
+|[Spalteneigenschaften &#40;SSAS – tabellarisch&#41;](column-properties-ssas-tabular.md)|Stellt Beschreibungen für Spalteneigenschaften bereit. Spalten Eigenschaften definieren den Datentyp, das Format und die Ausblenden einer Spalte.|  
+|[Konfigurieren von Standarddatenmodellierung und Bereitstellungseigenschaften &#40;SSAS – tabellarisch&#41;](configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)|Enthält Beschreibungen und Konfigurationsschritte für standardmäßige Modellierungs- und Bereitstellungseigenschaften. Standardeigenschaften werden auf neue Projekte für tabellarische Modelle angewendet. Nachdem ein Projekt erstellt wurde, können diese Eigenschaften abhängig von den Anforderungen für ein bestimmtes Modellprojekt geändert werden.|  
   
   

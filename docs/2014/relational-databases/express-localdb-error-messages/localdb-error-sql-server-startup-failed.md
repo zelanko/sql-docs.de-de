@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6478f29c150181b477e6fecc5c4b35f25db3e817
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63066288"
 ---
 # <a name="localdb_error_sql_server_startup_failed"></a>LOCALDB_ERROR_SQL_SERVER_STARTUP_FAILED
@@ -29,7 +29,7 @@ ms.locfileid: "63066288"
 |Komponente|Laufzeit-API der lokalen Datenbank|  
 |Meldungstext|Fehler beim Start der lokalen Datenbankinstanz: Der SQL Server-Prozess konnte nicht gestartet werden.|  
   
-## <a name="explanation"></a>Erklärung  
+## <a name="explanation"></a>Erläuterung  
  Ein SQL Server-Prozess wird gestartet, der SQL Server-Start ist jedoch fehlgeschlagen.  
   
 ## <a name="user-action"></a>Benutzeraktion  

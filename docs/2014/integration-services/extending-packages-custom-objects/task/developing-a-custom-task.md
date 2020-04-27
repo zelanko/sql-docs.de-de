@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7f597ee3a063da534267f7d4674a024a8fcc02f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62896141"
 ---
 # <a name="developing-a-custom-task"></a>Entwickeln eines benutzerdefinierten Tasks
@@ -88,7 +88,7 @@ ms.locfileid: "62896141"
 ![Integration Services Symbol (klein)](../../media/dts-16.gif "Integration Services (kleines Symbol)")immer auf**dem neuesten Stand bleiben mit Integration Services**  <br /> Die neuesten Downloads, Artikel, Beispiele und Videos von Microsoft sowie ausgewählte Lösungen aus der Community finden Sie auf MSDN auf der [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] -Seite:<br /><br /> [Besuchen Sie die Integration Services-Seite auf MSDN](https://go.microsoft.com/fwlink/?LinkId=136655)<br /><br /> Abonnieren Sie die auf der Seite verfügbaren RSS-Feeds, um automatische Benachrichtigungen zu diesen Updates zu erhalten.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erweitern von Paketen mithilfe des Skripttasks](../../extending-packages-scripting/task/extending-the-package-with-the-script-task.md)   
+ [Erweitern des Pakets mit dem Skript Task](../../extending-packages-scripting/task/extending-the-package-with-the-script-task.md)   
  [Vergleichen von Skriptlösungen und benutzerdefinierten Objekten](../../extending-packages-scripting/comparing-scripting-solutions-and-custom-objects.md)  
   
   

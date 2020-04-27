@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a7aa0f0ba295d8e152877d11ceb39fb6eb4f3c87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62877247"
 ---
 # <a name="restore-a-differential-database-backup-sql-server"></a>Wiederherstellen einer differenziellen Datenbanksicherung (SQL Server)
@@ -44,9 +44,9 @@ ms.locfileid: "62877247"
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   RESTORE ist nicht in einer expliziten oder implizierten Transaktion zulässig.  
   
@@ -54,18 +54,18 @@ ms.locfileid: "62877247"
   
 -   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]können Sie eine Benutzerdatenbank von einer Datenbanksicherung wiederherstellen, die mit [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] oder einer höheren Version erstellt wurde.  
   
-###  <a name="Prerequisites"></a> Voraussetzungen  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
   
 -   Im vollständigen oder im massenprotokollierten Wiederherstellungsmodell muss das Protokoll der aktiven Transaktion (wird als Protokollfragment bezeichnet) gesichert werden, bevor eine Datenbank wiederhergestellt werden kann. Weitere Informationen finden Sie unter [Sichern eines Transaktionsprotokolls &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)bezeichnet) gesichert werden.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Ist die wiederherzustellende Datenbank nicht vorhanden, muss der Benutzer über CREATE DATABASE-Berechtigungen verfügen, um RESTORE ausführen zu können. Ist die Datenbank vorhanden, werden RESTORE-Berechtigungen standardmäßig den Mitgliedern der festen Serverrollen **sysadmin** und **dbcreator** sowie dem Besitzer (**dbo**) der Datenbank erteilt (für die Option FROM DATABASE_SNAPSHOT ist die Datenbank immer vorhanden).  
   
  RESTORE-Berechtigungen werden Rollen erteilt, in denen Mitgliedsinformationen immer für den Server verfügbar sind. Da die Mitgliedschaft in einer festen Datenbankrolle nur bei unbeschädigten und zugänglichen Datenbanken geprüft werden kann (was beim Ausführen von RESTORE nicht immer der Fall ist), verfügen Mitglieder der festen Datenbankrolle **db_owner** nicht über RESTORE-Berechtigungen.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-restore-a-differential-database-backup"></a>So stellen Sie eine differenzielle Datenbanksicherung wieder her  
   
@@ -133,7 +133,7 @@ ms.locfileid: "62877247"
   
 12. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-restore-a-differential-database-backup"></a>So stellen Sie eine differenzielle Datenbanksicherung wieder her  
   
@@ -149,7 +149,7 @@ ms.locfileid: "62877247"
   
 3.  Beim vollständigen oder massenprotokollierten Wiederherstellungsmodell wird die Datenbank bei einer differenziellen Datenbankwiederherstellung in dem Status wiederhergestellt, in dem sie sich zum Zeitpunkt der Fertigstellung der differenziellen Datenbanksicherung befand. Um die Datenbank im Status zum Zeitpunkt des Fehlers wiederherzustellen, müssen Sie alle Transaktionsprotokollsicherungen anwenden, die nach der letzten differenziellen Datenbanksicherung erstellt wurden. Weitere Informationen finden Sie unter [Anwenden von Transaktionsprotokollsicherungen &#40;SQL Server&#41;](transaction-log-backups-sql-server.md).  
   
-###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Beispiele (Transact-SQL)  
   
 #### <a name="a-restoring-a-differential-database-backup"></a>A. Wiederherstellen einer differenziellen Datenbanksicherung  
  In diesem Beispiel werden eine Datenbanksicherung und eine differenzielle Datenbanksicherung der `MyAdvWorks` -Datenbank wiederhergestellt.  
@@ -201,7 +201,7 @@ RESTORE LOG MyAdvWorks
 GO  
 ```  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Erstellen einer differenziellen Datenbanksicherung &#40;SQL Server&#41;](create-a-differential-database-backup-sql-server.md)  
   

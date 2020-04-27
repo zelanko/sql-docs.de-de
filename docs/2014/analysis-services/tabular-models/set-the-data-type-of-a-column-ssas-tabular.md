@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f9240218b05af2c642ff374cb7e14d2a6c5dd616
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066608"
 ---
 # <a name="set-the-data-type-of-a-column-ssas-tabular"></a>Festlegen des Datentyps einer Spalte (SSAS – tabellarisch)
@@ -50,7 +50,7 @@ ms.locfileid: "66066608"
   
 |Modelldatentypen|  
 |----------------------|  
-|Text<br /><br /> Dezimalzahl<br /><br /> Ganze Zahl<br /><br /> Currency<br /><br /> TRUE/FALSE<br /><br /> Date|  
+|Text<br /><br /> Decimal Number<br /><br /> Ganze Zahl<br /><br /> Währung<br /><br /> TRUE/FALSE<br /><br /> Datum|  
   
  Wenn Sie feststellen, dass die Daten einen falschen bzw. nicht den gewünschten Datentyp aufweisen, haben Sie mehrere Möglichkeiten:  
   
@@ -68,6 +68,6 @@ ms.locfileid: "66066608"
  Unter [Unterstützte Datentypen &#40;SSAS – tabellarisch&#41;](data-types-supported-ssas-tabular.md)finden Sie detaillierte Informationen zu den Datentypen, die in Business Intelligence-Semantikmodellen verwendet werden. Zudem wird erläutert, wie die Datentypen implizit konvertiert und wie verschiedene Datentypen in Formeln verwendet werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Unterstützte Datentypen &#40;tabellarischen SSAS-&#41;](data-types-supported-ssas-tabular.md)  
+ [Unterstützte Datentypen &#40;SSAS – tabellarisch&#41;](data-types-supported-ssas-tabular.md)  
   
   

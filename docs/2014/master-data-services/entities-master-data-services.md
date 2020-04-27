@@ -14,10 +14,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 87e5446d4d6c9c0997dadbd2d3f9964b8d4271ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483907"
 ---
 # <a name="entities-master-data-services"></a>Entitäten (Master Data Services)
@@ -64,17 +64,17 @@ ms.locfileid: "65483907"
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Erstellen Sie eine neue Entität.|[Erstellen Sie eine Entität &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
+|Erstellen Sie eine neue Entität.|[Erstellen einer Entität &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-entity-master-data-services.md)|  
 |Geben Sie an, dass eine Entität explizite Hierarchien und Auflistungen enthalten kann.|[Aktivieren einer Entität für explizite Hierarchien und Auflistungen &#40;Master Data Services&#41;](../../2014/master-data-services/enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|  
 |Ändern Sie den Namen einer vorhandenen Entität.|[Ändern eines Entitäts namens &#40;Master Data Services&#41;](edit-an-entity-master-data-services.md)|  
-|Löschen Sie eine vorhandene Entität.|[Einen Entitäts &#40;Master Data Services löschen&#41;](../../2014/master-data-services/delete-an-entity-master-data-services.md)|  
-|Weisen Sie Entitäten Berechtigungen zu.|[Zuweisen von Berechtigungen für Modell Objekte &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
+|Löschen Sie eine vorhandene Entität.|[Löschen einer Entität &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-entity-master-data-services.md)|  
+|Weisen Sie Entitäten Berechtigungen zu.|[Zuweisen von Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|  
   
 ## <a name="related-content"></a>Verwandte Inhalte  
   
 -   [Modelle &#40;Master Data Services&#41;](../../2014/master-data-services/models-master-data-services.md)  
   
--   [Mitglieder &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
+-   [Elemente &#40;Master Data Services&#41;](../../2014/master-data-services/members-master-data-services.md)  
   
 -   [Attribute &#40;Master Data Services&#41;](../../2014/master-data-services/attributes-master-data-services.md)  
   

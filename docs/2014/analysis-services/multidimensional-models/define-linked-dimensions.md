@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca4b3c0b2f2a6c63e62a44499d6e33e651ca9bae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075574"
 ---
 # <a name="define-linked-dimensions"></a>Definieren von verknüpften Dimensionen
@@ -55,7 +55,7 @@ ms.locfileid: "66075574"
   
 4.  Auf der Seite **Assistenten abschließen** können Sie eine Vorschau der verknüpften Objekte anzeigen. Wenn Sie einen Link zu einer Dimension herstellen, die denselben Namen wie eine bereits bestehende aufweist, wird eine Ordinalzahl (beginnend mit '1' für den ersten doppelten Namen) an den Namen angefügt. Beim Abschließen des Assistenten wird die Dimension dem Ordner **Dimensionen** hinzugefügt.  
   
-##  <a name="bkmk_CreateNew"></a>Erstellen einer neuen Datenquellen Verbindung mit einer Analysis Services Datenbank  
+##  <a name="create-a-new-data-source-connection-to-an-analysis-services-database"></a><a name="bkmk_CreateNew"></a>Erstellen einer neuen Datenquellen Verbindung mit einer Analysis Services Datenbank  
  Verwenden Sie den Assistenten Neue Datenquelle, um dem Projekt Verbindungsinformationen zur Analysis Services-Datenbank hinzuzufügen, die die Dimension bereitstellt. Sie können den Assistenten starten, indem Sie auf der Seite Datenquelle auswählen des Assistenten für verknüpfte Objekte auf **Neue Datenquelle** klicken.  
   
 1.  Klicken Sie im Datenquellen-Assistenten auf der Seite **Wählen Sie aus, wie die Verbindung definiert werden soll**auf Neu.  

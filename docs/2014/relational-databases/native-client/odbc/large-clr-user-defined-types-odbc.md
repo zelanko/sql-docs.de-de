@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5af4f85652fc1a8a333912c741f96df014655ebe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63144307"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Große benutzerdefinierte CLR-Typen (ODBC)
@@ -34,7 +34,7 @@ ms.locfileid: "63144307"
   
  In der folgenden Tabelle wird die Datentypzuordnung in Parametern und Resultsets gezeigt:  
   
-|SQL Server-Datentyp|SQL-Datentyp|value|  
+|SQL Server-Datentyp|SQL-Datentyp|Wert|  
 |--------------------------|-------------------|-----------|  
 |CLR-UDT|SQL_SS_UDT|-151 (sqlncli.h)|  
   

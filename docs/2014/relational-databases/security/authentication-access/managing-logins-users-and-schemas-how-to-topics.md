@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2f09d633ccd8dfc8bdfdda27c75ac3a710475d93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63011500"
 ---
 # <a name="managing-logins-users-and-schemas-how-to-topics"></a>Verwalten von Anmeldungen, Benutzern und Schemas: Vorgehensweisen
@@ -24,7 +24,7 @@ ms.locfileid: "63011500"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Erstellen eines Anmeldenamens](create-a-login.md)  
+-   [Erstellen eines Anmelde namens](create-a-login.md)  
   
 -   [Erstellen eines Datenbankbenutzers](create-a-database-user.md)  
   

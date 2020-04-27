@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1e11d8cddaa780e6572bdb9e8116fa970fc9ef95
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070120"
 ---
 # <a name="review-the-queries-that-will-be-optimized-usage-based-optimization-wizard"></a>Zu optimierende Abfragen prüfen (Assistent für verwendungsbasierte Optimierung)
   Mithilfe der Seite **Zu optimierende Abfragen prüfen** können Sie Abfragen aus dem Abfrageprotokoll anzeigen und auswählen, die der Assistent für verwendungsbasierte Optimierung dazu verwendet, Aggregationen für ausgewählte Partitionen zu entwerfen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Auswahl**  
  Aktivieren Sie das Kontrollkästchen der Abfrage, für die Sie Aggregationen entwerfen möchten.  
   

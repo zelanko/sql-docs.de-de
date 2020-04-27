@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 81e4bafbd596894a8cecbeb707a5d8be698c1f3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63031934"
 ---
 # <a name="options-sql-server-object-explorer-scripting-page"></a>Optionen (SQL Server-Objekt-Explorer Seite "Skripterstellung")
@@ -44,7 +44,7 @@ ms.locfileid: "63031934"
  **Beschreibende Header einschließen**  
  Fügt dem Skript beschreibende Kommentare hinzu, indem das Skript in Abschnitte für die einzelnen Objekte aufgeteilt wird. Der Standardwert lautet "True". Weitere Informationen finden Sie unter [comment &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/comment-transact-sql).  
   
- **Vardecimal--Optionen einschließen**  
+ **vardecimal-Optionen einschließen**  
  Schließt die vardecimal-Speicheroptionen ein. Der Standardwert lautet False. Weitere Informationen finden Sie unter und [sp_db_vardecimal_storage_format &#40;Transact-SQL-&#41;](/sql/relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql).  
   
  **Skript für Änderungsnachverfolgung erstellen**  
@@ -63,7 +63,7 @@ ms.locfileid: "63031934"
  **Skript für abhängige Objekte generieren**  
  Generiert ein Skript für zusätzliche Objekte, die erforderlich sind, wenn das Skript für das ausgewählte Objekt ausgeführt wird. Der Standardwert lautet False.  
   
- **Include if not existiert-Klausel**  
+ **IF NOT EXISTS-Klausel einschließen**  
  Schließt eine Anweisung ein, mit der überprüft wird, ob die einzelnen Objekte nicht in der Datenbank vorhanden sind, bevor versucht wird, das Objekt zu erstellen. Der Standardwert lautet False. Weitere Informationen finden Sie unter [If... Andernfalls &#40;Transact-SQL-&#41;](/sql/t-sql/language-elements/if-else-transact-sql) und [&#40;Transact-SQL-&#41;vorhanden ](/sql/t-sql/language-elements/exists-transact-sql).  
   
  **Schema für Objektnamen qualifizieren**  
@@ -135,7 +135,7 @@ ms.locfileid: "63031934"
  **Skripterstellung für Sichtspalten**  
  Deklariert Sichtspalten in Sichtheadern. Der Standardwert lautet False. Weitere Informationen finden Sie unter [CREATE VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-view-transact-sql).  
   
- **Scriptdriincluentsystemnames**  
+ **ScriptDriIncludeSystemNames**  
  Schließt vom System generierte Einschränkungsnamen ein, damit die deklarative referenzielle Integrität erzwungen wird. Der Standardwert lautet False. Weitere Informationen finden Sie unter [REFERENTIAL_CONSTRAINTS &#40;Transact-SQL-&#41;](/sql/relational-databases/system-information-schema-views/referential-constraints-transact-sql).  
   
 ## <a name="see-also"></a>Weitere Informationen  

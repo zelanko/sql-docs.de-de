@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 60218cb5f50777ac07e9a2805d224d80bef7975d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66066523"
 ---
 # <a name="create-a-calculated-column-ssas-tabular"></a>Erstellen einer berechneten Spalte (SSAS – tabellarisch)
@@ -26,7 +26,7 @@ ms.locfileid: "66066523"
   
 1.  Wählen Sie im Modell-Designer in der Datensicht die Tabelle aus, der Sie eine berechnete Spalte hinzufügen möchten, und klicken Sie dann auf das Menü **Spalte** und auf **Spalte hinzufügen**.  
   
-     " **Spalte hinzufügen** " wird über der leeren Spalte ganz rechts hervorgehoben, und der Cursor wird in die Bearbeitungs Leiste verschoben.  
+     In der leeren Spalte am äußersten rechten Rand wird**Spalte hinzufügen** hervorgehoben, und der Cursor wird in die Bearbeitungsleiste verschoben.  
   
      Klicken Sie mit der rechten Maustaste auf eine vorhandene Spalte, und klicken Sie dann auf **Spalte einfügen**, um zwischen zwei vorhandenen Spalten eine neue Spalte zu erstellen.  
   
@@ -47,6 +47,6 @@ ms.locfileid: "66066523"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Berechnete Spalten &#40;tabellarischen SSAS-&#41;](ssas-calculated-columns.md)   
- [Measures &#40;tabellarischen SSAS-&#41;](measures-ssas-tabular.md)  
+ [Measures &#40;SSAS – tabellarisch&#41;](measures-ssas-tabular.md)  
   
   

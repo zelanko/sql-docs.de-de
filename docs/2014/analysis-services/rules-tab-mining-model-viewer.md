@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fca78578046122a1598df096e45965367b7880ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070103"
 ---
 # <a name="rules-tab-mining-model-viewer"></a>Registerkarte "Regeln" (Miningmodell-Viewer)
@@ -27,9 +27,9 @@ ms.locfileid: "66070103"
 > [!WARNING]  
 >  Standardmäßig werden nur die Regeln im Viewer angezeigt, die über dem in **Minimale Wahrscheinlichkeit** definierten Schwellenwert für die Wahrscheinlichkeit liegen. Dieser Wert kann im Viewer nicht verringert werden, da der Wahrscheinlichkeitsschwellenwert für Regelausgaben beim Erstellen des Modells bestimmt wird. Weitere Informationen finden Sie unter [Technische Referenz für den Microsoft Association-Algorithmus](data-mining/microsoft-association-algorithm-technical-reference.md).  
   
- **Weitere Informationen finden Sie unter:** [Microsoft Association-Algorithmus](data-mining/microsoft-association-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Association Rules-Viewer](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **Weitere Informationen:** [Microsoft Association-Algorithmus](data-mining/microsoft-association-algorithm.md), [Modell mit dem Microsoft-Viewer für Zuordnungsregeln durchsuchen](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
@@ -68,10 +68,10 @@ ms.locfileid: "66070103"
  **Langen Namen anzeigen**  
  Zeigt den vollständigen Namen der Regel so an, wie er im Inhalt des Miningmodells enthalten ist.  
   
- **Maximale Anzahl von Zeilen**  
+ **Maximale Zeilenanzahl**  
  Beschränkt die Anzahl der Regeln, die im Viewer angezeigt werden.  
   
- **Probability**  
+ **Besteht**  
  In dieser Spalte im Diagramm wird die Wahrscheinlichkeit für jede Regel angezeigt.  
   
  Sie können auf die Spaltenüberschrift klicken, um nach Wahrscheinlichkeit zu sortieren.  

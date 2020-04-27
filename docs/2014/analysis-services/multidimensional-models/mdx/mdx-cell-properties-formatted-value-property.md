@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a116be708dd714a48d1cc936a08350237ca98ddf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074397"
 ---
 # <a name="language-and-format_string-on-formated_value"></a>LANGUAGE und FORMAT_STRING für FORMATTED_VALUE
@@ -33,8 +33,7 @@ ms.locfileid: "66074397"
  Die Gebietsschemaspezifikation, die zusätzlich zu FORMAT_STRING übernommen werden soll, um eine lokalisierte Version von FORMATTED_VALUE zu generieren  
   
 ## <a name="formatted_value-constructed"></a>Erstellte FORMATTED_VALUE-Eigenschaft  
- Die FORMATTED_VALUE-Eigenschaft wird mithilfe des Werts aus der VALUE-Eigenschaft und durch Anwenden der Formatvorlage erstellt, die in der FORMAT_STRING-Eigenschaft für diesen Wert angegeben wird. Wenn der Formatierungswert ein `named formatting literal` ist, ändert die Spezifikation der LANGUAGE-Eigenschaft darüber hinaus die Ausgabe von FORMAT_STRING, sodass diese der Sprachverwendung für die benannte Formatierung folgt. Benannte Formatierungsliterale sind jeweils so definiert, dass eine Lokalisierung möglich ist. 
-  `"General Date"` ist beispielsweise eine Spezifikation, die lokalisiert werden kann, im Gegensatz zur Vorlage `"YYYY-MM-DD hh:nn:ss",` , die angibt, dass das Datum ungeachtet der Sprachspezifikation entsprechend der Definition durch die Vorlage dargestellt werden soll.  
+ Die FORMATTED_VALUE-Eigenschaft wird mithilfe des Werts aus der VALUE-Eigenschaft und durch Anwenden der Formatvorlage erstellt, die in der FORMAT_STRING-Eigenschaft für diesen Wert angegeben wird. Wenn der Formatierungswert ein `named formatting literal` ist, ändert die Spezifikation der LANGUAGE-Eigenschaft darüber hinaus die Ausgabe von FORMAT_STRING, sodass diese der Sprachverwendung für die benannte Formatierung folgt. Benannte Formatierungsliterale sind jeweils so definiert, dass eine Lokalisierung möglich ist. `"General Date"` ist beispielsweise eine Spezifikation, die lokalisiert werden kann, im Gegensatz zur Vorlage `"YYYY-MM-DD hh:nn:ss",` , die angibt, dass das Datum ungeachtet der Sprachspezifikation entsprechend der Definition durch die Vorlage dargestellt werden soll.  
   
  Wenn ein Konflikt zwischen der FORMAT_STRING-Vorlage und der LANGUAGE-Spezifikation vorliegt, überschreibt die FORMAT_STRING-Vorlage die LANGUAGE-Spezifikation. Wenn beispielsweise FORMAT_STRING="$ #0" und LANGUAGE=1034 (Spanien) sowie VALUE=123.456, dann gilt FORMATTED_VALUE="$ 123" anstelle von FORMATTED_VALUE="€ 123". Das erwartete Format ist Euro, da der Wert der Formatvorlage die angegebene Sprache überschreibt.  
   
@@ -77,7 +76,7 @@ ms.locfileid: "66074397"
   
  Damit werden die folgenden Ergebnisse erhalten, die beim Ausführen der obigen MSX-Abfrage mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] über einen Server und einen Client mit dem Gebietsschema 1033 transponiert wurden:  
   
-|Mitglied|FORMATTED_VALUE|Erklärung|  
+|Member|FORMATTED_VALUE|Erläuterung|  
 |------------|----------------------|-----------------|  
 |Ein|$5,040.00|FORMAT_STRING wird auf `Currency` festgelegt, und LANGUAGE ist `1033`(geerbt vom Wert des Systemgebietsschemas).|  
 |B|€5.040,00|FORMAT_STRING wird auf `Currency` festgelegt (geerbt von A), und LANGUAGE wird explizit auf `1034` (Spanien) festgelegt, wodurch das Euro-Symbol, das abweichende Dezimaltrennzeichen und das abweichende Tausendertrennzeichen erhalten werden.|  
@@ -127,7 +126,7 @@ ms.locfileid: "66074397"
   
  Damit werden die folgenden Ergebnisse erhalten, die beim Ausführen der obigen MSX-Abfrage mit [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] über einen Server und einen Client mit dem Gebietsschema 1033 transponiert wurden:  
   
-|Mitglied|FORMATTED_VALUE|Erklärung|  
+|Member|FORMATTED_VALUE|Erläuterung|  
 |------------|----------------------|-----------------|  
 |Ein|3/12/1959 6:30:00 AM|FORMAT_STRING wird durch den CDate()-Ausdruck implizit auf `General Date` festgelegt, und LANGUAGE ist `1033` (Englisch), geerbt vom Wert des Systemgebietsschemas.|  
 |B|Thursday, March 12, 1959|FORMAT_STRING wird explizit auf `Long Date` festgelegt, und LANGUAGE ist `1033` (geerbt vom Wert des Systemgebietsschemas).|  
@@ -146,6 +145,6 @@ ms.locfileid: "66074397"
  [FORMAT_STRING Inhalt &#40;MDX-&#41;](mdx-cell-properties-format-string-contents.md)   
  [Verwenden von Zell Eigenschaften &#40;MDX-&#41;](mdx-cell-properties-using-cell-properties.md)   
  [Erstellen und Verwenden von Eigenschafts Werten &#40;MDX-&#41;](../../creating-and-using-property-values-mdx.md)   
- [Grundlagen der MDX-Abfrage &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

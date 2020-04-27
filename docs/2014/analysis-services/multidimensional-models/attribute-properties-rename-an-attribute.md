@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: df6f25841231bbfc8821cb5a7c42c4687544f407
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077222"
 ---
 # <a name="rename-an-attribute"></a>Umbenennen eines Attributs
@@ -28,6 +28,6 @@ ms.locfileid: "66077222"
  Weitere Informationen zum Umbenennen eines Attributs finden Sie unter [Binden eines Attribut an eine Schlüsselspalte](attribute-properties-bind-an-attribute-to-a-key-column.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dimensionsattributeigenschaftenverweis](dimension-attribute-properties-reference.md)  
+ [Dimensionsattributeigenschaften-Verweis](dimension-attribute-properties-reference.md)  
   
   

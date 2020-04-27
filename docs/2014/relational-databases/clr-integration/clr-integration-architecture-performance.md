@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eced622903a0d68369f28d19ff521d99bcedbdc3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62874498"
 ---
 # <a name="performance-of-clr-integration"></a>Leistungsfähigkeit der CLR-Integration
@@ -38,8 +38,7 @@ ms.locfileid: "62874498"
  Im Folgenden werden Informationen über Leistungsaspekte in Bezug auf die CLR-Integration in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] gegeben. Ausführlichere Informationen finden Sie unter "[Verwenden der CLR-Integration in SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=50332)" auf der MSDN-Website. Allgemeine Informationen zur Leistung von verwaltetem Code finden Sie auf der MSDN-Website unter "[verbessern der Leistung und Skalierbarkeit von .NET-Anwendungen](https://go.microsoft.com/fwlink/?LinkId=50333)".  
   
 ### <a name="user-defined-functions"></a>Benutzerdefinierte Funktionen  
- CLR-Funktionen profitieren im Vergleich zu benutzerdefinierten [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Funktionen von einem schnelleren Aufrufpfad. Zudem bietet verwalteter Code im Vergleich zu [!INCLUDE[tsql](../../../includes/tsql-md.md)] deutliche Leistungsvorteile in Bezug auf den prozeduralen Code, die Berechnung und die Zeichenfolgenbearbeitung. Rechenintensive CLR-Funktionen, die keinen Datenzugriff ausführen, sollten bevorzugt in verwaltetem Code geschrieben werden. 
-  [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Funktionen führen Datenzugriffe jedoch effizienter aus als die CLR-Integration.  
+ CLR-Funktionen profitieren im Vergleich zu benutzerdefinierten [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Funktionen von einem schnelleren Aufrufpfad. Zudem bietet verwalteter Code im Vergleich zu [!INCLUDE[tsql](../../../includes/tsql-md.md)] deutliche Leistungsvorteile in Bezug auf den prozeduralen Code, die Berechnung und die Zeichenfolgenbearbeitung. Rechenintensive CLR-Funktionen, die keinen Datenzugriff ausführen, sollten bevorzugt in verwaltetem Code geschrieben werden. [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Funktionen führen Datenzugriffe jedoch effizienter aus als die CLR-Integration.  
   
 ### <a name="user-defined-aggregates"></a>Benutzerdefinierte Aggregate  
  Verwalteter Code ist deutlich leistungsfähiger als die cursorbasierte Aggregation. Verwalteter Code ist in der Regel etwas langsamer als integrierte [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Aggregatfunktionen. Wir empfehlen daher, eine systemeigene integrierte Aggregatfunktion zu verwenden, sofern sie zur Verfügung steht. In Fällen, in denen die benötigte Aggregation nicht vom System unterstützt wird, sollten Sie aus Gründen der Leistungsfähigkeit ein CLR-benutzerdefiniertes Aggregat einer cursorbasierten Implementierung den Vorzug geben.  
@@ -47,15 +46,13 @@ ms.locfileid: "62874498"
 ### <a name="streaming-table-valued-functions"></a>Streaming-Tabellenwertfunktionen  
  Anwendungen müssen oft als Reaktion auf einen Funktionsaufruf eine Tabelle als Ergebnis zurückgeben. Beispiele dafür sind das Lesen von Tabellendaten aus einer Datei als Teil eines Importvorgangs oder die Konvertierung von durch Trennzeichen getrennten Werte in eine relationale Darstellung. In der Regel erreichen Sie dies durch Materialisieren und Auffüllen der Ergebnistabelle, bevor sie vom Aufrufer verwendet werden kann. Mit der Integration von CLR in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wird ein neuer Erweiterungsmechanismus eingeführt, der als Streaming-Tabellenwertfunktion (STVF) bezeichnet wird. Verwaltete STVF sind leistungsfähiger als vergleichbare Implementierungen mit erweiterten gespeicherten Prozeduren.  
   
- STVFs sind verwaltete Funktionen, die eine `IEnumerable`-Schnittstelle zurückgeben. 
-  `IEnumerable` verfügt über Methoden, um in von STVF zurückgegebenen Resultsets zu navigieren. Wenn die STVF aufgerufen wird, wird die zurückgegebene `IEnumerable`-Schnittstelle direkt mit dem Abfrageplan verbunden. Der Abfrageplan ruft `IEnumerable`-Methoden auf, wenn er Zeilen abrufen muss. Dieses Iterationsmodell ermöglicht es, dass Ergebnisse sofort nach Abruf der ersten Zeile verarbeitet werden. Es muss nicht gewartet werden, bis die gesamte Tabelle aufgefüllt ist. Dadurch wird zudem der durch den Funktionsaufruf benötigte Arbeitsspeicher stark reduziert.  
+ STVFs sind verwaltete Funktionen, die eine `IEnumerable`-Schnittstelle zurückgeben. `IEnumerable` verfügt über Methoden, um in von STVF zurückgegebenen Resultsets zu navigieren. Wenn die STVF aufgerufen wird, wird die zurückgegebene `IEnumerable`-Schnittstelle direkt mit dem Abfrageplan verbunden. Der Abfrageplan ruft `IEnumerable`-Methoden auf, wenn er Zeilen abrufen muss. Dieses Iterationsmodell ermöglicht es, dass Ergebnisse sofort nach Abruf der ersten Zeile verarbeitet werden. Es muss nicht gewartet werden, bis die gesamte Tabelle aufgefüllt ist. Dadurch wird zudem der durch den Funktionsaufruf benötigte Arbeitsspeicher stark reduziert.  
   
 ### <a name="arrays-vs-cursors"></a>Arrays oder Cursor  
  Wenn [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Cursor Daten traversieren müssen, die als Array einfacher auszudrücken sind, kann verwalteter Code verwendet und die Leistung dadurch gesteigert werden.  
   
 ### <a name="string-data"></a>Zeichenfolgendaten  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Zeichendaten, wie z. B. `varchar`, können in verwalteten Funktionen vom Typ SqlString oder SqlChars sein. SqlString-Variablen erstellen im Arbeitsspeicher eine Instanz des gesamten Werts. SqlChars-Variablen stellen eine Streamingschnittstelle bereit, mit der eine höhere Leistung und bessere Skalierbarkeit erreicht wird, die jedoch nicht zum Erstellen einer Instanz des gesamten Werts im Arbeitsspeicher verwendet werden kann. Dies ist besonders für Daten großer Objekte (Large Objects, LOB) wichtig. Darüber hinaus kann über eine von `SqlXml.CreateReader()` zurückgegebene Streamingschnittstelle auf XML-Serverdaten zugegriffen werden.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Zeichendaten, wie z. B. `varchar`, können in verwalteten Funktionen vom Typ SqlString oder SqlChars sein. SqlString-Variablen erstellen im Arbeitsspeicher eine Instanz des gesamten Werts. SqlChars-Variablen stellen eine Streamingschnittstelle bereit, mit der eine höhere Leistung und bessere Skalierbarkeit erreicht wird, die jedoch nicht zum Erstellen einer Instanz des gesamten Werts im Arbeitsspeicher verwendet werden kann. Dies ist besonders für Daten großer Objekte (Large Objects, LOB) wichtig. Darüber hinaus kann über eine von `SqlXml.CreateReader()` zurückgegebene Streamingschnittstelle auf XML-Serverdaten zugegriffen werden.  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>CLR und erweiterte gespeicherte Prozeduren im Vergleich  
  Die Microsoft.SqlServer.Server-APIs (Application Programming Interfaces), die es verwalteten Prozeduren ermöglichen, Resultsets zurück an den Client zu senden, sind leistungsfähiger als die von erweiterten gespeicherten Prozeduren verwendeten Open Data Services(ODS)-APIs. Darüber hinaus unterstützen die System.Data.SqlServer-APIs Datentypen wie `xml`, `varchar(max)`, `nvarchar(max)` und `varbinary(max)`, die in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] eingeführt wurden, während ODS-APIs nicht für die Unterstützung der neuen Datentypen erweitert wurden.  
@@ -68,8 +65,7 @@ ms.locfileid: "62874498"
 >  Es wird jedoch empfohlen, keine neuen erweiterten gespeicherten Prozeduren zu entwickeln, da diese Funktion veraltet ist.  
   
 ### <a name="native-serialization-for-user-defined-types"></a>Systemeigene Serialisierung für benutzerdefinierte Typen  
- Benutzerdefinierte Typen (UDTs) wurden als Erweiterungsmechanismus für das Skalartypsystem entworfen. 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implementiert für UDTs ein Serialisierungsformat mit der Bezeichnung `Format.Native`. Während der Kompilierung wird die Struktur des Typs zur Generierung von MSIL geprüft, das für die betreffende Typdefinition angepasst wird.  
+ Benutzerdefinierte Typen (UDTs) wurden als Erweiterungsmechanismus für das Skalartypsystem entworfen. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implementiert für UDTs ein Serialisierungsformat mit der Bezeichnung `Format.Native`. Während der Kompilierung wird die Struktur des Typs zur Generierung von MSIL geprüft, das für die betreffende Typdefinition angepasst wird.  
   
  Die systemeigene Serialisierung ist die Standardimplementierung für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Die benutzerdefinierte Serialisierung ruft eine Methode auf, die vom Typautor für die Durchführung der Serialisierung definiert wurde. Für eine optimale Leistung sollte, sofern möglich, die `Format.Native`-Serialisierung verwendet werden.  
   

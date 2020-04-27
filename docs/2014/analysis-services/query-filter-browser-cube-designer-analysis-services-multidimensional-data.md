@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d788a4957d7c6b3ea02e407f8b09fa80b957a4b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070539"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Abfrage und Filter (Registerkarte 'Browser', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
@@ -27,7 +27,7 @@ ms.locfileid: "66070539"
   
  Die Anmeldeinformationen des aktuellen Benutzers, nicht die auf der Seite **Identitätswechselinformationen** angegebenen Anmeldeinformationen, werden standardmäßig zum Herstellen einer Verbindung mit der Datenquelle verwendet, wenn eine Abfrage ausgeführt wird. Sie können jedoch auch den Benutzerkontext für die Abfrage oder den Bericht ändern, indem Sie auf der **Symbolleiste** auf **Benutzer wechseln**klicken.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Dimension**  
  Wählen Sie die Dimension aus, in der der Teilcube in Slices aufgeteilt werden soll.  
   
@@ -37,9 +37,9 @@ ms.locfileid: "66070539"
  **Operator**  
  Wählen Sie den Operator aus, der definiert, wie der Ausdruck in **Filterausdruck** auf die ausgewählte Hierarchie angewendet wird. Die folgende Tabelle beschreibt die verfügbaren Operatoren.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**Hoch**|Die Ergebnisse sind auf die in **Filterausdruck**definierte Menge beschränkt.|  
+|**Gleich**|Die Ergebnisse sind auf die in **Filterausdruck**definierte Menge beschränkt.|  
 |**Ungleich**|Die Ergebnisse sind auf die Elemente beschränkt, die durch die in **Filterausdruck**definierte Menge ausgeschlossen werden.|  
 |**In**|Die Ergebnisse sind auf die in **Filterausdruck**gewählte benannte Menge beschränkt.|  
 |**Not In**|Die Ergebnisse sind auf die Elemente beschränkt, die durch die in **Filterausdruck**gewählte benannte Menge ausgeschlossen werden.|  
@@ -49,7 +49,7 @@ ms.locfileid: "66070539"
 |**Bereich (exklusiv)**|Die Ergebnisse sind auf die Elemente beschränkt, die durch den in **Filterausdruck**ausgewählten Bereich ausgeschlossen werden.|  
 |**MDX**|Die Ergebnisse sind auf den in **Filterausdruck**festgelegten MDX-Ausdruck (Multidimensional Expressions) beschränkt.|  
   
- **Filter Ausdruck**  
+ **Filterausdruck**  
  Geben Sie den Ausdruck ein, der durch **Operator**ausgewertet werden soll, um die zu durchsuchenden Ergebnisse zu beschränken.  
   
 > [!NOTE]  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2530d42c70b506fe927d35fd4e6f862e22e1ea1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078932"
 ---
 # <a name="modifying-the-customer-dimension"></a>Ändern der Customer-Dimension
@@ -122,7 +122,7 @@ ms.locfileid: "66078932"
   
 2.  Wählen Sie im Bereich **Attribute** die folgenden Attribute, indem Sie beim Klicken die STRG-Taste gedrückt halten:  
   
-    -   **City**  
+    -   **City (Ort)**  
   
     -   `Country-Region`  
   
@@ -132,21 +132,21 @@ ms.locfileid: "66078932"
   
 3.  Klicken Sie im Eigenschaftenfenster oben auf das **AttributeHierarchyDisplayFolder** -Eigenschaften Feld (möglicherweise müssen Sie darauf zeigen, um den vollständigen Namen anzuzeigen), und geben `Location`Sie dann ein.  
   
-4.  Klicken Sie **** `Customer Geography`im Bereich Hierarchien auf, und wählen `Location` Sie dann in der Eigenschaftenfenster auf der rechten Seite als Wert der **DisplayFolder** -Eigenschaft aus.  
+4.  Klicken Sie **Hierarchies** `Customer Geography`im Bereich Hierarchien auf, und wählen `Location` Sie dann in der Eigenschaftenfenster auf der rechten Seite als Wert der **DisplayFolder** -Eigenschaft aus.  
   
 5.  Wählen Sie im Bereich **Attribute** die folgenden Attribute, indem Sie beim Klicken die STRG-Taste gedrückt halten:  
   
-    -   **Entfernung der Entfernung**  
+    -   **Commute Distance**  
   
     -   `Education`  
   
-    -   **Geschlechter**  
+    -   **Geschlecht**  
   
-    -   **Hausbesitzerflag**  
+    -   **House Owner Flag**  
   
     -   **Marital Status**  
   
-    -   **Anzahl der Autos im Besitz**  
+    -   **Number Cars Owned**  
   
     -   **Anzahl der Kinder zu Hause**  
   
@@ -162,7 +162,7 @@ ms.locfileid: "66078932"
   
     -   **E-Mail Adresse**  
   
-    -   **Smartphone**  
+    -   **Telefon**  
   
 8.  Klicken Sie im Eigenschaftenfenster auf das **AttributeHierarchyDisplayFolder** -Eigenschaften Feld, `Contacts`und geben Sie ein.  
   
@@ -251,7 +251,7 @@ ms.locfileid: "66078932"
   
      Im Browser werden die Kunden in dem Ort angezeigt.  
   
-4.  Wechseln Sie zum **Cube-Designer** , um den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial Cube anzuzeigen. Doppelklicken Sie hierzu auf den **Analysis Services Tutorial** -Cube im **Cubes** -Knoten des **Projektmappen-Explorers**.  
+4.  Wechseln Sie zum **Cube-Designer** , um den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial Cube anzuzeigen. Doppelklicken Sie hierzu auf den **Analysis Services Tutorial** -Cube im **Cubes** -Knoten **Projektmappen-Explorer**.  
   
 5.  Klicken Sie auf die Registerkarte **Browser** und anschließend in der Symbolleiste des Designers auf die Schaltfläche zum Wiederherstellen der Verbindung.  
   
@@ -268,6 +268,6 @@ ms.locfileid: "66078932"
  [Dimensions Attribut-Eigenschaften Referenz](multidimensional-models/dimension-attribute-properties-reference.md)   
  [Entfernen eines Attributs aus einer Dimension](multidimensional-models/attribute-properties-remove-an-attribute-from-a-dimension.md)   
  [Umbenennen eines Attributs](multidimensional-models/attribute-properties-rename-an-attribute.md)   
- [Definieren Sie benannte Berechnungen in einer Datenquellen Sicht &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [Definieren von benannten Berechnungen in einer Datenquellensicht &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

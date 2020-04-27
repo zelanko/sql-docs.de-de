@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 12eb2a2f6ea7501e03830724b24c5808375db7c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075026"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Erteilen von Cube- oder Modellberechtigungen (Analysis Services)
@@ -29,8 +29,7 @@ ms.locfileid: "66075026"
   
  Standardmäßig hat nur der Server- oder Datenbankadministrator die Berechtigung, Cubes in einer Datenbank abzufragen. Der Zugriff auf Cubes durch einen Benutzer, der kein Administrator ist, setzt dessen Mitgliedschaft in einer Rolle voraus, die für die Datenbank, die den Cube enthält, erstellt wurde. Die Mitgliedschaft wird für Windows-Benutzer- oder -Gruppenkonten unterstützt, die entweder in Active Directory oder auf dem lokalen Computer definiert wurden. Bevor Sie beginnen, geben Sie an, welche Konten Mitgliedschaft in den zu erstellenden Rollen erhalten werden.  
   
- 
-  `Read`-Zugriff auf einen Cube umfasst auch Berechtigungen für die Dimensionen, Measuregruppen und Perspektiven darin. Die meisten Administratoren gewähren Leseberechtigungen auf Cubeebene und schränken dann die Berechtigungen auf bestimmte Objekte, auf zugehörige Daten oder nach Benutzeridentität ein.  
+ `Read`-Zugriff auf einen Cube umfasst auch Berechtigungen für die Dimensionen, Measuregruppen und Perspektiven darin. Die meisten Administratoren gewähren Leseberechtigungen auf Cubeebene und schränken dann die Berechtigungen auf bestimmte Objekte, auf zugehörige Daten oder nach Benutzeridentität ein.  
   
  Um die Rollendefinitionen für weitere Lösungsbereitstellungen beizubehalten, besteht eine bewährte Methode darin, Rollen in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] als integralen Bestandteil des Modells zu definieren, während die Rollenmitgliedschaften nach Veröffentlichung der Datenbank dann von einem Datenbankadministrator in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] zugewiesen werden. Sie können jedoch beide Tools für beide Aufgaben verwenden. Um die Übung einfacher zu gestalten, verwenden wir [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] sowohl für die Rollendefinition als auch für die Mitgliedschaft.  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66075026"
   
 1.  Wählen Sie im Bereich **Cubes** einen Cube aus, und klicken Sie `Read` dann auf oder **Lese-/Schreibzugriff** .  
   
-     `Read`der Zugriff ist für die meisten Vorgänge ausreichend. **Lese-/Schreibzugriff** wird nur für das Rück schreiben, nicht für die Verarbeitung verwendet. Weitere Informationen zu dieser Funktion finden Sie unter [Set Partition Writeback](set-partition-writeback.md) .  
+     `Read`der Zugriff ist für die meisten Vorgänge ausreichend. **Lesen/Schreiben** wird nur zum Rückschreiben, nicht für die Verarbeitung verwendet. Weitere Informationen zu dieser Funktion finden Sie unter [Set Partition Writeback](set-partition-writeback.md) .  
   
      Beachten Sie, dass Sie mehrere Cubes auswählen können sowie andere Objekte, die im Dialogfeld "Rolle erstellen" verfügbar sind. Wenn Sie Berechtigungen für einen Cube erteilen, gewährt dies auch Zugriff auf die Dimensionen und Perspektiven, die mit dem Cube verknüpft sind. Es besteht keine Notwendigkeit, Objekte, die bereits im Cube vorhanden sind, manuell hinzuzufügen.  
   
@@ -104,6 +103,6 @@ ms.locfileid: "66075026"
 ## <a name="see-also"></a>Weitere Informationen  
  [Von Analysis Services unterstützte Authentifizierungsmethoden](../instances/authentication-methodologies-supported-by-analysis-services.md)   
  [Erteilen von Berechtigungen für Data Mining Strukturen und Modelle &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Erteilen von Berechtigungen für ein Datenquellen Objekt &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [Erteilen von Berechtigungen für ein Datenquellenobjekt &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

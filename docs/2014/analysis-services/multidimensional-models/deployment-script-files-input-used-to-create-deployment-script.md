@@ -19,17 +19,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dec93494dd21412c067af293832066087ca3ed37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075406"
 ---
 # <a name="understanding-the-input-files-used-to-create-the-deployment-script"></a>Grundlegendes zu den zum Erstellen des Bereitstellungsskripts verwendeten Eingabedateien
-  Wenn [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Sie ein Projekt erstellen, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] generiert XML-Dateien für das Projekt. 
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] legt diese XML-Dateien im Ausgabeordner des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Projekts ab. Standardmäßig erfolgt die Ausgabe in den Ordner \Bin. In der folgenden Tabelle werden die von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] erstellten Dateien aufgeführt.  
+  Wenn [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Sie ein Projekt erstellen, [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] generiert XML-Dateien für das Projekt. [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] legt diese XML-Dateien im Ausgabeordner des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Projekts ab. Standardmäßig erfolgt die Ausgabe in den Ordner \Bin. In der folgenden Tabelle werden die von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] erstellten Dateien aufgeführt.  
   
-|XMLA-Datei|BESCHREIBUNG|  
+|XMLA-Datei|Beschreibung|  
 |---------------|-----------------|  
 |\<*Projektname*>. asdatabase|Enthält die deklarativen Definitionen für alle [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte im Projekt.|  
 |\<*Projektname*>. deploymenttargets|Enthält den Namen der Instanz und der Datenbank von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , in der die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekte erstellt werden.|  
@@ -37,8 +36,7 @@ ms.locfileid: "66075406"
 |\<*Projektname*>. deploymentoptions|Enthält Bereitstellungsoptionen, z. B. ob es sich um eine Transaktionsbereitstellung handelt und ob die bereitgestellten Objekte nach der Bereitstellung verarbeitet werden sollen.|  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] speichert Kennwörter nie in den Projektdateien.  
+>  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] speichert Kennwörter nie in den Projektdateien.  
   
 ## <a name="modifying-the-input-files"></a>Ändern der Eingabedateien  
  Durch Ändern der Werte in den Eingabedateien oder der aus den Eingabedateien abgerufenen Werte können das Bereitstellungs Ziel, die Konfigurationseinstellungen und die Bereitstellungs Optionen geändert werden, ohne dass der \<gesamte *Projektname*>. asdatabase-Datei bearbeitet wird (oder eine gesamte XMLA-Skriptdatei, wenn Sie [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ein Skript aus einer vorhandenen Datenbank generieren). Durch die Möglichkeit, einzelne Dateien zu ändern, können Sie auf einfache Weise verschiedene Bereitstellungsskripts für unterschiedliche Zwecke erstellen.  

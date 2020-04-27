@@ -15,14 +15,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f090e48f97f4756f6c87b7cac2a6db64105ef265
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "63021062"
 ---
 # <a name="publish-data-over-the-internet-using-vpn"></a>Veröffentlichen von Daten über das Internet mithilfe von VPN
-  Die VPN-Technologie (Virtual Private Network) ermöglicht Benutzern, die von zu Hause aus, in Niederlassungen, an Remoteclients oder in anderen Unternehmen arbeiten, eine Verbindung mit einem Unternehmensnetzwerk über das Internet herzustellen, während gleichzeitig die Sicherheit der Verbindung aufrechterhalten wird. Benutzer können die Windows-Authentifizierung so verwenden, als ob sie sich in einem lokalen Netzwerk (Local Area Network, LAN) befänden. Alle [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Replikations Typen können Daten über ein VPN replizieren, aber Sie sollten bei Verwendung der Mergereplikation die Websynchronisierung verwenden, da die Websynchronisierung die Notwendigkeit eines VPN entfällt. Weitere Informationen finden Sie unter [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md).  
+  Die VPN-Technologie (Virtual Private Network) ermöglicht Benutzern, die von zu Hause aus, in Niederlassungen, an Remoteclients oder in anderen Unternehmen arbeiten, eine Verbindung mit einem Unternehmensnetzwerk über das Internet herzustellen, während gleichzeitig die Sicherheit der Verbindung aufrechterhalten wird. Benutzer können die Windows-Authentifizierung so verwenden, als ob sie sich in einem lokalen Netzwerk (Local Area Network, LAN) befänden. Alle Arten der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Replikation können Daten über VPN replizieren, aber Sie sollten beim Verwenden der Mergereplikation die Websynchronisierung verwenden, da durch die Websynchronisierung kein VPN mehr erforderlich ist. Weitere Informationen finden Sie unter [Web Synchronization for Merge Replication](web-synchronization-for-merge-replication.md).  
   
  Ein VPN enthält Clientsoftware, sodass sich Computer über das Internet (oder in besonderen Fällen auch über ein Intranet) mit Software auf einem dedizierten Computer oder einem Server verbinden können. Optional können auf beiden Seiten die Verschlüsselung sowie Methoden zur Benutzerauthentifizierung verwendet werden. Die VPN-Verbindung über das Internet funktioniert logisch gesehen als WAN-Verbindung (Wide Area Network) zwischen den Standorten.  
   

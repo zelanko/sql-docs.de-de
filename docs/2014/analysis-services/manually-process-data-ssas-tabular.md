@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5de1215bd9646e115c6b2730c4e8a750a3f4040f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077973"
 ---
 # <a name="manually-process-data-ssas-tabular"></a>Manuelle Verarbeitung von Daten (SSAS – tabellarisch)
@@ -30,7 +30,7 @@ ms.locfileid: "66077973"
   
 -   [Status der Datenverarbeitung](#bkmk_data_process_progress)  
   
-##  <a name="bkmk_mahually_process"></a>Manuelles Verarbeiten von Daten  
+##  <a name="manually-process-data"></a><a name="bkmk_mahually_process"></a>Manuelles Verarbeiten von Daten  
   
 #### <a name="to-process-data-for-a-single-table-or-all-tables-in-a-model"></a>So verarbeiten Sie Daten für eine einzelne Tabelle oder alle Tabellen in einem Modell  
   
@@ -50,17 +50,17 @@ ms.locfileid: "66077973"
   
 2.  Wählen Sie im Dialogfeld **Partitionen verarbeiten** unter **Modus**einen der folgenden Verarbeitungsmodi aus:  
   
-    |Mode|BESCHREIBUNG|  
+    |Mode|Beschreibung|  
     |----------|-----------------|  
     |**Standard verarbeiten**|Erkennt den Verarbeitungsstatus eines Partitionsobjekts und führt die Verarbeitung durch, durch die nicht oder teilweise verarbeitete Partitionsobjekte in den Status "Vollständig verarbeitet" versetzt werden. Daten für leere Tabellen und Partitionen werden geladen, Hierarchien, berechnete Spalten und Beziehungen werden erstellt oder neu erstellt.|  
     |**Vollständig verarbeiten**|Verarbeitet ein Partitionsobjekt und alle darin enthaltenen Objekte. Wenn die Verarbeitungsmethode "Vollständig verarbeiten" für ein bereits verarbeitetes Objekt ausgeführt wird, löscht [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] alle Daten im Objekt und verarbeitet anschließend das Objekt. Diese Art der Verarbeitung ist erforderlich, wenn eine Änderung an der Objektstruktur vorgenommen wurde.|  
-    |**Daten verarbeiten**|Lädt Daten in eine Partition oder Tabelle, ohne Hierarchien oder Beziehungen neu zu erstellen bzw. berechnete Spalten und Measures neu zu berechnen.|  
-    |**Prozess löschen**|Entfernt alle Daten aus einer Partition.|  
+    |**Verarbeiten von Daten**|Lädt Daten in eine Partition oder Tabelle, ohne Hierarchien oder Beziehungen neu zu erstellen bzw. berechnete Spalten und Measures neu zu berechnen.|  
+    |**Löschung verarbeiten**|Entfernt alle Daten aus einer Partition.|  
     |**Hinzufügung verarbeiten**|Aktualisiert die Partition inkrementell mit neuen Daten.|  
   
 3.  Wählen Sie in der Liste der Partitionen die zu verarbeitende Partition aus, und klicken Sie auf **OK**.  
   
-##  <a name="bkmk_data_process_progress"></a>Status der Datenverarbeitung  
+##  <a name="data-process-progress"></a><a name="bkmk_data_process_progress"></a>Status der Datenverarbeitung  
  Im Dialogfeld **Status der Datenverarbeitung** können Sie die Verarbeitung von Daten überwachen, die Sie aus einer externen Quelle in das Modell importiert haben. Um dieses Dialogfeld zu öffnen, klicken Sie auf das Menü **Modell** und anschließend auf **Partitionen verarbeiten**, **Tabelle verarbeiten** oder **Alles verarbeiten**.  
   
  **Status**  
@@ -69,11 +69,11 @@ ms.locfileid: "66077973"
  **Details**  
  Listet die Tabellen und die Sichten, die importiert wurden, sowie die Anzahl von Zeilen auf, die importiert wurden, und stellt einen Link für einen Bericht zu Problemen bereit.  
   
- **Aktualisierung abbrechen**  
+ **Aktualisierung beenden**  
  Klicken Sie auf diese Option, um den Verarbeitungsvorgang anzuhalten. Diese Option ist nützlich, wenn der Vorgang zu lange dauert oder wenn es zu viele Fehler gibt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Verarbeiten von Daten &#40;tabellarischen SSAS-&#41;](process-data-ssas-tabular.md)   
- [Behandeln von Problemen mit Prozessdaten &#40;tabellarischen SSAS-&#41;](troubleshoot-process-data-ssas-tabular.md)  
+ [Problembehandlung von Verarbeitungsdaten &#40;SSAS – tabellarisch&#41;](troubleshoot-process-data-ssas-tabular.md)  
   
   

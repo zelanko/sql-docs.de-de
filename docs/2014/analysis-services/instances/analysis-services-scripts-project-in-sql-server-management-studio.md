@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0bcc06655333dfef073757218d9a740c1dfb0dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080358"
 ---
 # <a name="analysis-services-scripts-project-in-sql-server-management-studio"></a>Analysis Services-Skriptprojekt in SQL Server Management Studio
@@ -46,7 +46,7 @@ ms.locfileid: "66080358"
   
  Der Projektordner für ein Skriptprojekt von Analysis-Server kann die in der folgenden Tabelle aufgeführten Dateitypen enthalten:  
   
-|Dateityp|BESCHREIBUNG|  
+|Dateityp|Beschreibung|  
 |---------------|-----------------|  
 |Definitionsdatei für Skriptprojekte von Analysis-Server (.ssmsasproj)|Enthält Metadaten zu den im Projektmappen-Explorer angezeigten Ordnern sowie Informationen, aus denen hervorgeht, in welchen Ordnern dem Projekt zugehörige Dateien angezeigt werden sollten.<br /><br /> Die Projektdefinitionsdatei enthält darüber hinaus Metadaten für die im Projekt enthaltenen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Verbindungen sowie Metadaten, die Zuordnungen von Verbindungen mit Skriptdateien im Projekt herstellen.|  
 |DMX-Skriptdatei (.dmx)|Enthält ein in das Projekt aufgenommenes DMX-Skript.|  

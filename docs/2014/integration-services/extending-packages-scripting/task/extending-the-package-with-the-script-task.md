@@ -20,14 +20,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 10cfa4d5d9deeeeb6bc664fc6480e31bc5dc483e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62894774"
 ---
 # <a name="extending-the-package-with-the-script-task"></a>Erweitern von Paketen mithilfe des Skripttasks
-  Der Skript Task erweitert die Lauf Zeitfunktionen von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Paketen mit benutzerdefiniertem Code, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] der in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic oder Visual c# geschrieben ist und zur Laufzeit des Pakets kompiliert und ausgeführt wird. Der Skripttask vereinfacht die Entwicklung eines benutzerdefinierten Laufzeittasks, falls die in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] enthaltenen Tasks Ihre Anforderungen nicht voll erfüllen. Der Skripttask schreibt den nötigen Infrastrukturcode für Sie, damit Sie sich vollständig auf den Code konzentrieren können, der für die benutzerdefinierte Verarbeitung erforderlich ist.  
+  Der Skripttask erweitert die Laufzeitfunktionen von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Paketen durch benutzerdefinierten Code, der in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic oder [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# geschrieben ist und zur Laufzeit des Pakets kompiliert und ausgeführt wird. Der Skripttask vereinfacht die Entwicklung eines benutzerdefinierten Laufzeittasks, falls die in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] enthaltenen Tasks Ihre Anforderungen nicht voll erfüllen. Der Skripttask schreibt den nötigen Infrastrukturcode für Sie, damit Sie sich vollständig auf den Code konzentrieren können, der für die benutzerdefinierte Verarbeitung erforderlich ist.  
   
  Ein Skripttask interagiert mit dem entsprechenden Paket über das globale `Dts`-Objekt, eine Instanz der <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel>-Klasse, die in der Skriptumgebung verfügbar gemacht wird. In einem Skripttask können Sie Code schreiben, der die in [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]-Variablen gespeicherten Werte ändert. Anschließend kann das Paket anhand dieser aktualisierten Werte den Workflowpfad ermitteln. Der Skripttask kann außerdem den [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]-Namespace und die [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]-Klassenbibliothek sowie benutzerdefinierte Assemblys zum Implementieren individueller Funktionen verwenden.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62894774"
  Erläutert, wie sich die Eigenschaften, die Sie im **Skripttask-Editor** konfigurieren, auf die Funktionen und die Leistung des Codes im Skripttask auswirken.  
   
  [Codieren und Debuggen des Skripttasks](../../control-flow/script-task.md)  
- Erläutert die Verwendung [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] von Tools for Applications (VSTA) zum Entwickeln der Skripts, die im Skript Task enthalten sind.  
+ Erläutert, wie mit [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) die Skripts im Skripttask entwickelt werden.  
   
  [Verwenden von Variablen im Skripttask](using-variables-in-the-script-task.md)  
  Erklärt, wie Variablen mithilfe der <xref:Microsoft.SqlServer.Dts.Tasks.ScriptTask.ScriptObjectModel.Variables%2A>-Eigenschaft verwendet werden.  

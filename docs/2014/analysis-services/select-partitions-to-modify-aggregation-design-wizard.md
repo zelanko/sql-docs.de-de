@@ -13,25 +13,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f33066c622e3d1d736b1e8b800db96b0e9c35fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069297"
 ---
 # <a name="select-partitions-to-modify-aggregation-design-wizard"></a>Zu ändernde Partitionen auswählen (Aggregationsentwurfs-Assistent)
   Mithilfe der Seite **Zu ändernde Partitionen auswählen** können Sie die Partitionen auswählen, für die Sie Aggregationen entwerfen möchten.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Auswahl**  
  Aktivieren Sie das Kontrollkästchen in der Spaltenüberschrift, um Aggregationen für alle Partitionen in der Measuregruppe zu entwerfen.  
   
  Aktivieren Sie das Kontrollkästchen für eine Partition, um nur für die ausgewählte Partition Aggregationen zu entwerfen.  
   
- **Partitions Name**  
+ **Partitionsname**  
  Zeigt den Namen der Partition an.  
   
- **`Source`**  
+ **Quelle**  
  Zeigt die Tabelle oder die Abfrage an, durch die Quelldaten für die Partition bereitgestellt werden.  
   
  **Aggregationen**  

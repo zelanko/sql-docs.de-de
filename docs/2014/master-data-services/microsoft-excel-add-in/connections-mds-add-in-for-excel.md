@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a7d336e777f4f6bf00310cbadfed75987ba45252
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478918"
 ---
 # <a name="connections-mds-add-in-for-excel"></a>Verbindungen (MDS-Add-I für Excel)
@@ -41,7 +41,7 @@ ms.locfileid: "65478918"
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Herstellen einer Verbindung mit einer [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Datenbank|[Herstellen einer Verbindung mit einem MDS-Repository &#40;MDS-Add-in für Excel&#41;](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
+|Herstellen einer Verbindung mit einer [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Datenbank|[Herstellen einer Verbindung mit einem MDS-Repository &#40;MDS-Add-In für Excel&#41;](connect-to-an-mds-repository-mds-add-in-for-excel.md)|  
 |Laden Sie MDS-Daten in Excel.|[Laden von Daten aus MDS in Excel](export-data-to-excel-from-master-data-services.md)|  
 |Filtern Sie MDS-Daten, bevor Sie sie in Excel laden.|[Daten vor dem Laden &#40;MDS-Add-in für Excel Filtern&#41;](filter-data-before-exporting-mds-add-in-for-excel.md)|  
   
@@ -49,7 +49,7 @@ ms.locfileid: "65478918"
   
 -   [Daten &#40;MDS-Add-in für Excel werden geladen&#41;](overview-exporting-data-to-excel-mds-add-in-for-excel.md)  
   
--   [Die shortcutabfragedateien &#40;MDS-Add-in für Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
+-   [Shortcutabfragedateien &#40;MDS-Add-In für Excel&#41;](shortcut-query-files-mds-add-in-for-excel.md)  
   
 -   [Master Data Services-Add-In für Microsoft Excel](master-data-services-add-in-for-microsoft-excel.md)  
   

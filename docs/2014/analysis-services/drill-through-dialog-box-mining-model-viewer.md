@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c065e36dd20646312d04379ea61b96d37a47a262
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081484"
 ---
 # <a name="drill-through-dialog-box-mining-model-viewer"></a>Dialogfeld "Drillthrough" (Miningmodell &ndash; Viewer)
@@ -27,14 +27,14 @@ ms.locfileid: "66081484"
   
  Informationen über das Zugreifen auf Falldaten über die verschiedenen Miningmodell-Viewer, die Drillthrough unterstützen, **finden Sie unter** [Ausführen von Drillthroughs für Falldaten aus einem Miningmodell](data-mining/drill-through-to-case-data-from-a-mining-model.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Klassifizierte Fälle für**  
  Zeigt die Definition der Regeln Itemset und Cluster an, die im ausgewählten Knoten enthalten sind.  
   
  **Spaltenliste**  
  Zeigt die Spalten im Modell an, gefolgt von den Strukturspalten.  
   
- **Hinweis** Struktur Spalten werden nur angezeigt, wenn Drillthrough für die Mining Struktur aktiviert ist, und wenn Sie die Option **Modell-und Struktur Spalten**ausgewählt haben. Um die Spalten anzuzeigen, müssen Drillthroughberechtigungen außerdem sowohl im Miningmodell als auch in der Miningstruktur aktiviert sein.  
+ **Hinweis** Strukturspalten werden nur angezeigt, wenn Drillthrough auf der Miningstruktur aktiviert ist und wenn Sie die Option **Model- und Strukturspalten**gewählt haben. Um die Spalten anzuzeigen, müssen Drillthroughberechtigungen außerdem sowohl im Miningmodell als auch in der Miningstruktur aktiviert sein.  
   
  Struktur Spalten, die nicht im Modell enthalten sind, werden als **Struktur\< angezeigt. der Spaltenname>**.  
   

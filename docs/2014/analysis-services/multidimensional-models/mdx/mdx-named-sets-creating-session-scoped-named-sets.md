@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 545bbdb171388f06c28644e0b8caa48db95e7e7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074045"
 ---
 # <a name="creating-session-scoped-named-sets-mdx"></a>Erstellen benannter Mengen im Bereich einer Sitzung (MDX)
@@ -53,6 +53,6 @@ select SetCities_2_3 on 0 from [Store]
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erstellen benannter Mengen im Bereich einer Abfrage &#40;MDX-&#41;](mdx-named-sets-creating-query-scoped-named-sets.md)  
+ [Erstellen benannter Mengen im Bereich einer Abfrage &#40;MDX&#41;](mdx-named-sets-creating-query-scoped-named-sets.md)  
   
   

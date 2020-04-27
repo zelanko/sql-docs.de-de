@@ -13,10 +13,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 1d540c414b1190a045fdb18b4b971e73f348459f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65483581"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>Ändern einer Benutzer-E-Mail-Adresse (Master Data Services)
@@ -43,9 +43,9 @@ ms.locfileid: "65483581"
   
 ## <a name="next-steps"></a>Nächste Schritte  
   
--   [&#40;Master Data Services Berechtigungen für Funktionsbereiche zuweisen&#41;](assign-functional-area-permissions-master-data-services.md)  
+-   [Zuweisen von Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](assign-functional-area-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Sicherheits &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
+ [Sicherheit &#40;Master Data Services&#41;](../../2014/master-data-services/security-master-data-services.md)  
   
   

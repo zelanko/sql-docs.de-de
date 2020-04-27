@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fefc72d81129ac4691f35209f25c4f348272c81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081436"
 ---
 # <a name="edit-table-properties-dialog-box-ssas"></a>Tabelleneigenschaften bearbeiten (Dialogfeld) (SSAS)
@@ -32,7 +32,7 @@ ms.locfileid: "66081436"
 > [!NOTE]  
 >  Der Name kann hier nicht bearbeitet werden. Sie können den Namen der Tabelle jedoch ändern, indem Sie im unteren Bereich des Modell-Designers mit der rechten Maustaste auf die Tabellenregisterkarte klicken.  
   
- **Verbindungs Name**  
+ **Verbindungsname**  
  Zeigt den Namen der aktuell verwendeten Verbindung an.  
   
  **Quellname**  
@@ -46,7 +46,7 @@ ms.locfileid: "66081436"
  **Spaltennamen aus**  
  |||  
 |-|-|  
-|**`Source`**|Aktivieren Sie diese Option, um die aktuellen Spaltennamen durch die Spaltennamen aus der ausgewählten Quelltabelle zu ersetzen.|  
+|**Quelle**|Aktivieren Sie diese Option, um die aktuellen Spaltennamen durch die Spaltennamen aus der ausgewählten Quelltabelle zu ersetzen.|  
 |**Modells**|Aktivieren Sie diese Option, um die aktuellen Spaltennamen zu verwenden, wie sie im Modell vorhanden sind.|  
   
  **Vorschau aktualisieren**  
@@ -77,7 +77,7 @@ ms.locfileid: "66081436"
 > [!NOTE]  
 >  Sie können den Namen hier nicht bearbeiten. Sie können den Namen der Tabelle jedoch ändern, indem Sie im unteren Bereich des Designers mit der rechten Maustaste auf die Tabellenregisterkarte klicken.  
   
- **Verbindungs Name**  
+ **Verbindungsname**  
  Zeigt den Namen der aktuell verwendeten Verbindung an.  
   
  **Wechseln zu**  
@@ -99,6 +99,6 @@ ms.locfileid: "66081436"
  Klicken Sie auf diese Option, um alle vorgenommenen Änderungen zu übernehmen, auch das Ersetzen der Spalten.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Tabellen und Spalten &#40;tabellarischen SSAS-&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
+ [Tabellen und Spalten &#40;SSAS – tabellarisch&#41;](tabular-models/tables-and-columns-ssas-tabular.md)  
   
   

@@ -26,10 +26,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 41ac7c11824457bd6d93a062344eb3b411c95b3e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62900559"
 ---
 # <a name="fuzzy-grouping-transformation"></a>Transformation für Fuzzygruppierung
@@ -83,17 +83,17 @@ ms.locfileid: "62900559"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Transformations-Editor für Fuzzygruppierung** festlegen können:  
   
--   [Transformations-Editor für Fuzzygruppierung &#40;Register&#41;Karte Verbindungs-Manager](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
+-   [Transformations-Editor für Fuzzygruppierung &#40;Registerkarte „Verbindungs-Manager“&#41;](../../fuzzy-grouping-transformation-editor-connection-manager-tab.md)  
   
--   [Transformations-Editor für Fuzzygruppierung &#40;Register&#41;Karte Spalten](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
+-   [Transformations-Editor für Fuzzygruppierung &#40;Registerkarte „Spalten“&#41;](../../fuzzy-grouping-transformation-editor-columns-tab.md)  
   
--   [Transformations-Editor für Fuzzygruppierung &#40;Register&#41;Karte erweitert](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
+-   [Transformations-Editor für Fuzzygruppierung &#40;Registerkarte „Erweitert“&#41;](../../fuzzy-grouping-transformation-editor-advanced-tab.md)  
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Common Properties](../../common-properties.md)  
+-   [Allgemeine Eigenschaften](../../common-properties.md)  
   
--   [Benutzerdefinierte Eigenschaften von Transformationen](transformation-custom-properties.md)  
+-   [Transformation Custom Properties](transformation-custom-properties.md)  
   
 ## <a name="related-tasks"></a>Related Tasks  
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zum Festlegen der Eigenschaften dieses Tasks anzuzeigen:  

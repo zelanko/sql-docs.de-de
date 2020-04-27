@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4dfabea6ba2b8785e4c55b74099d9e4b0cd824ea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "65478916"
 ---
 # <a name="create-an-entity-mds-add-in-for-excel"></a>Erstellen einer Entität (MDS-Add-In für Excel)
@@ -33,7 +33,7 @@ ms.locfileid: "65478916"
   
     -   Die Daten sollten eine Kopfzeile haben.  
   
-    -   Es ist hilfreich, wenn die Spalten **Name** und **Code** vorhanden sind. **Code** ist ein eindeutiger Bezeichner für jede Zeile.  
+    -   Es ist hilfreich, wenn die Spalten **Name** und **Code** vorhanden sind. Der**Code** ist ein eindeutiger Bezeichner für jede Zeile.  
   
     -   Außer der Kopfzeile sollte mindestens eine Zeile mit Daten vorhanden sein. Nicht in allen Spalten müssen Werte enthalten sein, aber die Daten sollten repräsentativ für die Daten sein, die in der Entität enthalten sein sollen.  
   
@@ -76,6 +76,6 @@ ms.locfileid: "65478916"
 -   Bestätigen Sie, dass die Attribute mit dem gewünschten Datentyp erstellt wurden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erstellen eines domänenbasierten Attributs &#40;MDS-Add-in für Excel&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)  
+ [Erstellen eines domänenbasierten Attributs &#40;MDS-Add-In für Excel&#41;](create-a-domain-based-attribute-mds-add-in-for-excel.md)  
   
   

@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 62dd9af9ea66678c2cc69a016b83e907025a4294
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "62877875"
 ---
 # <a name="variables-window"></a>Variablen (Fenster)
@@ -49,7 +49,7 @@ ms.locfileid: "62877875"
  `Name`  
  Zeigt den Variablennamen an. Bei benutzerdefinierten Variablen können Sie den Namen der Variablen aktualisieren.  
   
- **`Scope`**  
+ **Scope**  
  Zeigt den Bereich der Variablen an. Eine Variable verfügt entweder über den Bereich des gesamten Pakets oder den Bereich eines Containers bzw. Tasks. Der Bereich der Variable muss ausreichend sein, sodass die Variable für alle anderen Tasks oder Komponenten sichtbar ist, die ihren Wert lesen oder festlegen müssen.  
   
  Sie können den Bereich ändern, indem Sie auf die Variable klicken und dann im Fenster **Variablen** auf **Variable verschieben** klicken.  
@@ -66,21 +66,21 @@ ms.locfileid: "62877875"
  `Namespace`  
  Zeigt den Namen des Namespaces an. Benutzerdefinierte Variablen werden anfänglich im **User** -Namespace erstellt, aber Sie können den Namespace Namen im `Namespace` Feld ändern. Klicken Sie zum Anzeigen dieser Spalte auf **Rasteroptionen**.  
   
- **Change-Ereignis erhöhen**  
+ **Ereignis bei Änderung des Variablenwertes auslösen**  
  Gibt an, ob das `OnVariableValueChanged`-Ereignis ausgelöst werden soll, wenn ein Wert geändert wird. Bei benutzerdefinierten und Systemvariablen können Sie den Wert aktualisieren. Standardmäßig wird diese Spalte nicht im Fenster **Variablen** angezeigt. Klicken Sie zum Anzeigen dieser Spalte auf **Rasteroptionen**.  
   
  **Beschreibung**  
  Anzeigen der Variablenbeschreibung. Sie können die Beschreibung für benutzerdefinierte Variablen ändern. Standardmäßig wird diese Spalte nicht im Fenster **Variablen** angezeigt. Klicken Sie zum Anzeigen dieser Spalte auf **Rasteroptionen**.  
   
- **Ausdruck**  
+ **expression**  
  Anzeigen des der Variable zugewiesenen Ausdrucks. Klicken Sie auf die Schaltfläche mit den Auslassungspunkten, um einen Ausdruck zuzuweisen.  
   
  Wenn Sie einer Variablen einen Ausdruck zuweisen, wird ein spezieller Symbolmarker neben der Variablen angezeigt. Dieser spezielle Symbolmarker wird auch neben Verbindungs-Managern und Tasks angezeigt, für die Ausdrücke festgelegt wurden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Integration Services-Variablen &#40;SSIS&#41;](integration-services-ssis-variables.md)   
+ [Integration Services &#40;SSIS-&#41; Variablen](integration-services-ssis-variables.md)   
  [Verwenden von Variablen in Paketen](../../2014/integration-services/use-variables-in-packages.md)   
- [Integration Services-Ausdrücke &#40;SSIS&#41;](expressions/integration-services-ssis-expressions.md)   
+ [Integration Services &#40;SSIS-&#41; Ausdrücke](expressions/integration-services-ssis-expressions.md)   
  [Generieren von Dumpdateien für die Paketausführung](troubleshooting/generating-dump-files-for-package-execution.md)  
   
   
