@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 663ef21dc9c4d0f3698ae468637fe0a8fd55a16e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078900"
 ---
 # <a name="modifying-measures"></a>Ändern von Measures
@@ -36,19 +36,19 @@ ms.locfileid: "66078900"
   
 5.  Wählen Sie eine der folgenden Measures aus. Um mehrere Measures auszuwählen, halten Sie beim Klicken die STRG-TASTE gedrückt:  
   
-    -   **Einzelpreis**  
+    -   **Unit Price**  
   
-    -   **Erweiterter Betrag**  
+    -   **Extended Amount**  
   
-    -   **Rabatt Betrag**  
+    -   **Discount Amount**  
   
-    -   **Produkt Standard Kosten**  
+    -   **Product Standard Cost**  
   
-    -   **Gesamtproduktkosten**  
+    -   **Total Product Cost**  
   
-    -   **Umsatz Betrag**  
+    -   **Sales Amount**  
   
-    -   **Steuern Amt**  
+    -   **Tax Amt**  
   
     -   **Freight (Fracht)**  
   

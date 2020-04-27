@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f2a4a4eb3ddbf272968485f37fd3ceb25e973864
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077471"
 ---
 # <a name="add-a-standard-action"></a>Hinzufügen einer Standardaktion
@@ -47,7 +47,7 @@ ms.locfileid: "66077471"
   
     -   Wählen Sie in der Dropdownliste **Typ** den Typ der Aktion aus, den Sie erstellen möchten. In der folgenden Tabelle sind die verfügbaren Aktionstypen aufgelistet.  
   
-        |type|BESCHREIBUNG|  
+        |type|Beschreibung|  
         |----------|-----------------|  
         |Dataset|Ruft ein Dataset ab.|  
         |Proprietär|Führt einen Vorgang über eine Schnittstelle aus, die nicht in dieser Tabelle aufgelistet ist.|  
@@ -61,16 +61,16 @@ ms.locfileid: "66077471"
   
     -   Geben Sie mithilfe der Dropdownliste **Aufruf** an, wie die Aktion aufgerufen wird. In der folgenden Tabelle werden die verfügbaren Optionen zum Aufrufen einer Aktion beschrieben.  
   
-        |Option|Beschreibung|  
+        |Option|BESCHREIBUNG|  
         |------------|-----------------|  
-        |Interactive|Die Aktion wird durch eine Benutzerinteraktion ausgelöst.|  
+        |Interactive (Interaktiv)|Die Aktion wird durch eine Benutzerinteraktion ausgelöst.|  
         |Batch|Die Aktion wird als Batchvorgang ausgeführt.|  
         |Beim Öffnen|Die Aktion wird ausgeführt, wenn der Cube von einem Benutzer geöffnet wird.|  
   
     -   Geben Sie in **Anwendung**den Namen der Anwendung ein, die der Aktion zugeordnet ist. Wenn Sie z. B. eine Aktion erstellen, durch die ein Benutzer zu einer bestimmten Website geleitet wird, sollte die der Aktion zugeordnete Anwendung Microsoft Internet Explorer oder ein anderer Webbrowser sein.  
   
         > [!NOTE]  
-        >  Proprietäre Aktionen werden erst an den Server zurückgegeben, wenn das Schemarowset von der Clientanwendung explizit so beschränkt wird, dass nur Aktionen zurückgegeben werden, die mit dem in **Anwendung**angegebenen Namen übereinstimmen.  
+        >   Proprietäre Aktionen werden erst an den Server zurückgegeben, wenn das Schemarowset von der Clientanwendung explizit so beschränkt wird, dass nur Aktionen zurückgegeben werden, die mit dem in **Anwendung**angegebenen Namen übereinstimmen.  
   
     -   Wenn Sie unter **Aktions Inhalt**den URL-Typ verwenden, schließen Sie die Internet Adresse in Anführungszeichen ein, z. bhttp://www.adventure-works.com. "".  
   

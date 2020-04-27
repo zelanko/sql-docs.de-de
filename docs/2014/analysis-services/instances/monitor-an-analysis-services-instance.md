@@ -16,15 +16,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6a09984f089a88f90798c2ca8f4c2514c06bc1cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079745"
 ---
 # <a name="monitor-an-analysis-services-instance"></a>Überwachen einer Instanz von Analysis Services
-  Sie können die Leistung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] überwachen, indem Sie [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] oder den Systemmonitor verwenden, der manchmal auch als **PerfMon**bezeichnet wird. 
-  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] erstellen und verwalten Sie Ablaufverfolgungen und können Ablaufverfolgungsergebnisse analysieren und wiedergeben. Systemmonitor-Berichte zum Serverstatus, die im Index unter den jeweiligen Leistungsindikatoren zu finden sind, werden im nächsten Abschnitt erläutert.  
+  Sie können die Leistung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] überwachen, indem Sie [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] oder den Systemmonitor verwenden, der manchmal auch als **PerfMon**bezeichnet wird. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] erstellen und verwalten Sie Ablaufverfolgungen und können Ablaufverfolgungsergebnisse analysieren und wiedergeben. Systemmonitor-Berichte zum Serverstatus, die im Index unter den jeweiligen Leistungsindikatoren zu finden sind, werden im nächsten Abschnitt erläutert.  
   
 > [!NOTE]  
 >  Weitere Informationen zur Überwachung finden Sie im [SQL Server 2008 R2-Vorgangshandbuch](https://go.microsoft.com/fwlink/?LinkID=225539).  
@@ -38,8 +37,8 @@ ms.locfileid: "66079745"
   
  [Verwenden Sie SQL Server erweiterte Ereignisse &#40;xevents-&#41; zum Überwachen von Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)  
   
- [Verwenden Sie dynamische Verwaltungs Sichten &#40;DMVs-&#41; zum Überwachen von Analysis Services](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+ [Verwenden von dynamischen Verwaltungssichten &#40;DMVs&#41; zum Überwachen von Analysis Services](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
- [Leistungsindikatoren &#40;SSAS-&#41;](performance-counters-ssas.md)  
+ [Leistungsindikatoren &#40;SSAS&#41;](performance-counters-ssas.md)  
   
   

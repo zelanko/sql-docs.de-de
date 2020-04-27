@@ -22,18 +22,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d41f61233bbbcb6c49d4980a3265726280627860
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073173"
 ---
 # <a name="requirements-and-considerations-for-analysis-services-deployment"></a>Anforderungen und Überlegungen für die Bereitstellung von Analysis Services
   Die Leistung und Verfügbarkeit einer Lösung hängt von vielen Faktoren ab, einschließlich der Funktionen der zugrunde liegenden Hardware, der Topologie der Serverbereitstellung, der Eigenschaften der Lösung (z. B. die Verteilung von Partitionen auf mehreren Servern oder die Verwendung von ROLAP-Speicher, der Direktzugriff auf die relationale Engine erfordert), der Vereinbarungen zum Servicelevel und der Komplexität des Datenmodells.  
   
 ## <a name="memory-and-processor-requirements"></a>Arbeitsspeicher- und Prozessoranforderungen  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] benötigt unter folgenden Umständen zusätzliche Arbeitsspeicher- und Prozessorressourcen:  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] benötigt unter folgenden Umständen zusätzliche Arbeitsspeicher- und Prozessorressourcen:  
   
 -   Wenn große oder komplexe Cubes verarbeitet werden. Diese benötigen eine größere Menge von Arbeitsspeicher- und Prozessorressourcen als kleine oder einfache Cubes.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66073173"
   
  [Von den SQL Server 2014-Editionen unterstützte Funktionen](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
   
- [Maximale Kapazitäts Spezifikationen &#40;Analysis Services&#41;](olap-physical/maximum-capacity-specifications-analysis-services.md)  
+ [Spezifikationen der maximalen Kapazität &#40;Analysis Services&#41;](olap-physical/maximum-capacity-specifications-analysis-services.md)  
   
 ## <a name="disk-space-requirements"></a>Anforderungen an den Datenträgerspeicher  
  Verschiedene Aspekte der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Installation und die Tasks, die sich auf Objektverarbeitung beziehen, erfordern unterschiedlichen Speicherplatz. In der folgenden Liste werden diese Anforderungen beschrieben.  
@@ -61,7 +60,7 @@ ms.locfileid: "66073173"
  Cubes  
  Cubes, die große Faktentabellen besitzen, verlangen mehr Speicherplatz als Cubes mit kleinen Faktentabellen. Entsprechend (wenn auch in geringerem Umfang) erfordern Cubes mit zahlreichen großen Dimensionen mehr Speicherplatz als Cubes mit einer geringeren Anzahl von Dimensionselementen. Im Allgemeinen können Sie erwarten, dass eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank ungefähr 20 Prozent des Speicherplatzes erfordert, der für die gleichen Daten benötigt wird, die in der zugrunde liegenden relationalen Datenbank gespeichert sind.  
   
- Aggregationen  
+ Aggregations  
  Aggregationen erfordern zusätzlichen Speicherplatz proportional zu den hinzugefügten Aggregationen. weitere Aggregationen sind vorhanden, desto mehr Speicherplatz ist erforderlich. Wenn Sie das Erstellen nicht erforderlicher Aggregationen vermeiden, sollte der für Aggregationen benötigte Speicherplatz in der Regel ungefähr 10 Prozent der Größe der Daten nicht übersteigen, die in der zugrunde liegenden relationalen Datenbank gespeichert sind.  
   
  Data Mining  
@@ -70,7 +69,7 @@ ms.locfileid: "66073173"
  Objektverarbeitung  
  Während der Verarbeitung speichert [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Kopien der Objekte, die aktuell verarbeitet werden, in der Verarbeitungstransaktion auf dem Datenträger, bis die Verarbeitung abgeschlossen ist. Nachdem die Verarbeitung abgeschlossen ist, ersetzen die verarbeiteten Kopien der Objekte die ursprünglichen Objekte. Daher müssen Sie ausreichend zusätzlichen Speicherplatz für eine zweite Kopie jedes Objekts vorsehen, das verarbeitet werden soll. Wenn Sie z.&nbsp;B. die Verarbeitung eines gesamten Cubes in einer einzigen Transaktion planen, benötigen Sie ausreichend Speicherplatz zum Speichern einer zweiten Kopie des gesamten Cubes.  
   
-##  <a name="BKMK_Availability"></a>Verfügbarkeits Überlegungen  
+##  <a name="availability-considerations"></a><a name="BKMK_Availability"></a>Verfügbarkeits Überlegungen  
  In einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Umgebung ist ein Cube oder Miningmodell möglicherweise für die Abfrage nicht verfügbar, weil ein Hardware- oder Softwarefehler aufgetreten ist. Ein Cube kann auch nicht verfügbar sein, weil er verarbeitet werden muss.  
   
 ### <a name="providing-availability-in-the-event-of-hardware-or-software-failures"></a>Gewährleisten der Verfügbarkeit im Fall von Hardware- oder Softwarefehlern  
@@ -87,7 +86,7 @@ ms.locfileid: "66073173"
   
  Wenn Sie inkrementelle Aktualisierungen der Quelldaten transparent verarbeiten möchten, aktivieren Sie proaktives Zwischenspeichern. Durch proaktives Zwischenspeichern werden Cubes mit neuen Quelldaten aktualisiert, ohne dass manuelle Verarbeitung erforderlich ist bzw. die Verfügbarkeit von Cubes beeinträchtigt wird. Weitere Informationen finden Sie unter [Proaktives Zwischenspeichern &#40;Partitionen&#41;](../multidimensional-models-olap-logical-cube-objects/partitions-proactive-caching.md).  
   
-##  <a name="BKMK_Scalability"></a>Überlegungen zur Skalierbarkeit  
+##  <a name="scalability-considerations"></a><a name="BKMK_Scalability"></a>Überlegungen zur Skalierbarkeit  
  Mehrere Instanzen von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] auf dem gleichen Computer können zu Leistungsproblemen führen. Eine Option zum Lösen dieser Probleme kann im Vergrößern der Prozessor-, Arbeitsspeicher- und Datenträgerressourcen auf dem Server bestehen. Möglicherweise müssen Sie jedoch auch die Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] über mehrere Computer hinweg skalieren.  
   
 ### <a name="scaling-analysis-services-across-multiple-computers"></a>Skalieren von Analysis Services über mehrere Computer hinweg  

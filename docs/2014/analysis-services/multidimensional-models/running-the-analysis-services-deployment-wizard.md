@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8fd34a7e614c1c1bb247f84846e090d22ea053e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073037"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Ausführen des Bereitstellungs-Assistenten für Analysis Services
   Wenn Sie zum bereit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellen eines [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projekts den Bereitstellungs-Assistenten verwenden, können Sie den Assistenten wie folgt ausführen:  
   
--   **Interaktiv** Bei interaktiver Durchführung generiert [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] der Bereitstellungs-Assistent basierend auf den Eingabedateien ein XML-Bereitstellungs Skript, das interaktiv durch Benutzereingaben geändert wird. Der Assistent wendet alle Änderungen durch den Benutzer ausschließlich auf das Bereitstellungsskript an. Der Assistent nimmt dabei keine Änderungen an den Eingabedateien vor. Weitere Informationen zu den Eingabedateien finden Sie unter [Grundlegendes zu den zum Erstellen des Bereitstellungsskripts verwendeten Eingabedateien](deployment-script-files-input-used-to-create-deployment-script.md).  
+-   **Interaktiv** Bei interaktiver Ausführung generiert der Bereitstellungs-Assistent für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] auf der Basis der durch die Benutzereingabe interaktiv geänderten Eingabedateien ein XML-Bereitstellungsskript. Der Assistent wendet alle Änderungen durch den Benutzer ausschließlich auf das Bereitstellungsskript an. Der Assistent nimmt dabei keine Änderungen an den Eingabedateien vor. Weitere Informationen zu den Eingabedateien finden Sie unter [Grundlegendes zu den zum Erstellen des Bereitstellungsskripts verwendeten Eingabedateien](deployment-script-files-input-used-to-create-deployment-script.md).  
   
 -   **An der Eingabeaufforderung** Wenn Sie an der Eingabeaufforderung ausführen, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] generiert der Bereitstellungs-Assistent ein XML for Analysis (XMLA)-Bereitstellungs Skript, das auf den Schaltern basiert, die Sie zum Ausführen des Assistenten verwenden. Der Assistent kann dann einen der folgenden Schritte ausführen: den Benutzer zur Eingabe auffordern und die Eingabedateien entsprechend der Benutzereingabe ändern, eine unbeaufsichtigte Bereitstellung mithilfe der unveränderten Eingabedateien durchführen oder ein Bereitstellungsskript erstellen, das vom Benutzer zu einem späteren Zeitpunkt verwendet werden kann.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66073037"
   
 -   Zeigen Sie im Menü **Start**auf **Alle Programme**, zeigen Sie auf **Microsoft SQL Server**, zeigen Sie auf **Analysis Services**, und klicken Sie dann auf **Bereitstellungs-Assistent**.  
   
-     Oder  
+     - oder -  
   
 -   Doppelklicken Sie im [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] **Projektordner des** Projekts auf den * \<Projektnamen>*. asdatabase-Datei.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66073037"
 ## <a name="running-the-analysis-services-deployment-wizard-at-the-command-prompt"></a>Ausführen des Bereitstellungs-Assistenten für Analysis Services an der Eingabeaufforderung  
  Der Bereitstellungs-Assistent für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] kann auch an der Eingabeaufforderung ausgeführt werden. Wenn Sie den Assistenten an der Eingabeaufforderung ausführen, geben Sie den vollständigen Pfad zur ASDATABASE-Datei an, und führen Sie den Assistenten in einem der folgenden Modi aus:  
   
- **Antwortdatei Modus**  
+ **Antwortdateimodus**  
  Im Antwortdateimodus können Sie die Eingabedateien interaktiv ändern, die ursprünglich beim Erstellen des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]generiert wurden. Der Assistent speichert diese geänderten Eingabedateien, bevor er das XMLA-Bereitstellungsskript generiert. Die geänderten Eingabedateien werden dann zum Ausgangspunkt beim nächsten Ausführen des Assistenten.  
   
  Verwenden Sie den Schalter **/a** , um den Assistenten im Antwortdatei Modus auszuführen.  

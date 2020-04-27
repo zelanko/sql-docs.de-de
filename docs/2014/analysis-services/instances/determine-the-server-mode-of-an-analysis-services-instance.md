@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff9ac19c0b605266de5eca69dd0f410f0d8fbdd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080060"
 ---
 # <a name="determine-the-server-mode-of-an-analysis-services-instance"></a>Bestimmen des Servermodus einer Analysis Services-Instanz
@@ -40,7 +40,7 @@ ms.locfileid: "66080060"
   
  Für diese Eigenschaften gibt es u. a. folgende gültige Werte:  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |0|Dies ist der Standardwert. Der mehrdimensionale Modus wird angegeben. Er dient zur Verwaltung von mehrdimensionalen Datenbanken, die MOLAP, HOLAP und ROLAP-Speicher sowie Data Mining-Modelle verwenden.|  
 |1|Gibt Analysis Services-Instanzen an, die als Teil einer PowerPivot für SharePoint-Bereitstellung installiert waren. Ändern Sie die Bereitstellungsmoduseigenschaft der Analysis Services-Instanz nicht, die Teil einer PowerPivot für SharePoint-Installation ist. Wenn Sie den Modus ändern, werden PowerPivot-Daten nicht mehr auf dem Server ausgeführt.|  
@@ -55,6 +55,6 @@ ms.locfileid: "66080060"
  [Verbindung mit Analysis Services herstellen](connect-to-analysis-services.md)   
  [Tabellarische Modelllösungen &#40;tabellarischen SSAS-&#41;](../tabular-model-solutions-ssas-tabular.md)   
  [Mehrdimensionale Modelllösungen &#40;SSAS&#41;](../multidimensional-models/multidimensional-model-solutions-ssas.md)   
- [Mining Modelle &#40;Analysis Services Data Mining-&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
+ [Miningmodelle &#40;Analysis Services – Data Mining&#41;](../data-mining/mining-models-analysis-services-data-mining.md)  
   
   

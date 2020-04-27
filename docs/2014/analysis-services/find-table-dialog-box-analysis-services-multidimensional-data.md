@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2730d14bb0ffc0bab6c0f6dc8a331bae62644da0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081089"
 ---
 # <a name="find-table-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Tabelle suchen' (Analysis Services – Mehrdimensionale Daten)
@@ -34,7 +34,7 @@ ms.locfileid: "66081089"
   
 -   Öffnen Sie **Data Mining-Modelldesigner** , klicken Sie auf der Seite **Miningstruktur** mit der rechten Maustaste auf den Hintergrund des Bereichs **Datenquellensicht** , und wählen Sie **Tabelle suchen**aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Wählen Sie eine Tabelle aus der Datenquellensicht aus:**  
  Wählen Sie im Bereich **Datenquellensicht** die Tabelle aus, nach der gesucht werden soll. Diese Option zeigt ein Raster verfügbarer Objekte und ihrer Typen an, die mit dem unter **Filter** festgelegten Filter übereinstimmen (oder aller Tabellen, wenn kein **Filter** festgelegt wurde) und noch nicht im aktuellen Diagramm angezeigt wurden.  
   

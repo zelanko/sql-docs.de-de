@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 429b35f6865deb5c0c3dd79e21cfe16cac7fae91
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070010"
 ---
 # <a name="schedule-a-data-refresh-powerpivot-for-sharepoint"></a>Planen einer Datenaktualisierung (PowerPivot für SharePoint)
@@ -39,7 +39,7 @@ ms.locfileid: "66070010"
 > [!NOTE]  
 >  Die PowerPivot-Datenaktualisierung wird von Analysis Services-Serverinstanzen in der SharePoint-Farm ausgeführt. Sie ist nicht mit der Datenaktualisierungsfunktion in Excel Services verwandt. Die planmäßige PowerPivot-Datenaktualisierungsfunktion aktualisiert keine Daten, die nicht in PowerPivot sind.  
   
-##  <a name="prereq"></a> Voraussetzungen  
+##  <a name="prerequisites"></a><a name="prereq"></a> Voraussetzungen  
  Sie benötigen mindestens die Berechtigungsstufe Teilnehmen für die Arbeitsmappe, um einen Zeitplan zur Datenaktualisierung zu erstellen.  
   
  Externe Datenquellen, auf die während der Datenaktualisierung zugegriffen wird, müssen verfügbar sein, und die Anmeldeinformationen, die Sie im Zeitplan angeben, müssen Zugriffsberechtigungen für diese Datenquellen beinhalten. Die geplante Datenaktualisierung erfordert einen Datenquellenspeicherort, auf den über eine Netzwerkverbindung zugegriffen werden kann (z. B. über eine Netzwerkdateifreigabe und nicht über einen lokalen Ordner auf der Arbeitsstation).  
@@ -53,7 +53,7 @@ ms.locfileid: "66070010"
 > [!NOTE]  
 >  Die Arbeitsmappe wird vom Server nicht gesperrt, während die Datenaktualisierung ausgeführt wird. Die Datei wird jedoch am Ende der Datenaktualisierung zum Einchecken der aktualisierten Datei gesperrt. Wenn die Datei zu diesem Zeitpunkt an einen anderen Benutzer ausgecheckt wird, werden die aktualisierten Daten ausgelöst. Analog dazu werden die aktualisierten Daten verworfen, wenn die Datei eingeglichen wird, Sie sich jedoch erheblich von der vom Server abgerufenen Kopie unterscheidet.  
   
-##  <a name="intro"></a>Übersicht über die Datenaktualisierung  
+##  <a name="data-refresh-overview"></a><a name="intro"></a>Übersicht über die Datenaktualisierung  
  PowerPivot-Daten in einer Excel-Arbeitsmappe können aus mehreren externen Datenquellen stammen. Dabei kann es sich um externe Datenbanken oder Datendateien handeln, auf die Sie von Remoteservern oder Netzwerkdateifreigaben zugreifen. Für PowerPivot-Arbeitsmappen, die importierte Daten aus verbundenen oder externen Datenquellen enthalten, können Sie die Datenaktualisierung so planen, dass automatisch aktualisierte Daten aus diesen ursprünglichen Quellen importiert werden.  
   
  Auf eine externe Datenquelle wird über eine eingebettete Verbindungszeichenfolge, eine URL oder einen UNC-Pfad zugegriffen, die Sie beim Importieren der ursprünglichen Daten unter Verwendung der PowerPivot-Clientanwendung in die Arbeitsmappe angegeben haben. Die ursprünglichen, in der PowerPivot-Arbeitsmappe gespeicherten Verbindungsinformationen werden für nachfolgende Datenaktualisierungsvorgänge wiederverwendet. Sie können Anmeldeinformationen überschreiben, um eine Verbindung mit Datenquellen herzustellen. Verbindungszeichenfolgen können zur Datenaktualisierung jedoch nicht überschrieben werden. Es werden nur vorhandene Verbindungsinformationen verwendet.  
@@ -72,7 +72,7 @@ ms.locfileid: "66070010"
   
  Durch die Erstellung eines präzisen Zeitplans für einzelne Datenquellen sind Sie in der Lage, den Aktualisierungszeitplan an Schwankungen in den externen Datenquellen anzupassen. Wenn eine externe Datenquelle z. B. über den Tag erzeugte Transaktionsdaten enthält, können Sie einen einzelnen Zeitplan zur Datenaktualisierung für diese Datenquelle erstellen, um die aktualisierten Informationen jede Nacht abzurufen.  
   
-##  <a name="drenablesched"></a>Aktivieren und Planen der Datenaktualisierung  
+##  <a name="enable-and-schedule-data-refresh"></a><a name="drenablesched"></a>Aktivieren und Planen der Datenaktualisierung  
  Mithilfe der folgenden Anweisungen können Sie die Datenaktualisierung für PowerPivot-Daten in einer Excel-Arbeitsmappe planen, die in einer SharePoint-Bibliothek veröffentlicht wird.  
   
 1.  Wählen Sie die Arbeitsmappe in der Bibliothek aus, die die Arbeitsmappe enthält, und klicken Sie dann auf den Pfeil nach unten, um eine Liste mit Befehlen anzuzeigen.  
@@ -88,9 +88,9 @@ ms.locfileid: "66070010"
   
 5.  Wählen Sie unter Früheste Startzeit einen der folgenden Werte aus:  
   
-    1.  **Nachdem die Geschäftszeiten** einen Verarbeitungs Zeitraum von außerhalb der Geschäftszeiten festgelegt haben, werden die Datenbankserver wahrscheinlich über aktuelle Daten verfügen, die während des gesamten Geschäfts Tags generiert wurden.  
+    1.  **Nach den Geschäftsstunden** gibt einen Zeitraum für die Verarbeitung außerhalb der Geschäftszeiten an, zu dem es wahrscheinlich ist, dass Datenbankserver über aktuelle, im Verlauf des Geschäftstags generierte Daten verfügen.  
   
-    2.  Eine **bestimmte früheste Startzeit** ist die Stunde und Minuten der frühesten Tageszeit, zu der die Daten Aktualisierungs Anforderung einer Verarbeitungs Warteschlange hinzugefügt wird. Sie können die Minuten in 15-Minuten-Intervallen angeben. Die Einstellung gilt für den heutigen Tag sowie zukünftige Tage. Wenn Sie beispielsweise 06:30 angeben und die aktuelle Uhrzeit 16:30 ist, wird die Aktualisierungsanforderung der Warteschlange für den heutigen Tag hinzugefügt, da 16:30 später als 06:30 ist.  
+    2.  **Früheste Startzeit** ist die frühestmögliche Tageszeit in Stunden und Minuten, zu der die Datenaktualisierungsanforderung einer Verarbeitungswarteschlange hinzugefügt wird. Sie können die Minuten in 15-Minuten-Intervallen angeben. Die Einstellung gilt für den heutigen Tag sowie zukünftige Tage. Wenn Sie beispielsweise 06:30 angeben und die aktuelle Uhrzeit 16:30 ist, wird die Aktualisierungsanforderung der Warteschlange für den heutigen Tag hinzugefügt, da 16:30 später als 06:30 ist.  
   
      Die früheste Startzeit definiert, wann der Verarbeitungswarteschlange eine Anforderung hinzugefügt wird. Die tatsächliche Verarbeitung erfolgt, sobald der Server über ausreichende Ressourcen zum Starten der Datenverarbeitung verfügt. Die tatsächliche Verarbeitungszeit wird im Datenaktualisierungsverlauf aufgezeichnet, nachdem die Verarbeitung abgeschlossen ist.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66070010"
   
 7.  Geben Sie in E-Mail-Benachrichtigungen die E-Mail-Adresse der Person ein, die im Fall eines Verarbeitungsfehlers benachrichtigt werden soll.  
   
-8.  Geben Sie in den Anmeldeinformationen ein Konto zum Ausführen des Datenaktualisierungsauftrags an. Das Konto muss über Teilnahmeberechtigungen für die Arbeitsmappe verfügen, damit die Arbeitsmappe zum Aktualisieren der Daten geöffnet werden kann. und ein Windows-Domänenbenutzerkonto sein. In vielen Fällen muss dieses Konto auch über Leseberechtigungen für die während der Datenaktualisierung verwendeten externen Datenquellen verfügen. Konkret wird dann, wenn Sie die Daten ursprünglich mithilfe der Option "Windows-Authentifizierung verwenden" importiert haben, die Verbindungszeichenfolge erstellt, um die Windows-Anmeldeinformationen des aktuellen Benutzers zu verwenden. Wenn der aktuelle Benutzer das Datenaktualisierungskonto ist, muss dieses Konto über Leseberechtigungen für die externe Datenquelle verfügen, um die Datenaktualisierung erfolgreich ausführen zu können. Wählen Sie eine der folgenden Optionen:  
+8.  Geben Sie in den Anmeldeinformationen ein Konto zum Ausführen des Datenaktualisierungsauftrags an. Das Konto muss über Teilnahmeberechtigungen für die Arbeitsmappe verfügen, damit die Arbeitsmappe zum Aktualisieren der Daten geöffnet werden kann. und ein Windows-Domänenbenutzerkonto sein. In vielen Fällen muss dieses Konto auch über Leseberechtigungen für die während der Datenaktualisierung verwendeten externen Datenquellen verfügen. Konkret wird dann, wenn Sie die Daten ursprünglich mithilfe der Option "Windows-Authentifizierung verwenden" importiert haben, die Verbindungszeichenfolge erstellt, um die Windows-Anmeldeinformationen des aktuellen Benutzers zu verwenden. Wenn der aktuelle Benutzer das Datenaktualisierungskonto ist, muss dieses Konto über Leseberechtigungen für die externe Datenquelle verfügen, um die Datenaktualisierung erfolgreich ausführen zu können. Wählen Sie eine der folgenden Optionen aus:  
   
     1.  Wählen Sie **Vom Administrator konfiguriertes Datenaktualisierungskonto verwenden** aus, um die Datenaktualisierung mit dem unbeaufsichtigten Datenaktualisierungskonto für PowerPivot durchzuführen.  
   
@@ -130,7 +130,7 @@ ms.locfileid: "66070010"
   
 11. Klicken Sie auf **OK** , um den Zeitplan zu speichern.  
   
-##  <a name="drverify"></a>Überprüfen der Datenaktualisierung  
+##  <a name="verify-data-refresh"></a><a name="drverify"></a>Überprüfen der Datenaktualisierung  
  Die beste Methode zum Überprüfen der Datenaktualisierung besteht darin, die Datenaktualisierung sofort auszuführen und dann auf der Verlaufsseite zu prüfen, ob sie erfolgreich abgeschlossen wurde. Durch das Aktivieren des Kontrollkästchens **Führen Sie zudem sobald wie möglich eine Aktualisierung durch.** für den Zeitplan wird die Überprüfung bereitgestellt, ob die Datenaktualisierung funktionstüchtig ist.  
   
  Sie können den aktuellen und vorherigen Datensatz mit Datenaktualisierungsvorgängen auf der Seite Verlauf der Datenaktualisierung der Arbeitsmappe anzeigen. Diese Seite wird nur angezeigt, wenn die Datenaktualisierung für eine Arbeitsmappe geplant wurde. Wenn kein Zeitplan zur Datenaktualisierung vorhanden ist, wird stattdessen die Seite zum Definieren des Zeitplans angezeigt.  

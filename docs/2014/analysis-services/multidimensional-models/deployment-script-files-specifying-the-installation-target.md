@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f5a46dc4c6130bb49d973ffc0025388c563c080f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075221"
 ---
 # <a name="specifying-the-installation-target"></a>Angeben des Installationszieles
@@ -36,11 +36,11 @@ ms.locfileid: "66075221"
   
 -   Führen Sie den Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] interaktiv aus. Geben Sie auf der Seite **Installationsziel** ein neues Ziel für die Instanz und die Datenbank von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] an.  
   
-     Oder  
+     - oder -  
   
 -   Führen Sie den Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] an der Eingabeaufforderung aus, und legen Sie fest, dass der Assistent im Antwortdateimodus ausgeführt wird. Weitere Informationen zum Antwortdateimodus finden Sie unter [Running the Analysis Services Deployment Wizard](running-the-analysis-services-deployment-wizard.md).  
   
-     Oder  
+     - oder -  
   
 -   Ändern Sie \<den *Projektnamen*>. deploymenttargets-Datei, indem Sie einen beliebigen Text-Editor verwenden.  
   

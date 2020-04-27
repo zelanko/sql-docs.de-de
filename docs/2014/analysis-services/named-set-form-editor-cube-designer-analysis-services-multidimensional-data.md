@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 861824359ff1cd9700f5acaa64d0b2155c870add
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072351"
 ---
 # <a name="named-set-form-editor-calculations-tab-cube-designer-analysis-services---multidimensional-data"></a>Formular-Editor für benannte Mengen (Registerkarte 'Berechnungen', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
@@ -29,7 +29,7 @@ ms.locfileid: "66072351"
  **Name**  
  Geben Sie den Namen der benannten Menge ein.  
   
- **Ausdruck**  
+ **expression**  
  Erweitern Sie das Element, um den MDX-Ausdruck (Multidimensional Expressions) für die benannte Menge anzuzeigen oder zu bearbeiten.  
   
  Ziehen Sie ausgewählte Elemente aus dem Bereich **Berechnungstools** auf diese Option, um die MDX-Syntax für das ausgewählte Element einzuschließen.  

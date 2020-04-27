@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a9597686f4c9ca5a90a8344b425b6808cd96477a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060570"
 ---
 # <a name="configure-the-integration-services-service-as-a-cluster-resource"></a>Konfigurieren des Integration Services-Diensts als Clusterressource
@@ -86,11 +86,11 @@ ms.locfileid: "66060570"
   
      Weitere Informationen finden Sie unter [Hinzufügen von Abhängigkeiten zu einer Ressource von SQL Server](../sql-server/failover-clusters/windows/add-dependencies-to-a-sql-server-resource.md).  
   
-8.  Geben Sie auf der Seite **Allgemeine Dienstparameter** **MsDtsServer** als Namen des Diensts ein. Klicken Sie auf **Weiter**.  
+8.  Geben Sie auf der Seite **Allgemeine Dienstparameter****MsDtsServer** als Namen des Diensts ein. Klicken Sie auf **Weiter**.  
   
 9. Klicken Sie auf der Seite **Registrierungsreplikation** auf **Hinzufügen** , um den Registrierungsschlüssel hinzuzufügen, der den Speicherort der Konfigurationsdatei für den [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst identifiziert. Diese Datei muss sich auf einem freigegebenen Datenträger befinden, der sich in der gleichen Ressourcengruppe wie der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst befindet.  
   
-10. Geben Sie im Dialogfeld **Registrierungsschlüssel** **SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile**ein. Klicken Sie auf **OK**und anschließend auf **Fertig stellen**.  
+10. Geben Sie im Dialogfeld **Registrierungsschlüssel****SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile**ein. Klicken Sie auf **OK**und dann auf **Fertig**stellen.  
   
      Der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst wurde nun als Clusterressource hinzugefügt.  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ba3b64847e2f63a96533a0f57cee41208176a7b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077811"
 ---
 # <a name="microsoft-generic-content-tree-viewer-data-mining"></a>Microsoft Generic Content Tree Viewer (Data Mining)
@@ -26,7 +26,7 @@ ms.locfileid: "66077811"
   
  Für die im Viewer angezeigten Informationen wird eine gemeinsame Struktur verwendet, die auf dem Schemarowset für Miningmodelle basiert. Das Schemarowset für den Inhalt ist ein allgemeines Framework zum Speichern von Mustern, Statistiken und weiteren Inhalten eines Data Mining-Modells. Eine Liste der Spalten im Data Mining-Schemarowset für Miningmodelle finden Sie unter [DMSCHEMA_MINING_MODEL_CONTENT-Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Knotenbeschriftung (Eindeutige ID)**  
  In diesem Bereich wird eine Liste aller Knoten im ausgewählten Miningmodell angezeigt. Die Knoten werden abhängig vom angezeigten Modelltyp unterschiedlich in der Struktur angeordnet.  
   

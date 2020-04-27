@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c0326d45af68db966f120fa12e35eb59f30becc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074161"
 ---
 # <a name="using-member-properties-mdx"></a>Verwenden von Elementeigenschaften (MDX)
@@ -74,6 +74,6 @@ SELECT [<axis_specification>
 -   Bei einer benutzerdefinierten Elementeigenschaft sollte der Name der Ebene vorangestellt werden, in der sie sich befindet. Weitere Informationen zur Verwendung des `PROPERTIES` Schlüssel Worts mit benutzerdefinierten Element Eigenschaften finden Sie unter [benutzerdefinierte Element Eigenschaften &#40;MDX-&#41;](mdx-member-properties-user-defined-member-properties.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erstellen und Verwenden von Eigenschafts Werten &#40;MDX-&#41;](../../creating-and-using-property-values-mdx.md)  
+ [Erstellen und Verwenden von Eigenschaftswerten &#40;MDX&#41;](../../creating-and-using-property-values-mdx.md)  
   
   

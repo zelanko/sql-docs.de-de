@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6efccad47f0d6670c87aeb1e9cc9ef9ec654a138
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070908"
 ---
 # <a name="use-data-feeds-powerpivot-for-sharepoint"></a>Datenfeeds verwenden (PowerPivot für SharePoint)
@@ -34,14 +34,14 @@ ms.locfileid: "66070908"
   
  [Erstellen eines Datenfeeds aus einem Datendienst Dokument](#dsdoc)  
   
-##  <a name="prereq"></a> Voraussetzungen  
+##  <a name="prerequisites"></a><a name="prereq"></a> Voraussetzungen  
  Sie benötigen PowerPivot für Excel, um ein Datenfeed nach Excel 2010 zu importieren.  
   
  Sie müssen über einen Webdienst oder Datendienst verfügen, der Daten im Atom 1.0-Format bereitstellt. Sowohl [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] als auch SharePoint 2010 können Daten in diesem Format bereitstellen.  
   
  Bevor Sie eine SharePoint-Liste als Datenfeed exportieren können, müssen Sie ADO.NET Data Services auf dem SharePoint-Server installieren. Weitere Informationen finden Sie unter [Installieren von ADO.NET Data Services, um Datenfeedexporte von SharePoint-Listen zu unterstützen](../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md).  
   
-##  <a name="sharepointlist"></a>Erstellen eines Datenfeeds aus einer SharePoint-Liste  
+##  <a name="create-a-data-feed-from-a-sharepoint-list"></a><a name="sharepointlist"></a>Erstellen eines Datenfeeds aus einer SharePoint-Liste  
  In einer SharePoint 2010-Farm verfügt eine SharePoint-Liste über eine Schaltfläche Als Datenfeed exportieren auf dem Listenmenüband. Sie können auf diese Schaltfläche klicken, um die Liste als Feed zu exportieren. Um optimale Ergebnisse zu erzielen, sollte Excel 2010 mit der PowerPivot-Clientanwendung auf der Arbeitsstation ausgeführt werden. Die PowerPivot-Clientanwendung wird als Reaktion auf den Datenfeedexport gestartet und erstellt eine neue PowerPivot-Tabelle, die die Liste enthält.  
   
 1.  Öffnen Sie die Liste auf Ihrer SharePoint-Website.  
@@ -59,7 +59,7 @@ ms.locfileid: "66070908"
   
  Wenn ADO.NET Data Services 3.5.1 nicht auf dem SharePoint-Server installiert ist, tritt ein Fehler auf. Weitere Informationen über den Fehler und seine Behebung finden Sie unter [Installieren von ADO.NET Data Services, um Datenfeedexporte von SharePoint-Listen zu unterstützen](../../sql-server/install/install-ado-net-data-services-to-support-data-feed-exports-of-sharepoint-lists.md).  
   
-##  <a name="rsreport"></a>Erstellen eines Datenfeeds aus einem Reporting Services Bericht  
+##  <a name="create-a-data-feed-from-a-reporting-services-report"></a><a name="rsreport"></a> Erstellen eines Datenfeeds aus einem Reporting Services-Bericht  
  Wenn Sie über eine SQL Server 2008 R2 Reporting Services-Bereitstellung verfügen, können Sie einen Datenfeed mithilfe der neuen Atom-Renderingerweiterung aus einem vorhandenen Bericht generieren. Um optimale Ergebnisse zu erzielen, sollte Excel 2010 mit dem PowerPivot-für Excel-Add-In auf der Arbeitsstation ausgeführt werden. Die PowerPivot-Clientanwendung wird in Reaktion auf den Datenfeedexport gestartet und fügt automatisch die gestreamten Tabellen und Spalten hinzu und verknüpft diese.  
   
  Anweisungen zum Exportieren eines Datenfeeds aus einem Bericht finden Sie unter [Generieren von Datenfeeds aus einem Bericht &#40;Berichts-Generator und SSRS&#41;](../../reporting-services/report-builder/generate-data-feeds-from-a-report-report-builder-and-ssrs.md) in der [Hilfedatei zum Berichts-Generator](https://go.microsoft.com/fwlink/?LinkId=154494).  
@@ -67,7 +67,7 @@ ms.locfileid: "66070908"
 > [!NOTE]  
 >  Zum Einrichten eines Zeitplans mit wiederholter Datenaktualisierung, durch den Berichtsdaten in eine in einer SharePoint-Bibliothek veröffentlichte PowerPivot-Arbeitsmappe erneut importiert werden, muss der Berichtsserver für die SharePoint-Integration konfiguriert sein. Weitere Informationen zur gemeinsamen Verwendung von PowerPivot für SharePoint und Reporting Services finden Sie unter [Konfiguration und Verwaltung eines Berichts Servers &#40;Reporting Services SharePoint-Modus&#41;](../../reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md).  
   
-##  <a name="dsdoc"></a>Erstellen eines Datenfeeds aus einem Datendienst Dokument  
+##  <a name="create-a-data-feed-from-a-data-service-document"></a><a name="dsdoc"></a> Erstellen eines Datenfeeds aus einem Datendienstdokument  
  Wenn Sie über einen benutzerdefinierten Datendienst verfügen, der Atom-Feeds generiert, haben Sie die Möglichkeit, die Daten für Benutzer und Anwendungen verfügbar zu machen. In einem *Datendienstdokument* (ATOMSVC-Datei) ist mindestens eine Verbindung mit Onlinequellen angegeben, die Daten im Atom-Übertragungsformat veröffentlichen. Datendienstdokumente können in einer *Datenfeedbibliothek*erstellt werden. Dabei handelt es sich um eine zweckgebundene Bibliothek, die einen allgemeinen Zugriffspunkt für die Durchsuchung von Datendienstdokumenten ermöglicht, die zu einem SharePoint Server veröffentlicht wurden. IT-Arbeiter, die die Berechtigung haben, in der Datenfeedbibliothek auf Datendienstdokumente zuzugreifen, können auf die SharePoint-URL des Dokuments verweisen, um die Datenfeeds in ihre Arbeitsmappen und Anwendungen zu importieren.  
   
 1.  Öffnen Sie eine Datenfeedbibliothek, die vom Websiteadministrator erstellt wurde. Weitere Informationen finden Sie unter [erstellen oder Anpassen einer datenfeedbibliothek &#40;PowerPivot für SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md).  
@@ -80,9 +80,9 @@ ms.locfileid: "66070908"
   
 5.  Geben Sie eine oder mehrere URLs an, die den Feed bereitstellen:  
   
-    1.  Die **Basis-URL** ist optional. Sie sollten dies angeben, wenn ein Datendienstdokument mehrere Feeds bereitstellt. Basis-URL sollte den Teil der URL angeben, der allen Feeds (z. B. der Servername und die Website) gemeinsam ist. Wenn Sie zu einem Reporting Services-Bericht ein Datendienstdokument erstellen, wäre die Basis-URL die Berichtsserver-URL und der Bericht.  
+    1.  **Basis-URL** ist optional. Sie sollten dies angeben, wenn ein Datendienstdokument mehrere Feeds bereitstellt. Basis-URL sollte den Teil der URL angeben, der allen Feeds (z. B. der Servername und die Website) gemeinsam ist. Wenn Sie zu einem Reporting Services-Bericht ein Datendienstdokument erstellen, wäre die Basis-URL die Berichtsserver-URL und der Bericht.  
   
-    2.  Die **Webdienst-URL** ist erforderlich. Ohne die Basis-URL muss dieser Wert http :// oder https:// in der Adresse enthalten. Wenn Sie eine Basis-URL angegeben haben, ist die Webdienst-URL der Teil, der der Basis-URL folgt. Wenn die vollständige URL z. b http://adventure-works/inventory/today.aspx. lautet, lautet die Basis http://adventure-works/inventory-URL, und die Webdienst-URL lautet/Today.aspx..  
+    2.  **Webdienst-URL** ist erforderlich. Ohne die Basis-URL muss dieser Wert http :// oder https:// in der Adresse enthalten. Wenn Sie eine Basis-URL angegeben haben, ist die Webdienst-URL der Teil, der der Basis-URL folgt. Wenn die vollständige URL z. b http://adventure-works/inventory/today.aspx. lautet, lautet die Basis http://adventure-works/inventory-URL, und die Webdienst-URL lautet/Today.aspx..  
   
          Die Webdienst-URL kann Parameter enthalten, die eine Teilmenge der Daten filtern oder auswählen. Die Anwendung oder der Dienst, die/der den Feed bereitstellt, muss die Parameter unterstützen, die Sie in der URL angeben.  
   

@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 76b5027f19eade18aa07187c1673f6ad27079391
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075937"
 ---
 # <a name="create-a-date-type-dimension"></a>Erstellen einer Datumstypdimension
@@ -40,8 +40,7 @@ ms.locfileid: "66075937"
  Serverzeitdimension  
  Wenn Sie über keine Dimensionstabelle verfügen, um zeitgestützte Attribute daran zu binden, können Sie durch [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine auf Zeiträumen basierende Serverzeitdimension definieren lassen. Um die von einer Serverzeitdimension dargestellten Hierarchien, Ebenen und Elemente zu definieren, wählen Sie beim Erstellen der Dimension Standardzeiträume aus.  
   
- Attribute in einer Serverzeitdimension verfügen über bestimmte Zeitattributbindungen. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet die zu Daten gehörigen Attributtypen, z. B. Jahr, Monat oder Tag, um Elemente von Attributen in einer Zeitdimension zu definieren.  
+ Attribute in einer Serverzeitdimension verfügen über bestimmte Zeitattributbindungen. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet die zu Daten gehörigen Attributtypen, z. B. Jahr, Monat oder Tag, um Elemente von Attributen in einer Zeitdimension zu definieren.  
   
  Nachdem Sie die Serverzeitdimension in einen Cube aufgenommen haben, legen Sie die Beziehung zwischen der Measuregruppe und der Serverzeitdimension fest, indem Sie die Beziehung auf der Seite **Dimensionsverwendung definieren** des Cube-Assistenten angeben.  
   
@@ -52,7 +51,7 @@ ms.locfileid: "66075937"
   
  Diese verschiedenen Kalender können Sie manuell im Dimensions-Designer erstellen. Der Dimensions-Assistent stellt jedoch verschiedene Hierarchievorlagen bereit, mit denen Sie automatisch verschiedene Kalendertypen generieren können, wenn Sie eine Zeitdimension oder eine Serverzeitdimension erstellen. Die folgende Tabelle beschreibt die verschiedenen Kalender, die mit dem Dimensions-Assistenten generiert werden können.  
   
-|Kalender|BESCHREIBUNG|  
+|Kalender|Beschreibung|  
 |--------------|-----------------|  
 |Standardkalender|Ein zwölfmonatiger gregorianischer Kalender, der am 1. Januar beginnt und am 31. Dezember endet.<br /><br /> Unabhängig davon, ob Sie mit dem Dimensions-Assistenten eine Zeitdimension oder eine Serverzeitdimension erstellen, generiert der Assistent eine Hierarchie für einen Standardkalender, nachdem Sie die Attribute definiert haben, die die Zeiträume der Dimension darstellen. Wenn Sie mit dem Dimensions-Assistenten eine Serverzeitdimension erstellen, können Sie das Anfangsdatum des Standardkalenders auf einen anderen Tag als den 1. Januar legen.|  
 |Geschäftskalender|Ein zwölfmonatiger Geschäftskalender. Wenn Sie diesen Kalender auswählen, müssen Sie den Anfangstag des vom Unternehmen verwendeten Geschäftsjahres angeben.<br /><br /> Hinweis: Dieser Kalender ist nur verfügbar, wenn Sie mit dem Dimensions-Assistenten eine Serverzeitdimension erstellen.|  

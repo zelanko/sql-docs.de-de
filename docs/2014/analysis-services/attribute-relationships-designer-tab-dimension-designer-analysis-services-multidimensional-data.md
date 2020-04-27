@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 110f02a8b3f0d1e8567914901f69d2fea5f09c46
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66062273"
 ---
 # <a name="attribute-relationships-attribute-relationship-designer-tab-dimension-designer-analysis-services---multidimensional-data"></a>Attributbeziehungen (Registerkarte Attributbeziehungs-Designer, Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
@@ -44,7 +44,7 @@ ms.locfileid: "66062273"
  **Attributbeziehung bearbeiten**  
  Öffnet das Dialogfeld **Attributbeziehung bearbeiten**, in dem Sie die Attributbeziehung bearbeiten können.  
   
- Weitere Informationen finden Sie unter [Dialogfelder „Attributbeziehung erstellen“ und „Attributbeziehung bearbeiten“ &#40;Registerkarte „Attributbeziehungs-Designer“, Dimensions-Designer&#41; &#40;Analysis Services – mehrdimensionale Daten&#41;](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) und [Definieren von Attributbeziehungen](multidimensional-models/attribute-relationships-define.md).  
+ Weitere Informationen finden Sie unter [Dialogfelder „Attributbeziehung erstellen“ und „Attributbeziehung bearbeiten“ &#40;Registerkarte „Attributbeziehungs-Designer“ im Dimensions-Designer&#41; &#40;Analysis Services – Mehrdimensionale Daten&#41;](create-edit-attribute-relationships-dialog-boxes-analysis-services-multidimensional-data.md) und [Definieren von Attributbeziehungen](multidimensional-models/attribute-relationships-define.md).  
   
  **Beziehungstyp**  
  Legt den Beziehungstyp entweder auf **Flexibel** oder **Fest**fest. In einer flexiblen Beziehung ändern sich die Beziehungen zwischen Elementen. In einer festen Beziehung ändern sich die Beziehungen zwischen Elementen nicht.  

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 02d084aea4491982d560f1cf0b8dc449b8502f09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073600"
 ---
 # <a name="move-an-analysis-services-database"></a>Verschieben einer Analysis Services Datenbank
@@ -37,7 +37,7 @@ ms.locfileid: "66073600"
 > [!NOTE]  
 >  Wenn Sie eine Datenbank trennen, ohne ihr ein Kennwort zuzuweisen, befindet sich die Datenbank in einem ungesicherten Zustand. Es wird daher empfohlen, dass Sie der Datenbank ein Kennwort zuweisen, um vertrauliche Informationen zu schützen. Zudem sollten Sie die entsprechende Zugriffssicherheit auf den Datenbankordner, die Unterordner und die Dateien anwenden, um den nicht autorisierten Zugriff darauf zu verhindern.  
   
-## <a name="procedures"></a>Prozeduren  
+## <a name="procedures"></a>Verfahren  
   
 #### <a name="moving-a-database-interactively-using-ssms"></a>Interaktives Verschieben einer Datenbank mithilfe von SSMS  
   
@@ -148,6 +148,6 @@ ms.locfileid: "66073600"
  [Attach-Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
  [Detach-Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
  ["Read Write-Mode"-Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/readwritemode-element)   
- [Dbstorageloation-Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
+ [DbStorageLocation-Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a363336af1bee8c3f84ff620f667c7c0d510b73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080731"
 ---
 # <a name="grant-permissions-on-stored-procedures-analysis-services"></a>Erteilen von Berechtigungen für gespeicherte Prozeduren (Analysis Services)
@@ -25,9 +25,7 @@ ms.locfileid: "66080731"
 ## <a name="security-context-for-stored-procedure-execution"></a>Sicherheitskontext für die Ausführung einer gespeicherten Prozedur  
  Alle Benutzer können gespeicherte Prozeduren aufrufen. Je nach Konfiguration der gespeicherten Prozedur kann diese entweder im Kontext des die Prozedur aufrufenden Benutzers oder im Kontext eines anonymen Benutzers ausgeführt werden. Da ein anonymer Benutzer keinen Sicherheitskontext besitzt, müssen Sie für diese Möglichkeit gleichzeitig die Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] so konfigurieren, dass sie den anonymen Zugriff erlaubt.  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] wertet die Aktionen in der gespeicherten Prozedur aus, nachdem diese vom Benutzer aufgerufen, jedoch bevor sie von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ausgeführt wird. 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] wertet die Aktionen in einer gespeicherten Prozedur anhand der Schnittmenge der Berechtigungen für den Benutzer sowie des Berechtigungssatzes zum Ausführen des Verfahrens aus. Wenn die gespeicherte Prozedur eine Aktion enthält, die durch die Datenbankrolle des Benutzers nicht ausgeführt werden kann, wird diese Aktion nicht ausgeführt.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] wertet die Aktionen in der gespeicherten Prozedur aus, nachdem diese vom Benutzer aufgerufen, jedoch bevor sie von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ausgeführt wird. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] wertet die Aktionen in einer gespeicherten Prozedur anhand der Schnittmenge der Berechtigungen für den Benutzer sowie des Berechtigungssatzes zum Ausführen des Verfahrens aus. Wenn die gespeicherte Prozedur eine Aktion enthält, die durch die Datenbankrolle des Benutzers nicht ausgeführt werden kann, wird diese Aktion nicht ausgeführt.  
   
  Beim Ausführen gespeicherter Prozeduren werden die folgenden Berechtigungssätze verwendet:  
   
@@ -38,6 +36,6 @@ ms.locfileid: "66080731"
 -   **Uneingeschränkt** Wenn die uneingeschränkte Berechtigung festgelegt ist, kann eine gespeicherte Prozedur über einen beliebigen Code auf externe Ressourcen zugreifen. Bei diesem Berechtigungssatz gibt es für gespeicherte Prozeduren keine Gewähr für die Sicherheit und Zuverlässigkeit.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwaltung von mehrdimensionalen Modellen](multidimensional-models/multidimensional-model-assemblies-management.md)  
+ [Verwaltung von mehrdimensionalen Modellassemblys](multidimensional-models/multidimensional-model-assemblies-management.md)  
   
   

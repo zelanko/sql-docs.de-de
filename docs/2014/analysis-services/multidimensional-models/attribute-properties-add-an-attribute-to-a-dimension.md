@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 70817c567b77af2bfdb7d715683ae6081fda442b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077432"
 ---
 # <a name="add-an--attribute-to-a-dimension"></a>Hinzufügen eines Attributs zu einer Dimension
@@ -33,6 +33,6 @@ ms.locfileid: "66077432"
  Weitere Informationen finden Sie unter [Automatisches Definieren eines neuen Attributs](attribute-properties-define-a-new-attribute-automatically.md), [Manuelles Definieren eines neuen Attributs](../define-a-new-attribute-manually.md), [Binden eines Attributs an eine Namensspalte](attribute-properties-bind-an-attribute-to-a-name-column.md), und [Ändern der KeyColumns-Eigenschaft eines Attributs](attribute-properties-modify-the-keycolumn-property.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dimensionsattributeigenschaftenverweis](dimension-attribute-properties-reference.md)  
+ [Dimensionsattributeigenschaften-Verweis](dimension-attribute-properties-reference.md)  
   
   

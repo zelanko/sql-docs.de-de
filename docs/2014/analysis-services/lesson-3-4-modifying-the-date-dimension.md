@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 826d5b1079e9fcfd0d2ec7a9abd55937f2da1a22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078803"
 ---
 # <a name="modifying-the-date-dimension"></a>Ändern der Date-Dimension
@@ -190,7 +190,7 @@ ms.locfileid: "66078803"
   
 3.  Klicken Sie im Fenster **Eigenschaften** auf das Feld **KeyColumns** und anschließend auf die Schaltfläche zum Durchsuchen (**...**).  
   
-4.  Wählen Sie im Dialogfeld **Schlüsselspalten** die Spalte **CalendarYear** in der Liste **Verfügbare Spalten**aus, und klicken Sie anschließend auf die Schaltfläche **>** .  
+4.  Wählen Sie im Dialogfeld **Schlüssel Spalten** in der Liste **Verfügbare Spalten** die Spalte **CalendarYear**aus, und klicken Sie dann **>** auf die Schaltfläche.  
   
 5.  Die Spalten **EnglishMonthName** und **CalendarYear** werden jetzt in der Liste **Schlüsselspalten** angezeigt.  
   
@@ -208,7 +208,7 @@ ms.locfileid: "66078803"
   
 2.  Klicken Sie im Fenster **Eigenschaften** auf das Feld **KeyColumns** und anschließend auf die Schaltfläche zum Durchsuchen (**...**).  
   
-3.  Wählen Sie im Dialogfeld **Schlüsselspalten** die Spalte **CalendarYear** in der Liste **Verfügbare Spalten**aus, und klicken Sie anschließend auf die Schaltfläche **>** .  
+3.  Wählen Sie im Dialogfeld **Schlüssel Spalten** in der Liste **Verfügbare Spalten** die Spalte **CalendarYear**aus, und klicken Sie dann **>** auf die Schaltfläche.  
   
      Die Spalten **CalendarQuarter** und **CalendarYear** werden jetzt in der Liste **Schlüsselspalten** angezeigt.  
   
@@ -226,7 +226,7 @@ ms.locfileid: "66078803"
   
 2.  Klicken Sie im Fenster **Eigenschaften** auf das Feld **KeyColumns** und anschließend auf die Schaltfläche zum Durchsuchen (**...**).  
   
-3.  Wählen Sie im Dialogfeld **Schlüssel Spalten** in der Liste **Verfügbare Spalten** die Spalte **CalendarYear**aus, und klicken Sie dann auf **>** die Schaltfläche.  
+3.  Wählen Sie im Dialogfeld **Schlüsselspalten** die Spalte **CalendarYear** in der Liste **Verfügbare Spalten**aus, und klicken Sie anschließend auf die Schaltfläche **>** .  
   
      Die Spalten **CalendarSemester** und **CalendarYear** werden jetzt in der Liste **Schlüsselspalten** angezeigt.  
   
@@ -284,7 +284,7 @@ ms.locfileid: "66078803"
   
      Die Elemente der Attributhierarchie sind jetzt zuerst nach Jahr und dann nach Monat sortiert.  
   
-9. Klicken Sie im Menü **Erstellen** von [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf **Analysis Services Tutorial bereitstellen**. Wenn die Bereitstellung erfolgreich abgeschlossen wurde, **** klicken Sie im Dimensions-Designer für `Date` die Dimension auf die Registerkarte Browser.  
+9. Klicken Sie im Menü **Erstellen** von [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf **Analysis Services Tutorial bereitstellen**. Wenn die Bereitstellung erfolgreich abgeschlossen wurde, **Browser** klicken Sie im Dimensions-Designer für `Date` die Dimension auf die Registerkarte Browser.  
   
 10. Klicken Sie auf der Symbolleiste der Registerkarte **Browser** auf die Schaltfläche zum Wiederherstellen der Verbindung.  
   

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f3fa1ce62b3c7402e1f938bea8e400173ef79f5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075637"
 ---
 # <a name="define-logical-primary-keys-in-a-data-source-view-analysis-services"></a>Definieren logischer Primärschlüssel in einer Datenquellensicht (Analysis Services)
@@ -36,7 +36,7 @@ ms.locfileid: "66075637"
   
 2.  Erweitern Sie im Projektmappen-Explorer den Ordner **Datenquellensichten** , und doppelklicken Sie anschließend auf die Datenquellensicht.  
   
-     Um nach einer Tabelle oder Sicht zu suchen, können Sie die Option **Tabelle suchen** verwenden, indem Sie entweder auf das Menü **Datenquellensicht**  klicken oder mit der rechten Maustaste auf einen offenen Bereich im Bereich **Tabellen** oder **Diagramm** klicken.  
+     Wenn Sie eine Tabelle oder Sicht suchen möchten, können Sie die Option **Tabelle suchen** verwenden, indem Sie entweder auf das Menü **Datenquellen Sicht** klicken oder mit der rechten Maustaste auf einen geöffneten Bereich der **Tabellen** -oder **Diagramm** Bereiche klicken.  
   
 3.  Klicken Sie im Bereich **Tabellen** oder **Diagramm** mit der rechten Maustaste auf die Spalte(n), mit denen Sie einen logischen Primärschlüssel definierten möchten, und klicken Sie anschließend auf **Logischen Primärschlüssel festlegen**.  
   
@@ -46,6 +46,6 @@ ms.locfileid: "66075637"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenquellen Sichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md)   
- [Definieren Sie benannte Berechnungen in einer Datenquellen Sicht &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
+ [Definieren von benannten Berechnungen in einer Datenquellensicht &#40;Analysis Services&#41;](define-named-calculations-in-a-data-source-view-analysis-services.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fc45827a349dc38054db98e3a435f18a42bdaa0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071810"
 ---
 # <a name="configure-disk-space-usage-powerpivot-for-sharepoint"></a>Konfigurieren der Speicherplatzverwendung (PowerPivot für SharePoint)
@@ -72,23 +72,23 @@ ms.locfileid: "66071810"
   
 ## <a name="how-to-limit-how-long-a-database-is-kept-in-the-cache"></a>So schränken Sie die Dauer ein, für die eine Datenbank zwischengespeichert wird  
   
-1.  Klicken Sie in der Zentraladministration unter „Anwendungsverwaltung“ auf **Dienstanwendungen verwalten**.  
+1.  Klicken Sie in der zentral Administration unter Anwendungs Verwaltung auf **Dienst Anwendungen verwalten**.  
   
 2.  Klicken Sie auf **Power Pivot-Standard Dienst Anwendung** , um das Management-Dashboard zu öffnen.  
   
-3.  Klicken Sie unter „Aktionen“auf **Einstellungen für Dienstanwendung konfigurieren**.  
+3.  Klicken Sie unter Aktionen auf **Einstellungen für Dienst Anwendung konfigurieren**.  
   
 4.  Im Abschnitt Datenträgercache können Sie angeben, wie lang eine inaktive Datenbank im Arbeitsspeicher bleibt, falls neue Anforderungen empfangen werden (standardmäßig 48 Stunden), und wie lang sie im Cache bleibt (standardmäßig 120 Stunden).  
   
-     **Inaktive Datenbank im Arbeitsspeicher beibehalten** gibt an, wie lange eine inaktive Datenbank im Arbeitsspeicher bleibt, um neue Anforderungen für diese Daten zu bedienen. Eine aktive Datenbank wird immer im Arbeitsspeicher beibehalten, solange Sie sie abfragen. Wenn die Datenbank jedoch nicht mehr aktiv ist, behält das System sie für einen zusätzlichen Zeitraum im Arbeitsspeicher, falls weitere Anforderungen für diese Daten empfangen werden.  
+     Unter**Inaktive Datenbank im Arbeitsspeicher behalten** wird angegeben, wie lang eine inaktive Datenbank im Arbeitsspeicher bleibt, falls neue Anforderungen für diese Daten empfangen werden. Eine aktive Datenbank wird immer im Arbeitsspeicher beibehalten, solange Sie sie abfragen. Wenn die Datenbank jedoch nicht mehr aktiv ist, behält das System sie für einen zusätzlichen Zeitraum im Arbeitsspeicher, falls weitere Anforderungen für diese Daten empfangen werden.  
   
      Da PowerPivot-Datenbanken zuerst zwischengespeichert und dann in den Arbeitsspeicher geladen werden, belegen Datenbankdateien sofort Speicherplatz. Während die Datenbank jedoch aktiv ist (und danach für 48 Stunden), werden alle Anforderungen zuerst an die Datenbank im Arbeitsspeicher weitergeleitet. Dabei wird die zwischengespeicherte Datenbank ignoriert. Nach 48 Stunden Inaktivität wird die Datei aus dem Arbeitsspeicher entladen, bleibt jedoch im Cache, wo sie erneut schnell geladen werden kann, wenn eine neue Verbindungsanforderung für diese Daten von der lokalen PowerPivot-Serverinstanz abgefangen wird. Verbindungsanforderungen an eine inaktive Datenbank werden vom Cache und nicht der Inhaltsbibliothek bedient, wodurch die Auswirkungen auf die Inhaltsdatenbanken minimiert werden.  
   
      Beachten Sie, dass die Inhaltsbibliothek der einzige dauerhafte Speicherort für PowerPivot-Datenbanken ist. Zwischengespeicherte Kopien werden nur verwendet, wenn die Datenbank in der Bibliothek mit der Kopie auf dem Datenträger übereinstimmt.  
   
-     **Inaktive Datenbank im Cache beibehalten** gibt an, wie lange eine inaktive Datenbank im Dateisystem verbleibt, nachdem Sie aus dem Arbeitsspeicher entladen wurde. Der Cleanupauftrag verwendet diese Einstellung, um die zu löschenden Dateien zu bestimmen. Alle PowerPivot-Datenbanken, die 168 Stunden (48 Stunden im Arbeitsspeicher und 120 Stunden im Cache) lang inaktiv sind, werden durch den Cleanupauftrag vom Datenträger gelöscht.  
+     Unter**Inaktive Datenbank im Cache behalten** wird angegeben, wie lange eine inaktive Datenbank im Dateisystem bleibt, nachdem sie aus dem Arbeitsspeicher entladen wurde. Der Cleanupauftrag verwendet diese Einstellung, um die zu löschenden Dateien zu bestimmen. Alle PowerPivot-Datenbanken, die 168 Stunden (48 Stunden im Arbeitsspeicher und 120 Stunden im Cache) lang inaktiv sind, werden durch den Cleanupauftrag vom Datenträger gelöscht.  
   
-5.  Klicken Sie auf **OK**, um die Änderungen zu speichern.  
+5.  Klicken Sie auf **OK** , um die Änderungen zu speichern.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
  Eine PowerPivot für SharePoint-Installation stellt Integritätsregeln bereit, sodass Sie Korrekturmaßnahmen ergreifen können, wenn Probleme bei Zustand, Konfiguration oder Verfügbarkeit des Servers erkannt werden. Einige dieser Regeln bestimmen mithilfe von Konfigurationseinstellungen die Bedingungen, unter denen Integritätsregeln ausgelöst werden. Beim aktiven Optimieren der Serverleistung können Sie auch diese Einstellungen überprüfen, um sicherzustellen, dass die Standardwerte für das System am besten geeignet sind. Weitere Informationen finden Sie unter [Power Pivot-Integritäts Regeln-konfigurieren](configure-power-pivot-health-rules.md).  

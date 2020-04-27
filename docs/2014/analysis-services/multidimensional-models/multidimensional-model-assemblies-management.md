@@ -22,10 +22,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6c4f57e12754fc8e32fba8f483a2dfc360d7edc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073527"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>Verwaltung von mehrdimensionalen Modellassemblys
@@ -73,23 +73,22 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  Um die Abwärtskompatibilität mit früheren Versionen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]sicherzustellen, ist die folgende Syntax ebenfalls zulässig:  
   
- *AssemblyName*! *FullClassName*! *Prozevername*(*Argument1*, *Argument2*,...)  
+ *Assemblyname*!*VollständigerKlassenname*!*Prozedurname*(*Argument1*, *Argument2*, ...)  
   
  Unterstützt eine COM-Bibliothek mehrere Schnittstellen, kann der Prozedurname auch mithilfe der Schnittstellen-ID aufgelöst werden, wie im Folgenden dargestellt:  
   
- *AssemblyName*! *Interfakeid*! *Prozevername*(*Argument1*, *Argument2*,...)  
+ *Assemblyname*!*Schnittstellen-ID*!*Prozedurname*(*Argument1*, *Argument2*, ...)  
   
 ## <a name="security"></a>Sicherheit  
  Die Sicherheit für Assemblys basiert auf dem .NET Framework-Sicherheitsmodell, bei dem es sich um ein Codezugriffs-Sicherheitsmodell handelt. .NET Framework unterstützt einen Codezugriffs-Sicherheitsmechanismus, der annimmt, dass die Laufzeit sowohl vollständig vertrauenswürdigen als auch teilweise vertrauenswürdigen Code hosten kann. Die durch die .NET Framework-Codezugriffssicherheit geschützten Ressourcen sind üblicherweise von verwaltetem Code umgeben, der die entsprechenden Berechtigungen anfordert, bevor er den Zugriff auf die Ressource ermöglicht. Die Anforderung der Berechtigung ist nur dann erfüllt, wenn alle aufrufenden Prozesse (auf Assemblyebene) in der Aufrufliste über die entsprechende Ressourcenberechtigung verfügen.  
   
  Für Assemblys wird die Ausführungsberechtigung mit der `PermissionSet`-Eigenschaft des `Assembly`-Objekts erteilt. Die Berechtigungen, die der verwaltete Code erhält, hängen von der gültigen Sicherheitsrichtlinie ab. In einer nicht von[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] gehosteten Umgebung werden drei Richtlinienebenen unterschieden: Unternehmen, Computer und Benutzer. Die gültige Berechtigungsliste, die der Code erhält, hängt von der Schnittmenge der Berechtigungen auf diesen drei Ebenen ab.  
   
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt für die gehostete CLR eine Sicherheitsrichtlinie auf Hostebene bereit. Diese Richtlinie stellt eine zusätzliche Richtlinienebene unterhalb der drei Richtlinienebenen dar, die immer gültig sind. Die Richtlinie wird für jede Anwendungsdomäne festgelegt, die von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellt wird.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] stellt für die gehostete CLR eine Sicherheitsrichtlinie auf Hostebene bereit. Diese Richtlinie stellt eine zusätzliche Richtlinienebene unterhalb der drei Richtlinienebenen dar, die immer gültig sind. Die Richtlinie wird für jede Anwendungsdomäne festgelegt, die von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellt wird.  
   
  Die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Richtlinie auf Hostebene ist eine Kombination der festen Richtlinie von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] für Systemassemblys und der benutzerdefinierten Richtlinie für Benutzerassemblys. Der benutzerdefinierte Teil der Hostrichtlinie von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] basiert darauf, dass der Assemblybesitzer einen von drei Berechtigungsbuckets für jede Assembly angibt:  
   
-|Berechtigungseinstellung|BESCHREIBUNG|  
+|Berechtigungseinstellung|Beschreibung|  
 |------------------------|-----------------|  
 |`Safe`|Stellt eine interne Berechnungsberechtigung bereit. Dieser Berechtigungsbucket weist keine Berechtigungen für den Zugriff auf die geschützten Ressourcen in .NET Framework zu. Es handelt es hierbei um den Standard-Berechtigungsbucket für eine Assembly, sofern nicht mithilfe der `PermissionSet`-Eigenschaft ein anderer Bucket angegeben wurde.|  
 |`ExternalAccess`|Bietet den gleichen Zugriff wie die `Safe`-Einstellung, zusätzlich jedoch die Möglichkeit, auf externe Systemressourcen zuzugreifen. Dieser Berechtigungsbucket leistet keine Gewähr für Sicherheit (obwohl dieses Szenario gesichert werden kann), wohl aber für Zuverlässigkeit.|  
@@ -109,8 +108,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
  Für die `ImpersonationMode`-Eigenschaft kann `ImpersonateCurrentUser` oder `ImpersonateAnonymous` festgelegt werden. Mit der Standardeinstellung, `ImpersonateCurrentUser`, wird eine Assembly unter dem Netzwerk-Anmeldekonto des aktuellen Benutzers ausgeführt. Wenn die `ImpersonateAnonymous` -Einstellung verwendet wird, entspricht der Ausführungs Kontext dem Windows-Anmelde Benutzerkonto IUSER_*Servername* auf dem Server. Hierbei handelt es sich um ein Internet-Gastkonto, das nur über eingeschränkte Rechte auf dem Server verfügt. Eine Assembly, die in diesem Kontext ausgeführt wird, kann nur beschränkt auf Ressourcen auf dem lokalen Server zugreifen.  
   
 ### <a name="application-domains"></a>Anwendungsdomänen  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] macht Anwendungsdomänen nicht direkt verfügbar. Aufgrund eines Assemblysatzes, der in der gleichen Anwendungsdomäne ausgeführt wird, können Anwendungsdomänen während der Ausführung einander erkennen, indem sie den `System.Reflection`-Namespace in .NET Framework oder ein anderes Verfahren anwenden, und sie können einander auf spät gebundene Weise aufrufen. Solche Aufrufe werden der Berechtigungsüberprüfung unterzogen, die im Rahmen der autorisierungsbasierten Sicherheit von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] durchgeführt wird.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] macht Anwendungsdomänen nicht direkt verfügbar. Aufgrund eines Assemblysatzes, der in der gleichen Anwendungsdomäne ausgeführt wird, können Anwendungsdomänen während der Ausführung einander erkennen, indem sie den `System.Reflection`-Namespace in .NET Framework oder ein anderes Verfahren anwenden, und sie können einander auf spät gebundene Weise aufrufen. Solche Aufrufe werden der Berechtigungsüberprüfung unterzogen, die im Rahmen der autorisierungsbasierten Sicherheit von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] durchgeführt wird.  
   
  Sie sollten sich nicht darauf verlassen, Assemblys in der gleichen Anwendungsdomäne zu finden, da die Grenze der Anwendungsdomäne und die Assemblys, die sich in jeder Domäne befinden, durch die Implementierung definiert werden.  
   

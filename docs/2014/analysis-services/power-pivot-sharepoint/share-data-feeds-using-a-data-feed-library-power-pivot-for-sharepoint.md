@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00ecb4487119251f1b86c2daf29b7481966f09f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071151"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-powerpivot-for-sharepoint"></a>Datenfeeds mithilfe einer Datenfeedbibliothek verwenden (PowerPivot für SharePoint)
@@ -39,7 +39,7 @@ ms.locfileid: "66071151"
 > [!NOTE]  
 >  Obwohl Datenfeeds zum Hinzufügen von Webdaten zu einer in einem [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] erstellten [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]-Datenquelle verwendet werden, kann jede Clientanwendung, die Atom-Feeds lesen kann, Datendienstdokumente verarbeiten.  
   
-##  <a name="prereq"></a> Voraussetzungen  
+##  <a name="prerequisites"></a><a name="prereq"></a> Voraussetzungen  
  Sie müssen über eine Bereitstellung [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] von PowerPivot für SharePoint verfügen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , die einer SharePoint-Farm eine Abfrage Verarbeitung hinzufügt. Datenfeedunterstützung wird durch das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Lösungspaket bereitgestellt.  
   
  Sie müssen über eine SharePoint-Bibliothek verfügen, die den Inhaltstyp von Datendienstdokumenten unterstützt. Zu diesem Zweck wird zwar eine Standard-Datenfeedbibliothek empfohlen, Sie können den Inhaltstyp jeder Bibliothek jedoch auch manuell hinzufügen. Weitere Informationen finden Sie unter [erstellen oder Anpassen einer datenfeedbibliothek &#40;PowerPivot für SharePoint&#41;](create-or-customize-a-data-feed-library-power-pivot-for-sharepoint.md).  
@@ -48,7 +48,7 @@ ms.locfileid: "66071151"
   
  Sie müssen auf einer SharePoint-Website über Teilnahmeberechtigungen verfügen, um ein Datendienstdokument in einer SharePoint-Bibliothek zu erstellen oder zu verwalten.  
   
-##  <a name="createdsdoc"></a>Erstellen eines Datendienst Dokuments  
+##  <a name="create-a-data-service-document"></a><a name="createdsdoc"></a> Erstellen eines Datendienstdokuments  
  Ein Datendienstdokument stellt eine permanente Anforderung dar, Daten von einer Onlinedatenquelle oder Onlineanwendung, die Daten in einem Feedformat bereitstellt, zu streamen. Beim Erstellen eines Datendienstdokuments geben Sie einen Zeiger auf mindestens einen via URL adressierbaren Datendienst an, der XML im tabellarischen Atom Syndication Format bereitstellt.  
   
  In einem einzelnen Dokument können mehrere Datenfeeds angegeben werden. Dies ist hilfreich, wenn Sie eine Reihe von Datennutzlasten vom gleichen Dienst oder sogar von unterschiedlichen Diensten in einem einzelnen Importvorgang abrufen möchten.  
@@ -83,7 +83,7 @@ ms.locfileid: "66071151"
   
  Zur Verwendung des Datendienstdokuments können Sie in [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] eine [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)] -Arbeitsmappe öffnen und im Datenimport-Assistenten die Option **Aus Datenfeed** auswählen. Wenn er dazu aufgefordert wird, gibt ein Benutzer die SharePoint-URL des Datendienstdokuments an, um einen Datenimportvorgang zu starten. Weitere Informationen finden Sie unter [Verwenden von Daten Feeds &#40;PowerPivot für SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).  
   
-##  <a name="securedsdoc"></a>Sichern eines Datendienst Dokuments  
+##  <a name="secure-a-data-service-document"></a><a name="securedsdoc"></a> Sichern eines Datendienstdokuments  
  Ein Datendienstdokument erbt die Berechtigungen der Bibliothek, in der es enthalten ist. Von den für das Element festgelegten Berechtigungen wird bestimmt, ob ein Datendienstdokument von einem Benutzer geöffnet, geändert oder gelöscht werden kann.  
   
  Um ein Datendienstdokument in der PowerPivot-Clientanwendung als Datenfeedimport zu verwenden, benötigt ein Benutzer lediglich Anzeigeberechtigungen für das Dokument. Anzeigeberechtigungen reichen aus, um die URL im Import-Assistenten aufzulösen.  
@@ -95,22 +95,21 @@ ms.locfileid: "66071151"
 |Aufgabe|SharePoint-Berechtigungsanforderungen|  
 |----------|----------------------------------------|  
 |Importieren von Datenfeeds in eine PowerPivot-fähige Arbeitsmappe.|Anzeigeberechtigungen für das Datendienstdokument in einer Bibliothek.|  
-|Aktualisieren von Daten, die zuvor über einen Feed abgerufen wurden, in der PowerPivot-Clientanwendung.|Nicht zutreffend Die PowerPivot-Clientanwendung verwendet eingebettete HTTP-Verbindungsinformationen, um eine direkte Verbindung mit den Datendiensten und -anwendungen herzustellen, die den Feed bereitstellen. Das Datendienstdokument wird von der PowerPivot-Clientanwendung nicht verwendet.|  
-|Aktualisieren von Daten als geplanter Task in einer SharePoint-Farm, ohne dass eine Benutzereingabe erforderlich ist.|Nicht zutreffend Der PowerPivot-Dienst verwendet eingebettete HTTP-Verbindungsinformationen, um eine direkte Verbindung mit den Datendiensten und -anwendungen herzustellen, die den Feed bereitstellen. Das Datendienstdokument wird vom PowerPivot-Dienst nicht verwendet.|  
+|Aktualisieren von Daten, die zuvor über einen Feed abgerufen wurden, in der PowerPivot-Clientanwendung.|Nicht zutreffend. Die PowerPivot-Clientanwendung verwendet eingebettete HTTP-Verbindungsinformationen, um eine direkte Verbindung mit den Datendiensten und -anwendungen herzustellen, die den Feed bereitstellen. Das Datendienstdokument wird von der PowerPivot-Clientanwendung nicht verwendet.|  
+|Aktualisieren von Daten als geplanter Task in einer SharePoint-Farm, ohne dass eine Benutzereingabe erforderlich ist.|Nicht zutreffend. Der PowerPivot-Dienst verwendet eingebettete HTTP-Verbindungsinformationen, um eine direkte Verbindung mit den Datendiensten und -anwendungen herzustellen, die den Feed bereitstellen. Das Datendienstdokument wird vom PowerPivot-Dienst nicht verwendet.|  
 |Löschen eines Datendienstdokuments in einer Bibliothek.|Teilnahmeberechtigungen für die Bibliothek.|  
   
-##  <a name="modifydsdoc"></a>Ändern eines Datendienst Dokuments  
+##  <a name="modify-a-data-service-document"></a><a name="modifydsdoc"></a> Ändern eines Datendienstdokuments  
  Sie können einzelne URL-Tabelle-Einträge in einem Datendienstdokument hinzufügen, bearbeiten oder entfernen. Nachdem Sie die Änderungen gespeichert haben, erhalten Benutzer, die das Dienstdokument in einem neuen Importvorgang auswählen, die von Ihnen angegebenen Datenfeeds.  
   
- 
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Arbeitsmappen, von denen eine frühere Version des Dokuments verwendet wurde, sind von den Änderungen nicht betroffen. Das liegt daran, dass ein Datendienstdokument nur einmal während des ursprünglichen Importvorgangs gelesen wird. Während des Imports werden Dienst-URL und Tabellennamen kopiert und intern in der Arbeitsmappe gespeichert. Diese internen Werte werden dann in nachfolgenden Aktualisierungsvorgängen zum Abrufen aktualisierter Daten verwendet.  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Arbeitsmappen, von denen eine frühere Version des Dokuments verwendet wurde, sind von den Änderungen nicht betroffen. Das liegt daran, dass ein Datendienstdokument nur einmal während des ursprünglichen Importvorgangs gelesen wird. Während des Imports werden Dienst-URL und Tabellennamen kopiert und intern in der Arbeitsmappe gespeichert. Diese internen Werte werden dann in nachfolgenden Aktualisierungsvorgängen zum Abrufen aktualisierter Daten verwendet.  
   
  Da kein persistenter Link zwischen einem Datendienstdokument auf einer SharePoint-Website und der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappe besteht, die den importierten Feed enthält, haben Änderungen an Teilen des Datendienstdokuments keine Auswirkungen auf vorhandene [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Arbeitsmappen.  
   
 > [!IMPORTANT]  
 >  Obwohl das Datendienstdokument lediglich einmal gelesen wird, kann auf Datendienste, die die tatsächlichen Daten bereitstellen, zum Abrufen neuerer Feeds regelmäßig zugegriffen werden. Weitere Informationen zum Aktualisieren von Daten finden Sie unter [Power Pivot-Datenaktualisierung](power-pivot-data-refresh.md).  
   
-##  <a name="usedsdoc"></a>Nächster Schritt: Verwenden eines Datendienst Dokuments  
+##  <a name="next-step-use-a-data-service-document"></a><a name="usedsdoc"></a> Nächster Schritt: Verwenden eines Datendienstdokuments  
  Wenn Sie ein Datendienst Dokument verwenden möchten, das Sie in einer SharePoint-Bibliothek erstellt haben, verwenden Sie die Import Option **aus Daten Feeds** in einer Power Pivot-Datenquelle. Anweisungen finden Sie unter [Verwenden von Daten Feeds &#40;PowerPivot für SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

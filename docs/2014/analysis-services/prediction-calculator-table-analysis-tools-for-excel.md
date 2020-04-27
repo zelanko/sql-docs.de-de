@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e57aee7142da5c256a213ddd2eb0390a0f3b042a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070857"
 ---
 # <a name="prediction-calculator-table-analysis-tools-for-excel"></a>Vorhersagerechner (Tabellenanalysetools für Excel)
@@ -58,7 +58,7 @@ ms.locfileid: "66070857"
   
      Das Tool erstellt neue Arbeitsblätter, die die Berichte und die Scorecards enthalten.  
   
-### <a name="requirements"></a>Requirements (Anforderungen)  
+### <a name="requirements"></a>Anforderungen  
  Das **Vorhersagerechner** Tool verwendet den Microsoft Logistic Regression-Algorithmus, der mit diskreten Werten sowie diskretisierten und kontinuierlichen numerischen Daten arbeiten kann.  
   
 ## <a name="understanding-the-scoring-reports"></a>Grundlegendes zu den Bewertungsberichten  
@@ -97,7 +97,7 @@ ms.locfileid: "66070857"
   
  Die Werte in der Spalte **relative Auswirkung** sind Wahrscheinlichkeiten, die als Prozentsätze dargestellt werden. Die Zelle wird schattiert, um die Auswirkung dieses Werts auf die Ergebnisse grafisch darzustellen.  
   
-|attribute|value|Relative Auswirkung|  
+|attribute|Wert|Relative Auswirkung|  
 |---------------|-----------|---------------------|  
 |Marital Status|Verheiratet|0|  
 |Marital Status|Single|71|  
@@ -127,7 +127,7 @@ ms.locfileid: "66070857"
   
  Wenn der Bericht beispielsweise die folgenden Werte enthält, können Sie den Wert für Autos auf 1 reduzieren und dann auf 0, um festzustellen, wie sich dies auf das Kaufverhalten der Kunden auswirkt. Wenn Sie den Wert von **Cars** in 0 ändern, ändert sich die Vorhersage unten in "true".  
   
-|attribute|value|Relative Auswirkung|  
+|attribute|Wert|Relative Auswirkung|  
 |---------------|-----------|---------------------|  
 |Marital Status|Verheiratet|0|  
 |Geschlecht|Male|0|  
@@ -139,7 +139,7 @@ ms.locfileid: "66070857"
 |Autos|2|50|  
 |Commute Distance|0-1 Meilen|99|  
 |Region|Nordamerika|0|  
-|Alter|37-46|5|  
+|Age|37-46|5|  
 |Gesamt||491|  
 |Vorhersage für 'Ja'||FALSE|  
   
@@ -175,8 +175,7 @@ ms.locfileid: "66070857"
 8.  Konvertieren Sie das Ergebnis in ein vorhergesagtes Ergebnis, indem Sie die auf dem Blatt gedruckten Kriterien unmittelbar nach der **Gesamt** Zeile verwenden.  
   
 ## <a name="related-tools"></a>Verwandte Tools  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stellt den Microsoft Logistic Regression-Algorithmus zur Verwendung für diese Art von Analyse bereit. Wenn Sie bereits mit der logistischen Regression vertraut sind, können Sie problemlos logistische Regressionsmodelle erstellen, indem Sie die **Erweiterte** Option des Data Mining-Clients für Excel verwenden. Weitere Informationen finden Sie unter [Erweiterte Modellierung &#40;Data Mining-Add-Ins für Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md). Weitere Informationen zu den Optionen und Parametern für logistische Regressionsmodelle finden Sie im Thema "Microsoft Logistic Regression- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Algorithmus" in der-Online Dokumentation.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stellt den Microsoft Logistic Regression-Algorithmus zur Verwendung für diese Art von Analyse bereit. Wenn Sie bereits mit der logistischen Regression vertraut sind, können Sie problemlos logistische Regressionsmodelle erstellen, indem Sie die **Erweiterte** Option des Data Mining-Clients für Excel verwenden. Weitere Informationen finden Sie unter [Erweiterte Modellierung &#40;Data Mining-Add-Ins für Excel&#41;](advanced-modeling-data-mining-add-ins-for-excel.md). Weitere Informationen zu den Optionen und Parametern für logistische Regressionsmodelle finden Sie im Thema "Microsoft Logistic Regression- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Algorithmus" in der-Online Dokumentation.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Tabellenanalysetools für Excel](table-analysis-tools-for-excel.md)  

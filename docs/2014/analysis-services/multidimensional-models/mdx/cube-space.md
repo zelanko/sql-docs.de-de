@@ -11,18 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b663f86b16576360083050c5709433eed7d4dc4a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074711"
 ---
 # <a name="cube-space"></a>Cuberaum
   Der Cuberaum ist das Produkt aus den Elementen der Attributhierarchien eines Cubes und den Measures des Cubes. Daher wird der Cuberaum durch das Kombinationsprodukt aller Attributhierarchieelemente im Cube und den Measures des Cubes bestimmt und definiert die maximale Größe des Cubes. Beachten Sie, dass dieser Raum alle potenziellen Kombinationen von Attributhierarchieelementen umfasst, einschließlich Kombinationen, die in der wirklichen Welt unmöglich sind, z. B. Kombinationen aus der Stadt Paris und den Ländern England, Spanien, Japan oder Indien.  
   
 ## <a name="autoexists-and-cube-space"></a>Autoexists und Cuberaum  
- 
-  *Autoexists* schränkt den Cuberaum auf solche Zellen ein, die tatsächlich vorhanden sind. Elemente einer Attributhierarchie in einer Dimension sind möglicherweise nicht gemeinsam mit Elementen einer anderen Attributhierarchie in der gleichen Dimension vorhanden.  
+ *Autoexists* schränkt den Cuberaum auf solche Zellen ein, die tatsächlich vorhanden sind. Elemente einer Attributhierarchie in einer Dimension sind möglicherweise nicht gemeinsam mit Elementen einer anderen Attributhierarchie in der gleichen Dimension vorhanden.  
   
  Bei einem Cube z. B., der eine City-Attributhierarchie, eine Country-Attributhierarchie und eine Internet Sales Amount-Measure aufweist, schließt der Cuberaum nur solche Elemente ein, die gemeinsam vorhanden sind. Wenn beispielsweise die City-Attributhierarchie die Städte New York, London, Paris, Tokyo und Melbourne und die Country-Attributhierarchie die Länder United States, United Kingdom, France, Japan, and Australia umfasst, schließt der Cuberaum nicht den Raum (die Zelle) am Schnittpunkt von Paris und United States ein.  
   
@@ -99,7 +98,7 @@ WHERE Measures.[Internet Sales Amount]
   
  In der vorherigen Abfrage wurde die benutzerdefinierte Customer Geography-Hierarchie innerhalb der Customer-Dimension zum Definieren der Position im Cuberaum verwendet, die zuvor über eine Attributhierarchie definiert worden war. Die gleiche Position im Cuberaum kann sowohl mithilfe von Attributhierarchien als auch mithilfe von benutzerdefinierten Hierarchien definiert werden.  
   
-##  <a name="AttribRelationships"></a>Attribut Beziehungen und Cuberaum  
+##  <a name="attribute-relationships-and-cube-space"></a><a name="AttribRelationships"></a> Attributbeziehungen und Cuberaum  
  Das Definieren von Attributbeziehungen zwischen verknüpften Attributen verbessert die Abfrageleistung (durch vereinfachte Erstellung von entsprechenden Aggregationen) und wirkt sich auf das Element einer verknüpften Attributhierarchie aus, das zusammen mit einem Attributhierarchie-Element auftritt. Wenn Sie beispielsweise ein Tupel definieren, das ein Element der City-Attributhierarchie einschließt, und das Tupel nicht explizit die Country-Attributelemente definiert, wäre zu erwarten, dass das Element der Country-Attributhierarchie das verknüpfte Element der Country-Attributhierarchie darstellt. Dies ist jedoch nicht der Fall, wenn eine Attributbeziehung zwischen der City-Attributhierarchie und der Country-Attributhierarchie definiert ist.  
   
  Im folgenden Beispiel wird das Element einer verknüpften Attributhierarchie zurückgegeben, die nicht explizit in der Abfrage eingeschlossen ist.  
@@ -136,6 +135,6 @@ FROM [Adventure Works]
  [Arbeiten mit Membern, Tupeln und Mengen &#40;MDX-&#41;](working-with-members-tuples-and-sets-mdx.md)   
  [Visuelle Gesamtsummen und nicht visuelle Gesamtwerte](visual-totals-and-non-visual-totals.md)   
  [MDX-Sprachreferenz &#40;MDX-&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [Mehrdimensionale Ausdrücke &#40;MDX-&#41; Referenz](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [Multidimensional Expressions &#40;MDX&#41; – Referenz](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d547c52bc5d4cb02870fc647469b5f63af9ab7cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080740"
 ---
 # <a name="goal-seek-scenario-table-analysis-tools-for-excel"></a>Zielsucheszenario (Tabellenanalysetools für Excel)
@@ -59,7 +59,7 @@ ms.locfileid: "66080740"
   
 9. Wenn Sie die Option **in dieser Zeile**ausgewählt haben, werden die Ergebnisse der Analyse im Dialogfeld zur Überprüfung ausgegeben. Das Dialogfeld bleibt geöffnet, damit Sie damit fortfahren können, andere Werte und Ziele auszuprobieren.  
   
-### <a name="requirements"></a>Requirements (Anforderungen)  
+### <a name="requirements"></a>Anforderungen  
  Für dieses Tool wird der Microsoft Logistic Regression-Algorithmus verwendet, der numerische oder diskrete Werte verarbeiten kann.  
   
  Sie können die Vorhersage mehrere Male ausführen und zu einem späteren Zeitpunkt andere Spalten auswählen. Es muss jedoch jede Kombination aus Ziel und Änderung separat berechnet werden.  

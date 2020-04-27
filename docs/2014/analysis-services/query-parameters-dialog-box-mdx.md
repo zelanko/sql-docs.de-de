@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7ad326f5205aa7efc3be9aee79af3671d892130
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070527"
 ---
 # <a name="query-parameters-dialog-box-mdx"></a>Dialogfeld "Abfrageparameter" (MDX)
   Verwenden Sie das Dialogfeld **Abfrageparameter** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] und [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , um MDX-Abfragen, die zum Definieren von Sätzen, Dimensionen und Teilcubes verwendet werden, Parameter hinzuzufügen. Sie können das Dialogfeld **Abfrageparameter** anzeigen, indem Sie im Dialogfeld **MDX-Abfrage-Generator** auf das Symbol **Parameter** klicken.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Parameter**  
  Geben Sie einen Parameternamen ein, um mit der Erstellung eines neuen Parameters zu beginnen, oder bearbeiten Sie den Namen eines vorhandenen Parameters.  
   

@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d5f0619e7291cc08b1750c0b35f9639cb7a9872
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078039"
 ---
 # <a name="manage-models-sql-server-data-mining-add-ins"></a>Modelle verwalten (SQL Server Data Mining-Add-Ins)
@@ -45,7 +45,7 @@ ms.locfileid: "66078039"
 > [!NOTE]  
 >  In diesem Dialogfeld können Sie keine Abfragen oder Modelle erstellen. Verwenden Sie zum Erstellen einer neuen Mining Struktur einen der im Data Mining-Client für Excel bereitgestellten Assistenten, oder verwenden Sie die **Data Mining-Abfrage Erweiterter Editor**.  
   
-### <a name="requirements"></a>Requirements (Anforderungen)  
+### <a name="requirements"></a>Anforderungen  
  Sie müssen zunächst eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] herstellen, um Data Mining-Modelle zu verwalten. Diese Verbindung ist auch dann erforderlich, wenn Sie mit Sitzungsmodellen arbeiten, die in einer temporären Datei gespeichert sind. Weitere Informationen zum Erstellen oder Ändern einer Verbindung finden Sie unter Herstellen einer Verbindung [mit Quelldaten &#40;Data Mining-Client für Excel&#41;](connect-to-source-data-data-mining-client-for-excel.md).  
   
  Wenn die Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], mit der Sie eine Verbindung herstellen, nicht bereits Data Mining-Strukturen oder Data Mining-Modelle enthält, können Sie mithilfe der von diesem Add-In bereitgestellten Assistenten und Tools solche Strukturen und Modelle erstellen. Sie können auch neue Modelle erstellen, indem Sie das **Data Mining-Modell Erweiterter Editor**verwenden.  

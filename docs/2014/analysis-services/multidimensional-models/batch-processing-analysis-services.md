@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2c54c374bc5dd6b7bea30a95cb84f5e9365f0e75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076939"
 ---
 # <a name="batch-processing-analysis-services"></a>Batchverarbeitung (Analysis Services)
@@ -28,11 +28,11 @@ ms.locfileid: "66076939"
   
  Dieses Thema enthält die folgenden Abschnitte:  
   
- [Batch Verarbeitung in SQL Server Data Tools](#bkmk_ssdt)  
+ [Batchverarbeitung in SQL Server Data Tools](#bkmk_ssdt)  
   
- [Batch Verarbeitung mithilfe von XMLA in Management Studio](#bkmk_xmla)  
+ [Batchverarbeitung mithilfe von XMLA in Management Studio](#bkmk_xmla)  
   
-##  <a name="bkmk_ssdt"></a>Batch Verarbeitung in SQL Server Data Tools  
+##  <a name="batch-processing-in-sql-server-data-tools"></a><a name="bkmk_ssdt"></a>Batch Verarbeitung in SQL Server Data Tools  
  Bevor Objekte in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]verarbeitet werden können, muss das Projekt, in dem sie enthalten sind, bereitgestellt werden. Weitere Informationen finden Sie unter [Bereitstellen von Analysis Services-Projekten &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md).  
   
 1.  Öffnen Sie [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -53,9 +53,9 @@ ms.locfileid: "66076939"
   
 9. Wählen Sie unter **Verarbeitungsoptionen**die folgenden Einstellungen aus:  
   
-    -   Die **Verarbeitungsreihenfolge** ist auf " **sequenziell**" und der **Transaktionsmodus** auf **eine Transaktion**festgelegt.  
+    -   Legen Sie für**Verarbeitungsreihenfolge** die Option **Sequenziell**und für **Transaktionsmodus** die Option **Eine Transaktion**fest.  
   
-    -   Die Option für die **Rück schreibe Tabelle** ist auf **vorhandene verwenden**festgelegt.  
+    -   Legen Sie für**Rückschreibetabellenoption** die Option **Vorhandene verwenden**fest.  
   
     -   Aktivieren Sie unter **Betroffene Objekte**das Kontrollkästchen **Betroffene Objekte verarbeiten** .  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66076939"
   
 14. Klicken Sie im Fenster **Objekte verarbeiten** auf **Schließen** .  
   
-##  <a name="bkmk_xmla"></a>Batch Verarbeitung mithilfe von XMLA in Management Studio  
+##  <a name="batch-processing-using-xmla-in-management-studio"></a><a name="bkmk_xmla"></a>Batch Verarbeitung mithilfe von XMLA in Management Studio  
  Sie können ein XMLA-Skript erstellen, das Batchverarbeitung ausführt. Starten Sie, indem Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] für jedes Objekt ein XMLA-Skript generieren, und kombinieren Sie sie dann in eine einzelne XMLA-Abfrage, die Sie interaktiv oder in einem geplanten Task ausführen.  
   
  Schrittanleitungen finden Sie unter **Beispiel 2** in [Planen von administrativen Tasks in SSAS mithilfe von SQL Server-Agent](../instances/schedule-ssas-administrative-tasks-with-sql-server-agent.md).  

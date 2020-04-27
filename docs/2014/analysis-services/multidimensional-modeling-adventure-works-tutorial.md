@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 174d4ab61cf56f4916babb1639e110162d20e6fd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077583"
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>Mehrdimensionale Modellierung (Adventure Works-Lernprogramm)
@@ -52,11 +52,11 @@ ms.locfileid: "66077583"
 |------------|--------------------------------|  
 |[Lektion 1: Definieren einer Datenquellensicht innerhalb eines Analysis Services-Projekts](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 Minuten|  
 |[Lektion 2: Definieren und Bereitstellen eines Cubes](lesson-2-defining-and-deploying-a-cube.md)|30 Minuten|  
-|[Lektion 3: Ändern von Maßen, Attributen und Hierarchien](lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 Minuten|  
+|[Lektion 3: Ändern von Measures, Attributen und Hierarchien](lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 Minuten|  
 |[Lektion 4: Definieren von erweiterten Attributen und Dimensionseigenschaften](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 Minuten|  
 |[Lektion 5: Definieren von Beziehungen zwischen Dimensionen und Measuregruppen](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 Minuten|  
 |[Lektion 6: Definieren von Berechnungen](lesson-6-defining-calculations.md)|45 Minuten|  
-|[Lektion 7: Definieren von wichtigsten Leistungsindikatoren &#40;KPIs&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 Minuten|  
+|[Lektion 7: Definieren von KPIs &#40;Key Performance Indicator&#41;](lesson-7-defining-key-performance-indicators-kpis.md)|30 Minuten|  
 |[Lektion 8: Definieren von Aktionen](lesson-8-defining-actions.md)|30 Minuten|  
 |[Lektion 9: Definieren von Perspektiven und Übersetzungen](lesson-9-defining-perspectives-and-translations.md)|30 Minuten|  
 |[Lektion 10: Definieren von Administratorrollen](lesson-10-defining-administrative-roles.md)|15 Minuten|  

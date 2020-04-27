@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 760a02da5fd98e558c6463d428d5018ccf65a5fa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072264"
 ---
 # <a name="new-measure-group-dialog-box-cube-designer"></a>Neue Measuregruppe (Dialogfeld, Cube-Designer)
@@ -28,7 +28,7 @@ ms.locfileid: "66072264"
   
 -   Klicken Sie im Bereich **Measures** auf der Registerkarte **Cubestruktur** mit der rechten Maustaste auf eine Measuregruppe oder ein Measure, und wählen Sie aus dem Kontextmenü **Neue Measuregruppe** aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Wählen Sie eine Tabelle aus der Datenquellensicht aus**  
  Wählen Sie die Faktentabelle für die neue Measuregruppe aus. Tabellen können innerhalb eines Cubes höchstens einmal als Faktentabelle verwendet werden.  
   

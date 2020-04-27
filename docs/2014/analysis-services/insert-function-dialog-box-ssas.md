@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e925358f8ce09ebdf2b2470e364016c951ef120b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080411"
 ---
 # <a name="insert-function-dialog-box-ssas"></a>Funktion einfügen (Dialogfeld) (SSAS)
@@ -50,6 +50,6 @@ ms.locfileid: "66080411"
  Das Dialogfeld **Funktion einfügen** ist nur verfügbar, wenn Sie eine Formel erstellen. Sie können Berechnungen entweder in einer berechneten Spalte oder in einer PivotTable bzw. einem PivotChart erstellen. Formeln, die Sie ausdrücklich zur Verwendung in einer PivotTable erstellen, werden auch als *Measures*bezeichnet. Weitere Informationen finden Sie unter [Erstellen einer berechneten Spalte &#40;SSAS – tabellarisch&#41;](tabular-models/ssas-calculated-columns-create-a-calculated-column.md) und [Erstellen und Verwalten von Measures &#40;SSAS – tabellarisch&#41;](tabular-models/measures-ssas-tabular.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Berechnungen &#40;tabellarischen SSAS-&#41;](tabular-models/calculations-ssas-tabular.md)  
+ [Berechnungen &#40;SSAS – tabellarisch&#41;](tabular-models/calculations-ssas-tabular.md)  
   
   

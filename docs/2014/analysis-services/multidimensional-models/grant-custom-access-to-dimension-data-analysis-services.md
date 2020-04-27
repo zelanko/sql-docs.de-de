@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 67bbc67db06e05a0f6a02f8e9efd8dcc46441aeb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075062"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>Erteilen eines benutzerdefinierten Zugriffs auf Dimensiondaten (Analysis Services)
@@ -44,7 +44,7 @@ ms.locfileid: "66075062"
 ## <a name="prerequisites"></a>Voraussetzungen  
  Nicht alle Measures oder Dimensionselemente können in benutzerdefinierten Zugriffsszenarien verwendet werden. Eine Verbindung schlägt fehl, wenn eine Rolle den Zugriff auf ein Standardmeasure oder -element oder auf Measures einschränkt, die Teil von Measureausdrücken sind.  
   
- **Überprüfen Sie, ob Hindernisse für die Dimensions Sicherheit verwendet werden sollen: Standardmeasures, Standardelemente und Measures, die in Measures verwendet werden**  
+ **Prüfen Sie, ob Hindernisse für die Dimensionssicherheit vorhanden sind: Standardmeasures, Standardelemente und in Measureausdrücken verwendete Measures.**  
   
 1.  Klicken Sie in SQL Server Management Studio mit der rechten Maustaste auf einen Cube, und wählen Sie **Skript Cube als** | **Alter in** | **neues Abfrage-Editor-Fenster**aus.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66075062"
   
 ## <a name="basic-dimension-security"></a>Standarddimensionssicherheit  
   
-1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]her, erweitern Sie im Objekt-Explorer das **Rollen** -Element für die entsprechende Datenbank, und klicken Sie dann auf eine Datenbankrolle (oder erstellen Sie eine neue Datenbankrolle).  
+1.  Stellen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Sie in eine Verbindung mit der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Instanz von her, erweitern Sie in Objekt-Explorer **Rollen** für die entsprechende Datenbank, und klicken Sie dann auf eine Daten Bank Rolle (oder erstellen Sie eine neue Daten Bank Rolle).  
   
      Die sollte bereits über Lesezugriff für den Cube verfügen. Weitere Informationen finden Sie unter [Erteilen von Cube- oder Modellberechtigungen &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md) .  
   
@@ -88,10 +88,10 @@ ms.locfileid: "66075062"
   
  Zum Schreiben der MDX-Anweisung können Sie den MDX-Generator verwenden. Informationen dazu finden Sie unter [MDX-Generator &#40;Analysis Services – Mehrdimensionale Daten&#41;](../mdx-builder-analysis-services-multidimensional-data.md). Die Registerkarte **Erweitert** enthält die folgenden Optionen:  
   
- **Attribut**  
+ **Versehen**  
  Wählen Sie das Attribut aus, für das Sie Einstellungen der Elementsicherheit verwalten möchten.  
   
- **Zulässige Element Gruppe**  
+ **Zulässige Elementgruppe**  
  Die Eigenschaft AllowedSet kann zu keinen Elementen (Standard), allen Elementen oder einigen Elementen aufgelöst werden. Wenn Sie das Zugreifen auf ein Attribut zulassen und keine Elemente der zulässigen Gruppe definieren, wird Zugriff auf alle Elemente gewährt. Wenn Sie den Zugriff auf ein Attribut zulassen und eine bestimmte Gruppe an Attributelementen definieren, sind nur die ausdrücklich zulässigen Elemente sichtbar.  
   
  Die Erstellung von AllowedSet wirkt sich wellenartig aus, wenn das Attribut Teil einer Hierarchie mit mehreren Ebenen ist. Nehmen wir beispielsweise an, eine Rolle gewährt den Zugriff auf den Staat Washington (gehen Sie von einem Szenario aus, in dem die Rolle Berechtigungen für die Vertriebsabteilung eines Unternehmens im Staat Washington gewährt). Für Personen, die eine Verbindung über diese Rolle herstellen, werden bei Anfragen, die Vorgänger (USA) oder Nachfolger (Seattle und Redmond) enthalten, nur Elemente in einer Kette angezeigt, die den Staat Washington enthält. Da andere Staaten ausdrücklich nicht zulässig sind, ist die Wirkung dieselbe, als wären sie verweigert.  
@@ -99,7 +99,7 @@ ms.locfileid: "66075062"
 > [!NOTE]  
 >  Wenn Sie einen leeren Satz ({}) von Attribut Elementen definieren, sind keine Elemente des Attributs für die Daten Bank Rolle sichtbar. Eine fehlende zulässige Gruppe wird nicht als leere Gruppe interpretiert.  
   
- **Verweigerter Element Satz**  
+ **Verweigerte Elementgruppe**  
  Die Eigenschaft DeniedSet kann zu keinen Elementen, allen Elementen (Standard) oder einigen Attributelementen aufgelöst werden. Wenn die verweigerte Gruppe nur eine bestimmte Gruppe von Attributelementen enthält, wird der Datenbankrolle der Zugriff nur auf diese bestimmten Elemente sowie auf Nachfolger verweigert, wenn sich das Attribut in einer Hierarchie mit mehreren Ebenen befindet. Denken Sie an das Beispiel der Vertriebsabteilung im Staat Washington. Wenn Washington in DeniedSet platziert wird, werden den Personen, die eine Verbindung über diese Rolle herstellen, alle Staaten außer Washington und seinen Nachfolgerattributen angezeigt.  
   
  Erinnern Sie sich aus dem vorherigen Abschnitt, dass die verweigerte Gruppe eine feste Auflistung ist. Wenn die Verarbeitung nachfolgend neue Elemente einführt, denen der Zugriff ebenfalls verweigert werden sollte, müssen Sie diese Rolle bearbeiten, um diese Elemente zur Liste hinzuzufügen.  
@@ -113,13 +113,12 @@ ms.locfileid: "66075062"
   
  Beispiel: Eine Datenbankrolle gibt `Male` als Standardelement für das `Gender`-Attribut an. Wenn eine Abfrage nicht ausdrücklich sowohl das `Gender`-Attribut einschließt als auch ein anderes Element für dieses Attribut angibt, gibt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ein Dataset zurück, das lediglich männliche (male) Kunden einschließt. Weitere Informationen zum Festlegen des Standardelements finden Sie unter [Definieren eines Standardelements](attribute-properties-define-a-default-member.md).  
   
- **Visual Total aktivieren**  
+ **Sichtbarer Gesamtwert aktivieren**  
  Die VisualTotals-Eigenschaft gibt an, ob die angezeigten aggregierten Zellenwerte gemäß allen Zellenwerten oder nur gemäß den Zellenwerten berechnet werden, die für die Datenbankrolle sichtbar sind.  
   
  Die visualtotal-Eigenschaft ist standardmäßig deaktiviert (festgelegt `False`auf). Diese Standardeinstellung maximiert die Leistung, da [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] das Gesamtergebnis aller Zellenwerte schnell berechnen kann, ohne Zeit für das Auswählen der zu berechnenden Zellenwerte aufwenden zu müssen.  
   
- Das Deaktivieren der VisualTotals-Eigenschaft kann jedoch zum Sicherheitsproblem werden, wenn ein Benutzer die aggregierten Zellenwerte verwenden kann, um Werte für Attributelemente abzuleiten, auf die die Datenbankrolle des Benutzers keinen Zugriff hat. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet beispielsweise die Werte für drei Attributelemente, um einen aggregierten Zellenwert zu berechnen. Die Datenbankrolle verfügt über die Zugriffsrechte zum Anzeigen zwei dieser drei Attributelemente. Mithilfe des aggregierten Zellenwertes wäre ein Mitglied dieser Datenbankrolle in der Lage, den Wert für das dritte Attributelement abzuleiten.  
+ Das Deaktivieren der VisualTotals-Eigenschaft kann jedoch zum Sicherheitsproblem werden, wenn ein Benutzer die aggregierten Zellenwerte verwenden kann, um Werte für Attributelemente abzuleiten, auf die die Datenbankrolle des Benutzers keinen Zugriff hat. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verwendet beispielsweise die Werte für drei Attributelemente, um einen aggregierten Zellenwert zu berechnen. Die Datenbankrolle verfügt über die Zugriffsrechte zum Anzeigen zwei dieser drei Attributelemente. Mithilfe des aggregierten Zellenwertes wäre ein Mitglied dieser Datenbankrolle in der Lage, den Wert für das dritte Attributelement abzuleiten.  
   
  Durch das Festlegen der visualtotal-Eigenschaft auf `True` kann dieses Risiko beseitigt werden. Wenn Sie die VisualTotals-Eigenschaft aktivieren, kann eine Datenbankrolle aggregierte Gesamtergebnisse nur für Dimensionselemente anzeigen, für die die Rolle die entsprechende Berechtigung aufweist.  
   
@@ -130,6 +129,6 @@ ms.locfileid: "66075062"
  [Erteilen von Cube-oder Modell Berechtigungen &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
  [Gewähren von benutzerdefiniertem Zugriff auf Zellen Daten &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)   
  [Erteilen von Berechtigungen für Data Mining Strukturen und Modelle &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Erteilen von Berechtigungen für ein Datenquellen Objekt &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [Erteilen von Berechtigungen für ein Datenquellenobjekt &#40;Analysis Services&#41;](grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

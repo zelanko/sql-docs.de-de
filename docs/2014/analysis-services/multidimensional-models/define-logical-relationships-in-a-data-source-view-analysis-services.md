@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: caa1b9ee8af054f7fcc5f10869553343d50a9c2d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075621"
 ---
 # <a name="define-logical-relationships-in-a-data-source-view-analysis-services"></a>Definieren von logischen Beziehungen in einer Datenquellensicht (Analysis Services)
@@ -47,7 +47,7 @@ ms.locfileid: "66075621"
   
  [So können Sie eine Beziehung im Bereich "Tabellen" anzeigen oder ändern](#bkmk_tablespane)  
   
-##  <a name="bkmk_addRel"></a>So fügen Sie eine Beziehung zwischen Tabellen, benannten Abfragen oder Sichten hinzu  
+##  <a name="to-add-a-relationship-between-tables-named-queries-or-views"></a><a name="bkmk_addRel"></a>So fügen Sie eine Beziehung zwischen Tabellen, benannten Abfragen oder Sichten hinzu  
   
 1.  Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]das Projekt, oder stellen Sie eine Verbindung mit der Datenbank her, das bzw. die die Datenquellensicht enthält, in der Sie eine logische Beziehung hinzufügen möchten.  
   
@@ -72,11 +72,11 @@ ms.locfileid: "66075621"
   
     4.  Geben Sie optional im Feld **Beschreibung** eine Beschreibung für die Beziehung ein.  
   
-##  <a name="bkmk_diagrampane"></a>So können Sie eine Beziehung im Diagrammbereich anzeigen oder ändern  
+##  <a name="to-view-or-modify-a-relationship-in-the-diagram-pane"></a><a name="bkmk_diagrampane"></a> So können Sie eine Beziehung im Bereich "Diagramm" anzeigen oder ändern  
   
 -   Klicken Sie im Bereich **Diagramm** im **Datenquellensicht-Designer**mit der rechten Maustaste auf die Beziehung, die Sie anzeigen möchten, und klicken Sie auf **Beziehung bearbeiten** (oder doppelklicken Sie einfach auf den Beziehungspfeil).  Verwenden Sie das Dialogfeld **Beziehung bearbeiten** , um die Beziehung zu ändern.  
   
-##  <a name="bkmk_tablespane"></a>So können Sie eine Beziehung im Bereich "Tabellen" anzeigen oder ändern  
+##  <a name="to-view-or-modify-a-relationship-in-the-tables-pane"></a><a name="bkmk_tablespane"></a> So können Sie eine Beziehung im Bereich "Tabellen" anzeigen oder ändern  
   
 1.  Suchen und erweitern Sie im Bereich **Tabelle** im **Datenquellensicht-Designer**die Tabelle, Sicht oder benannte Abfrage, die die Beziehung enthält, die Sie anzeigen oder ändern möchten.  
   
@@ -85,6 +85,6 @@ ms.locfileid: "66075621"
 3.  Klicken Sie mit der rechten Maustaste auf die zu ändernde Beziehung, und klicken Sie anschließend auf **Beziehung bearbeiten**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Datenquellensichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md)  
+ [Datenquellsichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b383621408cc84a65e5f9c5adb711dd9f047be64
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073205"
 ---
 # <a name="remote-processing-analysis-services"></a>Remoteverarbeitung (Analysis Services)
@@ -31,8 +31,7 @@ ms.locfileid: "66073205"
 -   Beheben Sie alle bestehenden lokalen Verarbeitungsprobleme, bevor Sie eine Remoteverarbeitung anwenden. Stellen Sie sicher, dass bei einer lokalen Verarbeitungsanforderung die Daten erfolgreich aus der externen relationalen Datenquelle abgerufen werden können. Anweisungen zum Angeben der Anmeldeinformationen für das Abrufen der Daten finden Sie unter [Festlegen von Identitätswechseloptionen &#40;SSAS – mehrdimensional&#41;](set-impersonation-options-ssas-multidimensional.md).  
   
 ## <a name="on-demand-remote-processing"></a>Bedarfsgesteuerte Remoteverarbeitung  
- 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] akzeptiert Verarbeitungsanforderungen von Benutzer- oder Anwendungskonten mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Administratorberechtigungen. Wenn Sie Administrator sind, stellen Sie sicher, dass Sie eine Verbindung zur Remoteinstanz herstellen und die Datenbank manuell über die Remoteverbindung verarbeiten können.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] akzeptiert Verarbeitungsanforderungen von Benutzer- oder Anwendungskonten mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Administratorberechtigungen. Wenn Sie Administrator sind, stellen Sie sicher, dass Sie eine Verbindung zur Remoteinstanz herstellen und die Datenbank manuell über die Remoteverbindung verarbeiten können.  
   
 1.  Starten Sie auf dem Computer, der zum Planen der Verarbeitung verwendet wird, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] , und stellen Sie eine Verbindung zur Remoteinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] her.  
   
@@ -51,7 +50,7 @@ ms.locfileid: "66073205"
   
 -   [Konfigurieren des SQL Server-Agents](../../ssms/agent/configure-sql-server-agent.md)  
   
--   [SQL Server-Agent-Komponenten](../../ssms/agent/sql-server-agent.md#Components) schlägt alternative Server Rollen vor, wenn das Erteilen von **sysadmin** -Berechtigungen nicht möglich ist.  
+-   [SQL Server Agent Components](../../ssms/agent/sql-server-agent.md#Components) schlägt alternative feste Serverrollen vor, wenn das Gewähren von **sysadmin** -Berechtigungen nicht möglich ist.  
   
  Fahren Sie nach dem Konfigurieren der Kontoberechtigungen mit den folgenden Schritten fort.  
   
@@ -85,7 +84,7 @@ ms.locfileid: "66073205"
   
 2.  Optional können Sie die Ablaufverfolgungseigenschaften so festlegen, dass die Ablaufverfolgung an eine Datei oder eine Tabelle in einer Datenbank gesendet wird.  
   
-#### <a name="run-the-job"></a>Ausführen des Auftrags  
+#### <a name="run-the-job"></a>Ausführung des Auftrags.  
   
 1.  Stellen Sie auf dem Computer, der zum Ausführen des Auftrags verwendet wird, sicher, dass der Auftrag den grundlegenden Vorgang durchführen kann. Erweitern Sie im Objekt-Explorer unter „SQL Server-Agent“ die Option **Aufträge**, klicken Sie mit der rechten Maustaste auf das Projekt, das Sie gerade erstellt haben, und klicken Sie auf **Auftrag starten bei Schritt**. Der Auftrag wird sofort gestartet. Sie können den Fortschritt im SQL Server Profiler überwachen.  
   

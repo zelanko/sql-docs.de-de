@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8793fe2e63d6867e8e5c12fef6ec73a6f7a27882
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073811"
 ---
 # <a name="the-basic-mdx-script-mdx"></a>Grundlegendes MDX-Skript (MDX)
@@ -36,8 +36,7 @@ ms.locfileid: "66073811"
   
  Das MDX-Standardskript enthält außerdem die Skriptbefehle, die benannte Mengen, Zuweisungen und berechnete Elemente erstellen, die im Cube-Designer erstellt wurden:  
   
--   
-  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] fügt dem MDX-Standardskript Skriptbefehle direkt hinzu.  
+-   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] fügt dem MDX-Standardskript Skriptbefehle direkt hinzu.  
   
 -   Für jede benannte Menge im Cube gibt es im MDX-Standardskript eine entsprechende CREATE SET-Anweisung.  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66073811"
  Alle MDX-Skriptanweisungen  
  In einem MDX-Skript steuern MDX-Skriptbefehle den Kontext und den Gültigkeitsbereich von Berechnungen und verwalten das Verhalten anderer Anweisungen im MDX-Skript. Zu dieser Kategorie gehören die folgenden Anweisungen:  
   
--   [Enen](/sql/mdx/mdx-scripting-calculate)  
+-   [CALCULATE](/sql/mdx/mdx-scripting-calculate)  
   
 -   [Ge](/sql/mdx/mdx-scripting-freeze)  
   
@@ -61,7 +60,7 @@ ms.locfileid: "66073811"
   
  Weitere Informationen zu MDX-Skriptanweisungen finden Sie unter [MDX-Skriptanweisungen &#40;MDX&#41;](/sql/mdx/mdx-scripting-statements-mdx).  
   
- [Mitglied erstellen](/sql/mdx/mdx-data-definition-create-member)  
+ [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member)  
  Die CREATE MEMBER-Anweisung erstellt berechnete Elemente. Weitere Informationen zum Erstellen berechneter Elemente finden Sie unter [Erstellen von berechneten Elementen in MDX &#40;MDX&#41;](mdx-calculated-members-building-calculated-members.md).  
   
  [CREATE SET](/sql/mdx/mdx-data-definition-create-set)  
@@ -92,6 +91,6 @@ ms.locfileid: "66073811"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [MDX-Sprachreferenz &#40;MDX-&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [Grundlagen der MDX-Skripterstellung &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
+ [Grundlegendes zu MDX-Skripts &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
   

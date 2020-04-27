@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 765d983bcd3c9e12b29235eb5ee5dac91e3c2d8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078421"
 ---
 # <a name="lesson-5-defining-relationships-between-dimensions-and-measure-groups"></a>Lektion 5: Definieren von Beziehungen zwischen Dimensionen und Measuregruppen
@@ -23,7 +23,7 @@ ms.locfileid: "66078421"
  Weitere Informationen finden Sie unter [Dimensionsbeziehungen](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
 > [!NOTE]  
->  Für alle Lektionen in diesem Lernprogramm sind abgeschlossene Projekte online verfügbar. Sie können jede Lektion aufrufen, indem Sie ein abgeschlossenes Projekt aus der vorherigen Lektion als Ausgangspunkt verwenden. [Klicken Sie hier](https://go.microsoft.com/fwlink/?LinkID=221866) , um die Beispiel Projekte für dieses Tutorial herunterzuladen.  
+>  Für alle Lektionen in diesem Lernprogramm sind abgeschlossene Projekte online verfügbar. Sie können jede Lektion aufrufen, indem Sie ein abgeschlossenes Projekt aus der vorherigen Lektion als Ausgangspunkt verwenden. [Klicken Sie hier](https://go.microsoft.com/fwlink/?LinkID=221866) , um die Beispielprojekte für dieses Lernprogramm herunterzuladen.  
   
  Diese Lektion enthält die folgenden Aufgaben:  
   

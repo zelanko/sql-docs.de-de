@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 79dfdc1534820d3637dfc06e42bd696e26db3501
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081781"
 ---
 # <a name="dimension-designer-analysis-services---multidimensional-data"></a>Dimensions-Designer (Analysis Services – Mehrdimensionale Daten)
@@ -28,14 +28,14 @@ ms.locfileid: "66081781"
   
     -   Klicken Sie mit der rechten Maustaste auf eine Dimension, und klicken Sie anschließend auf **Öffnen** oder **Sicht-Designer**.  
   
-         Oder  
+         - oder -  
   
     -   Doppelklicken Sie auf eine Dimension.  
   
 ## <a name="pages"></a>Seiten  
  Der Dimensions-Designer enthält die folgenden Seiten:  
   
- [Dimensions Struktur](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)  
+ [Dimensionsstruktur](dimension-structure-dimension-designer-analysis-services-multidimensional-data.md)  
  Mithilfe dieser Seite können Sie die Attribute, Hierarchien und Ebenen in der Dimension anzeigen und ändern.  
   
  [Attributbeziehungen](attribute-relationships-dimension-designer-analysis-services-multidimensional-data.md)  

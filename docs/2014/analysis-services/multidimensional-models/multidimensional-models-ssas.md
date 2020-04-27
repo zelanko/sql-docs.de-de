@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2839ecff951a9f1547a05b60f6957ed5976bee9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073491"
 ---
 # <a name="multidimensional-modeling-ssas"></a>Mehrdimensionale Modellierung (SSAS)
@@ -28,7 +28,7 @@ ms.locfileid: "66073491"
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Mehrdimensionale Modelllösungen &#40;SSAS&#41;](multidimensional-model-solutions-ssas.md)  
   
- [Mehrdimensionale Modell Datenbanken &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
+ [Mehrdimensionale Modelldatenbanken &#40;SSAS&#41;](multidimensional-model-databases-ssas.md)  
   
  [Verarbeitung von mehrdimensionalen Modellobjekten](processing-a-multidimensional-model-analysis-services.md)  
   
@@ -36,6 +36,6 @@ ms.locfileid: "66073491"
   
  [Power View für mehrdimensionale Modelle](power-view-for-multidimensional-models.md)  
   
- [Verwaltung von mehrdimensionalen Modellen](multidimensional-model-assemblies-management.md)  
+ [Verwaltung von mehrdimensionalen Modellassemblys](multidimensional-model-assemblies-management.md)  
   
   

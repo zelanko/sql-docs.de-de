@@ -24,10 +24,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c665c894a4e0bb3691c483a8d8bab084ac2fa276
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075437"
 ---
 # <a name="define-time-intelligence-calculations-using-the-business-intelligence-wizard"></a>Definieren von Zeitintelligenzberechnungen mithilfe des Business Intelligence-Assistenten
@@ -59,14 +59,14 @@ ms.locfileid: "66075437"
 ## <a name="apply-time-views-to-members"></a>Anwenden von Zeitsichten auf Elemente  
  Auf der Seite **Umfang der Berechnungen definieren** geben Sie die Elemente an, auf die die neuen Zeitsichten angewendet werden. Sie können die neuen Zeitsichten auf eines der folgenden Objekte anwenden:  
   
--   **Mitglieder einer Konto Dimension** Auf der Seite **Berechnungsbereich definieren** enthält die Liste **Verfügbare Measures** Konto Dimensionen. Die `Type`-Eigenschaften von Kontodimensionen sind auf `Accounts` festgelegt. Wird eine Kontodimension nicht in der Liste **Verfügbare Measures** angezeigt, können Sie die Kontointelligenz mithilfe des Business Intelligence-Assistenten auf diese Dimension anwenden. Weitere Informationen finden Sie unter [Hinzufügen von Kontointelligenz zu einer Dimension](bi-wizard-add-account-intelligence-to-a-dimension.md).  
+-   **Elemente einer Kontodimension** Kontodimensionen sind auf der Seite **Umfang der Berechnungen definieren** in der Liste **Verfügbare Measures** enthalten. Die `Type`-Eigenschaften von Kontodimensionen sind auf `Accounts` festgelegt. Wird eine Kontodimension nicht in der Liste **Verfügbare Measures** angezeigt, können Sie die Kontointelligenz mithilfe des Business Intelligence-Assistenten auf diese Dimension anwenden. Weitere Informationen finden Sie unter [Hinzufügen von Kontointelligenz zu einer Dimension](bi-wizard-add-account-intelligence-to-a-dimension.md).  
   
--   **Measures** Anstatt eine Konto Dimension anzugeben, können Sie die Measures angeben, auf die die Zeit Sichten angewendet werden sollen. Wählen Sie in diesem Fall die Sichten aus, auf die bestimmte Zeitberechnungen angewendet werden sollen. So sind beispielsweise Gesamtkapital und Passiva Daten, die auf Jahr-bis-heute basieren, und deshalb wird eine Jahr-bis-heute-Berechnung nicht auf solche Measures angewendet.  
+-   **Measures** Anstatt eine Kontodimension anzugeben, können Sie die Measures angeben, auf die die Zeitsichten angewendet werden sollen. Wählen Sie in diesem Fall die Sichten aus, auf die bestimmte Zeitberechnungen angewendet werden sollen. So sind beispielsweise Gesamtkapital und Passiva Daten, die auf Jahr-bis-heute basieren, und deshalb wird eine Jahr-bis-heute-Berechnung nicht auf solche Measures angewendet.  
   
 ## <a name="viewing-the-time-intelligence-enhancement"></a>Anzeigen der Zeitintelligenzerweiterung  
  Auf der letzten Seite des Business Intelligence-Assistenten können Sie die Änderungen anzeigen, die an der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank vorgenommen werden. Bei einer Zeitintelligenzerweiterung ändert der Assistent die ausgewählte Zeitdimension, die zugehörige Datenquellensicht und den zugehörigen Cube gemäß der Beschreibung in der folgenden Tabelle.  
   
-|Object|Change|  
+|Object|Änderung|  
 |------------|------------|  
 |Zeitdimension|Fügt ein Attribut für jede Berechnung (oder Sicht) hinzu.|  
 |Datenquellensicht|Fügt eine berechnete Spalte in der Zeittabelle für jedes neue Attribut in der Zeitdimension hinzu.|  

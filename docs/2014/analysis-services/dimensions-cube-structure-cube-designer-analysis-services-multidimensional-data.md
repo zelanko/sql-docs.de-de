@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a21ca5383d63d14908df0e7b08fb8419c0ff94a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081699"
 ---
 # <a name="dimensions-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Dimensionen (Registerkarte 'Cubestruktur', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Mithilfe des Bereichs **Dimensionen** können Sie auf der Registerkarte **Cubestruktur** im Cube-Designer Cubedimensionen anzeigen und bearbeiten, einschließlich Hierarchien und Attribute.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Hierarchien**  
  Klicken Sie auf diese Option, um die verfügbaren Cubedimensionen und die entsprechenden Cubehierarchien anzuzeigen.  
   
@@ -45,11 +45,11 @@ ms.locfileid: "66081699"
  **Dimension bearbeiten**  
  Klicken Sie auf diese Option, um den Dimensions-Designer anzuzeigen und die Datenbankdimension anzuzeigen, auf der die Cubedimension basiert. Weitere Informationen zum Dimensions-Designer finden Sie unter [Dimensions-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](dimension-designer-analysis-services-multidimensional-data.md).  
   
- **Benen**  
+ **Umbenennen**  
  Klicken Sie auf diese Option, um die ausgewählte Cubedimension für den Cube umzubenennen.  
   
 > [!NOTE]  
->  Wenn Sie eine Cubedimension im Bereich **Dimensionen** umbenennen, wird die Datenbankdimension, auf der die Cubedimension basiert, nicht umbenannt.  
+>   Wenn Sie eine Cubedimension im Bereich **Dimensionen** umbenennen, wird die Datenbankdimension, auf der die Cubedimension basiert, nicht umbenannt.  
   
 > [!NOTE]  
 >  Diese Option wird nur angezeigt, wenn eine Dimension ausgewählt ist.  
@@ -58,7 +58,7 @@ ms.locfileid: "66081699"
  Klicken Sie auf diese Option, um die ausgewählte Cubedimension für den Cube zu entfernen.  
   
 > [!NOTE]  
->  Wenn Sie eine Cubedimension im Bereich **Dimensionen** entfernen, wird die Datenbankdimension, auf der die Cubedimension basiert, nicht gelöscht.  
+>   Wenn Sie eine Cubedimension im Bereich **Dimensionen** entfernen, wird die Datenbankdimension, auf der die Cubedimension basiert, nicht gelöscht.  
   
 > [!NOTE]  
 >  Diese Option wird nur angezeigt, wenn eine Dimension ausgewählt ist.  

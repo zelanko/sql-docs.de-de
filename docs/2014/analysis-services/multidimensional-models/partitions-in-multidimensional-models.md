@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 00d17af3ce46ee5b20a730e536321140bb69f4ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073330"
 ---
 # <a name="partitions-in-multidimensional-models"></a>Partitionen in mehrdimensionalen Modellen
@@ -36,7 +36,7 @@ ms.locfileid: "66073330"
 ## <a name="remote-partitions"></a>Remotepartitionen  
  Bei Remotepartitionen handelt es sich um Partitionen, die auf einem Server definiert, aber auf einem anderen verarbeitet und gespeichert werden. Verwenden Sie Remotepartitionen, wenn Sie die Speicherung Ihrer Daten und Metadaten über mehrere Server verteilen möchten. Wenn Sie von der Entwicklung zur Produktion wechseln, wächst die Größe der zu analysierenden Daten normalerweise um ein Vielfaches. Bei so großen Datensegmenten besteht eine mögliche Alternative aus der Verteilung der Daten über mehrere Computer. Das liegt nicht nur daran, dass ein Computer nicht alle Daten fassen kann, sondern dass es sinnvoll ist, die Daten parallel auf mehr als einem Computer zu verarbeiten. Weitere Informationen finden Sie unter [Erstellen und Verwalten einer Remotepartition &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md).  
   
-## <a name="aggregations"></a>Aggregationen  
+## <a name="aggregations"></a>Aggregations  
  Aggregationen sind vorausberechnete Zusammenfassungen von Cubedaten, die die Abfrageantwortzeiten in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] beschleunigen. Sie können die Anzahl der für eine Measuregruppe erstellten Aggregationen steuern, indem Sie Grenzwerte für den Speicher und Leistungsgewinne festlegen oder den Prozess zur Erstellung von Aggregationen nach einer Weile willkürlich beenden. Mehr Aggregationen bringen nicht unbedingt Vorteile. Jede neue Aggregation verursacht Kosten sowohl beim Festplattenspeicher als auch bei der Verarbeitungszeit. Es wird empfohlen, Aggregationen für einen Leistungsgewinn von 30 % zu erstellen und die Anzahl von Aggregationen nur zu erhöhen, wenn Tests oder der laufende Betrieb dies erforderlich machen. Weitere Informationen finden Sie unter [Entwerfen von Aggregationen &#40;Analysis Services – Mehrdimensional&#41;](designing-aggregations-analysis-services-multidimensional.md).  
   
 ## <a name="partition-merging-and-editing"></a>Zusammenführen und Bearbeiten von Partitionen  
@@ -44,13 +44,13 @@ ms.locfileid: "66073330"
   
 ## <a name="related-topics"></a>Verwandte Themen  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Erstellen und Verwalten einer lokalen Partition &#40;Analysis Services&#41;](create-and-manage-a-local-partition-analysis-services.md)|Enthält Informationen zum Partitionieren von Daten mit Filtern oder unterschiedlichen Faktentabellen, ohne dass Daten dupliziert werden.|  
-|[Festlegen des Partitions Speichers &#40;Analysis Services-mehrdimensionalen&#41;](set-partition-storage-analysis-services-multidimensional.md)|Beschreibt die Speicherkonfiguration für Partitionen.|  
+|[Festlegen des Partitionsspeichers &#40;Analysis Services – Mehrdimensional&#41;](set-partition-storage-analysis-services-multidimensional.md)|Beschreibt die Speicherkonfiguration für Partitionen.|  
 |[Bearbeiten oder Löschen von Partitionen &#40;Analysis Services-mehrdimensionalen&#41;](edit-or-delete-partitions-analyisis-services-multidimensional.md)|Beschreibt, wie Partitionen angezeigt und bearbeitet werden.|  
-|[Zusammenführen von Partitionen in Analysis Services &#40;SSAS-Multidimensional&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)|Enthält Informationen zum Zusammenführen von Partitionen, die unterschiedliche Faktentabellen oder Datenslices aufweisen, ohne dass Daten dupliziert werden.|  
+|[Zusammenführen von Partitionen in Analysis Services &#40;SSAS – mehrdimensional&#41;](merge-partitions-in-analysis-services-ssas-multidimensional.md)|Enthält Informationen zum Zusammenführen von Partitionen, die unterschiedliche Faktentabellen oder Datenslices aufweisen, ohne dass Daten dupliziert werden.|  
 |[Einrichten des Rückschreibens von Partitionen](set-partition-writeback.md)|Enthält Anweisungen zum Aktivieren des Schreibzugriffs für eine Partition.|  
-|[Erstellen und Verwalten einer Remote Partition &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)|Beschreibt, wie eine Remotepartition erstellt und verwaltet wird.|  
+|[Erstellen und Verwalten einer Remotepartition &#40;Analysis Services&#41;](create-and-manage-a-remote-partition-analysis-services.md)|Beschreibt, wie eine Remotepartition erstellt und verwaltet wird.|  
   
   

@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41579af945bcf546eb2c32b5a337ba10bd59510a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070181"
 ---
 # <a name="result-pane-mining-model-prediction-view"></a>Ergebnisbereich (Miningmodellvorhersagesicht)
   Der Bereich **Ergebnisse** zeigt die Ergebnisse der in der **Entwurfs** -Ansicht des Vorhersageabfrage-Generators entworfenen Data Mining-Vorhersageabfrage an. Sie können eine Auswahl des Rasters oder alle Ergebnisse in die Zwischenablage kopieren.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Zur Abfrageentwurfssicht wechseln**  
  Klicken Sie hier, um zwischen den Bereichen **Entwurf**, **Abfrage**und **Ergebnis** zu wechseln.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "66070181"
  Öffnet das Dialogfeld **Ergebnis der Data Mining-Abfrage speichern** .  
   
  **SINGLETON-Abfrage**  
- Damit erstellen Sie eine SINGLETON-Abfrage. Die Tabelle **Eingabetabelle(n) auswählen** wird durch die Tabelle **SINGLETON-Abfrageeingabe** ersetzt. Die Ergebnisse der aktuellen Vorhersageabfrage gehen verloren, wenn Sie zu einer SINGLETON-Abfrage umschalten.  
+ Damit erstellen Sie eine SINGLETON-Abfrage. Die Tabelle **Eingabetabelle(n) auswählen** wird durch die Tabelle **Singleton-Abfrageeingabe** ersetzt. Die Ergebnisse der aktuellen Vorhersageabfrage gehen verloren, wenn Sie zu einer SINGLETON-Abfrage umschalten.  
   
  **Abfrageergebnis aktualisieren**  
  Verarbeitet die Vorhersageabfrage erneut.  
@@ -38,6 +38,6 @@ ms.locfileid: "66070181"
 ## <a name="see-also"></a>Weitere Informationen  
  [Vorhersage Abfrage-Generator &#40;Data Mining-&#41;](prediction-query-builder-data-mining.md)   
  [Schnittstellen für Data Mining-Abfragen](data-mining/data-mining-query-tools.md)   
- [Data Mining-Erweiterungen &#40;DMX-&#41;-Anweisungs Referenz](/sql/dmx/data-mining-extensions-dmx-statements)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

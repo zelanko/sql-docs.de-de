@@ -13,27 +13,27 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3fb4771c7345eb270e91a377d2755a25606f9a93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080415"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>Eingabeauswahl (Registerkarte, Mininggenauigkeitsdiagramm-Sicht)
   Mithilfe der Registerkarte **Eingabeauswahl** von **Mininggenauigkeitsdiagramm** können Sie die Datenquelle angeben, aus der die zum Testen des Modells und zum Erstellen des Genauigkeitsdiagramms verwendeten Daten stammen.  
   
- **Weitere Informationen finden Sie unter:** [Testen und validieren &#40;Data Mining-&#41;](data-mining/testing-and-validation-data-mining.md)  
+ **Weitere Informationen:** [Tests und Überprüfung &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
   
-## <a name="options"></a>Tastatur  
- **Synchronisieren von Vorhersage**  **Spalten und-Werten**  
+## <a name="options"></a>Optionen  
+ **Vorhersagespalten und**  **-werte synchronisieren**  
  Aktivieren Sie diese Option, um die vorhersagbaren Attribute des Rasters so zu koordinieren, dass sie (selbst wenn sie einen anderen Namen tragen) beim Modelltraining aus der gleichen vorhersagbaren Miningstrukturspalte abgeleitet werden.  
   
- **Hinweis** Diese Option ist standardmäßig ausgewählt. Deaktivieren Sie diese Option nur, wenn Sie sicher sind, dass zwei Miningstrukturspalten aus der gleichen zugrunde liegenden relationalen oder mehrdimensionalen Quelle abgeleitet sind und die Spalten den gleichen Status aufweisen bzw. auf die gleiche Weise diskretisiert wurden.  
+ **Hinweis** Diese Option ist standardmäßig aktiviert. Deaktivieren Sie diese Option nur, wenn Sie sicher sind, dass zwei Miningstrukturspalten aus der gleichen zugrunde liegenden relationalen oder mehrdimensionalen Quelle abgeleitet sind und die Spalten den gleichen Status aufweisen bzw. auf die gleiche Weise diskretisiert wurden.  
   
  **Wählen Sie die vorhersagbaren Miningmodellspalten aus, die im Prognosegütediagramm angezeigt werden sollen**  
  Ein Raster mit den Spalten, die steuern, welche Modelle das Prognosegütediagramm enthalten soll und wie diese Modelle im Prognosegütediagramm verwendet werden sollen.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Anzeigen**|Aktivieren Sie das Kontrollkästchen neben dem Namen jeder vorhersagbaren Spalte im Miningmodell, die im Diagramm angezeigt werden soll.<br /><br /> Wenn die Anzeige des Diagramms zu komplex wird, deaktivieren Sie das Kontrollkästchen neben mindestens einer Spalte, um das Diagramm zu vereinfachen.<br /><br /> Hinweis: Zum Erstellen eines Genauigkeitsdiagramms muss mindestens eine Spalte ausgewählt sein.|  
 |**Mining Modell**|Listet die Miningmodelle auf, die in der Miningstruktur enthalten sind.|  
@@ -43,11 +43,11 @@ ms.locfileid: "66080415"
  **Dataset auswählen, das für das Genauigkeitsdiagramm verwendet werden soll**  
  Eine Optionsgruppe, die drei Optionen zum Angeben von Genauigkeitstestdaten enthält.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**Testfälle für Mining Modell verwenden**|Verwenden Sie den Testsatz, der beim Partitionieren der Miningstruktur erstellt wurde, und wenden Sie den für das Modell definierten Filter an. Weitere Informationen zu Modellfiltern finden Sie unter [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-models-analysis-services-data-mining.md)|  
-|**Testfälle für Mining Struktur verwenden**|Verwenden Sie den Testsatz, der beim Partitionieren der Miningstruktur erstellt wurde.|  
-|**Anderes Dataset angeben**|Geben Sie eine Tabelle aus einer vorhandenen Datenquellensicht an, die als Testdataset verwendet werden soll.|  
+|**Testfälle für Miningmodell verwenden**|Verwenden Sie den Testsatz, der beim Partitionieren der Miningstruktur erstellt wurde, und wenden Sie den für das Modell definierten Filter an. Weitere Informationen zu Modellfiltern finden Sie unter [Filters for Mining Models &#40;Analysis Services - Data Mining&#41;](data-mining/mining-models-analysis-services-data-mining.md)|  
+|**Testfälle für Miningstruktur verwenden**|Verwenden Sie den Testsatz, der beim Partitionieren der Miningstruktur erstellt wurde.|  
+|**Anderes Dataset verwenden**|Geben Sie eine Tabelle aus einer vorhandenen Datenquellensicht an, die als Testdataset verwendet werden soll.|  
   
 ## <a name="filtering-options"></a>Filteroptionen  
  Wenn Sie die Option **Anderes Dataset verwenden**auswählen, können Sie eine Datenquellensicht definieren und Filter erstellen, die auf die betreffenden Daten angewendet werden sollen. Wenn Sie einen Filter erstellen, erstellen Sie eine WHERE-Klausel in der Abfrage, die die Testdaten aus der Datenquellensicht zurückgibt.  
@@ -61,7 +61,7 @@ ms.locfileid: "66080415"
   
  Weitere Informationen finden Sie unter [Spaltenzuordnung angeben &#40;Dialogfeld, Mininggenauigkeitsdiagramm&#41;](specify-column-mapping-dialog-box-mining-accuracy-chart.md).  
   
- **Filter Ausdruck**  
+ **Filterausdruck**  
  Zeigt die Filterbedingung an, die Sie mit den Filter-Editoren erstellt haben.  
   
  **Filter-Editor öffnen**  
@@ -71,6 +71,6 @@ ms.locfileid: "66080415"
  [Test-und validierungsaufgaben und Anleitungen &#40;Data Mining-&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
  [Mining Genauigkeits Diagramm-Designer &#40;Data Mining-&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Anwenden eines Filters auf ein Mining Modell](data-mining/apply-a-filter-to-a-mining-model.md)   
- [Filter für Mining Modelle &#40;Analysis Services Data Mining-&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
+ [Filter für Miningmodelle &#40;Analysis Services – Data Mining&#41;](data-mining/mining-models-analysis-services-data-mining.md)  
   
   

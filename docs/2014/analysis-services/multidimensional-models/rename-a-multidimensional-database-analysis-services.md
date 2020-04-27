@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 28ec21d4cb0cda01852316c1198bd68df3058ffc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073152"
 ---
 # <a name="rename-a-multidimensional-database-analysis-services"></a>Umbenennen einer mehrdimensionalen Datenbank (Analysis Services)
@@ -54,6 +54,6 @@ ms.locfileid: "66073152"
  [Konfigurieren von Server Eigenschaften in Analysis Services](../server-properties/server-properties-in-analysis-services.md)   
  [&#40;Analysis Services Eigenschaften für mehrdimensionale Datenbanken festlegen&#41;](set-multidimensional-database-properties-analysis-services.md)   
  [Konfigurieren von Analysis Services Projekteigenschaften &#40;SSDT&#41;](configure-analysis-services-project-properties-ssdt.md)   
- [Bereitstellen von Analysis Services Projekten &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
+ [Bereitstellen von Analysis Services-Projekten &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

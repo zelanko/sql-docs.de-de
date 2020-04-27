@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2b1d0c01be4901e771278c82c4277c280aeb43ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074519"
 ---
 # <a name="building-cell-calculations-in-mdx-mdx"></a>Erstellen von Zellenberechnungen in MDX (MDX)
@@ -34,11 +34,11 @@ ms.locfileid: "66074519"
   
  In Bezug auf den Gültigkeitsbereich sind berechnete Zellen sowohl mit benannten Mengen als auch mit berechneten Elementen vergleichbar, da berechnete Zellen temporär für die Dauer einer Sitzung oder einer einzelnen Abfrage erstellt oder global als Teil eines Cubes zur Verfügung gestellt werden können.  
   
--   **Abfrage** Bereich Verwenden Sie das with-Schlüsselwort, um eine berechnete Zelle zu erstellen, die als Teil einer MDX-Abfrage definiert ist und deren Bereich daher auf die Abfrage beschränkt ist. Anschließend können Sie die berechnete Zelle in einer MDX-SELECT-Anweisung verwenden. Bei dieser Vorgehensweise kann die mit dem `WITH`-Schlüsselwort erstellte berechnete Zelle geändert werden, ohne dass die SELECT-Anweisung davon beeinflusst wird.  
+-   **Im Bereich einer Abfrage** Mit dem WITH-Schlüsselwort können Sie eine berechnete Zelle erstellen, die als Teil einer MDX-Abfrage definiert ist und deren Bereich somit auf die Abfrage beschränkt ist. Anschließend können Sie die berechnete Zelle in einer MDX-SELECT-Anweisung verwenden. Bei dieser Vorgehensweise kann die mit dem `WITH`-Schlüsselwort erstellte berechnete Zelle geändert werden, ohne dass die SELECT-Anweisung davon beeinflusst wird.  
   
      Weitere Informationen zum Erstellen berechneter Elemente mithilfe des WITH-Schlüsselworts finden Sie unter [Erstellen von Zellenberechnungen im Bereich einer Abfrage &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md).  
   
--   **Sitzungs** bezogen Um ein berechnetes Element zu erstellen, dessen Bereich breiter ist als der Kontext der Abfrage, d. h., der Gültigkeitsbereich die Gültigkeitsdauer der MDX-Sitzung ist, verwenden Sie entweder die CREATE Cell-Berechnung oder die ALTER CUBE-Anweisung.  
+-   **Im Bereich einer Sitzung** Mit der CREATE CELL CALCULATION- oder der ALTER CUBE-Anweisung können Sie ein berechnetes Element erstellen, dessen Bereich mehr als den Kontext der Abfrage umfasst, dessen Bereich nämlich die Dauer der MDX-Sitzung ist.  
   
      Weitere Informationen zum Erstellen berechneter Elemente in einer Sitzung mithilfe der CREATE CELL CALCULATION- oder der ALTER CUBE-Anweisung finden Sie unter [Erstellen berechneter Zellen im Bereich einer Sitzung](mdx-cell-calculations-session-scoped-calculated-cells.md).  
   
@@ -46,6 +46,6 @@ ms.locfileid: "66074519"
  [ALTER CUBE-Anweisung &#40;MDX-&#41;](/sql/mdx/mdx-data-definition-alter-cube)   
  [Create Cell Berechnung-Anweisung &#40;MDX-&#41;](/sql/mdx/mdx-data-definition-create-cell-calculation)   
  [Erstellen von Zellen Berechnungen im Bereich einer Abfrage &#40;MDX-&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)   
- [Grundlagen der MDX-Abfrage &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

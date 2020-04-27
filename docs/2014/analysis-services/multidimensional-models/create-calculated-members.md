@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f6b7ca79cefee4d19593d20320da13b4253a89ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076277"
 ---
 # <a name="create-calculated-members"></a>Erstellen von berechneten Elementen
@@ -42,12 +42,12 @@ ms.locfileid: "66076277"
   
  Hierarchien werden in Ebenen unterteilt, die Elemente enthalten. Jedes Element erzeugt eine Überschrift. Während des Anzeigens der Daten in einem Cube können Endbenutzer einen Drilldown von einer ausgewählten Überschrift zu zuvor nicht angezeigten untergeordneten Überschriften ausführen. Die Überschrift für das berechnete Element wird zu der Ebene hinzugefügt, die sich direkt unter dem von Ihnen ausgewählten übergeordneten Element befindet.  
   
- **Ausdruck**  
+ **expression**  
  Geben Sie den Ausdruck an, der die Werte des berechneten Elements erzeugt. Dieser Ausdruck kann in MDX (Multidimensional Expressions) geschrieben sein. Der Ausdruck kann Folgendes enthalten:  
   
 -   Datenausdrücke, die für die Komponenten des Cubes stehen, wie Dimensionen, Ebenen, Measures usw.  
   
--   Arithmetische Operatoren  
+-   Arithmetische operatoren  
   
 -   Zahlen  
   

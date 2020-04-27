@@ -17,18 +17,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 616c39d03ff8081c209a80dcca912d831bcef1ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081677"
 ---
 # <a name="discontinued-analysis-services-functionality-in-sql-server-2014"></a>Nicht mehr unterstützte Analysis Services-Funktionalität in SQL Server 2014
   In diesem Thema werden die Funktionen von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] beschrieben, die in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]nicht mehr verfügbar sind.  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>Nicht mehr unterstützte Funktionen in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="discontinued-features-in-sssql14"></a>Nicht mehr unterstützte Funktionen in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
   
-|Category|Als veraltet markierte Funktion|Ersatz|  
+|Kategorie|Als veraltet markierte Funktion|Ersatz|  
 |--------------|------------------------|-----------------|  
 |Lokale Cubes|InsertInto (Verbindungszeichenfolgen-Eigenschaft)|Ursprüngliche Verbindungszeichenfolgensyntax zum Auffüllen lokaler Cubes wird durch die Anweisung zum Erstellen globaler Cubes ersetzt. Weitere Informationen finden Sie unter [Create Global Cube Statement &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube).|  
 |Lokale Cubes|CreateCube (Verbindungszeichenfolgen-Eigenschaft)|Ursprüngliche Verbindungszeichenfolgensyntax zum Auffüllen lokaler Cubes wird durch die Anweisung zum Erstellen globaler Cubes ersetzt. Weitere Informationen finden Sie unter [Create Global Cube Statement &#40;MDX&#41;](/sql/mdx/mdx-data-definition-create-global-cube).|  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070319"
 ---
 # <a name="lesson-3-rename-columns"></a>Lektion 3: Umbenennen von Spalten
@@ -26,13 +26,13 @@ ms.locfileid: "66070319"
  Geschätzte Zeit zum Bearbeiten dieser Lektion: **20 Minuten**  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
- Dieses Thema ist Teil eines Tutorials zur Tabellenmodellierung, das in der vorgegebenen Reihenfolge durchgeführt werden sollte. Sie sollten vor dem Ausführen der Tasks in dieser Lektion die vorherige Lektion abgeschlossen haben: [Lektion 2: Hinzufügen von Daten](lesson-2-add-data.md).  
+ Dieses Thema ist Teil eines Tutorials zur Tabellenmodellierung, das in der richtigen Reihenfolge absolviert werden sollte. Sie sollten vor dem Ausführen der Tasks in dieser Lektion die vorherige Lektion abgeschlossen haben: [Lektion 2: Hinzufügen von Daten](lesson-2-add-data.md).  
   
 ## <a name="rename-columns"></a>Umbenennen von Spalten  
   
 #### <a name="to-rename-columns"></a>So benennen Sie Spalten um  
   
-1.  Klicken Sie im Modell-Designer auf die Tabelle (Registerkarte) **Customer**.  
+1.  Klicken Sie im Modell-Designer auf die Tabelle (Registerkarte) **Customer** .  
   
      Wenn Sie auf eine Registerkarte klicken, wird diese Tabelle im Modell-Designer-Fenster aktiv.  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66070319"
     |Quellname|Anzeigename|  
     |-----------------|-------------------|  
     |GeographyKey|Geography Id|  
-    |CustomerAlternateKey|Customer Alternate Id|  
+    |CustomerAlternateKey|Customer Alternate ID|  
     |FirstName|First Name (Vorname)|  
     |MiddleName|Middle Name|  
     |LastName|Last Name (Nachname)|  
@@ -73,14 +73,14 @@ ms.locfileid: "66070319"
   
     |Quellname|Anzeigename|  
     |-----------------|-------------------|  
-    |FullDateAlternateKey|Date|  
+    |FullDateAlternateKey|Datum|  
     |DayNumberOfWeek|Day Number of Week|  
     |EnglishDayNameOfWeek|Day Name|  
     |DayNumberOfMonth|Day of Month|  
     |DayNumberOfYear|Day of Year|  
     |WeekNumberOfYear|Week Number of Year|  
     |EnglishMonthName|Month Name|  
-    |MonthNumberOfYear|Month (Monat)|  
+    |MonthNumberOfYear|Monat|  
     |CalendarQuarter|Calendar Quarter|  
     |CalendarYear|Calendar Year|  
     |CalendarSemester|Calendar Semester|  
@@ -88,7 +88,7 @@ ms.locfileid: "66070319"
     |FiscalYear|Fiscal Year|  
     |FiscalSemester|Fiscal Semester|  
   
-     **Human**  
+     **Geografie**  
   
     |Quellname|Anzeigename|  
     |-----------------|-------------------|  
@@ -100,7 +100,7 @@ ms.locfileid: "66070319"
     |PostalCode|Postleitzahl|  
     |SalesTerritoryKey|Sales Territory Id|  
   
-     **Produkt**  
+     **Product**  
   
     |Quellname|Anzeigename|  
     |-----------------|-------------------|  
@@ -121,7 +121,7 @@ ms.locfileid: "66070319"
     |Dealer Price|Dealer Price|  
     |ModelName|Model Name|  
     |LargePhoto|Large Photo|  
-    |EnglishDescription|BESCHREIBUNG|  
+    |EnglishDescription|Beschreibung|  
     |StartDate|Product Start Date|  
     |EndDate|Product End Date|  
     |Status|Product Status|  
@@ -143,7 +143,7 @@ ms.locfileid: "66070319"
     |EnglishProductSubcategoryName|Product Subcategory Name|  
     |ProductCategoryKey|Product Category Id|  
   
-     **Internet Verkäufe**  
+     **Internetumsätze**  
   
     |Quellname|Anzeigename|  
     |-----------------|-------------------|  

@@ -11,17 +11,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c17ed69cb8f64e08023e2e1473ad2cbc6624e403
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078781"
 ---
-# <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Lektion 3: Ändern von Maßen, Attributen und Hierarchien
+# <a name="lesson-3-modifying-measures-attributes-and-hierarchies"></a>Lektion 3: Ändern von Measures, Attributen und Hierarchien
   Nach dem Definieren des Anfangscubes können Sie den Cube nun besser verwendbar und benutzerfreundlicher machen. Fügen Sie zu diesem Zweck Hierarchien hinzu, die die Navigation und Aggregation auf verschiedenen Ebenen unterstützen, wenden Sie Formate auf bestimmte Measures an und definieren Sie Berechnungen und Beziehungen.  
   
 > [!NOTE]  
->  Für alle Lektionen in diesem Lernprogramm sind abgeschlossene Projekte online verfügbar. Sie können jede Lektion aufrufen, indem Sie ein abgeschlossenes Projekt aus der vorherigen Lektion als Ausgangspunkt verwenden. [Klicken Sie hier](https://go.microsoft.com/fwlink/?LinkID=221866) , um die Beispiel Projekte für dieses Tutorial herunterzuladen.  
+>  Für alle Lektionen in diesem Lernprogramm sind abgeschlossene Projekte online verfügbar. Sie können jede Lektion aufrufen, indem Sie ein abgeschlossenes Projekt aus der vorherigen Lektion als Ausgangspunkt verwenden. [Klicken Sie hier](https://go.microsoft.com/fwlink/?LinkID=221866) , um die Beispielprojekte für dieses Lernprogramm herunterzuladen.  
   
  Diese Lektion enthält die folgenden Aufgaben:  
   

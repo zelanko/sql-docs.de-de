@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 66f0d74a3ced6b803249afb93eac85f2681eca6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078102"
 ---
 # <a name="lift-chart-tab-mining-accuracy-chart-view"></a>Prognosegütediagramm (Registerkarte, Mininggenauigkeitsdiagramm-Sicht)
@@ -30,7 +30,7 @@ ms.locfileid: "66078102"
   
  Allgemeine Informationen zu Methoden zum Messen der Genauigkeit eines Miningmodells finden Sie unter [Prognosegütediagramm &#40;Analysis Services – Data Mining&#41;](data-mining/lift-chart-analysis-services-data-mining.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Diagrammtyp**  
  Legt den im Viewer angezeigten Diagrammtyp fest. Sie können entweder **Prognosegütediagramm** oder **Gewinndiagramm**auswählen.  
   
@@ -39,12 +39,12 @@ ms.locfileid: "66078102"
   
  Das Gewinndiagramm ist nicht verfügbar, wenn auf der Registerkarte **Spaltenzuordnung** eine kontinuierliche vorhersagbare Spalte ausgewählt wurde.  
   
- **Copy**  
+ **Kopieren**  
  Kopiert das Diagramm in die Zwischenablage.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Mining Genauigkeits Diagramm-Designer &#40;Data Mining-&#41;](mining-accuracy-chart-designer-data-mining.md)   
  [Test-und validierungsaufgaben und Anleitungen &#40;Data Mining-&#41;](data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)   
- [Testen und validieren &#40;Data Mining-&#41;](data-mining/testing-and-validation-data-mining.md)  
+ [Tests und Überprüfung &#40;Data Mining&#41;](data-mining/testing-and-validation-data-mining.md)  
   
   

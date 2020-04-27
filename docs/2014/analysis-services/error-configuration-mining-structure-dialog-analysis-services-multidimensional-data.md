@@ -13,25 +13,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e8973d9dd6fb5d96afc9cf66ded4b894f0dfe6df
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081370"
 ---
 # <a name="error-configuration-mining-structure-dialog-box-analysis-services---multidimensional-data"></a>Fehlerkonfiguration (Dialogfeld "Miningstruktur") (Analysis Services &ndash; Mehrdimensionale Daten)
   Auf der Seite **Fehlerkonfiguration** im Dialogfeld **Miningstruktureigenschaften** können Sie in **SQL Server Management Studio** die Eigenschaften der Fehlerkonfiguration einer Miningstruktur in einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank festlegen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Standardfehler Konfiguration verwenden**  
  Aktivieren Sie diese Option, um für Objekte im Verarbeitungsvorgang die Standardfehlerkonfiguration zu verwenden.  
   
  **Schlüsselfehler Aktion**  
  Wählen Sie eine der folgenden Aktionen aus, die ausgeführt werden soll, wenn während der Verarbeitung ein neuer Schlüssel erkannt wird, der nicht ermittelt werden kann:  
   
--   In " **Unknown konvertieren** " aggregiert die Informationen für den Datensatz in das unbekannte Element.  
+-   Mit**In unbekanntes Element konvertieren** werden die Informationen für den Datensatz im unbekannten Element zusammengesetzt.  
   
--   Der **Datensatz verwerfen** schließt die Informationen für den Datensatz von der Verarbeitung mit dem-Objekt aus.  
+-   Mit**Datensatz verwerfen** werden die Informationen für den Datensatz von der Verarbeitung mit dem Objekt ausgeschlossen.  
   
  **Fehler Anzahl ignorieren**  
  Klicken Sie hier, um bei der Verarbeitung auftretende Fehler grundsätzlich zu ignorieren.  
@@ -45,47 +45,47 @@ ms.locfileid: "66081370"
  **Aktion bei Fehler**  
  Wählen Sie eine der folgenden Aktionen aus, die ausgeführt wird, wenn die Anzahl der Fehler den in **Anzahl von Fehlern**angegebenen Wert überschreitet:  
   
--   Durch die **Verarbeitung beenden** wird der Verarbeitungsvorgang beendet.  
+-   Mit**Verarbeitung beenden** wird der Verarbeitungsvorgang beendet.  
   
--   Wenn die **Protokollierung beendet** wird, werden Fehler protokolliert, der Verarbeitungsvorgang wird jedoch fortgesetzt  
+-   Mit**Protokollierung beenden** werden Protokollierungsfehler beendet, während der Verarbeitungsvorgang weiter ausgeführt wird.  
   
  **Schlüssel nicht gefunden**  
  Geben Sie eine der folgenden Aktionen an, die ausgeführt wird, wenn ein Schlüssel bei der Verarbeitung eines Objekts nicht gefunden wird:  
   
 -   **Fehler ignorieren** ignoriert den Fehler.  
   
--   **Bericht und Fortsetzung** meldet den Fehler und setzt den Verarbeitungsvorgang fort  
+-   Mit**Melden und Vorgang fortsetzen** wird der Fehler gemeldet und der Verarbeitungsvorgang fortgesetzt.  
   
--   **Melden und beenden** meldet den Fehler und beendet den Verarbeitungsvorgang.  
+-   Mit**Melden und Vorgang beenden** wird der Fehler gemeldet und der Verarbeitungsvorgang beendet.  
   
  **Doppelter Schlüssel**  
  Geben Sie eine der folgenden Aktionen an, die ausgeführt wird, wenn bei der Verarbeitung eines Objekts ein doppelter Schlüssel gefunden wird:  
   
 -   **Fehler ignorieren** ignoriert den Fehler.  
   
--   **Bericht und Fortsetzung** meldet den Fehler und setzt den Verarbeitungsvorgang fort  
+-   Mit**Melden und Vorgang fortsetzen** wird der Fehler gemeldet und der Verarbeitungsvorgang fortgesetzt.  
   
--   **Melden und beenden** meldet den Fehler und beendet den Verarbeitungsvorgang.  
+-   Mit**Melden und Vorgang beenden** wird der Fehler gemeldet und der Verarbeitungsvorgang beendet.  
   
  **NULL-Schlüssel in unbekanntes konvertiert**  
  Geben Sie eine der folgenden Aktionen an, die ausgeführt wird, wenn dem unbekannten Element bei der Verarbeitung des Objekts ein Elementschlüssel NULL hinzugefügt wird.  
   
 -   **Fehler ignorieren** ignoriert den Fehler.  
   
--   **Bericht und Fortsetzung** meldet den Fehler und setzt den Verarbeitungsvorgang fort  
+-   Mit**Melden und Vorgang fortsetzen** wird der Fehler gemeldet und der Verarbeitungsvorgang fortgesetzt.  
   
--   **Melden und beenden** meldet den Fehler und beendet den Verarbeitungsvorgang.  
+-   Mit**Melden und Vorgang beenden** wird der Fehler gemeldet und der Verarbeitungsvorgang beendet.  
   
  **NULL-Schlüssel nicht zulässig**  
  Geben Sie eine der folgenden Aktionen an, die ausgeführt wird, wenn bei der Verarbeitung eines Objekts ein unzulässiger NULL-Schlüssel gefunden wird.  
   
 -   **Fehler ignorieren** ignoriert den Fehler.  
   
--   **Bericht und Fortsetzung** meldet den Fehler und setzt den Verarbeitungsvorgang fort  
+-   Mit**Melden und Vorgang fortsetzen** wird der Fehler gemeldet und der Verarbeitungsvorgang fortgesetzt.  
   
--   **Melden und beenden** meldet den Fehler und beendet den Verarbeitungsvorgang.  
+-   Mit**Melden und Vorgang beenden** wird der Fehler gemeldet und der Verarbeitungsvorgang beendet.  
   
- **Fehlerprotokoll Pfad**  
+ **Fehlerprotokollpfad**  
  Geben Sie den vollständigen Pfad und Dateinamen für die Fehlerprotokolldatei ein.  
   
 ## <a name="see-also"></a>Weitere Informationen  

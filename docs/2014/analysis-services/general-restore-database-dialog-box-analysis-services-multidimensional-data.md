@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2ebc1bc72a15545412adcc71d10feb08f3f05b16
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080947"
 ---
 # <a name="general-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Allgemein (Dialogfeld Datenbank wiederherstellen) (Analysis Services – Mehrdimensionale Daten)
@@ -32,7 +32,7 @@ ms.locfileid: "66080947"
   
 -   Klicken Sie in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]mit der rechten Maustaste entweder auf den Ordner **Datenbanken** einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Instanz oder auf eine Datenbank im **Objekt-Explorer**, klicken Sie auf **Wiederherstellen**, und unter **Seite auswählen**klicken Sie anschließend auf **Allgemein**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Skript**  
  Erstellt ein Wiederherstellungsskript, das auf den im Dialogfeld aktivierten Optionen basiert. Das Wiederherstellungsskript wird in der [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Skriptsprache (ASSL) geschrieben.  
   
@@ -65,10 +65,10 @@ ms.locfileid: "66080947"
   
  Wenn diese Option ausgewählt ist, können Sie den Umfang der Sicherheitsinformationen aus der dann verfügbaren Dropdownliste auswählen. Die folgenden Optionen sind verfügbar:  
   
-|Option|BESCHREIBUNG|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |**Alle kopieren**|Stellt die Datenbankrollen und die den Rollen zugeordneten Benutzerkonten wieder her, die in der Sicherungsdatei enthalten sind.|  
-|**Mitgliedschaft überspringen**|Stellt die Datenbankrollen wieder her, die in der Sicherungsdatei enthalten sind, nicht aber die den Rollen zugeordneten Benutzerkonten.|  
+|**Mitgliedschaft auslassen**|Stellt die Datenbankrollen wieder her, die in der Sicherungsdatei enthalten sind, nicht aber die den Rollen zugeordneten Benutzerkonten.|  
   
  **Kennwort**  
  Wenn die Sicherungsdatei verschlüsselt ist, geben Sie das Kennwort ein, dass zur Verschlüsselung der Sicherungsdatei verwendet wurde.  

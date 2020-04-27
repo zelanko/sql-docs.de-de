@@ -17,16 +17,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5a8cdeb912d1ead21571f1ec7f86e15b0d009514
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072861"
 ---
 # <a name="data-sources-supported-ssas-multidimensional"></a>Unterstützte Datenquellen (SSAS Multidimensional)
   In diesem Thema werden die Datenquellentypen beschrieben, die Sie in einem tabellarischen Modell verwenden können.  
   
-##  <a name="bkmk_supported_ds"></a>Unterstützte Datenquellen  
+##  <a name="supported-data-sources"></a><a name="bkmk_supported_ds"></a>Unterstützte Datenquellen  
  Sie können Daten aus den Datenquellen in der folgenden Tabelle abrufen. Bei der Installation von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]werden die für die einzelnen Datenquellen aufgelisteten Anbieter nicht von Setup installiert. Einige Anbieter wurden möglicherweise bereits mit anderen Anwendungen auf dem Computer installiert. In anderen Fällen müssen Sie den Anbieter herunterladen und installieren.  
   
 > [!NOTE]  
@@ -57,6 +57,6 @@ ms.locfileid: "66072861"
 ## <a name="see-also"></a>Weitere Informationen  
  [Unterstützte Datenquellen &#40;tabellarischen SSAS-&#41;](../tabular-models/data-sources-supported-ssas-tabular.md)   
  [Datenquellen in mehrdimensionalen Modellen](data-sources-in-multidimensional-models.md)   
- [Datenquellensichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md)  
+ [Datenquellsichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md)  
   
   

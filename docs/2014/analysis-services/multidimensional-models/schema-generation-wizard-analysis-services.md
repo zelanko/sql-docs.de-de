@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2f8757044ba15f7b8c2567dd88e1ef3637d2e3f7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073071"
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>Schemagenerierungs-Assistent (Analysis Services)
-  
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] unterstützt zwei Methoden der Verwendung relationaler Schemas, wenn OLAP-Objekte innerhalb von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekten oder -Datenbanken definiert werden. Normalerweise erfolgt die Definition von OLAP-Objekten basierend auf einem logischen Datenmodell, das in einer Datenquellensicht innerhalb eines [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts oder einer Datenbank gebildet wird. Diese Datenquellensicht wird basierend auf Schemaelementen aus einer oder mehreren relationalen Datenquellen (wie in der Datenquellensicht angepasst) definiert.  
   
  Alternativ können Sie zuerst OLAP-Objekte definieren und dann eine Datenquellensicht, eine Datenquelle und das zugrunde liegende relationale Datenbankschema generieren, von dem diese OLAP-Objekte unterstützt werden. Diese relationale Datenbank wird als Themenbereichsdatenbank bezeichnet.  
@@ -38,9 +37,9 @@ ms.locfileid: "66073071"
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  In der folgenden Tabelle sind die zusätzlichen Themen in diesem Abschnitt aufgeführt, in denen die Verwendung des Schemagenerierungs-Assistenten erklärt wird.  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
-|[Verwenden Sie den Schemagenerierungs-Assistenten &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)|Beschreibt, wie das Schema für die Themenbereichs- und Stagingbereichsdatenbanken generiert wird.|  
+|[Verwenden des Schemagenerierungs-Assistenten &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)|Beschreibt, wie das Schema für die Themenbereichs- und Stagingbereichsdatenbanken generiert wird.|  
 |[Grundlegendes zu Datenbankschemas](understanding-the-database-schemas.md)|Beschreibt das Schema, das für die Themenbereichs- und Stagingbereichsdatenbanken generiert wird.|  
 |[Grundlegendes zur inkrementellen Generierung](understanding-incremental-generation.md)|Beschreibt die Funktionen der inkrementellen Generierung des Schemagenerierungs-Assistenten.|  
   

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97e32b80d19675b3763101d1c226529a48e23e68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076770"
 ---
 # <a name="build-analysis-services-projects-ssdt"></a>Erstellen von Analysis Services-Projekten (SSDT)
@@ -41,15 +41,15 @@ ms.locfileid: "66076770"
   
  Ist die Überprüfung erfolgreich, werden in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] die XML-Dateien generiert. Nach der Erstellung enthält der Ausgabeordner die in der folgenden Tabelle beschriebenen Dateien.  
   
-|Dateien (im Ordner bin)|BESCHREIBUNG|  
+|Dateien (im Ordner bin)|Beschreibung|  
 |-----------------------------|-----------------|  
-|*ProjectName*. asdatabase|Enthält die ASSL-Elemente, die die Metadaten für die Objekte des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts in einer Bereitstellungsskriptdatei definieren. Diese Datei wird von der Bereitstellungs-Engine zum Bereitstellen der Objekte in einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbank verwendet.|  
-|*ProjectName*. configsettings|Enthält während der Bereitstellung verwendete Konfigurationseinstellungen, die Sie direkt oder im Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ändern können (z. B. die Verbindungszeichenfolge für die Datenquellen).|  
-|*ProjectName*. deploymenttargets|Enthält die während der Bereitstellung verwendeten Zieleinstellungen, die Sie direkt oder im Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ändern können (z. B. den Server- und Datenbanknamen).|  
-|*ProjectName*. deploymentoptions|Enthält verschiedene während der Bereitstellung verwendete Optionseinstellungen, die Sie direkt oder im Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ändern können (z. B. Speicherorte).|  
+|*Projectname*.asdatabase|Enthält die ASSL-Elemente, die die Metadaten für die Objekte des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts in einer Bereitstellungsskriptdatei definieren. Diese Datei wird von der Bereitstellungs-Engine zum Bereitstellen der Objekte in einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenbank verwendet.|  
+|*Projectname*.configsettings|Enthält während der Bereitstellung verwendete Konfigurationseinstellungen, die Sie direkt oder im Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ändern können (z. B. die Verbindungszeichenfolge für die Datenquellen).|  
+|*Projectname*.deploymenttargets|Enthält die während der Bereitstellung verwendeten Zieleinstellungen, die Sie direkt oder im Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ändern können (z. B. den Server- und Datenbanknamen).|  
+|*Projectname*.deploymentoptions|Enthält verschiedene während der Bereitstellung verwendete Optionseinstellungen, die Sie direkt oder im Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ändern können (z. B. Speicherorte).|  
 |*AssemblyName*/*dllName.* dll|Separate Ordner für jede Assembly, auf die verwiesen wird. In jedem Ordner sind jeweils die DLL für die Assembly, sämtliche Assemblys, auf die verwiesen wird, und sämtliche zugeordneten PDB-Dateien für Ausgabedebuginformationen enthalten.|  
   
-|Dateien (im Ordner obj)|BESCHREIBUNG|  
+|Dateien (im Ordner obj)|Beschreibung|  
 |-----------------------------|-----------------|  
 |\<Konfigurations Name> \lastbuilt.XML|Enthält den Zeitstempel und den Hashcode, der den Zeitpunkt identifiziert, als das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt zum letzten Mal erstellt wurde.|  
   
@@ -59,6 +59,6 @@ ms.locfileid: "66076770"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Analysis Services Skriptsprache &#40;ASSL&#41; Referenz](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
- [Bereitstellen von Analysis Services Projekten &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
+ [Bereitstellen von Analysis Services-Projekten &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

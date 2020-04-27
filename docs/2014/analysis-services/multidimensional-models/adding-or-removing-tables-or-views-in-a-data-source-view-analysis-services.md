@@ -20,10 +20,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: da7169cc95b768324e18f1ab5fd7b0a33615f99a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077468"
 ---
 # <a name="adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services"></a>Hinzufügen oder Entfernen von Tabellen oder Sichten in einer Datenquellensicht (Analysis Services)
@@ -46,6 +46,6 @@ ms.locfileid: "66077468"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenquellen Sichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md)   
- [Arbeiten mit Diagrammen im Datenquellen Sicht-Designer &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [Verwenden von Diagrammen im Datenquellensicht-Designer &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

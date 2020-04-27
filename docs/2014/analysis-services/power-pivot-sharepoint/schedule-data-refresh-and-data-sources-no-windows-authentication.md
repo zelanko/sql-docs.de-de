@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b4851c8054434713e69d8bf63b046484a01f0398
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071157"
 ---
 # <a name="schedule-data-refresh-and-data-sources-that-do-not-support-windows-authentication-powerpivot-for-sharepoint"></a>Planen der Datenaktualisierung mit Datenquellen, die die Windows-Authentifizierung nicht unterstützen (PowerPivot für SharePoint)
@@ -28,13 +28,13 @@ ms.locfileid: "66071157"
   
  ![as_powerpivot_refresh_no_windows_auth](../media/as-powerpivot-refresh-no-windows-auth.gif "as_powerpivot_refresh_no_windows_auth")  
   
--   **(1) powerpivotdatarefresh:** eine Secure Store-Zielanwendungs-ID, die mit der Windows-Authentifizierung festgelegt wird.  
+-   **(1) PowerPivotDatarefresh:** Eine Secure Store-Zielanwendungs-ID, für die im SET-Befehl die Windows-Authentifizierung angegeben ist.  
   
--   **(2) oracleauthentication:** eine Secure Store-Zielanwendungs-ID, die mit Oracle-Anmelde Informationen festgelegt wird.  
+-   **(2) OracleAuthentication:** Eine Secure Store-Zielanwendungs-ID, für die im SET-Befehl Oracle-Anmeldeinformationen angegeben sind.  
   
 -   **(3)** die Power Pivot-Dienst Anwendung wird so konfiguriert, dass Sie die Zielanwendung "powerpivotdatarefresh" für das **unbeaufsichtigte Daten Aktualisierungs Konto**verwendet.  
   
--   **(4)** die powerepivot-Arbeitsmappe verwendet Oracle-Daten. In den Aktualisierungseinstellungen der Arbeitsmappe ist angegeben, dass die Anmeldeinformationen von Zielanwendung **(2)** für die Datenquellenverbindung verwendet werden.  
+-   **(4)** Die PowerPivot-Arbeitsmappe verwendet Oracle-Daten. In den Aktualisierungseinstellungen der Arbeitsmappe ist angegeben, dass die Anmeldeinformationen von Zielanwendung **(2)** für die Datenquellenverbindung verwendet werden.  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66071157"
   
 ## <a name="to-create-a-target-application-id-that-uses-windows-authentication"></a>So erstellen Sie eine Zielanwendungs-ID, die die Windows-Authentifizierung verwendet  
   
-1.  Klicken Sie in der SharePoint-Zentraladministration auf **Dienstanwendungen verwalten**.  
+1.  Klicken Sie in der SharePoint-zentral Administration auf **Dienst Anwendungen verwalten**.  
   
 2.  Klicken Sie auf den Namen der Secure Store Service-Anwendung.  
   
@@ -54,15 +54,15 @@ ms.locfileid: "66071157"
   
 4.  Konfigurieren Sie auf der Seite **Neue Zielanwendung für einmaliges Anmelden erstellen** die folgenden Werte:  
   
-    -   **Zielanwendungs-ID:** PowerPivotDataRefresh.  
+    -   **Zielanwendungs-ID:** PowerPivotDataRefresh  
   
-    -   **Anzeige Name:** PowerPivotDataRefresh.  
+    -   **Anzeigename:** PowerPivotDataRefresh  
   
-    -   **Kontakt-e-Mail:** ?  
+    -   **Kontakt-E-Mail:** ?  
   
-    -   **Ziel Anwendungstyp:** Kreis.  
+    -   **Zielanwendungstyp:** Gruppe  
   
-    -   **URL der Ziel Anwendungsseite:** Gar.  
+    -   **Seiten-URL der Zielanwendung:** Keine  
   
 5.  Klicken Sie auf **Weiter**.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66071157"
   
 ## <a name="to-create-a-target-application-id-that-uses-oracle-credentials"></a>So erstellen Sie eine Zielanwendungs-ID, die Oracle-Anmeldeinformationen verwendet  
   
-1.  Klicken Sie in der SharePoint-Zentraladministration auf **Dienstanwendungen verwalten**.  
+1.  Klicken Sie in der SharePoint-zentral Administration auf **Dienst Anwendungen verwalten**.  
   
 2.  Klicken Sie auf den Namen der Secure Store Service-Anwendung.  
   
@@ -88,15 +88,15 @@ ms.locfileid: "66071157"
   
 4.  Konfigurieren Sie auf der Seite **Neue Zielanwendung für einmaliges Anmelden erstellen** die folgenden Werte:  
   
-    -   **Zielanwendungs-ID:** OracleAuthentication.  
+    -   **Zielanwendungs-ID:** OracleAuthentication  
   
-    -   **Anzeige Name:** OracleAuthentication.  
+    -   **Anzeigename:** OracleAuthentication  
   
-    -   **Kontakt-e-Mail:** ?  
+    -   **Kontakt-E-Mail:** ?  
   
-    -   **Ziel Anwendungstyp:** Kreis.  
+    -   **Zielanwendungstyp:** Gruppe  
   
-    -   **URL der Ziel Anwendungsseite:** Gar.  
+    -   **Seiten-URL der Zielanwendung:** Keine  
   
 5.  Klicken Sie auf **Weiter**.  
   
@@ -165,7 +165,7 @@ ms.locfileid: "66071157"
   
 ## <a name="more-information"></a>Weitere Informationen  
   
--   [Konfigurieren Sie die einmaliges Anmelden in SharePoint 2013](https://technet.microsoft.com/library/ee806866.aspx).  
+-   [Konfigurieren von Secure Store Service in SharePoint 2013](https://technet.microsoft.com/library/ee806866.aspx).  
   
 -   Weitere Informationen finden Sie im Abschnitt "geplante Datenaktualisierung" unter [Power Pivot-Datenaktualisierung mit SharePoint 2013 und SQL Server 2012 SP1 (Analysis Services)](https://msdn.microsoft.com/library/jj879294.aspx#bkmk_windows_auth_interactive_data_refresh).  
   

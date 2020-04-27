@@ -13,18 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: e249e2e8a9bccdeddb32bf0f8302d478d08adf1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069791"
 ---
 # <a name="select-a-measure-group-dimension-add-new-nested-table-wizard"></a>Wählen Sie eine Measuregruppendimension aus (Assistent für Neue geschachtelte Tabelle hinzufügen)
   Verwenden Sie die Seite **Wählen Sie eine Measuregruppendimension aus** , um die Dimension der Measuregruppe auszuwählen, die Sie als geschachtelte Tabelle verwenden möchten.  
   
- **Weitere Informationen finden Sie unter:** [Data Mining-Assistent &#40;Analysis Services Data Mining-&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Mining Struktur](data-mining/create-a-relational-mining-structure.md)  
+ **Weitere Informationen:** [Data Mining-Assistent &#40;Analysis Services - Data Mining&#41;](data-mining/data-mining-wizard-analysis-services-data-mining.md), [Erstellen einer relationalen Miningstruktur](data-mining/create-a-relational-mining-structure.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Measure-Gruppen**  
  Wählen Sie eine geschachtelte Tabelle aus der Measuregruppendimension aus.  
   

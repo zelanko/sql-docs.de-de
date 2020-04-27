@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97b391e24f98b230dbfe352e0cf1a574c7549984
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070021"
 ---
 # <a name="save-data-mining-query-result-dialog-box-mining-model-prediction-view"></a>Ergebnis der Data Mining-Abfrage speichern (Dialogfeld - Miningmodellvorhersage-Sicht)
@@ -26,7 +26,7 @@ ms.locfileid: "66070021"
   
  Die neue Tabelle wird in der durch die Datenquelle definierten Datenbank erstellt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Data Source**  
  Wählen Sie eine Datenquelle aus dem aktuellen Projekt aus. Wenn die richtige Datenquelle nicht vorhanden ist, klicken Sie auf **Neu** , um eine neue Datenquelle zu erstellen.  
   
@@ -57,6 +57,6 @@ ms.locfileid: "66070021"
 ## <a name="see-also"></a>Weitere Informationen  
  [Vorhersage Abfrage-Generator &#40;Data Mining-&#41;](prediction-query-builder-data-mining.md)   
  [Schnittstellen für Data Mining-Abfragen](data-mining/data-mining-query-tools.md)   
- [Data Mining-Erweiterungen &#40;DMX-&#41;-Anweisungs Referenz](/sql/dmx/data-mining-extensions-dmx-statements)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

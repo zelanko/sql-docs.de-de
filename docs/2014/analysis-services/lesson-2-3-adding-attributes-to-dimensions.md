@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a30424ce322ed356870465422c4f82fb8d7d88d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079033"
 ---
 # <a name="adding-attributes-to-dimensions"></a>Hinzufügen von Attributen zu Dimensionen
@@ -36,35 +36,35 @@ ms.locfileid: "66079033"
   
     -   **BirthDate**  
   
-    -   **Marital Status**  
+    -   **MaritalStatus**  
   
-    -   **Geschlechter**  
+    -   **Geschlecht**  
   
     -   **EmailAddress**  
   
     -   **YearlyIncome**  
   
-    -   **Totalchildren**  
+    -   **TotalChildren**  
   
     -   **NumberChildrenAtHome**  
   
-    -   **Englischschulen**  
+    -   **EnglishEducation**  
   
-    -   **Englischen shoccupations**  
+    -   **EnglishOccupation**  
   
-    -   **Housebesitzflag**  
+    -   **HouseOwnerFlag**  
   
-    -   **Nummerierte nummerierte**  
+    -   **NumberCarsOwned**  
   
-    -   **Smartphone**  
+    -   **Telefon**  
   
-    -   **Spalte datefirstpurchase**  
+    -   **DateFirstPurchase**  
   
-    -   **Pendel Entfernung**  
+    -   **CommuteDistance**  
   
 5.  Ziehen Sie die folgenden Spalten von der **Geography** -Tabelle im Bereich **Datenquellensicht** in den Bereich **Attribute** :  
   
-    -   **City**  
+    -   **City (Ort)**  
   
     -   **StateProvinceName**  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66079033"
   
     -   **StandardCost**  
   
-    -   **Color**  
+    -   **Farbe**  
   
     -   **SafetyStockLevel**  
   
@@ -98,9 +98,9 @@ ms.locfileid: "66079033"
   
     -   **Größe**  
   
-    -   **Sizerange**  
+    -   **SizeRange**  
   
-    -   **Gewicht**  
+    -   **Weight**  
   
     -   **DaysToManufacture**  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66079033"
   
     -   **DealerPrice**  
   
-    -   **Klassi**  
+    -   **Class**  
   
     -   **style**  
   
@@ -126,6 +126,6 @@ ms.locfileid: "66079033"
  [Überprüfen von Cube- und Dimensionseigenschaften](lesson-2-4-reviewing-cube-and-dimension-properties.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dimensionsattributeigenschaftenverweis](multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Dimensionsattributeigenschaften-Verweis](multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

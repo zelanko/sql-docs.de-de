@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1eabb28250699305952d1d0746dc9487a1a25271
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076719"
 ---
 # <a name="configure-analysis-services-project-properties-ssdt"></a>Konfigurieren von Analysis Services-Projekteigenschaften (SSDT)
@@ -29,7 +29,7 @@ ms.locfileid: "66076719"
 ## <a name="property-description"></a>Eigenschaftsbeschreibung  
  In der folgenden Tabelle werden die einzelnen Projekteigenschaften unter Angabe der zugehörigen Standardwerte beschrieben sowie Informationen über das Ändern der Werte bereitgestellt.  
   
-|Eigenschaft|Standardeinstellung|BESCHREIBUNG|  
+|Eigenschaft|Standardeinstellung|Beschreibung|  
 |--------------|---------------------|-----------------|  
 |Build/Deployment Server Edition|Die zum Entwickeln des Projekts verwendete Edition von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|Gibt die Edition von SQL Server an, auf der Projekte letztendlich bereitgestellt werden. Sind an einem Projekt mehrere Entwickler beteiligt, so muss jeder von ihnen die Edition von SQL Server kennen und verstehen, um zu wissen, welche Funktionen in das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt integriert werden sollen.|  
 |Build/Deployment Server Edition|Die für die Entwicklung des Projekts verwendete Version|Gibt die Version von SQL Server an, auf der Projekte letztendlich bereitgestellt werden.|  
@@ -37,8 +37,7 @@ ms.locfileid: "66076719"
 |Build/Kennwörter entfernen|True|Gibt an, ob bekannte Kennwörter aus Verbindungszeichenfolgen entfernt werden, die während des Erstellungsprozesses in das Ausgabeverzeichnis geschrieben werden. Kennwörter werden entfernt, um eine erhöhe Sicherheit zu bieten. Werden Kennwörter entfernt, müssen sie beim Verarbeiten des bereitgestellten Projekts angegeben werden, damit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] auf die Quelldaten zugreifen kann.|  
 |Debuggen/Startobjekt|\<Derzeit aktives Objekt>|Bestimmt das Objekt, das gestartet wird, wenn Sie das Debuggen starten.|  
 |Bereitstellung/Bereitstellungsmodus|Nur geänderte Objekte bereitstellen|Standardmäßig werden nur die an den Projektobjekten vorgenommenen Änderungen bereitgestellt (vorausgesetzt, dass keine weiteren Änderungen an den Objekten außerhalb des Projekts direkt vorgenommen wurden). Sie haben auch die Möglichkeit, bei jeder Bereitstellung alle Projektobjekte zu berücksichtigen. Verwenden Sie die Einstellung Nur geänderte Objekte bereitstellen, um die bestmögliche Leistung zu erzielen.|  
-|Bereitstellung/Verarbeitungsoption|Standard|
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bestimmt standardmäßig den Verarbeitungstyp, der beim Bereitstellen der an Objekten vorgenommenen Änderungen erforderlich ist. Diese Einstellung ermöglicht im Allgemeinen die schnellste Bereitstellungszeit. Sie haben aber auch die Möglichkeit, für die jeweilige Bereitstellung die vollständige Verarbeitung oder keine Verarbeitung zu wählen.|  
+|Bereitstellung/Verarbeitungsoption|Standard|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bestimmt standardmäßig den Verarbeitungstyp, der beim Bereitstellen der an Objekten vorgenommenen Änderungen erforderlich ist. Diese Einstellung ermöglicht im Allgemeinen die schnellste Bereitstellungszeit. Sie haben aber auch die Möglichkeit, für die jeweilige Bereitstellung die vollständige Verarbeitung oder keine Verarbeitung zu wählen.|  
 |Bereitstellung/Transaktionsbereitstellung|False|Standardmäßig ist die Bereitstellung geänderter oder aller Objekte keine Transaktionsbereitstellung bei der Verarbeitung dieser bereitgestellten Objekte. Die Bereitstellung kann erfolgreich ausgeführt werden und persistent sein, auch wenn bei der Verarbeitung ein Fehler auftritt. Sie können diese Standardeinstellung ändern, um die Bereitstellung und Verarbeitung in einer einzelnen Transaktion zu integrieren.|  
 |Bereitstellung/Zielserver|localhost|Standardmäßig werden Datenbankobjekte des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts auf der Standardinstanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] auf dem lokalen Computer bereitgestellt, auf dem [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] verwendet wird. Ändern Sie diese Standardeinstellung, um eine benannte Instanz auf dem lokalen Computer bzw. eine beliebige Instanz auf einem beliebigen Remotecomputer anzugeben, auf dem Sie über die Berechtigung zum Erstellen von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekten verfügen.|  
 |Bereitstellung/Datenbank|\<Projektname>|Der Name der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank, in der die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projektobjekte nach der Bereitstellung instanziiert werden, ist standardmäßig der Name des [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekts zum Zeitpunkt seiner Definition. Ändern Sie diese Eigenschaft, um den Namen der Datenbank auf der über die Server-Eigenschaft angegebene [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz zu ändern.|  
@@ -52,6 +51,6 @@ ms.locfileid: "66076719"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von Analysis Services Projekten &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)   
- [Bereitstellen von Analysis Services Projekten &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
+ [Bereitstellen von Analysis Services-Projekten &#40;SSDT&#41;](deploy-analysis-services-projects-ssdt.md)  
   
   

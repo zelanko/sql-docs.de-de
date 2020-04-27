@@ -15,17 +15,17 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7ee69724fbcacad78c6053c1bbdf9c3465482665
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069920"
 ---
 # <a name="select-a-column-dialog-box-mining-structure-view"></a>Spalte auswählen (Dialogfeld) (Miningstruktur-Ansicht)
   Verwenden Sie das Dialogfeld **Spalte auswählen** , um der Miningstruktur Spalten hinzuzufügen. Das Dialogfeld enthält unterschiedliche Optionen, abhängig davon, ob Sie mit einem OLAP-Miningmodell oder einem relationalen Miningmodell arbeiten.  
   
-## <a name="options"></a>Tastatur  
- **Quell Tabelle**  
+## <a name="options"></a>Optionen  
+ **Quelltabelle**  
  Die Tabelle, auf der das Miningmodell basiert.  
   
  Diese Option wird nur bei relationalen Miningmodellen verwendet.  
@@ -40,7 +40,7 @@ ms.locfileid: "66069920"
   
  Diese Option wird nur bei relationalen Miningmodellen verwendet.  
   
- **Verknüpfte Attribute und Measures**  
+ **Verwandte Attribute und Measures**  
  Eine Liste aller verfügbaren Measures und Attribute, die Sie der Miningstruktur hinzufügen können.  
   
  Diese Option wird nur bei OLAP-Miningmodellen verwendet.  

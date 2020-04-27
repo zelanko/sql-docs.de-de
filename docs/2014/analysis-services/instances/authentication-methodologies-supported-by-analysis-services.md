@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a57aff903d41e8bcddef25e21def39a45e33d23f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080341"
 ---
 # <a name="authentication-methodologies-supported-by-analysis-services"></a>Von Analysis Services unterstützte Authentifizierungsmethoden
@@ -34,7 +34,7 @@ ms.locfileid: "66080341"
   
  Weitere Informationen zu BI- und Analysis Services-Authentifizierungsabläufen finden Sie unter [Microsoft BI-Authentifizierung und Identitätsdelegierung](https://go.microsoft.com/fwlink/?LinkID=286576).  
   
-##  <a name="bkmk_auth"></a>Verständnis der Authentifizierungs Alternativen  
+##  <a name="understanding-your-authentication-alternatives"></a><a name="bkmk_auth"></a>Verständnis der Authentifizierungs Alternativen  
  Verbindungen mit einer Analysis Services-Datenbank erfordern eine Windows-Benutzeridentität bzw. die Mitgliedschaft in einer Windows-Gruppe sowie die zugehörigen Berechtigungen. Die Identität kann allgemeingültig sein, wenn sich ein Benutzer z. B. anmeldet, um einen Bericht anzuzeigen. Das wahrscheinlichere Szenario ist jedoch, die den einzelnen Benutzern zugewiesenen Identitäten zu verwenden.  
   
  Ein tabellarisches oder mehrdimensionales Modell verfügt häufig über verschiedene Datenzugriffsebenen. Abhängig von der Person, die die Authentifizierungsanforderung sendet, sind diese nach Objekt oder innerhalb der Daten festgelegt. NTLM, Kerberos, EffectiveUserName oder die Standardauthentifizierung stehen zur Verfügung, um die Vorgaben zu erfüllen. Bei allen diesen Verfahren kann für jede Verbindung eine andere Benutzeridentität übergeben werden. Meistens setzen diese Optionen jedoch Single-Hop-Verbindungen voraus. Nur die Kerberos-Authentifizierung mit Delegierung macht es möglich, die ursprüngliche Benutzeridentität über mehrere Computerverbindungen hinweg bis zu einem Back-End-Datenspeicher auf einem Remoteserver beizubehalten.  
@@ -64,7 +64,7 @@ ms.locfileid: "66080341"
   
  Weitere Informationen zur Verwendung von EffectiveUserName in SharePoint finden Sie unter [Verwenden von "EffectiveUserName" der Analysis Services in SharePoint Server 2010](https://go.microsoft.com/fwlink/?LinkId=311905).  
   
- **Standard Authentifizierung und anonymer Benutzer**  
+ **Standardauthentifizierung und anonyme Authentifizierung**  
   
  Die Standardauthentifizierung bietet eine vierte Alternative, mit der ein bestimmter Benutzer eine Verbindung mit einem Back-End-Server herstellen kann. Bei der Standardauthentifizierung werden Windows-Benutzername und Kennwort in der Verbindungszeichenfolge übergeben. Das erfordert jedoch zusätzliche Verschlüsselungsmethoden während der Übertragung, damit vertrauliche Informationen geschützt bleiben. Ein zentraler Vorteil der Standardauthentifizierung besteht darin, dass die Authentifizierungsanforderung domänenübergreifend übertragen werden kann.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66080341"
   
  Die Standardauthentifizierung und die anonyme Authentifizierung sind nur verfügbar, wenn Sie Analysis Services für den HTTP-Zugriff konfigurieren, d. h. die Verbindung mit IIS und msmdpump.dll herstellen. Weitere Informationen finden Sie unter [Konfigurieren von HTTP-Zugriff auf Analysis Services unter Internetinformationsdienste &#40;IIS&#41; 8.0](configure-http-access-to-analysis-services-on-iis-8-0.md).  
   
- **Gespeicherte Anmeldeinformationen**  
+ **Gespeicherte Anmelde Informationen**  
   
  Die meisten Anwendungsdienste der mittleren Ebene umfassen Funktionen zum Speichern von Benutzernamen und Kennwörtern, die anschließend verwendet werden, um Daten aus einem untergeordneten Datenspeicher wie Analysis Services oder der relationalen SQL Server-Engine abzurufen. So gesehen bieten gespeicherte Anmeldeinformationen eine fünfte Alternative zum Abrufen von Daten. Die Beschränkungen dieser Vorgehensweise liegen im erhöhten Wartungsaufwand, der mit der Aktualisierung von Benutzernamen und Kennwörtern verbunden ist, und der Verwendung einer einzelnen Identität für die Verbindung. Wenn Ihre Lösung die Identität des ursprünglichen Aufrufers erfordert, sind gespeicherte Anmeldeinformationen keine geeignete Alternative.  
   

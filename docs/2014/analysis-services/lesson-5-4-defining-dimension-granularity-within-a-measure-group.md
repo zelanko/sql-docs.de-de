@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 46d69f2bcc82ba1ff4ae49e9bfa5e3aa7a61ad2a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078459"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>Definieren von Dimensionsgranularität innerhalb einer Measuregruppe
@@ -60,8 +60,7 @@ ms.locfileid: "66078459"
   
 12. Löschen Sie das **Calendar Quarter** -Measure `Sales Quotas` aus der Measure-Gruppe.  
   
-     
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stellte die dem Calendar Quarter-Measure zugrunde liegende Spalte als Spalte fest, die Measures enthält. Diese Spalte und die CalendarYear-Spalte enthalten allerdings die Werte, die Sie zum Verknüpfen der Sales Quotas-Measuregruppe mit der Date-Dimension später in diesem Thema verwenden werden.  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stellte die dem Calendar Quarter-Measure zugrunde liegende Spalte als Spalte fest, die Measures enthält. Diese Spalte und die CalendarYear-Spalte enthalten allerdings die Werte, die Sie zum Verknüpfen der Sales Quotas-Measuregruppe mit der Date-Dimension später in diesem Thema verwenden werden.  
   
 13. Klicken Sie im Bereich **Measures** mit der rechten Maustaste `Sales Quotas` auf die Gruppe Measure, und klicken Sie dann auf **Neues Measure**.  
   
@@ -125,7 +124,7 @@ ms.locfileid: "66078459"
   
 3.  Klicken Sie im Cube- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Designer für den Tutorial-Cube auf die Registerkarte **Dimensions Verwendung** , und überprüfen Sie `Sales Quotas` dann die Dimensions Verwendung innerhalb der Measures und **Sales Kontingents 1** Measure.  
   
-     Beachten Sie, **** dass die `Date` Dimensionen "Employee" und "Cube" mit den Measure **-und Sales Kontingents 1-Measure-** Gruppen durch reguläre Beziehungen verknüpft sind. Beachten Sie außerdem, dass die **Sales Territory** -Cubedimension mit keiner dieser Measuregruppen verknüpft ist.  
+     Beachten Sie, **Employee** dass die `Date` Dimensionen "Employee" und "Cube" mit den Measure **-und Sales Kontingents 1-Measure-** Gruppen durch reguläre Beziehungen verknüpft sind. Beachten Sie außerdem, dass die **Sales Territory** -Cubedimension mit keiner dieser Measuregruppen verknüpft ist.  
   
 4.  Klicken Sie auf die Zelle am Schnittpunkt der **Sales Territory** -Dimension `Sales Quotas` und der Measure-Gruppe, und klicken Sie dann auf die Schaltfläche zum Durchsuchen (**...**). Das Dialogfeld **Beziehung definieren** wird geöffnet.  
   
@@ -226,6 +225,6 @@ ms.locfileid: "66078459"
 ## <a name="see-also"></a>Weitere Informationen  
  [Dimensions Beziehungen](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [Definieren regulärer Beziehungs-und regulärer Beziehungs Eigenschaften](multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)   
- [Arbeiten mit Diagrammen im Datenquellen Sicht-Designer &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [Verwenden von Diagrammen im Datenquellensicht-Designer &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

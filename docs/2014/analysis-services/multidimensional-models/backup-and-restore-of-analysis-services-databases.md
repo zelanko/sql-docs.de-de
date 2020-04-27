@@ -22,14 +22,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f591a5a8c8099e496c10958b43694e98ae7a24b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077031"
 ---
 # <a name="backup-and-restore-of-analysis-services-databases"></a>Sichern und Wiederherstellen von Analysis Services-Datenbanken
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verfügt über Sicherungs- und Wiederherstellungsfunktionen, weshalb Sie für eine Datenbank und ihre Objekte einen Zustand wiederherstellen können, der zu einem bestimmten Zeitpunkt gültig war. Die Sicherung und Wiederherstellung ist auch eine zulässige Methode zum Migrieren von Datenbanken zu aktualisierten Servern, zum Verschieben von Datenbanken zwischen Servern oder zum Bereitstellen einer Datenbank auf einem Produktionsserver. Zur Datenwiederherstellung sollten Sie, falls Sie noch nicht über einen Sicherungsplan verfügen und Ihre Daten wertvoll sind, so schnell wie möglich einen solchen Plan entwerfen und implementieren.  
   
  Die Befehle zur Sicherung und die Wiederherstellung werden in einer bereitgestellten Analysis Services-Datenbank ausgeführt. Für die Projekte und Projektmappen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]sollten Sie mithilfe der Quellcodeverwaltung sicherstellen, dass Sie bestimmte Versionen der Quelldateien wiederherstellen können, und anschließend einen Datenwiederherstellungsplan für das Repository des von Ihnen verwendeten Quellcodeverwaltungssystems erstellen.  
@@ -44,16 +43,16 @@ ms.locfileid: "66077031"
   
 -   [Sichern einer mehrdimensionalen oder tabellarischen Datenbank](#bkmk_cube)  
   
--   [Wiederherstellen einer Analysis Services Datenbank](#bkmk_restore)  
+-   [Wiederherstellen von Analysis Services-Datenbanken](#bkmk_restore)  
   
-##  <a name="bkmk_prereq"></a> Voraussetzungen  
+##  <a name="prerequisites"></a><a name="bkmk_prereq"></a> Voraussetzungen  
  Sie müssen über Administratorberechtigungen für die Analysis Services-Instanz oder die Vollzugriffsberechtigungen (Administrator) für die Datenbank verfügen, die Sie sichern.  
   
  Der Wiederherstellungsort muss einer Analysis Services-Instanz entsprechen, die dieselbe Version oder eine neuere Version aufweist als die Instanz, auf der die Sicherung erstellt wurde. Obwohl Sie eine Datenbank von einer [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Instanz nicht auf einer früheren Version von Analysis Services wiederherstellen können, ist es üblich, eine Datenbank einer älteren Version, z.B. SQL Server 2012, auf einer neueren [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Instanz wiederherzustellen.  
   
  Der Wiederherstellungsort muss den gleichen Servertyp aufweisen. Tabellarische Datenbanken können nur auf einer Analysis Services-Instanz wiederhergestellt werden, die im tabellarischen Modus ausgeführt wird. Mehrdimensionale Datenbanken erfordern eine Instanz, die im mehrdimensionalen Modus ausgeführt wird.  
   
-##  <a name="bkmk_prep"></a>Vorbereiten der Sicherung  
+##  <a name="preparing-for-backup"></a><a name="bkmk_prep"></a>Vorbereiten der Sicherung  
  Verwenden Sie die folgende Prüfliste, um die Sicherung vorzubereiten.  
   
 -   Überprüfen Sie den Speicherort, an der die Sicherungsdatei gespeichert wird. Wenn Sie einen Remotestandort verwenden, müssen Sie es als UNC-Ordner angeben. Überprüfen Sie, ob Sie auf den UNC-Pfad zugreifen können.  
@@ -64,12 +63,11 @@ ms.locfileid: "66077031"
   
 -   Überprüfen Sie vorhandene Dateien mit gleichem Namen. Wenn bereits eine Datei mit dem gleichen Namen vorhanden ist, tritt ein Sicherungsfehler auf, sofern Sie keine Optionen zum Überschreiben der Datei festlegen.  
   
-##  <a name="bkmk_cube"></a>Sichern einer mehrdimensionalen oder tabellarischen Datenbank  
+##  <a name="backing-up-a-multidimensional-or-a-tabular-database"></a><a name="bkmk_cube"></a>Sichern einer mehrdimensionalen oder tabellarischen Datenbank  
  Administratoren können eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank unabhängig von der Datenbankgröße in einer einzelnen [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Sicherungsdatei (.abf) sichern. Schritt-für-Schritt-Anweisungen finden Sie auf der TechMantra-Seite unter [How to Backup an Analysis Services Database](http://www.mytechmantra.com/LearnSQLServer/Backup_an_Analysis_Services_Database.html) (Sichern einer Analysis Services-Datenbank) und unter [Automate Backup an Analysis Services Database](http://www.mytechmantra.com/LearnSQLServer/Automate_Backup_of_Analysis_Services_Database.html)(Automatische Sicherung einer Analysis Services-Datenbank).  
   
 > [!NOTE]  
->  Wenn [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] zum Laden und Abfragen von PowerPivot-Datenmodellen in einer SharePoint-Umgebung verwendet wird, werden die zugehörigen Modelle aus SharePoint-Inhaltsdatenbanken geladen. Diese Inhaltsdatenbanken sind relational und werden in der relationalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank-Engine ausgeführt. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet folglich keine Sicherungs-/Wiederherstellungsstrategie für PowerPivot-Datenmodelle. Wenn Sie einen Notfallwiederherstellungsplan für SharePoint-Inhalte eingerichtet haben, umfasst der Plan die in den Inhaltsdatenbanken gespeicherten PowerPivot-Datenmodelle.  
+>  Wenn [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] zum Laden und Abfragen von PowerPivot-Datenmodellen in einer SharePoint-Umgebung verwendet wird, werden die zugehörigen Modelle aus SharePoint-Inhaltsdatenbanken geladen. Diese Inhaltsdatenbanken sind relational und werden in der relationalen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank-Engine ausgeführt. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] bietet folglich keine Sicherungs-/Wiederherstellungsstrategie für PowerPivot-Datenmodelle. Wenn Sie einen Notfallwiederherstellungsplan für SharePoint-Inhalte eingerichtet haben, umfasst der Plan die in den Inhaltsdatenbanken gespeicherten PowerPivot-Datenmodelle.  
   
  **Remotepartitionen**  
   
@@ -101,7 +99,7 @@ ms.locfileid: "66077031"
   
  Weitere Informationen zum Sichern einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank finden Sie unter [Sicherungsoptionen](backup-options.md).  
   
-##  <a name="bkmk_restore"></a>Wiederherstellen einer Analysis Services Datenbank  
+##  <a name="restoring-an-analysis-services-database"></a><a name="bkmk_restore"></a>Wiederherstellen einer Analysis Services Datenbank  
  Administratoren können eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank von einer oder mehreren Sicherungsdateien wiederherstellen.  
   
 > [!NOTE]  

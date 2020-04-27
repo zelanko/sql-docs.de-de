@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1aa03174d82c7319ce0c7b1cf455916e37a1b117
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072379"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>Verwenden von Diagrammen im Datenquellensicht-Designer (Analysis Services)
@@ -33,7 +33,7 @@ ms.locfileid: "66072379"
   
  [Diagramm hinzufügen](#bkmk_add)  
   
- [Bearbeiten oder Löschen eines Diagramms](#bkmk_edit)  
+ [Bearbeitung oder Löschen eines Diagramms](#bkmk_edit)  
   
  [Suchen von Tabellen in einem Diagramm](#bkmk_findtables)  
   
@@ -41,7 +41,7 @@ ms.locfileid: "66072379"
   
  [Objekt Anordnung beibehalten](#bkmk_preserve)  
   
-##  <a name="bkmk_add"></a>Diagramm hinzufügen  
+##  <a name="add-a-diagram"></a><a name="bkmk_add"></a> Hinzufügen eines Diagramms  
  Diagramme von Datenquellensichten werden automatisch erstellt, wenn Sie die Datenquellensicht erstellen. Nachdem die Datenquellensicht erstellt wurde, können Sie zusätzliche Diagramme erstellen, entfernen bzw. bestimmte Objekte ausblenden, um eine benutzerfreundlichere Darstellung der Datenquellensicht zu erhalten.  
   
  Zum Erstellen eines neuen Diagramms klicken Sie mit der rechten Maustaste auf eine beliebige Stelle im Bereich **Diagrammplaner** und klicken anschließend auf **Neues Diagramm**.  
@@ -52,14 +52,14 @@ ms.locfileid: "66072379"
   
  Sie können verknüpfte Tabellen und benannte Abfragen in separaten Diagrammen für geschäftliche Zwecke gruppieren. Diese Vorgehensweise eignet sich auch, um Datenquellensichten mit vielen Tabellen, Sichten und benannten Abfragen verständlicher zu gestalten. Die gleiche Tabelle oder benannte Abfrage kann in mehreren Diagrammen enthalten sein, mit Ausnahme \<der> Diagramm alle Tabellen. Im Diagramm \<alle Tabellen> werden alle Objekte, die in der Datenquellen Sicht enthalten sind, genau einmal angezeigt.  
   
-##  <a name="bkmk_edit"></a>Bearbeiten oder Löschen eines Diagramms  
+##  <a name="edit-or-delete-a-diagram"></a><a name="bkmk_edit"></a>Bearbeiten oder Löschen eines Diagramms  
  Beim Arbeiten mit einem Diagramm sollten Sie besonders auf die Befehle achten, die zum Hinzufügen und Entfernen von Objekten verwendet werden. Wenn Sie ein Objekt aus einem Diagramm löschen, wird es beispielsweise auch aus der Datenquellensicht gelöscht. Wenn Sie das Objekt nur aus dem Diagramm löschen möchten, sollten Sie stattdessen **Tabelle ausblenden** verwenden.  
   
  ![Screenshot des Diagrammarbeitsbereichs, Kontextmenü](../media/ssas-olapdsv-diagram.gif "Screenshot des Diagrammarbeitsbereichs, Kontextmenü")  
   
  Obwohl Sie Objekte einzeln ausblenden können, werden dem Diagramm alle zugehörigen Objekte wieder hinzugefügt, wenn Sie den Befehl Verknüpfte Tabellen anzeigen ausführen. Um zu steuern, welche Objekte in den Arbeitsbereich zurückgegeben werden, ziehen Sie die gewünschten Objekte einfach aus dem Bereich Tabellen.  
   
-##  <a name="bkmk_findtables"></a>Suchen von Tabellen in einem Diagramm  
+##  <a name="find-tables-in-a-diagram"></a><a name="bkmk_findtables"></a>Suchen von Tabellen in einem Diagramm  
  Bei einem großen Schema ist im Bereich **Diagramm** der Bildlauf zu einer bestimmten Tabelle möglicherweise schwierig. Mithilfe der folgenden Tools können Sie jedoch auf einfache Weise eine Tabelle in einem Diagramm suchen.  
   
 -   Führen Sie in der Tabellenliste im Bereich **Tabellen** einen Bildlauf durch.  
@@ -74,14 +74,14 @@ ms.locfileid: "66072379"
   
      Sie können Zeichenfolgen und Platzhalterzeichen in das Feld Filter eingeben, um Teilmengen der Tabellen im Diagramm anzuzeigen.  
   
-##  <a name="bkmk_arrangeobjects"></a>Anordnen von Objekten in einem Diagramm  
+##  <a name="arrange-objects-in-a-diagram"></a><a name="bkmk_arrangeobjects"></a> Anordnen von Objekten in einem Diagramm  
  Obwohl es möglich ist, mit dem Datenquellensicht-Designer mehrere Diagramme zu definieren, um eine Datenquellensicht verständlicher zu gestalten, können Diagramme mit Dutzenden von Tabellen schwer lesbar sein, und die manuelle Neuanordnung von Tabellenlayouts ist ein zeitraubender Prozess. Mit dem Datenquellensicht-Designer können die Tabellen im aktuellen Diagramm automatisch auf Basis der Beziehungen zwischen den Tabellen im aktuellen Diagramm in einem rechteckigen oder diagonalen Layout neu angeordnet werden.  
   
 -   In einem rechteckigen Layout verlaufen die Beziehungslinien zwischen Tabellen und nicht zwischen Spalten. Beziehungslinien werden horizontal und vertikal zwischen Tabellen gezogen.  
   
 -   In einem diagonalen Layout verlaufen Beziehungslinien so direkt wie möglich zwischen verknüpften Spalten in Tabellen. Eine Beziehung zu mehreren Spalten wird mit der ersten verknüpften Spalte in der Tabelle verbunden. Falls die Spalten in einer Tabelle nicht sichtbar sind, werden die Linien zum oberen Tabellenende hin gezogen.  
   
-##  <a name="bkmk_preserve"></a>Objekt Anordnung beibehalten  
+##  <a name="preserve-object-arrangement"></a><a name="bkmk_preserve"></a>Objekt Anordnung beibehalten  
  Nachdem Sie die Tabellen manuell in der gewünschten Form angeordnet haben, kann beim Hinzufügen weiterer Tabellen eine Diagrammaktualisierung auftreten. Dabei werden neuere Änderungen, die Sie am Objektlayout vorgenommen haben, gelöscht.  
   
  Dieses Verhalten tritt mit höherer Wahrscheinlichkeit beim Hinzufügen einer Tabelle auf, da der Diagrammplaner in diesem Fall die anderen Tabellen verschieben muss, um Platz für die neue Tabelle zu schaffen. Anschließend wird das Diagramm neu gerendert, um zu gewährleisten, dass alle Tabellen und Verbindungslinien ordnungsgemäß dargestellt werden. Wenn Sie die Platzierung bestimmter Objekte manuell angepasst haben, können die Änderungen bei diesem Schritt verloren gehen.  
@@ -90,6 +90,6 @@ ms.locfileid: "66072379"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenquellen Sichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md)   
- [Der Datenquellen Sicht-Designer &#40;Analysis Services Mehrdimensionale Daten&#41;](../data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Datenquellensicht-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](../data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

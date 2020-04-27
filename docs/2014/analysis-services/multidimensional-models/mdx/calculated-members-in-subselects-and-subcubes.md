@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57a7a9597be4b7a662fddd9550fdf341be44f922
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074786"
 ---
 # <a name="calculated-members-in-subselects-and-subcubes"></a>Berechnete Elemente in untergeordneten SELECT-Ausdrücken und Teilcubes
@@ -27,7 +27,7 @@ ms.locfileid: "66074786"
   
 |||  
 |-|-|  
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |0|Berechnete Elemente sind in untergeordneten SELECT-Ausdrücken oder Teilcubes nicht zulässig.<br /><br /> Beim Auswerten des untergeordneten SELECT-Ausdrucks oder des Teilcubes wird ein Fehler ausgelöst, wenn auf ein berechnetes Element verwiesen wird.|  
 |1|Berechnete Elemente in untergeordneten SELECT-Ausdrücken oder Teilcubes sind zulässig, in den zurückgebenden Teilbereich werden jedoch keine Vorgänger der Elemente eingeführt.|  
 |2|Berechnete Elemente in untergeordneten SELECT-Ausdrücken oder Teilcubes sind zulässig und in den zurückgebenden Teilbereich werden Vorgänger der Elemente eingeführt. Zudem ist eine gemischte Granularität in der Auswahl berechneter Elemente zulässig.|  
@@ -118,7 +118,7 @@ Where [Measures].[Reseller Sales Amount]
   
  In den obigen Ergebnissen werden die aggregierten Werte für [All Geographies], [United States], [Oregon] und [Washington] durch Aggregation der Nachfolger von &[Portland]&[OR] und &[Spokane]&[WA] erzeugt. Aus dem berechneten Element werden keine Werte abgerufen.  
   
-### <a name="remarks"></a>Bemerkungen  
+### <a name="remarks"></a>Hinweise  
  In untergeordneten SELECT-Ausdrücken und Teilcubes sind nur globale oder in der Sitzung berechnete Elemente zulässig. Wenn der MDX-Ausdruck in einer Abfrage berechnete Elemente enthält, wird bei der Auswertung des untergeordneten SELECT-Ausdrucks oder Teilcubes ein Fehler ausgelöst.  
   
 ## <a name="see-also"></a>Weitere Informationen  

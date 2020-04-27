@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a013ed1ca80e17f89baba65b89c460b6ee68691
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078031"
 ---
 # <a name="locate-database-files-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Datenbankdateien suchen' (Analysis Services – Mehrdimensionale Daten)
@@ -26,7 +26,7 @@ ms.locfileid: "66078031"
   
 -   Klicken Sie auf der Seite**Partitionen**im Dialogfeld **Datenbank wiederherstellen** in der **Sicherungsdatei** -Spalte des Rasters für die Option **Restore backup partitions** (Sicherungspartitionen wiederherstellen) auf die Schaltfläche mit den drei Punkten( **...** ).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Ordner auswählen**  
  Wählen Sie einen Ordner aus, um für **Ausgewählter Pfad** den gewünschten Pfad festzulegen.  
   

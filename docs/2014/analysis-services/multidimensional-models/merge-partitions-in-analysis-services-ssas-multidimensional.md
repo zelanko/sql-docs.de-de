@@ -14,35 +14,35 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 365f89286a59057efa39b503eedaedebb875c039
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073651"
 ---
 # <a name="merge-partitions-in-analysis-services-ssas---multidimensional"></a>Zusammenführen von Partitionen in Analysis Services (SSAS – Mehrdimensional)
   Sie können Partitionen in einer bestehenden [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbank zusammenführen, um Faktendaten aus mehreren Partitionen derselben Measuregruppe zu konsolidieren.  
   
- [Häufige Szenarien](#bkmk_Scenario)  
+ [Gängige Szenarios](#bkmk_Scenario)  
   
- [Requirements (Anforderungen)](#bkmk_prereq)  
+ [Anforderungen](#bkmk_prereq)  
   
- [Aktualisieren der Partitions Quelle nach dem Zusammenführen von Partitionen](#bkmk_Where)  
+ [Aktualisieren der Partitionsquelle nach dem Zusammenführen von Partitionen](#bkmk_Where)  
   
- [Besonderheiten bei Partitionen, die nach Fakten Tabelle oder benannter Abfrage segmentiert sind](#bkmk_fact)  
+ [Besondere Überlegungen für Partitionen, die nach Faktentabelle oder benannter Abfrage segmentiert sind](#bkmk_fact)  
   
  [Zusammenführen von Partitionen mithilfe von SSMS](#bkmk_partitionSSMS)  
   
  [Zusammenführen von Partitionen mithilfe von XMLA](#bkmk_partitionsXMLA)  
   
-##  <a name="bkmk_Scenario"></a>Häufige Szenarien  
+##  <a name="common-scenarios"></a><a name="bkmk_Scenario"></a>Häufige Szenarien  
  Die am häufigsten vorkommende Konfiguration für die Verwendung von Partitionen umfasst die Trennung von Daten über die Dimension der Zeit. Die den einzelnen Partitionen zugeordnete Zeitgranularität richtet sich nach den für das Projekt geltenden Geschäftsanforderungen. Die Segmentierung kann z. B. nach Jahr erfolgen, wobei das aktuelle Jahr nach Monaten unterteilt und eine separate Partition für den aktiven Monat vorhanden ist. Der Partition für den aktiven Monat werden regelmäßig neue Daten hinzugefügt.  
   
  Wenn der aktive Monat abgeschlossen ist, wird diese Partition wieder mit den Monaten in der Partition für das laufende Jahr zusammengeführt, und der Prozess wird fortgesetzt. Bis zum Ende des Jahres entsteht auf diese Weise eine vollständige neue Jahrespartition.  
   
  Wie dieses Szenario veranschaulicht, kann das Zusammenführen von Partitionen zu einer regelmäßig ausgeführten Routineaufgabe werden. Somit stellt es einen fortschrittlichen Ansatz für das Konsolidieren und Organisieren von Verlaufsdaten dar.  
   
-##  <a name="bkmk_prereq"></a>Bedingungen  
+##  <a name="requirements"></a><a name="bkmk_prereq"></a> Anforderungen  
  Partitionen können nur zusammengeführt werden, wenn sie sämtliche der folgenden Kriterien erfüllen:  
   
 -   Sie verfügen über dieselbe Measuregruppe.  
@@ -66,7 +66,7 @@ ms.locfileid: "66073651"
   
  Wenn Sie eine Partition erstellen, die später zusammengeführt werden soll, können Sie beim Erstellen der Partition im Partitions-Assistenten den Aggregationsaufbau einer anderen Partition des Cubes kopieren. Dadurch wird sichergestellt, dass diese Partitionen über den gleichen Aggregationsentwurf verfügen. Beim Zusammenführen werden die Aggregationen der Quellpartition mit den Aggregationen der Zielpartition kombiniert.  
   
-##  <a name="bkmk_Where"></a>Aktualisieren der Partitions Quelle nach dem Zusammenführen von Partitionen  
+##  <a name="update-the-partition-source-after-merging-partitions"></a><a name="bkmk_Where"></a>Aktualisieren der Partitions Quelle nach dem Zusammenführen von Partitionen  
  Partitionen werden nach Abfrage segmentiert, etwa so wie die WHERE-Klausel einer SQL-Abfrage zur Verarbeitung der Daten verwendet wird, oder nach einer Tabelle oder benannten Abfrage, die Daten für die Partition bereitstellt. Die `Source`-Eigenschaft der Partition gibt an, ob die Partition an eine Abfrage oder eine Tabelle gebunden ist.  
   
  Beim Zusammenführen von Partitionen wird der Inhalt der Partitionen konsolidiert, die `Source`-Eigenschaft wird jedoch nicht aktualisiert, um den erweiterten Partitionsbereich widerzuspiegeln. Wenn Sie eine Partition, die ihre ursprüngliche `Source` beibehält, also später erneut verarbeiten, rufen Sie falsche Daten aus dieser Partition ab. Die Partition aggregiert die Daten fälschlicherweise auf der übergeordneten Ebene. Im folgenden Beispiel wird dieses Verhalten veranschaulicht.  
@@ -81,11 +81,11 @@ ms.locfileid: "66073651"
   
  In diesem Beispiel können Sie nach dem Zusammenführen von Partition 3 in Partition 2 einen Filter bereitstellen, z.B. ("Product" = 'ColaDecaf' OR "Product" = 'ColaDiet'), um die Daten in der sich ergebenden Partition 2 anzugeben, damit nur Daten über [ColaDecaf] und [ColaDiet] aus der Faktentabelle extrahiert und die zu [ColaFull] gehörenden Daten ausgeschlossen werden. Alternativ können Sie bereits beim Erstellen Filter für Partition 2 und Partition 3 angeben. Diese Filter werden beim Zusammenführen dann kombiniert. In beiden Fällen enthält der Cube nach der Verarbeitung der Partition keine doppelten Daten.  
   
- **Die Schlussfolgerung**  
+ **Schlussfolgerung**  
   
  Nach dem Zusammenführen von Partitionen sollten Sie `Source` immer daraufhin überprüfen, ob der richtige Filter für die zusammengeführten Daten verwendet wird. Wenn Sie anfänglich eine Partition mit den Verlaufsdaten für Q1, Q2 und Q3 verwendet haben und diese jetzt mit Q4 zusammenführen möchten, müssen Sie Q4 einbeziehen, indem Sie den Filter anpassen. Andernfalls werden bei der nachfolgenden Verarbeitung der Partition fehlerhafte Ergebnisse zurückgegeben, bei denen Q4 nicht berücksichtigt wird.  
   
-##  <a name="bkmk_fact"></a>Besonderheiten bei Partitionen, die nach Fakten Tabelle oder benannter Abfrage segmentiert sind  
+##  <a name="special-considerations-for-partitions-segmented-by-fact-table-or-named-query"></a><a name="bkmk_fact"></a>Besonderheiten bei Partitionen, die nach Fakten Tabelle oder benannter Abfrage segmentiert sind  
  Zusätzlich zu Abfragen können auch Partitionen nach Tabelle oder benannter Abfrage segmentiert werden. Wenn Quell- und Zielpartition dieselbe Faktentabelle in einer Datenquelle oder Datenquellensicht verwenden, behält die `Source`-Eigenschaft nach dem Zusammenführen von Partitionen Gültigkeit. Sie gibt die Faktentabellendaten für die resultierende Partition an. Da die für die resultierende Partition erforderlichen Fakten in der Faktentabelle vorhanden sind, muss die `Source`-Eigenschaft nicht geändert werden.  
   
  Partitionen, die Daten aus mehreren Faktentabellen oder benannten Abfragen verwenden, erfordern zusätzlichen Arbeitsaufwand. Sie müssen die Fakten aus der Faktentabelle der Quellpartition manuell mit der Faktentabelle der Zielpartition zusammenführen.  
@@ -110,7 +110,7 @@ ms.locfileid: "66073651"
   
  Faktentabellen können vor oder nach dem Zusammenführen von Partitionen zusammengeführt werden. Die Aggregationen zeigen jedoch die zugrundeliegenden Fakten nicht einwandfrei an, bis beide Vorgänge abgeschlossen wurden. Es wird empfohlen, dass Sie HOLAP- oder ROLAP-Partitionen, die auf verschiedene Faktentabellen zugreifen, dann zusammenführen, wenn Benutzer nicht mit dem Cube verbunden sind, der diese Partitionen enthält.  
   
-##  <a name="bkmk_partitionSSMS"></a>Zusammenführen von Partitionen mithilfe von SSMS  
+##  <a name="how-to-merge-partitions-using-ssms"></a><a name="bkmk_partitionSSMS"></a>Zusammenführen von Partitionen mithilfe von SSMS  
   
 > [!IMPORTANT]  
 >  Vor dem Zusammenführen von Partitionen kopieren Sie zunächst die Datenfilterinformationen (häufig die WHERE-Klausel für Filter basierend auf SQL-Abfragen). Nachdem die Zusammenführung abgeschlossen ist, sollten Sie später die Eigenschaft für die Partitionsquelle der Partition aktualisieren, in der die akkumulierten Faktendaten enthalten sind.  
@@ -128,7 +128,7 @@ ms.locfileid: "66073651"
   
 5.  Öffnen Sie `Source` die-Eigenschaft, und ändern Sie die WHERE-Klausel so, dass Sie die soeben zusammengeführten Partitions Daten enthält. Beachten Sie, `Source` dass die-Eigenschaft nicht automatisch aktualisiert wird. Wenn Sie erneut verarbeiten, ohne zuerst das `Source`zu aktualisieren, erhalten Sie möglicherweise nicht alle erwarteten Daten.  
   
-##  <a name="bkmk_partitionsXMLA"></a>Zusammenführen von Partitionen mithilfe von XMLA  
+##  <a name="how-to-merge-partitions-using-xmla"></a><a name="bkmk_partitionsXMLA"></a> Zusammenführen von Partitionen mithilfe von XMLA  
  Weitere Informationen zu diesem Thema finden Sie unter [Zusammenführen von Partitionen &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/merging-partitions-xmla.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: dcddeb64b14301f08a7dc723ef89737102f257ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070482"
 ---
 # <a name="query-sql-server-data-mining-add-ins"></a>Abfrage (SQL Server Data Mining-Add-Ins)
@@ -47,7 +47,7 @@ ms.locfileid: "66070482"
   
  Sie können jederzeit auf **erweitert** klicken, um zum **erweiterten Data Mining-Abfrage-Editor**zu wechseln. Dadurch erhalten Sie mehr Kontrolle über die einzelnen Teile der DMX-Anweisung. Weitere Informationen zur Verwendung der erweiterten Tools zur Abfrage Bearbeitung finden Sie unter Erweiterter [Data Mining-Abfrage-Editor](advanced-data-mining-query-editor.md).  
   
-### <a name="requirements"></a>Requirements (Anforderungen)  
+### <a name="requirements"></a>Anforderungen  
  Wenn Sie den **Abfrage** -Assistenten verwenden möchten, müssen Sie mit einer Instanz [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]von verbunden sein. Außerdem muss der Server mindestens ein Data Mining-Modell eines geeigneten Typs enthalten. Wenn keine Miningmodelle verfügbar sind, können Sie mithilfe der im Data Mining-Client für Excel bereitgestellten Assistenten ein Modell erstellen. Informationen zum Erstellen eines neuen Mining Modus mithilfe eines Assistenten finden Sie unter [Erstellen eines Data Mining-Modells](creating-a-data-mining-model.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

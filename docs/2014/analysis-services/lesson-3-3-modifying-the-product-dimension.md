@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff912ed43048e00f0ed77989a46b3b7d0b111cff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078840"
 ---
 # <a name="modifying-the-product-dimension"></a>Ändern der Product-Dimension
@@ -95,23 +95,23 @@ ms.locfileid: "66078840"
   
 1.  Wählen Sie im Bereich **Attribute** die folgenden Attribute, indem Sie beim Klicken die STRG-Taste gedrückt halten:  
   
-    -   **Klassi**  
+    -   **Class**  
   
-    -   **Color**  
+    -   **Farbe**  
   
     -   **Zu Produktionstage**  
   
-    -   **Punkt neu anordnen**  
+    -   **Reorder Point**  
   
-    -   **Sicherheitsebene**  
+    -   **Safety Stock Level**  
   
     -   **Größe**  
   
-    -   **Größenbereich**  
+    -   **Size Range**  
   
     -   **style**  
   
-    -   **Gewicht**  
+    -   **Weight**  
   
 2.  Geben `Stocking`Sie im Eigenschaftenfenster **AttributeHierarchyDisplayFolder** -Eigenschafts Feld ein.  
   
@@ -119,11 +119,11 @@ ms.locfileid: "66078840"
   
 3.  Wählen Sie im Bereich **Attribute** die folgenden Attribute aus:  
   
-    -   **Händler Preis**  
+    -   **Dealer Price**  
   
-    -   **Listenpreis**  
+    -   **List Price**  
   
-    -   **Standard Kosten**  
+    -   **Standard Cost**  
   
 4.  Geben `Financial`Sie in der **AttributeHierarchyDisplayFolder** -Eigenschafts Zelle im Eigenschaftenfenster ein.  
   
@@ -184,6 +184,6 @@ ms.locfileid: "66078840"
 ## <a name="see-also"></a>Weitere Informationen  
  [Definieren Sie benannte Berechnungen in einer Datenquellen Sicht &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)   
  [Erstellen von benutzerdefinierten Hierarchien](multidimensional-models/user-defined-hierarchies-create.md)   
- [Konfigurieren des &#40;alle&#41; Ebene für Attribut Hierarchien](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [Konfigurieren der Ebene &#40;Alle&#41; für Attributhierarchien](multidimensional-models/database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

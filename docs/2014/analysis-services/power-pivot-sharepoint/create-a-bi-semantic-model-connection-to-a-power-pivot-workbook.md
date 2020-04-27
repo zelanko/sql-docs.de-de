@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f525c45e71c290d3eaab410c0fa0fa62d1e9a61d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071634"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-powerpivot-workbook"></a>Herstellen einer BI-Semantikmodellverbindung mit einer PowerPivot-Arbeitsmappe
@@ -32,9 +32,9 @@ ms.locfileid: "66071634"
   
  [Konfigurieren von SharePoint-Berechtigungen für die Arbeitsmappe](#bkmk_userdb)  
   
- [Nächste Schritte](#bkmk_next)  
+ [Next Steps](#bkmk_next)  
   
-##  <a name="bkmk_prereq"></a>Voraussetzungen prüfen  
+##  <a name="review-prerequisites"></a><a name="bkmk_prereq"></a>Voraussetzungen prüfen  
  Sie benötigen Teilnahmeberechtigungen oder weiterreichende Berechtigungen, um eine BI Semantikmodell-Verbindungsdatei zu erstellen.  
   
  Sie benötigen eine Bibliothek, die den Inhaltstyp der BI Semantikmodellverbindung unterstützt. Weitere Informationen finden [Sie unter Hinzufügen eines BI-Semantik Modell-Verbindungs-Inhaltstyps zu einer Bibliothek &#40;PowerPivot für SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
@@ -43,7 +43,7 @@ ms.locfileid: "66071634"
   
  Alle Computer und Benutzer, die Teil der Verbindungssequenz sind, müssen in der gleichen Domäne bzw. vertrauenswürdigen Domäne (bidirektionale Vertrauensstellung) enthalten sein.  
   
-##  <a name="bkmk_create"></a>Erstellen einer Verbindung  
+##  <a name="create-a-connection"></a><a name="bkmk_create"></a>Erstellen einer Verbindung  
   
 1.  Klicken Sie in der Bibliothek, die die BI-Semantikmodellverbindung enthalten soll, auf **Dokumente** im SharePoint-Menüband. Klicken Sie in „Neues Dokument“ auf den Pfeil nach unten, und wählen Sie **BISM-Verbindungsdatei** aus, um die Seite „Neue BI-Semantikmodellverbindung“ zu öffnen.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "66071634"
   
      Wenn Sie über SharePoint-Berechtigungen an der Arbeitsmappe verfügen, wird optional ein zusätzlicher Überprüfungsschritt ausgeführt, der sicherstellt, dass der Speicherort gültig ist. Wenn Sie nicht über die Berechtigung verfügen, auf die Daten zuzugreifen, wird Ihnen die Option gegeben, die BI-Semantikmodellverbindung ohne die Überprüfungsantwort zu speichern.  
   
-##  <a name="bkmk_permissions"></a>Konfigurieren von SharePoint-Berechtigungen für die BI-Semantik Modell Verbindung  
+##  <a name="configure-sharepoint-permissions-on-the-bi-semantic-model-connection"></a><a name="bkmk_permissions"></a> Konfigurieren von SharePoint-Berechtigungen für die BI-Semantikmodellverbindung  
  Damit eine BI-Semantikmodellverbindung als Datenquelle für eine Excel-Arbeitsmappe oder einen Reporting Services-Bericht verwendet werden kann, muss das BI-Semantikmodell-Verbindungselement über **Leseberechtigungen** in einer SharePoint-Bibliothek verfügen. Die Berechtigungsebene „Lesen“ schließt die Berechtigung **Elemente öffnen** ein, die das Herunterladen von BI-Semantikmodell-Verbindungsinformationen in eine Excel-Desktopanwendung ermöglicht.  
   
  Es gibt mehrere Möglichkeiten, Berechtigungen in SharePoint zu erteilen. Die folgenden Anweisungen erläutern, wie Sie eine neue Gruppe mit dem Namen **BISM-Benutzer** erstellen, die die Berechtigungsstufe **Lesen** haben.  
@@ -88,12 +88,12 @@ ms.locfileid: "66071634"
   
 4.  Klicken Sie auf **Benutzerberechtigungen entfernen**.  
   
-##  <a name="bkmk_userdb"></a>Konfigurieren von SharePoint-Berechtigungen für die Arbeitsmappe  
+##  <a name="configure-sharepoint-permissions-on-the-workbook"></a><a name="bkmk_userdb"></a> Konfigurieren von SharePoint-Berechtigungen für die Arbeitsmappe  
  Wenn Sie in einer Excel-Arbeitsmappe eine PowerPivot-Datenbank verwenden, bestimmen die SharePoint-Berechtigungen für die Excel-Arbeitsmappe den Datenzugriff auf die BI-Semantikmodellverbindung. Alle Benutzer, die auf die Arbeitsmappe zugreifen, müssen Leseberechtigungen für die Arbeitsmappe haben, um sie als externe Datenquelle zu verwenden.  
   
  Wenn Sie eine Gruppe **BISM-Benutzer** mithilfe der Anweisungen im vorherigen Abschnitt erstellt haben, haben Benutzer- und Gruppenkonten, die Mitglieder von **BISM-Benutzer** sind, ausreichende Berechtigungen für die Arbeitsmappe und für die BI-Semantikmodell-Verbindungsdatei, wenn die Arbeitsmappe geerbte Berechtigungen verwendet.  
   
-##  <a name="bkmk_next"></a>Nächste Schritte  
+##  <a name="next-steps"></a><a name="bkmk_next"></a> Nächste Schritte  
  Nachdem Sie eine BI-Semantikmodellverbindung erstellt und gesichert haben, können Sie sie als Datenquelle angeben. Weitere Informationen finden Sie unter [Verwenden einer BI-Semantikmodellverbindung in Excel oder Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

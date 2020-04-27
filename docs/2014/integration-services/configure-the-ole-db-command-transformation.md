@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8c9536e14f20e62b944df44ff943b05edb92e5fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060557"
 ---
 # <a name="configure-the-ole-db-command-transformation"></a>Konfigurieren der Transformation für OLE DB-Befehl
@@ -37,7 +37,7 @@ ms.locfileid: "66060557"
   
 6.  Wählen Sie auf der Registerkarte **Verbindungs-Manager** in der Liste **Verbindungs-Manager** einen OLE DB-Verbindungs-Manager aus. Weitere Informationen finden Sie unter [OLE DB Connection Manager](connection-manager/ole-db-connection-manager.md).  
   
-7.  Klicken Sie auf die Registerkarte **Komponenteneigenschaften**, und klicken Sie im Feld **SqlCommand** auf die Schaltfläche mit den Auslassungspunkten ( **...** ).  
+7.  Klicken Sie auf die Registerkarte **Komponenteneigenschaften**, und klicken Sie im Feld **SqlCommand** auf die Schaltfläche mit den Auslassungspunkten (**...**).  
   
 8.  Geben Sie in **Zeichenfolgenwert-Editor**die parametrisierte SQL-Anweisung mithilfe eines Fragezeichens (?) als Parametermarkierung für jeden Parameter ein.  
   
@@ -73,8 +73,8 @@ ms.locfileid: "66060557"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Transformation für OLE DB Befehl](data-flow/transformations/ole-db-command-transformation.md)   
- [SQL Server Integration Services-Transformationen](data-flow/transformations/integration-services-transformations.md)   
- [SQL Server Integration Services-Pfade](data-flow/integration-services-paths.md)   
+ [Integration Services Transformationen](data-flow/transformations/integration-services-transformations.md)   
+ [Integration Services Pfade](data-flow/integration-services-paths.md)   
  [Datenflusstask](control-flow/data-flow-task.md)  
   
   

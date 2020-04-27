@@ -13,14 +13,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 65688b553aab7bf35313a45e9c945f6d3031d127
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074204"
 ---
 # <a name="intrinsic-member-properties-mdx"></a>Integrierte Elementeigenschaften (MDX)
-  
   [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] macht systeminterne Eigenschaften für Dimensionselemente verfügbar, die Sie in eine Abfrage einschließen können, um zusätzliche Daten oder Metadaten für eine benutzerdefinierte Anwendung zurückzugeben, oder um die Überprüfung oder Erstellung des Modells zu unterstützen. Wenn Sie die SQL Server-Clienttools verwenden, können Sie die systeminternen Eigenschaften in SQL Server Management Studio (SSMS) anzeigen lassen.  
   
  Systeminterne Eigenschaften sind `ID`, `KEY`, `KEYx` und `NAME` und werden von jedem Element auf beliebigen Ebenen verfügbar gemacht. Sie können u. a. auch Positionsinformationen wie `LEVEL_NUMBER` oder `PARENT_UNIQUE_NAME` zurückgeben.  
@@ -60,7 +59,7 @@ ms.locfileid: "66074204"
 ## <a name="context-sensitive-member-properties"></a>Kontextabhängige Elementeigenschaften  
  Alle Dimensionselemente und Ebenenelemente unterstützen eine Reihe von systeminternen Elementeigenschaften, die kontextabhängig sind. In der folgenden Tabelle sind diese kontextabhängigen Eigenschaften aufgelistet.  
   
-|Eigenschaft|BESCHREIBUNG|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |`ID`|Die intern verwaltete ID für das Element.|  
 |`Key`|Der Wert des Elementschlüssels im ursprünglichen Datentyp. MEMBER_KEY wird für Abwärtskompatibilität verwendet.  MEMBER_KEY hat für nicht zusammengesetzte Schlüssel denselben Wert wie KEY0, und die MEMBER_KEY-Eigenschaft ist für zusammengesetzte Schlüssel NULL.|  
@@ -90,7 +89,7 @@ ms.locfileid: "66074204"
 > [!NOTE]  
 >  Die Spalten im MEMBERS-Schemarowset unterstützen die systeminternen Elementeigenschaften, die in der folgenden Tabelle aufgelistet sind. Weitere Informationen zum `MEMBERS` Schemarowset finden Sie unter [MDSCHEMA_MEMBERS-Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset).  
   
-|Eigenschaft|BESCHREIBUNG|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |`CATALOG_NAME`|Der Name des Cubes, zu dem dieses Element gehört.|  
 |`CHILDREN_CARDINALITY`|Die Anzahl der untergeordneten Elemente des Elements. Dies kann eine Schätzung sein, daher sollten Sie sich nicht darauf verlassen, dass es sich um die exakte Anzahl handelt. Anbieter sollten die bestmögliche Schätzung zurückgeben.|  
@@ -134,7 +133,7 @@ ms.locfileid: "66074204"
 ### <a name="example"></a>Beispiel  
  Die folgenden Beispiele zeigen MDX-Abfragen, die systeminterne Eigenschaften zurückgeben.  
   
- **Beispiel 1: verwenden Kontext abhängiger System interner Eigenschaften in Abfragen**  
+ **Beispiel 1: Verwenden kontextabhängiger systeminterner Eigenschaften in Abfragen**  
   
  Im folgenden Beispiel werden die übergeordnete ID, der Schlüssel und der Name jeder Produktkategorie zurückgegeben. Beachten Sie, dass die Eigenschaften als Measures verfügbar gemacht werden. Auf diese Weise können Sie die Eigenschaften bei Ausführen der Abfrage in einem Cellset anzeigen, anstatt das Dialogfeld Elementeigenschaften in SSMS zu öffnen. Sie können eine mit der folgenden Abfrage vergleichbare Abfrage ausführen, um Elementmetadaten aus einem bereits bereitgestellten Cube abzurufen.  
   
@@ -152,7 +151,7 @@ SELECT
 FROM [Adventure Works]  
 ```  
   
- **Beispiel 2: nicht kontextabhängige, systeminterne Eigenschaften**  
+ **Beispiel 2: Nicht kontextabhängige, systeminterne Eigenschaften**  
   
  Das folgende Beispiel enthält eine vollständige Liste der nicht kontextabhängigen, systeminternen Eigenschaften. Nachdem Sie die Abfrage in SSMS ausgeführt haben, klicken Sie auf die einzelnen Elemente, um die Eigenschaften im Dialogfeld Elementeigenschaften anzuzeigen.  
   
@@ -190,7 +189,7 @@ FROM [Adventure Works]
 WHERE [Employee].[Employee Department].[Department].&[Sales]  
 ```  
   
- **Beispiel 3: Zurückgeben von Element Eigenschaften als Daten in einem Resultset**  
+ **Beispiel 3: Zurückgeben von Elementeigenschaften als Daten in einem Resultset**  
   
  Im folgenden Beispiel wird die übersetzte Beschriftung für das Product Category-Element in der Product-Dimension im Adventure Works-Cube für bestimmte Gebietsschemas zurückgegeben.  
   
@@ -217,6 +216,6 @@ FROM [Adventure Works]
  [Eigenschaften &#40;MDX-&#41;](/sql/mdx/properties-mdx)   
  [PrevMember &#40;MDX-&#41;](/sql/mdx/prevmember-mdx)   
  [Verwenden von Element Eigenschaften &#40;MDX-&#41;](mdx-member-properties.md)   
- [MDX-Funktionsreferenz &#40;MDX-&#41;](/sql/mdx/mdx-function-reference-mdx)  
+ [MDX-Funktionsreferenz &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

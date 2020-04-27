@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b51c763987fdfe8bbaf08851094a5e6e6d267c36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074861"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Schlüsselkonzepte in MDX (Analysis Services)
@@ -33,13 +33,13 @@ ms.locfileid: "66074861"
 ## <a name="measures-and-dimensions"></a>Measures und Dimensionen  
  Ein Analysis Services-Cube besteht aus Measures, Dimensionen und Dimensionsattributen, die allesamt im PivotTable-Beispiel vorhanden sind.  
   
- **Measures** sind numerische Datenwerte in Zellen, die als Summe, Anzahl, Prozentsatz, min, Max oder Average aggregiert werden. Measure-Werte sind dynamisch und werden in Echtzeit anhand der Navigation und Interaktion von Benutzern in der PivotTable berechnet. In diesem Beispiel enthalten die Zellen steigende oder sinkende Reseller Sales-Werte, je nachdem, ob Sie die Achsen erweitern oder reduzieren. Sie können Reseller Sales-Werte summiert im jeweiligen Kontext für beliebige Kombinationen aus Datum (Jahr, Quartal, Monat oder Datum) und Vertriebsgebiet (Ländergruppe, Land, Region) abrufen. Measures werden auch als Fakten (in Data Warehouses) und berechnete Felder (in Tabellen- und Exceldatenmodellen) bezeichnet.  
+ **Measures** sind numerische Datenwerte aus Zellen, die als Summe, Anzahl, Prozentsatz, min, max oder Durchschnitt aufgezählt werden. Measure-Werte sind dynamisch und werden in Echtzeit anhand der Navigation und Interaktion von Benutzern in der PivotTable berechnet. In diesem Beispiel enthalten die Zellen steigende oder sinkende Reseller Sales-Werte, je nachdem, ob Sie die Achsen erweitern oder reduzieren. Sie können Reseller Sales-Werte summiert im jeweiligen Kontext für beliebige Kombinationen aus Datum (Jahr, Quartal, Monat oder Datum) und Vertriebsgebiet (Ländergruppe, Land, Region) abrufen. Measures werden auch als Fakten (in Data Warehouses) und berechnete Felder (in Tabellen- und Exceldatenmodellen) bezeichnet.  
   
- **Dimensionen** befinden sich auf den Spalten-und Zeilen Achsen einer PivotTables und stellen die Bedeutung hinter dem Measure dar. Dimensionen sind das Gegenstück zu Tabellen in relationalen Datenmodellen. Typische Beispiele für Dimensionen sind Zeit, Geografie, Produkte, Kunden, Mitarbeiter usw. Das aktuelle Beispiel enthält zwei Dimensionen: Vertriebsgebiet in den Zeilen und Datum in den Spalten. Sie könnten jedoch jederzeit weitere Dimensionen für Reseller Sales per Ziehen und Ablegen hinzufügen, um die Vertriebsleistung für diese Dimensionen anzuzeigen, wie z. B. Angebote oder Produkte. Die Möglichkeit zur Erkundung der Daten auf interessante Arten hängt von Ihren Dimensionen sowie von deren Verknüpfung mit Faktentabellen in Ihrer Datenquelle ab.  
+ **Dimensions** befinden sich auf den Spalten- und Zeilenachsen einer PivotTable, und geben die Bedeutung eines Measure an. Dimensionen sind das Gegenstück zu Tabellen in relationalen Datenmodellen. Typische Beispiele für Dimensionen sind Zeit, Geografie, Produkte, Kunden, Mitarbeiter usw. Das aktuelle Beispiel enthält zwei Dimensionen: Vertriebsgebiet in den Zeilen und Datum in den Spalten. Sie könnten jedoch jederzeit weitere Dimensionen für Reseller Sales per Ziehen und Ablegen hinzufügen, um die Vertriebsleistung für diese Dimensionen anzuzeigen, wie z. B. Angebote oder Produkte. Die Möglichkeit zur Erkundung der Daten auf interessante Arten hängt von Ihren Dimensionen sowie von deren Verknüpfung mit Faktentabellen in Ihrer Datenquelle ab.  
   
- **Dimensions Attribute** sind benannte Elemente innerhalb einer Dimension, ähnlich wie Spalten in einer Tabelle. In diesem Fall bestehen die Dimensionsattribute für das Vertriebsgebiet aus Ländergruppen (Europa, Nordamerika, Pazifik), Ländern (Kanada, USA) und Regionen (Zentral, Nordost, Nordwest, Südost, Südwest).  
+ **Dimension-Attribute** sind benannte Elemente innerhalb einer Dimension, ähnlich wie Spalten in einer Tabelle. In diesem Fall bestehen die Dimensionsattribute für das Vertriebsgebiet aus Ländergruppen (Europa, Nordamerika, Pazifik), Ländern (Kanada, USA) und Regionen (Zentral, Nordost, Nordwest, Südost, Südwest).  
   
- Mit jedem Attribut ist eine Sammlung von Datenwerten oder Elementen verknüpft. Elemente des Ländergruppen-Attributs sind in diesem Fall Europa, Nordamerika und Pazifik. **Members** bezieht sich auf die tatsächlichen Datenwerte, die zu einem Attribut gehören.  
+ Mit jedem Attribut ist eine Sammlung von Datenwerten oder Elementen verknüpft. Elemente des Ländergruppen-Attributs sind in diesem Fall Europa, Nordamerika und Pazifik. **Members** beziehen sich auf die tatsächlichen Datenwerte eines Attributs.  
   
 > [!NOTE]  
 >  Ein Aspekt der Datenmodellierung ist die Formalisierung von Mustern und Beziehungen, die bereits zwischen den eigentlichen Daten existieren. Bei der Arbeit mit Daten, die eine natürliche Hierarchie haben, wie im aktuellen Beispiel Länder-Regionen-Städte, können Sie diese Beziehung durch die Erstellung einer **Attributbeziehung**formalisieren. Eine Attribut Beziehung ist eine 1: n-Beziehung zwischen Attributen, z. b. eine Beziehung zwischen einem Bundesland und einem Ort, in der ein Bundesstaat viele Städte hat, aber eine Stadt zu nur einem Bundesstaat gehört. Wenn Sie Attribut Beziehungen im Modell erstellen, beschleunigt dies die Abfrageleistung. Daher empfiehlt es sich, diese zu erstellen, wenn Sie von den Daten unterstützt werden. Sie können Attributbeziehungen auch im Dimensions-Designer in den SQL Server Data Tools erstellen. Siehe [Define Attribute Relationships](attribute-relationships-define.md).  
@@ -118,29 +118,29 @@ ms.locfileid: "66074861"
   
  Der **Cuberaum** ist das Produkt der Elemente der Attribut Hierarchien eines Cubes mit den Measures des Cubes.  
   
- Der **Teilcube** ist eine Teilmenge eines Cubes, der eine gefilterte Ansicht des Cubes darstellt. Teilcubes können mithilfe von SCOPE-Anweisungen in einem MDX-Berechnungsskript oder mithilfe untergeordneter SELECT-Klauseln in einer MDX-Abfrage oder als ein Sitzungscube definiert werden.  
+ **Subcube** ist ein Teilsatz eines Cubes, der eine gefilterte Ansicht des Cubes darstellt. Teilcubes können mithilfe von SCOPE-Anweisungen in einem MDX-Berechnungsskript oder mithilfe untergeordneter SELECT-Klauseln in einer MDX-Abfrage oder als ein Sitzungscube definiert werden.  
   
- **Cell** bezieht sich auf den Raum an der Schnittmenge eines Members des Measures Dimensions Elements und eines Elements aus jeder Attribut Hierarchie in einem Cube.  
+ **Cell** bezieht sich auf den Abstand an einem Schnittpunkt eines Elements des Measuedimensionselements und eines Elements der einzelnen Attributhierarchien in einem Cube.  
   
 ## <a name="other-modeling-terms"></a>Weitere Modellierungsbegriffe  
  Dieser Abschnitt stellt eine Sammlung von Konzepten und Begriffen dar, die nicht problemlos in andere Abschnitte passen, aber Sie müssen noch wissen.  
   
- **Berechnetes** Element ist ein Dimensions Element, das zum Abfrage Zeitpunkt definiert und berechnet wird. Ein berechnetes Element kann in einer Benutzerabfrage oder in einem MDX-Berechnungsskript definiert und auf dem Server gespeichert werden. Ein berechnetes Element entspricht Zeilen in der Dimensionstabelle der Dimension, in der diese definiert sind.  
+ **Berechnetes Element** bezeichnet ein Dimensionselement, das zum Abfragezeitpunkt definiert und berechnet wird. Ein berechnetes Element kann in einer Benutzerabfrage oder in einem MDX-Berechnungsskript definiert und auf dem Server gespeichert werden. Ein berechnetes Element entspricht Zeilen in der Dimensionstabelle der Dimension, in der diese definiert sind.  
   
- Die unter **schiedliche Anzahl** ist ein spezieller Typ von Measure, der für Datenelemente verwendet wird, die nur einmal gezählt werden sollen. Das AdventureWorks-Beispielmodell enthält Distinct Count Measures für Internetbestellungen, Wiederverkäuferbestellungen und Verkaufsaufträge.  
+ **Distinct Count** ist ein spezieller Measuretyp, der für Datenelemente verwendet wird, die nur einmal gezählt werden sollen. Das AdventureWorks-Beispielmodell enthält Distinct Count Measures für Internetbestellungen, Wiederverkäuferbestellungen und Verkaufsaufträge.  
   
- Bei **Measure-Gruppen** handelt es sich um eine Sammlung von einem oder mehreren Measures. Diese Gruppen sind normalerweise benutzerdefiniert und werden zum Gruppieren verwandter Measures verwendet. Distinct Count Measures sind eine Ausnahme. Diese Measures sind immer Teil einer speziellen Measuregruppe, die nur distinct Measures enthält. Die Measure-Gruppe wird in der PivotTables-Beispiel Abbildung nicht angezeigt, Sie wird jedoch in einer PivotTables-Feldliste als benannte Auflistung von Measures angezeigt.  
+ **Measuregruppen** sind eine Sammlung von einem oder mehreren Measures. Diese Gruppen sind normalerweise benutzerdefiniert und werden zum Gruppieren verwandter Measures verwendet. Distinct Count Measures sind eine Ausnahme. Diese Measures sind immer Teil einer speziellen Measuregruppe, die nur distinct Measures enthält. Die Measure-Gruppe wird in der PivotTables-Beispiel Abbildung nicht angezeigt, Sie wird jedoch in einer PivotTables-Feldliste als benannte Auflistung von Measures angezeigt.  
   
- Die **Measures-Dimension** ist die Dimension, die alle Measures in einem Cube enthält. Sie ist nicht in einem mehrdimensionalen Modell verfügbar, das Sie in SQL Server Data Tools erstellen, aber es ist eben identisch. Da diese Dimension Measures enthält, werden alle Elemente einer Measuredimension normalerweise aggregiert (typischerweise als Summe oder Anzahl).  
+ **Measuredimension** ist die Dimension, die alle Measures in einem Cube enthält. Sie ist nicht in einem mehrdimensionalen Modell verfügbar, das Sie in SQL Server Data Tools erstellen, aber es ist eben identisch. Da diese Dimension Measures enthält, werden alle Elemente einer Measuredimension normalerweise aggregiert (typischerweise als Summe oder Anzahl).  
   
- **Daten Bank Dimensionen und Cubedimensionen**. In Modellen können Sie eigenständige Dimensionen definieren, die anschließend in einer beliebigen Anzahl von Cubes im gleichen Modell integriert werden. Wenn Sie einem Cube eine Dimension hinzufügen, wird diese als Cubedimension bezeichnet. Allein innerhalb eines Projekts als eigenständiges Element in Objekt-Explorer wird es als Daten Bank Dimension bezeichnet. Warum die Unterscheidung? Da Sie Eigenschaften der Dimensionen unabhängig voneinander setzen können. In der Produktdokumentation werden beide Begriffe verwendet, damit Sie verstehen, was Sie bedeuten.  
+ **Datenbankdimensionen und Cubedimensionen**. In Modellen können Sie eigenständige Dimensionen definieren, die anschließend in einer beliebigen Anzahl von Cubes im gleichen Modell integriert werden. Wenn Sie einem Cube eine Dimension hinzufügen, wird diese als Cubedimension bezeichnet. Allein innerhalb eines Projekts als eigenständiges Element in Objekt-Explorer wird es als Daten Bank Dimension bezeichnet. Warum die Unterscheidung? Da Sie Eigenschaften der Dimensionen unabhängig voneinander setzen können. In der Produktdokumentation werden beide Begriffe verwendet, damit Sie verstehen, was Sie bedeuten.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
  Sie kennen nun die wichtigsten Konzepte und Begriffe und können mit diesen zusätzlichen Themen fortfahren, in denen grundlegende Konzepte von Analysis Services weiter erläutert werden:  
   
--   [Die grundlegende MDX-Abfrage &#40;MDX-&#41;](mdx/mdx-query-the-basic-query.md)  
+-   [Die grundlegende MDX-Abfrage &#40;MDX&#41;](mdx/mdx-query-the-basic-query.md)  
   
--   [Das grundlegende MDX-Skript &#40;MDX-&#41;](mdx/the-basic-mdx-script-mdx.md)  
+-   [Grundlegendes MDX-Skript &#40;MDX&#41;](mdx/the-basic-mdx-script-mdx.md)  
   
 -   [Mehrdimensionale Modellierung &#40;Adventure Works-Tutorial&#41;](../multidimensional-modeling-adventure-works-tutorial.md)  
   
@@ -153,6 +153,6 @@ ms.locfileid: "66074861"
  [Grundlagen der MDX-Abfrage &#40;Analysis Services&#41;](mdx/mdx-query-fundamentals-analysis-services.md)   
  [Grundlagen der MDX-Skripterstellung &#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md)   
  [MDX-Sprachreferenz &#40;MDX-&#41;](/sql/mdx/mdx-language-reference-mdx)   
- [Mehrdimensionale Ausdrücke &#40;MDX-&#41; Referenz](/sql/mdx/multidimensional-expressions-mdx-reference)  
+ [Multidimensional Expressions &#40;MDX&#41; – Referenz](/sql/mdx/multidimensional-expressions-mdx-reference)  
   
   

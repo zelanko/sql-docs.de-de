@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f4826be0fd38118e94921f63e02882935132a4d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072480"
 ---
 # <a name="view-the-xml-for-an-analysis-services-project-ssdt"></a>Anzeigen des XML für ein Analysis Services-Projekt (SSDT)
@@ -34,6 +34,6 @@ ms.locfileid: "66072480"
      Der XML-Code des Objekts wird in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]angezeigt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erstellen von Analysis Services Projekten &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)  
+ [Erstellen von Analysis Services-Projekten &#40;SSDT&#41;](build-analysis-services-projects-ssdt.md)  
   
   

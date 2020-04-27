@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3bd6de297f4b5b677db10861e594afc36f74bb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072961"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Festlegen von Identitätswechseloptionen (SSAS – mehrdimensional)
@@ -39,13 +39,13 @@ ms.locfileid: "66072961"
 ## <a name="set-impersonation-options-in-management-studio"></a>Festlegen von Identitätswechseloptionen in Management Studio  
  Öffnen Sie in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]das Dialogfeld **Identitätswechselinformationen** , indem Sie für die folgenden Eigenschaften dieser Dialogfelder auf die Schaltfläche mit den Auslassungspunkten (**...**) klicken:  
   
--   Daten **Bank Eigenschaften** (Dialogfeld), über die Eigenschaft Identitätswechsel Informationen der Datenquelle.  
+-   Dialogfeld**Datenbankeigenschaften** , über die Eigenschaft "Identitätswechselinformationen der Datenquelle"  
   
--   **Datenquellen Eigenschaften** (Dialogfeld), über die Eigenschaft Identitätswechsel Informationen.  
+-   Dialogfeld**Datenquelleneigenschaften** , über die Eigenschaft "Identitätswechselinformationen"  
   
--   **** Dialogfeld Assemblyeigenschaften, über die Eigenschaft Identitätswechsel Informationen.  
+-   Dialogfeld**Assemblyeigenschaften** , über die Eigenschaft "Identitätswechselinformationen"  
   
-##  <a name="bkmk_options"></a>Identitätswechsel Optionen  
+##  <a name="impersonation-options"></a><a name="bkmk_options"></a> Identitätswechseloptionen  
  Alle Optionen sind im Dialogfeld verfügbar, aber nicht alle Optionen sind für jedes Szenario geeignet. Bestimmen Sie anhand folgender Informationen die beste Option für das Szenario.  
   
  **Einen bestimmten Benutzernamen und ein bestimmtes Kennwort verwenden**  
@@ -59,7 +59,7 @@ ms.locfileid: "66072961"
   
  Bei DMX OPENQUERY-Anweisungen wird diese Option ignoriert, und die Anmeldeinformationen des aktuellen Benutzers werden anstelle des angegebenen Benutzerkontos verwendet.  
   
- **Dienst Konto verwenden**  
+ **Dienstkonto verwenden**  
  Wählen Sie diese Option aus, damit das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekt die Anmeldeinformationen mit dem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Dienst verwendet, der das Objekt verwaltet. Dies ist die Standardoption. In früheren Versionen war dies die einzige Option, die Sie verwenden konnten. Möglicherweise bevorzugen Sie diese Option, um den Datenzugriff auf Dienstebene anstelle einzelner Benutzerkonten zu überwachen.  
   
  In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]kann das Dienstkonto abhängig vom verwendeten Betriebssystem einem NetworkService oder einem integrierten virtuellen Konto entsprechen, das für eine bestimmte [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz erstellt wurde. Wenn Sie das Dienstkonto für eine Verbindung auswählen, die die Windows-Authentifizierung verwendet, denken Sie daran, eine Datenbankanmeldung für dieses Konto zu erstellen und Leseberechtigungen zu gewähren, da diese während der Verarbeitung zum Abrufen von Daten verwendet werden. Weitere Informationen zum Dienstkonto finden Sie unter [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
@@ -76,14 +76,14 @@ ms.locfileid: "66072961"
 > [!NOTE]  
 >  Wenn ein Data Mining-Modell aus einem Cube verarbeitet wird, können Fehler auftreten, sofern das Dienstkonto nicht über Administratorberechtigungen für die Analysis Services-Instanz verfügt. Weitere Informationen finden Sie unter [Minigstruktur: Fehler bei der Verarbeitung, wenn die Datenquelle ein OLAP-Cube ist](https://go.microsoft.com/fwlink/?LinkId=251610).  
   
- **Anmelde Informationen des aktuellen Benutzers verwenden**  
+ **Anmeldeinformationen des aktuellen Benutzers verwenden**  
  Wählen Sie diese Option aus, damit vom [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekt für Out-of-Line-Bindungen, DMX OPENQUERY-Anweisungen, lokale Cubes und Miningmodelle die Sicherheitsanmeldeinformationen des aktuellen Benutzers verwendet werden.  
   
  Diese Option wird nicht für Tabellendatenbanken unterstützt.  
   
  Mit Ausnahme lokaler Cubes und der Verarbeitung mit Out-of-Line-Bindungen wird diese Option für mehrdimensionale Datenbanken nicht unterstützt.  
   
- **Standard** oder **erben**  
+ **Standard** oder **Erben**  
  Im Dialogfeld wird **Standard** für die Identitätswechseloptionen auf Datenbankebene und **Erben** für Identitätswechseloptionen auf Datenquellenebene verwendet.  
   
  **Datenquellen-Option "Erben"**  
@@ -107,7 +107,7 @@ ms.locfileid: "66072961"
  Bei mehrdimensionalen Datenbanken entspricht **Standard** der Verwendung des Dienstkontos und des aktuellen Benutzers für Data Mining-Vorgänge.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erstellen einer Datenquelle (SSAS: mehrdimensional)](create-a-data-source-ssas-multidimensional.md)   
+ [Erstellen einer Datenquelle &#40;mehrdimensionalen SSAS-&#41;](create-a-data-source-ssas-multidimensional.md)   
  [Festlegen von Datenquellen Eigenschaften &#40;mehrdimensionalen SSAS-&#41;](set-data-source-properties-ssas-multidimensional.md)   
  [Directquery-Bereitstellungs Szenarien &#40;tabellarischen SSAS-&#41;](../directquery-deployment-scenarios-ssas-tabular.md)  
   

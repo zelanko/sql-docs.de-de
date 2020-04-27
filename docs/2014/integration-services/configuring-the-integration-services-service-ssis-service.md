@@ -16,17 +16,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 600858e3d7b2ea29a30541c559aa764b4085f7cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66060501"
 ---
 # <a name="configuring-the-integration-services-service-ssis-service"></a>Konfigurieren des Integration Services-Diensts (SSIS-Dienst)
     
 > [!IMPORTANT]  
->  In diesem Thema wird der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst beschrieben, ein Windows-Dienst zur Verwaltung von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen. 
-  [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] unterstützt den Dienst für die Abwärtskompatibilität mit früheren Versionen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]können Sie Objekte, z. B. Pakete, auf dem Integration Services-Server verwalten.  
+>  In diesem Thema wird der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst beschrieben, ein Windows-Dienst zur Verwaltung von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Paketen. [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] unterstützt den Dienst für die Abwärtskompatibilität mit früheren Versionen von [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Ab [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]können Sie Objekte, z. B. Pakete, auf dem Integration Services-Server verwalten.  
   
  Der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst erhält seine Einstellungen über eine Konfigurationsdatei. Standardmäßig lautet der Name für diese Konfigurationsdatei MsDtsSrvr. ini. XML, und die Datei befindet sich im Ordner%ProgramFiles%\Microsoft SQL server\120\dz\binn.  
   
@@ -41,7 +40,7 @@ ms.locfileid: "66060501"
   
 -   Die Pakete im Dateisystem, die vom [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst verwaltet werden, befinden sich unter%ProgramFiles%\Microsoft SQL server\120\dz\packages.  
   
- Diese Konfigurationsdatei gibt auch an, welche msdb-Datenbank die Pakete enthält, die der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst verwaltet. Standardmäßig wird der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Dienst für die Verwaltung von Paketen in der msdb-Datenbank der Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] konfiguriert, die zur selben Zeit wie [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] installiert wird. Wenn eine Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] nicht zur selben Zeit installiert wird, wird der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Dienst so konfiguriert, dass Pakete in der msdb-Datenbank der lokalen Standardinstanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] verwaltet werden.  
+ Diese Konfigurationsdatei gibt auch an, welche msdb-Datenbank die Pakete enthält, die der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst verwaltet. Standardmäßig wird der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst für die Verwaltung von Paketen in der msdb-Datenbank der Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] konfiguriert, die zur selben Zeit wie [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]installiert wird. Wenn eine Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] nicht zur selben Zeit installiert wird, wird der [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Dienst so konfiguriert, dass Pakete in der msdb-Datenbank der lokalen Standardinstanz von [!INCLUDE[ssDE](../includes/ssde-md.md)]verwaltet werden.  
   
 ### <a name="default-configuration-file-example"></a>Beispiel für eine Standardkonfigurationsdatei  
  Folgendes Beispiel zeigt eine Standardkonfigurationsdatei, die die folgenden Einstellungen angibt:  
@@ -54,7 +53,7 @@ ms.locfileid: "66060501"
   
 -   Der Dienst verwaltet Pakete, die im Dateisystem im Ordner Pakete gespeichert sind.  
   
- **Beispiel für eine Standard Konfigurationsdatei**  
+ **Beispiel einer Standardkonfigurationsdatei**  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -79,7 +78,7 @@ ms.locfileid: "66060501"
 > [!NOTE]  
 >  Manche Zeichen sind für Ordnernamen nicht zulässig. Die gültigen Zeichen für Ordnernamen werden durch die [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] -Klasse **System.IO.Path** und das Feld **GetInvalidFilenameChars** bestimmt. Das Feld **GetInvalidFilenameChars** stellt ein plattformspezifisches Array mit Zeichen bereit, das nicht in Pfadzeichenfolgenargumenten angegeben werden kann, die an Mitglieder der **Path** -Klasse übergeben werden. Die Menge der ungültigen Zeichen kann je nach Dateisystem variieren. Normalerweise zählen zu den ungültigen Zeichen das Anführungszeichen ("), das Kleiner-als-Zeichen (<) und der senkrechte Strich (|).  
   
- Um Pakete zu verwalten, die in einer benannten Instanz oder einer Remoteinstanz von [!INCLUDE[ssDE](../includes/ssde-md.md)] gespeichert sind, müssen Sie die Konfigurationsdatei jedoch ändern. Wenn Sie die Konfigurationsdatei nicht aktualisieren, können Sie mit dem **Objekt-Explorer** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] keine Pakete anzeigen, die in der msdb-Datenbank auf der benannten Instanz oder der Remoteinstanz gespeichert sind. Wenn Sie versuchen, diese Pakete mit dem **Objekt-Explorer** anzuzeigen, erhalten Sie die folgende Fehlermeldung:  
+ Um Pakete zu verwalten, die in einer benannten Instanz oder einer Remoteinstanz von [!INCLUDE[ssDE](../includes/ssde-md.md)]gespeichert sind, müssen Sie die Konfigurationsdatei jedoch ändern. Wenn Sie die Konfigurationsdatei nicht aktualisieren, können Sie mit dem **Objekt-Explorer** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] keine Pakete anzeigen, die in der msdb-Datenbank auf der benannten Instanz oder der Remoteinstanz gespeichert sind. Wenn Sie versuchen, diese Pakete mit dem **Objekt-Explorer** anzuzeigen, erhalten Sie die folgende Fehlermeldung:  
   
  `Failed to retrieve data for this request. (Microsoft.SqlServer.SmoEnum)`  
   
@@ -123,8 +122,7 @@ Der Registrierungsschlüssel **HKEY_LOCAL_MACHINE \software\microsoft\microsoft 
   
   
 > [!CAUTION]  
->  Unsachgemäßes Bearbeiten der Registrierung kann zu schwerwiegenden Problemen führen, die ein Neuinstallieren des Betriebssystems erforderlich machen können. 
-  [!INCLUDE[msCoName](../includes/msconame-md.md)] garantiert nicht, dass Probleme, die durch unsachgemäßes Bearbeiten der Registrierung entstehen, behoben werden können. Sichern Sie vor dem Bearbeiten der Registrierung alle wichtigen Daten. Weitere Informationen zum Sichern, Wiederherstellen und Bearbeiten der Registrierung finden Sie im [!INCLUDE[msCoName](../includes/msconame-md.md)] Knowledge Base-Artikel [Windows-Registrierungsinformationen für Benutzer mit fortgeschrittenen Kenntnissen](https://support.microsoft.com/kb/256986).  
+>  Unsachgemäßes Bearbeiten der Registrierung kann zu schwerwiegenden Problemen führen, die ein Neuinstallieren des Betriebssystems erforderlich machen können. [!INCLUDE[msCoName](../includes/msconame-md.md)] garantiert nicht, dass Probleme, die durch unsachgemäßes Bearbeiten der Registrierung entstehen, behoben werden können. Sichern Sie vor dem Bearbeiten der Registrierung alle wichtigen Daten. Weitere Informationen zum Sichern, Wiederherstellen und Bearbeiten der Registrierung finden Sie im [!INCLUDE[msCoName](../includes/msconame-md.md)] Knowledge Base-Artikel [Windows-Registrierungsinformationen für Benutzer mit fortgeschrittenen Kenntnissen](https://support.microsoft.com/kb/256986).  
   
  Die Konfigurationsdatei wird beim Starten des [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Diensts geladen. Bei Änderungen am Registrierungseintrag ist es erforderlich, den Dienst neu zu starten.  
   

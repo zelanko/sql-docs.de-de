@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ea766d26034b9ee0d1fcefbd215f41c19da1f9ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075228"
 ---
 # <a name="specifying-processing-options"></a>Angeben von Verarbeitungsoptionen
@@ -29,7 +29,7 @@ ms.locfileid: "66075228"
 ## <a name="reviewing-the-processing-options-for-deployment"></a>Überprüfen der Verarbeitungsoptionen für die Bereitstellung  
  Die Konfigurationseinstellungen, die in \<der *Projektname*>. deploymentoptions-Datei gespeichert sind, lauten wie folgt:  
   
--   **Verarbeitungsmethode** Mit dieser Einstellung wird gesteuert, ob die bereitgestellten Objekte nach der Bereitstellung verarbeitet werden und welche Art von Verarbeitung ausgeführt wird. Es stehen drei Verarbeitungsoptionen zur Verfügung:  
+-   **Verarbeitungsmethode** Diese Einstellung steuert, ob die bereitgestellten Objekte nach der Bereitstellung verarbeitet werden und welche Art von Verarbeitung ausgeführt wird. Es stehen drei Verarbeitungsoptionen zur Verfügung:  
   
     -   Standardverarbeitung (Standardeinstellung)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66075228"
   
     -   Keine  
   
--   **Optionen** für die Rück schreibe Tabelle Wenn das Rück schreiben im [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projekt aktiviert ist, wird durch diese Einstellung definiert, wie das Rück schreiben behandelt wird. Es sind drei Rückschreibetabellenoptionen verfügbar:  
+-   **Optionen für die Rückschreibetabelle** Wenn im [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Projekt Rückschreiben aktiviert ist, wird mit dieser Einstellung die Ausführung dieses Vorgangs definiert. Es sind drei Rückschreibetabellenoptionen verfügbar:  
   
     -   Wenn eine Rückschreibetabelle vorhanden ist, wird diese standardmäßig verwendet. Ist keine Rückschreibetabelle vorhanden, wird eine neue Rückschreibetabelle erstellt.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66075228"
   
     -   Unabhängig davon, ob bereits eine Rückschreibetabelle vorhanden ist, wird eine neue Rückschreibetabelle erstellt. In diesem Fall löscht der Bereitstellungs-Assistent für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die vorhandene Tabelle und ersetzt sie durch eine neue Rückschreibetabelle.  
   
--   **Transaktions Bereitstellung** Mit dieser Einstellung wird gesteuert, ob die Bereitstellung von Metadatenänderungen und Verarbeitungs Befehlen in einer einzelnen Transaktion oder in separaten Transaktionen erfolgt.  
+-   **Transaktionsbereitstellung** Diese Einstellung steuert, ob die Bereitstellung von Metadatenänderungen und Verarbeitungsbefehlen in einer einzelnen Transaktion oder in getrennten Transaktionen erfolgt.  
   
     -   Wenn diese Option auf `True` (Standard) festgelegt ist, stellt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] alle Metadatenänderungen und alle Verarbeitungsbefehle in einer einzelnen Transaktion bereit.  
   
@@ -60,11 +60,11 @@ ms.locfileid: "66075228"
   
 -   Führen Sie den Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] interaktiv aus. Geben Sie auf der Seite **Verarbeitungsoptionen** die Verarbeitungsoptionen für das bereitzustellende Projekt an.  
   
-     Oder  
+     - oder -  
   
 -   Führen Sie den Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] an der Eingabeaufforderung aus, und legen Sie fest, dass der Assistent im Antwortdateimodus ausgeführt wird. Weitere Informationen zum Antwortdateimodus finden Sie unter [Running the Analysis Services Deployment Wizard](running-the-analysis-services-deployment-wizard.md).  
   
-     Oder  
+     - oder -  
   
 -   Ändern Sie \<den *Projektnamen*>. deploymentoptions-Datei, indem Sie einen beliebigen Text-Editor verwenden.  
   

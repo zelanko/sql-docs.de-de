@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8c9fb5d1300b6f50f7ef0a765881896069becf0b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073900"
 ---
 # <a name="subselects-in-queries"></a>Unterauswahlen in Abfragen
@@ -305,7 +305,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||Alle Vertriebsgebiete|Australien|Kanada|Zentral|Nordwest|Südwest|  
+||Alle Vertriebsgebiete|Australien|Canada|Zentral|Nordwest|Südwest|  
 |All Products|$7,591,495.49|$1,281,059.99|$1,547,298.12|$600,205.79|$1,924,763.50|$2,238,168.08|  
 |Mountain-200 Silver, 38|$1,449,576.15|$248,702.93|$275,052.45|$141,103.65|$349,487.01|$435,230.12|  
 |Mountain-200 Black, 38|$1,722,896.50|$218,024.05|$418,726.43|$123,929.46|$486,694.63|$475,521.93|  
@@ -328,7 +328,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-||Alle Vertriebsgebiete|Australien|Kanada|Nordwest|Südwest|Vereinigtes Königreich|  
+||Alle Vertriebsgebiete|Australien|Canada|Nordwest|Südwest|United Kingdom|  
 |All Products|$7,938,218.56|$1,096,312.24|$1,474,255.49|$2,042,674.72|$2,238,099.55|$1,086,876.56|  
 |Mountain-200 Silver, 38|$1,520,958.53|$248,702.93|$275,052.45|$349,487.01|$435,230.12|$212,486.03|  
 |Mountain-200 Silver, 42|$1,392,237.14|$198,127.15|$229,679.01|$361,233.58|$407,854.24|$195,343.16|  
@@ -338,7 +338,7 @@ SELECT [Sales Territory].[Sales Territory Region].MEMBERS on 0
   
  Wie Sie sehen können, gibt es zwischen beiden Sätzen Unterschiede in den Ergebnissen. Die erste Abfrage hat die Frage von den besten verkaufenden Produkte der obersten fünf verkaufenden Bereiche beantwortet. die zweite Abfrage hat die Frage der größten Verkäufe der obersten fünf verkaufenden Produkte beantwortet.  
   
-### <a name="remarks"></a>Bemerkungen  
+### <a name="remarks"></a>Hinweise  
  Unterauswahlen haben folgende Einschränkungen und Beschränkungen:  
   
 -   Die WHERE-Klausel filtert den Teilbereich nicht.  

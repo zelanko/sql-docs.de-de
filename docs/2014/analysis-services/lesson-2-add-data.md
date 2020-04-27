@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 370e368843fa1e9584cc341397853fcdad26922a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078965"
 ---
 # <a name="lesson-2-add-data"></a>Lektion 2: Hinzufügen von Daten
@@ -27,7 +27,7 @@ ms.locfileid: "66078965"
  Geschätzte Zeit zum Bearbeiten dieser Lektion: **20 Minuten**  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
- Dieses Thema ist Teil eines Tutorials zur Tabellenmodellierung, das in der vorgegebenen Reihenfolge durchgeführt werden sollte. Vor dem Ausführen der Aufgaben in dieser Lektion sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 1: Erstellen eines neuen tabellarischen Modellprojekts](lesson-1-create-a-new-tabular-model-project.md).  
+ Dieses Thema ist Teil eines Tutorials zur Tabellenmodellierung, das in der richtigen Reihenfolge absolviert werden sollte. Vor dem Ausführen der Aufgaben in dieser Lektion sollten Sie die vorherige Lektion abgeschlossen haben: [Lektion 1: Erstellen eines neuen tabellarischen Modellprojekts](lesson-1-create-a-new-tabular-model-project.md).  
   
 ## <a name="create-a-connection"></a>Erstellen einer Verbindung  
   
@@ -48,7 +48,7 @@ ms.locfileid: "66078965"
 6.  Auf der Seite **Identitätswechselinformationen** müssen Sie die Anmeldeinformationen angeben, mit denen Analysis Services eine Verbindung mit der Datenquelle herstellt, wenn Daten importiert und verarbeitet werden. Überprüfen Sie, ob **Bestimmter Windows-Benutzername und bestimmtes Kennwort** ausgewählt ist, geben Sie in den Feldern **Benutzername** und **Kennwort**Ihre Windows-Anmeldeinformationen ein, und klicken Sie anschließend auf **Weiter**.  
   
     > [!NOTE]  
-    >  Ein Windows-Benutzerkonto mit Kennwort ist die sicherste Methode, um sich mit einer Datenquelle zu verbinden. Weitere Informationen finden Sie unter [Identitätswechsel &#40;SSAS – tabellarisch&#41;](tabular-models/impersonation-ssas-tabular.md).  
+    >  Die Verwendung eines Windows-Benutzerkontos und -Kennworts stellt die sicherste Methode für das Herstellen einer Verbindung mit einer Datenquelle dar. Weitere Informationen finden Sie unter [Identitätswechsel &#40;SSAS – tabellarisch&#41;](tabular-models/impersonation-ssas-tabular.md).  
   
 7.  Überprüfen Sie auf der Seite **Auswählen, wie die Daten importiert werden sollen** , ob die Option **Aus einer Liste von Tabellen und Sichten auswählen, um die zu importierenden Daten zu bestimmen** ausgewählt ist. Sie möchten in einer Liste von Tabellen und Sichten eine Auswahl treffen. Klicken Sie daher auf **Weiter** , um eine Liste aller Quelltabellen in der Quelldatenbank anzuzeigen.  
   
@@ -60,18 +60,18 @@ ms.locfileid: "66078965"
   
     |Quellname|Anzeigename|  
     |-----------------|-------------------|  
-    |DimDate|Date|  
+    |DimDate|Datum|  
     |DimGeography|Gebiet|  
     |DimProduct|Produkt|  
     |DimProductCategory|Produktkategorie|  
     |DimProductSubcategory|Product Subcategory|  
     |FactInternetSales|Internet Sales|  
   
-     Klicken Sie nicht auf **Fertig** **stellen** .  
+     Klicken Sie**NICHT** auf **Fertig stellen**.  
   
  Da Sie jetzt eine Verbindung mit der Datenbank hergestellt, die zu importierenden Tabellen ausgewählt und den Tabellen Anzeigenamen zugewiesen haben, wechseln Sie zum nächsten Abschnitt mit der Überschrift [Filtern der Tabellendaten vor dem Importieren](#FilterData).  
   
-##  <a name="FilterData"></a>Filtern der Tabellendaten  
+##  <a name="filter-the-table-data"></a><a name="FilterData"></a>Filtern der Tabellendaten  
  Die DimCustomer-Tabelle, die Sie aus der Datenbank importieren, enthält eine Teilmenge der Daten aus der ursprünglichen SQL Server Adventure Works-Datenbank. Einige der Spalten aus der DimCustomer-Tabelle werden herausgefiltert, die nicht erforderlich sind. Wenn möglich, möchten Sie nicht verwendete Daten herausfiltern, um vom Modell verwendeten Speicherplatz im Arbeitsspeicher zu sparen.  
   
 #### <a name="to-filter-the-table-data-prior-to-importing"></a>So filtern Sie die Tabellendaten vor dem Importieren  
@@ -87,7 +87,7 @@ ms.locfileid: "66078965"
     |**SpanishOccupation**|  
     |**FrenchOccupation**|  
   
-     Da diese Spaltenwerte für die Analyse der Internetverkäufe nicht relevant sind, müssen diese Spalten nicht importiert werden. Durch Entfernen von nicht benötigten Spalten wird das Modell kleiner.  
+     Da die Werte für diese Spalten nicht relevant für die Analyse von Internetverkäufen sind, müssen die Spalten nicht importiert werden. Durch Entfernen von nicht benötigten Spalten wird das Modell kleiner.  
   
 3.  Überprüfen Sie, ob alle anderen Spalten aktiviert sind, und klicken Sie anschließend auf **OK**.  
   
@@ -95,42 +95,42 @@ ms.locfileid: "66078965"
   
 4.  Filtern Sie die verbleibenden Tabellen, indem Sie die Kontrollkästchen für die folgenden Spalten in jeder Tabelle deaktivieren:  
   
-    |Date|  
+    |Datum|  
     |----------|  
     |**DateKey**|  
-    |**Spanishdaynameof-Woche**|  
-    |**Frenchdaynameof-Woche**|  
-    |**Option SpanishMonthName**|  
-    |**Option FrenchMonthName aus**|  
+    |**SpanishDayNameOfWeek**|  
+    |**FrenchDayNameOfWeek**|  
+    |**SpanishMonthName**|  
+    |**FrenchMonthName**|  
   
     |Gebiet|  
     |---------------|  
-    |**Spanishcountryregionname**|  
-    |**Frenchcountryregionname**|  
-    |**Ipaddresslocator**|  
+    |**SpanishCountryRegionName**|  
+    |**FrenchCountryRegionName**|  
+    |**IpAddressLocator**|  
   
     |Produkt|  
     |-------------|  
-    |**Spanishproductname**|  
-    |**Frenchproductname**|  
-    |**Frenchdescription**|  
-    |**Chinesedescription**|  
-    |**Arabicdescription**|  
-    |**Hebrewdescription**|  
-    |**"Thaideabo"**|  
-    |**Germandescription**|  
-    |**Japanesedescription**|  
-    |**Turkishdescription**|  
+    |**SpanishProductName**|  
+    |**FrenchProductName**|  
+    |**FrenchDescription**|  
+    |**ChineseDescription**|  
+    |**ArabicDescription**|  
+    |**HebrewDescription**|  
+    |**ThaiDescription**|  
+    |**GermanDescription**|  
+    |**JapaneseDescription**|  
+    |**TurkishDescription**|  
   
     |Produktkategorie|  
     |----------------------|  
-    |**Spanishproductcategoryname**|  
-    |**Frenchproductcategoryname**|  
+    |**SpanishProductCategoryName**|  
+    |**FrenchProductCategoryName**|  
   
     |Product Subcategory|  
     |-------------------------|  
-    |**Spanishproductsubcategoryname**|  
-    |**Frenchproductsubcategoryname**|  
+    |**SpanishProductSubcategoryName**|  
+    |**FrenchProductSubcategoryName**|  
   
     |Internet Sales|  
     |--------------------|  
@@ -140,8 +140,8 @@ ms.locfileid: "66078965"
   
  Nachdem Sie die nicht benötigten Daten in der Vorschau angezeigt und die herausgefiltert haben, können Sie die Daten importieren. Wechseln Sie zum nächsten Abschnitt ( **Importieren der ausgewählten Tabellen- und Spaltendaten**).  
   
-##  <a name="Import"></a>Importieren der ausgewählten Tabellen und Spaltendaten  
- Sie können jetzt die ausgewählten Daten importieren. Der Assistent importiert sowohl die Tabellendaten als auch sämtliche Beziehungen zwischen den Tabellen. Neue Tabellen und Spalten werden im Modell mit den Anzeigenamen erstellt, die Sie angegeben haben, und gefilterte Daten werden nicht importiert.  
+##  <a name="import-the-selected-tables-and-column-data"></a><a name="Import"></a>Importieren der ausgewählten Tabellen und Spaltendaten  
+ Sie können jetzt die ausgewählten Daten importieren. Der Assistent importiert die Tabellendaten zusammen mit allen Beziehungen zwischen Tabellen. Neue Tabellen und Spalten werden im Modell mit den Anzeigenamen erstellt, die Sie angegeben haben, und gefilterte Daten werden nicht importiert.  
   
 #### <a name="to-import-the-selected-tables-and-column-data"></a>So importieren Sie die ausgewählten Tabellen und Spaltendaten  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0b11e1510213aefa98c6bf2c0c779cebaeed85e5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071033"
 ---
 # <a name="the-data-connection-uses-windows-authentication-and-user-credentials-could-not-be-delegated-the-following-connections-failed-to-refresh-powerpivot-data"></a>Die Datenverbindung verwendet die Windows-Authentifizierung, und Benutzeranmeldeinformationen konnten nicht delegiert werden. Die folgenden Verbindungen wurden nicht aktualisiert: PowerPivot-Daten
@@ -24,12 +24,12 @@ ms.locfileid: "66071033"
   
 |||  
 |-|-|  
-|Anwendungsbereich|PowerPivot für SharePoint|  
+|Gilt für|PowerPivot für SharePoint|  
 |Produktversion|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Ursache|Verbindungsfehler beim Versuch, einen PowerPivot-Datenanbieter zu verwenden.|  
 |Meldungstext|Die Datenverbindung verwendet die Windows-Authentifizierung, und Benutzeranmeldeinformationen konnten nicht delegiert werden. Die folgenden Verbindungen wurden nicht aktualisiert: PowerPivot-Daten|  
   
-## <a name="explanation"></a>Erklärung  
+## <a name="explanation"></a>Erläuterung  
  Es gibt mehrere Ursachen für diese Fehlermeldung. Alle haben gemeinsam, dass Excel Services keine gültige Windows-Benutzeridentität von einem Claims-Token in SharePoint abrufen können. Bei Excel-Arbeitsmappen, die PowerPivot-Daten enthalten, tritt dieser Fehler auf, wenn eine der folgenden Bedingungen zutrifft:  
   
 -   c2WTS (Claims to Windows Token Service) wird nicht ausgeführt. Sie können die Ursache dieses Fehlers überprüfen, indem Sie die SharePoint-Protokolldatei anzeigen. Wenn die SharePoint-Protokolle die Meldung enthalten, dass der Pipeendpunkt "net.pipe://localhost/s4u/022694f3-9fbd-422b-b4b2-312e25dae2a2" auf dem lokalen Computer nicht gefunden wurde, wird c2WTS (Claims to Windows Token Service) nicht ausgeführt. Um ihn zu starten, verwenden Sie die Zentraladministration und überprüfen dann, ob der Dienst in der Konsolenanwendung Dienste ausgeführt wird.  
@@ -49,7 +49,7 @@ ms.locfileid: "66071033"
   
 #### <a name="enable-claims-to-windows-token-service"></a>Aktivieren von c2WTS (Claims to Windows Token Service)  
   
-1.  Klicken Sie in der zentral Administration unter System Einstellungen auf **Dienste auf dem Server verwalten**.  
+1.  Klicken Sie in der Zentraladministration unter Systemeinstellungen auf **Dienste auf dem Server verwalten**.  
   
 2.  Wählen Sie **Claims to Windows Token Service**aus, und klicken Sie dann auf **Starten**.  
   

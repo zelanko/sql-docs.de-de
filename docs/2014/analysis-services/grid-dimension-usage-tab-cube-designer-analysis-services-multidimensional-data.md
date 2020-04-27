@@ -11,16 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 294b40d07731f588267e94ff748adaf871a8ac3b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080811"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>Raster (Registerkarte 'Dimensionsverwendung', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich **Raster** der Registerkarte **Dimensionsverwendung** können Sie im Cube-Designer die Dimensionsbeziehungen zwischen Cubedimensionen und Measuregruppen anzeigen und bearbeiten. Jede Dimensionsbeziehung ist in einem Raster, in dem Measuregruppen als Spalten und Dimensionen als Zeilen angezeigt werden, als Zelle dargestellt.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 |Option|Definition|  
 |------------|----------------|  
@@ -35,11 +35,11 @@ ms.locfileid: "66080811"
 |------------|----------------|  
 |**Cubedimension hinzufügen**|Wählen Sie diese Option aus, um das Dialogfeld **Cubedimension hinzufügen** anzuzeigen und vorhandenen oder neuen Datenbankdimensionen im Cube Verweise hinzuzufügen. Weitere Informationen zum Dialogfeld **Cubedimension hinzufügen** finden Sie unter [Dialogfeld „Cubedimension hinzufügen“ &#40;Analysis Services – Mehrdimensionale Daten&#41;](add-cube-dimension-dialog-box-analysis-services-multidimensional-data.md).|  
 |**Neues verknüpftes Objekt**|Wählen Sie diese Option aus, um **Assistent für verknüpfte Objekte** anzuzeigen und Measuregruppen mit Dimensionen aus anderen Cubes zu verknüpfen oder Aktionen, KPIs und Berechnungen in den ausgewählten Cube zu importieren. Weitere Informationen zum **Assistenten für verknüpfte Objekte**finden Sie unter [Assistent für verknüpfte Objekte (F1-Hilfe)](linked-object-wizard-f1-help.md).|  
-|**Ausschneiden**|Hinweis: diese Option ist deaktiviert.|  
-|**Copy**|Hinweis: diese Option ist deaktiviert.|  
+|**Schnitts**|Hinweis: diese Option ist deaktiviert.|  
+|**Kopieren**|Hinweis: diese Option ist deaktiviert.|  
 |**Einfügen**|Hinweis: diese Option ist deaktiviert.|  
 |**Löschen**|Wählen Sie diese Option aus, um die ausgewählte Cubedimension, Measuregruppe oder Dimensionsbeziehung aus dem Cube zu entfernen.|  
-|**Benen**|Wählen Sie diese Option aus, um die ausgewählte Cubedimension, Measuregruppe oder Dimensionsbeziehung umzubenennen.|  
+|**Umbenennen**|Wählen Sie diese Option aus, um die ausgewählte Cubedimension, Measuregruppe oder Dimensionsbeziehung umzubenennen.|  
 |**Eigenschaften**|Wählen Sie diese Option aus, um das Fenster **Eigenschaften** in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] für die ausgewählte Cubedimension, Measuregruppe oder Dimensionsbeziehung anzuzeigen.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

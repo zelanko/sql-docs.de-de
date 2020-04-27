@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 52ba9afd78722d53bad32a6c918a98dbc2279ffa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072689"
 ---
 # <a name="use-a-template-to-create-an-action"></a>Verwenden einer Vorlage zum Erstellen einer Aktion
@@ -32,6 +32,6 @@ ms.locfileid: "66072689"
 -   Geben Sie die erforderlichen Informationen ein, um die auf der Vorlage basierende Aktion fertig zu stellen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Aktionen &#40;Analysis Services Mehrdimensionale Daten&#41;](actions-analysis-services-multidimensional-data.md)  
+ [Aktionen &#40;Analysis Services – mehrdimensionale Daten&#41;](actions-analysis-services-multidimensional-data.md)  
   
   

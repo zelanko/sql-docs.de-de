@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c2e82ff5158f64c95b0e66f327c6d57ebf2def29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076760"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Durchsuchen von Daten und Metadaten in Cube
@@ -55,17 +55,17 @@ ms.locfileid: "66076760"
   
 -   Erweitern Sie eine Dimension im Bereich Metadaten, und ziehen Sie dann eine Hierarchie in den Bereich Filter.  
   
-     \- oder –  
+     \- oder -  
   
--   Klicken **** Sie **** **** ** \<** in der Spalte Dimension des Filter Bereichs auf Dimensions>auswählen, wählen Sie eine Dimension aus der Liste aus, ** \<** und klicken Sie dann in der Spalte Hierarchie auf Hierarchie>auswählen, und wählen Sie eine Hierarchie aus der Liste aus.  
+-   Klicken **Filter** Sie **Dimension** **Hierarchy** ** \<** in der Spalte Dimension des Filter Bereichs auf Dimensions>auswählen, wählen Sie eine Dimension aus der Liste aus, ** \<** und klicken Sie dann in der Spalte Hierarchie auf Hierarchie>auswählen, und wählen Sie eine Hierarchie aus der Liste aus.  
   
  Nachdem Sie die Hierarchie angegeben haben, geben Sie den Operator und den Filterausdruck an. In der folgenden Tabelle werden die Operatoren und die Filterausdrücke beschrieben.  
   
-|Operator|Filterausdruck|BESCHREIBUNG|  
+|Operator|Filterausdruck|Beschreibung|  
 |--------------|-----------------------|-----------------|  
 |Gleich|Ein oder mehrere Elemente|Werte müssen gleich einem angegebenen Element sein.<br /><br /> (Stellt für andere Attributhierarchien als Über-/Unterordnungshierarchien die Auswahl mehrerer Elemente und für sonstige Hierarchien die Auswahl einzelner Elemente bereit.)|  
 |Ungleich|Ein oder mehrere Elemente|Die Werte dürfen nicht gleich einem angegebenen Element sein.<br /><br /> (Stellt für andere Attributhierarchien als Über-/Unterordnungshierarchien die Auswahl mehrerer Elemente und für sonstige Hierarchien die Auswahl einzelner Elemente bereit.)|  
-|In|Eine oder mehrere benannte Mengen|Werte müssen in einer angegebenen benannten Menge enthalten sein.<br /><br /> (Wird nur für Attributhierarchien unterstützt.)|  
+|Geben Sie in|Eine oder mehrere benannte Mengen|Werte müssen in einer angegebenen benannten Menge enthalten sein.<br /><br /> (Wird nur für Attributhierarchien unterstützt.)|  
 |Not In|Eine oder mehrere benannte Mengen|Werte dürfen nicht in einer angegebenen benannten Menge enthalten sein.<br /><br /> (Wird nur für Attributhierarchien unterstützt.)|  
 |Bereich (inklusiv)|Eine oder zwei begrenzende Elemente eines Bereichs|Werte müssen gleich den begrenzenden Elementen sein oder dazwischen liegen. Wenn die begrenzenden Elemente gleich sind oder nur ein Element angegeben ist, wird kein Bereich erstellt, und alle Werte sind zulässig.<br /><br /> (Wird nur für Attributhierarchien unterstützt. Die Bereichswerte müssen sich auf einer Hierarchieebene befinden. Unbegrenzte Bereiche werden derzeit nicht unterstützt.)|  
 |Bereich (exklusiv)|Eine oder zwei begrenzende Elemente eines Bereichs|Werte müssen zwischen den begrenzenden Elementen liegen. Wenn die begrenzenden Elemente gleich sind oder nur ein Element angegeben ist, müssen die Werte größer oder kleiner als das begrenzende Element sein.<br /><br /> (Wird nur für Attributhierarchien unterstützt. Die Bereichswerte müssen sich auf einer Hierarchieebene befinden. Unbegrenzte Bereiche werden derzeit nicht unterstützt.)|  

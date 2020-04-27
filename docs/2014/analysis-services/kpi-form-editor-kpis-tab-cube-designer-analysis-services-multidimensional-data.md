@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ca81dda4ce34a498aa471ceed5ea86729b1df508
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079452"
 ---
 # <a name="kpi-form-editor-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>KPI-Formular-Editor (Registerkarte 'KPIs', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
@@ -65,7 +65,7 @@ ms.locfileid: "66079452"
 > [!NOTE]  
 >  Werte unter-1 und über 1 sind möglich, können aber möglicherweise von Client Anwendungen von Drittanbietern nicht ordnungsgemäß interpretiert werden.  
   
- **Trend**  
+ **Trends**  
  Erweitern Sie diese Option, um die Optionen **Trendgrafik** und **Trendausdruck** anzuzeigen.  
   
  **Trendgrafik**  
@@ -90,7 +90,7 @@ ms.locfileid: "66079452"
  **Anzeigeordner**  
  Geben Sie die Kategorisierung des KPIs ein, die von der Clientanwendung zum Anzeigen verwendet werden soll.  
   
- Verwenden Sie einen umgekehrten Schrägstrich (\\), um die Ordnernamen in einem Anzeigeordner zu trennen, und ein Semikolon (;), um mehrere Anzeigeordner voneinander zu trennen. Geben Sie beispielsweise `Category\Goal\Scientific;Category\Goal\Metric` ein.  
+ Verwenden Sie einen umgekehrten Schrägstrich (\\), um die Ordnernamen in einem Anzeigeordner zu trennen, und ein Semikolon (;), um mehrere Anzeigeordner voneinander zu trennen. Geben Sie beispielsweise `Category\Goal\Scientific;Category\Goal\Metric`.  
   
  **Übergeordneter KPI**  
  Wählen Sie einen vorhandenen KPI aus, unter dem der von der Clientanwendung zu verwendende KPI kategorisiert werden soll.  
@@ -106,7 +106,7 @@ ms.locfileid: "66079452"
 > [!IMPORTANT]  
 >  Der MDX-Ausdruck muss den eindeutigen Namen eines Elements innerhalb einer Zeitdimension zurückgeben, die der unter **Zugeordnete Measuregruppe**angegebenen Measuregruppe zugeordnet ist.  
   
- **Gewicht**  
+ **Weight**  
  Erweitern Sie diese Option, um den MDX-Ausdruck für den Gewichtungsfaktor des KPIs anzuzeigen oder zu bearbeiten.  
   
  Ziehen Sie ausgewählte Elemente aus dem Bereich **Berechnungstools** auf diese Option, um die MDX-Syntax für das ausgewählte Element einzuschließen.  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 57fe740bdd02c96eb21994f5996c734620793616
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079841"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Aktualisieren von Arbeitsmappen und planmäßige Datenaktualisierungen (SharePoint 2013)
@@ -27,15 +27,15 @@ ms.locfileid: "66079841"
   
 -   [Übersicht über das Aktualisieren von Arbeitsmappen](#bkmk_overview)  
   
--   [Upgrade auf SQL Server 2012 Service Pack 1 (SP1)-Arbeitsmappen aus 2008 R2-Arbeitsmappen](#bkmk_to_2012sp1_from_2008r2)  
+-   [Aktualisieren von Arbeitsmappen der Version 2008 R2 auf SQL Server 2012 Service Pack 1 (SP1)-Arbeitsmappen](#bkmk_to_2012sp1_from_2008r2)  
   
 -   [Aktualisieren von Versionen, die mit dem 2012 PowerPivot-Add-In für Excel erstellt wurden, auf Office 2013-Arbeitsmappen](#bkmk_to_2012sp1_from_2012)  
   
 -   [Aktualisieren von Versionen, die mit dem 2008 R2 PowerPivot-Add-In für Excel 2010 erstellt wurden, auf SQL Server 2012-Arbeitsmappen](#bkmk_to_2012_from_2008R2)  
   
--   [Ausführen mehrerer arbeitsmappenversionen auf einem neueren Server](#bkmk_runold)  
+-   [Ausführen mehrerer Arbeitsmappenversionen auf einem neueren Server](#bkmk_runold)  
   
-##  <a name="bkmk_overview"></a>Übersicht über das Aktualisieren von Arbeitsmappen  
+##  <a name="overview-of-upgrading-workbooks"></a><a name="bkmk_overview"></a>Übersicht über das Aktualisieren von Arbeitsmappen  
  Eine PowerPivot-Arbeitsmappe ist eine Excel-Arbeitsmappe, die eingebettete PowerPivot-Daten enthält. Das Aktualisieren einer Arbeitsmappe bietet zwei Vorteile:  
   
 -   Die neuen Funktionen in [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)]werden verwendet.  
@@ -52,14 +52,14 @@ ms.locfileid: "66079841"
 |Erstellt in|\<|Unterstützung und Verhalten|>|  
 |----------------|--------|--------------------------|--------|  
 ||**2008 R2 PowerPivot für SharePoint 2010**|**2012 PowerPivot für SharePoint 2010**|**2012 SP1 PowerPivot für SharePoint 2013**|  
-|**2008 R2 PowerPivot für Excel 2010**|Alle Funktionen|**Erleben** Sie Folgendes: Benutzer können im Browser mit der Arbeitsmappe interagieren und Sie als Datenquelle für andere Lösungen verwenden.<br /><br /> **Upgrade:** Arbeitsmappen werden automatisch in der Dokumentbibliothek aktualisiert, wenn das automatische Upgrade für den Power Pivot-Systemdienst in der SharePoint-Farm aktiviert ist.<br /><br /> **Planen der Datenaktualisierung:** Nicht unterstützt. Arbeitsmappe muss aktualisiert werden.|**Erleben** Sie Folgendes: Benutzer können mit der Arbeitsmappe interagieren und Sie als Datenquelle für andere Lösungen verwenden.<br /><br /> **Upgrade:** Das automatische Upgrade ist nicht verfügbar. Benutzer müssen 2008 R2-Arbeitsmappen manuell auf die 2012-Version oder die Office 2013-Version aktualisieren.<br /><br /> **Planen der Datenaktualisierung:** Nicht unterstützt. Arbeitsmappe muss aktualisiert werden.|  
-|**2012 PowerPivot für Excel**|Nicht unterstützt|Alle Funktionen|**Erleben** Sie Folgendes: Benutzer können im Browser mit der Arbeitsmappe interagieren und Sie als Datenquelle für andere Lösungen verwenden. Planmäßige Datenaktualisierung ist verfügbar.<br /><br /> **Upgrade:** Das automatische Upgrade wird nicht unterstützt. Benutzer können Arbeitsmappen manuell auf die Office 2013-Version aktualisieren.<br /><br /> **Planmäßige Datenaktualisierung:** unterstützt.|  
+|**2008 R2 PowerPivot für Excel 2010**|Alle Funktionen|**Benutzererfahrung:** Benutzer können im Browser mit der Arbeitsmappe interagieren und sie als Datenquelle für andere Lösungen verwenden.<br /><br /> **Upgrade:** Arbeitsmappen werden automatisch in der Dokumentbibliothek aktualisiert, wenn automatische Upgrades für den PowerPivot-Systemdienst in der SharePoint-Farm aktiviert sind.<br /><br /> **Planmäßige Datenaktualisierung:** NICHT unterstützt. Arbeitsmappe muss aktualisiert werden.|**Benutzererfahrung:** Benutzer können mit der Arbeitsmappe interagieren und sie als Datenquelle für andere Lösungen verwenden.<br /><br /> **Upgrade:** Es wird kein automatisches Upgrade unterstützt. Benutzer müssen 2008 R2-Arbeitsmappen manuell auf die 2012-Version oder die Office 2013-Version aktualisieren.<br /><br /> **Planmäßige Datenaktualisierung:** NICHT unterstützt. Arbeitsmappe muss aktualisiert werden.|  
+|**2012 PowerPivot für Excel**|Nicht unterstützt|Alle Funktionen|**Benutzererfahrung:** Benutzer können im Browser mit der Arbeitsmappe interagieren und sie als Datenquelle für andere Lösungen verwenden. Planmäßige Datenaktualisierung ist verfügbar.<br /><br /> **Upgrade:** Es wird kein automatisches Upgrade unterstützt. Benutzer können Arbeitsmappen manuell auf die Office 2013-Version aktualisieren.<br /><br /> **Planmäßige Datenaktualisierung:** unterstützt.|  
 |**Excel 2013**|Nicht unterstützt|Nicht unterstützt|Alle Funktionen|  
   
-##  <a name="bkmk_to_2012sp1_from_2008r2"></a>Upgrade auf SQL Server 2012 Service Pack 1 (SP1)-Arbeitsmappen aus 2008 R2-Arbeitsmappen  
+##  <a name="upgrade-to-sql-server-2012-service-pack-1-sp1-workbooks-from-2008-r2-workbooks"></a><a name="bkmk_to_2012sp1_from_2008r2"></a>Upgrade auf SQL Server 2012 Service Pack 1 (SP1)-Arbeitsmappen aus 2008 R2-Arbeitsmappen  
  In diesem Abschnitt wird das Upgrade von Arbeitsmappen im Format von SQL Server 2008 R2 PowerPivot für Excel 2010 auf SQL Server 2012 SP1 PowerPivot für Excel 2013-Arbeitsmappen beschrieben.  
   
- **Verhaltensänderung:** SQL Server 2008 R2 Power Pivot-Arbeitsmappen werden nicht automatisch aktualisiert, wenn Sie in SQL Server 2012 SP1 PowerPivot für SharePoint 2013 verwendet werden. Aus diesem Grund können in SQL Server 2008 R2 PowerPivot-Arbeitsmappen keine planmäßigen Datenaktualisierungen ausgeführt werden.  
+ **Verändertes Programmverhalten:** SQL Server 2008 R2 PowerPivot-Arbeitsmappen werden nicht automatisch aktualisiert, wenn sie in SQL Server 2012 SP1 PowerPivot für SharePoint 2013 verwendet werden. Aus diesem Grund können in SQL Server 2008 R2 PowerPivot-Arbeitsmappen keine planmäßigen Datenaktualisierungen ausgeführt werden.  
   
  Arbeitsmappen der Version 2008 R2 werden zwar in PowerPivot für SharePoint 2013 geöffnet, unterstützen aber keine planmäßigen Datenaktualisierungen. Wenn Sie den Aktualisierungsverlauf überprüfen, wird eine mit der folgenden vergleichbare Fehlermeldung angezeigt:  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66079841"
   
 -   SQL Server 2012 PowerPivot für Excel 2013.  
   
- Vorgehens **Weise beim Aktualisieren einer-Arbeitsmappe:** Die geplante Datenaktualisierung funktioniert erst, wenn Sie die Arbeitsmappe auf eine 2012-Arbeitsmappe aktualisieren. Um die Arbeitsmappe und das darin enthaltene Modell zu aktualisieren, führen Sie eines der folgenden Verfahren aus:  
+ **So aktualisieren Sie eine Arbeitsmappe:** Die planmäßigen Datenaktualisierungen funktionieren erst, nachdem die Arbeitsmappe auf eine Arbeitsmappe der Version 2012 aktualisiert wurde. Um die Arbeitsmappe und das darin enthaltene Modell zu aktualisieren, führen Sie eines der folgenden Verfahren aus:  
   
 -   Laden Sie die Arbeitsmappe herunter, und öffnen Sie sie in einer Microsoft Excel 2010-Version, für die das SQL Server 2012 PowerPivot-Add-In für Excel installiert wurde.  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66079841"
   
  Weitere Informationen zum Aktualisierungs Verlauf finden Sie unter [Anzeigen des Daten Aktualisierungs Verlaufs &#40;PowerPivot für SharePoint&#41;](../../power-pivot-sharepoint/view-data-refresh-history-power-pivot-for-sharepoint.md).  
   
-##  <a name="bkmk_to_2012sp1_from_2012"></a>Aktualisieren von Versionen, die mit dem 2012 Power Pivot-Add-in für Excel erstellt wurden, auf Office 2013-Arbeitsmappen  
+##  <a name="upgrade-to-office-2013-workbooks-from-versions-created-by-using-the-2012-powerpivot-add-in-for-excel"></a><a name="bkmk_to_2012sp1_from_2012"></a>Aktualisieren von Versionen, die mit dem 2012 Power Pivot-Add-in für Excel erstellt wurden, auf Office 2013-Arbeitsmappen  
  In diesem Abschnitt wird das Upgrade von Arbeitsmappen **von** SQL Server 2012 PowerPivot für Excel 2010 **auf** SQL Server 2012 SP1 PowerPivot in Excel 2013 beschrieben.  
   
  Durch ein Upgrade der Arbeitsmappe wird der folgende Fehler behoben, der beim Versuch auftritt, für eine Arbeitsmappe in einer vorherigen Version eine planmäßige Datenaktualisierung auszuführen:  
@@ -104,7 +104,7 @@ ms.locfileid: "66079841"
   
 4.  Speichern Sie dann die Arbeitsmappe, und veröffentlichen Sie sie auf dem SharePoint 2013-Server erneut.  
   
-##  <a name="bkmk_to_2012_from_2008R2"></a>Upgrade auf SQL Server 2012-Arbeitsmappen von Versionen, die mit dem 2008 R2 Power Pivot-Add-in für Excel 2010 erstellt wurden  
+##  <a name="upgrade-to-sql-server-2012-workbooks-from-versions-created-by-using-the-2008-r2-powerpivot-add-in-for-excel-2010"></a><a name="bkmk_to_2012_from_2008R2"></a>Upgrade auf SQL Server 2012-Arbeitsmappen von Versionen, die mit dem 2008 R2 Power Pivot-Add-in für Excel 2010 erstellt wurden  
  In diesem Abschnitt wird das Upgrade von Arbeitsmappen **von** SQL Server 2008 R2 PowerPivot für Excel 2010 **auf** SQL Server 2012 PowerPivot für Excel 2010 beschrieben.  
   
  Durch ein Upgrade der Arbeitsmappe wird der folgende Fehler behoben, der beim Versuch auftritt, für eine Arbeitsmappe in einer vorherigen Version eine planmäßige Datenaktualisierung auszuführen:  
@@ -122,7 +122,7 @@ ms.locfileid: "66079841"
     > [!NOTE]  
     >  Das automatische Upgrade ist eine Serverkonfigurationsfunktion; Sie können sie nicht für bestimmte Arbeitsmappen, Bibliotheken oder Websitesammlungen aktivieren oder deaktivieren.  
   
- **Konfigurieren des automatischen Upgrades während der Datenaktualisierung**  
+ **So konfigurieren Sie ein automatisches Upgrade während der Datenaktualisierung**  
   
  Um das automatische Upgrade zu verwenden, müssen Sie im PowerPivot-Konfigurationstool das Kontrollkästchen aktivieren, durch das die **PowerPivot-Arbeitsmappen automatisch aktualisiert werden, um die Datenaktualisierung vom Server zu ermöglichen** . Innerhalb des Tools befindet sich das Kontrollkästchen auf der Seite **PowerPivot System Service aktualisieren** und auf der Seite **PowerPivot-Dienstanwendung erstellen** , wenn Sie eine neue Installation konfigurieren.  
   
@@ -142,27 +142,27 @@ PS C:\Windows\system32> Set-PowerPivotSystemService -WorkbookUpgradeOnDataRefres
   
  Nachdem Sie die Arbeitsmappe aktualisiert haben, können Sie die planmäßige Datenaktualisierung und neue Funktionen im PowerPivot für Excel-Add-In verwenden.  
   
-##  <a name="bkmk_runold"></a>Ausführen mehrerer arbeitsmappenversionen auf einem neueren Server  
+##  <a name="running-multiple-workbook-versions-on-a-newer-server"></a><a name="bkmk_runold"></a>Ausführen mehrerer arbeitsmappenversionen auf einem neueren Server  
  Sie können ältere und neuere Versionen von PowerPivot-Arbeitsmappen auf einer [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] -Instanz von [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]nebeneinander ausführen.  
   
  Je nachdem, wie Sie den Server installiert haben, müssen Sie **möglicherweise** eine frühere Version des OLE DB-Anbieters für Analysis Services installieren, bevor Sie auf ältere und neuere Arbeitsmappen auf demselben Server zugreifen können.  
   
  Beachten Sie, dass die Veröffentlichung von Arbeitsmappen neuerer Versionen auf SQL Server-Instanzen früherer Versionen von [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] nicht unterstützt wird. Von einer [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)] -Instanz wird keine Arbeitsmappe geladen, die in der [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] -Version von [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)]erstellt wurde, und von einer SQL Server 2012-Instanz werden keine Office 2013-Arbeitsmappen mit erweiterten Datenmodellen geladen, die mit der [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] -Version von PowerPivot in Excel erstellt wurden.  
   
-###  <a name="bkmk_msolapxslx"></a>Vorgehensweise beim Überprüfen auf MSOLAP-Datenanbieter Informationen in einer Power Pivot-Arbeitsmappe  
+###  <a name="how-to-check-for-msolap-data-provider-information-in-a-powerpivot-workbook"></a><a name="bkmk_msolapxslx"></a>Vorgehensweise beim Überprüfen auf MSOLAP-Datenanbieter Informationen in einer Power Pivot-Arbeitsmappe  
  Gehen Sie folgendermaßen vor, um zu überprüfen, welcher OLE DB-Anbieter in einer PowerPivot-Arbeitsmappe verwendet wird. Zum Überprüfen der Datenverbindungsinformationen muss das [!INCLUDE[ssGeminiClient](../../../includes/ssgeminiclient-md.md)] -Add-In nicht installiert sein.  
   
 1.  Klicken Sie in Excel auf der Registerkarte "Daten" auf **Verbindungen**. Klicken Sie auf **Eigenschaften**.  
   
 2.  Auf der Registerkarte **Definition** wird die Anbieterversion zu Beginn der Verbindungszeichenfolge angezeigt.  
   
-     **Provider = MSOLAP. 5** gibt an, dass die [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]Arbeitsmappe den Wert hat.  
+     **Provider=MSOLAP.5** gibt an, dass die Arbeitsmappe Version [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]aufweist.  
   
-     **Provider = MSOLAP. 4** gibt [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]an.  
+     **Provider=MSOLAP.4** gibt [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]als Version an.  
   
-     **Data Source = $Embedded $** gibt an, dass die Arbeitsmappe eine Power Pivot-Arbeitsmappe ist und eine eingebettete Datenbank verwendet.  
+     **Data Source=$Embedded$** gibt an, dass die Arbeitsmappe eine PowerPivot-Arbeitsmappe ist und eine eingebettete Datenbank verwendet.  
   
-###  <a name="bkmk_msolappc"></a>Überprüfen der aktuellen Version des MSOLAP-Datenanbieter auf einem lokalen Computer  
+###  <a name="how-to-check-for-the-current-version-of-the-msolap-data-provider-on-a-local-computer"></a><a name="bkmk_msolappc"></a>Überprüfen der aktuellen Version des MSOLAP-Datenanbieter auf einem lokalen Computer  
  Gehen Sie folgendermaßen vor, um zu überprüfen, bei welchem OLE DB-Anbieter es sich um die aktuelle Version auf dem Server oder der Arbeitsstation mit PowerPivot-Arbeitsmappen handelt. Kenntnis der aktuellen Version ist für die Behebung von Datenverbindungsfehlern nach dem Upgrade hilfreich.  
   
 1.  Gehen Sie im Registrierungs-Editor zu HKEY_CLASSES_ROOT.  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 298f07b5a73e7dfd38ef8eef19893813d96e1892
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078937"
 ---
 # <a name="lesson-2-defining-and-deploying-a-cube"></a>Lektion 2: Definieren und Bereitstellen eines Cubes
@@ -23,7 +23,7 @@ ms.locfileid: "66078937"
  Sie können einen Cube und seine Dimensionen in einem Durchgang definieren, indem Sie den Cube-Assistenten verwenden. Alternativ können Sie eine oder mehrere Dimensionen definieren und dann mit dem Cube-Assistenten einen Cube definieren, der diese Dimensionen verwendet. Wenn Sie eine komplexe Projektmappe entwerfen, definieren Sie im Allgemeinen zuerst die Dimensionen. Weitere Informationen finden Sie unter [Dimensionen in mehrdimensionalen Modellen](multidimensional-models/dimensions-in-multidimensional-models.md) oder [Cubes in mehrdimensionalen Modellen](multidimensional-models/cubes-in-multidimensional-models.md).  
   
 > [!NOTE]  
->  Für alle Lektionen in diesem Lernprogramm sind abgeschlossene Projekte online verfügbar. Sie können jede Lektion aufrufen, indem Sie ein abgeschlossenes Projekt aus der vorherigen Lektion als Ausgangspunkt verwenden. [Klicken Sie hier](https://go.microsoft.com/fwlink/?LinkID=221866) , um die Beispiel Projekte für dieses Tutorial herunterzuladen.  
+>  Für alle Lektionen in diesem Lernprogramm sind abgeschlossene Projekte online verfügbar. Sie können jede Lektion aufrufen, indem Sie ein abgeschlossenes Projekt aus der vorherigen Lektion als Ausgangspunkt verwenden. [Klicken Sie hier](https://go.microsoft.com/fwlink/?LinkID=221866) , um die Beispielprojekte für dieses Lernprogramm herunterzuladen.  
   
  Diese Lektion enthält die folgenden Aufgaben:  
   
@@ -46,7 +46,7 @@ ms.locfileid: "66078937"
  In dieser Aufgabe durchsuchen Sie die Cube- und Dimensionsdaten mit Excel oder dem MDX-Abfrage-Designer.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 3: Ändern von Maßen, Attributen und Hierarchien](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
+ [Lektion 3: Ändern von Measures, Attributen und Hierarchien](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Analysis Services Tutorial-Szenario](analysis-services-tutorial-scenario.md)   
@@ -55,6 +55,6 @@ ms.locfileid: "66078937"
  [Cubes in mehrdimensionalen Modellen](multidimensional-models/cubes-in-multidimensional-models.md)   
  [Konfigurieren von Analysis Services Projekteigenschaften &#40;SSDT&#41;](multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
  [Erstellen von Analysis Services Projekten &#40;SSDT&#41;](multidimensional-models/build-analysis-services-projects-ssdt.md)   
- [Bereitstellen von Analysis Services Projekten &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Bereitstellen von Analysis Services-Projekten &#40;SSDT&#41;](multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

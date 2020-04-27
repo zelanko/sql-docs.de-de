@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a68cd859e93105c2fb4aa570dbf727fe7112bdab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080787"
 ---
 # <a name="hierarchies-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Hierarchien (Registerkarte Dimensionsstruktur, Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
@@ -36,7 +36,7 @@ ms.locfileid: "66080787"
   
 2.  Wenn sie nicht ausgewählt ist, klicken Sie auf die Registerkarte **Dimensionsstruktur** .  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Hierarchien**  
  Zeigt die aktuell erstellten Hierarchien an. Innerhalb jeder Hierarchie befinden sich die Attribute, die die Ebenen der Hierarchie bilden. Attributbeziehungen werden auch angezeigt, sie sind jedoch schreibgeschützt.  
   

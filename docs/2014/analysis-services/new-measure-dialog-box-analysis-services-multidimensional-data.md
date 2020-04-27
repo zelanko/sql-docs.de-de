@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 07970f55cea06e319ed937aa3937d49bc45363b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072342"
 ---
 # <a name="new-measure-dialog-box-analysis-services---multidimensional-data"></a>Dialogfeld 'Neues Measure' (Analysis Services – Mehrdimensionale Daten)
@@ -28,11 +28,11 @@ ms.locfileid: "66072342"
   
 -   Klicken Sie im Bereich **Measures** auf der Registerkarte **Cubestruktur** mit der rechten Maustaste auf eine Measuregruppe oder ein Measure, und wählen Sie aus dem Kontextmenü **Neues Measure** aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Verwendung**  
  Wählen Sie die Aggregatfunktion aus, die von dem neuen Measure verwendet werden soll.  
   
- **Quell Tabelle**  
+ **Quelltabelle**  
  Wählen Sie die Tabelle aus, aus der das neue Measure erstellt werden soll.  
   
  **Quell Spalte**  

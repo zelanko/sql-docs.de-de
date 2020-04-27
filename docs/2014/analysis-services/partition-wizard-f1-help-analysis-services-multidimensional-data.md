@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 86976ac183fc592deab50ebdf5599ef3e7231c28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072130"
 ---
 # <a name="partition-wizard-f1-help-analysis-services---multidimensional-data"></a>Partitions-Assistent (F1-Hilfe) (Analysis Services – Mehrdimensionale Daten)
@@ -48,6 +48,6 @@ ms.locfileid: "66072130"
 -   [Dialog Feld "Remote Ordner suchen" &#40;Analysis Services Mehrdimensionale Daten&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Partitionen &#40;Analysis Services Mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
+ [Partitionen &#40;Analysis Services – mehrdimensionale Daten&#41;](multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md)  
   
   

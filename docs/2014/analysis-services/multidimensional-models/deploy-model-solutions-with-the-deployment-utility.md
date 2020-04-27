@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0c17ef5426703a666f3d6763f878da3cb129e75c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075350"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Bereitstellen von Modelllösungen mit dem Bereitstellungshilfsprogramm
@@ -33,14 +33,14 @@ ms.locfileid: "66075350"
     {[/s[:logfile]] | [/a] | [[/o[:output_script_file]] [/d]]}  
 ```  
   
-##  <a name="Arguments"></a>Argumente  
+##  <a name="arguments"></a><a name="Arguments"></a>Argumentation  
  *ASdatabasefile*  
  Der vollständige Pfad des Ordners, in dem sich die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Bereitstellungsskriptdatei (.asdatabase) befindet. Diese Datei wird generiert, wenn Sie in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]ein Projekt bereitstellen. Sie befindet sich im Projektpapierkorb. Die AS-Datenbankdatei enthält die bereitzustellenden Objektdefinitionen. Wird dieses Argument nicht angegeben, wird der aktuelle Ordner verwendet.  
   
  **/s**  
  Führt das Hilfsprogramm im unbeaufsichtigten Modus aus; Dialogfelder werden nicht angezeigt. Weitere Informationen zu den Ausführungsmodi finden Sie im Abschnitt [Modi](#Modes)weiter unten in diesem Thema.  
   
- *Protokolldatei*  
+ *logfile*  
  Der vollständige Pfad und der Dateiname der Protokolldatei. Ablaufverfolgungsereignisse werden in der angegebenen Protokolldatei protokolliert. Wenn die Protokolldatei bereits vorhanden ist, wird der Inhalt der Datei ersetzt.  
   
  **/a**  
@@ -60,15 +60,15 @@ ms.locfileid: "66075350"
 > [!NOTE]  
 >  Das Argument **/d** wird nur im Ausgabemodus verwendet. Dieses Argument wird ignoriert, wenn es im Antwortmodus oder im unbeaufsichtigten Modus angegeben wird. Weitere Informationen zu den Ausführungsmodi finden Sie im Abschnitt [Modi](#Modes)weiter unten in diesem Thema.  
   
-## <a name="remarks"></a>Bemerkungen  
+## <a name="remarks"></a>Hinweise  
  Das Hilfsprogramm **Microsoft.AnalysisServices.Deployment** liest eine Gruppe von Dateien, die die Objektdefinitionen, Bereitstellungsziele, Bereitstellungsoptionen und Konfigurationseinstellungen angeben, und versucht, die Objektdefinitionen mithilfe der angegebenen Bereitstellungsoptionen und Konfigurationseinstellungen auf den angegebenen Bereitstellungszielen bereitzustellen. Dieses Hilfsprogramm kann eine Benutzeroberfläche bereitstellen, wenn es im Antwort- oder Ausgabemodus aufgerufen wird. Weitere Informationen zum Verwenden der Benutzeroberfläche, die für dieses Hilfsprogramm zum Erstellen von Antwortdateien bereitgestellt wird, finden Sie unter [Bereitstellen von Modelllösungen mithilfe des Bereitstellungs-Assistenten](deploy-model-solutions-using-the-deployment-wizard.md).  
   
  Das Hilfsprogramm befindet sich im Ordner Programme (x86)\Microsoft SQL Server\110\Binn\ManagementStudio.  
   
-##  <a name="Modes"></a>Spiel  
+##  <a name="modes"></a><a name="Modes"></a>Spiel  
  Das Hilfsprogramm kann in den folgenden Modi ausgeführt werden.  
   
-|Mode|BESCHREIBUNG|  
+|Mode|Beschreibung|  
 |----------|-----------------|  
 |Unbeaufsichtigter Modus|Es wird keine Benutzeroberfläche angezeigt. Alle Informationen, die für die Bereitstellung benötigt werden, werden durch die Eingabedateien angegeben. Im unbeaufsichtigten Modus gibt das Hilfsprogramm keinen Status aus. Stattdessen kann eine optionale Protokolldatei verwendet werden, um Status- und Fehlerinformationen für eine spätere Prüfung aufzuzeichnen.|  
 |Antwortmodus|Die Benutzeroberfläche des Bereitstellungs-Assistenten wird angezeigt; die Benutzerantworten werden in den angegebenen Ausgabedateien gespeichert, um sie bei einer späteren Bereitstellung verwenden zu können. Im Antwortmodus erfolgt keine Bereitstellung. Der Antwortmodus dient lediglich dazu, die Benutzerantworten aufzuzeichnen.|  
@@ -86,6 +86,6 @@ ms.locfileid: "66075350"
  `/s: C:\ My Documents\Visual Studio 2010\Projects\AdventureWorksProject\Project1\bin\deployment.log`  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [&#40;Datenbank-Engine des Befehlszeilen-Hilfsprogramms&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
+ [Referenz zum Eingabeaufforderungs-Hilfsprogramm &#40;Datenbank-Engine&#41;](../../tools/command-prompt-utility-reference-database-engine.md)  
   
   

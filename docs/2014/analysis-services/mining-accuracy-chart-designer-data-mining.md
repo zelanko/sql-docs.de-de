@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b27f1b3ae063cd1a464169f4ab5dbc85a4ce7466
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077782"
 ---
 # <a name="mining-accuracy-chart-designer-data-mining"></a>Miningstruktur-Diagrammdesigner (Data Mining)
@@ -36,7 +36,7 @@ ms.locfileid: "66077782"
   
      Zeigt eine Klassifikationsmatrix für Modelle an, die auf der Registerkarte `Input Selection` ausgewählt wurden.  
   
--   [Registerkarte Kreuz Validierung &#40;Mining Genauigkeits Diagramm Ansicht&#41;](cross-validation-tab-mining-accuracy-chart-view.md)  
+-   [Übergreifende Überprüfung &#40;Registerkarte, Mininggenauigkeitsdiagramm-Sicht&#41;](cross-validation-tab-mining-accuracy-chart-view.md)  
   
      Legen Sie Optionen fest, und generieren Sie Kreuzvalidierungsergebnisse für die ausgewählte Miningstruktur.  
   
@@ -60,6 +60,6 @@ ms.locfileid: "66077782"
  [Mining Strukturansicht &#40;Data Mining-Modell-Designer&#41;](mining-structure-view-data-mining-model-designer.md)   
  [Mining Modell Ansicht &#40;Data Mining-Modell-Designer&#41;](mining-models-view-data-mining-model-designer.md)   
  [Mining Modell-Viewer &#40;Data Mining-Modell-Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
- [Vorhersage Abfrage-Generator &#40;Data Mining-&#41;](prediction-query-builder-data-mining.md)  
+ [Generator für Vorhersageabfragen &#40;Data Mining&#41;](prediction-query-builder-data-mining.md)  
   
   

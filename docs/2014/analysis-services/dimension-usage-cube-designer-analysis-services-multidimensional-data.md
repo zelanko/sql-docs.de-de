@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 90eddd7949cee5067e5a00c4d9918d997a2d0df3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081664"
 ---
 # <a name="dimension-usage-cube-designer-analysis-services---multidimensional-data"></a>Dimensionsverwendung (Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
@@ -26,8 +26,8 @@ ms.locfileid: "66081664"
   
 |Bereich|Definition|  
 |----------|----------------|  
-|**Symbolleiste**|Verwenden Sie die Symbolleiste, um allgemeine Vorgänge auf dieser Registerkarte auszuführen. Weitere Informationen zu diesem Bereich finden Sie unter [Symbolleiste &#40;Registerkarte "Dimensions Verwendung", Cube-Designer&#41; &#40;Analysis Services-Mehrdimensionale Daten&#41;](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md).|  
-|**Netz**|Verwenden Sie das Raster, um Dimensionsbeziehungen zwischen Cubedimensionen und Measuregruppen im Cube anzuzeigen und zu bearbeiten. Weitere Informationen zu diesem Bereich finden Sie unter [Raster &#40;Registerkarte „Dimensionsverwendung“, Cube-Designer&#41; &#40;Analysis Services – Mehrdimensionale Daten&#41;](grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Suchfeld**|Verwenden Sie die Symbolleiste, um allgemeine Vorgänge auf dieser Registerkarte auszuführen. Weitere Informationen zu diesem Bereich finden Sie unter [Symbolleiste &#40;Registerkarte "Dimensions Verwendung", Cube-Designer&#41; &#40;Analysis Services-Mehrdimensionale Daten&#41;](toolbar-dimension-usage-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Raster**|Verwenden Sie das Raster, um Dimensionsbeziehungen zwischen Cubedimensionen und Measuregruppen im Cube anzuzeigen und zu bearbeiten. Weitere Informationen zu diesem Bereich finden Sie unter [Raster &#40;Registerkarte „Dimensionsverwendung“, Cube-Designer&#41; &#40;Analysis Services – Mehrdimensionale Daten&#41;](grid-dimension-usage-tab-cube-designer-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Dimensions Beziehungen](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

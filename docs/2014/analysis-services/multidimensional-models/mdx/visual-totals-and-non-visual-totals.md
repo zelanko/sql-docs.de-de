@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f110b54d1a8a057f16b5e5682adc3beb04c54f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073731"
 ---
 # <a name="visual-totals-and-non-visual-totals"></a>Sichtbare Gesamtwerte und nicht sichtbare Gesamtwerte
@@ -36,11 +36,11 @@ ms.locfileid: "66073731"
   
 |||||||  
 |-|-|-|-|-|-|  
-||**Alle Produkte**|**Bad**|**Bikes**|**Clothing**|**Komponenten**|  
-|**Alle Wiederverkäufer**|**$80.450.596,98**|**$571.297,93**|**$66.302.381,56**|**$1.777.840,84**|**$11.799.076,66**|  
-|**Spezialfahrrad Shop**|**$6.756.166,18**|**$65.125,48**|**$6.080.117,73**|**$252.933,91**|**$357.989,07**|  
-|**Hinzugefügter Wert Reseller**|**$34,967,517.33**|**$175.002,81**|**$30.892.354,33**|**$592,385.71**|**$3.307.774,48**|  
-|**Ll**|**$38,726,913.48**|**$331.169,64**|**$29.329.909,50**|**$932.521,23**|**$8.133.313,11**|  
+||**All Products**|**Accessories**|**Bikes**|**Clothing**|**Komponenten**|  
+|**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$66,302,381.56**|**$1,777,840.84**|**$11,799,076.66**|  
+|**Specialty Bike Shop**|**$6,756,166.18**|**$65,125.48**|**$6,080,117.73**|**$252,933.91**|**$357,989.07**|  
+|**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$30,892,354.33**|**$592,385.71**|**$3,307,774.48**|  
+|**Warehouse**|**$38,726,913.48**|**$331,169.64**|**$29,329,909.50**|**$932,521.23**|**$8,133,313.11**|  
   
 ## <a name="non-visual-on-rows-and-columns"></a>Nicht sichtbare Gesamtwerte für Zeilen und Spalten  
  Wenn Sie eine Tabelle erstellen möchten, die nur Accessories- und Clothing-Produkte sowie Wiederverkäufer vom Typ Value Added Reseller und Warehouse enthält, wobei die Gesamtbeträge jedoch beibehalten werden, können Sie die folgende Anweisung mit NON VISUAL ausgeben:  
@@ -61,10 +61,10 @@ ms.locfileid: "66073731"
   
 |||||  
 |-|-|-|-|  
-||**Alle Produkte**|**Bad**|**Clothing**|  
-|**Alle Wiederverkäufer**|**$80.450.596,98**|**$571.297,93**|**$1.777.840,84**|  
-|**Hinzugefügter Wert Reseller**|**$34,967,517.33**|**$175.002,81**|**$592,385.71**|  
-|**Ll**|**$38,726,913.48**|**$331.169,64**|**$932.521,23**|  
+||**All Products**|**Accessories**|**Clothing**|  
+|**All Resellers**|**$80,450,596.98**|**$571,297.93**|**$1,777,840.84**|  
+|**Value Added Reseller**|**$34,967,517.33**|**$175,002.81**|**$592,385.71**|  
+|**Warehouse**|**$38,726,913.48**|**$331,169.64**|**$932,521.23**|  
   
 ## <a name="non-visual-on-rows"></a>Nicht sichtbare Gesamtwerte für Zeilen  
  Wenn Sie eine Tabelle erstellen möchten, in der sichtbare Gesamtwerte für die Spalten, für die Zeilensummen jedoch die tatsächliche Summe aller [Category]-Werten angezeigt werden, geben Sie die folgende Abfrage aus:  
@@ -103,6 +103,6 @@ ms.locfileid: "66073731"
  [Grundlagen der MDX-Abfrage &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
  [Die grundlegende MDX-Abfrage &#40;MDX-&#41;](mdx-query-the-basic-query.md)   
  [Einschränken der Abfrage mit Abfrage-und Slicerachsen &#40;MDX-&#41;](mdx-query-and-slicer-axes-restricting-the-query.md)   
- [Einrichten des Cubekontexts in einer Abfrage &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)  
+ [Festlegen des Cubekontexts in einer Abfrage &#40;MDX&#41;](establishing-cube-context-in-a-query-mdx.md)  
   
   

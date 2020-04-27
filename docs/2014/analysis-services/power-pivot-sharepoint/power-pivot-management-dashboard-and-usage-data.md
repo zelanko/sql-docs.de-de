@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ece3d8a1e9a66ecc6ad05508c975e617c523a9c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071123"
 ---
 # <a name="powerpivot-management-dashboard-and-usage-data"></a>PowerPivot-Management-Dashboard und Verwendungsdaten
@@ -32,10 +32,10 @@ ms.locfileid: "66071123"
   
  [Erstellen von benutzerdefinierten Berichten für PowerPivot-Management-Dashboard](#reports)  
   
-##  <a name="prereq"></a> Voraussetzungen  
+##  <a name="prerequisites"></a><a name="prereq"></a> Voraussetzungen  
  Sie müssen Dienstadministrator sein, um das PowerPivot-Management-Dashboard für eine von Ihnen verwaltete PowerPivot-Dienstanwendung zu öffnen.  
   
-##  <a name="items"></a>Übersicht über die Abschnitte des Dashboards  
+##  <a name="overview-of-the-sections-of-the-dashboard"></a><a name="items"></a>Übersicht über die Abschnitte des Dashboards  
  Das PowerPivot-Management-Dashboard enthält Webparts und eingebettete Berichte, die einen Drilldown in bestimmte Informationskategorien ermöglichen. In der folgenden Liste werden die einzelnen Bestandteile des Dashboards beschrieben:  
   
 |Dashboard|BESCHREIBUNG|  
@@ -48,7 +48,7 @@ ms.locfileid: "66071123"
 |Datenaktualisierung - Letzte Fehler|Listet die PowerPivot-Arbeitsmappen auf, deren Datenaktualisierung nicht erfolgreich abgeschlossen wurde.|  
 |Berichte|Enthält Links zu Berichten, die Sie in Excel öffnen können.|  
   
-##  <a name="open"></a>Power Pivot-Management-Dashboard öffnen  
+##  <a name="open-powerpivot-management-dashboard"></a><a name="open"></a>Power Pivot-Management-Dashboard öffnen  
  Das Dashboard zeigt Informationen für jeweils eine PowerPivot-Dienstanwendung an. Sie können das Management-Dashboard von zwei unterschiedlichen Orten aus öffnen.  
   
 ### <a name="open-the-dashboard-from-general-application-settings"></a>Öffnen des Dashboards über die allgemeinen Anwendungseinstellungen  
@@ -59,7 +59,7 @@ ms.locfileid: "66071123"
   
 ### <a name="open-the-dashboard-from-a-powerpivot-service-application"></a>Öffnen des Dashboards aus einer PowerPivot-Dienstanwendung  
   
-1.  Klicken Sie in der zentral Administration unter **Anwendungs Verwaltung**auf **Dienst Anwendungen verwalten**.  
+1.  Klicken Sie in der Zentraladministration unter **Anwendungsverwaltung**auf **Dienstanwendungen verwalten**.  
   
 2.  Klicken Sie auf den Namen der PowerPivot-Dienstanwendung. Das PowerPivot-Management-Dashboard zeigt operative Daten für die aktuelle Dienstanwendung an.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66071123"
   
 3.  Klicken Sie auf den Namen der PowerPivot-Dienstanwendung, für die Management-Dashboard-Berichte angezeigt werden sollen.  
   
-##  <a name="sourcedata"></a>Quelldaten in Dashboards  
+##  <a name="source-data-in-dashboards"></a><a name="sourcedata"></a>Quelldaten in Dashboards  
  In Dashboards, Berichten und Webparts werden Daten aus einem internen Datenmodell angezeigt, das Daten aus den System- und PowerPivot-Anwendungsdatenbanken abruft. Das interne Datenmodell ist in einer PowerPivot-Arbeitsmappe eingebettet, die auf der Website der Zentraladministration gehostet wird. Das Datenmodell verfügt über eine feste Struktur. Obwohl Sie die PowerPivot-Arbeitsmappe als Datenquelle für neue Berichte verwenden können, darf die Struktur in keiner Weise geändert werden, die die vordefinierten Berichte beeinträchtigen würde, die die Struktur verwenden.  
   
  Im Folgenden finden Sie weitere Informationen dazu, wie Daten gesammelt werden:  
@@ -81,12 +81,12 @@ ms.locfileid: "66071123"
   
 -   [Konfigurieren der Sammlung von Verwendungs Daten für &#40;PowerPivot für SharePoint](configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- Achten Sie beim Sammeln von Daten zum PowerPivot-Serversystem darauf, dass für jede PowerPivot-Dienstanwendung Ereignismeldungen, Datenaktualisierungsverläufe und sonstige Verwendungsverläufe aktiviert sind. Die während des normalen Serverbetriebs gesammelten Server- und Verwendungsdaten bilden die Quelldaten, die in das interne Datenmodell übertragen werden. **Hinweis:** Wenn Sie Ereignisse oder den Verwendungs Verlauf deaktivieren, sind die zusammengesetzten Berichte unvollständig oder fehlerhaft.  
+ Achten Sie beim Sammeln von Daten zum PowerPivot-Serversystem darauf, dass für jede PowerPivot-Dienstanwendung Ereignismeldungen, Datenaktualisierungsverläufe und sonstige Verwendungsverläufe aktiviert sind. Die während des normalen Serverbetriebs gesammelten Server- und Verwendungsdaten bilden die Quelldaten, die in das interne Datenmodell übertragen werden. **Hinweis:** Wenn Sie Ereignismeldungen oder Verwendungsverläufe deaktivieren, enthalten die zusammengesetzten Berichte unvollständige oder fehlerhafte Angaben.  
   
-##  <a name="edit"></a>Bearbeiten des Power Pivot-Dashboards  
+##  <a name="edit-powerpivot-dashboard"></a><a name="edit"></a>Bearbeiten des Power Pivot-Dashboards  
  Wenn Sie erfahren in der Dashboardentwicklung oder -anpassung sind, können Sie das Dashboard bearbeiten, um neue Webparts aufzunehmen. Sie können auch die Webparteigenschaften bearbeiten, die im Dashboard enthalten sind.  
   
-##  <a name="reports"></a>Erstellen benutzerdefinierter Berichte für das Power Pivot-Management-Dashboard  
+##  <a name="create-custom-reports-for-powerpivot-management-dashboard"></a><a name="reports"></a>Erstellen benutzerdefinierter Berichte für das Power Pivot-Management-Dashboard  
  Für Berichtszwecke werden PowerPivot-Verwendungsdaten und -verlauf in einer internen PowerPivot-Arbeitsmappe aufbewahrt, die zusammen mit dem Dashboard erstellt und konfiguriert wird. Wenn die Standardberichte die Informationen nicht enthalten, die Sie benötigen, können Sie benutzerdefinierte Berichte in Excel auf Grundlage der Arbeitsmappe erstellen. Sowohl die Arbeitsmappe als auch benutzerdefinierte Berichte, die Sie erstellen, bleiben erhalten, wenn Sie die PowerPivot-Lösungsdateien später aktualisieren oder deinstallieren. Die Arbeitsmappe und die Berichte werden in der PowerPivot-Verwaltungsbibliothek innerhalb der Website der Zentraladministration gespeichert. Diese Bibliothek ist standardmäßig nicht sichtbar. Sie können sie jedoch unter Websiteaktionen mithilfe der Aktion Alle Websiteinhalte einblenden anzeigen.  
   
  Um Ihnen den Einstieg in die benutzerdefinierte Berichterstellung zu erleichtern, bietet das PowerPivot-Management-Dashboard eine ODC (Office Data Connection)-Datei, über die eine Verbindung mit der Quellarbeitsmappe hergestellt werden kann. Beispielsweise können Sie die ODC-Datei in Excel verwenden, um zusätzliche Berichte zu erstellen.  
@@ -126,7 +126,7 @@ ms.locfileid: "66071123"
   
     8.  Klicken Sie in MDX-Abfrage angeben auf **Entwurf** , um den MDX-Abfrage-Designer zu öffnen und die Daten zusammenzustellen, mit denen Sie arbeiten möchten, **Wenn die Fehlermeldung** "der Eigenschaften Name für den Bearbeitungsmodus ist nicht ordnungsgemäß formatiert" angezeigt wird. ODC-Datei.  
   
-    9. Klicken Sie auf **OK** und dann auf **Fertig**stellen.  
+    9. Klicken Sie auf **OK** und dann auf **Fertig stellen**.  
   
     10. Erstellen Sie PivotTable- oder PivotChart-Berichte, um die Daten in Excel visuell darzustellen.  
   

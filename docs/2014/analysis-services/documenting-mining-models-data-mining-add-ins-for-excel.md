@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: afe304e3fa76be805a64e9bd662bc21500ac2fa7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081588"
 ---
 # <a name="documenting-mining-models-data-mining-add-ins-for-excel"></a>Dokumentieren von Miningmodellen (Data Mining-Add-Ins für Excel)
@@ -70,8 +70,8 @@ ms.locfileid: "66081588"
 ||||  
 |-|-|-|  
 |**Metadaten**|Modellmetadaten|Algorithmusparameter und -werte|  
-||Spaltenmetadaten|Spaltenname<br /><br /> Verwendung<br /><br /> Datentyp<br /><br /> Content-Typ<br /><br /> Werte (Liste diskreter Werte oder Wertebereich)|  
-|**Modellstatistiken**|Kontinuierliche Spalten|Mittelwert<br /><br /> Mindestwert<br /><br /> Maximalwert<br /><br /> Wurzel des mittleren quadratischen Fehlers<br /><br /> Mittlerer absoluter Fehler<br /><br /> Logarithmisches Ergebnis<br /><br /> Regressionsformel (nur für lineare Regressionsmodelle)|  
+||Spaltenmetadaten|Spaltenname<br /><br /> Verwendung<br /><br /> Datentyp<br /><br /> Inhaltstyp<br /><br /> Werte (Liste diskreter Werte oder Wertebereich)|  
+|**Modell Statistiken**|Kontinuierliche Spalten|Mittelwert<br /><br /> Minimalwert<br /><br /> Maximalwert<br /><br /> Wurzel des mittleren quadratischen Fehlers<br /><br /> Mittlerer absoluter Fehler<br /><br /> Logarithmisches Ergebnis<br /><br /> Regressionsformel (nur für lineare Regressionsmodelle)|  
 ||Diskrete Spalten|Anzahl von Übergaben<br /><br /> Anzahl der Fehler<br /><br /> Logarithmisches Ergebnis<br /><br /> Lift|  
   
 > [!NOTE]  

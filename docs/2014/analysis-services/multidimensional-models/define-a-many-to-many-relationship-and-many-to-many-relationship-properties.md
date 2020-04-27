@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f679387dd1282dba3a4521f40bd11a2e0ba4b26f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075778"
 ---
 # <a name="define-a-many-to-many-relationship-and-many-to-many-relationship-properties"></a>Definieren einer m:n-Beziehung und deren Eigenschaften
@@ -150,7 +150,7 @@ ms.locfileid: "66075778"
   
     -   **Sales Reason Name** für Spalten  
   
-    -   **Verkaufs Auftragsnummer** für Zeilen  
+    -   **Sales Order Number** für Zeilen  
   
 4.  Analysieren Sie die Ergebnisse. Da wir Beispieldaten verwenden, entsteht zunächst der Eindruck, dass alle Bestellungen identische Werte aufweisen. Wenn Sie jedoch einen Bildlauf nach unten durchführen, sehen Sie, dass die Daten variieren.  
   
@@ -176,14 +176,14 @@ ms.locfileid: "66075778"
   
 4.  Es sollten keine verknüpften Measuregruppen in mehreren m:n-Beziehungen verwendet werden, insbesondere wenn sich diese Beziehungen in verschiedenen Cubes befinden. Andernfalls können mehrdeutige Aggregationen entstehen. Weitere Informationen finden Sie unter [Falsche Mengen für verknüpfte Measures in Cubes mit m:n-Beziehungen](https://social.technet.microsoft.com/wiki/contents/articles/22911.incorrect-amounts-for-linked-measures-in-cubes-containing-many-to-many-relationships-ssas-troubleshooting.aspx).  
   
-##  <a name="bkmk_Learn"></a>Weitere Informationen  
+##  <a name="learn-more"></a><a name="bkmk_Learn"></a>Weitere Informationen  
  Über die folgenden Links erhalten Sie zusätzliche Informationen, mit denen Sie Ihr Wissen vertiefen können.  
   
  [Definieren einer m:n-Dimension in Analysis Services](../lesson-5-3-defining-a-many-to-many-relationship.md)  
   
- [Die m:n-Revolution 2,0](https://go.microsoft.com/fwlink/?LinkId=324760)  
+ [Die m:n-Revolution 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   
- [Tutorial: Beispiel einer m:n-Dimension für SQL Server Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324761)  
+ [Lernprogramm: Beispiel einer m:n-Dimension für SQL Server Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324761)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Dimensions Beziehungen](../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e4aade575cdcb8260865d4a1fe9ab6f4b7941fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077848"
 ---
 # <a name="metadata-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Metadaten (Registerkarte 'Browser', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
@@ -24,17 +24,17 @@ ms.locfileid: "66077848"
   
  Sie können auch die Objekte und die Hierarchien im Bereich **Metadaten** in den Bereich zum Erstellen von Abfragen ziehen, um neue Abfragen zu erstellen oder Daten zum Durchsuchen in Excel zu exportieren.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Metadaten**  
  Zeigt die in der aktuellen Sicht verfügbaren Metadaten an. Sie können die Sicht (das heißt, die derzeit ausgewählte Perspektive oder den Cube) ändern, indem Sie auf das Cubesymbol klicken und anschließend mit dem Dialogfeld **Cubeauswahl** einen neuen Cube oder eine neue Perspektive auswählen. Sie können auch auf **Measuregruppe**klicken und eine neue Measuregruppe in der Dropdownliste auswählen, um die Objekte zu filtern, die im Bereich **Metadaten** verfügbar sind.  
   
  Ziehen Sie die ausgewählten Elemente im Bereich [!INCLUDE[msCoName](../includes/msconame-md.md)] Bericht **in den Filter-, Daten-, Zeilen- oder Spaltenbereich des PivotTable-Steuerelements von** Office 11.0, um die Daten für das ausgewählte Element anzuzeigen.  
   
- **Funktionen**  
+ **Functions**  
  Zeigt eine Liste aller Funktionen, Operatoren und Konstanten an, die verwendet werden können, um Abfragen oder Datensichten im **Browser**zu erstellen. Um eine Funktion zu verwenden, suchen Sie das gewünschte Objekt, und ziehen Sie es in den Abfragebereich. Die Syntaxdefinition wird dem Text hinzugefügt  
   
 > [!WARNING]  
->  Die **Funktions** Liste ist nicht verfügbar, wenn Sie in der grafischen Entwurfs Ansicht arbeiten.  
+>   Beim Arbeiten in der grafischen Entwurfssicht ist die Liste **Funktion** nicht verfügbar.  
   
  Bei Verwendung eines tabellarischen Modells enthält die Funktionsliste sowohl MDX-Funktionen als auch DAX-Funktionen. Andernfalls enthält die Liste nur MDX-Funktionen. Ein mehrdimensionales Modell kann DAX-Funktionen nicht direkt verwenden, obwohl eine Objektdefinition einen DAX-Ausdruck enthalten kann.  
   
@@ -43,11 +43,11 @@ ms.locfileid: "66077848"
 ## <a name="context-menu"></a>Kontextmenü  
  Wenn Sie mit der rechten Maustaste auf eines der im Bereich **Metadaten** angezeigten Elemente klicken, wird ein Kontextmenü angezeigt, das die folgenden Optionen enthält:  
   
-|Option|BESCHREIBUNG|  
+|Option|Beschreibung|  
 |------------|-----------------|  
 |**Zu Abfrage hinzufügen**|Klicken Sie, um dem unteren Bereich des Abfrageerstellungsbereichs das ausgewählte Objekt hinzuzufügen.|  
 |**Zu Filter hinzufügen**|Klicken Sie, um dem Filterbereich des **Browsers**die ausgewählte Dimension, das Attribut, die Hierarchie oder die Ebene hinzuzufügen.<br /><br /> Hinweis: Diese Option ist nur aktiviert, wenn eine Dimension, ein Attribut, eine Hierarchie oder eine Ebene ausgewählt wird.|  
-|**Copy**|Klicken Sie auf diese Option, um der Zwischenablage das ausgewählte Element hinzuzufügen.<br /><br /> Hinweis: Mit dieser Option wird der vollqualifizierte Name des Objekts kopiert.|  
+|**Kopieren**|Klicken Sie auf diese Option, um der Zwischenablage das ausgewählte Element hinzuzufügen.<br /><br /> Hinweis: Mit dieser Option wird der vollqualifizierte Name des Objekts kopiert.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Symbolleiste &#40;Registerkarte "Browser", Cube-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](toolbar-browser-tab-cube-designer-analysis-services-multidimensional-data.md)   

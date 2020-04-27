@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ad602710cab83e2be25a03a4da6cce0c3407493e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078111"
 ---
 # <a name="level-and-members-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Ebenen und Elemente (Registerkarte 'Browser', Dimensions-Designer) (Analysis Services – Mehrdimensionale Daten)
@@ -36,7 +36,7 @@ ms.locfileid: "66078111"
 |Umbenennen eines ausgewählten Elements|Klicken Sie entweder mit der rechten Maustaste auf das ausgewählte Element, und wählen Sie die Option **Umbenennen**aus, oder klicken Sie auf ein bereits ausgewähltes Element.|  
 |Bearbeiten der Werte von Elementeigenschaften|Doppelklicken Sie auf den Wert in der ausgewählten Elementeigenschaft für das ausgewählte Element, um den Wert zu bearbeiten.|  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Aktuelle Ebene**  
  Zeigt die Ebene an, zu der das aktuell ausgewählte Element unter **Struktur** gehört.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "66078111"
 > [!NOTE]  
 >  Diese Option wird nur angezeigt, wenn der Rückschreibemodus aktiviert ist.  
   
- **Ausschneiden**  
+ **Schnitts**  
  Kopiert die ausgewählten Elemente in die Zwischenablage und entfernt sie aus der Hierarchie.  
   
 > [!NOTE]  
@@ -92,7 +92,7 @@ ms.locfileid: "66078111"
 > [!NOTE]  
 >  Diese Option wird nur angezeigt, wenn der Rückschreibemodus aktiviert ist.  
   
- **Benen**  
+ **Umbenennen**  
  Wählen Sie diese Option aus, um den Namen des ausgewählten Elements zu bearbeiten.  
   
 > [!NOTE]  
@@ -119,7 +119,7 @@ ms.locfileid: "66078111"
  **Element reduzieren**  
  Reduziert das ausgewählte Element unter **Struktur**.  
   
- **Rück schreibe**  
+ **Rückschreiben**  
  Wählen Sie diese Option aus, um den Rückschreibemodus zu aktivieren.  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 939186d48f7dd8a0cc33b24778bf8948f9938a70
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079274"
 ---
 # <a name="defining-a-data-source-view"></a>Definieren einer Datenquellensicht
@@ -80,6 +80,6 @@ ms.locfileid: "66079274"
  [Ändern von Standardtabellennamen](lesson-1-4-modifying-default-table-names.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Datenquellensichten in mehrdimensionalen Modellen](multidimensional-models/data-source-views-in-multidimensional-models.md)  
+ [Datenquellsichten in mehrdimensionalen Modellen](multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

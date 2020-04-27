@@ -11,25 +11,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ef207028ab1b4f6bc084f3f4e515ae37630b771d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078433"
 ---
 # <a name="lesson-7-create-measures"></a>Lektion 7: Erstellen von Measures
-  In dieser Lektion erstellen Sie in das Modell einzufügende Measures. Ähnlich wie die berechneten Spalten, die Sie in der vorherigen Lektion erstellt haben, ist ein Measure im Wesentlichen eine mit einer DAX-Formel erstellte Berechnung. Im Gegensatz zu berechneten Spalten werden Measures jedoch anhand eines vom Benutzer ausgewählten *Filters* ausgewertet – z.B. eine bestimmte Spalte oder ein Slicer, der zum Feld „Zeilenbeschriftungen“ in einer PivotTable hinzugefügt wird.   Anschließend wird vom angewendeten Measure ein Wert für jede Zelle im Filter berechnet. Measures sind leistungsstarke, flexible Berechnungen, die Sie in fast alle Tabellenmodelle einbinden können, um dynamische Berechnungen für numerische Daten auszuführen. Weitere Informationen finden Sie unter [Measures &#40;SSAS – tabellarisch&#41;](tabular-models/measures-ssas-tabular.md).  
+  In dieser Lektion erstellen Sie in das Modell einzufügende Measures. Ähnlich wie die berechneten Spalten, die Sie in der vorherigen Lektion erstellt haben, ist ein Measure im Wesentlichen eine mit einer DAX-Formel erstellte Berechnung. Im Gegensatz zu berechneten Spalten werden Measures jedoch auf Basis eines vom Benutzer ausgewählten *Filters*ausgewertet; z.B. eine bestimmte Spalte oder ein Slicer, die bzw. der dem Feld für Zeilenbezeichnungen in einer PivotTable hinzugefügt wurde.   Anschließend wird vom angewendeten Measure ein Wert für jede Zelle im Filter berechnet. Measures sind leistungsstarke, flexible Berechnungen, die Sie in fast alle Tabellenmodelle einbinden können, um dynamische Berechnungen für numerische Daten auszuführen. Weitere Informationen finden Sie unter [Measures &#40;SSAS – tabellarisch&#41;](tabular-models/measures-ssas-tabular.md).  
   
- Um Measures zu erstellen, verwenden Sie das Measureraster. Standardmäßig verfügt jede Tabelle über ein leeres Measureraster; allerdings erstellen Sie normalerweise nicht für jede Tabelle Measures. Das Measureraster wird in der Datensicht unter einer Tabelle im Modell-Designer angezeigt. Klicken Sie auf das Menü **Tabelle**, und klicken Sie dann auf **Measureraster anzeigen**, um das Measureraster für eine Tabelle anzuzeigen oder auszublenden.  
+ Um Measures zu erstellen, verwenden Sie das Measureraster. Standardmäßig hat jede Tabelle ein leeres Measureraster. Sie erstellen jedoch in der Regel keine Measures für jede Tabelle. Das Measureraster wird in der Datensicht unter einer Tabelle im Modell-Designer angezeigt. Klicken Sie auf das Menü **Tabelle**, und klicken Sie dann auf **Measureraster anzeigen**, um das Measureraster für eine Tabelle anzuzeigen oder auszublenden.  
   
- Sie können ein Measure erstellen, indem Sie auf eine leere Zelle im Measureraster klicken und anschließend eine DAX-Formel in der Bearbeitungsleiste eingeben. Wenn Sie die EINGABETASTE drücken, um die Formel abzuschließen, wird das Measure in der Zelle angezeigt. Sie können auch Measures mithilfe einer Standardaggregationsfunktion erstellen, indem Sie auf eine Spalte und anschließend auf die Schaltfläche AutoSumme (**∑**) auf der Symbolleiste klicken. Measures, die mithilfe der AutoSumme-Funktion erstellt wurden, werden im Measureraster direkt unterhalb der Spalte angezeigt, können bei Bedarf jedoch verschoben werden.  
+ Sie können ein Measure erstellen, indem Sie auf eine leere Zelle im Measureraster klicken und dann eine DAX-Formel in die Bearbeitungsleiste eingeben. Nach dem Abschließen der Formelerstellung mit der EINGABETASTE wird das Measure in der Zelle angezeigt. Sie können auch Measures mithilfe einer Standardaggregationsfunktion erstellen, indem Sie auf eine Spalte und anschließend auf die Schaltfläche AutoSumme (**∑**) auf der Symbolleiste klicken. Measures, die mithilfe der AutoSumme-Funktion erstellt wurden, werden im Measureraster direkt unterhalb der Spalte angezeigt, können bei Bedarf jedoch verschoben werden.  
   
  In dieser Lektion erstellen Sie Measures sowohl durch Eingabe einer DAX-Formel in der Bearbeitungsleiste als auch mithilfe der AutoSumme-Funktion.  
   
  Geschätzte Zeit zum Bearbeiten dieser Lektion: **30 Minuten**  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
- Dieses Thema ist Teil eines Tutorials zur Tabellenmodellierung, das in der vorgegebenen Reihenfolge durchgeführt werden sollte. Sie sollten vor dem Ausführen der Aufgaben in dieser Lektion die vorherige Lektion abgeschlossen haben: [Lektion 6: Erstellen von berechneten Spalten](lesson-5-create-calculated-columns.md).  
+ Dieses Thema ist Teil eines Tutorials zur Tabellenmodellierung, das in der richtigen Reihenfolge absolviert werden sollte. Sie sollten vor dem Ausführen der Aufgaben in dieser Lektion die vorherige Lektion abgeschlossen haben: [Lektion 6: Erstellen von berechneten Spalten](lesson-5-create-calculated-columns.md).  
   
 ## <a name="create-measures"></a>Erstellen von Measures  
   
@@ -66,15 +66,15 @@ ms.locfileid: "66078433"
   
      Drücken Sie nach dem Erstellen der Formel die EINGABETASTE.  
   
- Bei der Erstellung eines Vergleichsverhältnisses zwischen einem nicht abgeschlossenen Zeitraum und dem vorherigen Zeitraum muss die Formel den Anteil des verstrichenen Zeitraums in Betracht ziehen und mit dem gleichen Anteil des vorherigen Zeitraums vergleichen. In diesem Fall gibt [Days Current Quarter to Date]/[Days in Current Quarter] den verstrichenen Anteil des aktuellen Zeitraums zurück.  
+ Bei der Erstellung eines Vergleichsverhältnisses zwischen einem unvollständigen Zeitraum und dem vorherigen Zeitraum muss in der Formel der Anteil des verstrichenen Zeitraums berücksichtigt und mit dem gleichen Anteil des vorherigen Zeitraums verglichen werden. In diesem Fall gibt [Days Current Quarter to Date]/[Days in Current Quarter] den verstrichenen Anteil des aktuellen Zeitraums zurück.  
   
 #### <a name="to-create-an-internet-distinct-count-sales-order-measure-in-the-internet-sales-table"></a>So erstellen Sie eine Measure vom Typ "Internet Distinct Count Sales Order" in der Internet Sales-Tabelle  
   
-1.  Klicken Sie im Modell-Designer auf die Tabelle (Registerkarte) **Internet Sales**.  
+1.  Klicken Sie im Modell-Designer auf die Tabelle (Registerkarte) **Internet Sales** .  
   
      Wenn das Measureraster nicht bereits angezeigt wird, klicken Sie mit der rechten Maustaste auf die Tabelle (Registerkarte) **Internet Sales** und anschließend auf **Measureraster anzeigen**.  
   
-2.  Klicken Sie auf die Spaltenüberschrift **Sales Order Number**.  
+2.  Klicken Sie auf die Spaltenüberschrift **Sales Order Number** .  
   
 3.  Klicken Sie in der Symbolleiste auf den Dropdownpfeil neben der Schaltfläche AutoSumme (**∑**), und wählen Sie dann **DistinctCount** aus.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "66078433"
   
      Beachten Sie die oberste Zelle unter der Spalte im Measureraster. Sie enthält jetzt einen Measurenamen, **Distinct Count Sales Order Number**. Mit der AutoSumme-Funktion erstellte Measures werden automatisch unter der zugeordneten Spalte in der obersten Zelle im Measureraster eingefügt.  
   
-4.  Klicken Sie im Measureraster auf das neue Measure, und benennen Sie anschließend im Fenster **Eigenschaften** im Feld **Measurename** das Measure in **Internet Distinct Count Sales Order** um.  
+4.  Klicken Sie im Measureraster auf das neue Measure, und benennen Sie anschließend im Fenster **Eigenschaften** im Feld **Measurename**das Measure in **Internet Distinct Count Sales Order**um.  
   
 #### <a name="to-create-additional-measures-in-the-internet-sales-table"></a>So erstellen Sie zusätzliche Measures in der Internet Sales-Tabelle  
   
@@ -90,12 +90,12 @@ ms.locfileid: "66078433"
   
     |Measurename|Column|AutoSumme (∑)|Formel|  
     |------------------|------------|-------------------|-------------|  
-    |Internet Order Lines Count|Sales Order Line Number|Count|=COUNT([Sales Order Line Number])|  
+    |Internet Order Lines Count|Sales Order Line Number|Anzahl|=COUNT([Sales Order Line Number])|  
     |Internet Total Units|Order Quantity|SUM|=SUM([Order Quantity])|  
     |Internet Total Discount Amount|Discount Amount|SUM|=SUM([Discount Amount])|  
     |Internet Total Product Cost|Total Product Cost|SUM|=SUM([Total Product Cost])|  
     |Internet Total Sales|Sales Amount|SUM|=SUM([Sales Amount])|  
-    |Internet Total Margin|Margin (Spanne)|SUM|=SUM([Margin])|  
+    |Internet Total Margin|Margin|SUM|=SUM([Margin])|  
     |Internet Total Tax Amt|Tax Amt|SUM|=SUM([Tax Amt])|  
     |Internet Total Freight|Freight (Fracht)|SUM|=SUM([Freight])|  
   

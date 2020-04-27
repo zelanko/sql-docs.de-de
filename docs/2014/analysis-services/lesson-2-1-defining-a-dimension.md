@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74561047f149ae6a6bdcd0cd54347d842e49569f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079087"
 ---
 # <a name="defining-a-dimension"></a>Definieren einer Dimension.
@@ -39,27 +39,27 @@ ms.locfileid: "66079087"
   
 7.  Aktivieren Sie auf der Seite **Dimensionsattribute auswählen** die Kontrollkästchen neben den folgenden Attributen:  
   
-    -   **Datums Schlüssel**  
+    -   **Date Key**  
   
-    -   **Alternativer Schlüssel für das vollständige Datum**  
+    -   **Full Date Alternate Key**  
   
-    -   **Name des englischen Monats**  
+    -   **English Month Name**  
   
-    -   **Kalenderquartal**  
+    -   **Calendar Quarter**  
   
-    -   **Kalenderjahr**  
+    -   **Calendar Year**  
   
-    -   **Kalender Semester**  
+    -   **Calendar Semester**  
   
 8.  Ändern Sie die Einstellung von der Spalte **Attributtyp** des **Full Date Alternate Key** -Attributs von **Regulär** in **Datum**. Klicken Sie hierzu auf **Regulär** in der Spalte **Attributtyp** . Klicken Sie anschließend auf den Pfeil, um die Optionen zu erweitern. Klicken Sie anschließend auf **Date** > **Calendar** > **Date**. Klicken Sie auf **OK**. Wiederholen Sie diese Schritte, um den Attributtyp der Attribute wie folgt zu ändern:  
   
-    -   **English Month Name** in **Month**  
+    -   **English Month Name** in **Monat**  
   
-    -   **Kalenderquartal** bis **Quartal**  
+    -   **Calendar Quarter** in **Quartal**  
   
-    -   **Kalenderjahr** bis **Jahr**  
+    -   **Calendar Year** zu **Jahr**  
   
-    -   **Kalender Semester** bis **Halbjahr**  
+    -   **Calendar Semester** zu **Halbjahr**  
   
 9. Klicken Sie auf **Weiter**.  
   

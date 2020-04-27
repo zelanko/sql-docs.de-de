@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a9b2b248207d19f99aae3b07837d624fb9bb9cf6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079337"
 ---
 # <a name="defining-a-data-source"></a>Definieren einer Datenquelle
@@ -32,7 +32,7 @@ ms.locfileid: "66079337"
   
 4.  Im Dialogfeld **Verbindungs-Manager** definieren Sie Verbindungseigenschaften für die Datenquelle. Überprüfen Sie im Listenfeld **Anbieter** , ob **Native OLE DB\SQL Server Native Client 11.0** ausgewählt ist.  
   
-     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützt auch andere Anbieter, die in der **Anbieter** Liste angezeigt werden.  
+     [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt auch andere Anbieter, die in der **Anbieter** -Liste angezeigt werden.  
   
 5.  Geben `localhost`Sie im Textfeld **Server Name den Namen** ein.  
   
@@ -44,8 +44,7 @@ ms.locfileid: "66079337"
   
 8.  Klicken Sie auf **OK**, und klicken Sie dann auf **Weiter**.  
   
-9. Auf der Seite **Identitätswechselinformationen** des Assistenten definieren Sie die Sicherheitsinformationen für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] zur Verbindungsherstellung mit der Datenquelle. Der Identitätswechsel wirkt sich auf das Windows-Konto aus, das zum Herstellen der Verbindung mit der Datenquelle verwendet wird, wenn die Windows-Authentifizierung ausgewählt ist. 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt keinen Identitätswechsel für die Verarbeitung von OLAP-Objekten. Wählen Sie **Dienstkonto verwenden**aus, und klicken Sie anschließend auf **Weiter**.  
+9. Auf der Seite **Identitätswechselinformationen** des Assistenten definieren Sie die Sicherheitsinformationen für [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] zur Verbindungsherstellung mit der Datenquelle. Der Identitätswechsel wirkt sich auf das Windows-Konto aus, das zum Herstellen der Verbindung mit der Datenquelle verwendet wird, wenn die Windows-Authentifizierung ausgewählt ist. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt keinen Identitätswechsel für die Verarbeitung von OLAP-Objekten. Wählen Sie **Dienstkonto verwenden**aus, und klicken Sie anschließend auf **Weiter**.  
   
 10. Bestätigen Sie auf der Seite **Assistenten abschließen** den Standardnamen **Adventure Works DW 2012**, und klicken Sie anschließend auf **Fertig stellen** , um die neue Datenquelle zu erstellen.  
   

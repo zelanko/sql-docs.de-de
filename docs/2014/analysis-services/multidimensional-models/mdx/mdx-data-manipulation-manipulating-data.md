@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 29e569ec781d0015017d3009746c3299f0865c80
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074361"
 ---
 # <a name="manipulating-data-mdx"></a>Bearbeiten von Daten (MDX)
@@ -27,11 +27,11 @@ Mit MDX (Multidimensional Expressions) können Daten auf viele Arten bearbeitet 
 
 ## <a name="in-this-section"></a>In diesem Abschnitt
 
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
-|[Verwenden von Drillthrough zum Abrufen von Quelldaten &#40;MDX-&#41;](mdx-data-manipulation-retrieve-source-data-using-drillthrough.md)|Erläutert die Verwendung der MDX- [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough) -Anweisung zum Abrufen der Rowsets von Quelldaten, die auf eine Zelle in einer mehrdimensionalen Datenquelle anwendbar ist.|  
-|[Arbeiten mit der RollupChildren-Funktion &#40;MDX-&#41;](mdx-data-manipulation-rollupchildren-function.md)|Erläutert die Auswirkung der MDX- [RollupChildren](/sql/mdx/rollupchildren-mdx)
-|[Grundlegendes zu Durchlauf-und Lösungs Reihenfolge &#40;MDX&#41;](mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|Erläutert die Konzepte der Lösungsreihenfolge und erläutert, wie sich diese Funktion auf MDX-Ausdrücke, -Anweisungen und -Skripts auswirkt.|  
+|[Verwenden von DRILLTHROUGH zum Abrufen von Quelldaten &#40;MDX&#41;](mdx-data-manipulation-retrieve-source-data-using-drillthrough.md)|Erläutert die Verwendung der MDX- [DRILLTHROUGH](/sql/mdx/mdx-data-manipulation-drillthrough) -Anweisung zum Abrufen der Rowsets von Quelldaten, die auf eine Zelle in einer mehrdimensionalen Datenquelle anwendbar ist.|  
+|[Arbeiten mit der RollupChildren-Funktion &#40;MDX&#41;](mdx-data-manipulation-rollupchildren-function.md)|Erläutert die Auswirkung der MDX- [RollupChildren](/sql/mdx/rollupchildren-mdx)
+|[Grundlegendes zu Durchlauf- und Lösungsreihenfolge &#40;MDX&#41;](mdx-data-manipulation-understanding-pass-order-and-solve-order.md)|Erläutert die Konzepte der Lösungsreihenfolge und erläutert, wie sich diese Funktion auf MDX-Ausdrücke, -Anweisungen und -Skripts auswirkt.|  
 
 <!-- ??
 

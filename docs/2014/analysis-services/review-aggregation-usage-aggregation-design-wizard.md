@@ -13,23 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f52ec05ddadc6bb23968f6b5f8ee7fda9adc65a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66070221"
 ---
 # <a name="review-aggregation-usage-aggregation-design-wizard"></a>Aggregationsverwendung überprüfen (Aggregationsentwurfs-Assistent)
   Mithilfe der Seite **Aggregationsverwendung überprüfen** können Sie die Einstellungen für die Aggregationsverwendung konfigurieren.  
   
-## <a name="options"></a>Tastatur  
- **Vorgegebene**  
+## <a name="options"></a>Optionen  
+ **Standard**  
  Wählen Sie diese Option aus, um die Einstellung der Aggregationsverwendung für das Attribut auf den Standard festzulegen. Bei dieser Einstellung wendet der Designer eine Standardregel basierend auf dem Typ des Attributs und der Dimension an.  
   
  `Full`  
  Wählen Sie diese Option aus, um die Aggregationsverwendung für das Attribut auf `Full` festzulegen. Bei Verwendung dieser Einstellung muss jede Aggregation für den Cube dieses Attribut oder ein verknüpftes Attribut enthalten, das sich weiter unten in der Attributkette befindet. Die Einstellung `Full` für die Aggregationsverwendung sollte vermieden werden, wenn ein Attribut viele Elemente enthält. Falls diese Einstellung für mehrere Attribute oder für Attribute definiert ist, die über viele Elemente verfügen, kann hierdurch aufgrund einer Größenüberschreitung der Entwurf von Aggregationen verhindert werden.  
   
- **Keine**  
+ **None**  
  Wählen Sie diese Option aus, um keine Aggregationsverwendung für das Attribut festzulegen. Wird diese Einstellung verwendet, kann keine Aggregation für den Cube dieses Attribut enthalten.  
   
  `Unrestricted`  

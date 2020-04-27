@@ -13,23 +13,23 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 901d8e0adc923ec5f70fbf1097cc806b30318809
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66069751"
 ---
 # <a name="select-a-data-source-view-cube-wizard"></a>Datenquellensicht auswählen (Cube-Assistent)
   Mithilfe der Seite **Datenquellensicht auswählen** können Sie die Datenquellensicht für den leeren Cube ermitteln.  
   
 > [!NOTE]  
->  Diese Seite wird nur angezeigt, wenn Sie auf der Seite **Erstellungs Methode auswählen** die **Option leeren Cube erstellen** ausgewählt haben.  
+>  Diese Seite wird nur dann angezeigt, wenn Sie auf der Seite **Erstellungsmethode auswählen****Leeren Cube erstellen** ausgewählt haben.  
   
-## <a name="options"></a>Tastatur  
- **Datenquellensicht**  
+## <a name="options"></a>Optionen  
+ **Datenquellen Sicht**  
  Wählen Sie die Datenquellensichten aus, die für den leeren Cube verwendet werden sollen.  
   
- **Keine**  
+ **None**  
  Aktivieren Sie diese Option, wenn Sie keine Datenquellensicht verwenden möchten. Diese Option ist dann angemessen, wenn Sie die Datenquellsicht später erstellen, oder wenn Sie den Cube nur mit verknüpften Measuregruppen verwenden möchten.  
   
 ## <a name="see-also"></a>Weitere Informationen  

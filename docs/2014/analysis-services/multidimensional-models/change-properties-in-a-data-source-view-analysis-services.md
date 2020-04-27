@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a508cbfb3d5a348fa07e33b686359f5f0d5531a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076737"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>Ändern von Eigenschaften in einer Datenquellensicht (Analysis Services)
@@ -43,44 +43,44 @@ ms.locfileid: "66076737"
 > [!NOTE]  
 >  Im Eigenschaftenbereich werden Eigenschaften sowohl für die DSV-Datei als auch für das DSV-Objekt angezeigt. Um die Eigenschaften des Objekts anzuzeigen, doppelklicken Sie im Projektmappen-Explorer darauf. Die Eigenschaften werden aktualisiert und entsprechen daraufhin den Eigenschaften in der folgenden Tabelle.  
   
-|Eigenschaft|BESCHREIBUNG|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |Data source|Gibt die Datenquelle innerhalb der Datenquellensicht an, deren Eigenschaften Sie anzeigen.|  
-|BESCHREIBUNG|Gibt eine Beschreibung der Datenquellensicht an.|  
-|Name|Gibt den Namen der Datenquellensicht an, der im Projektmappen-Explorer oder in der Analysis Services-Datenbank angezeigt wird. Sie können den Namen der Datenquellensicht hier oder im Projektmappen-Explorer ändern.|  
+|Beschreibung|Gibt eine Beschreibung der Datenquellensicht an.|  
+|name|Gibt den Namen der Datenquellensicht an, der im Projektmappen-Explorer oder in der Analysis Services-Datenbank angezeigt wird. Sie können den Namen der Datenquellensicht hier oder im Projektmappen-Explorer ändern.|  
 |NameMatchingCriteria|Die Namensübereinstimmungskriterien für die Datenquelle. Die Standardeinstellung ist (Keine), wenn Primärschlüssel/Fremdschlüssel-Beziehungen vom Datenquellensicht-Assistenten ermittelt wurden. Unabhängig davon, ob diese Eigenschaft vom Datenquellensicht-Assistenten festgelegt wurde, können Sie hier einen Wert angeben. Wenn Datenbankbeziehungen vorhanden sind und Sie Namensübereinstimmungskriterien angeben, werden beide Einstellungen verwendet, um auf Beziehungen zwischen vorhandenen Tabellen und neu hinzugefügten Tabellen zu schließen.|  
 |RetrieveRelationships|Gibt an, ob Beziehungen aus der Datenbank abgerufen werden. Der Standardwert lautet "True".|  
 |SchemaRestriction|Gibt ggf. die Einschränkungen für die Schemas an, die aus einer Datenquelle abgerufen werden. Standardmäßig sind keine Schemaeinschränkungen vorhanden.|  
   
 ## <a name="viewing-or-changing-datatable-properties"></a>Anzeigen oder Ändern von DataTable-Eigenschaften  
- **Datentyp** Eigenschaften sind die Eigenschaften von Tabellen, Sichten und benannten Abfragen in einer Datenquellen Sicht. Die Eigenschaften werden festgelegt, wenn der Datenquellensicht eines dieser Objekte hinzugefügt wird. In der folgenden Tabelle sind die Eigenschaften von **DataTable** -Objekten in einer Datenquellensicht aufgeführt und beschrieben.  
+ **DataTable** -Eigenschaften sind die Eigenschaften von Tabellen, Sichten und benannten Abfragen in einer Datenquellensicht. Die Eigenschaften werden festgelegt, wenn der Datenquellensicht eines dieser Objekte hinzugefügt wird. In der folgenden Tabelle sind die Eigenschaften von **DataTable** -Objekten in einer Datenquellensicht aufgeführt und beschrieben.  
   
-|Eigenschaft|BESCHREIBUNG|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |AllowChangesDuringGeneration|Gibt an, ob der Schemagenerierungs-Assistent berechtigt ist, eine Datenquellensicht-Tabelle während der erneuten Generierung zu überschreiben. Diese Eigenschaft ist nur für Tabellen vorhanden, die ursprünglich vom Schemagenerierungs-Assistenten generiert wurden. Weitere Informationen finden Sie unter [Grundlegendes zur inkrementellen Generierung](understanding-incremental-generation.md).|  
 |DataSource|Gibt die Datenquelle für das Objekt an. Sie können diese Eigenschaft nicht bearbeiten.|  
-|BESCHREIBUNG|Gibt die Beschreibung für die Tabelle, die Sicht oder die benannte Abfrage an. Wenn für die zugrunde liegende Datenquellentabelle oder -sicht eine Beschreibung als erweiterte Eigenschaft gespeichert wurde, wird dieser Wert angezeigt. Sie können diese Eigenschaft bearbeiten.|  
+|Beschreibung|Gibt die Beschreibung für die Tabelle, die Sicht oder die benannte Abfrage an. Wenn für die zugrunde liegende Datenquellentabelle oder -sicht eine Beschreibung als erweiterte Eigenschaft gespeichert wurde, wird dieser Wert angezeigt. Sie können diese Eigenschaft bearbeiten.|  
 |FriendlyName|Gibt einen Namen für die Tabelle oder die Sicht an, der für Benutzer leichter verständlich oder aussagekräftiger im Hinblick auf den Themenbereich ist. Standardmäßig ist die **FriendlyName** -Eigenschaft einer Tabelle oder einer Sicht mit der **Name** -Eigenschaft der Tabelle oder der Sicht identisch. Die **FriendlyName** -Eigenschaft wird von OLAP- und Data Mining-Objekten verwendet, wenn Objektnamen basierend auf Tabellen oder Sichten definiert werden. Sie können diese Eigenschaft bearbeiten.|  
-|Name|Gibt den Namen der zugrunde liegenden Tabelle oder Sicht oder den Namen der benannten Abfrage an. Die **Name** -Eigenschaft wird von OLAP- und Data Mining-Objekten verwendet, wenn Objektnamen basierend auf benannten Abfragen definiert werden. Diese Eigenschaft kann nur bei benannten Abfragen bearbeitet werden.|  
+|name|Gibt den Namen der zugrunde liegenden Tabelle oder Sicht oder den Namen der benannten Abfrage an. Die **Name** -Eigenschaft wird von OLAP- und Data Mining-Objekten verwendet, wenn Objektnamen basierend auf benannten Abfragen definiert werden. Diese Eigenschaft kann nur bei benannten Abfragen bearbeitet werden.|  
 |QueryDefinition|Gibt die Definition der benannten Abfrage an. Diese Eigenschaft kann nur auf benannte Abfragen angewendet werden; ein direktes Bearbeiten ist nicht möglich. Zum Bearbeiten dieser Eigenschaft müssen Sie die benannte Abfrage selbst bearbeiten.|  
 |Schema|Gibt das Datenbankschema an, das auf die Tabelle, die Sicht oder die benannte Abfrage angewendet wird. Diese Eigenschaft kann nicht bearbeitet werden.|  
 |TableType|Gibt den Tabellentyp für die Tabelle, die Sicht oder die benannte Abfrage an. Diese Eigenschaft kann nicht bearbeitet werden.|  
   
 ## <a name="viewing-or-changing-datacolumn-properties"></a>Anzeigen oder Ändern von DataColumn-Eigenschaften  
- **Datacolenn** -Eigenschaften sind die Eigenschaften von Spalten in Tabellen, Sichten und benannten Abfragen in einer Datenquellen Sicht. Diese Eigenschaften werden festgelegt, wenn eines dieser Objekte entweder aus der zugrunde liegenden Tabelle oder Sicht, aus einer benannten Abfrage oder gemäß Definition durch eine benannte Berechnung der Datenquellensicht hinzugefügt wird. In der folgenden Tabelle sind die Eigenschaften von **DataColumn** -Objekten in einer Datenquellensicht aufgeführt und beschrieben.  
+ **DataColumn** -Eigenschaften sind die Eigenschaften von Spalten in Tabellen, Sichten und benannten Abfragen in einer Datenquellensicht. Diese Eigenschaften werden festgelegt, wenn eines dieser Objekte entweder aus der zugrunde liegenden Tabelle oder Sicht, aus einer benannten Abfrage oder gemäß Definition durch eine benannte Berechnung der Datenquellensicht hinzugefügt wird. In der folgenden Tabelle sind die Eigenschaften von **DataColumn** -Objekten in einer Datenquellensicht aufgeführt und beschrieben.  
   
-|Eigenschaft|BESCHREIBUNG|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |AllowNull|Gibt die Eigenschaft, die die NULL-Zulässigkeit der Spalte definiert, basierend auf der Spalte in der zugrunde liegenden Tabelle, Sicht oder benannten Abfrage an. Diese Eigenschaft kann nicht bearbeitet werden.|  
 |DataType|Gibt den Datentyp der Spalte basierend auf der Spalte in der zugrunde liegenden Tabelle, Sicht oder benannten Abfrage an. Diese Eigenschaft kann nicht direkt bearbeitet werden. Wenn Sie jedoch den Datentyp einer Spalte aus einer Tabelle oder Sicht ändern müssen, können Sie die Tabelle durch eine benannte Abfrage ersetzen, die die Spalte in den gewünschten Datentyp konvertiert.|  
 |DateTimeMode|Gibt das Datumsserialisierungsformat für **DateTime** -Spalten an. Der Standardwert ist **UnspecifiedLocal**. Diese Eigenschaft kann bearbeitet werden.|  
-|BESCHREIBUNG|Gibt die Beschreibung für die Spalte an. Wenn für die zugrunde liegende Datenbankspalte eine Beschreibung als erweiterte Eigenschaft gespeichert wurde, wird dieser Wert angezeigt. Sie können diese Eigenschaft bearbeiten.|  
+|Beschreibung|Gibt die Beschreibung für die Spalte an. Wenn für die zugrunde liegende Datenbankspalte eine Beschreibung als erweiterte Eigenschaft gespeichert wurde, wird dieser Wert angezeigt. Sie können diese Eigenschaft bearbeiten.|  
 |FriendlyName|Gibt den Namen für eine Spalte aus einer Tabelle oder Sicht an, der für Benutzer leichter verständlich oder aussagekräftiger im Hinblick auf den Themenbereich ist. Standardmäßig ist die **FriendlyName** -Eigenschaft einer Spalte aus einer Tabelle oder Sicht mit der **Name** -Eigenschaft der Spalte identisch. Die **FriendlyName** -Eigenschaft wird von OLAP- und Data Mining-Objekten verwendet, wenn Attribute basierend auf Spalten aus Tabellen oder Sichten definiert werden. Sie können diese Eigenschaft bearbeiten.|  
 |Länge|Gibt die maximale Länge der Spalte basierend auf den Daten in der Spalte in der zugrunde liegenden Tabelle oder Sicht an.|  
-|Name|Gibt den Namen der zugrunde liegenden Spalte oder den Namen der benannten Berechnung an. Die **Name** -Eigenschaft wird von OLAP- und Data Mining-Objekten verwendet, wenn Attribute basierend auf benannten Berechnungen definiert werden. Diese Eigenschaft kann nur bei benannten Berechnungen bearbeitet werden.|  
+|name|Gibt den Namen der zugrunde liegenden Spalte oder den Namen der benannten Berechnung an. Die **Name** -Eigenschaft wird von OLAP- und Data Mining-Objekten verwendet, wenn Attribute basierend auf benannten Berechnungen definiert werden. Diese Eigenschaft kann nur bei benannten Berechnungen bearbeitet werden.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenquellen Sichten in mehrdimensionalen Modellen](data-source-views-in-multidimensional-models.md)   
- [Arbeiten mit Diagrammen im Datenquellen Sicht-Designer &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
+ [Verwenden von Diagrammen im Datenquellensicht-Designer &#40;Analysis Services&#41;](work-with-diagrams-in-data-source-view-designer-analysis-services.md)  
   
   

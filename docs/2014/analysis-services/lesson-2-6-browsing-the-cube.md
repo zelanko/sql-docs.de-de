@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 910bb7a425e62221dce932392e1aedfaa401a992
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078979"
 ---
 # <a name="browsing-the-cube"></a>Durchsuchen des Cubes
@@ -32,16 +32,16 @@ ms.locfileid: "66078979"
   
 2.  Klicken Sie auf die Registerkarte **Browser** , um das **alle** -Element der `Product Key` Attribut Hierarchie anzuzeigen. In Lektion 3 definieren Sie eine Benutzerhierarchie für die Product-Dimension, mit der Sie die Dimension durchsuchen können.  
   
-3.  Wechseln Sie in **zum** Cube-Designer [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Doppelklicken Sie hierzu auf den **Analysis Services Tutorial** -Cube im **Cubes** -Knoten Projektmappen-Explorer.  
+3.  Wechseln Sie in **zum** Cube-Designer [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Doppelklicken Sie hierzu auf den **Analysis Services Tutorial** -Cube im **Cubes** -Knoten des Projektmappen-Explorers.  
   
 4.  Klicken Sie auf die Registerkarte **Browser** und anschließend auf der Symbolleiste des Designers auf das Symbol zum **Wiederherstellen der Verbindung** .  
   
      Im linken Bereich des Designers werden die Objekte für den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube angezeigt. Auf der rechten Seite der Registerkarte **Browser** sind zwei Bereiche enthalten: Beim oberen Bereich handelt es sich um den Bereich **Filter** , beim unteren um den Bereich **Daten** . In einer der nächsten Lektionen verwenden Sie den Cube-Browser zur Durchführung von Analysen.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 3: Ändern von Maßen, Attributen und Hierarchien](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
+ [Lektion 3: Ändern von Measures, Attributen und Hierarchien](lesson-3-modifying-measures-attributes-and-hierarchies.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [MDX-Abfrage-Editor &#40;Analysis Services Mehrdimensionale Daten&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)  
+ [MDX-Abfrage-Editor &#40;Analysis Services – Mehrdimensionale Daten&#41;](mdx-query-editor-analysis-services-multidimensional-data.md)  
   
   

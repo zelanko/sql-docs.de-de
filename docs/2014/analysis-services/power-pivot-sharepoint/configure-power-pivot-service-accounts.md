@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b90944c3260af69f29fbae8a93f5865c1f3c6d1e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071860"
 ---
 # <a name="configure-powerpivot-service-accounts"></a>Konfigurieren von PowerPivot-Dienstkonten
@@ -32,17 +32,17 @@ ms.locfileid: "66071860"
   
  [Aktualisieren eines abgelaufenen Kennworts für die PowerPivot-Dienstanwendung](configure-power-pivot-service-accounts.md#bkmk_passwordapp)  
   
- [Ändern des Kontos, unter dem der jeweilige Dienst ausgeführt wird](#bkmk_newacct)  
+ [Das Konto ändern, unter dem der jeweilige Dienst ausgeführt wird](#bkmk_newacct)  
   
  [Erstellen oder Ändern des Anwendungspools für eine PowerPivot-Dienstanwendung](#bkmk_appPool)  
   
- [Kontoanforderungen und-Berechtigungen](#requirements)  
+ [Kontoanforderungen und Berechtigungen](#requirements)  
   
- [Problembehandlung: Manuelles erteilen von Administrator Berechtigungen](#updatemanually)  
+ [Problembehandlung: Manuelles Gewähren von Administratorberechtigungen](#updatemanually)  
   
- [Problembehandlung: Beheben von HTTP 503-Fehlern aufgrund abgelaufener Kenn Wörter für die zentral Administration oder den SharePoint Foundation-Webanwendungs Dienst](#expired)  
+ [Problembehandlung: Beheben von HTTP 503-Fehlern aufgrund abgelaufener Kennwörter für die zentrale Verwaltung oder den SharePoint Foundation-Webanwendungsdienst](#expired)  
   
-##  <a name="bkmk_passwordssas"></a>Aktualisieren eines abgelaufenen Kennworts für SQL Server Analysis Services (Power Pivot)-Instanz  
+##  <a name="update-an-expired-password-for-sql-server-analysis-services-powerpivot-instance"></a><a name="bkmk_passwordssas"></a>Aktualisieren eines abgelaufenen Kennworts für SQL Server Analysis Services (Power Pivot)-Instanz  
   
 1.  Zeigen Sie auf „Start“, klicken Sie auf **Verwaltung**, und klicken Sie dann auf **Dienste**. Doppelklicken Sie auf **SQL Server Analysis Services (Power Pivot)**. Klicken Sie auf **Anmelden**, und geben Sie dann ein neues Kennwort für das Konto ein.  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66071860"
   
 5.  Wählen Sie **Kontokennwort auf neuen Wert festlegen**aus. Alle Dienste, die unter dem verwalteten Konto ausgeführt werden, verwenden die aktualisierten Anmeldeinformationen.  
   
-##  <a name="bkmk_passwordapp"></a>Aktualisieren eines abgelaufenen Kennworts für die Power Pivot-Dienst Anwendung  
+##  <a name="update-an-expired-password-for-the-powerpivot-service-application"></a><a name="bkmk_passwordapp"></a>Aktualisieren eines abgelaufenen Kennworts für die Power Pivot-Dienst Anwendung  
   
 1.  Klicken Sie in der Zentraladministration im Abschnitt „Sicherheit“ auf **Verwaltete Konten konfigurieren**.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66071860"
   
 4.  Wählen Sie **Kontokennwort auf neuen Wert festlegen**aus. Alle Dienste, die unter dem verwalteten Konto ausgeführt werden, verwenden die aktualisierten Anmeldeinformationen.  
   
-##  <a name="bkmk_newacct"></a>Ändern des Kontos, unter dem der jeweilige Dienst ausgeführt wird  
+##  <a name="change-the-account-under-which-each-service-runs"></a><a name="bkmk_newacct"></a>Ändern des Kontos, unter dem der jeweilige Dienst ausgeführt wird  
   
 1.  Klicken Sie in der Zentraladministration im Abschnitt „Sicherheit“ auf **Dienstkonten konfigurieren**.  
   
@@ -80,7 +80,7 @@ ms.locfileid: "66071860"
   
 6.  Klicken Sie auf **OK**.  
   
-##  <a name="bkmk_appPool"></a>Erstellen oder Ändern des Anwendungs Pools für eine Power Pivot-Dienst Anwendung  
+##  <a name="create-or-change-the-application-pool-for-a-powerpivot-service-application"></a><a name="bkmk_appPool"></a>Erstellen oder Ändern des Anwendungs Pools für eine Power Pivot-Dienst Anwendung  
   
 1.  Klicken Sie in der zentral Administration unter Anwendungs Verwaltung auf **Dienst Anwendungen verwalten**.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "66071860"
   
 4.  Wählen Sie **Einen neuen Anwendungspool erstellen**aus. Geben Sie einen Namen für den Anwendungspool und ein verwaltetes Konto für die Identität des Anwendungspools an.  
   
-##  <a name="requirements"></a>Kontoanforderungen und-Berechtigungen  
+##  <a name="account-requirements-and-permissions"></a><a name="requirements"></a>Kontoanforderungen und-Berechtigungen  
  Wenn Sie eine PowerPivot für SharePoint-Bereitstellung planen, sollten Sie die folgenden Dienstkonten vorsehen.  
   
 -   Analysis Services-Dienstkonto. Analysis Services verarbeitet PowerPivot-Abfragen und -Datenaktualisierungsaufträge in der Farm. Dieses Konto wird immer während des SQL Server-Setups angegeben, wenn Sie PowerPivot für SharePoint installieren.  
@@ -113,9 +113,9 @@ ms.locfileid: "66071860"
 |Bereitstellungsanforderung|Beim PowerPivot-Systemdienst handelt es sich um eine in der Farm freigegebene Ressource, die verfügbar wird, wenn Sie eine Dienstanwendung erstellen. Der Dienstanwendungspool muss bei der Erstellung der Dienstanwendung angegeben werden. Er kann auf zwei Arten angegeben werden: mithilfe des PowerPivot-Konfigurationstools oder durch PowerShell-Befehle.<br /><br /> Sie haben die Anwendungspoolidentität möglicherweise so konfiguriert, dass sie unter einem eindeutigen Konto ausgeführt wird. Wenn dies nicht der Fall ist, sollten Sie es in Erwägung ziehen, es jetzt unter einem anderen Konto auszuführen.|  
 |Domänenbenutzerkonto-Anforderung|Die Anwendungspoolidentität muss ein Windows-Domänenbenutzerkonto sein. Integrierte Computerkonten (z. B. Netzwerkdienst oder Lokaler Dienst) sind nicht zulässig.|  
 |Berechtigungsanforderungen|Dieses Konto benötigt keine lokalen Systemadministratorberechtigungen auf dem Computer. Dieses Konto muss Analysis Services-Systemadministratorberechtigungen auf dem lokalen [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] -Computer aufweisen, der auf dem gleichen Computer installiert ist. Diese Berechtigungen werden automatisch von SQL Server-Setup oder beim Festlegen oder Ändern der Anwendungspoolidentität in der Zentraladministration gewährt.<br /><br /> Administratorberechtigungen sind erforderlich, damit das Weiterleiten von Abfragen an den [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]-Computer erfolgen kann. Sie sind auch zum Überwachen des Zustands, zum Schließen inaktiver Sitzungen und zum Lauschen auf Ablaufverfolgungsereignisse erforderlich.<br /><br /> Das Konto muss über Verbindungs-, Lese- und Schreibberechtigungen für die PowerPivot-Dienstanwendungsdatenbank verfügen. Diese Berechtigungen werden automatisch gewährt, wenn die Anwendung erstellt wird, und automatisch aktualisiert, wenn Sie Konten oder Kennwörter in der Zentraladministration ändern.<br /><br /> Die PowerPivot-Dienstanwendung überprüft, ob ein SharePoint-Benutzer berechtigt ist, Daten vor dem Abrufen der Datei anzuzeigen, aber sie nimmt die Identität des Benutzers nicht an. Es gibt keine Berechtigungsanforderungen für Identitätswechsel.|  
-|Anforderungen für horizontales Skalieren|Keine.|  
+|Anforderungen für horizontales Skalieren|Keine|  
   
-##  <a name="updatemanually"></a>Problembehandlung: Manuelles erteilen von Administrator Berechtigungen  
+##  <a name="troubleshooting-grant-administrative-permissions-manually"></a><a name="updatemanually"></a>Problembehandlung: Manuelles erteilen von Administrator Berechtigungen  
  Administratorberechtigungen werden nicht aktualisiert, wenn die Person, die die Anmeldeinformationen aktualisiert, kein lokaler Administrator auf dem Computer ist. Wenn dies auftritt, können Sie Administratorberechtigungen manuell gewähren. Die einfachste Möglichkeit hierzu besteht darin, den PowerPivot-Konfigurationszeitgeberauftrag in der Zentraladministration auszuführen. Mit diesem Ansatz können Sie Berechtigungen für alle PowerPivot-Server in der Farm zurücksetzen. Beachten Sie, dass dieser Ansatz nur funktioniert, wenn der SharePoint-Zeitgeberauftrag sowohl als Farmadministrator als auch als lokaler Administrator auf dem Computer ausgeführt wird.  
   
 1.  Klicken Sie in Monitoring auf **Auftragsdefinitionen überprüfen**.  
@@ -150,7 +150,7 @@ ms.locfileid: "66071860"
   
 11. Geben Sie den Namen des Kontos ein, das für den Power Pivot-Dienst Anwendungs Pool verwendet wird, und klicken Sie dann auf **OK**.  
   
-##  <a name="expired"></a>Problembehandlung: Beheben von HTTP 503-Fehlern aufgrund abgelaufener Kenn Wörter für die zentral Administration oder den SharePoint Foundation-Webanwendungs Dienst  
+##  <a name="troubleshooting-resolve-http-503-errors-due-to-expired-passwords-for-central-administration-or-the-sharepoint-foundation-web-application-service"></a><a name="expired"></a>Problembehandlung: Beheben von HTTP 503-Fehlern aufgrund abgelaufener Kenn Wörter für die zentral Administration oder den SharePoint Foundation-Webanwendungs Dienst  
  Wenn der zentrale Verwaltungsdienst oder der SharePoint Foundation-Webanwendungsdienst aufgrund der Rücksetzung eines Kontos oder des Ablaufs eines Kennworts aufhört zu arbeiten, erhalten Sie die Fehlermeldung HTTP 503 "Dienst nicht verfügbar", wenn Sie versuchen, die zentrale SharePoint-Verwaltung oder eine SharePoint-Website zu öffnen. Führen Sie folgende Schritte aus, um den Server online zurückzubringen. Sobald die zentrale Verwaltung verfügbar ist, können Sie damit fortfahren, abgelaufene Kontoinformationen zu aktualisieren.  
   
 1.  Klicken Sie in der Verwaltung auf **Internetinformationsdienste-Manager**.  

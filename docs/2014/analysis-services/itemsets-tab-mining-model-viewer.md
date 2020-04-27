@@ -13,18 +13,18 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b34031f0554fd9743ba036c9ce0f1bebe2c3d44d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079560"
 ---
 # <a name="itemsets-tab-mining-model-viewer"></a>Registerkarte "Itemsets" (Miningmodell-Viewer)
   Im Bereich **Itemsets** werden die häufig in einem Miningmodell für Zuordnungsregeln enthaltenen Itemsets angezeigt. Da ein Zuordnungsmodell viele Itemsets enthalten kann, werden im Viewer Steuerelemente bereitgestellt, mit denen Sie die im Viewer angezeigten Itemsets filtern können.  
   
- **Weitere Informationen finden Sie unter:** [Microsoft Association-Algorithmus](data-mining/microsoft-association-algorithm.md), [Durchsuchen eines Modells mit dem Microsoft Association Rules-Viewer](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
+ **Weitere Informationen:** [Microsoft Association-Algorithmus](data-mining/microsoft-association-algorithm.md), [Modell mit dem Microsoft-Viewer für Zuordnungsregeln durchsuchen](data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Viewerinhalt aktualisieren**  
  Lädt das Miningmodell im Viewer neu.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66079560"
  **Viewer**  
  Wählen Sie einen Viewer aus, mit dem das ausgewählte Miningmodell angezeigt werden soll. Sie können entweder den benutzerdefinierten Viewer für Zuordnungsmodelle oder den [!INCLUDE[msCoName](../includes/msconame-md.md)] Generic Content Tree Viewer verwenden. Sie können auch Plug-In-Viewer verwenden, falls diese verfügbar sind.  
   
- **Minimale Unterstützung**  
+ **Minimaler Unterstützungswert**  
  Ändern Sie diesen Wert, um den Unterstützungswert festzulegen, den ein Itemset enthalten muss, um im Viewer angezeigt zu werden. Der Standardwert, der beim ersten Öffnen des Modells angezeigt wird, wird vom Modell berechnet, Sie können ihn jedoch ändern, um mehr oder weniger Itemsets anzuzeigen.  
   
  **Mindestgröße des Itemsets**  
@@ -65,10 +65,10 @@ ms.locfileid: "66079560"
  **Langen Namen anzeigen**  
  Wählen Sie diese Option aus, um den vollständigen Namen des Itemsets anzuzeigen, wie er im Miningmodellinhalt angezeigt wird.  
   
- **Maximale Anzahl von Zeilen**  
+ **Maximale Zeilenanzahl**  
  Beschränkt die Anzahl der Itemsets, die im Viewer angezeigt werden. Standardmäßig werden Itemsets in absteigender Reihenfolge nach Unterstützung sortiert, durch Verringern dieses Werts wird die Liste daher auf die häufigsten Itemsets eingeschränkt.  
   
- **Förder**  
+ **Support**  
  Zeigt den Unterstützungswert der einzelnen Itemsets an.  
   
  **Größe**  

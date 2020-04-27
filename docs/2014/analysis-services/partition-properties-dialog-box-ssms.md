@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bfc0de04be668ea3d1ab5633049e6f81d971b4cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072161"
 ---
 # <a name="partition-properties-dialog-box-ssms"></a>Partitionseigenschaften (Dialogfeld, SSMS)
@@ -30,7 +30,7 @@ ms.locfileid: "66072161"
   
 |Seite|BESCHREIBUNG|  
 |----------|-----------------|  
-|**End**|Auf der Seite **Auswahl** wählen Sie die Partition in der Measuregruppe aus, deren Eigenschaften angezeigt oder geändert werden sollen. Weitere Informationen zu dieser Seite finden Sie unter [Auswahl &#40;Dialogfeld „Partitionseigenschaften“&#41; &#40;SSMS&#41;](selection-partition-properties-dialog-box-ssms.md).|  
+|**Auswahl**|Auf der Seite **Auswahl** wählen Sie die Partition in der Measuregruppe aus, deren Eigenschaften angezeigt oder geändert werden sollen. Weitere Informationen zu dieser Seite finden Sie unter [Auswahl &#40;Dialogfeld „Partitionseigenschaften“&#41; &#40;SSMS&#41;](selection-partition-properties-dialog-box-ssms.md).|  
 |**Allgemein**|Auf der Seite **Allgemein** können Sie die allgemeinen Eigenschaften der auf der Seite **Auswahl** ausgewählten Partition anzeigen und ändern. Weitere Informationen zu dieser Seite finden Sie unter [Allgemein &#40;Dialogfeld „Partitionseigenschaften“&#41; &#40;SSMS&#41;](general-partition-properties-dialog-box-ssms.md).|  
 |**Proaktives Zwischenspeichern**|Auf der Seite **Proaktives Zwischenspeichern** können Sie die Einstellungen für Speicherung und proaktives Zwischenspeichern für die auf der Seite **Auswahl** ausgewählte Partition anzeigen und ändern. Weitere Informationen zu dieser Seite finden Sie unter [Proaktives Zwischenspeichern &#40;Dialogfeld „Partitionseigenschaften“&#41; &#40;SSMS&#41;](proactive-caching-partition-properties-dialog-box-ssms.md).|  
 |**Fehlerkonfiguration**|Auf der Seite **Fehlerkonfiguration** können Sie die Fehlerkonfigurationseinstellungen für die Verarbeitung der auf der Seite **Auswahl** ausgewählten Partition anzeigen und ändern. Weitere Informationen zu dieser Seite finden Sie unter [Fehlerkonfiguration für die Verarbeitung von Cubes, Partitionen und Dimensionen &#40;SSAS – Mehrdimensional&#41;](multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md).|  

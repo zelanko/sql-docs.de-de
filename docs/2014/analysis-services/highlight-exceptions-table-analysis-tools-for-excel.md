@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 18bf54b7b97598c6c61d7e282ad5791d926cc25a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080755"
 ---
 # <a name="highlight-exceptions-table-analysis-tools-for-excel"></a>Ausnahmen hervorheben (Tabellenanalysetools für Excel)
@@ -43,7 +43,7 @@ ms.locfileid: "66080755"
   
 5.  Um die Anzahl der Highlights zu ändern, klicken Sie in der Zeile **Ausnahme Schwellenwert** des **Berichts Ausnahmen hervorheben**auf die Pfeile nach oben und nach unten.  
   
-### <a name="requirements"></a>Requirements (Anforderungen)  
+### <a name="requirements"></a>Anforderungen  
  Sie können auch Spalten einbeziehen, die keinen falschen Werte enthalten, wenn diese Werte Informationen enthalten, die zum Vorhersagen anderer Zeilen nützlich sein können. Sie sollten jedoch die Auswahl von Spalten aufheben, deren Werte fehlen oder Null sind.  
   
  Da alle ausgewählten Spalten für die Ermittlung eines allgemeinen Musters herangezogen werden, sollten Sie keine Spalten auswählen, die bekanntermaßen ungeeignete Daten enthalten, z. B.:  

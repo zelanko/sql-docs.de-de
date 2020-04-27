@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3efce85f27db9d0695ea56e9940ab563ed40537a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074961"
 ---
 # <a name="grant-permissions-on-a-dimension-analysis-services"></a>Gewähren von Berechtigungen in einer Dimension (Analysis Services)
@@ -45,22 +45,22 @@ ms.locfileid: "66074961"
 ## <a name="set-permissions-on-a-database-dimension"></a>Erteilen von Berechtigungen für eine Datenbankdimension  
  Datenbankdimensionen sind eigenständige Objekte innerhalb einer Datenbank, mit denen Dimensionen innerhalb desselben Modells erneut verwendet werden können. Denken Sie hierbei an eine DATE-Datenbankdimension, die in einem Modell vielfach verwendet wird, wie die Cubedimensionen Order Date, Ship Date und Due Date. Da Cubes und Datenbankdimensionen in einer Datenbank Peer-Objekte sind, können Sie Verarbeitungsberechtigungen unabhängig für jedes Objekt festlegen.  
   
-1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]her, erweitern Sie im Objekt-Explorer das **Rollen** -Element für die entsprechende Datenbank, und klicken Sie dann auf eine Datenbankrolle (oder erstellen Sie eine neue Datenbankrolle).  
+1.  Stellen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Sie in eine Verbindung mit der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Instanz von her, erweitern Sie in Objekt-Explorer **Rollen** für die entsprechende Datenbank, und klicken Sie dann auf eine Daten Bank Rolle (oder erstellen Sie eine neue Daten Bank Rolle).  
   
 2.  Im Bereich **Dimensionen** sollte für die Dimension **Alle Datenbankdimensionen**festgelegt sein.  
   
      Die Standardeinstellung für Berechtigungen ist **Lesen**.  
   
-     Obwohl **Lese-/Schreibzugriff** verfügbar ist, wird empfohlen, diese Berechtigung nicht zu verwenden. **Lese-/Schreibzugriff** wird für Szenarios zum Rück Schreiben von Dimensionen verwendet, die veraltet sind. Weitere Informationen finden Sie [unter Veraltete Analysis Services Features in SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md).  
+     Obwohl **Lese-/Schreibzugriff** verfügbar ist, wird empfohlen, diese Berechtigung nicht zu verwenden. **Lesen/Schreiben** wird für das Rückschreiben von Dimensionen verwendet, die veraltet sind. Weitere Informationen finden Sie [unter Veraltete Analysis Services Features in SQL Server 2014](../deprecated-analysis-services-features-in-sql-server-2014.md).  
   
      Optional können Sie die Berechtigungen **Definition lesen** und **Verarbeiten** für individuelle Objekte festlegen, solange diese Berechtigungen noch nicht auf Datenbankebene festgelegt wurden. Einzelheiten finden Sie unter [Erteilen von Berechtigungen zum Verarbeiten &#40;Analysis Services&#41;](grant-process-permissions-analysis-services.md) und [Erteilen von Berechtigungen zum Lesen von Definitionen für Objektmetadaten &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md).  
   
 ## <a name="set-permissions-on-a-cube-dimension"></a>Erteilen von Berechtigungen für eine Cubedimension  
  Cubedimensionen sind Datenbankdimensionen, die zu einem Cube hinzugefügt wurden. Als solche hängen sie strukturell von den zugehörigen Measuregruppen ab. Obwohl diese Objekte atomar verarbeitet werden können, ist es im Hinblick auf die Autorisierung sinnvoller, den Cube und die Cubedimensionen als einzelne Entität zu behandeln.  
   
-1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit einer Instanz von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]her, erweitern Sie im Objekt-Explorer das **Rollen** -Element für die entsprechende Datenbank, und klicken Sie dann auf eine Datenbankrolle (oder erstellen Sie eine neue Datenbankrolle).  
+1.  Stellen [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Sie in eine Verbindung mit der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Instanz von her, erweitern Sie in Objekt-Explorer **Rollen** für die entsprechende Datenbank, und klicken Sie dann auf eine Daten Bank Rolle (oder erstellen Sie eine neue Daten Bank Rolle).  
   
-2.  Ändern Sie **** \<im Bereich Dimensionen die Dimensions Gruppe in Cube-Name> **Cubedimensionen**.  
+2.  Ändern Sie **Dimensions** \<im Bereich Dimensionen die Dimensions Gruppe in Cube-Name> **Cubedimensionen**.  
   
      Standardmäßig werden Berechtigungen von einer entsprechenden Datenbankdimension geerbt. Deaktivieren Sie das Kontrollkästchen **Erben** , um Berechtigungen von **Lesen** zu **Lesen/Schreiben**zu ändern. Lesen Sie zuerst den Hinweis im vorhergehenden Abschnitt, bevor Sie **Lesen/Schreiben**verwenden.  
   
@@ -72,6 +72,6 @@ ms.locfileid: "66074961"
  [Erteilen von Cube-oder Modell Berechtigungen &#40;Analysis Services&#41;](grant-cube-or-model-permissions-analysis-services.md)   
  [Erteilen von Berechtigungen für Data Mining Strukturen und Modelle &#40;Analysis Services&#41;](grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
  [Gewähren von benutzerdefiniertem Zugriff auf Dimensions Daten &#40;Analysis Services&#41;](grant-custom-access-to-dimension-data-analysis-services.md)   
- [Gewähren von benutzerdefiniertem Zugriff auf Zellen Daten &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
+ [Erteilen von benutzerdefiniertem Zugriff auf Zellendaten &#40;Analysis Services&#41;](grant-custom-access-to-cell-data-analysis-services.md)  
   
   

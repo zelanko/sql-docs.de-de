@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 111948911c0fe7bdc0e7ce260a15b8efee50e9db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076903"
 ---
 # <a name="add-account-intelligence-to-a-dimension"></a>Hinzufügen von Kontointelligenz zu einer Dimension
@@ -44,15 +44,15 @@ ms.locfileid: "66076903"
   
 -   Die Spalte **Serverkontotypen** identifiziert den entsprechenden Kontotyp, der von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erkannt wird. In der folgenden Tabelle sind die Kontotypen aufgelistet, die von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erkannt werden, sowie die Standardaggregation für die einzelnen Typen. Die Auswahl erfolgt automatisch, wenn die Dimensionstabelle dieselben Kontotypnamen verwendet wie [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
-    |Serverkontotyp|Aggregation|BESCHREIBUNG|  
+    |Serverkontotyp|Aggregation|Beschreibung|  
     |-------------------------|-----------------|-----------------|  
     |**Statistisch**|`None`|Ein berechnetes Verhältnis von etwas oder eine Anzahl von etwas, das nicht im Verlauf der Zeit aggregiert wird. Für diesen Kontotyp wird keine Konvertierung von Währungsdaten mit Konvertierungsregeln ausgeführt.|  
     |**Liability**|`LastNonEmpty`|Das Geld oder der Wert von Dingen, das bzw. der zu einem bestimmten Zeitpunkt geschuldet wird. Für diesen Kontotyp werden im Verlauf der Zeit keine Akkumulierungen und daher auch keine natürlichen Aggregationen ausgeführt. So entspricht z. B. die Menge für Year dem Wert des letzten Monats, der Daten enthält. Für diesen Kontotyp können Währungen mit dem zum End of Period-Zeitpunkt gültigen Wechselkurs konvertiert werden.|  
     |**Asset**|`LastNonEmpty`|Das Geld oder der Wert von Dingen, die zu einem bestimmten Zeitpunkt im Besitz sind. Für diesen Kontotyp werden im Verlauf der Zeit Akkumulierungen und somit keine natürlichen Aggregationen ausgeführt. So entspricht z. B. die Menge für Year dem Wert des letzten Monats, der Daten enthält. Für diesen Kontotyp können Währungen mit dem zum End of Period-Zeitpunkt gültigen Wechselkurs konvertiert werden.|  
     |**Balance**|`LastNonEmpty`|Die Anzahl von etwas zu einem bestimmten Zeitpunkt. Für diesen Kontotyp werden im Verlauf der Zeit Akkumulierungen, jedoch keine natürlichen Aggregationen ausgeführt. So entspricht z. B. die Menge für Year dem Wert des letzten Monats, der Daten enthält.|  
-    |**Rom**|`Sum`|Eine inkrementelle Anzahl von etwas. Dieser Kontotyp wird im Verlauf der Zeit als `Sum` aggregiert, es werden jedoch keine Konvertierungen mithilfe von Regeln zur Währungskonvertierung ausgeführt.|  
-    |**Ausgaben**|`Sum`|Ausgegebenes Geld oder der Wert, der für Dinge ausgegeben wurde. Dieser Kontotyp wird im Verlauf der Zeit als `Sum` aggregiert, und Währungen werden mit einem Durchschnittskurs konvertiert.|  
-    |**Einkommen**|`Sum`|Erhaltenes Geld oder der Wert von erhaltenen Dingen. Dieser Kontotyp wird im Verlauf der Zeit als `Sum` aggregiert, und Währungen werden mit einem Durchschnittskurs konvertiert.|  
+    |**Flow**|`Sum`|Eine inkrementelle Anzahl von etwas. Dieser Kontotyp wird im Verlauf der Zeit als `Sum` aggregiert, es werden jedoch keine Konvertierungen mithilfe von Regeln zur Währungskonvertierung ausgeführt.|  
+    |**Expense**|`Sum`|Ausgegebenes Geld oder der Wert, der für Dinge ausgegeben wurde. Dieser Kontotyp wird im Verlauf der Zeit als `Sum` aggregiert, und Währungen werden mit einem Durchschnittskurs konvertiert.|  
+    |**Income**|`Sum`|Erhaltenes Geld oder der Wert von erhaltenen Dingen. Dieser Kontotyp wird im Verlauf der Zeit als `Sum` aggregiert, und Währungen werden mit einem Durchschnittskurs konvertiert.|  
   
     > [!NOTE]  
     >  Sie können einem bestimmten Serverkontotyp ggf. mehrere Kontotypen in der Dimension zuordnen.  

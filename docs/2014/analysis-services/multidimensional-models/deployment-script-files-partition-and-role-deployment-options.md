@@ -23,10 +23,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b9b36013f13360a2afcf9546cd1e286b35ae4acd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075354"
 ---
 # <a name="specifying-partition-and-role-deployment-options"></a>Angeben von Bereitstellungsoptionen für Partitionen und Rollen
@@ -35,13 +35,13 @@ ms.locfileid: "66075354"
 ## <a name="reviewing-the-partition-and-role-deployment-options"></a>Überprüfen der Bereitstellungsoptionen für Partitionen und Rollen  
  Die Bereitstellungs Optionen in \<der Datei *Project Name*>. deploymentoptions umfassen Folgendes:  
   
- **Bereitstellungs Optionen für Partitionen**  
+ **Bereitstellungsoptionen für Partitionen**  
  Der \< *Projektname*>. deploymentoptions-Datei gibt an, ob vorhandene Partitionen in der Zieldatenbank beibehalten oder überschrieben (Standard) werden. Wenn vorhandene Partitionen beibehalten werden, werden nur neue Partitionen bereitgestellt, und der Partitions- bzw. Aggregationsentwurf in allen vorhandenen Measuregruppen wird nicht geändert.  
   
 > [!NOTE]  
 >  Wird die Measuregruppe, in der die Partition vorhanden ist, gelöscht, wird die Partition automatisch gelöscht.  
   
- **Rollen Bereitstellungs Optionen**  
+ **Bereitstellungsoptionen für Rollen**  
  Der \< *Projektname*>. deploymentoptions-Datei gibt eine der folgenden Optionen für die Rollen Bereitstellung an:  
   
 -   Vorhandene Rollen und Rollenelemente in der Zieldatenbank werden beibehalten, und nur neue Rollen und Rollenelemente werden bereitgestellt.  
@@ -50,7 +50,7 @@ ms.locfileid: "66075354"
   
 -   Vorhandene Rollen und Rollenelemente in der Zieldatenbank werden beibehalten, neue Rollen werden nicht bereitgestellt.  
   
--   **Hinweis** Wenn vorhandene Rollen und Mitglieder beibehalten werden, werden die Berechtigungen, die diesen Rollen zugeordnet sind, auf keine zurückgesetzt. Sicherheitsberechtigungen sind in den Objekten enthalten, die sie sichern, und nicht in den Sicherheitsrollen, denen sie zugeordnet sind. Weitere Informationen zum Arbeiten mit diesem Verhalten mithilfe des Bereitstellungs-Assistenten für Analysis Services finden Sie unter "beibehalten von Rollen und Mitgliedern" in der Microsoft Knowledge Base.  
+-   **Hinweis:** Wenn vorhandene Rollen und Elemente beibehalten werden, werden die Berechtigungen, die diesen Rollen zugeordnet sind, zurückgesetzt. Sicherheitsberechtigungen sind in den Objekten enthalten, die sie sichern, und nicht in den Sicherheitsrollen, denen sie zugeordnet sind. Weitere Informationen zum Arbeiten mit diesem Verhalten mithilfe des Bereitstellungs-Assistenten für Analysis Services finden Sie unter "beibehalten von Rollen und Mitgliedern" in der Microsoft Knowledge Base.  
   
 ## <a name="modifying-the-partition-and-role-deployment-options"></a>Ändern der Bereitstellungsoptionen für Partitionen und Rollen  
  Möglicherweise müssen Sie das [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Projekt mit anderen Partitions-und Rollen Optionen bereitstellen, als diejenigen \<, die in der *Projektname*>. deploymentoptions-Datei gespeichert sind. Beispielsweise möchten Sie möglicherweise vorhandene Partitionen, Rollen und Rollen Mitglieder beibehalten, anstatt alle vorhandenen Partitionen, Rollen und Member zu ersetzen, wie in der \< *Projektname*>. deploymentoptions-Datei angegeben.  
@@ -61,11 +61,11 @@ ms.locfileid: "66075354"
   
 -   Führen Sie den Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] interaktiv aus, und geben Sie auf der Seite **Bereitstellungsoptionen für Partitionen und Rollen** neue Bereitstellungsoptionen für die Partitionen und Rollen an.  
   
-     Oder  
+     - oder -  
   
 -   Führen Sie den Bereitstellungs-Assistenten für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] an der Eingabeaufforderung aus, und legen Sie fest, dass der Assistent im Antwortdateimodus ausgeführt wird. (Weitere Informationen zum Antwortdatei Modus finden Sie unter [Ausführen des Bereitstellungs-Assistenten für Analysis Services](running-the-analysis-services-deployment-wizard.md).)  
   
-     Oder  
+     - oder -  
   
 -   Öffnen Sie \<den *Projektnamen*>. deploymentoptions in einem beliebigen Text-Editor, und ändern Sie die Optionen manuell.  
   

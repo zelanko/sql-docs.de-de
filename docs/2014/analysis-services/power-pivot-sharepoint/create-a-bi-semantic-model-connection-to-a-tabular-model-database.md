@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f058516059c0cadf92b9d558a47990af0a54725f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071663"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Erstellen einer BI-Semantikmodellverbindung mit einer tabellarischen Modelldatenbank
@@ -26,7 +26,7 @@ ms.locfileid: "66071663"
   
  [Voraussetzungen prüfen](#bkmk_prereq)  
   
- [Erteilen von Analysis Services administrativen Berechtigungen für freigegebene Dienst Anwendungen](#bkmk_ssas)  
+ [Erteilen von Analysis Services-Administratorberechtigungen an gemeinsame Dienstanwendungen](#bkmk_ssas)  
   
  [Erteilen von Leseberechtigungen für die Datenbank für tabellarische Modelle](#bkmk_BISM)  
   
@@ -34,9 +34,9 @@ ms.locfileid: "66071663"
   
  [Konfigurieren von SharePoint-Berechtigungen für die BI-Semantik Modell Verbindung](#bkmk_permissions)  
   
- [Nächste Schritte](#bkmk_next)  
+ [Next Steps](#bkmk_next)  
   
-##  <a name="bkmk_prereq"></a>Voraussetzungen prüfen  
+##  <a name="review-prerequisites"></a><a name="bkmk_prereq"></a>Voraussetzungen prüfen  
  Sie benötigen Teilnahmeberechtigungen oder weiterreichende Berechtigungen, um eine BI Semantikmodell-Verbindungsdatei zu erstellen.  
   
  Sie benötigen eine Bibliothek, die den Inhaltstyp der BI Semantikmodellverbindung unterstützt. Weitere Informationen finden [Sie unter Hinzufügen eines BI-Semantik Modell-Verbindungs-Inhaltstyps zu einer Bibliothek &#40;PowerPivot für SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md).  
@@ -53,7 +53,7 @@ ms.locfileid: "66071663"
   
  Alle Computer und Benutzer, die Teil der Verbindungssequenz sind, müssen in der gleichen Domäne bzw. vertrauenswürdigen Domäne (bidirektionale Vertrauensstellung) enthalten sein.  
   
-##  <a name="bkmk_ssas"></a>Erteilen von Analysis Services administrativen Berechtigungen für freigegebene Dienst Anwendungen  
+##  <a name="grant-analysis-services-administrative-permissions-to-shared-service-applications"></a><a name="bkmk_ssas"></a>Erteilen von Analysis Services administrativen Berechtigungen für freigegebene Dienst Anwendungen  
  Verbindungen zwischen SharePoint und einer Datenbank für tabellarische Modelle auf einem Analysis Services-Server werden manchmal von einem gemeinsamen Dienst im Namen des Benutzers hergestellt, der die Daten anfordert. Der Dienst, von dem die Anforderung stammt, könnte eine PowerPivot-Dienstanwendung, Reporting Services-Dienstanwendung oder PerformancePoint-Dienstanwendung sein. Damit die Verbindung erfolgreich verläuft, muss der Dienst über Administratorberechtigungen für den Analysis Services-Server verfügen. In Analysis Services ist nur ein Administrator berechtigt, die Identität eines anderen Benutzers anzunehmen und für diesen eine Verbindung herzustellen.  
   
  Wenn die Verbindung unter folgenden Bedingungen verwendet wird, sind Administratorberechtigungen erforderlich:  
@@ -66,7 +66,7 @@ ms.locfileid: "66071663"
   
  Um sicherzustellen, dass diese Verhaltensweisen erwartungsgemäß sind, erteilen Sie jeder Dienstidentität Administratorberechtigungen für die Analysis Services-Instanz. Verwenden Sie die folgenden Anweisungen, um die erforderliche Berechtigung zu erteilen.  
   
- **Hinzufügen von Dienst Identitäten zur Server Administrator Rolle**  
+ **Hinzufügen von Dienstidentitäten zur Serveradministratorrolle**  
   
 1.  Stellen Sie in SQL Server Management Studio eine Verbindung mit der Analysis Services-Instanz her.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "66071663"
   
      Sie können die Identität mithilfe der Zentraladministration ermitteln. Öffnen Sie im Abschnitt „Sicherheit“ die Option **Dienstkonten konfigurieren** , um festzustellen, welches Windows-Konto dem für die einzelnen Anwendungen verwendeten Dienstanwendungspool zugeordnet ist. Befolgen Sie anschließend die Anweisungen in diesem Thema, um dem Konto Administratorberechtigungen zu erteilen.  
   
-##  <a name="bkmk_BISM"></a>Erteilen von Leseberechtigungen für die Datenbank für tabellarische Modelle  
+##  <a name="grant-read-permissions-on-the-tabular-model-database"></a><a name="bkmk_BISM"></a>Erteilen von Leseberechtigungen für die Datenbank für tabellarische Modelle  
  Da die Datenbank auf einem Server außerhalb der Farm ausgeführt wird, müssen im Rahmen der Verbindungseinrichtung Datenbankbenutzerberechtigungen auf dem Analysis Services-Backend-Server erteilt werden. Analysis Services verwendet ein rollenbasiertes Berechtigungsmodell. Benutzer, die eine Verbindung mit Modelldatenbanken herstellen, müssen dazu Leseberechtigungen oder höher über eine Rolle verwenden, die Lesezugriff auf die Elemente gewährt.  
   
  Rollen und gelegentlich Rollenmitgliedschaft werden definiert, wenn das Modell in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]erstellt wird. Sie können Rollen nicht mithilfe von SQL Server Management Studio erstellen, aber Sie können einer Rolle, die bereits definiert ist, Mitglieder hinzufügen. Weitere Informationen zum Erstellen von Rollen finden Sie unter [Erstellen und Verwalten von Rollen &#40;SSAS – tabellarisch&#41;](../tabular-models/roles-ssas-tabular.md).  
@@ -89,7 +89,7 @@ ms.locfileid: "66071663"
   
 3.  Fügen Sie auf der Seite "Mitgliedschaft" die Windows-Gruppen- und Benutzerkonten hinzu, die Zugriff erfordern.  
   
-##  <a name="bkmk_connect"></a>Erstellen einer BI-Semantik Modell Verbindung mit einer tabellarischen Modelldatenbank  
+##  <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a><a name="bkmk_connect"></a>Erstellen einer BI-Semantik Modell Verbindung mit einer tabellarischen Modelldatenbank  
  Nachdem Sie Berechtigungen in Analysis Services festgelegt haben, können Sie zu SharePoint zurückkehren und eine BI-Semantikmodellverbindung erstellen.  
   
 1.  Klicken Sie in der Bibliothek, die die BI-Semantikmodellverbindung enthalten soll, auf **Dokumente** im SharePoint-Menüband.  
@@ -98,9 +98,9 @@ ms.locfileid: "66071663"
   
 3.  Legen Sie die **Server** -Eigenschaft und die **Database** -Eigenschaft fest. Wenn Sie sich beim Datenbanknamen nicht sicher sind, zeigen Sie mithilfe von SQL Server Management Studio eine Liste der auf dem Server bereitgestellten Datenbanken an.  
   
-     Der **Servername** ist entweder der Netzwerkname des Servers, die IP-Adresse oder der voll qualifizierte Domänen Name (z. b. myserver.mydomain.Corp.Adventure-Works.com). Wenn der Server als benannte Instanz installiert wird, geben Sie den Servernamen in diesem Format ein: Computername\Instanzname.  
+     **Servername** ist entweder der Netzwerkname des Servers, die IP-Adresse oder der vollqualifizierte Domänenname (z.B. „myserver.mydomain.corp.adventure-works.com“). Wenn der Server als benannte Instanz installiert wird, geben Sie den Servernamen in diesem Format ein: Computername\Instanzname.  
   
-     Die **Datenbank** muss eine tabellarische Datenbank sein, die aktuell auf dem Server verfügbar ist. Geben Sie keine andere BI Semantikmodell-Verbindungsdatei, Office-Datenverbindungsdatei, (.odc), Analysis Services-OLAP-Datenbank oder PowerPivot-Arbeitsmappe an. Um den Datenbanknamen abzurufen, können Sie Management Studio verwenden, um eine Verbindung mit dem Server herzustellen und die Liste der verfügbaren Datenbanken anzuzeigen. Verwenden Sie die Eigenschaftenseite der Datenbank, um sicherzustellen, dass Sie den richtigen Namen angeben.  
+     **Datenbank** muss eine Tabellendatenbank sein, die aktuell auf dem Server verfügbar ist. Geben Sie keine andere BI Semantikmodell-Verbindungsdatei, Office-Datenverbindungsdatei, (.odc), Analysis Services-OLAP-Datenbank oder PowerPivot-Arbeitsmappe an. Um den Datenbanknamen abzurufen, können Sie Management Studio verwenden, um eine Verbindung mit dem Server herzustellen und die Liste der verfügbaren Datenbanken anzuzeigen. Verwenden Sie die Eigenschaftenseite der Datenbank, um sicherzustellen, dass Sie den richtigen Namen angeben.  
   
 4.  Klicken Sie auf **OK** , um die Seite zu speichern. An diesem Punkt wird die Verbindung von der PowerPivot-Dienstanwendung überprüft.  
   
@@ -110,7 +110,7 @@ ms.locfileid: "66071663"
   
      Sie können die Verbindung überprüfen, indem Sie sie in Excel oder Power View verwenden, um eine Verbindung mit einer Datenbank für tabellarische Modelle herzustellen. Wenn die Datenquellenverbindung erfolgreich ist, ist die Verbindung trotz der Überprüfungswarnung gültig.  
   
-##  <a name="bkmk_permissions"></a>Konfigurieren von SharePoint-Berechtigungen für die BI-Semantik Modell Verbindung  
+##  <a name="configure-sharepoint-permissions-on-the-bi-semantic-model-connection"></a><a name="bkmk_permissions"></a>Konfigurieren von SharePoint-Berechtigungen für die BI-Semantik Modell Verbindung  
  Damit eine BI-Semantikmodellverbindung als Datenquelle für eine Excel-Arbeitsmappe oder einen Reporting Services-Bericht verwendet werden kann, muss das BI-Semantikmodell-Verbindungselement über **Leseberechtigungen** in einer SharePoint-Bibliothek verfügen. Die Berechtigungsebene „Lesen“ schließt die Berechtigung **Elemente öffnen** ein, die das Herunterladen von BI-Semantikmodell-Verbindungsinformationen in eine Excel-Desktopanwendung ermöglicht.  
   
  Es gibt mehrere Möglichkeiten, Berechtigungen in SharePoint zu erteilen. Die folgenden Anweisungen erläutern, wie Sie eine neue Gruppe mit dem Namen **BISM-Benutzer** erstellen, die die Berechtigungsstufe **Lesen** haben.  
@@ -139,7 +139,7 @@ ms.locfileid: "66071663"
   
 4.  Klicken Sie auf **Benutzerberechtigungen entfernen**.  
   
-##  <a name="bkmk_next"></a>Nächste Schritte  
+##  <a name="next-steps"></a><a name="bkmk_next"></a> Nächste Schritte  
  Nachdem Sie eine BI-Semantikmodellverbindung erstellt und gesichert haben, können Sie sie als Datenquelle angeben. Weitere Informationen finden Sie unter [Verwenden einer BI-Semantikmodellverbindung in Excel oder Reporting Services](use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

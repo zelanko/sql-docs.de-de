@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf87f2441488810286523a75137a3285aabc1956
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081086"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>Allgemein (Datenbank-Designer) (Analysis Services – Mehrdimensionale Daten)
@@ -60,7 +60,7 @@ ms.locfileid: "66081086"
  Erweitern Sie den Bereich **Kontotypzuordnung** , um die standardmäßige Aggregatfunktion zu ändern, die jedem **Kontotyp** in der ausgewählten Datenbank zugeordnet ist.  
   
 > [!NOTE]  
->  Diese Option ist nur auf Cubes anwendbar, in denen mindestens ein Measure die *ByAccount* -Aggregatfunktion verwendet.  
+>   Diese Option ist nur auf Cubes anwendbar, in denen mindestens ein Measure die *ByAccount* -Aggregatfunktion verwendet.  
   
  Dieser Bereich enthält ein Raster mit den folgenden Spalten:  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a80c7950ec4079021bbcf03d9ccee6970d68786b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072740"
 ---
 # <a name="translations-in-multidimensional-models"></a>Übersetzungen in mehrdimensionalen Modellen
@@ -36,11 +36,11 @@ ms.locfileid: "66072740"
 |Cubedimension|`Caption`|[Übersetzungen &#40;Cube-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |Perspektive|`Caption`|[Übersetzungen &#40;Cube-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |Key Performance Indicator (KPI)|`Caption`, `Description`, `DisplayFolder`|[Übersetzungen &#40;Cube-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
-|Action|`Caption`|[Übersetzungen &#40;Cube-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
+|Aktion|`Caption`|[Übersetzungen &#40;Cube-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |Benannte Menge|`Caption`|[Übersetzungen &#40;Cube-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |berechnetes Element|`Caption`|[Übersetzungen &#40;Cube-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](../translations-cube-designer-analysis-services-multidimensional-data.md)|  
 |Datenbankdimension|`Caption`, `AttributeAllMember`|[Übersetzungen &#40;Dimensions-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
-|attribute|`Caption`, `CaptionColumn` <sup>1</sup>, `AttributeHierarchyDisplayFolder`, `NamingTemplate`,`MembersWithDataCaption`|[Übersetzungen &#40;Dimensions-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
+|Attribut|`Caption`, `CaptionColumn` <sup>1</sup>, `AttributeHierarchyDisplayFolder`, `NamingTemplate`,`MembersWithDataCaption`|[Übersetzungen &#40;Dimensions-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
 |Hierarchy|`Caption`, `AllMemberName`|[Übersetzungen &#40;Dimensions-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
 |Ebene|`Caption`|[Übersetzungen &#40;Dimensions-Designer&#41; &#40;Analysis Services Mehrdimensionale Daten&#41;](../translations-dimension-designer-analysis-services-multidimensional-data.md)|  
   
@@ -66,10 +66,10 @@ ms.locfileid: "66072740"
     |-----------------------------------|-----------------------------------|  
     |3076 - Chinesisch (Hongkong S.A.R., Volksrepublik China)|1028 - Chinesisch (Taiwan)|  
     |5124 - Chinesisch (Macau SAR)|1028 - Chinesisch (Taiwan)|  
-    |1028 - Chinesisch (Taiwan)|Standardsprache:|  
+    |1028 - Chinesisch (Taiwan)|Standardsprache|  
     |4100 - Chinesisch (Singapur)|2052 - Chinesisch (Volksrepublik China)|  
-    |2074 - Kroatisch|Standardsprache:|  
-    |3098 - Kroatisch (Kyrillisch)|Standardsprache:|  
+    |2074 - Kroatisch|Standardsprache|  
+    |3098 - Kroatisch (Kyrillisch)|Standardsprache|  
   
 -   Für alle anderen angegebenen Sprachbezeichner extrahiert [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] die Hauptsprache des angegebenen Sprachbezeichners und ruft den von Windows als beste Übereinstimmung für die Hauptsprache angegebenen Sprachbezeichner zurück. Wenn eine Übersetzung für den ähnlichsten Sprachbezeichner nicht gefunden werden kann, oder wenn der vorgegebene Sprachbezeichner am stärksten mit der Hauptsprache übereinstimmt, wird die Standardsprache verwendet.  
   

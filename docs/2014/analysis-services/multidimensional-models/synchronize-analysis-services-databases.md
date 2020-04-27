@@ -16,14 +16,13 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a561b348b30afcbfe5305681f56e4f8314fa510
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072848"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Synchronisieren von Analysis Services-Datenbanken
-  
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] umfasst eine Funktion für die Datenbanksynchronisierung, mit der zwei [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbanken auf den gleichen Stand gebracht werden, indem die Daten und Metadaten aus einer Datenbank auf einem Quellserver in eine Datenbank auf einem Zielserver kopiert werden. Die Funktion für die Datenbanksynchronisierung kann für folgende Aufgaben verwendet werden:  
   
 -   Bereitstellen einer Datenbank von einem Stagingserver auf einem Produktionsserver  
@@ -82,7 +81,7 @@ ms.locfileid: "66072848"
   
 3.  Geben Sie den Quellserver und die Quelldatenbank an. Geben Sie auf der Seite Datenbank für die Synchronisierung auswählen unter **Quellserver** und **Quelldatenbank**den Namen des Quellservers und der Quelldatenbank ein. Wenn eine Bereitstellung beispielsweise von einer Testumgebung auf einem Produktionsserver erfolgt, entspricht die Quelle der Datenbank auf dem Stagingserver.  
   
-     **Ziel Server** zeigt den Namen der- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Instanz an, mit der die Daten und Metadaten aus der in **Quelldatenbank** ausgewählten Datenbank synchronisiert werden.  
+     Unter**Zielserver** wird der Name der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Instanz angezeigt, mit der die Daten und Metadaten aus der in **Quelldatenbank** ausgewählten Datenbank synchronisiert werden.  
   
      Die Synchronisierung wird für Quell- und Zieldatenbanken mit dem gleichen Namen ausgeführt. Wenn der Zielserver bereits über eine Datenbank mit dem gleichen Namen wie die Quelldatenbank verfügt, wird die Zieldatenbank mit den Metadaten und Daten der Quelldatenbank aktualisiert. Wenn die Datenbank nicht vorhanden ist, wird sie auf dem Zielserver erstellt.  
   
@@ -117,7 +116,7 @@ ms.locfileid: "66072848"
      **Measure-Gruppe**  
      Zeigt den Namen der Measuregruppe in dem Cube an, der die Partition enthält.  
   
-     **Partitions Name**  
+     **Partitionsname**  
      Zeigt den Namen der Partition an.  
   
      **Größe (MB)**  
@@ -163,7 +162,7 @@ ms.locfileid: "66072848"
      **Measure-Gruppe**  
      Zeigt den Namen der Measuregruppe in dem Cube an, der die Partition enthält.  
   
-     **Partitions Name**  
+     **Partitionsname**  
      Zeigt den Namen der Partition an.  
   
      **Größe (MB)**  

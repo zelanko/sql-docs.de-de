@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3c2c3d4838d0e21a1520197612dd08c679df843a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074342"
 ---
 # <a name="using-cell-properties-mdx"></a>Verwenden von Zelleigenschaften (MDX)
@@ -47,23 +47,19 @@ SELECT [<axis_specification>
 ## <a name="supported-intrinsic-cell-properties"></a>Unterstützte systeminterne Zelleigenschaften  
  In der folgenden Tabelle sind die unterstützten systeminternen Zelleigenschaften aufgelistet, die im `<property>` -Wert verwendet werden.  
   
-|Eigenschaft|BESCHREIBUNG|  
+|Eigenschaft|Beschreibung|  
 |--------------|-----------------|  
 |`ACTION_TYPE`|Eine Bitmaske, die die Arten der Aktionen für die Zelle angibt. Diese Eigenschaft kann einen der folgenden Werte haben:<br /><br /> **MDACTION_TYPE_URL**<br /><br /> **MDACTION_TYPE_HTML**<br /><br /> **MDACTION_TYPE_STATEMENT**<br /><br /> **MDACTION_TYPE_DATASET**<br /><br /> **MDACTION_TYPE_ROWSET**<br /><br /> **MDACTION_TYPE_COMMANDLINE**<br /><br /> **MDACTION_TYPE_PROPRIETARY**<br /><br /> **MDACTION_TYPE_REPORT**<br /><br /> **MDACTION_TYPE_DRILLTHROUGH**<br /><br /> <br /><br /> Hinweis: Drillthroughaktionen werden nicht für Abfragen eingeschlossen, die in der WHERE-Klausel eine Menge enthalten.|  
 |**BACK_COLOR**|Die Hintergrundfarbe zum Anzeigen der `VALUE`- oder der `FORMATTED_VALUE`-Eigenschaft. Weitere Informationen finden Sie unter [FORE_COLOR und BACK_COLOR – Inhalte &#40;MDX&#41;](mdx-cell-properties-fore-color-and-back-color-contents.md).|  
 |`CELL_ORDINAL`|Die Ordinalzahl der Zelle im Dataset.|  
-|**FONT_FLAGS**|Die Bitmaske, die Auswirkungen auf die Schriftart detailliert angibt. Der Wert 5 stellt z. B. die Kombination der Schriftarteffekte Fett (`MDFF_BOLD`) und Unterstrichen (`MDFF_UNDERLINE`) dar. Der Wert ist das Ergebnis einer bitweisen OR-Operation von einem oder mehreren der folgenden Konstanten:<br /><br /> `MDFF_BOLD`= 1<br /><br /> 
-  `MDFF_ITALIC` = 2<br /><br /> 
-  `MDFF_UNDERLINE` = 4<br /><br /> 
-  `MDFF_STRIKEOUT` = 8|  
+|**FONT_FLAGS**|Die Bitmaske, die Auswirkungen auf die Schriftart detailliert angibt. Der Wert 5 stellt z. B. die Kombination der Schriftarteffekte Fett (`MDFF_BOLD`) und Unterstrichen (`MDFF_UNDERLINE`) dar. Der Wert ist das Ergebnis einer bitweisen OR-Operation von einem oder mehreren der folgenden Konstanten:<br /><br /> `MDFF_BOLD` = 1<br /><br /> `MDFF_ITALIC` = 2<br /><br /> `MDFF_UNDERLINE` = 4<br /><br /> `MDFF_STRIKEOUT` = 8|  
 |**FONT_NAME**|Die Schriftart, die für das Anzeigen der `VALUE`- oder `FORMATTED_VALUE`-Eigenschaft verwendet werden soll.|  
 |**FONT_SIZE**|Der Schriftgrad, der für das Anzeigen der `VALUE`- oder `FORMATTED_VALUE`-Eigenschaft verwendet werden soll.|  
 |**FORE_COLOR**|Die Vordergrundfarbe zum Anzeigen der `VALUE`- oder der `FORMATTED_VALUE`-Eigenschaft. Weitere Informationen finden Sie unter [FORE_COLOR und BACK_COLOR – Inhalte &#40;MDX&#41;](mdx-cell-properties-fore-color-and-back-color-contents.md).|  
 |`FORMAT`|Identisch mit `FORMAT_STRING`.|  
 |`FORMAT_STRING`|Die Formatzeichenfolge, mit der der Wert der `FORMATTED_VALUE`-Eigenschaft erstellt wird. Weitere Informationen finden Sie unter [FORMAT_STRING-Inhalt &#40;MDX&#41;](mdx-cell-properties-format-string-contents.md).|  
 |`FORMATTED_VALUE`|Die Zeichenfolge, die eine formatierte Anzeige der `VALUE`-Eigenschaft darstellt.|  
-|`LANGUAGE`|Das Gebietsschema, in dem `FORMAT_STRING` verwendet wird. 
-  `LANGUAGE` wird i. d. R. zur Währungskonvertierung verwendet.|  
+|`LANGUAGE`|Das Gebietsschema, in dem `FORMAT_STRING` verwendet wird. `LANGUAGE` wird i. d. R. zur Währungskonvertierung verwendet.|  
 |`UPDATEABLE`|Ein Wert, der angibt, ob die Zelle aktualisiert werden kann. Diese Eigenschaft kann einen der folgenden Werte haben:<br /><br /> `MD_MASK_ENABLED`(0x00000000) die Zelle kann aktualisiert werden.<br /><br /> `MD_MASK_NOT_ENABLED`(0x10000000) die Zelle kann nicht aktualisiert werden.<br /><br /> `CELL_UPDATE_ENABLED`(0x00000001) die Zelle kann im Cellset aktualisiert werden.<br /><br /> `CELL_UPDATE_ENABLED_WITH_UPDATE`(0x00000002) die Zelle kann mit einer Update-Anweisung aktualisiert werden. Das Update kann einen Fehler erzeugen, wenn eine Blattzelle aktualisiert werden soll, für die der Schreibzugriff nicht aktiviert ist.<br /><br /> `CELL_UPDATE_NOT_ENABLED_FORMULA`(0x10000001) die Zelle kann nicht aktualisiert werden, da die Zelle über ein berechnetes Element unter den Koordinaten verfügt. die Zelle wurde mit einer Menge in der WHERE-Klausel abgerufen. Eine Zelle kann selbst dann aktualisiert werden, wenn sich eine Formel oder eine berechnete Zelle auf den Wert der Zelle auswirkt (sich irgendwo im Verlauf des Aggregationspfades befindet). In diesem Szenario ist der endgültige Wert der Zelle möglicherweise nicht mit dem aktualisierten Wert identisch, weil sich die Berechnung auf das Ergebnis ausgewirkt hat.<br /><br /> `CELL_UPDATE_NOT_ENABLED_NONSUM_MEASURE`(0x10000002) die Zelle kann nicht aktualisiert werden, da keine Summen Measures (count, min, Max, distincount, semiadditiv) nicht aktualisiert werden können.<br /><br /> `CELL_UPDATE_NOT_ENABLED_NACELL_VIRTUALCUBE`(0x10000003) die Zelle kann nicht aktualisiert werden, da die Zelle nicht vorhanden ist, da Sie sich an der Schnittmenge eines Measures und einem Dimensions Element befindet, das nicht mit der Measure-Gruppe des Measures verknüpft ist.<br /><br /> `CELL_UPDATE_NOT_ENABLED_SECURE`(0x10000005) die Zelle kann nicht aktualisiert werden, da die Zelle gesichert ist.<br /><br /> `CELL_UPDATE_NOT_ENABLED_CALCLEVEL`(0x10000006) für zukünftige Verwendung reserviert.<br /><br /> `CELL_UPDATE_NOT_ENABLED_CANNOTUPDATE`(0x10000007) die Zelle kann wegen interner Gründe nicht aktualisiert werden.<br /><br /> `CELL_UPDATE_NOT_ENABLED_INVALIDDIMENSIONTYPE`(0x10000009) die Zelle kann nicht aktualisiert werden, da das Update in Mining Modell-, indirekten oder Data Mining Dimensionen nicht unterstützt wird.|  
 |`VALUE`|Der unformatierte Wert der Zelle.|  
   
@@ -99,6 +95,6 @@ CELL PROPERTIES VALUE, FORMATTED_VALUE, FORE_COLOR, BACK_COLOR, FONT_SIZE
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Grundlagen der MDX-Abfrage &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
   

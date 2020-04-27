@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 56b0a13c30100a12ce7307fc3896b5976e30ad59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079360"
 ---
 # <a name="creating-an-analysis-services-project"></a>Erstellen eines Analysis Services-Projekts
@@ -32,7 +32,7 @@ ms.locfileid: "66079360"
   
      Beachten Sie, dass der Standardprojektname, Speicherort und Standardname der Projektmappe unten im Dialogfeld erstellt werden. Für die Projektmappe wird standardmäßig ein neues Verzeichnis erstellt.  
   
-4.  Ändern Sie den Projektnamen `Analysis Services Tutorial`in, wodurch auch das Feld Projektmappenname geändert wird, und klicken Sie dann auf **OK**. ****  
+4.  Ändern Sie den Projektnamen `Analysis Services Tutorial`in, wodurch auch das Feld Projektmappenname geändert wird, und klicken Sie dann auf **OK**. **Solution name**  
   
  Sie haben das Projekt basierend `Analysis Services Tutorial` auf der Analysis Services Vorlage für mehr **dimensionale und Data Mining-Projekte** in einer neuen Projekt Mappe erstellt, die ebenfalls `Analysis Services Tutorial`den Namen hat.  
   
@@ -41,6 +41,6 @@ ms.locfileid: "66079360"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen mehrdimensionaler Modelle mithilfe von SQL Server Data Tools &#40;SSDT&#41;](multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
- [Erstellen eines Analysis Services Projekts &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)  
+ [Erstellen eines Analysis Services-Projekts &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)  
   
   

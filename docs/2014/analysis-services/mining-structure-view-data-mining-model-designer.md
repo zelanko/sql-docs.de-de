@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 72a18711faf9784efc2202f577e2124f321e0052
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077667"
 ---
 # <a name="mining-structure-view-data-mining-model-designer"></a>Miningstruktur-Sicht (Modell-Designer für Data Mining)
@@ -34,6 +34,6 @@ ms.locfileid: "66077667"
  [Mining Modell Ansicht &#40;Data Mining-Modell-Designer&#41;](mining-models-view-data-mining-model-designer.md)   
  [Mining Modell-Viewer &#40;Data Mining-Modell-Designer&#41;](mining-model-viewers-data-mining-model-designer.md)   
  [Mining Genauigkeits Diagramm-Designer &#40;Data Mining-&#41;](mining-accuracy-chart-designer-data-mining.md)   
- [Vorhersage Abfrage-Generator &#40;Data Mining-&#41;](prediction-query-builder-data-mining.md)  
+ [Generator für Vorhersageabfragen &#40;Data Mining&#41;](prediction-query-builder-data-mining.md)  
   
   

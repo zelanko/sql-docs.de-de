@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 25c1acf7a1fadbc79b7781488143ce57881c81fc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073444"
 ---
 # <a name="unary-operators-in-parent-child-dimensions"></a>Unäre Operatoren in über- und untergeordneten Dimensionen
@@ -30,7 +30,7 @@ ms.locfileid: "66073444"
   
  Die Standardeinstellung für die **UnaryOperatorColumn** -Eigenschaft für ein übergeordnetes Attribut ist (keine), wodurch die benutzerdefinierten Rollup-Operatoren deaktiviert werden. In der folgenden Tabelle werden die unären Operatoren aufgelistet. Außerdem wird das Verhalten dieser Operatoren beschrieben, wenn sie auf eine Ebene angewendet werden.  
   
-|Unärer Operator|BESCHREIBUNG|  
+|Unärer Operator|Beschreibung|  
 |--------------------|-----------------|  
 |+ (Pluszeichen)|Der Wert des Elements wird dem Aggregatwert der gleichgeordneten Elemente hinzugefügt, die vor dem Element auftreten. Bei diesem Operator handelt es sich um den Standardoperator, wenn für ein Attribut keine unäre Operatorspalte definiert ist.|  
 |-(Minuszeichen)|Der Wert des Elements wird vom Aggregatwert der gleichgeordneten Elemente subtrahiert, die vor dem Element auftreten.|  

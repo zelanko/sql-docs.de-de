@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 97f5d2045601f72c3536fbf2d4e469eb5eb20fbe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071253"
 ---
 # <a name="powerpivot-data-access"></a>PowerPivot-Datenzugriff
@@ -28,7 +28,7 @@ ms.locfileid: "66071253"
   
  Auf einer SharePoint-Farm verwendet Excel Services den lokalen MSOLAP-OLE DB-Anbieter, um eine Verbindung mit PowerPivot-Daten herzustellen. Der Anbieter sendet die Verbindungsanforderung an einen PowerPivot für SharePoint-Server in der Farm. Dieser Server lädt die Daten, führt die Abfrage aus, und gibt das Resultset zurück.  
   
-##  <a name="queryproc"></a>Abfragen von Power Pivot-Daten in SharePoint  
+##  <a name="querying-powerpivot-data-in-sharepoint"></a><a name="queryproc"></a>Abfragen von Power Pivot-Daten in SharePoint  
  Wenn Sie eine PowerPivot-Arbeitsmappe aus einer SharePoint-Bibliothek anzeigen, werden die PowerPivot-Daten in der Arbeitsmappe erkannt, extrahiert und getrennt auf Analysis Services-Serverinstanzen innerhalb der Farm verarbeitet, während die Darstellungsschicht von Excel Services gerendert wird. Sie können die vollständig verarbeitete Arbeitsmappe in einem Browserfenster oder in einer Excel 2010-Desktopanwendung anzeigen, die über das PowerPivot-Add-In verfügt.  
   
  Das folgende Diagramm veranschaulicht, wie eine Anforderung für die Abfrageverarbeitung in der Farm weiterverarbeitet wird. Da PowerPivot-Daten Bestandteil einer Excel 2010-Arbeitsmappe sind, wird eine Anforderung für die Abfrageverarbeitung ausgegeben, wenn ein Benutzer eine Excel-Arbeitsmappe aus einer SharePoint-Bibliothek öffnet und mit einer PivotTable oder einem PivotChart interagiert, die bzw. das PowerPivot-Daten enthält.  

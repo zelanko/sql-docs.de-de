@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9b24e99ac31b126888a1fa49f3ef5547a4f82dda
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079675"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Planen von administrativen Tasks in SSAS mithilfe von SQL Server-Agent
@@ -36,7 +36,7 @@ ms.locfileid: "66079675"
   
  Ein geplanter [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Task ist ein in einem SQL Server-Agent-Auftrag eingebettetes XMLA-Skript. Dieser Auftrag ist geplant, d. h. er wird zu den festgelegten Zeiten und mit der festgelegten Häufigkeit ausgeführt. SQL Server-Agent ist Teil von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], daher benötigen Sie zum Erstellen und Planen von administrativen Tasks sowohl die Datenbank-Engine als auch [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
-###  <a name="bkmk_CreateScript"></a>Erstellen eines Skripts zum Verarbeiten einer Dimension in einem SQL Server-Agent Auftrag  
+###  <a name="create-a-script-for-processing-a-dimension-in-a-sql-server-agent-job"></a><a name="bkmk_CreateScript"></a> Erstellen eines Skripts zum Verarbeiten einer Dimension in einem SQL Server-Agent-Auftrag  
   
 1.  Stellen Sie in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung zu [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]her. Öffnen Sie einen Datenbankordner, und suchen Sie eine Dimension. Klicken Sie mit der rechten Maustaste auf die Dimension, und wählen Sie **Verarbeiten**aus.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "66079675"
     </Batch>  
     ```  
   
-###  <a name="bkmk_ProcessJob"></a>Erstellen und Planen des Dimensions Verarbeitungs Auftrags  
+###  <a name="create-and-schedule-the-dimension-processing-job"></a><a name="bkmk_ProcessJob"></a> Erstellen und Planen des Dimensionsverarbeitungsauftrags  
   
 1.  Stellen Sie eine Verbindung mit einer Instanz der Datenbank-Engine her, und öffnen Sie dann den Objekt-Explorer.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "66079675"
 ## <a name="example-2-batch-processing-a-dimension-and-a-partition-in-a-scheduled-task"></a>Beispiel 2: Batchverarbeitung einer Dimension und einer Partition in einem geplanten Task  
  Die Prozeduren in diesem Beispiel veranschaulichen, wie Sie einen Auftrag erstellen und planen, der eine Batchverarbeitung für eine [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenbankdimension ausführt und zur gleichen Zeit eine Cubepartition verarbeitet, deren Aggregation von der Dimension abhängt. Weitere Informationen zur Batchverarbeitung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Objekten finden Sie unter [Batchverarbeitung &#40;Analysis Services&#41;](../multidimensional-models/batch-processing-analysis-services.md).  
   
-###  <a name="bkmk_BatchProcess"></a>Erstellen eines Skripts für die Batch Verarbeitung einer Dimension und einer Partition in einem SQL Server-Agent Auftrag  
+###  <a name="create-a-script-for-batch-processing-a-dimension-and-partition-in-a-sql-server-agent-job"></a><a name="bkmk_BatchProcess"></a>Erstellen eines Skripts für die Batch Verarbeitung einer Dimension und einer Partition in einem SQL Server-Agent Auftrag  
   
 1.  Erweitern Sie unter Verwendung der gleichen Datenbank den Eintrag **Dimensionen**, klicken Sie mit der rechten Maustaste auf die **Customer** -Dimension, und wählen Sie **Verarbeiten**aus.  
   
@@ -183,7 +183,7 @@ ms.locfileid: "66079675"
   
 12. Dieser Schritt kopiert das XMLA-Skript in die Windows-Zwischenablage. Sie können das XMLA-Skript in der Zwischenablage lassen, in einer Datei speichern oder es in Editor oder einen anderen Text-Editor einfügen.  
   
-###  <a name="bkmk_Scheduling"></a>Erstellen und Planen des Batch Verarbeitungs Auftrags  
+###  <a name="create-and-schedule-the-batch-processing-job"></a><a name="bkmk_Scheduling"></a> Erstellen und Planen des Batchverarbeitungsauftrags  
   
 1.  Stellen Sie eine Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]her, und öffnen Sie den Objekt-Explorer.  
   
@@ -223,6 +223,6 @@ ms.locfileid: "66079675"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Verarbeitungsoptionen und-Einstellungen &#40;Analysis Services&#41;](../multidimensional-models/processing-options-and-settings-analysis-services.md)   
- [Skripterstellung für administrative Aufgaben in Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
+ [Skriptverwaltungsaufgaben in Analysis Services](../script-administrative-tasks-in-analysis-services.md)  
   
   

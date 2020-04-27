@@ -28,10 +28,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7a8532b20ae5b71a9ef2353893272c628b9a80b3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66073679"
 ---
 # <a name="working-with-members-tuples-and-sets-mdx"></a>Verwenden von Elementen, Tupeln und Mengen (MDX)
@@ -122,12 +122,12 @@ FROM [Adventure Works]
 ## <a name="numeric-functions"></a>Numerische Funktionen  
  Eine numerische Funktion nimmt einen MDX-Ausdruck als Argument und gibt einen Skalarwert zurück. Die [Aggregate-Funktion &#40;MDX&#41;](/sql/mdx/aggregate-mdx) gibt z.B. einen Skalarwert zurück, der durch Aggregieren von Measures über die Tupel in einer angegebenen Menge berechnet wird. Weitere Informationen zu numerischen Funktionen finden Sie unter [MDX-Funktionsreferenz &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx).  
   
-## <a name="string-functions"></a>Zeichenfolgenfunktionen  
+## <a name="string-functions"></a>String-Funktionen  
  Eine Zeichenfolgenfunktion nimmt einen MDX-Ausdruck als Argument und gibt eine Zeichenfolge zurück. Die [UniqueName-Funktion &#40;MDX&#41;](/sql/mdx/uniquename-mdx) z.B. gibt einen Zeichenfolgenwert zurück, der den eindeutigen Namen einer Dimension, Hierarchie, Ebene oder eines Elements enthält. Weitere Informationen zu Zeichenfolgenfunktionen finden Sie unter [MDX-Funktionsreferenz &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Wichtige Konzepte in MDX-&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)   
  [Grundlagen der MDX-Abfrage &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)   
- [MDX-Funktionsreferenz &#40;MDX-&#41;](/sql/mdx/mdx-function-reference-mdx)  
+ [MDX-Funktionsreferenz &#40;MDX&#41;](/sql/mdx/mdx-function-reference-mdx)  
   
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 846998acaa20b572760edcc67ecd24f8346a762a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66071375"
 ---
 # <a name="powerpivot-bi-semantic-model-connection-bism"></a>PowerPivot-BI-Semantikmodell-Verbindung (.bism)
@@ -24,7 +24,7 @@ ms.locfileid: "66071375"
   
  ![Screenshot des BISM-Schnellstartbefehls](../media/ssas-bism-quicklaunch.gif "Screenshot des BISM-Schnellstartbefehls")  
   
-##  <a name="bkmk_prereq"></a>Unterstützte Datenbanken  
+##  <a name="supported-databases"></a><a name="bkmk_prereq"></a>Unterstützte Datenbanken  
  Eine BI-Semantikmodellverbindung verweist auf tabellarische Modelldaten. Es gibt drei Quellen für diese Daten:  
   
 -   Eine Datenbank für tabellarische Modelle, die auf einer eigenständigen Analysis Services-Instanz im Tabellenservermodus ausgeführt wird. Die Bereitstellung einer eigenständigen Analysis Services-Instanz ist für die Farm extern. Für den Zugriff auf Datenquellen außerhalb der Farm sind zusätzliche Berechtigungen erforderlich, die in folgendem Thema erläutert werden: [Create a BI Semantic Model Connection to a Tabular Model Database](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  
@@ -68,7 +68,7 @@ ms.locfileid: "66071375"
   
  Da alle Verbindungen in diesem Szenario innerhalb der gleichen Farm erfolgen, ist weder eine Kerberos- noch eine eingeschränkte Delegierung erforderlich.  
   
-##  <a name="bkmk_rel"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="bkmk_rel"></a> Verwandte Aufgaben  
  [Hinzufügen eines BI-Semantik Modell-Verbindungs-Inhaltstyps zu einer Bibliothek &#40;PowerPivot für SharePoint&#41;](add-bi-semantic-model-connection-content-type-to-library.md)  
   
  [Herstellen einer BI-Semantikmodellverbindung mit einer PowerPivot-Arbeitsmappe](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  

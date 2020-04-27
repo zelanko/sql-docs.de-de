@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c5a8e3f2930d7975f8c75c8f89ab90b78461a650
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072010"
 ---
 # <a name="activate-powerpivot-feature-integration-for-site-collections-in-central-administration"></a>Aktivieren der PowerPivot-Funktionsintegration für Websitesammlungen in der Zentraladministration
@@ -39,13 +39,13 @@ ms.locfileid: "66072010"
   
 4.  Scrollen Sie auf der Seite nach unten, bis Sie die **Funktion zur Power Pivot-Integration-Website Sammlung**  
   
-5.  Klicken Sie auf **Aktivieren**.  
+5.  Klicken Sie auf **Activate** (Aktivieren).  
   
-6.  Wiederholen Sie diesen Schritt für zusätzliche Website Sammlungen, indem Sie jede Website öffnen und auf **Website Aktionen**klicken  
+6.  Wiederholen Sie den Schritt für zusätzliche Websitesammlungen, indem Sie jede Website öffnen und auf **Websiteaktionen**klicken.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Power Pivot-Server Verwaltung und-Konfiguration in der zentral Administration](power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Anfängliche Konfiguration &#40;PowerPivot für SharePoint&#41;](../../sql-server/install/initial-configuration-powerpivot-for-sharepoint.md)   
- [PowerPivot for SharePoint 2010 Installation](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
+ [PowerPivot für SharePoint 2010-Installation](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

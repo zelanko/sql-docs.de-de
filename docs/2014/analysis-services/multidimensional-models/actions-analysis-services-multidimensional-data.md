@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3ff4e330950a3fca54ba8ab08456157156836c0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077588"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Aktionen (Analysis Services – Mehrdimensionale Daten)
@@ -40,8 +40,7 @@ ms.locfileid: "66077588"
   
  Die Bedingung ist ein `Boolean` MDX-Ausdruck, der beim Aktionsereignis ausgewertet wird. Wenn die Bedingung `true` ergibt, dann wird die Aktion ausgeführt. Andernfalls wird die Aktion nicht ausgeführt.  
   
- Der Typ entspricht der Art der Aktion, die ausgeführt werden soll. 
-  <xref:Microsoft.AnalysisServices.Action> ist eine abstrakte Klasse. Sie müssen daher eine abgeleitete Klasse verwenden, um diese Klasse verwenden zu können. Zwei Arten von Aktionen werden vordefiniert: Drillthrough und Berichterstellung. Diese verfügen über entsprechende abgeleitete Klassen: <xref:Microsoft.AnalysisServices.DrillThroughAction> und <xref:Microsoft.AnalysisServices.ReportAction>. Andere Aktionen werden mit der <xref:Microsoft.AnalysisServices.StandardAction> -Klasse abgedeckt.  
+ Der Typ entspricht der Art der Aktion, die ausgeführt werden soll. <xref:Microsoft.AnalysisServices.Action> ist eine abstrakte Klasse. Sie müssen daher eine abgeleitete Klasse verwenden, um diese Klasse verwenden zu können. Zwei Arten von Aktionen werden vordefiniert: Drillthrough und Berichterstellung. Diese verfügen über entsprechende abgeleitete Klassen: <xref:Microsoft.AnalysisServices.DrillThroughAction> und <xref:Microsoft.AnalysisServices.ReportAction>. Andere Aktionen werden mit der <xref:Microsoft.AnalysisServices.StandardAction> -Klasse abgedeckt.  
   
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ist eine Aktion eine gespeicherte MDX-Anweisung, die für Client Anwendungen angezeigt und verwendet werden kann. Eine Aktion ist also ein Clientbefehl, der auf dem Server definiert und gespeichert wird. Eine Aktion enthält auch Informationen, die angeben, wann und wie die MDX-Anweisung von der Clientanwendung angezeigt und verarbeitet werden soll. Durch den von der Aktion angegebenen Vorgang kann eine Anwendung (mithilfe der Informationen in der Aktion als Parameter) gestartet werden oder können Informationen basierend auf von der Aktion bereitgestellten Kriterien abgerufen werden.  
   
@@ -57,12 +56,12 @@ ms.locfileid: "66077588"
 ## <a name="types-of-actions"></a>Aktionstypen  
  In der folgenden Tabelle werden die in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]enthaltenen Aktionstypen aufgeführt:  
   
-|Aktionstyp|BESCHREIBUNG|  
+|Aktionstyp|Beschreibung|  
 |-----------------|-----------------|  
 |CommandLine|Führt einen Befehl an der Eingabeaufforderung aus.|  
 |Dataset|Gibt ein Dataset an eine Clientanwendung zurück.|  
 |Drillthrough ausführen|Gibt eine Drillthroughanweisung als Ausdruck zurück, den der Client zur Rückgabe eines Rowsets ausführt.|  
-|HTML|Führt ein HTML-Skript in einem Internetbrowser aus.|  
+|Html|Führt ein HTML-Skript in einem Internetbrowser aus.|  
 |Proprietär|Führt einen Vorgang über eine Schnittstelle aus, die nicht in dieser Tabelle aufgelistet ist.|  
 |Bericht|Übermittelt eine parametrisierte, URL-basierte Anforderung an einen Berichtsserver und gibt einen Bericht an eine Clientanwendung zurück.|  
 |Rowset|Gibt ein Rowset an eine Clientanwendung zurück.|  

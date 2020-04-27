@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3359e26ace467bbf8446aac6b68a0ef2716d09a4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072895"
 ---
 # <a name="set-partition-writeback"></a>Einrichten des Rückschreibens von Partitionen
@@ -62,6 +62,6 @@ ms.locfileid: "66072895"
 ## <a name="see-also"></a>Weitere Informationen  
  [Partitionen mit aktiviertem Schreibzugriff](../multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [Aktivieren des Rück Schreibens in einen OLAP-Cube auf Zellen Ebene in Excel 2010](https://go.microsoft.com/fwlink/p/?LinkId=394952)   
- [Aktivieren und Sichern der Dateneingabe mit Analysis Services Rück schreiben](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
+ [Aktivieren und Sichern der Dateneingabe mit Analysis Services-Rückschreiben](https://go.microsoft.com/fwlink/p/?LinkId=394953)  
   
   

@@ -11,21 +11,21 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: eb70d7d495d88ee62e98bf27f2b92bf569c98387
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66078191"
 ---
 # <a name="lesson-10-create-hierarchies"></a>Lektion 10: Erstellen von Hierarchien
-  In dieser Lektion erstellen Sie Hierarchien. Hierarchien sind Gruppen von Spalten, die in Ebenen aufgeteilt sind. Eine Hierarchie „Geographie“ kann z.B. in die Ebenen „Land“, „Staat/Bundesland“, „Bezirk“ und „Stadt“ unterteilt sein. Hierarchien können in einer Feldliste einer Berichterstellungsclientanwendung getrennt von anderen Spalten auftreten. So können Clientbenutzer leichter durch diese navigieren und sie in Berichte einbeziehen. Weitere Informationen finden Sie unter [Hierarchien &#40;SSAS – tabellarisch&#41;](tabular-models/hierarchies-ssas-tabular.md).  
+  In dieser Lektion erstellen Sie Hierarchien. Hierarchien sind Gruppen von Spalten, die in Ebenen angeordnet werden. Beispielsweise könnte eine Geografiehierarchie Unterebenen für Land, Status, Landkreis und Stadt beinhalten. Hierarchien können in einer Feldliste einer Berichterstellungsclientanwendung getrennt von anderen Spalten auftreten. So können Clientbenutzer leichter durch diese navigieren und sie in Berichte einbeziehen. Weitere Informationen finden Sie unter [Hierarchien &#40;SSAS – tabellarisch&#41;](tabular-models/hierarchies-ssas-tabular.md).  
   
  Verwenden Sie zum Erstellen von Hierarchien den Modell-Designer in der *Diagrammsicht*. Das Erstellen und Verwalten von Hierarchien in der Datensicht des Modell-Designers wird nicht unterstützt.  
   
  Geschätzte Zeit zum Bearbeiten dieser Lektion: **20 Minuten**  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
- Dieses Thema ist Teil eines Tutorials zur Tabellenmodellierung, das in der vorgegebenen Reihenfolge durchgeführt werden sollte. Sie sollten vor dem Ausführen der Aufgaben in dieser Lektion die vorherige, [Lektion 9: Erstellen von Perspektiven](lesson-8-create-perspectives.md), abgeschlossen haben.  
+ Dieses Thema ist Teil eines Tutorials zur Tabellenmodellierung, das in der richtigen Reihenfolge absolviert werden sollte. Sie sollten vor dem Ausführen der Aufgaben in dieser Lektion die vorherige, [Lektion 9: Erstellen von Perspektiven](lesson-8-create-perspectives.md), abgeschlossen haben.  
   
 ## <a name="create-hierarchies"></a>Erstellen von Hierarchien  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66078191"
     > [!TIP]  
     >  Verwenden Sie die Steuerelemente der Miniaturkarte oben rechts im Modell-Designer, um die Sicht der Objekte in der Diagrammsicht je nach Bedarf zu ändern. Ordnen Sie Objekte in der Diagrammsicht neu an, wird diese Sicht beim Speichern des Projekts beibehalten.  
   
-2.  Klicken Sie im Modell-Designer mit der rechten `Product` Maustaste auf die Tabelle, und klicken Sie dann auf **Hierarchie erstellen**. Am unteren Rand des Tabellenfensters wird eine neue Hierarchie angezeigt.  
+2.  Klicken Sie im Modell-Designer mit der rechten `Product` Maustaste auf die Tabelle, und klicken Sie dann auf **Hierarchie erstellen**. Eine neue Hierarchie wird am unteren Rand des Tabellenfensters angezeigt.  
   
 3.  Benennen Sie im Hierarchienamen die Hierarchie um `Category`, indem Sie eingeben, und drücken Sie dann die EINGABETASTE.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "66078191"
 5.  Klicken Sie `Category` in der Hierarchie mit der rechten Maustaste auf die Spalte **Product Category Name** , klicken Sie dann `Category`auf **Umbenennen**, und geben Sie ein.  
   
     > [!NOTE]  
-    >  Wenn Sie eine Spalte in der Hierarchie umbenennen, wird diese Namensänderung in der Tabelle nicht übernommen. Eine Spalte in der Hierarchie stellt lediglich eine Repräsentation der Spalte in der Tabelle dar.  
+    >  Durch das Umbenennen einer Spalte in einer Hierarchie wird die betreffende Spalte in der Tabelle nicht umbenannt. Eine Spalte in einer Hierarchie ist nur eine Darstellung der Spalte in der Tabelle.  
   
 6.  Klicken Sie `Product` in der Tabelle mit der rechten Maustaste auf die Spalte **Product Subcategory Name** , zeigen Sie im Kontextmenü auf **zur Hierarchie hinzufügen**, `Category`und klicken Sie dann auf.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66078191"
   
 1.  Klicken Sie im Modell-Designer mit der rechten Maustaste auf die Tabelle **Date** und anschließend auf **Hierarchie erstellen**.  
   
-2.  Benennen Sie die Hierarchie in **Calendar** (Kalender) um.  
+2.  Benennen Sie die Hierarchie in **Calendar**(Kalender) um.  
   
 3.  Fügen Sie die folgenden Spalten in der entsprechenden Reihenfolge hinzu, und benennen Sie sie dann um:  
   
@@ -66,17 +66,17 @@ ms.locfileid: "66078191"
     |Calendar Year|Jahr|  
     |Calendar Semester|Semester|  
     |Calendar Quarter|Quarter|  
-    |Month Calendar|Month (Monat)|  
+    |Month Calendar|Monat|  
     |Day Of Month|Day (Tag)|  
   
-4.  Wiederholen Sie in der Tabelle **Date** die oben genannten Schritte, und erstellen Sie die Hierarchie **Fiscal**, einschließlich der folgenden Spalten:  
+4.  Wiederholen Sie in der Tabelle **Date** die oben genannten Schritte, und erstellen Sie die Hierarchie **Fiscal** , einschließlich der folgenden Spalten:  
   
     |Column|Umbenennen in:|  
     |------------|----------------|  
     |Fiscal Year|Jahr|  
     |Fiscal Semester|Semester|  
     |Fiscal Quarter|Quarter|  
-    |Month Calendar|Month (Monat)|  
+    |Month Calendar|Monat|  
     |Day Of Month|Day (Tag)|  
   
 5.  Wiederholen Sie abschließend in der Tabelle **Date** die oben genannten Schritte, und erstellen Sie die Hierarchie **Production Calendar** (Produktionskalender), einschließlich der folgenden Spalten:  

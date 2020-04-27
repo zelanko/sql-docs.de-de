@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5f77148e039e61c080d0eae4e4ab7cad06ef050d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077307"
 ---
 # <a name="define-a-new-attribute-automatically"></a>Automatisches Definieren eines neuen Attributs
@@ -29,11 +29,10 @@ ms.locfileid: "66077307"
   
 2.  Wählen Sie auf der Registerkarte **Dimensionsstruktur** im Bereich **Datenquellensicht** die Spalte aus der Tabelle aus, an die Sie das Attribut binden möchten, und ziehen Sie dann die Spalte in den Bereich **Attribute** .  
   
-     
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellt das neue Attribut mit demselben Namen wie die Spalte, an die es gebunden ist. Wird die Spalte von mehreren Attributen verwendet, fügt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine Nummer an den Attributnamen an.  
+     [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] erstellt das neue Attribut mit demselben Namen wie die Spalte, an die es gebunden ist. Wird die Spalte von mehreren Attributen verwendet, fügt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine Nummer an den Attributnamen an.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Dimensionen in mehrdimensionalen Modellen](dimensions-in-multidimensional-models.md)   
- [Dimensionsattributeigenschaftenverweis](dimension-attribute-properties-reference.md)  
+ [Dimensionsattributeigenschaften-Verweis](dimension-attribute-properties-reference.md)  
   
   

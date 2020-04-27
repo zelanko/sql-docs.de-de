@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 5b6c79c2ea4355e9d889e235c8185a2460c0ed8c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66075390"
 ---
 # <a name="deploy-analysis-services-projects-ssdt"></a>Bereitstellen von Analysis Services-Projekten (SSDT)
@@ -32,6 +32,6 @@ ms.locfileid: "66075390"
  Die Projektkonfiguration und die zugehörigen Einstellungen bestimmen die Bereitstellungseigenschaften, die für die Bereitstellung des Projekts verwendet werden. Bei einem freigegebenen Projekt kann jeder Entwickler seine eigene Konfiguration mit eigenen Projektkonfigurationsoptionen verwenden. So kann z. B. jeder Entwickler einen anderen Testserver angeben, um unabhängig von anderen Entwicklern arbeiten zu können.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erstellen eines Analysis Services Projekts &#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)  
+ [Erstellen eines Analysis Services-Projekts &#40;SSDT&#41;](create-an-analysis-services-project-ssdt.md)  
   
   

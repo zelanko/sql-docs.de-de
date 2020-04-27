@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 959645223eacec6c000ddbfa23615b7949d10d5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077420"
 ---
 # <a name="define-a-default-member"></a>Definieren eines Standardelements
@@ -44,6 +44,6 @@ ms.locfileid: "66077420"
  Wenn Ebenen in einer Hierarchie natürlich aggregieren, können Sie ein Standardelement für ein beliebiges Attribut in der Hierarchie definieren, ohne andere Attribute in der Hierarchie berücksichtigen zu müssen. In der Hierarchie Country-Province-City können Sie z. b. ein Standardelement für City wie [City] definieren. [Montreal], ohne das Standardelement für State oder für Country zu definieren.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Konfigurieren des &#40;alle&#41; Ebene für Attribut Hierarchien](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
+ [Konfigurieren der Ebene &#40;Alle&#41; für Attributhierarchien](database-dimensions-configure-the-all-level-for-attribute-hierarchies.md)  
   
   

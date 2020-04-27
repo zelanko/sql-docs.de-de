@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 44c109694f0a3263ff1ad40d1c343a1af91ce630
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077767"
 ---
 # <a name="mining-legend-dialog-box-mining-model-viewer"></a>Mininglegende (Dialogfeld) (Miningmodell-Viewer)
@@ -34,14 +34,14 @@ ms.locfileid: "66077767"
   
 -   Zuordnungsmodelle  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Entscheidungsstrukturmodelle  
  [Durchsuchen eines Modells mit dem Microsoft Struktur-Viewer](data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)  
   
  Naïve Bayes-Modelle  
  [Durchsuchen eines Modells mit dem Microsoft Naive Bayes-Viewer](data-mining/browse-a-model-using-the-microsoft-naive-bayes-viewer.md)  
   
- Clustering-Modelle  
+ Clustermodelle  
  [Durchsuchen eines Modells mit dem Microsoft Cluster-Viewer](data-mining/browse-a-model-using-the-microsoft-cluster-viewer.md)  
   
  [Durchsuchen eines Modells mit dem Microsoft Sequenzcluster-Viewer](data-mining/browse-a-model-using-the-microsoft-sequence-cluster-viewer.md)  

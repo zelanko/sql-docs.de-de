@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 439f46ba0fa58253572d017057bb236aa1bf2d67
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081327"
 ---
 # <a name="enable-dimension-writeback-dimension-business-intelligence-wizard"></a>Rückschreiben von Dimensionen aktivieren (Dimension) (Business Intelligence-Assistent)
@@ -25,7 +25,7 @@ ms.locfileid: "66081327"
 > [!NOTE]  
 >  Diese Seite wird nicht angezeigt, wenn der Business Intelligence-Assistent vom Dimensions-Designer aus oder durch Klicken mit der rechten Maustaste auf eine Dimension im Projektmappen-Explorer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]gestartet wurde.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Dimension**  
  Wählen Sie die Dimension aus, für die der Assistent das Rückschreiben aktiviert.  
   

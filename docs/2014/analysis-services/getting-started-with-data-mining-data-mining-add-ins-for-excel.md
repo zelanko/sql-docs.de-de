@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3e5a24a158681c3f596355b1b9abca6ada990531
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66080938"
 ---
 # <a name="getting-started-with-data-mining-data-mining-add-ins-for-excel"></a>Erste Schritte mit dem Data Mining (Data Mining-Add-Ins für Excel)
@@ -32,7 +32,7 @@ ms.locfileid: "66080938"
   
  Die gewählte Analysemethode hängt jeweils von Ihren Zielen ab. Die Data Mining-Add-Ins unterstützen diese Arten der Analyse:  
   
--   Überwachtes und nicht überwachtes Lernen  
+-   Überwachtes und unüberwachtes Lernen  
   
 -   Clustering (Segmentierung)  
   

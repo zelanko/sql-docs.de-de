@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a62a05c8908391b9ce925ecfe08ae30540b8fa29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66081650"
 ---
 # <a name="directquery-deployment-scenarios-ssas-tabular"></a>DirectQuery-Bereitstellungsszenarien (SSAS – tabellarisch)
@@ -24,7 +24,7 @@ ms.locfileid: "66081650"
   
  [Vergleichen von DirectQuery-Konfigurationen](#bkmk_Configurations)  
   
-##  <a name="bkmk_DQProcedure"></a>Entwurfs-und Bereitstellungs Schritte  
+##  <a name="design-and-deployment-steps"></a><a name="bkmk_DQProcedure"></a>Entwurfs-und Bereitstellungs Schritte  
  **Schritt 1: Erstellen der Projekt Mappe**  
   
  Unabhängig vom verwendeten Modus müssen Sie die Informationen überprüfen, in denen Einschränkungen hinsichtlich der Daten, die in DirectQuery-Modellen verwendet werden können, beschrieben werden. Alle im Modell verwendeten Daten und Berichte müssen z. B. von einer einzelnen SQL Server-Datenbank kommen. Weitere Informationen finden Sie unter [DirectQuery-Modus &#40;SSAS – tabellarisch&#41;](tabular-models/directquery-mode-ssas-tabular.md).  
@@ -89,7 +89,7 @@ ms.locfileid: "66081650"
 |||  
 |-|-|  
 |**Nur DirectQuery**|**DirectQueryOnly**<br /><br /> Da Sie nur "Direkte Abfrage" angegeben haben, werden die Metadaten des Modells auf dem Server bereitgestellt, das Modell wird jedoch nicht verarbeitet.<br /><br /> Beachten Sie, dass der von der Arbeitsbereichsdatenbank verwendete Cache nicht automatisch gelöscht wird. Wenn Sie sicherstellen möchten, dass die zwischengespeicherten Daten für Benutzer nicht sichtbar sind, können Sie den Entwurfszeitcache löschen. Weitere Informationen finden Sie unter [Löschen der Analysis Services Caches](instances/clear-the-analysis-services-caches.md).|  
-|**Hybridmodus**|**Directquery mit in-Memory**<br /><br /> **In-Memory mit directquery**<br /><br /> Beide Werte ermöglichen je nach Bedarf entweder die Verwendung des Caches oder der relationalen Datenquelle. Durch die Reihenfolge wird definiert, welche Datenquelle standardmäßig verwendet wird, wenn Abfragen für das Modell beantwortet werden.<br /><br /> Im Hybridmodus muss die Verarbeitung des Caches zur gleichen Zeit wie die Bereitstellung der Modellmetadaten auf dem Server stattfinden.<br /><br /> Sie können diese Einstellung nach der Bereitstellung ändern.|  
+|**Hybridmodus**|**DirectQuery mit InMemory**<br /><br /> **In-Memory mit directquery**<br /><br /> Beide Werte ermöglichen je nach Bedarf entweder die Verwendung des Caches oder der relationalen Datenquelle. Durch die Reihenfolge wird definiert, welche Datenquelle standardmäßig verwendet wird, wenn Abfragen für das Modell beantwortet werden.<br /><br /> Im Hybridmodus muss die Verarbeitung des Caches zur gleichen Zeit wie die Bereitstellung der Modellmetadaten auf dem Server stattfinden.<br /><br /> Sie können diese Einstellung nach der Bereitstellung ändern.|  
   
  **Schritt 8. Überprüfungsmodell**  
   
@@ -101,7 +101,7 @@ ms.locfileid: "66081650"
   
 -   Sie können diese Eigenschaften nach der Bereitstellung des Modells jederzeit ändern.  
   
-##  <a name="bkmk_Configurations"></a>Vergleichen von directquery-Optionen  
+##  <a name="comparing-directquery-options"></a><a name="bkmk_Configurations"></a>Vergleichen von directquery-Optionen  
  **Nur directquery**  
  Diese Option wird bevorzugt, wenn Sie eine einzelne Datenquelle garantieren möchten oder wenn die Datenmenge die Größe des Arbeitsspeichers übersteigt. Wenn Sie mit einer sehr großen relationalen Datenquelle arbeiten, können Sie während der Entwurfszeit das Modell mit einer Teilmenge der Daten erstellen. Wenn Sie das Modell im ausschließlichen DirectQuery-Modus bereitstellen, können Sie die Datenquellendefinition bearbeiten, um alle erforderlichen Daten einzuschließen.  
   

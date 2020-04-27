@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c7ce00bc87ca17c97996023d7cb9a4745b9882f3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66076108"
 ---
 # <a name="cubes-in-multidimensional-models"></a>Cubes in mehrdimensionalen Modellen
@@ -34,21 +34,21 @@ ms.locfileid: "66076108"
 |Element|BESCHREIBUNG|  
 |-------------|-----------------|  
 |Dimensionen|[Dimensionen in mehrdimensionalen Modellen](dimensions-in-multidimensional-models.md)|  
-|Measures und Measuregruppen|[Erstellen von Measures und Messen von Gruppen in mehrdimensionalen Modellen](create-measures-and-measure-groups-in-multidimensional-models.md)|  
+|Measures und Measuregruppen|[Erstellen von Measures und Measuregruppen in mehrdimensionalen Modellen](create-measures-and-measure-groups-in-multidimensional-models.md)|  
 |Partitionen|[Partitionen in mehrdimensionalen Modellen](partitions-in-multidimensional-models.md)|  
 |Perspektiven|[Perspektiven in mehrdimensionalen Modellen](perspectives-in-multidimensional-models.md)|  
 |Hierarchien|[Erstellen von benutzerdefinierten Hierarchien](user-defined-hierarchies-create.md)|  
 |Aktionen|[Aktionen in mehrdimensionalen Modellen](actions-in-multidimensional-models.md)|  
-|Key Performance Indicators (KPI)|[Wichtige Leistungsindikatoren &#40;KPIs&#41; in mehrdimensionalen Modellen](key-performance-indicators-kpis-in-multidimensional-models.md)|  
+|Key Performance Indicators (KPI)|[Leistungskennzahlen &#40;Key Performance Indicators, KPIs&#41; in mehrdimensionalen Modellen](key-performance-indicators-kpis-in-multidimensional-models.md)|  
 |Berechnungen|[Berechnungen in mehrdimensionalen Modellen](calculations-in-multidimensional-models.md)|  
 |Translations|[Übersetzungen in mehrdimensionalen Modellen](translations-in-multidimensional-models-analysis-services.md)|  
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |-----------|-----------------|  
 |[Erstellen eines Cubes mit dem Cube-Assistenten](create-a-cube-using-the-cube-wizard.md)|Beschreibt das Definieren von Cubes, Dimensionen, Dimensionsattributen und benutzerdefinierten Hierarchien mithilfe des Cube-Assistenten.|  
-|[Erstellen von Measures und Messen von Gruppen in mehrdimensionalen Modellen](create-measures-and-measure-groups-in-multidimensional-models.md)|Beschreibt das Definieren von Measuregruppen.|  
+|[Erstellen von Measures und Measuregruppen in mehrdimensionalen Modellen](create-measures-and-measure-groups-in-multidimensional-models.md)|Beschreibt das Definieren von Measuregruppen.|  
 |[Berechnungen in mehrdimensionalen Modellen](calculations-in-multidimensional-models.md)|Beschreibt das Definieren und Konfigurieren einer Berechnung in einem MDX-Skript.|  
 |[Aktionen in mehrdimensionalen Modellen](actions-in-multidimensional-models.md)|Beschreibt das Definieren und Konfigurieren einer Aktion.|  
 |[Perspektiven in mehrdimensionalen Modellen](perspectives-in-multidimensional-models.md)|Beschreibt das Definieren und Konfigurieren einer Perspektive.|  

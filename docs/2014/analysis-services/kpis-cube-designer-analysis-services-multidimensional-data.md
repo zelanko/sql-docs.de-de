@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 88e48fb2bfae9711b6d8f303287f2e26dff18d9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079425"
 ---
 # <a name="kpis-cube-designer-analysis-services---multidimensional-data"></a>KPIs (Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
@@ -37,7 +37,7 @@ ms.locfileid: "66079425"
   
 |Bereich|Definition|  
 |----------|----------------|  
-|**Symbolleiste**|Mithilfe der Symbolleiste in der Formular-und der Browseransicht können Sie allgemeine Vorgänge auf dieser Registerkarte ausführen. Weitere Informationen zu diesem Bereich finden Sie unter [Symbolleiste &#40;Registerkarte ' KPIs ', Cube-Designer&#41; &#40;Analysis Services-Multidimensional Data&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
+|**Suchfeld**|Mithilfe der Symbolleiste in der Formular-und der Browseransicht können Sie allgemeine Vorgänge auf dieser Registerkarte ausführen. Weitere Informationen zu diesem Bereich finden Sie unter [Symbolleiste &#40;Registerkarte ' KPIs ', Cube-Designer&#41; &#40;Analysis Services-Multidimensional Data&#41;](toolbar-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
 |**KPI-Planer**|Mithilfe des Bereichs **KPI-Planer** in der Formularansicht können Sie im Cube enthaltene KPIs in einem geordneten Format anzeigen. Weitere Informationen zu diesem Bereich finden Sie unter [KPI-Planer &#40;Registerkarte „KPIs“, Cube-Designer&#41; &#40;Analysis Services – Mehrdimensionale Daten&#41;](kpi-organizer-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  
 |**Berechnungstools**|Im Bereich **Berechnungstools** können Sie in der Formularansicht Metadaten, Funktionen und Tools anzeigen, die für den Cube verfügbar sind. Weitere Informationen zu diesem Bereich finden Sie unter [Berechnungstools &#40;Registerkarte „KPIs“, Cube-Designer&#41; &#40;Analysis Services – Mehrdimensionale Daten&#41;](calculation-tools-kpis-cube-designer-analysis-services-multidimensional-data.md).|  
 |**KPI-Formular-Editor**|Im Bereich KPI-Formular-Editor in der Formularansicht können Sie die im Cube enthaltenen KPIs bearbeiten. Weitere Informationen zu diesem Bereich finden Sie unter [KPI-Formular-Editor &#40;Registerkarte „KPIs“, Cube-Designer&#41; &#40;Analysis Services – Mehrdimensionale Daten&#41;](kpi-form-editor-kpis-tab-cube-designer-analysis-services-multidimensional-data.md).|  

@@ -11,25 +11,25 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 06ffe60802e52bd0ae141435628fc3812dc2c7c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66079201"
 ---
-# <a name="lesson-11-create-partitions"></a>Lektion 11: Erstellen von Partitionen
-  In dieser Lektion erstellen Sie Partitionen, um die Internet Sales-Tabelle in kleinere logische Teile aufzuteilen, die unabhängig von anderen Partitionen verarbeitet (aktualisiert) werden können. Standardmäßig verfügt jede Tabelle, die Sie in Ihr Modell einschließen, über eine Partition, die alle Spalten und Zeilen der Tabelle enthält. Für die Internet Sales-Tabelle sollen die Daten nach Jahr aufgeteilt werden. eine Partition für jede der fünf Jahre der Tabelle.  Jede Partition kann so unabhängig voneinander verarbeitet werden. Weitere Informationen finden Sie unter [Partitionen &#40;SSAS – tabellarisch&#41;](tabular-models/partitions-ssas-tabular.md).  
+# <a name="lesson-11-create-partitions"></a>Lektion 11: Erstellen von Partitionen
+  In dieser Lektion erstellen Sie Partitionen, um die Internet Sales-Tabelle in kleinere logische Teile aufzuteilen, die unabhängig von anderen Partitionen verarbeitet (aktualisiert) werden können. Standardmäßig verfügt jede Tabelle, die Sie in Ihr Modell einschließen, über eine Partition, die alle Spalten und Zeilen der Tabelle enthält. Für die Internet Sales-Tabelle sollen die Daten nach Jahr aufgeteilt werden. eine Partition für jede der fünf Jahre der Tabelle.  Jede Partition kann dann unabhängig verarbeitet werden. Weitere Informationen finden Sie unter [Partitionen &#40;SSAS – tabellarisch&#41;](tabular-models/partitions-ssas-tabular.md).  
   
  Geschätzte Zeit zum Bearbeiten dieser Lektion: **15 Minuten**  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
- Dieses Thema ist Teil eines Tutorials zur Tabellenmodellierung, das in der vorgegebenen Reihenfolge durchgeführt werden sollte. Sie sollten vor dem Ausführen der Aufgaben in dieser Lektion die vorherige Lektion abgeschlossen haben: [Lektion 10: Erstellen von Hierarchien](lesson-9-create-hierarchies.md).  
+ Dieses Thema ist Teil eines Tutorials zur Tabellenmodellierung, das in der richtigen Reihenfolge absolviert werden sollte. Sie sollten vor dem Ausführen der Aufgaben in dieser Lektion die vorherige Lektion abgeschlossen haben: [Lektion 10: Erstellen von Hierarchien](lesson-9-create-hierarchies.md).  
   
 ## <a name="create-partitions"></a>Erstellen von Partitionen  
   
 #### <a name="to-create-partitions-in-the-internet-sales-table"></a>So erstellen Sie Partitionen in der Internet Sales-Tabelle  
   
-1.  Klicken Sie im Modell-Designer auf die Tabelle **Internet Sales** und dann auf das Menü **Tabelle**. Klicken Sie anschließend auf **Partitionen**.  
+1.  Klicken Sie im Modell-Designer auf die Tabelle **Internet Sales** und dann auf das Menü **Tabelle** . Klicken Sie anschließend auf **Partitionen**.  
   
      Das Dialogfeld **Partitions-Manager** wird geöffnet.  
   
@@ -40,7 +40,7 @@ ms.locfileid: "66079201"
     > [!TIP]  
     >  Vor dem Fortfahren mit dem nächsten Schritt ist zu beachten, dass die Spaltennamen für diese in der Modelltabelle enthaltenen (aktivierten) Spalten im Tabellenvorschaufenster den Spaltennamen der Quelle entsprechen. Das liegt daran, dass das Tabellenvorschaufenster Spalten von der Quelltabelle und nicht von der Modelltabelle anzeigt.  
   
-4.  Klicken Sie direkt rechts oberhalb des Vorschaufensters auf die Schaltfläche **Abfrage-Editor**.  
+4.  Klicken Sie direkt rechts oberhalb des Vorschaufensters auf die Schaltfläche **Abfrage-Editor** .  
   
      Da die Partition nur die Zeilen eines bestimmten Zeitraums beinhalten soll, ist die WHERE-Klausel einzufügen. Sie können nur anhand einer SQL-Anweisung eine WHERE-Klausel erstellen.  
   
@@ -140,17 +140,17 @@ ms.locfileid: "66079201"
   
 #### <a name="to-process-internet-sales-partitions"></a>So verarbeiten Sie die Internet Sales-Partitionen  
   
-1.  Klicken Sie auf **OK**, um das Dialogfeld **Partitions-Manager** zu schließen.  
+1.  Klicken Sie auf **OK** , um das Dialogfeld **Partitions-Manager** zu schließen.  
   
-2.  Klicken Sie im Modell-Designer auf die Tabelle **Internet Sales**. Klicken Sie anschließend auf das Menü **Modell**, zeigen Sie auf **Verarbeiten** (Aktualisieren), und klicken Sie auf **Partitionen verarbeiten**.  
+2.  Klicken Sie im Modell-Designer auf die Tabelle **Internet Sales** . Klicken Sie anschließend auf das Menü **Modell** , zeigen Sie auf **Verarbeiten** (Aktualisieren), und klicken Sie auf **Partitionen verarbeiten**.  
   
-3.  Überprüfen Sie im Dialogfeld **Partitionen verarbeiten**, ob der Wert für **Modus** auf **Standard verarbeiten** festgelegt ist.  
+3.  Überprüfen Sie im Dialogfeld **Partitionen verarbeiten** , ob der Wert für **Modus** auf **Standard verarbeiten**festgelegt ist.  
   
 4.  Aktivieren Sie für jede der fünf Partitionen, die Sie erstellt haben, das Kontrollkästchen in der Spalte **Verarbeiten**, und klicken Sie anschließend auf **OK**.  
   
      Wenn Identitätswechsel-Anmeldeinformationen verlangt werden, geben Sie die Kombination aus Windows-Benutzername und Kennwort ein, die Sie in Lektion 2 (Schritt 6) angegeben haben.  
   
-     Daraufhin wird das Dialogfeld **Daten Prozess** angezeigt, in dem die Prozessdetails für jede Partition angezeigt werden. Beachten Sie, dass für jede Partition eine andere Anzahl von Zeilen übertragen wird. Dies liegt daran, dass jede Partition nur die Zeilen für das Jahr enthält, die in der WHERE-Klausel der SQL-Anweisung angegebenen wurden. Für das Jahr 2010 sind keine Daten vorhanden.  
+     Daraufhin wird das Dialogfeld **Daten Prozess** angezeigt, in dem die Prozessdetails für jede Partition angezeigt werden. Beachten Sie, dass eine unterschiedliche Anzahl an Zeilen für jede Partition übertragen wird. Das liegt daran, dass jede Partition nur die Zeilen für das in der WHERE-Klausel der SQL-Anweisung angegebene Jahr beinhaltet. Für das Jahr 2010 sind keine Daten vorhanden.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
  Wenn Sie mit diesem Tutorial fortfahren möchten, wechseln Sie zur nächsten Lektion: [Lektion 12: Erstellen von Rollen](lesson-11-create-roles.md).  

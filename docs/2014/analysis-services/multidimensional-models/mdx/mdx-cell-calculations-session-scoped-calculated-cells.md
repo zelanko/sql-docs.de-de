@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4388ef278c0762184859162dc55f656aae1c9a15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074429"
 ---
 # <a name="creating-session-scoped-calculated-cells"></a>Erstellen berechneter Zellen im Bereich einer Sitzung
@@ -83,6 +83,6 @@ FOR String_Expression AS 'MDX_Expression'
 |Menge nachfolgender Werte|Ein MDX-Mengenausdruck, der zu den nachfolgenden Werten eines angegebenen Elements aufgelöst wird. Ein Beispiel hierfür ist `Descendants`die MDX-Funktion (*Member_Expression*, *Level_Expression* *Desc_Flag*).<br /><br /> Weitere Informationen finden Sie unter [Descendants &#40;MDX&#41;](/sql/mdx/descendants-mdx).|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Das aufbauen von Zell Berechnungen in MDX-&#40;MDX-&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
+ [Erstellen von Zellenberechnungen in MDX &#40;MDX&#41;](../../multidimensional-models-olap-logical-cube-objects/calculations.md)  
   
   

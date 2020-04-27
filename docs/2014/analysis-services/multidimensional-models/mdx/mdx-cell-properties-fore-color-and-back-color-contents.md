@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ecd8bb157d7b501d29230c91d87f148ae738ff45
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66074411"
 ---
 # <a name="fore_color-and-back_color-contents-mdx"></a>FORE_COLOR- und BACK_COLOR-Inhalte (MDX)
@@ -31,6 +31,6 @@ ms.locfileid: "66074411"
  Der gültige Bereich für eine gewöhnliche RGB-Farbe ist 0 (null) bis 16.777.215 (&H00FFFFFF). Das höherwertige Byte einer Zahl in diesem Bereich entspricht immer 0. Die niederwertigen 3 Bytes bestimmen, vom niedrigsten zum höchsten Byte, den Anteil von Rot, Grün und Blau. Der rote, grüne und blaue Farbanteil werden jeweils durch eine Zahl zwischen 0 und 255 (&HFF) dargestellt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwenden von Zell Eigenschaften &#40;MDX-&#41;](mdx-cell-properties-using-cell-properties.md)  
+ [Verwenden von Zelleneigenschaften &#40;MDX&#41;](mdx-cell-properties-using-cell-properties.md)  
   
   

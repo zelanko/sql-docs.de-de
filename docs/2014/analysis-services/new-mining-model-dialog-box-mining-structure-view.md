@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 62df5e05019b8b00fa5297bc3c7c3291a6c0f918
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66072179"
 ---
 # <a name="new-mining-model-dialog-box-mining-structure-view"></a>Neues Miningmodell (Dialogfeld) (Miningstruktur-Ansicht)
   Verwenden Sie das Dialogfeld **Neues Miningmodell** , um der Miningstruktur ein neues Miningmodell hinzuzufügen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Modell Name**  
  Stellen Sie einen eindeutigen Namen für das neue Miningmodell bereit. Der Name muss in der gesamten Datenbank eindeutig sein, nicht nur innerhalb der Miningstruktur.  
   

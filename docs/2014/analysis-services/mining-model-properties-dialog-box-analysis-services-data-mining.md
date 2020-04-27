@@ -15,24 +15,24 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98d61d019aadeedadc673e1a8860ceb94d2ef96c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077684"
 ---
 # <a name="mining-model-properties-dialog-box-analysis-services---data-mining"></a>Dialogfeld "Miningmodelleigenschaften" (Analysis Services &ndash; Data Mining)
   Mithilfe des Dialogfelds **Miningmodelleigenschaften** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] können Sie die Eigenschaften eines Miningmodells in einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank festlegen. Zum Öffnen des Dialogfelds **Miningmodelleigenschaften** klicken Sie mit der rechten Maustaste in **Objekt-Explorer** auf ein Miningmodell und wählen dann die Option **Eigenschaften**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 |Begriff|Definition|  
 |----------|----------------|  
 |**Name**|Zeigt den Namen des Miningmodells an.|  
-|**id**|Zeigt den Bezeichner des Miningmodells an.|  
+|**ID**|Zeigt den Bezeichner des Miningmodells an.|  
 |**Beschreibung**|Zeigt die Beschreibung des Miningmodells an.|  
 |**Timestamp erstellen**|Zeigt das Datum und die Uhrzeit der Erstellung des Miningmodells an.|  
-|**Letzte Schema Aktualisierung**|Zeigt das Datum und die Uhrzeit des letzten Updates der Metadaten für das Miningmodell an.|  
+|**Letztes Schemaupdate**|Zeigt das Datum und die Uhrzeit des letzten Updates der Metadaten für das Miningmodell an.|  
 |**State**|Zeigt den Verarbeitungsstatus des Miningmodells an. Weitere Informationen zu den Werten für diese Eigenschaft finden Sie unter <xref:Microsoft.AnalysisServices.ProcessableMajorObject.State%2A>.|  
 |**Zuletzt verarbeitet**|Zeigt das Datum und die Uhrzeit an, zu der das Miningmodell zuletzt verarbeitet wurde.|  
   

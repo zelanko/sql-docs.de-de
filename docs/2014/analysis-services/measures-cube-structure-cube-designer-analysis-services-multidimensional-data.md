@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbd64cd4eb3ca686fdbdd1a59c9e84fa387e6a7f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/26/2020
 ms.locfileid: "66077920"
 ---
 # <a name="measures-cube-structure-tab-cube-designer-analysis-services---multidimensional-data"></a>Measures (Registerkarte 'Cubestruktur', Cube-Designer) (Analysis Services – Mehrdimensionale Daten)
   Im Bereich **Measures** können Sie die im Cube-Designer auf der Registerkarte **Cubestruktur** enthaltenen Measuregruppen und Elemente bearbeiten.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  Measures  
  Zeigt in Abhängigkeit von der ausgewählten Sicht die im Cube enthaltenen Measures und Measuregruppen an:  
   
@@ -63,9 +63,9 @@ ms.locfileid: "66077920"
 |Option|Definition|  
 |------------|----------------|  
 |**Linde**|Zeigt die Measuregruppen und Measures in einer Strukturansicht an.|  
-|**Netz**|Zeigt die Measuregruppen und Measures in einem Raster an.|  
+|**Raster**|Zeigt die Measuregruppen und Measures in einem Raster an.|  
   
- **Benen**  
+ **Umbenennen**  
  Wählen Sie diese Option aus, um die ausgewählte Measuregruppe oder das ausgewählte Measure umzubenennen.  
   
  **Löschen**  
