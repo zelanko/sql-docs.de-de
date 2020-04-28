@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ffd46d75f0d3dc803f2fa3739b363bbb53b7d55b
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289558"
 ---
 # <a name="design-reports-with-report-designer-ssrs"></a>Entwerfen von Berichten mithilfe des Berichts-Designers (SSRS)
-  Mit dem Berichts-Designer können Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Berichte und -Berichtslösungen mit vollem Funktionsumfang erstellen. Die grafische Benutzeroberfläche des Berichts-Designers ermöglicht Ihnen, Datenquellen, Datasets und Abfragen, Berichtslayoutpositionen für Datenbereiche und Felder sowie interaktive Funktionen. z. B. Parameter und zusammenwirkende Berichtssätze, zu definieren.  
+  Mit dem Berichts-Designer können Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Berichte und -Berichtslösungen mit vollem Funktionsumfang erstellen. Die grafische Benutzeroberfläche des Berichts-Designers ermöglicht Ihnen, Datenquellen, Datasets und Abfragen, Berichtslayoutpositionen für Datenbereiche und Felder sowie interaktive Funktionen. z. B. Parameter und zusammenwirkende Berichtssätze, zu definieren.  
   
 ## <a name="benefits-for-projects"></a>Vorteile für Projekte  
  Verwenden Sie Projekte für folgende Aufgaben:  
@@ -33,9 +33,9 @@ ms.locfileid: "79289558"
   
 -   Behalten Sie einen Satz von Masterkopien für Berichte und verwandte Elemente bei. Nach der Bereitstellung können veröffentlichte Berichte unbeabsichtigt geändert werden.  
   
- Anhand der Informationen in diesem Thema können Sie Berichte und verwandte Elemente für ein konkretes Berichtsprojekt in einer [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Projektmappe entwerfen. Weitere Informationen zu Projektmappen und mehreren Projekten in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] finden Sie unter [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md).  
+ Anhand der Informationen in diesem Thema können Sie Berichte und verwandte Elemente für ein konkretes Berichtsprojekt in einer [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] -Projektmappe entwerfen. Weitere Informationen zu Projektmappen und mehreren Projekten in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]finden Sie unter [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md).  
   
-##  <a name="bkmk_SharedDataSources"></a> Freigegebene Datenquellen  
+##  <a name="shared-data-sources"></a><a name="bkmk_SharedDataSources"></a>Freigegebene Datenquellen  
  Verwenden Sie [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] , um freigegebene Datenquellen für eine Berichtslösung zu definieren und bereitzustellen. Freigegebene Datenquellen können mit den Eigenschaften **OverwriteDataSources** und **TargetDataSourceFolder** unabhängig von anderen Elementen in einem Projekt bereitgestellt werden. Weitere Informationen finden Sie unter [Festlegen von Bereitstellungseigenschaften &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md).  
   
  Im Berichts-Designer nutzen Sie sowohl den Berichtsdatenbereich als auch den Projektmappen-Explorer, um die in einem Bericht verwendeten Datenquellen zu definieren. Weitere Informationen finden Sie unter [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). Sie können Datenquellen, die auf einem Berichtsserver oder einer SharePoint-Website veröffentlicht, aber nicht in die [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] -Projektmappe eingeschlossen wurden, nicht mit [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] öffnen. Verwenden Sie für dieses Feature [Berichts-Generator &#40;SSRS-&#41;](report-builder-authoring-environment-ssrs.md).  
@@ -45,7 +45,7 @@ ms.locfileid: "79289558"
  Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md).  
   
   
-##  <a name="bkmk_SharedDatasets"></a> Freigegebene Datasets  
+##  <a name="shared-datasets"></a><a name="bkmk_SharedDatasets"></a> Freigegebene Datasets  
  Verwenden Sie [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] , um freigegebene Datasets für eine Berichtslösung zu definieren und bereitzustellen. Freigegebene Datasets können mit den Eigenschaften **OverwriteDatasets** und **TargetDatasetFolder** unabhängig von anderen Elementen in einem Projekt bereitgestellt werden. Weitere Informationen finden Sie unter [Festlegen von Bereitstellungseigenschaften &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md).  
   
  Im Berichts-Designer nutzen Sie sowohl den Berichtsdatenbereich als auch den Projektmappen-Explorer, um die in einem Bericht verwendeten freigegebenen Datasets zu definieren. Weitere Informationen finden Sie unter [Report Data Pane](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_ReportDataPane). Sie können veröffentlichte Datasets mithilfe von [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] nicht direkt von einem Berichtsserver oder einer SharePoint-Website aus öffnen. Verwenden Sie für dieses Feature [Berichts-Generator &#40;SSRS-&#41;](report-builder-authoring-environment-ssrs.md) im freigegebenen datasetmodus.  
@@ -53,7 +53,7 @@ ms.locfileid: "79289558"
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] ist ein Clienttool. Abfrage-Designern unterstützen Sie beim Erstellen und Testen von Abfrageergebnissen lokale in der Vorschau. Nach der Bereitstellung können Sie freigegebene Datasets unabhängig von den freigegebenen Datenquellen und Berichten verwalten, von denen sie abhängen. Weitere Informationen finden Sie unter Erstellen von [Berichten zu eingebetteten Datasets und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](../report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md), [Abfrage Entwurfs Tools in Berichts-Designer SQL Server Data Tools &#40;SSRS-&#41;](../report-data/query-design-tools-ssrs.md)und Verwalten von frei [gegebenen Datasets](../report-data/manage-shared-datasets.md).  
   
   
-##  <a name="bkmk_Reports"></a>Verzeichnet  
+##  <a name="reports"></a><a name="bkmk_Reports"></a>Verzeichnet  
  Berichte sind Dateien, die in einem Berichtsprojekt gespeichert werden. Berichte können als eigenständige Berichte, als Unterberichte oder als Ziele für Drillthroughaktionen in Hauptberichten verwendet werden. Mit **TargetReportFolder** und anderen Eigenschaften können Berichte unabhängig von anderen Elementen in einem Projekt bereitgestellt werden. Weitere Informationen finden Sie unter [Festlegen von Bereitstellungseigenschaften &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md).  
   
 > [!NOTE]  
@@ -85,29 +85,29 @@ ms.locfileid: "79289558"
      Weitere Informationen finden Sie unter [Berichtsdefinitionssprache (Report Definition Language, RDL) &#40;SSRS&#41;](../reports/report-definition-language-ssrs.md).  
   
   
-##  <a name="bkmk_ReportParts"></a> Berichtsteile  
+##  <a name="report-parts"></a><a name="bkmk_ReportParts"></a>Berichts Teile  
  Nachdem Sie Tabellen, Diagramme und andere Berichtselemente in einem Projekt erstellt haben, können Sie sie im Berichts-Designer auf einem Berichtsserver oder einer in einen Berichtsserver integrierten SharePoint-Website als *Berichtsteile* veröffentlichen, damit sie von Ihnen und weiteren Benutzern in anderen Berichten wiederverwendet werden können. Weitere Informationen finden Sie unter [Berichtsteile im Berichts-Designer &#40;SSRS&#41;](../report-design/report-parts-in-report-designer-ssrs.md).  
   
  Mit **TargetReportPartFolder** und anderen Eigenschaften können Berichtsteile unabhängig von anderen Elementen in einem Projekt bereitgestellt werden. Weitere Informationen finden Sie unter [Festlegen von Bereitstellungseigenschaften &#40;Reporting Services&#41;](set-deployment-properties-reporting-services.md).  
   
   
-##  <a name="bkmk_Resources"></a> Ressourcen  
+##  <a name="resources"></a><a name="bkmk_Resources"></a>Verfügt  
  Sie können dem Projekt Dateien hinzufügen, die zwar einen Bezug zu dem Bericht haben, aber nicht vom Berichtsserver verarbeitet werden. Sie können z. B. Grafiken für Bilder oder ESRI-Shape-Dateien für räumliche Daten hinzufügen. Weitere Informationen finden Sie unter [Ressourcen](../report-server/report-server-content-management-ssrs-native-mode.md#bkmk_Resources).  
   
   
-##  <a name="bkmk_ReportLayout"></a>Berichts Layout  
+##  <a name="report-layout"></a><a name="bkmk_ReportLayout"></a>Berichts Layout  
  Um das Berichtslayout zu erstellen, ziehen Sie Berichtselemente und Datenbereiche aus der Toolbox auf die Entwurfsoberfläche, und ordnen Sie sie entsprechend an. Ziehen Sie Datasetfelder auf die Elemente in der Entwurfsoberfläche, um dem Bericht Daten hinzuzufügen. Wenn Sie Daten in einem Tablix-Datenbereich in Gruppen organisieren möchten, ziehen Sie Datasetfelder in den Bereich für die Gruppierung. Da Berichterstellungstools primär zum Erstellen von Berichtsdefinitionen dienen, sind die Ansätze für den Berichtsentwurf im Berichts-Generator und Report Designer einander sehr ähnlich.  
   
   
-##  <a name="bkmk_Preview"></a>Vorschau  
+##  <a name="preview"></a><a name="bkmk_Preview"></a>Vorschau  
  Verwenden Sie die **Vorschau** , um die Berichtsdaten und den Layoutentwurf zu überprüfen. Wenn Sie eine Vorschau eines Berichts anzeigen, überprüft der Berichtsprozessor das Berichtsdefinitionsschema und die Ausdruckssyntax. Probleme werden im Fenster [Output](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) aufgelistet.  
   
 > [!NOTE]  
->  Wenn Sie eine Vorschau für einen Bericht anzeigen, werden die Daten für den Bericht auf dem lokalen Computer in einer Datei zwischengespeichert. Wenn Sie für denselben Bericht erneut eine Vorschau anzeigen, indem Sie dieselbe Abfrage und dieselben Parameter und Anmeldeinformationen verwenden, ruft der Berichts-Designer die zwischengespeicherte Kopie ab, anstatt die Abfrage erneut auszuführen. Die Datendatei wird in demselben Verzeichnis wie die Berichtsdefinitionsdatei unter dem Namen „ *\<Berichtsname>* .rdl.data“ gespeichert. Die Datei wird nicht gelöscht, wenn Sie den Berichts-Designer schließen.  
+>  Wenn Sie eine Vorschau für einen Bericht anzeigen, werden die Daten für den Bericht auf dem lokalen Computer in einer Datei zwischengespeichert. Wenn Sie für denselben Bericht erneut eine Vorschau anzeigen, indem Sie dieselbe Abfrage und dieselben Parameter und Anmeldeinformationen verwenden, ruft der Berichts-Designer die zwischengespeicherte Kopie ab, anstatt die Abfrage erneut auszuführen. Die Datendatei wird als * \<Report Name>*. RDL. Data in demselben Verzeichnis wie die Berichts Definitionsdatei gespeichert. Die Datei wird nicht gelöscht, wenn Sie den Berichts-Designer schließen.  
   
  Sie können eine Vorschau eines Berichts wie folgt anzeigen:  
   
--   **Vorschauansicht.** Klicken Sie auf die Registerkarte **Vorschau** . Der Bericht wird lokal mit derselben Berichtsverarbeitungs- und Renderingfunktionalität ausgeführt, die auf dem Berichtsserver zur Verfügung steht. Der Bericht wird als interaktives Bild angezeigt, in dem Sie Parameter auswählen, auf Links klicken, die Dokumentstruktur anzeigen und ausgeblendete Bereiche des Berichts erweitern bzw. reduzieren können. Darüber hinaus können Sie den Bericht in jedes installierte Renderingformat exportieren.  
+-   **Vorschau Ansicht.** Klicken Sie auf die Registerkarte **Vorschau** . Der Bericht wird lokal mit derselben Berichtsverarbeitungs-und Renderingfunktionalität ausgeführt, die auch für den Berichts Server bereitgestellt wird. Der Bericht wird als interaktives Bild angezeigt, in dem Sie Parameter auswählen, auf Links klicken, die Dokumentstruktur anzeigen und ausgeblendete Bereiche des Berichts erweitern bzw. reduzieren können. Darüber hinaus können Sie den Bericht in jedes installierte Renderingformat exportieren.  
   
 -   **Eigenständige Vorschau.** Führen Sie den lokalen Bericht in einem Browser aus. Mit einer Debugkonfiguration können Sie diesen Modus auch verwenden, um von Ihnen geschriebene benutzerdefinierte Assemblys zu debuggen. Es gibt drei Möglichkeiten, ein Projekt im Debugmodus auszuführen:  
   
@@ -124,7 +124,7 @@ ms.locfileid: "79289558"
   
      Wenn Sie einen bestimmten Bericht in der Vorschau anzeigen möchten, der nicht als Startelement für das Projekt festgelegt ist, wählen Sie eine Konfiguration aus, die den Bericht zwar erstellt, jedoch nicht bereitstellt (z.B. die DebugLocal-Konfiguration). Klicken Sie dann mit der rechten Maustaste auf den Bericht, und klicken Sie anschließend auf **Ausführen**. Sie müssen eine Konfiguration auswählen, die den Bericht nicht bereitstellt. Andernfalls wird der Bericht auf dem Berichtsserver veröffentlicht und nicht lokal in einem Vorschaufenster angezeigt.  
   
--   **Seitenansicht.**  
+-   **Druckvorschau.**  
   
      Wenn Sie einen Bericht zum ersten Mal im Vorschaumodus oder im Vorschaufenster anzeigen, gleicht die Anzeige des Berichts einem per HTML-Renderingerweiterung erstellten Bericht. Die Vorschau ist kein HTML-Code, das Layout und die Paginierung des Berichts gleichen jedoch der HTML-Ausgabe.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "79289558"
     -   Notwendige Änderungen am Berichtslayout für eine bessere Lesbarkeit im gedruckten Format.  
   
   
-##  <a name="bkmk_SaveandDeploy"></a>Speichern und bereitstellen  
+##  <a name="save-and-deploy"></a><a name="bkmk_SaveandDeploy"></a>Speichern und bereitstellen  
  Sie können Berichte und andere Projektdateien im Berichts-Designer lokal speichern oder auf einem Berichtsserver oder einer SharePoint-Website bereitstellen. Freigegebene Datenquellen, freigegebene Datasets, Berichte, Berichtsressourcen und Berichtsteile können abhängig von den konfigurierten Projektbereitstellungseigenschaften unabhängig oder zusammen bereitgestellt werden. Weitere Informationen finden Sie unter [Configuration and Deployment Properties](deployment-and-version-support-in-sql-server-data-tools-ssrs.md#bkmk_ConfigurationandDeploymentProperties).  
   
  Beachten Sie, dass Sie Berichte im Berichts-Designer unter Verwendung des Berichtsdefinitionsschemas entwerfen, das von der aktuellen Version von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]unterstützt wird. Wenn Sie Projektbereitstellungseigenschaften für einen bestimmten Berichtsserver oder eine SharePoint-Website festlegen und den Bericht anschließend speichern, speichert der Berichts-Designer die Berichtsdefinition im Buildverzeichnis in dem Schema, das der Version auf dem Zielberichtsserver entspricht. Um Berichte zu erstellen, die auf einem Berichtsserver einer niedrigeren Version veröffentlicht werden können, löscht der Berichts-Designer Berichtselemente, die im Zielschema nicht vorhanden sind. Dies erfolgt automatisch und ohne Aufforderung. In diesem Fall wird die ursprüngliche Berichtsdefinition im Projektordner beibehalten. Die geänderte Berichtsdefinition, die bereitgestellt wird, befindet sich im Buildordner.  
@@ -165,7 +165,7 @@ ms.locfileid: "79289558"
  Berichte können in verschiedene Formate exportiert werden. Diese Formate haben Einfluss auf die Funktionsweise einiger Berichtslayouts und interaktiver Funktionen. Weitere Informationen zu Entwurfs Überlegungen für verschiedene Ausgabeformate finden Sie unter [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).  
   
   
-##  <a name="bkmk_ReportValidationandErrorLevels"></a> Berichtsüberprüfung und Fehlerebenen  
+##  <a name="report-validation-and-error-levels"></a><a name="bkmk_ReportValidationandErrorLevels"></a> Berichtsüberprüfung und Fehlerebenen  
  Berichte werden vor der Vorschau und während der Bereitstellung überprüft. Beim Erstellen von Berichten können verschiedene Erstellungsprobleme auftreten. Berichte können Zeichenfolgen, z. B. Ausdrücke oder Abfragen, enthalten, die mit der von der Projektkonfiguration angegebenen Version von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] nicht kompatibel sind.  
   
  Verwenden Sie die ErrorLevel-Eigenschaft, um die während der Erstellung angezeigten Warnungen und Fehler zu verwalten. Die ErrorLevel-Eigenschaft kann einen Wert von 0 bis einschließlich 4 enthalten. Durch den Wert wird bestimmt, welche Erstellungsprobleme als Fehler und welche als Warnungen gemeldet werden. Der Standardwert ist 2. Die Warnungen und die Fehler werden in das [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)][-Ausgabefenster](reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) geschrieben.  
@@ -188,6 +188,6 @@ ms.locfileid: "79289558"
 ## <a name="see-also"></a>Weitere Informationen  
  [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](reporting-services-in-sql-server-data-tools-ssdt.md)   
  [Abfrage Entwurfs Tools in Berichts-Designer SQL Server Data Tools &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md)   
- [Bereitstellung und Versions Unterstützung in SQL Server Data Tools &#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
+ [Bereitstellung und Versionsunterstützung in SQL Server Data Tools &#40;SSRS&#41;](deployment-and-version-support-in-sql-server-data-tools-ssrs.md)  
   
   

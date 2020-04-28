@@ -11,10 +11,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a1c05ed678fd0c23fc00466396f306763dfbc54b
-ms.sourcegitcommit: e914effe771a1ee323bb3653626cd4ba83d77308
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/04/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78280917"
 ---
 # <a name="lesson-1-creating-database-objects"></a>Lektion 1: Erstellen von Datenbankobjekten
@@ -34,7 +34,7 @@ ms.locfileid: "78280917"
   
  Diese Lektion enthält die folgenden Themen:  
   
--   [Tutorial zum Erstellen einer Datenbank &#40;&#41;](lesson-1-1-creating-a-database.md)  
+-   [Erstellen einer Datenbank &#40;Tutorial&#41;](lesson-1-1-creating-a-database.md)  
   
 -   [Erstellen einer Tabelle &#40;Tutorial&#41;](lesson-1-2-creating-a-table.md)  
   
@@ -45,6 +45,6 @@ ms.locfileid: "78280917"
 -   [Zusammenfassung: Erstellen von Datenbankobjekten](lesson-1-5-summary-creating-database-objects.md)  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
- [Tutorial zum Erstellen einer Datenbank &#40;&#41;](lesson-1-1-creating-a-database.md)  
+ [Erstellen einer Datenbank &#40;Tutorial&#41;](lesson-1-1-creating-a-database.md)  
   
   

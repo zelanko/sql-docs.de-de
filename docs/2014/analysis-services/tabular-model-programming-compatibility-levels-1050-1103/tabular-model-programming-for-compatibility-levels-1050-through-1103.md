@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1c9b04245e14be67242d5cd1ea6d257ac4fc6038
-ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79525431"
 ---
 # <a name="tabular-model-programming"></a>Programmierung von tabellarischen Modellen
@@ -25,7 +25,7 @@ ms.locfileid: "79525431"
  Dieser Abschnitt enthält weitere Informationen darüber, wie Sie programmgesteuert die Entitäten tabellarischer Modelle und ihre Eigenschaften verwenden können.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [CSDL-Anmerkungen für Business Intelligence &#40;csdlbi&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
+ [CSDL-Anmerkungen für Business Intelligence &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
  [Grundlegendes zum tabellarischen Objektmodell](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   

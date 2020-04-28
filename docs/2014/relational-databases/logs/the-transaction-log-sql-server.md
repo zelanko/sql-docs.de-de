@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b4a175ad850ccbb0711a0997c3658cf01497686
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289408"
 ---
 # <a name="the-transaction-log-sql-server"></a>Das Transaktionsprotokoll [SQL Server]
@@ -33,15 +33,15 @@ ms.locfileid: "79289408"
   
 -   [Vorteile: Vom Transaktionsprotokoll unterstützte Vorgänge](#Benefits)  
   
--   [Abschneiden des Transaktions Protokolls](#Truncation)  
+-   [Transaktionsprotokollabschneidungen](#Truncation)  
   
--   [Faktoren, die das Abschneiden von Protokollen verzögern können](#FactorsThatDelayTruncation)  
+-   [Faktoren, die die Protokollkürzung verzögern können](#FactorsThatDelayTruncation)  
   
--   [Vorgänge, für die eine minimale Protokollierung möglich ist](#MinimallyLogged)  
+-   [Vorgänge, für die eine minimale Protokollierung verfügbar ist](#MinimallyLogged)  
   
 -   [Verwandte Aufgaben](#RelatedTasks)  
   
-##  <a name="Benefits"></a>Vorteile: vom Transaktionsprotokoll unterstützte Vorgänge  
+##  <a name="benefits-operations-supported-by-the-transaction-log"></a><a name="Benefits"></a>Vorteile: vom Transaktionsprotokoll unterstützte Vorgänge  
  Das Transaktionsprotokoll unterstützt die folgenden Vorgänge:  
   
 -   Wiederherstellen einzelner Transaktionen.  
@@ -54,7 +54,7 @@ ms.locfileid: "79289408"
   
 -   Lösungen zur Unterstützung von Hochverfügbarkeit und Notfallwiederherstellung: [!INCLUDE[ssHADR](../../includes/sshadr-md.md)], Datenbankspiegelung und Protokollversand.  
   
-##  <a name="Truncation"></a>Abschneiden des Transaktions Protokolls  
+##  <a name="transaction-log-truncation"></a><a name="Truncation"></a>Abschneiden des Transaktions Protokolls  
  Durch das Kürzen des Protokolls wird in der Protokolldatei Speicherplatz freigegeben, der vom Transaktionsprotokoll erneut verwendet werden kann. Die Protokollkürzung ist wichtig, um ein Auffüllen des Protokolls verhindern zu können. Durch die Protokollkürzung werden inaktive virtuelle Protokolldateien aus dem logischen Transaktionsprotokoll einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank gelöscht. Zudem wird Speicherplatz im logischen Protokoll zur Wiederverwendung durch das physische Transaktionsprotokoll freigegeben. Wird ein Transaktionsprotokoll nicht gekürzt, füllt sich dadurch möglicherweise der gesamte Speicherplatz des Datenträgers auf, der den zugehörigen physischen Protokolldateien zugeordnet ist.  
   
  Um dieses Problem zu vermeiden, erfolgt die Kürzung automatisch nach den folgenden Ereignissen, sofern die Protokollkürzung nicht aus bestimmten Gründen verzögert wird:  
@@ -68,7 +68,7 @@ ms.locfileid: "79289408"
 > [!NOTE]  
 >  Die Protokollkürzung verringert nicht die Größe einer physischen Protokolldatei. Sie müssen zum Reduzieren der physischen Größe einer physischen Protokolldatei die Protokolldatei verkleinern. Informationen zum Verkleinern der Größe der physischen Protokolldatei finden Sie unter [Verwalten der Größe der Transaktionsprotokolldatei](manage-the-size-of-the-transaction-log-file.md).  
   
-##  <a name="FactorsThatDelayTruncation"></a>Faktoren, die das Abschneiden von Protokollen verzögern können  
+##  <a name="factors-that-can-delay-log-truncation"></a><a name="FactorsThatDelayTruncation"></a>Faktoren, die das Abschneiden von Protokollen verzögern können  
  Bleiben Protokolldatensätze lange aktiv, verzögert sich die Transaktionsprotokollkürzung. Dabei kann sich das Transaktionsprotokoll potenziell auffüllen.  
   
 > [!IMPORTANT]  
@@ -95,7 +95,7 @@ ms.locfileid: "79289408"
 |14|OTHER_TRANSIENT|Dieser Wert wird derzeit nicht verwendet.|  
 |16|XTP_CHECKPOINT|Wenn eine Datenbank eine speicheroptimierte Dateigruppe aufweist, wird das Transaktionsprotokoll möglicherweise nicht vor der Auslösung des automatischen [!INCLUDE[hek_2](../../includes/hek-2-md.md)] -Prüfpunkts gekürzt (was immer nach Anwachsen des Protokolls um 512 MB erfolgt).<br /><br /> Hinweis: um das Transaktionsprotokoll vor der Größe von 512 MB abzuschneiden, lösen Sie den Checkpoint-Befehl manuell für die betreffende Datenbank aus.|  
   
-##  <a name="MinimallyLogged"></a>Vorgänge, für die eine minimale Protokollierung möglich ist  
+##  <a name="operations-that-can-be-minimally-logged"></a><a name="MinimallyLogged"></a>Vorgänge, für die eine minimale Protokollierung möglich ist  
  Bei der*minimalen Protokollierung* werden nur die Informationen protokolliert, die zum Wiederherstellen der Transaktion ohne Unterstützung der Zeitpunktwiederherstellung erforderlich sind. In diesem Thema werden die Vorgänge aufgeführt, die unter dem massenprotokollierten Wiederherstellungsmodell minimal protokolliert werden (sowie unter dem einfachen Wiederherstellungsmodell, es sei denn, es wird eine Sicherung ausgeführt).  
   
 > [!NOTE]  
@@ -135,9 +135,9 @@ ms.locfileid: "79289408"
     -   Neuerstellungen neuer Heaps mit DROP INDEX (falls zutreffend).  
   
         > [!NOTE]  
-        >  Die Aufhebung der Zuordnung von Index Seiten während einer [Drop Index](/sql/t-sql/statements/drop-index-transact-sql) Operation wird immer vollständig protokolliert.  
+        >  Aufhebungen von Indexseitenzuordnungen während eines [DROP INDEX](/sql/t-sql/statements/drop-index-transact-sql) -Vorgangs werden immer vollständig protokolliert.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
  `Managing the transaction log`  
   
 -   [Verwalten der Größe der Transaktionsprotokolldatei](manage-the-size-of-the-transaction-log-file.md)  
@@ -153,10 +153,10 @@ ms.locfileid: "79289408"
 -  [Wiederherstellen einer Transaktionsprotokollsicherung](../backup-restore/restore-a-transaction-log-backup-sql-server.md)   
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Steuern der Transaktionsdauerhaftigkeit](control-transaction-durability.md)   
- [Voraussetzungen für die minimale Protokollierung beim Massenimport](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
+ [Steuern der Transaktions Dauerhaftigkeit](control-transaction-durability.md)   
+ [Voraussetzungen für die minimale Protokollierung beim Massen Import](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md)   
  [Sichern und Wiederherstellen von SQL Server-Datenbanken](../backup-restore/back-up-and-restore-of-sql-server-databases.md)   
- [Datenbankprüfpunkte &#40;SQL Server&#41;](database-checkpoints-sql-server.md)   
+ [Daten Bank Prüfpunkte &#40;SQL Server&#41;](database-checkpoints-sql-server.md)   
  [Anzeigen oder Ändern der Eigenschaften einer Datenbank](../databases/view-or-change-the-properties-of-a-database.md)   
  [Wiederherstellungsmodelle &#40;SQL Server&#41;](../backup-restore/recovery-models-sql-server.md)  
   

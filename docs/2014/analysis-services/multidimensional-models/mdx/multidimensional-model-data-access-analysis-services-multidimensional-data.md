@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0d6bea885a03d09da28d5f49ada36cf17375a507
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79217146"
 ---
 # <a name="multidimensional-model-data-access-analysis-services---multidimensional-data"></a>Datenzugriff auf mehrdimensionale Modelle (Analysis Services – mehrdimensionale Daten)
@@ -36,9 +36,9 @@ ms.locfileid: "79217146"
   
  [Abfrage Sprachen](#bkmk_querylang)  
   
- [Programmgesteuerte Schnittstellen](#bkmk_api)  
+ [Befehlsorientierte Benutzerschnittstellen](#bkmk_api)  
   
-##  <a name="bkmk_clientapps"></a>Client Anwendungen  
+##  <a name="client-applications"></a><a name="bkmk_clientapps"></a>Client Anwendungen  
  Obwohl Analysis Services Schnittstellen bieten, mit denen Sie mehrdimensionale Datenbanken programmgesteuert erstellen oder integrieren können, ist es ein gängigerer Ansatz, vorhandene Clientanwendungen von Microsoft und anderen Softwareanbietern zu verwenden, die über integrierten Datenzugriff auf Analysis Services-Daten verfügen.  
   
  Die folgenden Microsoft-Anwendungen unterstützen systemeigene Verbindungen zu mehrdimensionalen Daten.  
@@ -60,7 +60,7 @@ ms.locfileid: "79217146"
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
  Für Datenbankadministratoren ist SQL Server Management Studio eine integrierte Umgebung zum Verwalten der SQL Server-Instanzen, einschließlich Instanzen von Analysis Services und mehrdimensionalen Datenbanken. Weitere Informationen finden Sie im Artikel über [SQL Server Management Studio](../../../ssms/sql-server-management-studio-ssms.md) und unter [Verbindung mit Analysis Services herstellen](../../instances/connect-to-analysis-services.md).  
   
-##  <a name="bkmk_querylang"></a>Abfrage Sprachen  
+##  <a name="query-languages"></a><a name="bkmk_querylang"></a>Abfrage Sprachen  
  MDX ist eine Abfrage- und Berechnungssprache nach Branchenstandard, die zum Abrufen von Daten aus OLAP-Datenbanken verwendet wurden. In Analysis Services ist MDX die Abfragesprache, die zum Abrufen von Daten verwendet wird, aber auch Datendefinition und Datenbearbeitung unterstützt. MDX-Editoren werden in SQL Server Management Studio, Reporting Services und SQL Server Data Tools eingebaut. Sie können Ad-hoc-Anfragen oder wiederverwendbare Skripts mithilfe der MDX-Editoren erstellen, wenn der Datenvorgang wiederholbar ist.  
   
  Einige Tools und Anwendungen, z. B. Excel, fragen mithilfe von MDX-Konstrukten intern eine Analysis Services-Datenquelle ab. Sie können MDX auch programmgesteuert verwenden, indem Sie die MDX-Anweisung in eine XMLA-Ausführungs-Anforderung einschließen.  
@@ -69,13 +69,13 @@ ms.locfileid: "79217146"
   
  [Abfragen von mehrdimensionalen Daten mit MDX](querying-multidimensional-data-with-mdx.md)  
   
- [Wichtige Konzepte in MDX-&#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
+ [Schlüsselkonzepte in MDX &#40;Analysis Services&#41;](../key-concepts-in-mdx-analysis-services.md)  
   
- [Grundlagen der MDX-Abfrage &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
+ [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](mdx-query-fundamentals-analysis-services.md)  
   
- [Grundlagen der MDX-Skripterstellung &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
+ [Grundlegendes zu MDX-Skripts &#40;Analysis Services&#41;](mdx-scripting-fundamentals-analysis-services.md)  
   
-##  <a name="bkmk_api"></a>Programmgesteuerte Schnittstellen  
+##  <a name="programmatic-interfaces"></a><a name="bkmk_api"></a>Programmgesteuerte Schnittstellen  
  Wenn Sie eine benutzerdefinierte Anwendung erstellen, die mehrdimensionale Daten verwendet, wird der Ansatz zum Aufrufen der Daten wahrscheinlich in eine der folgenden Kategorien fallen:  
   
 -   **XMLA**: Verwenden Sie XMLA, wenn Kompatibilität mit einer Vielzahl von Betriebssystemen und Protokollen erforderlich ist. XMLA bietet die größte Flexibilität, aber oft auf Kosten einer verbesserten Leistung und der Programmierbarkeit.  
@@ -86,7 +86,7 @@ ms.locfileid: "79217146"
   
  Die folgende Tabelle enthält weitere Details und Links zu den Clientbibliotheken, die zum Verbinden von Analysis Services mit einer benutzerdefinierten Anwendung verwendet werden.  
   
-|Schnittstelle|Beschreibung|  
+|Interface|BESCHREIBUNG|  
 |---------------|-----------------|  
 |Analysis Services Management Objects (AMO)|AMO ist das primäre Objektmodell zum Verwalten von Analysis Services-Instanzen und mehrdimensionalen Datenbanken in Code. SQL Server Management Studio beispielsweise verwendet AMO zur Unterstützung von Server- und Datenbankverwaltung. Weitere Informationen finden Sie unter [Entwickeln mit Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo).|  
 |ADOMD.NET|ADOMD.NET ist das primäre Objektmodell, das mehrdimensionale Daten in benutzerdefinierten Anwendungen erstellt und aufruft. Sie können ADOMD.NET in einer verwalteten Clientanwendung verwenden, um [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Informationen mithilfe der Schnittstellen für den Microsoft .NET Framework-Datenzugriff abzurufen. Weitere Informationen finden Sie unter [Entwickeln mit ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net) und [ADOMD.NET Client-Programmierung](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/adomd-net-client-programming).|  

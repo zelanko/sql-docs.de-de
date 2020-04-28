@@ -1,5 +1,5 @@
 ---
-title: Planen des Berichtsentwurfs und der Berichtsbereitstellung (Reporting Services 2014) | Microsoft Docs
+title: Planen des Berichtsentwurfs und der Berichts Bereitstellung (Reporting Services 2014) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -11,26 +11,26 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d3047dba3e54d384f2f52733e8cf49308b793190
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380821"
 ---
 # <a name="plan-for-report-design-and-report-deployment-reporting-services-2014"></a>Planen von Berichtsentwurf und -bereitstellung (Reporting Services 2014)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] bietet mehrere Ansätze zum Erstellen und Bereitstellen von Berichten. Dieses Thema soll Sie bei der Planung für eine Berichterstellungsumgebung und einen Berichtsserver unterstützen, die reibungslos zusammenarbeiten. Dieses Thema bietet eine Übersicht über die Unterstützung der Berichtsdefinition durch [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Komponenten. Eine Berichtsdefinition ist eine XML-Datei, die in der Berichtsdefinitionssprache (Report Definition Language, RDL) oder in der Berichtsdefinitionssprache für Clients (Report Definition Language for Clients, RDLC) geschrieben ist. Jede Berichtsdefinition entspricht einer bestimmten Schemaversion, die am Anfang der Datei aufgelistet ist.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] bietet verschiedene Vorgehensweisen zum Erstellen und Bereitstellen von Berichten. Dieses Thema soll Sie bei der Planung für eine Berichterstellungsumgebung und einen Berichtsserver unterstützen, die reibungslos zusammenarbeiten. Dieses Thema bietet eine Übersicht über die Unterstützung der Berichtsdefinition durch [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Komponenten. Eine Berichtsdefinition ist eine XML-Datei, die in der Berichtsdefinitionssprache (Report Definition Language, RDL) oder in der Berichtsdefinitionssprache für Clients (Report Definition Language for Clients, RDLC) geschrieben ist. Jede Berichtsdefinition entspricht einer bestimmten Schemaversion, die am Anfang der Datei aufgelistet ist.  
   
  RDL-Dateien werden im Berichts-Designer in [!INCLUDE[ss_dtbi](../includes/ss-dtbi-md.md)] -Projekten erstellt, sowie im Berichts-Generator 3.0. RDLC-Dateien werden mit den ReportViewer-Steuerelementen erstellt, die in [!INCLUDE[vsprvs](../includes/vsprvs-md.md)]enthalten sind.  
   
  Inhalte dieses Themas:  
   
--   [RDL-Schemaversionen](#bkmk_rdl_schema_versions)  
+-   [RDL-Schema Versionen](#bkmk_rdl_schema_versions)  
   
--   [Berichtsserver- und RDL-Schemaunterstützung](#bkmk_report_server_rdl_schema_support)  
+-   [Unterstützung von Berichts Servern und RDL-Schemas](#bkmk_report_server_rdl_schema_support)  
   
--   [Berichtserstellungs- und Bereitstellungsunterstützung](#bkmk_report_authoring_and_deployment)  
+-   [Berichterstellung und Bereitstellungs Unterstützung](#bkmk_report_authoring_and_deployment)  
   
--   [ReportViewer-Steuerelemente](#bkmk_reportviewer)  
+-   [Report Viewer-Steuerelemente](#bkmk_reportviewer)  
   
 ##  <a name="rdl-schema-versions"></a><a name="bkmk_rdl_schema_versions"></a> RDL-Schemaversionen  
  In der folgenden Tabelle sind alle verfügbaren Schemaversionen und die in diesem Thema verwendeten Abkürzungen der Schemaversionen aufgeführt:  
@@ -69,7 +69,7 @@ ms.locfileid: "80380821"
   
 |Berichtsserverversion|RDL-Schemaversion|  
 |---------------------------|------------------------|  
-|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> oder<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> oder<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|2010 RDL<br /><br /> 2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL|  
+|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> Oder<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> Oder<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|2010 RDL<br /><br /> 2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL|  
 |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|2008 RDL<br /><br /> 2005 RDL<br /><br /> 2000 RDL|  
 |[!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]|2005 RDL<br /><br /> 2000 RDL|  
   
@@ -88,7 +88,7 @@ ms.locfileid: "80380821"
   
 |Berichterstellungsumgebung|Erstellte RDL-Version|Bereitstellen der RDL-Version|Bereitstellen für Berichtsserverversionen|  
 |---------------------------|--------------------------|------------------------|--------------------------------------|  
-|Berichts-Designer in SQL Server 2014 Data Tools – Business Intelligence für Microsoft Visual Studio 2012 im Microsoft Download Center.<br /><br /> oder<br /><br /> Berichts-Designer in SQL Server 2012 Data Tools – Business Intelligence für Microsoft Visual Studio 2012 im Microsoft Download Center.<br /><br /> oder<br /><br /> Berichts-Designer in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Data Tools, enthalten in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].|Autoren 2010 RDL. Beim Öffnen von vorhandenem RDL:<br /><br /> 2000 RDL, aktualisiert auf 2010 RDL<br /><br /> 2005 RDL, aktualisiert auf 2010 RDL<br /><br /> 2008 RDL, aktualisiert auf 2010 RDL|2008 RDL<br /><br /> 2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
+|Berichts-Designer in SQL Server 2014 Data Tools – Business Intelligence für Microsoft Visual Studio 2012 im Microsoft Download Center.<br /><br /> Oder<br /><br /> Berichts-Designer in SQL Server 2012 Data Tools – Business Intelligence für Microsoft Visual Studio 2012 im Microsoft Download Center.<br /><br /> Oder<br /><br /> Berichts-Designer in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] Data Tools, enthalten in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].|Autoren 2010 RDL. Beim Öffnen von vorhandenem RDL:<br /><br /> 2000 RDL, aktualisiert auf 2010 RDL<br /><br /> 2005 RDL, aktualisiert auf 2010 RDL<br /><br /> 2008 RDL, aktualisiert auf 2010 RDL|2008 RDL<br /><br /> 2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |Berichts-Designer in [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] Business Intelligence Development Studio|Autoren 2010 RDL. Beim Öffnen von vorhandenem RDL:<br /><br /> 2000 RDL, aktualisiert auf 2010 RDL<br /><br /> 2005 RDL, aktualisiert auf 2010 RDL<br /><br /> 2008 RDL, aktualisiert auf 2010 RDL|2008 RDL<br /><br /> 2010 RDL|[!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]|  
 |Berichts-Designer in [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] Business Intelligence Development Studio|Autoren 2008 RDL. Beim Öffnen von vorhandenem RDL:<br /><br /> 2000 RDL, aktualisiert auf 2008 RDL<br /><br /> 2005 RDL, aktualisiert auf 2008 RDL|2008 RDL|[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|  
 |[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] Berichts-Generator|Autoren 2010 RDL. Beim Öffnen von vorhandenem RDL:<br /><br /> 2000 RDL, aktualisiert auf 2010 RDL<br /><br /> 2005 RDL, aktualisiert auf 2010 RDL<br /><br /> 2008 RDL, aktualisiert auf 2010 RDL|2010 RDL|[!INCLUDE[ssSQL14](../includes/sssql14-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]<br /><br /> [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|  
@@ -100,15 +100,15 @@ ms.locfileid: "80380821"
   
 -   [Microsoft SQL Server Data Tools – Business Intelligence für Visual Studio 2012](https://www.microsoft.com/download/details.aspx?id=36843).  
   
-##  <a name="reportviewer-controls"></a><a name="bkmk_reportviewer"></a>ReportViewer-Steuerelemente  
+##  <a name="reportviewer-controls"></a><a name="bkmk_reportviewer"></a>Report Viewer-Steuerelemente  
  Ein [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] ReportViewer-Steuerelement kann einen RDLC-Bericht im lokalen Vorschaumodus oder im Remotemodus anzeigen; das Steuerelement kann eine RDL-Datei anzeigen, die auf einem [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Berichtsserver gehostet wird. In der folgenden Tabelle sind die RDL-Versionen aufgelistet, die von den ReportViewer-Steuerelementen für die lokale Verarbeitung (.rdlc) unterstützt werden. Informationen zur serverseitigen RDL-Unterstützung finden Sie im Abschnitt [Unterstützung von Berichtsservern und RDL-Schemas](#bkmk_report_server_rdl_schema_support).  
   
 |ReportViewer-Steuerelement im Produkt|RDL-Version für lokale Vorschau|  
 |-------------------------------------|--------------------------------------|  
-|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> oder<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> oder<br /><br /> [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]|2008 RDL|  
-|[!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)]<br /><br /> oder<br /><br /> [!INCLUDE[vsOrcas](../includes/vsorcas-md.md)]|2005 RDL|  
+|[!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2013<br /><br /> Oder<br /><br /> [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] 2012<br /><br /> Oder<br /><br /> [!INCLUDE[vs_dev10_long](../includes/vs-dev10-long-md.md)]|2008 RDL|  
+|[!INCLUDE[vsprvslong](../includes/vsprvslong-md.md)]<br /><br /> Oder<br /><br /> [!INCLUDE[vsOrcas](../includes/vsorcas-md.md)]|2005 RDL|  
   
- Weitere Informationen finden Sie unter   
+ Weitere Informationen finden Sie unter  
   
 -   [Konvertieren von RDLC-Dateien in RDL-Dateien](https://msdn.microsoft.com/library/ms252109.aspx)  
   
@@ -116,9 +116,9 @@ ms.locfileid: "80380821"
   
 -   [Hinzufügen und Konfigurieren der ReportViewer-Steuerelemente](https://msdn.microsoft.com/library/ms252104.aspx)  
   
-## <a name="see-also"></a>Siehe auch  
- [Berichte, Berichtsteile und Berichtsdefinitionen &#40;Berichts-Generator und SSRS-&#41;](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Reporting Services-Tools](tools/reporting-services-tools.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Berichte, Berichts Teile und Berichts Definitionen &#40;Berichts-Generator und SSRS&#41;](report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
+ [Reporting Services Tools](tools/reporting-services-tools.md)   
  [Berichtsdefinitionssprache (SSRS)](reports/report-definition-language-ssrs.md)  
   
   

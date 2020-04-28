@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 74f81deb2d9f5e4fcb770217a228a8b081098d89
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289138"
 ---
 # <a name="log-operations-in-analysis-services"></a>Protokollvorgänge in Analysis Services
@@ -28,7 +28,7 @@ ms.locfileid: "79289138"
   
 -   [Allgemeine Informationen zu Konfigurationseinstellungen für Protokolldateien](#bkmk_general)  
   
--   [Msmdsrv-Dienst Protokolldatei](#bkmk_msmdsrv)  
+-   [MSMDSRV-Dienstprotokolldatei](#bkmk_msmdsrv)  
   
 -   [Abfrageprotokolle](#bkmk_querylog)  
   
@@ -39,10 +39,10 @@ ms.locfileid: "79289138"
 > [!NOTE]  
 >  Wenn Sie Informationen zur Protokollierung suchen, interessiert Sie möglicherweise auch die Ablaufverfolgung von Vorgängen, die Verarbeitungs- und Abfrageausführungspfade anzeigen. Ablaufverfolgungsobjekte für die Ad-hoc- und die andauernde Ablaufverfolgung (z.B. Überwachung des Cubezugriffs), sowie Empfehlungen dazu, wie Sie Flight Recorder, SQL Server Profiler und xEvents optimal verwenden, finden Sie über die Links auf dieser Seite: [Überwachen einer Analysis Services-Instanz](monitor-an-analysis-services-instance.md).  
   
-##  <a name="bkmk_location"></a>Speicherort und Arten von Protokollen  
+##  <a name="location-and-types-of-logs"></a><a name="bkmk_location"></a>Speicherort und Arten von Protokollen  
  Analysis Services stellt die unten beschriebenen Protokolle zur Verfügung.  
   
-|Dateiname oder Speicherort|type|Syntaxelemente|Standardmäßig ein|  
+|Dateiname oder Speicherort|Typ|Verwendet für|Standardmäßig ein|  
 |---------------------------|----------|--------------|-------------------|  
 |Msmdsrv.log|Fehlerprotokoll|Routinemäßige Überwachung und grundlegende Problembehandlung|Ja|  
 |OlapQueryLog-Tabelle in einer relationalen Datenbank|Abfrageprotokoll|Sammeln von Eingaben für den Assistenten für die Nutzungsoptimierung|Nein|  
@@ -50,20 +50,19 @@ ms.locfileid: "79289138"
   
  Es wird dringend empfohlen, den folgenden Link für zusätzliche Informationsquellen zu nutzen, die in diesem Thema nicht behandelt werden: [Initial data collection tips from Microsoft Support](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)(Tipps vom Microsoft Support zur anfänglichen Datensammlung).  
   
-##  <a name="bkmk_general"></a>Allgemeine Informationen zu Konfigurationseinstellungen für Protokolldateien  
+##  <a name="general-information-on-log-file-configuration-settings"></a><a name="bkmk_general"></a> Allgemeine Informationen zu den Konfigurationseinstellungen der Protokolldatei  
  Sie finden Abschnitte für jedes Protokoll in der Serverkonfigurationsdatei "msmdsrv.ini" im Verzeichnis "\Programme\Microsoft SQL Server\MSAS12.MSSQLSERVER\OLAP\Config". Anweisungen zum Bearbeiten der Datei finden Sie unter [Konfigurieren von Server Eigenschaften in Analysis Services](../server-properties/server-properties-in-analysis-services.md) .  
   
  Wenn möglich wird empfohlen, die Eigenschaften für die Protokollierung auf der Servereigenschaftenseite von Management Studio festzulegen. In einigen Fällen müssen Sie die Datei "msmdsrv.ini" jedoch direkt bearbeiten, um Einstellungen zu konfigurieren, die nicht in den Verwaltungstools angezeigt werden.  
   
  ![Abschnitt der Config-Datei mit Protokolleinstellungen](../media/ssas-logfilesettings.png "Abschnitt der Config-Datei mit Protokolleinstellungen")  
   
-##  <a name="bkmk_msmdsrv"></a>Msmdsrv-Dienst Protokolldatei  
+##  <a name="msmdsrv-service-log-file"></a><a name="bkmk_msmdsrv"></a>Msmdsrv-Dienst Protokolldatei  
  Analysis Services protokolliert Servervorgänge in der Datei „msmdsrv.log“ (eine pro Instanz) im Verzeichnis „\Programme\Microsoft SQL Server\\<Instanz\>\Olap\Log“.  
   
  Diese Protokolldatei wird bei jedem Dienstneustart geleert. In früheren Versionen mussten Administratoren manchmal den Dienst neu starten, nur um die Protokolldatei zu leeren, bevor sie so groß wurde, dass sie nicht mehr verwendet werden konnte. Dies ist nicht mehr erforderlich. Mit den Konfigurationseinstellungen, die in SQL Server 2012 SP2 und höher eingeführt wurden, erhalten Sie die Kontrolle über die Größe der Protokolldatei und des dazugehörigen Verlaufs:  
   
--   
-  `MaxFileSizeMB` gibt die maximale Protokolldateigröße in Megabytes an. Der Standardwert ist 256. Ein gültiger Ersatzwert muss eine positive ganze Zahl sein. Wenn `MaxFileSizeMB` erreicht ist, benennt Analysis Services die aktuelle Datei in "msmdsrv{aktueller Zeitstempel}.log" um und beginnt eine neue Datei "msmdsrv.log".  
+-   `MaxFileSizeMB` gibt die maximale Protokolldateigröße in Megabytes an. Der Standardwert ist 256. Ein gültiger Ersatzwert muss eine positive ganze Zahl sein. Wenn `MaxFileSizeMB` erreicht ist, benennt Analysis Services die aktuelle Datei in "msmdsrv{aktueller Zeitstempel}.log" um und beginnt eine neue Datei "msmdsrv.log".  
   
 -   `MaxNumberFiles`Gibt die Aufbewahrung älterer Protokolldateien an. Der Standardwert ist 0 (deaktiviert). Sie können den Wert in eine positive ganze Zahl ändern, um Versionen der Protokolldatei beizubehalten. Wenn `MaxNumberFiles` erreicht ist, löscht Analysis Services die Datei mit dem ältesten Zeitstempel im Namen.  
   
@@ -93,11 +92,11 @@ ms.locfileid: "79289138"
   
 4.  Bearbeiten Sie die Werte bei Bedarf.  
   
-5.  Speichern Sie die Datei .  
+5.  Speichern Sie die Datei.  
   
 6.  Starten Sie den Dienst neu.  
   
-##  <a name="bkmk_querylog"></a>Abfrageprotokolle  
+##  <a name="query-logs"></a><a name="bkmk_querylog"></a> Abfrageprotokolle  
  Der Begriff "Abfrageprotokoll" ist ein wenig irreführend, da hierin keine der MDX- oder DAX-Abfrageaktivitäten Ihrer Benutzer protokolliert werden. Stattdessen sammelt dieses Protokoll Daten zu von Analysis Services generierten Abfragen, die anschließend als Dateneingabe im verwendungsbasierten Optimierung-Assistenten verwendet werden. Die im Abfrageprotokoll gesammelten Daten dienen nicht zur direkten Analyse. Insbesondere werden die Datasets in Bitarrays beschrieben, wobei eine 0 oder 1 angibt, welche Teile des Datasets in der Abfrage enthalten sind. Diese Daten sind für den Assistenten vorgesehen.  
   
  Bei der Abfrageüberwachung und Problembehandlung verwenden viele Entwickler und Administratoren das Communitytool **ASTrace**zum Überwachen von Abfragen. Sie können auch SQL Server Profiler, xEvents oder eine Analysis Services-Ablaufverfolgung verwenden. Links zu weiteren Informationen finden Sie unter [Überwachen einer Instanz von Analysis Services](monitor-an-analysis-services-instance.md) .  
@@ -126,7 +125,7 @@ ms.locfileid: "79289138"
   
  Weitere Informationen zur Abfrageprotokollkonfiguration finden Sie unter [Konfigurieren des Abfrageprotokolls von Analysis Services](https://technet.microsoft.com/library/Cc917676) . Dieses Dokument ist zwar ziemlich alt, die Abfrageprotokollkonfiguration hat sich jedoch in neueren Versionen nicht geändert, und die darin enthaltenen Informationen gelten weiterhin.  
   
-##  <a name="bkmk_mdmp"></a>Minidumpdateien (. mdmp)  
+##  <a name="mini-dump-mdmp-files"></a><a name="bkmk_mdmp"></a> Miniabbilddateien (.mdmp)  
  Abbilddateien erfassen Daten, die für die Analyse außergewöhnlicher Ereignisse verwendet werden. Analysis Services generiert automatisch Miniabbilder (.mdmp) als Reaktion auf einen Serverabsturz oder bei Ausnahme- und einigen Konfigurationsfehlern. Das Feature ist aktiviert, sendet aber Absturzberichte nicht automatisch.  
   
  Absturzberichte werden über den Abschnitt "Exception" in der Datei "Msmdsrv.ini" konfiguriert. Diese Einstellungen steuern die Generierung von Abbilddateien des Arbeitsspeichers. Der folgende Codeausschnitt zeigt die Standardwerte:  
@@ -153,27 +152,25 @@ ms.locfileid: "79289138"
   
  Die Konfigurationseinstellung, die wahrscheinlich geändert werden muss, ist die `CreateAndSendCrashReports`-Einstellung, die bestimmt, ob eine Speicherabbilddatei generiert wird.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |0|Deaktiviert die Speicherabbilddatei. Alle anderen Einstellungen im Abschnitt "Exception" werden ignoriert.|  
 |1|(Standard) Aktiviert die Speicherabbilddatei, sendet sie aber nicht.|  
 |2|Aktiviert das Feature und sendet automatisch einen Fehlerbericht an Microsoft.|  
   
- 
-  `CrashReportsFolder` ist der Speicherort der Abbilddateien. Standardmäßig werden MDMP-Dateien und die zugehörigen Protokolldatensätze im Ordner "\Olap\Log" gespeichert.  
+ `CrashReportsFolder` ist der Speicherort der Abbilddateien. Standardmäßig werden MDMP-Dateien und die zugehörigen Protokolldatensätze im Ordner "\Olap\Log" gespeichert.  
   
- 
-  `SQLDumperFlagsOn` wird verwendet, um ein vollständiges Speicherabbild zu generieren. Vollständige Speicherabbilder sind standardmäßig nicht aktiviert. Sie können diese Eigenschaft auf `0x34` festlegen.  
+ `SQLDumperFlagsOn` wird verwendet, um ein vollständiges Speicherabbild zu generieren. Vollständige Speicherabbilder sind standardmäßig nicht aktiviert. Sie können diese Eigenschaft auf `0x34` festlegen.  
   
  Die folgenden Links enthalten weitere Hintergrundinformationen:  
   
--   [Genauere Betrachtung von SQL Server mithilfe von Minidumps](https://blogs.msdn.com/b/sqlcat/archive/2009/09/11/looking-deeper-into-sql-server-using-minidumps.aspx)  
+-   [Tiefere Einblicke in SQL Server mithilfe von Miniabbildern](https://blogs.msdn.com/b/sqlcat/archive/2009/09/11/looking-deeper-into-sql-server-using-minidumps.aspx)  
   
--   [Erstellen einer Dumpdatei im Benutzermodus](https://support.microsoft.com/kb/931673)  
+-   [Erstellen einer Abbilddatei für den Benutzermodus](https://support.microsoft.com/kb/931673)  
   
--   [Verwenden des Hilfsprogramms "SQLDumper. exe" zum Generieren einer Dumpdatei in SQL Server](https://support.microsoft.com/kb/917825)  
+-   [Verwenden des Hilfsprogramms Sqldumper.exe zum Erstellen einer Abbilddatei in SQL Server](https://support.microsoft.com/kb/917825)  
   
-##  <a name="bkmk_tips"></a>Tipps und bewährte Methoden  
+##  <a name="tips-and-best-practices"></a><a name="bkmk_tips"></a>Tipps und bewährte Methoden  
  In diesem Abschnitt werden kurz die Tipps aus diesem Artikel zusammengefasst.  
   
 -   Konfigurieren Sie die Datei "msmdsrv.log", um die Größe und Anzahl der msmdsrv-Protokolldateien zu steuern. Die Einstellungen sind nicht standardmäßig aktiviert, fügen Sie diese daher nach der Installation hinzu. Weitere Informationen finden Sie in diesem Thema unter [MSMDSRV-Dienstprotokolldatei](#bkmk_msmdsrv) .  

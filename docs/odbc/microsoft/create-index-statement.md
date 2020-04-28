@@ -1,5 +1,5 @@
 ---
-title: CREATE INDEX-Anweisung | Microsoft Docs
+title: CREATE INDEX-Anweisung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,21 +14,21 @@ ms.assetid: 69438247-eef3-44c5-bef2-acef4e146f41
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: c6aa512ff789fcbd00f45f84fb194d4ab3f5da07
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81280970"
 ---
 # <a name="create-index-statement"></a>CREATE INDEX-Anweisung
-Die Syntax der CREATE INDEX-Anweisung lautet:  
+Die Syntax der CREATE INDEX-Anweisung lautet wie folgt:  
   
- CREATE [UNIQUE] INDEX *Indexname* ON *Tabellenname* (*Spaltenbezeichner* [ASC][DESC][, *Spaltenbezeichner* [ASC][DESC]...]) WITH \< *Indexoptionsliste*>  
+ Create [Unique] Index *Index-Name* für *Tabellenname* (*Spalten Bezeichner* [ASC] [ABSC] [, *Spalten Bezeichner* [ASC] [de]...]) WITH \< *Index-Optionsliste*>  
   
- Wobei \< *Indexoptionsliste*> sein kann: PRIMARY &#124; DISALLOW NULL &#124; IGNORE NULL  
+ die \< *Liste der Index Optionen* kann> lauten: primär &#124; NULL nicht zulassen &#124; NULL ignorieren.  
   
- Nur der Microsoft Access-Treiber verwendet die Indexoptionen DISALLOW NULL und IGNORE NULL. Die Treiber dBASE und Paradox akzeptieren die Syntax, ignorieren jedoch das Vorhandensein einer der beiden Optionen.  
+ Nur der Microsoft Access-Treiber verwendet die Optionen unallow NULL und NULL Index ignorieren. Der dBASE-und der Paradox-Treiber akzeptieren die Syntax, ignorieren jedoch das vorhanden sein einer der beiden Optionen.  
   
- Wenn der Paradox-Treiber verwendet wird, erstellt die CREATE INDEX-Anweisung Paradox Primärschlüsseldateien und sekundäre Dateien.  
+ Wenn der Paradox-Treiber verwendet wird, werden von der CREATE INDEX-Anweisung paradoxe Primärschlüssel Dateien und sekundäre Dateien erstellt.  
   
- Diese Anweisung wird von den Microsoft Excel- oder Texttreibern nicht unterstützt.
+ Diese Anweisung wird von Microsoft Excel oder Text Treibern nicht unterstützt.

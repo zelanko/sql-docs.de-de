@@ -1,5 +1,5 @@
 ---
-title: Dokumentation für SQL Server 2014-Tools und Add-In-Komponenten | Microsoft Docs
+title: Dokumentation zu den Tools und Add-in-Komponenten von SQL Server 2014 | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 03/27/2020
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b79bc4a06b7a69b4c19946c08de63f1dbfebf72b
-ms.sourcegitcommit: fc5b757bb27048a71bb39755648d5cefe25a8bc6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/30/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80402571"
 ---
 # <a name="documentation-for-sql-server-2014-tools-and-add-in-components"></a>Dokumentation für SQL Server 2014-Tools und -Add-Ins
@@ -35,5 +35,5 @@ ms.locfileid: "80402571"
 |[Microsoft ODBC Driver 11 für SQL Server unter Windows](https://go.microsoft.com/fwlink/?LinkId=299183)|Microsoft ODBC Driver 11 für Windows ist ein eigenständiger Treiber, der eine Anwendungsprogrammierschnittstelle (Application Programming Interface, API) bereitstellt, die die ODBC-Standardschnittstellen für Microsoft Windows implementiert.|  
 |[PowerPivot für SharePoint](https://go.microsoft.com/fwlink/?LinkId=299184)|PowerPivot für SharePoint ist ein Analysis Services-Server, der im SharePoint-Modus ausgeführt wird.|  
   
-## <a name="see-also"></a>Siehe auch  
- [SQL Server 2014-Dokumentation](../2014-toc/index.yml)  
+## <a name="see-also"></a>Weitere Informationen  
+ [Dokumentation zu SQL Server 2014](../2014-toc/index.yml)  

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbe78979c393490a52e1051fe158ae138f93dcc
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289698"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>Erteilen von T-SQL-Berechtigungen für parallele Data Warehouse
@@ -146,7 +146,7 @@ Wenn Sie einer Person die Berechtigung erteilen möchten, alle Datenbanken auf d
 ## <a name="grant-permissions-to-manage-logins-users-and-database-roles"></a>Erteilen von Berechtigungen zum Verwalten von Anmeldungen, Benutzern und Daten bankrollen
 In diesem Abschnitt wird beschrieben, wie Berechtigungen zum Verwalten von Anmeldungen, Datenbankbenutzern und Daten bankrollen erteilt werden.  
   
-### <a name="PermsAdminConsole"></a>Erteilen von Berechtigungen zum Verwalten von Anmeldungen  
+### <a name="grant-permissions-to-manage-logins"></a><a name="PermsAdminConsole"></a>Erteilen von Berechtigungen zum Verwalten von Anmeldungen  
 **Hinzufügen oder Verwalten von Anmeldungen**  
   
 Die folgenden SQL-Anweisungen erstellen einen Anmelde Namen mit dem Namen "kimabercrombie", der neue Anmeldungen mithilfe der [Create Login](../t-sql/statements/create-login-transact-sql.md) -Anweisung erstellen und vorhandene Anmeldungen mithilfe der [Alter Login](../t-sql/statements/alter-login-transact-sql.md) -Anweisung ändern kann.  
@@ -220,7 +220,7 @@ For a list of all permissions, see [Permissions: GRANT, DENY, REVOKE &#40;SQL Se
 ## <a name="grant-permissions-to-monitor-the-appliance"></a>Erteilen von Berechtigungen zum Überwachen der Appliance
 Die SQL Server PDW Appliance kann entweder über die Verwaltungskonsole oder über SQL Server PDW System Sichten überwacht werden. Anmeldungen erfordern die Berechtigung Server **Status anzeigen** auf Serverebene, um das Gerät zu überwachen. Für-Anmeldungen ist die Berechtigung **ALTER ANY Connection** zum Beenden von Verbindungen über die Verwaltungskonsole oder den **Kill** -Befehl erforderlich. Informationen zu den Berechtigungen, die für die Verwendung der-Verwaltungskonsole erforderlich sind, finden [Sie unter Erteilen von Berechtigungen für die Verwendung der Verwaltungskonsole &#40;SQL Server PDW&#41;](#grant-permissions-to-use-the-admin-console).  
   
-### <a name="PermsAdminConsole"></a>Erteilen der Berechtigung zum Überwachen der Appliance mithilfe von System Sichten  
+### <a name="grant-permission-to-monitor-the-appliance-by-using-system-views"></a><a name="PermsAdminConsole"></a>Erteilen der Berechtigung zum Überwachen der Appliance mithilfe von System Sichten  
 Die folgenden SQL-Anweisungen erstellen eine Anmeldung `monitor_login` mit dem Namen und gewähren der `monitor_login` Anmeldung die **View Server State** -Berechtigung.  
   
 ```sql  
@@ -245,8 +245,8 @@ GO
   
 Informationen zum Erstellen von Administrator Anmeldungen finden Sie unter [Fixed Server Rollen](pdw-permissions.md#fixed-server-roles).  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 [CREATE LOGIN](../t-sql/statements/create-login-transact-sql.md)  
-[Benutzer erstellen](../t-sql/statements/create-user-transact-sql.md)  
-[Rolle erstellen](../t-sql/statements/create-role-transact-sql.md)  
-[Load](load-overview.md)  
+[CREATE USER](../t-sql/statements/create-user-transact-sql.md)  
+[CREATE ROLE](../t-sql/statements/create-role-transact-sql.md)  
+[Laden](load-overview.md)  

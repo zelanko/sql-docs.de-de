@@ -1,5 +1,5 @@
 ---
-title: Korrelationsnamen | Microsoft Docs
+title: Korrelations Namen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,14 +14,14 @@ ms.assetid: 76c36c6f-f8e1-4ece-a77b-611dde3bdd8a
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: dfe0655ace4bbd622dfb80b833f49562732394e2
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81280960"
 ---
 # <a name="correlation-names"></a>Korrelationsnamen
-Korrelationsnamen werden vollständig unterstützt, auch in der Tabellenliste. In der folgenden Zeichenfolge ist E1 beispielsweise der Korrelationsname für die Tabelle mit dem Namen Emp:  
+Korrelations Namen werden vollständig unterstützt, einschließlich in der Tabellenliste. In der folgenden Zeichenfolge ist E1 z. b. der Korrelations Name für die Tabelle mit dem Namen EMP:  
   
 ```  
 SELECT * FROM Emp E1   

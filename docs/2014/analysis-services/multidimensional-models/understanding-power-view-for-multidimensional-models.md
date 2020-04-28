@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 53c14ed48d2b95988b1d7d794e4ea711be659dd1
-ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79525461"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>Grundlegendes zu Power View für mehrdimensionale Modelle
@@ -29,7 +29,7 @@ ms.locfileid: "79525461"
  ![Architektur von Power View für mehrdimensionale Modelle](../media/daxmd-architecture.gif "Architektur von Power View für mehrdimensionale Modelle")  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
- **Server Anforderungen**  
+ **Serveranforderungen**  
   
 -   SQL Server 2014 Enterprise oder Business Intelligence Edition mit Analysis Services im mehrdimensionalen Modus.  
   
@@ -44,14 +44,14 @@ ms.locfileid: "79525461"
   
  In dieser Version unterstützen mehrdimensionale Modelle die Analyse und Visualisierung unter Verwendung von Power View im SharePoint-Modus. Es ist keine spezielle Konfiguration für die mehrdimensionalen Modelle erforderlich. Es gibt jedoch Unterschiede zwischen der Anzeige mehrdimensionaler Modellobjekte in Power View und anderen Clienttools wie Microsoft Excel und Microsoft Performance Point. Diese Version bietet keine Unterstützung für die Analyse und Visualisierung mehrdimensionaler Modelle mithilfe von Power View in Excel 2013.  
   
- **Native Unterstützung für DAX-Abfragen**  
+ **Systemeigene Unterstützung für DAX-Abfragen**  
   
  In dieser Version unterstützen mehrdimensionale Modelle neben gängigeren MDX-Abfragen auch DAX-Abfragen und -Funktionen. Einige DAX-Funktionen, wie PATH, sind nicht auf mehrdimensionale Modelle anwendbar. Unter [Data Analysis Expressions und MDX](https://msdn.microsoft.com/library/ff487170\(SQL.105\).aspx)finden Sie weiterführende Informationen zu DAX und eine Gegenüberstellung mit MDX.  
   
 ## <a name="multidimensional-to-tabular-object-mapping"></a>Zuordnung zwischen mehrdimensionalen und tabellarischen Objekten  
  Analysis Services bietet eine tabellarische Darstellung der Modellmetadaten eines mehrdimensionalen Modells. Objekte in einem mehrdimensionalen Modell werden in Power View als tabellarische Objekte und in "CSDL/out" als tabellarische Objekte mit BI-Anmerkungen dargestellt.  
   
- **Zusammenfassung der Objekt Zuordnung**  
+ **Übersicht der Objektzuordnung**  
   
 |Mehrdimensionales Objekt|Tabellarisches Objekt|  
 |-----------------------------|--------------------|  
@@ -74,7 +74,7 @@ ms.locfileid: "79525461"
   
  Measuregruppen in einem mehrdimensionalen Cube werden in der Power View-Feldliste als Tabellen mit dem Sigma-Zeichen (∑) dargestellt.  
   
- **Messen von Gruppen in der Power View-Feldliste**  
+ **Measuregruppen in der Power View-Feldliste**  
   
  ![Feldliste in Power View](../media/daxmd-powerviewfieldlist.gif "Feldliste in Power View")  
   
@@ -82,7 +82,7 @@ ms.locfileid: "79525461"
   
  Um komplexere mehrdimensionale Modelle zu vereinfachen, können Modellentwickler einen Satz von Measures oder KPIs in einem Cube definieren, der in einen Anzeigeordner eingefügt wird. Anzeigeordner und die darin enthaltenen Measures und KPIs können von Power View angezeigt werden.  
   
- **Measures und KPIs in einer Measure-Gruppe**  
+ **Measures und KPIs in einer Measuregruppe**  
   
  ![Measuregruppe in Power View-Feldliste](../media/daxmd-fieldlist-group.gif "Measuregruppe in Power View-Feldliste")  
   
@@ -99,14 +99,14 @@ ms.locfileid: "79525461"
 ## <a name="dimensions-attributes-and-hierarchies"></a>Dimensionen, Attribute und Hierarchien  
  Cubedimensionen werden in tabellarischen Metadaten als Tabellen verfügbar gemacht. In der Power View-Feldliste werden Dimensionsattribute als Spalten in Anzeigeordnern angezeigt.  Dimensionsattribute, deren AttributeHierarchyEnabled-Eigenschaft (vgl. das Birth Date-Attribut in der Customer-Dimension) oder AttributeHierarchyVisible-Eigenschaft auf False festgelegt ist, werden in der Power View-Feldliste nicht angezeigt. Hierarchien mit mehreren Ebenen oder Benutzerhierarchien (z. B. "Customer Geography" in der Customer-Dimension) werden in der Power View-Feldliste als Hierarchien verfügbar gemacht. Auf Hidden festgelegte UnknownMembers eines Dimensionsattributs werden in DAX-Abfragen und in Power View verfügbar gemacht.  
   
- **Dimension, Attribute und Hierarchien in SQL Server Data Tools (SSDT) und Power View Feldliste**  
+ **Dimensionen, Attribute und Hierarchien in SQL Server Data Tools (SSDT) und der Power View-Feldliste**  
   
  ![Dimensionen in SSDT und Power View-Feldliste](../media/daxmd-ssdt-dimensions.gif "Dimensionen in SSDT und Power View-Feldliste")  
   
 ### <a name="dimension-attribute-type"></a>Dimensionsattributtyp  
  Mehrdimensionale Modelle unterstützen die Zuordnung spezifischer Dimensionsattributtypen zu Dimensionsattributen. Die folgende Abbildung zeigt die Geography-Dimension mit den Dimensionsattributen City, State-Province, Country und Postal Code, denen geography-Typen zugeordnet sind. Diese werden in den tabellarischen Metadaten verfügbar gemacht. Da die Metadaten von Power View erkannt werden, sind Benutzer in der Lage, Kartenvisualisierungen zu erstellen. Dies ist an dem Kartensymbol erkennbar, das in der Geography-Table der Power View-Feldliste neben den Spalten City, Country, Postal Code und State-Province angezeigt wird.  
   
- **Geography-Typen von Dimensions Attributen in SSDT und Power View Feldliste**  
+ **Geography-Typen von Dimensionsattributen in SSDT und Power View-Feldliste**  
   
  ![geography-Typen, Dimensionsattribut](../media/daxmd-ssdt-attribute-geog-types.gif "geography-Typen, Dimensionsattribut")  
   
@@ -123,7 +123,7 @@ ms.locfileid: "79525461"
   
  Die folgende Abbildung zeigt einen Power View Bericht für einen Cube, der berechnete Zeit Intelligenz Elemente für das Dimensions Attribut "Fiscal Date-Berechnungen" in der Date-Dimension enthält.  
   
- **Power View Bericht mit berechneten Elementen**  
+ **Power View-Bericht mit berechneten Elementen**  
   
  ![Berechnete Elemente in Power View](../media/daxmd-calcmembersinpowerview.gif "Berechnete Elemente in Power View")  
   
@@ -145,14 +145,14 @@ ms.locfileid: "79525461"
 ## <a name="images"></a>Bilder  
  Power View ist in der Lage, Bilder zu rendern. Eine Möglichkeit, in mehrdimensionalen Modellen Bilder für Power View bereitzustellen, besteht darin, Spalten mit den URLs (Uniform Resource Locators) der Bilder verfügbar zu machen. In dieser Version unterstützt Analysis Services das Kennzeichnen von Dimensionsattributen mit dem ImageURL-Typ. Dieser Datentyp wird in den tabellarischen Metadaten für Power View bereitgestellt. Auf diesen Weise können die in den URLs angegebenen Bilder von Power View heruntergeladen und in Visualisierungen dargestellt werden.  
   
- **Image URL-Dimensions Attributtyp in SSDT**  
+ **Dimensionsattributtyp "ImageURL" in SSDT**  
   
  ![Dimensionsattributeigenschaften](../media/daxmd-dimattribute-properties.gif "Dimensionsattributeigenschaften")  
   
 ## <a name="parent-child-hierarchies"></a>Über-/Unterordnungshierarchien  
  Mehrdimensionale Modelle unterstützen Über-/Unterordnungshierarchien, die in den tabellarischen Metadaten als Hierarchie verfügbar gemacht werden. Jede Ebene der Über-/Unterordnungshierarchie wird als ausgeblendete Spalte verfügbar gemacht. Das Schlüsselattribut der über- und untergeordneten Dimension wird in den tabellarischen Metadaten nicht verfügbar gemacht.  
   
- **Über-/unterordnungshierarchien in Power View**  
+ **Über-/Unterordnungshierarchien in Power View**  
   
  ![Über-/unterordnungshierarchien](../media/daxmd-ssdt-hierarchies.gif "Über-/Unterordnungshierarchien")  
   
@@ -172,16 +172,16 @@ ms.locfileid: "79525461"
 ## <a name="power-view-pinned-filters"></a>Angeheftete Filter in Power View  
  Power View-Berichte können mehrere Sichten umfassen. In dieser Version bietet die Funktion *Filter anheften* sowohl in tabellarischen als auch in mehrdimensionalen Modellen die Möglichkeit, Filter zu erstellen, die für alle Sichten in einem Bericht gelten. Die folgende Abbildung zeigt die Umschaltfläche Filter anheften für einen Ansichtsfilter. Ein Ansichtsfilter ist standardmäßig nicht angeheftet und wird nur auf die jeweilige Sicht angewendet. Durch das Anheften wird ein Ansichtsfilter auf alle Sichten angewendet. Durch das Lösen des Filters wird er aus den anderen Sichten entfernt.  
   
- **Fixierte Filter**  
+ **Angeheftete Filter**  
   
  ![Angehefteter Filter](../media/daxmd-pinnedfilterinpowerview.gif "Angehefteter Filter")  
   
 ## <a name="unsupported-features"></a>Nicht unterstützte Funktionen  
  **Power View in Excel 2013** -unterstützt keine Verbindung mit und Erstellung von Berichten für mehrdimensionale Modelle. Power View für mehrdimensionale Modelle unterstützt nur browserbasierte Power View-Clients.  
   
- **Aktionen** werden in Power View Berichten oder in DAX-Abfragen für ein mehrdimensionales Modell nicht unterstützt.  
+ **Aktionen** werden in Power View-Berichten oder DAX-Abfragen für mehrdimensionale Modelle nicht unterstützt.  
   
- **Benannte Mengen** in mehrdimensionalen Modellen werden in Power View oder in DAX-Abfragen für ein mehrdimensionales Modell nicht unterstützt.  
+ **Benannte Mengen** in mehrdimensionalen Modellen werden in Power View oder in DAX-Abfragen für mehrdimensionale Modelle nicht unterstützt.  
   
 > [!NOTE]  
 >  Die fehlende Unterstützung von Aktionen und benannten Mengen hindert Benutzer nicht daran, mithilfe von Power View eine Verbindung mit mehrdimensionalen Modellen herzustellen und diese zu durchsuchen.  
@@ -193,7 +193,7 @@ ms.locfileid: "79525461"
   
  Mehrdimensionale Metadaten werden als Namespace für tabellarische Modelle in einem CSDLBI-Dokument oder in "CSDL/out" dargestellt, wenn eine DISCOVER_CSDL_METADATA-Anforderung an die Analysis Services-Instanz gesendet wird.  
   
- **Beispiel DISCOVER_CSDL_METADATA Anforderung**  
+ **Beispiel für eine DISCOVER_CSDL_METADATA-Anforderung**  
   
 ```  
 <Envelopexmlns="http://schemas.xmlsoap.org/soap/envelope/">  
@@ -230,7 +230,7 @@ ms.locfileid: "79525461"
 ## <a name="client-help-on-officecom"></a>Hilfe zu Clienttools auf "Office.com"  
  In den folgenden Artikeln auf Office.com erfahren Benutzer, auf welche Weise mehrdimensionale Modellobjekte in Power View angezeigt werden und wie ein Beispielbericht erstellt wird:  
   
- [Grundlegendes zu mehrdimensionalen Modell Objekten in Power View](https://office.microsoft.com/excel-help/understanding-multidimensional-model-objects-in-power-view-HA104018589.aspx)  
+ [Grundlegendes zu mehrdimensionalen Modellobjekten in Power View](https://office.microsoft.com/excel-help/understanding-multidimensional-model-objects-in-power-view-HA104018589.aspx)  
   
- [Erkunden Sie das mehrdimensionale Adventure Works-Modell mithilfe Power View](https://office.microsoft.com/excel-help/explore-the-adventure-works-multidimensional-model-by-using-power-view-HA104046830.aspx)  
+ [Durchsuchen des mehrdimensionalen Adventure Works-Modells mithilfe von Power View](https://office.microsoft.com/excel-help/explore-the-adventure-works-multidimensional-model-by-using-power-view-HA104046830.aspx)  
   

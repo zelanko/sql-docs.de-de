@@ -12,10 +12,10 @@ ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: db042e18beb0b33f50639b63f76dde21863c19a8
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112295"
 ---
 # <a name="new-project-ssma-accesstosql"></a>New Project (SSMA) (accesstosql)
@@ -26,7 +26,7 @@ Verwenden Sie das Dialogfeld **Neues Projekt** , um ein neues SSMA-Projekt zu er
   
 Geben Sie den Namen des Projekts ein. SSMA fügt die Dateierweiterung an.  
   
-**Location**  
+**Speicherort**  
   
 Geben Sie den Ordner oder den Netzwerk Speicherort ein, um das Projekt zu speichern.  
   
@@ -34,11 +34,11 @@ Geben Sie den Ordner oder den Netzwerk Speicherort ein, um das Projekt zu speich
   
 Wählen Sie eine der Ziel Datenbankversion aus der Liste unten aus.  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   

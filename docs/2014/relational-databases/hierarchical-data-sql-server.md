@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 61d194edf727cb39a80fae852cee735c24ff560c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289188"
 ---
 # <a name="hierarchical-data-sql-server"></a>Hierarchische Daten (SQL Server)
@@ -41,7 +41,7 @@ ms.locfileid: "79289188"
   
  Mit dem Datentyp [hierarchyid](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) können Sie Tabellen mit einer hierarchischen Struktur erstellen oder die hierarchische Struktur der Daten an einem anderen Speicherort beschreiben. Verwenden Sie die [hierarchyid-Funktionen](/sql/t-sql/data-types/hierarchyid-data-type-method-reference) in [!INCLUDE[tsql](../includes/tsql-md.md)] , um hierarchische Daten abzufragen und zu verwalten.  
   
-##  <a name="keyprops"></a> Haupteigenschaften von hierarchyid  
+##  <a name="key-properties-of-hierarchyid"></a><a name="keyprops"></a> Haupteigenschaften von hierarchyid  
  Ein Wert des `hierarchyid`-Datentyps stellt eine Position in einer Strukturhierarchie dar. Werte des Typs `hierarchyid` verfügen über die folgenden Eigenschaften:  
   
 -   Äußerst komprimiert  
@@ -57,7 +57,7 @@ ms.locfileid: "79289188"
      Mithilfe der [GetDescendant](/sql/t-sql/data-types/getdescendant-database-engine) -Methode ist es immer möglich, rechts oder links von einem gegebenen Knoten einen gleichgeordneten Knoten zu generieren oder ihn auch zwischen zwei gleichgeordneten Knoten einzufügen. Die Vergleichseigenschaft bleibt auch dann gewahrt, wenn eine beliebige Anzahl von Knoten in die Hierarchie eingefügt oder aus ihr gelöscht wird. Die meisten Einfüge- und Löschoperationen behalten die Kompaktheitseigenschaft bei. Einfügungen zwischen zwei Knoten erzeugen jedoch hierarchyid-Werte in einer etwas weniger komprimierten Darstellung.  
   
   
-##  <a name="limits"></a> Einschränkungen von hierarchyid  
+##  <a name="limitations-of-hierarchyid"></a><a name="limits"></a> Einschränkungen von hierarchyid  
  Für `hierarchyid` den-Datentyp gelten die folgenden Einschränkungen:  
   
 -   Eine Spalte des Typs `hierarchyid` stellt nicht automatisch eine Baumstruktur dar. Es ist Aufgabe der Anwendung, `hierarchyid`-Werte so zu erstellen und zuzuweisen, dass die gewünschte Beziehung zwischen Zeilen anhand der Werte zu erkennen ist. Einige Anwendungen können eine Spalte vom Typ `hierarchyid` aufweisen, der den Speicherort in einer Hierarchie angibt, die in einer anderen Tabelle definiert ist.  
@@ -67,15 +67,14 @@ ms.locfileid: "79289188"
 -   Hierarchische, durch `hierarchyid`-Werte dargestellte Beziehungen werden nicht wie Fremdschlüsselbeziehungen durchgesetzt. Es ist möglich und manchmal auch angemessen, eine hierarchische Beziehung herzustellen, in der das Element B dem Element A untergeordnet ist, um dann A zu löschen, wodurch B mit einer Beziehung zu einem nicht mehr vorhandenen Datensatz verbleibt. Wenn dieses Verhalten unannehmbar ist, muss die Anwendung vor dem Löschen von Elementen prüfen, ob untergeordnete Elemente vorhanden sind.  
   
   
-##  <a name="alternatives"></a> Wann Alternativen zu hierarchyid zu verwenden sind  
+##  <a name="when-to-use-alternatives-to-hierarchyid"></a><a name="alternatives"></a> Wann Alternativen zu hierarchyid zu verwenden sind  
  Zur Darstellung hierarchischer Daten gibt es zwei Alternativen zu `hierarchyid`. Diese sind:  
   
 -   Über- und untergeordnet  
   
 -   XML  
   
- 
-  `hierarchyid` ist diesen Alternativen im Allgemeinen überlegen. Jedoch gibt es bestimmte, unten aufgelistete Situationen, in denen diese Alternativen wahrscheinlich überlegen sind.  
+ `hierarchyid` ist diesen Alternativen im Allgemeinen überlegen. Jedoch gibt es bestimmte, unten aufgelistete Situationen, in denen diese Alternativen wahrscheinlich überlegen sind.  
   
 ### <a name="parentchild"></a>Über- und untergeordnet  
  Beim Ansatz mit über- und untergeordneten Elementen enthält jede Zeile einen Verweis auf das übergeordnete Element. Im folgenden Beispiel wird eine typische Tabelle definiert, welche die über- und untergeordneten Zeilen einer Über-/Unterordnungsbeziehung enthält.  
@@ -145,7 +144,7 @@ GO
 ```  
   
   
-##  <a name="indexing"></a> Indizieren von Strategien für hierarchische Daten  
+##  <a name="indexing-strategies-for-hierarchical-data"></a><a name="indexing"></a> Indizieren von Strategien für hierarchische Daten  
  Für die Indizierung hierarchischer Daten gibt es zwei Strategien:  
   
 -   **Tiefensuche**  
@@ -160,7 +159,7 @@ GO
   
      In einem Breitensuchindex sind alle einem Knoten untergeordneten Knoten zusammen angeordnet. Daher sind Breitensuchindizes besonders effizient bei der Abfrage von unmittelbar untergeordneten Elementen, etwa bei Abfragen des Typs "Ermittle alle Angestellten, die direkt diesem Manager berichten".  
   
- Ob Sie einen Tiefen- oder Breitensuchindex verwenden und welchen Sie (wenn überhaupt) als Gruppierungsschlüssel definieren, hängt von der relativen Wichtigkeit der oben genanten Abfragetypen ab sowie von der relativen Wichtigkeit von SELECT- gegenüber DML-Vorgängen. Ein ausführliches Beispiel zu Indizierungsstrategien finden Sie unter [Tutorial: Verwenden des hierarchyid-Datentyps](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
+ Ob Sie einen Tiefen- oder Breitensuchindex verwenden und welchen Sie (wenn überhaupt) als Gruppierungsschlüssel definieren, hängt von der relativen Wichtigkeit der oben genanten Abfragetypen ab sowie von der relativen Wichtigkeit von SELECT- gegenüber DML-Vorgängen. Ein ausführliches Beispiel zu Indizierungsstrategien finden Sie unter [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
 ### <a name="creating-indexes"></a>Erstellen von Indizes  
@@ -263,13 +262,13 @@ INSERT SimpleDemo
 VALUES ('/', 'Earth', 'Planet');  
 ```  
   
-##  <a name="tasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="tasks"></a> Verwandte Aufgaben  
   
-###  <a name="migrating"></a> Migrieren von über- und untergeordneten Elementen zu hierarchyid  
+###  <a name="migrating-from-parentchild-to-hierarchyid"></a><a name="migrating"></a> Migrieren von über- und untergeordneten Elementen zu hierarchyid  
  Die meisten Strukturen werden mit über- und untergeordneten Elementen dargestellt. Die einfachste Möglichkeit, von einer über-und untergeordneten Struktur zu einer Tabelle `hierarchyid` mit zu migrieren, besteht darin, eine temporäre Spalte oder eine temporäre Tabelle zu verwenden, um die Anzahl der Knoten auf jeder Ebene der Hierarchie nachzuverfolgen. Ein Beispiel für die Migration einer über- und untergeordneten Tabelle finden Sie in Lektion 1 von [Tutorial: Verwenden des hierarchyid-Datentyps](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md).  
   
   
-###  <a name="BKMK_ManagingTrees"></a> Verwalten einer Struktur mit hierarchyid  
+###  <a name="managing-a-tree-using-hierarchyid"></a><a name="BKMK_ManagingTrees"></a> Verwalten einer Struktur mit hierarchyid  
  Eine `hierarchyid`-Spalte muss zwar nicht notwendigerweise eine Struktur darstellen, jedoch kann eine Anwendung dies auf einfache Weise sicherstellen.  
   
 -   Führen Sie eine der folgenden Maßnahmen durch, wenn Sie neue Werte erstellen:  
@@ -371,7 +370,7 @@ EmployeeId LastChild EmployeeName
 ```  
   
   
-###  <a name="BKMK_EnforcingTrees"></a> Durchsetzen einer Struktur  
+###  <a name="enforcing-a-tree"></a><a name="BKMK_EnforcingTrees"></a> Durchsetzen einer Struktur  
  In den Beispielen oben wird veranschaulicht, wie eine Anwendung sicherstellen kann, dass eine Struktur gewahrt bleibt. Um eine Struktur mithilfe von Einschränkungen durchzusetzen, kann eine berechnete Spalte mit einer Fremdschlüsseleinschränkung für die Primärschlüssel-ID erstellt werden, die das übergeordnete Element jedes Knotens berechnet.  
   
 ```  
@@ -389,7 +388,7 @@ GO
  Diese Methode der Durchsetzung einer Beziehung ist dann vorzuziehen, wenn Code, dem bezüglich der Bewahrung der hierarchischen Struktur nicht vertraut werden kann, über direkten DML-Zugriff auf die Tabelle verfügt. Diese Methode könnte jedoch die Leistung reduzieren, da die Einschränkung bei jedem DML-Vorgang geprüft werden muss.  
   
   
-###  <a name="findclr"></a> Suchen von Vorgängern mit CLR  
+###  <a name="finding-ancestors-by-using-the-clr"></a><a name="findclr"></a> Suchen von Vorgängern mit CLR  
  Ein allgemeiner Vorgang, der zwei Knoten einer Hierarchie betrifft, ist die Ermittlung des kleinsten gemeinsamen Vorgängers. Dies kann in [!INCLUDE[tsql](../includes/tsql-md.md)] oder CLR geschrieben werden, da der `hierarchyid` -Typ in beiden verfügbar ist. CLR wird empfohlen, da die Leistung höher ist.  
   
  Verwenden Sie den folgenden CLR-Code, um die Vorgänger aufzulisten und den kleinsten gemeinsamen Vorgänger zu ermitteln:  
@@ -436,7 +435,7 @@ GO
 ```  
   
   
-###  <a name="ancestors"></a> Auflisten von Vorgängern  
+###  <a name="listing-ancestors"></a><a name="ancestors"></a> Auflisten von Vorgängern  
  Die Erstellung einer Liste von Vorgängern, um beispielsweise die Position innerhalb einer Organisation anzuzeigen, ist ein häufig vorkommender Vorgang. Eine Möglichkeit dazu bietet die Verwendung einer Tabellenwertfunktion mithilfe der oben definierten **HierarchyId_Operations** -Klasse:  
   
  Verwenden von [!INCLUDE[tsql](../includes/tsql-md.md)]:  
@@ -465,7 +464,7 @@ GO
 ```  
   
   
-###  <a name="lowestcommon"></a> Ermitteln des kleinsten gemeinsamen Vorgängers  
+###  <a name="finding-the-lowest-common-ancestor"></a><a name="lowestcommon"></a> Ermitteln des kleinsten gemeinsamen Vorgängers  
  Erstellen Sie mithilfe der oben definierten **HierarchyId_Operations** -Klasse die folgende [!INCLUDE[tsql](../includes/tsql-md.md)] -Funktion, die den kleinsten gemeinsamen Vorgänger zweier Knoten in einer Hierarchie ermittelt:  
   
 ```  
@@ -497,7 +496,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
  Der resultierende Knoten ist /1/1/  
   
   
-###  <a name="BKMK_MovingSubtrees"></a> Verschieben von Teilstrukturen  
+###  <a name="moving-subtrees"></a><a name="BKMK_MovingSubtrees"></a> Verschieben von Teilstrukturen  
  Ein anderer allgemeiner Vorgang ist das Verschieben von Teilstrukturen. Das folgende Verfahren bewirkt, dass die Teil **@oldMgr** Struktur von und (einschließlich **@oldMgr**) zu einer Teilstruktur **@newMgr**von wird.  
   
 ```  
@@ -526,7 +525,7 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [hierarchyid-Datentyp-Methodenverweis](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)   
- [Tutorial: Verwenden des hierarchyid-Datentyps](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
+ [Tutorial: Using the hierarchyid Data Type](../relational-databases/tables/tutorial-using-the-hierarchyid-data-type.md)   
  [hierarchyid &#40;Transact-SQL&#41;](/sql/t-sql/data-types/hierarchyid-data-type-method-reference)  
   
   

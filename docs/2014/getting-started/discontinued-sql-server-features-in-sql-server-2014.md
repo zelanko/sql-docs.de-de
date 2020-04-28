@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e53e51a021315c79659e684327e8b7eb784001be
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112221"
 ---
 # <a name="discontinued-sql-server-features-in-sql-server-2014"></a>Nicht mehr unterstützte SQL Server-Funktionen in SQL Server 2014
@@ -28,15 +28,14 @@ ms.locfileid: "79112221"
 ### <a name="discontinued-active-directory-helper-service"></a>Eingestellter Hilfsdienst für Active Directory  
  Der Active Directory-Hilfsdienst und die zugehörigen Komponenten wurden entfernt. In der folgenden Tabelle werden die zugehörigen und somit entfernten Komponenten aufgeführt:  
   
-|Category|Nicht mehr unterstützte Funktion|Ersatz|  
+|Kategorie|Nicht mehr unterstützte Funktion|Ersatz|  
 |--------------|--------------------------|-----------------|  
 |Gespeicherte Systemprozeduren|sp_ActiveDirectory_Obj<br /><br /> sp_ActiveDirectory_SCP<br /><br /> sp_ActiveDirectory_Start|Kein Ersatz verfügbar|  
   
 ## <a name="discontinued-features-in-sql-server-2008-r2"></a>Nicht mehr unterstützte Funktionen in SQL Server 2008 R2  
   
 ### <a name="64-bit-platform-support-in-reporting-services"></a>Unterstützung der 64-Bit-Plattform in Reporting Services  
- Ab [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]bietet die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Komponente keine Unterstützung mehr für Itanium-basierte Server unter Windows Server 2003 oder Windows Server 2003 R2. 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] unterstützt weiterhin andere 64-Bit-Betriebssysteme, einschließlich Windows Server°2008 für Itanium-basierte Systeme und Windows Server°2008°R2 für Itanium-basierte Systeme. Um von einer [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] -Installation mit [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] unter einer Itanium-basierten Systemedition von Windows Server 2003 oder Windows Server 2003 R2 auf [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] zu aktualisieren, müssen Sie zunächst das Betriebssystem aktualisieren.  
+ Ab [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)]bietet die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Komponente keine Unterstützung mehr für Itanium-basierte Server unter Windows Server 2003 oder Windows Server 2003 R2. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] unterstützt weiterhin andere 64-Bit-Betriebssysteme, einschließlich Windows Server°2008 für Itanium-basierte Systeme und Windows Server°2008°R2 für Itanium-basierte Systeme. Um von einer [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] -Installation mit [!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] unter einer Itanium-basierten Systemedition von Windows Server 2003 oder Windows Server 2003 R2 auf [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] zu aktualisieren, müssen Sie zunächst das Betriebssystem aktualisieren.  
   
 ## <a name="discontinued-features-in-sql-server-2008"></a>Nicht mehr unterstützte Funktionen in SQL Server 2008  
   
@@ -52,8 +51,8 @@ ms.locfileid: "79112221"
 |Ersetzungs Einstellungen und Komponenten Features|Vorgehensweise zur Konfiguration|  
 |-------------------------------------------------|----------------------|  
 |Protokolle, Verbindungs-und Startoptionen|Verwenden Sie den [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Konfigurations-Manager.|  
-|[!INCLUDE[ssDE](../includes/ssde-md.md)]Aspekte|Verwenden Sie die richtlinienbasierte Verwaltung, die Eigenschafteneinstellungen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] oder sp_Configure.|  
-|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]Aspekte|Verwenden Sie die Eigenschafteneinstellungen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
+|[!INCLUDE[ssDE](../includes/ssde-md.md)]-Funktionen|Verwenden Sie die richtlinienbasierte Verwaltung, die Eigenschafteneinstellungen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] oder sp_Configure.|  
+|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Funktionen|Verwenden Sie die Eigenschafteneinstellungen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] - EnableIntegratedSecurity-Eigenschaft|Verwenden Sie die Eigenschafteneinstellungen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] - Geplante Ereignisse und Berichtsübermittlung und Webdienst und HTTP-Zugriff|Bearbeiten Sie die Konfigurationsdatei RSReportServer.config.|  
 |Befehlszeilenoptionen|In dieser Version nicht unterstützt|  

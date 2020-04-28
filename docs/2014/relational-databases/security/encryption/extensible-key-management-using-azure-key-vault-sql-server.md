@@ -17,10 +17,10 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 ms.openlocfilehash: f826ce7ff54bb28738f79fbf22c8c8435035008c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289448"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Erweiterbare Schlüsselverwaltung mit Azure Key Vault (SQL Server)
@@ -42,7 +42,7 @@ ms.locfileid: "79289448"
 
 -   [Beispiel C: Verschlüsselung auf Spaltenebene mit einem asymmetrischen Schlüssel aus dem Schlüsseltresor](#ExampleC)
 
-##  <a name="Uses"></a>Verwendung von EKM
+##  <a name="uses-of-ekm"></a><a name="Uses"></a>Verwendung von EKM
  Organisationen können die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verschlüsselung zum Schutz sensibler Daten verwenden. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]die Verschlüsselung umfasst [transparent Data Encryption &#40;TDE&#41;](transparent-data-encryption.md), [Verschlüsselung auf Spaltenebene](/sql/t-sql/functions/cryptographic-functions-transact-sql) (CLE) und [Sicherungs Verschlüsselung](../../backup-restore/backup-encryption.md). In all diesen Fällen werden die Daten mit einem symmetrischen Datenverschlüsselungsschlüssel verschlüsselt. Der symmetrische Datenverschlüsselungsschlüssel wird außerdem geschützt durch Verschlüsselung mit einer Hierarchie von Schlüsseln, die in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]gespeichert sind. Alternativ bietet die Architektur des Anbieters für erweiterbare Schlüsselverwaltung [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Möglichkeit, die Datenverschlüsselungsschlüssel mit einem asymmetrischen Schlüssel zu schützen, der außerhalb von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] in einem externen Kryptografieanbieter gespeichert ist. Die Verwendung der Architektur des Anbieters für erweiterbare Schlüsselverwaltung stellt eine zusätzliche Sicherheitsebene dar und ermöglicht Unternehmen die getrennte Verwaltung von Schlüsseln und Daten.
 
  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector für die Azure Key Vault-Vorschau ermöglicht [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] die Nutzung des skalierbaren, leistungsfähigen und hochverfügbaren Schlüsseltresordiensts als EKM-Anbieter für den Schutz des Verschlüsselungsschlüssels. Der Schlüsseltresordienst kann mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Installationen auf virtuellen [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure-Computern und für lokale Server verwendet werden. Der Schlüsseltresordienst bietet auch die Option, genau gesteuerte und stark überwachte Hardwaresicherheitsmodule (HSMs) für ein höheres Maß an Schutz für asymmetrische Schlüssel zu verwenden. Weitere Informationen zum Schlüsseltresor finden Sie unter [Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521401).
@@ -51,15 +51,15 @@ ms.locfileid: "79289448"
 
  ![Erweiterbare Schlüsselverwaltung in SQL Server mithilfe von Azure Key Vault](../../../database-engine/media/ekm-using-azure-key-vault.png "Erweiterbare Schlüsselverwaltung in SQL Server mithilfe von Azure Key Vault")
 
-##  <a name="Step1"></a>Schritt 1: Einrichten der Key Vault für die Verwendung durch SQL Server
+##  <a name="step-1-set-up-the-key-vault-for-use-by-sql-server"></a><a name="Step1"></a>Schritt 1: Einrichten der Key Vault für die Verwendung durch SQL Server
  Führen Sie die folgenden Schritte aus, um einen Schlüsseltresor für die Verwendung mit der [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] für den Schutz des Verschlüsselungsschlüssels einzurichten. Für die Organisation wird möglicherweise bereits ein Tresor verwendet. Wenn kein Tresor vorhanden ist, kann der Azure-Administrator in Ihrem Unternehmen, der die Verschlüsselungsschlüssel verwaltet, einen Tresor erstellen, einen asymmetrischen Schlüssel im Tresor generieren und dann [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] autorisieren, den Schlüssel zu verwenden. Machen Sie sich unter [Erste Schritte mit Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)und der Referenz zu PowerShell- [Azure Key Vault-Cmdlets](https://docs.microsoft.com/powershell/module/azurerm.keyvault) mit dem Schlüsseltresordienst vertraut.
 
 > [!IMPORTANT]
 >  Wenn Sie über mehrere Azure-Abonnements verfügen, müssen Sie das Abonnement nehmen, das [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]enthält.
 
-1.  **Erstellen Sie einen Tresor:** Erstellen Sie einen Tresor mithilfe der Anweisungen im Abschnitt **Erstellen eines Schlüssel** Tresors in " [Get Started with Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)". Notieren Sie den Namen des Tresors. In diesem Thema wird **ContosoKeyVault** als Schlüsseltresorname verwendet.
+1.  **Erstellen Sie einen Tresor:** Erstellen Sie einen Tresor nach der Anweisungen im Abschnitt **Erstellen eines Schlüsseltresors** in [Erste Schritte mit Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402). Notieren Sie den Namen des Tresors. In diesem Thema wird **ContosoKeyVault** als Schlüsseltresorname verwendet.
 
-2.  **Generieren Sie einen asymmetrischen Schlüssel im Tresor:** Der asymmetrische Schlüssel im Schlüssel Tresor dient zum Schutz [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] der Verschlüsselungsschlüssel. Nur der öffentliche Teil des asymmetrischen Schlüssels verlässt jemals den Tresor, der private Teil wird nie vom Tresor exportiert. Alle kryptografischen Vorgänge mit dem asymmetrischen Schlüssel werden an den Azure-Schlüsseltresor delegiert und durch die Schlüsseltresorsicherheit geschützt.
+2.  **Generieren Sie einen asymmetrischen Schlüssel im Tresor:** Der asymmetrische Schlüssel im Schlüsseltresor dient zum Schutz der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verschlüsselungsschlüssel. Nur der öffentliche Teil des asymmetrischen Schlüssels verlässt jemals den Tresor, der private Teil wird nie vom Tresor exportiert. Alle kryptografischen Vorgänge mit dem asymmetrischen Schlüssel werden an den Azure-Schlüsseltresor delegiert und durch die Schlüsseltresorsicherheit geschützt.
 
      Es gibt mehrere Möglichkeiten, wie Sie einen asymmetrischen Schlüssel generieren und im Tresor speichern können. Sie können einen Schlüssel extern generieren und den Schlüssel als PFX-Datei in den Tresor importieren. Oder Sie erstellen den Schlüssel mit den Schlüsseltresor-APIs direkt im Tresor.
 
@@ -73,7 +73,7 @@ ms.locfileid: "79289448"
 
      Weitere Informationen zum Importieren eines Schlüssels in den Tresor oder zum Erstellen eines Schlüssels im Schlüsseltresor (nicht empfohlen für Produktionsumgebungen) finden Sie im Abschnitt **Hinzufügen eines Schlüssels oder eines geheimen Schlüssels zum Schlüsseltresor** in [Erste Schritte mit Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402).
 
-3.  **Holen Sie sich Azure Active Directory Dienst Prinzipale, die für SQL Server verwendet werden sollen:** Wenn sich die Organisation für einen Microsoft-clouddienst registriert, erhält Sie einen Azure Active Directory. Erstellen Sie in Azure Active Directory **Dienstprinzipale** , die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (zur Authentifizierung gegenüber Azure Active Directory) beim Zugriff auf den Schlüsseltresor verwendet.
+3.  **Rufen Sie Azure Active Directory-Dienstprinzipale für SQL Server ab:** Wenn sich die Organisation für einen Microsoft Cloud-Dienst registriert, erhält sie ein Azure Active Directory. Erstellen Sie in Azure Active Directory **Dienstprinzipale** , die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (zur Authentifizierung gegenüber Azure Active Directory) beim Zugriff auf den Schlüsseltresor verwendet.
 
     -   Ein **Dienstprinzipal** wird von einem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Administrator benötigt, um beim Konfigurieren von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] für die Verschlüsselung auf den Tresor zuzugreifen.
 
@@ -81,14 +81,14 @@ ms.locfileid: "79289448"
 
      Weitere Informationen zum Registrieren einer Anwendung und Generieren eines Dienstprinzipals finden Sie im Abschnitt **Registrieren einer Anwendung in Azure Active Directory** in [Erste Schritte mit Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402). Der Registrierungsprozess gibt eine **Anwendungs-ID** (auch bekannt als **CLIENT-ID**) und einen **Authentifizierungsschlüssel** (auch bekannt als **geheimer Schlüssel**) für jeden Azure Active Directory- **Dienstprinzipal**zurück. Wenn Sie in der `CREATE CREDENTIAL` -Anweisung verwendet wird, muss der Bindestrich aus der **Client-ID**entfernt werden. Notieren Sie diese für die Verwendung in den unten stehenden Skripts:
 
-    -   **Dienst Prinzipal** für eine **sysadmin** -Anmeldung: **CLIENTID_sysadmin_login** und **SECRET_sysadmin_login**
+    -   **Dienstprinzipal** für eine **sysadmin** -Anmeldung: **CLIENTID_sysadmin_login** und **SECRET_sysadmin_login**
 
-    -   **Dienst Prinzipal** für [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]die: **CLIENTID_DBEngine** und **SECRET_DBEngine**.
+    -   **Dienstprinzipal** für die [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]: **CLIENTID_DBEngine** und **SECRET_DBEngine**.
 
 4.  **Erteilen Sie dem Dienst Prinzipal die Berechtigung, auf die Key Vault zuzugreifen:** Sowohl der **CLIENTID_sysadmin_login** als auch **CLIENTID_DBEngineService Prinzipale** benötigen die Berechtigungen **Get**, **List**, **wrapkey**und **unwrapkey** im Schlüssel Tresor. Wenn Sie beabsichtigen, Schlüssel über [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] zu erstellen, müssen Sie auch die Berechtigung **create** im Schlüsseltresor erteilen.
 
     > [!IMPORTANT]
-    >  Benutzer müssen mindestens über die Vorgänge **wrapkey** und **unwrapkey** für den Schlüssel Tresor verfügen.
+    >  Benutzer müssen mindestens über die Vorgänge **wrapKey** und **unwrapKey** für den Schlüsseltresor verfügen.
 
      Weitere Informationen zum Erteilen von Berechtigungen für den Tresor finden Sie im Abschnitt **Autorisieren der Anwendung zum Verwenden des Schlüssels oder des geheimen Schlüssels** in [Erste Schritte mit Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402).
 
@@ -96,26 +96,26 @@ ms.locfileid: "79289448"
 
     -   [Was ist der Azure-Schlüsseltresor?](https://go.microsoft.com/fwlink/?LinkId=521401)
 
-    -   [Erste Schritte mit Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)
+    -   [Beginnen Sie mit Azure Key Vault](https://go.microsoft.com/fwlink/?LinkId=521402)
 
     -   Referenz der PowerShell- [Azure Key Vault-Cmdlets](https://docs.microsoft.com/powershell/module/azurerm.keyvault)
 
-##  <a name="Step2"></a>Schritt 2: Installieren des SQL Server-Connector
+##  <a name="step-2-install-the-sql-server-connector"></a><a name="Step2"></a>Schritt 2: Installieren des SQL Server-Connector
  Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector wird vom Administrator des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Computers heruntergeladen und installiert. Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connector steht im [Microsoft-Downloadcenter](https://go.microsoft.com/fwlink/p/?LinkId=521700)als Download zur Verfügung.  Suchen Sie nach **SQL Server-Connector für Microsoft Azure Key Vault**. Überprüfen Sie die Details, Systemanforderungen und Installationsanweisungen, wählen Sie den Download des Connectors, und starten Sie die Installation mit **Ausführen**. Lesen Sie die Lizenzbedingungen, stimmen Sie ihnen zu, und setzen Sie den Vorgang fort.
 
  In der Standardeinstellung der Connector installiert ist, auf **C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault**. Dieser Speicherort kann während des Setups geändert werden. (Wenn Sie ihn ändern, passen Sie die unten angegebenen Skripts entsprechend an.)
 
  Nach Abschluss der Installation ist Folgendes auf dem Computer installiert:
 
--   **Microsoft. azurekeyvaultservice. EKM. dll**: Dies ist die kryptografiekm-Anbieter-DLL, die bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit der Create kryptografischen Provider-Anweisung registriert werden muss.
+-   **Microsoft.AzureKeyVaultService.EKM.dll**: Dies ist die kryptografische DLL des Anbieters für erweiterbare Schlüsselverwaltung, die bei [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] mit der CREATE CRYPTOGRAPHIC PROVIDER-Anweisung registriert werden muss.
 
--   **Azure Key Vault SQL Server-Connector**: Hierbei handelt es sich um einen Windows-Dienst, der dem kryptografiekm-Anbieter die Kommunikation mit dem Schlüssel Tresor ermöglicht.
+-   **Azure Key Vault SQL Server-Connector**: Dies ist ein Windows-Dienst, der dem kryptografischen Anbieter für erweiterbare Schlüsselverwaltung die Kommunikation mit dem Schlüsseltresor ermöglicht.
 
  Bei der Installation des [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Connectors können Sie optional auch Beispielskripts für die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Verschlüsselung herunterladen.
 
-##  <a name="Step3"></a>Schritt 3: Konfigurieren von SQL Server für die Verwendung eines EKM-Anbieters für das Key Vault
+##  <a name="step-3-configure-sql-server-to-use-an-ekm-provider-for-the-key-vault"></a><a name="Step3"></a>Schritt 3: Konfigurieren von SQL Server für die Verwendung eines EKM-Anbieters für das Key Vault
 
-###  <a name="Permissions"></a> Berechtigungen
+###  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen
  Das gesamte Verfahren erfordert die CONTROL SERVER-Berechtigung oder die Mitgliedschaft in der festen Serverrolle **sysadmin** . Bestimmte Aktionen erfordern die folgenden Berechtigungen:
 
 -   Zum Erstellen eines Kryptografieanbieters ist die CONTROL SERVER-Berechtigung oder die Mitgliedschaft in der festen Serverrolle **sysadmin** erforderlich.
@@ -128,7 +128,7 @@ ms.locfileid: "79289448"
 
 -   Zum Erstellen eines asymmetrischen Schlüssels ist die CREATE ASYMMETRIC KEY-Berechtigung erforderlich.
 
-###  <a name="TsqlProcedure"></a>So konfigurieren Sie SQL Server für die Verwendung eines Kryptografieanbieters
+###  <a name="to-configure-sql-server-to-use-a-cryptographic-provider"></a><a name="TsqlProcedure"></a>So konfigurieren Sie SQL Server für die Verwendung eines Kryptografieanbieters
 
 1.  Konfigurieren Sie die [!INCLUDE[ssDE](../../../includes/ssde-md.md)] für die Verwendung der erweiterbaren Schlüsselverwaltung, und registrieren (erstellen) Sie den Kryptografieanbieter in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
@@ -196,7 +196,7 @@ ms.locfileid: "79289448"
     ```
 
 > [!TIP]
->  Benutzer, die den Fehler **kann nicht öffentlichen Schlüssel vom Anbieter exportiert. Anbieterfehlercode: 2053.** erhalten, sollten ihre **get**, **list**, **wrapKey**und **unwrapKey** .
+>  Benutzer, die den Fehler **kann nicht öffentlichen Schlüssel vom Anbieter exportiert. Anbieterfehlercode: 2053.** sollten ihre **get**, **list**, **wrapKey**- und **unwrapKey** -Berechtigungen im Schlüsseltresor prüfen.
 
  Weitere Informationen finden Sie unter
 
@@ -214,7 +214,7 @@ ms.locfileid: "79289448"
 
 ## <a name="examples"></a>Beispiele
 
-###  <a name="ExampleA"></a>Beispiel A: Transparent Data Encryption mithilfe eines asymmetrischen Schlüssels aus der Key Vault
+###  <a name="example-a-transparent-data-encryption-by-using-an-asymmetric-key-from-the-key-vault"></a><a name="ExampleA"></a>Beispiel A: Transparent Data Encryption mithilfe eines asymmetrischen Schlüssels aus der Key Vault
  Erstellen Sie nach Abschluss der obigen Schritte Anmeldeinformationen und eine Anmeldung, und erstellen Sie einen Datenbank-Verschlüsselungsschlüssel, der durch den asymmetrischen Schlüssel im Schlüsseltresor geschützt wird. Verwenden Sie den Datenbank-Verschlüsselungsschlüssel zum Verschlüsseln einer Datenbank mit transparenter Datenverschlüsselung.
 
  Zum Verschlüsseln einer Datenbank ist die CONTROL-Berechtigung für die Datenbank erforderlich.
@@ -279,7 +279,7 @@ ms.locfileid: "79289448"
 
     -   [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql)
 
-###  <a name="ExampleB"></a>Beispiel B: Verschlüsseln von Sicherungen mit einem asymmetrischen Schlüssel aus der Key Vault
+###  <a name="example-b-encrypting-backups-by-using-an-asymmetric-key-from-the-key-vault"></a><a name="ExampleB"></a>Beispiel B: Verschlüsseln von Sicherungen mit einem asymmetrischen Schlüssel aus der Key Vault
  Verschlüsselte Sicherungen werden ab [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)]unterstützt. Im folgenden Beispiel wird eine Sicherung erstellt und wiederhergestellt, die mit einem Verschlüsselungsschlüssel verschlüsselt wurde, der durch den asymmetrischen Schlüssel im Schlüsseltresor geschützt wird.
 
 ```sql
@@ -301,7 +301,7 @@ GO
 
  Weitere Informationen zu Sicherungs Optionen finden Sie unter [Backup &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).
 
-###  <a name="ExampleC"></a>Beispiel C: Verschlüsselung auf Spaltenebene mithilfe eines asymmetrischen Schlüssels aus der Key Vault
+###  <a name="example-c-column-level-encryption-by-using-an-asymmetric-key-from-the-key-vault"></a><a name="ExampleC"></a>Beispiel C: Verschlüsselung auf Spaltenebene mithilfe eines asymmetrischen Schlüssels aus der Key Vault
  Das folgende Beispiel erstellt einen symmetrischen Schlüssel, der durch den asymmetrischen Schlüssel im Schlüsseltresor geschützt wird. Anschließend wird der symmetrische Schlüssel zum Verschlüsseln von Daten in der Datenbank verwendet.
 
  In diesem Beispiel wird der asymmetrische Schlüssel CONTOSO_KEY aus dem Schlüsseltresor verwendet, der importiert oder zuvor erstellt wurde, wie oben in [Schritt 3, Abschnitt 3](#Step3) beschrieben. Um diesen asymmetrischen Schlüssel in der `ContosoDatabase` -Datenbank zu verwenden, müssen Sie die CREATE ASYMMETRIC KEY-Anweisung erneut ausführen, um der `ContosoDatabase` -Datenbank einen Verweis auf den Schlüssel zur Verfügung zu stellen.

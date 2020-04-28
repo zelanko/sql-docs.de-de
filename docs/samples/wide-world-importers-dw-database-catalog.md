@@ -12,10 +12,10 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
 ms.openlocfilehash: 167b9d1d9990c20be8c01a3407a5423644e524f8
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112431"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Wideworldimportersdw-Daten Bank Katalog
@@ -48,8 +48,8 @@ Wideworldimportersdw verfügt über die folgenden Dimensions Tabellen. Die Besch
 |-----------------------------|---------------------|
 |City|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
 |Kunde|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
-|Date|Neue Tabelle mit Informationen zu Datumsangaben, einschließlich des Finanz Jahrs (basierend auf dem 1. November-Start für das Finanz Jahr).|
-|Mitarbeiter|`Application.People`.|
+|Datum|Neue Tabelle mit Informationen zu Datumsangaben, einschließlich des Finanz Jahrs (basierend auf dem 1. November-Start für das Finanz Jahr).|
+|Employee|`Application.People`.|
 |Stockitem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |Lieferanten|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
 |PaymentMethod|`Application.PaymentMethods`.|
@@ -63,9 +63,9 @@ Wideworldimportersdw verfügt über die folgenden Fakten Tabellen. Die Beschreib
 |-----------------------------|---------------------|---------------------|
 |Order|`Sales.Orders` und `Sales.OrderLines`|Sales People, Picker-und Packer-Produktivität und Zeit für die Auswahl von Aufträgen. Außerdem sind niedrige Aktien Situationen, die zu Aufträgen führen.|
 |Sale|`Sales.Invoices` und `Sales.InvoiceLines`|Verkaufsdaten, Übermittlungs Daten, Rentabilität im Zeitverlauf, Rentabilität durch Vertriebsmitarbeiter.|
-|Purchase|`Purchasing.PurchaseOrderLines`|Vs tatsächliche Vorlaufzeiten erwartet|
+|Kauf|`Purchasing.PurchaseOrderLines`|Vs tatsächliche Vorlaufzeiten erwartet|
 |Transaktion|`Sales.CustomerTransactions` und `Purchasing.SupplierTransactions`|Messen von Problem Daten im Vergleich zum Abschluss von Datumsangaben und Summen.|
-|Bewegung|`Warehouse.StockTransactions`|Bewegungen im Zeitverlauf.|
+|Movement|`Warehouse.StockTransactions`|Bewegungen im Zeitverlauf.|
 |Aktien Aufbewahrung|`Warehouse.StockItemHoldings`|Auf der Hand.|
 
 ## <a name="stored-procedures"></a>Gespeicherte Prozeduren

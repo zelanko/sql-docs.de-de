@@ -1,5 +1,5 @@
 ---
-title: ODBC Programmierer&#39;s Referenz | Microsoft Docs
+title: ODBC-Programmierer&#39;s-Referenz | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,112 +13,112 @@ ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6a9ca32627b9703465dcfca554fdc32ae01442e7
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81280510"
 ---
-# <a name="odbc-programmer39s-reference"></a>ODBC Programmer&#39;s Referenz
-Die *Referenz des ODBC-Programmierers* enthält die folgenden Abschnitte.  
+# <a name="odbc-programmer39s-reference"></a>ODBC-Programmierer&#39;s-Referenz
+Die *ODBC-Programmier Referenz* enthält die folgenden Abschnitte.  
   
--   [Was ist neu in ODBC 3.8](../../odbc/reference/what-s-new-in-odbc-3-8.md) listet die neuen ODBC-Funktionen, die in der Windows 8 SDK hinzugefügt wurden.  
+-   [Neues in ODBC 3,8](../../odbc/reference/what-s-new-in-odbc-3-8.md) listet die neuen ODBC-Funktionen auf, die im Windows 8-SDK hinzugefügt wurden.  
   
--   [Beispiel ODBC-Programm](../../odbc/reference/sample-odbc-program.md) präsentiert ein Beispiel ODBC-Programm.  
+-   Das [ODBC-Beispielprogramm](../../odbc/reference/sample-odbc-program.md) stellt ein ODBC-Beispielprogramm dar.  
   
--   [Die Einführung in ODBC](../../odbc/reference/introduction-to-odbc.md) enthält eine kurze Historie von Structured Query Language und ODBC sowie konzeptionelle Informationen zur ODBC-Schnittstelle.  
+-   Die [Einführung in ODBC](../../odbc/reference/introduction-to-odbc.md) bietet einen kurzen Überblick über strukturierte Abfragesprache und ODBC sowie konzeptionelle Informationen zur ODBC-Schnittstelle.  
   
--   [Das Entwickeln von Anwendungen](../../odbc/reference/develop-app/developing-applications.md) enthält Informationen zum Entwickeln von Anwendungen, die die ODBC-Schnittstelle verwenden, und Treiber, die sie implementieren.  
+-   Das [entwickeln von Anwendungen](../../odbc/reference/develop-app/developing-applications.md) enthält Informationen zum Entwickeln von Anwendungen, die die ODBC-Schnittstelle verwenden, und Treiber, die Sie implementieren.  
   
--   [Die Installation und Konfiguration der ODBC-Software](../../odbc/reference/install/installing-and-configuring-the-odbc-software.md) enthält Informationen zur Installation und eine DLL-Funktionsreferenz für setup.  
+-   Die [Installation und Konfiguration von ODBC-Software](../../odbc/reference/install/installing-and-configuring-the-odbc-software.md) enthält Informationen zur Installation und eine DLL-Funktionsreferenz für Setup.  
   
 -   [Die Entwicklung eines ODBC-Treibers](../../odbc/reference/develop-driver/developing-an-odbc-driver.md) enthält Informationen zum Schreiben eines Treibers.  
   
--   [API Reference](../../odbc/reference/syntax/odbc-reference.md) enthält Syntax- und semantische Informationen für alle ODBC-Funktionen.  
+-   Die [API-Referenz](../../odbc/reference/syntax/odbc-reference.md) enthält Syntax-und Semantik Informationen für alle ODBC-Funktionen.  
   
--   [ODBC-Anhänge](../../odbc/reference/appendixes/odbc-appendixes.md) enthalten technische Details und Referenztabellen für ODBC-Fehlercodes, Datentypen und SQL-Grammatik.  
+-   [ODBC-Appendixes](../../odbc/reference/appendixes/odbc-appendixes.md) enthalten technische Details und Referenztabellen für ODBC-Fehlercodes,-Datentypen und SQL-Grammatik.  
   
 ## <a name="working-with-the-odbc-documentation"></a>Arbeiten mit der ODBC-Dokumentation  
  Die ODBC-Schnittstelle dient zur Verwendung mit der Programmiersprache C. Die Verwendung der ODBC-Schnittstelle umfasst drei Bereiche: SQL-Anweisungen, ODBC-Funktionsaufrufe und C-Programmierung. In dieser Dokumentation wird Folgendes vorausgesetzt:  
   
--   Kenntnisse der Programmiersprache C.  
+-   Ein Funktions Wissen der Programmiersprache C.  
   
--   Allgemeines DBMS-Wissen und vertraut mit SQL.  
+-   Allgemeines DBMS-wissen und eine Vertrautheit mit SQL.  
   
  Die folgenden typografischen Konventionen werden verwendet.  
   
-|Format|Syntaxelemente|  
+|Format|Verwendet für|  
 |------------|--------------|  
-|WÄHLEN * VON|Großbuchstaben geben SQL-Anweisungen, Makronamen und Begriffe an, die auf Befehlsebene des Betriebssystems verwendet werden.|  
-|`RETCODE SQLFetch(hdbc)`|Die Monospace-Schriftart wird für Beispielbefehlszeilen und Programmcode verwendet.|  
-|*Argument*|Kursive Wörter geben programmgesteuerte Argumente, Informationen an, die der Benutzer oder die Anwendung bereitstellen muss, oder Wortbetonung.|  
-|**SQLEndTran**|Der Fetttyp gibt an, dass die Syntax genau wie gezeigt eingegeben werden muss, einschließlich Funktionsnamen.|  
-|&#124;|Ein vertikaler Balken trennt zwei sich gegenseitig ausschließende Optionen in einer Syntaxzeile.|  
-|...|Eine Auslassungspunkte gibt an, dass Argumente mehrmals wiederholt werden können.|  
-|. . .|Eine Spalte mit drei Punkten zeigt die Fortsetzung der vorherigen Codezeilen an.|  
+|Select * from|Großbuchstaben geben SQL-Anweisungen, Makronamen und Begriffe an, die auf der Betriebssystem-Befehls Ebene verwendet werden.|  
+|`RETCODE SQLFetch(hdbc)`|Die Schriftart fest breiten wird für Beispiel Befehlszeilen und Programmcode verwendet.|  
+|*argument*|Kursiv formatierte Wörter zeigen programmgesteuerte Argumente, Informationen an, die der Benutzer oder die Anwendung bereitstellen muss, oder die Wort Betonung.|  
+|**SQLEndTran**|Der Typ "Bold" gibt an, dass die Syntax genau wie gezeigt eingegeben werden muss, einschließlich der Funktionsnamen.|  
+|&#124;|Ein vertikaler Strich trennt zwei sich gegenseitig ausschließende Optionen in einer Syntax Zeile.|  
+|...|Ein Ellipsen Wert gibt an, dass Argumente mehrmals wiederholt werden können.|  
+|. . .|Eine Spalte mit drei Punkten gibt die Fortsetzung vorheriger Codezeilen an.|  
   
-## <a name="about-the-code-examples"></a>Informationen zu den Codebeispielen  
- Die Codebeispiele in diesem Handbuch dienen nur zur Veranschaulichung. Da sie in erster Linie geschrieben wurden, um ODBC-Prinzipien zu demonstrieren, wurde Effizienz manchmal im Interesse der Klarheit beiseite geschoben. Darüber hinaus wurden manchmal ganze Codeabschnitte aus Gründen der Übersichtlichkeit weggelassen. Dazu gehören die Definitionen von Nicht-ODBC-Funktionen (die Funktionen, deren Namen nicht mit "SQL" beginnen) und die meisten Fehlerbehandlungen.  
+## <a name="about-the-code-examples"></a>Informationen zu den Code Beispielen  
+ Die Codebeispiele in diesem Handbuch dienen nur zu Illustrations Zwecken. Da Sie in erster Linie für die Veranschaulichung von ODBC-Prinzipien geschrieben werden, wurde die Effizienz manchmal im Interesse der Klarheit eingestellt. Darüber hinaus wurden vollständige Code Abschnitte aus Gründen der Übersichtlichkeit ausgelassen. Hierzu gehören die Definitionen von nicht-ODBC-Funktionen (die Funktionen, deren Namen nicht mit "SQL" beginnen) und die meisten Fehlerbehandlung.  
   
- Alle Codebeispiele verwenden ANSI-Zeichenfolgen und dasselbe Datenbankschema, das am Anfang von [Catalog Functions](../../odbc/reference/develop-app/catalog-functions.md)angezeigt wird.  
+ Alle Codebeispiele verwenden ANSI-Zeichen folgen und das gleiche Datenbankschema, das am Anfang der [Katalog Funktionen](../../odbc/reference/develop-app/catalog-functions.md)angezeigt wird.  
   
 ## <a name="recommended-reading"></a>Empfohlene Lektüre  
- Weitere Informationen zu SQL finden Sie unter folgenden Standards:  
+ Weitere Informationen zu SQL finden Sie in den folgenden Standards:  
   
--   Datenbanksprache - SQL mit Integritätsverbesserung, ANSI, 1989 ANSI X3.135-1989.  
+-   Datenbanksprache-SQL mit Integritäts Erweiterung, ANSI, 1989 ANSI x 3.135-1989.  
   
--   Datenbanksprache - SQL: ANSI X3H2 und ISO/IEC JTC1/SC21/WG3 9075:1992 (SQL-92).  
+-   Datenbanksprache-SQL: ANSI X3H2 und ISO/IEC JTC1/SC21/WG3 9075:1992 (SQL-92).  
   
--   Open Group, Data Management: Structured Query Language (SQL), Version 2 (The Open Group, 1996).  
+-   Open Group, Datenverwaltung: strukturierte Abfragesprache (SQL), Version 2 (die geöffnete Gruppe, 1996).  
   
- Neben Standards und herstellerspezifischen SQL-Leitfäden beschreiben viele Bücher SQL, einschließlich:  
+ Zusätzlich zu den Standard-und herstellerspezifischen SQL-Leitfäden beschreiben viele Bücher SQL, einschließlich:  
   
--   Date, C. J., mit Darwen, Hugh: *A Guide to the SQL Standard* (Addison-Wesley, 1993).  
+-   Date, C. J., with Darwen, Hugh: *ein Leitfaden zum SQL-Standard* (Addison-Wesley, 1993).  
   
--   Emerson, Sandra L., Darnovsky, Marcy, and Bowman, Judith S.: *The Practical SQL Handbook* (Addison-Wesley, 1989).  
+-   Emerson, Sandra L., darnovsky, Marcy und Bowman, Judith S.: *das praktische SQL-Handbuch* (Addison-Wesley, 1989).  
   
--   Groff, James R. and Weinberg, Paul N.: *Using SQL* (Osborne McGraw-Hill, 1990).  
+-   Groff, James R. und Weinberg, Paul N.: *using SQL* (Osborne McGraw-Hill, 1990).  
   
--   Martin Gruber: *Understanding SQL* (Sybex, 1990).  
+-   Gruber, Martin: Grundlegendes zu *SQL* (Sybex, 1990).  
   
--   Jack L. Hursch und Carolyn J.: *SQL, The Structured Query Language* (TAB Books, 1988).  
+-   Hursch, Jack L. und Carolyn J.: *SQL, die strukturierte Abfragesprache* (Registerkarten Bücher, 1988).  
   
--   Alan R: *Understanding the New SQL: A Complete Guide* (Morgan Kaufmann Publishers, 1993).  
+-   Melton, Jim und Simon, Alan R.: Grundlegendes *zum neuen SQL: A Complete Guide* (Morgan Kaufmann Publisher, 1993).  
   
--   Pascal, Fabian: *SQL and Relational Basics* (M & T Books, 1990).  
+-   Pascal, Fabian: *SQL und relationale Grundlagen* (M & T Books, 1990).  
   
--   Trimble, J. Harvey, Jr. und Chappell, David: *A Visual Introduction to SQL* (Wiley, 1989).  
+-   Trimble, J. Harvey, Jr. und Chappell, David: *eine visuelle Einführung in SQL* (Wiley, 1989).  
   
--   Rick F. Van der Lans: *Introduction to SQL* (Addison-Wesley, 1988).  
+-   Van der LANs, Rick F.: *Einführung in SQL* (Addison-Wesley, 1988).  
   
--   Vang, Soren: *SQL and Relational Databases* (Microtrend Books, 1990).  
+-   Vang, Soren: *SQL-und relationale Datenbanken* (mikrotrend-Bücher, 1990).  
   
--   John: *Quick Reference Guide to SQL:* Viescas:  
+-   Viescas, John: *Kurzübersicht zu SQL* (Microsoft Corp., 1989).  
   
  Weitere Informationen zur Transaktionsverarbeitung finden Sie unter:  
   
--   Gray, J. N. und Reuter, Andreas: *Transaction Processing: Concepts and Techniques* (Morgan Kaufmann Publishers, 1993).  
+-   Grau, J. N. und Reuter, Andreas: *Transaktionsverarbeitung: Konzepte und Techniken* (Morgan Kaufmann Publisher, 1993).  
   
--   Richard D. Hackathorn: *Enterprise Database Connectivity* (Wiley & Sons, 1993).  
+-   Hackathorn, Richard D.: *Enterprise Database Connectivity* (Wiley & Sons, 1993).  
   
- Weitere Informationen zu Call-Level-Schnittstellen finden Sie unter folgenden Standards:  
+ Weitere Informationen zu Schnittstellen auf Aufrufebene finden Sie in den folgenden Standards:  
   
--   Open Group, *Data Management: SQL Call Level Interface (CLI), C451* (Open Group, 1995).  
+-   Open Group, *Datenverwaltung: SQL-Befehlsebenen-Schnittstelle (CLI), C451* (Open Group, 1995).  
   
--   ISO/IEC 9075-3:1995, Schnittstelle auf Aufrufebene (SQL/CLI).  
+-   ISO/IEC 9075-3:1995, Schnittstelle auf Callcenter (SQL/CLI).  
   
- Für weitere Informationen über ODBC stehen eine Reihe von Büchern zur Verfügung, darunter:  
+ Weitere Informationen zu ODBC finden Sie unter den folgenden Themen:  
   
--   Kyle Geiger: *Inside ODBC* (Microsoft Press®, 1995).  
+-   Geiger, Kyle: *innerhalb von ODBC* (Microsoft Press®, 1995).  
   
--   Gryphon, Robert, Charpentier, Luc, Oelschlager, Jon, Shoemaker, Andrew, Cross, Jim, and Lilley, Albert W.: *Using ODBC 2* (Que, 1994).  
+-   Gryphon, Robert, chartztier, Luc, Oelschlager, Jon, Shoemaker, Andrew, Cross, Jim und Lilley, Albert W.: *Using ODBC 2* (que, 1994).  
   
--   Tom and Osborne Johnston, Mark: *ODBC Developers Guide* (Howard W. Sams & Company, 1994).  
+-   Johnston, Tom und Osborne, Mark: *ODBC-Entwicklerhandbuch* (Howard W. Sams & Company, 1994).  
   
--   North, Ken: *Windows Multi-DBMS Programming: Using C++, Visual Basic, ODBC, OLE 2 and Tools for DBMS Projects* (John Wiley & Sons, Inc., 1995).  
+-   Nord, Ken: *Windows Multi-DBMS Programming: Using C++, Visual Basic, ODBC, OLE 2 und Tools for DBMS projects* (John Wiley & Sons, Inc., 1995).  
   
--   Stegman, Michael O., Signore, Robert, and Creamer, John: *The ODBC Solution, Open Database Connectivity in Distributed Environments* (McGraw-Hill, 1995).  
+-   Stegman, Michael O., Signore, Robert und Creamer, John: *die ODBC-Lösung, Open Database Connectivity in verteilten Umgebungen* (McGraw-Hill, 1995).  
   
--   Keith Welch: *Using ODBC 2* (Que, 1994).  
+-   Welch Keith: *Verwendung von ODBC 2* (que, 1994).  
   
--   Whiting, Bill: *Teach Yourself ODBC in Twenty-One Days* (Howard W. Sams & Company, 1994).
+-   Whiting, Rechnung: *vermitteln Sie ODBC in zwanzig Tagen* (Howard W. Sams & Company, 1994).

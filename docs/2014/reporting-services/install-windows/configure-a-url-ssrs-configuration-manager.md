@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e2337434a48e92ddc28af52cc3481951eafe66d3
-ms.sourcegitcommit: ff82f3260ff79ed860a7a58f54ff7f0594851e6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80380701"
 ---
 # <a name="configure-a-url--ssrs-configuration-manager"></a>Konfigurieren einer URL (SSRS-Konfigurations-Manager)
@@ -34,7 +34,7 @@ ms.locfileid: "80380701"
   
 -   Legen Sie erweiterte URL-Eigenschaften fest, um zusätzliche URLs zu definieren.  
   
- Weitere Informationen zur Speicherung und Verwaltung von URLs oder Interoperabilitätsproblemen finden Sie unter Informationen zu [URL-Reservierungen und Registrierung &#40;SSRS Configuration Manager&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md) und Installieren von Reporting Services und [Internetinformationsdiensten Side-by-Side &#40;SSRS Native Mode&#41;](install-reporting-and-internet-information-services-side-by-side.md)in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online. Beispiele für URLs, die häufig in Reporting Services-Installationen verwendet werden, finden Sie unter [Beispiele für URLs](#URLExamples) in diesem Thema.  
+ Weitere Informationen zur Speicherung und Beibehaltung von URLs sowie zu Interoperabilitätsproblemen finden Sie unter [Informationen zu URL-Reservierungen und-Registrierungen &#40;SSRS Configuration Manager&#41;](about-url-reservations-and-registration-ssrs-configuration-manager.md) und [Installieren von Reporting Services und Internetinformationsdienste nebeneinander &#40;SSRS ](install-reporting-and-internet-information-services-side-by-side.md)im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einheitlichen Modus&#41;in der-Online Dokumentation. Beispiele für URLs, die häufig in Reporting Services-Installationen verwendet werden, finden Sie unter [Beispiele für URLs](#URLExamples) in diesem Thema.  
   
 ## <a name="prerequisites"></a>Voraussetzungen  
  Bevor Sie eine URL erstellen oder ändern, beachten Sie folgende Punkte:  
@@ -71,7 +71,7 @@ ms.locfileid: "80380701"
   
     -   **::1** ist die Loopback-Adresse im IPv6-Format.  
   
-    -   Bestimmte IP-Adressen werden ebenfalls in dieser Liste angezeigt. IP-Adressen können in den Formaten IPv4 und IPv6 vorliegen *Nnn.nnn.nnn.nnn* ist die 32-Bit-IPv4-Adresse einer Netzwerkadapterkarte auf dem Computer. IPv6-Adressen sind 128-Bit, mit acht 4-Byte-Feldern, die durch Doppelpunkte getrennt sind: \<Präfix>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
+    -   Bestimmte IP-Adressen werden ebenfalls in dieser Liste angezeigt. IP-Adressen können in den Formaten IPv4 und IPv6 vorliegen *Nnn.nnn.nnn.nnn* ist die 32-Bit-IPv4-Adresse einer Netzwerkadapterkarte auf dem Computer. IPv6-Adressen sind 128-Bit-Adressen mit acht 4-Byte-Feldern, die durch Doppelpunkte getrennt sind: \<Präfix>:*nnnn:nnnn:nnnn:nnnn:nnnn:nnnn*  
   
          Wenn Sie über mehrere Karten verfügen oder wenn Ihr Netzwerk sowohl IPv4- als auch IPv6-Adressen unterstützt, werden Ihnen mehrere IP-Adressen angezeigt. Wenn Sie nur eine einzige IP-Adresse auswählen, wird der Anwendungszugriff auf genau diese IP-Adresse (und jeden Hostnamen, den ein Domänennamenserver dieser Adresse zuordnet) beschränkt. Sie können mit localhost nicht auf einen Berichtsserver zugreifen, und Sie können nicht die IP-Adressen der anderen Netzwerkkarten verwenden, die auf dem Berichtsservercomputer installiert sind. Normalerweise wählen Sie diesen Wert aus, weil Sie mehrere URL-Reservierungen konfigurieren, die auch explizite IP-Adressen oder Hostnamen angeben (z. B. einen für eine Netzwerkadapterkarte für Intranetverbindungen und einen zweiten für Extranetverbindungen).  
   
@@ -95,7 +95,7 @@ ms.locfileid: "80380701"
   
 10. Testen Sie die URL, indem Sie auf den Link im Abschnitt **URLs** der Seite klicken. Beachten Sie, dass die Berichtsserver-Datenbank erstellt und konfiguriert werden muss, bevor Sie die URL testen können. Anweisungen finden Sie unter [Erstellen einer Berichtsserver-Datenbank im einheitlichen Modus (SSRS-Konfigurations-Manager)](ssrs-report-server-create-a-native-mode-report-server-database.md).  
   
-11. Wenn Ihr Berichtsserver für die Ausführung im integrierten SharePoint-Modus konfiguriert ist, konfigurieren Sie außerdem die URL für den Berichtsserver-Webdienst in der SharePoint-Zentraladministration. Weitere Informationen zum Aktualisieren der Berichtsserver-Webdienst-URL in sharePoint Central Administration finden Sie unter [Konfiguration und Verwaltung eines Berichtsservers &#40;Reporting Services SharePoint Mode&#41;](../configure-administer-report-server-reporting-services-sharepoint-mode.md) und Reporting Services Report Server &#40;[SharePoint Mode&#41;](../reporting-services-report-server-sharepoint-mode.md).  
+11. Wenn Ihr Berichtsserver für die Ausführung im integrierten SharePoint-Modus konfiguriert ist, konfigurieren Sie außerdem die URL für den Berichtsserver-Webdienst in der SharePoint-Zentraladministration. Weitere Informationen zum Aktualisieren der URL des Berichts Server-Webdiensts in der SharePoint-zentral Administration finden Sie unter [Konfiguration und Verwaltung eines Berichts Servers &#40;Reporting Services SharePoint-Modus&#41;](../configure-administer-report-server-reporting-services-sharepoint-mode.md) und [Reporting Services Berichts Server &#40;SharePoint-Modus&#41;](../reporting-services-report-server-sharepoint-mode.md).  
   
 ### <a name="to-create-a-url-reservation-for-report-manager"></a>So erstellen Sie eine URL-Reservierung für den Berichts-Manager  
   
@@ -103,7 +103,7 @@ ms.locfileid: "80380701"
   
 2.  Klicken Sie auf **Berichts-Manager-URL**.  
   
-3.  Geben Sie das virtuelle Verzeichnis an. Der Berichts-Manager lauscht auf derselben IP-Adresse und demselben Port wie der Report Server-Webdienst. Wenn Sie den Berichts-Manager so konfiguriert haben, dass er auf einen anderen Berichtsserver-Webdienst verweist, müssen Sie die URL-Einstellungen des Berichts-Managers in der Datei RSReportServer.config überprüfen. Anweisungen finden Sie unter [Konfigurieren des Berichts-&#40;Systemmodus&#41;](../report-server/configure-web-portal.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  
+3.  Geben Sie das virtuelle Verzeichnis an. Der Berichts-Manager lauscht auf derselben IP-Adresse und demselben Port wie der Report Server-Webdienst. Wenn Sie den Berichts-Manager so konfiguriert haben, dass er auf einen anderen Berichtsserver-Webdienst verweist, müssen Sie die URL-Einstellungen des Berichts-Managers in der Datei RSReportServer.config überprüfen. Anweisungen finden Sie unter [Konfigurieren von Berichts-Manager &#40;](../report-server/configure-web-portal.md) im einheitlichen Modus [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]&#41;in der-Online Dokumentation.  
   
 4.  Wenn Sie ein SSL-Zertifikat installiert haben, können Sie es auswählen, um festzulegen, dass alle Anforderungen an den Berichts-Manager über HTTPS geleitet werden.  
   
@@ -168,8 +168,8 @@ ms.locfileid: "80380701"
   
 -   `https://www.adventure-works.com:8080/reports`  
   
-## <a name="see-also"></a>Siehe auch  
- [Reporting Services Configuration Manager &#40;nativer Modus&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
+## <a name="see-also"></a>Weitere Informationen  
+ [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [Konfigurieren von Berichtsserver-URLs &#40;SSRS-Konfigurations-Manager&#41;](configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

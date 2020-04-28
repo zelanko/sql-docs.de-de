@@ -11,10 +11,10 @@ ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: a0300b7f613610403970862fe9e5aad594372b27
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289888"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>Anzeigen von m:n-Beziehungen in abgeleiteten Hierarchien (Master Data Services)
@@ -72,11 +72,10 @@ ms.locfileid: "79289888"
   
  m:n-Ebenen können genau wie andere abgeleitete Hierarchieebenen ausgeblendet werden.  
    
-### <a name="M2MSample"></a>M2M-Beziehung im Beispielmodell  
+### <a name="m2m-relationship-in-sample-model"></a><a name="M2MSample"></a>M2M-Beziehung im Beispielmodell  
 Eine Vorführung einer m:n-Beziehung finden Sie in der abgeleiteten Hierarchie „Region Climate“ (regionales Klima) im Beispielmodell „Customer“, das in [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]enthalten ist.   
   
-Wie in der folgenden Abbildung gezeigt, lautet der Ebenenname, der diese Beziehung modelliert, ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (mapped via RegionClimate.Region)**(Klima (über RegionClimate.Region zugeordnet)). 
-  ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** (Vorschau) zeigt die Regionen gruppiert nach den Klimatypen, denen sie zugeordnet sind. Hierbei handelt es sich um eine m:n-Beziehung, weil einige Regionen (untergeordnete Elemente) mehreren Klimata (übergeordneten Elementen) zugeordnet sind. So ist ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** (Asien/Pazifik) z.B. ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** (Tropisch) und ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}**(Trocken) zugeordnet.  
+Wie in der folgenden Abbildung gezeigt, lautet der Ebenenname, der diese Beziehung modelliert, ![mds_Number1](../master-data-services/media/mds-number1.png)**Climate (mapped via RegionClimate.Region)**(Klima (über RegionClimate.Region zugeordnet)). ![mds_Number2](../master-data-services/media/mds-number2.png)**Preview** (Vorschau) zeigt die Regionen gruppiert nach den Klimatypen, denen sie zugeordnet sind. Hierbei handelt es sich um eine m:n-Beziehung, weil einige Regionen (untergeordnete Elemente) mehreren Klimata (übergeordneten Elementen) zugeordnet sind. So ist ![mds_Number3](../master-data-services/media/mds-number3.png)**APCR {Asia Pacific}** (Asien/Pazifik) z.B. ![mds_Number4](../master-data-services/media/mds-number4.png)**A {Tropical}** (Tropisch) und ![mds_Number5](../master-data-services/media/mds-number5.png)**B {Dry}**(Trocken) zugeordnet.  
   
 ![mds_M2MRelationship_Example_CustomerModel](../master-data-services/media/mds-m2mrelationship-example-customermodel.png)  
   
@@ -91,7 +90,7 @@ Eine Anleitung zum Bereitstellen des Customer-Beispielmodells und weitere in [!I
   
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
-##  <a name="bkmk_member_security"></a>Element Sicherheit  
+##  <a name="member-security"></a><a name="bkmk_member_security"></a>Element Sicherheit  
  Eine Hierarchie, die das Kopieren von Elementen ermöglicht (dadurch kann ein Element mehrere übergeordnete Elemente aufweisen), kann nicht dazu verwendet werden, um Elementsicherheitsberechtigungen zuzuweisen. Beispiel:  
   
 -   Eine rekursive abgeleitete Hierarchie, die keine Null-Rekursionen verankert (jedes Element der rekursiven Ebene wird sowohl unter ROOT als auch unter seinem rekursiven übergeordneten Element angezeigt).  
@@ -100,7 +99,7 @@ Eine Anleitung zum Bereitstellen des Customer-Beispielmodells und weitere in [!I
   
 -   Eine abgeleitete Hierarchie mit einer m:n-Ebene (ein untergeordnetes Element kann vielen übergeordneten Elementen zugeordnet werden).  
   
-## <a name="collections"></a>Auflistungen  
+## <a name="collections"></a>Sammlungen  
  Sammlungen und explizite Hierarchien sind veraltet. Die gespeicherte Konvertierungsprozedur (udpConvertCollectionAndConsolidatedMembersToLeaf) konvertiert Sammlungselemente in Blattelemente und erstellt abgeleitete m:n-Hierarchien, um die Informationen zur Sammlungsmitgliedschaft zu erfassen.  
   
 ## <a name="see-also"></a>Weitere Informationen  

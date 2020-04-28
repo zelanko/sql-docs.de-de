@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 499ac56d8a462f62dac92b97654a9ace12bd356e
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289688"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>Paralleles Verwalten von Berechtigungen Data Warehouse
 In diesem Artikel werden die Anforderungen und Optionen für die Verwaltung von Daten Bank Berechtigungen für SQL Server PDW beschrieben.
 
-## <a name="BackupRestoreBasics"></a>Grundlagen zu Datenbank-Engine Berechtigungen
+## <a name="database-engine-permission-basics"></a><a name="BackupRestoreBasics"></a>Grundlagen zu Datenbank-Engine Berechtigungen
 Datenbank-Engine Berechtigungen auf SQL Server PDW werden auf Server Ebene über Anmeldungen und auf Datenbankebene über Datenbankbenutzer und benutzerdefinierte Daten bankrollen verwaltet.
 
 **Anmeldungen** Anmeldungen sind einzelne Benutzerkonten für die Anmeldung beim SQL Server PDW. SQL Server PDW unterstützt Anmeldungen unter Verwendung der Windows-Authentifizierung und SQL Server Authentifizierung.  Windows-Authentifizierungs Anmeldungen können Windows-Benutzer oder Windows-Gruppen aus jeder Domäne sein, der von SQL Server PDW vertraut wird. SQL Server Authentifizierungs Anmeldungen werden von SQL Server PDW definiert und authentifiziert und müssen durch Angabe eines Kennworts erstellt werden.
@@ -52,7 +52,7 @@ Anmeldungen sind Objekte auf Serverebene und können durch Anzeigen von [sys. se
 
 Benutzer und Daten bankrollen sind Objekte auf Datenbankebene und können durch Anzeigen von [sys. database_principals](../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)aufgelistet werden. Daten Bank Prinzipale können nur Berechtigungen auf Datenbankebene erteilt werden.
 
-## <a name="BackupTypes"></a>Standardberechtigungen
+## <a name="default-permissions"></a><a name="BackupTypes"></a>Standardberechtigungen
 In der folgenden Liste werden die Standardberechtigungen beschrieben:
 
 -   Wenn eine Anmeldung von using-Direktiven **Create Login** -Anweisung erstellt wird, erhält der Anmelde Name die **Connect SQL** -Berechtigung, sodass der Anmelde Name eine Verbindung mit dem SQL Server PDW herstellen kann.
@@ -80,7 +80,7 @@ Alle neuen Appliance-Anmeldungen gehören automatisch zur public-Rolle. Die öff
 
 -   Die öffentliche Server Rolle kann keine impliziten Berechtigungen erben. Alle Berechtigungen, die der public-Rolle erteilt werden, müssen explizit erteilt werden.
 
-## <a name="BackupProc"></a>Festlegen von Berechtigungen
+## <a name="determining-permissions"></a><a name="BackupProc"></a>Festlegen von Berechtigungen
 Ob ein Anmelde Name über die Berechtigung zum Durchführen einer bestimmten Aktion verfügt, hängt von den Berechtigungen ab, die für die Anmeldung, den Benutzer und die Rollen erteilt oder verweigert werden, bei denen der Benutzer Mitglied ist. Berechtigungen auf Serverebene (z. b. **Create Login** und **View Server State**) sind für Prinzipale auf Serverebene (Anmeldungen) verfügbar. Berechtigungen auf Datenbankebene (z. b. **Select** from a Table oder **Execute** for a Procedure) sind für Prinzipale auf Datenbankebene (Benutzer und Daten bankrollen) verfügbar.
 
 ### <a name="implicit-and-explicit-permissions"></a>Implizite und explizite Berechtigungen
@@ -165,7 +165,7 @@ In der folgenden Liste werden allgemeine Regeln zum Bestimmen von Berechtigungen
         ON DP.grantee_principal_id = DPUsers.principal_id;
     ```
 
-## <a name="RestoreProc"></a>Bewährte Methoden für Daten Bank Berechtigungen
+## <a name="database-permissions-best-practices"></a><a name="RestoreProc"></a>Bewährte Methoden für Daten Bank Berechtigungen
 
 -   Erteilen Sie Berechtigungen auf der differenzierteren Ebene, die praktikabel ist. Das Erteilen von Berechtigungen auf der Tabellen-oder Sicht Ebene kann möglicherweise nicht mehr verwaltet werden. Das Erteilen von Berechtigungen auf Datenbankebene ist jedoch möglicherweise zu nicht zulässig. Wenn die Datenbank mit Schemas zum Definieren von Arbeits Begrenzungen entworfen wurde, ist die Erteilung der Berechtigung für das Schema möglicherweise eine angemessene Gefährdung zwischen der Tabellenebene und der Datenbankebene.
 
@@ -214,7 +214,7 @@ Das System fester Server Rollen und fester Daten bankrollen ist ein Legacy Syste
 Festes Server Rollen werden automatisch von SQL Server erstellt. SQL Server PDW verfügt über eine begrenzte Implementierung SQL Server fester Server Rollen. Nur " **sysadmin** " und " **Public** " verfügen über Benutzeranmeldungen als Mitglieder. Die Rollen **festen setupadmin** und **dbcreator** werden intern von SQL Server PDW verwendet. Weitere Mitglieder können keiner Rolle hinzugefügt oder entfernt werden.
 
 ### <a name="sysadmin-fixed-server-role"></a>festen Server Rolle "sysadmin"
-Mitglieder der festen Serverrolle **sysadmin** können alle Aktivitäten auf dem Server ausführen. Der **sa** -Anmelde Name ist das einzige Mitglied der festen Server Rolle **sysadmin** . Zusätzliche Anmeldungen können nicht der festen Server Rolle **sysadmin** hinzugefügt werden. Das Erteilen der Berechtigung **CONTROL SERVER** gleicht der Mitgliedschaft in der festen Serverrolle **sysadmin**. Im folgenden Beispiel wird die **Control Server** -Berechtigung für einen Anmelde Namen mit dem Namen Fay erteilt.
+Mitglieder der festen Server Rolle **sysadmin** können alle Aktivitäten auf dem Server ausführen. Der **sa** -Anmelde Name ist das einzige Mitglied der festen Server Rolle **sysadmin** . Zusätzliche Anmeldungen können nicht der festen Server Rolle **sysadmin** hinzugefügt werden. Das Erteilen der Berechtigung **CONTROL SERVER** gleicht der Mitgliedschaft in der festen Serverrolle **sysadmin**. Im folgenden Beispiel wird die **Control Server** -Berechtigung für einen Anmelde Namen mit dem Namen Fay erteilt.
 
 ```sql
 USE master;

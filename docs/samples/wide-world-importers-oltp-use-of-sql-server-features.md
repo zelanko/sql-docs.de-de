@@ -12,10 +12,10 @@ ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: abf7cff6bfcd1640f2115c2a7f097ba4fccb499d
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112418"
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>Verwendung von SQL Server Features und Funktionen
@@ -29,7 +29,7 @@ Wideworldimporters ist so konzipiert, dass viele der wichtigsten Features von SQ
 
 |SQL Server Feature oder Funktion|Verwendung in wideworldimporters|
 |:-------------------------------|:------------------------|
-|Temporäre Tabellen|Es gibt viele Temporale Tabellen, einschließlich aller Nachschlage Tabellen und Haupt Entitäten, z. b. stockitems, Kunden und Lieferanten. Mithilfe Temporaler Tabellen kann der Verlauf dieser Entitäten bequem nachverfolgt werden.|
+|Temporale Tabellen|Es gibt viele Temporale Tabellen, einschließlich aller Nachschlage Tabellen und Haupt Entitäten, z. b. stockitems, Kunden und Lieferanten. Mithilfe Temporaler Tabellen kann der Verlauf dieser Entitäten bequem nachverfolgt werden.|
 |AJAX-Aufrufe für JSON|Die Anwendung verwendet häufig AJAX-Aufrufe, um diese Tabellen abzufragen: Personen, Kunden, Lieferanten und stockitems. Die Aufrufe geben die Daten im JSON-Format zurück. Informationen hierzu finden Sie beispielsweise in `Website.SearchForCustomers`der gespeicherten Prozedur.|
 |JSON-Eigenschaft/Wert-Taschen|Eine Reihe von Tabellen enthält Spalten, die JSON-Daten enthalten, um die relationalen Daten in der Tabelle zu erweitern. Beispielsweise `Application.SystemParameters` verfügt über eine-Spalte für Anwendungseinstellungen `Application.People` und eine-Spalte, um Benutzereinstellungen zu erfassen. Diese Tabellen verwenden eine `nvarchar(max)` -Spalte, um die JSON-Daten zusammen mit einer Check-Einschränkung aufzuzeichnen, die die `ISJSON` integrierte-Funktion verwendet, um sicherzustellen, dass die Spaltenwerte gültige JSON-Werte sind.|
 |Sicherheit auf Zeilenebene|Sicherheit auf Zeilenebene (RLS) wird verwendet, um den Zugriff auf die Customers-Tabelle basierend auf der Rollen Mitgliedschaft einzuschränken. Jedes Vertriebsgebiet hat eine Rolle und einen Benutzer. Wenn Sie ein RLS-Zugriffs Limit in Aktion sehen möchten, verwenden Sie das entsprechende Skript in Sample-Script. zip, das Teil der [Veröffentlichung des](https://go.microsoft.com/fwlink/?LinkID=800630)Beispiels ist.|

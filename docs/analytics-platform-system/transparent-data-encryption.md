@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: e75230ed175c6fbf1b0a2492265bbe12067060ca
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289748"
 ---
 # <a name="transparent-data-encryption"></a>Transparente Datenverschlüsselung
@@ -37,7 +37,7 @@ Die folgende Abbildung zeigt die Schlüssel Hierarchie für die TDE-Verschlüsse
   
 ![Zeigt die Hierarchie an](media/tde-architecture.png "TDE_Architecture")  
   
-## <a name="using-tde"></a>Verwenden der transparenten Datenverschlüsselung  
+## <a name="using-transparent-data-encryption"></a><a name="using-tde"></a>Verwenden der transparenten Datenverschlüsselung  
 Führen Sie folgende Schritte aus, um TDE zu verwenden: Die ersten drei Schritte werden nur einmal ausgeführt, wenn Sie SQL Server PDW für die Unterstützung von TDE vorbereiten.  
   
 1.  Erstellen Sie einen Hauptschlüssel in der Master-Datenbank.  
@@ -121,8 +121,8 @@ Die folgende Tabelle bietet Links und Erläuterungen zu den Befehlen und Funktio
 |Befehl oder Funktion|Zweck|  
 |-----------------------|-----------|  
 |[CREATE DATABASE ENCRYPTION KEY](../t-sql/statements/create-database-encryption-key-transact-sql.md)|Erstellt einen Schlüssel, der verwendet wird, um eine Datenbank zu verschlüsseln.|  
-|[Alter Database-Verschlüsselungsschlüssel](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Ändert den Schlüssel, der verwendet wird, um eine Datenbank zu verschlüsseln.|  
-|[Verschlüsselungsschlüssel für Datenbank löschen](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Entfernt den Schlüssel, der verwendet wurde, um eine Datenbank zu verschlüsseln.|  
+|[ALTER DATABASE ENCRYPTION KEY](../t-sql/statements/alter-database-encryption-key-transact-sql.md)|Ändert den Schlüssel, der verwendet wird, um eine Datenbank zu verschlüsseln.|  
+|[DROP DATABASE ENCRYPTION KEY](../t-sql/statements/drop-database-encryption-key-transact-sql.md)|Entfernt den Schlüssel, der verwendet wurde, um eine Datenbank zu verschlüsseln.|  
 |[ALTER DATABASE](../t-sql/statements/alter-database-transact-sql.md?tabs=sqlpdw)|Erklärt die **ALTER DATABASE** -Option, mit der TDE aktiviert wird.|  
   
 ## <a name="catalog-views-and-dynamic-management-views"></a>Katalogsichten und dynamische Verwaltungssichten  
@@ -264,7 +264,7 @@ Msg 110806;
 A distributed query failed: Database '<db_name>' cannot be opened due to inaccessible files or insufficient memory or disk space. See the SQL Server errorlog for details.
 ```  
   
-## <a name="performance-impact"></a>Auswirkungen auf die Leistung  
+## <a name="performance-impact"></a>Leistungsauswirkungen  
 Die Auswirkungen von TDE auf die Leistung variieren abhängig von der Art der Daten, der Art der Speicherung und der Art der Arbeits Auslastungs Aktivität auf der SQL Server PDW. Beim Schutz durch TDE ist die e/a-Vorgänge zum Lesen und anschließenden Entschlüsseln von Daten oder zum Verschlüsseln und anschließenden Schreiben von Daten eine CPU-intensive Aktivität und hat mehr Auswirkungen, wenn gleichzeitig andere CPU-intensive Aktivitäten durchgeführt werden. TDE verschlüsselt `tempdb`, kann TDE sich auf die Leistung von Datenbanken auswirken, die nicht verschlüsselt sind. Um eine genaue Vorstellung der Leistung zu erhalten, sollten Sie das gesamte System mit Ihrer Daten-und Abfrage Aktivität testen.  
   
 ## <a name="related-content"></a>Verwandte Inhalte  

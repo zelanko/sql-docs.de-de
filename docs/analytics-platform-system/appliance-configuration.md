@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 80fc899400be167badaae9d617d43a61e0d346b5
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289738"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Checklisten für die Gerätekonfiguration für Analytics Platform System
@@ -22,7 +22,7 @@ Enthält Checklisten für die Aufgaben, die erforderlich sind, um Analytics Plat
 > [!WARNING]  
 > Die Verwendung von Analytics Platform System**Configuration Manager** ist die beste Methode und die einzige unterstützte Methode, die im Tool verfügbaren Aufgaben auszuführen.  
   
-## <a name="BeforeTasks"></a>Bevor Sie beginnen  
+## <a name="before-you-begin"></a><a name="BeforeTasks"></a>Bevor Sie beginnen  
   
 ### <a name="prerequisites"></a>Voraussetzungen  
   
@@ -44,12 +44,12 @@ Enthält Checklisten für die Aufgaben, die erforderlich sind, um Analytics Plat
   
     2.  Starten Sie den **Configuration Manager** über das **Startmenü** des PDW-Steuerelement Knotens. Auf dem ersten Bildschirm des Configuration Manager wird die Geräte Topologie angezeigt, die von Ihrem IHV erstellt wurde. Es handelt sich um eine Liste der Hardware Knoten, die von Ihrer SQL Server PDW Software als Teil Ihrer Appliance erkannt werden. Sie sollten keine Einstellungen auf dem Bildschirm "Geräte Topologie" ändern.  
   
-## <a name="CMTasks"></a>Ausführen von Configuration Manager Tasks  
+## <a name="perform-configuration-manager-tasks"></a><a name="CMTasks"></a>Ausführen von Configuration Manager Tasks  
 Der SQL Server PDW**Configuration Manager** (pdwcm) ist ein Tool zum Verwalten von Geräten, das SQL Server PDW Systemadministratoren zum Ausführen von Vorgängen auf Geräteebene und zum Ändern der Einstellungen auf Geräteebene verwenden. Verwenden Sie z. b. pdwcm, um Kenn Wörter zurückzusetzen, die Zeitzone festzulegen, IP-Adressen zu ändern, SSL-Zertifikate zu aktivieren, den Remote Zugriff über die Firewall zu aktivieren, die Appliance zu starten oder anzuhalten und die sofortige Datei Initialisierung festzulegen.  
   
 Verwenden Sie **Configuration Manager** , um die folgenden Konfigurationsaufgaben auszuführen.  
   
-|Konfigurationstask|Beschreibung|  
+|Konfigurationstask|BESCHREIBUNG|  
 |----------------------|---------------|  
 |Machen Sie sich mit den Namen der physischen Komponenten vertraut.|[PDW und Appliance Fabric physische Komponenten &#40;Analytics Platform System&#41;](pdw-and-appliance-fabric-physical-components.md)|  
 |Starten Sie SQL Server PDW Configuration Manager|[Starten Sie die Configuration Manager &#40;Analytics-Platt Form System&#41;](launch-the-configuration-manager.md)|  
@@ -64,10 +64,10 @@ Verwenden Sie **Configuration Manager** , um die folgenden Konfigurationsaufgabe
 |Überprüfen der sofortigen Datei Initialisierungs Optionen mithilfe des Dialog Felds " **Berechtigungen** "|Die sofortige Datei Initialisierung ist ein SQL Server Feature, mit dem Datendatei Vorgänge schneller ausgeführt werden können. Sie wird nur auf SQL Server PDW aktiviert, wenn dem Netzwerkdienst Konto die Berechtigung SE_MANAGE_VOLUME_NAME gewährt wurde. Sie ist standardmäßig deaktiviert.<br /><br />Weitere Informationen finden Sie unter [Konfiguration der sofortigen Datei Initialisierung &#40;Analytics Platform System&#41;](instant-file-initialization-configuration.md).|  
 |Wiederherstellen der Master-Datenbank aus einer Sicherung|Löscht die aktuelle **Master** -Datenbank und ersetzt Sie durch eine Sicherung. Weitere Informationen finden Sie unter [Wiederherstellen der Master-Datenbank &#40;Analytics Platform System&#41;](restore-the-master-database.md).|  
   
-## <a name="AddTasks"></a>Ausführen zusätzlicher Konfigurationsaufgaben  
+## <a name="perform-additional-configuration-tasks"></a><a name="AddTasks"></a>Ausführen zusätzlicher Konfigurationsaufgaben  
 Nachdem Sie die **Configuration Manager** Aufgaben ausgeführt haben, führen Sie die folgende Liste mit zusätzlichen Konfigurationsaufgaben aus. Einige dieser Aufgaben sind optional.  
   
-|Konfigurationstask|Beschreibung|  
+|Konfigurationstask|BESCHREIBUNG|  
 |----------------------|---------------|  
 |Antivirussoftware von Drittanbietern kann auf der SQL Server PDW Appliance für extern ausgerichtete Knoten installiert und konfiguriert werden.<br /><br />(Optional)|Weitere Informationen finden Sie unter [Antivirus Software &#40;Analytics Platform System&#41;](antivirus-software.md).|  
 |Das Kennwort für DSRM kann geändert werden.<br /><br />(Optional)|Weitere Informationen finden Sie unter [Festlegen des Administrator Kennworts für die Anmeldung bei AD-Knoten im Verzeichnisdienst-Wiederherstellungs Modus &#40;DSRM&#41; &#40;Analytics-Platt Form System&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md).|  

@@ -13,10 +13,10 @@ author: HJToland3
 ms.author: rajsell
 ms.reviewer: mathoma
 ms.openlocfilehash: 1c87d791d5a5a16ec3b0d07c6a630f133a7f673c
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289828"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Aufzeichnen einer Ablauf Verfolgung in Assistent für Datenbankexperimente
@@ -80,7 +80,7 @@ Im folgenden finden Sie einige häufig gestellte Fragen zur Erfassung von Ablauf
 
 In der folgenden Tabelle werden die Ereignisse und die entsprechenden Spaltendaten aufgelistet, die von DEA für Ablauf Verfolgungen erfasst werden:
   
-|Veranstaltungsname|Textdaten (1)|Binärdaten (2)|Datenbank-ID (3)|Hostname (8)|Anwendungs Name (10)|Anmelde Name (11)|SPID (12)|Startzeit (14)|Endzeit (15)|Datenbankname (35)|Ereignis Sequenz (51)|IsSystem (60)|  
+|Ereignisname|Textdaten (1)|Binärdaten (2)|Datenbank-ID (3)|Hostname (8)|Anwendungs Name (10)|Anmelde Name (11)|SPID (12)|Startzeit (14)|Endzeit (15)|Datenbankname (35)|Ereignis Sequenz (51)|IsSystem (60)|  
 |---|---|---|---|---|---|---|---|---|---|---|---|---|  
 |**RPC: abgeschlossen (10)**||*|*|*|*|*|*|*|*|*|*|*|  
 |**RPC: wird gestartet (11)**||*|*|*|*|*|*|*||*|*|*|  
@@ -147,6 +147,6 @@ Im folgenden finden Sie einige mögliche Fehler, die möglicherweise angezeigt w
 
 Wenn Sie andere Fehler mit der Bezeichnung *SQL-Fehler Code*sehen, finden Sie unter [Datenbank-Engine Fehler](https://docs.microsoft.com/sql/relational-databases/errors-events/database-engine-events-and-errors) ausführliche Beschreibungen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - Informationen zum Konfigurieren der Distributed Replay Tools in SQL Server vor der Wiedergabe einer aufgezeichneten Ablauf Verfolgung finden Sie unter [configure Distributed Replay for Assistent für Datenbankexperimente](database-experimentation-assistant-configure-replay.md).

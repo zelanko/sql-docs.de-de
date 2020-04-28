@@ -1,5 +1,5 @@
 ---
-title: sys.dm_server_registry (Transact-SQL) | Microsoft Docs
+title: sys. dm_server_registry (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,10 +19,10 @@ ms.assetid: 9b3e0c74-2e99-4996-a383-104d51831e97
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8daa2d195ab1f4cf4602b9633394ed1705a3d7d2
-ms.sourcegitcommit: 1124b91a3b1a3d30424ae0fec04cfaa4b1f361b6
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/01/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "80530825"
 ---
 # <a name="sysdm_server_registry-transact-sql"></a>sys.dm_server_registry (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "80530825"
 |-----------------|---------------|-----------------|  
 |registry_key|**nvarchar(256)**|Registrierungsschlüsselname. Lässt NULL-Werte zu.|  
 |value_name|**nvarchar(256)**|Schlüsselwertname. Dies ist das Element, das in der Spalte **Name** des Registrierungs-Editors angezeigt wird. Lässt NULL-Werte zu.|  
-|value_data|**Sql_variant**|Der Wert der Schlüsseldaten. Dies ist der Wert, der für einen Eintrag in der Spalte **Daten** des Registrierungs-Editors angezeigt wird. Lässt NULL-Werte zu.|  
+|value_data|**sql_variant**|Der Wert der Schlüsseldaten. Dies ist der Wert, der für einen Eintrag in der Spalte **Daten** des Registrierungs-Editors angezeigt wird. Lässt NULL-Werte zu.|  
   
 ## <a name="security"></a>Sicherheit  
   
@@ -70,7 +70,7 @@ FROM sys.dm_server_registry
 WHERE value_name = N'CurrentVersion';  
 ```  
   
-### <a name="d-display-the-parameters-passed-to-the-instance-of-sql-server-during-startup"></a>D: Anzeigen der Parameter, die beim Start an die Instanz von SQL Server übergeben wurden  
+### <a name="d-display-the-parameters-passed-to-the-instance-of-sql-server-during-startup"></a>D. Anzeigen der Parameter, die beim Start an die Instanz von SQL Server übergeben wurden  
  Im folgenden Beispiel werden die Parameter zurückgegeben, die beim Start an die Instanz von SQL Server übergeben wurden.  
   
 ```  
@@ -89,6 +89,6 @@ WHERE registry_key LIKE N'%SuperSocketNetLib%';
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sys.dm_server_services &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
+ [sys. dm_server_services &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-server-services-transact-sql.md)  
   
   

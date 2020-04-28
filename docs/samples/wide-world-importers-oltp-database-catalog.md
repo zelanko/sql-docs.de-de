@@ -11,10 +11,10 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: d4502a64a3822741c1928fcf6faee69d80d893d5
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112404"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Wideworldimporters-Daten Bank Katalog
@@ -69,7 +69,7 @@ Details zu Parametern und Personen (Benutzer und Kontakte) zusammen mit allgemei
 |-----------------------------|---------------------|
 |SystemParameters|Enthält systemweite konfigurierbare Parameter.|
 |Personen|Enthält Benutzernamen, Kontaktinformationen, für alle Benutzer, die die Anwendung verwenden, und für die Personen, mit denen sich die weltweiten Importierer bei Kundenorganisationen beschäftigt. Dazu zählen Mitarbeiter, Kunden, Lieferanten und andere Kontakte. Für Personen, denen die Berechtigung erteilt wurde, das System oder die Website zu verwenden, enthält die Informationen Anmelde Informationen.|
-|Städte|Im System werden viele Adressen gespeichert, für Personen, Lieferadressen der Kundenorganisation, Abhol Adressen bei Lieferanten usw. Wenn eine Adresse gespeichert wird, gibt es einen Verweis auf eine Stadt in dieser Tabelle. Es gibt auch einen räumlichen Standort für jede Stadt.|
+|Cities (Städte)|Im System werden viele Adressen gespeichert, für Personen, Lieferadressen der Kundenorganisation, Abhol Adressen bei Lieferanten usw. Wenn eine Adresse gespeichert wird, gibt es einen Verweis auf eine Stadt in dieser Tabelle. Es gibt auch einen räumlichen Standort für jede Stadt.|
 |Stateprovinzen|Städte sind Teil der Bundesstaaten oder Provinzen. Diese Tabelle enthält Details zu diesen, einschließlich räumlicher Daten, die die Grenzen der einzelnen Bundesstaaten oder Provinzen beschreiben.|
 |Länder|Staaten oder Provinzen sind Teil der Länder. Diese Tabelle enthält Details zu diesen, einschließlich räumlicher Daten, die die Grenzen der einzelnen Länder beschreiben.|
 |DeliveryMethods|Auswahlmöglichkeiten für die Bereitstellung von Aktien Elementen (z. b. LKW/van, Post, Pickup, Courier usw.)|
@@ -100,9 +100,9 @@ Details zu Kunden, Vertriebsmitarbeitern und Bestands Element Verkäufen.
 |Buyinggroups|Kundenorganisationen können Teil von Gruppen sein, die eine größere Kauf Leistung haben.|
 |Customertransactions|Alle Finanztransaktionen, die Kunden bezogen sind (Rechnungen, Zahlungen)|
 |Specialdeals|Sonderpreise. Dies kann festes Preis, Rabatt in Dollar oder Rabatt in Prozent enthalten.|
-|Aufträge|Details der Kunden Bestellungen|
+|Orders|Details der Kunden Bestellungen|
 |OrderLines|Detail Zeilen von Kunden Bestellungen|
-|Invoices|Details zu Kunden Rechnungen|
+|Rechnungen|Details zu Kunden Rechnungen|
 |Invoicelines|Detail Zeilen von Kunden Rechnungen|
 
 ### <a name="warehouse-schema"></a>Warehouse-Schema
@@ -122,7 +122,7 @@ Details zu Aktien Elementen, deren Bestand und Transaktionen.
 |Coldroomtemperaturen|Regelmäßig aufgezeichnete Temperaturen von kalt Raum chillern|
 
 
-## <a name="design-considerations"></a>Überlegungen zum Entwurf
+## <a name="design-considerations"></a>Entwurfsüberlegungen
 
 Der Daten bankentwurf ist subjektiv, und es gibt keine Rechte oder falsche Methode zum Entwerfen einer Datenbank. In den Schemas und Tabellen in dieser Datenbank werden Ideen zum Entwerfen Ihrer eigenen Datenbank angezeigt.
 

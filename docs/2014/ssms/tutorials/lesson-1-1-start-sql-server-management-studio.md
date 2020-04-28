@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: af3f08bcde8b2a325784ef7a99ba5ffad89ce617
-ms.sourcegitcommit: 85b26bc1abbd8d8e2795ab96532ac7a7e01a954f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/05/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78288981"
 ---
 # <a name="start-sql-server-management-studio"></a>Starten von SQL Server Management Studio
@@ -27,14 +27,12 @@ ms.locfileid: "78288981"
 1.  Zeigen Sie im Menü **Start** auf **Alle Programme**, zeigen Sie auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], und klicken Sie dann auf **SQL Server Management Studio**.  
   
     > [!NOTE]  
-    >  
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ist nicht standardmäßig installiert. Wenn [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] nicht verfügbar ist, installieren Sie es, indem Sie Setup ausführen. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]ist in [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]nicht verfügbar. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Express steht als kostenloser Download im [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=14630)zur Verfügung, verfügt aber über eine andere Benutzeroberfläche als in diesem Tutorial beschrieben.  
+    >  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] ist nicht standardmäßig installiert. Wenn [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] nicht verfügbar ist, installieren Sie es, indem Sie Setup ausführen. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]ist in [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]nicht verfügbar. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]Express steht als kostenloser Download im [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=14630)zur Verfügung, verfügt aber über eine andere Benutzeroberfläche als in diesem Tutorial beschrieben.  
   
 2.  Überprüfen Sie im Dialogfeld **Verbindung mit dem Server herstellen** die Standardeinstellungen, und klicken Sie dann auf **Verbinden**. Damit die Verbindung hergestellt werden kann, muss das Feld **Servername** den Namen des Computers enthalten, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installiert ist. [!INCLUDE[ssDE](../../includes/ssde-md.md)] Wenn es sich bei um eine benannte Instanz handelt, sollte das Feld **Server Name** auch den Instanznamen im Format \< *computer_name*>\\<*instance_name*> enthalten.  
   
 ## <a name="management-studio-components"></a>Management Studio-Komponenten  
- 
-  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] stellt seine Informationen in Fenstern bereit, die für die jeweils spezielle Art von Informationen vorgesehen sind. Datenbankinformationen werden im Fenster Objekt-Explorer sowie im Fenster für Dokumente angezeigt.  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] stellt seine Informationen in Fenstern bereit, die für die jeweils spezielle Art von Informationen vorgesehen sind. Datenbankinformationen werden im Fenster Objekt-Explorer sowie im Fenster für Dokumente angezeigt.  
   
 -   Der Objekt-Explorer enthält eine Strukturansicht aller Datenbankobjekte eines Servers. Diese kann die Datenbanken von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]und [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]umfassen. Der Objekt-Explorer umfasst Informationen zu allen Servern, mit denen eine Verbindung besteht. Wenn Sie [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]öffnen, werden Sie aufgefordert, den Objekt-Explorer mit den zuletzt verwendeten Einstellungen zu verbinden. Zum Herstellen einer Verbindung können Sie auf jeden beliebigen Server in der Komponente Registrierte Server doppelklicken. Sie brauchen keinen Server zu registrieren, um eine Verbindung herzustellen.  
   

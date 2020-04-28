@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: b5caa8b63175447daa04198768a67e7fe5e59c81
-ms.sourcegitcommit: 610e49c3e1fa97056611a85e31e06ab30fd866b1
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/07/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78896806"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Neuerungen im Datenmigrations-Assistenten
@@ -82,7 +82,7 @@ Verwenden Sie nach Abschluss der Bewertung unsere [Azure Database Migration Serv
 
 ## <a name="data-migration-assistant-v40"></a>Datenmigrations-Assistent v 4.0
 
-Mit der Version 4.0 von Datenmigrations-Assistent wird das Azure SQL-Datenbank-SKU-Empfehlungs Feature eingeführt, mit dem Benutzer die empfohlene Azure SQL-Datenbank-SKU basierend auf Leistungsindikatoren identifizieren können, die von den Computern gesammelt werden, auf denen Ihre Termin. Diese Funktion bietet Empfehlungen im Zusammenhang mit Tarif, computeebene und maximaler Datengröße sowie geschätzten Kosten pro Monat. Außerdem bietet es die Möglichkeit, alle Datenbanken in Azure in einem Massen Vorgang bereitzustellen.
+Mit der Version 4.0 von Datenmigrations-Assistent wird das Azure SQL-Datenbank-SKU-Empfehlungs Feature eingeführt, mit dem Benutzer die empfohlene Azure SQL-Datenbank-SKU auf der Grundlage von Leistungsindikatoren identifizieren können, die von den Computern gesammelt werden, auf denen die Datenbanken gehostet werden. Diese Funktion bietet Empfehlungen im Zusammenhang mit Tarif, computeebene und maximaler Datengröße sowie geschätzten Kosten pro Monat. Außerdem bietet es die Möglichkeit, alle Datenbanken in Azure in einem Massen Vorgang bereitzustellen.
 
 > [!NOTE]
 > Diese Funktion ist zurzeit nur über die Befehlszeilenschnittstelle (CLI) verfügbar.
@@ -176,8 +176,8 @@ Die v 2.0-Version von Datenmigrations-Assistent umfasst verbesserte Features fü
 Die Version 1.0 von Datenmigrations-Assistent ist die erste Version und bietet Folgendes:
 
 - Ermittlung von Problemen, die ein Upgrade auf eine lokale Version von SQL Server beeinflussen können. Alle Ergebnisse werden als Kompatibilitätsprobleme beschrieben und in den folgenden Bereichen kategorisiert:
-  - Aktuelle Änderungen
-  -  Behavior Changes
+  - Breaking Changes
+  - Verhaltensänderungen
   - Veraltete Features
 - Ermittlung neuer Features auf der Ziel SQL Server Plattform, von der die Datenbank nach einem Upgrade profitieren kann. Alle Ergebnisse werden als Funktions Empfehlungen beschrieben und in den folgenden Bereichen kategorisiert:
   - Leistung
@@ -185,6 +185,6 @@ Die Version 1.0 von Datenmigrations-Assistent ist die erste Version und bietet F
   - Storage
 - Moderne Benutzer Funktionen zum Durchführen von Bewertungen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 [Übersicht über Datenmigrations-Assistent](../dma/dma-overview.md)

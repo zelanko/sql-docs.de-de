@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3a35afb1c1bd38aa123211ae1801d914494aec91
-ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79525471"
 ---
 # <a name="tabular-model-data-access"></a>Zugriff auf Daten im tabellarischen Modell
@@ -31,18 +31,16 @@ ms.locfileid: "79525471"
  Excel ist auch die empfohlene Anwendung zum Durchsuchen von tabellarischen Modellen in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Das Tool beinhaltet eine Option **In Excel analysieren** , die eine neue Instanz von Excel startet, eine Excel-Arbeitsmappe erstellt und in der Arbeitsmappe eine Datenverbindung mit der Arbeitsbereichsdatenbank des Modells öffnet. Beim Durchsuchen von tabellarischen Modelldaten in Excel ist zu beachten, dass Excel Abfragen für das Modell mit dem Excel PivotTable-Client ausgibt. Entsprechend führen Vorgänge innerhalb der Excel-Arbeitsmappe zu MDX-Abfragen, die an die Arbeitsbereichsdatenbank gesendet werden. DAX-Abfragen werden nicht erstellt. Wenn Sie Abfragen mit SQL-Profiler oder einem anderen Überwachungstool überwachen, wird in der Profiler-Ablaufverfolgung voraussichtlich MDX angezeigt und nicht DAX. Weitere Informationen zur Funktion „In Excel analysieren“ finden Sie unter [In Excel analysieren &#40;SSAS Tabular&#41;](analyze-in-excel-ssas-tabular.md).  
   
 ### <a name="power-view"></a>Power View  
- 
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] ist eine Reporting Services-Clientanwendung zur Berichtserstellung, die in einer SharePoint 2010-Umgebung ausgeführt wird. Sie kombiniert das Durchsuchen von Daten, den Abfrageentwurf und das Präsentationslayout in einer integrierten Ad-hoc-Berichtsumgebung. 
-  [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] kann tabellarische Modelle als Datenquellen verwenden, und zwar unabhängig davon, ob das Modell auf einer im tabellarischen Modus ausgeführten Analysis Services-Instanz gehostet wird oder Daten im DirectQuery-Modus aus einem relationalen Datenspeicher abgerufen werden. Um in [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]eine Verbindung mit einem tabellarischen Modell herzustellen, müssen Sie eine Verbindungsdatei erstellen, die den Serverspeicherort und den Datenbanknamen enthält. Sie können eine freigegebene Reporting Services-Datenquelle oder eine BI-Semantikmodell-Verbindungsdatei in SharePoint erstellen. Weitere Informationen zu BI-Semantik Modell Verbindungen finden Sie unter [Power Pivot BI Semantic Model Connection &#40;. bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md).  
+ [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] ist eine Reporting Services-Clientanwendung zur Berichtserstellung, die in einer SharePoint 2010-Umgebung ausgeführt wird. Sie kombiniert das Durchsuchen von Daten, den Abfrageentwurf und das Präsentationslayout in einer integrierten Ad-hoc-Berichtsumgebung. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] kann tabellarische Modelle als Datenquellen verwenden, und zwar unabhängig davon, ob das Modell auf einer im tabellarischen Modus ausgeführten Analysis Services-Instanz gehostet wird oder Daten im DirectQuery-Modus aus einem relationalen Datenspeicher abgerufen werden. Um in [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]eine Verbindung mit einem tabellarischen Modell herzustellen, müssen Sie eine Verbindungsdatei erstellen, die den Serverspeicherort und den Datenbanknamen enthält. Sie können eine freigegebene Reporting Services-Datenquelle oder eine BI-Semantikmodell-Verbindungsdatei in SharePoint erstellen. Weitere Informationen zu BI-Semantik Modell Verbindungen finden Sie unter [Power Pivot BI Semantic Model Connection &#40;. bism&#41;](../power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md).  
   
  Der [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Client bestimmt die Struktur des angegebenen Modells, indem er eine Anforderung an die angegebene Datenquelle sendet, die ein Schema zurückgibt, das vom Client verwendet werden kann, um Abfragen für das Modell als Datenquelle zu erstellen und Vorgänge auf Grundlage der Daten auszuführen. Nachfolgende Vorgänge in der [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Benutzeroberfläche, um Daten zu filtern, Berechnungen oder Aggregationen auszuführen und zugeordnete Daten anzuzeigen, werden vom Client gesteuert und können nicht programmgesteuert bearbeitet werden.  
   
  Die Abfragen, die vom [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] -Client an das Modell gesendet werden, werden als DAX-Anweisungen ausgegeben, die Sie überwachen können, indem Sie eine Ablaufverfolgung auf dem Modell festlegen.  Der Client gibt auch eine Anforderung an den Server für die ursprüngliche Schemadefinition aus, die entsprechend der konzeptionellen Schemadefinitionssprache (CSDL) präsentiert wird. Weitere Informationen finden Sie unter [CSDL-Anmerkungen für Business Intelligence &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="sql-server-management-studio"></a>SQL Server Management Studio  
- Mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Sie Instanzen verwalten, die tabellarische Modelle hosten, sowie die darin enthaltenen Metadaten und Daten abfragen. Sie können die Modelle oder die Objekte in einem Modell verarbeiten, Partitionen erstellen und verwalten sowie die Sicherheit festlegen, die zum Verwalten des Datenzugriffs verwendet werden kann. Weitere Informationen finden Sie in den folgenden Themen:  
+ Mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Sie Instanzen verwalten, die tabellarische Modelle hosten, sowie die darin enthaltenen Metadaten und Daten abfragen. Sie können die Modelle oder die Objekte in einem Modell verarbeiten, Partitionen erstellen und verwalten sowie die Sicherheit festlegen, die zum Verwalten des Datenzugriffs verwendet werden kann. Weitere Informationen finden Sie unter den folgenden Themen:  
   
--   [Bestimmen des Server Modus einer Analysis Services Instanz](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
+-   [Bestimmen des Servermodus einer Analysis Services-Instanz](../instances/determine-the-server-mode-of-an-analysis-services-instance.md)  
   
 -   [Verbindung mit Analysis Services herstellen](../instances/connect-to-analysis-services.md)  
   
@@ -85,13 +83,13 @@ ms.locfileid: "79525471"
   
 -   Tabellenmodell AMO-Beispiel auf Codeplex  
   
--   [Verwenden Sie dynamische Verwaltungs Sichten &#40;DMVs-&#41; zum Überwachen von Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
+-   [Verwenden von dynamischen Verwaltungssichten &#40;DMVs&#41; zum Überwachen von Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   
  In nicht verwalteten Clientanwendungen können Sie den OLE DB-Anbieter für Analysis Services 9.0 zur Unterstützung des OLE DB-Zugriffs auf tabellarische Modelle verwenden. Eine aktualisierte Version des OLE DB-Anbieters für Analysis Services ist erforderlich, um den Zugriff auf tabellarische Modelle zu aktivieren. Weitere Informationen zu Anbietern, die mit tabellarischen Modellen verwendet werden, finden Sie unter [Installieren des OLE DB-Anbieters für Analysis Services auf SharePoint-Servern](../../sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md) .  
   
  Sie können auch Daten aus einer Analysis Services-Instanz direkt im XML-basierten Format abrufen. Sie können das Schema des tabellarischen Modells mit dem DISCOVER_CSDL_METADATA-Rowset abrufen, oder Sie können einen EXECUTE- oder DISCOVER-Befehl mit vorhandenen ASSL-Elementen, -Objekten oder -Eigenschaften verwenden. Weitere Informationen finden Sie in den folgenden Ressourcen:  
   
--   [CSDL-Anmerkungen für Business Intelligence &#40;csdlbi&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
+-   [CSDL-Anmerkungen für Business Intelligence &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### <a name="manipulate-analysis-services-objects"></a>Bearbeiten von Analysis Services-Objekten  
  Sie können tabellarische Modelle und darin enthaltene Objekte, einschließlich Tabellen, Spalten, Perspektiven, Measures und Partitionen, mit XMLA-Befehlen oder mit AMO erstellen, ändern, löschen und verarbeiten. Sowohl AMO als auch XMLA wurden aktualisiert, um zusätzliche Eigenschaften, die in tabellarischen Modellen zur verbesserten Berichterstellung und Modellierung verwendet werden, zu unterstützen.  

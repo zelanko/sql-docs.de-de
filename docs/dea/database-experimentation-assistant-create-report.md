@@ -13,10 +13,10 @@ ms.author: jtoland
 ms.reviewer: mathoma
 ms.custom: seo-lt-2019
 ms.openlocfilehash: f82aba87632abea4ac5fbc8b54daa6dfd0eb5b4a
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289838"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant-sql-server"></a>Erstellen von Analyseberichten in Assistent für Datenbankexperimente (SQL Server)
@@ -98,6 +98,6 @@ Wenn keine Daten vorhanden sind, wurden die Daten möglicherweise nicht ordnungs
 
 Weitere Fragen oder Feedback? Übermitteln Sie Ihr Feedback über das Tool "DEA", indem Sie in der unteren linken Ecke das Smiley-Symbol auswählen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - Weitere Informationen zum Anzeigen des Analyse Berichts finden Sie unter [Anzeigen von Berichten](database-experimentation-assistant-view-report.md).

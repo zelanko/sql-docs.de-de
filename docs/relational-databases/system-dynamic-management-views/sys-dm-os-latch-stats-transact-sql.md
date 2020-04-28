@@ -19,10 +19,10 @@ ms.assetid: 2085d9fc-828c-453e-82ec-b54ed8347ae5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1a8480b7e512c697f3645006d453866963b81aa
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289908"
 ---
 # <a name="sysdm_os_latch_stats-transact-sql"></a>sys.dm_os_latch_stats (Transact-SQL)
@@ -35,7 +35,7 @@ Gibt Informationen zu allen nach Klassen sortierten Latchwartevorgängen zurück
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|latch_class|**nvarchar (120)**|Name der Latchklasse.|  
+|latch_class|**nvarchar(120)**|Name der Latchklasse.|  
 |waiting_requests_count|**bigint**|Anzahl der Wartevorgänge auf Latches in dieser Klasse. Dieser Leistungsindikator wird beim Starten eines Latchwartevorgangs erhöht.|  
 |wait_time_ms|**bigint**|Gesamtwartezeit auf Latches in dieser Klasse (in Millisekunden).<br /><br /> **Hinweis:** Diese Spalte wird alle fünf Minuten während eines latchwartens und am Ende eines Latchwartevorgangs aktualisiert.|  
 |max_wait_time_ms|**bigint**|Maximale Zeitdauer, die ein Speicherobjekt auf diesen Latch gewartet hat. Wenn dieser Wert ungewöhnlich hoch ist, kann dies ein Hinweis auf einen internen Deadlock sein.|  
@@ -60,7 +60,7 @@ GO
 > [!NOTE]  
 >  Diese Statistiken werden nicht persistent gespeichert, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wird. Alle Daten stellen einen Gesamtwert seit dem letzten Zurücksetzen der Statistiken oder dem Starten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dar.  
   
-## <a name="latches"></a>Latches  
+## <a name="latches"></a><a name="latches"></a>Latches  
  Ein Latch ist ein internes Lightweight-Synchronisierungs Objekt, das einer Sperre ähnlich ist, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von verschiedenen-Komponenten verwendet wird. Ein Latch wird hauptsächlich zum Synchronisieren von Datenbankseiten bei Vorgängen wie dem Puffer-oder Dateizugriff verwendet. Jedem Latch wird eine einzelne Zuordnungseinheit zugeordnet. 
   
  Ein Latchwartevorgang findet dann statt, wenn der Latch nicht sofort erteilt werden kann, da er von einem anderen Thread in einem in Konflikt stehenden Modus beansprucht wird. Im Gegensatz zu Sperren wird ein Latch unmittelbar nach dem Vorgang freigegeben, selbst bei Schreibvorgängen.  
@@ -72,7 +72,7 @@ GO
   
  Die folgende Tabelle enthält kurze Beschreibungen der verschiedenen Latchklassen.  
   
-|Latchklasse|Beschreibung|  
+|Latchklasse|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |ALLOC_CREATE_RINGBUF|Wird intern von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Initialisieren der Synchronisierung beim Erstellen eines Zuordnungsringpuffers verwendet.|  
 |ALLOC_CREATE_FREESPACE_CACHE|Wird zum Initialisieren der Synchronisierung interner Caches für freien Speicher für Heaps verwendet.|  

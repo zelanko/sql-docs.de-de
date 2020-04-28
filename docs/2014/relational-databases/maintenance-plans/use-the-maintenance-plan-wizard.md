@@ -35,10 +35,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 105e8022775642d915cbcedf180ed9e07f8bc958
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289168"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Verwenden des Wartungsplanungs-Assistenten
@@ -54,20 +54,20 @@ ms.locfileid: "79289168"
   
 -   [Erstellen eines Wartungsplans mit dem Wartungsplanungs-Assistenten in SQL Server Management Studio](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Wenn Sie einen Multiserver-Wartungsplan erstellen möchten, muss eine Multiserverumgebung mit einem Masterserver und mindestens einem Zielserver konfiguriert sein. Multiserver-Wartungspläne müssen auf dem Masterserver erstellt und verwaltet werden. Diese Pläne können auf Zielservern zwar angezeigt, jedoch nicht verwaltet werden.  
   
 -   Mitglieder der **db_ssisadmin** -Rolle und der **dc_admin** -Rolle können ihre Berechtigungen möglicherweise auf **sysadmin**erhöhen. Diese Ausweitung von Berechtigungen ist möglich, da diese Rollen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Pakete ändern können. Diese Pakete können von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe des **sysadmin** -Sicherheitskontexts des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents ausgeführt werden. Konfigurieren Sie als Schutz vor dieser Ausweitung von Berechtigungen beim Ausführen von Wartungsplänen, Datensammlungssätzen und anderen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Paketen Aufträge des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents, die Pakete ausführen, für die Verwendung eines Proxykontos mit eingeschränkten Berechtigungen, oder fügen Sie der **db_ssisadmin** -Rolle und der **dc_admin** -Rolle nur **sysadmin** -Mitglieder hinzu.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Sie müssen Mitglied der festen Serverrolle **sysadmin** sein, um Wartungspläne erstellen oder verwalten zu können. Im Objekt-Explorer wird der **Wartungspläne** -Knoten nur für Benutzer angezeigt, die Mitglied der festen Serverrolle **sysadmin** sind.  
   
-##  <a name="SSMSProcedure"></a>Assistent zum Verwenden von Wartungsplänen  
+##  <a name="using-maintenance-plan-wizard"></a><a name="SSMSProcedure"></a>Assistent zum Verwenden von Wartungsplänen  
   
 #### <a name="to-start-the-maintenance-plan-wizard"></a>So starten Sie den Wartungsplanungs-Assistenten  
   
@@ -118,9 +118,9 @@ ms.locfileid: "79289168"
   
                 -   Wenn Sie **Monatlich**auswählen, wählen Sie **Tag** oder **Am**aus.  
   
-                    -   Wenn Sie **Tag**auswählen, geben Sie das Datum ein, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Wenn Sie beispielsweise möchten, dass der Auftragszeitplan jeden zweiten Monat am 15. ausgeführt wird, wählen Sie **Tag** aus, und geben Sie in das erste Feld „15“ und in das zweite Feld „2“ ein. Beachten Sie, dass die größte im zweiten Feld zulässige Zahl „99“ ist.  
+                    -   Wenn Sie **Tag**auswählen, geben Sie das Datum ein, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Wenn Sie beispielsweise möchten, dass der Auftrags Zeitplan jeden zweiten Monat am 15. Tag des Monats ausgeführt wird, wählen Sie **Tag** aus, und geben Sie im ersten Feld "15" und in das zweite Feld "2" ein. Beachten Sie, dass die größte im zweiten Feld zulässige Zahl „99“ ist.  
   
-                    -   Wenn Sie **Am**auswählen, geben Sie den spezifischen Tag der Woche im Monat an, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Wenn Sie beispielsweise möchten, dass der Auftragszeitplan jeden zweiten Monat am letzten Wochentag ausgeführt werden soll, wählen Sie **Tag** und in der ersten Liste **Letzter** und in der zweiten Liste **Wochentag** aus, und geben Sie in das letzte Feld „2“ ein. Sie können auch **ersten**, **zweiten**, **dritten**oder **vierten**sowie bestimmte Wochentage z. B. Sonntag oder Mittwoch) aus den ersten beiden Listen auswählen. Beachten Sie, dass die größte im letzten Feld zulässige Zahl „99“ ist.  
+                    -   Wenn Sie **Am**auswählen, geben Sie den spezifischen Tag der Woche im Monat an, an dem der Auftragszeitplan ausgeführt wird, und wie oft der Auftragszeitplan wiederholt werden soll (in Monaten). Wenn Sie z. b. möchten, dass der Auftrags Zeitplan jeden zweiten Monat am letzten Wochentag ausgeführt werden soll, wählen Sie **Tag**aus **, und wählen** Sie in der ersten Liste **Letzter** aus, und geben Sie dann im letzten Feld "2" ein. Sie können auch **erster**, **zweiter**, **dritter**oder **vierter**sowie bestimmte Wochentage (z.B. Sonntag oder Mittwoch) aus den ersten beiden Listen auswählen. Beachten Sie, dass die größte im letzten Feld zulässige Zahl „99“ ist.  
   
             2.  Geben Sie unter **Häufigkeit pro Tag**an, wie oft der Auftragszeitplan an dem Tag wiederholt werden soll, an dem der Auftragszeitplan ausgeführt wird:  
   
@@ -148,12 +148,12 @@ ms.locfileid: "79289168"
 7.  Wählen Sie auf der Seite **Wartungstasks auswählen** die Wartungstasks aus, die Sie dem Plan hinzufügen möchten. Klicken Sie anschließend auf **Weiter**.  
   
     > [!NOTE]  
-    >  Die hier ausgewählten Tasks bestimmen, welche Seiten Sie nach der nachfolgenden Seite **Wartungs Task Reihenfolge auswählen** ausführen müssen.  
+    >  Die hier ausgewählten Tasks bestimmen, auf welchen Seiten nach der folgenden Seite **Wartungstaskreihenfolge auswählen** Einstellungen vorgenommen werden müssen.  
   
-8.  Wählen Sie auf der Seite **Wartungstaskreihenfolge auswählen** einen Task aus, und klicken Sie auf **Nach oben...** oder **Nach unten...** , um die Ausführungsreihenfolge zu ändern. Klicken Sie auf **Weiter**, wenn Sie fertig bzw. mit der aktuellen Taskreihenfolge zufrieden sind.  
+8.  Wählen Sie auf der Seite **Wartungstaskreihenfolge auswählen** einen Task aus, und klicken Sie auf **Nach oben...** oder **Nach unten...**, um die Ausführungsreihenfolge zu ändern. Klicken Sie auf **Weiter**, wenn Sie fertig bzw. mit der aktuellen Taskreihenfolge zufrieden sind.  
   
     > [!NOTE]  
-    >  Wenn Sie oben auf der Seite **Plan Eigenschaften auswählen** die Option **separate Zeitpläne für jede Aufgabe** ausgewählt haben, können Sie die Reihenfolge der Wartungs Tasks auf dieser Seite nicht ändern.  
+    >  Wenn Sie zuvor auf der Seite **Planeigenschaften auswählen** die Option **Getrennte Zeitpläne für jede Aufgabe** ausgewählt haben, können Sie die Reihenfolge der Wartungstasks auf dieser Seite nicht ändern.  
   
 #### <a name="define-database-check-integrity-checkdb-tasks"></a>Definieren von Tasks zum Überprüfen der Datenbankintegrität (CHECKDB)  
   
@@ -209,14 +209,14 @@ ms.locfileid: "79289168"
   
 #### <a name="define-the-index-tasks"></a>Definieren der Indextasks  
   
-1.  Wählen Sie auf der Seite **Task „Index neu organisieren“ definieren** die Server aus, auf denen Indexseiten in eine effizientere Suchreihenfolge gebracht werden sollen. Für diesen Task wird die `ALTER INDEX ... REORGANIZE`-Anweisung verwendet. Weitere Informationen finden Sie unter [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql). Klicken Sie auf **Weiter**, wenn Sie fertig sind.  
+1.  Wählen Sie auf der Seite **Task „Index neu organisieren“ definieren** die Server aus, auf denen Indexseiten in eine effizientere Suchreihenfolge gebracht werden sollen. Für diesen Task wird die `ALTER INDEX ... REORGANIZE`-Anweisung verwendet. Weitere Informationen finden Sie unter [Alter Index &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-index-transact-sql). Klicken Sie auf **Weiter**, wenn Sie fertig sind.  
   
      Die folgenden Optionen sind auf dieser Seite verfügbar.  
   
      Liste**Datenbanken**  
      Gibt die Datenbanken an, die von dieser Aufgabe betroffen sind. Weitere Informationen zu den verfügbaren Optionen in dieser Liste finden Sie weiter oben in Schritt 9.  
   
-     Liste**Objekt**  
+     **Objekt** Liste  
      Begrenzt die Liste **Auswahl** auf die Anzeige von Tabellen und/oder Sichten. Diese Liste ist nur verfügbar, wenn in der obigen Liste **Datenbanken** eine einzelne Datenbank ausgewählt wurde.  
   
      Liste**Auswahl**  
@@ -225,14 +225,14 @@ ms.locfileid: "79289168"
      Kontrollkästchen**Große Objekte komprimieren**  
      Hebt die Speicherplatzzuordnung für Tabellen und Sichten nach Möglichkeit auf. Diese Option verwendet `ALTER INDEX ... LOB_COMPACTION = ON`.  
   
-2.  Wählen Sie auf der Seite **Task „Index neu erstellen“ definieren** die Datenbanken aus, in denen mehrere Indizes neu erstellt werden sollen. Für diesen Task wird die `ALTER INDEX ... REBUILD PARTITION`-Anweisung verwendet. Weitere Informationen finden Sie unter [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql).) Klicken Sie anschließend auf **Weiter**.  
+2.  Wählen Sie auf der Seite **Task „Index neu erstellen“ definieren** die Datenbanken aus, in denen mehrere Indizes neu erstellt werden sollen. Für diesen Task wird die `ALTER INDEX ... REBUILD PARTITION`-Anweisung verwendet. Weitere Informationen finden Sie unter [Alter Index &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-index-transact-sql).) Wenn Sie fertig sind, klicken Sie auf **weiter**.  
   
      Die folgenden Optionen sind auf dieser Seite verfügbar.  
   
      Liste**Datenbanken**  
      Gibt die Datenbanken an, die von dieser Aufgabe betroffen sind. Weitere Informationen zu den verfügbaren Optionen in dieser Liste finden Sie weiter oben in Schritt 9.  
   
-     Liste**Objekt**  
+     **Objekt** Liste  
      Begrenzt die Liste **Auswahl** auf die Anzeige von Tabellen und/oder Sichten. Diese Liste ist nur verfügbar, wenn in der obigen Liste **Datenbanken** eine einzelne Datenbank ausgewählt wurde.  
   
      Liste**Auswahl**  
@@ -268,7 +268,7 @@ ms.locfileid: "79289168"
      Liste**Datenbanken**  
      Gibt die Datenbanken an, die von dieser Aufgabe betroffen sind. Weitere Informationen zu den verfügbaren Optionen in dieser Liste finden Sie weiter oben in Schritt 9.  
   
-     Liste**Objekt**  
+     **Objekt** Liste  
      Begrenzt die Liste **Auswahl** auf die Anzeige von Tabellen und/oder Sichten. Diese Liste ist nur verfügbar, wenn in der obigen Liste **Datenbanken** eine einzelne Datenbank ausgewählt wurde.  
   
      Liste**Auswahl**  
@@ -286,7 +286,7 @@ ms.locfileid: "79289168"
      **Scantyp**  
      Der Typ des Scanvorgangs, der zum Zusammenstellen von aktualisierten Statistiken verwendet wird.  
   
-     **Vollständiger Scan**  
+     **Vollständige Überprüfung**  
      Liest zum Zusammenstellen der Statistiken alle Zeilen in der Tabelle oder Sicht.  
   
      **Stichprobe von**  
@@ -311,7 +311,7 @@ ms.locfileid: "79289168"
      Dieser Verlauf kann Ihnen bei der Problembehandlung fehlgeschlagener Wartungsplanaufträge bzw. der Ermittlung der Ursache von Datenbankaktionen helfen.  
   
      **Verlaufsdaten entfernen, die älter sind als**  
-     Geben Sie das Alter an, in dem Elemente gelöscht werden sollen. Sie können **Stunde(n)** , **Tag(e)** , **Woche(n)** (Standardeinstellung), **Monat(e)** oder **Jahr(e)** angeben.  
+     Geben Sie das Alter an, in dem Elemente gelöscht werden sollen. Sie können **Stunde(n)**, **Tag(e)**, **Woche(n)** (Standardeinstellung), **Monat(e)** oder **Jahr(e)** angeben.  
   
 #### <a name="define-the-execute-agent-job-task"></a>Definieren des Tasks zum Ausführen von Agentaufträgen  
   
@@ -363,7 +363,7 @@ ms.locfileid: "79289168"
      Feld**Ordner**  
      Gibt den Ordner an, in dem die automatisch erstellten Datenbankdateien gespeichert werden sollen. Diese Option ist deaktiviert, wenn Sie URL als Sicherungsziel ausgewählt haben.  
   
-     **SQL-Anmeldeinformationen**  
+     **SQL-Anmelde Informationen**  
      Wählen Sie SQL-Anmeldeinformationen aus, die zur Authentifizierung bei Azure Storage verwendet werden sollen. Wenn Sie über keine vorhandenen geeigneten SQL-Anmeldeinformationen verfügen, klicken Sie auf die Schaltfläche **Erstellen** , um neue SQL-Anmeldeinformationen zu erstellen.  
   
     > [!IMPORTANT]  
@@ -373,7 +373,7 @@ ms.locfileid: "79289168"
      Geben Sie den Namen des Azure-Speichercontainers an.  
   
      **URL-Präfix:**  
-     Wird automatisch entsprechend den Speicherkontoinformationen, die in den SQL-Anmeldeinformationen gespeichert sind, und dem Namen des Azure-Speichercontainers generiert. Es wird empfohlen, die Informationen in diesem Feld nur zu bearbeiten, wenn Sie eine Domäne mit einem anderen Format als **\<Speicherkonto.blob.core.windows.net** verwenden.  
+     Wird automatisch entsprechend den Speicherkontoinformationen, die in den SQL-Anmeldeinformationen gespeichert sind, und dem Namen des Azure-Speichercontainers generiert. Es wird empfohlen, die Informationen in diesem Feld nur zu bearbeiten, wenn Sie eine Domäne verwenden, die ein anderes Format als ** \<das Speicherkonto>. BLOB.Core.Windows.net**verwendet.  
   
      Feld**Sicherungsdateierweiterung**  
      Gibt die Dateierweiterung an, die für Sicherungsdateien verwendet wird. Der Standardwert lautet BAK.  
@@ -404,7 +404,7 @@ ms.locfileid: "79289168"
     |||  
     |-|-|  
     |**Standardservereinstellungen verwenden**|Klicken Sie hier, um die Standardeinstellung auf Serverebene zu verwenden. Diese Standardeinstellung wird durch die Serverkonfigurationsoption **Komprimierungsstandard für Sicherung** festgelegt. Informationen zum Anzeigen der aktuellen Einstellung dieser Option finden Sie unter [Anzeigen oder Konfigurieren der Serverkonfigurationsoption „Standardeinstellung für die Sicherungskomprimierung“](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md).|  
-    |**Sicherung komprimieren**|Klicken Sie hier, um die Sicherung unabhängig von der Standardeinstellung auf Serverebene zu komprimieren.<br /><br /> **\*\* Wichtig \*\*** Standardmäßig steigt die CPU-Nutzung durch die Komprimierung erheblich, und die bei der Komprimierung zusätzlich verbrauchten CPU-Ressourcen können sich negativ auf gleichzeitige Vorgänge auswirken. Daher ist es u. U. sinnvoll, in einer Sitzung, bei der die CPU-Nutzung durch die Ressourcenkontrolle eingeschränkt ist, komprimierte Sicherungen mit niedriger Priorität zu erstellen. Weitere Informationen finden Sie unter [Einschränken der CPU-Nutzung durch die Sicherungskomprimierung mithilfe der Ressourcenkontrolle &#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
+    |**Sicherung komprimieren**|Klicken Sie hier, um die Sicherung unabhängig von der Standardeinstellung auf Serverebene zu komprimieren.<br /><br /> ** \* Wichtig \* \* ** Standardmäßig steigt die CPU-Auslastung durch die Komprimierung erheblich, und die durch den Komprimierungs Vorgang verbrauchte CPU-Auslastung kann sich negativ auf parallele Vorgänge auswirken Daher ist es u. U. sinnvoll, in einer Sitzung, bei der die CPU-Nutzung durch die Ressourcenkontrolle eingeschränkt ist, komprimierte Sicherungen mit niedriger Priorität zu erstellen. Weitere Informationen finden Sie unter [Einschränken der CPU-Nutzung durch die Sicherungskomprimierung mithilfe der Ressourcenkontrolle &#40;Transact-SQL&#41;](../backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md).|  
     |**Sicherung nicht komprimieren**|Klicken Sie hier, um unabhängig von der Standardeinstellung auf Serverebene eine nicht komprimierte Sicherung zu erstellen.|  
   
 2.  Wählen Sie auf der Seite **Task 'Datenbank sichern (differenziell)' definieren** die Datenbanken aus, für die eine Teilsicherung ausgeführt werden soll. Weitere Informationen zu den verfügbaren Optionen auf dieser Seite finden Sie in der Definitionsliste in Schritt 16 oben. Für diesen Task wird die `BACKUP DATABASE ... WITH DIFFERENTIAL`-Anweisung verwendet. Weitere Informationen finden Sie unter [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  Klicken Sie abschließend auf **Weiter**.  
@@ -429,7 +429,7 @@ ms.locfileid: "79289168"
      **Textberichte für Wartungsplan**  
      Löscht Textberichte über zuvor ausgeführte Wartungspläne.  
   
-     **Dateispeicherort**  
+     **Datei Speicherort**  
      Geben Sie den Pfad der zu löschenden Dateien an.  
   
      **Bestimmte Datei löschen**  
@@ -494,7 +494,7 @@ ms.locfileid: "79289168"
      **Meldung**  
      Stellt alle vom Prozess zurückgegebenen Fehler- oder Warnmeldungen bereit.  
   
-     **Report**  
+     **Bericht**  
      Erstellt einen Bericht mit den Ergebnissen des Assistenten zum Erstellen von Partitionen. Die Optionen sind **Bericht anzeigen**, **Bericht in Datei speichern**, **Bericht in Zwischenablage kopieren**und **Bericht als E-Mail senden**.  
   
      **Bericht anzeigen**  

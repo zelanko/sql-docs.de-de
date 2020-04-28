@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 34fdc72cfbb341e7b7d998a76036e6e2b060e7d8
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112243"
 ---
 # <a name="a-guide-to-query-processing-for-memory-optimized-tables"></a>Anleitung zur Abfrageverarbeitung für speicheroptimierte Tabellen
@@ -195,7 +195,7 @@ END
 |-|-----------------------|-----------------|  
 |Ursprüngliche Kompilierung|Bei der Erstellung|Bei der ersten Ausführung|  
 |Automatische Neukompilierung|Bei der ersten Ausführung der Prozedur nach einem Datenbank- oder Serverneustart.|Beim Serverneustart. Oder Entfernung aus dem Plancache, normalerweise aufgrund von Schema- oder Statusänderungen oder wegen Arbeitsspeichermangels.|  
-|Manuelle Neukompilierung|Wird nicht unterstützt. Das Problem kann umgangen werden, indem die gespeicherte Prozedur gelöscht und neu erstellt wird.|Verwenden Sie `sp_recompile`. Sie können den Plan manuell aus dem Cache entfernen, beispielsweise durch DBCC FREEPROCCACHE. Sie können auch die gespeicherte Prozedur WITH RECOMPILE erstellen. Diese gespeicherte Prozedur wird bei jeder Ausführung erneut kompiliert.|  
+|Manuelle Neukompilierung|Nicht unterstützt. Das Problem kann umgangen werden, indem die gespeicherte Prozedur gelöscht und neu erstellt wird.|Verwenden Sie `sp_recompile`. Sie können den Plan manuell aus dem Cache entfernen, beispielsweise durch DBCC FREEPROCCACHE. Sie können auch die gespeicherte Prozedur WITH RECOMPILE erstellen. Diese gespeicherte Prozedur wird bei jeder Ausführung erneut kompiliert.|  
   
 ### <a name="compilation-and-query-processing"></a>Kompilierung und Abfrageverarbeitung  
  Das folgende Diagramm veranschaulicht den Kompilierungsprozess systemintern kompilierte gespeicherte Prozeduren:  
@@ -300,10 +300,9 @@ SELECT o.OrderID, c.* FROM dbo.[Customer] c INNER JOIN dbo.[Order] o ON c.Custom
 -   Der vollständige Indexscan für IX_CustomerID wurde durch eine Indexsuche ersetzt. Dies führte zum Scannen von 5 Zeilen anstelle der für den vollständigen Indexscan erforderlichen 830 Zeilen.  
   
 ### <a name="statistics-and-cardinality-for-memory-optimized-tables"></a>Statistiken und Kardinalität für speicheroptimierte Tabellen  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] behält Statistiken auf Spaltenebene für speicheroptimierte Tabellen bei. Darüber hinaus behält es die tatsächliche Zeilenanzahl der Tabelle bei. Im Gegensatz zu datenträgerbasierten Tabellen werden die Statistiken für speicheroptimierte Tabellen aber nicht automatisch aktualisiert. Daher müssen Statistiken nach wichtigen Änderungen an den Tabellen manuell aktualisiert werden. Weitere Informationen finden Sie unter [Statistiken für speicheroptimierte Tabellen](memory-optimized-tables.md).  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] behält Statistiken auf Spaltenebene für speicheroptimierte Tabellen bei. Darüber hinaus behält es die tatsächliche Zeilenanzahl der Tabelle bei. Im Gegensatz zu datenträgerbasierten Tabellen werden die Statistiken für speicheroptimierte Tabellen aber nicht automatisch aktualisiert. Daher müssen Statistiken nach wichtigen Änderungen an den Tabellen manuell aktualisiert werden. Weitere Informationen finden Sie unter [Statistiken für speicheroptimierte Tabellen](memory-optimized-tables.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Speicheroptimierte Tabellen](memory-optimized-tables.md)  
+ [Speicher optimierte Tabellen](memory-optimized-tables.md)  
   
   

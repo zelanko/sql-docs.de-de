@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: efa15bffc3b00dfce2c1c5d11bc3705f2b6f677e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78180125"
 ---
 # <a name="sp_describe_undeclared_parameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
@@ -51,7 +51,7 @@ sp_describe_undeclared_parameters
   
  Ist eine Zeichenfolge, die die Definitionen aller Parameter enthält, die in *Transact-SQL_batch*eingebettet wurden. Die Zeichenfolge muss eine Unicode-Konstante oder eine Unicode-Variable sein. Jede Parameterdefinition besteht aus einem Parameternamen und einem Datentyp. Dabei ist n ein Platzhalter für zusätzlicher Parameterdefinitionen. Wenn die Transact-SQL-Anweisung oder der Batch in der Anweisung keine Parameter enthält \@, sind keine Parameter erforderlich. Der Standardwert für diesen Parameter ist NULL.  
   
- Datentyp  
+ Datatype  
  Der Datentyp des Parameters.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
@@ -84,8 +84,8 @@ sp_describe_undeclared_parameters
 |**suggested_is_input**|**Bit not NULL**|Gibt 1 zurück, wenn der Parameter an anderer Stelle verwendet wird als links einer Zuweisung. Andernfalls wird 0 zurückgegeben.|  
 |**suggested_is_output**|**Bit not NULL**|Gibt 1 zurück, wenn der Parameter auf der linken Seite einer Zuweisung verwendet wird oder an einen Ausgabeparameter einer gespeicherten Prozedur übergeben wird. Andernfalls wird 0 zurückgegeben.|  
 |**formal_parameter_name**|**vom Datentyp sysname NULL**|Wenn es sich bei dem Parameter um ein Argument für eine gespeicherte Prozedur oder eine benutzerdefinierte Funktion handelt, wird der Name des entsprechenden formalen Parameters zurückgegeben. Andernfalls wird NULL zurückgegeben.|  
-|**suggested_tds_type_id**|**int NOT NULL**|Zur internen Verwendung.|  
-|**suggested_tds_length**|**int NOT NULL**|Zur internen Verwendung.|  
+|**suggested_tds_type_id**|**int NOT NULL**|Für die interne Verwendung.|  
+|**suggested_tds_length**|**int NOT NULL**|Für die interne Verwendung.|  
   
 ## <a name="remarks"></a>Bemerkungen  
  **sp_describe_undeclared_parameters** gibt immer den Rückgabestatus 0 (null) zurück.  

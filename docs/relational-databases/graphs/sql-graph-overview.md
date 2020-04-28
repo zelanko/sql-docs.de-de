@@ -16,10 +16,10 @@ ms.author: shkale
 ms.custom: seo-dt-2019
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2b0934562f2f0ff1a2dd3ec8df1ed15f10d955ee
-ms.sourcegitcommit: 6e7696a169876eb914f79706d022451a1213eb6b
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79428151"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Graph-Verarbeitung mit SQL Server und Azure SQL-Datenbank
@@ -28,7 +28,7 @@ ms.locfileid: "79428151"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]bietet Graph-Datenbankfunktionen zum Modellieren von m:n-Beziehungen. Die Diagramm Beziehungen sind in [!INCLUDE[tsql-md](../../includes/tsql-md.md)] integriert und erhalten die Vorteile der Verwendung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] von als grundlegendes Datenbankverwaltungssystem.
 
 
-## <a name="what-is-a-graph-database"></a>Was ist eine Graph-Datenbank?  
+## <a name="what-is-a-graph-database"></a>Was ist eine Graphdatenbank?  
 Eine Diagrammdatenbank ist eine Sammlung von Knoten (oder Vertices) und Edges (oder Beziehungen). Ein Knoten repräsentiert eine Entität (z.B. eine Person oder eine Organisation), und eine Kante repräsentiert eine Beziehung zwischen den beiden Knoten, die durch die Kante verbunden sind (z.B. „Gefällt mir“-Markierungen oder Freunde). Sowohl Knoten als auch Kanten können Eigenschaften zugeordnet sein. Folgende Features machen eine Graphdatenbank einmalig:  
 -    Kanten oder Beziehungen sind Entitäten der ersten Klasse in einer Graphdatenbank, denen Attribute oder Eigenschaften zugeordnet sein können. 
 -    Eine einzelne Kante kann flexibel mehrere Knoten in einer Graphdatenbank verbinden.
@@ -47,7 +47,7 @@ Wir beginnen damit, SQL Server Graph-Erweiterungen hinzuzufügen, um das Speiche
 
 
 ### <a name="create-graph-objects"></a>Erstellen von Diagramm Objekten
-[!INCLUDE[tsql-md](../../includes/tsql-md.md)]Erweiterungen ermöglichen es Benutzern, Knoten-oder Edge-Tabellen zu erstellen. Sowohl Knoten als auch Kanten können Eigenschaften zugeordnet werden. Da Knoten und Kanten als Tabellen gespeichert werden, werden alle Vorgänge, die für relationale Tabellen unterstützt werden, für die Knoten-oder Kanten Tabelle unterstützt. Beispiel:   
+[!INCLUDE[tsql-md](../../includes/tsql-md.md)]Erweiterungen ermöglichen es Benutzern, Knoten-oder Edge-Tabellen zu erstellen. Sowohl Knoten als auch Kanten können Eigenschaften zugeordnet werden. Da Knoten und Kanten als Tabellen gespeichert werden, werden alle Vorgänge, die für relationale Tabellen unterstützt werden, für die Knoten-oder Kanten Tabelle unterstützt. Beispiel:  
 
 ```   
 CREATE TABLE Person (ID INTEGER PRIMARY KEY, Name VARCHAR(100), Age INT) AS NODE;

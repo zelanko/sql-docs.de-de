@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a51393748d47159cfc4cf6bf8bd25e50307cfb7
-ms.sourcegitcommit: 36d07f0b832b1b29df6ffbfebc8c60016b37f5cb
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79525441"
 ---
 # <a name="csdlbi-concepts"></a>CSDLBI-Konzepte
@@ -58,8 +58,7 @@ ms.locfileid: "79525441"
   
 ```  
   
- 
-  `EntitySet` enthält keine Informationen zu Spalten oder Daten in der Tabelle. Die ausführliche Beschreibung der Spalten und ihrer Eigenschaften wird im EntityType-Element bereitgestellt.  
+ `EntitySet` enthält keine Informationen zu Spalten oder Daten in der Tabelle. Die ausführliche Beschreibung der Spalten und ihrer Eigenschaften wird im EntityType-Element bereitgestellt.  
   
  Das `EntitySet`-Element für jede Entität (Tabelle) umfasst eine Auflistung von Eigenschaften, die die Schlüsselspalte, den Datentyp und die Länge der Spalte, die NULL-Zulässigkeit, das Sortierverhalten usw. definieren. Im folgenden CSDL-Auszug werden z. B. drei Spalten in der Customer-Tabelle beschrieben. Die erste Spalte ist eine spezielle ausgeblendete Spalte, die intern vom Modell verwendet wird.  
   
@@ -147,6 +146,6 @@ ms.locfileid: "79525441"
  **Einschränkungen:** Die Zellen Sicherheit wird nicht unterstützt.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [CSDL-Anmerkungen für Business Intelligence &#40;csdlbi&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
+ [CSDL-Anmerkungen für Business Intelligence &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
   

@@ -24,10 +24,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 58abfde651fb59bc69207db810324eb4c74b8c26
-ms.sourcegitcommit: 59c09dbe29882cbed539229a9bc1de381a5a4471
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/11/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79112064"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Verknüpfen von Zugriffs Anwendungen mit SQL Server-Azure SQL-Datenbank (Access Token-SQL)
@@ -146,13 +146,13 @@ Recordset.LastModified
 ### <a name="hyperlink-functionality-is-lost-after-migrating-data"></a>Hyperlink-Funktionalität geht nach dem Migrieren von Daten verloren  
 **Ursache:** Nach dem Migrieren von Daten verlieren Hyperlinks in Spalten ihre Funktionalität und werden zu einfachen **nvarchar (max)** -Spalten.  
   
-**Lösung:** Gar.  
+**Lösung:** Keine.  
   
 ### <a name="some-sql-server-data-types-are-not-supported-by-access"></a>Einige SQL Server Datentypen werden nicht durch den Zugriff unterstützt.  
 **Ursache:** Wenn Sie Ihre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -oder-SQL Azure Tabellen später aktualisieren, sodass Sie Datentypen enthalten, die nicht durch den Zugriff unterstützt werden, können Sie die Tabelle nicht in Access öffnen.  
   
 **Lösung:** Sie können eine Zugriffs Abfrage definieren, die nur die Zeilen mit unterstützten Datentypen zurückgibt.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Weitere Informationen:  
 [Migration von Access-Datenbanken zu SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: caae4212e2182ae6afde29b0fed1aaee4f05645a
-ms.sourcegitcommit: 4baa8d3c13dd290068885aea914845ede58aa840
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/13/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "79289288"
 ---
 # <a name="features-supported-by-the-editions-of-sql-server-2014"></a>Von den SQL Server 2014-Editionen unterstützte Funktionen
@@ -28,7 +28,7 @@ ms.locfileid: "79289288"
   
  Um zur Tabelle für eine [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Technologie zu navigieren, klicken Sie auf den zugehörigen Link:  
   
- [Feld übergreifende Skalierungs Grenzwerte](#CrossBoxScale)  
+ [Feldübergreifende Skalagrenzen](#CrossBoxScale)  
   
  [Hochverfügbarkeit](#High_availability)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "79289288"
   
  [Programmierbarkeit](#Programmability)  
   
- [Integration Services](#SSIS)  
+ [Integrationsdienste](#SSIS)  
   
  [Integration Services – Erweiterte Adapter](#SSIS_AA)  
   
@@ -60,7 +60,7 @@ ms.locfileid: "79289288"
   
  [BI-Semantikmodell (mehrdimensional)](#BISemModel_multi)  
   
- [BI-Semantik Modell (tabellarisch)](#BISemModel_tabular)  
+ [BI-Semantikmodell (tabellarisch)](#BISemModel_tabular)  
   
  [PowerPivot für SharePoint](#PowerPivot)  
   
@@ -72,11 +72,11 @@ ms.locfileid: "79289288"
   
  [Räumliche Dienste und Standortdienste](#Spatial)  
   
- [Zusätzliche Datenbankdienste](#Add_DBServices)  
+ [Weitere Datenbankdienste](#Add_DBServices)  
   
  [Andere Komponenten](#Other_Components)  
   
-##  <a name="CrossBoxScale"></a>Feld übergreifende Skalierungs Grenzwerte  
+##  <a name="cross-box-scale-limits"></a><a name="CrossBoxScale"></a>Feld übergreifende Skalierungs Grenzwerte  
   
 |Funktionsname|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -89,7 +89,7 @@ ms.locfileid: "79289288"
   
  <sup>1</sup> die Enterprise Edition mit einer Lizenzierung auf Grundlage von Server + Client Zugriffslizenz (CAL) (für neue Verträge nicht verfügbar) ist auf maximal 20 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Kerne pro-Instanz beschränkt. Für das auf Prozessorkernen basierende Serverlizenzierungsmodell gelten keine Beschränkungen. Weitere Informationen finden Sie unter [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).  
   
-##  <a name="High_availability"></a> Hochverfügbarkeit  
+##  <a name="high-availability"></a><a name="High_availability"></a>Hohe Verfügbarkeit  
   
 |Funktionsname|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -115,7 +115,7 @@ ms.locfileid: "79289288"
   
  <sup>2</sup> Diese Funktion ist nur für 64-Bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verfügbar.  
   
-##  <a name="Scalability"></a>Skalierbarkeit und Leistung  
+##  <a name="scalability-and-performance"></a><a name="Scalability"></a>Skalierbarkeit und Leistung  
   
 |Funktionsname|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -133,7 +133,7 @@ ms.locfileid: "79289288"
   
  <sup>1</sup> diese Funktion ist nur für 64-Bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verfügbar.  
   
-##  <a name="Enterprise_security"></a> Sicherheit  
+##  <a name="security"></a><a name="Enterprise_security"></a> Sicherheit  
   
 |Funktionsname|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -145,11 +145,11 @@ ms.locfileid: "79289288"
 |Eigenständige Datenbanken|Ja|Ja|Ja|Ja|Ja|Ja|Ja|  
 |Verschlüsselung von Sicherungen|Ja|Ja|Ja|||||  
   
-##  <a name="Replication"></a> Replikation  
+##  <a name="replication"></a><a name="Replication"></a> Replikation  
   
 |Funktionsname|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Änderungs Nachverfolgung|Ja|Ja|Ja|Ja|Ja|Ja|Ja|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Änderungsnachverfolgung|Ja|Ja|Ja|Ja|Ja|Ja|Ja|  
 |Mergereplikation|Ja|Ja|Ja|Ja (Nur Abonnent)|Ja (Nur Abonnent)|Ja (Nur Abonnent)|Ja (Nur Abonnent)|  
 |Transaktionsreplikation|Ja|Ja|Ja|Ja (Nur Abonnent)|Ja (Nur Abonnent)|Ja (Nur Abonnent)|Ja (Nur Abonnent)|  
 |Momentaufnahmereplikation|Ja|Ja|Ja|Ja (Nur Abonnent)|Ja (Nur Abonnent)|Ja (Nur Abonnent)|Ja (Nur Abonnent)|  
@@ -157,14 +157,14 @@ ms.locfileid: "79289288"
 |Veröffentlichungen mit Oracle|Ja|||||||  
 |Peer-zu-Peer-Transaktionsreplikation|Ja|||||||  
   
-##  <a name="Mgmt_Tools"></a>Verwaltungs Tools  
+##  <a name="management-tools"></a><a name="Mgmt_Tools"></a>Verwaltungs Tools  
   
 |Funktionsname|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |SQL Management Objects (SMO)|Ja|Ja|Ja|Ja|Ja|Ja|Ja|  
 |SQL-Konfigurations-Manager|Ja|Ja|Ja|Ja|Ja|Ja|Ja|  
 |SQL CMD (Command Prompt Tool – Eingabeaufforderungstool)|Ja|Ja|Ja|Ja|Ja|Ja|Ja|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Management Studio|Ja|Ja|Ja|Ja|Ja|Ja||  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio|Ja|Ja|Ja|Ja|Ja|Ja||  
 |Distributed Replay: Administratortool|Ja|Ja|Ja|Ja|Ja|Ja||  
 |Distributed Replay - Client|Ja|Nein|Ja|Ja||||  
 |Distributed Replay - Controller|Ja (Enterprise unterstützt bis zu 16 Clients, Developer unterstützt nur 1 Client)|Nein|Ja (nur 1 Client unterstützt)|Ja (nur 1 Client unterstützt)||||  
@@ -179,7 +179,7 @@ ms.locfileid: "79289288"
   
  <sup>3</sup> Optimierung ist nur in Funktionen der Standard Edition aktiviert.  
   
-##  <a name="RDBMS_mgmt"></a>RDBMS-Verwaltbarkeit  
+##  <a name="rdbms-manageability"></a><a name="RDBMS_mgmt"></a>RDBMS-Verwaltbarkeit  
   
 |Funktionsname|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -208,11 +208,11 @@ ms.locfileid: "79289288"
   
  <sup>2</sup> diese Funktion ist nur für 64-Bit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]verfügbar.  
   
-##  <a name="Dev_tools"></a>Entwicklungs Tools  
+##  <a name="development-tools"></a><a name="Dev_tools"></a>Entwicklungs Tools  
   
 |Funktionsname|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[msCoName](../includes/msconame-md.md)]Visual Studio-Integration|Ja|Ja|Ja|Ja|Ja|Ja|Ja|  
+|Integration in [!INCLUDE[msCoName](../includes/msconame-md.md)] Visual Studio|Ja|Ja|Ja|Ja|Ja|Ja|Ja|  
 |IntelliSense ([!INCLUDE[tsql](../includes/tsql-md.md)] und MDX)|Ja|Ja|Ja|Ja|Ja|Ja|Ja|  
 |[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]|Ja|Ja|Ja|Ja|Ja|||  
 |SQL-Abfrage Bearbeitungs-und-Entwurfs Tools<sup>1</sup>|Ja|Ja|Ja|||||  
@@ -221,7 +221,7 @@ ms.locfileid: "79289288"
   
  <sup>1</sup> diese Funktion ist für die 64-Bit-Version der Standard Edition nicht verfügbar.  
   
-##  <a name="Programmability"></a> Programmability  
+##  <a name="programmability"></a><a name="Programmability"></a> Programmability  
   
 |Funktionsname|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -236,14 +236,13 @@ ms.locfileid: "79289288"
 |Volltextsuche und semantische Suche|Ja|Ja|Ja|Ja|Ja|||  
 |Angabe der Sprache in einer Abfrage|Ja|Ja|Ja|Ja|Ja|||  
 |Service Broker (Messaging)|Ja|Ja|Ja|Nein (nur Client)|Nein (nur Client)|Nein (nur Client)|Nein (nur Client)|  
-|[!INCLUDE[tsql](../includes/tsql-md.md)]Endpunkte|Ja|Ja|Ja|Ja||||  
+|[!INCLUDE[tsql](../includes/tsql-md.md)]-Endpunkte|Ja|Ja|Ja|Ja||||  
   
-##  <a name="SSIS"></a> Integration Services  
+##  <a name="integration-services"></a><a name="SSIS"></a> Integration Services  
   
 |Funktion|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Import/Export-Assistent|Ja|Ja|Ja|Ja|Ja|Ja|Ja|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Import/Export-Assistent|Ja|Ja|Ja|Ja|Ja|Ja|Ja|  
 |Integrierte Datenquellenkonnektoren|Ja|Ja|Ja|Ja|Ja|Ja|Ja|  
 |SSIS-Designer und Laufzeit|Ja|Ja|Ja|||||  
 |Grundlegende Transformationen|Ja|Ja|Ja|||||  
@@ -251,7 +250,7 @@ ms.locfileid: "79289288"
 |Change Data Capture Service für Oracle von Attunity|Ja|||||||  
 |Change Data Capture Designer für Oracle von Attunity|Ja|||||||  
   
-###  <a name="SSIS_AA"></a>Integration Services erweiterte Adapter  
+###  <a name="integration-services---advanced-adapters"></a><a name="SSIS_AA"></a> Integration Services – Erweiterte Adapter  
   
 |Funktionsname|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -264,7 +263,7 @@ ms.locfileid: "79289288"
 |Change Data Capture-Komponenten von Attunity|Ja|||||||  
 |Konnektor für Open Database Connectivity (ODBC) von Attunity|Ja|||||||  
   
-###  <a name="SSIS_AT"></a>Erweiterte Transformationen Integration Services  
+###  <a name="integration-services---advanced-transforms"></a><a name="SSIS_AT"></a> Integration Services – Erweiterte Transformationen  
   
 |Funktionsname|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -273,18 +272,17 @@ ms.locfileid: "79289288"
 |Transformationen für Fuzzygruppierung und -suche|Ja|||||||  
 |Transformationen für Ausdrucksextrahierung und -suche|Ja|||||||  
   
-##  <a name="MDS"></a>Master Data Services  
+##  <a name="master-data-services"></a><a name="MDS"></a>Master Data Services  
   
 > [!NOTE]  
->  -   
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ist nur in den 64-Bit-Editionen von Business Intelligence and Enterprise verfügbar.  
+>  -   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] ist nur in den 64-Bit-Editionen von Business Intelligence and Enterprise verfügbar.  
   
 |Funktion|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |-------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]Verbindung|Ja|Ja||||||  
-|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]Webanwendung|Ja|Ja||||||  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]-Datenbank|Ja|Ja||||||  
+|[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]-Webanwendung|Ja|Ja||||||  
   
-##  <a name="Data_warehouse"></a>Data Warehouse  
+##  <a name="data-warehouse"></a><a name="Data_warehouse"></a>Data Warehouse  
   
 |Funktionsname|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -297,7 +295,7 @@ ms.locfileid: "79289288"
 |Speicheroptimierte xVelocity-columnstore-Indizes|Ja|||||||  
 |Globale Batchaggregation|Ja|||||||  
   
-##  <a name="SSAS"></a>Analysis Services  
+##  <a name="analysis-services"></a><a name="SSAS"></a>Analysis Services  
   
 |Funktionsname|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -307,7 +305,7 @@ ms.locfileid: "79289288"
 |Hochverfügbarkeit|Ja|Ja|Ja|||||  
 |Programmierbarkeit (AMO, ADOMD.NET, OLEDB, XML/A, ASSL)|Ja|Ja|Ja|||||  
   
-###  <a name="BISemModel_multi"></a>BI-Semantik Modell (mehrdimensional)  
+###  <a name="bi-semantic-model-multidimensional"></a><a name="BISemModel_multi"></a>BI-Semantik Modell (mehrdimensional)  
   
 |Funktionsname|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -327,7 +325,7 @@ ms.locfileid: "79289288"
 |Erweiterte Dimensionen (Bezugsdimensionen, m:n-Dimensionen)|Ja|Ja|Ja|||||  
 |Verknüpfte Measures und Dimensionen|Ja|Ja||||||  
 |Translations|Ja|Ja|Ja|||||  
-|Aggregationen|Ja|Ja|Ja|||||  
+|Aggregations|Ja|Ja|Ja|||||  
 |Mehrere Partitionen|Ja|Ja|Ja, bis zu 3|||||  
 |Proaktives Zwischenspeichern|Ja|Ja||||||  
 |Benutzerdefinierte Assemblys (gespeicherte Prozeduren)|Ja|Ja|Ja|||||  
@@ -344,7 +342,7 @@ ms.locfileid: "79289288"
   
  <sup>1</sup> Das semiadditive LastChild-Measure wird in der Standard Edition unterstützt, aber andere semiadditive Measures, wie z. b. None, firstChild, FirstNonEmpty, LastNonEmpty, AverageOfChildren und ByAccount, sind nicht. Additive Measures, z. B. Sum, Count, Min, Max und nicht additive Measures (DistinctCount) werden in allen Editionen unterstützt.  
   
-###  <a name="BISemModel_tabular"></a>BI-Semantik Modell (tabellarisch)  
+###  <a name="bi-semantic-model-tabular"></a><a name="BISemModel_tabular"></a>BI-Semantik Modell (tabellarisch)  
   
 |Funktionsname|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -357,7 +355,7 @@ ms.locfileid: "79289288"
 |Partitionen|Ja|Ja||||||  
 |Arbeitsspeicherinterne und DirectQuery-Speichermodi (nur tabellarisch)|Ja|Ja||||||  
   
-###  <a name="PowerPivot"></a>PowerPivot für SharePoint  
+###  <a name="powerpivot-for-sharepoint"></a><a name="PowerPivot"></a> PowerPivot für SharePoint  
   
 |Funktionsname|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -368,7 +366,7 @@ ms.locfileid: "79289288"
 |PowerPivot-Datenaktualisierung|Ja|Ja||||||  
 |PowerPivot-Datenfeeds|Ja|Ja||||||  
   
-###  <a name="DataMining"></a>Data Mining  
+###  <a name="data-mining"></a><a name="DataMining"></a>Data Mining  
   
 |Funktionsname|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -387,9 +385,9 @@ ms.locfileid: "79289288"
 |Sequenzvorhersage|Ja|Ja||||||  
 |Mehrere Vorhersageziele für Naïve BaJa, neuronale Netzwerke und logistische Regression|Ja|Ja||||||  
   
-##  <a name="Reporting"></a>Reporting Services  
+##  <a name="reporting-services"></a><a name="Reporting"></a>Reporting Services  
   
-###  <a name="Reporting_features"></a>Reporting Services Features  
+###  <a name="reporting-services-features"></a><a name="Reporting_features"></a>Reporting Services Features  
   
 |Funktionsname|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -417,7 +415,7 @@ ms.locfileid: "79289288"
 |Datengesteuerte Berichtsabonnements|Ja|Ja||||||  
 |Bereitstellung für horizontales Skalieren (Webfarmen)|Ja|Ja||||||  
 |Warnungen<sup>2</sup>|Ja|Ja||||||  
-|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)]<sup>2</sup>|Ja|Ja||||||  
+|[!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] <sup>2</sup>|Ja|Ja||||||  
   
  <sup>1</sup> Weitere Informationen zu den unterstützten Datenquellen in [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)]finden Sie [unter von Reporting Services &#40;SSRS&#41;unterstützte Datenquellen ](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md).  
   
@@ -433,24 +431,23 @@ ms.locfileid: "79289288"
 |Standard|Standard, Enterprise Editions (lokal oder remote)|  
 |Web|Web Edition (nur lokal)|  
 |Express mit Advanced Services|Express mit Advanced Services (nur lokal)|  
-|Auswertung|Auswertung|  
+|Bewertung|Bewertung|  
   
-##  <a name="BIClients"></a>Business Intelligence-Clients  
+##  <a name="business-intelligence-clients"></a><a name="BIClients"></a> Business Intelligence-Clients  
  Die folgenden Softwareclientanwendungen sind im Microsoft Downloads Center verfügbar und bieten Unterstützung beim Erstellen von Business Intelligence-Dokumenten, die in einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz ausgeführt werden. Wenn Sie diese Dokumente in einer Serverumgebung hosten, verwenden Sie eine Edition von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , die für diesen Dokumenttyp unterstützt wird. In der folgenden Tabelle wird dargestellt, welche [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Editionen die Serverfunktionen zum Hosten der in den Clientanwendungen erstellten Dokumente besitzen.  
   
 |Funktionsname|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
 |[!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)]|Ja|Ja|Ja|||||  
 |Data Mining-Add-Ins für Excel und Visio 2010|Ja|Ja|Ja|||||  
-|[!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)]2010|Ja|Ja||||||  
+|[!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)] 2010|Ja|Ja||||||  
 |[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../includes/ssmdsxls-md.md)]|Ja|Ja||||||  
   
 > [!NOTE]
->  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)]ist ein Excel-Add-in und hängt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]nicht von ab. 
-  [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] ist jedoch für die Freigabe und das Zusammenarbeiten mit [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] -Arbeitsmappen in SharePoint erforderlich, und diese Funktion ist als Teil von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise und Business Intelligence-Editionen verfügbar.  
+>  1.  [!INCLUDE[ssGeminiClient](../includes/ssgeminiclient-md.md)]ist ein Excel-Add-in und hängt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]nicht von ab. [!INCLUDE[ssGeminiShort](../includes/ssgeminishort-md.md)] ist jedoch für die Freigabe und das Zusammenarbeiten mit [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] -Arbeitsmappen in SharePoint erforderlich, und diese Funktion ist als Teil von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise und Business Intelligence-Editionen verfügbar.  
 > 2.  In der oben aufgeführten Tabelle sind die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Editionen angegeben, die zur Aktivierung dieser Clienttools erforderlich sind. Über diese Funktionen kann jedoch auf Daten zugegriffen werden, die von beliebigen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Editionen gehostet werden.  
   
-##  <a name="Spatial"></a>Räumliche Dienste und Standortdienste  
+##  <a name="spatial-and-location-services"></a><a name="Spatial"></a>Räumliche Dienste und Standortdienste  
   
 |Funktionsname|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
@@ -459,15 +456,14 @@ ms.locfileid: "79289288"
 |Erweiterte räumliche Bibliotheken|Ja|Ja|Ja|Ja|Ja|Ja|Ja|  
 |Importieren/Exportieren räumlicher Industriestandard-Datenformate|Ja|Ja|Ja|Ja|Ja|Ja|Ja|  
   
-##  <a name="Add_DBServices"></a>Zusätzliche Datenbankdienste  
+##  <a name="additional-database-services"></a><a name="Add_DBServices"></a>Zusätzliche Datenbankdienste  
   
 |Funktionsname|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
-|
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration Assistant|Ja|Ja|Ja|Ja|Ja|Ja|Ja|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration Assistant|Ja|Ja|Ja|Ja|Ja|Ja|Ja|  
 |Datenbank-E-Mail|Ja|Ja|Ja|Ja||||  
   
-##  <a name="Other_Components"></a>Andere Komponenten  
+##  <a name="other-components"></a><a name="Other_Components"></a>Andere Komponenten  
   
 |Funktionsname|Enterprise|Business Intelligence|Standard|Web|Express mit Advanced Services|Express mit Tools|Express|  
 |------------------|----------------|---------------------------|--------------|---------|------------------------------------|------------------------|-------------|  
