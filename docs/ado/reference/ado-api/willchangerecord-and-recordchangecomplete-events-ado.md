@@ -19,10 +19,10 @@ ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6e632db34fbbacbee61cd943067052af27a8cfe8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938676"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>WillChangeRecord- und RecordChangeComplete-Ereignis (ADO)
@@ -38,9 +38,9 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
   
 #### <a name="parameters"></a>Parameter  
  *adReason*  
- Ein [eventreasonenumerationswert](../../../ado/reference/ado-api/eventreasonenum.md) , der den Grund für dieses Ereignis angibt. Der Wert kann " **adrsnaddnew**", " **adrsndelete**", " **adrsnupdate**", " **adrsnundoupdate**", " **adrsnundoaddnew**", "adrsnundodelete" oder " **adrsnfirstchange**" lauten. ****  
+ Ein [eventreasonenumerationswert](../../../ado/reference/ado-api/eventreasonenum.md) , der den Grund für dieses Ereignis angibt. Der Wert kann " **adrsnaddnew**", " **adrsndelete**", " **adrsnupdate**", " **adrsnundoupdate**", " **adrsnundoaddnew**", "adrsnundodelete" oder " **adrsnfirstchange**" lauten. **adRsnUndoDelete**  
   
- *crecords*  
+ *cRecords*  
  Ein **Long** -Wert, der die Anzahl der geänderten Datensätze angibt (betroffen).  
   
  *pError*  
@@ -57,7 +57,7 @@ RecordChangeCompleteadReason, cRecords, pError, adStatus, pRecordset
   
  Legen Sie diesen Parameter vor der Rückgabe von **RecordChangeComplete** auf **adStatus-unwantedevent** fest, um nachfolgende Benachrichtigungen zu verhindern.  
   
- *precordset*  
+ *pRecordset*  
  Ein **Recordset** -Objekt. Das **Recordset** , für das dieses Ereignis aufgetreten ist.  
   
 ## <a name="remarks"></a>Bemerkungen  

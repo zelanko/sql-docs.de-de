@@ -28,10 +28,10 @@ ms.assetid: 99d45b9c-e3b9-4d56-8c25-b594b887ace1
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2cc48fa530730beec07aaca4bfb933c9ff8fb2b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67986356"
 ---
 # <a name="incompatible-access-features-accesstosql"></a>Nicht kompatible Zugriffs Features (accesstosql)
@@ -53,6 +53,6 @@ Nicht alle Access-Daten Bank Features sind [!INCLUDE[ssNoVersion](../../includes
 |Standard Ausdrücke oder Validierungs Regel Ausdrücke enthalten Zugriffs Funktionen, die nicht in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konvertiert oder SQL Azure werden können.|Access-Standard Ausdrücke oder-Validierungsregeln können Zugriffs Systemfunktionen oder benutzerdefinierte Funktionen enthalten, die nicht zugeordnet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder SQL Azure werden. Wenn Sie Funktionen verwenden, die nicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mit oder SQL Azure werden, können Sie die Standard Ausdrücke oder Validierungsregeln nicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in oder SQL Azure laden.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Vorbereiten einer Access-Datenbank für die Migration](preparing-access-databases-for-migration-accesstosql.md)  
+[Vorbereiten der Zugriffs Datenbanken für die Migration](preparing-access-databases-for-migration-accesstosql.md)  
 [Migration von Access-Datenbanken zu SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

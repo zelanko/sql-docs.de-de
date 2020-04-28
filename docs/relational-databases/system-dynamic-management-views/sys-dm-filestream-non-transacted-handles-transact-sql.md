@@ -19,10 +19,10 @@ ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4dda607ace977be539dbed096a3d83ac5f220ea0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67950983"
 ---
 # <a name="sysdm_filestream_non_transacted_handles-transact-sql"></a>sys.dm_filestream_non_transacted_handles (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "67950983"
   
  Weitere Informationen finden Sie unter [Verwalten von FileTables](../../relational-databases/blob/manage-filetables.md).  
   
-|**Spalte**|**Typ**|**Beschreibung**|  
+|**Column**|**Typ**|**Beschreibung**|  
 |----------------|--------------|---------------------|  
 |database_id|INT|ID der Datenbank, die dem Handle zugeordnet ist.|  
 |object_id|INT|Objekt-ID der FileTable, der das Handle zugeordnet ist.|  

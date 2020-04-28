@@ -16,10 +16,10 @@ ms.assetid: 3dedf755-0741-4c3f-8b4e-bff8ff8809c8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 44d6b5f06bffb1cea786ba34d3d2aa8a3efb45ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949499"
 ---
 # <a name="member-object-ado-md"></a>Member-Objekt (ADO MD)
@@ -48,7 +48,7 @@ Stellt einen Member einer Ebene in einem Cube, die untergeordneten Elemente eine
   
 -   Verwenden Sie die standardmäßige ADO [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) -Auflistung, um zusätzliche Informationen über das **Level** -Objekt zu erhalten.  
   
- Durch die Auflistungen und Eigenschaften **** eines Members einer **Position** auf einer [Achse](../../../ado/reference/ado-md-api/axis-object-ado-md.md)können Sie folgende Aufgaben ausführen:  
+ Durch die Auflistungen und Eigenschaften **Member** eines Members einer **Position** auf einer [Achse](../../../ado/reference/ado-md-api/axis-object-ado-md.md)können Sie folgende Aufgaben ausführen:  
   
 -   Identifizieren Sie den **Member** mit den Eigenschaften " [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) " und " [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) ".  
   

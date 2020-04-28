@@ -18,10 +18,10 @@ ms.assetid: cb1ab102-1ae0-4811-9144-9a8121ef2d7e
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: 95598885a80b1f697f5e1287e22c1048e737ba6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67944723"
 ---
 # <a name="sp_revokelogin-transact-sql"></a>sp_revokelogin (Transact-SQL)
@@ -42,7 +42,7 @@ sp_revokelogin [ @loginame= ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @loginame = ] 'login'`Der Name des Windows-Benutzers oder der Windows-Gruppe. *Login* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. " *Login* " kann ein beliebiger Windows-Benutzername oder eine Gruppe im Format " *Computer Name*\\*Benutzer" oder "Domäne*\\*Benutzer*" sein.  
+`[ @loginame = ] 'login'`Der Name des Windows-Benutzers oder der Windows-Gruppe. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. " *Login* " kann ein beliebiger Windows-Benutzername oder eine Gruppe im Format " *Computer Name*\\*Benutzer" oder "Domäne*\\*Benutzer*" sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -72,7 +72,7 @@ sp_revokelogin [ADVWORKS\john]
 EXEC sp_revokelogin 'Corporate\MollyA';  
 ```  
   
- oder  
+ Oder  
   
 ```  
 EXEC sp_revokelogin [Corporate\MollyA];  

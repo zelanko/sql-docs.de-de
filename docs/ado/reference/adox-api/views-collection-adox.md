@@ -17,21 +17,21 @@ ms.assetid: a55d380c-2b7b-4b57-af74-8ba0b3de0db9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0cec2462f8726e7c580a7d6755394c6c3f07c85b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964770"
 ---
 # <a name="views-collection-adox"></a>Views-Collection (ADOX)
 Enthält alle [Ansichts](../../../ado/reference/adox-api/view-object-adox.md) Objekte eines Katalogs.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die [Append](../../../ado/reference/adox-api/append-method-adox-views.md) -Methode für eine **views** -Auflistung ist für ADOX eindeutig. Ihre Möglichkeiten:  
+ Die [Append](../../../ado/reference/adox-api/append-method-adox-views.md) -Methode für eine **views** -Auflistung ist für ADOX eindeutig. Sie haben folgende Möglichkeiten:  
   
 -   Fügen Sie der Auflistung mithilfe der **Append** -Methode eine neue Ansicht hinzu.  
   
- Die restlichen Eigenschaften und Methoden sind Standard für ADO-Auflistungen. Ihre Möglichkeiten:  
+ Die restlichen Eigenschaften und Methoden sind Standard für ADO-Auflistungen. Sie haben folgende Möglichkeiten:  
   
 -   Greifen Sie mit der [Item](../../../ado/reference/ado-api/item-property-ado.md) -Eigenschaft auf eine Ansicht in der Auflistung zu.  
   
@@ -43,7 +43,7 @@ Enthält alle [Ansichts](../../../ado/reference/adox-api/view-object-adox.md) Ob
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Views-Collection – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/views-collection-properties-methods-and-events.md)  
+-   [Views Collection Properties, Methods, and Events (Views-Auflistung – Eigenschaften, Methoden und Ereignisse)](../../../ado/reference/adox-api/views-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Beispiel für Sichten und Fields-Auflistungen (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   

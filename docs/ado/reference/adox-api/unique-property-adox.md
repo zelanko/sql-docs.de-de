@@ -18,10 +18,10 @@ ms.assetid: 85fd4bd0-393b-4dc1-9d73-80dced4f2fbe
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7a4b3ab6c9b623544f1cc93f26394fa1905b6d3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964984"
 ---
 # <a name="unique-property-adox"></a>Unique-Eigenschaft (ADOX)
@@ -31,7 +31,7 @@ Gibt an, ob die Index Schlüssel eindeutig sein müssen.
  Legt einen **booleschen** Wert fest und gibt ihn zurück.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Der Standardwert ist **False**.  
+ Der Standardwert lautet **False**.  
   
  Diese Eigenschaft ist für [Index](../../../ado/reference/adox-api/index-object-adox.md) Objekte, die bereits an eine Auflistung angehängt wurden, schreibgeschützt.  
   

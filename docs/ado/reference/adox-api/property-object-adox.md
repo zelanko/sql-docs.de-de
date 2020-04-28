@@ -14,10 +14,10 @@ ms.assetid: 6a56def6-dbe6-4ccc-a491-8d076889f019
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: b7911608970e9860d7eddcf3e83156ac99645c3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965396"
 ---
 # <a name="property-object-adox"></a>Property-Objekt (ADOX)
@@ -44,4 +44,4 @@ Stellt ein Merkmal eines ADOX-Objekts dar.
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [ADOX-Property-Objekt – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/adox-property-object-properties-methods-and-events.md)
+-   [ADOX-Objekt – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/adox-property-object-properties-methods-and-events.md)

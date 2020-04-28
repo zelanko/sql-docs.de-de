@@ -14,10 +14,10 @@ ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 416aaefa95871e909a12117756ea59747c555650
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963494"
 ---
 # <a name="reset-method-rds"></a>Reset-Methode (RDS)
@@ -37,13 +37,13 @@ DataControl.Reset(value)
  *DataControl*  
  Eine Objekt Variable, die einen [RDS darstellt. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Objekt.  
   
- *Wert*  
- Optional. Ein **boolescher** Wert, der **true** (Standard) ist, wenn Sie nach dem aktuellen "gefilterten" Rowset filtern möchten. **False** gibt an, dass Sie nach dem ursprünglichen Rowset filtern, indem Sie alle vorherigen Filteroptionen entfernen.  
+ *value*  
+ (Optional) Ein **boolescher** Wert, der **true** (Standard) ist, wenn Sie nach dem aktuellen "gefilterten" Rowset filtern möchten. **False** gibt an, dass Sie nach dem ursprünglichen Rowset filtern, indem Sie alle vorherigen Filteroptionen entfernen.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Die Eigenschaften [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), [SortDirection](../../../ado/reference/rds-api/sortdirection-property-rds.md), [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [Filterkriterium](../../../ado/reference/rds-api/filtercriterion-property-rds.md)und [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md) stellen Sortier-und Filterfunktionen für den Client seitigen Cache bereit. Die Sortierfunktion ordnet Datensätze nach Werten aus einer Spalte an. Die Filterfunktion zeigt eine Teilmenge der Datensätze basierend auf einem Suchkriterium an, während das vollständige [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) im Cache beibehalten wird. Die **Reset** -Methode führt die Kriterien aus und ersetzt das aktuelle **Recordset** durch ein Aktualisier bares **Recordset**.  
   
- Wenn Änderungen an den ursprünglichen Daten vorgenommen wurden, die noch nicht übermittelt wurden, tritt bei der **Reset** -Methode ein Fehler auf. Verwenden Sie zunächst die [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) -Methode, um Änderungen in einem Lese-/schreibrecordset zu speichern, und verwenden Sie dann die **Reset** -Methode, um die Datensätze zu sortieren oder zu filtern. ****  
+ Wenn Änderungen an den ursprünglichen Daten vorgenommen wurden, die noch nicht übermittelt wurden, tritt bei der **Reset** -Methode ein Fehler auf. Verwenden Sie zunächst die [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) -Methode, um Änderungen in einem Lese-/schreibrecordset zu speichern, und verwenden Sie dann die **Reset** -Methode, um die Datensätze zu sortieren oder zu filtern. **Recordset**  
   
  Wenn Sie mehr als einen Filter für das Rowset ausführen möchten, können Sie das optionale *boolesche* Argument mit der **Reset** -Methode verwenden. Dies wird anhand des folgenden Beispiels veranschaulicht:  
   

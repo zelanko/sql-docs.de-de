@@ -19,10 +19,10 @@ ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
 author: pmasl
 ms.author: pelopes
 ms.openlocfilehash: 21e5230e4f3efd86fe90382202f0b21a0187a214
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67937065"
 ---
 # <a name="stretch-database---sysdm_db_rda_migration_status"></a>Stretch Database-sys. dm_db_rda_migration_status
@@ -38,7 +38,7 @@ ms.locfileid: "67937065"
 |-----------------|---------------|-----------------|  
 |**table_id**|**int**|Die ID der Tabelle, aus der die Zeilen migriert wurden.|  
 |**database_id**|**int**|Die ID der Datenbank, aus der die Zeilen migriert wurden.|  
-|**migrated_rows**|**BIGINT**|Die Anzahl der in diesem Batch migrierten Zeilen.|  
+|**migrated_rows**|**bigint**|Die Anzahl der in diesem Batch migrierten Zeilen.|  
 |**start_time_utc**|**datetime**|Die UTC-Zeit, zu der der Batch gestartet wurde.|  
 |**end_time_utc**|**datetime**|Die UTC-Zeit, zu der der Batch beendet wurde.|  
 |**error_number**|**int**|Wenn der Batch fehlschlägt, wird die Fehlernummer des aufgetretenen Fehlers angezeigt. andernfalls NULL.|  

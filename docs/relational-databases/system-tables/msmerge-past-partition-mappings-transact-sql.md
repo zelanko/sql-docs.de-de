@@ -18,10 +18,10 @@ ms.assetid: 06d54ff5-4d29-4eeb-b8be-64d032e53134
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7d56debf540de7b1e7f33f741fdd4c3f52d3f04a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67984892"
 ---
 # <a name="msmerge_past_partition_mappings-transact-sql"></a>MSmerge_past_partition_mappings (Transact-SQL)
@@ -35,8 +35,8 @@ ms.locfileid: "67984892"
 |**tablenick**|**int**|Der Spitzname der veröffentlichten Tabelle.|  
 |**rowguid**|**uniqueidentifier**|Der Zeilenbezeichner für die angegebene Zeile.|  
 |**partition_id**|**int**|Die Partitions-ID, die der Zeile zugeordnet ist. Der Wert ist-1, wenn die Zeilen Änderung für alle Abonnenten relevant ist.|  
-|**Stro**|**BIGINT**|Der Wert der Generierung, in der die Partitionsänderung aufgetreten ist.|  
-|**weshalb**|**tinyint**|Nur intern verwendet.|  
+|**Stro**|**bigint**|Der Wert der Generierung, in der die Partitionsänderung aufgetreten ist.|  
+|**reason**|**tinyint**|Nur intern verwendet.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

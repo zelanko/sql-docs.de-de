@@ -16,10 +16,10 @@ ms.assetid: 6b2a9c31-1a7e-40db-8a53-30720d0f6cc1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 6ce247905afd6ed34366424f5f905d57b42d988f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938845"
 ---
 # <a name="update-method"></a>Update-Methode
@@ -34,11 +34,11 @@ record.Fields.Update
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Fields*  
- Optional. Eine **Variante** , die einen einzelnen Namen darstellt, oder ein **Variant** -Array, das Namen oder Ordinalpositionen der Felder darstellt, die Sie ändern möchten.  
+ *Felder*  
+ (Optional) Eine **Variante** , die einen einzelnen Namen darstellt, oder ein **Variant** -Array, das Namen oder Ordinalpositionen der Felder darstellt, die Sie ändern möchten.  
   
  *Werte*  
- Optional. Eine **Variante** , die einen einzelnen Wert darstellt, oder ein **Variant** -Array, das Werte für das Feld bzw. die Felder im neuen Datensatz darstellt.  
+ (Optional) Eine **Variante** , die einen einzelnen Wert darstellt, oder ein **Variant** -Array, das Werte für das Feld bzw. die Felder im neuen Datensatz darstellt.  
   
 ## <a name="remarks"></a>Bemerkungen  
   

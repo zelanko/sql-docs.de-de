@@ -16,19 +16,19 @@ ms.assetid: 738fd3ff-3daf-483d-a0b9-88bef1be54c1
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 87c61baa93cb1dbca58bbe86ffc254a92d2b9d5b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965248"
 ---
 # <a name="ruleenum"></a>RuleEnum
 Gibt die Regel an, die befolgt werden soll, wenn eine [Taste](../../../ado/reference/adox-api/key-object-adox.md) gelöscht wird.  
   
-|Dauerhaft|value|BESCHREIBUNG|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
 |**adricascade**|1|Kaskadierte Änderungen.|  
-|**adrinone**|0|Default. Es wird keine Aktion ausgeführt.|  
+|**adrinone**|0|Standard. Es wird keine Aktion ausgeführt.|  
 |**adrisetdefault**|3|Der Fremdschlüssel Wert wird auf den Standardwert festgelegt.|  
 |**adrisetnull**|2|Der Fremdschlüssel Wert ist auf NULL festgelegt.|  
   

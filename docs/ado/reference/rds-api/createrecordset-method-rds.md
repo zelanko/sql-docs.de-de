@@ -20,10 +20,10 @@ ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 3c65f7d415864b169b683e0c9ab858506d31783b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964513"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset-Methode (RDS)
@@ -43,13 +43,13 @@ object.CreateRecordset(ColumnInfos)
  *Object*  
  Eine Objekt Variable, die ein [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) oder [RDS darstellt. DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) -Objekt.  
   
- *Columnsinfos*  
+ *ColumnsInfos*  
  Ein **Variant** -Array von Attributen, das jede Spalte im erstellten **Recordset** definiert. Jede Spaltendefinition enthält ein Array von vier erforderlichen Attributen und ein optionales Attribut.  
   
-|attribute|BESCHREIBUNG|  
+|Attribut|BESCHREIBUNG|  
 |---------------|-----------------|  
 |Name|Der Name des Spalten Headers.|  
-|type|Ganzzahliger Wert des Datentyps.|  
+|Typ|Ganzzahliger Wert des Datentyps.|  
 |Size|Ganzzahlige Breite in Zeichen, unabhängig vom Datentyp.|  
 |NULL-Zulässigkeit|Boolescher Wert.|  
 |Skalieren (optional)|Dieses optionale Attribut definiert die Skala für numerische Felder. Wenn dieser Wert nicht angegeben wird, werden numerische Werte auf drei Dezimalstellen abgeschnitten. Die Genauigkeit ist nicht betroffen, aber die Anzahl der Ziffern nach dem Dezimaltrennzeichen wird auf drei gekürzt.|  
@@ -65,36 +65,36 @@ object.CreateRecordset(ColumnInfos)
   
  Für einige der Variablen Datentypen kann der Typ in den Typ umgewandelt werden, der in der Ersetzungs Spalte angegeben ist. Die Ersetzungen werden erst angezeigt, nachdem das **Recordset** erstellt und gefüllt wurde. Anschließend können Sie ggf. den tatsächlichen Datentyp überprüfen.  
   
-|Länge|Dauerhaft|Number|Ersetzung|  
+|Länge|Konstante|Anzahl|Ersetzung|  
 |------------|--------------|------------|------------------|  
-|Korrigiert|**adtinyint**|16||  
-|Korrigiert|**adsmallint**|2||  
-|Korrigiert|**adinteger**|3||  
-|Korrigiert|**adbigint**|20||  
-|Korrigiert|**adunsignedtinyint**|17||  
-|Korrigiert|**adunsignedsmallint**|18||  
-|Korrigiert|**adunsignedint**|19||  
-|Korrigiert|**adunsignedbigint**|21||  
-|Korrigiert|**adsingle**|4||  
+|Korrigiert|**adTinyInt**|16||  
+|Korrigiert|**adSmallInt**|2||  
+|Korrigiert|**adInteger**|3||  
+|Korrigiert|**adBigInt**|20||  
+|Korrigiert|**adUnsignedTinyInt**|17||  
+|Korrigiert|**adUnsignedSmallInt**|18||  
+|Korrigiert|**adUnsignedInt**|19||  
+|Korrigiert|**adUnsignedBigInt**|21||  
+|Korrigiert|**adSingle**|4||  
 |Korrigiert|**adDouble**|5||  
-|Korrigiert|**adcurrency**|6||  
-|Korrigiert|**addecimal**|14||  
+|Korrigiert|**adCurrency**|6||  
+|Korrigiert|**adDecimal**|14||  
 |Korrigiert|**adNumeric**|131||  
-|Korrigiert|**adboolean**|11||  
-|Korrigiert|**aderror**|10||  
-|Korrigiert|**adguid**|72||  
+|Korrigiert|**adBoolean**|11||  
+|Korrigiert|**adError**|10||  
+|Korrigiert|**adGuid**|72||  
 |Korrigiert|**adDate**|7||  
-|Korrigiert|**addbdate**|133||  
-|Korrigiert|**addbtime**|134||  
+|Korrigiert|**adDBDate**|133||  
+|Korrigiert|**adDBTime**|134||  
 |Korrigiert|**adDBTimestamp**|135|7|  
 |Variable|**adBSTR**|8|130|  
-|Variable|**adchar**|129|200|  
+|Variable|**adChar**|129|200|  
 |Variable|**adVarChar**|200||  
 |Variable|**adLongVarChar**|201|200|  
-|Variable|**adwchar**|130||  
-|Variable|**adVarWchar**|202|130|  
+|Variable|**adWChar**|130||  
+|Variable|**adVarWChar**|202|130|  
 |Variable|**adLongVarWChar**|203|130|  
-|Variable|**adbinary**|128||  
+|Variable|**adBinary**|128||  
 |Variable|**adVarBinary**|204||  
 |Variable|**adLongVarBinary**|205|204|  
   

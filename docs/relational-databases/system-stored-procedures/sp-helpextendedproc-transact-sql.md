@@ -18,10 +18,10 @@ ms.assetid: 7e1f017e-c898-4225-b375-6a73ef9aac7b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3dcbe6d187b56b0b15ae829eeecf1811b02dfee7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67943508"
 ---
 # <a name="sp_helpextendedproc-transact-sql"></a>sp_helpextendedproc (Transact-SQL)
@@ -42,7 +42,7 @@ sp_helpextendedproc [ [@funcname = ] 'procedure' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @funcname = ] 'procedure'`Der Name der erweiterten gespeicherten Prozedur, für die Informationen gemeldet werden. *Procedure* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @funcname = ] 'procedure'`Der Name der erweiterten gespeicherten Prozedur, für die Informationen gemeldet werden. *procedure* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  

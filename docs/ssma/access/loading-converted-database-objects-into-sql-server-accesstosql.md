@@ -30,10 +30,10 @@ ms.assetid: 4e854eee-b10c-4f0b-9d9e-d92416e6f2ba
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7effaa973b7a39df6fc0b9385a5cfde4fdad18d4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67986320"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-accesstosql"></a>Laden von konvertierten Datenbankobjekten in SQL Server (accesstosql)
@@ -83,7 +83,7 @@ Wenn Sie Definitionen der konvertierten Datenbankobjekte speichern [!INCLUDE[tsq
   
 1.  Erweitern [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Sie im metadatenexplorer den obersten Knoten (Servername), und erweitern Sie dann **Datenbanken**.  
   
-2.  Führen Sie einen oder mehrere der folgenden Schritte aus:  
+2.  Führen Sie eine oder mehrere der folgenden Aktionen aus:  
   
     -   Aktivieren Sie das Kontrollkästchen neben dem Datenbanknamen, um ein Skript für eine komplette Datenbank zu erstellen.  
   

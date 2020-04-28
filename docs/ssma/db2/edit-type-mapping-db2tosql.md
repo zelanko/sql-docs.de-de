@@ -10,10 +10,10 @@ ms.assetid: f93c4b7d-74fc-4856-bf42-035289918e83
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 29669535f3544dafea58e7064e6d2c5281f6102f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989697"
 ---
 # <a name="edit-type-mapping-db2tosql"></a>Typzuordnung bearbeiten (DB2ToSQL)
@@ -27,13 +27,13 @@ Sie können auf dieses Dialogfeld an mehreren Stellen zugreifen:
   
 Tabellen spezifische Typzuordnungen überschreiben Datenbank-und Projekttyp Zuordnungen. Datenbankspezifische Zuordnungen überschreiben Projekt Zuordnungen.  
   
-## <a name="options"></a>Tastatur  
-**Quelltyp**  
+## <a name="options"></a>Optionen  
+**Quellentyp**  
 Wählen Sie den Quell Datentyp aus, der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einem Datentyp zugeordnet werden soll.  
   
 Wenn der Datentyp eine Variable Länge hat, werden die folgenden Felder unter **Quelltyp**angezeigt:  
   
-**Von**  
+**From**  
 Geben Sie die Mindestlänge für diese Zuordnung an. Beispielsweise können Sie für den **NCHAR** -Datentyp 10 eingeben, um anzugeben, dass diese Zuordnung für einen Bereich gilt, der bei **NCHAR (10)** beginnt.  
   
 **An**  

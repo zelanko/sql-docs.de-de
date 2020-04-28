@@ -18,10 +18,10 @@ ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: c316f48f3e590fcba419e125f8e327b25ee1ede6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933824"
 ---
 # <a name="sp_dropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
@@ -44,11 +44,11 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @remoteserver = ] 'remoteserver'`Der Name des Remote Servers, der dem Remote Anmelde Namen zugeordnet ist, der entfernt werden soll. *Remote Server* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. *Remote Server* muss bereits vorhanden sein.  
+`[ @remoteserver = ] 'remoteserver'`Der Name des Remote Servers, der dem Remote Anmelde Namen zugeordnet ist, der entfernt werden soll. *remoteserver* ist vom Datentyp **sysname**und hat keinen Standardwert. Der*remoteserver* muss bereits vorhanden sein.  
   
-`[ @loginame = ] 'login'`Der optionale Anmelde Name auf dem lokalen Server, der dem Remote Server zugeordnet ist. *Login* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. der *Anmelde* Name muss bereits vorhanden sein, wenn angegeben.  
+`[ @loginame = ] 'login'`Der optionale Anmelde Name auf dem lokalen Server, der dem Remote Server zugeordnet ist. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL. *login* muss ggf. bereits vorhanden sein.  
   
-`[ @remotename = ] 'remote_name'`Der optionale Name der Remote Anmeldung, die dem *Anmelde* Namen beim Anmelden vom Remote Server zugeordnet wird. *remote_name* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @remotename = ] 'remote_name'`Der optionale Name der Remote Anmeldung, die dem *Anmelde* Namen beim Anmelden vom Remote Server zugeordnet wird. *remote_name* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  

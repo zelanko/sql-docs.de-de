@@ -23,10 +23,10 @@ author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 437dbbc4ea7deb32a9723febb443cc67941fdc5e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67940226"
 ---
 # <a name="sysdatabase_automatic_tuning_options-transact-sql"></a>Automatisches\_tuning_options von\_sys. Database (Transact-SQL)
@@ -38,11 +38,11 @@ ms.locfileid: "67940226"
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(128)**|Der Name der automatischen Optimierungs Option. Informationen zu den verfügbaren Optionen finden Sie unter [ALTER DATABASE SET AUTOMATIC_TUNING &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) .|  
 |**desired_state**|**smallint**|Gibt den gewünschten Betriebsmodus für die automatische Optimierungs Option an, der explizit vom Benutzer festgelegt wird.<br />0 = OFF<br />1 = ON|  
-|**desired_state_desc**|**nvarchar (60)**|Textbeschreibung des gewünschten Betriebsmodus der automatischen Optimierungs Option.<br />OFF<br />EIN|  
+|**desired_state_desc**|**nvarchar(60)**|Textbeschreibung des gewünschten Betriebsmodus der automatischen Optimierungs Option.<br />OFF<br />EIN|  
 |**actual_state**|**smallint**|Gibt den Betriebsmodus der automatischen Optimierungs Option an.<br />0 = OFF<br />1 = ON|  
-|**actual_state_desc**|**nvarchar (60)**|Textbeschreibung des tatsächlichen Betriebsmodus der automatischen Optimierungs Option.<br />OFF<br />EIN|  
-|**weshalb**|**smallint**|Gibt an, warum sich der tatsächliche und der gewünschte Status unterscheiden.<br />2 = deaktiviert<br />11 = QUERY_STORE_OFF<br />12 = QUERY_STORE_READ_ONLY<br />13 = NOT_SUPPORTED|   
-|**reason_desc**|**nvarchar (60)**|Textbeschreibung des Grunds, warum sich der tatsächliche und der gewünschte Status unterscheiden.<br />Deaktiviert = Option ist vom System deaktiviert.<br />QUERY_STORE_OFF = Abfragespeicher ist ausgeschaltet.<br />QUERY_STORE_READ_ONLY = Abfragespeicher ist im schreibgeschützten Modus.<br />NOT_SUPPORTED = nur in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition verfügbar| 
+|**actual_state_desc**|**nvarchar(60)**|Textbeschreibung des tatsächlichen Betriebsmodus der automatischen Optimierungs Option.<br />OFF<br />EIN|  
+|**reason**|**smallint**|Gibt an, warum sich der tatsächliche und der gewünschte Status unterscheiden.<br />2 = deaktiviert<br />11 = QUERY_STORE_OFF<br />12 = QUERY_STORE_READ_ONLY<br />13 = NOT_SUPPORTED|   
+|**reason_desc**|**nvarchar(60)**|Textbeschreibung des Grunds, warum sich der tatsächliche und der gewünschte Status unterscheiden.<br />Deaktiviert = Option ist vom System deaktiviert.<br />QUERY_STORE_OFF = Abfragespeicher ist ausgeschaltet.<br />QUERY_STORE_READ_ONLY = Abfragespeicher ist im schreibgeschützten Modus.<br />NOT_SUPPORTED = nur in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Enterprise Edition verfügbar| 
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die `VIEW DATABASE STATE`-Berechtigung.  

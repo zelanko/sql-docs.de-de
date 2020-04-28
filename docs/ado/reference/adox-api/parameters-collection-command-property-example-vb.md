@@ -15,10 +15,10 @@ ms.assetid: 7df1089e-69b7-476e-9244-19947c087351
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd8595cf8089ce6fd15549680da538946414b9c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965621"
 ---
 # <a name="parameters-collection-command-property-example-vb"></a>Parameters-Collection, Command-Eigenschaft – Beispiel (VB)
@@ -80,4 +80,4 @@ End Sub
  [Catalog-Objekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Command-Eigenschaft (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
  [Procedure-Objekt (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Procedures-Collection (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+ [Procedures Collection (ADOX) (Procedures-Auflistung (ADOX))](../../../ado/reference/adox-api/procedures-collection-adox.md)

@@ -18,10 +18,10 @@ ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a8e6a8187936e7a2f824315123937cf9c7eca9c5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933868"
 ---
 # <a name="sp_dropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
@@ -40,15 +40,15 @@ sp_dropmessage [ @msgnum = ] message_number
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @msgnum = ] message_number`Die Nachrichten-Nummer, die gelöscht werden soll. *message_number* muss eine benutzerdefinierte Meldung mit einer Meldungs Nummer größer als 50000 sein. *message_number* ist vom Datentyp **int**und hat den Standardwert NULL.  
+`[ @msgnum = ] message_number`Die Nachrichten-Nummer, die gelöscht werden soll. *message_number* muss eine benutzerdefinierte Nachricht mit einer Nachrichtennummer größer als 50000 sein. *message_number* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
-`[ @lang = ] 'language'`Die Sprache der zu löschenden Nachricht. Wenn **all** angegeben wird, werden alle Sprachversionen von *message_number* gelöscht. *Language* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @lang = ] 'language'`Die Sprache der zu löschenden Nachricht. Wenn **all** angegeben wird, werden alle Sprachversionen von *message_number* gelöscht. *language* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="result-sets"></a>Resultsets  
- Keine.  
+ Keine  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in den festen Serverrollen **sysadmin** und **serveradmin** .  
@@ -132,7 +132,7 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
- [sp_addmessage &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
+ [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [sp_altermessage &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
  [FormatMessage &#40;Transact-SQL-&#41;](../../t-sql/functions/formatmessage-transact-sql.md)   
  [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)   

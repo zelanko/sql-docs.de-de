@@ -17,10 +17,10 @@ ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e0e7c29be102e9c5c7709816895a6647c95337c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67936612"
 ---
 # <a name="willexecute-event-ado"></a>WillExecute-Ereignis (ADO)
@@ -34,10 +34,10 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *`Source`*  
+ *Quelle*  
  Eine **Zeichenfolge** , die einen SQL-Befehl oder den Namen einer gespeicherten Prozedur enthält.  
   
- *Cursor Type*  
+ *CursorType*  
  Eine [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md) , die den Typ des Cursors für das **Recordset** enthält, das geöffnet wird. Mit diesem Parameter können Sie den Cursor während eines **Recordset**-Vorgangs für die[Open-Methode (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md) in einen beliebigen Typ ändern. " *Cursor Type* " wird für jeden anderen Vorgang ignoriert.  
   
  *LockType*  
@@ -49,13 +49,13 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
  *adStatus*  
  Ein [eventstatusenum](../../../ado/reference/ado-api/eventstatusenum.md) -Statuswert, der **adStatusCantDeny** oder **adStatusOK** sein kann, wenn dieses Ereignis aufgerufen wird. Wenn es **adStatus cantdeny**ist, fordert dieses Ereignis möglicherweise keinen Abbruch des ausstehenden Vorgangs an.  
   
- *pcommand*  
+ *pCommand*  
  Das [ADO-Objekt (Command Object)](../../../ado/reference/ado-api/command-object-ado.md) , für das diese Ereignis Benachrichtigung gilt.  
   
- *precordset*  
+ *pRecordset*  
  Das [Recordset-Objekt (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md) -Objekt, für das diese Ereignis Benachrichtigung gilt.  
   
- *pconnection*  
+ *pConnection*  
  Das [ADO-Objekt (Connection Object)](../../../ado/reference/ado-api/connection-object-ado.md) , für das diese Ereignis Benachrichtigung gilt.  
   
 ## <a name="remarks"></a>Bemerkungen  

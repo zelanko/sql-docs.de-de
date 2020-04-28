@@ -14,10 +14,10 @@ ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 66c3b9ecefd63cf7de1806e6fa838a0204626605
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963255"
 ---
 # <a name="synchronize21-method-rds"></a>Synchronize21-Methode (RDS)
@@ -37,10 +37,10 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
  *ConnectionString*  
  Eine Zeichenfolge, die zum Herstellen einer Verbindung mit dem OLE DB Anbieters verwendet wird, an den die Anforderung gesendet wird. Wenn ein Handler verwendet wird, kann der Handler die Verbindungs Zeichenfolge bearbeiten oder ersetzen.  
   
- *Handlerstring*  
+ *HandlerString*  
  Die Zeichenfolge identifiziert den Handler, der bei dieser Ausführung verwendet werden soll. Die Zeichenfolge enthält zwei Teile. Der erste Teil enthält den Namen (ProgID) des zu verwendenden Handlers. Der zweite Teil der Zeichenfolge enthält Argumente, die an den Handler übermittelt werden sollen. Wie die Argument Zeichenfolge interpretiert wird, ist handlerspezifisch. Die beiden Teile sind durch die erste Instanz eines Kommas in der Zeichenfolge getrennt. Die Argument Zeichenfolge kann zusätzliche Kommas enthalten. Die Argumente sind optional.  
   
- *lsynchronizeoptions*  
+ *lSynchronizeOptions*  
  Eine Bitmaske der Synchronisierungs Optionen.  
   
  1 =*updatetransact* -Aktualisierungen der Datenbank werden in einer Transaktion umschließt. Die Transaktion wird abgebrochen, wenn ein Update fehlschlägt.  
@@ -51,10 +51,10 @@ object.Synchronize21(ConnectionString As String, HandlerString As String, lSynch
   
  8 = Aktualisierungs*Konflikte* alle Zeilen mit ausstehenden Änderungen können nicht aktualisiert werden. Die Zeilen, die nicht aktualisiert werden konnten, werden mit den aktuellen Daten aus der Datenbank aktualisiert.  
   
- *pprecordset*  
+ *ppRecordset*  
  Ein Zeiger auf einen Zeiger auf das Recordset, das synchronisiert werden soll.  
   
- *pstatus Array*  
+ *pStatusArray*  
  Eine Variante, mit der ein sicheres Array von Zeilen Status für die von der Synchronisierung betroffenen Zeilen zurückgegeben wird. Nicht festgelegt, wenn keine der folgenden Synchronisierungs Optionen festgelegt ist: Refresh *withupdate, Update* *und* *Refresh* .  
   
 ## <a name="remarks"></a>Bemerkungen  

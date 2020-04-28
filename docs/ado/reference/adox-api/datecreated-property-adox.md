@@ -18,10 +18,10 @@ ms.assetid: 2bf4b00d-045c-444e-8af7-8af6297ed418
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0151b6388a19fc95227cbfa55a571e0a797d0acc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966570"
 ---
 # <a name="datecreated-property-adox"></a>DateCreated-Eigenschaft (ADOX)
@@ -37,7 +37,7 @@ Gibt das Datum an, an dem das Objekt erstellt wurde.
   
 ||||  
 |-|-|-|  
-|[Procedure-Objekt (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[Table-Objekt (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[View-Objekt (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
+|[Procedure Object (ADOX) (Procedure-Objekt (ADOX))](../../../ado/reference/adox-api/procedure-object-adox.md)|[Table-Objekt (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[View-Objekt (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [DateCreated und DateModified-Eigenschaften (Beispiel) (VB)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)   

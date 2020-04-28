@@ -13,10 +13,10 @@ ms.assetid: 438e4369-f7e8-4dca-a709-dd501a3ca83f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8ac4e07dd4721cf2ae38f480563350fa0fbbaf51
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67952074"
 ---
 # <a name="adox-code-examples"></a>ADOX-Codebeispiele
@@ -47,4 +47,4 @@ Verwenden Sie die folgenden Codebeispiele, um zu erfahren, wie Sie die ADOX-Obje
  [Beispiele für die Append-Methode (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
  [Views-Auflistung, CommandText-Eigenschafts Beispiel (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
  [Sichten Delete-Methode (Beispiel) (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
- [Refresh-Methode für Sichten – Beispiel (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)
+ [Views Refresh-Methode – Beispiel (VB)](../../../ado/reference/adox-api/views-refresh-method-example-vb.md)

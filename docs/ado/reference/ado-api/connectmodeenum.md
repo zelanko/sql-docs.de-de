@@ -16,16 +16,16 @@ ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: debf6f9dc4ac1326caf9fbf32b65f15f34a19094
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933456"
 ---
 # <a name="connectmodeenum"></a>ConnectModeEnum
 Gibt die verfügbaren Berechtigungen zum Ändern von Daten in einer [Verbindung](../../../ado/reference/ado-api/connection-object-ado.md), zum Öffnen eines Daten [Satzes](../../../ado/reference/ado-api/record-object-ado.md)oder zum Angeben von Werten für die [Mode](../../../ado/reference/ado-api/mode-property-ado.md) -Eigenschaft des **Datensatz** -und des [Stream](../../../ado/reference/ado-api/stream-object-ado.md) -Objekts an.  
   
-|Dauerhaft|value|BESCHREIBUNG|  
+|Konstante|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |**admoderead**|1|Gibt schreibgeschützte Berechtigungen an.|  
 |**admodereadwrite**|3|Gibt Lese-/Schreibberechtigungen an.|  
@@ -34,13 +34,13 @@ Gibt die verfügbaren Berechtigungen zum Ändern von Daten in einer [Verbindung]
 |**admodesharedenyread**|4|Verhindert, dass andere eine Verbindung mit Leseberechtigungen öffnen.|  
 |**admodesharedenywrite**|8|Verhindert, dass andere eine Verbindung mit Schreibberechtigungen öffnen.|  
 |**admodeshareexclusive**|12|Hindert andere daran, eine Verbindung zu öffnen.|  
-|**adModeUnknown**|0|Default. Gibt an, dass die Berechtigungen noch nicht festgelegt wurden oder nicht bestimmt werden können.|  
+|**adModeUnknown**|0|Standard. Gibt an, dass die Berechtigungen noch nicht festgelegt wurden oder nicht bestimmt werden können.|  
 |**admodewrite**|2|Gibt schreibgeschützte Berechtigungen an.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Dauerhaft|  
+|Konstante|  
 |--------------|  
 |AdoEnums. ConnectMode. Read|  
 |AdoEnums. ConnectMode. ReadWrite|  

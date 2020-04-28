@@ -18,10 +18,10 @@ ms.assetid: 40e44df7-d3e3-44ee-b149-08aba629a21f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 20eab8076d88941080898a21cb0d82cc1c667359
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67995484"
 ---
 # <a name="sp_resync_targetserver-transact-sql"></a>sp_resync_targetserver (Transact-SQL)
@@ -40,7 +40,7 @@ sp_resync_targetserver
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @server_name = ] 'server'`Der Name des Servers, der neu synchronisiert werden soll. *Server* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Mit **ALL** werden alle Zielserver neu synchronisiert.  
+`[ @server_name = ] 'server'`Der Name des Servers, der neu synchronisiert werden soll. *server* ist vom Datentyp **sysname**und hat keinen Standardwert. Mit **ALL** werden alle Zielserver neu synchronisiert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -49,7 +49,7 @@ sp_resync_targetserver
  Meldet das Ergebnis von **sp_post_msx_operation** -Aktionen.  
   
 ## <a name="remarks"></a>Bemerkungen  
- **sp_resync_targetserver** löscht den aktuellen Satz von Anweisungen für den Zielserver und stellt einen neuen Satz für den Zielserver bereit, der heruntergeladen werden soll. Die neuen Anweisungen bestehen aus einer Anweisung zum Löschen aller Multiserveraufträge, gefolgt von einem Eintrag für jeden Auftrag, der an diesen Server gerichtet ist.  
+ **sp_resync_targetserver** löscht die aktuellen Anweisungen für den Zielserver und stellt neue Anweisungen für den Zielserver zum Herunterladen bereit. Die neuen Anweisungen bestehen aus einer Anweisung zum Löschen aller Multiserveraufträge, gefolgt von einem Eintrag für jeden Auftrag, der an diesen Server gerichtet ist.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Die Berechtigungen zum Ausführen dieser Prozedur werden standardmäßig Mitgliedern der festen Server Rolle **sysadmin** zugewiesen.  

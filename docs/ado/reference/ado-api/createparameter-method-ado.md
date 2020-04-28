@@ -17,10 +17,10 @@ ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: af796c36bd2960730536ec07ac49614876311e84
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933297"
 ---
 # <a name="createparameter-method-ado"></a>CreateParameter-Methode (ADO)
@@ -38,19 +38,19 @@ Set parameter = command.CreateParameter (Name, Type, Direction, Size, Value)
   
 #### <a name="parameters"></a>Parameter  
  *Name*  
- Optional. Ein **Zeichen** folgen Wert, der den Namen des **Parameter** Objekts enthält.  
+ (Optional) Ein **Zeichen** folgen Wert, der den Namen des **Parameter** Objekts enthält.  
   
  *Typ*  
- Optional. Ein [datatyetenum](../../../ado/reference/ado-api/datatypeenum.md) -Wert, der den Datentyp des **Parameter** Objekts angibt.  
+ (Optional) Ein [datatyetenum](../../../ado/reference/ado-api/datatypeenum.md) -Wert, der den Datentyp des **Parameter** Objekts angibt.  
   
- *Orientierung*  
- Optional. Ein [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) -Wert, der den Typ des **Parameter** Objekts angibt.  
+ *Richtung*  
+ (Optional) Ein [ParameterDirectionEnum](../../../ado/reference/ado-api/parameterdirectionenum.md) -Wert, der den Typ des **Parameter** Objekts angibt.  
   
  *Größe*  
- Optional. Ein **Long** -Wert, der die maximale Länge für den Parameterwert in Zeichen oder Bytes angibt.  
+ (Optional) Ein **Long** -Wert, der die maximale Länge für den Parameterwert in Zeichen oder Bytes angibt.  
   
  *Wert*  
- Optional. Eine **Variante** , die den Wert für das **Parameter** Objekt angibt.  
+ (Optional) Eine **Variante** , die den Wert für das **Parameter** Objekt angibt.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Verwenden Sie die Methode " **kreateparameter** ", um ein neues **Parameter** Objekt mit einem angegebenen Namen, Typ, Richtung, Größe und Wert zu erstellen. Alle Werte, die Sie an die Argumente übergeben, werden in die entsprechenden **Parameter** Eigenschaften geschrieben.  

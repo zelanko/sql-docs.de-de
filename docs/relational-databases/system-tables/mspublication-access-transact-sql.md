@@ -18,10 +18,10 @@ ms.assetid: 7bebe47e-3153-4579-8092-5723667a24c6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fccf3e82fbf5958e0293c462961d8aa9b459e594
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67947774"
 ---
 # <a name="mspublication_access-transact-sql"></a>MSpublication_access (Transact-SQL)
@@ -32,8 +32,7 @@ ms.locfileid: "67947774"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**publication_id**|**int**|Die ID der Veröffentlichung.|  
-|**Anmel**|**sysname**|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konten, die sowohl auf der Verleger- als auch auf der Verteilerseite vorhanden sind|  
+|**Anmel**|**sysname**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konten, die sowohl auf der Verleger- als auch auf der Verteilerseite vorhanden sind|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

@@ -16,10 +16,10 @@ ms.assetid: a6d74000-0828-49ba-850a-63da865f8802
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 10f3add3cb243d54643c3294104ec2546e7737d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965166"
 ---
 # <a name="table-object-adox"></a>Table-Objekt (ADOX)
@@ -69,4 +69,4 @@ Dim obj As New Table
  [Indexes-Auflistung (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)   
  [Keys-Auflistung (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)   
  [Properties-Auflistung (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)   
- [Tables-Collection (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)
+ [Tables-Auflistung (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)

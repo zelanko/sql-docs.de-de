@@ -17,10 +17,10 @@ ms.assetid: 38e3492c-c1e1-42e3-a71a-befdc90204db
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: dd64ba8119db1ecf2d2b621cd202c9f700b53475
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967284"
 ---
 # <a name="append-method-adox-procedures"></a>Append-Methode (ADOX-Prozeduren)
@@ -49,7 +49,7 @@ Procedures.Append Name, Command
 >  Wenn Sie den OLE DB Anbieter für Microsoft Jet verwenden, können Sie mit der Prozeduren-Auflistungs **Methode "** **Prozeduren** " anstelle einer **Prozedur** im *Befehls* Parameter eine **Ansicht** angeben. Die **Sicht** wird der Datenquelle hinzugefügt und der Auflistung der **Prozeduren** hinzugefügt. Wenn die **Auflistungen** der **Prozeduren** und Sichten nach dem **Anfügen**aktualisiert werden, ist die **Ansicht** nicht mehr in der Auflistung der **Prozeduren** enthalten und wird in der Auflistung **Sichten** angezeigt.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Procedures-Collection (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)  
+ [Procedures Collection (ADOX) (Procedures-Auflistung (ADOX))](../../../ado/reference/adox-api/procedures-collection-adox.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Prozeduren Append-Methode Beispiel (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
@@ -59,4 +59,4 @@ Procedures.Append Name, Command
  [Append-Methode (ADOX-Schlüssel)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
  [Append-Methode (ADOX-Tabellen)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Append-Methode (ADOX-Benutzer)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append-Methode (ADOX-Sichten)](../../../ado/reference/adox-api/append-method-adox-views.md)
+ [Append-Methode (ADOX-Ansichten)](../../../ado/reference/adox-api/append-method-adox-views.md)

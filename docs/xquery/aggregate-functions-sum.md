@@ -16,10 +16,10 @@ ms.assetid: 12288f37-b54c-4237-b75e-eedc5fe8f96d
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9e9095fdecf9bdf9782815c8b44c2131313568c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67985740"
 ---
 # <a name="aggregate-functions---sum"></a>Aggregatfunktionen – sum
@@ -48,7 +48,7 @@ fn:sum($arg as xdt:anyAtomicType*) as xdt:anyAtomicType
  Die Funktion gibt einen Laufzeitfehler zurück, wenn ein Ausnahmefehler wegen Überlauf oder Verstoß gegen den Gültigkeitsbereich auftritt.  
   
 ## <a name="examples"></a>Beispiele  
- Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die **** in verschiedenen Spalten vom Typ [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML in der-Datenbank gespeichert sind.  
+ Dieses Thema stellt XQuery-Beispiele für XML-Instanzen bereit, die **xml** in verschiedenen Spalten vom Typ [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] XML in der-Datenbank gespeichert sind.  
   
 ### <a name="a-using-the-sum-xquery-function-to-find-the-total-combined-number-of-labor-hours-for-all-work-center-locations-in-the-manufacturing-process"></a>A. Ermitteln der kombinierten Gesamtanzahl der Arbeitsstunden für alle Arbeitsplatzstandorte im Produktionsprozess mit der XQuery-Funktion sum()  
  Die folgende Abfrage sucht nach der Gesamtanzahl der Arbeitsstunden für alle Arbeitsplatzstandorte im Produktionsprozess aller Produktmodelle, für die Produktionsanweisungen gespeichert sind.  

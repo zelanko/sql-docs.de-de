@@ -14,10 +14,10 @@ ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5a1adb6d9354dc870c11fab0a68f6c92e704ebfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67984534"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>Erste Schritte mit SSMA für MySQL (MySqlToSql)
@@ -37,7 +37,7 @@ Nachdem SSMA installiert und lizenziert wurde, können Sie SSMA zum Migrieren vo
   
 Zum Starten einer Migration müssen Sie die folgenden Schritte ausführen:  
   
-1.  Erstellen eines neuen Projekts  
+1.  Erstellen Sie ein neues Projekt.  
   
 2.  Herstellen einer Verbindung mit einer MySQL-Datenbank  
   
@@ -107,8 +107,8 @@ In der folgenden Tabelle sind die SSMA-Menüs aufgeführt.
   
 |||  
 |-|-|  
-|**Stehen**|**Beschreibung**|  
-|**Datei**|Enthält Befehle für das Arbeiten mit Projekten, das Herstellen einer Verbindung mit MySQL und das Herstellen einer Verbindung mit SQL Server oder Azure SQL-Datenbank.|  
+|**Menü**|**Beschreibung**|  
+|**File**|Enthält Befehle für das Arbeiten mit Projekten, das Herstellen einer Verbindung mit MySQL und das Herstellen einer Verbindung mit SQL Server oder Azure SQL-Datenbank.|  
 |**Bearbeiten**|Enthält Befehle zum Suchen und arbeiten mit Text auf den Detailseiten. Um das Dialogfeld **Lesezeichen verwalten** zu öffnen, klicken Sie im Menü Bearbeiten auf Lesezeichen verwalten. Im Dialogfeld wird eine Liste vorhandener Lesezeichen angezeigt. Sie können die Schaltflächen auf der rechten Seite des Dialog Felds verwenden, um die Lesezeichen zu verwalten.|  
 |**Ansicht**|Enthält den Befehl Metadaten-Explorer **Synchronisieren** . Damit werden die Objekte zwischen dem MySQL-metadatenexplorer und SQL Server oder dem Azure SQL-Datenbank-metadatenexplorer synchronisiert. Enthält auch Befehle zum Anzeigen und Ausblenden der **Ausgabe** -und **Fehlerliste** Bereiche sowie ein Options **Layout** , das mit den Layouts verwaltet werden soll.|  
 |**Tools**|Enthält Befehle zum Erstellen von Berichten, zum Konvertieren von Schemas, zum Aktualisieren von Datenbanken, zum Migrieren von Objekten und Daten und zum Speichern als Skript. Bietet auch Zugriff auf die Dialogfelder " **globale Einstellungen", "Standard Projekteinstellungen** " und " **Projekteinstellungen** ".|  

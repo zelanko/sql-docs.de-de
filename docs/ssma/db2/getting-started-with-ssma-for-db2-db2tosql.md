@@ -10,10 +10,10 @@ ms.assetid: 48ca32fc-1830-4d1f-add7-480ba5ad02e8
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 0eab4f23e342c95d83baa70dd03aba2f5d4bc8d1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989641"
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>Getting Started with SSMA for DB2 (DB2ToSQL)
@@ -88,9 +88,9 @@ In der folgenden Tabelle werden die Befehle für die Migrations Symbolleiste ang
 ### <a name="menus"></a>Menüs  
 In der folgenden Tabelle sind die SSMA-Menüs aufgeführt.  
   
-|Menü|BESCHREIBUNG|  
+|Menü|Beschreibung|  
 |----|-----------|  
-|**Datei**|Enthält Befehle für das Arbeiten mit-Projekten, das Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DB2 und das Herstellen einer Verbindung mit.|  
+|**File**|Enthält Befehle für das Arbeiten mit-Projekten, das Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]DB2 und das Herstellen einer Verbindung mit.|  
 |**Bearbeiten**|Enthält Befehle zum Suchen und arbeiten mit Text auf den Detailseiten, z. b [!INCLUDE[tsql](../../includes/tsql-md.md)] . zum Kopieren aus dem SQL-Detailbereich. Enthält auch die Option **Lesezeichen verwalten** , in der eine Liste vorhandener Lesezeichen angezeigt werden kann. Sie können die Schaltflächen auf der rechten Seite des Dialog Felds verwenden, um die Lesezeichen zu verwalten.|  
 |**Ansicht**|Enthält den Befehl Metadaten-Explorer **Synchronisieren** . , Der die Objekte zwischen dem DB2-metadatenexplorer und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem metadatenexplorer synchronisiert. Enthält auch Befehle zum Anzeigen und Ausblenden der **Ausgabe** -und **Fehlerliste** Bereiche sowie ein Options **Layout** zum Verwalten der Layouts.|  
 |**Tools**|Enthält Befehle zum Erstellen von Berichten und zum Migrieren von Objekten und Daten. Bietet auch Zugriff auf die Dialogfelder **globale Einstellungen** und **Projekteinstellungen** .|  

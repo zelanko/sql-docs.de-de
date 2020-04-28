@@ -14,10 +14,10 @@ ms.assetid: 2d9c30e9-ab5b-4920-91b8-48454c2fb5d8
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d1a5fa5c9002d4a27490dfc98fb79f482539f042
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964315"
 ---
 # <a name="execute-method-rds"></a>Execute-Methode (RDS)
@@ -37,7 +37,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *ConnectionString*  
  Eine Zeichenfolge, die zum Herstellen einer Verbindung mit dem OLE DB Anbieter verwendet wird, an den die Anforderung zur Ausführung gesendet wird. Wenn ein Handler mithilfe von *handlerstring* angegeben wird, kann er die Verbindungs Zeichenfolge bearbeiten oder ersetzen.  
   
- *Handlerstring*  
+ *HandlerString*  
  Eine zweiteilige Zeichenfolge, die den Handler identifiziert, der bei dieser Ausführung verwendet werden soll. Die Zeichenfolge enthält zwei Teile. Der erste Teil enthält den Namen (ProgID) des zu verwendenden Handlers. Der zweite Teil enthält Argumente, die an den Handler übermittelt werden sollen. Die Details, wie die Argument Zeichenfolge interpretiert wird, sind spezifisch für jeden Handler. Die beiden Teile sind durch die erste Instanz eines Kommas in der Zeichenfolge getrennt. Die Argument Zeichenfolge kann zusätzliche Kommas enthalten. Die Argumente sind optional.  
   
  *QueryString*  
@@ -45,7 +45,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
   
  Wenn ein Handler verwendet wird, kann der Handler den hier angegebenen Wert ändern oder ersetzen. Der-Handler ersetzt z. b. in der Regel *QueryString* durch eine Abfrage Zeichenfolge aus der INI-Datei. Standardmäßig wird die Datei "msdfmap. ini" verwendet.  
   
- *lfetchoptions*  
+ *lFetchOptions*  
  Gibt den Typ des asynchronen fetchen an.  
   
  Weitere Informationen finden Sie unter [FetchOptions-Eigenschaft (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md).  
@@ -53,7 +53,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *TableID*  
  Eine **Variante** vom Typ entweder VT_EMPTY oder VT_BSTR. Wenn dieser Wert vom Typ VT_EMPTY ist, wird er ignoriert. Wenn der Typ VT_BSTR ist, wird das Recordset mithilfe von **adCmdTableDirect** erstellt, und der hier angegebene Wert und der *QueryString* -Parameter werden ignoriert.  
   
- *lexecuteoptions*  
+ *lExecuteOptions*  
  Eine Bitmaske der Ausführungs Optionen:  
   
  1 =*Schreib* geschützt das Recordset wird mithilfe von **adlockread only**geöffnet.  
@@ -68,13 +68,13 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
   
  Schreibgeschützt, *nobatch* und *gethiddencolumns* sind Optionen, *die sich gegen*seitig ausschließen. Es wird jedoch kein Fehler generiert, wenn mehr als ein Wert festgelegt wird. Wenn mehrere Optionen festgelegt sind, hat *gethiddencolumns* Vorrang vor allen anderen, gefolgt *von "* schreibgeschützt". Wenn keine Optionen angegeben werden, wird das Recordset standardmäßig mithilfe von **adlockbatchoptimier** geöffnet, und verborgene Spalten sind nicht im Recordset enthalten.  
   
- *pparameters*  
+ *pParameters*  
  Eine **Variante** , die ein sicheres Array von Parameter Definitionen enthält. Wenn die *GetInfo* -Option in *lexecuteoptions*angegeben wurde, wird dieser Parameter verwendet, um die Parameter Definitionen zurückzugeben, die vom OLE DB Anbieter abgerufen werden. Andernfalls kann dieser Parameter leer sein.  
   
- *LCID*  
+ *lcid*  
  Die LCID, die verwendet wird, um Fehler zu erstellen, die in *pinformation*zurückgegeben werden.  
   
- *pinformation*  
+ *pInformation*  
  Ein Zeiger auf Informationen, die von Execute zurückgegeben werden. Wenn der Wert NULL ist, werden keine Fehlerinformationen zurückgegeben.  
   
 ## <a name="remarks"></a>Bemerkungen  

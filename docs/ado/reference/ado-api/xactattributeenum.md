@@ -16,24 +16,24 @@ ms.assetid: e7dcecd3-7dc7-445c-b922-f700c3067fbc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: d828c2b9b49138cc4dfd6345d90e70c333554fe0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67947433"
 ---
 # <a name="xactattributeenum"></a>XactAttributeEnum
 Gibt die Transaktions Attribute eines [Verbindungs](../../../ado/reference/ado-api/connection-object-ado.md) Objekts an.  
   
-|Dauerhaft|value|BESCHREIBUNG|  
+|Konstante|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|**adxactabortregewahrsam**|262.144|Führt beibehaltende Abbrüche durch Aufrufen von [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) aus, um automatisch eine neue Transaktion zu starten. Dieses Verhalten wird nicht von allen Anbietern unterstützt.|  
-|**adxactcommitbehält**|131.072|Führt beibehaltende Commits durch Aufrufen von [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) aus, um automatisch eine neue Transaktion zu starten. Dieses Verhalten wird nicht von allen Anbietern unterstützt.|  
+|**adxactabortregewahrsam**|262144|Führt beibehaltende Abbrüche durch Aufrufen von [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) aus, um automatisch eine neue Transaktion zu starten. Dieses Verhalten wird nicht von allen Anbietern unterstützt.|  
+|**adxactcommitbehält**|131072|Führt beibehaltende Commits durch Aufrufen von [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) aus, um automatisch eine neue Transaktion zu starten. Dieses Verhalten wird nicht von allen Anbietern unterstützt.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Paket: **com. ms. wfc. Data**  
   
-|Dauerhaft|  
+|Konstante|  
 |--------------|  
 |Adoreums. xactattribute. abortretribute|  
 |Adoumums. xactattribute. commitbehält|  

@@ -20,10 +20,10 @@ ms.assetid: f4e21060-40cb-4790-8611-4086a092dda2
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 37fd7f3f9cd69dd3702a19bd390ee6601a75dd44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965003"
 ---
 # <a name="updaterule-property-adox"></a>UpdateRule-Eigenschaft (ADOX)
@@ -39,4 +39,4 @@ Gibt die Aktion an, die ausgeführt wird, wenn ein primär [Schlüssel](../../..
  [Key-Objekt (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Append-Methode für Schlüssel, Key Type-, RelatedColumn-, RelatedTable- und UpdateRule-Eigenschaften – Beispiel (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)
+ [Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VB) (Keys Append-Methode, Key Type-, RelatedColumn-, RelatedTable- und UpdateRule-Eigenschaften – Beispiel (VB))](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)

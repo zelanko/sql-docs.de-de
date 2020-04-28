@@ -10,10 +10,10 @@ ms.assetid: f245c017-023e-4880-8721-8908d339525e
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: fbb0a90d9cfd628e9251a55de3df8b66a22f1ef7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989651"
 ---
 # <a name="getting-started-with-ssma--for-db2-console-db2tosql"></a>Getting Started with SSMA for DB2 Console (DB2ToSQL)
@@ -56,7 +56,7 @@ Farb Interpretation der Konsolenausgabe in der folgenden Tabelle:
 |---------|---------------|  
 |Red|Schwerwiegender Fehler während der Ausführung|  
 |Grau|Datums-und Zeitstempel, Meldung an den Benutzer|  
-|Weiß|Skriptdatei Befehle, Nachrichtentyp|  
+|White|Skriptdatei Befehle, Nachrichtentyp|  
 |Gelb|Warnung|  
 |Grün|Eingabeaufforderung für Benutzereingabe|  
 |Cyan|Starten, beenden und Ergebnis eines Vorgangs|  

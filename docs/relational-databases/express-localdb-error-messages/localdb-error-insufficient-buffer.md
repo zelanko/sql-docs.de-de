@@ -10,10 +10,10 @@ ms.assetid: ff67bda8-7e5c-4b06-8d7b-9985b6059a98
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 372ec1bbee84b90a9a30ec768fd7a35e3f6112d5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67995788"
 ---
 # <a name="localdb_error_insufficient_buffer"></a>LOCALDB_ERROR_INSUFFICIENT_BUFFER
@@ -29,7 +29,7 @@ ms.locfileid: "67995788"
 |Komponente|Laufzeit-API der lokalen Datenbank|  
 |Meldungstext|Der an die API-Methode der lokalen Datenbankinstanz übergebene Puffer ist nicht groß genug.|  
   
-## <a name="explanation"></a>Erklärung  
+## <a name="explanation"></a>Erläuterung  
  Der Eingabepuffer ist zu kurz. Abschneiden wurde nicht angefordert.  
   
 ## <a name="user-action"></a>Benutzeraktion  

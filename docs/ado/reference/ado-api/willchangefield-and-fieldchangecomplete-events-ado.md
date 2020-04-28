@@ -20,10 +20,10 @@ ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 7484e2a57925cc22c83456c244dc67aded5cefd2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67945881"
 ---
 # <a name="willchangefield-and-fieldchangecomplete-events-ado"></a>WillChangeField- und FieldChangeComplete-Ereignis (ADO)
@@ -38,10 +38,10 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *cfields*  
+ *cFields*  
  Ein **Long** -Wert, der die Anzahl der **Feld** Objekte in *Feldern*angibt.  
   
- *Fields*  
+ *Felder*  
  Der *Fields* -Parameter für " **WillChangeField**" ist ein Array von **Varianten** , das **Feld** Objekte mit den ursprünglichen Werten enthält. Für **FieldChangeComplete**ist der *Fields* -Parameter ein Array von **Varianten** , das **Feld** Objekte mit den geänderten Werten enthält.  
   
  *pError*  
@@ -58,7 +58,7 @@ FieldChangeComplete cFields, Fields, pError, adStatus, pRecordset
   
  Legen Sie diesen Parameter vor der Rückgabe von **FieldChangeComplete** auf **adStatus-unwantedevent** fest, um nachfolgende Benachrichtigungen zu verhindern.  
   
- *precordset*  
+ *pRecordset*  
  Ein **Recordset** -Objekt. Das **Recordset** , für das dieses Ereignis aufgetreten ist.  
   
 ## <a name="remarks"></a>Bemerkungen  

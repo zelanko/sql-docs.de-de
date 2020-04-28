@@ -16,10 +16,10 @@ ms.assetid: 55f116fe-4d56-4892-bffe-0cdd6fc727c9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f7e405cfdde86a4f19590a87035ff574e1d255c9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965904"
 ---
 # <a name="key-object-adox"></a>Key-Objekt (ADOX)
@@ -51,4 +51,4 @@ Dim obj As New Key
 ## <a name="see-also"></a>Weitere Informationen  
  [Keys Append-Methode, Schlüsseltyp, RelatedColumn, RelatedTable und UpdateRule Properties-Beispiel (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Columns-Auflistung (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Keys-Collection (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)
+ [Keys Collection (ADOX) (Keys-Auflistung (ADOX))](../../../ado/reference/adox-api/keys-collection-adox.md)

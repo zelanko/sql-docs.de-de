@@ -14,10 +14,10 @@ ms.assetid: 250062a4-13c4-4bed-807d-8b9ad81536d4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 783ad55a2355759f7625d536272f5243cd1c61c4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963281"
 ---
 # <a name="submitchanges-method-rds"></a>SubmitChanges-Methode (RDS)
@@ -40,7 +40,7 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  *DataFactory*  
  Eine Objekt Variable, die ein [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) -Objekt darstellt.  
   
- *Verbindung*  
+ *Connection*  
  Ein **Zeichen** folgen Wert, der die mit dem RDS erstellte Verbindung darstellt **. ** [Connect](../../../ado/reference/rds-api/connect-property-rds.md) -Eigenschaft des DataControl-Objekts.  
   
  *Recordset*  

@@ -22,10 +22,10 @@ ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 07058816406ef6ac0d5a3356423e231a10ce6165
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946484"
 ---
 # <a name="path-expressions---specifying-axis"></a>Pfadausdrücke – Angeben der Achse
@@ -43,14 +43,14 @@ ms.locfileid: "67946484"
   
  Die XQuery-Implementierung in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] unterstützt folgende Achsenschritte:  
   
-|Achse|BESCHREIBUNG|  
+|Achse|Beschreibung|  
 |----------|-----------------|  
-|**Idee**|Gibt die untergeordneten Elemente des Kontextknotens zurück.|  
-|**Nachfolger**|Gibt alle nachfolgenden Elemente des Kontextknotens zurück.|  
-|**übergeordneten**|Gibt das übergeordnete Element des Kontextknotens zurück.|  
+|**Untergeordnetes Element**|Gibt die untergeordneten Elemente des Kontextknotens zurück.|  
+|**descendant**|Gibt alle nachfolgenden Elemente des Kontextknotens zurück.|  
+|**parent**|Gibt das übergeordnete Element des Kontextknotens zurück.|  
 |**versehen**|Gibt die Attribute des Kontextknotens zurück.|  
 |**Selbstbedienungs**|Gibt den Kontextknoten selbst zurück.|  
-|**Nachfolger-or-self**|Gibt den Kontextknoten und alle nachfolgenden Elemente des Kontextknotens zurück.|  
+|**descendant-or-self**|Gibt den Kontextknoten und alle nachfolgenden Elemente des Kontextknotens zurück.|  
   
  Alle diese Achsen, außer die über **geordnete** Achse, sind vorwärts Achsen. Die über **geordnete** Achse ist eine umgekehrte Achse, da Sie rückwärts in der Dokument Hierarchie durchsucht wird. Beispiel: Der relative Pfadausdruck `child::ProductDescription/child::Summary` enthält zwei Schritte, von denen jeder eine `child`-Achse angibt. Im ersten Schritt werden die unter \<geordneten Elemente ProductDescription> des Kontext Knotens abgerufen. Der zweite \<Schritt ruft für jeden ProductDescription-> Elementknoten die zusammen \<Fassung> untergeordneten Knoten des Elements ab.  
   

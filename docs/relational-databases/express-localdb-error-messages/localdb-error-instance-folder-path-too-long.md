@@ -10,10 +10,10 @@ ms.assetid: c178a308-8d99-47fc-8a49-5a480dc592f6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3db8328576d69fe32cea28d3596c5f9b1658d7b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67995815"
 ---
 # <a name="localdb_error_instance_folder_path_too_long"></a>LOCALDB_ERROR_INSTANCE_FOLDER_PATH_TOO_LONG
@@ -29,7 +29,7 @@ ms.locfileid: "67995815"
 |Komponente|Laufzeit-API der lokalen Datenbank|  
 |Meldungstext|Die vollständige Pfadlänge des Ordners der lokalen Datenbankinstanz ist länger als MAX_PATH. Die Instanz muss im folgenden Ordner gespeichert werden:%% localappdata%% \ Microsoft\Microsoft SQL Server Local db\instance\\<Instanzname.\>|  
   
-## <a name="explanation"></a>Erklärung  
+## <a name="explanation"></a>Erläuterung  
  Der Pfad, unter dem die Instanz gespeichert werden soll, ist länger als MAX_PATH.  
   
 ## <a name="user-action"></a>Benutzeraktion  

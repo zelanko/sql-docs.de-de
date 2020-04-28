@@ -17,21 +17,21 @@ ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 693029bf83fe28343b450906da3e16e2665819d2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965434"
 ---
 # <a name="procedures-collection-adox"></a>Procedures-Collection (ADOX)
 Enthält alle [Prozedur](../../../ado/reference/adox-api/procedure-object-adox.md) Objekte eines Katalogs.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) -Methode für eine **Prozeduren** Auflistung ist für ADOX eindeutig. Ihre Möglichkeiten:  
+ Die [Append](../../../ado/reference/adox-api/append-method-adox-procedures.md) -Methode für eine **Prozeduren** Auflistung ist für ADOX eindeutig. Sie haben folgende Möglichkeiten:  
   
 -   Fügen Sie der Auflistung mithilfe der **Append** -Methode eine neue Prozedur hinzu.  
   
- Die restlichen Eigenschaften und Methoden sind Standard für ADO-Auflistungen. Ihre Möglichkeiten:  
+ Die restlichen Eigenschaften und Methoden sind Standard für ADO-Auflistungen. Sie haben folgende Möglichkeiten:  
   
 -   Greifen Sie mit der [Item](../../../ado/reference/ado-api/item-property-ado.md) -Eigenschaft auf eine Prozedur in der-Auflistung zu.  
   
@@ -43,7 +43,7 @@ Enthält alle [Prozedur](../../../ado/reference/adox-api/procedure-object-adox.m
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Indexes-Collections – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
+-   [Indizes Auflistungseigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Beispiel für Befehls-und CommandText-Eigenschaften (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
@@ -53,4 +53,4 @@ Enthält alle [Prozedur](../../../ado/reference/adox-api/procedure-object-adox.m
  [Prozeduren Aktualisierungs Methode (Beispiel) (VB)](../../../ado/reference/adox-api/procedures-refresh-method-example-vb.md)   
  [Prozeduren: Auflistungs Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/procedures-collection-properties-methods-and-events.md)   
  [Catalog-Objekt (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Procedure-Objekt (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)
+ [Procedure Object (ADOX) (Procedure-Objekt (ADOX))](../../../ado/reference/adox-api/procedure-object-adox.md)

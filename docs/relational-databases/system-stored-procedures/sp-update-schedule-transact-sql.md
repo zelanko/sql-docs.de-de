@@ -18,10 +18,10 @@ ms.assetid: 97b3119b-e43e-447a-bbfb-0b5499e2fefe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 51e21d189a9302c2dc7b74a013846460e9cb7bc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946640"
 ---
 # <a name="sp_update_schedule-transact-sql"></a>sp_update_schedule (Transact-SQL)
@@ -65,7 +65,7 @@ sp_update_schedule
   
 `[ @freq_type = ] freq_type`Ein Wert, der angibt, wann ein Auftrag ausgeführt werden soll. *freq_type*ist vom Datentyp **int**und hat den Standardwert **0**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
 |**4**|Täglich|  
@@ -89,7 +89,7 @@ sp_update_schedule
   
 `[ @freq_subday_type = ] freq_subday_type`Gibt die Einheiten für *freq_subday_interval * * an.* *freq_subday_type*ist vom Datentyp **int**und hat den Standardwert **0**. die folgenden Werte sind möglich:  
   
-|value|Beschreibung (Einheit)|  
+|Wert|Beschreibung (Einheit)|  
 |-----------|--------------------------|  
 |**0x1**|Zum angegebenen Zeitpunkt|  
 |**0x2**|Sekunden|  
@@ -100,7 +100,7 @@ sp_update_schedule
   
 `[ @freq_relative_interval = ] freq_relative_interval`Das Vorkommen eines Auftrags *freq_interval* in jedem Monat, wenn *freq_interval* **32** (monatlich, relativ) ist. *freq_relative_interval*ist vom Datentyp **int**und hat den Standardwert **0**. die folgenden Werte sind möglich:  
   
-|value|Beschreibung (Einheit)|  
+|Wert|Beschreibung (Einheit)|  
 |-----------|--------------------------|  
 |**1**|First (Erster)|  
 |**2**|Sekunde|  
@@ -108,7 +108,7 @@ sp_update_schedule
 |**88**|Vierter|  
 |**Uhr**|Last (Letzter)|  
   
-`[ @freq_recurrence_factor = ] freq_recurrence_factor`Die Anzahl der Wochen oder Monate zwischen der geplanten Ausführung eines Auftrags. *freq_recurrence_factor* wird nur verwendet, ** wenn freq_type **8**, **16**oder **32**ist. *freq_recurrence_factor*ist vom Datentyp **int**und hat den Standardwert **0**.  
+`[ @freq_recurrence_factor = ] freq_recurrence_factor`Die Anzahl der Wochen oder Monate zwischen der geplanten Ausführung eines Auftrags. *freq_recurrence_factor* wird nur verwendet, *freq_type* wenn freq_type **8**, **16**oder **32**ist. *freq_recurrence_factor*ist vom Datentyp **int**und hat den Standardwert **0**.  
   
 `[ @active_start_date = ] active_start_date`Das Datum, an dem die Ausführung eines Auftrags beginnen kann. *active_start_date*ist vom Datentyp **int**und hat den Standardwert NULL, der das heutige Datum angibt. Das Datum wird als YYYYMMDD formatiert. Wenn *active_start_date* nicht NULL ist, muss das Datum größer oder gleich 19900101 sein.  
   
@@ -166,6 +166,6 @@ GO
  [sp_add_jobschedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-jobschedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_help_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
+ [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   

@@ -17,10 +17,10 @@ ms.assetid: 56b94fc6-7ef0-4e4a-82a3-033b94c46036
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8281b8b480289dca2b4976cea61a6d6838fa2779
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967319"
 ---
 # <a name="append-method-adox-groups"></a>Append-Methode (ADOX-Gruppen)
@@ -34,7 +34,7 @@ Groups.Append Group
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *Gruppe*  
+ *Group*  
  Das anzufügende **Gruppen** Objekt oder der Name der Gruppe, die erstellt und angefügt werden soll.  
   
 ## <a name="remarks"></a>Bemerkungen  
@@ -46,7 +46,7 @@ Groups.Append Group
 >  Vor dem Anhängen eines **Group** -Objekts an die **Groups** -Auflistung eines **User** -Objekts muss bereits ein **Gruppen** Objekt mit demselben [Namen](../../../ado/reference/adox-api/name-property-adox.md) wie das angefügte-Objekt in der **Groups** -Auflistung des **Katalogs**vorhanden sein.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Groups-Collection (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)  
+ [Groups-Auflistung (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Anfügen von Gruppen und Benutzern, ChangePassword-Methoden (Beispiel) (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
@@ -56,4 +56,4 @@ Groups.Append Group
  [Append-Methode (ADOX-Prozeduren)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [Append-Methode (ADOX-Tabellen)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Append-Methode (ADOX-Benutzer)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append-Methode (ADOX-Sichten)](../../../ado/reference/adox-api/append-method-adox-views.md)
+ [Append-Methode (ADOX-Ansichten)](../../../ado/reference/adox-api/append-method-adox-views.md)

@@ -18,10 +18,10 @@ ms.assetid: f6a17e8c-7a28-48d0-bded-76b9e0cf7639
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9b996ba4bedbb4ccf1ccb0453e4da33e09206a18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67938231"
 ---
 # <a name="type-property-ado-stream"></a>Type-Eigenschaft (ADO-Stream)
@@ -33,7 +33,7 @@ Gibt den Typ der im [Stream](../../../ado/reference/ado-api/stream-object-ado.md
 ## <a name="remarks"></a>Bemerkungen  
  Die **Type** -Eigenschaft ist nur Lese-/Schreibzugriff, wenn sich die aktuelle Position am Anfang des **Streams** befindet ([Position](../../../ado/reference/ado-api/position-property-ado.md) ist 0) und an jeder anderen Position schreibgeschützt ist.  
   
- Die**Type** -Eigenschaft bestimmt, welche Methoden zum Lesen und Schreiben des **Streams**verwendet werden sollen. Verwenden Sie für **Textstreams**den Text "read [Text](../../../ado/reference/ado-api/readtext-method.md) " und " [Write Text](../../../ado/reference/ado-api/writetext-method.md)". Verwenden Sie **** für binäre Streams [Lese](../../../ado/reference/ado-api/read-method.md) -und [Schreib](../../../ado/reference/ado-api/write-method.md)Vorgänge.  
+ Die**Type** -Eigenschaft bestimmt, welche Methoden zum Lesen und Schreiben des **Streams**verwendet werden sollen. Verwenden Sie für **Textstreams**den Text "read [Text](../../../ado/reference/ado-api/readtext-method.md) " und " [Write Text](../../../ado/reference/ado-api/writetext-method.md)". Verwenden Sie **Streams**für binäre Streams [Lese](../../../ado/reference/ado-api/read-method.md) -und [Schreib](../../../ado/reference/ado-api/write-method.md)Vorgänge.  
   
 ## <a name="applies-to"></a>Gilt für  
  [Stream-Objekt (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  

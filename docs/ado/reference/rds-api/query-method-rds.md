@@ -14,10 +14,10 @@ ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f646d5ebee63981c882f5e1ece147be0ff1677e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963827"
 ---
 # <a name="query-method-rds"></a>Query-Methode (RDS)
@@ -40,7 +40,7 @@ Set Recordset = DataFactory.Query(Connection, Query)
  *DataFactory*  
  Eine Objekt Variable, die ein [RDSServer. DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) -Objekt darstellt.  
   
- *Verbindung*  
+ *Connection*  
  Ein **Zeichen** folgen Wert, der die Server Verbindungsinformationen enthält. Dies ähnelt der [Connect](../../../ado/reference/rds-api/connect-property-rds.md) -Eigenschaft.  
   
  *Abfrage*  

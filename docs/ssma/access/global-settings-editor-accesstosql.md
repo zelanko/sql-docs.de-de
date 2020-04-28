@@ -10,10 +10,10 @@ ms.assetid: 5a0abfda-912a-4dfc-acf7-0e0a6cae15c5
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d2c57efc70353d3499096a2faceb55ce21037411
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67986400"
 ---
 # <a name="global-settings-editor-accesstosql"></a>Globale Einstellungen (Editor) (accesstosql)
@@ -21,7 +21,7 @@ Verwenden Sie die Seite Editor des Dialog Felds **globale Einstellungen** , um E
   
 Um **auf die Editor** -Einstellungen zuzugreifen, wählen Sie im Menü Extras die Option **globale Einstellungen**aus, klicken Sie unten im linken Bereich auf **GUI** , und wählen Sie dann **Editor**aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Zeilennummern in Editoren anzeigen**  
 Wählen Sie **true**aus, um die Zeilennummern in den Code-Editor-Fenstern anzuzeigen.  
   

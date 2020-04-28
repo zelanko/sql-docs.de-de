@@ -18,10 +18,10 @@ ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: de4970e82155454b3d05d6200bc7413baca97aef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67939013"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67939013"
 |**ung**|**sysname**|Der Name der Veröffentlichung.|  
 |**publication_id**|**int**|Die ID der Veröffentlichung.|  
 |**publication_type**|**int**|Der Typ der Veröffentlichung:<br /><br /> **0** = transaktional.<br /><br /> **1** = Momentaufnahme.<br /><br /> **2** = Merge.|  
-|**thirdparty_flag**|**bit**|Gibt an, ob eine Veröffentlichung [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Datenbank ist:<br /><br /> **** = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **1** = andere Datenquelle als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**thirdparty_flag**|**bit**|Gibt an, ob eine Veröffentlichung [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] eine Datenbank ist:<br /><br /> **0** = 0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **1** = andere Datenquelle als [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**independent_agent**|**bit**|Zeigt an, ob ein Verteilungs-Agent im Einzelplatzmodus für diese Veröffentlichung vorhanden ist.|  
 |**immediate_sync**|**bit**|Zeigt an, ob bei jeder Ausführung des Momentaufnahme-Agents Synchronisierungsdateien erstellt oder neu erstellt werden.|  
 |**allow_push**|**bit**|Zeigt an, ob für die angegebene Veröffentlichung Pushabonnements erstellt werden können.|  
@@ -49,7 +49,7 @@ ms.locfileid: "67939013"
 |**allow_subscription_copy**|**bit**|Aktiviert oder deaktiviert die Option zum Kopieren der Abonnementdatenbanken, die diese Veröffentlichung abonniert haben. **0** bedeutet, dass das Kopieren deaktiviert ist, und **1** bedeutet, dass es aktiviert ist.|  
 |**thirdparty_options**|**int**|Gibt an, ob die Anzeige einer Veröffentlichung im Ordner Replikation [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] unterdrückt wird:<br /><br /> **0** = eine heterogene Veröffentlichung im Ordner Replikation in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]anzeigen.<br /><br /> **1** = unterdrücken Sie die Anzeige einer heterogenen Veröffentlichung im Ordner [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Replikation in.|  
 |**allow_queued_tran**|**bit**|Gibt an, ob die Veröffentlichung verzögerte Updates über eine Warteschlange zulässt:<br /><br /> **0 =** Die Veröffentlichung ist nicht in die Warteschlange eingereiht.<br /><br /> **1** = Veröffentlichung wird in die Warteschlange eingereiht.|  
-|**Optionen**|**int**|Für diese Version sind keine Informationen verfügbar.|  
+|**options**|**int**|Für diese Version sind keine Informationen verfügbar.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

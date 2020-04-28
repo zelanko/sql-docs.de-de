@@ -16,10 +16,10 @@ ms.assetid: 34244ae6-bd98-4a6a-bbd3-85f50edfcdc0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8bf38ef67089c65d53bedcb56afd81de3e21a413
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933870"
 ---
 # <a name="sp_dropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
@@ -50,13 +50,13 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
   
 `[ @subscription_type = ] 'subscription_type'`Der Abonnementtyp. *subscription_type*ist vom Datentyp **nvarchar (15)**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**allen**|Push-, Pull- und anonyme Abonnements.|  
 |**Anonymous**|Anonymes Abonnement.|  
 |**Push**|Pushabonnement.|  
 |**auszu**|Pullabonnement.|  
-|**beides** (Standard)|Sowohl Push- als auch Pullabonnements.|  
+|**both** (Standard)|Sowohl Push- als auch Pullabonnements.|  
   
 `[ @ignore_distributor = ] ignore_distributor`Gibt an, ob diese gespeicherte Prozedur ausgeführt wird, ohne eine Verbindung mit dem Verteiler herzustellen. *ignore_distributor* ist vom Typ **Bit**. der Standardwert ist **0**. Mit diesem Parameter kann ein Abonnement gelöscht werden, ohne Cleanuptasks auf dem Verteiler auszuführen. Er erweist sich auch bei einer etwaigen Neuinstallation des Verteilers als hilfreich.  
   

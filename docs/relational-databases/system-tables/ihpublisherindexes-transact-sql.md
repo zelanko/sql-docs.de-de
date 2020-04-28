@@ -18,10 +18,10 @@ ms.assetid: 6008ef89-eeb9-46dc-93a2-f7623298cf0f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 114ffee3ca13d7b5a42c3843957df0a2450b787f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990245"
 ---
 # <a name="ihpublisherindexes-transact-sql"></a>IHpublisherindexes (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "67990245"
 |**type**|**nvarchar(255)**|Ein unterstützter [Indextyp aus der IHindextypes](../../relational-databases/system-tables/ihindextypes-transact-sql.md) -Systemtabelle.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Heterogene Datenbankreplikation](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Heterogene Replikation](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikationssichten &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

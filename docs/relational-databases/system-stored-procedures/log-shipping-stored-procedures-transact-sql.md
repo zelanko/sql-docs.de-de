@@ -16,10 +16,10 @@ ms.assetid: 39554188-20fe-42ec-a53f-35e1dc98c274
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0a081fd1d3cebb7d5d83362d2cf5af700f75da09
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942172"
 ---
 # <a name="log-shipping-stored-procedures-transact-sql"></a>Gespeicherte Prozeduren für den Protokollversand (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "67942172"
 |[sp_delete_log_shipping_primary_secondary](../../relational-databases/system-stored-procedures/sp-delete-log-shipping-primary-secondary-transact-sql.md)||  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informationen zum Protokoll Versand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

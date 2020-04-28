@@ -10,10 +10,10 @@ ms.assetid: 60c7a47b-114c-441b-869e-9d8ebfe4148e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2393c7da432f2143319588c3c16ea88c3b9f1b65
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67995707"
 ---
 # <a name="localdb_error_internal_error"></a>LOCALDB_ERROR_INTERNAL_ERROR
@@ -29,7 +29,7 @@ ms.locfileid: "67995707"
 |Komponente|Laufzeit-API der lokalen Datenbank|  
 |Meldungstext|Unerwarteter Fehler im API-Methodenaufruf der lokalen Datenbankinstanz. Ausführliche Fehlerinformationen finden Sie im Windows-Anwendungsereignisprotokoll.|  
   
-## <a name="explanation"></a>Erklärung  
+## <a name="explanation"></a>Erläuterung  
  Ein unerwarteter Fehler ist aufgetreten.  
   
 ## <a name="user-action"></a>Benutzeraktion  

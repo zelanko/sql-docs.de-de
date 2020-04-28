@@ -16,10 +16,10 @@ ms.assetid: ffe27a4c-fdf3-4c66-94f1-7e955a36cadd
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 28ac10e211d57fc9e118f47ccb9d506d6cb846e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946435"
 ---
 # <a name="path-expressions---specifying-node-test"></a>Pfadausdrücke – Angeben eines Knotentests
@@ -94,14 +94,10 @@ select @x.query('declare namespace ns="ns1"; /ns:*')
   
 |Knotentyp|Rückgabe|Beispiel|  
 |---------------|-------------|-------------|  
-|`comment()`|True für einen Kommentarknoten.|
-  `following::comment()` wählt alle Kommentarknoten aus, die nach dem Kontextknoten auftreten.|  
-|`node()`|True für einen beliebigen Knoten.|
-  `preceding::node()` wählt alle Kommentarknoten aus, die vor dem Kontextknoten auftreten.|  
-|`processing-instruction()`|True für einen Verarbeitungsanweisungsknoten.|
-  `self::processing instruction()` wählt alle Verarbeitungsanweisungsknoten im Kontextknoten aus.|  
-|`text()`|True für einen Textknoten.|
-  `child::text()` wählt alle Textknoten aus, die untergeordnete Elemente des Kontextknotens sind.|  
+|`comment()`|True für einen Kommentarknoten.|`following::comment()` wählt alle Kommentarknoten aus, die nach dem Kontextknoten auftreten.|  
+|`node()`|True für einen beliebigen Knoten.|`preceding::node()` wählt alle Kommentarknoten aus, die vor dem Kontextknoten auftreten.|  
+|`processing-instruction()`|True für einen Verarbeitungsanweisungsknoten.|`self::processing instruction()` wählt alle Verarbeitungsanweisungsknoten im Kontextknoten aus.|  
+|`text()`|True für einen Textknoten.|`child::text()` wählt alle Textknoten aus, die untergeordnete Elemente des Kontextknotens sind.|  
   
  Wenn der Knotentyp, z. B. text() oder comment() ..., als Knotentest angegeben wird, gibt der Schritt unabhängig von der Hauptknotenart der Achse nur Knoten der angegebenen Art zurück. Der folgende Pfadausdruck gibt z. B. nur die untergeordneten Kommentarknoten des Kontextknotens zurück:  
   

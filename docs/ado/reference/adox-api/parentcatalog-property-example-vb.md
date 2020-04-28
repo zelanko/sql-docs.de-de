@@ -15,10 +15,10 @@ ms.assetid: 448bc850-7584-4c5f-89f3-5f4fee88b259
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f87a092d20fb15a23e21a7ef9f0094e40eedeb57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965592"
 ---
 # <a name="parentcatalog-property-example-vb"></a>ParentCatalog-Eigenschaft – Beispiel (VB)
@@ -92,4 +92,4 @@ End Sub
  [Name-Eigenschaft (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
  [Para Catalog-Eigenschaft (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)   
  [Table-Objekt (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Type-Eigenschaft (Spalte) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)
+ [Type-Eigenschaft (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)

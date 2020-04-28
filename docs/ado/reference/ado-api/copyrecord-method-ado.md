@@ -17,10 +17,10 @@ ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aaabb32234cefe2e3c3727ce5a18dd2d98549a77
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933415"
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord-Methode (ADO)
@@ -34,23 +34,23 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
 ```  
   
 #### <a name="parameters"></a>Parameter  
- *`Source`*  
- Optional. Ein **Zeichen** folgen Wert, der eine URL enthält, die die zu kopierende Entität angibt (z. b. eine Datei oder ein Verzeichnis). Wenn die *Quelle* weggelassen wird oder eine leere Zeichenfolge angibt, wird die Datei oder das Verzeichnis kopiert, die durch den aktuellen [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) dargestellt werden.  
+ *Quelle*  
+ (Optional) Ein **Zeichen** folgen Wert, der eine URL enthält, die die zu kopierende Entität angibt (z. b. eine Datei oder ein Verzeichnis). Wenn die *Quelle* weggelassen wird oder eine leere Zeichenfolge angibt, wird die Datei oder das Verzeichnis kopiert, die durch den aktuellen [Datensatz](../../../ado/reference/ado-api/record-object-ado.md) dargestellt werden.  
   
  *Ziel*  
- Optional. Ein **Zeichen** folgen Wert, der eine URL enthält, die den Speicherort angibt, an den die *Quelle* kopiert wird.  
+ (Optional) Ein **Zeichen** folgen Wert, der eine URL enthält, die den Speicherort angibt, an den die *Quelle* kopiert wird.  
   
  *User*  
- Optional. Ein **Zeichen** folgen Wert, der die Benutzer-ID enthält, die bei Bedarf den Zugriff auf das *Ziel*autorisiert.  
+ (Optional) Ein **Zeichen** folgen Wert, der die Benutzer-ID enthält, die bei Bedarf den Zugriff auf das *Ziel*autorisiert.  
   
  *Kennwort*  
- Optional. Ein **Zeichen** folgen Wert, der das Kennwort enthält, das bei Bedarf den *Benutzernamen*überprüft.  
+ (Optional) Ein **Zeichen** folgen Wert, der das Kennwort enthält, das bei Bedarf den *Benutzernamen*überprüft.  
   
  *Optionen*  
- Optional. Ein [copyrecordoptionsenum](../../../ado/reference/ado-api/copyrecordoptionsenum.md) -Wert, der den Standardwert **adcopyunspezifiziert**hat. Gibt das Verhalten dieser Methode an.  
+ (Optional) Ein [copyrecordoptionsenum](../../../ado/reference/ado-api/copyrecordoptionsenum.md) -Wert, der den Standardwert **adcopyunspezifiziert**hat. Gibt das Verhalten dieser Methode an.  
   
  *Async*  
- Optional. Ein **boolescher** Wert, der, wenn **true**, angibt, dass dieser Vorgang asynchron sein soll.  
+ (Optional) Ein **boolescher** Wert, der, wenn **true**, angibt, dass dieser Vorgang asynchron sein soll.  
   
 ## <a name="return-value"></a>Rückgabewert  
  Ein **Zeichen** folgen Wert, der in der Regel den Wert von *Destination*zurückgibt. Der genaue zurückgegebene Wert ist jedoch vom Anbieter abhängig.  

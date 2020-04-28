@@ -20,10 +20,10 @@ ms.assetid: c2afa20c-b15f-46ca-ae74-2eb65909409e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e4336fdeeb0867018e9a2a630f2212cc06259482
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67984904"
 ---
 # <a name="dbosysoperators-transact-sql"></a>dbo.sysoperators (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "67984904"
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**Name**|**int**|ID des Operators.|  
+|**id**|**int**|ID des Operators.|  
 |**name**|**sysname**|Name des Operators.|  
 |**wodurch**|**tinyint**|Status der Warnbenachrichtigungen (Boolesch). Beträgt der Wert **1**, kann dieser Operator Benachrichtigungen erhalten, wenn eine Warnung auftritt.|  
 |**email_address**|**nvarchar (100)**|E-Mail-Adresse für diesen Operator.|  

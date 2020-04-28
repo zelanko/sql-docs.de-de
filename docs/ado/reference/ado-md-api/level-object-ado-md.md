@@ -16,10 +16,10 @@ ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4a44060ae4ffd9399c34d4cd8133f5ad7404ed5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949601"
 ---
 # <a name="level-object-ado-md"></a>Level-Objekt (ADO MD)
@@ -42,11 +42,11 @@ Enthält einen Satz von Membern, von denen jeder denselben Rang innerhalb einer 
   
  Die **Properties** -Auflistung enthält vom Anbieter bereitgestellte Eigenschaften. In der folgenden Tabelle sind die verfügbaren Eigenschaften aufgeführt. Die tatsächliche Eigenschaften Liste kann je nach Implementierung des Anbieters abweichen. Eine ausführlichere Liste der verfügbaren Eigenschaften finden Sie in der Dokumentation für Ihren Anbieter.  
   
-|Name|BESCHREIBUNG|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |CatalogName|Der Name des Katalogs, zu dem dieser Cube gehört.|  
 |CubeName|Der Name des Cubes.|  
-|BESCHREIBUNG|Eine aussagekräftige Beschreibung der Ebene.|  
+|Beschreibung|Eine aussagekräftige Beschreibung der Ebene.|  
 |Dimensionuniquename|Der eindeutige Name der [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md).|  
 |Hierarchyuniquename|Der eindeutige Name der Hierarchie.|  
 |LevelCaption|Eine Bezeichnung oder Beschriftung, die der Ebene zugeordnet ist.|  

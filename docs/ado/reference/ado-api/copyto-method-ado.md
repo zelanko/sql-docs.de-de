@@ -17,10 +17,10 @@ ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25d57116e1fa24658d62a0c9083e00a3e320d2a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933375"
 ---
 # <a name="copyto-method-ado"></a>CopyTo-Methode (ADO)
@@ -41,7 +41,7 @@ Stream.CopyTo DestStream, NumChars
 >  Der *DestStream* -Parameter ist möglicherweise kein Proxy des Daten **Strom** Objekts, da hierfür der Zugriff auf eine private Schnittstelle für das Daten **Strom** Objekt erforderlich ist, das nicht Remote an den Client übergeben werden kann.  
   
  *NumChars*  
- Optional. Ein **ganzzahliger** Wert, der die Anzahl der Bytes oder Zeichen angibt, die von der aktuellen Position im Quelldaten **Strom** in den **Zielstream**kopiert werden sollen. Der Standardwert ist-1 und gibt an, dass alle Zeichen oder Bytes von der aktuellen Position in [EOS](../../../ado/reference/ado-api/eos-property.md)kopiert werden.  
+ (Optional) Ein **ganzzahliger** Wert, der die Anzahl der Bytes oder Zeichen angibt, die von der aktuellen Position im Quelldaten **Strom** in den **Zielstream**kopiert werden sollen. Der Standardwert ist-1 und gibt an, dass alle Zeichen oder Bytes von der aktuellen Position in [EOS](../../../ado/reference/ado-api/eos-property.md)kopiert werden.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Diese Methode kopiert die angegebene Anzahl von Zeichen oder bytes, beginnend bei der aktuellen Position, die durch die [Positions](../../../ado/reference/ado-api/position-property-ado.md) Eigenschaft angegeben wird. Wenn die angegebene Anzahl größer als die verfügbare Anzahl von Bytes bis **EOS**ist, werden nur die Zeichen oder Bytes von der aktuellen Position zu **EOS** kopiert. Wenn der Wert von " *NumChars* "-1 ist oder weggelassen wird, werden alle Zeichen oder bytes, die von der aktuellen Position beginnen, kopiert.  

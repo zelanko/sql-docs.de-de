@@ -10,20 +10,20 @@ ms.assetid: 46ebada7-db36-4ae9-b7ae-baa4b854b237
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2fb50ca8cab409e117becdc1335d956d05cb818b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989756"
 ---
 # <a name="data-migration-report-db2tosql"></a>Daten Migrationsbericht (DB2ToSQL)
 Das Dialogfeld **Daten Migrationsbericht** wird angezeigt, nachdem Sie Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu migriert haben.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Status**  
 Zeigt den Status der Datenmigration von der Quell-zur Zieldatenbank an.  
   
-**Von**  
+**From**  
 Die Quell Tabelle.  
   
 **An**  

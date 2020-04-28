@@ -20,10 +20,10 @@ ms.assetid: 9b62fb35-de43-425a-83ca-77af4e33fea9
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: c66bca375951ec78593bafc2c2eff950e3282e4c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966991"
 ---
 # <a name="clustered-property-adox"></a>Clustered-Eigenschaft (ADOX)
@@ -33,7 +33,7 @@ Gibt an, ob der Index gruppiert ist.
  Legt einen **booleschen** Wert fest und gibt ihn zurück.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Der Standardwert ist **False**.  
+ Der Standardwert lautet **False**.  
   
  Diese Eigenschaft ist für [Index](../../../ado/reference/adox-api/index-object-adox.md) Objekte, die bereits an eine Auflistung angehängt wurden, schreibgeschützt.  
   
@@ -41,4 +41,4 @@ Gibt an, ob der Index gruppiert ist.
  [Index-Objekt (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Clustered-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/clustered-property-example-vb.md)
+ [Beispiel für die Clustered-Eigenschaft (VB)](../../../ado/reference/adox-api/clustered-property-example-vb.md)

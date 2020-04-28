@@ -16,10 +16,10 @@ ms.assetid: e8f67bdf-b489-49a9-9d0f-2069c1750467
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: df46abb8efdd5761797a599cf5a8cdebe02e5158
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946013"
 ---
 # <a name="xquery-extension-functions---sqlcolumn"></a>XQuery-Erweiterungsfunktionen – sql:column()
@@ -132,9 +132,9 @@ select @x
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server XQuery-Erweiterungsfunktionen](https://msdn.microsoft.com/library/4bc5d499-5fec-4c3f-b11e-5ab5ef9d8f97)   
  [Vergleichen von typisiertem XML mit nicht typisiertem XML](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md)   
- [XML-Daten &#40;SQL Server&#41;](../relational-databases/xml/xml-data-sql-server.md)   
- [Erstellen von Instanzen der XML-Daten](../relational-databases/xml/create-instances-of-xml-data.md)   
- [XML-Datentypmethoden](../t-sql/xml/xml-data-type-methods.md)   
+ [SQL Server der XML-Daten &#40;&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [Erstellen von Instanzen von XML-Daten](../relational-databases/xml/create-instances-of-xml-data.md)   
+ [XML-Datentyp Methoden](../t-sql/xml/xml-data-type-methods.md)   
  [XML DML &#40;Data Modification Language&#41;](../t-sql/xml/xml-data-modification-language-xml-dml.md)  
   
   

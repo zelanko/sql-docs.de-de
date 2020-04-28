@@ -14,10 +14,10 @@ ms.assetid: 5be75bc7-1171-4440-a37e-c8cc6b5cd865
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8a2a3d22f30a865687e38aedfaf6e688e677efae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963581"
 ---
 # <a name="readystate-property-rds"></a>ReadyState-Eigenschaft (RDS)
@@ -29,11 +29,11 @@ Gibt den Fortschritt eines [DataControl](../../../ado/reference/rds-api/datacont
 ## <a name="settings-and-return-values"></a>Einstellungen und Rückgabewerte  
  Legt einen der folgenden Werte fest oder gibt ihn zurück.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
-|**adkreadystatus**|Die aktuelle Abfrage wird noch ausgeführt, und es wurden keine Zeilen abgerufen. Das **Recordset** des **DataControl** -Objekts ist nicht für die Verwendung verfügbar.|  
-|**adkreadystatueinteractive**|Ein anfänglicher Satz von Zeilen, der von der aktuellen Abfrage abgerufen wurde, wurde im **Recordset** des **DataControl** -Objekts gespeichert und steht für die Verwendung zur Verfügung. Die verbleibenden Zeilen werden noch abgerufen.|  
-|**adkreadystatecomplete**|Alle von der aktuellen Abfrage abgerufenen Zeilen wurden im **Recordset** des **DataControl** -Objekts gespeichert und stehen zur Verwendung zur Verfügung.<br /><br /> Dieser Status ist auch vorhanden, wenn ein Vorgang aufgrund eines Fehlers abgebrochen wurde oder wenn das **Recordset** -Objekt nicht initialisiert ist.|  
+|**adcReadyStateLoaded**|Die aktuelle Abfrage wird noch ausgeführt, und es wurden keine Zeilen abgerufen. Das **Recordset** des **DataControl** -Objekts ist nicht für die Verwendung verfügbar.|  
+|**adcReadyStateInteractive**|Ein anfänglicher Satz von Zeilen, der von der aktuellen Abfrage abgerufen wurde, wurde im **Recordset** des **DataControl** -Objekts gespeichert und steht für die Verwendung zur Verfügung. Die verbleibenden Zeilen werden noch abgerufen.|  
+|**adcReadyStateComplete**|Alle von der aktuellen Abfrage abgerufenen Zeilen wurden im **Recordset** des **DataControl** -Objekts gespeichert und stehen zur Verwendung zur Verfügung.<br /><br /> Dieser Status ist auch vorhanden, wenn ein Vorgang aufgrund eines Fehlers abgebrochen wurde oder wenn das **Recordset** -Objekt nicht initialisiert ist.|  
   
 > [!NOTE]
 >  Jede Client seitige ausführbare Datei, die diese Konstanten verwendet, muss Deklarationen für Sie bereitstellen. Sie können die gewünschten Konstanten Deklarationen aus der Datei "adcvsb. Inc" Ausschneiden und einfügen, die sich im Standard Installationsordner für die RDS-Bibliothek befindet.  

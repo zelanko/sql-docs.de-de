@@ -17,21 +17,21 @@ ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2e84f49d5ad2d88ebb88417ae01046c0bcfd8006
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966049"
 ---
 # <a name="indexes-collection-adox"></a>Indexes-Collection (ADOX)
 Enthält alle [Index](../../../ado/reference/adox-api/index-object-adox.md) Objekte einer Tabelle.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die [Append](../../../ado/reference/adox-api/append-method-adox-indexes.md) -Methode für eine **Index** Sammlung ist für ADOX eindeutig. Ihre Möglichkeiten:  
+ Die [Append](../../../ado/reference/adox-api/append-method-adox-indexes.md) -Methode für eine **Index** Sammlung ist für ADOX eindeutig. Sie haben folgende Möglichkeiten:  
   
 -   Fügen Sie der Auflistung mithilfe der **Append** -Methode einen neuen Index hinzu.  
   
- Die restlichen Eigenschaften und Methoden sind Standard für ADO-Auflistungen. Ihre Möglichkeiten:  
+ Die restlichen Eigenschaften und Methoden sind Standard für ADO-Auflistungen. Sie haben folgende Möglichkeiten:  
   
 -   Greifen Sie mit der [Item](../../../ado/reference/ado-api/item-property-ado.md) -Eigenschaft auf einen Index in der-Auflistung zu.  
   
@@ -43,7 +43,7 @@ Enthält alle [Index](../../../ado/reference/adox-api/index-object-adox.md) Obje
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Indexes-Collections – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
+-   [Indizes Auflistungseigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Beispiel für Index Append-Methode (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   

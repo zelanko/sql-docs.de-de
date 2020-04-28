@@ -13,10 +13,10 @@ ms.assetid: b27b5c37-3db2-4831-a447-ee6442e24d87
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1a26f602e5746f1dfc0556d16448514ae8df7215
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966024"
 ---
 # <a name="indexes-collection-properties-methods-and-events"></a>Indexes-Collections – Eigenschaften, Methoden und Ereignisse
@@ -32,8 +32,8 @@ ms.locfileid: "67966024"
   
  [Aktualisierungs Methode](../../../ado/reference/ado-api/refresh-method-ado.md)  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Ereignisse  
  Keine.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Indexes-Collection (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)
+ [Auflistung von Indizes (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)

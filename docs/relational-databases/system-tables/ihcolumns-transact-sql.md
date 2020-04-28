@@ -18,10 +18,10 @@ ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9985b0587316641955219eb5179ffd6ed07916d3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67990390"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-SQL)
@@ -39,13 +39,13 @@ ms.locfileid: "67990390"
 |**article_id**|**int**|Identifiziert den Artikel, zu dem die Spalte gehört.|  
 |**column_ordinal**|**int**|Identifiziert die Spalte nach Reihenfolge.|  
 |**mapped_type**|**tinyint**|Der Spaltendatentyp der Zielspalte auf dem Abonnenten.|  
-|**mapped_length**|**BIGINT**|Die Länge der Spalte auf dem Abonnenten.|  
+|**mapped_length**|**bigint**|Die Länge der Spalte auf dem Abonnenten.|  
 |**mapped_prec**|**int**|Die Genauigkeit der Spalte auf dem Abonnenten.|  
 |**mapped_scale**|**int**|Die Dezimalstellen der Spalte auf dem Abonnenten.|  
 |**mapped_nullable**|**bit**|Gibt an, ob die Spalte auf dem Abonnenten NULL-Werte akzeptiert, wobei **1** bedeutet, dass NULL-Werte akzeptiert werden.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Heterogene Datenbankreplikation](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Heterogene Replikation](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikations Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_articlecolumn &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   

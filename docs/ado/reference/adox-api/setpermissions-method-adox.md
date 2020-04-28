@@ -19,10 +19,10 @@ ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 50a609d0cebe70ea5127ed448e57a70881e35097
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965229"
 ---
 # <a name="setpermissions-method-adox"></a>SetPermissions-Methode (ADOX)
@@ -49,10 +49,10 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  Ein **Long** -Wert, der eine Bitmaske einer oder mehrerer [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) -Konstanten sein kann, die die festzulegenden Rechte angibt.  
   
  *Ver*  
- Optional. Ein **Long** -Wert, bei dem es sich [um eine der Vererbungs](../../../ado/reference/adox-api/inherittypeenum.md) Konstanten handelt, die angibt, wie Objekte diese Berechtigungen erben. Der Standardwert ist " **adgeerbt None**".  
+ (Optional) Ein **Long** -Wert, bei dem es sich [um eine der Vererbungs](../../../ado/reference/adox-api/inherittypeenum.md) Konstanten handelt, die angibt, wie Objekte diese Berechtigungen erben. Der Standardwert ist " **adgeerbt None**".  
   
  *ObjectTypeId*  
- Optional. Ein **Variant** -Wert, der die GUID für einen Anbieter Objekttyp angibt, der nicht von der OLE DB Spezifikation definiert ist. Dieser Parameter ist erforderlich, wenn *ObjectType* auf **adpermubjproviderspecific**festgelegt ist. Andernfalls wird Sie nicht verwendet.  
+ (Optional) Ein **Variant** -Wert, der die GUID für einen Anbieter Objekttyp angibt, der nicht von der OLE DB Spezifikation definiert ist. Dieser Parameter ist erforderlich, wenn *ObjectType* auf **adpermubjproviderspecific**festgelegt ist. Andernfalls wird Sie nicht verwendet.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Wenn der Anbieter das Festlegen von Zugriffsrechten für Gruppen oder Benutzer nicht unterstützt, tritt ein Fehler auf.  

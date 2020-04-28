@@ -19,10 +19,10 @@ ms.assetid: 401207dc-ef4a-4a3f-879c-76dcbb52d6bc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f2f363998699846ca5020127f19be6dc0ad59712
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67948632"
 ---
 # <a name="sysdm_broker_queue_monitors-transact-sql"></a>sys.dm_broker_queue_monitors (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "67948632"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Objekt-ID für die Datenbank mit der Warteschlange, die überwacht wird. Lässt NULL-Werte zu.|  
 |**queue_id**|**int**|Objekt-ID der überwachten Warteschlange. Lässt NULL-Werte zu.|  
-|**Land**|**nvarchar (32)**|Status des Überwachungsservers. Lässt NULL-Werte zu. Folgende Werte sind möglich:<br /><br /> **VSTE**<br /><br /> **NOTIFIED**<br /><br /> **RECEIVES_OCCURRING**|  
+|**state**|**nvarchar(32)**|Status des Überwachungsservers. Lässt NULL-Werte zu. Folgende Werte sind möglich:<br /><br /> **VSTE**<br /><br /> **NOTIFIED**<br /><br /> **RECEIVES_OCCURRING**|  
 |**last_empty_rowset_time**|**datetime**|Zeitpunkt, zu dem bei einer RECEIVE-Anweisung aus der Warteschlange zuletzt ein leeres Ergebnis zurückgegeben wurde. Lässt NULL-Werte zu.|  
 |**last_activated_time**|**datetime**|Zeitpunkt, zu dem die Warteschlangenüberwachung zuletzt eine gespeicherte Prozedur aktiviert hat. Lässt NULL-Werte zu.|  
 |**tasks_waiting**|**int**|Anzahl von Sitzungen, die zurzeit in einer RECEIVE-Anweisung auf diese Warteschlange warten. Lässt NULL-Werte zu.<br /><br /> Hinweis: Diese Zahl umfasst alle Sitzungen, die eine RECEIVE-Anweisung ausführen, unabhängig davon, ob die Sitzung von der Warteschlangen Überwachung gestartet wurde. Dies gilt beim Verwenden von WAITFOR zusammen mit RECEIVE. Im Wesentlichen warten diese Tasks darauf, dass Nachrichten in der Warteschlange eintreffen.|  
@@ -75,8 +75,8 @@ INNER JOIN sys.databases t5 ON ( t5.database_id = DB_ID() );
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Service Broker verwandte dynamische Verwaltungs Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungssichten in Verbindung mit Service Broker &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/service-broker-related-dynamic-management-views-transact-sql.md)  
   
   
 

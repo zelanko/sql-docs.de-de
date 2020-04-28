@@ -10,10 +10,10 @@ ms.assetid: ec23d188-b890-49b8-9a88-446df96269e4
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 324aff21d677c213148922f7e06f267e08740c13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989836"
 ---
 # <a name="creating-script-files-db2tosql"></a>Erstellen von Skriptdateien (DB2ToSQL)
@@ -61,7 +61,7 @@ Die vom benutzerkonfigurierbaren Optionen umfassen:
   
     </output-providers>  
     ```  
-    *noch*  
+    *or*  
   
     ```xml  
     <...All commands...>  
@@ -98,7 +98,7 @@ Die vom benutzerkonfigurierbaren Optionen umfassen:
   
     </output-providers>  
     ```  
-    *noch*  
+    *or*  
   
     ```xml  
     <migrate-data>  
@@ -131,7 +131,7 @@ Die vom benutzerkonfigurierbaren Optionen umfassen:
   
     </output-providers>  
     ```  
-    *noch*  
+    *or*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -164,7 +164,7 @@ Die vom benutzerkonfigurierbaren Optionen umfassen:
   
     </output-providers>  
     ```  
-    *noch*  
+    *or*  
   
     ```xml  
     <!--synchronization-->  
@@ -175,7 +175,7 @@ Die vom benutzerkonfigurierbaren Optionen umfassen:
   
     </synchronize-target>  
     ```  
-    *noch*  
+    *or*  
   
     ```xml  
     <!--data migration-->  
@@ -210,7 +210,7 @@ Die vom benutzerkonfigurierbaren Optionen umfassen:
   
     </output-providers>  
     ```  
-    *noch*  
+    *or*  
   
     ```xml  
     <convert-schema object-name="<object-name>">  
@@ -263,7 +263,7 @@ Die vom benutzerkonfigurierbaren Optionen umfassen:
   
     </output-providers>  
     ```  
-    *noch*  
+    *or*  
   
     ```xml  
     <...All commands...>  
@@ -305,7 +305,7 @@ Die vom benutzerkonfigurierbaren Optionen umfassen:
   
     </output-providers>  
     ```  
-    *noch*  
+    *or*  
   
     ```xml  
     <...All commands...>  

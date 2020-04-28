@@ -18,10 +18,10 @@ ms.assetid: 03924684-c5fd-44dc-8d73-c6ab90f5e069
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 84f4093fe9c4693c50d6ae89c7b2ba111191db9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67946608"
 ---
 # <a name="modules-and-prologs---xquery-prolog"></a>Module und Prologe – XQuery-Prolog
@@ -45,8 +45,7 @@ WHERE ProductModelID=7
   
 -   Das `declare namespace`-Schlüsselwort definiert ein Namespacepräfix, das später im Hauptteil der Abfrage verwendet wird.  
   
--   
-  `/AWMI:root/AWMI:Location[@LocationID="10"]` ist der Hauptteil der Abfrage.  
+-   `/AWMI:root/AWMI:Location[@LocationID="10"]` ist der Hauptteil der Abfrage.  
   
 ## <a name="namespace-declarations"></a>Namespacedeklarationen  
  Eine Namespacedeklaration definiert ein Präfix und ordnet dieses einem Namespace-URI zu, was in der folgenden Abfrage dargestellt ist. In der Abfrage `CatalogDescription` ist eine Spalte vom Typ **XML** .  

@@ -17,10 +17,10 @@ ms.assetid: 215a5391-f422-42ec-99ea-4e6fbb5d3d64
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fd66edb75bec4f4b7e35c53c9ebeabd9b3c75d83
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967297"
 ---
 # <a name="append-method-adox-keys"></a>Append-Methode (ADOX-Schlüssel)
@@ -38,22 +38,22 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
  Das anzufügende **Schlüssel** Objekt oder der Name des Schlüssels, der erstellt und angefügt werden soll.  
   
  *KeyType*  
- Optional. Ein **Long** -Wert, der den Typ des Schlüssels angibt. Der *Key* -Parameter entspricht der [Type](../../../ado/reference/adox-api/type-property-key-adox.md) -Eigenschaft eines **Key** -Objekts.  
+ (Optional) Ein **Long** -Wert, der den Typ des Schlüssels angibt. Der *Key* -Parameter entspricht der [Type](../../../ado/reference/adox-api/type-property-key-adox.md) -Eigenschaft eines **Key** -Objekts.  
   
- *Spalte*  
- Optional. Ein **Zeichen** folgen Wert, der den Namen der zu indizierenden Spalte angibt. Der *Columns* -Parameter entspricht dem Wert der [Name](../../../ado/reference/adox-api/name-property-adox.md) -Eigenschaft eines [Column](../../../ado/reference/adox-api/column-object-adox.md) -Objekts.  
+ *Column*  
+ (Optional) Ein **Zeichen** folgen Wert, der den Namen der zu indizierenden Spalte angibt. Der *Columns* -Parameter entspricht dem Wert der [Name](../../../ado/reference/adox-api/name-property-adox.md) -Eigenschaft eines [Column](../../../ado/reference/adox-api/column-object-adox.md) -Objekts.  
   
  *RelatedTable*  
- Optional. Ein **Zeichen** folgen Wert, der den Namen der verknüpften Tabelle angibt. Der *RelatedTable* -Parameter entspricht dem Wert der **Name** -Eigenschaft eines [Table](../../../ado/reference/adox-api/table-object-adox.md) -Objekts.  
+ (Optional) Ein **Zeichen** folgen Wert, der den Namen der verknüpften Tabelle angibt. Der *RelatedTable* -Parameter entspricht dem Wert der **Name** -Eigenschaft eines [Table](../../../ado/reference/adox-api/table-object-adox.md) -Objekts.  
   
  *RelatedColumn*  
- Optional. Ein **Zeichen** folgen Wert, der den Namen der verknüpften Spalte für einen Fremdschlüssel angibt. Der *RelatedColumn* -Parameter entspricht dem Wert der **Name** -Eigenschaft eines [Column](../../../ado/reference/adox-api/column-object-adox.md) -Objekts.  
+ (Optional) Ein **Zeichen** folgen Wert, der den Namen der verknüpften Spalte für einen Fremdschlüssel angibt. Der *RelatedColumn* -Parameter entspricht dem Wert der **Name** -Eigenschaft eines [Column](../../../ado/reference/adox-api/column-object-adox.md) -Objekts.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Der *Columns* -Parameter kann entweder den Namen einer Spalte oder ein Array mit Spaltennamen annehmen.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Keys-Collection (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
+ [Keys Collection (ADOX) (Keys-Auflistung (ADOX))](../../../ado/reference/adox-api/keys-collection-adox.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Keys Append-Methode, Schlüsseltyp, RelatedColumn, RelatedTable und UpdateRule Properties-Beispiel (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
@@ -63,4 +63,4 @@ Keys.Append Key [,KeyType] [,Column] [,RelatedTable] [,RelatedColumn]
  [Append-Methode (ADOX-Prozeduren)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [Append-Methode (ADOX-Tabellen)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Append-Methode (ADOX-Benutzer)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append-Methode (ADOX-Sichten)](../../../ado/reference/adox-api/append-method-adox-views.md)
+ [Append-Methode (ADOX-Ansichten)](../../../ado/reference/adox-api/append-method-adox-views.md)

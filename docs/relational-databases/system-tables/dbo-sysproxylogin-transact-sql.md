@@ -20,10 +20,10 @@ ms.assetid: 433d33cb-bdf2-47bb-af78-2a40b7c8dfce
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2fb62d70c1b0a41edf684a8216205fb43e070eea
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67984880"
 ---
 # <a name="dbosysproxylogin-transact-sql"></a>dbo.sysproxylogin (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "67984880"
 |**proxy_id**|**int**|ID des Proxykontos des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents. Dieser Wert entspricht der **proxy_id** -Spalte in der **sysproxies** -Tabelle.|  
 |**sid**|**varbinary(85)**|Microsoft Windows *security_identifier* für die SQL Server-Anmeldung.|  
 |**principal_id**|**int**|ID des Benutzers oder der Gruppe, der bzw. die berechtigt ist, das Proxykonto für einen bestimmten Subsystemschritt zu verwenden.|  
-|**fahren**|**int**|Anmeldungstyp:<br /><br /> **0** = Windows-Benutzer oder-Gruppe [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und-Anmeldung.<br /><br /> **** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Systemrolle wird korrigiert<br /><br /> **2** = **msdb** -Daten Bank Rolle|  
+|**flags**|**int**|Anmeldungstyp:<br /><br /> **0** = Windows-Benutzer oder -Gruppe und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldung.<br /><br /> **1** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Systemrolle wird korrigiert<br /><br /> **2** = **msdb** -Daten Bank Rolle|  
   
 ## <a name="remarks"></a>Bemerkungen  
  Nur Mitglieder der festen Serverrolle **sysadmin** können auf diese Tabelle zugreifen.  

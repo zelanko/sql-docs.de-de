@@ -17,10 +17,10 @@ ms.assetid: 6070fd58-3237-4c77-a966-5b39ce5d57e4
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 637932fed7effb87705b3aa195578cfd506e1454
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967151"
 ---
 # <a name="append-method-adox-views"></a>Append-Methode (ADOX-Sichten)
@@ -49,7 +49,7 @@ Views.Append Name, Command
 >  Wenn **Sie den OLE DB** Anbieter für Microsoft Jet verwenden, können Sie mit der **Ansichts** Sammlungs- **Append** -Methode anstelle einer Ansicht im *Befehls* Parameter eine **Prozedur** angeben. Die **Prozedur** wird der Datenquelle hinzugefügt und der Auflistung **views** hinzugefügt. Wenn nach dem Anfüge **Vorgang** die Auflistungen für **Prozeduren** und **Sichten** aktualisiert **werden, ist**die Prozedur nicht mehr in der Sammlung **views** enthalten und wird in der Auflistung der **Prozeduren** angezeigt.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Views-Collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
+ [Views-Auflistung (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Beispiele für die Append-Methode (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   

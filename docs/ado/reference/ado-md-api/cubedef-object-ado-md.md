@@ -16,10 +16,10 @@ ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 61795a8cb10fb0b469f89012d52dfb4723aa0a89
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949788"
 ---
 # <a name="cubedef-object-ado-md"></a>CubeDef-Objekt (ADO MD)
@@ -38,7 +38,7 @@ Stellt einen Cube aus einem mehrdimensionalen Schema dar, der einen Satz verwand
   
  Die **Properties** -Auflistung enthält vom Anbieter bereitgestellte Eigenschaften. In der folgenden Tabelle sind die verfügbaren Eigenschaften aufgeführt. Die tatsächliche Eigenschaften Liste kann je nach Implementierung des Anbieters abweichen. Eine ausführlichere Liste der verfügbaren Eigenschaften finden Sie in der Dokumentation für Ihren Anbieter.  
   
-|Name|BESCHREIBUNG|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |CatalogName|Der Name des Katalogs, zu dem dieser Cube gehört.|  
 |CreatedOn|Das Datum und die Uhrzeit der Erstellung des Cubes.|  
@@ -46,7 +46,7 @@ Stellt einen Cube aus einem mehrdimensionalen Schema dar, der einen Satz verwand
 |CubeName|Der Name des Cubes.|  
 |Cubetype|Der Typ des Cubes.|  
 |Dataupdatedby|Die Benutzer-ID der Person, die das letzte Datenupdate durchgeführt hat.|  
-|BESCHREIBUNG|Eine aussagekräftige Beschreibung des Cubes.|  
+|Beschreibung|Eine aussagekräftige Beschreibung des Cubes.|  
 |LastSchemaUpdate|Datum und Uhrzeit des letzten Schema Updates.|  
 |SchemaName|Der Name des Schemas, zu dem dieser Cube gehört.|  
 |Schemaupdatedby|Die Benutzer-ID der Person, die die letzte Schema Aktualisierung durchgeführt hat.|  

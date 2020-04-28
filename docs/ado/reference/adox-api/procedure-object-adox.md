@@ -16,10 +16,10 @@ ms.assetid: 927bcf3e-32f5-4a80-98d3-600779f0732e
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 1681001dd42026c1a1fce04814b094047a475a0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965485"
 ---
 # <a name="procedure-object-adox"></a>Procedure-Objekt (ADOX)
@@ -45,4 +45,4 @@ Stellt eine gespeicherte Prozedur dar. Bei Verwendung in Verbindung mit dem ADO-
  [Parameter Auflistung, Beispiel für Befehls Eigenschaft (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
  [Prozeduren Append-Methode Beispiel (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   
  [Prozeduren Delete-Methode (Beispiel) (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
- [Procedures-Collection (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+ [Procedures Collection (ADOX) (Procedures-Auflistung (ADOX))](../../../ado/reference/adox-api/procedures-collection-adox.md)

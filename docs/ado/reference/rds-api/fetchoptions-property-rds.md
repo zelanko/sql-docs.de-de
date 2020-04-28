@@ -14,10 +14,10 @@ ms.assetid: 7b2e254a-9354-4541-bc98-bb185276388f
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4e4e0943a675ef7cf3684ccddd2699fba02dac9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964124"
 ---
 # <a name="fetchoptions-property-rds"></a>FetchOptions-Eigenschaft (RDS)
@@ -29,11 +29,11 @@ Gibt den Typ des asynchronen fetchen an.
 ## <a name="setting-and-return-values"></a>Festlegen und Zurückgeben von Werten  
  Legt einen der folgenden Werte fest oder gibt ihn zurück.  
   
-|Dauerhaft|BESCHREIBUNG|  
+|Konstante|Beschreibung|  
 |--------------|-----------------|  
 |**adcFetchUpFront**|Alle Datensätze des [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) werden abgerufen, bevor die Steuerung an die Anwendung zurückgegeben wird. Das gesamte **Recordset** wird abgerufen, bevor die Anwendung mit der Anwendung arbeiten darf.|  
 |**adcFetchBackground**|Das Steuerelement kann zur Anwendung zurückkehren, sobald der erste Batch von Datensätzen abgerufen wurde. Ein späterer Lesevorgang des **Recordsets** , das versucht, auf einen Datensatz zuzugreifen, der nicht im ersten Batch abgerufen wurde, wird verzögert, bis der gesuchte Datensatz tatsächlich abgerufen wird. zu diesem Zeitpunkt wird die Steuerung an die Anwendung zurückgegeben.|  
-|**adcfetchasync**|Default. Die Steuerung wird sofort an die Anwendung zurückgegeben, während die Datensätze im Hintergrund abgerufen werden. Wenn die Anwendung versucht, einen Datensatz zu lesen, der noch nicht abgerufen wurde, wird der Datensatz, der dem gesuchten Datensatz am nächsten ist, gelesen, und die Steuerung wird sofort zurückgegeben. Dies deutet darauf hin, dass das aktuelle Ende des **Recordsets** erreicht wurde. Beispielsweise wird durch einen [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) -Aufrufvorgang die aktuelle Daten Satz Position in den letzten tatsächlich abgerufenen Datensatz verschoben, auch wenn weitere Datensätze weiterhin das **Recordset**auffüllen.|  
+|**adcFetchAsync**|Standard. Die Steuerung wird sofort an die Anwendung zurückgegeben, während die Datensätze im Hintergrund abgerufen werden. Wenn die Anwendung versucht, einen Datensatz zu lesen, der noch nicht abgerufen wurde, wird der Datensatz, der dem gesuchten Datensatz am nächsten ist, gelesen, und die Steuerung wird sofort zurückgegeben. Dies deutet darauf hin, dass das aktuelle Ende des **Recordsets** erreicht wurde. Beispielsweise wird durch einen [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) -Aufrufvorgang die aktuelle Daten Satz Position in den letzten tatsächlich abgerufenen Datensatz verschoben, auch wenn weitere Datensätze weiterhin das **Recordset**auffüllen.|  
   
 > [!NOTE]
 >  Jede Client seitige ausführbare Datei, die diese Konstanten verwendet, muss Deklarationen für Sie bereitstellen. Sie können die gewünschten Konstanten Deklarationen aus der Datei "adcvsb. Inc" Ausschneiden und einfügen, die sich im Standard Installationsordner für die RDS-Bibliothek befindet.  

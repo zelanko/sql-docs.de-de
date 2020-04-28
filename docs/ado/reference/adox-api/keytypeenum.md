@@ -16,18 +16,18 @@ ms.assetid: 3e597c52-caf4-4341-8471-d1ade563dbf7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: aaeac9e4b8d542b00df190b366d2c7b9d29f9183
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965790"
 ---
 # <a name="keytypeenum"></a>KeyTypeEnum
 Gibt den Typ des [Schlüssels](../../../ado/reference/adox-api/key-object-adox.md)an: primär, fremd oder eindeutig.  
   
-|Dauerhaft|value|BESCHREIBUNG|  
+|Konstante|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
-|**adkeyprimary**|1|Default. Der Schlüssel ist ein Primärschlüssel.|  
+|**adkeyprimary**|1|Standard. Der Schlüssel ist ein Primärschlüssel.|  
 |**adkeyforeign**|2|Der Schlüssel ist ein Fremdschlüssel.|  
 |**adkeyunique**|3|Der Schlüssel ist eindeutig.|  
   

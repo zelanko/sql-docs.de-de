@@ -13,10 +13,10 @@ ms.assetid: dadd6e7e-b5b4-4ede-8747-ae67ec917d90
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: fb8efcb41ea0a82f11351e5a439ee8b9cf7a053e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949482"
 ---
 # <a name="member-object-properties-methods-and-events"></a>Member-Objekt – Eigenschaften, Methoden und Ereignisse
@@ -48,9 +48,9 @@ ms.locfileid: "67949482"
  [UniqueName-Eigenschaft](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)  
   
 ## <a name="methods"></a>Methoden  
- Keine.  
+ Keine  
   
-## <a name="events"></a>Events  
+## <a name="events"></a>Ereignisse  
  Keine.  
   
 ## <a name="see-also"></a>Weitere Informationen  

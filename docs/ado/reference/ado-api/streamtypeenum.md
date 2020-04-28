@@ -16,19 +16,19 @@ ms.assetid: 220fe51d-4889-4020-a099-2ec9c7485503
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 09f917f326db197fa42aedf9a668134c257af4a2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67936722"
 ---
 # <a name="streamtypeenum"></a>StreamTypeEnum
 Gibt den Typ der in einem [Streamobjekt](../../../ado/reference/ado-api/stream-object-ado.md) gespeicherten Daten an.  
   
-|Dauerhaft|value|BESCHREIBUNG|  
+|Konstante|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |**adTypeBinary**|1|Gibt Binärdaten an.|  
-|**adtypetext**|2|Default. Gibt Textdaten an, die sich in dem durch [CharSet](../../../ado/reference/ado-api/charset-property-ado.md)angegebenen Zeichensatz befinden.|  
+|**adtypetext**|2|Standard. Gibt Textdaten an, die sich in dem durch [CharSet](../../../ado/reference/ado-api/charset-property-ado.md)angegebenen Zeichensatz befinden.|  
   
 ## <a name="adowfc-equivalent"></a>ADO/WFC-Entsprechung  
  Diese Konstanten haben keine ADO/WFC-Entsprechungen.  

@@ -17,21 +17,21 @@ ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 0bf28af10084a30a5c81c76fe7e44781178979ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965131"
 ---
 # <a name="tables-collection-adox"></a>Tables-Collection (ADOX)
 Enthält alle [Tabellen](../../../ado/reference/adox-api/table-object-adox.md) Objekte eines Katalogs.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die [Append](../../../ado/reference/adox-api/append-method-adox-tables.md) -Methode für eine **Tabellen** Sammlung ist für ADOX eindeutig. Ihre Möglichkeiten:  
+ Die [Append](../../../ado/reference/adox-api/append-method-adox-tables.md) -Methode für eine **Tabellen** Sammlung ist für ADOX eindeutig. Sie haben folgende Möglichkeiten:  
   
 -   Fügen Sie der Auflistung mithilfe der **Append** -Methode eine neue Tabelle hinzu.  
   
- Die restlichen Eigenschaften und Methoden sind Standard für ADO-Auflistungen. Ihre Möglichkeiten:  
+ Die restlichen Eigenschaften und Methoden sind Standard für ADO-Auflistungen. Sie haben folgende Möglichkeiten:  
   
 -   Greifen Sie mit der [Item](../../../ado/reference/ado-api/item-property-ado.md) -Eigenschaft auf eine Tabelle in der-Auflistung zu.  
   
@@ -45,7 +45,7 @@ Enthält alle [Tabellen](../../../ado/reference/adox-api/table-object-adox.md) O
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Tables-Collection – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/tables-collection-properties-methods-and-events.md)  
+-   [Tables Collection Properties, Methods, and Events (Tables-Auflistung – Eigenschaften, Methoden und Ereignisse)](../../../ado/reference/adox-api/tables-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Katalog ActiveConnection-Eigenschaft (Beispiel) (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   

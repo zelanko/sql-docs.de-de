@@ -16,10 +16,10 @@ ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f9843ad9ac0a456f7e38e741e08ce9b66f862fd9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967053"
 ---
 # <a name="catalog-object-adox"></a>Catalog-Objekt (ADOX)
@@ -38,7 +38,7 @@ Enthält Sammlungen ([Tabellen](../../../ado/reference/adox-api/tables-collectio
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Catalog-Objekt – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/catalog-object-properties-methods-and-events.md)  
+-   [Error-Objekt – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/catalog-object-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Katalog ActiveConnection-Eigenschaft (Beispiel) (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
@@ -60,4 +60,4 @@ Enthält Sammlungen ([Tabellen](../../../ado/reference/adox-api/tables-collectio
  [Prozeduren (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
  [Tables-Auflistung (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
  [Users-Auflistung (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)   
- [Views-Collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [Views-Auflistung (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)

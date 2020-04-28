@@ -16,10 +16,10 @@ ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: ef30faf0fef05c4e86ffb4d2c21781592094c198
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967303"
 ---
 # <a name="append-method-adox-indexes"></a>Append-Methode (ADOX-Indizes)
@@ -37,7 +37,7 @@ Indexes.Append Index [,Columns]
  Das anzufügende **Index** Objekt oder der Name des Indexes, der erstellt und angefügt werden soll.  
   
  *Spalten*  
- Optional. Ein **Variant** -Wert, der die Namen der zu indizierenden Spalte (n) angibt. Der *Columns* -Parameter entspricht den Werten der [Name](../../../ado/reference/adox-api/name-property-adox.md) -Eigenschaft eines [Spalten](../../../ado/reference/adox-api/column-object-adox.md) Objekts oder von Objekten.  
+ (Optional) Ein **Variant** -Wert, der die Namen der zu indizierenden Spalte (n) angibt. Der *Columns* -Parameter entspricht den Werten der [Name](../../../ado/reference/adox-api/name-property-adox.md) -Eigenschaft eines [Spalten](../../../ado/reference/adox-api/column-object-adox.md) Objekts oder von Objekten.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Der *Columns* -Parameter kann entweder den Namen einer Spalte oder ein Array mit Spaltennamen annehmen.  
@@ -45,7 +45,7 @@ Indexes.Append Index [,Columns]
  Wenn der Anbieter das Erstellen von Indizes nicht unterstützt, tritt ein Fehler auf.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Indexes-Collection (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+ [Auflistung von Indizes (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Beispiel für Index Append-Methode (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
@@ -55,4 +55,4 @@ Indexes.Append Index [,Columns]
  [Append-Methode (ADOX-Prozeduren)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [Append-Methode (ADOX-Tabellen)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
  [Append-Methode (ADOX-Benutzer)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append-Methode (ADOX-Sichten)](../../../ado/reference/adox-api/append-method-adox-views.md)
+ [Append-Methode (ADOX-Ansichten)](../../../ado/reference/adox-api/append-method-adox-views.md)

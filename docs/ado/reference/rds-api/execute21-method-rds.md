@@ -14,10 +14,10 @@ ms.assetid: 9f131c8d-1497-416d-8209-abb481c38f7b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 8434345dcc4436865e4981a19ef1164d35a852f9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964202"
 ---
 # <a name="execute21-method-rds"></a>Execute21-Methode (RDS)
@@ -37,7 +37,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  *ConnectionString*  
  Eine Zeichenfolge, die zum Herstellen einer Verbindung mit dem OLE DB Anbieter verwendet wird, an den die Anforderung zur Ausführung gesendet wird. Wenn ein Handler mithilfe von *handlerstring*angegeben wird, kann die Verbindungs Zeichenfolge bearbeitet oder ersetzt werden.  
   
- *Handlerstring*  
+ *HandlerString*  
  Die Zeichenfolge identifiziert den Handler, der bei dieser Ausführung verwendet werden soll. Die Zeichenfolge enthält zwei Teile. Der erste Teil enthält den Namen (ProgID) des zu verwendenden Handlers. Der zweite Teil der Zeichenfolge enthält Argumente, die an den Handler übermittelt werden sollen. Wie die Argument Zeichenfolge interpretiert wird, ist handlerspezifisch. Die beiden Teile sind durch die erste Instanz eines Kommas in der Zeichenfolge getrennt (obwohl die Argument Zeichenfolge zusätzliche Kommas enthalten kann). Die Argumente sind optional.  
   
  *QueryString*  
@@ -45,13 +45,13 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
   
  Außerdem kann der Handler den hier angegebenen Wert ändern oder ersetzen, wenn ein Handler verwendet wird (und es dringend empfohlen wird, einen Handler zu verwenden). Der-Handler ersetzt z. b. in der Regel *QueryString* durch eine Abfrage Zeichenfolge aus der INI-Datei. Standardmäßig wird die Datei "msdfmap. ini" verwendet.  
   
- *lmarshaloptions*  
+ *lMarshalOptions*  
  Wird verwendet, um die Marshallingoptionen für das Rowset/Recordset festzulegen, das zurückgegeben wird.  
   
  *TableID*  
  Eine Variante vom Typ entweder VT_EMPTY oder VT_BSTR. Wenn dieser Wert vom Typ VT_EMPTY ist, wird er ignoriert. Wenn der Typ VT_BSTR ist, wird das Recordset mithilfe von **adCmdTableDirect** erstellt, wobei der hier angegebene Wert verwendet wird und der *QueryString* -Parameter ignoriert wird.  
   
- *lexecuteoptions*  
+ *lExecuteOptions*  
  Eine Bitmaske der Ausführungs Optionen:  
   
  1 =*Schreib* geschützt das Recordset wird mithilfe von **adlockread only**geöffnet.  
@@ -66,7 +66,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
   
  Obwohl "read *only*", " *nobatch* " und " *gethiddencolumns* " sich gegenseitig ausschließende Optionen sind, ist es nicht möglich, mehr als eine dieser Optionen festzulegen. Wenn mehrere Optionen festgelegt sind, hat *gethiddencolumns* Vorrang vor allen anderen Optionen, gefolgt *von "* schreibgeschützt". Wenn keine Optionen angegeben werden, wird das Recordset standardmäßig mithilfe von **adlockbatchoptimierup** geöffnet, aber verborgene Spalten sind nicht im Recordset enthalten.  
   
- *pparameters*  
+ *pParameters*  
  Eine Variante, die ein sicheres Array von Parameter Definitionen enthält. Wenn die *GetInfo* -Option in *lexecuteoptions*angegeben wurde, wird dieser Parameter verwendet, um die Parameter Definitionen zurückzugeben, die vom OLE DB Anbieter abgerufen werden. Andernfalls ist dieser Parameter möglicherweise leer.  
   
 ## <a name="remarks"></a>Bemerkungen  

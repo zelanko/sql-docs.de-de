@@ -18,10 +18,10 @@ ms.assetid: 0d185a16-2b16-4958-884f-efe675e2e551
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: c0bf121cdb6007783cca682125dad04c01ab59ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942206"
 ---
 # <a name="full-text-search-and-semantic-search-stored-procedures-transact-sql"></a>Gespeicherte Prozeduren für Volltextsuche und semantische Suche (Transact-SQL)
@@ -60,7 +60,7 @@ ms.locfileid: "67942206"
  [sp_fulltext_table](../../relational-databases/system-stored-procedures/sp-fulltext-table-transact-sql.md)  
  Markiert eine Tabelle für die Volltextindizierung oder hebt die Markierung auf.  
   
- [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Verwenden Sie stattdessen [CREATE FULLTEXT Index](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT Index](../../t-sql/statements/alter-fulltext-index-transact-sql.md)und [DROP FULLTEXT Index](../../t-sql/statements/drop-fulltext-index-transact-sql.md) .  
+ [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md), [ALTER FULLTEXT INDEX](../../t-sql/statements/alter-fulltext-index-transact-sql.md)und [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) .  
   
  [sp_help_fulltext_catalog_components](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalog-components-transact-sql.md)  
  Gibt eine Liste aller Komponenten (Filter, Wörtertrennung und Protokollhandler) zurück, die für alle Volltextkataloge in der aktuellen Datenbank verwendet werden.  
@@ -108,7 +108,7 @@ ms.locfileid: "67942206"
 ## <a name="see-also"></a>Weitere Informationen  
  [Katalog Sichten für die voll Text Suche und die semantische Suche &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/full-text-search-and-semantic-search-catalog-views-transact-sql.md)   
  [Dynamische Verwaltungs Sichten und Funktionen für die voll Text Suche und die semantische Suche &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
- [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Volltextsuche](../../relational-databases/search/full-text-search.md)  
+ [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Voll Text Suche](../../relational-databases/search/full-text-search.md)  
   
   

@@ -10,10 +10,10 @@ ms.assetid: 9435f6c2-16e7-41b1-906d-d9f09b336f8f
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: a531208e03c38af7edfa8baf071f855ecd89024d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67944644"
 ---
 # <a name="troubleshooting-mysqltosql"></a>Problembehandlung (MySqlToSql)
@@ -25,7 +25,7 @@ Die BEHEB baren Fehler können sich auf Folgendes beziehen:
   
 2.  Verfahren  
   
-3.  Sicht  
+3.  Anzeigen  
   
 4.  Trigger  
   

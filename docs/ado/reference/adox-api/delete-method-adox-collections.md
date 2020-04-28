@@ -31,10 +31,10 @@ ms.assetid: e6b6e3a4-8952-4d79-81f4-51019c338374
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: be2aa91cf27d7dc12d3cd0c1e0bf719bd43797ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966432"
 ---
 # <a name="delete-method-adox-collections"></a>Delete-Methode (ADOX-Collections)
@@ -60,10 +60,10 @@ Collection.Delete Name
   
 ||||  
 |-|-|-|  
-|[Columns-Collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)|[Groups-Collection (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)|[Indexes-Collection (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
-|[Keys-Collection (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)|[Procedures-Collection (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)|[Tables-Collection (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|  
-|[Users-Collection (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|[Views-Collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)||  
+|[Columns-Auflistung (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)|[Groups-Auflistung (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)|[Auflistung von Indizes (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
+|[Keys Collection (ADOX) (Keys-Auflistung (ADOX))](../../../ado/reference/adox-api/keys-collection-adox.md)|[Procedures Collection (ADOX) (Procedures-Auflistung (ADOX))](../../../ado/reference/adox-api/procedures-collection-adox.md)|[Tables-Auflistung (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|  
+|[Users-Auflistung (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|[Views-Auflistung (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)||  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Prozeduren Delete-Methode (Beispiel) (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
- [Delete-Methode für Sichten – Beispiel (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)
+ [Views Delete-Methode – Beispiel (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)

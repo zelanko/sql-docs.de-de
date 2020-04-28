@@ -10,10 +10,10 @@ ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 7a16a28a163acece321cc2229e9988cf7ab01f9e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67989867"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Umstellen von DB2-Schemas (DB2ToSQL)
@@ -43,7 +43,7 @@ Die folgende Tabelle zeigt, welche DB2-Objekte konvertiert werden, und [!INCLUDE
 |SELECT-Anweisung|**SSMA Maps wählen Sie mit den folgenden Ausnahmen aus:**<br /><br />Data-Change-Table-Reference-Klausel: teilweise zugeordnet, aber endgültige Tabellen werden nicht unterstützt.<br /><br />Tabellen Verweis Klausel: teilweise zugeordnet, aber nur-Table-Reference, Outer-Table-Reference, analyze_table-Expression, Collection-abgeleitete Tabelle, XMLTable-Expression ist nicht der SQL Server-Semantik zugeordnet.<br /><br />Die Period-Specification-Klausel ist nicht zugeordnet.<br /><br />Die Continue-Handler-Klausel ist nicht zugeordnet.<br /><br />Die typisierte Korrelations Klausel ist nicht zugeordnet.<br /><br />Die Klausel für die gleichzeitige Zugriffs Auflösung ist nicht zugeordnet.|  
 |Values-Anweisung|Wird zugeordnet.|  
 |INSERT-Anweisung|Wird zugeordnet.|  
-|UPDATE-Anweisung|S**SMA ordnet Updates mit den folgenden Ausnahmen zu:**<br /><br />Table-Reference-Klausel-only: der Tabellen Verweis ist nicht der SQL Server-Semantik zugeordnet.<br /><br />Period-Klausel-ist nicht zugeordnet.|  
+|Update-Anweisung|S**SMA ordnet Updates mit den folgenden Ausnahmen zu:**<br /><br />Table-Reference-Klausel-only: der Tabellen Verweis ist nicht der SQL Server-Semantik zugeordnet.<br /><br />Period-Klausel-ist nicht zugeordnet.|  
 |MERGE-Anweisung|**SSMA ordnet die Zusammenführung mit den folgenden Ausnahmen zu:**<br /><br />Einzelne im Vergleich zu mehreren Vorkommen jeder Klausel: wird der SQL Server-Semantik für begrenzte Vorkommen der einzelnen Klauseln zugeordnet.<br /><br />Signal-Klausel-nicht SQL Server Semantik zugeordnet<br /><br />Gemischte Update-und DELETE-Klauseln: SQL Server Semantik nicht zugeordnet<br /><br />Period-clause: wird nicht SQL Server Semantik zugeordnet.|  
 |DELETE-Anweisung|**SSMA ordnet DELETE mit den folgenden Ausnahmen zu:**<br /><br />Table-Reference-Klausel-only: der Tabellen Verweis ist nicht der SQL Server-Semantik zugeordnet.<br /><br />Period-Klausel-wird nicht SQL Server Semantik zugeordnet|  
 |Isolationsstufe und Sperrentyp|Wird zugeordnet.|  

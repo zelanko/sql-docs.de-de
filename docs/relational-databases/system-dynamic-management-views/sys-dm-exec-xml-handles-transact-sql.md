@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 303ceed8cc7078e4025f160d25ce1474d1be6aed
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67936787"
 ---
 # <a name="sysdm_exec_xml_handles-transact-sql"></a>sys.dm_exec_xml_handles (Transact-SQL)
@@ -52,15 +52,15 @@ dm_exec_xml_handles (session_id | 0 )
 |**session_id**|**int**|Sitzungs-ID der Sitzung, die dieses XML-Dokumenthandle verwaltet.|  
 |**document_id**|**int**|Von **sp_xml_preparedocument**zurückgegebene ID eines XML-Dokumenthandles.|  
 |**namespace_document_id**|**int**|Interne Handle-ID für das zugeordnete Namespacedokument, das als dritter Parameter an **sp_xml_preparedocument**übergeben wurde. NULL, wenn kein Namespacedokument vorhanden ist.|  
-|**sql_handle**|**varbinary (64)**|Handle für den Text des SQL-Codes, in dem das Handle definiert wurde.|  
+|**sql_handle**|**varbinary(64)**|Handle für den Text des SQL-Codes, in dem das Handle definiert wurde.|  
 |**statement_start_offset**|**int**|Die Anzahl von Zeichen, nach der der Aufruf von **sp_xml_preparedocument** im zurzeit ausgeführten Batch oder in der gespeicherten Prozedur auftritt. Kann in Verbindung mit dem **sql_handle**, dem **statement_end_offset**und der dynamischen Verwaltungsfunktion **sys. dm_exec_sql_text** verwendet werden, um die derzeit ausgeführte Anweisung für die Anforderung abzurufen.|  
 |**statement_end_offset**|**int**|Die Anzahl von Zeichen, nach der der Aufruf von **sp_xml_preparedocument** im zurzeit ausgeführten Batch oder in der gespeicherten Prozedur auftritt. Kann zusammen mit **sql_handle**, **statement_start_offset**und der dynamischen Verwaltungsfunktion **sys.dm_exec_sql_text** zum Abrufen der zurzeit ausgeführten Anweisung für die Anforderung verwendet werden.|  
 |**creation_time**|**datetime**|Timestamp des Aufrufs von **sp_xml_preparedocument** .|  
-|**original_document_size_bytes**|**BIGINT**|Größe des nicht analysierten XML-Dokuments in Bytes.|  
-|**original_namespace_document_size_bytes**|**BIGINT**|Größe des nicht analysierten XML-Namespacedokuments in Bytes. NULL, wenn kein Namespacedokument vorhanden ist.|  
-|**num_openxml_calls**|**BIGINT**|Die Anzahl von OPENXML-Aufrufen mit diesem Dokumenthandle.|  
-|**row_count**|**BIGINT**|Die Anzahl von Zeilen, die von allen vorherigen OPENXML-Aufrufen für dieses Dokumenthandle zurückgegeben wurden.|  
-|**dormant_duration_ms**|**BIGINT**|Millisekunden seit dem letzten OPENXML-Aufruf. Falls OPENXML nicht aufgerufen wurde, werden die Millisekunden seit dem Aufruf von **sp_xml_preparedocument**zurückgegeben.|  
+|**original_document_size_bytes**|**bigint**|Größe des nicht analysierten XML-Dokuments in Bytes.|  
+|**original_namespace_document_size_bytes**|**bigint**|Größe des nicht analysierten XML-Namespacedokuments in Bytes. NULL, wenn kein Namespacedokument vorhanden ist.|  
+|**num_openxml_calls**|**bigint**|Die Anzahl von OPENXML-Aufrufen mit diesem Dokumenthandle.|  
+|**row_count**|**bigint**|Die Anzahl von Zeilen, die von allen vorherigen OPENXML-Aufrufen für dieses Dokumenthandle zurückgegeben wurden.|  
+|**dormant_duration_ms**|**bigint**|Millisekunden seit dem letzten OPENXML-Aufruf. Falls OPENXML nicht aufgerufen wurde, werden die Millisekunden seit dem Aufruf von **sp_xml_preparedocument**zurückgegeben.|  
   
 ## <a name="remarks"></a>Bemerkungen  
  Die Lebensdauer von **sql_handle** -Werten, mit denen der SQL-Text abgerufen wird, in dem ein Aufruf von **sp_xml_preparedocument** ausgeführt wird, überdauert den zwischengespeicherten Plan, nach dem die Abfrage ausgeführt wird. Ist der Abfragetext nicht im Cache verfügbar, können die Daten nicht mithilfe der Informationen im Funktionsergebnis abgerufen werden. Dies kann eintreten, wenn Sie viele umfangreiche Batches ausführen.  

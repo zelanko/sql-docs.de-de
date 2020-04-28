@@ -17,10 +17,10 @@ ms.assetid: bcc9146f-586f-4e69-9c10-863440c9cffa
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 55f54ed42b121c347bc2640068fd5b4ef702aeb3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966684"
 ---
 # <a name="command-property-adox"></a>Command-Eigenschaft (ADOX)
@@ -36,10 +36,10 @@ Gibt ein ADO- [Befehls](../../../ado/reference/ado-api/command-object-ado.md) Ob
   
 |||  
 |-|-|  
-|[Procedure-Objekt (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[View-Objekt (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
+|[Procedure Object (ADOX) (Procedure-Objekt (ADOX))](../../../ado/reference/adox-api/procedure-object-adox.md)|[View-Objekt (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Beispiel für Befehls-und CommandText-Eigenschaften (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
  [Parameter Auflistung, Beispiel für Befehls Eigenschaft (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
  [Beispiel für Sichten und Fields-Auflistungen (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
- [Views-Collection, CommandText-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)
+ [Views Collection, CommandText Property Example (VB) (Views-Auflistungen, CommandText-Eigenschaft – Beispiel (VB))](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)

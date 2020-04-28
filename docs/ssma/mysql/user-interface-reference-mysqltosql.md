@@ -10,10 +10,10 @@ ms.assetid: 2fad3fa2-5729-4b96-99d4-2c6edfab0a54
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 17a287b38eb1dd1c1d9e3cee6943f7c069a39c61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67944629"
 ---
 # <a name="user-interface-reference-mysqltosql"></a>Referenz zur Benutzeroberfläche (MySqlToSql)
@@ -36,7 +36,7 @@ In der folgenden Tabelle sind die SSMA-Dialogfelder aufgeführt:
 |[Typzuordnung &#40;mysqlto SQL-&#41;bearbeiten](../../ssma/mysql/edit-type-mapping-mysqltosql.md)|Verwenden Sie das Dialogfeld **Typzuordnung bearbeiten** , um die Zuordnung von Datentypen zwischen den Quell-und Ziel Datenbanken und Datenbankobjekten zu erstellen oder zu ändern.|  
 |[Globale Einstellungen &#40;Editor&#41; &#40;mysqldesql&#41;](../../ssma/mysql/global-settings-editor-mysqltosql.md)|Mithilfe der Seite Editor des Dialog Felds **globale Einstellungen** können Sie Optionen für den Code-Editor konfigurieren.|  
 |[Globale Einstellungen &#40;Dialoge&#41; &#40;mysqltosql&#41;](../../ssma/mysql/global-settings-dialogs-mysqltosql.md)|Im Dialogfeld **globale Einstellungen** können Sie auf der Seite Dialogfelder die Standardeinstellungen für Dialogfeld und Warnungen konfigurieren.|  
-|[Globale Einstellungen (Protokollierung)](https://msdn.microsoft.com/0d033492-5ec3-473a-8de1-821894ec9518)|Verwenden Sie die Seite Protokollierung des Dialog Felds **globale Einstellungen** , um die Protokollierung zu konfigurieren.|  
+|[Global Settings (Logging) (Globale Einstellungen (Protokollierung))](https://msdn.microsoft.com/0d033492-5ec3-473a-8de1-821894ec9518)|Verwenden Sie die Seite Protokollierung des Dialog Felds **globale Einstellungen** , um die Protokollierung zu konfigurieren.|  
 |[Globale Einstellungen &#40;Ausgabefenster&#41; &#40;mysqldesql&#41;](../../ssma/mysql/global-settings-output-window-mysqltosql.md)|Verwenden Sie das Dialogfeld **globale Einstellungen** , um die Einstellungen für die SSMA für MySQL-Benutzeroberfläche festzulegen.|  
 |[Neues Projekt &#40;SSMA&#41; &#40;mysqldesql&#41;](../../ssma/mysql/new-project-ssma-mysqltosql.md)|Verwenden Sie das Dialogfeld **Neues Projekt** , um ein neues SSMA für MySQL-Projekt zu erstellen.|  
 |[Projekteinstellungen &#40;Konvertierung&#41; &#40;mysqltoisql-&#41;](../../ssma/mysql/project-settings-conversion-mysqltosql.md)|Verwenden Sie die Seite Konvertierung des Dialog Felds **Projekteinstellungen** , um anzugeben, wie SSMA für MySQL Funktionen und globale Variablen konvertiert.|  

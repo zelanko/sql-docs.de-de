@@ -18,10 +18,10 @@ ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 2a6146a942e572e28692ceaafd77d6958cdab9dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67964953"
 ---
 # <a name="users-collection-adox"></a>Users-Collection (ADOX)
@@ -30,11 +30,11 @@ Enthält alle gespeicherten [Benutzer](../../../ado/reference/adox-api/user-obje
 ## <a name="remarks"></a>Bemerkungen  
  Die **Benutzer** Sammlung eines [Katalogs](../../../ado/reference/adox-api/catalog-object-adox.md) stellt alle Benutzer des Katalogs dar. Die **Benutzer** Sammlung für eine [Gruppe](../../../ado/reference/adox-api/group-object-adox.md) stellt nur die Benutzer dar, die über eine Mitgliedschaft in einer bestimmten Gruppe verfügen.  
   
- Die [Append](../../../ado/reference/adox-api/append-method-adox-users.md) -Methode für eine **Benutzer** Sammlung ist für ADOX eindeutig. Ihre Möglichkeiten:  
+ Die [Append](../../../ado/reference/adox-api/append-method-adox-users.md) -Methode für eine **Benutzer** Sammlung ist für ADOX eindeutig. Sie haben folgende Möglichkeiten:  
   
 -   Fügen Sie der Sammlung mithilfe der **Append** -Methode einen neuen Benutzer hinzu.  
   
- Die restlichen Eigenschaften und Methoden sind Standard für ADO-Auflistungen. Ihre Möglichkeiten:  
+ Die restlichen Eigenschaften und Methoden sind Standard für ADO-Auflistungen. Sie haben folgende Möglichkeiten:  
   
 -   Greifen Sie mit der [Item](../../../ado/reference/ado-api/item-property-ado.md) -Eigenschaft auf einen Benutzer in der Auflistung zu.  
   
@@ -49,7 +49,7 @@ Enthält alle gespeicherten [Benutzer](../../../ado/reference/adox-api/user-obje
   
  Dieser Abschnitt enthält das folgende Thema.  
   
--   [Users-Collection – Eigenschaften, Methoden und Ereignisse](../../../ado/reference/adox-api/users-collection-properties-methods-and-events.md)  
+-   [Users Collection Properties, Methods, and Events (Users-Auflistung – Eigenschaften, Methoden und Ereignisse)](../../../ado/reference/adox-api/users-collection-properties-methods-and-events.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Getberechtigungs-und setberechtigungs-Methoden Beispiel (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   

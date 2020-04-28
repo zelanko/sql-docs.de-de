@@ -19,10 +19,10 @@ ms.assetid: 9d1efde6-8fa4-42ac-80e5-37456ffebd0b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e836fb2bd64a4fb0be15288322aa8fee30dc763e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942288"
 ---
 # <a name="sp_filestream_force_garbage_collection-transact-sql"></a>sp_filestream_force_garbage_collection (Transact-SQL)
@@ -46,23 +46,22 @@ sp_filestream_force_garbage_collection
  Gibt den Namen der Datenbank an, für die der Garbage Collector ausgeführt werden soll.  
   
 > [!NOTE]  
-> `@dbname`ist vom **Datentyp vom Datentyp sysname**. Fehlt die Angabe, wird die aktuelle Datenbank zugrunde gelegt.  
+> `@dbname` ist vom Typ **sysname**. Fehlt die Angabe, wird die aktuelle Datenbank zugrunde gelegt.  
   
  `[ @filename = ] 'logical_file_name'`  
- Gibt den logischen Namen des FILESTREAM-Containers an, für den der Garbage Collector ausgeführt werden soll. 
-  `@filename` ist optional. Wenn kein logischer Dateiname angegeben wird, bereinigt der Garbage Collector alle FILESTREAM-Container in der angegebenen Datenbank.  
+ Gibt den logischen Namen des FILESTREAM-Containers an, für den der Garbage Collector ausgeführt werden soll. `@filename` ist optional. Wenn kein logischer Dateiname angegeben wird, bereinigt der Garbage Collector alle FILESTREAM-Container in der angegebenen Datenbank.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
   
 |||  
 |-|-|  
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |0|Vorgang war erfolgreich.|  
 |1|Fehler beim Vorgang.|  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |*file_name*|Gibt den Namen des FILESTREAM-Containers an|  
 |*num_collected_items*|Gibt die Anzahl der FILESTREAM-Elemente (Dateien/Verzeichnisse) an, die vom Garbage Collector in diesem Container erfasst (gelöscht) wurden.|  
@@ -107,10 +106,10 @@ EXEC sp_filestream_force_garbage_collection @dbname = N'FSDB',
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
-[Filestream](../../relational-databases/blob/filestream-sql-server.md)
+[FileStream](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetables](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Dynamische Verwaltungssichten für Filestream und FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
-<br>[Katalogsichten für Filestream und FileTable (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
+<br>[Filestream- und FileTable-Katalogsichten (Transact-SQL)](../system-catalog-views/filestream-and-filetable-catalog-views-transact-sql.md)
 <br>[sp_kill_filestream_non_transacted_handles (Transact-SQL)](filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md)
   
   

@@ -10,10 +10,10 @@ ms.assetid: 6c2204f2-d49e-49ba-9c0f-f14cf07fa561
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5b8ef85b9d0d997ed8aae05fc53aa685a2dcacfa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67986407"
 ---
 # <a name="global-settings-dialogs-accesstosql"></a>Globale Einstellungen (Dialogfelder) (accesstosql)
@@ -21,7 +21,7 @@ Auf der Seite Dialoge des Dialog Felds **globale Einstellungen** können Sie die
   
 Um auf die Dialogfeld Einstellungen im **Menü Extras** zuzugreifen, klicken Sie auf **globale Einstellungen**, klicken Sie unten im linken Bereich auf **GUI** , und wählen Sie dann **Dialoge**aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Migrations-Assistenten beim Start anzeigen**  
 In SSMA haben Sie die Möglichkeit, den **Migrations-Assistenten** beim Start der SSMA-Anwendung zu aktivieren oder zu deaktivieren. Diese Option ist standardmäßig auf **true**eingestellt.  
   

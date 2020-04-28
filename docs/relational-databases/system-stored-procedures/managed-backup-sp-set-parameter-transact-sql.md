@@ -21,10 +21,10 @@ ms.assetid: bd8ae5fd-1337-4b7f-b0a4-153cbca9fa5f
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 838a8b0d998476a37b0dd4d30cab5041ad4276a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67942036"
 ---
 # <a name="managed_backupsp_set_parameter-transact-sql"></a>managed_backup. sp_set_parameter (Transact-SQL)
@@ -45,7 +45,7 @@ EXEC managed_backup.sp_set_parameter
     ,[@parameter_value = ] 'parameter_value'  
 ```  
   
-##  <a name="Arguments"></a>Argumente  
+##  <a name="arguments"></a><a name="Arguments"></a>Argumentation  
  @parameter_name  
  Der Name des Parameters, dessen Wert festgelegt werden soll. @parameter_nameist vom Datentyp nvarchar (128). Die verfügbaren Parameternamen lauten **SSMBackup2WANotificationEmailIds**, **SSMBackup2WADebugXevent**, **SSMBackup2WAEnableUserDefinedPolicy**, **fileretentiondebug XEvent**und **storageoperationdebug-Ereignis**.  
   
@@ -65,7 +65,7 @@ EXEC managed_backup.sp_set_parameter
 ## <a name="return-code-value"></a>Rückgabecodewert  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
-## <a name="best-practices"></a>Bewährte Methoden  
+## <a name="best-practices"></a>Empfehlungen  
  Optionaler Abschnitt, der bewährte Methoden beschreibt, die der Benutzer beim Ausführen der Anweisung oder Routine befolgen sollte.  
   
 ## <a name="security"></a>Sicherheit  

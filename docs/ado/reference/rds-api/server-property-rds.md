@@ -16,10 +16,10 @@ ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 9d196a60986734c5717be9711af1fa28accee414
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67963476"
 ---
 # <a name="server-property-rds"></a>Servereigenschaft (RDS)
@@ -54,7 +54,7 @@ awebsrvr:port
   
 ```  
   
- **Http**  
+ **HTTPS**  
   
  Syntax zur Entwurfszeit  
   
@@ -89,7 +89,7 @@ computername
 DataControl.Server="computername"  
 ```  
   
- **Prozess interne**  
+ **In-Process**  
   
  Syntax zur Entwurfszeit  
   
@@ -110,8 +110,8 @@ DataControl.Server=""
  *awebsrvr*oder *Computername*  
  Ein **Zeichen** folgen Wert, der einen Internet-oder intranetpfad bzw. einen Computernamen enthält, wenn sich der Server auf einem Remote Computer befindet. oder eine leere Zeichenfolge, wenn sich der Server auf dem lokalen Computer befindet.  
   
- *Port*  
- Optional. Port, der zum Herstellen einer Verbindung mit einem Server verwendet wird, auf dem IIS ausgeführt wird. Die Portnummer wird in Internet Explorer festgelegt (Klicken Sie im Menü **Ansicht** auf **Optionen**, und wählen Sie dann die Registerkarte **Verbindung** ) oder in IIS aus.  
+ *port*  
+ (Optional) Port, der zum Herstellen einer Verbindung mit einem Server verwendet wird, auf dem IIS ausgeführt wird. Die Portnummer wird in Internet Explorer festgelegt (Klicken Sie im Menü **Ansicht** auf **Optionen**, und wählen Sie dann die Registerkarte **Verbindung** ) oder in IIS aus.  
   
  *DataControl*  
  Eine Objekt Variable, die einen **RDS darstellt. DataControl** -Objekt.  

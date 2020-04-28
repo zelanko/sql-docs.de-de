@@ -20,10 +20,10 @@ ms.assetid: 313b0bf7-3f37-4823-8fca-bd9c80e078a7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 25a319d81fb3ecde22691f5197e93acb38a5e04a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67966005"
 ---
 # <a name="indexnulls-property-adox"></a>IndexNulls-Eigenschaft (ADOX)
@@ -39,4 +39,4 @@ Gibt an, ob Datensätze mit NULL-Werten in ihren Indexfeldern Indexeinträge auf
  [Index-Objekt (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [IndexNulls-Eigenschaft – Beispiel (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)
+ [Beispiel für IndexNulls-Eigenschaft (VB)](../../../ado/reference/adox-api/indexnulls-property-example-vb.md)

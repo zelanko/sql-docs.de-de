@@ -17,10 +17,10 @@ ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 99a21cd5dd32af9e84877865cfe7c0fc92f6c087
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67967225"
 ---
 # <a name="append-method-adox-users"></a>Append-Methode (ADOX-Benutzer)
@@ -38,7 +38,7 @@ Users.Append User[,Password]
  Ein **Variant** -Wert, der das anzufügende **Benutzer** Objekt oder den Namen des Benutzers enthält, der erstellt und angefügt werden soll.  
   
  *Kennwort*  
- Optional. Ein **Zeichen** folgen Wert, der das Kennwort für den Benutzer enthält. Der *Password* -Parameter entspricht dem Wert, der von der [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) -Methode eines **User** -Objekts angegeben wird.  
+ (Optional) Ein **Zeichen** folgen Wert, der das Kennwort für den Benutzer enthält. Der *Password* -Parameter entspricht dem Wert, der von der [ChangePassword](../../../ado/reference/adox-api/changepassword-method-adox.md) -Methode eines **User** -Objekts angegeben wird.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Die **Benutzer** Sammlung eines [Katalogs](../../../ado/reference/adox-api/catalog-object-adox.md) stellt alle Benutzer des Katalogs dar. Die **Benutzer** Sammlung für eine [Gruppe](../../../ado/reference/adox-api/group-object-adox.md) stellt nur die Benutzer dar, die über eine Mitgliedschaft in einer bestimmten Gruppe verfügen.  
@@ -49,7 +49,7 @@ Users.Append User[,Password]
 >  Bevor ein Benutzerobjekt an die **Users** -Auflistung eines **Group** -Objekts angefügt wird, muss ein **Benutzer** Objekt mit demselben [Namen](../../../ado/reference/adox-api/name-property-adox.md) wie das angefügte **-Objekt in** der **Benutzer** Auflistung des **Katalogs**bereits vorhanden sein.  
   
 ## <a name="applies-to"></a>Gilt für  
- [Users-Collection (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)  
+ [Users-Auflistung (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Anfügen von Gruppen und Benutzern, ChangePassword-Methoden (Beispiel) (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
@@ -59,4 +59,4 @@ Users.Append User[,Password]
  [Append-Methode (ADOX-Schlüssel)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
  [Append-Methode (ADOX-Prozeduren)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
  [Append-Methode (ADOX-Tabellen)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Append-Methode (ADOX-Sichten)](../../../ado/reference/adox-api/append-method-adox-views.md)
+ [Append-Methode (ADOX-Ansichten)](../../../ado/reference/adox-api/append-method-adox-views.md)

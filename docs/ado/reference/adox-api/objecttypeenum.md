@@ -16,23 +16,23 @@ ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 04c7b1d1cb5d07a300b82d13a7e80158498bbd5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67965651"
 ---
 # <a name="objecttypeenum"></a>ObjectTypeEnum
 Gibt den Typ des Datenbankobjekts an, für das Berechtigungen oder den Besitz festgelegt werden sollen.  
   
-|Dauerhaft|value|BESCHREIBUNG|  
+|Konstante|Wert|Beschreibung|  
 |--------------|-----------|-----------------|  
-|**adpermubjcolumn**|2|Das-Objekt ist eine-Spalte.|  
-|**adpermubjdatabase**|3|Das-Objekt ist eine-Datenbank.|  
-|**adpermubjprocedure**|4|Das-Objekt ist eine-Prozedur.|  
-|**adpermubjproviderspecific**|-1|Das-Objekt ist ein vom Anbieter definiertes Typ. Wenn der *ObjectType* -Parameter **adpermubjproviderspecific** ist und keine *ObjectTypeId* angegeben wurde, tritt ein Fehler auf.|  
-|**adpermubjtable**|1|Das-Objekt ist eine Tabelle.|  
-|**adpermubjview**|5|Das-Objekt ist eine Sicht.|  
+|**adPermObjColumn**|2|Das-Objekt ist eine-Spalte.|  
+|**adPermObjDatabase**|3|Das-Objekt ist eine-Datenbank.|  
+|**adPermObjProcedure**|4|Das-Objekt ist eine-Prozedur.|  
+|**adPermObjProviderSpecific**|-1|Das-Objekt ist ein vom Anbieter definiertes Typ. Wenn der *ObjectType* -Parameter **adpermubjproviderspecific** ist und keine *ObjectTypeId* angegeben wurde, tritt ein Fehler auf.|  
+|**adPermObjTable**|1|Das-Objekt ist eine Tabelle.|  
+|**adPermObjView**|5|Das-Objekt ist eine Sicht.|  
   
 ## <a name="applies-to"></a>Gilt für  
   

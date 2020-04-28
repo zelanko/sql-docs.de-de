@@ -16,10 +16,10 @@ ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: e391ad7c61bd6c303b0558892435af344a2768fb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67933496"
 ---
 # <a name="connectionstring-property-ado"></a>ConnectionString-Eigenschaft (ADO)
@@ -58,7 +58,7 @@ Gibt die Informationen an, die zum Herstellen einer Verbindung mit einer Datenqu
   
 |Standard-ADO-Anbieter|Windows-Betriebssystem|  
 |--------------------------|------------------------------|  
-|MSDASQL<br /><br /> (Um die Lesbarkeit des Quellcodes zu verbessern, geben Sie den Anbieter Namen explizit in der Verbindungs Zeichenfolge an.)|Windows 2000 (32 Bit)<br /><br /> Windows XP (32 Bit)<br /><br /> Windows 2003 Server (32 Bit)<br /><br /> Windows Vista (32 Bit)<br /><br /> Windows Vista Service Pack 1 oder höher (32-Bit und 64-Bit)<br /><br /> Windows-Versionen nach Windows Vista (32-Bit und 64-Bit)|  
+|MSDASQL<br /><br /> (Um die Lesbarkeit des Quellcodes zu verbessern, geben Sie den Anbieter Namen explizit in der Verbindungs Zeichenfolge an.)|Windows 2000 (32 Bit)<br /><br /> Windows XP (32-Bit)<br /><br /> Windows 2003 Server (32 Bit)<br /><br /> Windows Vista (32-Bit)<br /><br /> Windows Vista Service Pack 1 oder höher (32-Bit und 64-Bit)<br /><br /> Windows-Versionen nach Windows Vista (32-Bit und 64-Bit)|  
 |Keine Standardeinstellung.<br /><br /> Wenn eine ADO-Anwendung unter den folgenden Betriebssystemen ausgeführt wird und den Anbieter nicht explizit angibt, gibt ADO den folgenden Fehler zurück: "ADODB. Verbindung: der Anbieter ist nicht angegeben, und es ist kein festgelegter Standardanbieter vorhanden.|Windows 2000 (64 Bit)<br /><br /> Windows XP (64-Bit)<br /><br /> Windows 2003 Server (64 Bit)<br /><br /> Windows Vista (64-Bit)|  
   
 ## <a name="applies-to"></a>Gilt für  

@@ -16,10 +16,10 @@ ms.assetid: 034af340-ac79-494e-ba5e-2b57da1cb9de
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 35e02e4823d0a3abf245e1885b95176d6350d712
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "67949695"
 ---
 # <a name="hierarchy-object-ado-md"></a>Hierarchy-Objekt (ADO MD)
@@ -38,13 +38,13 @@ Stellt eine Methode dar, mit der die [Elemente einer Dimension](../../../ado/ref
   
  Die **Properties** -Auflistung enthält vom Anbieter bereitgestellte Eigenschaften. In der folgenden Tabelle sind die verfügbaren Eigenschaften aufgeführt. Die tatsächliche Eigenschaften Liste kann je nach Implementierung des Anbieters abweichen. Eine ausführlichere Liste der verfügbaren Eigenschaften finden Sie in der Dokumentation für Ihren Anbieter.  
   
-|Name|BESCHREIBUNG|  
+|Name|Beschreibung|  
 |----------|-----------------|  
 |AllMember|Der Member auf der höchsten Rollup-Ebene in der Hierarchie.|  
 |CatalogName|Der Name des Katalogs, zu dem dieser Cube gehört.|  
 |CubeName|Der Name des Cubes.|  
 |DefaultMember|Der eindeutige Name des Standard Members für diese Hierarchie.|  
-|BESCHREIBUNG|Eine aussagekräftige Beschreibung der Hierarchie.|  
+|Beschreibung|Eine aussagekräftige Beschreibung der Hierarchie.|  
 |DimensionType|Der Typ der Dimension, zu der diese Hierarchie gehört.|  
 |Dimensionuniquename|Der eindeutige Name der Dimension.|  
 |Hierarchycaption|Eine Bezeichnung oder Beschriftung, die der Hierarchie zugeordnet ist.|  
