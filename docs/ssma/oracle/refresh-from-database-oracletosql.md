@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: ba9a56c5fb47be4db081aebb3753db2c3e9ed6ad
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266544"
 ---
 # <a name="refresh-from-database-oracletosql"></a>Aktualisieren der Datenbank (OracleToSQL)
@@ -32,7 +32,7 @@ Sie können im Dialogfeld **Projekteinstellungen** die Standardeinstellungen fü
   
 Um auf das Dialogfeld **aus Datenbank aktualisieren** zuzugreifen, klicken Sie mit der rechten Maustaste auf ein Objekt im Oracle Metadata Explorer, und klicken Sie dann auf **aus Datenbank aktualisieren**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Reduzieren (-)**  
 Reduzieren Sie alle Objektgruppen, um einzelne Objekte auszublenden.  
   

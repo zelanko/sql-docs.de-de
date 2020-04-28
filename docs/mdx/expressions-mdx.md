@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: a1dfcdc52bb52652c204e31c28ccf5ec48ca7a00
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893590"
 ---
 # <a name="expressions-mdx"></a>Ausdrücke (MDX)
@@ -25,7 +25,7 @@ ms.locfileid: "68893590"
   
  Ein einfacher Ausdruck kann einer der folgenden Ausdrücke sein:  
   
- Dauerhaft  
+ Konstante  
  Eine Konstante ist ein Symbol, das einen bestimmten Datenwert in MDX darstellt. Zeichenfolgen-, numerische und Datumswerte können als Konstanten gerendert werden. Im Gegensatz zu numerischen Konstanten müssen Zeichenfolgen- und Datumskonstanten in einfache Anführungszeichen (') eingeschlossen werden.  
   
  Skalarfunktion  
@@ -75,16 +75,16 @@ WHERE [Product].[Category].[Bikes]
   
 |Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
-|[Verwenden von Cube- und Teilcubeausdrücken](../mdx/using-cube-and-subcube-expressions.md)|Definiert Cube- und Teilcubeausdrücke.|  
-|[Verwenden von Dimensionsausdrücken](../mdx/using-dimension-expressions.md)|Definiert Dimensionsausdrücke.|  
+|[Using Cube and Subcube Expressions (Verwenden von Cube- und Teilcubeausdrücken)](../mdx/using-cube-and-subcube-expressions.md)|Definiert Cube- und Teilcubeausdrücke.|  
+|[Using Dimension Expressions (Verwenden von Dimensionsausdrücken)](../mdx/using-dimension-expressions.md)|Definiert Dimensionsausdrücke.|  
 |[Verwenden von Elementausdrücken](../mdx/using-member-expressions.md)|Definiert Elementausdrücke.|  
-|[Verwenden von Tupelausdrücken](../mdx/using-tuple-expressions.md)|Definiert Tupelausdrücke.|  
-|[Verwenden von Mengenausdrücken](../mdx/using-set-expressions.md)|Definiert Mengenausdrücke.|  
-|[Verwenden von Skalarausdrücken](../mdx/using-scalar-expressions.md)|Definiert skalare Ausdrücke.|  
-|[Arbeiten mit leeren Werten](../mdx/working-with-empty-values.md)|Beschreibt, was ein leerer Wert ist und wie leere Werte gehandhabt werden.|  
+|[Using Tuple Expressions (Verwenden von Tupelausdrücken)](../mdx/using-tuple-expressions.md)|Definiert Tupelausdrücke.|  
+|[Using Set Expressions (Verwenden von Mengenausdrücken)](../mdx/using-set-expressions.md)|Definiert Mengenausdrücke.|  
+|[Using Scalar Expressions (Verwenden von Skalarausdrücken)](../mdx/using-scalar-expressions.md)|Definiert skalare Ausdrücke.|  
+|[Working with Empty Values (Arbeiten mit leeren Werten)](../mdx/working-with-empty-values.md)|Beschreibt, was ein leerer Wert ist und wie leere Werte gehandhabt werden.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [MDX-Sprachreferenz &#40;MDX-&#41;](../mdx/mdx-language-reference-mdx.md)   
- [Grundlagen der MDX-Abfrage &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
+ [Grundlegendes zu MDX-Abfragen &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)  
   
   

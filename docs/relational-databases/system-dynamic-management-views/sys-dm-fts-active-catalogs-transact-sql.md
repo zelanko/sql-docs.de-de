@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 31dd240f15d9d778cbab43f6b4b1bfda2e4e1857
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265969"
 ---
 # <a name="sysdm_fts_active_catalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
@@ -43,10 +43,10 @@ ms.locfileid: "68265969"
 |**memory_address**|**varbinary(8)**|Adresse von Speicherpuffern, die für Auffüllungsaktivitäten im Zusammenhang mit diesem Volltextkatalog zugeordnet wurden.|  
 |**name**|**nvarchar(128)**|Name des aktiven Volltextkatalogs.|  
 |**is_paused**|**bit**|Gibt an, ob das Auffüllen des aktiven Volltextkatalogs angehalten wurde.|  
-|**Stands**|**int**|Aktueller Status des Volltextkatalogs. Einer der folgenden:<br /><br /> 0 = Wird initialisiert<br /><br /> 1 = Bereit<br /><br /> 2 = Angehalten<br /><br /> 3 = Temporärer Fehler<br /><br /> 4 = Erneute Einbindung erforderlich<br /><br /> 5 = Herunterfahren<br /><br /> 6 = Übernehmen von Änderungen zu Sicherungszwecken<br /><br /> 7 = Sicherung erfolgt über Katalog<br /><br /> 8 = Katalog ist beschädigt|  
-|**status_description**|**nvarchar (120)**|Beschreibung des aktuellen Status des aktiven Volltextkatalogs.|  
+|**status**|**int**|Aktueller Status des Volltextkatalogs. Einer der folgenden:<br /><br /> 0 = Wird initialisiert<br /><br /> 1 = Bereit<br /><br /> 2 = Angehalten<br /><br /> 3 = Temporärer Fehler<br /><br /> 4 = Erneute Einbindung erforderlich<br /><br /> 5 = Herunterfahren<br /><br /> 6 = Übernehmen von Änderungen zu Sicherungszwecken<br /><br /> 7 = Sicherung erfolgt über Katalog<br /><br /> 8 = Katalog ist beschädigt|  
+|**status_description**|**nvarchar(120)**|Beschreibung des aktuellen Status des aktiven Volltextkatalogs.|  
 |**previous_status**|**int**|Vorhergehender Status des Volltextkatalogs. Einer der folgenden:<br /><br /> 0 = Wird initialisiert<br /><br /> 1 = Bereit<br /><br /> 2 = Angehalten<br /><br /> 3 = Temporärer Fehler<br /><br /> 4 = Erneute Einbindung erforderlich<br /><br /> 5 = Herunterfahren<br /><br /> 6 = Übernehmen von Änderungen zu Sicherungszwecken<br /><br /> 7 = Sicherung erfolgt über Katalog<br /><br /> 8 = Katalog ist beschädigt|  
-|**previous_status_description**|**nvarchar (120)**|Beschreibung des vorhergehenden Status des aktiven Volltextkatalogs.|  
+|**previous_status_description**|**nvarchar(120)**|Beschreibung des vorhergehenden Status des aktiven Volltextkatalogs.|  
 |**worker_count**|**int**|Anzahl der zurzeit aktiven Arbeitsthreads für diesen Volltextkatalog.|  
 |**active_fts_index_count**|**int**|Anzahl der Volltextindizes, die aufgefüllt werden.|  
 |**auto_population_count**|**int**|Anzahl von Tabellen, bei denen dieser Volltextkatalog automatisch aufgefüllt wird.|  
@@ -68,7 +68,7 @@ Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VI
   
 ## <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-|Von|To|Beziehung|  
+|Von|Beschreibung|Beziehung|  
 |----------|--------|------------------|  
 |dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|1:1|  
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|1:1|  

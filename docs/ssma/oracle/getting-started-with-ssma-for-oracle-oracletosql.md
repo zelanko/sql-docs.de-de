@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: ef71a9355bc11c4d377f00a44b2b8cd2958f8656
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264449"
 ---
 # <a name="getting-started-with-ssma-for-oracle-oracletosql"></a>Erste Schritte mit SSMA für Oracle (OracleToSQL)
@@ -96,7 +96,7 @@ In der folgenden Tabelle sind die SSMA-Menüs aufgeführt.
   
 |Menü|BESCHREIBUNG|  
 |----|-----------|  
-|**Datei**|Enthält Befehle für das Arbeiten mit-Projekten, das Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Oracle und das Herstellen einer Verbindung mit.|  
+|**File**|Enthält Befehle für das Arbeiten mit-Projekten, das Herstellen einer Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Oracle und das Herstellen einer Verbindung mit.|  
 |**Bearbeiten**|Enthält Befehle zum Suchen und arbeiten mit Text auf den Detailseiten, z. b [!INCLUDE[tsql](../../includes/tsql-md.md)] . zum Kopieren aus dem SQL-Detailbereich. Enthält auch die Option **Lesezeichen verwalten** , in der eine Liste vorhandener Lesezeichen angezeigt werden kann. Sie können die Schaltflächen auf der rechten Seite des Dialog Felds verwenden, um die Lesezeichen zu verwalten.|  
 |**Ansicht**|Enthält den Befehl Metadaten-Explorer **Synchronisieren** . , Die die Objekte zwischen dem Oracle-metadatenexplorer und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dem metadatenexplorer synchronisiert. Enthält auch Befehle zum Anzeigen und Ausblenden der **Ausgabe** -und **Fehlerliste** Bereiche sowie ein Options **Layout** zum Verwalten der Layouts.|  
 |**Tools**|Enthält Befehle zum Erstellen von Berichten und zum Migrieren von Objekten und Daten. Bietet auch Zugriff auf die Dialogfelder **globale Einstellungen** und **Projekteinstellungen** .|  

@@ -16,10 +16,10 @@ ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 79bca732108776b66a2e5750015a27e5931b617a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69028956"
 ---
 # <a name="sp_addpullsubscription_agent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
@@ -130,16 +130,16 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @frequency_type = ] frequency_type`Die Häufigkeit, mit der die Verteilungs-Agent geplant werden soll. *frequency_type* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
-|**2** (Standard)|On-Demand-Streaming|  
+|**2** (Standardwert)|On-Demand-Streaming|  
 |**4**|Täglich|  
 |**88**|Wöchentlich|  
 |**Uhr**|Monatlich|  
 |**32**|Monatlich, relativ|  
 |**64**|Autostart|  
-|**128**|Serie|  
+|**128**|Wiederholt|  
   
 > [!NOTE]  
 >  Das Angeben des Werts **64** bewirkt, dass die Verteilungs-Agent im kontinuierlichen Modus ausgeführt wird. Dies entspricht dem Festlegen des **-Continuous-** Parameters für den Agent. Weitere Informationen finden Sie unter [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md).  
@@ -148,7 +148,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Das Datum der Verteilungs-Agent. Dieser Parameter wird verwendet, wenn *frequency_type* auf **32** (monatlich, relativ) festgelegt ist. *frequency_relative_interval* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1** (Standard)|First (Erster)|  
 |**2**|Sekunde|  
@@ -160,7 +160,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @frequency_subday = ] frequency_subday`Gibt an, wie oft innerhalb des definierten Zeitraums neu geplant werden soll. *frequency_subday* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1** (Standard)|Einmalig|  
 |**2**|Sekunde|  
@@ -246,6 +246,6 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
  [sp_change_subscription_properties &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)   
  [sp_droppullsubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [sp_helppullsubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
- [sp_helpsubscription_properties &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
+ [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   

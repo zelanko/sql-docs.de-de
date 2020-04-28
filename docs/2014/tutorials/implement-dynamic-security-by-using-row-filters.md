@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 39d0d92d83a41970dcddae54d74aca3d118dcf6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530877"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>Implementieren von dynamischer Sicherheit mithilfe von Zeilenfiltern
@@ -46,9 +46,9 @@ ms.locfileid: "69530877"
   
 4.  Wählen Sie auf der Seite **Tabellen und Sichten auswählen** die Tabelle **DimSalesTerritory** aus.  
   
-5.  Geben Sie **Sales Territory** (Vertriebsgebiet) in die Spalte „Anzeigename“ ein.  
+5.  Geben Sie **Sales Territory**(Vertriebsgebiet) in die Spalte „Anzeigename“ ein.  
   
-6.  Klicken Sie auf **Preview and Filter** (Vorschau anzeigen und filtern).  
+6.  Klicken Sie auf **Preview and Filter**(Vorschau anzeigen und filtern).  
   
 7.  Heben Sie die Auswahl der Spalte **SalesTerritoryAlternateKey** auf, und klicken Sie anschließend auf **OK**.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "69530877"
   
 5.  Wählen Sie im Arbeitsblatt alle Zellen mit Mitarbeiterdaten, einschließlich der Kopfzeilen, aus, klicken Sie mit der rechten Maustaste auf die ausgewählten Daten, und klicken Sie anschließend auf **Kopieren**.  
   
-6.  Klicken Sie in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] auf das Menü **Bearbeiten** und anschließend auf **Einfügen**.  
+6.  Klicken Sie in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf das Menü **Bearbeiten** und anschließend auf **Einfügen**.  
   
      Wenn „Einfügen“ abgeblendet dargestellt ist, klicken Sie im Modell-Designer-Fenster in einer beliebigen Tabelle auf eine Spalte, und klicken Sie anschließend auf das Menü **Bearbeiten** und auf **Einfügen**.  
   
@@ -130,11 +130,11 @@ ms.locfileid: "69530877"
  In dieser Aufgabe erstellen Sie eine neue Benutzerrolle. Diese Rolle umfasst einen Zeilenfilter, der definiert, welche Zeilen der Tabelle Sales Territory für die Benutzer sichtbar sind. Der Filter wird dann über die 1:n-Beziehung auf alle anderen Tabellen angewendet, die mit der Tabelle Sales Territory verknüpft sind. Sie wenden außerdem einen einfachen Filter an, der die vollständige Tabelle Employee Security sichert, damit keine Benutzer, die Mitglied der Rolle sind, Daten in der Tabelle abfragen können.  
   
 > [!NOTE]  
->  Die Rolle „Sales Employees by Territory“, die Sie in dieser Lektion erstellen, bewirkt, dass Member nur Verkaufsdaten Ihres eigenen Gebiets durchsuchen oder abfragen können. Wenn Sie einen Benutzer als Mitglied zu der Rolle „Sales Employees by Territory“ (Vertriebsangestellte nach Gebiet) hinzufügen und er auch Mitglied einer Rolle ist, die unter [Lektion 12: Erstellen von Rollen](../analysis-services/lesson-11-create-roles.md) erstellt wurde, werden die Berechtigungen kombiniert. Wenn ein Benutzer ein Member mehrerer Rollen ist, sind die Berechtigungen und Zeilenfilter jeder Rolle kumulativ. Der Benutzer verfügt also um mehr Berechtigungen, entsprechend der kombinierten Rollen.  
+>  Die Rolle „Sales Employees by Territory“, die Sie in dieser Lektion erstellen, bewirkt, dass Member nur Verkaufsdaten Ihres eigenen Gebiets durchsuchen oder abfragen können. Wenn Sie einen Benutzer als Mitglied zu der Rolle „Sales Employees by Territory“ (Vertriebsangestellte nach Gebiet) hinzufügen und er auch Mitglied einer Rolle ist, die unter [Lektion 12: Erstellen von Rollen](../analysis-services/lesson-11-create-roles.md)erstellt wurde, werden die Berechtigungen kombiniert. Wenn ein Benutzer ein Member mehrerer Rollen ist, sind die Berechtigungen und Zeilenfilter jeder Rolle kumulativ. Der Benutzer verfügt also um mehr Berechtigungen, entsprechend der kombinierten Rollen.  
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>So erstellen Sie die Benutzerrolle „Sales Employees by Territory“  
   
-1.  Klicken Sie in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] auf das Menü **Modell** und anschließend auf **Rollen**.  
+1.  Klicken Sie in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]auf das Menü **Modell** und anschließend auf **Rollen**.  
   
 2.  Klicken Sie im Dialogfeld **Rollen-Manager** auf **Neu**.  
   
@@ -146,11 +146,11 @@ ms.locfileid: "69530877"
   
 5.  Klicken Sie auf die Registerkarte **Mitglieder** und anschließend auf **Hinzufügen**.  
   
-6.  Geben Sie im Dialogfeld **Benutzer oder Gruppe auswählen** unter **Geben Sie die zu verwendenden Objektnamen ein** den ersten Beispielbenutzernamen ein, den Sie beim Erstellen der Tabelle Employee Security verwendet haben. Klicken Sie auf **Namen prüfen**, um zu prüfen, ob der Name zulässig ist, und klicken Sie anschließend auf **OK**.  
+6.  Geben Sie im Dialogfeld **Benutzer oder Gruppe auswählen** unter **Geben Sie die zu verwendenden Objektnamen ein**den ersten Beispielbenutzernamen ein, den Sie beim Erstellen der Tabelle Employee Security verwendet haben. Klicken Sie auf **Namen prüfen**, um zu prüfen, ob der Name zulässig ist, und klicken Sie anschließend auf **OK**.  
   
      Wiederholen Sie diesen Schritt, und fügen Sie die anderen Beispielbenutzernamen hinzu, die Sie beim Erstellen der Tabelle Employee Security verwendet haben.  
   
-7.  Klicken Sie auf die Registerkarte **Zeilenfilter**.  
+7.  Klicken Sie auf die Registerkarte **Zeilenfilter** .  
   
 8.  Geben Sie `Employee Security` für die Tabelle in der Spalte **DAX Filter** die folgende Formel ein.  
   
@@ -173,7 +173,7 @@ ms.locfileid: "69530877"
 10. Klicken Sie im Dialogfeld „Rollen-Manager“ auf **OK**.  
   
 ## <a name="test-the-sales-employees-by-territory-user-role"></a>Testen der Benutzerrolle „Sales Employees by Territory“  
- In dieser Aufgabe verwenden Sie die Funktion In Excel analysieren in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], um die Wirksamkeit der Benutzerrolle Sales Employees by Territory zu testen. Geben Sie einen der Benutzernamen an, die Sie zur Tabelle Employee Security und als Mitglied der Rolle hinzugefügt haben. Dieser Benutzername wird dann als der gültige Benutzername in der zwischen Excel und dem Modell erstellten Verbindung verwendet.  
+ In dieser Aufgabe verwenden Sie die Funktion In Excel analysieren in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] , um die Wirksamkeit der Benutzerrolle Sales Employees by Territory zu testen. Geben Sie einen der Benutzernamen an, die Sie zur Tabelle Employee Security und als Mitglied der Rolle hinzugefügt haben. Dieser Benutzername wird dann als der gültige Benutzername in der zwischen Excel und dem Modell erstellten Verbindung verwendet.  
   
 #### <a name="to-test-the-sales-employees-by-territory-user-role"></a>So testen Sie die Benutzerrolle „Sales Employees by Territory“  
   
@@ -181,7 +181,7 @@ ms.locfileid: "69530877"
   
 2.  Wählen Sie im Dialogfeld **In Excel analysieren** unter **Geben Sie den Benutzernamen oder die Rolle für die Verbindung mit dem Modell** an **Andere Windows-Benutzer** aus, und klicken Sie auf **Durchsuchen**.  
   
-3.  Geben Sie im Dialogfeld **Benutzer oder Gruppe auswählen** in **Geben Sie die zu verwendenden Objektnamen ein** einen der Benutzernamen ein, die in der Tabelle „Employee“ enthalten sind, und klicken Sie anschließend auf **Namen überprüfen**.  
+3.  Geben Sie im Dialogfeld **Benutzer oder Gruppe auswählen** in **Geben Sie die zu verwendenden Objektnamen ein**einen der Benutzernamen ein, die in der Tabelle „Employee“ enthalten sind, und klicken Sie anschließend auf **Namen überprüfen**.  
   
 4.  Klicken Sie auf **OK**, um das Dialogfeld **Benutzer oder Gruppe auswählen** zu schließen, und klicken Sie anschließend auf **OK**, um das Dialogfeld **In Excel analysieren** zu schließen.  
   

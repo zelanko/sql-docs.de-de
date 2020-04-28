@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3f8a31fd2e6659f4d971ebb30bad7b2876dafa6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493944"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Verwenden einer geänderten Version des Analysis Services Tutorial-Projekts
@@ -24,7 +24,7 @@ ms.locfileid: "69493944"
   
 ## <a name="downloading-and-extracting-the-project-file"></a>Herunterladen und Extrahieren der Projektdatei  
   
-1.  [Klicken Sie hier](https://go.microsoft.com/fwlink/?LinkID=221866) , um zur Downloadseite zu wechseln, auf der die Beispiel Projekte für dieses Tutorial aufgeführt sind. Die Lernprogrammprojekte sind im Download **Analysis Services Tutorial SQL Server 2012** enthalten.  
+1.  [Klicken Sie hier](https://go.microsoft.com/fwlink/?LinkID=221866) , um die Downloadseite mit Beispielprojekten für dieses Lernprogramm aufzurufen. Die Lernprogrammprojekte sind im Download **Analysis Services Tutorial SQL Server 2012** enthalten.  
   
 2.  Klicken Sie auf **Analysis Services Tutorial SQL Server 2012** , um das Paket herunterzuladen, in dem die Projekte für dieses Lernprogramm enthalten sind.  
   
@@ -61,13 +61,13 @@ ms.locfileid: "69493944"
 #### <a name="internet-sales-diagram"></a>Internet Sales-Diagramm  
  Das **Internet Sales** -Diagramm enthält die Tabellen, die mit dem Verkauf von [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] -Produkten direkt an Kunden über das Internet verknüpft sind. Bei den Tabellen im Diagramm handelt es sich um die vier Dimensionstabellen und eine Faktentabelle, die Sie in Lektion 1 der **Adventure Works DW 2012** -Datenquellensicht hinzugefügt haben. Nachfolgend sind diese Tabellen aufgeführt:  
   
--   **Human**  
+-   **Geografie**  
   
 -   **Kunde**  
   
 -   **Date**  
   
--   **Produkt**  
+-   **Product**  
   
 -   **InternetSales**  
   
@@ -76,15 +76,15 @@ ms.locfileid: "69493944"
   
 -   **Reseller**  
   
--   **Ungs**  
+-   **Promotion**  
   
 -   **SalesTerritory**  
   
--   **Human**  
+-   **Geografie**  
   
 -   **Date**  
   
--   **Produkt**  
+-   **Product**  
   
 -   **Mitarbeiter**  
   

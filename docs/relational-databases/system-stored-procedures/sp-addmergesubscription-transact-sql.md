@@ -16,10 +16,10 @@ ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b501a2c06a6d9e8e3573ef5d5814c3318c4e623b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769134"
 ---
 # <a name="sp_addmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
@@ -74,10 +74,10 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @subscriber_type = ] 'subscriber_type'`Der Typ des Abonnenten. *subscriber_type*ist vom Datentyp **nvarchar (15)**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**local** (Standard)|Der Abonnent ist nur dem Verleger bekannt.|  
-|**Weltbühne**|Der Abonnent ist allen Servern bekannt.|  
+|**global**|Der Abonnent ist allen Servern bekannt.|  
   
  In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen werden lokale Abonnements als "Clientabonnements" und globale Abonnements als "Serverabonnements" bezeichnet.  
   
@@ -90,35 +90,35 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`Ein Wert, der angibt, wann die Merge-Agent ausgeführt wird. *frequency_type* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
 |**4**|Täglich|  
 |**88**|Wöchentlich|  
-|**€**|Monatlich|  
+|**10**|Monatlich|  
 |**20**|Monatlich, relativ zum Häufigkeitsintervall|  
 |**40**|Beim Starten des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agents|  
 |NULL (Standard)||  
   
 `[ @frequency_interval = ] frequency_interval`Der Tag oder die Tage, an denen die Merge-Agent ausgeführt wird. *frequency_interval* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Sonntag|  
 |**2**|Montag|  
-|**€**|Tuesday|  
-|**4**|Mittwoch|  
-|**5@@**|Thursday|  
+|**3**|Tuesday|  
+|**4**|Wednesday|  
+|**5**|Thursday|  
 |**6**|Freitag|  
-|**19.00**|Samstag|  
+|**7**|Samstag|  
 |**88**|Day (Tag)|  
-|**21.00**|Wochentage|  
-|**€**|Wochenendtage|  
+|**9**|Wochentage|  
+|**10**|Wochenendtage|  
 |NULL (Standard)||  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Das geplante Merge-Vorkommen des Häufigkeits Intervalls in jedem Monat. *frequency_relative_interval* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|First (Erster)|  
 |**2**|Sekunde|  
@@ -131,7 +131,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @frequency_subday = ] frequency_subday`Ist die Einheit für *frequency_subday_interval*. *frequency_subday* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
 |**2**|Sekunde|  
@@ -186,7 +186,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
  Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_addmergesubscription**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
+ [Erstellen eines Pushabonnements](../../relational-databases/replication/create-a-push-subscription.md)   
  [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [Interaktive Konfliktlösung](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
  [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md)   

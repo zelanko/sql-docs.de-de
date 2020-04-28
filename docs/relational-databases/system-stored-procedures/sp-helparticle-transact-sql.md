@@ -16,10 +16,10 @@ ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: e1e71d3795b233ec335cf01848fa3b226a6ebde0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771101"
 ---
 # <a name="sp_helparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
@@ -64,8 +64,8 @@ sp_helparticle [ @publication = ] 'publication'
 |**destination-Objekt**|**sysname**|Name der Zieltabelle (Abonnement).|  
 |**synchronization object**|**nvarchar (257)**|Name der Sicht, die den veröffentlichten Artikel definiert.|  
 |**type**|**smallint**|Der Artikeltyp:<br /><br /> **1** = Protokoll basiert.<br /><br /> **3** = Protokoll basiert mit manuellem Filter.<br /><br /> **5** = Protokoll basiert mit manueller Sicht.<br /><br /> **7** = Protokoll basiert mit manuellem Filter und manueller Ansicht.<br /><br /> **8** = Ausführung gespeicherter Prozeduren.<br /><br /> **24** = serialisierbare Ausführung gespeicherter Prozeduren.<br /><br /> **32** = gespeicherte Prozedur (nur Schema).<br /><br /> **64** = Ansicht (nur Schema).<br /><br /> **96** = Aggregatfunktion (nur Schema).<br /><br /> **128** = Funktion (nur Schema).<br /><br /> **257** = Protokoll basierte indizierte Sicht.<br /><br /> **259** = Protokoll basierte indizierte Sicht mit manuellem Filter.<br /><br /> **261** = Protokoll basierte indizierte Sicht mit manueller Sicht.<br /><br /> **263** = Protokoll basierte indizierte Sicht mit manuellem Filter und manueller Sicht.<br /><br /> **320** = indizierte Sicht (nur Schema).<br /><br />|  
-|**Stands**|**tinyint**|Kann das [& (Bitweises and)-](../../t-sql/language-elements/bitwise-and-transact-sql.md) Ergebnis einer oder mehrerer oder dieser Artikeleigenschaften sein:<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0x01** = der Artikel ist aktiv.<br /><br /> **0x08** = schließt den Spaltennamen in INSERT-Anweisungen ein.<br /><br /> **0x16** = parametrisierte Anweisungen verwenden.<br /><br /> **0x32** = parametrisierte Anweisungen verwenden und den Spaltennamen in INSERT-Anweisungen einschließen.|  
-|**Filter**|**nvarchar (257)**|Die gespeicherte Prozedur, mit der die Tabelle horizontal gefiltert wird. Diese gespeicherte Prozedur muss mit der FOR REPLICATION-Klausel erstellt werden.|  
+|**status**|**tinyint**|Kann das [& (Bitweises and)-](../../t-sql/language-elements/bitwise-and-transact-sql.md) Ergebnis einer oder mehrerer oder dieser Artikeleigenschaften sein:<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0x01** = der Artikel ist aktiv.<br /><br /> **0x08** = schließt den Spaltennamen in INSERT-Anweisungen ein.<br /><br /> **0x16** = parametrisierte Anweisungen verwenden.<br /><br /> **0x32** = parametrisierte Anweisungen verwenden und den Spaltennamen in INSERT-Anweisungen einschließen.|  
+|**filter**|**nvarchar (257)**|Die gespeicherte Prozedur, mit der die Tabelle horizontal gefiltert wird. Diese gespeicherte Prozedur muss mit der FOR REPLICATION-Klausel erstellt werden.|  
 |**Beschreibung**|**nvarchar(255)**|Beschreibungseintrag für den Artikel.|  
 |**insert_command**|**nvarchar(255)**|Der Replikationsbefehlstyp, der zur Replikation von Einfügungen bei Tabellenartikeln verwendet wird. Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**update_command**|**nvarchar(255)**|Der Replikationsbefehlstyp, der zur Replikation von Updates bei Tabellenartikeln verwendet wird. Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
@@ -84,8 +84,8 @@ sp_helparticle [ @publication = ] 'publication'
 |**unqua_filter**|**sysname**|Name des Filters, ohne den Namen des Besitzers.|  
 |**auto_identity_range**|**int**|Flag, das anzeigt, ob die automatische Behandlung von Identitätsbereichen für die Veröffentlichung bei ihrer Erstellung aktiviert wurde. **1** bedeutet, dass der automatische Identitäts Bereich aktiviert ist. der Wert **0** bedeutet, dass er deaktiviert ist.|  
 |**publisher_identity_range**|**int**|Bereichs Größe des Identitäts Bereichs auf dem Verleger, wenn für den Artikel *identityrangemanagementoption* auf **Auto** oder **auto_identity_range** auf **true**festgelegt ist.|  
-|**identity_range**|**BIGINT**|Bereichs Größe des Identitäts Bereichs auf dem Abonnenten, wenn für den Artikel *identityrangemanagementoption* auf **Auto** oder **auto_identity_range** auf **true**festgelegt ist.|  
-|**Mindest**|**BIGINT**|Prozentwert, der anzeigt, wann der Verteilungs-Agent einen neuen Identitätsbereich zuweist.|  
+|**identity_range**|**bigint**|Bereichs Größe des Identitäts Bereichs auf dem Abonnenten, wenn für den Artikel *identityrangemanagementoption* auf **Auto** oder **auto_identity_range** auf **true**festgelegt ist.|  
+|**Mindest**|**bigint**|Prozentwert, der anzeigt, wann der Verteilungs-Agent einen neuen Identitätsbereich zuweist.|  
 |**identityrangemanagementoption**|**int**|Gibt die für den Artikel behandelte Identitätsbereichsverwaltung an.|  
 |**fire_triggers_on_snapshot**|**bit**|Gibt an, ob replizierte Benutzertrigger beim Anwenden der Anfangsmomentaufnahme ausgeführt werden.<br /><br /> **1** = Benutzer Trigger werden ausgeführt.<br /><br /> **0** = Benutzer Trigger werden nicht ausgeführt.|  
   

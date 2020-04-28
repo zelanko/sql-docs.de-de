@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b9f58e472b0b6e6d164e45c2d1136c81bc4a46d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811230"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replikation mit Abonnenten von speicheroptimierten Tabellen
@@ -303,7 +303,7 @@ GO
   
 -   Fremdschlüssel, UNIQUE-Einschränkung, Trigger, Schemaänderungen, ROWGUIDCOL, berechnete Spalten, die Datenkomprimierung, Aliasdatentypen, Versionsverwaltung und Sperren werden in speicheroptimierte Tabellen nicht unterstützt. Weitere Informationen finden Sie unter [Transact-SQL Constructs Not Supported by In-Memory OLTP](../in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md) .  
   
-##  <a name="Schema"></a> Ändern einer Schemadatei  
+##  <a name="modifying-a-schema-file"></a><a name="Schema"></a>Ändern einer Schema Datei  
   
 -   Gruppierte Indizes werden nicht unterstützt. Ändern Sie alle gruppierten Indizes in nicht gruppierte Indizes.  
   
@@ -313,7 +313,7 @@ GO
   
 -   ANSI_PADDING muss auf ON festgelegt sein.  
   
-##  <a name="PrimaryKey"></a>Replizieren von Änderungen an einem Primärschlüssel  
+##  <a name="replicating-changes-to-a-primary-key"></a><a name="PrimaryKey"></a>Replizieren von Änderungen an einem Primärschlüssel  
  Der Primärschlüssel einer speicheroptimierten Tabelle kann nicht aktualisiert werden. Wenn Sie ein Primärschlüsselupdate auf einem Abonnenten replizieren möchten, ändern Sie die gespeicherte Updateprozedur so, dass der Updatevorgang als DELETE/INSERT-Paar übermittelt wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  

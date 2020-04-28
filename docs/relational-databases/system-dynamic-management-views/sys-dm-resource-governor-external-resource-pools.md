@@ -21,10 +21,10 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: cf77a073a1432df839bfd13046c66018496e79f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68468514"
 ---
 # <a name="sysdm_resource_governor_external_resource_pools-transact-sql"></a>sys. dm_resource_governor_external_resource_pools (Transact-SQL)
@@ -32,22 +32,22 @@ ms.locfileid: "68468514"
 
 Gibt Informationen zum aktuellen Status des externen Ressourcenpools, zur aktuellen Konfiguration von Ressourcenpools und Ressourcenpool Statistiken zurück. 
   
- ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
 |Name des colmn      |Datentyp      |BESCHREIBUNG|  
 |----------------|---------------|-----------------| 
 | external_pool_id|**int**|Die ID des Ressourcenpools. Lässt keine NULL-Werte zu. |
-| name|**sysname**|Der Name des Ressourcenpools. Lässt keine NULL-Werte zu. 
+| Name|**sysname**|Der Name des Ressourcenpools. Lässt keine NULL-Werte zu. 
 | pool_version|**int**|Interne Versionsnummer.|
 | max_cpu_percent|**int**|Die aktuelle Konfiguration für die maximale durchschnittliche CPU-Bandbreite, die für alle Anforderungen im Ressourcenpool zulässig ist, wenn CPU-Konflikte bestehen. Lässt keine NULL-Werte zu. |
 | max_processes|**int**|Maximale Anzahl gleichzeitiger externer Prozesse. Der Standardwert 0 bedeutet, dass kein Grenzwert festgelegt ist. Lässt keine NULL-Werte zu.|
 | max_memory_percent|**int**|Die aktuelle Konfiguration des Prozentsatzes des gesamten Serverspeichers, der für Anforderungen in diesem Ressourcenpool verwendet werden kann. Lässt keine NULL-Werte zu. |
 | statistics_start_time|**datetime**|Der Zeitpunkt, zu dem Statistiken für diesen Pool zurückgesetzt wurden. Lässt keine NULL-Werte zu. 
-| peak_memory_kb|**BIGINT**|Die maximale Menge an Arbeitsspeicher in Kilobyte für den Ressourcenpool. Lässt keine NULL-Werte zu. |
+| peak_memory_kb|**bigint**|Die maximale Menge an Arbeitsspeicher in Kilobyte für den Ressourcenpool. Lässt keine NULL-Werte zu. |
 | write_io_count|**int**|Die Gesamtanzahl der E/A-Schreibvorgänge, die seit dem Zurücksetzen der Ressourcenkontrollstatistiken ausgegeben wurden. Lässt keine NULL-Werte zu. |
 | read_io_count|**int**|Die Gesamtanzahl der E/A-Lesevorgänge, die seit dem Zurücksetzen der Ressourcenkontrollstatistiken ausgegeben wurden. Lässt keine NULL-Werte zu. |
-| total_cpu_kernel_ms|**BIGINT**|Die CPU-Zeit des kumulativen CPU-Benutzers in Millisekunden seit dem Zurücksetzen der Ressourcen-govenstatistik. Lässt keine NULL-Werte zu. |
-| total_cpu_user_ms|**BIGINT**|Die kumulierte CPU-Benutzer Zeit in Millisekunden seit dem Zurücksetzen der Ressourcen-govenstatistik. Lässt keine NULL-Werte zu. |
+| total_cpu_kernel_ms|**bigint**|Die CPU-Zeit des kumulativen CPU-Benutzers in Millisekunden seit dem Zurücksetzen der Ressourcen-govenstatistik. Lässt keine NULL-Werte zu. |
+| total_cpu_user_ms|**bigint**|Die kumulierte CPU-Benutzer Zeit in Millisekunden seit dem Zurücksetzen der Ressourcen-govenstatistik. Lässt keine NULL-Werte zu. |
 | active_processes_count|**int**|Die Anzahl externer Prozesse, die zum Zeitpunkt der Anforderung ausgeführt werden. Lässt keine NULL-Werte zu. |
 
  
@@ -56,6 +56,6 @@ Gibt Informationen zum aktuellen Status des externen Ressourcenpools, zur aktuel
 Erfordert die `VIEW SERVER STATE`-Berechtigung.
 
 ## <a name="see-also"></a>Weitere Informationen  
- [sys. dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
+ [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  
   
   

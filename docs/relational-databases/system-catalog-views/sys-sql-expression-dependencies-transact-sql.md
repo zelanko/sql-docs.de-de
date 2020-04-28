@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: ade6ffc213d570fcb7da965cf73f43e2db335d17
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69561125"
 ---
 # <a name="syssql_expression_dependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
@@ -51,10 +51,10 @@ ms.locfileid: "69561125"
 |referencing_id|**int**|ID der verweisenden Entität. Lässt keine NULL-Werte zu.|  
 |referencing_minor_id|**int**|Die Spalten-ID, wenn es sich bei der verweisenden Entität um eine Spalte handelt. Andernfalls ist der Wert 0. Lässt keine NULL-Werte zu.|  
 |referencing_class|**tinyint**|Klasse der verweisenden Entität.<br /><br /> 1 = Objekt oder Spalte<br /><br /> 12 = DDL-Trigger auf Datenbankebene<br /><br /> 13 = DDL-Trigger auf Serverebene<br /><br /> Lässt keine NULL-Werte zu.|  
-|referencing_class_desc|**nvarchar (60)**|Klassenbeschreibung der verweisenden Entität.<br /><br /> OBJECT_OR_COLUMN<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER<br /><br /> Lässt keine NULL-Werte zu.|  
+|referencing_class_desc|**nvarchar(60)**|Klassenbeschreibung der verweisenden Entität.<br /><br /> OBJECT_OR_COLUMN<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER<br /><br /> Lässt keine NULL-Werte zu.|  
 |is_schema_bound_reference|**bit**|1 = Entität, auf die verwiesen wird, ist schemagebunden.<br /><br /> 0 = Entität, auf die verwiesen wird, ist nicht schemagebunden.<br /><br /> Lässt keine NULL-Werte zu.|  
 |referenced_class|**tinyint**|Klasse der Entität, auf die verwiesen wird.<br /><br /> 1 = Objekt oder Spalte<br /><br /> 6 = Typ<br /><br /> 10 = XML-Schemaauflistung<br /><br /> 21 = Partitionsfunktion<br /><br /> Lässt keine NULL-Werte zu.|  
-|referenced_class_desc|**nvarchar (60)**|Klassenbeschreibung der Entität, auf die verwiesen wird.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> Lässt keine NULL-Werte zu.|  
+|referenced_class_desc|**nvarchar(60)**|Klassenbeschreibung der Entität, auf die verwiesen wird.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION<br /><br /> Lässt keine NULL-Werte zu.|  
 |referenced_server_name|**sysname**|Servername der Entität, auf die verwiesen wird.<br /><br /> Diese Spalte wird für serverübergreifende Abhängigkeiten aufgefüllt, die auf der Angabe eines gültigen vierteiligen Namens basieren. Weitere Informationen zu mehrteiligen Namen finden Sie unter [Transact-SQL-Syntax Konventionen &#40;Transact-SQL-&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).<br /><br /> NULL für nicht schemagebundene Entitäten, für die ohne Angabe eines vierteiligen Namens auf die Entität verwiesen wurde.<br /><br /> NULL für Schema gebundene Entitäten, da Sie sich in derselben Datenbank befinden müssen und deshalb nur mit einem zweiteiligen Namen (*Schema. Object*) definiert werden können.|  
 |referenced_database_name|**sysname**|Datenbankname der Entität, auf die verwiesen wird.<br /><br /> Diese Spalte wird für datenbankübergreifende oder serverübergreifende Verweise aufgefüllt, die auf der Angabe eines gültigen dreiteiligen oder vierteiligen Namens basieren.<br /><br /> NULL für nicht schemagebundene Verweise, wenn auf Basis eines einteiligen oder zweiteiligen Namens angegeben.<br /><br /> NULL für Schema gebundene Entitäten, da Sie sich in derselben Datenbank befinden müssen und deshalb nur mit einem zweiteiligen Namen (*Schema. Object*) definiert werden können.|  
 |referenced_schema_name|**sysname**|Schema, in das die Entität gehört, auf die verwiesen wird.<br /><br /> NULL für nicht schemagebundene Verweise, in denen ohne Angabe des Schemanamens auf die Entität verwiesen wird.<br /><br /> Niemals NULL für schemagebundene Verweise, da schemagebundene Entitäten mit einem zweiteiligen Namen definiert werden müssen und mit diesem zweiteiligen Namen auf sie verwiesen werden muss.|  
@@ -73,12 +73,12 @@ ms.locfileid: "69561125"
 |Entitätstyp|Verweisende Entität|Entität, auf die verwiesen wird|  
 |-----------------|------------------------|-----------------------|  
 |Tabelle|Ja*|Ja|  
-|Sicht|Ja|Ja|  
+|Anzeigen|Ja|Ja|  
 |Gefilterter Index|Ja**|Nein|  
 |Gefilterte Statistik|Ja**|Nein|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]gespeicherte Prozedur * * *|Ja|Ja|  
+|Gespeicherte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Prozedur***|Ja|Ja|  
 |Gespeicherte CLR-Prozedur|Nein |Ja|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]benutzerdefinierte Funktion|Ja|Ja|  
+|Benutzerdefinierte Funktion in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Ja|  
 |CLR-benutzerdefinierte Funktion|Nein |Ja|  
 |CLR-Trigger (DML und DDL)|Nein|Nein|  
 |DML-Trigger in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Nein|  
@@ -172,7 +172,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sys. dm_sql_referenced_entities &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
+ [sys.dm_sql_referenced_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)   
  [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)  
   
   

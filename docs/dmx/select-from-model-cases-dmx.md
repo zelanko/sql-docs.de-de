@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5f0334c37eeedafee7066f01d61745fcb82d1629
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892847"
 ---
 # <a name="select-from-ltmodelgtcases-dmx"></a>Wählen Sie &lt;aus&gt;dem Modell aus. Fälle (DMX)
@@ -37,7 +37,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
   
 ## <a name="arguments"></a>Argumente  
  *n*  
- Optional. Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
+ (Optional) Eine ganze Zahl, die angibt, wie viele Zeilen zurückgegeben werden sollen.  
   
  *Ausdrucks Liste*  
  Eine Liste von Ausdrücken, die durch Trennzeichen voneinander getrennt sind. Ein Ausdruck kann u. a. Spaltenbezeichner, benutzerdefinierte Funktionen und VBA-Funktionen einschließen.  
@@ -50,8 +50,8 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CASES
  *Bedingungs Ausdruck*  
  Eine Bedingung, die die Werte einschränkt, die für die Spaltenliste zurückgegeben werden.  
   
- *Begriff*  
- Optional. Ein Ausdruck, der einen Skalarwert zurückgibt.  
+ *expression*  
+ (Optional) Ein Ausdruck, der einen Skalarwert zurückgibt.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Wenn Sie Drillthrough sowohl für das Miningmodell als auch für die Miningstruktur aktivieren, können Benutzer, die Mitglied einer Rolle mit Drillthroughberechtigungen für das Miningmodell und die Miningstruktur sind, auf Spalten in der Miningstruktur zugreifen, die nicht Teil des Miningmodells sind. Daher sollten Sie zum Schutz sensibler Daten oder persönlicher Informationen die Datenquellen Sicht so erstellen, dass persönliche Informationen maskiert werden, und die **AllowDrillThrough** -Berechtigung für eine Mining Struktur nur bei Bedarf erteilen.  
@@ -90,6 +90,6 @@ AND IsInNode('002')
  [Wählen Sie &#40;DMX-&#41;](../dmx/select-dmx.md)   
  [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Definitions Anweisungen](../dmx/dmx-statements-data-definition.md)   
  [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining-Erweiterungen &#40;DMX-&#41;-Anweisungs Referenz](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

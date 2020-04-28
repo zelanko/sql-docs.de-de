@@ -12,11 +12,11 @@ ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8c67150d5345b95b025e4005642ebccac63f86f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.openlocfilehash: 52770f78381da2eb686aa445d19e6923f0f0a275
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889500"
 ---
 # <a name="local-cubes-analysis-services---multidimensional-data"></a>Lokale Cubes (Analysis Services - Mehrdimensionale Daten)
@@ -24,7 +24,7 @@ ms.locfileid: "68889500"
   
  Lokale Cubes und lokale Miningmodelle ermöglichen Analysen auf einer Clientarbeitsstation, wenn deren Verbindung mit dem Netzwerk getrennt ist. Beispielsweise könnte eine Clientanwendung den OLE DB-Anbieter für OLAP 9.0 (MSOLAP.3) aufrufen, der die lokale Cube-Engine zum Erstellen und Abfragen von lokalen Cubes lädt, wie in der folgenden Abbildung dargestellt:  
   
- ![Clientarchitektur für lokale Cubes und Modelle](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-localcubearch9.gif "Clientarchitektur für lokale Cubes und Modelle")  
+ ![Clientarchitektur für lokale Cubes und Modelle](../../../analysis-services/dev-guide/media/as-localcubearch9.gif "Clientarchitektur für lokale Cubes und Modelle")  
   
  ADMOD.NET und Analysis Management Objects (AMO) laden zudem die lokale Cube-Engine, wenn eine Interaktion mit lokalen Cubes erfolgt. Es kann nur mit einem einzelnen Prozess auf eine lokale Cubedatei zugegriffen werden, da die lokale Cube-Engine eine lokale Cubedatei exklusiv sperrt, wenn eine Verbindung mit dem lokalen Cube hergestellt wird. Mit einem Prozess sind bis zu fünf gleichzeitige Verbindungen zulässig.  
   

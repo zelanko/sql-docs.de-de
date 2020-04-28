@@ -22,10 +22,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2f0e03483ab0e2470df24fa2a00e6b7965b2199f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265890"
 ---
 # <a name="sysdm_fts_outstanding_batches-transact-sql"></a>sys.dm_fts_outstanding_batches (Transact-SQL)
@@ -45,8 +45,8 @@ ms.locfileid: "68265890"
 |hr_batch|**int**|Zuletzt aufgetretener Fehlercode für den Batch|  
 |is_retry_batch|**bit**|Gibt an, ob dies ein Wiederholungsbatch ist:<br /><br /> 0 = Nein<br /><br /> 1 = Ja|  
 |retry_hints|**int**|Typ der für den Batch benötigten Wiederholung:<br /><br /> 0 = Keine Wiederholung<br /><br /> 1 = Multithreadwiederholung<br /><br /> 2 = Einzelthreadwiederholung<br /><br /> 3 = Einzel- und Multithreadwiederholung<br /><br /> 5 = Letzte Multithreadwiederholung<br /><br /> 6 = Letzte Einzelthreadwiederholung<br /><br /> 7 = Letzte Einzel- und Multithreadwiederholung|  
-|retry_hints_description|**nvarchar (120)**|Beschreibung des benötigten Wiederholungstyps:<br /><br /> NO RETRY<br /><br /> MULTI THREAD RETRY<br /><br /> SINGLE THREAD RETRY<br /><br /> SINGLE AND MULTI THREAD RETRY<br /><br /> MULTI THREAD FINAL RETRY<br /><br /> SINGLE THREAD FINAL RETRY<br /><br /> SINGLE AND MULTI THREAD FINAL RETRY|  
-|doc_failed|**BIGINT**|Anzahl der fehlgeschlagenen Dokumente im Batch|  
+|retry_hints_description|**nvarchar(120)**|Beschreibung des benötigten Wiederholungstyps:<br /><br /> NO RETRY<br /><br /> MULTI THREAD RETRY<br /><br /> SINGLE THREAD RETRY<br /><br /> SINGLE AND MULTI THREAD RETRY<br /><br /> MULTI THREAD FINAL RETRY<br /><br /> SINGLE THREAD FINAL RETRY<br /><br /> SINGLE AND MULTI THREAD FINAL RETRY|  
+|doc_failed|**bigint**|Anzahl der fehlgeschlagenen Dokumente im Batch|  
 |batch_timestamp|**timestamp**|Der Timestampwert, der bei der Erstellung des Batches erhalten wurde|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -64,6 +64,6 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Dynamische Verwaltungs Sichten und Funktionen für die voll Text Suche und die semantische Suche &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
- [Volltextsuche](../../relational-databases/search/full-text-search.md)  
+ [Voll Text Suche](../../relational-databases/search/full-text-search.md)  
   
   

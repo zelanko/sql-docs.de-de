@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d835269f77e563b94c89c3a68c5c82844edc773
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493968"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>Konfigurieren von PowerPivot und Bereitstellen von Lösungen (SharePoint 2013)
@@ -36,15 +36,15 @@ ms.locfileid: "69493968"
   
  [Beheben von Problemen](#bkmk_troubleshoot_issues)  
   
-##  <a name="bkmk_run_configuration_tool"></a>PowerPivot für SharePoint 2013-Konfiguration ausführen  
- **Hinweis:** Der [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Setup-Assistent installiert zwei verschiedene Konfigurationstools [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]für. Jedes Tool unterstützt eine andere SharePoint-Version.  
+##  <a name="run-powerpivot-for-sharepoint-2013-configuration"></a><a name="bkmk_run_configuration_tool"></a>PowerPivot für SharePoint 2013-Konfiguration ausführen  
+ **Hinweis:** Vom Setup-Assistenten für [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] werden zwei unterschiedliche Konfigurationstools für [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]installiert. Jedes Tool unterstützt eine andere SharePoint-Version.  
   
 |Name|BESCHREIBUNG|  
 |----------|-----------------|  
 |Konfiguration von PowerPivot für SharePoint 2013|SharePoint 2013|  
 |PowerPivot-Konfigurationstool|SharePoint 2010 mit SharePoint 2010 Service Pack 1 (SP1)|  
   
- **Hinweis:** Sie müssen ein Farm Administrator sein, um die folgenden Schritte ausführen zu können. Angenommen, eine Fehlermeldung mit etwa folgendem Wortlaut wird ausgegeben:  
+ **Hinweis:** Die folgenden Schritte können nur von einem Farmadministrator ausgeführt werden. Angenommen, eine Fehlermeldung mit etwa folgendem Wortlaut wird ausgegeben:  
   
 -   "Der Benutzer ist kein Farm Administrator. Beheben Sie die Überprüfungsfehler, und wiederholen Sie den Vorgang."  
   
@@ -58,13 +58,13 @@ ms.locfileid: "69493968"
   
 4.  Registerkarte **Parameter** :  
   
-    1.  **Standardkonto Benutzername**: Geben Sie ein Domänen Benutzerkonto für das Standardkonto ein. Dieses Konto wird verwendet, um Dienste bereitzustellen, einschließlich des PowerPivot-Dienstanwendungspools. Geben Sie kein integriertes Konto wie Network Service oder Local System an. Das Tool blockiert Konfigurationen, bei denen integrierte Konten angegeben werden.  
+    1.  **Benutzername für Standardkonto**: Geben Sie ein Domänenbenutzerkonto für das Standardkonto ein. Dieses Konto wird verwendet, um Dienste bereitzustellen, einschließlich des PowerPivot-Dienstanwendungspools. Geben Sie kein integriertes Konto wie Network Service oder Local System an. Das Tool blockiert Konfigurationen, bei denen integrierte Konten angegeben werden.  
   
-    2.  **Daten Bank Server**: Sie können SQL Server Datenbank-Engine verwenden, das für die SharePoint-Farm unterstützt wird.  
+    2.  **Datenbankserver**: Sie können die für die SharePoint-Farm unterstützte SQL Server-Datenbank-Engine verwenden.  
   
-    3.  **Passphrase**: Geben Sie eine Passphrase ein. Wenn Sie eine neue SharePoint-Farm erstellen, wird die Passphrase immer dann verwendet, wenn Sie der SharePoint-Farm einen Server oder eine Anwendung hinzufügen. Wenn die Farm bereits vorhanden ist, geben Sie die Passphrase ein, die Ihnen ermöglicht, der Farm eine Serveranwendung hinzuzufügen.  
+    3.  **Passphrase**. Geben Sie eine Passphrase ein. Wenn Sie eine neue SharePoint-Farm erstellen, wird die Passphrase immer dann verwendet, wenn Sie der SharePoint-Farm einen Server oder eine Anwendung hinzufügen. Wenn die Farm bereits vorhanden ist, geben Sie die Passphrase ein, die Ihnen ermöglicht, der Farm eine Serveranwendung hinzuzufügen.  
   
-    4.  **Power Pivot-Server für Excel Services**: Geben Sie den Namen [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] eines Servers im SharePoint-Modus ein. Bei einer Bereitstellung auf einem einzelnen Server entspricht dieser dem Datenbankserver. `[ServerName]\powerpivot`  
+    4.  **PowerPivot-Server für Excel Services**: Geben Sie den Namen eines [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] -Servers im SharePoint-Modus ein. Bei einer Bereitstellung auf einem einzelnen Server entspricht dieser dem Datenbankserver. `[ServerName]\powerpivot`  
   
     5.  Klicken Sie im linken Fenster auf **Websitesammlung erstellen** . Notieren Sie sich die **Website-URL** , damit Sie sie später zur Hand haben. Wenn der SharePoint-Server noch nicht konfiguriert ist, verwendet der Konfigurations-Assistent für die URL der Webanwendung und Websitesammlung standardmäßig den Stamm von `http://[ServerName]`. Um die Standardeinstellungen zu ändern, überprüfen Sie die folgenden Seiten im linken Fenster: **Standardwebanwendung erstellen** und **Webanwendungslösung bereitstellen**  
   
@@ -78,26 +78,26 @@ ms.locfileid: "69493968"
   
  Weitere Informationen finden Sie unter [konfigurieren oder reparieren PowerPivot für SharePoint 2010 &#40;Power Pivot-Konfigurationstools&#41;](../../configure-repair-powerpivot-sharepoint-2010.md)  
   
-##  <a name="bkmk_verify_powerpivot"></a>Überprüfen der Power Pivot-Konfiguration  
+##  <a name="verify-powerpivot-configuration"></a><a name="bkmk_verify_powerpivot"></a>Überprüfen der Power Pivot-Konfiguration  
  **Betreuung**  
   
-1.  Klicken Sie in der zentral Administration unter System Einstellungen auf **Dienste auf dem Server verwalten**.  
+1.  Klicken Sie in der Zentraladministration unter Systemeinstellungen auf **Dienste auf dem Server verwalten**.  
   
 2.  Überprüfen Sie, ob **SQL Server Analysis Services** und **SQL Server PowerPivot System Service** gestartet wurden.  
   
- **Farm Feature:**  
+ **Farmfunktion:**  
   
 1.  Klicken Sie in der Zentraladministration unter Systemeinstellungen auf **Farmfunktionen verwalten**.  
   
 2.  Überprüfen Sie, ob **Funktion zur PowerPivot-Integration** auf **Aktiv**festgelegt ist.  
   
- **Website Sammlungs Feature:**  
+ **Websitesammlungsfunktion:**  
   
 1.  Navigieren Sie zu der vom Konfigurationstool erstellten Website-URL.  
   
      Klicken Sie auf **Einstellungen**![SharePoint-Einstellungen](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint-Einstellungen")und dann auf **Website Einstellungen**.  
   
-     Klicken Sie auf **Website Sammlungs Features**.  
+     Klicken Sie auf **Websitesammlungs-Features**.  
   
 2.  Stellen Sie sicher, dass **Funktion zur PowerPivot-Integration für Websitesammlungen** auf **Aktiv**festgelegt ist.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "69493968"
   
  Weitere Informationen finden Sie unter [Verify a PowerPivot for SharePoint Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation).  
   
-##  <a name="bkmk_troubleshoot_issues"></a>Beheben von Problemen  
+##  <a name="troubleshoot-issues"></a><a name="bkmk_troubleshoot_issues"></a>Beheben von Problemen  
  Um Unterstützung bei der Problembehandlung zu erhalten, empfiehlt es sich, die Diagnoseprotokollierung zu aktivieren.  
   
 1.  Klicken Sie in der SharePoint-Zentraladministration auf **Überwachung** und dann auf **Verwendungs- und Integritätsdatenerfassung konfigurieren**.  

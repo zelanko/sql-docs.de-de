@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: c06fb621cab581e934ba4655ed6507149d109c60
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266502"
 ---
 # <a name="selecting-and-configuring-affected-objects-oracletosql"></a>Auswählen und Konfigurieren von betroffenen Objekten (OracleToSQL)
@@ -50,7 +50,7 @@ Die Registerkarte Tabelle enthält die Rasteransicht der ausgewählten Tabelle. 
 ## <a name="sql"></a>Sql  
 Die Registerkarte "SQL" enthält die SQL-Tabelle "CREATE TABLE" der ausgewählten Tabelle.  
   
-## <a name="data"></a>Data  
+## <a name="data"></a>Daten  
 Registerkarte Daten zeigt Daten an, die in der ausgewählten Tabelle enthalten sind.  
   
 ## <a name="properties"></a>Eigenschaften  

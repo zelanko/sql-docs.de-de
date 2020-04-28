@@ -18,10 +18,10 @@ ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 554b9317d6b474b23e9dbbc10dea03156ccc6287
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68702786"
 ---
 # <a name="sp_stored_procedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
@@ -43,9 +43,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @sp_name = ] 'name'`Der Name der Prozedur, die zum Zurückgeben von Katalog Informationen verwendet wird. *Name ist vom Datentyp* **nvarchar (390)** und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt.  
+`[ @sp_name = ] 'name'`Der Name der Prozedur, die zum Zurückgeben von Katalog Informationen verwendet wird. *name* ist vom Datentyp **nvarchar(390)** und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt.  
   
-`[ @sp_owner = ] 'schema'`Der Name des Schemas, zu dem die Prozedur gehört. *Schema* ist vom Datentyp **nvarchar (384)** und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Wenn *owner* nicht angegeben wird, gelten die Standardregeln für die Sichtbarkeit von Prozeduren des zugrunde liegenden DBMS.  
+`[ @sp_owner = ] 'schema'`Der Name des Schemas, zu dem die Prozedur gehört. *schema* ist vom Datentyp **nvarchar(384)** und hat den Standardwert NULL. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Wenn *owner* nicht angegeben wird, gelten die Standardregeln für die Sichtbarkeit von Prozeduren des zugrunde liegenden DBMS.  
   
  Wenn das aktuelle Schema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]eine Prozedur mit dem angegebenen Namen enthält, wird diese Prozedur zurückgegeben. Wird ein nicht gekennzeichneter Name einer gespeicherten Prozedur angegeben, durchsucht [!INCLUDE[ssDE](../../includes/ssde-md.md)] die folgenden Schemas in der angegebenen Reihenfolge nach der Prozedur:  
   
@@ -55,13 +55,13 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   Das **dbo** -Schema in der aktuellen Datenbank  
   
-`[ @qualifier = ] 'qualifier'`Der Name des Prozedur Qualifizierers. *Qualifizierer* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen im Format (_qualifier_**.**_schema_**.**_name_. Wenn das aktuelle Schema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *qualifier* den Datenbanknamen dar. Bei einigen anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
+`[ @qualifier = ] 'qualifier'`Der Name des Prozedur Qualifizierers. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Namensgebung für Tabellen im Format (_qualifier_**.**_schema_**.**_name_. Wenn das aktuelle Schema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]stellt *qualifier* den Datenbanknamen dar. Bei einigen anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
   
-`[ @fUsePattern = ] 'fUsePattern'`Bestimmt, ob der Unterstrich (_), Prozent (%) oder eckige Klammern []) als Platzhalter Zeichen interpretiert werden. *fUsePattern* ist vom Typ **Bit**. der Standardwert ist 1.  
+`[ @fUsePattern = ] 'fUsePattern'`Bestimmt, ob der Unterstrich (_), Prozent (%) oder eckige Klammern []) als Platzhalter Zeichen interpretiert werden. *fUsePattern* ist vom Datentyp **bit**. Der Standardwert ist 1.  
   
- **0** = Muster Vergleich ist deaktiviert.  
+ **0** = Mustervergleich ist deaktiviert.  
   
- **1** = Muster Vergleich ist on.  
+ **1** = Mustervergleich ist aktiviert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  Keine  
@@ -76,10 +76,8 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 |**NUM_INPUT_PARAMS**|**int**|Für die zukünftige Verwendung reserviert.|  
 |**NUM_OUTPUT_PARAMS**|**int**|Für die zukünftige Verwendung reserviert.|  
 |**NUM_RESULT_SETS**|**int**|Für die zukünftige Verwendung reserviert.|  
-|**Rede**|**varchar (254)**|Die Beschreibung der Prozedur. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt für diese Spalte keinen Wert zurück.|  
-|**PROCEDURE_TYPE**|**smallint**|Der Prozedurtyp. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt immer 2,0 zurück. Die folgenden Werte sind möglich:<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
+|**HINWEISE**|**varchar (254)**|Die Beschreibung der Prozedur. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt für diese Spalte keinen Wert zurück.|  
+|**PROCEDURE_TYPE**|**smallint**|Der Prozedurtyp. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt immer 2,0 zurück. Die folgenden Werte sind möglich:<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
 ## <a name="remarks"></a>Bemerkungen  
  Für eine optimale Interoperabilität sollte der Gatewayclient nur einen SQL-Standardmustervergleich voraussetzen (die Platzhalterzeichen Prozent (%) und Unterstrich (_)).  

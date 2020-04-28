@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86aa646865ecfe3da6ed1ad4bacb75907ab39472
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891864"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Datentypen in Ausdrücken (Berichts-Generator und SSRS)
@@ -35,7 +35,7 @@ ms.locfileid: "68891864"
 |Integer|Standard: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
 |Datetime|Standard: DateTime<br /><br /> DateTimeOffset|  
 |Float|Standard: Double<br /><br /> Single, Decimal|  
-|Binär|Standard: Byte[]|  
+|Binary|Standard: Byte[]|  
 |Variant|Beliebiger Wert von oben außer Byte []|  
 |VariantArray|Array von Variant|  
 |Serialisierbar|Variant oder Typen, die mit Serializable markiert sind oder ISerializable implementieren.|  
@@ -65,7 +65,7 @@ ms.locfileid: "68891864"
   
 -   Erstellen Sie ein berechnetes, auf einem bestehenden Berichtsdatasetfeld basierendes Feld, indem Sie einen Ausdruck schreiben, durch den alle Daten in einer Resultsetspalte in eine neue Spalte mit einem anderen Datentyp konvertiert werden. So wird beispielsweise durch den folgenden Ausdruck das Feld Year von einer Ganzzahl in eine Zeichenfolge konvertiert: `=CStr(Fields!Year.Value)`. Weitere Informationen finden Sie unter [Hinzufügen, Bearbeiten und Aktualisieren von Feldern im Berichtsdatenbereich &#40;Berichts-Generator und SSRS&#41;](../report-data/add-edit-refresh-fields-in-the-report-data-pane-report-builder-and-ssrs.md).  
   
--   Überprüfen Sie, ob die verwendete Datenverarbeitungserweiterung Metadaten zum Abrufen von vorformatierten Daten enthält. Eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] MDX-Abfrage enthält z. b. eine FORMATTED_VALUE erweiterte Eigenschaft für cubewerte, die bereits bei der Verarbeitung des Cubes formatiert wurden. Weitere Informationen finden Sie unter [Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS)](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
+-   Überprüfen Sie, ob die verwendete Datenverarbeitungserweiterung Metadaten zum Abrufen von vorformatierten Daten enthält. So enthält beispielsweise eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-MDX-Abfrage die erweiterte Eigenschaft FORMATTED_VALUE für Cube-Werte, die bereits während der Verarbeitung des Cubes formatiert wurden. Weitere Informationen finden Sie unter [Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS)](../report-data/extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
 ## <a name="understanding-parameter-data-types"></a>Parameterdatentypen  
  Berichtsparameter müssen einen der folgenden Datentypen aufweisen: Boolesch (Boolean), Datum/Zeit (DateTime), Ganzzahl (Integer), Gleitkomma (Float) oder Text (String). Wenn eine Datasetabfrage Abfrageparameter enthält, werden automatisch Berichtsparameter erstellt und mit den Abfrageparametern verknüpft. Der Standarddatentyp für einen Berichtsparameter lautet String. Wenn Sie den Standarddatentyp eines Berichtsparameters ändern möchten, wählen Sie im Dialogfeld **Berichtsparametereigenschaften** auf der Seite **Allgemein** in der Dropdownliste **Datentyp** den gewünschten Wert aus.  

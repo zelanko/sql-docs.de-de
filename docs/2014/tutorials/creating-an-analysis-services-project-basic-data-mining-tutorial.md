@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a7fcece285a17e158fcdfe77ef00004afe637541
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69494032"
 ---
 # <a name="creating-an-analysis-services-project-basic-data-mining-tutorial"></a>Erstellen eines Analysis Services-Projekts (Lernprogramm zu Data Mining-Grundlagen)
@@ -30,8 +30,7 @@ ms.locfileid: "69494032"
   
  In diesem Lernprogramm verwenden Sie das relationale Data Warehouse [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)]als Datenquelle. Sie stellen alle Ihre Data Mining-Objekte in einer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenbank mit dem Namen `BasicDataMining` bereit, die ausschließlich für Data Mining verwendet wird.  
   
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verwendet standardmäßig die **localhost** -Instanz für neue Projekte. Wenn Sie eine benannte Instanz oder einen anderen Server verwenden, müssen Sie zunächst das Projekt erstellen und öffnen und anschließend den Instanznamen ändern.  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verwendet standardmäßig die **localhost** -Instanz für neue Projekte. Wenn Sie eine benannte Instanz oder einen anderen Server verwenden, müssen Sie zunächst das Projekt erstellen und öffnen und anschließend den Instanznamen ändern.  
   
  Weitere Informationen zu [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Projekten finden Sie unter [Creating an Analysis Services Project](../analysis-services/lesson-1-1-creating-an-analysis-services-project.md).  
   
@@ -45,7 +44,7 @@ ms.locfileid: "69494032"
   
 4.  Wählen Sie im Bereich **Vorlagen** die Vorlage für mehrdimensionale Projekte bzw. Data Mining-Projekte von Analysis Services **** aus.  
   
-5.  Benennen Sie **** das neue Projekt `BasicDataMining`in das Feld Name.  
+5.  Benennen Sie **Name** das neue Projekt `BasicDataMining`in das Feld Name.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -62,6 +61,6 @@ ms.locfileid: "69494032"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen von Analysis Services Projekten &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/build-analysis-services-projects-ssdt)   
- [Erstellen eines Analysis Services Projekts &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt)  
+ [Erstellen eines Analysis Services-Projekts &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt)  
   
   

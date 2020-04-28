@@ -18,14 +18,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3f4aaaef619e0f8ae5810e70e9a6707c6213268d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890569"
 ---
 # <a name="dimension-processing-destination"></a>Ziel für Dimensionsverarbeitung
-  Das Ziel für die Dimensions Verarbeitung lädt und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] verarbeitet eine Dimension. Weitere Informationen zu Dimensionen finden Sie unter [Dimensionen &#40;Analysis Services – Mehrdimensionale Daten&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data).  
+  Das Ziel für Dimensionsverarbeitung lädt und verarbeitet eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Dimension. Weitere Informationen zu Dimensionen finden Sie unter [Dimensionen &#40;Analysis Services – Mehrdimensionale Daten&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data).  
   
  Das Ziel für Dimensionsverarbeitung schließt die folgenden Funktionen ein:  
   
@@ -46,15 +46,15 @@ ms.locfileid: "68890569"
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im Dialogfeld **Ziel-Editor für Dimensionsverarbeitung** festlegen können:  
   
--   [Ziel-Editor für Dimensions Verarbeitung &#40;Seite Verbindungs-Manager&#41;](../dimension-processing-destination-editor-connection-manager-page.md)  
+-   [Ziel-Editor für Dimensionsverarbeitung &#40;Seite Verbindungs-Manager&#41;](../dimension-processing-destination-editor-connection-manager-page.md)  
   
--   [Ziel-Editor für Dimensions Verarbeitung &#40;Seite Zuordnungen&#41;](../dimension-processing-destination-editor-mappings-page.md)  
+-   [Ziel-Editor für Dimensionsverarbeitung &#40;Seite Zuordnungen&#41;](../dimension-processing-destination-editor-mappings-page.md)  
   
--   [Ziel-Editor für Dimensions Verarbeitung &#40;Seite "Erweitert"&#41;](../dimension-processing-destination-editor-advanced-page.md)  
+-   [Ziel-Editor für Dimensionsverarbeitung &#40;Seite „Erweitert“&#41;](../dimension-processing-destination-editor-advanced-page.md)  
   
  Das Dialogfeld **Erweiterter Editor** enthält die Eigenschaften, die programmgesteuert festgelegt werden können. Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften anzuzeigen, die Sie im Dialogfeld **Erweiterter Editor** oder programmgesteuert festlegen können:  
   
--   [Common Properties](../common-properties.md)  
+-   [Allgemeine Eigenschaften](../common-properties.md)  
   
  Informationen zum Festlegen der Eigenschaften finden Sie unter [Festlegen der Eigenschaften einer Datenflusskomponente](set-the-properties-of-a-data-flow-component.md).  
   

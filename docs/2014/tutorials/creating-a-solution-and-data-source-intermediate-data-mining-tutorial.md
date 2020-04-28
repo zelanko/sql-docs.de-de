@@ -11,17 +11,16 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 21bedc825f5890e3eb6551818dc5dc10724d2bf8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891440"
 ---
 # <a name="creating-a-solution-and-data-source-intermediate-data-mining-tutorial"></a>Erstellen einer Projektmappe und einer Datenquelle (Data Mining-Lernprogramm für Fortgeschrittene)
   Um mit Data Mining zu arbeiten, müssen Sie zunächst mit der Vorlage für multidimensionale Projekte bzw. Data Mining-Projekte von Analysis Services [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]**ein Projekt in**erstellen. Wenn Sie die Vorlage öffnen, werden alle Schemas in den Designer geladen, die Sie möglicherweise für Data Mining benötigen: Datenquellen, Miningstrukturen und Miningmodelle und sogar Cubes, wenn die Miningstruktur mehrdimensionale Daten verwendet.  
   
- Wenn Sie das Projekt erstellen, wird Ihre Lösung bis zur Bereitstellung als lokale Datei gespeichert. Wenn Sie die Lösung bereitstellen, sucht [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nach dem in den Projekteigenschaften angegebenen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Server und erstellt eine neue [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank mit dem gleichen Namen wie das Projekt. 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verwendet standardmäßig die **localhost** -Instanz für neue Projekte. Wenn Sie eine benannte Instanz verwenden oder einen anderen Namen für die Standardinstanz angegeben haben, müssen Sie für die Eigenschaft der Bereitstellungsdatenbank des Projekts den Speicherort angeben, an dem Data Mining-Objekte erstellt werden sollen.  
+ Wenn Sie das Projekt erstellen, wird Ihre Lösung bis zur Bereitstellung als lokale Datei gespeichert. Wenn Sie die Lösung bereitstellen, sucht [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] nach dem in den Projekteigenschaften angegebenen [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Server und erstellt eine neue [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Datenbank mit dem gleichen Namen wie das Projekt. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] verwendet standardmäßig die **localhost** -Instanz für neue Projekte. Wenn Sie eine benannte Instanz verwenden oder einen anderen Namen für die Standardinstanz angegeben haben, müssen Sie für die Eigenschaft der Bereitstellungsdatenbank des Projekts den Speicherort angeben, an dem Data Mining-Objekte erstellt werden sollen.  
   
  Weitere Informationen zu [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Projekten finden Sie unter [Erstellen eines Analysis Services Projekts &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-an-analysis-services-project-ssdt).  
   
@@ -71,15 +70,15 @@ ms.locfileid: "68891440"
 |Szenario|In der Datenquellensicht enthaltene Daten|  
 |--------------|-------------------------------------------|  
 |[Lektion 2: Erstellung eines Vorhersage Szenarios &#40;Data Mining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)|Monatliche Verkaufsberichte für Fahrradmodelle in unterschiedlichen Regionen (als einzelne Sicht gesammelt).|  
-|[Lektion 3: aufbauen eines Market Basket-Szenarios &#40;Data Mining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)|Eine Tabelle, die eine Liste mit Kundenaufträgen und eine geschachtelte Tabelle, in der die einzelnen Käufe für jeden Kunden angezeigt werden, enthält.|  
+|[Lektion 3: Erstellen eines Warenkorbszenarios &#40;Data Mining-Tutorial für Fortgeschrittene&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)|Eine Tabelle, die eine Liste mit Kundenaufträgen und eine geschachtelte Tabelle, in der die einzelnen Käufe für jeden Kunden angezeigt werden, enthält.|  
 |[Lektion 4: Entwickeln eines Sequence Clustering-Szenarios &#40;Data Mining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)|Die gleichen Daten, die für die Warenkorbanalyse verwendet werden, sowie ein Bezeichner, der die Reihenfolge anzeigt, in der Elemente gekauft wurden.|  
-|[Lektion 5: aufbauen von neuronalen Netzwerk-und logistischen Regressionsmodellen &#40;Data&#41;Mining-Lernprogramms](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)|Eine einzelne Tabelle, die vorläufige Nachverfolgungsdaten für die Leistung in einem Callcenter enthält.|  
+|[Lektion 5: Erstellen von neuronalen Netzwerk- und logistischen Regressionsmodellen &#40;Data Mining-Tutorial für Fortgeschrittene&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)|Eine einzelne Tabelle, die vorläufige Nachverfolgungsdaten für die Leistung in einem Callcenter enthält.|  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
  [Lektion 2: Erstellung eines Vorhersage Szenarios &#40;Data Mining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Data Mining-Projekte](../../2014/analysis-services/data-mining/data-mining-projects.md)   
- [Datenquellensichten in mehrdimensionalen Modellen](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)  
+ [Datenquellsichten in mehrdimensionalen Modellen](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)  
   
   

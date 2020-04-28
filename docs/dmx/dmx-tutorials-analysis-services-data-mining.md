@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 553ae5c425b08dc0b53f101d028fdea1557bf63c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892787"
 ---
 # <a name="dmx-tutorials-analysis-services---data-mining"></a>DMX-Lernprogramme (Analysis Services – Data Mining)
@@ -32,11 +32,11 @@ ms.locfileid: "68892787"
 ## <a name="reference"></a>Verweis  
  [Data Mining-Erweiterungen &#40;DMX-&#41; Syntax Elemente](../dmx/data-mining-extensions-dmx-syntax-elements.md)  
   
- [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Definitions Anweisungen](../dmx/dmx-statements-data-definition.md)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)  
   
  [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)  
   
- [Grundlegendes zur SELECT-Anweisung (DMX)](../dmx/understanding-the-dmx-select-statement.md)  
+ [Understanding the DMX Select Statement (Grundlegendes zur SELECT-Anweisung)](../dmx/understanding-the-dmx-select-statement.md)  
   
 ## <a name="related-sections"></a>Verwandte Abschnitte  
  [Datenzugriff auf mehrdimensionale Modelle &#40;Analysis Services-mehrdimensionalen Daten&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data)  

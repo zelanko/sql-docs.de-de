@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: caac43eb176e17a6e92e487f3dedae71a252f5af
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68887727"
 ---
 # <a name="ltsource-data-querygt---openquery"></a>&lt;Quelldaten Abfrage&gt; -OPENQUERY
@@ -35,7 +35,7 @@ OPENQUERY(<named datasource>, <query syntax>)
  Eine Abfragesyntax, die ein Rowset zurückgibt.  
   
 ## <a name="remarks"></a>Bemerkungen  
- **OPENQUERY** bietet eine sicherere Möglichkeit für den Zugriff auf externe Daten durch Unterstützung von Datenquellen Berechtigungen. Da die Verbindungszeichenfolge direkt in der Datenquelle gespeichert wird, können Administratoren die Eigenschaften der Datenquelle dazu verwenden, den Zugriff auf die Daten zu verwalten. Weitere Informationen zu Datenquellen finden Sie [unter Unterstützte Datenquellen &#40;SSAS-Multidimensional&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional).  
+ **OPENQUERY** bietet eine sicherere Möglichkeit für das Zugreifen auf externe Daten, weil es Datenquellenberechtigungen unterstützt. Da die Verbindungszeichenfolge direkt in der Datenquelle gespeichert wird, können Administratoren die Eigenschaften der Datenquelle dazu verwenden, den Zugriff auf die Daten zu verwalten. Weitere Informationen zu Datenquellen finden Sie [unter Unterstützte Datenquellen &#40;SSAS-Multidimensional&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional).  
   
  Durch Abfragen des **MDSCHEMA_INPUT_DATASOURCES** -Schemarowsets können Sie eine Liste der Datenquellen abrufen, die auf einem Server verfügbar sind. Weitere Informationen zum Verwenden von **MDSCHEMA_INPUT_DATASOURCES**finden Sie unter [MDSCHEMA_INPUT_DATASOURCES Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset).  
   
@@ -53,6 +53,6 @@ OPENQUERY (MyDS,'SELECT TOP 1000 * FROM vTargetMail')
 ## <a name="see-also"></a>Weitere Informationen  
  [&#60;Quelldaten Abfrage&#62;](../dmx/source-data-query.md)   
  [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining-Erweiterungen &#40;DMX-&#41;-Anweisungs Referenz](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

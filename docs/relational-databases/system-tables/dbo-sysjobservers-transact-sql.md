@@ -20,10 +20,10 @@ ms.assetid: 9abcc20f-a421-4591-affb-62674d04575e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 03a4457cb5dd087639a439e9e9bb883eaf924366
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70026197"
 ---
 # <a name="dbosysjobservers-transact-sql"></a>dbo.sysjobservers (Transact-SQL)
@@ -36,7 +36,7 @@ Speichert die Zuordnung oder Beziehung eines bestimmten Auftrags zu einem oder m
 |job_id|**uniqueidentifier**|Identifikationsnummer des Auftrags.|  
 |server_id|**int**|Die Server-ID.|  
 |last_run_outcome|**tinyint**|Ergebnis der letzten Ausführung des Auftrags:<br /><br /> **0** = Fehler<br /><br /> **1** = erfolgreich<br /><br /> **2** = Wiederholung<br /><br /> **3** = Abbrechen<br /><br /> **4** = in Bearbeitung<br /><br /> **5** = unbekannt (siehe nachfolgenden Abschnitt "Hinweise") |  
-|last_outcome_ message|**nvarchar (1024)**|Zugeordnete Meldung, falls vorhanden, zu der last_run_outcome-Spalte.|  
+|last_outcome_ message|**nvarchar(1024)**|Zugeordnete Meldung, falls vorhanden, zu der last_run_outcome-Spalte.|  
 |last_run_date|**int**|Datum, an dem der Auftrag zuletzt ausgeführt wurde.|  
 |last_run_time|**int**|Uhrzeit, zu der der Auftrag zuletzt ausgeführt wurde.|  
 |last_run_duration|**int**|Dauer der Ausführung des Auftrags in Stunden, Minuten und Sekunden. Berechnet mithilfe der Formel: (*Stunden*\*10000) + (*Minuten*\*100) + *Sekunden*.|  

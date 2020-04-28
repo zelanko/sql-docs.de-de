@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e8fb59e9cfe636f6cab775fa2cb000c60ba08ad2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262609"
 ---
 # <a name="sysdm_tran_top_version_generators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
@@ -47,7 +47,7 @@ sys.dm_tran_top_version_generators
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Datenbank-ID|  
-|**rowset_id**|**BIGINT**|Rowset-ID.|  
+|**rowset_id**|**bigint**|Rowset-ID.|  
 |**aggregated_record_length_in_bytes**|**int**|Summe der Daten Satzlängen der einzelnen **database_id** und **rowset_id Paars** im Versionsspeicher.|  
 |**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
@@ -92,7 +92,7 @@ database_id rowset_id            aggregated_record_length_in_bytes
  Die Ausgabe zeigt, dass alle Versionen von `database_id``9` erstellt werden und dass die Versionen aus zwei Tabellen generiert werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Dynamische Verwaltungssichten und Funktionen in Verbindung mit Transaktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

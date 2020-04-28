@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 9d888fa133e6cb1026ae23486dfabfc5e0b13b57
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68259829"
 ---
 # <a name="creating-script-files-accesstosql"></a>Erstellen von Skriptdateien (accesstosql)
@@ -62,7 +62,7 @@ Die vom benutzerkonfigurierbaren Optionen umfassen:
   
     </output-providers>  
     ```  
-    *noch*  
+    *or*  
   
     ```xml  
     <...All commands...>  
@@ -99,7 +99,7 @@ Die vom benutzerkonfigurierbaren Optionen umfassen:
   
     </output-providers>  
     ```  
-    *noch*  
+    *or*  
   
     ```xml  
     <migrate-data>  
@@ -132,7 +132,7 @@ Die vom benutzerkonfigurierbaren Optionen umfassen:
   
     </output-providers>  
     ```  
-    *noch*  
+    *or*  
   
     ```xml  
     <!-- Connect to target database -->  
@@ -165,7 +165,7 @@ Die vom benutzerkonfigurierbaren Optionen umfassen:
   
     </output-providers>  
     ```  
-    *noch*  
+    *or*  
   
     ```xml  
     <!--synchronization-->  
@@ -176,7 +176,7 @@ Die vom benutzerkonfigurierbaren Optionen umfassen:
   
     </synchronize-target>  
     ```  
-    *noch*  
+    *or*  
   
     ```xml  
     <!--data migration-->  
@@ -211,7 +211,7 @@ Die vom benutzerkonfigurierbaren Optionen umfassen:
   
     </output-providers>  
     ```  
-    *noch*  
+    *or*  
   
     ```xml  
     <convert-schema object-name="ssma.TT1">  
@@ -264,7 +264,7 @@ Die vom benutzerkonfigurierbaren Optionen umfassen:
   
     </output-providers>  
     ```  
-    *noch*  
+    *or*  
   
     ```xml  
     <...All commands...>  
@@ -306,7 +306,7 @@ Die vom benutzerkonfigurierbaren Optionen umfassen:
   
     </output-providers>  
     ```  
-    *noch*  
+    *or*  
   
     ```xml  
     <...All commands...>  
@@ -393,6 +393,6 @@ Der Benutzer kann seine Skriptdatei problemlos anhand der Schema Definitionsdate
 ## <a name="next-step"></a>Nächster Schritt
 Der nächste Schritt beim Betrieb der Konsole ist das [Erstellen von Variablen Wert Dateien &#40;Access Token&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md).  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Weitere Informationen:  
 [Erstellen von Variablen Wert Dateien &#40;Access Token&#41;](../../ssma/access/creating-variable-value-files-accesstosql.md)  
   

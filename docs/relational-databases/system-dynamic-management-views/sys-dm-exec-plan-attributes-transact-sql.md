@@ -19,10 +19,10 @@ ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4b6e5b28612efccafa9e2de0606eef821e341081
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68255598"
 ---
 # <a name="sysdm_exec_plan_attributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
@@ -40,7 +40,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="arguments"></a>Argumente  
  *plan_handle*  
- Führt eine eindeutige Identifizierung eines Abfrageplans für einen ausgeführten Batch aus, dessen Plan sich im Plancache befindet. *plan_handle* ist vom Datentyp **varbinary (64)**. Das Plan Handle kann aus der dynamischen Verwaltungs Sicht [sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) abgerufen werden.  
+ Führt eine eindeutige Identifizierung eines Abfrageplans für einen ausgeführten Batch aus, dessen Plan sich im Plancache befindet. *plan_handle* ist **varbinary(64)** Das Plan Handle kann aus der dynamischen Verwaltungs Sicht [sys. dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) abgerufen werden.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
@@ -52,7 +52,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
 
 In der obigen Tabelle kann das- **Attribut** die folgenden Werte aufweisen:
 
-|attribute|Datentyp|BESCHREIBUNG|  
+|Attribut|Datentyp|BESCHREIBUNG|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|Gibt die Optionswerte an, mit denen der Plan kompiliert wurde.|  
 |objectid|**int**|Einer der Hauptschlüssel zur Suche nach einem Objekt im Cache. Dies ist die Objekt-ID, die in [sys. Objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) für Datenbankobjekte (Prozeduren, Sichten, Trigger usw.) gespeichert ist. Für Pläne vom Typ "Adhoc" oder "Prepared" ist dies ein interner Hash des Batchtexts.|  
@@ -91,7 +91,7 @@ Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VI
 ### <a name="evaluating-set-options"></a>Auswerten von SET-Optionen  
  Um den in **set_options** zurückgegebenen Wert in die Optionen zu übersetzen, mit denen der Plan kompiliert wurde, subtrahieren Sie die Werte vom **set_options** Wert, beginnend mit dem größtmöglichen Wert, bis Sie 0 erreichen. Jeder subtrahierte Wert entspricht einer Option, die im Abfrageplan verwendet wurde. Wenn der Wert in **set_options** beispielsweise 251 ist, werden die Optionen, mit denen der Plan kompiliert wurde, ANSI_NULL_DFLT_ON (128), QUOTED_IDENTIFIER (64), ANSI_NULLS (32), ANSI_WARNINGS (16), CONCAT_NULL_YIELDS_NULL (8), paralleler Plan (2) und ANSI_PADDING (1).  
   
-|Option|value|  
+|Option|Wert|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
 |Paralleler Plan|2|  
@@ -103,15 +103,15 @@ Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VI
 |ANSI_NULL_DFLT_ON|128|  
 |ANSI_NULL_DFLT_OFF|256|  
 |NoBrowseTable<br /><br /> Gibt an, dass im Plan keine Arbeitstabelle verwendet wird, um einen FOR BROWSE-Vorgang zu implementieren.|512|  
-|TriggerOneRow<br /><br /> Gibt an, dass der Plan Optimierungen einzelner Zeilen für Deltatabellen von AFTER-Triggern umfasst.|1.024|  
+|TriggerOneRow<br /><br /> Gibt an, dass der Plan Optimierungen einzelner Zeilen für Deltatabellen von AFTER-Triggern umfasst.|1024|  
 |ResyncQuery<br /><br /> Gibt an, dass die Abfrage von internen gespeicherten Systemprozeduren übermittelt wurde.|2048|  
 |ARITH_ABORT|4096|  
 |NUMERIC_ROUNDABORT|8192|  
 |DATEFIRST|16384|  
-|DATEFORMAT|32.768|  
+|DATEFORMAT|32768|  
 |LanguageID|65536|  
-|UPON<br /><br /> Gibt an, dass die Datenbankoption PARAMETERIZATION beim Kompilieren des Plans auf FORCED festgelegt wurde.|131.072|  
-|ROWCOUNT|**Gilt für:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262.144|  
+|UPON<br /><br /> Gibt an, dass die Datenbankoption PARAMETERIZATION beim Kompilieren des Plans auf FORCED festgelegt wurde.|131072|  
+|ROWCOUNT|**Gilt für:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] bis[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 262144|  
   
 ## <a name="cursors"></a>Cursor  
  Inaktive Cursor werden in einem kompilierten Plan zwischengespeichert, sodass der zum Speichern des Cursors verwendete Arbeitsspeicher von gleichzeitigen Benutzern des Cursors wiederverwendet werden kann. Angenommen, dass ein Cursor von einem Batch deklariert und verwendet wird, ohne dass seine Zuordnung aufgehoben wird. Wenn zwei Benutzer denselben Batch ausführen, sind zwei aktive Cursor vorhanden. Sobald die Zuordnung der Cursor aufgehoben ist (möglicherweise in unterschiedlichen Batches), wird der Arbeitsspeicher zum Speichern des Cursors zwischengespeichert und nicht freigegeben. Der Liste der inaktiven Cursor wird im kompilierten Plan beibehalten. Bei der nächsten Ausführung des Batches durch einen Benutzer wird der zwischengespeicherte Arbeitsspeicher für den Cursor wiederverwendet und als aktiver Cursor ordnungsgemäß initialisiert.  
@@ -119,7 +119,7 @@ Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VI
 ### <a name="evaluating-cursor-options"></a>Auswerten von Cursoroptionen  
  Subtrahieren Sie die Werte vom Spaltenwert, beginnend mit dem größtmöglichen Wert, bis Sie 0 erreichen, um den in **required_cursor_options** zurückgegebenen Wert und **acceptable_cursor_options** auf die Optionen zu übersetzen, mit denen der Plan kompiliert wurde. Jeder subtrahierte Wert entspricht einer Cursoroption, die im Abfrageplan verwendet wurde.  
   
-|Option|value|  
+|Option|Wert|  
 |------------|-----------|  
 |Keine|0|  
 |INSENSITIVE|1|  
@@ -132,7 +132,7 @@ Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VI
 |KEYSET|128|  
 |DYNAMIC|256|  
 |SCROLL_LOCKS|512|  
-|OPTIMISTIC|1.024|  
+|OPTIMISTIC|1024|  
 |STATIC|2048|  
 |FAST_FORWARD|4096|  
 |IN PLACE|8192|  
@@ -167,11 +167,11 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Dynamische Verwaltungs Sichten und-Funktionen im Zusammenhang mit der Ausführung &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
+ [sys. dm_exec_cached_plans &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
- [sys. Objects &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
+ [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)  
   
   
 

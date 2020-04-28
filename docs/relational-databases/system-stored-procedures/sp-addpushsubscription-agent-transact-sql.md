@@ -16,10 +16,10 @@ ms.assetid: 1fdd2052-50d8-4318-8aa7-fc635d5cad18
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8073d51fb4376acbdc19724422f6ef7543e3c403
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68894045"
 ---
 # <a name="sp_addpushsubscription_agent-transact-sql"></a>sp_addpushsubscription_agent (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68894045"
   Fügt einen neuen geplanten Agentauftrag hinzu, der zum Synchronisieren eines Pushabonnements mit einer Transaktionsveröffentlichung verwendet wird. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
 > [!IMPORTANT]  
->  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen mit dem Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -98,7 +98,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`Die Häufigkeit, mit der die Verteilungs-Agent geplant werden soll. *frequency_type* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
 |**2**|On-Demand-Streaming|  
@@ -107,7 +107,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 |**Uhr**|Monatlich|  
 |**32**|Monatlich, relativ|  
 |**64** (Standard)|Autostart|  
-|**128**|Serie|  
+|**128**|Wiederholt|  
   
 > [!NOTE]  
 >  Das Angeben des Werts **64** bewirkt, dass die Verteilungs-Agent im kontinuierlichen Modus ausgeführt wird. Dies entspricht dem Festlegen des **-Continuous-** Parameters für den Agent. Weitere Informationen finden Sie unter [Replication Distribution Agent](../../relational-databases/replication/agents/replication-distribution-agent.md).  
@@ -116,7 +116,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Das Datum der Verteilungs-Agent. Dieser Parameter wird verwendet, wenn *frequency_type* auf **32** (monatlich, relativ) festgelegt ist. *frequency_relative_interval* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1** (Standard)|First (Erster)|  
 |**2**|Sekunde|  
@@ -128,7 +128,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
   
 `[ @frequency_subday = ] frequency_subday`Gibt an, wie oft innerhalb des definierten Zeitraums neu geplant werden soll. *frequency_subday* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
 |**2**|Sekunde|  
@@ -183,10 +183,10 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
  Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_addpushsubscription_agent**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)   
+ [Erstellen eines Pushabonnements](../../relational-databases/replication/create-a-push-subscription.md)   
  [Erstellen eines Abonnements für einen nicht-SQL Server Abonnenten](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [Abonnieren von Veröffentlichungen](../../relational-databases/replication/subscribe-to-publications.md)   
- [Gespeicherte Replikationsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [Gespeicherte Replikations Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_addsubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_changesubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)   
  [sp_dropsubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   

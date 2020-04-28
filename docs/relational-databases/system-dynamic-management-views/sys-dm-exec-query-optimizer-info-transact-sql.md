@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d6195ee80fb851a9875e4a95a6e5aab87deb905e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68255351"
 ---
 # <a name="sysdm_exec_query_optimizer_info-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
@@ -38,8 +38,8 @@ ms.locfileid: "68255351"
 |Name|Datentyp|BESCHREIBUNG|  
 |----------|---------------|-----------------|  
 |**Indikator**|**nvarchar(4000)**|Name des Statistikereignisses des Abfrageoptimierers.|  
-|**vorkommt**|**BIGINT**|Anzahl der Vorkommen von Optimierungsereignissen für diesen Leistungsindikator.|  
-|**Wert**|**float**|Durchschnittlicher Eigenschaftswert pro Ereignisvorkommen.|  
+|**occurrence**|**bigint**|Anzahl der Vorkommen von Optimierungsereignissen für diesen Leistungsindikator.|  
+|**value**|**float**|Durchschnittlicher Eigenschaftswert pro Ereignisvorkommen.|  
 |**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -50,7 +50,7 @@ Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VI
 ## <a name="remarks"></a>Bemerkungen  
  **sys. dm_exec_query_optimizer_info** enthält die folgenden Eigenschaften (Indikatoren). Alle Vorkommenwerte sind kumulativ und werden beim Neustarten des Systems auf 0 festgelegt. Alle Werte für Wertfelder werden beim Neustarten des Systems auf NULL festgelegt. Alle Wertspaltenwerte, die einen Durchschnitt angeben, verwenden den Vorkommenwert aus derselben Zeile als Nenner bei der Berechnung des Durchschnitts. Alle Abfrage Optimierungen werden gemessen, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Änderungen an **dm_exec_query_optimizer_info**bestimmt, einschließlich Benutzer-und System generierter Abfragen. Durch die Ausführung eines bereits zwischengespeicherten Plans werden Werte in **dm_exec_query_optimizer_info**nicht geändert, nur Optimierungen sind von Bedeutung.  
   
-|Leistungsindikator|Vorkommen|value|  
+|Leistungsindikator|Vorkommen|Wert|  
 |-------------|----------------|-----------|  
 |optimizations|Gesamtzahl der Optimierungen.|Nicht verfügbar|  
 |elapsed time|Gesamtzahl der Optimierungen.|Durchschnittlich verstrichene Zeit pro Optimierung einer einzelnen Anweisung (Abfrage), in Sekunden.|  
@@ -76,7 +76,7 @@ Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VI
 |update stmt|Anzahl der für UPDATE-Anweisungen ausgeführten Optimierungen.|Nicht verfügbar|  
 |contains subquery|Anzahl der Optimierungen für eine Abfrage, die mindestens eine Unterabfrage enthält.|Nicht verfügbar|  
 |unnest failed|Nur intern|Nur intern|  
-|tables|Gesamtzahl der Optimierungen.|Gesamtzahl der Tabellen, auf die pro optimierte Abfrage verwiesen wird.|  
+|Tabellen|Gesamtzahl der Optimierungen.|Gesamtzahl der Tabellen, auf die pro optimierte Abfrage verwiesen wird.|  
 |hints|Häufigkeit, mit der ein Hinweis angegeben wurde. Zu diesen Hinweisen gehören die Abfragehinweise JOIN, GROUP, UNION und FORCE ORDER, die SET-Option FORCE PLAN sowie Joinhinweise.|Nicht verfügbar|  
 |order hint|Häufigkeit, mit der ein FORCE ORDER-Hinweis angegeben wurde.|Nicht verfügbar|  
 |join hint|Häufigkeit, mit der der Joinalgorithmus von einem Joinhinweis erzwungen wurde.|Nicht verfügbar|  
@@ -117,7 +117,7 @@ SELECT ISNULL(value,0.0) AS ElapsedTimePerOptimization
 FROM sys.dm_exec_query_optimizer_info WHERE counter = 'elapsed time';  
 ```  
   
-### <a name="d-fraction-of-optimizations-that-involve-subqueries"></a>D: Anteil der Optimierungen mit Unterabfragen  
+### <a name="d-fraction-of-optimizations-that-involve-subqueries"></a>D. Anteil der Optimierungen mit Unterabfragen  
  Wie hoch liegt der Anteil der optimierten Abfragen mit einer Unterabfrage?  
   
 ```  
@@ -128,8 +128,8 @@ SELECT (SELECT CAST (occurrence AS float) FROM sys.dm_exec_query_optimizer_info 
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [Dynamische Verwaltungs Sichten und-Funktionen im Zusammenhang mit der Ausführung &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41; (Dynamische Verwaltungssichten und Funktionen im Zusammenhang mit der Ausführung (Transact-SQL))](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

@@ -14,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5ed522c64e0f9652e3ffb310f98348c402193ef8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889250"
 ---
 # <a name="install-sql-server-2014"></a>Installieren von SQL Server 2014
-## <a name="download-sql-server-2014-expresshttpwwwhanselmancomblogdownloadsqlserverexpressaspx"></a>[Download SQL Server 2014 Express](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
+## <a name="download-sql-server-2014-express"></a>[Download SQL Server 2014 Express](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
   **Vielen Dank, dass [Scott Hanselman](http://www.hanselman.com/) alle installerpaketverknüpfungen an einem Ort sammelt!**
   
  Dieses Thema bietet eine Übersicht über andere Installationsoptionen, die zur Installation von [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] zur Verfügung stehen. Weitere Informationen zu den verschiedenen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Komponenten, die installiert werden können, und zum Installationsvorgang finden Sie unter [Installation für SQL Server 2014](installation-for-sql-server.md).  
@@ -32,17 +32,17 @@ ms.locfileid: "68889250"
  Vor der Installation von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sollten Sie die Installationsanforderungen, Systemkonfigurationsprüfungen und Sicherheitsaspekte überprüfen. Weitere Informationen finden Sie unter [Planen einer SQL Server-Installation](../../sql-server/install/planning-a-sql-server-installation.md). Überprüfen Sie die Themen im nächsten Abschnitt, um Informationen zu den verschiedenen Installationsszenarien für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] zu erhalten.  
   
   
-## <a name="install-includesscurrentincludessscurrent-mdmd-components"></a>Komponenten [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installieren  
+## <a name="install-sscurrent-components"></a>Komponenten [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installieren  
   
 |Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
 |[Informationen zur SQL Server-Datenbank-Engine](../sql-server-database-engine-overview.md)|Beschreibt, wie Sie [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]installieren und konfigurieren.|  
-|[Installieren von SQL Server-Replikation](install-sql-server-replication.md)|Beschreibt, wie Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikation installieren und konfigurieren.|  
+|[Installieren der SQL Server-Replikation](install-sql-server-replication.md)|Beschreibt, wie Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikation installieren und konfigurieren.|  
 |[Installieren von Distributed Replay](../../tools/distributed-replay/install-distributed-replay-overview.md)|Enthält eine Auflistung der Themen zur Installation der Distributed Replay-Funktion.|  
 |[Installieren der SQL Server-Verwaltungstools](../../sql-server/install/install-sql-server-management-tools.md)|Beschreibt, wie Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verwaltungstools installieren und konfigurieren.|  
 |[Installieren von SQL Server PowerShell](install-sql-server-powershell.md)|Beschreibt die Überlegungen zum Installieren von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell-Komponenten.|  
   
-## <a name="how-to-install-includesscurrentincludessscurrent-mdmd"></a>So installieren Sie[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+## <a name="how-to-install-sscurrent"></a>So installieren Sie[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
 |Titel|BESCHREIBUNG|  
 |-----------|-----------------|  
@@ -55,7 +55,7 @@ ms.locfileid: "68889250"
   
 |Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
-|[Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|Dieses Thema bietet einen Überblick über die Firewallkonfiguration und wie Windows-Firewall konfiguriert wird.|  
+|[Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|Dieses Thema bietet einen Überblick über die Firewallkonfiguration und wie Windows-Firewall konfiguriert wird.|  
 |[Konfigurieren eines mehrfach vernetzten Computers für SQL Server-Zugriff](../../sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|In diesem Thema wird beschrieben, wie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und Windows-Firewall mit erweiterter Sicherheit konfiguriert werden, um Netzwerkverbindungen zu einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in einer mehrfach vernetzten Umgebung bereitzustellen.|  
 |[Konfigurieren der Windows-Firewall, um den Zugriff auf Analysis Services zuzulassen](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|Sie können die in diesem Thema beschriebenen Schritte zur Konfiguration von Port- und Firewalleinstellungen ausführen, um den Zugriff auf [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oder PowerPivot für SharePoint zuzulassen.|  
   
@@ -70,6 +70,6 @@ ms.locfileid: "68889250"
  [Planen einer SQL Server Installation](../../sql-server/install/planning-a-sql-server-installation.md)   
  [Upgrade auf SQL Server 2014](upgrade-sql-server.md)   
  [Deinstallieren von SQL Server 2014](../../sql-server/install/uninstall-sql-server.md)   
- [Hoch Verfügbarkeits Lösungen &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  
+ [Lösungen mit hoher Verfügbarkeit &#40;SQL Server&#41;](../../sql-server/failover-clusters/high-availability-solutions-sql-server.md)  
   
   

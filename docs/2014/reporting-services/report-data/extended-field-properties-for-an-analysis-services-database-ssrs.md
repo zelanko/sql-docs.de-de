@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b05d670e7873cab5b44c1bce0c62c716809af476
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892033"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank (SSRS)
-  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenverarbeitungs Erweiterung unterstützt erweiterte Feldeigenschaften. Erweiterte Feldeigenschaften sind zusätzlich zu den für die Datenquelle verfügbaren und von der Datenverarbeitungserweiterung unterstützten Feldeigenschaften `Value` und `IsMissing` vorhanden. Erweiterte Eigenschaften werden im Berichtsdatenbereich nicht als Teil der Feldauflistung für ein Berichtsdataset angezeigt. Sie können erweiterte Feld Eigenschaftswerte in den Bericht einschließen, indem Sie Ausdrücke schreiben, die diese mithilfe der integrierten- `Fields` Auflistung anhand des Namens angeben.  
+  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenverarbeitungserweiterung unterstützt erweiterte Feldeigenschaften. Erweiterte Feldeigenschaften sind zusätzlich zu den für die Datenquelle verfügbaren und von der Datenverarbeitungserweiterung unterstützten Feldeigenschaften `Value` und `IsMissing` vorhanden. Erweiterte Eigenschaften werden im Berichtsdatenbereich nicht als Teil der Feldauflistung für ein Berichtsdataset angezeigt. Sie können erweiterte Feld Eigenschaftswerte in den Bericht einschließen, indem Sie Ausdrücke schreiben, die diese mithilfe der integrierten- `Fields` Auflistung anhand des Namens angeben.  
   
  Erweiterte Eigenschaften umfassen vordefinierte Eigenschaften und benutzerdefinierte Eigenschaften. Vordefinierte Eigenschaften werden für mehrere Datenquellen gemeinsam verwendet und bestimmten Feldeigenschaftsnamen zugeordnet. Sie sind über die integrierte `Fields`-Auflistung nach Namen verfügbar. Benutzerdefinierte Eigenschaften werden spezifisch für jeden Datenanbieter definiert. Auf diese Eigenschaften kann über die integrierte `Fields`-Auflistung nur mithilfe von Syntax zugegriffen werden, in der der erweiterte Eigenschaftsname als Zeichenfolge verwendet wird.  
   
@@ -29,16 +29,16 @@ ms.locfileid: "68892033"
   
  Verwenden Sie die folgende Syntax in einem Ausdruck, um auf eine erweiterte Eigenschaft zu verweisen, die nicht vordefiniert ist:  
   
--   *Feld! FieldName ("PropertyName")*  
+-   *Fields!FieldName("PropertyName")*  
   
 ## <a name="predefined-field-properties"></a>Vordefinierte Feldeigenschaften  
  Vordefinierte Feldeigenschaften werden in den meisten Fällen auf Measures, Ebenen oder Dimensionen angewendet. Für eine vordefinierte Feldeigenschaft muss ein entsprechender Wert in der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenquelle gespeichert sein. Wenn kein Wert vorhanden ist, oder wenn Sie z. B. eine nur Measure-bezogene Feldeigenschaft auf einer Ebene angeben, gibt die Eigenschaft einen NULL-Wert zurück.  
   
  Sie können jede der folgenden Syntaxangaben verwenden, um aus einem Ausdruck auf eine vordefinierte Eigenschaft zu verweisen:  
   
--   *Feld! FieldName. PropertyName*  
+-   *Fields!FieldName.PropertyName*  
   
--   *Feld! FieldName ("PropertyName")*  
+-   *Fields!FieldName("PropertyName")*  
   
  In der folgenden Tabelle wird eine Liste der zur Verfügung stehenden vordefinierten Feldeigenschaften bereitgestellt.  
   
@@ -123,12 +123,12 @@ CELL PROPERTIES
 |-------------------|-----------------|  
 |January|2,481|  
 |Februar|2,684|  
-|March|2,749|  
+|März|2,749|  
 |April|2,739|  
   
  Obwohl die Eigenschaften Teil der MDX-Select-Anweisung sind, werden sie nicht in den Spalten des Resultsets angezeigt. Die Daten sind jedoch für einen Bericht verfügbar und können mit der Funktion für erweiterte Eigenschaften angezeigt werden. In einem MDX-Abfrageergebnis Bereich [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]in können Sie auf die Zelle doppelklicken und die Zellen Eigenschaftswerte anzeigen, wenn Sie im Cube festgelegt sind. Wenn Sie auf die erste Zelle "Anzahl Bestellungen" mit dem Wert 1.379 klicken, wird ein Popupfenster mit den folgenden Zelleigenschaften angezeigt:  
   
-|Eigenschaft|value|  
+|Eigenschaft|Wert|  
 |--------------|-----------|  
 |CellOrdinal|0|  
 |VALUE|2481|  
@@ -150,7 +150,7 @@ CELL PROPERTIES
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)   
- [Integrierte Sammlungen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
+ [Integrierte Auflistungen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md)   
  [Datasetfeld-Sammlung &#40;Berichts-Generator und SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
   
   

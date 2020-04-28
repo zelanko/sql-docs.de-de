@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 3f85320a99c901a2fd71c9048750825569559099
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69494023"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>Erstellen einer Datenquelle (Lernprogramm zu Data Mining-Grundlagen)
@@ -61,8 +61,8 @@ ms.locfileid: "69494023"
  [Erstellen eines Analysis Services Projekts &#40;Lernprogramm zu Data Mining-Grundlagen&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erstellen einer Datenquelle (SSAS: mehrdimensional)](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
+ [Erstellen einer Datenquelle &#40;mehrdimensionalen SSAS-&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
  [Definieren einer Datenquelle](../analysis-services/lesson-1-2-defining-a-data-source.md)   
- [Festlegen von Identitätswechsel Optionen &#40;SSAS-mehrdimensionalen&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional)  
+ [Festlegen von Identitätswechseloptionen &#40;SSAS – mehrdimensional&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 67a1c039-c283-4a9c-bacc-b9b3973590c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7bd511eb6eeff5cd412504373e7214703c845cd0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811345"
 ---
 # <a name="sysschemaarticles-transact-sql"></a>sysschemaarticles (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68811345"
 |**objid**|**int**|Der Objektbezeichner des Basisobjekts des Artikels. Dies kann der Objektbezeichner einer Prozedur, einer Sicht, einer indizierten Sicht oder einer UDF sein.|  
 |**pubid**|**int**|Die ID für die Veröffentlichung.|  
 |**pre_creation_cmd**|**tinyint**|Gibt die vom System durchzuführenden Schritte an, wenn es beim Anwenden der Momentaufnahme für diesen Artikel ein vorhandenes Objekt mit demselben Namen beim Abonnenten erkennt:<br /><br /> **0** = nichts.<br /><br /> **1** = Ziel Tabelle löschen.<br /><br /> **2** = Ziel Tabelle löschen.<br /><br /> **3** = Abschneiden der Ziel Tabelle.|  
-|**Stands**|**int**|Das Bitmuster, das zum Anzeigen des Artikelstatus verwendet wird.|  
+|**status**|**int**|Das Bitmuster, das zum Anzeigen des Artikelstatus verwendet wird.|  
 |**type**|**tinyint**|Der Wert, der den Typ des schema only-Artikels anzeigt:<br /><br /> **32** = gespeicherte Prozedur.<br /><br /> **64** = Sicht oder indizierte Sicht. <br /><br /> **96** = Aggregatfunktion.<br /><br /> **128** = Funktion.|  
 |**schema_option**|**Binär (8)**|Die Bitmaske der Option zur Schemagenerierung für den angegebenen Artikel. Sie gibt die automatische Erstellung der gespeicherten Prozedur in der Zieldatenbank für alle Anweisungen vom Typ CALL/MCALL/XCALL an. Hierbei kann es sich um das Ergebnis eines bitweisen logischen OR-Vorgangs von mindestens einem der folgenden Werte handeln:<br /><br /> **0x00** = deaktiviert die Skripterstellung durch den Momentaufnahmen-Agent und verwendet *creation_script*.<br /><br /> **0x01** = generiert die Objekt Erstellung (CREATE TABLE, CREATE PROCEDURE usw.). Dies ist der Standardwert für alle Artikel mit gespeicherten Prozeduren.<br /><br /> **0x02** = generiert benutzerdefinierte gespeicherte Prozeduren für den Artikel, falls definiert.<br /><br /> **0x10** = generiert einen entsprechenden gruppierten Index.<br /><br /> **0x20** = konvertiert benutzerdefinierte Datentypen in Basis Datentypen.<br /><br /> **0x40**= generiert entsprechende nicht gruppierte Indizes.<br /><br /> **0x80**= schließt die deklarierte referenzielle Integrität für die Primärschlüssel ein.<br /><br /> **0x73** = generiert die CREATE TABLE-Anweisung, erstellt gruppierte und nicht gruppierte Indizes, konvertiert benutzerdefinierte Datentypen in Basis Datentypen und generiert benutzerdefinierte Skripts für gespeicherte Prozeduren, die auf dem Abonnenten angewendet werden. Dies ist der Standardwert für alle Artikel außer für Artikel mit gespeicherten Prozeduren.<br /><br /> **0x100**= repliziert Benutzer Trigger für einen Tabellen Artikel, falls definiert.<br /><br /> **0x200**= repliziert Foreign Key-Einschränkungen. Wenn die Tabelle, auf die verwiesen wird, nicht Teil einer Veröffentlichung ist, werden alle FOREIGN KEY-Einschränkungen für eine veröffentlichte Tabelle nicht repliziert.<br /><br /> **0x400**= repliziert Check-Einschränkungen.<br /><br /> **0x800**= repliziert Standardwerte.<br /><br /> **0x1000**= repliziert die Sortierung auf Spaltenebene.<br /><br /> **0x2000**= repliziert erweiterte Eigenschaften, die dem veröffentlichten Artikel Quell Objekt zugeordnet sind.<br /><br /> **0x4000**= repliziert eindeutige Schlüssel, wenn Sie für einen Tabellen Artikel definiert sind.<br /><br /> **0X8000**= repliziert Primärschlüssel und eindeutige Schlüssel eines Tabellen Artikels als Einschränkungen mithilfe von ALTER TABLE-Anweisungen.|  
 |**dest_owner**|**sysname**|Der Besitzer der Tabelle in der Zieldatenbank|  

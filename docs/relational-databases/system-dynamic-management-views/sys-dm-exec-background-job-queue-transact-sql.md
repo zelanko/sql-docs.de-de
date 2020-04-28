@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 09e760bac8e31ba9c78b9809a12f8d595b7ebd05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68263928"
 ---
 # <a name="sysdm_exec_background_job_queue-transact-sql"></a>sys.dm_exec_background_job_queue (Transact-SQL)
@@ -60,7 +60,7 @@ Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VI
   
  Die Werte **object_id1** , die über **object_id4** sind, hängen vom Typ der Auftrags Anforderung ab. In der folgenden Tabelle wird die Bedeutung dieser Spalten für die verschiedenen Auftragstypen zusammengefasst.  
   
-|Typ der Anfrage|object_id1|object_id2|object_id3|object_id4|  
+|Anforderungstyp|object_id1|object_id2|object_id3|object_id4|  
 |------------------|-----------------|-----------------|-----------------|-----------------|  
 |Asynchrones Statistikupdate|Tabellen- oder Sicht-ID|Statistik-ID|Nicht verwendet|Nicht verwendet|  
   
@@ -76,9 +76,9 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Dynamische Verwaltungs Sichten und-Funktionen im Zusammenhang mit der Ausführung &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Statistiken](../../relational-databases/statistics/statistics.md)   
+ [Kam](../../relational-databases/statistics/statistics.md)   
  [KILL STATS JOB &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-stats-job-transact-sql.md)  
   
   

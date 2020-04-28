@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 523c57811ca29956edc3c18b8143844732c163b6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892393"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
@@ -42,13 +42,12 @@ ClusterDistance([<ClusterID expression>])
   
  ClusterDistance (n) = 1-(mitgliedführungs Gewichtung (n))  
   
- Alternative:  
+ Oder:  
   
  ClusterDistance (n) = 1-clusterwahrscheinlichkeits (n))  
   
 ## <a name="related-prediction-functions"></a>Zugehörige Vorhersagefunktionen  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stellt folgende zusätzliche Funktionen für die Abfrage von Clusteringmodellen bereit:  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] stellt folgende zusätzliche Funktionen für die Abfrage von Clusteringmodellen bereit:  
   
 -   Verwenden Sie die Funktion [Cluster &#40;DMX-&#41;](../dmx/cluster-dmx.md) , um den wahrscheinlichsten Cluster zurückzugeben.  
   
@@ -76,7 +75,7 @@ NATURAL PREDICTION JOIN
   
  Beispielergebnisse:  
   
-|Ausdruck|  
+|expression|  
 |----------------|  
 |0.0477390930705145|  
   
@@ -129,6 +128,6 @@ NATURAL PREDICTION JOIN
  [Cluster &#40;DMX-&#41;](../dmx/cluster-dmx.md)   
  [Data Mining-Erweiterungen &#40;DMX-&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Funktionen &#40;DMX-&#41;](../dmx/functions-dmx.md)   
- [Mining Modell Inhalt für Clustering-Modelle &#40;Analysis Services Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
+ [Mingingmodellinhalt von Clustermodellen &#40;Analysis Services – Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining)  
   
   

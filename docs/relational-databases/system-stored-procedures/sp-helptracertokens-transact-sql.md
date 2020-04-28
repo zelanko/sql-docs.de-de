@@ -16,10 +16,10 @@ ms.assetid: 61f27234-531d-4b37-8fa3-fe4c32e6f521
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9b4df50d1cf43ba1b0f4eb8b8f313634b4d11d18
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771542"
 ---
 # <a name="sp_helptracertokens-transact-sql"></a>sp_helptracertokens (Transact-SQL)
@@ -70,7 +70,7 @@ sp_helptracertokens [ @publication = ] 'publication'
  Nur Mitglieder der festen Server Rolle **sysadmin** , der festen Daten Bank Rolle **db_owner** in der Veröffentlichungs Datenbank oder **db_owner** festen Datenbank-oder **replmonitor** -Rollen in der Verteilungs Datenbank können **sp_helptracertokenhistory**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Messen der Latenzzeit und Überprüfen der Verbindungen bei Transaktionsreplikationen](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
+ [Messen der Latenzzeit und Überprüfen der Verbindungen für die Transaktions Replikation](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
  [sp_deletetracertokenhistory &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
   
   

@@ -16,10 +16,10 @@ ms.assetid: ea0dacd2-a5fd-42f4-88dd-7d289b0ae017
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4db6a29d92fe093e9704f88fcc528c9fa687ccff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68768949"
 ---
 # <a name="sp_changedynamicsnapshot_job-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
@@ -59,7 +59,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @frequency_type = ] frequency_type`Die Häufigkeit, mit der der Agent geplant werden soll. *frequency_type* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
 |**2**|On-Demand-Streaming|  
@@ -68,28 +68,28 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
 |**Uhr**|Monatlich|  
 |**32**|Monatlich, relativ|  
 |**64**|Autostart|  
-|**128**|Serie|  
+|**128**|Wiederholt|  
 |NULL (Standard)||  
   
 `[ @frequency_interval = ] frequency_interval`Die Tage, an denen der Agent ausgeführt wird. *frequency_interval* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Sonntag|  
 |**2**|Montag|  
-|**€**|Tuesday|  
-|**4**|Mittwoch|  
-|**5@@**|Thursday|  
+|**3**|Tuesday|  
+|**4**|Wednesday|  
+|**5**|Thursday|  
 |**6**|Freitag|  
-|**19.00**|Samstag|  
+|**7**|Samstag|  
 |**88**|Day (Tag)|  
-|**21.00**|Wochentage|  
-|**€**|Wochenendtage|  
+|**9**|Wochentage|  
+|**10**|Wochenendtage|  
 |NULL (Standard)||  
   
 `[ @frequency_subday = ] frequency_subday`Gibt an, wie oft innerhalb des definierten Zeitraums neu geplant werden soll. *frequency_subday* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
 |**2**|Sekunde|  
@@ -101,7 +101,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Das Datum, an dem die Merge-Agent ausgeführt wird. Dieser Parameter wird verwendet, wenn *frequency_type* auf **32** (monatlich, relativ) festgelegt ist. *frequency_relative_interval* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|First (Erster)|  
 |**2**|Sekunde|  
@@ -139,7 +139,7 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
  Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_changedynamicsnapshot_job**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Anzeigen und Ändern von Replikationssicherheitseinstellungen](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
- [Momentaufnahmen für Mergeveröffentlichungen mit parametrisierten Filtern](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
+ [Anzeigen und Ändern von Replikations Sicherheitseinstellungen](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md)   
+ [Momentaufnahmen für eine Mergeveröffentlichung mit parametrisierten Filtern](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
   
   

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a6bcc8e830c682c800f7dbdd586b25b88ca8577f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530942"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>Tools und Ansätze zum Verarbeiten (Analysis Services)
@@ -92,14 +92,13 @@ ms.locfileid: "69530942"
   
 6.  Klicken Sie nach Abschluss der Verarbeitung auf **Schließen**.  
   
-##  <a name="bkmk_impactanalysis"></a>Ausführen der Auswirkungs Analyse, um Objektabhängigkeiten und den Umfang der Vorgänge zu identifizieren  
+##  <a name="run-impact-analysis-to-identify-object-dependencies-and-scope-of-operations"></a><a name="bkmk_impactanalysis"></a>Ausführen der Auswirkungs Analyse, um Objektabhängigkeiten und den Umfang der Vorgänge zu identifizieren  
   
 1.  Bevor Sie ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekt in [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] oder [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]verarbeiten, können Sie die Auswirkung auf die verbundenen Objekte analysieren, indem Sie auf **Auswirkungsanalyse** in einem der **Objekte verarbeiten** -Dialogfelder klicken.  
   
 2.  Klicken Sie mit der rechten Maustaste auf eine Dimension, einen Cube, eine Measuregruppe oder eine Partition, um ein Dialogfeld **Objekte verarbeiten** zu öffnen.  
   
-3.  Klicken Sie auf **Auswirkungsanalyse**. 
-  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] scannt das Modell und berichtet über Neuverarbeitungsanforderungen für Objekte, die auf das für die Verarbeitung ausgewählte verweisen.  
+3.  Klicken Sie auf **Auswirkungsanalyse**. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] scannt das Modell und berichtet über Neuverarbeitungsanforderungen für Objekte, die auf das für die Verarbeitung ausgewählte verweisen.  
   
 ### <a name="processing-objects-using-xmla"></a>Verarbeiten von Objekten mit XMLA  
   
@@ -123,13 +122,13 @@ ms.locfileid: "69530942"
   
 1.  Ab dieser Version von SQL Server können Sie Analysis Services PowerShell-Cmdlets zum Verarbeiten von Objekten verwenden. Die folgenden Cmdlets können interaktiv oder per Skript ausgeführt werden:  
   
-    -   [Aufruf-processcube-Cmdlet](/powershell/module/sqlserver/invoke-processcube)  
+    -   [Invoke-ProcessCube-Cmdlet](/powershell/module/sqlserver/invoke-processcube)  
   
-    -   [Cmdlet "Aufruf-ProcessDimension"](/powershell/module/sqlserver/invoke-processdimension)  
+    -   [Invoke-ProcessDimension-Cmdlet](/powershell/module/sqlserver/invoke-processdimension)  
   
-    -   [Aufruf-processpartition-Cmdlet](/powershell/module/sqlserver/invoke-processpartition)  
+    -   [Invoke-ProcessPartition-Cmdlet](/powershell/module/sqlserver/invoke-processpartition)  
   
-    -   Das [Cmdlet "Start-ascmd](/powershell/module/sqlserver/invoke-ascmd)", das verwendet werden kann, um XMLA-, MDX-oder DMX-Skripts auszuführen, die Verarbeitungs Befehle enthalten.  
+    -   [Invoke-ASCmd-Cmdlet](/powershell/module/sqlserver/invoke-ascmd), das verwendet werden kann, um ein XMLA-, MDX- oder DMX-Skript mit Verarbeitungsbefehlen auszuführen.  
   
 ### <a name="monitoring-object-processing-using-sql-server-profiler"></a>Überwachungsobjektverarbeitung mit SQL Server Profiler  
   
@@ -141,11 +140,11 @@ ms.locfileid: "69530942"
   
     -   **Command Begin** und **Command End** , um anzuzeigen, wenn die Verarbeitung gestartet und angehalten wird  
   
-    -   **Fehler** beim Erfassen von Fehlern.  
+    -   **Error** , um sämtliche Fehler aufzuzeichnen  
   
-    -   **Progress Report BEGIN**, **Progress Report Current**und **Progress Report End** , um Berichte zum Prozessstatus zu erhalten und die SQL-Abfragen anzuzeigen, die zum Abrufen der Daten verwendet wurden.  
+    -   **Progress Report Begin**, **Progress Report Current**und **Progress Report End** , um über den Verarbeitungsstatus zu berichten und die SQL-Abfragen anzuzeigen, die verwendet wurden, um die Daten abzurufen  
   
-    -   **MDX-Skript ausführen BEGIN** und **Execute MDX Script End** , um die Cubeberechnungen anzuzeigen  
+    -   **Execute MDX Script Begin** und **Execute MDX Script End** , um die Cubeberechnungen anzuzeigen  
   
     -   Fügen Sie alternativ Sperrereignisse hinzu, wenn Sie auf Verarbeitung bezogene Leistungsprobleme diagnostizieren  
   

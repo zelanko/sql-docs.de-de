@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 374630b5e5eab1602bb33e176e6f205ee1375af9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264431"
 ---
 # <a name="global-settings-logging-oracletosql"></a>Globale Einstellungen (Protokollierung) (OracleToSQL)
@@ -22,7 +22,7 @@ Verwenden Sie das Dialogfeld **globale Einstellungen** , um die Protokollierungs
   
 Um auf dieses Dialogfeld zuzugreifen, wählen Sie **im Menü Extras die Option** **globale Einstellungen** aus, und klicken Sie dann unten im linken Bereich auf die Schaltfläche **Protokollierung** .  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Nachrichten Ebene**  
 Die folgenden Optionen sind unter **Nachrichten Ebene**verfügbar:  
   
@@ -30,9 +30,9 @@ Die folgenden Optionen sind unter **Nachrichten Ebene**verfügbar:
 |----------|---------------|  
 |**[alle Kategorien]**|Wird verwendet, um den Protokolliergrad für alle folgenden Optionen festzulegen.|  
 |**Collector**|Sammelt Metadaten über das Quell Schema und speichert Sie im Projekt.|  
-|**Erer**|Konvertiert Strukturen von Quelldaten Bank Objekten, z. b. Tabellen und gespeicherte Prozeduren, in entsprechende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Strukturen.|  
+|**Converter**|Konvertiert Strukturen von Quelldaten Bank Objekten, z. b. Tabellen und gespeicherte Prozeduren, in entsprechende [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Strukturen.|  
 |**Datenmigrierer**|Migriert Daten von der Quelldatenbank zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**Formatierungs Programm**|Unterkomponente des Konverters, der Skripts für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Schema generiert.|  
+|**Formatierungsprogramm**|Unterkomponente des Konverters, der Skripts für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Schema generiert.|  
 |**Grafische Benutzeroberfläche**|Meldungen, die angezeigt werden, wenn Sie das SSMA-Tool verwenden.|  
 |**Linker**|Löst SQL-Bezeichner auf und stellt Informationen für andere Komponenten bereit.|  
 |**Andere**|Alle Nachrichten, die nicht in einer anderen Kategorie vorhanden sind.|  
@@ -48,10 +48,10 @@ Konfigurieren Sie für jede Option unter **Nachrichten Ebene**einen der folgende
 |**Schwerwiegender Fehler**|Schreiben Sie nur schwerwiegende Fehlermeldungen in das Protokoll.|  
 |**Fehler**|Schreiben Sie Fehler-und schwerwiegende Fehlermeldungen in das Protokoll.|  
 |**Warning**|Schreiben Sie Warnungs-, Fehler-und schwerwiegende Fehlermeldungen in das Protokoll.|  
-|**Opo**|Schreiben Sie Informations-, Warnungs-, Fehler-und schwerwiegende Fehlermeldungen in das Protokoll.|  
+|**Info**|Schreiben Sie Informations-, Warnungs-, Fehler-und schwerwiegende Fehlermeldungen in das Protokoll.|  
 |**Debuggen**|Schreiben Sie alle Meldungen, einschließlich des Debuggens von Nachrichten, in das Protokoll.|  
   
-**Protokolldatei Pfad**  
+**Protokolldateipfad**  
 Der Dateipfad und der Name der SSMA-Protokolldateien. Wenn Sie einen anderen Namen angeben möchten, klicken Sie auf den aktuellen Pfad, und klicken Sie dann auf die Schaltfläche zum Durchsuchen (**..**.).  
   
 **Größe der Protokolldatei**  

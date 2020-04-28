@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a17fb16130aea073c7a878334ac78b0347267b6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262703"
 ---
 # <a name="sysdm_tran_active_snapshot_database_transactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
@@ -60,15 +60,15 @@ sys.dm_tran_active_snapshot_database_transactions
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**transaction_id**|**BIGINT**|Eindeutige, der Transaktion zugewiesene ID. Die Transaktions-ID wird in erster Linie zum Identifizieren der Transaktion in Sperrvorgängen verwendet.|  
-|**transaction_sequence_num**|**BIGINT**|Transaktionssequenznummer. Hierbei handelt es sich um eine eindeutige, der Transaktion beim Start zugewiesene Sequenznummer. Transaktionen, die keine Versionsdatensätze generieren und keine Momentaufnahmescans verwenden, erhalten keine Transaktionssequenznummer.|  
-|**commit_sequence_num**|**BIGINT**|Sequenznummer, die das Ende (durch Commit oder Anhalten) der Transaktion angibt. Bei aktiven Transaktionen ist der Wert NULL.|  
+|**transaction_id**|**bigint**|Eindeutige, der Transaktion zugewiesene ID. Die Transaktions-ID wird in erster Linie zum Identifizieren der Transaktion in Sperrvorgängen verwendet.|  
+|**transaction_sequence_num**|**bigint**|Transaktionssequenznummer. Hierbei handelt es sich um eine eindeutige, der Transaktion beim Start zugewiesene Sequenznummer. Transaktionen, die keine Versionsdatensätze generieren und keine Momentaufnahmescans verwenden, erhalten keine Transaktionssequenznummer.|  
+|**commit_sequence_num**|**bigint**|Sequenznummer, die das Ende (durch Commit oder Anhalten) der Transaktion angibt. Bei aktiven Transaktionen ist der Wert NULL.|  
 |**is_snapshot**|**int**|0 = Keine Momentaufnahmeisolationstransaktion<br /><br /> 1 = Momentaufnahmeisolationstransaktion|  
 |**session_id**|**int**|ID der Sitzung, die die Transaktion gestartet hat.|  
-|**first_snapshot_sequence_num**|**BIGINT**|Niedrigste Transaktionssequenznummer der Transaktionen, die beim Erstellen einer Momentaufnahme aktiviert waren. Bei der Ausführung einer Momentaufnahmetransaktion wird eine Momentaufnahme aller zu diesem Zeitpunkt aktiven Transaktionen erstellt. Für NonSnapshot-Transaktionen wird in dieser Spalte 0 angezeigt.|  
+|**first_snapshot_sequence_num**|**bigint**|Niedrigste Transaktionssequenznummer der Transaktionen, die beim Erstellen einer Momentaufnahme aktiviert waren. Bei der Ausführung einer Momentaufnahmetransaktion wird eine Momentaufnahme aller zu diesem Zeitpunkt aktiven Transaktionen erstellt. Für NonSnapshot-Transaktionen wird in dieser Spalte 0 angezeigt.|  
 |**max_version_chain_traversed**|**int**|Maximale Länge der Versionskette, die durchsucht wird, um die hinsichtlich der Transaktion konsistente Version zu finden.|  
-|**average_version_chain_traversed**|**wirkliche**|Durchschnittliche Anzahl von Zeilenversionen in den durchsuchten Versionsketten.|  
-|**elapsed_time_seconds**|**BIGINT**|Zeitraum, der verstrichen ist, seitdem die Transaktion ihre Transaktionssequenznummer erhalten hat.|  
+|**average_version_chain_traversed**|**real**|Durchschnittliche Anzahl von Zeilenversionen in den durchsuchten Versionsketten.|  
+|**elapsed_time_seconds**|**bigint**|Zeitraum, der verstrichen ist, seitdem die Transaktion ihre Transaktionssequenznummer erhalten hat.|  
 |**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen
@@ -145,8 +145,7 @@ elapsed_time_seconds
   
  In den folgenden Informationen werden die Ergebnisse aus **sys. dm_tran_active_snapshot_database_transactions**ausgewertet:  
   
--   XSN-57: da diese Transaktion nicht unter der Momentaufnahme Isolation ausgeführt wird `is_snapshot` , ist `first_snapshot_sequence_num` der `0`Wert und. 
-  `transaction_sequence_num` zeigt an, dass der Transaktion eine Transaktionsnummer zugewiesen wurde, da die Datenbankoption ALLOW_SNAPSHOT_ISOLATION und/oder die Datenbankoption READ_COMMITTED_SNAPSHOT aktiviert sind (ON).  
+-   XSN-57: da diese Transaktion nicht unter der Momentaufnahme Isolation ausgeführt wird `is_snapshot` , ist `first_snapshot_sequence_num` der `0`Wert und. `transaction_sequence_num` zeigt an, dass der Transaktion eine Transaktionsnummer zugewiesen wurde, da die Datenbankoption ALLOW_SNAPSHOT_ISOLATION und/oder die Datenbankoption READ_COMMITTED_SNAPSHOT aktiviert sind (ON).  
   
 -   XSN-58: Diese Transaktion wird nicht unter der Momentaufnahmeisolation ausgeführt. Es gelten die gleichen Informationen wie für XSN-57.  
   
@@ -156,7 +155,7 @@ elapsed_time_seconds
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Festlegen der Transaktions Isolationsstufe &#40;Transact-SQL-&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   
- [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Dynamische Verwaltungssichten und Funktionen in Verbindung mit Transaktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

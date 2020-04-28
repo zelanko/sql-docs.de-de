@@ -16,10 +16,10 @@ ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d049a5e96d9c7212467595aa70cd44db727bdf6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769001"
 ---
 # <a name="sp_browsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
@@ -77,7 +77,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 |**originator_publication_id**|**int**|ID der Veröffentlichung, von der die Transaktion stammt|  
 |**originator_db_version**|**int**|Version der Datenbank, von der die Transaktion stammt|  
 |**originator_lsn**|**varbinary(16)**|Identifiziert die Protokollfolgenummer (LSN, Log Sequence Number) für den Befehl in der ursprünglichen Veröffentlichung Wird in der Peer-zu-Peer-Transaktions Replikation verwendet.|  
-|**s**|**nvarchar (1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]s.|  
+|**s**|**nvarchar(1024)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] verwenden, um die Migrationsdaten zu bereinigen.|  
 |**command_id**|**int**|ID des Befehls in [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
   
  Lange Befehle können auf mehrere Zeilen des Resultsets aufgeteilt werden.  
@@ -89,7 +89,7 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
  Nur Mitglieder der festen Server Rolle **sysadmin** oder Mitglieder der festen Daten bankrollen **db_owner** oder **replmonitor** in der Verteilungs Datenbank können **sp_browsereplcmds**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
+ [sp_replcmds &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [sp_replshowcmds &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-replshowcmds-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

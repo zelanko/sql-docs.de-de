@@ -31,15 +31,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8c1c78e1d126420b17a1b8de0499c432059b25ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811032"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Neuorganisieren und Neuerstellen von Indizes
-  In diesem Thema wird beschrieben, wie Sie einen fragmentierten Index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] neu organisieren oder neu erstellen. 
-  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verwaltet Indizes automatisch, wenn Einfüge-, Update- oder Löschvorgänge an den zugrunde liegenden Daten vorgenommen werden. Im Lauf der Zeit können diese Änderungen dazu führen, dass die Informationen im Index in der Datenbank verstreut (fragmentiert) werden. Fragmentierung liegt vor, wenn Indizes über Seiten verfügen, in denen die logische Reihenfolge (basierend auf dem Schlüsselwert) nicht der physischen Reihenfolge in der Datendatei entspricht. Hochgradig fragmentierte Indizes können die Abfrageleistung beeinträchtigen und dazu führen, dass Ihre Anwendung nur langsam reagiert.  
+  In diesem Thema wird beschrieben, wie Sie einen fragmentierten Index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] oder [!INCLUDE[tsql](../../includes/tsql-md.md)] neu organisieren oder neu erstellen. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verwaltet Indizes automatisch, wenn Einfüge-, Update- oder Löschvorgänge an den zugrunde liegenden Daten vorgenommen werden. Im Lauf der Zeit können diese Änderungen dazu führen, dass die Informationen im Index in der Datenbank verstreut (fragmentiert) werden. Fragmentierung liegt vor, wenn Indizes über Seiten verfügen, in denen die logische Reihenfolge (basierend auf dem Schlüsselwert) nicht der physischen Reihenfolge in der Datendatei entspricht. Hochgradig fragmentierte Indizes können die Abfrageleistung beeinträchtigen und dazu führen, dass Ihre Anwendung nur langsam reagiert.  
   
  Sie können die Indexfragmentierung durch Neuorganisieren oder Neuerstellen eines Indexes beheben. Für partitionierte Indizes, die auf Grundlage eines Partitionsschemas erstellt wurden, können beide Methoden für einen vollständigen Index oder für eine einzelne Partition eines Indexes verwendet werden. Beim Neuerstellen eines Indexes wird der Index gelöscht und neu erstellt. Bei diesem Vorgang wird die Fragmentierung entfernt, Speicherplatz wird freigegeben, indem die Seiten auf der Grundlage der angegebenen oder vorhandenen Füllfaktoreinstellung komprimiert werden, und die Indexzeilen werden in aufeinanderfolgenden Seiten neu geordnet. Wenn ALL angegeben ist, werden alle Indizes der Tabelle in einer einzelnen Transaktion gelöscht und neu erstellt. Das Neuorganisieren eines Indexes beansprucht minimale Systemressourcen. Dabei wird die Blattebene von gruppierten und nicht gruppierten Indizes in Tabellen und Sichten defragmentiert, indem die Blattebenenseiten physisch neu geordnet werden, damit sie mit der logischen Reihenfolge der Blattknoten von links nach rechts übereinstimmen. Durch das Neuorganisieren werden die Indexseiten auch komprimiert. Die Komprimierung basiert auf dem vorhandenen Füllfaktorwert.  
   
@@ -51,26 +50,26 @@ ms.locfileid: "68811032"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
--   **So überprüfen Sie die Fragmentierung eines Indexes mit:**  
+-   **Überprüfen der Fragmentierung eines Indexes mit:**  
   
      [SQL Server Management Studio](#SSMSProcedureFrag)  
   
      [Transact-SQL](#TsqlProcedureFrag)  
   
--   **So können Sie einen Index neu organisieren oder neu erstellen mit:**  
+-   **Neuorganisieren oder Neuerstellen eines Indexes mit:**  
   
      [SQL Server Management Studio](#SSMSProcedureReorg)  
   
      [Transact-SQL](#TsqlProcedureReorg)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Fragmentation"></a>Erkennen der Fragmentierung  
- Der erste Schritt bei der Entscheidung für eine Defragmentierungsmethode besteht im Analysieren des Indexes, um den Fragmentierungsgrad zu ermitteln. Mithilfe der Systemfunktion [sys.dm_db_index_physical_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql)können Sie die Fragmentierung in einem bestimmten Index, allen Indizes in einer Tabelle oder indizierten Sicht, allen Indizes in einer Datenbank oder allen Indizes in allen Datenbanken erkennen. Für partitionierte Indizes stellt **sys.dm_db_index_physical_stats** außerdem Fragmentierungsinformationen für jede Partition bereit.  
+###  <a name="detecting-fragmentation"></a><a name="Fragmentation"></a>Erkennen der Fragmentierung  
+ Der erste Schritt bei der Entscheidung für eine Defragmentierungsmethode besteht im Analysieren des Indexes, um den Fragmentierungsgrad zu ermitteln. Mithilfe der Systemfunktion [sys.dm_db_index_physical_stats](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql) können Sie die Fragmentierung in einem bestimmten Index, allen Indizes in einer Tabelle oder indizierten Sicht, allen Indizes in einer Datenbank oder allen Indizes in allen Datenbanken erkennen. Für partitionierte Indizes stellt **sys.dm_db_index_physical_stats** außerdem Fragmentierungsinformationen für jede Partition bereit.  
   
- Das von der **sys. dm_db_index_physical_stats** -Funktion zurückgegebene Resultset enthält die folgenden Spalten.  
+ Das durch die Funktion **sys.dm_db_index_physical_stats** zurückgegebene Resultset enthält die folgenden Spalten.  
   
 |Column|BESCHREIBUNG|  
 |------------|-----------------|  
@@ -80,12 +79,12 @@ ms.locfileid: "68811032"
   
  Nachdem der Grad der Fragmentierung bekannt ist, verwenden Sie die folgenden Tabelle, um die beste Methode zum Beheben der Fragmentierung zu ermitteln.  
   
-|**avg_fragmentation_in_percent** Wert|Korrigierende Anweisung|  
+|**avg_fragmentation_in_percent** -Wert|Korrigierende Anweisung|  
 |-----------------------------------------------|--------------------------|  
 |> 5% und \< = 30%|ALTER INDEX REORGANIZE|  
 |> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>1</sup>|
 
-<sup>1</sup> das Neuerstellen eines Indexes kann online oder offline ausgeführt werden. Das Neuorganisieren eines Indexes erfolgt immer online. Damit eine Verfügbarkeit ähnlich der Neuorganisierungsoption erreicht wird, sollten Indizes online neu erstellt werden.  
+<sup>1</sup> Das Neuerstellen eines Indexes kann online oder offline erfolgen. Das Neuorganisieren eines Indexes erfolgt immer online. Damit eine Verfügbarkeit ähnlich der Neuorganisierungsoption erreicht wird, sollten Indizes online neu erstellt werden.  
   
 > [!TIP]
 > Diese Werte dienen als grobe Richtlinie, um den Punkt zu bestimmen, an dem Sie zwischen `ALTER INDEX REORGANIZE` und `ALTER INDEX REBUILD` wechseln sollten. Die Istwerte können jedoch von Fall zu Fall unterschiedlich sein. Es ist wichtig, dass Sie experimentieren, um den besten Schwellenwert für Ihre Umgebung zu bestimmen. Wird ein bestimmter Index beispielsweise hauptsächlich für Überprüfungsvorgänge verwendet, kann ein Entfernen der Fragmentierung die Leistung dieser Vorgänge verbessern. Für Indizes, die in erster Linie für Suchvorgänge verwendet werden, fällt der Leistungsvorteil weniger auf. Ähnliches gilt für das Entfernen der Fragmentierung in einem Heap (einer Tabelle ohne gruppierten Index). Auch dies ist besonders nützlich für Überprüfungsvorgänge für nicht gruppierte Indizes, wirkt sich aber kaum auf Suchvorgänge aus.
@@ -110,7 +109,7 @@ In diesen Szenarien ist es nicht erforderlich, dass alle nicht gruppierten Indiz
 -  Neuerstellen eines nicht eindeutigen gruppierten Indexes
 -  Ändern des Indexschemas, beispielsweise Anwenden eines Partitionierungsschemas auf einen gruppierten Index oder Verschieben des gruppierten Indexes in eine andere Dateigruppe
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 Indizes mit mehr als 128 Blöcken werden in zwei getrennten Phasen neu erstellt: der logischen und der physischen Phase. In der logischen Phase werden die vorhandenen Zuordnungseinheiten, die vom Index verwendet werden, für die Aufhebung der Zuordnung markiert, die Datenzeilen werden kopiert und sortiert und dann in neue Zuordnungseinheiten verschoben, die erstellt werden, um den neu erstellten Index zu speichern. In der physischen Phase werden die zuvor für die Aufhebung der Zuordnung markierten Zuordnungseinheiten in kurzen Transaktionen physisch gelöscht, die im Hintergrund ausgeführt werden und nicht viele Sperren benötigen. Weitere Informationen zu Blöcken finden Sie im [Handbuch zur Architektur von Seiten und Blöcken](https://docs.microsoft.com/sql/relational-databases/pages-and-extents-architecture-guide).
 
@@ -120,12 +119,12 @@ Das Erstellen bzw. Neuerstellen von nicht ausgerichteten Indizes für eine Tabel
 
 Ein Index kann nicht neu organisiert oder neu erstellt werden, wenn die Dateigruppe, in der er enthalten ist, eine Offline- oder schreibgeschützte Dateigruppe ist. Wenn das Schlüsselwort `ALL` angegeben ist und mindestens ein Index in einer Offline- oder schreibgeschützten Dateigruppe enthalten ist, erzeugt die Anweisung einen Fehler.
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die `ALTER`-Berechtigung für die Tabelle oder Sicht. Der Benutzer muss ein Mitglied der festen Serverrolle **sysadmin** bzw. der festen Datenbankrollen **db_ddladmin** und **db_owner** sein.  
   
-##  <a name="SSMSProcedureFrag"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedureFrag"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-check-the-fragmentation-of-an-index"></a>So überprüfen Sie die Fragmentierung eines Indexes  
   
@@ -143,16 +142,16 @@ Ein Index kann nicht neu organisiert oder neu erstellt werden, wenn die Dateigru
   
      Die folgenden Informationen sind auf der Seite **Fragmentierung** verfügbar:  
   
-     **Seiten Füll**  
+     **Seitenfüllgrad**  
      Gibt den durchschnittlichen Füllgrad der Indexseiten als Prozentwert an. 100 % bedeutet, dass die Indexseiten vollständig gefüllt sind. 50 % heißt, dass jede Indexseite im Durchschnitt zur Hälfte gefüllt ist.  
   
-     **Fragmentierung Gesamt**  
+     **Fragmentierung gesamt**  
      Prozentwert der logischen Fragmentierung. Dieser Wert gibt die Anzahl der Seiten in einem Index an, die nicht in Reihenfolge gespeichert sind.  
   
      **Durchschnittliche Zeilengröße**  
      Durchschnittliche Größe einer Zeile auf Blattebene.  
   
-     **Tiefe**  
+     **Eingeh**  
      Anzahl der Ebenen im Index, einschließlich der Blattebene.  
   
      **Weitergeleitete Datensätze**  
@@ -164,7 +163,7 @@ Ein Index kann nicht neu organisiert oder neu erstellt werden, wenn die Dateigru
      **Indextyp**  
      Der Indextyp. Mögliche Werte sind **Gruppierter Index**, **Nicht gruppierter Index**und **Primär-XML**. Tabellen können auch als Heap gespeichert werden (ohne Indizes). Dann kann aber diese Seite Indexeigenschaften nicht geöffnet werden.  
   
-     **Zeilen auf Blatt Ebene**  
+     **Zeilen auf Blattebene**  
      Anzahl der Zeilen auf Blattebene.  
   
      **Maximale Zeilengröße**  
@@ -179,10 +178,10 @@ Ein Index kann nicht neu organisiert oder neu erstellt werden, wenn die Dateigru
      **Partitions-ID**  
      Partitions-ID der B-Struktur, die den Index enthält.  
   
-     **Inaktive Zeilen der Version**  
+     **Inaktive Zeilen (Version)**  
      Die Anzahl inaktiver Datensätze, die aufgrund einer ausstehenden Momentaufnahme-Isolationstransaktion beibehalten werden.  
   
-##  <a name="TsqlProcedureFrag"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedureFrag"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-check-the-fragmentation-of-an-index"></a>So überprüfen Sie die Fragmentierung eines Indexes  
   
@@ -220,7 +219,7 @@ Ein Index kann nicht neu organisiert oder neu erstellt werden, wenn die Dateigru
   
  Weitere Informationen finden Sie unter [sys. dm_db_index_physical_stats &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql).  
   
-##  <a name="SSMSProcedureReorg"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedureReorg"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-reorganize-or-rebuild-an-index"></a>So organisieren oder erstellen Sie einen Index neu  
   
@@ -274,7 +273,7 @@ Ein Index kann nicht neu organisiert oder neu erstellt werden, wenn die Dateigru
   
 8.  Klicken Sie auf **OK**.  
   
-##  <a name="TsqlProcedureReorg"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedureReorg"></a> Verwenden von Transact-SQL  
   
 #### <a name="to-reorganize-a-defragmented-index"></a>So organisieren Sie einen defragmentierten Index neu  
   
@@ -334,6 +333,6 @@ Ein Index kann nicht neu organisiert oder neu erstellt werden, wenn die Dateigru
  Weitere Informationen finden Sie unter [Alter Index &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Bewährte Methoden für die Microsoft SQL Server 2000-Index Defragmentierung](https://technet.microsoft.com/library/cc966523.aspx)  
+ [Bewährte Methoden für die Indexdefragmentierung in Microsoft SQL Server 2000](https://technet.microsoft.com/library/cc966523.aspx)  
   
   

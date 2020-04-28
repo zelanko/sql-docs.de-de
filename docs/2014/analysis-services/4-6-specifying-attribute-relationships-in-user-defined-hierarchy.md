@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 838185def1d562f51d810cebdf79684f341a5903
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493852"
 ---
 # <a name="specifying-attribute-relationships-between-attributes-in-a-user-defined-hierarchy"></a>Angeben von Attributbeziehungen zwischen Attributen in einer benutzerdefinierten Hierarchie
@@ -22,7 +22,7 @@ ms.locfileid: "69493852"
   
  Wenn Sie Attributbeziehungen zwischen den Attributen definieren, die die Ebenen bilden, kann von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] mithilfe einer natürlichen Hierarchie eine Aggregation von einem Attribut verwendet werden, um die Ergebnisse von einem verknüpften Attribut zu erhalten. Wenn keine Beziehungen zwischen Attributen definiert sind, werden von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] alle Nicht-Schlüssel-Attribute vom Schlüsselattribut aggregiert. Sofern die zugrunde liegenden Daten dies unterstützen, sollten Sie daher auch Attributbeziehungen zwischen Attributen definieren. Durch Definieren von Attributbeziehungen wird die Dimensions-, Partitions- und Abfrageverarbeitung verbessert. Weitere Informationen finden Sie unter [Definieren von Attributbeziehungen](multidimensional-models/attribute-relationships-define.md) und [Attributbeziehungen](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md).  
   
- Wenn Sie Attributbeziehungen definieren, können Sie angeben, ob die Beziehung flexibel oder fest ist. Wenn Sie eine Beziehung als fest definieren, werden von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Aggregationen beim Aktualisieren der Dimension beibehalten. Wenn sich eine als fest definierte Beziehung tatsächlich ändert, wird von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ein Fehler während der Verarbeitung generiert, außer wenn die Dimension vollständig verarbeitet wurde. Durch das Angeben der entsprechenden Beziehungen und Beziehungseigenschaften wird die Abfrage- und Verarbeitungsleistung erhöht. Weitere Informationen finden Sie unter [Definieren von Attribut Beziehungen](multidimensional-models/attribute-relationships-define.md)und [Eigenschaften der Benutzer Hierarchie](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md).  
+ Wenn Sie Attributbeziehungen definieren, können Sie angeben, ob die Beziehung flexibel oder fest ist. Wenn Sie eine Beziehung als fest definieren, werden von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Aggregationen beim Aktualisieren der Dimension beibehalten. Wenn sich eine als fest definierte Beziehung tatsächlich ändert, wird von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] ein Fehler während der Verarbeitung generiert, außer wenn die Dimension vollständig verarbeitet wurde. Durch das Angeben der entsprechenden Beziehungen und Beziehungseigenschaften wird die Abfrage- und Verarbeitungsleistung erhöht. Weitere Informationen finden Sie unter [Definieren von Attributbeziehungen](multidimensional-models/attribute-relationships-define.md)und [Eigenschaften der Benutzerhierarchie](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md).  
   
  In den Aufgaben in diesem Thema definieren Sie Attributbeziehungen für die Attribute in den natürlichen Benutzerhierarchien im [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Projekt. Dazu gehören die Hierarchie **Customer Geography** in der **Customer**-Dimension, die Hierarchie **Sales Territory** in der Dimension **Vertriebsgebiet** , die Hierarchie **Product Model Lines** in der **Product** -Dimension und die Hierarchien **Fiscal Date** und **Calendar Date** in der **Date** -Dimension. Diese Benutzerhierarchien sind alle natürliche Hierarchien.  
   

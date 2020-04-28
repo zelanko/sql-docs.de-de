@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: b1b77b5ac7562ffcf39e065fb99df9da5b1f6ca6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266575"
 ---
 # <a name="project-settings-gui-oracletosql"></a>Projekteinstellungen (GUI) (OracleToSQL)
@@ -26,7 +26,7 @@ Der Bereich GUI ist in den Dialogfeldern **Projekteinstellungen** und **Standard
   
 -   Verwenden Sie das Dialogfeld **Standard Projekteinstellungen** , um Optionen für die Benutzeroberfläche für alle Projekte festzulegen. Um auf die GUI-Einstellungen zuzugreifen, wählen Sie **im Menü Extras** die Option **Standard Projekteinstellungen**aus, wählen Sie den Migrations Projekttyp aus, für den die Einstellungen in der Dropdown Liste **Migrations Ziel Version** angezeigt oder geändert werden müssen, und klicken Sie dann unten im linken Bereich auf **GUI** .  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Maximale Zeilennummer für Quelle**  
 Konfiguriert die Anzahl der Daten Zeilen, die auf der Registerkarte **Daten** für die ausgewählte Quell Tabelle angezeigt werden.  
   

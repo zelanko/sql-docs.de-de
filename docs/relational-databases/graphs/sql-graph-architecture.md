@@ -15,10 +15,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 79a85515322d492d4356d47f78da4b79489a223e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811108"
 ---
 # <a name="sql-graph-architecture"></a>SQL Graph-Architektur  
@@ -98,22 +98,22 @@ In der folgenden Tabelle sind die gültigen Werte `graph_type` für die-Spalte a
 
 Implizite Spalten in einer Knoten Tabelle
 
-|Spaltenname    |Datentyp  |is_hidden  |Comment  |
+|Spaltenname    |Datentyp  |is_hidden  |Kommentar  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |BIGINT |1  |interne `graph_id` Spalte  |
+|graph_id_\<hex_string> |bigint |1  |interne `graph_id` Spalte  |
 |$Node _id_\<hex_string> |NVARCHAR   |0  |Externe Knoten `node_id` Spalte  |
 
 Implizite Spalten in einer Edge-Tabelle
 
-|Spaltenname    |Datentyp  |is_hidden  |Comment  |
+|Spaltenname    |Datentyp  |is_hidden  |Kommentar  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |BIGINT |1  |interne `graph_id` Spalte  |
+|graph_id_\<hex_string> |bigint |1  |interne `graph_id` Spalte  |
 |$Edge _id_\<hex_string> |NVARCHAR   |0  |externe `edge_id` Spalte  |
 |from_obj_id_\<hex_string>  |INT    |1  |intern von Knoten`object_id`  |
-|from_id_\<hex_string>  |BIGINT |1  |Intern von Knoten`graph_id`  |
+|from_id_\<hex_string>  |bigint |1  |Intern von Knoten`graph_id`  |
 |$from _id_\<hex_string> |NVARCHAR   |0  |extern von Knoten`node_id`  |
 |to_obj_id_\<hex_string>    |INT    |1  |intern zu Knoten`object_id`  |
-|to_id_\<hex_string>    |BIGINT |1  |Intern zu Knoten`graph_id`  |
+|to_id_\<hex_string>    |bigint |1  |Intern zu Knoten`graph_id`  |
 |$to _id_\<hex_string>   |NVARCHAR   |0  |extern zu Knoten`node_id`  |
  
 ### <a name="system-functions"></a>Systemfunktionen
@@ -135,18 +135,18 @@ Erfahren Sie [!INCLUDE[tsql-md](../../includes/tsql-md.md)] mehr über die in SQ
  
 ### <a name="data-definition-language-ddl-statements"></a>Anweisungen der Data Definition Language (DDL)
 
-|Aufgabe   |Verwandter Artikel  |Notizen
+|Aufgabe   |Verwandter Artikel  |Hinweise
 |---  |---  |---  |
 |CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE`wird jetzt erweitert, um das Erstellen einer Tabelle als Knoten oder als Edge zu unterstützen. Beachten Sie, dass eine Edge-Tabelle über benutzerdefinierte Attribute verfügen kann.  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|Knoten-und edgetabellen können mithilfe von auf dieselbe Weise wie eine relationale Tabelle `ALTER TABLE`geändert werden. Benutzer können benutzerdefinierte Spalten, Indizes oder Einschränkungen hinzufügen oder ändern. Das ändern interner Diagramm Spalten, wie `$node_id` z. `$edge_id`b. oder, führt jedoch zu einem Fehler.  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |Benutzer können Indizes für Pseudo Spalten und benutzerdefinierte Spalten in Knoten-und Edge-Tabellen erstellen. Alle Index Typen werden unterstützt, einschließlich gruppierter und nicht gruppierter columnstore--Indizes.  |
 |Edge-Einschränkungen erstellen    |[Edge-Einschränkungen &#40;Transact-SQL-&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |Benutzer können jetzt Edge-Einschränkungen für Edge-Tabellen erstellen, um eine bestimmte Semantik zu erzwingen und die Datenintegrität beizubehalten.  |
-|DROP TABLE |[DROP TABLE &#40;Transact-SQL-&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |Knoten-und Kanten Tabellen können auf die gleiche Weise wie eine relationale Tabelle mithilfe von `DROP TABLE`gelöscht werden. Allerdings gibt es in dieser Version keine Einschränkungen, um sicherzustellen, dass keine Ränder auf einen gelöschten Knoten verweisen und das überlappende Löschen von Kanten beim Löschen einer Knoten-oder Knoten Tabelle nicht unterstützt wird. Es wird empfohlen, dass beim Löschen einer Knoten Tabelle alle Kanten, die mit den Knoten in dieser Knoten Tabelle verbunden sind, manuell abgelegt werden, um die Integrität des Diagramms aufrechtzuerhalten.  |
+|DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |Knoten-und Kanten Tabellen können auf die gleiche Weise wie eine relationale Tabelle mithilfe von `DROP TABLE`gelöscht werden. Allerdings gibt es in dieser Version keine Einschränkungen, um sicherzustellen, dass keine Ränder auf einen gelöschten Knoten verweisen und das überlappende Löschen von Kanten beim Löschen einer Knoten-oder Knoten Tabelle nicht unterstützt wird. Es wird empfohlen, dass beim Löschen einer Knoten Tabelle alle Kanten, die mit den Knoten in dieser Knoten Tabelle verbunden sind, manuell abgelegt werden, um die Integrität des Diagramms aufrechtzuerhalten.  |
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>Anweisungen der Data Manipulation Language (DML)
 
-|Aufgabe   |Verwandter Artikel  |Notizen
+|Aufgabe   |Verwandter Artikel  |Hinweise
 |---  |---  |---  |
 |INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|Das Einfügen in eine Knoten Tabelle unterscheidet sich nicht vom Einfügen in eine relationale Tabelle. Die Werte für `$node_id` die Spalte werden automatisch generiert. Der Versuch, einen Wert in `$node_id` die `$edge_id` Spalte oder einzufügen, führt zu einem Fehler. Benutzer müssen beim Einfügen in `$from_id` eine `$to_id` Rahmen Tabelle Werte für die Spalten und angeben. `$from_id`und `$to_id` sind die `$node_id` Werte der Knoten, die von einem bestimmten Edge verbunden werden.  |
 |Delete | [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)|Daten aus Knoten-oder edgetabellen können auf die gleiche Weise wie aus relationalen Tabellen gelöscht werden. Allerdings gibt es in dieser Version keine Einschränkungen, um sicherzustellen, dass keine Ränder auf einen gelöschten Knoten und das überlappende Löschen von Rändern zeigen, wenn ein Knoten nicht mehr unterstützt wird. Es wird empfohlen, dass jedes Mal, wenn ein Knoten gelöscht wird, alle Verbindungs Ränder mit diesem Knoten gelöscht werden, um die Integrität des Diagramms aufrechtzuerhalten.  |
@@ -156,7 +156,7 @@ Erfahren Sie [!INCLUDE[tsql-md](../../includes/tsql-md.md)] mehr über die in SQ
 
 ### <a name="query-statements"></a>Abfrage Anweisungen
 
-|Aufgabe   |Verwandter Artikel  |Notizen
+|Aufgabe   |Verwandter Artikel  |Hinweise
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|Knoten und Kanten werden intern als Tabellen gespeichert. Daher werden die meisten Vorgänge, die für eine Tabelle in SQL Server oder Azure SQL-Datenbank unterstützt werden, in den Knoten-und Edge-Tabellen unterstützt.  |
 |MATCH  | [Vergleichen &#40;Transact-SQL-&#41;](../../t-sql/queries/match-sql-graph.md)|Die integrierte Übereinstimmung wird eingeführt, um Muster Vergleiche und durchlaufen des Diagramms zu unterstützen.  |

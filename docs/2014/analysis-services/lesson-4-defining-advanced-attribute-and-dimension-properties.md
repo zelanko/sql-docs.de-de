@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 11d566c029491378a5e0e091e0803cdf5616e637
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493992"
 ---
 # <a name="lesson-4-defining-advanced-attribute-and-dimension-properties"></a>Lektion 4: Definieren von erweiterten Attributen und Dimensionseigenschaften
@@ -32,7 +32,7 @@ ms.locfileid: "69493992"
  In dieser Aufgabe definieren Sie Ebenennamen in einer über- und untergeordneten Dimension und geben an, ob mit übergeordneten Elementen verknüpfte Daten angezeigt werden sollen. Weitere Informationen finden Sie unter über [-](multidimensional-models/parent-child-dimension.md) /unterordnungshierarchie und [Attribute in über-und untergeordneten Hierarchien](multidimensional-models/parent-child-dimension-attributes.md).  
   
  [Automatisches Gruppieren von Attributelementen](lesson-4-3-automatically-grouping-attribute-members.md)  
- In dieser Aufgabe erstellen Sie automatisch Gruppierungen von Attributelementen basierend auf der Verteilung von Elementen innerhalb der Attributhierarchie. Weitere Informationen finden Sie unter [Gruppieren von Attribut Elementen &#40;diskretisierungs&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
+ In dieser Aufgabe erstellen Sie automatisch Gruppierungen von Attributelementen basierend auf der Verteilung von Elementen innerhalb der Attributhierarchie. Weitere Informationen finden Sie unter [Gruppieren von Attributelementen &#40;Diskretisierung&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).  
   
  [Ausblenden und Deaktivieren von Attributhierarchien](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
  In dieser Aufgabe lernen Sie, wie und wann Attributhierarchien zu deaktivieren oder auszublenden sind.  
@@ -41,7 +41,7 @@ ms.locfileid: "69493992"
  In dieser Aufgabe lernen Sie, wie Dimensionselemente basierend auf einem sekundären Attribut sortiert werden, um die gewünschte Sortierreihenfolge zu erreichen.  
   
  [Angeben von Attributbeziehungen zwischen Attributen in einer benutzerdefinierten Hierarchie](4-6-specifying-attribute-relationships-in-user-defined-hierarchy.md)  
- In dieser Aufgabe lernen Sie, wie Elementeigenschaften für Attribute zu definieren und Aggregationsbeziehungen zwischen ihnen anzugeben sind. Weitere Informationen finden Sie unter [Attributbeziehungen](multidimensional-models/attribute-relationships-define.md) und [Definieren von Attributbeziehungen](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md).  
+ In dieser Aufgabe lernen Sie, wie Elementeigenschaften für Attribute zu definieren und Aggregationsbeziehungen zwischen ihnen anzugeben sind. Weitere Informationen finden Sie unter [Definieren von Attribut Beziehungen](multidimensional-models/attribute-relationships-define.md) und [Eigenschaften der Benutzer Hierarchie](multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md).  
   
  [Definieren von unbekannten Elementen und Eigenschaften für das Verarbeiten von NULL-Werten](lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
  In dieser Aufgabe konfigurieren Sie die Eigenschaften UnknownMember und UnknownMemberName, um Fehlerbedingungen zu behandeln, die durch NULL-Dimensionselemente verursacht werden.  

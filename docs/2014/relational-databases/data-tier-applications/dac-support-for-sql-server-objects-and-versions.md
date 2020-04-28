@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b528a7a9efb91bb99cb7c2b0a32c71dc0de7785b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811269"
 ---
 # <a name="dac-support-for-sql-server-objects-and-versions"></a>DAC-Unterstützung für SQL Server-Objekte und -Versionen
@@ -25,17 +25,16 @@ ms.locfileid: "68811269"
   
  **In diesem Thema**  
   
--   [Unterstützte SQL Server Objekte](#SupportedObjects)  
+-   [Unterstützte SQL Server-Objekte](#SupportedObjects)  
   
 -   [Unterstützung von Datenebenenanwendungen durch die Versionen von SQL Server](#SupportByVersion)  
   
--   [Einschränkungen der Datenbereitstellung](#DeploymentLimitations)  
+-   [Beschränkungen für die Datenbereitstellung](#DeploymentLimitations)  
   
--   [Weitere Überlegungen zu Bereitstellungs Aktionen](#Considerations)  
+-   [Zusätzliche Überlegungen zu Bereitstellungsaktionen](#Considerations)  
   
-##  <a name="SupportedObjects"></a>Unterstützte SQL Server Objekte  
- Beim Erstellen oder Bearbeiten einer Datenebenenanwendung können nur unterstützte Objekte angegeben werden. Sie können keine DACs aus einer bestehenden Datenbank mit Objekten extrahieren, bei dieser registrieren oder in diese importieren, die in einer DAC nicht unterstützt werden. 
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt in einer DAC die im Folgenden aufgeführten Objekte.  
+##  <a name="supported-sql-server-objects"></a><a name="SupportedObjects"></a>Unterstützte SQL Server Objekte  
+ Beim Erstellen oder Bearbeiten einer Datenebenenanwendung können nur unterstützte Objekte angegeben werden. Sie können keine DACs aus einer bestehenden Datenbank mit Objekten extrahieren, bei dieser registrieren oder in diese importieren, die in einer DAC nicht unterstützt werden. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] unterstützt in einer DAC die im Folgenden aufgeführten Objekte.  
   
 |||  
 |-|-|  
@@ -55,7 +54,7 @@ ms.locfileid: "68811269"
 |TYPE: Benutzerdefinierter Tabellentyp|USER|  
 |VIEW||  
   
-##  <a name="SupportByVersion"></a>Unterstützung von Datenebenenanwendungen durch die Versionen von SQL Server  
+##  <a name="data-tier-application-support-by-the-versions-of-sql-server"></a><a name="SupportByVersion"></a>Unterstützung von Datenebenenanwendungen durch die Versionen von SQL Server  
  Die Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bieten verschiedene Ebenen der Unterstützung für DAC-Vorgänge. Alle DAC-Vorgänge, die von einer Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt werden, werden von allen Editionen dieser Version unterstützt.  
   
  Instanzen von [!INCLUDE[ssDE](../../includes/ssde-md.md)] unterstützen die folgenden DAC-Vorgänge:  
@@ -68,14 +67,11 @@ ms.locfileid: "68811269"
   
  Das DAC-Framework umfasst die clientseitigen Tools zum Erstellen und Verarbeiten von DAC-Paketen und Exportdateien. Das DAC-Framework ist in den folgenden Produkten enthalten:  
   
--   
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] umfassen DAC Framework 3.0, das alle DAC-Vorgänge unterstützt.  
+-   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] umfassen DAC Framework 3.0, das alle DAC-Vorgänge unterstützt.  
   
--   
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP1 und Visual Studio 2010 SP1 umfassten DAC-Framework 1.1, das alle DAC-Vorgänge mit Ausnahme des Exports und Imports unterstützt.  
+-   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP1 und Visual Studio 2010 SP1 umfassten DAC-Framework 1.1, das alle DAC-Vorgänge mit Ausnahme des Exports und Imports unterstützt.  
   
--   
-  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] und Visual Studio 2010 umfassen DAC Framework 1.0, das alle DAC-Vorgänge außer Export, Import und direkte Upgrades unterstützt.  
+-   [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] und Visual Studio 2010 umfassen DAC Framework 1.0, das alle DAC-Vorgänge außer Export, Import und direkte Upgrades unterstützt.  
   
 -   Die Clienttools früherer Versionen von SQL Server oder Visual Studio unterstützen keine DAC-Vorgänge.  
   
@@ -83,7 +79,7 @@ ms.locfileid: "68811269"
   
  Mit einer Version des DAC-Frameworks erstellte DAC-Pakete und Exportdateien können von allen höheren Versionen des DAC-Frameworks verarbeitet werden. Beispielsweise kann ein DAC-Paket, das mit den [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] -Clienttools extrahiert wurde, mit den Clienttools von [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] SP1 oder höher bereitgestellt werden.  
   
-##  <a name="DeploymentLimitations"></a>Einschränkungen der Datenbereitstellung  
+##  <a name="data-deployment-limitations"></a><a name="DeploymentLimitations"></a>Einschränkungen der Datenbereitstellung  
  Beachten Sie diese Genauigkeitseinschränkungen in der DAC Framework-Datenbereitstellungs-Engine in SQL Server 2012 SP1. Die Beschränkungen gelten für die folgenden DAC-Framework-Aktionen: Bereitstellen oder Veröffentlichen einer DACPAC-Datei und Importieren einer BACPAC-Datei.  
   
 1.  Verlust von Metadaten unter bestimmten Bedingungen und für bestimmte Basistypen innerhalb von sql_variant-Spalten. In den jeweiligen Fällen wird eine Warnung mit folgendem Inhalt angezeigt:  **Bestimmte Eigenschaften für spezifische Datentypen, die innerhalb einer sql_variant-Spalte verwendet werden, werden bei der Bereitstellung durch das DAC-Framework nicht beibehalten**.  
@@ -108,12 +104,12 @@ ms.locfileid: "68811269"
   
     -   Basistypen DECIMAL, NUMERIC: Wenn die Genauigkeit des Werts größer als 28 ist.  
   
-##  <a name="Considerations"></a>Weitere Überlegungen zu Bereitstellungs Aktionen  
+##  <a name="additional-considerations-for-deployment-actions"></a><a name="Considerations"></a>Weitere Überlegungen zu Bereitstellungs Aktionen  
  Beachten Sie Folgendes bei DAC-Framework-Datenbereitstellungsaktionen:  
   
 -   **Extrahieren/exportieren** : bei Aktionen, bei denen mithilfe des DAC-Frameworks ein Paket aus einer Datenbank erstellt wird, z. b. Extrahieren einer dacpac-Datei, Exportieren einer BacPac-Datei: Diese Einschränkungen gelten nicht. Die im Paket enthaltenen Daten zeichnen sich durch vollständige Datentreue mit den Daten in der Quelldatenbank aus. Falls eine dieser Bedingungen im Paket vorliegt, enthält das Extrahierungs-/Exportprotokoll eine Zusammenfassung der Probleme anhand der oben beschriebenen Meldungen. Das soll den Benutzer vor möglichen Problemen mit der Datenbereitstellung warnen, die beim erstellten Paket auftreten können. Darüber hinaus sieht der Benutzer die folgende Zusammenfassungsmeldung im Protokoll:  **Die Genauigkeit der Datentypen und Werte, die in dem von DAC-Framework erstellten DAC-Paket gespeichert sind, wird durch diese Beschränkungen nicht beeinträchtigt; die Beschränkungen gelten nur für die Datentypen und Werte, die sich aus der Bereitstellung eines DAC-Pakets auf einer Datenbank ergeben. Weitere Informationen zu den betroffenen Daten und eine Problemumgehung dieser Beschränkung finden Sie in** [diesem Thema](https://go.microsoft.com/fwlink/?LinkId=267086).  
   
--   Bereitstellen **/veröffentlichen/importieren** : für Aktionen, bei denen mithilfe des DAC-Frameworks ein Paket in einer Datenbank bereitgestellt wird, wie z. b. zum Bereitstellen oder Veröffentlichen einer dacpac-Datei und Importieren einer BacPac-Datei, gelten diese Einschränkungen. Die Daten in der Zieldatenbank entsprechen möglicherweise keiner vollständig datentreuen Ausgabe der im Paket enthaltenen Daten. Das Bereitstellungs-/Importprotokoll enthält für jede Instanz, auf der das Problem auftritt, die oben angegebene Meldung. Der Vorgang wird zwar durch Fehler blockiert (siehe Kategorie 3 oben), anschließend jedoch mit den übrigen Warnungen fortgesetzt.  
+-   **Bereitstellen/Veröffentlichen/Importieren** : Für Aktionen, bei denen mithilfe des DAC-Frameworks ein Paket in einer Datenbank bereitgestellt wird – z.B. Bereitstellen oder Veröffentlichen einer DACPAC-Datei und Importieren einer BACPAC-Datei – sind diese Beschränkungen gültig. Die Daten in der Zieldatenbank entsprechen möglicherweise keiner vollständig datentreuen Ausgabe der im Paket enthaltenen Daten. Das Bereitstellungs-/Importprotokoll enthält für jede Instanz, auf der das Problem auftritt, die oben angegebene Meldung. Der Vorgang wird zwar durch Fehler blockiert (siehe Kategorie 3 oben), anschließend jedoch mit den übrigen Warnungen fortgesetzt.  
   
      Weitere Informationen zu den von diesem Szenario betroffenen Daten und eine Problemumgehung dieser Beschränkung für Bereitstellungs-/Veröffentlichungs-/Importaktionen finden Sie in [diesem Thema](https://go.microsoft.com/fwlink/?LinkId=267087).  
   

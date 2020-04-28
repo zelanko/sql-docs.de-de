@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7f4ddc16bdfcc7e0d3acdfabe83e81f3d06c0b93
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154441"
 ---
 # <a name="dqs-administration"></a>DQS-Administration
@@ -40,7 +40,7 @@ ms.locfileid: "70154441"
   
 -   Konfigurieren Sie die Protokollierung auf Grundlage des Schweregrads der Ereignisse.  
   
-##  <a name="AdminUsingClent"></a>Verwaltungsaktivitäten mithilfe von Data Quality-Client  
+##  <a name="administration-activities-by-using-data-quality-client"></a><a name="AdminUsingClent"></a>Verwaltungsaktivitäten mithilfe von Data Quality-Client  
  Diese Aktivitäten werden mit der Funktion **Verwaltung** in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]ausgeführt.  
   
 ### <a name="activity-monitoring"></a>Aktivitätsüberwachung  
@@ -51,19 +51,19 @@ ms.locfileid: "70154441"
   
 -   **Verweis Daten**: Konfigurieren von Reference Data Service-Anbietern: Azure Marketplace oder direkte Reference Data Service-Anbieter. Nachdem Sie die Verweisdaten-Dienstanbieter eingerichtet haben, können Sie während einer Domänenverwaltungsaktivität in einer Wissensdatenbank den Verweisdaten eine Domäne bzw. Verbunddomäne zuordnen und anschließend die gleiche Wissensdatenbank für die Bereinigungsaktivität in einem Data Quality-Projekt verwenden. Außerdem können Sie die Proxy Einstellungen für die Verbindung mit dem Internet angeben, um Azure Marketplace zu verwenden.  
   
--   **Allgemeine Einstellungen**: Geben Sie die Schwellenwerte für die Datenbereinigung und den Datenabgleich an, und ob [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]Sie Benachrichtigungen für die Profilerstellung in aktivieren möchten. Diese Schwellenwerte werden von DQS bei der computergestützten Bereinigung und bei Abgleichsaktivitäten in einem Data Quality-Projekt verwendet.  
+-   **Allgemeine Einstellungen**: Geben Sie die Schwellenwerte für die Datenbereinigung und den Datenabgleich an und ob Sie Benachrichtigungen für die Profilerstellung in [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]aktivieren möchten. Diese Schwellenwerte werden von DQS bei der computergestützten Bereinigung und bei Abgleichsaktivitäten in einem Data Quality-Projekt verwendet.  
   
--   **Protokoll Einstellungen**: die Protokolldateien in DQS zeichnen die in DQS ausgeführten Aktivitäten auf und eignen sich zum Nachverfolgen von Betriebsproblemen während der Wartung und Problembehandlung. Sie können die Meldungen filtern, die für verschiedene DQS-Funktionen (Domänenverwaltung, Wissensermittlung, Bereinigung, Abgleich und Verweisdatendienste) und DQS-Module auf Grundlage des Schweregrads der Ereignisse protokolliert werden sollen.  
+-   **Protokolleinstellungen**: Die Protokolldateien in DQS zeichnen die in DQS ausgeführten Aktivitäten auf und eignen sich zum Nachverfolgen funktionaler Probleme während der Wartung und Problembehebung. Sie können die Meldungen filtern, die für verschiedene DQS-Funktionen (Domänenverwaltung, Wissensermittlung, Bereinigung, Abgleich und Verweisdatendienste) und DQS-Module auf Grundlage des Schweregrads der Ereignisse protokolliert werden sollen.  
   
 > [!NOTE]  
 >  Der Bildschirm **Konfiguration** ist nur für Benutzer verfügbar, die die "dqs_administrator"-Rolle in der Datenbank "DQS_MAIN" aufweisen.  
   
-##  <a name="AdminOutsideClient"></a>Verwaltungsaktivitäten außerhalb Data Quality-Client  
+##  <a name="administration-activities-outside-of-data-quality-client"></a><a name="AdminOutsideClient"></a>Verwaltungsaktivitäten außerhalb Data Quality-Client  
  Folgende Aktivitäten werden außerhalb des Data Quality-Clients ausgeführt:  
   
--   **Sichern und Wiederherstellen von DQS-Datenbanken**: das Sichern und Wiederherstellen von DQS-Datenbanken entspricht dem Sichern und Wiederherstellen beliebiger SQL Server-Datenbanken, wobei einige Aspekte für DQS spezifisch sind.  
+-   **Sichern und Wiederherstellen von DQS-Datenbanken**: Das Sichern und Wiederherstellen von DQS-Datenbanken entspricht dem Sichern und Wiederherstellen von SQL Server-Datenbanken, wobei einige Aspekte jedoch spezifisch für DQS sind.  
   
--   **Trennen und Anfügen von DQS-Datenbanken**: die Schritte zum Trennen und Anfügen von DQS-Datenbanken sind identisch mit dem Trennen und Anfügen von SQL Server-Datenbank mit einigen spezifischen Überlegungen für DQS.  
+-   **Trennen und Anfügen von DQS-Datenbanken**: Die Schritte zum Trennen und Anfügen von DQS-Datenbanken entsprechen dem Trennen und Anfügen von SQL Server-Datenbanken, wobei einige Aspekte jedoch spezifisch für DQS sind.  
   
  Weitere Informationen finden Sie unter [Manage DQS Databases](../../2014/data-quality-services/manage-dqs-databases.md).  
   

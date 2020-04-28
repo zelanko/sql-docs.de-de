@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: b96aba990231225516a7ba8ccf1523b91cb56c86
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266364"
 ---
 # <a name="working-with-ssma-projects-oracletosql"></a>Arbeiten mit SSMA-Projekten (OracleToSQL)
@@ -72,9 +72,9 @@ Wenn Sie Daten aus Oracle-Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversio
   
 4.  Wählen Sie in der Dropdown Liste **Migration zu** die Version des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ziels aus, die für die Migration verwendet wird. Die verfügbaren Optionen sind:  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
@@ -100,7 +100,7 @@ Wenn Sie ein Projekt speichern, behält SSMA die Projekteinstellungen und option
   
         Das Speichern von Metadaten kann einige Minuten dauern. Wenn Sie noch keine Metadaten speichern möchten, aktivieren Sie keine Kontrollkästchen.  
   
-    2.  Klicken Sie auf die Schaltfläche **Speichern**.  
+    2.  Klicken Sie auf die Schaltfläche **Save** .  
   
         SSMA analysiert die Oracle-Schemas und speichert die Metadaten in der Projektdatei.  
   

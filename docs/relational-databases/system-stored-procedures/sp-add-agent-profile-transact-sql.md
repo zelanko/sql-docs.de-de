@@ -16,10 +16,10 @@ ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
 author: mashamsft
 ms.author: mathoma
 ms.openlocfilehash: 24a900409ae5979c13bdbff0d67d9d2670059208
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770855"
 ---
 # <a name="sp_add_agent_profile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
@@ -44,17 +44,17 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
 ## <a name="arguments"></a>Argumente  
 `[ @profile_id = ] profile_id`Die ID, die dem neu eingefügten Profil zugeordnet ist. *profile_id* ist vom Datentyp **int** und ein optionaler OUTPUT-Parameter. Wenn profile_id angegeben wird, wird der Wert auf die ID des neuen Profils festgelegt.  
   
-`[ @profile_name = ] 'profile_name'`Der Name des Profils. *profile_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @profile_name = ] 'profile_name'`Der Name des Profils. *profile_name* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
 `[ @agent_type = ] 'agent_type'`Der Typ des Replikations-Agents. *agent_type* ist vom Datentyp **int**und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Momentaufnahme-Agent|  
 |**2**|Protokolllese-Agent|  
-|**€**|Verteilungs-Agent|  
+|**3**|Verteilungs-Agent|  
 |**4**|Merge-Agent|  
-|**21.00**|Warteschlangenlese-Agent|  
+|**9**|Warteschlangenlese-Agent|  
   
 `[ @profile_type = ] profile_type`Der Typ des Profils. *profile_type* ist vom Datentyp **int**und hat den Standardwert **1**.  
   

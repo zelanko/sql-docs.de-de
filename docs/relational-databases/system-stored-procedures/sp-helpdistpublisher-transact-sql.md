@@ -16,10 +16,10 @@ ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a47a81b2b19ceccf76a031e298ab60cf4a6f8c9a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770952"
 ---
 # <a name="sp_helpdistpublisher-transact-sql"></a>sp_helpdistpublisher (Transact-SQL)
@@ -48,9 +48,9 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Der Name des Verlegers.|  
 |**distribution_db**|**sysname**|Verteilungsdatenbank für den angegebenen Verleger.|  
-|**security_mode**|**int**|Sicherheitsmodus, der von Replikations-Agents für die Verbindung mit dem Verleger für Abonnements mit verzögertem Update über eine Warteschlange oder für die Verbindung mit einem Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger verwendet wird.<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung<br /><br /> **1** = Windows-Authentifizierung|  
+|**security_mode**|**int**|Sicherheitsmodus, der von Replikations-Agents für die Verbindung mit dem Verleger für Abonnements mit verzögertem Update über eine Warteschlange oder für die Verbindung mit einem Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger verwendet wird.<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung<br /><br /> **1** = Windows-Authentifizierung|  
 |**Anmel**|**sysname**|Anmeldename, der von Replikations-Agents für die Verbindung mit dem Verleger für Abonnements mit verzögertem Update über eine Warteschlange oder für die Verbindung mit einem Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Verleger verwendet wird.|  
-|**anmelden**|**nvarchar (524)**|Zurückgegebenes Kennwort (in einfacher verschlüsselter Form). Das Kennwort ist für andere Benutzer als **sysadmin**NULL.|  
+|**password**|**nvarchar (524)**|Zurückgegebenes Kennwort (in einfacher verschlüsselter Form). Das Kennwort ist für andere Benutzer als **sysadmin**NULL.|  
 |**enden**|**bit**|Gibt an, ob ein Remoteverleger den lokalen Server als Verteiler verwendet:<br /><br /> **0** = Nein<br /><br /> **1** = ja|  
 |**working_directory**|**nvarchar(255)**|Name des Arbeitsverzeichnisses.|  
 |**trusted**|**bit**|Gibt an, ob das Kennwort beim Herstellen der Verbindung des Verlegers mit dem Verteiler erforderlich ist. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] In und höheren Versionen sollte dies immer **0**(null) zurückgeben, was bedeutet, dass das Kennwort erforderlich ist.|  
@@ -71,7 +71,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
  Mitglieder der festen Server Rolle **sysadmin** können **sp_helpdistpublisher** für jeden Verleger ausführen, der den lokalen Server als Verteiler verwendet. Mitglieder der festen Daten Bank Rolle **db_owner** oder der **replmonitor** -Rolle in einer Verteilungs Datenbank können **sp_helpdistpublisher** für jeden Verleger ausführen, der diese Verteilungs Datenbank verwendet. Benutzer in der Veröffentlichungs Zugriffsliste für eine Veröffentlichung auf dem angegebenen *Verleger* können **sp_helpdistpublisher**ausführen. Wenn *Publisher* nicht angegeben wird, werden Informationen für alle Verleger zurückgegeben, für die der Benutzer Zugriffsberechtigung hat.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [Anzeigen und Ändern der Verteiler-und Verleger Eigenschaften](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistpublisher &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_changedistpublisher &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  

@@ -16,10 +16,10 @@ ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ea01bd3eb765a0a5f7a85245090b79579f347b3a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771423"
 ---
 # <a name="sp_helpqreader_agent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
@@ -43,7 +43,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**Name**|**int**|Die ID des Agents.|  
+|**id**|**int**|Die ID des Agents.|  
 |**name**|**nvarchar (100)**|Der Name des Agents.|  
 |**job_id**|**uniqueidentifier**|Eindeutige ID des Agentauftrags.|  
 |**job_login**|**nvarchar(512)**|Das Windows-Konto, unter dem der Verteilungs-Agent ausgeführt wird, das im Format *Domäne*\\*Benutzername*zurückgegeben wird.|  
@@ -59,6 +59,6 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
  Wenn der Wert von *frompublisher* **1**ist, können nur Mitglieder der festen Server Rolle **sysadmin** auf dem Verleger oder Mitglieder der festen Daten Bank Rolle **db_owner** in der Veröffentlichungs Datenbank **sp_helpqreader_agent**ausführen. Andernfalls können nur Mitglieder der festen Server Rolle **sysadmin** auf dem Verteiler oder Mitglieder der festen Daten Bank Rolle **db_owner** in der Verteilungs Datenbank **sp_helpqreader_agent**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Aktivieren des Aktualisierens von Abonnements für Transaktions Veröffentlichungen](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
+ [Aktivieren des Aktualisierens von Abonnements für Transaktionsveröffentlichungen](../../relational-databases/replication/publish/enable-updating-subscriptions-for-transactional-publications.md)  
   
   

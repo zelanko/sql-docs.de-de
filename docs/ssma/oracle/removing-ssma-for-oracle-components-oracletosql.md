@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 0434f88c46d14672c84f5f7939488a827b229e27
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266564"
 ---
 # <a name="removing-ssma--for-oracle-components-oracletosql"></a>Entfernen von SSMA-Komponenten für Oracle (OracleToSQL)
@@ -27,7 +27,7 @@ Sie können SSMA **mithilfe der**Option Software deinstallieren.
   
 **So deinstallieren Sie SSMA**  
   
-1.  Öffnen Sie in der Systemsteuerung das Modul **Software**.  
+1.  Öffnen Sie in der Systemsteuerung **Programme hinzufügen/entfernen**.  
   
 2.  Wählen Sie ** [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant für Oracle aus**, und klicken Sie dann auf **Entfernen**.  
   
@@ -38,7 +38,7 @@ Wenn Sie sicher sind, dass die migrierten Datenbanken keine Objekte im **sysdb. 
   
 **So deinstallieren Sie das Erweiterungspaket**  
   
-1.  Öffnen Sie in der Systemsteuerung das Modul **Software**.  
+1.  Öffnen Sie in der Systemsteuerung **Programme hinzufügen/entfernen**.  
   
 2.  Wählen Sie **Microsoft SQL Server Migration Assistant für das Oracle-Erweiterungspaket aus**, und klicken Sie dann auf **Entfernen**.  
   

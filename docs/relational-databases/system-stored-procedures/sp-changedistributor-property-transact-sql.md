@@ -16,10 +16,10 @@ ms.assetid: 04f503a1-307c-4de0-bac6-e6e97d5b6940
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 18921fa57cfa203b0d8e5274caeb1e17c385405c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771305"
 ---
 # <a name="sp_changedistributor_property-transact-sql"></a>sp_changedistributor_property (Transact-SQL)
@@ -40,7 +40,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
 ## <a name="arguments"></a>Argumente  
 `[ @property = ] 'property'`Die-Eigenschaft für einen angegebenen Verteiler. *Property* ist vom **Datentyp vom Datentyp sysname**. die folgenden Werte sind möglich.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**heartbeat_interval**|Maximale Anzahl von Minuten, die ein Agent ohne Protokollierung einer Statusmeldung ausgeführt werden kann.|  
 |NULL (Standard)|Alle verfügbaren *Eigenschafts* Werte werden gedruckt.|  
@@ -60,7 +60,7 @@ sp_changedistributor_property [ [ @property= ] 'property' ]
  Nur Mitglieder der festen Server Rolle **sysadmin** können **sp_changedistributor_property**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [Anzeigen und Ändern der Verteiler-und Verleger Eigenschaften](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistributor &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
  [sp_dropdistributor &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   

@@ -16,10 +16,10 @@ ms.assetid: d453c451-e957-490f-b968-5e03aeddaf10
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 42b56712e8b441184d55bf12ce16dbcb55930374
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68762783"
 ---
 # <a name="sp_changesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
@@ -60,7 +60,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @type = ] type`Der Typ des Abonnenten. *Type ist vom Datentyp* **tinyint**. der Standardwert ist NULL. **0** gibt einen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten an. **1** gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder einen anderen ODBC-Datenquellen Server-Abonnenten an.  
   
-`[ @login = ] 'login'`Die Anmelde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -ID für die Authentifizierung. *Login* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @login = ] 'login'`Die Anmelde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -ID für die Authentifizierung. *login* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
 `[ @password = ] 'password'`Das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierungs Kennwort. *Password* ist vom **%** **Datentyp vom Datentyp sysname**und hat den Standardwert. **%** Gibt an, dass die Kenn Wort Eigenschaft nicht geändert wird.  
   
@@ -72,7 +72,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @frequency_type = ] frequency_type`Die Häufigkeit, mit der der Verteilungs Task geplant werden soll. *frequency_type* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
 |**2**|On-Demand-Streaming|  
@@ -81,13 +81,13 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
 |**Uhr**|Monatlich|  
 |**32**|Monatlich, relativ|  
 |**64**|Autostart|  
-|**128**|Serie|  
+|**128**|Wiederholt|  
   
 `[ @frequency_interval = ] frequency_interval`Das Intervall für die *frequency_type*. *frequency_interval* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Das Datum des Verteilungs Tasks. Dieser Parameter wird verwendet, wenn *frequency_type* auf **32** (monatlich, relativ) festgelegt ist. *frequency_relative_interval* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|First (Erster)|  
 |**2**|Sekunde|  
@@ -99,7 +99,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @frequency_subday = ] frequency_subday`Gibt an, wie oft innerhalb des definierten Zeitraums neu geplant werden soll. *frequency_subday* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
 |**2**|Sekunde|  
@@ -120,7 +120,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @security_mode = ] security_mode`Der implementierte Sicherheitsmodus. *security_mode* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentifizierung|  
 |**1**|Windows-Authentifizierung|  

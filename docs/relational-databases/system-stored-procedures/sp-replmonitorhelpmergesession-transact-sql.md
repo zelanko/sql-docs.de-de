@@ -16,10 +16,10 @@ ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1781e22e97870e7b9c26e7de397d77600ecbe1ce
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771239"
 ---
 # <a name="sp_replmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (Transact-SQL)
@@ -46,15 +46,15 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
   
 `[ @hours = ] hours`Der Zeitraum (in Stunden), für den historische agentsitzungsinformationen zurückgegeben werden. *Hours* ist vom Datentyp **int**. die folgenden Bereiche sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |< **1,0**|Gibt Informationen zu vergangenen Agentausführungen (bis zu maximal 100 Ausführungen) zurück.|  
-|**0** (Standard)|Gibt Informationen zu allen vergangenen Agentausführungen zurück.|  
+|**0** (Standardwert)|Gibt Informationen zu allen vergangenen Agentausführungen zurück.|  
 |> **1,0**|Gibt Informationen zu Agent-Ausführungen zurück, die in der Anzahl der letzten *Stunden* aufgetreten sind.|  
   
 `[ @session_type = ] session_type`Filtert das Resultset basierend auf dem Endzeit Ergebnis der Sitzung. *session_type* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**1** (Standard)|Agentsitzungen mit einem Neuversuch oder erfolgreichem Abschluss.|  
 |**0**|Agentsitzungen mit einem Fehlerergebnis.|  
@@ -78,10 +78,10 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |**DownloadedCommands**|**int**|Anzahl von Befehlen, die während der Agentsitzung heruntergeladen wurden.|  
 |**ErrorMessages**|**int**|Anzahl von Fehlermeldungen, die während der Agentsitzung generiert wurden.|  
 |**ErrorID**|**int**|ID des aufgetretenen Fehlers.|  
-|**PercentageDone**|**Decimal**|Geschätzter prozentualer Anteil an der Gesamtzahl von Änderungen, die bereits in einer aktiven Sitzung zugestellt wurden.|  
+|**PercentageDone**|**decimal**|Geschätzter prozentualer Anteil an der Gesamtzahl von Änderungen, die bereits in einer aktiven Sitzung zugestellt wurden.|  
 |**TimeRemaining**|**int**|Geschätzte verbleibende Zeit (in Sekunden) in einer aktiven Sitzung.|  
 |**CurrentPhase**|**int**|Die aktuelle Phase einer aktiven Sitzung, die Folgendes sein kann:<br /><br /> **1** = hochladen<br /><br /> **2** = herunterladen|  
-|**Last Message**|**nvarchar (500)**|Die letzte protokollierte Meldung des Merge-Agents während der Sitzung.|  
+|**LastMessage**|**nvarchar (500)**|Die letzte protokollierte Meldung des Merge-Agents während der Sitzung.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -95,6 +95,6 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
  Nur Mitglieder der festen Daten Bank Rolle **db_owner** oder **replmonitor** in der Verteilungs Datenbank auf dem Verteiler oder der Abonnement Datenbank auf dem Abonnenten können **sp_replmonitorhelpmergesession**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Programmgesteuertes Überwachen der Replikation](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [Programmgesteuerte Überwachen der Replikation](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Erweiterte Zeitreihen-Vorhersagen (Intermediate Data Mining Tutorial) | Microsoft Docs
+title: Erweiterte Zeitreihen Vorhersagen (Data Mining-Lernprogramm für Fortgeschrittene) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: ca144d1d473f7df49f73d5ed170052c61ce6107d
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893693"
 ---
 # <a name="advanced-time-series-predictions-intermediate-data-mining-tutorial"></a>Erweiterte Zeitreihenvorhersagen (Data Mining-Lernprogramm für Fortgeschrittene)
@@ -24,7 +24,7 @@ ms.locfileid: "68893693"
   
  In dieser Aufgabe erstellen Sie alle Datenquellen, die für die erweiterten Vorhersagetasks erforderlich sind. Sie erstellen zwei Datenquellensichten zur Verwendung als Eingaben in die Vorhersageabfrage und eine Datenquellensicht, die beim Erstellen eines neuen Modells zum Einsatz kommt.  
   
- **Schritte**  
+ **Nehmen**  
   
 1.  [Vorbereiten der erweiterten Umsatzdaten (für die Vorhersage)](#bkmk_newExtendData)  
   
@@ -40,10 +40,10 @@ ms.locfileid: "68893693"
   
 7.  [Überprüfen der neuen Vorhersagen](../../2014/tutorials/comparing-predictions-for-forecasting-models-intermediate-data-mining-tutorial.md)  
   
-##  <a name="creating-the-new-extended-sales-data"></a><a name="bkmk_newExtendData"></a>Erstellen der neuen erweiterten Vertriebsdaten  
+##  <a name="creating-the-new-extended-sales-data"></a><a name="bkmk_newExtendData"></a>Erstellen der neuen erweiterten Umsatzdaten  
  Um die Umsatzdaten zu aktualisieren, müssen Sie die letzten Umsatzzahlen abrufen. Die Daten aus der Pazifikregion sind von besonderem Interesse, da dort eine regionale Werbeaktion durchgeführt wurde, um neue Niederlassungen einzuführen und ihre Produkte bekannt zu machen.  
   
- Für dieses Szenario gehen wir davon aus, dass die Daten aus einer Excel-Arbeitsmappe importiert wurden, die nur drei Monate neue Daten für ein paar Regionen enthält. Sie erstellen eine Tabelle für die Daten mit einem Transact-SQL-Skript und definieren dann eine Datenquellenansicht, die für die Vorhersage verwendet werden soll.  
+ In diesem Szenario gehen wir davon aus, dass die Daten aus einer Excel-Arbeitsmappe importiert wurden, die für eine Reihe von Regionen nur drei Monate neue Daten enthält. Sie erstellen mit einem Transact-SQL-Skript eine Tabelle für die Daten und definieren dann eine Datenquellen Sicht, die für die Vorhersage verwendet werden soll.  
   
 #### <a name="create-the-table-with-new-sales-data"></a>Erstellen der Tabelle mit neuen Umsatzdaten  
   
@@ -93,7 +93,7 @@ ms.locfileid: "68893693"
     >   
     >  Die in der Beispieldatenbank verwendeten Datumsangaben wurden für diese Version geändert. Wenn Sie eine frühere Edition von AdventureWorks verwenden, müssen Sie die eingefügten Datumsangaben ggf. anpassen.  
   
-###  <a name="create-a-data-source-view-using-the-new-sales-data"></a><a name="bkmk_newReplaceData"></a>Erstellen einer Datenquellenansicht mithilfe der neuen Verkaufsdaten  
+###  <a name="create-a-data-source-view-using-the-new-sales-data"></a><a name="bkmk_newReplaceData"></a>Erstellen einer Datenquellen Sicht mit den neuen Umsatzdaten  
   
 1.  Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf **Datenquellensichten**und wählen Sie dann **Neue Datenquellensicht**aus.  
   
@@ -101,16 +101,16 @@ ms.locfileid: "68893693"
   
      **Datenquelle**:[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]  
   
-     **Tabellen und Ansichten auswählen**: Wählen Sie die soeben erstellte Tabelle NewSalesData aus.  
+     **Tabellen und Sichten auswählen**: Wählen Sie die Tabelle aus, die Sie soeben erstellt haben, newsalesdata.  
   
 3.  Klicken Sie auf **Fertig stellen**.  
   
-4.  Klicken Sie in der Entwurfsoberfläche datenquellenansicht mit der rechten Maustaste auf NewSalesData, und wählen Sie dann **Daten untersuchen** aus, um die Daten zu überprüfen.  
+4.  Klicken Sie in der Entwurfs Oberfläche der Datenquellen Sicht mit der rechten Maustaste auf newsalesdata, und wählen Sie **Daten durchsuchen** aus, um die Daten zu überprüfen.  
   
 > [!WARNING]  
 >  Sie verwenden diese Daten nur für Vorhersagen; daher ist es nicht wichtig, dass sie unvollständig sind.  
   
-##  <a name="creating-the-data-for-the-cross-prediction-model"></a><a name="bkmk_CrossData2"></a>Erstellen der Daten für das Cross-Prediction-Modell  
+##  <a name="creating-the-data-for-the-cross-prediction-model"></a><a name="bkmk_CrossData2"></a>Erstellen der Daten für das Kreuz Vorhersagemodell  
  Die Daten, die im ursprünglichen Prognosemodell verwendet wurden, wurden in der Sicht vTimeSeries bereits ein wenig gruppiert, da dort mehrere Fahrradmodelle in eine kleinere Anzahl von Kategorien und die Ergebnisse einzelner Länder in Regionen zusammengeführt wurden. Sie erstellen ein Modell, das für weltweite Prognosen verwendet werden kann, indem Sie direkt im Datenquellensicht-Designer einige zusätzliche einfache Aggregationen erstellen. Die neue Datenquellensicht enthält nur die Summe und den Durchschnitt der Umsätze aller Produkte in allen Regionen.  
   
  Nachdem Sie die für das Modell verwendete Datenquelle erstellt haben, müssen Sie eine neue Datenquellensicht erstellen, die für Vorhersage verwendet werden soll. Wenn Sie z. B. die Umsätze in Europa mit dem neuen weltweite Modell vorhersagen möchten, dürfen Sie nur Daten aus der Region Europa eingeben. Daher richten Sie eine neue Datenquellensicht ein, die die ursprünglichen Daten filtert, und ändern die Filterbedingung für jeden Satz von Vorhersageabfragen.  
@@ -123,13 +123,13 @@ ms.locfileid: "68893693"
   
 3.  Wählen Sie auf der Seite **Datenquelle auswählen**[!INCLUDE[ssAWDWsp](../includes/ssawdwsp-md.md)]aus und klicken Sie dann auf **Weiter**.  
   
-4.  Auf der Seite **"Tabellen und Ansichten auswählen**" fügen Sie keine Tabellen hinzu - klicken Sie einfach auf **Weiter**.  
+4.  Wählen Sie auf der Seite **Tabellen und Sichten**, keine Tabellen hinzufügen aus. Klicken Sie einfach auf **weiter**.  
   
-5.  Geben Sie auf der Seite Abschließen `AllRegions`des **Assistenten**den Namen ein, und klicken Sie dann auf Fertig **stellen**.  
+5.  Geben Sie auf der Seite **Assistenten abschließen**den Namen `AllRegions`ein, und klicken Sie dann auf **Fertig**stellen.  
   
 6.  Klicken Sie danach mit der rechten Maustaste auf die leere Entwurfsoberfläche der Datenquellensicht und wählen Sie **Neue benannte Abfrage**aus.  
   
-7.  Geben Sie im Dialogfeld **Benannte** `AllRegions`Abfrage erstellen für **Name**, Typ und für **Beschreibung**, Summe **und Umsatzdurchschnitt für alle Modelle und Regionen**ein.  
+7.  Geben Sie im Dialogfeld **benannte Abfrage erstellen** unter **Name**den Namen `AllRegions`ein, und geben Sie für **Beschreibung**den Wert **Sum und Average of Sales für alle Modelle und Regionen**ein.  
   
 8.  Geben Sie im SQL-Textbereich die folgende Anweisung ein, und klicken Sie dann auf "OK":  
   
@@ -142,9 +142,9 @@ ms.locfileid: "68893693"
     GROUP BY ReportingDate  
     ```  
   
-9. Klicken Sie `AllRegions` mit der rechten Maustaste auf die Tabelle, und wählen Sie dann **Daten untersuchen**aus.  
+9. Klicken Sie mit der `AllRegions` rechten Maustaste auf die Tabelle, und wählen Sie **Daten durchsuchen**aus.  
   
-###  <a name="to-create-the-series-data-for-cross-prediction"></a><a name="bkmk_CrossData"></a>So erstellen Sie die Seriendaten für die Cross-Prediction  
+###  <a name="to-create-the-series-data-for-cross-prediction"></a><a name="bkmk_CrossData"></a>So erstellen Sie die Reihen Daten für Kreuz Vorhersagen  
   
 1.  Klicken Sie im **Projektmappen-Explorer**mit der rechten Maustaste auf **Datenquellensichten**und wählen Sie dann **Neue Datenquellensicht**aus.  
   
@@ -154,7 +154,7 @@ ms.locfileid: "68893693"
   
      **Tabellen und Sichten auswählen**: keine Auswahl  
   
-     **Bezeichnung**:`T1000 Pacific Region`  
+     **Name**:`T1000 Pacific Region`  
   
 3.  Klicken Sie auf **Fertig stellen**.  
   
@@ -162,9 +162,9 @@ ms.locfileid: "68893693"
   
      Das Dialogfeld **Benannte Abfrage erstellen** wird geöffnet. Geben Sie den Namen erneut ein und fügen Sie die folgende Beschreibung hinzu:  
   
-     **Bezeichnung**:`T1000 Pacific Region`  
+     **Name**:`T1000 Pacific Region`  
   
-     **Beschreibung**: **Filtern`vTimeSeries`nach Region und Modell**  
+     **Beschreibung**: **nach`vTimeSeries`Region und Modell Filtern**  
   
 5.  Geben Sie im Textbereich die folgende Abfrage ein, und klicken Sie dann auf "OK":  
   
@@ -177,16 +177,16 @@ ms.locfileid: "68893693"
     > [!NOTE]  
     >  Da Sie Vorhersagen für jede Reihe getrennt erstellen müssen, könnten Sie den Abfragetext kopieren und als Textdatei speichern, damit Sie ihn für die andere Datenreihe erneut verwenden können.  
   
-6.  Klicken Sie in der Entwurfsoberfläche Datenquellenansicht mit der rechten Maustaste auf T1000 Pacific, und wählen Sie dann **Daten untersuchen** aus, um sicherzustellen, dass die Daten ordnungsgemäß gefiltert wurden.  
+6.  Klicken Sie in der Entwurfs Oberfläche der Datenquellen Sicht mit der rechten Maustaste auf T1000 Pacific, und wählen Sie **Daten durchsuchen** , um zu überprüfen, ob die Daten ordnungsgemäß gefiltert wurden.  
   
      Sie verwenden diese Daten als Eingabe in das Modell, wenn Sie Abfragen für Kreuzvorhersagen erstellen.  
   
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion  
- [Zeitreihenvorhersagen mit aktualisierten Daten &#40;Intermediate Data Mining Tutorial&#41;](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
+ [Zeitreihen Vorhersagen mit aktualisierten Data &#40;Data Mining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/time-series-predictions-using-updated-data-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Microsoft Time Series-Algorithmus](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm.md)   
- [Technische Referenz für microsoft Time Series Algorithm](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
+ [Technische Referenz für den Microsoft Time Series-Algorithmus](../../2014/analysis-services/data-mining/microsoft-time-series-algorithm-technical-reference.md)   
  [Datenquellsichten in mehrdimensionalen Modellen](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)  
   
   

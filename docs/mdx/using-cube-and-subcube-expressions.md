@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7c656bdaa0de108ade568a22bbcc734f38d43bfd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893530"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>Verwenden von Cube- und Teilcubeausdrücken
@@ -73,6 +73,6 @@ ms.locfileid: "68893530"
  [Entwickeln von Teilcubes in MDX-&#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
  [CREATE SUBCUBE-Anweisung &#40;MDX-&#41;](../mdx/mdx-data-definition-create-subcube.md)   
  [Ausdrücke &#40;MDX-&#41;](../mdx/expressions-mdx.md)   
- [SCOPE-Anweisung &#40;MDX-&#41;](../mdx/mdx-scripting-scope.md)  
+ [SCOPE-Anweisung &#40;MDX&#41;](../mdx/mdx-scripting-scope.md)  
   
   

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a548597b42bacdf5afaf7a2dc024156bd4ec3ad3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68290357"
 ---
 # <a name="sp_executesql-transact-sql"></a>sp_executesql (Transact-SQL)
@@ -234,7 +234,7 @@ FROM Sales.SalesOrderHeader
 WHERE SalesOrderNumber = @SalesOrderNumber;  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="d-executing-a-simple-select-statement"></a>D: Ausführen einer einfachen SELECT-Anweisung  
  In diesem Beispiel wird eine einfache `SELECT`-Anweisung erstellt und ausgeführt, die den eingebetteten Parameter `@level` enthält.  

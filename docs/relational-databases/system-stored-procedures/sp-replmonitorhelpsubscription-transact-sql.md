@@ -16,10 +16,10 @@ ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 845b9bc59b2232dfa6760087c4a18af84a3c65b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68764351"
 ---
 # <a name="sp_replmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
@@ -52,7 +52,7 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
 `[ @publication_type = ] publication_type`Gibt an, ob der Typ der Veröffentlichung ist. *publication_type* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**0**|Transaktionsveröffentlichung.|  
 |**1**|Momentaufnahmeveröffentlichung.|  
@@ -61,16 +61,16 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
   
 `[ @mode = ] mode`Der Filter Modus, der beim Zurückgeben von Abonnement Überwachungsinformationen verwendet werden soll. der *Modus* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**0** (Standard)|Gibt alle Abonnements zurück.|  
+|**0** (Standardwert)|Gibt alle Abonnements zurück.|  
 |**1**|Gibt nur Abonnements mit Fehlern zurück.|  
 |**2**|Gibt nur Abonnements zurück, die Schwellenwertwarnungen generiert haben.|  
-|**€**|Gibt nur Abonnements zurück, die entweder Fehler aufweisen oder Schwellenwertwarnungen generiert haben.|  
+|**3**|Gibt nur Abonnements zurück, die entweder Fehler aufweisen oder Schwellenwertwarnungen generiert haben.|  
 |**4**|Gibt die 25 häufigsten Abonnements zurück.|  
-|**5@@**|Gibt die 50 Abonnements zurück, die die schlechteste Leistung aufweisen.|  
+|**5**|Gibt die 50 Abonnements zurück, die die schlechteste Leistung aufweisen.|  
 |**6**|Gibt nur Abonnements zurück, für die zurzeit eine Synchronisierung im Gange ist.|  
-|**19.00**|Gibt nur Abonnements zurück, für die zurzeit keine Synchronisierung im Gange ist.|  
+|**7**|Gibt nur Abonnements zurück, für die zurzeit keine Synchronisierung im Gange ist.|  
   
 `[ @topnum = ] topnum`Beschränkt das Resultset auf die angegebene Anzahl von Abonnements am Anfang der zurückgegebenen Daten. *topnum* ist vom Datentyp **int**und hat keinen Standardwert.  
   
@@ -125,6 +125,6 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
  Nur Mitglieder der festen Daten Bank Rolle **db_owner** oder **replmonitor** in der Verteilungs Datenbank können **sp_replmonitorhelpsubscription**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Programmgesteuertes Überwachen der Replikation](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [Programmgesteuerte Überwachen der Replikation](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

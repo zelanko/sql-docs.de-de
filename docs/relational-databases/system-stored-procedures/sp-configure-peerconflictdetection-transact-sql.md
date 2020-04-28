@@ -16,10 +16,10 @@ ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8a8cc9930ddf85dea60999e3b63dbcebaaf42d8f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68215945"
 ---
 # <a name="sp_configure_peerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
@@ -50,7 +50,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  [ @action= ] "*Action*"  
  Gibt an, ob die Konflikterkennung für eine Veröffentlichung aktiviert oder deaktiviert werden soll. *Action* ist vom Datentyp **nvarchar (5)**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**fähigen**|Aktiviert die Konflikterkennung für eine Veröffentlichung.|  
 |**ier**|Deaktiviert die Konflikterkennung für eine Veröffentlichung.|  
@@ -85,7 +85,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Konflikterkennung bei der Peer-zu-Peer-Replikation](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)   
- [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [Peer-zu-Peer-Transaktions Replikation](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [Gespeicherte Automatisierungsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

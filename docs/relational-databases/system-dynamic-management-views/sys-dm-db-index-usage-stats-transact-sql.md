@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 491ec37d96cf6bdb2b074efb42a54406beb1fd20
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264404"
 ---
 # <a name="sysdm_db_index_usage_stats-transact-sql"></a>sys.dm_db_index_usage_stats (Transact-SQL)
@@ -45,18 +45,18 @@ ms.locfileid: "68264404"
 |**database_id**|**smallint**|ID der Datenbank, für die die Tabelle oder Sicht definiert ist.|  
 |**object_id**|**int**|ID der Tabelle oder Sicht, für die der Index definiert ist.|  
 |**index_id**|**int**|Die ID des Index.|  
-|**user_seeks**|**BIGINT**|Anzahl von Suchvorgängen durch Benutzerabfragen.|  
-|**user_scans**|**BIGINT**|Anzahl der Scans durch Benutzer Abfragen, für die kein Seek-Prädikat verwendet wurde.|  
-|**user_lookups**|**BIGINT**|Anzahl von Lesezeichen-Nachschlagevorgängen durch Benutzerabfragen.|  
-|**user_updates**|**BIGINT**|Anzahl von Updates durch Benutzerabfragen. Dies schließt Einfüge-, Lösch-und Update Vorgänge ein, die die Anzahl der Vorgänge darstellen, die nicht den betroffenen Zeilen entspricht. Wenn Sie z. b. 1000 Zeilen in einer Anweisung löschen, wird dieser Zähler um 1 erhöht.|  
+|**user_seeks**|**bigint**|Anzahl von Suchvorgängen durch Benutzerabfragen.|  
+|**user_scans**|**bigint**|Anzahl der Scans durch Benutzer Abfragen, für die kein Seek-Prädikat verwendet wurde.|  
+|**user_lookups**|**bigint**|Anzahl von Lesezeichen-Nachschlagevorgängen durch Benutzerabfragen.|  
+|**user_updates**|**bigint**|Anzahl von Updates durch Benutzerabfragen. Dies schließt Einfüge-, Lösch-und Update Vorgänge ein, die die Anzahl der Vorgänge darstellen, die nicht den betroffenen Zeilen entspricht. Wenn Sie z. b. 1000 Zeilen in einer Anweisung löschen, wird dieser Zähler um 1 erhöht.|  
 |**last_user_seek**|**datetime**|Zeitpunkt des letzten Suchvorgangs durch den Benutzer|  
 |**last_user_scan**|**datetime**|Zeitpunkt des letzten Scanvorgangs durch den Benutzer|  
 |**last_user_lookup**|**datetime**|Zeitpunkt des letzten Nachschlagevorgangs durch den Benutzer.|  
 |**last_user_update**|**datetime**|Zeitpunkt des letzten Updates durch den Benutzer.|  
-|**system_seeks**|**BIGINT**|Anzahl von Suchvorgängen durch Systemabfragen.|  
-|**system_scans**|**BIGINT**|Anzahl von Scanvorgängen durch Systemabfragen.|  
-|**system_lookups**|**BIGINT**|Anzahl von Nachschlagevorgängen durch Systemabfragen.|  
-|**system_updates**|**BIGINT**|Anzahl von Updates durch Systemabfragen.|  
+|**system_seeks**|**bigint**|Anzahl von Suchvorgängen durch Systemabfragen.|  
+|**system_scans**|**bigint**|Anzahl von Scanvorgängen durch Systemabfragen.|  
+|**system_lookups**|**bigint**|Anzahl von Nachschlagevorgängen durch Systemabfragen.|  
+|**system_updates**|**bigint**|Anzahl von Updates durch Systemabfragen.|  
 |**last_system_seek**|**datetime**|Zeitpunkt des letzten Systemsuchvorgangs.|  
 |**last_system_scan**|**datetime**|Zeitpunkt des letzten Systemscanvorgangs.|  
 |**last_system_lookup**|**datetime**|Zeitpunkt des letzten Systemnachschlagevorgangs.|  
@@ -83,7 +83,7 @@ Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VI
  [Index bezogene dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)   
  [sys. dm_db_index_operational_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [sys. Indexes &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys. Objects &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [Überwachen und Optimieren der Leistung](../../relational-databases/performance/monitor-and-tune-for-performance.md)  
   

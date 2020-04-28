@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fb5dec821d69066ce0a24c4e104f5f2be3ef905a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530951"
 ---
 # <a name="developer39s-guide-database-engine"></a>Entwickler&#39;s Guide (Datenbank-Engine)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]stellt einen umfangreichen Satz von Tools zum entwickeln, verwalten und Steuern von Datenbankanwendungen bereit.  
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] stellt einen umfangreichen Satz von Tools zum Entwickeln, Verwalten und Steuern von Datenbankanwendungen bereit.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Programmierkonzepte für die Integration der Common Language Runtime &#40;CLR&#41;](clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  

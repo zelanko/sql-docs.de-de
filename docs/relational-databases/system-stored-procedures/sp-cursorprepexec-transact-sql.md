@@ -18,10 +18,10 @@ ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 660a75f1e6fea9b5a825372501c2e65f2dd3874b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69652435"
 ---
 # <a name="sp_cursorprepexec-transact-sql"></a>sp_cursorprepexec (Transact-SQL)
@@ -29,7 +29,7 @@ ms.locfileid: "69652435"
 
   Kompiliert einen Plan für die gesendete Cursoranweisung oder den gesendeten Batch, erstellt dann den Cursor und füllt ihn auf. sp_cursorprepexec kombiniert die Funktionen von sp_cursorprepare und sp_cursorexecute. Diese Prozedur wird aufgerufen, indem ID = 5 in einem Tabular Data Stream-Paket (TDS) angegeben wird.  
   
- ![Link Symbol](../../database-engine/configure-windows/media/topic-link.gif "Linksymbol") [Transact-SQL-Syntax Konventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![Linksymbol](../../database-engine/configure-windows/media/topic-link.gif "Linksymbol") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Syntax  
   
@@ -44,11 +44,11 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  *vorbereitetes handle*  
  Ein [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generierter vorbereiteter *handle* -Bezeichner. *vorbereitetes handle* ist erforderlich und gibt **int**zurück.  
   
- *Hand*  
+ *Cursor*  
  Der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generierte Cursorbezeichner. der *Cursor* ist ein erforderlicher Parameter, der für alle nachfolgenden Prozeduren angegeben werden muss, die auf diesen Cursor (z. b. sp_cursorfetch) reagieren.  
   
  *params*  
- Identifiziert parametrisierte Anweisungen. Die *params* -Definition der Variablen wird in der Anweisung an die Stelle der Parametermarkierungen gesetzt. " *para* meters" ist ein erforderlicher Parameter, der den Eingabe Wert " **ntext**", " **NCHAR**" oder " **nvarchar** " aufruft.  
+ Identifiziert parametrisierte Anweisungen. Die *params* -Definition der Variablen wird in der Anweisung an die Stelle der Parametermarkierungen gesetzt. *params* ist ein erforderlicher Parameter, der einen Eingabewert vom Typ **ntext**, **nchar**,oder **nvarchar** erfordert.  
   
 > [!NOTE]  
 >  Verwenden Sie eine **ntext** -Zeichenfolge als Eingabe Wert, wenn *stmt* parametrisiert und der *scrollopt* -PARAMETERIZED_STMT Wert aktiviert ist.  
@@ -59,17 +59,17 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
 > [!NOTE]  
 >  Die Regeln zum Angeben des stmt-Werts sind identisch mit denen für sp_cursoropen, mit der Ausnahme, dass der *stmt* -Zeichen folgen Datentyp **ntext**lauten muss.  
   
- *Optionen*  
+ *options*  
  Ein optionaler Parameter, der eine Beschreibung der Spalten im Cursorresultset zurückgibt. * Optionen erfordern den folgenden **int** -Eingabe Wert.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   
  *scrollopt*  
  Scrolloption. *scrollopt* ist ein optionaler Parameter, der einen der folgenden **int** -Eingabewerte erfordert.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |0x0001|KEYSET|  
 |0x0002|DYNAMIC|  
@@ -91,7 +91,7 @@ sp_cursorprepexec prepared handle OUTPUT, cursor OUTPUT, params , statement , op
  *ccopt*  
  Option für die Parallelitätssteuerung. *ccopt* ist ein optionaler Parameter, der einen der folgenden **int** -Eingabewerte erfordert.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |0x0001|READ_ONLY|  
 |0x0002|SCROLL_LOCKS (vormals bekannt als LOCKCC)|  

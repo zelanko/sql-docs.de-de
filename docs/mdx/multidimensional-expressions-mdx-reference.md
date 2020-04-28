@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e557ffae3c4a530f448e0dfe78594f3f2c63feaf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893170"
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>Multidimensional Expressions (MDX) - Referenz
@@ -23,8 +23,8 @@ ms.locfileid: "68893170"
   
 |Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
-|[MDX-Syntax Elemente &#40;MDX-&#41;](../mdx/mdx-syntax-elements-mdx.md)|Beschreibt die verschiedenen Syntaxelemente, die in der MDX-Sprache für MDX-Ausdrücke, -Anweisungen und -Skripts verfügbar sind.|  
-|[MDX-Sprachreferenz &#40;MDX-&#41;](../mdx/mdx-language-reference-mdx.md)|Beschreibt die Anweisungen, Operatoren und Funktionen, die die MDX-Sprache definieren.|  
+|[MDX-Syntaxelemente &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)|Beschreibt die verschiedenen Syntaxelemente, die in der MDX-Sprache für MDX-Ausdrücke, -Anweisungen und -Skripts verfügbar sind.|  
+|[MDX-Sprachreferenz &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)|Beschreibt die Anweisungen, Operatoren und Funktionen, die die MDX-Sprache definieren.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Abfragen von mehrdimensionalen Daten mit MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx)   

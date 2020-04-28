@@ -13,16 +13,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f45ccaa0caab2e1dcc7e96e80e217d82d4f1f805
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530894"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Objektbenennungsregeln (Analysis Services)
   In diesem Thema werden Benennungskonventionen für Objekte sowie reservierte Wörter und Zeichen beschrieben, die in Objektnamen, in Code oder Skripts in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] nicht verwendet werden können.  
   
-##  <a name="bkmk_Names"></a>Benennungs Konventionen  
+##  <a name="naming-conventions"></a><a name="bkmk_Names"></a>Benennungs Konventionen  
  Jedes Objekt verfügt über eine `Name`-Eigenschaft und eine `ID`-Eigenschaft, die innerhalb des Bereichs der übergeordneten Auflistung eindeutig sein müssen. Beispielsweise können zwei Dimensionen denselben Namen haben, solange sich beide in unterschiedlichen Datenbanken befinden.  
   
  Sie können die `ID` manuell eingeben. In der Regel wird diese jedoch automatisch beim Erstellen des Objekts generiert. Die `ID` sollte nicht mehr geändert werden, nachdem Sie mit dem Erstellen eines Modells begonnen haben. Alle Objektverweise im gesamten Modell basieren auf der `ID`. Daher kann das Ändern der `ID` sehr schnell zu Fehlern im Modell führen.  
@@ -39,7 +39,7 @@ ms.locfileid: "69530894"
   
 -   Es gibt keine besondere Anforderung für das erste Zeichen eines Bezeichners. Das erste Zeichen kann ein beliebiges gültiges Zeichen sein.  
   
-##  <a name="bkmk_reserved"></a>Reservierte Wörter und Zeichen  
+##  <a name="reserved-words-and-characters"></a><a name="bkmk_reserved"></a>Reservierte Wörter und Zeichen  
  Reservierte Wörter sind auf Englisch und gelten für Objektnamen, nicht für Beschriftungen. Falls Sie ein reserviertes Wort versehentlich in einem Objektnamen verwenden, tritt ein Überprüfungsfehler auf. Die unten aufgeführten reservierten Wörter dürfen in keinem Fall in Objektnamen für mehrdimensionale Modelle und Data Mining-Modelle verwendet werden.  
   
  Bei tabellarischen Modellen mit dem Datenbank-Kompatibilitätsgrad 1103 wurden die Überprüfungsregeln für bestimmte Objekte gelockert, um zu gewährleisten, dass sie mit den Anforderungen an erweiterte Zeichen und Benennungskonventionen bestimmter Clientanwendungen kompatibel sind. Datenbanken, die diese Kriterien erfüllen, unterliegen weniger strengen Überprüfungsregeln. In diesem Fall kann ein Objekt die Überprüfung bestehen, obwohl es ein eingeschränktes Zeichen enthält.  
@@ -70,8 +70,8 @@ ms.locfileid: "69530894"
 |------------|------------------------|  
 |`Server`|Befolgen Sie beim Benennen von Serverobjekten die Benennungskonventionen für Windows-Server. Weitere Informationen finden Sie unter [Benennungs Konventionen (Windows)](/windows/desktop/DNS/naming-conventions) .|  
 |`DataSource`| `: / \ * \| ? " () [] {} <>` |  
-|`Level`noch`Attribute`|````. , ; ' ` : / \ * & \| ? " & % $ ! + = [] {} < >````|  
-|`Dimension`noch`Hierarchy`|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} <,>````|  
+|`Level` oder `Attribute`|````. , ; ' ` : / \ * & \| ? " & % $ ! + = [] {} < >````|  
+|`Dimension` oder `Hierarchy`|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} <,>````|  
 |Alle anderen Objekte|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} < >````|  
   
  **Ausnahmen: Wenn reservierte Zeichen zulässig sind**  

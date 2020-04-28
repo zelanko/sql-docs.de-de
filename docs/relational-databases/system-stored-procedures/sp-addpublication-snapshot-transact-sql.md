@@ -16,10 +16,10 @@ ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c32ea67eef368a17b129989e3f05c29ab0533d72
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769115"
 ---
 # <a name="sp_addpublication_snapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68769115"
   Erstellt den Momentaufnahme-Agent für die angegebene Veröffentlichung. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
 > [!IMPORTANT]  
->  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen mit dem Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,7 +61,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`Die Häufigkeit, mit der die Momentaufnahmen-Agent ausgeführt wird. *frequency_type* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmal.|  
 |**4** (Standard)|Tä.|  
@@ -85,7 +85,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
   
 `[ @frequency_subday = ] frequency_subday`Ist die Einheit für *freq_subday_interval*. *frequency_subday* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
 |**2**|Sekunde|  
@@ -108,7 +108,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
   
 `[ @snapshot_job_name = ] 'snapshot_agent_name'`Der Name eines vorhandenen Momentaufnahmen-Agent Auftrags namens, wenn ein vorhandener Auftrag verwendet wird. *snapshot_agent_name* ist vom Datentyp **nvarchar (100)** und hat den Standardwert NULL. Dieser Parameter dient der internen Verwendung und sollte beim Erstellen einer neuen Veröffentlichung nicht angegeben werden. Wenn *snapshot_agent_name* angegeben wird, müssen *job_login* und *job_password* NULL sein.  
   
-`[ @publisher_security_mode = ] publisher_security_mode`Der Sicherheitsmodus, der vom Agent beim Herstellen einer Verbindung mit dem Verleger verwendet wird. *publisher_security_mode* ist vom Datentyp **smallint**. der Standardwert ist 1. **0** gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Authentifizierung an, und **1** gibt die Windows-Authentifizierung an. Für nicht- **** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger muss ein Wert von 0 angegeben werden. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+`[ @publisher_security_mode = ] publisher_security_mode`Der Sicherheitsmodus, der vom Agent beim Herstellen einer Verbindung mit dem Verleger verwendet wird. *publisher_security_mode* ist vom Datentyp **smallint**. der Standardwert ist 1. **0** gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Authentifizierung an, und **1** gibt die Windows-Authentifizierung an. Für nicht- **0** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger muss ein Wert von 0 angegeben werden. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
 `[ @publisher_login = ] 'publisher_login'`Der Anmelde Name, der beim Herstellen einer Verbindung mit dem Verleger verwendet wird. *publisher_login* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. *publisher_login* muss angegeben werden, wenn *publisher_security_mode* den Wert **0**hat. Wenn *publisher_login* NULL und *publisher_security_mode* 1 ist, wird das in *job_login* angegebene Konto verwendet, wenn **eine**Verbindung mit dem Verleger hergestellt wird.  
   

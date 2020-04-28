@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4d1817910457d9d4e46dd1f923058ce98f02f51e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262633"
 ---
 # <a name="sysdm_tran_current_transaction-transact-sql"></a>sys.dm_tran_current_transactions (Transact-SQL)
@@ -46,12 +46,12 @@ sys.dm_tran_current_transaction
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**transaction_id**|**BIGINT**|Transaktions-ID der aktuellen Momentaufnahme.|  
-|**transaction_sequence_num**|**BIGINT**|Sequenznummer der Transaktion, die die Datensatzversion generiert.|  
+|**transaction_id**|**bigint**|Transaktions-ID der aktuellen Momentaufnahme.|  
+|**transaction_sequence_num**|**bigint**|Sequenznummer der Transaktion, die die Datensatzversion generiert.|  
 |**transaction_is_snapshot**|**bit**|Der Momentaufnahmeisolationsstatus. Dieser Wert beträgt 1, wenn die Transaktion unter der Momentaufnahmeisolation gestartet wird. Anderenfalls ist der Wert 0.|  
-|**first_snapshot_sequence_num**|**BIGINT**|Niedrigste Transaktionssequenznummer der Transaktionen, die beim Erstellen einer Momentaufnahme aktiviert waren. Bei der Ausführung einer Momentaufnahmetransaktion wird eine Momentaufnahme aller zu diesem Zeitpunkt aktiven Transaktionen erstellt. Für NonSnapshot-Transaktionen wird in dieser Spalte 0 angezeigt.|  
-|**last_transaction_sequence_num**|**BIGINT**|Globale Sequenznummer. Dieser Wert stellt die letzte Transaktionssequenznummer dar, die vom System generiert wurde.|  
-|**first_useful_sequence_num**|**BIGINT**|Globale Sequenznummer. Dieser Wert stellt die älteste Transaktionssequenznummer der Transaktion dar, die über Zeilenversionen verfügt, die im Versionsspeicher beibehalten werden müssen. Zeilenversionen, die von früheren Transaktionen erstellt wurden, können entfernt werden.|  
+|**first_snapshot_sequence_num**|**bigint**|Niedrigste Transaktionssequenznummer der Transaktionen, die beim Erstellen einer Momentaufnahme aktiviert waren. Bei der Ausführung einer Momentaufnahmetransaktion wird eine Momentaufnahme aller zu diesem Zeitpunkt aktiven Transaktionen erstellt. Für NonSnapshot-Transaktionen wird in dieser Spalte 0 angezeigt.|  
+|**last_transaction_sequence_num**|**bigint**|Globale Sequenznummer. Dieser Wert stellt die letzte Transaktionssequenznummer dar, die vom System generiert wurde.|  
+|**first_useful_sequence_num**|**bigint**|Globale Sequenznummer. Dieser Wert stellt die älteste Transaktionssequenznummer der Transaktion dar, die über Zeilenversionen verfügt, die im Versionsspeicher beibehalten werden müssen. Zeilenversionen, die von früheren Transaktionen erstellt wurden, können entfernt werden.|  
 |**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen
@@ -120,7 +120,7 @@ first_useful_sequence_num
  Da XSN-57 keine Momentaufnahmetransaktion ist, weist `first_snapshot_sequence_num` den Wert `NULL` auf.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Dynamische Verwaltungssichten und Funktionen in Verbindung mit Transaktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 6fcb9915f6945e2dc8413a4c28003428a4ad3e07
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264422"
 ---
 # <a name="global-settings-editor-oracletosql"></a>Globale Einstellungen (Editor) (OracleToSQL)
@@ -22,7 +22,7 @@ Verwenden Sie die Seite Editor des Dialog Felds **globale Einstellungen** , um E
   
 Um **auf die Editor** -Einstellungen zuzugreifen, wählen Sie im Menü Extras die Option **globale Einstellungen**aus, klicken Sie unten im linken Bereich auf **GUI** , und wählen Sie dann **Editor**aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Zeilennummern anzeigen**  
 Wählen Sie **true**aus, um die Zeilennummern in den Code-Editor-Fenstern anzuzeigen.  
   

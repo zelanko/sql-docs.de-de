@@ -16,10 +16,10 @@ ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cf591964e5dfef0536c79b0b35e5918d4f46d972
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771140"
 ---
 # <a name="sp_deletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
@@ -49,10 +49,10 @@ Der Name der Veröffentlichung, in die das Überwachungstoken eingefügt wurde. 
 Die ID des zu löschenden Überwachungstokens. Der Datentyp ist " **int**". Der Standardwert ist *null*. Wenn der Wert *null*ist, werden alle Überwachungs Token gelöscht, die zur Veröffentlichung gehören.
 
 `[ @cutoff_date= ] cutoff_date`  
-Überwachungs Token, die vor diesem Datum in die Veröffentlichung eingefügt wurden, werden gelöscht. Der **Datentyp ist "DateTime**". Der Standardwert ist *null*.
+Überwachungs Token, die vor diesem Datum in die Veröffentlichung eingefügt wurden, werden gelöscht. Der **Datentyp ist "DateTime**". Der Standardwert ist *NULL*.
 
 `[ @publisher= ] 'publisher'`  
-Der Name des Verlegers. Der Datentyp ist vom Datentyp **vom Datentyp sysname**. Der Standardwert ist *null*.
+Der Name des Verlegers. Der Datentyp ist vom Datentyp **vom Datentyp sysname**. Der Standardwert ist *NULL*.
 
 > [!NOTE]
 > Dieser Parameter sollte nur für nicht-- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger oder beim Ausführen der gespeicherten Prozedur vom Verteiler angegeben werden.

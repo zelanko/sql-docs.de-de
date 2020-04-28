@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a1549a3760ce8576b86b07048aef5a60b25fccbd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68263797"
 ---
 # <a name="sysdm_exec_connections-transact-sql"></a>sys.dm_exec_connections (Transact-SQL)
@@ -40,25 +40,25 @@ ms.locfileid: "68263797"
 |session_id|**int**|Identifiziert die Sitzung, die dieser Verbindung zugeordnet ist. Lässt NULL-Werte zu.|  
 |most_recent_session_id|**int**|Stellt die Sitzungs-ID für die letzte Anforderung dar, die dieser Verbindung zugeordnet ist. (SOAP-Verbindungen können von einer anderen Sitzung wieder verwendet werden.) Lässt NULL-Werte zu.|  
 |connect_time|**datetime**|Zeitstempel, der angibt, wann die Verbindung eingerichtet wurde. Lässt keine NULL-Werte zu.|  
-|net_transport|**nvarchar (40)**|Gibt immer eine **Sitzung** zurück, wenn für eine Verbindung Multiple Active Result Sets (Mars) aktiviert ist.<br /><br /> **Hinweis:** Beschreibt das physische Transportprotokoll, das von dieser Verbindung verwendet wird. Lässt keine NULL-Werte zu.|  
-|protocol_type|**nvarchar (40)**|Gibt den Protokolltyp der Nutzlast an. Zurzeit wird zwischen TDS (TSQL) und SOAP unterschieden. Lässt NULL-Werte zu.|  
+|net_transport|**nvarchar(40)**|Gibt immer eine **Sitzung** zurück, wenn für eine Verbindung Multiple Active Result Sets (Mars) aktiviert ist.<br /><br /> **Hinweis:** Beschreibt das physische Transportprotokoll, das von dieser Verbindung verwendet wird. Lässt keine NULL-Werte zu.|  
+|protocol_type|**nvarchar(40)**|Gibt den Protokolltyp der Nutzlast an. Zurzeit wird zwischen TDS (TSQL) und SOAP unterschieden. Lässt NULL-Werte zu.|  
 |protocol_version|**int**|Die Version des Datenzugriffsprotokolls, das dieser Verbindung zugeordnet ist. Lässt NULL-Werte zu.|  
 |endpoint_id|**int**|Ein Bezeichner, der beschreibt, um welchen Verbindungstyp es sich handelt. Dieser endpoint_id-Wert kann zum Abfragen der sys.endpoint-Sicht verwendet werden. Lässt NULL-Werte zu.|  
-|encrypt_option|**nvarchar (40)**|Boolescher Wert, der angibt, ob die Verschlüsselung für diese Verbindung aktiviert ist. Lässt keine NULL-Werte zu.|  
-|auth_scheme|**nvarchar (40)**|Gibt das mit dieser Verbindung verwendete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-/Windows-Authentifizierungsschema an. Lässt keine NULL-Werte zu.|  
+|encrypt_option|**nvarchar(40)**|Boolescher Wert, der angibt, ob die Verschlüsselung für diese Verbindung aktiviert ist. Lässt keine NULL-Werte zu.|  
+|auth_scheme|**nvarchar(40)**|Gibt das mit dieser Verbindung verwendete [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-/Windows-Authentifizierungsschema an. Lässt keine NULL-Werte zu.|  
 |node_afinity|**smallint**|Identifiziert den Speicherknoten, zu dem diese Verbindung eine Affinität besitzt. Lässt keine NULL-Werte zu.|  
 |num_reads|**int**|Anzahl von Byte Lesevorgängen, die über diese Verbindung aufgetreten sind. Lässt NULL-Werte zu.|  
 |num_writes|**int**|Anzahl von Byte Schreibvorgängen, die über diese Verbindung aufgetreten sind. Lässt NULL-Werte zu.|  
 |last_read|**datetime**|Zeitstempel für den letzten Lesevorgang, der über diese Verbindung erfolgt ist. Lässt NULL-Werte zu.|  
 |last_write|**datetime**|Zeitstempel für den letzten Schreibvorgang, der über diese Verbindung erfolgt ist. Lässt keine NULL-Werte zu.|  
 |net_packet_size|**int**|Netzwerkpaketgröße, die für die Informations- und Datenübertragung verwendet wird. Lässt NULL-Werte zu.|  
-|client_net_address|**varchar (48)**|Hostadresse des Clients, der die Verbindung mit diesem Server herstellt. Lässt NULL-Werte zu.<br /><br /> In Vorgängerversionen von V12 in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], gibt diese Spalte immer NULL zurück.|  
+|client_net_address|**varchar(48)**|Hostadresse des Clients, der die Verbindung mit diesem Server herstellt. Lässt NULL-Werte zu.<br /><br /> In Vorgängerversionen von V12 in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], gibt diese Spalte immer NULL zurück.|  
 |client_tcp_port|**int**|Portnummer auf dem Clientcomputer, die dieser Verbindung zugeordnet ist. Lässt NULL-Werte zu.<br /><br /> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] gibt diese Spalte immer NULL zurück.|  
-|local_net_address|**varchar (48)**|Stellt die IP-Adresse auf dem Server dar, die die Zieladresse dieser Verbindung ist. Ist nur für Verbindungen verfügbar, die den TCP-Transportanbieter verwenden. Lässt NULL-Werte zu.<br /><br /> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] gibt diese Spalte immer NULL zurück.|  
+|local_net_address|**varchar(48)**|Stellt die IP-Adresse auf dem Server dar, die die Zieladresse dieser Verbindung ist. Ist nur für Verbindungen verfügbar, die den TCP-Transportanbieter verwenden. Lässt NULL-Werte zu.<br /><br /> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] gibt diese Spalte immer NULL zurück.|  
 |local_tcp_port|**int**|Stellt den Server-TCP-Port dar, der der Zielport dieser Verbindung ist, falls die Verbindung den TCP-Transport verwendet. Lässt NULL-Werte zu.<br /><br /> In [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] gibt diese Spalte immer NULL zurück.|  
 |connection_id|**uniqueidentifier**|Dient zur eindeutigen Identifizierung jeder Verbindung. Lässt keine NULL-Werte zu.|  
 |parent_connection_id|**uniqueidentifier**|Identifiziert die primäre Verbindung, die von der MARS-Sitzung verwendet wird. Lässt NULL-Werte zu.|  
-|most_recent_sql_handle|**varbinary (64)**|Das SQL-Handle der letzten Anforderung, die über diese Verbindung ausgeführt wurde. Die most_recent_sql_handle-Spalte ist immer mit der most_recent_session_id-Spalte synchronisiert. Lässt NULL-Werte zu.|  
+|most_recent_sql_handle|**varbinary(64)**|Das SQL-Handle der letzten Anforderung, die über diese Verbindung ausgeführt wurde. Die most_recent_sql_handle-Spalte ist immer mit der most_recent_session_id-Spalte synchronisiert. Lässt NULL-Werte zu.|  
 |pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen
@@ -95,7 +95,7 @@ WHERE c.session_id = @@SPID;
   
 ## <a name="see-also"></a>Weitere Informationen  
 
- [Dynamische Verwaltungs Sichten und-Funktionen im Zusammenhang mit der Ausführung &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
+ [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41; (Dynamische Verwaltungssichten und Funktionen im Zusammenhang mit der Ausführung (Transact-SQL))](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   
 

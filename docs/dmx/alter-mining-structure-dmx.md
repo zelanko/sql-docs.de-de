@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 5535428d89a0d14b60e3ac79d281f63b4c69bfb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889863"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
@@ -36,7 +36,7 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Werks*  
+ *structure*  
  Der Name der Miningstruktur, der das Miningmodell hinzugefügt wird.  
   
  *model*  
@@ -58,7 +58,7 @@ USING <algorithm> [(<parameter list>)]
 >  Eine Liste der Algorithmen, die vom aktuellen Anbieter unterstützt werden, kann mithilfe [DMSCHEMA_MINING_SERVICES Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)abgerufen werden. Informationen zum Anzeigen der in der aktuellen Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützten Algorithmen finden Sie unter [Data Mining-Eigenschaften](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *Parameterliste*  
- Optional. Eine durch Trennzeichen getrennte Liste mit anbieterdefinierten Parametern für den Algorithmus.  
+ (Optional) Eine durch Trennzeichen getrennte Liste mit anbieterdefinierten Parametern für den Algorithmus.  
   
  *Filterkriterien*  
  Ein Filterausdruck, der für die Spalten in der Falltabelle übernommen wird.  
@@ -103,8 +103,7 @@ USING <algorithm> [(<parameter list>)]
  Sie können einen Filterausdruck definieren, der auf die geschachtelte Tabelle angewendet wird, indem Sie nach der Definition für die Spalte der geschachtelten Tabelle einen Filterkriterienausdruck anhängen.  
   
 ### <a name="modeling-flags"></a>Modellierungsflags  
- 
-  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt die folgenden Modellierungsflags zur Verwendung in Miningmodellspalten:  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] unterstützt die folgenden Modellierungsflags zur Verwendung in Miningmodellspalten:  
   
 > [!NOTE]  
 >  Das NOT NULL-Modellierungsflag gilt für die Miningstrukturspalte. Weitere Informationen finden Sie unter [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
@@ -178,7 +177,7 @@ WITH FILTER([Gender] = 'F' AND [Age] >50)
 ```  
   
 ## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>Beispiel 3: Hinzufügen eines gefilterten Modells zu einer Struktur mit einer geschachtelten Tabelle  
- Im folgenden Beispiel wird ein Miningmodell einer geänderten Version der Warenkorbminingstruktur hinzugefügt. Die im Beispiel verwendete Mining Struktur wurde so geändert, dass Sie eine **Regions** Spalte, die Attribute für den Kundenbereich enthält, und eine Spalte mit **Einkommensgruppen** enthält, die das Kunden Einkommen mithilfe der **** Werte hoch **, Mittel**oder **niedrig**kategorisiert.  
+ Im folgenden Beispiel wird ein Miningmodell einer geänderten Version der Warenkorbminingstruktur hinzugefügt. Die im Beispiel verwendete Mining Struktur wurde so geändert, dass Sie eine **Regions** Spalte, die Attribute für den Kundenbereich enthält, und eine Spalte mit **Einkommensgruppen** enthält, die das Kunden Einkommen mithilfe der **High**Werte hoch **, Mittel**oder **niedrig**kategorisiert.  
   
  Die Miningstruktur schließt auch eine geschachtelte Tabelle ein, in der die Elemente, die der Kunde gekauft hat, aufgelistet werden.  
   
@@ -204,6 +203,6 @@ USING Microsoft_Decision Trees
 ## <a name="see-also"></a>Weitere Informationen  
  [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Definitions Anweisungen](../dmx/dmx-statements-data-definition.md)   
  [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining-Erweiterungen &#40;DMX-&#41;-Anweisungs Referenz](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

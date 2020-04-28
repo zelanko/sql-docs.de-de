@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 30c3a5d7358e49c1e1762fbb9851066bdaf30871
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68809904"
 ---
 # <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>Räumliche Daten-sys. dm_db_objects_disabled_on_compatibility_level_change
@@ -40,19 +40,19 @@ ms.locfileid: "68809904"
 sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )   
 ```  
   
-##  <a name="Arguments"></a>Argumente  
+##  <a name="arguments"></a><a name="Arguments"></a>Argumentation  
  *compatibility_level*  
- **int** , der den Kompatibilitäts Grad angibt, den Sie festlegen möchten.  
+ **int** -Wert, der den Kompatibilitätsgrad angibt, den Sie festlegen möchten.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**klassi**|**int**|1 = Einschränkungen<br /><br /> 7 = Indizes und Heaps|  
-|**class_desc**|**nvarchar (60)**|OBJECT oder COLUMN für Einschränkungen<br /><br /> INDEX für Indizes und Heaps|  
+|**class**|**int**|1 = Einschränkungen<br /><br /> 7 = Indizes und Heaps|  
+|**class_desc**|**nvarchar(60)**|OBJECT oder COLUMN für Einschränkungen<br /><br /> INDEX für Indizes und Heaps|  
 |**major_id**|**int**|OBJECT ID der Einschränkungen<br /><br /> OBJECT ID der Tabelle, die Indizes und Heaps enthält|  
 |**minor_id**|**int**|NULL für Einschränkungen<br /><br /> Index_id für Indizes und Heaps|  
-|**gkeit**|**nvarchar (60)**|Beschreibung der Abhängigkeit, die bewirkt, dass die Einschränkung oder der Index deaktiviert wird. Die gleichen Werte werden auch in den Warnungen verwendet, die während des Upgrades ausgelöst werden. Einige Beispiele dafür sind:<br /><br /> "space" für eine systeminterne Funktion<br /><br /> "geometry" für einen System-UDT<br /><br /> "geography::Parse" für eine Methode eines System-UDTs|  
+|**gkeit**|**nvarchar(60)**|Beschreibung der Abhängigkeit, die bewirkt, dass die Einschränkung oder der Index deaktiviert wird. Die gleichen Werte werden auch in den Warnungen verwendet, die während des Upgrades ausgelöst werden. Einige Beispiele dafür sind:<br /><br /> "space" für eine systeminterne Funktion<br /><br /> "geometry" für einen System-UDT<br /><br /> "geography::Parse" für eine Methode eines System-UDTs|  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Persistente berechnete Spalten, die systeminterne Funktionen verwenden, werden bei einer Änderung des Kompatibilitätsgrads deaktiviert. Darüber hinaus werden persistierte berechnete Spalten, die eine Geometry-Methode oder Geography-Methode verwenden, beim Upgrade einer Datenbank deaktiviert.  
@@ -136,7 +136,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
  Deaktivierte CHECK-Einschränkungen und Fremdschlüssel lösen keinen Fehler aus. Die Einschränkungen werden jedoch nicht erzwungen, wenn Zeilen geändert werden. Um diese Objekte erneut zu aktivieren, überprüfen Sie die Einschränkungen nach dem Upgrade durch Aufrufen von **ALTER TABLE... Check-Einschränkung**.  
   
- **Permanent berechnete Spalten**  
+ **Persistente berechnete Spalten**  
   
  Da eine Deaktivierung einzelner Spalten nicht möglich ist, wird die gesamte Tabelle deaktiviert, indem der gruppierte Index oder der Heap deaktiviert wird.  
   

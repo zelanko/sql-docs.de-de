@@ -20,10 +20,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 863e62dc9e2970f7531bba15f7242c73c5b0f9e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68259924"
 ---
 # <a name="getting-started-with-sql-server-migration-assistant-for-access-accesstosql"></a>Ersten Schritte mit SQL Server Migration Assistant für den Zugriff (Access Token)
@@ -56,7 +56,7 @@ Nachdem Sie konvertierte Schemas in [!INCLUDE[ssNoVersion](../../includes/ssnove
   
 Weitere Informationen zu diesen Aufgaben und deren Ausführung finden Sie in den folgenden Themen:  
   
--   [Vorbereiten einer Access-Datenbank für die Migration](preparing-access-databases-for-migration-accesstosql.md)  
+-   [Vorbereiten der Zugriffs Datenbanken für die Migration](preparing-access-databases-for-migration-accesstosql.md)  
   
 -   [Migration von Access-Datenbanken zu SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   
@@ -118,7 +118,7 @@ SSMA enthält die folgenden Menüs:
   
 |Menü|BESCHREIBUNG|  
 |--------|---------------|  
-|**Datei**|Enthält Befehle für den Migrations-Assistenten, das Arbeiten mit Projekten, das Hinzufügen und Entfernen von Access- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbankdateien und das Herstellen einer Verbindung mit oder Azure SQL DB.|  
+|**File**|Enthält Befehle für den Migrations-Assistenten, das Arbeiten mit Projekten, das Hinzufügen und Entfernen von Access- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbankdateien und das Herstellen einer Verbindung mit oder Azure SQL DB.|  
 |**Bearbeiten**|Enthält Befehle zum Suchen und arbeiten mit Text auf den Detailseiten, z. b [!INCLUDE[tsql](../../includes/tsql-md.md)] . zum Kopieren aus dem SQL-Detailbereich. Um das Dialogfeld **Lesezeichen verwalten** zu öffnen, klicken Sie im Menü Bearbeiten auf Lesezeichen verwalten. Im Dialogfeld wird eine Liste vorhandener Lesezeichen angezeigt. Sie können die Schaltflächen auf der rechten Seite des Dialog Felds verwenden, um die Lesezeichen zu verwalten.|  
 |**Ansicht**|Enthält den Befehl Metadaten-Explorer **Synchronisieren** . Dadurch werden die Objekte zwischen Access Metadata Explorer und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] oder Azure SQL DB Metadata Explorer synchronisiert. Enthält auch Befehle zum Anzeigen und Ausblenden der **Ausgabe** -und **Fehlerliste** Bereiche sowie ein Options **Layout** , das mit den Layouts verwaltet werden soll.|  
 |**Tools**|Enthält Befehle zum Erstellen von Berichten, Exportieren von Daten, Migrieren von Objekten und Daten, Verknüpfen von Tabellen und Bereitstellen des Zugriffs auf die Dialogfelder für globale und Projekteinstellungen.|  
@@ -131,6 +131,6 @@ Das Menü **Ansicht** enthält Befehle zum Umschalten der Sichtbarkeit des Ausga
   
 -   Im Fehlerliste Bereich werden Fehler-, Warn-und Informationsmeldungen in einer Liste angezeigt, die Sie sortieren können.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Weitere Informationen:  
 [Migration von Access-Datenbanken zu SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

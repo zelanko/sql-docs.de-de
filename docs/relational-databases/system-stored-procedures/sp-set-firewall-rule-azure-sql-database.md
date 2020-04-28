@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 9bc37626879b743eb3a5d0864490dc3543a8d8a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70152064"
 ---
 # <a name="sp_set_firewall_rule-azure-sql-database"></a>sp_set_firewall_rule (Azure SQL-Datenbank)
@@ -44,11 +44,11 @@ sp_set_firewall_rule [@name =] 'name',
 ## <a name="arguments"></a>Argumente  
  In der folgenden Tabelle werden die unterstützten Argumente und [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]Optionen in veranschaulicht.  
   
-|Name|Datentyp|BESCHREIBUNG|  
+|Name|Datatype|BESCHREIBUNG|  
 |----------|--------------|-----------------|  
 |[@name =] Benennen|**Nvarchar (128)**|Der verwendete Name, um die Firewalleinstellung auf Serverebene zu beschreiben und von anderen zu unterscheiden.|  
 |[@start_ip_address =] "start_ip_address"|**Varchar (50)**|Die niedrigste IP-Adresse im Bereich der Firewalleinstellung auf Serverebene. IP-Adressen, die gleich oder größer dieser IP-Adresse sind, können versuchen, eine Verbindung mit dem [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Server herzustellen. Die niedrigste mögliche IP-Adresse ist `0.0.0.0`.|  
-|[@end_ip_address =] "end_ip_address"|**Varchar (50)**|Die höchste IP-Adresse im Bereich der Firewalleinstellung auf Serverebene. IP-Adressen, die kleiner oder gleich dieser IP-Adresse sind, können versuchen, eine Verbindung mit dem [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Server herzustellen. Die höchste mögliche IP-Adresse ist `255.255.255.255`.<br /><br /> Hinweis: Azure-Verbindungsversuche sind zulässig, wenn sowohl dieses Feld ** als auch das `0.0.0.0`start_ip_address Feld gleich sind.|  
+|[@end_ip_address =] "end_ip_address"|**Varchar (50)**|Die höchste IP-Adresse im Bereich der Firewalleinstellung auf Serverebene. IP-Adressen, die kleiner oder gleich dieser IP-Adresse sind, können versuchen, eine Verbindung mit dem [!INCLUDE[ssSDS](../../includes/sssds-md.md)]-Server herzustellen. Die höchste mögliche IP-Adresse ist `255.255.255.255`.<br /><br /> Hinweis: Azure-Verbindungsversuche sind zulässig, wenn sowohl dieses Feld *start_ip_address* als auch das `0.0.0.0`start_ip_address Feld gleich sind.|  
   
 ## <a name="remarks"></a>Bemerkungen  
  Die Namen der Firewalleinstellungen auf Serverebene müssen eindeutig sein. Wenn der Name der für die gespeicherte Prozedur bereitgestellten Einstellung bereits in der Tabelle mit den Firewalleinstellungen vorhanden ist, werden die Start- und End-IP-Adressen aktualisiert. Andernfalls wird eine neue Firewalleinstellung auf Serverebene erstellt.  

@@ -16,10 +16,10 @@ ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b8755bea5e318d1ded2631a2253134fd8721a421
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771153"
 ---
 # <a name="sp_helptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
@@ -55,11 +55,11 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**distributor_latency**|**BIGINT**|Anzahl der Sekunden zwischen dem Commit des Überwachungstokendatensatzes auf dem Verleger und dem Commit des Datensatzes auf dem Verteiler|  
+|**distributor_latency**|**bigint**|Anzahl der Sekunden zwischen dem Commit des Überwachungstokendatensatzes auf dem Verleger und dem Commit des Datensatzes auf dem Verteiler|  
 |**Abonnenten**|**sysname**|Name des Abonnenten, der das Überwachungstoken empfing|  
 |**subscriber_db**|**sysname**|Name der Abonnementdatenbank, in die der Überwachungstokendatensatz eingefügt wurde|  
-|**subscriber_latency**|**BIGINT**|Anzahl der Sekunden zwischen dem Commit des Überwachungstokendatensatzes auf dem Verteiler und dem Commit des Datensatzes auf dem Abonnenten|  
-|**overall_latency**|**BIGINT**|Anzahl der Sekunden zwischen dem Commit des Überwachungstokendatensatzes auf dem Verleger und dem Commit des Datensatzes auf dem Abonnenten|  
+|**subscriber_latency**|**bigint**|Anzahl der Sekunden zwischen dem Commit des Überwachungstokendatensatzes auf dem Verteiler und dem Commit des Datensatzes auf dem Abonnenten|  
+|**overall_latency**|**bigint**|Anzahl der Sekunden zwischen dem Commit des Überwachungstokendatensatzes auf dem Verleger und dem Commit des Datensatzes auf dem Abonnenten|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
@@ -78,7 +78,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
  Nur Mitglieder der festen Server Rolle **sysadmin** , der festen Daten Bank Rolle **db_owner** in der Veröffentlichungs Datenbank oder **db_owner** festen Datenbank-oder **replmonitor** -Rollen in der Verteilungs Datenbank können **sp_helptracertokenhistory**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Messen der Latenzzeit und Überprüfen der Verbindungen bei Transaktionsreplikationen](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
+ [Messen der Latenzzeit und Überprüfen der Verbindungen für die Transaktions Replikation](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
  [sp_deletetracertokenhistory &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
   
   

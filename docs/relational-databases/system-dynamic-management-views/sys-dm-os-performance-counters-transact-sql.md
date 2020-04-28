@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5c7b4d78f73af003e93bc662f10f1f95acda2b6a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265712"
 ---
 # <a name="sysdm_os_performance_counters-transact-sql"></a>sys.dm_os_performance_counters (Transact-SQL)
@@ -40,7 +40,7 @@ ms.locfileid: "68265712"
 |**object_name**|**NCHAR (128)**|Kategorie, zu der dieser Leistungsindikator gehört.|  
 |**counter_name**|**NCHAR (128)**|Name des Leistungsindikators. Um weitere Informationen zu einem Leistungsindikator zu erhalten, ist dies der Name des Themas, das in der Liste der [SQL Server Objekte verwendeten](../../relational-databases/performance-monitor/use-sql-server-objects.md)Indikatoren ausgewählt werden soll. |  
 |**instance_name**|**NCHAR (128)**|Name der spezifischen Instanz des Leistungsindikators. Enthält oft den Datenbanknamen.|  
-|**cntr_value**|**BIGINT**|Aktueller Wert des Leistungsindikators.<br /><br /> **Hinweis:** Für Leistungsindikatoren pro Sekunde ist dieser Wert kumulativ. Der Ratenwert muss durch Stichproben des Werts zu diskreten Zeitintervallen berechnet werden. Der Unterschied zwischen zwei aufeinander folgenden Werten ist gleich der Rate für das verwendete Zeitintervall.|  
+|**cntr_value**|**bigint**|Aktueller Wert des Leistungsindikators.<br /><br /> **Hinweis:** Für Leistungsindikatoren pro Sekunde ist dieser Wert kumulativ. Der Ratenwert muss durch Stichproben des Werts zu diskreten Zeitintervallen berechnet werden. Der Unterschied zwischen zwei aufeinander folgenden Werten ist gleich der Rate für das verwendete Zeitintervall.|  
 |**cntr_type**|**int**|Typ des Leistungsindikators, wie von der Windows-Leistungsarchitektur definiert. Weitere Informationen zu Leistungsdaten Typen finden Sie unter [WMI-Leistungsdaten Typen](https://docs.microsoft.com/windows/desktop/WmiSdk/wmi-performance-counter-types) in docs oder in Ihrer Windows Server-Dokumentation.|  
 |**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   

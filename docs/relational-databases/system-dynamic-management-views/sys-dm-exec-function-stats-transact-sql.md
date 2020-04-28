@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 89d66217536d5cd552eb11de67d6d97d21ec9f6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68742832"
 ---
 # <a name="sysdm_exec_function_stats-transact-sql"></a>sys. dm_exec_function_stats (Transact-SQL)
@@ -41,36 +41,36 @@ ms.locfileid: "68742832"
 |**database_id**|**int**|Datenbank-ID, in der sich die Funktion befindet.|  
 |**object_id**|**int**|Objekt-ID der Funktion.|  
 |**type**|**char (2)**|Objekttyp: FN = skalare Wert Funktionen|  
-|**type_desc**|**nvarchar (60)**|Beschreibung des Objekt Typs: SQL_SCALAR_FUNCTION|  
-|**sql_handle**|**varbinary (64)**|Dies kann verwendet werden, um mit Abfragen in **sys. dm_exec_query_stats** zu korrelieren, die in dieser Funktion ausgeführt wurden.|  
-|**plan_handle**|**varbinary (64)**|Bezeichner für den speicherinternen Plan. Dieser Bezeichner ist vorübergehend und bleibt nur für die Dauer der Speicherung des Plans im Cache konstant. Dieser Wert kann mit der dynamischen Verwaltungssicht **sys.dm_exec_cached_plans** verwendet werden.<br /><br /> Ist immer 0x000, wenn eine nativ kompilierte Funktion eine Speicher optimierte Tabelle abfragt.|  
+|**type_desc**|**nvarchar(60)**|Beschreibung des Objekt Typs: SQL_SCALAR_FUNCTION|  
+|**sql_handle**|**varbinary(64)**|Dies kann verwendet werden, um mit Abfragen in **sys. dm_exec_query_stats** zu korrelieren, die in dieser Funktion ausgeführt wurden.|  
+|**plan_handle**|**varbinary(64)**|Bezeichner für den speicherinternen Plan. Dieser Bezeichner ist vorübergehend und bleibt nur für die Dauer der Speicherung des Plans im Cache konstant. Dieser Wert kann mit der dynamischen Verwaltungssicht **sys.dm_exec_cached_plans** verwendet werden.<br /><br /> Ist immer 0x000, wenn eine nativ kompilierte Funktion eine Speicher optimierte Tabelle abfragt.|  
 |**cached_time**|**datetime**|Der Zeitpunkt, zu dem die Funktion dem Cache hinzugefügt wurde.|  
 |**last_execution_time**|**datetime**|Der Zeitpunkt, zu dem die Funktion zuletzt ausgeführt wurde.|  
-|**execution_count**|**BIGINT**|Gibt an, wie oft die Funktion seit der letzten Kompilierung ausgeführt wurde.|  
-|**total_worker_time**|**BIGINT**|Die Gesamtmenge der CPU-Zeit (in Mikrosekunden), die von Ausführungen dieser Funktion seit der Kompilierung verbraucht wurde.<br /><br /> Bei nativ kompilierten Funktionen sind **total_worker_time** möglicherweise nicht genau, wenn viele Ausführungen weniger als 1 Millisekunde benötigen.|  
-|**last_worker_time**|**BIGINT**|Die CPU-Zeit (in Mikrosekunden), die bei der letzten Ausführung der Funktion verbraucht wurde. <sup>1</sup>|  
-|**min_worker_time**|**BIGINT**|Die minimale CPU-Zeit (in Mikrosekunden), die diese Funktion seit einer einzelnen Ausführung verbraucht hat. <sup>1</sup>|  
-|**max_worker_time**|**BIGINT**|Maximale CPU-Zeit (in Mikrosekunden), die diese Funktion seit einer einzelnen Ausführung verbraucht hat. <sup>1</sup>|  
-|**total_physical_reads**|**BIGINT**|Die Gesamtanzahl der physischen Lesevorgänge, die von Ausführungen dieser Funktion seit der Kompilierung durchgeführt wurden.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**last_physical_reads**|**BIGINT**|Anzahl physischer Lesevorgänge bei der letzten Ausführung der Funktion.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**min_physical_reads**|**BIGINT**|Minimale Anzahl physischer Lesevorgänge für eine einzelne Ausführung dieser Funktion.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**max_physical_reads**|**BIGINT**|Maximale Anzahl physischer Lesevorgänge für eine einzelne Ausführung dieser Funktion.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**total_logical_writes**|**BIGINT**|Die Gesamtanzahl logischer Schreibvorgänge für Ausführungen dieser Funktion seit der Kompilierung.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**last_logical_writes**|**BIGINT**|Die Anzahl der Pufferpoolseiten, die seit der letzten Planausführung modifiziert wurden. Wenn eine Seite bereits modifiziert (geändert) wurde, werden keine Schreibvorgänge gezählt.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**min_logical_writes**|**BIGINT**|Die minimale Anzahl logischer Schreibvorgänge, die diese Funktion während einer einzelnen Ausführung durchgeführt hat.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**max_logical_writes**|**BIGINT**|Maximale Anzahl logischer Schreibvorgänge für eine einzelne Ausführung dieser Funktion.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**total_logical_reads**|**BIGINT**|Die Gesamtanzahl logischer Lesevorgänge für Ausführungen dieser Funktion seit der Kompilierung.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**last_logical_reads**|**BIGINT**|Anzahl logischer Lesevorgänge bei der letzten Ausführung der Funktion.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**min_logical_reads**|**BIGINT**|Bisherige Mindestanzahl logischer Lesevorgänge für eine einzelne Ausführung dieser Funktion.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**max_logical_reads**|**BIGINT**|Maximale Anzahl logischer Lesevorgänge für eine einzelne Ausführung dieser Funktion.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
-|**total_elapsed_time**|**BIGINT**|Insgesamt verstrichene Zeit (in Mikrosekunden) für abgeschlossene Ausführungen dieser Funktion.|  
-|**last_elapsed_time**|**BIGINT**|Verstrichene Zeit (in Mikrosekunden) für die zuletzt abgeschlossene Ausführung dieser Funktion.|  
-|**min_elapsed_time**|**BIGINT**|Mindestens verstrichene Zeit (in Mikrosekunden) für eine beliebige abgeschlossene Ausführung dieser Funktion.|  
-|**max_elapsed_time**|**BIGINT**|Maximal verstrichene Zeit (in Mikrosekunden) für eine beliebige abgeschlossene Ausführung dieser Funktion.|  
-|**total_page_server_reads**|**BIGINT**|Die Gesamtanzahl von Seiten Server Lesevorgängen, die von Ausführungen dieser Funktion seit der Kompilierung ausgeführt wurden.<br /><br /> **Gilt für:** Hyperskalierung von Azure SQL-Datenbank.|  
-|**last_page_server_reads**|**BIGINT**|Anzahl von Seiten Server Lesevorgängen, die bei der letzten Ausführung der Funktion ausgeführt wurden.<br /><br /> **Gilt für:** Hyperskalierung von Azure SQL-Datenbank.|  
-|**min_page_server_reads**|**BIGINT**|Die minimale Anzahl von Seiten Server Lesevorgängen, die diese Funktion jemals während einer einzelnen Ausführung ausgeführt hat.<br /><br /> **Gilt für:** Hyperskalierung von Azure SQL-Datenbank.|  
-|**max_page_server_reads**|**BIGINT**|Maximale Anzahl von Seiten Server Lesevorgängen, die diese Funktion jemals während einer einzelnen Ausführung ausgeführt hat.<br /><br /> **Gilt für:** Hyperskalierung von Azure SQL-Datenbank.|
+|**execution_count**|**bigint**|Gibt an, wie oft die Funktion seit der letzten Kompilierung ausgeführt wurde.|  
+|**total_worker_time**|**bigint**|Die Gesamtmenge der CPU-Zeit (in Mikrosekunden), die von Ausführungen dieser Funktion seit der Kompilierung verbraucht wurde.<br /><br /> Bei nativ kompilierten Funktionen sind **total_worker_time** möglicherweise nicht genau, wenn viele Ausführungen weniger als 1 Millisekunde benötigen.|  
+|**last_worker_time**|**bigint**|Die CPU-Zeit (in Mikrosekunden), die bei der letzten Ausführung der Funktion verbraucht wurde. <sup>1</sup>|  
+|**min_worker_time**|**bigint**|Die minimale CPU-Zeit (in Mikrosekunden), die diese Funktion seit einer einzelnen Ausführung verbraucht hat. <sup>1</sup>|  
+|**max_worker_time**|**bigint**|Maximale CPU-Zeit (in Mikrosekunden), die diese Funktion seit einer einzelnen Ausführung verbraucht hat. <sup>1</sup>|  
+|**total_physical_reads**|**bigint**|Die Gesamtanzahl der physischen Lesevorgänge, die von Ausführungen dieser Funktion seit der Kompilierung durchgeführt wurden.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**last_physical_reads**|**bigint**|Anzahl physischer Lesevorgänge bei der letzten Ausführung der Funktion.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**min_physical_reads**|**bigint**|Minimale Anzahl physischer Lesevorgänge für eine einzelne Ausführung dieser Funktion.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**max_physical_reads**|**bigint**|Maximale Anzahl physischer Lesevorgänge für eine einzelne Ausführung dieser Funktion.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**total_logical_writes**|**bigint**|Die Gesamtanzahl logischer Schreibvorgänge für Ausführungen dieser Funktion seit der Kompilierung.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**last_logical_writes**|**bigint**|Die Anzahl der Pufferpoolseiten, die seit der letzten Planausführung modifiziert wurden. Wenn eine Seite bereits modifiziert (geändert) wurde, werden keine Schreibvorgänge gezählt.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**min_logical_writes**|**bigint**|Die minimale Anzahl logischer Schreibvorgänge, die diese Funktion während einer einzelnen Ausführung durchgeführt hat.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**max_logical_writes**|**bigint**|Maximale Anzahl logischer Schreibvorgänge für eine einzelne Ausführung dieser Funktion.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**total_logical_reads**|**bigint**|Die Gesamtanzahl logischer Lesevorgänge für Ausführungen dieser Funktion seit der Kompilierung.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**last_logical_reads**|**bigint**|Anzahl logischer Lesevorgänge bei der letzten Ausführung der Funktion.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**min_logical_reads**|**bigint**|Bisherige Mindestanzahl logischer Lesevorgänge für eine einzelne Ausführung dieser Funktion.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**max_logical_reads**|**bigint**|Maximale Anzahl logischer Lesevorgänge für eine einzelne Ausführung dieser Funktion.<br /><br /> Ist immer 0, wenn eine speicheroptimierte Tabelle abgefragt wird.|  
+|**total_elapsed_time**|**bigint**|Insgesamt verstrichene Zeit (in Mikrosekunden) für abgeschlossene Ausführungen dieser Funktion.|  
+|**last_elapsed_time**|**bigint**|Verstrichene Zeit (in Mikrosekunden) für die zuletzt abgeschlossene Ausführung dieser Funktion.|  
+|**min_elapsed_time**|**bigint**|Mindestens verstrichene Zeit (in Mikrosekunden) für eine beliebige abgeschlossene Ausführung dieser Funktion.|  
+|**max_elapsed_time**|**bigint**|Maximal verstrichene Zeit (in Mikrosekunden) für eine beliebige abgeschlossene Ausführung dieser Funktion.|  
+|**total_page_server_reads**|**bigint**|Die Gesamtanzahl von Seiten Server Lesevorgängen, die von Ausführungen dieser Funktion seit der Kompilierung ausgeführt wurden.<br /><br /> **Gilt für:** Hyperskalierung von Azure SQL-Datenbank.|  
+|**last_page_server_reads**|**bigint**|Anzahl von Seiten Server Lesevorgängen, die bei der letzten Ausführung der Funktion ausgeführt wurden.<br /><br /> **Gilt für:** Hyperskalierung von Azure SQL-Datenbank.|  
+|**min_page_server_reads**|**bigint**|Die minimale Anzahl von Seiten Server Lesevorgängen, die diese Funktion jemals während einer einzelnen Ausführung ausgeführt hat.<br /><br /> **Gilt für:** Hyperskalierung von Azure SQL-Datenbank.|  
+|**max_page_server_reads**|**bigint**|Maximale Anzahl von Seiten Server Lesevorgängen, die diese Funktion jemals während einer einzelnen Ausführung ausgeführt hat.<br /><br /> **Gilt für:** Hyperskalierung von Azure SQL-Datenbank.|
   
 ## <a name="permissions"></a>Berechtigungen  
 

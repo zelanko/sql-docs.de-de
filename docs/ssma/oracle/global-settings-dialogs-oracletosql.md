@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 4fc68e8b8d3fc009b766f0fb0be97f1124797764
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68259653"
 ---
 # <a name="global-settings-dialogs--oracletosql"></a>Globale Einstellungen (Dialogfelder) (oracletosql)
@@ -22,7 +22,7 @@ Auf der Seite Dialoge des Dialog Felds **globale Einstellungen** können Sie die
   
 Um auf die Dialogfeld Einstellungen im **Menü Extras** zuzugreifen, klicken Sie auf **globale Einstellungen**, klicken Sie unten im linken Bereich auf **GUI** , und wählen Sie dann **Dialoge**aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Vor dem Überschreiben von Objekten warnen**  
 Wenn SSMA Objekte in SQL Server konvertiert, sind einige Objekte möglicherweise bereits in den SQL Server Metadaten des Projekts vorhanden. Diese Objekte wurden möglicherweise bereits konvertiert, oder die Objekte können im Ziel Schema einfach denselben Namen haben wie Objekte, die Sie konvertieren möchten.  
   

@@ -16,10 +16,10 @@ ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1ab2afba10ff754b5bd99d36df02d642cc5c6bb0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771436"
 ---
 # <a name="sp_helppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
@@ -70,11 +70,11 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**immediate_sync**|**bit**|Gibt an, ob die Synchronisierungsdateien bei jeder Ausführung des Momentaufnahme-Agents erstellt oder neu erstellt werden.|  
 |**Verleger Anmeldung**|**sysname**|Auf dem Verleger für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendete Anmelde-ID.|  
 |**publisher password**|**nvarchar (524)**|Das Kennwort (verschlüsselt), das auf dem Verleger für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendet wird.|  
-|**publisher security_mode**|**int**|Auf dem Verleger implementierter Sicherheitsmodus:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung<br /><br /> **1** = Windows-Authentifizierung<br /><br /> **2** = die Synchronisierungs Trigger verwenden einen statischen **sysservers** -Eintrag für Remote Prozedur Aufrufe (RPC), und der *Herausgeber* muss in der **sysservers** -Tabelle als Remote Server oder Verbindungs Server definiert sein.|  
+|**publisher security_mode**|**int**|Auf dem Verleger implementierter Sicherheitsmodus:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung<br /><br /> **1** = Windows-Authentifizierung<br /><br /> **2** = die Synchronisierungs Trigger verwenden einen statischen **sysservers** -Eintrag für Remote Prozedur Aufrufe (RPC), und der *Herausgeber* muss in der **sysservers** -Tabelle als Remote Server oder Verbindungs Server definiert sein.|  
 |**Verleih**|**sysname**|Name des Verteilers.|  
 |**distributor_login**|**sysname**|Auf dem Verteiler für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendete Anmelde-ID.|  
 |**distributor_password**|**nvarchar (524)**|Kennwort (verschlüsselt), das auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verteiler für die Authentifizierung verwendet wird.|  
-|**distributor_security_mode**|**int**|Auf dem Verteiler implementierter Sicherheitsmodus:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung<br /><br /> **1** = Windows-Authentifizierung|  
+|**distributor_security_mode**|**int**|Auf dem Verteiler implementierter Sicherheitsmodus:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung<br /><br /> **1** = Windows-Authentifizierung|  
 |**ftp_address**|**sysname**|Nur aus Gründen der Abwärtskompatibilität beibehalten|  
 |**ftp_port**|**int**|Nur aus Gründen der Abwärtskompatibilität beibehalten|  
 |**ftp_login**|**sysname**|Nur aus Gründen der Abwärtskompatibilität beibehalten|  

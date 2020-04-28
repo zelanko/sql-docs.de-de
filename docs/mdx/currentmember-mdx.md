@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 374a38d07c3174e799d01199e20e822f85deed13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892922"
 ---
 # <a name="currentmember-mdx"></a>CurrentMember (MDX)
@@ -35,8 +35,7 @@ Hierarchy_Expression.CurrentMember
  Bei der Iteration durch eine Menge von Hierarchieelementen stellt bei jedem Iterationsschritt das jeweils bearbeitete Element das aktuelle Element dar. Die **CurrentMember** -Funktion gibt dieses Element zurück.  
   
 > [!IMPORTANT]  
->  Wenn eine Dimension nur eine einzige sichtbare Hierarchie enthält, kann auf die Hierarchie entweder mit dem Dimensionsnamen oder mit dem Hierarchienamen verwiesen werden, weil der Dimensionsname in seine einzige sichtbare Hierarchie aufgelöst wird. 
-  `Measures.CurrentMember` ist z. B. ein gültiger MDX-Ausdruck, weil er in die einzige vorhandene Hierarchie in der Measures-Dimension aufgelöst wird.  
+>  Wenn eine Dimension nur eine einzige sichtbare Hierarchie enthält, kann auf die Hierarchie entweder mit dem Dimensionsnamen oder mit dem Hierarchienamen verwiesen werden, weil der Dimensionsname in seine einzige sichtbare Hierarchie aufgelöst wird. `Measures.CurrentMember` ist z. B. ein gültiger MDX-Ausdruck, weil er in die einzige vorhandene Hierarchie in der Measures-Dimension aufgelöst wird.  
   
 ## <a name="examples"></a>Beispiele  
  Die folgende Abfrage zeigt, wie " **CurrentMember** " verwendet werden kann, um den aktuellen Member aus Hierarchien in den Spalten, Zeilen und slicenachse zu finden:  
@@ -118,6 +117,6 @@ WHERE {[Date].[Calendar Year].[Calendar Year].&[2003]}
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 6366ed7d6346fb6240a5d56ae6cc4d91575f2ed0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68259787"
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>Arbeiten mit SSMA für die Zugriffs Konsole (Access Token)
@@ -38,6 +38,6 @@ Zu den in diesem Abschnitt behandelten Themen gehören:
 |[Erstellen von Berichten &#40;Access Token&#41;](../../ssma/access/generating-reports-accesstosql.md)|Listet die Befehle zum Generieren von Berichten auf.|  
 |[Problembehandlung &#40;Access Token&#41;](../../ssma/access/troubleshooting-accesstosql.md)|Bietet kurze Informationen zum Beheben von Migrationsproblemen.|  
   
-## <a name="see-also"></a>Weitere Informationen  
-[Erste Schritte mit der SSMA-Konsole für Access](getting-started-with-ssma-for-access-console-accesstosql.md)  
+## <a name="see-also"></a>Weitere Informationen:  
+[Ersten Schritte mit SSMA für die Zugriffs Konsole](getting-started-with-ssma-for-access-console-accesstosql.md)  
   

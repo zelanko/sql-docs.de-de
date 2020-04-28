@@ -11,19 +11,18 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66cbc5b8b54ec2507bb4fbe96443afa25386de96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68670501"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>Sichern, Wiederherstellen und Verschieben des SSIS-Katalogs
-  
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] schließt die SSISDB-Datenbank ein. Sie können Sichten in der SSISDB-Datenbank abfragen, um im **SSISDB** -Katalog gespeicherte Objekte, Einstellungen und operative Daten zu überprüfen. Dieses Thema enthält Anweisungen zum Sichern und Wiederherstellen der Datenbank.  
   
  Der **SSISDB**-Katalog speichert die Pakete, die Sie auf dem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Server bereitgestellt haben. Weitere Informationen zum Katalog finden Sie unter [SSIS-Katalog](catalog/ssis-catalog.md).  
   
-##  <a name="backup"></a>So sichern Sie die SSIS-Datenbank  
+##  <a name="to-back-up-the-ssis-database"></a><a name="backup"></a>So sichern Sie die SSIS-Datenbank  
   
 1.  Öffnen Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , und stellen Sie eine Verbindung zu einer Instanz von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]her.  
   
@@ -63,7 +62,7 @@ ms.locfileid: "68670501"
   
 ### <a name="to-restore-the-ssis-database"></a>So stellen Sie die SSIS-Datenbank wieder her  
   
-1.  Wenn Sie die SSISDB-Datenbank auf einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Instanz wiederherstellen, auf der der SSISDB-Katalog nie erstellt wurde, aktivieren Sie Common Language Runtime (clr), indem Sie die gespeicherte Prozedur sp_configure ausführen. Weitere Informationen finden Sie unter [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) und [CLR-fähig (Option)](https://go.microsoft.com/fwlink/?LinkId=231855).  
+1.  Wenn Sie die SSISDB-Datenbank auf einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Instanz wiederherstellen, auf der der SSISDB-Katalog nie erstellt wurde, aktivieren Sie Common Language Runtime (clr), indem Sie die gespeicherte Prozedur sp_configure ausführen. Weitere Informationen finden Sie unter [sp_configure &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) und [CLR-fähig (Option)](https://go.microsoft.com/fwlink/?LinkId=231855).  
   
     ```  
     use master   
@@ -80,8 +79,7 @@ ms.locfileid: "68670501"
   
     ```  
   
-     
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -CLR-gespeicherte Prozeduren erfordern UNSAFE-Berechtigungen, die der Anmeldung gewährt werden müssen, da die Anmeldung einen zusätzlichen Zugriff auf eingeschränkte Ressourcen (z. B. die Microsoft Win32-API) benötigt. Weitere Informationen zur UNSAFE-Codeberechtigung finden Sie unter [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
+     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -CLR-gespeicherte Prozeduren erfordern UNSAFE-Berechtigungen, die der Anmeldung gewährt werden müssen, da die Anmeldung einen zusätzlichen Zugriff auf eingeschränkte Ressourcen (z. B. die Microsoft Win32-API) benötigt. Weitere Informationen zur UNSAFE-Codeberechtigung finden Sie unter [Creating an Assembly](../relational-databases/clr-integration/assemblies/creating-an-assembly.md).  
   
     ```  
     Create Login MS_SQLEnableSystemAssemblyLoadingUser  
@@ -91,13 +89,13 @@ ms.locfileid: "68670501"
   
     ```  
   
-3.  Stellen Sie die SSISDB-Datenbank über die Sicherung wieder her. Verwenden Sie dazu das Dialogfeld **Datenbank wiederherstellen** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Weitere Informationen finden Sie in den nachfolgenden Themen.  
+3.  Stellen Sie die SSISDB-Datenbank über die Sicherung wieder her. Verwenden Sie dazu das Dialogfeld **Datenbank wiederherstellen** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Weitere Informationen finden Sie in den folgenden Themen.  
   
     -   [Datenbank wiederherstellen &#40;Seite „Allgemein“&#41;](general-page-of-integration-services-designers-options.md)  
   
-    -   [Seite "Daten Bank &#40;Dateien wiederherstellen"&#41;](../relational-databases/backup-restore/restore-database-files-page.md)  
+    -   [Datenbank wiederherstellen &#40;Seite Dateien&#41;](../relational-databases/backup-restore/restore-database-files-page.md)  
   
-    -   [Datenbank wiederherstellen &#40;Seite „Optionen“&#41;](../relational-databases/backup-restore/restore-database-options-page.md)  
+    -   [Datenbank wiederherstellen &#40;Seite Optionen&#41;](../relational-databases/backup-restore/restore-database-options-page.md)  
   
 4.  Führen Sie die Skripts aus, die Sie in [So sichern Sie die SSIS-Datenbank](#backup) für ##MS_SSISServerCleanupJobLogin##, sp_ssis_startup und den SSIS-Serverwartungsauftrag erstellt haben. Bestätigen Sie, dass der SQL Server-Agent gestartet wurde.  
   
@@ -107,7 +105,7 @@ ms.locfileid: "68670501"
     EXEC sp_procoption N'sp_ssis_startup','startup','on'  
     ```  
   
-6.  Ordnen Sie den SSISDB-Benutzer ##MS_SSISServerCleanupJobUser## (SSISDB-Datenbank) ##MS_SSISServerCleanupJobLogin## zu, indem Sie das Dialogfeld **Anmeldungseigenschaften** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] verwenden.  
+6.  Ordnen Sie den SSISDB-Benutzer ##MS_SSISServerCleanupJobUser## (SSISDB-Datenbank) ##MS_SSISServerCleanupJobLogin## zu, indem Sie das Dialogfeld **Anmeldungseigenschaften** in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]verwenden.  
   
 7.  Verwenden Sie zum Sichern des Hauptschlüssels eine der folgenden Methoden. Weitere Informationen zur Verschlüsselung finden Sie unter [Encryption Hierarchy](../relational-databases/security/encryption/encryption-hierarchy.md).  
   

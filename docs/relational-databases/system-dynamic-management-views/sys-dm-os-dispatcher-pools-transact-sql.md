@@ -20,10 +20,10 @@ ms.assetid: b9edbc83-c6bc-4753-9bb5-a454cfe7d6bf
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cf8e1700f51f808811a1f5a61f86777547c9cb65
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265855"
 ---
 # <a name="sysdm_os_dispatcher_pools-transact-sql"></a>sys.dm_os_dispatcher_pools (Transact-SQL)
@@ -38,7 +38,7 @@ ms.locfileid: "68265855"
 |-----------------|---------------|-----------------|  
 |dispatcher_pool_address|**varbinary(8)**|Die Adresse des Verteilerpools. dispatcher_pool_address ist eindeutig. Lässt keine NULL-Werte zu.|  
 |type|**nvarchar(256)**|Der Typ des Verteilerpools. Lässt keine NULL-Werte zu. Es gibt zwei Typen von Verteilerpools:<br /><br /> DISP_POOL_XE_ENGINE<br /><br /> DISP_POOL_XE_SESSION<br /><br /> Abfragen der DMV für die vollständige Liste|  
-|name|**nvarchar(256)**|Der Name des Verteilerpools Lässt keine NULL-Werte zu.|  
+|Name|**nvarchar(256)**|Der Name des Verteilerpools Lässt keine NULL-Werte zu.|  
 |dispatcher_count|**int**|Die Anzahl aktiver Verteilerthreads Lässt keine NULL-Werte zu.|  
 |dispatcher_ideal_count|**int**|Die Anzahl zu verwendender Verteilerthreads, die der Verteilerpool erhöhen kann. Lässt keine NULL-Werte zu.|  
 |dispatcher_timeout_ms|**int**|Die Zeit in Millisekunden, die ein Verteiler auf neue Arbeit wartet, bevor er beendet wird. Lässt keine NULL-Werte zu.|  

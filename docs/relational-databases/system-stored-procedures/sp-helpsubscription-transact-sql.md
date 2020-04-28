@@ -16,10 +16,10 @@ ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bf7712ceb55fc368d493be9999cd0b8d4d9f474c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771569"
 ---
 # <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)

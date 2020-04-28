@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: b2b6f88e857ab7fc6300698174914126fb0881f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265727"
 ---
 # <a name="sysdm_os_nodes-transact-sql"></a>sys.dm_os_nodes (Transact-SQL)
@@ -48,15 +48,15 @@ Die folgende Tabelle enthält Informationen zu diesen Knoten.
 |memory_clerk_address|**varbinary(8)**|Adresse des Speicherclerks ist diesem Knoten zugeordnet. Eine eins-zu-eins-Beziehung zu [sys. dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md). memory_clerk_address.|  
 |io_completion_worker_address|**varbinary(8)**|Adresse des Arbeitsthreads ist dem E/A-Abschluss für diesen Knoten zugewiesen. Eine eins-zu-eins-Beziehung zu [sys. dm_os_workers](../../relational-databases/system-dynamic-management-views/sys-dm-os-workers-transact-sql.md). worker_address.|  
 |memory_node_id|**smallint**|ID des Arbeitsspeicherknotens, zu dem dieser Knoten gehört. N:1-Beziehung zu [sys. dm_os_memory_nodes](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-nodes-transact-sql.md). memory_node_id.|  
-|cpu_affinity_mask|**BIGINT**|Bitmap, das die CPUs identifiziert, die diesem Knoten zugeordnet sind.|  
+|cpu_affinity_mask|**bigint**|Bitmap, das die CPUs identifiziert, die diesem Knoten zugeordnet sind.|  
 |online_scheduler_count|**smallint**|Anzahl der von diesem Knoten verwalteten Online Planer.|  
 |idle_scheduler_count|**smallint**|Anzahl der Onlinescheduler, die über keinen aktiven Arbeitsthread verfügen.|  
 |active_worker_count|**int**|Anzahl der Arbeitsthreads, die auf allen von diesem Knoten verwalteten Zeitplanungsmodulen aktiv sind.|  
 |avg_load_balance|**int**|Durchschnittliche Anzahl von Tasks pro Zeitplanungsmodul auf diesem Knoten.|  
-|timer_task_affinity_mask|**BIGINT**|Bitmap, das die Zeitplanungsmodule identifiziert, denen Zeitgebertasks zugewiesen sein können.|  
-|permanent_task_affinity_mask|**BIGINT**|Bitmap, das die Zeitplanungsmodule identifiziert, denen permanente Zeitgebertasks zugewiesen sein können.|  
+|timer_task_affinity_mask|**bigint**|Bitmap, das die Zeitplanungsmodule identifiziert, denen Zeitgebertasks zugewiesen sein können.|  
+|permanent_task_affinity_mask|**bigint**|Bitmap, das die Zeitplanungsmodule identifiziert, denen permanente Zeitgebertasks zugewiesen sein können.|  
 |resource_monitor_state|**bit**|Jeder Knoten verfügt über einen zugewiesenen Ressourcenmonitor. Der Ressourcenmonitor kann ausgeführt werden oder sich im Leerlauf befinden. Der Wert 1 gibt an, dass der Monitor ausgeführt wird, der Wert 0 gibt an, dass er sich im Leerlauf befindet.|  
-|online_scheduler_mask|**BIGINT**|Identifiziert die Prozessaffinitätsmaske für diesen Knoten.|  
+|online_scheduler_mask|**bigint**|Identifiziert die Prozessaffinitätsmaske für diesen Knoten.|  
 |processor_group|**smallint**|Identifiziert die Gruppe von Prozessoren für diesen Knoten.|  
 |cpu_count |**int** |Anzahl der verfügbaren CPUs für diesen Knoten. |
 |pdw_node_id|**int**|Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.<br /><br /> **Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]|  

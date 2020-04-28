@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9d79ef7ae57894470f58701fd51a1d9ddd1b7126
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891992"
 ---
 # <a name="ole-db-connection-type-ssrs"></a>OLE-Datenbank-Verbindungstyp (SSRS)
@@ -22,7 +22,7 @@ ms.locfileid: "68891992"
   
  OLE DB ist eine Datenzugriffstechnologie, die es Clients ermöglicht, eine Verbindung mit einer Vielzahl von Datenanbietern herzustellen. Nachdem Sie den Datenquellentyp OLE DB ausgewählt haben, müssen Sie einen bestimmten Datenanbieter auswählen. Die Unterstützung für Funktionen wie Parameter und Anmeldeinformationen hängt vom ausgewählten Datenanbieter ab.  
   
- Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstellen. Schrittweise Anweisungen finden Sie unter [Hinzufügen und Überprüfen einer Datenverbindung oder Datenquelle &#40;Berichts-Generators und SSRS-&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
+ Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstellen. Schritt-für-Schritt-Anweisungen finden [Sie unter Hinzufügen und Überprüfen einer Datenverbindung oder einer Datenquelle &#40;Berichts-Generator und SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
 ##  <a name="connection-string"></a><a name="Connection"></a> Verbindungszeichenfolge  
  Die Verbindungszeichenfolge für die OLE DB-Datenverarbeitungserweiterung hängt vom gewünschten Datenanbieter ab. Eine typische Verbindungszeichenfolge enthält Name-Wert-Paare, die vom Datenanbieter unterstützt werden. Die folgende Verbindungszeichenfolge gibt z. B. den OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client und die AdventureWorks-Datenbank an:  
@@ -42,7 +42,7 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
  Nachdem Sie den Bericht veröffentlicht haben, müssen Sie eventuell die Anmeldeinformationen für die Datenquelle ändern, sodass die Berechtigungen zum Abrufen der Daten beim Ausführen des Berichts auf dem Berichtsserver gültig sind.  
   
- Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) oder [Angeben von Anmeldeinformationen in Report Builder](../specify-credentials-in-report-builder.md).  
+ Weitere Informationen finden Sie unter [Datenverbindungen, Datenquellen und Verbindungs](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) Zeichenfolgen in Reporting Services oder [Angeben von Anmelde Informationen in Berichts-Generator](../specify-credentials-in-report-builder.md).  
   
 ###### <a name="special-characters-in-a-password"></a>Sonderzeichen in Kennwörtern  
  Wenn Sie die OLE DB-Datenquelle so konfigurieren, dass ein Kennwort angegeben werden muss oder das Kennwort in der Verbindungszeichenfolge enthalten ist, und Benutzer das Kennwort mit Sonderzeichen (z. B. Satzzeichen) eingeben, können einige zugrunde liegende Datenquellentreiber die Sonderzeichen nicht überprüfen. Wenn Sie den Bericht verarbeiten, ist die Meldung "Kein zulässiges Kennwort" möglicherweise ein Anzeichen für dieses Problem.  
@@ -72,10 +72,10 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
   
   
   
-##  <a name="how-to-topics"></a><a name="HowTo"></a>How-To-Themen  
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Themen zur Vorgehensweise  
  Dieser Abschnitt enthält schrittweise Anweisungen zum Arbeiten mit Datenverbindungen, Datenquellen und Datasets.  
   
- [Hinzufügen und Überprüfen einer Datenverbindung oder Datenquelle &#40;Berichts-Generators und SSRS-&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
+ [Hinzufügen und Überprüfen einer Datenverbindung oder Datenquelle &#40;Berichts-Generator und SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md)  
   
  [Erstellen eines freigegebenen Datasets oder eingebetteten Datasets &#40;Berichts-Generator und SSRS&#41;](create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs.md)  
   
@@ -86,16 +86,16 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
 ##  <a name="related-sections"></a><a name="Related"></a> Verwandte Abschnitte  
  Diese Abschnitte der Dokumentation enthalten umfassende grundlegende Informationen zu Berichtsdaten sowie Informationen zum Definieren, Anpassen und Verwenden der mit Daten zusammenhängenden Teile eines Berichts.  
   
- [Hinzufügen von Daten zu einem Berichts-&#40;Berichts-Generator und SSRS-&#41;](report-datasets-ssrs.md)  
+ [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-datasets-ssrs.md)  
  Bietet eine Übersicht über den Zugriff auf Daten für den Bericht.  
   
  [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Berichts-Generator](../data-connections-data-sources-and-connection-strings-in-report-builder.md)  
  Enthält Informationen zu Datenverbindungen und Datenquellen.  
   
- [Bericht Eingebettete Datasets und freigegebene Datasets &#40;Berichts-Generator und SSRS-&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
+ [Melden Sie eingebettete Datasets und freigegebene Datasets &#40;Berichts-Generator und SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  Enthält Informationen zu eingebetteten und freigegebenen Datasets.  
   
- [Datasetfelder-Sammlung &#40;Berichts-Generator und SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
+ [Datasetfeld-Sammlung &#40;Berichts-Generator und SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Enthält Informationen zur von der Abfrage generierten Datasetfeldauflistung.  
   
  [Von Reporting Services unterstützte Datenquellen (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md) in der [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Dokumentation der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Onlinedokumentation](https://go.microsoft.com/fwlink/?linkid=121312) zu .  
@@ -104,8 +104,8 @@ Provider=SQLNCLI10.1;Data Source=server; Initial Catalog=AdventureWorks
  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer-&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)   
- [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS-&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
+ [Berichts Parameter &#40;Berichts-Generator und Berichts-Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)   
+ [Filtern, gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)   
  [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](../report-design/expressions-report-builder-and-ssrs.md)  
   
   

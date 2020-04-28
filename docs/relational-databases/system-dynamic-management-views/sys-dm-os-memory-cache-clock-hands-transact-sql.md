@@ -19,10 +19,10 @@ ms.assetid: 0660eddc-691c-425f-9d43-71151d644de7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 783f985810b44673c6a6566caa6e89ff655670e0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265791"
 ---
 # <a name="sysdm_os_memory_cache_clock_hands-transact-sql"></a>sys.dm_os_memory_cache_clock_hands (Transact-SQL)
@@ -37,16 +37,16 @@ ms.locfileid: "68265791"
 |-----------------|---------------|-----------------|  
 |**cache_address**|**varbinary(8)**|Adresse des Caches, der der Clock zugeordnet ist. Lässt keine NULL-Werte zu.|  
 |**name**|**nvarchar(256)**|Name des Caches. Lässt keine NULL-Werte zu.|  
-|**type**|**nvarchar (60)**|Typ des Cachespeichers. Es können mehrere Caches desselben Typs vorhanden sein. Lässt keine NULL-Werte zu.|  
-|**clock_hand**|**nvarchar (60)**|Zeigertyp. Folgende Werte sind möglich:<br /><br /> Extern<br /><br /> Intern<br /><br /> Lässt keine NULL-Werte zu.|  
-|**clock_status**|**nvarchar (60)**|Clockstatus. Folgende Werte sind möglich:<br /><br /> Suspended<br /><br /> Wird ausgeführt<br /><br /> Lässt keine NULL-Werte zu.|  
-|**rounds_count**|**BIGINT**|Anzahl der Sweeps innerhalb des Caches zum Entfernen von Einträgen. Lässt keine NULL-Werte zu.|  
-|**removed_all_rounds_count**|**BIGINT**|Anzahl der durch alle Sweeps entfernten Einträge. Lässt keine NULL-Werte zu.|  
-|**updated_last_round_count**|**BIGINT**|Anzahl der während des letzten Sweeps aktualisierten Einträge. Lässt keine NULL-Werte zu.|  
-|**removed_last_round_count**|**BIGINT**|Anzahl der während des letzten Sweeps entfernten Einträge. Lässt keine NULL-Werte zu.|  
-|**last_tick_time**|**BIGINT**|Letzter Zeitpunkt, in Millisekunden, zu dem sich der Uhrzeiger bewegt hat. Lässt keine NULL-Werte zu.|  
-|**round_start_time**|**BIGINT**|Zeitpunkt des letzten Sweeps in Millisekunden. Lässt keine NULL-Werte zu.|  
-|**last_round_start_time**|**BIGINT**|Gesamtzeit in Millisekunden, die die Uhr für die letzte Umdrehung benötigt hat. Lässt keine NULL-Werte zu.|  
+|**type**|**nvarchar(60)**|Typ des Cachespeichers. Es können mehrere Caches desselben Typs vorhanden sein. Lässt keine NULL-Werte zu.|  
+|**clock_hand**|**nvarchar(60)**|Zeigertyp. Folgende Werte sind möglich:<br /><br /> Extern<br /><br /> Intern<br /><br /> Lässt keine NULL-Werte zu.|  
+|**clock_status**|**nvarchar(60)**|Clockstatus. Folgende Werte sind möglich:<br /><br /> Ausgesetzt<br /><br /> Wird ausgeführt<br /><br /> Lässt keine NULL-Werte zu.|  
+|**rounds_count**|**bigint**|Anzahl der Sweeps innerhalb des Caches zum Entfernen von Einträgen. Lässt keine NULL-Werte zu.|  
+|**removed_all_rounds_count**|**bigint**|Anzahl der durch alle Sweeps entfernten Einträge. Lässt keine NULL-Werte zu.|  
+|**updated_last_round_count**|**bigint**|Anzahl der während des letzten Sweeps aktualisierten Einträge. Lässt keine NULL-Werte zu.|  
+|**removed_last_round_count**|**bigint**|Anzahl der während des letzten Sweeps entfernten Einträge. Lässt keine NULL-Werte zu.|  
+|**last_tick_time**|**bigint**|Letzter Zeitpunkt, in Millisekunden, zu dem sich der Uhrzeiger bewegt hat. Lässt keine NULL-Werte zu.|  
+|**round_start_time**|**bigint**|Zeitpunkt des letzten Sweeps in Millisekunden. Lässt keine NULL-Werte zu.|  
+|**last_round_start_time**|**bigint**|Gesamtzeit in Millisekunden, die die Uhr für die letzte Umdrehung benötigt hat. Lässt keine NULL-Werte zu.|  
 |**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen  

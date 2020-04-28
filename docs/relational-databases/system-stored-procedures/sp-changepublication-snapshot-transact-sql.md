@@ -16,10 +16,10 @@ ms.assetid: 518a4618-3592-4edc-8425-cbc33cdff891
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8d7252f0335e2fc83c5b8e5e27f5e41535fdc7bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68762256"
 ---
 # <a name="sp_changepublication_snapshot-transact-sql"></a>sp_changepublication_snapshot (Transact-SQL)
@@ -28,7 +28,7 @@ ms.locfileid: "68762256"
   Ändert Eigenschaften des Momentaufnahme-Agents für die angegebene Veröffentlichung. Diese gespeicherte Prozedur wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
 > [!IMPORTANT]  
->  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen mit dem Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -61,7 +61,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
   
 `[ @frequency_type = ] frequency_type`Die Häufigkeit, mit der der Agent geplant werden soll. *frequency_type* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
 |**2**|On-Demand-Streaming|  
@@ -70,28 +70,28 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
 |**Uhr**|Monatlich|  
 |**32**|Monatlich, relativ|  
 |**64**|Autostart|  
-|**128**|Serie|  
+|**128**|Wiederholt|  
 |NULL (Standard)||  
   
 `[ @frequency_interval = ] frequency_interval`Gibt die Tage an, an denen der Agent ausgeführt wird. *frequency_interval* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Sonntag|  
 |**2**|Montag|  
-|**€**|Tuesday|  
-|**4**|Mittwoch|  
-|**5@@**|Thursday|  
+|**3**|Tuesday|  
+|**4**|Wednesday|  
+|**5**|Thursday|  
 |**6**|Freitag|  
-|**19.00**|Samstag|  
+|**7**|Samstag|  
 |**88**|Day (Tag)|  
-|**21.00**|Wochentage|  
-|**€**|Wochenendtage|  
+|**9**|Wochentage|  
+|**10**|Wochenendtage|  
 |NULL (Standard)||  
   
 `[ @frequency_subday = ] frequency_subday`Die Einheiten für *freq_subday_interval*. *frequency_subday* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
 |**2**|Sekunde|  
@@ -115,7 +115,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
   
 `[ @snapshot_job_name = ] 'snapshot_agent_name'`Der Name eines vorhandenen Momentaufnahmen-Agent Auftrags namens, wenn ein vorhandener Auftrag verwendet wird. *snapshot_agent_name* ist vom Datentyp **nvarchar (100)** und hat den Standardwert NULL.  
   
-`[ @publisher_security_mode = ] publisher_security_mode`Der Sicherheitsmodus, der vom Agent beim Herstellen einer Verbindung mit dem Verleger verwendet wird. *publisher_security_mode* ist vom Datentyp **smallint**. der Standardwert ist NULL. **0** gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Authentifizierung an, und **1** gibt die Windows-Authentifizierung an. Für nicht- **** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger muss ein Wert von 0 angegeben werden.  
+`[ @publisher_security_mode = ] publisher_security_mode`Der Sicherheitsmodus, der vom Agent beim Herstellen einer Verbindung mit dem Verleger verwendet wird. *publisher_security_mode* ist vom Datentyp **smallint**. der Standardwert ist NULL. **0** gibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Authentifizierung an, und **1** gibt die Windows-Authentifizierung an. Für nicht- **0** - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger muss ein Wert von 0 angegeben werden.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
@@ -150,7 +150,7 @@ sp_changepublication_snapshot [ @publication= ] 'publication'
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen und Ändern von Veröffentlichungseigenschaften](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
- [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
+ [Ändern von Veröffentlichungs-und Artikeleigenschaften](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addpublication_snapshot &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

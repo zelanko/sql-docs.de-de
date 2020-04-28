@@ -16,10 +16,10 @@ ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5e6e7232d718d5cf6cb1791783f105f31dc2f4ec
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769103"
 ---
 # <a name="sp_addpublication-transact-sql"></a>sp_addpublication (Transact-SQL)
@@ -91,19 +91,19 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@sync_method = ] _'sync_method'`Der Synchronisierungs Modus. *sync_method* ist vom Datentyp **nvarchar (13)**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**einheimischen**|Erstellt eine Massenkopierprogramm-Ausgabe aller Tabellen im einheitlichen Modus. *Wird für Oracle-Verleger nicht unterstützt*.|  
+|**native**|Erstellt eine Massenkopierprogramm-Ausgabe aller Tabellen im einheitlichen Modus. *Wird für Oracle-Verleger nicht unterstützt*.|  
 |**Art**|Erstellt eine Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus. _Bei einem Oracle-Verleger_ ist das **Zeichen** _nur für die Momentaufnahme Replikation gültig_.|  
 |**findende**|Erzeugt eine Massenkopierprogramm-Ausgabe aller Tabellen im einheitlichen Modus, sperrt jedoch die Tabellen während der Erstellung der Momentaufnahme nicht. Wird nur für Transaktionsveröffentlichungen unterstützt. *Wird für Oracle-Verleger nicht unterstützt*.|  
 |**concurrent_c**|Erzeugt eine Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus, sperrt jedoch die Tabellen während der Erstellung der Momentaufnahme nicht. Wird nur für Transaktionsveröffentlichungen unterstützt.|  
 |**Daten Bank Momentaufnahme**|Erstellt aus einer Datenbankmomentaufnahme eine Massenkopierprogramm-Ausgabe aller Tabellen im einheitlichen Modus. Daten Bank Momentaufnahmen sind nicht in jeder Edition [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
 |**database snapshot character**|Erstellt aus einer Datenbankmomentaufnahme eine Massenkopierprogramm-Ausgabe aller Tabellen im Zeichenmodus. Daten Bank Momentaufnahmen sind nicht in jeder Edition [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]von verfügbar. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).|  
-|NULL (Standard)|Der Standard **** Wert ist [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native für Verleger. Bei nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verlegern wird standardmäßig ein **Zeichen** verwendet, wenn der Wert von *repl_freq* **Momentaufnahme** ist, und für alle anderen Fälle **concurrent_c** .|  
+|NULL (Standard)|Der Standard **native** Wert ist [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native für Verleger. Bei nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verlegern wird standardmäßig ein **Zeichen** verwendet, wenn der Wert von *repl_freq* **Momentaufnahme** ist, und für alle anderen Fälle **concurrent_c** .|  
   
 `[ \@repl_freq = ] 'repl_freq'`Der Typ der Replikations Häufigkeit, *repl_freq* ist vom Datentyp **nvarchar (10)**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Continuous** (Standard)|Der Verleger stellt die Ausgabe aller protokollbasierten Transaktionen bereit. Für nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger erfordert dies, dass *sync_method* auf **concurrent_c**festgelegt werden.|  
 |**Überblick**|Der Verleger gibt nur geplante Synchronisierungsereignisse aus. Für nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger erfordert dies, dass *sync_method* auf **Zeichen**festgelegt werden.|  
@@ -112,7 +112,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@status = ] 'status'`Gibt an, ob Veröffentlichungsdaten verfügbar sind. der *Status* ist **nvarchar (8)**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**enden**|Die Veröffentlichungsdaten sind für Abonnenten sofort verfügbar.|  
 |**inaktiv** (Standard)|Die Veröffentlichungsdaten sind für Abonnenten zunächst nicht verfügbar, wenn die Veröffentlichung erstellt wird (die Abonnierung ist möglich, aber die Abonnements werden nicht verarbeitet).|  
@@ -135,10 +135,10 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@autogen_sync_procs = ] 'autogen_sync_procs'`Gibt an, ob die Synchronisierungs gespeicherte Prozedur zum Aktualisieren von Abonnements auf dem Verleger generiert wird. *autogen_sync_procs* ist vom Datentyp **nvarchar (5)**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**Fall**|Wird automatisch festgelegt, wenn das Aktualisieren von Abonnements aktiviert ist.|  
-|**Alarm**|Wird automatisch für Oracle-Verleger festgelegt oder wenn das Aktualisieren von Abonnements nicht aktiviert ist.|  
+|**true**|Wird automatisch festgelegt, wenn das Aktualisieren von Abonnements aktiviert ist.|  
+|**false**|Wird automatisch für Oracle-Verleger festgelegt oder wenn das Aktualisieren von Abonnements nicht aktiviert ist.|  
 |NULL (Standard)|Der Standardwert ist **true** , wenn das Aktualisieren von Abonnements aktiviert ist, und **false** , wenn Abonnements nicht aktiviert sind.|  
   
 > [!NOTE]  
@@ -176,7 +176,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@conflict_policy = ] 'conflict_policy'`Gibt die Richtlinie zur Konfliktlösung an, gefolgt von der Verwendung der Option für Abonnenten mit verzögertem Update. *conflict_policy* ist vom Datentyp **nvarchar (100)** und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**pub wins**|Der Verleger gewinnt den Konflikt.|  
 |**sub reinit**|Erneutes Initialisieren des Abonnements.|  
@@ -191,9 +191,9 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@queue_type = ] 'queue_type'`Gibt an, welcher Typ von Warteschlange verwendet wird. *queue_type* ist vom Datentyp **nvarchar (10)** und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**sql**|Verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Speichern von Transaktionen.|  
+|**SQL**|Verwendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Speichern von Transaktionen.|  
 |NULL (Standard)|Standardmäßig wird **SQL**verwendet, das angibt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , dass zum Speichern von Transaktionen verwendet werden soll.|  
   
 > [!NOTE]  
@@ -210,14 +210,14 @@ sp_addpublication [ @publication = ] 'publication'
 `[ \@publisher = ] 'publisher'`Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
 > [!NOTE]  
->  ** beim Hinzufügen einer Veröffentlichung zu einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger sollte der Verleger nicht verwendet werden.  
+>  *publisher* beim Hinzufügen einer Veröffentlichung zu einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger sollte der Verleger nicht verwendet werden.  
   
 `[ \@allow_initialize_from_backup = ] 'allow_initialize_from_backup'`Gibt an, ob Abonnenten ein Abonnement für diese Veröffentlichung aus einer Sicherung anstelle einer Anfangs Momentaufnahme initialisieren können. *allow_initialize_from_backup* ist vom Datentyp **nvarchar (5)**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**Fall**|Aktiviert die Initialisierung aus einer Sicherung.|  
-|**Alarm**|Deaktiviert die Initialisierung aus einer Sicherung.|  
+|**true**|Aktiviert die Initialisierung aus einer Sicherung.|  
+|**false**|Deaktiviert die Initialisierung aus einer Sicherung.|  
 |NULL (Standard)|Der Standardwert ist **true** für eine Veröffentlichung in einer Peer-zu-Peer-Replikations Topologie und **false** für alle anderen Veröffentlichungen.|  
   
  Weitere Informationen finden Sie unter [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)initialisiert wird.  

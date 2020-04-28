@@ -11,13 +11,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 61a25d1f4e86204d05b3be6bf2a5dbc8cd0474b9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70153834"
 ---
-# <a name="lesson-3-create-a-sql-server-credential"></a>Lektion 3: Erstellen von SQL Server-Anmeldeinformationen
+# <a name="lesson-3-create-a-sql-server-credential"></a>Lektion 3: Erstellen von SQL Server-Anmeldeinformationen
   In dieser Lektion erstellen Sie Anmelde Informationen zum Speichern der Sicherheitsinformationen, die für den Zugriff auf das Azure-Speicherkonto verwendet werden.  
   
  SQL Server-Anmeldeinformationen sind ein Objekt zum Speichern von Authentifizierungsinformationen, die für die Verbindung mit einer Ressource außerhalb von SQL Server erforderlich sind. In den Anmeldeinformationen werden der URI-Pfad des Speichercontainers und die Shared Access Signature-Schlüsselwerte gespeichert. Für jeden Speichercontainer, der von einer Daten- oder Protokolldatei verwendet wird, müssen Sie SQL Server-Anmeldeinformationen erstellen, deren Namen mit dem Containerpfad übereinstimmen.  
@@ -59,6 +59,6 @@ ms.locfileid: "70153834"
   
  **Nächste Lektion:**  
   
- [Lektion 4: Erstellen einer Datenbank in Azure Storage](lesson-3-database-backup-to-url.md)  
+ [Lektion 4: Erstellen einer Datenbank in Azure Storage](lesson-3-database-backup-to-url.md)  
   
   

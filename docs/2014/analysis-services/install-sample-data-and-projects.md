@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0be986ee50599c6e95222bca2eae217b088e2de3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530818"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Installieren von Beispieldaten und -projekten für das Analysis Services-Lernprogramm zur mehrdimensionalen Modellierung
@@ -29,7 +29,7 @@ ms.locfileid: "69530818"
   
      Analysis Services ist nur in der Evaluation, Enterprise, Business Intelligence und Standard Edition verfügbar.  
   
-     In den Express-Editionen von SQL Server ist Analysis Services nicht enthalten. [Laden Sie die Evaluierungsversion herunter](https://go.microsoft.com/fwlink/?LinkId=392824) , wenn Sie die Software kostenlos ausprobieren möchten.  
+     In den Express-Editionen von SQL Server ist Analysis Services nicht enthalten. [Laden Sie die Evaluation Edition herunter](https://go.microsoft.com/fwlink/?LinkId=392824) , um die Software kostenlos zu testen.  
   
      Analysis Services wird standardmäßig als mehrdimensionale Instanz installiert. Sie können diesen Modus überschreiben, indem Sie im Installations-Assistenten auf der Seite für die Serverkonfiguration den tabellarischen Servermodus auswählen. Falls Sie beide Servermodi ausführen möchten, führen Sie SQL Server-Setup auf demselben Computer erneut aus, um eine zweite Analysis Services-Instanz im anderen Modus zu installieren.  
   
@@ -150,6 +150,6 @@ ms.locfileid: "69530818"
 ## <a name="see-also"></a>Weitere Informationen  
  [Installieren Sie SQL Server 2014 über den Installations-Assistenten &#40;Setup&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   
  [Konfigurieren der Windows-Firewall für den Analysis Services Zugriff](instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)   
- [Konfigurieren der Windows-Firewall für den SQL Server-Zugriff](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
+ [Configure the Windows Firewall to Allow SQL Server Access](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)  
   
   

@@ -19,10 +19,10 @@ ms.assetid: 48dd6ad9-0d36-4370-8a12-4921d0df4b86
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a8e131e2550ffa5078df5e284898ffe936128b7e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265869"
 ---
 # <a name="sysdm_os_memory_brokers-transact-sql"></a>sys.dm_os_memory_brokers (Transact-SQL)
@@ -40,14 +40,14 @@ ms.locfileid: "68265869"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**pool_id**|**int**|ID des Ressourcenpools, wenn er einem Ressourcenkontrollenpool zugeordnet ist.|  
-|**memory_broker_type**|**nvarchar (60)**|Typ des Speicherbrokers. Derzeit gibt es drei Typen von Speicher Brokern [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die unten mit ihren Beschreibungen aufgeführt sind.<br /><br /> **MEMORYBROKER_FOR_CACHE** : Arbeitsspeicher, der für zwischengespeicherte Objekte (nicht Puffer Pool Cache) reserviert ist.<br /><br /> **MEMORYBROKER_FOR_STEAL** : Arbeitsspeicher, der aus dem Pufferpool gestohlen wird. Dieser Speicher ist erst dann zur Wiederverwendung durch andere Komponenten verfügbar, wenn er durch den aktuellen Besitzer freigegeben wird.<br /><br /> **MEMORYBROKER_FOR_RESERVE** : Arbeitsspeicher, der für die zukünftige Verwendung durch aktuell ausgeführte Anforderungen reserviert ist.|  
-|**allocations_kb**|**BIGINT**|Größe des Arbeitsspeichers in Kilobyte (KB), der diesem Typ Broker zugeordnet wurde.|  
-|**allocations_kb_per_sec**|**BIGINT**|Rate der Speicherbelegungen in Kilobyte (KB) pro Sekunde. Dieser Wert kann für die Aufhebung von Arbeitsspeicherzuordnungen negativ sein.|  
-|**predicted_allocations_kb**|**BIGINT**|Vorhergesagte Größe des durch den Broker belegten Arbeitsspeichers. Dieser Wert basiert auf dem Speicherauslastungsmuster.|  
-|**target_allocations_kb**|**BIGINT**|Empfohlene Größe des belegten Speichers in Kilobyte (KB) auf Basis der aktuellen Einstellungen und des Speicherverwendungsmusters. Dieser Broker sollte auf diesen Wert vergrößert oder verkleinert werden.|  
-|**future_allocations_kb**|**BIGINT**|Prognostizierte Anzahl der Zuordnungen in Kilobyte (KB), die in den nächsten Sekunden erfolgen werden.|  
-|**overall_limit_kb**|**BIGINT**|Maximale Arbeitsspeicher Menge in Kilobyte (KB), die der Broker zuordnen kann.|  
-|**last_notification**|**nvarchar (60)**|Speicherauslastungsempfehlung auf Basis der aktuellen Einstellungen und des Verwendungsmusters. Gültige Werte sind:<br /><br /> grow<br /><br /> shrink<br /><br /> stable|  
+|**memory_broker_type**|**nvarchar(60)**|Typ des Speicherbrokers. Derzeit gibt es drei Typen von Speicher Brokern [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die unten mit ihren Beschreibungen aufgeführt sind.<br /><br /> **MEMORYBROKER_FOR_CACHE** : Arbeitsspeicher, der für zwischengespeicherte Objekte (nicht Puffer Pool Cache) reserviert ist.<br /><br /> **MEMORYBROKER_FOR_STEAL** : Arbeitsspeicher, der aus dem Pufferpool gestohlen wird. Dieser Speicher ist erst dann zur Wiederverwendung durch andere Komponenten verfügbar, wenn er durch den aktuellen Besitzer freigegeben wird.<br /><br /> **MEMORYBROKER_FOR_RESERVE** : Arbeitsspeicher, der für die zukünftige Verwendung durch aktuell ausgeführte Anforderungen reserviert ist.|  
+|**allocations_kb**|**bigint**|Größe des Arbeitsspeichers in Kilobyte (KB), der diesem Typ Broker zugeordnet wurde.|  
+|**allocations_kb_per_sec**|**bigint**|Rate der Speicherbelegungen in Kilobyte (KB) pro Sekunde. Dieser Wert kann für die Aufhebung von Arbeitsspeicherzuordnungen negativ sein.|  
+|**predicted_allocations_kb**|**bigint**|Vorhergesagte Größe des durch den Broker belegten Arbeitsspeichers. Dieser Wert basiert auf dem Speicherauslastungsmuster.|  
+|**target_allocations_kb**|**bigint**|Empfohlene Größe des belegten Speichers in Kilobyte (KB) auf Basis der aktuellen Einstellungen und des Speicherverwendungsmusters. Dieser Broker sollte auf diesen Wert vergrößert oder verkleinert werden.|  
+|**future_allocations_kb**|**bigint**|Prognostizierte Anzahl der Zuordnungen in Kilobyte (KB), die in den nächsten Sekunden erfolgen werden.|  
+|**overall_limit_kb**|**bigint**|Maximale Arbeitsspeicher Menge in Kilobyte (KB), die der Broker zuordnen kann.|  
+|**last_notification**|**nvarchar(60)**|Speicherauslastungsempfehlung auf Basis der aktuellen Einstellungen und des Verwendungsmusters. Gültige Werte sind:<br /><br /> grow<br /><br /> shrink<br /><br /> stable|  
 |**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen  

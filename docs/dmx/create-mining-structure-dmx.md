@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 87b27f9e1c5927392b4ea221dcb6b7468a42ff9c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892827"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
@@ -34,7 +34,7 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Werks*  
+ *structure*  
  Ein eindeutiger Name für die Struktur.  
   
  *Spalten Definitionsliste*  
@@ -95,13 +95,13 @@ CREATE [SESSION] MINING STRUCTURE <structure>
   
  Eine Liste der Datentypen, Inhaltstypen, Spaltendistributionen und Modellierungsflags, mit denen Sie eine Strukturspalte definieren können, finden Sie in den folgenden Themen:  
   
--   [Datentypen &#40;Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [Datentypen &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
   
--   [Inhaltstypen &#40;Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [Inhaltstypen &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
   
--   [Spalten Verteilungen &#40;Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [Spaltenverteilungen &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [Modellierungsflags &#40;Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [Modellierungsflags &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
  Sie können mehrere Modellierungsflagwerte für eine Spalte definieren. Für eine Spalte können jedoch nur jeweils ein Inhaltstyp und ein Datentyp gelten.  
   
@@ -180,6 +180,6 @@ WITH HOLDOUT(25 PERCENT OR 2000 CASES) REPEATABLE(0)
 ## <a name="see-also"></a>Weitere Informationen  
  [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Definitions Anweisungen](../dmx/dmx-statements-data-definition.md)   
  [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining-Erweiterungen &#40;DMX-&#41;-Anweisungs Referenz](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

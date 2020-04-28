@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5053cc16734cc18c75e163fec4c06b1768e590cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68941067"
 ---
 # <a name="view-and-modify-publication-properties"></a>Anzeigen und Ändern von Veröffentlichungseigenschaften
@@ -44,17 +44,17 @@ ms.locfileid: "68941067"
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Einige Eigenschaften können nicht geändert werden, nachdem eine Veröffentlichung erstellt wurde. Andere Eigenschaften können nicht geändert werden, wenn Abonnements für die Veröffentlichung vorhanden sind. Eigenschaften, die nicht geändert werden können, werden als schreibgeschützt angezeigt.  
   
-###  <a name="Recommendations"></a> Empfehlungen  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
   
 -   Nachdem eine Veröffentlichung erstellt wurde, ist für bestimmte Eigenschaftsänderungen eine neue Momentaufnahme erforderlich. Wenn für eine Veröffentlichung Abonnements erstellt wurden, müssen bei bestimmten Änderungen alle Abonnements erneut initialisiert werden. Weitere Informationen finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](change-publication-and-article-properties.md) und [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](add-articles-to-and-drop-articles-from-existing-publications.md).  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Sie können die Eigenschaften von Veröffentlichungen im Dialogfeld **Veröffentlichungseigenschaften - \<<Veröffentlichung>** anzeigen und ändern. Dieses Dialogfeld ist in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] und im Replikationsmonitor verfügbar. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](../monitor/start-the-replication-monitor.md).  
   
  Das Dialogfeld **Veröffentlichungseigenschaften - \<<Veröffentlichung>** enthält folgende Seiten:  
@@ -97,7 +97,7 @@ ms.locfileid: "68941067"
   
 3.  Ändern Sie die Eigenschaften nach Bedarf, und klicken Sie dann auf **OK**.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Veröffentlichungen können mithilfe gespeicherter Replikationsprozeduren programmgesteuert geändert und ihre Eigenschaften zurückgegeben werden. Welche gespeicherten Prozeduren Sie verwenden, hängt vom Typ der Veröffentlichung ab.  
   
 #### <a name="to-view-the-properties-of-a-snapshot-or-transactional-publication"></a>So zeigen Sie die Eigenschaften einer Momentaufnahme oder einer Transaktionsveröffentlichung an  
@@ -130,7 +130,7 @@ ms.locfileid: "68941067"
   
 1.  Führen Sie [sp_changepublication_snapshot](/sql/relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql)aus, und geben Sie dabei eine oder mehrere der neuen Momentaufnahmeeigenschaften für die entsprechenden Momentaufnahmeparameter an.  
   
-###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Beispiele (Transact-SQL)  
  In diesem Beispiel für Transaktionsreplikation werden die Eigenschaften der Veröffentlichung zurückgegeben.  
   
  [!code-sql[HowTo#sp_helppublication](../../../snippets/tsql/SQL15/replication/howto/tsql/changetranpub.sql#sp_helppublication)]  
@@ -147,7 +147,7 @@ ms.locfileid: "68941067"
   
  [!code-sql[HowTo#sp_changemergepublication](../../../snippets/tsql/SQL15/replication/howto/tsql/changemergepub.sql#sp_changemergepublication)]  
   
-##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
  Sie können Veröffentlichungen ändern und mithilfe von Replikationsverwaltungsobjekten (RMO) programmgesteuert auf ihre Eigenschaften zugreifen. Welche RMO-Klassen zum Anzeigen oder Ändern von Veröffentlichungseigenschaften verwendet werden, hängt vom Typ der Veröffentlichung ab.  
   
 #### <a name="to-view-or-modify-properties-of-a-snapshot-or-transactional-publication"></a>So zeigen Sie die Eigenschaften einer Momentaufnahme- oder einer Transaktionsveröffentlichung an oder ändern diese  
@@ -174,7 +174,7 @@ ms.locfileid: "68941067"
   
 5.  (Optional) Wenn Sie den Wert `true` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> angegeben haben, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>-Methode auf, um die Änderungen auf dem Server einzutragen. Wenn Sie den Wert `false` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (die Standardeinstellung) angegeben haben, werden die Änderungen sofort an den Server gesendet.  
   
-###  <a name="PShellExample"></a> Beispiele (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Beispiele (RMO)  
  In diesem Beispiel werden Veröffentlichungsattribute einer Transaktionsveröffentlichung festgelegt. Die Änderungen werden zwischengespeichert, bis sie explizit zum Server gesendet werden.  
   
  [!code-csharp[HowTo#rmo_ChangeTranPub_cached](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_changetranpub_cached)]  

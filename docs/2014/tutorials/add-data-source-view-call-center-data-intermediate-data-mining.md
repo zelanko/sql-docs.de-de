@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 04f930c42b0e41a9f10b35d10295a38e8dac7490
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68888684"
 ---
 # <a name="adding-a-data-source-view-for-call-center-data-intermediate-data-mining-tutorial"></a>Hinzufügen einer Datenquellensicht für Callcenterdaten (Data Mining-Lernprogramm für Fortgeschrittene)
@@ -58,7 +58,7 @@ ms.locfileid: "68888684"
     |-|-|  
     |**Spaltenname**|DayOfWeek|  
     |**Beschreibung**|Abrufen des Wochentags aus der DimDate-Tabelle|  
-    |**Ausdruck**|`(SELECT EnglishDayNameOfWeek AS DayOfWeek FROM DimDate where FactCallCenter.DateKey = DimDate.DateKey)`|  
+    |**expression**|`(SELECT EnglishDayNameOfWeek AS DayOfWeek FROM DimDate where FactCallCenter.DateKey = DimDate.DateKey)`|  
   
      Um zu überprüfen, ob der Ausdruck die benötigten Daten erstellt, klicken Sie mit der rechten Maustaste auf die Tabelle **FactCallCenter**, und wählen Sie dann **Daten durchsuchen**aus.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "68888684"
 |TotalOperators|Die Gesamtzahl der arbeitenden Telefonisten während der Schicht.|  
 |Aufrufe|Anzahl der Anrufe, die während der Schicht empfangen werden.|  
 |AutomaticResponses|Die Anzahl der Anrufe, die vollständig über die automatisierte Anrufabwicklung (Interactive Voice Response, IVR) bearbeitet wurden.|  
-|Aufträge|Die Anzahl der Aufträge, die durch die Anrufe abgeschlossen wurden.|  
+|Orders|Die Anzahl der Aufträge, die durch die Anrufe abgeschlossen wurden.|  
 |IssuesRaised|Die Anzahl der Probleme, die aus Anrufen hervorgingen und einer Nachbearbeitung bedürfen.|  
 |AverageTimePerIssue|Die durchschnittliche Zeit, die erforderlich ist, um einen eingehenden Anruf zu bearbeiten.|  
 |ServiceGrade|Eine Metrik, die die allgemeine Quality of Service angibt, gemessen als Abbruch *Rate* für die gesamte Schicht. Je höher die Abbruchrate, desto wahrscheinlicher ist es, dass Kunden unzufrieden sind und potenzielle Aufträge verloren gehen.|  
@@ -88,6 +88,6 @@ ms.locfileid: "68888684"
  [Erstellen einer neuronalen Netzwerkstruktur und eines Modells &#40;Data Mining-Lernprogramm für fortgeschrittene&#41;](../../2014/tutorials/creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Datenquellensichten in mehrdimensionalen Modellen](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)  
+ [Datenquellsichten in mehrdimensionalen Modellen](https://docs.microsoft.com/analysis-services/multidimensional-models/data-source-views-in-multidimensional-models)  
   
   

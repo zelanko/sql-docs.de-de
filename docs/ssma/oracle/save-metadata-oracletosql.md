@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 7e45f85a26d2beaaba552707681e574bae4795cc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266510"
 ---
 # <a name="save-metadata--oracletosql"></a>Speichern von Metadaten (OracleToSQL)
@@ -31,13 +31,13 @@ Gibt an, ob Metadaten in das SSMA-Projekt geladen werden oder ob Metadaten fehle
   
 SSMA lädt bei Bedarf Metadaten in das Projekt. Metadaten werden automatisch geladen, wenn Sie Metadaten durchsuchen und Schemas konvertieren.  
   
-**Alles markieren**  
+**Alle auswählen**  
 Wählt alle aufgelisteten Datenbanken aus.  
   
-**Clear**  
+**Klartext**  
 Löscht das Kontrollkästchen für alle Datenbanken mit fehlenden Metadaten. Sie können das Kontrollkästchen nicht deaktivieren, wenn eine Metadaten geladen wurde.  
   
-**Sicher**  
+**Speichern**  
 Speichert das Projekt und lädt Metadaten für ausgewählte Datenbanken, die über fehlende Metadaten verfügen.  
   
 **Abbrechen**  

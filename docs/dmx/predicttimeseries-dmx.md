@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 48b656283cbe251b0c8ecb4e7c7b41681cddc7ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68893884"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
@@ -254,6 +254,6 @@ OR [Model Region] = 'M200 North America'
 ## <a name="see-also"></a>Weitere Informationen  
  [Data Mining-Erweiterungen &#40;DMX-&#41; Funktionsreferenz](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Abfrage Beispiele für Zeitreihen Modelle](https://docs.microsoft.com/analysis-services/data-mining/time-series-model-query-examples)   
- [Vorhersagen &#40;DMX-&#41;](../dmx/predict-dmx.md)  
+ [Predict &#40;DMX&#41;](../dmx/predict-dmx.md)  
   
   

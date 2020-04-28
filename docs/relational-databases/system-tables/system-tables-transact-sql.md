@@ -23,10 +23,10 @@ ms.assetid: 56b8ad51-930c-4e5c-8d99-8c939d5b70ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 292b6cdce6b2f13445e50f79c956f07eb8d33de7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69903596"
 ---
 # <a name="system-tables-transact-sql"></a>Systemtabellen (Transact-SQL)
@@ -40,18 +40,15 @@ ms.locfileid: "69903596"
   
 -   Gespeicherte Systemprozeduren  
   
--   
-  [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen und -Funktionen  
+-   [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen und -Funktionen  
   
--   
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO)  
   
 -   Replikationsverwaltungsobjekte (RMO)  
   
 -   Datenbank-API-Katalogfunktionen  
   
- Die Komponenten bilden eine veröffentlichte API zum Abrufen von Systeminformationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] erhält die Kompatibilität dieser Komponenten von Version zu Version aufrecht. Das Format der Systemtabellen hängt von der internen Architektur von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab und kann sich von Version zu Version ändern. Daher müssen Anwendungen, die direkt auf die undokumentierten Spalten der Systemtabellen zugreifen, möglicherweise geändert werden, bevor sie auf eine spätere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugreifen können.  
+ Die Komponenten bilden eine veröffentlichte API zum Abrufen von Systeminformationen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[msCoName](../../includes/msconame-md.md)] erhält die Kompatibilität dieser Komponenten von Version zu Version aufrecht. Das Format der Systemtabellen hängt von der internen Architektur von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ab und kann sich von Version zu Version ändern. Daher müssen Anwendungen, die direkt auf die undokumentierten Spalten der Systemtabellen zugreifen, möglicherweise geändert werden, bevor sie auf eine spätere Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zugreifen können.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  Die Themen im Zusammenhang mit Systemtabellen sind nach den folgenden Funktionen unterteilt:  

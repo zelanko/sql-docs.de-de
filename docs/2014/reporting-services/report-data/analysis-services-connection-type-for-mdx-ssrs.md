@@ -11,20 +11,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dbd62eff94b1a885198c62a9a36cb8eef7ba57c7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892125"
 ---
 # <a name="analysis-services-connection-type-for-mdx-ssrs"></a>Analysis Services-Verbindungstyp für MDX (SSRS)
-  Wenn Sie Daten aus einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Cube in den Bericht einschließen möchten, benötigen Sie ein DataSet, das auf einer Berichtsdaten Quelle vom [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]Typ basiert. Dieser integrierte Datenquellentyp basiert auf der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenerweiterung. Sie können Metadaten über Dimensionen, Hierarchien, Ebenen, Key Performance Indicator (KPIs), Measures und Attribute aus einem [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Cube für die Verwendung als Berichtsdaten abrufen.  
+  Wenn Sie Daten aus einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Cube in den Bericht einschließen möchten, benötigen Sie ein Dataset, das auf einer Berichtsdatenquelle des Typs „[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]“ basiert. Dieser integrierte Datenquellentyp basiert auf der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenerweiterung. Sie können Metadaten über Dimensionen, Hierarchien, Ebenen, Key Performance Indicators (KPIs), Measures und Attribute aus einem [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Cube abrufen, um sie als Berichtsdaten zu verwenden.  
   
  Diese Datenverarbeitungserweiterung unterstützt mehrwertige Parameter, Serveraggregate und getrennt von der Verbindungszeichenfolge verwaltete Anmeldeinformationen.  
   
  Verwenden Sie die Informationen in diesem Thema, um eine Datenquelle zu erstellen. Schritt-für-Schritt-Anweisungen finden [Sie unter Hinzufügen und Überprüfen einer Datenverbindung oder einer Datenquelle &#40;Berichts-Generator und SSRS&#41;](add-and-verify-a-data-connection-report-builder-and-ssrs.md).  
   
-##  <a name="Connection"></a>Verbindungs Zeichenfolge  
+##  <a name="connection-string"></a><a name="Connection"></a> Verbindungszeichenfolge  
  Wenn Sie eine Verbindung mit einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Cube herstellen, stellen Sie eine Verbindung mit dem Datenbankobjekt in einer Analysis Services-Instanz auf einem Server her. Die Datenbank kann mehrere Cubes enthalten. Sie geben den Cube beim Erstellen der Abfrage im Abfrage-Designer an. Das folgenden Beispiel zeigt eine Verbindungszeichenfolge:  
   
 ```  
@@ -35,7 +35,7 @@ data source=<server name>;initial catalog=<database name>
   
   
   
-##  <a name="Credentials"></a>Daten  
+##  <a name="credentials"></a><a name="Credentials"></a> Anmeldeinformationen  
  Anmeldeinformationen sind erforderlich, um Abfragen auszuführen und den Bericht lokal oder vom Berichtsserver aus in der Vorschau anzuzeigen.  
   
  Nachdem Sie den Bericht veröffentlicht haben, müssen Sie eventuell die Anmeldeinformationen für die Datenquelle ändern, sodass die Berechtigungen zum Abrufen der Daten beim Ausführen des Berichts auf dem Berichtsserver gültig sind.  
@@ -54,16 +54,16 @@ data source=<server name>;initial catalog=<database name>
   
   
   
-##  <a name="Query"></a>Fragt  
+##  <a name="queries"></a><a name="Query"></a> Abfragen  
  Nachdem Sie eine Datenverbindung mit einer [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenquelle hergestellt haben, erstellen Sie ein Dataset, und Sie definieren eine MDX-Abfrage (Multidimensional Expressions), die die aus dem Cube abzurufenden Daten angibt. Verwenden Sie den grafischen MDX-Abfrage-Designer, um die zugrunde liegenden Datenstrukturen der Datenquelle zu durchsuchen und auszuwählen.  
   
  Zum Angeben einer Abfrage stehen Ihnen folgende Methoden zur Auswahl:  
   
 -   Erstellen Sie eine Abfrage interaktiv. Der Analysis Services-MDX-Abfrage-Designer unterstützt die folgenden Ansichten:  
   
-    -   **Entwurfs Ansicht** Ziehen Sie Dimensionen, Elemente, Element Eigenschaften, Measures und KPIs aus dem Metadatenbrowser in den **Daten** Bereich, um eine MDX-Abfrage zu erstellen. Ziehen Sie berechnete Elemente aus dem Bereich „Berechnete Elemente“ in den Datenbereich, um zusätzliche Datasetfelder zu definieren.  
+    -   **Entwurfsansicht** Ziehen Sie Dimensionen, Elemente, Elementeigenschaften, Measures und KPIs aus dem Metadatenbrowser in den Bereich **Daten** , um eine MDX-Abfrage zu erstellen. Ziehen Sie berechnete Elemente aus dem Bereich „Berechnete Elemente“ in den Datenbereich, um zusätzliche Datasetfelder zu definieren.  
   
-    -   **Abfrageansicht** Ziehen Sie Dimensionen, Elemente, Element Eigenschaften, Measures und KPIs aus dem Metadatenbrowser in den Abfrage Bereich, um eine MDX-Abfrage zu erstellen. Sie können MDX-Text direkt im Abfragebereich bearbeiten. Ziehen Sie berechnete Elemente aus dem Bereich „Berechnete Elemente“ in den Abfragebereich, um zusätzliche Datasetfelder zu definieren.  
+    -   **Abfrageansicht** Ziehen Sie Dimensionen, Elemente, Elementeigenschaften, Measures und KPIs aus dem Metadatenbrowser in den Bereich "Abfrage", um eine MDX-Abfrage zu erstellen. Sie können MDX-Text direkt im Abfragebereich bearbeiten. Ziehen Sie berechnete Elemente aus dem Bereich „Berechnete Elemente“ in den Abfragebereich, um zusätzliche Datasetfelder zu definieren.  
   
      Weitere Informationen finden Sie unter [Benutzeroberfläche des MDX-Abfrage-Designers für Analysis Services (Berichts-Generator)](../analysis-services-mdx-query-designer-user-interface-report-builder.md).  
   
@@ -71,18 +71,18 @@ data source=<server name>;initial catalog=<database name>
   
  Führen Sie die Abfrage zur Entwurfszeit aus, um ein Resultset anzuzeigen. Die Abfrageergebnisse werden automatisch als vereinfachtes Rowset abgerufen. Die Feldauflistung für ein Dataset wird mit den Spalten aus dem Resultset einer Abfrage aufgefüllt. Nachdem Sie die Abfrage erstellt haben, zeigen Sie die aus den Metadaten generierte Datasetfeldauflistung im Berichtsdatenbereich an. Bei der Ausführung des Berichts werden die tatsächlichen Daten aus der externen Datenquelle zurückgegeben.  
   
- Die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenverarbeitungserweiterung unterstützt erweiterte Datasetfeldeigenschaften. Bei diesen Eigenschaften handelt es sich um Werte, die in der externen Datenquelle verfügbar sind, aber nicht im Berichtsdatenbereich angezeigt werden. Über die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Auflistung können Sie in Ihrem Bericht erweiterte Feldeigenschaften verwenden, die von der `Fields`-Datenverarbeitungserweiterung unterstützt werden. Für Eigenschaften, die Werte für die Datenquelle besitzen, können Sie auf vordefinierte Eigenschaftswerte wie `FormattedValue`, `Color` oder `UniqueName` zugreifen. Weitere Informationen finden Sie unter [Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md)).  
+ Die [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Datenverarbeitungserweiterung unterstützt erweiterte Datasetfeldeigenschaften. Bei diesen Eigenschaften handelt es sich um Werte, die in der externen Datenquelle verfügbar sind, aber nicht im Berichtsdatenbereich angezeigt werden. Über die `Fields`-Auflistung können Sie in Ihrem Bericht erweiterte Feldeigenschaften verwenden, die von der [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Datenverarbeitungserweiterung unterstützt werden. Für Eigenschaften, die Werte für die Datenquelle besitzen, können Sie auf vordefinierte Eigenschaftswerte wie `FormattedValue`, `Color` oder `UniqueName` zugreifen. Weitere Informationen finden Sie unter [Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md).  
   
   
   
-##  <a name="Parameters"></a>Metern  
+##  <a name="parameters"></a><a name="Parameters"></a> Parameter  
  Erstellen Sie im Filterbereich des Abfrage-Designers einen Filter, und markieren Sie ihn als Parameter, um Abfrageparameter einzuschließen. Für jeden Filter wird automatisch ein Dataset erstellt, um die verfügbaren Werte bereitzustellen. Diese Datasets werden standardmäßig nicht im Berichtsdatenbereich angezeigt. Weitere Informationen finden Sie unter [Definieren von Parametern im MDX-Abfrage-Designer für Analysis Services (Berichts-Generator und SSRS)](define-parameters-in-the-mdx-query-designer-for-analysis-services.md) und [Anzeigen von ausgeblendeten Datasets für Parameterwerte für mehrdimensionale Daten (Berichts-Generator und SSRS)](show-hidden-datasets-for-parameter-values-multidimensional-data.md).  
   
  Alle Berichtsparameter sind standardmäßig vom Datentyp **Text**. Die Standardwerte müssen möglicherweise nach dem Erstellen der Berichtsparameter geändert werden. Weitere Informationen finden Sie unter [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md)" basiert.  
   
   
   
-##  Hinweise zu <a name="Remarks"></a>  
+##  <a name="remarks"></a><a name="Remarks"></a> Hinweise  
  Die Analysis Services-Datenerweiterung basiert auf dem XMLA-Protokoll (XML for Analysis). Resultsets von Cubes werden durch das XMLA-Protokoll als vereinfachtes Rowset abgerufen. Unregelmäßige Hierarchien werden nicht unterstützt. Weitere Informationen finden Sie unter [Unregelmäßige Hierarchien](https://docs.microsoft.com/analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies).  
   
  Sie können auch mit dem OLE DB-Datenquellentyp Daten aus einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Cube abrufen. Weitere Informationen finden Sie unter [OLE DB-Verbindungstyp &#40;SSRS&#41;](ole-db-connection-type-ssrs.md).  
@@ -91,7 +91,7 @@ data source=<server name>;initial catalog=<database name>
   
   
   
-##  <a name="Related"></a>Verwandte Abschnitte  
+##  <a name="related-sections"></a><a name="Related"></a> Verwandte Abschnitte  
  Diese Abschnitte der Dokumentation enthalten umfassende grundlegende Informationen zu Berichtsdaten sowie Informationen zum Definieren, Anpassen und Verwenden der mit Daten zusammenhängenden Teile eines Berichts.  
   
  [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-datasets-ssrs.md)  
@@ -103,13 +103,13 @@ data source=<server name>;initial catalog=<database name>
  [Erstellen von Berichten zu eingebetteten und freigegebenen Datasets &#40;Berichts-Generator und SSRS&#41;](report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
  Enthält Informationen zu eingebetteten und freigegebenen Datasets.  
   
- [Datasetfeld-Sammlung &#40;Berichts-Generator und SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
+ [Datasetfelder-Sammlung &#40;Berichts-Generator und SSRS&#41;](dataset-fields-collection-report-builder-and-ssrs.md)  
  Enthält Informationen zur von der Abfrage generierten Datasetfeldauflistung.  
   
  [Erweiterte Feldeigenschaften für eine Analysis Services-Datenbank &#40;SSRS&#41;](extended-field-properties-for-an-analysis-services-database-ssrs.md)  
  Enthält Informationen zu zusätzlichen Feldern, die über den XMLA-Datenanbieter zur Verfügung stehen.  
   
- [Datenquellen, die von Reporting Services &#40;SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] der- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dokumentation in der [-Online](https://go.microsoft.com/fwlink/?linkid=121312)Dokumentation unterstützt werden.  
+ [Von Reporting Services unterstützte Datenquellen (SSRS)](../create-deploy-and-manage-mobile-and-paginated-reports.md) in der [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]-Dokumentation der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [Onlinedokumentation](https://go.microsoft.com/fwlink/?linkid=121312) zu .  
  Enthält ausführliche Informationen zur Plattform- und Versionsunterstützung für die einzelnen Datenerweiterungen.  
   
   

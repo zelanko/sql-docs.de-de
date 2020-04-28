@@ -21,16 +21,16 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d993cd06d555a9d4136274b35242477df1b304e9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262602"
 ---
 # <a name="sysdm_tran_version_store-transact-sql"></a>sys.dm_tran_version_store (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Gibt eine virtuelle Tabelle zurück, die alle Versionsdatensätze im Versionsspeicher anzeigt. die Ausführung von **sys. dm_tran_version_store** ist ineffizient, da der gesamte Versionsspeicher abgefragt wird und der Versionsspeicher sehr groß sein kann.  
+  Gibt eine virtuelle Tabelle zurück, die alle Versionsdatensätze im Versionsspeicher anzeigt. Die Ausführung von**sys.dm_tran_version_store** ist ineffizient, da der gesamte Versionsspeicher abgefragt wird und dieser sehr groß sein kann.  
   
  Jeder Versionsdatensatz wird als Binärdaten zusammen mit Protokollierungs- oder Statusinformationen gespeichert. Ähnlich wie Datensätze in Datenbanktabellen werden die Versionsspeicherdatensätze in 8192 Bytes umfassenden Seiten gespeichert. Falls ein Datensatz größer ist als 8192 Bytes, wird er in zwei unterschiedliche Datensätze geteilt.  
   
@@ -47,16 +47,16 @@ sys.dm_tran_version_store
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**transaction_sequence_num**|**BIGINT**|Sequenznummer der Transaktion, die die Datensatzversion generiert.|  
-|**version_sequence_num**|**BIGINT**|Sequenznummer des Versionsdatensatzes. Dieser Wert ist in der die Version generierenden Transaktion eindeutig.|  
+|**transaction_sequence_num**|**bigint**|Sequenznummer der Transaktion, die die Datensatzversion generiert.|  
+|**version_sequence_num**|**bigint**|Sequenznummer des Versionsdatensatzes. Dieser Wert ist in der die Version generierenden Transaktion eindeutig.|  
 |**database_id**|**int**|Datenbank-ID des Versionsdatensatzes.|  
-|**rowset_id**|**BIGINT**|Rowset-ID des Datensatzes.|  
-|**Stands**|**tinyint**|Gibt an, ob ein Versionsdatensatz auf zwei Datensätze aufgeteilt wurde. Falls der Wert 0 beträgt, wird der Datensatz in einer Seite gespeichert. Falls der Wert 1 beträgt, ist der Datensatz auf zwei Datensätze aufgeteilt, die in zwei unterschiedlichen Seiten gespeichert sind.|  
+|**rowset_id**|**bigint**|Rowset-ID des Datensatzes.|  
+|**status**|**tinyint**|Gibt an, ob ein Versionsdatensatz auf zwei Datensätze aufgeteilt wurde. Falls der Wert 0 beträgt, wird der Datensatz in einer Seite gespeichert. Falls der Wert 1 beträgt, ist der Datensatz auf zwei Datensätze aufgeteilt, die in zwei unterschiedlichen Seiten gespeichert sind.|  
 |**min_length_in_bytes**|**smallint**|Maximale Länge des Datensatzes (in Bytes).|  
 |**record_length_first_part_in_bytes**|**smallint**|Länge des ersten Teiles des Versionsdatensatzes (in Bytes).|  
-|**record_image_first_part**|**varbinary (8000)**|Binäres Image des ersten Teiles des Versionsdatensatzes.|  
+|**record_image_first_part**|**varbinary(8000)**|Binäres Image des ersten Teiles des Versionsdatensatzes.|  
 |**record_length_second_part_in_bytes**|**smallint**|Länge des zweiten Teiles des Versionsdatensatzes (in Bytes).|  
-|**record_image_second_part**|**varbinary (8000)**|Binäres Image des zweiten Teiles des Versionsdatensatzes.|  
+|**record_image_second_part**|**varbinary(8000)**|Binäres Image des zweiten Teiles des Versionsdatensatzes.|  
   
 ## <a name="permissions"></a>Berechtigungen
 
@@ -132,7 +132,7 @@ record_length_second_part_in_bytes record_image_second_part
  Die Ausgabe zeigt an, dass XSN-57 drei Zeilenversionen aus einer Tabelle und XSN-58 eine Zeilenversion aus einer anderen Tabelle erstellt hat.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Dynamische Verwaltungssichten und Funktionen in Verbindung mit Transaktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

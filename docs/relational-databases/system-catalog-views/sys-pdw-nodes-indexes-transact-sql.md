@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: bb20ecd4fe212f4004061a6c39ad33c3ffc8ac8e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68809935"
 ---
 # <a name="syspdw_nodes_indexes-transact-sql"></a>sys. pdw_nodes_indexes (Transact-SQL)
@@ -24,13 +24,13 @@ ms.locfileid: "68809935"
 
   Gibt Indizes für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]zurück.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|Range|  
+|Spaltenname|Datentyp|BESCHREIBUNG|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
 |object_id|**int**|ID des Objekts, zu dem dieser Index gehört.||  
-|name|**sysname**|Der Name des Indexes. Der Name ist nur innerhalb des Objekts eindeutig. NULL = Heap||  
+|Name|**sysname**|Name des Indexes. Der Name ist nur innerhalb des Objekts eindeutig. NULL = Heap||  
 |index_id|**int**|ID des Indexes. index_id ist nur innerhalb des-Objekts eindeutig.<br /><br /> 0 = Heap<br /><br /> 1 = Gruppierter Index<br /><br /> > 1 = Nicht gruppierter Index||  
 |type|**tinyint**|Typ des Index:<br /><br /> 0 = Heap<br /><br /> 1 = In einem Cluster gruppiert<br /><br /> 2 = Nicht gruppiert<br /><br /> 5 = gruppierter Speicher optimierter xvelocity-columnstore--Index|  
-|type_desc|**nvarchar (60)**|Beschreibung des Typs des Index:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> gruppierter columnstore||  
+|type_desc|**nvarchar(60)**|Beschreibung des Typs des Index:<br /><br /> HEAP<br /><br /> CLUSTERED<br /><br /> NONCLUSTERED<br /><br /> gruppierter columnstore||  
 |is_unique|**bit**|0 = Der Index ist nicht eindeutig.|Immer 0.|  
 |data_space_id|**int**|ID des Datenraums für diesen Index. Der Datenspeicherplatz ist entweder eine Dateigruppe oder ein Partitionsschema.<br /><br /> 0 = object_id ist eine Tabellenwertfunktion.||  
 |ignore_dup_key|**bit**|0 = IGNORE_DUP_KEY ist OFF.|Immer 0.|  
@@ -50,6 +50,6 @@ ms.locfileid: "68809935"
  Erfordert die CONTROL SERVER-Berechtigung.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Data Warehouse und parallele Data Warehouse Katalog Sichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [SQL Data Warehouse- und Parallel Data Warehouse-Katalogsichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   

@@ -16,17 +16,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f11f2eac6d1d44ed361324f2b5e25cea80df8768
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890410"
 ---
 # <a name="data-mining-query-task"></a>Data Mining-Abfragetask
   Der Data Mining-Abfragetask führt Vorhersageabfragen basierend auf in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]erstellten Data Mining-Modellen aus. Die Vorhersageabfrage erstellt mithilfe von Miningmodellen eine Vorhersage für neue Daten. Beispielsweise kann eine Vorhersageabfrage vorhersagen, wie viele Segelboote in den Sommermonaten voraussichtlich verkauft werden, oder sie kann eine Liste potenzieller Kunden generieren, die mit hoher Wahrscheinlichkeit ein Segelboot kaufen werden.  
   
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt Tasks bereit, die andere Business Intelligence-Vorgänge ausführen, z.B. das Ausführen von DDL-Anweisungen (Data Definition Language, Datendefinitionssprache) und das Verarbeiten analytischer Objekte.  
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] stellt Tasks bereit, die andere Business Intelligence-Vorgänge ausführen, z.B. das Ausführen von DDL-Anweisungen (Data Definition Language, Datendefinitionssprache) und das Verarbeiten analytischer Objekte.  
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu weiteren Business Intelligence-Tasks zu erhalten:  
   
@@ -46,17 +45,17 @@ ms.locfileid: "68890410"
  Wenn die Ergebnisse eine Schachtelung einschließen, wird das Ergebnis vor dem Speichern vereinfacht. Durch das Vereinfachen eines Ergebnisses wird das geschachtelte Resultset in eine Tabelle geändert. Beispielsweise werden durch das Vereinfachen eines geschachtelten Ergebnisses mit einer **Customer** -Spalte und einer geschachtelten **Product** -Spalte der **Customer** -Spalte Zeilen hinzugefügt, um eine Tabelle zu erstellen, die Produktdaten für jeden Kunden enthält. Beispielsweise wird ein Kunde mit drei verschiedenen Produkten zu einer Tabelle mit drei Zeilen, wobei der Kunde in jeder Zeile wiederholt und in jeder Zeile ein anderes Produkt hinzugefügt wird. Falls das FLATTENED-Schlüsselwort ausgelassen wird, enthält die Tabelle nur die **Customer** -Spalte und nur eine einzige Zeile pro Kunde. Weitere Informationen finden Sie unter [SELECT &#40;DMX&#41;](/sql/dmx/select-dmx).  
   
 ## <a name="configuration-of-the-data-mining-query-task"></a>Konfiguration des Data Mining-Abfragetasks  
- Der Data Mining-Abfragetask erfordert zwei Verbindungen. Bei der ersten Verbindung handelt [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] es sich um einen Verbindungs-Manager, der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] eine Verbindung mit [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] einer Instanz von oder mit einem-Projekt herstellt, das die Mining Struktur und das Mining Modell enthält. Die zweite Verbindung ist ein OLE DB-Verbindungs-Manager, der eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank herstellt, die die Tabelle enthält, in die der Task schreibt. Weitere Informationen finden Sie unter [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md) und [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md).  
+ Der Data Mining-Abfragetask erfordert zwei Verbindungen. Die erste Verbindung ist ein [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Verbindungs-Manager, der eine Verbindung mit einer Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] oder mit einem [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]-Projekt herstellt, die bzw. das die Miningstruktur und das Miningmodell enthält. Die zweite Verbindung ist ein OLE DB-Verbindungs-Manager, der eine Verbindung mit der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Datenbank herstellt, die die Tabelle enthält, in die der Task schreibt. Weitere Informationen finden Sie unter [Analysis Services Connection Manager](../connection-manager/analysis-services-connection-manager.md) und [OLE DB Connection Manager](../connection-manager/ole-db-connection-manager.md).  
   
  Sie können Eigenschaften mit dem [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer oder programmgesteuert festlegen.  
   
  Klicken Sie auf eines der folgenden Themen, um weitere Informationen zu den Eigenschaften zu erhalten, die Sie im [!INCLUDE[ssIS](../../../includes/ssis-md.md)] -Designer festlegen können:  
   
--   [Editor für den Data Mining-Abfrage Task &#40;Registerkarte Mining Modell&#41;](../data-mining-query-task-editor-mining-model-tab.md)  
+-   [Editor für Data Mining-Abfragetasks &#40;Registerkarte Miningmodell&#41;](../data-mining-query-task-editor-mining-model-tab.md)  
   
--   [Editor für Data Mining-Abfrage Tasks &#40;Abfrage Registerkarte&#41;](../data-mining-query-task-editor-query-tab.md)  
+-   [Editor für Data Mining-Abfragetasks &#40;Registerkarte „Abfrage“&#41;](../data-mining-query-task-editor-query-tab.md)  
   
--   [Editor für Data Mining-Abfrage Tasks &#40;Registerkarte Ausgabe&#41;](../data-mining-query-task-editor-output-tab.md)  
+-   [Editor für Data Mining-Abfragetasks &#40;Registerkarte Ausgabe&#41;](../data-mining-query-task-editor-output-tab.md)  
   
 > [!NOTE]  
 >  Der Transformations-Editor für Data Mining-Abfragen weist keine Seite mit Ausdrücken auf. Verwenden Sie stattdessen das Fenster **Eigenschaften** für den Zugriff auf die Tools zum Erstellen und Verwalten von Eigenschaftsausdrücken für Eigenschaften des Data Mining-Abfragetasks.  

@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 42ab1e77dbdb7cee237a9ec22c49a725a64390c0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68264484"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Herstellen einer Verbindung mit Oracle (OracleToSQL)
@@ -22,7 +22,7 @@ Verwenden Sie das Dialogfeld **Verbindung mit Oracle herstellen** , um eine Verb
   
 Um auf dieses Dialogfeld zuzugreifen, wählen Sie im Menü **Datei** die Option **mit Oracle verbinden**aus. Wenn Sie bereits eine Verbindung hergestellt haben, stellt der Befehl die **Verbindung mit Oracle wieder**her.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Anbieter**  
 Wählen Sie den Datenzugriffs Anbieter für die Verbindung mit der Oracle-Datenbank aus. Verfügbare Anbieter sind der Oracle-Client Anbieter und der OLE DB-Anbieter. Der Standardwert ist der Oracle-Client Anbieter.  
   
@@ -51,7 +51,7 @@ Geben Sie den Oracle Connect-Bezeichner ein. Dies ist der Alias der Datenbank, w
   
 Dies ist eine Option für den TNSNAME-Modus.  
   
-**Oracle-sid**  
+**Oracle SID**  
 Geben Sie die sid für die Datenbank ein. Die SID ist ein Bezeichner, der die Oracle-Datenbank auf einem Computer unterscheidet. Die Standard-sid für eine Datenbank ist die ersten acht Zeichen des Daten Banknamens.  
   
 Dies ist eine Standard Modus-Option.  
@@ -60,7 +60,7 @@ Dies ist eine Standard Modus-Option.
 Geben Sie den Benutzernamen ein, der von SSMA für die Verbindung mit der Oracle-Datenbank verwendet werden soll.  
   
 **Kennwort**  
-Geben Sie das Kennwort für den Benutzernamen ein,  
+Geben Sie das Kennwort für den Benutzernamen ein.  
   
 **Verbindungszeichenfolge**  
 > [!IMPORTANT]  

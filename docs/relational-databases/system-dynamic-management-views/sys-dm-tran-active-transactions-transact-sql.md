@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 138a44184276e1eecc524747ad801df7a8991482
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262677"
 ---
 # <a name="sysdm_tran_active_transactions-transact-sql"></a>sys.dm_tran_active_transactions (Transact-SQL)
@@ -37,8 +37,8 @@ ms.locfileid: "68262677"
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|transaction_id|**BIGINT**|ID der Transaktion auf Instanzebene, nicht auf Datenbankebene. Die ID ist nur für alle Datenbanken in einer Instanz eindeutig, jedoch nicht für alle Serverinstanzen.|  
-|name|**nvarchar (32)**|Transaktionsname. Bei Markierung der Transaktion wird der Transaktionsname überschrieben und durch den markierten Namen ersetzt.|  
+|transaction_id|**bigint**|ID der Transaktion auf Instanzebene, nicht auf Datenbankebene. Die ID ist nur für alle Datenbanken in einer Instanz eindeutig, jedoch nicht für alle Serverinstanzen.|  
+|Name|**nvarchar(32)**|Transaktionsname. Bei Markierung der Transaktion wird der Transaktionsname überschrieben und durch den markierten Namen ersetzt.|  
 |transaction_begin_time|**datetime**|Uhrzeit des Transaktionsbeginns.|  
 |transaction_type|**int**|Transaktionstyp.<br /><br /> 1 = Lese-/Schreibtransaktion<br /><br /> 2 = Schreibgeschützte Transaktion<br /><br /> 3 = Systemtransaktion<br /><br /> 4 = Verteilte Transaktion|  
 |transaction_uow|**uniqueidentifier**|Arbeitseinheits-Bezeichner (Unit of Work, UOW) für verteilte Transaktionen. MS DTC verwendet den UOW-Bezeichner zum Bearbeiten der verteilten Transaktion.|  
@@ -48,7 +48,7 @@ ms.locfileid: "68262677"
 |dtc_state|**int**|**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (anfängliche Version bis [aktuelle Version](https://go.microsoft.com/fwlink/p/?LinkId=299659)).<br /><br /> 1 = ACTIVE<br /><br /> 2 = PREPARED<br /><br /> 3 = COMMITTED<br /><br /> 4 = ABORTED<br /><br /> 5 = RECOVERED|  
 |dtc_status|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |dtc_isolation_level|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|filestream_transaction_id|**varbinary (128)**|**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (anfängliche Version bis [aktuelle Version](https://go.microsoft.com/fwlink/p/?LinkId=299659)).<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|filestream_transaction_id|**varbinary(128)**|**Gilt für**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (anfängliche Version bis [aktuelle Version](https://go.microsoft.com/fwlink/p/?LinkId=299659)).<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen
@@ -59,7 +59,7 @@ Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VI
 ## <a name="see-also"></a>Weitere Informationen  
  [sys. dm_tran_session_transactions &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-session-transactions-transact-sql.md)   
  [sys. dm_tran_database_transactions &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)   
- [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Dynamische Verwaltungssichten und Funktionen in Verbindung mit Transaktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   
   

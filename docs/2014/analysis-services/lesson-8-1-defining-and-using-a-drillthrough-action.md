@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493825"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Definieren und Verwenden einer Drillthroughaktion
@@ -38,7 +38,7 @@ ms.locfileid: "69493825"
   
      ![Leere Aktionsvorlage im Anzeigebereich](../../2014/tutorials/media/l8-action2.gif "Leere Aktionsvorlage im Anzeigebereich")  
   
-3.  Ändern Sie **** `Internet Sales Details Drillthrough Action`im Feld Name den Namen dieser Aktion in.  
+3.  Ändern Sie **Name** `Internet Sales Details Drillthrough Action`im Feld Name den Namen dieser Aktion in.  
   
 4.  Wählen Sie in der Liste **Measuregruppenelemente** die Option **Internet Sales**aus.  
   

@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: fc295e108357040617bf6bdaa1af61fada2c97ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68259681"
 ---
 # <a name="installing-ssma-for-oracle-client-oracletosql"></a>Installieren von SSMA für den Oracle-Client (OracleToSQL)
@@ -62,7 +62,7 @@ Nachdem Sie die aktuelle Version heruntergeladen haben, müssen Sie die Installa
   
 1.  Doppelklicken Sie auf SSMA für Oracle *n*. Install. exe, wobei *n* für die Buildnummer steht.  
   
-2.  Klicken Sie auf der Willkommensseite auf **weiter**.  
+2.  Klicken Sie auf der Seite Willkommenauf **Weiter**.  
   
     Wenn die erforderlichen Komponenten nicht installiert sind, wird eine Meldung mit dem Hinweis angezeigt, dass Sie zunächst erforderliche Komponenten installieren müssen. Stellen Sie sicher, dass Sie alle erforderlichen Komponenten installiert haben, und führen Sie das Installationsprogramm dann erneut aus.  
   

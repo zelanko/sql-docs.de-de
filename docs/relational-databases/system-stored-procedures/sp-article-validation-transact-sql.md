@@ -16,10 +16,10 @@ ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6f5ee076163ff3cf0f69daab7ceff115bf5876a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769025"
 ---
 # <a name="sp_article_validation-transact-sql"></a>sp_article_validation (Transact-SQL)
@@ -62,7 +62,7 @@ sp_article_validation [ @publication = ] 'publication'
 |---------------|---------------------|  
 |**0**|Führt die vollständige Anzahl mithilfe von count (*) aus.|  
 |**1**|Führt eine schnelle Anzahl von **sysindexes. Rows**aus. Das zählen von Zeilen in **sysindexes** ist schneller als das zählen der Zeilen in der eigentlichen Tabelle. **Sysindexes** wird jedoch verzögert aktualisiert, und die Zeilen Anzahl ist möglicherweise nicht korrekt.|  
-|**2** (Standard)|Führt die bedingte schnelle Zählung durch, indem zuerst die schnelle Methode versucht wird. Ergeben sich mit der schnellen Methode Unterschiede, wird die Methode für die vollständige Zählung verwendet. Wenn *expected_rowcount* NULL ist und die gespeicherte Prozedur verwendet wird, um den Wert zu erhalten, wird immer eine vollständige Anzahl (*) verwendet.|  
+|**2** (Standardwert)|Führt die bedingte schnelle Zählung durch, indem zuerst die schnelle Methode versucht wird. Ergeben sich mit der schnellen Methode Unterschiede, wird die Methode für die vollständige Zählung verwendet. Wenn *expected_rowcount* NULL ist und die gespeicherte Prozedur verwendet wird, um den Wert zu erhalten, wird immer eine vollständige Anzahl (*) verwendet.|  
   
 `[ @shutdown_agent = ] shutdown_agent`Gibt an, ob der Verteilungs-Agent unmittelbar nach Abschluss der Überprüfung heruntergefahren werden soll. *shutdown_agent* ist vom Typ **Bit**. der Standardwert ist **0**. Wenn der Wert **0**ist, wird der Verteilungs-Agent nicht heruntergefahren. Wenn der Wert **1**ist, wird der Verteilungs-Agent nach der Validierung des Artikels heruntergefahren.  
   

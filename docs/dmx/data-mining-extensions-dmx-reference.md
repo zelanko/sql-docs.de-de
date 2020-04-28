@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c47514f551ec07a8c8837533cb38c0e6283645cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68892882"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>Data Mining-Erweiterungen (DMX) - Referenz
@@ -33,7 +33,7 @@ ms.locfileid: "68892882"
   
  **Weitere Informationen finden Sie unter:** [Mining Strukturen &#40;Analysis Services Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-structures-analysis-services-data-mining)  
   
-##  <a name="BKMK_DMXStatements"></a>DMX-Anweisungen  
+##  <a name="dmx-statements"></a><a name="BKMK_DMXStatements"></a>DMX-Anweisungen  
  Mit den DMX-Anweisungen können Sie Data Mining-Modelle erstellen, verarbeiten, kopieren, durchsuchen und für Vorhersagen verwenden. Es gibt zwei Arten von Anweisungen in DMX: Datendefinitionsanweisungen und Datenbearbeitungsanweisungen. Sie können jede Art von Anweisung zum Ausführen unterschiedlicher Arten von Aufgaben verwenden.  
   
  In den folgenden Abschnitten finden Sie weitere Informationen zum Verwenden von DMX-Anweisungen:  
@@ -44,7 +44,7 @@ ms.locfileid: "68892882"
   
 -   [Grundlagen der Abfrage](#BKMK_Queries)  
   
-###  <a name="BKMK_DDL"></a>Daten Definitions Anweisungen  
+###  <a name="data-definition-statements"></a><a name="BKMK_DDL"></a>Daten Definitions Anweisungen  
  Datendefinitionsanweisungen verwenden Sie in DMX dazu, neue Miningstrukturen und -modelle zu erstellen und zu definieren, Miningmodelle und Miningstrukturen zu importieren und zu exportieren sowie vorhandene Modelle aus einer Datenbank zu löschen. Datendefinitionsanweisungen in DMX sind Teil der Datendefinitionssprache (Data Definition Language, DDL).  
   
  Mit den Datendefinitionsanweisungen in DMX können Sie folgende Aufgaben ausführen:  
@@ -63,7 +63,7 @@ ms.locfileid: "68892882"
   
  [Zurück zu den DMX-Anweisungen](#BKMK_DMXStatements)  
   
-###  <a name="BKMK_DML"></a>Daten Bearbeitungsanweisungen  
+###  <a name="data-manipulation-statements"></a><a name="BKMK_DML"></a>Daten Bearbeitungsanweisungen  
  Mit den Datenbearbeitungsanweisungen in DMX können Sie vorhandene Miningmodelle verwenden, die Modelle durchsuchen sowie Vorhersagen aus ihnen erstellen. Datenbearbeitungsanweisungen in DMX sind Teil der Datenbearbeitungssprache (Data Manipulation Language, DML).  
   
  Mit den Datenbearbeitungsanweisungen in DMX können Sie folgende Aufgaben ausführen:  
@@ -90,7 +90,7 @@ ms.locfileid: "68892882"
   
  [Zurück zu den DMX-Anweisungen](#BKMK_DMXStatements)  
   
-###  <a name="BKMK_Queries"></a>Grundlagen der DMX-Abfrage  
+###  <a name="dmx-query-fundamentals"></a><a name="BKMK_Queries"></a>Grundlagen der DMX-Abfrage  
  Die SELECT-Anweisung ist die Grundlage für die meisten DMX-Abfragen. Abhängig von den Klauseln, die Sie in der jeweiligen Anweisung verwenden, können Sie Miningmodelle durchsuchen, kopieren oder für Vorhersagen verwenden. Die Vorhersage Abfrage verwendet das Formular SELECT, um Vorhersagen auf Grundlage vorhandener Mining Modelle zu erstellen. Funktionen erweitern Ihre Möglichkeiten zum Durchsuchen und Abfragen von Miningmodellen über die systeminternen Möglichkeiten des Data Mining-Modells hinaus.  
   
  Mit DMX-Funktionen können Sie Informationen abrufen, die während des Trainings eines Modells ermittelt wurden, sowie neue Informationen berechnen. Sie können diese Funktionen für viele Zwecke verwenden, so z. B. zum Zurückgeben von Statistiken, die die zugrunde liegenden Daten oder die Genauigkeit einer Vorhersage beschreiben, oder zum Zurückgeben einer erweiterten Erläuterung einer Vorhersage.  
@@ -107,6 +107,6 @@ ms.locfileid: "68892882"
  [Data Mining-Erweiterungen &#40;DMX-&#41; Syntax Elemente](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Allgemeine Vorhersagefunktionen &#40;DMX-&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Struktur und Verwendung von DMX-Vorhersage Abfragen](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Grundlegendes zur SELECT-Anweisung (DMX)](../dmx/understanding-the-dmx-select-statement.md)  
+ [Understanding the DMX Select Statement (Grundlegendes zur SELECT-Anweisung)](../dmx/understanding-the-dmx-select-statement.md)  
   
   

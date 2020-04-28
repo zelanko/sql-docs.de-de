@@ -21,10 +21,10 @@ ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 333be9cb6c86c1db3801ac50159610c6d19d1611
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68941102"
 ---
 # <a name="syssysservers-transact-sql"></a>sys.sysservers (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "68941102"
 |**srvproduct**|**sysname**|Produktname für den Remoteserver.|  
 |**Provider Name**|**nvarchar(128)**|Name des OLE DB-Anbieters für den Zugriff auf diesen Server.|  
 |**DataSource**|**nvarchar(4000)**|OLE DB-Datenquellenwert.|  
-|**Hotels**|**nvarchar(4000)**|OLE DB-Speicherortwert.|  
+|**location**|**nvarchar(4000)**|OLE DB-Speicherortwert.|  
 |**Eigenschaften**|**nvarchar(4000)**|Zeichenfolgenwert des OLE DB-Anbieters.|  
 |**schemadate**|**datetime**|Datum, an dem diese Zeile zuletzt aktualisiert wurde.|  
 |**topologyx**|**int**|Wird nicht verwendet.|  
@@ -54,22 +54,22 @@ ms.locfileid: "68941102"
 |**QueryTimeout**|**int**|Timeouteinstellung für Abfragen auf den Server.|  
 |**srvnetname**|**char (30)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**IsRemote**|**bit**|1 = Server ist ein Remoteserver.<br /><br /> 0 = Server ist ein Verbindungsserver.|  
-|**rpc**|**bit**|1 = **sp_serveroption\@RPC** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption\@RPC** ist auf **false** oder **Off**festgelegt.|  
-|**Kneipe**|**bit**|1 = **sp_serveroption\@pub** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption\@pub** ist auf **false** oder **Off**festgelegt.|  
-|**nationale**|**bit**|1 = **sp_serveroption\@Sub** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption\@Sub** ist auf **false** oder **Off**festgelegt.|  
+|**RPC**|**bit**|1 = **sp_serveroption\@RPC** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption\@RPC** ist auf **false** oder **Off**festgelegt.|  
+|**pub**|**bit**|1 = **sp_serveroption\@pub** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption\@pub** ist auf **false** oder **Off**festgelegt.|  
+|**sub**|**bit**|1 = **sp_serveroption\@Sub** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption\@Sub** ist auf **false** oder **Off**festgelegt.|  
 |**dist**|**bit**|1 = **sp_serveroption\@dist** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption\@dist** ist auf **false** oder **Off**festgelegt.|  
-|**dpub ist**|**bit**|1 = **sp_serveroption\@dpub ist** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption\@dpub ist** ist auf **false** oder **Off**festgelegt.|  
+|**dpub**|**bit**|1 = **sp_serveroption\@dpub ist** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption\@dpub ist** ist auf **false** oder **Off**festgelegt.|  
 |**rpcout**|**bit**|1 = **sp_serveroption\@RPC out** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption\@RPC out** ist auf **false** oder **Off**festgelegt.|  
 |**DataAccess**|**bit**|1 = **sp_serveroption\@Datenzugriff** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption\@Datenzugriff** ist auf **false** oder **Off**festgelegt.|  
 |**collationcompatible**|**bit**|1 = **sp_serveroption\@Sortierungs Kompatibilitäts** Wert ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption\@Sortierungs Kompatibilitäts** Wert ist auf **false** oder **Off**festgelegt.|  
-|**Anlage**|**bit**|1 = **sp_serveroption\@System** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption\@System** ist auf **false** oder **Off**festgelegt.|  
-|**useremotecollations**|**bit**|1 = **sp_serveroption\@Remote Sortierung** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption\@Remote Sortierung** ist auf **false** oder **Off**festgelegt.|  
+|**System**|**bit**|1 = **sp_serveroption\@System** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption\@System** ist auf **false** oder **Off**festgelegt.|  
+|**useremotecollation**|**bit**|1 = **sp_serveroption\@Remote Sortierung** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption\@Remote Sortierung** ist auf **false** oder **Off**festgelegt.|  
 |**lazyschemavalidation**|**bit**|1 = **sp_serveroption\@verzögerte Schema Validierung** ist auf **true** oder **on**festgelegt.<br /><br /> 0 = **sp_serveroption\@verzögerte Schema Validierung** ist auf **false** oder **Off**festgelegt.|  
 |**Sortierung**|**sysname**|Die durch **sp_serveroption\@Sortierungs Name**festgelegte Server Sortierung.|  
 |**nonsqlsub**|bit|0 = Server ist eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> 1 = Server ist keine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Zuordnung von Systemtabellen zu System Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Kompatibilitäts Sichten &#40;Transact-SQL-&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Kompatibilitätssichten &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

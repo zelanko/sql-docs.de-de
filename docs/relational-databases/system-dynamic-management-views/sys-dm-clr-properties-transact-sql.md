@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 331969c2baa8ec67e0cd7c0ebf8cdd894878f397
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266062"
 ---
 # <a name="sysdm_clr_properties-transact-sql"></a>sys.dm_clr_properties (Transact-SQL)
@@ -37,14 +37,14 @@ ms.locfileid: "68266062"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(128)**|Der Name der Eigenschaft.|  
-|**Wert**|**nvarchar(128)**|Der Wert der Eigenschaft.|  
+|**value**|**nvarchar(128)**|Der Wert der Eigenschaft.|  
   
 ## <a name="properties"></a>Eigenschaften  
  Die **Directory** -Eigenschaft gibt das Verzeichnis an, in dem der .NET Framework auf dem Server installiert wurde. Möglicherweise sind mehrere Installationen von .NET Framework auf dem Servercomputer vorhanden, und durch den Wert dieser Eigenschaft wird angegeben, welche Installation derzeit von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet wird.  
   
  Die **Version** -Eigenschaft gibt die Version der .NET Framework und der gehosteten CLR auf dem Server an.  
   
- Die dynamische verwaltete Sicht **sys. dm_clr_properties** kann sechs verschiedene Werte für die **State** -Eigenschaft zurückgeben, die den Status der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gehosteten CLR widerspiegeln. Sie lauten wie folgt:  
+ Die dynamische verwaltete Sicht **sys. dm_clr_properties** kann sechs verschiedene Werte für die **State** -Eigenschaft zurückgeben, die den Status der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gehosteten CLR widerspiegeln. Dies sind:  
   
 -   Mscoree is not loaded.  
   
@@ -85,7 +85,7 @@ FROM sys.dm_clr_properties;
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Dynamische Verwaltungs Sichten im Zusammenhang mit der Common Language Runtime &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/common-language-runtime-related-dynamic-management-views-transact-sql.md)  
   
   

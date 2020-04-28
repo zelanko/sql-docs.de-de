@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 5e4febf0882f57f7d1545f86cbe4c65e322226dc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68263973"
 ---
 # <a name="sysdm_db_session_space_usage-transact-sql"></a>sys.dm_db_session_space_usage (Transact-SQL)
@@ -40,13 +40,13 @@ ms.locfileid: "68263973"
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**session_id**|**smallint**|Sitzungs-ID<br /><br /> **session_id** wird **session_id** in [sys. dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)zugeordnet.|  
+|**session_id**|**smallint**|Sitzungs-ID.<br /><br /> **session_id** wird **session_id** in [sys. dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)zugeordnet.|  
 |**database_id**|**smallint**|Datenbank-ID|  
-|**user_objects_alloc_page_count**|**BIGINT**|Anzahl der Seiten, die für Benutzerobjekte von dieser Sitzung reserviert oder zugeordnet wurden.|  
-|**user_objects_dealloc_page_count**|**BIGINT**|Anzahl der Seiten, deren Zuordnung für Benutzerobjekte von dieser Sitzung aufgehoben wurde bzw. die nicht mehr reserviert sind.|  
-|**internal_objects_alloc_page_count**|**BIGINT**|Anzahl der Seiten, die für interne Objekte von dieser Sitzung reserviert oder zugeordnet wurden.|  
-|**internal_objects_dealloc_page_count**|**BIGINT**|Anzahl der Seiten, deren Zuordnung für interne Objekte von dieser Sitzung aufgehoben wurde bzw. die nicht mehr reserviert sind.|  
-|**user_objects_deferred_dealloc_page_count**|**BIGINT**|Anzahl der Seiten, die für die verzögerte Aufhebung der Zuordnung markiert wurden.<br /><br /> **Hinweis:** Eingeführt in Service Packs für [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].|  
+|**user_objects_alloc_page_count**|**bigint**|Anzahl der Seiten, die für Benutzerobjekte von dieser Sitzung reserviert oder zugeordnet wurden.|  
+|**user_objects_dealloc_page_count**|**bigint**|Anzahl der Seiten, deren Zuordnung für Benutzerobjekte von dieser Sitzung aufgehoben wurde bzw. die nicht mehr reserviert sind.|  
+|**internal_objects_alloc_page_count**|**bigint**|Anzahl der Seiten, die für interne Objekte von dieser Sitzung reserviert oder zugeordnet wurden.|  
+|**internal_objects_dealloc_page_count**|**bigint**|Anzahl der Seiten, deren Zuordnung für interne Objekte von dieser Sitzung aufgehoben wurde bzw. die nicht mehr reserviert sind.|  
+|**user_objects_deferred_dealloc_page_count**|**bigint**|Anzahl der Seiten, die für die verzögerte Aufhebung der Zuordnung markiert wurden.<br /><br /> **Hinweis:** Eingeführt in Service Packs für [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].|  
 |**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -92,18 +92,18 @@ Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VI
   
 ## <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-|Von|To|Beziehung|  
+|Von|Beschreibung|Beziehung|  
 |----------|--------|------------------|  
 |dm_db_session_space_usage.session_id|dm_exec_sessions.session_id|1:1|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Dynamische Verwaltungs Sichten im Zusammenhang mit der Datenbank &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
- [sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
- [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys. dm_exec_sessions &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)   
+ [sys. dm_exec_requests &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [sys. dm_os_tasks &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)   
  [sys. dm_db_task_space_usage &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
- [sys. dm_db_file_space_usage &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)  
+ [sys.dm_db_file_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-file-space-usage-transact-sql.md)  
   
   
 

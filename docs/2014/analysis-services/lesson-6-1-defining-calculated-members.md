@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ede0a23a6e37c47a1af242748233ca49b0cdfab7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69493887"
 ---
 # <a name="defining-calculated-members"></a>Definieren berechneter Elemente
@@ -42,7 +42,7 @@ ms.locfileid: "69493887"
   
      ![Bereichsformular für Berechnungsausdrücke](../../2014/tutorials/media/l6-calculatedmembers-02.gif "Bereichsformular für Berechnungsausdrücke")  
   
-3.  Ändern Sie **** `[Total Sales Amount]`im Feld Name den Namen des berechneten Measures in.  
+3.  Ändern Sie **Name** `[Total Sales Amount]`im Feld Name den Namen des berechneten Measures in.  
   
      Enthält der Name eines berechneten Elements ein Leerzeichen, muss er in eckige Klammern eingeschlossen werden.  
   
@@ -61,7 +61,7 @@ ms.locfileid: "69493887"
   
 7.  Erweitern Sie auf der Registerkarte **Metadaten** im Bereich **Berechnungstools** die Option **Reseller Sales**, und ziehen Sie anschließend **Reseller Sales-Sales Amount** in das Feld **Ausdruck** im Bereich **Berechnungsausdrücke** hinter das Pluszeichen (+).  
   
-8.  Wählen Sie in der Liste **Formatzeichenfolge** die Option **"Currency"** aus.  
+8.  Wählen Sie in der Liste **Format Zeichenfolge** die Option **"Currency" aus.**  
   
 9. Aktivieren Sie in der Liste **Verhalten für nicht leere Elemente** die Kontrollkästchen für **Internet Sales-Sales Amount** und **Reseller Sales-Sales Amount**, und klicken Sie anschließend auf **OK**.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "69493887"
     [Measures].[Internet Sales-Total Product Cost] + [Measures].[Reseller Sales-Total Product Cost]  
     ```  
   
-14. Wählen Sie in der Liste **Format Zeichenfolge** die Option **"Currency"** aus.  
+14. Wählen Sie in der Liste **Formatzeichenfolge** die Option **"Currency"** aus.  
   
 15. Aktivieren Sie in der Liste **Verhalten für nicht leere Elemente** die Kontrollkästchen für **Internet Sales-Total Product Cost** und **Reseller Sales-Total Product Cost**, und klicken Sie anschließend auf **OK**.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "69493887"
   
 1.  Vergewissern Sie `[Total Product Cost]` sich, dass im Bereich **Skript Planer** ausgewählt ist, und klicken Sie dann auf der Symbolleiste der Registerkarte **Berechnungen** auf **Neues berechnetes** Element.  
   
-2.  Ändern Sie **** `[Internet GPM]`im Feld Name den Namen des neuen berechneten Measures in.  
+2.  Ändern Sie **Name** `[Internet GPM]`im Feld Name den Namen des neuen berechneten Measures in.  
   
 3.  Erstellen Sie im Feld **Ausdruck** den folgenden MDX-Ausdruck:  
   
@@ -119,7 +119,7 @@ ms.locfileid: "69493887"
   
 6.  Klicken Sie auf der Symbolleiste der Registerkarte **Berechnungen** auf **Neues berechnetes Element**.  
   
-7.  Ändern Sie **** `[Reseller GPM]`im Feld Name den Namen des neuen berechneten Measures in.  
+7.  Ändern Sie **Name** `[Reseller GPM]`im Feld Name den Namen des neuen berechneten Measures in.  
   
 8.  Erstellen Sie im Feld **Ausdruck** den folgenden MDX-Ausdruck:  
   
@@ -135,7 +135,7 @@ ms.locfileid: "69493887"
   
 11. Klicken Sie auf der Symbolleiste der Registerkarte **Berechnungen** auf **Neues berechnetes Element**.  
   
-12. Ändern Sie **** `[Total GPM]`im Feld Name den Namen dieses berechneten Measures in.  
+12. Ändern Sie **Name** `[Total GPM]`im Feld Name den Namen dieses berechneten Measures in.  
   
 13. Erstellen Sie im Feld **Ausdruck** den folgenden MDX-Ausdruck:  
   

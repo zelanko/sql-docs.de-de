@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 8c9d934cc74bbafc5dca4517a063aaeb8c49e9a1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266604"
 ---
 # <a name="project-settings-migration-oracletosql"></a>Projekteinstellungen (Migration) (OracleToSQL)
@@ -39,13 +39,13 @@ Der Bereich Migration ist sowohl in den Dialogfeldern **Projekteinstellungen** a
   
 |Begriff|Definition|  
 |--------|--------------|  
-|**Batch Größe**|Gibt die Batch Größe an, die während der Datenmigration verwendet wird.<br /><br />**Standardmodus**: 10000<br /><br />**Optimistischer Modus**: 10000<br /><br />**Vollständiger Modus**: 10000|  
+|**Batch Size**|Gibt die Batch Größe an, die während der Datenmigration verwendet wird.<br /><br />**Standardmodus**: 10000<br /><br />**Optimistischer Modus**: 10000<br /><br />**Vollständiger Modus**: 10000|  
 |**Check-Einschränkungen**|Gibt an, ob SSMA Einschränkungen überprüfen soll, wenn Daten in SQL Server Tabellen eingefügt werden.<br /><br />**Standardmodus**: false<br /><br />**Optimistischer Modus**: false<br /><br />**Vollständiger Modus**: false|  
 |**Timeout bei der Daten Migration**|Gibt das während der Datenmigration verwendete Timeout an.<br /><br />**Standardmodus**: 15<br /><br />**Optimistischer Modus**: 15<br /><br />**Vollständiger Modus**: 15|  
 |**Erweiterte Daten Migrations Optionen**|Zeigt zusätzliche Daten Migrations Optionen für jede Tabelle auf einer separaten Detail Registerkarte an.<br /><br />**Standardmodus**: Ausblenden<br /><br />**Optimistischer Modus**: Ausblenden<br /><br />**Vollmodus**: Ausblenden|  
 |**Trigger auslösen**|Gibt an, ob SSMA Einfügetrigger auslösen soll, wenn Daten SQL Server Tabellen hinzugefügt werden.<br /><br />**Standardmodus**: false<br /><br />**Optimistischer Modus**: false<br /><br />**Vollständiger Modus**: false|  
 |**Identität beibehalten**|Gibt an, ob SSMA beim Hinzufügen von Daten zu SQL Server NULL-Werte in den Quelldaten beibehält, unabhängig von den in SQL Server angegebenen Standardwerten.<br /><br />**Standardmodus**: true<br /><br />**Optimistischer Modus**: true<br /><br />**Vollständiger Modus**: false|  
-|**NULL-Werten beibehalten**|Gibt an, ob SSMA beim Hinzufügen von Daten zu SQL Server NULL-Werte in den Quelldaten beibehält, unabhängig von den in SQL Server angegebenen Standardwerten.<br /><br />**Standardmodus**: true<br /><br />**Optimistischer Modus**: true<br /><br />**Vollständiger Modus**: true|  
+|**NULL-Werte beibehalten**|Gibt an, ob SSMA beim Hinzufügen von Daten zu SQL Server NULL-Werte in den Quelldaten beibehält, unabhängig von den in SQL Server angegebenen Standardwerten.<br /><br />**Standardmodus**: true<br /><br />**Optimistischer Modus**: true<br /><br />**Vollständiger Modus**: true|  
 |**Zeichen folgen-Trim-Vorgang mit Fehler markieren**|Wenn die Ziel Spaltengröße kleiner als die Länge der Quell Zeichenfolge ist, wird der Wert abgeschnitten und als Fehler markiert.<br /><br />**Standardmodus**: Ja<br /><br />**Optimistischer Modus**: Ja<br /><br />**Vollständiger Modus**: Ja|  
 |**Bei Fehler**|Beendet die Datenmigration, wenn ein Fehler auftritt. Es gibt drei Optionen:<br /><br />**Migration Abbrechen:** Beendet den Daten Migrations Vorgang.<br /><br />**Weiter zur nächsten Tabelle:** Beendet die Datenmigration zur aktuellen Tabelle und geht zum nächsten<br /><br />**Zum nächsten Batch wechseln:** Beendet die Datenmigration zum aktuellen Batch und geht zum nächsten<br /><br />**Standardmodus**: fahren Sie mit dem nächsten Batch fort<br /><br />**Optimistischer Modus**: mit dem nächsten Batch fortfahren<br /><br />**Vollständiger Modus**: mit dem nächsten Batch fortfahren|  
 |**Nicht unterstützte Datumsangaben ersetzen**|Gibt an, ob SSMA Datumsangaben vor dem frühesten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **DateTime** -Datum (01. Januar 1753) korrigieren soll.<br /><br />Um die aktuellen Datumswerte beizubehalten, wählen Sie keine Aktion durch **führen**aus. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]akzeptiert keine Datumsangaben vor 01. Januar 1753 in einer datetime-Spalte. Wenn Sie ältere Datumsangaben verwenden, müssen Sie die DateTime-Werte in Zeichen Werte konvertieren.<br /><br />Um Datumsangaben vor 01. Januar 1753 in NULL zu konvertieren, wählen Sie **durch Null Ersetzen**aus.<br /><br />Um Datumsangaben vor 01. Januar 1753 durch ein unterstütztes Datum zu ersetzen, wählen Sie **durch das nächste unterstützte Datum ersetzen**aus.<br /><br />**Standardmodus**: nichts tun<br /><br />**Optimistischer Modus**: nichts tun<br /><br />**Vollständiger Modus**: durch das nächste unterstützte Datum ersetzen|  

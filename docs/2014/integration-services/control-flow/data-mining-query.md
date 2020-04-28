@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 07373f17838fa387fe6ee22e31312a3933307fa3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890331"
 ---
 # <a name="data-mining-query"></a>Data Mining-Abfrage
@@ -26,20 +26,20 @@ ms.locfileid: "68890331"
  Schaltfläche Ansicht wechseln  
  Klicken Sie auf ein Symbol, um zwischen dem Entwurfs- und Abfragebereich zu wechseln. Standardmäßig ist der Entwurfsbereich geöffnet.  
   
- Um zum Entwurfs Bereich zu wechseln, klicken Sie auf das Symbol für den ![Entwurfs Symbol](../media/ssis-designicon.gif "Entwurf (Symbol)") .  
+ Klicken Sie auf das ![Design-Symbol](../media/ssis-designicon.gif "Entwurf (Symbol)"), um in den Entwurfsbereich zu wechseln.  
   
- Um zum Abfrage Bereich zu wechseln, klicken Sie auf das Symbol ![SQL-Symbol](../media/ssis-queryicon.gif "SQL (Symbol)") .  
+ Klicken Sie auf das ![SQL-Symbol](../media/ssis-queryicon.gif "SQL (Symbol)"), um in den Abfragebereich zu wechseln.  
   
- **Mining Modell**  
+ **Miningmodell**  
  Zeigt das Miningmodell an, auf dem Sie die Vorhersagen aufbauen wollen.  
   
  **Modell auswählen**  
  Öffnet das Dialogfeld **Miningmodell auswählen** .  
   
- **Eingabe Spalten**  
+ **Eingabespalten**  
  Zeigt die zum Generieren der Vorhersagen ausgewählten Eingabespalten an.  
   
- **`Source`**  
+ **Quelle**  
  Wählen Sie in der Dropdownliste die Quelle aus, die das Feld enthält, das Sie für die Spalte verwenden wollen. Sie können entweder das in der **Miningmodell** -Tabelle ausgewählte Miningmodell, die in der **Eingabetabelle(n) auswählen** -Tabelle ausgewählten Eingabetabellen, eine Vorhersagefunktion oder einen benutzerdefinierten Ausdruck verwenden.  
   
  Spalten können aus den das Miningmodell enthaltenden Tabellen und den Eingabespalten auf die Zelle gezogen werden.  
@@ -56,7 +56,7 @@ ms.locfileid: "68890331"
  **Gruppe**  
  Wird mit der **Und/Oder** -Spalte verwendet, um Ausdrücke zu gruppieren. Beispielsweise (expr1 OR expr2) AND expr3.  
   
- **Und/oder**  
+ **Und/Oder**  
  Wird zum Erstellen einer logischen Abfrage verwendet. Beispielsweise (expr1 OR expr2) AND expr3.  
   
  **Kriterium/Argument**  
@@ -64,6 +64,6 @@ ms.locfileid: "68890331"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Schnittstellen für Data Mining-Abfragen](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
- [Data Mining-Erweiterungen &#40;DMX-&#41;-Anweisungs Referenz](/sql/dmx/data-mining-extensions-dmx-statements)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   

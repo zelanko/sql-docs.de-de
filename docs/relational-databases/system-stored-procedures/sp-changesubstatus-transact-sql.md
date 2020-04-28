@@ -16,10 +16,10 @@ ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5c10e05098a611e51583b2b1132f811d36b0f20a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771329"
 ---
 # <a name="sp_changesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
@@ -72,11 +72,11 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @status = ] 'status'`Der Abonnement Status in der **sysabonnements** -Tabelle. der *Status* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**enden**|Der Abonnent ist synchronisiert und empfängt Daten.|  
 |**VSTE**|Es ist ein Eintrag für einen Abonnenten ohne Abonnement vorhanden.|  
-|**zehnmal**|Der Abonnent fordert Daten an, ist aber noch nicht synchronisiert.|  
+|**subscribed**|Der Abonnent fordert Daten an, ist aber noch nicht synchronisiert.|  
   
 `[ @previous_status = ] 'previous_status'`Der vorherige Status des Abonnements. *previous_status* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Mithilfe dieses Parameters können Sie alle Abonnements ändern, die den Status aktuell aufweisen, sodass Sie Gruppenfunktionen für einen bestimmten Satz von Abonnements zulassen (z. b. das Zurücksetzen aller aktiven Abonnements auf **abonniert**).  
   
@@ -88,7 +88,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Das Datum des Verteilungs Tasks. Dieser Parameter wird verwendet, wenn *frequency_type* auf 32 (monatlich, relativ) festgelegt ist. *frequency_relative_interval* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|First (Erster)|  
 |**2**|Sekunde|  
@@ -101,7 +101,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @frequency_subday = ] frequency_subday`Gibt an, wie oft (in Minuten) während des definierten Zeitraums neu geplant werden soll. *frequency_subday* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
 |**2**|Sekunde|  

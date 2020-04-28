@@ -21,10 +21,10 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 2a4fac732f784a401206f37fb2af9d3d8e0688ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262663"
 ---
 # <a name="sysdm_tran_version_store_space_usage-transact-sql"></a>sys. dm_tran_version_store_space_usage (Transact-SQL)
@@ -39,8 +39,8 @@ Da der Versionsdatensatz als Binärdaten gespeichert wird, treten keine Probleme
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Datenbank-ID der Datenbank.|  
-|**reserved_page_count**|**BIGINT**|Gesamtanzahl der Seiten, die in tempdb für Versionsspeicher Datensätze der Datenbank reserviert sind.|  
-|**reserved_space_kb**|**BIGINT**|Gesamter verwendeter Speicherplatz in Kilobyte in tempdb für Versionsspeicher Datensätze der Datenbank.|  
+|**reserved_page_count**|**bigint**|Gesamtanzahl der Seiten, die in tempdb für Versionsspeicher Datensätze der Datenbank reserviert sind.|  
+|**reserved_space_kb**|**bigint**|Gesamter verwendeter Speicherplatz in Kilobyte in tempdb für Versionsspeicher Datensätze der Datenbank.|  
   
 ## <a name="permissions"></a>Berechtigungen  
 In [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]ist die `VIEW SERVER STATE` -Berechtigung erforderlich.   
@@ -68,6 +68,6 @@ WideWorldImporters        20                   160
 ```
  
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Dynamische Verwaltungssichten und Funktionen in Verbindung mit Transaktionen &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

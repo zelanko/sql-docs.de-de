@@ -18,10 +18,10 @@ ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5684d80bc63fe543e54aa4c38d9f0a516b6334ff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770666"
 ---
 # <a name="sp_changesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
@@ -30,7 +30,7 @@ ms.locfileid: "68770666"
   Ändert die Eigenschaften eines Momentaufnahme- oder Transaktionspushabonnements bzw. eines Pullabonnements, das an einem verzögerten Update über eine Warteschlange beteiligt ist. Verwenden Sie [sp_change_subscription_properties &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md), um die Eigenschaften aller anderen Typen von Pullabonnements zu ändern. **sp_changesubscription** wird auf dem Verleger für die Veröffentlichungs Datenbank ausgeführt.  
   
 > [!IMPORTANT]  
->  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen mit dem Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+>  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -60,7 +60,7 @@ sp_changesubscription [ @publication = ] 'publication'
   
 `[ @value = ] 'value'`Der neue Wert für die angegebene *Eigenschaft*. der Wert ist vom Datentyp **nvarchar (4000)**. der *Wert* kann einer der Werte in der Tabelle sein.  
   
-|Eigenschaft|value|BESCHREIBUNG|  
+|Eigenschaft|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||Anmeldename für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto, unter dem der Agent ausgeführt wird.|  
 |**distrib_job_password**||Kennwort für das Windows-Konto, unter dem der Agent ausgeführt wird.|  
@@ -73,9 +73,9 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**0**|Verwendung der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung für die Verbindung mit dem Abonnenten.|  
 |**subscriber_provider**||Eindeutiger Programmbezeichner (PROGID, Programmatic Identifier), mit dem der OLE DB-Anbieter für die Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenquelle registriert wird. *Diese Eigenschaft ist nur für nicht--* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Abonnenten gültig.*|  
 |**subscriber_providerstring**||Für den OLE DB-Anbieter spezifische Verbindungszeichenfolge, die die Datenquelle identifiziert. *Diese Eigenschaft ist nur für nicht--* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Abonnenten gültig.*|  
-|**SubscriptionStreams**||Die pro Verteilungs-Agent zulässige Anzahl von Verbindungen, um Batches von Änderungen parallel auf einen Abonnenten anzuwenden. Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger wird ein Wertebereich zwischen **1** und **64** unterstützt. Diese Eigenschaft muss für **** nicht--[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten, Oracle-Verleger oder Peer-zu-Peer-Abonnements den Wert 0 aufweisen.|  
+|**SubscriptionStreams**||Die pro Verteilungs-Agent zulässige Anzahl von Verbindungen, um Batches von Änderungen parallel auf einen Abonnenten anzuwenden. Für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Verleger wird ein Wertebereich zwischen **1** und **64** unterstützt. Diese Eigenschaft muss für **0** nicht--[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Abonnenten, Oracle-Verleger oder Peer-zu-Peer-Abonnements den Wert 0 aufweisen.|  
 |**subscriber_type**|**1**|ODBC-Datenquellenserver|  
-||**€**|OLE DB-Anbieter|  
+||**3**|OLE DB-Anbieter|  
 |**memory_optimized**|**bit**|Gibt an, dass das Abonnement Speicher optimierte Tabellen unterstützt. *memory_optimized* ist " **Bit**", wobei "1" true ist (das Abonnement unterstützt Speicher optimierte Tabellen).|  
   
 `[ @publisher = ] 'publisher'`Gibt einen nicht- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verleger an. *Publisher* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  

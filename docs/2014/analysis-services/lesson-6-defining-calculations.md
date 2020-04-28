@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8f61e0e04c5ca96da69098b58c38b1ef73eba206
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69530839"
 ---
 # <a name="lesson-6-defining-calculations"></a>Lektion 6: Definieren von Berechnungen
@@ -41,7 +41,7 @@ ms.locfileid: "69530839"
  Weitere Informationen finden Sie unter [Berechnungen](multidimensional-models-olap-logical-cube-objects/calculations.md)und [Berechnungen in mehrdimensionalen Modellen](multidimensional-models/calculations-in-multidimensional-models.md).  
   
 > [!NOTE]  
->  Für alle Lektionen in diesem Lernprogramm sind abgeschlossene Projekte online verfügbar. Sie können jede Lektion aufrufen, indem Sie ein abgeschlossenes Projekt aus der vorherigen Lektion als Ausgangspunkt verwenden. [Klicken Sie hier](https://go.microsoft.com/fwlink/?LinkID=221866) , um die Beispiel Projekte für dieses Tutorial herunterzuladen.  
+>  Für alle Lektionen in diesem Lernprogramm sind abgeschlossene Projekte online verfügbar. Sie können jede Lektion aufrufen, indem Sie ein abgeschlossenes Projekt aus der vorherigen Lektion als Ausgangspunkt verwenden. [Klicken Sie hier](https://go.microsoft.com/fwlink/?LinkID=221866) , um die Beispielprojekte für dieses Lernprogramm herunterzuladen.  
   
  Diese Lektion enthält die folgenden Aufgaben:  
   
@@ -52,7 +52,7 @@ ms.locfileid: "69530839"
  In diesem Task erfahren Sie, wie benannte Mengen definiert werden.  
   
 ## <a name="next-lesson"></a>Nächste Lektion  
- [Lektion 7: Definieren von wichtigsten Leistungsindikatoren &#40;KPIs&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
+ [Lektion 7: Definieren von KPIs &#40;Key Performance Indicator&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Analysis Services Tutorial-Szenario](analysis-services-tutorial-scenario.md)   

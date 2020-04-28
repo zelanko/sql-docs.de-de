@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fe53a1d912ce03ab2eedb66b72b4de947466b313
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68263941"
 ---
 # <a name="sysdm_exec_cached_plans-transact-sql"></a>sys.dm_exec_cached_plans (Transact-SQL)
@@ -40,13 +40,13 @@ ms.locfileid: "68263941"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |bucketid|**int**|ID des Hashbuckets, in dem der Eintrag gespeichert ist. Der Wert gibt einen Bereich von 0 bis zur Hashtabellengröße für den Typ des Caches an.<br /><br /> Für die SQL-Plan- und Objektplancaches kann die Hashtabellengröße in 32-Bit-Systemen bis zu 10007 und in 64-Bit-Systemen bis zu 40009 betragen. Für den Cache für gebundene Strukturen kann die Hashtabellengröße in 32-Bit-Systemen bis zu 1009 und in 64-Bit-Systemen bis zu 4001 betragen. Für den Cache für erweiterte gespeicherte Prozeduren kann die Hashtabellengröße in 32-Bit-Systemen und 64-Bit-Systemen bis zu 127 betragen.|  
-|refcounts|**int**|Anzahl der Cacheobjekte, die auf dieses Cacheobjekt verweisen. **RefCounts** muss mindestens 1 betragen, damit ein Eintrag im Cache gespeichert wird.|  
+|refcounts|**int**|Anzahl der Cacheobjekte, die auf dieses Cacheobjekt verweisen. **Refcounts** muss mindestens 1 betragen, wenn der Eintrag im Cache vorhanden sein soll.|  
 |usecounts|**int**|Häufigkeit, mit der das Cacheobjekt nachgeschlagen wurde. Nicht inkrementiert, wenn parametrisierte Abfragen einen Plan im Cache suchen. Kann bei Verwenden von Showplan mehrmals inkrementiert werden.|  
 |size_in_bytes|**int**|Anzahl von Bytes, die vom Cacheobjekt belegt werden.|  
 |memory_object_address|**varbinary(8)**|Speicheradresse des zwischengespeicherten Eintrags. Dieser Wert kann mit [sys.dm_os_memory_objects](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md) verwendet werden, um die Arbeitsspeicheraufteilung des zwischengespeicherten Plans abzurufen, und mit [sys.dm_os_memory_cache_entries](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-cache-entries-transact-sql.md), um die Kosten für das Zwischenspeichern des Eintrags abzurufen.|  
-|cacheobjtype|**nvarchar (34)**|Typ des Objekts im Cache. Der Wert kann einer der folgenden sein:<br /><br /> Kompilierter Plan<br /><br /> Stub des kompilierten Plans<br /><br /> Analysestruktur<br /><br /> Erweiterte Prozedur<br /><br /> Kompilierte CLR-Funktion<br /><br /> Kompilierte CLR-Prozedur|  
+|cacheobjtype|**nvarchar (34)**|Typ des Objekts im Cache. Der Wert kann in folgenden Formen vorliegen:<br /><br /> Kompilierter Plan<br /><br /> Stub des kompilierten Plans<br /><br /> Analysestruktur<br /><br /> Erweiterte Prozedur<br /><br /> Kompilierte CLR-Funktion<br /><br /> Kompilierte CLR-Prozedur|  
 |objtype|**nvarchar (16)**|Typ des Objekts. Unten sind die möglichen Werte und ihre entsprechenden Beschreibungen aufgeführt.<br /><br /> Proc: gespeicherte Prozedur<br />Vorbereitet: vorbereitete Anweisung<br />Ad-hoc: Ad-hoc-Abfrage. Bezieht sich [!INCLUDE[tsql](../../includes/tsql-md.md)] auf übermittelte Ereignisse als sprach Ereignisse, indem **osql** oder **sqlcmd** anstelle von Remote Prozedur aufrufen verwendet wird.<br />ReplProc: Replikations Filter Prozedur<br />Auslösende Funktion:<br />Ansicht: anzeigen<br />Standardwert: Standardwert<br />Registerkarte "Start": Benutzertabelle<br />SYSTAB: System Tabelle<br />Check: Check-Einschränkung<br />Regel: Regel|  
-|plan_handle|**varbinary (64)**|Bezeichner für den speicherinternen Plan. Dieser Bezeichner ist vorübergehend und bleibt nur für die Dauer der Speicherung des Plans im Cache konstant. Dieser Wert kann mit den folgenden dynamischen Verwaltungsfunktionen verwendet werden:<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
+|plan_handle|**varbinary(64)**|Bezeichner für den speicherinternen Plan. Dieser Bezeichner ist vorübergehend und bleibt nur für die Dauer der Speicherung des Plans im Cache konstant. Dieser Wert kann mit den folgenden dynamischen Verwaltungsfunktionen verwendet werden:<br /><br /> [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)<br /><br /> [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)<br /><br /> [sys.dm_exec_plan_attributes](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)|  
 |pool_id|**int**|Die ID des Ressourcenpools, auf die sich diese Planspeicherauslastung bezieht.|  
 |pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
@@ -97,7 +97,7 @@ PIVOT (MAX(ecpa.value) FOR ecpa.attribute IN ("set_options", "sql_handle")) AS p
 GO  
 ```  
   
-### <a name="d-returning-the-memory-breakdown-of-all-cached-compiled-plans"></a>D: Zurückgeben der Arbeitsspeicheraufteilung aller zwischengespeicherter kompilierter Pläne  
+### <a name="d-returning-the-memory-breakdown-of-all-cached-compiled-plans"></a>D. Zurückgeben der Arbeitsspeicheraufteilung aller zwischengespeicherter kompilierter Pläne  
  Im folgenden Beispiel wird die Aufteilung des Arbeitsspeichers zurückgegeben, der von allen kompilierten Plänen im Zwischenspeicher verwendet wird.  
   
 ```sql  
@@ -112,7 +112,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Dynamische Verwaltungs Sichten und-Funktionen im Zusammenhang mit der Ausführung &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys. dm_exec_query_plan &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
  [sys. dm_exec_plan_attributes &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-plan-attributes-transact-sql.md)   

@@ -15,10 +15,10 @@ ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 82b906be4568b15a18c55247532bf35b6cd939a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69028899"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>Gespeicherte Prozeduren für räumliche Indizes: Argumente und Eigenschaften
@@ -314,7 +314,7 @@ ms.locfileid: "69028899"
   
 -   [sp_help_spatial_geography_index_xml &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
-## <a name="requirements"></a>Requirements (Anforderungen)  
+## <a name="requirements"></a>Anforderungen  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Prozeduren für räumliche Indizes &#40;Transact-SQL-&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   

@@ -16,10 +16,10 @@ ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 90dee1076743ae54201248c808b04c6197d42198
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68770935"
 ---
 # <a name="sp_helpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
@@ -49,7 +49,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**history retention**|**int**|Die Anzahl von Stunden, für die der Verlauf erhalten bleibt.|  
 |**history_cleanup_agent**|**sysname**|Der Name des Verlaufscleanup-Agents.|  
 |**distribution_cleanup_agent**|**sysname**|Der Name des Verteilungscleanup-Agents.|  
-|**Stands**|**int**|Nur interne Verwendung.|  
+|**status**|**int**|Nur interne Verwendung.|  
 |**data_folder**|**nvarchar(255)**|Der Name des Verzeichnisses zum Speichern der Datenbankdateien.|  
 |**data_file**|**nvarchar(255)**|Der Name der Datenbankdatei.|  
 |**data_file_size**|**int**|Die Anfangsgröße der Datendatei in Megabyte.|  
@@ -67,7 +67,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
  Mitglieder der festen Daten Bank Rolle **db_owner** oder der Rolle **replmonitor** in einer Verteilungs Datenbank und Benutzer in der Veröffentlichungs Zugriffsliste einer Veröffentlichung, die die Verteilungs Datenbank verwendet, können **sp_helpdistributiondb** ausführen, um Datei bezogene Informationen zurückzugeben. Mitglieder der **Public** -Rolle können **sp_helpdistributiondb** ausführen, um nicht Datei bezogene Informationen für Verteilungs Datenbanken zurückzugeben, auf die Sie Zugriff haben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
+ [Anzeigen und Ändern der Verteiler-und Verleger Eigenschaften](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistributiondb &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
  [sp_changedistributiondb &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
  [sp_dropdistributiondb &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   

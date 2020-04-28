@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c0c0ad4d5c375b537f4bc0fd4efb820395a8d6e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889218"
 ---
 # <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>Tabellen hinzufügen (Dialog Feld) (Analysis Services-Mehrdimensionale Daten)
@@ -28,11 +28,11 @@ ms.locfileid: "68889218"
   
 -   Klicken Sie mit der rechten Maustaste auf den Bereich **Diagramm** von **Datenquellensicht-Designer**, und wählen Sie **Tabellen hinzufügen/entfernen** aus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Datenquelle**  
  Wählen Sie die Datenquelle zum Hinzufügen oder Entfernen von Tabellen.  
   
- **Verfügbare Objekte**  
+ **Available objects**  
  Zeigt die Objekte und die dazugehörigen Objekttypen der ausgewählten Datenquelle an, die noch nicht in der Datenquellensicht enthalten sind.  
   
  Klicken **>>** Sie hierauf, um alle in **Verfügbare Objekte** aufgelisteten Objekte in **enthaltene Objekte**zu übertragen, oder **>** wählen Sie ein oder mehrere Objekte aus, und klicken Sie auf diese Option **, um die**ausgewählten Objekte  
@@ -40,19 +40,19 @@ ms.locfileid: "68889218"
  **Filter**  
  Geben Sie den Filter ein, mit dem die in **Verfügbare Objekte** aufgelisteten Objekte eingeschränkt werden sollen, und klicken Sie dann auf die Schaltfläche, um die aufgelisteten Objekte zu filtern.  
   
- **Show system objects**  
+ **Systemobjekte anzeigen**  
  Wählen Sie diese Option aus, um Systemobjekte für die in **Verfügbare Objekte** angegebene Datenquelle anzuzeigen.  
   
- **Eingeschlossene Objekte**  
+ **Included objects**  
  Zeigt die Objekte und die dazugehörigen Typen an, die der Datenquellensicht bereits hinzugefügt wurden.  
   
  Klicken **<<** Sie hierauf, um alle in den **enthaltenen** Objekten aufgeführten Objekte in **Verfügbare Objekte**zu übertragen, **<** oder wählen Sie mindestens ein Objekt aus, und klicken Sie auf diese Option **, um die**ausgewählten Objekte  
   
- **Verknüpfte Tabellen hinzufügen**  
+ **Add related tables**  
  Klicken Sie hier, um alle Tabellen hinzuzufügen, die mit den in **Verfügbare Objekte** ausgewählten Tabellen verknüpft sind.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Analysis Services Designer und Dialog Felder &#40;Mehrdimensionale Daten&#41;](../analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [Der Datenquellen Sicht-Designer &#40;Analysis Services Mehrdimensionale Daten&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
+ [Datenquellensicht-Designer &#40;Analysis Services – Mehrdimensionale Daten&#41;](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
   
   

@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: c11561ac71aa72469a809ea25297d62133aa93da
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68891218"
 ---
 # <a name="identifiers-mdx"></a>Bezeichner (MDX)
@@ -125,6 +125,6 @@ ms.locfileid: "68891218"
 ## <a name="see-also"></a>Weitere Informationen  
  [MDX-Sprachreferenz &#40;MDX-&#41;](../mdx/mdx-language-reference-mdx.md)   
  [Grundlagen der MDX-Abfrage &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
- [MDX-Syntax Elemente &#40;MDX-&#41;](../mdx/mdx-syntax-elements-mdx.md)  
+ [MDX-Syntaxelemente &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

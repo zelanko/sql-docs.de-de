@@ -21,10 +21,10 @@ ms.author: pariks
 manager: ajayj
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7cb87d2d5677085edc8e6bd998f20c3c45013823
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68262082"
 ---
 # <a name="sysdm_db_log_info-transact-sql"></a>sys. dm_db_log_info (Transact-SQL)
@@ -52,15 +52,15 @@ sys.dm_db_log_info ( database_id )
 |-----------------|---------------|-----------------|  
 |database_id|**int**|Datenbank-ID|
 |file_id|**smallint**|Die Datei-ID des Transaktions Protokolls.|  
-|vlf_begin_offset|**BIGINT** |Der Offset Speicherort der [virtuellen Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) ab dem Anfang der Transaktionsprotokoll Datei.|
+|vlf_begin_offset|**bigint** |Der Offset Speicherort der [virtuellen Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) ab dem Anfang der Transaktionsprotokoll Datei.|
 |vlf_size_mb |**float** |Größe der [virtuellen Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) in MB, auf 2 Dezimalstellen gerundet.|     
-|vlf_sequence_number|**BIGINT** |die Sequenznummer der [virtuellen Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) in der erstellten Reihenfolge. Wird verwendet, um VLFs in der Protokolldatei eindeutig zu identifizieren.|
+|vlf_sequence_number|**bigint** |die Sequenznummer der [virtuellen Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) in der erstellten Reihenfolge. Wird verwendet, um VLFs in der Protokolldatei eindeutig zu identifizieren.|
 |vlf_active|**bit** |Gibt an, ob die [virtuelle Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch) verwendet wird oder nicht. <br />0-VLF wird nicht verwendet.<br />1-VLF ist aktiv.|
 |vlf_status|**int** |Status der [virtuellen Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Folgende Werte sind möglich. <br />0-VLF ist inaktiv. <br />1-VLF ist initialisiert, wird aber nicht verwendet. <br /> 2-VLF ist aktiv.|
 |vlf_parity|**tinyint** |Parität der [virtuellen Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch). Wird intern verwendet, um das Ende des Protokolls innerhalb eines VLF zu bestimmen.|
 |vlf_first_lsn|**nvarchar (48)** |[Protokoll Sequenznummer (Log Sequence Number, LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) des ersten Protokolldaten Satzes in der [virtuellen Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch).|
 |vlf_create_lsn|**nvarchar (48)** |[Protokoll Sequenznummer (Log Sequence Number, LSN)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) des Protokolldaten Satzes, von dem die [virtuelle Protokolldatei (VLF)](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#physical_arch)erstellt wurde.|
-|vlf_encryptor_thumbprint|**varbinary (20)**| **Gilt für:**[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> Zeigt den Fingerabdruck der Verschlüsselung der VLF an, wenn die VLF mit [transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md)verschlüsselt ist, andernfalls NULL. |
+|vlf_encryptor_thumbprint|**varbinary(20)**| **Gilt für:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] <br><br> Zeigt den Fingerabdruck der Verschlüsselung der VLF an, wenn die VLF mit [transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption.md)verschlüsselt ist, andernfalls NULL. |
 
 ## <a name="remarks"></a>Bemerkungen
 Die `sys.dm_db_log_info` dynamische Verwaltungsfunktion ersetzt die `DBCC LOGINFO` -Anweisung.    
@@ -110,8 +110,8 @@ GO
 ```
 
 ## <a name="see-also"></a>Weitere Informationen  
-[Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+[Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
 [Dynamische Verwaltungs Sichten im Zusammenhang mit der Datenbank &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
 [sys. dm_db_log_space_usage &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-space-usage-transact-sql.md)   
-[sys. dm_db_log_stats &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
+[sys.dm_db_log_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md)
 

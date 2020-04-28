@@ -18,10 +18,10 @@ ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68124080"
 ---
 # <a name="sp_get_query_template-transact-sql"></a>sp_get_query_template (Transact-SQL)
@@ -113,7 +113,7 @@ SELECT @my_parameters;
 >  Die Reihenfolge und Benennung von Parametern in der Ausgabe von sp_get_query_template kann sich von einem zum nächsten Quick Fix Engineering, Service Pack und Versionsupgrade für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ändern. Upgrades können auch bewirken, dass eine andere Gruppe mit konstanten Literalen für dieselbe Abfrage parametrisiert und unterschiedliche Abstände auf die Ergebnisse beider Ausgabeparameter angewendet werden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Angeben des Abfrageparametrisierungsverhaltens mithilfe von Planhinweislisten](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)  
   

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ace9bbbbbc023d14dbce91a176f7d05ad19d699b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68811058"
 ---
 # <a name="understanding-incremental-generation"></a>Grundlegendes zur inkrementellen Generierung
@@ -85,6 +85,6 @@ ms.locfileid: "68811058"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von Änderungen an Datenquellen Sichten und Datenquellen](manage-changes-to-data-source-views-and-data-sources.md)   
- [Der Schemagenerierungs-Assistent &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
+ [Schemagenerierungs-Assistent &#40;Analysis Services&#41;](schema-generation-wizard-analysis-services.md)  
   
   

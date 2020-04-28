@@ -18,10 +18,10 @@ ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 595f8adb46602109751b1912feed99ae4702fb55
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68702843"
 ---
 # <a name="sp_table_privileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
@@ -55,7 +55,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
  Der Name des Tabellenqualifizierers. *TABLE_QUALIFIER* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Benennung für Tabellen (*Qualifier.Owner.Name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
   
  [ @fUsePattern= ] "*fUsePattern*"  
- Bestimmt, ob die Zeichen Unterstrich (_), Prozentzeichen (%) und eckige Klammern ([oder]) als Platzhalter Zeichen interpretiert werden. Gültige Werte sind 0 (Mustervergleich ist deaktiviert) und 1 (Mustervergleich ist aktiviert). *fUsePattern* ist vom Typ **Bit**. der Standardwert ist 1.  
+ Bestimmt, ob die Zeichen Unterstrich (_), Prozentzeichen (%) und eckige Klammern ([oder]) als Platzhalter Zeichen interpretiert werden. Gültige Werte sind 0 (Mustervergleich ist deaktiviert) und 1 (Mustervergleich ist aktiviert). *fUsePattern* ist vom Datentyp **bit**. Der Standardwert ist 1.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  Keine  

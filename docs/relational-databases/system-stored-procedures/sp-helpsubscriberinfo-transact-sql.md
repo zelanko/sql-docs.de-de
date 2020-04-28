@@ -16,10 +16,10 @@ ms.assetid: fbabe1ec-57cf-425c-bae7-af7f5d3198fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 38b653dcb51f428692401fb87609187a82449393
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771487"
 ---
 # <a name="sp_helpsubscriberinfo-transact-sql"></a>sp_helpsubscriberinfo (Transact-SQL)
@@ -51,12 +51,12 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |-----------------|---------------|-----------------|  
 |**Gebers**|**sysname**|Name des Verlegers.|  
 |**Abonnenten**|**sysname**|Der Name des Abonnenten.|  
-|**type**|**tinyint**|Typ des Abonnenten:<br /><br /> **** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] Datenbank 1 = ODBC-Datenquelle **** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
+|**type**|**tinyint**|Typ des Abonnenten:<br /><br /> **0** =  0[!INCLUDE[msCoName](../../includes/msconame-md.md)] Datenbank 1 = ODBC-Datenquelle **1** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**Anmel**|**sysname**|Anmelde-ID für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung.|  
-|**anmelden**|**sysname**|Kennwort für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung.|  
-|**commit_batch_size**|**int**|Wird nicht unterstützt.|  
-|**status_batch_size**|**int**|Wird nicht unterstützt.|  
-|**flush_frequency**|**int**|Wird nicht unterstützt.|  
+|**password**|**sysname**|Kennwort für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung.|  
+|**commit_batch_size**|**int**|Nicht unterstützt.|  
+|**status_batch_size**|**int**|Nicht unterstützt.|  
+|**flush_frequency**|**int**|Nicht unterstützt.|  
 |**frequency_type**|**int**|Häufigkeit, mit der der Verteilungs-Agent ausgeführt wird:<br /><br /> **1** = einmal<br /><br /> **2** = Bedarfs gesteuert<br /><br /> **4** = täglich<br /><br /> **8** = wöchentlich<br /><br /> **16** = monatlich<br /><br /> **32** = monatlich, relativ<br /><br /> **64** = Autostart<br /><br /> **128** = wiederholt|  
 |**frequency_interval**|**int**|Der Wert, der auf die durch *frequency_type*festgelegte Häufigkeit angewendet wird.|  
 |**frequency_relative_interval**|**int**|Datum der Verteilungs-Agent, die verwendet wird, wenn *frequency_type* auf **32** (monatlich, relativ) festgelegt ist:<br /><br /> **1** = zuerst<br /><br /> **2** = Sekunde<br /><br /> **4** = dritte<br /><br /> **8** = Fourth<br /><br /> **16** = zuletzt|  
@@ -67,10 +67,10 @@ sp_helpsubscriberinfo [ [ @subscriber =] 'subscriber']
 |**active_end_time_of_day**|**int**|Zeitpunkt, zu dem die Planung des Einsatzes des Verteilungs-Agents beendet wird (Format: HHMMSS).|  
 |**active_start_date**|**int**|Datum, an dem der Einsatz des Verteilungs-Agents zum ersten Mal geplant wird (Format: YYYYMMDD).|  
 |**active_end_date**|**int**|Datum, an dem die Planung des Einsatzes des Verteilungs-Agents beendet wird (Format: YYYYMMDD).|  
-|**retryattempt**|**int**|Wird nicht unterstützt.|  
-|**retrydelay**|**int**|Wird nicht unterstützt.|  
+|**retryattempt**|**int**|Nicht unterstützt.|  
+|**retrydelay**|**int**|Nicht unterstützt.|  
 |**Beschreibung**|**nvarchar(255)**|Beschreibungstext des Abonnenten.|  
-|**security_mode**|**int**|Implementierter Sicherheitsmodus:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung<br /><br /> **** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Authentifizierung|  
+|**security_mode**|**int**|Implementierter Sicherheitsmodus:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung<br /><br /> **1** =  1[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Authentifizierung|  
 |**frequency_type2**|**int**|Häufigkeit, mit der der Merge-Agent ausgeführt wird:<br /><br /> **1** = einmal<br /><br /> **2** = Bedarfs gesteuert<br /><br /> **4** = täglich<br /><br /> **8** = wöchentlich<br /><br /> **16** = monatlich<br /><br /> **32** = monatlich, relativ<br /><br /> **64** = Autostart<br /><br /> **128** = wiederholt|  
 |**frequency_interval2**|**int**|Der Wert, der auf die durch *frequency_type*festgelegte Häufigkeit angewendet wird.|  
 |**frequency_relative_interval2**|**int**|Datum der Merge-Agent, die verwendet wird, wenn *frequency_type* auf 32 (monatlich, relativ) festgelegt ist:<br /><br /> **1** = zuerst<br /><br /> **2** = Sekunde<br /><br /> **4** = dritte<br /><br /> **8** = Fourth<br /><br /> **16** = zuletzt|  

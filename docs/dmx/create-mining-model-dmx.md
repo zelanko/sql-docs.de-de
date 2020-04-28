@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: e7215f50705b593130a69cfe076f0878b0ac03d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889081"
 ---
 # <a name="create-mining-model-dmx"></a>CREATE MINING MODEL (DMX)
@@ -50,7 +50,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
 >  Eine Liste der Algorithmen, die vom aktuellen Anbieter unterstützt werden, kann mithilfe [DMSCHEMA_MINING_SERVICES Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)abgerufen werden. Informationen zum Anzeigen der in der aktuellen Instanz von [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützten Algorithmen finden Sie unter [Data Mining-Eigenschaften](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *Parameterliste*  
- Optional. Eine durch Trennzeichen getrennte Liste mit anbieterdefinierten Parametern für den Algorithmus.  
+ (Optional) Eine durch Trennzeichen getrennte Liste mit anbieterdefinierten Parametern für den Algorithmus.  
   
  *XML-Zeichenfolge*  
  (Nur für Erweiterte Verwendung.) Ein XML-codiertes Modell (PMML). Die Zeichenfolge muss in einfache Anführungszeichen (') eingeschlossen werden.  
@@ -94,13 +94,13 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
   
  Eine Liste der Datentypen, Inhaltstypen, Spaltendistributionen und Modellierungsflags, mit denen Sie eine Spalte definieren können, finden Sie in den folgenden Themen:  
   
--   [Datentypen &#40;Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
+-   [Datentypen &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/data-types-data-mining)  
   
--   [Inhaltstypen &#40;Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
+-   [Inhaltstypen &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)  
   
--   [Spalten Verteilungen &#40;Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
+-   [Spaltenverteilungen &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/column-distributions-data-mining)  
   
--   [Modellierungsflags &#40;Data Mining-&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
+-   [Modellierungsflags &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/modeling-flags-data-mining)  
   
  Sie können der Anweisung eine Klausel hinzufügen, um die Beziehung zwischen zwei Spalten zu beschreiben. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]unterstützt die Verwendung der folgenden \<Spalten Beziehung>-Klausel.  
   
@@ -189,6 +189,6 @@ USING Microsoft_Time_Series (PERIODICITY_HINT = '{12}', FORECAST_METHOD = 'ARTXP
 ## <a name="see-also"></a>Weitere Informationen  
  [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Definitions Anweisungen](../dmx/dmx-statements-data-definition.md)   
  [Data Mining-Erweiterungen &#40;DMX-&#41; Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)   
- [Data Mining-Erweiterungen &#40;DMX-&#41;-Anweisungs Referenz](../dmx/data-mining-extensions-dmx-statements.md)  
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Anweisungsreferenz](../dmx/data-mining-extensions-dmx-statements.md)  
   
   

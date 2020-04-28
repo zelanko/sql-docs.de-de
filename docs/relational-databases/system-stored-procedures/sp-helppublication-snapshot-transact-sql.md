@@ -16,10 +16,10 @@ ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d8909396e7a7da39ed2ae27c475a154c58bad090
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771501"
 ---
 # <a name="sp_helppublication_snapshot-transact-sql"></a>sp_helppublication_snapshot (Transact-SQL)
@@ -49,9 +49,9 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**Name**|**int**|ID des Momentaufnahme-Agents|  
+|**id**|**int**|ID des Momentaufnahme-Agents|  
 |**name**|**nvarchar (100)**|Name des Momentaufnahme-Agents|  
-|**publisher_security_mode**|**smallint**|Sicherheitsmodus, der vom Agent für die Verbindung mit dem Verleger verwendet wird. Folgende Werte sind möglich:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung<br /><br /> **1** = Windows-Authentifizierung.|  
+|**publisher_security_mode**|**smallint**|Sicherheitsmodus, der vom Agent für die Verbindung mit dem Verleger verwendet wird. Folgende Werte sind möglich:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung<br /><br /> **1** = Windows-Authentifizierung.|  
 |**publisher_login**|**sysname**|Anmeldename, der für die Verbindung mit dem Verleger verwendet wird.|  
 |**publisher_password**|**nvarchar (524)**|Aus Sicherheitsgründen wird ** \* \* \* \* \* \* immer \* der \* Wert zurück \* ** gegeben.|  
 |**job_id**|**uniqueidentifier**|Eindeutige ID des Agentauftrags.|  

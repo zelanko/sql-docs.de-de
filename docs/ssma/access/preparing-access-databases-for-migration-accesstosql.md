@@ -22,10 +22,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: murato
 ms.openlocfilehash: 58988d31687cacdce2954d8e4098d509a9dcbb2b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68260222"
 ---
 # <a name="preparing-access-databases-for-migration-accesstosql"></a>Vorbereiten von Access-Datenbanken für die Migration (accesstosql)
@@ -42,7 +42,7 @@ Nachdem Sie Datenbanken zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
    > [!NOTE]
    > Nicht alle Zugriffs Features und-Einstellungen werden von unterstützt oder können problemlos in konvertiert werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Informationen zum Migrieren von Datenbanken finden Sie unter [inkompatible Zugriffs Features](incompatible-access-features-accesstosql.md).
   
-## <a name="preparing-for-migration"></a>Vorbereiten der Migration  
+## <a name="preparing-for-migration"></a>Vorbereitung auf die Migration  
 Verwenden Sie die folgenden Richtlinien, um Ihre Access-Datenbanken [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]für die Migration zu vorzubereiten.  
   
 ### <a name="upgrading-older-access-databases"></a>Aktualisieren älterer Access-Datenbanken  
@@ -75,6 +75,6 @@ Weitere Informationen zum Sichern von [!INCLUDE[ssNoVersion](../../includes/ssno
 ### <a name="documenting-databases"></a>Dokumentieren von Datenbanken  
 Möglicherweise möchten Sie auch die Eigenschaften, z. b. Listen mit Datenbankobjekten, Dateigrößen und Berechtigungen, von ihren Access-Datenbanken dokumentieren. Um diese Dokumentation in Access zu generieren, zeigen Sie **im Menü Extras** auf **analysieren**, und klicken Sie dann auf **dokumentiert**.  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Weitere Informationen:  
 [Migration von Access-Datenbanken zu SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
 [Verknüpfen von Zugriffs Anwendungen mit SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8bb3daf170e25abc9b346aeaedb4b835cae2dfdd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68809919"
 ---
 # <a name="modify-unique-constraints"></a>Ändern von UNIQUE-Einschränkungen
@@ -31,26 +31,26 @@ ms.locfileid: "68809919"
   
      [Sicherheit](#Security)  
   
--   **So ändern Sie eine Unique-Einschränkung mit:**  
+-   **So ändern Sie eine UNIQUE-Einschränkung mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Erfordert die ALTER-Berechtigung für die Tabelle.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
   
 #### <a name="to-modify-a-unique-constraint"></a>So ändern Sie eine UNIQUE-Einschränkung  
   
 1.  Klicken Sie im **Objekt-Explorer**mit der rechten Maustaste auf die Tabelle mit der UNIQUE-Einschränkung, und wählen Sie dann **Entwerfen**aus.  
   
-2.  Klicken Sie im Menü **Tabellen-Designer** auf **Indizes/Schlüssel...**.  
+2.  Klicken Sie im Menü **Tabellen-Designer** auf **Indizes/Schlüssel...** .  
   
 3.  Wählen Sie im Dialogfeld **Indizes/Schlüssel** unter **Ausgewählter Primärschlüssel/eindeutiger Schlüssel oder Index**die Einschränkung aus, die Sie bearbeiten möchten.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "68809919"
   
 5.  Klicken Sie im Menü **Datei** auf **Speichern** > _Tabellenname_.  
   
-##  <a name="TsqlProcedure"></a>So **Ändern Sie eine Unique-Einschränkung**  
+##  <a name="to-modify-a-unique-constraint"></a><a name="TsqlProcedure"></a> **Ändern einer UNIQUE-Einschränkung**  
   
  Um eine UNIQUE-Einschränkung mit Transact-SQL ändern zu können, müssen Sie zuerst die vorhandene UNIQUE-Einschränkung löschen und sie dann mit der neuen Definition neu erstellen. Weitere Informationen finden Sie unter [Delete Unique Constraints](delete-unique-constraints.md) und [Create Unique Constraints](create-unique-constraints.md).  
   

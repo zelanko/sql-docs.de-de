@@ -16,10 +16,10 @@ ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7aa68b2ee2e592f264f5a64c4c675103253da495
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771534"
 ---
 # <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
@@ -43,7 +43,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 `[ @type = ] 'type'`Schränkt das Resultset so ein, dass es nur Datenbanken enthält, für die der angegebene Wert des Replikations options *Typs* aktiviert wurde *Type ist vom Datentyp* **vom Datentyp sysname**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**veröffentlichen**|Transaktionsreplikation ist zulässig.|  
 |**Zusammenführen der Veröffentlichung**|Mergereplikation ist zulässig.|  
@@ -56,7 +56,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Der Name der Datenbank.|  
-|**Name**|**int**|Datenbankbezeichner.|  
+|**id**|**int**|Datenbankbezeichner.|  
 |**transpublish**|**bit**|, Wenn die Datenbank für die Momentaufnahme-oder Transaktions Veröffentlichung aktiviert wurde. der Wert **1** bedeutet, dass die Momentaufnahme-oder Transaktions Veröffentlichung aktiviert ist.|  
 |**mergepublish**|**bit**|, Wenn die Datenbank für die Mergeveröffentlichung aktiviert wurde. der Wert **1** bedeutet, dass die Mergeveröffentlichung aktiviert ist.|  
 |**dbowner**|**bit**|, Wenn der Benutzer ein Mitglied der **db_owner** Fixed-Daten Bank Rolle ist. mit dem Wert **1** wird angegeben, dass der Benutzer ein Mitglied dieser Rolle ist.|  

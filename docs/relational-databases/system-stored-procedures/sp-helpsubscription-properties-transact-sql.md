@@ -16,10 +16,10 @@ ms.assetid: 7a76a645-97eb-47ac-b3ea-e2d75012cbed
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 28305f4676c9323b364703feb0b668615a159e6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771565"
 ---
 # <a name="sp_helpsubscription_properties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
@@ -48,7 +48,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
   
 `[ @publication_type = ] publication_type`Der Typ der Veröffentlichung. *publication_type* ist vom Datentyp **int**und hat den Standardwert NULL. Wenn angegeben, muss *publication_type* einen der folgenden Werte aufweisen:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**0**|Transaktionsveröffentlichung|  
 |**1**|Momentaufnahmeveröffentlichung|  
@@ -64,11 +64,11 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**publication_type**|**int**|Typ der Veröffentlichung:<br /><br /> **0** = transaktional<br /><br /> **1** = Momentaufnahme<br /><br /> **2** = zusammenführen|  
 |**publisher_login**|**sysname**|Auf dem Verleger für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendete Anmelde-ID.|  
 |**publisher_password**|**nvarchar (524)**|Das Kennwort, das auf dem Verleger für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung verwendet wird (verschlüsselt).|  
-|**publisher_security_mode**|**int**|Auf dem Verleger verwendeter Sicherheitsmodus:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung<br /><br /> **1** = Windows-Authentifizierung|  
+|**publisher_security_mode**|**int**|Auf dem Verleger verwendeter Sicherheitsmodus:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung<br /><br /> **1** = Windows-Authentifizierung|  
 |**Verleih**|**sysname**|Name des Verteilers.|  
 |**distributor_login**|**sysname**|Verteilerbenutzername.|  
 |**distributor_password**|**nvarchar (524)**|Verteilerkennwort (verschlüsselt).|  
-|**distributor_security_mode**|**int**|Auf dem Verteiler verwendeter Sicherheitsmodus:<br /><br /> **** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung<br /><br /> **1** = Windows-Authentifizierung|  
+|**distributor_security_mode**|**int**|Auf dem Verteiler verwendeter Sicherheitsmodus:<br /><br /> **0** =  0[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Authentifizierung<br /><br /> **1** = Windows-Authentifizierung|  
 |**ftp_address**|**sysname**|Nur aus Gründen der Abwärtskompatibilität beibehalten Die Netzwerkadresse des FTP-Dienstes für den Verteiler.|  
 |**ftp_port**|**int**|Nur aus Gründen der Abwärtskompatibilität beibehalten Die Nummer des Anschlusses für den FTP-Dienst des Verteilers.|  
 |**ftp_login**|**sysname**|Nur aus Gründen der Abwärtskompatibilität beibehalten Der Benutzername, mit dem eine Verbindung mit dem FTP-Dienst hergestellt wird.|  
@@ -88,7 +88,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**internet_password**|**nvarchar (524)**|Das Kennwort für den Anmeldenamen, der vom Merge-Agent zum Herstellen einer Verbindung mit dem Webserver verwendet wird, der die Websynchronisierung mithilfe der Standardauthentifizierung hostet.|  
 |**internet_security_mode**|**int**|Der Authentifizierungsmodus, der beim Herstellen einer Verbindung mit dem Webserver verwendet wird, der die Websynchronisierung verwendet. der Wert **1** steht für die Windows-Authentifizierung und der Wert **0** für die Standard Authentifizierung.|  
 |**internet_timeout**|**int**|Zeit in Sekunden, bevor eine Anforderung für eine Websynchronisierung abläuft.|  
-|**Hostname**|**nvarchar(128)**|Gibt den Wert für HOST_NAME() an, wenn diese Funktion in der WHERE-Klausel eines parametrisierten Zeilenfilters verwendet wird.|  
+|**hostname**|**nvarchar(128)**|Gibt den Wert für HOST_NAME() an, wenn diese Funktion in der WHERE-Klausel eines parametrisierten Zeilenfilters verwendet wird.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

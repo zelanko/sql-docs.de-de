@@ -22,10 +22,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 325bedac3968cb59c70863d54c7e0ef429cedd75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68941076"
 ---
 # <a name="view-and-modify-article-properties"></a>Anzeigen und Ändern von Artikeleigenschaften
@@ -39,7 +39,7 @@ ms.locfileid: "68941076"
   
      [Empfehlungen](#Recommendations)  
   
--   **So zeigen Sie Artikeleigenschaften an und ändern Sie mit:**  
+-   **So zeigen Sie Artikeleigenschaften an oder ändern sie mit:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -47,18 +47,18 @@ ms.locfileid: "68941076"
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Einige Eigenschaften können nicht geändert werden, nachdem eine Veröffentlichung erstellt wurde. Andere Eigenschaften können nicht geändert werden, wenn Abonnements für die Veröffentlichung vorhanden sind. Eigenschaften, die nicht geändert werden können, werden als schreibgeschützt angezeigt.  
   
-###  <a name="Recommendations"></a> Empfehlungen  
+###  <a name="recommendations"></a><a name="Recommendations"></a> Empfehlungen  
   
 -   Nachdem eine Veröffentlichung erstellt wurde, ist für bestimmte Eigenschaftsänderungen eine neue Momentaufnahme erforderlich. Wenn für eine Veröffentlichung Abonnements erstellt wurden, müssen bei bestimmten Änderungen alle Abonnements erneut initialisiert werden. Weitere Informationen finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](change-publication-and-article-properties.md) und [Hinzufügen und Löschen von Artikeln aus vorhandenen Veröffentlichungen](add-articles-to-and-drop-articles-from-existing-publications.md).  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
- Sie können die Eigenschaften von Artikeln im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** anzeigen und ändern. Dieses Dialogfeld ist in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]und im Replikationsmonitor verfügbar. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](../monitor/start-the-replication-monitor.md).  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+ Sie können die Eigenschaften von Artikeln im Dialogfeld **Veröffentlichungseigenschaften - \<Veröffentlichung>** anzeigen und ändern. Dieses Dialogfeld ist in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] und im Replikationsmonitor verfügbar. Informationen zum Starten des Replikationsmonitors finden Sie unter [Starten des Replikationsmonitors](../monitor/start-the-replication-monitor.md).  
   
 -   Die Seite **Allgemein** enthält den Namen und die Beschreibung der Veröffentlichung, den Datenbanknamen, den Typ der Veröffentlichung und die Einstellungen für den Abonnementablauf.  
   
@@ -88,45 +88,45 @@ ms.locfileid: "68941076"
   
     -   Klicken Sie auf **Eigenschaften des hervorgehobenen \<ObjectType>-Artikels festlegen**, um das Dialogfeld **Artikeleigenschaften - \<ObjectName>** zu starten. Die in diesem Dialogfeld vorgenommenen Änderungen werden nur auf das Objekt angewendet, das im Objektbereich auf der Seite **Artikel** markiert ist.  
   
-    -   Klicken Sie auf **Eigenschaften aller \<ObjectType-> Artikel festlegen**, um das Dialogfeld **Eigenschaften für alle \<ObjectType> Artikel** zu starten. in diesem Dialogfeld vorgenommene Eigenschaften Änderungen werden auf alle Objekte dieses Typs im Objektbereich auf der Seite " **Artikel** " angewendet, einschließlich derjenigen, die noch nicht für die Veröffentlichung ausgewählt wurden.  
+    -   Klicken Sie auf **Eigenschaften aller \<ObjectType>-Artikel** festlegen, um das Dialogfeld **Eigenschaften für alle \<ObjectType>-Artikel** zu starten. Die in diesem Dialogfeld vorgenommenen Änderungen werden auf alle Objekte dieses Typs angewendet, die im Objektbereich auf der Seite **Artikel** vorhanden sind, einschließlich jener Objekte, die noch nicht für die Veröffentlichung ausgewählt wurden.  
   
         > [!NOTE]  
         >  Durch die Änderungen im Dialogfeld **Eigenschaften für alle \<ObjectType>-Artikel**, werden alle zuvor im Dialogfeld **Artikeleigenschaften - \<ObjectName>** vorgenommenen Änderungen überschrieben. Wenn Sie beispielsweise sowohl mehrere Standardwerte für alle Artikel eines Objekttyps als auch bestimmte Eigenschaften für einzelne Objekte festlegen möchten, legen Sie zuerst die Standardwerte für alle Artikel fest. Legen Sie anschließend die Eigenschaften für die einzelnen Objekte fest.  
   
 3.  Ändern Sie die Eigenschaften nach Bedarf, und klicken Sie dann auf **OK**.  
   
-4.  Klicken Sie im Dialogfeld **Veröffentlichungseigenschaften - **Veröffentlichung>** auf \<OK**.  
+4.  Klicken Sie im Dialogfeld **Veröffentlichungseigenschaften -** Veröffentlichung> **auf \<OK**.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Artikel können mithilfe gespeicherter Replikationsprozeduren programmgesteuert geändert und ihre Eigenschaften zurückgegeben werden. Die verwendeten gespeicherten Prozeduren hängen vom Typ der Veröffentlichung ab, zu der der Artikel gehört.  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>So zeigen Sie die Eigenschaften eines Artikels an, der zu einer Momentaufnahme- oder einer Transaktionsveröffentlichung gehört  
   
-1.  Führen Sie [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql) aus, und geben Sie dabei den Namen der Veröffentlichung für den **\@publication**-Parameter und den Namen des Artikels für den **\@article**-Parameter an. Wenn Sie keinen ** \@Artikel**angeben, werden Informationen für alle Artikel in der Veröffentlichung zurückgegeben.  
+1.  Führen Sie [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql)aus, und geben Sie dabei den Namen der Veröffentlichung für den ** \@Veröffentlichungs** Parameter und den Namen des Artikels für den ** \@Artikel** Parameter an. Wenn Sie keinen ** \@Artikel**angeben, werden Informationen für alle Artikel in der Veröffentlichung zurückgegeben.  
   
 2.  Führen Sie [sp_helparticlecolumns](/sql/relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql) aus, damit die Tabellenartikel alle in der Basistabelle verfügbaren Spalten auflisten.  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>So ändern Sie die Eigenschaften eines Artikels, der zu einer Momentaufnahme- oder einer Transaktionsveröffentlichung gehört  
   
-1.  Führen Sie [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql) aus, und geben Sie dabei die zu ändernde Artikeleigenschaft im **\@property**-Parameter und den neuen Wert dieser Eigenschaft im **\@value**-Parameter an.  
+1.  Führen Sie [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql)aus, und geben Sie dabei die zu ändernde Artikel Eigenschaft im ** \@Property** -Parameter und den neuen Wert dieser Eigenschaft im ** \@Value** -Parameter an.  
   
     > [!NOTE]  
-    >  Wenn die Änderung das Generieren einer neuen Momentaufnahme erfordert, müssen Sie zudem den Wert **1** für **\@force_invalidate_snapshot** angeben, und wenn die Änderung das nochmalige Initialisieren der Abonnenten erfordert, müssen Sie auch den Wert **1** für **\@force_reinit_subscription** angeben. Weitere Informationen über Eigenschaften, die bei Änderung eine neue Momentaufnahme oder eine erneute Initialisierung erfordern, finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](change-publication-and-article-properties.md).  
+    >  Wenn die Änderung die Generierung einer neuen Momentaufnahme erfordert, müssen Sie auch den Wert **1** für ** \@force_invalidate_snapshot**angeben. wenn die Änderung das erneute Initialisieren der Abonnenten erfordert, müssen Sie auch den Wert **1** für ** \@force_reinit_subscription**angeben. Weitere Informationen über Eigenschaften, die bei Änderung eine neue Momentaufnahme oder eine erneute Initialisierung erfordern, finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](change-publication-and-article-properties.md).  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-merge-publication"></a>So zeigen Sie die Eigenschaften eines Artikels an, der zu einer Mergeveröffentlichung gehört  
   
-1.  Führen Sie [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql) aus, und geben Sie dabei den Namen der Veröffentlichung für den **\@publication**-Parameter und den Namen des Artikels für den **\@article**-Parameter an. Wenn Sie diese Parameter nicht angeben, werden Informationen zu allen Artikeln einer Veröffentlichung oder des Verlegers zurückgegeben.  
+1.  Führen Sie [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql)aus, und geben Sie dabei den Namen der Veröffentlichung für den ** \@Veröffentlichungs** Parameter und den Namen des Artikels für den ** \@Artikel** Parameter an. Wenn Sie diese Parameter nicht angeben, werden Informationen zu allen Artikeln einer Veröffentlichung oder des Verlegers zurückgegeben.  
   
 2.  Führen Sie [sp_helpmergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-helpmergearticlecolumn-transact-sql) aus, damit die Tabellenartikel alle in der Basistabelle verfügbaren Spalten auflisten.  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-merge-publication"></a>So ändern Sie die Eigenschaften eines Artikels, der zu einer Mergeveröffentlichung gehört  
   
-1.  Führen Sie [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) aus, und geben Sie dabei die zu ändernde Artikeleigenschaft im **\@property**-Parameter und den neuen Wert dieser Eigenschaft im **\@value**-Parameter an.  
+1.  Führen Sie [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)aus, und geben Sie dabei die zu ändernde Artikel Eigenschaft im ** \@Property** -Parameter und den neuen Wert dieser Eigenschaft im ** \@Value** -Parameter an.  
   
     > [!NOTE]  
-    >  Wenn die Änderung das Generieren einer neuen Momentaufnahme erfordert, müssen Sie zudem den Wert **1** für **\@force_invalidate_snapshot** angeben, und wenn die Änderung das nochmalige Initialisieren der Abonnenten erfordert, müssen Sie auch den Wert **1** für **\@force_reinit_subscription** angeben. Weitere Informationen über Eigenschaften, die bei Änderung eine neue Momentaufnahme oder eine erneute Initialisierung erfordern, finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](change-publication-and-article-properties.md).  
+    >  Wenn die Änderung die Generierung einer neuen Momentaufnahme erfordert, müssen Sie auch den Wert **1** für ** \@force_invalidate_snapshot**angeben. wenn die Änderung das erneute Initialisieren der Abonnenten erfordert, müssen Sie auch den Wert **1** für ** \@force_reinit_subscription**angeben. Weitere Informationen über Eigenschaften, die bei Änderung eine neue Momentaufnahme oder eine erneute Initialisierung erfordern, finden Sie unter [Ändern von Veröffentlichungs- und Artikeleigenschaften](change-publication-and-article-properties.md).  
   
-###  <a name="TsqlExample"></a> Beispiel (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Beispiel (Transact-SQL)  
  In diesem Beispiel für eine Transaktionsreplikation werden die Eigenschaften des veröffentlichten Artikels zurückgegeben.  
   
  [!code-sql[HowTo#sp_helptranarticle](../../../snippets/tsql/SQL15/replication/howto/tsql/changetranart.sql#sp_helptranarticle)]  
@@ -143,7 +143,7 @@ ms.locfileid: "68941076"
   
  [!code-sql[HowTo#sp_changemergearticle](../../../snippets/tsql/SQL15/replication/howto/tsql/changemergeart.sql#sp_changemergearticle)]  
   
-##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
  Sie können Artikel ändern und mithilfe von Replikationsverwaltungsobjekten (RMO) programmgesteuert auf ihre Eigenschaften zugreifen. Welche RMO-Klassen Sie zum Anzeigen oder Ändern von Artikeleigenschaften verwenden, hängt vom Typ der Veröffentlichung ab, zu der der Artikel gehört.  
   
 #### <a name="to-view-or-modify-properties-of-an-article-that-belongs-to-a-snapshot-or-transactional-publication"></a>So zeigen Sie die Eigenschaften eines Artikels an, der zu einer Momentaufnahme- oder einer Transaktionsveröffentlichung gehört, oder ändern sie  
@@ -178,7 +178,7 @@ ms.locfileid: "68941076"
   
 7.  (Optional) Wenn Sie den Wert `true` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> angegeben haben, rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>-Methode auf, um die Änderungen auf dem Server einzutragen. Wenn Sie den Wert `false` für <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (die Standardeinstellung) angegeben haben, werden die Änderungen sofort an den Server gesendet.  
   
-###  <a name="PShellExample"></a>Beispiel (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a> Beispiel (RMO)  
  In diesem Beispiel wird ein Mergeartikel geändert, um den vom Artikel verwendeten Geschäftslogikhandler anzugeben.  
   
  [!code-csharp[HowTo#rmo_ChangeMergeArticle_BLH](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_changemergearticle_blh)]  
@@ -186,7 +186,7 @@ ms.locfileid: "68941076"
  [!code-vb[HowTo#rmo_vb_ChangeMergeArticle_BLH](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changemergearticle_blh)]  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Implementieren eines Geschäftslogik Handlers für einen Mergeartikel](../implement-a-business-logic-handler-for-a-merge-article.md)   
+ [Implementieren eines Geschäftslogikhandlers für einen Mergeartikel](../implement-a-business-logic-handler-for-a-merge-article.md)   
  [Veröffentlichen von Daten und Datenbankobjekten](publish-data-and-database-objects.md)   
  [Ändern von Veröffentlichungs- und Artikeleigenschaften](change-publication-and-article-properties.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   

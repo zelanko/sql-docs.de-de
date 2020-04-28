@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0354c73a14b249065b69f41d5f7534fd97de5081
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68890712"
 ---
 # <a name="data-mining-query-task-editor-query-tab"></a>Editor für Data Mining-Abfragetasks (Registerkarte Abfrage)
@@ -40,12 +40,12 @@ ms.locfileid: "68890712"
  **Data Mining-Abfrage**  
  Geben Sie eine Data Mining-Abfrage ein.  
   
- **Verwandte Themen:**  [Data Mining-Erweiterungen &#40;DMX-&#41; Referenz](/sql/dmx/data-mining-extensions-dmx-reference)  
+ **Verwandte Themen:**  [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](/sql/dmx/data-mining-extensions-dmx-reference)  
   
  **Neue Abfrage erstellen**  
  Erstellt die Data Mining-Abfrage mithilfe eines grafischen Tools.  
   
- **Verwandte Themen:** [Data Mining-Abfrage](control-flow/data-mining-query.md)  
+ **Verwandte Themen:** [Data Mining Query](control-flow/data-mining-query.md)  
   
 ## <a name="parameter-mapping-tab-options"></a>Optionen der Registerkarte Parameterzuordnung  
  **Parameter Name**  
@@ -61,7 +61,7 @@ ms.locfileid: "68890712"
  Wählen Sie einen Parameter aus, und klicken Sie anschließend auf **Entfernen**.  
   
 ## <a name="result-set-tab-options"></a>Optionen der Registerkarte Resultset  
- **Ergebnis Name**  
+ **Ergebnisname**  
  Sie können optional den Resultsetnamen aktualisieren. Ordnen Sie das Resultset einer Variable zu, indem Sie in der Liste **Variablenname** eine Variable auswählen.  
   
  Nachdem Sie das Ergebnis durch Klicken auf **Hinzufügen**hinzugefügt haben, geben Sie einen eindeutigen Namen für das Ergebnis an.  
@@ -79,7 +79,7 @@ ms.locfileid: "68890712"
  Wählen Sie ein Ergebnis aus, und klicken Sie anschließen auf **Entfernen**.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Fehler- und Meldungsreferenz von Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
+ [Fehler-und Meldungs Referenz für Integration Services](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [Editor für den Data Mining-Abfrage Task &#40;Registerkarte Mining Modell&#41;](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
  [Editor für Data Mining-Abfrage Tasks &#40;Registerkarte Ausgabe&#41;](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
  [Data Mining Designer](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  

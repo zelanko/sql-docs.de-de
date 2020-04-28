@@ -16,10 +16,10 @@ ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8fe752b17af683f59078bd7c37eb702a9408a530
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68771403"
 ---
 # <a name="sp_changearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
@@ -61,15 +61,15 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**dest_object**||Dieser Parameter wird aus Gründen der Abwärtskompatibilität bereitgestellt. Verwenden Sie **dest_table**.|  
 |**dest_table**||Die neue Zieltabelle.|  
 |**destination_owner**||Name des Besitzers des Zielobjekts.|  
-|**Filter**||Die neue gespeicherte Prozedur, mit der die Tabelle gefiltert werden soll (horizontales Filtern). Die Standardeinstellung ist NULL. Kann bei der Peer-zu-Peer-Replikation für Veröffentlichungen nicht geändert werden.|  
-|**fire_triggers_on_snapshot**|**Fall**|Replizierte Benutzertrigger werden ausgeführt, wenn die Anfangsmomentaufnahme angewendet wird.<br /><br /> Hinweis: Wenn Trigger repliziert werden sollen, muss der Bitmasken Wert *schema_option* den Wert **0x100**enthalten.|  
-||**Alarm**|Replizierte Benutzertrigger werden nicht ausgeführt, wenn die Anfangsmomentaufnahme angewendet wird.|  
+|**filter**||Die neue gespeicherte Prozedur, mit der die Tabelle gefiltert werden soll (horizontales Filtern). Die Standardeinstellung ist NULL. Kann bei der Peer-zu-Peer-Replikation für Veröffentlichungen nicht geändert werden.|  
+|**fire_triggers_on_snapshot**|**true**|Replizierte Benutzertrigger werden ausgeführt, wenn die Anfangsmomentaufnahme angewendet wird.<br /><br /> Hinweis: Wenn Trigger repliziert werden sollen, muss der Bitmasken Wert *schema_option* den Wert **0x100**enthalten.|  
+||**false**|Replizierte Benutzertrigger werden nicht ausgeführt, wenn die Anfangsmomentaufnahme angewendet wird.|  
 |**identity_range**||Steuert die Größe der zugeordneten Identitätsbereiche, die am Abonnent zugeordnet wurden. Wird für die Peer-zu-Peer-Replikation nicht unterstützt.|  
 |**ins_cmd**||Die auszuführende INSERT-Anweisung; andernfalls wird die Operation aus dem Protokoll hergeleitet.|  
 |**pre_creation_cmd**||Ein Vorabbefehl, mit dem die Zieltabelle entfernt, gelöscht oder abgeschnitten werden kann, bevor die Synchronisierung angewendet wird.|  
-||**gar**|Verwendet keinen Befehl.|  
+||**Keine**|Verwendet keinen Befehl.|  
 ||**Dropdown**|Entfernt die Zieltabelle.|  
-||**Lösch**|Löscht die Zieltabelle.|  
+||**delete**|Löscht die Zieltabelle.|  
 ||**TRUNCATE**|Schneidet die Zieltabelle ab.|  
 |**pub_identity_range**||Steuert die Größe der zugeordneten Identitätsbereiche, die am Abonnent zugeordnet wurden. Wird für die Peer-zu-Peer-Replikation nicht unterstützt.|  
 |**schema_option**||Gibt die Bitmap der Schemagenerierungsoption für den angegebenen Artikel an. *schema_option* ist **Binär (8)**. Weitere Informationen finden Sie im Abschnitt mit den Hinweisen weiter unten in diesem Thema.|  
@@ -118,13 +118,13 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x20000000000**|Repliziert das SPARSE-Attribut für Spalten. Weitere Informationen zu diesem Attribut finden Sie unter [Verwenden von sparsespalten](../../relational-databases/tables/use-sparse-columns.md).|  
 ||**0x40000000000**|Ermöglicht die Skripterstellung durch den Momentaufnahme-Agent, um eine Speicher optimierte Tabelle auf dem Abonnenten zu erstellen.|  
 ||**0x80000000000**|Konvertiert den gruppierten Index für Speicher optimierte Artikel in einen nicht gruppierten Index.|  
-|**Stands**||Gibt den neuen Status der Eigenschaft an.|  
+|**status**||Gibt den neuen Status der Eigenschaft an.|  
 ||**dts horizontal partitions**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 ||**include column names**|Spaltennamen sind in der replizierten INSERT-Anweisung enthalten.|  
 ||**no column names**|Spaltennamen sind nicht in der replizierten INSERT-Anweisung enthalten.|  
 ||**no dts horizontal partitions**|Die horizontale Partition für den Artikel wird nicht durch ein transformierbares Abonnement definiert.|  
-||**gar**|Löscht alle Status Optionen in der [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md) -Tabelle und markiert den Artikel als inaktiv.|  
-||**Metern**|Änderungen werden an den Abonnenten mit parametrisierten Befehlen weitergegeben. Dies ist die Standardeinstellung für einen neuen Artikel.|  
+||**Keine**|Löscht alle Status Optionen in der [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md) -Tabelle und markiert den Artikel als inaktiv.|  
+||**parameters**|Änderungen werden an den Abonnenten mit parametrisierten Befehlen weitergegeben. Dies ist die Standardeinstellung für einen neuen Artikel.|  
 ||**Zeichen folgen Literale**|Änderungen werden an den Abonnenten mit Werten von Literalzeichenfolgen weitergegeben.|  
 |**sync_object**||Der Name der Tabelle oder Sicht, mit der eine Synchronisierungsausgabedatei erstellt wird. Die Standardeinstellung ist NULL. Diese Option wird für Oracle-Verleger nicht unterstützt.|  
 |**Tabellenbereich**||Gibt den Tabellenbereich an, der von der Protokollierungstabelle für einen Artikel verwendet wird, der von einer Oracle-Datenbank veröffentlicht wird. Weitere Informationen finden Sie unter [Verwalten von Oracle-Tabellenbereichen](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md).|  
@@ -194,11 +194,11 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 -   **destination_owner**  
   
--   **Filter**  
+-   **filter**  
   
 -   **ins_cmd**  
   
--   **Stands**  
+-   **status**  
   
 -   **upd_cmd**  
   
@@ -238,7 +238,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Anzeigen und Ändern von Artikeleigenschaften](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
- [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
+ [Ändern von Veröffentlichungs-und Artikeleigenschaften](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addarticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_droparticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   

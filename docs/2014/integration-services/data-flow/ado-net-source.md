@@ -19,16 +19,16 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 296163b64d565ae3a65a16f1dbbf002bfc464bee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70153958"
 ---
 # <a name="ado-net-source"></a>ADO NET-Quelle
   Die ADO NET-Quelle verwendet Daten von einem .NET-Anbieter und stellt sie dem Datenfluss zur Verfügung.  
   
- Sie können die ADO NET-Quelle verwenden, um [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]eine Verbindung mit herzustellen. Das Herstellen einer Verbindung mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)] über OLE DB wird nicht unterstützt. Weitere Informationen zu [!INCLUDE[ssSDS](../../includes/sssds-md.md)] finden Sie unter [Azure SQL-Datenbank – Allgemeine Einschränkungen und Leitlinien](https://go.microsoft.com/fwlink/?LinkId=248228).  
+ Sie können mithilfe der ADO.NET-Quelle eine Verbindung mit [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] herstellen. Das Herstellen einer Verbindung mit [!INCLUDE[ssSDS](../../includes/sssds-md.md)] über OLE DB wird nicht unterstützt. Weitere Informationen zu [!INCLUDE[ssSDS](../../includes/sssds-md.md)] finden Sie unter [Azure SQL-Datenbank – Allgemeine Einschränkungen und Leitlinien](https://go.microsoft.com/fwlink/?LinkId=248228).  
   
 ## <a name="data-type-support"></a>Datentypunterstützung  
  Die Quelle konvertiert alle Datentypen, die nicht einem bestimmten [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] -Datentyp zugeordnet sind, in den DT_NTEXT-Datentyp von [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] . Diese Konvertierung findet auch dann statt, wenn der Datentyp `System.Object` ist.  
@@ -64,12 +64,12 @@ ms.locfileid: "70153958"
  Zum Konfigurieren der ADO NET-Quelle geben Sie die SQL-Anweisung an, die das Resultset definiert. Beispielsweise extrahiert eine ADO NET-Quelle, die eine Verbindung mit der [!INCLUDE[ssSampleDBUserInputNonLocal](../../includes/sssampledbuserinputnonlocal-md.md)] -Datenbank herstellt und die SQL-Anweisung `SELECT * FROM Production.Product` verwendet, alle Zeilen aus der **Production.Product** -Tabelle und stellt das Dataset einer Downstreamkomponente bereit.  
   
 > [!NOTE]  
->  Wenn Sie mithilfe einer SQL-Anweisung eine gespeicherte Prozedur aufrufen, die Ergebnisse von einer temporären Tabelle zurückgibt, verwenden Sie die WITH RESULT SETS-Option, um Metadaten für das Resultset zu definieren.  
+>  Wenn Sie mithilfe einer SQL-Anweisung eine gespeicherte Prozedur aufrufen, die Ergebnisse von einer temporären Tabelle zurückgibt, verwenden Sie die Option WITH RESULT SETS, um Metadaten für das Resultset zu definieren.  
   
 > [!NOTE]  
 >  Wenn Sie zum Ausführen einer gespeicherten Prozedur eine SQL-Anweisung verwenden und der folgende Paketfehler auftritt, können Sie den Fehler u. U. beheben, indem Sie die `SET FMTONLY OFF`-Anweisung vor der EXEC-Anweisung hinzufügen.  
 >   
->  **Die Spalten <column_name> wurden in der Datenquelle nicht gefunden.**  
+>  **Die Spalte <Spaltenname> wurde in der Datenquelle nicht gefunden.**  
   
  Die ADO NET-Quelle verwendet den [!INCLUDE[vstecado](../../includes/vstecado-md.md)] -Verbindungs-Manager zum Herstellen einer Verbindung mit einer Datenquelle, und der Verbindungs-Manager gibt den .NET-Anbieter an. Weitere Informationen finden Sie unter [ADO.NET Connection Manager](../connection-manager/ado-net-connection-manager.md).  
   

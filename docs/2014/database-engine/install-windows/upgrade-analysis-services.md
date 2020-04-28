@@ -21,10 +21,10 @@ author: Minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cdd9e34e57694efc1234a2f0245833596644cb73
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68889185"
 ---
 # <a name="upgrade-analysis-services"></a>Aktualisieren von Analysis Services
@@ -37,7 +37,7 @@ ms.locfileid: "68889185"
   
 -   Informationen zu den [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Features und Funktionen, die eingestellt, veraltet oder geändert wurden, finden Sie unter [Analysis Services Abwärtskompatibilität](https://docs.microsoft.com/analysis-services/analysis-services-backward-compatibility).  
   
-## <a name="pre-upgrade-checklist"></a>Prüfliste vor der Aktualisierung  
+## <a name="pre-upgrade-checklist"></a>Prüfliste vor dem Upgrade  
  Lesen Sie vor dem Upgrade die folgenden Informationen:  
   
 -   [Unterstützte Versions- und Editionsupgrades](supported-version-and-edition-upgrades.md)  
@@ -83,6 +83,6 @@ ms.locfileid: "68889185"
  [Grundlegendes zur Microsoft OLAP-Architektur](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/understanding-microsoft-olap-architecture)   
  [UpgradePowerPivot für SharePoint](upgrade-power-pivot-for-sharepoint.md)   
  [Installieren von Analysis Services im mehrdimensionalen und Data Mining-Modus](../../sql-server/install/install-analysis-services-in-multidimensional-and-data-mining-mode.md)   
- [PowerPivot for SharePoint 2010 Installation](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
+ [PowerPivot für SharePoint 2010-Installation](../../sql-server/install/powerpivot-for-sharepoint-2010-installation.md)  
   
   

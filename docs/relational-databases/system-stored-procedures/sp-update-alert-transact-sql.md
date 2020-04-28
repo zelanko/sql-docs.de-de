@@ -18,10 +18,10 @@ ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2856f89264994b9f1812653450d94e2cb2e2b0c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "69890845"
 ---
 # <a name="sp_update_alert-transact-sql"></a>sp_update_alert (Transact-SQL)
@@ -78,13 +78,13 @@ sp_update_alert
   
 `[ @include_event_description_in = ] include_event_description_in`Gibt an, ob die Beschreibung [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] des Fehlers aus dem Windows-Anwendungsprotokoll in die Benachrichtigungs Meldung eingeschlossen werden soll. *include_event_description_in* ist vom Datentyp **tinyint**. der Standardwert ist NULL. die folgenden Werte sind möglich.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**0**|Keine|  
 |**1**|E-Mail|  
 |**2**|Pager|  
 |**4**|**NET SEND**|  
-|**19.00**|All|  
+|**7**|Alle|  
   
 `[ @database_name = ] 'database'`Der Name der Datenbank, in der der Fehler auftreten muss, damit die Warnung ausgelöst wird. *Database* ist vom **Datentyp sysname.** In eckige Klammern ([ ]) eingeschlossene Namen sind nicht zulässig. Der Standardwert ist NULL.  
   
@@ -114,7 +114,7 @@ sp_update_alert
   
 |Format-Element|BESCHREIBUNG|  
 |--------------------|-----------------|  
-|*Element*|Ein Leistungsobjekt, ein Leistungsindikator oder die benannte Instanz des Indikators|  
+|*Position*|Ein Leistungsobjekt, ein Leistungsindikator oder die benannte Instanz des Indikators|  
 |*Vergleichs Operator*|Einer dieser Operatoren: **>**, **<**,**=**|  
 |*Wert*|Numerischer Wert des Indikators|  
   
@@ -149,7 +149,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
+ [Sp_add_alert &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
  [sp_help_alert &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 4551181da22af1244f8083f6df5ea00f63e00e69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68266581"
 ---
 # <a name="project-settings-type-mapping-oracletosql"></a>Projekteinstellungen (Typzuordnung) (OracleToSQL)
@@ -28,7 +28,7 @@ Die Seite Typzuordnung ist in den Dialogfeldern **Projekteinstellungen** und **S
   
 Verwenden Sie die Registerkarte **Typzuordnung** im primären SSMA-Fenster, um Einstellungen für das aktuelle Objekt oder die Klasse von Objekten anzugeben.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 In der folgenden Tabelle werden die Registerkarten Optionen für die **Typzuordnung** angezeigt:  
   
 **Quelltyp**  
@@ -48,7 +48,7 @@ Klicken Sie hierauf, um den ausgewählten Datentyp in der Liste Zuordnung zu bea
 **Remove**  
 Klicken Sie hierauf, um die ausgewählte Datentyp Zuordnung aus der Liste Zuordnung zu entfernen.  
   
-**Auf Standard zurücksetzen**  
+**Standard wiederherstellen**  
 Klicken Sie hier, um die Liste Typzuordnung auf die SSMA-Standardwerte zurückzusetzen.  
   
 ## <a name="default-type-mappings"></a>Standardtyp Zuordnungen  
@@ -97,7 +97,7 @@ Die folgende Tabelle enthält die standardmäßige Datentyp Zuordnung für Argum
 |ROWID|UNIQUEIDENTIFIER|  
 |signtype|SMALLINT|  
 |SMALLINT|SMALLINT|  
-|string|varchar(max)|  
+|Zeichenfolge|varchar(max)|  
 |timestamp|datetime2|  
 |Zeitstempel mit lokaler Zeitzone|datetimeoffset|  
 |Zeitstempel mit Zeitzone|datetimeoffset|  
@@ -188,7 +188,7 @@ Die folgende Tabelle enthält die Standardtyp Zuordnung für lokale Variablen.
 |binary_float|float [53]|  
 |binary_interger|INT|  
 |Blob|varbinary(max)|  
-|Boolean|bit|  
+|Boolesch|bit|  
 |Char|char|  
 |char-Variation [*. 8000]|varchar [*]|  
 |char-Variation [8001.. *]|varchar(max)|  
@@ -234,7 +234,7 @@ Die folgende Tabelle enthält die Standardtyp Zuordnung für lokale Variablen.
 |NCHAR variiert [*. 4000]|nvarchar [*]|  
 |NCHAR-Variation [4001.. *]|nvarchar(max)|  
 |NCLOB|nvarchar(max)|  
-|Number|float [53]|  
+|Anzahl|float [53]|  
 |Zahl [*.. \*]|numerisch [*]|  
 |Zahl [*.. \*][\*.. \*]|numerisch [*]\*[]|  
 |Numeric|numerisch [38] [0]|  

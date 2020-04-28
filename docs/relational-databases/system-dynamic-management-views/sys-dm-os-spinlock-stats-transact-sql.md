@@ -23,10 +23,10 @@ ms.author: pamela
 ms.reviewer: maghan
 manager: amitban
 ms.openlocfilehash: eae0057441fe6bc356c7cea6c1e6ded829bbb9e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68265687"
 ---
 # <a name="sysdm_os_spinlock_stats-transact-sql"></a>sys. dm_os_spinlock_stats (Transact-SQL)
@@ -39,10 +39,10 @@ Gibt Informationen zu allen Spinlock-warte Vorgängen nach Typ organisiert zurü
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |name|**nvarchar(256)**|Der Name des Spinlock-Typs.|  
-|Stöße|**BIGINT**|Gibt an, wie oft ein Thread versucht, die Spinlock abzurufen, und wird blockiert, da ein anderer Thread derzeit die Spinlock-Sperre besitzt.|  
-|HS|**BIGINT**|Gibt an, wie oft ein Thread eine Schleife ausführt, während versucht wird, das Spinlock abzurufen.|  
-|spins_per_collision|**wirkliche**|Das Verhältnis von Drehungen pro Kollision.|  
-|sleep_time|**BIGINT**|Die Zeitspanne in Millisekunden, die Threads im Fall eines Backoff im Standbymodus verbracht haben.|  
+|Stöße|**bigint**|Gibt an, wie oft ein Thread versucht, die Spinlock abzurufen, und wird blockiert, da ein anderer Thread derzeit die Spinlock-Sperre besitzt.|  
+|HS|**bigint**|Gibt an, wie oft ein Thread eine Schleife ausführt, während versucht wird, das Spinlock abzurufen.|  
+|spins_per_collision|**real**|Das Verhältnis von Drehungen pro Kollision.|  
+|sleep_time|**bigint**|Die Zeitspanne in Millisekunden, die Threads im Fall eines Backoff im Standbymodus verbracht haben.|  
 |Backoffs auch|**int**|Gibt an, wie oft ein Thread, der "spinnt" ist, den Spinlock nicht abrufen kann und den Scheduler ergibt.|  
 
 
@@ -67,7 +67,7 @@ GO
 >  Diese Statistiken werden nicht persistent gespeichert, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu gestartet wird. Alle Daten stellen einen Gesamtwert seit dem letzten Zurücksetzen der Statistiken oder dem Starten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] dar.  
   
 ## <a name="spinlocks"></a>Spinlocks  
- Ein Spinlock ist ein schlankes Synchronisierungs Objekt, das verwendet wird, um den Zugriff auf Datenstrukturen zu serialisieren, die in der Regel für kurze Zeit aufbewahrt werden. Wenn ein Thread versucht, auf eine Ressource zuzugreifen, die durch einen Spinlock geschützt ist, der von einem anderen Thread aufbewahrt wird, führt der Thread eine Schleife aus, oder es wird versucht, erneut auf die Ressource zuzugreifen, anstatt den Scheduler sofort wie bei einem Latch oder einer anderen Ressource bereitzustellen. Warte. Der Thread wird fortgesetzt, bis die Ressource verfügbar ist, oder die Schleife wird beendet. zu diesem Zeitpunkt führt der Thread den Scheduler aus und wechselt zurück in die ausführbare Warteschlange. Durch diese Vorgehensweise wird die übermäßige Thread Kontext Umschaltung verringert. Wenn jedoch ein Konflikt zwischen Spinlock vorliegt, wird möglicherweise eine beträchtliche CPU-Auslastung festgestellt.
+ Ein Spinlock ist ein schlankes Synchronisierungs Objekt, das verwendet wird, um den Zugriff auf Datenstrukturen zu serialisieren, die in der Regel für kurze Zeit aufbewahrt werden. Wenn ein Thread versucht, auf eine Ressource zuzugreifen, die durch einen Spinlock geschützt ist, der von einem anderen Thread aufbewahrt wird, führt der Thread eine Schleife aus, und versucht erneut, auf die Ressource zuzugreifen, anstatt sofort den Scheduler wie bei einem Latch oder einer anderen Ressourcen Wartezeit bereitzustellen. Der Thread wird fortgesetzt, bis die Ressource verfügbar ist, oder die Schleife wird beendet. zu diesem Zeitpunkt führt der Thread den Scheduler aus und wechselt zurück in die ausführbare Warteschlange. Durch diese Vorgehensweise wird die übermäßige Thread Kontext Umschaltung verringert. Wenn jedoch ein Konflikt zwischen Spinlock vorliegt, wird möglicherweise eine beträchtliche CPU-Auslastung festgestellt.
    
  Die folgende Tabelle enthält kurze Beschreibungen einiger der gängigsten Spinlock-Typen.  
   
@@ -177,7 +177,7 @@ GO
 |HTTP|Nur interne Verwendung.|
 |HTTP_CONNCACHE|Nur interne Verwendung.|
 |HTTP_ENDPOINT|Nur interne Verwendung.|
-|IDENTITÄT|Nur interne Verwendung.|
+|IDENTITY|Nur interne Verwendung.|
 |INDEX_CREATE|Nur interne Verwendung.|
 |IO_DISPENSER_PAUSE|Nur interne Verwendung.|
 |IO_RG_VOLUME_HASHTABLE|Nur interne Verwendung.|
@@ -406,7 +406,7 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  
- [DBCC SQLPERF &#40;Transact-SQL-&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
+ [DBCC SQLPERF &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-sqlperf-transact-sql.md)   
  
  [SQL Server dynamischen Verwaltungs Sichten im Zusammenhang mit dem Betriebs System &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
 

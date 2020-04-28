@@ -16,10 +16,10 @@ ms.assetid: a6225033-5c3b-452f-ae52-79890a3590ed
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7baa7419620fd25be06a731894432862bfba2b96
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68769054"
 ---
 # <a name="sp_addsubscriber_schedule-transact-sql"></a>sp_addsubscriber_schedule (Transact-SQL)
@@ -53,14 +53,14 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
   
 `[ @agent_type = ] agent_type`Der Typ des Agents. *agent_type* ist vom Datentyp **smallint**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**0** (Standard)|Verteilungs-Agent|  
+|**0** (Standardwert)|Verteilungs-Agent|  
 |**1**|Merge-Agent|  
   
 `[ @frequency_type = ] frequency_type`Die Häufigkeit, mit der die Verteilungs-Agent geplant werden soll. *frequency_type* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
 |**2**|On-Demand-Streaming|  
@@ -69,13 +69,13 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
 |**Uhr**|Monatlich|  
 |**32**|Monatlich, relativ|  
 |**64** (Standard)|Autostart|  
-|**128**|Serie|  
+|**128**|Wiederholt|  
   
 `[ @frequency_interval = ] frequency_interval`Der Wert, der auf die von *frequency_type*festgelegte Häufigkeit angewendet werden soll. *frequency_interval* ist vom Datentyp **int**und hat den Standardwert **1**.  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`Das Datum der Verteilungs-Agent. Dieser Parameter wird verwendet, wenn *frequency_type* auf **32** (monatlich, relativ) festgelegt ist. *frequency_relative_interval* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1** (Standard)|First (Erster)|  
 |**2**|Sekunde|  
@@ -87,7 +87,7 @@ sp_addsubscriber_schedule [ @subscriber = ] 'subscriber'
   
 `[ @frequency_subday = ] frequency_subday`Gibt an, wie oft innerhalb des definierten Zeitraums neu geplant werden soll. *frequency_subday* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
 |**2**|Sekunde|  
