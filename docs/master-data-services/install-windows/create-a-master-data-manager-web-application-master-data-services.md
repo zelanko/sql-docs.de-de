@@ -1,5 +1,5 @@
 ---
-title: Erstellen einer Stammdatenmanager-Webanwendung
+title: Erstellen einer Master Data Manager-Webanwendung
 ms.custom: seo-lt-2019
 ms.date: 12/13/2019
 ms.prod: sql
@@ -11,13 +11,13 @@ ms.assetid: 241d46d7-8008-47f6-bebd-0dfff1cc856a
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 5617adb01ffc566319905942376ecaa9b78065bb
-ms.sourcegitcommit: 66407a7248118bb3e167fae76bacaa868b134734
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/21/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81728506"
 ---
-# <a name="create-a-master-data-manager-web-application-master-data-services"></a>Erstellen einer Stammdatenmanager-Webanwendung (Master Data Services)
+# <a name="create-a-master-data-manager-web-application-master-data-services"></a>Erstellen einer Master Data Manager-Webanwendung (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
@@ -78,7 +78,7 @@ ms.locfileid: "81728506"
   
 -   Ordnen Sie die Webanwendung einer [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] -Datenbank zu. Weitere Informationen finden Sie unter [Zuordnen einer Master Data Services-Datenbank und -Webanwendung](../../master-data-services/install-windows/associate-a-master-data-services-database-and-web-application.md).  
   
--   Optional konfigurieren Sie die Website, auf der die [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Webanwendung gehostet wird, so, dass eine HTTPS-Bindung verwendet wird, wenn Sie Inhalte mithilfe von Transport Layer Security (TLS) verschlüsseln möchten, das zuvor als SSL (Secure Sockets Layer) bezeichnet wurde. Sie müssen ein IIS-Tool (Internet Information Services) verwenden, z. B. IIS Manager, um das Serverzertifikat für den Webserver zu konfigurieren und eine HTTPS-Bindung und die TLS-Einstellungen für die Site zu konfigurieren. Weitere Informationen finden Sie unter [Secure a Master Data Manager Web Application](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md).  
+-   Optional können Sie die Website, die die [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Webanwendung hostet, so konfigurieren, dass Sie eine HTTPS-Bindung verwendet, wenn Sie Inhalte mithilfe von Transport Layer Security (TLS) verschlüsseln möchten, die zuvor als Secure Sockets Layer (SSL) bezeichnet wurden. Sie müssen ein Internetinformationsdienste (IIS)-Tool (z. b. IIS-Manager) verwenden, um das Serverzertifikat für den Webserver zu konfigurieren und eine HTTPS-Bindung und die TLS-Einstellungen für den Standort zu konfigurieren. Weitere Informationen finden Sie unter [Secure a Master Data Manager Web Application](../../master-data-services/install-windows/secure-a-master-data-manager-web-application.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Installieren von Master Data Services](../../master-data-services/install-windows/install-master-data-services.md)  

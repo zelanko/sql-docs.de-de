@@ -1,6 +1,6 @@
 ---
-title: Benutzerdefinierte CLR-Aggregate | Microsoft Docs
-description: Mit der SQL Server CLR-Integration können Sie benutzerdefinierte Aggregatfunktionen in verwaltetem Code erstellen, die eine Berechnung für eine Reihe von Werten durchführen und einen Wert zurückgeben.
+title: Benutzerdefinierte CLR-Aggregate | Microsoft-Dokumentation
+description: SQL Server CLR-Integration ermöglicht es Ihnen, benutzerdefinierte Aggregatfunktionen in verwaltetem Code zu erstellen, die eine Berechnung für einen Satz von Werten ausführen und einen Wert zurückgeben.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: bad9b7e8-5967-4afa-8dc8-6d840faf9372
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 9267e1e1e0b051dbbd8581b694aafacd2e5ce8a9
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488289"
 ---
 # <a name="clr-user-defined-aggregates"></a>Benutzerdefinierte CLR-Aggregate

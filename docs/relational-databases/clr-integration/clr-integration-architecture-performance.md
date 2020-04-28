@@ -1,6 +1,6 @@
 ---
-title: Leistung der CLR-Integration | Microsoft Docs
-description: In diesem Artikel werden Entwurfsoptionen für die Microsoft SQL Server-Integration mit der .NET Framework CLR erläutert, einschließlich des Kompilierungsprozesses und der Leistung.
+title: Leistung der CLR-Integration | Microsoft-Dokumentation
+description: In diesem Artikel werden die Entwurfsentscheidungen für Microsoft SQL Server Integration in die .NET Framework CLR erläutert, einschließlich des Kompilierungsprozesses und der Leistung.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ac12bf75588d70f12b4550260f9911796c1c3a56
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488152"
 ---
 # <a name="clr-integration-architecture----performance"></a>CLR-Integrationsarchitektur: Leistung
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
-  In diesem Thema werden einige der Entwurfsoptionen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] erläutert, [!INCLUDE[msCoName](../../includes/msconame-md.md)] die die Leistung der Integration mit der .NET Framework Common Language Runtime (CLR) verbessern.  
+  In diesem Thema werden einige der Entwurfs Optionen erläutert, die die Leistung [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Integration in [!INCLUDE[msCoName](../../includes/msconame-md.md)] die .NET Framework Common Language Runtime (CLR) verbessern.  
   
 ## <a name="the-compilation-process"></a>Der Kompilierungsprozess  
  Wenn während der Kompilierung von SQL-Ausdrücken ein Verweis auf eine verwaltete Routine gefunden wird, wird ein [!INCLUDE[msCoName](../../includes/msconame-md.md)] Intermediate Language (MSIL)-Stub generiert. Dieser Stub enthält Code zum Marshallen der Routineparameter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu CLR, zum Aufrufen der Funktion und zur Rückgabe des Ergebnisses. Dieser "Verbindungscode" basiert auf dem Parametertyp und der Parameterrichtung (IN, OUT oder Verweis).  
@@ -36,7 +36,7 @@ ms.locfileid: "81488152"
  Der Kompilierungsprozess erzeugt einen Funktionszeiger, der zur Laufzeit über systemeigenen Code aufgerufen werden kann. Bei benutzerdefinierten Skalarwertfunktionen erfolgt dieser Funktionsaufruf auf Zeilenbasis. Um die Kosten für den Übergang zwischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] und CLR zu minimieren, verfügen Anweisungen, die verwaltete Aufrufe beinhalten, über einen Startschritt zur Identifizierung der Zielanwendungsdomäne. Dieser Identifizierungsschritt reduziert die Kosten für den Übergang der einzelnen Zeilen.  
   
 ## <a name="performance-considerations"></a>Überlegungen zur Leistung  
- Im Folgenden werden Informationen über Leistungsaspekte in Bezug auf die CLR-Integration in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gegeben. Ausführlichere Informationen finden Sie unter "[Verwenden der CLR-Integration in SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=50332)" auf der MSDN-Website. Allgemeine Informationen zur Leistung von verwaltetem Code finden Sie unter["Verbessern der .NET-Anwendungsleistung und Skalierbarkeit](https://go.microsoft.com/fwlink/?LinkId=50333)" auf der MSDN-Website.  
+ Im Folgenden werden Informationen über Leistungsaspekte in Bezug auf die CLR-Integration in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gegeben. Ausführlichere Informationen finden Sie unter "[Verwenden der CLR-Integration in SQL Server 2005](https://go.microsoft.com/fwlink/?LinkId=50332)" auf der MSDN-Website. Allgemeine Informationen zur Leistung von verwaltetem Code finden Sie auf der MSDN-Website unter "[verbessern der Leistung und Skalierbarkeit von .NET-Anwendungen](https://go.microsoft.com/fwlink/?LinkId=50333)".  
   
 ### <a name="user-defined-functions"></a>Benutzerdefinierte Funktionen  
  CLR-Funktionen profitieren im Vergleich zu benutzerdefinierten [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen von einem schnelleren Aufrufpfad. Zudem bietet verwalteter Code im Vergleich zu [!INCLUDE[tsql](../../includes/tsql-md.md)] deutliche Leistungsvorteile in Bezug auf den prozeduralen Code, die Berechnung und die Zeichenfolgenbearbeitung. Rechenintensive CLR-Funktionen, die keinen Datenzugriff ausführen, sollten bevorzugt in verwaltetem Code geschrieben werden. [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktionen führen Datenzugriffe jedoch effizienter aus als die CLR-Integration.  
@@ -47,16 +47,16 @@ ms.locfileid: "81488152"
 ### <a name="streaming-table-valued-functions"></a>Streaming-Tabellenwertfunktionen  
  Anwendungen müssen oft als Reaktion auf einen Funktionsaufruf eine Tabelle als Ergebnis zurückgeben. Beispiele dafür sind das Lesen von Tabellendaten aus einer Datei als Teil eines Importvorgangs oder die Konvertierung von durch Trennzeichen getrennten Werte in eine relationale Darstellung. In der Regel erreichen Sie dies durch Materialisieren und Auffüllen der Ergebnistabelle, bevor sie vom Aufrufer verwendet werden kann. Mit der Integration von CLR in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird ein neuer Erweiterungsmechanismus eingeführt, der als Streaming-Tabellenwertfunktion (STVF) bezeichnet wird. Verwaltete STVF sind leistungsfähiger als vergleichbare Implementierungen mit erweiterten gespeicherten Prozeduren.  
   
- STVFs sind verwaltete Funktionen, die eine **IEnumerable-Schnittstelle** zurückgeben. **IEnumerable** verfügt über Methoden zum Navigieren im vom STVF zurückgegebenen Resultset. Wenn der STVF aufgerufen wird, wird das **zurückgegebene IEnumerable** direkt mit dem Abfrageplan verbunden. Der Abfrageplan ruft **IEnumerable-Methoden** auf, wenn Zeilen abgerufen werden müssen. Dieses Iterationsmodell ermöglicht es, dass Ergebnisse sofort nach Abruf der ersten Zeile verarbeitet werden. Es muss nicht gewartet werden, bis die gesamte Tabelle aufgefüllt ist. Dadurch wird zudem der durch den Funktionsaufruf benötigte Arbeitsspeicher stark reduziert.  
+ STVFs sind verwaltete Funktionen, die eine **IEnumerable** -Schnittstelle zurückgeben. **IEnumerable** verfügt über Methoden, um das von der STVF zurückgegebene Resultset zu navigieren. Wenn die STVF aufgerufen wird, ist die zurückgegebene **IEnumerable** direkt mit dem Abfrageplan verbunden. Der Abfrageplan ruft **IEnumerable** -Methoden auf, wenn er Zeilen abrufen muss. Dieses Iterationsmodell ermöglicht es, dass Ergebnisse sofort nach Abruf der ersten Zeile verarbeitet werden. Es muss nicht gewartet werden, bis die gesamte Tabelle aufgefüllt ist. Dadurch wird zudem der durch den Funktionsaufruf benötigte Arbeitsspeicher stark reduziert.  
   
 ### <a name="arrays-vs-cursors"></a>Arrays oder Cursor  
  Wenn [!INCLUDE[tsql](../../includes/tsql-md.md)]-Cursor Daten traversieren müssen, die als Array einfacher auszudrücken sind, kann verwalteter Code verwendet und die Leistung dadurch gesteigert werden.  
   
 ### <a name="string-data"></a>Zeichenfolgendaten  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Zeichendaten, z. B. **varchar**, können in verwalteten Funktionen vom Typ SqlString oder SqlChars sein. SqlString-Variablen erstellen im Arbeitsspeicher eine Instanz des gesamten Werts. SqlChars-Variablen stellen eine Streamingschnittstelle bereit, mit der eine höhere Leistung und bessere Skalierbarkeit erreicht wird, die jedoch nicht zum Erstellen einer Instanz des gesamten Werts im Arbeitsspeicher verwendet werden kann. Dies ist besonders für Daten großer Objekte (Large Objects, LOB) wichtig. Darüber hinaus können Server-XML-Daten über eine Streaming-Schnittstelle aufgerufen werden, die von **SqlXml.CreateReader()** zurückgegeben wird.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Zeichendaten, wie z. b. **varchar**, können in verwalteten Funktionen vom Typ SqlString oder SqlChars sein. SqlString-Variablen erstellen im Arbeitsspeicher eine Instanz des gesamten Werts. SqlChars-Variablen stellen eine Streamingschnittstelle bereit, mit der eine höhere Leistung und bessere Skalierbarkeit erreicht wird, die jedoch nicht zum Erstellen einer Instanz des gesamten Werts im Arbeitsspeicher verwendet werden kann. Dies ist besonders für Daten großer Objekte (Large Objects, LOB) wichtig. Darüber hinaus kann auf die Server-XML-Daten über eine von **SQLXML. kreatereader ()** zurückgegebene Streamingschnittstelle zugegriffen werden.  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>CLR und erweiterte gespeicherte Prozeduren im Vergleich  
- Die Microsoft.SqlServer.Server-APIs (Application Programming Interfaces), die es verwalteten Prozeduren ermöglichen, Resultsets zurück an den Client zu senden, sind leistungsfähiger als die von erweiterten gespeicherten Prozeduren verwendeten Open Data Services(ODS)-APIs. Darüber hinaus unterstützen die System.Data.SqlServer-APIs Datentypen wie **xml**, **varchar(max)**, **nvarchar(max)** und **varbinary(max)**, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]eingeführt wurden, während die ODS-APIs nicht erweitert wurden, um die neuen Datentypen zu unterstützen.  
+ Die Microsoft.SqlServer.Server-APIs (Application Programming Interfaces), die es verwalteten Prozeduren ermöglichen, Resultsets zurück an den Client zu senden, sind leistungsfähiger als die von erweiterten gespeicherten Prozeduren verwendeten Open Data Services(ODS)-APIs. Außerdem unterstützen die System. Data. SqlServer-APIs Datentypen wie **XML**, **varchar (max)**, **nvarchar (max)** und **varbinary (max)**, die in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]eingeführt wurden, während die ODS-APIs nicht für die Unterstützung der neuen Datentypen erweitert wurden.  
   
  Mit verwaltetem Code verwaltet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die Verwendung von Ressourcen wie beispielsweise Arbeitsspeicher, Threads und Synchronisierung. Das rührt daher, dass die verwalteten APIs, die diese Ressourcen verfügbar machen, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Ressourcen-Manager implementiert werden. Hingegen verfügt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] über keine Sicht für oder Kontrolle über die Ressourcenverwendung der erweiterten gespeicherten Prozedur. Wenn eine erweiterte gespeicherte Prozedur beispielsweise zu viel CPU- oder Speicherressourcen belegt, gibt es keine Möglichkeit, dies mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zu erkennen oder zu kontrollieren. Mit verwaltetem Code kann [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hingegen erkennen, dass ein bestimmter Thread längere Zeit nicht aktiv war, und dann die Ausführung des Tasks erzwingen, damit andere Arbeit geplant werden kann. Infolgedessen kann mit verwaltetem Code eine bessere Skalierbarkeit und Systemressourcenverwendung erreicht werden.  
   
@@ -66,9 +66,9 @@ ms.locfileid: "81488152"
 >  Es wird jedoch empfohlen, keine neuen erweiterten gespeicherten Prozeduren zu entwickeln, da diese Funktion veraltet ist.  
   
 ### <a name="native-serialization-for-user-defined-types"></a>Systemeigene Serialisierung für benutzerdefinierte Typen  
- Benutzerdefinierte Typen (UDTs) wurden als Erweiterungsmechanismus für das Skalartypsystem entworfen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]implementiert ein Serialisierungsformat für UDTs namens **Format.Native**. Während der Kompilierung wird die Struktur des Typs zur Generierung von MSIL geprüft, das für die betreffende Typdefinition angepasst wird.  
+ Benutzerdefinierte Typen (UDTs) wurden als Erweiterungsmechanismus für das Skalartypsystem entworfen. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]implementiert ein Serialisierungsformat für UDTs, die als **Format. Native**bezeichnet werden. Während der Kompilierung wird die Struktur des Typs zur Generierung von MSIL geprüft, das für die betreffende Typdefinition angepasst wird.  
   
- Die systemeigene Serialisierung ist die Standardimplementierung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die benutzerdefinierte Serialisierung ruft eine Methode auf, die vom Typautor für die Durchführung der Serialisierung definiert wurde. **Format.Native** Serialisierung sollte nach Möglichkeit für die beste Leistung verwendet werden.  
+ Die systemeigene Serialisierung ist die Standardimplementierung für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Die benutzerdefinierte Serialisierung ruft eine Methode auf, die vom Typautor für die Durchführung der Serialisierung definiert wurde. **Format. Native** Serialisierung sollte verwendet werden, wenn möglich, um eine optimale Leistung zu erzielen.  
   
 ### <a name="normalization-of-comparable-udts"></a>Normalisierung vergleichbarer UDTs  
  Relationale Vorgänge, z. B. die Sortierung und das Vergleichen von UDTs, verwenden direkt die binäre Darstellung des Werts. Zu diesem Zweck wird eine normalisierte (binär sortierte) Darstellung des UDT-Zustands auf Festplatte gespeichert.  

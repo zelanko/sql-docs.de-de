@@ -1,6 +1,6 @@
 ---
-title: Verwenden von System.Transaktionen | Microsoft Docs
-description: Der Namespace System.Transactions stellt ein Transaktionsframework bereit, das vollständig in die ADO.NET- und SQL Server-CLR-Integration integriert ist.
+title: Verwenden von System. Transactions | Microsoft-Dokumentation
+description: Der System. Transactions-Namespace stellt ein Transaktions Framework bereit, das vollständig in die ADO.net-und SQL Server CLR-Integration integriert ist.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,10 +18,10 @@ ms.assetid: 79656ce5-ce46-4c5e-9540-cf9869bd774b
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 7fa98e9e13062d358a6a1810485d45c8d9d3e911
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488495"
 ---
 # <a name="using-systemtransactions"></a>Verwenden von 'System.Transactions'

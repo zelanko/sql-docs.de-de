@@ -1,6 +1,6 @@
 ---
-title: Übersicht über CLR-Integration | Microsoft Docs
-description: Microsoft SQL Server, der CLR hostet, wird als CLR-Integration bezeichnet. Die Erstellung von verwaltetem Code kann die Leistung verbessern. SQL Server verwendet CAS, um verwalteten Code zu schützen.
+title: Übersicht über die CLR-Integration | Microsoft-Dokumentation
+description: Microsoft SQL Server Hosting von CLR wird als CLR-Integration bezeichnet. Die Erstellung in verwaltetem Code kann die Leistung verbessern. SQL Server verwendet CAS zum Sichern von verwaltetem Code.
 ms.custom: ''
 ms.date: 04/19/2017
 ms.prod: sql
@@ -19,10 +19,10 @@ ms.assetid: 5aa176da-3652-4afa-a742-4c40c77ce5c3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 64c30629cf7608a7816ec16c458f55f4dfad1e75
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488106"
 ---
 # <a name="clr-integration---overview"></a>CLR-Integration: Übersicht
@@ -41,7 +41,7 @@ ms.locfileid: "81488106"
  Verwalteter Code eignet sich besser als [!INCLUDE[tsql](../../includes/tsql-md.md)] für Berechnungen und komplizierte Ausführungslogik und bietet weitreichende Unterstützung für zahlreiche komplexe Tasks wie Zeichenfolgenbehandlung und reguläre Ausdrücke. Mit der Funktionalität, die in der .NET Framework -Bibliothek zur Verfügung steht, haben Sie Zugriff auf Tausende von vorgefertigten Klassen und Routinen. Auf diese Klassen und Routinen können Sie von jeder gespeicherten Prozedur, jedem Trigger und jeder benutzerdefinierten Funktion aus zugreifen. Die Basisklassenbibliothek (Base Class Library, BCL) enthält u. a. Klassen mit Funktionen zur Zeichenfolgenbearbeitung, für erweiterte mathematische Vorgänge, den Dateizugriff, die Kryptografie.  
   
 > [!NOTE]  
->  Viele dieser Klassen können ausgehend vom CLR-Code in SQL Server verwendet werden. Klassen, die nicht für eine serverseitige Verwendung geeignet sind (beispielsweise Window-Klassen) sind auf diese Weise nicht verfügbar. Weitere Informationen finden Sie unter [Unterstützte .NET Framework-Bibliotheken](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
+>  Viele dieser Klassen können ausgehend vom CLR-Code in SQL Server verwendet werden. Klassen, die nicht für eine serverseitige Verwendung geeignet sind (beispielsweise Window-Klassen) sind auf diese Weise nicht verfügbar. Weitere Informationen finden Sie [unter Supported .NET Framework Libraries](../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
   
  Einer der Vorteile von verwaltetem Code besteht in der Typsicherheit, d. h. die Gewissheit, dass der Code nur in einer genau definierten und zulässigen Weise auf Typen zugreift. Bevor verwalteter Code ausgeführt wird, überprüft die CLR, dass der Code sicher ist. Beispielsweise wird der Code dahingehend überprüft, dass kein Speicher gelesen wird, der nicht zuvor geschrieben wurde. Die CLR kann auch dazu beitragen, sicherzustellen, dass der Code nicht verwalteten Speicher bearbeitet.  
   
@@ -60,7 +60,7 @@ ms.locfileid: "81488106"
  Erweiterte gespeicherte Prozeduren werden erstellt, um Funktionen auszuführen, die mit gespeicherten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Prozeduren nicht möglich sind. Erweiterte gespeicherte Prozeduren können jedoch die Integrität des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Prozesses beeinträchtigen, während verwalteter Code auf Typsicherheit überprüft wird und daher keine Gefährdung darstellt. Darüber hinaus sind Speicherverwaltungsfunktionen, Planung von Threads und Fibers und Synchronisierungsdienste des verwalteten Codes der CLR und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]besser integriert. Die CLR-Integration bietet mehr Sicherheit als erweiterte gespeicherte Prozeduren beim Erstellen der gespeicherten Prozeduren, die Sie benötigen, um Tasks auszuführen, die in [!INCLUDE[tsql](../../includes/tsql-md.md)]nicht möglich sind. Weitere Informationen zu CLR-Integration und erweiterte gespeicherte Prozeduren finden Sie unter [Performance of CLR Integration](../../relational-databases/clr-integration/clr-integration-architecture-performance.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Installieren von .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
+ [Installieren des .NET Framework](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)   
  [Architektur der CLR-Integration](https://msdn.microsoft.com/library/05e4b872-3d21-46de-b4d5-739b5f2a0cf9)   
  [Datenzugriff von CLR-Datenbankobjekten](../../relational-databases/clr-integration/data-access/data-access-from-clr-database-objects.md)   
  [Erste Schritte mit der CLR-Integration](../../relational-databases/clr-integration/database-objects/getting-started-with-clr-integration.md)  

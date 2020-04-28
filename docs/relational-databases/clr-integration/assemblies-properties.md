@@ -1,6 +1,6 @@
 ---
-title: Baugruppeneigenschaften (Allgemeine Seite) | Microsoft Docs
-description: Sie können Eigenschaften für eine Assembly anzeigen oder ändern, die auf SQL Server gehostet wird. Dazu gehören Assemblyname und -besitzer, Berechtigungssatz und andere Eigenschaften.
+title: Assemblyeigenschaften (Seite Allgemein) | Microsoft-Dokumentation
+description: Sie können Eigenschaften für eine Assembly, die auf SQL Server gehostet wird, anzeigen oder ändern. Hierzu gehören AssemblyName und-Besitzer, Berechtigungs Satz und andere Eigenschaften.
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -13,10 +13,10 @@ ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 64e1847db5477ce556824d1b424649f617a0fa9f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488019"
 ---
 # <a name="assemblies---properties"></a>Assemblys: Eigenschaften
@@ -30,7 +30,7 @@ ms.locfileid: "81488019"
  **Assemblybesitzer**  
  Geben Sie den Besitzernamen oder Schemanamen ein, oder wählen Sie einen aus der Liste aus.  
   
- **Berechtigungssatz**  
+ **Berechtigungs Satz**  
  Legen Sie die Sicherheitsstufe für die Assembly fest. Drei Sicherheitsstufen stehen zur Verfügung: **Sicher**, **Externer Zugriff**und **Uneingeschränkt** .  
   
  **Pfad zur Assembly**  

@@ -1,5 +1,5 @@
 ---
-title: sys.dm_external_script_requests | Microsoft Docs
+title: sys. dm_external_script_requests | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 10/28/2018
 ms.prod: sql
@@ -19,10 +19,10 @@ ms.assetid: e7e7c50f-b8b2-403c-b8c8-1955da5636c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 70f1024f73ff955facaa2b6a2af2b9f5f4ccf247
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488199"
 ---
 # <a name="sysdm_external_script_requests"></a>sys.dm_external_script_requests
@@ -32,7 +32,7 @@ Gibt eine Zeile für jedes aktive Workerkonto zurück, das ein externes Skript a
   
 > [!NOTE] 
 >  
-> Diese dynamische Verwaltungsansicht (DMV) ist nur verfügbar, wenn Sie die Funktion installiert und aktiviert haben, die die Ausführung externer Skripts unterstützt. Weitere Informationen finden Sie unter [R-Dienste in SQL Server 2016](../../machine-learning/r/sql-server-r-services.md) und [Machine Learning Services (R, Python) in SQL Server 2017 und höher](../../machine-learning/sql-server-machine-learning-services.md).  
+> Diese dynamische Verwaltungs Sicht (Dynamic Management View, DMV) ist nur verfügbar, wenn Sie die Funktion installiert und aktiviert haben, die die Ausführung externer Skripts unterstützt. Weitere Informationen finden Sie unter [r Services in SQL Server 2016](../../machine-learning/r/sql-server-r-services.md) und [Machine Learning Services (r, python) in SQL Server 2017 und](../../machine-learning/sql-server-machine-learning-services.md)höher.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
@@ -52,7 +52,7 @@ Gibt eine Zeile für jedes aktive Workerkonto zurück, das ein externes Skript a
 
 Diese Sicht kann über die Skriptsprachen-ID gefiltert werden.
 
-Die Sicht gibt auch das Workerkonto zurück, unter dem das Skript ausgeführt wird. Informationen zu Workerkonten, die von den externen Skripts verwendet werden, finden Sie im Abschnitt Identitäten, die bei der Verarbeitung verwendet werden (SQLRUserGroup) in [der Sicherheitsübersicht für das Erweiterbarkeitsframework in SQL Server Machine Learning Services](../../machine-learning/concepts/security.md#sqlrusergroup).
+Die Sicht gibt auch das Workerkonto zurück, unter dem das Skript ausgeführt wird. Informationen zu workerkonten, die von externen Skripts verwendet werden, finden Sie im Abschnitt "Identitäten in Verarbeitung (sqlrusergroup)" in der [Sicherheitsübersicht für das Erweiterbarkeit Framework in SQL Server Machine Learning Services](../../machine-learning/concepts/security.md#sqlrusergroup).
 
 Die GUID, die im **external_script_request_id** -Feld zurückgegeben wird, entspricht auch dem Dateinamen des geschützten Verzeichnisses, in dem temporäre Dateien gespeichert werden. Jedes Workerkonto, z. B. MSSQLSERVER01, entspricht einer einzelnen SQL-Anmeldung oder einem einzelnen Windows-Benutzer und kann dazu verwendet werden, mehrere Skriptanforderungen auszuführen. Standardmäßig werden diese temporären Dateien nach Abschluss des angeforderten Skripts gelöscht.
  
@@ -81,9 +81,9 @@ external_script_request_id  |language  |degree_of_parallelism  |external_user_na
 
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungsansichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Execution Related Dynamic Management Views and Functions &#40;Transact-SQL&#41; (Dynamische Verwaltungssichten und Funktionen im Zusammenhang mit der Ausführung (Transact-SQL))](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)  
-[sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
+[sys. dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)
 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)  
   
 

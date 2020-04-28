@@ -1,6 +1,6 @@
 ---
-title: Aktualisieren von UDT-Spalten mit DataAdapters | Microsoft Docs
-description: UDTs in einer SQL Server-Datenbank werden mithilfe von System.Data.DataSet und System.Data.SqlClient.SqlDataAdapter zum Abrufen und Ändern von Daten unterstützt.
+title: Aktualisieren von UDT-Spalten mit DataAdapters | Microsoft-Dokumentation
+description: UDTs in einer SQL Server Datenbank werden mithilfe von System. Data. DataSet und System. Data. SqlClient. SqlDataAdapter zum Abrufen und Ändern von Daten unterstützt.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,18 +24,18 @@ ms.assetid: 4489c938-ba03-4fdb-b533-cc3f5975ae50
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 08c36963088684d415534e091a2764f576a86d22
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81488225"
 ---
 # <a name="accessing-user-defined-types---updating-udt-columns-with-dataadapters"></a>Zugreifen auf benutzerdefinierte Typen: Aktualisieren von UDT-Spalten mit DataAdapters
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Benutzerdefinierte Typen (UDTs) werden mithilfe eines **System.Data.DataSet** und eines **System.Data.SqlClient.SqlDataAdapter** zum Abrufen und Ändern von Daten unterstützt.  
+  Benutzerdefinierte Typen (User-Defined Types, UDTs) werden mithilfe von **System. Data. DataSet** und **System. Data. SqlClient. SqlDataAdapter** zum Abrufen und Ändern von Daten unterstützt.  
   
 ## <a name="populating-a-dataset"></a>Auffüllen eines Datasets  
- Mit einer [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung können Sie UDT-Spaltenwerte zum Auffüllen eines Datasets mit einem Datenadapter auswählen. Im folgenden Beispiel wird davon ausgegangen, dass eine **Punktetabelle** mit der folgenden Struktur und einigen Beispieldaten definiert ist. Die [!INCLUDE[tsql](../../includes/tsql-md.md)] folgenden Anweisungen erstellen die **Tabelle Punkte** und fügen einige Zeilen ein.  
+ Mit einer [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT-Anweisung können Sie UDT-Spaltenwerte zum Auffüllen eines Datasets mit einem Datenadapter auswählen. Im folgenden Beispiel wird davon ausgegangen, dass Sie eine **Points** -Tabelle mit der folgenden Struktur und einigen Beispiel Daten definiert haben. Die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)] Anweisungen erstellen die **Points** -Tabelle und fügen einige Zeilen ein.  
   
 ```  
 CREATE TABLE dbo.Points (id int PRIMARY Key, p Point);  
@@ -47,7 +47,7 @@ INSERT INTO dbo.Points VALUES (4, CONVERT(Point, '4,6'));
 GO  
 ```  
   
- Die folgende ADO.NET Codefragment eine gültige Verbindungszeichenfolge abruft, einen neuen **SqlDataAdapter**erstellt und eine **System.Data.DataTable** mit den Datenzeilen aus der **Tabelle Points** auffüllt.  
+ Das folgende ADO.NET-Code Fragment Ruft eine gültige Verbindungs Zeichenfolge ab, erstellt einen neuen **SqlDataAdapter**und füllt eine **System. Data. dattable** mit den Daten Zeilen aus der **Points** -Tabelle auf.  
   
 ```vb  
 Dim da As New SqlDataAdapter( _  
@@ -66,14 +66,14 @@ da.Fill(datTable);
 ## <a name="updating-udt-data-in-a-dataset"></a>Aktualisieren von UDT-Daten in einem Dataset  
  Sie können zwei Methoden verwenden, um eine UDT-Spalte in einem **DataSet**zu aktualisieren:  
   
--   Stellen Sie benutzerdefinierte **InsertCommand**-, **UpdateCommand-** und **DeleteCommand-Objekte** für ein **SqlDataAdapter-Objekt** bereit.  
+-   Stellen Sie benutzerdefinierte **InsertCommand**-, **UpdateCommand** -und **DeleteCommand** -Objekte für ein **SqlDataAdapter** -Objekt bereit.  
   
--   Verwenden Sie den Befehlsgenerator (**System.Data.SqlClient.SqlCommandBuilder**), um automatisch die Befehle INSERT, UPDATE und DELETE für Sie zu erstellen. Um eine Konflikterkennung zu erhalten, fügen Sie der Tabelle, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die UDT enthält, eine **Zeitstempelspalte** (alias **rowversion**) hinzu. Der **Zeitstempeldatentyp** ermöglicht es Ihnen, die Zeilen in einer Tabelle mit einer Versionsstempel zu versehen, und sie ist garantiert innerhalb einer Datenbank eindeutig. Wird ein Wert in der Tabelle geändert, aktualisiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die binäre 8-Bit-Zahl für die von der Änderung betroffenen Zeile.  
+-   Verwenden Sie den Befehls-Generator (**System. Data. SqlClient. SqlCommandBuilder**), um automatisch die INSERT-, Update-und DELETE-Befehle für Sie zu erstellen. Fügen Sie der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Tabelle, die den UDT enthält, eine **Zeitstempel** -Spalte (Alias- **rowversion**) hinzu, um eine Konflikterkennung zu erhalten. Der **Zeitstempel** -Datentyp ermöglicht es Ihnen, die Zeilen in einer Tabelle zu versionstempeln und innerhalb einer Datenbank eindeutig zu sein. Wird ein Wert in der Tabelle geändert, aktualisiert [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die binäre 8-Bit-Zahl für die von der Änderung betroffenen Zeile.  
   
- Beachten Sie, dass **sqlCommandBuilder** die UDT für die Konflikterkennung nur berücksichtigt, wenn in der zugrunde liegenden Tabelle eine **Zeitstempelspalte** vorhanden ist. UDTs können zwar vergleichbar sein, sie sind jedoch nicht in der WHERE-Klausel enthalten, wenn die Option zum Vergleichen der ursprünglichen Werte verwendet wird, um einen Befehl zu erstellen.  
+ Beachten Sie, dass **SqlCommandBuilder** den UDT nicht für die Konflikterkennung berücksichtigt, es sei denn, in der zugrunde liegenden Tabelle ist eine **Zeitstempel** -Spalte vorhanden. UDTs können zwar vergleichbar sein, sie sind jedoch nicht in der WHERE-Klausel enthalten, wenn die Option zum Vergleichen der ursprünglichen Werte verwendet wird, um einen Befehl zu erstellen.  
   
 ### <a name="example"></a>Beispiel  
- Im folgenden Beispiel ist die Erstellung einer zweiten Tabelle erforderlich, die die **Spalte Punkt** UDT sowie eine **Zeitstempelspalte** enthält. Beide Tabellen werden verwendet, um zu veranschaulichen, wie benutzerdefinierte Befehlsobjekte zum Aktualisieren von Daten erstellt und wie sie mithilfe einer **Zeitstempelspalte** aktualisiert werden. Führen Sie die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen aus, um die zweite Tabelle zu erstellen und mit Beispieldaten aufzufüllen.  
+ Das folgende Beispiel erfordert die Erstellung einer zweiten Tabelle, die die UDT- **Punkt** Spalte und eine **Zeitstempel** -Spalte enthält. Beide Tabellen werden verwendet, um zu veranschaulichen, wie benutzerdefinierte Befehls Objekte zum Aktualisieren von Daten erstellt werden und wie mithilfe einer **Zeitstempel** -Spalte aktualisiert wird. Führen Sie die folgenden [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisungen aus, um die zweite Tabelle zu erstellen und mit Beispieldaten aufzufüllen.  
   
 ```  
 CREATE TABLE dbo.Points_ts (id int PRIMARY KEY, p Point, ts timestamp);  
@@ -86,9 +86,9 @@ INSERT INTO dbo.Points_ts (id, p) VALUES (4, CONVERT(Point, '4,6'));
   
  Das folgende ADO.NET-Beispiel verfügt über zwei Methoden:  
   
--   **UserProvidedCommands**, das veranschaulicht, wie **InsertCommand** **-, UpdateCommand**und **DeleteCommand-Objekte** zum Aktualisieren der **Punkt-UDT** in der Tabelle **"Punkte"** (die keine **Zeitstempelspalte** enthält) bereitgestellt werden.  
+-   **UserProvidedCommands**, das zeigt, wie **InsertCommand**-, **UpdateCommand**-und **DeleteCommand** -Objekte zum Aktualisieren des **Point** -UDT in der **Points** -Tabelle (die keine **Zeitstempel** -Spalte enthält) bereitgestellt werden.  
   
--   **CommandBuilder**, der veranschaulicht, wie ein **SqlCommandBuilder** in der **Points_ts** Tabelle verwendet wird, die die **Spalte Zeitstempel** enthält.  
+-   **CommandBuilder**, das veranschaulicht, wie ein **SqlCommandBuilder** in der **Points_ts** Tabelle verwendet wird, die die **Zeitstempel** -Spalte enthält.  
   
 ```vb  
 Imports System  

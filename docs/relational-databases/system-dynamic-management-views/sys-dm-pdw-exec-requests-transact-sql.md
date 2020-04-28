@@ -1,5 +1,5 @@
 ---
-title: sys.dm_pdw_exec_requests (Transact-SQL) | Microsoft Docs
+title: sys. dm_pdw_exec_requests (Transact-SQL) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 11/05/2019
 ms.prod: sql
@@ -13,57 +13,57 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 4f4ebcbf84da7d899b4d4cbd861cfb2ae3f75863
-ms.sourcegitcommit: c37777216fb8b464e33cd6e2ffbedb6860971b0d
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/23/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "82087560"
 ---
-# <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys.dm_pdw_exec_requests (Transact-SQL)
+# <a name="sysdm_pdw_exec_requests-transact-sql"></a>sys. dm_pdw_exec_requests (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  Enthält Informationen zu allen Anforderungen, [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]die derzeit oder kürzlich in aktiv sind. Es listet eine Zeile pro Anforderung/Abfrage auf.  
+  Enthält Informationen zu allen Anforderungen, die derzeit oder vor [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]kurzem in aktiv sind. Es wird eine Zeile pro Anforderung/Abfrage aufgelistet.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
-|request_id|**nvarchar(32)**|Schlüssel für diese Ansicht. Eindeutige numerische ID, die der Anforderung zugeordnet ist.|Einzigartig für alle Anforderungen im System.|  
-|session_id|**nvarchar(32)**|Eindeutige numerische ID, die der Sitzung zugeordnet ist, in der diese Abfrage ausgeführt wurde. Siehe [sys.dm_pdw_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
-|status|**nvarchar(32)**|Aktueller Status der Anforderung.|'Running', 'Suspended', 'Completed', 'Canceled', 'Failed'.|  
-|submit_time|**datetime**|Zeitpunkt, zu dem der Antrag zur Ausführung übermittelt wurde.|Gültige **Datumszeit** kleiner oder gleich der aktuellen Uhrzeit und start_time.|  
-|start_time|**datetime**|Zeitpunkt, zu dem die Anforderungsausführung gestartet wurde.|NULL für Anforderungen in die Warteschlange; andernfalls die **gültigkeitsdatumszeit** kleiner oder gleich der aktuellen Zeit.|  
-|end_compile_time|**datetime**|Zeitpunkt, zu dem das Modul die Kompilierung der Anforderung abgeschlossen hat.|NULL für Anforderungen, die noch nicht kompiliert wurden; andernfalls eine gültige **Datumszeit,** die kleiner als start_time und kleiner oder gleich der aktuellen Zeit ist.|
-|end_time|**datetime**|Zeitpunkt, zu dem die Anforderungsausführung abgeschlossen, fehlgeschlagen oder abgebrochen wurde.|Null für in die Warteschlange gestellte oder aktive Anforderungen; andernfalls eine gültige **Datumszeit** kleiner oder gleich der aktuellen Zeit.|  
-|total_elapsed_time|**int**|Die Ausführungszeit seit dem Start der Anforderung in Millisekunden verstrichen.|Zwischen 0 und dem Unterschied zwischen start_time und end_time.</br></br> Wenn total_elapsed_time den Maximalwert für eine ganze Zahl überschreitet, ist total_elapsed_time weiterhin der Maximalwert. Diese Bedingung generiert die Warnung "Der Maximalwert wurde überschritten."</br></br> Der Maximalwert in Millisekunden entspricht 24,8 Tagen.|  
-|label|**nvarchar(255)**|Optionale Beschriftungszeichenfolge, die einigen SELECT-Abfrageanweisungen zugeordnet ist.|Jede Zeichenfolge, die 'a-z','A-Z','0-9','_' enthält.|  
-|error_id|**nvarchar(36)**|Eindeutige ID des Fehlers, der der Anforderung zugeordnet ist, falls vorhanden.|Siehe [sys.dm_pdw_errors &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); auf NULL gesetzt, wenn kein Fehler aufgetreten ist.|  
-|database_id|**int**|Bezeichner der Datenbank, die vom expliziten Kontext verwendet wird (z. B. USE DB_X).|Siehe ID in [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
-|command|**nvarchar(4000)**|Enthält den vollständigen Text der Anforderung, wie er vom Benutzer übermittelt wurde.|Jeder gültige Abfrage- oder Anforderungstext. Abfragen, die länger als 4000 Byte sind, werden abgeschnitten.|  
-|resource_class|**nvarchar(20)**|Die Arbeitsauslastungsgruppe, die für diese Anforderung verwendet wird. |Statische Ressourcenklassen</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Dynamische Ressourcenklassen</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
-|importance|**nvarchar(128)**|Die Wichtigkeit, die die Anforderung festlegt, die ausgeführt wird.  Dies ist die relative Bedeutung einer Anforderung in dieser Workloadgruppe und über Workloadgruppen hinweg für freigegebene Ressourcen.  Die in der Klassifier angegebene Wichtigkeit überschreibt die Wichtigkeitseinstellung der Workloadgruppe.</br>Gilt für: Azure SQL Data Warehouse|NULL</br>niedrig</br>below_normal</br>normal (Standard)</br>above_normal</br>high|
-|group_name|**sysname** |Bei Anforderungen, die Ressourcen verwenden, ist group_name der Name der Arbeitsauslastungsgruppe, unter der die Anforderung ausgeführt wird.  Wenn die Anforderung keine Ressourcen verwendet, ist group_name null.</br>Gilt für: Azure SQL Data Warehouse|
-|classifier_name|**sysname**|Für Anforderungen, die Ressourcen verwenden, Der Name des Klassifiierers, der zum Zuweisen von Ressourcen und wichtig verwendet wird.||
-|resource_allocation_percentage|**dezimal(5,2)**|Der prozentuale Betrag der Ressourcen, die der Anforderung zugeordnet sind.</br>Gilt für: Azure SQL Data Warehouse|
-|result_cache_hit|**Hexadezimale**|Gibt an, ob eine abgeschlossene Abfrage den Ergebnissatzcache verwendet hat.  </br>Gilt für: Azure SQL Data Warehouse| 1 = Ergebnissatz-Cache-Treffer </br> 0 = Ergebnissatz-Cache-Fehler </br> Negative Werte = Gründe, warum die Zwischenspeicherung von Resultsets nicht verwendet wurde.  Weitere Informationen finden Sie im Abschnitt "Bemerkungen".|
+|request_id|**nvarchar(32)**|Der Schlüssel für diese Ansicht. Eindeutige numerische ID, die der Anforderung zugeordnet ist.|Eindeutig für alle Anforderungen im System.|  
+|session_id|**nvarchar(32)**|Eindeutige numerische ID, die der Sitzung zugeordnet ist, in der die Abfrage ausgeführt wurde. Weitere Informationen finden Sie unter [sys. dm_pdw_exec_sessions &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).||  
+|status|**nvarchar(32)**|Aktueller Status der Anforderung.|"Wird ausgeführt", "angehalten", "abgeschlossen", "abgebrochen", "fehlerhaft".|  
+|submit_time|**datetime**|Der Zeitpunkt, zu dem die Anforderung zur Ausführung übermittelt wurde.|Gültiger **DateTime** -Wert, der kleiner oder gleich der aktuellen Uhrzeit und start_time ist.|  
+|start_time|**datetime**|Der Zeitpunkt, zu dem die Ausführung der Anforderung gestartet wurde.|NULL bei Anforderungen in der Warteschlange; Andernfalls ist ein gültiger **DateTime** -Wert kleiner oder gleich der aktuellen Zeit.|  
+|end_compile_time|**datetime**|Der Zeitpunkt, zu dem die Engine das Kompilieren der Anforderung abgeschlossen hat.|NULL für Anforderungen, die noch nicht kompiliert wurden. andernfalls ein gültiger **DateTime** -Wert, der kleiner als start_time und kleiner oder gleich der aktuellen Uhrzeit ist.|
+|end_time|**datetime**|Der Zeitpunkt, zu dem die Ausführung der Anforderung abgeschlossen wurde, fehlgeschlagen ist oder abgebrochen wurde.|NULL für Warteschlangen-oder aktive Anforderungen; andernfalls ein gültiger **DateTime** -Wert, der kleiner oder gleich der aktuellen Zeit ist.|  
+|total_elapsed_time|**int**|Verstrichene Zeit seit dem Start der Anforderung in Millisekunden.|Zwischen 0 und dem Unterschied zwischen start_time und end_time.</br></br> Wenn total_elapsed_time den maximalen Wert für eine ganze Zahl überschreitet, ist total_elapsed_time weiterhin der Höchstwert. Mit dieser Bedingung wird die Warnung "der Höchstwert wurde überschritten" generiert.</br></br> Der maximale Wert in Millisekunden entspricht 24,8 Tagen.|  
+|label|**nvarchar(255)**|Optionale Zeichnungs Zeichenfolge, die einigen SELECT-Abfrage Anweisungen zugeordnet ist.|Eine beliebige Zeichenfolge, die "a-z", "a-z", "0-9", "_" enthält.|  
+|error_id|**nvarchar (36)**|Eindeutige ID des Fehlers, der der Anforderung zugeordnet ist, sofern vorhanden.|Weitere Informationen finden Sie unter [sys. dm_pdw_errors &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md); auf NULL festgelegt, wenn kein Fehler aufgetreten ist.|  
+|database_id|**int**|Der Bezeichner der vom expliziten Kontext verwendeten Datenbank (z. b. DB_X verwenden).|Weitere Informationen finden Sie unter ID in [sys. Datenbanken &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md).|  
+|command|**nvarchar(4000)**|Enthält den vollständigen Text der Anforderung, wie er vom Benutzer gesendet wurde.|Jeder gültige Abfrage-oder Anforderungs Text. Abfragen, die länger als 4000 Bytes sind, werden abgeschnitten.|  
+|resource_class|**nvarchar (20)**|Die für diese Anforderung verwendete Arbeits Auslastungs Gruppe. |Statische Ressourcenklassen</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80</br>            </br>Dynamische Ressourcenklassen</br>SmallRC</br>MediumRC</br>LargeRC</br>XLargeRC|
+|importance|**nvarchar(128)**|Die Wichtigkeits Einstellung, die die Anforderung an ausgeführt hat.  Dies ist die relative Wichtigkeit einer Anforderung in dieser Arbeits Auslastungs Gruppe und zwischen Arbeits Auslastungs Gruppen für freigegebene Ressourcen.  Die in der Klassifizierung angegebene Wichtigkeit überschreibt die Wichtigkeits Einstellung der Arbeits Auslastungs Gruppe.</br>Gilt für: Azure SQL Data Warehouse|NULL</br>niedrig</br>below_normal</br>Normal (Standard)</br>above_normal</br>high|
+|group_name|**sysname** |Bei Anforderungen, die Ressourcen verwenden, ist group_name der Name der Arbeits Auslastungs Gruppe, unter der die Anforderung ausgeführt wird.  Wenn die Anforderung keine Ressourcen verwendet, ist group_name NULL.</br>Gilt für: Azure SQL Data Warehouse|
+|classifier_name|**sysname**|Für Anforderungen, die Ressourcen verwenden, den Namen des Klassifizierers, der zum Zuweisen von Ressourcen und Wichtigkeit verwendet wird.||
+|resource_allocation_percentage|**Dezimalzahl (5, 2)**|Die prozentuale Menge der Ressourcen, die der Anforderung zugeordnet sind.</br>Gilt für: Azure SQL Data Warehouse|
+|result_cache_hit|**Hexadezimal**|Erläutert, ob für eine abgeschlossene Abfrage der resultsetcache verwendet wurde.  </br>Gilt für: Azure SQL Data Warehouse| 1 = resultsetcache-Treffer </br> 0 = resultsetcache-Fehler </br> Negative Werte = Gründe, warum das Zwischenspeichern von Resultsets nicht verwendet wurde.  Weitere Informationen finden Sie im Abschnitt "Hinweise".|
 ||||
   
 ## <a name="remarks"></a>Bemerkungen 
- Informationen zu den maximalen Zeilen, die von dieser Ansicht beibehalten werden, finden Sie im Abschnitt Metadaten im Thema [Kapazitätsgrenzen.](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)
+ Informationen über die maximale Anzahl von Zeilen, die in dieser Sicht beibehalten werden, finden Sie im Abschnitt "Metadaten" im Thema [Kapazitäts Limits](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata) .
 
- Die result_cache_hit ist eine Bitmaske für die Verwendung des Ergebnissatzcache einer Abfrage.  Diese Spalte kann die [| (Bitweise ODER)](../../t-sql/language-elements/bitwise-or-transact-sql.md) Produkt eines oder mehrerer dieser Werte:  
+ Der result_cache_hit ist eine Bitmaske der Verwendung von resultsetcache einer Abfrage.  Diese Spalte kann [| (Bitweises OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) Produkt mindestens eines der folgenden Werte:  
   
 |Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**1**|Ergebnissatz-Cache-Treffer|  
-|-**0x00**|Ergebnissatz-Cache-Fehler|  
-|-**0x01**|Die Zwischenspeicherung von Resultsets ist in der Datenbank deaktiviert.|  
-|-**0x02**|Die Zwischenspeicherung des Ergebnissatzes ist für die Sitzung deaktiviert. | 
-|-**0x04**|Die Zwischenspeicherung von Resultsets ist deaktiviert, da keine Datenquellen für die Abfrage vorhanden sind.|  
-|-**0x08**|Das Zwischenspeichern von Resultsets ist aufgrund von Sicherheitsprädikaten auf Zeilenebene deaktiviert.|  
-|-**0x10**|Die Zwischenspeicherung von Resultsets ist aufgrund der Verwendung von Systemtabelle, temporärer Tabelle oder externer Tabelle in der Abfrage deaktiviert.|  
-|-**0x20**|Die Zwischenspeicherung von Resultsets ist deaktiviert, da die Abfrage Laufzeitkonstanten, benutzerdefinierte Funktionen oder nicht deterministische Funktionen enthält.|  
-|-**0x40**|Die Zwischenspeicherung des Ergebnissatzes ist aufgrund der geschätzten Größe des Resultsets >10 GB deaktiviert.|  
-|-**0x80**|Die Zwischenspeicherung des Resultsets ist deaktiviert, da das Resultset Zeilen mit großer Größe (>64 kb) enthält.|  
+|**1**|Resultsetcache-Treffer|  
+|-**0x00**|Resultsetcache-Fehler|  
+|-**0x01**|Das Zwischenspeichern von Resultsets ist für die Datenbank deaktiviert.|  
+|-**0x02**|Das Zwischenspeichern von Resultsets ist für die Sitzung deaktiviert. | 
+|-**0x04**|Das Zwischenspeichern von Resultsets ist deaktiviert, weil keine Datenquellen für die Abfrage verfügbar sind.|  
+|-**0x08**|Das Zwischenspeichern von Resultsets ist aufgrund von Sicherheits Prädikaten auf Zeilenebene deaktiviert.|  
+|-**0x10**|Das Zwischenspeichern von Resultsets ist aufgrund der Verwendung der Systemtabelle, der temporären Tabelle oder der externen Tabelle in der Abfrage deaktiviert.|  
+|-**0x20**|Das Zwischenspeichern von Resultsets ist deaktiviert, da die Abfrage Lauf Zeitkonstanten, benutzerdefinierte Funktionen oder nicht deterministische Funktionen enthält.|  
+|-**0x40**|Das Zwischenspeichern von Resultsets ist deaktiviert, da die geschätzte Größe des Resultsets >10 GB beträgt.|  
+|-**0x80**|Das Zwischenspeichern von Resultsets ist deaktiviert, da das Resultset Zeilen mit großer Größe (>64 KB) enthält.|  
   
 ## <a name="permissions"></a>Berechtigungen
 
@@ -71,11 +71,11 @@ ms.locfileid: "82087560"
   
 ## <a name="security"></a>Sicherheit
 
- sys.dm_pdw_exec_requests filtert Abfrageergebnisse nicht nach datenbankspezifischen Berechtigungen. Anmeldungen mit VIEW SERVER STATE-Berechtigung können Ergebnisabfrageergebnisse für alle Datenbanken erhalten  
+ sys. dm_pdw_exec_requests filtert Abfrageergebnisse nicht nach datenbankspezifischen Berechtigungen. Anmeldungen mit der View Server State-Berechtigung können Ergebnisse-Abfrageergebnisse für alle Datenbanken abrufen.  
   
 >[!WARNING]  
->Ein Angreifer kann sys.dm_pdw_exec_requests verwenden, um Informationen zu bestimmten Datenbankobjekten abzurufen, indem er einfach über VIEW SERVER STATE-Berechtigungen verfügt und keine datenbankspezifische Berechtigung hat.  
+>Ein Angreifer kann sys. dm_pdw_exec_requests zum Abrufen von Informationen über bestimmte Datenbankobjekte verwenden, indem er einfach die View Server State-Berechtigung und keine datenbankspezifische Berechtigung besitzt.  
   
 ## <a name="see-also"></a>Weitere Informationen
 
- [SQL Data Warehouse und Parallel Data Warehouse Dynamic Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)
+ [SQL Data Warehouse und parallele Data Warehouse dynamischen Verwaltungs Sichten &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)
