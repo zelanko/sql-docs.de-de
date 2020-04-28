@@ -1,5 +1,5 @@
 ---
-title: Bindungsparameter ODBC | Microsoft Docs
+title: Bindungs Parameter ODBC | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,32 +13,32 @@ ms.assetid: 7538a82b-b08b-4c8f-9809-e4ccea16db11
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 6e314bb9e3a1a979976a450e2a45a286ec54dfe7
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306381"
 ---
 # <a name="binding-parameters-odbc"></a>Binden von Parametern (ODBC)
-Jeder Parameter in einer SQL-Anweisung muss einer Variablen in der Anwendung zugeordnet oder *gebunden werden,* bevor die Anweisung ausgeführt wird. Wenn die Anwendung eine Variable an einen Parameter bindet, wird diese Variable - Adresse, C-Datentyp usw. - an den Treiber beschrieben. Außerdem wird der Parameter selbst beschrieben - SQL-Datentyp, Genauigkeit usw. Der Treiber speichert diese Informationen in der Struktur, die er für diese Anweisung verwaltet, und verwendet die Informationen, um den Wert aus der Variablen abzurufen, wenn die Anweisung ausgeführt wird.  
+Jeder Parameter in einer SQL-Anweisung muss einer Variablen in der Anwendung zugeordnet oder *gebunden* werden, bevor die Anweisung ausgeführt wird. Wenn die Anwendung eine Variable an einen Parameter bindet, wird die Variable-Address, der C-Datentyp usw. für den Treiber beschrieben. Außerdem wird der Parameter selbst-SQL-Datentyp, Genauigkeit usw. beschrieben. Der Treiber speichert diese Informationen in der Struktur, die er für diese Anweisung verwaltet, und verwendet die Informationen, um den Wert aus der Variablen abzurufen, wenn die Anweisung ausgeführt wird.  
   
- Parameter können jederzeit gebunden oder zurückgeprallt werden, bevor eine Anweisung ausgeführt wird. Wenn ein Parameter zurückerprobt wird, nachdem eine Anweisung ausgeführt wurde, wird die Bindung erst angewendet, wenn die Anweisung erneut ausgeführt wird. Um einen Parameter an eine andere Variable zu binden, bindet eine Anwendung den Parameter einfach erneut an die neue Variable. die vorherige Bindung wird automatisch freigegeben.  
+ Parameter können jederzeit vor der Ausführung einer-Anweisung gebunden oder erneut gebunden werden. Wenn ein Parameter nach dem Ausführen einer-Anweisung neu gebunden wird, gilt die Bindung erst, wenn die-Anweisung erneut ausgeführt wird. Um einen Parameter an eine andere Variable zu binden, bindet eine Anwendung einfach den Parameter an die neue Variable. die vorherige Bindung wird automatisch freigegeben.  
   
- Eine Variable bleibt an einen Parameter gebunden, bis eine andere Variable an den Parameter gebunden ist, bis alle Parameter durch Aufrufen von **SQLFreeStmt** mit der Option SQL_RESET_PARAMS oder bis die Anweisung freigegeben wird. Aus diesem Grund muss die Anwendung sicherstellen, dass Variablen erst freigegeben werden, nachdem sie ungebunden sind. Weitere Informationen finden Sie unter [Zuweisen und Verteilen von Puffern](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md).  
+ Eine Variable bleibt an einen Parameter gebunden, bis eine andere Variable an den-Parameter gebunden ist, bis die Bindung aller Parameter durch Aufrufen von **SQLFreeStmt** mit der SQL_RESET_PARAMS-Option oder bis zur Freigabe der-Anweisung aufgehoben wird. Aus diesem Grund muss die Anwendung sicherstellen, dass die Variablen erst freigegeben werden, wenn die Bindung aufgehoben wurde. Weitere Informationen finden Sie unter [zuordnen und Freigeben von Puffern](../../../odbc/reference/develop-app/allocating-and-freeing-buffers.md).  
   
- Da Parameterbindungen nur Informationen sind, die in der Vom Treiber für die Anweisung verwalteten Struktur gespeichert werden, können sie in beliebiger Reihenfolge festgelegt werden. Sie sind auch unabhängig von der SQL-Anweisung, die ausgeführt wird. Angenommen, eine Anwendung bindet drei Parameter und führt dann die folgende SQL-Anweisung aus:  
+ Da Parameter Bindungen nur Informationen sind, die in der Struktur gespeichert sind, die vom Treiber für die-Anweisung verwaltet wird, können Sie in beliebiger Reihenfolge festgelegt werden. Sie sind auch unabhängig von der ausgeführten SQL-Anweisung. Angenommen, eine Anwendung bindet drei Parameter und führt dann die folgende SQL-Anweisung aus:  
   
 ```  
 INSERT INTO Parts (PartID, Description, Price) VALUES (?, ?, ?)  
 ```  
   
- Wenn die Anwendung dann sofort die SQL-Anweisung  
+ Wenn die Anwendung die SQL-Anweisung sofort ausführt  
   
 ```  
 SELECT * FROM Orders WHERE OrderID = ?, OpenDate = ?, Status = ?  
 ```  
   
- für dasselbe Anweisungshandle werden die Parameterbindungen für die **INSERT-Anweisung** verwendet, da dies die bindungen sind, die in der Anweisungsstruktur gespeichert sind. In den meisten Fällen ist dies eine schlechte Programmierpraxis und sollte vermieden werden. Stattdessen sollte die Anwendung **SQLFreeStmt** mit der SQL_RESET_PARAMS Option aufrufen, um alle alten Parameter zu binden und dann neue zu binden.  
+ beim gleichen Anweisungs Handle werden die Parameter Bindungen für die **Insert** -Anweisung verwendet, da es sich dabei um die in der Anweisungs Struktur gespeicherten Bindungen handelt. In den meisten Fällen ist dies eine schlechte Programmierpraxis und sollte vermieden werden. Stattdessen sollte die Anwendung **SQLFreeStmt** mit der SQL_RESET_PARAMS-Option aufgerufen werden, um die Bindung aller alten Parameter aufzuheben und neue zu binden.  
   
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   

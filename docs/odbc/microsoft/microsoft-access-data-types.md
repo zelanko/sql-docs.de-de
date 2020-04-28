@@ -1,5 +1,5 @@
 ---
-title: Microsoft Access-Datentypen | Microsoft Docs
+title: Microsoft Access-Datentypen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2019
 ms.prod: sql
@@ -18,55 +18,55 @@ ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 024fb65b6fdc81ae0a8e007d1cee150c6a35b91c
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307729"
 ---
 # <a name="microsoft-access-data-types"></a>Microsoft Access-Datentypen
-Die folgende Tabelle zeigt die Microsoft Access-Datentypen, die zum Erstellen von Tabellen verwendeten Datentypen und ODBC SQL-Datentypen.  
+In der folgenden Tabelle werden die Microsoft Access-Datentypen, Datentypen zum Erstellen von Tabellen und ODBC-SQL-Datentypen angezeigt.  
   
-|Microsoft Access-Datentyp|Datentyp (CREATETABLE)|ODBC SQL-Datentyp|  
+|Microsoft Access-Datentyp|Datentyp (kreatetable)|ODBC SQL-Datentyp|  
 |--------------------------------|-------------------------------|------------------------|  
-|BIGBINARY[1]|LONGBINARY|SQL_LONGVARBINARY|  
+|Bigbinary [1]|LONGBINARY|SQL_LONGVARBINARY|  
 |BINARY|BINARY|SQL_BINARY|  
 |BIT|BIT|SQL_BIT|  
-|Zähler|Zähler|SQL_INTEGER|  
+|Indikator|Indikator|SQL_INTEGER|  
 |CURRENCY|CURRENCY|SQL_NUMERIC|  
-|DATUM/UHRZEIT|DATETIME|SQL_TIMESTAMP|  
+|Datum/Uhrzeit|DATETIME|SQL_TIMESTAMP|  
 |GUID|GUID|SQL_GUID|  
-|LANGE BINÄR|LONGBINARY|SQL_LONGVARBINARY|  
-|LONG TEXT|LONGTEXT|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
-|Memo|LONGTEXT|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
-|NUMBER (FieldSize= SINGLE)|Einzelnen|SQL_REAL|  
-|NUMBER (FieldSize= DOUBLE)|Double|SQL_DOUBLE|  
-|NUMBER (FieldSize= BYTE)|UNSIGNED BYTE|SQL_TINYINT|  
-|NUMBER (FieldSize= INTEGER)|SHORT|SQL_SMALLINT|  
-|NUMBER (FieldSize= LONG INTEGER)|LONG|SQL_INTEGER|  
+|lange Binärdatei|LONGBINARY|SQL_LONGVARBINARY|  
+|langer Text|LONGTEXT|SQL_LONGVARCHAR [2] SQL_WLONGVARCHAR [3]|  
+|Anruf|LONGTEXT|SQL_LONGVARCHAR [2] SQL_WLONGVARCHAR [3]|  
+|Number (FieldSize = Single)|Gänger|SQL_REAL|  
+|Number (FieldSize = Double)|Double|SQL_DOUBLE|  
+|Number (FieldSize = Byte)|Byte ohne Vorzeichen|SQL_TINYINT|  
+|Number (FieldSize = Integer)|SHORT|SQL_SMALLINT|  
+|Number (FieldSize = Long Integer)|LONG|SQL_INTEGER|  
 |NUMERIC|NUMERIC|SQL_NUMERIC|  
 |OLE|LONGBINARY|SQL_LONGVARBINARY|  
-|TEXT|VARCHAR|SQL_VARCHAR[1] SQL_WVARCHAR[2]|  
+|TEXT|VARCHAR|SQL_VARCHAR [1] SQL_WVARCHAR [2]|  
 |VARBINARY|VARBINARY|SQL_VARBINARY|  
   
- [1] Greifen Sie nur auf 4.0-Anwendungen zu. Maximale Länge von 4000 Bytes. Verhalten ähnlich LONGBINARY.  
+ [1] nur auf 4,0-Anwendungen zugreifen. Maximale Länge von 4000 bytes. Ähnliches Verhalten wie LONGBINARY.  
   
- [2] Nur ANSI-Anwendungen.  
+ [2] nur ANSI-Anwendungen.  
   
- [3] Nur Unicode- und Access 4.0-Anwendungen.  
+ [3] nur Unicode-und Access 4,0-Anwendungen.  
   
 > [!NOTE]  
->  **SQLGetTypeInfo** gibt ODBC-Datentypen zurück. Es werden nicht alle Microsoft Access-Datentypen zurückgegeben, wenn mehr als ein Microsoft Access-Typ demselben ODBC SQL-Datentyp zugeordnet ist. Alle Konvertierungen in Anhang D der *ODBC-Programmierreferenz* werden für die in der vorherigen Tabelle aufgeführten SQL-Datentypen unterstützt.  
+>  **SQLGetTypeInfo** gibt ODBC-Datentypen zurück. Es werden nicht alle Microsoft Access-Datentypen zurückgegeben, wenn dem gleichen ODBC-SQL-Datentyp mehr als ein Microsoft-Zugriffstyp zugeordnet ist. Alle Konvertierungen in Anhang D der *ODBC-Programmier Referenz* werden für die SQL-Datentypen unterstützt, die in der vorherigen Tabelle aufgeführt sind.  
   
- Die folgende Tabelle zeigt Einschränkungen für Microsoft Access-Datentypen.  
+ In der folgenden Tabelle sind die Einschränkungen für Microsoft Access-Datentypen aufgeführt.  
   
 |Datentyp|BESCHREIBUNG|  
 |---------------|-----------------|  
-|BINARY, VARBINARY und VARCHAR|Beim Erstellen einer BINARY-, VARBINARY- oder VARCHAR-Spalte mit Null oder nicht angegebener Länge wird tatsächlich eine 510-Byte-Spalte zurückgegeben.|  
-|BYTE|Obwohl ein Microsoft Access NUMBER-Feld mit einer FieldSize gleich BYTE nicht signiert ist, kann bei Verwendung des Microsoft Access-Treibers eine negative Zahl in das Feld eingefügt werden.|  
-|CHAR, LONGVARCHAR und VARCHAR|Ein Zeichenfolgenliteral kann ein beliebiges ANSI-Zeichen (1-255 dezimal) enthalten. Verwenden Sie zwei aufeinander folgende einfache Anführungszeichen ('), um ein einzelnes Anführungszeichen (') darzustellen.<br /><br /> Prozeduren sollten verwendet werden, um Zeichendaten zu übergeben, wenn ein Sonderzeichen in einer Zeichendatentypspalte verwendet wird.|  
-|DATE|Datumswerte müssen entweder gemäß dem kanonischen Datumsformat ODBC oder durch das Datumstrennzeichen datumsabhängig (") begrenzt werden. Andernfalls behandelt Microsoft Access den Wert als arithmetischen Ausdruck und löst keine Warnung oder einen Fehler aus.<br /><br /> Beispielsweise muss das Datum "5. März 1996" als "d '1996-03-05'" oder #03/05/1996' dargestellt werden. Andernfalls wird Microsoft Access, wenn nur der 03.05.1993 eingereicht wird, dies als 3 dividiert durch 5 dividiert durch 1996 bewerten. Dieser Wert wird auf die ganze Zahl 0 aufgerunde, und da die Null-Tageskarte 1899-12-31, dies ist das verwendete Datum.<br /><br /> Ein Rohrzeichen (&#124;) kann nicht in einem Datumswert verwendet werden, auch wenn es in zurückgesetzte Anführungszeichen eingeschlossen ist.|  
-|GUID|Datentyp, der auf Microsoft Access 4.0 beschränkt ist.|  
-|NUMERIC|Datentyp, der auf Microsoft Access 4.0 beschränkt ist.|  
+|Binary, varbinary und varchar|Beim Erstellen einer Spalte vom Typ binary, varbinary oder varchar mit 0 (null) oder einer nicht angegebenen Länge wird tatsächlich eine 510-Byte-Spalte zurückgegeben.|  
+|BYTE|Obwohl ein Microsoft-Zugriffs Nummern Feld mit einem FieldSize-Wert von Byte nicht signiert ist, kann bei Verwendung des Microsoft Access-Treibers eine negative Zahl in das Feld eingefügt werden.|  
+|Char, LONGVARCHAR und varchar|Ein Zeichenfolgenliteralzeichen kann beliebige ANSI-Zeichen (1-255 Decimal) enthalten. Verwenden Sie zwei aufeinanderfolgende einfache Anführungszeichen (' '), um ein einzelnes Anführungszeichen (') darzustellen.<br /><br /> Prozeduren sollten verwendet werden, um Zeichendaten bei Verwendung eines beliebigen Sonderzeichens in einer Zeichen Datentyp Spalte zu übergeben.|  
+|DATE|Datumswerte müssen entweder entsprechend dem kanonischen ODBC-Datumsformat begrenzt oder durch das DateTime-Trennzeichen ("#") getrennt werden. Andernfalls wird der Wert von Microsoft Access als arithmetischer Ausdruck behandelt, und es wird keine Warnung oder ein Fehler ausgegeben.<br /><br /> Beispielsweise muss das Datum "5. März 1996" als {d ' 1996-03-05 '} oder #03/05/1996 #; dargestellt werden. Wenn nur 03/05/1993 übermittelt wird, wertet Microsoft Access dies als 3 dividiert durch 5 dividiert durch 1996 aus. Dieser Wert wird auf die Ganzzahl 0 aufgerundet, und da der Zero-Tag 1899-12-31 zugeordnet ist, ist dies das verwendete Datum.<br /><br /> Ein senkrechter Strich (&#124;) kann nicht in einem Datumswert verwendet werden, auch wenn er in backanführungs Zeichen eingeschlossen ist.|  
+|GUID|Der Datentyp ist auf Microsoft Access 4,0 beschränkt.|  
+|NUMERIC|Der Datentyp ist auf Microsoft Access 4,0 beschränkt.|  
   
- Weitere Einschränkungen für Datentypen finden Sie unter [Datentypeinschränkungen](../../odbc/microsoft/data-type-limitations.md).
+ Weitere Einschränkungen für Datentypen finden Sie unter [Datentyp Einschränkungen](../../odbc/microsoft/data-type-limitations.md).

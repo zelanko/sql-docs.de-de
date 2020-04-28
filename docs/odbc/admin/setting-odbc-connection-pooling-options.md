@@ -1,5 +1,5 @@
 ---
-title: Festlegen von ODBC-Verbindungspoolingoptionen | Microsoft Docs
+title: Festlegen der Optionen für das ODBC-Verbindungs Pooling | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,31 +15,31 @@ ms.assetid: 037e2f78-f204-40f4-b4ab-d9cdf562012b
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 1d8e66c506518b77320347ce9120254aa1cae287
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307195"
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>Festlegen von Optionen für ODBC-Verbindungspooling
-Das Verbindungspooling ermöglicht es einer Anwendung, eine Verbindung von einem Pool von Verbindungen zu verwenden, die nicht für jede Verwendung wiederhergestellt werden müssen. Sie können die Registerkarte **Verbindungspooling** im Dialogfeld **ODBC-Datenquellenadministrator** verwenden, um die Leistungsüberwachung zu aktivieren und zu deaktivieren. Doppelklicken Sie auf einen Treibernamen, um den Verbindungstimeoutpunkt festzulegen.  
+Das Verbindungspooling ermöglicht einer Anwendung, eine Verbindung aus einem Pool von Verbindungen zu verwenden, die nicht für jede Verwendung wieder hergestellt werden müssen. Mithilfe der Registerkarte **Verbindungs Pooling** des Dialog Felds **ODBC-Datenquellen-Administrator** können Sie die Leistungsüberwachung aktivieren und deaktivieren. Doppelklicken Sie auf einen Treiber Namen, um den Verbindungs Timeout Zeitraum festzulegen.  
   
- Auf Treiberebene wird das Verbindungspooling durch den Registrierungswert CPTimeout aktiviert. Diese selektive Aktivierung pro Treiber ermöglicht es einem Systemadministrator, das Verbindungspooling nur für die Treiber zu aktivieren, die es unterstützen können. Dies wird erreicht, indem der Standardwert von CPTimeout während des Setupprogramms des Treibers festgelegt wird. Doppelklicken Sie auf einen Treibernamen, um den Verbindungstimeoutpunkt festzulegen.  
+ Auf der Treiber Ebene wird das Verbindungspooling durch den Registrierungs Wert "CPTimeout" aktiviert. Diese selektive pro-Treiber-Aktivierung ermöglicht einem Systemadministrator, das Verbindungspooling nur für die Treiber zu aktivieren, die dies unterstützen können. Dies wird erreicht, indem der Standardwert von CPTimeout während des Setup Programms des Treibers festgelegt wird. Doppelklicken Sie auf einen Treiber Namen, um den Verbindungs Timeout Zeitraum festzulegen.  
   
- Weitere Informationen zum Verbindungspooling finden Sie unter [ODBC Connection Pooling](../../odbc/reference/develop-app/driver-manager-connection-pooling.md).  
+ Weitere Informationen zum Verbindungspooling finden Sie unter [ODBC-Verbindungspooling](../../odbc/reference/develop-app/driver-manager-connection-pooling.md).  
   
 ## <a name="performance-monitoring"></a>Leistungsüberwachung  
- Die Leistungsüberwachung verfolgt die Verbindungsleistung, indem eine Vielzahl von Statistiken aufgezeichnet werden. Diese Statistiken können vom Entwickler so angepasst werden, dass sie Elemente wie die folgenden enthalten:  
+ Die Leistungsüberwachung verfolgt die Verbindungs Leistung, indem eine Reihe von Statistiken aufgezeichnet wird. Diese Statistiken können vom Entwickler angepasst werden, um Elemente wie die folgenden einzuschließen:  
   
 |Leistungsindikator|Definition|  
 |-------------|----------------|  
-|ODBC Hard Connection Counter pro Sekunde|Die Anzahl der tatsächlichen Verbindungen pro Sekunde, die mit dem Server hergestellt werden. Wenn Ihre Umgebung zum ersten Mal eine schwere Last trägt, wird dieser Zähler sehr schnell steigen. Nach einigen Sekunden wird es auf Null fallen. Dies ist die normale Situation, wenn das Verbindungspooling funktioniert. Wenn die Verbindungen zum Server hergestellt wurden, werden sie zur Wiederverwendung verwendet und im Pool platziert.|  
-|ODBC Hard Disconnect Counter pro Sekunde|Die Anzahl der harten Trennungen pro Sekunde, die an den Server ausgegeben werden. Dies sind tatsächliche Verbindungen mit dem Server, die durch Verbindungspooling freigegeben werden. Dieser Wert wird von Null erhöht, wenn Sie alle Clients auf dem System anhalten und die Verbindungen mit dem Timeout beginnen.|  
-|ODBC Soft Connection Counter pro Sekunde|Die Anzahl der Verbindungen, die vom Pool pro Sekunde erfüllt werden, d. h. Verbindungen aus diesem Pool, die an Benutzer übergeben wurden. Dieser Leistungsindikator gibt an, ob das Pooling funktioniert. Je nach Auslastung des Servers ist es nicht ungewöhnlich, dass 40-60 weiche Verbindungen pro Sekunde angezeigt werden.|  
-|ODBC Soft Disconnection Counter pro Sekunde|Die Anzahl der von den Anwendungen ausgegebenen Trenngetrennten pro Sekunde. Wenn die Anwendung die Verbindung löst oder trennt, wird die Verbindung wieder im Pool platziert.|  
-|ODBC Current Active Connection Counter|Die Anzahl der Verbindungen im Pool, die derzeit verwendet werden.|  
-|ODBC Current Free Connection Counter|Die aktuelle Anzahl der im Pool verfügbaren freien Verbindungen. Dies sind Live-Verbindungen, die zur Verwendung zur Verfügung stehen.|  
-|Pools derzeit aktiv|Die Anzahl der derzeit aktiven Pools. Dieser Leistungsindikator wurde in Windows 8 für Treiber hinzugefügt, die Verbindungen im Verbindungspool verwalten. Weitere Informationen finden Sie unter [Treiber-Aware Connection Pooling](../../odbc/reference/develop-app/driver-aware-connection-pooling.md).|  
-|Pools erstellt|Die Anzahl der aktiven Pools, einschließlich aktiver und entfernter Pools. Dieser Leistungsindikator wurde in Windows 8 für Treiber hinzugefügt, die Verbindungen im Verbindungspool verwalten. Weitere Informationen finden Sie unter [Treiber-Aware Connection Pooling](../../odbc/reference/develop-app/driver-aware-connection-pooling.md).|  
+|ODBC-hardverbindungs-Counter pro Sekunde|Die Anzahl der tatsächlich auf dem Server vorgenommenen Verbindungen pro Sekunde. Wenn Ihre Umgebung zum ersten Mal stark ausgelastet ist, wird dieser Leistungswert sehr schnell fortgeführt. Nach einigen Sekunden wird der Wert auf 0 (null) gesenkt. Dies ist die normale Situation, wenn Verbindungspooling funktioniert. Wenn die Verbindungen mit dem Server hergestellt wurden, werden Sie verwendet und zur Wiederverwendung in den Pool eingefügt.|  
+|ODBC-hardtrennungs-Counter pro Sekunde|Die Anzahl der hart getrennten Verbindungen pro Sekunde, die für den Server ausgegeben werden. Dabei handelt es sich um tatsächliche Verbindungen mit dem Server, die vom Verbindungspooling freigegeben werden. Dieser Wert wird von Null erhöht, wenn Sie alle Clients auf dem System beenden und das Timeout für Verbindungen beginnt.|  
+|ODBC-weicher Verbindungs Counter pro Sekunde|Die Anzahl von Verbindungen, die vom Pool pro Sekunde erfüllt werden, d. h. Verbindungen von diesem Pool, die an Benutzer übergeben wurden. Dieser Wert gibt an, ob das Pooling funktioniert. Abhängig von der Auslastung Ihres Servers ist es nicht ungewöhnlich, dass in diesem Fall 40-60 weiche Verbindungen pro Sekunde angezeigt werden.|  
+|ODBC-Verbindungs-Counter für weiche Verbindungen pro Sekunde|Die Anzahl von Verbindungen, die pro Sekunde von den Anwendungen ausgegeben werden. Wenn die Anwendung die Verbindung freigibt oder trennt, wird die Verbindung wieder im Pool abgelegt.|  
+|ODBC-Leistungs Leistungswert|Die Anzahl der Verbindungen im Pool, die zurzeit verwendet werden.|  
+|ODBC-Leistungswert für aktuelle freie Verbindung|Die aktuelle Anzahl der verfügbaren freien Verbindungen im Pool. Dabei handelt es sich um Live Verbindungen, die zur Verwendung verfügbar sind.|  
+|Derzeit aktive Pools|Die Anzahl der zurzeit aktiven Pools. Dieser Wert wurde in Windows 8 für Treiber hinzugefügt, die Verbindungen im Verbindungspool verwalten. Weitere Informationen finden Sie unter [Treiber fähiges Verbindungs Pooling](../../odbc/reference/develop-app/driver-aware-connection-pooling.md).|  
+|Erstellte Pools|Die Anzahl aktiver Pools, einschließlich aktiver und entfernter Pools. Dieser Wert wurde in Windows 8 für Treiber hinzugefügt, die Verbindungen im Verbindungspool verwalten. Weitere Informationen finden Sie unter [Treiber fähiges Verbindungs Pooling](../../odbc/reference/develop-app/driver-aware-connection-pooling.md).|  
   
- Sie müssen eigene Überwachungsparameter angeben. Beispiele für die Leistungsüberwachung wurden in dieser Version von ODBC enthalten.
+ Sie müssen ihre eigenen Überwachungsparameter angeben. Beispiele für die Leistungsüberwachung sind in dieser Version von ODBC enthalten.

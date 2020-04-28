@@ -1,5 +1,5 @@
 ---
-title: Testen von interoperablen Anwendungen | Microsoft Docs
+title: Testen von interoperablen Anwendungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.assetid: 489083cb-8430-40be-9ef2-d75b9a2eea88
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: c1d43c7aad2501591c497475f6c250ac33712aa7
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307741"
 ---
 # <a name="testing-interoperable-applications"></a>Testen von interoperablen Anwendungen
-Das Testen interoperabler Anwendungen ist bestenfalls ein zeitaufwändiges Geschäft und schlimmstenfalls unmöglich, da ständig neue Treiber auf dem Markt erscheinen. Ein angemessenes Prüfmaß ist jedoch möglich. Anwendungen mit eingeschränkter oder geringer Interoperabilität müssen nur anhand der Treiber getestet werden, die sie garantiert unterstützen. Sie müssen jedoch vollständig gegen diese Treiber getestet werden.  
+Das Testen von interoperablen Anwendungen ist am besten ein zeitaufwändiges Geschäft und im schlimmsten Fall nicht möglich, da neue Treiber ständig auf dem Markt erscheinen. Es ist jedoch ein angemessener Grad an Tests möglich. Anwendungen mit eingeschränkter oder niedriger Interoperabilität müssen nur mit den Treibern getestet werden, die Sie unterstützen. Allerdings müssen Sie für diese Treiber vollständig getestet werden.  
   
- Hochinteroperabilitätsanwendungen können nicht praktisch an allen Treibern getestet werden. Das Beste, was die meisten Anwendungsentwickler tun können, ist, sie vollständig gegen eine kleine Anzahl von Treibern und cursorig gegen mehrere weitere zu testen. Getestete Treiber sollten die beliebtesten Treiber für die beliebtesten DBMS auf dem Markt der Anwendung enthalten. Wenn der Markt alle DBMS abdeckt, sollten Treiber für Desktop- und Server-DBMS getestet werden.  
+ Hochgradig interoperable Anwendungen können nicht praktisch für alle Treiber getestet werden. Die meisten Anwendungsentwickler können dies tun, indem Sie sie vollständig mit einer kleinen Anzahl von Treibern testen und sich mit mehreren weiteren Treibern in einigen weiteren Fällen durchführen. Getestete Treiber sollten die beliebtesten Treiber für den beliebtesten DBMSs auf dem Markt der Anwendung enthalten. Wenn der Markt alle DBMSs abdeckt, sollten Treiber für Desktop-und Server-DBMSs getestet werden.  
   
- Eines der Probleme beim Testen von ODBC-Anwendungen ist die Anzahl der beteiligten Komponenten: die Anwendung selbst, der Treiber-Manager, der Treiber, das DBMS und möglicherweise Netzwerksoftware oder Gateways. Anwendungen können das Nachverfolgen von Fehlern vereinfachen, indem sie die von ODBC-Funktionen zurückgegebenen Fehlermeldungen über **SQLGetDiagField** und **SQLGetDiagRec**veröffentlichen. Diese Meldungen identifizieren den Hersteller und die Komponente, in der Fehler auftreten. Weitere Informationen finden Sie unter [Diagnose](../../../odbc/reference/develop-app/diagnostics.md).
+ Eines der Probleme beim Testen von ODBC-Anwendungen ist die Anzahl der beteiligten Komponenten: die Anwendung selbst, der Treiber-Manager, der Treiber, das DBMS und möglicherweise Netzwerk Software oder Gateways. Anwendungen können das Nachverfolgen von Fehlern vereinfachen, indem Sie die Fehlermeldungen, die von ODBC-Funktionen zurückgegeben werden, über **SQLGetDiagField** und **SQLGetDiagRec**veröffentlichen. Diese Nachrichten identifizieren den Hersteller und die Komponente, in denen Fehler auftreten. Weitere Informationen finden Sie unter [Diagnostics](../../../odbc/reference/develop-app/diagnostics.md).

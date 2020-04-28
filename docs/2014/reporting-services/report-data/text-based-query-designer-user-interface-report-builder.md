@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e500d746f3ef0cdfc2d48037467f2ab6ce376d3f
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388323"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Benutzeroberfläche des textbasierten Abfrage-Designers (Berichts-Generator)
@@ -56,7 +56,7 @@ ms.locfileid: "81388323"
 |Ergebnis|Zeigt die Ergebnisse der Abfrage an. Klicken Sie zum Ausführen der Abfrage mit der rechten Maustaste in einen beliebigen Bereich, und klicken Sie auf **Ausführen**, oder klicken Sie auf der Symbolleiste auf **Ausführen** .|
 
 #### <a name="example"></a>Beispiel
- Die folgende Abfrage gibt die Liste [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]der Nachnamen `ContactType` aus `Person` der Datenbanktabelle **2008** für das Schema zurück.
+ Die folgende Abfrage gibt die Liste der Nachnamen aus der [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** -Daten `ContactType` Bank Tabelle für `Person` das Schema zurück.
 
 ```
 SELECT Name FROM Person.ContactType
@@ -79,7 +79,7 @@ SELECT Name FROM Person.ContactType
 |Ergebnis|Zeigt die Ergebnisse der Abfrage an. Klicken Sie zum Ausführen der Abfrage mit der rechten Maustaste in einen beliebigen Bereich, und klicken Sie auf **Ausführen**, oder klicken Sie auf der Symbolleiste auf **Ausführen** .|
 
 #### <a name="example"></a>Beispiel
- Die folgende Abfrage [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]ruft die gespeicherte Prozedur `uspGetWhereUsedProductID` **2008** auf. Sie müssen einen Wert für den Produkt-ID-Parameter eingeben, wenn Sie die Abfrage ausführen.
+ Die folgende Abfrage ruft die [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]gespeicherte Prozedur `uspGetWhereUsedProductID` **2008** auf. Sie müssen einen Wert für den Produkt-ID-Parameter eingeben, wenn Sie die Abfrage ausführen.
 
 ```
 uspGetWhereUsedProductID
@@ -98,13 +98,13 @@ uspGetWhereUsedProductID
  Wenn Sie den **Befehlstyp TableDirect**auswählen, zeigt der textbasierte Abfrage-Designer zwei Bereiche an: den Abfragebereich und den Ergebnisbereich. Wenn Sie eine Tabelle auswählen und auf die Schaltfläche **Ausführen** klicken, werden alle Spalten für diese Tabelle zurückgegeben.
 
 #### <a name="example"></a>Beispiel
- Bei einem Datenquellentyp OLE DB gibt die folgende Datasetabfrage ein [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)]Resultset für alle Kontakttypen in der **Datenbank 2008** zurück.
+ Für einen Daten Quellentyp OLE DB gibt die folgende Datasetabfrage ein Resultset für alle Kontakt Typen in der [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] **2008** -Datenbank zurück.
 
  `Person.ContactType`
 
  Die Eingabe des Tabellennamens Person.ContactType entspricht der Erstellung der [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung `SELECT * FROM Person.ContactType`.
 
 ## <a name="see-also"></a>Weitere Informationen
- [Relational Query Designer Benutzeroberfläche &#40;Berichts-Generator&#41;](relational-query-designer-user-interface-report-builder.md) [Abfragedesigner &#40;Berichts-Generator-&#41;](../query-designers-report-builder.md)
+ Die [Benutzeroberfläche des relationalen Abfrage-Designers &#40;Berichts-Generator&#41;](relational-query-designer-user-interface-report-builder.md) [Abfrage-Designer &#40;Berichts-Generator&#41;](../query-designers-report-builder.md)
 
 

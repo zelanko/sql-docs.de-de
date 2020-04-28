@@ -1,5 +1,5 @@
 ---
-title: OLE DB-Referenz
+title: OLE DB Referenz
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,18 +17,18 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 31fff0767ecbbbf41349b3f0dd431eb440fa7d77
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388529"
 ---
 # <a name="sql-server-native-client-ole-db-interfaces"></a>SQL Server Native Client-Schnittstellen (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native Client-OLE-DB-Anbieter macht Schnittstellen für Verbraucher verfügbar, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]die Zugriff auf Daten auf einem oder mehreren Computern wünschen, auf denen ausgeführt wird. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter ist ein OLE DB Version 2.0-kompatibler Anbieter.  
+  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter macht Schnittstellen für Consumer verfügbar, die auf einem oder mehreren Computern [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mit Zugriff auf Daten benötigen. Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter ist ein OLE DB, Version 2,0-kompatibler Anbieter.  
   
- Dieser [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Programmierverweis für native Client-OLE-DB-Anbieter dokumentiert nicht alle OLE DB-Schnittstellen und -Methoden, sondern [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nur Schnittstellen und Methoden, die bei verwendung des nativen Client-OLE-DB-Anbieters anbieterspezifisches Verhalten aufweisen.  
+ Diese [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Programmier Referenz für den Native Client OLE DB-Anbieter dokumentiert nicht alle OLE DB-Schnittstellen und-Methoden, sondern nur die Schnittstellen und Methoden, die das Anbieter [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spezifische Verhalten bei Verwendung des Native Client-OLE DB Anbieters aufweisen.  
   
  Eine vollständige Beschreibung der wichtigsten OLE DB-Schnittstellen und -Methoden finden Sie unter [OLE DB Programmer's Reference (Programmierreferenz für OLE DB)](https://go.microsoft.com/fwlink/?LinkId=45232).  
   

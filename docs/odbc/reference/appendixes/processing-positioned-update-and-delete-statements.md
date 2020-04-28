@@ -1,5 +1,5 @@
 ---
-title: Verarbeitung von positionierten Aktualisierungs- und Löschanweisungen | Microsoft Docs
+title: Verarbeiten von positionierten Update-und DELETE-Anweisungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,27 +19,27 @@ ms.assetid: 2975dd97-48e6-4d0a-a9c7-40759a7d94c8
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 4b3f20da018bcd4e28e8ffca097fb5a4373d7f42
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81308021"
 ---
 # <a name="processing-positioned-update-and-delete-statements"></a>Verarbeiten von positionierten UPDATE- und DELETE-Anweisungen
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Windows-Version entfernt. Vermeiden Sie es, diese Funktion in neuen Entwicklungsarbeiten zu verwenden, und planen Sie, Anwendungen zu ändern, die diese Funktion derzeit verwenden. Microsoft empfiehlt die Verwendung der Cursorfunktionalität des Treibers.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Vermeiden Sie die Verwendung dieses Features bei der Entwicklung neuer Anwendungen, und planen Sie das Ändern von Anwendungen, in denen diese Funktion derzeit verwendet wird Microsoft empfiehlt die Verwendung der Cursor-Funktionalität des Treibers.  
   
- Die Cursorbibliothek unterstützt positionierte Aktualisierungs- und Löschanweisungen, indem sie die **WHERE CURRENT OF-Klausel** in solchen Anweisungen durch eine **WHERE-Klausel** ersetzt, die die im Cache gespeicherten Werte für jede gebundene Spalte aufzählt. Die Cursorbibliothek übergibt die neu erstellten **UPDATE-** und **DELETE-Anweisungen** zur Ausführung an den Treiber. Bei positionierten Aktualisierungsanweisungen aktualisiert die Cursorbibliothek dann ihren Cache von den Werten in den Rowset-Puffern und legt den entsprechenden Wert im Zeilenstatusarray auf SQL_ROW_UPDATED. Für positionierte löschanweisungen legt sie den entsprechenden Wert im Zeilenstatusarray auf SQL_ROW_DELETED fest.  
+ Die Cursor Bibliothek unterstützt positionierte UPDATE-und DELETE-Anweisungen durch Ersetzen der **WHERE CURRENT of** -Klausel in solchen Anweisungen durch eine **Where** -Klausel, die die im Cache gespeicherten Werte für jede gebundene Spalte auflistet. Die Cursor Bibliothek übergibt die neu erstellten **Update** -und **Delete** -Anweisungen zur Ausführung an den Treiber. Bei positionierten Update-Anweisungen aktualisiert die Cursor Bibliothek dann Ihren Cache von den Werten in den rowsetpuffern und legt den entsprechenden Wert im Zeilen Status Array auf SQL_ROW_UPDATED fest. Für positionierte DELETE-Anweisungen wird der entsprechende Wert im Zeilen Status Array auf SQL_ROW_DELETED festgelegt.  
   
 > [!CAUTION]  
->  Die **WHERE** WHERE-Klausel, die von der Cursorbibliothek erstellt wurde, um die aktuelle Zeile zu identifizieren, kann keine Zeilen identifizieren, eine andere Zeile identifizieren oder mehr als eine Zeile identifizieren. Weitere Informationen finden Sie unter [Erstellen von durchsuchten Anweisungen](../../../odbc/reference/appendixes/constructing-searched-statements.md)weiter unten in diesem Anhang.  
+>  Die **Where** -Klausel, die von der Cursor Bibliothek zum Identifizieren der aktuellen Zeile erstellt wurde, kann keine Zeilen identifizieren, eine andere Zeile identifizieren oder mehr als eine Zeile identifizieren. Weitere Informationen finden Sie unter [Erstellen](../../../odbc/reference/appendixes/constructing-searched-statements.md)von Such Anweisungen weiter unten in diesem Anhang.  
   
- Positionierte Aktualisierungs- und Löschanweisungen unterliegen den folgenden Einschränkungen:  
+ Positionierte UPDATE-und DELETE-Anweisungen unterliegen den folgenden Einschränkungen:  
   
--   Positionierte Aktualisierungs- und Löschanweisungen können nur in den folgenden Fällen verwendet werden: Wenn eine **SELECT-Anweisung** das Resultset generiert hat; wenn die **SELECT-Anweisung** keine Join-, **UNION-Klausel** oder **GROUP BY-Klausel** enthielt; und wenn Spalten, die einen Alias oder Ausdruck in der Auswahlliste verwendet haben, nicht mit **SQLBindCol**gebunden waren.  
+-   Positionierte UPDATE-und DELETE-Anweisungen können nur in den folgenden Fällen verwendet werden: Wenn eine **Select** -Anweisung das Resultset generiert hat. Wenn die **Select** -Anweisung keine Join-, **Union** -oder **Group by** -Klausel enthielt; und wenn Spalten, die einen Alias oder Ausdruck in der Auswahlliste verwendet haben, nicht an **SQLBindCol**gebunden wurden.  
   
--   Wenn eine Anwendung eine positionierte Aktualisierungs- oder Löschanweisung vorbereitet, muss sie dies tun, nachdem sie **SQLFetch** oder **SQLFetchScroll**aufgerufen hat. Obwohl die Cursorbibliothek die Anweisung zur Vorbereitung an den Treiber sendet, schließt sie die Anweisung und führt sie direkt aus, wenn die Anwendung **SQLExecute**aufruft.  
+-   Wenn eine Anwendung eine positionierte UPDATE-oder DELETE-Anweisung vorbereitet, muss Sie nach dem Aufrufen von **SQLFetch** oder **SQLFetchScroll**aufgerufen werden. Obwohl die Cursor Bibliothek die Anweisung zur Vorbereitung an den Treiber übermittelt, schließt Sie die Anweisung und führt Sie direkt aus, wenn die Anwendung **SQLExecute**aufruft.  
   
--   Wenn der Treiber nur eine aktive Anweisung unterstützt, ruft die Cursorbibliothek den Rest des Resultsets ab und ruft dann das aktuelle Rowset aus dem Cache erneut ab, bevor eine positionierte Aktualisierungs- oder Löschanweisung ausgeführt wird. Wenn die Anwendung dann eine Funktion aufruft, die Metadaten in einem Resultset zurückgibt (z. B. **SQLNumResultCols** oder **SQLDescribeCol**), gibt die Cursorbibliothek einen Fehler zurück.  
+-   Wenn der Treiber nur eine aktive Anweisung unterstützt, ruft die Cursor Bibliothek den Rest des Resultsets ab und ruft dann das aktuelle Rowset aus dem Cache ab, bevor eine positionierte UPDATE-oder DELETE-Anweisung ausgeführt wird. Wenn die Anwendung dann eine Funktion aufruft, die Metadaten in einem Resultset zurückgibt (z. b. **SQLNumResultCols** oder **SQLDescribeCol**), gibt die Cursor Bibliothek einen Fehler zurück.  
   
--   Wenn eine positionierte Aktualisierungs- oder Löschanweisung für eine Spalte einer Tabelle ausgeführt wird, die eine Zeitstempelspalte enthält, die bei jeder Aktualisierung automatisch aktualisiert wird, schlagen alle nachfolgenden positionierten Aktualisierungs- oder Löschanweisungen fehl, wenn die Zeitstempelspalte gebunden ist. Dies liegt daran, dass die von der Cursorbibliothek erstellte Such- oder Löschanweisung die zu aktualisierende Zeile nicht genau identifiziert. Der Wert in der gesuchten Anweisung für die Spalte Zeitstempel stimmt nicht mit dem automatisch aktualisierten Wert der Zeitstempelspalte überein.
+-   Wenn eine positionierte UPDATE-oder DELETE-Anweisung für eine Spalte einer Tabelle mit einer Zeitstempel-Spalte ausgeführt wird, die bei jeder Aktualisierung automatisch aktualisiert wird, können alle nachfolgenden positionierten Update-oder DELETE-Anweisungen nicht ausgeführt werden, wenn die Zeitstempel-Spalte gebunden ist. Dies liegt daran, dass die von der Cursor Bibliothek erstellte Update-oder DELETE-Anweisung die zu Aktualisier Ende Zeile nicht exakt identifiziert. Der Wert in der gesuchten Anweisung für die Zeitstempel-Spalte stimmt nicht mit dem automatisch aktualisierten Wert der Zeitstempel-Spalte ab.

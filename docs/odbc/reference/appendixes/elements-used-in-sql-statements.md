@@ -1,5 +1,5 @@
 ---
-title: In SQL-Anweisungen verwendete Elemente | Microsoft Docs
+title: In SQL-Anweisungen verwendete Elemente | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,92 +15,92 @@ ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 49a1cd54957426d4d14d84d43df670c8c3d96189
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307021"
 ---
 # <a name="elements-used-in-sql-statements"></a>Elemente, die in SQL-­Anweisungen verwendet werden
 Die folgenden Elemente werden in den zuvor aufgeführten SQL-Anweisungen verwendet.  
   
 ## <a name="element"></a>Element  
- *Base-Table-Bezeichner* ::= *benutzerdefinierter Name*  
+ *base-table-Identifier* :: = *benutzerdefinierter Name*  
   
- *Basis-Tabellenname* ::= *Base-Table-Bezeichner*  
+ *base-table-Name* :: = *base-table-Identifier*  
   
- *boolean-Faktor* ::= [NOT] *boolean-primär*  
+ *boolescher Faktor* :: = [nicht] *Boolean-primär*  
   
- *boolean-primär* ::= Vergleich *-prädikat* &#124; ( *Suchbedingung* )  
+ *Boolean-Primary* :: = Comparison *-Predicate* &#124; ( *Such Bedingung* )  
   
- *boolesch-term* ::= *boolean-factor* [AND *boolean-term*]  
+ *Boolean-Term* :: = *boolescher Faktor* [und *boolescher*Ausdruck]  
   
- *character-string-literal* ::=*''''zeichen*'...'' (*Zeichen* ist ein beliebiges Zeichen im Zeichensatz des Treibers/der Datenquelle. Um ein einzelnes wörtliches Anführungszeichen ('') in ein Zeichen-Zeichenfolgenliteral einzuschließen, verwenden Sie zwei literale Anführungszeichen [''''].)  
+ *Character-String-Literale* :: = ' ' {*Character*}... ' ' (*Zeichen* ist ein beliebiges Zeichen im Zeichensatz des Treibers bzw. der Datenquelle. Verwenden Sie zwei Literale Anführungszeichen [' ' ' '], um ein einzelnes Anführungszeichen (' ') in ein Zeichenfolgenliteralzeichen einzufügen.  
   
- *Spaltenbezeichner* ::= *benutzerdefinierter Name*  
+ *Column-Identifier* :: = *benutzerdefinierter Name*  
   
- *Spaltenname* ::= [*Tabellenname*.] *Spaltenbezeichner*  
+ *Column-Name* :: = [*Tabellenname*] *Spalten Bezeichner*  
   
- *Vergleichsoperator* ::= \< < &#124; > &#124; = &#124; >= &#124; = &#124; <>  
+ *Comparison-Operator* :: = < &#124; > &#124; \<= &#124; >= &#124; = &#124; <>  
   
- *Vergleichsprädikat* ::= Ausdrucksvergleich-Operator-Ausdruck *expression*  
+ *Comparison-Predicate* :: = *Expression* Comparison-Operator Ausdruck  
   
- *data-type* ::= *character-string-type* *(character-string-type* ist ein beliebiger Datentyp, für den die Spalte ""DATA_TYPE"" in dem von SQLGetTypeInfo zurückgegebenen Resultset entweder SQL_CHAR oder SQL_VARCHAR ist.)  
+ *Data-Type* :: = *Character-String-type* (*Zeichen folgen vom Typ Zeichenfolge* ) ist ein beliebiger Datentyp, für den die Spalte "" data_type "" im Resultset, das von SQLGetTypeInfo zurückgegeben wurde, entweder SQL_CHAR oder SQL_VARCHAR ist.)  
   
- *Ziffer* ::= 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; &#124; 7 &#124; 8 &#124; 9  
+ *Ziffer* :: = 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9  
   
- *dynamischer Parameter* ::= ?  
+ *Dynamic-Parameter* :: =?  
   
- *Ausdruck* ::= Ausdruck &#124; Ausdrucks ,&#124;-" -Term  
+ *Expression* :: = Term &#124; Ausdruck {+&#124;-} Term  
   
- *Faktor* ::=*+* *-*[&#124;]*primär*  
+ *Faktor* :: = [*+*&#124;*-*]*primär*  
   
- *Insert-Wert* ::=  
+ *Insert-Value* :: =  
   
- *dynamischer Parameter*  
+ *Dynamic-Parameter*  
   
- &#124; *wörtlich*  
+ &#124; *Literale*  
   
  &#124; NULL  
   
- &#124; USER  
+ &#124; Benutzer  
   
- *Buchstabe* ::= *Kleinbuchstaben &#124; Großbuchstaben*  
+ *Buchstabe* :: = *Kleinbuchstabe &#124; groß* Buchstaben  
   
- *Literal* ::= *Zeichen-Zeichenfolge-Literal*  
+ *Literalzeichen* :: = *Zeichen folgen Literale*  
   
- *Kleinbuchstabe* ::= a &#124; b &#124; c &#124; d &#124; e &#124; f &#124; g &#124; h &#124; i &#124; j &#124; k &#124; l &#124; m &#124; n &#124; o &#124; p &#124; q &#124; r &#124; s &#124; t &#124; u &#124; v &#124; w &#124; x &#124; y &#124; z  
+ *klein* Buchstaben:: = a &#124; b &#124; c &#124; d &#124; e &#124; f &#124; g &#124; h &#124; &#124; &#124; j &#124; k &#124; l &#124; m &#124; n &#124; o &#124; p &#124; q &#124; r &#124; s &#124; t &#124; u &#124; v &#124; w &#124; x &#124; y z  
   
- *order-by-clause* ::= ORDER BY *sort-specification* [, *sort-specification*]...  
+ *Order-by-clause* :: = Order by *Sort-Specification* [, *Sort-Specification*]...  
   
- *Primär ::=* *Spaltenname*  
+ *Primary* :: = *Spaltenname*  
   
- &#124; *dynamischer Parameter*  
+ *Dynamische Parameter* &#124;  
   
- &#124; *wörtlich*  
+ &#124; *Literale*  
   
  &#124; ( *Ausdruck* )  
   
- *Suchbedingung* ::= *boolescher Begriff* [ODER *Suchbedingung*]  
+ *Search-Condition* :: = *Boolean-Term* [oder *Search-Condition*]  
   
- *Select-Liste* ::= \* &#124; *Select-Unterliste* [, *Select-Unterliste*]...  (*Auswahlliste* darf keine Parameter enthalten.)  
+ *Select-List* :: = \* &#124; *Select-unterst* [, *Select-subList*]...  (*Select-List* darf keine Parameter enthalten.)  
   
- *select-sublist* ::= *Ausdruck*  
+ *Select-subList* :: =- *Ausdruck*  
   
- *sort-specification* ::= '*unsigned-integer &#124; column-name*' [*ASC &#124; DESC*]  
+ *Sort-Specification* :: = {*unsigned-Integer &#124; Spaltenname*} [*ASC &#124;* Debug]  
   
- *Tabellenbezeichner* ::= *benutzerdefinierter Name*  
+ *Table-Identifier* :: = *benutzerdefinierter Name*  
   
- *Tabellenname* ::= *Tabellenbezeichner*  
+ *Table-Name* :: = *Table-Identifier*  
   
- *Tabellenverweis* ::= *Tabellenname*  
+ *Table-Reference* :: = *Tabellenname*  
   
- *Tabellen-Referenzliste* ::= *Tabellenverweis* [,*Tabellenverweis*]...  
+ *Table-Reference-List* :: = *Tabellen Verweis* [,*Tabellen Verweis*]...  
   
- *Begriff* ::= *Faktor* \* &#124; */* *Begriffs* ,&#124;*Faktor*  
+ *Begriff* :: = *Faktor* &#124; *Begriff* {\*&#124;*/*} *Faktor*  
   
- *Unsigned-integer* ::=*digit*  
+ *unsigned-Integer* :: = {*Digit*}  
   
- *Großbuchstaben* ::= *A &#124; B &#124; C &#124; D &#124; E &#124; F &#124; G &#124; H &#124; J &#124; J &#124; &#124; K &#124; L &#124; &#124; M &#124; N &#124; O &#124; &#124; P &#124; Q &#124; R &#124; S &#124; T &#124; U &#124; V &#124; W &#124; &#124; X &#124; Y &#124; Z*  
+ *groß* Buchstaben:: = *A &#124; B &#124; C &#124; D &#124; E &#124; F &#124; G &#124; H &#124; I &#124; J &#124; K &#124; L &#124; M &#124; N &#124; O &#124; P &#124; Q &#124; R &#124; S &#124; T &#124; U &#124; V &#124; W &#124; X &#124; Y &#124; Z*  
   
- *benutzerdefinierter Name* ::= *Buchstabe*[*Ziffer* &#124; *Buchstabe* &#124; *_*]...
+ *benutzerdefinierter Name* :: = *Letter*[*Digit* &#124; *Letter* &#124; *_*]...

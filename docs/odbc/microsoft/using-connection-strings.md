@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Verbindungszeichenfolgen | Microsoft Docs
+title: Verwenden von Verbindungs Zeichenfolgen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,21 +15,21 @@ ms.assetid: 57634960-47e9-49bf-95c1-6e3702ac8166
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9083414503606720a40d372ed883a140953dc415
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307591"
 ---
 # <a name="using-connection-strings"></a>Verwenden von Verbindungszeichenfolgen
-Sie können eine Verbindungszeichenfolge verwenden, um eine Verbindung mit einer Visual FoxPro-Datenquelle herzustellen.  
+Sie können eine Verbindungs Zeichenfolge verwenden, um eine Verbindung mit einer Visual FoxPro-Datenquelle herzustellen.  
   
- Um beispielsweise eine Verbindung mit der TasTrade-Datenquelle herzustellen und die aktuelle Einstellung exklusiv zu überschreiben, die der Datenquelle zugeordnet ist, verwenden Sie die Zeichenfolge:  
+ Wenn Sie z. b. eine Verbindung mit der Datenquelle Tastrade herstellen und die aktuelle Einstellung von exklusiv, die der Datenquelle zugeordnet ist, überschreiben möchten, verwenden Sie die folgende Zeichenfolge:  
   
 ```  
 DSN=TasTrade;Exclusive=Yes  
 ```  
   
- Eine Liste der Attributschlüsselwörter und -werte, die Sie in die Verbindungszeichenfolge aufnehmen können, finden Sie unter [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md).  
+ Eine Liste der Attribut Schlüsselwörter und-Werte, die Sie in die Verbindungs Zeichenfolge einschließen können, finden Sie unter [SQLDriverConnect](../../odbc/microsoft/sqldriverconnect-visual-foxpro-odbc-driver.md).  
   
- Eine vollständige Erläuterung der Verbindungszeichenfolgensyntax finden Sie unter [SQLBrowseConnect](../../odbc/reference/syntax/sqlbrowseconnect-function.md) in der *ODBC-Programmiererreferenz*.
+ Eine vollständige Erläuterung der Syntax der Verbindungs Zeichenfolge finden Sie unter [sqlbrowseconnetct](../../odbc/reference/syntax/sqlbrowseconnect-function.md) in der *ODBC Programmer es Reference*.

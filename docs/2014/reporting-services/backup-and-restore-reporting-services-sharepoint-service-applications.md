@@ -1,5 +1,5 @@
 ---
-title: Sichern und Wiederherstellen von Reporting Services SharePoint Service-Anwendungen | Microsoft Docs
+title: Sichern und Wiederherstellen Reporting Services SharePoint-Dienst Anwendungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 59e0de9e8ee6882b19939ef116ef4ac8023782ed
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487549"
 ---
 # <a name="backup-and-restore-reporting-services-sharepoint-service-applications"></a>Sichern und Wiederherstellen von Reporting Services-SharePoint-Dienstanwendungen
@@ -22,9 +22,9 @@ ms.locfileid: "81487549"
   
 -   [Einschränkungen](#bkmk_Restrictions)  
   
--   [Backup Der Service-Anwendung](#bkmk_backup)  
+-   [Sichern der Dienst Anwendung](#bkmk_backup)  
   
--   [Wiederherstellen der Dienstanwendung](#bkmk_restore)  
+-   [Wiederherstellen der Dienst Anwendung](#bkmk_restore)  
   
 ##  <a name="before-you-begin"></a><a name="bkmk_BeforeYouBegin"></a> Vorbereitungen  
   
@@ -41,7 +41,7 @@ ms.locfileid: "81487549"
   
 -   Stellen Sie sicher, dass das SharePoint-Sicherungsprotokoll im gleichen Ordner wie die Sicherungsdatei erstellt wird. Die Datei wird in der Regel **spbackup.log**genannt.  
   
-##  <a name="backup-the-service-application"></a><a name="bkmk_backup"></a>Backup Der Service-Anwendung  
+##  <a name="backup-the-service-application"></a><a name="bkmk_backup"></a>Sichern der Dienst Anwendung  
  Führen Sie die folgenden Schritte wie folgt aus:  
   
 1.  Sichern der Verschlüsselungsschlüssel  
@@ -51,7 +51,7 @@ ms.locfileid: "81487549"
 3.  Überprüfen Sie, ob die Dienstanwendung ein Konto mit unbeaufsichtigter Ausführung oder Windows-Authentifizierung für den Datenbankzugriff verwendet. Bei Verwendung einer dieser Kontotypen müssen Sie sich die Anmeldeinformationen notieren, damit Sie die Dienstanwendung nach der Wiederherstellung konfigurieren können.  
   
 ### <a name="backup-the-encryption-keys-using-central-administration"></a>Sichern der Verschlüsselungsschlüssel mit der Zentraladministration  
- Informationen zum Sichern [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] der Verschlüsselungsschlüssel finden Sie im Abschnitt "Verschlüsselungsschlüssel" im Abschnitt [Verwalten einer SharePoint-Dienstanwendung](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)für Reporting Services .  
+ Informationen zum Sichern der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Verschlüsselungsschlüssel finden Sie im Abschnitt "Verschlüsselungsschlüssel" unter [Verwalten einer Reporting Services SharePoint-Dienst Anwendung](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).  
   
 ###  <a name="backup-the-service-application-using-sharepoint-central-administration"></a><a name="bkmk_centraladmin"></a> Sichern der Dienstanwendung mit der SharePoint-Zentraladministration  
  So sichern Sie die Dienstanwendung:  
@@ -75,7 +75,7 @@ ms.locfileid: "81487549"
 ### <a name="verify-execution-account-and-database-authentication"></a>Überprüfen der Kontoausführung und Datenbankauthentifizierung  
  **Ausführungskonto:** So überprüfen Sie, ob die Dienstanwendung ein Ausführungskonto verwendet:  
   
-1.  Klicken Sie in sharePoint Central Administration in der **Gruppe Anwendungsverwaltung** auf **Dienstanwendungen verwalten.**  
+1.  Klicken Sie in der SharePoint-zentral Administration in der Gruppe **Anwendungs Verwaltung** auf **Dienst Anwendungen verwalten** .  
   
 2.  Klicken Sie auf den Namen der Dienstanwendung und dann im SharePoint-Menüband auf **Verwalten** .  
   
@@ -85,7 +85,7 @@ ms.locfileid: "81487549"
   
  **Datenbankauthentifizierung** : So überprüfen Sie, ob die Dienstanwendung die Windows-Authentifizierung für die Datenbankauthentifizierung verwendet:  
   
-1.  Klicken Sie in sharePoint Central Administration in der **Gruppe Anwendungsverwaltung** auf **Dienstanwendungen verwalten.**  
+1.  Klicken Sie in der SharePoint-zentral Administration in der Gruppe **Anwendungs Verwaltung** auf **Dienst Anwendungen verwalten** .  
   
 2.  Klicken Sie auf den Namen der Dienstanwendung und dann im SharePoint-Menüband auf **Eigenschaften** .  
   
@@ -93,7 +93,7 @@ ms.locfileid: "81487549"
   
 4.  Ist die Windows-Authentifizierung konfiguriert, müssen Ihnen die Anmeldeinformationen bekannt sein, um die Dienstanwendung nach der Wiederherstellung konfigurieren zu können. Fahren Sie erst mit der Sicherungs- und Wiederherstellungsprozedur fort, wenn Sie die richtigen Anmeldeinformationen kennen.  
   
-##  <a name="restore-the-service-application"></a><a name="bkmk_restore"></a>Wiederherstellen der Dienstanwendung  
+##  <a name="restore-the-service-application"></a><a name="bkmk_restore"></a>Wiederherstellen der Dienst Anwendung  
  Führen Sie die folgenden Schritte wie folgt aus:  
   
 1.  Stellen Sie die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienstanwendung wieder her.  
@@ -125,12 +125,12 @@ ms.locfileid: "81487549"
  [Wiederherstellen einer Dienstanwendung (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428305.aspx)  
   
 ### <a name="restore-the-encryption-keys-using-central-administration"></a>Wiederherstellen der Verschlüsselungsschlüssel mit der Zentraladministration  
- Informationen zum Wiederherstellen [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] der Verschlüsselungsschlüssel finden Sie im Abschnitt "Verschlüsselungsschlüssel" im Abschnitt [Verwalten einer SharePoint-Dienstanwendung](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)für Reporting Services .  
+ Informationen zum Wiederherstellen der [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Verschlüsselungsschlüssel finden Sie im Abschnitt "Verschlüsselungsschlüssel" unter [Verwalten einer Reporting Services SharePoint-Dienst Anwendung](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).  
   
 ### <a name="configure-the-execution-account-and-database-authentication"></a>Konfigurieren des Ausführungskontos und der Datenbankauthentifizierung  
  **Ausführungskonto** : Wurde für die Dienstanwendung ein Ausführungskonto verwendet, gehen Sie zum Konfigurieren des Kontos wie folgt vor:  
   
-1.  Klicken Sie in sharePoint Central Administration in der **Gruppe Anwendungsverwaltung** auf **Dienstanwendungen verwalten.**  
+1.  Klicken Sie in der SharePoint-zentral Administration in der Gruppe **Anwendungs Verwaltung** auf **Dienst Anwendungen verwalten** .  
   
 2.  Klicken Sie auf den Namen der Dienstanwendung und dann im SharePoint-Menüband auf **Verwalten** .  
   
@@ -142,7 +142,7 @@ ms.locfileid: "81487549"
   
  **Datenbankauthentifizierung** : Wenn für die Dienstanwendung die Windows-Authentifizierung zur Datenbankauthentifizierung verwendet wurde, gehen Sie wie folgt vor:  
   
-1.  Klicken Sie in der Gruppe **Anwendungsverwaltung** auf **Dienstanwendungen** verwalten.  
+1.  Klicken Sie in der SharePoint-zentral Administration in der Gruppe **Anwendungs Verwaltung** auf **Dienst Anwendungen verwalten** .  
   
 2.  Klicken Sie auf den Namen der Dienstanwendung und dann im SharePoint-Menüband auf **Eigenschaften** .  
   
@@ -152,6 +152,6 @@ ms.locfileid: "81487549"
   
 5.  Geben Sie das Konto und Kennwort ein. Wählen Sie ggf. die Option **Windows-Anmeldeinformationen verwenden** aus.  
   
-6.  Klicken Sie auf **Ok**  
+6.  Klicken Sie auf **OK**  
   
   

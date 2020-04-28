@@ -1,6 +1,6 @@
 ---
-title: Transaktionsförderung | Microsoft Docs
-description: Bei der SQL Server CLR-Integration kann eine einfache lokale Transaktion durch Transaktionsheraufstufung zu einer vollständig verteilbaren Transaktion heraufgestuft werden.
+title: Transaktions herauf Stufung | Microsoft-Dokumentation
+description: In SQL Server CLR-Integration kann eine leichte lokale Transaktion durch Transaktions herauf Stufung zu einer vollständig verteilbaren Transaktion herauf gestuft werden.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 5bc7e26e-28ad-4198-a40d-8b2c648ba304
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: e77409f6bf6c71363e030f29f86f41205dd4a0f0
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487477"
 ---
 # <a name="transaction-promotion"></a>Transaktionshöherstufung
@@ -32,7 +32,7 @@ ms.locfileid: "81487477"
 ## <a name="distributed-transactions"></a>Verteilte Transaktionen  
  Verteilte Transaktionen nehmen normalerweise beträchtliche Systemressourcen in Anspruch. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC) verwaltet diese Transaktionen und integriert alle Ressourcen-Manager, auf die in den Transaktionen zugegriffen wird. Andererseits handelt es sich bei der Transaktionhöherstufung um eine besondere Form der **System.Transactions** -Transaktion, mit der die Verarbeitung an eine einfache [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Transaktion delegiert wird. **System.Transactions**, **System.Data.SqlClient**und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] koordinieren die Verarbeitung der Transaktion, um sie bei Bedarf zu einer vollständigen verteilten Transaktion höherzustufen.  
   
- Der Vorteil der Verwendung der Transaktionshöherstufung liegt darin, dass beim Öffnen einer Verbindung, die eine aktive **TransactionScope** -Transaktion aufweist, diese Transaktion als "leichtgewichtige" Transaktion agiert, wenn keine anderen Verbindungen geöffnet sind, anstatt als verteilte Transaktion zusätzliche Ressourcen zu verbrauchen. Weitere Informationen **zu TransactionScope**finden Sie unter [Verwenden von System.Transactions](../../relational-databases/clr-integration-data-access-transactions/using-system-transactions.md).  
+ Der Vorteil der Verwendung der Transaktionshöherstufung liegt darin, dass beim Öffnen einer Verbindung, die eine aktive **TransactionScope** -Transaktion aufweist, diese Transaktion als "leichtgewichtige" Transaktion agiert, wenn keine anderen Verbindungen geöffnet sind, anstatt als verteilte Transaktion zusätzliche Ressourcen zu verbrauchen. Weitere Informationen zu **transaktionscope**finden Sie unter [Verwenden von System. Transactions](../../relational-databases/clr-integration-data-access-transactions/using-system-transactions.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [CLR-Integration und Transaktionen](../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  

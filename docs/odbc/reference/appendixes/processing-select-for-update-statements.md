@@ -1,5 +1,5 @@
 ---
-title: Verarbeiten von SELECT FOR UPDATE-Anweisungen | Microsoft Docs
+title: Verarbeiten von Select for Update-Anweisungen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -19,16 +19,16 @@ ms.assetid: 8d2e79a4-5daf-458e-a536-d8b6e588753e
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 904028cd7b3798fcac8f9e5afa6186fae3e9fa29
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81308011"
 ---
 # <a name="processing-select-for-update-statements"></a>Verarbeiten von SELECT FOR UPDATE-Anweisungen
 > [!IMPORTANT]  
->  Diese Funktion wird in einer zukünftigen Windows-Version entfernt. Vermeiden Sie es, diese Funktion in neuen Entwicklungsarbeiten zu verwenden, und planen Sie, Anwendungen zu ändern, die diese Funktion derzeit verwenden. Microsoft empfiehlt die Verwendung der Cursorfunktionalität des Treibers.  
+>  Diese Funktion wird in einer zukünftigen Version von Windows entfernt. Vermeiden Sie die Verwendung dieses Features bei der Entwicklung neuer Anwendungen, und planen Sie das Ändern von Anwendungen, in denen diese Funktion derzeit verwendet wird Microsoft empfiehlt die Verwendung der Cursor-Funktionalität des Treibers.  
   
- Für maximale Interoperabilität sollten Anwendungen Resultsets generieren, die mit einer positionierten Updateanweisung aktualisiert werden, indem eine **SELECT FOR UPDATE-Anweisung** ausgeführt wird. Obwohl die Cursorbibliothek dies nicht erfordert, wird sie von den meisten Datenquellen benötigt, die positionierte Aktualisierungsanweisungen unterstützen.  
+ Zur maximalen Interoperabilität sollten Anwendungen Resultsets generieren, die mit einer positionierten Update-Anweisung aktualisiert werden, indem **Sie eine SELECT for Update** -Anweisung ausführen. Die Cursor Bibliothek erfordert dies nicht, aber Sie ist für die meisten Datenquellen erforderlich, die positionierte UPDATE-Anweisungen unterstützen.  
   
- Die Cursorbibliothek ignoriert die Spalten in der **FOR UPDATE-Klausel** einer **SELECT FOR UPDATE-Anweisung;** Diese Klausel wird entfernt, bevor die Anweisung an den Treiber übergeben wird. In der Cursorbibliothek steuert das Attribut SQL_ATTR_CONCURRENCY-Anweisung zusammen mit den im vorherigen Abschnitt erwähnten Einschränkungen, ob die Spalten in einer Ergebnismenge aktualisiert werden können.
+ Die Cursor Bibliothek ignoriert die Spalten in der **for Update** -Klausel einer **Select for Update** -Anweisung. Diese Klausel wird entfernt, bevor die-Anweisung an den Treiber übergeben wird. In der Cursor Bibliothek steuert das SQL_ATTR_CONCURRENCY Statement-Attribut zusammen mit den im vorherigen Abschnitt erwähnten Einschränkungen, ob die Spalten in einem Resultset aktualisiert werden können.

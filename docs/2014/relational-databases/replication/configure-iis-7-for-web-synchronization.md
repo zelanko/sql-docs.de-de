@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c130d3e9ef5be0d60ab19aa4fb16c33ad9426a4f
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81486989"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Konfigurieren von IIS 7 für die Websynchronisierung
@@ -54,7 +54,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
 4.  Registrieren Sie replisapi.dll:  
   
-    1.  Klicken Sie im **Startmenü**auf **Ausführen**. Geben **Open** Sie `cmd`im Feld Öffnen ein , und klicken Sie dann auf **OK**.  
+    1.  Klicken Sie im **Startmenü**auf **Ausführen**. Geben Sie **Open** `cmd`im Feld Öffnen ein, und klicken Sie dann auf **OK**.  
   
     2.  Führen Sie in dem in Schritt 1 erstellten Verzeichnis den folgenden Befehl aus:  
   
@@ -66,7 +66,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
     1.  Klicken Sie im **Internetinformationsdienste-Manager**im Bereich **Verbindungen** mit der rechten Maustaste auf **Standardwebsite**, und wählen Sie dann **Virtuelles Verzeichnis hinzufügen**aus.  
   
-    2.  Geben **Alias**Sie `SQLReplication`für Alias ein.  
+    2.  Geben **Alias**Sie `SQLReplication`als Alias ein.  
   
     3.  Geben Sie **\<Laufwerk>:\Inetpub\SQLReplication\\** für **Physischer Pfad** ein, und klicken Sie dann auf **OK**.  
   
@@ -78,7 +78,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
     3.  Klicken Sie im Bereich **Aktionen** auf **Modulzuordnung hinzufügen**.  
   
-    4.  Geben **Request** Sie für `replisapi.dll`Request Path ein.  
+    4.  Geben **Request** Sie `replisapi.dll`unter Anforderungs Pfad den Namen ein.  
   
     5.  Wählen Sie in der Dropdownliste **Modul** die Option **IsapiModule**aus.  
   
@@ -155,11 +155,11 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
 ###### <a name="to-test-the-certificate"></a>So testen Sie das Zertifikat  
   
-1.  Klicken Sie unter **Internet Information Services (IIS)-Manager**auf **Standardwebsite.**  
+1.  Klicken Sie im **Klicken Sie imternet Klicken Sie imformation Services (IIS) Manager**auf **Standardwebsite.**  
   
 2.  Klicken Sie im Bereich **Aktionen** auf \*:443(https) **durchsuchen**.  
   
-3.  Internet Explorer wird geöffnet und zeigt folgende Meldung an: "Es besteht ein Problem mit dem Sicherheitszertifikat der Website". Diese Warnung besagt, dass das zugeordnete Zertifikat nicht von einer bekannten Zertifizierungsstelle ausgestellt wurde und möglicherweise nicht vertrauenswürdig ist. Dies ist eine erwartete Warnung, klicken Sie deshalb auf **Laden dieser Website fortsetzen (nicht empfohlen)**.  
+3.  Internet Explorer wird geöffnet und zeigt folgende Meldung an: "Es besteht ein Problem mit dem Sicherheitszertifikat der Website". Diese Warnung besagt, dass das zugeordnete Zertifikat nicht von einer bekannten Zertifizierungsstelle ausgestellt wurde und möglicherweise nicht vertrauenswürdig ist. Dies ist eine erwartete Warnung, klicken Sie deshalb auf **Laden dieser Website fortsetzen (nicht empfohlen)** .  
   
 4.  Wenn die Aufforderung **Mit Localhost verbinden**angezeigt wird, geben Sie einen Benutzernamen und ein Kennwort ein, um fortzufahren. Die Standardseite für die Website sollte angezeigt werden.  
   
@@ -188,7 +188,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
 1.  Erstellen Sie ein lokales Konto auf dem Computer mit IIS:  
   
-    1.  Öffnen Sie **Den Server-Manager**. Klicken Sie im Startmenü mit der rechten Maustaste auf **Arbeitsplatz**, und klicken Sie dann auf **Verwalten**.  
+    1.  Öffnen Sie **Server-Manager**. Klicken Sie im Startmenü mit der rechten Maustaste auf **Arbeitsplatz**, und klicken Sie dann auf **Verwalten**.  
   
     2.  Erweitern Sie in **Server-Manager**den Knoten **Konfiguration**, und erweitern Sie dann **Lokale Benutzer und Gruppen**.  
   
@@ -196,7 +196,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
     4.  Geben Sie einen Benutzernamen und ein sicheres Kennwort ein. Deaktivieren Sie die Option **Benutzer muss Kennwort bei der nächsten Anmeldung ändern**.  
   
-    5.  Klicken Sie auf **Erstellen**, und klicken Sie dann auf **Schließen**.  
+    5.  Klicken Sie auf **Erstellen**und dann auf **Schließen**.  
   
 2.  Fügen Sie das Konto der IIS_IUSRS-Gruppe hinzu:  
   
@@ -272,7 +272,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
   
 1.  Stellen Sie sicher, dass die Netzwerkeinstellungen auf dem Abonnenten ordnungsgemäß eingerichtet wurden:  
   
-    1.  Klicken [!INCLUDE[msCoName](../../includes/msconame-md.md)] Sie in Internet Explorer im Menü **Extras** auf **Internetoptionen**.  
+    1.  Klicken Sie in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer im Menü **Extras** auf **Internetoptionen**.  
   
     2.  Klicken Sie auf der Registerkarte **Verbindungen** auf **Einstellungen**.  
   
@@ -283,7 +283,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
 2.  Stellen Sie auf dem Abonnenten in Internet Explorer eine Verbindung mit dem Server im Diagnosemodus her, indem Sie an die Adresse für replisapi.dll `?diag` anhängen. Beispiel: `https://server.domain.com/directory/replisapi.dll?diag`.  
   
     > [!NOTE]  
-    >   Im oben aufgeführten Beispiel sollte **server.domain.com** durch den im Abschnitt **Serverzertifikate** in IIS-Manager aufgeführten genauen **Ausgestellt an** -Namen ersetzt werden.  
+    >  Im oben aufgeführten Beispiel sollte **server.domain.com** durch den im Abschnitt **Serverzertifikate** in IIS-Manager aufgeführten genauen **Ausgestellt an** -Namen ersetzt werden.  
   
 3.  Wenn das für IIS angegebene Zertifikat nicht vom Windows-Betriebssystem erkannt wird, wird das Dialogfeld **Sicherheitshinweis** angezeigt. Dieser Hinweis wird möglicherweise angezeigt, weil das Zertifikat ein Testzertifikat ist oder es von einer Zertifizierungsstelle ausgestellt wurde, die von Windows nicht erkannt wird.  
   
@@ -318,7 +318,7 @@ Die Websynchronisierung wird auf IIS ab Version 5.0 unterstützt. Der Assistent 
     2.  Stellen Sie eine Verbindung mit dem Server im Diagnosemodus her. Wenn das Zertifikat ordnungsgemäß installiert ist, wird das Dialogfeld **Sicherheitshinweis** nicht angezeigt. Wenn das Dialogfeld angezeigt wird, ist der Merge-Agent nicht in der Lage, eine Verbindung mit dem Computer mit IIS herzustellen. Sie müssen daher sicherstellen, dass das Zertifikat für den Server, auf den Sie zugreifen, dem Zertifikatsspeicher auf dem Abonnenten als vertrauenswürdiges Zertifikat hinzugefügt wurde. Weitere Informationen zum Exportieren von Zertifikaten finden Sie in der IIS-Dokumentation.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Websynchronisierung für Mergereplikation](web-synchronization-for-merge-replication.md)   
+ [Websynchronisierung für die Mergereplikation](web-synchronization-for-merge-replication.md)   
  [Konfigurieren der Websynchronisierung](configure-web-synchronization.md)  
   
   

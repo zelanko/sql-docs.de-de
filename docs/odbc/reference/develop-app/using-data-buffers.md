@@ -1,5 +1,5 @@
 ---
-title: Verwenden von Datenpuffern | Microsoft Docs
+title: Verwenden von Daten Puffern | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,14 +15,14 @@ ms.assetid: 06b9f603-b395-497c-979b-d3ec3d6db375
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 510d3a6728efb63c3c352e5215e54d1bf7c4e025
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81306771"
 ---
 # <a name="using-data-buffers"></a>Verwenden von Datenpuffern
-Datenpuffer werden durch drei Informationen beschrieben: Typ, Adresse und Bytelänge. Immer wenn eine Funktion eine dieser Informationen benötigt und sie nicht bereits kennt, hat sie ein Argument, mit dem die Anwendung sie übergibt.  
+Datenpuffer werden durch drei Informationen beschrieben: Typ, Adresse und Byte Länge. Wenn eine Funktion eine dieser Informationen benötigt und Sie nicht bereits kennt, verfügt sie über ein Argument, mit dem die Anwendung Sie übergibt.  
   
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   

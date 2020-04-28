@@ -1,6 +1,6 @@
 ---
-title: Arbeiten mit benutzerdefinierten Typen in SQL Server | Microsoft Docs
-description: Sie können über die Transact-SQL-Sprache mithilfe der regulären Abfragesyntax auf die UDT-Funktionalität in SQL Server zugreifen. Definieren Sie UDT-Tabellen und -Spalten, und bearbeiten Sie UDT-Daten.
+title: Arbeiten mit benutzerdefinierten Typen in SQL Server | Microsoft-Dokumentation
+description: Mithilfe der regulären Abfrage Syntax können Sie in SQL Server von der Transact-SQL-Sprache aus auf die UDT-Funktionalität zugreifen. Definieren Sie UDT-Tabellen und-Spalten, und bearbeiten Sie UDT-Daten.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,15 +17,15 @@ ms.assetid: 807376fb-1f1a-4f2a-8cf8-a622c5858634
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0dd3ba726d4b23b5dc3b8aa58188b0c259a7c3f9
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81486904"
 ---
 # <a name="working-with-user-defined-types-in-sql-server"></a>Arbeiten mit benutzerdefinierten Typen in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Sie können über die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] Sprache auf die Funktionalität des benutzerdefinierten Typs (UDT) zugreifen, indem Sie die reguläre Abfragesyntax verwenden. UDTs können für die Definition von Datenbankobjekten, als Variablen in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batches, in Funktionen und gespeicherten Prozeduren und als Argumente in Funktionen und gespeicherten Prozeduren verwendet werden.  
+  Mithilfe der regulären Abfrage Syntax können Sie von der Sprache aus auf [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] die [!INCLUDE[tsql](../../includes/tsql-md.md)] Funktionalität des benutzerdefinierten Typs (User-Defined Type, UDT) zugreifen. UDTs können für die Definition von Datenbankobjekten, als Variablen in [!INCLUDE[tsql](../../includes/tsql-md.md)]-Batches, in Funktionen und gespeicherten Prozeduren und als Argumente in Funktionen und gespeicherten Prozeduren verwendet werden.  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
  [Definieren von UDT-Tabellen und -Spalten](../../relational-databases/clr-integration-database-objects-user-defined-types/working-with-user-defined-types-defining-udt-tables-and-columns.md)  

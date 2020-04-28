@@ -1,5 +1,5 @@
 ---
-title: Zusätzliche unterstützte ODBC SQL-Grammatik | Microsoft Docs
+title: Weitere unterstützte ODBC-SQL-Grammatik | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,26 +14,26 @@ ms.assetid: 2ead7727-3245-4c2b-91f5-ed946ef4edf5
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: d6ac9bd3a54e1f06f17bf6b92485ce5b9cc52882
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307131"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>Zusätzliche unterstützte ODBC-SQL-Grammatik
-Die ODBC-Treiber unterstützen die Minimale ODBC 2.5-Grammatik und die folgenden Klauseln in der Core- und Extended ODBC 2.5-Grammatik vollständig. Zusätzliche Informationen können angezeigt werden, indem Sie zu den Themen [ALTER TABLE-Anweisung](../../odbc/microsoft/alter-table-statement.md), [Korrelationsnamen](../../odbc/microsoft/correlation-names.md)und [Prozeduraufruf](../../odbc/microsoft/procedure-invocation.md) springen.  
+Die ODBC-Treiber unterstützen vollständig die minimale ODBC 2,5-Grammatik und die folgenden Klauseln in der Core-und Extended ODBC 2,5-Grammatik. Weitere Informationen können angezeigt werden, wenn Sie zu den Themen [ALTER TABLE](../../odbc/microsoft/alter-table-statement.md), [Korrelations Namen](../../odbc/microsoft/correlation-names.md)und [Prozedur Aufruf](../../odbc/microsoft/procedure-invocation.md) springen.  
   
--   Ungefähres numerisches Literal (Kern)  
+-   Ungefähre numerische Literale (Core)  
   
--   [ALTER TABLE-Anweisung](../../odbc/microsoft/alter-table-statement.md) (Kern)  
+-   [ALTER TABLE-Anweisung](../../odbc/microsoft/alter-table-statement.md) (Core)  
   
--   Binärliterale (Erweitert)  
+-   Binäre Literale (erweitert)  
   
--   [Korrelationsnamen](../../odbc/microsoft/correlation-names.md) (Kern)  
+-   [Korrelations Namen](../../odbc/microsoft/correlation-names.md) (Core)  
   
--   [Prozeduraufruf](../../odbc/microsoft/procedure-invocation.md) (Erweitert)  
+-   [Prozedur Aufruf](../../odbc/microsoft/procedure-invocation.md) (erweitert)  
   
--   [ZWISCHEN Prädikat](../../odbc/microsoft/between-predicate.md) (Kern)  
+-   [Zwischen Prädikat](../../odbc/microsoft/between-predicate.md) (Core)  
   
 -   [CREATE INDEX-Anweisung](../../odbc/microsoft/create-index-statement.md)  
   
@@ -51,15 +51,15 @@ Die ODBC-Treiber unterstützen die Minimale ODBC 2.5-Grammatik und die folgenden
   
 -   [ORDER BY mit GROUP BY](../../odbc/microsoft/order-by-with-group-by.md)  
   
--   EXISTS-Prädikat (Kern)  
+-   Vorhanden Prädikat (Core)  
   
--   IN (*Wertliste*) (Kern)  
+-   IN (*ValueList*) (Core)  
   
--   [Jet: Äußere Verbindungen](../../odbc/microsoft/jet-outer-joins.md) (Erweitert)  
+-   [Jet: äußere Joins](../../odbc/microsoft/jet-outer-joins.md) (erweitert)  
   
--   SELECT-Anweisung (Erweitert) (einschließlich GROUP BY-, HAVING- und UNION-Klauseln)  
+-   SELECT-Anweisung (erweitert) (einschließlich Group by-, have-und Union-Klauseln)  
   
--   Unterabfragen (SUBSELECTs) (Core)  
+-   Unterabfragen (Unterauswahlen) (Core)  
   
 -   [Skalarfunktionen](../../odbc/microsoft/scalar-functions.md)  
   

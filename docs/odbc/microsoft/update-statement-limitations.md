@@ -1,5 +1,5 @@
 ---
-title: UPDATE-Anweisungsbeschränkungen | Microsoft Docs
+title: Einschränkungen der Update-Anweisung | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.assetid: 14700aac-e135-4dc0-9138-4b01224461d5
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 8ddf19c0b672901b2e778833f8bf624996d4ced3
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307621"
 ---
 # <a name="update-statement-limitations"></a>Einschränkungen der UPDATE-Anweisung
-Damit der Paradox-Treiber eine Tabelle aktualisieren kann, muss die Tabelle über einen eindeutigen Index (Paradox-Primärschlüssel) verfügen. Wenn Sie den Paradox-Treiber verwenden, ohne die Borland Database Engine zu implementieren, ist es nicht möglich, eine Paradox-Tabelle zu aktualisieren.  
+Damit der Paradox-Treiber eine Tabelle aktualisieren kann, muss die Tabelle über einen eindeutigen Index verfügen (Paradox-Primärschlüssel). Wenn Sie den Paradox-Treiber verwenden, ohne die Datenbank-Engine "Borland" zu implementieren, ist es nicht möglich, eine Paradox-Tabelle zu aktualisieren.  
   
- Wird vom Texttreiber nicht unterstützt.  
+ Wird vom Text Treiber nicht unterstützt.  
   
- Wenn der Microsoft Excel-Treiber verwendet wird, ist es möglich, Werte zu aktualisieren, aber eine Zeile kann nicht aus einer Tabelle gelöscht werden, die auf einer Microsoft Excel-Tabelle basiert. Daher wird die UPDATE-Anweisung nicht offiziell vom Microsoft Excel-Treiber unterstützt. Nur die INSERT-Anweisung wird als unterstützt betrachtet.
+ Wenn der Microsoft Excel-Treiber verwendet wird, ist es möglich, Werte zu aktualisieren, aber eine Zeile kann nicht aus einer Tabelle gelöscht werden, die auf einer Microsoft Excel-Tabelle basiert. Folglich wird die Update-Anweisung nicht als offiziell vom Microsoft Excel-Treiber unterstützt betrachtet. Nur die INSERT-Anweisung wird als unterstützt betrachtet.

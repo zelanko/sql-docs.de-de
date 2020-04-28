@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 607ac55fe426cd086ce31ade33d3e772e7a3d9a9
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487149"
 ---
 # <a name="permissions-hierarchy-database-engine"></a>Berechtigungshierarchie (Datenbank-Engine)
@@ -34,12 +34,12 @@ ms.locfileid: "81487149"
  ![Abbildung mit den Berechtigungshierarchien in Datenbank-Engine](../../database-engine/media/wj-security-layers.gif "Abbildung mit den Berechtigungshierarchien in Datenbank-Engine")
 
 ## <a name="chart-of-sql-server-permissions"></a>Diagramm der SQL Server-Berechtigungen
- Ein Diagramm im Posterformat aller [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Berechtigungen [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)im pdf-Format finden Sie unter .
+ Ein Diagramm mit einem Diagramm mit allen [!INCLUDE[ssDE](../../../includes/ssde-md.md)] Berechtigungen im PDF-Format finden [https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/security/permissions-posters/Microsoft_SQL_Server_2017_and_Azure_SQL_Database_permissions_infographic.pdf)Sie unter.
 
 ## <a name="working-with-permissions"></a>Arbeiten mit Berechtigungen
  Berechtigungen können mit den bekannten [!INCLUDE[tsql](../../includes/tsql-md.md)] -Abfragen GRANT, DENY und REVOKE geändert werden. Informationen über Berechtigungen finden Sie in den Katalogsichten [sys.server_permissions](/sql/relational-databases/system-catalog-views/sys-server-permissions-transact-sql) und [sys.database_permissions](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql) . Zudem wird die Abfrage von Berechtigungsinformationen mithilfe von integrierten Funktionen unterstützt.
 
 ## <a name="see-also"></a>Weitere Informationen
- [Sichern von SQL](securing-sql-server.md) [Server-Berechtigungen &#40;Database Engine&#41;](permissions-database-engine.md) [Securables](securables.md) [Principals &#40;Database Engine&#41;](authentication-access/principals-database-engine.md) GRANT &#40;[Transact-SQL&#41;](/sql/t-sql/statements/grant-transact-sql) [REVOKE &#40;Transact-SQL&#41;](/sql/t-sql/statements/revoke-transact-sql) [DENY &#40;Transact-SQL&#41;](/sql/t-sql/statements/deny-transact-sql) HAS_PERMS_BY_NAME &#40;&#40;[Transact-SQL&#41;](/sql/t-sql/functions/has-perms-by-name-transact-sql) [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql) [sys.server_permissions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-server-permissions-transact-sql) [sys.database_permissions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql)
+ [Sichern von SQL Server](securing-sql-server.md) [Berechtigungen &#40;Datenbank-Engine&#41;](permissions-database-engine.md) Sicherungs fähigen [Securables](securables.md) [Prinzipalen &#40;](authentication-access/principals-database-engine.md) Datenbank-Engine&#41;&#40;&#41;Transact- [SQL](/sql/t-sql/statements/grant-transact-sql) [-&#40;&#41;](/sql/t-sql/statements/revoke-transact-sql) Transact-SQL-&#40;&#41;HAS_PERMS_BY_NAME Transact- [SQL &#40;&#41;](/sql/t-sql/statements/deny-transact-sql) [fn_builtin_permissions](/sql/t-sql/functions/has-perms-by-name-transact-sql) &#40;Transact-SQL&#41;[sys. server_permissions &#40;Transact-SQL](/sql/relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql) [-&#41;](/sql/relational-databases/system-catalog-views/sys-server-permissions-transact-sql) [sys.database_permissions &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-permissions-transact-sql)
 
 

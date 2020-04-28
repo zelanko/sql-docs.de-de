@@ -1,6 +1,6 @@
 ---
-title: SqlContext-Objekt | Microsoft Docs
-description: Wenn Sie verwalteten Code in SQL Server in einer Benutzerverbindung aufrufen, wird der Zugriff auf den Kontext des Aufrufers in einem SqlContext-Objekt abstrahiert.
+title: SqlContext-Objekt | Microsoft-Dokumentation
+description: Wenn Sie verwalteten Code in SQL Server in einer Benutzer Verbindung aufrufen, wird der Zugriff auf den Kontext des Aufrufers in einem SqlContext-Objekt abstrahiert.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: cd6d3091b155ae829e368bdd182b3da8286c7194
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487536"
 ---
 # <a name="sqlcontext-object"></a>SqlContext-Objekt
@@ -30,9 +30,9 @@ ms.locfileid: "81487536"
   
  **SqlContext** stellt den Zugriff auf folgende Komponenten bereit:  
   
--   **SqlPipe**: Das **SqlPipe** -Objekt stellt die "Pipe" dar, d. h. den Kanal, durch den die Ergebnisse den Client erreichen. Weitere Informationen zum **SqlPipe-Objekt** finden Sie unter [SqlPipe-Objekt](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md).  
+-   **SqlPipe**: Das **SqlPipe** -Objekt stellt die "Pipe" dar, d. h. den Kanal, durch den die Ergebnisse den Client erreichen. Weitere Informationen zum **SqlPipe** -Objekt finden Sie unter [SqlPipe-Objekt](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md).  
   
--   **SqlTriggerContext**: Das **SqlTriggerContext** -Objekt kann nur innerhalb eines CLR-Triggers abgerufen werden. Es stellt Informationen über den Vorgang bereit, durch den der Trigger ausgelöst wurde, sowie eine Übersicht der aktualisierten Spalten. Weitere Informationen zum **SqlTriggerContext-Objekt** finden Sie unter [SqlTriggerContext-Objekt](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md).  
+-   **SqlTriggerContext**: Das **SqlTriggerContext** -Objekt kann nur innerhalb eines CLR-Triggers abgerufen werden. Es stellt Informationen über den Vorgang bereit, durch den der Trigger ausgelöst wurde, sowie eine Übersicht der aktualisierten Spalten. Weitere Informationen zum **SqlTriggerContext** -Objekt finden Sie unter [SqlTriggerContext-Objekt](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md).  
   
 -   **IsAvailable**: Die **IsAvailable** -Eigenschaft wird verwendet, um die Verfügbarkeit des Kontexts zu ermitteln.  
   

@@ -1,6 +1,6 @@
 ---
 title: Bewährte Methoden für den Datenmigrations-Assistenten
-description: Erfahren Sie mehr über bewährte Methoden zum Migrieren von SQL Server-Datenbanken mit dem Datenmigrationsassistenten
+description: Informieren Sie sich über bewährte Methoden zum Migrieren von SQL Server-Daten Datenmigrations-Assistent Banken
 ms.custom: seo-lt-2019
 ms.date: 03/12/2019
 ms.prod: sql
@@ -15,31 +15,31 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 ms.openlocfilehash: f2bfbb79a8a4803bb56e3dce85f575e8cf257b4a
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388150"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>Bewährte Methoden für die Ausführung des Datenmigrations-Assistenten
-Dieser Artikel enthält einige Informationen zu bewährten Vorgehensweisen für die Installation, Bewertung und Migration.
+Dieser Artikel enthält Informationen zu bewährten Methoden für die Installation, Bewertung und Migration.
 
 ## <a name="installation"></a>Installation
-Installieren und führen Sie den Datenmigrations-Assistenten nicht direkt auf dem SQL Server-Hostcomputer aus.
+Installieren Sie die Datenmigrations-Assistent nicht direkt auf dem SQL Server Host Computer, und führen Sie Sie nicht aus.
 
 ## <a name="assessment"></a>Bewertung
-- Führen Sie Bewertungen für Produktionsdatenbanken während nicht-Spitzenzeiten aus.
-- Führen Sie die **Kompatibilitätsprobleme** und die Bewertungen **neuer Feature-Empfehlungen** separat durch, um die Bewertungsdauer zu reduzieren.
+- Führen Sie Bewertungen für Produktionsdatenbanken außerhalb der Spitzenzeiten aus.
+- Führen Sie die **Kompatibilitätsprobleme** und **neuen Bewertungs Empfehlungen** separat aus, um die Bewertungs Dauer zu verringern.
 
 ## <a name="migration"></a>Migration
-- Migrieren Sie einen Server während nicht-Spitzenzeiten.
+- Migrieren eines Servers außerhalb der Spitzenzeiten.
 
-- Stellen Sie beim Migrieren einer Datenbank einen einzelnen Freigabespeicherort bereit, auf den der Quellserver und der Zielserver zugreifen können, und vermeiden Sie nach Möglichkeit einen Kopiervorgang. Ein Kopiervorgang kann aufgrund der Größe der Sicherungsdatei zu Verzögerungen führen. Der Kopiervorgang erhöht auch die Wahrscheinlichkeit, dass eine Migration aufgrund eines zusätzlichen Schritts fehlschlägt. Wenn ein einzelner Speicherort bereitgestellt wird, umgeht der Datenmigrationsassistent den Kopiervorgang.
+- Geben Sie beim Migrieren einer Datenbank einen einzelnen Freigabe Speicherort an, der für den Quell Server und den Zielserver zugänglich ist, und vermeiden Sie, wenn möglich, einen Kopiervorgang. Ein Kopiervorgang kann je nach Größe der Sicherungsdatei zu einer Verzögerung führen. Der Kopiervorgang erhöht außerdem die Wahrscheinlichkeit, dass eine Migration aufgrund eines zusätzlichen Schritts fehlschlägt. Wenn ein einzelner Speicherort bereitgestellt wird, wird Datenmigrations-Assistent den Kopiervorgang umgangen.
  
-    Stellen Sie außerdem sicher, dass Sie die richtigen Berechtigungen für den freigegebenen Ordner bereitstellen, um Migrationsfehler zu vermeiden. Die richtigen Berechtigungen werden im Tool angegeben. Wenn eine SQL Server-Instanz unter Netzwerkdienstanmeldeinformationen ausgeführt wird, erteilen Sie dem Computerkonto für die SQL Server-Instanz die richtigen Berechtigungen für den freigegebenen Ordner.
+    Stellen Sie außerdem sicher, dass Sie die richtigen Berechtigungen für den freigegebenen Ordner bereitstellen, um Migrations Fehler zu vermeiden. Die richtigen Berechtigungen werden im Tool angegeben. Wenn eine SQL Server Instanz unter den Anmelde Informationen des Netzwerk Dienstanbieter ausgeführt wird, müssen Sie dem Computer Konto für die SQL Server Instanz die richtigen Berechtigungen für den freigegebenen Ordner erteilt haben.
 
-- Aktivieren Sie die Verschlüsselungsverbindung, wenn Sie eine Verbindung mit den Quell- und Zielservern herstellen. Die Verwendung der TLS-Verschlüsselung erhöht die Sicherheit der Über die Netzwerke zwischen dem Datenmigrationsassistenten und der SQL Server-Instanz übertragenen Daten, was insbesondere bei der Migration von SQL-Anmeldungen von Vorteil ist. Wenn die TLS-Verschlüsselung nicht verwendet wird und das Netzwerk von einem Angreifer kompromittiert wird, können die migrierten SQL-Anmeldungen vom Angreifer abgefangen und/oder geändert werden.
+- Aktivieren Sie Verbindung verschlüsseln, wenn eine Verbindung mit den Quell-und Ziel Servern hergestellt wird. Die Verwendung der TLS-Verschlüsselung erhöht die Sicherheit von Daten, die über die Netzwerke zwischen Datenmigrations-Assistent und der SQL Server Instanz übertragen werden. Dies ist insbesondere bei der Migration von SQL-Anmeldungen vorteilhaft. Wenn die TLS-Verschlüsselung nicht verwendet wird und das Netzwerk von einem Angreifer kompromittiert wird, können die migrierten SQL-Anmeldungen ggf. vom Angreifer abgefangen und/oder geändert werden.
 
-    Wenn sich aber der gesamte Zugriff innerhalb einer sicheren Intranetkonfiguration abspielt, ist eine Verschlüsselung möglicherweise nicht erforderlich. Das Aktivieren der Verschlüsselung verlangsamt die Leistung, da der zusätzliche Overhead, der zum Ver- und Entschlüsseln von Paketen erforderlich ist, erforderlich ist. Weitere Informationen finden Sie unter [Verschlüsseln von Verbindungen zu SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).
+    Wenn sich aber der gesamte Zugriff innerhalb einer sicheren Intranetkonfiguration abspielt, ist eine Verschlüsselung möglicherweise nicht erforderlich. Das Aktivieren der Verschlüsselung verlangsamt die Leistung, da der zusätzliche Aufwand zum Verschlüsseln und Entschlüsseln von Paketen erforderlich ist. Weitere Informationen finden Sie unter Verschlüsseln von [Verbindungen mit SQL Server](https://go.microsoft.com/fwlink/?linkid=832513).
     
-- Überprüfen Sie, ob nicht vertrauenswürdige Einschränkungen sowohl für die Quelldatenbank als auch für die Zieldatenbank vorhanden sind, bevor Sie Daten migrieren. Analysieren Sie nach der Migration erneut die Zieldatenbank, um festzustellen, ob Einschränkungen im Rahmen der Datenverschiebung nicht vertrauenswürdig sind. Beheben Sie nicht vertrauenswürdige Einschränkungen nach Bedarf. Wenn Sie die Einschränkungen nicht vertrauenswürdig lassen, kann dies zu schlechten Ausführungsplänen führen und die Leistung beeinträchtigen.
+- Überprüfen Sie vor dem Migrieren von Daten, ob die Quelldatenbank und die Zieldatenbank nicht vertrauenswürdig sind. Analysieren Sie die Zieldatenbank nach der Migration erneut, um festzustellen, ob Einschränkungen im Rahmen der Daten Verschiebung als nicht vertrauenswürdig eingestuft wurden. Korrigieren Sie nach Bedarf nicht vertrauenswürdige Einschränkungen. Wenn die Einschränkungen nicht vertrauenswürdig sind, kann dies zu schlechten Ausführungsplänen führen, was sich auf die Leistung auswirken kann.

@@ -1,6 +1,6 @@
 ---
-title: CLR-Integrationssicherheit | Microsoft Docs
-description: Die SQL Server-Integration mit der .NET Framework CLR-Sicherheit verwaltet den Zugriff zwischen Objekten. Sicherheitsüberprüfungen, die an Objekten durchgeführt werden, hängen von den beteiligten Aufrufen ab.
+title: Sicherheit bei der CLR-Integration | Microsoft-Dokumentation
+description: SQL Server Integration in die .NET Framework CLR-Sicherheit verwaltet den Zugriff zwischen Objekten. Die für Objekte ausgeführten Sicherheitsüberprüfungen sind von den beteiligten aufrufen abhängig.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -16,10 +16,10 @@ ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 561ba77b01af31c30341c5af7fa22b68ede413f6
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487117"
 ---
 # <a name="clr-integration-security"></a>Sicherheit der CLR-Integration

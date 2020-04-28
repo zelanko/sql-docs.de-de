@@ -1,5 +1,5 @@
 ---
-title: Verwalten von Datenquellen | Microsoft Docs
+title: Verwalten von Datenquellen | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,35 +17,35 @@ ms.assetid: 67cc4945-4850-4eb4-8da6-b835ddaeca4c
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: a5069ac9a5babc3071c52d73d5b56b21729a5d8a
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307211"
 ---
 # <a name="managing-data-sources"></a>Verwalten von Datenquellen
-Nachdem Sie einen ODBC-Treiber aus dem Setupprogramm des Treibers installiert haben, können Sie eine oder mehrere Datenquellen dafür definieren. Der Datenquellenname (Data Source Name, DSN) sollte eine eindeutige Beschreibung der Daten enthalten. z. *B. Lohn-* oder *Kontenpflicht .* Die Benutzer- und Systemdatenquellen, die für alle aktuell installierten Treiber definiert sind, werden auf den Registerkarten **Benutzer-DSN** oder **System-DSN** im Dialogfeld **ODBC-Datenquellenadministrator** aufgeführt. Die Dateidatenquellen in einem bestimmten Verzeichnis werden auf der Registerkarte **Datei-DSN** aufgeführt. das anzuzeigende Verzeichnis wird in das Feld **"In suchen"** auf der Registerkarte **Datei-DSN** eingegeben.  
+Nachdem Sie einen ODBC-Treiber aus dem Setup Programm des Treibers installiert haben, können Sie eine oder mehrere Datenquellen dafür definieren. Der Datenquellen Name (Data Source Name, DSN) sollte eine eindeutige Beschreibung der Daten bereitstellen. z. b. *Abrechnung* oder Konten, die *bezahlt*werden. Die Benutzer-und Systemdaten Quellen, die für alle zurzeit installierten Treiber definiert sind, werden auf den Registerkarten **Benutzer-DSN** oder **System-DSN** des Dialog Felds **ODBC-Datenquellen-Administrator** aufgeführt. Die Datei Datenquellen in einem bestimmten Verzeichnis sind auf der Registerkarte **Datei-DSN** aufgeführt. das Verzeichnis, das angezeigt werden soll, wird in das Feld **Suchen in** auf der Registerkarte **Datei-DSN** eingegeben.  
   
 > [!NOTE]  
->  Um eine Datenquelle zu verwalten, die eine Verbindung zu einem 32-Bit-Treiber unter der 64-Bit-Plattform herstellt, verwenden Sie c:-Windows-System-sysWOW64-odbcad32.exe. Um eine Datenquelle zu verwalten, die eine Verbindung zu einem 64-Bit-Treiber herstellt, verwenden Sie c:-Windows-System32-odbcad32.exe. In **Administrative Tools** auf einem 64-Bit-Betriebssystem für Windows 8 gibt es Symbole für das Dialogfeld 32-Bit und 64-Bit **ODBC Data Source Administrator.**  
+>  Verwenden Sie c:\windows\syswow64\odbcad32.exe, um eine Datenquelle zu verwalten, die eine Verbindung mit einem 32-Bit-Treiber unter der 64-Bit-Plattform herstellt. Verwenden Sie c:\windows\system32\odbcad32.exe, um eine Datenquelle zu verwalten, die eine Verbindung mit einem 64-Bit-Treiber herstellt. In den **Verwaltungs Tools** auf einem 64-Bit-Windows 8-Betriebssystem gibt es Symbole für das Dialogfeld " **ODBC-Datenquellen-Administrator** " für 32-Bit und 64-Bit.  
   
- Wenn Sie die 64-Bit-Datei odbcad32.exe verwenden, um einen DSN zu konfigurieren oder zu entfernen, der eine Verbindung zu einem 32-Bit-Treiber herstellt, z. B. **Driver do Microsoft Access (\*.mdb),** wird die folgende Fehlermeldung angezeigt:  
+ Wenn Sie das 64-Bit odbcad32. exe zum Konfigurieren oder Entfernen eines DSN verwenden, der eine Verbindung mit einem 32-Bit-Treiber herstellt, z.b. **Driver do Microsoft\*Access (MDB)**, wird die folgende Fehlermeldung angezeigt:  
   
 ```  
 The specified DSN contains an architecture mismatch between the Driver and Application  
 ```  
   
- Um diesen Fehler zu beheben, verwenden Sie die 32-Bit-Datei odbcad32.exe, um den DSN zu konfigurieren oder zu entfernen.  
+ Um diesen Fehler zu beheben, verwenden Sie 32-Bit odbcad32. exe, um den DSN zu konfigurieren oder zu entfernen.  
   
- Eine Datenquelle ordnet einen bestimmten ODBC-Treiber den Daten zu, auf die Sie über diesen Treiber zugreifen möchten. Sie können z. B. eine Datenquelle erstellen, um den ODBC dBASE-Treiber für den Zugriff auf eine oder mehrere dBASE-Dateien in einem bestimmten Verzeichnis auf Ihrer Festplatte oder einem Netzwerklaufwerk zu verwenden. Mit dem ODBC-Datenquellenadministrator können Sie Datenquellen hinzufügen, ändern und löschen, wie in der folgenden Tabelle beschrieben.  
+ Eine Datenquelle verknüpft einen bestimmten ODBC-Treiber mit den Daten, auf die Sie über diesen Treiber zugreifen möchten. Beispielsweise können Sie eine Datenquelle erstellen, um den ODBC-dBase-Treiber für den Zugriff auf eine oder mehrere dBASE-Dateien zu verwenden, die sich in einem bestimmten Verzeichnis auf der Festplatte oder auf einem Netzwerklaufwerk befinden. Mit dem ODBC-Datenquellen-Administrator können Sie Datenquellen hinzufügen, ändern und löschen, wie in der folgenden Tabelle beschrieben.  
   
 |Aktion|BESCHREIBUNG|  
 |------------|-----------------|  
-|Hinzufügen von Datenquellen|Es ist möglich, mehrere Datenquellen hinzuzufügen, wobei jeder einen Treiber mit einigen Daten, auf die Sie zugreifen möchten, mit diesem Treiber assoziiert. Geben Sie jeder Datenquelle einen Namen, der diese Datenquelle eindeutig identifiziert. Wenn Sie beispielsweise eine Datenquelle für einen Satz von dBASE-Dateien erstellen, die Kundeninformationen enthalten, können Sie die Datenquelle als "Kunden" bezeichnen. Anwendungen zeigen in der Regel Datenquellennamen für Benutzer an, aus denen Sie auswählen können.<br /><br /> Das Hinzufügen einer Dateidatenquelle unterscheidet sich geringfügig vom Hinzufügen von Benutzer- oder Systemdatenquellen. Weitere Informationen finden Sie in der Hilfedatei des ODBC-Datenquellenadministrators.|  
-|Ändern von Datenquellen|Je nach Ihren Anforderungen ist es möglicherweise erforderlich, Datenquellen neu zu konfigurieren. Sie können die Optionen zurücksetzen, indem Sie in einem beliebigen Dialogfeld für das Treiber-Setup auf **Konfigurieren** klicken.|  
-|Löschen von Datenquellen|Klicken Sie auf **Entfernen,** nachdem Sie eine Datenquelle ausgewählt haben.|  
+|Hinzufügen von Datenquellen|Es ist möglich, mehrere Datenquellen hinzuzufügen, von denen jeder einen Treiber mit einigen Daten verknüpft, auf die Sie mithilfe dieses Treibers zugreifen möchten. Weisen Sie jeder Datenquelle einen Namen zu, der diese Datenquelle eindeutig identifiziert. Wenn Sie z. b. eine Datenquelle für eine Gruppe von dBASE-Dateien erstellen, die Kundeninformationen enthalten, können Sie der Datenquelle den Namen "Customers" geben. Anwendungen zeigen in der Regel Datenquellen Namen an, aus denen Benutzer auswählen können.<br /><br /> Das Hinzufügen einer Datei Datenquelle unterscheidet sich geringfügig vom Hinzufügen von Benutzer-oder Systemdaten Quellen. Weitere Informationen finden Sie in der Hilfedatei für den ODBC-Datenquellen-Administrator.|  
+|Ändern von Datenquellen|Abhängig von Ihren Anforderungen ist es möglicherweise erforderlich, Datenquellen neu zu konfigurieren. Sie können die Optionen zurücksetzen, indem Sie im Dialogfeld für die Treiber Einrichtung auf **Konfigurieren** klicken.|  
+|Löschen von Datenquellen|Klicken Sie nach dem Auswählen einer Datenquelle auf **Entfernen** .|  
   
- Weitere Informationen zu Dateidatenquellen finden Sie unter [Verbinden mit Dateidatenquellen](../../odbc/reference/develop-app/connecting-using-file-data-sources.md) oder die [SQLDriverConnect-Funktion](../../odbc/reference/syntax/sqldriverconnect-function.md).  
+ Weitere Informationen zu Datei Datenquellen finden Sie unter [Herstellen einer Verbindung mithilfe von Datei Datenquellen](../../odbc/reference/develop-app/connecting-using-file-data-sources.md) oder der [SQLDriverConnect-Funktion](../../odbc/reference/syntax/sqldriverconnect-function.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [ODBC-Datenquellen-Administrator](../../odbc/admin/odbc-data-source-administrator.md)

@@ -1,6 +1,6 @@
 ---
-title: Einschränkungen für reguläre und Kontextverbindungen | Microsoft Docs
-description: In diesem Artikel werden die Einschränkungen beschrieben, die mit Code verbunden sind, der im Microsoft SQL Server-Prozess über Kontext und regelmäßige Verbindungen ausgeführt wird.
+title: Einschränkungen für reguläre Verbindungen und Kontext Verbindungen | Microsoft-Dokumentation
+description: In diesem Artikel werden die Einschränkungen beschrieben, die mit dem Code verbunden sind, der im Microsoft SQL Server Prozess über Kontext-und reguläre Verbindungen ausgeführt wird
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,15 +14,15 @@ ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: fac92658366cceffc3d4fac5ba650f9a14501185
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81485296"
 ---
 # <a name="context-connections-and-regular-connections---restrictions"></a>Kontextverbindungen und reguläre Verbindungen: Einschränkungen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  In diesem Thema werden die Einschränkungen erläutert, die mit der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Ausführung von Code im Prozess über Kontext und regelmäßige Verbindungen verbunden sind.  
+  In diesem Thema werden die Einschränkungen erläutert, die im zusammen [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Hang mit der Ausführung von Code im Prozess durch Kontext-und reguläre Verbindungen  
   
 ## <a name="restrictions-on-context-connections"></a>Einschränkungen für Kontextverbindungen  
  Berücksichtigen Sie bei der Anwendungsentwicklung die folgenden Einschränkungen, die für Kontextverbindungen gelten:  
@@ -41,7 +41,7 @@ ms.locfileid: "81485296"
   
 -   Wenn "context connection=true" verwendet wird, können keine anderen Schlüsselwörter in Verbindungszeichenfolgen angegeben werden.  
   
--   Die **SqlConnection.DataSource-Eigenschaft** gibt null zurück, wenn die Verbindungszeichenfolge für **die SqlConnection** "context connection=true" ist, anstelle des Namens der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Die **SqlConnection. DataSource** -Eigenschaft gibt NULL zurück, wenn die Verbindungs Zeichenfolge für " **SqlConnection** " anstelle des Namens der Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]"context connection = true" ist.  
   
 -   Die Festlegung der **SqlCommand.CommandTimeout** -Eigenschaft hat keine Auswirkungen, wenn der Befehl für eine Kontextverbindung ausgeführt wird.  
   

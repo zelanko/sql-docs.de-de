@@ -1,6 +1,6 @@
 ---
-title: CLR-Integration und Transaktionen | Microsoft Docs
-description: Der Namespace System.Transactions stellt ein Transaktionsframework bereit, das vollständig in die ADO.NET- und SQL Server-CLR-Integration integriert ist.
+title: CLR-Integration und Transaktionen | Microsoft-Dokumentation
+description: Der System. Transactions-Namespace stellt ein Transaktions Framework bereit, das vollständig in die ADO.net-und SQL Server CLR-Integration integriert ist.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,15 +18,15 @@ ms.assetid: 381d206e-06e2-48d0-8206-295fcf06ac98
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 3d7e4ac0e338ac556c88c8cc22d6a87a53c67d51
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487480"
 ---
 # <a name="clr-integration-and-transactions"></a>CLR-Integration und Transaktionen
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Durch den **System.Transactions** -Namespace wird ein neues Transaktionsframework bereitgestellt, das voll in ADO.NET und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR (Common Language Runtime) integriert ist. **System.Transaktionen** und ADO.NET zusammenarbeiten, um die Verwendung lokaler und verteilter Transaktionen in verwalteten Anwendungen zu erweitern und zu vereinfachen.  
+  Durch den **System.Transactions** -Namespace wird ein neues Transaktionsframework bereitgestellt, das voll in ADO.NET und [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] CLR (Common Language Runtime) integriert ist. **System. Transactions** und ADO.NET arbeiten zusammen, um die Verwendung lokaler und verteilter Transaktionen in verwalteten Anwendungen zu erweitern und zu vereinfachen.  
   
 > [!NOTE]  
 >  Eine CLR-benutzerdefinierte Prozedur (UDP) kann keine Verbindung zu dem gleichen Server herstellen, auf dem sie ausgeführt wird (Loopbackverbindung), und sich in die gleiche Transaktion eintragen. Wird ein solcher Versuch unternommen, wird die Verbindung blockiert und die Kontrolle nicht wieder an die benutzerdefinierte Prozedur übergeben. Dies führt für die benutzerdefinierte Prozedur zu einem Timeoutfehler (Msg 1206).  
@@ -41,7 +41,7 @@ ms.locfileid: "81487480"
  Beschreibt, wie auf eine Transaktion, die gerade auf [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prozessintern ausgeführt wird, zugegriffen wird.  
   
  [Verwenden von 'System.Transactions'](../../relational-databases/clr-integration-data-access-transactions/using-system-transactions.md)  
- Beschreibt die Verwendung der **System.Transactions-API** (Application Programming Interface) in ihrer verwalteten Anwendung.  
+ Beschreibt die Verwendung der **System. Transactions** -API (Application Programming Interface) in der verwalteten Anwendung.  
   
  [Lebensdauer von Transaktionen](../../relational-databases/clr-integration-data-access-transactions/transaction-lifetimes.md)  
  Beschreibt den Unterschied in der Lebensdauer von Transaktionen, die in [!INCLUDE[tsql](../../includes/tsql-md.md)]-gespeicherten Prozeduren gestartet wurden, und Transaktionen, die in CLR-Anwendungen gestartet wurden.  

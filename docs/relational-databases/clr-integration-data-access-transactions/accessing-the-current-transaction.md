@@ -1,6 +1,6 @@
 ---
-title: Zugriff auf die aktuelle Transaktion | Microsoft Docs
-description: In der SQL Server CLR-Integration können Sie mit der Current-Eigenschaft der System.Transactions.Transaction-Klasse auf die aktuelle Transaktion zugreifen.
+title: Zugreifen auf die aktuelle Transaktion | Microsoft-Dokumentation
+description: In SQL Server CLR-Integration ermöglicht die Current-Eigenschaft der System. Transactions. Transaction-Klasse den Zugriff auf die aktuelle Transaktion.
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,10 +15,10 @@ ms.assetid: 1a4e2ce5-f627-4c81-8960-6a9968cefda2
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: ad8c499355ada4ab84c0f7e2016bbb363c71e779
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81487478"
 ---
 # <a name="accessing-the-current-transaction"></a>Zugriff auf die aktuelle Transaktion

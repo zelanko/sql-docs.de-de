@@ -1,5 +1,5 @@
 ---
-title: Abfrageentwurfstools in Berichtsdesigner SQL Server Data Tools (SSRS) | Microsoft Docs
+title: Abfrage Entwurfs Tools in Berichts-Designer SQL Server Data Tools (SSRS) | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -21,16 +21,16 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1179f4e5a6c8be90b5bc52b814ae49c96a3a39aa
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388623"
 ---
 # <a name="query-design-tools-in-report-designer-sql-server-data-tools-ssrs"></a>Abfrageentwurfstools in SQL Server-Datentools (SSRS) des Berichts-Designers
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stellt eine Reihe von Abfrageentwurfstools bereit, mit denen Sie im Berichts-Designer Datasetabfragen erstellen können. Ob ein bestimmter Abfrage-Designer verfügbar ist, hängt von dem Typ der Datenquelle ab, mit der Sie arbeiten. Darüber hinaus stellen einige Abfrage-Designer alternative Modi bereit, sodass Sie entscheiden können, ob Sie im visuellen Modus oder direkt in der Abfragesprache arbeiten möchten. In diesem Thema werden die einzelnen Tools sowie die von ihnen unterstützten Datenquellen beschrieben. Folgende Tools werden in diesem Thema vorgestellt:
 
--   [Textbasierter Abfrage-Designer](#Textbased)
+-   [Text basierter Abfrage-Designer](#Textbased)
 
 -   [Grafischer Abfrage-Designer](#Graphical)
 
@@ -47,7 +47,7 @@ ms.locfileid: "81388623"
  Wenn Sie mit einer Berichtsserver-Projektvorlage oder einer Vorlage des Berichtsserverprojekt-Assistenten arbeiten, werden alle Abfrageentwurfstools in der Datenentwurfsumgebung von [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] ausgeführt. Weitere Informationen zum Arbeiten mit Abfrage-Designern finden Sie unter [Reporting Services Query Designers](../reporting-services-query-designers.md).
 
 ##  <a name="text-based-query-designer"></a><a name="Textbased"></a> Textbasierter Abfrage-Designer
- Der textbasierte Abfrage-Designer ist das Standard-Abfrageerstellungstool für [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]die meisten unterstützten relationalen Datenquellen, einschließlich , Oracle, Teradata, OLE DB, XML und ODBC. Im Gegensatz zum grafischen Abfrage-Designer wird bei diesem Abfrageentwurfstools die Abfragesyntax während des Abfrageentwurfs nicht überprüft. In der folgenden Grafik wird der textbasierte Abfrage-Designer veranschaulicht.
+ Der textbasierte Abfrage-Designer ist das Standard Tool zum Entwickeln von Abfragen für die meisten unterstützten relationalen Datenquellen, einschließlich [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, Teradata, OLE DB, XML und ODBC. Im Gegensatz zum grafischen Abfrage-Designer wird bei diesem Abfrageentwurfstools die Abfragesyntax während des Abfrageentwurfs nicht überprüft. In der folgenden Grafik wird der textbasierte Abfrage-Designer veranschaulicht.
 
  ![Generischer Abfrage-Designer für relationale Datenabfragen](../../analysis-services/media/rsqd-dsaw-sql-generic.gif "Generischer Abfrage-Designer für relationale Datenabfragen")
 
@@ -60,7 +60,7 @@ ms.locfileid: "81388623"
 
  Sie können auf der Symbolleiste die Schaltfläche **Als Text bearbeiten** aktivieren oder deaktivieren, um zwischen dem textbasierten und dem grafischen Abfrage-Designer zu wechseln. Weitere Informationen finden Sie unter [Graphical Query Designer User Interface](graphical-query-designer-user-interface.md).
 
-##  <a name="report-model-query-designer"></a><a name="Model"></a>Berichtsmodellabfrage-Designer
+##  <a name="report-model-query-designer"></a><a name="Model"></a>Berichts Modell Abfrage-Designer
  Der Berichtsmodellabfrage-Designer wird zum Erstellen oder Ändern von Abfragen verwendet, die für ein auf einem Berichtsserver veröffentlichtes SMDL-Berichtsmodell ausgeführt werden. Berichte, die für Modelle ausgeführt werden, unterstützen die Datendurchsuchung mittels Durchklicken. Die Abfrage bestimmt den Pfad der Datendurchsuchung zur Laufzeit. In der folgenden Grafik wird der Berichtsmodellabfrage-Designer veranschaulicht.
 
  ![Benutzeroberfläche für das semantische Modell des Abfrage-Designers](../media/rsqd-dsawmodel-smql.gif "Benutzeroberfläche für das semantische Modell des Abfrage-Designers")
@@ -86,7 +86,7 @@ ms.locfileid: "81388623"
 
  ![Verwenden von MDX im Entwurfsmodus des Abfrage-Designers](../media/rsqd-dssapbw-mdx-designmode.gif "Verwenden von MDX im Entwurfsmodus des Abfrage-Designers")
 
-##  <a name="hyperion-essbase-query-designer"></a><a name="Hyperion"></a>Hyperion Essbase-Abfrage-Designer
+##  <a name="hyperion-essbase-query-designer"></a><a name="Hyperion"></a>Abfrage-Designer von Hyperion ESS Base
  Der [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] -Abfrage-Designer dient zum Abrufen von Daten aus [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] -Datenbanken und -Anwendungen. In der folgenden Grafik wird der [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] -Abfrage-Designer veranschaulicht.
 
  ![Abfrage-Designer für Hyperion Essbase-Datenquelle](../media/rsqd-dshyperionessbase-mdx-designmode.gif "Abfrage-Designer für Hyperion Essbase-Datenquelle")
@@ -94,6 +94,6 @@ ms.locfileid: "81388623"
  Wenn Sie diesen Abfrage-Designer verwenden möchten, benötigen Sie eine [!INCLUDE[extEssbase](../../../includes/extessbase-md.md)] -Datenquelle mit mindestens einer Datenbank. Weitere Informationen finden Sie unter [SAP NetWeaver BI Query Designer User Interface](sap-netweaver-bi-query-designer-user-interface.md).
 
 ## <a name="see-also"></a>Weitere Informationen
- [Reporting Services Tools](../tools/reporting-services-tools.md) [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-datasets-ssrs.md) [Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) Reporting Services [Tutorials &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md) Datenquellen, die von Reporting Services unterstützt werden &#40;[SSRS&#41;](../create-deploy-and-manage-mobile-and-paginated-reports.md) Erstellen einer [eingebetteten oder freigegebenen Datenquelle &#40;SSRS-&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)
+ [Reporting Services Tools](../tools/reporting-services-tools.md) [fügen Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-datasets-ssrs.md) [Datenverbindungen, Datenquellen und Verbindungs Zeichenfolgen in Reporting Services](../data-connections-data-sources-and-connection-strings-in-reporting-services.md) [Reporting Services Tutorials &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md) [Datenquellen, die von Reporting Services &#40;SSRS unterstützt werden](../create-deploy-and-manage-mobile-and-paginated-reports.md) [Create an Embedded or Shared Data Source &#40;SSRS&#41;](../create-an-embedded-or-shared-data-source-ssrs.md)&#41;
 
 

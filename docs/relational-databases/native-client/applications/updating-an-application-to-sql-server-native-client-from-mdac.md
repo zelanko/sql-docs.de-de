@@ -1,5 +1,5 @@
 ---
-title: Update von MDAC
+title: Aktualisieren von MDAC
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: e1651eecd3238f737adfe82cfef0d574b5312b6c
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388274"
 ---
 # <a name="updating-an-application-to-sql-server-native-client-from-mdac"></a>Aktualisieren einer Anwendung von MDAC auf SQL Server Native Client
@@ -28,7 +28,7 @@ ms.locfileid: "81388274"
 
   Es gibt eine Reihe von Unterschieden zwischen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client und Microsoft Data Access Components (MDAC; ab Windows Vista werden die Datenzugriffskomponenten als Windows Data Access Components oder Windows DAC bezeichnet). Durch beide Technologien wird systemeigener Datenzugriff auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbanken bereitgestellt, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] SQL Native Client wurde jedoch speziell für die Verwendung der neuen Funktionen von [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] entwickelt und bietet gleichzeitig Abwärtskompatibilität mit früheren Versionen.  
   
- Anhand der Informationen in diesem Thema können Sie die MDAC-Anwendung (oder Windows DAC) auf die Version [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client aktualisieren, die im Lieferumfang von [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] enthalten ist. Informationen zum Aktualisieren dieser Anwendung mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] der in ausgelieferten [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]Version von Native Client finden Sie unter [Aktualisieren einer Anwendung von SQL Server 2005 Native Client](../../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md).  
+ Anhand der Informationen in diesem Thema können Sie die MDAC-Anwendung (oder Windows DAC) auf die Version [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client aktualisieren, die im Lieferumfang von [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] enthalten ist. Informationen dazu, wie Sie diese Anwendung mit der Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, die in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]ausgeliefert wird, aktuell machen können, finden Sie unter [Aktualisieren einer Anwendung aus SQL Server 2005 Native Client](../../../relational-databases/native-client/applications/updating-an-application-from-sql-server-2005-native-client.md).  
   
  Obwohl MDAC Komponenten zur Verwendung von OLE DB, ODBC und ActiveX Data Objects (ADO) enthält, implementiert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client nur OLE DB und ODBC (ADO hat allerdings Zugriff auf die Funktionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client).  
   
@@ -50,19 +50,19 @@ ms.locfileid: "81388274"
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unterstützt den Zugriff auf Datenbanken früherer [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Versionen.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client enthält keine XML-Integration. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client unterstützt SELECT ... FÜR XML-Abfragen, unterstützt jedoch keine anderen XML-Funktionen. Native [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Client unterstützt jedoch den xml-Datentyp, der in **xml** [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]eingeführt wurde.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client enthält keine XML-Integration. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client unterstützt SELECT... FOR XML-Abfragen, unterstützt jedoch keine anderen XML-Funktionen. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unterstützt jedoch den in **xml** [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]eingeführten XML-Datentyp.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unterstützt das Konfigurieren clientseitiger Netzwerkbibliotheken nur mithilfe von Verbindungszeichenfolgenattributen. Wenn Sie eine umfassendere Netzwerkbibliothekskonfiguration benötigen, müssen Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Konfigurations-Manager verwenden.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ist nicht kompatibel mit odbcbcp.dll. Anwendungen, die sowohl ODBC- als auch **bcp-APIs** verwenden, müssen neu [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erstellt werden, um eine Verknüpfung mit sqlncli11.lib herzustellen, um Native Client verwenden zu können.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ist nicht kompatibel mit odbcbcp.dll. Anwendungen, die sowohl ODBC-als auch **bcp** -APIs verwenden, müssen neu erstellt werden, um mit sqlncli11 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . lib verknüpft zu werden, um Native Client zu verwenden.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client wird vom Microsoft OLE DB-Anbieter für ODBC (MSDASQL) nicht unterstützt. Wenn Sie den MDAC SQLODBC-Treiber mit MSDASQL oder mit ADO verwenden, sollten Sie in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB verwenden.  
   
--   Bei MDAC-Verbindungszeichenfolgen ist für das **Trusted_Connection**-Schlüsselwort ein boolescher Wert (**true**) zulässig. Eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Systemeigene Client-Verbindungszeichenfolge muss **ja** oder **nein**verwenden.  
+-   Bei MDAC-Verbindungszeichenfolgen ist für das **Trusted_Connection**-Schlüsselwort ein boolescher Wert (**true**) zulässig. Für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] eine Native Client-Verbindungs Zeichenfolge muss **Yes** oder **No**verwendet werden.  
   
 -   An Warnungen und Fehlern wurden geringfügige Änderungen vorgenommen. Vom Server zurückgegebene Warnungen und Fehler behalten bei Übergabe an den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client den gleichen Schweregrad bei. Sie sollten sicherstellen, dass die Anwendung gründlich getestet wurde, wenn Sie auf das Abfangen bestimmter Warnungen und Fehler angewiesen sind.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client enthält eine strengere Fehlerprüfung als MDAC. Dies bedeutet, dass einige Anwendungen, die den ODBC- und OLE DB-Spezifikationen nicht hundertprozentig entsprechen, sich anders verhalten. Der SQLOLEDB-Anbieter hat z. B. die Regel\@nicht erzwungen, dass [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Parameternamen für Ergebnisparameter mit ' ' beginnen müssen, der native Client-OLE-DB-Anbieter jedoch.  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client enthält eine strengere Fehlerprüfung als MDAC. Dies bedeutet, dass einige Anwendungen, die den ODBC- und OLE DB-Spezifikationen nicht hundertprozentig entsprechen, sich anders verhalten. Der SQLOLEDB-Anbieter hat z. b. die Regel nicht erzwungen, dass Parameternamen für\@Ergebnis Parameter mit ' ' beginnen müssen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , aber der Native Client OLE DB-Anbieter.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client verhält sich in Bezug auf fehlgeschlagene Verbindungen anders als MDAC. MDAC gibt beispielsweise zwischengespeicherte Eigenschaftswerte für eine fehlgeschlagene Verbindung zurück, während [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client einen Fehler an die aufrufende Anwendung meldet.  
   
@@ -72,11 +72,11 @@ ms.locfileid: "81388274"
   
 -   Wenn [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client mit [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] oder höheren Versionen verbunden wird, wird Serverfehler 16947 als SQL_ERROR zurückgegeben. Dieser Fehler tritt auf, wenn ein positioniertes Update oder Löschen eine Zeile nicht aktualisieren oder löschen kann. Mit MDAC wird beim Herstellen einer Verbindung mit einer Version von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] der Serverfehler 16947 als Warnung (SQL_SUCCESS_WITH_INFO) zurückgegeben.  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client implementiert die **IDBDataSourceAdmin-Schnittstelle,** bei der es sich um eine optionale OLE-DB-Schnittstelle handelt, die zuvor nicht implementiert wurde, aber nur die **CreateDataSource-Methode** dieser optionalen Schnittstelle implementiert ist. [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client implementiert die **IDBDataSourceAdmin** -Schnittstelle. dabei handelt es sich um eine optionale OLE DB-Schnittstelle, die zuvor nicht implementiert wurde, aber nur die Methode " **kreatedatasource** " dieser optionalen Schnittstelle implementiert wird. [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
   
 -   Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter gibt Synonyme in den Schemarowsets TABLES und TABLE_INFO zurück, wobei der Wert TABLE_TYPE auf SYNONYM gesetzt ist.  
   
--   Rückgabewerte des Datentyps **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, **udt**oder [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]anderer großer Objekttypen können nicht an Clientversionen vor zurückgegeben werden. Wenn Sie diese Typen als Rückgabewerte verwenden möchten, müssen Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client verwenden.  
+-   Rückgabewerte des Datentyps **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML**, **UDT**oder andere Typen von großen Objekten können nicht an Client Versionen vor zurück [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]gegeben werden. Wenn Sie diese Typen als Rückgabewerte verwenden möchten, müssen Sie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client verwenden.  
   
 -   MDAC lässt die Ausführung folgender Anweisungen beim Start manueller und impliziter Transaktionen zu, während [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client diese Möglichkeit nicht bietet. Die Anweisungen müssen im Autocommitmodus ausgeführt werden.  
   
@@ -98,19 +98,19 @@ ms.locfileid: "81388274"
     |--------------------------|--------------------------|  
     |**varchar(max)**|**text**|  
     |**nvarchar(max)**|**ntext**|  
-    |**varbinary(max)**|**Bild**|  
-    |**Udt**|**varbinary**|  
+    |**varbinary(max)**|**image**|  
+    |**udt**|**varbinary**|  
     |**xml**|**ntext**|  
   
-     Diese Typzuordnung beeinflusst die für Spaltenmetadaten zurückgegebenen Werte. Beispielsweise hat eine **Textspalte** eine maximale Größe von 2.147.483.647, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aber Native Client ODBC meldet die maximale Größe von **varchar(max)-Spalten** als SQL_SS_LENGTH_UNLIMITED, und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB meldet die maximale Größe von **varchar(max)-Spalten** je nach Plattform als 2.147.483.647 oder -1.  
+     Diese Typzuordnung beeinflusst die für Spaltenmetadaten zurückgegebenen Werte. Beispielsweise hat eine **Text** Spalte eine maximale Größe von 2.147.483.647 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , aber Native Client ODBC meldet die maximale Größe von **varchar (max)** -Spalten als SQL_SS_LENGTH_UNLIMITED, und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB meldet die maximale Größe von **varchar (max)** -Spalten als 2.147.483.647 oder-1, abhängig von der Plattform.  
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client lässt aus Gründen der Abwärtskompatibilität Mehrdeutigkeit in Verbindungszeichenfolgen zu (einige Schlüsselwörter können beispielsweise mehr als einmal angegeben werden, und konfliktverursachende Schlüsselwörter können mit einer Auflösung basierend auf der Position oder Rangfolge zugelassen werden). Zukünftige Versionen von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client lassen möglicherweise keine Mehrdeutigkeit in Verbindungszeichenfolgen zu. Es empfiehlt sich beim Ändern von Anwendungen, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client zu verwenden, um eine Abhängigkeit von der Mehrdeutigkeit von Verbindungszeichenfolgen zu umgehen.  
   
--   Wenn Sie einen ODBC- oder OLE DB-Aufruf zum Starten von Transaktionen verwenden, verhalten sich [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client und MDAC unterschiedlich. Mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client werden die Transaktionen unmittelbar gestartet, mit MDAC hingegen beginnen sie erst nach dem ersten Datenzugriff. Dies kann sich auf das Verhalten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] \@ \@gespeicherter Prozeduren und Batches auswirken, da TRANCOUNT nach Abschluss der Ausführung durch einen Batch oder eine gespeicherte Prozedur identisch sein muss, wie es beim Starten der Batch- oder gespeicherten Prozedur der Fall war.  
+-   Wenn Sie einen ODBC- oder OLE DB-Aufruf zum Starten von Transaktionen verwenden, verhalten sich [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client und MDAC unterschiedlich. Mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client werden die Transaktionen unmittelbar gestartet, mit MDAC hingegen beginnen sie erst nach dem ersten Datenzugriff. Dies kann sich auf das Verhalten gespeicherter Prozeduren [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und \@ \@Batches auswirken, da nach der Ausführung eines Batches oder einer gespeicherten Prozedur die Ausführung von nach der Ausführung des Batches oder der gespeicherten Prozedur erforderlich ist.  
   
--   Mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client bewirkt ITransactionLocal::BeginTransaction, dass eine Transaktion sofort gestartet wird. Mit MDAC wurde der Transaktionsstart verzögert, bis die Anwendung eine Anweisung ausgeführt hat, die eine Transaktion im impliziten Transaktionsmodus erforderte. Weitere Informationen finden Sie unter [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
+-   Mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client bewirkt itransaktionlocal:: BeginTransaction, dass eine Transaktion sofort gestartet wird. Mit MDAC wurde der Transaktionsstart verzögert, bis die Anwendung eine Anweisung ausgeführt hat, die eine Transaktion im impliziten Transaktionsmodus erforderte. Weitere Informationen finden Sie unter [SET IMPLICIT_TRANSACTIONS &#40;Transact-SQL&#41;](../../../t-sql/statements/set-implicit-transactions-transact-sql.md).  
   
--   Bei der Verwendung [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] des Native Client-Treibers mit System.Data.Odbc kann es zu Fehlern kommen, um auf einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Servercomputer zuzugreifen, der neue, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-spezifische Datentypen oder -features verfügbar macht. System.Data.Odbc stellt eine generische ODBC-Implementierung bereit und macht anschließend keine herstellerspezifischen Funktionen oder Erweiterungen verfügbar. (Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Treiber wird aktualisiert, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] um die neuesten Funktionen nativ zu unterstützen.) Um dieses Problem zu umgehen, können Sie entweder zu MDAC zurückkehren oder zu System.Data.SqlClient migrieren.  
+-   Möglicherweise treten Fehler auf, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Wenn Sie den Native Client-Treiber mit System. Data. ODBC verwenden, um auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] einen [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Server Computer zuzugreifen, der neue,-spezifische Datentypen oder Features verfügbar macht. System. Data. ODBC stellt eine generische ODBC-Implementierung bereit und macht anschließend keine herstellerspezifischen Funktionen oder Erweiterungen verfügbar. (Der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client-Treiber wird aktualisiert, um die neuesten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Features nativ zu unterstützen.) Um dieses Problem zu umgehen, können Sie entweder zu MDAC zurückkehren oder zu System. Data. SqlClient migrieren.  
   
  Sowohl [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client als auch MDAC unterstützen die Read Committed-Isolation mit Zeilenversionsverwaltung, aber nur [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client unterstützt die Momentaufnahmen-Transaktionsisolation. (Programmiertechnisch ausgedrückt bedeutet dies, dass die Read Committed-Transaktionsisolation mit Zeilenversionsverwaltung gleichbedeutend mit einer Read Committed-Transaktion ist.)  
   

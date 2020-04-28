@@ -1,5 +1,5 @@
 ---
-title: Sitzungseigenschaften OLE DB
+title: Sitzungs Eigenschaften OLE DB
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,23 +15,23 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 799d007dea8063486e836f47032fc3177c890168
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388596"
 ---
 # <a name="session-properties---sql-server-native-client-ole-db-provider"></a>Sitzungseigenschaften – OLE DB-Anbieter von SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] native Client-OLE-DB-Anbieter interpretiert ole DB-Sitzungseigenschaften wie folgt.  
+  Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter interpretiert OLE DB Sitzungs Eigenschaften wie folgt.  
   
 |Eigenschafts-ID|BESCHREIBUNG|  
 |-----------------|-----------------|  
-|DBPROP_SESS_AUTOCOMMITISOLEVELS|Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt alle Autocommit-Transaktionsisolationsebenen mit Ausnahme der Chaosebene DBPROPVAL_TI_CHAOS.|  
+|DBPROP_SESS_AUTOCOMMITISOLEVELS|Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter unterstützt alle Isolations Stufen für Autocommit-Transaktionen mit Ausnahme des DBPROPVAL_TI_CHAOS Chaos Level.|  
 |||
 
- Im anbieterspezifischen Eigenschaftensatz DBPROPSET_SQLSERVERSESSION [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] definiert der native Client-OLE-DB-Anbieter die folgende zusätzliche Sitzungseigenschaft.  
+ Im anbieterspezifischen Eigenschaften Satz DBPROPSET_SQLSERVERSESSION definiert der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter die folgende zusätzliche Sitzungs Eigenschaft.  
   
 |Eigenschafts-ID|BESCHREIBUNG|  
 |-----------------|-----------------|  

@@ -1,6 +1,6 @@
 ---
-title: Zeichenfolgensuche in XQuery | Microsoft Docs
-description: Erfahren Sie, wie Sie Text in XML-Dokumenten durchsuchen, indem Sie ein Beispiel für die Zeichenfolgensuche in XQuery anzeigen.
+title: Zeichen folgen Suche in XQuery | Microsoft-Dokumentation
+description: Erfahren Sie, wie Sie Text in XML-Dokumenten durchsuchen, indem Sie ein Beispiel für die Zeichen folgen Suche in XQuery anzeigen.
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -19,10 +19,10 @@ ms.assetid: edc62024-4c4c-4970-b5fa-2e54a5aca631
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 33f68a55cb627099150ec14941fe5de81de53fc8
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81388054"
 ---
 # <a name="string-search-in-xquery"></a>Zeichenfolgensuche in XQuery
@@ -45,7 +45,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=19  
 ```  
   
- In der vorherigen `where` Abfrage filtert der flowR-Ausdruck das Ergebnis des `for` Ausdrucks und gibt nur Elemente zurück, die die bedingung **contains()** erfüllen.  
+ In der vorherigen Abfrage filtert `where` der im FLOWR-Ausdruck das Ergebnis des `for` Ausdrucks und gibt nur die Elemente zurück, die die **enthält ()** -Bedingung erfüllen.  
   
  Dies ist das Ergebnis:  
   
@@ -59,7 +59,7 @@ WHERE ProductModelID=19
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [XML-Daten &#40;SQL Server-&#41;](../relational-databases/xml/xml-data-sql-server.md)   
+ [SQL Server der XML-Daten &#40;&#41;](../relational-databases/xml/xml-data-sql-server.md)   
  [XQuery-Sprachreferenz &#40;SQL Server&#41;](../xquery/xquery-language-reference-sql-server.md)  
   
   

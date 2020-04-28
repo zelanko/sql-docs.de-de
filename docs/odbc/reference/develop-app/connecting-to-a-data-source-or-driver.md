@@ -1,5 +1,5 @@
 ---
-title: Herstellen einer Verbindung mit einer Datenquelle oder einem Treiber | Microsoft Docs
+title: Herstellen einer Verbindung mit einer Datenquelle oder einem Treiber | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: e93027ab-9e60-47b7-ba96-8289dae32a22
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 48015cf134b71eb96bd19cdcf61ec2d7fcc04fcc
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307462"
 ---
 # <a name="connecting-to-a-data-source-or-driver"></a>Herstellen einer Verbindung mit einer Datenquelle oder einem Treiber
-Eine Anwendung kann mit einer beliebigen Anzahl von Treibern und Datenquellen verbunden werden. Dabei kann es sich um eine Vielzahl von Treibern und Datenquellen, denselben Treiber und eine Vielzahl von Datenquellen oder sogar mehrere Verbindungen zu demselben Treiber und derselben Datenquelle ernennen.  
+Eine Anwendung kann mit einer beliebigen Anzahl von Treibern und Datenquellen verbunden werden. Dabei kann es sich um eine Vielzahl von Treibern und Datenquellen, den gleichen Treiber und eine Vielzahl von Datenquellen oder sogar mehrere Verbindungen mit dem gleichen Treiber und der gleichen Datenquelle handeln.  
   
  In diesem Abschnitt werden die folgenden Themen behandelt:  
   

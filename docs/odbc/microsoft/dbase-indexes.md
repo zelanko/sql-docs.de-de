@@ -1,5 +1,5 @@
 ---
-title: dBASE Indizes | Microsoft Docs
+title: dBASE-Indizes | Microsoft-Dokumentation
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,29 +14,29 @@ ms.assetid: fdfa56f5-e324-4ec2-9267-fdf95ab99373
 author: David-Engel
 ms.author: v-daenge
 ms.openlocfilehash: 9300a38a0e36da771a238f73b77d3dda527334ae
-ms.sourcegitcommit: ce94c2ad7a50945481172782c270b5b0206e61de
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/14/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81307671"
 ---
 # <a name="dbase-indexes"></a>dBASE-Indizes
-Der ODBC dBASE-Treiber öffnet und aktualisiert dBASE IV-Indexdateien automatisch. Sie müssen das Dialogfeld **Indizes auswählen** verwenden, das über den ODBC-Datenquellenadministrator angezeigt wird, um dBASE III .ndx-Dateien dBASE-Dateien zuzuordnen.  
+Der ODBC-dBase-Treiber öffnet und aktualisiert automatisch dBASE IV-Indexdateien. Sie müssen das durch den ODBC-Datenquellen-Administrator angezeigte Dialogfeld **Indizes auswählen** verwenden, um dBASE III. NDX-Dateien mit dBASE-Dateien zuzuordnen.  
   
  Die folgenden Einschränkungen gelten für die Erstellung von dBASE-Indizes:  
   
 -   Alle Spaltennamen müssen gültig sein.  
   
--   Alle Spalten müssen in derselben aufsteigenden oder absteigenden Reihenfolge sein.  
+-   Alle Spalten müssen sich in der gleichen aufsteigenden oder absteigenden Reihenfolge befinden.  
   
--   Die Länge einer einzelnen Textspalte muss kleiner als 100 Byte sein.  
+-   Die Länge einer einzelnen Text Spalte muss kleiner als 100 Bytes sein.  
   
--   Wenn mehr als eine Spalte vorhanden ist, müssen alle Spalten Textspalten sein, und die Summe der Spaltengrößen muss weniger als 100 Byte betragen.  
+-   Wenn mehr als eine Spalte vorhanden ist, müssen alle Spalten Textspalten sein, und die Summe der Spaltengrößen muss kleiner als 100 Bytes sein.  
   
--   Memofelder können nicht indiziert werden.  
+-   Memo Felder können nicht indiziert werden.  
   
--   Für den aktuellen Satz von Feldern darf kein Index angegeben werden (d. h., doppelte Indizes sind nicht zulässig).  
+-   Für den aktuellen Satz von Feldern darf kein Index angegeben werden (d. h. doppelte Indizes sind nicht zulässig).  
   
--   Der Indexname muss mit der dBASE-Indexbenennungskonvention übereinstimmen. dBASE III erfordert, dass sich jeder Index in einer separaten Datei befindet, die jeweils eine .ndx-Erweiterung hat. In dBASE IV werden Indizes als Tag-Namen erstellt, die in einer einzelnen .mdx-Datei gespeichert werden. Die .mdx-Datei hat denselben Basisnamen wie die Datenbankdatei (z. B. Emp.mdx ist die Indexdatei für die Emp.dbf-Datenbank).  
+-   Der Indexname muss der Benennungs Konvention für den dBASE-Index entsprechen. dBASE III erfordert, dass sich jeder Index in einer separaten Datei mit der Erweiterung. NDX befinden muss. In dBASE IV werden Indizes als Tagnamen erstellt, die in einer einzelnen MDX-Datei gespeichert werden. Die MDX-Datei weist den gleichen Basis Namen wie die Datenbankdatei auf (z. b. ist "EMP. MDX" die Indexdatei für die Datenbank "EMP. dbf").  
   
--   dBASE definiert einen eindeutigen Index als einen Index, bei dem dem Index nur ein Datensatz aus einem Satz mit identischen Schlüsselwerten hinzugefügt wird.
+-   dBASE definiert einen eindeutigen Index als einen, bei dem nur ein Datensatz aus einer Menge mit identischen Schlüsselwerten dem Index hinzugefügt wird.

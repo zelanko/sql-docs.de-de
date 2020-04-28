@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4c015844fd0b0a3ed219adabaf95f4b2af98d663
-ms.sourcegitcommit: b2cc3f213042813af803ced37901c5c9d8016c24
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/16/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "81486976"
 ---
 # <a name="raw-file-source"></a>Rohdatendatei-Quelle
@@ -54,7 +54,7 @@ ms.locfileid: "81486976"
 -   Blogeintrag, [Raw Files Are Awesome](https://www.sqlservercentral.com/blogs/31-days-of-ssis-%e2%80%93-raw-files-are-awesome-131), auf sqlservercentral.com  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Raw-Dateiziel](raw-file-destination.md)   
+ [Rohdatendatei-Ziel](raw-file-destination.md)   
  [Datenfluss](data-flow.md)  
   
   
