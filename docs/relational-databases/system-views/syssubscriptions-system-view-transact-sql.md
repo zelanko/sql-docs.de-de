@@ -18,10 +18,10 @@ ms.assetid: c9613858-9512-43a9-aa53-7ee8064f064c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 517d9359085f7cb4bc4c94eb941981a09ca06eef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304787"
 ---
 # <a name="syssubscriptions-system-view-transact-sql"></a>syssubscriptions (Systemsicht) (Transact-SQL)
@@ -34,7 +34,7 @@ ms.locfileid: "72304787"
 |**artid**|**int**|Die eindeutige ID eines abonnierten Artikels.|  
 |**srvid**|**smallint**|Die Server-ID des Abonnenten.|  
 |**dest_db**|**sysname**|Der Name der Abonnement Datenbank.|  
-|**Stands**|**tinyint**|Status des Abonnements:<br /><br /> **0** = inaktiv.<br /><br /> **1** = abonniert.<br /><br /> **2** = aktiv.|  
+|**status**|**tinyint**|Status des Abonnements:<br /><br /> **0** = inaktiv.<br /><br /> **1** = abonniert.<br /><br /> **2** = aktiv.|  
 |**sync_type**|**tinyint**|Der Typ der Erstsynchronisierung:<br /><br /> **1** = automatisch.<br /><br /> **2** = keine.|  
 |**login_name**|**sysname**|Der Anmeldename, der für die Verbindung mit dem Verleger zum Hinzufügen des Abonnements verwendet wird.|  
 |**subscription_type**|**int**|Der Typ des Abonnements:<br /><br /> **0** = Push-der Verteilungs-Agent wird auf dem Verteiler ausgeführt.<br /><br /> **1** = Pull-der Verteilungs-Agent wird auf dem Abonnenten ausgeführt.|  
@@ -49,6 +49,6 @@ ms.locfileid: "72304787"
 ## <a name="see-also"></a>Weitere Informationen  
  [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikations Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sysabonnements &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/syssubscriptions-transact-sql.md)  
+ [syssubscriptions &#40;Transact-SQL&#41;](../../relational-databases/system-tables/syssubscriptions-transact-sql.md)  
   
   

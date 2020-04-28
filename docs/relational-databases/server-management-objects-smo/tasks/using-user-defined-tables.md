@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 0aa54692cf300a8d52d767092881ab30bc62d80f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70911215"
 ---
 # <a name="using-user-defined-tables"></a>Verwenden von benutzerdefinierten Tabellen
@@ -29,8 +29,7 @@ ms.locfileid: "70911215"
   
  Wenn Sie eine neue benutzerdefinierte Tabelle mithilfe des <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType>-Objekts definieren, müssen Sie Spalten und einen Primärschlüssel basierend auf einer der Spalten bereitstellen.  
   
- Benutzerdefinierte Tabellentypen können nicht geändert werden, nachdem sie erstellt wurden. 
-  <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> unterstützt nicht die Alter-Methode. Benutzerdefinierte Tabellentypen können über CHECK-Einschränkungen verfügen. Allerdings lösen einige CHECK-Vorgänge Ausnahmen aus, da der Typ nicht änderbar ist.  
+ Benutzerdefinierte Tabellentypen können nicht geändert werden, nachdem sie erstellt wurden. <xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType> unterstützt nicht die Alter-Methode. Benutzerdefinierte Tabellentypen können über CHECK-Einschränkungen verfügen. Allerdings lösen einige CHECK-Vorgänge Ausnahmen aus, da der Typ nicht änderbar ist.  
   
  Die <xref:Microsoft.SqlServer.Management.Smo.DataType>-Klasse wird verwendet, um den Datentyp anzugeben, der Spalten und Parametern zugeordnet wird. Verwenden Sie diesen Typ, um den benutzerdefinierten Tabellentyp als Parameter für benutzerdefinierte Funktionen und gespeicherte Prozeduren festzulegen.  
   

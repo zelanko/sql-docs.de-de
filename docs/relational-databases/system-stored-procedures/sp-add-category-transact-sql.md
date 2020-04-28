@@ -18,10 +18,10 @@ ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 076d5ade1f4951183578b1b46761d49dafbce8be
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70810556"
 ---
 # <a name="sp_add_category-transact-sql"></a>sp_add_category (Transact-SQL)
@@ -47,7 +47,7 @@ sp_add_category
 ## <a name="arguments"></a>Argumente  
 `[ @class = ] 'class'`Die Klasse der Kategorie, die hinzugefügt werden soll. die *Klasse* ist vom Datentyp **varchar (8)** und hat den Standardwert Job. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |JOB|Fügt eine Auftragskategorie hinzu|  
 |ALERT|Fügt eine Warnungskategorie hinzu|  
@@ -55,7 +55,7 @@ sp_add_category
   
 `[ @type = ] 'type'`Der Typ der Kategorie, die hinzugefügt werden soll. *Type ist vom Datentyp* **varchar (12)** und hat den Standardwert **local**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |LOCAL|Lokale Auftragskategorie|  
 |MultiServer|Eine Multiserver-Auftrags Kategorie.|  

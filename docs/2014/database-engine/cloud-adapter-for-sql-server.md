@@ -14,10 +14,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: bf57adb31330f5b0c0f18fbcccd4d71f47d3c933
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176017"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>Cloud-Adapter für SQL Server
@@ -47,7 +47,7 @@ ms.locfileid: "70176017"
   
 -   **Konfigurationsdatei Parameter** -  
   
-    -   \<Konfigurations>  
+    -   \<configuration>  
   
         -   \<appSettings->  
   
@@ -75,7 +75,7 @@ ms.locfileid: "70176017"
 |-------------|------------|-------------|--------------|  
 |WebServicePort|1-65535|11435|Wenn nicht angegeben, wird 11435 verwendet.|  
 |WebServiceCertificate|Fingerabdruck|Leer|Bei einem leeren Wert wird ein neues selbstsigniertes Zertifikat generiert.|  
-|ExposeExceptionDetails|True/False|False||  
+|ExposeExceptionDetails|Wahr/falsch|False||  
   
 ## <a name="cloud-adapter-troubleshooting"></a>Cloud-Adapter-Problembehandlung  
  Verwenden Sie die folgenden Informationen zur Problembehandlung beim Cloud-Adapter für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  

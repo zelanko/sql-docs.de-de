@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a94ec756e86cb814d0e3b3f624b4a9b3eb180533
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176024"
 ---
 # <a name="back-up-and-restore-of-sql-server-databases"></a>Sichern und Wiederherstellen von SQL Server-Datenbanken
@@ -38,7 +38,7 @@ ms.locfileid: "70176024"
   
 
   
-##  <a name="Benefits"></a> Vorteile  
+##  <a name="benefits"></a><a name="Benefits"></a>Davon  
   
 -   Sie können sich vor schwerwiegendem Datenverlust schützen, indem Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbanken sichern, Testwiederherstellungsprozeduren für die Sicherungen ausführen und Kopien der Sicherungen an einem sicheren Ort außerhalb Ihrer Geschäftsräume aufbewahren.  
   
@@ -59,7 +59,7 @@ ms.locfileid: "70176024"
   
 
   
-##  <a name="TermsAndDefinitions"></a>Komponenten und Konzepte  
+##  <a name="components-and-concepts"></a><a name="TermsAndDefinitions"></a>Komponenten und Konzepte  
  Sichern [Verb]  
  Kopiert die Daten oder Protokolldatensätze aus einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbank oder aus deren Transaktionsprotokoll auf ein Sicherungsmedium, z. B. einen Datenträger, um eine Datensicherung oder Protokollsicherung zu erstellen.  
   
@@ -101,7 +101,7 @@ ms.locfileid: "70176024"
   
 
   
-##  <a name="BnrStrategies"></a>Einführung in Sicherungs-und Wiederherstellungs Strategien  
+##  <a name="introduction-to-backup-and-restore-strategies"></a><a name="BnrStrategies"></a>Einführung in Sicherungs-und Wiederherstellungs Strategien  
  Das Sichern und Wiederherstellen von Daten muss jedoch auf die entsprechende Umgebung und auf die verfügbaren Ressourcen abgestimmt werden. Die zuverlässige Verwendung von Sicherungen und Wiederherstellungen erfordert daher eine Sicherungs- und Wiederherstellungsstrategie. Eine sorgfältig geplante Sicherungs- und Wiederherstellungsstrategie maximiert Datenverfügbarkeit und minimiert Datenverluste, wobei die besonderen Anforderungen des entsprechenden Unternehmens berücksichtigt werden.  
   
 > [!IMPORTANT]  
@@ -109,7 +109,7 @@ ms.locfileid: "70176024"
   
  Eine Sicherungs- und Wiederherstellungsstrategie enthält einen Sicherungsteil und einen Wiederherstellungsteil. Der Sicherungsteil der Strategie definiert den Typ und die Häufigkeit der Sicherungen, die Art und die Geschwindigkeit der dafür benötigten Hardware, die vorgesehene Testmethode für die Sicherungen sowie Aufbewahrungsort und -methode von Sicherungsmedien (einschließlich Sicherheitsüberlegungen). Der Wiederherstellungsteil der Strategie definiert, wer für die Ausführung der Wiederherstellungen verantwortlich ist und wie Wiederherstellungen ausgeführt werden sollen, um die jeweiligen Ziele hinsichtlich der Verfügbarkeit der Datenbank und Minimierung von Datenverlusten zu erreichen. Es empfiehlt sich, Sicherungs- und Wiederherstellungsprozeduren zu dokumentieren und eine Kopie der Dokumentation im Ausführungsbuch aufzubewahren.  
   
- Das Entwerfen einer effektiven Sicherungs- und Wiederherstellungsstrategie erfordert sorgfältiges Planen, Implementieren und Testen. Die Testphase ist erforderlich. Sie verfügen erst dann über eine Sicherungsstrategie, wenn Sie die Sicherungen, die in Ihrer Wiederherstellungsstrategie enthalten sind, in allen Kombinationen erfolgreich wiederhergestellt haben. Sie müssen eine Vielzahl von Faktoren berücksichtigen: Dabei handelt es sich z. B. um:  
+ Das Entwerfen einer effektiven Sicherungs- und Wiederherstellungsstrategie erfordert sorgfältiges Planen, Implementieren und Testen. Die Testphase ist erforderlich. Sie verfügen erst dann über eine Sicherungsstrategie, wenn Sie die Sicherungen, die in Ihrer Wiederherstellungsstrategie enthalten sind, in allen Kombinationen erfolgreich wiederhergestellt haben. Sie müssen eine Vielzahl von Faktoren berücksichtigen: Hierzu gehört Folgendes:  
   
 -   Die Produktionsziele des Unternehmens im Verhältnis zur Datenbank, besonders die Anforderungen an Verfügbarkeit und Schutz vor Datenverlusten.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "70176024"
   
      Weitere Informationen hierzu finden Sie unter [Schätzen der Größe einer vollständigen Datenbanksicherung](#EstimateDbBuSize)weiter unten in diesem Thema.  
   
-####  <a name="EstimateDbBuSize"></a>Schätzen der Größe einer vollständigen Datenbanksicherung  
+####  <a name="estimate-the-size-of-a-full-database-backup"></a><a name="EstimateDbBuSize"></a>Schätzen der Größe einer vollständigen Datenbanksicherung  
  Vor dem Implementieren einer Sicherungs- und Wiederherstellungsstrategie sollten Sie schätzen, wie viel Speicherplatz eine vollständige Datenbanksicherung auf dem Datenträger belegen wird. Beim Sicherungsvorgang werden die in der Datenbank enthaltenen Daten in die Sicherungsdatei kopiert. Die Sicherung enthält nur die in der Datenbank vorhandenen Daten, nicht etwa ungenutzten Speicherplatz. Daher ist die Sicherung normalerweise kleiner als die Datenbank selbst. Ein Schätzwert der Größe einer vollständigen Datenbanksicherung kann mithilfe der gespeicherten Systemprozedur **sp_spaceused** ermittelt werden. Weitere Informationen finden Sie unter [sp_spaceused &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql).  
   
 ### <a name="schedule-backups"></a>Planen von Sicherungen  
@@ -166,7 +166,7 @@ ms.locfileid: "70176024"
   
  Es empfiehlt sich, für jede Datenbank ein Betriebshandbuch zu führen. In diesem Betriebshandbuch sollten der Aufbewahrungsort der Sicherungen, ggf. die Namen der Sicherungsmedien sowie Angaben zum Zeitaufwand für die Wiederherstellung der Testsicherungen vermerkt sein.  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 ### <a name="scheduling-backup-jobs"></a>Planen von Sicherungsaufträgen  
   
@@ -174,7 +174,7 @@ ms.locfileid: "70176024"
   
 -   [Erstellen eines Auftrags](../../ssms/agent/create-a-job.md)  
   
--   [Schedule a Job](../../ssms/agent/schedule-a-job.md)  
+-   [Planen eines Auftrags](../../ssms/agent/schedule-a-job.md)  
   
 ### <a name="working-with-backup-devices-and-backup-media"></a>Arbeiten mit Sicherungsgeräten und Sicherungsmedien  
   
@@ -186,11 +186,11 @@ ms.locfileid: "70176024"
   
 -   [Löschen eines Sicherungsmediums &#40;SQL Server&#41;](delete-a-backup-device-sql-server.md)  
   
--   [Legen Sie das Ablaufdatum für eine Sicherungs &#40;SQL Server fest&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
+-   [Festlegen des Ablaufdatums für eine Sicherung &#40;SQL Server&#41;](set-the-expiration-date-on-a-backup-sql-server.md)  
   
 -   [Anzeigen der Inhalte eines Sicherungsbands oder einer -datei &#40;SQL Server&#41;](view-the-contents-of-a-backup-tape-or-file-sql-server.md)  
   
--   [Anzeigen der Daten-und Protokolldateien in einem Sicherungs Satz &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
+-   [Anzeigen der Daten und Protokolldateien in einem Sicherungssatz &#40;SQL Server&#41;](view-the-data-and-log-files-in-a-backup-set-sql-server.md)  
   
 -   [Anzeigen der Eigenschaften und des Inhalts eines logischen Sicherungsmediums &#40;SQL Server&#41;](view-the-properties-and-contents-of-a-logical-backup-device-sql-server.md)  
   
@@ -236,7 +236,7 @@ ms.locfileid: "70176024"
   
  **Verwenden von Transact-SQL**  
   
--   [Wiederherstellen einer Datenbanksicherung unter dem einfachen Wiederherstellungs Modell &#40;Transact-SQL-&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
+-   [Wiederherstellen einer Datenbanksicherung unter dem einfachen Wiederherstellungsmodell &#40;Transact-SQL&#41;](restore-a-database-backup-under-the-simple-recovery-model-transact-sql.md)  
   
 -   [Wiederherstellen einer Datenbank bis zum Fehlerzeitpunkt im vollständigen Wiederherstellungsmodell &#40;Transact-SQL&#41;](restore-database-to-point-of-failure-full-recovery.md)  
   
@@ -274,14 +274,14 @@ ms.locfileid: "70176024"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über Sicherungen &#40;SQL Server&#41;](backup-overview-sql-server.md)   
- [Wiederherstellungs-und Wiederherstellungs Übersicht &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
+ [Übersicht über Wiederherstellungsvorgänge &#40;SQL Server&#41;](restore-and-recovery-overview-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [RESTORE &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-transact-sql)   
  [Sichern und Wiederherstellen von Analysis Services-Datenbanken](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)   
- [Sichern und Wiederherstellen von voll Text Katalogen und-Indizes](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
+ [Sichern und Wiederherstellen von Volltextkatalogen und Indizes](../search/back-up-and-restore-full-text-catalogs-and-indexes.md)   
  [Sichern und Wiederherstellen von replizierten Datenbanken](../replication/administration/back-up-and-restore-replicated-databases.md)   
  [Das Transaktionsprotokoll &#40;SQL Server&#41;](../logs/the-transaction-log-sql-server.md)   
- [Wiederherstellungs Modelle &#40;SQL Server&#41;](recovery-models-sql-server.md)   
+ [Wiederherstellungsmodelle &#40;SQL Server&#41;](recovery-models-sql-server.md)   
  [Mediensätze, Medienfamilien und Sicherungssätze &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)  
   
   

@@ -10,10 +10,10 @@ ms.assetid: 57002374-0d4d-43c1-b4e9-cbec02355a9c
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 829e7b0c51cd341193944fb2f28241f48618c407
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176222"
 ---
 # <a name="project-settings-azure-sql-db--sybasetosql"></a>Projekteinstellungen (Azure SQL-DB) (SybaseToSQL)
@@ -25,7 +25,7 @@ Der Bereich Azure SQL-Datenbank ist in den Dialogfeldern **Projekteinstellungen*
   
 -   Verwenden Sie das Dialogfeld Standard Projekteinstellungen, um Konfigurationsoptionen für alle Projekte festzulegen. Um auf die Azure SQL-Datenbankeinstellungen zuzugreifen, wählen Sie **im Menü Extras** die Option **defaultproject Settings**aus, klicken Sie unten im linken Bereich auf **Allgemein** , und wählen Sie dann **Azure SQL**-Datenbank aus.  
   
-## <a name="connectivity"></a>Konnektivität  
+## <a name="connectivity"></a>Verbindung  
 **Taktintervall**  
   
 Gibt ein Zeitintervall an, das für den Takt Mechanismus verwendet wird, um die Azure SQL-Daten Bankverbindung im Format "Minuten: Sekunden" zu wahren.  

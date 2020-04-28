@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: d0fc42e1ce8d15498caf89582b66549f4e083130
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305230"
 ---
 # <a name="syspdw_nodes_partitions-transact-sql"></a>sys. pdw_nodes_partitions (Transact-SQL)
@@ -26,20 +26,20 @@ ms.locfileid: "72305230"
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|partition_id|**BIGINT**|die ID der Partition. Ist innerhalb einer Datenbank eindeutig.|  
+|partition_id|**bigint**|die ID der Partition. Ist innerhalb einer Datenbank eindeutig.|  
 |object_id|**int**|ID des Objekts, zu dem diese Partition gehört. Jede Tabelle oder Sicht besteht aus mindestens einer Partition.|  
 |index_id|**int**|ID des Indexes innerhalb des Objekts, zu dem diese Partition gehört.|  
 |partition_number|**int**|Auf 1 basierende Partitionsnummer im besitzenden Index oder Heap. Für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ist der Wert dieser Spalte 1.|  
-|hobt_id|**BIGINT**|Die ID des Data Heap-oder B-Struktur (hubt), das die Zeilen für diese Partition enthält.|  
-|rows|**BIGINT**|Die ungefähre Anzahl der Zeilen in dieser Partition. |  
+|hobt_id|**bigint**|Die ID des Data Heap-oder B-Struktur (hubt), das die Zeilen für diese Partition enthält.|  
+|rows|**bigint**|Die ungefähre Anzahl der Zeilen in dieser Partition. |  
 |data_compression|**int**|Gibt den Status der Komprimierung für jede Partition an:<br /><br /> 0 = NONE<br /><br /> 1 = ROW<br /><br /> 2 = PAGE<br /><br /> 3 = COLUMNSTORE|  
-|data_compression_desc|**nvarchar (60)**|Gibt den Status der Komprimierung für jede Partition an. Mögliche Werte sind NONE, ROW und PAGE.|  
+|data_compression_desc|**nvarchar(60)**|Gibt den Status der Komprimierung für jede Partition an. Mögliche Werte sind NONE, ROW und PAGE.|  
 |pdw_node_id|**int**|Eindeutiger Bezeichner [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] eines Knotens.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die `CONTROL SERVER`-Berechtigung.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
 
 ### <a name="example-a-display-rows-in-each-partition-within-each-distribution"></a>Beispiel A: Anzeigen von Zeilen in jeder Partition in jeder Verteilung 
 
@@ -49,7 +49,7 @@ Verwenden Sie [DBCC PDW_SHOWPARTITIONSTATS (SQL Server PDW)](../../t-sql/databas
 
 ### <a name="example-b-uses-system-views-to-view-rows-in-each-partition-of-each-distribution-of-a-table"></a>Beispiel B: verwendet System Sichten, um Zeilen in jeder Partition jeder Verteilung einer Tabelle anzuzeigen.
 
-**Gilt für:**[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
+**Gilt für:** [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]
  
 Diese Abfrage gibt die Anzahl der Zeilen in jeder Partition jeder Verteilung der Tabelle `myTable`zurück.  
  
@@ -70,7 +70,7 @@ ORDER BY o.name, pnp.index_id, pnp.partition_id;
 ```    
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Data Warehouse und parallele Data Warehouse Katalog Sichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+ [SQL Data Warehouse- und Parallel Data Warehouse-Katalogsichten](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   
 

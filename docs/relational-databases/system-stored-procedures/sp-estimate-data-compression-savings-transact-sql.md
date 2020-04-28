@@ -19,10 +19,10 @@ ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2ecc9f44e28296b79cc5e1dc9a9c70caa93bd94f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71682130"
 ---
 # <a name="sp_estimate_data_compression_savings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
@@ -59,7 +59,7 @@ sp_estimate_data_compression_savings
  Der Name des Datenbankschemas, das die Tabelle oder die indizierte Sicht enthält. *schema_name* ist vom **Datentyp vom Datentyp sysname**. Wenn *schema_name* NULL ist, wird das Standardschema des aktuellen Benutzers verwendet.  
   
  [ @object_name= ] "*object_name*"  
- Der Name der Tabelle oder der indizierten Sicht des Indexes. *object_name* ist vom **Datentyp vom Datentyp sysname**.  
+ Der Name der Tabelle oder der indizierten Sicht des Indexes. *database_name* ist vom Datentyp **sysname**.  
   
  [ @index_id= ] *index_id*  
  Die ID des Indexes. *index_id* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen: die ID-Nummer eines Indexes, NULL oder 0, wenn *object_id* ein Heap ist. Geben Sie NULL an, wenn Informationen zu allen Indizes für eine Basistabelle oder Sicht zurückgegeben werden sollen. Wenn Sie NULL angeben, müssen Sie auch für *partition_number*NULL angeben.  
@@ -84,10 +84,10 @@ sp_estimate_data_compression_savings
 |schema_name|**sysname**|Das Schema der Tabelle oder indizierten Sicht.|  
 |index_id|**int**|Index-ID eines Index:<br /><br /> 0 = Heap<br /><br /> 1 = Gruppierter Index<br /><br /> > 1 = Nicht gruppierter Index|  
 |partition_number|**int**|Partitionsnummer. Gibt 1 für eine nicht partitionierte Tabelle oder einen Index zurück.|  
-|size_with_current_compression_setting (KB)|**BIGINT**|Die Größe der angeforderten, vorhandenen Tabelle, des Indexes oder der Partition.|  
-|size_with_requested_compression_setting (KB)|**BIGINT**|Die geschätzte Größe der Tabelle, des Indexes oder der Partition, die bzw. der die angeforderte Komprimierungseinstellung verwendet, und der vorhandene Füllfaktor (sofern zutreffend). Zudem wird vorausgesetzt, dass keine Fragmentierung vorliegt.|  
-|sample_size_with_current_compression_setting (KB)|**BIGINT**|Die Größe der Stichprobe mit der aktuellen Komprimierungseinstellung. Dies beinhaltet jegliche Fragmentierung.|  
-|sample_size_with_requested_compression_setting (KB)|**BIGINT**|Die Größe der Stichprobe, die mithilfe der angeforderten Komprimierungseinstellung erstellt wird, mit vorhandenem Füllfaktor (sofern zutreffend) und ohne Fragmentierung.|  
+|size_with_current_compression_setting (KB)|**bigint**|Die Größe der angeforderten, vorhandenen Tabelle, des Indexes oder der Partition.|  
+|size_with_requested_compression_setting (KB)|**bigint**|Die geschätzte Größe der Tabelle, des Indexes oder der Partition, die bzw. der die angeforderte Komprimierungseinstellung verwendet, und der vorhandene Füllfaktor (sofern zutreffend). Zudem wird vorausgesetzt, dass keine Fragmentierung vorliegt.|  
+|sample_size_with_current_compression_setting (KB)|**bigint**|Die Größe der Stichprobe mit der aktuellen Komprimierungseinstellung. Dies beinhaltet jegliche Fragmentierung.|  
+|sample_size_with_requested_compression_setting (KB)|**bigint**|Die Größe der Stichprobe, die mithilfe der angeforderten Komprimierungseinstellung erstellt wird, mit vorhandenem Füllfaktor (sofern zutreffend) und ohne Fragmentierung.|  
   
 ## <a name="remarks"></a>Bemerkungen  
  Verwenden `sp_estimate_data_compression_savings` Sie, um die Einsparungen zu schätzen, die beim Aktivieren einer Tabelle oder einer Partition für die Zeilen-, Seiten-, columnstore--oder columnstore--Archiv Komprimierung auftreten können. Wenn beispielsweise die durchschnittliche Größe der Zeile um 40 Prozent verringert werden kann, können Sie die Größe des Objekts potenziell um 40 Prozent verringern. Möglicherweise erzielen Sie keine Platzeinsparung, weil dies vom Füllfaktor und von der Zeilengröße abhängt. Wenn Sie z. b. eine Zeile haben, die 8.000 Bytes lang ist, und Sie die Größe um 40 Prozent verringern, können Sie immer noch nur eine Zeile auf einer Datenseite anpassen. Daher werden keine Einsparungen erzielt.  
@@ -123,7 +123,7 @@ sp_estimate_data_compression_savings
  |Gruppierter Columnstore-Index|Gruppierter Columnstore-Index|
 
 > [!NOTE]  
-> Beim Schätzen der columnstore--Komprimierung aus einem rowstore-Quell Objekt (gruppierter Index, nicht gruppierter Index oder Heap), wenn Spalten im Quell Objekt vorhanden sind, die einen Datentyp aufweisen, der in einem columnstore--Index nicht unterstützt wird, sp_estimate_compression_savings schlägt mit einem Fehler fehl.
+> Wenn beim Schätzen der columnstore--Komprimierung aus einem rowstore-Quell Objekt (gruppierter Index, nicht gruppierter Index oder Heap) Spalten im Quell Objekt vorhanden sind, die einen Datentyp aufweisen, der in einem columnstore--Index nicht unterstützt wird, schlägt sp_estimate_compression_savings mit einem Fehler fehl.
 
  Wenn der `@data_compression` -Parameter auf `NONE`, `ROW`oder `PAGE` festgelegt ist und das Quell Objekt ein columnstore--Index ist, werden in der folgenden Tabelle die verwendeten Verweis Objekte beschrieben.
 

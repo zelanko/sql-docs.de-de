@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 98e360887d63db59e1e61bf5c52928e9626b0f39
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304885"
 ---
 # <a name="sp_help_fulltext_system_components-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
@@ -47,9 +47,9 @@ sp_help_fulltext_system_components
   
 `[ @component_type = ] component_type`Gibt den Komponententyp an. *component_type* kann eine der folgenden sein:  
   
--   **Wörtertrennung**  
+-   **Wörter Trennung**  
   
--   **Filter**  
+-   **filter**  
   
 -   **Protokollhandler**  
   
@@ -69,17 +69,17 @@ sp_help_fulltext_system_components
 |-----------------|---------------|-----------------|  
 |**componenttype**|**sysname**|Typ der Komponente. Einer der folgenden:<br /><br /> filter<br /><br /> Protokollhandler<br /><br /> Wörtertrennung|  
 |**componentname**|**sysname**|Der Name der Komponente.|  
-|**clsid**|**uniqueidentifier**|Klassenbezeichner der Komponente.|  
+|**CLSID**|**uniqueidentifier**|Klassenbezeichner der Komponente.|  
 |**FullPath**|**nvarchar(256)**|Pfad zum Speicherort der Komponente.<br /><br /> NULL = Aufrufer ist kein Mitglied der festen Serverrolle **serveradmin** .|  
-|**Version**|**nvarchar (30)**|Version der Komponente.|  
-|**manufacturer**|**sysname**|Name des Herstellers der Komponente.|  
+|**version**|**nvarchar(30)**|Version der Komponente.|  
+|**Bauers**|**sysname**|Name des Herstellers der Komponente.|  
   
  Das folgende Resultset wird nur zurückgegeben, wenn mindestens ein voll Text Katalog vorhanden ist, der *component_type*verwendet.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**DBID**|**int**|Die ID der Datenbank.|  
-|**ftcatid sortiert ist**|**int**|ID des Volltextkatalogs.|  
+|**ftcatid**|**int**|ID des Volltextkatalogs.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **Public** -Rolle. Benutzer können jedoch nur Informationen zu den Volltextkatalogen anzeigen, für die Sie über die View Definition-Berechtigung verfügen. Nur Mitglieder der Server Rolle **serveradmin** können Werte in der Spalte **FullPath** sehen.  
@@ -115,7 +115,7 @@ GO
   
  In der Standardeinstellung ist diese Wörtertrennung nicht installiert, das Resultset ist daher leer.  
   
-### <a name="d-determining-whether-a-specific-filter-has-been-registered"></a>D: Bestimmen, ob ein bestimmter Filter registriert wurde  
+### <a name="d-determining-whether-a-specific-filter-has-been-registered"></a>D. Bestimmen, ob ein bestimmter Filter registriert wurde  
  Im folgenden Beispiel wird der Filter für die .xdoc-Komponente aufgeführt, wenn dieser manuell auf dem System installiert und auf der Serverinstanz registriert wurde.  
   
 ```  

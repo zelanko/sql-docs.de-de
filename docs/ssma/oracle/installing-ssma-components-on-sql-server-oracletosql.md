@@ -14,10 +14,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: shamikg
 ms.openlocfilehash: 1f0cea859e9465eebefebc061ee51107dc7844aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71713309"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>Installieren von SSMA-Komponenten auf SQL Server (oracleto SQL)
@@ -109,7 +109,7 @@ Nachdem Sie das Erweiterungspaket installiert haben, wird eine **ssma_oracle. bc
 
 Jedes Mal, wenn Sie Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu migrieren, erstellt [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SSMA einen-Agent-Auftrag. Diese Aufträge werden **ssma_oracle Daten Migrationspaket {GUID}** benannt und sind im Knoten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] im Ordner Aufträge sichtbar.  
   
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 [Installieren von SSMA für Oracle Client &#40;oracleto SQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
 [Migrieren von Oracle-Datenbanken zu SQL Server &#40;oracleto SQL-&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  

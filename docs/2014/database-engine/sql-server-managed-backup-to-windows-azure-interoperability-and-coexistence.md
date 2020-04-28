@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 70d941786fd06e48bf071b8448b84c8f4857f8c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176063"
 ---
 # <a name="sql-server-managed-backup-to-azure-interoperability-and-coexistence"></a>Verwaltete SQL Server-Sicherung in Azure: Interoperabilität und Koexistenz
@@ -24,8 +24,7 @@ ms.locfileid: "70176063"
  AlwaysOn-Verfügbarkeitsgruppen, die als reine Azure-Lösung für [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]unterstützt werden. Lokale oder gemischte Konfigurationen für AlwaysOn-Verfügbarkeitsgruppen werden nicht unterstützt. Weitere Informationen und weitere Überlegungen finden [Sie unter Einrichten SQL Server verwalteten Sicherung in Azure für Verfügbarkeits Gruppen](../../2014/database-engine/setting-up-sql-server-managed-backup-to-windows-azure-for-availability-groups.md) .  
   
 ### <a name="database-mirroring"></a>Datenbankspiegelung  
- 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] wird nur für die Prinzipaldatenbank unterstützt. Wenn sowohl die Prinzipaldatenbank als auch der Spiegel für die Verwendung von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] konfiguriert wurden, wird die gespiegelte Datenbank übersprungen und nicht gesichert. Bei einem Failover startet [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] allerdings den Sicherungsprozess, sobald der Spiegel den Rollenwechsel abgeschlossen hat und online ist. In diesem Fall werden die Sicherungen in einem neuen Container gespeichert. Wenn die Spiegeldatenbank nicht konfiguriert wird, um [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] im Falle eines Failovers zu verwenden, werden keine Sicherungen vorgenommen. Es wird empfohlen, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] auf dem Prinzipalserver und dem Spiegelserver zu konfigurieren, sodass Sicherungen im Falle eines Failovers fortgesetzt werden.  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] wird nur für die Prinzipaldatenbank unterstützt. Wenn sowohl die Prinzipaldatenbank als auch der Spiegel für die Verwendung von [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] konfiguriert wurden, wird die gespiegelte Datenbank übersprungen und nicht gesichert. Bei einem Failover startet [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] allerdings den Sicherungsprozess, sobald der Spiegel den Rollenwechsel abgeschlossen hat und online ist. In diesem Fall werden die Sicherungen in einem neuen Container gespeichert. Wenn die Spiegeldatenbank nicht konfiguriert wird, um [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] im Falle eines Failovers zu verwenden, werden keine Sicherungen vorgenommen. Es wird empfohlen, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] auf dem Prinzipalserver und dem Spiegelserver zu konfigurieren, sodass Sicherungen im Falle eines Failovers fortgesetzt werden.  
   
 > [!TIP]  
 >  Wenn Sie eine gespiegelte Datenbank auf einer Instanz mit [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Standardeinstellungen erstellen, kann es von Vorteil sein, [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Instanzstandards zu deaktivieren, damit sie nicht auf die gespiegelte Datenbank angewendet werden. Dann werden die Instanzstandards nach dem Konfigurieren der Prinzipal- und der Spiegeldatenbank erneut aktiviert.  

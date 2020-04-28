@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4b51e4e38b7587074a39f850c2e56dbd8c09ed6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72005970"
 ---
 # <a name="sp_fulltext_catalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
@@ -47,12 +47,12 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 ## <a name="arguments"></a>Argumente  
 `[ @ftcat = ] 'fulltext_catalog_name'`Der Name des voll Text Katalogs. Katalognamen müssen für jede Datenbank eindeutig sein. *fulltext_catalog_name* ist vom **Datentyp vom Datentyp sysname**.  
   
-`[ @action = ] 'action'`Die auszuführende Aktion. *Action* ist vom Datentyp **varchar (20)**. die folgenden Werte sind möglich:  
+`[ @action = ] 'action'`Die auszuführende Aktion. *action* ist vom Datentyp **varchar(20)**. Die folgenden Werte sind möglich:  
   
 > [!NOTE]  
 >  Volltextkataloge können bei Bedarf erstellt, gelöscht und geändert werden. Vermeiden Sie es jedoch, Schemaänderungen an mehreren Katalogen gleichzeitig auszuführen. Diese Aktionen können mithilfe der gespeicherten Prozedur **sp_fulltext_table** ausgeführt werden. Dies ist die empfohlene Vorgehensweise.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**Erstellen**|Erstellt einen leeren, neuen voll Text Katalog im Dateisystem und fügt eine zugeordnete Zeile in **sysfulltextkataloge** mit dem *fulltext_catalog_name* und *root_directory*, sofern vorhanden,-Werten hinzu. *fulltext_catalog_name* muss innerhalb der Datenbank eindeutig sein.|  
 |**Dropdown**|Löscht *fulltext_catalog_name* durch Entfernen aus dem Dateisystem und Löschen der zugeordneten Zeile in **sysfulltextkataloge**. Diese Aktion schlägt fehl, wenn der Katalog Indizes für eine oder mehrere Tabellen enthält. **sp_fulltext_table** "*table_name*", "Drop", sollte ausgeführt werden, um die Tabellen aus dem Katalog zu löschen.<br /><br /> Wenn der Katalog nicht vorhanden ist, wird ein Fehler gemeldet.|  
@@ -113,7 +113,7 @@ EXEC sp_fulltext_catalog 'Cat_Desc', 'start_full';
 GO  
 ```  
   
-### <a name="d-stop-the-population-of-a-full-text-catalog"></a>D: Beenden des Auffüllens eines Volltextkatalogs  
+### <a name="d-stop-the-population-of-a-full-text-catalog"></a>D. Beenden des Auffüllens eines Volltextkatalogs  
  In diesem Beispiel wird die Auffüllung des **Cat_Desc** Katalogs angehalten.  
   
 ```  
@@ -138,7 +138,7 @@ GO
  [sp_fulltext_database &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-database-transact-sql.md)   
  [sp_help_fulltext_catalogs &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-transact-sql.md)   
  [sp_help_fulltext_catalogs_cursor &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-catalogs-cursor-transact-sql.md)   
- [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Volltextsuche](../../relational-databases/search/full-text-search.md)  
+ [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Voll Text Suche](../../relational-databases/search/full-text-search.md)  
   
   

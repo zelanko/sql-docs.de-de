@@ -18,10 +18,10 @@ ms.assetid: 65e15e2e-107c-49c3-b12c-f4edf0eb1617
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: d382d8ee7a871244213467b7a46bdc5b864c55cb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72381903"
 ---
 # <a name="sysmail_add_account_sp-transact-sql"></a>sysmail_add_account_sp (Transact-SQL)
@@ -51,7 +51,7 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @account_name = ] 'account_name'`Der Name des hinzu zufügenden Kontos. *account_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @account_name = ] 'account_name'`Der Name des hinzu zufügenden Kontos. *account_name* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
 `[ @email_address = ] 'email_address'`Die e-Mail-Adresse, von der die Nachricht gesendet wird. Bei dieser Adresse muss es sich um eine Internet-E-Mail-Adresse handeln. *email_address* ist vom Datentyp **nvarchar (128)** und hat keinen Standardwert. Beispielsweise kann ein Konto für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den-Agent e-Mail von der Adresse **SQLAgent\@Adventure-Works.com**senden.  
   

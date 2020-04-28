@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ea4432b07007ce1bbc4ec5b944594b204a7ad808
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782905"
 ---
 # <a name="use-the-powershell-provider-for-extended-events"></a>Verwenden des PowerShell-Anbieters für erweiterte Ereignisse
@@ -28,7 +28,7 @@ ms.locfileid: "72782905"
   
 -   Erweitern Sie im Objekt-Explorer den Instanznamen, erweitern Sie **Verwaltung**, klicken Sie mit der rechten Maustaste auf **Erweiterte Ereignisse**, und klicken Sie anschließend auf **PowerShell starten**. Damit wird PowerShell unter dem folgenden Pfad gestartet:  
   
-     PS SQLSERVER:\XEvent\\*Servername*\\*Instanzname*>  
+     PS SQLServer: \ XEvent\\*Servername*\\*instanceName*>  
   
     > [!NOTE]  
     >  PowerShell können Sie unter **Erweiterte Ereignisse**von jedem Knoten aus starten. Sie können z.B. mit der rechten Maustaste auf **Sitzungen**klicken und anschließend auf **PowerShell starten**klicken. Damit starten Sie PowerShell eine Ebene tiefer, mit dem Ordner Sitzungen.  
@@ -110,6 +110,6 @@ $session.Create()
  Zum Erstellen, Ändern oder Löschen einer Sitzung für erweiterte Ereignisse müssen Sie über die ALTER ANY EVENT SESSION-Berechtigung verfügen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server-PowerShell](../../powershell/sql-server-powershell.md)   
- [Verwenden der system_health-Sitzung](use-the-ssms-xe-profiler.md)   
+ [SQL Server PowerShell](../../powershell/sql-server-powershell.md)   
+ [Verwenden der system_health Sitzung](use-the-ssms-xe-profiler.md)   
  [Tools für erweiterte Ereignisse](extended-events-tools.md)  

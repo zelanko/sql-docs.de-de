@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5ca7d915b940296e6de6689e666401b0c3534c9d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782732"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>Verwenden von SQL Server PowerShell-Pfaden
@@ -22,9 +22,9 @@ ms.locfileid: "72782732"
   
 1.  [Vorbereitungen](#BeforeYouBegin)  
   
-2.  So **arbeiten Sie an einem Pfad Knoten: Auflisten von**[Methoden und Eigenschaften](#ListPropMeth), [Verwenden von Methoden und Eigenschaften](#UsePropMeth)    
+2.  **So arbeiten Sie an einem Pfadknoten:**  [Auflisten von Methoden und Eigenschaften](#ListPropMeth), [Verwenden von Methoden und Eigenschaften](#UsePropMeth)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
  Nach der Navigation zu einem Knoten in einem [!INCLUDE[ssDE](../includes/ssde-md.md)] -Anbieterpfad können Sie zwei Arten von Aktionen ausführen:  
   
 -   Sie können Windows PowerShell-Cmdlets ausführen, die Vorgänge an Knoten durchführen, z.B. **Rename-Item**.  
@@ -33,7 +33,7 @@ ms.locfileid: "72782732"
   
  Der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Anbieter wird zum Verwalten der Objekte in einer Instanz von [!INCLUDE[ssDE](../includes/ssde-md.md)]verwendet. Er wird nicht verwendet, um mit den Daten in Datenbanken zu arbeiten. Wenn Sie zu einer Tabelle oder einer Sicht navigiert sind, können Sie den Anbieter nicht dazu verwenden, Daten auszuwählen, einzufügen, zu aktualisieren oder zu löschen. Verwenden Sie das Cmdlet **Invoke-Sqlcmd** , um Daten in Tabellen und Sichten aus der Windows PowerShell-Umgebung abzufragen oder zu ändern. Weitere Informationen finden Sie unter [Cmdlet Invoke-Sqlcmd](../database-engine/invoke-sqlcmd-cmdlet.md).  
   
-##  <a name="ListPropMeth"></a> Auflisten von Methoden und Eigenschaften
+##  <a name="listing-methods-and-properties"></a><a name="ListPropMeth"></a>Auflisten von Methoden und Eigenschaften
   
  Sie können das Cmdlet **Get-Member** verwenden, um die für bestimmte Objekte oder Objektklassen verfügbaren Methoden und Eigenschaften anzuzeigen.  
   
@@ -62,7 +62,7 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012
 Get-Item . | Get-Member -Type Properties  
 ```  
   
-##  <a name="UsePropMeth"></a>Verwenden von SMO-Methoden und-Eigenschaften  
+##  <a name="using-smo-methods-and-properties"></a><a name="UsePropMeth"></a>Verwenden von SMO-Methoden und-Eigenschaften  
   
  Sie können SMO-Methoden und Eigenschaften dazu verwenden, Arbeiten an Objekten eines [!INCLUDE[ssDE](../includes/ssde-md.md)] -Anbieterpfads auszuführen.  
   
@@ -94,9 +94,9 @@ $MyDBVar.State
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [SQL Server PowerShell-Anbieter](sql-server-powershell-provider.md)   
- [Navigieren in SQL Server PowerShell-Pfaden](navigate-sql-server-powershell-paths.md)   
- [Konvertieren von URNs in SQL Server-Anbieterpfade](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
+ [SQL Server PowerShell Anbieter](sql-server-powershell-provider.md)   
+ [Navigieren SQL Server PowerShell Pfaden](navigate-sql-server-powershell-paths.md)   
+ [Konvertieren von URNs in SQL Server Anbieter Pfade](../database-engine/convert-urns-to-sql-server-provider-paths.md)   
  [SQL Server-PowerShell](sql-server-powershell.md)  
   
   

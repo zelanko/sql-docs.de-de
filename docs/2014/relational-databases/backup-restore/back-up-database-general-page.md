@@ -13,19 +13,19 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fc6680702fd32c670d2f3c3861c47bab96c52c47
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70155075"
 ---
 # <a name="back-up-database-general-page"></a>Datenbank sichern (Seite Allgemein)
-  Mithilfe der Seite **Allgemein** des Dialog Felds **Datenbank sichern** können Sie die Einstellungen für einen Daten Bank Sicherungs Vorgang anzeigen oder ändern.  
+  Verwenden Sie im Dialogfeld **Datenbank sichern** die Seite **Allgemein** , um die Einstellungen für einen Sicherungsvorgang der Datenbank anzuzeigen und zu ändern.  
   
  Weitere Informationen zu grundlegenden Sicherungskonzepten finden Sie unter [Übersicht über Sicherungen &#40;SQL Server&#41;](backup-overview-sql-server.md).  
   
 > [!NOTE]  
->  Wenn Sie eine Sicherungsaufgabe mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]angeben, können Sie das entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)][BACKUP](/sql/t-sql/statements/backup-transact-sql) -Skript generieren, indem Sie auf die Schaltfläche **Skript** klicken und anschließend ein Ziel für das Skript auswählen.  
+>  Wenn Sie eine Sicherungsaufgabe mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] angeben, können Sie das entsprechende [!INCLUDE[tsql](../../includes/tsql-md.md)]-[BACKUP](/sql/t-sql/statements/backup-transact-sql)-Skript generieren, indem Sie auf die Schaltfläche **Skript** klicken und anschließend ein Ziel für das Skript auswählen.  
   
  **So verwenden Sie SQL Server Management Studio zum Erstellen einer Sicherung**  
   
@@ -38,7 +38,7 @@ ms.locfileid: "70155075"
   
  **So erstellen Sie eine Teilsicherung**  
   
--   Für eine Teilsicherung müssen Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)] [BACKUP](/sql/t-sql/statements/backup-transact-sql) -Anweisung mit der Option PARTIAL verwenden.  
+-   Für eine Teilsicherung müssen Sie die [!INCLUDE[tsql](../../includes/tsql-md.md)]BACKUP[-Anweisung (](/sql/t-sql/statements/backup-transact-sql)) mit der Option PARTIAL verwenden.  
   
 ## <a name="options"></a>Tastatur  
   
@@ -61,12 +61,12 @@ ms.locfileid: "70155075"
 |Transaktionsprotokoll|Transaktionsprotokolle|Transaktionsprotokollsicherungen sind beim einfachen Wiederherstellungsmodell nicht verfügbar.|  
   
  **Kopiesicherung**  
- Wählen Sie diese Option aus, um eine Kopiesicherung zu erstellen. Eine *Kopiesicherung* ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherung, die unabhängig von der Sequenz von herkömmlichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Sicherungen erstellt wird. Weitere Informationen finden Sie unter [Kopiesicherungen &#40;SQL Server&#41;](copy-only-backups-sql-server.md).  
+ Wählen Sie diese Option aus, um eine Kopiesicherung zu erstellen. Eine *Kopiesicherung* ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherung, die unabhängig von der Sequenz von herkömmlichen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherungen erstellt wird. Weitere Informationen finden Sie unter [Kopiesicherungen &#40;SQL Server&#41;](copy-only-backups-sql-server.md).  
   
 > [!NOTE]  
 >  Wenn die Option **Differenziell** aktiviert ist, können Sie keine Kopiesicherung erstellen.  
   
- **Sicherungs Komponente**  
+ **Sicherungskomponente**  
  Wählen Sie die zu sichernde Datenbankkomponente aus. Wenn in der Liste **Sicherungstyp** der Eintrag **Transaktionsprotokoll** ausgewählt wird, ist diese Option nicht aktiviert.  
   
  Wählen Sie eines der folgenden Optionsfelder aus:  
@@ -87,9 +87,9 @@ ms.locfileid: "70155075"
   
 |||  
 |-|-|  
-|**Diskette**|Sicherung auf einem Datenträger. Hierbei kann es sich um eine Systemdatei oder ein datenträgerbasiertes logisches Sicherungsmedium handeln, das für die Datenbank erstellt wurde. Die aktuell ausgewählten Datenträger werden in der Liste **Sichern auf** angezeigt. Sie können bis zu 64 Datenträger für den Sicherungsvorgang auswählen.|  
+|**Datenträger**|Sicherung auf einem Datenträger. Hierbei kann es sich um eine Systemdatei oder ein datenträgerbasiertes logisches Sicherungsmedium handeln, das für die Datenbank erstellt wurde. Die aktuell ausgewählten Datenträger werden in der Liste **Sichern auf** angezeigt. Sie können bis zu 64 Datenträger für den Sicherungsvorgang auswählen.|  
 |**Band**|Sicherung auf einem Band. Hierbei kann es sich um ein lokales Bandlaufwerk oder ein bandbasiertes logisches Sicherungsmedium handeln, das für die Datenbank erstellt wurde. Die aktuell ausgewählten Bänder werden in der Liste **Sichern auf** angezeigt. Es können maximal 64 Werte angegeben werden. Wenn keine Bandmedien mit dem Server verbunden sind, ist diese Option deaktiviert. Die ausgewählten Bänder werden in der Liste **Sichern auf** aufgeführt.<br /><br /> Die Unterstützung für Bandsicherungsgeräte wird in zukünftigen Versionen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktion zurzeit verwenden.|  
-|**Urne**|Sichert in Azure BLOB Storage.|  
+|**URL**|Sichert in Azure BLOB Storage.|  
   
  Welche Optionen als Nächstes angezeigt werden, ist abhängig vom Typ des ausgewählten Ziels. Wenn Sie einen Datenträger oder ein Band auswählen, werden die folgenden Optionen angezeigt:  
   
@@ -107,13 +107,13 @@ ms.locfileid: "70155075"
  **Dateiname**  
  Geben Sie den Namen der Sicherungsdatei an.  
   
- **SQL-Anmelde Informationen**  
+ **SQL-Anmeldeinformationen**  
  Wählen Sie SQL-Anmelde Informationen aus, die zum Authentifizieren bei Azure Storage verwendet werden. Wenn Sie über keine vorhandenen geeigneten SQL-Anmeldeinformationen verfügen, klicken Sie auf die Schaltfläche **Erstellen** , um neue SQL-Anmeldeinformationen zu erstellen.  
   
 > [!IMPORTANT]  
 >  Das Dialogfeld, das beim Klicken auf **Erstellen** geöffnet wird, erfordert ein Verwaltungszertifikat oder das Veröffentlichungsprofil für das Abonnement. Wenn Sie keinen Zugriff auf das Verwaltungszertifikat oder Veröffentlichungsprofil haben, können Sie SQL-Anmeldeinformationen erstellen, indem Sie den Namen des Speicherkontos und die Informationen zum Zugriffsschlüssel mithilfe von Transact-SQL oder SQL Server Management Studio angeben. Informationen zum Erstellen von Anmelde Informationen mithilfe von Transact-SQL finden Sie im Beispielcode im Thema [zum Erstellen](../security/authentication-access/create-a-credential.md#Credential) von Anmelde Informationen. Alternativ können Sie auf der Datenbank-Engine-Instanz in SQL Server Management Studio mit der rechten Maustaste auf **Sicherheit**klicken und **Neu**sowie **Anmeldeinformationen**auswählen. Geben Sie im Feld **Identität** den Namen des Speicherkontos und im Feld **Kennwort** den Zugriffsschlüssel an.  
   
- **Azure-Speicher Container**  
+ **Azure-Speichercontainer**  
  Geben Sie den Namen des Azure-Speichercontainers an.  
   
  **URL-Präfix:**  
@@ -122,8 +122,8 @@ ms.locfileid: "70155075"
 ## <a name="see-also"></a>Weitere Informationen  
  [Sichern eines Transaktions Protokolls &#40;SQL Server&#41;](back-up-a-transaction-log-sql-server.md)   
  [Sichern von Dateien und Dateigruppen &#40;SQL Server&#41;](back-up-files-and-filegroups-sql-server.md)   
- [Definieren eines logischen Sicherungsmediums für eine Datenträgerdatei &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
- [Definieren eines logischen Sicherungsmediums für ein Bandlaufwerk &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
+ [Definieren eines logischen Sicherungs Mediums für eine Datenträger Datei &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-disk-file-sql-server.md)   
+ [Definieren eines logischen Sicherungs Mediums für ein Bandlaufwerk &#40;SQL Server&#41;](define-a-logical-backup-device-for-a-tape-drive-sql-server.md)   
  [Wiederherstellungsmodelle &#40;SQL Server&#41;](recovery-models-sql-server.md)  
   
   

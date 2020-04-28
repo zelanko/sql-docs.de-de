@@ -19,10 +19,10 @@ helpviewer_keywords:
 author: joesackmsft
 ms.author: josack
 ms.openlocfilehash: 5fea5badf14ce9863f07dff189f1665788ec5fb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70873769"
 ---
 # <a name="sysdm_resource_governor_workload_groups_history_ex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (Azure SQL-Datenbank)
@@ -68,8 +68,8 @@ Gibt die Momentaufnahme für die letzten 32 Minuten (insgesamt 128 RECS) der Res
 |**max_request_cpu_msec**| BIGINT |Maximale CPU-Nutzung für eine einzelne Anforderung in Millisekunden. Lässt keine NULL-Werte zu.|
 |**max_concurrent_request**| INT |Aktuelle Einstellung für die maximale Anzahl gleichzeitiger Anforderungen. Lässt keine NULL-Werte zu.|
 |**max_io**| INT |Maximale e/a-Beschränkung für die Gruppe.|
-|**max_global_io**| INT |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.
-|**max_queued_io**| INT |Nur für Informationszwecke identifiziert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|
+|**max_global_io**| INT |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.
+|**max_queued_io**| INT |Nur für Informationszwecke identifiziert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|
 |**max_log_rate_kb**| BIGINT |Maximale Protokoll Rate (Kilobytes pro Sekunde) auf Ressourcengruppen Ebene.|
 |**max_session**| INT |Sitzungs Limit für die Gruppe.|
 |**max_worker**| INT |Workerlimit für die Gruppe.|
@@ -103,5 +103,5 @@ ORDER BY snapshot_time DESC;
 ## <a name="see-also"></a>Weitere Informationen
 
 - [Governanceprotokoll Raten-Governance](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server#transaction-log-rate-governance)
-- [DTU-Ressourcen Limits für elastische Datenbanken](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
-- [Ressourcen Limits für den Ressourcenpool für elastische Datenbanken](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)
+- [Pool für elastische Datenbanken: DTU-Ressourcenlimits](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits-elastic-pools)
+- [Pool für elastische Datenbanken: V-Kern-Ressourcenlimits](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits-elastic-pools)

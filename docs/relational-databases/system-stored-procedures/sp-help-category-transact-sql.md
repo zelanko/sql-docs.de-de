@@ -18,10 +18,10 @@ ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1b44f5962e8241afa95b9e68cf75d493dff01ad5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304803"
 ---
 # <a name="sp_help_category-transact-sql"></a>sp_help_category (Transact-SQL)
@@ -44,7 +44,7 @@ sp_help_category [ [ @class = ] 'class' ]
 ## <a name="arguments"></a>Argumente  
 `[ @class = ] 'class'`Die Klasse, über die Informationen angefordert werden. die *Klasse* ist vom Datentyp **varchar (8)** und hat den Standardwert **Job**. die *Klasse* kann einen der folgenden Werte aufweisen.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Auftrag**|Stellt Informationen zu einer Auftragskategorie bereit.|  
 |**Warnung**|Stellt Informationen zu einer Warnungskategorie bereit.|  
@@ -52,13 +52,13 @@ sp_help_category [ [ @class = ] 'class' ]
   
 `[ @type = ] 'type'`Der Typ der Kategorie, für die Informationen angefordert werden. *Type ist vom Datentyp* **varchar (12)** und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Nah**|Lokale Auftrags Kategorie.|  
 |**MULTI-SERVER**|Multiserver-Auftragskategorie|  
 |**Gar**|Kategorie für eine andere Klasse als **Job**.|  
   
-`[ @name = ] 'name'`Der Name der Kategorie, für die Informationen angefordert werden. *Name ist vom Datentyp* **vom Datentyp sysname**und hat den Standardwert NULL.  
+`[ @name = ] 'name'`Der Name der Kategorie, für die Informationen angefordert werden. *name* ist vom Datentyp **sysname**und hat den Standardwert NULL.  
   
 `[ @suffix = ] suffix`Gibt an, ob die **category_type** Spalte im Resultset eine ID oder ein Name ist. *Suffix* ist vom Typ **Bit**. der Standardwert ist **0**. **1** zeigt den **category_type** als Namen an, und **0** zeigt ihn als ID an.  
   
@@ -72,7 +72,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|Kategorie-ID|  
 |**category_type**|**tinyint**|Typ der Kategorie:<br /><br /> **1** = lokal<br /><br /> **2** = MultiServer<br /><br /> **3** = keine|  
-|**name**|**sysname**|Name der Kategorie|  
+|**name**|**sysname**|Kategoriename|  
   
  Wenn ** \@Suffix** **1**ist, gibt **sp_help_category** das folgende Resultset zurück:  
   
@@ -80,7 +80,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|Kategorie-ID|  
 |**category_type**|**sysname**|Art der Kategorie: Eine von " **local**", " **MultiServer**" oder " **None** ".|  
-|**name**|**sysname**|Name der Kategorie|  
+|**name**|**sysname**|Kategoriename|  
   
 ## <a name="remarks"></a>Bemerkungen  
  **sp_help_category** müssen von der **msdb** -Datenbank aus ausgeführt werden.  

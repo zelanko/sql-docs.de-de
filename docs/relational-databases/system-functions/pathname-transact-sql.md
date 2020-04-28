@@ -18,10 +18,10 @@ ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: b64c1d0d6032ce5032a92c840635fdf0c087e571
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72251951"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
@@ -45,9 +45,9 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  Wenn der Pfadname für eine Spalte eines beliebigen anderen Datentyps oder für eine **varbinary (max)** -Spalte angefordert wird, die nicht über das FILESTREAM-Speicher Attribut verfügt, führt dies zu einem Kompilierzeitfehler der Abfrage.  
   
  *\@andere*  
- Ein ganzzahliger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) , der definiert, wie die Serverkomponente des Pfads formatiert werden soll. die Option kann einen der folgenden Werte aufweisen. * \@* Die Standardeinstellung ist 0.  
+ Ein ganzzahliger [Ausdruck](../../t-sql/language-elements/expressions-transact-sql.md) , der definiert, wie die Serverkomponente des Pfads formatiert werden soll. die Option kann einen der folgenden Werte aufweisen. * \@* Der Standardwert ist 0.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |0|Gibt den Servernamen in ein BIOS-Format konvertiert zurück, z. B.: `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`|  
 |1|Gibt den Servernamen ohne Konvertierung zurück, z. B.: `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
@@ -60,7 +60,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
   
  Wenn die Datenbank zu einer Always on-Verfügbarkeits Gruppe gehört, hat der Wert von *use_replica_computer_name* die folgenden Auswirkungen auf die Ausgabe der **pathname** -Funktion:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |Nicht angegeben.|Die Funktion gibt den virtuellen Netzwerknamen in (VNN) im Pfad zurück.|  
 |0|Die Funktion gibt den virtuellen Netzwerknamen in (VNN) im Pfad zurück.|  
@@ -148,7 +148,7 @@ DROP DATABASE PathNameDB;
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Binary Large Object &#40;Blob&#41; Daten &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
+ [Binärer Large Object &#40;BLOB&#41; Daten &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;Transact-SQL-&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [ZUgreifen auf FILESTREAM-Daten mit OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  
   

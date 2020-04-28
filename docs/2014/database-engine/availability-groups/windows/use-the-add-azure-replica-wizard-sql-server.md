@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 90418193ac869641a20f8b0f684fc43dd46712f8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175993"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Verwenden des Assistenten zum Hinzufügen von Azure-Replikaten (SQL Server)
@@ -26,14 +26,14 @@ ms.locfileid: "70175993"
   
      [Voraussetzungen](#Prerequisites)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
--   So **fügen Sie ein Replikat hinzu mit:**[SQL Server Management Studio Assistent zum Hinzufügen von Azure-Replikaten](#SSMSProcedure)    
+-   **Fügen Sie ein Replikat hinzu mit:**  [Assistent zum Hinzufügen von Azure-Replikaten (SQL Server Management Studio)](#SSMSProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
  Wenn Sie einer Verfügbarkeits Gruppe noch nie ein Verfügbarkeits Replikat hinzugefügt haben, lesen Sie die Abschnitte "Server Instanzen" und "Verfügbarkeits Gruppen und-Replikate" unter [Voraussetzungen, Einschränkungen und Empfehlungen für die AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Prerequisites"></a> Voraussetzungen  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
   
 -   Sie müssen mit der Serverinstanz verbunden sein, auf der das aktuelle primäre Replikat gehostet wird.  
   
@@ -47,12 +47,12 @@ ms.locfileid: "70175993"
   
      Wenn Sie nicht den Assistenten für eine vollständige anfängliche Datensynchronisierung verwenden können, müssen Sie die sekundären Datenbanken manuell vorbereiten. Dies ist vor oder nach dem Ausführen des Assistenten möglich. Weitere Informationen finden Sie unter [Manuelles Vorbereiten einer sekundären Datenbank auf eine Verfügbarkeitsgruppe &#40;SQL Server&#41;](manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)erstellt und konfiguriert wird.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Siehe [Security](use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md#Security)  
   
-##  <a name="SSMSProcedure"></a> Verwenden des Assistenten zum Hinzufügen von Azure-Replikaten (SQL Server Management Studio)  
+##  <a name="using-the-add-azure-replica-wizard-sql-server-management-studio"></a><a name="SSMSProcedure"></a>Verwenden des Assistenten zum Hinzufügen von Azure-Replikaten (SQL Server Management Studio  
  Der Assistent zum Hinzufügen von Azure-Replikaten kann auf der Seite [Replikate angeben](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md)gestartet werden. Die Seite kann auf zwei Weisen aufgerufen werden:  
   
 -   [Verwenden des Assistenten für Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](use-the-availability-group-wizard-sql-server-management-studio.md)  
@@ -69,7 +69,7 @@ ms.locfileid: "70175993"
   
 4.  Geben Sie die Einstellungen für die Azure-VM an, die das neue sekundäre Replikat hostet:  
   
-     Image  
+     Bild  
      Der Name des SQL Server-Images, das für die Azure-VM verwendet werden soll.  
   
      Größe des virtuellen Computers  
@@ -103,15 +103,15 @@ ms.locfileid: "70175993"
   
 6.  Führen Sie die übrigen Konfigurationsschritte auf der Seite [Replikate angeben](specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md) wie für jedes neue Replikat aus.  
   
-     Wenn Sie den Assistenten für Verfügbarkeits Gruppen oder den Assistenten zum Hinzufügen von Replikaten zu Verfügbarkeits Gruppen abgeschlossen haben, führt der Konfigurationsprozess alle Vorgänge in Azure aus, um den neuen virtuellen Computer zu erstellen, ihn mit der AD-Domäne zu verknüpfen, ihn dem Windows-Cluster hinzuzufügen und AlwaysOn hoch Verfügbarkeit, und fügen Sie das neue Replikat der Verfügbarkeits Gruppe hinzu.  
+     Wenn Sie den Assistenten für Verfügbarkeits Gruppen oder den Assistenten zum Hinzufügen von Replikaten zu Verfügbarkeits Gruppen abgeschlossen haben, führt der Konfigurationsprozess alle Vorgänge in Azure aus, um den neuen virtuellen Computer zu erstellen, ihn mit der AD-Domäne zu verknüpfen, ihn dem Windows-Cluster hinzuzufügen, Hochverfügbarkeit von AlwaysOn zu aktivieren und das neue Replikat der Verfügbarkeits  
   
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben  
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben  
   
 -   [Hinzufügen eines sekundären Replikats zu einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md)   
- [Hinzufügen eines sekundären Replikats zu einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
+ [Hinzufügen eines sekundären Replikats zu einer Verfügbarkeitsgruppe (SQL Server)](add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
   

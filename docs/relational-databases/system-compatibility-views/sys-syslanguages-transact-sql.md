@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: bc152b8241b775f9fd686f8a31363cb4fca39de4
-ms.sourcegitcommit: a17245869c2d3df97ec8cf083608f754f4b2f40f
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 03/18/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874869"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
@@ -39,18 +39,17 @@ ms.locfileid: "70874869"
 |dateformat|**nchar(3)**|Reihenfolge in Datumsangaben, z. B. DMY.|  
 |datefirst|**tinyint**|Erster Tag der Woche: 1 für Montag, 2 für Dienstag usw., bis 7 für Sonntag.|  
 |upgrade|**int**|Ist für das System reserviert.|  
-|name|**sysname**|Offizieller Sprachen Name, z. b. "Français".|  
+|Name|**sysname**|Offizieller Sprachen Name, z. b. "Français".|  
 |alias|**sysname**|Alternativer Sprachenname, z. B. Französisch.|  
 |months|**nvarchar (372)**|Liste mit durch Trennzeichen getrennten Monatsnamen in voller Länge, in der Reihenfolge Januar bis Dezember. Jeder Name kann bis zu 20 Zeichen lang sein.|  
 |shortmonths|**nvarchar (132)**|Liste mit durch Trennzeichen getrennten abgekürzten Monatsnamen, in der Reihenfolge Januar bis Dezember. Jeder Name kann bis zu 9 Zeichen lang sein.|  
 |days|**nvarchar (217)**|Liste mit durch Trennzeichen getrennten Wochentagsnamen, in der Reihenfolge von Montag bis Sonntag. Jeder Name kann bis zu 30 Zeichen lang sein.|  
-|lcid|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows-Gebiets Schema-ID für die Sprache.|  
+|lcid|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Gebietsschema-ID für die Sprache.|  
 |msglangid|**smallint**|ID der Meldungsgruppe von [!INCLUDE[ssDE](../../includes/ssde-md.md)]|  
   
- 
-  [!INCLUDE[ssDE](../../includes/ssde-md.md)] enthält die folgenden installierten Sprachen.  
+ [!INCLUDE[ssDE](../../includes/ssde-md.md)] enthält die folgenden installierten Sprachen.  
   
-|Name auf Deutsch|Windows-LCID|[!INCLUDE[ssDE](../../includes/ssde-md.md)]Nachrichten Gruppen-ID|  
+|Name auf Deutsch|Windows-LCID|ID der Meldungsgruppe von [!INCLUDE[ssDE](../../includes/ssde-md.md)].|  
 |---------------------|------------------|-----------------------------------------|  
 |Englisch|1033|1033|  
 |Deutsch|1031|1031|  
@@ -63,13 +62,13 @@ ms.locfileid: "70874869"
 |Norwegisch|2068|2068|  
 |Portugiesisch|2070|2070|  
 |Finnisch|1035|1035|  
-|Schwedisch|1.053|1.053|  
+|Schwedisch|1053|1053|  
 |Tschechisch|1029|1029|  
 |Ungarisch|1038|1038|  
 |Polnisch|1045|1045|  
 |Rumänisch|1048|1048|  
 |Kroatisch|1050|1050|  
-|Slowakisch|1.051|1.051|  
+|Slowakisch|1051|1051|  
 |Schem|1060|1060|  
 |Griechisch|1032|1032|  
 |Bulgarisch|1026|1026|  
@@ -84,7 +83,7 @@ ms.locfileid: "70874869"
 |Koreanisch|1042|1042|  
 |Chinesisch (vereinfacht)|2052|2052|  
 |Arabisch|1025|1025|  
-|Thailändisch|1.054|1.054|  
+|Thailändisch|1054|1054|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Kompatibilitäts Sichten &#40;Transact-SQL-&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   

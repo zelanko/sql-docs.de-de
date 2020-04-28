@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a15f6735ef0ef79b7eb953445c926f60f6bfb12e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176085"
 ---
 # <a name="tutorial-sql-server-data-files-in-azure-storage-service"></a>Tutorial: SQL Server-Datendateien im Azure Storage-Dienst
@@ -27,25 +27,25 @@ ms.locfileid: "70176085"
   
  Dieses Lernprogramm ist in neun Lektionen aufgeteilt:  
   
- **[Lektion 1: Erstellen eines Azure Storage-Kontos und -Containers](../tutorials/lesson-1-create-windows-azure-storage-account-and-container.md)**  
+ **[Lektion 1: Erstellen eines Azure Storage-Kontos und -Containers](../tutorials/lesson-1-create-windows-azure-storage-account-and-container.md)**  
  In dieser Lektion erstellen Sie ein Azure Storage Konto und einen Container.  
   
  **[Lektion 2. Erstellen einer Richtlinie für einen Container und Generieren einer Shared Access Signature &#40;SAS-&#41; Schlüssel](lesson-1-create-stored-access-policy-and-shared-access-signature.md)**  
  In dieser Lektion erstellen Sie eine Richtlinie für den BLOB-Container und generieren zusätzlich eine SAS (Shared Access Signature, Signatur für gemeinsamen Zugriff).  
   
- **[Lektion 3: Erstellen von SQL Server-Anmeldeinformationen](lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)**  
+ **[Lektion 3: Erstellen von SQL Server-Anmeldeinformationen](lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)**  
  In dieser Lektion erstellen Sie Anmeldeinformationen, um die Sicherheitsinformationen für den Zugriff auf das Azure-Speicherkonto zu speichern.  
   
- **[Lektion 4: Erstellen einer Datenbank in Azure Storage](../relational-databases/lesson-3-database-backup-to-url.md)**  
+ **[Lektion 4: Erstellen einer Datenbank in Azure Storage](../relational-databases/lesson-3-database-backup-to-url.md)**  
  In dieser Lektion erstellen Sie eine Datenbank in Azure Storage mithilfe der Option Create Database filename.  
   
  **[Lektion 5. &#40;optional,&#41; Ihre Datenbank mithilfe von TDE zu verschlüsseln.](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)**  
  In dieser Lektion verschlüsseln Sie die Datenbank mithilfe einer transparenten Datenverschlüsselung (TDE) und eines Serverzertifikats.  
   
- **[Lektion 6: Migrieren einer Datenbank von einem lokalen Quellcomputer zu einem Zielcomputer in Azure](lesson-5-backup-database-using-file-snapshot-backup.md)**  
+ **[Lektion 6: Migrieren einer Datenbank von einem lokalen Quellcomputer zu einem Zielcomputer in Azure](lesson-5-backup-database-using-file-snapshot-backup.md)**  
  In dieser Lektion migrieren Sie eine Datenbank von einem lokalen Standort zu einem virtuellen Computer in Azure mithilfe der Option Create Database for Attach.  
   
- **[Lektion 7: Verschieben von Datendateien in Azure Storage](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)**  
+ **[Lektion 7: Verschieben von Datendateien nach Azure Storage](../relational-databases/lesson-6-generate-activity-and-backup-log-using-file-snapshot-backup.md)**  
  In dieser Lektion verschieben Sie die Datendateien mithilfe der ALTER DATABASE-Anweisung in Azure Storage.  
   
  **[Lektion 8. Wiederherstellen einer Datenbank auf Azure Storage](../relational-databases/lesson-7-restore-a-database-to-a-point-in-time.md)**  

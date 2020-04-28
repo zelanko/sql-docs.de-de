@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ac34c95e7ee4dc6f57ef7d8806a7db1bb981a944
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175962"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server-URL-Sicherung – bewährte Methoden und Problembehandlung
@@ -43,7 +43,7 @@ ms.locfileid: "70175962"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sicherungsvorgänge verwenden mehrere Threads, um die Datenübertragung an die Azure Blob Storage-Dienste zu optimieren.  Die Leistung hängt jedoch von verschiedenen Faktoren ab wie der Bandbreite des unabhängigen Softwareherstellers (ISV) und der Größe der Datenbank. Wenn Sie beabsichtigen, große Datenbanken oder Dateigruppen von einer lokalen SQL Server-Datenbank zu sichern, sollten Sie zunächst den Durchsatz testen. [Die Azure Storage-SLA](https://go.microsoft.com/fwlink/?LinkId=271619) hat maximale Verarbeitungszeiten für BLOB, die Sie in Erwägung ziehen können.  
   
--   Die Verwendung der im Abschnitt `WITH COMPRESSION`Verwalten von Sicherungen** empfohlenen **-Option ist besonders beim Sichern umfangreicher Dateien von Bedeutung.  
+-   Die Verwendung der im Abschnitt **Verwalten von Sicherungen** empfohlenen `WITH COMPRESSION`-Option ist besonders beim Sichern umfangreicher Dateien von Bedeutung.  
   
 ## <a name="troubleshooting-backup-to-or-restore-from-url"></a>Problembehandlung bei Sicherungs- oder Wiederherstellungsvorgängen über URLs  
  Im Folgenden finden Sie einige schnelle Lösungen zur Behandlung von Sicherungs- und Wiederherstellungsfehlern im Azure Blob Storage-Dienst.  
@@ -98,15 +98,15 @@ ms.locfileid: "70175962"
   
          Um diesen Fehler zu beheben, übergeben Sie die `BACKUP`-Anweisung erneut mit `BLOCKSIZE = 65536`.  
   
--   Fehler während der Sicherung aufgrund von Blobs mit aktiver Lease: Eine fehlerhafte Sicherungsaktivität kann zu Blobs mit aktiven Leases führen.  
+-   Sicherungsfehler aufgrund von BLOBs, die über eine aktive Leasedauer verfügen: Fehlerhafte Sicherungsaktivitäten können dazu führen, dass BLOBs eine aktive Leasedauer aufweisen.  
   
      Wenn die BACKUP-Anweisung erneut ausgeführt wird, kann ein Sicherungsvorgang einen Fehler mit etwa folgendem Wortlaut verursachen:  
   
-     **Bei der URL-Sicherung wurde eine Ausnahme vom Remote Endpunkt empfangen. Ausnahme Meldung: der Remote Server hat einen Fehler zurückgegeben: (412) derzeit ist eine Lease für das BLOB vorhanden, und in der Anforderung wurde keine Lease-ID angegeben**.  
+     **Bei einer URL-Sicherung wurde eine Ausnahme vom Remoteendpunkt empfangen. Ausnahmemeldung: Der Remoteserver hat einen Fehler zurückgegeben: (412) Derzeit weist das Blob eine Lease auf, obwohl in der Anforderung keine Lease-ID angegeben wurde**.  
   
      Wenn versucht wird, eine RESTORE-Anweisung für eine BLOB-Sicherungsdatei mit aktiver Leasedauer auszuführen, wird eine Fehlermeldung mit etwa folgendem Wortlaut angezeigt:  
   
-     **Ausnahme Meldung: der Remote Server hat einen Fehler zurückgegeben: (409) Konflikt..**  
+     **Ausnahmemeldung: Der Remoteserver hat einen Fehler zurückgegeben: (409) Konflikt...**  
   
      Wenn dieser Fehler auftritt, müssen die BLOB-Dateien gelöscht werden. Weitere Informationen zu diesem Szenario und Lösungsvorschläge finden Sie unter [Löschen von Sicherungsblobdateien mit aktiver Lease](deleting-backup-blob-files-with-active-leases.md).  
   

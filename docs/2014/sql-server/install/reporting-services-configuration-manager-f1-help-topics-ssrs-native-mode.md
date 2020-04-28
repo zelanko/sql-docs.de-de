@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: d2205465f1fd6f03c67e1fc09ec76a2dfbb2e083
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952041"
 ---
 # <a name="reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode"></a>F1-Hilfethemen für Reporting Services-Konfigurations-Manager (einheitlicher SSRS-Modus)
@@ -26,7 +26,7 @@ ms.locfileid: "71952041"
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
   
--   [Herstellen einer Verbindung mit einem Berichts Server](../../../2014/sql-server/install/connect-to-a-native-mode-report-server.md)  
+-   [Herstellen einer Verbindung mit einem Berichtsserver](../../../2014/sql-server/install/connect-to-a-native-mode-report-server.md)  
   
 -   [Berichtsserverstatus](../../../2014/sql-server/install/report-server-status-ssrs-native-mode.md)  
   

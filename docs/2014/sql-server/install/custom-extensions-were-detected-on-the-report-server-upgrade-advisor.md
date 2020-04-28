@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: f985f41104dd194d851760c3d1c3e5479a65b7e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952589"
 ---
 # <a name="custom-extensions-were-detected-on-the-report-server-upgrade-advisor"></a>Auf dem Berichtsserver wurden benutzerdefinierte Erweiterungen erkannt (Upgrade Advisor)
@@ -28,7 +28,7 @@ ms.locfileid: "71952589"
   
 ||  
 |-|  
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Einheitlicher Modus &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint-Modus.|  
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im einheitlichen Modus &#124; [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] im SharePoint-Modus|  
   
 ## <a name="component"></a>Komponente  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
@@ -66,7 +66,7 @@ ms.locfileid: "71952589"
   
  Wenn Sie entscheiden, nicht mit dem Upgrade fortzufahren, können Sie entscheiden, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] stattdessen zu migrieren. Schritte zum Migrieren benutzerdefinierter Erweiterungen finden Sie unter [Migrieren von benutzerdefinierten Erweiterungen](#migrcustext) in diesem Thema.  
   
-###  <a name="dataprocdeliver"></a>Benutzerdefinierte Datenverarbeitungs-oder Übermittlungs Erweiterungen  
+###  <a name="custom-data-processing-or-delivery-extensions"></a><a name="dataprocdeliver"></a>Benutzerdefinierte Datenverarbeitungs-oder Übermittlungs Erweiterungen  
  Wenn der Upgrade Advisor benutzerdefinierte Datenverarbeitungs- oder Übermittlungserweiterungen erkennt, wird der Upgradevorgang nicht blockiert. Nach Abschluss des Upgrades müssen Sie jedoch möglicherweise weitere Schritte ausführen, damit die von diesen Erweiterungen bereitgestellte benutzerdefinierte Funktionalität verwendet werden kann. Beispielsweise müssen Sie weitere Schritte ausführen, wenn die Dateien für die benutzerdefinierten Erweiterungen im Installationsordner von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installiert sind.  
   
 ##### <a name="post-upgrade-steps-for-custom-data-processing-or-delivery-extensions"></a>Nach dem Upgrade auszuführende Schritte für benutzerdefinierte Datenverarbeitungs- oder Übermittlungserweiterungen  
@@ -75,7 +75,7 @@ ms.locfileid: "71952589"
   
  Weitere Informationen finden Sie unter "Bereitstellen einer Datenverarbeitungserweiterung" und "Implementieren von Übermittlungserweiterungen" in der SQL Server-Onlinedokumentation.  
   
-###  <a name="render"></a>Benutzerdefinierte Rendering-Erweiterungen  
+###  <a name="custom-rendering-extensions"></a><a name="render"></a>Benutzerdefinierte Rendering-Erweiterungen  
  Wenn der Upgrade Advisor benutzerdefinierte Renderingerweiterungen erkennt, wird der Upgradevorgang blockiert. Sie können den Upgradevorgang fortsetzen, indem Sie die Konfigurationseinträge für die benutzerdefinierten Erweiterungen aus der Konfigurationsdatei entfernen. Dann stehen nach Abschluss des Upgrades die benutzerdefinierten Erweiterungen jedoch den Benutzern nicht zur Verfügung. Wenn Sie nach dem Upgrade benutzerdefinierte Renderingerweiterungen benötigen, müssen Sie aktualisierte Renderingerweiterungen erstellen oder von einem entsprechenden Anbieter beziehen.  
   
  Sie müssen Schritte ausführen, um ein Upgrade zu aktivieren, oder Sie können stattdessen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] migrieren.  
@@ -95,7 +95,7 @@ ms.locfileid: "71952589"
   
  Weitere Informationen finden Sie unter "Implementieren von Renderingerweiterungen" in der SQL Server-Onlinedokumentation.  
   
-###  <a name="secauth2000"></a>Benutzerdefinierte Sicherheits-oder Authentifizierungs Erweiterungen auf einem SQL Server 2000-Berichts Server  
+###  <a name="custom-security-or-authentication-extensions-on-a-sql-server-2000-report-server"></a><a name="secauth2000"></a>Benutzerdefinierte Sicherheits-oder Authentifizierungs Erweiterungen auf einem SQL Server 2000-Berichts Server  
  Wenn der Upgrade Advisor benutzerdefinierte Sicherheits- oder Authentifizierungserweiterungen auf einem Berichtsserver von [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] erkennt, wird der Upgradevorgang blockiert. Sie müssen Schritte ausführen, um ein Upgrade zu aktivieren, oder Sie können stattdessen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] migrieren. In jedem der beiden Fälle müssen Sie die Erweiterungen anhand der aktuellen Schnittstellen in Microsoft.ReportingServices.Interfaces.dll aktualisieren und neu kompilieren, da die Schnittstellen beim Übergang von [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] zu [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] geändert wurden.  
   
 > [!IMPORTANT]  
@@ -115,7 +115,7 @@ ms.locfileid: "71952589"
   
  Weitere Informationen finden Sie unter "Implementieren von Sicherheitserweiterungen" in der SQL Server-Onlinedokumentation.  
   
-###  <a name="secauth2005"></a>Benutzerdefinierte Sicherheits-oder Authentifizierungs Erweiterungen auf einem SQL Server 2005-Berichts Server  
+###  <a name="custom-security-or-authentication-extensions-on-a-sql-server-2005-report-server"></a><a name="secauth2005"></a>Benutzerdefinierte Sicherheits-oder Authentifizierungs Erweiterungen auf einem SQL Server 2005-Berichts Server  
  Wenn der Upgrade Advisor benutzerdefinierte Sicherheits- oder Authentifizierungserweiterungen auf einem Berichtsserver von [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] erkennt, wird der Upgradevorgang blockiert. Sie müssen Schritte ausführen, um ein Upgrade zu aktivieren, oder Sie können stattdessen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] migrieren.  
   
 ##### <a name="to-upgrade-custom-security-or-authentication-extensions-from-a-sql-server-2005-report-server"></a>So aktualisieren Sie Sicherheits- oder Authentifizierungserweiterungen von einem Berichtsserver mit SQL Server 2005  
@@ -130,7 +130,7 @@ ms.locfileid: "71952589"
   
  Weitere Informationen finden Sie unter "Implementieren von Sicherheitserweiterungen" in der SQL Server-Onlinedokumentation.  
   
-###  <a name="migrcustext"></a>Migrieren benutzerdefinierter Erweiterungen  
+###  <a name="migrating-custom-extensions"></a><a name="migrcustext"></a>Migrieren benutzerdefinierter Erweiterungen  
  Wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] migrieren möchten, statt ein Upgrade auszuführen, verwenden Sie die Schritte zum Migrieren benutzerdefinierter Erweiterungen zur neuen [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]-Instanz.  
   
 ##### <a name="to-migrate-custom-extensions-to-a-new-reporting-services-instance"></a>So migrieren Sie benutzerdefinierte Erweiterungen zu einer neuen Reporting Services-Instanz  

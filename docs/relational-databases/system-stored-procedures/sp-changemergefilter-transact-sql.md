@@ -16,10 +16,10 @@ ms.assetid: e08fdfdd-d242-4e85-817b-9f7a224fe567
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: bfe3cd91150d1990acc410cb4a61af9485c61f4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304950"
 ---
 # <a name="sp_changemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
@@ -55,16 +55,16 @@ sp_changemergefilter [ @publication= ] 'publication'
   
  Diese Tabelle beschreibt die Eigenschaften von Artikeln und die Werte für diese Eigenschaften.  
   
-|Eigenschaft|value|BESCHREIBUNG|  
+|Eigenschaft|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |**filter_type**|**1**|Joinfilter.<br /><br /> Diese Option ist erforderlich, um [!INCLUDE[ssEW](../../includes/ssew-md.md)]-Abonnenten zu unterstützen.|  
 ||**2**|Logische Datensatzbeziehung.|  
-||**€**|Ein Joinfilter ist ebenfalls eine logische Datensatzbeziehung.|  
-|**filtername**||Name des Filters.|  
+||**3**|Ein Joinfilter ist ebenfalls eine logische Datensatzbeziehung.|  
+|**Filter Name**||Name des Filters.|  
 |**join_articlename**||Name des Join-Artikels.|  
 |**join_filterclause**||Filterklausel|  
-|**join_unique_key**|**Fall**|Der Join betrifft einen eindeutigen Schlüssel.|  
-||**Alarm**|Der Join betrifft nicht einen eindeutigen Schlüssel.|  
+|**join_unique_key**|**true**|Der Join betrifft einen eindeutigen Schlüssel.|  
+||**false**|Der Join betrifft nicht einen eindeutigen Schlüssel.|  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot`Bestätigt, dass die von dieser gespeicherten Prozedur ausgeführte Aktion eine vorhandene Momentaufnahme für ungültig erklären kann. *force_invalidate_snapshot* ist ein **Bit**und hat den Standardwert **0**.  
   
@@ -92,7 +92,7 @@ sp_changemergefilter [ @publication= ] 'publication'
  Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_changemergefilter**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Ändern von Veröffentlichungs- und Artikeleigenschaften](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
+ [Ändern von Veröffentlichungs-und Artikeleigenschaften](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergefilter &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)   
  [sp_dropmergefilter &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)   
  [sp_helpmergefilter &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)   

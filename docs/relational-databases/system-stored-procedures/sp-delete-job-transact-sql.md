@@ -18,10 +18,10 @@ ms.assetid: b85db6e4-623c-41f1-9643-07e5ea38db09
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fc733ca2b56ef9fa96be5ab2adf6486419e0e250
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72306271"
 ---
 # <a name="sp_delete_job-transact-sql"></a>sp_delete_job (Transact-SQL)
@@ -68,8 +68,7 @@ sp_delete_job { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
   
  Das ** \@delete_unused_schedule** -Argument bietet Abwärtskompatibilität mit früheren Versionen von SQL Server durch automatisches Entfernen von Zeitplänen, die nicht an einen Auftrag angefügt sind. Beachten Sie, dass dieser Parameter standardmäßig das Verhalten der Abwärtskompatibilität bietet. Wenn Sie Zeitpläne beibehalten möchten, die nicht an einen Auftrag angefügt sind, müssen Sie den Wert **0** als ** \@delete_unused_schedule** Argument angeben.  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Aufträge problemlos mithilfe einer grafischen Oberfläche verwaltet werden. Dies ist die empfohlene Vorgehensweise für die Erstellung und Verwaltung der Auftragsinfrastruktur.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Aufträge problemlos mithilfe einer grafischen Oberfläche verwaltet werden. Dies ist die empfohlene Vorgehensweise für die Erstellung und Verwaltung der Auftragsinfrastruktur.  
   
  Mit dieser gespeicherten Prozedur können keine Wartungspläne oder Aufträge, die Teil von Wartungsplänen sind, gelöscht werden. Zum Löschen von Wartungsplänen müssen Sie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] verwenden.  
   

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 7dff59c26c057caec1df1f5850be41dcc6f85711
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952307"
 ---
 # <a name="database-ssrs-native-mode"></a>Datenbank (einheitlicher SSRS-Modus)
@@ -30,11 +30,11 @@ ms.locfileid: "71952307"
   
  Um diese Seite zu öffnen, starten Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, und klicken Sie im Navigationsbereich auf **Datenbank** . Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **SQL Server Name**  
  In der aktuellen Berichtsserverdatenbank gibt **Name des SQL-Servers** den Namen der [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] an, auf der die Berichtsserverdatenbank ausgeführt wird. Sie können eine Standardinstanz oder eine benannte Instanz auf einem lokalen oder einem Remotecomputer verwenden.  
   
- **Database Name**  
+ **Datenbankname**  
  Gibt den Namen der Berichtsserver-Datenbank an, die die Serverdaten speichert.  
   
  **Berichtsserver-Modus**  
@@ -43,10 +43,10 @@ ms.locfileid: "71952307"
  **Datenbank ändern**  
  Starten Sie einen Assistenten, der Sie durch alle Schritte führt, die zur Erstellung oder Auswahl einer Berichtsserver-Datenbank erforderlich sind.  
   
- **Anmelde Informationstyp**  
+ **Typ der Anmeldeinformationen**  
  Gibt die Anmeldeinformationen an, die vom Berichtsserver zum Herstellen der Verbindung zur Berichtsserver-Datenbank verwendet werden. Zu den Anmeldeinformationen, die Sie angeben können, gehören das Dienstkonto, ein Windows-Domänenbenutzer, ein lokaler Windows-Benutzer oder die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankanmeldung. Weitere Informationen zum Auswählen von Anmelde Informationen finden Sie unter [Konfigurieren einer Verbindung mit der Berichts Server-Datenbank &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
- **Benutzer Name**  
+ **Benutzername**  
  Gibt ein Domänenbenutzerkonto an, wenn Sie Windows-Anmeldeinformationen verwenden, bzw. einen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen, wenn Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldeinformationen verwenden. Wenn Sie Windows-Anmelde Informationen verwenden, geben Sie diese im folgenden Format an: * \< \\ Domäne\>><Konto*.  
   
  **Kennwort**  
@@ -58,7 +58,7 @@ ms.locfileid: "71952307"
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen einer Berichts Server-Datenbank im einheitlichen Modus &#40;SSRS-Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)   
  [Konfigurations-Manager für Reporting Services F1-Hilfe Themen &#40;SSRS im einheitlichen Modus&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [Berichtsserver-Datenbank &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
+ [Berichts Server-Datenbank &#40;einheitlicher SSRS-Modus&#41;](../../reporting-services/report-server/report-server-database-ssrs-native-mode.md)   
  [Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank &#40;SSRS-Konfigurations-Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
   
   

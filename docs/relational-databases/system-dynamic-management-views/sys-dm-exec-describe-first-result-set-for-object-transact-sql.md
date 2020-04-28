@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c500967b83581cc3bc108232f12c9a0f4d008da6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71199333"
 ---
 # <a name="sysdm_exec_describe_first_result_set_for_object-transact-sql"></a>sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)
@@ -44,7 +44,7 @@ sys.dm_exec_describe_first_result_set_for_object
   
 ## <a name="arguments"></a>Argumente  
  *\@object_id*  
- Der @object_id einer [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherten Prozedur oder eines [!INCLUDE[tsql](../../includes/tsql-md.md)] -Auslösers. @object_idist vom Typ **int**.  
+ Der @object_id einer [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherten Prozedur oder eines [!INCLUDE[tsql](../../includes/tsql-md.md)] -Auslösers. @object_id ist vom Typ **int**.  
   
  *\@include_browse_information*  
  @include_browse_informationist vom Typ **Bit**. Bei 1 werden alle Abfragen so analysiert, als ob die FOR BROWSE-Option in der Abfrage enthalten wäre. Gibt zusätzliche Schlüsselspalten und Quelltabelleninformationen zurück.  
@@ -94,7 +94,7 @@ sys.dm_exec_describe_first_result_set_for_object
 |**error_state**|**int**|Enthält die von der Funktion zurückgegebene Statusmeldung. Wenn kein Fehler ist aufgetreten ist, enthält die Spalte NULL.|  
 |**error_message**|**nvarchar (4096)**|Enthält die von der Funktion zurückgegebene Meldung. Wenn kein Fehler aufgetreten ist, enthält die Spalte NULL.|  
 |**error_type**|**int**|Enthält eine ganze Zahl, die den zurückgegebenen Fehler darstellt. Wird error_type_desc zugeordnet. Siehe Liste unter Hinweisen.|  
-|**error_type_desc**|**nvarchar (60)**|Enthält eine kurze Zeichenfolge in Großbuchstaben, die den zurückgegebenen Fehler darstellt. Wird error_type zugeordnet. Siehe Liste unter Hinweisen.|  
+|**error_type_desc**|**nvarchar(60)**|Enthält eine kurze Zeichenfolge in Großbuchstaben, die den zurückgegebenen Fehler darstellt. Wird error_type zugeordnet. Siehe Liste unter Hinweisen.|  
   
 ## <a name="remarks"></a>Bemerkungen  
  Diese Funktion verwendet den gleichen Algorithmus wie **sp_describe_first_result_set**. Weitere Informationen finden Sie unter [sp_describe_first_result_set &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  

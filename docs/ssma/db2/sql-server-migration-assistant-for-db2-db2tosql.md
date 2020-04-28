@@ -11,10 +11,10 @@ author: Jtoland
 ms.author: Jtoland
 manager: murato
 ms.openlocfilehash: 62b4910d6073da7ec845cc5e754a4e005f5d1461
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252164"
 ---
 # <a name="sql-server-migration-assistant-for-db2-db2tosql"></a>SQL Server Migration Assistant für DB2 (DB2ToSQL)
@@ -26,7 +26,7 @@ In dieser Dokumentation finden Sie Informationen zu SSMA für DB2 und eine Schri
   
 |`Section`|BESCHREIBUNG|  
 |-----------|---------------|
-|[Neuerungen in SSMA für DB2](https://msdn.microsoft.com/1cc38f85-3caa-42d0-8c76-a380c1d15c67)|Neuerungen in dieser Version von SSMA für DB2|  
+|[What's New in SSMA  for DB2 (Neuerungen in SSMA für DB2)](https://msdn.microsoft.com/1cc38f85-3caa-42d0-8c76-a380c1d15c67)|Neuerungen in dieser Version von SSMA für DB2|  
 |[Installieren von SSMA für DB2-Client &#40;DB2ToSQL&#41;](../../ssma/db2/installing-ssma-for-db2-client-db2tosql.md)|Enthält Artikel, die Voraussetzungen und Anweisungen für die Installation von SSMA für den DB2-Client und erforderliche Komponenten auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Computer, auf dem ausgeführt wird, bereitstellen.|  
 |[Informationen zu den ersten Schritten mit SSMA für DB2 &#40;DB2ToSQL&#41;](../../ssma/db2/getting-started-with-ssma-for-db2-db2tosql.md)|Führt die Benutzeroberfläche, die Projekte und die Konfigurationsoptionen ein.|  
 |[Migrieren von DB2-Datenbanken zu SQL Server &#40;DB2ToSQL&#41;](../../ssma/db2/migrating-db2-databases-to-sql-server-db2tosql.md)|Bietet eine Übersicht über den Konvertierungsprozess und ausführliche Informationen zu den einzelnen Schritten des Prozesses.|  

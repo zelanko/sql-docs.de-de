@@ -14,32 +14,31 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 5e51cda61bb44d1f143cab50901276b927cca73a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176078"
 ---
 # <a name="what39s-new-database-engine"></a>Neues&#39;s (Datenbank-Engine)
   Die neueste Version des [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]s enthält neue Funktionen und Erweiterungen, die die Leistungsfähigkeit und Produktivität von Architekten, Entwicklern und Administratoren erhöhen, die Datenspeichersysteme entwerfen, entwickeln und pflegen. Das [!INCLUDE[ssDE](../includes/ssde-md.md)] wurde in den folgenden Bereichen verbessert.  
   
-##  <a name="Feature"></a>Erweiterungen der Datenbank-Engine Features  
+##  <a name="database-engine-feature-enhancements"></a><a name="Feature"></a>Erweiterungen der Datenbank-Engine Features  
   
-###  <a name="MemoryOpt"></a>Speicher optimierte Tabellen  
+###  <a name="memory-optimized-tables"></a><a name="MemoryOpt"></a>Speicher optimierte Tabellen  
  In-Memory OLTP ist ein speicheroptimiertes, in die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Engine integrierte Datenbank-Engine. In-Memory OLTP wurde für OLTP optimiert. Weitere Informationen finden Sie unter [In-Memory OLTP &#40;Arbeitsspeicheroptimierung&#41;](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
  
   
-###  <a name="DataFiles"></a>SQL Server von Datendateien in Azure  
+###  <a name="sql-server-data-files-in-azure"></a><a name="DataFiles"></a>SQL Server von Datendateien in Azure  
  [SQL Server Datendateien in Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md) ermöglicht Native Unterstützung [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] für Datenbankdateien, die als Azure-blobspeicher gespeichert sind. Diese Funktion ermöglicht es Ihnen, eine Datenbank in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zu erstellen, die lokal oder auf einem virtuellen Computer in Azure ausgeführt wird, wobei ein dedizierter Speicherort für Ihre Daten in Azure BLOB Storage.  
   
   
-###  <a name="AzureVM"></a>Hosten einer SQL Server-Datenbank auf einem virtuellen Azure-Computer  
+###  <a name="host-a-sql-server-database-in-an-azure-virtual-machine"></a><a name="AzureVM"></a>Hosten einer SQL Server-Datenbank auf einem virtuellen Azure-Computer  
  Verwenden Sie den Assistenten zum Bereitstellen [einer SQL Server Datenbank auf einem virtuellen Azure-Computer](https://msdn.microsoft.com/library/dn195938\(v=sql.120\).aspx) , um eine Datenbank [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] von einer Instanz von auf einem virtuellen Azure-Computer zu hosten.  
   
   
-###  <a name="Backup"></a>Sicherungs-und Wiederherstellungs Erweiterungen  
- 
-  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] umfasst die folgenden Erweiterungen für die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Sicherung und -Wiederherstellung:  
+###  <a name="backup-and-restore-enhancements"></a><a name="Backup"></a>Sicherungs-und Wiederherstellungs Erweiterungen  
+ [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] umfasst die folgenden Erweiterungen für die [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Sicherung und -Wiederherstellung:  
   
 -   **SQL Server-Sicherung über URLs**  
   
@@ -47,27 +46,25 @@ ms.locfileid: "70176078"
   
 -   **Verwaltete SQL Server-Sicherung in Azure**  
   
-     Der Dienst [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] basiert auf der [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Sicherung über URLs und wird von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zum Verwalten und Planen von Datenbank- und Protokollsicherungen bereitgestellt. In dieser Version wird nur die Sicherung in Azure Storage unterstützt. 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] kann sowohl auf Datenbank- als auch auf Instanzebene konfiguriert werden und ermöglicht die präzise Steuerung auf Datenbankebene sowie die Automatisierung auf Instanzebene. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]kann für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Instanzen konfiguriert werden, die lokal ausgeführt werden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , sowie für Instanzen, die auf virtuellen Azure-Computern ausgeführt werden. Dies wird für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Instanzen empfohlen, die auf virtuellen Azure-Computern ausgeführt werden. Weitere Informationen finden Sie unter [SQL Server Managed Backup to Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
+     Der Dienst [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] basiert auf der [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Sicherung über URLs und wird von [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] zum Verwalten und Planen von Datenbank- und Protokollsicherungen bereitgestellt. In dieser Version wird nur die Sicherung in Azure Storage unterstützt. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] kann sowohl auf Datenbank- als auch auf Instanzebene konfiguriert werden und ermöglicht die präzise Steuerung auf Datenbankebene sowie die Automatisierung auf Instanzebene. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]kann für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Instanzen konfiguriert werden, die lokal ausgeführt werden [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , sowie für Instanzen, die auf virtuellen Azure-Computern ausgeführt werden. Dies wird für [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Instanzen empfohlen, die auf virtuellen Azure-Computern ausgeführt werden. Weitere Informationen finden Sie unter [SQL Server Managed Backup to Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
   
 -   **Verschlüsselung für Sicherungen**  
   
      Sie haben jetzt die Möglichkeit, die Sicherungsdatei während eines Sicherungsvorgangs zu verschlüsseln.  Es werden mehrere Verschlüsselungsalgorithmen unterstützt, einschließlich AES 128, AES, AES 192 256 und Triple DES. Sie müssen entweder ein Zertifikat oder einen asymmetrischen Schlüssel verwenden, um während des Sicherungsvorgangs eine Verschlüsselung auszuführen. Weitere Informationen finden Sie unter [Sicherungsverschlüsselung](../relational-databases/backup-restore/backup-encryption.md).  
   
   
-###  <a name="CE"></a>Neuer Entwurf für die Kardinalitätsschätzung  
+###  <a name="new-design-for-cardinality-estimation"></a><a name="CE"></a>Neuer Entwurf für die Kardinalitätsschätzung  
  Die Logik der Kardinalitätsschätzung wurde in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] überarbeitet, um die Qualität von Abfrageplänen und somit die Abfrageleistung zu verbessern. Die neue Kardinalitätsschätzung umfasst Annahmen und Algorithmen, die sich optimal mit den heutigen OLTP- und Data Warehouse-Arbeitsauslastungen ergänzen. Sie basiert auf intensiven Forschungen zum Verhalten der Kardinalitätsschätzung in heutigen Arbeitsauslastungen sowie auf unseren eigenen Erkenntnissen, die wir in den letzten 15 Jahren bei der Optimierung der SQL Server-Kardinalitätsschätzung gewonnen haben. Das Feedback unserer Kunden zeigt, dass die meisten Abfragen von den Änderungen profitieren oder mindestens mit gleicher Leistung ausgeführt werden. Bei einer geringen Zahl von Abfragen kann jedoch eine Verschlechterung gegenüber der früheren Kardinalitätsschätzung auftreten. Empfehlungen zur Leistungsoptimierung und zum Testen finden Sie unter [Kardinalitätsschätzung &#40;SQL Server&#41;](../relational-databases/performance/cardinality-estimation-sql-server.md).  
    
   
-###  <a name="Durability"></a>Verzögerte Dauerhaftigkeit  
+###  <a name="delayed-durability"></a><a name="Durability"></a>Verzögerte Dauerhaftigkeit  
  In [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] wurde die Möglichkeit eingeführt, die Latenz zu verringern, indem einige oder alle Transaktionen als verzögert dauerhaft festgelegt werden. Bei einer verzögert dauerhaften Transaktion wird die Steuerung an den Client zurückgegeben, bevor der Transaktionsprotokoll-Datensatz auf den Datenträger geschrieben wird. Dauerhaftigkeit kann auf Datenbankebene, auf COMMIT-Ebene oder auf ATOMIC-Blockebene gesteuert werden.  
   
  Weitere Informationen finden Sie im Thema [Steuern der Transaktions Dauerhaftigkeit](../relational-databases/logs/control-transaction-durability.md).  
   
   
-###  <a name="AlwaysOn"></a>AlwaysOn-Erweiterungen  
- 
-  [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] enthält die folgenden Erweiterungen für AlwaysOn-Failoverclusterinstanzen und AlwaysOn-Verfügbarkeitsgruppen:  
+###  <a name="alwayson-enhancements"></a><a name="AlwaysOn"></a>AlwaysOn-Erweiterungen  
+ [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] enthält die folgenden Erweiterungen für AlwaysOn-Failoverclusterinstanzen und AlwaysOn-Verfügbarkeitsgruppen:  
   
 -   Ein Assistent zum Hinzufügen von Azure-Replikaten vereinfacht das Erstellen von Hybridlösungen für AlwaysOn-Verfügbarkeitsgruppen. Weitere Informationen finden Sie unter [Verwenden des Assistenten zum Hinzufügen von Azure-Replikaten &#40;SQL Server&#41;](availability-groups/windows/use-the-add-azure-replica-wizard-sql-server.md).  
   
@@ -82,15 +79,15 @@ ms.locfileid: "70176078"
 -   Die folgenden DMVs wurden verbessert und geben jetzt FCI-Informationen zurück: [sys. dm_hadr_cluster](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-transact-sql), [sys. dm_hadr_cluster_members](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-members-transact-sql)und [sys. dm_hadr_cluster_networks](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-cluster-networks-transact-sql).  
   
   
-###  <a name="OIR"></a>Partitions Wechsel und Indizierung  
+###  <a name="partition-switching-and-indexing"></a><a name="OIR"></a>Partitions Wechsel und Indizierung  
  Die einzelnen Partitionen der partitionierten Tabellen können jetzt neu erstellt werden. Weitere Informationen finden Sie unter [Alter Index &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
    
   
-###  <a name="Lock"></a>Verwalten der sperrenpriorität von Online Vorgängen  
+###  <a name="managing-the-lock-priority-of-online-operations"></a><a name="Lock"></a>Verwalten der sperrenpriorität von Online Vorgängen  
  Die `ONLINE = ON`-Option verfügt nun über eine `WAIT_AT_LOW_PRIORITY`-Option, mit der angegeben werden kann, wie lange der Neuerstellungsprozess auf die erforderlichen Sperren warten soll. Mithilfe der `WAIT_AT_LOW_PRIORITY`-Option kann zusätzlich die Beendigung blockierender Prozesse konfiguriert werden, die sich auf die REBUILD-Anweisung beziehen. Weitere Informationen finden Sie unter [ALTER TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-table-transact-sql) und [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql). Informationen zur Problembehandlung für neue Typen von Sperr Zuständen finden Sie unter [sys. dm_tran_locks &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql) und [sys. dm_os_wait_stats &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql).  
  
   
-###  <a name="CCI"></a>Columnstore-Indizes  
+###  <a name="columnstore-indexes"></a><a name="CCI"></a>Columnstore-Indizes  
  Die folgenden neuen Funktionen sind für columnstore-Indizes verfügbar:  
   
 -   **Gruppierte Columnstore-Indizes**  
@@ -106,28 +103,28 @@ ms.locfileid: "70176078"
      Alter Index... Rebuild verfügt über eine neue COLUMNSTORE_ARCHIVE Daten Komprimierungs Option, mit der die angegebenen Partitionen eines columnstore--Indexes weiter komprimiert werden. Verwenden Sie diese Option bei der Archivierung und in Situationen, in denen es auf eine geringere Datenspeichergröße und nicht auf den zusätzlichen Zeitaufwand für das Speichern und Abrufen ankommt. Weitere Informationen finden Sie unter [Alter Index &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-index-transact-sql).  
    
   
-###  <a name="Buffer"></a>Puffer Pool Erweiterung  
+###  <a name="buffer-pool-extension"></a><a name="Buffer"></a>Puffer Pool Erweiterung  
  Die [Pufferpool Erweiterung](configure-windows/buffer-pool-extension.md) ermöglicht die nahtlose Integration von Solid-State-Laufwerken (SSD) als nicht flüchtige Erweiterung des Zufalls zugriffsspeichers (NVRAM) [!INCLUDE[ssDE](../includes/ssde-md.md)] in den Pufferpool, um den e/a-Durchsatz deutlich zu verbessern.  
    
   
-###  <a name="Stats"></a>Krementelle Statistiken  
+###  <a name="incremental-statistics"></a><a name="Stats"></a>Krementelle Statistiken  
  CREATE STATISTICS und verwandte Statistikanweisungen ermöglicht jetzt mithilfe der INCREMENTAL-Option die Erstellung von Statistiken pro Partition. Verwandte Anweisungen lassen inkrementelle Statistiken zu oder erstellen Berichte. Zu den betroffenen Syntax zählen Update Statistics, sp_createstats, CREATE Index, Alter Index, ALTER DATABASE SET-Optionen, DATABASEPROPERTYEX, sys. Database und sys. stats. Weitere Informationen finden Sie unter [CREATE STATISTICS &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-statistics-transact-sql).  
   
   
-###  <a name="RG"></a>Resource Governor Erweiterungen für physisches IO-Steuerelement  
+###  <a name="resource-governor-enhancements-for-physical-io-control"></a><a name="RG"></a>Resource Governor Erweiterungen für physisches IO-Steuerelement  
  Über die Ressourcenkontrolle können Sie Grenzwerte für die CPU, physische E/A und den Arbeitsspeicher, d. h. Ressourcen festlegen, die eingehenden Anwendungsanforderungen im Ressourcenpool zur Verfügung stehen. In [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] können Sie über die neue MIN_IOPS_PER_VOLUME-Einstellung und MAX_IOPS_PER_VOLUME-Einstellung die physischen E/A-Befehle steuern, die für Benutzerthreads eines bestimmten Ressourcenpools ausgegeben werden. Weitere Informationen finden Sie unter [Resource Governor Ressourcenpools](../relational-databases/resource-governor/resource-governor-resource-pool.md) und [Erstellen eines Ressourcenpools &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-resource-pool-transact-sql).  
   
  Mit der MAX_OUTSTANDING_IO_PER_VOLUME-Einstellung von ALTER RESOURCE GOVENOR werden die maximalen ausstehenden E/A-Vorgänge pro Datenträgervolume festgelegt. Mit dieser Einstellung können Sie die E/A-Ressourcenkontrolle auf die E/A-Eigenschaften eines Datenträgervolumes abstimmen. Außerdem kann sie die Anzahl der E/A-Befehle auf den Grenzwert der SQL Server-Instanz beschränken. Weitere Informationen finden Sie unter [ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-resource-governor-transact-sql).  
   
   
-###  <a name="OnlineEvent"></a>Online Index Operation (Ereignisklasse)  
+###  <a name="online-index-operation-event-class"></a><a name="OnlineEvent"></a>Online Index Operation (Ereignisklasse)  
  Der Fortschrittsbericht für die Online Index Operation-Ereignisklasse enthält jetzt zwei neue Datenspalten: **PartitionID** und **PARTITIONNUMBER**. Weitere Informationen finden Sie unter [Progress Report: Online Index Operation-Ereignisklasse](../relational-databases/event-classes/progress-report-online-index-operation-event-class.md).  
   
   
-###  <a name="Compat"></a>Datenbank-Kompatibilitäts Grad  
+###  <a name="database-compatibility-level"></a><a name="Compat"></a>Datenbank-Kompatibilitäts Grad  
  Der Kompatibilitätsgrad 90 ist in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] nicht gültig. Weitere Informationen finden Sie unter [ALTER DATABASE-Kompatibilitäts Grad &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
   
-##  <a name="TSQL"></a>Transact-SQL-Erweiterungen  
+##  <a name="transact-sql-enhancements"></a><a name="TSQL"></a>Transact-SQL-Erweiterungen  
   
 ### <a name="inline-specification-of-clustered-and-nonclustered"></a>Inlinespezifikation von CLUSTERED und NONCLUSTERED  
  Die Inlinespezifikation von `CLUSTERED`- und `NONCLUSTERED`-Indizes ist jetzt für datenträgerbasierte Tabellen zulässig. Das Erstellen einer Tabelle mit Inlineindizes entspricht der Ausgabe einer CREATE TABLE-Anweisung gefolgt von den entsprechenden `CREATE INDEX`-Anweisungen. Eingeschlossene Spalten und Filterbedingungen werden bei Inlineindizes nicht unterstützt.  
@@ -135,12 +132,11 @@ ms.locfileid: "70176078"
 ### <a name="select--into"></a>Wählen Sie... In  
  Die `SELECT ... INTO`-Anweisung wurde verbessert und kann nun parallel ausgeführt werden. Der Kompatibilitätsgrad der Datenbank muss auf mindestens 110 festgelegt werden.  
   
-### <a name="includetsqlincludestsql-mdmd-enhancements-for-in-memory-oltp"></a>
-  [!INCLUDE[tsql](../includes/tsql-md.md)]-Erweiterungen für In-Memory OLTP  
+### <a name="tsql-enhancements-for-in-memory-oltp"></a>[!INCLUDE[tsql](../includes/tsql-md.md)]-Erweiterungen für In-Memory OLTP  
  Informationen zu den Änderungen [!INCLUDE[tsql](../includes/tsql-md.md)] , die in-Memory OLTP unterstützen, finden Sie unter [Transact-SQL-Unterstützung für in-Memory OLTP](../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md).  
   
   
-##  <a name="SystemTable"></a>Erweiterungen der System Sicht  
+##  <a name="system-view-enhancements"></a><a name="SystemTable"></a>Erweiterungen der System Sicht  
   
 ### <a name="sysxml_indexes"></a>sys.xml_indexes  
  [sys. xml_indexes &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-xml-indexes-transact-sql) verfügt über drei neue `xml_index_type`Spalten `xml_index_type_description`:, `path_id`und.  
@@ -158,7 +154,7 @@ ms.locfileid: "70176078"
  Informationen zu den Verbesserungen der Systemsicht zur Unterstützung von in-Memory OLTP finden Sie unter [System Sichten, gespeicherte Prozeduren, DMVs und warte Typen für in-Memory OLTP](../../2014/database-engine/system-views-stored-procedures-dmvs-and-wait-types-for-in-memory-oltp.md).  
    
   
-##  <a name="Security"></a>Sicherheitsverbesserungen  
+##  <a name="security-enhancements"></a><a name="Security"></a>Sicherheitsverbesserungen  
   
 ### <a name="connect-any-database-permission"></a>CONNECT ANY DATABASE-Berechtigung  
  Eine neue Berechtigung auf Serverebene. Erteilen Sie die **CONNECT ANY DATABASE**-Berechtigung einem Anmeldenamen, der eine Verbindung mit allen derzeit vorhandenen Datenbanken und allen zukünftig erstellten neuen Datenbanken herstellen muss. Gewährt keine Berechtigung für Datenbanken außer der Berechtigung zum Herstellen der Verbindung. Kombinieren **Sie mit Select all User securables** oder `VIEW SERVER STATE` , um einem Überwachungsprozess das Anzeigen aller Daten oder aller Daten Bank Zustände in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]der-Instanz zu ermöglichen.  
@@ -170,8 +166,8 @@ ms.locfileid: "70176078"
  Eine neue Berechtigung auf Serverebene. Wenn sie erteilt wird, kann ein Anmeldename, z. B. ein Auditor, Daten in allen Datenbanken anzeigen, mit denen der Benutzer eine Verbindung herstellen kann.  
   
   
-##  <a name="Deployment"></a>Erweiterungen der Bereitstellung  
-### <a name="azure-vm"></a>Azure VM
+##  <a name="deployment-enhancements"></a><a name="Deployment"></a>Erweiterungen der Bereitstellung  
+### <a name="azure-vm"></a>Azure-VM
 Bereitstellen [einer SQL Server Datenbank auf einem Microsoft Azure virtuellen Computer](../relational-databases/databases/deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine.md) ermöglicht die bereit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Stellung einer Datenbank auf einem virtuellen Azure-Computer.  
 
 ### <a name="refs"></a>ReFS

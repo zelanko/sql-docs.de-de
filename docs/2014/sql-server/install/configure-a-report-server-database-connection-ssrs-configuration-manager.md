@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 8b6f1fa1697898432479b524659383d81fc8836a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952634"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>Konfigurieren einer Verbindung mit der Berichtsserver-Datenbank (SSRS-Konfigurations-Manager)
@@ -62,8 +62,7 @@ ms.locfileid: "71952634"
  Den angegebenen Anmeldeinformationen muss Zugriff auf die Berichtsserver-Datenbank gewährt werden. Wenn Sie das [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool verwenden, wird dieser Schritt automatisch ausgeführt. Weitere Informationen über die Berechtigungen, die für den Zugriff auf die Datenbank erforderlich sind, finden Sie im Abschnitt "Datenbankberechtigungen" weiter unten in diesem Thema.  
   
 ### <a name="storing-database-connection-information"></a>Speichern von Verbindungsinformationen für eine Datenbank  
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] speichert und verschlüsselt die Verbindungsinformationen in den folgenden RSreportserver.config-Einstellungen. Verschlüsselte Werte für diese Einstellungen müssen Sie mithilfe des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstools oder des RSCONFIG-Hilfsprogramms erstellen.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] speichert und verschlüsselt die Verbindungsinformationen in den folgenden RSreportserver.config-Einstellungen. Verschlüsselte Werte für diese Einstellungen müssen Sie mithilfe des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstools oder des RSCONFIG-Hilfsprogramms erstellen.  
   
  Nicht alle Werte sind für jeden Verbindungstyp festgelegt. Wenn Sie die Verbindung mithilfe der Standardwerte konfigurieren (d. h., indem Sie die Dienst Konten zum Herstellen der Verbindung `LogonUser` verwenden), `LogonDomain` werden <>, `LogonCred` <> und <> wie folgt leer:  
   
@@ -107,9 +106,9 @@ ms.locfileid: "71952634"
 ### <a name="database-permissions"></a>Datenbankberechtigungen  
  Konten, über die eine Verbindung mit der Berichtsserver-Datenbank hergestellt wird, werden die folgenden Rollen zugewiesen:  
   
--   die Rollen **Public** und **RSExecRole** für die **Report Server** -Datenbank.  
+-   Die Rollen**public** und **RSExecRole** für die **ReportServer** -Datenbank.  
   
--   **RSExecRole** -Rolle für die Datenbanken **Master**, **msdb**und **ReportServerTempDB** .  
+-   Die**RSExecRole** -Rolle für die Datenbanken **master**, **msdb**und **ReportServerTempDB** .  
   
  Wenn Sie die Verbindung anhand des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstools erstellen oder ändern, werden diese Berechtigungen automatisch erteilt. Wenn Sie das RSCONFIG-Hilfsprogramm verwenden und ein anderes Konto für die Verbindung angeben, müssen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldenamen für dieses neue Konto aktualisieren. Mit dem [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstool können Sie Skriptdateien erstellen, mit deren Hilfe der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Anmeldename für den Berichtsserver aktualisiert wird.  
   
@@ -117,13 +116,13 @@ ms.locfileid: "71952634"
  Mithilfe des [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurationstools können Sie feststellen, welche Berichtsserver-Datenbank von einer bestimmten Berichtsserverinstanz verwendet wird. Zum Ermitteln des Namens stellen Sie eine Verbindung mit der Berichtsserverinstanz her und öffnen dann die Seite Setup der Datenbank.  
   
 ## <a name="using-a-different-report-server-database-or-moving-a-report-server-database"></a>Verwenden einer anderen Berichtsserver-Datenbank oder Verschieben einer Berichtsserver-Datenbank  
- Durch das Ändern der Verbindungsinformationen können Sie eine Berichtsserverinstanz so konfigurieren, dass sie eine andere Berichtsserver-Datenbank verwendet. Der Wechsel der Datenbanken hängt häufig damit zusammen, dass ein Produktionsberichtsserver bereitgestellt wird. Der Wechsel von einer Testberichts Server-Datenbank zu einer Produktions-Berichts Server-Datenbank erfolgt in der Regel, wie Produktionsserver eingeführt werden. Sie können eine Berichts Server-Datenbank auch auf einen anderen Computer verschieben. Weitere Informationen finden Sie unter [Aktualisieren und Migrieren von Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation, .  
+ Durch das Ändern der Verbindungsinformationen können Sie eine Berichtsserverinstanz so konfigurieren, dass sie eine andere Berichtsserver-Datenbank verwendet. Der Wechsel der Datenbanken hängt häufig damit zusammen, dass ein Produktionsberichtsserver bereitgestellt wird. Der Wechsel von einer Datenbank auf einem Testberichtsserver zu einer Datenbank auf einem Produktionsberichtsserver ist typisch für die Inbetriebnahme eines Produktionsservers. Sie können eine Berichtsserver-Datenbank auch auf einen anderen Computer verschieben. Weitere Informationen finden Sie unter [Aktualisieren und Migrieren von Reporting Services](../../reporting-services/install-windows/upgrade-and-migrate-reporting-services.md) in der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Onlinedokumentation, .  
   
 ## <a name="configuring-multiple-reports-servers-to-use-the-same-report-server-database"></a>Konfigurieren mehrerer Berichtsserver für die Verwendung der gleichen Berichtsserver-Datenbank  
  Es ist möglich, mehrere Berichtsserver so zu konfigurieren, dass sie dieselbe Berichtsserver-Datenbank verwenden. Diese Konfiguration wird als Bereitstellung für horizontales Skalieren bezeichnet. Diese Konfiguration ist eine Voraussetzung, wenn Sie mehrere Berichtsserver in einem Servercluster ausführen möchten. Sie können diese Konfiguration jedoch auch verwenden, wenn Sie Dienstanwendungen segmentieren oder wenn Sie die Installation und die Einstellungen einer neuen Berichtsserverinstanz testen möchten, um diese mit der Installation eines vorhandenen Berichtsservers zu vergleichen. Weitere Informationen finden Sie unter [Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Erstellen einer Berichtsserver-Datenbank](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
+ [Erstellen einer Berichts Server-Datenbank &#40;SSRS-Configuration Manager&#41;](../../../2014/sql-server/install/create-a-report-server-database-ssrs-configuration-manager.md)   
  [Verwalten eines Reporting Services Berichts Servers im einheitlichen Modus](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)   
  [Konfigurieren des Berichtsserver-Dienstkontos &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
   

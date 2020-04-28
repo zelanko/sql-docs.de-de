@@ -11,10 +11,10 @@ author: Jtoland
 ms.author: Jtoland
 manager: murato
 ms.openlocfilehash: dfa640787f42d06ed65b713c9fea415dc9560a2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72252204"
 ---
 # <a name="sql-server-migration-assistant-for-access-accesstosql"></a>SQL Server Migration Assistant für den Zugriff (Access Token)
@@ -27,10 +27,10 @@ In dieser Dokumentation finden Sie Informationen zu SSMA für den Zugriff und ei
   
 |`Section`|BESCHREIBUNG|
 |-----------|---------------|
-|[Neuerungen in SSMA für Access](https://msdn.microsoft.com/a24d3fc0-6911-4bfa-828a-197abf222e02)|Listet die Änderungen an SSMA-Releases auf.|  
+|[What's New in SSMA for Access (Neuerungen in SSMA für Access)](https://msdn.microsoft.com/a24d3fc0-6911-4bfa-828a-197abf222e02)|Listet die Änderungen an SSMA-Releases auf.|  
 |[Installieren von SQL Server Migration Assistant für den Zugriff](installing-sql-server-migration-assistant-for-access-accesstosql.md)|Listet die Voraussetzungen für die Installation von SSMA, das Verfahren zum Installieren und lizenzieren von SSMA und einen Link zur neuesten Version auf.|  
 |[Die ersten Schritte mit SQL Server Migration Assistant für Access &#40;accesstosql-&#41;](../../ssma/access/getting-started-with-sql-server-migration-assistant-for-access-accesstosql.md)|Führt SSMA und die zugehörige Benutzeroberfläche ein.|  
-|[Vorbereiten einer Access-Datenbank für die Migration](preparing-access-databases-for-migration-accesstosql.md)|Hier wird beschrieben, wie Sie Ihre Access-Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Banken für die Konvertierung in/SQL Azure vorbereiten.|  
+|[Vorbereiten der Zugriffs Datenbanken für die Migration](preparing-access-databases-for-migration-accesstosql.md)|Hier wird beschrieben, wie Sie Ihre Access-Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Banken für die Konvertierung in/SQL Azure vorbereiten.|  
 |[Migration von Access-Datenbanken zu SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)|Bietet eine Übersicht über den Konvertierungsprozess und ausführliche Informationen zu den einzelnen Schritten des Prozesses.|  
 |[Verknüpfen von Zugriffs Anwendungen mit SQL Server](linking-access-applications-to-sql-server-azure-sql-db-accesstosql.md)|Beschreibt die Verwendung vorhandener Access-Anwendungen mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |[Referenz zur Benutzeroberfläche](user-interface-reference-accesstosql.md)|Enthält die Dokumentation für SSMA-Dialogfelder.|  

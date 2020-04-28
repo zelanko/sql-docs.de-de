@@ -13,17 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: edde17b3339a6a78f81ddf92da95afb2f8ba851c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782349"
 ---
 # <a name="creating-altering-and-removing-user-defined-functions"></a>Erstellen, Ändern und Löschen von benutzerdefinierten Funktionen
   Das <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction> -Objekt stellt Funktionen bereit, mit denen Benutzer benutzerdefinierte Funktionen in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Programm gesteuert verwalten können. Benutzerdefinierte Funktionen unterstützen sowohl Eingabe- und Ausgabeparameter als auch direkte Verweise auf Tabellenspalten.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erfordert, dass Assemblys in einer Datenbank registriert werden, bevor diese in gespeicherten Prozeduren, benutzerdefinierten Funktionen, Trigger und benutzerdefinierten Datentypen verwendet werden können. SMO unterstützt diese Funktion mit dem <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly>-Objekt.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] erfordert, dass Assemblys in einer Datenbank registriert werden, bevor diese in gespeicherten Prozeduren, benutzerdefinierten Funktionen, Trigger und benutzerdefinierten Datentypen verwendet werden können. SMO unterstützt diese Funktion mit dem <xref:Microsoft.SqlServer.Management.Smo.SqlAssembly>-Objekt.  
   
  Das <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction>-Objekt verweist auf die .NET-Assembly mit den Eigenschaften <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.AssemblyName%2A>, <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.ClassName%2A> und <xref:Microsoft.SqlServer.Management.Smo.UserDefinedFunction.MethodName%2A>.  
   
@@ -33,12 +32,12 @@ ms.locfileid: "72782349"
  Zum Verwenden eines angegebenen Codebeispiels müssen Sie die Programmierumgebung, Programmiervorlage und die zu verwendende Programmiersprache auswählen, um Ihre Anwendung zu erstellen. Weitere Informationen finden Sie unter [Erstellen eines Visual Basic SMO-Projekts in Visual Studio .net](../../../database-engine/dev-guide/create-a-visual-basic-smo-project-in-visual-studio-net.md) oder [Erstellen eines Visual C&#35; SMO-Projekts in Visual Studio .net](../how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-basic"></a>Erstellen einer benutzerdefinierten Skalarfunktion in Visual Basic  
- In diesem Codebeispiel wird gezeigt, wie in <xref:System.DateTime> eine benutzerdefinierte Skalarfunktion erstellt und gelöscht wird, die über einen [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)]-Eingabeobjektparameter und einen ganzzahligen Rückgabetyp verfügt. Die benutzerdefinierte Funktion wird für die [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] -Datenbank erstellt. Im Beispiel wird die benutzerdefinierte Funktion ISOweek erstellt, die ein Datumsargument annimmt und die Nummer der ISO-Woche berechnet. Damit diese Funktion ordnungsgemäß berechnet wird, muss die DATEFIRST-Option der Datenbank auf 1 festgelegt werden, bevor die Funktion aufgerufen wird.  
+ In diesem Codebeispiel wird gezeigt, wie in [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] eine benutzerdefinierte Skalarfunktion erstellt und gelöscht wird, die über einen <xref:System.DateTime>-Eingabeobjektparameter und einen ganzzahligen Rückgabetyp verfügt. Die benutzerdefinierte Funktion wird für die [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] -Datenbank erstellt. Im Beispiel wird die benutzerdefinierte Funktion ISOweek erstellt, die ein Datumsargument annimmt und die Nummer der ISO-Woche berechnet. Damit diese Funktion ordnungsgemäß berechnet wird, muss die DATEFIRST-Option der Datenbank auf 1 festgelegt werden, bevor die Funktion aufgerufen wird.  
   
 <!-- TODO: review snippet reference  [!CODE [SMO How to#SMO_VBUserDefFuncs1](SMO How to#SMO_VBUserDefFuncs1)]  -->  
   
 ## <a name="creating-a-scalar-user-defined-function-in-visual-c"></a>Erstellen einer benutzerdefinierten Skalarfunktion in Visual C#  
- In diesem Codebeispiel wird gezeigt, wie in <xref:System.DateTime> eine benutzerdefinierte Skalarfunktion erstellt und gelöscht wird, die über einen [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]-Eingabeobjektparameter und einen ganzzahligen Rückgabetyp verfügt. Die benutzerdefinierte Funktion wird für die [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] -Datenbank erstellt. Im Beispiel wird die folgende benutzerdefinierte Funktion erstellt. `ISOweek`. Diese Funktion nimmt ein Datumsargument an und berechnet die Nummer der ISO-Woche. Damit diese Funktion richtige Werte berechnet, muss die Datenbankoption `DATEFIRST` auf `1` festgelegt werden, bevor die Funktion aufgerufen wird.  
+ In diesem Codebeispiel wird gezeigt, wie in [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] eine benutzerdefinierte Skalarfunktion erstellt und gelöscht wird, die über einen <xref:System.DateTime>-Eingabeobjektparameter und einen ganzzahligen Rückgabetyp verfügt. Die benutzerdefinierte Funktion wird für die [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] -Datenbank erstellt. Im Beispiel wird die folgende benutzerdefinierte Funktion erstellt. `ISOweek`. Diese Funktion nimmt ein Datumsargument an und berechnet die Nummer der ISO-Woche. Damit diese Funktion richtige Werte berechnet, muss die Datenbankoption `DATEFIRST` auf `1` festgelegt werden, bevor die Funktion aufgerufen wird.  
   
 ```csharp
 {  
@@ -74,7 +73,7 @@ ms.locfileid: "72782349"
 ```  
   
 ## <a name="creating-a-scalar-user-defined-function-in-powershell"></a>Erstellen einer benutzerdefinierten Skalarfunktion in PowerShell  
- In diesem Codebeispiel wird gezeigt, wie in <xref:System.DateTime> eine benutzerdefinierte Skalarfunktion erstellt und gelöscht wird, die über einen [!INCLUDE[csprcs](../../../includes/csprcs-md.md)]-Eingabeobjektparameter und einen ganzzahligen Rückgabetyp verfügt. Die benutzerdefinierte Funktion wird für die [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] -Datenbank erstellt. Im Beispiel wird die folgende benutzerdefinierte Funktion erstellt. `ISOweek`. Diese Funktion nimmt ein Datumsargument an und berechnet die Nummer der ISO-Woche. Damit diese Funktion richtige Werte berechnet, muss die Datenbankoption `DATEFIRST` auf `1` festgelegt werden, bevor die Funktion aufgerufen wird.  
+ In diesem Codebeispiel wird gezeigt, wie in [!INCLUDE[csprcs](../../../includes/csprcs-md.md)] eine benutzerdefinierte Skalarfunktion erstellt und gelöscht wird, die über einen <xref:System.DateTime>-Eingabeobjektparameter und einen ganzzahligen Rückgabetyp verfügt. Die benutzerdefinierte Funktion wird für die [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] -Datenbank erstellt. Im Beispiel wird die folgende benutzerdefinierte Funktion erstellt. `ISOweek`. Diese Funktion nimmt ein Datumsargument an und berechnet die Nummer der ISO-Woche. Damit diese Funktion richtige Werte berechnet, muss die Datenbankoption `DATEFIRST` auf `1` festgelegt werden, bevor die Funktion aufgerufen wird.  
   
 ```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

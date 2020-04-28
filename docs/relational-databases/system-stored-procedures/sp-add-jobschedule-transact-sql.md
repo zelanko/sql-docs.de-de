@@ -18,10 +18,10 @@ ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 06dbee74cfb3e2d5e697ea9594d46c98557de8ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70810495"
 ---
 # <a name="sp_add_jobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
@@ -67,7 +67,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_type = ] frequency_type`Ein Wert, der angibt, wann der Auftrag ausgeführt werden soll. *frequency_type* ist vom Datentyp **int**und hat den Standardwert **0**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**1**|Einmalig|  
 |**4**|Täglich|  
@@ -79,7 +79,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_interval = ] frequency_interval`Der Tag, an dem der Auftrag ausgeführt wird. *frequency_interval* ist vom Datentyp **int**und hat den Standardwert 0. der Wert hängt von dem Wert *frequency_type* ab, wie in der folgenden Tabelle angegeben:  
   
-|value|Wirkung|  
+|Wert|Wirkung|  
 |-----------|------------|  
 |**1** (einmal)|*frequency_interval* wird nicht verwendet.|  
 |**4** (täglich)|Alle *frequency_interval* Tage.|  
@@ -91,7 +91,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_subday_type = ] frequency_subday_type`Gibt die Einheiten für die *frequency_subday_interval*an. *frequency_subday_type* ist vom Datentyp **int**und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
-|value|Beschreibung (Einheit)|  
+|Wert|Beschreibung (Einheit)|  
 |-----------|--------------------------|  
 |**0x1**|Zum angegebenen Zeitpunkt|  
 |**0x4**|Minuten|  
@@ -103,7 +103,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
  *frequency_relative_interval* ist vom Datentyp **int**und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
-|value|Beschreibung (Einheit)|  
+|Wert|Beschreibung (Einheit)|  
 |-----------|--------------------------|  
 |**1**|First (Erster)|  
 |**2**|Sekunde|  
@@ -170,6 +170,6 @@ EXEC msdb.dbo.sp_add_jobschedule
  [sp_update_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-update-schedule-transact-sql.md)   
  [sp_delete_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-delete-schedule-transact-sql.md)   
  [sp_help_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-schedule-transact-sql.md)   
- [sp_attach_schedule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
+ [sp_attach_schedule &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-attach-schedule-transact-sql.md)  
   
   

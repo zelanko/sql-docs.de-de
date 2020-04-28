@@ -14,10 +14,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f0d1e6e4fa9c88fc67b15a076a6c96a742fd7fdc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304820"
 ---
 # <a name="sysinternal_partitions-transact-sql"></a>sys. internal_partitions (Transact-SQL)
@@ -27,21 +27,21 @@ ms.locfileid: "72304820"
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|partition_id|**BIGINT**|Partitions-ID für diese Partition. Sie ist innerhalb einer Datenbank eindeutig.|  
+|partition_id|**bigint**|Partitions-ID für diese Partition. Sie ist innerhalb einer Datenbank eindeutig.|  
 |object_id|**int**|Objekt-ID für die Tabelle, die die Partition enthält.|  
 |index_id|**int**|Index-ID für den columnstore--Index, der in der Tabelle definiert ist.<br /><br /> 1 = gruppierter columnstore--Index<br /><br /> 2 = nicht gruppierter columnstore--Index|  
 |partition_number|**int**|Die Partitionsnummer.<br /><br /> 1 = erste Partition einer partitionierten Tabelle oder die einzelne Partition einer nicht partitionierten Tabelle.<br /><br /> 2 = zweite Partition, usw.|  
 |internal_object_type|**tinyint**|Rowsetobjekte, die interne Daten für den columnstore--Index nachverfolgen.<br /><br /> 2 = COLUMN_STORE_DELETE_BITMAP<br /><br /> 3 = COLUMN_STORE_DELTA_STORE<br /><br /> 4 = COLUMN_STORE_DELETE_BUFFER<br /><br /> 5 = COLUMN_STORE_MAPPING_INDEX|  
-|internal_object_type_desc|**nvarchar (60)**|COLUMN_STORE_DELETE_BITMAP: mit diesem Bitmapindex werden Zeilen nachverfolgt, die im columnstore als gelöscht markiert sind. Die Bitmap gilt für jede Zeilen Gruppe, da Partitionen Zeilen in mehreren Zeilen Gruppen aufweisen können. Die Zeilen sind immer noch physisch vorhanden und nehmen im columnstore Speicherplatz in Anspruch.<br /><br /> COLUMN_STORE_DELTA_STORE: speichert Gruppen von Zeilen, die als Zeilen Gruppen bezeichnet werden und nicht in Spalten Speicher komprimiert wurden. Jede Tabellen Partition kann über NULL oder mehr Delta Store-Zeilen Gruppen verfügen.<br /><br /> COLUMN_STORE_DELETE_BUFFER-für die Beibehaltung von Lösch Vorgängen in aktualisierbaren nicht gruppierten columnstore--Indizes. Wenn eine Abfrage eine Zeile aus der zugrunde liegenden rowstore-Tabelle löscht, verfolgt der DELETE-Puffer den Löschvorgang aus dem columnstore. Wenn die Anzahl der gelöschten Zeilen den Wert 1048576 überschreitet, werden Sie wieder mit dem Thread Bitmap by background tupelverschiebungsthread oder einem expliziten reorganisierungs Befehl zusammengeführt.  Zu einem beliebigen Zeitpunkt stellt die Gesamtmenge der DELETE-Bitmap und des Lösch Puffers alle gelöschten Zeilen dar.<br /><br /> COLUMN_STORE_MAPPING_INDEX nur verwendet, wenn der gruppierte columnstore--Index einen sekundären, nicht gruppierten Index aufweist. Dadurch werden nicht gruppierte Index Schlüssel der richtigen Zeilen Gruppen-und Zeilen-ID im columnstore zugeordnet. Sie speichert nur Schlüssel für Zeilen, die in eine andere Zeilen Gruppe verschoben werden. Dies tritt auf, wenn eine Delta-Zeilen Gruppe in den columnstore komprimiert wird und ein Merge-Vorgang Zeilen aus zwei verschiedenen Zeilen Gruppen zusammenführt.|  
+|internal_object_type_desc|**nvarchar(60)**|COLUMN_STORE_DELETE_BITMAP: mit diesem Bitmapindex werden Zeilen nachverfolgt, die im columnstore als gelöscht markiert sind. Die Bitmap gilt für jede Zeilen Gruppe, da Partitionen Zeilen in mehreren Zeilen Gruppen aufweisen können. Die Zeilen sind immer noch physisch vorhanden und nehmen im columnstore Speicherplatz in Anspruch.<br /><br /> COLUMN_STORE_DELTA_STORE: speichert Gruppen von Zeilen, die als Zeilen Gruppen bezeichnet werden und nicht in Spalten Speicher komprimiert wurden. Jede Tabellen Partition kann über NULL oder mehr Delta Store-Zeilen Gruppen verfügen.<br /><br /> COLUMN_STORE_DELETE_BUFFER-für die Beibehaltung von Lösch Vorgängen in aktualisierbaren nicht gruppierten columnstore--Indizes. Wenn eine Abfrage eine Zeile aus der zugrunde liegenden rowstore-Tabelle löscht, verfolgt der DELETE-Puffer den Löschvorgang aus dem columnstore. Wenn die Anzahl der gelöschten Zeilen den Wert 1048576 überschreitet, werden Sie wieder mit dem Thread Bitmap by background tupelverschiebungsthread oder einem expliziten reorganisierungs Befehl zusammengeführt.  Zu einem beliebigen Zeitpunkt stellt die Gesamtmenge der DELETE-Bitmap und des Lösch Puffers alle gelöschten Zeilen dar.<br /><br /> COLUMN_STORE_MAPPING_INDEX nur verwendet, wenn der gruppierte columnstore--Index einen sekundären, nicht gruppierten Index aufweist. Dadurch werden nicht gruppierte Index Schlüssel der richtigen Zeilen Gruppen-und Zeilen-ID im columnstore zugeordnet. Sie speichert nur Schlüssel für Zeilen, die in eine andere Zeilen Gruppe verschoben werden. Dies tritt auf, wenn eine Delta-Zeilen Gruppe in den columnstore komprimiert wird und ein Merge-Vorgang Zeilen aus zwei verschiedenen Zeilen Gruppen zusammenführt.|  
 |Row_group_id|**int**|ID für die Delta Store-Zeilen Gruppe. Jede Tabellen Partition kann über NULL oder mehr Delta Store-Zeilen Gruppen verfügen.|  
-|hobt_id|**BIGINT**|ID des internen Rowsetobjekt (-Objekt). Dies ist ein guter Schlüssel für den Beitritt zu anderen DMVs, um weitere Informationen zu den physischen Merkmalen des internen Rowsets zu erhalten.|  
-|rows|**BIGINT**|Die ungefähre Anzahl der Zeilen in dieser Partition.|  
+|hobt_id|**bigint**|ID des internen Rowsetobjekt (-Objekt). Dies ist ein guter Schlüssel für den Beitritt zu anderen DMVs, um weitere Informationen zu den physischen Merkmalen des internen Rowsets zu erhalten.|  
+|rows|**bigint**|Die ungefähre Anzahl der Zeilen in dieser Partition.|  
 |data_compression|**tinyint**|Der Komprimierungs Status für das Rowset:<br /><br /> 0 = NONE<br /><br /> 1 = ROW<br /><br /> 2 = PAGE|  
-|data_compression_desc|**nvarchar (60)**|Der Status der Komprimierung für jede Partition. Mögliche Werte für rowstore-Tabellen sind NONE, ROW und PAGE. Mögliche Werte für columnstore-Tabellen sind COLUMNSTORE und COLUMNSTORE_ARCHIVE.|  
+|data_compression_desc|**nvarchar(60)**|Der Status der Komprimierung für jede Partition. Mögliche Werte für rowstore-Tabellen sind NONE, ROW und PAGE. Mögliche Werte für columnstore-Tabellen sind COLUMNSTORE und COLUMNSTORE_ARCHIVE.|  
 |optimize_for_sequential_key|**bit**|1 = Partition verfügt über die aktivierte INSERT-Optimierung der letzten Seite.<br><br>0 = Standardwert. Bei der Partition wurde die INSERT-Optimierung der letzten Seite deaktiviert.|
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in `public` der Rolle. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Erfordert die Mitgliedschaft in der Rolle `public`.  Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]erstellt bei jedem Erstellen oder Neuerstellen eines columnstore--Indexes neue interne columnstore--Indizes neu.  
@@ -61,7 +61,7 @@ WHERE p.object_id = OBJECT_ID ( '<table name' ) ;
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Objektkatalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [FAQ: Abfragen des SQL Server-Systemkatalogs](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)  
   
   

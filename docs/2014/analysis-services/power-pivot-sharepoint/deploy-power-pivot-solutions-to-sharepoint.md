@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c91225761c76a58b81d8895698ca059014969f0f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782831"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>Bereitstellen von PowerPivot-Lösungen in SharePoint
@@ -28,17 +28,17 @@ ms.locfileid: "72782831"
   
  [Voraussetzung: überprüfen, ob die Webanwendung Authentifizierung im klassischen Modus](#bkmk_classic)  
   
- [Schritt 1: Bereitstellen der Farm Lösung](#bkmk_farm)  
+ [Schritt 1: Bereitstellen der Farmlösung](#bkmk_farm)  
   
  [Schritt 2: Bereitstellen der PowerPivot-Webanwendungslösung in der Zentraladministration](#deployCA)  
   
  [Schritt 3: Bereitstellen der PowerPivot-Webanwendungslösung auf anderen Webanwendungen](#deployUI)  
   
- [Erneutes Bereitstellen oder zurückziehen der Lösung](#retract)  
+ [Erneutes Bereitstellen oder Zurückziehen der Lösung](#retract)  
   
  [Informationen zu den PowerPivot-Lösungen](#intro)  
   
-##  <a name="bkmk_classic"></a>Voraussetzung: überprüfen, ob die Webanwendung Authentifizierung im klassischen Modus  
+##  <a name="prerequisite-verify-the-web-application-uses-classic-mode-authentication"></a><a name="bkmk_classic"></a> Voraussetzung: Überprüfen, ob die Webanwendung den klassischen Authentifizierungsmodus verwendet  
  PowerPivot für SharePoint wird nur für Webanwendungen unterstützt, die den klassischen Authentifizierungsmodus in Windows verwenden. Um zu überprüfen, ob die Anwendung den klassischen Modus verwendet, führen Sie das folgende PowerShell-Cmdlet in der **SharePoint 2010-Verwaltungsshell**aus, und ersetzen `http://<top-level site name>` Sie dabei durch den Namen Ihrer SharePoint-Website:  
   
 ```powershell
@@ -47,7 +47,7 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
  Der Rückgabewert sollte **FALSE**sein. Wenn dies der **Fall**ist, können Sie mit dieser Webanwendung nicht auf Power Pivot-Daten zugreifen.  
   
-##  <a name="bkmk_farm"></a>Schritt 1: Bereitstellen der Farm Lösung  
+##  <a name="step-1-deploy-the-farm-solution"></a><a name="bkmk_farm"></a>Schritt 1: Bereitstellen der Farm Lösung  
  In diesem Abschnitt erfahren Sie, wie Sie Lösungen mithilfe der PowerShell bereitstellen können. Sie können aber auch das PowerPivot-Konfigurationstool verwenden, um diese Aufgabe abzuschließen. Weitere Informationen finden Sie unter [konfigurieren oder reparieren PowerPivot für SharePoint 2010 &#40;Power Pivot-Konfigurationstools&#41;](../configure-repair-powerpivot-sharepoint-2010.md).  
   
  Diese Aufgabe muss nur einmal ausgeführt werden, nachdem Sie PowerPivot für SharePoint installiert haben.  
@@ -68,7 +68,7 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
     Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-##  <a name="deployCA"></a>Schritt 2: Bereitstellen der Power Pivot-Webanwendungslösung in der zentral Administration  
+##  <a name="step-2-deploy-the-powerpivot-web-application-solution-to-central-administration"></a><a name="deployCA"></a>Schritt 2: Bereitstellen der Power Pivot-Webanwendungslösung in der zentral Administration  
  Nach dem Bereitstellen der Farmlösung müssen Sie die Webanwendungslösung in der Zentraladministration bereitstellen. Durch diesen Schritt wird das PowerPivot-Management-Dashboard der Zentraladministration hinzugefügt.  
   
 1.  Öffnen Sie eine SharePoint 2010-Verwaltungsshell mithilfe der Option **Als Administrator ausführen** .  
@@ -95,7 +95,7 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
  Da Sie nun die Webanwendungslösung in der Zentraladministration bereitgestellt haben, können Sie mithilfe der Zentraladministration alle verbleibenden Konfigurationsschritte ausführen.  
   
-##  <a name="deployUI"></a>Schritt 3: Bereitstellen der Power Pivot-Webanwendungslösung in anderen Webanwendungen  
+##  <a name="step-3-deploy-the-powerpivot-web-application-solution-to-other-web-applications"></a><a name="deployUI"></a>Schritt 3: Bereitstellen der Power Pivot-Webanwendungslösung in anderen Webanwendungen  
  In der vorherigen Aufgabe haben Sie powerpivotwebapp.wsp in der Zentraladministration bereitgestellt. In diesem Abschnitt stellen Sie die Lösung "powerpivotwebapp.wsp" in jeder vorhandenen Webanwendung bereit, die PowerPivot-Datenzugriff unterstützt. Wenn Sie später weitere Webanwendungen hinzufügen, wiederholen Sie unbedingt diesen Schritt für die zusätzlichen Webanwendungen.  
   
 1.  Klicken Sie in der Zentraladministration unter Systemeinstellungen auf **Farmlösungen verwalten**.  
@@ -110,7 +110,7 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
 6.  Wiederholen Sie die Schritte für andere SharePoint-Webanwendungen, die den PowerPivot-Datenzugriff ebenfalls unterstützen.  
   
-##  <a name="retract"></a>Erneutes Bereitstellen oder zurückziehen der Lösung  
+##  <a name="redeploy-or-retract-the-solution"></a><a name="retract"></a>Erneutes Bereitstellen oder zurückziehen der Lösung  
  Obwohl in der SharePoint-Zentraladministration das Zurückziehen der Lösung möglich ist, müssen Sie die Datei powerpivotwebapp.wsp nur entfernen, wenn Sie systematisch ein Installations- oder ein Patchbereitstellungsproblem behandeln.  
   
 1.  Klicken Sie in der SharePoint 2010-Zentraladministration in Systemeinstellungen auf **Farmlösungen verwalten**.  
@@ -131,7 +131,7 @@ Get-SPWebApplication http://<top-level site name> | Format-List UseClaimsAuthent
   
 4.  Stellen Sie die PowerPivot-Webanwendungslösung erneut für alle SharePoint-Webanwendungen bereit.  
   
-##  <a name="intro"></a>Informationen zu den Power Pivot-Lösungen  
+##  <a name="about-the-powerpivot-solutions"></a><a name="intro"></a>Informationen zu den Power Pivot-Lösungen  
  PowerPivot für SharePoint verwendet zwei Lösungspakete, um Anwendungsseiten und Programmdateien für die Farm und einzelne Webanwendungen bereitzustellen.  
   
 -   Die Farmlösung ist global. Sie wird einmal bereitgestellt und ist dann für jeden neuen Server mit PowerPivot für SharePoint automatisch verfügbar, den Sie der Farm später hinzufügen.  

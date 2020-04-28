@@ -11,10 +11,10 @@ author: Jtoland
 ms.author: Jtoland
 manager: murato
 ms.openlocfilehash: d3b9dca69afecc78a680459caf03d085ef17857e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72251336"
 ---
 # <a name="sql-server-migration-assistant-for-oracle-oracletosql"></a>SQL Server Migration Assistant für Oracle (oracleto SQL)
@@ -31,5 +31,5 @@ In dieser Dokumentation werden Sie mit SSMA für Oracle eingeführt und erhalten
 |[Informationen zu den ersten Schritten mit SSMA für Oracle &#40;oracleto SQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-oracletosql.md)|Führt die Benutzeroberfläche, die Projekte und die Konfigurationsoptionen ein.|  
 |[Migrieren von Oracle-Datenbanken zu SQL Server &#40;oracleto SQL-&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)|Bietet eine Übersicht über den Konvertierungsprozess und ausführliche Informationen zu den einzelnen Schritten des Prozesses.|  
 |[Referenz zur Benutzeroberfläche &#40;oracletosql&#41;](../../ssma/oracle/user-interface-reference-oracletosql.md)|Enthält die Dokumentation zu den Dialogfeldern von SSMA für Oracle.|  
-|[Arbeiten mit der SSMA-Konsole für Oracle](working-with-ssma-for-oracle-console-oracletosql.md)|Enthält Dokumentation in der SSMA-Konsolenanwendung|  
+|[Working with SSMA for Oracle Console (Arbeiten mit der SSMA-Konsole für Oracle)](working-with-ssma-for-oracle-console-oracletosql.md)|Enthält Dokumentation in der SSMA-Konsolenanwendung|  
 |[Erhalten von SSMA für Oracle-Unterstützung](https://go.microsoft.com/fwlink/?LinkID=708538&clcid=0x409)|Bietet Informationen zum erhalten zusätzlicher Unterstützung.|  

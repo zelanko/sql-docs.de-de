@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b614a2e405501e2c41cae1add9e8e6b47d372dae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874472"
 ---
 # <a name="possible-failures-during-sessions-between-availability-replicas-sql-server"></a>Mögliche Fehler bei Sitzungen zwischen Verfügbarkeitsreplikaten (SQL Server)
@@ -59,8 +59,7 @@ ms.locfileid: "70874472"
   
 -   Die Kabel sind nicht angeschlossen.  
   
--   
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows verfügt über eine Firewall, die einen bestimmten Port blockiert.  
+-   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows verfügt über eine Firewall, die einen bestimmten Port blockiert.  
   
 -   Die Anwendung, die einen Port überwacht, erzeugt einen Fehler.  
   
@@ -69,8 +68,7 @@ ms.locfileid: "70874472"
 -   Ein Windows-Server wurde neu gestartet.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)] bietet keinen Schutz vor Problemen im Hinblick auf den Zugriff des Clients auf die Server. Nehmen wir beispielsweise an, eine öffentliche Netzwerkkarte verwaltet Clientverbindungen zum primären Replikat, während eine private Netzwerkschnittstellenkarte den Datenverkehr zwischen den Serverinstanzen verwaltet, die die Replikate einer Verfügbarkeitsgruppe hosten. Wenn in einem solchen Fall die öffentliche Netzwerkkarte ausfällt, können die Clients nicht mehr auf die Datenbanken zugreifen.  
+>  [!INCLUDE[ssHADRc](../../../includes/sshadrc-md.md)] bietet keinen Schutz vor Problemen im Hinblick auf den Zugriff des Clients auf die Server. Nehmen wir beispielsweise an, eine öffentliche Netzwerkkarte verwaltet Clientverbindungen zum primären Replikat, während eine private Netzwerkschnittstellenkarte den Datenverkehr zwischen den Serverinstanzen verwaltet, die die Replikate einer Verfügbarkeitsgruppe hosten. Wenn in einem solchen Fall die öffentliche Netzwerkkarte ausfällt, können die Clients nicht mehr auf die Datenbanken zugreifen.  
   
 ## <a name="failures-due-to-soft-errors"></a>Fehler aufgrund von Softwarefehlern  
  Die folgenden Bedingungen stellen u. a. mögliche Ursachen für Sitzungstimeouts dar:  
@@ -94,11 +92,11 @@ ms.locfileid: "70874472"
  Ungeachtet des Fehlertyps reagiert eine Serverinstanz, die einen Fehler erkennt, abhängig von ihrer Rolle, dem Verfügbarkeitsmodus der Sitzung und dem Status der anderen Verbindungen in der Sitzung. Informationen dazu, was beim Verlust eines Partners geschieht, finden Sie unter [Verfügbarkeits Modi (AlwaysOn-Verfügbarkeitsgruppen)](availability-modes-always-on-availability-groups.md).  
   
 ## <a name="related-tasks"></a>Related Tasks  
- **So ändern Sie den Timeout Wert (nur Verfügbarkeits Modus mit synchronem Commit)**  
+ **So ändern Sie den Timeoutwert (nur Verfügbarkeitsmodus mit synchronem Commit)**  
   
 -   [Ändern des Sitzungstimeouts für ein Verfügbarkeitsreplikat &#40;SQL Server&#41;](change-the-session-timeout-period-for-an-availability-replica-sql-server.md)  
   
- **So zeigen Sie den aktuellen Timeout Wert an**  
+ **So zeigen Sie den aktuellen Timeoutwert an**  
   
 -   Abfrage **session_timeout** in [sys.availability_replicas &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-availability-replicas-transact-sql).  
   

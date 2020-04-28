@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 52b4bc564c9ea8d105809a4d5225056a231ad2e7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70155003"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Verwenden des RSClientPrint-Steuerelements in benutzerdefinierten Anwendungen
@@ -42,7 +42,7 @@ ms.locfileid: "70155003"
 -   Lesen Sie sich die Themen in der Onlinedokumentation zur Bildrenderingerweiterung (EMF) durch, um Grundlegendes zum Rendern von Seiten für die Druckvorschau und -ausgabe zu erfahren.  
   
 ## <a name="rsprintclient-overview"></a>Übersicht über RSPrintClient  
- Vom Steuerelement wird ein benutzerdefiniertes Dialogfeld zum Drucken angezeigt, das die in Dialogfeldern zum Drucken üblichen Funktionen enthält. Dazu zählen Druckvorschau, Seitenauswahl zum Angeben bestimmter Seiten und Bereiche, Seitenränder und Ausrichtung. Das Steuerelement ist in eine CAB-Datei verpackt. Der Text im Dialogfeld **Drucken** ist in allen Sprachen lokalisiert, die in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt werden. **RSPrintClient** Das ActiveX-Steuerelement verwendet die imagerenderingerweiterung (EMF), um den Bericht zu drucken. Die folgenden EMF-Geräteinformationen werden verwendet: StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight und PageWidth. Andere Einstellungen für Geräteinformationen werden für Bildrendering nicht unterstützt.  
+ Vom Steuerelement wird ein benutzerdefiniertes Dialogfeld zum Drucken angezeigt, das die in Dialogfeldern zum Drucken üblichen Funktionen enthält. Dazu zählen Druckvorschau, Seitenauswahl zum Angeben bestimmter Seiten und Bereiche, Seitenränder und Ausrichtung. Das Steuerelement ist in eine CAB-Datei verpackt. Der Text im Dialogfeld **Drucken** ist in allen Sprachen lokalisiert, die in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] unterstützt werden. Das ActiveX-Steuerelement **RSPrintClient** druckt den Bericht mithilfe der Bildrenderingerweiterung (EMF). Die folgenden EMF-Geräteinformationen werden verwendet: StartPage, EndPage, MarginBottom, MarginLeft, MarginTop, MarginRight, PageHeight und PageWidth. Andere Einstellungen für Geräteinformationen werden für Bildrendering nicht unterstützt.  
   
 ### <a name="language-support"></a>Sprachunterstützung  
  Das Drucksteuerelement stellt Text in der Benutzeroberfläche in unterschiedlichen Sprachen bereit und akzeptiert Eingabewerte mit einer Kalibrierung für unterschiedliche Maßsysteme. Welches Sprach- und Maßsystem verwendet wird, wird durch die Eigenschaften **Culture** und **UICulture** bestimmt. Beide Eigenschaften akzeptieren LCID-Werte. Wenn Sie einen LCID-Wert für eine Sprache angeben, die eine Variante einer unterstützten Sprache ist, wird die Sprache verwendet, die am nächsten zu Ihrer Angabe liegt. Falls Sie einen LCID-Wert angeben, der nicht unterstützt wird und auch keine enge Übereinstimmung mit einem anderen LCID-Wert aufweist, wird Englisch (Vereinigte Staaten) verwendet.  
@@ -57,9 +57,9 @@ ms.locfileid: "70155003"
   
  Sie können erfahren, welche Werte für Seitengrößen und -ränder verwendet werden, wenn Sie mithilfe der **GetProperties**-Methode die Standardwerte abrufen:  
   
--   **PageHeight** und **PageWidth** geben die standardmäßige Seitenhöhe und-Breite an. Beim Starten des Drucksteuerelements werden diese Eigenschaftswerte zur Auswahl der nächsten verfügbaren Papiergröße für den aktuell ausgewählten Drucker verwendet. Falls der Wert für **PageWidth** größer als der Wert für **PageHeight** ist, wird die Ausrichtung auf Querformat festgelegt. Andernfalls ist sie auf Hochformat festgelegt.  
+-   Mit **PageHeight** und **PageWidth** werden die Standardseitenhöhe und -breite angegeben. Beim Starten des Drucksteuerelements werden diese Eigenschaftswerte zur Auswahl der nächsten verfügbaren Papiergröße für den aktuell ausgewählten Drucker verwendet. Falls der Wert für **PageWidth** größer als der Wert für **PageHeight** ist, wird die Ausrichtung auf Querformat festgelegt. Andernfalls ist sie auf Hochformat festgelegt.  
   
--   **LeftMargin**, **RightMargin**, **TopMargin**und **BottomMargin** werden standardmäßig auf 12,2 Millimeter festgelegt.  
+-   **LeftMargin**, **RightMargin**, **TopMargin**, und **BottomMargin** werden standardmäßig auf jeweils 12,2 mm festgelegt.  
   
  Diese Eigenschaften werden in der **Item**-Eigenschaftsauflistung auf dem Berichtsserver gespeichert. Die Werte werden bei jedem Update der Berichtsdefinition überschrieben.  
   
@@ -75,7 +75,7 @@ ms.locfileid: "70155003"
 |PageHeight|Double|RW|Berichteinstellung|Ruft die Seitenhöhe ab bzw. legt sie fest. Wird kein Wert vom Entwickler oder in der Berichtsdefinition festgelegt, wird 279,4 Millimeter als Standardwert verwendet.|  
 |Kultur|Int32|RW|Browsergebietsschema|Gibt den Gebietsschemabezeichner (LCID) an. Mit diesem Wert wird die Maßeinheit für die Benutzereingaben bestimmt. Wenn ein Benutzer beispielsweise eingibt `3`, wird der Wert in Millimetern gemessen, wenn die Sprache Französisch oder Zoll ist, wenn die Sprache Englisch (USA) ist. Zu den gültigen Werten zählen folgende: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
 |UICulture|String|RW|Clientkultur|Gibt die Zeichenfolgenlokalisierung des Dialogfelds an. Der Text im Dialogfeld Drucken ist in folgende Sprachen lokalisiert: Vereinfachtes Chinesisch, Traditionelles Chinesisch, Englisch, Französisch, Deutsch, Italienisch, Japanisch, Koreanisch und Spanisch. Zu den gültigen Werten zählen folgende: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
-|Authentifizieren|Boolean|RW|False|Gibt an, ob das Steuerelement einen GET-Befehl für den Berichtsserver ausgibt, um eine Verbindung für das Drucken außerhalb der Sitzung zu initiieren.|  
+|Authentifizieren|Boolesch|RW|False|Gibt an, ob das Steuerelement einen GET-Befehl für den Berichtsserver ausgibt, um eine Verbindung für das Drucken außerhalb der Sitzung zu initiieren.|  
   
 ### <a name="when-to-set-the-authenticate-property"></a>Festlegen der Authenticate-Eigenschaft  
  Wenn Sie von einer Browsersitzung heraus drucken, muss die `Authenticate`-Eigenschaft nicht festgelegt werden. Im Kontext einer aktiven Sitzung werden alle Anforderungen vom Drucksteuerelement an den Berichtsserver über den Browser verarbeitet. Der Browser legt die für die Kommunikation mit dem Berichtsserver erforderlichen Sitzungsvariablen fest.  
@@ -104,9 +104,9 @@ ms.locfileid: "70155003"
   
 |Argument|E/A|type|BESCHREIBUNG|  
 |--------------|----------|----------|-----------------|  
-|ServerPath|In|String|Gibt das virtuelle Verzeichnis des Berichts Servers an (z https://adventure-works/reportserver). b..|  
-|ReportPathParameters|In|String|Gibt den vollständigen Namen zum Bericht im Ordnernamespace des Berichtsservers einschließlich Parameter an. Berichte werden über den URL-Zugriff abgerufen. Beispiel: "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
-|ReportName|In|String|Der kurze Name des Berichts (im Beispiel oben lautet der kurze Name Employee Sales Summary). Dieser Name wird im Dialogfeld Drucken und in der Druckerwarteschlange angezeigt.|  
+|ServerPath|Geben Sie in|String|Gibt das virtuelle Verzeichnis des Berichts Servers an (z https://adventure-works/reportserver). b..|  
+|ReportPathParameters|Geben Sie in|String|Gibt den vollständigen Namen zum Bericht im Ordnernamespace des Berichtsservers einschließlich Parameter an. Berichte werden über den URL-Zugriff abgerufen. Beispiel: "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
+|ReportName|Geben Sie in|String|Der kurze Name des Berichts (im Beispiel oben lautet der kurze Name Employee Sales Summary). Dieser Name wird im Dialogfeld Drucken und in der Druckerwarteschlange angezeigt.|  
   
 ### <a name="example"></a>Beispiel  
  Im folgenden HTML-Beispiel wird das Angeben der CAB-Datei, der **Print**-Methode und der Eigenschaften in JavaScript angezeigt:  
@@ -142,7 +142,7 @@ ms.locfileid: "70155003"
  `</BODY>`  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Drucken von Berichten in einem Browser mit dem Drucksteuerelement (Berichts-Generator und SSRS)](../../report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
+ [Drucken von Berichten in einem Browser mit dem Druck Steuerelement &#40;Berichts-Generator und SSRS&#41;](../../report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
  [Drucken von Berichten &#40;Berichts-Generator und SSRS&#41;](../../report-builder/print-reports-report-builder-and-ssrs.md)   
  [Geräteinformationseinstellungen für Bilder](../../image-device-information-settings.md)  
   

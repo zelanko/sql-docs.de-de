@@ -16,10 +16,10 @@ ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1f7f75d37762f5e6df971f3139eea118c6a3fdf2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72689049"
 ---
 # <a name="sp_helppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
@@ -53,7 +53,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |pubid|**int**|ID für die Veröffentlichung.|  
-|name|**sysname**|Name der Veröffentlichung.|  
+|Name|**sysname**|Name der Veröffentlichung.|  
 |restricted|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |status|**tinyint**|Der aktuelle Status der Veröffentlichung.<br /><br /> **0** = inaktiv.<br /><br /> **1** = aktiv.|  
 |task||Dieser Parameter wird aus Gründen der Abwärtskompatibilität verwendet.|  
@@ -86,9 +86,9 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |allow_subscription_copy|**bit**|Gibt an, ob die Möglichkeit zum Kopieren der Abonnementdatenbanken aktiviert wurde, die diese Veröffentlichung abonniert haben. **0** bedeutet, dass das Kopieren nicht zulässig ist.|  
 |centralized_conflicts|**bit**|Gibt an, ob Konfliktdatensätze auf dem Verleger gespeichert werden:<br /><br /> **0** = Konflikt Datensätze werden sowohl auf dem Verleger als auch auf dem Abonnenten gespeichert, der den Konflikt verursacht hat.<br /><br /> **1** = Konflikt Datensätze werden auf dem Verleger gespeichert.|  
 |conflict_retention|**int**|Gibt die Konfliktaufbewahrungsdauer in Tagen an.|  
-|conflict_policy|**int**|Gibt die Richtlinie zur Konfliktlösung an, die für die Option zur verzögerten Aktualisierung über eine Warteschlange verwendet wird. Kann einen der folgenden Werte aufweisen:<br /><br /> **1** = der Verleger gewinnt den Konflikt.<br /><br /> **2** = Abonnent gewinnt den Konflikt.<br /><br /> **3** = das Abonnement wird erneut initialisiert.|  
-|queue_type||Gibt an, welcher Wartenschlangentyp verwendet wird. Kann einen der folgenden Werte aufweisen:<br /><br /> **MSMQ** = verwendet [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing, um Transaktionen zu speichern.<br /><br /> **SQL** = wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Speichern von Transaktionen verwendet.<br /><br /> Hinweis: die Unterstützung für Message Queuing wurde eingestellt.|  
-|backward_comp_level||Der Datenbank-Kompatibilitätsgrad. Folgende Werte sind möglich:<br /><br /> **** =  90[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **** =  100[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+|conflict_policy|**int**|Gibt die Richtlinie zur Konfliktlösung an, die für die Option zur verzögerten Aktualisierung über eine Warteschlange verwendet wird. Einer der folgenden Werte ist möglich:<br /><br /> **1** = der Verleger gewinnt den Konflikt.<br /><br /> **2** = Abonnent gewinnt den Konflikt.<br /><br /> **3** = das Abonnement wird erneut initialisiert.|  
+|queue_type||Gibt an, welcher Wartenschlangentyp verwendet wird. Einer der folgenden Werte ist möglich:<br /><br /> **MSMQ** = verwendet [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing, um Transaktionen zu speichern.<br /><br /> **SQL** = wird [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] zum Speichern von Transaktionen verwendet.<br /><br /> Hinweis: die Unterstützung für Message Queuing wurde eingestellt.|  
+|backward_comp_level||Der Datenbank-Kompatibilitätsgrad. Folgende Werte sind möglich:<br /><br /> **90** =  90[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** =  100[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_AD|**bit**|Gibt an, ob die Veröffentlichung in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory veröffentlicht wird. Der Wert **1** gibt an, dass Sie veröffentlicht wird, und der Wert **0** gibt an, dass Sie nicht veröffentlicht wird.|  
 |allow_initialize_from_backup|**bit**|Gibt an, ob Abonnenten ein Abonnement für diese Veröffentlichung über eine Sicherung anstelle einer Anfangsmomentaufnahme initialisieren können. **1** bedeutet, dass Abonnements aus einer Sicherung initialisiert werden können, und **0** bedeutet, dass Sie nicht möglich sind. Weitere Informationen finden Sie unter [Initialisieren eines Transaktions Abonnements ohne Momentaufnahme](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) einen Transaktions Abonnenten ohne Momentaufnahme.|  
 |replicate_ddl|**int**|Gibt an, ob die Schema Replikation für die Veröffentlichung unterstützt wird. **1** gibt an, dass DDL-Anweisungen (Data Definition Language), die auf dem Verleger ausgeführt werden, repliziert werden, und **0** bedeutet, dass DDL-Anweisungen nicht repliziert werden Weitere Informationen finden Sie unter [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).|  

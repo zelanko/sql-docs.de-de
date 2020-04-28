@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4fec86c0f732a4f47d3132be51226b877c428d5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72782761"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Abfrageausdrücke und eindeutige Ressourcennamen
@@ -63,21 +63,21 @@ ms.locfileid: "72782761"
  Geben Sie z.B. „Server“ für die **ServerCollection** -Klasse und „Database“ für die **DatabaseCollection** -Klasse an.  
   
  \@*PropertyName*  
- Gibt den Namen einer Eigenschaft der Klasse an, die mit dem in *Object*angegebenen Objekt verknüpft ist. Dem Namen der Eigenschaft muss das Zeichen \@ vorangestellt werden. Geben Sie z. B. \@IsAnsiNull für die **Database**-Klasseneigenschaft **IsAnsiNull** an.  
+ Gibt den Namen einer Eigenschaft der Klasse an, die mit dem in *Object*angegebenen Objekt verknüpft ist. Dem Namen der Eigenschaft muss das Zeichen \@ vorangestellt werden. Geben \@Sie z. b. isansinull für die **Datenbank** -Klassen Eigenschaft **isansinull**an.  
   
- \@*BooleanPropertyName*=true()  
+ \@*Booleanpropertyname*= true ()  
  Listet alle Objekte auf, bei denen die angegebene boolesche Eigenschaft auf TRUE gesetzt ist.  
   
- \@*BooleanPropertyName*=false()  
+ \@*Booleanpropertyname*= false ()  
  Listet alle Objekte auf, bei denen die angegebene boolesche Eigenschaft auf FALSE gesetzt ist.  
   
  contains(\@*StringPropertyName*, '*PatternString*')  
  Listet alle Objekte auf, bei denen die angegebene Zeichenfolgeneigenschaft mindestens ein Vorkommen des Zeichensatzes enthält, der in '*PatternString*' angegeben ist.  
   
- \@*StringPropertyName*='*PatternString*'  
+ \@*Stringpropertyname*= '*patternstring*'  
  Listet alle Objekte auf, bei denen der Wert der angegebenen Zeichenfolgeneigenschaft mit dem Zeichenmuster identisch ist, das in '*PatternString*' angegeben ist.  
   
- \@*DatePropertyName*= datetime('*DateString*')  
+ \@*Datepropertyname*= DateTime ('*DateString*')  
  Listet alle Objekte auf, bei denen der Wert der angegebenen Datumseigenschaft mit dem in '*DateString*' angegebenen Datum übereinstimmt. *DateString* muss dem Format „yyyy-mm-dd hh:mi:ss.mmm“ entsprechen.  
   
 |||  
@@ -103,7 +103,7 @@ ms.locfileid: "72782761"
   
  Abfrageausdrücke müssen mit einem absoluten Verweis auf das Serverobjekt beginnen. Relative Ausdrücke mit einem vorangestellten Schrägstrich (/) sind nicht zulässig. Die Sequenz der Objekte, die in einem Abfrageausdruck angegeben sind, muss der Hierarchie der Auflistungsobjekte im zugeordneten Objektmodell entsprechen. Ein Abfrageausdruck beispielsweise, der auf Objekte im Microsoft.SqlServer.Management.Smo-Namespace verweist, muss mit einem Serverknoten beginnen, gefolgt von einem Datenbankknoten usw.  
   
- Wenn für ein Objekt kein Wert für *\<<FilterExpression* angegeben wird, werden alle Objekte an diesem Knoten aufgelistet.  
+ Wenn ein * \<Filter Expression->* für ein Objekt nicht angegeben ist, werden alle Objekte an diesem Knoten aufgelistet.  
   
 ## <a name="uniform-resource-names-urn"></a>Uniform Resource Name (URN)  
  URNs sind eine Teilmenge von Abfrageausdrücken. Jeder URN bildet einen voll qualifizierten Verweis auf ein einzelnes Objekt. Ein typischer URN verwendet die Eigenschaft Name, um ein einzelnes Objekt an jedem Knoten zu identifizieren. Zum Beispiel verweist dieser URN auf eine bestimmte Spalte:  
@@ -135,7 +135,7 @@ Server[@Name='MYCOMPUTER']/Database[@CaseSensitive=false() and contains(@Name, '
 Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[not(@Schema='Production') and contains(@Name, 'History')]  
 ```  
   
-### <a name="d-not-supplying-a-filter-expression-for-the-final-node"></a>D: Keine Angabe eines Filterausdrucks für den abschließenden Knoten  
+### <a name="d-not-supplying-a-filter-expression-for-the-final-node"></a>D. Keine Angabe eines Filterausdrucks für den abschließenden Knoten  
  Dieser Abfrageausdruck listet alle Spalten in der **AdventureWorks2012.Sales.SalesPerson** -Tabelle auf:  
   
 ```  
@@ -157,5 +157,5 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012"]/Table[Not(is_nul
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Invoke-PolicyEvaluation-Cmdlet](../database-engine/invoke-policyevaluation-cmdlet.md)   
+ [Cmdlet "Aufruf-PolicyEvaluation"](../database-engine/invoke-policyevaluation-cmdlet.md)   
  [SQL Server Audit &#40;Datenbank-Engine&#41;](../relational-databases/security/auditing/sql-server-audit-database-engine.md)  

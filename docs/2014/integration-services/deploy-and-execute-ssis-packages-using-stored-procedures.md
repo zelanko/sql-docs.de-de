@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8cc6c9a2961696512c69f9c3e9de6d229eabb509
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72251317"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>Bereitstellen und Ausführen von SSIS-Paketen mithilfe von gespeicherten Prozeduren
@@ -30,7 +30,7 @@ ms.locfileid: "72251317"
 > 3.  Legen Sie nach Bedarf Parameterwerte, Verbindungs-Manager-Eigenschaften und Optionen auf der Registerkarte **Erweitert** fest, zum Beispiel den Protokolliergrad.  
 > 
 >      Weitere Informationen zu Protokolliergraden finden Sie unter [Enable Logging for Package Execution on the SSIS Server](../../2014/integration-services/enable-logging-for-package-execution-on-the-ssis-server.md).  
-> 4.  Bevor Sie auf **OK** klicken, um das Paket auszuführen, klicken Sie auf **Skript**. Die Transact-SQL-Anweisung wird in einem Fenster des Abfrage-Editors in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] angezeigt.  
+> 4.  Bevor Sie auf **OK** klicken, um das Paket auszuführen, klicken Sie auf **Skript**. Die Transact-SQL-Anweisung wird in einem Fenster des Abfrage-Editors in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]angezeigt.  
   
 ## <a name="to-deploy-and-execute-a-package-using-stored-procedures"></a>So stellen Sie ein Paket mit gespeicherten Prozeduren bereit und führen es aus  
   
@@ -99,7 +99,7 @@ ms.locfileid: "72251317"
   
      Legen Sie auf der Seite **Serveroptionen** des Dialogfelds **Eigenschaften des Verbindungsservers** die Optionen **RPC** und **RPC-Ausgabe** auf **True**fest. Legen Sie außerdem **Höherstufung von verteilten Transaktionen für RPC aktivieren** auf **False**fest.  
   
--   Aktivieren Sie dynamische Parameter für den Anbieter, den Sie für den Verbindungsserver ausgewählt haben, indem Sie im Objekt-Explorer unter **Verbindungsserver** den Knoten **Anbieter** erweitern, mit der rechten Maustaste auf den Anbieter klicken und dann auf **Eigenschaften** klicken. Wählen Sie **Aktivieren** neben **Dynamischer Parameter**aus.  
+-   Aktivieren Sie dynamische Parameter für den Anbieter, den Sie für den Verbindungsserver ausgewählt haben, indem Sie im Objekt-Explorer unter **Verbindungsserver** den Knoten **Anbieter** erweitern, mit der rechten Maustaste auf den Anbieter klicken und dann auf **Eigenschaften**klicken. Wählen Sie **Aktivieren** neben **Dynamischer Parameter**aus.  
   
 -   Überprüfen Sie, ob der Distributed Transaction Coordinator (DTC) auf beiden Servern gestartet ist.  
   

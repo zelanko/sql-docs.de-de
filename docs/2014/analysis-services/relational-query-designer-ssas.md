@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d9d3ea17d614a9c5cff48c35ae1864f1672bf8bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72251220"
 ---
 # <a name="relational-query-designer-ssas"></a>Relationaler Abfrage-Designer (SSAS)
@@ -38,8 +38,7 @@ ms.locfileid: "72251220"
  Der grafische Abfrage-Designer ist in drei Bereiche aufgeteilt. Abhängig davon, ob die Abfrage Tabellen/Sichten oder gespeicherte Prozeduren/Tabellenwertfunktionen verwendet, ändert sich das Layout des Abfrage-Designers.  
   
 > [!NOTE]  
->  
-  [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] unterstützt keine gespeicherten Prozeduren oder Tabellenwertfunktionen.  
+>  [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] unterstützt keine gespeicherten Prozeduren oder Tabellenwertfunktionen.  
   
  Die folgende Abbildung zeigt den grafischen Abfrage-Designer, wenn er mit Tabellen oder Sichten verwendet wird.  
   
@@ -53,26 +52,26 @@ ms.locfileid: "72251220"
   
 |Bereich|Funktion|  
 |----------|--------------|  
-|[Daten Bank Sicht](#DatabaseView)|Zeigt eine hierarchische Sicht von Tabellen, Sichten, gespeicherten Prozeduren und Tabellenwertfunktionen an, die nach Datenbankschema angeordnet sind.|  
+|[Datenbanksicht](#DatabaseView)|Zeigt eine hierarchische Sicht von Tabellen, Sichten, gespeicherten Prozeduren und Tabellenwertfunktionen an, die nach Datenbankschema angeordnet sind.|  
 |[Ausgewählte Felder](#SelectedFields)|Zeigt die Liste der Datenbankfeldnamen von den ausgewählten Elementen im Bereich Datenbanksicht an. Diese Felder werden zur Feldauflistung für das Dataset.|  
 |[Funktionsparameter](#FunctionParameters)|Zeigt die Liste der Eingabeparameter für gespeicherte Prozeduren oder Tabellenwertfunktionen im Bereich Datenbanksicht an.|  
 |[Beziehungen](#Relationships)|Zeigt eine Liste von Beziehungen an, die aus ausgewählten Feldern für Tabellen oder Sichten im Bereich "Datenbanksicht" abgeleitet werden, oder zeigt manuell erstellte Beziehungen an.|  
 |[Angewendete Filter](#AppliedFilters)|Zeigt eine Liste von Feldern und Filterkriterien für Tabellen oder Sichten in der Datenbanksicht an.|  
 |[Abfrageergebnisse](#QueryResults)|Zeigt Beispieldaten für das Resultset für die automatisch generierte Abfrage an.|  
   
-###  <a name="DatabaseView"></a>Bereich Daten Bank Sicht  
+###  <a name="database-view-pane"></a><a name="DatabaseView"></a> Bereich Datenbanksicht  
  Im Bereich Datenbanksicht werden die Metadaten für Datenbankobjekte angezeigt, zu deren Anzeige Sie berechtigt sind. Diese Berechtigung wird von der Datenquellenverbindung und den Anmeldeinformationen bestimmt. In der hierarchischen Sicht werden Datenbankobjekte nach Datenbankschema angeordnet angezeigt. Erweitern Sie den Knoten für jedes Schema, um Tabellen, Sichten, gespeicherte Prozeduren und Tabellenwertfunktionen anzuzeigen. Erweitern Sie die Tabelle oder Sicht, um die einzelnen Spalten anzuzeigen.  
   
-###  <a name="SelectedFields"></a>Bereich "ausgewählte Felder"  
+###  <a name="selected-fields-pane"></a><a name="SelectedFields"></a>Bereich "ausgewählte Felder"  
  Der Bereich "Ausgewählte Felder" zeigt die Felder im Dataset und die Gruppen und Aggregate an, die in die Abfrage eingeschlossen werden sollen.  
   
  Die folgenden Optionen werden angezeigt:  
   
--   **Ausgewählte Felder** Zeigt die Datenbankfelder an, die Sie für Tabellen oder Sichten auswählen, oder die Eingabeparameter für gespeicherte Prozeduren oder Tabellenwert Funktionen. Die Felder, die in diesem Bereich angezeigt werden, werden zur Feldauflistung für das Dataset.  
+-   **Ausgewählte Felder** zeigt die Datenbankfelder an, die Sie für Tabellen oder Sichten auswählen, oder die Eingabeparameter für gespeicherte Prozeduren oder Tabellenwertfunktionen. Die Felder, die in diesem Bereich angezeigt werden, werden zur Feldauflistung für das Dataset.  
   
      Verwenden Sie den Berichtsdatenbereich, um die Feldauflistung für ein Dataset anzuzeigen.  
   
--   **Gruppieren und Aggregieren** Schaltet die Verwendung von Gruppierung und Aggregaten in der Abfrage um. Wenn Sie die Funktion zum Gruppieren und Aggregieren deaktivieren, nachdem Sie die Gruppierung und Aggregate hinzugefügt haben, werden sie entfernt. Der Text **(keine)** gibt an, dass Gruppierung und Aggregate nicht verwendet werden. Wenn Sie die Funktion zum Gruppieren und aggregieren wieder aktivieren, werden die vorherige Gruppierung und die vorherigen Aggregate wiederhergestellt.  
+-   **Gruppieren und aggregieren:** Schaltet die Verwendung der Gruppierung und von Aggregaten in der Abfrage um. Wenn Sie die Funktion zum Gruppieren und Aggregieren deaktivieren, nachdem Sie die Gruppierung und Aggregate hinzugefügt haben, werden sie entfernt. Der Text **(keine)** gibt an, dass Gruppierung und Aggregate nicht verwendet werden. Wenn Sie die Funktion zum Gruppieren und aggregieren wieder aktivieren, werden die vorherige Gruppierung und die vorherigen Aggregate wiederhergestellt.  
   
 -   **Feld löschen** Löscht das ausgewählte Feld.  
   
@@ -90,7 +89,7 @@ ms.locfileid: "72251220"
 |Aggregat|BESCHREIBUNG|  
 |---------------|-----------------|  
 |Avg|Gibt den Mittelwert der Werte in einer Gruppe zurück. Implementiert das SQL AVG-Aggregat.|  
-|Count|Gibt die Anzahl von Elementen in einer Gruppe zurück. Implementiert das SQL COUNT-Aggregat.|  
+|Anzahl|Gibt die Anzahl von Elementen in einer Gruppe zurück. Implementiert das SQL COUNT-Aggregat.|  
 |Count Big|Gibt die Anzahl von Elementen in einer Gruppe zurück. Es ist das SQL COUNT_BIG-Aggregat. Der Unterschied zwischen COUNT und COUNT_BIG ist, dass COUNT_BIG immer einen `bigint`-Datentypwert zurückgibt.|  
 |Min|Gibt den kleinsten Wert in einer Gruppe zurück. Implementiert das SQL MIN-Aggregat.|  
 |Max|Gibt den größten Wert in einer Gruppe zurück. Implementiert das SQL MAX-Aggregat.|  
@@ -108,24 +107,24 @@ ms.locfileid: "72251220"
 |Var Distinct|Gibt eindeutige statistische Varianzen zurück. Implementiert eine Kombination des VAR-Aggregats und des DISTINCT-Schlüsselworts.|  
 |VarP Distinct|Gibt eindeutige statistische Varianzen zurück. Implementiert eine Kombination des VARP-Aggregats und des DISTINCT-Schlüsselworts.|  
   
-###  <a name="FunctionParameters"></a>Funktionsparameter Bereich  
+###  <a name="function-parameters-pane"></a><a name="FunctionParameters"></a>Funktionsparameter Bereich  
  Der Bereich Funktionsparameter zeigt die Parameter für eine gespeicherte Prozedur oder Tabellenwertfunktion an. Die folgenden Spalten werden angezeigt:  
   
--   **Parameter Name** Zeigt den Namen des Parameters an, der von der gespeicherten Prozedur oder Tabellenwert Funktion definiert wird.  
+-   **Parametername** zeigt den Namen des Parameters an, der von der gespeicherten Prozedur oder Tabellenwertfunktion definiert wird.  
   
--   **Wert** Ein Wert, der für den-Parameter verwendet werden soll, wenn die Abfrage ausgeführt wird, um Daten abzurufen, die zur Entwurfszeit im Bereich Abfrageergebnisse angezeigt werden sollen. Dieser Wert wird zur Laufzeit nicht verwendet.  
+-   **Wert** Ein Wert, der für den Parameter verwendet werden soll, wenn die Abfrage zur Laufzeit ausgeführt wird, um Daten abzurufen, die im Bereich Abfrageergebnisse angezeigt werden sollen. Dieser Wert wird zur Laufzeit nicht verwendet.  
   
-###  <a name="Relationships"></a>Beziehungs Bereich  
+###  <a name="relationships-pane"></a><a name="Relationships"></a>Beziehungs Bereich  
  Im Bereich "Beziehungen" werden die Joinbeziehungen angezeigt. Die Beziehungen können automatisch von den Fremdschlüsseleinschränkungen erkannt werden, die aus den Datenbankmetadaten abgerufen werden, oder Sie können diese manuell erstellen.  
   
  Die folgenden Optionen werden angezeigt:  
   
--   **Automatisch erkennen** Schaltet die Funktion zur automatischen Erkennung um, die automatisch Beziehungen zwischen Tabellen erstellt. Wenn die automatische Erkennung aktiviert ist, erstellt der Abfrage-Designer Beziehungen aus Fremdschlüsseln in Tabellen; andernfalls müssen Sie die Beziehungen manuell erstellen. Wenn Sie Tabellen im Bereich **Datenbanksicht** auswählen, versucht die Funktion zur automatischen Erkennung automatisch, Beziehungen zu erstellen. Wenn Sie die Funktion zur automatischen Erkennung aktivieren, nachdem Sie manuell Joins erstellt haben, werden diese Joins verworfen.  
+-   **Automatische Erkennung** schaltet das Feature zur automatischen Erkennung um, die Beziehungen zwischen Tabellen automatisch erstellt. Wenn die automatische Erkennung aktiviert ist, erstellt der Abfrage-Designer Beziehungen aus Fremdschlüsseln in Tabellen; andernfalls müssen Sie die Beziehungen manuell erstellen. Wenn Sie Tabellen im Bereich **Datenbanksicht** auswählen, versucht die Funktion zur automatischen Erkennung automatisch, Beziehungen zu erstellen. Wenn Sie die Funktion zur automatischen Erkennung aktivieren, nachdem Sie manuell Joins erstellt haben, werden diese Joins verworfen.  
   
     > [!IMPORTANT]  
     >  Bei der Verwendung mit [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] werden die zum Erstellen von Joins benötigten Metadaten nicht bereitgestellt, und Beziehungen können nicht automatisch erkannt werden. Wenn die Abfrage Daten aus [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]abruft, müssen alle Tabellenjoins manuell erstellt werden.  
   
--   **Beziehung hinzufügen** Fügt der **Beziehungs** Liste eine Beziehung hinzu.  
+-   **Beziehung hinzufügen** Fügt der Liste **Beziehung** eine Beziehung hinzu.  
   
      Wenn die automatische Erkennung aktiviert ist, werden die Tabellen, von denen Spalten in der Abfrage verwendet werden, automatisch der Liste **Beziehung** hinzugefügt. Wenn die automatische Erkennung feststellt, dass zwei Tabellen verknüpft sind, wird der Spalte **Linke Tabelle** eine Tabelle und der Spalte **Rechte Tabelle** die andere Tabelle hinzugefügt, und zwischen ihnen wird ein innerer Join erstellt. Jede Beziehung generiert eine JOIN-Klausel in der Abfrage. Wenn die Tabellen nicht verknüpft sind, werden alle Tabellen in der Spalte **Linke Tabelle** aufgelistet, und die Spalte **Jointyp** gibt an, dass die Tabellen nicht mit anderen Tabellen verknüpft sind. Wenn die Funktion zur automatischen Erkennung aktiviert ist, können Sie manuell keine Beziehungen zwischen Tabellen hinzufügen, die von der automatischen Erkennung als nicht verknüpft erkannt wurden.  
   
@@ -137,36 +136,36 @@ ms.locfileid: "72251220"
   
      Wenn von einer vorangehenden Beziehung auf beide Tabellen in einer Beziehung verwiesen wird, generiert die Beziehung keine separate Joinklausel; stattdessen wird der für die vorangehende Beziehung generierten Joinklausel eine Joinbedingung hinzugefügt. Der Jointyp wird von der vorangehenden Beziehung abgeleitet, von der auf die gleichen Tabellen verwiesen wurde.  
   
--   **Felder bearbeiten** Öffnet das Dialogfeld verknüpfte **Felder bearbeiten** , in dem Sie Beziehungen zwischen Tabellen hinzufügen und ändern. Sie haben ausgewählt, dass die Felder in der rechten und linken Tabelle verknüpft werden sollen. Sie können mehrere Felder aus der linken Tabelle und aus der rechten Tabelle verknüpfen, um mehrere Joinbedingungen in einer Beziehung anzugeben. Die beiden Felder, die die linken und rechten Tabellen verknüpfen, müssen nicht über den gleichen Namen verfügen. Der Datentyp der verknüpften Felder muss kompatible Datentypen haben.  
+-   **Felder bearbeiten** Öffnet das Dialogfeld **Verknüpfte Felder bearbeiten** , in dem Sie Beziehungen zwischen Tabellen hinzufügen und ändern. Sie haben ausgewählt, dass die Felder in der rechten und linken Tabelle verknüpft werden sollen. Sie können mehrere Felder aus der linken Tabelle und aus der rechten Tabelle verknüpfen, um mehrere Joinbedingungen in einer Beziehung anzugeben. Die beiden Felder, die die linken und rechten Tabellen verknüpfen, müssen nicht über den gleichen Namen verfügen. Der Datentyp der verknüpften Felder muss kompatible Datentypen haben.  
   
--   **Beziehung löschen**  Löscht die ausgewählte Beziehung **.**  
+-   **Beziehung löschen:**  Löscht die ausgewählte Beziehung **.**  
   
--   Nach **oben** und **nach unten** verschiebt Beziehungen in der **Beziehungs** Liste nach oben oder unten. Die Reihenfolge, in der Beziehungen in die Abfrage eingefügt werden, kann sich auf die Abfrageergebnisse auswirken. Die Beziehungen werden der Abfrage in der Reihenfolge hinzugefügt, in der sie in der Liste **Beziehung** angezeigt werden.  
+-   **Nach oben** und **Nach oben** Verschiebt Beziehungen in der Liste **Beziehung** nach oben oder nach unten. Die Reihenfolge, in der Beziehungen in die Abfrage eingefügt werden, kann sich auf die Abfrageergebnisse auswirken. Die Beziehungen werden der Abfrage in der Reihenfolge hinzugefügt, in der sie in der Liste **Beziehung** angezeigt werden.  
   
  Die folgenden Spalten werden angezeigt:  
   
--   **Linke Tabelle** Zeigt den Namen der ersten Tabelle an, die Teil einer Joinbeziehung ist.  
+-   **Linke Tabelle** Zeigt den Namen der ersten Tabelle an, die ein Teil einer Joinbeziehung ist.  
   
--   **Jointyp** Zeigt den Typ der SQL JOIN-Anweisung an, die in der automatisch generierten Abfrage verwendet wird. Wenn eine Fremdschlüsseleinschränkung erkannt wird, wird standardmäßig INNER JOIN verwendet. Andere Jointypen können LEFT JOIN oder RIGHT JOIN sein. Wenn keiner dieser Jointypen zutrifft, wird in der Spalte **Jointyp****Nicht verbunden**angezeigt. Für nicht verknüpfte Tabellen werden keine CROSS JOIN-Joins erstellt; stattdessen müssen Sie Beziehungen manuell erstellen, indem Sie Spalten in der linken und rechten Tabelle verknüpfen. Weitere Informationen zu JOINs finden Sie unter den JOIN-Grundlagen in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?LinkId=141687) on msdn.microsoft.com.  
+-   **Jointyp** Zeigt den Typ der SQL-Anweisung JOIN an, die in der automatisch generierten Abfrage verwendet wird. Wenn eine Fremdschlüsseleinschränkung erkannt wird, wird standardmäßig INNER JOIN verwendet. Andere Jointypen können LEFT JOIN oder RIGHT JOIN sein. Wenn keiner dieser Jointypen zutrifft, wird in der Spalte **Jointyp****Nicht verbunden**angezeigt. Für nicht verknüpfte Tabellen werden keine CROSS JOIN-Joins erstellt; stattdessen müssen Sie Beziehungen manuell erstellen, indem Sie Spalten in der linken und rechten Tabelle verknüpfen. Weitere Informationen zu JOINs finden Sie unter den JOIN-Grundlagen in der [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Books Online](https://go.microsoft.com/fwlink/?LinkId=141687) on msdn.microsoft.com.  
   
 -   **Rechte Tabelle** Zeigt den Namen der zweiten Tabelle in der Joinbeziehung an.  
   
--   **Joinfelder** Listet die Paare von verknüpften Feldern auf. Wenn eine Beziehung mehrere Joinbedingungen hat, werden die Paare von verknüpften Feldern durch Kommas (,) getrennt.  
+-   **Joinfelder** listet Paare von verknüpften Felder auf. Wenn eine Beziehung mehrere Joinbedingungen umfasst, werden die Joinfelderpaare durch Kommas (,) getrennt.  
   
-###  <a name="AppliedFilters"></a>Bereich angewendete Filter  
+###  <a name="applied-filters-pane"></a><a name="AppliedFilters"></a>Bereich angewendete Filter  
  Im Bereich "Angewendete Filter" werden die Kriterien angezeigt, mit denen die Anzahl von Datenzeilen begrenzt wird, die zur Laufzeit abgerufen werden. In diesem Bereich angegebene Kriterien werden verwendet, um eine SQL-WHERE-Klausel zu generieren. Wenn Sie die Parameteroption auswählen, wird automatisch ein Parameter erstellt.  
   
  Die folgenden Spalten werden angezeigt:  
   
--   **Feldname** Zeigt den Namen des Felds an, auf das die Kriterien angewendet werden sollen.  
+-   **Feldname** Zeigt den Namen des Felds an, für das die Kriterien angewendet werden sollen.  
   
--   **Operator** Zeigt den Vorgang an, der im Filter Ausdruck verwendet werden soll.  
+-   **Operator** Zeigt den Vorgang an, der im Filterausdruck verwendet werden soll.  
   
--   **Wert** Zeigt den Wert an, der im Filter Ausdruck verwendet werden soll.  
+-   **Wert** Zeigt den Wert an, der im Filterausdruck verwendet werden soll.  
   
--   **Parameter** Zeigt die Option an, um der Abfrage einen Abfrage Parameter hinzuzufügen.  
+-   **Parameter** Zeigt die Option an, mit der ein Abfrageparameter der Abfrage hinzugefügt werden kann.  
   
-###  <a name="QueryResults"></a>Abfrageergebnis Bereich  
+###  <a name="query-results-pane"></a><a name="QueryResults"></a> Bereich Abfrageergebnisse  
  Im Bereich Abfrageergebnisse werden die Ergebnisse für die automatisch generierte Abfrage angezeigt, die mit den Auswahlen in den anderen Bereichen angegeben wird. Die Spalten im Resultset entsprechen den Feldern, die Sie im Bereich Ausgewählte Felder angeben. Die Zeilendaten werden mit den Filtern begrenzt, die Sie im Bereich Angewendete Filter angeben.  
   
  Diese Daten stellen Werte aus der Datenquelle zum Zeitpunkt der Abfrageausführung dar.  
@@ -179,8 +178,8 @@ ms.locfileid: "72251220"
 |Schaltfläche|BESCHREIBUNG|  
 |------------|-----------------|  
 |**Als Text bearbeiten**|Wechselt zum textbasierten Abfrage-Designer, um die automatisch generierte Abfrage anzuzeigen oder die Abfrage zu ändern.|  
-|**Importieren**|Importieren einer vorhandenen Abfrage aus einer Datei oder einem Bericht. Die Dateitypen SQL und RDL werden unterstützt.|  
-|**Ausführen der Abfrage**|Führen Sie die Abfrage aus. Das Resultset wird im Bereich mit den Abfrageergebnissen angezeigt.|  
+|**Importieren**|Importiert eine vorhandene Abfrage aus einer Datei oder einem Bericht. Die Dateitypen SQL und RDL werden unterstützt.|  
+|**Abfrage ausführen**|Führen Sie die Abfrage aus. Das Resultset wird im Bereich mit den Abfrageergebnissen angezeigt.|  
   
 ## <a name="understanding-automatically-generated-queries"></a>Grundlegendes zu automatisch generierten Abfragen  
  Wenn Sie Tabellen und Spalten oder gespeicherte Prozeduren und Sichten im Bereich Datenbanksicht auswählen, ruft der Abfrage-Designer die zugrunde liegenden Primärschlüssel- und Fremdschlüsselbeziehungen aus dem Datenbankschema ab. Der Abfrage-Designer erkennt Beziehungen zwischen zwei Tabellen, indem er diese Beziehungen analysiert, und fügt der Abfrage Joins hinzu. Sie können die Abfrage dann ändern, indem Sie Gruppen und Aggregate hinzufügen, Beziehungen hinzufügen oder ändern und Filter hinzufügen. Klicken Sie auf **Als Text bearbeiten**, um den Abfragetext anzuzeigen, der die Spalten, aus denen Daten abgerufen werden sollen, die Joins zwischen Tabellen und alle Gruppen oder Aggregate anzeigt.  
@@ -194,7 +193,7 @@ ms.locfileid: "72251220"
   
 -   **Abfrage** Zeigt den Abfragetext, den Tabellennamen oder den Namen der gespeicherten Prozedur an, je nach Abfragetyp. Nicht alle Abfragetypen können für alle Datenquellentypen verwendet werden. Beispiel: Tabellenname wird nur vom Datenquellentyp OLE DB unterstützt.  
   
--   **Ergebnis** Zeigt die Ergebnisse der Ausführung der Abfrage zur Entwurfszeit an.  
+-   **Ergebnis** Zeigt die Ergebnisse einer Ausführung der Abfrage zur Entwurfszeit an.  
   
 ### <a name="text-based-query-designer-toolbar"></a>Symbolleiste für den textbasierten Abfrage-Designer  
  Der textbasierte Abfrage-Designer stellt eine einzige Symbolleiste für alle Befehlstypen bereit. In der folgenden Tabelle werden jede Schaltfläche auf der Symbolleiste und ihre Funktion aufgelistet.  
@@ -202,7 +201,7 @@ ms.locfileid: "72251220"
 |Schaltfläche|BESCHREIBUNG|  
 |------------|-----------------|  
 |**Als Text bearbeiten**|Wechseln zwischen dem textbasierten Abfrage-Designer und dem grafischen Abfrage-Designer. Nicht alle Datenquellentypen unterstützen grafische Abfrage-Designer.|  
-|**Importieren**|Importieren einer vorhandenen Abfrage aus einer Datei oder einem Bericht. Nur die Dateitypen SQL und RDL werden unterstützt.|  
+|**Importieren**|Importiert eine vorhandene Abfrage aus einer Datei oder einem Bericht. Nur die Dateitypen SQL und RDL werden unterstützt.|  
 |![Ausführen der Abfrage](media/rsqdicon-run.gif "Abfrage ausführen")|Führen Sie die Abfrage aus, und zeigen Sie das Resultset im Ergebnisbereich an.|  
 |**Befehlstyp**|Wählen Sie **Text**, **StoredProcedure**oder **TableDirect**. Weist eine gespeicherte Prozedur Parameter auf, wird das Dialogfeld **Abfrageparameter definieren** angezeigt, wenn Sie auf der Symbolleiste auf **Ausführen** klicken. Sie können nach Bedarf Werte eingeben.<br /><br /> Beachten Sie Folgendes: Wenn eine gespeicherte Prozedur mehr als ein Resultset zurückgibt, wird nur das erste Resultset verwendet, um das DataSet aufzufüllen. Beachten Sie auch, dass <br />                      **TableDirect** ist nur für den Daten Quellentyp OLE DB verfügbar.|  
   

@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 01e5393ae638ddcecd04211a0a7e01e8116346a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952364"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>Webdienst-URL (einheitlicher SSRS-Modus)
@@ -34,22 +34,22 @@ ms.locfileid: "71952364"
   
  Wenn Sie [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] neu installiert haben und Fehlermeldungen bei der Verwendung des Standard-IP-Adressenwerts "Alle zugewiesenen" und Port 80 erhalten, können Sie den Fehler normalerweise beheben, indem Sie die URL nach dem Neustarten des Diensts neu erstellen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Virtuelles Verzeichnis**  
  Gibt den Namen des virtuellen Verzeichnisses für den Berichtsserver-Webdienst an. Sie können auf einem Computer nur einen Namen eines virtuellen Verzeichnisses für jede Instanz des Report Server-Webdiensts haben.  
   
  **IP-Adresse**  
  Gibt den Berichtsserver-Computer im TCP/IP-Netzwerk an. Gültige Werte:  
   
--   **Alle zugewiesenen** gibt an, dass alle IP-Adressen, die dem Computer zugewiesen sind, in einer URL verwendet werden können, die auf eine Berichts Serveranwendung verweist. Dieser Wert umfasst auch Host-Anzeigenamen (z. B. Computernamen), die durch einen Domänennamenserver in eine IP-Adresse aufgelöst werden können, die dem Computer zugewiesen ist. Dies ist der Standardwert für eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -URL.  
+-   Der Wert**Alle zugewiesenen** gibt an, dass alle IP-Adressen, die dem Computer zugewiesen sind, in einer URL verwendet werden können, die auf eine Berichtsserveranwendung verweist. Dieser Wert umfasst auch Host-Anzeigenamen (z. B. Computernamen), die durch einen Domänennamenserver in eine IP-Adresse aufgelöst werden können, die dem Computer zugewiesen ist. Dies ist der Standardwert für eine [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -URL.  
   
--   **Alle nicht zugewiesenen** gibt an, dass der Berichts Server alle Anforderungen annimmt, die keine genaue Entsprechung für die IP-Adresse oder den Hostnamen aufweisen. Verwenden Sie diesen Wert nicht, wenn er bereits von einer anderen Webanwendung verwendet wird. Wenn Sie es trotzdem tun, damit, unterbrechen Sie den Dienst der anderen Anwendung.  
+-   Mit dem Wert**Alle nicht zugewiesenen** wird angegeben, dass der Berichtsserver alle Anforderungen annimmt, die keine exakte Entsprechung in der IP-Adresse oder im Hostnamen haben. Verwenden Sie diesen Wert nicht, wenn er bereits von einer anderen Webanwendung verwendet wird. Wenn Sie es trotzdem tun, damit, unterbrechen Sie den Dienst der anderen Anwendung.  
   
--   **127.0.0.1** wird für den Zugriff auf localhost verwendet. Sie unterstützt die lokale Verwaltung auf dem Berichtsservercomputer. Wenn Sie nur diesen Wert auswählen, können nur Benutzer, die lokal auf dem Berichtsservercomputer angemeldet sind, auf die Anwendung zugreifen.  
+-   Mit**127.0.0.1** wird auf localhost zugegriffen. Sie unterstützt die lokale Verwaltung auf dem Berichtsservercomputer. Wenn Sie nur diesen Wert auswählen, können nur Benutzer, die lokal auf dem Berichtsservercomputer angemeldet sind, auf die Anwendung zugreifen.  
   
--   *Nnn. nnn. nnn. nnn* ist die IPv4-Adresse einer Netzwerkadapter Karte auf dem Computer. Wenn Ihr Netzwerk IPv6-Adressierung verwendet, ist die IP-Adresse ein 128-Bit-Wert von 8 4-Byte-Feldern ähnlich dem \<folgenden Format: Header>:*nnnn: nnnn: nnnn: nnnn*  
+-   *Nnn.nnn.nnn.nnn* ist die IPv4-Adresse einer Netzwerkkarte auf Ihrem Computer. Wenn Ihr Netzwerk IPv6-Adressierung verwendet, ist die IP-Adresse ein 128-Bit-Wert von 8 4-Byte-Feldern ähnlich dem \<folgenden Format: Header>:*nnnn: nnnn: nnnn: nnnn*  
   
-     Wenn Sie mehrere Karten haben, wird für jede Karte eine IP-Adresse angezeigt. Wenn Sie nur diesen Wert auswählen, wird der Anwendungszugriff auf genau diese IP-Adresse (und jeden Hostname, den ein Domänennamenserver dieser Adresse zuordnet) beschränkt. Sie können localhost nicht für den Zugriff auf einen Berichtsserver verwenden, und Sie können nicht die IP-Adressen anderer Netzwerkadapterkarten verwenden, die auf den Berichtsservercomputer installiert sind.  
+     Wenn Sie mehrere Karten haben, wird für jede Karte eine IP-Adresse angezeigt. Wenn Sie nur diesen Wert auswählen, wird der Anwendungszugriff auf genau diese IP-Adresse (und jeden Hostname, den ein Domänennamenserver dieser Adresse zuordnet) beschränkt. Sie können mit localhost nicht auf einen Berichtsserver zugreifen, und Sie können nicht die IP-Adressen der anderen Netzwerkkarten verwenden, die auf dem Berichtsservercomputer installiert sind.  
   
  **TCP-Port**  
  Gibt den Port an, den der Berichtsserver auf http-Anforderungen für die URLs untersucht, die den Namen des virtuellen Verzeichnisses für den Berichtsserver enthalten.  
@@ -62,7 +62,7 @@ ms.locfileid: "71952364"
  **SSL-Port**  
  Gibt den Port für SSL-Verbindungen an.  
   
- **Del**  
+ **URLs**  
  Zeigt die für die aktuelle Berichtsserver-Instanz definierten URLs an.  
   
  **Erweitert**  

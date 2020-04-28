@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: c49e4e01dd8ddaf0667546a8cc221a7918f42c81
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70911202"
 ---
 # <a name="sysdm_operation_status-azure-sql-database"></a>sys.dm_operation_status (Azure SQL-Datenbank)
@@ -39,9 +39,9 @@ ms.locfileid: "70911202"
 |resource_type_desc|**nvarchar (2048)**|Beschreibung des Ressourcentyps, für den der Vorgang ausgeführt wird. In der aktuellen Version verfolgt diese Sicht nur die Vorgänge nach, die für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ausgeführt werden.|  
 |major_resource_id|**sql_variant**|Name von [!INCLUDE[ssSDS](../../includes/sssds-md.md)], für die der Vorgang ausgeführt wird. Nicht NULL.|  
 |minor_resource_id|**sql_variant**|Nur zur internen Verwendung. Nicht NULL.|  
-|Vorgang|**nvarchar (60)**|Für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ausgeführter Vorgang, z. B. CREATE oder ALTER.|  
+|operation|**nvarchar(60)**|Für [!INCLUDE[ssSDS](../../includes/sssds-md.md)] ausgeführter Vorgang, z. B. CREATE oder ALTER.|  
 |state|**tinyint**|Der Zustand des Vorgangs.<br /><br /> 0 = Ausstehend<br />1 = Vorgang wird ausgeführt<br />2 = Abgeschlossen<br />3 = fehlgeschlagen<br />4 = Abgebrochen|  
-|state_desc|**nvarchar (120)**|PENDING = Vorgang wartet auf verfügbare Ressource oder verfügbares Kontingent.<br /><br /> IN_PROGRESS = Vorgang wurde gestartet und wird ausgeführt.<br /><br /> COMPLETED = Vorgang wurde erfolgreich abgeschlossen.<br /><br /> FAILED = Vorgang ist fehlgeschlagen. Weitere Informationen finden Sie in der Spalte **error_desc** .<br /><br /> CANCELLED = Vorgang wurde auf Anforderung des Benutzers beendet.|  
+|state_desc|**nvarchar(120)**|PENDING = Vorgang wartet auf verfügbare Ressource oder verfügbares Kontingent.<br /><br /> IN_PROGRESS = Vorgang wurde gestartet und wird ausgeführt.<br /><br /> COMPLETED = Vorgang wurde erfolgreich abgeschlossen.<br /><br /> FAILED = Vorgang ist fehlgeschlagen. Weitere Informationen finden Sie in der Spalte **error_desc** .<br /><br /> CANCELLED = Vorgang wurde auf Anforderung des Benutzers beendet.|  
 |percent_complete|**int**|Prozentsatz des Vorgangs, der abgeschlossen wurde. Werte sind nicht kontinuierlich, und die gültigen Werte sind unten aufgeführt. Nicht NULL.<br/><br/>0 = Vorgang wurde nicht gestartet.<br/>50 = Vorgang wird ausgeführt<br/>100 = Vorgang wurde beendet.|  
 |error_code|**int**|Code, der den Fehler angibt, der während eines fehlgeschlagenen Vorgangs aufgetreten ist. Wenn der Wert 0 ist, bedeutet dies, dass der Vorgang erfolgreich abgeschlossen wurde.|  
 |error_desc|**nvarchar (2048)**|Beschreibung des Fehlers, der während eines fehlgeschlagenen Vorgangs aufgetreten ist.|  
@@ -87,6 +87,6 @@ SELECT * FROM sys.dm_operation_status
  [Dynamische Verwaltungs Sichten und-Funktionen für die georeplikation &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
  [sys. dm_geo_replication_link_status &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)   
  [sys. geo_replication_links &#40;Azure SQL-Datenbank&#41;](../../relational-databases/system-dynamic-management-views/sys-geo-replication-links-azure-sql-database.md)   
- [Alter Database &#40;Azure SQL-Datenbank&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)  
+ [ALTER DATABASE &#40;Azure SQL-Datenbank&#41;](../../t-sql/statements/alter-database-azure-sql-database.md)  
   
   

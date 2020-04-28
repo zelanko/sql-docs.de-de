@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a040993001a60c410cc1da83f8efae2a4d163162
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175415"
 ---
 # <a name="building-applications-with-sql-server-native-client"></a>Erstellen von Anwendungen mit SQL Server Native Client
@@ -32,7 +32,7 @@ ms.locfileid: "70175415"
  [Komponenten von SQL Server Native Client](components-of-sql-server-native-client.md)  
  Beschreibt die Komponenten, aus denen sich [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client einschließlich Bibliothek, Ressource, Hilfe und Headerdateien zusammensetzt.  
   
- [Verwenden von Schlüsselwörtern für Verbindungszeichenfolgen mit SQL Server Native Client](using-connection-string-keywords-with-sql-server-native-client.md)  
+ [Verwenden von Schlüsselwörtern für Verbindungszeichenfolgen mit SQL Server Native Client](using-connection-string-keywords-with-sql-server-native-client.md)  
  Erläutert die verschiedenen Verbindungszeichenfolgen, die beim Herstellen einer Verbindung zu einer Datenbank mit [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client verwendet werden können.  
   
  [Verwenden der SQL Server Native Client-Header- und Bibliotheksdateien](using-the-sql-server-native-client-header-and-library-files.md)  
@@ -56,6 +56,6 @@ ms.locfileid: "70175415"
 ## <a name="see-also"></a>Weitere Informationen  
  [SQL Server Native Client Programmierung](../sql-server-native-client-programming.md)   
  [ODBC-Themen zur Vorgehensweise](../../native-client-odbc-how-to/odbc-how-to-topics.md)   
- [Vorgehensweisen für OLE DB](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
+ [Gewusst-wie-Themen zu OLE DB](../../native-client-ole-db-how-to/ole-db-how-to-topics.md)  
   
   

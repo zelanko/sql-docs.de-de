@@ -25,10 +25,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3335c5a7fcb46b901777de0404b5206aa6a876f6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175973"
 ---
 # <a name="export-a-data-tier-application"></a>Exportieren einer Datenebenenanwendung
@@ -44,15 +44,15 @@ ms.locfileid: "70175973"
  Beim Exportvorgang wird die DAC-Version auf 1.0.0.0 und die DAC-Beschreibung in der Exportdatei auf eine leere Zeichenfolge festgelegt. Wurde die Datenbank von einer DAC bereitgestellt, enthält die DAC-Definition in der Exportdatei den Namen der ursprünglichen DAC. Andernfalls wird der DAC-Name auf den Datenbanknamen festgelegt.  
   
 
-###  <a name="LimitationsRestrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a> Einschränkungen  
  Eine DAC oder Datenbank kann nur aus einer Datenbank in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]oder [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 4 (SP4) oder höher exportiert werden.  
   
  Sie können keine Datenbank exportieren, die über in einer DAC nicht unterstützte Objekte oder eigenständige Benutzer verfügt. Weitere Informationen zu den in einer DAC unterstützten Objekttypen finden Sie unter [DAC Support For SQL Server Objects and Versions](dac-support-for-sql-server-objects-and-versions.md).  
   
-###  <a name="Permissions"></a> Berechtigungen  
+###  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Zum Exportieren einer DAC sind mindestens die ALTER ANY LOGIN-Berechtigung und die VIEW DEFINITION-Berechtigung im Datenbankbereich sowie SELECT-Berechtigungen für **sys.sql_expression_dependencies**erforderlich. Zum Exportieren einer DAC sind nur Mitglieder der festen Serverrolle "securityadmin" berechtigt, die ebenfalls Mitglieder der festen Datenbankrolle "database_owner" in der Datenbank sind, aus der die DAC exportiert wird. Mitglieder der festen Serverrolle „sysadmin“ oder des integrierten SQL Server-Systemadministratorkontos **sa** sind ebenfalls berechtigt, eine DAC zu exportieren.  
   
-##  <a name="UsingDeployDACWizard"></a>Verwenden des Assistenten zum Exportieren von Datenebenenanwendungen  
+##  <a name="using-the-export-data-tier-application-wizard"></a><a name="UsingDeployDACWizard"></a>Verwenden des Assistenten zum Exportieren von Datenebenenanwendungen  
  **So exportieren Sie eine DAC mithilfe eines Assistenten**  
   
 1.  Stellen Sie entweder lokal oder in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]eine Verbindung zu einer Instanz von [!INCLUDE[ssSDS](../../includes/sssds-md.md)]her.  
@@ -67,7 +67,7 @@ ms.locfileid: "70175973"
   
     -   [Seite "Einführung"](#Introduction)  
   
-    -   [Seite "Einstellungen exportieren"](#Export_settings)  
+    -   [Exporteinstellungen (Seite)](#Export_settings)  
   
     -   [Überprüfung (Seite)](#Validation)  
   
@@ -77,44 +77,44 @@ ms.locfileid: "70175973"
   
     -   [Ergebnisse (Seite)](#Results)  
   
-##  <a name="Introduction"></a> Seite "Einführung"  
+##  <a name="introduction-page"></a><a name="Introduction"></a> Seite "Einführung"  
  Auf dieser Seite werden die Schritte für den Assistenten zum Exportieren von Datenebenenanwendungen beschrieben.  
   
  **Optionen**  
   
  **Diese Seite nicht mehr anzeigen.** – Aktivieren Sie dieses Kontrollkästchen, damit die Einführungsseite in Zukunft nicht mehr angezeigt wird.  
   
- **Weiter** : geht zur Seite **DAC-Paket auswählen** über.  
+ **Weiter** – Geht zur Seite **DAC-Paket auswählen** über.  
   
  **Abbrechen** : bricht den Vorgang ab und schließt den Assistenten.  
   
-##  <a name="Export_settings"></a>Seite "Einstellungen exportieren"  
+##  <a name="export-settings-page"></a><a name="Export_settings"></a>Seite "Einstellungen exportieren"  
  Auf dieser Seite können Sie den Ort angeben, wo die BACPAC-Datei erstellt werden soll.  
   
--   **Auf lokalem** Datenträger speichern: erstellt eine BacPac-Datei in einem Verzeichnis auf dem lokalen Computer. Klicken Sie auf **Durchsuchen...** , um den lokalen Computer zu durchsuchen oder um den Pfad im bereitgestellten Feld anzugeben. Der Pfadname muss einen Dateinamen und die Erweiterung BACPAC enthalten.  
+-   **Auf lokalem Datenträger speichern** – Erstellt eine BACPAC-Datei in einem Verzeichnis auf dem lokalen Computer. Klicken Sie auf **Durchsuchen...**, um den lokalen Computer zu durchsuchen oder um den Pfad im bereitgestellten Feld anzugeben. Der Pfadname muss einen Dateinamen und die Erweiterung BACPAC enthalten.  
   
--   In **Azure speichern** : erstellt eine BacPac-Datei in einem Azure-Container. Sie müssen eine Verbindung mit einem Azure-Container herstellen, um diese Option zu überprüfen. Beachten Sie, dass diese Option auch erfordert, dass Sie ein lokales Verzeichnis für die temporäre Datei angeben. Beachten Sie, dass die temporäre Datei am angegebenen Speicherort erstellt wird und dort verbleibt, nachdem der Vorgang abgeschlossen wurde.  
+-   **In Azure speichern** – Erstellt eine BACPAC-Datei in einem Azure-Container. Sie müssen eine Verbindung mit einem Azure-Container herstellen, um diese Option zu überprüfen. Beachten Sie, dass diese Option auch erfordert, dass Sie ein lokales Verzeichnis für die temporäre Datei angeben. Beachten Sie, dass die temporäre Datei am angegebenen Speicherort erstellt wird und dort verbleibt, nachdem der Vorgang abgeschlossen wurde.  
   
  Um eine Teilmenge von zu exportierenden Tabellen anzugeben, verwenden Sie die Option **Erweitert** .  
   
-##  <a name="Validation"></a>Validierungs Seite  
+##  <a name="validation-page"></a><a name="Validation"></a>Validierungs Seite  
  Verwenden Sie die Überprüfungsseite, um sämtliche Probleme zu überprüfen, die den Vorgang blockieren. Beheben Sie zum Fortfahren die Blockierungsprobleme, und klicken Sie dann auf **Überprüfung erneut ausführen** , um sicherzustellen, dass die Überprüfung erfolgreich ist.  
   
- Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.  
+ Klicken Sie zum Fortfahren auf **Weiter**.  
   
-##  <a name="Summary"></a> Seite "Zusammenfassung"  
+##  <a name="summary-page"></a><a name="Summary"></a> Seite "Zusammenfassung"  
  Verwenden Sie diese Seite, um die angegebene Quelle und die Zieleinstellungen für den Vorgang zu überprüfen. Klicken Sie auf **Fertig stellen**, um den Exportvorgang mithilfe der angegebenen Einstellungen abzuschließen. Klicken Sie auf **Abbrechen**, um den Exportvorgang abzubrechen und um den Assistenten zu beenden.  
   
-##  <a name="Progress"></a> Status (Seite)  
+##  <a name="progress-page"></a><a name="Progress"></a>Seite "Status"  
  Auf dieser Seite wird eine Statusanzeige angezeigt, die den Status des Vorgangs anzeigt. Klicken Sie auf die Option **Details anzeigen** , um ausführliche Informationen anzuzeigen.  
   
-##  <a name="Results"></a> Ergebnisse (Seite)  
+##  <a name="results-page"></a><a name="Results"></a>Seite "Ergebnisse"  
  Auf dieser Seite wird angegeben, ob der Exportvorgang erfolgreich war oder ob dabei Fehler auftraten, dabei werden die Ergebnisse jeder Aktion angezeigt. Für alle Aktionen, die fehlerhaft waren, ist in der Spalte **Ergebnis** ein Link enthalten. Klicken Sie auf den Link, um einen Bericht des für diese Aktion aufgetretenen Fehlers anzuzeigen.  
   
  Klicken Sie auf **Fertig** stellen, um den Assistenten zu schließen.  
   
-##  <a name="NetApp"></a>Verwenden einer .NET Framework-Anwendung  
- **So exportieren Sie eine DAC mithilfe der Export ()-Methode in einer .NET Framework-Anwendung**  
+##  <a name="using-a-net-framework-application"></a><a name="NetApp"></a>Verwenden einer .NET Framework-Anwendung  
+ **So exportieren Sie eine DAC mithilfe der Export()-Methode in einer .NET Framework-Anwendung**  
   
  Laden Sie zum Anzeigen eines Codebeispiels die DAC-Beispielanwendung unter [Codeplex](https://go.microsoft.com/fwlink/?LinkId=219575)herunter.  
   

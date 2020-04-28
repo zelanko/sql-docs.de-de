@@ -19,10 +19,10 @@ ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 42c763b37f5c721a259fbe87eca804e22f5c27b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71974368"
 ---
 # <a name="sp_send_dbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
@@ -89,7 +89,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 `[ @importance = ] 'importance'`Die Wichtigkeit der Nachricht. Der-Parameter ist vom Typ **varchar (6)**. Der Parameter kann einen der folgenden Werte enthalten:  
   
--   Niedrig  
+-   Low (Niedrig)  
   
 -   Normal  
   
@@ -143,7 +143,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
 > [!NOTE]  
 >  Bei Verwendung mit großen Datenmengen beansprucht die \@ **query_no_truncate** Option zusätzliche Ressourcen und kann die Serverleistung verlangsamen.  
   
-`[ @query_result_no_padding ] @query_result_no_padding`Der Typ ist "Bit". Die Standardeinstellung ist 0. Wenn Sie auf 1 festlegen, werden die Abfrageergebnisse nicht aufgefüllt, und möglicherweise wird die Dateigröße reduziert. Wenn Sie query_result_no_padding \@auf 1 festlegen und den \@query_result_width-Parameter festlegen, über \@schreibt der query_result_no_padding-Parameter \@den query_result_width-Parameter.  
+`[ @query_result_no_padding ] @query_result_no_padding`Der Typ ist "Bit". Der Standardwert ist 0. Wenn Sie auf 1 festlegen, werden die Abfrageergebnisse nicht aufgefüllt, und möglicherweise wird die Dateigröße reduziert. Wenn Sie query_result_no_padding \@auf 1 festlegen und den \@query_result_width-Parameter festlegen, über \@schreibt der query_result_no_padding-Parameter \@den query_result_width-Parameter.  
   
  In diesem Fall tritt kein Fehler auf.  
  

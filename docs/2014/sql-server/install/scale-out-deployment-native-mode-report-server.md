@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: a9fe82102df73ddfa77b4636dd29793ac2694949
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952419"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>Bereitstellung für horizontales Skalieren (Berichtsserver im einheitlichen Modus)
@@ -36,14 +36,14 @@ ms.locfileid: "71952419"
   
  Um diese Seite zu öffnen, starten Sie den [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] -Konfigurations-Manager, und klicken Sie im Navigationsbereich auf **Bereitstellung für horizontales Skalieren** . Weitere Informationen finden Sie unter [Reporting Services-Konfigurations-Manager &#40;einheitlicher Modus&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **SQL Server Name**  
  Geben Sie den Namen der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] -Instanz an, die die Berichts Server-Datenbank hostet.  
   
- **Database Name**  
+ **Datenbankname**  
  Gibt den Namen der Datenbank an, mit der die Berichtsserverinstanz momentan verbunden ist.  
   
- **Server Modus**  
+ **Servermodus**  
  Zeigt den Modus des Servers und der Datenbank an. Der Servermodus ist entweder systemeigen oder der integrierte SharePoint-Modus. Bereitstellungen für horizontales Skalieren werden für beide Modi unterstützt.  
   
  **Server**  
@@ -63,7 +63,7 @@ ms.locfileid: "71952419"
   
      Für einen Berichtsserver, der bereits Teil einer Bereitstellung für horizontales Skalieren ist, können Sie auf dieser Seite Knoten hinzufügen oder entfernen.  
   
- **Initialisieren**  
+ **Initialize**  
  Klicken Sie auf **Initialisieren** , um einen Berichtsserver zur Bereitstellung für horizontales Skalieren hinzuzufügen. Mit diesem Schritt wird ein Berichtsserver so konfiguriert, dass er einen symmetrischen Schlüssel in einer freigegebenen Berichtsserver-Datenbank verwendet. Mithilfe von **Initialisieren** können Sie einer Bereitstellung für horizontales Skalieren eine Berichtsserverinstanz hinzufügen oder ein Migrations- oder Installationsproblem beseitigen.  
   
  Eine Berichtsserverinstanz ist nur verfügbar, wenn zuvor eine Verbindung mit der freigegebenen Berichtsserverdatenbank konfiguriert wurde. Darüber hinaus müssen Sie die Initialisierung auf einem Berichtsserver ausführen, der bereits für die Verwendung der Berichtsserverdatenbank initialisiert ist.  
@@ -76,8 +76,8 @@ ms.locfileid: "71952419"
  Wenn Sie die verschlüsselten Daten nicht mehr benötigen oder falls Sie keine Sicherungskopie des Schlüssels besitzen, müssen Sie die verschlüsselten Daten löschen. Weitere Informationen finden Sie unter [Verschlüsselungsschlüssel &#40;SSRS im einheitlichen Modus&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Initialisieren eines Berichts Servers &#40;SSRS-Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
- [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
- [Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
+ [Initialisieren eines Berichtsservers (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   
+ [Konfigurieren und Verwalten von Verschlüsselungsschlüsseln &#40;SSRS-Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
+ [Konfigurieren eines Berichtsservers im einheitlichen Modus für Bereitstellungen für horizontales Skalieren (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
   
   

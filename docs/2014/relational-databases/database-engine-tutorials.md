@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1b2f4b080287dd4481a121def388f327112f21ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154613"
 ---
 # <a name="database-engine-tutorials"></a>Lernprogramme zur Datenbank-Engine
@@ -44,7 +44,7 @@ ms.locfileid: "70154613"
  [Tutorial: Verwalten von Servern mit der richtlinienbasierten Verwaltung](policy-based-management/tutorial-administering-servers-by-using-policy-based-management.md)  
  In diesem Lernprogramm erfahren Sie, wie Sie Richtlinien zur Durchsetzung von Standards zur Websiteverwaltung erstellen.  
   
- [Lernprogramm: Auswerten von Best Practices mithilfe der richtlinienbasierten Verwaltung](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
+ [Tutorial: Auswerten von Best Practices mithilfe der richtlinienbasierten Verwaltung](../tutorials/tutorial-evaluating-best-practices-by-using-policy-based-management.md)  
  In diesem Lernprogramm erfahren Sie, wie Sie Richtlinien erstellen, um [!INCLUDE[ssDE](../includes/ssde-md.md)]-Instanzen auf bekannte Probleme zu untersuchen.  
   
  [Tutorial: SQL Server-Sicherung und -Wiederherstellung mit dem Azure Blob Storage-Dienst](tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md)  

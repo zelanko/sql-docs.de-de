@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9e0eadbbc2d126a001057cf5f9d0e17211c0a93e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874720"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>Wiederherstellen der von der Suche verwendeten Wörtertrennungen auf die vorherige Version
@@ -32,7 +32,7 @@ ms.locfileid: "70874720"
   
  Allgemeine Informationen zur Wörtertrennung und Wortstammerkennung finden Sie unter [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
-##  <a name="overview"></a> Übersicht über das Wiederherstellen von Wörtertrennungen und Wortstammerkennungen  
+##  <a name="overview-of-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="overview"></a> Übersicht über das Wiederherstellen von Wörtertrennungen und Wortstammerkennungen  
  Die Anweisungen zum Wiederherstellen von Wörtertrennungen und Wortstammerkennungen hängen von der Sprache ab. In der folgenden Tabelle werden die 3 Sätze von Aktionen zusammengefasst, die möglicherweise erforderlich sind, um die frühere Version der Komponenten wiederherzustellen.  
   
 |Aktuelle Datei|Vorherige Datei|Anzahl betroffener Sprachen|Aktion für Dateien|Aktion für Registrierungseinträge|  
@@ -48,7 +48,7 @@ ms.locfileid: "70874720"
   
  `C:\Program Files\Microsoft SQL Server\<instance>\MSSQL\Binn`  
   
-##  <a name="nl6nl6"></a> Sprachen, für die der Dateiname sowohl für die aktuelle als auch die vorherige Wörtertrennung NaturalLanguage6.dll ist  
+##  <a name="languages-for-which-the-file-name-of-both-the-current-and-previous-word-breaker-is-naturallanguage6dll"></a><a name="nl6nl6"></a> Sprachen, für die der Dateiname sowohl für die aktuelle als auch die vorherige Wörtertrennung NaturalLanguage6.dll ist  
  Für die Sprachen in der folgenden Tabelle ist der Dateiname sowohl für die aktuelle als auch die vorherige Wörtertrennung NaturalLanguage6.dll. Um diese Komponenten wiederherzustellen, müssen Sie NaturalLanguage6.dll mit einer anderen Version der gleichen Datei überschreiben. Sie müssen keine Registrierungseinträge ändern, da sich die Registrierungseinträge für diese Version nicht geändert haben.  
   
 > [!WARNING]  
@@ -95,7 +95,7 @@ ms.locfileid: "70874720"
   
  Die obige Tabelle ist nach der Spalte "Abkürzung" alphabetisch sortiert.  
   
-###  <a name="nl6nl6revert"></a> So stellen Sie die vorherigen Komponenten wieder her  
+###  <a name="to-revert-to-the-previous-components"></a><a name="nl6nl6revert"></a> So stellen Sie die vorherigen Komponenten wieder her  
   
 1.  Navigieren Sie zum Ordner "Binn", der oben beschrieben wurde.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "70874720"
   
 4.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
   
-###  <a name="nl6nl6restore"></a> So stellen Sie aktuelle Komponenten wieder her  
+###  <a name="to-restore-the-current-components"></a><a name="nl6nl6restore"></a> So stellen Sie aktuelle Komponenten wieder her  
   
 1.  Navigieren Sie zum Speicherort, an dem Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version von NaturalLanguage6.dll gesichert haben.  
   
@@ -119,7 +119,7 @@ ms.locfileid: "70874720"
   
 3.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
   
-##  <a name="newnl6"></a> Sprachen, für die nur der Dateiname der vorherigen Wörtertrennung NaturalLanguage6.dll ist  
+##  <a name="languages-for-which-the-file-name-of-the-previous-word-breaker-only-is-naturallanguage6dll"></a><a name="newnl6"></a> Sprachen, für die nur der Dateiname der vorherigen Wörtertrennung NaturalLanguage6.dll ist  
  Für die Sprachen in der folgenden Tabelle unterscheidet sich der Dateiname für die vorherige Wörtertrennung vom Dateinamen der neuen Version. Der vorherige Dateiname ist NaturalLanguage6.dll. Um zur früheren Version wiederherzustellen, müssen Sie die aktuelle Version von NaturalLanguage6.dll mit einer früheren Version der gleichen Datei überschreiben. Sie müssen auch einen Satz von Registrierungseinträgen ändern, um die vorherige oder aktuelle Version der Komponenten anzugeben.  
   
 > [!WARNING]  
@@ -139,7 +139,7 @@ ms.locfileid: "70874720"
   
  Verwenden Sie die folgenden Anweisungen zusammen mit der Liste der Werte im Abschnitt [Dateinamen und Registrierungswerte zum Wiederherstellen von Wörtertrennungen und Wortstammerkennungen](#newnl6values).  
   
-###  <a name="newnl6revert"></a> So stellen Sie die vorherigen Komponenten wieder her  
+###  <a name="to-revert-to-the-previous-components"></a><a name="newnl6revert"></a> So stellen Sie die vorherigen Komponenten wieder her  
   
 1.  Navigieren Sie zum Ordner "Binn", der oben beschrieben wurde.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "70874720"
     > [!WARNING]  
     >  Diese Änderung wirkt sich auf alle Sprachen aus, die NaturalLanguage6.dll sowohl in der aktuellen als auch der früherer Version verwenden.  
   
-5.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<instanceroot\>\MSSearch\CLSID**.  
+5.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<Instanzstamm\>\MSSearch\CLSID**.  
   
 6.  Fügen Sie mithilfe der folgenden Schritte für die COM ClassIDs für die Schnittstellen der früheren Wörtertrennung und die Wortstammerkennung für die ausgewählte Sprache neue Schlüssel hinzu:  
   
@@ -164,7 +164,7 @@ ms.locfileid: "70874720"
   
     4.  Wenn die ausgewählte Sprache eine Wortstammerkennung verwendet, aktualisieren Sie dann die (Standard-)Daten dieses Schlüsselwerts auf den Dateinamen der vorherigen Wortstammerkennung aus der Tabelle.  
   
-7.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<instanceroot\>\MSSearch\Language\\<language_key #d2 **. *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
+7.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<Instanzstamm\>\MSSearch\Sprache\\<Sprachschlüssel>**. *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
   
 8.  Aktualisieren Sie den **WBreakerClass** -Schlüsselwert auf den Wert aus der Tabelle für die aktuelle Wörtertrennung.  
   
@@ -172,7 +172,7 @@ ms.locfileid: "70874720"
   
 10. Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
   
-###  <a name="newnl6restore"></a> So stellen Sie aktuelle Komponenten wieder her  
+###  <a name="to-restore-the-current-components"></a><a name="newnl6restore"></a> So stellen Sie aktuelle Komponenten wieder her  
   
 1.  Navigieren Sie zum Speicherort, an dem Sie die [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Version von NaturalLanguage6.dll gesichert haben.  
   
@@ -181,7 +181,7 @@ ms.locfileid: "70874720"
     > [!WARNING]  
     >  Diese Änderung wirkt sich auf alle Sprachen aus, die NaturalLanguage6.dll sowohl in der aktuellen als auch der früherer Version verwenden.  
   
-3.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<instanceroot\>\MSSearch\CLSID**.  
+3.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<Instanzstamm\>\MSSearch\CLSID**.  
   
 4.  Wenn die folgenden Schlüssel nicht vorhanden sind, gehen Sie folgendermaßen vor, um neue Schlüssel für die COM ClassIDs für die Schnittstellen der aktuellen Wörtertrennung und der Wortstammerkennung für die ausgewählte Sprache hinzuzufügen:  
   
@@ -193,7 +193,7 @@ ms.locfileid: "70874720"
   
     4.  Wenn die ausgewählte Sprache eine Wortstammerkennung verwendet, aktualisieren Sie dann die (Standard-)Daten dieses Schlüsselwerts auf den Dateinamen der aktuellen Wortstammerkennung aus der Tabelle.  
   
-5.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<instanceroot\>\MSSearch\Language\\<language_key #d2 **. *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
+5.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<Instanzstamm\>\MSSearch\Sprache\\<Sprachschlüssel>**. *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
   
 6.  Aktualisieren Sie den **WBreakerClass** -Schlüsselwert auf den Wert aus der Tabelle für die vorherige Wörtertrennung.  
   
@@ -201,7 +201,7 @@ ms.locfileid: "70874720"
   
 8.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
   
-###  <a name="newnl6values"></a> Dateinamen und Registrierungswerte zum Wiederherstellen von Wörtertrennungen und Wortstammerkennungen  
+###  <a name="file-names-and-registry-values-for-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="newnl6values"></a> Dateinamen und Registrierungswerte zum Wiederherstellen von Wörtertrennungen und Wortstammerkennungen  
  Verwenden Sie die folgende Liste von Dateinamen und Registrierungseinträgen zusammen mit den Anweisungen im vorangehenden Abschnitt. Verwenden Sie die vorherigen Werte, um die frühere Version wiederherzustellen, oder verwenden Sie die aktuellen Werte, um die aktuelle Version der Komponenten wiederherzustellen.  
   
  Die folgende Liste ist alphabetisch nach der für jede Sprache verwendeten Abkürzung sortiert.  
@@ -251,7 +251,7 @@ ms.locfileid: "70874720"
 |Aktuelle CLSID|aaa3d3bd-6de7-4317-91a0-d25e7d3babc3|d42c8b70-adeb-4b81-a52f-c09f24f77dfa|  
 |Aktueller Dateiname|MSWB7.dll|MSWB7.dll|  
   
-##  <a name="newnew"></a> Sprachen, für die weder der vorherige noch der aktuelle Dateiname NaturalLanguage6.dll ist  
+##  <a name="languages-for-which-neither-the-previous-nor-the-current-file-name-is-naturallanguage6dll"></a><a name="newnew"></a> Sprachen, für die weder der vorherige noch der aktuelle Dateiname NaturalLanguage6.dll ist  
  Für die Sprachen in der folgenden Tabelle unterscheiden sich die Dateinamen der vorherigen Wörtertrennungen und Wortstammerkennungen von den Dateinamen der neuen Versionen. Weder der vorherige noch der aktuelle Dateiname ist NaturalLanguage6.dll. Sie müssen keine Dateien ersetzen, da [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] -Setup sowohl die aktuellen als auch die früheren Versionen der Komponenten in den Ordner "Binn" kopiert. Sie müssen jedoch einen Satz von Registrierungseinträgen ändern, um die vorherige oder aktuelle Version der Komponenten anzugeben.  
   
  **Liste betroffener Sprachen**  
@@ -269,11 +269,11 @@ ms.locfileid: "70874720"
   
  Verwenden Sie die folgenden Anweisungen zusammen mit der Liste der Werte im Abschnitt [Dateinamen und Registrierungswerte zum Wiederherstellen von Wörtertrennungen und Wortstammerkennungen](#newnewvalues).  
   
-###  <a name="newnewrevert"></a> So stellen Sie die vorherigen Komponenten wieder her  
+###  <a name="to-revert-to-the-previous-components"></a><a name="newnewrevert"></a> So stellen Sie die vorherigen Komponenten wieder her  
   
 1.  Entfernen Sie die Dateien für die aktuelle Version der Komponenten nicht aus dem Ordner "Binn".  
   
-2.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<instanceroot\>\MSSearch\CLSID**.  
+2.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<Instanzstamm\>\MSSearch\CLSID**.  
   
 3.  Fügen Sie mithilfe der folgenden Schritte für die COM ClassIDs für die Schnittstellen der früheren Wörtertrennung und die Wortstammerkennung für die ausgewählte Sprache neue Schlüssel hinzu:  
   
@@ -285,7 +285,7 @@ ms.locfileid: "70874720"
   
     4.  Wenn die ausgewählte Sprache eine Wortstammerkennung verwendet, aktualisieren Sie dann die (Standard-)Daten dieses Schlüsselwerts auf den Dateinamen der vorherigen Wortstammerkennung aus der Tabelle.  
   
-4.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<instanceroot\>\MSSearch\Language\\<language_key #d2 **. *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
+4.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<Instanzstamm\>\MSSearch\Sprache\\<Sprachschlüssel>**. *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
   
 5.  Aktualisieren Sie den **WBreakerClass** -Schlüsselwert auf den Wert aus der Tabelle für die aktuelle Wörtertrennung.  
   
@@ -293,11 +293,11 @@ ms.locfileid: "70874720"
   
 7.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
   
-###  <a name="newnewrestore"></a> So stellen Sie die vorherigen Komponenten wieder her  
+###  <a name="to-restore-the-previous-components"></a><a name="newnewrestore"></a> So stellen Sie die vorherigen Komponenten wieder her  
   
 1.  Entfernen Sie die Dateien für die vorherige Version der Komponenten nicht aus dem Ordner "Binn".  
   
-2.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<instanceroot\>\MSSearch\CLSID**.  
+2.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<Instanzstamm\>\MSSearch\CLSID**.  
   
 3.  Wenn die folgenden Schlüssel nicht vorhanden sind, gehen Sie folgendermaßen vor, um neue Schlüssel für die COM ClassIDs für die Schnittstellen der aktuellen Wörtertrennung und der Wortstammerkennung für die ausgewählte Sprache hinzuzufügen:  
   
@@ -309,7 +309,7 @@ ms.locfileid: "70874720"
   
     4.  Wenn die ausgewählte Sprache eine Wortstammerkennung verwendet, aktualisieren Sie dann die (Standard-)Daten dieses Schlüsselwerts auf den Dateinamen der aktuellen Wortstammerkennung aus der Tabelle.  
   
-4.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE \software\microsoft\microsoft SQL Server\\<instanceroot\>\MSSearch\Language\\<language_key #d2 **. *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
+4.  Navigieren Sie in der Registrierung zu folgendem Knoten: **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\<Instanzstamm\>\MSSearch\Sprache\\<Sprachschlüssel>**. *<Sprachschlüssel>* stellt die Abkürzung für die Sprache dar, die in der Registrierung verwendet wird (z.B. „fra“ für Französisch und „esn“ für Spanisch).  
   
 5.  Aktualisieren Sie den **WBreakerClass** -Schlüsselwert auf den Wert aus der Tabelle für die vorherige Wörtertrennung.  
   
@@ -317,7 +317,7 @@ ms.locfileid: "70874720"
   
 7.  Starten Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] neu.  
   
-###  <a name="newnewvalues"></a> Dateinamen und Registrierungswerte zum Wiederherstellen von Wörtertrennungen und Wortstammerkennungen  
+###  <a name="file-names-and-registry-values-for-reverting-and-restoring-word-breakers-and-stemmers"></a><a name="newnewvalues"></a> Dateinamen und Registrierungswerte zum Wiederherstellen von Wörtertrennungen und Wortstammerkennungen  
  Verwenden Sie die folgende Liste von Dateinamen und Registrierungseinträgen zusammen mit den Anweisungen im vorangehenden Abschnitt. Verwenden Sie die vorherigen Werte, um die frühere Version wiederherzustellen, oder verwenden Sie die aktuellen Werte, um die aktuelle Version der Komponenten wiederherzustellen.  
   
  Die folgende Liste ist alphabetisch nach der für jede Sprache verwendeten Abkürzung sortiert.  

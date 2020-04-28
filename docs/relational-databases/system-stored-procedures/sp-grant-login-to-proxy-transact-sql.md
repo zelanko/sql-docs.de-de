@@ -18,10 +18,10 @@ ms.assetid: 90e1a6d5-a692-4462-a163-4b0709d83150
 ms.author: vanto
 author: VanMSFT
 ms.openlocfilehash: bdfeab5754a2397c01ace2bb9f822fa168eeef6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72005856"
 ---
 # <a name="sp_grant_login_to_proxy-transact-sql"></a>sp_grant_login_to_proxy (Transact-SQL)
@@ -44,26 +44,21 @@ sp_grant_login_to_proxy
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @login_name = ] 'login_name'`Der Anmelde Name, dem der Zugriff gewährt werden soll. 
-  *login_name* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine der ** \@login_name**, ** \@fixed_server_role**oder ** \@msdb_role** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
+`[ @login_name = ] 'login_name'`Der Anmelde Name, dem der Zugriff gewährt werden soll. *login_name* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine der ** \@login_name**, ** \@fixed_server_role**oder ** \@msdb_role** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
   
-`[ @fixed_server_role = ] 'fixed_server_role'`Die fixierte Server Rolle, für die der Zugriff gewährt werden soll. 
-  *fixed_server_role* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine der ** \@login_name**, ** \@fixed_server_role**oder ** \@msdb_role** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
+`[ @fixed_server_role = ] 'fixed_server_role'`Die fixierte Server Rolle, für die der Zugriff gewährt werden soll. *fixed_server_role* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine der ** \@login_name**, ** \@fixed_server_role**oder ** \@msdb_role** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
   
-`[ @msdb_role = ] 'msdb_role'`Die Daten Bank Rolle in der **msdb** -Datenbank, für die der Zugriff gewährt werden soll. 
-  *msdb_role* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine der ** \@login_name**, ** \@fixed_server_role**oder ** \@msdb_role** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
+`[ @msdb_role = ] 'msdb_role'`Die Daten Bank Rolle in der **msdb** -Datenbank, für die der Zugriff gewährt werden soll. *msdb_role* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine der ** \@login_name**, ** \@fixed_server_role**oder ** \@msdb_role** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
   
-`[ @proxy_id = ] id`Der Bezeichner für den Proxy, für den der Zugriff gewährt werden soll. 
-  *id* ist vom Datentyp **int**und hat den Standardwert NULL. Eine ** \@proxy_id** oder ** \@proxy_name** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
+`[ @proxy_id = ] id`Der Bezeichner für den Proxy, für den der Zugriff gewährt werden soll. *id* ist vom Datentyp **int**und hat den Standardwert NULL. Eine ** \@proxy_id** oder ** \@proxy_name** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
   
-`[ @proxy_name = ] 'proxy_name'`Der Name des Proxys, für den der Zugriff gewährt werden soll. 
-  *proxy_name* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine ** \@proxy_id** oder ** \@proxy_name** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
+`[ @proxy_name = ] 'proxy_name'`Der Name des Proxys, für den der Zugriff gewährt werden soll. *proxy_name* ist vom Datentyp **nvarchar(256)** und hat den Standardwert NULL. Eine ** \@proxy_id** oder ** \@proxy_name** muss angegeben werden, oder die gespeicherte Prozedur schlägt fehl.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Bemerkungen  
- **sp_grant_login_to_proxy** müssen von der **msdb** -Datenbank aus ausgeführt werden.  
+ **sp_grant_login_to_proxy** muss von der **msdb** -Datenbank aus ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Serverrolle **sysadmin** können **sp_grant_login_to_proxy**ausführen.  

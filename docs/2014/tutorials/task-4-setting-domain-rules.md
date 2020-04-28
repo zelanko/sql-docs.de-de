@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dd59bf315e90bd52ba1388d27c533ab4a3136d3c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72381740"
 ---
-# <a name="task-4-setting-domain-rules"></a>Aufgabe 4: Festlegen von Domänenregeln
+# <a name="task-4-setting-domain-rules"></a>Aufgabe 4: Festlegen von Domänenregeln
   In dieser Aufgabe erstellen Sie eine Regel für die **Kontakt-e-Mail-** Domäne, um zu prüfen, ob die e-Mail-Adresse mit ** \@Adventure-Works.com**endet. Weitere Informationen zu dieser Seite finden Sie im Thema [Erstellen einer Domänen Regel](https://msdn.microsoft.com/library/hh510397.aspx) .  
   
 1.  Klicken Sie in der **Domänen Liste**auf **Contact Email** .  
@@ -59,6 +59,6 @@ ms.locfileid: "72381740"
 13. Klicken Sie auf **Schließen** , um das Dialogfeld **Domänen Regel testen** zu schließen.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 5: Festlegung begriffsbasierter Beziehungen](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
+ [Aufgabe 5: Festlegen begriffsbasierter Beziehungen](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
   
   

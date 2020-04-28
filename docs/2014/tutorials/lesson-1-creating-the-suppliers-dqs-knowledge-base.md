@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 26759a68274cfbc520e5e176d0dd3e1fab07e720
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70154967"
 ---
-# <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>Lektion 1: Erstellen der DQS-Wissensdatenbank 'Suppliers'
+# <a name="lesson-1-creating-the-suppliers-dqs-knowledge-base"></a>Lektion 1: Erstellen der DQS-Wissensdatenbank „Suppliers“
   In dieser Lektion erstellen Sie eine DQS-Wissensdatenbank mit dem Namen **Suppliers** und den Kenntnissen (Metadaten) zu Lieferantendaten. Sie verwenden die Wissensdatenbank, um die Bereinigungs- und Abgleichsaktivitäten für Eingabelieferantendaten auszuführen. Die Bereinigungsaktivität identifiziert falsche/ungültige Daten, korrigiert falsche Daten, schlägt Korrekturen vor/macht Vorschläge, standardisiert die Daten und wertet die Daten durch weitere Informationen auf. Die Abgleichsaktivität vergleicht Daten und identifiziert ähnliche (aber leicht abweichende) Datensätze in den Daten, wodurch Sie Datenduplikate entfernen können.  
   
  Sie können sowohl interaktive als auch computerunterstützte Prozesse verwenden, um eine Wissensdatenbank zu erstellen, aufzubauen und zu verwalten. Wissen in einer Wissensdatenbank wird in Domänen verwaltet, die jeweils für ein Datenfeld in den Daten spezifisch sind, die Sie bereinigen und/oder abgleichen möchten.  
@@ -43,6 +43,6 @@ ms.locfileid: "70154967"
 -   Veröffentlichen Sie die Wissensdatenbank, damit die Wissensdatenbank in Bereinigungs- und Abgleichsaktivitäten verwendet werden kann.  
   
 ## <a name="next-step"></a>Nächster Schritt  
- [Aufgabe 1: Erstellen einer Wissensdatenbank und von Domänen](../../2014/tutorials/task-1-creating-a-knowledge-base-and-domains.md)  
+ [Aufgabe 1: Erstellen von Wissensdatenbanken und Domänen](../../2014/tutorials/task-1-creating-a-knowledge-base-and-domains.md)  
   
   

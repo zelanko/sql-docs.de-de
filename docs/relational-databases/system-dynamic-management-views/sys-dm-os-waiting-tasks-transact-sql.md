@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c0a89a48fa960812ee955cd3b7ecb30069161f61
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72260382"
 ---
 # <a name="sysdm_os_waiting_tasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
@@ -40,8 +40,8 @@ ms.locfileid: "72260382"
 |**waiting_task_address**|**varbinary(8)**|Adresse des wartenden Tasks.|  
 |**session_id**|**smallint**|ID der Sitzung, die dem Task zugeordnet ist.|  
 |**exec_context_id**|**int**|ID des Ausführungskontexts, der dem Task zugeordnet ist.|  
-|**wait_duration_ms**|**BIGINT**|Gesamtwartezeit für diesen Wartetyp (in Millisekunden). Diese Zeit ist **signal_wait_time**.|  
-|**wait_type**|**nvarchar (60)**|Der Name des Wartetyps.|  
+|**wait_duration_ms**|**bigint**|Gesamtwartezeit für diesen Wartetyp (in Millisekunden). Diese Zeit ist **signal_wait_time**.|  
+|**wait_type**|**nvarchar(60)**|Der Name des Wartetyps.|  
 |**resource_address**|**varbinary(8)**|Adresse der Ressource, auf die der Task wartet.|  
 |**blocking_task_address**|**varbinary(8)**|Task, der derzeit diese Ressource verwendet.|  
 |**blocking_session_id**|**smallint**|ID der Sitzung, die die Anforderung blockiert. Wenn diese Spalte den Wert NULL aufweist, wird die Anforderung nicht blockiert, oder die Sitzungsinformationen der blockierenden Sitzung sind nicht verfügbar (bzw. können nicht identifiziert werden).<br /><br /> -2 = Der Besitzer der blockierenden Ressource ist eine verwaiste verteilte Transaktion.<br /><br /> -3 = Der Besitzer der blockierenden Ressource ist eine verzögerte Wiederherstellungstransaktion.<br /><br /> -4 = Die Sitzungs-ID des Besitzers des blockierenden Latches konnte aufgrund interner Latchstatusübergänge nicht bestimmt werden.|  

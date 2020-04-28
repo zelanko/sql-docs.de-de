@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: cd81004765b1ba5d15c5929dc661ce1dea04b371
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952661"
 ---
 # <a name="change-database-wizard-ssrs-native-mode"></a>Assistent zum Ändern der Datenbank (einheitlicher SSRS-Modus)
@@ -31,7 +31,7 @@ ms.locfileid: "71952661"
   
  [!INCLUDE[applies](../../includes/applies-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Einheitlicher Modus.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
  **Aktion**  
  Wählen Sie den Task aus, den Sie ausführen möchten. Sie können eine neue Datenbank im einheitlichen Modus oder im integrierten SharePoint-Modus erstellen. Oder Sie können eine vorhandene Berichtsserver-Datenbank auswählen, die mit der aktuellen Berichtsserverinstanz verwendet werden soll.  
   
@@ -52,10 +52,9 @@ ms.locfileid: "71952661"
  **Sprache**  
  Dieser Wert wird nur beim Erstellen einer neuen Berichtsserver-Datenbank festgelegt.  
   
- Mit diesem Wert geben Sie die Sprache an, in der Rollendefinitionen und Beschreibungen erstellt werden. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bietet ein rollenbasiertes Autorisierungsmodell, das eine Reihe von vordefinierten Rollen enthält. Diese Rollen werden einmal in der Sprache erstellt, die Sie angeben. Rollennamen und Beschreibungen werden nie in einer anderen Sprache angezeigt, auch wenn Sie eine Verbindung zum Berichtsserver über einen Browser mit Kultur- oder Spracheinstellungen herstellen, die vom Server unterstützt werden. Mit der angegebenen Sprache wird außerdem die Sprache bestimmt, mit der der Name des Ordners Meine Berichte sowie die Benutzerordner erstellt werden, die Bestandteile der Funktion Meine Berichte sind.  
+ Mit diesem Wert geben Sie die Sprache an, in der Rollendefinitionen und Beschreibungen erstellt werden. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] bietet ein rollenbasiertes Autorisierungsmodell, das eine Reihe von vordefinierten Rollen enthält. Diese Rollen werden einmal in der Sprache erstellt, die Sie angeben. Rollennamen und Beschreibungen werden nie in einer anderen Sprache angezeigt, auch wenn Sie eine Verbindung zum Berichtsserver über einen Browser mit Kultur- oder Spracheinstellungen herstellen, die vom Server unterstützt werden. Mit der angegebenen Sprache wird außerdem die Sprache bestimmt, mit der der Name des Ordners Meine Berichte sowie die Benutzerordner erstellt werden, die Bestandteile der Funktion Meine Berichte sind.  
   
- **Server Modus**  
+ **Servermodus**  
  Eine Berichtsserver-Datenbank unterstützt entweder den einheitlichen Modus oder den integrierten SharePoint-Modus. Die Modi schließen sich gegenseitig aus.  
   
  Wenn Sie eine neue Berichtsserver-Datenbank erstellen, müssen Sie einen Modus angeben. Der ausgewählte Modus bestimmt die Struktur der Berichtsserver-Datenbank und legt die `SharePointIntegrated`-Systemeigenschaft des Berichtsservers auf `true` oder `false` fest.  

@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 15a177080792eb26273399f41aad577962885376
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952462"
 ---
 # <a name="report-server-status-ssrs-native-mode"></a>Berichtsserverstatus (einheitlicher SSRS-Modus)
@@ -31,8 +31,8 @@ ms.locfileid: "71952462"
   
  Wenn Sie eine Verbindung mit dem Berichtsserver herstellen und alle Seitenlinks ausgegraut sind, überprüfen Sie, ob der Berichtsserverdienst gestartet wurde. Der **Berichts Dienst Status** sollte "gestartet" lauten. Sie können den Dienststatus auch mithilfe der Konsolenanwendung Dienste in den Administratortools überprüfen.  
   
-## <a name="options"></a>Tastatur  
- **SQL Server-Instanz**  
+## <a name="options"></a>Optionen  
+ **SQL Server Instanz**  
  Zeigt Informationen zu der Berichtsserverinstanz an, mit der Sie derzeit verbunden sind. Die Namen von Berichtsserverinstanzen basieren auf benannten Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Der Name der Standardinstanz lautet MSSQLSERVER. Eine benannte Instanz ist ein Wert, den Sie während des Setups angegeben haben. Weitere Informationen zu-Instanzen finden Sie unter [Arbeiten mit mehreren Versionen und Instanzen von SQL Server](../../../2014/sql-server/install/work-with-multiple-versions-and-instances-of-sql-server.md) in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der-Online Dokumentation.  
   
 > [!NOTE]  
@@ -55,7 +55,7 @@ ms.locfileid: "71952462"
  **Produkt Version**  
  Zeigt die von Ihnen installierte Version von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] an.  
   
- **Berichts Server-Datenbank**  
+ **Berichtsserver-Datenbank**  
  Zeigt den Namen der Berichtsserver-Datenbank an, die Anwendungsdaten für die aktuelle Berichtsserverinstanz speichert.  
   
  **Berichtsserver-Modus**  
@@ -64,7 +64,7 @@ ms.locfileid: "71952462"
  **Server Status**  
  Zeigt an, ob der Berichtsserver-Dienst ausgeführt wird.  
   
- **Starten**  
+ **Start**  
  Startet den Berichtsserver-Dienst. Nach einigen Konfigurationsänderungen ist es erforderlich, den Dienst neu zu starten (z.&nbsp;B. wenn ein Berichtsserver nach der Änderung eines Computernamens neu konfiguriert wird). Wenn Sie die URL-Reservierungen neu konfigurieren, startet der Dienst automatisch neu. Der Neustart ist erforderlich, um die Änderungen zu übernehmen.  
   
  **Beenden**  
@@ -73,6 +73,6 @@ ms.locfileid: "71952462"
 ## <a name="see-also"></a>Weitere Informationen  
  [Konfigurations-Manager für Reporting Services F1-Hilfe Themen &#40;SSRS im einheitlichen Modus&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [Konfigurations-Manager für Reporting Services &#40;del-&#41;](/sql/sql-server/install/reporting-services-configuration-manager-native-mode)   
- [Initialisieren eines Berichtsservers &#40;SSRS-Konfigurations-Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
+ [Initialisieren eines Berichtsservers (SSRS-Konfigurations-Manager)](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

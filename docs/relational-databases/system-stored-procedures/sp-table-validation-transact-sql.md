@@ -16,10 +16,10 @@ ms.assetid: 31b25f9b-9b62-496e-a97e-441d5fd6e767
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 736b4f00e8d33a6bd1e095addc5219fe305ae26a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72173557"
 ---
 # <a name="sp_table_validation-transact-sql"></a>sp_table_validation (Transact-SQL)
@@ -63,11 +63,11 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @full_or_fast = ] full_or_fast`Die Methode, die zum Berechnen der Zeilen Anzahl verwendet wird. *full_or_fast* ist vom Datentyp **tinyint**. der Standardwert ist **2**. die folgenden Werte sind möglich.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**0**|Führt eine vollständige Zählung mit COUNT(*) durch.|  
 |**1**|Führt eine schnelle Anzahl von **sysindexes. Rows**aus. Das zählen von Zeilen in **sysindexes** ist wesentlich schneller als das zählen der Zeilen in der eigentlichen Tabelle. Da **sysindexes** jedoch verzögert aktualisiert wird, ist die Zeilen Anzahl möglicherweise nicht korrekt.|  
-|**2** (Standard)|Führt eine bedingte schnelle Zählung durch, indem zunächst versucht wird, die schnelle Methode anzuwenden. Ergeben sich mit der schnellen Methode Unterschiede, wird die Methode für die vollständige Zählung verwendet. Wenn *expected_rowcount* NULL ist und die gespeicherte Prozedur verwendet wird, um den Wert zu erhalten, wird immer eine vollständige Anzahl (*) verwendet.|  
+|**2** (Standardwert)|Führt eine bedingte schnelle Zählung durch, indem zunächst versucht wird, die schnelle Methode anzuwenden. Ergeben sich mit der schnellen Methode Unterschiede, wird die Methode für die vollständige Zählung verwendet. Wenn *expected_rowcount* NULL ist und die gespeicherte Prozedur verwendet wird, um den Wert zu erhalten, wird immer eine vollständige Anzahl (*) verwendet.|  
   
 `[ @shutdown_agent = ] shutdown_agent`Wenn die Verteilungs-Agent **sp_table_validation**ausgeführt wird, gibt an, ob die Verteilungs-Agent sofort nach Abschluss der Überprüfung heruntergefahren werden soll. *shutdown_agent* ist vom Typ **Bit**. der Standardwert ist **0**. Bei **0**wird der Replikations-Agent nicht heruntergefahren. Wenn der Wert **1**ist, wird Fehler 20578 ausgelöst, und der Replikations-Agent wird zum Herunterfahren signalisiert. Dieser Parameter wird ignoriert, wenn **sp_table_validation** direkt von einem Benutzer ausgeführt wird.  
   

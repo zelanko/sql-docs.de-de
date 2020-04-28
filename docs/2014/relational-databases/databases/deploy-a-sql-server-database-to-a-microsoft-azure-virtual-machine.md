@@ -43,10 +43,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c7d84fbe56d36bd91f2b7f8b49a3df73fb383c6e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70175737"
 ---
 # <a name="deploy-a-sql-server-database-to-a-microsoft-azure-virtual-machine"></a>Bereitstellen einer SQL Server-Datenbank auf einem virtuellen Microsoft Azure-Computer
@@ -54,7 +54,7 @@ ms.locfileid: "70175737"
   
  Sie können den Assistenten nicht für differenzielle Sicherungen verwenden, da der Assistent keine vorhandene Datenbank überschreibt, die denselben Datenbanknamen hat. Um eine vorhandene Datenbank auf der VM zu ersetzen, müssen Sie zuerst die vorhandene Datenbank löschen oder den Datenbanknamen ändern. Falls ein Namenskonflikt zwischen dem Datenbanknamen eines aktiven Bereitstellungsvorgangs und dem einer vorhandenen Datenbank auf der VM auftritt, schlägt der Assistent ein Namenssuffix für den Namen der bereitzustellenden Datenbank vor, sodass der Vorgang erfolgreich abgeschlossen werden kann.  
   
-##  <a name="before_you_begin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="before_you_begin"></a> Vorbereitungen  
  Für diesen Assistenten sind die folgenden Informationen und Konfigurationseinstellungen verfügbar sein:  
   
 -   Die Microsoft-Konto Details, die Ihrem Azure-Abonnement zugeordnet sind.  
@@ -92,7 +92,7 @@ ms.locfileid: "70175737"
   
 -   Aktivieren Sie JavaScript: Internet Explorer > Internetoptionen > Sicherheit > Stufe anpassen > Skripting > Active Scripting: **Aktivieren**.  
   
-###  <a name="limitations"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="limitations"></a> Einschränkungen  
  Die Datenbankgröße für diesen Vorgang ist auf 1 TB beschränkt.  
   
  Diese Bereitstellungsfunktion ist in SQL Server Management Studio für [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]verfügbar.  
@@ -119,14 +119,14 @@ ms.locfileid: "70175737"
   
  Falls ein Namenskonflikt zwischen dem Datenbanknamen eines aktiven Bereitstellungsvorgangs und dem einer vorhandenen Datenbank auf der VM auftritt, schlägt der Assistent ein Namenssuffix für den Namen der bereitzustellenden Datenbank vor, sodass der Vorgang erfolgreich abgeschlossen werden kann.  
   
-###  <a name="filestream"></a>Überlegungen zur Bereitstellung einer FILESTREAM-aktivierten Datenbank in einer Azure-VM  
+###  <a name="considerations-for-deploying-a-filestream-enabled-database-to-an-azure-vm"></a><a name="filestream"></a> Überlegungen zur Bereitstellung einer FILESTREAM-aktivierten Datenbank in einer Azure-VM  
  Beachten Sie die folgenden Richtlinien und Einschränkungen, wenn Sie Datenbanken bereitstellen, in denen BLOBs in FILESTREAM-Objekten gespeichert sind:  
   
 -   Die Bereitstellungsfunktion kann eine FILESTREAM-aktivierte Datenbank nicht in einer neuen VM bereitstellen. Wenn FILESTREAM vor dem Ausführen des Assistenten in der VM nicht aktiviert wurde, schlägt der Vorgang zur Datenbankwiederherstellung fehl, und der Assistentenvorgang kann nicht erfolgreich abgeschlossen werden. Um eine Datenbank, die FILESTREAM verwendet, erfolgreich bereitzustellen, aktivieren Sie FILESTREAM in der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auf der Host-VM, bevor Sie den Assistenten starten. Weitere Informationen finden Sie unter [FILESTREAM (SQL Server)](https://msdn.microsoft.com/library/gg471497.aspx).  
   
 -   Wenn die Datenbank In-Memory OLTP verwendet, können Sie die Datenbank ohne Änderungen an der Datenbank in einer Azure-VM bereitstellen. Weitere Informationen finden Sie unter [In-Memory OLTP (Speicheroptimierung)](https://msdn.microsoft.com/library/dn133186\(SQL.120\).aspx).  
   
-###  <a name="geography"></a>Überlegungen zur geografischen Verteilung von Assets  
+###  <a name="considerations-for-geographic-distribution-of-assets"></a><a name="geography"></a>Überlegungen zur geografischen Verteilung von Assets  
  Beachten Sie, dass sich die folgenden Ressourcen in der gleichen geografischen Region befinden müssen:  
   
 -   Clouddienst  
@@ -137,14 +137,14 @@ ms.locfileid: "70175737"
   
  Wenn sich die oben genannten Ressourcen nicht in derselben Region befinden, kann der Assistent nicht erfolgreich abgeschlossen werden.  
   
-###  <a name="configuration_settings"></a>Konfigurationseinstellungen des Assistenten  
+###  <a name="wizard-configuration-settings"></a><a name="configuration_settings"></a> Konfigurationseinstellungen des Assistenten  
  Verwenden Sie die folgenden Konfigurationsdetails, um die Einstellungen für eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Datenbankbereitstellung in einer Azure-VM zu ändern.  
   
--   **Standardpfad für die Konfigurationsdatei** :%localappdata%\SQL server\bereit Stellung in SQL in WA vm\deploymentsettings.XML  
+-   **Standardpfad für die Konfigurationsdatei** – %LOCALAPPDATA%\SQL Server\Deploy to SQL in WA VM\DeploymentSettings.xml  
   
 -   **Struktur der Konfigurationsdatei**  
   
-    -   \<Deploymentsettings->  
+    -   \<DeploymentSettings>  
   
         -   <OtherSettings  
   
@@ -164,15 +164,14 @@ ms.locfileid: "70175737"
   
             -   Publisher="" />  
   
-    -   
-  \</DeploymentSettings>  
+    -   \</DeploymentSettings>  
   
- **Werte der Konfigurationsdatei**  
+ **Konfigurationsdateiwerte**  
   
-###  <a name="permissions"></a> Berechtigungen  
+###  <a name="permissions"></a><a name="permissions"></a> Berechtigungen  
  Die bereitzustellende Datenbank muss sich in einem normalen Status befinden. Außerdem muss das Benutzerkonto, über das der Assistent ausgeführt wird, Zugriff auf die Datenbank haben und über die Berechtigung verfügen, einen Sicherungsvorgang auszuführen.  
   
-##  <a name="launch_wizard"></a>Verwenden des Assistenten zum Bereitstellen einer Datenbank auf Azure-VMS  
+##  <a name="using-the-deploy-database-to-azure-vm-wizard"></a><a name="launch_wizard"></a>Verwenden des Assistenten zum Bereitstellen einer Datenbank auf Azure-VMS  
  **Gehen Sie folgendermaßen vor, um den Assistenten zu starten:**  
   
 1.  Verbinden Sie die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe von SQL Server Management Studio mit der bereitzustellenden Datenbank.  
@@ -183,20 +182,20 @@ ms.locfileid: "70175737"
   
 
   
-##  <a name="Introduction"></a> Seite "Einführung"  
+##  <a name="introduction-page"></a><a name="Introduction"></a> Seite "Einführung"  
  Auf dieser Seite wird der Assistent zum Bereitstellen **einer SQL Server Datenbank in einer Azure-VM** beschrieben.  
   
  **Optionen**  
   
 -   **Diese Seite nicht mehr anzeigen.** – Aktivieren Sie dieses Kontrollkästchen, damit die Einführungsseite in Zukunft nicht mehr angezeigt wird.  
   
--   **Weiter** : geht zur Seite " **Quell Einstellungen** " über.  
+-   Durch**Weiter** gelangen Sie zur Seite **Quelleinstellungen** .  
   
--   **Abbrechen**: Bricht den Vorgang ab und schließt den Assistenten.  
+-   **Abbrechen** : bricht den Vorgang ab und schließt den Assistenten.  
   
 -   **Hilfe** : Hiermit wird das MSDN-Hilfethema für den Assistenten gestartet.  
   
-##  <a name="Source_settings"></a>Quell Einstellungen  
+##  <a name="source-settings"></a><a name="Source_settings"></a>Quell Einstellungen  
  Verwenden Sie diese Seite, um eine Verbindung mit [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Instanz von herzustellen, die die Datenbank hostet, die Sie der Azure-VM bereitstellen möchten. Außerdem geben Sie einen temporären Speicherort für Dateien an, die auf dem lokalen Computer gespeichert werden sollen, bevor Sie an Azure übertragen werden. Dies kann ein freigegebener Netzwerkspeicherort sein.  
   
  **Optionen**  
@@ -207,7 +206,7 @@ ms.locfileid: "70175737"
   
 -   Geben Sie im Feld **andere Einstellungen** einen freigegebenen Ordner an, auf den der Azure-VM-Dienst zugreifen kann.  
   
-##  <a name="Azure_sign-in"></a>Azure-Anmeldung  
+##  <a name="azure-sign-in"></a><a name="Azure_sign-in"></a>Azure-Anmeldung  
  Verwenden Sie diese Seite, um eine Verbindung mit Azure herzustellen und Verwaltungs Zertifikate bereitzustellen oder Profildetails zu veröffentlichen.  
   
  **Optionen**  
@@ -220,7 +219,7 @@ ms.locfileid: "70175737"
   
 -   **Abonnement** : Wählen Sie Ihre Azure-Abonnement-ID aus dem lokalen Zertifikat Speicher oder einem Veröffentlichungs Profil aus, geben Sie Sie ein, oder fügen Sie Sie ein.  
   
-##  <a name="Deployment_settings"></a>Seite mit Bereitstellungs Einstellungen  
+##  <a name="deployment-settings-page"></a><a name="Deployment_settings"></a>Seite mit Bereitstellungs Einstellungen  
  Auf dieser Seite können Sie den Zielserver angeben sowie Details zur neuen Datenbank bereitstellen.  
   
  **Optionen**  
@@ -241,12 +240,12 @@ ms.locfileid: "70175737"
   
 -   **Datenbank** : Geben Sie den Namen einer neuen Datenbank an, oder bestätigen Sie Sie. Wenn der Datenbankname auf der SQL Server-Zielinstanz bereits vorhanden ist, wird empfohlen, einen anderen Datenbanknamen anzugeben.  
   
-##  <a name="Summary"></a> Seite "Zusammenfassung"  
+##  <a name="summary-page"></a><a name="Summary"></a> Seite "Zusammenfassung"  
  Auf dieser Seite können Sie die für den Vorgang angegebenen Einstellungen überprüfen. Klicken Sie auf **Fertig stellen**, um den Bereitstellungsvorgang mithilfe der angegebenen Einstellungen abzuschließen. Klicken Sie auf **Abbrechen**, um den Bereitstellungsvorgang abzubrechen und den Assistenten zu beenden.  
   
  Möglicherweise sind manuelle Schritte erforderlich, um Daten Bank Details in der SQL Server-Datenbank auf der Azure-VM bereitzustellen. Diese Schritte werden detailliert für Sie beschriebenen.  
   
-##  <a name="Results"></a> Ergebnisse (Seite)  
+##  <a name="results-page"></a><a name="Results"></a>Seite "Ergebnisse"  
  Auf dieser Seite wird angegeben, ob der Bereitstellungsvorgang erfolgreich war oder ob dabei Fehler auftraten, dabei werden die Ergebnisse jeder Aktion angezeigt. Für alle Aktionen, die fehlerhaft waren, wird dies in der Spalte **Ergebnis** entsprechend angezeigt. Klicken Sie auf den Link, um einen Bericht des für diese Aktion aufgetretenen Fehlers anzuzeigen.  
   
  Klicken Sie auf **Fertig stellen**, und beenden Sie den Assistenten.  

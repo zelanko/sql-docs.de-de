@@ -18,10 +18,10 @@ ms.assetid: 2adcac78-4a4a-407e-9666-1d9c43c73cc2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4b6adc5f6c02eae49a5f5e2598c6b02e5b00534e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70211266"
 ---
 # <a name="sysmail_delete_account_sp-transact-sql"></a>sysmail_delete_account_sp (Transact-SQL)
@@ -41,7 +41,7 @@ sysmail_delete_account_sp { [ @account_id = ] account_id | [ @account_name = ] '
 ## <a name="arguments"></a>Argumente  
 `[ @account_id = ] account_id`Die ID-Nummer des zu löschenden Kontos. *account_id* ist vom Datentyp **int**und hat keinen Standardwert. Es muss entweder *account_id* oder *account_name* angegeben werden.  
   
-`[ @account_name = ] 'account_name'`Der Name des zu löschenden Kontos. *account_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. Es muss entweder *account_id* oder *account_name* angegeben werden.  
+`[ @account_name = ] 'account_name'`Der Name des zu löschenden Kontos. *account_name* ist vom Datentyp **sysname**und hat keinen Standardwert. Es muss entweder *account_id* oder *account_name* angegeben werden.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  

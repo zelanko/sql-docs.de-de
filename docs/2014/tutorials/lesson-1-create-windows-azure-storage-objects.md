@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 53fcba3401a6798fb865613470ba78aa05e9b6dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70176106"
 ---
-# <a name="lesson-1-create-azure-storage-objects"></a>Lektion 1: Erstellen von Azure Storage-Objekten
+# <a name="lesson-1-create-azure-storage-objects"></a>Lektion 1: Erstellen von Azure Storage-Objekten
   Bevor Sie [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Sicherungen im Cloudspeicher erstellen, müssen Sie zunächst ein Speicherkonto und dann einen BLOB-Container erstellen. Lektion 1 führt Sie durch die Schritte zum Anmelden beim Azure-Verwaltungsportal und zum Erstellen eines Speicher Kontos und eines BLOB-Containers.  
   
 ## <a name="create-a-storage-account"></a>Erstellen eines Speicherkontos  
@@ -29,8 +29,7 @@ ms.locfileid: "70176106"
   
 2.  Führen Sie die [hier](https://go.microsoft.com/fwlink/?LinkId=271926)beschriebenen schrittweisen Anweisungen aus, um ein Speicherkonto zu erstellen.  
   
-3.  Navigieren Sie zu dem Speicherkonto, das Sie im vorherigen Schritt erstellt haben. Klicken Sie unten in der Mitte der Webseite auf **Schlüssel verwalten**. Die Kontoinformationen werden angezeigt. Kopieren Sie den Speicherkontonamen und die Zugriffsschlüssel. Diese Informationen sind erforderlich, um gespeicherte SQL-Anmeldeinformation zu erstellen. 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet diese Informationen, um auf das Speicherkonto zuzugreifen und Sicherungen zu erstellen.  
+3.  Navigieren Sie zu dem Speicherkonto, das Sie im vorherigen Schritt erstellt haben. Klicken Sie unten in der Mitte der Webseite auf **Schlüssel verwalten**. Die Kontoinformationen werden angezeigt. Kopieren Sie den Speicherkontonamen und die Zugriffsschlüssel. Diese Informationen sind erforderlich, um gespeicherte SQL-Anmeldeinformation zu erstellen. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] verwendet diese Informationen, um auf das Speicherkonto zuzugreifen und Sicherungen zu erstellen.  
   
      ![Screenshot der Azure Storage Kontoschlüssel](../../2014/tutorials/media/manageaccesskeys-backuptocloud.gif "Screenshot der Azure Storage Kontoschlüssel")  
   
@@ -38,7 +37,7 @@ ms.locfileid: "70176106"
     >  Sie können ein Speicherkonto mithilfe von REST-APIs auch programmgesteuert erstellen. Weitere Informationen finden Sie unter [Erstellen eines Speicher Kontos](https://go.microsoft.com/fwlink/?LinkId=271928).  
   
 ### <a name="create-a-blob-container"></a>Erstellen eines BLOB-Containers  
- Ein Container dient zum Gruppieren mehrerer Blobs. Alle BLOBs müssen sich in Containern befinden. Die Anzahl der Container für ein Konto ist unbegrenzt, muss jedoch mindestens 1 betragen. In einem Container kann eine beliebige Anzahl von BLOBs gespeichert sein.  
+ Ein Container stellt eine Gruppierung eines Blob-Satzes bereit. Alle BLOBs müssen sich in einem Container befinden. Die Anzahl der Container für ein Konto ist unbegrenzt, muss jedoch mindestens 1 betragen. In einem Container kann eine unbegrenzte Anzahl von BLOBs gespeichert werden.  
   
  Führen Sie die folgenden Schritte aus, um einen Container zu erstellen:  
   

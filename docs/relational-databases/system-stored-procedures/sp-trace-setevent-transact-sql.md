@@ -18,10 +18,10 @@ ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f622f7d7097afd66a87b8ad90280e19ac3ea40de
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305300"
 ---
 # <a name="sp_trace_setevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
@@ -81,7 +81,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |36|SP:CacheRemove|Zeigt an, dass ein Element aus dem Prozedurcache entfernt wurde.|  
 |37|SP:Recompile|Zeigt an, dass eine gespeicherte Prozedur neu kompiliert wurde.|  
 |38|SP:CacheHit|Zeigt an, dass eine gespeicherte Prozedur im Prozedurcache gefunden wurde.|  
-|11,9|Veraltet|Veraltet|  
+|39|Als veraltet markiert|Als veraltet markiert|  
 |40|SQL:StmtStarting|Tritt auf, wenn eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung gestartet wurde.|  
 |41|SQL:StmtCompleted|Tritt auf, wenn eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Anweisung abgeschlossen wurde.|  
 |42|SP:Starting|Zeigt an, dass eine gespeicherte Prozedur gestartet wurde.|  
@@ -245,11 +245,11 @@ sp_trace_setevent [ @traceid = ] trace_id
 |1|**TextData**|Ein Textwert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wird.|  
 |2|**BinaryData**|Binärer Wert, der von der Ereignisklasse abhängt, die in der Ablaufverfolgung aufgezeichnet wird.|  
 |3|**DatabaseID**|Die ID der Datenbank, die durch die use *Database* -Anweisung angegeben wird, oder die Standarddatenbank, wenn für eine bestimmte Verbindung keine use *Database* -Anweisung ausgegeben wird.<br /><br /> Der Wert für eine Datenbank kann mithilfe der DB_ID-Funktion bestimmt werden.|  
-|4|**TransactionId**|Die vom System zugewiesene ID der Transaktion.|  
+|4|**TransactionID**|Die vom System zugewiesene ID der Transaktion.|  
 |5|**LineNumber**|Enthält die Nummer der Zeile mit dem Fehler. Für Ereignisse, an denen [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen beteiligt sind, wie z. B. **SP:StmtStarting**, enthält der Wert von **LineNumber** die Zeilennummer der Anweisung in der gespeicherten Prozedur oder dem Batch.|  
 |6|**NTUserName**|Der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Benutzername.|  
 |7|**NTDomainName**|Windows-Domäne, zu der der Benutzer gehört.|  
-|8|**Hostname**|Der Name des Clientcomputers, von dem die Anforderung stammt.|  
+|8|**HostName**|Der Name des Clientcomputers, von dem die Anforderung stammt.|  
 |9|**ClientProcessID**|Die ID, die vom Clientcomputer dem Prozess zugewiesen wird, in dem die Clientanwendung ausgeführt wird.|  
 |10|**ApplicationName**|Name der Clientanwendung, die die Verbindung mit einer Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]hergestellt hat. Diese Spalte wird mit den Werten aufgefüllt, die von der Anwendung übergeben werden, und nicht mit dem angezeigten Namen des Programms.|  
 |11|**LoginName**|Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Anmeldename des Clients.|  
@@ -261,37 +261,37 @@ sp_trace_setevent [ @traceid = ] trace_id
 |17|**Schreibvorgänge**|Die Anzahl physischer Schreibvorgänge auf dem Datenträger, die vom Server aufgrund des Ereignisses ausgeführt werden.|  
 |18|**CPU**|Die CPU-Zeit (in Millisekunden), die vom Ereignis verwendet wurde.|  
 |19|**Berechtigungen**|Stellt die Bitmap der Berechtigungen dar; wird von Security Auditing verwendet.|  
-|20|**severity**|Schweregrad einer Ausnahme.|  
+|20|**Schweregrad**|Schweregrad einer Ausnahme.|  
 |21|**EventSubClass**|Der Typ der Ereignisunterklasse. Diese Datenspalte wird nicht für alle Ereignisklassen aufgefüllt.|  
 |22|**ObjectID**|Vom System zugewiesene ID des Objekts.|  
-|23|**Erfolgreich**|Erfolg der Berechtigungsverwendung; wird für die Überwachung verwendet.<br /><br /> **1** = Erfolg**0** = Fehler|  
+|23|**Success**|Erfolg der Berechtigungsverwendung; wird für die Überwachung verwendet.<br /><br /> **1** = Erfolg**0** = Fehler|  
 |24|**IndexID**|ID für den Index des Objekts, das von dem Ereignis betroffen ist. Sie können die Index-ID für ein Objekt mithilfe der **indid** -Spalte der **sysindexes** -Systemtabelle ermitteln.|  
 |25|**IntegerData**|Wert für eine ganze Zahl, der von der in der Ablaufverfolgung erfassten Ereignisklasse abhängt.|  
-|26|**Servername**|Der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], entweder *Server* Name oder *Servername\Instanzname*, für die eine Ablauf Verfolgung ausgeführt wird.|  
+|26|**ServerName**|Der Name der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], entweder *Server* Name oder *Servername\Instanzname*, für die eine Ablauf Verfolgung ausgeführt wird.|  
 |27|**EventClass**|Typ der aufgezeichneten Ereignisklasse.|  
 |28|**ObjectType**|Der Typ des Objekts, z. B. Tabelle, Funktion oder gespeicherte Prozedur.|  
-|29|**NESTLEVEL**|Die Schachtelungsebene, auf der diese gespeicherte Prozedur ausgeführt wird. Weitere Informationen finden Sie unter [@@NESTLEVEL &#40;Transact-SQL-&#41;](../../t-sql/functions/nestlevel-transact-sql.md).|  
+|29|**NestLevel**|Die Schachtelungsebene, auf der diese gespeicherte Prozedur ausgeführt wird. Weitere Informationen finden Sie unter [@@NESTLEVEL &#40;Transact-SQL-&#41;](../../t-sql/functions/nestlevel-transact-sql.md).|  
 |30|**State**|Der Serverstatus im Fall eines Fehlers.|  
 |31|**Fehler**|Fehlernummer.|  
 |32|**Mode**|Der Sperrmodus der aktivierten Sperre. Diese Spalte wird nicht durch das **Lock: Released** -Ereignis aufgefüllt.|  
-|33|**Bewältigen**|Das Handle des Objekts, auf das im Ereignis verwiesen wird.|  
+|33|**Handle**|Das Handle des Objekts, auf das im Ereignis verwiesen wird.|  
 |34|**ObjectName**|Der Name des Objekts, auf das zugegriffen wird.|  
 |35|**DatabaseName**|Der Name der Datenbank, die in der use *Database* -Anweisung angegeben ist.|  
-|36|**Einfügen**|Der logische Name für den Dateinamen, der geändert wird.|  
+|36|**FileName**|Der logische Name für den Dateinamen, der geändert wird.|  
 |37|**OwnerName**|Der Name des Besitzers des Objekts, auf das verwiesen wird.|  
 |38|**RoleName**|Der Name der Datenbankrolle oder der serverweiten Rolle, die Ziel einer Anweisung ist.|  
-|11,9|**Targetusername**|Der Benutzername des Ziels einer Aktion.|  
-|40|**Dbusername**|Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankbenutzername des Clients.|  
-|41|**LoginSID**|Die Sicherheits-ID (Security Identifier, SID) des angemeldeten Benutzers.|  
-|42|**Targetloginname**|Der Anmeldename des Ziels einer Aktion.|  
-|43|**Targetloginsid**|Die SID des Anmeldenamens, der Ziel einer Aktion ist.|  
-|44|**Collectionobjekt**|Berechtigungsstatus auf Spaltenebene; wird von Security Auditing verwendet.|  
+|39|**TargetUserName**|Der Benutzername des Ziels einer Aktion.|  
+|40|**DBUserName**|Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbankbenutzername des Clients.|  
+|41|**LoginSid**|Die Sicherheits-ID (Security Identifier, SID) des angemeldeten Benutzers.|  
+|42|**TargetLoginName**|Der Anmeldename des Ziels einer Aktion.|  
+|43|**TargetLoginSid**|Die SID des Anmeldenamens, der Ziel einer Aktion ist.|  
+|44|**ColumnPermissions**|Berechtigungsstatus auf Spaltenebene; wird von Security Auditing verwendet.|  
 |45|**LinkedServerName**|Name des Verbindungsservers|  
 |46|**ProviderName**|Name des OLE DB-Anbieters.|  
 |47|**MethodName**|Der Name der OLE DB-Methode.|  
-|48|**Zeilen Anzahl**|Die Anzahl von Zeilen im Batch.|  
+|48|**RowCounts**|Die Anzahl von Zeilen im Batch.|  
 |49|**RequestId**|Die ID der Anforderung, die die Anweisung enthält.|  
-|50|**Xactsequence**|Ein Token zur Beschreibung der aktuellen Transaktion.|  
+|50|**XactSequence**|Ein Token zur Beschreibung der aktuellen Transaktion.|  
 |51|**EventSequence**|Die Sequenznummer für dieses Ereignis.|  
 |52|**BigintData1**|der **bigint** -Wert, der von der Ereignisklasse abhängt, die in der Ablauf Verfolgung aufgezeichnet wurde.|  
 |53|**BigintData2**|der **bigint** -Wert, der von der Ereignisklasse abhängt, die in der Ablauf Verfolgung aufgezeichnet wurde.|  
@@ -302,10 +302,10 @@ sp_trace_setevent [ @traceid = ] trace_id
 |58|**OwnerID**|Der Typ des Objekts, das die Sperre besitzt. Nur für Sperrereignisse.|  
 |59|**ParentName**|Der Name des Schemas, in dem sich das Objekt befindet.|  
 |60|**IsSystem**|Gibt an, ob das Ereignis bei einem Systemprozess oder einem Benutzerprozess aufgetreten ist.<br /><br /> **1** = System<br /><br /> **0** = Benutzer.|  
-|61|**Kompensieren**|Der Startoffset der Anweisung in der gespeicherten Prozedur oder im Batch.|  
-|62|**Sourcedatabaseid**|Die ID der Datenbank, in der sich die Quelle des Objekts befindet.|  
-|63|**SqlHandle**|64-Bit-Hash, der auf dem Text einer Ad-hoc-Abfrage oder der Datenbank- und Objekt-ID eines SQL-Objekts basiert. Dieser Wert kann an **sys.dm_exec_sql_text()** übergeben werden, um den dazugehörigen SQL-Text abzurufen.|  
-|64|**Ausführen**|Anmeldename des Benutzers, der die Sitzung geöffnet hat. Wenn Sie beispielsweise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **verwenden, um eine Verbindung mit** herzustellen, und eine Anweisung als **Login2**ausführen, zeigt **SessionLoginName** den Wert **Login1**an und **LoginName** den Wert **Login2**. In dieser Datenspalte werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - und Windows-Anmeldenamen angezeigt.|  
+|61|**Offset**|Der Startoffset der Anweisung in der gespeicherten Prozedur oder im Batch.|  
+|62|**SourceDatabaseID**|Die ID der Datenbank, in der sich die Quelle des Objekts befindet.|  
+|63|**SqlHandle**|64-Bit-Hash, der auf dem Text einer Ad-hoc-Abfrage oder der Datenbank- und Objekt-ID eines SQL-Objekts basiert. Dieser Wert kann an **sys. dm_exec_sql_text ()** übermittelt werden, um den zugehörigen SQL-Text abzurufen.|  
+|64|**SessionLoginName**|Anmeldename des Benutzers, der die Sitzung geöffnet hat. Wenn Sie beispielsweise [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Login1 **verwenden, um eine Verbindung mit** herzustellen, und eine Anweisung als **Login2**ausführen, zeigt **SessionLoginName** den Wert **Login1**an und **LoginName** den Wert **Login2**. In dieser Datenspalte werden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] - und Windows-Anmeldenamen angezeigt.|  
   
  **[ @on=]** *auf*  
  Gibt an, ob das Ereignis auf ON (1) oder OFF (0) festgelegt werden soll. *on ist vom* Typ **Bit**und hat keinen Standardwert.  
@@ -329,7 +329,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |Rückgabecode|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |0|Kein Fehler.|  
-|1|Unknown error. (Unbekannter Fehler.)|  
+|1|Unbekannter Fehler.|  
 |2|Die Ablaufverfolgung wird derzeit ausgeführt. Wenn die Ablaufverfolgung jetzt geändert wird, hat dies einen Fehler zur Folge.|  
 |3|Das angegebene Ereignis ist ungültig. Das Ereignis ist möglicherweise nicht vorhanden oder nicht für die gespeicherte Prozedur geeignet.|  
 |4|Die angegebene Spalte ist ungültig.|  
@@ -358,9 +358,9 @@ sp_trace_setevent [ @traceid = ] trace_id
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sys. fn_trace_geteventinfo &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [sys. fn_trace_getinfo &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [sp_trace_generateevent &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [Ereignisklassen in SQL Server: Referenz](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
+ [SQL Server-Ereignis Klassenreferenz](../../relational-databases/event-classes/sql-server-event-class-reference.md)   
  [SQL-Ablaufverfolgung](../../relational-databases/sql-trace/sql-trace.md)  
   
   

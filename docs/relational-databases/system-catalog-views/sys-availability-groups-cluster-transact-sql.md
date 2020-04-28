@@ -22,10 +22,10 @@ ms.assetid: d0f4683f-cdf0-4227-8b68-720ffe58f158
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: a9ca998a0b65fff44e71549d1dae879d73288dfb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874272"
 ---
 # <a name="sysavailability_groups_cluster-transact-sql"></a>sys.availability_groups_cluster (Transact-SQL)
@@ -37,12 +37,12 @@ ms.locfileid: "70874272"
 |-----------------|---------------|-----------------|  
 |**group_id**|**uniqueidentifier**|Eindeutiger Bezeichner (GUID) der Verfügbarkeitsgruppe.|  
 |**name**|**sysname**|Der Name der Verfügbarkeitsgruppe. Dies ist ein vom Benutzer angegebener Name, der innerhalb des Windows Server-Failoverclusters (WSFC) eindeutig sein muss.|  
-|**resource_id**|**nvarchar (40)**|Ressourcen-ID für die WSFC-Clusterressource.|  
-|**resource_group_id**|**nvarchar (40)**|Ressourcengruppen-ID für die WSFC-Clusterressourcengruppe der Verfügbarkeitsgruppe.|  
+|**resource_id**|**nvarchar(40)**|Ressourcen-ID für die WSFC-Clusterressource.|  
+|**resource_group_id**|**nvarchar(40)**|Ressourcengruppen-ID für die WSFC-Clusterressourcengruppe der Verfügbarkeitsgruppe.|  
 |**failure_condition_level**|**int**|Benutzerdefinierte Fehlerbedingungsebene, unter der ein automatisches Failover ausgelöst werden muss, einer der folgenden ganzzahligen Werte:<br /><br /> 1: gibt an, dass ein automatisches Failover initiiert werden soll, wenn eine der folgenden Aktionen auftritt: <br />-Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Dienst ist herunter.<br />-Die Lease der Verfügbarkeits Gruppe für die Verbindung mit dem wsfc-Failovercluster läuft ab, da keine ACK von der Serverinstanz empfangen wird. Weitere Informationen finden Sie unter [How It Works: SQL Server AlwaysOn Lease Timeout](https://blogs.msdn.com/b/psssql/archive/2012/09/07/how-it-works-sql-server-Always%20On-lease-timeout.aspx).<br /><br /> 2: gibt an, dass ein automatisches Failover initiiert werden soll, wenn eine der folgenden Aktionen auftritt:  <br />-Die Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt keine Verbindung mit dem Cluster her, und der vom Benutzer angegebene **health_check_timeout** Schwellenwert der Verfügbarkeits Gruppe wurde überschritten. <br />-Das Verfügbarkeits Replikat weist einen fehlerhaften Status auf. <br />3: gibt an, dass ein automatisches Failover bei kritischen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internen Fehlern initiiert werden soll, z. b. verwaisten Spinlocks, ernsthaften Schreibzugriffs Verletzungen oder zu viel Absicherungen. Dies ist der Standardwert. <br />4: gibt an, dass ein automatisches Failover bei mittleren [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internen Fehlern initiiert werden soll, z. b. bei einem permanenten Speichermangel im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] internen Ressourcenpool.<br />5: gibt an, dass ein automatisches Failover für alle qualifizierten Fehlerbedingungen initiiert werden soll, einschließlich:<br />-Erschöpfung der SQL-Engine-Arbeitsthreads. <br />-Erkennung eines nicht lösbaren Deadlocks.<br /><br /> Die Fehlerbedingungsebenen (1–5) reichen von der Ebene 1 mit den wenigsten Einschränkungen bis zur Ebene 5 mit den meisten Einschränkungen. Jede Bedingungsebene umfasst stets auch sämtliche weniger restriktiven Ebenen. Daher schließt die strengste Bedingungsebene 5 die vier Bedingungsebenen mit weniger Einschränkungen (1-4) ein, Ebene 4 schließt die Ebenen 1-3 ein usw.<br /><br /> Um diesen Wert zu ändern, verwenden Sie die FAILURE_CONDITION_LEVEL-Option der [Alter Availability Group](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung.|  
 |**health_check_timeout**|**int**|Die Wartezeit (in Millisekunden), mit der die gespeicherte Prozedur des [sp_server_diagnostics](../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) Servers Server Zustandsinformationen zurückgibt, bevor davon ausgegangen wird, dass die Serverinstanz langsam ist oder nicht antwortet. Der Standardwert ist 30000 Millisekunden (oder 30 Sekunden).<br /><br /> Um diesen Wert zu ändern, verwenden Sie die HEALTH_CHECK_TIMEOUT-Option der [Alter Availability Group](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisung.|  
 |**automated_backup_preference**|**tinyint**|Bevorzugter Speicherort zum Durchführen von Sicherungen auf den Verfügbarkeitsdatenbanken in dieser Verfügbarkeitsgruppe. Einer der folgenden Werte:<br /><br /> 0: primär. Sicherungen sollten immer auf dem primären Replikat erfolgen.<br />1: nur sekundär. Die Durchführung von Sicherungen auf einem sekundären Replikat wird bevorzugt.<br />2: Sekundär bevorzugen. Die Durchführung von Sicherungen auf einem sekundären Replikat wird bevorzugt, aber die Durchführung von Sicherungen auf dem primären Replikat wird akzeptiert, wenn kein sekundäres Replikat für Sicherungsvorgänge verfügbar ist. Dies ist das Standardverhalten.<br />3: beliebiges Replikat. Keine Präferenz, ob Sicherungen auf dem primären Replikat oder einem sekundären Replikat durchgeführt werden.<br /><br /> Weitere Informationen finden Sie unter [Aktive sekundäre Replikate: Sicherung auf sekundären Replikaten &#40;Always On-Verfügbarkeitsgruppen&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md)wichtig sind.|  
-|**automated_backup_preference_desc**|**nvarchar (60)**|Beschreibung der **automated_backup_preference**, eine der folgenden:<br /><br /> PRIMARY<br /><br /> SECONDARY_ONLY<br /><br /> SECONDARY<br /><br /> Keine|  
+|**automated_backup_preference_desc**|**nvarchar(60)**|Beschreibung der **automated_backup_preference**, eine der folgenden:<br /><br /> PRIMARY<br /><br /> SECONDARY_ONLY<br /><br /> SECONDARY<br /><br /> Keine|  
   
 ## <a name="security"></a>Sicherheit  
   
@@ -51,8 +51,8 @@ ms.locfileid: "70874272"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sys. availability_replicas &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-availability-replicas-transact-sql.md)   
- [Always On-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
- [Überwachen von Verfügbarkeitsgruppen (Transact-SQL)](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
+ [Always on Verfügbarkeits Gruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
+ [Überwachen von Verfügbarkeits Gruppen &#40;Transact-SQL-&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)   
  [Überwachen von Verfügbarkeitsgruppen &#40;Transact-SQL&#41;](../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  
   
   

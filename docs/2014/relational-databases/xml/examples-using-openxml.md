@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 61c5fc1cb0692d22f110958b894ac2eb7c2af4cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70874688"
 ---
 # <a name="examples-using-openxml"></a>Beispiele: Verwenden von OPENXML
@@ -95,8 +95,7 @@ LILAS      Carlos Gonzlez
   
  Da die <`Customer`>-Elemente keinerlei Unterelemente besitzen, werden die Werte von *CustomerID* und **ContactName** für beide Kunden als NULL zurückgegeben, wenn dieselbe SELECT-Anweisung mit auf den Wert **2** gesetztem **flags**-Parameter ausgeführt wird, um die elementzentrierte Zuordnung anzuzeigen.  
   
- 
-  @xmlDocument kann auch vom Typ **xml** oder **(n)varchar(max)** sein.  
+ @xmlDocument kann auch vom Typ **xml** oder **(n)varchar(max)** sein.  
   
  Wenn <`CustomerID`> und <`ContactName`> im XML-Dokument Unterelemente sind, ruft die elementzentrierte Zuordnung die Werte ab.  
   

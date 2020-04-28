@@ -18,10 +18,10 @@ ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ab825ce5eb1310f3ff502965e409731b8741932e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305135"
 ---
 # <a name="sp_addtype-transact-sql"></a>sp_addtype (Transact-SQL)
@@ -50,12 +50,12 @@ sp_addtype [ @typename = ] type,
   
 ||||  
 |-|-|-|  
-|**BIGINT**|**binary(n)**|**bit**|  
-|**char(n)**|**datetime**|**Decimal**|  
-|**float**|**Klang**|**int**|  
-|**money**|**nchar(n)**|**ntext**|  
-|**isch**|**nvarchar(n)**|**wirkliche**|  
-|**smalldatetime**|**smallint**|**SMALLMONEY**|  
+|**bigint**|**binary(n)**|**bit**|  
+|**char(n)**|**datetime**|**decimal**|  
+|**float**|**image**|**int**|  
+|**money**|**NCHAR (n)**|**ntext**|  
+|**numeric**|**nvarchar (n)**|**real**|  
+|**smalldatetime**|**smallint**|**smallmoney**|  
 |**sql_variant**|**text**|**tinyint**|  
 |**uniqueidentifier**|**varbinary(n)**|**varchar(n)**|  
   
@@ -64,7 +64,7 @@ sp_addtype [ @typename = ] type,
  *n*  
  Eine nicht negative ganze Zahl, die die Länge für den ausgewählten Datentyp angibt.  
   
- *Cker*  
+ *P*  
  Eine nicht negative ganze Zahl, die die maximale Anzahl der Dezimalstellen angibt, die vor und nach dem Dezimalzeichen gespeichert werden können. Weitere Informationen finden Sie unter [decimal und numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md).  
   
  *Hymnen*  
@@ -135,11 +135,11 @@ GO
  [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [Create Type &#40;Transact-SQL-&#41;](../../t-sql/statements/create-type-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
- [Erstellen einer Regel &#40;Transact-SQL-&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
+ [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [sp_bindefault &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-bindefault-transact-sql.md)   
  [sp_bindrule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
  [sp_droptype &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-droptype-transact-sql.md)   
- [sp_rename &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
+ [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)   
  [sp_unbindefault &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-unbindefault-transact-sql.md)   
  [sp_unbindrule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-unbindrule-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

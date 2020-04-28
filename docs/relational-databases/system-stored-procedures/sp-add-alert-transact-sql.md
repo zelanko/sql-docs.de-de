@@ -18,10 +18,10 @@ ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 848f3cffb3c05f16b339233c89892396b5443e4f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71174257"
 ---
 # <a name="sp_add_alert-transact-sql"></a>sp_add_alert (Transact-SQL)
@@ -79,7 +79,7 @@ sp_add_alert [ @name = ] 'name'
 > [!IMPORTANT]
 >  Die Pager-und **net send** -Optionen werden in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] einer zukünftigen Version von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]aus dem-Agent entfernt. Nutzen Sie diese Funktionen bei Neuentwicklungen nicht mehr, und planen Sie die Änderung von Anwendungen, die diese Funktionen zurzeit verwenden.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**0**|Keine|  
 |**1**|E-Mail|  
@@ -103,7 +103,7 @@ sp_add_alert [ @name = ] 'name'
   
 |Format-Element|BESCHREIBUNG|  
 |--------------------|-----------------|  
-|*Element*|Ein Leistungsobjekt, ein Leistungsindikator oder die benannte Instanz des Indikators|  
+|*Position*|Ein Leistungsobjekt, ein Leistungsindikator oder die benannte Instanz des Indikators|  
 |*Vergleichs Operator*|Einer dieser Operatoren: >, < oder =|  
 |*Wert*|Numerischer Wert des Indikators|  
   
@@ -132,8 +132,7 @@ sp_add_alert [ @name = ] 'name'
   
 -   Alle mit **xp_logevent** protokollierten Ereignisse  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] lässt sich das gesamte Warnungssystem auf einfache Weise mit einer grafischen Oberfläche verwalten. Dies ist die empfohlene Vorgehensweise, um eine Warnungsinfrastruktur zu konfigurieren.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] lässt sich das gesamte Warnungssystem auf einfache Weise mit einer grafischen Oberfläche verwalten. Dies ist die empfohlene Vorgehensweise, um eine Warnungsinfrastruktur zu konfigurieren.  
   
  Überprüfen Sie die folgenden Punkte, wenn eine Warnung nicht ordnungsgemäß funktioniert:  
   
@@ -143,7 +142,7 @@ sp_add_alert [ @name = ] 'name'
   
 -   Die Warnung ist aktiviert.  
   
--   Ereignisse, die mit **xp_logevent** generiert werden, treten in der master-Datenbank auf. Daher wird von **xp_logevent** erst dann eine Warnung ausgelöst, wenn der **\@database_name**-Wert für die Warnung den Wert **'master'** oder NULL aufweist.  
+-   Ereignisse, die mit **xp_logevent** generiert werden, treten in der master-Datenbank auf. Daher löst **xp_logevent** nur dann eine Warnung aus, wenn der ** \@database_name** für die Warnung **"Master"** oder NULL ist.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Standardmäßig können nur Mitglieder der festen Serverrolle **sysadmin** die Prozedur **sp_add_alert**ausführen.  

@@ -18,10 +18,10 @@ ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7752b8fcb453f545c357c529774d570e41201ed1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72381909"
 ---
 # <a name="sp_add_job-transact-sql"></a>sp_add_job (Transact-SQL)
@@ -73,12 +73,12 @@ sp_add_job [ @job_name = ] 'job_name'
   
 `[ @notify_level_eventlog = ] eventlog_level`Ein Wert, der angibt, wann für diesen Auftrag ein Eintrag in das Microsoft Windows-Anwendungsprotokoll platziert werden soll. *eventlog_level*ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**0**|Nie|  
 |**1**|Bei Erfolg|  
-|**2** (Standard)|Bei Fehler|  
-|**€**|Always|  
+|**2** (Standardwert)|Bei Fehler|  
+|**3**|Always|  
   
 `[ @notify_level_email = ] email_level`Ein Wert, der angibt, wann nach Abschluss dieses Auftrags eine e-Mail gesendet werden soll. *email_level*ist vom Datentyp **int**und hat den Standardwert **0**. Dies bedeutet nie. *email_level*verwendet die gleichen Werte wie *eventlog_level*.  
   
@@ -112,8 +112,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  Wenn der Auftrag auf einem oder mehreren Ziel Servern in einer Multiserverumgebung ausgeführt wird, verwenden Sie **sp_apply_job_to_targets** , um die Zielserver oder Zielserver Gruppen für den Auftrag festzulegen. Verwenden Sie **sp_remove_job_from_targets**, um Aufträge von Ziel Servern oder Zielserver Gruppen zu entfernen.  
   
- 
-  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Aufträge problemlos mithilfe einer grafischen Oberfläche verwaltet werden. Dies ist die empfohlene Vorgehensweise für die Erstellung und Verwaltung der Auftragsinfrastruktur.  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] können Aufträge problemlos mithilfe einer grafischen Oberfläche verwaltet werden. Dies ist die empfohlene Vorgehensweise für die Erstellung und Verwaltung der Auftragsinfrastruktur.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Zum Ausführen dieser gespeicherten Prozedur müssen Benutzer ein Mitglied der festen Server Rolle **sysadmin** oder eine der folgenden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] festen Daten bankrollen des-Agents haben, die sich in der **msdb** -Datenbank befinden:  

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 75c3bda5d15e3930fcdeba9ca73d70128fd90336
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952061"
 ---
 # <a name="reporting-services-upgrade-issues-upgrade-advisor"></a>Upgradeprobleme bei Reporting Services (Upgrade Advisor)
@@ -34,8 +34,7 @@ ms.locfileid: "71952061"
  In den folgenden Themen werden bekannte Probleme beschrieben, die vom Updateratgeber gemeldet werden. Außerdem wird erläutert, wie Sie die vorhandene Installation ändern können, um ein Upgrade zuzulassen.  
   
 > [!IMPORTANT]  
->  Upgrade Advisor muss auf dem Berichtsserver installiert werden, um eine Instanz von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] zu analysieren. 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unterstützt keine Remoteanalyse.  
+>  Upgrade Advisor muss auf dem Berichtsserver installiert werden, um eine Instanz von [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] zu analysieren. [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] unterstützt keine Remoteanalyse.  
 >   
 >  Weitere Informationen finden Sie unter [Installieren des Upgrade Advisors](../../../2014/sql-server/install/installing-upgrade-advisor.md).  
   

@@ -17,10 +17,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 1b54661c47ff40af595be55d444f6c0ffb4bc2cd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952126"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>Reporting Services-Konfigurationsoptionen (SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "71952126"
   
  Aktuelle Informationen zu [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] und zur Installation und Konfiguration dieser Version finden Sie unter [Zusätzliche Installationsinformationen](https://go.microsoft.com/fwlink/?LinkId=207425) (https://go.microsoft.com/fwlink/?LinkId=207425).  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 ### <a name="reporting-services-native-mode"></a>Einheitlicher Modus von Reporting Services  
  Wenn Setup keine Standardkonfiguration des Berichtsservers ausführen kann, weil mindestens eine Anforderung nicht erfüllt wird, lässt der Installations-Assistent nur die Option für die minimale Installation zu. Dabei werden die erforderlichen Dateien kopiert, nach Abschluss der Installation muss jedoch ein Berichtsserver im einheitlichen Modus mithilfe des Konfigurations-Managers für Reporting Services konfiguriert werden.  

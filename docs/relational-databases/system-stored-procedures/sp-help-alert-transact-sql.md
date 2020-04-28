@@ -18,10 +18,10 @@ ms.assetid: 850cef4e-6348-4439-8e79-fd1bca712091
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a4b430884a497d9a8926f16f387b3608300f037c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72304833"
 ---
 # <a name="sp_help_alert-transact-sql"></a>sp_help_alert (Transact-SQL)
@@ -61,13 +61,13 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**Name**|**int**|Vom System zugewiesener eindeutiger, ganzzahliger Bezeichner.|  
+|**id**|**int**|Vom System zugewiesener eindeutiger, ganzzahliger Bezeichner.|  
 |**name**|**sysname**|Der Name der Warnung (z. b. Demo: vollständiges **msdb** -Protokoll).|  
 |**event_source**|**nvarchar (100)**|Quelle des Ereignisses. Es ist immer **MSSQLSERVER** für [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7,0.|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Fehlernummer der Meldung, die die Warnung definiert. (Entspricht in der Regel einer Fehlernummer in der Tabelle **sysmess** .) Wenn der Schweregrad zum Definieren der Warnung verwendet wird, ist **message_id** **0** oder NULL.|  
-|**zunehmen**|**int**|Der Schweregrad (von **9** bis **25**, **110**, **120**, **130**oder **140**), der die Warnung definiert.|  
+|**severity**|**int**|Der Schweregrad (von **9** bis **25**, **110**, **120**, **130**oder **140**), der die Warnung definiert.|  
 |**wodurch**|**tinyint**|Status gibt an, ob die Warnung derzeit aktiviert ist (**1**) oder nicht (**0**). Eine nicht aktivierte Warnung wird nicht gesendet.|  
 |**delay_between_responses**|**int**|Wartezeit in Sekunden zwischen Antworten auf die Warnung.|  
 |**last_occurrence_date**|**int**|Datum, an dem die Warnung zuletzt aufgetreten ist.|  
@@ -84,25 +84,24 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**job_id**|**uniqueidentifier**|ID des Auftrags, der als Antwort auf eine Warnung ausgeführt werden soll.|  
 |**job_name**|**sysname**|Name des Auftrags, der als Antwort auf eine Warnung ausgeführt werden soll.|  
 |**has_notification**|**int**|Ungleich 0, wenn einer oder mehrere Operatoren für diese Warnung benachrichtigt werden. Der Wert ist einer oder mehrere der folgenden Werte (ORed):<br /><br /> **1**= e-Mail-Benachrichtigung<br /><br /> **2**= Pager-Benachrichtigung<br /><br /> **4**= hat eine **net send** -Benachrichtigung.|  
-|**fahren**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**performance_condition**|**nvarchar(512)**|Wenn **** der Typ **2**ist, wird in dieser Spalte die Definition der Leistungs Bedingung angezeigt. Andernfalls ist die Spalte NULL.|  
-|**category_name**|**sysname**|
-  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Ist für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 immer '[Uncategorized]'.|  
-|**wmi_namespace**|**sysname**|Wenn **** der Typ **3**ist, wird in dieser Spalte der Namespace für das WMI-Ereignis angezeigt.|  
-|**wmi_query**|**nvarchar(512)**|Wenn **** der Typ **3**ist, wird in dieser Spalte die Abfrage für das WMI-Ereignis angezeigt.|  
-|**type**|**int**|Typ des Ereignisses:<br /><br /> **** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ereignis Warnung<br /><br /> **** =  2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Leistungs Warnung<br /><br /> **3** = WMI-Ereignis Warnung|  
+|**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**performance_condition**|**nvarchar(512)**|Wenn **type** der Typ **2**ist, wird in dieser Spalte die Definition der Leistungs Bedingung angezeigt. Andernfalls ist die Spalte NULL.|  
+|**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Ist für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 immer '[Uncategorized]'.|  
+|**wmi_namespace**|**sysname**|Wenn **type** der Typ **3**ist, wird in dieser Spalte der Namespace für das WMI-Ereignis angezeigt.|  
+|**wmi_query**|**nvarchar(512)**|Wenn **type** der Typ **3**ist, wird in dieser Spalte die Abfrage für das WMI-Ereignis angezeigt.|  
+|**type**|**int**|Typ des Ereignisses:<br /><br /> **1** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ereignis Warnung<br /><br /> **2** =  2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Leistungs Warnung<br /><br /> **3** = WMI-Ereignis Warnung|  
   
  Wenn ** \@legacy_format** **1**ist, erstellt **sp_help_alert** das folgende Resultset.  
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**Name**|**int**|Vom System zugewiesener eindeutiger, ganzzahliger Bezeichner.|  
+|**id**|**int**|Vom System zugewiesener eindeutiger, ganzzahliger Bezeichner.|  
 |**name**|**sysname**|Der Name der Warnung (z. b. Demo: vollständiges **msdb** -Protokoll).|  
 |**event_source**|**nvarchar (100)**|Quelle des Ereignisses. Es ist immer **MSSQLSERVER** für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7,0.|  
 |**event_category_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**event_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**message_id**|**int**|Fehlernummer der Meldung, die die Warnung definiert. (Entspricht in der Regel einer Fehlernummer in der Tabelle **sysmess** .) Wenn der Schweregrad zum Definieren der Warnung verwendet wird, ist **message_id** **0** oder NULL.|  
-|**zunehmen**|**int**|Der Schweregrad (von **9** bis **25**, **110**, **120**, **130**oder 1**40**), der die Warnung definiert.|  
+|**severity**|**int**|Der Schweregrad (von **9** bis **25**, **110**, **120**, **130**oder 1**40**), der die Warnung definiert.|  
 |**wodurch**|**tinyint**|Status gibt an, ob die Warnung derzeit aktiviert ist (**1**) oder nicht (**0**). Eine nicht aktivierte Warnung wird nicht gesendet.|  
 |**delay_between_responses**|**int**|Wartezeit in Sekunden zwischen Antworten auf die Warnung.|  
 |**last_occurrence_date**|**int**|Datum, an dem die Warnung zuletzt aufgetreten ist.|  
@@ -119,10 +118,10 @@ sp_help_alert [ [ @alert_name = ] 'alert_name' ]
 |**job_id**|**uniqueidentifier**|Identifikationsnummer des Auftrags.|  
 |**job_name**|**sysname**|Ein bedarfsgesteuerter Auftrag, der als Antwort auf eine Warnung ausgeführt werden soll.|  
 |**has_notification**|**int**|Ungleich 0, wenn einer oder mehrere Operatoren für diese Warnung benachrichtigt werden. Einer oder mehrere der folgenden Werte sind möglich (mit OR verknüpft):<br /><br /> **1**= e-Mail-Benachrichtigung<br /><br /> **2**= Pager-Benachrichtigung<br /><br /> **4**= hat eine **net send** -Benachrichtigung.|  
-|**fahren**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
-|**performance_condition**|**nvarchar(512)**|Wenn **** der Typ **2**ist, wird in dieser Spalte die Definition der Leistungs Bedingung angezeigt. Wenn **** der Typ **3**ist, wird in dieser Spalte die Abfrage für das WMI-Ereignis angezeigt. Andernfalls weist die Spalte den Wert NULL auf.|  
+|**flags**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)].|  
+|**performance_condition**|**nvarchar(512)**|Wenn **type** der Typ **2**ist, wird in dieser Spalte die Definition der Leistungs Bedingung angezeigt. Wenn **type** der Typ **3**ist, wird in dieser Spalte die Abfrage für das WMI-Ereignis angezeigt. Andernfalls weist die Spalte den Wert NULL auf.|  
 |**category_name**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]Ist für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7,0 immer "**[nicht kategorisiert]**".|  
-|**type**|**int**|Warnungstyp:<br /><br /> **** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ereignis Warnung<br /><br /> **** =  2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Leistungs Warnung<br /><br /> **3** = WMI-Ereignis Warnung|  
+|**type**|**int**|Warnungstyp:<br /><br /> **1** =  1[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ereignis Warnung<br /><br /> **2** =  2[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Leistungs Warnung<br /><br /> **3** = WMI-Ereignis Warnung|  
   
 ## <a name="remarks"></a>Bemerkungen  
  **sp_help_alert** müssen von der **msdb** -Datenbank aus ausgeführt werden.  
@@ -144,7 +143,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
+ [Sp_add_alert &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
  [sp_update_alert &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-update-alert-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

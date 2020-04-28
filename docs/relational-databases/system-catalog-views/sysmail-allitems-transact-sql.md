@@ -18,10 +18,10 @@ ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: be5c74e58e5c107a804903ab09de38b931f676e1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "70745455"
 ---
 # <a name="sysmail_allitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
@@ -39,13 +39,13 @@ ms.locfileid: "70745455"
 |**copy_recipients**|**varchar(max)**|Die E-Mail-Adressen derer, die Kopien der Nachricht erhalten.|  
 |**blind_copy_recipients**|**varchar(max)**|Die E-Mail-Adressen derer, die Kopien der Nachricht erhalten, deren Namen jedoch nicht im Nachrichtenkopf angezeigt werden.|  
 |**Betreff**|**nvarchar (510)**|Die Betreffzeile der Nachricht.|  
-|**Instanz**|**varchar(max)**|Mithilfe des Hauptteils der Nachricht|  
+|**body**|**varchar(max)**|Der Textkörper der Nachricht.|  
 |**body_format**|**varchar (20)**|Das Textkörperformat der Nachricht. Mögliche Werte sind TEXT und HTML.|  
-|**Wichtigkeit**|**varchar (6)**|Der **Wichtigkeits** Parameter der Nachricht.|  
+|**importance**|**varchar (6)**|Der **Wichtigkeits** Parameter der Nachricht.|  
 |**/Kleinschreibung**|**varchar (12)**|Der **Sensitivitäts** Parameter der Nachricht.|  
 |**file_attachments**|**varchar(max)**|Eine durch Semikolons getrennte Liste der Dateinamen, die an die E-Mail-Nachricht angehängt wurden.|  
 |**attachment_encoding**|**varchar (20)**|Der Typ der E-Mail-Anlage.|  
-|**Such**|**varchar(max)**|Die Abfrage, die vom E-Mail-Programm ausgeführt wurde.|  
+|**Frage**|**varchar(max)**|Die Abfrage, die vom E-Mail-Programm ausgeführt wurde.|  
 |**execute_query_database**|**sysname**|Der Datenbankkontext, in dem das E-Mail-Programm die Abfrage ausgeführt hat.|  
 |**attach_query_result_as_file**|**bit**|Bei einem Wert von 0 wurden die Abfrageergebnisse hinter dem Inhalt des Textkörpers in den Textkörper der E-Mail-Nachricht eingeschlossen. Bei einem Wert von 1 wurden die Ergebnisse als Anlage zurückgegeben.|  
 |**query_result_header**|**bit**|Bei einem Wert von 1 enthielten die Abfrageergebnisse Spaltenheader. Bei einem Wert von 0 enthielten die Abfrageergebnisse keine Spaltenheader.|  
@@ -56,7 +56,7 @@ ms.locfileid: "70745455"
 |**send_request_date**|**datetime**|Das Datum und die Uhrzeit, an dem bzw. zu der die Nachricht in der E-Mail-Warteschlange platziert wurde.|  
 |**send_request_user**|**sysname**|Der Benutzer, der die Nachricht übermittelt hat. Hierbei handelt es sich um den Benutzerkontext der Datenbank-E-Mail-Prozedur, nicht um das Von-Feld der Nachricht.|  
 |**sent_account_id**|**int**|Der Bezeichner des Datenbank-E-Mail-Kontos, das zum Senden der Nachricht verwendet wird.|  
-|**sent_status**|**varchar (8)**|Der Status der E-Mail. Die folgenden Werte sind möglich:<br /><br /> **gesendet** -die e-Mail wurde gesendet.<br /><br /> nicht gesendete **Datenbank-e** -Mail versucht weiterhin, die Nachricht zu senden.<br /><br /> erneuter **Versuch** : Datenbank-E-Mail konnte die Nachricht nicht senden, sendet Sie jedoch erneut.<br /><br /> Fehler: Datenbank-e-Mail konnte die **Nachricht nicht senden** .|  
+|**sent_status**|**varchar (8)**|Der Status der E-Mail. Mögliche Werte:<br /><br /> **gesendet** -die e-Mail wurde gesendet.<br /><br /> nicht gesendete **Datenbank-e** -Mail versucht weiterhin, die Nachricht zu senden.<br /><br /> erneuter **Versuch** : Datenbank-E-Mail konnte die Nachricht nicht senden, sendet Sie jedoch erneut.<br /><br /> Fehler: Datenbank-e-Mail konnte die **Nachricht nicht senden** .|  
 |**sent_date**|**datetime**|Das Datum und die Uhrzeit, an dem bzw. zu der die Nachricht gesendet wurde.|  
 |**last_mod_date**|**datetime**|Das Datum und die Uhrzeit der letzten Änderung der Zeile.|  
 |**last_mod_user**|**sysname**|Der Benutzer, der die Zeile zuletzt geändert hat.|  

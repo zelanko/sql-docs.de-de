@@ -17,10 +17,10 @@ ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 69b3b9eae6c292b9501dfbe74b84d7399304a291
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "72305151"
 ---
 # <a name="syssp_rda_test_connection-transact-sql"></a>sys. sp_rda_test_connection (Transact-SQL)
@@ -72,7 +72,7 @@ EXECUTE sys.sp_rda_test_connection
 |-----------------|---------------|-----------------|  
 |link_state|INT|Einer der folgenden-Werte, die den Werten für **link_state_desc**entsprechen.<br /><br /> -0<br />-1<br />-2<br />-3<br />-4|  
 |link_state_desc|varchar(32)|Einer der folgenden-Werte, die den vorangehenden Werten für **LINK_STATE**entsprechen.<br /><br /> -Fehlerfrei<br />     Der zwischen SQL Server und der Azure-Remote Server sind fehlerfrei.<br />-ERROR_AZURE_FIREWALL<br />     Die Verbindung zwischen SQL Server und dem Azure-Remote Server wird von der Azure-Firewall verhindert.<br />-ERROR_NO_CONNECTION<br />     SQL Server kann keine Verbindung mit dem Azure-Remote Server herstellen.<br />-ERROR_AUTH_FAILURE<br />     Ein Authentifizierungsfehler verhindert die Verknüpfung zwischen SQL Server und dem Azure-Remote Server.<br />-Fehler<br />     Ein Fehler, bei dem es sich nicht um ein Authentifizierungs Problem, ein Konnektivitätsproblem oder ein firewallproblem handelt, verhindert die Verknüpfung zwischen SQL Server und dem Azure-Remote Server.|  
-|error_number|INT|Die Nummer des Fehlers. Wenn kein Fehler vorliegt, ist dieses Feld NULL.|  
+|error_number|INT|Die Fehlernummer des Fehlers. Wenn kein Fehler vorliegt, ist dieses Feld NULL.|  
 |error_message|nvarchar(1024)|Die Fehlermeldung. Wenn kein Fehler vorliegt, ist dieses Feld NULL.|  
   
 ## <a name="permissions"></a>Berechtigungen  

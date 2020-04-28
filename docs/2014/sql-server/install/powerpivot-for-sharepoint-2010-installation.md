@@ -11,14 +11,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 0bb88370db889eac44e3ce71ad498779e55e4d7d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "71952050"
 ---
 # <a name="powerpivot-for-sharepoint-2010-installation"></a>PowerPivot for SharePoint 2010 Installation
-  
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] ist eine Sammlung von Serverkomponenten, mit denen die Abfrageverarbeitung und Verwaltung der in SharePoint veröffentlichten [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]-Arbeitsmappen gesteuert werden kann. Die Dienste umfassen die Analysis Services-Engine und den [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Systemdienst.  
   
 > [!NOTE]  
@@ -33,9 +32,9 @@ ms.locfileid: "71952050"
  Anweisungen zu erweiterten Bereitstellungs Szenarien finden Sie unter Bereitstellungs Prüfliste [: Reporting Services, Power View und PowerPivot für SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md) und Bereitstellungs Prüfliste: horizontales [skalieren durch Hinzufügen von Power Pivot-Servern zu einer SharePoint 2010-Farm](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md).  
   
 ## <a name="in-this-section"></a>In diesem Abschnitt  
- [Installieren von PowerPivot für SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  
+ [Installieren von PowerPivot für SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  
   
- [Installieren des OLE DB-Anbieters für Analysis Services auf SharePoint-Servern](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)  
+ [Installieren des Analysis Services OLE DB-Anbieters auf SharePoint-Servern](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)  
   
  [Installieren von ADOMD.NET auf Web-Front-End-Servern, auf denen die Zentraladministration ausgeführt wird](../../../2014/sql-server/install/install-adomd-net-on-web-front-end-servers-running-central-administration.md)  
   
