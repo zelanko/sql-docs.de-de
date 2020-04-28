@@ -11,10 +11,10 @@ ms.assetid: 45bd01f9-ae15-4fc5-a2ba-eee565a26ef8
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 401983aa2e5094560f7bcc852c839986ffe4234d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728775"
 ---
 # <a name="approve-or-reject-a-changeset-master-data-services"></a>Genehmigen oder Ablehnen eines Changesets (Master Data Services)
@@ -25,7 +25,7 @@ ms.locfileid: "73728775"
   
 ## <a name="prerequisites"></a>Voraussetzungen  
   
--   Sie müssen über die Berechtigung für den Zugriff auf den Funktionsbereich **Explorer** verfügen. Weitere Informationen finden Sie unter [Funktions Bereichs Berechtigungen &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Sie müssen über die Berechtigung für den Zugriff auf den Funktionsbereich **Explorer** verfügen. Weitere Informationen finden Sie unter [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
 -   Sie benötigen Administratorberechtigungen für die Entität.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "73728775"
   
 ## <a name="to-approve-or-reject-a-changeset"></a>So können Sie ein Changeset genehmigen oder ablehnen  
   
-1.  Wählen Sie [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] auf der Startseite das Modell und die Version aus, und klicken Sie dann auf **Explorer**.  
+1.  Wählen Sie auf der Startseite von [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] das Modell und die Version aus, und klicken Sie anschließend auf **Explorer**.  
   
 2.  Klicken Sie im Menü **Entitäten** auf eine Entität.  
   
@@ -52,6 +52,6 @@ ms.locfileid: "73728775"
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen Sie ein Changeset-&#40;Master Data Services&#41;](../master-data-services/create-a-changeset-master-data-services.md)   
  [Anwenden und Aktualisieren eines Changesets &#40;Master Data Services&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
- [Ein Changeset &#40;Master Data Services Commit oder übermitteln&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
+ [Ein Changeset bestätigen oder übermitteln &#40;Master Data Services&#41;](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
   

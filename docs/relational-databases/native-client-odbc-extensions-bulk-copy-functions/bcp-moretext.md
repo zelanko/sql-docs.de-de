@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 05d7a6ca9f90439f803032087f4032765cba2f88
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73782625"
 ---
 # <a name="bcp_moretext"></a>bcp_moretext
@@ -54,7 +54,7 @@ RETCODE bcp_moretext (
  SUCCEED oder FAIL.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Diese Funktion kann zusammen mit [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) und [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) verwendet werden, um lange Datenwerte mit variabler Länge in mehreren kleineren Blöcken nach SQL Server zu kopieren. **bcp_moretext** können mit Spalten verwendet werden, die die folgenden SQL Server Datentypen aufweisen: **Text**, **ntext**, **Image**, **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, User-Defined Type (UDT) und XML. **bcp_moretext** unterstützt keine Datenkonvertierungen. die angegebenen Daten müssen mit dem Datentyp der Ziel Spalte identisch sein.  
+ Diese Funktion kann zusammen mit [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md) und [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) verwendet werden, um lange Datenwerte mit variabler Länge in mehreren kleineren Blöcken nach SQL Server zu kopieren. **bcp_moretext** kann mit Spalten verwendet werden, die die folgenden SQL Server-Datentypen aufweisen: **text**, **ntext**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, benutzerdefinierter Typ (UDT) und XML. **bcp_moretext** unterstützt keine Datenkonvertierungen. Die angegebenen Daten müssen mit dem Datentyp der Zielspalte übereinstimmen.  
   
  Wenn **bcp_bind** mit einem *pData* -Parameter ungleich NULL für Datentypen aufgerufen wird, die von **bcp_moretext**unterstützt werden, sendet **bcp_sendrow** unabhängig von der Länge den gesamten Datenwert. Verfügt **bcp_bind** hingegen über einen *pData* -NULL-Parameter für unterstützte Datentypen, kann **bcp_moretext** verwendet werden, um Daten unmittelbar nach einer erfolgreichen Rückgabe von **bcp_sendrow** zu kopieren. Dadurch wird angegeben, dass alle gebundenen Spalten mit vorhandenen Daten verarbeitet wurden.  
   

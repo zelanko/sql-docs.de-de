@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 639eb4e9e5c531e154b9eb7f91165af365bc519f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400362"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Senden von telemetriefeedback an Microsoft for Analytics Platform System
@@ -22,10 +22,10 @@ Analytics Platform System verfügt über ein optionales telemetriefeature, mit d
 > [!NOTE]  
 > In dieser Version überwacht Microsoft die Telemetriedaten nicht aktiv. Die Daten werden nur zu Analysezwecken gesammelt.  
   
-## <a name="privacy"></a>Datenschutz  
+## <a name="privacy"></a><a name="privacy"></a>Datenschutz  
 Um den maximalen Datenschutz zu gewährleisten, wird APS ohne Aktivierung der Telemetrie ausgeliefert. Bevor Sie dieses Feature aktivieren, überprüfen Sie zunächst die [Microsoft Analytics Platform System Datenschutzbestimmungen](https://go.microsoft.com/fwlink/?LinkId=400902). Führen Sie das unten beschriebene PowerShell-Skript aus, um sich zu entscheiden.  
   
-## <a name="enable"></a>Aktivieren von Telemetrie  
+## <a name="enable-telemetry"></a><a name="enable"></a>Aktivieren von Telemetrie  
 **DNS-Weiterleitung:** Zum Senden von Telemetriedaten an Microsoft muss das Analytics Platform System über eine DNS-Weiterleitung eine Verbindung mit dem Internet herstellen. Zum Aktivieren dieses Features müssen Sie die DNS-Weiterleitung auf allen Hosts und Arbeits Auslastungs-VMS aktivieren. Rufen Sie `Enable-RemoteMonitoring` den Befehl mit `SetupDnsForwarder` der Option zum ordnungsgemäßen Konfigurieren der DNS-Weiterleitung und zum Aktivieren der Telemetrie auf Rufen Sie `Enable-RemoteMonitoring` den Befehl ohne `SetupDnsForwarder` die Option auf, wenn die DNS-Weiterleitung bereits konfiguriert ist und Sie nur die Takt Überwachung aktivieren möchten.  
   
 > [!IMPORTANT]  
@@ -75,7 +75,7 @@ Wenn Sie " **N**" eingegeben haben, werden keine Befehle ausgeführt, und die Fu
   
 Es gibt keinen Schaden bei der mehrfach `Enable-RemoteMonitoring` Ausführung des Befehls. Wenn die DNS-Weiterleitung bereits festgelegt ist, erhalten Sie eine Warnmeldung, die angibt, dass dies der Fall ist.  
   
-## <a name="disable"></a>Deaktivieren der Telemetrie  
+## <a name="disable-telemetry"></a><a name="disable"></a>Deaktivieren der Telemetrie  
 Durch das Deaktivieren der Telemetrie werden alle Vorgänge angehalten, die Informationen über den Zustand des Geräts an den APS-Überwachungsdienst in der Cloud übermitteln.  
   
 > [!IMPORTANT]  

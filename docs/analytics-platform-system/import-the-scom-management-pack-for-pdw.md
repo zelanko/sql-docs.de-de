@@ -10,23 +10,23 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: bcb0e667424767fd53a5fc7e027e84d512022203
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401086"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>Importieren Sie das SCOM Management Pack-Analytics Platform System.
 Führen Sie die folgenden Schritte aus, um die System Center Operations Manager (SCOM) Management Packs für Analytics Platform System (APS) zu importieren. Die Management Packs sind zum Überwachen paralleler Data Warehouse von SCOM erforderlich. 
   
-## <a name="BeforeBegin"></a>Bevor Sie beginnen  
+## <a name="before-you-begin"></a><a name="BeforeBegin"></a>Bevor Sie beginnen  
 **Voraussetzungen**  
   
 System Center Operations Manager 2007 R2 muss installiert sein und ausgeführt werden.  
   
 Die Management Packs müssen installiert sein. Weitere Informationen finden Sie [unter Installieren der SCOM-Management Packs &#40;Analytics Platform System&#41;](install-the-scom-management-packs.md).  
   
-## <a name="Step1"></a>Schritt 1: Importieren des Basis-Management Packs für die SQL Server Appliance  
+## <a name="step-1-import-the-sql-server-appliance-base-management-pack"></a><a name="Step1"></a>Schritt 1: Importieren des Basis-Management Packs für die SQL Server Appliance  
   
 1.  Melden Sie sich am Computer mit einem Konto an, das Mitglied der Rolle "Operations Manager-Administratoren" für die Operations Manager 2007-Verwaltungsgruppe ist.  
   
@@ -36,7 +36,7 @@ Die Management Packs müssen installiert sein. Weitere Informationen finden Sie 
   
     ![Klicken auf 'Management Packs importieren'](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP.png "SCOM_IMP")  
   
-4.  Wählen Sie in der Liste der Management Packs die Management Pack aus, die Sie importieren möchten, klicken Sie auf **auswählen**, und klicken Sie dann auf **Hinzufügen**.  
+4.  Wählen Sie in der Liste der Management Packs das Management Pack aus, das importiert werden soll, klicken Sie auf **Auswählen**, und klicken Sie dann auf **Hinzufügen**.  
   
     ![Management Pack-Liste](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP2.png "SCOM_IMP2")  
   
@@ -56,7 +56,7 @@ Die Management Packs müssen installiert sein. Weitere Informationen finden Sie 
   
     ![Klicken auf 'Schließen' nach Abschluss](./media/import-the-scom-management-pack-for-pdw/SCOM_IMP6.png "SCOM_IMP6")  
   
-## <a name="Step2"></a>Importieren Sie das Überwachungspaket für Microsoft SQL Server 2008 R2 parallel Data Warehouse Appliance  
+## <a name="import-the-monitoring-pack-for-microsoft-sql-server-2008-r2-parallel-data-warehouse-appliance"></a><a name="Step2"></a>Importieren Sie das Überwachungspaket für Microsoft SQL Server 2008 R2 parallel Data Warehouse Appliance  
   
 1.  Klicken Sie mit der rechten Maustaste auf den Knoten **Management Packs** , und klicken Sie dann auf **Management Packs importieren**.  
   

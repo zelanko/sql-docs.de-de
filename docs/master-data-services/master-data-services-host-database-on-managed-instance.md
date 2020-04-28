@@ -14,10 +14,10 @@ ms.author: lle
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: b4bb1a89e997486e88b6d4ca48a9a550d1c552b8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729019"
 ---
 # <a name="host-an-mds-database-on-a-managed-instance"></a>Hosten einer MDS-Datenbank auf einer verwalteten Instanz
@@ -78,7 +78,7 @@ Zum Vorbereiten von müssen Sie eine verwaltete Azure SQL-Datenbank-Instanz erst
      - WCF Services
      - HTTP-Aktivierung (erforderlich)
      - TCP-Portfreigabe
-     - Aktivierungsdienst für Windows-Prozesse
+     - Windows-Prozessaktivierungsdienst
      - Prozessmodell
      - .NET-Umgebung
      - Konfiguration-APIs
@@ -162,7 +162,7 @@ Mit dieser Aktion wird Folgendes installiert:
 
    Weitere Informationen zum Dialogfeld **Webanwendung erstellen** finden Sie unter [Dialogfeld "Webanwendung [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] erstellen" &#40;Configuration Manager&#41;](../master-data-services/create-web-application-dialog-box-master-data-services-configuration-manager.md).
 
-1. Wählen Sie **** im Fenster Webanwendung im Fenster **Webanwendung** die Anwendung aus, die Sie erstellt haben, und wählen Sie dann im Abschnitt **Anwendung einer Datenbank zuordnen** die Option **auswählen** aus.
+1. Wählen Sie **Web Configuration** im Fenster Webanwendung im Fenster **Webanwendung** die Anwendung aus, die Sie erstellt haben, und wählen Sie dann im Abschnitt **Anwendung einer Datenbank zuordnen** die Option **auswählen** aus.
 
 1. Wählen Sie **verbinden** aus, [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] und wählen Sie die Datenbank aus, die Sie der Webanwendung zuordnen möchten. Klicken Sie auf **OK**.
 
@@ -170,7 +170,7 @@ Mit dieser Aktion wird Folgendes installiert:
 
    ![MDS-SQLServer2019-config-Mi-webconfigselectdb](../master-data-services/media/mds-sqlserver2019-config-mi-webconfigselectdb.png "MDS-SQLServer2019-config-MI_WebConfigSelectDB")
 
-1. Wählen **Sie**übernehmen. Die Meldung zum **vervollständigen der Konfiguration** wird angezeigt. Wählen Sie im Meldungs Feld **OK** aus, um die-Webanwendung zu starten. Die Website Adresse lautet `http://server name/web application/`.
+1. Wählen Sie **Übernehmen**. Die Meldung zum **vervollständigen der Konfiguration** wird angezeigt. Wählen Sie im Meldungs Feld **OK** aus, um die-Webanwendung zu starten. Die Website Adresse lautet `http://server name/web application/`.
 
 ## <a name="configure-authentication"></a>Konfigurieren der Authentifizierung
 
@@ -198,9 +198,9 @@ MDS unterstützt auch Active Directory Kenn Wort Authentifizierung und SQL Serve
    <add name="MDS1" connectionString="Data Source=*****.*****.database.windows.net;Initial Catalog=MasterDataServices;Integrated Security=False;Connect Timeout=60;User ID=UserName;Password=MyPassword!;" />
    ```
 
-## <a name="upgrade-includessmdsshort_mdincludesssmdsshort-mdmd-and-sql-database-version"></a>Upgrade [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] und SQL-Datenbankversion
+## <a name="upgrade-ssmdsshort_md-and-sql-database-version"></a>Upgrade [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] und SQL-Datenbankversion
 
-### <a name="upgrade-includessmdsshort_mdincludesssmdsshort-mdmd"></a>Zuführen[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
+### <a name="upgrade-ssmdsshort_md"></a>Zuführen[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]
 
 Installieren Sie das **kumulative Update SQL Server 2019**. [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]wird automatisch aktualisiert.
 
@@ -229,9 +229,9 @@ Um dieses Problem zu beheben, müssen Sie die Datenbankversion aktualisieren:
 
 1. Wählen Sie **Fertig** stellen aus, nachdem alle Aufgaben abgeschlossen sind.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Master Data Services-Datenbank](../master-data-services/master-data-services-database.md)
 - [Master Data Manager-Webanwendung [Master Data Services]](../master-data-services/master-data-manager-web-application.md)
-- [Die Seite "Daten Bank Konfiguration" &#40;Konfigurations-Manager für Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)
+- [Datenbankkonfiguration &#40;Seite im Konfigurations-Manager für Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)
 - [Neues in Master Data Services &#40;MDS&#41;](../master-data-services/what-s-new-in-master-data-services-mds.md)

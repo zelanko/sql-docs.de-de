@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 46da93307d28b5be6aec3fbcbff31322e96ea634
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73782400"
 ---
 # <a name="bcp_setbulkmode"></a>bcp_setbulkmode
@@ -43,10 +43,10 @@ RETCODE bcp_setbulkmode (
  *hdbc*  
  Das für den Massenkopiervorgang aktivierte ODBC-Verbindungshandle.  
   
- *Property*  
+ *property*  
  Eine Konstante vom Typ BYTE. Eine Liste der Konstanten finden Sie in der Tabelle im Abschnitt mit Hinweisen.  
   
- *pfield*  
+ *pField*  
  Der Zeiger auf den Wert des Feldabschlusszeichens.  
   
  *cbField*  
@@ -81,7 +81,7 @@ RETCODE bcp_setbulkmode (
   
  Wenn Sie versuchen, bcp_setbulkmode mit einer Sequenz von Funktionsaufrufen aufzurufen, die bcp_setcolfmt, bcp_control und bcp_readfmt enthält, gibt einer der Funktionsaufrufe einen Sequenz Fehler Fehler zurück. Wenn Sie den Fehler beheben möchten, wenden Sie bcp_init an, um alle Einstellungen zurückzusetzen und neu zu beginnen.  
   
- Im folgenden finden Sie einige Beispiele für Funktionsaufrufe, die zu einem Funktions Sequenz Fehler führen:  
+ Im Folgenden werden einige Beispiele für Funktionsaufrufe dargestellt, die zu einem Funktionssequenzfehler führen:  
   
 ```  
 bcp_init("table", DB_IN);  

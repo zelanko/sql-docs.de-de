@@ -14,10 +14,10 @@ ms.assetid: 703e1bf5-4b4b-4830-8a5b-f979b09f677d
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: b55d028e90869f6b21d51348b97411fb6c965eb9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729637"
 ---
 # <a name="collection-permissions-master-data-services"></a>Auflistungsberechtigungen (Master Data Services)
@@ -32,8 +32,8 @@ ms.locfileid: "73729637"
 |Berechtigung|BESCHREIBUNG|  
 |----------------|-----------------|  
 |**Lesen**|Der Benutzer kann Elemente der Auflistung und die Elementattribute lesen.|  
-|**Stelle**|Der Benutzer kann Auflistungselemente erstellen und Attributwerte zuweisen.|  
-|**Alisierungs**|Der Benutzer kann Auflistungselemente, Attribute und Beziehungen aktualisieren.|  
+|**Erstellen**|Der Benutzer kann Auflistungselemente erstellen und Attributwerte zuweisen.|  
+|**Update**|Der Benutzer kann Auflistungselemente, Attribute und Beziehungen aktualisieren.|  
 |**Löschen**|Der Benutzer kann Elemente der Auflistung löschen.|  
 |**Deny**|Jeglicher Zugriff auf die Elemente der Auflistung wird verweigert.|  
   
@@ -42,6 +42,6 @@ ms.locfileid: "73729637"
 ## <a name="see-also"></a>Weitere Informationen  
  [Zuweisen von Berechtigungen für Modell Objekte &#40;Master Data Services&#41;](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [Sammlungen &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)   
- [Modell Objekt Berechtigungen &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)  
+ [Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../master-data-services/model-object-permissions-master-data-services.md)  
   
   

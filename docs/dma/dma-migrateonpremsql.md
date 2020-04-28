@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 ms.openlocfilehash: fc78354e3b422342e376bd7ebe75233dcd3ffaee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056531"
 ---
 # <a name="upgrade-sql-server-using-the-data-migration-assistant"></a>Aktualisieren Sie SQL Server mithilfe des Datenmigrations-Assistent
@@ -41,7 +41,7 @@ Dieser Artikel enthält Schritt-für-Schritt-Anleitungen für das Upgrade von SQ
 
 1. Geben Sie für die Quelle im Abschnitt **Quell Server Details** den SQL Server Instanznamen in das Feld **Server Name** ein. 
 
-2. Wählen Sie den **Authentifizierungstyp** aus, der vom Quell SQL Server Instanz unterstützt
+2. Wählen Sie den **Authentifizierungstyp** aus, der von der SQL Server-Quellinstanz unterstützt wird.
 
 3. Geben Sie im Abschnitt **Zielserver Details** den SQL Server Instanznamen in das Feld **Server Name** ein. 
 
@@ -53,7 +53,7 @@ Dieser Artikel enthält Schritt-für-Schritt-Anleitungen für das Upgrade von SQ
 
    ![Quell-und Zielseite angeben](../dma/media/SourceTarget.png)
 
-## <a name="add-databases"></a>Hinzufügen von Datenbanken
+## <a name="add-databases"></a>Datenbanken hinzufügen
 
 1. Wählen Sie die gewünschten Datenbanken aus, die Sie migrieren möchten, indem Sie im linken Bereich der Seite **Datenbanken hinzufügen** nur diese Datenbanken auswählen.
 
@@ -107,7 +107,7 @@ Sie können den Migrations Fortschritt auf der Seite **Ergebnisse anzeigen** üb
 
 2. Überprüfen Sie die gespeicherte Datei auf Details zur Anmelde Migration, und überprüfen Sie dann die Änderungen.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - [Datenmigrations-Assistent (DMA)](../dma/dma-overview.md)
 - [Datenmigrations-Assistent: Konfigurationseinstellungen](../dma/dma-configurationsettings.md)

@@ -10,17 +10,17 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f3ecf5cf783b707b75c90dfa70d502e3c81d28c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400998"
 ---
 # <a name="locking-behavior-in-parallel-data-warehouse"></a>Sperr Verhalten parallel Data Warehouse
 Erfahren Sie, wie parallele Data Warehouse Sperren verwendet, um die Integrität von Transaktionen sicherzustellen und die Konsistenz der Datenbanken beizubehalten, wenn mehrere Benutzer gleichzeitig auf Daten zugreifen.  
   
-## <a name="Basics"></a>Grundlagen zu sperren  
-**Spiel**  
+## <a name="locking-basics"></a><a name="Basics"></a>Grundlagen zu sperren  
+**Modi**  
   
 SQL Server PDW unterstützt vier Sperr Modi:  
   
@@ -38,9 +38,9 @@ Die sharedupdate-Sperre verhindert exklusive und exclusiveupdate-Sperr Modi und 
   
 **Ressourcen Klassen**  
   
-Sperren werden für die folgenden Objektklassen gespeichert: Datenbank, Schema, Objekt (eine Tabelle, Sicht oder Prozedur), Anwendung (intern verwendet), externaldatasource, externalfileformat und schemaresolution (eine Sperre auf Datenbankebene, die beim Erstellen, ändern oder Löschen von Schema Objekten oder Datenbankbenutzern). Diese Objektklassen können in der object_type-Spalte von [sys. dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)angezeigt werden.  
+Sperren werden für die folgenden Objektklassen aufrechterhalten: Datenbank, Schema, Objekt (eine Tabelle, Sicht oder Prozedur), Anwendung (intern verwendet), externaldatasource, externalfileformat und schemaresolution (eine Sperre auf Datenbankebene beim Erstellen, ändern oder Löschen von Schema Objekten oder Datenbankbenutzern). Diese Objektklassen können in der object_type-Spalte von [sys. dm_pdw_waits](../relational-databases/system-dynamic-management-views/sys-dm-pdw-waits-transact-sql.md)angezeigt werden.  
   
-## <a name="Remarks"></a>Allgemeine Hinweise  
+## <a name="general-remarks"></a><a name="Remarks"></a>Allgemeine Hinweise  
 Sperren können auf Datenbanken, Tabellen oder Sichten angewendet werden.  
   
 SQL Server PDW implementiert keine konfigurierbaren Isolations Stufen. Sie unterstützt die vom ANSI-Standard definierte read_uncommitted Isolationsstufe. Da Lesevorgänge jedoch unter read_uncommitted ausgeführt werden, treten nur wenige blockierende Vorgänge auf oder führen zu Konflikten im System.  

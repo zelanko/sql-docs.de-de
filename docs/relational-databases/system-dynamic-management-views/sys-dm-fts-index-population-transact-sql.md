@@ -21,10 +21,10 @@ author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7af62bc20e96d3c9ab9508b89244d6401356d7ef
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983107"
 ---
 # <a name="sysdm_fts_index_population-transact-sql"></a>sys.dm_fts_index_population (Transact-SQL)
@@ -39,18 +39,18 @@ ms.locfileid: "73983107"
 |**table_id**|**int**|ID der Tabelle, für die der Volltextindex aufgefüllt wird.|  
 |**memory_address**|**varbinary(8)**|Speicheradresse der internen Datenstruktur, mit der ein aktiver Auffüllprozess dargestellt wird.|  
 |**population_type**|**int**|Typ der Auffüllung. Einer der folgenden:<br /><br /> 1 = Vollständiges Auffüllen<br /><br /> 2 = Inkrementelles, auf Timestamps basierendes Auffüllen<br /><br /> 3 = Manuelles Aktualisieren von Überarbeitungen<br /><br /> 4 = Aktualisieren von Überarbeitungen im Hintergrund.|  
-|**population_type_description**|**nvarchar (120)**|Beschreibung des Auffüllungstyps.|  
+|**population_type_description**|**nvarchar(120)**|Beschreibung des Auffüllungstyps.|  
 |**is_clustered_index_scan**|**bit**|Gibt an, ob die Auffüllung einen Scanvorgang im gruppierten Index umfasst.|  
 |**range_count**|**int**|Anzahl der Teilbereiche, in die diese Auffüllung parallelisiert wurde.|  
 |**completed_range_count**|**int**|Anzahl der Bereiche, für die die Verarbeitung abgeschlossen ist.|  
 |**outstanding_batch_count**|**int**|Aktuelle Anzahl ausstehender Batches für diese Auffüllung. Weitere Informationen finden Sie unter [sys. dm_fts_outstanding_batches &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-fts-outstanding-batches-transact-sql.md).|  
-|**Stands**|**int**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Status dieser Auffüllung. Hinweis: Einige Status sind vorübergehend. Einer der folgenden:<br /><br /> 3 = Wird gestartet<br /><br /> 5 = Normal verarbeiten<br /><br /> 7 = Verarbeitung wurde angehalten<br /><br /> Dieser Status tritt zum Beispiel auf, wenn eine automatische Zusammenführung ausgeführt wird.<br /><br /> 11 = Auffüllen abgebrochen<br /><br /> 12 = Verarbeiten einer semantischen Ähnlichkeitsextraktion|  
-|**status_description**|**nvarchar (120)**|Beschreibung des Status der Auffüllung.|  
+|**status**|**int**|**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Status dieser Auffüllung. Hinweis: Einige Status sind vorübergehend. Einer der folgenden:<br /><br /> 3 = Wird gestartet<br /><br /> 5 = Normal verarbeiten<br /><br /> 7 = Verarbeitung wurde angehalten<br /><br /> Dieser Status tritt zum Beispiel auf, wenn eine automatische Zusammenführung ausgeführt wird.<br /><br /> 11 = Auffüllen abgebrochen<br /><br /> 12 = Verarbeiten einer semantischen Ähnlichkeitsextraktion|  
+|**status_description**|**nvarchar(120)**|Beschreibung des Status der Auffüllung.|  
 |**completion_type**|**int**|Status des Abschlusses dieser Auffüllung.|  
-|**completion_type_description**|**nvarchar (120)**|Beschreibung des Abschlusstyps.|  
+|**completion_type_description**|**nvarchar(120)**|Beschreibung des Abschlusstyps.|  
 |**worker_count**|**int**|Dieser Wert ist immer 0.|  
 |**queued_population_type**|**int**|Typ der Auffüllung, basierend auf Überarbeitungen, die ggf. nach der aktuellen Auffüllung folgt.|  
-|**queued_population_type_description**|**nvarchar (120)**|Beschreibung der Auffüllung, die ggf. folgt. Wenn beispielsweise CHANGE TRACKING = AUTO und die erste vollständige Auffüllung durchgeführt wird, wird in dieser Spalte "Autom. Auffüllen" angezeigt.|  
+|**queued_population_type_description**|**nvarchar(120)**|Beschreibung der Auffüllung, die ggf. folgt. Wenn beispielsweise CHANGE TRACKING = AUTO und die erste vollständige Auffüllung durchgeführt wird, wird in dieser Spalte "Autom. Auffüllen" angezeigt.|  
 |**start_time**|**datetime**|Zeit des Starts der Auffüllung.|  
 |**incremental_timestamp**|**timestamp**|Stellt den Timestamp des Starts einer vollständigen Auffüllung dar. Für alle anderen Auffüllungstypen ist dieser Wert der letzte Prüfpunkt, für den ein Commit ausgeführt wurde, der den Fortschritt der Auffüllung darstellt.|  
   
@@ -67,14 +67,14 @@ Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VI
   
 ## <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-|Von|To|Beziehung|  
+|Von|Beschreibung|Beziehung|  
 |----------|--------|------------------|  
 |dm_fts_active_catalogs.database_id|dm_fts_index_population.database_id|1:1|  
 |dm_fts_active_catalogs.catalog_id|dm_fts_index_population.catalog_id|1:1|  
 |dm_fts_population_ranges.parent_memory_address|dm_fts_index_population.memory_address|n:1|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Dynamische Verwaltungs Sichten und Funktionen für die voll Text Suche und die semantische Suche &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)  
   
   

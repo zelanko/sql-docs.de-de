@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4ed739ce12170aa6d0ab79b996de0075cd6723ee
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400885"
 ---
 # <a name="parallel-data-warehouse-firewall-configuration-in-analytics-platform-system"></a>Parallele Data Warehouse Firewall-Konfiguration in Analytics Platform System
@@ -35,7 +35,7 @@ Auf der Seite **Firewall** der SQL Server PDW Configuration Manager können Sie 
 ## <a name="external-ports"></a>Externe Ports  
 Die folgenden Ports werden für Clientverbindungen geöffnet, die von außerhalb von PDW stammen.  
   
-|Zweck|Port #|Nodes|  
+|Zweck|Port #|Knoten|  
 |-----------|-----------|---------|  
 |SQL-Client Zugriff für PDW (TDS)|17001|CTL|  
 |Loader-Client Zugriff (dwloader & SSIS)|8001|CTL|  
@@ -51,7 +51,7 @@ Die folgenden Ports werden für Clientverbindungen geöffnet, die von außerhalb
 ## <a name="internal-ports"></a>Interne Ports  
 Die folgenden Ports werden von PDW für die interne Kommunikation verwendet, jedoch nicht für Verbindungen, die von außerhalb des PDW-Geräts stammen.  
   
-|Zweck|Port #|Nodes|  
+|Zweck|Port #|Knoten|  
 |-----------|-----------|---------|  
 |DMS-Steuerungs Kanal-Datenverkehr|16450|CTL, CMP|  
 |DMS-Datenkanal Datenverkehr|16550|CTL, CMP|  

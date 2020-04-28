@@ -15,10 +15,10 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 ms.openlocfilehash: 3fbf2429a384ad64b1b416e3920a193d92a6c387
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056619"
 ---
 # <a name="run-data-migration-assistant-from-the-command-line"></a>Ausführen von Datenmigrations-Assistent von der Befehlszeile aus
@@ -337,6 +337,6 @@ Diese Befehle unterstützen Empfehlungen für Bereitstellungs Optionen für eine
 /SkuRecommendationPreventPriceRefresh=true  
 ```
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 - [Datenmigrations-Assistent](https://aka.ms/get-dma) herunterladen.
 - Der Artikel [identifiziert die richtige Azure SQL-Datenbank-SKU für Ihre lokale Datenbank](https://aka.ms/dma-sku-recommend-sqldb).

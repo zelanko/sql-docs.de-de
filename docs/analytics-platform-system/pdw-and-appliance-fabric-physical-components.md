@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5cbed66f53189668518e04848002ae69adb8c614
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400923"
 ---
 # <a name="appliance-physical-components---analytics-platform-system"></a>Physische Appliance von Appliance-Analytics Platform System
@@ -21,7 +21,7 @@ Namen und Beschreibungen der physischen Komponenten des PDW-und Appliance Fabric
   
 <!-- MISSING LINKS See also [HDInsight Physical Components &#40;Analytics Platform System&#41;](hdinsight-physical-components.md).  -->  
   
-## <a name="diagrams"></a>Komponenten Diagramme  
+## <a name="component-diagrams"></a><a name="diagrams"></a>Komponenten Diagramme  
 Dies zeigt die Namen der physischen Komponenten an, wo Sie sich im ersten Gestell einer 6-Compute-Knoten Appliance befinden.  
   
 ![Komponentennamen für die PDW-Region – HP](./media/pdw-and-appliance-fabric-physical-components/APS_HW_ComponentNames-HP.png "APS_HW_ComponentNames-HP")  
@@ -34,7 +34,7 @@ Im folgenden finden Sie eine konsolidierte Ansicht eines PDW-Bereichs mit sechs 
   
 ![PDW-Komponentennamen](./media/pdw-and-appliance-fabric-physical-components/APS_HW_Names.png "APS_HW_Names")  
   
-## <a name="pdw"></a>PDW-Komponenten  
+## <a name="pdw-components"></a><a name="pdw"></a>PDW-Komponenten  
 Die virtuellen Computer in PDW sind Teil der PDW-Region.  
   
 *PDW_region*-CTL01  
@@ -46,7 +46,7 @@ Ein virtueller Computer, der den Steuer Knoten ausführt. Dies wird auf HST01 au
 *PDW_region*-CMP01 bis *PDW_Region*-CMP06  
 Ein virtueller Computer, auf dem der Computeknoten ausgeführt wird. In diesem Knoten Diagramm mit 6 Computeknoten führen die Hosts HSA01 bis HSA06 virtuelle Computer mit Computeknoten CMP01 bis CMP06 aus.  
   
-## <a name="fabric"></a>Appliance Fabric-Komponenten  
+## <a name="appliance-fabric-components"></a><a name="fabric"></a>Appliance Fabric-Komponenten  
 Diese Komponenten sind Bestandteil des Appliance-Fabrics.  
   
 ### <a name="virtual-machines"></a>Virtual Machines  
@@ -64,7 +64,7 @@ Active Directory Domain Services, das die Domain Name System (DNS) enthält, wir
 *appliance_domain*-ISCSI01  
 Ein virtueller iSCSI-Computer wird auf jedem der Hosts mit angefügtem Speicher (HSA01-HSA06) ausgeführt. Diese VM führt kein Failover durch.  
   
-### <a name="hosts"></a>Host  
+### <a name="hosts"></a>Hosts  
 *appliance_domain*-HST01 bis *appliance_domain*-HST06  
 Die Hosts für den PDW-Steuerungs Knoten und die Appliance Fabric Virtual Machines. HST03 ist ein optionaler passiver Host.  
   

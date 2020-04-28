@@ -11,10 +11,10 @@ ms.assetid: 0ddceab4-d2b3-4bc1-bd9c-6b852200b414
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 1036d8b05bf3dfca825f88d562c89dbce7f6b538
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729522"
 ---
 # <a name="create-and-execute-an-entity-sync-relationship-master-data-services"></a>Erstellen und Verwenden einer Beziehung für die Entitätensynchronisierung (Master Data Services)
@@ -26,7 +26,7 @@ ms.locfileid: "73729522"
 ## <a name="prerequisites"></a>Voraussetzungen  
  Komponenten zum Erstellen einer Entitäten-Synchronisierungspartnerschaft:  
   
--   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich "Systemverwaltung" zuzugreifen. Weitere Informationen finden Sie unter [Funktions Bereichs Berechtigungen &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich "Systemverwaltung" zuzugreifen. Weitere Informationen finden Sie unter [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
 -   Sie müssen ein Modelladministrator des Zielmodells sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
@@ -34,7 +34,7 @@ ms.locfileid: "73729522"
   
  Komponenten zum Ausführen einer Entitäten-Synchronisierungspartnerschaft:  
   
--   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich "Systemverwaltung" zuzugreifen. Weitere Informationen finden Sie unter [Funktions Bereichs Berechtigungen &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Sie müssen über die Berechtigung verfügen, auf den Funktionsbereich "Systemverwaltung" zuzugreifen. Weitere Informationen finden Sie unter [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
 -   Sie müssen ein Modelladministrator des Zielmodells sein. Weitere Informationen finden Sie unter [Administratoren &#40;Master Data Services&#41;](../master-data-services/administrators-master-data-services.md).  
   
@@ -58,7 +58,7 @@ ms.locfileid: "73729522"
   
 -   Synchronisierung generiert keine Zielentitätstransaktionen/-verläufe.  
   
- **So erstellen Sie eine Entitäten-Synchronisierungs Partnerschaft**  
+ **Erstellen einer Entitäten-Synchronisierungspartnerschaft**  
   
 1.  Klicken Sie im Master Data Manager auf **Systemverwaltung**.  
   
@@ -82,7 +82,7 @@ ms.locfileid: "73729522"
   
 11. Klicken Sie auf **Speichern**.  
   
- **Ausführen einer Entitäten-Synchronisierungs Partnerschaft**  
+ **Wie Sie eine Entitäten-Synchronisierungspartnerschaft ausführen**  
   
 1.  Klicken Sie im Master Data Manager auf **Systemverwaltung**.  
   
@@ -104,23 +104,23 @@ ms.locfileid: "73729522"
 |Zielmodell|Der Name des Zielmodells.|  
 |Zielversion|Der Name der Zielversion.|  
 |Zielentität|Der Name der Zielentität.|  
-|Frequency|Gibt die Häufigkeit der Synchronisierungsbeziehung an.|  
+|Häufigkeit|Gibt die Häufigkeit der Synchronisierungsbeziehung an.|  
 |Uhrzeit des letzten Versuchs|Zeigt die Uhrzeit des letzten Synchronisierungsversuchs an.|  
 |Uhrzeit des letzten erfolgreichen Versuchs|Zeigt die Uhrzeit des letzten erfolgreichen Synchronisierungsversuchs an.|  
   
  Wenn Sie auf einen Index klicken, werden die folgenden Informationen angezeigt.  
   
--   **Letzter Fehler**: zeigt die Fehlerinformationen zum letzten Synchronisierungs Versuch an.  
+-   **Fehler des letzten Versuchs**: Zeigt die Fehlerinformationen zum letzten Synchronisierungsversuch an.  
   
--   **Erstellt von**: der Name des Benutzers, der die Synchronisierung erstellt hat.  
+-   **Erstellt von**: Der Name des Benutzers, der die Synchronisierung erstellt hat.  
   
--   **Am**: das Datum und die Uhrzeit, zu der die Synchronisierung erstellt wurde.  
+-   **Am**: Datum und Uhrzeit, wann die Synchronisierung erstellt wurde.  
   
--   **Aktualisiert von**: der Name des Benutzers, der die Synchronisierung zuletzt aktualisiert hat.  
+-   **Aktualisiert von**: Der Name des Benutzers, der die Synchronisierung zuletzt aktualisiert hat.  
   
--   **Am**: das Datum und die Uhrzeit, zu der die Synchronisierung zuletzt aktualisiert wurde.  
+-   **Am**: Datum und Uhrzeit, wann die Synchronisierung zuletzt aktualisiert wurde.  
   
 ## <a name="next-steps"></a>Nächste Schritte  
- [Bearbeiten und Löschen einer Entitäten-Synchronisierungs Beziehung &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  
+ [Bearbeiten und Löschen einer Entitäten-Synchronisierungspartnerschaft &#40;Master Data Services&#41;](../master-data-services/edit-and-delete-an-entity-sync-relationship-master-data-services.md)  
   
   

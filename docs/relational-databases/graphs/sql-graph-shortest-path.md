@@ -19,10 +19,10 @@ author: shkale-msft
 ms.author: shkale
 monikerRange: =azuresqldb-current||>=sql-server-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current
 ms.openlocfilehash: 9318a34b4853937983b107491c9210de80e5506c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056403"
 ---
 # <a name="shortest_path-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
@@ -173,7 +173,7 @@ FROM (
 WHERE Q.LastNode = 'Alice'
  ```
 
-### <a name="d-find-people-1-3-hops-away-from-a-given-person"></a>D: Suchen von Personen, die von einer bestimmten Person 1-3 Hops entfernt wurden
+### <a name="d-find-people-1-3-hops-away-from-a-given-person"></a>D. Suchen von Personen, die von einer bestimmten Person 1-3 Hops entfernt wurden
 Im folgenden Beispiel wird der kürzeste Pfad zwischen Jacob und allen Personen, mit denen er verbunden ist, im Graph 1-3-hophop gefunden. 
 
 ```

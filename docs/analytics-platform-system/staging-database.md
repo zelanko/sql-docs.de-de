@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: dcd7f95833695cc5f9f791d83a6221c35e88f58e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400281"
 ---
 # <a name="using-a-staging-database-in-parallel-data-warehouse-pdw"></a>Verwenden einer Stagingdatenbank parallel Data Warehouse (PDW)
 SQL Server parallele Data Warehouse (PDW) verwendet eine Stagingdatenbank, um Daten während des Ladevorgangs temporär zu speichern. Standardmäßig verwendet SQL Server PDW die Zieldatenbank als Stagingdatenbank, was eine Tabellen Fragmentierung verursachen kann. Um die Tabellen Fragmentierung zu reduzieren, können Sie eine benutzerdefinierte Stagingdatenbank erstellen. Wenn das Rollback eines Lade Fehlers kein Problem ist, können Sie den vom fastappend Lademodus-Lade Modus verwenden, um die Leistung zu verbessern, indem Sie die temporäre Tabelle überspringen und direkt in die Ziel Tabelle laden.  
   
-## <a name="StagingDatabase"></a>Grundlagen zu Staging  
+## <a name="staging-database-basics"></a><a name="StagingDatabase"></a>Grundlagen zu Staging  
 Eine *Stagingdatenbank* ist eine vom Benutzer erstellte PDW-Datenbank, in der Daten temporär gespeichert werden, während Sie in die Appliance geladen werden. Wenn eine Stagingdatenbank für eine Last angegeben wird, kopiert die Appliance zuerst die Daten in die Stagingdatenbank und kopiert dann die Daten aus den temporären Tabellen in der Stagingdatenbank in dauerhafte Tabellen in der Zieldatenbank.  
   
 Wenn für eine Last keine Stagingdatenbank angegeben wird, werden die temporären Tabellen in der Zieldatenbank von SQL serverpdw erstellt und zum Speichern der geladenen Daten verwendet, bevor die geladenen Daten in die permanenten Ziel Tabellen eingefügt werden.  
@@ -38,7 +38,7 @@ Die Speicherstruktur für jede Datenbanktabelle hängt von der Ziel Tabelle ab.
   
 -   Bei Ladevorgängen in einen gruppierten rowstore-Index ist die Stagingtabelle ein gruppierter rowstore-Index.  
   
-## <a name="Permissions"></a>Berechtigungen  
+## <a name="permissions"></a><a name="Permissions"></a>Berechtigungen  
 Erfordert die CREATE-Berechtigung (zum Erstellen einer temporären Tabelle) für die Stagingdatenbank. 
 
 <!-- MISSING LINKS
@@ -47,7 +47,7 @@ For more information, see [Grant Permissions to load data](grant-permissions-to-
 
 -->
   
-## <a name="CreatingStagingDatabase"></a>Bewährte Methoden zum Erstellen einer Stagingdatenbank  
+## <a name="best-practices-for-creating-a-staging-database"></a><a name="CreatingStagingDatabase"></a>Bewährte Methoden zum Erstellen einer Stagingdatenbank  
   
 1.  Es darf nur eine Stagingdatenbank pro Appliance vorhanden sein. Die Stagingdatenbank kann von allen Lade Aufträgen für alle Ziel Datenbanken gemeinsam genutzt werden.  
   
@@ -61,7 +61,7 @@ For more information, see [Grant Permissions to load data](grant-permissions-to-
   
     -   Die Protokoll Größe ähnelt in der Regel der replizierten Tabellengröße.  
   
-## <a name="Examples"></a>Beispiele  
+## <a name="examples"></a><a name="Examples"></a>Beispiele  
   
 ### <a name="a-create-a-staging-database"></a>A. Erstellen einer Stagingdatenbank 
 Im folgenden Beispiel wird eine Stagingdatenbank, stagedb, für die Verwendung mit allen Ladevorgängen auf dem Gerät erstellt. Angenommen, Sie schätzen, dass fünf replizierte Tabellen mit einer Größe von jeweils 5 GB gleichzeitig geladen werden. Diese Parallelität führt zu einer Zuordnung von mindestens 25 GB für die replizierte Größe. Angenommen, Sie schätzen, dass sechs verteilte Tabellen der Größen 100, 200, 400, 500, 500 und 550 GB gleichzeitig geladen werden. Diese Parallelität führt zu einer Zuordnung von mindestens 2250 GB für die verteilte Tabellengröße.  

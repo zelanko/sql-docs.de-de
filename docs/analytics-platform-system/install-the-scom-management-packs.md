@@ -10,21 +10,21 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: f3652b767f4628b61f5dd363999838418ff933aa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401074"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Installieren von SQL Server Operations Manager Management Packs (SCOM) für Analytics Platform System
 Führen Sie die folgenden Schritte aus, um die System Center Operations Manager-Management Packs (SCOM) für SQL Server PDW herunterzuladen und zu installieren. Die Management Packs sind erforderlich, um SQL Server PDW von SCOM zu überwachen.  
   
-## <a name="BeforeBegin"></a>Bevor Sie beginnen  
+## <a name="before-you-begin"></a><a name="BeforeBegin"></a>Bevor Sie beginnen  
 **Voraussetzungen**  
   
 System Center Operations Manager müssen installiert sein und ausgeführt werden. SQL Server PDW 2012 erfordert System Center Operations Manager 2007 R2, System Center Operations Manager 2012 oder System Center Operations Manager 2012 Service Pack 1.  
   
-## <a name="Step1"></a>Schritt 1: Herunterladen der Management Packs  
+## <a name="step-1-download-the-management-packs"></a><a name="Step1"></a>Schritt 1: Herunterladen der Management Packs  
 Laden Sie für die APS PDW-Arbeitsauslastung das [System Center-Management Pack für den Microsoft Analytics Platform System](https://go.microsoft.com/fwlink/?LinkId=396857)herunter.  
   
 Laden Sie für die Geräteverwaltung das [Basis-Management Pack für SQL Server Appliance](https://docs.microsoft.com/previous-versions/system-center/packs/gg602398(v=technet.10))herunter.  
@@ -33,7 +33,7 @@ Für ältere Versionen von PDW ohne APS laden Sie das[System Center Monitoring P
   
 <!-- MISSING LINKS - For the HDInsight workload, download the [System Center Management Pack for HDInsight](https://go.microsoft.com/fwlink/?LinkId=390208).  -->
   
-## <a name="Step2"></a>Schritt 2: Installieren der Management Packs  
+## <a name="step-2-install-the-management-packs"></a><a name="Step2"></a>Schritt 2: Installieren der Management Packs  
   
 ### <a name="install-the-sql-server-appliance-base-management-pack"></a>Installieren des Basis-Management Packs für die SQL Server Appliance  
   
@@ -73,7 +73,7 @@ Für ältere Versionen von PDW ohne APS laden Sie das[System Center Monitoring P
   
 5.  Klicken Sie auf **Schließen**.  
   
-    ![Installation ist beendet](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
+    ![Installation abgeschlossen](./media/install-the-scom-management-packs/SCOM_licnse_agmtB3.png "SCOM_licnse_agmtB3")  
   
 ## <a name="next-step"></a>Nächster Schritt  
 Nachdem Sie die Management Packs installiert haben, fahren Sie mit dem nächsten Schritt fort: [Importieren des SCOM-Management Packs für PDW &#40;Analytics Platform System&#41;](import-the-scom-management-pack-for-pdw.md).  

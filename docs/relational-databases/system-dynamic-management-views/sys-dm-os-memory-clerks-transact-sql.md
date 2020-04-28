@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 97805251e309132892fb94db63a308b10657daff
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983101"
 ---
 # <a name="sysdm_os_memory_clerks-transact-sql"></a>sys.dm_os_memory_clerks (Transact-SQL)
@@ -38,18 +38,18 @@ ms.locfileid: "73983101"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**memory_clerk_address**|**varbinary(8)**|Gibt die eindeutige Speicheradresse des Arbeitsspeicherclerks an. Dies ist die Primärschlüsselspalte. Lässt keine NULL-Werte zu.|  
-|**type**|**nvarchar (60)**|Gibt den Typ des Arbeitsspeicherclerks an. Jeder Clerk entspricht einem bestimmten Typ, wie z. B. dem CLR-Clerk MEMORYCLERK_SQLCLR. Lässt keine NULL-Werte zu.|  
+|**type**|**nvarchar(60)**|Gibt den Typ des Arbeitsspeicherclerks an. Jeder Clerk entspricht einem bestimmten Typ, wie z. B. dem CLR-Clerk MEMORYCLERK_SQLCLR. Lässt keine NULL-Werte zu.|  
 |**name**|**nvarchar(256)**|Gibt den intern zugewiesenen Namen des Arbeitsspeicherclerks an. Eine Komponente kann über mehrere Arbeitsspeicherclerks eines bestimmten Typs verfügen. Eine Komponente hat die Möglichkeit, bestimmte Namen zum Identifizieren von Arbeitsspeicherclerks desselben Typs zu verwenden. Lässt keine NULL-Werte zu.|  
 |**memory_node_id**|**smallint**|Gibt die ID des Speicherknotens an. Lässt keine NULL-Werte zu.|  
-|**single_pages_kb**|**BIGINT**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].|  
-|**pages_kb**|**BIGINT**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Gibt an, wie viel Arbeitsspeicher für Seiten diesem Arbeitsspeicherclerk (in Kilobyte) zugewiesen wurde. Lässt keine NULL-Werte zu.|  
-|**multi_pages_kb**|**BIGINT**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Umfang des zugeordneten Arbeitsspeichers für mehrere Seiten in KB. Dies entspricht dem Umfang des Arbeitsspeichers, der mithilfe der Mehrfachseitenzuordnung der Speicherknoten zugeordnet wurde. Dieser Arbeitsspeicher wird außerhalb des Pufferpools zugeordnet und nutzt die virtuelle Zuordnung der Arbeitsspeicherknoten. Lässt keine NULL-Werte zu.|  
-|**virtual_memory_reserved_kb**|**BIGINT**|Gibt den Umfang des von einem Arbeitsspeicherclerk reservierten virtuellen Arbeitsspeichers an. Lässt keine NULL-Werte zu.|  
-|**virtual_memory_committed_kb**|**BIGINT**|Gibt den Umfang des virtuellen Arbeitsspeichers an, für den ein Arbeitsspeicherclerk ein Commit ausgeführt hat. Der Umfang des Arbeitsspeichers, für den ein Commit ausgeführt wurde, sollte immer geringer als der Umfang des reservierten Arbeitsspeichers sein. Lässt keine NULL-Werte zu.|  
-|**awe_allocated_kb**|**BIGINT**|Gibt den Arbeitsspeicher in Kilobyte (KB) an, der im physischen Speicher gesperrt und nicht vom Betriebssystem ausgelagert ist. Lässt keine NULL-Werte zu.|  
-|**shared_memory_reserved_kb**|**BIGINT**|Gibt den Umfang des von einem Arbeitsspeicherclerk reservierten gemeinsamen Arbeitsspeichers an. Der Umfang des Arbeitsspeichers, der als freigegebener Speicherbereich und für die Dateizuordnung reserviert ist. Lässt keine NULL-Werte zu.|  
-|**shared_memory_committed_kb**|**BIGINT**|Gibt den Umfang des freigegebenen Speicherbereichs an, für den vom Arbeitsspeicherclerk ein Commit ausgeführt wurde. Lässt keine NULL-Werte zu.|  
-|**page_size_in_bytes**|**BIGINT**|Gibt die Granularität der Seitenzuordnung für diesen Arbeitsspeicherclerk an. Lässt keine NULL-Werte zu.|  
+|**single_pages_kb**|**bigint**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].|  
+|**pages_kb**|**bigint**|**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Gibt an, wie viel Arbeitsspeicher für Seiten diesem Arbeitsspeicherclerk (in Kilobyte) zugewiesen wurde. Lässt keine NULL-Werte zu.|  
+|**multi_pages_kb**|**bigint**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Umfang des zugeordneten Arbeitsspeichers für mehrere Seiten in KB. Dies entspricht dem Umfang des Arbeitsspeichers, der mithilfe der Mehrfachseitenzuordnung der Speicherknoten zugeordnet wurde. Dieser Arbeitsspeicher wird außerhalb des Pufferpools zugeordnet und nutzt die virtuelle Zuordnung der Arbeitsspeicherknoten. Lässt keine NULL-Werte zu.|  
+|**virtual_memory_reserved_kb**|**bigint**|Gibt den Umfang des von einem Arbeitsspeicherclerk reservierten virtuellen Arbeitsspeichers an. Lässt keine NULL-Werte zu.|  
+|**virtual_memory_committed_kb**|**bigint**|Gibt den Umfang des virtuellen Arbeitsspeichers an, für den ein Arbeitsspeicherclerk ein Commit ausgeführt hat. Der Umfang des Arbeitsspeichers, für den ein Commit ausgeführt wurde, sollte immer geringer als der Umfang des reservierten Arbeitsspeichers sein. Lässt keine NULL-Werte zu.|  
+|**awe_allocated_kb**|**bigint**|Gibt den Arbeitsspeicher in Kilobyte (KB) an, der im physischen Speicher gesperrt und nicht vom Betriebssystem ausgelagert ist. Lässt keine NULL-Werte zu.|  
+|**shared_memory_reserved_kb**|**bigint**|Gibt den Umfang des von einem Arbeitsspeicherclerk reservierten gemeinsamen Arbeitsspeichers an. Der Umfang des Arbeitsspeichers, der als freigegebener Speicherbereich und für die Dateizuordnung reserviert ist. Lässt keine NULL-Werte zu.|  
+|**shared_memory_committed_kb**|**bigint**|Gibt den Umfang des freigegebenen Speicherbereichs an, für den vom Arbeitsspeicherclerk ein Commit ausgeführt wurde. Lässt keine NULL-Werte zu.|  
+|**page_size_in_bytes**|**bigint**|Gibt die Granularität der Seitenzuordnung für diesen Arbeitsspeicherclerk an. Lässt keine NULL-Werte zu.|  
 |**page_allocator_address**|**varbinary(8)**|Gibt die Adresse der Seitenzuordnung an. Diese Adresse ist für einen Arbeitsspeicher Clerk eindeutig und kann in **sys. dm_os_memory_objects** verwendet werden, um Speicher Objekte zu suchen, die an diesen Clerk gebunden sind. Lässt keine NULL-Werte zu.|  
 |**host_address**|**varbinary(8)**|Gibt die Arbeitsspeicheradresse des Hosts für diesen Arbeitsspeicherclerk an. Weitere Informationen finden Sie unter [sys. dm_os_hosts &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-hosts-transact-sql.md). Komponenten, z [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . b. Native Client [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , greifen über die Host Schnittstelle auf Speicherressourcen zu.<br /><br /> 0x00000000 = Arbeitsspeicherclerk gehört zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> Lässt keine NULL-Werte zu.|  
 |**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
@@ -67,9 +67,9 @@ Bei [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium-Tarifen ist die `VI
 ## <a name="see-also"></a>Weitere Informationen  
 
  [SQL Server dynamischen Verwaltungs Sichten im Zusammenhang mit dem Betriebs System &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)   
- [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
+ [sys. dm_os_sys_info &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)   
  [sys. dm_exec_query_memory_grants &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)   
- [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+ [sys. dm_exec_requests &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
  [sys. dm_exec_query_plan &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)   
  [sys. dm_exec_sql_text &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
   

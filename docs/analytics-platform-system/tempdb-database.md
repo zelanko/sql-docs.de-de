@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 3772e2b4cabac84c00854eba85f7a0c2a33d48bc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400138"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>tempdb-Datenbank parallel Data Warehouse
@@ -21,7 +21,7 @@ bei **tempdb** handelt es sich um eine SQL Server PDW Systemdatenbank, in der lo
   
 Weitere Informationen zu System Datenbanken finden Sie unter [System Datenbanken](system-databases.md).  
   
-## <a name="Basics"></a>Wichtige Begriffe und Konzepte  
+## <a name="key-terms-and-concepts"></a><a name="Basics"></a>Wichtige Begriffe und Konzepte  
 *lokale temporäre Tabelle*  
 Eine *lokale temporäre Tabelle* verwendet das Präfix # vor dem Tabellennamen und ist eine temporäre Tabelle, die von einer lokalen Benutzersitzung erstellt wird. Jede Sitzung kann nur für eine eigene Sitzung auf die Daten in lokalen temporären Tabellen zugreifen.  
   
@@ -51,7 +51,7 @@ SQL Server PDW löscht Tabellen aus **tempdb** , wenn:
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
 SQL Server PDW führt die gleichen Vorgänge für temporäre Tabellen und permanente Tabellen aus, sofern nicht ausdrücklich anders angegeben. Beispielsweise werden die Daten in lokalen temporären Tabellen, genauso wie permanente Tabellen, entweder auf den Computeknoten verteilt oder repliziert.  
   
-## <a name="LimitationsRestrictions"></a>Einschränkungen  
+## <a name="limitations-and-restrictions"></a><a name="LimitationsRestrictions"></a>Einschränkungen  
 Einschränkungen für die SQL Server PDW**tempdb** -Datenbank. Folgendes ist *nicht möglich:*  
   
 -   Erstellen Sie eine globale temporäre Tabelle, die mit # # beginnt.  
@@ -82,7 +82,7 @@ Einschränkungen für lokale temporäre Tabellen. Folgendes ist *nicht möglich:
 ## <a name="permissions"></a>Berechtigungen  
 Jeder Benutzer ist berechtigt, temporäre Objekte in tempdb zu erstellen. Benutzer haben nur Zugriff auf ihre eigenen Objekte, es sei denn, ihnen wurden zusätzliche Berechtigungen zugewiesen. Die CONNECT-Berechtigung für tempdb kann widerrufen werden, um Benutzer daran zu hindern, die tempdb-Datenbank zu verwenden. Von diesem Schritt wird jedoch abgeraten, da einige Routinevorgänge auf die Verwendung von tempdb angewiesen sind.  
   
-## <a name="RelatedTasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a><a name="RelatedTasks"></a>Related Tasks  
   
 |Aufgaben|BESCHREIBUNG|  
 |---------|---------------|  

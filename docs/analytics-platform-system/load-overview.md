@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: fd161820fd53d45642848697bce9589a98dec4ca
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401038"
 ---
 # <a name="loading-data-into-parallel-data-warehouse"></a>Laden von Daten in parallele Data Warehouse
@@ -25,7 +25,7 @@ Zum Laden von Daten benötigen Sie mindestens einen Lade Server. Sie können Ihr
 ## <a name="load-with-dwloader"></a>Mit "dwloader laden  
 Die Verwendung des [Befehlszeilen Laders von "dwloader](dwloader.md) ist die schnellste Möglichkeit zum Laden von Daten in PDW.  
   
-![Ladevorgang](media/loading-process.png "Ladevorgang")  
+![Prozess wird geladen](media/loading-process.png "Ladevorgang")  
   
 "dwloader lädt Daten direkt auf die Computeknoten, ohne die Daten über den Steuer Knoten zu übergeben. Zum Laden von Daten kommuniziert "dwloader zunächst mit dem Steuer Knoten, um Kontaktinformationen für die Computeknoten zu erhalten. "dwloader richtet einen Kommunikationskanal mit jedem Computeknoten ein und sendet dann mit einer Roundrobin-Methode 256 KB Datenblöcke an die Computeknoten.  
   

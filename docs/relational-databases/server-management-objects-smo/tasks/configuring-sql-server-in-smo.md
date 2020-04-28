@@ -15,10 +15,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f973b47d4b55624e0f78658f7dfa13ec1aebd80c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74095954"
 ---
 # <a name="configuring-sql-server-in-smo"></a>Konfigurieren von SQL Server in SMO
@@ -26,8 +26,7 @@ ms.locfileid: "74095954"
 
   In SMO enthalten das <xref:Microsoft.SqlServer.Management.Smo.Information> -Objekt, <xref:Microsoft.SqlServer.Management.Smo.Settings> das-Objekt <xref:Microsoft.SqlServer.Management.Smo.UserOptions> , das-Objekt <xref:Microsoft.SqlServer.Management.Smo.Configuration> und das-Objekt Einstellungen und Informationen für die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Instanz von.  
   
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verfügt über zahlreiche Eigenschaften, die das Verhalten der installierten Instanz beschreiben. Die Eigenschaften beschreiben die Startoptionen, die Serverstandardwerte, Dateien und Verzeichnisse, System- und Prozessorinformationen, Produkt und Versionen, Verbindungsinformationen, Speicheroptionen, Sprach- und Sortierungsauswahl und den Authentifizierungsmodus.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] verfügt über zahlreiche Eigenschaften, die das Verhalten der installierten Instanz beschreiben. Die Eigenschaften beschreiben die Startoptionen, die Serverstandardwerte, Dateien und Verzeichnisse, System- und Prozessorinformationen, Produkt und Versionen, Verbindungsinformationen, Speicheroptionen, Sprach- und Sortierungsauswahl und den Authentifizierungsmodus.  
   
 ## <a name="sql-server-configuration"></a>SQL Server-Konfiguration  
  Die <xref:Microsoft.SqlServer.Management.Smo.Information>-Objekteigenschaften enthalten Informationen über die Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], wie z. B. Prozessor und Plattform.  

@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ee70338b5a46ec60d808e489d982fd80692c5d1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400623"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Einschalten oder Deaktivieren der Appliance für das Analytics-Platt Form System
@@ -25,9 +25,9 @@ Wenn diese Anweisungen das Herstellen einer Verbindung mit einem SQL Server PDW 
   
 Verbindungen mit SQL Server PDW Knoten können mithilfe der IP-Adressen hergestellt werden, die den Knoten zugewiesen sind, oder vom **HST01** -Computer mithilfe der Anwendungen **Failovercluster-Manager** (**Cluadmin. msc**) oder **Hyper-V-Manager** (**virtmgmt. msc**), und klicken Sie mit der rechten Maustaste auf den Knoten Namen.  
   
-## <a name="PowerOff"></a>Ausschalten der Appliance  
+## <a name="power-off-the-appliance"></a><a name="PowerOff"></a>Ausschalten der Appliance  
   
-### <a name="before-you-begin"></a>Voraussetzungen  
+### <a name="before-you-begin"></a>Vorbereitung  
 Bevor Sie das Gerät ausschalten, sollten Sie alle Aktivitäten auf dem Gerät beenden. So beenden Sie alle Aktivitäten:  
   
 -   Verwenden Sie die Seite **Sitzungen** der Verwaltungskonsole, um die aktuellen Benutzer zu identifizieren. Kontaktieren Sie Sie, und bitten Sie Sie, sich abzumelden.  
@@ -61,7 +61,7 @@ Bevor Sie das Gerät ausschalten, sollten Sie alle Aktivitäten auf dem Gerät b
   
 9. Fahren Sie die Stromverteiler Einheiten (PDUs) herunter.  
   
-## <a name="PowerOn"></a>Einschalten des Geräts  
+## <a name="power-on-the-appliance"></a><a name="PowerOn"></a>Einschalten des Geräts  
   
 ### <a name="to-power-on-the-appliance"></a>So schalten Sie das Gerät ein  
   

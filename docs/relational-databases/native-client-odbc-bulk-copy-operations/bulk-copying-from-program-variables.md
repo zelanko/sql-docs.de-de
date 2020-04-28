@@ -20,10 +20,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f88a966e2095f527f36c84498e026c1e23aaa2ab
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73785224"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Massenkopieren aus Programmvariablen
@@ -57,33 +57,33 @@ ms.locfileid: "73785224"
   
 |ODBC SQL-Datentyp|ODBC C-Datentyp|bcp_bind *Typparameter*|SQL Server-Datentyp|  
 |-----------------------|----------------------|--------------------------------|--------------------------|  
-|SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**Art**<br /><br /> **Char**|  
-|SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **Zeichen variiert**<br /><br /> **char-Variation**<br /><br /> **sysname**|  
+|SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**Art**<br /><br /> **char**|  
+|SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **character varying**<br /><br /> **char varying**<br /><br /> **sysname**|  
 |SQL_LONGVARCHAR|SQL_C_CHAR|SQLCHARACTER|**text**|  
 |SQL_WCHAR|SQL_C_WCHAR|SQLNCHAR|**nchar**|  
 |SQL_WVARCHAR|SQL_C_WCHAR|SQLNVARCHAR|**nvarchar**|  
 |SQL_WLONGVARCHAR|SQL_C_WCHAR|SQLNTEXT|**ntext**|  
-|SQL_DECIMAL|SQL_C_CHAR|SQLCHARACTER|**Decimal**<br /><br /> **31.12.2012**<br /><br /> **money**<br /><br /> **SMALLMONEY**|  
-|SQL_NUMERIC|SQL_C_NUMERIC|SQLNUMERICN|**isch**|  
+|SQL_DECIMAL|SQL_C_CHAR|SQLCHARACTER|**decimal**<br /><br /> **31.12.2012**<br /><br /> **money**<br /><br /> **smallmoney**|  
+|SQL_NUMERIC|SQL_C_NUMERIC|SQLNUMERICN|**numeric**|  
 |SQL_BIT|SQL_C_BIT|SQLBIT|**bit**|  
 |SQL_TINYINT (mit Vorzeichen)|SQL_C_SSHORT|SQLINT2|**smallint**|  
 |SQL_TINYINT (ohne Vorzeichen)|SQL_C_UTINYINT|SQLINT1|**tinyint**|  
 |SQL_SMALL_INT (mit Vorzeichen)|SQL_C_SSHORT|SQLINT2|**smallint**|  
 |SQL_SMALL_INT (ohne Vorzeichen)|SQL_C_SLONG|SQLINT4|**int**<br /><br /> **integer**|  
 |SQL_INTEGER (mit Vorzeichen)|SQL_C_SLONG|SQLINT4|**int**<br /><br /> **integer**|  
-|SQL_INTEGER (ohne Vorzeichen)|SQL_C_CHAR|SQLCHARACTER|**Decimal**<br /><br /> **31.12.2012**|  
-|SQL_BIGINT (mit und ohne Vorzeichen)|SQL_C_CHAR|SQLCHARACTER|**BIGINT**|  
-|SQL_REAL|SQL_C_FLOAT|SQLFLT4|**wirkliche**|  
+|SQL_INTEGER (ohne Vorzeichen)|SQL_C_CHAR|SQLCHARACTER|**decimal**<br /><br /> **31.12.2012**|  
+|SQL_BIGINT (mit und ohne Vorzeichen)|SQL_C_CHAR|SQLCHARACTER|**bigint**|  
+|SQL_REAL|SQL_C_FLOAT|SQLFLT4|**real**|  
 |SQL_FLOAT|SQL_C_DOUBLE|SQLFLT8|**float**|  
 |SQL_DOUBLE|SQL_C_DOUBLE|SQLFLT8|**float**|  
-|SQL_BINARY|SQL_C_BINARY|SQLBINARY|**BINARY**<br /><br /> **timestamp**|  
-|SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **binäre unterschiedlichen**|  
-|SQL_LONGVARBINARY|SQL_C_BINARY|SQLBINARY|**Klang**|  
+|SQL_BINARY|SQL_C_BINARY|SQLBINARY|**binary**<br /><br /> **timestamp**|  
+|SQL_VARBINARY|SQL_C_BINARY|SQLBINARY|**varbinary**<br /><br /> **binary varying**|  
+|SQL_LONGVARBINARY|SQL_C_BINARY|SQLBINARY|**image**|  
 |SQL_TYPE_DATE|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
 |SQL_TYPE_TIME|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
 |SQL_TYPE_TIMESTAMP|SQL_C_CHAR|SQLCHARACTER|**datetime**<br /><br /> **smalldatetime**|  
 |SQL_GUID|SQL_C_GUID|SQLUNIQUEID|**uniqueidentifier**|  
-|SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**Char**|  
+|SQL_INTERVAL_|SQL_C_CHAR|SQLCHARACTER|**char**|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]weist nicht signierte Datentypen " **tinyint**", "Ganzzahl ohne Vorzeichen **smallint**" oder "Ganzzahl ohne Vorzeichen **int** " auf. Um den Verlust von Datenwerten beim Migrieren dieser Datentypen zu verhindern, erstellen Sie die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Tabelle mit dem nächstgrößeren ganzzahligen Datentyp. Um zu verhindern, dass Benutzer später Werte außerhalb des für den ursprünglichen Datentyp zulässigen Bereichs hinzufügen, wenden Sie eine Regel auf die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Spalte an, mit der die zulässigen Werte entsprechend eingeschränkt werden:  
   
@@ -105,8 +105,7 @@ sp_bindrule USmallInt_Rule, 'Sample_Ints.USmallIntCol'
 GO  
 ```  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt Intervalldatentypen nicht direkt. Eine Anwendung kann Intervallescapesequenzen jedoch als Zeichenfolgen in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zeichenspalte speichern. Die Anwendung kann sie zur späteren Verwendung lesen, sie können aber nicht in [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen verwendet werden.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt Intervalldatentypen nicht direkt. Eine Anwendung kann Intervallescapesequenzen jedoch als Zeichenfolgen in einer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Zeichenspalte speichern. Die Anwendung kann sie zur späteren Verwendung lesen, sie können aber nicht in [!INCLUDE[tsql](../../includes/tsql-md.md)] -Anweisungen verwendet werden.  
   
  Mithilfe der Massenkopierfunktionen können aus einer ODBC-Datenquelle gelesene Daten schnell in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geladen werden. Verwenden Sie [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) , um die Spalten eines Resultsets an Programmvariablen zu binden, und verwenden Sie dann **bcp_bind** , um die gleichen Programmvariablen an einen Massen Kopiervorgang zu binden. Durch den Aufruf von [SQLFetchScroll](../../relational-databases/native-client-odbc-api/sqlfetchscroll.md) oder **SQLFetch** wird eine Daten Zeile aus der ODBC-Datenquelle in die Programmvariablen abgerufen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . beim Aufrufen von [bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) werden die Daten aus den Programmvariablen in Massen kopiert.  
   

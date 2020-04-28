@@ -13,10 +13,10 @@ ms.assetid: 721277fd-84f0-41aa-8f2d-bc13a7221044
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6b1941b6be24b926b870ad284b0aa8ce7242fba4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729685"
 ---
 # <a name="change-a-user39s-email-address-master-data-services"></a>Ändern einer Benutzer-E-Mail-Adresse (Master Data Services)
@@ -46,9 +46,9 @@ ms.locfileid: "73729685"
   
 ## <a name="next-steps"></a>Nächste Schritte  
   
--   [&#40;Master Data Services Berechtigungen für Funktionsbereiche zuweisen&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
+-   [Zuweisen von Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/assign-functional-area-permissions-master-data-services.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Sicherheits &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
+ [Sicherheit &#40;Master Data Services&#41;](../master-data-services/security-master-data-services.md)  
   
   

@@ -20,10 +20,10 @@ ms.assetid: 89099668-1dc6-4b07-9d8b-49bc95c7bfc0
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8e4068d9763460995335fe5adbd6684ecb70d8b7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982620"
 ---
 # <a name="sysresource_governor_configuration-transact-sql"></a>sys.resource_governor_configuration (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73982620"
 |-----------------|---------------|-----------------|  
 |classifier_function_id|**int**|Die ID der Klassifizierungsfunktion, wie sie in den Metadaten gespeichert ist. Lässt keine NULL-Werte zu.<br /><br /> **Hinweis** Diese Funktion wird zum Klassifizieren neuer Sitzungen verwendet und verwendet Regeln, um die Arbeitsauslastung an die entsprechende Arbeits Auslastungs Gruppe weiterzuleiten. Weitere Informationen finden Sie unter [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).|  
 |is_enabled|**bit**|Gibt den aktuellen Status der Ressourcenkontrolle an:<br /><br /> 0 = Resource Governor ist nicht aktiviert.<br /><br /> 1 = Resource Governor aktiviert ist.<br /><br /> Lässt keine NULL-Werte zu.|  
-|max_outstanding_io_per_volume|**int**|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.<br /><br /> Die maximale Anzahl der ausstehenden E/A-Vorgänge pro Volume.|  
+|max_outstanding_io_per_volume|**int**|**Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.<br /><br /> Die maximale Anzahl der ausstehenden E/A-Vorgänge pro Volume.|  
   
 ## <a name="remarks"></a>Bemerkungen  
  Die Katalogsicht zeigt die Konfiguration der Ressourcenkontrolle an, wie sie in den Metadaten gespeichert ist. Um die Konfiguration im Arbeitsspeicher anzuzeigen, verwenden Sie die entsprechende dynamische Verwaltungssicht.  
@@ -67,7 +67,7 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Resource Governor Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
- [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys. dm_resource_governor_configuration &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md)   
  [Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor.md)  
   

@@ -21,10 +21,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 26d6ca64dfbca8bc63a81989d7c3c34a841e4f5a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74095343"
 ---
 # <a name="backing-up-and-restoring-databases-and-transaction-logs"></a>Sichern und Wiederherstellen von Datenbanken und Transaktionsprotokollen
@@ -450,8 +450,7 @@ del "C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\Backup\Test
 ```  
   
 ## <a name="running-database-integrity-checks-in-visual-basic"></a>Ausführen von Datenbankintegritätsprüfungen in Visual Basic  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt Datenintegritätsprüfungen bereit. In diesem Codebeispiel wird eine Datenbankkonsistenztyp-Prüfung für die angegebene Datenbank ausgeführt. In diesem Beispiel wird <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A> verwendet. Allerdings können auch <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> oder <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> verwendet werden.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt Datenintegritätsprüfungen bereit. In diesem Codebeispiel wird eine Datenbankkonsistenztyp-Prüfung für die angegebene Datenbank ausgeführt. In diesem Beispiel wird <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A> verwendet. Allerdings können auch <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> oder <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> verwendet werden.  
   
 > [!NOTE]  
 >  Das <xref:System.Collections.Specialized.StringCollection>-Objekt erfordert einen Verweis auf den Namespace mittels `imports System.Collections.Specialized`-Anweisung.  
@@ -481,8 +480,7 @@ End Module
 ```  
   
 ## <a name="running-database-integrity-checks-in-visual-c"></a>Ausführen von Datenbankintegritätsprüfungen in Visual C#  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt Datenintegritätsprüfungen bereit. In diesem Codebeispiel wird eine Datenbankkonsistenztyp-Prüfung für die angegebene Datenbank ausgeführt. In diesem Beispiel wird <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A> verwendet. Allerdings können auch <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> oder <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> verwendet werden.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt Datenintegritätsprüfungen bereit. In diesem Codebeispiel wird eine Datenbankkonsistenztyp-Prüfung für die angegebene Datenbank ausgeführt. In diesem Beispiel wird <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A> verwendet. Allerdings können auch <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> oder <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> verwendet werden.  
   
 > [!NOTE]  
 >  Das <xref:System.Collections.Specialized.StringCollection>-Objekt erfordert einen Verweis auf den Namespace mittels `imports System.Collections.Specialized`-Anweisung.  
@@ -514,8 +512,7 @@ class A {
 ```  
   
 ## <a name="running-database-integrity-checks-in-powershell"></a>Ausführen von Datenbankintegritätsprüfungen in PowerShell  
- 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt Datenintegritätsprüfungen bereit. In diesem Codebeispiel wird eine Datenbankkonsistenztyp-Prüfung für die angegebene Datenbank ausgeführt. In diesem Beispiel wird <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A> verwendet. Allerdings können auch <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> oder <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> verwendet werden.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] stellt Datenintegritätsprüfungen bereit. In diesem Codebeispiel wird eine Datenbankkonsistenztyp-Prüfung für die angegebene Datenbank ausgeführt. In diesem Beispiel wird <xref:Microsoft.SqlServer.Management.Smo.Database.CheckTables%2A> verwendet. Allerdings können auch <xref:Microsoft.SqlServer.Management.Smo.Database.CheckAllocations%2A>, <xref:Microsoft.SqlServer.Management.Smo.Database.CheckCatalog%2A> oder <xref:Microsoft.SqlServer.Management.Smo.Database.CheckIdentityValues%2A> verwendet werden.  
   
 > [!NOTE]  
 >  Das <xref:System.Collections.Specialized.StringCollection>-Objekt erfordert einen Verweis auf den Namespace mittels `imports System.Collections.Specialized`-Anweisung.  

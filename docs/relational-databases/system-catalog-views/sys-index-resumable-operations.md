@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d33b78710605841e4559f9c402a18210e25b2daa
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73980306"
 ---
 # <a name="sysindex_resumable_operations-transact-sql"></a>sys. index_resumable_operations (Transact-SQL)
@@ -36,17 +36,17 @@ ms.locfileid: "73980306"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID des Objekts, zu dem dieser Index gehört (lässt keine NULL-Werte zu).|  
 |**index_id**|**int**|ID des Indexes (lässt keine NULL-Werte zu). **index_id** ist nur innerhalb des-Objekts eindeutig.|
-|**name**|**sysname**|Der Name des Indexes. der **Name** ist nur innerhalb des Objekts eindeutig.|  
+|**name**|**sysname**|Name des Indexes. der **Name** ist nur innerhalb des Objekts eindeutig.|  
 |**sql_text**|**nvarchar(max)**|DDL-T-SQL-Anweisungs Text|
 |**last_max_dop**|**smallint**|Letztes MAX_DOP verwendet (Standardwert = 0)|
 |**partition_number**|**int**|Die Partitionsnummer im besitzenden Index oder Heap. Für nicht partitionierte Tabellen und Indizes oder für den Fall, dass alle Partitionen neu erstellt werden, ist der Wert dieser Spalte NULL.|
-|**Land**|**tinyint**|Betriebsstatus für fort Setz baren Index:<br /><br />0 = wird ausgeführt<br /><br />1 = anhalten|
-|**state_desc**|**nvarchar (60)**|Beschreibung des Betriebsstatus für einen fort Setz baren Index (wird ausgeführt oder angehalten)|  
+|**state**|**tinyint**|Betriebsstatus für fort Setz baren Index:<br /><br />0 = wird ausgeführt<br /><br />1 = anhalten|
+|**state_desc**|**nvarchar(60)**|Beschreibung des Betriebsstatus für einen fort Setz baren Index (wird ausgeführt oder angehalten)|  
 |**start_time**|**datetime**|Startzeit des Index Vorgangs (lässt keine NULL-Werte zu)|
 |**last_pause_time**|**DataTime**| Zeit für Index Vorgang: letzte Pause (Nullable). NULL, wenn der Vorgang ausgeführt wird und nie angehalten wird.|
 |**total_execution_time**|**int**|Gesamt Ausführungszeit der Startzeit in Minuten (lässt keine NULL-Werte zu)|
-|**percent_complete**|**wirkliche**|Der Fortschritt des Index Vorgangs in% (lässt keine NULL-Werte zu).|
-|**page_count**|**BIGINT**|Die Gesamtanzahl der Indexseiten, die vom indexbuildvorgang für die neuen Indizes und Zuordnungs Indizes zugeordnet werden (keine NULL-Werte zulassen).
+|**percent_complete**|**real**|Der Fortschritt des Index Vorgangs in% (lässt keine NULL-Werte zu).|
+|**page_count**|**bigint**|Die Gesamtanzahl der Indexseiten, die vom indexbuildvorgang für die neuen Indizes und Zuordnungs Indizes zugeordnet werden (keine NULL-Werte zulassen).
 
 ## <a name="permissions"></a>Berechtigungen
 
@@ -64,7 +64,7 @@ SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;
 
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)
 - [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
-- [Katalogansichten](catalog-views-transact-sql.md)
+- [Katalog Sichten](catalog-views-transact-sql.md)
 - [Objektkatalog Sichten](object-catalog-views-transact-sql.md)
 - [sys.indexes](sys-xml-indexes-transact-sql.md)
 - [sys.index_columns](sys-index-columns-transact-sql.md)

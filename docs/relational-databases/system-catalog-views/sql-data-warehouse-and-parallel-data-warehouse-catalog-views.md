@@ -13,10 +13,10 @@ ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b3d5780daea40f229ed7d4d86438be814dfe7d29
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73844515"
 ---
 # <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>SQL Data Warehouse- und Parallel Data Warehouse-Katalogsichten
@@ -25,7 +25,7 @@ ms.locfileid: "73844515"
 
  In diesem Thema werden [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] die [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Katalog Sichten und aufgelistet.  
   
-## <a name="includesssdwincludessssdw-mdmd-and-includesspdwincludessspdw-mdmd-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Katalog Sichten  
+## <a name="sssdw-and-sspdw-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Katalog Sichten  
  Die folgenden Katalog Sichten gelten für [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] und: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
  [sys. pdw_column_distribution_properties &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-pdw-column-distribution-properties-transact-sql.md)  
@@ -34,9 +34,9 @@ ms.locfileid: "73844515"
   
  [sys. pdw_index_mappings &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-pdw-index-mappings-transact-sql.md)  
   
- [sys. pdw_loader_backup_run_details &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
+ [sys.pdw_loader_backup_run_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-run-details-transact-sql.md)  
   
- [sys. pdw_loader_backup_runs &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
+ [sys.pdw_loader_backup_runs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-backup-runs-transact-sql.md)  
   
  [sys. pdw_nodes_column_store_dictionaries &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
   
@@ -54,13 +54,13 @@ ms.locfileid: "73844515"
   
  [sys. pdw_nodes_tables &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-tables-transact-sql.md) 
 
- [sys. pdw_replicated_table_cache_state (Transact-SQL)](sys-pdw-replicated-table-cache-state-transact-sql.md) 
+ [sys.pdw_replicated_table_cache_state (Transact-SQL)](sys-pdw-replicated-table-cache-state-transact-sql.md) 
   
  [sys. pdw_table_distribution_properties &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-distribution-properties-transact-sql.md)  
   
  [sys. pdw_table_mappings &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-pdw-table-mappings-transact-sql.md) 
 
-## <a name="includesssdwincludessssdw-mdmd-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Katalogsichten
+## <a name="sssdw-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]Katalog Sichten
 
  Die folgenden Katalog Sichten gelten nur [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] für:
 
@@ -77,7 +77,7 @@ ms.locfileid: "73844515"
  [sys. workload_management_workload_groups &#40;Transact-SQL-&#41;](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql?view=azure-sqldw-latest) (Vorschau)
 
 
-## <a name="includesspdwincludessspdw-mdmd-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Katalogsichten
+## <a name="sspdw-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]Katalog Sichten
 
  Die folgenden Katalog Sichten gelten nur [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] für:
 
@@ -99,7 +99,7 @@ ms.locfileid: "73844515"
   
  [sys. pdw_health_components &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-pdw-health-components-transact-sql.md)  
   
- [sys. pdw_loader_run_stages &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
+ [sys.pdw_loader_run_stages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-loader-run-stages-transact-sql.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  

@@ -11,10 +11,10 @@ ms.assetid: 113069c5-12e6-48ec-b443-b42e14f77308
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 4bc3d2a084f7f1ec3abcf9e3d3bbcaf82e4749e8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729110"
 ---
 # <a name="member-revision-history-master-data-services"></a>Elementrevisionsverlauf (Master Data Services)
@@ -36,7 +36,7 @@ ms.locfileid: "73729110"
 ## <a name="view-and-manage-revision-history-by-entity"></a>Anzeigen und Verwalten des Revisionsverlaufs je Entität  
  Im Funktionsbereich des Explorers können Sie die Revision für alle Elemente in der Entität anzeigen. Wenn Sie über Aktualisierungsberechtigungen verfügen, können Sie das Element auf eine frühere Version zurücksetzen.  
   
- **So zeigen Sie den Revisions Verlauf an und verwalten ihn**  
+ **So zeigen Sie den Revisionsverlauf an und verwalten ihn**  
   
 1.  Wählen Sie in [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]das Modell und die Version und klicken Sie anschließend auf **Explorer**.  
   
@@ -62,16 +62,16 @@ ms.locfileid: "73729110"
 4.  Klicken Sie auf **Verlauf anzeigen** im rechten Bereich.  
   
 ## <a name="log-retention-setting"></a>Einstellung für Protokollbeibehaltung  
- Sie können konfigurieren, wie lange Verlaufsdaten beibehalten werden, indem Sie die Eigenschaft **Protokollaufbewahrung in Tagen** in den Systemeinstellungen für die [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)]-Datenbank festlegen, und durch Festlegen von **Protokollaufbewahrung in Tagen**, wenn Sie ein Modell erstellen oder bearbeiten.  
+ Sie können konfigurieren, wie lange Verlaufsdaten beibehalten werden, indem Sie die Eigenschaft **Protokollaufbewahrung in Tagen[!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] in den Systemeinstellungen für die **-Datenbank festlegen, und durch Festlegen von **Protokollaufbewahrung in Tagen**, wenn Sie ein Modell erstellen oder bearbeiten.  
   
 ## <a name="related-task"></a>Verwandte Aufgabe  
   
 |Taskbeschreibung|Thema|  
 |----------------------|-----------|  
-|Zurücksetzen des Elementrevisionsverlaufs|[Rollback für Element Revisions Verlauf &#40;Master Data Services&#41;](../master-data-services/rollback-member-revision-history-master-data-services.md)|  
+|Zurücksetzen des Elementrevisionsverlaufs|[Zurücksetzen des Elementrevisionsverlaufs &#40;Master Data Services&#41;](../master-data-services/rollback-member-revision-history-master-data-services.md)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Erstellen Sie ein Modell &#40;Master Data Services&#41;](../master-data-services/create-a-model-master-data-services.md)   
- [System Einstellungen &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)  
+ [Systemeinstellungen &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md)  
   
   

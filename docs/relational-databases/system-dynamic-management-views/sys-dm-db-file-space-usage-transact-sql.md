@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a160909901b265a6d07af18f6373554b036fe894
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983049"
 ---
 # <a name="sysdm_db_file_space_usage-transact-sql"></a>sys.dm_db_file_space_usage (Transact-SQL)
@@ -39,15 +39,15 @@ ms.locfileid: "73983049"
 |-----------------|---------------|-----------------|  
 |database_id|**smallint**|Datenbank-ID|  
 |file_id|**smallint**|Die Datei-ID<br /><br /> file_id wird file_id in [sys. dm_io_virtual_file_stats](../../relational-databases/system-dynamic-management-views/sys-dm-io-virtual-file-stats-transact-sql.md) und in der [Datei "sys. sysfiles](../../relational-databases/system-compatibility-views/sys-sysfiles-transact-sql.md)" zugeordnet.|  
-|filegroup_id|**smallint**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Die Dateigruppen-ID.|  
-|total_page_count|**BIGINT**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Die Gesamtanzahl von Seiten in der Datei.|  
-|allocated_extent_page_count|**BIGINT**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Die Gesamtzahl der Seiten in den zugeordneten Blöcken der Datei.|  
-|unallocated_extent_page_count|**BIGINT**|Gesamtzahl der Seiten in den nicht zugeordneten Blöcken der Datei.<br /><br /> Nicht verwendete Seiten in nicht zugeordneten Blöcken sind nicht enthalten.|  
-|version_store_reserved_page_count|**BIGINT**|Gesamtzahl der Seiten in den gleichartigen Blöcken, die dem Versionsspeicher zugeordnet werden. Versionsspeicherseiten werden nie aus gemischten Blöcken zugeordnet.<br /><br /> IAM-Seiten sind nicht enthalten, da sie immer aus gemischten Blöcken zugeordnet werden. PFS-Seiten sind dann enthalten, wenn sie aus einem einheitlichen Block zugeordnet werden.<br /><br /> Weitere Informationen finden Sie unter [sys.dm_tran_version_store &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md).|  
-|user_object_reserved_page_count|**BIGINT**|Gesamtzahl der Seiten, die aus gleichartigen Blöcken für Benutzerobjekte in der Datenbank zugeordnet werden. Nicht verwendete Seiten aus einem zugeordneten Block sind in der Gesamtzahl enthalten.<br /><br /> IAM-Seiten sind nicht enthalten, da sie immer aus gemischten Blöcken zugeordnet werden. PFS-Seiten sind dann enthalten, wenn sie aus einem einheitlichen Block zugeordnet werden.<br /><br /> Sie können die Spalte total_pages in der [sys. allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) -Katalog Sicht verwenden, um die Anzahl der reservierten Seiten jeder Zuordnungs Einheit im Benutzerobjekt zurückzugeben. Die total_pages-Spalte enthält jedoch IAM-Seiten.|  
-|internal_object_reserved_page_count|**BIGINT**|Gesamtzahl der Seiten in gleichartigen Blöcken, die für interne Objekte in der Datei zugeordnet werden. Nicht verwendete Seiten aus einem zugeordneten Block sind in der Gesamtzahl enthalten.<br /><br /> IAM-Seiten sind nicht enthalten, da sie immer aus gemischten Blöcken zugeordnet werden. PFS-Seiten sind dann enthalten, wenn sie aus einem einheitlichen Block zugeordnet werden.<br /><br /> Es ist keine Katalogsicht bzw. kein dynamisches Verwaltungsobjekt vorhanden, die bzw. das die Seitenanzahl für jedes interne Objekt zurückgibt.|  
-|mixed_extent_page_count|**BIGINT**|Gesamtzahl der zugeordneten und nicht zugeordneten Seiten in zugeordneten gemischten Blöcken in der Datei. Gemischte Blöcke enthalten Seiten, die verschiedenen Objekten zugeordnet werden. Diese Gesamtzahl enthält alle IAM-Seiten in der Datei.|
-|modified_extent_page_count|**BIGINT**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und höher.<br /><br />Gesamtanzahl der Seiten, die seit der letzten vollständigen Datenbanksicherung in den zugeordneten Blöcken der Datei geändert wurden. Mithilfe der geänderten Seitenanzahl kann die Menge der differenziellen Änderungen in der Datenbank seit der letzten vollständigen Sicherung nachverfolgt werden, um zu entscheiden, ob eine differenzielle Sicherung erforderlich ist.|
+|filegroup_id|**smallint**|**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Die Dateigruppen-ID.|  
+|total_page_count|**bigint**|**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Die Gesamtanzahl von Seiten in der Datei.|  
+|allocated_extent_page_count|**bigint**|**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Die Gesamtzahl der Seiten in den zugeordneten Blöcken der Datei.|  
+|unallocated_extent_page_count|**bigint**|Gesamtzahl der Seiten in den nicht zugeordneten Blöcken der Datei.<br /><br /> Nicht verwendete Seiten in nicht zugeordneten Blöcken sind nicht enthalten.|  
+|version_store_reserved_page_count|**bigint**|Gesamtzahl der Seiten in den gleichartigen Blöcken, die dem Versionsspeicher zugeordnet werden. Versionsspeicherseiten werden nie aus gemischten Blöcken zugeordnet.<br /><br /> IAM-Seiten sind nicht enthalten, da sie immer aus gemischten Blöcken zugeordnet werden. PFS-Seiten sind dann enthalten, wenn sie aus einem einheitlichen Block zugeordnet werden.<br /><br /> Weitere Informationen finden Sie unter [sys.dm_tran_version_store &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql.md).|  
+|user_object_reserved_page_count|**bigint**|Gesamtzahl der Seiten, die aus gleichartigen Blöcken für Benutzerobjekte in der Datenbank zugeordnet werden. Nicht verwendete Seiten aus einem zugeordneten Block sind in der Gesamtzahl enthalten.<br /><br /> IAM-Seiten sind nicht enthalten, da sie immer aus gemischten Blöcken zugeordnet werden. PFS-Seiten sind dann enthalten, wenn sie aus einem einheitlichen Block zugeordnet werden.<br /><br /> Sie können die Spalte total_pages in der [sys. allocation_units](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md) -Katalog Sicht verwenden, um die Anzahl der reservierten Seiten jeder Zuordnungs Einheit im Benutzerobjekt zurückzugeben. Die total_pages-Spalte enthält jedoch IAM-Seiten.|  
+|internal_object_reserved_page_count|**bigint**|Gesamtzahl der Seiten in gleichartigen Blöcken, die für interne Objekte in der Datei zugeordnet werden. Nicht verwendete Seiten aus einem zugeordneten Block sind in der Gesamtzahl enthalten.<br /><br /> IAM-Seiten sind nicht enthalten, da sie immer aus gemischten Blöcken zugeordnet werden. PFS-Seiten sind dann enthalten, wenn sie aus einem einheitlichen Block zugeordnet werden.<br /><br /> Es ist keine Katalogsicht bzw. kein dynamisches Verwaltungsobjekt vorhanden, die bzw. das die Seitenanzahl für jedes interne Objekt zurückgibt.|  
+|mixed_extent_page_count|**bigint**|Gesamtzahl der zugeordneten und nicht zugeordneten Seiten in zugeordneten gemischten Blöcken in der Datei. Gemischte Blöcke enthalten Seiten, die verschiedenen Objekten zugeordnet werden. Diese Gesamtzahl enthält alle IAM-Seiten in der Datei.|
+|modified_extent_page_count|**bigint**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 und höher.<br /><br />Gesamtanzahl der Seiten, die seit der letzten vollständigen Datenbanksicherung in den zugeordneten Blöcken der Datei geändert wurden. Mithilfe der geänderten Seitenanzahl kann die Menge der differenziellen Änderungen in der Datenbank seit der letzten vollständigen Sicherung nachverfolgt werden, um zu entscheiden, ob eine differenzielle Sicherung erforderlich ist.|
 |pdw_node_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
 |distribution_id|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Die eindeutige, der Verteilung zugeordnete numerische ID.|  
   
@@ -84,7 +84,7 @@ ms.locfileid: "73983049"
   
 ## <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-|Von|To|Beziehung|  
+|Von|Beschreibung|Beziehung|  
 |----------|--------|------------------|  
 |sys.dm_db_file_space_usage.database_id, file_id|sys.dm_io_virtual_file_stats.database_id, file_id|1:1|  
   
@@ -118,7 +118,7 @@ FROM sys.dm_db_file_space_usage;
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Dynamische Verwaltungs Sichten im Zusammenhang mit der Datenbank &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)   
  [sys. dm_db_task_space_usage &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-task-space-usage-transact-sql.md)   
- [sys. dm_db_session_space_usage &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  
+ [sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)  

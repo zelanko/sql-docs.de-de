@@ -15,10 +15,10 @@ ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 056975a05f697851d1fc0eac773c917c1f22b738
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729792"
 ---
 # <a name="administrators-master-data-services"></a>Administratoren (Master Data Services)
@@ -52,7 +52,7 @@ ms.locfileid: "73729792"
 ## <a name="master-data-services-super-user"></a>Master Data Services-Administrator  
  In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]können Sie einem Benutzer Berechtigungen für den Funktionsbereich „Administrator“ zuweisen. Ein Benutzer mit Berechtigungen für den Funktionsbereich „Administrator“ verfügt über Administratorberechtigungen für alle Modelle und über Berechtigungen für alle anderen Funktionsbereiche. Informationen zu den Berechtigungen für Funktionsbereiche finden Sie unter [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
- Der Standardadministrator wird für das **Administratorkonto** angegeben, wenn mithilfe des [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]Datenbankerstellungs-Assistenten &#40;Master Data Services-Konfigurations-Manager&#41;[ die ](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md)-Datenbank erstellt wird.  
+ Der Standardadministrator wird für das **Administratorkonto** angegeben, wenn mithilfe des [Datenbankerstellungs-Assistenten &#40;Master Data Services-Konfigurations-Manager&#41;](../master-data-services/create-database-wizard-master-data-services-configuration-manager.md) die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]-Datenbank erstellt wird.  
   
  Der Administrator verfügt über die folgenden Berechtigungen:  
   
@@ -66,7 +66,7 @@ ms.locfileid: "73729792"
   
 |Administratortyp|BESCHREIBUNG|  
 |------------------------|-----------------|  
-|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]Administrator|Im [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] zugewiesene Berechtigungen wirken sich nicht auf den Zugriff des Administrators aus.<br /><br /> Kann ein Administrator sein, je nach den explizit zugewiesenen oder von einer Gruppe geerbten Berechtigungen für Funktionsbereiche.<br /><br /> Verfügt automatisch über alle Berechtigungen für alle Modelle.<br /><br /> Verfügt automatisch über Zugriff auf alle Funktionsbereiche.|  
+|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] Administrator|Im [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] zugewiesene Berechtigungen wirken sich nicht auf den Zugriff des Administrators aus.<br /><br /> Kann ein Administrator sein, je nach den explizit zugewiesenen oder von einer Gruppe geerbten Berechtigungen für Funktionsbereiche.<br /><br /> Verfügt automatisch über alle Berechtigungen für alle Modelle.<br /><br /> Verfügt automatisch über Zugriff auf alle Funktionsbereiche.|  
 |Modelladministrator|Kann ein Modelladministrator sein, je nach den explizit zugewiesenen oder von einer Gruppe geerbten Adminberechtigungen.<br /><br /> Verfügt nur über Zugriff auf Funktionsbereiche, für die ihm eine Berechtigung gewährt wurde.<br /><br /> Verfügt automatisch über alle Berechtigungen für alle Objekte und Elemente in dem bestimmten Modell.|  
 |Entitätsadministrator|Kann ein Entitätsadministrator sein, je nach den explizit zugewiesenen oder von einer Gruppe geerbten Administratorberechtigungen.<br /><br /> Verfügt nur über Zugriff auf Funktionsbereiche, für die ihm eine Berechtigung gewährt wurde.<br /><br /> Verfügt automatisch über alle Berechtigungen für alle Objekte und Elemente in der bestimmten Entität.<br /><br /> Können die ausstehenden Changesets genehmigen, wenn die Entitätsänderungen genehmigt werden müssen.|  
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2c72d07873e2e07ee7f6f095f677625a18cdb5a7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982268"
 ---
 # <a name="sp_tableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
@@ -52,13 +52,13 @@ sp_tableoption [ @TableNamePattern = ] 'table'
  [ @OptionName = ] "*option_name*"  
  Der Name einer Tabellenoption. *option_name* ist vom Datentyp **varchar (35)** und hat den Standardwert NULL. *option_name* kann einen der folgenden Werte aufweisen.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |table lock on bulk load|Eine deaktivierte Option (Standard) führt dazu, dass der Massenladevorgang auf benutzerdefinierten Tabellen Zeilensperren erhält. Wenn diese Option aktiviert ist, erhalten die Massenladevorgänge auf benutzerdefinierten Tabellen eine Massenupdatesperre.|  
-|insert row lock|Nicht mehr unterstützt.<br /><br /> Diese Option wirkt sich nicht auf das Sperrverhalten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus und ist nur aus Gründen der Kompatibilität mit vorhandenen Skripts und Prozeduren enthalten.|  
+|insert row lock|Wird nicht mehr unterstützt.<br /><br /> Diese Option wirkt sich nicht auf das Sperrverhalten von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aus und ist nur aus Gründen der Kompatibilität mit vorhandenen Skripts und Prozeduren enthalten.|  
 |text in row|Beim Wert OFF oder 0 (deaktivierte Option, Standard) wird das aktuelle Verhalten nicht geändert, und es gibt keine BLOBs in Zeilen.<br /><br /> Wenn angegeben und @OptionValue auf on (aktiviert) oder einen ganzzahligen Wert von 24 bis 7000, werden neue **Text**-, **ntext**-oder **Image** -Zeichen folgen direkt in der Daten Zeile gespeichert. Alle vorhandenen BLOB-Daten (Binary Large Object: **Text**, **ntext**oder **Image** ) werden in das Format Text in row geändert, wenn der BLOB-Wert aktualisiert wird. Weitere Informationen finden Sie in den Hinweisen.|  
 |LARGE VALUE TYPES OUT OF ROW|1 = **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML** und große benutzerdefinierte Typen (User-Defined Type, UDT) in der Tabelle werden außerhalb der Zeile gespeichert, mit einem 16-Byte-Zeiger auf den Stamm.<br /><br /> 0 = **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **XML** und große UDT-Werte werden direkt in der Daten Zeile gespeichert, bis zu einem Limit von 8000 Bytes, und solange der Wert in den Datensatz passt. Überschreitet der Wert die Größe des Datensatzes, wird ein Zeiger innerhalb der Zeilen gespeichert, während der Rest außerhalb der Zeilen im LOB-Speicherbereich gespeichert wird. Der Standardwert ist 0 (null).<br /><br /> Großer benutzerdefinierter Typ (User-Defined Type, UDT [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ) gilt für: und höher. <br /><br /> Verwenden Sie die Option TEXTIMAGE_ON von [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) , um einen Speicherort für die Speicherung großer Datentypen anzugeben. |  
-|vardecimal-Speicherformat|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Bei TRUE, ON oder 1 ist die festgelegte Tabelle für das vardecimal-Speicherformat aktiviert. Bei FALSE, OFF oder 0 ist die Tabelle für das vardecimal-Speicherformat nicht aktiviert. Das vardecimal--Speicherformat kann nur aktiviert werden, wenn die Datenbank mit [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)für das vardecimal--Speicherformat aktiviert wurde. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen ist das **vardecimal-** -Speicherformat veraltet. Verwenden Sie stattdessen die ROW-Komprimierung. Weitere Informationen finden Sie unter [Data Compression](../../relational-databases/data-compression/data-compression.md). Der Standardwert ist 0 (null).|  
+|vardecimal-Speicherformat|**Gilt für**:  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höher.<br /><br /> Bei TRUE, ON oder 1 ist die festgelegte Tabelle für das vardecimal-Speicherformat aktiviert. Bei FALSE, OFF oder 0 ist die Tabelle für das vardecimal-Speicherformat nicht aktiviert. Das vardecimal--Speicherformat kann nur aktiviert werden, wenn die Datenbank mit [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md)für das vardecimal--Speicherformat aktiviert wurde. In [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] und höheren Versionen ist das **vardecimal-** -Speicherformat veraltet. Verwenden Sie stattdessen die ROW-Komprimierung. Weitere Informationen finden Sie unter [Data Compression](../../relational-databases/data-compression/data-compression.md). Der Standardwert ist 0 (null).|  
   
  [ @OptionValue =] "*Wert*"  
  Gibt an, ob der *option_name* aktiviert (true, on oder 1) oder deaktiviert (false, Off oder 0) ist. der Wert ist vom Datentyp **varchar (12)** und hat keinen Standard *Wert* . beim *Wert* wird Groß-/Kleinschreibung  
@@ -83,13 +83,11 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
 -   Es steht genügend Speicherplatz in der Datenzeile zur Verfügung.  
   
- Wenn BLOB-Zeichen folgen in der Daten Zeile gespeichert werden, kann das Lesen und Schreiben von **Text**-, **ntext**-oder **Image** -Zeichen folgen so schnell wie das Lesen oder Schreiben von Zeichen-und Binär Zeichenfolgen sein. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann nicht auf separate Seiten zugreifen, um die BLOB-Zeichenfolge zu lesen oder zu schreiben.  
+ Wenn BLOB-Zeichen folgen in der Daten Zeile gespeichert werden, kann das Lesen und Schreiben von **Text**-, **ntext**-oder **Image** -Zeichen folgen so schnell wie das Lesen oder Schreiben von Zeichen-und Binär Zeichenfolgen sein. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] kann nicht auf separate Seiten zugreifen, um die BLOB-Zeichenfolge zu lesen oder zu schreiben.  
   
  Wenn eine **Text**-, **ntext**-oder **Image** -Zeichenfolge größer ist als die angegebene Grenze oder der verfügbare Speicherplatz in der Zeile, werden Zeiger stattdessen in der Zeile gespeichert. Die Bedingungen zum Speichern der BLOB-Zeichenfolgen sind jedoch trotzdem gültig: Für die Zeiger muss genügend Speicherplatz in der Datenzeile vorhanden sein.  
   
- BLOB-Zeichenfolgen und -Zeiger, die in der Zeile einer Tabelle gespeichert werden, werden ähnlich wie Zeichenfolgen mit variabler Länge behandelt. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet nur so viele Bytes, wie erforderlich sind, um die Zeichenfolge oder den Zeiger zu speichern.  
+ BLOB-Zeichenfolgen und -Zeiger, die in der Zeile einer Tabelle gespeichert werden, werden ähnlich wie Zeichenfolgen mit variabler Länge behandelt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet nur so viele Bytes, wie erforderlich sind, um die Zeichenfolge oder den Zeiger zu speichern.  
   
  Vorhandene BLOB-Zeichenfolgen werden nicht sofort konvertiert, wenn text in row aktiviert ist. Die Zeichenfolgen werden erst konvertiert, wenn sie aktualisiert werden. Wenn der Grenzwert für Text in row-Optionen zunimmt, werden die **Text**-, **ntext**-oder **Image** -Zeichen folgen, die sich bereits in der Daten Zeile befinden, nicht konvertiert, um den neuen Grenzwert bis zum Aktualisierungs Zeitpunkt einzuhalten.  
   
@@ -138,7 +136,7 @@ EXEC sp_tableoption 'Production.WorkOrderRouting',
 ## <a name="see-also"></a>Weitere Informationen  
  [sys. Tables &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-tables-transact-sql.md)   
  [OBJECTPROPERTY &#40;Transact-SQL-&#41;](../../t-sql/functions/objectproperty-transact-sql.md)   
- [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

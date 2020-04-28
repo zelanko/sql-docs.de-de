@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: d2752a1708c5727567de470b49d4cbcc63f90923
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73782654"
 ---
 # <a name="bcp_gettypename"></a>bcp_gettypename
@@ -40,7 +40,7 @@ RETCODE bcp_gettypename (
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *toben*  
+ *token*  
  Ein Wert, der ein BCP-Typtoken angibt.  
   
  *Flächen*  
@@ -56,44 +56,44 @@ RETCODE bcp_gettypename (
   
 |BCP-Typname|MaxType|Output|  
 |-------------------|-------------|------------|  
-|**SqlDecimal**|Sie können das|**Decimal**|  
-|**SQLNUMERIC**|Sie können das|**isch**|  
-|**SQLINT1**|Sie können das|**tinyint**|  
-|**SQLINT2**|Sie können das|**smallint**|  
-|**SQLINT4**|Sie können das|**int**|  
-|**SQLMONEY**|Sie können das|**money**|  
-|**SQLFLT8**|Sie können das|**float**|  
-|**SqlDateTime**|Sie können das|**datetime**|  
-|**SQLBITN**|Sie können das|**bit-null**|  
-|**SQLBIT**|Sie können das|**bit**|  
-|**SQLBIGCHAR**|Nein|**Char**|  
-|**SQLCHARACTER**|Nein|**Char**|  
+|**SQLDECIMAL**|Sowohl als auch|**decimal**|  
+|**SQLNUMERIC**|Sowohl als auch|**numeric**|  
+|**SQLINT1**|Sowohl als auch|**tinyint**|  
+|**SQLINT2**|Sowohl als auch|**smallint**|  
+|**SQLINT4**|Sowohl als auch|**int**|  
+|**SQLMONEY**|Sowohl als auch|**money**|  
+|**SQLFLT8**|Sowohl als auch|**float**|  
+|**SQLDATETIME**|Sowohl als auch|**datetime**|  
+|**SQLBITN**|Sowohl als auch|**bit-null**|  
+|**SQLBIT**|Sowohl als auch|**bit**|  
+|**SQLBIGCHAR**|Nein|**char**|  
+|**SQLCHARACTER**|Nein|**char**|  
 |**SQLBIGVARCHAR**|Nein|**varchar**|  
 |**SQLVARCHAR**|Nein|**varchar**|  
-|**SQLTEXT**|Sie können das|**text**|  
-|**SQLBIGBINARY**|Nein|**BINARY**|  
+|**SQLTEXT**|Sowohl als auch|**text**|  
+|**SQLBIGBINARY**|Nein|**binary**|  
 |**SQLBINARY**|Nein|**Ärer**|  
 |**SQLBIGVARBINARY**|Nein|**Varbinary**|  
 |**SQLVARBINARY**|Nein|**Varbinary**|  
-|**SQLIMAGE**|Sie können das|**Image**|  
-|**SQLINTN**|Sie können das|**int-null**|  
-|**SQLDATETIMN**|Sie können das|**datetime-null**|  
-|**SQLMONEYN**|Sie können das|**money-null**|  
-|**SQLFLTN**|Sie können das|**float-null**|  
-|**Sqlaopsum**|Sie können das|**Pauschalen**|  
-|**Sqlaopavg**|Sie können das|**AVG**|  
-|**Sqlaopcnt**|Sie können das|**Countdown**|  
-|**Sqlaopmin**|Sie können das|**Man**|  
-|**Sqlaopmax**|Sie können das|**Max**|  
-|**SQLDATETIM4**|Sie können das|**smalldatetime**|  
-|**SQLMONEY4**|Sie können das|**Smallmoney**|  
-|**SQLFLT4**|Sie können das|**Wirkliche**|  
-|**SQLUNIQUEID**|Sie können das|**uniqueidentifier**|  
+|**SQLIMAGE**|Sowohl als auch|**Image**|  
+|**SQLINTN**|Sowohl als auch|**int-null**|  
+|**SQLDATETIMN**|Sowohl als auch|**datetime-null**|  
+|**SQLMONEYN**|Sowohl als auch|**money-null**|  
+|**SQLFLTN**|Sowohl als auch|**float-null**|  
+|**Sqlaopsum**|Sowohl als auch|**Pauschalen**|  
+|**Sqlaopavg**|Sowohl als auch|**AVG**|  
+|**Sqlaopcnt**|Sowohl als auch|**Count**|  
+|**Sqlaopmin**|Sowohl als auch|**Man**|  
+|**Sqlaopmax**|Sowohl als auch|**Max**|  
+|**SQLDATETIM4**|Sowohl als auch|**smalldatetime**|  
+|**SQLMONEY4**|Sowohl als auch|**Smallmoney**|  
+|**SQLFLT4**|Sowohl als auch|**Wirkliche**|  
+|**SQLUNIQUEID**|Sowohl als auch|**uniqueidentifier**|  
 |**SQLNCHAR**|Nein|**NCHAR**|  
 |**SQLNVARCHAR**|Nein|**Nvarchar**|  
-|**SQLNTEXT**|Sie können das|**Ntext**|  
-|**SQLVARIANT**|Sie können das|**sql_variant**|  
-|**SQLINT8**|Sie können das|**Bigint**|  
+|**SQLNTEXT**|Sowohl als auch|**Ntext**|  
+|**SQLVARIANT**|Sowohl als auch|**sql_variant**|  
+|**SQLINT8**|Sowohl als auch|**Bigint**|  
 |**SQLCHARACTER**|Ja|**varchar(max)**|  
 |**SQLBIGCHAR**|Ja|**varchar(max)**|  
 |**SQLBIGVARCHAR**|Ja|**varchar(max)**|  
@@ -105,7 +105,7 @@ RETCODE bcp_gettypename (
 |**SQLNCHAR**|Ja|**nvarchar(max)**|  
 |**SQLNVARCHAR**|Ja|**nvarchar(max)**|  
 |**SQLXML**|Ja|**Basi**|  
-|**SQLUDT**|Sie können das|**UDT**|  
+|**SQLUDT**|Sowohl als auch|**UDT**|  
   
 ## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename-Unterstützung für erweiterte Funktionen für Datum und Uhrzeit  
  Die Tokenparameterwerte für Datums-/Uhrzeittypen werden in der Spalte "Type in sqlncli. h" der Tabelle unter [Massen Kopier Änderungen für verbesserte Datums-und Uhrzeittypen &#40;OLE DB und ODBC-&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)beschrieben. Der zurückgegebene Wert ist in der entsprechenden Zeile der Spalte "Dateispeichertyp" angegeben.  

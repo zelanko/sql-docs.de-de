@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 086065aa79ca6fba7ad84e5b7e7f99f6f462f7dd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74164900"
 ---
 # <a name="sysdm_os_tasks-transact-sql"></a>sys.dm_os_tasks (Transact-SQL)
@@ -38,10 +38,10 @@ ms.locfileid: "74164900"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**task_address**|**varbinary(8)**|Speicheradresse des Objekts.|  
-|**task_state**|**nvarchar (60)**|Der Status des Tasks. Mögliche Werte:<br /><br /> PENDING: Warten auf einen Arbeitsthread.<br /><br /> RUNNABLE: Ausführbar, doch wird auf das Eintreffen eines Quantums gewartet.<br /><br /> RUNNING: Wird derzeit auf dem Zeitplanungsmodul ausgeführt.<br /><br /> SUSPENDED: Verfügt über einen Arbeitsthread, wartet jedoch auf ein Ereignis.<br /><br /> DONE: Abgeschlossen.<br /><br /> SPINLOOP: In einem Spinlock festgehalten.|  
+|**task_state**|**nvarchar(60)**|Der Status des Tasks. Die folgenden Werte sind möglich:<br /><br /> PENDING: Warten auf einen Arbeitsthread.<br /><br /> RUNNABLE: Ausführbar, doch wird auf das Eintreffen eines Quantums gewartet.<br /><br /> RUNNING: Wird derzeit auf dem Zeitplanungsmodul ausgeführt.<br /><br /> SUSPENDED: Verfügt über einen Arbeitsthread, wartet jedoch auf ein Ereignis.<br /><br /> DONE: Abgeschlossen.<br /><br /> SPINLOOP: In einem Spinlock festgehalten.|  
 |**context_switches_count**|**int**|Anzahl der Kontextwechsel im Zeitplanungsmodul, die dieser Task abgeschlossen hat.|  
 |**pending_io_count**|**int**|Anzahl der physischen E/A-Vorgänge, die dieser Task ausgeführt hat.|  
-|**pending_io_byte_count**|**BIGINT**|Gesamtbytezahl der von diesem Task ausgeführten E/A-Vorgänge.|  
+|**pending_io_byte_count**|**bigint**|Gesamtbytezahl der von diesem Task ausgeführten E/A-Vorgänge.|  
 |**pending_io_byte_average**|**int**|Durchschnittliche Bytezahl der von diesem Task ausgeführten E/A-Vorgänge.|  
 |**scheduler_id**|**int**|ID des übergeordneten Zeitplanungsmoduls. Dies ist ein Handle für die Zeitplanungsmodul-Informationen zu diesem Task. Weitere Informationen finden Sie unter [sys. dm_os_schedulers &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md).|  
 |**session_id**|**smallint**|ID der Sitzung, die dem Task zugeordnet ist.|  

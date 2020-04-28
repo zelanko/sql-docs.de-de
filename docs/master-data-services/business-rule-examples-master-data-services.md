@@ -11,10 +11,10 @@ ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 79cf6243b275ba6090eb76400a8dbf7f8dd01f0a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728699"
 ---
 # <a name="business-rule-examples-master-data-services"></a>Beispiele für Geschäftsregeln (Master Data Services)
@@ -76,7 +76,7 @@ Else
   
 Beispielmodell  |Entität  |Geschäftsregelname|BESCHREIBUNG    
 ---------|---------|---------|-------------  
-Produkt     |Produkt         |Erforderliche Felder| Gibt die erforderlichen Attribute für die Elemente der Entität „Product“ an.           
+Produkt     |Produkt         |Pflichtfelder| Gibt die erforderlichen Attribute für die Elemente der Entität „Product“ an.           
 In der folgenden Geschäftsregel wird unter allen Umständen die `is required` [validation action](../master-data-services/business-rule-actions-master-data-services.md) is taken for the specified attributes. Die Attributwerte dürfen nicht Null oder leer sein.  
 ```  
 If  
@@ -136,7 +136,7 @@ Else
 Beispielmodell  |Entität  |Geschäftsregelname|BESCHREIBUNG    
 ---------|---------|---------|------------  
 Produkt     | Produkt        |  Standardname| Gibt den Standardnamen des Produkts basierend auf den Werten der Farb- und Klassenattribute an. Wenn der Farbattributwert nicht YLO ist, und das Klassenattribut nicht NA, dann ist der Standardname „Gelb NA“         
-In der folgenden Geschäftsregel wird die `is equal`Regelaktion`defaults to` [ auf das Namensattribut angewendet, wenn die Farb- und Klassenattribute die](../master-data-services/business-rule-actions-master-data-services.md)-Regelbedingung nicht erfüllen.  
+In der folgenden Geschäftsregel wird die `is equal``defaults to` [auf das Namensattribut angewendet, wenn die Farb- und Klassenattribute die](../master-data-services/business-rule-actions-master-data-services.md) -Regelbedingung nicht erfüllen.  
 ```  
 If  
     (Color is equal to YLO AND Class is equal to NA) is not true  
@@ -149,7 +149,7 @@ Else
 **--------------------------------------------------**  
   
   
-**So zeigen Sie die Geschäftsregel Beispiele in den Beispiel Modellen an**  
+**So zeigen Sie die Geschäftsregelbeispiele in den Beispielmodellen an**  
 1. Navigieren Sie zur [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] -Website, die Sie nach der Installation von MDS eingerichtet haben, und klicken Sie auf das Feld **Systemverwaltung** .   
 Anweisungen zum Einrichten der Website finden Sie unter [Master Data Services – Installation und Konfiguration](../master-data-services/master-data-services-installation-and-configuration.md).  
 2. Klicken Sie auf das Beispielmodell, das die Geschäftsregel enthält, so wie in den obigen Tabellen aufgeführt, und klicken Sie anschließend auf **Entitäten**.  

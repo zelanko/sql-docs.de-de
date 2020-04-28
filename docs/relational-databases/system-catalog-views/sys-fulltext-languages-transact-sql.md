@@ -22,10 +22,10 @@ ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e5af224150508f048d91345cba595517209f824d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73981778"
 ---
 # <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
@@ -35,8 +35,7 @@ ms.locfileid: "73981778"
    
 |Column|Datentyp|BESCHREIBUNG|  
 |------------|---------------|-----------------|  
-|**LCID**|**int**|
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Gebietsschemabezeichner (Locale Identifier, LCID) für die Sprache.|  
+|**lcid**|**int**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Gebietsschemabezeichner (Locale Identifier, LCID) für die Sprache.|  
 |**name**|**sysname**|Ist entweder der Wert des Alias in [sys. syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) , der dem Wert von **LCID** entspricht, oder die Zeichen folgen Darstellung der numerischen LCID.|  
   
 ## <a name="values-returned-for-default-languages"></a>Werte, die für Standardsprachen zurückgegeben wurden  
@@ -59,7 +58,7 @@ ms.locfileid: "73981778"
 |Englisch|1033|  
 |Französisch|1036|  
 |Deutsch|1031|  
-|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Griechisch|1032|  
+|**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Griechisch|1032|  
 |Gujarati|1095|  
 |Hebräisch|1037|  
 |Hindi|1081|  
@@ -76,7 +75,7 @@ ms.locfileid: "73981778"
 |Marathi|1102|  
 |Neutral|0|  
 |Norwegisch (Bokmål)|1044|  
-|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Polnisch|1045|  
+|**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Polnisch|1045|  
 |Portugiesisch (Brasilien)|1046|  
 |Portugiesisch (Portugal)|2070|  
 |Pandschabi|1094|  
@@ -85,15 +84,15 @@ ms.locfileid: "73981778"
 |Serbisch (Kyrillisch)|3098|  
 |Serbisch (Lateinisch)|2074|  
 |Chinesisch (vereinfacht)|2052|  
-|Slowakisch|1.051|  
+|Slowakisch|1051|  
 |Slowenisch|1060|  
 |Spanisch|3082|  
-|Schwedisch|1.053|  
+|Schwedisch|1053|  
 |Tamilisch|1097|  
 |Telugu|1.098|  
-|Thailändisch|1.054|  
+|Thailändisch|1054|  
 |Chinesisch (traditionell)|1028|  
-|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Türkisch|1.055|  
+|**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Türkisch|1.055|  
 |Ukrainisch|1058|  
 |Urdu|1056|  
 |Vietnamesisch|1066|  
@@ -106,10 +105,10 @@ ms.locfileid: "73981778"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_fulltext_load_thesaurus_file &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-load-thesaurus-file-transact-sql.md)   
- [sp_fulltext_service &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
+ [sp_fulltext_service &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-fulltext-service-transact-sql.md)   
  [Konfigurieren und Verwalten von Wörter Trennungen und Wort Stamm Erkennungen für die Suche](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   
  [Konfigurieren und Verwalten von Thesaurusdateien für die voll Text Suche](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
- [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
+ [Konfigurieren und Verwalten von Stopp Wörtern und Stopp Listen für die voll Text Suche](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md)   
  [Upgrade der Volltextsuche](../../relational-databases/search/upgrade-full-text-search.md)  
   
   

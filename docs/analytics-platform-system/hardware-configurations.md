@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: ee16045931da345f06c141597ccd25d19a36dea7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401133"
 ---
 # <a name="hardware-configurations---analytics-platform-system"></a>Hardware Konfigurationen-Analytics Platform System
@@ -26,7 +26,7 @@ Die Hardware des Analytics Platform System (APS) wurde mit skalierbaren Einheite
 -   [Konfigurationen mit mehreren Racks](#section2)  
 
   
-## <a name="section1"></a>One-Rack-Konfigurationen  
+## <a name="one-rack-configurations"></a><a name="section1"></a>One-Rack-Konfigurationen  
 Das erste Gestell in der Appliance enthält die zum Ausführen von PDW erforderlichen Komponenten. Die minimale Gerätekonfiguration ist ein Gestell und Netzwerk sowie eine Basis Skalierungs Einheit. Diese Diagramme zeigen, wie das erste Gestell des Geräts konfiguriert werden kann. Abhängig vom Hardware Anbieter können Sie zwischen 2 und 9 Computeknoten im ersten Rack haben.  
   
 ### <a name="first-rack-configurations---dell"></a>Erste Rack-Konfigurationen (Dell)  
@@ -39,7 +39,7 @@ Die Mindestkonfiguration für eine HPE-Appliance umfasst zwei Computeknoten. Sie
   
 ![HPE First Rack-Konfigurationen für HPE](media/first-rack-configurations-hpe.png "HPE-erste Rack-Konfigurationen")  
   
-## <a name="section2"></a>Konfigurationen mit mehreren Racks  
+## <a name="multi-rack-configurations"></a><a name="section2"></a>Konfigurationen mit mehreren Racks  
 Um PDW Kapazität hinzuzufügen, können Sie Daten Skalierungs Einheiten zusammen mit zusätzlichen Rack & Netzwerkkomponenten hinzufügen, um die richtige Stromversorgung, Netzwerk-und Rack-Infrastruktur bereitzustellen. Für jedes zusätzliche Rack & Netzwerk ist ein passiver Host erforderlich.  
   
 Jeder Hardwarehersteller gibt die Anzahl der Daten Skalierungs Einheiten an, die Sie mit der Kapazität Ihres Geräts hinzufügen können. Es wird empfohlen, genügend Daten Skalierungs Einheiten hinzuzufügen, um mindestens eine Erhöhung der Leistung von 20 Prozent zu sehen. Beispielsweise kann das Hinzufügen einer Daten Skalierungs Einheit zu einem Gerät, das bereits 20 datenskalierungseinheiten aufweist, zu einem vernachlässigbaren Leistungsgewinn führen. Der Nettogewinn wäre nicht die Kosten und der Aufwand.  

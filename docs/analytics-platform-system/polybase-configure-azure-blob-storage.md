@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 4ea61ea7e6983f9601783957eee6776f36eccfb4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400723"
 ---
 # <a name="configure-polybase-to-access-external-data-in-azure-blob-storage"></a>Konfigurieren von polybase für den Zugriff auf externe Daten in Azure BLOB Storage
@@ -66,7 +66,7 @@ Zum Abfragen der Daten in Azure BLOB Storage müssen Sie eine externe Tabelle de
    WITH IDENTITY = 'user', Secret = '<azure_storage_account_key>';
    ```
 
-1. Erstellen Sie eine externe Datenquelle mit der [externen Datenquelle erstellen](../t-sql/statements/create-external-data-source-transact-sql.md).
+1. Erstellen Sie mit [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md) eine externe Datenquelle.
 
    ```sql
    -- LOCATION:  Azure account storage account name and blob container name.  

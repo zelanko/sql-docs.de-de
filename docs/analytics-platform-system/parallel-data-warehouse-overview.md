@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 5e609585e464cb52b996f45c7d8c57aaffcd79fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400931"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>Parallele Data Warehouse Komponenten-Analytics Platform System
@@ -40,11 +40,11 @@ To learn more about Analytics Platform System, see:
   
 ![Parallele Data Warehouse Software](media/parallel-data-warehouse-software.png "Parallele Data Warehouse Software")  
   
-## <a name="sec1"></a>Geräte Software-Abfrage Verarbeitung und Speicherung von Benutzerdaten  
+## <a name="appliance-software---query-processing-and-user-data-storage"></a><a name="sec1"></a>Geräte Software-Abfrage Verarbeitung und Speicherung von Benutzerdaten  
   
 ### <a name="control-node"></a>Steuerknoten  
 MPP-Engine  
-Die MPP-Engine ist das Hirn des MPP-Systems (massive Parallel Processing). Die Option bewirkt Folgendes:  
+Die MPP-Engine ist das Hirn des MPP-Systems (massive Parallel Processing). Sie führt die folgenden Aktionen aus:  
   
 -   Erstellt parallele Abfrage Pläne und koordiniert die parallele Ausführung von Abfragen auf den Computeknoten.  
   
@@ -55,7 +55,7 @@ Die MPP-Engine ist das Hirn des MPP-Systems (massive Parallel Processing). Die O
 -   Verfolgt den Hardware-und Software Status.  
   
 ### <a name="data-movement-service-dms"></a>Daten Verschiebungs Dienst (DMS)  
-Der Daten Verschiebungs Dienst (Data Movement Service, DMS) ist Teil der "geheimen Soße" von PDW. Die Option bewirkt Folgendes:  
+Der Daten Verschiebungs Dienst (Data Movement Service, DMS) ist Teil der "geheimen Soße" von PDW. Sie führt die folgenden Aktionen aus:  
   
 -   Überträgt Daten an und von den SQL Server PDW Knoten.  
   
@@ -66,7 +66,7 @@ Der Daten Verschiebungs Dienst (Data Movement Service, DMS) ist Teil der "geheim
 ### <a name="admin-console"></a>Verwaltungskonsole  
 Die Verwaltungskonsole ist eine Webanwendung, in der die Gerätestatus-, Integritäts-und Leistungsinformationen dargestellt werden.  
   
-### <a name="configuration-manager"></a>Konfigurations-Manager  
+### <a name="configuration-manager"></a>Configuration Manager  
 Der Configuration Manager (dwconfig. exe) ist das Tool, das von Anwendungs Administratoren zum Konfigurieren von Analytics Platform System verwendet wird.  
   
 ### <a name="control-node-databases"></a>Steuern von Knoten Datenbanken  
@@ -118,7 +118,7 @@ Windows Server Update Services (WSUS) zum Anwenden oder Entfernen von Windows-Up
 ### <a name="windows-server"></a>Windows Server  
 Auf allen Hosts und virtuellen Maschinen in der Appliance wird das Windows Server-Betriebssystem ausgeführt.  
   
-### <a name="failover-clustering"></a>Failoverclustering  
+### <a name="failover-clustering"></a>Failoverclusterunterstützung  
 Windows-Failoverclustering bietet die Möglichkeit, Prozesse auf einem passiven Host neu zu starten, wenn ein Host ausfällt.  
   
 ### <a name="storage-spaces"></a>Speicherplätze  
@@ -127,7 +127,7 @@ Windows-Speicherplätze verwalten Benutzerdaten als Speicherpool für eine klein
 ### <a name="hyper-v"></a>Hyper-V  
 Microsoft Hyper-V Server bietet eine einfache und zuverlässige Virtualisierungslösung. Analytics Platform System verwendet Virtualisierungen, um CPU-Ressourcen auszugleichen und Hochverfügbarkeit für die PDW-Knoten und Appliance Fabric-Komponenten bereitzustellen.  
   
-## <a name="sec2"></a>Nicht relationale Daten
+## <a name="non-relational-data"></a><a name="sec2"></a>Nicht relationale Daten
 Die polybase-Technologie integriert SQL Server PDW Daten mit externen Hadoop-Daten. Die Hadoop-Daten können auf allen folgenden Hadoop-Datenquellen gespeichert werden:  
   
 -   Hortonworks Hadoop-Verteilung  

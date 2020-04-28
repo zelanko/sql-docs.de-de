@@ -11,22 +11,21 @@ ms.assetid: f227c49a-ed46-4e0f-8992-83093456cf94
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 6d8c277796f743b31dfb5df349352bb6c7470421
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728620"
 ---
 # <a name="changesets-master-data-services"></a>Changesets (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] unterstützt nun die Möglichkeit, ausstehende Änderungen in einer Entität als Changesets zu speichern. Es gibt zwei Verwendungsszenarios für diese Funktion.  
   
 -   **Änderungen, wenn "Genehmigung erforderlich" von Entitäts Administrator aktiviert wird**  
   
-     Wenn ein Entitätsadministrator angibt, dass für die Änderungen an einer bestimmten Entität eine Genehmigung erforderlich ist, bevor für diese ein Commit ausgeführt wird, so müssen alle Änderungen an der Entität in einem neuen oder vorhandenen Changeset gespeichert werden, bevor sie zur Genehmigung übermittelt werden.  Weitere Informationen finden Sie unter [Genehmigung erforderlich &#40;Master Data Services&#41;](../master-data-services/approval-required-master-data-services.md)  
+     Wenn ein Entitätsadministrator angibt, dass für die Änderungen an einer bestimmten Entität eine Genehmigung erforderlich ist, bevor für diese ein Commit ausgeführt wird, so müssen alle Änderungen an der Entität in einem neuen oder vorhandenen Changeset gespeichert werden, bevor sie zur Genehmigung übermittelt werden.  Weitere Informationen finden Sie unter [Genehmigung erforderlich &#40;Master Data Services&#41;](../master-data-services/approval-required-master-data-services.md).  
   
      Befolgen Sie diesen Workflow.  
   
@@ -40,7 +39,7 @@ ms.locfileid: "73728620"
   
     5.  Für das genehmigte Changeset wird automatisch ein Commit ausgeführt. Wenn für die Änderung erfolgreich ein Commit ausgeführt wurde, befindet sich das Changeset im Status „Commit wurde ausgeführt“.  
   
--   **Lokale Benutzer Änderungen**  
+-   **Änderungen des lokalen Benutzers**  
   
      Wenn Sie lediglich Ihre lokalen Änderungen speichern möchten, sodass Sie diese später verwenden oder abrufen können, können Sie dafür Changesets verwenden.  
   

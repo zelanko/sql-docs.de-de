@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 86ced6fd281da2e47ddaa31cab7fa977767b98d6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74164953"
 ---
 # <a name="view-replicated-commands-and-other-information-in-the-distribution-database-replication-transact-sql-programming"></a>Anzeigen replizierter Befehle und anderer Informationen in der Verteilungsdatenbank (Replikationsprogrammierung mit Transact-SQL)
@@ -38,6 +38,6 @@ ms.locfileid: "74164953"
 2.  Führen Sie auf dem Verteiler für die Verteilungsdatenbank [sp_browsereplcmds](/sql/relational-databases/system-stored-procedures/sp-browsemergesnapshotfolder-transact-sql)aus. Optionale Geben Sie die Artikel-ID aus Schritt 2 für ** \@article_id**an. Optionale Geben Sie die ID der Veröffentlichungs Datenbank für ** \@publisher_database_id**an, die aus der **database_id** Spalte in der [sys. Database](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql) -Katalog Sicht abgerufen werden kann.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Programmgesteuertes Überwachen der Replikation](../monitoring-replication.md)  
+ [Programmgesteuerte Überwachen der Replikation](../monitoring-replication.md)  
   
   

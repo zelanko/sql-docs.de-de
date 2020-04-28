@@ -16,17 +16,16 @@ author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c06f91b30d4c108a2221f0b6c750dab60ed059bd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74095389"
 ---
 # <a name="sql-server-management-objects-smo-programming-guide"></a>SQL Server Management Objects (SMO)-Programmierungshandbuch
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Objects (SMO) ist eine Auflistung von-Objekten, die zum Programmieren aller Aspekte der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Verwaltung von vorgesehen sind. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RMO (Replikationsverwaltungsobjekte) steht für eine Auflistung von Objekten, die die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Replikationsverwaltung kapselt.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Management Objects (SMO) ist eine Auflistung von-Objekten, die zum Programmieren aller Aspekte der [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Verwaltung von vorgesehen sind. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RMO (Replikationsverwaltungsobjekte) steht für eine Auflistung von Objekten, die die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Replikationsverwaltung kapselt.  
   
 |Thema|BESCHREIBUNG|  
 |-----------|-----------------|

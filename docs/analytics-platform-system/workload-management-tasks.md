@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 88d95eb0a2e0805930cb5f01f5af05b8fc6b3f2e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399416"
 ---
 # <a name="workload-management-tasks-in-analytics-platform-system"></a>Verwaltungsaufgaben für die Arbeitsauslastung in Analytics Platform System
@@ -70,7 +70,7 @@ GO
   
 Wenn keine Anmeldungen vorhanden sind, die Mitglieder einer Ressourcen Klassen-Server Rolle sind, ist die resultierende Tabelle leer. Wenn in diesem Fall die Abfrage einen Anmelde Namen mit dem Namen "Ching" zurückgibt, empfängt die Anforderung beim Senden einer Anforderung die Standardsystem Ressourcen, die kleiner sind als die Ressourcen Klassensystem Ressourcen. Wenn eine Anmeldung Mitglied von mehr als einer Ressourcen Klasse ist, hat die größte Klasse Vorrang.  
   
-Eine Liste der Ressourcen Zuordnungen für jede Ressourcen Klasse finden Sie [](workload-management.md)unter workloadverwaltung.  
+Eine Liste der Ressourcen Zuordnungen für jede Ressourcen Klasse finden Sie [Workload Management](workload-management.md)unter workloadverwaltung.  
   
 ### <a name="step-2-run-the-request-under-a-login-with-different-resource-class-membership"></a>Schritt 2: Ausführen der Anforderung unter einem Anmelde Namen mit einer anderen Ressourcen Klassenmitgliedschaft  
 Es gibt zwei Möglichkeiten, eine Anforderung mit größeren oder kleineren Systemressourcen auszuführen:  

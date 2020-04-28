@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 0b244d85e601e46fe778298e723c0a7d01e669bb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400970"
 ---
 # <a name="monitor-with-system-center-operations-manager---analytics-platform-system"></a>Überwachen mit System Center Operations Manager Analytics Platform System
@@ -41,12 +41,12 @@ Verwenden Sie System Center Operations Manager (SCOM), um das Analytics Platform
 ## <a name="to-monitor-sql-server-pdw-with-scom"></a>So überwachen Sie SQL Server PDW mit SCOM  
 Klicken Sie nach dem Konfigurieren der SCOM-Management Packs auf den Überwachungsbereich von SCOM, und führen Sie einen Drilldown zu **SQL Server Appliance** und dann **Microsoft SQL Server parallel Data Warehouse**aus. Unterhalb Microsoft SQL Server parallel Data Warehouse stehen vier Optionen zur Auswahl: Warnungen, Geräte, Geräte Diagramme und Knoten.  
   
-### <a name="alerts"></a>Alerts  
+### <a name="alerts"></a>Warnungen  
 In den Warnungen finden Sie die aktuellen Warnungen, die Sie verwalten können.  
   
 ![Warnungen](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM.png "SCOM_SCOM")  
   
-### <a name="appliances"></a>Gungs  
+### <a name="appliances"></a>Appliances  
 In den Geräten finden Sie die derzeit ermittelten und überwachten SQL Server PDW Appliances in Ihrer Umgebung. Wenn ein Gerät hier nicht angezeigt wird und Sie die ODBC-Verbindung dafür erstellt haben, liegt möglicherweise ein Fehler in Ihrem pdwwatcher-Konto vor. Wenn Sie als "nicht überwacht" angezeigt werden, liegt möglicherweise ein Fehler in Ihrem pdwmonitor-Konto vor. Da SCOM keine Änderungen in Echtzeit vornimmt, prüft regelmäßig, ob neue Geräte überwacht werden müssen, und sendet regelmäßig Abfragen zur Überwachung an Appliances.  
   
 ![Gungs](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM2.png "SCOM_SCOM2")  
@@ -56,7 +56,7 @@ Auf der Seite Appliances-Diagramm können Sie sich die Integrität Ihrer Applian
   
 ![Anwendungsdiagramm](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM3.png "SCOM_SCOM3")  
   
-### <a name="nodes"></a>Nodes  
+### <a name="nodes"></a>Knoten  
 Zum Schluss können Sie in der Ansicht "Knoten" die Integrität Ihrer Appliance über jeden Knoten anzeigen:  
   
 ![Knoten](./media/monitor-the-appliance-by-using-system-center-operations-manager/SCOM_SCOM4.png "SCOM_SCOM4")  

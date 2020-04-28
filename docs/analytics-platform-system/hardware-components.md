@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: db9966315d60fd4de1de7ae6805620d3f2144e6f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401146"
 ---
 # <a name="hardware-components-for-analytics-platform-system"></a>Hardware Komponenten für Analytics Platform System
@@ -21,13 +21,13 @@ ms.locfileid: "74401146"
 Analytics Platform System (APS) nutzt skalierbare Komponenten, sodass Sie die richtige Menge an Verarbeitung und Speicherung gemäß Ihren Geschäftsanforderungen erwerben können. Wenn Sie APS anordnen, benötigen Sie eine Kombination dieser kernhardware Komponenten. Bestimmte Hardware Anbieter verwenden möglicherweise andere Benennungs Konventionen oder zusätzliche Komponenten.  
  
   
-## <a name="rackandnetwork"></a>Gestell und Netzwerk 
+## <a name="rack-and-network"></a><a name="rackandnetwork"></a>Gestell und Netzwerk 
  
 APS-Komponenten werden alle in einem oder mehreren Racks gespeichert, die in Ihr Rechenzentrum passt. Jedes Gestell verfügt über Stromverteiler Einheiten (PDUs), zwei InfiniBand-Switches und zwei Ethernet-Switches.  
   
 ![Gestell und Netzwerk](media/rack-and-network.png "APS-Rack und-Netzwerk")  
   
-## <a name="datascaleunit"></a>Datenskalierungs Einheit
+## <a name="data-scale-unit"></a><a name="datascaleunit"></a>Datenskalierungs Einheit
  
 Eine datenskalierungs Einheit enthält die Daten Hosts und den direkt angeschlossenen Speicher (das) zum Verarbeiten und Speichern von Benutzerdaten. Um Kapazität hinzuzufügen, fügen Sie Daten Skalierungs Einheiten gemäß den Konfigurationen hinzu, die vom Hardwarehersteller unterstützt werden. Wenn die Anzahl der Daten Skalierungs Einheiten zunimmt, müssen Sie ggf. zusätzliche Rack & Netzwerkkomponenten hinzufügen, um eine höhere Stromversorgung, Netzwerk-und Gestell-Infrastruktur bereitzustellen.  
   
@@ -65,7 +65,7 @@ Wenn **für hohe Verfügbarkeit**ein Failover eines computeknotens durchgeführt
   
 **Für**Datenträger Größen kann der direkt angeschlossene Speicher über 1, 2 oder 3 Terabyte Festplattenlaufwerke verfügen. Alle datenskalierungseinheiten müssen Datenträger mit derselben Größe aufweisen.  
   
-## <a name="basescaleunit"></a>Basis Skalierungs Einheit 
+## <a name="base-scale-unit"></a><a name="basescaleunit"></a>Basis Skalierungs Einheit 
  
 Die Basis Skalierungs Einheit enthält die Mindestanzahl von Brain-Power-Hosts, Daten Hosts und einem direkt angeschlossenen Speicher, der für das Gerät erforderlich ist. Sie enthält die folgenden Komponenten. 
   

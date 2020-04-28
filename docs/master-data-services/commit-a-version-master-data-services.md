@@ -14,10 +14,10 @@ ms.assetid: 6b967a39-b333-4b84-9e5f-4fb07e156826
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: 0fa359de1daa844fbcce073b0c67efdd5f721b37
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728590"
 ---
 # <a name="commit-a-version-master-data-services"></a>Durchführen eines Commits für eine Version (Master Data Services)
@@ -37,7 +37,7 @@ ms.locfileid: "73728590"
   
 -   Alle Elemente müssen erfolgreich überprüft worden sein.  
   
--   Sie müssen über die Berechtigung für den Zugriff auf den Funktionsbereich „Versionsverwaltung“ verfügen. Weitere Informationen finden Sie unter [Funktions Bereichs Berechtigungen &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
+-   Sie müssen über die Berechtigung für den Zugriff auf den Funktionsbereich „Versionsverwaltung“ verfügen. Weitere Informationen finden Sie unter [Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../master-data-services/functional-area-permissions-master-data-services.md).  
   
 ### <a name="to-commit-a-version"></a>So führen Sie einen Commit für eine Version durch  
   
@@ -53,11 +53,11 @@ ms.locfileid: "73728590"
   
 ## <a name="next-steps"></a>Nächste Schritte  
   
--   [Erstellen Sie ein Versionsflag &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
+-   [Erstellen eines Versionsflags &#40;Master Data Services&#41;](../master-data-services/create-a-version-flag-master-data-services.md)  
   
 -   [Zuweisen eines Flags zu einer Version &#40;Master Data Services&#41;](../master-data-services/assign-a-flag-to-a-version-master-data-services.md)  
   
--   [Kopieren Sie eine Version &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)  
+-   [Kopieren einer Version &#40;Master Data Services&#41;](../master-data-services/copy-a-version-master-data-services.md)  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Versionen &#40;Master Data Services&#41;](../master-data-services/versions-master-data-services.md)  

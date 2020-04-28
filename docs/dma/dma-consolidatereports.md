@@ -15,10 +15,10 @@ author: HJToland3
 ms.author: rajpo
 ms.custom: seo-lt-2019
 ms.openlocfilehash: ec8ededac012ccb2b3d4b62fc40d84132a6fb882
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056647"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>Bewerten eines Unternehmens und Konsolidieren der Bewertungsberichte mit DMA
@@ -28,13 +28,13 @@ Die folgenden Schritt-für-Schritt-Anweisungen helfen Ihnen bei der Verwendung d
 ## <a name="prerequisites"></a>Voraussetzungen
 
 - Legen Sie einen Tools-Computer in Ihrem Netzwerk fest, von dem DMA initiiert wird. Stellen Sie sicher, dass dieser Computer über eine Verbindung mit Ihren SQL Server Zielen verfügt.
-- Herunterladen und installieren:
+- Sie müssen Folgendes herunterladen und installieren:
   - [Datenmigrations-Assistent](https://www.microsoft.com/download/details.aspx?id=53595) v 3.6 oder höher.
   - [PowerShell](https://aka.ms/wmf5download) Version 5.0 oder höher.
   - [.NET Framework](https://www.microsoft.com/download/details.aspx?id=30653) v 4.5 oder höher.
   - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17,0 oder höher.
   - [Power BI Desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
-  - [Azure PowerShell Module](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
+  - [Azure PowerShell-Module](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Herunterladen und extrahieren:
   - Der [DMA-Bericht Power BI Vorlage](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip).
   - Das [loadwarehouse-Skript](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/1/LoadWarehouse1.zip).
@@ -64,7 +64,7 @@ Führen Sie die folgenden Schritte aus, um die Module zu laden:
 
     PowerShell sollte diese Module jetzt automatisch laden, wenn eine neue PowerShell-Sitzung gestartet wird.
 
-## <a name="create-inventory"></a>Erstellen eines Inventars von SQL-Servern
+## <a name="create-an-inventory-of-sql-servers"></a><a name="create-inventory"></a>Erstellen eines Inventars von SQL-Servern
 
 Bevor Sie das PowerShell-Skript zur Bewertung Ihrer SQL Server-Computer ausführen, müssen Sie eine Inventur der SQL Server-Computer erstellen, die Sie bewerten möchten.
 
@@ -92,7 +92,7 @@ Wenn Sie eine CSV-Datei verwenden, um die Daten zu importieren, stellen Sie sich
 
 Erstellen Sie eine Datenbank mit dem Namen **estatueingeventory** und eine Tabelle namens **databaseingeventory**. Die Tabelle, in der diese Inventur Daten enthalten sind, kann beliebig viele Spalten enthalten, solange die folgenden vier Spalten vorhanden sind:
 
-- Servername
+- ServerName
 - InstanceName
 - DatabaseName
 - Bewermentflag
@@ -118,7 +118,7 @@ Die der dmadatacollector-Funktion zugeordneten Parameter werden in der folgenden
 |**getserverlistfrom** | Ihre Inventur. Mögliche Werte sind **SQLServer** und **CSV**.<br/>Weitere Informationen finden Sie unter [Erstellen eines Inventars von SQL-Servern](#create-inventory). |
 |**csvpath** | Der Pfad zu Ihrer CSV-Inventur Datei.  Wird nur verwendet, wenn **getserverlistfrom** auf **CSV**festgelegt ist. |
 |**Servername** | Der SQL Server Instanzname des Inventars, wenn **SQLServer** im **getserverlistfrom** -Parameter verwendet wird. |
-|**DatabaseName** | Die Datenbank, in der die Inventur Tabelle gehostet wird. |
+|**databaseName** | Die Datenbank, in der die Inventur Tabelle gehostet wird. |
 |**AssessmentName** | Der Name der DMA-Bewertung. |
 |**TargetPlatform** | Der Zieltyp der Bewertung, den Sie ausführen möchten.  Mögliche Werte sind **azuresqldatabase**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**und **managedsqlserver**. |
 |**AuthenticationMethod** | Die Authentifizierungsmethode für das Herstellen einer Verbindung mit den SQL Server Zielen, die Sie bewerten möchten. Mögliche Werte sind **SQLAuth** und **windowsauth**. |
@@ -142,8 +142,8 @@ Die der dmaprocessor-Funktion zugeordneten Parameter werden in der folgenden Tab
 |**Servername** | Die SQL Server Instanz, in die die Daten verarbeitet werden.  Wenn Sie für den **processto** -Parameter **azuresqldatabase** angeben, schließen Sie nur den SQL Server Namen ein (nicht include. Database.Windows.net). Sie werden zur Eingabe von zwei Anmeldungen aufgefordert, wenn Sie die Azure SQL-Datenbank als Ziel haben. die erste ist Ihre Azure-Mandanten-Anmelde Informationen, während die zweite die Administrator Anmeldung für den Azure-SQL Server ist. |
 |**"Kreatedmareporting"** | Die Stagingdatenbank, die für die Verarbeitung der JSON-Datei erstellt werden soll.  Wenn die angegebene Datenbank bereits vorhanden ist und Sie diesen Parameter auf einen Wert festlegen, werden die Objekte nicht erstellt.  Dieser Parameter ist hilfreich, um ein einzelnes Objekt neu zu erstellen, das gelöscht wurde. |
 |**"Kreatedatawarehouse"** | Erstellt die Data Warehouse, die vom Power BI Bericht verwendet werden. |
-|**DatabaseName** | Der Name der dmareporting-Datenbank. |
-|**Warehouse-Sender Name** | Der Name der Data Warehouse Datenbank. |
+|**databaseName** | Der Name der dmareporting-Datenbank. |
+|**Warehouse-Sender Name** | Name der Data Warehouse-Datenbank. |
 |**jsondirectory** | Das Verzeichnis, das die JSON-Bewertungs Datei enthält.  Wenn mehrere JSON-Dateien im Verzeichnis vorhanden sind, werden Sie nacheinander verarbeitet. |
 
 Die dmaprocessor-Funktion sollte nur einige Sekunden in Anspruch nehmen, um eine einzelne Datei zu verarbeiten.

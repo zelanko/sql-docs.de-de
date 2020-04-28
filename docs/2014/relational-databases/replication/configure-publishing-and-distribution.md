@@ -15,27 +15,27 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 905b1ceed2df8afc854ad38ee07d2b21596530f1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882252"
 ---
 # <a name="configure-publishing-and-distribution"></a>Konfigurieren der Veröffentlichung und der Verteilung
   In diesem Thema wird beschrieben, wie die Veröffentlichung und die Verteilung in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mithilfe von [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)]oder Replikationsverwaltungsobjekten (RMO) konfiguriert werden.  
   
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
  Weitere Informationen finden Sie unter [sichere Replikations Bereitstellung](security/view-and-modify-replication-security-settings.md).  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Sie konfigurieren die Verteilung mit dem Assistenten für neue Veröffentlichung oder mit dem Verteilungskonfigurations-Assistenten. Rufen Sie nach der Konfiguration des Verteilers das Dialogfeld **Verteilereigenschaften - \<Distributor>** auf, und ändern Sie die Eigenschaften. Verwenden Sie den Verteilungskonfigurations-Assistenten, wenn Sie einen Verteiler so konfigurieren möchten, dass die Mitglieder der festen Datenbankrollen **db_owner** Veröffentlichungen erstellen können, oder wenn Sie einen Remoteverteiler konfigurieren möchten, bei dem es sich nicht um einen Verleger handelt.  
   
 #### <a name="to-configure-distribution"></a>So konfigurieren Sie die Verteilung  
   
-1.  Stellen [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Sie in eine Verbindung mit dem Server her, der als Verteiler fungieren soll (in vielen Fällen handelt es sich bei dem Verleger und dem Verteiler um denselben Server), und erweitern Sie dann den Server Knoten.  
+1.  Stellen Sie in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine Verbindung mit dem Server her, der als Verteiler fungieren soll, und erweitern Sie den Serverknoten (in vielen Fällen handelt es sich beim Verleger und beim Verteiler um denselben Server).  
   
 2.  Klicken Sie mit der rechten Maustaste auf den Ordner **Replikation** , und klicken Sie dann auf **Verteilung konfigurieren**.  
   
@@ -53,7 +53,7 @@ ms.locfileid: "73882252"
   
     -   Erstellen Sie optional ein Skript für die Konfigurationseinstellungen. Weitere Informationen finden Sie unter [Scripting Replication](scripting-replication.md).  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Die Replikationsveröffentlichung und -verteilung kann mit gespeicherten Replikationsprozeduren programmgesteuert konfiguriert werden.  
   
 #### <a name="to-configure-publishing-using-a-local-distributor"></a>So konfigurieren Sie die Veröffentlichung mit einem lokalen Verteiler  
@@ -82,12 +82,12 @@ ms.locfileid: "73882252"
   
 4.  Führen Sie [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) auf dem Verleger aus. Geben Sie die zu veröffentlichende Datenbank für ** \@dbname**, den Replikationstyp für ** \@optname**und den Wert true für ** \@Value**an.  
   
-###  <a name="TsqlExample"></a> Beispiel (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a>Beispiel (Transact-SQL)  
  Im folgenden Beispiel wird veranschaulicht, wie die Veröffentlichung und die Verteilung programmgesteuert konfiguriert werden. In diesem Beispiel werden der Name des Servers, der als Verleger konfiguriert wird, und ein lokaler Verteiler mithilfe von Skriptvariablen bereitgestellt. Die Replikationsveröffentlichung und -verteilung kann mit gespeicherten Replikationsprozeduren programmgesteuert konfiguriert werden.  
   
  [!code-sql[HowTo#AddDistPub](../../snippets/tsql/SQL15/replication/howto/tsql/adddistpub.sql#adddistpub)]  
   
-##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
   
 #### <a name="to-configure-publishing-and-distribution-on-a-single-server"></a>So konfigurieren Sie Veröffentlichung und Verteilung auf einem einzelnen Server  
   
@@ -105,20 +105,15 @@ ms.locfileid: "73882252"
   
 7.  Legen Sie dann die folgenden Eigenschaften von <xref:Microsoft.SqlServer.Replication.DistributionPublisher>fest:  
   
-    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A>: Name des Verlegers.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> &ndash; der Name des Verlegers  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> &ndash; die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> &ndash; die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1.  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> &ndash; der Name der in Schritt 5 erstellten Datenbank.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> &ndash; der Name der in Schritt 5 erstellten Datenbank.  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> &ndash; die Freigabe, die verwendet wird, um auf Momentaufnahmedateien zuzugreifen.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> &ndash; die Freigabe, die verwendet wird, um auf Momentaufnahmedateien zuzugreifen.  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> : Der Sicherheitsmodus, der beim Herstellen einer Verbindung mit dem Verleger verwendet wird. 
-  <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> wird empfohlen.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> : Der Sicherheitsmodus, der beim Herstellen einer Verbindung mit dem Verleger verwendet wird. <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> wird empfohlen.  
   
 8.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A> -Methode auf.  
   
@@ -141,21 +136,15 @@ ms.locfileid: "73882252"
   
 7.  Legen Sie dann die folgenden Eigenschaften von <xref:Microsoft.SqlServer.Replication.DistributionPublisher>fest:  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> &ndash; der Name des lokalen Verlegerservers.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Name%2A> &ndash; der Name des lokalen Verlegerservers.  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> &ndash; die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1.  
+    -   <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> &ndash; die <xref:Microsoft.SqlServer.Management.Common.ServerConnection> aus Schritt 1.  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> &ndash; der Name der in Schritt 5 erstellten Datenbank.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.DistributionDatabase%2A> &ndash; der Name der in Schritt 5 erstellten Datenbank.  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> &ndash; die Freigabe, die verwendet wird, um auf Momentaufnahmedateien zuzugreifen.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.WorkingDirectory%2A> &ndash; die Freigabe, die verwendet wird, um auf Momentaufnahmedateien zuzugreifen.  
   
-    -   
-  <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> : Der Sicherheitsmodus, der beim Herstellen einer Verbindung mit dem Verleger verwendet wird. 
-  <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> wird empfohlen.  
+    -   <xref:Microsoft.SqlServer.Replication.DistributionPublisher.PublisherSecurity%2A> : Der Sicherheitsmodus, der beim Herstellen einer Verbindung mit dem Verleger verwendet wird. <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.WindowsAuthentication%2A> wird empfohlen.  
   
 8.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.DistributionPublisher.Create%2A> -Methode auf.  
   
@@ -168,7 +157,7 @@ ms.locfileid: "73882252"
     > [!IMPORTANT]  
     >  Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmeldeinformationen speichern müssen, verwenden Sie die [Kryptografiedienste](https://go.microsoft.com/fwlink/?LinkId=34733) von Windows .NET Framework.  
   
-###  <a name="PShellExample"></a>Beispiel (RMO)  
+###  <a name="example-rmo"></a><a name="PShellExample"></a>Beispiel (RMO)  
  Sie können die Veröffentlichung und Verteilung mithilfe von Replikationsverwaltungsobjekten (ROM) programmgesteuert konfigurieren.  
   
  [!code-csharp[HowTo#rmo_AddDistPub](../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_adddistpub)]  
@@ -176,8 +165,8 @@ ms.locfileid: "73882252"
  [!code-vb[HowTo#rmo_vb_AddDistPub](../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_adddistpub)]  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Anzeigen und Ändern der Verteiler- und Verlegereigenschaften](view-and-modify-distributor-and-publisher-properties.md)   
- [Replication System Stored Procedures Concepts](concepts/replication-system-stored-procedures-concepts.md)   
+ [Anzeigen und Ändern der Verteiler-und Verleger Eigenschaften](view-and-modify-distributor-and-publisher-properties.md)   
+ [Konzepte für gespeicherte System Prozeduren von](concepts/replication-system-stored-procedures-concepts.md)   
  [Verteilung konfigurieren](configure-distribution.md)   
  [Replikationsverwaltungsobjekte Konzepte](concepts/replication-management-objects-concepts.md)   
  [Konfigurieren Sie die Replikation für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md) 

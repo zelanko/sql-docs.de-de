@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fa08a7f84cd413f1212cc73d4242b5da70fd33eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882288"
 ---
 # <a name="delete-a-publication"></a>Löschen einer Veröffentlichung
@@ -35,7 +35,7 @@ ms.locfileid: "73882288"
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Verwenden Sie zum Löschen von Veröffentlichungen den Ordner **Lokale Veröffentlichungen** in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
 #### <a name="to-delete-a-publication"></a>So löschen Sie eine Veröffentlichung  
@@ -46,7 +46,7 @@ ms.locfileid: "73882288"
   
 3.  Klicken Sie mit der rechten Maustaste auf die Veröffentlichung, die Sie löschen möchten, und klicken Sie dann auf **Löschen**.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Veröffentlichungen können programmgesteuert mit gespeicherten Replikationsprozeduren gelöscht werden. Welche gespeicherten Prozeduren Sie verwenden, hängt vom Typ der zu löschenden Veröffentlichung ab.  
   
 > [!NOTE]  
@@ -82,7 +82,7 @@ ms.locfileid: "73882288"
   
 3.  (Optional) Führen Sie auf dem Abonnenten für die Abonnementdatenbank [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql) aus, um alle verbleibenden Replikationsmetadaten aus der Abonnementdatenbank zu entfernen.  
   
-###  <a name="TsqlExample"></a> Beispiele (Transact-SQL)  
+###  <a name="examples-transact-sql"></a><a name="TsqlExample"></a> Beispiele (Transact-SQL)  
  Dieses Beispiel zeigt, wie eine Transaktionsveröffentlichung entfernt und die Transaktionsveröffentlichung für eine Datenbank deaktiviert wird. In diesem Beispiel wird davon ausgegangen, dass alle Abonnements vorher entfernt wurden. Weitere Informationen finden Sie unter [Delete a Pull Subscription](../delete-a-pull-subscription.md) oder [Delete a Push Subscription](../delete-a-push-subscription.md).  
   
  [!code-sql[HowTo#sp_droppublication](../../../snippets/tsql/SQL15/replication/howto/tsql/droptranpub.sql#sp_droppublication)]  
@@ -91,7 +91,7 @@ ms.locfileid: "73882288"
   
  [!code-sql[HowTo#sp_dropmergepublication](../../../snippets/tsql/SQL15/replication/howto/tsql/dropmergepub.sql#sp_dropmergepublication)]  
   
-##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
  Sie können Veröffentlichungen mithilfe von Replikationsverwaltungsobjekten (RMO) programmgesteuert löschen. Welche RMO-Klassen Sie zum Entfernen von Veröffentlichungen verwenden, hängt vom Typ der zu entfernenden Veröffentlichung ab.  
   
 #### <a name="to-remove-a-snapshot-or-transactional-publication"></a>So entfernen Sie eine Momentaufnahme- oder Transaktionsveröffentlichung  
@@ -112,7 +112,7 @@ ms.locfileid: "73882288"
   
     2.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn diese Methode zurück `false`gibt, vergewissern Sie sich, dass die Datenbank vorhanden ist.  
   
-    3.  Setzen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A>-Eigenschaft auf `false`.  
+    3.  Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A> -Eigenschaft auf `false`fest.  
   
     4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> -Methode auf.  
   
@@ -136,13 +136,13 @@ ms.locfileid: "73882288"
   
     2.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> -Methode auf. Wenn diese Methode `false` zurückgibt, überzeugen Sie sich davon, dass die Datenbank vorhanden ist.  
   
-    3.  Setzen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A>-Eigenschaft auf `false`.  
+    3.  Legen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> -Eigenschaft auf `false`fest.  
   
     4.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> -Methode auf.  
   
 7.  Trennen Sie die Verbindung.  
   
-###  <a name="PShellExample"></a> Beispiele (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Beispiele (RMO)  
  Im folgenden Beispiel wird eine Transaktionsveröffentlichung gelöscht. Wenn für diese Datenbank keine anderen Transaktionsveröffentlichungen vorhanden sind, werden Transaktionsveröffentlichungen zudem deaktiviert.  
   
  [!code-csharp[HowTo#rmo_DropTranPub](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_droptranpub)]  

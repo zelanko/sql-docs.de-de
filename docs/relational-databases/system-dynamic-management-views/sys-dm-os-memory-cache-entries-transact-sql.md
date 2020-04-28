@@ -19,10 +19,10 @@ ms.assetid: dd32be6b-10d1-4059-b4fd-0bf817f40d54
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 737de971ca39cdf8c164787ff7703b87c38e92e2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983119"
 ---
 # <a name="sysdm_os_memory_cache_entries-transact-sql"></a>sys.dm_os_memory_cache_entries (Transact-SQL)
@@ -47,10 +47,10 @@ ms.locfileid: "73983119"
 |**original_cost**|**int**|Ursprüngliche Kosten des Eintrags. Dieser Wert entspricht der ungefähren Anzahl von E/A-Vorgängen, den ungefähren CPU-Anweisungskosten sowie dem ungefähr vom Eintrag belegten Speicher. Je höher die Kosten, desto niedriger ist die Chance, dass das Element aus dem Cache entfernt wird. Lässt keine NULL-Werte zu.|  
 |**current_cost**|**int**|Aktuelle Kosten des Cacheeintrags. Dieser Wert wird beim Löschen von Einträgen aktualisiert. Die aktuellen Kosten werden auf den ursprünglichen Wert zurückgesetzt, wenn der Eintrag wiederverwendet wird. Lässt keine NULL-Werte zu.|  
 |**memory_object_address**|**varbinary(8)**|Adresse des zugeordneten Arbeitsspeicherobjekts. Lässt NULL-Werte zu.|  
-|**pages_allocated_count**|**BIGINT**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Anzahl von 8-KB-Seiten zum Speichern dieses Cacheeintrags. Lässt keine NULL-Werte zu.|  
-|**pages_kb**|**BIGINT**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Der Arbeitsspeicher, der von diesem Cacheeintrag verwendet wird, in Kilobyte (KB).  Lässt keine NULL-Werte zu.|  
+|**pages_allocated_count**|**bigint**|**Gilt für**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Anzahl von 8-KB-Seiten zum Speichern dieses Cacheeintrags. Lässt keine NULL-Werte zu.|  
+|**pages_kb**|**bigint**|**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> Der Arbeitsspeicher, der von diesem Cacheeintrag verwendet wird, in Kilobyte (KB).  Lässt keine NULL-Werte zu.|  
 |**entry_data**|**nvarchar (2048)**|Serialisierte Darstellung des zwischengespeicherten Eintrags. Diese Informationen sind vom Cachespeicher abhängig. Lässt NULL-Werte zu.|  
-|**pool_id**|**int**|**Gilt für**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] und höher.<br /><br /> Die ID des Ressourcen-Pools, der diesem Eintrag zugeordnet ist. Lässt NULL-Werte zu.<br /><br /> nicht Katmai|  
+|**pool_id**|**int**|**Gilt für**:  [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] und höher.<br /><br /> Die ID des Ressourcen-Pools, der diesem Eintrag zugeordnet ist. Lässt NULL-Werte zu.<br /><br /> nicht Katmai|  
 |**pdw_node_id**|**int**|**Gilt für**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)],[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> Der Bezeichner für den Knoten, auf dem sich diese Distribution befindet.|  
   
 ## <a name="permissions"></a>Berechtigungen 

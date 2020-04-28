@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6d23813078c2a90b18af0a1df48079b571e77a13
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983143"
 ---
 # <a name="sysdm_exec_text_query_plan-transact-sql"></a>sys.dm_exec_text_query_plan (Transact-SQL)
@@ -53,10 +53,9 @@ sys.dm_exec_text_query_plan
   
 ## <a name="arguments"></a>Argumente  
 *plan_handle*  
-Ein Token, das einen Abfrage Ausführungsplan für einen Batch eindeutig identifiziert, der ausgeführt wurde und dessen Plan sich im Plancache befindet oder gerade ausgeführt wird. *plan_handle* ist vom Datentyp **varbinary (64)**.   
+Ein Token, das einen Abfrage Ausführungsplan für einen Batch eindeutig identifiziert, der ausgeführt wurde und dessen Plan sich im Plancache befindet oder gerade ausgeführt wird. *plan_handle* ist **varbinary(64)**   
 
-
-  *plan_handle* kann aus den folgenden dynamischen Verwaltungsobjekten abgerufen werden: 
+*plan_handle* kann aus den folgenden dynamischen Verwaltungsobjekten abgerufen werden: 
   
 -   [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
@@ -82,7 +81,7 @@ Gibt (in Bytes) die Endposition der Abfrage an, die die Zeile innerhalb des Text
   
 *statement_start_offset* ist vom Datentyp **int**.  
   
-Der Wert -1 gibt das Ende des Batches an. Der Standardwert ist-1.  
+Der Wert -1 gibt das Ende des Batches an. Der Standardwert ist -1.  
   
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
   
@@ -168,7 +167,7 @@ CROSS APPLY sys.dm_exec_text_query_plan(qs.plan_handle, qs.statement_start_offse
 GO  
 ```  
   
-### <a name="d-retrieving-information-about-the-top-five-queries-by-average-cpu-time"></a>D: Abrufen von Informationen zu den fünf Abfragen mit der höchsten durchschnittlichen CPU-Zeit  
+### <a name="d-retrieving-information-about-the-top-five-queries-by-average-cpu-time"></a>D. Abrufen von Informationen zu den fünf Abfragen mit der höchsten durchschnittlichen CPU-Zeit  
  Im folgenden Beispiel werden die Abfragepläne und die durchschnittliche CPU-Zeit für die fünf Abfragen mit der höchsten durchschnittlichen CPU-Zeit zurückgegeben. Die **sys.dm_exec_text_query_plan**-Funktion gibt die Standardwerte 0 und -1 an, um alle Anweisungen im Batch im Abfrageplan zurückzugeben.  
   
 ```sql  

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 87fc7802ea79a73c452f515f72f553850f017bb6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73882322"
 ---
 # <a name="create-a-publication"></a>Create a Publication
@@ -31,7 +31,7 @@ ms.locfileid: "73882322"
   
      [Einschränkungen](#Restrictions)  
   
-     [Sicherheit](#Security)  
+     [Security](#Security)  
   
 -   **So erstellen Sie eine Veröffentlichung und definieren Artikel mit:**  
   
@@ -41,21 +41,21 @@ ms.locfileid: "73882322"
   
      [Replikationsverwaltungsobjekte (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Restrictions"></a> Einschränkungen  
+###  <a name="limitations-and-restrictions"></a><a name="Restrictions"></a> Einschränkungen  
   
 -   Veröffentlichungs- und Artikelnamen dürfen folgende Zeichen nicht enthalten: % , \* , [ , ] , | , : , " , ? , ', \,/, \< , >. Wenn Objekte in der Datenbank eines dieser Zeichen enthalten, und Sie die Objekte replizieren möchten, müssen Sie einen Artikelnamen angeben, der sich von dem Objektnamen im Dialogfeld **Artikeleigenschaften - \<Article>** unterscheidet. Dieses Dialogfeld ist im Assistenten auf der Seite **Artikel** verfügbar.  
   
-###  <a name="Security"></a> Sicherheit  
- Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmelde Informationen speichern müssen, verwenden Sie die [Kryptografiedienste](https://go.microsoft.com/fwlink/?LinkId=34733) , die vom [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-.NET Framework bereitgestellt werden.  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
+ Benutzer sollten nach Möglichkeit dazu aufgefordert werden, Anmeldeinformationen zur Laufzeit anzugeben. Wenn Sie Anmeldeinformationen speichern müssen, verwenden Sie die [Kryptografiedienste](https://go.microsoft.com/fwlink/?LinkId=34733) von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
   
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio  
  Mit dem Assistenten für neue Veröffentlichung erstellen Sie Veröffentlichungen und definieren Artikel. Rufen Sie nach der Erstellung einer Veröffentlichung das Dialogfeld **Veröffentlichungseigenschaften – \<Veröffentlichung>** auf, um die Eigenschaften anzuzeigen und zu ändern. Weitere Informationen zum Erstellen von Veröffentlichungen aus einer Oracle-Datenbank finden Sie unter [Erstellen einer Veröffentlichung aus einer Oracle-Datenbank](create-a-publication-from-an-oracle-database.md).  
   
 #### <a name="to-create-a-publication-and-define-articles"></a>So erstellen Sie eine Veröffentlichung und definieren Artikel  
   
-1.  Stellen Sie in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]eine Verbindung mit dem Verleger her, und erweitern Sie dann den Server Knoten.  
+1.  Stellen Sie in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] eine Verbindung mit dem Verleger her, und erweitern Sie dann den Serverknoten.  
   
 2.  Erweitern Sie den Ordner **Replikation** , und klicken Sie dann mit der rechten Maustaste auf den Ordner **Lokale Veröffentlichungen** .  
   
@@ -83,12 +83,11 @@ ms.locfileid: "73882322"
   
     -   Angeben der Anmeldeinformationen, unter denen die folgenden Replikations-Agents ausgeführt werden und Verbindungen herstellen:  
   
-         \-Momentaufnahmen-Agent für alle Veröffentlichungen.  
+         \- Momentaufnahme-Agent (für alle Veröffentlichungen)  
   
-         \-Protokolllese-Agent für alle Transaktions Veröffentlichungen.  
+         \- Protokolllese-Agent (für alle Transaktionsveröffentlichungen)  
   
-         
-  \- Warteschlangenlese-Agent für Transaktionsveröffentlichungen, in denen Updates von Abonnements zulässig sind  
+         \- Warteschlangenlese-Agent für Transaktionsveröffentlichungen, in denen Updates von Abonnements zulässig sind  
   
          Weitere Informationen finden Sie unter [Replication Agent Security Model](../security/replication-agent-security-model.md) und [Replication Security Best Practices](../security/replication-security-best-practices.md).  
   
@@ -96,7 +95,7 @@ ms.locfileid: "73882322"
   
     -   Angeben eines Namens für die Veröffentlichung.  
   
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL  
  Veröffentlichungen können programmgesteuert mit gespeicherten Replikationsprozeduren erstellt werden. Welche gespeicherten Prozeduren Sie verwenden, hängt vom Typ der zu erstellenden Veröffentlichung ab.  
   
 #### <a name="to-create-a-snapshot-or-transactional-publication"></a>So erstellen Sie eine Momentaufnahme- oder Transaktionsveröffentlichung  
@@ -109,7 +108,7 @@ ms.locfileid: "73882322"
   
     -   Wenn Sie sich nicht sicher sind, ob ein Protokolllese-Agentauftrag für die Veröffentlichungsdatenbank vorhanden ist, dann führen Sie [sp_helplogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql) auf dem Verleger für die Veröffentlichungsdatenbank aus.  
   
-    -   Wenn das Resultset leer ist, erstellen Sie einen Auftrag des Protokolllese-Agents. Führen Sie auf dem Verleger [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql) aus. Geben Sie [!INCLUDE[msCoName](../../../includes/msconame-md.md)] die Windows-Anmelde Informationen, unter denen der Agent ausgeführt wird, ** \@job_name** und ** \@das Kennwort** Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die SQL Server-Authentifizierung verwendet, müssen Sie zudem für **** publisher_security_mode** den Wert \@0** und für [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**publisher_login\@ und ****publisher_password\@ die **-Anmeldeinformationen angeben. Fahren Sie mit Schritt 3 fort.  
+    -   Wenn das Resultset leer ist, erstellen Sie einen Auftrag des Protokolllese-Agents. Führen Sie auf dem Verleger [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql) aus. Geben Sie für **\@job_name** und **\@password** die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Anmeldeinformationen an, unter denen der Agent ausgeführt wird. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die SQL Server-Authentifizierung verwendet, müssen Sie zudem für **\@publisher_security_mode** den Wert **0** und für **\@publisher_login** und **\@publisher_password** die [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldeinformationen angeben. Fahren Sie mit Schritt 3 fort.  
   
 3.  Führen Sie auf dem Verleger [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) aus. Geben Sie einen Veröffentlichungsnamen für die ** \@Veröffentlichung**an, und geben Sie für den ** \@repl_freq** -Parameter `snapshot` den Wert für eine Momentaufnahme Veröffentlichung oder `continuous` den Wert für eine Transaktions Veröffentlichung an. Geben Sie eventuell weitere Veröffentlichungsoptionen an. Dadurch wird die Veröffentlichung definiert.  
   
@@ -118,10 +117,10 @@ ms.locfileid: "73882322"
     >   
     >  % * [ ] | : " ? \ / \< >  
   
-4.  Führen Sie auf dem Verleger [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) aus. Geben Sie den in Schritt 3 für ** \@die Veröffentlichung** verwendeten Veröffentlichungsnamen und die Windows-Anmelde Informationen an, unter denen der Momentaufnahmen-Agent für ** \@snapshot_job_name** und ** \@das Kennwort**ausgeführt wird. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die SQL Server-Authentifizierung verwendet, müssen Sie zudem für **** publisher_security_mode** den Wert \@0** und für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**publisher_login\@ und ****publisher_password\@ die **-Anmeldeinformationen angeben. Dadurch wird ein Auftrag des Momentaufnahme-Agents für die Veröffentlichung erstellt.  
+4.  Führen Sie auf dem Verleger [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) aus. Geben Sie für **\@publication** den in Schritt 3 verwendeten Veröffentlichungsnamen und für **\@snapshot_job_name** und **\@password** die Windows-Anmeldeinformationen an, unter denen der Momentaufnahme-Agent ausgeführt wird. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die SQL Server-Authentifizierung verwendet, müssen Sie zudem für **\@publisher_security_mode** den Wert **0** und für **\@publisher_login** und **\@publisher_password** die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldeinformationen angeben. Dadurch wird ein Auftrag des Momentaufnahme-Agents für die Veröffentlichung erstellt.  
   
     > [!IMPORTANT]  
-    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen mit dem Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 5.  Fügen Sie der Veröffentlichung Artikel hinzu. Weitere Informationen finden Sie unter [Definieren eines Artikels](define-an-article.md).  
   
@@ -131,23 +130,23 @@ ms.locfileid: "73882322"
   
 1.  Führen Sie auf dem Verleger [sp_replicationdboption &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql) aus, um die Veröffentlichung der aktuellen Datenbank mit der Mergereplikation zu aktivieren.  
   
-2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) aus. Geben Sie einen Namen für die Veröffentlichung für die ** \@Veröffentlichung** und alle anderen Veröffentlichungs Optionen an. Dadurch wird die Veröffentlichung definiert.  
+2.  Führen Sie auf dem Verleger für die Veröffentlichungsdatenbank [sp_addmergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql) aus. Geben Sie einen Veröffentlichungsnamen für **\@publication** und eventuell weitere Veröffentlichungsoptionen an. Dadurch wird die Veröffentlichung definiert.  
   
     > [!NOTE]  
     >  Veröffentlichungsnamen dürfen die folgenden Zeichen nicht enthalten:  
     >   
     >  % * [ ] | : " ? \ / \< >  
   
-3.  Führen Sie auf dem Verleger [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) aus. Geben Sie den in Schritt 2 für ** \@die Veröffentlichung** verwendeten Veröffentlichungsnamen und die Windows-Anmelde Informationen an, unter denen der Momentaufnahmen-Agent für ** \@snapshot_job_name** und ** \@das Kennwort**ausgeführt wird. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die SQL Server-Authentifizierung verwendet, müssen Sie zudem für **** publisher_security_mode** den Wert \@0** und für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**publisher_login\@ und ****publisher_password\@ die **-Anmeldeinformationen angeben. Dadurch wird ein Auftrag des Momentaufnahme-Agents für die Veröffentlichung erstellt.  
+3.  Führen Sie auf dem Verleger [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql) aus. Geben Sie für **\@publication** den in Schritt 2 verwendeten Veröffentlichungsnamen und für **\@snapshot_job_name** und **\@password** die Windows-Anmeldeinformationen an, unter denen der Momentaufnahme-Agent ausgeführt wird. Wenn der Agent zum Herstellen der Verbindung mit dem Verleger die SQL Server-Authentifizierung verwendet, müssen Sie zudem für **\@publisher_security_mode** den Wert **0** und für **\@publisher_login** und **\@publisher_password** die [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Anmeldeinformationen angeben. Dadurch wird ein Auftrag des Momentaufnahme-Agents für die Veröffentlichung erstellt.  
   
     > [!IMPORTANT]  
-    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen mit dem Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Parameter, einschließlich *job_login* und *job_password*, bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie diese gespeicherte Prozedur ausführen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
 4.  Fügen Sie der Veröffentlichung Artikel hinzu. Weitere Informationen finden Sie unter [Definieren eines Artikels](define-an-article.md).  
   
 5.  Starten Sie den Auftrag des Momentaufnahme-Agents, um die Anfangsmomentaufnahme für diese Veröffentlichung zu generieren. Weitere Informationen finden Sie unter [Create and Apply the Initial Snapshot](../create-and-apply-the-initial-snapshot.md).  
   
-###  <a name="TsqlExample"></a> Beispiel (Transact-SQL)  
+###  <a name="example-transact-sql"></a><a name="TsqlExample"></a> Beispiel (Transact-SQL)  
  In diesem Beispiel wird eine Transaktionsveröffentlichung erstellt. Anhand von Skriptvariablen werden Windows-Anmeldeinformationen übergeben, die zur Erstellung von Aufträgen für den Momentaufnahme-Agent und den Protokolllese-Agent erforderlich sind.  
   
  [!code-sql[HowTo#sp_AddTranPub](../../../snippets/tsql/SQL15/replication/howto/tsql/createtranpub.sql#sp_addtranpub)]  
@@ -156,7 +155,7 @@ ms.locfileid: "73882322"
   
  [!code-sql[HowTo#sp_AddMergePub](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergepub)]  
   
-##  <a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
+##  <a name="using-replication-management-objects-rmo"></a><a name="RMOProcedure"></a> Verwenden von Replikationsverwaltungsobjekten (RMO)  
  Sie können Veröffentlichungen mithilfe von Replikationsverwaltungsobjekten (RMO) programmgesteuert erstellen. Welche RMO-Klassen Sie zum Erstellen von Veröffentlichungen verwenden, hängt vom Typ der zu erstellenden Veröffentlichung ab.  
   
 #### <a name="to-create-a-snapshot-or-transactional-publication"></a>So erstellen Sie eine Momentaufnahme- oder Transaktionsveröffentlichung  
@@ -167,16 +166,16 @@ ms.locfileid: "73882322"
   
 3.  Hat die <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledTransPublishing%2A>-Eigenschaft den Wert `false`, dann legen Sie ihren Wert auf `true` fest.  
   
-4.  Überprüfen Sie für eine Transaktionsveröffentlichung den Wert der <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentExists%2A>-Eigenschaft. Wenn diese Eigenschaft den Wert `true` hat, ist ein Protokolllese-Agentauftrag für diese Datenbank bereits vorhanden. Hat diese Eigenschaft den Wert `false`, gehen Sie wie folgt vor:  
+4.  Überprüfen Sie für eine Transaktionsveröffentlichung den Wert der <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentExists%2A> -Eigenschaft. Wenn diese Eigenschaft den Wert `true` hat, ist ein Protokolllese-Agentauftrag für diese Datenbank bereits vorhanden. Hat diese Eigenschaft den Wert `false`, gehen Sie wie folgt vor:  
   
     -   Legen Sie die Felder <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> und <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> oder <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.SecurePassword%2A> von <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> fest, um die Anmeldeinformationen für das [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Konto bereitzustellen, unter dem der Protokolllese-Agent auf dem Abonnenten ausgeführt wird.  
   
         > [!NOTE]  
-        >  Wenn die Veröffentlichung von einem Mitglied der festen Serverrolle <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> erstellt wird, müssen Sie `sysadmin` nicht festlegen. In diesem Fall nimmt der Agent die Identität des SQL Server-Agent-Kontos an. Weitere Informationen finden Sie unter [Sicherheitsmodell des Replikations-Agents](../security/replication-agent-security-model.md).  
+        >  Wenn die Veröffentlichung von einem Mitglied der festen Serverrolle `sysadmin` erstellt wird, müssen Sie <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentProcessSecurity%2A> nicht festlegen. In diesem Fall nimmt der Agent die Identität des SQL Server-Agent-Kontos an. Weitere Informationen finden Sie unter [Replication Agent Security Model](../security/replication-agent-security-model.md).  
   
     -   (Optional) Legen Sie die Felder <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> und <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> oder <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> von <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.LogReaderAgentPublisherSecurity%2A> fest, wenn Sie die SQL Server-Authentifizierung zum Herstellen einer Verbindung mit dem Verleger verwenden.  
   
-    -   Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.CreateLogReaderAgent%2A>-Methode auf, um den Protokolllese-Agentauftrag für die Datenbank zu erstellen.  
+    -   Rufen Sie die <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.CreateLogReaderAgent%2A> -Methode auf, um den Protokolllese-Agentauftrag für die Datenbank zu erstellen.  
   
 5.  Erstellen Sie eine Instanz der <xref:Microsoft.SqlServer.Replication.TransPublication> -Klasse, und legen Sie die folgenden Eigenschaften für dieses Objekt fest:  
   
@@ -186,25 +185,25 @@ ms.locfileid: "73882322"
   
     -   Einen Namen für die Veröffentlichung für <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>.  
   
-    -   Einen <xref:Microsoft.SqlServer.Replication.PublicationType>, entweder <xref:Microsoft.SqlServer.Replication.PublicationType.Transactional> oder <xref:Microsoft.SqlServer.Replication.PublicationType.Snapshot>.  
+    -   Einen <xref:Microsoft.SqlServer.Replication.PublicationType> , entweder <xref:Microsoft.SqlServer.Replication.PublicationType.Transactional> oder <xref:Microsoft.SqlServer.Replication.PublicationType.Snapshot>.  
   
-    -   Die Felder <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> und <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> von <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, um die Anmeldeinformationen für das Windows-Konto bereitzustellen, unter dem der Momentaufnahme-Agent ausgeführt wird. Dieses Konto wird auch verwendet, wenn der Momentaufnahme-Agent Verbindungen mit dem lokalen Verteiler herstellt, sowie für alle Remoteverbindungen mithilfe der Windows-Authentifizierung.  
+    -   Die Felder <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> und <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> von <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> , um die Anmeldeinformationen für das Windows-Konto bereitzustellen, unter dem der Momentaufnahme-Agent ausgeführt wird. Dieses Konto wird auch verwendet, wenn der Momentaufnahme-Agent Verbindungen mit dem lokalen Verteiler herstellt, sowie für alle Remoteverbindungen mithilfe der Windows-Authentifizierung.  
   
         > [!NOTE]  
-        >  Wenn die Veröffentlichung von einem Mitglied der festen Serverrolle <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> erstellt wird, müssen Sie `sysadmin` nicht festlegen. In diesem Fall nimmt der Agent die Identität des SQL Server-Agent-Kontos an. Weitere Informationen finden Sie unter [Sicherheitsmodell des Replikations-Agents](../security/replication-agent-security-model.md).  
+        >  Wenn die Veröffentlichung von einem Mitglied der festen Serverrolle `sysadmin` erstellt wird, müssen Sie <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> nicht festlegen. In diesem Fall nimmt der Agent die Identität des SQL Server-Agent-Kontos an. Weitere Informationen finden Sie unter [Replication Agent Security Model](../security/replication-agent-security-model.md).  
   
-    -   (Optional) Die Felder <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> und <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> oder <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> von <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentPublisherSecurity%2A>, wenn Sie die SQL Server-Authentifizierung zum Herstellen einer Verbindung mit dem Verleger verwenden.  
+    -   (Optional) Legen Sie die Felder <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardLogin%2A> und <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SqlStandardPassword%2A> oder <xref:Microsoft.SqlServer.Replication.ConnectionSecurityContext.SecureSqlStandardPassword%2A> von <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentPublisherSecurity%2A> fest, wenn Sie die SQL Server-Authentifizierung zum Herstellen einer Verbindung mit dem Verleger verwenden.  
   
     -   (Optional) Verwenden Sie den inklusiven logischen OR-Operator (`|` in Visual C# und `Or` in Visual Basic) und den exklusiven logischen OR-Operator (`^` in Visual C# und `Xor` in Visual Basic), um die <xref:Microsoft.SqlServer.Replication.PublicationAttributes>-Werte für die <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>-Eigenschaft festzulegen.  
   
-    -   (Optional) Den Namen des Verlegers für <xref:Microsoft.SqlServer.Replication.TransPublication.PublisherName%2A>, wenn der Verleger ein Nicht-SQL Server-Verleger ist.  
+    -   (Optional) Den Namen des Verlegers für <xref:Microsoft.SqlServer.Replication.TransPublication.PublisherName%2A> , wenn der Verleger ein Nicht-SQL Server-Verleger ist.  
   
 6.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> -Methode auf, um die Veröffentlichung zu erstellen.  
   
     > [!IMPORTANT]  
-    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Eigenschaften einschließlich <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie die <xref:Microsoft.SqlServer.Replication.Publication.Create%2A>-Methode aufrufen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen mit dem Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Eigenschaften einschließlich <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie die <xref:Microsoft.SqlServer.Replication.Publication.Create%2A>-Methode aufrufen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-7.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>-Methode auf, um den Momentaufnahme-Agentauftrag für die Veröffentlichung zu erstellen.  
+7.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> -Methode auf, um den Momentaufnahme-Agentauftrag für die Veröffentlichung zu erstellen.  
   
 #### <a name="to-create-a-merge-publication"></a>So erstellen Sie eine Mergeveröffentlichung  
   
@@ -222,21 +221,21 @@ ms.locfileid: "73882322"
   
     -   Einen Namen für die Veröffentlichung für <xref:Microsoft.SqlServer.Replication.Publication.Name%2A>.  
   
-    -   Die Felder <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> und <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> von <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>, um die Anmeldeinformationen für das Windows-Konto bereitzustellen, unter dem der Momentaufnahme-Agent ausgeführt wird. Dieses Konto wird auch verwendet, wenn der Momentaufnahme-Agent Verbindungen mit dem lokalen Verteiler herstellt, sowie für alle Remoteverbindungen mithilfe der Windows-Authentifizierung.  
+    -   Die Felder <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> und <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> von <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> , um die Anmeldeinformationen für das Windows-Konto bereitzustellen, unter dem der Momentaufnahme-Agent ausgeführt wird. Dieses Konto wird auch verwendet, wenn der Momentaufnahme-Agent Verbindungen mit dem lokalen Verteiler herstellt, sowie für alle Remoteverbindungen mithilfe der Windows-Authentifizierung.  
   
         > [!NOTE]  
-        >  Wenn die Veröffentlichung von einem Mitglied der festen Serverrolle <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> erstellt wird, müssen Sie `sysadmin` nicht festlegen. Weitere Informationen finden Sie unter [Sicherheitsmodell des Replikations-Agents](../security/replication-agent-security-model.md).  
+        >  Wenn die Veröffentlichung von einem Mitglied der festen Serverrolle `sysadmin` erstellt wird, müssen Sie <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A> nicht festlegen. Weitere Informationen finden Sie unter [Replication Agent Security Model](../security/replication-agent-security-model.md).  
   
     -   (Optional) Verwenden Sie den inklusiven logischen OR-Operator (`|` in Visual C# und `Or` in Visual Basic) und den exklusiven logischen OR-Operator (`^` in Visual C# und `Xor` in Visual Basic), um die <xref:Microsoft.SqlServer.Replication.PublicationAttributes>-Werte für die <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A>-Eigenschaft festzulegen.  
   
 5.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Publication.Create%2A> -Methode auf, um die Veröffentlichung zu erstellen.  
   
     > [!IMPORTANT]  
-    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Eigenschaften einschließlich <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie die <xref:Microsoft.SqlServer.Replication.Publication.Create%2A>-Methode aufrufen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen mit dem Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
+    >  Beim Konfigurieren eines Verlegers mit einem Remoteverteiler werden die Werte, die für alle Eigenschaften einschließlich <xref:Microsoft.SqlServer.Replication.Publication.SnapshotGenerationAgentProcessSecurity%2A>bereitgestellt werden, als Nur-Text an den Verteiler gesendet. Sie sollten die Verbindung zwischen dem Verleger und dem zugehörigen Remoteverteiler verschlüsseln, bevor Sie die <xref:Microsoft.SqlServer.Replication.Publication.Create%2A>-Methode aufrufen. Weitere Informationen finden Sie unter [Aktivieren von verschlüsselten Verbindungen zur Datenbank-Engine &#40;SQL Server-Konfigurations-Manager&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
   
-6.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A>-Methode auf, um den Momentaufnahme-Agentauftrag für die Veröffentlichung zu erstellen.  
+6.  Rufen Sie die <xref:Microsoft.SqlServer.Replication.Publication.CreateSnapshotAgent%2A> -Methode auf, um den Momentaufnahme-Agentauftrag für die Veröffentlichung zu erstellen.  
   
-###  <a name="PShellExample"></a> Beispiele (RMO)  
+###  <a name="examples-rmo"></a><a name="PShellExample"></a> Beispiele (RMO)  
  In diesem Beispiel wird die AdventureWorks-Datenbank für Transaktionsveröffentlichung aktiviert, ein Protokolllese-Agentauftrag definiert und die AdvWorksProductTran-Veröffentlichung erstellt. Für diese Veröffentlichung muss ein Artikel definiert sein. Die Anmeldeinformationen für das Windows-Konto, die für die Erstellung des Protokolllese- und des Momentaufnahme-Agentauftrags erforderlich sind, werden zur Laufzeit übergeben. Informationen darüber, wie RMO verwendet wird, um Momentaufnahme- und Transaktionsartikel zu definieren, finden Sie unter [Define an Article](define-an-article.md).  
   
  [!code-csharp[HowTo#rmo_CreateTranPub](../../../snippets/csharp/SQL15/replication/howto/cs/rmotestevelope.cs#rmo_createtranpub)]  
@@ -250,9 +249,9 @@ ms.locfileid: "73882322"
  [!code-vb[HowTo#rmo_vb_CreateMergePub](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_createmergepub)]  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwenden von sqlcmd mit Skript Variablen](../../scripting/sqlcmd-use-with-scripting-variables.md)   
+ [Verwenden von sqlcmd mit Skriptvariablen](../../scripting/sqlcmd-use-with-scripting-variables.md)   
  [Veröffentlichen von Daten und Datenbankobjekten](publish-data-and-database-objects.md)   
- [Replikationsverwaltungsobjekte Konzepte](../concepts/replication-management-objects-concepts.md)   
+ [Replication Management Objects Concepts](../concepts/replication-management-objects-concepts.md)   
  [Define an Article](define-an-article.md)   
  [Anzeigen und Ändern von Veröffentlichungseigenschaften](view-and-modify-publication-properties.md)   
  [Verteilung konfigurieren](../configure-distribution.md)   

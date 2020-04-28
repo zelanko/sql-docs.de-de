@@ -11,10 +11,10 @@ ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: lrtoyou1223
 ms.author: lle
 ms.openlocfilehash: e6d5f9fd7dfe49b71424e13818de51d8c323676c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73728915"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>Datenbankupgrade-Assistent (Konfigurations-Manager für Master Data Services)
@@ -23,7 +23,7 @@ ms.locfileid: "73728915"
 
   Mit dem **Datenbankupgrade-Assistenten** können Sie [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbanken aktualisieren.  
   
-## <a name="action"></a>Action  
+## <a name="action"></a>Aktion  
  Dies ist die Einführungsseite des Assistenten. Klicken Sie auf **Weiter** , um mit dem Aktualisieren der Datenbank zu beginnen.  
   
 ## <a name="upgrade-review"></a>Upgradeüberprüfung  
@@ -31,7 +31,7 @@ ms.locfileid: "73728915"
   
 |Steuerelementname|BESCHREIBUNG|  
 |------------------|-----------------|  
-|**SQL Server Instanz**|Der Name der derzeit ausgewählten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] -Instanz.|  
+|**SQL Server-Instanz**|Der Name der derzeit ausgewählten [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../includes/ssde-md.md)] -Instanz.|  
 |**Master Data Services Datenbank**|Der Name der derzeit ausgewählten [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank.|  
   
 ## <a name="progress-and-finish"></a>Status und Fertig stellen  
@@ -39,7 +39,7 @@ ms.locfileid: "73728915"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Die Seite "Daten Bank Konfiguration" &#40;Konfigurations-Manager für Master Data Services&#41;](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
-[Master Data Services Installation und Konfiguration](../master-data-services/master-data-services-installation-and-configuration.md)  
+[Master Data Services – Installation und Konfiguration](../master-data-services/master-data-services-installation-and-configuration.md)  
  [Aktualisieren von Master Data Services](../database-engine/install-windows/upgrade-master-data-services.md)  
   
   

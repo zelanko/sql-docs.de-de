@@ -16,10 +16,10 @@ ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0fdd70480a63e334aa3e178d19287b30937e2f53
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74056795"
 ---
 # <a name="sp_helpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
@@ -48,7 +48,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 |**thisdate**|**varchar (22)**|Der Zeitpunkt der Änderung.|  
 |**nextdate**|**varchar (22)**|Das nächste Datum, an dem der Auftrag ausgeführt wird.|  
 |**broken**|**varchar(1)**|Flag, das angibt, ob der Auftrag unterbrochen wurde.|  
-|**Tri**|**varchar (200)**|Das Intervall für den Auftrag.|  
+|**interval**|**varchar (200)**|Das Intervall für den Auftrag.|  
 |**Versäumnisse**|**int**|Die Anzahl Fehler für den Auftrag.|  
 |**xactsetjobwhat**|**varchar (200)**|Der Name der Prozedur, die von dem Auftrag ausgeführt wird.|  
 |**xactsetjob**|**varchar(1)**|Der Status des Auftrags, der einen der folgenden Werte haben kann:<br /><br /> **1** -der Auftrag ist aktiviert.<br /><br /> **0** -der Auftrag ist deaktiviert.|  

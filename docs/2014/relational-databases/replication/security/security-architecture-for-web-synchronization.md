@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ff0c6336bcbd3f9ad8c09f5a25f7317c0d2c4c7b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73912807"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Sicherheitsarchitektur für die Websynchronisierung
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ermöglicht eine präzise Steuerung der Konfiguration der Websynchronisierungs Sicherheit. In diesem Thema wird eine umfassende Liste aller Komponenten bereitgestellt, die in eine Websynchronisierungskonfiguration einbezogen werden können, und Informationen zu den zwischen den Komponenten hergestellten Verbindungen. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
+  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ermöglicht eine präzise Steuerung der Konfiguration der Websynchronisierungssicherheit. In diesem Thema wird eine umfassende Liste aller Komponenten bereitgestellt, die in eine Websynchronisierungskonfiguration einbezogen werden können, und Informationen zu den zwischen den Komponenten hergestellten Verbindungen. [!INCLUDE[ssNoteWinAuthentication](../../../includes/ssnotewinauthentication-md.md)]  
   
  Die folgende Abbildung zeigt alle möglichen Verbindungen, manche Verbindungen sind jedoch in einer bestimmten Topologie möglicherweise nicht erforderlich. Beispielsweise ist eine Verbindung zu einem FTP-Server nur erforderlich, wenn die Momentaufnahme mithilfe von FTP übermittelt wird.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "73912807"
 |Kontotyp|Stelle, an der das Konto angegeben wird|  
 |---------------------|------------------------------------|  
 |Windows-Benutzer|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: die ** \@job_login** -und ** \@job_password** Parameter von [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql).<br /><br /> Replikationsverwaltungsobjekte (Replication Management Objects oder RMO): die Eigenschaften <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> und <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> für <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>.|  
-|Windows-Dienstkonto für den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Configuration Manager|  
+|Windows-Dienstkonto für den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Agent|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Konfigurations-Manager|  
 |Eigenständige Anwendung|Der Merge-Agent wird im Kontext des Windows-Benutzers ausgeführt, von dem die Anwendung ausgeführt wird.|  
   
 ## <a name="b-connection-to-the-subscriber"></a>B. Verbindung mit dem Abonnenten  
@@ -136,7 +136,7 @@ ms.locfileid: "73912807"
 |Beliebiger Windows-Benutzer, der über die erforderlichen Berechtigungen verfügt.|Internetinformationsdienste-Manager (IIS).|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Websynchronisierung konfigurieren](../configure-web-synchronization.md)   
+ [Konfigurieren der Websynchronisierung](../configure-web-synchronization.md)   
  [Replication Merge Agent](../agents/replication-merge-agent.md)  
   
   

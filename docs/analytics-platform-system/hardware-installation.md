@@ -10,16 +10,16 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 60e27e2251cd2f613ca00266d76d4aaaf3b5c442
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401124"
 ---
 # <a name="hardware-installation-for-analytics-platform-system-aps-appliance"></a>Hardware Installation für das Analytics Platform System (APS)-Gerät
 In diesem Artikel wird beschrieben, wie Sie die Hardware für Ihre SQL Server PDW Appliance verschieben, entpacken und installieren. Dieser Artikel dient nur zu Informationszwecken und soll Ihnen helfen, den Prozess zu verstehen. Ihre Appliance sollte entpackt, installiert und überprüft werden, bevor Sie auf Sie über geschaltet wird. Kundenbeteiligung ist für Elemente wie den Zugriff auf Rechenzentren, Stromversorgung und Ethernet-Verbindungen erforderlich.  
   
-## <a name="BeforeMoving"></a>Vor dem Verschieben von Komponenten aus dem Lade Dock  
+## <a name="before-you-move-any-components-from-the-loading-dock"></a><a name="BeforeMoving"></a>Vor dem Verschieben von Komponenten aus dem Lade Dock  
 Führen Sie die folgenden Aufgaben aus, bevor Sie die Gerätekomponenten verschieben, entpacken oder Rack ausführen.  
   
 |Aufgabe|BESCHREIBUNG|  
@@ -32,7 +32,7 @@ Führen Sie die folgenden Aufgaben aus, bevor Sie die Gerätekomponenten verschi
 |Sichern des Daten Center Racks|Sichern Sie das Gestell des Rechenzentrums mit zusätzlichen Geräten, die für den Standort Ihres Rechenzentrums erforderlich sind, z. b. Erdbeben Bänder in geografischen Bereichen, die für Erdbeben anfällig sind.|  
 |Vorbereiten der Unterstützung beim Transportieren der Komponenten|Legen Sie im Voraus fest, welche Unterstützung, Ausrüstung und Tools Sie benötigen, um die einzelnen Komponenten sicher und ohne Beschädigung zu verarbeiten.|  
   
-## <a name="Moving"></a>Verschieben der Racks aus dem Lade Dock in das Rechenzentrum  
+## <a name="move-the-racks-from-the-loading-dock-into-the-data-center"></a><a name="Moving"></a>Verschieben der Racks aus dem Lade Dock in das Rechenzentrum  
 Jede Palette enthält alle Komponenten für ein Geräte Gestell, einschließlich Knoten, Kabel, Kabel usw.  
   
 Verwenden Sie die folgende Prüfliste, um jedes Appliance Gestell von der Palette an das Lade Dock an seine Regal Position im Rechenzentrum zu verschieben. Verschieben Sie zuerst das Steuerelement Gestell, und verschieben Sie dann die anderen Gerätedaten Racks.  
@@ -51,7 +51,7 @@ Verwenden Sie die folgende Prüfliste, um jedes Appliance Gestell von der Palett
 |Sichern Sie den Knoten im Rechenzentrums Rack|Sichern Sie den Knoten im Rechenzentrums Rack.|  
 |Wiederholen Sie diese Schritte für den nächsten Knoten oder die nächste Komponente.|Wiederholen Sie diese Schritte, um den nächsten Knoten oder eine andere Geräte Komponente in das Rechenzentrum zu verschieben.|  
   
-## <a name="AfterMoving"></a>Installieren zusätzlicher Komponenten  
+## <a name="install-additional-components"></a><a name="AfterMoving"></a>Installieren zusätzlicher Komponenten  
 Verwenden Sie die folgende Checkliste, um die zusätzlichen Komponenten zu installieren.  
   
 |Aufgabe|BESCHREIBUNG||  

@@ -10,20 +10,20 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 6bbbf42106602a25b03072a9c9abfb04f04d3c49
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74400333"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>Festlegen des Administrator Kennworts für die Anmeldung bei AD-Knoten im Verzeichnisdienst-Wiederherstellungs Modus (DSRM)-Analytics Platform System
 Der Verzeichnisdienst-Wiederherstellungs Modus (Directory Services Restore Mode, DSRM) ist ein Start Modus zum Reparieren oder Wiederherstellen Active Directory Domain Services (AD DS) Sie wird verwendet, um sich bei den AD-Knoten der Appliance anzumelden, nachdem AD DS fehlgeschlagen ist oder AD DS wieder hergestellt werden muss. Das Kennwort für DSRM wurde während der Einrichtung der Appliance am Hardwarehersteller Standort initialisiert und sollte vom Geräte Administrator geändert werden. Analytics Platform System verfügt über zwei AD DS (Domänen Controller); ** _appliance_domain_-ad01** und ** _appliance_domain_-ad02**. Ändern Sie das DSRM-Kennwort für jeden AD-Geräteknoten mithilfe der folgenden Schritte.  
   
-## <a name="HowToDSRM"></a>So setzen Sie das Administrator Kennwort zurück  
+## <a name="to-reset-the-administrator-password"></a><a name="HowToDSRM"></a>So setzen Sie das Administrator Kennwort zurück  
   
 1.  Öffnen Sie ein Eingabe Aufforderungs Fenster auf einem AD-Knoten des Geräts <strong> _appliance_domain_AD_xx_</strong>virtuellen Computers.  
   
-2.  Geben Sie an der Eingabeaufforderung Folgendes ein: `ntdsutil`.  
+2.  Geben Sie an der Eingabeaufforderung `ntdsutil` ein:  
   
 3.  Geben `set dsrm password`Sie an der Eingabeaufforderung von **Ntdsutil** ein.  
   

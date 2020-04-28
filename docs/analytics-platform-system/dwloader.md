@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 8ea941e45f5125beed0820c5d5242b0f86073f76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401177"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>"dwloader-Befehlszeilen Lade Modul für parallele Data Warehouse
@@ -209,7 +209,7 @@ Beispiele:
 Wenn Ladefehler auftreten, speichert **"dwloader** die Zeile, die nicht geladen werden konnte, und die Fehlerbeschreibung in einer Datei mit dem Namen *load_failure_file_name*. Wenn diese Datei bereits vorhanden ist, wird die vorhandene Datei von "dwloader überschrieben. *load_failure_file_name* wird erstellt, wenn der erste Fehler auftritt. Wenn alle Zeilen erfolgreich geladen wurden, wird *load_failure_file_name* nicht erstellt.  
   
 **-FH** *number_header_rows*  
-Die Anzahl der Zeilen (Zeilen), die am Anfang *source_data_file_name*ignoriert werden sollen. Die Standardeinstellung ist 0.  
+Die Anzahl der Zeilen (Zeilen), die am Anfang *source_data_file_name*ignoriert werden sollen. Der Standardwert ist 0.  
   
 <variable_length_column_options>  
 Die Optionen für eine *source_data_file_name* , die über Zeichen getrennte Spalten mit variabler Länge verfügt. Standardmäßig enthält *source_data_file_name* ASCII-Zeichen in Spalten variabler Länge.  
@@ -224,13 +224,13 @@ Das Trennzeichen für jedes Feld (Spalte) in der Zeile. Das Feld Trennzeichen is
   
 |Name|Escape-Zeichen|Hex-Zeichen|  
 |--------|--------------------|-----------------|  
-|TAB|\t|0x09|  
+|Registerkarte|\t|0x09|  
 |Wagen Rücklauf (CR)|\r|0x0D|  
 |Zeilenvorschub (LF)|\n|0x0A|  
 |CRLF|\r\n|0x0d0x0a|  
 |Komma|','|0x2c|  
 |Doppeltes Anführungszeichen|\\"|0x22|  
-|Einfache Anführungszeichen|\\'|0x27|  
+|Einfaches Anführungszeichen|\\'|0x27|  
   
 Um das Pipezeichen in der Befehlszeile anzugeben, müssen Sie es mit doppelten Anführungszeichen ("|") einschließen. Dadurch wird die Fehlinterpretation durch den Befehlszeilen Parser vermieden. Andere Zeichen sind in einfache Anführungszeichen eingeschlossen.  
   
@@ -349,7 +349,7 @@ ydm und DMY lassen dieselben Eingabeformate zu. Beide ermöglichen es, dass das 
 ydm  
 Sie können nur als ydm formatierte Eingaben in Spalten vom Datentyp DateTime und smalldatetime laden. Ydm-Werte können nicht in eine Spalte des Datentyps datetime2, Date oder DateTimeOffset geladen werden.  
   
-mdy  
+dmy  
 MDY ermöglicht <month> <space> <day> <comma>. <year>  
   
 Beispiele für MDY-Eingabedaten für den 1. Januar 1975:  
@@ -419,7 +419,7 @@ Wird nur für die Verwendung durch Microsoft-Support empfohlen, *BatchSize* ist 
   
 Ab SQL Server 2012 PDW berechnet der Steuer Knoten standardmäßig dynamisch eine Batch Größe für jede Last. Diese automatische Berechnung basiert auf mehreren Parametern, wie z. b. der Arbeitsspeicher Größe, dem Ziel Tabellentyp, dem Ziel Tabellen Schema, dem Auslastungstyp, der Dateigröße und der Ressourcen Klasse des Benutzers.  
   
-Wenn der Lademodus beispielsweise fastappend ist und die Tabelle einen gruppierten columnstore--Index aufweist, wird SQL Server PDW standardmäßig versuchen, eine Batch Größe von 1.048.576 zu verwenden, damit Zeilen Gruppen geschlossen werden und direkt in den columnstore-geladen werden, ohne dass die Delta Speicher. Wenn der Arbeitsspeicher die Batch Größe von 1.048.576 nicht zulässt, wählt "dwloader eine kleinere Batch Größe aus.  
+Wenn der Lademodus beispielsweise fastappend ist und die Tabelle über einen gruppierten columnstore--Index verfügt, wird SQL Server PDW standardmäßig versuchen, eine Batch Größe von 1.048.576 zu verwenden, damit Zeilen Gruppen geschlossen werden und direkt in den columnstore-geladen werden, ohne den Delta Speicher zu durchlaufen. Wenn der Arbeitsspeicher die Batch Größe von 1.048.576 nicht zulässt, wählt "dwloader eine kleinere Batch Größe aus.  
   
 Wenn der Auslastungstyp fastappend ist, gilt der *BatchSize* -Wert für das Laden von Daten in die Tabelle; andernfalls gilt *BatchSize* für das Laden von Daten in die Stagingtabelle.  
   

@@ -20,10 +20,10 @@ ms.assetid: 9fd9fa76-6128-410c-896f-741e6050143a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 38b5ac732926ae544dbad2cc22006c45533702c3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982603"
 ---
 # <a name="sysservice_queues-transact-sql"></a>sys.service_queues (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "73982603"
 |**is_receive_enabled**|**bit**|1 = Empfangen ist aktiviert.|  
 |**is_enqueue_enabled**|**bit**|1 = Einreihen in Warteschlange ist aktiviert.|  
 |**is_retention_enabled**|**bit**|1 = Nachrichten werden bis zum Ende des Dialogs beibehalten.|  
-|**is_poison_message_handling_enabled**|**bit**|**Gilt für**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> 1 = Behandlung nicht verarbeitbarer Nachrichten ist aktiviert.|  
+|**is_poison_message_handling_enabled**|**bit**|**Gilt für**:  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] und höher.<br /><br /> 1 = Behandlung nicht verarbeitbarer Nachrichten ist aktiviert.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: erikre
 ms.openlocfilehash: e6e2247cd3648e78df0349ec8de2b63f29e52e94
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73729348"
 ---
 # <a name="deprecated-master-data-services-features"></a>Veraltete Funktionen von Master Data Services
@@ -45,17 +45,17 @@ ms.locfileid: "73729348"
   
 -   [Sammlungen &#40;Master Data Services&#41;](../master-data-services/collections-master-data-services.md)  
   
--   [Mitglieder &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
+-   [Elemente &#40;Master Data Services&#41;](../master-data-services/members-master-data-services.md)  
   
 ## <a name="attribute-entity-transaction-log-type"></a>Transaktionsprotokolltyp von Entitäten  
 Der Transaktionsprotokolltyp von Entitäten „Attribut“ ist veraltet, bitte migrieren Sie zum Transaktionsprotokolltyp von Entitäten „Element“. Informationen zu Transaktionsprotokolltypen von Entitäten finden Sie in folgendem Thema:
-* [Ändern des Transaktionsprotokoll Typs von Entitäten (Master Data Services)](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)
+* [Ändern des Transaktionsprotokolltyps von Entitäten (Master Data Services)](../master-data-services/change-the-entity-transaction-log-type-master-data-services.md)
 * [Elementrevisionsverlauf](../master-data-services/member-revision-history-master-data-services.md)
   
 ## <a name="external-resources"></a>Externe Ressourcen  
  Blogbeitrag [Deprecated: Explicit Hierarchies and Collections](https://go.microsoft.com/fwlink/p/?LinkId=615373)(Veraltet: explizite Hierarchien und Sammlungen) auf msdn.com.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Nicht unterstützte Master Data Services Features](../master-data-services/discontinued-master-data-services-features.md)  
+ [Eingestellte Master Data Services-Funktionen](../master-data-services/discontinued-master-data-services-features.md)  
   
   

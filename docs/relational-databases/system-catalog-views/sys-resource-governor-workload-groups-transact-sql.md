@@ -20,10 +20,10 @@ ms.assetid: 619ba4b7-868f-4784-b527-ec1dfd703c4f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 785062784aa465c438ab842a642d09cad03c799b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73982974"
 ---
 # <a name="sysresource_governor_workload_groups-transact-sql"></a>sys.resource_governor_workload_groups (Transact-SQL)
@@ -34,15 +34,15 @@ ms.locfileid: "73982974"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |group_id|**int**|Eindeutige ID der Arbeitsauslastungsgruppe Lässt keine NULL-Werte zu.|  
-|name|**sysname**|Name der Arbeitsauslastungsgruppe. Lässt keine NULL-Werte zu.|  
+|Name|**sysname**|Name der Arbeitsauslastungsgruppe. Lässt keine NULL-Werte zu.|  
 |importance|**sysname**|**Hinweis:** Die Wichtigkeit gilt nur für Arbeits Auslastungs Gruppen im selben Ressourcenpool.<br /><br /> Die relative Wichtigkeit einer Anforderung in dieser Arbeitsauslastungsgruppe. Die Wichtigkeit ist eine der folgenden, wobei Medium die Standardeinstellung ist: niedrig, Mittel, hoch.<br /><br /> Lässt keine NULL-Werte zu.|  
 |request_max_memory_grant_percent|**int**|Angabe der maximalen Arbeitsspeicherzuweisung in Prozent für eine einzelne Anforderung. Der Standardwert ist 25. Lässt keine NULL-Werte zu.<br /><br /> **Hinweis:** Wenn diese Einstellung höher als 50 Prozent ist, werden große Abfragen nacheinander ausgeführt. Daher besteht das Risiko, dass beim Ausführen der Abfrage nicht genügend Arbeitsspeicher verfügbar ist.|  
 |request_max_cpu_time_sec|**int**|Maximaler CPU-Nutzungsgrenzwert für eine einzelne Anforderung in Sekunden. Der Standardwert 0 bedeutet, dass kein Grenzwert festgelegt ist. Lässt keine NULL-Werte zu.<br /><br /> **Hinweis:** Weitere Informationen finden Sie unter [CPU-Schwellenwert überschrittene Ereignisklasse](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).|  
 |request_memory_grant_timeout_sec|**int**|Timeout für die Arbeitsspeicherzuweisung für eine einzelne Anforderung in Sekunden. Der Standardwert 0 verwendet eine interne Berechnung auf Basis der Abfragekosten. Lässt keine NULL-Werte zu.|  
 |max_dop|**int**|Maximaler Grad der Parallelität für die Arbeitsauslastungsgruppe. Der Standardwert 0 verwendet globale Einstellungen. Lässt keine NULL-Werte zu.<br /><br /> **Knoten:** Mit dieser Einstellung wird die Abfrage Option **MAXDOP**überschrieben.|  
-|group_max_requests|**int**|Maximale Anzahl von gleichzeitigen Anforderungen. Der Standardwert 0 bedeutet, dass kein Grenzwert festgelegt ist. Lässt keine NULL-Werte zu.|  
+|group_max_requests|**int**|Maximale Anzahl gleichzeitiger Anforderungen. Der Standardwert 0 bedeutet, dass kein Grenzwert festgelegt ist. Lässt keine NULL-Werte zu.|  
 |pool_id|**int**|ID des Ressourcenpools, den diese Arbeitsauslastungsgruppe verwendet.|  
-|external_pool_id|**int**|**Gilt für**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.<br /><br /> ID des externen Ressourcenpools, der von dieser Arbeits Auslastungs Gruppe verwendet wird.|  
+|external_pool_id|**int**|**Gilt für**:  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] und höher.<br /><br /> ID des externen Ressourcenpools, der von dieser Arbeits Auslastungs Gruppe verwendet wird.|  
   
 ## <a name="remarks"></a>Bemerkungen  
  Die Katalogsicht zeigt die gespeicherten Metadaten an. Um die Konfiguration im Arbeitsspeicher anzuzeigen, verwenden Sie die entsprechende dynamische Verwaltungs Sicht [sys. dm_resource_governor_workload_groups &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md).  
@@ -54,7 +54,7 @@ ms.locfileid: "73982974"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sys. dm_resource_governor_workload_groups &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-workload-groups-transact-sql.md)   
- [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Resource Governor Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)  
   
   

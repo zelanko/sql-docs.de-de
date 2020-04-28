@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: b0bcb5cfe1ec4111aaea7153f35bca084df62b76
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74401014"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Laden von Daten mit Integration Services in parallele Data Warehouse
@@ -33,7 +33,7 @@ For general information about developing Integration Services packages, see [Des
 
 -->
   
-## <a name="Basics"></a>Kenntnisse  
+## <a name="basics"></a><a name="Basics"></a>Grundlagen  
 Integration Services ist die Komponente von SQL Server für das Extrahieren, Transformieren und Laden von Daten (ETL) mit hoher Leistung und wird häufig verwendet, um ein Data Warehouse aufzufüllen und zu aktualisieren.  
   
 Der PDW-Ziel Adapter ist eine Integration Services Komponente, mit der Sie Daten mithilfe Integration Services dzx-Paketen in PDW laden können. In einem Paket Workflow für SQL serverpdw können Sie Daten aus mehreren Quellen laden und Zusammenführen sowie Daten in mehrere Ziele laden. Die Ladevorgänge erfolgen parallel innerhalb eines Pakets und unter mehreren gleichzeitig ausgeführten Paketen, bis zu einem Maximum von 10 in der gleichen Anwendung parallel ausgeführten Ladevorgängen.  
@@ -42,7 +42,7 @@ Zusätzlich zu den in diesem Thema beschriebenen Aufgaben können Sie andere Fun
   
 Eine umfassende Dokumentation zu Integration Services finden Sie unter [SQL Server Integration Services](../integration-services/sql-server-integration-services.md).  
   
-## <a name="HowToDeployPackage"></a>Methoden zum Ausführen eines Integration Services Pakets  
+## <a name="methods-for-running-an-integration-services-package"></a><a name="HowToDeployPackage"></a>Methoden zum Ausführen eines Integration Services Pakets  
 Verwenden Sie eine dieser Methoden, um ein Integration Services Paket auszuführen.  
   
 ### <a name="run-from-sql-server-2008-r2-business-intelligence-development-studio-bids"></a>Ausführen von SQL Server 2008 R2 Business Intelligence Development Studio (Angebote)  
@@ -63,7 +63,7 @@ So führen Sie das Paket mithilfe des Hilfsprogramms **dtexec** von einer Window
   
 Beispiel: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
-## <a name="DataTypes"></a>Datentypen  
+## <a name="data-types"></a><a name="DataTypes"></a>Datentypen  
 Wenn Integration Services zum Laden von Daten aus einer Datenquelle in eine SQL Server PDW-Datenbank verwendet wird, werden die Daten zunächst aus den Quelldaten Integration Services-Datentypen zugeordnet. Dies ermöglicht die Zuordnung von Daten aus mehreren Datenquellen zu einem allgemeinen Satz von Datentypen.  
   
 Anschließend werden die Daten aus Integration Services SQL Server PDW-Datentypen zugeordnet. In der folgenden Tabelle werden für jeden SQL Server PDW Datentyp die Integration Services-Datentypen aufgelistet, die in den SQL Server PDW-Datentyp konvertiert werden können.  
@@ -71,7 +71,7 @@ Anschließend werden die Daten aus Integration Services SQL Server PDW-Datentype
 |PDW-Datentyp|Integration Services Datentypen, die dem PDW-Datentyp zugeordnet sind.|  
 |---------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|  
 |BIT|DT_BOOL|  
-|BIGINT|DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4|  
+|bigint|DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4|  
 |CHAR|DT_STR|  
 |DATE|DT_DBDATE|  
 |DATETIME|DT_DATE, DT_DBDATE, DT_DBTIMESTAMP, DT_DBTIMESTAMP2|  
@@ -126,10 +126,10 @@ Zum Ausführen eines Integration Services Lade Pakets benötigen Sie Folgendes:
   
 -   Wenn keine Staging-Datenbank verwendet wird, erstellen Sie die-Berechtigung für die Zieldatenbank. Dies dient zum Erstellen einer temporären Tabelle.  
   
-## <a name="GenRemarks"></a>Allgemeine Hinweise  
+## <a name="general-remarks"></a><a name="GenRemarks"></a>Allgemeine Hinweise  
 Wenn für ein Integration Services Paket mehrere SQL Server PDW Ziele ausgeführt werden und eine Verbindung beendet wird, beendet Integration Services das Übertragen von Daten an alle SQL Server PDW Ziele.  
   
-## <a name="Limits"></a>Einschränkungen  
+## <a name="limitations-and-restrictions"></a><a name="Limits"></a>Einschränkungen  
 Bei einem Integration Services Paket wird die Anzahl der SQL Server PDW Ziele für die gleiche Datenquelle durch die maximale Anzahl aktiver Ladevorgänge beschränkt. Das Maximum ist vorkonfiguriert und kann nicht durch den Benutzer konfiguriert werden. 
 
 <!-- MISSING LINKS
@@ -146,12 +146,12 @@ Das Paket wird nicht ausgeführt, wenn die Anzahl der Ladevorgänge in der Warte
 > Die Verwendung einer OLE DB Datenquelle in SSIS mit dem PDW-Ziel Adapter kann zu Daten Beschädigungen führen, wenn die Quell Tabelle char-und varchar-Spalten mit SQL-Sortierungen enthält. Es wird empfohlen, eine ADO.NET-Quelle zu verwenden, wenn die Quell Tabelle char-oder varchar-Spalten mit SQL-Sortierungen enthält. 
 
   
-## <a name="Locks"></a>Sperrverhalten  
+## <a name="locking-behavior"></a><a name="Locks"></a>Sperr Verhalten  
 Beim Laden von Daten mit Integration Services verwendet SQL Server PDW Sperren auf Zeilenebene, um Daten in der Ziel Tabelle zu aktualisieren. Dies bedeutet, dass jede Zeile während des Updates für den Lese- und Schreibzugriff gesperrt wird. Die Zeilen in der Zieltabelle werden nicht gesperrt, während die Daten in die Stagingtabelle geladen werden.  
   
-## <a name="Examples"></a>Beispiele  
+## <a name="examples"></a><a name="Examples"></a>Beispiele  
   
-### <a name="Walkthrough"></a>Ein. Einfaches Laden aus Flatfile  
+### <a name="a-simple-load-from-flat-file"></a><a name="Walkthrough"></a>A. Einfaches Laden aus Flatfile  
 In der folgenden exemplarischen Vorgehensweise wird eine einfache Daten Auslastung mithilfe Integration Services veranschaulicht, um Flatfiledaten in eine SQL Server PDW Appliance zu laden.  In diesem Beispiel wird davon ausgegangen, dass Integration Services bereits auf dem Client Computer installiert wurde und das SQL Server PDW Ziel wie oben beschrieben installiert wurde.  
   
 In diesem Beispiel werden wir in die `Orders` -Tabelle laden, die die folgende DDL enthält. Die `Orders` Tabelle ist Teil der `LoadExampleDB` Datenbank.  

@@ -19,10 +19,10 @@ ms.assetid: c89aab6a-0434-4ce6-af8c-f8a1a3284e38
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6d37a6ad94056007dd7c941d53ce52b4b84498a9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73983302"
 ---
 # <a name="sysdm_resource_governor_configuration-transact-sql"></a>sys.dm_resource_governor_configuration (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "73983302"
 |-----------------|---------------|-----------------|  
 |classifier_function_id|**int**|Die ID der Klassifizierungsfunktion, die zurzeit von der Ressourcenkontrolle verwendet wird. Gibt den Wert 0 (null) zurück, wenn keine Funktion verwendet wird. Lässt keine NULL-Werte zu.<br /><br /> **Hinweis:** Diese Funktion wird zum Klassifizieren neuer Anforderungen verwendet und verwendet Regeln, um diese Anforderungen an die entsprechende Arbeits Auslastungs Gruppe weiterzuleiten. Weitere Informationen finden Sie unter [Resource Governor](../../relational-databases/resource-governor/resource-governor.md).|  
 |is_reconfiguration_pending|**bit**|Gibt an, ob mit der ALTER RESOURCE GOVERNOR RECONFIGURE-Anweisung Änderungen an einer Gruppe oder einem Pool vorgenommen wurden, die jedoch noch nicht auf die Konfiguration im Arbeitsspeicher angewendet wurden. Einer der folgenden Werte wird zurückgegeben:<br /><br /> 0 - Eine Anweisung zur Neukonfiguration ist nicht erforderlich.<br /><br /> 1 - Es ist eine Anweisung zur Neukonfiguration oder ein Serverneustart erforderlich, damit ausstehende Konfigurationsänderungen übernommen werden können.<br /><br /> **Hinweis:** Der zurückgegebene Wert ist immer 0, wenn Resource Governor deaktiviert ist.<br /><br /> Lässt keine NULL-Werte zu.|  
-|max_outstanding_io_per_volume|**int**|**Gilt für**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.<br /><br /> Die maximale Anzahl der ausstehenden E/A-Vorgänge pro Volume.|  
+|max_outstanding_io_per_volume|**int**|**Gilt für**:  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] und höher.<br /><br /> Die maximale Anzahl der ausstehenden E/A-Vorgänge pro Volume.|  
   
 ## <a name="remarks"></a>Bemerkungen  
  Diese dynamische Verwaltungssicht zeigt die Konfiguration im Arbeitsspeicher an. Verwenden Sie die entsprechende Katalogsicht, um die gespeicherten Konfigurationsmetadaten anzuzeigen.  
@@ -65,7 +65,7 @@ go
  Erfordert die VIEW SERVER STATE-Berechtigung.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [sys. resource_governor_configuration &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-configuration-transact-sql.md)   
  [Ressourcenkontrolle](../../relational-databases/resource-governor/resource-governor.md)  
   

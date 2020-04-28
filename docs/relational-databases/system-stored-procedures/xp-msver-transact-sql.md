@@ -18,10 +18,10 @@ ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 85552daa2dda14c6a7516c96f0f9fe6566f31111
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "73843898"
 ---
 # <a name="xp_msver-transact-sql"></a>xp_msver (Transact-SQL)
@@ -51,11 +51,10 @@ xp_msver [ optname ]
 |**Kommentare**|Verschiedene Informationen zu [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**CompanyName**|Der Name der Firma, die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] herstellt. Beispiel: [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corporation.|  
 |**FileDescription**|Das Betriebssystem.|  
-|**File Version**|Version der ausführbaren Datei von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**FileVersion**|Version der ausführbaren Datei von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**InternalName**|Von [!INCLUDE[msCoName](../../includes/msconame-md.md)] verwendeter interner Name für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Beispiel: SQLSERVR.|  
 |**LegalCopyright**|Urheberrechtliche Informationen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Beispiel: Copyright© [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corp. 1988-2005.|  
-|**LegalTrademarks**|Markeninformationen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] ist z. B. eine eingetragene Marke der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corporation.|  
+|**LegalTrademarks**|Markeninformationen für [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[msCoName](../../includes/msconame-md.md)] ist z. B. eine eingetragene Marke der [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corporation.|  
 |**OriginalFilename**|Der Name der Datei, die beim Start von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird. Beispiel: Sqlservr.exe.|  
 |**PrivateBuild**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**SpecialBuild**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -64,7 +63,7 @@ xp_msver [ optname ]
 |**ProcessorActiveMask**|Gibt die Prozessoren in dem Computer an, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird, die gestartet werden und von [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows verwendet werden können.|  
 |**ProcessorType**|Der Prozessortyp. Vergleichbar mit **Platform**.|  
 |**PhysicalMemory**|Die Menge an Arbeitsspeicher (RAM) in Megabyte (MB), die auf dem Computer installiert ist, auf dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ausgeführt wird.|  
-|**Product ID**|Product ID (PID). Wird bei der Installation angegeben. Diese Nummer finden Sie auf dem Aufkleber der Hülle der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Original-CD.|  
+|**Produkt-ID**|Product ID (PID). Wird bei der Installation angegeben. Diese Nummer finden Sie auf dem Aufkleber der Hülle der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Original-CD.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  1 (Erfolg)  
@@ -77,7 +76,7 @@ xp_msver [ optname ]
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Systemfunktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
- [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Allgemeine erweiterte gespeicherte Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [@@VERSION &#40;Transact-SQL&#41;](../../t-sql/functions/version-transact-sql-configuration-functions.md)  
   

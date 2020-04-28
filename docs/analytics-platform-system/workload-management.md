@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: d14714cb23a9f6b0d6cc63ddca5049cb6741017c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "74399444"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Workloadverwaltung in Analytics Platform System
@@ -28,11 +28,11 @@ Beispielsweise können Sie mit den Techniken zur Verwaltung von Arbeits Auslastu
   
 -   Beheben Sie die Problembehandlung bei einem Hash Join mit langsamer Leistung, um zu ermitteln, ob mehr Arbeitsspeicher benötigt wird.  
   
-## <a name="Basics"></a>Grundlagen der Verwaltung  
+## <a name="workload-management-basics"></a><a name="Basics"></a>Grundlagen der Verwaltung  
   
 ### <a name="key-terms"></a>Schlüsselbegriffe  
 Workloadverwaltung  
-** Mit der workloadverwaltung können Sie die Systemressourcen Nutzung verstehen und anpassen, um die beste Leistung für gleichzeitige Anforderungen zu erzielen.  
+*Workload Management* Mit der workloadverwaltung können Sie die Systemressourcen Nutzung verstehen und anpassen, um die beste Leistung für gleichzeitige Anforderungen zu erzielen.  
   
 Ressourcenklasse  
 In SQL Server PDW handelt es sich bei einer *Ressourcen Klasse* um eine integrierte Server Rolle, die vorab zugewiesene Grenzwerte für Arbeitsspeicher und Parallelität aufweist. SQL Server PDW ordnet Ressourcenanforderungen entsprechend der Server Rollen Mitgliedschaft der Ressourcen Klasse der Anmeldung zu, die die Anforderungen übermittelt.  
@@ -55,13 +55,13 @@ Fügen Sie z. b. den Anmelde Namen, der die Anforderung sendet, an die **largerc
 ALTER SERVER ROLE largerc ADD MEMBER Anna;  
 ```  
   
-## <a name="RC"></a>Ressourcen Klassen Beschreibungen  
+## <a name="resource-class-descriptions"></a><a name="RC"></a>Ressourcen Klassen Beschreibungen  
 In der folgenden Tabelle werden die Ressourcen Klassen und deren Systemressourcen Zuordnungen beschrieben.  
   
 |Ressourcenklasse|Wichtigkeit anfordern|Maximale Speicherauslastung *|Parallelitäts Slots (Maximum = 32)|BESCHREIBUNG|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
-|default|Mittel|400 MB|1|Standardmäßig ist für jede Anmeldung eine geringe Menge an Speicherplatz und Parallelitäts Ressourcen für Ihre Anforderungen zulässig.<br /><br />Wenn einer Ressourcen Klasse ein Anmelde Name hinzugefügt wird, hat die neue Klasse Vorrang. Wenn ein Anmelde Name aus allen Ressourcen Klassen gelöscht wird, wird die Standard Ressourcenzuweisung wieder hergestellt.|  
-|MediumRC|Mittel|1200 MB|3|Beispiele für Anforderungen, bei denen möglicherweise die mittlere Ressourcen Klasse erforderlich ist:<br /><br />CTAs-Vorgänge mit großen Hashjoins.<br /><br />Wählen Sie Vorgänge aus, die mehr Arbeitsspeicher benötigen, um das Zwischenspeichern auf Datenträgern<br /><br />Laden von Daten in gruppierte columnstore--Indizes.<br /><br />Erstellen, Neuerstellen und Neuorganisieren von gruppierten columnstore--Indizes für kleinere Tabellen mit 10-15-Spalten.|  
+|default|Medium (Mittel)|400 MB|1|Standardmäßig ist für jede Anmeldung eine geringe Menge an Speicherplatz und Parallelitäts Ressourcen für Ihre Anforderungen zulässig.<br /><br />Wenn einer Ressourcen Klasse ein Anmelde Name hinzugefügt wird, hat die neue Klasse Vorrang. Wenn ein Anmelde Name aus allen Ressourcen Klassen gelöscht wird, wird die Standard Ressourcenzuweisung wieder hergestellt.|  
+|MediumRC|Medium (Mittel)|1200 MB|3|Beispiele für Anforderungen, bei denen möglicherweise die mittlere Ressourcen Klasse erforderlich ist:<br /><br />CTAs-Vorgänge mit großen Hashjoins.<br /><br />Wählen Sie Vorgänge aus, die mehr Arbeitsspeicher benötigen, um das Zwischenspeichern auf Datenträgern<br /><br />Laden von Daten in gruppierte columnstore--Indizes.<br /><br />Erstellen, Neuerstellen und Neuorganisieren von gruppierten columnstore--Indizes für kleinere Tabellen mit 10-15-Spalten.|  
 |Largerc|High|2,8 GB|7|Beispiele für Anforderungen, bei denen möglicherweise die große Ressourcen Klasse erforderlich ist:<br /><br />Sehr große CTAs-Vorgänge, die über riesige Hashjoins verfügen oder große Aggregationen wie z. b. große Order by-oder GROUP BY-Klauseln enthalten.<br /><br />Select-Vorgänge, bei denen sehr große Mengen an Arbeitsspeicher für Vorgänge wie Hashjoins oder Aggregationen wie Order by-oder GROUP BY-Klauseln erforderlich sind<br /><br />Laden von Daten in gruppierte columnstore--Indizes.<br /><br />Erstellen, Neuerstellen und Neuorganisieren von gruppierten columnstore--Indizes für kleinere Tabellen mit 10-15-Spalten.|  
 |xlargerc|High|8,4 GB|22|Die Ressourcen Klasse "Extra Large" ist für Anforderungen vorgesehen, die zur Laufzeit einen extrem großen Ressourcenverbrauch erfordern könnten.|  
   
@@ -98,7 +98,7 @@ Wenn Anforderungen abgeschlossen werden und Parallelitäts Slots verfügbar werd
   
 In jeder Ressourcen Klasse werden die Anforderungen in der FIFO-Reihenfolge (First in First Out) ausgeführt.  
   
-## <a name="GeneralRemarks"></a>Allgemeine Hinweise  
+## <a name="general-remarks"></a><a name="GeneralRemarks"></a>Allgemeine Hinweise  
 Wenn eine Anmeldung Mitglied von mehr als einer Ressourcen Klasse ist, hat die Klasse mit den meisten Ressourcen Vorrang.  
   
 Wenn ein Anmelde Name einer Ressourcen Klasse hinzugefügt oder aus dieser gelöscht wird, tritt die Änderung für alle zukünftigen Anforderungen sofort in Kraft. aktuelle Anforderungen, die ausgeführt werden oder warten, sind nicht betroffen. Der Anmelde Name muss nicht getrennt und erneut verbunden werden, damit die Änderung erfolgt.  
@@ -137,10 +137,10 @@ SQL-Anweisungen und-Vorgänge, die von Ressourcen Klassen gesteuert werden:
   
 -   SELECT, ausgenommen nur DMV-Abfragen  
   
-## <a name="Limits"></a>Einschränkungen  
+## <a name="limitations-and-restrictions"></a><a name="Limits"></a>Einschränkungen  
 Die Ressourcen Klassen Steuern Speicher-und Parallelitäts Zuordnungen.  Sie Steuern keine Eingabe-/Ausgabevorgänge.  
   
-## <a name="Metadata"></a>Metadaten  
+## <a name="metadata"></a><a name="Metadata"></a>Metadaten  
 DMVs, die Informationen zu Ressourcen Klassen und Ressourcen Klassenmembern enthalten.  
   
 -   [sys.server_role_members](../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md)  
@@ -177,7 +177,7 @@ Verwandte System Sichten, die von den SQL Server DMVs auf den Computeknoten verf
   
 -   sys.dm_pdw_nodes_exec_cached_plans  
   
-## <a name="RelatedTasks"></a>Verwandte Aufgaben  
+## <a name="related-tasks"></a><a name="RelatedTasks"></a>Related Tasks  
 [Workloadverwaltungsaufgaben](workload-management-tasks.md)  
   
 <!-- MISSING LINKS
