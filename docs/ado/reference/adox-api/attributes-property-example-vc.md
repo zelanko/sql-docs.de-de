@@ -15,14 +15,14 @@ ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 794fcee913b41d98c0703244df86eb90efe3f740
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76918822"
 ---
 # <a name="attributes-property-example-vc"></a>Attributes-Eigenschaft – Beispiel (VC++)
-Dieses Beispiel veranschaulicht die [Attribute](../../../ado/reference/adox-api/attributes-property-adox.md) -Eigenschaft einer [Spalte](../../../ado/reference/adox-api/column-object-adox.md). Wenn Sie es auf **adcolnullable** festlegen, kann der Benutzer den Wert eines [recordsetfelds](../../../ado/reference/ado-api/recordset-object-ado.md) [](../../../ado/reference/ado-api/field-object.md) auf eine leere Zeichenfolge festlegen. In dieser Situation kann der Benutzer zwischen einem Datensatz unterscheiden, bei dem keine Daten bekannt sind, und einem Datensatz, in dem die Daten nicht zutreffen.  
+Dieses Beispiel veranschaulicht die [Attribute](../../../ado/reference/adox-api/attributes-property-adox.md) -Eigenschaft einer [Spalte](../../../ado/reference/adox-api/column-object-adox.md). Wenn Sie es auf **adcolnullable** festlegen, kann der Benutzer den Wert eines [recordsetfelds](../../../ado/reference/ado-api/recordset-object-ado.md) [Field](../../../ado/reference/ado-api/field-object.md) auf eine leere Zeichenfolge festlegen. In dieser Situation kann der Benutzer zwischen einem Datensatz unterscheiden, bei dem keine Daten bekannt sind, und einem Datensatz, in dem die Daten nicht zutreffen.  
   
 ```  
 // Attributes_Property_Sample.cpp  

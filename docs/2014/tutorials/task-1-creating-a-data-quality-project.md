@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3724210a1c55a1ad584b5b581de72763fdfd1c0e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177300"
 ---
-# <a name="task-1-creating-a-data-quality-project"></a>Aufgabe 1: Erstellen eines Data Quality-Projekts
+# <a name="task-1-creating-a-data-quality-project"></a>Aufgabe 1: Erstellen eines Data Quality-Projekts
   In dieser Aufgabe erstellen Sie ein Data Quality-Projekt zur Bereinigung der Lieferantendaten in einer Excel-Datei anhand der Wissensdatenbank "Suppliers", die Sie zuvor in diesem Lernprogramm erstellt haben.
 
 1.  Klicken Sie im Bereich **Data Quality-Projekt** auf der Hauptseite auf **Neues Data Quality-Projekt**.
@@ -33,6 +33,6 @@ ms.locfileid: "78177300"
      ![Seite "Neues Data Quality-Projekt" – "Bereinigung" ausgewählt](../../2014/tutorials/media/et-creatingadataqualityproject-02.jpg "Seite "Neues Data Quality-Projekt" – "Bereinigung" ausgewählt")
 
 ## <a name="next-step"></a>Nächster Schritt
- [Aufgabe 2: Zuordnen von Excel-Spalten zu DQS-Domänen](../../2014/tutorials/task-2-mapping-excel-columns-to-dqs-domains.md)
+ [Aufgabe 2: Zuordnen von Excel-Spalten zu DQS-Domänen](../../2014/tutorials/task-2-mapping-excel-columns-to-dqs-domains.md)
 
 

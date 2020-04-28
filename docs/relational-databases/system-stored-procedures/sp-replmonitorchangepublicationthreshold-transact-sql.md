@@ -17,10 +17,10 @@ ms.assetid: 2c3615d8-4a1a-4162-b096-97aefe6ddc16
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fdcf5a9dcd462562886c7815b500c43145b749a3
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75322227"
 ---
 # <a name="sp_replmonitorchangepublicationthreshold-transact-sql"></a>sp_replmonitorchangepublicationthreshold (Transact-SQL)
@@ -54,7 +54,7 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
 `[ @publication_type = ] publication_type`Gibt an, ob der Typ der Veröffentlichung ist. *publication_type* ist vom Datentyp **int**. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**0**|Transaktionsveröffentlichung.|  
 |**1**|Momentaufnahmeveröffentlichung.|  
@@ -63,14 +63,14 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
   
 `[ @metric_id = ] metric_id`Die ID der Schwellenwert Metrik für die Veröffentlichung, die geändert wird. *metric_id* ist vom Datentyp **int**und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
-|value|Metrikname|  
+|Wert|Metrikname|  
 |-----------|-----------------|  
-|**1**|**Ablauf** : überwacht den bevorstehenden Ablauf von Abonnements für Transaktions Veröffentlichungen.|  
-|**2**|**Latenz** : überwacht die Leistung von Abonnements für Transaktions Veröffentlichungen.|  
-|**4**|**mergeablauf** : überwacht den bevorstehenden Ablauf von Abonnements für Mergeveröffentlichungen.|  
-|**5@@**|**mergeslowrunduration** : überwacht die Dauer von Mergesynchronisierungen über Verbindungen mit niedriger Bandbreite (DFÜ-Verbindungen).|  
+|**1**|**expiration** - überwacht den bevorstehenden Ablauf von Abonnements für Transaktionsveröffentlichungen.|  
+|**2**|**latency** - überwacht die Leistung von Abonnements für Transaktionsveröffentlichungen.|  
+|**4**|**mergeexpiration** - überwacht den bevorstehenden Ablauf von Abonnements für Mergeveröffentlichungen.|  
+|**5**|**mergeslowrunduration** : überwacht die Dauer von Mergesynchronisierungen über Verbindungen mit niedriger Bandbreite (DFÜ-Verbindungen).|  
 |**6**|**mergefastrauunduration** : überwacht die Dauer von Mergesynchronisierungen über LAN-Verbindungen (Local Area Network) mit hoher Bandbreite.|  
-|**19.00**|**mergefastrauunspeed** : überwacht die Synchronisierungs Geschwindigkeit von Mergesynchronisierungen über Verbindungen mit hoher Bandbreite (LAN-Verbindungen).|  
+|**7**|**mergefastrunspeed** - Überwachung der Synchronisierungsgeschwindigkeit von Mergesynchronisierungen über Verbindungen mit hoher Bandbreite (LAN-Verbindungen).|  
 |**88**|**mergeslowrunspeed** : überwacht die Synchronisierungs Geschwindigkeit von Mergesynchronisierungen über Verbindungen mit niedriger Bandbreite (DFÜ-Verbindungen).|  
   
  Sie müssen entweder *metric_id* oder " *stammoldmetricname*" angeben. Wenn " *stammoldmetricname* " angegeben ist, sollte *metric_id* NULL sein.  
@@ -93,6 +93,6 @@ sp_replmonitorchangepublicationthreshold [ @publisher = ] 'publisher'
  Nur Mitglieder der festen Daten Bank Rolle **db_owner** oder **replmonitor** in der Verteilungs Datenbank können **sp_replmonitorchangepublicationthreshold**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Programmgesteuertes Überwachen der Replikation](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [Programmgesteuerte Überwachen der Replikation](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

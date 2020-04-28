@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bd19f3a7f4978d2f8bcbd8e62cdf542e05437519
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175166"
 ---
 # <a name="data-source-view-designer-analysis-services---multidimensional-data"></a>Datenquellensicht-Designer (Analysis Services – Mehrdimensionale Daten)
@@ -45,11 +45,11 @@ ms.locfileid: "78175166"
 
 |||
 |-|-|
-|Umbenennen von Spalten oder Tabellen bzw. Erstellen neuer berechneter Spalten. Beispielsweise können Sie einen Vornamen und einen Nachnamen in einer neuen Spalte mit vollständigen Namen verketten.|[Definieren Sie benannte Berechnungen in einer Datenquellen Sicht &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)|
-|Manuelles Hinzufügen von Tabellenbeziehungen|[Definieren von logischen Beziehungen in einer Datenquellen Sicht &#40;Analysis Services&#41;](multidimensional-models/define-logical-relationships-in-a-data-source-view-analysis-services.md)|
-|Erstellen einer benannten Abfrage, um ein neues Objekt auf der Grundlage einer T-SQL-Abfrage zu definieren.|[Definieren Sie benannte Abfragen in einer Datenquellen Sicht &#40;Analysis Services&#41;](multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)|
-|Untersuchen zugrunde liegender Daten, um die eigentlichen Datenwerte anzuzeigen, die von Modellobjekten dargestellt werden.<br /><br /> Durch das Durchsuchen von Daten können Sie Daten, die von der zugrunde liegenden dimensionalen Tabelle oder Abfrage zurückgegeben wurden, visuell überprüfen und kopieren. Beim Durchsuchen von Daten wird standardmäßig die Stichprobenmethode "Anzahl erste Daten" mit einer Stichprobenanzahl von 5000 verwendet, Sie können diese Einstellungen jedoch ändern.|[Durchsuchen von Daten in einer Datenquellen Sicht &#40;Analysis Services&#41;](multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)|
-|Grafische Darstellung aller oder einer Teilmenge der Tabellen und Beziehungen in einer Datenquellensicht|[Arbeiten mit Diagrammen im Datenquellen Sicht-Designer &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)|
+|Umbenennen von Spalten oder Tabellen bzw. Erstellen neuer berechneter Spalten. Beispielsweise können Sie einen Vornamen und einen Nachnamen in einer neuen Spalte mit vollständigen Namen verketten.|[Definieren von benannten Berechnungen in einer Datenquellensicht &#40;Analysis Services&#41;](multidimensional-models/define-named-calculations-in-a-data-source-view-analysis-services.md)|
+|Manuelles Hinzufügen von Tabellenbeziehungen|[Definieren von logischen Beziehungen in einer Datenquellensicht &#40;Analysis Services&#41;](multidimensional-models/define-logical-relationships-in-a-data-source-view-analysis-services.md)|
+|Erstellen einer benannten Abfrage, um ein neues Objekt auf der Grundlage einer T-SQL-Abfrage zu definieren.|[Definieren von benannten Abfragen in einer Datenquellensicht &#40;Analysis Services&#41;](multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)|
+|Untersuchen zugrunde liegender Daten, um die eigentlichen Datenwerte anzuzeigen, die von Modellobjekten dargestellt werden.<br /><br /> Durch das Durchsuchen von Daten können Sie Daten, die von der zugrunde liegenden dimensionalen Tabelle oder Abfrage zurückgegeben wurden, visuell überprüfen und kopieren. Beim Durchsuchen von Daten wird standardmäßig die Stichprobenmethode "Anzahl erste Daten" mit einer Stichprobenanzahl von 5000 verwendet, Sie können diese Einstellungen jedoch ändern.|[Durchsuchen von Daten in einer Datenquellensicht &#40;Analysis Services&#41;](multidimensional-models/explore-data-in-a-data-source-view-analysis-services.md)|
+|Grafische Darstellung aller oder einer Teilmenge der Tabellen und Beziehungen in einer Datenquellensicht|[Verwenden von Diagrammen im Datenquellensicht-Designer &#40;Analysis Services&#41;](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)|
 
 ## <a name="see-also"></a>Weitere Informationen
  [Datenquellen Sichten in mehrdimensionalen Modellen](multidimensional-models/data-source-views-in-multidimensional-models.md) [Hinzufügen oder Entfernen von Tabellen oder Sichten in einer Datenquellen Sicht &#40;Analysis Services&#41;](multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)

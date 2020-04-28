@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9e435ab4cec86d439a7e2fba31f6099bf8668ec0
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175430"
 ---
 # <a name="buffer-pool-extension"></a>Pufferpoolerweiterung
@@ -25,7 +25,7 @@ ms.locfileid: "78175430"
 
  Daten- und Indexseiten werden vom Datenträger in den Pufferpool gelesen und geänderte Seiten (auch bekannt als modifizierte Seiten) werden zurück auf den Datenträger geschrieben. Ungenügender Arbeitsspeicher auf den Server- und Datenbankprüfpunkten bewirkt heiße (aktive) modifizierte Seiten im Puffercache, die aus dem Cache entfernt und auf mechanische Datenträger geschrieben und dann wieder in den Cache gelesen werden. Diese E/A-Vorgänge sind in der Regel kleine zufällige Lese- und Schreibvorgänge in der Größenordnung von 4 bis 16 KB Daten. Kleine zufällige E/A-Muster verursachen häufige Suchen, die um den mechanischen Datenträgerarm konkurrieren, die E/A-Latenzzeit erhöhen und den aggregierten E/A-Durchsatz des Systems verringern.
 
- Der normale Ansatz zum Beheben dieser E/A-Engpässe besteht darin, mehr DRAM hinzuzufügen oder leistungsstarke SAS-Spindeln hinzuzufügen. Auch wenn diese Optionen hilfreich sind, haben sie erhebliche Nachteile: DRAM ist teurer als Datenspeicherungslaufwerke, und das Hinzufügen von Spindeln erhöht den Investitionsaufwand bei der Hardwareanschaffung und die Betriebskosten durch erhöhte Leistungsaufnahme und erhöhte Wahrscheinlichkeit von Komponentenfehlern.
+ Der normale Ansatz zum Beheben dieser E/A-Engpässe besteht darin, mehr DRAM hinzuzufügen oder leistungsstarke SAS-Spindeln hinzuzufügen. Auch wenn diese Optionen hilfreich sind, haben sie erhebliche Nachteile: DRAM ist teurer als Datenspeicherungslaufwerke und das Hinzufügen von Spindeln erhöht den Investitionsaufwand bei der Hardwareanschaffung und die Betriebskosten durch erhöhte Leistungsaufnahme und erhöhte Wahrscheinlichkeit von Komponentenfehlern.
 
  Die Pufferpoolerweiterungsfunktion erweitert den Pufferpoolcache um nicht flüchtigen Speicher (üblicherweise SSD). Aufgrund der Erweiterung kann der Pufferpool ein größeres Datenbankworkingset aufnehmen, das die Auslagerung von E/A-Vorgängen zwischen RAM und SSDs erzwingt. Dies verlagert effektiv kleine zufällige E/A-Vorgänge von den mechanischen Datenträgern auf SSDs. Aufgrund der niedrigeren Latenzzeit und besser verteilten zufälligen E/A-Zugriffen von SSDs verbessert die Pufferpoolerweiterung erheblich den E/A-Durchsatz.
 
@@ -61,7 +61,7 @@ ms.locfileid: "78175430"
 
  Wenn sie aktiviert ist, gibt die Pufferpoolerweiterung die Größe und den Dateipfad der Pufferpoolzwischenspeicherdatei auf dem SSD an. Diese Datei ist ein zusammenhängender Speicherbereich auf dem SSD und wird beim Starten der Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]statisch konfiguriert. Änderungen an den Dateikonfigurationsparametern können nur ausgeführt werden, wenn die Pufferpoolerweiterungsfunktion deaktiviert ist. Wenn die Pufferpoolerweiterung deaktiviert wird, werden alle zugehörigen Konfigurationseinstellungen aus der Registrierung entfernt. Die Pufferpoolerweiterungsdatei wird nach dem Herunterfahren der SQL Server-Instanz gelöscht.
 
-## <a name="best-practices"></a>Bewährte Methoden
+## <a name="best-practices"></a>Empfehlungen
  Es wird empfohlen, nach den folgenden bewährten Methoden vorzugehen.
 
 -   Nach dem ersten Aktivieren der Pufferpoolerweiterung empfiehlt es sich, die SQL Server-Instanz neu zu starten, um die maximalen Leistungsvorteile zu erhalten.
@@ -73,15 +73,15 @@ ms.locfileid: "78175430"
 ## <a name="return-information-about-the-buffer-pool-extension"></a>Rückgabeinformationen zur Pufferpoolerweiterung
  Sie können die folgenden dynamischen Verwaltungssichten verwenden, um die Konfiguration der Pufferpoolerweiterung anzuzeigen und Informationen über die Datenseiten in der Erweiterung zurückzugeben.
 
--   [sys. dm_os_buffer_pool_extension_configuration &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)
+-   [sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)
 
--   [sys. dm_os_buffer_descriptors &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)
+-   [sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)
 
  Im Puffer-Manager-Objekt von SQL Server sind Leistungsindikatoren verfügbar, um die Datenseiten in der Pufferpoolerweiterungsdatei nachzuverfolgen. Weitere Informationen finden Sie unter [Leistungsindikatoren für die Pufferpoolerweiterung](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md).
 
  Die folgenden XEvents sind verfügbar.
 
-|XEvent|Beschreibung|Parameter|
+|XEvent|BESCHREIBUNG|Parameter|
 |------------|-----------------|----------------|
 |sqlserver.buffer_pool_extension_pages_written|Wird ausgelöst, wenn eine Seite oder eine Gruppe von Seiten aus dem Pufferpool in die Pufferpoolerweiterungsdatei geschrieben werden.|number_page<br /><br /> first_page_id<br /><br /> first_page_offset<br /><br /> initiator_numa_node_id|
 |sqlserver.buffer_pool_extension_pages_read|Wird ausgelöst, wenn eine Seite aus der Pufferpoolerweiterungsdatei in den Pufferpool gelesen wird.|number_page<br /><br /> first_page_id<br /><br /> first_page_offset<br /><br /> initiator_numa_node_id|
@@ -93,9 +93,9 @@ ms.locfileid: "78175430"
 |||
 |-|-|
 |**Taskbeschreibung**|**Thema**|
-|Aktivieren und Konfigurieren der Pufferpoolerweiterung.|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
-|Ändern der Konfiguration der Pufferpoolerweiterung|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
-|Anzeigen der Konfiguration der Pufferpoolerweiterung|[sys. dm_os_buffer_pool_extension_configuration &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)|
-|Überwachen der Pufferpoolerweiterung|[sys. dm_os_buffer_descriptors &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)<br /><br /> [Leistungsindikatoren](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|
+|Aktivieren und Konfigurieren der Pufferpoolerweiterung.|[Alter Server Configuration &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
+|Ändern der Konfiguration der Pufferpoolerweiterung|[Alter Server Configuration &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-server-configuration-transact-sql)|
+|Anzeigen der Konfiguration der Pufferpoolerweiterung|[sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql)|
+|Überwachen der Pufferpoolerweiterung|[sys.dm_os_buffer_descriptors &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-os-buffer-descriptors-transact-sql)<br /><br /> [Leistungsindikatoren](../../relational-databases/performance-monitor/sql-server-buffer-manager-object.md)|
 
 

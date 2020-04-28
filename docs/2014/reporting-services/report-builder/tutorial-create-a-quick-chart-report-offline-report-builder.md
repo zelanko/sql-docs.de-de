@@ -15,13 +15,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5cd666ec589737d83717e9b435a260bd2a0d0ef6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176894"
 ---
-# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Erstellen eines Quick-Diagrammberichts offline (Berichts-Generator)
+# <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Lernprogramm: Erstellen eines Quick-Diagrammberichts offline (Berichts-Generator)
   In diesem Lernprogramm erstellen Sie ein Kreisdiagramm mithilfe eines Assistenten. Danach nehmen Sie eine kleine Änderung an diesem Diagramm vor, damit Sie eine Vorstellung von den Bearbeitungsmöglichkeiten erhalten. Dieses Lernprogramm kann auf zwei unterschiedliche Arten absolviert werden. Beide Methoden haben dasselbe Ergebnis: ein Kreis Diagramm wie das in der folgenden Abbildung:
 
  !["Mein erstes Kreisdiagramm" in der Ansicht "Ausführen"](../media/rs-my1stpierunview.gif "Mein erstes Kreis Diagramm in der Ansicht "ausführen"")
@@ -29,11 +29,11 @@ ms.locfileid: "78176894"
 ## <a name="prerequisites"></a>Voraussetzungen
  Sowohl bei Verwendung von XML-Daten als auch bei einer [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Abfrage benötigen Sie Zugriff auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Berichts-Generator. Sie können die eigenständige Version oder die ClickOnce-Version ausführen, die im Berichts-Manager oder auf einer SharePoint-Website verfügbar ist. Bei der ClickOnce-Version ist lediglich der erste Schritt anders, also das Öffnen des Berichts-Generators. Weitere Informationen finden Sie [unter Installieren, deinstallieren und Berichts-Generator-Unterstützung](../install-uninstall-and-report-builder-support.md).
 
-##  <a name="TwoWays"></a> Zwei Möglichkeiten zum Absolvieren des Lernprogramms
+##  <a name="two-ways-to-do-this-tutorial"></a><a name="TwoWays"></a> Zwei Möglichkeiten zum Absolvieren des Lernprogramms
 
 -   [Erstellen des Kreisdiagramms mit XML-Daten](#CreatePieChartXML)
 
--   [Erstellen des Kreisdiagramms mit einer Transact-SQL-Abfrage, die Daten enthält](#CreatePieQueryData)
+-   [Erstellen des Kreis Diagramms mit einer Transact-SQL-Abfrage, die Daten enthält](#CreatePieQueryData)
 
 ### <a name="using-xml-data-for-this-tutorial"></a>Verwenden von XML-Daten für dieses Lernprogramm
  Sie können XML-Daten verwenden, die Sie aus diesem Thema kopieren und in den Assistenten einfügen. Es muss keine Verbindung mit einem Berichtsserver oder einem Berichtsserver im integrierten SharePoint-Modus bestehen, und Sie müssen auf keine Instanz von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] zugreifen.
@@ -47,14 +47,14 @@ ms.locfileid: "78176894"
 
  Für die [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Abfrage müssen noch einige andere Voraussetzungen erfüllt sein. Weitere Informationen finden Sie unter [Voraussetzungen für Lernprogramme &#40;Berichts-Generator&#41;](../report-builder-tutorials.md).
 
- [Erstellen des Kreisdiagramms mit einer Transact-SQL-Abfrage, die Daten enthält](#CreatePieQueryData)
+ [Erstellen des Kreis Diagramms mit einer Transact-SQL-Abfrage, die Daten enthält](#CreatePieQueryData)
 
 ## <a name="also-in-this-article"></a>Auch in diesem Artikel
  [Nach dem Ausführen des Assistenten](#AfterWizard)
 
  [Was kommt als nächstes](#WhatsNext)
 
-##  <a name="CreatePieChartXML"></a>Erstellen des Kreis Diagramms mit XML-Daten
+##  <a name="creating-the-pie-chart-with-xml-data"></a><a name="CreatePieChartXML"></a>Erstellen des Kreis Diagramms mit XML-Daten
 
 #### <a name="to-create-the-pie-chart-with-xml-data"></a>So erstellen Sie das Kreisdiagramm mit XML-Daten
 
@@ -110,7 +110,7 @@ ms.locfileid: "78176894"
     </Query>
     ```
 
-11. (Optional) Klicken Sie auf die Schaltfläche „Ausführen“ ( **!** ), um die Daten anzuzeigen, auf denen das Diagramm basiert.
+11. (Optional) Klicken Sie auf die Schaltfläche Ausführen (**!**), um die Daten anzuzeigen, auf denen das Diagramm basiert.
 
 12. Klicken Sie auf **Weiter**.
 
@@ -130,9 +130,9 @@ ms.locfileid: "78176894"
 
 18. Klicken Sie auf der Registerkarte **Home** des Menübands auf **Ausführen** , um das tatsächliche Kreisdiagramm anzuzeigen.
 
- ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [Zurück zum Anfang](#TwoWays)
+ ![Pfeilsymbol mit dem Link "zurück zum Anfang](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") " [zurück zum Anfang](#TwoWays)
 
-##  <a name="CreatePieQueryData"></a>Erstellen des Kreis Diagramms mit [!INCLUDE[tsql](../../../includes/tsql-md.md)] einer Abfrage
+##  <a name="creating-the-pie-chart-with-a-tsql-query"></a><a name="CreatePieQueryData"></a> Erstellen des Kreisdiagramms mit einer [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Abfrage
 
 #### <a name="to-create-the-pie-chart-with-a-tsql-query-that-contains-data"></a>So erstellen Sie das Kreisdiagramm mit einer [!INCLUDE[tsql](../../../includes/tsql-md.md)]-Abfrage, die Daten enthält
 
@@ -149,7 +149,7 @@ ms.locfileid: "78176894"
     > [!NOTE]
     >  Welche Datenquelle Sie auswählen, ist unwichtig, solange Sie über ausreichende Berechtigungen verfügen. Aus der Datenquelle werden keine Daten abgerufen. Weitere Informationen finden Sie unter [Voraussetzungen für Lernprogramme &#40;Berichts-Generator&#41;](../report-builder-tutorials.md).
 
-6.  Klicken Sie auf der Seite **Abfrage entwerfen** auf **Als Text bearbeiten**.
+6.  Klicken Sie auf der Seite **Abfrage entwerfen** auf **als Text bearbeiten**.
 
 7.  Fügen Sie die folgende Abfrage in den Abfragebereich ein:
 
@@ -161,7 +161,7 @@ ms.locfileid: "78176894"
     UNION SELECT 450 AS Sales, 'Ranjit Varkey' AS FullName 
     ```
 
-8.  (Optional) Klicken Sie auf die Schaltfläche „Ausführen“ ( **!** ), um die Daten anzuzeigen, auf denen das Diagramm basiert.
+8.  (Optional) Klicken Sie auf die Schaltfläche Ausführen (**!**), um die Daten anzuzeigen, auf denen das Diagramm basiert.
 
 9. Klicken Sie auf **Weiter**.
 
@@ -181,9 +181,9 @@ ms.locfileid: "78176894"
 
 15. Klicken Sie auf der Registerkarte **Home** des Menübands auf **Ausführen** , um das tatsächliche Kreisdiagramm anzuzeigen.
 
- ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [Zurück zum Anfang](#TwoWays)
+ ![Pfeilsymbol mit dem Link "zurück zum Anfang](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") " [zurück zum Anfang](#TwoWays)
 
-##  <a name="AfterWizard"></a> Nach der Ausführung des Assistenten
+##  <a name="after-you-run-the-wizard"></a><a name="AfterWizard"></a> Nach der Ausführung des Assistenten
  Nachdem Sie den Kreisdiagrammbericht erstellt haben, können Sie etwas experimentieren. Klicken Sie auf der Registerkarte **Ausführen** des Menübands auf **Entwurf**, um das Diagramm weiter ändern zu können.
 
 ### <a name="make-the-chart-bigger"></a>Vergrößern des Diagramms
@@ -202,14 +202,13 @@ ms.locfileid: "78176894"
 
 3.  Geben `#PERCENT{P0}` Sie für die Option Bezeichnungs **Daten** ein.
 
-     Mit `{P0}` erhalten Sie den Prozentsatz ohne Dezimalstellen. Falls Sie nur `#PERCENT` eingeben, erhalten Ihre Zahlen zwei Dezimalstellen. 
-  `#PERCENT` ist ein Schlüsselwort, das eine Berechnung oder eine Funktion für Sie ausführt. Dies ist nur ein Beispiel unter vielen.
+     Mit `{P0}` erhalten Sie den Prozentsatz ohne Dezimalstellen. Falls Sie nur `#PERCENT` eingeben, erhalten Ihre Zahlen zwei Dezimalstellen. `#PERCENT` ist ein Schlüsselwort, das eine Berechnung oder eine Funktion für Sie ausführt. Dies ist nur ein Beispiel unter vielen.
 
  Weitere Informationen zum Anpassen von Diagrammbezeichnungen und -legenden finden Sie unter [Anzeigen von Prozentwerten in einem Kreisdiagramm &#40;Berichts-Generator und SSRS&#41;](../report-design/display-percentage-values-on-a-pie-chart-report-builder-and-ssrs.md) sowie unter [Ändern des Texts eines Legendenelements &#40;Berichts-Generator und SSRS&#41;](../report-design/chart-legend-change-item-text-report-builder.md).
 
- ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [Zurück zum Anfang](#TwoWays)
+ ![Pfeilsymbol mit dem Link "zurück zum Anfang](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") " [zurück zum Anfang](#TwoWays)
 
-##  <a name="WhatsNext"></a>Was kommt als nächstes?
+##  <a name="whats-next"></a><a name="WhatsNext"></a>Was kommt als nächstes?
  Nachdem Sie nun Ihren ersten Bericht im Berichts-Generator erstellt haben, können Sie die anderen Lernprogramme ausführen und die ersten Berichte mit Ihren eigenen Daten erstellen. Um Berichts-Generator auszuführen, benötigen Sie die Berechtigung für den Zugriff auf Ihre Datenquellen, z. b. Datenbanken, mit einer *Verbindungs Zeichenfolge*, die Sie tatsächlich mit der Datenquelle verbindet. Der Systemadministrator hat diese Informationen und kann Ihnen bei der Einrichtung helfen.
 
  Zum Absolvieren der anderen Lernprogramme benötigen Sie den Namen einer Instanz von [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] sowie Anmeldeinformationen für den schreibgeschützten Zugriff auf eine beliebige Datenbank. Auch dabei können Sie sich an den Systemadministrator wenden.
@@ -218,7 +217,7 @@ ms.locfileid: "78176894"
 
  Außerdem sollten Sie sich zunächst mit einigen Grundlagen und Begriffen vertraut machen. Weitere Informationen finden Sie unter [Konzepte der Berichterstellung &#40;Berichts-Generator und SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md). Außerdem sollten Sie das Erstellen Ihres ersten Berichts sorgfältig planen. Der Aufwand lohnt sich. Weitere Informationen finden Sie unter [Planning a Report &#40;Berichts-Generator&#41;](../report-design/planning-a-report-report-builder.md).
 
- ![Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") [Zurück zum Anfang](#TwoWays)
+ ![Pfeilsymbol mit dem Link "zurück zum Anfang](../../2014-toc/media/uparrow16x16.gif "Pfeilsymbol, das mit dem Link „Zurück zum Anfang“ verwendet wird") " [zurück zum Anfang](#TwoWays)
 
 ## <a name="see-also"></a>Weitere Informationen
  Lernprogramme [&#40;Berichts-Generator&#41;](../report-builder-tutorials.md) [Berichts-Generator in SQL Server 2014](report-builder-in-sql-server-2016.md)

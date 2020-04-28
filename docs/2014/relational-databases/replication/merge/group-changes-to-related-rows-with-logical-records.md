@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 423cbb00f8c28cc1abca309c5a2d518da4511f1a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175843"
 ---
 # <a name="group-changes-to-related-rows-with-logical-records"></a>Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen
@@ -33,7 +33,7 @@ ms.locfileid: "78175843"
 
  Nehmen Sie die folgenden drei verknüpften Tabellen als Beispiel:
 
- ![Logischer Datensatz für drei Tabellen, nur Spaltennamen](../media/logical-records-01.gif "Logischer Datensatz für drei Tabellen, nur Spaltennamen")
+ ![Logischer Datensatz für drei Tabellen, mit ausschließlich Spaltennamen](../media/logical-records-01.gif "Logischer Datensatz für drei Tabellen, mit ausschließlich Spaltennamen")
 
  Die **Customers** -Tabelle ist die übergeordnete Tabelle in dieser Beziehung und enthält eine **CustID**-Primärschlüsselspalte. Die **Orders** -Tabelle enthält eine **OrderID**-Primärschlüsselspalte sowie eine FOREIGN KEY-Einschränkung für die **CustID** -Spalte, die auf die **CustID** -Spalte in der **Customers** -Tabelle verweist. Dementsprechend enthält die **OrderItems** -Tabelle eine **OrderItemID**-Primärschlüsselspalte sowie eine FOREIGN KEY-Einschränkung für die **OrderID** -Spalte, die auf die **OrderID** -Spalte in der **Orders** -Tabelle verweist.
 
@@ -141,6 +141,6 @@ ms.locfileid: "78175843"
  Werden logische Datensätzen verwendet, muss der Merge-Agent die Änderungen für jeden vollständigen logischen Datensatz auf einmal verarbeiten. Das wirkt sich auf die Dauer aus, die der Merge-Agent zum Replizieren der Zeilen benötigt. Darüber hinaus können sich die Sperranforderungen erhöhen, da der Agent eine separate Transaktion für jeden logischen Datensatz öffnet.
 
 ## <a name="see-also"></a>Weitere Informationen
- [Article Options for Merge Replication](article-options-for-merge-replication.md)
+ [Artikeloptionen für die Mergereplikation](article-options-for-merge-replication.md)
 
 

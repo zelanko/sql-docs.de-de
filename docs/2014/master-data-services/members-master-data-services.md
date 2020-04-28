@@ -18,10 +18,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 76b452e5ee362aeb2e66d8949a12ed910489f990
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175999"
 ---
 # <a name="members-master-data-services"></a>Elemente (Master Data Services)
@@ -61,11 +61,11 @@ ms.locfileid: "78175999"
 
 |Taskbeschreibung|Thema|
 |----------------------|-----------|
-|Erstellen Sie ein Blattelement.|[Blatt Element &#40;Master Data Services erstellen&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)|
-|Erstellen Sie ein neues konsolidiertes Element.|[Erstellen Sie ein konsolidiertes Element &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)|
+|Erstellen Sie ein Blattelement.|[Erstellen eines Blattelements &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-leaf-member-master-data-services.md)|
+|Erstellen Sie ein neues konsolidiertes Element.|[Erstellen eines konsolidierten Elements &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-consolidated-member-master-data-services.md)|
 |Löschen Sie ein vorhandenes Element oder eine Auflistung.|[Löschen eines Elements oder einer Sammlung &#40;Master Data Services&#41;](../../2014/master-data-services/delete-a-member-or-collection-master-data-services.md)|
-|Reaktivieren Sie ein gelöschtes Element oder eine Auflistung.|[Erneutes Aktivieren eines Elements oder einer Sammlung &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)|
-|Aktualisieren Sie die Attributwerte eines Elements.|[Ändern Sie den Attributtyp &#40;MDS-Add-in für Excel&#41;](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|
+|Reaktivieren Sie ein gelöschtes Element oder eine Auflistung.|[Reaktivieren eines Elements oder einer Sammlung &#40;Master Data Services&#41;](../../2014/master-data-services/reactivate-a-member-or-collection-master-data-services.md)|
+|Aktualisieren Sie die Attributwerte eines Elements.|[Ändern des Attributtyps &#40;MDS-Add-In für Excel&#41;](microsoft-excel-add-in/change-the-attribute-type-mds-add-in-for-excel.md)|
 |Verschieben Sie Elemente innerhalb einer Hierarchie.|[Verschieben von Elementen innerhalb einer Hierarchie &#40;Master Data Services&#41;](../../2014/master-data-services/move-members-within-a-hierarchy-master-data-services.md)|
 
 ## <a name="related-content"></a>Verwandte Inhalte
@@ -80,10 +80,10 @@ ms.locfileid: "78175999"
 
 -   [Sammlungen &#40;Master Data Services&#41;](../../2014/master-data-services/collections-master-data-services.md)
 
--   [Blatt Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)
+-   [Blattberechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-permissions-master-data-services.md)
 
 -   [Konsolidierte Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-permissions-master-data-services.md)
 
--   [Filter Operatoren &#40;Master Data Services&#41;](../../2014/master-data-services/filter-operators-master-data-services.md)
+-   [Filteroperatoren &#40;Master Data Services&#41;](../../2014/master-data-services/filter-operators-master-data-services.md)
 
 

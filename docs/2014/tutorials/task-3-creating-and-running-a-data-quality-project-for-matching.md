@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c6953214bd5e5353643cb16b75ed51ac18783256
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78171769"
 ---
-# <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Aufgabe 3: Erstellen und Ausführen eines Data Quality-Projekts für den Abgleich
+# <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Aufgabe 3: Erstellen und Ausführen eines Data Quality-Projekts für Abgleiche
   In dieser Aufgabe erstellen Sie ein Data Quality-Projekt für die Abgleichsaktivität, und führen den Abgleichsprozess für bereinigte Lieferantendaten durch, um Duplikate in den Daten zu entfernen.
 
 1.  Klicken Sie auf der Hauptseite des **DQS-Clients**auf **Neues Data Quality-Projekt**.
@@ -47,6 +47,6 @@ ms.locfileid: "78171769"
 12. Klicken Sie auf **weiter** , um zur Seite **exportieren** zu wechseln.
 
 ## <a name="next-step"></a>Nächster Schritt
- [Aufgabe 4: Exportieren der Ergebnisse der Abgleichsaktivität in eine Excel-Datei](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)
+ [Aufgabe 4: Exportieren der Ergebnisse der Abgleichaktivität in eine Excel-Datei](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)
 
 

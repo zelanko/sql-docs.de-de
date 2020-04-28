@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: d567ccb528d881057829eb4b1071410e37e944fe
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78171735"
 ---
-# <a name="task-3-optional-reviewing-the-subscription-views"></a>Aufgabe 3 (optional): Überprüfung der Abonnementsichten
+# <a name="task-3-optional-reviewing-the-subscription-views"></a>Aufgabe 3 (optional): Überprüfung der Abonnementsichten
   In dieser Aufgabe bestätigen Sie, dass die SQL-Ansichten mit SQL Server Management Studio erstellt werden.
 
 1.  Starten Sie **SQL Server Management Studio**. Klicken Sie auf die Schaltfläche **Start** , klicken Sie auf **Alle Programme**, klicken Sie auf **Microsoft SQL Server 2012**und dann auf **SQL Server Management Studio**.
@@ -31,4 +31,4 @@ ms.locfileid: "78171735"
      ![SQL Server Management Studio – "mdm.Suppliers"-Ansicht](../../2014/tutorials/media/et-reviewingthesubscriptionviews.jpg "SQL Server Management Studio – "mdm.Suppliers"-Ansicht")
 
 ## <a name="next-step"></a>Nächster Schritt
- [Aufgabe 4: Erstellen eines SSIS-Projekts mit SQL Server Data Tools](../../2014/tutorials/task-4-creating-an-ssis-project-using-sql-server-data-tools.md)
+ [Aufgabe 4: Erstellen eines SSIS-Projekts mit SQL Server Data Tools](../../2014/tutorials/task-4-creating-an-ssis-project-using-sql-server-data-tools.md)

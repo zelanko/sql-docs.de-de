@@ -11,10 +11,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: e14aafe004ffd94f0711161fac73ce59c57cd810
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176720"
 ---
 # <a name="circularstring"></a>CircularString
@@ -37,8 +37,7 @@ DECLARE @g2 geometry = 'CIRCULARSTRING(1 1, 2 0, -1 1)';
 DECLARE @g3 geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 2 0, 1 1)';
 ```
 
- 
-  `@g3` zeigt, dass eine `CircularString`-Instanz akzeptiert werden kann, jedoch nicht gültig ist. Die folgende Deklaration einer CircularString-Instanz wird nicht akzeptiert. Diese Deklaration löst eine `System.FormatException`aus.
+ `@g3` zeigt, dass eine `CircularString`-Instanz akzeptiert werden kann, jedoch nicht gültig ist. Die folgende Deklaration einer CircularString-Instanz wird nicht akzeptiert. Diese Deklaration löst eine `System.FormatException`aus.
 
 ```sql
 DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';
@@ -55,8 +54,7 @@ DECLARE @g geometry = 'CIRCULARSTRING(1 1, 2 0, 2 0, 1 1)';
 
 -   Sie darf sich über ein Intervalls nicht selbst überlappen.
 
--   
-  `CircularString`-Instanzen können zwar Liniensegmente enthalten, diese Liniensegmente müssen jedoch durch drei kollineare Punkte definiert werden.
+-   `CircularString`-Instanzen können zwar Liniensegmente enthalten, diese Liniensegmente müssen jedoch durch drei kollineare Punkte definiert werden.
 
  Im folgenden Beispiel werden gültige `CircularString`-Instanzen veranschaulicht.
 
@@ -137,7 +135,7 @@ Perimeter = 5.65685
 
  Beachten Sie, dass der Wert `CircularString` für das Beispiel nahe bei 2&#x03c0; (2 * PI) liegt. Dies ist der tatsächliche Umfang des Kreises.
 
-### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>D: Deklarieren und Instanziieren einer Geometry-Instanz mit einem CircularString in derselben Anweisung
+### <a name="d-declaring-and-instantiating-a-geometry-instance-with-a-circularstring-in-the-same-statement"></a>D. Deklarieren und Instanziieren einer Geometry-Instanz mit einem CircularString in derselben Anweisung
  In diesem Codeausschnitt wird veranschaulicht, wie eine `geometry`-Instanz mit einem `CircularString` in derselben Anweisung deklariert und instanziiert wird:
 
 ```sql
@@ -160,6 +158,6 @@ SET @g = geometry::STGeomFromText('CIRCULARSTRING(0 0, 1 2, 2 4)', 0);
 ```
 
 ## <a name="see-also"></a>Weitere Informationen
- [Übersicht über räumliche Datentypen](spatial-data-types-overview.md) [: compoundcurve](compoundcurve.md) [MakeValid &#40;geography-Datentyp&#41;](/sql/t-sql/spatial-geography/makevalid-geography-data-type) [MakeValid &#40;Geometry](/sql/t-sql/spatial-geometry/makevalid-geometry-data-type) -Datentyp&#41;[STIsValid &#40;Geometry](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type) -Datentyp&#41;[STIsValid &#40;geography](/sql/t-sql/spatial-geography/stisvalid-geography-data-type) -Datentyp&#41;[STLength &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type) [STStartPoint &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type) [STEndpoint &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type) [STPointN &#40;geometry-Datentyp](/sql/t-sql/spatial-geometry/stpointn-geometry-data-type)&#41;[STNumPoints &#40;geometry-Datentyp](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type)&#41;[STIsRing &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stisring-geometry-data-type) [STIsClosed &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type) [STPointOnSurface &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type) [LineString](linestring.md)
+ [Übersicht über räumliche Datentypen](spatial-data-types-overview.md) [: compoundcurve](compoundcurve.md) [MakeValid &#40;geography-Datentyp&#41;](/sql/t-sql/spatial-geography/makevalid-geography-data-type) [MakeValid &#40;Geometry](/sql/t-sql/spatial-geometry/makevalid-geometry-data-type) -Datentyp&#41;[STIsValid &#40;Geometry](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type) -Datentyp&#41;[STIsValid &#40;geography](/sql/t-sql/spatial-geography/stisvalid-geography-data-type) -Datentyp&#41;[STLength &#40;Geometry](/sql/t-sql/spatial-geometry/stlength-geometry-data-type) -Datentyp&#41;[STStartPoint &#40;Geometry](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type) -Datentyp&#41;[STEndpoint &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type) [STPointN &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stpointn-geometry-data-type) [STNumPoints &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type) [STIsRing &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stisring-geometry-data-type) [STIsClosed &#40;Geometry](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type) -Datentyp&#41;[STPointOnSurface &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type) [LineString](linestring.md)
 
 

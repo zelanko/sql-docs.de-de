@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 85e2c4a1fda84a8575509a863de6e5f2e6fd5dce
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176049"
 ---
 # <a name="explicit-hierarchies-master-data-services"></a>Explizite Hierarchien (Master Data Services)
@@ -83,7 +83,7 @@ ms.locfileid: "78176049"
 |----------------------|-----------|
 |Aktivieren Sie eine Entität für explizite Hierarchien und Auflistungen.|[Aktivieren einer Entität für explizite Hierarchien und Auflistungen &#40;Master Data Services&#41;](enable-an-entity-for-explicit-hierarchies-and-collections-master-data-services.md)|
 |Erstellen Sie eine neue explizite Hierarchie.|[Erstellen einer expliziten Hierarchie &#40;Master Data Services&#41;](../../2014/master-data-services/create-an-explicit-hierarchy-master-data-services.md)|
-|Ändern Sie den Namen einer vorhandenen expliziten Hierarchie.|[Ändern Sie den Namen einer expliziten Hierarchie &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|
+|Ändern Sie den Namen einer vorhandenen expliziten Hierarchie.|[Ändern des Namens einer expliziten Hierarchie &#40;Master Data Services&#41;](../../2014/master-data-services/change-an-explicit-hierarchy-name-master-data-services.md)|
 |Löschen Sie eine vorhandene explizite Hierarchie.|[Löschen einer expliziten Hierarchie &#40;Master Data Services&#41;](../../2014/master-data-services/delete-an-explicit-hierarchy-master-data-services.md)|
 |||
 

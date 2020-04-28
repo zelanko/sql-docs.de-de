@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ec30df18fd50118d8698490f24f6ee65621d3b12
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176250"
 ---
 # <a name="creating-an-asynchronous-transformation-with-the-script-component"></a>Erstellen einer asynchronen Transformation mit der Skriptkomponente
@@ -77,14 +77,14 @@ ms.locfileid: "78176250"
  Weitere Informationen über die Seite **Skript** im **Transformations-Editor für Skripterstellung** finden Sie unter [Script Transformation Editor (Script Page) (Transformations-Editor für Skripterstellung (Seite „Skript“))](../script-transformation-editor-script-page.md).
 
 ## <a name="scripting-an-asynchronous-transformation-component-in-code-design-mode"></a>Skripterstellung für eine asynchrone Transformationskomponente im Codeentwurfsmodus
- Nachdem Sie alle Metadaten für Ihre Komponente konfiguriert haben, können Sie das benutzerdefinierte Skript schreiben. Klicken Sie auf der Seite **Skript** im **Transformations-Editor für Skripterstellung** auf **Skript bearbeiten**, um die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications-IDE (VSTA) zu öffnen und Ihr benutzerdefiniertes Skript hinzuzufügen. Welche Skriptsprache Sie verwenden, hängt davon ab, ob Sie auf der Seite **Skript**[!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic oder [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# als Skriptsprache für die **ScriptLanguage**-Eigenschaft festgelegt haben.
+ Nachdem Sie alle Metadaten für Ihre Komponente konfiguriert haben, können Sie das benutzerdefinierte Skript schreiben. Klicken Sie auf der Seite **Skript** im **Transformations-Editor für Skripterstellung** auf **Skript bearbeiten**, um die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] Tools for Applications-IDE (VSTA) zu öffnen und Ihr benutzerdefiniertes Skript hinzuzufügen. Welche Skriptsprache Sie verwenden, hängt davon ab, ob Sie auf der Seite [!INCLUDE[msCoName](../../includes/msconame-md.md)]Skript[!INCLUDE[msCoName](../../includes/msconame-md.md)]**Visual Basic oder** Visual C# als Skriptsprache für die **ScriptLanguage**-Eigenschaft festgelegt haben.
 
  Wichtige Informationen, die alle Arten von Komponenten betreffen, die mithilfe der Skriptkomponente erstellt wurden, finden Sie unter [Coding and Debugging the Script Component (Codieren und Debuggen der Skriptkomponente)](../extending-packages-scripting/data-flow-script-component/coding-and-debugging-the-script-component.md).
 
 ### <a name="understanding-the-auto-generated-code"></a>Grundlegendes zum automatisch generierten Code
  Wenn Sie nach der Erstellung und Konfiguration einer Transformations Komponente die VSTA-IDE öffnen, wird `ScriptMain` die bearbeitbare Klasse im Code-Editor mit stufstufstubweise für die Methoden ProcessInputRow und die Methode kreatenewoutputrows angezeigt. Sie schreiben Ihren benutzerdefinierten Code in der ScriptMain-Klasse. „ProcessInputRow“ ist die wichtigste Methode in einer Transformationskomponente. Die `CreateNewOutputRows`-Methode wird eher in einer Quellkomponente verwendet, die insofern wie eine asynchrone Transformation funktioniert, dass beide Komponenten eigene Ausgabezeilen erstellen müssen.
 
- Wenn Sie das Fenster VSTA **** `BufferWrapper` -Projekt-Explorer öffnen, können Sie sehen, dass die Skript Komponente auch schreibgeschützte- `ComponentWrapper` und-Projekt Elemente generiert hat. Die ScriptMain-Klasse erbt von der UserComponent-Klasse `ComponentWrapper` im-Projekt Element.
+ Wenn Sie das Fenster VSTA **Project Explorer** `BufferWrapper` -Projekt-Explorer öffnen, können Sie sehen, dass die Skript Komponente auch schreibgeschützte- `ComponentWrapper` und-Projekt Elemente generiert hat. Die ScriptMain-Klasse erbt von der UserComponent-Klasse `ComponentWrapper` im-Projekt Element.
 
  Zur Laufzeit ruft die Datenfluss-Engine die PrimeOutput-Methode in der `UserComponent` -Klasse auf, die die <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost.PrimeOutput%2A> -Methode der <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> übergeordneten-Klasse überschreibt. Die PrimeOutput-Methode ruft wiederum die CreateNewOutputRows-Methode auf.
 

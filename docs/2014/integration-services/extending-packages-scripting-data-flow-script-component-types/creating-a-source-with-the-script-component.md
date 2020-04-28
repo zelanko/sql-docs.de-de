@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e297bad605e839dc37f757906df2367926eb522e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176270"
 ---
 # <a name="creating-a-source-with-the-script-component"></a>Erstellen einer Quelle mit der Skriptkomponente
@@ -85,8 +85,7 @@ ms.locfileid: "78176270"
 ### <a name="understanding-the-auto-generated-code"></a>Grundlegendes zum automatisch generierten Code
  Wenn Sie nach der Erstellung und Konfiguration einer Quellkomponente die VSTA IDE öffnen, wird die bearbeitbare `ScriptMain`-Klasse im Code-Editor angezeigt. Sie schreiben den benutzerdefinierten Code in der `ScriptMain`-Klasse.
 
- Die `ScriptMain`-Klasse schließt einen Stub für die `CreateNewOutputRows`-Methode ein. 
-  `CreateNewOutputRows` ist die wichtigste Methode in einer Quellkomponente.
+ Die `ScriptMain`-Klasse schließt einen Stub für die `CreateNewOutputRows`-Methode ein. `CreateNewOutputRows` ist die wichtigste Methode in einer Quellkomponente.
 
  Wenn Sie das Fenster **Projekt Explorer** in VSTA öffnen, können Sie sehen, dass die Skript Komponente auch schreibgeschützte- `BufferWrapper` und `ComponentWrapper` -Projekt Elemente generiert hat. Die `ScriptMain`-Klasse erbt von der `UserComponent`-Klasse im `ComponentWrapper`-Projektelement.
 

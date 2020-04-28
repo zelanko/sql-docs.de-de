@@ -23,10 +23,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9c5e1eb0a35081cd9392178412db990308efcd0b
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176730"
 ---
 # <a name="replication-publishing-model-overview"></a>Das Replikationsveröffentlichungsmodell (Übersicht)
@@ -44,7 +44,7 @@ ms.locfileid: "78176730"
 
  Die *Replikationstopologie* definiert die Beziehung zwischen Servern und die Kopien von Daten sowie die Logik, die den Datenfluss zwischen den Servern festlegt. Für das Kopieren und Verschieben von Daten zwischen dem Verleger und den Abonnenten sind eine Reihe von Replikationsprozessen (so genannte *Agents*) verantwortlich. Die folgende Abbildung gibt eine Übersicht über die Komponenten und Prozesse, die bei der Replikation beteiligt sind.
 
- ![Komponenten und Datenfluss für die Replikation](../media/replintro1.gif "Komponenten und Datenfluss für Replikation")
+ ![Komponenten und Datenfluss für die Replikation](../media/replintro1.gif "Komponenten und Datenfluss für die Replikation")
 
 ## <a name="publisher"></a>Herausgeber
  Der Verleger ist eine Datenbankinstanz, die anderen Speicherorten per Replikation Daten zur Verfügung stellt. Der Verleger kann eine oder mehrere Veröffentlichungen besitzen, die jeweils einen logisch zusammengehörigen Satz von Objekten und Daten enthalten, der repliziert werden kann.

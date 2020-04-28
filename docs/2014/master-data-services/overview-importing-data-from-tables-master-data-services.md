@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3d1ad35a40e4218bfef44daeec01ee03fc0c7c78
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175987"
 ---
 # <a name="data-import-master-data-services"></a>Datenimport (Master Data Services)
@@ -69,9 +69,9 @@ ms.locfileid: "78175987"
 ## <a name="staging-tables-and-stored-procedures"></a>Stagingtabellen und gespeicherte Prozeduren
  Die [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Datenbank enthält die folgenden Typen von Stagingtabellen, die Sie mit Ihren Daten auffüllen können.
 
--   [&#40;Master Data Services der Stagingtabelle für Blatt Elemente&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)
+-   [Stagingtabelle für Blattelemente &#40;Master Data Services&#41;](../../2014/master-data-services/leaf-member-staging-table-master-data-services.md)
 
--   [Konsolidierte Element-Stagingtabelle &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)
+-   [Konsolidierte Elementstagingtabelle &#40;Master Data Services&#41;](../../2014/master-data-services/consolidated-member-staging-table-master-data-services.md)
 
 -   [Stagingtabelle für Beziehungen &#40;Master Data Services&#41;](../../2014/master-data-services/relationship-staging-table-master-data-services.md)
 
@@ -81,8 +81,7 @@ ms.locfileid: "78175987"
 
  Der Name der Tabelle wird beim Erstellen einer Entität angegeben und kann nicht geändert werden. Wenn der Stagingtabellenname eine _1 oder eine andere Zahl enthält, war eine andere Tabelle dieses Namens bereits vorhanden, als die Entität erstellt wurde.
 
- 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] beinhaltet die folgenden Typen von gespeicherten Stagingprozeduren.
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] beinhaltet die folgenden Typen von gespeicherten Stagingprozeduren.
 
 -   stg.udp_\<name>_Leaf
 
@@ -103,8 +102,8 @@ ms.locfileid: "78175987"
 
 ## <a name="related-content"></a>Verwandte Inhalte
 
--   [Master Data Services der Überprüfung &#40;&#41;](../../2014/master-data-services/validation-master-data-services.md)
+-   [Überprüfung &#40;Master Data Services&#41;](../../2014/master-data-services/validation-master-data-services.md)
 
--   [Master Data Services von Geschäftsregeln &#40;&#41;](../../2014/master-data-services/business-rules-master-data-services.md)
+-   [Geschäftsregeln &#40;Master Data Services&#41;](../../2014/master-data-services/business-rules-master-data-services.md)
 
 

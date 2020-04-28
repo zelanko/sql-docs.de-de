@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ed13821f9bd37525da962fa85dfe5683cb37329f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177042"
 ---
 # <a name="use-powershell-to-change-and-list-reporting-services-subscription-owners-and-run-a-subscription"></a>Verwenden von PowerShell, um Reporting Services-Abonnenten zu ändern und aufzulisten sowie ein Abonnement auszuführen
@@ -24,38 +24,38 @@ ms.locfileid: "78177042"
 
 ||
 |-|
-|**[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]Einheitlicher Modus &#124; [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint-Modus|
+|**[!INCLUDE[applies](../../includes/applies-md.md)]** [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] im einheitlichen Modus &#124; [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] im SharePoint-Modus|
 
  **In diesem Thema:**
 
--   [Verwenden der Skripts](#bkmk_how_to)
+-   [Gewusst wie: Verwenden der Skripts](#bkmk_how_to)
 
--   [Skript: Auflisten des Besitzes aller Abonnements](#bkmk_list_ownership_all)
+-   [Skript: Auflisten der Besitzer aller Abonnements](#bkmk_list_ownership_all)
 
--   [Skript: Auflisten aller Abonnements, die sich im Besitz eines bestimmten Benutzers befinden](#bkmk_list_all_one_user)
+-   [Skript: Auflisten aller Abonnements im Besitz eines spezifischen Benutzers](#bkmk_list_all_one_user)
 
--   [Skript: Ändern des Besitzes für alle Abonnements, die ein bestimmter Benutzer besitzt](#bkmk_change_all)
+-   [Skript: Ändern des Besitzes aller Abonnements eines spezifischen Benutzers](#bkmk_change_all)
 
--   [Skript: Auflisten aller Abonnements, die mit einem bestimmten Bericht verknüpft sind](#bkmk_list_for_1_report)
+-   [Skript: Auflisten aller Abonnements im Zusammenhang mit einem bestimmten Bericht](#bkmk_list_for_1_report)
 
 -   [Skript: Ändern des Besitzes eines bestimmten Abonnements](#bkmk_change_all_1_subscription)
 
--   [Skript: ausführen (auslösen) eines einzelnen Abonnements](#bkmk_run_1_subscription)
+-   [Skript: Ausführen (Auslösen) eines Einzelabonnements](#bkmk_run_1_subscription)
 
-##  <a name="bkmk_how_to"></a>Verwenden der Skripts
+##  <a name="how-to-use-the-scripts"></a><a name="bkmk_how_to"></a> Gewusst wie: Verwenden der Skripts
 
 ### <a name="permissions"></a>Berechtigungen
  In diesem Abschnitt werden die erforderlichen Berechtigungsstufen für die Verwendung der Methoden für den einheitlichen und den SharePoint-Modus [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]zusammengefasst. Die Skripts in diesem Thema verwenden die folgenden [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Methoden:
 
--   [ReportingService2010. listabonnements-Methode](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)
+-   [ReportingService2010.ListSubscriptions Method](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listsubscriptions.aspx)
 
--   [ReportingService2010. changeabonneptionowner-Methode](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)
+-   [ReportingService2010.ChangeSubscriptionOwner Method](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.changesubscriptionowner.aspx)
 
--   [ReportingService2010. ListChildren](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)
+-   [ReportingService2010.ListChildren](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.listchildren.aspx)
 
 -   Die Methode [ReportingService2010.FireEvent](https://technet.microsoft.com/library/reportservice2010.reportingservice2010.fireevent.aspx) wird nur im letzten Skript verwendet, um zu veranlassen, dass ein bestimmtes Abonnement ausgeführt wird. Wenn Sie nicht vorhaben, dieses Skript zu verwenden, können Sie die Berechtigungsanforderungen für die FireEvent-Methode ignorieren.
 
- **Einheitlicher Modus:**
+ **Einheitlicher Modus :**
 
 -   Auflisten von Abonnements: (Hyperlinkhttps://technet.microsoft.com/library/microsoft.reportingservices.interfaces.reportoperation.aspx"", lesen Sie den Bericht, und der Benutzer ist der Abonnement Besitzer) oder "Read anyabonnement"
 
@@ -78,7 +78,7 @@ ms.locfileid: "78177042"
  Weitere Informationen finden Sie unter [Vergleichen der Rollen und Aufgaben in Reporting Services mit SharePoint-Gruppen und -Berechtigungen](../reporting-services-roles-tasks-vs-sharepoint-groups-permissions.md).
 
 ### <a name="script-usage"></a>Verwenden von Skripts
- **Erstellen von Skriptdateien (. ps1)**
+ **Erstellen von Skriptdateien (.ps1)**
 
 1.  Erstellen Sie einen Ordner mit dem Namen **c:\scripts**. Wenn Sie einen anderen Ordner wählen, passen Sie den Ordnernamen in den Befehlszeilensyntax-Anweisungen aus dem Beispiel an.
 
@@ -98,7 +98,7 @@ ms.locfileid: "78177042"
 
 -   [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)]
 
-##  <a name="bkmk_list_ownership_all"></a>Skript: Auflisten des Besitzes aller Abonnements
+##  <a name="script-list-the-ownership-of-all-subscriptions"></a><a name="bkmk_list_ownership_all"></a> Skript: Auflisten der Besitzer aller Abonnements
  Dieses Skript listet alle Abonnements auf einer Site auf. Sie können dieses Skript verwenden, um Ihre Verbindung zu testen oder um den Berichtspfad und die Abonnement-ID für die Verwendung in den anderen Skripts zu verifizieren. Dieses Skript ist außerdem hilfreich, wenn Sie einfach prüfen möchten, welche Abonnements vorhanden sind und wer diese besitzt.
 
 ### <a name="native-mode-syntax"></a>Syntax im einheitlichen Modus
@@ -135,7 +135,7 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 > [!TIP]
 >  Verwenden Sie das SharePoint-Cmdlet **Get-SPSite**, um Website-URLs im SharePoint-Modus zu verifizieren. Weitere Informationen finden Sie unter [Get-SPSite](https://technet.microsoft.com/library/ff607950\(v=office.15\).aspx).
 
-##  <a name="bkmk_list_all_one_user"></a>Skript: Auflisten aller Abonnements, die sich im Besitz eines bestimmten Benutzers befinden
+##  <a name="script-list-all-subscriptions-owned-by-a-specific-user"></a><a name="bkmk_list_all_one_user"></a> Skript: Auflisten aller Abonnements im Besitz eines spezifischen Benutzers
  Dieses Skript listet alle Abonnements auf, die ein bestimmter Benutzer besitzt. Sie können dieses Skript verwenden, um Ihre Verbindung zu testen oder um den Berichtspfad und die Abonnement-ID für die Verwendung in den anderen Skripts zu verifizieren. Dieses Skript ist hilfreich, wenn jemand Ihr Unternehmen verlässt und Sie prüfen möchten, welche Abonnements diese Person besessen hat, sodass Sie den Besitzer ändern oder das Abonnement löschen können.
 
 ### <a name="native-mode-syntax"></a>Syntax im einheitlichen Modus
@@ -172,7 +172,7 @@ Write-Host "----- $currentOwner's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.owner -eq $currentOwner}
 ```
 
-##  <a name="bkmk_change_all"></a>Skript: Ändern des Besitzes für alle Abonnements, die ein bestimmter Benutzer besitzt
+##  <a name="script-change-ownership-for-all-subscriptions-owned-by-a-specific-user"></a><a name="bkmk_change_all"></a> Skript: Ändern des Besitzes aller Abonnements eines spezifischen Benutzers
  Dieses Skript ändert den Besitz für alle Abonnements, die ein bestimmter Benutzer besitzt, zum neuen Besitzerparameter.
 
 ### <a name="native-mode-syntax"></a>Syntax im einheitlichen Modus
@@ -242,7 +242,7 @@ ForEach ($item in $items)
 }
 ```
 
-##  <a name="bkmk_list_for_1_report"></a>Skript: Auflisten aller Abonnements, die mit einem bestimmten Bericht verknüpft sind
+##  <a name="script-list-all-subscriptions-associated-with-a-specific-report"></a><a name="bkmk_list_for_1_report"></a> Skript: Auflisten aller Abonnements im Zusammenhang mit einem bestimmten Bericht
  Dieses Skript listet alle Abonnements auf, die mit einem bestimmten Bericht verknüpft sind. Die Berichtspfadsyntax unterscheidet sich vom SharePoint-Modus, der eine vollständige URL erfordert. In den Syntaxbeispielen wird der Berichtsname „title only“ verwendet, der ein Leerzeichen enthält und daher einfache Anführungszeichen vor und nach dem Berichtsnamen erfordert.
 
 ### <a name="native-mode-syntax"></a>Syntax im einheitlichen Modus
@@ -280,7 +280,7 @@ Write-Host "----- $reportpath 's Subscriptions: "
 $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastexecuted,Status | where {$_.path -eq $reportpath}
 ```
 
-##  <a name="bkmk_change_all_1_subscription"></a>Skript: Ändern des Besitzes eines bestimmten Abonnements
+##  <a name="script-change-ownership-of-a-specific-subscription"></a><a name="bkmk_change_all_1_subscription"></a> Skript: Ändern des Besitzes eines bestimmten Abonnements
  Dieses Skript ändert den Besitz eines bestimmten Abonnements. Dieses Abonnement wird durch die SubscriptionID (Abonnement-ID) identifiziert, die Sie in das Skript übernehmen. Sie können eines der Skripts zur Auflistung von Abonnements verwenden, um die korrekte SubscriptionID zu bestimmen.
 
 ### <a name="native-mode-syntax"></a>Syntax im einheitlichen Modus
@@ -326,7 +326,7 @@ Write-Host "----- $subscriptionid's Subscription properties: "
 $subscription | select Path, report, Description, SubscriptionID, Owner, Status
 ```
 
-##  <a name="bkmk_run_1_subscription"></a>Skript: ausführen (auslösen) eines einzelnen Abonnements
+##  <a name="script-run-fire-a-single-subscription"></a><a name="bkmk_run_1_subscription"></a> Skript: Ausführen (Auslösen) eines Einzelabonnements
  Dieses Skript führt ein bestimmtes Abonnement mit der FireEvent-Methode aus. Das Skript führt das Abonnement sofort aus, unabhängig davon, welcher Zeitplan für das Abonnement konfiguriert ist. Der EventType (Ereignistyp) wird mit einem bekannten Satz an Ereignissen abgeglichen, die in der Konfigurationsdatei des Berichtsservers **rsreportserver.config** definiert sind. Das Skript verwendet den folgenden Ereignistyp für standardmäßige Abonnements:
 
  `<Event>`

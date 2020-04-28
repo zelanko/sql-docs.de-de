@@ -11,20 +11,20 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c4024ae380a1ab6513f8bc055680d8848e97fbf6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173305"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Verwalten einer Reporting Services-SharePoint-Dienstanwendung
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Dienst Anwendungen werden über die SharePoint-zentral Administration verwaltet. Die Seiten für die Verwaltung und Eigenschaften ermöglichen es Ihnen, die Konfiguration der Dienstanwendung sowie allgemeine Verwaltungsaufgaben zu aktualisieren.
+  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienstanwendungen werden über die SharePoint-Zentraladministration verwaltet. Die Seiten für die Verwaltung und Eigenschaften ermöglichen es Ihnen, die Konfiguration der Dienstanwendung sowie allgemeine Verwaltungsaufgaben zu aktualisieren.
 
  Dieses Thema enthält folgende Informationen:
 
--   [So öffnen Sie Verwaltungs Seiten für Dienst Anwendungen](#bkmk_openpages)
+-   [So öffnen Sie Verwaltungsseiten für Dienstanwendungen](#bkmk_openpages)
 
--   [Seite "System Einstellungen"](#bkmk_systemsettings)
+-   [Seite "Systemeinstellungen"](#bkmk_systemsettings)
 
 -   [Verwalten von Aufträgen](#bkmk_managejobs)
 
@@ -45,7 +45,7 @@ ms.locfileid: "78173305"
 
  Weitere Informationen zu Dienstanwendungseigenschaften finden Sie unter [Step 3: Create a Reporting Services Service Application](../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md#bkmk_create_serrviceapplication).
 
-##  <a name="bkmk_openpages"></a>So öffnen Sie Verwaltungs Seiten für Dienst Anwendungen
+##  <a name="to-open-service-application-management-pages"></a><a name="bkmk_openpages"></a>So öffnen Sie Verwaltungs Seiten für Dienst Anwendungen
  Zum Öffnen der Verwaltungsseiten für eine [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Dienstanwendung gehen Sie wie folgt vor:
 
 1.  Klicken Sie in der Zentraladministration in der Gruppe **Anwendungsverwaltung**auf Dienstanwendungen verwalten.
@@ -54,49 +54,48 @@ ms.locfileid: "78173305"
 
 3.  Klicken Sie alternativ neben den Namen der Dienstanwendung oder auf die Spalte **Typ** für die Dienstanwendung. Dadurch wird die gesamte Zeile ausgewählt. Klicken Sie anschließend im SharePoint-Menüband auf **Verwalten** .
 
-##  <a name="bkmk_systemsettings"></a>Seite "System Einstellungen"
+##  <a name="system-settings-page"></a><a name="bkmk_systemsettings"></a>Seite "System Einstellungen"
  Die Seite für die Systemeinstellungen ermöglicht es Ihnen, das Verhalten und die Benutzerfreundlichkeit der Dienstanwendung einschließlich verschiedener Timeouts zu konfigurieren.
 
--   [Berichts Einstellungen](#bkmk_report_settings_section)
+-   [Berichtseinstellungen](#bkmk_report_settings_section)
 
 -   [Sitzungs Einstellungen](#bkmk_session_settings_section)
 
--   [System Einstellungen für die Protokollierung](#bkmk_logging_settings_section)
+-   [Systemeinstellungen für die Protokollierung](#bkmk_logging_settings_section)
 
 -   [Sicherheitseinstellungen](#bkmk_security_settings_section)
 
 -   [Client Einstellungen](#bkmk_client_settings_section)
 
-###  <a name="bkmk_report_settings_section"></a>Berichts Einstellungen
+###  <a name="report-settings"></a><a name="bkmk_report_settings_section"></a>Berichts Einstellungen
 
 |Einstellung|Kommentare|
 |-------------|--------------|
 |Timeout für externe Bilder|Der Standardwert ist 600 Sekunden.|
 |Momentaufnahmekomprimierung|Der Standardwert ist SQL.|
-|Systemberichtstimeout|Der Standardwert ist 1.800 Sekunden.<br /><br /> Geben Sie eine bestimmte Anzahl von Sekunden als Timeoutwert für die Berichtsverarbeitung auf dem Berichtsserver an. Dieser Wert gilt für die Berichtsverarbeitung auf einem Berichtsserver. Er hat keine Auswirkung auf die Datenverarbeitung auf dem Datenbankserver, der die Daten für den Bericht zur Verfügung stellt. Der Zeitgeber für die Berichtsverarbeitung läuft ab dem Zeitpunkt der Auswahl des Berichts und wird mit dem Öffnen des Berichts beendet. Der angegebene Wert muss genügend Zeit sowohl für die Daten- als auch für die Berichtsverarbeitung zur Verfügung stellen.|
+|Systemberichtstimeout|Der Standardwert ist 1800 Sekunden.<br /><br /> Geben Sie eine bestimmte Anzahl von Sekunden als Timeoutwert für die Berichtsverarbeitung auf dem Berichtsserver an. Dieser Wert gilt für die Berichtsverarbeitung auf einem Berichtsserver. Er hat keine Auswirkung auf die Datenverarbeitung auf dem Datenbankserver, der die Daten für den Bericht zur Verfügung stellt. Der Zeitgeber für die Berichtsverarbeitung läuft ab dem Zeitpunkt der Auswahl des Berichts und wird mit dem Öffnen des Berichts beendet. Der angegebene Wert muss genügend Zeit sowohl für die Daten- als auch für die Berichtsverarbeitung zur Verfügung stellen.|
 |Grenzwerte für Systemmomentaufnahmen|Der Standard ist -1. Dies stellt kein Limit dar.<br /><br /> Wählen Sie für die gesamte Website einen Standardwert für die Anzahl der Kopien aus, die im Berichtsverlauf gespeichert werden. Der Standardwert ist die ursprüngliche Einstellung, mit der die Anzahl der Momentaufnahmen festgelegt wird, die für jeden Bericht gespeichert werden können. Sie können verschiedene Grenzwerte auf Eigenschaftenseiten für bestimmte Berichte angeben.|
 |Lebensdauer für gespeicherte Parameter|Der Standardwert ist 180.|
 |Schwellenwert für gespeicherte Parameter|Der Standard ist 1500 Tage.|
 
-###  <a name="bkmk_session_settings_section"></a>Sitzungs Einstellungen
+###  <a name="session-settings"></a><a name="bkmk_session_settings_section"></a>Sitzungs Einstellungen
 
 |Einstellung|Kommentare|
 |-------------|--------------|
 |Sitzungstimeout|Der Standardwert ist 600 Sekunden.|
 |Sitzungscookies verwenden|Der Standardwert ist TRUE.|
-|EDLX-Berichtstimeout|Der Standardwert ist 1.800 Sekunden.|
+|EDLX-Berichtstimeout|Der Standardwert ist 1800 Sekunden.|
 
-###  <a name="bkmk_logging_settings_section"></a>System Einstellungen für die Protokollierung
+###  <a name="system-settings-for-logging"></a><a name="bkmk_logging_settings_section"></a>System Einstellungen für die Protokollierung
 
 |Einstellung|Kommentare|
 |-------------|--------------|
 |Protokollierung der Ausführung aktivieren|Der Standardwert ist TRUE.<br /><br /> Geben Sie an, ob der Berichtsserver Ablaufverfolgungsprotokolle generiert, und geben Sie die Anzahl von Tagen für die Beibehaltung der Protokolle an. . Die Protokolle werden auf dem Berichtsservercomputer im Ordner \Microsoft SQL Server\MSSQL.n\ReportServer\Log gespeichert. Bei jedem Neustart des Diensts wird eine neue Protokolldatei begonnen. Weitere Informationen zu Protokolldateien finden Sie unter [Report Server Service Trace Log](report-server/report-server-service-trace-log.md).|
 |Beibehaltungsdauer des Ausführungsprotokolls in Tagen|Der Standard ist 60 Tage.|
 
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] unterstützt die SharePoint-ULS-Protokollierung.  Weitere Informationen finden Sie unter [Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll &#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] unterstützt die SharePoint-ULS-Protokollierung.  Weitere Informationen finden Sie unter [Aktivieren von Reporting Services-Ereignissen für das SharePoint-Ablaufverfolgungsprotokoll &#40;ULS&#41;](report-server/turn-on-reporting-services-events-for-the-sharepoint-trace-log-uls.md)
 
-###  <a name="bkmk_security_settings_section"></a>Sicherheitseinstellungen
+###  <a name="security-settings"></a><a name="bkmk_security_settings_section"></a>Sicherheitseinstellungen
 
 |Einstellung|Kommentare|
 |-------------|--------------|
@@ -105,7 +104,7 @@ ms.locfileid: "78173305"
 |Remotefehler aktivieren|Der Standardwert ist FALSE.|
 |Detaillierte Fehler bei Verbindungstests aktivieren|Der Standardwert ist TRUE.|
 
-###  <a name="bkmk_client_settings_section"></a>Client Einstellungen
+###  <a name="client-settings"></a><a name="bkmk_client_settings_section"></a>Client Einstellungen
 
 |Einstellung|Kommentare|
 |-------------|--------------|
@@ -115,12 +114,12 @@ ms.locfileid: "78173305"
 |Sitzungstimeout bearbeiten|Der Standardwert ist 7.200 Sekunden.|
 |Sitzungscachelimit bearbeiten|Der Standardwert ist 5.|
 
-##  <a name="bkmk_managejobs"></a>Verwalten von Aufträgen
+##  <a name="manage-jobs"></a><a name="bkmk_managejobs"></a>Verwalten von Aufträgen
  Sie können aktive Aufträge anzeigen und löschen, beispielsweise Aufträge, die von Berichtsabonnements und datengesteuerten Abonnements erstellt werden. Die Seite wird nicht zum Verwalten von Abonnements, sondern von Aufträgen verwendet, die von einem Abonnement ausgelöst werden. Beispielsweise generiert ein Abonnement, das planmäßig stündlich einmal ausgeführt wird, jede Stunde einen Auftrag, der auf der Seite **Aufträge verwalten** angezeigt wird.
 
- ![Verwalten von laufenden Aufträgen](media/ssrs-manage-jobs.gif "Verwalten aktiver Aufträge")
+ ![Verwalten ausgeführter Aufträge](media/ssrs-manage-jobs.gif "Verwalten ausgeführter Aufträge")
 
-##  <a name="bkmk_keymgt"></a>Schlüsselverwaltung
+##  <a name="key-management"></a><a name="bkmk_keymgt"></a>Schlüsselverwaltung
  Die folgende Tabelle fasst die Schlüsselverwaltungsseiten zusammen.
 
 > [!IMPORTANT]
@@ -133,7 +132,7 @@ ms.locfileid: "78173305"
 |Ändern des Verschlüsselungsschlüssels|Dieser Vorgang erstellt einen neuen Schlüssel und verschlüsselt den verschlüsselten Inhalt erneut. Verfügen Sie über umfangreiche Inhalte, dauert dieser Vorgang u. U. mehrere Stunden.<br /><br /> Nach Abschluss der Änderung des Verschlüsselungsschlüssels wird empfohlen, eine Sicherung des neuen Schlüssels zu erstellen.|
 |Gelöschter verschlüsselter Inhalt|Gelöschter Inhalt kann nicht wiederhergestellt werden.<br /><br /> ** \* Wichtig \* \* ** Die Aktion zum Löschen und erneuten Erstellen des symmetrischen Schlüssels kann nicht umgekehrt oder rückgängig gemacht werden. Das Löschen oder Neuerstellen des Schlüssels kann sich erheblich auf die aktuelle Installation auswirken. Wenn Sie den Schlüssel löschen, werden alle vorhandenen, durch den symmetrischen Schlüssel verschlüsselten Daten ebenfalls gelöscht. Zu den gelöschten Daten zählen Verbindungszeichenfolgen zu externen Berichtsdatenquellen, gespeicherte Verbindungszeichenfolgen und einige Abonnementinformationen.|
 
-##  <a name="bkmk_executionaccount"></a>Ausführungs Konto
+##  <a name="execution-account"></a><a name="bkmk_executionaccount"></a>Ausführungs Konto
  Verwenden Sie diese Seite, um ein Konto zu konfigurieren, das für unbeaufsichtigte Verarbeitungen verwendet werden soll. Dieses Konto wird unter bestimmten Umständen verwendet, wenn keine andere Quellen für Anmeldeinformationen verfügbar sind:
 
 -   Wenn der Berichtsserver eine Verbindung mit einer Datenquelle herstellt, für die keine Anmeldeinformationen erforderlich sind. Beispiele für Datenquellen, die möglicherweise keine Anmeldeinformationen erfordern, sind XML-Dokumente und einige clientseitige Datenbankanwendungen.
@@ -156,26 +155,26 @@ Get-SPRSServiceApplication | Select typename, name, service, ueaccountname
 
  Weitere Informationen finden Sie unter [PowerShell-Cmdlets für SharePoint-Modus von Reporting Services](../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md).
 
-### <a name="options"></a>Tastatur
- **Ausführungs Konto angeben** Wählen Sie diese Option, um ein Konto anzugeben.
+### <a name="options"></a>Optionen
+ **Ausführungskonto angeben** Wählen Sie diese Option aus, um ein Konto anzugeben.
 
- **Konto** Geben Sie ein Windows-Domänen Benutzerkonto ein. Verwenden Sie dieses Format: * \<Domänen>\\<\>Benutzerkonto*.
+ **Konto** Geben Sie ein Windows-Domänenbenutzerkonto an. Verwenden Sie dieses Format: * \<Domänen>\\<\>Benutzerkonto*.
 
  **Kennwort** Geben Sie das Kennwort ein.
 
  **Kennwort bestätigen** Geben Sie das Kennwort erneut ein.
 
-##  <a name="bkmk_email"></a>E-Mail-Einstellungen
+##  <a name="e-mail-settings"></a><a name="bkmk_email"></a>E-Mail-Einstellungen
  Verwenden Sie diese Seite, um die SMTP (Simple Mail Transport Protocol)-Einstellungen anzugeben, mit denen die E-Mail-Übermittlung des Berichtsservers aktiviert wird. Mit der E-Mail-Übermittlungserweiterung des Berichtsservers können Sie Berichte oder Benachrichtigungen über Berichtsverarbeitungen mithilfe von E-Mail-Abonnements verteilen. Für die Berichtsserver-E-Mail-Übermittlungserweiterung sind ein SMTP-Server und eine E-Mail-Adresse erforderlich, die im Feld "Von:" verwendet wird.
 
-### <a name="options"></a>Tastatur
+### <a name="options"></a>Optionen
  **SMTP-Server verwenden** Gibt an, dass Berichts Server-e-Mail über einen SMTP-Server geleitet wird.
 
- **Ausgehender SMTP-Server** Geben Sie den zu verwendenden SMTP-Server oder das Gateway an. Sie können einen lokalen Server oder einen SMTP-Server in Ihrem Netzwerk verwenden.
+ **Ausgehender SMTP-Server** Geben Sie den zu verwendenden SMTP-Server oder -Gateway an. Sie können einen lokalen Server oder einen SMTP-Server in Ihrem Netzwerk verwenden.
 
  **Von Adresse** Gibt die e-Mail-Adresse an, die im Feld von: einer generierten e-Mail verwendet werden soll. Sie müssen ein Benutzerkonto angeben, das über die Berechtigung zum Senden von E-Mails vom SMTP-Server verfügt.
 
-##  <a name="bkmk_provisionsubscriptions"></a>Abonnements und Warnungen bereitstellen
+##  <a name="provision-subscriptions-and-alerts"></a><a name="bkmk_provisionsubscriptions"></a>Abonnements und Warnungen bereitstellen
  Überprüfen Sie auf dieser Seite, ob der SQL Server-Agent ausgeführt wird, und um den Zugriff auf Reporting Services für die Verwendung des SQL Server-Agent zu gewähren. Der SQL Server-Agent ist für [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] -Abonnements, -Zeitpläne und -Datenwarnungen erforderlich. [Bereitstellen von Abonnements und Warnungen für SSRS-Dienstanwendungen](install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)
 
 ## <a name="proxy-association"></a>Proxyzuordnung

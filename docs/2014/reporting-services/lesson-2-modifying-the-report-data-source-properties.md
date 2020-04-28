@@ -11,14 +11,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 41679439c7c687cc4574a56369c535f019c77e13
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176930"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lektion 2: Ändern der Eigenschaften der Berichtsdatenquelle
-  In dieser Lektion verwenden Sie den Berichts-Manager für die Auswahl eines Berichts, der an Empfänger übermittelt werden soll. Das datengesteuerte Abonnement, das Sie definieren, verteilt den im Tutorial **Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;** erstellten Bericht [Erstellen eines einfachen Tabellenberichts &amp;#40;SSRS-Tutorial&amp;#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). In den folgenden Schritten wird erläutert, wie Sie die Datenquellen-Verbindungsinformationen ändern, die vom Bericht zum Abrufen von Daten verwendet werden. Nur Berichte, die **gespeicherte Anmeldeinformationen** für das Zugreifen auf eine Berichtsdatenquelle verwenden, können über ein datengesteuertes Abonnement verteilt werden. Für die unbeaufsichtigte Berichtsverarbeitung sind gespeicherte Anmeldeinformationen erforderlich.
+  In dieser Lektion verwenden Sie den Berichts-Manager für die Auswahl eines Berichts, der an Empfänger übermittelt werden soll. Das datengesteuerte Abonnement, das Sie definieren, verteilt den im Tutorial **Erstellen eines einfachen Tabellenberichts &amp;#40;SSRS-Tutorial&amp;#41;** erstellten Bericht [Erstellen eines einfachen Tabellenberichts &#40;SSRS-Tutorial&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md). In den folgenden Schritten wird erläutert, wie Sie die Datenquellen-Verbindungsinformationen ändern, die vom Bericht zum Abrufen von Daten verwendet werden. Nur Berichte, die **gespeicherte Anmeldeinformationen** für das Zugreifen auf eine Berichtsdatenquelle verwenden, können über ein datengesteuertes Abonnement verteilt werden. Für die unbeaufsichtigte Berichtsverarbeitung sind gespeicherte Anmeldeinformationen erforderlich.
 
  Sie ändern auch das Dataset und den Bericht, um einen Parameter zu verwenden, mit dem der Bericht nach `[Order]` gefiltert wird, damit das Abonnement verschiedene Instanzen des Berichts für bestimmte Aufträge und Renderingformate ausgeben kann.
 
@@ -26,13 +26,13 @@ ms.locfileid: "78176930"
 
 -   [So ändern Sie die Datenquelleneigenschaften](#bkmk_modify_datasource)
 
--   [So ändern Sie das AdventureWorksDataSet](#bkmk_modify_dataset)
+-   [So ändern Sie den AdventureWorksDataset](#bkmk_modify_dataset)
 
--   [So fügen Sie einen Berichts Parameter hinzu und veröffentlichen den Bericht erneut](#bkmk_add_reportparameter)
+-   [So fügen Sie einen Berichtsparameter hinzu und veröffentlichen den Bericht erneut](#bkmk_add_reportparameter)
 
 -   [So stellen Sie den Bericht erneut bereit](#bkmk_redeploy)
 
-##  <a name="bkmk_modify_datasource"></a>So ändern Sie die Datenquellen Eigenschaften
+##  <a name="to-modify-the-data-source-properties"></a><a name="bkmk_modify_datasource"></a>So ändern Sie die Datenquellen Eigenschaften
 
 1.  Starten Sie [Berichts-Manager &#40;SSRS im einheitlichen&#41;Modus](../../2014/reporting-services/report-manager-ssrs-native-mode.md) mit Administratorrechten, indem Sie z. b. mit der rechten Maustaste auf das Symbol für Internet Explorer und dann auf **als Administrator ausführen**klicken.
 
@@ -62,7 +62,7 @@ ms.locfileid: "78176930"
 
 11. Zeigen Sie den Bericht an, um zu überprüfen, ob er mit den von Ihnen angegebenen Anmeldeinformationen ausgeführt wird. Um den Bericht anzuzeigen, klicken Sie auf die Registerkarte **Ansicht** . Beachten Sie, dass nach dem Öffnen des Berichts ein Mitarbeiter Name ausgewählt werden muss. Klicken Sie dann auf die Schaltfläche **Bericht anzeigen** , um den Bericht anzuzeigen.
 
-##  <a name="bkmk_modify_dataset"></a>So ändern Sie das AdventureWorksDataSet
+##  <a name="to-modify-the-adventureworksdataset"></a><a name="bkmk_modify_dataset"></a>So ändern Sie das AdventureWorksDataSet
 
 1.  Öffnen Sie den Bericht "Sales Orders" in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]
 
@@ -89,7 +89,7 @@ ms.locfileid: "78176930"
 
 4.  Klicken Sie auf **OK**
 
-##  <a name="bkmk_add_reportparameter"></a>So fügen Sie einen Berichts Parameter hinzu und veröffentlichen den Bericht erneut
+##  <a name="to-add-a-report-parameter-and-republish-the-report"></a><a name="bkmk_add_reportparameter"></a>So fügen Sie einen Berichts Parameter hinzu und veröffentlichen den Bericht erneut
 
 1.  Klicken Sie im **Berichtsdatenbereich** auf **Neu** und anschließend auf **Parameter...**.
 
@@ -115,7 +115,7 @@ ms.locfileid: "78176930"
 
 8.  Stellen Sie den Bericht erneut bereit, damit bei der Abonnementkonfiguration in der nächsten Lektion die in dieser Lektion vorgenommenen Änderungen verwendet werden können. Weitere Informationen zu den Projekteigenschaften, die im Tabellentutorial verwendet werden, finden Sie im Abschnitt „So veröffentlichen Sie den Bericht auf dem Berichtsserver (Optional)“ in [Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).
 
-##  <a name="bkmk_redeploy"></a>So stellen Sie den Bericht erneut bereit
+##  <a name="to-re-deploy-the-report"></a><a name="bkmk_redeploy"></a>So stellen Sie den Bericht erneut bereit
 
 1.  Stellen Sie den Bericht erneut bereit, damit bei der Abonnementkonfiguration in der nächsten Lektion die in dieser Lektion vorgenommenen Änderungen verwendet werden können. Weitere Informationen zu den Projekteigenschaften, die im Tabellentutorial verwendet werden, finden Sie im Abschnitt „So veröffentlichen Sie den Bericht auf dem Berichtsserver (Optional)“ in [Lektion 6: Hinzufügen von Gruppierungen und Gesamtwerten &#40;Reporting Services&#41;](../reporting-services/lesson-6-adding-grouping-and-totals-reporting-services.md).
 

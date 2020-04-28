@@ -17,19 +17,18 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 426f6aa75647b351edc33152144eec93d32394c4
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177324"
 ---
 # <a name="windows-server-failover-clustering-wsfc-with-sql-server"></a>Windows Server-Failoverclustering (WSFC) mit SQL Server
-  Ein wsfc-Cluster ( *Windows Server Failover Clustering* ) ist eine Gruppe unabhängiger Server, die zusammenarbeiten, um die Verfügbarkeit von Anwendungen und Diensten zu erhöhen. 
-  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] nutzt WSFC-Dienste und -Funktionen, um [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] - und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanzen zu unterstützen.
+   Bei *Windows Server-Failoverclustering* (WSFC) handelt es sich um eine Gruppe unabhängiger Server, die zur Steigerung der Verfügbarkeit von Anwendungen und Diensten zusammenarbeiten. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] nutzt WSFC-Dienste und -Funktionen, um [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] - und [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanzen zu unterstützen.
 
  
 
-##  <a name="TermsAndDefs"></a>Begriffe und Definitionen
+##  <a name="terms-and-definitions"></a><a name="TermsAndDefs"></a>Begriffe und Definitionen
  Wsfc-Cluster ein Windows Server-Failoverclustering (wsfc)-Cluster ist eine Gruppe unabhängiger Server, die zusammenarbeiten, um die Verfügbarkeit von Anwendungen und Diensten zu erhöhen.
 
  Die Failoverclusterinstanz ist eine Instanz eines Windows-Diensts, der eine IP-Adress Ressource, eine Netzwerknamen Ressource und zusätzliche Ressourcen verwaltet, die zum Ausführen von mindestens einer Anwendung oder einem Dienst erforderlich sind. Clients können mit den Netzwerknamen auf die Ressourcen in der Gruppe zugreifen. Dies ist vergleichbar mit dem Zugriff auf die Dienste auf einem physischen Server mithilfe eines Computernamens. Da es sich bei einer Failoverclusterinstanz jedoch um eine Gruppe handelt, kann dafür ein Failover zu einem anderen Knoten ohne Auswirkung auf den zugrunde liegenden Namen oder die Adresse ausgeführt werden.
@@ -54,7 +53,7 @@ ms.locfileid: "78177324"
 
  Weitere Informationen finden Sie im [Glossar zu Failoverclustern](/previous-versions/windows/desktop/MsCS/server-cluster-glossary)
 
-##  <a name="Overview"></a>Übersicht über Windows Server-Failoverclustering
+##  <a name="overview-of-windows-server-failover-clustering"></a><a name="Overview"></a>Übersicht über Windows Server-Failoverclustering
  Windows Server-Failoverclustering stellt Infrastrukturfunktionen bereit, die Szenarien mit hoher Verfügbarkeit und Notfallwiederherstellung für gehostete Serveranwendungen, z. B. Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] und Microsoft Exchange, unterstützen. Wenn ein Clusterknoten oder -dienst fehlschlägt, können die auf diesem Knoten gehosteten Dienste automatisch oder manuell auf einen anderen verfügbaren Knoten übertragen werden. Dieser Prozess wird als *Failover*bezeichnet.
 
  Die Knoten im WSFC-Cluster wirken zusammen, um diese Arten von Funktionen bereitzustellen:
@@ -69,7 +68,7 @@ ms.locfileid: "78177324"
 
  Weitere Informationen finden Sie unter [Failovercluster in Windows Server 2008 R2](https://technet.microsoft.com/library/ff182338\(WS.10\).aspx)
 
-##  <a name="AlwaysOnWsfcTech"></a>SQL Server AlwaysOn-Technologien und wsfc
+##  <a name="sql-server-alwayson-technologies-and-wsfc"></a><a name="AlwaysOnWsfcTech"></a>SQL Server AlwaysOn-Technologien und wsfc
  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]*AlwaysOn* ist eine neue Lösung für Hochverfügbarkeit und Notfall Wiederherstellung, die wsfc nutzt. AlwaysOn stellt eine integrierte, flexible Lösung bereit, die die Anwendungsverfügbarkeit erhöht, einen höheren Ertrag bei Hardwareinvestitionen bietet und die Bereitstellung und Verwaltung von Hochverfügbarkeit vereinfacht.
 
  Sowohl [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] als auch AlwaysOn-Failoverclusterinstanzen verwenden WSFC als Plattformtechnologie und registrieren Komponenten als WSFC-Clusterressourcen.  Verwandte Ressourcen werden in einer *Ressourcengruppe*kombiniert, für die Abhängigkeiten von anderen WSFC-Clusterressourcen festgelegt werden können. Der WSFC-Clusterdienst kann dann die Notwendigkeit eines Neustarts der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz ermitteln und signalisieren oder automatisch ein Failover zu einem anderen Serverknoten im WSFC-Cluster ausführen.
@@ -105,7 +104,7 @@ ms.locfileid: "78177324"
 
  Weitere Informationen finden Sie unter [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).
 
-##  <a name="AlwaysOnWsfcHealth"></a>Wsfc-Systemüberwachung und-Failover
+##  <a name="wsfc-health-monitoring-and-failover"></a><a name="AlwaysOnWsfcHealth"></a>Wsfc-Systemüberwachung und-Failover
  Hohe Verfügbarkeit für eine AlwaysOn-Lösung wird durch proaktive Systemüberwachung physischer und logischer WSFC-Clusterressourcen zusammen mit automatischem Failover zu und Neukonfiguration von redundanter Hardware erreicht.  Ein Systemadministrator kann außerdem ein *manuelles Failover* einer Verfügbarkeitsgruppe oder [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanz von einem Knoten zum anderen initiieren.
 
 ### <a name="failover-policies-for-nodes-failover-cluster-instances-and-availability-groups"></a>Failoverrichtlinien für Knoten, Failoverclusterinstanzen und Verfügbarkeitsgruppen
@@ -130,7 +129,7 @@ ms.locfileid: "78177324"
 > [!TIP]
 >  Es wird immer empfohlen eine ungerade Anzahl an Quorumstimmen in einem WSFC-Cluster empfohlen.  Für den Zweck der Quorumabstimmung muss [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] nicht auf allen Knoten im Cluster installiert sein. Ein zusätzlicher Server kann als Quorumelement dienen. Alternativ kann das WSFC-Quorummodell zur Verwendung einer Remotedateifreigabe als Tiebreaker konfiguriert werden.
 > 
->  Weitere Informationen finden Sie unter [wsfc-Quorum Modi und Abstimmungs Konfiguration &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md)
+>  Weitere Informationen finden Sie unter [WSFC-Quorummodi und Abstimmungskonfiguration &#40;SQL Server&#41;](wsfc-quorum-modes-and-voting-configuration-sql-server.md).
 
 ### <a name="disaster-recovery-through-forced-quorum"></a>Notfallwiederherstellung durch erzwungenes Quorum
  Abhängig vom Betriebsverfahren und von der WSFC-Clusterkonfiguration können Sie sowohl automatische als auch manuelle Failovers auslösen und dennoch eine stabile, fehlertolerante [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn-Lösung betreiben. Falls jedoch ein Quorum der freigegebenen Abstimmungsknoten im WSFC-Cluster nicht kommunizieren kann oder bei der Integritätsüberprüfung des WSFC-Clusters ein anderer Fehler zurückgegeben wird, wird der WSFC-Cluster möglicherweise offline geschaltet.
@@ -139,9 +138,9 @@ ms.locfileid: "78177324"
 
  Danach muss außerdem eine Reihe von Schritten ausgeführt werden, um den WSFC-Cluster neu zu konfigurieren, die betroffenen Datenbankreplikate wiederherzustellen und ein neues Quorum einzurichten.
 
- Weitere Informationen finden Sie unter [wsfc-Notfall Wiederherstellung durch erzwungenes Quorum &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)
+ Informationen zur Erzwingung des Quorums finden Sie unter [WSFC-Notfallwiederherstellung durch erzwungenes Quorum &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md).
 
-##  <a name="AlwaysOnWsfcRelationship"></a>Beziehung zwischen SQL Server AlwaysOn-Komponenten und wsfc
+##  <a name="relationship-of-sql-server-alwayson-components-to-wsfc"></a><a name="AlwaysOnWsfcRelationship"></a>Beziehung zwischen SQL Server AlwaysOn-Komponenten und wsfc
  Zwischen den Funktionen und Komponenten von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] AlwaysOn und WSFC liegen verschiedene Beziehungsstufen vor.
 
  AlwaysOn-Verfügbarkeitsgruppen werden auf [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanzen gehostet.
@@ -156,13 +155,12 @@ Metadaten und Status der WSFC-Konfiguration für alle Knoten werden in jedem Kno
  Der WSFC-Dienst überwacht die Integrität und verwaltet die Konfiguration für eine Gruppe von Servern.
 Der Dienst Windows Server-Failovercluster (WSFC) gibt Änderungen an den Metadaten und am Status der WSFC-Konfiguration an alle Knoten im Cluster weiter. Partielle Metadaten und Zustände können auf einer WSFC-Remotedateifreigabe (Quorumfreigabe) gespeichert werden. Zwei oder mehr aktive Knoten oder Zeugen bilden ein Quorum zum Bestimmen der Integrität des WSFC-Clusters.
 
- 
-  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Registrierungsschlüssel sind Unterschlüssel des WSFC-Clusters.
+ [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] -Registrierungsschlüssel sind Unterschlüssel des WSFC-Clusters.
 Wenn Sie einen WSFC-Cluster löschen und neu erstellen, müssen Sie die Funktion [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] auf jeder Serverinstanz, die auf dem ursprünglichen WSFC-Cluster für [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] aktiviert war, deaktivieren und erneut aktivieren. Weitere Informationen finden Sie unter [Aktivieren und Deaktivieren von AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/enable-and-disable-always-on-availability-groups-sql-server.md).
 
- ![Diagramm zum SQL Server-Komponentenkontext "AlwaysOn"](../../../database-engine/media/alwaysoncomponentcontextdiagram.gif "Diagramm zum SQL Server-Komponentenkontext "AlwaysOn"")
+ ![Abbildung zum SQL Server Always On-Komponentenkontext](../../../database-engine/media/alwaysoncomponentcontextdiagram.gif "Abbildung zum SQL Server Always On-Komponentenkontext")
 
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben
 
 -   [Anzeigen von Cluster-Quorum-NodeWeight-Einstellungen](view-cluster-quorum-nodeweight-settings.md)
 
@@ -170,7 +168,7 @@ Wenn Sie einen WSFC-Cluster löschen und neu erstellen, müssen Sie die Funktion
 
 -   [Erzwingen des Starts eines Clusters ohne Quorum](force-a-wsfc-cluster-to-start-without-a-quorum.md)
 
-##  <a name="RelatedContent"></a> Verwandte Inhalte
+##  <a name="related-content"></a><a name="RelatedContent"></a> Verwandte Inhalte
 
 -   [Windows Server-Technologien: Failovercluster](https://technet.microsoft.com/library/cc732488\(v=WS.10\).aspx)
 
@@ -178,7 +176,7 @@ Wenn Sie einen WSFC-Cluster löschen und neu erstellen, müssen Sie die Funktion
 
 -   [Anzeigen von Ereignissen und Protokollen für einen Failovercluster](https://technet.microsoft.com/library/cc772342\(WS.10\).aspx)
 
--   [Get-CLUSTERLOG-Failovercluster-Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)
+-   [Get-ClusterLog-Failovercluster-Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)
 
 ## <a name="see-also"></a>Weitere Informationen
  [AlwaysOn-Failoverclusterinstanzen (SQL Server)](always-on-failover-cluster-instances-sql-server.md) [Übersicht über AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) [wsfc-Quorum Modi und Abstimmungs Konfiguration &#40;](wsfc-quorum-modes-and-voting-configuration-sql-server.md) SQL Server&#41;[Failoverrichtlinie für Failoverclusterinstanzen](failover-policy-for-failover-cluster-instances.md) [wsfc-Notfall Wiederherstellung durch erzwungenes Quorum &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)

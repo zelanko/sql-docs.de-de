@@ -17,10 +17,10 @@ ms.assetid: 805c92fc-3169-410c-984d-f37e063b791d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b5e29916d4dc8419311c9639cc5321b1cf391940
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75321619"
 ---
 # <a name="sp_replmonitorhelpmergesessiondetail-transact-sql"></a>sp_replmonitorhelpmergesessiondetail (Transact-SQL)
@@ -46,12 +46,12 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
 |-----------------|---------------|-----------------|  
 |**PhaseID**|**int**|Die Phase der Synchronisierungssitzung. Die folgenden Werte sind möglich:<br /><br /> **0** = Initialisierungs-oder Zusammenfassungs Zeile<br /><br /> **1** = hochladen<br /><br /> **2** = herunterladen|  
 |**ArticleName**|**sysname**|Der Name des Artikels, der synchronisiert wird. **ArticleName** enthält auch Zusammenfassungs Informationen für Zeilen im Resultset, die keine Artikeldetails darstellen.|  
-|**PercentComplete**|**Decimal**|Gibt die prozentualen Änderungen an, die insgesamt in einer Artikeldetailzeile für aktuell ausgeführte oder fehlerhafte Sitzungen angewendet wurden.|  
-|**RelativeCost**|**Decimal**|Gibt den Zeitaufwand zum Synchronisieren des Artikels als Prozentsatz der Gesamtsynchronisierungszeit für die Sitzung an.|  
+|**PercentComplete**|**decimal**|Gibt die prozentualen Änderungen an, die insgesamt in einer Artikeldetailzeile für aktuell ausgeführte oder fehlerhafte Sitzungen angewendet wurden.|  
+|**RelativeCost**|**decimal**|Gibt den Zeitaufwand zum Synchronisieren des Artikels als Prozentsatz der Gesamtsynchronisierungszeit für die Sitzung an.|  
 |**Duration**|**int**|Dauer der Agentsitzung|  
 |**Inserts**|**int**|Anzahl von Einfügungen in einer Sitzung|  
 |**Updates**|**int**|Anzahl von Updates in einer Sitzung|  
-|**Löschvorgang**|**int**|Anzahl von Löschvorgängen in einer Sitzung|  
+|**Löschvorgänge**|**int**|Anzahl von Löschvorgängen in einer Sitzung|  
 |**Konflikte**|**int**|Anzahl der in einer Sitzung aufgetretenen Konflikte|  
 |**ErrorID**|**int**|ID eines Sitzungsfehlers|  
 |**SeqNo**|**int**|Reihenfolge von Sitzungen im Resultset|  
@@ -70,6 +70,6 @@ sp_replmonitorhelpmergesessiondetail [ @session_id = ] session_id
  Nur Mitglieder der festen Daten Bank Rolle **db_owner** oder **replmonitor** in der Verteilungs Datenbank auf dem Verteiler oder der Abonnement Datenbank auf dem Abonnenten können **sp_replmonitorhelpmergesessiondetail**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Programmgesteuertes Überwachen der Replikation](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [Programmgesteuerte Überwachen der Replikation](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

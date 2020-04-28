@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 261aab8b0e8a5d80aed143d6b29e952243742917
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176816"
 ---
 # <a name="create-tables-database-engine"></a>Erstellen von Tabellen (Datenbank-Engine)
@@ -37,18 +37,18 @@ ms.locfileid: "78176816"
 
      [Transact-SQL](#TsqlProcedure)
 
-##  <a name="BeforeYouBegin"></a> Vorbereitungen
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen
 
-###  <a name="Security"></a> Sicherheit
+###  <a name="security"></a><a name="Security"></a> Sicherheit
 
-####  <a name="Permissions"></a> Berechtigungen
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen
  Es sind die CREATE TABLE-Berechtigung in der Datenbank und die ALTER-Berechtigung für das Schema erforderlich, in der die Tabelle erstellt wird.
 
  Wenn in der CREATE TABLE-Anweisung Spalten als CLR-benutzerdefinierter Typ definiert sind, ist entweder der Besitz des Typs oder die REFERENCES-Berechtigung für den Typ erforderlich.
 
  Wenn einer Spalte in der CREATE TABLE-Anweisung eine XML-Schemaauflistung zugeordnet ist, ist entweder der Besitz der XML-Schemaauflistung oder die REFERENCES-Berechtigung für die Auflistung erforderlich.
 
-##  <a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio
+##  <a name="using-sql-server-management-studio"></a><a name="SSMSProcedure"></a> Verwenden von SQL Server Management Studio
 
 #### <a name="to-create-a-table-with-table-designer"></a>So erstellen Sie eine Tabelle mit dem Tabellen-Designer
 
@@ -60,7 +60,7 @@ ms.locfileid: "78176816"
 
 4.  Geben Sie für die einzelnen Spalten Spaltennamen ein, wählen Sie Datentypen aus, und legen Sie fest, ob NULL-Werte zulässig sein sollen, wie in der folgenden Abbildung veranschaulicht.
 
-     ![AddColumnsinTableDesigner](../../database-engine/media/addcolumnsintabledesigner.gif "AddColumnsinTableDesigner")
+     ![Spalten im Tabellen-Designer hinzufügen](../../database-engine/media/addcolumnsintabledesigner.gif "Spalten im Tabellen-Designer hinzufügen")
 
 5.  Um weitere Eigenschaften für eine Spalte anzugeben, z. B. die Identität oder Werte für berechnete Spalten, klicken Sie auf die Spalte und wählen auf der Registerkarte mit den Spalteneigenschaften die geeigneten Eigenschaften aus. Weitere Informationen zu Spalteneigenschaften finden Sie unter [Tabellenspalteneigenschaften &#40;SQL Server Management Studio&#41;](table-column-properties-sql-server-management-studio.md).
 
@@ -68,13 +68,13 @@ ms.locfileid: "78176816"
 
 7.  Um Fremdschlüsselbeziehungen, CHECK-Einschränkungen oder Indizes zu erstellen, klicken Sie mit der rechten Maustaste in den Bereich des Tabellen-Designers und wählen ein Objekt aus der Liste aus, wie in der folgenden Abbildung veranschaulicht.
 
-     ![AddTableObjects](../../database-engine/media/addtableobjects.gif "AddTableObjects")
+     ![Tabellenobjekte hinzufügen](../../database-engine/media/addtableobjects.gif "Tabellenobjekte hinzufügen")
 
      Weitere Informationen zu diesen Objekten finden Sie unter [Create Foreign Key Relationships](../tables/create-foreign-key-relationships.md), [Create Check Constraints](../tables/create-check-constraints.md) und [Indexes](../indexes/indexes.md).
 
 8.  Die Tabelle ist standardmäßig im **dbo** -Schema enthalten. Um ein anderes Schema für die Tabelle anzugeben, klicken Sie mit der rechten Maustaste in den Bereich des Tabellen-Designers, und wählen Sie **Eigenschaften** aus, wie in der folgenden Abbildung veranschaulicht. Wählen Sie in der Dropdownliste **Schema** das geeignete Schema aus.
 
-     ![Specifyatableschema](../../database-engine/media/specifyatableschema.gif "Specifyatableschema")
+     ![Tabellenschema angeben](../../database-engine/media/specifyatableschema.gif "Tabellenschema angeben")
 
      Weitere Informationen zu Schemas finden Sie unter [Create a Database Schema](../security/authentication-access/create-a-database-schema.md).
 
@@ -84,7 +84,7 @@ ms.locfileid: "78176816"
 
 11. Zum Anzeigen der neuen Tabelle erweitern Sie im **Objekt-Explorer**den Knoten **Tabellen** und drücken **F5** , um die Objektliste zu aktualisieren. Die neue Tabelle wird in der Tabellenliste angezeigt.
 
-##  <a name="TsqlProcedure"></a> Verwenden von Transact-SQL
+##  <a name="using-transact-sql"></a><a name="TsqlProcedure"></a> Verwenden von Transact-SQL
 
 #### <a name="to-create-a-table-in-the-query-editor"></a>So erstellen Sie eine Tabelle im Abfrage-Editor
 

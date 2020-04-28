@@ -12,10 +12,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 75cf9c751afb03b963eb888a6dbe6ed03ed4003a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176660"
 ---
 # <a name="spatial-indexes-overview"></a>Übersicht über räumliche Indizes
@@ -24,9 +24,9 @@ ms.locfileid: "78176660"
 > [!IMPORTANT]
 >  Um eine ausführliche Beschreibung und Beispiele der in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]eingeführten räumlichen Funktionen (z.B. Funktionen, die räumliche Indizes beeinflussen) zu erhalten, laden Sie das Whitepaper [New Spatial Features in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)(Neue räumliche Funktionen in SQL Server 2012) herunter.
 
-##  <a name="about"></a> Informationen zu räumlichen Indizes
+##  <a name="about-spatial-indexes"></a><a name="about"></a> Informationen zu räumlichen Indizes
 
-###  <a name="decompose"></a> Zerlegen von indiziertem Raum in eine Rasterhierarchie
+###  <a name="decomposing-indexed-space-into-a-grid-hierarchy"></a><a name="decompose"></a> Zerlegen von indiziertem Raum in eine Rasterhierarchie
  In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]werden räumliche Indizes mithilfe von B-Strukturen erstellt; das heißt, dass die Indizes die zweidimensionalen räumlichen Daten in der linearen Reihenfolge der B-Strukturen darstellen müssen. Bevor Daten in einen räumlichen Index eingelesen werden, implementiert [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] daher eine einheitliche hierarchische Zerlegung des Raums. Während der Indexerstellung wird der Raum in eine vier Ebenen umfassende *Rasterhierarchie* *zerlegt*. Diese Ebenen werden als *Ebene 1* (die oberste Ebene), *Ebene 2*, *Ebene 3*und *Ebene 4*bezeichnet.
 
  Auf jeder nachfolgenden Ebene wird die ihr übergeordnete Ebene weiter zerlegt, sodass jede Zelle der übergeordneten Ebene ein vollständiges Raster der nächsten Ebene enthält. Auf einer gegebenen Ebene verfügen alle Raster an beiden Achsen über die gleiche Anzahl von Zellen (beispielweise 4&nbsp;x&nbsp;4 oder 8&nbsp;x&nbsp;8), und die Zellen sind alle gleich groß.
@@ -60,7 +60,7 @@ ms.locfileid: "78176660"
 > [!NOTE]
 >  Die Rasterdichten eines räumlichen Index sind in den Spalten level_1_grid, level_2_grid, level_3_grid und level_4_grid der [sys.spatial_index_tessellations](/sql/relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql) -Katalogsicht sichtbar, wenn der Datenbank-Kompatibilitätsgrad auf 100 oder niedriger festgelegt wird. `GEOMETRY_AUTO_GRID` / Die `GEOGRAPHY_AUTO_GRID` Mosaik Schema Optionen füllen diese Spalten nicht auf. die sys. spatial_index_tessellations-Katalog `NULL` Sicht enthält Werte für diese Spalten, wenn die automatischen Raster Optionen verwendet werden.
 
-###  <a name="tessellation"></a>Mosaik
+###  <a name="tessellation"></a><a name="tessellation"></a> Mosaik
  Nach der Zerlegung eines indizierten Raums in eine Rasterhierarchie werden die Daten anhand des räumlichen Indexes zeilenweise aus der räumlichen Spalte gelesen. Nachdem die Daten für ein räumliches Objekt (bzw. eine räumliche Instanz) gelesen wurden, wird unter Verwendung des räumlichen Index ein *Mosaikprozess* für dieses Objekt durchgeführt. Durch den Mosaikprozess wird das Objekt in die Rasterhierarchie eingepasst, indem das Objekt einer Menge von Rasterzellen zugeordnet wird, die es berührt (*berührte Zellen*). Auf Ebene 1 der Rasterhierarchie beginnend, verläuft der Mosaikprozess *breitenorientiert* über der Ebene. Potenziell kann der Prozess über alle vier Ebenen fortgesetzt werden, wobei zu einem Zeitpunkt jeweils nur eine Ebene bearbeitet werden kann.
 
  Ergebnis des Mosaikprozesses ist eine Menge berührter Zellen, die im räumlichen Index für das betreffende Objekt verzeichnet sind. Durch das Verweisen auf diese aufgezeichneten Zellen kann mit dem räumlichen Index die Position des Objekts im Raum relativ zu anderen Objekten der räumlichen Spalte, die ebenfalls im Index gespeichert sind, bestimmt werden.
@@ -110,7 +110,7 @@ ms.locfileid: "78176660"
 
  ![Tiefste-Zelle-Optimierung](../../database-engine/media/spndx-opt-deepest-cell.gif "Tiefste-Zelle-Optimierung")
 
-###  <a name="schemes"></a>Mosaik Schemas
+###  <a name="tessellation-schemes"></a><a name="schemes"></a> Mosaikschemas
  Das Verhalten eines räumlichen Indexes hängt teilweise von seinem *Mosaikschema*ab. Das Mosaikschema ist datentypspezifisch. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]werden zwei Mosaikschemas für räumliche Indizes unterstützt:
 
 -   *Geometrie Raster*Mosaik, das das Schema für den `geometry` Datentyp darstellt.
@@ -129,13 +129,13 @@ ms.locfileid: "78176660"
 ##### <a name="the-bounding-box"></a>Das umgebende Feld
  Geometrische Daten belegen eine Fläche, die unendlich sein kann. In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]erfordert ein räumlicher Index jedoch einen endlichen Raum. Um einen endlichen Raum für die Zerlegung einzurichten, erfordert das Geometrierastermosaikschema ein rechteckiges *umgebendes Feld*. Das umgebende Feld wird durch vier `(`Koordinaten ( _x-min_**,**_y-min_ `)` und `(` _x-max_**,**_y-max_`)`) definiert, die als Eigenschaften des räumlichen Indexes gespeichert werden. Diese Koordinaten stellen Folgendes dar:
 
--   *x-min* ist die x-Koordinate der unteren linken Ecke des umgebenden Felds.
+-   *x-min* ist die X-Koordinate der linken unteren Ecke des umgebenden Felds.
 
--   *y-min* ist die y-Koordinate der unteren linken Ecke.
+-   *y-min* ist die Y-Koordinate der unteren linken Ecke.
 
--   *x-max* ist die x-Koordinate der oberen rechten Ecke.
+-   *x-max* ist die X-Koordinate der oberen rechten Ecke.
 
--   *y-max* ist die y-Koordinate der oberen rechten Ecke.
+-   *y-max* ist die Y-Koordinate der oberen rechten Ecke.
 
 > [!NOTE]
 >  Diese Koordinaten werden durch die BOUNDING_BOX-Klausel der [CREATE SPATIAL Index](/sql/t-sql/statements/create-spatial-index-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Anweisung angegeben.
@@ -146,7 +146,7 @@ ms.locfileid: "78176660"
 
  Die folgende Abbildung zeigt die Punkte, die durch `(` _die x-min_**,**_y-min_ `)` und `(` _x-max_**,**_y-max_ `)` -Koordinaten des umgebenden Felds definiert werden. Die obersten Ebene der Rasterhierarchie wird als 4&nbsp;x&nbsp;4-Raster angezeigt. Zur Veranschaulichung werden die niedrigeren Ebenen weggelassen. Der Raum außerhalb des umgebenden Felds wird durch eine Null (0) angegeben. Beachten Sie, dass Objekt 'A' teilweise über das Feld hinausragt und dass sich Objekt 'B' komplett außerhalb des Felds in Zelle&nbsp;0 befindet.
 
- ![Begrenzungsfeld mit Koordinaten und Zelle 0.](../../database-engine/media/spndx-bb-4x4-objects.gif "Umgebendes Feld mit Koordinaten und Zelle 0.")
+ ![Umgebendes Feld mit Koordinaten und Zelle 0.](../../database-engine/media/spndx-bb-4x4-objects.gif "Umgebendes Feld mit Koordinaten und Zelle 0.")
 
  Ein umgebendes Feld entspricht zu einem gewissen Teil den räumlichen Daten einer Anwendung. Ob das umgebende Feld des Indexes die in der räumlichen Spalte gespeicherten Daten vollständig oder nur zum Teil enthält, hängt von der Anwendung ab. Nur Vorgänge, die mit Objekten berechnet werden, die vollständig im umgebenden Feld liegen, profitieren vom räumlichen Index. Damit der räumliche Index für eine `geometry`-Spalte den größtmöglichen Nutzen bietet, müssen Sie ein umgebendes Feld angeben, das alle oder die meisten Objekte enthält.
 
@@ -176,9 +176,9 @@ ms.locfileid: "78176660"
 
  ![Geografieraster der Ebene 1](../../database-engine/media/spndx-geodetic-level1grid.gif "Geografieraster der Ebene 1")
 
-##  <a name="methods"></a>Von räumlichen Indizes unterstützte Methoden
+##  <a name="methods-supported-by-spatial-indexes"></a><a name="methods"></a> Von räumlichen Indizes unterstützte Methoden
 
-###  <a name="geometry"></a>Von räumlichen Indizes unterstützte geometry-Methoden
+###  <a name="geometry-methods-supported-by-spatial-indexes"></a><a name="geometry"></a>Von räumlichen Indizes unterstützte geometry-Methoden
  Räumliche Indizes unterstützen unter bestimmten Bedingungen die folgenden mengenorientierten geometry-Methoden: STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() und STWithin(). Diese Methoden werden nur dann von einem räumlichen Index unterstützt, wenn sie in der WHERE-Klausel oder JOIN ON-Klausel einer Abfrage verwendet werden und in einem Prädikat der folgenden allgemeinen Form stehen:
 
  *Geometry1*. *method_name*(*Geometry2*)*comparison_operator * * valid_number*
@@ -187,23 +187,23 @@ ms.locfileid: "78176660"
 
  Räumliche Indizes unterstützen die folgenden Prädikatformen:
 
--   *Geometry1*. [Stenthält](/sql/t-sql/spatial-geometry/stcontains-geometry-data-type)(*Geometry2*) = 1
+-   *geometry1*.[STContains](/sql/t-sql/spatial-geometry/stcontains-geometry-data-type)(*geometry2*) = 1
 
 -   *Geometry1*. [STDistance](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)(*Geometry2*) < *Nummer*
 
--   *Geometry1*. [STDistance](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)(*Geometry2*) <= *Zahl*
+-   *geometry1*.[STDistance](/sql/t-sql/spatial-geometry/stdistance-geometry-data-type)(*geometry2*) <= *number*
 
--   *Geometry1*. [STEquals](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)(*Geometry2*) = 1
+-   *geometry1*.[STEquals](/sql/t-sql/spatial-geometry/stequals-geometry-data-type)(*geometry2*)= 1
 
--   *Geometry1*. [Stintersekten](/sql/t-sql/spatial-geometry/stintersects-geometry-data-type)(*Geometry2*) = 1
+-   *geometry1*.[STIntersects](/sql/t-sql/spatial-geometry/stintersects-geometry-data-type)(*geometry2*)= 1
 
--   *Geometry1.* [STOverlaps](/sql/t-sql/spatial-geometry/stoverlaps-geometry-data-type) *(Geometry2) = 1*
+-   *geometry1.* [STOverlaps](/sql/t-sql/spatial-geometry/stoverlaps-geometry-data-type) *(geometry2) = 1*
 
--   *Geometry1*. [STTouches](/sql/t-sql/spatial-geometry/sttouches-geometry-data-type)(*Geometry2*) = 1
+-   *geometry1*.[STTouches](/sql/t-sql/spatial-geometry/sttouches-geometry-data-type)(*geometry2*) = 1
 
--   *Geometry1*. [STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*Geometry2*) = 1
+-   *geometry1*.[STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*geometry2*)= 1
 
-###  <a name="geography"></a>Von räumlichen Indizes unterstützte geography-Methoden
+###  <a name="geography-methods-supported-by-spatial-indexes"></a><a name="geography"></a>Von räumlichen Indizes unterstützte geography-Methoden
  Unter bestimmten Bedingungen unterstützen räumliche Indizes die folgenden mengenorientierten geography-Methoden: STIntersects(),STEquals() und STDistance(). Diese Methoden werden nur dann von einem räumlichen Index unterstützt, wenn sie in der WHERE-Klausel einer Abfrage verwendet werden und in einem Prädikat der folgenden allgemeinen Form stehen:
 
  *geography1*. *method_name*(*geography2*)*comparison_operator * * valid_number*
@@ -212,13 +212,13 @@ ms.locfileid: "78176660"
 
  Räumliche Indizes unterstützen die folgenden Prädikatformen:
 
--   *geography1*. [Stintersekten](/sql/t-sql/spatial-geography/stintersects-geography-data-type)(*geography2*) = 1
+-   *geography1*.[STIntersects](/sql/t-sql/spatial-geography/stintersects-geography-data-type)(*geography2*)= 1
 
--   *geography1*. [STEquals](/sql/t-sql/spatial-geography/stequals-geography-data-type)(*geography2*) = 1
+-   *geography1*.[STEquals](/sql/t-sql/spatial-geography/stequals-geography-data-type)(*geography2*)= 1
 
 -   *geography1*. [STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) < *Nummer*
 
--   *geography1*. [STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) <= *Zahl*
+-   *geography1*.[STDistance](/sql/t-sql/spatial-geography/stdistance-geography-data-type)(*geography2*) <= *number*
 
 ### <a name="queries-that-use-spatial-indexes"></a>Abfragen auf der Grundlage räumlicher Indizes
  Räumliche Indizes werden nur in Abfragen unterstützt, die einen indizierten räumlichen Operator in der `WHERE`-Klausel enthalten. Beispiele für diese Syntax sind:

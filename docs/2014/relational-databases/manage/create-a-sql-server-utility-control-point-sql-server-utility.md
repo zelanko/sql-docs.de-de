@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: eefa464ae8cb694001d40c5ad9090f7f4efbd8e6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175879"
 ---
 # <a name="create-a-sql-server-utility-control-point-sql-server-utility"></a>Erstellen eines Steuerungspunkts für das SQL Server-Hilfsprogramm (SQL Server-Hilfsprogramm)
@@ -121,14 +121,14 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 
 -   [Erstellen eines Steuerungspunkts für das Hilfsprogramm](#Creating_UCP)
 
-##  <a name="Welcome"></a> Einführung in den Assistenten zum Erstellen von UCPs
+##  <a name="introduction-to-create-ucp-wizard"></a><a name="Welcome"></a> Einführung in den Assistenten zum Erstellen von UCPs
  Wenn Sie den Hilfsprogramm-Explorer öffnen und keinen verbundenen Steuerungspunkt für das Hilfsprogramm sehen, müssen Sie eine Verbindung mit einem Steuerungspunkt herstellen oder einen neuen erstellen.
 
  **Mit vorhandenem UCP verbinden**: Wenn bereits ein Steuerungspunkt für das Hilfsprogramm in der Bereitstellung vorhanden ist, können Sie eine Verbindung mit ihm herstellen, indem Sie oben im Bereich „Hilfsprogramm-Explorer“ auf die Schaltfläche ![](../../database-engine/media/connect-to-utility.gif "Connect_to_Utility")**Mit Hilfsprogramm verbinden** klicken. Um eine Verbindung mit einem vorhandenen UCP herzustellen, müssen Sie über Administrator-Anmeldeinformationen verfügen oder Mitglied der Utility Reader-Rolle sein. Beachten Sie, dass es nur einen UCP pro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm geben kann, und Sie können nur mit einem UCP von einer Instanz des SSMS verbunden werden.
 
- **Neuen UCP erstellen**: Um einen neuen Steuerungspunkt für das Hilfsprogramm zu erstellen, klicken Sie oben im Bereich „Hilfsprogramm-Explorer“ auf die Schaltfläche ![](../../database-engine/media/create-ucp.gif "Create_UCP")**Create UCP** (UCP erstellen). Um einen neuen UCP zu erstellen, müssen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen sowie Administrator-Anmeldeinformationen im Verbindungsdialogfeld angeben. Beachten Sie, dass es nur einen UCP pro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm geben kann.
+ **Neuen UCP erstellen**: Um einen neuen Steuerungspunkt für das Hilfsprogramm zu erstellen, klicken Sie oben im Bereich „Hilfsprogramm-Explorer“ auf die Schaltfläche ![](../../database-engine/media/create-ucp.gif "UCP erstellen")**Create UCP** (UCP erstellen). Um einen neuen UCP zu erstellen, müssen Sie den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen sowie Administrator-Anmeldeinformationen im Verbindungsdialogfeld angeben. Beachten Sie, dass es nur einen UCP pro [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm geben kann.
 
-##  <a name="Instance_name"></a> Instanz angeben
+##  <a name="specify-instance"></a><a name="Instance_name"></a> Instanz angeben
  Geben Sie die folgenden Informationen zum UCP an, den Sie erstellen:
 
 -   **Instanzname**: Klicken Sie auf **Verbinden...** , um eine Instanz von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] im Verbindungsdialogfeld auszuwählen. Stellen Sie den Computernamen und den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Instanznamen im Format „Computername\Instanzname“ bereit.
@@ -137,7 +137,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.
 
-##  <a name="Connection_dialog"></a> Dialogfeld „Verbindung“
+##  <a name="connection-dialog"></a><a name="Connection_dialog"></a> Dialogfeld „Verbindung“
  Überprüfen Sie im Dialogfeld Verbindung mit Server herstellen den Servertyp, den Computernamen und die Informationen zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanznamen. Weitere Informationen finden Sie unter [Verbindung mit Server herstellen &#40;Datenbank-Engine&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).
 
 > [!NOTE]
@@ -145,7 +145,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 
  Klicken Sie auf **Verbinden...** , um den Vorgang fortzusetzen.
 
-##  <a name="Agent_configuration"></a> Konto des Hilfsprogramm-Sammlungssatzes
+##  <a name="utility-collection-set-account"></a><a name="Agent_configuration"></a> Konto des Hilfsprogramm-Sammlungssatzes
  Geben Sie ein Windows-Domänenkonto an, um den Sammlungssatz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramms auszuführen. Dieses Konto wird als Proxykonto des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agents für den Sammlungssatz des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramms verwendet. Alternativ können Sie das vorhandene [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienstkonto verwenden. Um die Überprüfungsanforderungen zu erfüllen, geben Sie das Konto unter Beachtung folgender Richtlinien an.
 
  Angeben des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent-Dienstkontos:
@@ -154,7 +154,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.
 
-##  <a name="Validation_rules"></a> Überprüfungsregeln
+##  <a name="validation-rules"></a><a name="Validation_rules"></a> Überprüfungsregeln
  In dieser Version von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]müssen die folgenden Bedingungen für die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz, in der der UCP erstellt wird, erfüllt sein:
 
 |Überprüfungsregel|Korrekturmaßnahme|
@@ -180,7 +180,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 
  Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.
 
-##  <a name="Summary"></a> Zusammenfassung
+##  <a name="summary"></a><a name="Summary"></a> Zusammenfassung
  Auf der Zusammenfassungsseite werden die Informationen angezeigt, die Sie zum UCP angegeben haben:
 
 -   Der Name der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Instanz, die den UCP hostet.
@@ -191,7 +191,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 
  Um UCP-Konfigurationseinstellungen zu ändern, klicken Sie auf **Zurück**. Klicken Sie auf **Weiter**, um den Vorgang fortzusetzen.
 
-##  <a name="Creating_UCP"></a> Erstellen eines Steuerungspunkts für das Hilfsprogramm
+##  <a name="creating-the-utility-control-point"></a><a name="Creating_UCP"></a> Erstellen eines Steuerungspunkts für das Hilfsprogramm
  Während der Erstellung des UCPs zeigt der Assistent die Schritte sowie Statusinformationen an:
 
 -   Vorbereiten der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Instanz für die UCP-Erstellung
@@ -216,7 +216,7 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 
  Weitere Informationen zum Registrieren zusätzlicher Instanzen von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] für das [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Hilfsprogramm finden Sie unter [Registrieren einer Instanz von SQL Server &#40;SQL Server-Hilfsprogramm&#41;](enroll-an-instance-of-sql-server-sql-server-utility.md). Um den UCP als verwaltete Instanz aus dem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Hilfsprogramm zu entfernen, wählen Sie **Verwaltete Instanzen** im Bereich **Hilfsprogramm-Explorer** aus, um die Listenansicht verwalteter Instanzen aufzufüllen, klicken Sie mit der rechten Maustaste in der Listenansicht [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Inhalt des Hilfsprogramm-Explorers **auf den** -Instanznamen, und wählen Sie dann **Instanz als nicht verwaltet einrichten**aus.
 
-##  <a name="PowerShell_create_UCP"></a> Erstellen eines neuen Steuerungspunkts für das Hilfsprogramm mithilfe von PowerShell
+##  <a name="create-a-new-utility-control-point-using-powershell"></a><a name="PowerShell_create_UCP"></a> Erstellen eines neuen Steuerungspunkts für das Hilfsprogramm mithilfe von PowerShell
  Verwenden Sie das folgende Beispiel, um einen neuen Steuerungspunkt für das Hilfsprogramm zu erstellen:
 
 ```powershell

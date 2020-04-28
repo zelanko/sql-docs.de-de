@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 82d8de1aa71507b8d1397befc287041def1ab839
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76929538"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>Datentypunterstützung für Verbesserungen von OLE DB-Datum und -Uhrzeit
@@ -26,7 +26,7 @@ ms.locfileid: "76929538"
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>Datentypzuordnung zu Rowsets und Parametern  
  OLE DB stellt zwei neue Datentypen bereit, um die neuen Servertypen zu unterstützen: DBTYPE_DBTIME2 und DBTYPE_DBTIMESTAMPOFFSET. Die folgende Tabelle zeigt die vollständige Servertypzuordnung:  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Datentyp|OLE DB-Datentyp|value|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp|OLE DB-Datentyp|Wert|  
 |-----------------------------------------|----------------------|-----------|  
 |datetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
@@ -37,10 +37,9 @@ ms.locfileid: "76929538"
   
 ## <a name="data-formats-strings-and-literals"></a>Datenformate: Zeichenfolgen und Literale  
   
-|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Datentyp|OLE DB-Datentyp|Zeichenfolgenformat für Clientkonvertierungen|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp|OLE DB-Datentyp|Zeichenfolgenformat für Clientkonvertierungen|  
 |-----------------------------------------|----------------------|------------------------------------------|  
-|datetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt bis zu drei Sekundenbruchteilziffern für Datetime.|  
+|datetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss[.999]'<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] unterstützt bis zu drei Sekundenbruchteilziffern für Datetime.|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|'yyyy-mm-dd hh:mm:ss'<br /><br /> Dieser Datentyp verfügt über eine Genauigkeit von einer Minute. Die zweite Komponente ist 0 (null) auf Ausgabe und wird auf Eingabe vom Server gerundet.|  
 |date|DBTYPE_DBDATE|'yyyy-mm-dd'|  
 |time|DBTYPE_DBTIME2|'hh:mm:ss[.9999999]'<br /><br /> Sekundenbruchteile können optional mit bis zu sieben Ziffern angegeben werden.|  
@@ -110,7 +109,7 @@ typedef struct tagDBTIMESTAMPOFFSET {
     } DBTIMESTAMPOFFSET;  
 ```  
   
- Wenn `timezone_hour` negativ ist, `timezone_minute` muss negativ oder 0 (null) sein. Wenn `timezone_hour` positiv ist, `timezone minute` muss positiv oder NULL sein. Wenn `timezone_hour` 0 (null) ist, kann `timezone minute` einen Wert zwischen -59 und +59 haben.  
+ Wenn `timezone_hour` negativ ist, muss `timezone_minute` negativ oder 0 (null) sein. Wenn `timezone_hour` positiv ist, muss `timezone minute` positiv oder 0 (null) sein. Wenn `timezone_hour` 0 (null) ist, kann `timezone minute` einen Wert zwischen -59 und +59 haben.  
   
 ### <a name="ssvariant"></a>SSVARIANT  
  Dieses struct enthält jetzt die neuen Strukturen DBTYPE_DBTIME2 und DBTYPE_DBTIMESTAMPOFFSET und fügt Sekundenbruchteile für entsprechende Typen hinzu.  
@@ -169,18 +168,18 @@ enum SQLVARENUM {
 ```  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>Datentypzuordnung zu ITableDefinition::CreateTable  
- Die folgende Typzuordnung wird mit DBCOLUMNDESC-Strukturen verwendet, die von ITableDefinition:: aufgabeneable verwendet werden:  
+ Die folgende Typzuordnung wird mit DBCOLUMNDESC-Strukturen verwendet, die von ITableDefinition::CreateTable verwendet werden:  
   
-|OLE DB-Datentyp (*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Datentyp|Notizen|  
+|OLE DB-Datentyp (*wType*)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp|Hinweise|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
-|DBTYPE_DBTIMESTAMP|`datetime2`cker|Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter überprüft das DBCOLUMDESC *bScale* -Element, um die Genauigkeit der Sekundenbruchteile zu bestimmen.|  
-|DBTYPE_DBTIME2|`time`cker|Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter überprüft das DBCOLUMDESC *bScale* -Element, um die Genauigkeit der Sekundenbruchteile zu bestimmen.|  
-|DBTYPE_DBTIMESTAMPOFFSET|`datetimeoffset`cker|Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter überprüft das DBCOLUMDESC *bScale* -Element, um die Genauigkeit der Sekundenbruchteile zu bestimmen.|  
+|DBTYPE_DBTIMESTAMP|`datetime2`(p)|Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter überprüft das DBCOLUMDESC *bScale* -Element, um die Genauigkeit der Sekundenbruchteile zu bestimmen.|  
+|DBTYPE_DBTIME2|`time`(p)|Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter überprüft das DBCOLUMDESC *bScale* -Element, um die Genauigkeit der Sekundenbruchteile zu bestimmen.|  
+|DBTYPE_DBTIMESTAMPOFFSET|`datetimeoffset`(p)|Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB-Anbieter überprüft das DBCOLUMDESC *bScale* -Element, um die Genauigkeit der Sekundenbruchteile zu bestimmen.|  
   
  Wenn eine Anwendung DBTYPE_DBTIMESTAMP in *wType*angibt, kann Sie die Zuordnung zu `datetime2` überschreiben, indem Sie einen Typnamen in *pwsztytzame*bereitstellt. Wenn `datetime` angegeben wird, muss *bScale* 3 sein. Wenn `smalldatetime` angegeben wird, muss *bScale* den Wert 0 aufweisen. Wenn *bScale* nicht mit *wType* und *pwsztykame*konsistent ist, wird DB_E_BADSCALE zurückgegeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Datums-und Uhrzeit Verbesserungen &#40;OLE DB&#41;](date-and-time-improvements-ole-db.md)  
+ [Date and Time Improvements &#40;OLE DB&#41; (Verbesserungen bei Datum und Uhrzeit &#40;OLE DB&#41;)](date-and-time-improvements-ole-db.md)  
   
   

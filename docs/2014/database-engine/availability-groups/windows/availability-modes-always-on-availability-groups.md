@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9c05fe87c5121427fb2ad96bd8b912be308968a7
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175469"
 ---
 # <a name="availability-modes-always-on-availability-groups"></a>Verfügbarkeitsmodi (Always On-Verfügbarkeitsgruppen)
@@ -31,14 +31,14 @@ ms.locfileid: "78175469"
 >  Wenn das Sitzungstimeout des primären Replikats von einem sekundären Replikat überschritten wird, wechselt das primäre Replikat für das betreffende sekundäre Replikat vorübergehend in den Modus für asynchrone Commits. Wenn das sekundäre Replikat erneut eine Verbindung mit dem primären Replikat herstellt, wird der Modus für synchrone Commits wieder aufgenommen.
 
 
-##  <a name="SupportedAvModes"></a>Unterstützte Verfügbarkeits Modi
+##  <a name="supported-availability-modes"></a><a name="SupportedAvModes"></a>Unterstützte Verfügbarkeits Modi
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]unterstützt zwei Verfügbarkeits Modi: asynchroner Commit-Modus und synchroner Commit-Modus wie folgt:
 
--   Der *asynchrone Commit-Modus* ist eine Lösung für die Notfall Wiederherstellung, die gut funktioniert, wenn die Verfügbarkeits Replikate über beträchtliche Entfernungen verteilt werden. Wenn jedes sekundäre Replikat im Modus für asynchrone Commits ausgeführt wird, wartet das primäre Replikat nicht, bis ein sekundäres Replikat das Protokoll festschreibt. Stattdessen sendet das primäre Replikat die Transaktionsbestätigung, unmittelbar nachdem es einen Protokolldatensatz in die lokale Protokolldatei geschrieben hat, an den Client. Das primäre Replikat wird mit minimaler Transaktionswartezeit bezogen auf ein sekundäres Replikat ausgeführt, das für den Modus für asynchrone Commits konfiguriert wurde.  Wenn das aktuelle primäre Replikat für den Verfügbarkeitsmodus "Asynchroner Commit" konfiguriert ist, führt es für alle sekundären Replikate, unabhängig von deren Verfügbarkeitsmoduseinstellungen, asynchron ein Commit für Transaktionen aus.
+-   *Der Modus für asynchrone Commits* ist eine Wiederherstellungslösung für Notfälle, die gut funktioniert, wenn die Verfügbarkeitsreplikate über weite Entfernungen verteilt sind. Wenn jedes sekundäre Replikat im Modus für asynchrone Commits ausgeführt wird, wartet das primäre Replikat nicht, bis ein sekundäres Replikat das Protokoll festschreibt. Stattdessen sendet das primäre Replikat die Transaktionsbestätigung, unmittelbar nachdem es einen Protokolldatensatz in die lokale Protokolldatei geschrieben hat, an den Client. Das primäre Replikat wird mit minimaler Transaktionswartezeit bezogen auf ein sekundäres Replikat ausgeführt, das für den Modus für asynchrone Commits konfiguriert wurde.  Wenn das aktuelle primäre Replikat für den Verfügbarkeitsmodus "Asynchroner Commit" konfiguriert ist, führt es für alle sekundären Replikate, unabhängig von deren Verfügbarkeitsmoduseinstellungen, asynchron ein Commit für Transaktionen aus.
 
      Weitere Informationen finden Sie weiter unten in diesem Thema unter [Verfügbarkeitsmodus "Asynchroner Commit"](#AsyncCommitAvMode).
 
--   Der *Modus für synchrone* Commits unterstreicht hohe Verfügbarkeit gegenüber der Leistung, was zu einer erhöhten Transaktions Latenz geführt hat. Im Modus für synchrone Commits wird mit dem Senden der Transaktionsbestätigung an den Client gewartet, bis das sekundäre Replikat das Protokoll auf dem Datenträger festgeschrieben hat. Wenn die Datensynchronisierung für eine sekundäre Datenbank beginnt, fängt das sekundäre Replikat an, eingehende Protokolldatensätze von der entsprechenden primären Datenbank zu übernehmen. Sobald alle Protokolldatensätze festgeschrieben wurden, wechselt die sekundäre Datenbank in den Status SYNCHRONIZED. Anschließend wird jede neue Transaktion vom sekundären Replikat festgeschrieben, bevor der Protokolleintrag in die lokale Protokolldatei geschrieben wird. Wenn alle sekundären Datenbanken eines gegebenen sekundären Replikats synchronisiert worden sind, unterstützt der Modus für synchrone Commits manuelles Failover und optional automatisches Failover.
+-   Im*Modus für synchrone Commits* hat Hochverfügbarkeit Vorrang vor Leistung, und dies hat eine größere Transaktionswartezeit zur Folge. Im Modus für synchrone Commits wird mit dem Senden der Transaktionsbestätigung an den Client gewartet, bis das sekundäre Replikat das Protokoll auf dem Datenträger festgeschrieben hat. Wenn die Datensynchronisierung für eine sekundäre Datenbank beginnt, fängt das sekundäre Replikat an, eingehende Protokolldatensätze von der entsprechenden primären Datenbank zu übernehmen. Sobald alle Protokolldatensätze festgeschrieben wurden, wechselt die sekundäre Datenbank in den Status SYNCHRONIZED. Anschließend wird jede neue Transaktion vom sekundären Replikat festgeschrieben, bevor der Protokolleintrag in die lokale Protokolldatei geschrieben wird. Wenn alle sekundären Datenbanken eines gegebenen sekundären Replikats synchronisiert worden sind, unterstützt der Modus für synchrone Commits manuelles Failover und optional automatisches Failover.
 
      Weitere Informationen finden Sie weiter unten in diesem Thema unter [Verfügbarkeitsmodus "Synchroner Commit"](#SyncCommitAvMode).
 
@@ -57,18 +57,18 @@ ms.locfileid: "78175469"
 
  Normalerweise wird Knoten 04 als Replikat mit asynchronem Commit an einem Standort für die Notfallwiederherstellung bereitgestellt. Die Tatsache, dass die Knoten 01, 02 und 03 nach einem Failover auf Knoten 04 im Modus für asynchrone Commits verbleiben, hilft, einen Leistungsabfall in der Verfügbarkeitsgruppe zu vermeiden, der infolge einer hohen Netzwerklatenz zwischen den beiden Standorten auftritt.
 
-##  <a name="AsyncCommitAvMode"></a>Verfügbarkeits Modus für asynchrone Commitvorgänge
+##  <a name="asynchronous-commit-availability-mode"></a><a name="AsyncCommitAvMode"></a>Verfügbarkeits Modus für asynchrone Commitvorgänge
  Im *Modus für asynchrone Commits*wird das sekundäre Replikat nie mit dem primären Replikat synchronisiert. Obwohl eine gegebene sekundäre Datenbank den gleichen Datenbestand wie eine entsprechende primäre Datenbank aufweisen kann, kann der Datenbestand jeder sekundären Datenbank jederzeit älter sein. Der Modus für asynchrone Commits kann in einem Notfallwiederherstellungsszenario nützlich sein, in dem das primäre Replikat und das sekundäre Replikat räumlich weit voneinander getrennt sind und in dem sich kleine Fehler nicht auf das primäre Replikat auswirken sollen, oder in Situationen, in denen die Leistung wichtiger als der Schutz der synchronisierten Daten ist. Zudem ist vorteilhaft, dass sich Probleme mit dem sekundären Replikat nie auf das primäre Replikat auswirken, weil das primäre Replikat nicht auf die Bestätigungen des sekundären Replikats wartet.
 
  Das sekundäre Replikat im Modus für asynchrone Commits versucht, mit den vom primären Replikat empfangenen Protokolldatensätzen Schritt zu halten. Im Modus für asynchrone Commits bleiben sekundäre Datenbanken jedoch stets unsynchronisiert und weisen meist einen älteren Datenbestand als die zugehörigen primären Datenbanken auf. In der Regel ist die Lücke zwischen einer sekundären Datenbank mit asynchronem Commit und der entsprechenden primären Datenbank klein. Doch kann sich die Lücke erheblich vergrößern, wenn der Server, der das sekundäre Replikat hostet, überlastet oder das Netzwerk langsam ist.
 
  Im Modus für asynchrone Commits wird lediglich ein erzwungenes manuelles Failover (mit möglichem Datenverlust) unterstützt. Das erzwungene Failover ist lediglich als letztes Mittel für Situationen vorgesehen, in denen das aktuelle primäre Replikat über einen längeren Zeitraum nicht verfügbar ist und die sofortige Verfügbarkeit der primären Datenbanken wichtiger ist als das Risiko eines möglichen Datenverlusts. Das Failoverziel muss ein Replikat sein, dessen Rolle im SECONDARY oder RESOLVING-Status ist. Das Failoverziel wechselt in die primäre Rolle, und seine Datenbankkopien werden zur primären Datenbank. Sämtliche verbleibenden sekundären Datenbanken werden zusammen mit den bisherigen primären Datenbanken, sobald diese verfügbar werden, angehalten, bis Sie sie einzeln manuell fortsetzen. Unter dem Modus für asynchrone Commits gehen alle Transaktionsprotokolle verloren, die das ursprüngliche primäre Replikat noch nicht an das frühere sekundäre Replikat gesendet hatte. Dies bedeutet, dass in den neuen primären Datenbanken möglicherweise einige oder alle Transaktion fehlen, für die kürzlich ein Commit ausgeführt wurde. Weitere Informationen zur Funktionsweise des erzwungenen Failovers und bewährte Methoden für die Verwendung finden Sie unter [Failover und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](failover-and-failover-modes-always-on-availability-groups.md).
 
-##  <a name="SyncCommitAvMode"></a>Verfügbarkeits Modus mit synchronem Commit
+##  <a name="synchronous-commit-availability-mode"></a><a name="SyncCommitAvMode"></a>Verfügbarkeits Modus mit synchronem Commit
  Im Verfügbarkeitsmodus mit synchronem Commit (*Modus für synchrone Commits*) wird jede sekundäre Datenbank, sobald sie einer Verfügbarkeitsgruppe zugeordnet wurde, so schnell wie möglich auf den Stand der entsprechenden primären Datenbank gebracht und wechselt in den Status SYNCHRONIZED. Die sekundäre Datenbank verbleibt so lange im Status SYNCHRONIZED, bis die Datensynchronisierung fortgesetzt wird. Damit wird sichergestellt, dass für jede Transaktion, für die auf einer bestimmten primären Datenbank ein Commit ausgeführt wird, auch auf der neuen sekundären Datenbank ein Commit ausgeführt wurde. Wenn jede sekundäre Datenbank für ein bestimmtes sekundäres Replikat synchronisiert wurde, wird der Synchronisierungsstatus des sekundären Replikats insgesamt auf den Status HEALTHY festgelegt.
 
 
-###  <a name="DisruptSync"></a>Faktoren, die die Datensynchronisierung stören
+###  <a name="factors-that-disrupt-data-synchronization"></a><a name="DisruptSync"></a> Faktoren, die die Datensynchronisierung stören
  Nachdem alle Datenbanken synchronisiert wurden, wechselt ein sekundäres Replikat in den Status HEALTHY. Das synchronisierte sekundäre Replikat verbleibt so lange im Status HEALTHY, bis eine der folgenden Situationen eintritt:
 
 -   Eine Verzögerung oder eine Störung im Netzwerk oder auf dem Computer führt dazu, dass für die Sitzung zwischen dem sekundären und dem primären Replikat ein Timeout auftritt.
@@ -87,7 +87,7 @@ ms.locfileid: "78175469"
 > [!TIP]
 >  Fragen Sie die **synchronization_health** - oder **synchronization_health_desc** -Spalte von [sys.dm_hadr_availability_group_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql), [sys.dm_hadr_availability_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)oder [sys.dm_hadr_database_replica_states](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)ab, um den Synchronisierungsstatus einer Verfügbarkeitsgruppe, eines Verfügbarkeitsreplikats oder einer Verfügbarkeitsdatenbank anzuzeigen.
 
-###  <a name="HowSyncWorks"></a>Funktionsweise der Synchronisierung auf einem sekundären Replikat
+###  <a name="how-synchronization-works-on-a-secondary-replica"></a><a name="HowSyncWorks"></a>Funktionsweise der Synchronisierung auf einem sekundären Replikat
  Nachdem im Modus für synchrone Commits ein sekundäres Replikat mit der Verfügbarkeitsgruppe verknüpft und eine Sitzung mit dem primären Replikat eingerichtet wurde, schreibt das sekundäre Replikat eingehende Protokolldatensätze auf den Datenträger (*schreibt das Protokoll fest*) und sendet eine Bestätigungsmeldung an das primäre Replikat. Sobald das festgeschriebene Protokoll auf der sekundären Datenbank das Ende des Protokolls auf der primären Datenbank erreicht hat, wird der Status der sekundären Datenbank auf SYNCHRONIZED festgelegt. Wie viel Zeit für die Synchronisierung benötigt wird, hängt in hohem Maße davon ab, wie weit die sekundäre Datenbank zu Beginn der Sitzung gegenüber der primären Datenbank zurücklag (gemessen an der Anzahl der Protokolldatensätze, die anfänglich vom primären Replikat empfangen wurden), sowie von der Arbeitslast der primären Datenbank und der Geschwindigkeit des Computers der Serverinstanz, die als Host für das sekundäre Replikat fungiert.
 
  Die synchrone Operation wird wie folgt beibehalten:
@@ -108,22 +108,22 @@ ms.locfileid: "78175469"
 ### <a name="synchronous-commit-mode-with-only-manual-failover"></a>Modus für synchrone Commits ausschließlich mit manuellem Failover
  Wenn diese Replikate verbunden sind und die Datenbank synchronisiert ist, wird das manuelle Failover unterstützt. Ein Ausfall des sekundären Replikats wirkt sich nicht auf das primäre Replikat aus. Das primäre Replikat wird ungeschützt ausgeführt, wenn keine Replikate mit dem Status SYNCHRONIZED vorhanden sind (das heißt, ohne Daten an ein sekundäres Replikat zu senden). Wenn das primäre Replikat verloren geht, wechseln die sekundären Replikate in den Status RESOLVING, aber der Datenbankbesitzer kann ein Failover zum sekundären Replikat (mit möglichem Datenverlust) erzwingen. Weitere Informationen finden Sie unter [Failover und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](failover-and-failover-modes-always-on-availability-groups.md).
 
-###  <a name="SyncCommitWithAuto"></a>Synchroner Commit-Modus mit automatischem Failover
- Das automatische Failover bietet eine hohe Verfügbarkeit, indem sichergestellt wird, dass die Datenbank nach dem Ausfall des primären Replikats schnell wieder verfügbar gemacht wird. Um eine Verfügbarkeitsgruppe für ein automatisches Failover zu konfigurieren, müssen Sie sowohl das aktuelle primäre Replikat als auch ein sekundäres Replikat für den Modus für synchrone Commits mit automatischem Failover festlegen.
+###  <a name="synchronous-commit-mode-with-automatic-failover"></a><a name="SyncCommitWithAuto"></a>Synchroner Commit-Modus mit automatischem Failover
+ Das automatische Failover bietet Hochverfügbarkeit, indem sichergestellt wird, dass die Datenbank nach dem Ausfall des primären Replikats schnell wieder verfügbar gemacht wird. Um eine Verfügbarkeitsgruppe für ein automatisches Failover zu konfigurieren, müssen Sie sowohl das aktuelle primäre Replikat als auch ein sekundäres Replikat für den Modus für synchrone Commits mit automatischem Failover festlegen.
 
  Damit ein automatisches Failover innerhalb einer bestimmten Zeit ausgeführt werden kann, muss dieses sekundäre Replikat darüber hinaus mit dem primären Replikat synchronisiert werden (Synchronisierung aller sekundären Datenbanken), und der WSFC (Windows Server Failover Clustering)-Cluster muss über ein Quorum verfügen. Wenn das primäre Replikat unter diesen Bedingungen ausfällt, findet ein automatisches Failover statt. Das sekundäre Replikat wechselt in die Rolle des primären Replikats und bietet seine Datenbank als primäre Datenbank an. Weitere Informationen finden Sie im Abschnitt "Automatisches Failover" des Themas [Failover und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](failover-and-failover-modes-always-on-availability-groups.md) .
 
 > [!NOTE]
 >  Informationen zu WSFC-Quorum und [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] finden Sie unter [WSFC-Quorummodi und Abstimmungskonfiguration &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md).
 
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben
- **So ändern Sie den Verfügbarkeits Modus und den Failovermodus**
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben
+ **So ändern Sie den Verfügbarkeitsmodus und Failovermodus**
 
 -   [Ändern des Verfügbarkeitsmodus eines Verfügbarkeitsreplikats &#40;SQL Server&#41;](change-the-availability-mode-of-an-availability-replica-sql-server.md)
 
 -   [Ändern des Failovermodus eines Verfügbarkeitsreplikats &#40;SQL Server&#41;](change-the-failover-mode-of-an-availability-replica-sql-server.md)
 
- **So passen Sie Quorum Stimmen an**
+ **So passen Sie Quorumsstimmen an**
 
 -   [Anzeigen von Cluster-Quorum-NodeWeight-Einstellungen](../../../sql-server/failover-clusters/windows/view-cluster-quorum-nodeweight-settings.md)
 
@@ -135,19 +135,19 @@ ms.locfileid: "78175469"
 
 -   [Ausführen eines geplanten manuellen Failovers einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md)
 
--   [Ausführen eines erzwungenen manuellen Failovers einer Verfügbarkeitsgruppe &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)
+-   [Führen Sie ein erzwungenes manuelles Failover einer Verfügbarkeits Gruppe &#40;SQL Server aus&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)
 
 -   [Verwenden des Assistenten für Failover-Verfügbarkeitsgruppen &#40;SQL Server Management Studio&#41;](use-the-fail-over-availability-group-wizard-sql-server-management-studio.md)
 
- **So zeigen Sie Verfügbarkeits Gruppe, Verfügbarkeits Replikat und Daten Bank Status**
+ **So zeigen Sie Verfügbarkeitsgruppe, Verfügbarkeitsreplikat und Datenbankstatus an**
 
--   [sys. dm_hadr_availability_group_states &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql)
+-   [sys.dm_hadr_availability_group_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-group-states-transact-sql)
 
--   [sys. dm_hadr_availability_replica_states &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)
+-   [sys.dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql)
 
--   [sys. dm_hadr_database_replica_states &#40;Transact-SQL-&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)
+-   [sys.dm_hadr_database_replica_states &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql)
 
-##  <a name="RelatedContent"></a> Verwandte Inhalte
+##  <a name="related-content"></a><a name="RelatedContent"></a> Verwandte Inhalte
 
 -   [Microsoft SQL Server AlwaysOn-Lösungshandbuch zu hoher Verfügbarkeit und Notfallwiederherstellung](https://go.microsoft.com/fwlink/?LinkId=227600)
 

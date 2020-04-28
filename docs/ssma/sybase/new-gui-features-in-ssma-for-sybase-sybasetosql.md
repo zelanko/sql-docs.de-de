@@ -10,10 +10,10 @@ ms.assetid: d3c60e8c-f0a7-4590-8ece-c68ceaeaea4a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3d6176934e5a31cc245354db70c5295afc70d2d8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76909983"
 ---
 # <a name="new-gui-features-in-ssma-for-sybase-sybasetosql"></a>Neue GUI-Features in SSMA für Sybase (sybasedesql)
@@ -72,7 +72,7 @@ Sie können ein Lesezeichen wie folgt entfernen:
   
 -   Schaltflächen entfernen oder alle entfernen im Dialogfeld "Lesezeichen verwalten"  
   
-### <a name="manage-bookmarks"></a>Lesezeichen verwalten  
+### <a name="manage-bookmarks"></a>Verwalten von Textmarken  
 Um das Dialogfeld Lesezeichen verwalten zu öffnen, klicken Sie im Menü Bearbeiten auf Lesezeichen verwalten. Im Dialogfeld wird eine Liste vorhandener Lesezeichen angezeigt. Sie können die Schaltflächen auf der rechten Seite des Dialog Felds verwenden, um die Lesezeichen zu verwalten.  
   
 ## <a name="object-history"></a>Objekt Verlauf  

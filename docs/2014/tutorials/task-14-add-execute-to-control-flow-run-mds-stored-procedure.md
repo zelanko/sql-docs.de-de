@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8c926f2ea3d9ef9973f75764e254c5e0884836e3
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177290"
 ---
-# <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>Aufgabe 14: Hinzufügen von Execute SQL Task zur Ablaufsteuerung, um die gespeicherte Prozedur für MDS auszuführen
+# <a name="task-14-adding-execute-sql-task-to-control-flow-to-run-the-stored-procedure-for-mds"></a>Aufgabe 14: Hinzufügen des Tasks „SQL ausführen“ zur Ablaufsteuerung, um die gespeicherte Prozedur für MDS auszuführen
   Nachdem Sie Daten in die Stagingtabellen von MDS geladen haben, müssen Sie eine gespeicherte Prozedur ausführen, die der Tabelle zugeordnet ist, um die Daten aus dem Staging in die entsprechenden Tabellen in der MDS-Datenbank zu laden. Diese gespeicherte Prozedur hat zwei erforderliche Parameter, die Sie übergeben müssen: LogFlag und VersionName. LogFlag gibt an, ob Transaktionen während des Stagingprozesses protokolliert werden, und VersionName gibt die Version des Modells an. Weitere Informationen finden Sie im Thema [gestaffelte gespeicherte Prozeduren](https://msdn.microsoft.com/library/hh231028.aspx) .
 
  In dieser Aufgabe fügen Sie der Ablaufsteuerung den Task "SQL ausführen" hinzu, um die gespeicherte Prozedur aufzurufen und die bereitgestellten Daten in die entsprechenden MDS-Tabellen zu laden.
@@ -34,7 +34,7 @@ ms.locfileid: "78177290"
 
 5.  Fügen Sie mithilfe des Fensters **Variablen** zwei neue Variablen mit den folgenden Einstellungen hinzu. Wenn das Fenster **Variablen** nicht angezeigt wird, klicken Sie in der Menüleiste auf **SSIS** , und klicken Sie dann auf **Variablen**.
 
-    |Name|Datentyp|value|
+    |Name|Datentyp|Wert|
     |----------|---------------|-----------|
     |LogFlag|Int32|1|
     |VersionName|String|VERSION_1|
@@ -71,6 +71,6 @@ ms.locfileid: "78177290"
 15. Klicken Sie auf **OK** , um das Dialogfeld **SQL-Editor ausführen** zu schließen.
 
 ## <a name="next-step"></a>Nächster Schritt
- [Aufgabe 15: Erstellen und Ausführen des SSIS-Projekts](../../2014/tutorials/task-15-building-and-running-the-ssis-project.md)
+ [Aufgabe 15: Erstellen und Ausführen des SSIS-Projekts](../../2014/tutorials/task-15-building-and-running-the-ssis-project.md)
 
 

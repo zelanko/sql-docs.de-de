@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 27667eececc3905b927b7e888e692a8261d14d30
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177059"
 ---
 # <a name="create-a-linked-report"></a>Erstellen eines verknüpften Berichts
@@ -34,15 +34,13 @@ ms.locfileid: "78177059"
 
 2.  Geben Sie einen Namen für den neuen verknüpften Bericht ein. Geben Sie optional eine Beschreibung ein.
 
-3.  Um einen anderen Ordner für den Bericht auszuwählen, klicken Sie auf **Speicherort ändern**. Klicken Sie auf den Ordner, den Sie verwenden möchten, oder geben Sie den Ordnernamen im Feld **Speicherort** ein. 
-  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Wenn Sie keinen anderen Ordner auswählen, wird der verknüpfte Bericht im aktuellen Ordner (in dem der Bericht, auf dem er basiert, gespeichert ist) erstellt.
+3.  Um einen anderen Ordner für den Bericht auszuwählen, klicken Sie auf **Speicherort ändern**. Klicken Sie auf den Ordner, den Sie verwenden möchten, oder geben Sie den Ordnernamen im Feld **Speicherort** ein. [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Wenn Sie keinen anderen Ordner auswählen, wird der verknüpfte Bericht im aktuellen Ordner (in dem der Bericht, auf dem er basiert, gespeichert ist) erstellt.
 
-4.  
-  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Der verknüpfte Bericht wird geöffnet.
+4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)] Der verknüpfte Bericht wird geöffnet.
 
      Das Symbol für einen verknüpften Bericht unterscheidet sich von anderen Elementen, die von einem Berichtsserver verwaltet werden. Das folgende Symbol steht für einen verknüpften Bericht:
 
-     ![Verknüpfter Bericht (Symbol)](../media/hlp-16linked.gif "Verknüpfter Bericht (Symbol)")
+     ![Symbol für einen verknüpften Bericht](../media/hlp-16linked.gif "Symbol für einen verknüpften Bericht")
 
 ## <a name="see-also"></a>Weitere Informationen
  [Öffnen und schließen Sie einen Bericht &#40;Berichts-Manager&#41;](../reports/open-and-close-a-report-report-manager.md) [neuen verknüpften Berichtsseite &#40;Berichts-Manager](../new-linked-report-page-report-manager.md) [&#41;Seite Speicherort für Elemente auswählen &#40;Berichts-Manager&#41;Seite](../choose-item-location-page-report-manager.md) [Allgemeine Eigenschaften die Berichte &#40;](../general-properties-page-reports-report-manager.md) Berichts-Manager&#41;Reporting Services &#40;&#41;[SSRS](../reporting-services-concepts-ssrs.md) Berichts-Manager &#40;&#41;[SSRS im einheitlichen Modus](../report-manager-ssrs-native-mode.md)

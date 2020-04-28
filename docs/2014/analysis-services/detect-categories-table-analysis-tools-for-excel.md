@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1c54c6f369d519812bb79cacf51bd1ad00a1dfb5
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175226"
 ---
 # <a name="detect-categories-table-analysis-tools-for-excel"></a>Kategorien erkennen (Tabellenanalysetool für Excel)
@@ -65,13 +65,13 @@ ms.locfileid: "78175226"
  Die Schattierung in der Spalte, **relative Wichtigkeit**, gibt an, wie wichtig diese Kombination von Attribut und Wert ist. Je länger der Balken, desto wahrscheinlicher ist es, dass das Attribut für seine Kategorie stark repräsentativ ist.
 
 ### <a name="categories-profile-chart"></a>Kategorieprofildiagramm
- Das abschließende Diagramm im Arbeits **** Blatt " **kategorieberichte", "Kategorieprofile**", ist ein interaktives **PivotChart** , das Sie verwenden können, um Felder neu anzuordnen und auszublenden, nach Werten zu filtern und die Diagramm Darstellung anzupassen.
+ Das abschließende Diagramm im Arbeits **Categories Report** Blatt " **kategorieberichte", "Kategorieprofile**", ist ein interaktives **PivotChart** , das Sie verwenden können, um Felder neu anzuordnen und auszublenden, nach Werten zu filtern und die Diagramm Darstellung anzupassen.
 
  Excel 2013 bietet jetzt **Diagramm Stile** und **Diagramm Elemente** -Steuerelemente direkt in der Entwurfs Oberfläche, die das verbessern des Diagramm Entwurfs erleichtern.
 
  ![Mit dem Tool "Kategorien erkennen" erstellter Bericht](media/dm13-tat-detectcat-report3.gif "Mit dem Tool "Kategorien erkennen" erstellter Bericht")
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
  Das Tool **Kategorien erkennen** hat keine Anforderungen hinsichtlich der Menge oder des Datentyps.
 
 > [!NOTE]

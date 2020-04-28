@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 761abc52c7ef0ba974540ff0b87a57773a4badc4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76918092"
 ---
 # <a name="glossary-report-builder"></a>Glossar (Berichts-Generator)
@@ -30,7 +30,7 @@ ms.locfileid: "76918092"
 |Aggregatfunktion|Eine Funktion, die Berechnungen für mehrere Werte ausführt und nur einen zusammenfassenden Wert zurückgibt.|  
 |Aggregat von Aggregaten (aggregate of aggregates)|Ein zusammenfassender Wert, der aus Aggregaten berechnet wird, z. B. der maximale Wert einer Reihe von Summen.|  
 |Aggregatabfrage|Eine Abfrage, die Informationen aus mehreren Zeilen zusammenfasst, indem sie eine Aggregatfunktion wie SUM oder AVG einschließt.|  
-|Aggregation|Eine Tabelle oder Struktur, die im Voraus berechnete Daten für einen Cube enthält.|  
+|aggregation|Eine Tabelle oder Struktur, die im Voraus berechnete Daten für einen Cube enthält.|  
 |alias|Ein alternativer Name für eine Tabelle oder Spalte, der häufig in Ausdrücken verwendet wird, um den Namen für nachfolgende Verweise im Code abzukürzen, mögliche mehrdeutige Verweise zu vermeiden oder einen aussagekräftigeren Namen in der Ausgabe einer Abfrage bereitzustellen.|  
 |Analytische Daten|Ein Satz numerischer Werte in einem Bericht, die analysiert werden können. In einem Kartenbericht steuern analytische Werte die Farbe, den Markertyp oder die Größe von Kartenelementen auf jeder Kartenebene.|  
 |Antialiasing (antialiasing)|Die Verwendung eines Algorithmus zum Glätten einer gezackten Kurvenannäherung in Grafiken.|  
@@ -44,11 +44,11 @@ ms.locfileid: "76918092"
 |Sichern (back up)|Erstellen einer Sicherungskopie eines Programms, eines Datenträgers oder von Daten.|  
 |Sicherung|Eine Sammlung von Dateien, Ordnern und anderen Daten, die in einer Datei oder auf mindestens einem Band dupliziert und gespeichert wurde.|  
 |Basistabelle|Eine Tabelle, die dauerhaft in einer Datenbank gespeichert ist. Auf Basistabellen wird durch Sichten, Cursor, SQL-Anweisungen und gespeicherte Prozeduren verwiesen.|  
-|batch|1. Ein Satz von SQL-Anweisungen, die gemeinsam übermittelt und als Gruppe ausgeführt werden.  2. In Reporting Services eine Auflistung von SOAP-Methodenaufrufen innerhalb einer einzelnen Transaktion.|  
+|Batch|1. Ein Satz von SQL-Anweisungen, die gemeinsam übermittelt und als Gruppe ausgeführt werden.  2. In Reporting Services eine Auflistung von SOAP-Methodenaufrufen innerhalb einer einzelnen Transaktion.|  
 |Binary Large Object (BLOB) (binary large object, BLOB)|Außergewöhnlich große binäre Daten (z. B. digital gespeicherte Bilder, Audio- oder Multimediatracks) oder eine Variable oder Tabellenspalte, die zum Speichern solcher Werte groß genug ist.|  
 |Bitweise Operation (bitwise operation)|Ein Vorgang, der ein einzelnes Bit bearbeitet oder testet, ob ein Bit ON oder OFF ist.|  
 |Lesezeichen (bookmark)|Ein Link in einem Bericht, der zu einer anderen Stelle innerhalb des Berichts springt.|  
-|Boolean|Eine Operation oder ein Ausdruck, die bzw. der nur zu TRUE oder FALSE ausgewertet werden kann.|  
+|Boolesch|Eine Operation oder ein Ausdruck, die bzw. der nur zu TRUE oder FALSE ausgewertet werden kann.|  
 |Blasendiagrammkarte|Eine Kartenebene, auf der Kreise variabler Größe angezeigt werden. Blasen sind auf Polygonmittelpunkten oder -punkten zentriert.|  
 |Integrierte Funktionen|Eine Gruppe vordefinierter Funktionen, die als Bestandteil der Sprachen Transact-SQL und MDX (Multidimensional Expressions) bereitgestellt werden.|  
 |Berechnete Spalte|Eine Spalte in einer Tabelle, in der anstelle gespeicherter Daten das Ergebnis eines Ausdrucks angezeigt wird.|  
@@ -63,7 +63,7 @@ ms.locfileid: "76918092"
 |Untergeordnetes Element|Ein Element in der nächsten untergeordneten Ebene einer Hierarchie, das eine direkte Beziehung zum aktuellen Element besitzt.|  
 |Klausel (clause)|In Transact-SQL eine Untereinheit einer SQL-Anweisung. Eine Klausel beginnt mit einem Schlüsselwort.|  
 |Bericht mit Durchklicken|Ein Bericht, in dem die zugehörigen Berichtsmodelldaten angezeigt werden, wenn in einem gerenderten Berichts-Generator-Bericht auf die Daten geklickt wird.|  
-|Clientanwendung|Eine Anwendung, die Daten von einem Server abruft und lokale Analysen und Präsentationen von Daten aus relationalen oder mehrdimensionalen Datenbanken ausführt.|  
+|Clientanwendung (client application)|Eine Anwendung, die Daten von einem Server abruft und lokale Analysen und Präsentationen von Daten aus relationalen oder mehrdimensionalen Datenbanken ausführt.|  
 |Clientcursor|Ein Cursor, der auf dem Client implementiert ist. Das gesamte Resultset wird zuerst auf den Client übertragen. Anschließend implementiert die API-Software des Clients die Cursorfunktionalität von diesem zwischengespeicherten Resultset aus.|  
 |CLR|Siehe anderen Begriff: Common Language Runtime (Common Language Runtime)|  
 |CLR-Funktion|Eine Funktion, die für eine SQL Server-Assembly erstellt wird, deren Implementierung in einer Assembly definiert ist, die in der .NET Framework Common Language Runtime (CLR) erstellt wird.|  
@@ -95,7 +95,7 @@ ms.locfileid: "76918092"
 |Datenverarbeitungserweiterung|Eine Komponente in Reporting Services, die zum Abrufen von Berichtsdaten aus einer externen Datenquelle verwendet wird.|  
 |Datenanbieter|Die Softwareebene, die die Kommunikation zwischen Datenerweiterungen und benutzerdefinierter Software behandelt, die für jeden Typ der externen Datenquellen spezifisch ist. Je nach der spezifischen Datenquelle sind mehrere Datenanbieter von Microsoft und von Drittanbietern verfügbar.|  
 |Datenbereich|Ein Berichtselement, das wiederholte Datenzeilen aus einem zugrunde liegenden Dataset in einer Tabelle, einer Matrix, einer Liste oder einem Diagramm anzeigt.|  
-|Datenquelle|1. In ADO und OLE DB der Speicherort von Quelldaten, die von einem OLE DB-Anbieter bereitgestellt werden. 2. Die Quelle der Daten für ein Objekt, wie z. B. einen Cube oder eine Dimension. Außerdem die Spezifikation der für den Zugriff auf Quelldaten notwendigen Informationen. Bezieht sich manchmal auf ein Objekt, dessen ClassType-Eigenschaft den Wert clsDataSource aufweist. <br />3. In Reporting Services ein angegebener Datenquellentyp mit Verbindungszeichenfolge und Anmeldeinformationen, der separat auf einem Berichtsserver gespeichert und für Berichtsprojekte freigegeben oder in eine Berichtsdefinitionsdatei (RDL) eingebettet werden kann.|  
+|Datenquelle (data source)|1. In ADO und OLE DB der Speicherort von Quelldaten, die von einem OLE DB-Anbieter bereitgestellt werden. 2. Die Quelle der Daten für ein Objekt, wie z. B. einen Cube oder eine Dimension. Außerdem die Spezifikation der für den Zugriff auf Quelldaten notwendigen Informationen. Bezieht sich manchmal auf ein Objekt, dessen ClassType-Eigenschaft den Wert clsDataSource aufweist. <br />3. In Reporting Services ein angegebener Datenquellentyp mit Verbindungszeichenfolge und Anmeldeinformationen, der separat auf einem Berichtsserver gespeichert und für Berichtsprojekte freigegeben oder in eine Berichtsdefinitionsdatei (RDL) eingebettet werden kann.|  
 |Datenquellenname (data source name)|In einem Bericht der Name des Datenquellenobjekts.|  
 |Datentyp|Ein Attribut, das die Art der Informationen angibt, die in einer Spalte, einem Parameter oder einer Variablen gespeichert werden können.|  
 |Data Warehouse|Eine Datenbank, die speziell für Abfragen und Analysen strukturiert ist.|  
@@ -112,7 +112,7 @@ ms.locfileid: "76918092"
 |Datenbankskript|Eine Auflistung von Anweisungen, die zum Erstellen von Datenbankobjekten verwendet werden.|  
 |Datengebundenes Bild (data-bound image)|Ein Bild, das in einer Datenbank vorhanden ist, z. B. ein Feld in einer Datenbank, die Bilder enthält.|  
 |Datengesteuertes Abonnement|Ein Abonnement in Reporting Services, für das mit einer Abfrage Abonnementdaten aus einer externen Datenquelle zur Laufzeit abgerufen werden.|  
-|Dataset|1. In OLE DB für OLAP der Satz mehrdimensionaler Daten, der das Ergebnis der Ausführung einer MDX-SELECT-Anweisung (Multidimensional Expressions, mehrdimensionale Ausdrücke) ist.   <br />2. In Reporting Services eine benannte Spezifikation, die eine Datenquellendefinition, eine Abfragedefinition und optional Parameterwerte, berechnete Felder sowie Filter- und Sortierinformationen als Teil einer Berichtsdefinitionsdatei (RDL) enthält. Eine RDL-Datei kann mehrere Datasets enthalten.|  
+|dataset|1. In OLE DB für OLAP der Satz mehrdimensionaler Daten, der das Ergebnis der Ausführung einer MDX-SELECT-Anweisung (Multidimensional Expressions, mehrdimensionale Ausdrücke) ist.   <br />2. In Reporting Services eine benannte Spezifikation, die eine Datenquellendefinition, eine Abfragedefinition und optional Parameterwerte, berechnete Felder sowie Filter- und Sortierinformationen als Teil einer Berichtsdefinitionsdatei (RDL) enthält. Eine RDL-Datei kann mehrere Datasets enthalten.|  
 |DBCS|Doppelbyte-Zeichensatz|  
 |default|1. Ein Datenwert, eine Optionseinstellung, eine Sortierung oder ein Name, der bzw. die automatisch vom System zugewiesen wird, falls der Benutzer den Wert, die Einstellung, die Sortierung oder den Namen nicht angibt. 2. Eine Aktion, die bei bestimmten Ereignissen automatisch ausgeführt wird, falls der Benutzer die auszuführende Aktion nicht angegeben hat.|  
 |Standarddatenbank|Die Datenbank, mit der ein Benutzer sofort nach der Anmeldung bei SQL Server verbunden wird.|  
@@ -144,7 +144,7 @@ ms.locfileid: "76918092"
 |Escapezeichen (escape character)|Mit diesem Zeichen wird festgelegt, dass ein anderes Zeichen innerhalb eines Ausdrucks in seiner eigentlichen Bedeutung und nicht als Operator verstanden werden soll.|  
 |SHP-Datei von ESRI (ESRI .shp file)|Eine von Environmental Systems Research Institute, Inc. (ESRI) entwickelte offene Spezifikation für räumliche Daten.|  
 |ESRI-Shape-Datei (ESRI Shapefile)|Eine von Environmental Systems Research Institute, Inc. (ESRI) entwickelte offene Spezifikation für räumliche Daten.|  
-|Ereignis|Ein signifikantes Vorkommnis im System oder in einer Anwendung, über das Benutzer benachrichtigt werden müssen oder für das dem Protokoll ein Eintrag hinzugefügt werden muss.|  
+|event|Ein signifikantes Vorkommnis im System oder in einer Anwendung, über das Benutzer benachrichtigt werden müssen oder für das dem Protokoll ein Eintrag hinzugefügt werden muss.|  
 |Ereignishandler|1. Eine Softwareroutine, die als Reaktion auf ein Ereignis ausgeführt wird. 2. In Integration Services eine Ablaufsteuerung, die als Reaktion auf ein Laufzeitereignis ausgeführt wird.|  
 |expression|1. In SQL eine Kombination aus Symbolen und Operatoren, die einen Datenwert ergeben. 2. In Integration Services eine Kombination aus Literalen, Konstanten, Funktionen und Operatoren, die einen Datenwert ergeben.|  
 |Feld|1. Ein Bereich in einem Fenster oder Datensatz, in dem ein einzelner Datenwert gespeichert ist.  2. Im Berichts-Generator stellen Datasetfelder entweder numerische oder nicht numerische Daten aus einer Datenverbindung dar. Dazu zählen z. B. Umsätze, der Gesamtumsatz, Kundennamen, Datenbankbezeichner, URLs, Bilder und räumliche Daten. Ein Bericht kann drei Typen von Feldern enthalten: Datasetfelder, berechnete Datasetfelder und integrierte Felder.|  
@@ -196,7 +196,7 @@ ms.locfileid: "76918092"
 |Verknüpfter Bericht (linked report)|Ein Bericht, der mittels unterschiedlicher Parameterwerte oder Eigenschaften auf eine vorhandene Berichtsdefinition verweist. Ein verknüpfter Bericht ist ein Berichtsserverelement, das einen Zugriffspunkt auf einen vorhandenen Bericht bereitstellt. Grundsätzlich ist er mit einer Programmverknüpfung vergleichbar, die Sie verwenden, um ein Programm auszuführen oder eine Datei zu öffnen.|  
 |Listendatenbereich (list data region)|Ein Datenbereich in einem Berichtslayout, der mit jeder Gruppe oder Zeile im Berichtsdataset wiederholt wird. Eine Liste kann verwendet werden, um Freiformberichte oder -formulare, z. B. Rechnungen, oder Berichte und Formulare in Verbindung mit anderen Datenbereichen zu erstellen.|  
 |Lokaler Server (local server)|1. Bei SQL Server-Verbindungen eine Instanz von SQL Server, die auf demselben Computer wie die Anwendung ausgeführt wird. <br />2. Beim Auflösen von Verweisen auf die Datenbankobjekte in einer Transact-SQL-Anweisung ist dies die Instanz von SQL Server, die die Anweisung ausführt. <br />3. Bei verteilten Abfragen von SQL Server ist dies die Instanz von SQL Server, die die verteilte Abfrage ausführt. Der lokale Server greift dann auf die Verbindungsserver zu, auf die in der Abfrage verwiesen wird.|  
-|Gebietsschema|Das Attribut des Windows-Betriebssystems, das bestimmte Verhaltensweisen im Zusammenhang mit der Sprache definiert.|  
+|locale|Das Attribut des Windows-Betriebssystems, das bestimmte Verhaltensweisen im Zusammenhang mit der Sprache definiert.|  
 |Gebietsschema-ID (LCID) (locale identifier, LCID)|Eine Nummer, die ein Windows-basiertes Gebietsschema identifiziert.|  
 |Protokolldatei (log file)|Eine Datei oder ein Dateisatz mit Aufzeichnungen zu den Änderungen, die in einer Datenbank vorgenommen wurden.|  
 |Logischer Name|Eine Name, der von SQL Server verwendet wird, um eine Datei zu identifizieren.|  
@@ -215,7 +215,7 @@ ms.locfileid: "76918092"
 |MDX|Siehe anderen Begriff: Mehrdimensionale Ausdrücke (MDX)|  
 |Mercator-Projektion (Mercator projection)|Eine zylindrische Kartenprojektion in einem Kartenberichtselement, die 1569 von Gerardus Mercator erfunden wurde.|  
 |metadata|Informationen zu den Eigenschaften von Daten, z. B. der Datentyp in einer Spalte (numerisch, Text usw.) oder die Länge der Spalte, Informationen zu einer Datei, z. B. Titel, Beschreibung, Erstellungsdatum und Datum der letzten Änderung, oder Informationen zur Struktur von Daten oder Informationen, die den Entwurf von Objekten angeben, z. B. Cubes oder Dimensionen.|  
-|method|Eine Funktion, die eine Aktion mithilfe eines COM-Objekts (Component Object Model) ausführt, wie z. B. in SQL-DMO, OLE DB und ActiveX-Datenobjekte (ADO).|  
+|Methode|Eine Funktion, die eine Aktion mithilfe eines COM-Objekts (Component Object Model) ausführt, wie z. B. in SQL-DMO, OLE DB und ActiveX-Datenobjekte (ADO).|  
 |MIME-Typ (MIME type)|Das Dateiformat eines Bilds, z. B. .bmp, .gif oder .jpeg.|  
 |Modellabhängigkeit|Eine Beziehung zwischen mindestens zwei Modellen, bei der ein Modell von den Informationen eines anderen Modells abhängt.|  
 |Multidimensional Expressions (MDX)|Eine Syntax zum Definieren mehrdimensionaler Objekte und zum Abfragen und Bearbeiten mehrdimensionaler Daten.|  
@@ -229,7 +229,7 @@ ms.locfileid: "76918092"
 |Schachtelung (nesting)|Das Einfügen eines Datenbereichs in einen anderen Datenbereich, beispielsweise eine Sparkline in eine Tabelle. Geschachtelte Datenbereiche basieren auf dem gleichen Berichtsdataset, und der Bereich für Daten im geschachtelten Datenbereich wird automatisch durch die Platzierung im übergeordneten Datenbereich definiert.|  
 |NULL|Ein Eintrag ohne einen explizit zugewiesenen Wert.|  
 |Numerischer Ausdruck|Ein beliebiger Ausdruck, der zu einer Zahl ausgewertet wird.|  
-|Objekt (object)|Eine der Komponenten einer Datenbank, z. B. eine Tabelle, ein Index oder eine gespeicherte Prozedur.|  
+|object|Eine der Komponenten einer Datenbank, z. B. eine Tabelle, ein Index oder eine gespeicherte Prozedur.|  
 |Objektbezeichner|1. Ein eindeutiger Name, der einem Objekt zugewiesen wird. 2. In Meta Data Services ein eindeutiger Bezeichner, der aus einer GUID (Globally Unique Identifier) und einem internen Bezeichner erstellt wird.|  
 |ODBC-Datenquelle (ODBC data source)|1. Der Speicherort von Daten, auf die über einen ODBC-Treiber zugegriffen werden kann. 2. Eine gespeicherte Definition, die alle Verbindungsinformationen enthält, die eine ODBC-Anwendung zum Herstellen einer Verbindung mit der Datenquelle benötigt.|  
 |ODBC-Treiber|Eine DLL (Dynamic Link Library), die von einer ODBC-aktivierten Anwendung wie Microsoft Excel für den Zugriff auf eine ODBC-Datenquelle verwendet werden kann.|  
@@ -243,9 +243,9 @@ ms.locfileid: "76918092"
 |Operator|Ein Zeichen oder ein Symbol, das den Typ der Berechnung angibt, die innerhalb eines Ausdrucks ausgeführt werden soll. Es gibt mathematische Operatoren, Vergleichsoperatoren, logische Operatoren und Verweisoperatoren.|  
 |Äußeres Aggregat (outer aggregate)|Eine Aggregatfunktion, die einen Bereichsparameter angibt, bei dem es sich um eine andere Aggregatfunktion handelt.|  
 |Auffüllung|1. Eine Zeichenfolge, die im Allgemeinen hinzugefügt wird, wenn der letzte Nur-Text-Block kurz ist. 2. Der in einer Zelle vorgesehene Platz, mit dem eine bestimmte Größe erstellt oder gewahrt wird.|  
-|Seite|Im Berichts-Generator bezieht sich die Seite auf die physische Papierseite. Das Papierformat, das Sie für den Bericht angeben, steuert das Rendern des Berichts.|  
+|Seite (page)|Im Berichts-Generator bezieht sich die Seite auf die physische Papierseite. Das Papierformat, das Sie für den Bericht angeben, steuert das Rendern des Berichts.|  
 |Palette (palette)|Ein Satz vordefinierter oder benutzerdefinierter Werte für die in Diagrammen, Karten und Messgeräten verwendeten Farben.|  
-|parameter|Eine integrierte globale Auflistung in einem Bericht, die Benutzern ermöglicht, Werte zum Ändern von Berichtsdaten, der Darstellung und zum Verbinden verwandter Berichte festzulegen. Berichtsparameter werden automatisch aus Abfrageparametern und Datasetparametern sowie manuell vom Autor des Berichts erstellt.|  
+|-Parameter von|Eine integrierte globale Auflistung in einem Bericht, die Benutzern ermöglicht, Werte zum Ändern von Berichtsdaten, der Darstellung und zum Verbinden verwandter Berichte festzulegen. Berichtsparameter werden automatisch aus Abfrageparametern und Datasetparametern sowie manuell vom Autor des Berichts erstellt.|  
 |Parametrisierter Bericht|Ein veröffentlichter Bericht, an den mithilfe von Parametern Eingabewerte übergeben werden können.|  
 |Parametrisierter Zeilenfilter|Ein Zeilenfilter, der bei der Mergereplikation zur Verfügung steht und mit dem Daten eingeschränkt werden können, die für einen Abonnenten repliziert werden. Der Zeilenfilter basiert auf der Systemfunktion oder einer benutzerdefinierten Funktion.|  
 |parent|Ein Element auf der nächsthöheren Ebene in einer Hierarchie, das eine direkte Beziehung zum aktuellen Element aufweist.|  
@@ -254,17 +254,17 @@ ms.locfileid: "76918092"
 |Platzhalter (placeholder)|Ein Zeichen oder Symbol, das anstelle eines tatsächlichen Werts, Texts oder Objekts verwendet wird. Der tatsächliche Wert, den der Platzhalter darstellt, ist unbekannt oder zum jetzigen Zeitpunkt nicht verfügbar oder wird aus Sicherheitsgründen nicht angezeigt. Wenn ein einfacher oder komplexer Ausdruck in einem Textfeld definiert wird, wird die resultierende Darstellung dieses Ausdrucks in der Entwurfsansicht als Platzhalter bezeichnet.|  
 |Planare Daten (planar data)|Daten, die Punkte, Linien oder Bereiche auf einer flachen geometrischen Ebene angeben.|  
 |Polygonebene|Eine Ebene in einem Kartenberichtselement, die räumliche Daten als Bereiche darstellt, z. B. geografische Regionen wie Bundesländer.|  
-|Genauigkeit|Die maximale Gesamtanzahl von Dezimalstellen links und rechts vom Dezimaltrennzeichen, die gespeichert werden können.|  
+|precision|Die maximale Gesamtanzahl von Dezimalstellen links und rechts vom Dezimaltrennzeichen, die gespeichert werden können.|  
 |Primärschlüssel|Mindestens eine Spalte, die alle Zeilen in einer Tabelle eindeutig identifiziert.|  
 |Primäre Tabelle|Die "1"-Seite von zwei verknüpften Tabellen in einer 1:n-Beziehung.|  
 |Projektion (projection)|Eine Zuordnung von Daten aus einem N-dimensionalen Koordinatensystem zu einem (N-1)-dimensionalen Koordinatensystem. Beispielsweise das Zuordnen von dreidimensionalen geografischen Daten zu einer zweidimensionalen Anzeigeoberfläche.|  
 |Eigenschaftenseite|Ein Dialogfeld, das Informationen über ein Objekt in der Schnittstelle anzeigt.|  
 |property|Ein benanntes Attribut eines Steuerelements, eines Felds oder eines Datenbankobjekts, das festgelegt wird, um eines der Merkmale des Objekts (z. B. Größe, Farbe oder Bildschirmposition) oder einen Aspekt seines Verhaltens (z. B. ob es ausgeblendet ist) zu definieren.|  
-|protocol|Ein Satz von Standardformaten und -prozeduren, die Computern ermöglichen, Informationen auszutauschen.|  
-|Anbieter|1. Ein OLE DB-Anbieter. 2. Eine prozessinterne DLL (Dynamic Link Library), die den Zugriff auf eine Datenbank ermöglicht.|  
+|Protokoll|Ein Satz von Standardformaten und -prozeduren, die Computern ermöglichen, Informationen auszutauschen.|  
+|Provider|1. Ein OLE DB-Anbieter. 2. Eine prozessinterne DLL (Dynamic Link Library), die den Zugriff auf eine Datenbank ermöglicht.|  
 |Abfrageparameter (query parameters)|Parameter, die in einer Datasetabfrage angegeben werden, z. B. einer Transact-SQL-Abfrage.|  
 |RDL|Siehe anderen Begriff: Berichtsdefinitionssprache (Report Definition Language, RDL)|  
-|record|Eine Gruppe verwandter Felder (Spalten) mit Informationen, die als Einheit behandelt wird. In einer relationalen Datenbank wird ein Datensatz in der Regel als Zeile bezeichnet.|  
+|Datensatz (record)|Eine Gruppe verwandter Felder (Spalten) mit Informationen, die als Einheit behandelt wird. In einer relationalen Datenbank wird ein Datensatz in der Regel als Zeile bezeichnet.|  
 |Rechteck|Ein Berichtselement, das als Container für mehrere Berichtselemente oder als grafisches Element in einem Bericht verwendet werden kann.|  
 |Rekursive Hierarchie|1. Eine Hierarchie von Daten aus einem Berichtsdataset, das mehrere hierarchische Ebenen in eine Hierarchiestruktur einschließt, zum Beispiel eine Berichtsstruktur für die Beziehung zwischen Managern und Mitarbeitern in der Hierarchie einer Organisation. 2. In Master Data Services eine abgeleitete Hierarchie, die eine rekursive Beziehung einschließt. Eine rekursive Beziehung liegt vor, wenn eine Entität über ein domänenbasiertes Attribut verfügt, das auf der Entität selbst basiert.|  
 |-Datenbank|Eine Datenbank oder ein Datenbank-Managementsystem, in der bzw. dem Informationen in Tabellen in Form von Datenzeilen und -spalten gespeichert werden und Suchvorgänge mithilfe der Daten in angegebenen Spalten einer Tabelle ausgeführt werden, um zusätzliche Daten in einer anderen Tabelle zu finden.|  
@@ -312,7 +312,7 @@ ms.locfileid: "76918092"
 |Skalar|Ein Feld mit einem Einzelwert, im Gegensatz zu einem Aggregat.|  
 |Skalaraggregat (scalar aggregate)|Eine Aggregatfunktion, wie beispielsweise MIN(), MAX() oder AVG(), die in der Spaltenliste einer SELECT-Anweisung angegeben ist, die nur Aggregatfunktionen enthält.|  
 |schema|Im SQL-92-Standard eine Auflistung von Datenbankobjekten, die im Besitz eines einzelnen Benutzers sind und einen einzelnen Namespace bilden. Ein Namespace ist ein Satz von Objekten, die keine doppelten Namen haben dürfen.|  
-|Bereich|Dieser Begriff wird in mehreren Kontexten verwendet. Ein Bereich kann die Daten bezeichnen, die zum Auswerten eines Ausdrucks verwendet werden, den Satz von Textfeldern auf einer gerenderten Seite oder den Satz von Berichtselementen, die mithilfe einer Umschaltfläche ein- oder ausgeblendet werden können.|  
+|scope|Dieser Begriff wird in mehreren Kontexten verwendet. Ein Bereich kann die Daten bezeichnen, die zum Auswerten eines Ausdrucks verwendet werden, den Satz von Textfeldern auf einer gerenderten Seite oder den Satz von Berichtselementen, die mithilfe einer Umschaltfläche ein- oder ausgeblendet werden können.|  
 |script|Eine Auflistung von Transact-SQL-Anweisungen, die zum Ausführen eines Vorgangs verwendet werden.|  
 |Sicherungsfähig|Entitäten, die mit Berechtigungen gesichert werden können.|  
 |Secure Sockets Layer (SSL)|Ein vorgeschlagener offener Standard für die Einrichtung eines sicheren Kommunikationskanals, um das Abfangen wichtiger Informationen (wie z. B. von Kreditkartennummern) zu verhindern. Primär ermöglicht SSL sichere elektronische Finanztransaktionen im WWW. SSL kann entwurfsbedingt jedoch auch für andere Internetdienste verwendet werden.|  
@@ -337,12 +337,12 @@ ms.locfileid: "76918092"
 |Räumliche Daten|Daten, die Positionen von Objekten auf einer ebenen oder gekrümmten Oberfläche angeben. Räumliche Daten können Punkte, Linien oder Polygone sein.|  
 |Räumliche Datentypen (spatial data types)|Gibt Daten an, die geometrische (planare) oder geografische (geodätische) Informationen darstellen.|  
 |SQL|Siehe anderen Begriff: Structured Query Language (SQL)|  
-|SQL-Abfrage|Eine SQL-Anweisung wie SELECT, INSERT, UPDATE, DELETE oder CREATE TABLE.|  
+|SQL-Abfrage (SQL query)|Eine SQL-Anweisung wie SELECT, INSERT, UPDATE, DELETE oder CREATE TABLE.|  
 |SQL Server-Authentifizierung|Der Mechanismus, mit dem eine Verbindungsherstellung mit einer Instanz von SQL Server überprüft wird, indem eine SQL Server-Anmelde-ID und ein Kennwort angegeben werden.|  
 |SQL Server-Anmeldung|Ein Konto, das in SQL Server gespeichert wird und über das Benutzer eine Verbindung mit SQL Server herstellen können.|  
 |SQL-Anweisung|Ein SQL- oder Transact-SQL-Befehl wie SELECT oder DELETE, der für Daten eine Aktion ausführt.|  
 |Statische Verbindungszeichenfolge (static connection string)|Ein Satz von Werten, der verwendet wird, um bei jeder Berichtsausführung eine Verbindung mit derselben Datenquelle herzustellen.|  
-|string|Ein Datentyp, der Buchstaben, Zahlen und die meisten Zeichen beinhaltet. Zahlen in einem Zeichenfolgenfeld, bei dem es sich um ein Feld mit dem Datentyp "String" handelt, stehen nicht für numerische Berechnungen zur Verfügung. Sie müssen einen numerischen Datentyp verwenden, beispielsweise "Integer" oder "Float", um numerische Berechnungen auszuführen. Für einen Parameter ist "String" mit dem Datentyp "Text" identisch.|  
+|Zeichenfolge|Ein Datentyp, der Buchstaben, Zahlen und die meisten Zeichen beinhaltet. Zahlen in einem Zeichenfolgenfeld, bei dem es sich um ein Feld mit dem Datentyp "String" handelt, stehen nicht für numerische Berechnungen zur Verfügung. Sie müssen einen numerischen Datentyp verwenden, beispielsweise "Integer" oder "Float", um numerische Berechnungen auszuführen. Für einen Parameter ist "String" mit dem Datentyp "Text" identisch.|  
 |Zeichenfolgenfunktionen (string-Funktionen)|Funktionen, die Vorgänge mit Zeichen- oder Binärzeichenfolgen ausführen.|  
 |Structured Query Language (SQL) (Structured Query Language, SQL)|Eine Sprache zum Einfügen, Abrufen, Ändern und Löschen von Daten in einer relationalen Datenbank, die speziell für Datenbankabfragen entworfen wurde.|  
 |Unterbericht|Ein Unterbericht ist ein Steuerelement, das im Text eines übergeordneten Berichts eingebettet ist. Im Prinzip ist ein Unterbericht mit dem Frame einer Webseite vergleichbar, der einen Container für anderen Webseiteninhalt bereitstellt. Der Unterbericht wird im übergeordneten Bericht gerendert, in dem er enthalten ist. Beide Berichte werden verarbeitet und gleichzeitig angezeigt.|  
@@ -358,7 +358,7 @@ ms.locfileid: "76918092"
 |Benutzerinstanz|Eine SQL Server Express-Instanz, die im Auftrag eines Benutzers von der übergeordneten Instanz generiert wird.|  
 |Wertachse (y) (value (y) axis)|Die Achse in einem Diagramm, auf der numerische Datenwerte angezeigt werden. Normalerweise die vertikale Achse. Ausnahme: Bei Balkendiagramm sind die Achsen umgekehrt, und Gruppierungsdaten werden auf der y-Achse angezeigt.|  
 |Wertausdruck|Ein MDX-Ausdruck (Multidimensional Expressions), der einen Wert zurückgibt. Wertausdrücke können mit Mengen, Tupeln, Elementen, Ebenen, Zahlen oder Zeichenfolgen arbeiten.|  
-|variable|1. Speichert in Integration Services Werte, die in Skripts, Ausdrücken und Eigenschaftsausdrücken verwendet werden können, um Spaltenwerte und die Eigenschaften von Paketobjekten festzulegen. <br />2. Definierte Entitäten, denen Werte zugewiesen werden. Eine lokale Variable wird mit einer DECLARE@localvariable-Anweisung definiert. Innerhalb der Anweisungsgruppe, in der sie deklariert wird, wird ihr mit einer SELECT- oder SET@localvariableAnweisung ein Anfangswert zugewiesen.|  
+|Variable|1. Speichert in Integration Services Werte, die in Skripts, Ausdrücken und Eigenschaftsausdrücken verwendet werden können, um Spaltenwerte und die Eigenschaften von Paketobjekten festzulegen. <br />2. Definierte Entitäten, denen Werte zugewiesen werden. Eine lokale Variable wird mit einer DECLARE@localvariable-Anweisung definiert. Innerhalb der Anweisungsgruppe, in der sie deklariert wird, wird ihr mit einer SELECT- oder SET@localvariableAnweisung ein Anfangswert zugewiesen.|  
 |Variables Intervall (variable interval)|Eine Option für ein Reporting Services-Diagramm, die angegeben werden kann, um automatisch anhand der Breite oder der Höhe des Diagramms die optimale Anzahl der Bezeichnungen zu berechnen, die auf einer Achse platziert werden können.|  
 |Visualisierung (visualization)|Die Methode, die ein Benutzer in Karten, Diagrammen und Messgeräten zur visuellen Darstellung von analytischen Daten auswählt.|  
 |Webdienst|Ein Dienst in Reporting Services, der SOAP (Simple Object Access Protocol) über HTTP verwendet und als Kommunikationsschnittstelle zwischen den Clientprogrammen und dem Berichtsserver fungiert.|  
@@ -370,6 +370,6 @@ ms.locfileid: "76918092"
 |y-Achse (y-axis)|Siehe anderen Begriff: Wertachse (y)|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Konzepte der Berichterstellung &#40;Berichts-Generator und SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Berichterstellungskonzepte &#40;Berichts-Generator und SSRS&#41;](../report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
   
   

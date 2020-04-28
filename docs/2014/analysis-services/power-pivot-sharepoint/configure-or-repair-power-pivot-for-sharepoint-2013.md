@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84418ca3f32700831eaac6b344f50f9cc862625a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175699"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2013-powerpivot-configuration-tool"></a>Konfigurieren oder Reparieren von PowerPivot für SharePoint 2013 (PowerPivot-Konfigurationstool)
@@ -24,27 +24,26 @@ ms.locfileid: "78175699"
 
  **In diesem Thema:**
 
- [Vorbereitung](#bkmk_before)
+ [Vorbereitungen](#bkmk_before)
 
  [So verwenden Sie das PowerPivot für SharePoint 2013-Konfigurationstool](#bkmk_using)
 
  [Konfigurationsschritte](#bkmk_steps)
 
- [Eingabewerte, die zum Konfigurieren des Servers verwendet werden](#bkmk_input)
+ [Eingabewerte für die Serverkonfiguration](#bkmk_input)
 
  [Nächste Schritte](#bkmk_nextsteps)
 
-##  <a name="bkmk_before"></a>Bevor Sie beginnen
+##  <a name="before-you-start"></a><a name="bkmk_before"></a>Bevor Sie beginnen
  Das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint 2013-Konfigurationstool sucht nach Programmdateien, Registrierungseinstellungen und verfügbaren Ports. Lesen Sie die folgenden Ausführungen, um die Tools optimal zu nutzen.
 
 -   Allgemeine Anforderungen zum Ausführen des Konfigurationstools [PowerPivot Configuration Tools](power-pivot-configuration-tools.md).
 
--   
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint 2013 wird bevorzugt eine für die anspruchsbasierte Authentifizierung konfigurierte Webanwendung verwendet. Wenn die Anwendung vom [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint 2013-Konfigurationstool für Sie erstellt wird, wird sie für die Verwendung der anspruchsbasierten Windows-Authentifizierung konfiguriert. Weitere Informationen zu Authentifizierungsanforderungen finden Sie unter [PowerPivot Authentication and Authorization](power-pivot-authentication-and-authorization.md).
+-   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint 2013 wird bevorzugt eine für die anspruchsbasierte Authentifizierung konfigurierte Webanwendung verwendet. Wenn die Anwendung vom [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint 2013-Konfigurationstool für Sie erstellt wird, wird sie für die Verwendung der anspruchsbasierten Windows-Authentifizierung konfiguriert. Weitere Informationen zu Authentifizierungsanforderungen finden Sie unter [PowerPivot Authentication and Authorization](power-pivot-authentication-and-authorization.md).
 
 -   Port 80 muss verfügbar sein, damit das[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint 2013-Konfigurationstool eine Webanwendung erstellen kann.
 
-##  <a name="bkmk_using"></a>So verwenden Sie das Konfigurations Tool "PowerPivot für SharePoint 2013"
+##  <a name="to-use-the-powerpivot-for-sharepoint-2013-configuration-tool"></a><a name="bkmk_using"></a>So verwenden Sie das Konfigurations Tool "PowerPivot für SharePoint 2013"
  Die erste Seite des Tools enthält eine Zusammenfassung der Eingabewerte, die zum Konfigurieren der SharePoint-Farm verwendet werden. Zusätzlich zu den von Ihnen angegebenen Eingabewerten werden Standardwerte zum Konfigurieren des Systems verwendet. Standardnamen werden für Dienstanwendungen, Dienstanwendungsdatenbanken und Dienstanwendungseigenschaften verwendet.
 
 > [!TIP]
@@ -58,9 +57,9 @@ ms.locfileid: "78175699"
 
  ![PowerPivot für SharePoint 2013-Konfigurationstool](../media/ssas-powerpivot-configtool-4-sharepoint2013-mainpage-configure.gif "PowerPivot für SharePoint 2013-Konfigurationstool")
 
-||Beschreibung|
+||BESCHREIBUNG|
 |-|-----------------|
-|**1**|Fenster mit Aufgabenliste.|
+|**(1)**|Fenster mit Aufgabenliste.|
 |**2,2**|Einzelne Aktionen.|
 |**€**|Die vom Konfigurationstool erstellten Windows PowerShell-Skripts.|
 |**0:**|Protokollmeldungen, die beim Starten der Überprüfung oder Ausführen von Aktionen erstellt werden.|
@@ -68,7 +67,7 @@ ms.locfileid: "78175699"
 |**6**|Eingabeparameter|
 |**19.00**|Die Schaltfläche **Ausführen** ist aktiviert, nachdem Sie die Aktionen überprüft haben.|
 
-##  <a name="bkmk_steps"></a>Konfigurationsschritte
+##  <a name="configuration-steps"></a><a name="bkmk_steps"></a>Konfigurationsschritte
  Der Link zum Konfigurationstool ist nur sichtbar, wenn PowerPivot für SharePoint 2013 auf dem lokalen Server installiert ist.
 
 1.  Zeigen Sie im Menü **Start** auf **Alle Programme**, und klicken Sie dann auf [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Konfigurationstools**und auf **Konfiguration von PowerPivot für SharePoint 2013**.
@@ -77,11 +76,11 @@ ms.locfileid: "78175699"
 
 3.  Erweitern Sie das Fenster auf Vollbildgröße. Am unteren Rand des Fensters wird eine Schaltflächenleiste angezeigt, die die Befehle **Überprüfen**, **Ausführen**und **Beenden** enthält.
 
-4.  **Standardkonto:** Geben Sie auf der Registerkarte Parameter ein Domänen Benutzerkonto als **Standardbenutzer Name**für das Konto ein. Dieses Konto wird verwendet, um grundlegende Dienste bereitzustellen, einschließlich des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendungspools. Geben Sie kein integriertes Konto wie Network Service oder Local System an. Das Tool blockiert Konfigurationen, bei denen integrierte Konten angegeben werden.
+4.  **Standardkonto:** Geben Sie auf der Registerkarte **Parameter**ein Domänenbenutzerkonto für Benutzername für Standardkonto ein. Dieses Konto wird verwendet, um grundlegende Dienste bereitzustellen, einschließlich des [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendungspools. Geben Sie kein integriertes Konto wie Network Service oder Local System an. Das Tool blockiert Konfigurationen, bei denen integrierte Konten angegeben werden.
 
-     **Passphrase:** geben Sie eine Passphrase ein. Bei einer neuen SharePoint-Farm wird die Passphrase immer dann verwendet, wenn Sie der SharePoint-Farm neue Server oder Anwendungen hinzufügen. Wenn die Farm vorhanden ist, geben Sie die Passphrase ein, die Ihnen ermöglicht, der Farm eine Serveranwendung hinzuzufügen.
+     **Passphrase:** Geben Sie eine Passphrase ein. Bei einer neuen SharePoint-Farm wird die Passphrase immer dann verwendet, wenn Sie der SharePoint-Farm neue Server oder Anwendungen hinzufügen. Wenn die Farm vorhanden ist, geben Sie die Passphrase ein, die Ihnen ermöglicht, der Farm eine Serveranwendung hinzuzufügen.
 
-5.  **Port:** Geben Sie optional eine Portnummer für die Verbindung mit der Webanwendung der zentral Administration ein, oder verwenden Sie die bereitgestellte, zufällig generierte Nummer. Das Konfigurationstool überprüft, ob die Nummer verfügbar ist, bevor sie als Option angeboten wird.
+5.  **Port:** Geben Sie optional eine Portnummer für die Verbindung mit der Webanwendung für die Zentraladministration an, oder verwenden Sie die bereitgestellte, zufällig generierte Nummer. Das Konfigurationstool überprüft, ob die Nummer verfügbar ist, bevor sie als Option angeboten wird.
 
 6.  Geben Sie auf der Hauptseite den Namen eines [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Servers ein, der im SharePoint-Modus ausgeführt wird.
 
@@ -101,26 +100,25 @@ ms.locfileid: "78175699"
 
 11. [Überprüfen Sie eine PowerPivot für SharePoint Installation](../instances/install-windows/verify-a-power-pivot-for-sharepoint-installation.md).
 
-##  <a name="bkmk_input"></a>Eingabewerte, die zum Konfigurieren des Servers verwendet werden
+##  <a name="input-values-used-to-configure-the-server"></a><a name="bkmk_input"></a>Eingabewerte, die zum Konfigurieren des Servers verwendet werden
  Das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool nutzt eine Kombination aus Eingabewerten, die Sie angeben, und Standardwerten, die vom Tool erkannt oder automatisch verwendet werden.
 
  Welche Aktionen im Konfigurationstool aufgelistet werden, hängt von der aktuellen Konfiguration der SharePoint-Farmen ab. Wenn die SharePoint-Farm z. B. bereits konfiguriert ist, sehen Sie keine Aktionen, die die Farm konfigurieren oder eine Webanwendung erstellen. Sie können das Tool jederzeit ausführen, um zu konfigurieren, zu reparieren oder Konfigurationsfehler zu erkennen. Wenn erforderliche Dienste wie Excel Services oder Secure Store Service nicht in der Farm ausgeführt werden, erkennt das Tool die fehlenden Dienste und stellt Optionen bereit, um sie zu aktivieren. Wenn keine Aktionen erforderlich sind, ist die Aufgabenliste leer.
 
  In der folgenden Tabelle werden die Werte beschrieben, die für die Serverkonfiguration verwendet werden.
 
-|Seite|Eingabewert|`Source`|Beschreibung|
+|Seite|Eingabewert|`Source`|BESCHREIBUNG|
 |----------|-----------------|------------|-----------------|
-|**Für SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] konfigurieren oder reparieren**|Standardkonto|Aktueller Benutzer|Das Standardkonto ist ein Windows-Domänenbenutzerkonto, das verwendet wird, um gemeinsame Dienste in der Farm bereitzustellen. Es wird zur Bereitstellung folgender Dienste verwendet:<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]Dienst Anwendung<br />Secure Store Service<br />Excel Services<br />Identität für Webanwendungspool<br />Websitesammlungsadministrator<br />Das unbeaufsichtigte Datenaktualisierungskonto für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Standardmäßig verwendet es das Domänenkonto des aktuellen Benutzers. Es wird empfohlen, den Standardwert zu ersetzen, es sei denn, Sie konfigurieren einen Server zu Evaluierungs- und anderen als Produktionszwecken. Sie können später Dienstidentitäten mit der Zentraladministration ändern. Optional können Sie im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool dedizierte Konten für folgende Komponenten angeben:<br /><br /> Webanwendung unter Verwendung der Seite **Standardweb Anwendung erstellen** (vorausgesetzt, dass das Tool eine Webanwendung für die Farm erstellt).<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]Konto für die unbeaufsichtigte Datenaktualisierung auf der Seite **Unbeaufsichtigtes Konto für Datenaktualisierung erstellen** in diesem Tool.|
-||Datenbankserver|Lokale benannte [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Instanz, falls verfügbar|Wenn eine Datenbank-Engine-Instanz als benannte [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Instanz installiert ist, füllt das Tool das Datenbankserverfeld mit dem Namen dieser Instanz auf. Wenn Sie die Datenbank-Engine nicht installiert haben, ist dieses Feld leer.<br /><br /> Der **Daten Bank Server** ist ein erforderlicher Parameter. Es kann irgendeine Version oder eine Ausgabe von SQL Server sein, die für SharePoint-Farmen unterstützt wird.|
+|**Für SharePoint [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] konfigurieren oder reparieren**|Standardkonto|Aktueller Benutzer|Das Standardkonto ist ein Windows-Domänenbenutzerkonto, das verwendet wird, um gemeinsame Dienste in der Farm bereitzustellen. Es wird zur Bereitstellung folgender Dienste verwendet:<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung<br />Secure Store Service<br />Excel Services<br />Identität für Webanwendungspool<br />Websitesammlungsadministrator<br />Das unbeaufsichtigte Datenaktualisierungskonto für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Standardmäßig verwendet es das Domänenkonto des aktuellen Benutzers. Es wird empfohlen, den Standardwert zu ersetzen, es sei denn, Sie konfigurieren einen Server zu Evaluierungs- und anderen als Produktionszwecken. Sie können später Dienstidentitäten mit der Zentraladministration ändern. Optional können Sie im [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool dedizierte Konten für folgende Komponenten angeben:<br /><br /> Webanwendung unter Verwendung der Seite **Standardweb Anwendung erstellen** (vorausgesetzt, dass das Tool eine Webanwendung für die Farm erstellt).<br />[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]Konto für die unbeaufsichtigte Datenaktualisierung auf der Seite **Unbeaufsichtigtes Konto für Datenaktualisierung erstellen** in diesem Tool.|
+||Datenbankserver|Lokale benannte [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Instanz, falls verfügbar|Wenn eine Datenbank-Engine-Instanz als benannte [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Instanz installiert ist, füllt das Tool das Datenbankserverfeld mit dem Namen dieser Instanz auf. Wenn Sie die Datenbank-Engine nicht installiert haben, ist dieses Feld leer.<br /><br /> **Datenbankserver**  ist ein erforderlicher Parameter. Es kann irgendeine Version oder eine Ausgabe von SQL Server sein, die für SharePoint-Farmen unterstützt wird.|
 ||Passphrase|Benutzereingabe|Wenn Sie eine neue Farm erstellen, wird die von Ihnen eingegebene Passphrase als Passphrase für die Farm verwendet. Wenn Sie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint einer vorhandenen Farm hinzufügen, geben Sie die vorhandene Passphrase für die Farm ein.|
 ||SharePoint-Zentraladministration-Port|Standard, falls erforderlich|Wenn die Farm nicht konfiguriert ist, stellt das Tool Optionen bereit, um die Farm zu erstellen, einschließlich der Erstellung eines HTTP-Endpunkts zur Zentraladministration. Es wählt eine zufällig generierte Portnummer aus, die nicht in Gebrauch ist.|
-||
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel Services ([Servername]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|Benutzereingabe|Der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Server ist erforderlich, damit Excel Services die Hauptfunktionen von PowerPivot aktivieren kann. Der Servername, den Sie auf dieser Seite eingeben, wird auch der Liste auf der Seite **PowerPivot-Server konfigurieren** hinzugefügt.|
+||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für Excel Services ([Servername]\ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])|Benutzereingabe|Der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Server ist erforderlich, damit Excel Services die Hauptfunktionen von PowerPivot aktivieren kann. Der Servername, den Sie auf dieser Seite eingeben, wird auch der Liste auf der Seite **PowerPivot-Server konfigurieren** hinzugefügt.|
 |**Neue Farm konfigurieren**|Datenbankserver<br /><br /> Farmkonto<br /><br /> Passphrase<br /><br /> SharePoint-Zentraladministration-Port|Standard, falls erforderlich|Es werden standardmäßig die Einstellungen übernommen, die Sie auf der Hauptseite eingegeben haben.|
 |**PowerPivot-Dienstanwendung erstellen**|Name der Dienstanwendung|Standard|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]Dienst Anwendungs Name: der Standardname lautet **Power Pivot-Standard Dienst Anwendung**. Sie können einen anderen Wert im Tool ersetzen.|
 ||Datenbankserver|Standard|Der Datenbankserver, von dem die Datenbank der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendung gehostet wird. Der Standardservername ist der Name des für die Farm verwendeten Datenbankservers. Sie können einen anderen Wert als Standardservernamen verwenden.|
 ||Datenbankname|Standard|Der Name der Datenbank, der für die [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dienstanwendungsdatenbank erstellt werden soll. Der Standarddatenbankname basiert auf dem Dienstanwendungsnamen, gefolgt von einer GUID, um einen eindeutigen Namen sicherzustellen. Sie können einen anderen Wert im Tool ersetzen.|
-|**Standardweb Anwendung erstellen**|Name der Webanwendung|Standard, falls erforderlich|Wenn keine Webanwendungen vorhanden sind, erstellt das Tool eine. Die Webanwendung wird für die Authentifizierung im klassischen Modus und das Lauschen an Port 80 konfiguriert. Die maximale Dateiuploadgröße wird auf 2047 festgelegt, das von SharePoint zugelassene Maximum. Die umfangreichere Dateiuploadgröße ist für die großen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dateien vorgesehen, die auf den Server hochgeladen werden.|
+|**Standardwebanwendung erstellen**|Name der Webanwendung|Standard, falls erforderlich|Wenn keine Webanwendungen vorhanden sind, erstellt das Tool eine. Die Webanwendung wird für die Authentifizierung im klassischen Modus und das Lauschen an Port 80 konfiguriert. Die maximale Dateiuploadgröße wird auf 2047 festgelegt, das von SharePoint zugelassene Maximum. Die umfangreichere Dateiuploadgröße ist für die großen [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Dateien vorgesehen, die auf den Server hochgeladen werden.|
 ||URL|Standard, falls erforderlich|Das Tool erstellt eine URL auf Grundlage des Servernamens und verwendet die gleichen Dateinamenskonventionen wie SharePoint.|
 ||Anwendungspool|Standard, falls erforderlich|Das Tool erstellt in IIS einen Standardanwendungspool.|
 ||Konto und Kennwort des Anwendungspools|Standard, falls erforderlich|Das Anwendungspoolkonto basiert auf dem Standardkonto, aber Sie können es im Tool überschreiben.|
@@ -128,25 +126,25 @@ ms.locfileid: "78175699"
 ||Datenbankname|Standard, falls erforderlich|Der Name der Anwendungsdatenbank. Der Datenbankname basiert auf den Dateinamenskonventionen von SharePoint, aber Sie können einen anderen Namen auswählen.|
 |**Webanwendungslösung bereitstellen**|URL|Standard, falls erforderlich|Die Standard-URL wird von der Standardwebanwendung übernommen.|
 ||Maximale Dateigröße (in MB)|Standard, falls erforderlich|Die Standardeinstellung ist 2.047. SharePoint-Dokumentbibliotheken verfügen ebenfalls über eine maximale Größe, und die Einstellung der Dokumentbibliothek sollte von der [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Einstellung nicht überschritten werden. Weitere Informationen finden Sie unter [Konfigurieren der maximalen Dateiuploadgröße &#40;PowerPivot für SharePoint&#41;](configure-maximum-file-upload-size-power-pivot-for-sharepoint.md).|
-|**Website Sammlung erstellen**|Siteadministrator|Standard, falls erforderlich|Das Tool verwendet das Standardkonto. Sie können es auf der Seite **Websitesammlung erstellen** überschreiben.|
+|**Websitesammlung erstellen**|Siteadministrator|Standard, falls erforderlich|Das Tool verwendet das Standardkonto. Sie können es auf der Seite **Websitesammlung erstellen** überschreiben.|
 ||Kontakt-E-Mail|Standard, falls erforderlich|Wenn Microsoft Outlook auf dem Server konfiguriert ist, verwendet das Tool die E-Mail-Adresse des aktuellen Benutzers. Andernfalls wird ein Platzhalterwert verwendet.|
 ||Website-URL|Standard, falls erforderlich|Das Tool erstellt die Website-URL und verwendet die gleichen URL-Namenskonventionen wie SharePoint.|
 ||Websitetitel|Standard, falls erforderlich|Das Tool fügt **PowerPivot-Website** als Standardtitel hinzu.|
 |**Aktivieren [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] der Funktion in einer Website Sammlung**|Website-URL||Die URL der Websitesammlung, für die Sie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Funktionen aktivieren.|
 ||Premium-Funktion für diese Website aktivieren||Aktivieren Sie die SharePoint-Website Funktion "Premiumsite".|
-|**Erstellen einmaliges Anmelden Anwendung**|Name der Dienstanwendung|Standard, falls erforderlich|Geben Sie den Namen für die Secure Store Service-Anwendung ein.|
+|**Secure Store Service-Anwendung erstellen**|Name der Dienstanwendung|Standard, falls erforderlich|Geben Sie den Namen für die Secure Store Service-Anwendung ein.|
 ||Datenbankserver|Benutzereingabe|Geben Sie den Namen des Datenbankservers ein, der für die Secure Store Service-Anwendung verwendet werden soll.|
-|**Erstellen einmaliges Anmelden Anwendungs Proxys**|Name der Dienstanwendung|Standard, falls erforderlich|Geben Sie den Namen für die Secure Store Service-Anwendung ein, den Sie auf der vorherigen Seite eingegeben haben.|
+|**Proxy für Secure Store Service-Anwendung erstellen**|Name der Dienstanwendung|Standard, falls erforderlich|Geben Sie den Namen für die Secure Store Service-Anwendung ein, den Sie auf der vorherigen Seite eingegeben haben.|
 ||Proxy für Dienstanwendung|Standard, falls erforderlich|Geben Sie den Namen für den Proxy der Secure Store Service-Anwendung ein. Der Name wird in der Standardverbindungsgruppe angezeigt, über die Anwendungen den SharePoint-Inhaltswebanwendungen zugeordnet werden.|
-|**Aktualisieren einmaliges Anmelden Haupt Schlüssels**|Proxy für Dienstanwendung|Standard, falls erforderlich|Geben Sie den Namen des Secure Store Service-Anwendungsproxys ein, den Sie auf der vorherigen Seite eingegeben haben.|
+|**Secure Store Service-Hauptschlüssel aktualisieren**|Proxy für Dienstanwendung|Standard, falls erforderlich|Geben Sie den Namen des Secure Store Service-Anwendungsproxys ein, den Sie auf der vorherigen Seite eingegeben haben.|
 ||Passphrase|Benutzereingabe|Der Hauptschlüssel, der für die Datenverschlüsselung verwendet wird. Die zum Generieren des Schlüssels verwendete Passphrase entspricht standardmäßig der Passphrase, die zum Bereitstellen neuer Server in der Farm verwendet wird. Sie können die Standardpassphrase durch eine eindeutige Passphrase ersetzen.|
-|**Unbeaufsichtigtes Konto für "datarefresh" erstellen**|Zielanwendungs-ID|Standard, falls erforderlich|Erstellen Sie eine Zielanwendung zum Speichern von Anmeldeinformationen für die unbeaufsichtigte [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenaktualisierung.<br /><br /> Die Anwendungs-ID kann beschreibender Text sein.|
+|**Unbeaufsichtigtes Konto für 'DataRefresh' erstellen**|Zielanwendungs-ID|Standard, falls erforderlich|Erstellen Sie eine Zielanwendung zum Speichern von Anmeldeinformationen für die unbeaufsichtigte [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Datenaktualisierung.<br /><br /> Die Anwendungs-ID kann beschreibender Text sein.|
 ||Anzeigename für die Zielanwendung|Standard, falls erforderlich||
 ||Benutzername und Kennwort des unbeaufsichtigten Kontos|Standard, falls erforderlich|Geben Sie Anmeldeinformationen eines Windows-Benutzerkontos ein, das von der Zielanwendung zur Ausführung einer unbeaufsichtigten Datenaktualisierung verwendet wird. Weitere Informationen finden Sie unter [Konfigurieren der Excel Services-Datenaktualisierung mithilfe des unbeaufsichtigten Dienst Kontos in SharePoint Server 2013](https://technet.microsoft.com/library/hh525344\(office.15\).aspx) (https://technet.microsoft.com/library/hh525344(office.15).aspx).|
 ||Website-URL|Standard, falls erforderlich|Geben Sie die Website-URL der Websitesammlung ein, die der Zielanwendung zugeordnet ist. Um Zuordnungen mit zusätzlichen Websitesammlungen herzustellen, verwenden Sie die SharePoint-Zentraladministration.|
-|**Excel Services-Dienst Anwendung erstellen**|Name der Dienstanwendung|Standard, falls erforderlich|Geben Sie einen Namen für die Dienstanwendung ein. Eine-Dienst Anwendungsdatenbank mit demselben Namen wird auf dem Datenbankserver der SharePoint-Farm erstellt.|
+|**Excel Services-Dienstanwendung erstellen**|Name der Dienstanwendung|Standard, falls erforderlich|Geben Sie einen Namen für die Dienstanwendung ein. Eine-Dienst Anwendungsdatenbank mit demselben Namen wird auf dem Datenbankserver der SharePoint-Farm erstellt.|
 |**Konfigurieren [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] von Servern**|Name der Dienstanwendung|Standard, falls erforderlich|Dienstanwendungsname, den Sie auf der vorherigen Seite eingegeben haben.|
-||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]Server Name||Liste der registrierten [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Server.<br /><br /> Der auf die Hauptseite eingegebene Servername wird dieser Seite automatisch hinzugefügt.|
+||[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Servername||Liste der registrierten [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Server.<br /><br /> Der auf die Hauptseite eingegebene Servername wird dieser Seite automatisch hinzugefügt.|
 |**Add [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -in als Excel Services-Verwendungs Protokollierung registrieren**|Name der Dienstanwendung||Dienstanwendungsname, den Sie auf der vorherigen Seite eingegeben haben.|
 |||||
 
@@ -157,7 +155,7 @@ ms.locfileid: "78175699"
 ## <a name="verify-the-configuration"></a>Überprüfen der Konfiguration
  Weitere Informationen finden Sie [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] im Abschnitt "Überprüfen der Konfiguration" unter [Konfigurieren von Power Pivot und Bereitstellen von Lösungen &#40;SharePoint 2013&#41;](../instances/install-windows/configure-power-pivot-and-deploy-solutions-sharepoint-2013.md).
 
-##  <a name="bkmk_nextsteps"></a>Nächste Schritte
+##  <a name="next-steps"></a><a name="bkmk_nextsteps"></a> Nächste Schritte
  Nach Abschluss der Serverinstallation gibt es einige weitere Schritte, die Sie durchführen sollten:
 
 -   Gewähren Sie Einzelbenutzern und Gruppen SharePoint-Berechtigungen. Dieser Schritt ist notwendig, um den Zugriff auf Websites und Inhalte zu ermöglichen.
@@ -183,7 +181,7 @@ ms.locfileid: "78175699"
  Die serverseitige Datenaktualisierung ermöglicht Benutzern das erneute Importieren aktualisierter Daten in ihre Arbeitsmappen in unbeaufsichtigtem Modus. Um eine Datenaktualisierung erfolgreich durchzuführen, muss der Server, auf dem Analysis Services im SharePoint-Modus ausführt wird, die gleichen Datenanbieter haben, die beim ursprünglichen Import der Daten verwendet wurden. Darüber hinaus sind für das Benutzerkonto, unter dem die Datenaktualisierung ausgeführt wird, oft Leseberechtigungen für die externen Datenquellen erforderlich. Überprüfen Sie die Anforderungen für das Aktivieren und Konfigurieren der Datenaktualisierung, um ein erfolgreiches Ergebnis sicherzustellen. Weitere Informationen finden Sie unter [Power Pivot-Datenaktualisierung mit SharePoint 2010](../powerpivot-data-refresh-with-sharepoint-2010.md).
 
 > [!NOTE]
->  Für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint 2013 werden die Datenanbieter installiert, wenn Sie das Installationsprogramm **spPowerPivot.msi** und das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint 2013-Konfigurationstool ausführen. Weitere Informationen finden Sie unter [installieren oder Deinstallieren des PowerPivot für SharePoint-Add-ins &#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).
+>  Für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint 2013 werden die-Datenanbieter installiert, wenn Sie das Installationsprogramm **sppowerpivot. msi** und das für SharePoint 2013- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Konfigurationstool ausführen. Weitere Informationen finden Sie unter [installieren oder Deinstallieren des PowerPivot für SharePoint-Add-ins &#40;SharePoint 2013&#41;](../instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md).
 
 ### <a name="change-application-pool-and-service-identities-in-sharepoint"></a>Ändern des Anwendungspools und der Dienstidentitäten in SharePoint
  Das [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Konfigurationstool stellt Farmfunktionen, Anwendungen und Dienste zur Ausführung unter einem einzelnen Konto bereit. Dies vereinfacht die Installation, führt aber nicht zu einer Bereitstellung, die die Sicherheitsanforderungen einer SharePoint-Farm erfüllt. Um eine stabilere Bereitstellung zu erzielen, ändern Sie die Anwendungspools und Dienstidentitäten so, dass sie unter anderen Konten ausgeführt werden, nachdem das Setup abgeschlossen ist. Weitere Informationen finden Sie unter [Konfigurieren von Power Pivot-Dienst Konten](configure-power-pivot-service-accounts.md).
@@ -201,7 +199,7 @@ ms.locfileid: "78175699"
 ### <a name="add-additional-analysis-services-servers-in-sharepoint-mode"></a>Hinzufügen zusätzlicher Analysis Services-Server im SharePoint-Modus
  Wenn Sie mit der Zeit feststellen, dass zusätzlicher Datenspeicher und zusätzliche Verarbeitungskapazität erforderlich sind, können Sie der Farm zusätzliche Server hinzufügen, auf denen Analysis Services im SharePoint-Modus ausgeführt wird. Für [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] für SharePoint 2013 installieren Sie neue [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Server im SharePoint-Modus und konfigurieren dann Excel Services. Weitere Informationen finden Sie im Abschnitt "über die Installation auf einem einzelnen Server hinaus" in [PowerPivot für SharePoint 2013-Installation](../instances/install-windows/install-analysis-services-in-power-pivot-mode.md).
 
-## <a name="additional-resources"></a>Weitere Ressourcen
+## <a name="additional-resources"></a>Zusätzliche Ressourcen
  ![SharePoint-Einstellungen](../media/as-sharepoint2013-settings-gear.gif "SharePoint-Einstellungen") [übermitteln Sie Feedback und Kontaktinformationen über Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).
 
 ## <a name="see-also"></a>Weitere Informationen

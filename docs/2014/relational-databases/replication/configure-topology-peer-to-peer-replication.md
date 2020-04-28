@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5c41bc845e7b02959f25aa8282452db64f819558
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176570"
 ---
 # <a name="configure-topology-peer-to-peer-replication"></a>Topologie konfigurieren (Peer-zu-Peer-Replikation)
@@ -28,7 +28,7 @@ ms.locfileid: "78176570"
 ## <a name="options"></a>Tastatur
  Die Seite **Topologie konfigurieren** enthält Oberflächenelemente und Optionen, die verfügbar sind, wenn Sie mit der rechten Maustaste auf ein Element klicken. In der folgenden Tabelle werden die einzelnen Oberflächenelemente beschrieben.
 
-|Oberflächenelement|Beschreibung|
+|Oberflächenelement|BESCHREIBUNG|
 |-----------------------|-----------------|
 |Entwurfsoberfläche|Zeigt andere Oberflächenelemente an. Zum Hinzufügen von Elementen klicken Sie mit der rechten Maustaste auf die Entwurfsoberfläche.|
 |![Der erste Knoten einer Topologie](media/p2pwizard-firstnode.gif "Der erste Knoten einer Topologie")|Der ursprüngliche Knoten in der Topologie. Neue Knoten werden mit einer Kopie der Veröffentlichungsdatenbank vom ursprünglichen Knoten initialisiert.|
@@ -37,9 +37,9 @@ ms.locfileid: "78176570"
 |Graue Linie mit Pfeilen|Die Verbindung zwischen zwei Knoten. Klicken Sie zum Hinzufügen einer Verbindung mit der rechten Maustaste auf einen der Knoten, die Sie verbinden möchten. Zum Entfernen einer Verbindung klicken Sie mit der rechten Maustaste auf diese Verbindung.<br /><br /> Wenn die Linie nur einen Pfeil aufweist, sind für einen der Knoten unvollständige Informationen für die Replikation vorhanden.|
 
 ### <a name="options-for-the-design-surface"></a>Optionen für die Entwurfsoberfläche
- **Diagramm neu zeichnen** Zeichnen Sie die Objekte auf der Entwurfs Oberfläche neu, ohne die Topologie zu aktualisieren. Durch das Neuzeichnen erhalten Sie möglicherweise eine bessere Ansicht der Topologie.
+ **Diagramm neu zeichnen** Zeichnet die Objekte auf der Entwurfsoberfläche neu, ohne die Topologie zu aktualisieren. Durch das Neuzeichnen erhalten Sie möglicherweise eine bessere Ansicht der Topologie.
 
- **Topologie aktualisieren** Fragen Sie jeden Knoten in der Topologie ab, und zeigen Sie aktualisierte Informationen zu jedem Knoten an. Bei zahlreichen Knoten kann dieser Vorgang mehrere Minuten dauern.
+ **Topologie aktualisieren** Fragt jeden Knoten in der Topologie ab und zeigt aktualisierte Informationen zu jedem Knoten an. Bei zahlreichen Knoten kann dieser Vorgang mehrere Minuten dauern.
 
  Wenn der Assistent Topologieinformationen anfordert und Sie den Assistenten dann schließen und erneut öffnen, bevor alle Knoten auf die Anforderung reagiert haben, werden auf dieser Seite möglicherweise nicht alle Knoten in der Topologie angezeigt.
 
@@ -53,22 +53,22 @@ ms.locfileid: "78176570"
 
  **Knoten zum Anzeigen auswählen** Wählen Sie die Knoten aus, die auf der Entwurfs Oberfläche angezeigt werden sollen. Diese Option ist nützlich, wenn die Topologie eine große Anzahl von Knoten enthält. Beachten Sie, dass Sie Verbindungen nur zwischen Knoten hinzufügen können, die auf der Entwurfsoberfläche sichtbar sind.
 
- **Aktualisierungs Timeout festlegen** Geben Sie an, wie lange der Aktualisierungs Vorgang ausgeführt werden kann, bevor ein Timeout eintritt.
+ **Aktualisierungstimeout festlegen** Geben Sie an, wie lange der Aktualisierungsvorgang ausgeführt werden kann, bevor ein Timeout eintritt.
 
 ### <a name="options-for-each-node"></a>Optionen für einzelne Knoten
- **Neue Peer Verbindung hinzufügen** Fügen Sie eine Verbindung zwischen zwei Knoten hinzu. Wenn Sie z. B. eine Verbindung zwischen Knoten A und Knoten B hinzufügen, werden bei der Replikation zwei Abonnements hinzugefügt. Durch das erste Abonnement wird Knoten A in die Lage versetzt, Änderungen der Veröffentlichung auf Knoten B zu empfangen, während durch das zweite Abonnement Knoten B in die Lage versetzt wird, Änderungen der Veröffentlichung auf Knoten A zu empfangen.
+ **Neue Peerverbindung hinzufügen** Fügen Sie eine Verbindung zwischen zwei Knoten hinzu. Wenn Sie z. B. eine Verbindung zwischen Knoten A und Knoten B hinzufügen, werden bei der Replikation zwei Abonnements hinzugefügt. Durch das erste Abonnement wird Knoten A in die Lage versetzt, Änderungen der Veröffentlichung auf Knoten B zu empfangen, während durch das zweite Abonnement Knoten B in die Lage versetzt wird, Änderungen der Veröffentlichung auf Knoten A zu empfangen.
 
- **Peer Knoten löschen** Entfernt einen Knoten aus der Topologie. Wenn Sie z. B. Knoten C entfernen, wird die Veröffentlichung auf diesem Knoten entfernt. Abonnements zwischen Knoten A und Knoten C sowie zwischen Knoten B und Knoten C werden ebenfalls entfernt. Die Datenbank auf Knoten C wird nicht gelöscht, und Veröffentlichung und Verteilung werden nicht deaktiviert.
+ **Peerknoten löschen** Entfernt einen Knoten aus der Topologie. Wenn Sie z. B. Knoten C entfernen, wird die Veröffentlichung auf diesem Knoten entfernt. Abonnements zwischen Knoten A und Knoten C sowie zwischen Knoten B und Knoten C werden ebenfalls entfernt. Die Datenbank auf Knoten C wird nicht gelöscht, und Veröffentlichung und Verteilung werden nicht deaktiviert.
 
 > [!NOTE]
 >  Wenn Sie Peer-zu-Peer-Replikation konfigurieren, geben Sie eine ID für jeden Knoten an. Diese ID muss für alle Knoten in der Topologie eindeutig sein und wird in der Spalte originator_id der Systemtabelle [MSpeer_originatorid_history](/sql/relational-databases/system-tables/mspeer-originatorid-history-transact-sql) gespeichert. Wenn ein Knoten aus der Topologie entfernt wird, wird die ID weiterhin in der Verlaufstabelle beibehalten. Die ID wird beibehalten, um FALSE-Konflikte zu vermeiden, wenn Änderungen am entfernten Knoten weiterhin topologieübergreifend repliziert werden. Wenn Sie die ID für einen neuen Knoten wiederverwenden möchten, müssen Sie die ID endgültig aus der Tabelle MSpeer_originatorid_history für alle Knoten löschen. Bevor Sie eine ID für einen Knoten löschen, führen Sie [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) aus, um zu überprüfen, ob alle Änderungen, die vom Knoten stammen, repliziert wurden.
 
- **Mit allen angezeigten Knoten verbinden** Fügt Verbindungen zwischen dem ausgewählten Knoten und allen anderen Knoten hinzu. Wenn Sie z. B. diese Option für Knoten C in einer drei Knoten umfassenden Topologie auswählen, werden bei der Replikation vier Abonnements hinzugefügt, und zwar zwei, mit denen Knoten A und Knoten B in die Lage versetzt werden, Änderungen der Veröffentlichung auf Knoten C zu empfangen, und zwei, mit denen Knoten C in die Lage versetzt wird, Änderungen der Veröffentlichungen auf Knoten A und Knoten B zu empfangen.
+ **Mit ALLEN angezeigten Knoten verbinden** Fügt Verbindungen zwischen dem ausgewählten Knoten und allen anderen Knoten hinzu. Wenn Sie z. B. diese Option für Knoten C in einer drei Knoten umfassenden Topologie auswählen, werden bei der Replikation vier Abonnements hinzugefügt, und zwar zwei, mit denen Knoten A und Knoten B in die Lage versetzt werden, Änderungen der Veröffentlichung auf Knoten C zu empfangen, und zwei, mit denen Knoten C in die Lage versetzt wird, Änderungen der Veröffentlichungen auf Knoten A und Knoten B zu empfangen.
 
  **Knoten zum Anzeigen auswählen** Wählen Sie die Knoten aus, die auf der Entwurfs Oberfläche angezeigt werden sollen. Diese Option ist nützlich, wenn die Topologie eine große Anzahl von Knoten enthält. Beachten Sie, dass Sie Verbindungen nur zwischen Knoten hinzufügen können, die auf der Entwurfsoberfläche sichtbar sind.
 
 ### <a name="options-for-the-connection-arrows"></a>Optionen für die Verbindungspfeile
- **Peer Verbindung entfernen** Entfernen Sie eine Verbindung zwischen zwei Knoten. Wenn Sie z. B. eine Verbindung zwischen Knoten A und Knoten B entfernen, werden bei der Replikation zwei Abonnements gelöscht, und zwar das Abonnement, das Knoten A in die Lage versetzt, Änderungen der Veröffentlichung auf Knoten B zu empfangen, und das Abonnement, das Knoten B in die Lage versetzt, Änderungen der Veröffentlichung auf Knoten A zu empfangen.
+ **Peerverbindung entfernen** Entfernt eine Verbindung zwischen zwei Knoten. Wenn Sie z. B. eine Verbindung zwischen Knoten A und Knoten B entfernen, werden bei der Replikation zwei Abonnements gelöscht, und zwar das Abonnement, das Knoten A in die Lage versetzt, Änderungen der Veröffentlichung auf Knoten B zu empfangen, und das Abonnement, das Knoten B in die Lage versetzt, Änderungen der Veröffentlichung auf Knoten A zu empfangen.
 
 ## <a name="see-also"></a>Weitere Informationen
  [Konfigurieren der Veröffentlichung und der Verteilung](configure-publishing-and-distribution.md) [Verwalten einer Peer-zu-Peer-Topologie &#40;Replikations Programmierung mit Transact-SQL&#41;](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md) [Peer-zu-Peer-Transaktions Replikation](transactional/peer-to-peer-transactional-replication.md)

@@ -21,13 +21,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e47c9640c314ad28ae64ef105d723b77695e644d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176460"
 ---
-# <a name="ssis-tutorial-deploying-packages"></a>SSIS-Lernprogramm: Bereitstellen von Paketen
+# <a name="ssis-tutorial-deploying-packages"></a>SSIS-Tutorial: Bereitstellen von Paketen
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] bietet Tools zum einfachen Bereitstellen von Paketen auf anderen Computern. Von den Bereitstellungstools werden auch mögliche Abhängigkeiten wie vom Paket benötigte Konfigurationen und Dateien verwaltet. In diesem Lernprogramm lernen Sie, wie Sie diese Tools verwenden, um Pakete und ihre Abhängigkeiten auf einem Zielrechner zu installieren.
 
  Zuerst führen Sie Aufgaben aus, um die Bereitstellung vorzubereiten. Sie erstellen zunächst ein neues [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] und fügen diesem vorhandene Pakete und Datendateien hinzu. Sie erstellen keine neuen Pakete. Stattdessen arbeiten Sie nur mit fertigen Paketen, die speziell für dieses Lernprogramm erstellt wurden. Sie nehmen in diesem Lernprogramm keine Änderung der Funktionalität der Pakete vor. Nachdem Sie die Pakete dem Projekt hinzugefügt haben, sollten Sie sie jedoch im [!INCLUDE[ssIS](../includes/ssis-md.md)] -Designer öffnen und ihren Inhalt überprüfen. Durch Untersuchen der Pakete erhalten Sie Informationen zu Paketabhängigkeiten wie Protokolldateien und weiteren interessanten Funktionen der Pakete.
@@ -45,13 +45,12 @@ ms.locfileid: "78176460"
 ## <a name="what-you-will-learn"></a>Lernziele
  Die beste Möglichkeit, sich mit den neuen Tools, Steuerelementen und Features vertraut zu machen [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , die in verfügbar sind, besteht darin, Sie zu verwenden. Dieses Lernprogramm führt Sie schrittweise durch die Erstellung eines [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekts und das anschließende Hinzufügen der Pakete und weiterer erforderlicher Dateien zum Projekt. Wenn das Projekt vollständig ist, erstellen Sie ein Bereitstellungspaket, kopieren es zum Zielcomputer und installieren dann die Pakete auf dem Zielcomputer.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
  Dieses Tutorial richtet sich an Benutzer, die bereits mit grundlegenden Dateisystem Vorgängen vertraut sind, aber nur über begrenzte Kenntnisse in Bezug auf [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]die in verfügbaren neuen Features verfügen. Um die grundlegenden [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] Konzepte besser zu verstehen, die Sie in diesem Tutorial verwenden werden, ist es möglicherweise hilfreich, zunächst die [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] folgenden Tutorials [auszuführen: Ausführen des SQL Server-Import/Export-Assistenten](import-export-data/start-the-sql-server-import-and-export-wizard.md) und [SSIS-Tutorial: Erstellen eines einfachen ETL-Pakets](../integration-services/ssis-how-to-create-an-etl-package.md).
 
  **Quellcomputer.** Auf dem Computer, auf dem Sie das Bereitstellungspaket erstellen, müssen die folgenden Komponenten installiert sein:
 
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mit der AdventureWorks-Datenbank. Aus Sicherheitsgründen werden die Beispieldatenbanken standardmäßig nicht installiert. Sie können die Beispieldatenbank von [codeplex](https://msftdbprodsamples.codeplex.com/releases/view/125550)herunterladen.
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mit der AdventureWorks-Datenbank. Aus Sicherheitsgründen werden die Beispieldatenbanken standardmäßig nicht installiert. Sie können die Beispieldatenbank von [codeplex](https://msftdbprodsamples.codeplex.com/releases/view/125550)herunterladen.
 
 -   Sie müssen die Berechtigung zum Erstellen und Löschen von Tabellen in AdventureWorks haben.
 
@@ -61,14 +60,13 @@ ms.locfileid: "78176460"
 
  **Zielcomputer.** Auf dem Computer, auf dem Sie die Pakete bereitstellen, müssen die folgenden Komponenten installiert sein:
 
--   
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mit der AdventureWorks-Datenbank.
+-   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mit der AdventureWorks-Datenbank.
 
 -   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
 
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].
 
--   Sie müssen über die Berechtigungen zum Erstellen und Löschen von Tabellen in AdventureWorks und zum Ausführen von Paketen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] verfügen.
+-   Sie müssen über die Berechtigungen zum Erstellen und Löschen von Tabellen in AdventureWorks und zum Ausführen von Paketen in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]verfügen.
 
 -   Sie müssen über Lese-und Schreib Berechtigung für die sysssispackages-Tabelle in der[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] msdb-Systemdatenbank verfügen.
 

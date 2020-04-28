@@ -14,10 +14,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 43cecce8e173c0135a7a37ee5800c7cf658c1f1a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175379"
 ---
 # <a name="technical-reference-database-engine"></a>Technische Referenz (Datenbank-Engine)
@@ -31,7 +31,7 @@ ms.locfileid: "78175379"
 
  ![Kleines Datei Ordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") **Befehlszeilen-Hilfsprogramm Referenz** [bcp-Hilfsprogramm](../tools/bcp-utility.md)
 
- [dta](../tools/dta/dta-utility.md)
+ [DTA-Hilfsprogramm](../tools/dta/dta-utility.md)
 
  [SqlLocalDB-Hilfsprogramm](../tools/sqllocaldb-utility.md)
 

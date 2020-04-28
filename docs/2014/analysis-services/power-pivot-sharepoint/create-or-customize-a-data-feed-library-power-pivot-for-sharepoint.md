@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 853798cd1e78757684d16f7b964787dfa13d208a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175639"
 ---
 # <a name="create-or-customize-a-data-feed-library-powerpivot-for-sharepoint"></a>Erstellen oder Anpassen einer Datenfeedbibliothek (PowerPivot für SharePoint)
@@ -35,17 +35,16 @@ ms.locfileid: "78175639"
 
  [Voraussetzungen](#prereq)
 
- [Erstellen einer neuen datenfeedbibliothek](#createlib)
+ [Erstellen einer neuen Datenfeedbibliothek](#createlib)
 
  [Hinzufügen des Inhaltstyps für Datenfeeds zu einer Bibliothek](#addtolib)
 
-##  <a name="prereq"></a> Voraussetzungen
- 
-  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Funktion muss für die Websites aktiviert werden, für die Sie die Datenfeedbibliothek erstellen. Wenn der Vorlagentyp für Datenfeedbibliotheken nicht verfügbar ist, liegt dies höchstwahrscheinlich daran, dass diese Voraussetzung nicht erfüllt wurde. Weitere Informationen finden Sie unter [Aktivieren der Power Pivot-Funktions Integration für Website Sammlungen in der zentral Administration](activate-power-pivot-integration-for-site-collections-in-ca.md).
+##  <a name="prerequisites"></a><a name="prereq"></a> Voraussetzungen
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] -Funktion muss für die Websites aktiviert werden, für die Sie die Datenfeedbibliothek erstellen. Wenn der Vorlagentyp für Datenfeedbibliotheken nicht verfügbar ist, liegt dies höchstwahrscheinlich daran, dass diese Voraussetzung nicht erfüllt wurde. Weitere Informationen finden Sie unter [Aktivieren der Power Pivot-Funktions Integration für Website Sammlungen in der zentral Administration](activate-power-pivot-integration-for-site-collections-in-ca.md).
 
  Sie müssen Websitebesitzer sein, um die Bibliothek erstellen zu können.
 
-##  <a name="createlib"></a>Erstellen einer neuen datenfeedbibliothek
+##  <a name="create-a-new-data-feed-library"></a><a name="createlib"></a>Erstellen einer neuen datenfeedbibliothek
  Das Erstellen einer Datenfeedbibliothek ist der erste Schritt zur Aktivierung von Datenfeeds für [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Arbeitsmappen. Da eine Datenfeedbibliothek Anwendungs- und Verwaltungsseiten für Datendienstdokumente bereitstellt, muss diese Bibliothek vorhanden sein, bevor Sie ein neues Dokument erstellen können.
 
  Eine Datenfeedbibliothek basiert auf einer integrierten Vorlage und einem vorkonfigurierten *Inhaltstyp für Datendienstdokumente* , der Eigenschaften und Verhaltensweisen für ein Datendienstdokument definiert.
@@ -64,7 +63,7 @@ ms.locfileid: "78175639"
 
  Nachdem Sie eine Bibliothek erstellt haben, können Sie mit ihrer Hilfe Datendienstdokumente erstellen. Weitere Informationen finden Sie unter [Verwenden von Daten Feeds &#40;PowerPivot für SharePoint&#41;](use-data-feeds-power-pivot-for-sharepoint.md).
 
-##  <a name="addtolib"></a>Hinzufügen des Inhaltstyps für Datenfeeds zu einer Bibliothek
+##  <a name="add-the-data-feed-content-type-to-any-library"></a><a name="addtolib"></a>Hinzufügen des Inhaltstyps für Datenfeeds zu einer Bibliothek
  Wenn Sie keine dedizierte Datenfeedbibliothek erstellen, aber trotzdem Datendienstdokumente von einer SharePoint-Website erstellen und verwalten möchten, können Sie den Inhaltstyp für Datendienstdokumente für eine beliebige Bibliothek manuell hinzufügen und konfigurieren, die Sie zum Freigeben von Datendienstdokumenten (ATOMSVC-Dateien) verwenden möchten.
 
  Sie müssen mindestens über die Listenverwaltungsberechtigung verfügen, um einen Inhaltstyp hinzuzufügen und zu konfigurieren. Diese Berechtigung ist in die Berechtigungsebene "Entwerfen" und höher integriert.

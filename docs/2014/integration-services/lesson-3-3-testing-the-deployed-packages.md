@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 687a3c6e92dad953d39199afb446389bc11b9841
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176139"
 ---
 # <a name="step-3-testing-the-deployed-packages"></a>Schritt 3: Testen der bereitgestellten Pakete
@@ -22,8 +22,7 @@ ms.locfileid: "78176139"
 
  In anderen [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Tutorials haben Sie Pakete in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], der Entwicklungsumgebung für [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], mithilfe des Befehls **Debuggen starten** im Menü **Debuggen** ausgeführt. Dieses Mal führen Sie die Pakete auf andere Weise aus.
 
- 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt mehrere Tools bereit, die Sie zum Ausführen von Paketen in der Test- und Produktionsumgebung verwenden können: das Eingabeaufforderungs-Hilfsprogramm `dtexec` und das Paketausführungshilfsprogramm. Das Paketausführungshilfsprogramm ist ein grafisches Tool, das auf `dtexec` aufbaut. Mit diesen beiden Tools wird das Paket sofort ausgeführt. Zusätzlich stellt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ein Subsystem des SQL Server-Agents bereit, das speziell dazu dient, die Paketausführung als Schritt in einem SQL Server-Agent-Auftrag zu planen.
+ [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] stellt mehrere Tools bereit, die Sie zum Ausführen von Paketen in der Test- und Produktionsumgebung verwenden können: das Eingabeaufforderungs-Hilfsprogramm `dtexec` und das Paketausführungshilfsprogramm. Das Paketausführungshilfsprogramm ist ein grafisches Tool, das auf `dtexec` aufbaut. Mit diesen beiden Tools wird das Paket sofort ausgeführt. Zusätzlich stellt [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ein Subsystem des SQL Server-Agents bereit, das speziell dazu dient, die Paketausführung als Schritt in einem SQL Server-Agent-Auftrag zu planen.
 
  Sie verwenden das Paketausführungshilfsprogramm, um die bereitgestellten Pakete auszuführen. Die Pakete werden in ihrem aktuellen Zustand verwendet. Sie brauchen die Informationen auf den Seiten des Dialogfelds also nicht zu aktualisieren. Sie führen die Pakete von der Seite Allgemein aus. Hierbei handelt es sich um die erste Seite des Paketausführungshilfsprogramms. Sie können auf die anderen Seiten klicken, um zu sehen, welche Informationen für jedes Paket angezeigt werden.
 

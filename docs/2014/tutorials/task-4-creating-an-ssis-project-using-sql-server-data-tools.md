@@ -11,13 +11,13 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: bcf16dc7d63e6a4acca6c30871666d1ffe996192
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78171719"
 ---
-# <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>Aufgabe 4: Erstellen eines SSIS-Projekts mit SQL Server Data Tools
+# <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>Aufgabe 4: Erstellen eines SSIS-Projekts mit SQL Server Data Tools
   In dieser Aufgabe erstellen Sie ein SSIS-Projekt mithilfe **SQL Server Data Tools** , um die Bereinigung und den Abgleich der Lieferantendaten zu automatisieren.
 
 1.  Starten Sie **SQL Server Data Tools**. Klicken Sie auf Start, zeigen Sie auf **Alle Programme**, erweitern Sie **Microsoft SQL Server 2012**, und klicken Sie auf **SQL Server Data Tools**.
@@ -39,6 +39,6 @@ ms.locfileid: "78171719"
 7.  Geben Sie **cleantandcursor. dzx** ein, und drücken **Sie die Eingabe**Taste. Stellen Sie sicher, dass die **Erweiterung** **. DTX**beibehalten wird.
 
 ## <a name="next-step"></a>Nächster Schritt
- [Aufgabe 5: Hinzufügen eines Datenflusstasks](task-5-adding-data-flow-task.md)
+ [Aufgabe 5: Hinzufügen eines Datenflusstasks](task-5-adding-data-flow-task.md)
 
 

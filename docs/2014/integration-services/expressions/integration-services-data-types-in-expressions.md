@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 793d07bfd7500318a5fe822683e8353b07e541ba
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176430"
 ---
 # <a name="integration-services-data-types-in-expressions"></a>Integration Services-Datentypen in Ausdrücken
@@ -51,19 +51,19 @@ ms.locfileid: "78176430"
 > 
 >  Um Fehler oder unerwartete Ergebnisse zu vermeiden, sollten Sie keinen Code erstellen, der von bestimmten numerischen Werten für `True` und `False` abhängig ist. Nach Möglichkeit sollten bei booleschen Variablen nur die für sie vorgesehenen logischen Werte verwendet werden.
 
- Weitere Informationen finden Sie in den folgenden Themen:
+ Weitere Informationen finden Sie unter den folgenden Themen:
 
--   [== &#40;Gleich&#41; &#40;SSIS-Ausdruck&#41;](equal-ssis-expression.md)
+-   [== &#40;Gleich, SSIS-Ausdruck&#41;](equal-ssis-expression.md)
 
--   [! = &#40;ungleich&#41; &#40;SSIS-Ausdruck&#41;](unequal-ssis-expression.md)
+-   [\!= &#40;Ungleich&#41; &#40;SSIS-Ausdruck&#41;](unequal-ssis-expression.md)
 
 -   [&#62; &#40;Größer als&#41; &#40;SSIS-Ausdruck&#41;](greater-than-ssis-expression.md)
 
 -   [&#60; &#40;Kleiner als&#41; &#40;SSIS-Ausdruck&#41;](less-than-ssis-expression.md)
 
--   [&#62;= &#40;Größer oder gleich&#41; &#40;SSIS-Ausdruck&#41;](greater-than-or-equal-to-ssis-expression.md)
+-   [&#62;= &#40;Größer als oder gleich&#41; &#40;SSIS-Ausdruck&#41;](greater-than-or-equal-to-ssis-expression.md)
 
--   [&#60;= &#40;Kleiner oder gleich&#41; &#40;SSIS-Ausdruck&#41;](less-than-or-equal-to-ssis-expression.md)
+-   [&#60;= &#40;Kleiner als oder gleich&#41; &#40;SSIS-Ausdruck&#41;](less-than-or-equal-to-ssis-expression.md)
 
  Eine Funktion mit einem einzelnen Argument gibt ein Ergebnis mit dem Datentyp des Arguments zurück, wobei folgende Ausnahmen gelten:
 

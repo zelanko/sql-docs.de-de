@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 74346c2563366300058c1a33bd625162aec7121e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172609"
 ---
 # <a name="tables-report-builder--and-ssrs"></a>Tabellen (Berichts-Generator und SSRS)
@@ -30,7 +30,7 @@ ms.locfileid: "78172609"
 > [!NOTE]
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-##  <a name="AddingTable"></a>Hinzufügen einer Tabelle zum Anzeigen von Detail Daten
+##  <a name="adding-a-table-to-display-detail-data"></a><a name="AddingTable"></a> Hinzufügen einer Tabelle zum Anzeigen von Detaildaten
  Fügen Sie der Entwurfsoberfläche über die Registerkarte "Einfügen" auf dem Menüband eine Tabelle hinzu. Sie können eine Tabelle mit dem Tabellen- oder Matrix-Assistenten hinzufügen (einschließlich der Erstellung einer Datenquellenverbindung und eines Datasets und der Konfiguration der Tabelle) oder eine Tabelle auf Grundlage der Tabellenvorlage hinzufügen, die Sie manuell konfigurieren.
 
 > [!NOTE]
@@ -46,7 +46,7 @@ ms.locfileid: "78172609"
 
  ![Auf der Entwurfsoberfläche ausgewählte Tabellenvorlage](../media/rs-tabletemplatenewselected.gif "Auf der Entwurfsoberfläche ausgewählte Tabellenvorlage")
 
- Das Zeilen Handle für die Daten Zeile zeigt das Detail Symbol an (![Zeilen Handle mit drei parallelen Linien für die Detail Zeile](../media/rs-icontablix-detailsrow.gif "Zeilenziehpunkt mit 3 parallelen Linien für Detailzeile")). Ziehen Sie Felder aus dem Berichtsdatenbereich in die Zellen der Tabelle in der Kopf- oder Detailzeile, um Daten in diesen Zeilen anzuzeigen. Beide Zeilen werden gleichzeitig gefüllt. Ziehen Sie das Feld in die Tabelle, bis eine Einfügemarke angezeigt wird, um weitere Spalten hinzuzufügen. Nach dem Hinzufügen von Datasetfeldern zur Tabelle können Sie die Standardformate für Datum und Währung für die Anzeige im Bericht ändern. Das folgende Diagramm zeigt einen Tabellendatenbereich mit folgenden Feldern: Date, Order, Product, Qty und Line Total.
+ Das Zeilenhandle für die Datenzeile enthält das Detailsymbol (![Zeilenhandle mit drei parallelen Linien für die Detailzeile](../media/rs-icontablix-detailsrow.gif "Zeilenhandle mit 3 parallelen Linien für Detailzeile")). Ziehen Sie Felder aus dem Berichtsdatenbereich in die Zellen der Tabelle in der Kopf- oder Detailzeile, um Daten in diesen Zeilen anzuzeigen. Beide Zeilen werden gleichzeitig gefüllt. Ziehen Sie das Feld in die Tabelle, bis eine Einfügemarke angezeigt wird, um weitere Spalten hinzuzufügen. Nach dem Hinzufügen von Datasetfeldern zur Tabelle können Sie die Standardformate für Datum und Währung für die Anzeige im Bericht ändern. Das folgende Diagramm zeigt einen Tabellendatenbereich mit folgenden Feldern: Date, Order, Product, Qty und Line Total.
 
  ![Entwurf, Tabelle mit fett formatierten Spaltenüberschriften](../media/rs-basictabledetailsformatteddesign.gif "Entwurf, Tabelle mit fett formatierten Spaltenüberschriften")
 
@@ -67,16 +67,16 @@ ms.locfileid: "78172609"
 
  Weitere Informationen finden Sie unter [Hinzufügen eines Gesamtergebnisses zu einer Gruppe oder einem Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md).
 
-##  <a name="AddingRowGroups"></a>Hinzufügen von Zeilen Gruppen zu einer Tabelle
+##  <a name="adding-row-groups-to-a-table"></a><a name="AddingRowGroups"></a> Hinzufügen von Zeilengruppen zu einer Tabelle
  Analog zum Anzeigen von Detaildaten durch Ziehen eines Felds aus dem Berichtsdatenbereich in eine Zelle können Sie auch Felder in den Gruppierungsbereich ziehen, um Gruppen hinzuzufügen. Ziehen Sie das Feld bei einer Tabelle in den Bereich Zeilengruppen. Nach dem Hinzufügen einer Gruppe werden neuen Spalten im Zeilengruppenbereich von der Tabelle automatisch Zellen hinzugefügt, in denen die Gruppenwerte angezeigt werden. Weitere Informationen zu Bereichen finden Sie unter [Zonen des Tablix-Datenbereichs (Berichts-Generator und SSRS)](tablix-data-region-areas-report-builder-and-ssrs.md).
 
  Die folgende Abbildung zeigt eine Tabelle mit zwei geschachtelten Zeilengruppen in der Entwurfsansicht. Die Zeilengruppen wurden erstellt, indem zunächst das Feld Order und anschließend das Feld Date in den Zeilengruppenbereich gezogen und jede Gruppe als übergeordnetes Element der vorhandenen Gruppen hinzugefügt wurden. Die Abbildung zeigt eine übergeordnete Gruppe auf Basis des Datums sowie eine untergeordnete Gruppe auf Basis der Bestellnummer an; außerdem wird die standardmäßig definierte Detailgruppe angezeigt.
 
- ![Tabelle gruppiert nach 'Date' und 'Order'](../media/rs-basictablegroupsdesign.gif "Tabelle gruppiert nach 'Date' und 'Order'")
+ ![Tabelle gruppiert nach „Date“ und „Order“](../media/rs-basictablegroupsdesign.gif "Tabelle gruppiert nach „Date“ und „Order“")
 
  In der Vorschau werden die Bestelldaten im Bericht zunächst nach Datum und anschließend nach Bestellung angeordnet angezeigt, wie die folgende Abbildung zeigt.
 
- ![Tabelle gruppiert nach 'Date' und dann 'Order'](../../tutorials/media/rs-basictablegroupspreview.gif "Tabelle gruppiert nach 'Date' und dann 'Order'")
+ ![Tabelle gruppiert nach „Date“ und dann „Order“](../../tutorials/media/rs-basictablegroupspreview.gif "Tabelle gruppiert nach „Date“ und dann „Order“")
 
  Gruppierte Daten können auch durch Festlegen eines Einzugs für die Gruppenhierarchie angezeigt werden, um die geschachtelte Beziehung von Gruppen statt einzelner Werte in eigenen Spalten darzustellen. Diese Art der Formatierung wird als abgestufter Bericht bezeichnet. Weitere Informationen zum Formatieren von Gruppeninformationen als abgestufter Bericht finden Sie unter [Erstellen von abgestuften Berichten (Berichts-Generator und SSRS)](create-a-stepped-report-report-builder-and-ssrs.md).
 
@@ -91,7 +91,7 @@ ms.locfileid: "78172609"
 
  Weitere Informationen finden Sie unter [Hinzufügen eines Gesamtergebnisses zu einer Gruppe oder einem Tablix-Datenbereich &#40;Berichts-Generator und SSRS&#41;](add-a-total-to-a-group-or-tablix-data-region-report-builder-and-ssrs.md).
 
-##  <a name="RemovingHidingRows"></a>Entfernen oder Ausblenden von Detail Zeilen
+##  <a name="removing-or-hiding-detail-rows"></a><a name="RemovingHidingRows"></a> Entfernen oder Ausblenden von Detailzeilen
  Nachdem Sie eine Tabelle in einem Bericht in der Vorschau angezeigt haben, können Sie vorhandene Detailzeilen entfernen. Sie können vorhandene Detailzeilen auch standardmäßig ausblenden und Benutzern analog zu einem Drilldownbericht das Ein- und Ausblenden von Details ermöglichen.
 
  Mithilfe des Gruppierungsbereichs können Sie Detailzeilen aus einer Tabelle entfernen. Wählen Sie die Detailgruppe aus, und löschen Sie die Gruppe sowie die Zeilen, in denen die Detaildaten angezeigt werden, mithilfe des Kontextmenüs. Die folgende Abbildung zeigt die Entwurfsansicht für eine Tabelle nach Datum und Bestellnummer gruppiert ohne Detailzeilen. Dieser Tabelle wurden keine Gesamtwertzeilen hinzugefügt.

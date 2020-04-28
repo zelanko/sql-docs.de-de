@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65f498318c29f6e3dc7189bd8f1c5d852cc1a2d0
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176710"
 ---
 # <a name="transactional-replication"></a>Transaktionsreplikation
@@ -33,7 +33,7 @@ ms.locfileid: "78176710"
 
  Standardmäßig sollten Abonnenten von Transaktionsreplikationen schreibgeschützt sein, da Änderungen nicht an den Verleger zurückgegeben werden. Die Transaktionsreplikation bietet aber auch Optionen, die Updates auf dem Abonnenten ermöglichen.
 
-##  <a name="HowWorks"></a> Funktionsweise der Transaktionsreplikation
+##  <a name="how-transactional-replication-works"></a><a name="HowWorks"></a> Funktionsweise der Transaktionsreplikation
  Die Transaktionsreplikation wird vom Momentaufnahme-Agent, dem Protokolllese-Agent und dem Verteilungs-Agent von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implementiert. Der Momentaufnahme-Agent bereitet Momentaufnahmen vor, die das Schema und die Daten von veröffentlichten Tabellen und Datenbankobjekten enthalten, speichert die Dateien im Momentaufnahmeordner und zeichnet Synchronisierungsaufträge in der Verteilungsdatenbank auf dem Verteiler auf.
 
  Der Protokolllese-Agent überwacht das Transaktionsprotokoll jeder für die Transaktionsreplikation konfigurierten Datenbank und kopiert die für die Replikation markierten Transaktionen aus dem Transaktionsprotokoll in die Verteilungsdatenbank, die als zuverlässige Warteschlange zum Speichern und Weiterleiten fungiert. Der Verteilungs-Agent kopiert die Anfangsmomentaufnahmedateien aus dem Momentaufnahmeordner und die in den Tabellen der Verteilungsdatenbank gespeicherten Transaktionen auf Abonnenten.
@@ -44,7 +44,7 @@ ms.locfileid: "78176710"
 
  ![Komponenten und Datenfluss der Transaktionsreplikation](../media/trnsact.gif "Komponenten und Datenfluss der Transaktionsreplikation")
 
-##  <a name="Dataset"></a> Anfangsdataset
+##  <a name="initial-dataset"></a><a name="Dataset"></a> Anfangsdataset
  Bevor ein neuer Abonnent einer Transaktionsreplikation inkrementelle Änderungen von einem Verleger erhalten kann, muss der Abonnent Tabellen mit demselben Schema und denselben Daten wie die Tabellen auf dem Verleger enthalten. Das Anfangsdataset ist in der Regel eine Momentaufnahme, die vom Momentaufnahme-Agent erstellt und vom Verteilungs-Agent verteilt und angewendet wird. Das Anfangsdataset kann auch über eine Sicherung oder andere Methoden, wie [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Integration Services, bereitgestellt werden.
 
  Wenn Momentaufnahmen an Abonnenten verteilt und auf Abonnenten angewendet werden, sind nur die Abonnenten betroffen, die auf eine Anfangsmomentaufnahme warten. Andere Abonnenten für diese Veröffentlichung (diejenigen, die bereits initialisiert wurden) sind nicht betroffen.
@@ -52,19 +52,19 @@ ms.locfileid: "78176710"
 ## <a name="concurrent-snapshot-processing"></a>Gleichzeitige Momentaufnahmeverarbeitung
  Bei der Momentaufnahmegenerierung werden für die Dauer der Momentaufnahmegenerierung freigegebene Sperren auf allen Tabellen platziert, die als Teil der Replikation veröffentlicht werden. So kann verhindert werden, dass Updates in den veröffentlichten Tabellen ausgeführt werden. Bei der gleichzeitigen Momentaufnahmeverarbeitung, die Standardeinstellung für die Transaktionsreplikation, werden die freigegebenen Sperren nicht während der gesamten Momentaufnahmegenerierung beibehalten. Deshalb können Benutzer ohne Unterbrechung weiter arbeiten, während Anfangsmomentaufnahmedateien durch die Replikation erstellt werden.
 
-##  <a name="SnapshotAgent"></a> Momentaufnahme-Agent
+##  <a name="snapshot-agent"></a><a name="SnapshotAgent"></a> Momentaufnahme-Agent
  Die Prozeduren, mit denen der Momentaufnahme-Agent die Anfangsmomentaufnahme in der Transaktionsreplikation implementiert, sind identisch mit den bei der Momentaufnahmereplikation verwendeten Prozeduren (ausgenommen der für die gleichzeitige Momentaufnahmeverarbeitung weiter oben beschriebenen Prozeduren).
 
  Nach dem Generieren der Momentaufnahmedateien können Sie sie mithilfe von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows-Explorer im Momentaufnahmeordner anzeigen.
 
-##  <a name="LogReaderAgent"></a> Ändern von Daten und der Protokolllese-Agent
+##  <a name="modifying-data-and-the-log-reader-agent"></a><a name="LogReaderAgent"></a> Ändern von Daten und der Protokolllese-Agent
  Der Protokolllese-Agent wird auf dem Verteiler ausgeführt. In der Regel wird er fortlaufend ausgeführt, Sie können jedoch auch einen Zeitplan für die Ausführung festlegen. Beim Ausführen liest der Protokolllese-Agent zunächst das Transaktionsprotokoll der Veröffentlichung (dasselbe Datenbankprotokoll, das auch für die Transaktionsprotokollierung und -wiederherstellung während regulärer Vorgänge der [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-Datenbank-Engine verwendet wird) und identifiziert alle INSERT-, UPDATE- und DELETE-Anweisungen und andere Änderungen, die an den für die Replikation markierten Daten vorgenommen wurden. Danach kopiert der Agent diese Transaktionen als Batch in die Verteilungsdatenbank auf dem Verteiler. Der Protokolllese-Agent verwendet die intern gespeicherte Prozedur **sp_replcmds** zum Abrufen des nächsten Satzes von Befehlen aus dem Protokoll, die für die Replikation markiert wurden. Die Verteilungsdatenbank wird dann zur Warteschlange zum Speichern und Weiterleiten, von der aus Änderungen an die Abonnenten gesendet werden. Nur Transaktionen, für die ein Commit ausgeführt wurde, werden an die Verteilungsdatenbank gesendet.
 
  Nachdem der gesamte Transaktionsbatch erfolgreich in die Verteilungsdatenbank geschrieben wurde, wird ein Commit ausgeführt. Nach der Ausführung eines Commits für jeden Batch von Befehlen auf dem Verteiler ruft der Protokolllese-Agent **sp_repldone** auf, um zu markieren, wo die Replikation zuletzt abgeschlossen wurde. Schließlich markiert der Agent die Zeilen im Transaktionsprotokoll, die gelöscht werden können. Zeilen, die noch auf ihre Replikation warten, werden nicht gelöscht.
 
  Transaktionsbefehle werden in der Verteilungsdatenbank gespeichert, bis sie an alle Abonnenten weitergegeben werden oder bis die maximale Beibehaltungsdauer für die Verteilung überschritten wird. Abonnenten erhalten Transaktionen in der gleichen Reihenfolge, in der sie auf den Verleger angewendet wurden.
 
-##  <a name="DistributionAgent"></a> Verteilungs-Agent
+##  <a name="distribution-agent"></a><a name="DistributionAgent"></a> Verteilungs-Agent
  Der Verteilungs-Agent wird für Pushabonnements auf dem Verteiler und für Pullabonnements auf dem Abonnenten ausgeführt. Der Agent verschiebt Transaktionen aus der Verteilungsdatenbank auf den Abonnenten. Wenn ein Abonnement für die Überprüfung markiert ist, überprüft der Verteilungs-Agent auch, ob die Daten auf dem Verleger und dem Abonnenten übereinstimmen.
 
 ## <a name="publication-types"></a>Veröffentlichungstypen
@@ -72,7 +72,7 @@ ms.locfileid: "78176710"
 
 Die Transaktionsreplikation stellt vier Veröffentlichungstypen bereit:
 
-|Veröffentlichungstyp|Beschreibung|
+|Veröffentlichungstyp|BESCHREIBUNG|
 |----------------------|-----------------|
 |Standardmäßige Transaktionsveröffentlichung|Geeignet für Topologien, in denen alle Daten auf dem Abonnenten schreibgeschützt sind (von der Transaktionsreplikation wird dies auf dem Abonnenten nicht erzwungen).<br /><br /> Diese Transaktionsveröffentlichungen werden standardmäßig bei der Verwendung von Transact-SQL oder Replikationsverwaltungsobjekten (RMO) erstellt. Im Assistenten für neue Veröffentlichung werden sie erstellt, wenn auf der Seite **Veröffentlichungstyp** die Option **Transaktionsveröffentlichung** ausgewählt wird.<br /><br /> Weitere Informationen zum Erstellen von Veröffentlichungen finden Sie unter [Veröffentlichen von Daten und Datenbankobjekten](../../../relational-databases/replication/publish/publish-data-and-database-objects.md).|
 |Transaktionsveröffentlichung mit aktualisierbaren Abonnements|Dieser Veröffentlichungstyp weist die folgenden Merkmale auf:<br /><br /> -Jeder Standort verfügt über identische Daten, mit einem Verleger und einem Abonnenten. <br /> -Es ist möglich, die Zeilen auf dem Abonnenten zu aktualisieren.<br /> – Diese Topologie eignet sich am besten für Serverumgebungen, die Hochverfügbarkeit und Leseskalierbarkeit erfordern.<br /><br />Weitere Informationen finden Sie unter [Aktualisierbare Abonnements](../../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).|

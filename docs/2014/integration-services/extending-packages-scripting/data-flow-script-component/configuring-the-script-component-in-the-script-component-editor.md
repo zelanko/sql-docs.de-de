@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 40f354f190093c0c689e708301bed9fcba8c87c3
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176209"
 ---
 # <a name="configuring-the-script-component-in-the-script-component-editor"></a>Konfigurieren der Skriptkomponente im Skriptkomponenten-Editor
@@ -117,7 +117,7 @@ Dim currentCustomerName as String = CustomerInput.CustomerName
 ### <a name="connection-managers-page-of-the-script-transformation-editor"></a>Seite 'Verbindungs-Manager' des Transformations-Editors für Skripterstellung
  Auf der Seite **Verbindungs-Manager** im **Transformations-Editor für Skripterstellung** können Sie Verbindungs-Manager hinzufügen und entfernen, die im benutzerdefinierten Skript verwendet werden sollen. Normalerweise müssen Sie Verbindungs-Manager mit Verweisen versehen, wenn Sie eine Quell- oder Zielkomponente erstellen.
 
- Im Codeprojekt, das basierend auf diesen Metadaten erstellt wird, enthält das Projektelement `ComponentWrapper` eine `Connections`-Auflistungsklasse, die für jeden ausgewählten Verbindungs-Manager eine typisierte Accessoreigenschaft aufweist. Jede typisierte Accessoreigenschaft trägt denselben Namen wie der jeweilige Verbindungs-Manager und gibt einen Verweis auf den Verbindungs-Manager als Instanz von <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100> zurück. Wenn Sie beispielsweise auf der Seite **Verbindungs-Manager** des Editors den Verbindungs-Manager `MyADONETConnection` hinzugefügt haben, können Sie mit dem folgenden Code einen Verweis auf diesen Verbindungs-Manager im Skript erhalten:
+ Im Codeprojekt, das basierend auf diesen Metadaten erstellt wird, enthält das Projektelement `ComponentWrapper` eine `Connections`-Auflistungsklasse, die für jeden ausgewählten Verbindungs-Manager eine typisierte Accessoreigenschaft aufweist. Jede typisierte Accessoreigenschaft trägt denselben Namen wie der jeweilige Verbindungs-Manager und gibt einen Verweis auf den Verbindungs-Manager als Instanz von <xref:Microsoft.SqlServer.Dts.Runtime.Wrapper.IDTSConnectionManager100> zurück. Wenn Sie beispielsweise auf der Seite `MyADONETConnection`Verbindungs-Manager**des Editors den Verbindungs-Manager** hinzugefügt haben, können Sie mit dem folgenden Code einen Verweis auf diesen Verbindungs-Manager im Skript erhalten:
 
 ```vb
 Dim myADONETConnectionManager As IDTSConnectionManager100 = _

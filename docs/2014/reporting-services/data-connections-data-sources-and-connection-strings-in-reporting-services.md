@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 88f843db8280220b75025dc286fe692957bf2b77
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173919"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-in-reporting-services"></a>Datenverbindungen, Datenquellen und Verbindungszeichenfolgen in Reporting Services
@@ -31,14 +31,14 @@ ms.locfileid: "78173919"
 
 ||
 |-|
-|**[!INCLUDE[applies](../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Einheitlicher Modus &#124; [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint-Modus|
+|**[!INCLUDE[applies](../includes/applies-md.md)]** Einheitlicher Modus von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] &#124; SharePoint-Modus von [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|
 
 > [!NOTE]
 >  [!INCLUDE[ssRBRDDup](../includes/ssrbrddup-md.md)]
 
 
 
-##  <a name="bkmk_data_sources"></a>Eingebettete und freigegebene Datenquellen
+##  <a name="embedded-and-shared-data-sources"></a><a name="bkmk_data_sources"></a>Eingebettete und freigegebene Datenquellen
  Der Unterschied zwischen den eingebetteten und den freigegebenen Datenquellen ist die Art der Erstellung, Speicherung und Verwaltung.
 
 -   In Berichts-Designer werden eingebettete oder freigegebene Datenquellen als Teil eines [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] -Projekts erstellt. Sie können steuern, ob Sie sie für die Vorschau lokal verwenden oder sie als Teil des Projekts auf einem Berichtsserver oder einer SharePoint-Website bereitstellen möchten. Sie können benutzerdefinierte Datenerweiterungen verwenden, die auf dem Computer und dem Berichtsserver oder der SharePoint-Website installiert wurden, auf dem bzw. der die Berichte bereitgestellt werden.
@@ -49,7 +49,7 @@ ms.locfileid: "78173919"
 
 -   Wechseln Sie im Berichts-Generator zu einem Berichtsserver oder zu einer SharePoint-Website, und wählen Sie freigegebene Datenquellen aus, oder erstellen Sie eingebettete Datenquellen im Bericht. Freigegebene Datenquellen können nicht in Berichts-Generator erstellt werden. Sie können keine benutzerdefinierten Datenerweiterungen in Berichts-Generator verwenden.
 
-##  <a name="bkmk_DataConnections"></a>Integrierte Daten Erweiterungen
+##  <a name="built-in-data-extensions"></a><a name="bkmk_DataConnections"></a>Integrierte Daten Erweiterungen
  Standarddatenerweiterungen in [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] umfassen die folgenden Typen von Datenverbindungen:
 
 -   Microsoft SQL Server
@@ -80,14 +80,14 @@ ms.locfileid: "78173919"
 
  Eine vollständige Liste der Datenquellen und -versionen, die [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] unterstützt, finden Sie unter [Von Reporting Services unterstützte Datenquellen &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md).
 
-##  <a name="bkmk_create_data_source"></a>Erstellen einer Datenquelle
+##  <a name="create-a-data-source"></a><a name="bkmk_create_data_source"></a>Erstellen einer Datenquelle
  Zum Erstellen einer Datenquelle benötigen Sie die folgenden Informationen:
 
--   **Daten Quellentyp** Der Verbindungstyp, z [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. b.. Wählen Sie diesen Wert aus der Dropdownliste von Verbindungstypen aus.
+-   **Datenquellentyp** Der Verbindungstyp, zum Beispiel [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Wählen Sie diesen Wert aus der Dropdownliste von Verbindungstypen aus.
 
--   **Verbindungsinformationen** Verbindungsinformationen umfassen den Namen und den Speicherort der Datenquelle sowie Verbindungs Eigenschaften, die für jeden Datenanbieter spezifisch sind. Die *Verbindungszeichenfolge* ist die Darstellung der Verbindungsinformationen in Textform. Wenn zum Beispiel die Datenquelle eine SQL Server-Datenbank ist, können Sie den Namen der Datenbank angeben. Für eingebettete Datenquellen können Sie auch auf Ausdrücken beruhende Verbindungszeichenfolgen schreiben, die zur Laufzeit ausgewertet werden. Weitere Informationen finden Sie im vorliegenden Thema weiter unten unter [Auf Ausdrücken beruhende Verbindungszeichenfolgen](#bkmk_Expressions_in_connection_strings) .
+-   **Verbindungsinformationen** Verbindungsinformationen umfassen den Namen und den Ort der Datenquelle sowie Verbindungseigenschaften, die jeweils speziell für die verschiedenen Datenanbieter gelten. Die *Verbindungszeichenfolge* ist die Darstellung der Verbindungsinformationen in Textform. Wenn zum Beispiel die Datenquelle eine SQL Server-Datenbank ist, können Sie den Namen der Datenbank angeben. Für eingebettete Datenquellen können Sie auch auf Ausdrücken beruhende Verbindungszeichenfolgen schreiben, die zur Laufzeit ausgewertet werden. Weitere Informationen finden Sie im vorliegenden Thema weiter unten unter [Auf Ausdrücken beruhende Verbindungszeichenfolgen](#bkmk_Expressions_in_connection_strings) .
 
--   **Anmelde** Informationen Sie geben die Anmelde Informationen an, die für den Zugriff auf die Daten erforderlich sind. Der Datenquellenbesitzer muss Ihnen die erforderlichen Berechtigungen erteilt haben, um sowohl auf die Datenquelle und die bestimmten Daten für die Datenquelle zugreifen zu können. Zum Herstellen einer Verbindung mit der auf einem Netzwerkserver installierten [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] -Beispieldatenbank müssen Sie über die Berechtigung zum Herstellen einer Verbindung mit dem Server sowie über die Leseberechtigung für den Zugriff auf die Datenbank verfügen.
+-   **Anmeldeinformationen** Sie geben die Anmeldeinformationen an, die zum Zugriff auf die Daten benötigt werden. Der Datenquellenbesitzer muss Ihnen die erforderlichen Berechtigungen erteilt haben, um sowohl auf die Datenquelle und die bestimmten Daten für die Datenquelle zugreifen zu können. Zum Herstellen einer Verbindung mit der auf einem Netzwerkserver installierten [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] -Beispieldatenbank müssen Sie über die Berechtigung zum Herstellen einer Verbindung mit dem Server sowie über die Leseberechtigung für den Zugriff auf die Datenbank verfügen.
 
     > [!NOTE]
     >  Gemäß Konzeption werden Anmeldeinformationen unabhängig von Datenquellen verwaltet. Anmeldeinformationen, mit denen Sie den Bericht in einem lokalen System in der Vorschau anzeigen, unterscheiden sich u. U. von den Anmeldeinformationen, mit denen Sie den veröffentlichten Bericht anzeigen. Nachdem Sie eine Datenquelle auf dem Berichtsserver oder der SharePoint-Website gespeichert haben, müssen Sie unter Umständen die Anmeldeinformationen ändern, um von diesem Ort aus arbeiten zu können. Weitere Informationen finden Sie unter [Anmeldeinformationen für Datenquellen](#bkmk_credentials).
@@ -97,7 +97,7 @@ ms.locfileid: "78173919"
 
  Im Berichtsdatenbereich werden eingebettete Datenquellen und Verweise auf freigegebene Datenquellen angezeigt, die dem Bericht hinzugefügt wurden. In Berichts-Generator verweist ein freigegebener Datenquellenbezug auf eine freigegebene Datenquelle auf einem Berichtsserver oder einer SharePoint-Website. Im Berichts-Designer verweist eine freigegebene Datenquellenreferenz auf eine freigegebene Datenquelle im Projektmappen-Explorer.
 
-##  <a name="bkmk_credentials"></a>Anmelde Informationen für Datenquellen
+##  <a name="credentials-for-data-sources"></a><a name="bkmk_credentials"></a>Anmelde Informationen für Datenquellen
  Per Konzept ist vorgesehen, dass Anmeldeinformationen unabhängig von den Verbindungsinformationen gespeichert und verwaltet werden können. Anmeldeinformationen werden verwendet, um eine Datenquelle zu erstellen, eine Datasetabfrage auszuführen und einen Bericht in der Vorschau anzuzeigen.
 
 > [!NOTE]
@@ -107,7 +107,7 @@ ms.locfileid: "78173919"
 
  Wenn Sie einen Bericht auf dem Berichtsserver oder der SharePoint-Website bereitstellen, werden die eingebetteten und freigegebenen Datenquellen unabhängig verwaltet. Die erforderlichen Datenquellen-Anmeldeinformationen für den Zugriff auf die Daten auf Ihrem Computer unterscheiden sich u. U. von den Anmeldeinformationen, die für den Zugriff auf die Daten durch den Berichtsserver erforderlich sind.
 
- ![Hinweis](media/rs-fyinote.png "Hinweis") Es empfiehlt sich, zu überprüfen, ob die Verbindung der Datenquellen Verbindungen nach der Veröffentlichung eines Berichts weiterhin hergestellt werden kann. Wenn Sie die Anmeldeinformationen ändern müssen, können Sie sie direkt auf dem Berichtsserver ändern.
+ ![Hinweis](media/rs-fyinote.png "Hinweis:") Es empfiehlt sich, zu überprüfen, ob die Verbindung der Datenquellen Verbindungen nach der Veröffentlichung eines Berichts weiterhin hergestellt werden kann. Wenn Sie die Anmeldeinformationen ändern müssen, können Sie sie direkt auf dem Berichtsserver ändern.
 
  Um die von einem Bericht verwendeten Datenquellen zu ändern, können Sie die Berichts Eigenschaften im einheitlichen Modus Berichts-Manager oder in Dokument Bibliotheken im SharePoint-Modus ändern. Weitere Informationen finden Sie unter
 
@@ -115,13 +115,13 @@ ms.locfileid: "78173919"
 
 -   [Angeben der Anmeldeinformationen und Verbindungsinformationen für Berichtsdatenquellen](report-data/specify-credential-and-connection-information-for-report-data-sources.md)
 
--   [Angeben von Verbindungen für benutzerdefinierte Datenverarbeitungserweiterungen](report-data/specify-connections-for-custom-data-processing-extensions.md)
+-   [Specify Connections for Custom Data Processing Extensions (Angeben von Verbindungen für benutzerdefinierte Datenverarbeitungserweiterungen)](report-data/specify-connections-for-custom-data-processing-extensions.md)
 
 -   [Angeben von Anmeldeinformationen im Berichts-Generator](../../2014/reporting-services/specify-credentials-in-report-builder.md)
 
 -   [Hinzufügen und Überprüfen einer Datenverbindung oder Datenquelle &#40;Berichts-Generator und SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)
 
-##  <a name="bkmk_connection_examples"></a>Beispiele für allgemeine Verbindungs Zeichenfolgen
+##  <a name="common-connection-string-examples"></a><a name="bkmk_connection_examples"></a> Beispiele für häufige Verbindungszeichenfolgen
  Verbindungszeichenfolgen sind die Textdarstellung von Verbindungseigenschaften für einen Datenanbieter. In der folgenden Tabelle sind Beispiele von Verbindungszeichenfolgen für verschiedene Datenverbindungstypen aufgeführt.
 
 |**Datenquelle**|**Beispiel**|**Beschreibung**|
@@ -136,22 +136,21 @@ ms.locfileid: "78173919"
 |Analysis Services-Datenbank für tabellarische Modelle mit Sales-Perspektive|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|Legen Sie den Datenquellentyp auf `Microsoft SQL Server Analysis Services` fest. Geben Sie den Perspektivennamen in der "cube="-Einstellung an. Weitere Informationen finden Sie unter [Perspektiven &#40;SSAS – tabellarisch&#41;](https://docs.microsoft.com/analysis-services/tabular-models/perspectives-ssas-tabular).|
 |Berichtsmodell-Datenquelle auf einem Berichtsserver, der im einheitlichen Modus konfiguriert ist|`Server=http://myreportservername/reportserver; datasource=/models/Adventure Works`|Geben Sie die URL des Berichtsservers oder der Dokumentbibliothek sowie den Pfad des veröffentlichten Modells im Namespace des Berichtsserverordners oder Dokumentbibliotheksordners an.
 |Berichtsmodell-Datenquelle auf einem Berichtsserver, der im integrierten SharePoint-Modus konfiguriert ist|`Server=http://server; datasource=http://server/site/documents/models/Adventure Works.smdl`|Geben Sie die URL des Berichtsservers oder der Dokumentbibliothek sowie den Pfad des veröffentlichten Modells im Namespace des Berichtsserverordners oder Dokumentbibliotheksordners an.|
-|
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Server|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|Legen Sie den Datenquellentyp auf `OLE DB Provider for OLAP Services 8.0` fest.<br /><br /> Sie können eine schnellere Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenquellen erzielen, wenn Sie die `ConnectTo`-Eigenschaft auf `8.0` festlegen. Sie können diese Eigenschaft im Dialogfeld **Verbindungseigenschaften** auf der Registerkarte **Erweiterte Eigenschaften** festlegen.|
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] -Server|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|Legen Sie den Datenquellentyp auf `OLE DB Provider for OLAP Services 8.0` fest.<br /><br /> Sie können eine schnellere Verbindung mit [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Datenquellen erzielen, wenn Sie die `ConnectTo`-Eigenschaft auf `8.0` festlegen. Sie können diese Eigenschaft im Dialogfeld **Verbindungseigenschaften** auf der Registerkarte **Erweiterte Eigenschaften** festlegen.|
 |Oracle-Server|`data source=myserver`|Legen Sie den Datenquellentyp auf `Oracle` fest. Auf dem Computer mit Berichts-Designer und auf dem Berichtsserver müssen die Oracle-Clienttools installiert sein. Weitere Informationen finden Sie unter [Oracle-Verbindungstyp &#40;SSRS&#41;](report-data/oracle-connection-type-ssrs.md).|
 |SAP NetWeaver BI-Datenquelle|`DataSource=http://mySAPNetWeaverBIServer:8000/sap/bw/xml/soap/xmla`|Legen Sie den Datenquellentyp auf `SAP NetWeaver BI` fest. Weitere Informationen finden Sie unter [SAP NetWeaver BI-Verbindungstyp &#40;SSRS&#41;](report-data/sap-netweaver-bi-connection-type-ssrs.md).|
 |Hyperion Essbase-Datenquelle|`Data Source=http://localhost:13080/aps/XMLA; Initial Catalog=Sample`|Legen Sie den Datenquellentyp auf `Hyperion Essbase` fest. Weitere Informationen finden Sie unter [Hyperion Essbase-Verbindungstyp &#40;SSRS&#41;](report-data/hyperion-essbase-connection-type-ssrs.md).|
-|Teradata-Datenquelle|`data source=`\<Nnn->. \<Nnn->. \<Nnn->. \<Nnn->`;`|Legen Sie den Datenquellentyp auf `Teradata` fest. Die Verbindungszeichenfolge ist eine IP-Adresse (Internet Protocol) in Form von vier Feldern, wobei jedes Feld ein bis drei Ziffern aufweisen kann. Weitere Informationen finden Sie unter [Teradataverbindungstyp (SSRS)](report-data/teradata-connection-type-ssrs.md).|
+|Teradata-Datenquelle|`data source=`\<NNN>.\<NNN>.\<NNN>.\<NNN>`;`|Legen Sie den Datenquellentyp auf `Teradata` fest. Die Verbindungszeichenfolge ist eine IP-Adresse (Internet Protocol) in Form von vier Feldern, wobei jedes Feld ein bis drei Ziffern aufweisen kann. Weitere Informationen finden Sie unter [Teradataverbindungstyp (SSRS)](report-data/teradata-connection-type-ssrs.md).|
 |XML-Datenquelle, Webdienst|`data source=http://adventure-works.com/results.aspx`|Legen Sie den Datenquellentyp auf `XML` fest. Die Verbindungszeichenfolge ist eine URL für einen Webdienst, der Webdienste-Definitionssprache (WSDL) unterstützt. Weitere Informationen finden Sie unter [XML-Verbindungstyp (SSRS)](report-data/xml-connection-type-ssrs.md).|
 |XML-Datenquelle, XML-Dokument|`http://localhost/XML/Customers.xml`|Legen Sie den Datenquellentyp auf `XML` fest. Die Verbindungszeichenfolge besteht aus einer URL für das XML-Dokument.|
 |XML-Datenquelle, eingebettetes XML-Dokument|*Leer*|Legen Sie den Datenquellentyp auf `XML` fest. Die XML-Daten sind in der Berichtsdefinition eingebettet.|
 
-Wenn Sie mittels `localhost` keine Verbindung zu einem Berichtsserver herstellen können, überprüfen Sie, ob das Netzwerkprotokoll für TCP/IP aktiviert ist. Weitere Informationen finden Sie unter [Konfigurieren von Client Protokollen](../database-engine/configure-windows/configure-client-protocols.md).
+Wenn Sie mittels `localhost` keine Verbindung zu einem Berichtsserver herstellen können, überprüfen Sie, ob das Netzwerkprotokoll für TCP/IP aktiviert ist. Weitere Informationen finden Sie unter [Configure Client Protocols](../database-engine/configure-windows/configure-client-protocols.md).
 
-##  <a name="bkmk_special_password_characters"></a>Sonderzeichen in einem Kennwort
+##  <a name="special-characters-in-a-password"></a><a name="bkmk_special_password_characters"></a> Sonderzeichen in Kennwörtern
  Wenn Sie eine ODBC- oder SQL-Datenquelle so konfigurieren, dass nach einem Kennwort gefragt oder das Kennwort in die Verbindungszeichenfolge eingeschlossen wird, und ein Benutzer das Kennwort mit Sonderzeichen wie z. B. Satzzeichen eingibt, können die Sonderzeichen von einigen zugrunde liegenden Datenquellentreibern nicht überprüft werden. Wenn Sie den Bericht verarbeiten, ist die Meldung "Kein zulässiges Kennwort" möglicherweise ein Anzeichen für dieses Problem. Falls die Änderung des Kennworts unmöglich ist, können Sie mit dem Datenbankadministrator vereinbaren, dass die entsprechenden Anmeldeinformationen auf dem Server als Teil eines ODBC-System-Datenquellennamens (Data Source Name, DSN) gespeichert werden. Weitere Informationen finden Sie unter "OdbcConnection.ConnectionString" in der [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] SDK-Dokumentation.
 
-##  <a name="bkmk_Expressions_in_connection_strings"></a>Ausdrucks basierte Verbindungs Zeichenfolgen
+##  <a name="expression-based-connection-strings"></a><a name="bkmk_Expressions_in_connection_strings"></a>Ausdrucks basierte Verbindungs Zeichenfolgen
  Auf Ausdrücken beruhende Verbindungszeichenfolgen werden zur Laufzeit ausgewertet. Sie können beispielsweise die Datenquelle als Parameter angeben, den Parameterverweis in die Verbindungszeichenfolge einbinden und dem Benutzer das Auswählen einer Datenquelle für den Bericht gestatten. Nehmen Sie beispielsweise an, ein multinationales Unternehmen verfügt über Datenserver in verschiedenen Ländern. Mit einer ausdrucksbasierten Verbindungszeichenfolge kann ein Benutzer, der einen Umsatzbericht ausführt, vor der Ausführung des Berichts eine Datenquelle für ein bestimmtes Land bzw. für eine bestimmte Region auswählen.
 
  Im folgenden Beispiel wird die Verwendung eines Datenquellenausdrucks in einer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Verbindungszeichenfolge veranschaulicht. Für das Beispiel wird vorausgesetzt, dass Sie einen Berichtsparameter mit dem Namen `ServerName`erstellt haben:
@@ -175,4 +174,4 @@ Wenn Sie mittels `localhost` keine Verbindung zu einem Berichtsserver herstellen
 -   Ersetzen Sie die statische Verbindungszeichenfolge durch einen Ausdruck, bevor Sie den Bericht veröffentlichen. Ersetzen Sie die statische Verbindungszeichenfolge erst dann durch einen Ausdruck, wenn der Entwurf des Berichts vollständig abgeschlossen ist. Sobald Sie einen Ausdruck verwenden, können Sie die Abfrage nicht mehr im Berichts-Designer ausführen. Außerdem werden die Feldliste im Berichtsdatenbereich und die Parameterliste nicht mehr automatisch aktualisiert.
 
 ## <a name="see-also"></a>Weitere Informationen
- [Eingebettete und freigegebene Datenverbindungen oder Datenquellen &#40;Berichts-Generator und SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) [Dialogfeld "Daten](../../2014/reporting-services/data-source-properties-dialog-box-credentials.md) [Quellen für Berichtsdaten Quellen verwalten](report-data/manage-report-data-sources.md) ", Dialogfeld "Anmelde Informationen frei [gegebene Datenquelle", Anmelde](../../2014/reporting-services/shared-data-source-properties-dialog-box-credentials.md) Informationen [erstellen, ändern und Löschen von freigegebenen Datenquellen &#40;SSRS&#41;](report-data/create-modify-and-delete-shared-data-sources-ssrs.md) [Festlegen von Bereitstellungs Eigenschaften &#40;Reporting Services](tools/set-deployment-properties-reporting-services.md)&#41;[Angeben von Anmelde Informationen und Verbindungsinformationen für Berichtsdaten Quellen](report-data/specify-credential-and-connection-information-for-report-data-sources.md) [&#40;Berichts-Generator und SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md)
+ [Eingebettete und freigegebene Datenverbindungen oder Datenquellen &#40;Berichts-Generator und SSRS&#41;](../../2014/reporting-services/embedded-and-shared-data-connections-or-data-sources-report-builder-and-ssrs.md) Dialogfeld "Daten [Quellen für Berichtsdaten Quellen verwalten"](report-data/manage-report-data-sources.md) [, Anmelde](../../2014/reporting-services/data-source-properties-dialog-box-credentials.md) Informationen frei [gegebene Datenquellen Eigenschaften (Dialogfeld), Anmelde](../../2014/reporting-services/shared-data-source-properties-dialog-box-credentials.md) Informationen [erstellen, ändern und Löschen von freigegebenen Datenquellen &#40;SSRS](report-data/create-modify-and-delete-shared-data-sources-ssrs.md)&#41;Festlegen von [Bereitstellungs Eigenschaften &#40;Reporting Services](tools/set-deployment-properties-reporting-services.md)&#41;[Angeben von Anmelde Informationen und Verbindungsinformationen für Berichtsdaten Quellen](report-data/specify-credential-and-connection-information-for-report-data-sources.md) [Add and Verify a Data Connection or Data Source &#40;Report Builder and SSRS&#41;](report-data/add-and-verify-a-data-connection-report-builder-and-ssrs.md) &#40;

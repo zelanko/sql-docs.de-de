@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 7a40d8b72dbac45e4546281198e4af000032a94c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173791"
 ---
 # <a name="data-processing-extensions-overview"></a>Übersicht über Datenverarbeitungserweiterungen
@@ -24,7 +24,7 @@ ms.locfileid: "78173791"
 
  In folgender Tabelle finden Sie eine Liste der Datenverarbeitungserweiterungen, die in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enthalten sind.
 
-|Datenverarbeitungserweiterung|Beschreibung|
+|Datenverarbeitungserweiterung|BESCHREIBUNG|
 |-------------------------------|-----------------|
 |Datenverarbeitungserweiterung für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Verwendet den .NET Framework-Datenanbieter für SQL Server, um eine Verbindung zu [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] herzustellen und Daten daraus abzurufen|
 |Datenverarbeitungserweiterung für OLE DB|Verwendet den .NET Framework-Datenanbieter für OLE DB. Mit dieser Erweiterung kann der Berichtsserver jede Datenquelle abfragen, die über einen OLE DB-Anbieter verfügt.|
@@ -53,7 +53,7 @@ ms.locfileid: "78173791"
 ## <a name="data-extension-process-flow"></a>Verarbeitungsablauf für Datenerweiterungen
  Bevor Sie Ihre benutzerdefinierte Datenerweiterung bereitstellen, sollten Sie wissen, wie der Berichtsserver Datenerweiterungen zur Verarbeitung von Daten verwendet. Sie sollten auch die Konstruktoren und Verfahren kennen, die vom Berichtsserver aufgerufen werden.
 
- ![Prozessablauf für Datenverarbeitungs Erweiterung](../../media/bk-ext-01.gif "Verarbeitungsfluss für Datenverarbeitungserweiterung") Der Schritt-für-Schritt-Prozessfluss einer Daten Erweiterung, die vom Berichts Server aufgerufen wird.
+ ![Prozessablauf für Datenverarbeitungs Erweiterung](../../media/bk-ext-01.gif "Prozessablauf für Datenverarbeitungserweiterung") Der Schritt-für-Schritt-Prozessfluss einer Daten Erweiterung, die vom Berichts Server aufgerufen wird.
 
  Die Abbildung stellt die folgende Abfolge von Ereignissen dar:
 

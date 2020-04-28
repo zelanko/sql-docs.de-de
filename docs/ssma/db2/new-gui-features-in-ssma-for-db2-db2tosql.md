@@ -10,10 +10,10 @@ ms.assetid: a8ed33e9-185a-492d-a4cf-2fded1aa5c70
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 5d3fb45d6220d10e9a6d5cc786fc09f33ce5ee59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76909710"
 ---
 # <a name="new-gui-features-in-ssma-for-db2-db2tosql"></a>Neue GUI-Features in SSMA für DB2 (DB2ToSQL)
@@ -72,7 +72,7 @@ Sie können ein Lesezeichen wie folgt entfernen:
   
 -   Schaltflächen entfernen oder alle entfernen im Dialogfeld "Lesezeichen verwalten"  
   
-### <a name="manage-bookmarks"></a>Lesezeichen verwalten  
+### <a name="manage-bookmarks"></a>Verwalten von Textmarken  
 Um das Dialogfeld Lesezeichen verwalten zu öffnen, klicken Sie im Menü Bearbeiten auf Lesezeichen verwalten. Im Dialogfeld wird eine Liste vorhandener Lesezeichen angezeigt. Sie können die Schaltflächen auf der rechten Seite des Dialog Felds verwenden, um die Lesezeichen zu verwalten.  
   
 ## <a name="object-history"></a>Objekt Verlauf  

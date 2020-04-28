@@ -17,10 +17,10 @@ ms.assetid: df5b955a-feb0-4863-9b3b-7f71e9653b3d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a493ef87ad2f980f21a99c50da1cb39dfdcda8cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75319983"
 ---
 # <a name="sp_replmonitorsubscriptionpendingcmds-transact-sql"></a>sp_replmonitorsubscriptionpendingcmds (Transact-SQL)
@@ -55,7 +55,7 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
   
 `[ @subscription_type = ] subscription_type`Gibt an, ob der Abonnementtyp ist. *publication_type* ist vom Datentyp **int**und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**0**|Pushabonnement|  
 |**1**|Pull-Abonnement|  
@@ -77,6 +77,6 @@ sp_replmonitorsubscriptionpendingcmds [ @publisher = ] 'publisher'
  Nur Mitglieder der festen Server Rolle **sysadmin** auf dem Verteiler oder Mitglieder der festen Daten Bank Rolle **db_owner** in der Verteilungs Datenbank können **sp_replmonitorsubscriptionpendingcmds**ausführen. Mitglieder der Veröffentlichungs Zugriffsliste für eine Veröffentlichung, die die Verteilungs Datenbank verwendet, können **sp_replmonitorsubscriptionpendingcmds** ausführen, um ausstehende Befehle für diese Veröffentlichung zurückzugeben.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Programmgesteuertes Überwachen der Replikation](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
+ [Programmgesteuerte Überwachen der Replikation](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

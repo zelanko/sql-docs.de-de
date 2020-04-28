@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 05f5390323efcf38c4f0d91f71613b5a2c3161a7
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176606"
 ---
 # <a name="security-master-data-services"></a>Sicherheit (Master Data Services)
@@ -22,8 +22,7 @@ ms.locfileid: "78176606"
 
  Mithilfe der Sicherheit können Sie auch einem Administrator für ein bestimmtes Modell und einen Funktionsbereich bestimmen. Sie können es z. B. jemandem ermöglichen, Versionen des Kundenmodells zu erstellen oder Sicherheitsberechtigungen festzulegen.
 
- 
-  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Sicherheit basiert auf lokalen oder Active Directory-Domänenbenutzern und -gruppen. Beim Bestimmen der Daten, auf die ein Benutzer zugreifen kann, können Sie mithilfe der MDS-Sicherheit eine präzise Detailebene verwenden. Aufgrund der hohen Detailgenauigkeit kann die Sicherheit leicht kompliziert werden. Gehen Sie deshalb bei der Verwendung sich überschneidender Benutzer und Gruppen vorsichtig vor. Weitere Informationen finden Sie unter [Überlappende Benutzer- und Gruppenberechtigungen &#40;Master Data Services&#41;](overlapping-user-and-group-permissions-master-data-services.md).
+ [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Sicherheit basiert auf lokalen oder Active Directory-Domänenbenutzern und -gruppen. Beim Bestimmen der Daten, auf die ein Benutzer zugreifen kann, können Sie mithilfe der MDS-Sicherheit eine präzise Detailebene verwenden. Aufgrund der hohen Detailgenauigkeit kann die Sicherheit leicht kompliziert werden. Gehen Sie deshalb bei der Verwendung sich überschneidender Benutzer und Gruppen vorsichtig vor. Weitere Informationen finden Sie unter [Überlappende Benutzer- und Gruppenberechtigungen &#40;Master Data Services&#41;](overlapping-user-and-group-permissions-master-data-services.md).
 
  Sie können den Sicherheitszugriff im Funktionsbereich **Benutzer- und Gruppenberechtigungen** der [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] -Webanwendung oder mit dem Webdienst zuweisen.
 
@@ -37,12 +36,11 @@ ms.locfileid: "78176606"
 ## <a name="how-to-set-security"></a>Festlegen der Sicherheit
  Sie müssen Folgendes zuweisen, um einem Benutzer oder einer Gruppe die Berechtigung für den Zugriff zu erteilen:
 
--   [Zugriff auf den Funktionsbereich](../../2014/master-data-services/functional-area-permissions-master-data-services.md), der bestimmt, auf welche der fünf Funktionsbereiche der Benutzeroberfläche ein Benutzer zugreifen kann.
+-   [Zugriff auf Funktionsbereiche](../../2014/master-data-services/functional-area-permissions-master-data-services.md). Damit wird bestimmt, auf welche der fünf Funktionsbereiche der Benutzeroberfläche ein Benutzer zugreifen kann.
 
--   [Modell Objekt Berechtigungen](../../2014/master-data-services/model-object-permissions-master-data-services.md), mit denen die Attribute bestimmt werden, auf die ein Benutzer zugreifen kann, und der Zugriffstyp (lesen oder aktualisieren), den der Benutzer für diese Attribute besitzt.
+-   [Modellobjektberechtigungen](../../2014/master-data-services/model-object-permissions-master-data-services.md). Damit werden die Attribute bestimmt, auf die ein Benutzer zugreifen kann, und der Zugriffstyp (Lesen oder Aktualisieren), den der Benutzer für diese Attribute besitzt.
 
--   
-  [Hierarchieelementberechtigungen](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)(optional). Damit werden die Elemente bestimmt, auf die ein Benutzer zugreifen kann, und der Zugriffstyp (Lesen oder Aktualisieren), den der Benutzer für diese Elemente besitzt.
+-   [Hierarchieelementberechtigungen](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md)(optional). Damit werden die Elemente bestimmt, auf die ein Benutzer zugreifen kann, und der Zugriffstyp (Lesen oder Aktualisieren), den der Benutzer für diese Elemente besitzt.
 
  Wenn Sie Attributen und Elementen Berechtigungen zuweisen, überschneiden sich die Berechtigungen. Dabei bestimmen Regeln, welche Berechtigung Vorrang hat. Weitere Informationen finden Sie unter [Vorgehensweise: Festlegen von Berechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md).
 
@@ -65,11 +63,11 @@ ms.locfileid: "78176606"
 
 |Taskbeschreibung|Thema|
 |----------------------|-----------|
-|Erstellen Sie einen Benutzer, der über die Vollberechtigung für ein Modell verfügt.|[Erstellen Sie einen Modell Administrator &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)|
-|Fügen Sie [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]eine Active Directory-Gruppe hinzu; dies ist der erste Schritt darin, einer Gruppe die Berechtigung für den Zugriff auf Daten in der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Webanwendung zu erteilen.|[Gruppe &#40;Master Data Services hinzufügen&#41;](../../2014/master-data-services/add-a-group-master-data-services.md)|
-|Weisen Sie die Berechtigung einem Funktionsbereich der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Webanwendung zu.|[&#40;Master Data Services Berechtigungen für Funktionsbereiche zuweisen&#41;](../../2014/master-data-services/assign-functional-area-permissions-master-data-services.md)|
-|Weisen Sie die Berechtigung Attributwerten zu, indem Sie die Berechtigung zum Modellieren von Objekten zuweisen.|[Zuweisen von Berechtigungen für Modell Objekte &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|
-|Weisen Sie die Berechtigung Elementwerten zu, indem Sie die Berechtigung Hierarchieknoten zuweisen.|[Hierarchie Element Berechtigungen &#40;Master Data Services zuweisen&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|
+|Erstellen Sie einen Benutzer, der über die Vollberechtigung für ein Modell verfügt.|[Erstellen eines Modelladministrators &#40;Master Data Services&#41;](../../2014/master-data-services/create-a-model-administrator-master-data-services.md)|
+|Fügen Sie [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]eine Active Directory-Gruppe hinzu; dies ist der erste Schritt darin, einer Gruppe die Berechtigung für den Zugriff auf Daten in der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Webanwendung zu erteilen.|[Hinzufügen einer Gruppe &#40;Master Data Services&#41;](../../2014/master-data-services/add-a-group-master-data-services.md)|
+|Weisen Sie die Berechtigung einem Funktionsbereich der [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] -Webanwendung zu.|[Zuweisen von Berechtigungen für Funktionsbereiche &#40;Master Data Services&#41;](../../2014/master-data-services/assign-functional-area-permissions-master-data-services.md)|
+|Weisen Sie die Berechtigung Attributwerten zu, indem Sie die Berechtigung zum Modellieren von Objekten zuweisen.|[Zuweisen von Berechtigungen für Modellobjekte &#40;Master Data Services&#41;](../../2014/master-data-services/assign-model-object-permissions-master-data-services.md)|
+|Weisen Sie die Berechtigung Elementwerten zu, indem Sie die Berechtigung Hierarchieknoten zuweisen.|[Zuweisen von Hierarchieelementberechtigungen &#40;Master Data Services&#41;](../../2014/master-data-services/assign-hierarchy-member-permissions-master-data-services.md)|
 
 ## <a name="see-also"></a>Weitere Informationen
  [Administratoren &#40;Master Data Services&#41;](../../2014/master-data-services/administrators-master-data-services.md) [Benutzer und Gruppen &#40;Master Data Services](../../2014/master-data-services/users-and-groups-master-data-services.md)&#41;Berechtigungen für den Berechtigungs [Bereich](../../2014/master-data-services/functional-area-permissions-master-data-services.md) &#40;Master Data Services [&#41;&#40;Berechtigungen](../../2014/master-data-services/model-object-permissions-master-data-services.md) für das von [Hierarchie](../../2014/master-data-services/hierarchy-member-permissions-master-data-services.md) Elementen Master Data Services&#41;&#40;, [wie die Berechtigungen bestimmt werden Master Data Services](../../2014/master-data-services/how-permissions-are-determined-master-data-services.md)&#41;&#40;

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9458f2c1fb3d170bf1b4a2887acae94b55ed877e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175804"
 ---
 # <a name="mining-model-viewers-data-mining-model-designer"></a>Miningmodell-Viewer (Modell-Designer für Data Mining)
@@ -27,11 +27,11 @@ ms.locfileid: "78175804"
  Eine exemplarische Vorgehensweise zum Verwenden jedes Viewers finden Sie unter [Data Mining-Modell-Viewer](data-mining/data-mining-model-viewers.md).
 
 ## <a name="common-options"></a>Häufige Optionen
- **Viewer-Inhalt aktualisieren** Laden Sie das Mining Modell im Viewer neu.
+ **Viewerinhalt aktualisieren** Lädt das Miningmodell im Viewer neu.
 
- **Mining Modell** Wählen Sie ein Mining Modell aus, das in der aktuellen Mining Struktur enthalten sein soll. Das Miningmodell wird zuerst im zugeordneten benutzerdefinierten Viewer geöffnet.
+ **Miningmodell** Wählen Sie ein anzuzeigendes, in der aktuellen Miningstruktur enthaltenes Miningmodell aus. Das Miningmodell wird zuerst im zugeordneten benutzerdefinierten Viewer geöffnet.
 
- **Viewer** Wählen Sie einen Viewer aus, der zum Durchsuchen des ausgewählten Mining Modells verwendet werden soll. Diese Liste [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] enthält die Viewer, die für jedes Mining Modell bereitstellt [!INCLUDE[msCoName](../includes/msconame-md.md)] , den Viewer für Mining Inhalte sowie alle Plug-in-Viewer.
+ **Viewer** Wählen Sie den Viewer aus, der zum Durchsuchen des ausgewählten Miningmodells verwendet werden soll. Diese Liste [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] enthält die Viewer, die für jedes Mining Modell bereitstellt [!INCLUDE[msCoName](../includes/msconame-md.md)] , den Viewer für Mining Inhalte sowie alle Plug-in-Viewer.
 
  Das folgende Diagramm zeigt einen benutzerdefinierten Viewer und den generischen Viewer für das gleiche Modell an.
 

@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1c13b66a5ffe594589c325bc7d8001451161f054
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175499"
 ---
 # <a name="overview-of-alwayson-availability-groups-sql-server"></a>Übersicht über AlwaysOn-Verfügbarkeitsgruppen (SQL Server)
@@ -49,7 +49,7 @@ ms.locfileid: "78175499"
  ![Verfügbarkeitsgruppe mit fünf Replikaten](../../media/aoag-agintrofigure.gif "Verfügbarkeitsgruppe mit fünf Replikaten")
 
 
-##  <a name="AvDbs"></a> Availability Databases
+##  <a name="availability-databases"></a><a name="AvDbs"></a> Availability Databases
  Zum Hinzufügen einer Datenbank zu einer Verfügbarkeitsgruppe muss die Datenbank eine Onlinedatenbank mit Lese-/Schreibzugriff auf der Serverinstanz sein, die das primäre Replikat hostet. Wenn Sie eine Datenbank hinzufügen, wird sie als primäre Datenbank mit der Verfügbarkeitsgruppe verknüpft, wobei sie für Clients verfügbar bleibt. Es ist keine entsprechende sekundäre Datenbank vorhanden, bis Sicherungen der neuen primären Datenbank mithilfe von RESTORE WITH NORECOVERY auf der Serverinstanz wiederhergestellt werden, die das sekundäre Replikat hostet. Die neue sekundäre Datenbank befindet sich im Status RESTORING, bis sie der Verfügbarkeitsgruppe hinzugefügt wird. Weitere Informationen finden Sie unter [Starten der Datenverschiebung auf einer sekundären AlwaysOn-Datenbank &#40;SQL Server&#41;](start-data-movement-on-an-always-on-secondary-database-sql-server.md).
 
  Durch das Hinzufügen wechselt die sekundäre Datenbank in den Status ONLINE und initiiert die Datensynchronisierung mit der entsprechenden primären Datenbank. Die*Datensynchronisierung* ist der Prozess, durch den Änderungen an einer primären Datenbank auf einer sekundären Datenbank reproduziert werden. Bei der Datensynchronisierung sendet die primäre Datenbank Transaktionsprotokoll-Datensätze an die sekundäre Datenbank.
@@ -57,20 +57,20 @@ ms.locfileid: "78175499"
 > [!IMPORTANT]
 >  Eine Verfügbarkeitsdatenbank wird manchmal als *Datenbankreplikat* in [!INCLUDE[tsql](../../../includes/tsql-md.md)]-, PowerShell- und SQL Server Management Objects-Namen (SMO) bezeichnet. Der Begriff-"Datenbankreplikat" wird z. B. in den Namen der dynamischen AlwaysOn-Verwaltungssichten verwendet, die Informationen zu Verfügbarkeitsdatenbanken zurückgeben:  **sys.dm_hadr_database_replica_states** und **sys.dm_hadr_database_replica_cluster_states**. In der SQL Server-Onlinedokumentation bezieht sich der Begriff "Replikat" jedoch in der Regel auf Verfügbarkeitsreplikate. Zum Beispiel sind mit "primäres Replikat" und "sekundäres Replikat" stets Verfügbarkeitsreplikate gemeint.
 
-##  <a name="AGsARsADBs"></a> Verfügbarkeitsreplikate
+##  <a name="availability-replicas"></a><a name="AGsARsADBs"></a> Verfügbarkeitsreplikate
  Jede Verfügbarkeitsgruppe definiert einen Satz von zwei oder mehr Failoverpartnern, bekannt als Verfügbarkeitsreplikate. *Verfügbarkeitsreplikate* sind Komponenten der Verfügbarkeitsgruppe. Jedes Verfügbarkeitsreplikat hostet eine Kopie der Verfügbarkeitsdatenbanken in der Verfügbarkeitsgruppe. Die Verfügbarkeitsreplikate der jeweiligen Verfügbarkeitsgruppe müssen von getrennten [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Instanzen gehostet werden, die sich in unterschiedlichen Knoten eines WSFC-Clusters befinden. Jede der Serverinstanzen muss für AlwaysOn aktiviert sein.
 
  Eine Instanz kann nur ein Verfügbarkeitsreplikat pro Verfügbarkeitsgruppe hosten. Allerdings kann jede Instanz für zahlreiche Verfügbarkeitsgruppen verwendet werden. Eine Instanz kann entweder eine eigenständige Instanz oder eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Failoverclusterinstanz (FCI) sein. Falls Sie Redundanz auf Serverebene benötigen, verwenden Sie Failoverclusterinstanzen.
 
- Allen Verfügbarkeitsreplikaten wird eine Anfangsrolle zugewiesen: entweder die *primäre Rolle* oder die *sekundäre Rolle*, die von den Verfügbarkeitsdatenbanken dieses Replikats geerbt wird. Die Rolle eines bestimmten Replikats legt fest, ob Datenbanken mit Lese-/Schreibzugriff oder schreibgeschützte Datenbanken gehostet werden. Einem als *primäres Replikat*bezeichneten Replikat wird die primäre Rolle zugewiesen. Es hostet Datenbanken mit Lese-/Schreibzugriff, die als *primäre Datenbanken*bezeichnet werden. Mindestens einem anderen Replikat, das als *sekundäres Replikat*bezeichnet wird, wird die sekundäre Rolle zugewiesen. Ein sekundäres Replikat hostet schreibgeschützte Datenbanken, sogenannte sekundäre Datenbanken.
+ Jedem Verfügbarkeits Replikat wird eine anfängliche Rolle zugewiesen: entweder die *primäre Rolle* oder die *sekundäre Rolle*, die von den Verfügbarkeits Datenbanken dieses Replikats geerbt wird. Die Rolle eines bestimmten Replikats legt fest, ob Datenbanken mit Lese-/Schreibzugriff oder schreibgeschützte Datenbanken gehostet werden. Einem als *primäres Replikat*bezeichneten Replikat wird die primäre Rolle zugewiesen. Es hostet Datenbanken mit Lese-/Schreibzugriff, die als *primäre Datenbanken*bezeichnet werden. Mindestens einem anderen Replikat, das als *sekundäres Replikat*bezeichnet wird, wird die sekundäre Rolle zugewiesen. Ein sekundäres Replikat hostet schreibgeschützte Datenbanken, sogenannte sekundäre Datenbanken.
 
 > [!NOTE]
 >  Wenn die Rolle eines Verfügbarkeitsreplikats unbestimmt ist, z. B. während eines Failovers, befinden sich seine Datenbanken vorübergehend im NOT SYNCHRONIZING-Status. Ihre Rolle wird auf RESOLVING festgelegt, bis die Rolle des Verfügbarkeitsreplikats aufgelöst wurde. Wird ein Verfügbarkeitsreplikat zur primären Rolle aufgelöst, werden seine Datenbanken zu primären Datenbanken. Wird ein Verfügbarkeitsreplikat zur sekundären Rolle aufgelöst, werden seine Datenbanken sekundäre Datenbanken.
 
-##  <a name="AvailabilityModes"></a> Verfügbarkeitsmodi
- Der Verfügbarkeitsmodus ist eine Eigenschaft jedes Verfügbarkeitsreplikats. Der Verfügbarkeitsmodus legt fest, ob das primäre Replikat mit dem Commit der Transaktionen für eine Datenbank wartet, bis ein bestimmtes sekundäres Replikat die Transaktionsprotokoll-Datensätze auf den Datenträger geschrieben hat. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] unterstützt zwei Verfügbarkeitsmodi: *asynchroner Commit-Modus* und *synchroner Commit-Modus*.
+##  <a name="availability-modes"></a><a name="AvailabilityModes"></a>Verfügbarkeits Modi
+ Der Verfügbarkeitsmodus ist eine Eigenschaft jedes Verfügbarkeitsreplikats. Der Verfügbarkeitsmodus legt fest, ob das primäre Replikat mit dem Commit der Transaktionen für eine Datenbank wartet, bis ein bestimmtes sekundäres Replikat die Transaktionsprotokoll-Datensätze auf den Datenträger geschrieben hat. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]unterstützt zwei Verfügbarkeits Modi:*asynchroner Commit-Modus* und *synchroner Commit-Modus*.
 
--   **Asynchronous-commit mode**
+-   **Asynchroner Commit-Modus**
 
      Ein Verfügbarkeitsreplikat, das diesen Verfügbarkeitsmodus verwendet, wird als*Replikat mit asynchronem Commit*bezeichnet. Im Modus für asynchrone Commits führt das primäre Replikat einen Commit für Transaktionen aus, ohne auf die Bestätigung zu warten, dass ein sekundäres Replikat mit asynchronem Commit das Protokoll geschrieben hat. Im Modus für asynchrone Commits wird die Transaktionswartezeit auf den sekundären Datenbanken minimiert. Dabei liegen sie jedoch möglicherweise hinter den primären Datenbanken zurück, was Datenverluste zur Folge haben kann.
 
@@ -78,14 +78,14 @@ ms.locfileid: "78175499"
 
      Ein Verfügbarkeitsreplikat, das diesen Verfügbarkeitsmodus verwendet, wird als *Replikat mit synchronem Commit*bezeichnet. Im Modus für synchrone Commits wartet ein primäres Replikat mit synchronen Commits vor dem Commit für Transaktionen auf ein sekundäres Replikat mit synchronen Commits, um zu bestätigen, dass das Schreiben des Protokolls abgeschlossen wurde. Im Modus für synchrone Commits wird sichergestellt, dass Transaktionen, für die ein Commit ausgeführt wird, vollständig geschützt sind, sobald eine angegebene sekundäre Datenbank mit der primären Datenbank synchronisiert wird. Dieser Schutz führt jedoch zu einer erhöhten Transaktionswartezeit.
 
- Weitere Informationen finden Sie unter [Verfügbarkeits Modi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](availability-modes-always-on-availability-groups.md).
+ Weitere Informationen finden Sie unter [Verfügbarkeitsmodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](availability-modes-always-on-availability-groups.md).
 
-##  <a name="FormsOfFailover"></a> Failovertypen
+##  <a name="types-of-failover"></a><a name="FormsOfFailover"></a>Failovertypen
  Im Kontext einer Sitzung zwischen dem primären Replikat und einem sekundären Replikat sind die primären und sekundären Rollen in einem als *Failover*bezeichneten Prozess potenziell austauschbar. Während eines Failovers geht das sekundäre Zielreplikat in die primäre Rolle über und wird dadurch zum neuen primären Replikat. Das neue primäre Replikat schaltet seine Datenbanken als primäre Datenbanken online. Clientanwendungen können eine Verbindung mit ihnen herstellen. Wenn das zuvor primäre Replikat verfügbar ist, geht es in die sekundäre Rolle über und wird dadurch zu einem sekundären Replikat. Die zuvor primären Datenbanken werden sekundäre Datenbanken, und die Datensynchronisierung wird fortgesetzt.
 
  Man unterscheidet drei Failovertypen: automatisches Failover, manuelles Failover und erzwungenes Failover (mit möglichem Datenverlust). Die von einem bestimmten sekundären Replikat unterstützten Failovertypen hängen von seinem Verfügbarkeitsmodus und beim Modus für synchrone Commits vom Failovermodus für das primäre Replikat und das sekundäre Zielreplikat ab:
 
--   Der Modus für synchrone Commits unterstützt zwei Failovertypen:*geplantes manuelles Failover* und *automatisches Failover*, wenn das sekundäre Zielreplikat derzeit mit „avt1“ synchronisiert wird. Die Unterstützung für diese Formen des Failovers hängt von der Einstellung der *Failovermoduseigenschaft* der Failoverpartner ab. Ist der Failovermodus für das primäre oder sekundäre Replikat auf "manuell" festgelegt, wird nur ein manuelles Failover für dieses sekundäre Replikat unterstützt. Ist der Failovermodus für das primäre und sekundäre Replikat auf "automatisch" festgelegt, wird sowohl das automatische als auch das manuelle Failover auf diesem sekundären Replikat unterstützt.
+-   Der Modus mit synchronem Commit unterstützt zwei Arten von Failover:*Geplantes manuelles Failover* und *Automatisches Failover*, wenn das sekundäre Ziel Replikat derzeit mit dem "avt1" synchronisiert ist. Die Unterstützung für diese Formen des Failovers hängt von der Einstellung der *Failovermoduseigenschaft* der Failoverpartner ab. Ist der Failovermodus für das primäre oder sekundäre Replikat auf "manuell" festgelegt, wird nur ein manuelles Failover für dieses sekundäre Replikat unterstützt. Ist der Failovermodus für das primäre und sekundäre Replikat auf "automatisch" festgelegt, wird sowohl das automatische als auch das manuelle Failover auf diesem sekundären Replikat unterstützt.
 
     -   **Geplantes manuelles Failover** (ohne Datenverlust)
 
@@ -105,7 +105,7 @@ ms.locfileid: "78175499"
 
  Weitere Informationen finden Sie unter [Failover und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](failover-and-failover-modes-always-on-availability-groups.md).
 
-##  <a name="ClientConnections"></a> Clientverbindungen
+##  <a name="client-connections"></a><a name="ClientConnections"></a>Client Verbindungen
  Sie können Clientkonnektivität für das primäre Replikat einer angegebenen Verfügbarkeitsgruppe bereitstellen, indem Sie einen Verfügbarkeitsgruppenlistener erstellen. Ein *Verfügbarkeitsgruppenlistener* stellt einen Satz von Ressourcen bereit, der an eine bestimmte Verfügbarkeitsgruppe angefügt wird, um Clientverbindungen an das entsprechende Verfügbarkeitsreplikat umzuleiten.
 
  Ein Verfügbarkeitsgruppenlistener ist einem eindeutigen DNS-Namen, der als virtueller Netzwerkname (VNN) dient, mindestens einer virtuellen IP-Adresse (VIPs) und einer TCP-Portnummer zugeordnet. Weitere Informationen finden Sie unter [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)wichtig sind.
@@ -113,7 +113,7 @@ ms.locfileid: "78175499"
 > [!TIP]
 >  Wenn eine Verfügbarkeitsgruppe nur zwei Verfügbarkeitsreplikate besitzt und nicht für den Lesezugriff auf das sekundäre Replikat konfiguriert wird, können Clients mithilfe einer [Verbindungszeichenfolge für die Datenbankspiegelung](../../database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)eine Verbindung mit dem primären Verfügbarkeitsreplikat herstellen. Dieser Ansatz kann nach dem Migrieren einer Datenbank von der Datenbankspiegelung zu [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]vorübergehend nützlich sein. Bevor Sie zusätzliche sekundäre Replikate hinzufügen, müssen Sie einen Verfügbarkeitsgruppenlistener für die Verfügbarkeitsgruppe erstellen und die Anwendungen aktualisieren, damit der Netzwerkname des Listeners verwendet wird.
 
-##  <a name="ActiveSecondaries"></a> Aktive sekundäre Replikate
+##  <a name="active-secondary-replicas"></a><a name="ActiveSecondaries"></a> Aktive sekundäre Replikate
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] unterstützt aktive sekundäre Replikate. Die Funktionen für aktive sekundäre Replikate umfassen auch die Unterstützung für Folgendes:
 
 -   **Ausführen von Sicherungsvorgängen auf sekundären Replikaten**
@@ -126,26 +126,26 @@ ms.locfileid: "78175499"
 
      Wenn eine Verfügbarkeitsgruppe derzeit einen Verfügbarkeitsgruppenlistener und mindestens ein lesbares sekundäres Replikat besitzt, können Verbindungsanforderungen für beabsichtigte Lesevorgänge von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] an eines dieser Replikate weitergeleitet werden (*schreibgeschütztes Routing*). Weitere Informationen finden Sie unter [Verfügbarkeitsgruppenlistener, Clientkonnektivität und Anwendungsfailover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)wichtig sind.
 
-##  <a name="SessionTimeoutPerios"></a> Sitzungstimeout
+##  <a name="session-timeout-period"></a><a name="SessionTimeoutPerios"></a> Sitzungstimeout
  Das Sitzungstimeout ist eine Eigenschaft von Verfügbarkeitsreplikaten, die bestimmt, wie lange eine Verbindung mit einem anderen Verfügbarkeitsreplikat inaktiv sein darf, bevor die Verbindung geschlossen wird. Die primären und sekundären Replikate signalisieren einander mithilfe von Pingbefehlen, dass sie noch aktiv sind. Durch den Empfang eines Pings von einem anderen Replikat innerhalb des Timeoutzeitraums wird angegeben, dass die Verbindung weiterhin geöffnet ist und dass die Serverinstanzen miteinander kommunizieren. Beim Empfang eines Pings setzt ein Verfügbarkeitsreplikat seinen Sitzungstimeoutzähler für diese Verbindung zurück.
 
- Das Sitzungstimeout verhindert, dass Replikate unbegrenzt auf ein Ping vom anderen Replikat warten. Wenn innerhalb des Zeitraums für das Sitzungstimeout kein Ping vom anderen Replikat empfangen wird, tritt für das Replikat ein Timeout ein. Die Verbindung wird geschlossen, und der Status des Replikats mit dem Timeout ändert sich in DISCONNECTED. Auch wenn ein nicht verbundenes Replikat für den Modus für synchrone Commits konfiguriert ist, warten Transaktionen nicht darauf, dass dieses Replikat erneut verbunden und synchronisiert wird.
+ Das Sitzungstimeout verhindert, dass Replikate unbegrenzt auf ein Ping vom anderen Replikat warten. Wenn innerhalb des Sitzungs Timeouts kein Ping vom anderen Replikat empfangen wird, kommt es zu einem Timeout des Replikats. Die Verbindung ist geschlossen, und das Timeout Replikat wechselt in den getrennten Zustand. Auch wenn ein nicht verbundenes Replikat für den Modus für synchrone Commits konfiguriert ist, warten Transaktionen nicht darauf, dass dieses Replikat erneut verbunden und synchronisiert wird.
 
  Das Standardsitzungstimeout für alle Verfügbarkeitsreplikate liegt bei 10 Sekunden. Dieser Wert kann vom Benutzer konfiguriert werden, muss aber mindestens 5 Sekunden betragen. Im Allgemeinen wird empfohlen, einen Timeoutzeitraum von 10 Sekunden oder mehr zu wählen. Wenn Sie diesen Wert auf weniger als 10 Sekunden festlegen, kann ein stark ausgelastetes System einen falschen Fehler melden.
 
 > [!NOTE]
 >  In der Rolle RESOLVING ist das Sitzungstimeout nicht gültig, da keine Pings ausgeführt werden.
 
-##  <a name="APR"></a> Automatische Seitenreparatur
+##  <a name="automatic-page-repair"></a><a name="APR"></a>Automatische Seiten Reparatur
  Jedes Verfügbarkeitsreplikat versucht, durch das Auflösen bestimmter Fehlertypen, die das Lesen einer Datenseite verhindern, beschädigte Seiten auf einer lokalen Datenbank automatisch wiederherzustellen. Wenn von einem sekundären Replikat eine Seite nicht gelesen werden kann, wird vom Replikat eine neue Kopie der Seite vom primären Replikat angefordert. Wenn das primäre Replikat eine Seite nicht lesen kann, überträgt das Replikat eine Anforderung für eine neue Kopie an alle sekundären Replikate und ruft die Seite von dem Replikat ab, das zuerst antwortet. Ist diese Anforderung erfolgreich, wird die nicht lesbare Seite durch die Kopie ersetzt. Dadurch kann der Fehler normalerweise behoben werden.
 
  Weitere Informationen finden Sie unter [Automatische Seitenreparatur &#40;Verfügbarkeitsgruppen: Datenbankspiegelung&#41;](../../../sql-server/failover-clusters/automatic-page-repair-availability-groups-database-mirroring.md).
 
-##  <a name="RelatedTasks"></a> Verwandte Aufgaben
+##  <a name="related-tasks"></a><a name="RelatedTasks"></a> Verwandte Aufgaben
 
 -   [Die ersten Schritte mit AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](getting-started-with-always-on-availability-groups-sql-server.md)
 
-##  <a name="RelatedContent"></a> Verwandte Inhalte
+##  <a name="related-content"></a><a name="RelatedContent"></a> Verwandte Inhalte
 
 -   **Blogs:**
 
@@ -155,7 +155,7 @@ ms.locfileid: "78175499"
 
      [CSS SQL Server-Technikblogs](https://blogs.msdn.com/b/psssql/)
 
--   **Videos:**
+-   **Videos**
 
      [Microsoft SQL Server Codename "Denali" AlwaysOn-Reihe, Teil 1: Einführung in die nächste Generation von Lösungen mit hoher Verfügbarkeit](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)
 
@@ -170,5 +170,5 @@ ms.locfileid: "78175499"
      [Whitepapers des SQL Server-Kundenberatungsteams](http://sqlcat.com/)
 
 ## <a name="see-also"></a>Weitere Informationen
- [Verfügbarkeits Modi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](availability-modes-always-on-availability-groups.md) [Failover-und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](failover-and-failover-modes-always-on-availability-groups.md) [Übersicht über Transact-SQL-Anweisungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](transact-sql-statements-for-always-on-availability-groups.md) [Übersicht über PowerShell-Cmdlets für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md) [Unterstützung für Hochverfügbarkeit für in-Memory OLTP-Datenbanken](../../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md) [Voraussetzungen, Einschränkungen und Empfehlungen für AlwaysOn-Verfügbarkeitsgruppen &#40;](prereqs-restrictions-recommendations-always-on-availability.md) [SQL Server&#41;Erstellung und Konfiguration von Verfügbarkeits Gruppen &#40;SQL Server&#41;](creation-and-configuration-of-availability-groups-sql-server.md) [aktive sekundäre Replikate: lesbare sekundäre Replikate &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;aktive sekundäre](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) Replikate [: Sicherung auf sekundären Replikaten](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;[verfügbarkeitsgruppenlistener, Client Konnektivität und Anwendungs Failover &#40;](../../listeners-client-connectivity-application-failover.md) SQL Server&#41;
+ [Verfügbarkeits Modi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](availability-modes-always-on-availability-groups.md) [Failover-und Failovermodi &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](failover-and-failover-modes-always-on-availability-groups.md) [Übersicht über Transact-SQL-Anweisungen für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](transact-sql-statements-for-always-on-availability-groups.md) [Übersicht über PowerShell-Cmdlets für AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md) [Unterstützung für Hochverfügbarkeit für in-Memory OLTP-Datenbanken](../../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md) [Voraussetzungen, Einschränkungen und Empfehlungen für die AlwaysOn-Verfügbarkeitsgruppen &#40;SQL Server&#41;](prereqs-restrictions-recommendations-always-on-availability.md) [Erstellung und Konfiguration von Verfügbarkeits Gruppen &#40;](creation-and-configuration-of-availability-groups-sql-server.md) SQL Server&#41;[aktive sekundäre Replikate: lesbare sekundäre Replikate &#40;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md) AlwaysOn-Verfügbarkeitsgruppen&#41;aktive sekundäre Replikate [: Sicherung auf sekundären Replikaten &#40;AlwaysOn-Verfügbarkeitsgruppen&#41;](active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md) [verfügbarkeitsgruppenlistener, Client Konnektivität und Anwendungs Failover &#40;](../../listeners-client-connectivity-application-failover.md) SQL Server&#41;
 

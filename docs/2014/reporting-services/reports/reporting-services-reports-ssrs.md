@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f9697d5a53b2aac0d951445206adc4c4f30e5385
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177079"
 ---
 # <a name="reporting-services-reports-ssrs"></a>Reporting Services-Berichte (SSRS)
@@ -47,14 +47,14 @@ ms.locfileid: "78177079"
 
  ![rs_GettingStartedReport](../media/rs-gettingstartedreport.gif "rs_GettingStartedReport")
 
-##  <a name="bkmk_StagesSummary"></a>Phasen der Berichts Verarbeitung
+##  <a name="stages-of-report-processing"></a><a name="bkmk_StagesSummary"></a> Phasen der Berichtsverarbeitung
  Wenn Sie einen Bericht erstellen, definieren Sie eine Berichtsdefinitionsdatei (.rdl) im XML-Format. Diese Datei enthält alle Informationen, die für den Berichtsprozessor zum Kombinieren der Berichtsdaten und des Berichtslayouts erforderlich sind. Der Bericht durchläuft vor der Anzeige folgende Phasen:
 
--   **Kompilieren** Ausdrücke in der Berichtsdefinition werden ausgewertet und das kompilierte Zwischenformat intern auf dem Berichtsserver gespeichert.
+-   **Lierten.** Ausdrücke in der Berichtsdefinition werden ausgewertet und das kompilierte Zwischenformat intern auf dem Berichtsserver gespeichert.
 
--   **Prozess:** Datasetabfragen werden ausgeführt und das Zwischenformat mit den Daten und dem Layout kombiniert.
+-   **ESS.** Datasetabfragen werden ausgeführt und das Zwischenformat mit den Daten und dem Layout kombiniert.
 
--   **Rendern** Der verarbeitete Bericht wird an eine Renderingerweiterung gesendet, um zu bestimmen, wie viele Informationen auf den einzelnen Seiten dargestellt werden können, und um den mehrseitigen Bericht zu erstellen.
+-   **Bieten.** Der verarbeitete Bericht wird an eine Renderingerweiterung gesendet, um zu bestimmen, wie viele Informationen auf den einzelnen Seiten dargestellt werden können, und um den mehrseitigen Bericht zu erstellen.
 
 -   **Exportieren (optional).** Der Bericht wird in ein anderes Dateiformat exportiert.
 
@@ -79,7 +79,7 @@ ms.locfileid: "78177079"
 
     -   **Wählen Sie aus, welche Daten aus der jeweiligen Quelle verwendet werden.** Definieren Sie für jede Datenquelle Berichtsdatasets. Jedes Dataset enthält eine Abfrage, um die zu verwendenden Daten anzugeben. Wenn Sie Berichtsparameter verwenden, definieren Sie ein Dataset, um die verfügbare Werteliste für jeden Parameter aufzufüllen. Weitere Informationen finden Sie unter [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](../report-data/report-datasets-ssrs.md) und [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](../report-design/report-parameters-report-builder-and-report-designer.md).
 
-    -   **Wählen Sie eine Datenvisualisierung aus.** Wählen Sie für jedes Dataset aus, welcher Datenbereich zum Anzeigen der Daten verwendet werden soll. Wählen Sie aus Liste der Tabellen, Diagramme, Messgeräte und Karten aus. Weitere Informationen finden Sie in den folgenden Themen:
+    -   **Wählen Sie eine Datenvisualisierung aus.** Wählen Sie für jedes Dataset aus, welcher Datenbereich zum Anzeigen der Daten verwendet werden soll. Wählen Sie aus Liste der Tabellen, Diagramme, Messgeräte und Karten aus. Weitere Informationen finden Sie unter den folgenden Themen:
 
         -   [Tabellen, Matrizen und Listen &#40;Berichts-Generator und SSRS&#41;](../report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 
@@ -93,7 +93,7 @@ ms.locfileid: "78177079"
 
         -   [Messgeräte &#40;Berichts-Generator und SSRS&#41;](../report-design/gauges-report-builder-and-ssrs.md)
 
-    -   **Passen Sie die Daten und das Layout an.** Entwerfen Sie das Berichtslayout. Eine Berichtsdefinition verfügt über einen Berichtshauptteil, Datenquellen, Datasets, Datenbereiche, Textfelder, Linien und Bilder. Rechtecke werden als Container für Layoutelemente sowie für visuelle Elemente verwendet. Passen Sie die einzelnen Datenbereiche an, indem Sie Ausdrücke schreiben, mit denen die Filterung, Gruppierung, Sortierung, Formatierung und Anzeige der Daten gesteuert wird. Fügen Sie Berichtsnamen, Speicherorte und andere Identifikationsinformationen hinzu, mit deren Hilfe Dutzende oder sogar Hunderte von Berichten verwaltet werden können. Fügen Sie visuelle Elemente und Container hinzu, um die Layoutelemente auf der Seite zu organisieren. Weitere Informationen finden Sie in den folgenden Themen:
+    -   **Passen Sie die Daten und das Layout an.** Entwerfen Sie das Berichtslayout. Eine Berichtsdefinition verfügt über einen Berichtshauptteil, Datenquellen, Datasets, Datenbereiche, Textfelder, Linien und Bilder. Rechtecke werden als Container für Layoutelemente sowie für visuelle Elemente verwendet. Passen Sie die einzelnen Datenbereiche an, indem Sie Ausdrücke schreiben, mit denen die Filterung, Gruppierung, Sortierung, Formatierung und Anzeige der Daten gesteuert wird. Fügen Sie Berichtsnamen, Speicherorte und andere Identifikationsinformationen hinzu, mit deren Hilfe Dutzende oder sogar Hunderte von Berichten verwaltet werden können. Fügen Sie visuelle Elemente und Container hinzu, um die Layoutelemente auf der Seite zu organisieren. Weitere Informationen finden Sie unter den folgenden Themen:
 
         -   [Filtern, Gruppieren und Sortieren von Daten &#40;Berichts-Generator und SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md)
 
@@ -105,7 +105,7 @@ ms.locfileid: "78177079"
 
         -   [Bilder, Textfelder, Rechtecke und Linien &#40;Berichts-Generator und SSRS&#41;](../report-design/rectangles-and-lines-report-builder-and-ssrs.md)
 
-        -   [Seitenlayout und Rendering &#40;Berichts-Generator und SSRS&#41;](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)
+        -   [Seitenlayout und Rendering (Berichts-Generator und SSRS)](../report-design/page-layout-and-rendering-report-builder-and-ssrs.md)
 
     -   **Konfigurieren Sie Interaktivitätsfunktionen.** Fügen Sie Interaktivitätsfunktionen für die Leser des Berichts hinzu. Fügen Sie beispielsweise Sortierschaltflächen oder Elemente zum Ein-/Ausschalten hinzu, um die Abfragen anzuzeigen. Weitere Informationen finden Sie unter [Interaktive Sortierung, Dokumentstrukturen und Links &#40;Berichts-Generator und SSRS&#41;](../report-design/interactive-sort-document-maps-and-links-report-builder-and-ssrs.md).
 
@@ -124,13 +124,13 @@ ms.locfileid: "78177079"
 ## <a name="view-reports"></a>Anzeigen von Berichten
  Sie können einen lokal gespeicherten oder auf einem Berichtsserver veröffentlichten Bericht nicht nur in der Vorschau anzeigen, sondern den Berichtslesern eine Vielzahl von Anzeigemöglichkeiten zur Verfügung stellen. So zeigen Sie einen Bericht an
 
--   **Browser**  Zeigen Sie veröffentlichte Berichte mithilfe des Berichtsserver-Webdiensts oder der SharePoint-Website an. Auf einer SharePoint-Website können Sie auch ein Webpart für die Anzeige veröffentlichter Berichte konfigurieren. Weitere Informationen finden Sie unter [Planen der Unterstützung für Reporting Services und Power View-Browser &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md), [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md) und [URL-Zugriff &#40;SSRS&#41;](../url-access-ssrs.md).
+-   **Browser.**  Zeigen Sie veröffentlichte Berichte mithilfe des Berichtsserver-Webdiensts oder der SharePoint-Website an. Auf einer SharePoint-Website können Sie auch ein Webpart für die Anzeige veröffentlichter Berichte konfigurieren. Weitere Informationen finden Sie unter [Planen der Unterstützung für Reporting Services und Power View-Browser &#40;Reporting Services 2014&#41;](../browser-support-for-reporting-services-and-power-view.md), [Berichts-Manager &#40;einheitlicher SSRS-Modus&#41;](../report-manager-ssrs-native-mode.md) und [URL-Zugriff &#40;SSRS&#41;](../url-access-ssrs.md).
 
--   **Übermittlung**  Konfigurieren Sie ein Abonnement, um den Lesern Berichte per E-Mail oder über einen freigegebenen Dateiordner zur Verfügung zu stellen.  Weitere Informationen finden Sie unter [Abonnements und Übermittlung &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md).
+-   **Liefer.**  Konfigurieren Sie ein Abonnement, um den Lesern Berichte per E-Mail oder über einen freigegebenen Dateiordner zur Verfügung zu stellen.  Weitere Informationen finden Sie unter [Abonnements und Übermittlung &#40;Reporting Services&#41;](../subscriptions/subscriptions-and-delivery-reporting-services.md).
 
--   **Export:**  Mithilfe der Berichts-Viewer-Symbolleiste können Leser einen Bericht in ein anderes Dateiformat exportieren. Die Exportdateiformate können vom Berichtsserveradministrator konfiguriert werden. Weitere Informationen finden Sie unter [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).
+-   **Exports.**  Mithilfe der Berichts-Viewer-Symbolleiste können Leser einen Bericht in ein anderes Dateiformat exportieren. Die Exportdateiformate können vom Berichtsserveradministrator konfiguriert werden. Weitere Informationen finden Sie unter [Exportieren von Berichten &#40;Berichts-Generator und SSRS&#41;](../report-builder/export-reports-report-builder-and-ssrs.md).
 
--   **Drucken**  Leser können einen Bericht abhängig von der Anzeigemethode vollständig oder seitenweise drucken. Weitere Informationen finden Sie unter [Drucken von Berichten &#40;Berichts-Generator und SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md).
+-   **Gedruck.**  Leser können einen Bericht abhängig von der Anzeigemethode vollständig oder seitenweise drucken. Weitere Informationen finden Sie unter [Drucken von Berichten &#40;Berichts-Generator und SSRS&#41;](../report-builder/print-reports-report-builder-and-ssrs.md).
 
 -   **Web Forms- oder Windows Forms-Anwendung**  Verwenden Sie Visual Studio, um eine ASP.NET AJAX-Anwendung oder Windows Forms-Anwendung zum Hosten des Steuerelements des Berichts-Viewers zu entwickeln. Das Steuerelement kann auf veröffentlichte Berichte auf einem Berichtsserver verweisen. Weitere Informationen finden Sie unter [Microsoft Reports](https://go.microsoft.com/fwlink/?LinkID=205399).
 
@@ -141,19 +141,19 @@ ms.locfileid: "78177079"
 
 -   **Datasets.**  Freigegebene Datasets werden unabhängig von der Berichtsdefinition verwaltet.
 
--   **Parameter**  Parameter werden unabhängig von der Berichtsdefinition verwaltet. Nachdem Parameter auf dem Berichtsserver geändert wurden, können die auf dem Server vorgenommenen Änderungen von Berichterstellungsclients nicht durch neue Veröffentlichungen überschrieben werden.
+-   **Metern.**  Parameter werden unabhängig von der Berichtsdefinition verwaltet. Nachdem Parameter auf dem Berichtsserver geändert wurden, können die auf dem Server vorgenommenen Änderungen von Berichterstellungsclients nicht durch neue Veröffentlichungen überschrieben werden.
 
--   **Ressourcen**  Bilder und räumliche Daten in ESRI-Shape-Dateien sind Ressourcen, die unabhängig von der Berichtsdefinition veröffentlicht und verwaltet werden können.
+-   **Verfügt.**  Bilder und räumliche Daten in ESRI-Shape-Dateien sind Ressourcen, die unabhängig von der Berichtsdefinition veröffentlicht und verwaltet werden können.
 
 -   **Berichtscache**  Wenn Sie umfangreiche Berichte so planen möchten, dass sie außerhalb von Spitzenzeiten ausgeführt werden, können Sie die Auswirkung der Verarbeitung auf den Berichtsserver während der Kernarbeitszeiten verringern.
 
--   **Momentaufnahmen**  Verwenden Sie Berichtmomentaufnahmen, wenn Sie konsistente Ergebnisse für viele Benutzer liefern möchten, die mit identischen Datensätzen arbeiten müssen. Bei flüchtigen Daten kann ein bedarfsgesteuerter Bericht von einer Minute zur nächsten unterschiedliche Ergebnisse liefern. Dagegen können Sie mit einer Berichtsmomentaufnahme gültige Vergleiche mit anderen Berichten oder Analysetools ausführen, die Daten desselben Zeitpunkts enthalten.
+-   **Gesorgt.**  Verwenden Sie Berichtmomentaufnahmen, wenn Sie konsistente Ergebnisse für viele Benutzer liefern möchten, die mit identischen Datensätzen arbeiten müssen. Bei flüchtigen Daten kann ein bedarfsgesteuerter Bericht von einer Minute zur nächsten unterschiedliche Ergebnisse liefern. Dagegen können Sie mit einer Berichtsmomentaufnahme gültige Vergleiche mit anderen Berichten oder Analysetools ausführen, die Daten desselben Zeitpunkts enthalten.
 
--   **Berichtsverlauf.** Durch Erstellen einer Folge von Berichtsmomentaufnahmen können Sie einen Verlauf eines Berichts erstellen, der die Änderung der Daten über die Zeit aufzeigt.
+-   **Berichts Verlauf.** Durch Erstellen einer Folge von Berichtsmomentaufnahmen können Sie einen Verlauf eines Berichts erstellen, der die Änderung der Daten über die Zeit aufzeigt.
 
  Weitere Informationen zur Leistung finden Sie unter [Leistung, Momentaufnahmen, Zwischenspeichern &#40;Reporting Services&#41;](../report-server/performance-snapshots-caching-reporting-services.md).
 
-##  <a name="bkmk_SecureReportsSummary"></a>Sichere Berichte
+##  <a name="secure-reports"></a><a name="bkmk_SecureReportsSummary"></a> Sichern von Berichten
  So sichern Sie einen Bericht
 
 -   Erfragen Sie beim Berichtsserveradministrator, welches Autorisierungs- und Authentifizierungssystem für die [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] -Installation verwendet wird. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet standardmäßig Windows-Authentifizierung, integrierte Sicherheit und Rollenzuweisungen, um den Zugriff auf veröffentlichte Berichte zu steuern. Weitere Informationen finden Sie unter [Rollen und Berechtigungen (Reporting Services)](../security/roles-and-permissions-reporting-services.md) und [Sicherheit und Schutz für Reporting Services](../security/reporting-services-security-and-protection.md).
@@ -164,7 +164,7 @@ ms.locfileid: "78177079"
 ## <a name="upgrade-reports"></a>Upgrade Reports
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] unterstützt mehrere Versionen von Berichtsdefinitionen, Berichtsservern und SharePoint-Websites. So aktualisieren Sie einen Bericht
 
--   Aktualisieren Sie eine Berichtsserverinstallation. Auf dem Berichtsserver gespeicherte kompilierte Berichte werden automatisch bei der ersten Verwendung aktualisiert. Die Berichtsdefinition (.rdl) wird nicht geändert. Weitere Informationen finden Sie unter [Upgrade and Migrate Reporting Services](../install-windows/upgrade-and-migrate-reporting-services.md).
+-   Aktualisieren Sie eine Berichtsserverinstallation. Auf dem Berichtsserver gespeicherte kompilierte Berichte werden automatisch bei der ersten Verwendung aktualisiert. Die Berichtsdefinition (.rdl) wird nicht geändert. Weitere Informationen finden Sie unter [Upgrade and Migration Reporting Services](../install-windows/upgrade-and-migrate-reporting-services.md).
 
 -   Öffnen Sie einen Bericht in einer Berichterstellungsumgebung. Die Berichtsdefinition wird in den meisten Fällen aktualisiert. Weitere Informationen finden Sie unter [Aktualisieren von Berichten](../install-windows/upgrade-reports.md) und [Bereitstellung und Versionsunterstützung in SQL Server Data Tools (SSRS)](../tools/deployment-and-version-support-in-sql-server-data-tools-ssrs.md).
 

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 644fa33aa0a9fd8bd51521270cfb89636ac63791
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173199"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Erstellen eines freigegebenen Datasets oder eingebetteten Datasets (Berichts-Generator und SSRS)
@@ -56,7 +56,7 @@ ms.locfileid: "78173199"
 
 4.  Geben Sie im Abfrage-Designer die Felder an, die in das Dataset einbezogen werden sollen.
 
-5.  Klicken Sie auf **Ausführen** ( **!** ), um die Abfrage auszuführen.
+5.  Klicken Sie auf **Ausführen** (**!**), um die Abfrage auszuführen.
 
 6.  Klicken Sie in der Schaltfläche **Berichts-Generator** auf **Speichern** oder **Speichern unter** , um das freigegebene Dataset auf dem Berichtsserver zu speichern.
 

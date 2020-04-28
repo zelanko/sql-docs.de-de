@@ -15,16 +15,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b810a3785c41356042639c4fdb79b4f6cf28d871
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76934800"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Erstellen, Ändern und Löschen von FileTables
   Beschreibt, wie eine neue FileTable erstellt bzw. eine vorhandene FileTable geändert oder gelöscht wird.  
   
-##  <a name="BasicsCreate"></a>Erstellen einer FILETABLE  
+##  <a name="creating-a-filetable"></a><a name="BasicsCreate"></a> Erstellen einer FileTable  
  Eine FileTable ist eine spezialisierte Benutzertabelle, die ein vordefiniertes und festes Schema aufweist. Dieses Schema speichert FILESTREAM-Daten, Datei- und Verzeichnisinformationen sowie Dateiattribute. Weitere Informationen zum FileTable-Beispielschema finden Sie unter [FileTable Schema](filetable-schema.md).  
   
  Sie können mit Transact-SQL oder [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]eine neue FileTable erstellen. Da eine FileTable ein festes Schema hat, müssen Sie keine Liste von Spalten angeben. Mit der einfachen Syntax zum Erstellen einer FileTable können Sie Folgendes angeben:  
@@ -35,8 +35,8 @@ ms.locfileid: "76934800"
   
 -   Die Namen, die für die 3 automatisch erstellten PRIMARY KEY- und UNIQUE-Einschränkungen verwendet werden sollen.  
   
-###  <a name="HowToCreate"></a>Vorgehensweise: Erstellen einer FILETABLE  
- **Erstellen einer FILETABLE mithilfe von Transact-SQL**  
+###  <a name="how-to-create-a-filetable"></a><a name="HowToCreate"></a> Vorgehensweise: Erstellen einer FileTable  
+ **Erstellen einer FileTable mit Transact-SQL**  
  Erstellen Sie eine FileTable, indem Sie die Option [CREATE TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-table-transact-sql) mit der Option **AS FileTable** aufrufen. Da eine FileTable ein festes Schema hat, müssen Sie keine Liste von Spalten angeben. Sie können die folgenden beiden Einstellungen für die neue FileTable angeben:  
   
 1.  **FILETABLE_DIRECTORY**. Gibt das Verzeichnis an, das als Stammverzeichnis für alle in der FileTable gespeicherten Dateien und Verzeichnisse verwendet wird. Dieser Name sollte für alle FileTable-Verzeichnisnamen in der Datenbank eindeutig sein. Bei Eindeutigkeitsvergleichen wird die Groß-/Kleinschreibung nicht beachtet, unabhängig von den aktuellen Sortiereinstellungen.  
@@ -83,12 +83,12 @@ CREATE TABLE DocumentStore AS FileTable;
 GO  
 ```  
   
- **Erstellen einer FILETABLE mit SQL Server Management Studio**  
+ **Erstellen einer FileTable mithilfe von SQL Server Management Studio**  
  Erweitern Sie im Objekt-Explorer unter der ausgewählten Datenbank die Objekte, klicken Sie dann mit der rechten Maustaste auf den Ordner **Tabellen** , und wählen Sie dann **Neue FileTable**aus.  
   
  Mit dieser Option wird ein neues Skriptfenster geöffnet, das eine Transact-SQL-Skriptvorlage enthält, die Sie zum Erstellen einer FileTable anpassen und ausführen können. Passen Sie das Skript einfach mit der Option **Werte für Vorlagenparameter angeben** im Menü **Abfrage** an.  
   
-###  <a name="ReqCreate"></a>Anforderungen und Einschränkungen beim Erstellen einer FILETABLE  
+###  <a name="requirements-and-restrictions-for-creating-a-filetable"></a><a name="ReqCreate"></a> Anforderungen und Einschränkungen beim Erstellen einer FileTable  
   
 -   Sie können eine vorhandene Tabelle nicht ändern, um sie in eine FileTable zu konvertieren.  
   
@@ -102,13 +102,13 @@ GO
   
 -   Eine FileTable kann nicht als temporäre Tabelle erstellt werden.  
   
-##  <a name="BasicsAlter"></a>Ändern einer FILETABLE  
+##  <a name="altering-a-filetable"></a><a name="BasicsAlter"></a> Ändern einer FileTable  
  Da eine FileTable ein vordefiniertes und festes Schema aufweist, können Sie keine Spalten hinzufügen oder ändern. Sie können einer FileTable jedoch benutzerdefinierte Indizes, Trigger, Einschränkungen und andere Optionen hinzufügen.  
   
  Informationen zum Aktivieren bzw. Deaktivieren des FileTable-Namespace (einschließlich der systemdefinierten Einschränkungen) mithilfe der ALTER TABLE-Anweisung finden Sie unter [Verwalten von FileTables](manage-filetables.md).  
   
-###  <a name="HowToChange"></a>Vorgehensweise: Ändern des Verzeichnisses für eine FILETABLE  
- **Ändern des Verzeichnisses für eine FILETABLE mithilfe von Transact-SQL**  
+###  <a name="how-to-change-the-directory-for-a-filetable"></a><a name="HowToChange"></a> Vorgehensweise: Ändern des Verzeichnisses für eine FileTable  
+ **Ändern des Verzeichnisses für eine FileTable mit Transact-SQL**  
  Rufen Sie die ALTER TABLE-Anweisung auf, und geben Sie einen gültigen neuen Wert für die SET-Option von **FILETABLE_DIRECTORY** an.  
   
  **Beispiel**  
@@ -119,10 +119,10 @@ ALTER TABLE filetable_name
 GO  
 ```  
   
- **Ändern des Verzeichnisses für eine FILETABLE mithilfe SQL Server Management Studio**  
+ **Ändern des Verzeichnisses für eine FileTable mit SQL Server Management Studio**  
  Klicken Sie im Objekt-Explorer mit der rechten Maustaste auf eine FileTable, und wählen Sie **Eigenschaften** aus, um das Dialogfeld **Tabelleneigenschaften** zu öffnen. Geben Sie auf der Seite **FileTable** einen neuen Wert für **Name des FileTable-Verzeichnisses**ein.  
   
-###  <a name="ReqAlter"></a>Anforderungen und Einschränkungen beim Ändern einer FILETABLE  
+###  <a name="requirements-and-restrictions-for-altering-a-filetable"></a><a name="ReqAlter"></a> Anforderungen und Einschränkungen beim Ändern einer FileTable  
   
 -   Sie können den Wert von **FILETABLE_COLLATE_FILENAME**nicht ändern.  
   
@@ -130,7 +130,7 @@ GO
   
 -   Sie können einer FileTable keine neuen Benutzerspalten, berechnete Spalten oder persistente berechnete Spalten hinzufügen.  
   
-##  <a name="BasicsDrop"></a>Löschen einer FILETABLE  
+##  <a name="dropping-a-filetable"></a><a name="BasicsDrop"></a> Löschen einer FileTable  
  Mithilfe der normalen Syntax für die [DROP TABLE &#40;Transact-SQL&#41;](/sql/t-sql/statements/drop-table-transact-sql)-Anweisung können Sie eine FileTable löschen.  
   
  Beim Löschen einer FileTable werden auch die folgenden Objekte gelöscht:  
@@ -141,7 +141,7 @@ GO
   
  Der DROP TABLE-Befehl schlägt fehl, wenn geöffnete Dateihandles im Dateinamespace der Dateitabelle vorhanden sind. Informationen zum Schließen von geöffneten Handles finden Sie unter [Verwalten von FileTables](manage-filetables.md).  
   
-##  <a name="BasicsOtherObjects"></a>Beim Erstellen einer FILETABLE werden andere Datenbankobjekte erstellt.  
+##  <a name="other-database-objects-are-created-when-you-create-a-filetable"></a><a name="BasicsOtherObjects"></a> Beim Erstellen einer FileTable werden andere Datenbankobjekte erstellt  
  Wenn Sie eine neue FileTable erstellen, werden auch einige systemdefinierte Indizes und Einschränkungen erstellt. Sie können diese Objekte nicht ändern oder löschen; sie verschwinden nur, wenn die FileTable selbst gelöscht wird. Um eine Liste dieser Objekte anzuzeigen, fragen Sie die Katalogsicht [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql) ab.  
   
 ```sql  
@@ -156,7 +156,7 @@ SELECT OBJECT_NAME(parent_object_id) AS 'FileTable', OBJECT_NAME(object_id) AS '
 GO  
 ```  
   
- **Indizes, die erstellt werden, wenn Sie eine neue FILETABLE erstellen**  
+ **Indizes, die erstellt werden, wenn Sie eine neue FileTable erstellen**  
  Wenn Sie eine neue FileTable erstellen, werden auch die folgenden systemdefinierten Indizes erstellt:  
   
 |||  
@@ -166,7 +166,7 @@ GO
 |[parent_path_locator] ASC,<br /><br /> [name] ASC|Eindeutig und nicht gruppiert|  
 |[stream_id] ASC|Eindeutig und nicht gruppiert|  
   
- **Einschränkungen, die erstellt werden, wenn Sie eine neue FILETABLE erstellen**  
+ **Einschränkungen, die erstellt werden, wenn Sie eine neue FileTable erstellen**  
  Wenn Sie eine neue FileTable erstellen, werden auch die folgenden systemdefinierten Einschränkungen erstellt:  
   
 |Einschränkungen|Erzwingung|  
@@ -174,12 +174,12 @@ GO
 |Standardeinschränkungen in den folgenden Spalten:<br /><br /> **creation_time** <br /> **is_archive** <br /> **is_directory** <br /> **is_hidden** <br /> **is_offline** <br /> **is_readonly** <br /> **is_system** <br /> **is_temporary** <br /> **last_access_time** <br /> **last_write_time** <br /> **path_locator** <br /> **stream_id**|Die systemdefinierten Standardeinschränkungen erzwingen Standardwerte für die angegebenen Spalten.|  
 |Check-Einschränkungen|Die systemdefinierten CHECK-Einschränkungen erzwingen die folgenden Anforderungen:<br /><br /> Gültige Dateinamen<br /><br /> Gültige Dateiattribute<br /><br /> Übergeordnetes Objekt muss ein Verzeichnis sein.<br /><br /> Namespacehierarchie ist während der Dateibearbeitung gesperrt.|  
   
- **Benennungs Konvention für die System definierten Einschränkungen**  
- Die oben beschriebenen System definierten Einschränkungen werden im Format ** \<"Einschränkungs Name>_\<\_\<TableName> [ColumnName>]\_\<uniquifier** " benannt>wobei:  
+ **Benennungskonvention für die systemdefinierten Einschränkungen**  
+ Die Namen der oben beschriebenen systemdefinierten Einschränkungen werden nach dem Schema **\<Einschränkungstyp>_\<Tabellenname>[\_\<Spaltenname>]\_\<Uniquifier>** benannt, wobei gilt:  
   
--   *<CONSTRAINT_TYPE>* ist ck (Check-Einschränkung), DF (DEFAULT-Einschränkung), FK (Fremdschlüssel), PK (Primärschlüssel) oder UQ (Unique-Einschränkung).  
+-   *<constraint_type>* ist CK (CHECK-Einschränkung), DF (Standardeinschränkung), FK (Fremdschlüssel), PK (Primärschlüssel) oder UQ (UNIQUE-Einschränkung).  
   
--   uniquifier>ist eine vom systemgenerierte Zeichenfolge, die den Namen eindeutig macht. * \<* Diese Zeichenfolge kann den FileTable-Namen und einen eindeutigen Bezeichner enthalten.  
+-   *\<uniquifier>* ist eine vom System generierte Zeichenfolge, die den Namen eindeutig macht. Diese Zeichenfolge kann den FileTable-Namen und einen eindeutigen Bezeichner enthalten.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Verwalten von FileTables](manage-filetables.md)  

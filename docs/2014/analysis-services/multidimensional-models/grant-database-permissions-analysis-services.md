@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9529fbcb784d0f6a2a2ae88f5a976e8607e0705a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175731"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>Erteilen von Datenbankberechtigungen (Analysis Services)
@@ -33,7 +33,7 @@ ms.locfileid: "78175731"
 
  Auf Datenbankebene gibt es drei Berechtigungstypen.
 
- **Vollzugriff (Administrator)** : Full Control ist eine umfassende Berechtigung, die weitreichende Berechtigungen über eine Analysis Services Datenbank überträgt, z. b. die Möglichkeit, beliebige Objekte in der Datenbank abzufragen oder zu verarbeiten und die Rollen Sicherheit zu verwalten. Vollzugriff entspricht dem Datenbankadministratorstatus. Wenn Sie `Full Control` auswählen, werden die Berechtigungen `Process Database` und `Read Definition` ebenfalls ausgewählt und können nicht entfernt werden.
+ **Vollzugriff (Administrator)** ─ Vollzugriff ist eine globale Berechtigung, die viele Zugriffsmöglichkeiten in einer Analysis Services-Datenbank mit sich bringt, z.B. die Fähigkeit, jedes Objekt in der Datenbank abzufragen oder zu verarbeiten und die Rollensicherheit zu verwalten. Vollzugriff entspricht dem Datenbankadministratorstatus. Wenn Sie `Full Control` auswählen, werden die Berechtigungen `Process Database` und `Read Definition` ebenfalls ausgewählt und können nicht entfernt werden.
 
 > [!NOTE]
 >  Serveradministratoren (Mitglieder der Serveradministratorrolle) besitzen ebenfalls impliziten Vollzugriff auf jede Datenbank auf dem Server.

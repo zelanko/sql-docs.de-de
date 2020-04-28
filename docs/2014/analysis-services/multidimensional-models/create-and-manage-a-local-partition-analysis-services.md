@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c06e40e452fa0db682e2f79b523ddcd90d0450c2
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175789"
 ---
 # <a name="create-and-manage-a-local-partition-analysis-services"></a>Erstellen und Verwalten einer lokalen Partition (Analysis Services)
@@ -39,7 +39,7 @@ ms.locfileid: "78175789"
 
  Zum Verteilen der Faktendaten auf mehrere Partitionen können beide Verfahren eingesetzt werden. Folgende Verfahren können zum Segmentieren der Daten verwendet werden.
 
-|Technik|Empfehlungen|
+|Verfahren|Empfehlungen|
 |---------------|---------------------|
 |Segmentieren von Faktendaten mithilfe von SQL-Abfragen|Partitionen können mithilfe von SQL-Abfragen definiert werden. Während der Verarbeitung werden die Daten mit der SQL-Abfrage abgerufen. In der WHERE-Klausel der Abfrage ist der Filter angegeben, durch den die Daten für die einzelnen Partitionen segmentiert werden. Die Abfrage wird von Analysis Services generiert, sodass Sie nur noch die WHERE-Klausel definieren müssen, um die Daten ordnungsgemäß zu segmentieren.<br /><br /> Der Hauptvorteil dieses Ansatzes besteht in der Leichtigkeit, mit der Daten aus einer einzelnen Quelltabelle partitioniert werden können. Wenn sämtliche Quelldaten aus einer umfangreichen Faktentabelle stammen, können Sie Filterabfragen erstellen, durch die die Daten in diskrete Partitionen aufgeteilt werden, ohne zusätzliche Datenstrukturen in der Datenquellensicht erzeugen zu müssen.<br /><br /> Ein Nachteil besteht darin, dass durch die Verwendung von Abfragen die Bindung zwischen Partition und DSV verloren geht. Wenn Sie die DSV später im Analysis Services-Projekt aktualisieren, indem Sie der Faktentabelle z. B. Spalten hinzufügen, müssen Sie die Abfragen für jede Partition manuell bearbeiten, damit die neue Spalte berücksichtigt wird. Für den zweiten Ansatz, der im Folgenden erläutert wird, gilt dieser Nachteil nicht.|
 |Segmentieren von Faktendaten mithilfe von Tabellen in der DSV|Sie können eine Partition an eine Tabelle, benannte Abfrage oder Sicht in der DSV binden. Als Ausgangsbasis für eine Partition sind die drei Ansätze funktionell gleichwertig. Die gesamte Tabelle, benannte Abfrage oder Sicht stellt sämtliche Daten für eine einzelne Partition bereit.<br /><br /> Bei Verwendung einer Tabelle, Sicht oder benannten Abfrage ist die gesamte Logik zur Datenauswahl in der DSV enthalten, die längerfristig einfacher zu verwalten und zu pflegen ist. Ein wichtiger Vorteil dieses Ansatzes besteht darin, dass die Tabellenbindungen erhalten bleiben. Wenn Sie die Quelltabelle später aktualisieren, müssen die Partitionen, die auf der Tabelle basieren, nicht geändert werden. Da alle Tabellen, benannten Abfragen und Sichten außerdem in einem gemeinsamen Arbeitsbereich enthalten sind, lassen sie sich wesentlich einfacher aktualisieren als Partitionsabfragen, die einzeln geöffnet und bearbeitet werden müssen.|

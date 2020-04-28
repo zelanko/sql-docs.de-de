@@ -13,10 +13,10 @@ author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
 ms.openlocfilehash: f2640e9018f29385851839932572aeaa3ee91ad9
-ms.sourcegitcommit: 92b2e3cf058e6b1e9484e155d2cc28ed2a0b7a8c
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/25/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "77600130"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>Ausführen von Assistent für Datenbankexperimente an einer Eingabeaufforderung
@@ -132,6 +132,6 @@ Beim Analysieren von Ablauf Verfolgungen mit dem Befehl "DEA" können Sie die fo
 | --Abu | BLOB-URL für eine-Instanz mit einem SAS-Schlüssel |
 | --BBU | BLOB-URL für B-Instanz mit SAS-Schlüssel |
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - Weitere Informationen zur Verwendung von DEA finden Sie unter [Übersicht über Assistent für Datenbankexperimente](database-experimentation-assistant-overview.md).

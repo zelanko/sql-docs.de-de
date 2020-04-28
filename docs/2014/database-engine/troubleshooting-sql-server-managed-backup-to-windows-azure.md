@@ -11,24 +11,21 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 385fa6f6bd874734207c6fec10ddc687b951825a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76929435"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-azure"></a>Problembehandlung für die verwaltete SQL Server-Sicherung in Azure
   Dieses Thema enthält zudem Informationen zu den Aufgaben und Tools, die Sie verwenden können, um Fehler bei [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Vorgängen zu beheben.  
   
 ## <a name="overview"></a>Übersicht  
- 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verfügt über integrierte Prüfungen und Fehlerbehebungen, d. h., in vielen Fällen kümmert sich der [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Prozess selbst um interne Fehler.  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verfügt über integrierte Prüfungen und Fehlerbehebungen, d. h., in vielen Fällen kümmert sich der [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]-Prozess selbst um interne Fehler.  
   
  Ein Beispiel für einen solchen Fall ist das Löschen einer Sicherungsdatei, die zu einer Unterbrechung der Protokoll Kette führt, die [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] die Wiederherstellbarkeit beeinträchtigt. in wird die Unterbrechung in der Protokoll Kette identifiziert und eine sofortige Sicherung geplant. Nichtsdestotrotz sollten Sie den Status überwachen und mögliche Fehler, die ein manuelles Eingreifen erfordern, entsprechend behandeln.  
   
- 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] protokolliert Ereignisse und Fehler anhand gespeicherter Systemprozeduren, Systemsichten und erweiterter Ereignisse. Systemsichten und gespeicherte Prozeduren stellen [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Konfigurationsinformationen, Status von geplanten Sicherungen sowie Fehler bereit, die von erweiterten Ereignissen aufgezeichnet wurden. 
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verwendet erweiterte Ereignisse zur Aufzeichnung von Fehlern für die Fehlerbehebung. Zusätzlich zur Ereignisprotokollierung stellen die intelligenten Administrations-Richtlinien von SQL Server einen Integritätsstatus bereit, der von einem E-Mail-Benachrichtigungs-Auftrag zur Bereitstellung von Benachrichtigungen zu Fehlern und Problemen verwendet wird. Weitere Informationen finden [Sie unter Überwachen SQL Server verwalteten Sicherung in Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] protokolliert Ereignisse und Fehler anhand gespeicherter Systemprozeduren, Systemsichten und erweiterter Ereignisse. Systemsichten und gespeicherte Prozeduren stellen [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Konfigurationsinformationen, Status von geplanten Sicherungen sowie Fehler bereit, die von erweiterten Ereignissen aufgezeichnet wurden. [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] verwendet erweiterte Ereignisse zur Aufzeichnung von Fehlern für die Fehlerbehebung. Zusätzlich zur Ereignisprotokollierung stellen die intelligenten Administrations-Richtlinien von SQL Server einen Integritätsstatus bereit, der von einem E-Mail-Benachrichtigungs-Auftrag zur Bereitstellung von Benachrichtigungen zu Fehlern und Problemen verwendet wird. Weitere Informationen finden [Sie unter Überwachen SQL Server verwalteten Sicherung in Azure](../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md).  
   
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]verwendet auch die gleiche Protokollierung, die beim manuellen Sichern in Azure Storage (SQL Server Sicherung auf URL) verwendet wird. Weitere Informationen zu Problemen bei der Sicherung auf URL finden Sie im Abschnitt zur Problembehandlung unter [SQL Server bewährte Methoden und Problem](../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md) Behandlung bei der Sicherung von URLs.  
   
@@ -36,8 +33,7 @@ ms.locfileid: "76929435"
   
 1.  Aktivieren Sie die E-Mail-Benachrichtigung, um E-Mails zu Fehlern und Warnungen zu erhalten.  
   
-     Alternativ können Sie auch `smart_admin.fn_get_health_status` regelmäßig ausführen, um die aggregierten Fehler und Zahlen zu überprüfen. Zum Beispiel gibt `number_of_invalid_credential_errors` an, wie häufig die intelligente Sicherung eine Sicherung versucht, aber einen Fehler aufgrund ungültiger Anmeldeinformationen erhalten hat. 
-  `Number_of_backup_loops` und `number_of_retention_loops` sind keine Fehler; sie geben an, wie häufig Sicherungsthread und Beibehaltungsthread die Liste der Datenbanken überprüft haben. Wenn @begin_time und @end_time nicht bereitgestellt werden, zeigt die Funktion in der Regel die Informationen in den letzten 30 Minuten an. für diese beiden Spalten sollten normalerweise Werte ungleich Null angezeigt werden. Wenn sie null sind, weist dies auf eine Systemüberlastung oder sogar auf ein nicht reagierendes System hin. Weitere Informationen finden Sie im Abschnitt Problembehandlung bei **System Problemen** weiter unten in diesem Thema.  
+     Alternativ können Sie auch `smart_admin.fn_get_health_status` regelmäßig ausführen, um die aggregierten Fehler und Zahlen zu überprüfen. Zum Beispiel gibt `number_of_invalid_credential_errors` an, wie häufig die intelligente Sicherung eine Sicherung versucht, aber einen Fehler aufgrund ungültiger Anmeldeinformationen erhalten hat. `Number_of_backup_loops` und `number_of_retention_loops` sind keine Fehler; sie geben an, wie häufig Sicherungsthread und Beibehaltungsthread die Liste der Datenbanken überprüft haben. Wenn @begin_time und @end_time nicht bereitgestellt werden, zeigt die Funktion in der Regel die Informationen in den letzten 30 Minuten an. für diese beiden Spalten sollten normalerweise Werte ungleich Null angezeigt werden. Wenn sie null sind, weist dies auf eine Systemüberlastung oder sogar auf ein nicht reagierendes System hin. Weitere Informationen finden Sie im Abschnitt Problembehandlung bei **System Problemen** weiter unten in diesem Thema.  
   
 2.  Prüfen Sie die Protokolle der erweiterten Ereignisse, um weitere Details zu den Fehlern und zu den zugehörigen Ereignissen zu erfahren.  
   
@@ -62,8 +58,7 @@ ms.locfileid: "76929435"
   
      Fehler: "Fehler beim Zugriff auf die Speicher-URL.... Geben Sie gültige SQL-Anmelde Informationen an... ": möglicherweise werden diese und andere ähnliche Fehler angezeigt, die sich auf die SQL-Anmelde Informationen beziehen.  Überprüfen Sie in diesen Fällen den Namen der angegebenen SQL-Anmelde Informationen sowie die in den SQL-Anmelde Informationen gespeicherten Informationen, den Speicherkonto Namen und den Speicherzugriffs Schlüssel, und stellen Sie sicher, dass Sie aktuell und gültig sind.  
   
-     Fehler: "... die Datenbank kann nicht konfiguriert werden... Da es sich um eine Systemdatenbank handelt ": dieser Fehler wird angezeigt, wenn Sie versuchen [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] , für eine Systemdatenbank zu aktivieren.  
-  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] unterstützt keine Sicherungen von Systemdatenbanken.  Um die Sicherung einer Systemdatenbank zu konfigurieren, verwenden Sie andere SQL Server-Sicherungstechnologien, z. B. Wartungspläne.  
+     Fehler: "... die Datenbank kann nicht konfiguriert werden... Da es sich um eine Systemdatenbank handelt ": dieser Fehler wird angezeigt, wenn Sie versuchen [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] , für eine Systemdatenbank zu aktivieren.  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] unterstützt keine Sicherungen von Systemdatenbanken.  Um die Sicherung einer Systemdatenbank zu konfigurieren, verwenden Sie andere SQL Server-Sicherungstechnologien, z. B. Wartungspläne.  
   
      Fehler: "... Geben Sie eine Beibehaltungs Dauer an.... ": möglicherweise werden Fehler bezüglich der Beibehaltungs Dauer angezeigt, wenn Sie für die Datenbank oder Instanz bei der erstmaligen Konfiguration dieser Werte keine Beibehaltungs Dauer angegeben haben. Es wird außerdem ein Fehler angezeigt, wenn Sie einen anderen Wert als eine Zahl zwischen 1 und 30 angeben. Der zulässige Wert für die Beibehaltungsdauer ist eine Zahl zwischen 1 und 30.  
   

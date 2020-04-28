@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0a8cd7ddaac1138599701e4ccfe14c3cb0b84656
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173946"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Erstellen einer Datenwarnung im Datenwarnungs-Designer
@@ -70,15 +70,15 @@ ms.locfileid: "78173946"
 
 10. Geben Sie den Vergleichswert ein.
 
-11. Klicken Sie optional erneut auf die Auslassungspunkte **(...)**.
+11. Klicken Sie optional erneut auf die Auslassungs Punkte **(...)** .
 
-     Die Auslassungspunkte **(...)** werden in der Zeile mit der ersten Klausel angezeigt.
+     Die Auslassungs Punkte **(...)** werden in der Zeile mit der ersten Klausel angezeigt.
 
      Eine OR-Klausel wird unten und innerhalb der AND-Regel hinzugefügt.
 
 12. Klicken Sie optional auf den Pfeil nach unten, wählen Sie **Feldauswahlmodus**und anschließend eine Spalte in der Liste aus.
 
-     Die Auslassungspunkte **(...)**, auf die Sie zum Hinzufügen von OR-Klauseln klicken, werden nicht mehr angezeigt.
+     Sie werden bemerken, dass die Auslassungs Punkte **(...)** , auf die Sie zum Hinzufügen von OR-Klauseln klicken, verschwunden sind.
 
 13. Klicken Sie optional erneut auf **Regel hinzufügen** , um weitere Regeln hinzuzufügen.
 
@@ -99,7 +99,7 @@ ms.locfileid: "78173946"
     > [!NOTE]
     >  Durch das Beenden einer Warnmeldung wird die Warnungsdefinition nicht gelöscht. Nach dem Beenden einer Warnmeldung können Sie diese durch Aktualisieren des Start- und Enddatums erneut starten. Weitere Informationen zum Löschen von Warnungsdefinitionen finden Sie unter [Verwalten meiner Datenwarnungen im Datenwarnungs-Manager](manage-my-data-alerts-in-data-alert-manager.md).
 
-18. Deaktivieren Sie optional das Kontrollkästchen zum **Senden von Meldungen nur bei Ergebnisänderungen** .
+18. Deaktivieren Sie optional das Kontrollkästchen zum **Senden von Meldungen nur bei Ergebnisänderungen**.
 
      Wenn Sie Warnmeldungen häufig senden, sind redundante Informationen u. U. nicht erwünscht, und Sie sollten das Kontrollkästchen nicht deaktivieren.
 
@@ -109,7 +109,7 @@ ms.locfileid: "78173946"
 
 20. Aktualisieren Sie optional im Textfeld **Betreff** die Betreffzeile der Warnmeldung.
 
-     Der Standardbetreff lautet **Datenwarnung für \<Name der Datenwarnung>**.
+     Der Standard Betreff lautet **Daten Warnung für \<Daten Warnungs Name>**.
 
 21. Geben Sie optional im Textfeld **Beschreibung** eine Beschreibung der Warnmeldung ein.
 

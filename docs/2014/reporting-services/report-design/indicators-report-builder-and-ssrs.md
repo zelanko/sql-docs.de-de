@@ -18,10 +18,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f56a7fc3d4d5d24143d2c83709e9674e1b2fd43d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176830"
 ---
 # <a name="indicators-report-builder-and-ssrs"></a>Indikatoren (Berichts-Generator und SSRS)
@@ -41,10 +41,9 @@ ms.locfileid: "78176830"
 
  ![rs_IndicatorTableTrafficLight](../media/rs-indicatortabletrafficlight.gif "rs_IndicatorTableTrafficLight")
 
- 
-  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält integrierte Indikatorsätze und Indikatorsymbole, die direkt verwendet werden können. Sie haben jedoch auch die Möglichkeit, einzelne Indikatorsymbole und Indikatorsätze an Ihre individuellen Anforderungen anzupassen.
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] enthält integrierte Indikatorsätze und Indikatorsymbole, die direkt verwendet werden können. Sie haben jedoch auch die Möglichkeit, einzelne Indikatorsymbole und Indikatorsätze an Ihre individuellen Anforderungen anzupassen.
 
- Weitere Informationen zur Verwendung von Indikatoren als KPIs finden Sie unter [Tutorial: Hinzufügen eines KPI zu einem Bericht (Berichts-Generator)](../tutorial-adding-a-kpi-to-your-report-report-builder.md).
+ Weitere Informationen zur Verwendung von Indikatoren als KPIs finden Sie unter [Tutorial: Hinzufügen eines KPIS zu einem Bericht &#40;Berichts-Generator&#41;](../tutorial-adding-a-kpi-to-your-report-report-builder.md).
 
 > [!NOTE]
 >  Sie können Indikatoren in einem Bericht als Berichtsteile getrennt veröffentlichen. [!INCLUDE[ssRBrptparts](../../includes/ssrbrptparts-md.md)]
@@ -52,7 +51,7 @@ ms.locfileid: "78176830"
 > [!NOTE]
 >  [!INCLUDE[ssRBRDDup](../../includes/ssrbrddup-md.md)]
 
-##  <a name="ComparingIndicatorsToGauges"></a> Vergleichen von Indikatoren mit Messgeräten
+##  <a name="comparing-indicators-to-gauges"></a><a name="ComparingIndicatorsToGauges"></a>Vergleichen von Indikatoren mit Messgeräten
  Auch wenn Indikatoren ganz anders aussehen, sind sie genauso einfach wie Messgeräte aufgebaut. Sowohl Indikatoren als auch Messgeräte zeigen einen einzelnen Datenwert an. Der Hauptunterschied besteht darin, dass Messgeräte außerdem über Elemente wie Frames und Zeiger verfügen. Indikatoren verfügen nur über Status, Symbole und (optional) Bezeichnungen. Indikatorstatus ähneln Messgerätskalen.
 
  Wie Messgeräte befinden sich auch Indikatoren in einem Messgerätebereich. Wenn Sie einen Indikator mit dem Dialogfeld **Indikatoreigenschaften** oder dem Eigenschaftenbereich konfigurieren möchten, müssen Sie den Indikator und nicht den Bereich auswählen. Andernfalls gelten die verfügbaren Optionen für die Messgerätbereichsoptionen, und Sie können den Indikator nicht konfigurieren. Die folgende Abbildung enthält einen ausgewählten Indikator in dessen Messgerätbereich.
@@ -62,7 +61,7 @@ ms.locfileid: "78176830"
  Abhängig davon, wie Sie den Datenwert darstellen möchten, können Messgeräte sich als effektiver als Indikatoren erweisen. Weitere Informationen finden Sie unter [Messgeräte &#40;Berichts-Generator und SSRS&#41;](gauges-report-builder-and-ssrs.md).
 
 
-##  <a name="ChoosingIndicatorTypes"></a> Auswählen des zu verwendenden Indikatortyps
+##  <a name="choosing-the-indicator-type-to-use"></a><a name="ChoosingIndicatorTypes"></a>Auswählen des zu verwendenden Indikator Typs
  Der richtige Indikatorsatz ist entscheidend, wenn es darum geht, die Bedeutung von Daten direkt zu vermitteln, unabhängig davon, ob die Daten sich in einer Detailzeile, Zeilen- oder Spaltengruppe in einer Tabelle oder Matrix befinden oder eigenständig im Hauptteil eines Berichts oder in einem Dashboard angezeigt werden. Die integrierten Indikatorsätze verfügen mindestens über drei Symbole. Die Symbole können hinsichtlich Form, Farbe oder beider Kriterien variieren. Jedes Symbol vermittelt einen anderen Datenzustand.
 
  In der folgenden Tabelle werden die integrierten Indikatorsätze aufgeführt und einige allgemeine Verwendungsmöglichkeiten beschrieben.
@@ -77,7 +76,7 @@ ms.locfileid: "78176830"
  Nachdem Sie einen Indikatorsatz ausgewählt haben, können Sie die Darstellung der einzelnen Indikatorsymbole des Satzes anpassen, indem Sie die Eigenschaften in den Dialogfeldern für Indikatoren oder im Eigenschaftenbereich festlegen. Sie können Indikatoren mit den integrierten Farben, Symbolen und Größen oder Ausdrücken konfigurieren.
 
 
-##  <a name="CustomizingIndicators"></a> Anpassen von Indikatoren
+##  <a name="customizing-indicators"></a><a name="CustomizingIndicators"></a>Anpassen von Indikatoren
  Indikatoren können beliebig an Ihre Anforderungen angepasst werden. Sie können die Indikatorsätze sowie einzelne Indikatorsymbole innerhalb eines Satzes auf folgende Weise ändern:
 
 -   Ändern Sie die Farben der Indikatorsymbole. Möglicherweise soll das Farbschema eines Indikators einfarbig sein, oder Sie möchten andere Farben als die Standardfarben verwenden.
@@ -93,7 +92,7 @@ ms.locfileid: "78176830"
  Weitere Informationen finden Sie unter [Ändern von Indikatorsymbolen und Indikatorsätzen &#40;Berichts-Generator und SSRS&#41;](change-indicator-icons-and-indicator-sets-report-builder-and-ssrs.md).
 
 
-##  <a name="UsingIndicatorsInTablesMatrices"></a> Verwenden von Indikatoren in Tabellen und Matrizen
+##  <a name="using-indicators-in-tables-and-matrices"></a><a name="UsingIndicatorsInTablesMatrices"></a>Verwenden von Indikatoren in Tabellen und Matrizen
  Aufgrund der einfachen Formen von Indikatoren eignen sie sich perfekt für die Verwendung in Tabellen und Matrizen. Indikatoren sind auch dann wirkungsvoll, wenn sie klein sind. Deshalb sind sie in Detail- oder Gruppenzeilen von Berichten äußerst nützlich.
 
  Das folgende Diagramm enthält einen Bericht mit einer Tabelle, in der der Richtungsindikatorsatz **Vier Pfeile (farbig)** verwendet wird, um Verkäufe anzugeben. Die Indikatorsymbole im Bericht werden so konfiguriert, dass Blau in verschiedenen Schattierungen anstelle der Standardfarben Rot, Gelb und Grün verwendet wird.
@@ -113,7 +112,7 @@ ms.locfileid: "78176830"
  Indikatoren verwenden nur einen einzelnen Wert. Wenn Sie mehrere Datenwerte anzeigen müssen, verwenden Sie eine Sparkline oder einen Datenbalken anstelle eines Indikators. Sie können mehrere Datenwerte darstellen, sind jedoch ebenfalls einfach aufgebaut, bei kleiner Größe leicht zu verstehen und gut geeignet für Tabellen und Matrizen. Weitere Informationen finden Sie unter [Sparklines und Datenbalken &#40;Berichts-Generator und SSRS&#41;](sparklines-and-data-bars-report-builder-and-ssrs.md).
 
 
-##  <a name="SizingIndicatators"></a> Anpassen der Größe von Indikatoren für eine maximale visuelle Wirkung
+##  <a name="sizing-indicators-to-maximize-visual-impact"></a><a name="SizingIndicatators"></a>Größen Anpassungs Indikatoren zum Maximieren der visuellen Auswirkung
  Zusätzlich zu Farbe, Richtung und Form können Sie die Größe anpassen und damit die visuelle Wirkung von Indikatoren maximieren. Angenommen, ein Bericht verwendet Indikatoren, um die Zufriedenheit der Kunden mit unterschiedlichen Fahrradmodellen anzuzeigen. Das vom Indikator verwendete Symbol kann so konfiguriert werden, dass es je nach der Zufriedenheit der Kunden eine entsprechende Größe annimmt. Je größer die Zufriedenheit, desto größer ist auch das Symbol, das im Bericht angezeigt wird. Im folgenden Bild wird ein Bericht zu Fahrradverkäufen angezeigt, wobei die Größe des Symbols jeweils den Umsatz darstellt.
 
  Die Größe der Sterne legen Sie mit Ausdrücken dynamisch fest. Dabei dienen die vom Indikator verwendeten Feldwerte als Grundlage. Weitere Informationen finden Sie unter [Angeben der Größe eines Indikators mithilfe eines Ausdrucks &#40;Berichts-Generator und SSRS&#41;](specify-the-size-of-an-indicator-using-an-expression-report-builder-and-ssrs.md).
@@ -121,7 +120,7 @@ ms.locfileid: "78176830"
  Weitere Informationen zum Schreiben und Verwenden von Ausdrücken finden Sie unter [Ausdrücke &#40;Berichts-Generator und SSRS&#41;](expressions-report-builder-and-ssrs.md).
 
 
-##  <a name="IncludingIndicatorsInGauges"></a> Aufnehmen von Indikatoren und Messgeräten in Messgerätbereiche
+##  <a name="including-indicators-and-gauges-in-gauge-panels"></a><a name="IncludingIndicatorsInGauges"></a>Einschließen von Indikatoren und Messgeräten in Mess Gerät Bereiche
  Indikatoren werden immer in einem Messgerätbereich positioniert. Der Messgerätbereich ist ein Container auf der obersten Ebene, der ein oder mehrere Messgeräte und Statusindikatoren enthalten kann. Der Messgerätbereich kann untergeordnete oder angrenzende Messgeräte oder Indikatoren enthalten. Wenn Sie einen Indikator als untergeordnetes Element eines Messgeräts verwenden, können Sie die Daten darüber hinaus visualisieren, indem Sie den Status des im Messgerät angezeigten Datenwerts anzeigen. Ein Indikator innerhalb eines Messgeräts kann z. B. einen grünen Kreis anzeigen, um darauf hinzuweisen, dass sich der Wert im Messgerät innerhalb der oberen 33 Prozent des Wertbereichs befindet. Platzieren Sie ein Messgerät und einen Indikator nebeneinander, um die Daten unterschiedlich darzustellen. In jedem Fall können der Indikator und das Messgerät die gleichen oder unterschiedliche Datenfelder verwenden.
 
  Das folgende Diagramm zeigt einen Indikator neben einem Messgerät und innerhalb eines Messgeräts.
@@ -133,7 +132,7 @@ ms.locfileid: "78176830"
  Weitere Informationen zum Verwenden von Messgeräten finden Sie unter [Messgeräte &#40;Berichts-Generator und SSRS&#41;](gauges-report-builder-and-ssrs.md).
 
 
-##  <a name="SequenceIndicatorStates"></a> Sequenz der Indikatorstatus
+##  <a name="sequence-of-indicator-states"></a><a name="SequenceIndicatorStates"></a>Sequenz von Indikator Zuständen
  Die Sequenz der Indikatorstatus auf der Registerkarte **Wert und Status** im Dialogfeld **Indikatoreigenschaften** beeinflusst, welches Indikatorsymbol für einen Datenwert angezeigt wird, wenn die Start- und Endwerte der Indikatorstatus sich überschneiden.
 
  Das kann unabhängig davon vorkommen, ob Sie die prozentuale oder die numerische Maßeinheit für den Status verwenden. Die Wahrscheinlichkeit ist größer, wenn Sie die numerische Maßeinheit verwenden, da Sie für dafür spezifische Werte bereitstellen. Es ist auch wahrscheinlicher, wenn Sie Berichtsdatenwerte runden, da die Werte dadurch in der Regel weniger diskret werden.
@@ -185,7 +184,7 @@ ms.locfileid: "78176830"
  Zusammenfassend lässt sich also sagen, dass die Auswertung oben in der Indikatorstatusliste startet und der Bericht das Indikatorsymbol anzeigt, das dem ersten Indikatorstatus zugeordnet ist, zu dessen Wertebereich die Daten passen. Wenn Sie die Sequenz der Indikatorstatus ändern, können Sie daher die Visualisierung von Datenwerten beeinflussen.
 
 
-##  <a name="HowTo"></a> Themen zur Vorgehensweise
+##  <a name="how-to-topics"></a><a name="HowTo"></a>Themen zur Vorgehensweise
  Dieser Abschnitt enthält Verfahren, in denen das Hinzufügen, Ändern und Löschen von Indikatoren, das Konfigurieren und Anpassen von Indikatoren und die Verwendung von Indikatoren in Messgeräten erläutert werden.
 
 -   [Hinzufügen oder Löschen eines Indikators &#40;Berichts-Generator und SSRS&#41;](add-or-delete-an-indicator-report-builder-and-ssrs.md)

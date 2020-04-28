@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4a48b400196a77a9c59219bc28cdff496229ae7e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175559"
 ---
 # <a name="tools-and-applications-used-in-analysis-services"></a>In Analysis Services verwendete Tools und Anwendungen
@@ -24,8 +24,7 @@ ms.locfileid: "78175559"
  Tabellarische und mehrdimensionale Modelle werden aus Projektvorlagen in einer in der Visual Studio-Shell erstellen Lösung erstellt. Die Projektvorlage stellt die Entwürfe für das Erstellen von Modellen, Cubes, Dimensionen und Rollen bereit, aus denen Analysis Services-Lösung zusammengestellt ist.
 
 ### <a name="download-sql-server-data-tools-for-business-intelligence-ssdt-bi"></a>Herunterladen der SQL Server Data Tools für Business Intelligence (SSDT-BI)
- 
-  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] für Business Intelligence (SSDT-BI), das zuvor als Business Intelligence Development Studio (BIDS) bezeichnet wurde, wird zum Erstellen von Analysis Services-Modellen, Reporting Services-Berichten und Integration Services-Paketen verwendet. Sie können SSDT-BI von folgenden Orten herunterladen:
+ [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] für Business Intelligence (SSDT-BI), das zuvor als Business Intelligence Development Studio (BIDS) bezeichnet wurde, wird zum Erstellen von Analysis Services-Modellen, Reporting Services-Berichten und Integration Services-Paketen verwendet. Sie können SSDT-BI von folgenden Orten herunterladen:
 
 -   [Herunterladen von SSDT-BI für Visual Studio 2013](https://go.microsoft.com/fwlink/p/?LinkId=396526)
 
@@ -50,4 +49,4 @@ ms.locfileid: "78175559"
  Mithilfe von PowerShell-Befehlen können Sie viele Verwaltungsaufgaben durchführen. Weitere Informationen finden Sie unter [Analysis Services PowerShell](analysis-services-powershell.md) .
 
 ### <a name="community-and-third-party-tools"></a>Community- und Drittanbietertools
- Community-Codebeispiele finden Sie auf der [Analysis Services-Codeplex-Seite](https://sqlsrvanalysissrvcs.codeplex.com/) . [Foren](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlanalysisservices) können hilfreich sein, wenn Sie Empfehlungen für Drittanbieter Tools suchen, die Analysis Services unterstützen.
+ Community-Codebeispiele finden Sie auf der [Analysis Services-Codeplex-Seite](https://sqlsrvanalysissrvcs.codeplex.com/) . [Foren](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlanalysisservices) können hilfreich sein, wenn Sie Empfehlungen für Drittanbietertools suchen, die Analysis Services unterstützen.

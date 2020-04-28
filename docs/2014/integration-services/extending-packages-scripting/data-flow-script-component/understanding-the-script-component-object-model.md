@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89e2e5d774abf2a6bee712ec7a1479107d3d1c36
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176199"
 ---
 # <a name="understanding-the-script-component-object-model"></a>Grundlegendes zum Skript-Komponentenobjektmodell
@@ -158,8 +158,7 @@ public override void PreExecute()
 #### <a name="what-the-componentwrapper-project-item-provides"></a>Bereitstellungen durch das ‚ComponentWrapper’-Projektelement
  Das ComponentWrapper-Projektelement enthält eine Klasse mit dem Namen `UserComponent`, die von <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponent> abgeleitet wird. Die `ScriptMain`-Klasse, in die Sie Ihren benutzerdefinierten Code schreiben, wird wiederum von `UserComponent` abgeleitet. Die `UserComponent`-Klasse enthält die folgenden Methoden:
 
--   Eine überschriebene Implementierung der `PrimeOutput`-Methode. Diese Methode wird von der Datenfluss-Engine zur Laufzeit vor `ProcessInput` (und nur einmal) aufgerufen. 
-  `PrimeOutput` übergibt die Verarbeitung an die `CreateNewOutputRows`-Methode. Wenn die Komponente eine Quelle ist (d. h. die Komponente weist keine Eingaben auf), ruft `PrimeOutput` anschließend die überschreibbare `FinishOutputs`-Methode und die private `MarkOutputsAsFinished`-Methode auf. Die `MarkOutputsAsFinished`-Methode ruft beim letzten Ausgabepuffer `SetEndOfRowset` auf.
+-   Eine überschriebene Implementierung der `PrimeOutput`-Methode. Diese Methode wird von der Datenfluss-Engine zur Laufzeit vor `ProcessInput` (und nur einmal) aufgerufen. `PrimeOutput` übergibt die Verarbeitung an die `CreateNewOutputRows`-Methode. Wenn die Komponente eine Quelle ist (d. h. die Komponente weist keine Eingaben auf), ruft `PrimeOutput` anschließend die überschreibbare `FinishOutputs`-Methode und die private `MarkOutputsAsFinished`-Methode auf. Die `MarkOutputsAsFinished`-Methode ruft beim letzten Ausgabepuffer `SetEndOfRowset` auf.
 
 -   Eine überschreibbare Implementierung der `CreateNewOutputRows`-Methode. Der Standardimplementierung ist leer. Dies ist die Methode, die Sie normalerweise überschreiben, um den benutzerdefinierten Datenverarbeitungscode zu schreiben.
 

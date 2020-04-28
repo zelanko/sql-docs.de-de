@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3b83ce9b00ead21d2f067f95ece0234d92682991
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175978"
 ---
 # <a name="data-collection"></a>Datensammlung
@@ -36,8 +36,7 @@ ms.locfileid: "78175978"
 ## <a name="data-collector-concepts"></a>Datensammlerkonzepte
  Der Datensammler ist in den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Agent und in [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]integriert und verwendet beides intensiv. Bevor Sie mit dem Datensammler arbeiten, sollten Sie Kenntnisse über bestimmte Konzepte hinsichtlich dieser beiden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Komponenten haben.
 
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent wird zum Planen und Ausführen von Sammlungsaufträgen verwendet. Sie sollten mit den folgenden Konzepten vertraut sein:
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Agent wird zum Planen und Ausführen von Sammlungsaufträgen verwendet. Sie sollten mit den folgenden Konzepten vertraut sein:
 
 -   Auftrag
 
@@ -51,13 +50,11 @@ ms.locfileid: "78175978"
 
  Weitere Informationen finden Sie unter [Automatisierte Administrationstasks &#40;SQL Server Agent&#41;](../../ssms/agent/sql-server-agent.md).
 
- 
-  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) wird verwendet, um Pakete auszuführen, die Daten von einzelnen Datenanbietern auflisten. Sie sollten mit den folgenden Tools und Konzepten von [!INCLUDE[ssIS](../../includes/ssis-md.md)] vertraut sein:
+ [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) wird verwendet, um Pakete auszuführen, die Daten von einzelnen Datenanbietern auflisten. Sie sollten mit den folgenden Tools und Konzepten von [!INCLUDE[ssIS](../../includes/ssis-md.md)] vertraut sein:
 
--   [!INCLUDE[ssIS](../../includes/ssis-md.md)]Paketen
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)] Paket
 
--   
-  [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Paketkonfiguration
+-   [!INCLUDE[ssIS](../../includes/ssis-md.md)]-Paketkonfiguration
 
  Weitere Informationen finden Sie unter [Integration Services-Pakete &#40;SSIS&#41;](../../integration-services/integration-services-ssis-packages.md).
 

@@ -17,15 +17,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3e67d718c928785d85712eb5307130af22570c26
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173909"
 ---
 # <a name="reporting-services-ssrs"></a>Reporting Services (SSRS)
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] bietet eine umfassende Palette an gebrauchsfertigen Tools und Diensten, die Sie beim Erstellen, bereitstellen und Verwalten von Berichten für Ihre Organisation unterstützen. 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] umfasst Programmierfunktionen, mit denen die Berichtsfunktionen erweitert und angepasst werden können.
+  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] bietet eine umfassende Palette an gebrauchsfertigen Tools und Diensten, die Sie beim Erstellen, bereitstellen und Verwalten von Berichten für Ihre Organisation unterstützen. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] umfasst Programmierfunktionen, mit denen die Berichtsfunktionen erweitert und angepasst werden können.
 
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]ist eine serverbasierte Berichterstattungs Plattform, die umfassende Berichterstattungs Funktionen für eine Vielzahl von Datenquellen bereitstellt. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]enthält einen umfassenden Satz von Tools zum Erstellen, verwalten und Übermitteln von Berichten und APIs, mit denen Entwickler die Daten-und Berichts Verarbeitung in benutzerdefinierte Anwendungen integrieren oder erweitern können. [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]Tools funktionieren in der [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] -Umgebung und sind vollständig [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in-Tools und-Komponenten integriert.
 
@@ -35,37 +34,37 @@ ms.locfileid: "78173909"
 
  Weitere Informationen zu anderen [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] -Komponenten, -Tools und -Ressourcen finden Sie in der [SQL Server-Onlinedokumentation](../2014-toc/index.yml).
 
- Symbol " **Inhalt nach Bereichs** ![Ordner](media/hlp-16folder.gif "Ordner (Symbol)") Durchsuchen" [Reporting Services Berichts Server](../../2014/reporting-services/reporting-services-report-server.md)
+ Symbol " **Inhalt nach Bereichs** ![Ordner](media/hlp-16folder.gif "Ordnersymbol") Durchsuchen" [Reporting Services Berichts Server](../../2014/reporting-services/reporting-services-report-server.md)
 
- ![Ordnersymbol](media/hlp-16folder.gif "Ordner (Symbol)") [Reporting Services Berichte &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)
+ ![Ordnersymbol](media/hlp-16folder.gif "Ordnersymbol") [Reporting Services Berichte &#40;SSRS&#41;](reports/reporting-services-reports-ssrs.md)
 
- ![Ordnersymbol](media/hlp-16folder.gif "Ordner (Symbol)") [Berichtsdaten &#40;SSRS&#41;](report-data/report-data-ssrs.md)
+ ![Ordnersymbol](media/hlp-16folder.gif "Ordnersymbol") [Berichtsdaten &#40;SSRS&#41;](report-data/report-data-ssrs.md)
 
- ![Ordnersymbol](media/hlp-16folder.gif "Ordner (Symbol)") [Berichts Parameter &#40;Berichts-Generator und Berichts-Designer&#41;](report-design/report-parameters-report-builder-and-report-designer.md)
+ ![Ordnersymbol](media/hlp-16folder.gif "Ordnersymbol") [Berichts Parameter &#40;Berichts-Generator und Berichts-Designer&#41;](report-design/report-parameters-report-builder-and-report-designer.md)
 
- ![Ordnersymbol](media/hlp-16folder.gif "Ordner (Symbol)") [Berichts Teile in Berichts-Designer &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md)
+ ![Ordnersymbol](media/hlp-16folder.gif "Ordnersymbol") [Berichts Teile in Berichts-Designer &#40;SSRS&#41;](report-design/report-parts-in-report-designer-ssrs.md)
 
- [Zeitpläne](subscriptions/schedules.md) für ![Ordnersymbol](media/hlp-16folder.gif "Ordner (Symbol)")
+ [Zeitpläne](subscriptions/schedules.md) für ![Ordnersymbol](media/hlp-16folder.gif "Ordnersymbol")
 
- ![Ordnersymbol](media/hlp-16folder.gif "Ordner (Symbol)") [Abonnements und Übermittlungs &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)
+ ![Ordnersymbol](media/hlp-16folder.gif "Ordnersymbol") [Abonnements und Übermittlungs &#40;Reporting Services&#41;](subscriptions/subscriptions-and-delivery-reporting-services.md)
 
- ![Ordnersymbol](media/hlp-16folder.gif "Ordner (Symbol)") [Reporting Services Daten Warnungen](../ssms/agent/alerts.md)
+ ![Ordnersymbol](media/hlp-16folder.gif "Ordnersymbol") [Reporting Services Daten Warnungen](../ssms/agent/alerts.md)
 
- ![Ordnersymbol](media/hlp-16folder.gif "Ordner (Symbol)") [Power View](https://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx)
+ ![Ordnersymbol](media/hlp-16folder.gif "Ordnersymbol") [Power View](https://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx)
 
- ![Ordnersymbol](media/hlp-16folder.gif "Ordner (Symbol)") [Reporting Services Sicherheit und Schutz](security/reporting-services-security-and-protection.md)
+ ![Ordnersymbol](media/hlp-16folder.gif "Ordnersymbol") [Reporting Services Sicherheit und Schutz](security/reporting-services-security-and-protection.md)
 
- ![Ordnersymbol](media/hlp-16folder.gif "Ordner (Symbol)") [URL-Zugriff &#40;SSRS&#41;](url-access-ssrs.md)
+ ![Ordnersymbol](media/hlp-16folder.gif "Ordnersymbol") [URL-Zugriff &#40;SSRS&#41;](url-access-ssrs.md)
 
- ![Ordnersymbol](media/hlp-16folder.gif "Ordner (Symbol)") [Erweiterungen &#40;SSRS&#41;](extensions-ssrs.md)
+ ![Ordnersymbol](media/hlp-16folder.gif "Ordnersymbol") [Erweiterungen &#40;SSRS&#41;](extensions-ssrs.md)
 
- ![Ordnersymbol](media/hlp-16folder.gif "Ordner (Symbol)") [Reporting Services Tools](tools/reporting-services-tools.md)
+ ![Ordnersymbol](media/hlp-16folder.gif "Ordnersymbol") [Reporting Services Tools](tools/reporting-services-tools.md)
 
- ![](media/hlp-16folder.gif "Ordner (Symbol)") [Fehler-und Ereignis Referenz des Ordner Symbols &#40;Reporting Services&#41;](troubleshooting/errors-and-events-reference-reporting-services.md)
+ ![Folder icon](media/hlp-16folder.gif "Ordnersymbol") [Fehler-und Ereignis Referenz des Ordner Symbols &#40;Reporting Services&#41;](troubleshooting/errors-and-events-reference-reporting-services.md)
 
- ![Ordnersymbol](media/hlp-16folder.gif "Ordner (Symbol)") [Funktionsreferenz &#40;Reporting Services&#41;](feature-reference-reporting-services.md)
+ ![Ordnersymbol](media/hlp-16folder.gif "Ordnersymbol") [Funktionsreferenz &#40;Reporting Services&#41;](feature-reference-reporting-services.md)
 
 ## <a name="see-also"></a>Weitere Informationen
- [SQL Server-Ressourcen Center](https://go.microsoft.com/fwlink/?linkID=219676)
+ [SQL Server-Ressourcencenter](https://go.microsoft.com/fwlink/?linkID=219676)
 
 

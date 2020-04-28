@@ -23,10 +23,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d779c02d895088cff2ae59aff6722acd8db79adf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76971392"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Erteilen von Berechtigungen für einen Berichtsserver im einheitlichen Modus
@@ -70,10 +70,10 @@ ms.locfileid: "76971392"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Vordefinierte Rollen](role-definitions-predefined-roles.md)   
- [Erteilen von Berechtigungen für Berichtsserverelemente auf einer SharePoint-Website](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
+ [Erteilen von Berechtigungen für Berichts Server Elemente auf einer SharePoint-Website](granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Authentifizierung mit dem Berichtsserver](authentication-with-the-report-server.md)   
  (Create-and-manage-role-assignments.MD)   
- [Sicherheit und Schutz für Reporting Services](reporting-services-security-and-protection.md)   
- [Berichtsserver Content Management (einheitlicher SSRS-Modus)](../report-server/report-server-content-management-ssrs-native-mode.md)  
+ [Sicherheit und Schutz Reporting Services](reporting-services-security-and-protection.md)   
+ [Verwalten von Berichtsserverinhalten &#40;einheitlicher SSRS-Modus&#41;](../report-server/report-server-content-management-ssrs-native-mode.md)  
   
   

@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bc23747a13ee2e5b126b7e57ba7121878d05643d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176470"
 ---
 # <a name="precedence-constraints"></a>Rangfolgeneinschränkungen
@@ -90,7 +90,7 @@ ms.locfileid: "78176470"
 
 -   [Festlegen des Werts einer Rangfolgeneinschränkung mithilfe des Kontextmenüs](../set-the-value-of-a-precedence-constraint-by-using-the-shortcut-menu.md)
 
--   [Verbinden von Tasks und Containern mithilfe einer Standardrangfolgen-Einschränkung](../connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)
+-   [Verbinden von Tasks und Containern mithilfe einer Standardrangfolgeneinschränkung](../connect-tasks-and-containers-by-using-a-default-precedence-constraint.md)
 
      Dieses Thema enthält Informationen dazu, wie Sie das Standardverhalten für Rangfolgeneinschränkungen festlegen und ausführbare Dateien mithilfe der Standardrangfolgeneinschränkungen verbinden.
 

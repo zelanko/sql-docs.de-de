@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 61faaa7854aa362e7d269cf3f00911470126f42c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176840"
 ---
 # <a name="full-text-search"></a>Volltextsuche
@@ -27,12 +27,12 @@ ms.locfileid: "78176840"
 > [!NOTE]
 >  Die Volltextsuche ist eine optionale Komponente der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenbank-Engine. Weitere Informationen finden Sie unter [Installieren von SQL Server 2014](../../database-engine/install-windows/install-sql-server.md).
 
-##  <a name="benefits"></a>Was kann ich mit der voll Text Suche tun?
+##  <a name="what-can-i-do-with-full-text-search"></a><a name="benefits"></a>Was kann ich mit der voll Text Suche tun?
  Die Volltextsuche gilt für eine Vielzahl von Geschäftsszenarios, z. b. e-Business-suchen nach Elementen auf einer Website. Justiz Unternehmen: Suchen nach Fall Verläufen in einem juristischen Datenrepository; oder Personalabteilung: übereinstimmende Auftrags Beschreibungen mit gespeicherten fort Läufen. Die grundlegenden Administrator- und Entwicklungsaufgaben der Volltextsuche bleiben unabhängig vom Geschäftsszenario unverändert. In einem bestimmten Geschäftsszenario können Volltextindex und Abfragen jedoch verfeinert werden, um die Geschäftsziele zu erreichen. In einem e-Business kann das Maximieren der Leistung beispielsweise wichtiger als das Ordnen von Ergebnissen, die Rückrufgenauigkeit (die Anzahl der tatsächlich von einer Volltextabfrage zurückgegebenen vorhandenen Übereinstimmungen) oder die Unterstützung mehrerer Sprachen sein. Für eine Anwaltskanzlei hingegen kann die Rückgabe jedes möglichen Treffers (der *Gesamtrückruf* von Informationen) der wichtigste Aspekt sein.
 
  [In diesem Thema](#top)
 
-###  <a name="queries"></a>Voll Text Such Abfragen
+###  <a name="full-text-search-queries"></a><a name="queries"></a>Voll Text Such Abfragen
  Nachdem einem Volltextindex Spalten hinzugefügt wurden, können Benutzer und Anwendungen Volltextabfragen zum Text in diesen Spalten ausführen. Bei diesen Abfragen kann nach Folgendem gesucht werden:
 
 -   Mindestens ein Wort oder Ausdruck (*einfacher Begriff*)
@@ -74,12 +74,12 @@ ms.locfileid: "78176840"
 
  [In diesem Thema](#top)
 
-###  <a name="like"></a>Vergleichen von like mit der voll Text Suche
- Im Gegensatz zur Volltextsuche funktioniert das [like](/sql/t-sql/language-elements/like-transact-sql) [!INCLUDE[tsql](../../../includes/tsql-md.md)] -Prädikat nur bei Zeichen Mustern. Darüber hinaus können Sie mit dem LIKE-Prädikat keine formatierten Binärdaten abfragen. Eine LIKE-Abfrage in umfangreichen unstrukturierten Textdaten ist sehr viel langsamer als eine entsprechende Volltextabfrage in denselben Daten. Eine LIKE-Abfrage für Millionen von Zeilen von Textdaten kann Minuten in Anspruch nehmen; eine Volltextabfrage kann dagegen in Sekunden oder weniger für dieselben Daten ein Ergebnis liefern, je nach Anzahl der zurückgegebenen Zeilen.
+###  <a name="comparing-like-to-full-text-search"></a><a name="like"></a>Vergleichen von like mit der voll Text Suche
+ Im Gegensatz zur Volltextsuche verarbeitet das [LIKE](/sql/t-sql/language-elements/like-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] -Prädikat ausschließlich Zeichenmuster. Darüber hinaus können Sie mit dem LIKE-Prädikat keine formatierten Binärdaten abfragen. Eine LIKE-Abfrage in umfangreichen unstrukturierten Textdaten ist sehr viel langsamer als eine entsprechende Volltextabfrage in denselben Daten. Eine LIKE-Abfrage für Millionen von Zeilen von Textdaten kann Minuten in Anspruch nehmen; eine Volltextabfrage kann dagegen in Sekunden oder weniger für dieselben Daten ein Ergebnis liefern, je nach Anzahl der zurückgegebenen Zeilen.
 
  [In diesem Thema](#top)
 
-##  <a name="architecture"></a>Komponenten und Architektur der voll Text Suche
+##  <a name="components-and-architecture-of-full-text-search"></a><a name="architecture"></a>Komponenten und Architektur der voll Text Suche
  Die Architektur der Volltextsuche besteht aus den folgenden Prozessen:
 
 -   Dem [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Prozess (sqlservr.exe)
@@ -94,16 +94,16 @@ ms.locfileid: "78176840"
 
  [In diesem Thema](#top)
 
-###  <a name="sqlprocess"></a>SQL Server Prozess
+###  <a name="sql-server-process"></a><a name="sqlprocess"></a>SQL Server Prozess
  Für den [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Prozess werden die folgenden Komponenten für die Volltextsuche verwendet:
 
--   **Benutzer Tabellen.** Diese Tabellen enthalten die Daten, für die ein Volltextindex erstellt werden soll.
+-   **Benutzertabellen** Diese Tabellen enthalten die Daten, für die ein Volltextindex erstellt werden soll.
 
--   **Volltext-Gatherer.** Der Volltext-Gatherer verwendet die Volltextdurchforstungsthreads. Er ist für das Planen und Antreiben der Auffüllung von Volltextindizes sowie für das Überwachen von Volltextkatalogen verantwortlich.
+-   **Volltext-Gatherer** Der Volltext-Gatherer verwendet die Volltextdurchforstungsthreads. Er ist für das Planen und Antreiben der Auffüllung von Volltextindizes sowie für das Überwachen von Volltextkatalogen verantwortlich.
 
 -   **Thesaurusdateien.** Diese Dateien enthalten Synonyme von Suchbegriffen. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche](configure-and-manage-thesaurus-files-for-full-text-search.md).
 
--   **STOPLIST-Objekte.** Stopplistenobjekte enthalten eine Liste häufig auftretender Wörter, die nicht nützlich für die Suche sind. Weitere Informationen finden sie unter [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).
+-   **Stopplistenobjekte** Stopplistenobjekte enthalten eine Liste häufig auftretender Wörter, die nicht nützlich für die Suche sind. Weitere Informationen finden sie unter [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).
 
 -   **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Abfrage Prozessor.** Der Abfrageprozessor kompiliert SQL-Abfragen und führt diese aus. Wenn eine SQL-Abfrage eine Volltextsuchabfrage enthält, wird die Abfrage sowohl während der Kompilierung als auch während der Ausführung an die Volltextsuch-Engine gesendet. Das Abfrageergebnis wird mit dem Volltextindex verglichen.
 
@@ -115,7 +115,7 @@ ms.locfileid: "78176840"
 
  [In diesem Thema](#top)
 
-###  <a name="fdhostprocess"></a>Filterdaemon-Host Prozess
+###  <a name="filter-daemon-host-process"></a><a name="fdhostprocess"></a>Filterdaemon-Host Prozess
  Der Filterdaemonhost ist ein Prozess, der von der Volltextsuch-Engine gestartet wird. Er führt die folgenden Komponenten der Volltextsuche aus, die für den Zugriff auf, die Filterung von und die Wörtertrennung für Daten aus Tabellen sowie für die Wörtertrennung und Wortstammerkennung für Abfrageeingaben verantwortlich sind.
 
  Der Filterdaemonhost umfasst die folgenden Komponenten:
@@ -124,14 +124,14 @@ ms.locfileid: "78176840"
 
 -   **Filter.** Bei einigen Datentypen ist eine Filterung erforderlich, bevor die Daten in einem Dokument volltextindiziert werden können. Dazu zählen Daten in `varbinary`-, `varbinary(max)`-, `image`- oder `xml`-Spalten. Welcher Filter für ein bestimmtes Dokument verwendet wird, ist vom Dokumenttyp abhängig. Beispielsweise werden für Microsoft Word-Dokumente (DOC), Microsoft Excel-Dokumente (XLS) und XML-Dokumente unterschiedliche Filter verwendet. Anschließend extrahiert der Filter Textabschnitte aus dem Dokument. Dabei werden eingebettete Formatierungen entfernt, der Text und ggf. Informationen über seine Position werden beibehalten. Das Ergebnis ist ein Datenstrom von Textinformationen. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Filtern für die Suche](configure-and-manage-filters-for-search.md).
 
--   **Wörter Trennungen und Wort Stamm Erkennungen.** Die Wörtertrennung ist eine sprachspezifische Komponente, die anhand von lexikalischen Regeln einer bestimmten Sprache Wortgrenzen erkennt (*Wörtertrennung*). Jede Wörtertrennung ist einer sprachspezifischen Wortstammerkennungskomponente zugeordnet, die Verben konjugiert und flektierende Erweiterungen vornimmt. Bei der Indizierung verwendet der Filterdaemonhost die Wörtertrennung und die Wortstammerkennung, um eine linguistische Analyse der Textdaten aus einer angegebenen Tabellenspalte durchzuführen. Die Sprache, die einer Tabellenspalte im Volltextindex zugeordnet ist, bestimmt, welche Wörtertrennung und Wortstammerkennung zum Indizieren der Spalte verwendet wird. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](configure-and-manage-word-breakers-and-stemmers-for-search.md).
+-   **Wörtertrennung und Wortstammerkennung** Die Wörtertrennung ist eine sprachspezifische Komponente, die anhand von lexikalischen Regeln einer bestimmten Sprache Wortgrenzen erkennt (*Wörtertrennung*). Jede Wörtertrennung ist einer sprachspezifischen Wortstammerkennungskomponente zugeordnet, die Verben konjugiert und flektierende Erweiterungen vornimmt. Bei der Indizierung verwendet der Filterdaemonhost die Wörtertrennung und die Wortstammerkennung, um eine linguistische Analyse der Textdaten aus einer angegebenen Tabellenspalte durchzuführen. Die Sprache, die einer Tabellenspalte im Volltextindex zugeordnet ist, bestimmt, welche Wörtertrennung und Wortstammerkennung zum Indizieren der Spalte verwendet wird. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](configure-and-manage-word-breakers-and-stemmers-for-search.md).
 
  [In diesem Thema](#top)
 
-##  <a name="processing"></a>Verarbeitung der voll Text Suche
+##  <a name="full-text-search-processing"></a><a name="processing"></a>Verarbeitung der voll Text Suche
  Die Volltextsuche beruht auf der Volltext-Engine. Die Volltext-Engine erfüllt zwei Funktionen: Unterstützung der Indizierung und Unterstützung von Abfragen.
 
-###  <a name="indexing"></a>Prozess der voll Text Indizierung
+###  <a name="full-text-indexing-process"></a><a name="indexing"></a>Prozess der voll Text Indizierung
  Wenn eine Volltextauffüllung (auch als „Durchforstung“ bezeichnet) initiiert wird, werden von der Volltext-Engine große Batches von Daten in den Arbeitsspeicher geladen, und der Filterdaemonhost wird benachrichtigt. Der Host führt Filterung und Wörtertrennung aus und konvertiert die Daten in invertierte Wortlisten. Die konvertierten Daten werden dann von der Volltextsuche aus den Wortlisten abgerufen, Stoppwörter werden entfernt, und die Wortlisten werden für einen Batch in einem oder mehreren invertierten Indizes gespeichert.
 
  Beim Indizieren von Daten, `varbinary(max)` die `image` in einer-oder-Spalte gespeichert sind, extrahiert der Filter, der die **IFilter** -Schnittstelle implementiert, Text basierend auf dem angegebenen [!INCLUDE[msCoName](../../includes/msconame-md.md)] Dateiformat für diese Daten (z. b. Word). In manchen Fällen erfordern die Filterkomponenten, dass `varbinary(max)`die- `image` oder-Daten in den Ordner "FilterData" geschrieben werden, anstatt in den Arbeitsspeicher verschoben zu werden.
@@ -144,30 +144,29 @@ ms.locfileid: "78176840"
 
  [In diesem Thema](#top)
 
-###  <a name="querying"></a>Prozess der voll Text Abfrage
+###  <a name="full-text-querying-process"></a><a name="querying"></a>Prozess der voll Text Abfrage
  Der Abfrageprozessor übergibt die Volltextteile einer Abfrage zur Verarbeitung an die Volltext-Engine. Die Volltext-Engine führt Worttrennungen sowie optional Thesauruserweiterungen, Wortstammerkennung und Stoppwort-/Füllwortverarbeitung durch. Die Volltextteile der Abfrage werden dann in Form von SQL-Operatoren dargestellt, vorrangig als Streaming-Tabellenwertfunktionen. Während der Abfrageausführung greifen diese Streaming-Tabellenwertfunktionen auf den invertierten Index zu, um die richtigen Ergebnisse abzurufen. Die Ergebnisse werden entweder zu diesem Zeitpunkt an den Client zurückgegeben oder vor der Rückgabe an den Client weiter verarbeitet.
 
  [In diesem Thema](#top)
 
-##  <a name="components"></a>Linguistische Komponenten und Sprachunterstützung in der voll Text Suche
+##  <a name="linguistic-components-and-language-support-in-full-text-search"></a><a name="components"></a>Linguistische Komponenten und Sprachunterstützung in der voll Text Suche
  Die Volltextsuche unterstützt fast 50 verschiedene Sprachen, z. B. Englisch, Spanisch, Chinesisch, Japanisch, Arabisch, Bangla und Hindi. Eine vollständige Liste der unterstützten Volltextsprachen finden Sie unter [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql). Jeder Spalte, die im Volltextindex enthalten ist, ist ein Microsoft Windows-Gebietsschemabezeichner (LCID) zugeordnet, der einer von der Volltextsuche unterstützten Sprache entspricht. Der LCID 1033 entspricht beispielsweise US-Englisch, und der LCID 2057 steht für britisches Englisch. Für jede unterstützte Volltextsprache bietet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] linguistische Komponenten, die die Indizierung und Abfrage von in dieser Sprache gespeicherten Volltextdaten unterstützen.
 
  Sprachspezifische Komponenten umfassen Folgendes:
 
--   **Wörter Trennungen und Wort Stamm Erkennungen.** Die Wörtertrennung erkennt Wortgrenzen anhand der lexikalischen Regeln einer bestimmten Sprache (*Wörtertrennung*). Jeder Wörtertrennung ist eine Wortstammerkennung zugeordnet, die Verben für diese Sprache konjugiert. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](configure-and-manage-word-breakers-and-stemmers-for-search.md).
+-   **Wörtertrennung und Wortstammerkennung** Die Wörtertrennung erkennt Wortgrenzen anhand der lexikalischen Regeln einer bestimmten Sprache (*Wörtertrennung*). Jeder Wörtertrennung ist eine Wortstammerkennung zugeordnet, die Verben für diese Sprache konjugiert. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Wörtertrennungen und Wortstammerkennungen für die Suche](configure-and-manage-word-breakers-and-stemmers-for-search.md).
 
 -   **Stopp Listen.** Eine Systemstoppliste enthält eine Reihe grundlegender Stoppwörter (Füllwörter). Ein *Stoppwort* ist ein Wort, das nicht zur Suche beiträgt und in Volltextabfragen ignoriert wird. Im deutschen Gebietsschema werden beispielsweise Wörter wie "ein", "und", "ist" und "der/die/das" als Stoppwörter betrachtet. In der Regel müssen Sie eine oder mehrere Thesaurusdateien und Stopplisten konfigurieren. Weitere Informationen finden sie unter [Konfigurieren und Verwalten von Stoppwörtern und Stopplisten für Volltextsuche](configure-and-manage-stopwords-and-stoplists-for-full-text-search.md).
 
--   **Thesaurusdateien.** 
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installiert außerdem eine Thesaurusdatei für jede Volltextsprache sowie eine globale Thesaurusdatei. Die installierten Thesaurusdateien sind im Wesentlichen leer, Sie können sie jedoch so bearbeiten, dass sie Synonyme für eine bestimmte Sprache oder Geschäftsszenarien definieren. Indem Sie einen Thesaurus entwickeln, der genau auf Ihre Volltextdaten abgestimmt ist, können Sie den Bereich der Volltextabfragen für diese Daten effektiv erweitern. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche](configure-and-manage-thesaurus-files-for-full-text-search.md).
+-   **Thesaurusdateien.** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installiert außerdem eine Thesaurusdatei für jede Volltextsprache sowie eine globale Thesaurusdatei. Die installierten Thesaurusdateien sind im Wesentlichen leer, Sie können sie jedoch so bearbeiten, dass sie Synonyme für eine bestimmte Sprache oder Geschäftsszenarien definieren. Indem Sie einen Thesaurus entwickeln, der genau auf Ihre Volltextdaten abgestimmt ist, können Sie den Bereich der Volltextabfragen für diese Daten effektiv erweitern. Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Thesaurusdateien für die Volltextsuche](configure-and-manage-thesaurus-files-for-full-text-search.md).
 
--   **Filter (IFilters).**  Die Indizierung eines Dokuments in einer Spalte mit dem Datentyp `varbinary(max)`, `image` oder `xml` erfordert einen Filter für die Ausführung zusätzlicher Verarbeitungsschritte. Der Filter muss für den Dokumenttyp spezifisch sein (DOC, PDF, XLS, XML und so weiter). Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Filtern für die Suche](configure-and-manage-filters-for-search.md).
+-   **Filter (iFilters)**  Die Indizierung eines Dokuments in einer Spalte mit dem Datentyp `varbinary(max)`, `image` oder `xml` erfordert einen Filter für die Ausführung zusätzlicher Verarbeitungsschritte. Der Filter muss für den Dokumenttyp spezifisch sein (DOC, PDF, XLS, XML und so weiter). Weitere Informationen finden Sie unter [Konfigurieren und Verwalten von Filtern für die Suche](configure-and-manage-filters-for-search.md).
 
  Wörtertrennung (und Wortstammerkennung) sowie Filter werden im Filterdaemon-Hostprozess (fdhost.exe) ausgeführt.
 
  [In diesem Thema](#top)
 
-##  <a name="reltasks"></a> Verwandte Aufgaben
+##  <a name="related-tasks"></a><a name="reltasks"></a> Verwandte Aufgaben
 
 -   [Erste Schritte mit der Volltextsuche](get-started-with-full-text-search.md)
 
@@ -213,7 +212,7 @@ ms.locfileid: "78176840"
 
     -   [Wiederherstellen der von der Suche verwendeten Wörtertrennungen auf die vorherige Version](revert-the-word-breakers-used-by-search-to-the-previous-version.md)
 
-    -   [Ändern der für Englisch (USA) und Englisch (Vereinigtes Königreich) verwendeten Wörtertrennung](change-the-word-breaker-used-for-us-english-and-uk-english.md)
+    -   [Ändern der für Englisch (USA) und Englisch (Großbritannien) verwendeten Wörtertrennung](change-the-word-breaker-used-for-us-english-and-uk-english.md)
 
     -   [Anpassen des Verhaltens der Wörtertrennung mit einem Benutzerwörterbuch](customize-the-behavior-of-word-breakers-with-a-custom-dictionary.md)
 
@@ -231,7 +230,7 @@ ms.locfileid: "78176840"
 
  [In diesem Thema](#top)
 
-##  <a name="relcontent"></a> Verwandte Inhalte
+##  <a name="related-content"></a><a name="relcontent"></a> Verwandte Inhalte
 
 -   [DDL, Funktionen, gespeicherte Prozeduren und Sichten für Volltextsuche](../views/views.md)
 

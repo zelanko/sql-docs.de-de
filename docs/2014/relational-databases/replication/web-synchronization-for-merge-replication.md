@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8cf6a58c50922b412b76576ee2a7fd44cdf9e32a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176700"
 ---
 # <a name="web-synchronization-for-merge-replication"></a>Websynchronisierung für die Mergereplikation
@@ -45,9 +45,9 @@ ms.locfileid: "78176700"
 
  Die folgende Abbildung zeigt einige Komponenten der Websynchronisierung für die Mergereplikation.
 
- ![Komponenten und Datenfluss für die Websynchronisierung](media/web-sync01.gif "Komponenten und Datenfluss für Websynchronisierung")
+ ![Komponenten und Datenfluss für die Websynchronisierung](media/web-sync01.gif "Komponenten und Datenfluss für die Websynchronisierung")
 
- Die Websynchronisierung steht nur für Pullabonnements zur Verfügung. Ein Merge-Agent wird deshalb immer auf dem Abonnenten ausgeführt. Dabei kann es sich um den Standard-Merge-Agent, das ActiveX-Steuerelement für den Merge-Agent oder eine Anwendung handeln, die die Synchronisierung über Replikationsverwaltungsobjekte (RMO) bereitstellt. Mit dem **–InternetUrl**-Parameter für den Merge-Agent wird der Standort des Computers mit IIS angegeben.
+ Die Websynchronisierung steht nur für Pullabonnements zur Verfügung. Ein Merge-Agent wird deshalb immer auf dem Abonnenten ausgeführt. Dabei kann es sich um den Standard-Merge-Agent, das ActiveX-Steuerelement für den Merge-Agent oder eine Anwendung handeln, die die Synchronisierung über Replikationsverwaltungsobjekte (RMO) bereitstellt. Verwenden Sie zum Angeben des Speicher Orts des Computers, auf dem IIS ausgeführt wird, den **-internetturl-** Parameter für die Merge-Agent.
 
  Die [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Replikationsüberwachung (Replisapi.dll) ist auf dem Computer mit IIS konfiguriert und verarbeitet die Nachrichten, die vom Verleger und den Abonnenten an den Server gesendet werden. Jeder Knoten in der Topologie verarbeitet den XML-Datenstrom mithilfe der SQL Server-Mergereplikationssynchronisierung (Replrec.dll).
 

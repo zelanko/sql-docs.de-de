@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 04cb8ea2505340cb90221b328c04efc390296c19
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175359"
 ---
 # <a name="using-clustered-columnstore-indexes"></a>Verwenden von gruppierten Columnstore-Indizes
@@ -38,7 +38,7 @@ ms.locfileid: "78175359"
 
 -   [Neuorganisieren eines gruppierten Columnstore-Indexes](#reorganize)
 
-##  <a name="create"></a>Erstellen eines gruppierten columnstore-Index
+##  <a name="create-a-clustered-columnstore-index"></a><a name="create"></a>Erstellen eines gruppierten columnstore-Index
  Um einen gruppierten columnstore--Index zu erstellen, erstellen Sie zuerst eine rowstore-Tabelle als Heap oder gruppierten Index, und verwenden Sie dann den [Create gruppierten columnstore-Index &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql) -Anweisung, um die Tabelle in einen gruppierten columnstore--Index zu konvertieren. Wenn der gruppierte Columnstore-Index denselben Namen erhalten soll wie der gruppierte Index, verwenden Sie die Option DROP_EXISTING.
 
  In diesem Beispiel wird eine Tabelle als Heap erstellt und anschließend in einen gruppierten Columnstore-Index mit dem Namen cci_Simple konvertiert. Dadurch wird der Speicher für die gesamte Tabelle von rowstore in columnstore geändert.
@@ -56,10 +56,10 @@ GO
 
  Weitere Beispiele finden Sie im Abschnitt "Beispiele" unter [CREATE CLUSTERED columnstore Index &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql).
 
-##  <a name="drop"></a>Löschen eines gruppierten columnstore-Index
+##  <a name="drop-a-clustered-columnstore-index"></a><a name="drop"></a>Löschen eines gruppierten columnstore-Index
  Verwenden Sie die [Drop Index &#40;Transact-SQL](/sql/t-sql/statements/drop-index-transact-sql) -Anweisung&#41;, um einen gruppierten columnstore--Index zu löschen. Bei diesem Vorgang wird der Index gelöscht, und die Columnstore-Tabelle wird in einen Rowstore-Heap konvertiert.
 
-##  <a name="load"></a>Laden von Daten in einen gruppierten columnstore-Index
+##  <a name="load-data-into-a-clustered-columnstore-index"></a><a name="load"></a>Laden von Daten in einen gruppierten columnstore-Index
  Sie können einem vorhandenen gruppierten Columnstore-Index Daten hinzufügen, indem Sie eine der Standardladenmethoden verwenden.  Beispielsweise das bcp-Massen Lade Tool, Integration Services und INSERT... Select kann alle Daten in einen gruppierten columnstore--Index laden.
 
  Gruppierte Columnstore-Indizes nutzen den Deltastore, um eine Fragmentierung der Spaltensegmente im Columnstore zu verhindern.
@@ -83,9 +83,9 @@ GO
 |Zeilen für Massenladevorgang|Dem Columnstore hinzugefügte Zeilen|Dem Deltastore hinzugefügte Zeilen|
 |-----------------------|-----------------------------------|----------------------------------|
 |102.000|0|102.000|
-|145,000|145,000<br /><br /> Zeilengruppengröße: 145.000.|0|
-|1,048,577|1,048,576<br /><br /> Zeilengruppengröße: 1.048.576.|1|
-|2,252,152|2,252,152<br /><br /> Zeilengruppengrößen: 1.048.576, 1.048.576, 155.000.|0|
+|145,000|145,000<br /><br /> Zeilengruppengröße: 145,000|0|
+|1,048,577|1,048,576<br /><br /> Zeilengruppengröße: 1.048.576|1|
+|2,252,152|2,252,152<br /><br /> Zeilengruppengrößen: 1.048.576, 1.048.576, 155.000|0|
 
  Im folgenden Beispiel werden die Ergebnisse des Ladens von 1.048.577 Zeilen in eine Partition angezeigt. Aus den Ergebnissen wird ersichtlich, dass eine COMPRESSED-Zeilengruppe im Columnstore (in Form von komprimierten Spaltensegmenten) und eine Zeile im Deltastore vorhanden sind.
 
@@ -93,11 +93,11 @@ GO
 SELECT * FROM sys.column_store_row_groups
 ```
 
- ![Rowgroup und Deltastore für einen Batchladevorgang](../../2014/database-engine/media/sql-server-pdw-columnstore-batchload.gif "Rowgroup und Deltastore für einen Batchladevorgang")
+ ![Zeilengruppe und Deltastore für einen Batchladevorgang](../../2014/database-engine/media/sql-server-pdw-columnstore-batchload.gif "Zeilengruppe und Deltastore für einen Batchladevorgang")
 
 
 
-##  <a name="change"></a>Ändern von Daten in einem gruppierten columnstore-Index
+##  <a name="change-data-in-a-clustered-columnstore-index"></a><a name="change"></a>Ändern von Daten in einem gruppierten columnstore-Index
  Gruppierte Columnstore-Indizes unterstützen DML-Vorgänge zum Einfügen, Aktualisieren und Löschen.
 
  Verwenden Sie [Insert &#40;Transact-SQL-&#41;](/sql/t-sql/statements/insert-transact-sql) , um eine Zeile einzufügen. Die Zeile wird dem Deltastore hinzugefügt.
@@ -114,7 +114,7 @@ SELECT * FROM sys.column_store_row_groups
 
 -   Wenn sich die Zeile im Deltastore befindet, aktualisiert [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] die Zeile im Deltastore.
 
-##  <a name="rebuild"></a>Neuerstellen eines gruppierten columnstore-Indexes
+##  <a name="rebuild-a-clustered-columnstore-index"></a><a name="rebuild"></a>Neuerstellen eines gruppierten columnstore-Indexes
  Verwenden Sie [Create gruppierten columnstore-Index &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql) oder [Alter Index &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql) , um einen vorhandenen gruppierten columnstore--Index vollständig neu zu erstellen. Außerdem können Sie Alter Index... Erstellen Sie neu, um eine bestimmte Partition neu zu erstellen.
 
 ### <a name="rebuild-process"></a>Neuerstellungsprozess
@@ -145,7 +145,7 @@ SELECT * FROM sys.column_store_row_groups
 
      Dadurch wird sichergestellt, dass alle Daten im Columnstore gespeichert sind. Wenn mehrere Ladevorgänge zur gleichen Zeit ausgeführt werden, kann dies ggf. dazu führen, dass für jede Partition mehrere Deltastores vorhanden sind. Durch das Neuerstellen werden alle Deltastore-Zeilen in den Columnstore verschoben.
 
-##  <a name="reorganize"></a>Neuorganisieren eines gruppierten columnstore-Indexes
+##  <a name="reorganize-a-clustered-columnstore-index"></a><a name="reorganize"></a>Neuorganisieren eines gruppierten columnstore-Indexes
  Beim Neuorganisieren eines gruppierten Columnstore-Indexes werden alle Closed-Zeilengruppen in den Columnstore-Index verschoben. Verwenden Sie zum Ausführen einer Neuorganisierung [Alter Index &#40;Transact-SQL-&#41;](/sql/t-sql/statements/alter-index-transact-sql)mit der reorganisierungs Option.
 
  Die Neuorganisation ist für das Verschieben von CLOSED-Zeilengruppen in den Columnstore nicht zwingend erforderlich. Zuletzt werden alle CLOSED-Zeilengruppen vom TM (Tuple Mover)-Vorgang gesucht und verschoben. Da der Tuple Mover jedoch in einem einzelnen Thread ausgeführt wird, werden die Zeilengruppen für Ihre Arbeitsauslastung u. U. nicht schnell genug verschoben.

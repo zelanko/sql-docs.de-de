@@ -18,10 +18,10 @@ ms.assetid: 02cfb76f-a0f9-4b42-a880-1c3e7d64fe41
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a5e4ad5d6f3d0b2e35633694d65e58dd782cc3ba
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75688256"
 ---
 # <a name="sp_create_plan_guide_from_handle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
@@ -44,7 +44,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
  Der Name der Planhinweisliste. Die Gültigkeit der Namen von Planhinweislisten beschränkt sich auf die aktuelle Datenbank. *plan_guide_name* müssen den [Regeln für](../../relational-databases/databases/database-identifiers.md) Bezeichner entsprechen und nicht mit dem Nummern Zeichen (#) beginnen. Die maximale Länge *plan_guide_name* beträgt 124 Zeichen.  
   
  [ @plan_handle = ] *plan_handle*  
- Identifiziert einen Batch im Plancache. *plan_handle* ist vom Datentyp **varbinary (64)**. *plan_handle* können aus der dynamischen Verwaltungs Sicht [sys. dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) abgerufen werden.  
+ Identifiziert einen Batch im Plancache. *plan_handle* ist **varbinary(64)** *plan_handle* können aus der dynamischen Verwaltungs Sicht [sys. dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) abgerufen werden.  
   
  [ @statement_start_offset = ] { *statement_start_offset* | NULL}]  
  Identifiziert die Anfangsposition der Anweisung innerhalb des Batches des angegebenen *plan_handle*. *statement_start_offset* ist vom Datentyp **int**und hat den Standardwert NULL.  
@@ -126,6 +126,6 @@ GO
  [sp_create_plan_guide &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sys. dm_exec_sql_text &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
  [sys. dm_exec_text_query_plan &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-text-query-plan-transact-sql.md)   
- [sp_control_plan_guide &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
+ [sp_control_plan_guide &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md)  
   
   

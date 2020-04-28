@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fcda1522fdb8be83ec61df04898d19600ad04a3e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176814"
 ---
 # <a name="primary-and-foreign-key-constraints"></a>Primärschlüssel- und Fremdschlüsseleinschränkungen
@@ -33,14 +33,14 @@ ms.locfileid: "78176814"
 
  [Verwandte Aufgaben](../tables/primary-and-foreign-key-constraints.md#Tasks)
 
-##  <a name="PKeys"></a> PRIMARY KEY-Einschränkungen
+##  <a name="primary-key-constraints"></a><a name="PKeys"></a> PRIMARY KEY-Einschränkungen
  Eine Tabelle verfügt normalerweise über eine Spalte oder eine Kombination aus Spalten, die Werte enthalten, die jede Zeile in der Tabelle eindeutig identifizieren. Diese Spalte oder Kombination aus Spalten wird als Primärschlüssel (PK, Primary Key) der Tabelle bezeichnet und erzwingt die Entitätsintegrität der Tabelle. Da PRIMARY KEY-Einschränkungen eindeutige Daten garantieren, werden sie häufig für eine Identitätsspalte definiert.
 
  Wenn Sie eine PRIMARY KEY-Einschränkung für eine Tabelle angeben, erzwingt [!INCLUDE[ssDE](../../includes/ssde-md.md)] die Eindeutigkeit der Daten, indem automatisch ein eindeutiger Index für die Primärschlüsselspalten erstellt wird. Der Index ermöglicht darüber hinaus den schnellen Zugriff auf Daten, wenn der Primärschlüssel in Abfragen verwendet wird. Wenn eine PRIMARY KEY-Einschränkung für mehrere Spalten definiert wird, können Werte innerhalb einer Spalte dupliziert werden; jede Kombination aus den Werten aller Spalten, die in der Definition der PRIMARY KEY-Einschränkung enthalten sind, muss jedoch eindeutig sein.
 
  Wie in der nachfolgenden Abbildung dargestellt, müssen die Spalten **ProductID** und **VendorID** in der **Purchasing.ProductVendor** -Tabelle eine zusammengesetzte PRIMARY KEY-Einschränkung für diese Tabelle bilden. Dadurch wird sichergestellt, dass jede Zeile in der **ProductVendor**-Tabelle eine eindeutige Kombination aus **ProductID** und **VendorID** aufweist. Dies verhindert die Einfügung doppelter Zeilen.
 
- ![Zusammengesetzte Primärschlüsseleinschränkung](../../database-engine/media/fund04.gif "Zusammengesetzte PRIMARY KEY-Einschränkung")
+ ![Zusammengesetzte Primärschlüsseleinschränkung](../../database-engine/media/fund04.gif "Zusammengesetzte Primärschlüsseleinschränkung")
 
 -   Eine Tabelle kann nur eine PRIMARY KEY-Einschränkung enthalten.
 
@@ -54,7 +54,7 @@ ms.locfileid: "78176814"
 
 -   Wenn ein Primärschlüssel für eine Spalte eines CLR-benutzerdefinierten Typs definiert wird, muss die Implementierung des Typs eine binäre Sortierreihenfolge unterstützen.
 
-##  <a name="FKeys"></a> Foreign Key Constraints
+##  <a name="foreign-key-constraints"></a><a name="FKeys"></a> Foreign Key Constraints
  Ein Fremdschlüssel (FS) ist eine Spalte oder eine Kombination von Spalten, mit deren Hilfe eine Verknüpfung zwischen den Daten in zwei Tabellen eingerichtet und erzwungen wird, um die Daten zu steuern, die in der Fremdschlüsseltabelle gespeichert werden können. In einem Fremdschlüsselverweis wird zwischen zwei Tabellen ein Link erstellt, wenn eine Spalte bzw. mehrere Spalten einer Tabelle auf die Spalte bzw. Spalten mit dem Primärschlüsselwert einer anderen Tabelle verweisen. Diese Spalte wird zu einem Fremdschlüssel in der zweiten Tabelle.
 
  Nehmen Sie beispielsweise an, die **Sales.SalesOrderHeader** -Tabelle weist eine Fremdschlüsselverknüpfung zur **Sales.SalesPerson** -Tabelle auf, da eine logische Beziehung zwischen „Sales Orders“ (Kaufaufträgen) und „Sales People“ (Vertriebsmitarbeiter) besteht. Die **SalesPersonID** -Spalte der **SalesOrderHeader** -Tabelle stimmt mit der Primärschlüsselspalte der **SalesPerson** -Tabelle überein. Die **SalesPersonID** -Spalte der **SalesOrderHeader** -Tabelle ist der Fremdschlüssel für die **SalesPerson** -Tabelle. Wenn Sie diese Fremdschlüsselbeziehung erstellen, kann ein Wert für **SalesPersonID** nicht in die **SalesOrderHeader** -Tabelle eingefügt werden, wenn er nicht bereits in der **SalesPerson** -Tabelle vorhanden ist.
@@ -103,12 +103,12 @@ ms.locfileid: "78176814"
 
 -   Eine Tabelle mit einem INSTEAD OF-Trigger kann nicht gleichzeitig eine REFERENCES-Klausel aufweisen, die eine kaskadierende Aktion angibt. Ein AFTER-Trigger in einer Tabelle, die das Ziel einer kaskadierenden Aktion ist, kann jedoch eine INSERT-, UPDATE- oder DELETE-Anweisung in einer anderen Tabelle oder Sicht ausführen, die einen für dieses Objekt definierten INSTEAD OF-Trigger auslöst.
 
-##  <a name="Tasks"></a> Verwandte Aufgaben
+##  <a name="related-tasks"></a><a name="Tasks"></a> Verwandte Aufgaben
  In der folgenden Tabelle sind die PRIMARY KEY- und FOREIGN KEY-Einschränkungen zugeordneten häufigen Tasks aufgeführt.
 
 |Aufgabe|Thema|
 |----------|-----------|
-|Beschreibt, wie ein Primärschlüssel erstellt wird.|[Erstellen von Primärschlüsseln](../tables/create-primary-keys.md)|
+|Beschreibt, wie ein Primärschlüssel erstellt wird.|[Erstellen von primär Schlüsseln](../tables/create-primary-keys.md)|
 |Beschreibt, wie ein Primärschlüssel gelöscht wird.|[Löschen von Primärschlüsseln](../tables/delete-primary-keys.md)|
 |Beschreibt, wie ein Primärschlüssel geändert wird.|[Ändern von Primärschlüsseln](../tables/modify-primary-keys.md)|
 |Beschreibt, wie Fremdschlüsselbeziehungen erstellt werden.|[Erstellen von Fremdschlüssel-Beziehungen](../tables/create-foreign-key-relationships.md)|

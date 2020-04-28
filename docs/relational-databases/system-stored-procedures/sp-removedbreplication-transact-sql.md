@@ -17,10 +17,10 @@ ms.assetid: cb98d571-d1eb-467b-91f7-a6e091009672
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c7da3db641d6e0b9aa53d570a7d0cf9bdc731477
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75322248"
 ---
 # <a name="sp_removedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
@@ -42,25 +42,25 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @dbname = ] 'dbname'`Der Name der Datenbank. *dbname* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Bei NULL wird die aktuelle Datenbank verwendet.  
+`[ @dbname = ] 'dbname'`Der Name der Datenbank. *dbname* ist vom Datentyp **sysname**. Der Standardwert ist NULL. Bei NULL wird die aktuelle Datenbank verwendet.  
   
-`[ @type = ] type`Der Typ der Replikation, für den Datenbankobjekte entfernt werden. *Type ist vom Datentyp* **nvarchar (5)** . die folgenden Werte sind möglich:  
+`[ @type = ] type`Der Typ der Replikation, für den Datenbankobjekte entfernt werden. *type* ist vom Datentyp **nvarchar(5)** . Die folgenden Werte sind möglich:  
   
 |||  
 |-|-|  
-|**Bahnhöfen**|Entfernt Transaktionsreplikations-Veröffentlichungsobjekte.|  
+|**tran**|Entfernt Transaktionsreplikations-Veröffentlichungsobjekte.|  
 |**Merge**|Entfernt Mergereplikations-Veröffentlichungsobjekte.|  
-|**beides** (Standard)|Entfernt alle Replikationsveröffentlichungsobjekte.|  
+|**both** (Standard)|Entfernt alle Replikationsveröffentlichungsobjekte.|  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  **0** (Erfolg) oder **1** (Fehler)  
   
 ## <a name="remarks"></a>Bemerkungen  
- **sp_removedbreplication** wird bei allen Replikations Typen verwendet.  
+ **sp_removedbreplication** wird für alle Replikationstypen verwendet.  
   
- **sp_removedbreplication** ist nützlich, wenn eine replizierte Datenbank wieder hergestellt wird, für die keine Replikations Objekte wieder hergestellt werden müssen.  
+ **sp_removedbreplication** ist hilfreich beim Wiederherstellen einer replizierten Datenbank, für die keine Replikationsobjekte wiederhergestellt werden müssen.  
   
- **sp_removedbreplication** kann nicht für eine Datenbank verwendet werden, die als schreibgeschützt gekennzeichnet ist.  
+ **sp_removedbreplication** kann nicht bei schreibgeschützten Datenbanken verwendet werden.  
   
 ## <a name="example"></a>Beispiel  
  [!code-sql[HowTo#sp_removedbreplication](../../relational-databases/replication/codesnippet/tsql/sp-removedbreplication-t_1.sql)]  

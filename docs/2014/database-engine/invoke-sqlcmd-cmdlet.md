@@ -16,14 +16,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: beee2fa576387eadb75ee5ab1bfefcb66453acc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76928028"
 ---
 # <a name="invoke-sqlcmd-cmdlet"></a>Invoke-Sqlcmd-Cmdlet
-  " **Aufruf-sqlcmd** " [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ist ein Cmdlet, das Skripts ausführt, die Anweisungen[!INCLUDE[tsql](../includes/tsql-md.md)] aus den Sprachen (und XQuery) und Befehlen enthalten, die vom Hilfsprogramm **sqlcmd** unterstützt werden.  
+  **Invoke-Sqlcmd** ist ein [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-Cmdlet, das Skripts ausführt, die Anweisungen aus den Sprachen ([!INCLUDE[tsql](../includes/tsql-md.md)] und XQuery) und Befehle enthalten, die vom Hilfsprogramm **sqlcmd** unterstützt werden.  
   
 ## <a name="using-invoke-sqlcmd"></a>Verwenden von Invoke-Sqlcmd  
  Mit dem **Invoke-Sqlcmd** -Cmdlet können Sie die **sqlcmd** -Skriptdateien in einer Windows PowerShell-Umgebung ausführen. Viele der Vorgänge, die Sie mit **sqlcmd** durchführen können, können auch mit **Invoke-Sqlcmd**durchgeführt werden.  
@@ -63,7 +63,7 @@ Invoke-Sqlcmd "SELECT GETDATE() AS TimeOfQuery;" -ServerInstance "MyComputer\MyI
 ## <a name="path-context-in-invoke-sqlcmd"></a>Pfadkontext in Invoke-Sqlcmd  
  Wenn Sie den Database-Parameter nicht verwenden, wird der Datenbankkontext für Invoke-Sqlcmd vom Pfad gesetzt, der aktiv ist, wenn cmdlet aufgerufen wird.  
   
-|`Path`|Datenbankkontext|  
+|Pfad|Datenbankkontext|  
 |----------|----------------------|  
 |Beginnt mit einem anderen Laufwerk als SQLSERVER:|Die Standarddatenbank für die Anmelde-ID in der Standardinstanz auf dem lokalen Computer.|  
 |SQLSERVER:\SQL|Die Standarddatenbank für die Anmelde-ID in der Standardinstanz auf dem lokalen Computer.|  
@@ -89,14 +89,13 @@ Invoke-Sqlcmd "SELECT DB_NAME() AS DatabaseName;"
  Invoke-Sqlcmd stellt eine Warnung bereit, wenn es den Pfaddatenbankkontext verwendet. Sie können den SuppressProviderContextWarning-Parameter verwenden, um die Warnmeldung zu deaktivieren. Sie können den IgnoreProviderContext-Parameter verwenden, um Invoke-Sqlcmd anzuweisen, immer die Standarddatenbank für die Anmeldung zu verwenden.  
   
 ## <a name="comparing-invoke-sqlcmd-and-the-sqlcmd-utility"></a>Vergleichen von Invoke-Sqlcmd und dem sqlcmd-Hilfsprogramm  
- Mit " **aufrufen-sqlcmd** " können viele der Skripts ausgeführt werden, die mit dem Hilfsprogramm " **sqlcmd** " ausgeführt werden können. 
-  **Invoke-Sqlcmd** wird jedoch in einer Windows PowerShell-Umgebung ausgeführt, die sich von der Eingabeaufforderungsumgebung unterscheidet, in der **sqlcmd** ausgeführt wird. Das Verhalten von **Invoke-Sqlcmd** wurde für die Ausführung in einer Windows PowerShell-Umgebung angepasst.  
+ Mit**Invoke-Sqlcmd** können zahlreiche der Skripts ausgeführt werden, die auch mit dem **sqlcmd** Hilfsprogramm ausgeführt werden können. **Invoke-Sqlcmd** wird jedoch in einer Windows PowerShell-Umgebung ausgeführt, die sich von der Eingabeaufforderungsumgebung unterscheidet, in der **sqlcmd** ausgeführt wird. Das Verhalten von **Invoke-Sqlcmd** wurde für die Ausführung in einer Windows PowerShell-Umgebung angepasst.  
   
  Nicht alle **sqlcmd** -Befehle sind in **Invoke-Sqlcmd**implementiert. Befehle, die nicht implementiert werden, sind die folgenden: **:!!**, **:connect**, **:error**, **:out**, **:ed**, **:list**, **:listvar**, **:reset**, **:perftrace**, and **:serverlist**.  
   
- "Start **-sqlcmd** " initialisiert nicht die **sqlcmd** -Umgebung oder Skript Variablen wie SQLCMDDBNAME oder SQLCMDWORKSTATION.  
+ **Invoke-Sqlcmd** initialisiert die **sqlcmd** -Umgebung oder Skriptvariablen wie SQLCMDDBNAME oder SQLCMDWORKSTATION nicht.  
   
- " **Aufruf-sqlcmd** " zeigt keine Nachrichten an, wie z. b. die Ausgabe von Print-Anweisungen, es sei denn, Sie geben den allgemeinen Windows PowerShell **-** allgemeinen Parameter an. Beispiel:  
+ **Invoke-Sqlcmd** zeigt keine Meldungen, wie die Ausgabe von PRINT-Anweisungen, an, außer Sie geben den gängigen Windows PowerShell-Parameter **-Verbose** an. Beispiel:  
   
 ```powershell
 Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose  
@@ -107,11 +106,10 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |BESCHREIBUNG|sqlcmd-Option|Invoke-Sqlcmd-Parameter|  
 |-----------------|-------------------|------------------------------|  
 |Server- und Instanzname.|-S|-ServerInstance|  
-|Die zu verwendende ursprüngliche Datenbank.|-d angeben,|-Database|  
+|Die zu verwendende ursprüngliche Datenbank.|-d|-Database|  
 |Die angegebene Abfrage ausführen und dann beenden.|-Q|-Query|  
-|
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Anmelde-ID für die Authentifizierung.|-U|-Username|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]Das Authentifizierungs Kennwort.|-P|-Password|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Anmelde-ID für die Authentifizierung.|-U|-Username|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Kennwort für die Authentifizierung.|-P|-Password|  
 |Variablendefinition.|-v|-Variable|  
 |Abfragetimeoutintervall.|-t|-QueryTimeOut|  
 |Ausführung bei Fehler beenden.|-b|-AbortOnError|  
@@ -134,12 +132,12 @@ Invoke-Sqlcmd -Query "PRINT N'abc';" -Verbose
 |Codepage zur Verwendung für Ausgabedaten.|-f|Kein Parameter|  
 |Ein Kennwort ändern und mit der Ausführung fortfahren|-Z|Kein Parameter|  
 |Paketgröße|-a|Kein Parameter|  
-|Spaltentrennzeichen|-s|Kein Parameter|  
-|Steuern von Ausgabeheadern|-h|Kein Parameter|  
+|Spaltentrennzeichen|-S|Kein Parameter|  
+|Steuern von Ausgabeheadern|-H|Kein Parameter|  
 |Angeben von Steuerzeichen|-k|Kein Parameter|  
 |Feste Längenanzeigebreite|-y|Kein Parameter|  
 |Variable Längenanzeigebreite|-y|Kein Parameter|  
-|Eingabe auf dem Bildschirm anzeigen.|-e|Kein Parameter|  
+|Eingabe auf dem Bildschirm anzeigen.|-E|Kein Parameter|  
 |Bezeichner in Anführungszeichen aktivieren|-I|Kein Parameter|  
 |Nachfolgende Leerzeichen löschen.|-w|Kein Parameter|  
 |Instanzen auflisten|-l|Kein Parameter|  

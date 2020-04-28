@@ -15,10 +15,10 @@ ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: df671e83d80175f154a4008270c3b68dc2581b59
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75557915"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data---data-quality-services-dqs"></a>Anfügen einer Domäne oder Verbund Domäne an Verweis Daten-Data Quality Services (DQS)
@@ -39,15 +39,15 @@ ms.locfileid: "75557915"
   
 ## <a name="before-you-begin"></a>Vorbereitungen  
   
-###  <a name="Prerequisites"></a> Voraussetzungen  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
  Sie müssen [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) konfiguriert haben, um Verweisdatendienste zu verwenden. Siehe [Konfigurieren von DQS zum Verwenden von Verweisdaten](../data-quality-services/configure-dqs-to-use-reference-data.md).  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
 #### <a name="permissions"></a>Berechtigungen  
  Sie müssen über die dqs_kb_editor-Rolle in der DQS_MAIN-Datenbank verfügen, um Domänen Verweisdaten zuzuordnen.  
   
-##  <a name="Map"></a>Zuordnen von Domänen zu Verweis Daten aus Melissa Data  
+##  <a name="map-domains-to-reference-data-from-melissa-data"></a><a name="Map"></a>Zuordnen von Domänen zu Verweis Daten aus Melissa Data  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../data-quality-services/run-the-data-quality-client-application.md)aus.  
   
@@ -78,17 +78,17 @@ ms.locfileid: "75557915"
   
 9. Sie kehren zur Registerkarte **Verweis Daten** zurück. Ändern Sie im Bereich **Anbieter Einstellungen** ggf. die Werte in den folgenden Feldern:  
   
-    -   **Schwellenwert für die automatische Korrektur**: Korrekturen aus dem Verweis Datendienst mit einem Vertrauensgrad oberhalb dieses Schwellenwerts werden automatisch durchgeführt. Geben Sie einen Wert in der Dezimalnotation des entsprechenden Prozentwerts ein. Geben Sie beispielsweise 0,9 für 90 % ein.  
+    -   **Schwellenwert für Autokorrektur**: Korrekturen aus dem Verweisdatendienst mit einem Vertrauensgrad über den Schwellenwerten werden automatisch vorgenommen. Geben Sie einen Wert in der Dezimalnotation des entsprechenden Prozentwerts ein. Geben Sie beispielsweise 0,9 für 90 % ein.  
   
-    -   **Vorgeschlagene Kandidaten**: Anzahl der vorgeschlagenen Kandidaten, die vom Verweis Datendienst angezeigt werden sollen.  
+    -   **Vorgeschlagene Kandidaten**: Anzahl der vorgeschlagenen Kandidaten aus dem Verweisdatendienst, die angezeigt werden sollen.  
   
-    -   Minimaler **Vertrauens**Grad: Vorschläge aus dem Verweis Datendienst mit einem Vertrauensgrad, der niedriger als dieser Wert ist, werden ignoriert. Geben Sie einen Wert in der Dezimalnotation des entsprechenden Prozentwerts ein. Geben Sie beispielsweise 0,6 für 60 % an.  
+    -   **Minimaler Vertrauensgrad**: Vorschläge aus dem Verweisdatendienst mit einem Vertrauensgrad, der niedriger als dieser Wert ist, werden ignoriert. Geben Sie einen Wert in der Dezimalnotation des entsprechenden Prozentwerts ein. Geben Sie beispielsweise 0,6 für 60 % an.  
   
 10. Klicken Sie auf **Fertig stellen** , um die Wissensdatenbank zu veröffentlichen. Eine Bestätigungsmeldung wird angezeigt, nachdem die Wissensdatenbank erfolgreich veröffentlicht wurde.  
   
  Sie können diese Wissensdatenbank jetzt für Bereinigungs Aktivitäten in einem Data Quality-Projekt verwenden, um US-Adressen in den Quelldaten zu standardisieren und zu bereinigen, basierend auf den von Melissa Data über Azure Marketplace bereitgestellten Kenntnissen.  
   
-##  <a name="FollowUp"></a>Nachverfolgung: nach dem Mapping einer Domäne zu Verweis Daten  
+##  <a name="follow-up-after-mapping-a-domain-to-reference-data"></a><a name="FollowUp"></a> Nachverfolgung: Nach dem Zuordnen einer Domäne zu Verweisdaten  
  Erstellen Sie ein Data Quality-Projekt, und führen Sie die Bereinigungsaktivität für die Quelldaten aus, die US-Adressen enthalten, indem Sie diese mit der in diesem Thema erstellten Wissensdatenbank vergleichen. Siehe [Bereinigen von Daten mit Wissen über &#40;externe&#41; Verweisdaten](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  

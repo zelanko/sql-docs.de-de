@@ -14,16 +14,14 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 77f7fdb2689d910d6fe9534a5f1f65e1c381b351
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175449"
 ---
 # <a name="sql-server-database-engine"></a>SQL Server-Datenbank-Engine
-  
-  [!INCLUDE[ssDE](../includes/ssde-md.md)] ist der Kerndienst zum Speichern, Verarbeiten und Sichern von Daten. 
-  [!INCLUDE[ssDE](../includes/ssde-md.md)] ermöglicht einen gesteuerten Zugriff und eine schnelle Transaktionsverarbeitung, um auch den Anforderungen der anspruchsvollsten Datenverarbeitungsanwendungen in Ihrem Unternehmen gerecht zu werden.
+  [!INCLUDE[ssDE](../includes/ssde-md.md)] ist der Kerndienst zum Speichern, Verarbeiten und Sichern von Daten. [!INCLUDE[ssDE](../includes/ssde-md.md)] ermöglicht einen gesteuerten Zugriff und eine schnelle Transaktionsverarbeitung, um auch den Anforderungen der anspruchsvollsten Datenverarbeitungsanwendungen in Ihrem Unternehmen gerecht zu werden.
 
  Verwenden Sie [!INCLUDE[ssDE](../includes/ssde-md.md)] , um relationale Datenbanken für OLTP- (Online Transactional Processing, Onlinetransaktionsverarbeitung) oder OLAP-Daten (Online Analytical Processing, Analytische Onlineverarbeitung) zu erstellen. Dazu gehört das Erstellen von Tabellen zur Datenspeicherung und von Datenbankobjekten, wie z. B. Indizes, Sichten und gespeicherte Prozeduren, zum Anzeigen, Verwalten und Sichern von Daten. Verwenden Sie [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] , um die Datenbankobjekte zu verwalten, und [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] , um Serverereignisse aufzuzeichnen.
 
@@ -42,6 +40,6 @@ ms.locfileid: "78175449"
  ![Kleines Datei Ordnersymbol](../../2014/integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") [XQuery-Referenz](/sql/xquery/xquery-language-reference-sql-server)
 
 ## <a name="see-also"></a>Weitere Informationen
- [SQL Server-Ressourcen Center](https://go.microsoft.com/fwlink/?LinkId=219676)
+ [SQL Server-Ressourcencenter](https://go.microsoft.com/fwlink/?LinkId=219676)
 
 

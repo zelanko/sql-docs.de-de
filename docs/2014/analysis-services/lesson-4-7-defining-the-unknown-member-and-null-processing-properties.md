@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: c8db9d2dd582651d852f34372d5d2ae74c958f72
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175309"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>Definieren von unbekannten Elementen und Eigenschaften für das Verarbeiten von NULL-Werten
@@ -87,7 +87,7 @@ ms.locfileid: "78175309"
 
 8.  Suchen Sie im Bereich **Datenquellensicht** die **DimProductCategory** -Tabelle, klicken Sie mit der rechten Maustaste auf **ProductCategoryKey** in dieser Tabelle und anschließend auf **Neues Attribut aus Spalte**.
 
-9. Ändern Sie **** `Category`im Bereich Attribute den Namen dieses neuen Attributs in.
+9. Ändern Sie **Attributes** `Category`im Bereich Attribute den Namen dieses neuen Attributs in.
 
 10. Klicken Sie im Eigenschaftenfenster auf das Eigenschafts Feld **namecolumzun** , und klicken Sie dann auf die Schaltfläche zum Durchsuchen (**...**), um das Dialogfeld **Namensspalte** zu öffnen.
 
@@ -95,7 +95,7 @@ ms.locfileid: "78175309"
 
 12. Suchen Sie im Bereich **Datenquellensicht** die **DimProductSubcategory** -Tabelle, klicken Sie mit der rechten Maustaste auf **ProductSubcategoryKey** in dieser Tabelle und anschließend auf **Neues Attribut aus Spalte**.
 
-13. Ändern Sie **** `Subcategory`im Bereich Attribute den Namen dieses neuen Attributs in.
+13. Ändern Sie **Attributes** `Subcategory`im Bereich Attribute den Namen dieses neuen Attributs in.
 
 14. Klicken Sie im Eigenschaftenfenster auf das Eigenschafts Feld **namecolumzun** , und klicken Sie dann auf die Schaltfläche zum Durchsuchen **(...)** , um das Dialogfeld **Namensspalte** zu öffnen.
 

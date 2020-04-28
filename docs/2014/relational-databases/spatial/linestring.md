@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: e1bdfd447fdf61123615dad329b297490172b191
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176670"
 ---
 # <a name="linestring"></a>LineString
@@ -25,7 +25,7 @@ ms.locfileid: "78176670"
 ## <a name="linestring-instances"></a>LineString-Instanzen
  Die nachfolgende Abbildung enthält Beispiele für `LineString`-Instanzen.
 
- ![Beispiele für LineString-Geometrieinstanzen](../../database-engine/media/linestring.gif "Beispiele von LineString-geometry-Instanzen")
+ ![Beispiele für LineString-Geometrieinstanzen](../../database-engine/media/linestring.gif "Beispiele für LineString-Geometrieinstanzen")
 
  Folgendes wird dargestellt:
 
@@ -46,8 +46,7 @@ DECLARE @g2 geometry = 'LINESTRING(1 1,2 3,4 8, -6 3)';
 DECLARE @g3 geometry = 'LINESTRING(1 1, 1 1)';
 ```
 
- 
-  `@g3` zeigt, dass eine `LineString`-Instanz zwar akzeptiert werden kann, dass sie möglicherweise jedoch nicht gültig ist.
+ `@g3` zeigt, dass eine `LineString`-Instanz zwar akzeptiert werden kann, dass sie möglicherweise jedoch nicht gültig ist.
 
  Die folgende `LineString`-Instanz wird nicht akzeptiert. Sie löst eine `System.FormatException`aus.
 
@@ -127,6 +126,6 @@ POINT(1 3) is a valid Point.
 ```
 
 ## <a name="see-also"></a>Weitere Informationen
- [STLength &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type) [STStartPoint &#40;Geometry](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type) -Datentyp&#41;[STEndpoint &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type) [STPointN &#40;geometry-Datentyp](/sql/t-sql/spatial-geometry/stpointn-geometry-data-type)&#41;[STNumPoints &#40;](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type)&#41;der geometry-Datentyp &#40;[STIsRing](/sql/t-sql/spatial-geometry/stisring-geometry-data-type) [](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type)&#41;&#40;der geometry-Datentyp&#41;&#40;der geometry-Datentyp [&#41;&#40;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type) für [räumliche Daten](../spatial/spatial-data-sql-server.md) SQL Server&#41;
+ [STLength &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stlength-geometry-data-type) [STStartPoint &#40;Geometry](/sql/t-sql/spatial-geometry/ststartpoint-geometry-data-type) -Datentyp&#41;[STEndpoint &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stendpoint-geometry-data-type) [STPointN &#40;geometry-Datentyp](/sql/t-sql/spatial-geometry/stpointn-geometry-data-type)&#41;[STNumPoints &#40;](/sql/t-sql/spatial-geometry/stnumpoints-geometry-data-type)&#41;der geometry-Datentyp &#40;[STIsRing](/sql/t-sql/spatial-geometry/stisring-geometry-data-type) [STIsClosed &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stisclosed-geometry-data-type)&#41;&#40;der geometry-Datentyp&#41;&#40;der geometry-Datentyp [&#41;&#40;](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type) für [räumliche Daten](../spatial/spatial-data-sql-server.md) SQL Server&#41;
 
 

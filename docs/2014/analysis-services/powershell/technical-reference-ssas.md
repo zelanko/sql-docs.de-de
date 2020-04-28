@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f0f8ac81762fac418eb1009626038e6b0708476f
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175619"
 ---
 # <a name="technical-reference-ssas"></a>Technische Referenz (SSAS)
@@ -36,7 +36,7 @@ ms.locfileid: "78175619"
 
  [Data Analysis Expressions &#40;DAX-&#41; Referenz](/dax/data-analysis-expressions-dax-reference)
 
- [Data Mining-Erweiterungen &#40;DMX-&#41; Referenz](/sql/dmx/data-mining-extensions-dmx-reference)
+ [Data Mining-Erweiterungen &#40;DMX&#41; – Referenz](/sql/dmx/data-mining-extensions-dmx-reference)
 
  ![Kleines Datei Ordnersymbol](../../integration-services/media/filefolder-small.gif "Kleines Dateiordnersymbol") **Benutzeroberflächen** Verweis auf [Benutzeroberflächen Verweis &#40;Analysis Services&#41;](../user-interface-reference-analysis-services.md)
 

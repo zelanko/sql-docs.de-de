@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d4190f096efaf80989d397f26a314454fe2171b7
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175856"
 ---
 # <a name="detecting-and-resolving-conflicts-in-logical-records"></a>Ermitteln und Lösen von Konflikten in logischen Datensätzen
   In diesem Thema werden die verschiedenen Kombinationsmöglichkeiten aus Konflikterkennung und Konfliktlösung bei der Verwendung logischer Datensätze behandelt. Konflikte treten bei der Mergereplikation auf, wenn ein und dieselben Daten von mehreren Knoten geändert werden oder wenn die Mergereplikation auf bestimmte Arten von Fehlern stößt, wie z. B. Einschränkungsverletzungen beim Replizieren von Änderungen. Weitere Informationen zur Konflikterkennung und -lösung finden Sie unter [Advanced Merge Replication Conflict Detection and Resolution](advanced-merge-replication-conflict-detection-and-resolution.md).
 
- Informationen zum Eingeben der Konfliktnachverfolgungs- und -lösungsebene für einen Artikel finden Sie unter [Specify the Conflict Tracking and Resolution Level for Merge Articles](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution).
+ Informationen zum Eingeben der Konfliktnachverfolgungs- und -lösungsebene für einen Artikel finden Sie unter [Geben Sie den Konflikt nachverfolgen und-lösungsebene für Mergeveröffentlichungen](../publish/specify-merge-replication-properties.md#interactive-conflict-resolution).
 
 ## <a name="conflict-detection"></a>Konflikterkennung
  Wie Konflikte bei logischen Datensätzen ermittelt werden, hängt von den folgenden beiden Artikeleigenschaften ab: **column_tracking** und **logical_record_level_conflict_detection**. [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] und höhere Versionen unterstützen ebenfalls die Erkennung auf der logischen Datensatzebene.
@@ -105,6 +105,6 @@ ms.locfileid: "78175856"
  ![Reihe von Tabellen mit Änderungen an verknüpften Zeilen](../media/logical-records-08.gif "Reihe von Tabellen mit Änderungen an verknüpften Zeilen")
 
 ## <a name="see-also"></a>Weitere Informationen
- [Gruppieren von Änderungen an verknüpften Zeilen mithilfe von logischen Datensätzen](group-changes-to-related-rows-with-logical-records.md)
+ [Gruppieren von Änderungen an verknüpften Zeilen mit logischen Datensätzen](group-changes-to-related-rows-with-logical-records.md)
 
 

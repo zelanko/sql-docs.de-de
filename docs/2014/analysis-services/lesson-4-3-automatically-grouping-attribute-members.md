@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 7fc8bed16488f1688576d6c5b265811cdc9705a1
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175339"
 ---
 # <a name="automatically-grouping-attribute-members"></a>Automatisches Gruppieren von Attributelementen
@@ -26,7 +26,7 @@ ms.locfileid: "78175339"
 
  **Cluster** [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] erstellt Gruppen, indem ein eindimensionales Clustering auf den Eingabe Werten mithilfe der K-Means-Clustering-Methode mit gauschen Verteilungen durchgeführt wird. Diese Option ist nur für numerische Spalten gültig.
 
- Nach dem Angeben einer Gruppierungsmethode müssen Sie die Anzahl von Gruppen angeben, indem Sie die **DiscretizationBucketCount** -Eigenschaft verwenden. Weitere Informationen finden Sie unter [Gruppieren von Attributelementen &#40;Diskretisierung&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)
+ Nach dem Angeben einer Gruppierungsmethode müssen Sie die Anzahl von Gruppen angeben, indem Sie die **DiscretizationBucketCount** -Eigenschaft verwenden. Weitere Informationen finden Sie unter [Gruppieren von Attribut Elementen &#40;Diskretisierung&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)
 
  In den Aufgaben in diesem Thema aktivieren Sie verschiedene Gruppierungstypen für Folgendes: die jährlichen Einkommenswerte in der **Customer** -Dimension, die Anzahl der krankheitsbedingten Ausfallstunden von Angestellten in der **Employees** -Dimension und die Anzahl der Urlaubsstunden der Angestellten in der **Employees** -Dimension. Sie verarbeiten und durchsuchen dann den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial-Cube, um die Auswirkung der Elementgruppen anzuzeigen. Schließlich ändern Sie die Elementgruppeneigenschaften, um die Auswirkung der Änderung im Gruppierungstyp anzuzeigen.
 
@@ -124,6 +124,6 @@ ms.locfileid: "78175339"
  [Ausblenden und Deaktivieren von Attributhierarchien](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)
 
 ## <a name="see-also"></a>Weitere Informationen
- [Gruppieren von Attribut Elementen &#40;diskretisierungs&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)
+ [Gruppieren von Attributelementen &#40;Diskretisierung&#41;](multidimensional-models/attribute-properties-group-attribute-members.md)
 
 

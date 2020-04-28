@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6dba2c6637c9a637e60583b926b9e80671c043be
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173519"
 ---
 # <a name="add-an-additional-reporting-services-web-front-end-to-a-farm"></a>Hinzufügen eines zusätzlichen Reporting Services-Web-Front-Ends zu einer Farm
@@ -53,7 +53,7 @@ ms.locfileid: "78173519"
 
 |Schritt|Beschreibung und Link|
 |----------|--------------------------|
-|Führen Sie das Vorbereitungstool für SharePoint 2010-Produkte aus.|Sie müssen über die Installationsmedien für SharePoint 2010 verfügen. Das Vorbereitungs Tool auf dem-Installationsmedium ist " **Voraussetzungen. exe** ".|
+|Führen Sie das Vorbereitungstool für SharePoint 2010-Produkte aus.|Sie müssen über die Installationsmedien für SharePoint 2010 verfügen. Das Vorbereitungstool heißt **PrerequisiteInstaller.exe** auf dem Installationsmedium.|
 |Installieren Sie ein SharePoint 2010-Produkt.|1) wählen Sie den Installationstyp **Server Farm** aus.<br /><br /> 2) wählen Sie für den Servertyp die Option **Fertig** aus.<br /><br /> 3) Wenn die Installation abgeschlossen ist, führen Sie nicht den Konfigurations-Assistenten für SharePoint-Produkte aus, wenn die vorhandene SharePoint-Farm SharePoint 2010 SP1 installiert hat. Sie sollten SharePoint SP1 vor dem Ausführen des Konfigurations-Assistenten für SharePoint-Produkte installieren.|
 |Installieren Sie SharePoint Server 2010 SP1.|Wenn auf Ihrer vorhandenen SharePoint-Farm SharePoint 2010 SP1 installiert ist, laden Sie SharePoint 2010 SP1[https://support.microsoft.com/kb/2460045](https://go.microsoft.com/fwlink/p/?linkID=219697)von: herunter, und installieren Sie es.<br /><br /> Weitere Informationen zu SharePoint 2010 SP1 finden Sie unter [Bekannte Probleme bei der Installation von Office 2010 SP1 und SharePoint 2010 SP1](https://support.microsoft.com/kb/2532126):|
 |Führen Sie den Konfigurations-Assistenten für SharePoint-Produkte aus, um den Server zur Farm hinzuzufügen.|1) klicken Sie in der Programmgruppe **Microsoft SharePoint 2010-Produkte** auf **Konfigurations-Assistent für Microsoft SharePoint 2010-Produkte**.<br /><br /> 2) wählen Sie auf der Seite **Verbindung mit einer Server Farm herstellen** die **Option mit einer vorhandenen Farm verbinden aus,** und klicken Sie auf **weiter**.<br /><br /> 3) geben Sie auf der Seite Einstellungen für die **Konfigurations Datenbank angeben** den Namen des für die vorhandene Farm verwendeten Datenbankservers und den Namen der Konfigurations Datenbank ein. Klicken Sie auf **Weiter**.<br />**&#42;&#42; wichtige &#42;&#42;** Wenn eine Fehlermeldung ähnlich der folgenden angezeigt wird und Sie überprüft haben, dass Sie über die entsprechenden Berechtigungen verfügen, überprüfen Sie, welche Protokolle für die SQL Server-Netzwerkkonfiguration in **SQL Server Configuration Manager**aktiviert sind. "Es konnte keine Verbindung mit dem Datenbankserver hergestellt werden. Stellen Sie sicher, dass die Datenbank vorhanden ist, eine SQL Server-Datenbank ist und Sie über die entsprechenden Berechtigungen für den Zugriff auf den Server verfügen. "<br />**&#42;&#42; wichtige &#42;&#42;** Wenn die Seite **Server Farm Produkt und Patchstatus**angezeigt wird, müssen Sie die Informationen auf der Seite überprüfen und den Server mit den benötigten Dateien aktualisieren, bevor Sie mit dem Hinzufügen des Servers zur Farm fortfahren können.<br /><br /> 4) geben Sie auf der Seite **Farm Sicherheitseinstellungen angeben** die Passphrase der Farm ein, und klicken Sie auf **weiter**. Klicken Sie auf der Bestätigungsseite auf **Weiter** , um den Assistenten auszuführen.<br /><br /> 5) klicken Sie auf **weiter** , um den Assistenten für die **Farm Konfiguration**auszuführen.|

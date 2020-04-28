@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 42ac0e7f8b2c41fa30dd41c8255e0b8f04f6e730
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176540"
 ---
 # <a name="working-with-variables-programmatically"></a>Programmgesteuertes Arbeiten mit Variablen
@@ -158,7 +158,7 @@ End Module
  Beachten Sie, dass alle im **System**-Namespace bewerteten Variablen dem Paket zur Verfügung stehen. Weitere Informationen finden Sie unter [System Variables](../system-variables.md).
 
 ## <a name="namespaces"></a>Namespaces
- [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) stellt zwei Standardnamespaces zur Verfügung, in denen [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] sich Variablen befinden. **Benutzer** -und **Systemnamespaces** . Standardmäßig werden dem **User**-Namespace alle vom Entwickler erstellten benutzerdefinierten Variablen hinzugefügt. Systemvariablen befinden sich im **System**-Namespace. Sie können neben dem **User**-Namespace zusätzliche Namespaces für benutzerdefinierte Variablen erstellen und den Namen des **User**-Namespaces ändern. Es ist jedoch nicht möglich, Variablen im **System**-Namespace hinzuzufügen oder zu ändern oder Systemvariablen einem anderen Namespace zuzuweisen.
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] ([!INCLUDE[ssIS](../../includes/ssis-md.md)]) stellt zwei Standardnamespaces für Variablen bereit: **User** und **System**. Standardmäßig werden dem **User**-Namespace alle vom Entwickler erstellten benutzerdefinierten Variablen hinzugefügt. Systemvariablen befinden sich im **System**-Namespace. Sie können neben dem **User**-Namespace zusätzliche Namespaces für benutzerdefinierte Variablen erstellen und den Namen des **User**-Namespaces ändern. Es ist jedoch nicht möglich, Variablen im **System**-Namespace hinzuzufügen oder zu ändern oder Systemvariablen einem anderen Namespace zuzuweisen.
 
  Die verfügbaren Systemvariablen sind je nach Containertyp unterschiedlich. Eine Liste der für Pakete, Container, Tasks und Ereignishandler verfügbaren Systemvariablen finden Sie unter [System Variables](../system-variables.md) (Systemvariablen).
 

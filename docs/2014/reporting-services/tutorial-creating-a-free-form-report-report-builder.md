@@ -11,18 +11,18 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aaa5729c47c66e40b62cddc6bfcef1ba2ec84bdf
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175020"
 ---
-# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: Erstellen eines Freiformberichts (Berichts-Generator)
+# <a name="tutorial-creating-a-free-form-report-report-builder"></a>Lernprogramm: Erstellen eines Freiformberichts (Berichts-Generator)
   Dieses Lernprogramm zeigt Ihnen, wie Sie einen SSRS-Freiformbericht erstellen, der einem Formularbrief gleicht. Sie können Berichtselemente zu einem Formular mit Textfeldern, Bildern und anderen Datenbereichen anordnen.
 
  Der Bericht, den Sie in diesem Lernprogramm erstellen, basiert auf Beispielumsatzdaten, die im Lernprogramm enthalten sind. Im Bericht werden Informationen nach Gebiet gruppiert und der Name des Vertriebsmanagers für das Gebiet sowie ausführliche und zusammenfassende Umsatzdaten angezeigt. Der Listendatenbereich wird als Grundlage für den formfreien Bericht verwendet. Anschließend werden folgende Objekte hinzugefügt: ein dekorativer Bereich mit einem Bild, statischer Text mit eingefügten Daten, eine Tabelle zum Anzeigen ausführlicher Informationen und optional Kreis- und Säulendiagramme zum Anzeigen von Zusammenfassungsinformationen.
 
-##  <a name="BackToTop"></a>Was Sie lernen werden
+##  <a name="what-you-will-learn"></a><a name="BackToTop"></a>Was Sie lernen werden
  In diesem Lernprogramm lernen Sie Folgendes:
 
 -   [Erstellen eines leeren Berichts, einer leeren Datenquelle und eines leeren Datasets](#BlankReport)
@@ -47,10 +47,10 @@ ms.locfileid: "78175020"
 
  Ungefähre Dauer dieses Lernprogramms: 20 Minuten.
 
-## <a name="requirements"></a>Requirements (Anforderungen)
+## <a name="requirements"></a>Anforderungen
  Weitere Informationen zu den Anforderungen finden Sie unter [Voraussetzungen für Tutorials &#40;Berichts-Generator&#41;](../reporting-services/report-builder-tutorials.md).
 
-##  <a name="BlankReport"></a>1. Erstellen eines leeren Berichts, einer leeren Datenquelle und eines leeren Datasets
+##  <a name="1-create-a-blank-report-data-source-and-dataset"></a><a name="BlankReport"></a>1. Erstellen eines leeren Berichts, einer leeren Datenquelle und eines leeren Datasets
 
 > [!NOTE]
 >  In diesem Lernprogramm sind die Datenwerte in der Abfrage enthalten, sodass keine externe Datenquelle für den Bericht benötigt wird. Die Verwendung dieser Art von internen Daten eignet sich hervorragend für Lernzwecke, aber macht die Abfrage lang. .
@@ -68,7 +68,7 @@ ms.locfileid: "78175020"
 
 #### <a name="to-create-a-new-data-source"></a>So erstellen Sie eine neue Datenquelle
 
-1.  Klicken Sie im Berichtsdaten Bereich auf **neu**, und klicken Sie dann auf **Datenquelle**.
+1.  Klicken Sie im Berichtsdatenbereich auf **Neu**, und klicken Sie dann auf **Datenquelle**.
 
 2.  Geben Sie `Name` im Feld Folgendes ein: **listdatasource**
 
@@ -84,7 +84,7 @@ ms.locfileid: "78175020"
 
 #### <a name="to-create-a-new-dataset"></a>So erstellen Sie ein neues Dataset
 
-1.  Klicken Sie im Berichtsdaten Bereich auf **neu**, und klicken Sie dann auf **DataSet**.
+1.  Klicken Sie im Berichtsdatenbereich auf **Neu**und anschließend auf **Dataset**.
 
 2.  Geben Sie `Name` im Feld Folgendes ein: **listdataset.**
 
@@ -137,9 +137,8 @@ ms.locfileid: "78175020"
 
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]
 
-##  <a name="List"></a>2. hinzufügen und Konfigurieren einer Liste
- 
-  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] stellt drei Datenbereichsvorlagen bereit: Tabelle, Matrix und Liste. Diese Vorlagen basieren alle auf einem Tablix-Datenbereich.
+##  <a name="2-add-and-configure-a-list"></a><a name="List"></a>2. hinzufügen und Konfigurieren einer Liste
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] stellt drei Datenbereichsvorlagen bereit: Tabelle, Matrix und Liste. Diese Vorlagen basieren alle auf einem Tablix-Datenbereich.
 
  In diesem Lernprogramm verwenden Sie eine Liste, um die Umsatzdaten für Vertriebsgebiete in einem Bericht anzuzeigen, der einem Newsletter ähnelt. Die Informationen werden nach Gebiet gruppiert. Sie fügen eine neue Zeilengruppe hinzu, in der Daten nach Gebiet gruppiert werden, und löschen dann die integrierte Zeilengruppe "Details". Die Listenvorlage ist ideal zum Erstellen von Freiformberichten. Weitere Informationen finden Sie unter [Listen &#40;Berichts-Generator und SSRS&#41;](report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).
 
@@ -190,11 +189,11 @@ ms.locfileid: "78175020"
 
      ![Löschen der Detailgruppe](../../2014/tutorials/media/tutorial-deletedetailsgroup.png "Löschen der Detailgruppe")
 
-7.  Klicken Sie auf **nur Gruppe löschen**.
+7.  Klicken Sie auf **Nur Gruppe löschen**.
 
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]
 
-##  <a name="Graphics"></a>3. Hinzufügen von Grafiken
+##  <a name="3-add-graphics"></a><a name="Graphics"></a>3. Hinzufügen von Grafiken
  Einer der Vorteile der Verwendung eines Listendatenbereichs besteht darin, dass Berichtselemente wie z. B. Rechtecke und Textfelder überall hingefügt werden können und keine Beschränkung auf ein tabellarisches Layout besteht. Sie verbessern die Darstellung des Berichts durch Hinzufügen einer Grafik (ein mit einer Farbe ausgefülltes Rechteck).
 
 #### <a name="to-add-graphic-elements-to-the-report"></a>So fügen Sie dem Bericht grafische Elemente hinzu
@@ -215,7 +214,7 @@ ms.locfileid: "78175020"
 
  Die linke Seite des Berichts enthält nun eine vertikale Grafik, die aus einem dunkelgrauen Rechteck besteht.
 
-##  <a name="Text"></a>4. Hinzufügen von freiem Formular Text
+##  <a name="4-add-free-form-text"></a><a name="Text"></a>4. Hinzufügen von freiem Formular Text
  Ein Textfeld enthält statischen Text, der auf jeder Berichtsseite sowie in allen Datenfeldern wiederholt wird.
 
 #### <a name="to-add-text-to-the-report"></a>So fügen Sie dem Bericht Text hinzu
@@ -241,7 +240,7 @@ ms.locfileid: "78175020"
 
 7.  Wählen Sie in der Liste **Schriftart** die Schriftart **Times New Roman**, in **Größe** den Wert **20 pt**und in **Farbe** die Option **Rot**aus.
 
-     ![Texteigenschaften](../../2014/tutorials/media/tutorial-textpropertieswithnumbers.png "Texteigenschaften")
+     ![Text Eigenschaften](../../2014/tutorials/media/tutorial-textpropertieswithnumbers.png "Texteigenschaften")
 
 8.  [!INCLUDE[clickOK](../includes/clickok-md.md)]
 
@@ -320,7 +319,7 @@ ms.locfileid: "78175020"
 
  ![Vorschau für Newsletter](../../2014/tutorials/media/tutorial-newsletters.png "Vorschau für Newsletter")
 
-##  <a name="Table"></a>5. Hinzufügen einer Tabelle, um Umsatz Details anzuzeigen
+##  <a name="5-add-a-table-to-show-sales-details"></a><a name="Table"></a>5. Hinzufügen einer Tabelle, um Umsatz Details anzuzeigen
  Fügen Sie dem formfreien Bericht mithilfe des Assistenten für neue Tabellen und Matrizen eine Tabelle hinzu. Nach Fertigstellung des Assistenten wird manuell eine Zeile für Summen hinzugefügt.
 
 #### <a name="to-add-a-table"></a>So fügen Sie eine Tabelle hinzu
@@ -362,7 +361,7 @@ ms.locfileid: "78175020"
 
  ![Gesamtumsatz im Bericht](../../2014/tutorials/media/tutorial-reportsalestotals.png "Gesamtumsatz im Bericht")
 
-##  <a name="Format"></a>6. Formatieren von Daten
+##  <a name="6-format-data"></a><a name="Format"></a>6. Formatieren von Daten
  Formatieren Sie numerische Daten nur als Währung und Datumsangaben nur als Tag- und Uhrzeitangaben.
 
 #### <a name="to-format-fields-table"></a>So formatieren Sie die Feldtabelle
@@ -381,14 +380,14 @@ ms.locfileid: "78175020"
 
  ![Formatieren von Gesamtumsätzen im Bericht](../../2014/tutorials/media/tutorial-reportsalestotals-formatted.png "Formatieren von Gesamtumsätzen im Bericht")
 
-##  <a name="Save"></a>7. Speichern des Berichts
+##  <a name="7-save-the-report"></a><a name="Save"></a>7. Speichern des Berichts
  Sie können Berichte auf einem Berichtsserver, in einer SharePoint-Bibliothek oder auf dem Computer speichern. Sie können den Bericht auch in eine Vielzahl von Formaten wie Word und PDF exportieren, indem Sie den Bericht ausführen und das Format aus dem Menü **Exportieren** auswählen.
 
  Speichern Sie in diesem Lernprogramm den Bericht auf einem Berichtsserver. Wenn Sie keinen Zugriff auf einen Berichtsserver besitzen, speichern Sie den Bericht auf dem Computer.
 
 #### <a name="to-save-the-report-on-a-report-server"></a>So speichern Sie den Bericht auf einem Berichtsserver
 
-1.  Klicken Sie in der Schaltfläche **Berichts-Generator** auf **Speichern**unter.
+1.  Klicken Sie auf die Schaltfläche **Berichts-Generator** und anschließend auf **Speichern unter**.
 
 2.  Klicken Sie auf **Letzte Sites und Server**.
 
@@ -404,7 +403,7 @@ ms.locfileid: "78175020"
 
 #### <a name="to-save-the-report-on-your-computer"></a>So speichern Sie den Bericht auf dem Computer
 
-1.  Klicken Sie in der Schaltfläche **Berichts-Generator** auf **Speichern**unter.
+1.  Klicken Sie auf die Schaltfläche **Berichts-Generator** und anschließend auf **Speichern unter**.
 
 2.  Klicken Sie auf **Desktop**, **Meine Dokumente**oder **Arbeitsplatz**, und navigieren Sie anschließend zu dem Ordner, in dem Sie den Bericht speichern möchten.
 
@@ -412,7 +411,7 @@ ms.locfileid: "78175020"
 
 4.  Klicken Sie auf **Speichern**.
 
-##  <a name="Line"></a>8. (optional) Hinzufügen einer Zeile zum Trennen von Bereichen des Berichts
+##  <a name="8-optional-add-a-line-to-separate-areas-of-the-report"></a><a name="Line"></a>8. (optional) Hinzufügen einer Zeile zum Trennen von Bereichen des Berichts
  Fügen Sie eine Zeile hinzu, um den Leitartikel und die Details des Berichts zu trennen.
 
 #### <a name="to-add-a-line"></a>So fügen Sie eine Linie hinzu
@@ -431,7 +430,7 @@ ms.locfileid: "78175020"
 
      ![Hinzufügen einer Zeile zum Bericht](../../2014/tutorials/media/tutorial-reportwithline.png "Hinzufügen einer Zeile zum Bericht")
 
-##  <a name="Visualization"></a>9. (optional) Hinzufügen einer Zusammenfassungs Datenvisualisierung
+##  <a name="9-optional-add-summary-data-visualization"></a><a name="Visualization"></a>9. (optional) Hinzufügen einer Zusammenfassungs Datenvisualisierung
  Mit Rechtecken kann das Rendern des Berichts beeinflusst werden. Platzieren Sie in einem Rechteck ein Kreis- und ein Säulendiagramm, um sicherzustellen, dass der Bericht wunschgemäß gerendert wird.
 
 #### <a name="to-add-a-rectangle"></a>So fügen Sie ein Rechteck hinzu
@@ -446,7 +445,7 @@ ms.locfileid: "78175020"
 
 1.  Klicken Sie auf der Registerkarte **Einfügen** des Menübands im Bereich **Datenvisualisierungen** auf **Diagramm** und anschließend auf **Diagramm-Assistent**.
 
-2.  Klicken Sie auf der Seite Dataset auswählen auf **ListDataset**und anschließend auf **Weiter**.
+2.  Klicken Sie auf der Seite Dataset auswählen auf **ListDataset**, und anschließend auf **Weiter**.
 
 3.  Klicken Sie auf **Kreis**, und klicken Sie dann auf **Weiter**.
 
@@ -476,7 +475,7 @@ ms.locfileid: "78175020"
 
 1.  Klicken Sie auf der Registerkarte **Einfügen** des Menübands im Bereich **Datenvisualisierungen** auf **Diagramm** und anschließend auf **Diagramm-Assistent**.
 
-2.  Klicken Sie auf der Seite **Dataset auswählen** auf **listdataset**, und klicken Sie dann auf **weiter**.
+2.  Klicken Sie auf der Seite **Dataset auswählen** auf **ListDataset**, und anschließend auf **Weiter**.
 
 3.  Klicken Sie auf **Spalte**und anschließend auf **Weiter**.
 

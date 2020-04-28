@@ -13,10 +13,10 @@ ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4b92f9c8b65db459d46aff51b7aed58c3ff6e307
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76940437"
 ---
 # <a name="ado-glossary-terms"></a>ADO-Glossar Begriffe
@@ -63,7 +63,7 @@ In diesem Thema werden die für ADO relevanten Begriffe definiert.
 
  Zeichensatz: eine Zuordnung eines Satzes von Zeichen zu den numerischen Werten. Beispielsweise ist Unicode ein 16-Bit-Zeichensatz, der alle bekannten Zeichen codieren und als weltweiten Zeichen Codierungsstandard verwendet werden kann.
 
- untergeordnetes Element der abhängigen Seite einer hierarchischen Beziehung. Ein untergeordnetes Element ist ein Knoten in einer hierarchischen Struktur, der über einen anderen übergeordneten Knoten verfügt (näher an der Wurzel). Siehe auch untergeordneter *Alias*, über-/Unterordnungsbeziehung, über *geordnetes*Element. **
+ untergeordnetes Element der abhängigen Seite einer hierarchischen Beziehung. Ein untergeordnetes Element ist ein Knoten in einer hierarchischen Struktur, der über einen anderen übergeordneten Knoten verfügt (näher an der Wurzel). Siehe auch untergeordneter *Alias*, über-/Unterordnungsbeziehung, über *geordnetes*Element. *parent-child relationship*
 
  untergeordneter Alias ein Alias, der auf das untergeordnete Element verweist. Siehe auch *Alias*, *unter*geordnet.
 
@@ -104,7 +104,7 @@ In diesem Thema werden die für ADO relevanten Begriffe definiert.
 
  DDL (Data Definition Language, Datendefinitionssprache) diese Anweisungen in SQL, die im Gegensatz zur Bearbeitung von Daten definieren. Das Schema einer Datenbank wird mit DDL erstellt oder geändert. **CREATE TABLE**, **Create Index**, **Grant**und **revosind z** . b. SQL-DDL-Anweisungen.
 
- Standardmäßig streamen Sie einen Text-oder Binärdaten Strom (dargestellt durch ein **Streamobjekt** ), der **Daten Satz** -oder recordsetobjekten zugeordnet ist, wenn bestimmte OLE DB Anbieter verwendet werden, z. b. der Microsoft OLE DB-Anbieter für die Internet **** Der Standarddaten Strom enthält normalerweise den Inhalt einer Datei, z. b. den HTML-Code für den Stamm einer Website.
+ Standardmäßig streamen Sie einen Text-oder Binärdaten Strom (dargestellt durch ein **Streamobjekt** ), der **Daten Satz** -oder recordsetobjekten zugeordnet ist, wenn bestimmte OLE DB Anbieter verwendet werden, z. b. der Microsoft OLE DB-Anbieter für die Internet **Recordset** Der Standarddaten Strom enthält normalerweise den Inhalt einer Datei, z. b. den HTML-Code für den Stamm einer Website.
 
  verteilte Anwendung: ein Programm, das so geschrieben ist, dass die Verarbeitung über ein Netzwerk auf mehrere Computer aufgeteilt werden kann. Eine verteilte Anwendung ist in der Regel in Präsentations-, Geschäftslogik-und Daten *Speicherebenen unterteilt.* Siehe auch Client Ebene, mittlere Ebene, Datenquellen Ebene.
 

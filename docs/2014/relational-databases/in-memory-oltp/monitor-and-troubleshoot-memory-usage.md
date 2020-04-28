@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 968d1bb6ce5eee2d25860353586d14f31dc67807
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175909"
 ---
 # <a name="monitor-and-troubleshoot-memory-usage"></a>Überwachung und Fehlerbehebung für die Arbeitsspeicherauslastung
@@ -23,7 +23,7 @@ ms.locfileid: "78175909"
  In diesem Thema wird das Überwachen der [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] -Speicherauslastung behandelt.
 
 
-##  <a name="bkmk_CreateDB"></a>Erstellen einer Beispieldatenbank mit Speicher optimierten Tabellen
+##  <a name="create-a-sample-database-with-memory-optimized-tables"></a><a name="bkmk_CreateDB"></a>Erstellen einer Beispieldatenbank mit Speicher optimierten Tabellen
  Sie können diesen Abschnitt überspringen, wenn Sie bereits über eine Datenbank mit speicheroptimierten Tabellen verfügen.
 
  In den folgenden Schritten wird eine Datenbank mit drei speicheroptimierten Tabellen erstellt, die Sie im weiteren Verlauf dieses Themas verwenden können. Im Beispiel wurde die Datenbank einem Ressourcenpool zugeordnet, um zu steuern, wie viel Arbeitsspeicher von speicheroptimierten Tabellen eingenommen werden kann.
@@ -113,8 +113,7 @@ ms.locfileid: "78175909"
 ##  <a name="monitoring-memory-usage"></a>Überwachen der Arbeitsspeicherverwendung
 
 ###  <a name="using-ssmanstudiofull"></a>Verwenden von [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]
- 
-  [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Im Lieferumfang sind integrierte Standardberichte enthalten, um den von Tabellen im Arbeitsspeicher beanspruchten Speicherplatz zu überwachen. Sie können auf diese Berichte mithilfe des Objekt-Explorers zugreifen, wie [hier](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)erläutert. Mit dem Objekt-Explorer können Sie auch den Arbeitsspeicher überwachen, der von einzelnen speicheroptimierten Tabellen beansprucht wird.
+ [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Im Lieferumfang sind integrierte Standardberichte enthalten, um den von Tabellen im Arbeitsspeicher beanspruchten Speicherplatz zu überwachen. Sie können auf diese Berichte mithilfe des Objekt-Explorers zugreifen, wie [hier](https://blogs.msdn.com/b/managingsql/archive/2006/05/16/ssms-reports-1.aspx)erläutert. Mit dem Objekt-Explorer können Sie auch den Arbeitsspeicher überwachen, der von einzelnen speicheroptimierten Tabellen beansprucht wird.
 
 #### <a name="consumption-at-the-database-level"></a>Verbrauch auf Datenbankebene
  Sie können die Arbeitsspeicherauslastung auf Datenbankebene wie folgt überwachen.

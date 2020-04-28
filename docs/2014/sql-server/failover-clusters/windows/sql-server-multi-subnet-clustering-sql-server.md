@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ca6e081097cb26d4054e5b62fd62cefc0c6d96f8
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172372"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>SQL Server-Multisubnetzclustering (SQL Server)
@@ -28,32 +28,28 @@ ms.locfileid: "78172372"
 
  
 
-##  <a name="VisualElement"></a>SQL Server-multisubnetz-Failovercluster (zwei Knoten, zwei Subnetze)
+##  <a name="sql-server-multi-subnet-failover-cluster-two-nodes-two-subnets"></a><a name="VisualElement"></a> SQL Server-Multisubnetz-Failovercluster (zwei Knoten, zwei Subnetze)
  In der folgenden Abbildung wird eine Failoverclusterinstanz (FCI) in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]mit zwei Knoten dargestellt.
 
  ![Multisubnetzarchitektur mit MultiSubnetFailover](../../../database-engine/media/multi-subnet-architecture-withmultisubnetfailoverparam.gif "Multisubnetzarchitektur mit MultiSubnetFailover")
 
 
 
-##  <a name="Configurations"></a>Konfigurationen von multisubnetz-Failoverclusterinstanzen
+##  <a name="multi-subnet-failover-cluster-instance-configurations"></a><a name="Configurations"></a> Konfigurationen einer Multisubnetz-Failoverclusterinstanz
  Im Folgenden finden Sie einige Beispiele für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCIs mit mehreren Subnetzen:
 
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCI SQLCLUST1 enthält Node1 und Node2. Node1 ist mit Subnet1 verbunden. Node2 ist mit Subnet2 verbunden. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Setup sieht diese Konfiguration als multisubnetzcluster und legt die IP-Adress Abhängigkeit auf **or**fest.
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCI SQLCLUST1 enthält Node1 und Node2. Node1 ist mit Subnet1 verbunden. Node2 ist mit Subnet2 verbunden. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup betrachtet diese Konfiguration als Multisubnetzcluster und legt die IP-Adressressourcenabhängigkeit auf **OR**fest.
 
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCI SQLCLUST1 enthält Node1, Node2 und Node3. Node1 und Node2 sind mit Subnet1 verbunden. Node3 ist mit Subnet2 verbunden. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Setup sieht diese Konfiguration als multisubnetzcluster und legt die IP-Adress Abhängigkeit auf **or**fest. Da sich Node1 und Node2 im gleichen Subnetz befinden, bietet diese Konfiguration zusätzlich lokale Hochverfügbarkeit.
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCI SQLCLUST1 enthält Node1, Node2 und Node3. Node1 und Node2 sind mit Subnet1 verbunden. Node3 ist mit Subnet2 verbunden. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup betrachtet diese Konfiguration als Multisubnetzcluster und legt die IP-Adressressourcenabhängigkeit auf **OR**fest. Da sich Node1 und Node2 im gleichen Subnetz befinden, bietet diese Konfiguration zusätzlich lokale Hochverfügbarkeit.
 
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCI SQLCLUST1 enthält Node1 und Node2. Node1 befindet sich in Subnet1. Node2 befindet sich in Subnet1 und Subnet2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Setup sieht diese Konfiguration als multisubnetzcluster und legt die IP-Adress Abhängigkeit auf **or**fest.
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCI SQLCLUST1 enthält Node1 und Node2. Node1 befindet sich in Subnet1. Node2 befindet sich in Subnet1 und Subnet2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -Setup betrachtet diese Konfiguration als Multisubnetzcluster und legt die IP-Adressressourcenabhängigkeit auf **OR**fest.
 
--   
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCI SQLCLUST1 enthält Node1 und Node2. Node1 ist mit Subnet1 und Subnet2 verbunden. Node2 ist auch mit Subnet1 und Subnet2 verbunden. Die IP-Adressabhängigkeit wird vom Setup von **auf** AND [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] festgelegt.
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCI SQLCLUST1 enthält Node1 und Node2. Node1 ist mit Subnet1 und Subnet2 verbunden. Node2 ist auch mit Subnet1 und Subnet2 verbunden. Die IP-Adressabhängigkeit wird vom Setup von **auf** AND [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] festgelegt.
 
     > [!NOTE]
     >  Diese Konfiguration wird nicht als Multisubnetz-Failovercluster-Konfiguration betrachtet, da sich die gruppierten Knoten in der gleichen Subnetzgruppe befinden.
 
-##  <a name="ComponentsAndConcepts"></a>Überlegungen zur IP-Adress Ressource
+##  <a name="ip-address-resource-considerations"></a><a name="ComponentsAndConcepts"></a> Überlegungen zu IP-Adressressourcen
  Die IP-Adressen in einer Multisubnetz-Failoverclusterkonfiguration sind nicht im Besitz aller Knoten im Failovercluster und beim Start von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] möglicherweise nicht alle online. Ab [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]können Sie die IP-Adressabhängigkeit auf **OR**festlegen. Dadurch kann [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] online sein, wenn mindestens eine gültige IP-Adresse vorhanden ist, mit der eine Bindung hergestellt werden kann.
 
 > [!NOTE]
@@ -70,7 +66,7 @@ ms.locfileid: "78172372"
 
  Wenn eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCI und eine eigenständige [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]-Instanz parallel installiert sind, achten Sie darauf, dass Konflikte mit TCP-Portnummern für die IP-Adressen vermieden werden. Konflikte treten in der Regel auf, wenn in zwei [!INCLUDE[ssDE](../../../includes/ssde-md.md)] -Instanzen die Verwendung des TCP-Standartports (1433) konfiguriert wurde. Um Konflikte zu vermeiden, konfigurieren Sie in einer Instanz die Verwendung eines nicht standardmäßigen festen Ports. Die Konfiguration eines festen Ports kann in der Regel in der eigenständigen Instanz am einfachsten vorgenommen werden. Wenn [!INCLUDE[ssDE](../../../includes/ssde-md.md)] für die Verwendung anderer Ports konfiguriert wird, wird verhindert, dass ein unerwarteter IP-Adressen-/TCP-Port-Konflikt auftritt, der den Start einer Instanz blockiert, wenn eine [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] -FCI ein Failover zu dem Standbyknoten ausführt.
 
-##  <a name="DNS"></a>Client Wiederherstellungs Latenz während des Failovers
+##  <a name="client-recovery-latency-during-failover"></a><a name="DNS"></a> Clientwiederherstellungs-Latenzzeit während der Failover
  Die RegisterAllProvidersIP-Clusterressource wird von einer Multisubnetz-FCI für den Netzwerknamen standardmäßig aktiviert. In einer Multisubnetzkonfiguration werden die Online- und Offline-IP-Adressen des Netzwerknamens beim DNS-Server registriert. Die Clientanwendung ruft dann alle registrierten IP-Adressen vom DNS-Server ab und versucht, entweder geordnet oder parallel eine Verbindung mit den Adressen herzustellen. Demnach hängt die Clientwiederherstellungszeit in Multisubnetz-Failovern nicht länger von DNS-Aktualisierungs-Wartezeiten ab. Standardmäßig versucht der Client die IP-Adressen geordnet abzurufen. Wenn der Client den neuen optionalen `MultiSubnetFailover=True`-Parameter in seiner Verbindungszeichenfolge verwendet, versucht er stattdessen gleichzeitig die IP-Adressen abzurufen und stellt eine Verbindung mit dem ersten antwortenden Server her. Dadurch kann die Clientwiederherstellungs-Latenzzeit minimiert werden, wenn Failover auftreten. Weitere Informationen finden Sie unter [AlwaysOn-Client Konnektivität (SQL Server)](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md) und [erstellen oder Konfigurieren eines verfügbarkeitsgruppenlistener &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).
 
  Bei Legacyclientbibliotheken oder Drittanbieterdatenanbietern können Sie den `MultiSubnetFailover`-Parameter in der Verbindungszeichenfolge nicht verwenden. Versuchen Sie, den Verbindungstimeout in der Clientverbindungszeichenfolge um 21 Sekunden für jede zusätzliche IP-Adresse anzupassen, damit sichergestellt wird, dass Ihre Clientanwendung optimal mit dem Multisubnetz-FCI in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]interagiert. Dadurch wird sichergestellt, dass der Wiederverbindungsversuch des Clients nicht zu einem Timeout führt, bevor es in der Lage ist, alle IP-Adressen in der Multisubnetz-FCI durchzugehen.
@@ -79,7 +75,7 @@ ms.locfileid: "78172372"
 
  
 
-##  <a name="RelatedContent"></a> Verwandte Inhalte
+##  <a name="related-content"></a><a name="RelatedContent"></a> Verwandte Inhalte
 
 |Inhaltsbeschreibung|Thema|
 |-------------------------|-----------|

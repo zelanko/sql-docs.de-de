@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: fb8ade48f56a6b8bec4a8de5094a271080a1eab7
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175769"
 ---
 # <a name="create-measures-and-measure-groups-in-multidimensional-models"></a>Erstellen von Measures und Measuregruppen in mehrdimensionalen Modellen
@@ -28,11 +28,11 @@ ms.locfileid: "78175769"
 
 -   [Komponenten eines Measures](#bkmk_comps)
 
--   [Modellieren von Measures und Messen von Gruppen in Fakten und Fakten Tabellen](#bkmk_modeling)
+-   [Modellierung von Measures und Measuregruppen zu Fakten und Faktentabellen](#bkmk_modeling)
 
--   [Granularität einer Measure-Gruppe](#bkmk_grain)
+-   [Granularität einer Measuregruppe](#bkmk_grain)
 
-##  <a name="bkmk_create"></a>Ansätze zum Erstellen von Measures
+##  <a name="approaches-for-creating-measures"></a><a name="bkmk_create"></a>Ansätze zum Erstellen von Measures
  Measures können ein statisches Element des Cubes sein, die zur Entwurfszeit erstellt werden und immer vorhanden sind, wenn auf den Cube zugegriffen wird. Sie können ein Measure aber auch als *berechnetes Element* mithilfe eines MDX-Ausdrucks definieren, um einen berechneten Wert für ein Measure basierend auf anderen Measures im Cube bereitzustellen. Ein berechnetes Element kann auf die Sitzung oder den Benutzer begrenzt werden.
 
  Verwenden Sie einen der folgenden Ansätze, um ein Measure oder eine Measuregruppe zu erstellen:
@@ -44,16 +44,16 @@ ms.locfileid: "78175769"
 |berechnetes Element|Berechnete Elemente fügen einem Cube in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Flexibilität und Analysefunktionen hinzu, da Sie steuern können, wann und wie sie erstellt werden. Manchmal benötigen Sie ein Measure nur vorübergehend für die Dauer einer Benutzersitzung oder in Management Studio als Teil einer Untersuchung.<br /><br /> Öffnen Sie in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]die Registerkarte Berechnungen, um ein neues berechnetes Element zu erstellen.<br /><br /> Wählen Sie diesen Ansatz, um ein Measure auf Grundlage eines MDX-Ausdrucks zu erstellen. Weitere Informationen finden Sie in den folgenden Themen: [Erstellen von Measures in MDX](mdx/mdx-building-measures.md), [Berechnungen](../multidimensional-models-olap-logical-cube-objects/calculations.md), [Berechnungen in mehrdimensionalen Modellen](calculations-in-multidimensional-models.md) und [Grundlegendes zu MDX-Skripts &#40;Analysis Services&#41;](mdx/mdx-scripting-fundamentals-analysis-services.md).|
 |MDX oder XMLA|In SQL Server Management Studio können Sie MDX oder XMLA ausführen, um eine Datenbank zu ändern und ein neues berechnetes Measure einzubeziehen. Dieser Ansatz eignet sich für Ad-hoc-Tests von Daten, nachdem die Projektmappe auf einem Server bereitgestellt wurde. Siehe [Document and Script an Analysis Services Database](document-and-script-an-analysis-services-database.md).|
 
-##  <a name="bkmk_comps"></a>Komponenten eines Measures
+##  <a name="components-of-a-measure"></a><a name="bkmk_comps"></a>Komponenten eines Measures
  Ein Measure ist ein Objekt mit Eigenschaften. Neben dem Namen benötigt ein Measure einen Aggregationstyp und eine Quellspalte oder einen Ausdruck, um das Measure mit Daten zu laden. Sie können die Measuredefinition durch Einstellen der Eigenschaften ändern.
 
 |||
 |-|-|
 |**Ausgangs**|Die meisten Measures stammen aus numerischen Spalten in Faktentabellen in einem externen Data Warehouse, z. B. die Spalte "Betrag der Verkäufe" in den Tabellen "Internetverkäufe" und "Verkäufe des Wiederverkäufers" im AdventureWorks-Data Warehouse. Sie können aber auch neue Measures erstellen, die vollkommen auf von Ihnen definierten Berechnungen basieren.<br /><br /> Attributspalten aus Dimensionstabellen können zum Definieren von Measures verwendet werden. Diese Measures sind jedoch im Allgemeinen hinsichtlich ihres Aggregationsverhaltens semiadditiv oder nicht additiv. Weitere Informationen zum semiadditiven Aggregationsverhalten finden Sie unter [Semiadditives Verhalten definieren](define-semiadditive-behavior.md).|
-|**Stellung**|Standardmäßig werden Measures über die einzelnen Dimensionen hinweg summiert. Die `AggregateFunction`-Eigenschaft bietet Ihnen jedoch die Möglichkeit, dieses Verhalten zu ändern. Eine Liste finden Sie unter [Use Aggregate Functions](use-aggregate-functions.md) .|
+|**aggregation**|Standardmäßig werden Measures über die einzelnen Dimensionen hinweg summiert. Die `AggregateFunction`-Eigenschaft bietet Ihnen jedoch die Möglichkeit, dieses Verhalten zu ändern. Eine Liste finden Sie unter [Use Aggregate Functions](use-aggregate-functions.md) .|
 |**Eigenschaften**|Zusätzliche Beschreibungen der Eigenschaften finden Sie unter [Configure Measure Properties](configure-measure-properties.md) .|
 
-##  <a name="bkmk_modeling"></a>Modellieren von Measures und Messen von Gruppen in Fakten und Fakten Tabellen
+##  <a name="modeling-measures-and-measure-groups-on-facts-and-fact-tables"></a><a name="bkmk_modeling"></a>Modellieren von Measures und Messen von Gruppen in Fakten und Fakten Tabellen
  Bevor Sie einen Assistenten ausführen, sollten Sie die Modellierungsprinzipien hinter der Measuredefinition kennen.
 
  Measures und Measuregruppen sind die mehrdimensionalen Objekte, die Fakten und Faktentabellen in einem externen Data Warehouse darstellen. In den meisten Fällen basieren Measures und Measuregruppen auf Objekten in einer Datenquellensicht, die wiederum aus dem zugrundeliegenden Data Warehouse erstellt werden.
@@ -75,7 +75,7 @@ ms.locfileid: "78175769"
 > [!NOTE]
 >  Nicht alle Measures werden direkt aus einem in einer Spalte der Faktentabelle gespeicherten Wert abgeleitet. So basiert beispielsweise das **Sales Person Count** -Measure, das in der **Sales Quota** -Measuregruppe des Adventure Works-Beispielcubes definiert ist, tatsächlich auf der Anzahl eindeutiger Werte (oder Distinct Count) in der Spalte **EmployeeKey** der Faktentabelle **FactSalesQuota** .
 
-##  <a name="bkmk_grain"></a>Granularität einer Measure-Gruppe
+##  <a name="granularity-of-a-measure-group"></a><a name="bkmk_grain"></a>Granularität einer Measure-Gruppe
  Measuregruppen verfügen über eine zugeordnete Granularität, die auf die von einer Faktentabelle unterstützte Detailebene verweist. Die Granularität ist über die Fremdschlüssel-Beziehung zu einer Dimension festgelegt.
 
  Beispielsweise hat die Faktentabelle **FactSalesQuota** eine Fremdschlüsselbeziehung zur Tabelle **DimEmployee** , jeder Datensatz in der Tabelle **FactSalesQuota** steht in Beziehung zu einem Mitarbeiter. Die Granularität der Measuregruppe befindet sich aus Sicht der Employee-Dimension also auf der Ebene einzelner Mitarbeiter.

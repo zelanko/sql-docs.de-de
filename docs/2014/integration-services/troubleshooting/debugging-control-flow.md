@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3a7417a3f5792be0838d421ca0115935ae190f49
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176601"
 ---
 # <a name="debugging-control-flow"></a>Debuggen der Ablaufsteuerung
@@ -40,7 +40,7 @@ ms.locfileid: "78176601"
 
  [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] stellt zehn Unterbrechungsbedingungen bereit, die Sie für alle Tasks und Container aktivieren können. Im Dialogfeld **Breakpoints festlegen** können Sie Breakpoints für die folgenden Bedingungen aktivieren:
 
-|Unterbrechungsbedingung|Beschreibung|
+|Unterbrechungsbedingung|BESCHREIBUNG|
 |---------------------|-----------------|
 |Wenn der Task oder Container das `OnPreExecute`-Ereignis empfängt.|Wird aufgerufen, unmittelbar bevor ein Task ausgeführt wird. Dieses Ereignis wird durch einen Task oder Container ausgelöst, unmittelbar bevor er ausgeführt wird.|
 |Wenn der Task oder Container das `OnPostExecute`-Ereignis empfängt.|Wird aufgerufen, unmittelbar nachdem die Ausführungslogik des Tasks beendet wurde. Dieses Ereignis wird durch einen Task oder Container ausgelöst, unmittelbar nachdem er ausgeführt wurde.|
@@ -65,7 +65,7 @@ ms.locfileid: "78176601"
 
  In der folgenden Tabelle sind die Typen der Trefferanzahl aufgeführt.
 
-|Typ der Trefferanzahl|Beschreibung|
+|Typ der Trefferanzahl|BESCHREIBUNG|
 |--------------------|-----------------|
 |Always|Die Ausführung wird immer angehalten, wenn der Breakpoint erreicht wird.|
 |Trefferanzahl ist gleich|Die Ausführung wird angehalten, wenn die Anzahl des Auftretens des Breakpoints der Trefferanzahl entspricht.|
@@ -97,7 +97,7 @@ ms.locfileid: "78176601"
 
  Im folgenden Diagramm wird die Registerkarte **Status** angezeigt.
 
- ![Fortschrittsregisterkarte des SSIS-Designers](../media/mw-dtsflow04.gif "Status (Registerkarte) des SSIS-Designers")
+ ![Fortschrittsregisterkarte des SSIS-Designers](../media/mw-dtsflow04.gif "Fortschrittsregisterkarte des SSIS-Designers")
 
 ## <a name="debug-windows"></a>Debugfenster
  [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)] enthält viele Fenster, in denen Sie Breakpoints verwenden und Pakete, die Breakpoints enthalten, debuggen können. Um weitere Informationen zu den einzelnen Fenstern zu erhalten, öffnen Sie das entsprechende Fenster, und drücken Sie F1, um die zugehörige Hilfe anzuzeigen.
@@ -106,7 +106,7 @@ ms.locfileid: "78176601"
 
  In der folgenden Tabelle sind diese Fenster beschrieben.
 
-|Fenster|Beschreibung|
+|Fenster|BESCHREIBUNG|
 |------------|-----------------|
 |Breakpoints|Listet die Breakpoints in einem Paket auf und stellt Optionen zum Aktivieren und Löschen von Breakpoints bereit.|
 |Output|Zeigt Statusmeldungen für Funktionen in [!INCLUDE[ssBIDevStudioFull](../../../includes/ssbidevstudiofull-md.md)]an.|

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 450a42a4564d3a59b5b609f2ca8faf6c1f99a128
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175267"
 ---
 # <a name="defining-named-sets"></a>Definieren von benannten Mengen
@@ -32,7 +32,7 @@ ms.locfileid: "78175267"
 
      Wenn Sie eine neue Berechnung auf der Registerkarte **Berechnungen** definieren, sollten Sie daran denken, dass Berechnungen in der Reihenfolge aufgelöst werden, in der sie im Bereich **Skriptplaner** angezeigt werden. Ihr Fokus innerhalb dieses Bereichs bestimmt beim Erstellen einer neuen Berechnung die Reihenfolge, in der die Berechnung ausgeführt wird. Eine neue Berechnung wird unmittelbar nach der Berechnung definiert, die gerade den Fokus besitzt.
 
-3.  Ändern Sie **** `[Core Products]`im Feld Name den Namen der neuen benannten Menge in.
+3.  Ändern Sie **Name** `[Core Products]`im Feld Name den Namen der neuen benannten Menge in.
 
      Achten Sie im Bereich **Skriptplaner** auf das spezielle Symbol, das eine benannte Menge von einem Skriptbefehl oder einem berechneten Element unterscheidet.
 
@@ -49,7 +49,7 @@ ms.locfileid: "78175267"
 
 1.  Klicken Sie mit `[Core Products]` der rechten Maustaste in den Bereich **Skript Planer** , und klicken Sie dann auf **neue benannte Menge**.
 
-2.  Ändern Sie **** `[Large Resellers]`im Feld Name den Namen dieser benannten Menge in.
+2.  Ändern Sie **Name** `[Large Resellers]`im Feld Name den Namen dieser benannten Menge in.
 
 3.  Geben `Exists()`Sie im Feld **Ausdruck** ein.
 
@@ -75,7 +75,7 @@ ms.locfileid: "78175267"
 
 8.  Öffnen Sie den Dimensions-Designer für die **Reseller** -Dimension, und klicken Sie anschließend im Bereich **Attribute** auf **Number of Employees** .
 
-9. `DiscretizationMethod` Ändern Sie im Eigenschaftenfenster die-Eigenschaft in **automatisch**, und ändern Sie dann `DiscretizationBucketCount` die- `5`Eigenschaft in. Weitere Informationen finden Sie unter [Gruppieren von Attribut Elementen &#40;diskretisierungs&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).
+9. `DiscretizationMethod` Ändern Sie im Eigenschaftenfenster die-Eigenschaft in **automatisch**, und ändern Sie dann `DiscretizationBucketCount` die- `5`Eigenschaft in. Weitere Informationen finden Sie unter [Gruppieren von Attributelementen &#40;Diskretisierung&#41;](multidimensional-models/attribute-properties-group-attribute-members.md).
 
 10. Klicken Sie im Menü **Erstellen** von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]auf **Analysis Services Tutorial bereitstellen**.
 
@@ -132,7 +132,7 @@ ms.locfileid: "78175267"
      ![Filterbereich mit zwei benannten Mengen](../../2014/tutorials/media/l6-named-set-05.gif "Filterbereich mit zwei benannten Mengen")
 
 ## <a name="next-task-in-lesson"></a>Nächste Aufgabe in der Lektion
- [Lektion 7: Definieren von wichtigsten Leistungsindikatoren &#40;KPIs&#41;](lesson-7-defining-key-performance-indicators-kpis.md)
+ [Lektion 7: Definieren von KPIs &#40;Key Performance Indicator&#41;](lesson-7-defining-key-performance-indicators-kpis.md)
 
 ## <a name="see-also"></a>Weitere Informationen
  [Berechnungen](multidimensional-models-olap-logical-cube-objects/calculations.md) [Erstellen benannter Mengen](multidimensional-models/create-named-sets.md)

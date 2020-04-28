@@ -12,10 +12,10 @@ ms.assetid: 4d3a3940-6c2a-4dc4-90eb-86f26012c165
 author: swinarko
 ms.author: sawinark
 ms.openlocfilehash: 35f5c02e7206c6a9117b31c9ca9b503fb7b6875f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75557956"
 ---
 # <a name="import-domains-from-an-excel-file-in-knowledge-discovery---data-quality-services-dqs"></a>Importieren von Domänen aus einer Excel-Datei in Knowledge Discovery-Data Quality Services (DQS)
@@ -24,17 +24,17 @@ ms.locfileid: "75557956"
 
   In diesem Thema wird beschrieben, wie eine oder mehrere Domänen in einer Excel-Datei in die [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS)-Wissensermittlungsaktivität importiert werden. Der Importvorgang vereinfacht den Wissensgenerierungsprozess und spart Zeit und Aufwand. Auf diese Weise können Personen, die über Daten in einer Excel-Datei oder Textdatei verfügen, eine Wissensdatenbank mit diesen Daten erstellen. (Weitere Informationen zum Importieren von Werten in eine Domäne einer vorhandenen Wissensdatenbank finden Sie [unter Importieren von Werten aus einer Excel-Datei in eine Domäne](../data-quality-services/import-values-from-an-excel-file-into-a-domain.md) .) Das Exportieren in eine Excel-Datei wird nicht unterstützt.  
   
-##  <a name="BeforeYouBegin"></a> Vorbereitungen  
+##  <a name="before-you-begin"></a><a name="BeforeYouBegin"></a> Vorbereitungen  
   
-###  <a name="Prerequisites"></a> Voraussetzungen  
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen  
  Um Domänen aus einer Excel-Datei zu importieren, muss Excel auf dem Computer installiert sein, auf dem [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] installiert ist; Sie müssen eine Excel-Datei mit Domänenwerten erstellt haben (siehe [How the import works](#How)) und Sie müssen eine Wissensdatenbank erstellt und geöffnet haben, um die Domäne zu importieren.  
   
-###  <a name="Security"></a> Sicherheit  
+###  <a name="security"></a><a name="Security"></a> Sicherheit  
   
-####  <a name="Permissions"></a> Berechtigungen  
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen  
  Sie müssen über die dqs_kb_editor- oder die dqs_administrator-Rolle in der DQS_MAIN-Datenbank verfügen, um Domänen aus einer Excel-Datei zu importieren.  
   
-##  <a name="Import"></a>Importieren von Domänen aus einer Excel-Datei in eine Wissensdatenbank  
+##  <a name="import-domains-from-an-excel-file-into-a-knowledge-base"></a><a name="Import"></a>Importieren von Domänen aus einer Excel-Datei in eine Wissensdatenbank  
   
 1.  [!INCLUDE[ssDQSInitialStep](../includes/ssdqsinitialstep-md.md)][Führen Sie die Data Quality-Client Anwendung](../data-quality-services/run-the-data-quality-client-application.md)aus.  
   
@@ -71,10 +71,10 @@ ms.locfileid: "75557956"
   
 14. Überprüfen Sie, ob die Wissensdatenbank veröffentlicht wurde, und klicken Sie dann auf **OK**.  
   
-##  <a name="FollowUp"></a>Nachverfolgung: nach dem Importieren von Domänen aus einer Excel-Datei  
+##  <a name="follow-up-after-importing-domains-from-an-excel-file"></a><a name="FollowUp"></a>Nachverfolgung: nach dem Importieren von Domänen aus einer Excel-Datei  
  Nachdem Sie Domänen aus einer Excel-Datei importiert haben, können Sie den Domänen Wissen hinzufügen oder die Domänen in einem Bereinigungs- oder Abgleichsprojekt verwenden – je nach den Inhalten der Domänen. Weitere Informationen finden Sie unter [Durchführen der Wissensermittlung](../data-quality-services/perform-knowledge-discovery.md), [Verwalten einer Domäne](../data-quality-services/managing-a-domain.md), [Verwalten einer Verbunddomäne](../data-quality-services/managing-a-composite-domain.md), [Erstellen einer Abgleichsrichtlinie](../data-quality-services/create-a-matching-policy.md), [Datenbereinigung](../data-quality-services/data-cleansing.md) oder [Datenabgleich](../data-quality-services/data-matching.md).  
   
-##  <a name="How"></a>Funktionsweise des Imports  
+##  <a name="how-the-import-works"></a><a name="How"></a>Funktionsweise des Imports  
  Beim Importvorgang interpretiert DQS eine Excel-Datei wie folgt:  
   
 -   Eine Spalte stellt eine Domäne dar.  

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c953060e082ade1e325589cc712f723dabb4909d
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175409"
 ---
 # <a name="transactions-in-memory-optimized-tables"></a>Transaktionen in speicheroptimierten Tabellen
@@ -50,8 +50,7 @@ ms.locfileid: "78175409"
  Wenn darüber hinaus von einer Transaktion (TxA) Zeilen gelesen werden, die von einer anderen Transaktion (TxB) eingefügt oder bearbeitet wurden und für die gerade ein Commit ausgeführt wird, wartet die Transaktion nicht auf den Commit, sondern geht optimistisch davon aus, dass die andere Transaktion einen Commit ausführen wird. In diesem Fall übernimmt Transaktion TxA eine Abhängigkeit vom Commit der Transaktion TxB.
 
 ## <a name="conflict-detection-validation-and-commit-dependency-checks"></a>Konflikterkennung, Überprüfung und Commitabhängigkeitsüberprüfungen
- 
-  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] erkennt Konflikte zwischen gleichzeitigen Transaktionen sowie Verletzungen der Isolationsstufe und verwirft eine der in Konflikt stehenden Transaktionen. Diese Transaktion muss erneut ausgeführt werden. (Weitere Informationen finden Sie unter [Richtlinien für Wiederholungs Logik für Transaktionen in Speicher optimierten Tabellen](../relational-databases/in-memory-oltp/memory-optimized-tables.md).)
+ [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] erkennt Konflikte zwischen gleichzeitigen Transaktionen sowie Verletzungen der Isolationsstufe und verwirft eine der in Konflikt stehenden Transaktionen. Diese Transaktion muss erneut ausgeführt werden. (Weitere Informationen finden Sie unter [Richtlinien für Wiederholungs Logik für Transaktionen in Speicher optimierten Tabellen](../relational-databases/in-memory-oltp/memory-optimized-tables.md).)
 
  Das System nimmt optimistisch an, dass keine Konflikte und keine Verstöße gegen die Transaktionsisolation vorliegen. Falls Konflikte auftreten, die Inkonsistenzen in der Datenbank verursachen oder die Transaktionsisolation verletzen könnten, werden diese Konflikte ermittelt und die Transaktion beendet.
 
@@ -83,7 +82,7 @@ Lebensdauer einer Transaktion, die auf speicheroptimierte Tabellen zugreift.
 
  Dieser Fehler führt zu einem Transaktionsabbruch (selbst wenn XACT_ABORT auf OFF festgelegt ist). Dies bedeutet, dass bei Beendigung der Benutzersitzung ein Rollback für die Transaktion ausgeführt wird. Für fehlgeschlagene Transaktionen kann kein Commit ausgeführt werden, und sie unterstützen nur Lesevorgänge, durch die nicht in das Protokoll geschrieben und auf speicheroptimierte Tabellen zugegriffen wird.
 
-#####  <a name="cd"></a>Commit-Abhängigkeiten
+#####  <a name="commit-dependencies"></a><a name="cd"></a>Commit-Abhängigkeiten
  Während der regulären Verarbeitung kann eine Transaktion Zeilen von anderen Transaktionen lesen, die sich in der Überprüfungs- oder Commitphase befinden, deren Commit jedoch noch nicht abgeschlossen ist. Die Zeilen sind sichtbar, da der logische Endzeitpunkt der Transaktionen beim Start der Überprüfungsphase zugewiesen wurde.
 
  Wenn Zeilen, für die kein Commit ausgeführt wurde, von einer Transaktion gelesen werden, übernimmt sie eine Commitabhängigkeit von dieser Transaktion. Dies hat zwei wesentliche Auswirkungen:

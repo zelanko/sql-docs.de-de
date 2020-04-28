@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7ffe6a854e24240c6298dfbf7b4c195d787e07c7
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78172029"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>Option Wiedergabe (Verwaltungstool Distributed Replay)
@@ -52,7 +52,7 @@ ms.locfileid: "78172029"
 
  **-o** Erfasst die Wiedergabe Aktivität der Clients und speichert Sie in einer Ergebnisdatei der Ablauf Verfolgung in dem Pfad, `<ResultDirectory>` der vom-Element in der Client `DReplayClient.xml`Konfigurationsdatei angegeben wird.
 
- Wenn der **-o** -Parameter nicht angegeben wird, wird die Ergebnisdatei der Ablaufverfolgung nicht generiert. Die Konsolenausgabe gibt am Ende der Wiedergabe Zusammenfassungsinformationen zurück, es sind jedoch keine weiteren Wiedergabestatistiken verfügbar.
+ Wenn der Parameter " **-o** " nicht angegeben wird, wird die Ergebnisdatei der Ablauf Verfolgung nicht generiert. Die Konsolenausgabe gibt am Ende der Wiedergabe Zusammenfassungsinformationen zurück, es sind jedoch keine weiteren Wiedergabestatistiken verfügbar.
 
  **-s** *target_server* gibt die Ziel Instanz von [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] an, für die die verteilte Arbeitsauslastung wiedergegeben werden soll. Sie müssen diesen Parameter im folgenden Format angeben: **server_name[\instance name]**.
 

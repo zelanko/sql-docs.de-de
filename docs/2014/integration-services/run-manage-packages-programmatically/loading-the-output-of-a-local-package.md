@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 843c5e8cbb857271d4cbd07288e24bfbd98019e3
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176620"
 ---
 # <a name="loading-the-output-of-a-local-package"></a>Laden der Ausgabe eines lokalen Pakets
@@ -29,7 +29,7 @@ ms.locfileid: "78176620"
 > [!NOTE]
 >  Für die in diesem Artikel beschriebene Vorgehensweise müssen die DelayValidation-Eigenschaft des Datenflusstasks und alle übergeordneten Objekte auf den Standardwert **FALSE** festgelegt werden.
 
-## <a name="description"></a>Beschreibung
+## <a name="description"></a>BESCHREIBUNG
  In dieser Prozedur wird veranschaulicht, wie eine Clientanwendung in verwaltetem Code entwickelt wird, die die Ausgabe eines Pakets mit einem DataReader-Ziel direkt aus dem Arbeitsspeicher lädt. Die hier zusammengefassten Schritte werden in dem folgenden Codebeispiel veranschaulicht.
 
 #### <a name="to-load-data-package-output-into-a-client-application"></a>So laden Sie Datenpaketausgabe in eine Clientanwendung
@@ -38,7 +38,7 @@ ms.locfileid: "78176620"
 
 2.  Legen Sie im Entwicklungsprojekt einen Verweis auf den `Microsoft.SqlServer.Dts.DtsClient` -Namespace fest, indem Sie die Assembly **Microsoft. SqlServer. DTS. DtsClient. dll**suchen. Diese Assembly wird standardmäßig im Verzeichnis **C:\Programme\Microsoft SQL Server\100\DTS\Binn** installiert. Importieren Sie den Namespace mithilfe der c# `Using` -Anweisung oder der [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] `Imports` -Anweisung in Ihren Code.
 
-3.  Erstellen Sie in Ihrem Code ein Objekt vom Typ `DtsClient.DtsConnection` mit einer Verbindungs Zeichenfolge, die die Befehlszeilenparameter enthält, die **dtexec. exe** zum Ausführen des Pakets benötigt. Weitere Informationen finden Sie unter [dtexec Utility](../packages/dtexec-utility.md). Öffnen Sie dann die Verbindung mit dieser Verbindungszeichenfolge. Sie können auch das **dtexecui**-Hilfsprogramm verwenden, um die erforderliche Verbindungszeichenfolge visuell zu erstellen.
+3.  Erstellen Sie in Ihrem Code ein Objekt vom Typ `DtsClient.DtsConnection` mit einer Verbindungs Zeichenfolge, die die Befehlszeilenparameter enthält, die **dtexec. exe** zum Ausführen des Pakets benötigt. Weitere Informationen finden Sie [hier](../packages/dtexec-utility.md). Öffnen Sie dann die Verbindung mit dieser Verbindungszeichenfolge. Sie können auch das **dtexecui**-Hilfsprogramm verwenden, um die erforderliche Verbindungszeichenfolge visuell zu erstellen.
 
     > [!NOTE]
     >  Im Beispielcode wird das Laden des Pakets aus dem Dateisystem mithilfe der `/FILE <path and filename>`-Syntax veranschaulicht. Sie können das Paket jedoch auch aus der MSDB-Datenbank mithilfe der `/SQL <package name>`-Syntax oder aus dem [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]-Paket mithilfe der `/DTS \<folder name>\<package name>`-Syntax laden.

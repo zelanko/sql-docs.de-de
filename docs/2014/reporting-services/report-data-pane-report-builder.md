@@ -15,21 +15,21 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a77024e62402cea0a37b945e0539274fee9a3c6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78173329"
 ---
 # <a name="report-data-pane-report-builder"></a>Berichtsdatenbereich (Berichts-Generator)
   Verwenden Sie den Bereich **Berichtsdaten** , um die aktuell definierten Parameter, Datenquellen, Datasets, Feldauflistungen und Bilder in Ihrem Bericht anzuzeigen. Die Berichtsdaten zeigen eine hierarchische Ansicht der Elemente an, die Daten im Bericht darstellen. Die Knoten der obersten Ebene stellen integrierte Felder, Parameter, Bilder und Datenquellenverweise dar. Erweitern Sie jeden Knoten, um die Datenelemente anzuzeigen. Wenn Sie z. B. einen Datenquellenknoten erweitern, werden die für diese Datenquelle definierten Datasets angezeigt. Wenn Sie ein Dataset erweitern, wird seine Feldauflistung angezeigt. Ziehen Sie Elemente in die Berichtsoberfläche oder den Gruppierungsbereich, um Daten mit den gewählten Berichtselementen auf der Berichtsseite zu verknüpfen. Weitere Informationen finden Sie unter [Berichtsentwurfsansicht (Berichts-Generator)](report-builder/report-design-view-report-builder.md).
 
-## <a name="options"></a>Tastatur
+## <a name="options"></a>Optionen
  **Integrierte Felder** Stellt häufig verwendete Felder in einem Bericht dar, z. b. der Berichts Name oder die Seitenzahl. Weitere Informationen finden Sie unter [Integrierte Sammlungen in Ausdrücken &#40;Berichts-Generator und SSRS&#41;](report-design/built-in-collections-in-expressions-report-builder.md).
 
  **Parameter** Stellt die Auflistung von Berichts Parametern dar, von denen jeder einwertig oder mehr wertig sein kann. Weitere Informationen finden Sie unter [Berichtsparameter &#40;Berichts-Generator und Berichts-Designer&#41;](report-design/report-parameters-report-builder-and-report-designer.md)" basiert.
 
- **Bilder** Stellt den Satz von Bildern dar, die im Bericht verwendet werden. Weitere Informationen finden Sie unter [Bilder &#40;Berichts-Generator und SSRS&#41;](report-design/images-report-builder-and-ssrs.md).
+ **Bilder** Stellt den Bildersatz dar, der im Bericht verwendet wird. Weitere Informationen finden Sie unter [Bilder &#40;Berichts-Generator und SSRS&#41;](report-design/images-report-builder-and-ssrs.md).
 
  **Datenquellen** Stellt eine eingebettete Datenquelle oder einen Verweis auf eine freigegebene Datenquelle dar. Eine Datenquelle stellt die Quelle für die Daten des Berichts dar. Eine Datenquelle ist der übergeordnete Knoten für die Auflistung der Datasets, die sie verwenden. Weitere Informationen finden Sie unter [Hinzufügen von Daten zu einem Bericht &#40;Berichts-Generator und SSRS&#41;](report-data/report-datasets-ssrs.md) und [Datenverbindungen, Datenquellen und Verbindungs](../../2014/reporting-services/data-connections-data-sources-and-connection-strings-in-report-builder.md)Zeichenfolgen in Berichts-Generator.
 

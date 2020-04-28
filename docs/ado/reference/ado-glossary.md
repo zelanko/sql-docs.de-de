@@ -13,10 +13,10 @@ ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: f9677e62a9efbaa36f03c5cde253b79aa5d401c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76925599"
 ---
 # <a name="ado-glossary"></a>ADO-Glossar
@@ -80,7 +80,7 @@ In diesem Thema werden die für ADO relevanten Begriffe definiert.
  Eine Zuordnung eines Satzes von Zeichen zu ihren numerischen Werten. Beispielsweise ist Unicode ein 16-Bit-Zeichensatz, der alle bekannten Zeichen codieren und als weltweiten Zeichen Codierungsstandard verwendet werden kann.  
   
  Untergeordnetes Element  
- Die abhängige Seite einer hierarchischen Beziehung. Ein untergeordnetes Element ist ein Knoten in einer hierarchischen Struktur, der über einen anderen übergeordneten Knoten verfügt (näher an der Wurzel). Siehe auch untergeordneter *Alias*, über-/Unterordnungsbeziehung, über *geordnetes*Element. **  
+ Die abhängige Seite einer hierarchischen Beziehung. Ein untergeordnetes Element ist ein Knoten in einer hierarchischen Struktur, der über einen anderen übergeordneten Knoten verfügt (näher an der Wurzel). Siehe auch untergeordneter *Alias*, über-/Unterordnungsbeziehung, über *geordnetes*Element. *parent-child relationship*  
   
  untergeordneter Alias  
  Ein Alias, der auf das untergeordnete Element verweist. Siehe auch *Alias*, *unter*geordnet.  
@@ -138,7 +138,7 @@ In diesem Thema werden die für ADO relevanten Begriffe definiert.
  Diese Anweisungen in SQL, die definieren, dass Daten nicht geändert werden. Das Schema einer Datenbank wird mit DDL erstellt oder geändert. **CREATE TABLE**, **Create Index**, **Grant**und **revosind z** . b. SQL-DDL-Anweisungen.  
   
  Standarddaten Strom  
- Ein Text-oder Binärstream (dargestellt durch ein **Streamobjekt** ), der **Daten Satz** -oder recordsetobjekten zugeordnet ist, wenn bestimmte OLE DB Anbieter verwendet werden, z. b. der Microsoft OLE DB-Anbieter für die Internet Veröffentlichung. **** Der Standarddaten Strom enthält normalerweise den Inhalt einer Datei, z. b. den HTML-Code für den Stamm einer Website.  
+ Ein Text-oder Binärstream (dargestellt durch ein **Streamobjekt** ), der **Daten Satz** -oder recordsetobjekten zugeordnet ist, wenn bestimmte OLE DB Anbieter verwendet werden, z. b. der Microsoft OLE DB-Anbieter für die Internet Veröffentlichung. **Recordset** Der Standarddaten Strom enthält normalerweise den Inhalt einer Datei, z. b. den HTML-Code für den Stamm einer Website.  
   
  Verteilte Anwendung  
  Ein Programm, das so geschrieben ist, dass die Verarbeitung über ein Netzwerk auf mehrere Computer aufgeteilt werden kann. Eine verteilte Anwendung ist in der Regel in Präsentations-, Geschäftslogik-und Daten *Speicherebenen unterteilt.* Siehe auch Client Ebene, mittlere Ebene, Datenquellen Ebene.  
@@ -164,7 +164,7 @@ In diesem Thema werden die für ADO relevanten Begriffe definiert.
   
  Wird auch als *Enumerationskonstante*bezeichnet. Siehe auch *Konstante*.  
   
- Ereignis  
+ event  
  Eine von einem-Objekt erkannte Aktion, für die Sie Code schreiben können, der antwortet. Ereignisse können unter anderem durch Befehlsausführung, Transaktions Vervollständigung, Recordsetnavigation und Datenaktualisierungen generiert werden. Siehe auch *Ereignishandler*.  
   
  Ereignishandler  
@@ -186,11 +186,11 @@ In diesem Thema werden die für ADO relevanten Begriffe definiert.
  ISAPI (Internet Server-Anwendungsprogrammierschnittstelle)  
  Eine Reihe von Funktionen für Internet Server, z. b. ein Windows NT® Server/Windows 2000-Server, auf dem Microsoft® Internetinformationsdienste (IIS) ausgeführt wird.  
   
- Key  
+ Schlüssel  
  Eine Spalte oder Spalten in einer Tabelle, die eine Zeile eindeutig identifizieren. wird häufig verwendet, um eine Tabelle zu indizieren.  
   
 ## <a name="m"></a>M  
- Marshalling  
+ marshaling  
  Der Prozess zum Verpacken, senden und entpacken von Schnittstellen Methoden Parametern über Thread-oder Prozess Grenzen hinweg.  
   
  Mittlere Ebene  

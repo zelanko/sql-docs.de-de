@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 760e4c00401e42b6d6ccca8bd7c7acd7ec0d5b86
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176329"
 ---
 # <a name="developing-a-user-interface-for-a-data-flow-component"></a>Entwickeln einer Benutzeroberfläche für eine Datenflusskomponente
@@ -89,7 +89,7 @@ End Class
 ### <a name="using-the-services-of-the-ssis-designer"></a>Verwenden der Dienste des SSIS-Designers
  Der `IServiceProvider`-Parameter der <xref:Microsoft.SqlServer.Dts.Pipeline.Design.IDtsComponentUI.Initialize%2A>-Methode bietet Zugriff auf die folgenden Dienste des [!INCLUDE[ssIS](../../../includes/ssis-md.md)]-Designers:
 
-|Dienst|Beschreibung|
+|Dienst|BESCHREIBUNG|
 |-------------|-----------------|
 |<xref:Microsoft.SqlServer.Dts.Design.IDtsClipboardService>|Wird verwendet, um zu bestimmen, ob die Komponente als Teil eines Kopier-/Einfüge- oder Ausschneide-/Einfügevorgangs generiert wurde.|
 |<xref:Microsoft.SqlServer.Dts.Runtime.Design.IDtsConnectionService>|Wird verwendet, um auf vorhandene Verbindungen zuzugreifen oder neue Verbindungen im Paket zu erstellen.|

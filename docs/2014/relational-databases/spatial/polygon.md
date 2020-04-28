@@ -13,10 +13,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: d03ce811c860b976d891dd096ec8e0a7d5507d3a
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176630"
 ---
 # <a name="polygon"></a>Polygon
@@ -73,9 +73,7 @@ DECLARE @g1 geometry = 'POLYGON((1 1, 3 3, 1 1))';
 DECLARE @g2 geometry = 'POLYGON((1 1, 3 3, 3 1, 1 5))';
 ```
 
- 
-  `@g1` wird nicht akzeptiert, da die `LineString`-Instanz für den äußeren Ring nicht genug Punkte enthält. 
-  `@g2` wird nicht akzeptiert, da die `LineString`-Instanz des Ausgangspunkts des äußeren Rings nicht dem Endpunkt entspricht. Im folgenden Beispiel ist ein akzeptabler äußerer Ring enthalten, der innere Ring hingegen ist nicht akzeptabel. Dadurch wird auch eine `System.FormatException`ausgelöst.
+ `@g1` wird nicht akzeptiert, da die `LineString`-Instanz für den äußeren Ring nicht genug Punkte enthält. `@g2` wird nicht akzeptiert, da die `LineString`-Instanz des Ausgangspunkts des äußeren Rings nicht dem Endpunkt entspricht. Im folgenden Beispiel ist ein akzeptabler äußerer Ring enthalten, der innere Ring hingegen ist nicht akzeptabel. Dadurch wird auch eine `System.FormatException`ausgelöst.
 
 ```
 DECLARE @g geometry = 'POLYGON((-5 -5, -5 5, 5 5, 5 -5, -5 -5),(0 0, 3 0, 0 0))';
@@ -147,6 +145,6 @@ SELECT @g.ToString()
  Die oben zurückgegebene geometry-Instanz ist ein `Point(1 3)`.  Wenn das angegebene `Polygon` gleich `POLYGON((1 3, 1 5, 1 3, 1 3))` ist, gibt `MakeValid()``LINESTRING(1 3, 1 5)`zurück.
 
 ## <a name="see-also"></a>Weitere Informationen
- [STArea &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/starea-geometry-data-type) [STExteriorRing &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stexteriorring-geometry-data-type) [STNumInteriorRing &#40;geometry-Datentyp](/sql/t-sql/spatial-geometry/stnuminteriorring-geometry-data-type) [&#41;STInteriorRingN &#40;geometry-Datentyp](/sql/t-sql/spatial-geometry/stinteriorringn-geometry-data-type)&#41;[STCentroid](/sql/t-sql/spatial-geometry/stcentroid-geometry-data-type) &#40;geometry-Datentyp&#41;[STPointOnSurface &#40;geometry-Datentyps](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type) [&#41;&#40;](../spatial/polygon.md) für den geometry-Datentyp SQL Server&#41;&#40;den geometry-Datentyp&#41;[](../spatial/spatial-data-sql-server.md) [](/sql/t-sql/spatial-geography/stisvalid-geography-data-type) [](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type)
+ [STArea &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/starea-geometry-data-type) [STExteriorRing &#40;geometry-Datentyp&#41;](/sql/t-sql/spatial-geometry/stexteriorring-geometry-data-type) [STNumInteriorRing &#40;geometry-Datentyp](/sql/t-sql/spatial-geometry/stnuminteriorring-geometry-data-type) [&#41;STInteriorRingN &#40;geometry-Datentyp](/sql/t-sql/spatial-geometry/stinteriorringn-geometry-data-type)&#41;[STCentroid](/sql/t-sql/spatial-geometry/stcentroid-geometry-data-type) &#40;geometry-Datentyp&#41;[STPointOnSurface &#40;geometry-Datentyps](/sql/t-sql/spatial-geometry/stpointonsurface-geometry-data-type) [&#41;&#40;](../spatial/polygon.md) für den geometry-Datentyp SQL Server&#41;&#40;den geometry-Datentyp&#41;[Spatial Data &#40;SQL Server&#41;](../spatial/spatial-data-sql-server.md) [STIsValid &#40;geography Data Type&#41;](/sql/t-sql/spatial-geography/stisvalid-geography-data-type) [STIsValid &#40;geometry Data Type&#41;](/sql/t-sql/spatial-geometry/stisvalid-geometry-data-type)
 
 

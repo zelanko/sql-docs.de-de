@@ -11,10 +11,10 @@ ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
 ms.openlocfilehash: 7c76ec1a74032b5f35bc42ab4a901d95574e0900
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75688216"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Analyse und Berichterstellung mit Microsoft Business Intelligence-Tools (BI)
@@ -25,7 +25,7 @@ ms.locfileid: "75688216"
   
  Wenn Sie für die Suche nach den richtigen Tools eine kurze Übersicht benötigen, informieren Sie sich unter [Einführung in Microsoft Business Intelligence (BI)-Tools](https://www.digitalvidya.com/blog/introduction-to-microsoft-power-bi/).  
   
-|Workloads|Benutzer|||BI-Tools|||  
+|Arbeitsauslastungen|Benutzer|||BI-Tools|||  
 |---------------|----------|-|-|--------------|-|-|  
 |||**Excel**|**SharePoint**|**SharePoint Online**|**Power BI**|**SQL Server**|  
 |**Self-Service-BI**|Analyst/Endbenutzer||||||  
@@ -34,8 +34,8 @@ ms.locfileid: "75688216"
 |Ausführen von Self-Service-Vorhersageanalysen||||||[Data Mining-Add-Ins für Excel](../analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins.md)|  
 |Visualisieren und Untersuchen von Daten||[Power View](https://go.microsoft.com/fwlink/p/?LinkId=391847)<br /><br /> [3D-Karten](https://support.office.com/article/visualize-your-data-in-3d-maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||||  
 |Fragen mithilfe von Abfragen in natürlicher Sprache|||||[Q & A](https://docs.microsoft.com/power-bi/consumer/end-user-q-and-a)||  
-|Zugreifen auf Berichte über mobile Geräte||||[HTML 5 (unterstützt die Anzeige <10-MB-Dateien)](https://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (unterstützt die Anzeige <250 MB)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Power BI Mobile App auf IOS-Geräten](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Power BI Mobile App auf Android-Geräten](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[Power BI Mobile App für Windows 10](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  
-|Zusammenarbeit und gemeinsame Nutzung|||[SharePoint-Sites](https://go.microsoft.com/fwlink/p/?LinkId=391849)|[SharePoint-Team Websites](https://go.microsoft.com/fwlink/p/?LinkId=391850)|[Power BI Websites](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
+|Zugreifen auf Berichte über mobile Geräte||||[HTML 5 (unterstützt die Anzeige von Dateien unter 10 MB)](https://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (unterstützt die Anzeige von unter 250 GB)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Mobile Power BI-App auf iOS-Geräten](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Mobile Power BI-App auf Android-Geräten](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[Mobile Power BI-App für Windows 10](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  
+|Zusammenarbeit und gemeinsame Nutzung|||[SharePoint-Sites](https://go.microsoft.com/fwlink/p/?LinkId=391849)|[SharePoint-Teamwebsites](https://go.microsoft.com/fwlink/p/?LinkId=391850)|[Power BI-Websites](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
 |**Unternehmens-BI**|IT-Profi||||||  
 |Erstellen mehrdimensionaler/tabellarischer Unternehmensmodelle||||||[Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-overview)|  
 |Erstellen von Ad-hoc-Datenvisualisierungen|||[Power View für SharePoint](https://go.microsoft.com/fwlink/p/?LinkId=391858)||||  

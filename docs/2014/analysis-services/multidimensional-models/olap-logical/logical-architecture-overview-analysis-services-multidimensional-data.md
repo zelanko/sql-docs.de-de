@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8ad62267358ac48525a4c933a796ac70f3638665
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175719"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Übersicht über logische Architektur (Analysis Services – Mehrdimensionale Daten)
@@ -91,14 +91,14 @@ ms.locfileid: "78175719"
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>Zuordnen von Measures, Attributen und Hierarchien
  Die Measures, Attribute und Hierarchien des Cubes in dem Beispiel werden aus den folgenden Spalten in den Fakten- und Dimensionstabellen des Cubes abgeleitet.
 
-|Measure oder Attribut (Ebene)|Members|Quelltabelle|Quellspalte|Beispielspaltenwert|
+|Measure oder Attribut (Ebene)|Member|Quelltabelle|Quellspalte|Beispielspaltenwert|
 |------------------------------------|-------------|------------------|-------------------|-------------------------|
 |Packages-Measure|Nicht verfügbar|ImportsFactTable|Pakete|12|
 |Last-Measure|Nicht verfügbar|ImportsFactTable|Last (Letzter)|May-03-99|
 |Route Category-Ebene in Route-Dimension|nonground, ground|RouteDimensionTable|Route_Category|Nonground|
 |Route-Attribut in Route-Dimension|air, sea, road, rail|RouteDimensionTable|Route|Sea|
 |Hemisphere-Attribut in Source-Dimension|Eastern Hemisphere, Western Hemisphere|SourceDimensionTable|Hemisphere|Eastern Hemisphere|
-|Continent-Attribut in Source-Dimension|Afrika, Asien, Australien, Europa, Nordamerika Amerika|SourceDimensionTable|Continent|Europa|
+|Continent-Attribut in Source-Dimension|Afrika, Asien, Australien, Europa, Nordamerika Südamerika|SourceDimensionTable|Continent|Europa|
 |Half-Attribut in Time-Dimension|1st half, 2nd half|TimeDimensionTable|Half|2nd half|
 |Quarter-Attribut in Time-Dimension|1st quarter, 2nd quarter, 3rd quarter, 4th quarter|TimeDimensionTable|Quarter|3rd quarter|
 
@@ -121,6 +121,6 @@ ms.locfileid: "78175719"
  Das hier dargestellte Beispiel enthält nur eine einzige Faktentabelle. Wenn ein Cube mehrere Faktentabellen enthält, werden die Measures aus jeder Faktentabelle in Measuregruppen organisiert, und eine Measuregruppe wird mithilfe von definierten Dimensionsbeziehungen mit einer bestimmten Gruppe von Dimensionen verbunden. Diese Beziehungen werden durch Angeben der teilnehmenden Tabellen in der Datenquellensicht und der Granularität der Beziehung definiert. **Verwandte Themen:**[Dimensions Beziehungen](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).
 
 ## <a name="see-also"></a>Weitere Informationen
- [Mehrdimensionale Modell Datenbanken &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)
+ [Mehrdimensionale Modelldatenbanken &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)
 
 

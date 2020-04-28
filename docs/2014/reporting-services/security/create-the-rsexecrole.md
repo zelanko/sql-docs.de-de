@@ -13,14 +13,13 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4e3717bb9af98c9f3231115a7bad4cc8639998d1
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177104"
 ---
 # <a name="create-the-rsexecrole"></a>Erstellen der Rolle RSExecRole
-  
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet eine vordefinierte Datenbankrolle namens `RSExecRole`, um Berichtsserverberechtigungen für die Berichtsserver-Datenbank zu gewähren. Die `RSExecRole` Rolle wird automatisch mit der Berichts Server-Datenbank erstellt. Als Faustregel gilt, dass Sie sie nie ändern und ihr keine anderen Benutzer zuweisen sollten. Wenn Sie jedoch eine Berichts Server-Datenbank in eine neue oder andere [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)]verschieben, muss die Rolle in den System Datenbanken Master und msdb neu erstellen.
 
  Mithilfe der folgenden Anweisungen führen Sie die folgenden Schritte aus:
@@ -65,7 +64,7 @@ ms.locfileid: "78177104"
 
 8.  Geben `RSExecRole`Sie unter **Rollenname den Namen**ein.
 
-9. Geben Sie unter **Besitzer**den Namen **dbo**ein.
+9. Geben Sie im Feld **Besitzer**die Zeichenfolge **DBO**ein.
 
 10. Klicken Sie auf **Sicherungsfähige Elemente**.
 
@@ -95,7 +94,7 @@ ms.locfileid: "78177104"
 
 20. Wiederholen Sie diesen Schritt für alle übrigen gespeicherten Prozeduren. Der Rolle `RSExecRole` müssen Berechtigungen zum Ausführen aller drei gespeicherten Prozeduren gewährt werden.
 
- ![Datenbankrolle-Eigenschaften (Seite)](../media/rsexecroledbproperties.gif "Datenbankrolle-Eigenschaften (Seite)")
+ ![Eigenschaftenseite für Datenbankrolle](../media/rsexecroledbproperties.gif "Eigenschaftenseite für Datenbankrolle")
 
 ## <a name="create-rsexecrole-in-msdb"></a>Erstellen der Rolle 'RSExecRole' in 'MSDB'
  Reporting Services verwendet gespeicherte Prozeduren für den SQL Server-Agent-Dienst und ruft zur Unterstützung geplanter Vorgänge Auftragsinformationen ab. Die folgenden Schritte erklären, wie der Rolle RSExecRole Berechtigungen zum Ausführen der Prozeduren und zum Auswählen der Tabellen gewährt werden.
@@ -187,7 +186,7 @@ ms.locfileid: "78177104"
 30. Wiederholen Sie diesen Schritt für die Tabelle sysjobs. Die Rolle RSExecRole muss Berechtigungen zum Auswählen beider Tabellen erhalten.
 
 ## <a name="move-the-report-server-database"></a>Verlagern der Berichtsserver-Datenbank
- Nachdem Sie die Rollen erstellt haben, können Sie die Berichtsserver-Datenbank auf eine andere SQL Server-Instanz verschieben. Weitere Informationen finden Sie unter [Moving the Report Server Databases to Another Computer &#40;SSRS Native Mode&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).
+ Nachdem Sie die Rollen erstellt haben, können Sie die Berichtsserver-Datenbank auf eine andere SQL Server-Instanz verschieben. Weitere Informationen finden Sie unter [Verschieben von Berichtsserver-Datenbanken auf einen anderen Computer &#40;einheitlicher SSRS-Modus&#41;](../report-server/moving-the-report-server-databases-to-another-computer-ssrs-native-mode.md).
 
  Wenn Sie das [!INCLUDE[ssDE](../../../includes/ssde-md.md)] auf [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]aktualisieren, können Sie dieses Upgrade vor oder nach dem Verschieben der Datenbank durchführen.
 
@@ -214,11 +213,11 @@ ms.locfileid: "78177104"
 
 8.  Wählen Sie die Berichtsserver-Datenbank aus.
 
-9. Klicken Sie auf **Weiter**, und schließen Sie den Assistenten ab.
+9. Klicken Sie auf **Weiter** , und schließen Sie den Assistenten ab.
 
 10. Klicken Sie auf **Verschlüsselungsschlüssel**.
 
-11. Klicken Sie auf **Restore**.
+11. Klicken Sie auf **Wiederherstellen**.
 
 12. Wählen Sie die Datei mit starkem Namen (Dateierweiterung .snk) aus, welche die Sicherungskopie des symmetrischen Schlüssel enthält, der zum Entschlüsseln gespeicherter Anmeldeinformationen und Verbindungsinformationen in der Berichtsserver-Datenbank verwendet wird.
 

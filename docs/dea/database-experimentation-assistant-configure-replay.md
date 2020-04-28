@@ -13,17 +13,17 @@ author: HJToland3
 ms.author: jtoland
 ms.reviewer: mathoma
 ms.openlocfilehash: ae7c3c2a987d9fb048c1c3fa494978626abce06a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76761534"
 ---
 # <a name="configure-distributed-replay-for-database-experimentation-assistant"></a>Konfigurieren von Distributed Replay für Assistent für Datenbankexperimente
 
 Assistent für Datenbankexperimente (DEA) verwendet die Distributed Replay Tools aus der SQL Server-Installation, um eine aufgezeichnete Ablauf Verfolgung in einer aktualisierten Testumgebung wiederzugeben. Es wird empfohlen, einen Testlauf mithilfe einer kleinen Ablauf Verfolgungs Datei auszuführen, bevor Sie eine vollständige Wiedergabe ausführen
 
-## <a name="distributed-replay-requirements"></a>Distributed Replay Anforderungen
+## <a name="distributed-replay-requirements"></a>Distributed Replay: Anforderungen
 
 - Zum Erstellen von auf dem Distributed Replay Controller-Computer sind zusätzliche 78% des Festplatten Speicherplatzes erforderlich.
 - 200 MB oder 512 MB ist die ideale ablaufverfolgungsrollovergröße zum Erfassen von Produktions-oder Leistungs Ablauf Verfolgungen.
@@ -126,6 +126,6 @@ Die folgenden Schritte müssen für jede Wiedergabe ausgeführt werden:
 2. Erteilen von Berechtigungen für den Benutzer des Client Dienst Kontos für den Zugriff auf die Datenbanken unter der SQL Server Instanz. Berechtigungen sind erforderlich, damit die Abfragen für die SQL Server Instanz ausgeführt werden.
 3. Starten Sie die Wiedergabe.
 
-## <a name="see-also"></a>Weitere Informationen
+## <a name="see-also"></a>Weitere Informationen:
 
 - Informationen dazu, wie Sie eine aufgezeichnete Ablauf Verfolgung in einer aktualisierten Testumgebung wiedergeben, finden Sie unter Wiedergeben [einer Ablauf Verfolgung in Assistent für Datenbankexperimente](database-experimentation-assistant-replay-trace.md).

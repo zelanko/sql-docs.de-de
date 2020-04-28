@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 57b036269dd4aeed91cf8af811bd2f24faecbb98
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78171609"
 ---
 # <a name="backup-server-capacity-planning-worksheet---parallel-data-warehouse"></a>Arbeitsblatt zur Kapazitätsplanung für Sicherungs Server-parallele Data Warehouse
@@ -23,7 +23,7 @@ Dieses Arbeitsblatt ist eine Ergänzung zu den Anweisungen unter [erwerben und K
 
 ## <a name="capacity-planning-worksheet-for-backup-servers"></a>Arbeitsblatt zur Kapazitätsplanung für Sicherungs Server
 
-### <a name="notes"></a>Notizen
+### <a name="notes"></a>Hinweise
 
 1.  Dieses Arbeitsblatt gilt für Server, von denen Sicherungs-und Wiederherstellungs Vorgänge für PDW-Datenbanken durchgeführt werden.
 
@@ -33,7 +33,7 @@ Dieses Arbeitsblatt ist eine Ergänzung zu den Anweisungen unter [erwerben und K
 
 Drucken Sie dieses Arbeitsblatt, und füllen Sie es mit ihren eigenen Anforderungen aus.
 
-|Komponente|Anforderung|Füllen Sie diese Spalte mit ihren eigenen Anforderungen aus.|Empfehlungen|
+|Komponente|Anforderungen|Füllen Sie diese Spalte mit ihren eigenen Anforderungen aus.|Empfehlungen|
 |-------------|---------------|--------------------------------------------------|-------------------|
 |Storage|Maximale Anzahl von Bytes, die Sie zu einem beliebigen Zeitpunkt auf dem Sicherungs Server speichern möchten.|![Stiftsymbol](media/pencil-icon.png "Stiftsymbol")|Um die Speicheranforderungen zu ermitteln, ermitteln Sie, wie viele Daten Sie in einem beliebigen Zeitraum auf dem Sicherungs Server speichern möchten.<br /><br />Die Sicherungsdaten werden auf dem Sicherungs Server in komprimiertem Format gespeichert. Die Daten Komprimierungs Raten hängen von den Eigenschaften der Daten ab.<br /><br />Beispiel: als grobe Schätzung empfiehlt es sich, ein 7:1-Komprimierungs Verhältnis in Relation zur Größe ihrer nicht komprimierten Daten einzuschätzen. Dabei wird davon ausgegangen, dass mindestens 80% der Daten in gruppierten columnstore--Indizes gespeichert werden. Wenn Sie z. b. über 700 GB unkomprimierte Daten in einer Datenbank verfügen und in gruppierten columnstore--Indizes gespeichert sind, können Sie einschätzen, dass die Datenbanksicherung ungefähr 100 GB benötigt.<br /><br />Wenn Sie beabsichtigen, mehrere Kopien von Datenbanksicherungen auf dem Sicherungs Server zu haben, müssen Sie diese berücksichtigen.<br /><br />Beispiel: Wenn Sie planen, 10 Datenbanken zu sichern, die jeweils 5 TB unkomprimierter Daten enthalten, haben die Datenbanken eine kombinierte Größe von 50 TB. Wenn Sie beabsichtigen, diese 10 Datenbanken täglich für fünf Tage in einer Zeile zu sichern, beträgt die Gesamtgröße für die nicht komprimierte Größe 250 TB. Factoring bei einem 7:1-Komprimierungs Verhältnis benötigen Sie 250/7 = 35,7 TB Speicher auf dem Sicherungs Server. Es wird empfohlen, konservativ zu sein und ca. 30% zusätzliche Kapazität zu erhalten, um Abweichungen zu berücksichtigen und zu wachsen.  In diesem Beispiel wäre 46,6 TB besser.|
 |Netzwerk|Der Netzwerk Verbindungstyp.|![Stiftsymbol](media/pencil-icon.png "Stiftsymbol")|Bestimmen Sie den optimalen Netzwerk Verbindungstyp, der Ihren Anforderungen an die Lasten Raten gerecht werden kann.<br /><br />Beispiel: InfiniBand oder 10Gbit Ethernet bietet die optimalen Lade Raten. 1Gbit Ethernet schränkt die Last Raten auf 360 GB pro Stunde oder weniger ein.|

@@ -17,10 +17,10 @@ ms.assetid: 7dac5e68-bf84-433a-a531-66921f35126f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1a2e2e3c0074c3fcc53298c2556c786c9b7057db
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75322268"
 ---
 # <a name="sp_mschange_distribution_agent_properties-transact-sql"></a>sp_MSchange_distribution_agent_properties (Transact-SQL)
@@ -60,7 +60,7 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
   
  Diese Tabelle beschreibt die änderbaren Eigenschaften des Verteilungs-Agent-Auftrags sowie die Einschränkungen für die Werte dieser Eigenschaften.  
   
-|Eigenschaft|value|BESCHREIBUNG|  
+|Eigenschaft|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||Anmeldename für das [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows-Konto, unter dem der Agent ausgeführt wird.|  
 |**distrib_job_password**||Kennwort für das Windows-Konto, unter dem der Agentauftrag ausgeführt wird.|  
@@ -72,10 +72,10 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 |**subscriber_provider**||Eindeutiger Programmbezeichner (PROGID, Programmatic Identifier), mit dem der OLE DB-Anbieter für die Nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datenquelle registriert wird. *Diese Eigenschaft ist nur für nicht--* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Abonnenten gültig.*|  
 |**subscriber_providerstring**||Für den OLE DB-Anbieter spezifische Verbindungszeichenfolge, die die Datenquelle identifiziert. *Diese Eigenschaft ist nur für andere Abonnenten als SQL Server-Abonnenten gültig.*|  
 |**subscriber_security_mode**|**1**|Windows-Authentifizierung.<br /><br /> [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]|  
-||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Genehmigung.|  
+||**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Authentifizierung.|  
 |**subscriber_type**|**0**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Abonnenten|  
 ||**1**|ODBC-Datenquellenserver|  
-||**€**|OLE DB-Anbieter|  
+||**3**|OLE DB-Anbieter|  
 |**SubscriptionStreams**||Bezeichnet die Anzahl zulässiger Verbindungen pro Verteilungs-Agent, um Änderungsbatches parallel auf einen Abonnenten anzuwenden. *Wird für nicht--* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *Abonnenten, Oracle-Verleger oder Peer-zu-Peer-Abonnements* nicht unterstützt.|  
   
 > [!NOTE]  

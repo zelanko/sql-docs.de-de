@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a40eb3451ed249cf1ac582179fbda67e04fdfb3e
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78174039"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
@@ -96,7 +96,7 @@ EXEC sp_xml_removedocument @docHandle;
 
  Die folgende Abbildung zeigt die analysierte XML-Struktur des vorherigen XML-Dokuments, das mithilfe von sp_xml_preparedocument erstellt wurde.
 
- ![Analysierter XML-Baum](../../database-engine/media/xmlparsedtree.gif "Analysierte XML-Struktur")
+ ![Analysierter XML-Baum](../../database-engine/media/xmlparsedtree.gif "Analysierter XML-Baum")
 
 ## <a name="openxml-parameters"></a>OPENXML-Parameter
  Zu den Parametern für OPENXML gehören:
@@ -137,7 +137,7 @@ EXEC sp_xml_removedocument @docHandle;
 
  In der folgenden Tabelle wird die Struktur der Rahmentabelle beschrieben.
 
-|Spaltenname|Datentyp|Beschreibung|
+|Spaltenname|Datentyp|BESCHREIBUNG|
 |-----------------|---------------|-----------------|
 |**id**|**bigint**|Die eindeutige ID des Dokumentknotens.<br /><br /> Das Stammelement weist den ID-Wert 0 auf. Die negativen ID-Werte sind reserviert.|
 |**parentid**|**bigint**|Identifiziert das übergeordnete Element des Knotens. Bei dem über diese ID identifizierten übergeordneten Objekt muss es sich nicht unbedingt um das übergeordnete Element handeln. Dies hängt jedoch vom NodeType des Knotens ab, dessen übergeordnetes Objekt durch diese ID identifiziert wird. Wenn es sich bei dem Knoten beispielsweise um einen Textknoten handelt, kann das übergeordnete Objekt ein Attributknoten sein.<br /><br /> Wenn sich der Knoten auf der obersten Ebene im XML-Dokument befindet, ist **ParentID** gleich NULL.|

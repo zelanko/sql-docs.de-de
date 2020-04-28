@@ -11,10 +11,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 22e63496f3b26ac2c56a72f23ec4489e8a9cdbfb
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176680"
 ---
 # <a name="compoundcurve"></a>CompoundCurve
@@ -41,7 +41,7 @@ ms.locfileid: "78176680"
 
 1.  Alle von der `CompoundCurve`-Instanz enthaltenen Instanzen sind akzeptierte Kreisbogensegment-Instanzen. Weitere Informationen zu akzeptierten Kreisbogensegment-Instanzen finden Sie unter [LineString](linestring.md) und [CircularString](circularstring.md).
 
-2.  Alle Kreisbogensegmente in der `CompoundCurve`-Instanz sind verbunden. Der erste Punkt jedes nachfolgenden Kreisbogen Segments entspricht dem letzten Punkt des vorangehenden Kreisbogen Segments.
+2.  Alle Kreisbogensegmente in der `CompoundCurve`-Instanz sind verbunden. Der erste Punkt jedes nachfolgenden Kreisbogensegments entspricht dem letzten Punkt des jeweils vorgehenden Kreisbogensegments.
 
     > [!NOTE]
     >  Dies schließt die Z- und M-Koordinaten ein. Daher müssen alle vier Koordinaten X, Y, Z und M identisch sein.
@@ -79,8 +79,7 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
 
 ```
 
- 
-  `@g3` ist gültig, da die `CircularString`-Instanz gültig ist. Weitere Informationen zur Gültigkeit der- `CircularString` Instanz finden Sie unter [circularstring](circularstring.md).
+ `@g3` ist gültig, da die `CircularString`-Instanz gültig ist. Weitere Informationen zur Gültigkeit der- `CircularString` Instanz finden Sie unter [circularstring](circularstring.md).
 
  Im folgenden Beispiel werden `CompoundCurve` -Instanzen veranschaulicht, die nicht gültig sind.
 
@@ -91,10 +90,7 @@ DECLARE @g3 geometry = 'COMPOUNDCURVE(CIRCULARSTRING(1 1, 2 3, 1 1))';
 SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid();
 ```
 
- 
-  `@g1` ist ungültig, da die zweite Instanz keine gültige LineString-Instanz ist. 
-  `@g2` ist ungültig, da die `LineString`-Instanz ungültig ist. 
-  `@g3` ist ungültig, da die `CircularString`-Instanz ungültig ist. Weitere Informationen zu `CircularString` gültigen-und `LineString` -Instanzen finden Sie unter [circularstring](circularstring.md) und [LineString](linestring.md).
+ `@g1` ist ungültig, da die zweite Instanz keine gültige LineString-Instanz ist. `@g2` ist ungültig, da die `LineString`-Instanz ungültig ist. `@g3` ist ungültig, da die `CircularString`-Instanz ungültig ist. Weitere Informationen zu `CircularString` gültigen-und `LineString` -Instanzen finden Sie unter [circularstring](circularstring.md) und [LineString](linestring.md).
 
 ## <a name="examples"></a>Beispiele
 
@@ -120,7 +116,7 @@ DECLARE @g geometry = 'COMPOUNDCURVE ((2 2, 0 0),CIRCULARSTRING (0 0, 1 2.1082, 
 DECLARE @g geography = 'COMPOUNDCURVE(CIRCULARSTRING(-122.358 47.653, -122.348 47.649, -122.348 47.658, -122.358 47.658, -122.358 47.653))';
 ```
 
-### <a name="d-storing-a-square-in-a-compoundcurve-instance"></a>D: Speichern eines Quadrats in einer CompoundCurve-Instanz
+### <a name="d-storing-a-square-in-a-compoundcurve-instance"></a>D. Speichern eines Quadrats in einer CompoundCurve-Instanz
  Im folgenden Beispiel werden zwei verschiedene Möglichkeiten gezeigt, wie mithilfe einer `CompoundCurve` -Instanz ein Quadrat gespeichert werden kann.
 
 ```sql

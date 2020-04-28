@@ -18,10 +18,10 @@ ms.assetid: 1eedd65c-03cc-4eab-b76e-04684fdfec52
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3ba1648da108762b03155eb93e1ee11c53a75583
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "75831768"
 ---
 # <a name="xp_sprintf-transact-sql"></a>xp_sprintf (Transact-SQL)
@@ -40,16 +40,16 @@ xp_sprintf { string OUTPUT , format }
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *Schnür*  
+ *string*  
  Eine **varchar** -Variable für die Ausgabe.  
   
  OUTPUT  
  Wenn dieser Parameter angegeben wird, wird der Wert der Variablen in den Ausgabeparameter gesetzt.  
   
- *Ges*  
+ *format*  
  Eine Formatierungszeichenfolge mit Platzhaltern für *argument* -Werte, ähnlich wie bei der **sprintf** -Funktion der Programmiersprache C. Derzeit wird nur das %s-Formatierungsargument unterstützt.  
   
- *gestritten*  
+ *argument*  
  Eine Zeichenfolge, die den Wert des entsprechenden Formatierungsarguments darstellt.  
   
  *n*  
@@ -59,7 +59,7 @@ xp_sprintf { string OUTPUT , format }
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="result-sets"></a>Resultsets  
- **xp_sprintf** gibt die folgende Meldung zurück:  
+ **xp_sprintf** gibt die folgende Nachricht zurück:  
   
  `The command(s) completed successfully.`  
   
@@ -67,7 +67,7 @@ xp_sprintf { string OUTPUT , format }
  Erfordert die Mitgliedschaft in der **public** -Rolle.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Allgemeine erweiterte gespeicherte Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/general-extended-stored-procedures-transact-sql.md)   
  [xp_sscanf &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/xp-sscanf-transact-sql.md)  
   

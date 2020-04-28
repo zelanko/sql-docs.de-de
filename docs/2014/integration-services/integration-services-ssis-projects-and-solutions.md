@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b1040afed8e9cb63f22bf81a30c426a4bdc8ec22
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176177"
 ---
 # <a name="integration-services-ssis-projects"></a>Integration Services-Projekte (SSIS)
@@ -46,9 +46,9 @@ ms.locfileid: "78176177"
 
  In der folgende Tabelle werden die Ordner in einem [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] -Projekt beschrieben.
 
-|Ordner|Beschreibung|
+|Ordner|BESCHREIBUNG|
 |------------|-----------------|
-|[!INCLUDE[ssIS](../includes/ssis-md.md)]Spar|Enthält Pakete. Weitere Informationen finden Sie unter [Integration Services-Pakete &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md).|
+|[!INCLUDE[ssIS](../includes/ssis-md.md)] Pakete|Enthält Pakete. Weitere Informationen finden Sie unter [Integration Services-Pakete &#40;SSIS&#41;](../../2014/integration-services/integration-services-ssis-packages.md).|
 |Verschiedenes|Enthält Dateien, die sich von Paketdateien unterscheiden.|
 
 ### <a name="files-in-integration-services-projects"></a>Dateien in SQL Server Integration Services-Projekten
@@ -74,12 +74,12 @@ ms.locfileid: "78176177"
  Zwar wird von [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] beim Erstellen eines neuen Projekts automatisch eine Projektmappe erstellt, jedoch können Sie auch eine leere Projektmappe erstellen und später Projekte hinzufügen.
 
 > [!NOTE]
->  Wenn Sie in [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] ein neues [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]-Projekt erstellen, wird die Projektmappe standardmäßig nicht im Bereich **Projektexplorer** angezeigt. Um dieses Standardverhalten zu ändern, klicken Sie im Menü **Extras** auf **Optionen**. Erweitern Sie im Dialogfeld **Optionen** den Eintrag **Projekte und Projektmappen**, und klicken Sie dann auf **Allgemein**. Wählen Sie auf der Seite **Allgemein** die Option **Projektmappe immer anzeigen**aus.
+>  Wenn Sie in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] ein neues [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]-Projekt erstellen, wird die Projektmappe standardmäßig nicht im Bereich **Projektexplorer** angezeigt. Um dieses Standardverhalten zu ändern, klicken Sie im Menü **Extras** auf **Optionen**. Erweitern Sie im Dialogfeld **Optionen** den Eintrag **Projekte und Projektmappen**, und klicken Sie dann auf **Allgemein**. Wählen Sie auf der Seite **Allgemein** die Option **Projektmappe immer anzeigen**aus.
 
 ## <a name="related-tasks"></a>Related Tasks
  [Hinzufügen oder Entfernen eines Integration Services-Projekts in einer Projektmappe](../../2014/integration-services/add-or-remove-an-integration-services-project-in-a-solution.md)
 
- [Erstellen eines neuen Integration Services Projekts](../../2014/integration-services/create-a-new-integration-services-project.md)
+ [Erstellen eines neuen SQL Server Integration Services-Projekts](../../2014/integration-services/create-a-new-integration-services-project.md)
 
  [Hinzufügen eines Elements zu einem Integration Services-Projekt](../../2014/integration-services/add-an-item-to-an-integration-services-project.md)
 

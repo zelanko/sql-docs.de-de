@@ -18,10 +18,10 @@ ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2a51fcc7108c7f6af6237d77cbad73c87ed7c6e6
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78180115"
 ---
 # <a name="sp_dbfixedrolepermission-transact-sql"></a>sp_dbfixedrolepermission (Transact-SQL)
@@ -42,7 +42,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @rolename = ] 'role'`Der Name einer gültigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fixed-Daten Bank Rolle. *Role* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Wenn *Role* nicht angegeben wird, werden die Berechtigungen für alle festgelegten Daten bankrollen angezeigt.  
+`[ @rolename = ] 'role'`Der Name einer gültigen [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Fixed-Daten Bank Rolle. *role* ist vom Datentyp **sysname**und hat den Standardwert NULL. Wenn *Role* nicht angegeben wird, werden die Berechtigungen für alle festgelegten Daten bankrollen angezeigt.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -57,7 +57,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ## <a name="remarks"></a>Bemerkungen  
  Führen Sie **sp_helpdbfixedrole**aus, um eine Liste der fixierten Daten bankrollen anzuzeigen. In der folgenden Tabelle werden die festen Datenbankrollen angezeigt.  
   
-|Fixed-Daten Bank Rolle|Beschreibung|  
+|Fixed-Daten Bank Rolle|BESCHREIBUNG|  
 |-------------------------|-----------------|  
 |**db_owner**|Datenbankbesitzer|  
 |**db_accessadmin**|Administratoren für den Datenbankzugriff|  
@@ -86,7 +86,7 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Sicherheits Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_addrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
+ [sp_addrolemember &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)   
  [sp_droprolemember &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)   
  [sp_helpdbfixedrole &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpdbfixedrole-transact-sql.md)   
  [sp_srvrolepermission &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-srvrolepermission-transact-sql.md)   

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e50cd7bc491109c1aa7a1941d04330141e907941
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175899"
 ---
 # <a name="linked-servers-database-engine"></a>Verbindungsserver (Datenbank-Engine)
@@ -46,7 +46,7 @@ ms.locfileid: "78175899"
 
  Ein *OLE DB-Anbieter* ist eine DLL (Dynamic Link Library), die mit einer bestimmten Datenquelle interagiert und sie verwaltet. Eine *OLE DB-Datenquelle* identifiziert die spezielle Datenbank, auf die über OLE DB zugegriffen werden kann. Obwohl es sich bei Datenquellen, die über Verbindungsserverdefinitionen abgefragt werden, normalerweise um Datenbanken handelt, sind OLE DB-Anbieter für eine Vielzahl von Dateien und Dateiformaten verfügbar. Dazu gehören Textdateien, Kalkulationstabellendaten und die Ergebnisse aus Volltextsuchläufen.
 
- Der OLE DB-Anbieter von [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client (PROGID: SQLNCLI11) ist der offizielle OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
+ Der [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB Provider (ProgID: SQLNCLI11) ist der offizielle OLE DB Anbieter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].
 
 > [!NOTE]
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sind jedoch so entworfen, dass sie mit jedem OLE DB-Anbieter zusammenarbeiten, der die erforderlichen OLE DB-Schnittstellen implementiert. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] wurde jedoch nur für den OLE DB-Anbieter für [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client und bestimmte andere Anbieter getestet.

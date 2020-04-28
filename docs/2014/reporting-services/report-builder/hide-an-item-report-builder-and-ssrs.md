@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d0eb06c9136179a075057791f88bf2d80e187026
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176879"
 ---
 # <a name="hide-an-item-report-builder-and-ssrs"></a>Ausblenden eines Elements (Berichts-Generator und SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "78176879"
     > [!NOTE]
     >  Klicken Sie im Datenbereich, um eine ganze Tabelle oder Matrix auszuwählen. Klicken Sie mit der rechten Maustaste auf einen Zeilen-, Spalten- oder Eckziehpunkt, und klicken Sie anschließend auf **Tablix-Eigenschaften**.
 
-2.  Klicken Sie auf **Sichtbarkeit**.
+2.  Klicken Sie auf **Transparenz.**
 
 3.  Geben Sie unter **Bei erstmaliger Ausführung des Berichts**an, ob das Element ausgeblendet werden soll, wenn der Bericht erstmals angezeigt wird:
 
@@ -51,7 +51,7 @@ ms.locfileid: "78176879"
         >  Wenn Sie einen Ausdruck für die Sichtbarkeit angeben, legen Sie die Hidden-Eigenschaft des Berichtselements wie im folgenden Bild dargestellt fest. Der ausgewertete Ausdruck zeigt das Berichtselement an, wenn der Wert False lautet, und blendet das Berichtselement aus, wenn der Wert True lautet. 
         > ![Properties_Visibility-Dialogfeld und Eigenschaft „Hidden“](../media/hiddenproperty-propertiesvisibility.png "Properties_Visibility-Dialogfeld und Eigenschaft „Hidden“")
 
-4.  Klicken Sie zweimal auf **OK** .
+4.  Klicken Sie zweimal auf **OK**.
 
 ### <a name="to-hide-static-rows-in-a-table-matrix-or-list"></a>So blenden Sie statische Zeilen in einer Tabelle, Matrix oder Liste aus
 

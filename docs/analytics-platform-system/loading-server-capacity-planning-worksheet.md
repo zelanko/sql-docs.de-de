@@ -10,10 +10,10 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ms.openlocfilehash: 1d2c3f1c0366d2c7d3d9efe700d9cfccc688dbc9
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78171599"
 ---
 # <a name="loading-server-capacity-planning-worksheet-for-analytics-platform-system"></a>Laden des Arbeitsblatts für die Server Kapazitätsplanung für Analytics Platform System
@@ -31,7 +31,7 @@ Mithilfe dieses Arbeitsblatts zur Kapazitätsplanung können Sie die Anforderung
 
 Drucken Sie dieses Arbeitsblatt, und füllen Sie es mit ihren eigenen Anforderungen aus.
 
-|Komponente|Anforderung|Füllen Sie diese Spalte mit ihren eigenen Anforderungen aus.|Empfehlungen|
+|Komponente|Anforderungen|Füllen Sie diese Spalte mit ihren eigenen Anforderungen aus.|Empfehlungen|
 |-------------|---------------|--------------------------------------------------|-------------------|
 |Storage|Maximale Anzahl von Bytes, die Sie zu einem beliebigen Zeitpunkt auf dem Lade Server speichern möchten.|![Stiftsymbol](media/pencil-icon.png "Stiftsymbol")|Um die Speicheranforderungen zu ermitteln, ermitteln Sie, wie viele Daten Sie in einem beliebigen Zeitraum auf dem Lade Server speichern möchten.  Kapazitätsanforderungen gelten nur für das Laden von Dateien; das Betriebssystem und die Auslastungs Dateien müssen sich auf unterschiedlichen Datenträger Arrays befinden.<br /><br />Wenn Sie z. b. Vorhaben, 100 GB Daten von dem Datenträger dreimal täglich zu laden, aber die Datendateien bis zum Ende der Woche nicht zu löschen, benötigen Sie mindestens 2,1 TB, um die Datendateien zu speichern. Es wird empfohlen, konservativ zu sein und ca. 30% mehr Speicher zu erhalten, um Abweichungen und Wachstum zu berücksichtigen.  In diesem Beispiel sind 2,73 TB Speicherplatz besser.|
 |Auslastungs Rate|Maximale Anzahl von Bytes pro Stunde zum Laden von Daten in PDW.|![Stiftsymbol](media/pencil-icon.png "Stiftsymbol")|Dies ist eine Schätzung. Wenn Sie diese Anforderung berechnen, gehen Sie davon aus, dass sich die Dateien bereits auf dem Lade Server befinden und dass andere Ladebedingungen so gut wie möglich sind.<br /><br />Beispiel: Es ist nicht erforderlich, die Datenkomprimierung zu berücksichtigen, da "dwloader immer unkomprimierte Daten an das PDW sendet. Es ist nicht erforderlich, die Datentyp Konvertierungen und die Größe der Ziel Tabelle zu berücksichtigen.|

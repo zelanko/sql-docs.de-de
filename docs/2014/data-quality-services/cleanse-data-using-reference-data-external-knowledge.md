@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dff5f6464a14b520a35493b96b47b4a1c5a82481
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175509"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>Bereinigen von Daten mit (externem) Verweisdaten-Wissen
@@ -41,15 +41,15 @@ ms.locfileid: "78175509"
 
 ## <a name="before-you-begin"></a>Vorbereitungen
 
-###  <a name="Prerequisites"></a> Voraussetzungen
+###  <a name="prerequisites"></a><a name="Prerequisites"></a> Voraussetzungen
  Sie müssen dem entsprechenden Verweisdatendienst erforderliche Domänen in einer DQS-Wissensdatenbank zugeordnet haben. Darüber hinaus muss die Wissensdatenbank Wissen zum Typ von Daten enthalten, die Sie bereinigen möchten. Wenn Sie z.B. die Quelldaten bereinigen, die US-Adressen enthalten, müssen Sie die Domänen einem Verweisdaten-Dienstanbieter zuordnen, der hochwertige Daten für US-Adressen bereitstellt. Weitere Informationen finden Sie unter [Anfügen einer Domäne oder Verbund Domäne an Verweis Daten](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md).
 
-###  <a name="Security"></a> Sicherheit
+###  <a name="security"></a><a name="Security"></a> Sicherheit
 
-####  <a name="Permissions"></a> Berechtigungen
+####  <a name="permissions"></a><a name="Permissions"></a> Berechtigungen
  Sie müssen über die Rolle "dqs_kb_editor" oder "dqs_kb_operator" für die Datenbank DQS_MAIN verfügen, um eine Datenbereinigung auszuführen.
 
-##  <a name="Cleanse"></a>Bereinigen von Daten mit Referenzdaten Kenntnissen
+##  <a name="cleanse-your-data-using-reference-data-knowledge"></a><a name="Cleanse"></a> Bereinigen der Daten mit Verweisdaten-Wissen
  Wir fahren mit dem gleichen Beispiel der Verwendung der Domänen fort, die wir im vorherigen Thema zugeordnet haben, [Anfügen einer Domäne oder Verbund Domäne an Verweis Daten](../../2014/data-quality-services/attach-a-domain-or-composite-domain-to-reference-data.md)mit dem Melissa-Datendienst in Azure Marketplace. Jetzt verwenden wir die gleichen Domänen, um einige Beispiel-US-Adressen zu bereinigen. Die Schritte zum Bereinigen von Daten sind dieselben wie in [Bereinigen von Daten mit &#40;internem&#41; DQS-Wissen](../../2014/data-quality-services/cleanse-data-using-dqs-internal-knowledge.md) beschrieben. Wir lenken Ihre Aufmerksamkeit jedoch während des Prozesses an die nötigen Stellen.
 
 1.  Erstellen Sie ein Datenqualitätsprojekt, und wählen Sie die Aktivität **Bereinigung** aus. Siehe [Create a Data Quality Project](../../2014/data-quality-services/create-a-data-quality-project.md).

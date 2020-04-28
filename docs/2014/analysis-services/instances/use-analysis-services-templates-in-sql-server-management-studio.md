@@ -11,33 +11,32 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 019f0c2853006be8213d0f6766f9d462492b7105
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175223"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Verwenden von Analysis Services-Vorlagen in SQL Server Management Studio
-  
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] stellt einen Satz von Vorlagen bereit, mit deren Hilfe Sie schnell XMLA-Skripts oder DMX/MDX-Abfragen erstellen, KPIs in einem Cube oder einem tabellarischen Modell erstellen, Skripts für Sicherungs- und Wiederherstellungsvorgänge schreiben und viele andere Tasks ausführen können. Die Vorlagen befinden sich im **Vorlagen-Explorer** von [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
  Dieses Thema enthält eine Liste der Vorlagen für mehrdimensionale Modelle und tabellarische Modelle sowie Beispiele für die Erstellung einer MDX-Abfrage und XMLA-Anweisung mit dem Metadaten-Explorer und dem Vorlagen-Explorer.
 
  Dieses Thema enthält die folgenden Abschnitte:
 
- [Öffnen einer Analysis Services Vorlage](#bkmk_usingTE)
+ [Öffnen einer Analysis Services-Vorlage](#bkmk_usingTE)
 
  [Erstellen und Ausführen einer MDX-Abfrage für ein tabellarisches Modell mit einer Vorlage](#BKMK_Building_Queries)
 
- [Erstellen eines XMLA-Skripts aus einer Vorlage](#bkmk_backup)
+ [Erstellen von XMLA-Skript aus einer Vorlage](#bkmk_backup)
 
  [Generieren einer Schemarowsetabfrage mithilfe einer XMLA-Vorlage](#bkmk_schemarowset)
 
- [Analysis Services Vorlagen Verweis](#bkmk_Ref)
+ [Referenz zu Analysis Services-Vorlagen](#bkmk_Ref)
 
  In diesem Thema werden DMX-Vorlagen nicht behandelt. Beispiele zum Erstellen von Data Mining-Abfragen mithilfe von Vorlagen finden Sie unter [Erstellen einer DMX-Abfrage in SQL Server Management Studio](../data-mining/create-a-dmx-query-in-sql-server-management-studio.md) oder [Erstellen einer Singleton-Vorhersageabfrage aus einer Vorlage](../data-mining/create-a-singleton-prediction-query-from-a-template.md).
 
-##  <a name="bkmk_usingTE"></a>Öffnen einer Analysis Services Vorlage
+##  <a name="open-an-analysis-services-template"></a><a name="bkmk_usingTE"></a>Öffnen einer Analysis Services Vorlage
  Alle Vorlagen für Datenbank-Engine-Abfragen und Analysis Services-Abfragen und -Befehle sind im Vorlagen-Explorer verfügbar.
 
  Wählen Sie zum Öffnen des **Vorlagen-Explorers**im Menü **Ansicht** die entsprechende Option. Klicken Sie auf das Cubesymbol, um eine Liste der Vorlagen anzuzeigen, die für [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]verfügbar sind.
@@ -56,7 +55,7 @@ ms.locfileid: "78175223"
 
      Wechseln Sie auf die Registerkarte **Meldungen** , um die Anzahl der zurückgegebenen Datensätze, Fehler, Abfrageanweisungen und andere beliebige Meldungen anzuzeigen, die mit der Ausführung der Abfrage verbunden sind. Wenn Sie z. B. eine DAX-Anweisung für ein Modell ausführen, das im Direct Query-Modus ausgeführt wird, wird die von der xVelocity-Engine für Datenanalyse im Arbeitsspeicher (VertiPaq) generierte Transact-SQL-Anweisung angezeigt.
 
-##  <a name="BKMK_Building_Queries"></a>Erstellen und Ausführen einer MDX-Abfrage für ein tabellarisches Modell mit einer Vorlage
+##  <a name="build-and-run-an-mdx-query-on-a-tabular-model-using-a-template"></a><a name="BKMK_Building_Queries"></a>Erstellen und Ausführen einer MDX-Abfrage für ein tabellarisches Modell mit einer Vorlage
  In diesem Beispiel wird verdeutlicht, wie Sie in SQL Server Management Studio eine MDX-Abfrage erstellen, indem Sie eine tabellarische Modelldatenbank als Datenquelle verwenden. Um dieses Beispiel auf Ihrem Computer zu wiederholen, können Sie das [Adventureworks-Beispielprojekt mit einem tabellarischen Modell herunterladen](https://go.microsoft.com/fwlink/?LinkId=231183).
 
 > [!WARNING]
@@ -80,7 +79,7 @@ ms.locfileid: "78175223"
 
 4.  Sie können die Abfrage unverändert ausführen, aber in den meisten Fällen sind ggf. einige Änderungen erforderlich, z. B. das Hinzufügen einer Funktion zum Zurückgeben bestimmter Elemente. Geben `.members` Sie z. b **. nach [Product Category]. [ Name der Produktkategorie]**. Weitere Informationen finden Sie unter [Using Member Expressions](/sql/mdx/using-member-expressions).
 
-##  <a name="bkmk_backup"></a>Erstellen eines XMLA-Skripts aus einer Vorlage
+##  <a name="create-xmla-script-from-a-template"></a><a name="bkmk_backup"></a>Erstellen eines XMLA-Skripts aus einer Vorlage
  Die XMLA-Befehlsvorlagen, die im Vorlagen-Explorer bereitgestellt werden, können zum Erstellen von Skripts für die Überwachung und Aktualisierung von [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] -Objekten verwendet werden. Dies gilt unabhängig davon, ob sich die Instanz im mehrdimensionalen und Data Mining-Modus oder im tabellarischen Modus befindet. Die **XMLA** -Vorlagen enthalten Beispiele für die folgenden Arten von Skripts:
 
 -   Sicherungs-, Wiederherstellungs- und Synchronisierungsvorgänge
@@ -108,7 +107,7 @@ ms.locfileid: "78175223"
 
 5.  Doppelklicken Sie auf den Text innerhalb \<der Datei> Elements. Geben Sie den Namen der Sicherungsdatei einschließlich der Dateierweiterung ABF ein. Geben Sie den vollständigen Dateipfad an, falls Sie nicht den Standardspeicherort für Sicherungen verwenden. Weitere Informationen finden Sie unter [Sichern, Wiederherstellen und Synchronisieren von Datenbanken &#40;XMLA&#41;](../multidimensional-models-scripting-language-assl-xmla/backing-up-restoring-and-synchronizing-databases-xmla.md).
 
-##  <a name="bkmk_schemarowset"></a>Generieren einer Schemarowsetabfrage mithilfe einer XMLA-Vorlage
+##  <a name="generate-a-schema-rowset-query-using-an-xmla-template"></a><a name="bkmk_schemarowset"></a>Generieren einer Schemarowsetabfrage mithilfe einer XMLA-Vorlage
  Der **Vorlagen-Explorer** enthält nur eine Vorlage für Schemarowset-Abfragen. Zum Verwenden dieser Vorlage müssen Sie mit den Anforderungen der einzelnen Schemarowsets (und allen erforderlichen Elementen) vertraut sein, die Sie verwenden möchten, sowie mit den Spalten, die als Einschränkungen verwendet werden können. Weitere Informationen finden Sie unter [Analysis Services-Schemarowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets).
 
  Beachten Sie, dass viele Schemarowsets der Einfachheit halber auch als Dynamische Verwaltungssichten (DMVs) verfügbar gemacht wurden. Indem Sie die entsprechende DMV verwenden, können Sie das Schemarowset mit Syntax abfragen, die der Transact-SQL-Syntax gleicht. Die folgenden Abfragen geben z. B. die gleichen Ergebnisse zurück, jedoch einmal im XML-Format und einmal in einem tabellarischen Format. Weitere Informationen zu DMVs finden Sie unter [Verwenden von dynamischen Verwaltungssichten &#40;DMVs&#41; zum Überwachen von Analysis Services](use-dynamic-management-views-dmvs-to-monitor-analysis-services.md).
@@ -163,10 +162,10 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 
     ```
 
-##  <a name="bkmk_Ref"></a>Analysis Services Vorlagen Verweis
+##  <a name="analysis-services-template-reference"></a><a name="bkmk_Ref"></a>Analysis Services Vorlagen Verweis
  Die folgenden Vorlagen werden zum Verwenden von Analysis Services-Datenbanken und den Objekten innerhalb der Datenbank bereitgestellt, einschließlich Miningstrukturen und -modellen, Cubes und tabellarischer Modelle:
 
-|Category|Elementvorlage|Beschreibung|
+|Kategorie|Elementvorlage|BESCHREIBUNG|
 |--------------|-------------------|-----------------|
 |DMX\Modellinhalt|Content Query|Veranschaulicht die Verwendung der DMX SELECT FROM * \<Model->*. Inhalts Anweisung zum Abrufen des Inhalts des Mining Modell-Schemarowsets für ein bestimmtes Mining Modell.|
 ||Continuous Column Values|Veranschaulicht, wie Sie die DMX SELECT-Anweisung unterschiedliche from * \<Model>* mit den `RangeMin` DMX-Funktionen und `RangeMax` verwenden, um eine Reihe von Werten in einem angegebenen Bereich von kontinuierlichen Spalten in einem angegebenen Mining Modell abzurufen.|
@@ -217,12 +216,12 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 |XMLA\Schemarowsets|Ermitteln von Schemarowsets|Zeigt, wie Sie mithilfe der XMLA `Discover`-Methode den Inhalt eines DISCOVER_SCHEMA_ROWSETS-Schemarowsets abrufen.|
 |XMLA\Serverstatus|Verbindungen|Zeigt, wie Sie mithilfe der XMLA `Discover`-Methode den Inhalt eines DISCOVER_CONNECTIONS-Schemarowsets abrufen.|
 ||Aufträge|Zeigt, wie Sie mithilfe der XMLA `Discover`-Methode den Inhalt eines DISCOVER_JOBS-Schemarowsets abrufen.|
-||Locations|Zeigt, wie Sie mithilfe der XMLA `Discover`-Methode den Inhalt des DISCOVER_LOCATIONS-Schemarowsets unter Angabe des Pfades zum Standort der Sicherungsdateien abrufen.|
+||Standorte|Zeigt, wie Sie mithilfe der XMLA `Discover`-Methode den Inhalt des DISCOVER_LOCATIONS-Schemarowsets unter Angabe des Pfades zum Standort der Sicherungsdateien abrufen.|
 ||Locks|Zeigt, wie Sie mithilfe der XMLA `Discover`-Methode den Inhalt eines DISCOVER_LOCKS-Schemarowsets abrufen.|
 ||Memory Grant|Zeigt, wie Sie mithilfe der XMLA `Discover`-Methode den Inhalt eines DISCOVER_MEMORYGRANT-Schemarowsets abrufen.|
 ||Leistungsindikatoren|Zeigt, wie Sie mithilfe der XMLA `Discover`-Methode den Inhalt eines DISCOVER_PERFORMANCE_COUNTERS-Schemarowsets abrufen.|
 ||Sitzungen|Zeigt, wie Sie mithilfe der XMLA `Discover`-Methode den Inhalt eines DISCOVER_SESSIONS-Schemarowsets abrufen.|
-||Ablaufverfolgungen|Zeigt, wie Sie mithilfe der XMLA `Discover`-Methode den Inhalt eines DISCOVER_TRACES-Schemarowsets abrufen.|
+||Traces|Zeigt, wie Sie mithilfe der XMLA `Discover`-Methode den Inhalt eines DISCOVER_TRACES-Schemarowsets abrufen.|
 ||Transaktionen|Zeigt, wie Sie mithilfe der XMLA `Discover`-Methode den Inhalt eines DISCOVER_TRANSACTIONS-Schemarowsets abrufen.|
 
 ## <a name="see-also"></a>Weitere Informationen

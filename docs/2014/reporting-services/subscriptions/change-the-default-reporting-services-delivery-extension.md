@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2a92d967e0b37f1143c9fd37a0d5ee8154ac21db
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78177120"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Ändern der Standardübermittlungserweiterung für Reporting Services
@@ -53,7 +53,7 @@ ms.locfileid: "78177120"
 
      Öffnen Sie die Datei RSReportServer.config in einem Text-Editor. Weitere Informationen zur Konfigurationsdatei finden Sie unter [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md). Nach Änderung der Konfiguration sieht die Benutzeroberfläche wie folgt aus:
 
-     ![Geänderte Liste der Übermittlungserweiterungen](../media/ssrs-modified-delivery.png "geänderte Liste der Übermittlungserweiterungen")
+     ![Geänderte Liste der Übermittlungserweiterungen](../media/ssrs-modified-delivery.png "Geänderte Liste der Übermittlungserweiterungen")
 
 2.  Ändern Sie den Abschnitt DeliveryUI wie folgt und beachten Sie die wichtigsten Änderungen:
 

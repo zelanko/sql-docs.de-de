@@ -1,5 +1,5 @@
 ---
-title: DefinedSize-Eigenschaftsbeispiel (VC++) | Microsoft Docs
+title: DefinedSize-Eigenschaft (Beispiel) (VC + +) | Microsoft-Dokumentation
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,14 +15,14 @@ ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
 author: MightyPen
 ms.author: genemi
 ms.openlocfilehash: 4d34aeed81cfead8f3081d9e0d7c4f148c17396d
-ms.sourcegitcommit: a3f5c3742d85d21f6bde7c6ae133060dcf1ddd44
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 04/15/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76939582"
 ---
 # <a name="definedsize-property-example-vc"></a>DefinedSize-Eigenschaft – Beispiel (VC++)
-In diesem Beispiel wird die [DefinedSize-Eigenschaft](../../../ado/reference/adox-api/definedsize-property-adox.md) einer [Spalte](../../../ado/reference/adox-api/column-object-adox.md)veranschaulicht. Der Code definiert die Größe der Spalte FirstName der **Tabelle Employees** der *Northwind-Datenbank* neu. Anschließend wird die Änderung der Werte des [FirstName-Feldes](../../../ado/reference/ado-api/field-object.md) eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) basierend auf der Tabelle **Employees** angezeigt. Beachten Sie, dass das Feld FirstName standardmäßig mit Leerzeichen aufgepolstert wird, nachdem Sie die **DefinedSize-Eigenschaft** neu definiert haben.  
+Dieses Beispiel veranschaulicht die [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) -Eigenschaft einer [Spalte](../../../ado/reference/adox-api/column-object-adox.md). Mit dem Code wird die Größe der FirstName-Spalte der **Employees** -Tabelle der *Northwind* -Datenbank neu definiert. Anschließend wird die Änderung der Werte des [Felds](../../../ado/reference/ado-api/field-object.md) FirstName eines [Recordsets](../../../ado/reference/ado-api/recordset-object-ado.md) , das auf der Tabelle **Employees** basiert, angezeigt. Beachten Sie, dass das Feld FirstName standardmäßig mit Leerzeichen aufgefüllt wird, nachdem Sie die **DefinedSize** -Eigenschaft neu definiert haben.  
   
 ```  
 // BeginDefinedSizeCpp.cpp  
@@ -163,5 +163,5 @@ int main() {
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Spaltenobjekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
+ [Column-Objekt (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
  [DefinedSize-Eigenschaft (ADOX)](../../../ado/reference/adox-api/definedsize-property-adox.md)

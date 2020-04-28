@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 34079d17fd847b2a522b74f7ecdddcf3a0342b2c
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176109"
 ---
 # <a name="ssis-designer"></a>SSIS-Designer
@@ -96,8 +96,7 @@ ms.locfileid: "78176109"
 >  Zum Aktivieren bzw. Deaktivieren der Anzeige von Meldungen auf der Registerkarte **Status** schalten Sie die Option **Debug-Statusbericht** im Menü **SSIS** um.
 
 ##### <a name="connection-managers-area"></a>Verbindungs-Manager (Bereich)
- Die Verbindungs-Manager, die ein Paket verwendet, können Sie im Bereich **Verbindungs-Manager** hinzufügen und ändern. 
-  [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] enthält Verbindungs-Manager zum Herstellen von Verbindungen mit verschiedenen Datenquellen, beispielsweise mit Textdateien, OLE DB-Datenbanken und .NET-Providern.
+ Die Verbindungs-Manager, die ein Paket verwendet, können Sie im Bereich **Verbindungs-Manager** hinzufügen und ändern. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] enthält Verbindungs-Manager zum Herstellen von Verbindungen mit verschiedenen Datenquellen, beispielsweise mit Textdateien, OLE DB-Datenbanken und .NET-Providern.
 
  Weitere Informationen finden Sie unter [Integration Services-Verbindungen &#40;SSIS&#41;](connection-manager/integration-services-ssis-connections.md) und [Erstellen von Verbindungs-Managern](../../2014/integration-services/create-connection-managers.md).
 

@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c190e95df57c80d29428b39b72a4115ac7d23de1
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78175349"
 ---
 # <a name="using-nonclustered-columnstore-indexes"></a>Verwenden nicht gruppierter Columnstore-Indizes
@@ -28,14 +28,14 @@ ms.locfileid: "78175349"
 
 -   [Erstellen eines nicht gruppierten Columnstore-Indexes](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#load)
 
--   [Ändern der Daten in einem nicht gruppierten columnstore-Index](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#change)
+-   [Ändern der Daten in einem nicht gruppierten Columnstore-Index](../../2014/database-engine/using-nonclustered-columnstore-indexes.md#change)
 
-##  <a name="load"></a>Erstellen eines nicht gruppierten columnstore-Indexes
+##  <a name="create-a-nonclustered-columnstore-index"></a><a name="load"></a>Erstellen eines nicht gruppierten columnstore-Indexes
  Zum Laden von Daten in einen nicht gruppierten columnstore--Index laden Sie zuerst Daten in eine herkömmliche rowstore-Tabelle, die als Heap oder gruppierter Index gespeichert ist, und verwenden Sie dann [Create columnstore-Index &#40;Transact-SQL-&#41;](/sql/t-sql/statements/create-columnstore-index-transact-sql) , um einen columnstore--Index zu erstellen.
 
  ![Laden von Daten in einen columnstore-Index](../../2014/database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "Laden von Daten in einen columnstore-Index")
 
-##  <a name="change"></a>Ändern der Daten in einem nicht gruppierten columnstore-Index
+##  <a name="change-the-data-in-a-nonclustered-columnstore-index"></a><a name="change"></a>Ändern der Daten in einem nicht gruppierten columnstore-Index
  Wenn Sie einen nicht gruppierten Columnstore-Index für eine Tabelle erstellen, können Sie die Daten in dieser Tabelle nicht mehr direkt ändern. Eine Abfrage mit INSERT, UPDATE, MERGE oder DELETE schlägt fehl und gibt eine Fehlermeldung zurück. Um Daten in der Tabelle hinzuzufügen oder zu ändern, können Sie eine der folgenden Aktionen ausführen:
 
 -   Deaktivieren Sie den columnstore--Index. Anschließend können Sie die Daten in der Tabelle aktualisieren. Wenn Sie den Columnstore-Index deaktivieren, können Sie den Columnstore-Index nach dem Aktualisieren der Daten neu erstellen. Beispiel:

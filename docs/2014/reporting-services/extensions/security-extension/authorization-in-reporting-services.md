@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 79c0e947ce20c8c8393e4a87cf7f2f9f86203d39
-ms.sourcegitcommit: 2d4067fc7f2157d10a526dcaa5d67948581ee49e
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/28/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "78176990"
 ---
 # <a name="authorization-in-reporting-services"></a>Autorisierung in Reporting Services
-  Unter Autorisierung versteht man den Prozess der Beurteilung, ob einer Identität die angeforderte Zugriffsart auf eine bestimmte Ressource in der Berichtsserver-Datenbank erteilt wird. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet eine Autorisierungarchitektur auf Rollenbasis, bei der ein Benutzer Zugriff auf eine bestimmte Rolle ausgehend von der Rollenzuweisung für die Anwendung erhält. Sicherheitserweiterungen für [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enthalten eine Implementierung einer Autorisierungskomponente, über die ein Benutzer Zugriff erhält, sobald er sich auf dem Berichtsserver authentifiziert hat. Die Autorisierung wird gestartet, wenn ein Benutzer versucht, einen Vorgang im System oder auf einem Berichtsserverelement über die SOAP-API und den URL-Zugriff auszuführen. Dies wird durch die Sicherheitserweiterungsschnittstelle **IAuthorizationExtension**ermöglicht. Wie vorher angegeben, erben alle Erweiterungen von **IExtension** die Basisschnittstelle für jede Erweiterung, die Sie bereitstellen. **IExtension** und **IAuthorizationExtension** sind Elemente des **Microsoft. ReportingServices. Interfaces** -Namespace.
+  Unter Autorisierung versteht man den Prozess der Beurteilung, ob einer Identität die angeforderte Zugriffsart auf eine bestimmte Ressource in der Berichtsserver-Datenbank erteilt wird. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] verwendet eine Autorisierungarchitektur auf Rollenbasis, bei der ein Benutzer Zugriff auf eine bestimmte Rolle ausgehend von der Rollenzuweisung für die Anwendung erhält. Sicherheitserweiterungen für [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enthalten eine Implementierung einer Autorisierungskomponente, über die ein Benutzer Zugriff erhält, sobald er sich auf dem Berichtsserver authentifiziert hat. Die Autorisierung wird gestartet, wenn ein Benutzer versucht, einen Vorgang im System oder auf einem Berichtsserverelement über die SOAP-API und den URL-Zugriff auszuführen. Dies wird durch die Sicherheitserweiterungsschnittstelle **IAuthorizationExtension**ermöglicht. Wie vorher angegeben, erben alle Erweiterungen von **IExtension** die Basisschnittstelle für jede Erweiterung, die Sie bereitstellen. **IExtension** und **IAuthorizationExtension** sind Elemente des **Microsoft.ReportingServices.Interfaces** -Namespace.
 
 ## <a name="checking-access"></a>Zugriffsprüfung
  Bei der Autorisierung ist der Schlüssel für jede benutzerdefinierte Implementierung der Sicherheit die in der <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A>-Methode implementierte Zugriffsüberprüfung. <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> wird immer aufgerufen, wenn ein Benutzer versucht, auf dem Berichtsserver einen Vorgang auszuführen. Die Methode <xref:Microsoft.ReportingServices.Interfaces.IAuthorizationExtension.CheckAccess%2A> wird für jeden Vorgangstyp überladen. Für Ordnervorgänge könnte ein Beispiel für eine Zugriffsprüfung folgendermaßen aussehen:

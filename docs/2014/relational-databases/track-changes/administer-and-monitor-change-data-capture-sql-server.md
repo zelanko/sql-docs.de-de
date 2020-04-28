@@ -15,16 +15,16 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 467cb4dab267b04965058f118d798bdd5a7b0909
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "76929192"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Verwalten und Überwachen von Change Data Capture (SQL Server)
   In diesem Thema wird beschrieben, wie Sie Change Data Capture verwalten und überwachen können.  
   
-##  <a name="Capture"></a>Aufzeichnungs Auftrag  
+##  <a name="capture-job"></a><a name="Capture"></a> Aufzeichnungsauftrag  
  Der Aufzeichnungsauftrag wird durch Ausführen der parameterlosen gespeicherten Prozedur `sp_MScdc_capture_job` initiiert. Diese gespeicherte Prozedur beginnt mit dem Extrahieren der konfigurierten Werte für *maxtrans*, *maxscans*, *continuous*und *pollinginterval* für den Aufzeichnungsauftrag aus „msdb.dbo.cdc_jobs“. Diese konfigurierten Werte werden dann als Parameter an die gespeicherte Prozedur `sp_cdc_scan` übergeben. Diese werden verwendet, um `sp_replcmds` zum Ausführen des Protokollscans aufzurufen.  
   
 ### <a name="capture-job-parameters"></a>Parameter von Aufzeichnungsaufträgen  
@@ -61,7 +61,7 @@ ms.locfileid: "76929192"
 ### <a name="capture-job-customization"></a>Anpassen eines Aufzeichnungsauftrags  
  Sie können für den Aufzeichnungsauftrag statt eines festen Abrufintervalls zusätzliche Logik anwenden, um zu bestimmen, ob sofort ein neuer Scan beginnen soll oder ob vor einem neuen Scan ein Ruhezustand erzwungen wird. Die Wahl kann einfach auf der Uhrzeit basieren. Z. B. können sehr lange Ruhezustände während Spitzenzeiten erzwungen werden. Es sind auch Abrufintervalle von 0 zum Tagesende möglich, wenn die Verarbeitungsvorgänge des Tages abgeschlossen und die Vorgänge der Nacht vorbereitet werden müssen. Der Status des Aufzeichnungsprozesses kann außerdem überwacht werden, um zu bestimmen, wann alle Transaktionen, für die bis Mitternacht ein Commit ausgeführt wurde, gescannt und in Änderungstabellen abgelegt worden sind. Dies beendet den Aufzeichnungsauftrag, der durch einen geplanten täglichen Neustart neu gestartet wird. Durch Ersetzen des übermittelten Auftragsschritts, der `sp_cdc_scan` aufruft, durch einen Aufruf eines benutzerspezifischen Wrappers für `sp_cdc_scan` kann durch wenig zusätzlichen Aufwand ein hochgradig angepasstes Verhalten erzielt werden.  
   
-##  <a name="Cleanup"></a>Cleanupauftrag  
+##  <a name="cleanup-job"></a><a name="Cleanup"></a> Cleanupauftrag  
  Dieser Abschnitt enthält Informationen darüber, wie der Change Data Capture-Cleanupauftrag funktioniert.  
   
 ### <a name="structure-of-the-cleanup-job"></a>Struktur des Cleanupauftrags  
@@ -77,8 +77,8 @@ ms.locfileid: "76929192"
 ### <a name="cleanup-job-customization"></a>Anpassen eines Cleanupauftrags  
  Die Anpassungsmöglichkeiten für den Cleanupauftrag bestehen in der Strategie, die verwendet wird, um zu bestimmen, welche Einträge in der Änderungstabelle verworfen werden sollen. Im übermittelten Cleanupauftrag wird nur eine zeitbasierte Strategie unterstützt. In diesem Fall wird die neue Untergrenzenmarkierung durch Subtrahieren der zulässigen Beibehaltungsdauer von der Commitzeit der letzten verarbeiteten Transaktion berechnet. Da die zugrunde liegenden Cleanupprozeduren auf `lsn` statt auf Zeit basieren, kann eine beliebige Anzahl von Strategien verwendet werden, um den kleinsten `lsn` zu bestimmen, der in den Änderungstabellen bewahrt werden soll. Nur einige von diesen sind streng zeitbasiert. Es könnte z. B. Wissen über die Clients zum Bereitstellen einer Sicherung verwendet werden, wenn nachfolgende Prozesse, die Zugriff auf die Änderungstabellen erfordern, nicht ausgeführt werden können. Obwohl die Standardstrategie denselben `lsn` für das Cleanup aller Änderungstabellen der Datenbank verwendet, kann auch die zugrunde liegende Cleanupprozedur für das Cleanup auf Aufzeichnungsinstanzebene aufgerufen werden.  
   
-##  <a name="Monitor"></a>Überwachen des Change Data Capture-Prozesses  
- Indem Sie den Change Data Capture-Prozess überwachen, können Sie ermitteln, ob Änderungen korrekt und mit einer akzeptablen Latenzzeit in die Änderungstabellen geschrieben werden. Das Überwachen kann Ihnen auch dabei helfen, jegliche Fehler zu identifizieren, die auftreten könnten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]enthält zwei dynamische Verwaltungs Sichten, mit denen Sie Change Data Capture überwachen können: [sys. dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) und [sys. dm_cdc_errors](../native-client-ole-db-errors/errors.md).  
+##  <a name="monitor-the-change-data-capture-process"></a><a name="Monitor"></a> Überwachen des Change Data Capture-Prozesses  
+ Indem Sie den Change Data Capture-Prozess überwachen, können Sie ermitteln, ob Änderungen korrekt und mit einer akzeptablen Latenzzeit in die Änderungstabellen geschrieben werden. Das Überwachen kann Ihnen auch dabei helfen, jegliche Fehler zu identifizieren, die auftreten könnten. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verfügt über zwei dynamische Verwaltungssichten, womit Sie Change Data Capture überwachen können: [sys.dm_cdc_log_scan_sessions](../native-client-ole-db-data-source-objects/sessions.md) und [sys.dm_cdc_errors](../native-client-ole-db-errors/errors.md).  
   
 ### <a name="identify-sessions-with-empty-result-sets"></a>Identifizieren von Sitzungen mit leeren Resultsets  
  Jede Zeile in sys.dm_cdc_log_scan_sessions stellt eine Protokollscansitzung (außer der Zeile mit einer ID von 0) dar. Eine Protokollscansitzung entspricht einer Ausführung von [sp_cdc_scan](/sql/relational-databases/system-stored-procedures/sys-sp-cdc-scan-transact-sql). Während einer Sitzung kann der Scan entweder Änderungen oder ein leeres Ergebnis zurückgeben. Wenn das Resultset leer ist, wird die Spalte empty_scan_count in sys.dm_cdc_log_scan_sessions auf den Wert 1 gesetzt. Folgen noch weitere leere Resultsets, z. B. wenn der Aufzeichnungsauftrag dauerhaft ausgeführt wird, wird empty_scan_count in der letzten vorhandenen Zeile inkrementiert. Wenn sys.dm_cdc_log_scan_sessions z. B. bereits 10 Zeilen für Scans enthält, die Änderungen zurückgegeben haben, und fünf leere Ergebnisse aufeinander folgen, enthält die Sicht 11 Zeilen. Die letzte Zeile verfügt in der Spalte empty_scan_count über einen Wert von 5. Führen Sie die folgende Abfrage aus, um Sitzungen zu ermitteln, die einen leeren Scan aufweisen:  
@@ -161,7 +161,7 @@ SELECT command_count/duration AS [Throughput] FROM sys.dm_cdc_log_scan_sessions 
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Nachverfolgen von Datenänderungen &#40;SQL Server&#41;](track-data-changes-sql-server.md)   
- [Über Change Data Capture &#40;SQL Server&#41;](../track-changes/about-change-data-capture-sql-server.md)   
+ [Informationen zu Change Data Capture &#40;SQL Server&#41;](../track-changes/about-change-data-capture-sql-server.md)   
  [Aktivieren und Deaktivieren von Change Data Capture &#40;SQL Server&#41;](enable-and-disable-change-data-capture-sql-server.md)   
  [Arbeiten mit Änderungsdaten &#40;SQL Server&#41;](work-with-change-data-sql-server.md)  
   
