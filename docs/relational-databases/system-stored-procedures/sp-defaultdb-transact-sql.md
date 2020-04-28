@@ -18,10 +18,10 @@ ms.assetid: 663b859f-c6da-4942-95a6-60b93d05654e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: aec951ea8a0397c39c57619609264596aec9a648
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085823"
 ---
 # <a name="sp_defaultdb-transact-sql"></a>sp_defaultdb (Transact-SQL)
@@ -42,7 +42,7 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @loginame = ] 'login'`Der Anmelde Name. *Login* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. der *Anmelde* Name kann eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorhandene Anmeldung oder ein Windows-Benutzer oder eine Windows-Gruppe sein. Falls für den Windows-Benutzer bzw. die Gruppe kein Anmeldename in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorhanden ist, wird er automatisch hinzugefügt.  
+`[ @loginame = ] 'login'`Der Anmelde Name. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. der *Anmelde* Name kann eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorhandene Anmeldung oder ein Windows-Benutzer oder eine Windows-Gruppe sein. Falls für den Windows-Benutzer bzw. die Gruppe kein Anmeldename in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vorhanden ist, wird er automatisch hinzugefügt.  
   
 `[ @defdb = ] 'database'`Der Name der neuen Standarddatenbank. *Database* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. die *Datenbank* muss bereits vorhanden sein.  
   
@@ -66,7 +66,7 @@ EXEC sp_defaultdb 'Victoria', 'AdventureWorks2012';
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Sicherheits Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
+ [Alter Login &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [sp_addlogin &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addlogin-transact-sql.md)   
  [sp_droplogin &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-droplogin-transact-sql.md)   
  [sp_grantdbaccess &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-grantdbaccess-transact-sql.md)   

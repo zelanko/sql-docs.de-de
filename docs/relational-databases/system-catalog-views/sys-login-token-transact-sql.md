@@ -22,10 +22,10 @@ ms.assetid: 86e06938-9d0a-44e5-99e2-55c8ef5f2f84
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: fb396d47da69724d16c0d72e1373527f9c5e700f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68102429"
 ---
 # <a name="syslogin_token-transact-sql"></a>sys.login_token (Transact-SQL)
@@ -38,12 +38,12 @@ ms.locfileid: "68102429"
 |**principal_id**|**int**|ID des Prinzipals. Dieser Wert ist innerhalb des Servers eindeutig.|  
 |**sid**|**varbinary(85)**|Sicherheits- ID des Prinzipals. Wenn dies ein Windows-Prinzipal ist, **sid** = Windows-SID. Wenn die Anmeldung einem Zertifikat zugeordnet ist, **sid** = GUID aus dem Zertifikat.|  
 |**name**|**nvarchar(128)**|Name des Prinzipals. Dieser Wert ist innerhalb des Servers eindeutig.|  
-|**type**|**nvarchar(128)**|Beschreibung des Prinzipaltyps. Alle Typen werden **sid**zugeordnet. Der Wert kann einer der folgenden sein:<br /><br /> SQL LOGIN<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> SERVER ROLE<br /><br /> LOGIN MAPPED TO CERTIFICATE<br /><br /> LOGIN MAPPED TO ASYMMETRIC KEY<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC KEY|  
+|**type**|**nvarchar(128)**|Beschreibung des Prinzipaltyps. Alle Typen werden **sid**zugeordnet. Der Wert kann in folgenden Formen vorliegen:<br /><br /> SQL LOGIN<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> SERVER ROLE<br /><br /> LOGIN MAPPED TO CERTIFICATE<br /><br /> LOGIN MAPPED TO ASYMMETRIC KEY<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC KEY|  
 |**ungs**|**nvarchar(128)**|Zeigt an, dass der Prinzipal an der Auswertung von GRANT- oder DENY-Berechtigungen teilnimmt oder als Authentifikator dient.<br /><br /> Die folgenden Werte sind möglich:<br /><br /> GRANT OR DENY<br /><br /> DENY ONLY<br /><br /> AUTHENTICATOR|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sys. user_token &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-user-token-transact-sql.md)   
- [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
+ [sys. server_principals &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md)   
  [sys. database_principals &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)   
  [Prinzipale &#40;Datenbank-Engine&#41;](../../relational-databases/security/authentication-access/principals-database-engine.md)  
   

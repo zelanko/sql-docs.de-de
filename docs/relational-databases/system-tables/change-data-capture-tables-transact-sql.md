@@ -13,10 +13,10 @@ ms.assetid: a4372d0b-50ca-4e58-80f6-2ed3cb52a84a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7d6d87ee8b2aa05c3156acb2db9c6604380db887
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68082684"
 ---
 # <a name="change-data-capture-tables-transact-sql"></a>Change Data Capture-Tabellen (Transact-SQL)
@@ -47,7 +47,7 @@ ms.locfileid: "68082684"
  Gibt die Konfigurationsparameter für Change Data Capture-Agentaufträge zurück.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Gespeicherte Prozeduren für Change Data Capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
+ [Gespeicherte Prozeduren für Change Data Capture &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
  [Change Data Capture-Funktionen &#40;Transact-SQL&#41;](../../relational-databases/system-functions/change-data-capture-functions-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 3bdcea5da463e2501954c4bf96ca58bac216eb58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060203"
 ---
 # <a name="sysmail_mailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
@@ -35,7 +35,7 @@ ms.locfileid: "68060203"
 |**mailitem_id**|**int**|Der Bezeichner für das E-Mail-Element, das die Anlage enthält.|  
 |**Einfügen**|**nvarchar (520)**|Der Dateiname der Anlage. Wenn **attach_query_result** 1 und **query_attachment_filename** NULL ist, erstellt Datenbank-E-Mail einen beliebigen Dateinamen.|  
 |**Filesize**|**int**|Die Größe der Anlage in Bytes.|  
-|**attachment**|**varbinary(max)**|Der Inhalt der Anlage.|  
+|**Angeklag**|**varbinary(max)**|Der Inhalt der Anlage.|  
 |**last_mod_date**|**datetime**|Das Datum und die Uhrzeit der letzten Änderung der Zeile.|  
 |**last_mod_user**|**sysname**|Der Benutzer, der die Zeile zuletzt geändert hat.|  
   

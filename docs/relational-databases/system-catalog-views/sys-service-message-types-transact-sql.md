@@ -20,10 +20,10 @@ ms.assetid: 6a38709a-60fe-46f6-89da-718f74f15600
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 560ee8a4ccc03f747df2b475394af092db589e7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078738"
 ---
 # <a name="sysservice_message_types-transact-sql"></a>sys.service_message_types (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68078738"
 |**message_type_id**|**int**|Die ID des Nachrichtentypes, die innerhalb der Datenbank eindeutig ist. Lässt keine NULL-Werte zu.|  
 |**principal_id**|**int**|Die ID des Datenbankprinzipals, der diesen Nachrichtentyp besitzt. Lässt NULL-Werte zu.|  
 |**Validierungs**|**char (2)**|Vom Broker vor dem Senden von Nachrichten dieses Types ausgeführte Überprüfung. Lässt keine NULL-Werte zu. Enthält einen der folgenden Werte:<br /><br /> N = Keiner<br /><br /> X = XML<br /><br /> E = Leer|  
-|**validation_desc**|**nvarchar (60)**|Beschreibung der vom Broker vor dem Senden von Nachrichten dieses Types ausgeführten Überprüfung. Lässt NULL-Werte zu. Enthält einen der folgenden Werte:<br /><br /> Keine<br /><br /> XML<br /><br /> EMPTY|  
+|**validation_desc**|**nvarchar(60)**|Beschreibung der vom Broker vor dem Senden von Nachrichten dieses Types ausgeführten Überprüfung. Lässt NULL-Werte zu. Enthält einen der folgenden Werte:<br /><br /> Keine<br /><br /> XML<br /><br /> EMPTY|  
 |**xml_collection_id**|**int**|Für eine Überprüfung, die ein XML-Schema verwendet, wird die ID der Schemaauflistung verwendet.<br /><br /> Andernfalls wird NULL verwendet.|  
   
 ## <a name="permissions"></a>Berechtigungen  

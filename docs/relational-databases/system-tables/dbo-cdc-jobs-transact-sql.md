@@ -18,10 +18,10 @@ ms.assetid: 85e2d580-1c54-4b81-b7e6-2e12997199fd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0c9668c234728dc34952a7095889fe6ba5cfd06a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084704"
 ---
 # <a name="dbocdc_jobs-transact-sql"></a>dbo.cdc_jobs (Transact-SQL)
@@ -39,9 +39,9 @@ ms.locfileid: "68084704"
 |**maxtrans**|**int**|Die maximale Anzahl von Transaktionen, die in jedem Scanvorgang verarbeitet werden sollen.<br /><br /> **maxtrans** ist nur für Aufzeichnungs Aufträge gültig.|  
 |**maxscans**|**int**|Die maximale Anzahl der Scan Zyklen, die ausgeführt werden müssen, um alle Zeilen aus dem Protokoll zu extrahieren.<br /><br /> **maxscans** ist nur für Aufzeichnungs Aufträge gültig.|  
 |**Continuous**|**bit**|Flag, das angibt, ob der Aufzeichnungsauftrag fortlaufend (1) oder einmalig (0) ausgeführt werden soll. Weitere Informationen finden Sie unter [sys. sp_cdc_add_job &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).<br /><br /> **Continuous** ist nur für Aufzeichnungs Aufträge gültig.|  
-|**PollingInterval**|**BIGINT**|Anzahl der Sekunden zwischen Protokollscanzyklen.<br /><br /> **PollingInterval** ist nur für Aufzeichnungs Aufträge gültig.|  
-|**zurück**|**BIGINT**|Anzahl der Minuten, die Änderungszeilen in Änderungstabellen beibehalten werden sollen.<br /><br /> die **Beibehaltung** ist nur für Cleanupaufträge gültig.|  
-|**Mindest**|**BIGINT**|Die maximale Anzahl von Einträgen für Löschvorgänge, die mit einer einzelnen Anweisung beim Cleanup gelöscht werden können.|  
+|**PollingInterval**|**bigint**|Anzahl der Sekunden zwischen Protokollscanzyklen.<br /><br /> **PollingInterval** ist nur für Aufzeichnungs Aufträge gültig.|  
+|**zurück**|**bigint**|Anzahl der Minuten, die Änderungszeilen in Änderungstabellen beibehalten werden sollen.<br /><br /> die **Beibehaltung** ist nur für Cleanupaufträge gültig.|  
+|**Mindest**|**bigint**|Die maximale Anzahl von Einträgen für Löschvorgänge, die mit einer einzelnen Anweisung beim Cleanup gelöscht werden können.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sys. sp_cdc_add_job &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)   

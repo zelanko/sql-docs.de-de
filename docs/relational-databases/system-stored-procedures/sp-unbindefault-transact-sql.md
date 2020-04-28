@@ -18,10 +18,10 @@ ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7616401e8dcc9461d5eb3c7d67aedccf3a8c7af9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095884"
 ---
 # <a name="sp_unbindefault-transact-sql"></a>sp_unbindefault (Transact-SQL)
@@ -43,8 +43,7 @@ sp_unbindefault [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @objname = ] 'object_name'`Der Name der Tabelle und Spalte oder der Alias Datentyp, von dem aus der Standardwert für die Bindung aufgehoben wird. *object_name* ist vom Datentyp **nvarchar (776)** und hat keinen Standardwert. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht zuerst, zweiteilige Bezeichner für Spaltennamen aufzulösen, und versucht dann, zweiteilige Bezeichner für Aliasdatentypen aufzulösen.  
+`[ @objname = ] 'object_name'`Der Name der Tabelle und Spalte oder der Alias Datentyp, von dem aus der Standardwert für die Bindung aufgehoben wird. *object_name* ist vom Datentyp **nvarchar (776)** und hat keinen Standardwert. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht zuerst, zweiteilige Bezeichner für Spaltennamen aufzulösen, und versucht dann, zweiteilige Bezeichner für Aliasdatentypen aufzulösen.  
   
  Beim Aufheben der Bindung eines Standardwerts an einen Aliasdatentyp wird auch die Bindung für alle Spalten dieses Datentyps, die denselben Standardwert aufweisen, aufgehoben. Spalten dieses Datentyps mit Standardwerten, die direkt an diese gebunden sind, sind nicht betroffen.  
   
@@ -85,7 +84,7 @@ EXEC sp_unbindefault 'ssn';
 EXEC sp_unbindefault 'ssn', 'futureonly';  
 ```  
   
-### <a name="d-using-delimited-identifiers"></a>D: Verwenden von Begrenzungs Bezeichnerzeichen  
+### <a name="d-using-delimited-identifiers"></a>D. Verwenden von Begrenzungs Bezeichnerzeichen  
  Das folgende Beispiel zeigt die Verwendung von Begrenzungs bezeichnerbezeichern in *object_name* Parameter.  
   
 ```  
@@ -101,7 +100,7 @@ EXEC sp_unbindefault '[t.3].c1';
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   
  [Drop default &#40;Transact-SQL-&#41;](../../t-sql/statements/drop-default-transact-sql.md)   

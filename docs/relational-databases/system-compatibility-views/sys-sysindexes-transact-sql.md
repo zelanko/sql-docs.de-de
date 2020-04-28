@@ -21,10 +21,10 @@ ms.assetid: f483d89c-35c4-4a08-8f8b-737fd80d13f5
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 560b5ab5d85c7f2a69fb5062a6eacc6e5c85ee1d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053444"
 ---
 # <a name="syssysindexes-transact-sql"></a>sys.sysindexes (Transact-SQL)
@@ -37,35 +37,35 @@ ms.locfileid: "68053444"
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**Name**|**int**|ID der Tabelle, zu der der Index gehört.|  
-|**Stands**|**int**|Systemstatusinformationen.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**erstes**|**Binary (6)**|Zeiger auf die erste Seite oder Stammseite.<br /><br /> Nicht verwendet, wenn **indid** = 0.<br /><br /> NULL = Index ist partitioniert, wenn **indid** > 1.<br /><br /> NULL = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.|  
+|**id**|**int**|ID der Tabelle, zu der der Index gehört.|  
+|**status**|**int**|Systemstatusinformationen.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**first**|**Binary (6)**|Zeiger auf die erste Seite oder Stammseite.<br /><br /> Nicht verwendet, wenn **indid** = 0.<br /><br /> NULL = Index ist partitioniert, wenn **indid** > 1.<br /><br /> NULL = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.|  
 |**indid**|**smallint**|ID des Indexes:<br /><br /> 0 = Heap<br /><br /> 1 = Gruppierter Index<br /><br /> >1 = nicht gruppierter Index|  
-|**fasst**|**Binary (6)**|Bei **indid** >= 1 ist **root** der Zeiger auf die Stamm Seite.<br /><br /> Nicht verwendet, wenn **indid** = 0.<br /><br /> NULL = Index ist partitioniert, wenn **indid** > 1.<br /><br /> NULL = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.|  
+|**root**|**Binary (6)**|Bei **indid** >= 1 ist **root** der Zeiger auf die Stamm Seite.<br /><br /> Nicht verwendet, wenn **indid** = 0.<br /><br /> NULL = Index ist partitioniert, wenn **indid** > 1.<br /><br /> NULL = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.|  
 |**minlen**|**smallint**|Mindestgröße einer Zeile.|  
 |**keycnt**|**smallint**|Anzahl der Schlüssel.|  
 |**groupID**|**smallint**|ID der Dateigruppe, für die das Objekt erstellt wurde.<br /><br /> NULL = Index ist partitioniert, wenn **indid** > 1.<br /><br /> NULL = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.|  
 |**dpages**|**int**|Für **indid** = 0 oder **indid** = 1 ist **dpages** die Anzahl der verwendeten Datenseiten.<br /><br /> Bei **indid** > 1 gibt **dpages** die Anzahl der verwendeten Indexseiten an.<br /><br /> 0 = Index ist partitioniert, wenn **indid** > 1.<br /><br /> 0 = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.<br /><br /> Bei einem Zeilenüberlauf ist das Ergebnis ungenau.|  
 |**bleiben**|**int**|Für **indid** = 0 oder **indid** = 1 ist **reserved** die Anzahl der allen Indizes und Tabellendaten zugeordneten Seiten.<br /><br /> Bei **indid** > 1 ist **reserved** die Anzahl der Seiten, die dem Index zugeordnet sind.<br /><br /> 0 = Index ist partitioniert, wenn **indid** > 1.<br /><br /> 0 = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.<br /><br /> Bei einem Zeilenüberlauf ist das Ergebnis ungenau.|  
-|**used**|**int**|Für **indid** = 0 oder **indid** = 1 ist **used** die Gesamtanzahl der für alle Indizes und Tabellendaten verwendeten Seiten.<br /><br /> Bei **indid** > 1 ist " **used** " die Anzahl von Seiten, die für den Index verwendet werden.<br /><br /> 0 = Index ist partitioniert, wenn **indid** > 1.<br /><br /> 0 = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.<br /><br /> Bei einem Zeilenüberlauf ist das Ergebnis ungenau.|  
-|**rowcnt**|**BIGINT**|Zeilenanzahl auf Datenebene, basierend auf **indid** = 0 und **indid** = 1.<br /><br /> 0 = Index ist partitioniert, wenn **indid** > 1.<br /><br /> 0 = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.|  
+|**daran**|**int**|Für **indid** = 0 oder **indid** = 1 ist **used** die Gesamtanzahl der für alle Indizes und Tabellendaten verwendeten Seiten.<br /><br /> Bei **indid** > 1 ist " **used** " die Anzahl von Seiten, die für den Index verwendet werden.<br /><br /> 0 = Index ist partitioniert, wenn **indid** > 1.<br /><br /> 0 = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.<br /><br /> Bei einem Zeilenüberlauf ist das Ergebnis ungenau.|  
+|**rowcnt**|**bigint**|Zeilenanzahl auf Datenebene, basierend auf **indid** = 0 und **indid** = 1.<br /><br /> 0 = Index ist partitioniert, wenn **indid** > 1.<br /><br /> 0 = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.|  
 |**rowmodctr**|**int**|Zählt die Gesamtzahl der eingefügten, gelöschten oder aktualisierten Zeilen, seitdem die Statistiken für die Tabelle zuletzt aktualisiert wurden.<br /><br /> 0 = Index ist partitioniert, wenn **indid** > 1.<br /><br /> 0 = Tabelle ist partitioniert, wenn **indid** gleich 0 oder 1.<br /><br /> In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen ist **rowmodctr** nicht vollständig mit früheren Versionen kompatibel. Weitere Informationen finden Sie in den Hinweisen.|  
-|**"reserved3"**|**int**|Gibt 0 zurück.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**"reserved4"**|**int**|Gibt 0 zurück.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**reserved3**|**int**|Gibt 0 zurück.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**reserved4**|**int**|Gibt 0 zurück.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xmaxlen**|**smallint**|Maximale Größe einer Zeile|  
 |**maxirow**|**smallint**|Maximale Größe einer Indexzeile, die kein Blatt darstellt.<br /><br /> In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und höheren Versionen ist **maxirow** nicht vollständig mit früheren Versionen kompatibel.|  
-|**Origfillfactor**|**tinyint**|Ursprünglicher Füllfaktorwert, der beim Erstellen des Indexes verwendet wurde. Dieser Wert wird nicht aufrechterhalten, kann jedoch hilfreich sein, wenn Sie einen Index neu erstellen müssen und sich nicht an den verwendeten Füllfaktorwert erinnern.|  
-|**Status Version**|**tinyint**|Gibt 0 zurück.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**"reserved2"**|**int**|Gibt 0 zurück.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**OrigFillFactor**|**tinyint**|Ursprünglicher Füllfaktorwert, der beim Erstellen des Indexes verwendet wurde. Dieser Wert wird nicht aufrechterhalten, kann jedoch hilfreich sein, wenn Sie einen Index neu erstellen müssen und sich nicht an den verwendeten Füllfaktorwert erinnern.|  
+|**StatVersion**|**tinyint**|Gibt 0 zurück.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**reserved2**|**int**|Gibt 0 zurück.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**FirstIAM**|**Binary (6)**|NULL = Index ist partitioniert.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**impid**|**smallint**|Indeximplementierungsflag.<br /><br /> Gibt 0 zurück.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**LockFlags**|**smallint**|Wird zur Einschränkung der berücksichtigten Granularitäten von Sperren für einen Index verwendet. Beispielsweise könnte zur Minimierung der Sperrkosten eine Nachschlagetabelle, die im Wesentlichen schreibgeschützt ist, so eingerichtet werden, dass die Sperrung nur auf Tabellenebene erfolgt.|  
+|**lockflags**|**smallint**|Wird zur Einschränkung der berücksichtigten Granularitäten von Sperren für einen Index verwendet. Beispielsweise könnte zur Minimierung der Sperrkosten eine Nachschlagetabelle, die im Wesentlichen schreibgeschützt ist, so eingerichtet werden, dass die Sperrung nur auf Tabellenebene erfolgt.|  
 |**pgmodctr**|**int**|Gibt 0 zurück.<br /><br /> [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**or**|**varbinary (816)**|Liste der Spalten-IDs der Spalten, aus denen der Indexschlüssel besteht.<br /><br /> Gibt NULL zurück.<br /><br /> Verwenden Sie zum Anzeigen der Indexschlüsselspalten [sys.sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md).|  
+|**or**|**varbinary(816)**|Liste der Spalten-IDs der Spalten, aus denen der Indexschlüssel besteht.<br /><br /> Gibt NULL zurück.<br /><br /> Verwenden Sie zum Anzeigen der Indexschlüsselspalten [sys.sysindexkeys](../../relational-databases/system-compatibility-views/sys-sysindexkeys-transact-sql.md).|  
 |**name**|**sysname**|Name des Indexes oder der Statistik. Gibt NULL zurück, wenn **indid** = 0. Ändern Sie die Anwendung so, dass nach einem Heapnamen mit dem Wert NULL gesucht wird.|  
-|**Status-BLOB**|**Klang**|Statistik-BLOB (Binary Large Object).<br /><br /> Gibt NULL zurück.|  
+|**statblob**|**image**|Statistik-BLOB (Binary Large Object).<br /><br /> Gibt NULL zurück.|  
 |**maxlen**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**rows**|**int**|Zeilen Anzahl auf Datenebene, basierend auf **indid** = 0 und **indid** = 1, und der Wert wird für **indid** >1 wiederholt.|  
+|**Streitigkeiten**|**int**|Zeilen Anzahl auf Datenebene, basierend auf **indid** = 0 und **indid** = 1, und der Wert wird für **indid** >1 wiederholt.|  
   
 ## <a name="remarks"></a>Bemerkungen  
  Als reserviert definierte Spalten sollten nicht verwendet werden.  
@@ -85,7 +85,7 @@ ms.locfileid: "68053444"
 -   Verwenden Sie Informationen auf Anwendungsebene, um den Zeitpunkt für das Statistikupdate zu bestimmen. Beispielsweise jedes Mal, wenn sich der Maximalwert einer **identity** -Spalte um mehr als 10.000 ändert oder wenn ein Masseneinfügungsvorgang ausgeführt wird.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [Zuordnung von Systemtabellen zu System Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)  
   

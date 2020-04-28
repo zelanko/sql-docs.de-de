@@ -18,10 +18,10 @@ ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0f48f7e8dd6e7d8fa57868994f9bcabb66777e90
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095940"
 ---
 # <a name="sp_trace_setfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
@@ -54,18 +54,18 @@ sp_trace_setfilter [ @traceid = ] trace_id
   
 `[ @comparison_operator = ] comparison_operator`Gibt den Typ des Vergleichs an, der erstellt werden soll. *comparison_operator* ist vom Datentyp **int**und hat keinen Standardwert. Die folgende Tabelle enthält die Vergleichsoperatoren und die sie darstellenden Werte.  
   
-|value|Vergleichsoperator|  
+|Wert|Vergleichsoperator|  
 |-----------|-------------------------|  
 |**0**|= (Gleich)|  
 |**1**|<>  (nicht gleich)|  
 |**2**|> (Größer als)|  
-|**€**|< (Kleiner als)|  
+|**3**|< (Kleiner als)|  
 |**4**|>= (größer als oder gleich)|  
-|**5@@**|<= (kleiner als oder gleich)|  
+|**5**|<= (kleiner als oder gleich)|  
 |**6**|LIKE|  
-|**19.00**|Nicht wie|  
+|**7**|Nicht wie|  
   
-`[ @value = ] value`Gibt den Wert an, nach dem gefiltert werden soll. Der Datentyp des *Werts* muss mit dem Datentyp der zu filternden Spalte identisch sein. Wenn der Filter beispielsweise für eine Objekt-ID-Spalte mit einem **int** -Datentyp festgelegt ist, muss *value* " **int**" lauten. Wenn ** der Wert **nvarchar** oder **varbinary**ist, kann er eine maximale Länge von 8000 aufweisen.  
+`[ @value = ] value`Gibt den Wert an, nach dem gefiltert werden soll. Der Datentyp des *Werts* muss mit dem Datentyp der zu filternden Spalte identisch sein. Wenn der Filter beispielsweise für eine Objekt-ID-Spalte mit einem **int** -Datentyp festgelegt ist, muss *value* " **int**" lauten. Wenn *value* der Wert **nvarchar** oder **varbinary**ist, kann er eine maximale Länge von 8000 aufweisen.  
   
  Wenn der Vergleichsoperator LIKE oder NOT LIKE ist, kann der logische Operator % oder einen anderen für die LIKE-Operation geeigneten Filter enthalten.  
   
@@ -78,10 +78,10 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  In der folgenden Tabelle werden die Codewerte beschrieben, die die Benutzer nach Abschluss der gespeicherten Prozedur möglicherweise erhalten.  
   
-|Rückgabecode|BESCHREIBUNG|  
+|Rückgabecode|Beschreibung|  
 |-----------------|-----------------|  
 |0|Kein Fehler.|  
-|1|Unknown error. (Unbekannter Fehler.)|  
+|1|Unbekannter Fehler.|  
 |2|Die Ablaufverfolgung wird derzeit ausgeführt. Das Ändern der Ablauf Verfolgung zu diesem Zeitpunkt führt zu einem Fehler.|  
 |4|Die angegebene Spalte ist ungültig.|  
 |5|Für die angegebene Spalte ist das Filtern nicht zulässig. Dieser Wert wird nur von **sp_trace_setfilter**zurückgegeben.|  
@@ -94,8 +94,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 ## <a name="remarks"></a>Bemerkungen  
  **sp_trace_setfilter** ist eine [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gespeicherte Prozedur, die viele der Aktionen ausführt, die zuvor von erweiterten gespeicherten Prozeduren ausgeführt wurden [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], die in früheren Versionen von verfügbar waren. Verwenden Sie **sp_trace_setfilter** anstelle des **xp_trace_set\*Filtern** Sie erweiterte gespeicherte Prozeduren, um Filter für Ablauf Verfolgungen zu erstellen, anzuwenden, zu entfernen oder zu bearbeiten. Weitere Informationen finden Sie unter [Filtern einer Ablauf Verfolgung](../../relational-databases/sql-trace/filter-a-trace.md).  
   
- Alle Filter für eine bestimmte Spalte müssen in einer Ausführung von **sp_trace_setfilter**miteinander aktiviert werden. Wenn ein Benutzer z. B. zwei Filter auf die Spalte application name und einen Filter auf die Spalte username anwenden möchte, muss er die Filter für application name nacheinander angeben. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt einen Fehler zurück, wenn der Benutzer in einem Aufruf einer gespeicherten Prozedur einen Filter für application name angibt und danach ein Filter für username und ein weiterer Filter für application name folgt.  
+ Alle Filter für eine bestimmte Spalte müssen in einer Ausführung von **sp_trace_setfilter**miteinander aktiviert werden. Wenn ein Benutzer z. B. zwei Filter auf die Spalte application name und einen Filter auf die Spalte username anwenden möchte, muss er die Filter für application name nacheinander angeben. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt einen Fehler zurück, wenn der Benutzer in einem Aufruf einer gespeicherten Prozedur einen Filter für application name angibt und danach ein Filter für username und ein weiterer Filter für application name folgt.  
   
  Parameter aller gespeicherten Prozeduren der SQL-Ablaufverfolgung (**sp_trace_xx**) haben eine strikte Typbindung. Wenn diese Parameter nicht mit den richtigen Datentypen für Eingabeparameter aufgerufen werden, wie in der Argumentbeschreibung angegeben, gibt die gespeicherte Prozedur einen Fehler zurück.  
   
@@ -112,8 +111,8 @@ sp_trace_setfilter  1, 11, 0, 0, N'joe';
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sys.fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
- [sys.fn_trace_getinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
+ [sys. fn_trace_getfilterinfo &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
+ [sys. fn_trace_getinfo &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-trace-getinfo-transact-sql.md)   
  [SQL-Ablaufverfolgung](../../relational-databases/sql-trace/sql-trace.md)  
   
   

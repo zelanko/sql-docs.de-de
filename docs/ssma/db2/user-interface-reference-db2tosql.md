@@ -10,10 +10,10 @@ ms.assetid: 98ecc4ff-9416-48a2-af0f-86852cf69dab
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: c0332efca72c216ac6ecbb2f5f397fbf57e8b7cf
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68059957"
 ---
 # <a name="user-interface-reference-db2tosql"></a>Referenz zur Benutzeroberfläche (DB2ToSQL)
@@ -24,7 +24,7 @@ In der folgenden Tabelle sind die SSMA-Dialogfelder aufgeführt:
   
 |||  
 |-|-|  
-|Thema|BESCHREIBUNG|  
+|Thema|Beschreibung|  
 |[Erweiterte Objektauswahl &#40;DB2ToSQL&#41;](../../ssma/db2/advanced-object-selection-db2tosql.md)|Verwenden Sie das Dialogfeld **Erweiterte Objektauswahl** , um mithilfe von Filterkriterien Datenbankobjekte zu suchen, und wählen Sie diese Objekte aus, oder löschen Sie Sie.|  
 |[Bewertungsbericht &#40;DB2ToSQL&#41;](../../ssma/db2/assessment-report-db2tosql.md)|Verwenden Sie den Bewertungsbericht, um die Ergebnisse der Konvertierung von DB2-Objekten [!INCLUDE[tsql](../../includes/tsql-md.md)] in die-Syntax anzuzeigen und um die Zeit und Komplexität einer Migration [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]zu einzuschätzen.|  
 |[Herstellen einer Verbindung mit der DB2-Datenbank &#40;DB2ToSQL&#41;](../../ssma/db2/connecting-to-db2-database-db2tosql.md)|Verwenden Sie das Dialogfeld **mit DB2 verbinden** , um eine Verbindung mit der DB2-Datenbank herzustellen, die Sie migrieren möchten.|  

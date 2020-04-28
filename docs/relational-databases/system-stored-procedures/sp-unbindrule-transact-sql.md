@@ -18,10 +18,10 @@ ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b409b76d3a7c07ac03173346059f38ac616f5a87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095862"
 ---
 # <a name="sp_unbindrule-transact-sql"></a>sp_unbindrule (Transact-SQL)
@@ -43,8 +43,7 @@ sp_unbindrule [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @objname = ] 'object_name'`Der Name der Tabelle und Spalte oder der Alias Datentyp, von dem die Regel nicht gebunden ist. *object_name* ist vom Datentyp **nvarchar (776)** und hat keinen Standardwert. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht zuerst, zweiteilige Bezeichner für Spaltennamen aufzulösen, und versucht dann, zweiteilige Bezeichner für Aliasdatentypen aufzulösen. Beim Aufheben der Bindung einer Regel an einen Aliasdatentyp wird auch die Bindung für alle Spalten des betreffenden Datentyps, die dieselbe Regel aufweisen, aufgehoben. Spalten dieses Datentyps mit Regeln, die direkt an diese gebunden sind, sind nicht betroffen.  
+`[ @objname = ] 'object_name'`Der Name der Tabelle und Spalte oder der Alias Datentyp, von dem die Regel nicht gebunden ist. *object_name* ist vom Datentyp **nvarchar (776)** und hat keinen Standardwert. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versucht zuerst, zweiteilige Bezeichner für Spaltennamen aufzulösen, und versucht dann, zweiteilige Bezeichner für Aliasdatentypen aufzulösen. Beim Aufheben der Bindung einer Regel an einen Aliasdatentyp wird auch die Bindung für alle Spalten des betreffenden Datentyps, die dieselbe Regel aufweisen, aufgehoben. Spalten dieses Datentyps mit Regeln, die direkt an diese gebunden sind, sind nicht betroffen.  
   
 > [!NOTE]  
 >  *object_name* können eckige Klammern **[]** als Begrenzungs Bezeichner enthalten. Weitere Informationen finden Sie unter [Datenbankbezeichner](../../relational-databases/databases/database-identifiers.md).  
@@ -87,7 +86,7 @@ EXEC sp_unbindrule ssn;
 EXEC sp_unbindrule 'ssn', 'futureonly';  
 ```  
   
-### <a name="d-using-delimited-identifiers"></a>D: Verwenden von Begrenzungs Bezeichnerzeichen  
+### <a name="d-using-delimited-identifiers"></a>D. Verwenden von Begrenzungs Bezeichnerzeichen  
  Im folgenden Beispiel wird die Verwendung von Begrenzungs bezeichnerbezeichnerzeichen im *object_name* -Parameter gezeigt.  
   
 ```  
@@ -104,9 +103,9 @@ EXEC sp_unbindrule '[t.4].c1';
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Erstellen einer Regel &#40;Transact-SQL-&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
+ [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   
  [Drop Rule &#40;Transact-SQL-&#41;](../../t-sql/statements/drop-rule-transact-sql.md)   
  [sp_bindrule &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-bindrule-transact-sql.md)   
  [sp_helptext &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helptext-transact-sql.md)   

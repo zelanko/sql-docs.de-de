@@ -18,10 +18,10 @@ ms.assetid: c12ef6df-58c6-4391-bbbf-683ea874bd81
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 799c45755d9d3866a1cbe3b61b8582787331123c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070343"
 ---
 # <a name="sp_columns_ex-transact-sql"></a>sp_columns_ex (Transact-SQL)
@@ -74,15 +74,14 @@ sp_columns_ex [ @table_server = ] 'table_server'
 |**DECIMAL_DIGITS**|**smallint**|Die Anzahl der Ziffern rechts vom Dezimalzeichen|  
 |**NUM_PREC_RADIX**|**smallint**|Ist die Basis für numerische Datentypen.|  
 |**Werte zulässt**|**smallint**|Gibt die NULL-Zulässigkeit an.<br /><br /> 1 = NULL ist möglich<br /><br /> 0 = NOT NULL|  
-|**Rede**|**varchar (** 254 **)**|Dieses Feld gibt immer NULL zurück.|  
+|**HINWEISE**|**varchar (** 254 **)**|Dieses Feld gibt immer NULL zurück.|  
 |**COLUMN_DEF**|**varchar (** 254 **)**|Standardwert der Spalte|  
 |**SQL_DATA_TYPE**|**smallint**|Der Wert des SQL-Datentyps, wie er im TYPE-Feld des Deskriptors angezeigt wird. Diese Spalte ist identisch mit der **data_type** Spalte, mit Ausnahme der Datentypen **DateTime** und SQL-92 **Interval** . Diese Spalte gibt immer einen Wert zurück.|  
 |**SQL_DATETIME_SUB**|**smallint**|Untertyp Code für **DateTime** -und SQL-92 **Interval** -Datentypen. Bei allen anderen Datentypen gibt diese Spalte NULL zurück.|  
 |**CHAR_OCTET_LENGTH**|**int**|Die maximale Länge (in Byte) einer Spalte eines Zeichendatentyps oder eines ganzzahligen Datentyps. Für alle anderen Datentypen gibt diese Spalte NULL zurück.|  
 |**ORDINAL_POSITION**|**int**|Die Position einer Spalte innerhalb der Tabelle. Die erste Spalte in der Tabelle ist "1". Diese Spalte gibt immer einen Wert zurück.|  
 |**IS_NULLABLE**|**varchar (** 254 **)**|NULL-Zulässigkeit der Spalte in der Tabelle. Die NULL-Zulässigkeit wird gemäß den ISO-Regeln bestimmt. Ein DBMS nach ISO SQL kann keine leere Zeichenfolge zurückgeben.<br /><br /> YES = Spalte kann NULL-Werte enthalten.<br /><br /> NO = Spalte kann keine NULL-Werte enthalten.<br /><br /> Die Spalte gibt eine leere Zeichenfolge zurück, wenn die NULL-Zulässigkeit unbekannt ist.<br /><br /> Der für diese Spalte zurückgegebene Wert unterscheidet sich von dem Wert, der für die **Nullable** -Spalte zurückgegeben wird.|  
-|**SS_DATA_TYPE**|**tinyint**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp, der von erweiterten gespeicherten Prozeduren verwendet wird.|  
+|**SS_DATA_TYPE**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp, der von erweiterten gespeicherten Prozeduren verwendet wird.|  
   
  Weitere Informationen finden Sie in der Microsoft ODBC-Dokumentation.  
   

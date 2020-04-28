@@ -18,10 +18,10 @@ ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 45278a6d9501b75b624e11bbeb11d24d10e482c6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056214"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (Transact-SQL)
@@ -40,12 +40,12 @@ ms.locfileid: "68056214"
 |**publisher_id**|**smallint**|Die ID des Nicht-SQL Server-Verlegers.|  
 |**creation_script**|**nvarchar(255)**|Das Schemaskript für den Artikel.|  
 |**del_cmd**|**nvarchar(255)**|Der Replikationsbefehlstyp, der zur Replikation von Löschungen bei Tabellenartikeln verwendet wird. Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
-|**Filter**|**int**|Diese Spalte wird nicht verwendet und ist nur enthalten, um die [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) -Sicht der **IHarticles** -Tabelle mit der [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) -Sicht, die für SQL Server Artikel ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)) verwendet wird, kompatibel zu machen.|  
+|**filter**|**int**|Diese Spalte wird nicht verwendet und ist nur enthalten, um die [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) -Sicht der **IHarticles** -Tabelle mit der [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) -Sicht, die für SQL Server Artikel ([sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)) verwendet wird, kompatibel zu machen.|  
 |**filter_clause**|**ntext**|Die WHERE-Klausel des Artikels, die zum horizontalen Filtern verwendet wird und in einem standardmäßigen Transact-SQL-Code geschrieben ist, der von anderen als SQL Server-Verlegern interpretiert werden kann.|  
 |**ins_cmd**|**nvarchar(255)**|Der Replikationsbefehlstyp, der zur Replikation von Einfügungen bei Tabellenartikeln verwendet wird. Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**pre_creation_cmd**|**tinyint**|Der Befehl, der vor dem Anwenden der Anfangsmomentaufnahme ausgeführt wird, wenn auf dem Abonnenten bereits ein Objekt mit dem gleichen Namen vorhanden ist.<br /><br /> **0** = None-ein Befehl wird nicht ausgeführt.<br /><br /> **1** = Drop-Drop der Ziel Tabelle.<br /><br /> **2** = DELETE-Daten aus der Ziel Tabelle löschen.<br /><br /> **3** = abschneiden-die Ziel Tabelle wird abgeschnitten.|  
-|**Stands**|**tinyint**|Die Bitmaske der Artikeloptionen und der Status, die das Ergebnis des bitweisen logischen OR von mindestens einem der folgenden Werte sein können:<br /><br /> **0** = keine zusätzlichen Eigenschaften.<br /><br /> **1** = aktiv.<br /><br /> **8** = schließen Sie den Spaltennamen in INSERT-Anweisungen ein.<br /><br /> **16** = parametrisierte Anweisungen verwenden.<br /><br /> Ein aktiver Artikel, der parametrisierte Anweisungen verwendet, würde in dieser Spalte beispielsweise den Wert 17 anzeigen. Der Wert 0 gibt an, dass der Artikel inaktiv ist und keine zusätzlichen Eigenschaften definiert wurden.|  
-|**type**|**tinyint**|Der Artikeltyp:<br /><br /> **1** = Protokoll basierter Artikel.|  
+|**status**|**tinyint**|Die Bitmaske der Artikeloptionen und der Status, die das Ergebnis des bitweisen logischen OR von mindestens einem der folgenden Werte sein können:<br /><br /> **0** = keine zusätzlichen Eigenschaften.<br /><br /> **1** = aktiv.<br /><br /> **8** = Den Spaltennamen in INSERT-Anweisungen einschließen.<br /><br /> **16** = Parametrisierte Anweisungen verwenden.<br /><br /> Ein aktiver Artikel, der parametrisierte Anweisungen verwendet, würde in dieser Spalte beispielsweise den Wert 17 anzeigen. Der Wert 0 gibt an, dass der Artikel inaktiv ist und keine zusätzlichen Eigenschaften definiert wurden.|  
+|**type**|**tinyint**|Der Artikeltyp:<br /><br /> **1** = Protokollbasierter Artikel.|  
 |**upd_cmd**|**nvarchar(255)**|Der Replikationsbefehlstyp, der zur Replikation von Updates bei Tabellenartikeln verwendet wird. Weitere Informationen finden Sie unter [Angeben der Weitergabemethode für Änderungen bei Transaktionsartikeln](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
 |**schema_option**|**Binär (8)**|Das Bitmuster der Schemagenerierungsoption für den angegebenen Artikel, die das Ergebnis des bitweisen logischen OR von mindestens einem der folgenden Werte sein kann:<br /><br /> **0x00** = Skripterstellung durch die Momentaufnahmen-Agent deaktivieren und das bereitgestellte Skript für die Erstellung von Skripts verwenden.<br /><br /> **0x01** = generiert die Objekt Erstellung (CREATE TABLE, CREATE PROCEDURE usw.).<br /><br /> **0x10** = generiert einen entsprechenden gruppierten Index.<br /><br /> **0x40** = generieren Sie entsprechende nicht gruppierte Indizes.<br /><br /> **0x80** = deklarierte referenzielle Integrität für die Primärschlüssel einschließen.<br /><br /> **0x1000** = repliziert die Sortierung auf Spaltenebene. Hinweis: diese Option ist standardmäßig für Oracle-Verleger festgelegt, um Vergleiche zwischen Groß-und Kleinschreibung zu aktivieren.<br /><br /> **0x4000** = repliziert eindeutige Schlüssel, wenn Sie für einen Tabellen Artikel definiert sind.<br /><br /> **0X8000** = repliziert einen Primärschlüssel und eindeutige Schlüssel für einen Tabellen Artikel als Einschränkungen mithilfe von ALTER TABLE-Anweisungen.|  
 |**dest_owner**|**sysname**|Der Besitzer der Tabelle in der Zieldatenbank|  
@@ -66,10 +66,10 @@ ms.locfileid: "68056214"
 |**use_default_datatypes**|**bit**|Gibt an, ob der Artikel standardmäßige Datentyp Zuordnungen verwendet. der Wert **1** gibt an, dass standardmäßige Datentyp Zuordnungen verwendet werden.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Heterogene Datenbankreplikation](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
+ [Heterogene Replikation](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [Replikations Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addarticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_changearticle &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)  
+ [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)  
   
   

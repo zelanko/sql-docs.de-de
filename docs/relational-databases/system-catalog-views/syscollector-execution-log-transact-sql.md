@@ -19,10 +19,10 @@ ms.assetid: 11554d64-0426-42ce-b7ce-5591f67864d2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 31270da81f0951702aeef0427e70c6a66db5ff0e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060351"
 ---
 # <a name="syscollector_execution_log-transact-sql"></a>syscollector_execution_log (Transact-SQL)
@@ -32,8 +32,8 @@ ms.locfileid: "68060351"
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|log_id|**BIGINT**|Identifiziert jede Sammlungssatzausführung. Wird verwendet, um diese Sicht mit anderen ausführlichen Protokollen zu verknüpfen. Lässt keine NULL-Werte zu.|  
-|parent_log_id|**BIGINT**|Identifiziert das übergeordnete Paket oder den Sammlungssatz. Lässt keine NULL-Werte zu. Die IDs werden in der Über-/Unterordnungsbeziehung verkettet. Auf diese Weise können Sie bestimmen, welches Paket von welchem Sammlungssatz gestartet wurde. Diese Sicht gruppiert die Protokolleinträge nach ihren über- und untergeordneten Verknüpfungen und rückt die Namen der Pakete ein, sodass die Aufrufkette übersichtlich angezeigt wird.|  
+|log_id|**bigint**|Identifiziert jede Sammlungssatzausführung. Wird verwendet, um diese Sicht mit anderen ausführlichen Protokollen zu verknüpfen. Lässt keine NULL-Werte zu.|  
+|parent_log_id|**bigint**|Identifiziert das übergeordnete Paket oder den Sammlungssatz. Lässt keine NULL-Werte zu. Die IDs werden in der Über-/Unterordnungsbeziehung verkettet. Auf diese Weise können Sie bestimmen, welches Paket von welchem Sammlungssatz gestartet wurde. Diese Sicht gruppiert die Protokolleinträge nach ihren über- und untergeordneten Verknüpfungen und rückt die Namen der Pakete ein, sodass die Aufrufkette übersichtlich angezeigt wird.|  
 |collection_set_id|**int**|Gibt den Sammlungssatz oder das Paket an, der bzw. das von diesem Protokolleintrag dargestellt wird. Lässt keine NULL-Werte zu.|  
 |collection_item_id|**int**|Identifiziert ein Sammlungselement. Lässt NULL-Werte zu.|  
 |start_time|**datetime**|Die Startzeit für den Sammlungssatz oder das Paket. Lässt keine NULL-Werte zu.|  
@@ -51,7 +51,7 @@ ms.locfileid: "68060351"
  Erfordert SELECT für dc_operator.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Gespeicherte Prozeduren für den Datensammler &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Gespeicherte Prozeduren für den Datensammler &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Datensammler Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [Datensammlung](../../relational-databases/data-collection/data-collection.md)  
   

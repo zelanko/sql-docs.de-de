@@ -18,10 +18,10 @@ ms.assetid: 6e92a8e8-7667-4c98-b1c4-46735bac50d8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 38f5037598e240585333d246a99c29c5fd8f40fe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079160"
 ---
 # <a name="msrepl_identity_range-transact-sql"></a>MSrepl_identity_range (Transact-SQL)
@@ -35,12 +35,12 @@ ms.locfileid: "68079160"
 |**publisher_db**|**sysname**|Der Name der Veröffentlichungs Datenbank.|  
 |**TableName**|**sysname**|Der Name der Tabelle.|  
 |**identity_support**|**int**|Gibt an, ob die automatische Behandlung der Identitätsbereiche aktiviert ist. 0 gibt an, dass die automatische Behandlung der Identitätsbereiche nicht aktiviert ist.|  
-|**next_seed**|**BIGINT**|Wenn die automatische Behandlung der Identitätsbereiche aktiviert ist, zeigt dieser Wert den Anfangspunkt des nächsten Bereichs an.|  
-|**pub_range**|**BIGINT**|Die Größe des Identitätsbereichs für den Verleger.|  
-|**Bereich**|**BIGINT**|Die Bereichsgröße der aufeinander folgenden Identitätswerte, die Abonnenten bei einer Anpassung zugewiesen würden.|  
-|**max_identity**|**BIGINT**|Die obere Grenze des Identitätsbereichs.|  
+|**next_seed**|**bigint**|Wenn die automatische Behandlung der Identitätsbereiche aktiviert ist, zeigt dieser Wert den Anfangspunkt des nächsten Bereichs an.|  
+|**pub_range**|**bigint**|Die Größe des Identitätsbereichs für den Verleger.|  
+|**range**|**bigint**|Die Bereichsgröße der aufeinander folgenden Identitätswerte, die Abonnenten bei einer Anpassung zugewiesen würden.|  
+|**max_identity**|**bigint**|Die obere Grenze des Identitätsbereichs.|  
 |**Mindest**|**int**|Als Prozentsatz angegebener Schwellenwert für den Identitätsbereich.|  
-|**current_max**|**BIGINT**|Der aktuelle maximale Wert, der zugewiesen werden kann, aber nicht notwendigerweise zugewiesen werden muss.|  
+|**current_max**|**bigint**|Der aktuelle maximale Wert, der zugewiesen werden kann, aber nicht notwendigerweise zugewiesen werden muss.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

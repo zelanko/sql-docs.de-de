@@ -18,10 +18,10 @@ ms.assetid: 35d686f2-ef31-4eaa-baa9-9cef5d6c87c2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6fea210183ae67179dcc6f686e25f939cd00713b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056334"
 ---
 # <a name="sp_prepexecrpc-transact-sql"></a>sp_prepexecrpc (Transact-SQL)
@@ -44,10 +44,10 @@ sp_prepexecrpc handle OUTPUT, RPCCall
  Der von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]generierte, vorbereitete Handlebezeichner. *handle* ist ein erforderlicher Parameter mit einem **int** -Rückgabewert.  
   
  *RPCCall*  
- Definiert den Aufruf für die gespeicherte Prozedur mit kanonischer ODBC-Syntax. *Rpccall* ist ein erforderlicher Parameter, der einen **ntext** -Zeichen folgen Eingabe Wert aufruft.  
+ Definiert den Aufruf für die gespeicherte Prozedur mit kanonischer ODBC-Syntax. *RPCCall* ist ein erforderlicher Parameter, der einen Eingabewert für eine **ntext** -Zeichenfolge erfordert.  
   
  *bound_param*  
- Gibt die optionale Verwendung zusätzlicher Parameter an. *bound_param* einen Eingabe Wert eines beliebigen Datentyps aufrufen, um die zusätzlichen verwendeten Parameter festzulegen.  
+ Gibt die optionale Verwendung zusätzlicher Parameter an. *bound_param* erfordert einen Eingabewert eines beliebigen Datentyps, um die zusätzlichen verwendeten Parameter festzulegen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

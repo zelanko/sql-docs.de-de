@@ -18,10 +18,10 @@ ms.assetid: 0cc9b40a-36ce-485b-9bc2-d4abd5aa6727
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b3e8b9c2443a6fa74e113dc1a3f25880ac753dc0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079939"
 ---
 # <a name="msreplmonthresholdmetrics-transact-sql"></a>MSreplmonthresholdmetrics (Transact-SQL)
@@ -31,8 +31,8 @@ ms.locfileid: "68079939"
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**metric_id**|**int**|Identifiziert eine Replikationsleistungsmetrik. Einer der folgenden Werte ist möglich.<br /><br /> **1** = Ablauf<br /><br /> **2** = Latenz<br /><br /> **4** = mergeablauf<br /><br /> **5** = mergeslowrunduration<br /><br /> **6** = mergefastrauunduration<br /><br /> **7** = mergefastrauunspeed<br /><br /> **8** = mergeslowrunspeed|  
-|**Tel**|**sysname**|Der Name der Replikationsleistungsmetrik|  
+|**metric_id**|**int**|Identifiziert eine Replikationsleistungsmetrik. Einer der folgenden Werte ist möglich.<br /><br /> **1** = Ablauf<br /><br /> **2** = Latenz<br /><br /> **4** = mergeablauf<br /><br /> **5** = mergeslowrunduration<br /><br /> **6** = mergefastrunduration<br /><br /> **7** = mergefastrunspeed<br /><br /> **8** = mergeslowrunspeed|  
+|**title**|**sysname**|Der Name der Replikationsleistungsmetrik|  
 |**warningbitstatus**|**int**|Der bitweise Bezeichner, der zum Bereitstellen einer Warnung bei einer Schwellenwertverletzung für die folgenden metrischen Daten verwendet wird:<br /><br /> **1** = Ablauf: ein Abonnement für eine Transaktions Veröffentlichung hat die Beibehaltungs Dauer um mehr als den zulässigen Schwellenwert überschritten (als Prozentsatz der Beibehaltungs Dauer).<br /><br /> **2** = Latenz: die Zeit, die zum Replizieren von Daten von einem transaktionalen Verleger auf den Abonnenten benötigt wird, überschreitet den Schwellenwert (in Sekunden).<br /><br /> **4** = mergeablauf: ein Abonnement für eine Mergeveröffentlichung hat die Beibehaltungs Dauer um mehr als den zulässigen Schwellenwert überschritten, als Prozentsatz der Beibehaltungs Dauer.<br /><br /> **8** = mergefastrauunduration: die Zeit, die zum Abschließen der Synchronisierung eines Mergeabonnements benötigt wird, überschreitet den Schwellenwert über eine schnelle Netzwerkverbindung (in Sekunden).<br /><br /> **16** = mergeslowrunduration: die Zeit für die Synchronisierung eines Mergeabonnements überschreitet den Schwellenwert über eine langsame oder DFÜ-Netzwerkverbindung (in Sekunden).<br /><br /> **32** = mergefastrauunspeed-die Übermittlungs Rate für Zeilen während der Synchronisierung eines Mergeabonnements konnte den Schwellenwert (in Zeilen pro Sekunde) über eine schnelle Netzwerkverbindung nicht aufrechterhalten.<br /><br /> **64** = mergeslowrunspeed-die Übermittlungs Rate für Zeilen während der Synchronisierung eines Mergeabonnements konnte den Schwellenwert (in Zeilen pro Sekunde) über eine langsame oder DFÜ-Netzwerkverbindung nicht aufrechterhalten.|  
 |**alertmessageid**|**int**|Die ID der Fehlermeldung, die angezeigt wird, wenn die Schwellenwert-Warnungsbedingung auftritt|  
 |**Beschreibung**|**nvarchar (3000)**|Die Beschreibung der Replikationsleistungsmetrik|  

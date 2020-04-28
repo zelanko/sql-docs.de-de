@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fba09255204b796a5134e8b8098e650430b7de63
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68048404"
 ---
 # <a name="sp_helpstats-transact-sql"></a>sp_helpstats (Transact-SQL)
@@ -66,7 +66,7 @@ sp_helpstats[ @objname = ] 'object_name'
  Erfordert die Mitgliedschaft in der **public** -Rolle.  
   
 ## <a name="examples"></a>Beispiele  
- Durch Ausführen von [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] werden einspaltige Statistiken für alle in Frage kommenden Spalten aller Benutzertabellen in der `sp_createstats`-Datenbank erstellt. Anschließend wird `sp_helpstats` ausgeführt, um die für die `Customer`-Tabelle erstellten Statistiken zu ermitteln.  
+ Durch Ausführen von `sp_createstats` werden einspaltige Statistiken für alle in Frage kommenden Spalten aller Benutzertabellen in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank erstellt. Anschließend wird `sp_helpstats` ausgeführt, um die für die `Customer`-Tabelle erstellten Statistiken zu ermitteln.  
   
 ```  
 USE AdventureWorks2012;  
@@ -99,7 +99,7 @@ EXEC sp_helpstats
  `PK_Customer_CustomerID        CustomerID`  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)  
   
   

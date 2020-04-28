@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 1f72832fd684dd59e27ce58576a7f65fa8796347
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68074813"
 ---
 # <a name="identifiers-dmx"></a>Bezeichner (DMX)
@@ -28,7 +28,7 @@ ms.locfileid: "68074813"
   
  Ein Objektbezeichner wird erstellt, wenn Sie das Objekt definieren. Sie verwenden den Bezeichner dann dazu, auf das Objekt zu verweisen. Ein Bezeichner kann bis zu 100 Zeichen lang sein.  
   
-##  <a name="RegularIdentifiers"></a>Reguläre Bezeichner  
+##  <a name="regular-identifiers"></a><a name="RegularIdentifiers"></a>Reguläre Bezeichner  
  Reguläre Bezeichner in DMX entsprechen den [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]-Regeln für das Format von Bezeichnern. Für einen regulären Bezeichner sind in DMX keine Begrenzungszeichen erforderlich. Im folgenden finden Sie ein Beispiel für eine DMX-Anweisung, die einen regulären, nicht Begrenzungs Bezeichner verwendet:  
   
 ```  
@@ -58,7 +58,7 @@ SELECT * FROM Clustering.CONTENT;
   
  Wenn Sie in DMX-Anweisungen Bezeichner verwenden, die nicht diesen Regeln entsprechen, müssen Sie diese Bezeichner in eckige Klammern setzen.  
   
-##  <a name="DelimitedIdentifiers"></a>Begrenzungs Bezeichner  
+##  <a name="delimited-identifiers"></a><a name="DelimitedIdentifiers"></a>Begrenzungs Bezeichner  
  Begrenzungsbezeichner sind in eckige Klammern ([ ]) eingeschlossen.  Das folgende Beispiel besteht aus einer DMX-Anweisung mit einem Begrenzungsbezeichner, der diesen Regeln entspricht.  
   
 ```  
@@ -104,6 +104,6 @@ SELECT * FROM [Targeted Mailing].CONTENT;
  [Data Mining-Erweiterungen &#40;DMX-&#41; Syntax Konventionen](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Allgemeine Vorhersagefunktionen &#40;DMX-&#41;](../dmx/general-prediction-functions-dmx.md)   
  [Struktur und Verwendung von DMX-Vorhersage Abfragen](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
- [Grundlegendes zur SELECT-Anweisung (DMX)](../dmx/understanding-the-dmx-select-statement.md)  
+ [Understanding the DMX Select Statement (Grundlegendes zur SELECT-Anweisung)](../dmx/understanding-the-dmx-select-statement.md)  
   
   

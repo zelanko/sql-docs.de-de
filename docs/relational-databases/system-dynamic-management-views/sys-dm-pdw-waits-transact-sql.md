@@ -13,10 +13,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 476b2f251bd41480962eb9925af6e3619507e791
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088764"
 ---
 # <a name="sysdm_pdw_waits-transact-sql"></a>sys. dm_pdw_waits (Transact-SQL)
@@ -24,14 +24,14 @@ ms.locfileid: "68088764"
 
   Enthält Informationen zu allen warte Zuständen, die während der Ausführung einer Anforderung oder Abfrage aufgetreten sind, einschließlich Sperren, Warteschlangen für Übertragungs Warteschlangen usw.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|Range|  
+|Spaltenname|Datentyp|BESCHREIBUNG|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
-|wait_id|**BIGINT**|Eindeutige numerische ID, die dem Wartezustand zugeordnet ist.<br /><br /> Der Schlüssel für diese Ansicht.|Eindeutig für alle warte Vorgänge im System.|  
-|session_id|**nvarchar (32)**|Die ID der Sitzung, für die der Wartezustand aufgetreten ist.|Weitere Informationen finden Sie unter session_id in [sys. dm_pdw_exec_sessions &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
+|wait_id|**bigint**|Eindeutige numerische ID, die dem Wartezustand zugeordnet ist.<br /><br /> Der Schlüssel für diese Ansicht.|Eindeutig für alle warte Vorgänge im System.|  
+|session_id|**nvarchar(32)**|Die ID der Sitzung, für die der Wartezustand aufgetreten ist.|Weitere Informationen finden Sie unter session_id in [sys. dm_pdw_exec_sessions &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md).|  
 |type|**nvarchar(255)**|Der Typ des warte Vorgangs, den dieser Eintrag darstellt.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |object_type|**nvarchar(255)**|Der Typ des Objekts, das vom warte Vorgang betroffen ist.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  
 |object_name|**nvarchar (386)**|Der Name oder die GUID des angegebenen Objekts, das von der Wartezeit betroffen war.||  
-|request_id|**nvarchar (32)**|ID der Anforderung, für die der Wartezustand aufgetreten ist.|Weitere Informationen finden Sie unter request_id in [sys. dm_pdw_exec_requests &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
+|request_id|**nvarchar(32)**|ID der Anforderung, für die der Wartezustand aufgetreten ist.|Weitere Informationen finden Sie unter request_id in [sys. dm_pdw_exec_requests &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md).|  
 |request_time|**datetime**|Der Zeitpunkt, zu dem der Wartezustand angefordert wurde.||  
 |acquire_time|**datetime**|Der Zeitpunkt, zu dem die Sperre oder Ressource abgerufen wurde.||  
 |state|**nvarchar(50)**|Status des warte Zustands.|[!INCLUDE[ssInfoNA](../../includes/ssinfona-md.md)]|  

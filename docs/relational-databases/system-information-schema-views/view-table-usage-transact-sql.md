@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 7e691a52cebf3ca9de0454ca2ccd60b3f8daa43f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078372"
 ---
 # <a name="view_table_usage-transact-sql"></a>VIEW_TABLE_USAGE (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68078372"
 |-----------------|---------------|-----------------|  
 |**VIEW_CATALOG**|**nvarchar (** 128 **)**|Sichtqualifizierer|  
 |**VIEW_SCHEMA**|**nvarchar (** 128 **)**|Der Name des Schemas, das die Sicht enthält.<br /><br /> **&#42;&#42; wichtige &#42;&#42;** Verwenden Sie INFORMATION_SCHEMA Sichten nicht, um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
-|**VIEW_NAME**|**sysname**|Der Ansichts Name.|  
+|**VIEW_NAME**|**sysname**|Ansichtsname.|  
 |**TABLE_CATALOG**|**nvarchar (** 128 **)**|Tabellenqualifizierer|  
 |**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Name des Schemas, das die Basistabelle enthält<br /><br /> **&#42;&#42; wichtige &#42;&#42;** Verwenden Sie INFORMATION_SCHEMA Sichten nicht, um das Schema eines Objekts zu bestimmen. Die einzig zuverlässige Möglichkeit zum Finden des Schemas eines Objekts besteht darin, die sys.objects-Katalogsicht abzufragen.|  
 |**TABLE_NAME**|**sysname**|Basistabelle der Sicht|  
@@ -47,6 +47,6 @@ ms.locfileid: "68078372"
  [Informations Schema Sichten &#40;Transact-SQL-&#41;](~/relational-databases/system-information-schema-views/system-information-schema-views-transact-sql.md)   
  [sys. sql_dependencies &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)   
  [sys. Objects &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
- [sys. views &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)  
+ [sys.views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)  
   
   

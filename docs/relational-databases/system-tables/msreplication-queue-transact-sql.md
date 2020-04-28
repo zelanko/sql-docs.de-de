@@ -18,10 +18,10 @@ ms.assetid: 664bf817-8021-4417-96d6-2bb1e4baabff
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 914cf3ad65c881383a6d625c07d4fb5ed028b36a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68080008"
 ---
 # <a name="msreplication_queue-transact-sql"></a>MSreplication_queue (Transact-SQL)
@@ -35,11 +35,11 @@ ms.locfileid: "68080008"
 |**publisher_db**|**sysname**|Der Name der Veröffentlichungs Datenbank.|  
 |**ung**|**sysname**|Der Name der Veröffentlichung.|  
 |**tranid**|**sysname**|Die Transaktions-ID, unter der der Befehl in der Warteschlange ausgeführt wurde|  
-|**data**|**varbinary (8000)**|Der gepackte Bytedatenstrom, der Informationen zu dem in der Warteschlange aufgenommenen Befehl gespeichert hat.|  
+|**Daten**|**varbinary(8000)**|Der gepackte Bytedatenstrom, der Informationen zu dem in der Warteschlange aufgenommenen Befehl gespeichert hat.|  
 |**datalen**|**int**|Die Länge der Daten in Bytes.|  
 |**CommandType**|**int**|Der Typ des Befehls in der Warteschlange:<br /><br /> 1 = Benutzerbefehl in Transaktion.<br /><br /> 2 = Befehl zur Abonnementsynchronisierung.|  
 |**insertdate**|**datetime**|Das Einfügedatum.|  
-|**orderkey**|**BIGINT**|Die Identitätsspalte, deren Wert monoton ansteigt.|  
+|**orderkey**|**bigint**|Die Identitätsspalte, deren Wert monoton ansteigt.|  
 |**cmdstate**|**bit**|Der Befehlsstatus:<br /><br /> 0 = Abgeschlossen.<br /><br /> 1 = Teilweise.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

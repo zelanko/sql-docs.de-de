@@ -21,10 +21,10 @@ ms.assetid: 454ab849-07a5-4b50-ba0a-6b1b14721f77
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 1b0fad344831d8073badb2618eb2c34a1cdc2161
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68089177"
 ---
 # <a name="syssyscurconfigs-transact-sql"></a>sys.syscurconfigs (Transact-SQL)
@@ -37,13 +37,13 @@ ms.locfileid: "68089177"
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**Wert**|**int**|Vom Benutzer änderbarer Wert für die Variable. Wird nur von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verwendet, wenn RECONFIGURE ausgeführt wurde.|  
+|**value**|**int**|Vom Benutzer änderbarer Wert für die Variable. Wird nur von [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] verwendet, wenn RECONFIGURE ausgeführt wurde.|  
 |**Einstellungen**|**smallint**|Nummer der Konfigurationsvariablen.|  
 |**geäußert**|**nvarchar(255)**|Erläuterung der Konfigurationsoption.|  
-|**Stands**|**smallint**|Bitmuster, das den Status der Option kennzeichnet. Folgende Werte sind möglich:<br /><br /> 0 = Statisch Die Einstellung wird beim Neustart des Servers wirksam.<br /><br /> 1 = Dynamisch. Variable wird beim Ausführen der RECONFIGURE-Anweisung wirksam.<br /><br /> 2 = Erweitert. Variable wird nur angezeigt, wenn **Erweiterte Optionen anzeigen** festgelegt ist.<br /><br /> 3 = Dynamisch und erweitert.|  
+|**status**|**smallint**|Bitmuster, das den Status der Option kennzeichnet. Folgende Werte sind möglich:<br /><br /> 0 = Statisch Die Einstellung wird beim Neustart des Servers wirksam.<br /><br /> 1 = Dynamisch. Variable wird beim Ausführen der RECONFIGURE-Anweisung wirksam.<br /><br /> 2 = Erweitert. Variable wird nur angezeigt, wenn **Erweiterte Optionen anzeigen** festgelegt ist.<br /><br /> 3 = Dynamisch und erweitert.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Zuordnung von Systemtabellen zu System Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Kompatibilitäts Sichten &#40;Transact-SQL-&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Kompatibilitätssichten &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

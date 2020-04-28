@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: d540b299fd08aa78576b19040a4cfafb9046ae7c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68055681"
 ---
 # <a name="order-mdx"></a>Order (MDX)
@@ -45,7 +45,7 @@ Order(Set_Expression, String_Expression
  Ein gültiger Zeichenfolgenausdruck, bei dem es sich in der Regel um einen gültigen MDX-Ausdruck (Multidimensional Expressions) für Zellenkoordinaten handelt, der eine als Zeichenfolge ausgedrückte Zahl zurückgibt.  
   
 ## <a name="remarks"></a>Bemerkungen  
- Die **Order** -Funktion kann entweder hierarchisch (entsprechend der Angabe mit **** dem ASC **-oder dem** Debug-Flag) oder nicht hierarchisch (wie durch das BASC-oder bdebug-Flag angegeben) oder nicht hierarchisch (wie **durch das** **BASC** -oder **bdebug** -Flag angegeben) sein Wenn **ASC** oder **Debug** angegeben ist, ordnet die **Order** -Funktion die Member zuerst entsprechend ihrer Position in der Hierarchie an und ordnet dann jede Ebene an. Wenn **BASC** oder **bdebug** angegeben ist, ordnet die **Order** -Funktion Elemente im Satz ohne Berücksichtigung der Hierarchie an. Wenn kein Flag angegeben ist, wird **ASC** als Standardwert angegeben.  
+ Die **Order** -Funktion kann entweder hierarchisch (entsprechend der Angabe mit **ASC** dem ASC **-oder dem** Debug-Flag) oder nicht hierarchisch (wie durch das BASC-oder bdebug-Flag angegeben) oder nicht hierarchisch (wie **durch das** **BASC** -oder **bdebug** -Flag angegeben) sein Wenn **ASC** oder **Debug** angegeben ist, ordnet die **Order** -Funktion die Member zuerst entsprechend ihrer Position in der Hierarchie an und ordnet dann jede Ebene an. Wenn **BASC** oder **bdebug** angegeben ist, ordnet die **Order** -Funktion Elemente im Satz ohne Berücksichtigung der Hierarchie an. Wenn kein Flag angegeben ist, wird **ASC** als Standardwert angegeben.  
   
  Wenn die **Order** -Funktion mit einer Menge verwendet wird, in der zwei oder mehr Hierarchien quer verknüpft sind, und **das Flag zum** Aufheben der Verwendung verwendet wird, werden nur die Elemente der letzten Hierarchie in der Gruppe sortiert. Dies ist eine Änderung im Vergleich zu Analysis Services 2000, wo alle Hierarchien im Satz befohlen wurden.  
   
@@ -211,6 +211,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

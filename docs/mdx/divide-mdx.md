@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 6184aa9d932355cd935a9131848ec27895faea5f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68049297"
 ---
 # <a name="divide-mdx"></a>Dividieren (MDX)
@@ -28,11 +28,11 @@ Divide (<numerator>, <denominator> [,<alternateresult>])
 ```  
   
 ## <a name="arguments"></a>Argumente  
- *numerator*  
- Die zu dividierende Dividende oder Zahl.  
+ *Zähler*  
+ Der Dividend oder die zu teilende Zahl.  
   
- *denominator*  
- Der Divisor oder die Zahl, durch die dividiert werden soll.  
+ *vorzuschlagen*  
+ Der Divisor oder die Zahl, durch die geteilt wird.  
   
  *alternateresult*  
  (Optional) Der Rückgabewert, wenn die Division durch null zu einem Fehler führt. Der Standardwert ist BLANK(), wenn nichts angegeben ist.  
@@ -41,6 +41,6 @@ Divide (<numerator>, <denominator> [,<alternateresult>])
  Das alternative Ergebnis für eine Division durch 0 muss eine Konstante sein.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

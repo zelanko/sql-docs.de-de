@@ -19,10 +19,10 @@ ms.assetid: 9ceb9611-4929-44ee-a406-c39ba2720fd5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 190b4f0598afa6d434b5dada8c8464cb8209dac7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061260"
 ---
 # <a name="sp_dbmmonitorupdate-transact-sql"></a>sp_dbmmonitorupdate (Transact-SQL)
@@ -62,7 +62,7 @@ sp_dbmmonitorupdate [ database_name ]
  Beim Aktualisieren des Spiegelungs Status einer Datenbank prüft **sp_dbmmonitorupdate** den aktuellen Wert jeder Spiegelungs Leistungs Metrik, für die ein Warnungs Schwellenwert angegeben wurde. Wenn der Wert den Schwellenwert überschreitet, fügt die Prozedur dem Ereignisprotokoll ein Informationsereignis hinzu. Alle Raten sind seit dem letzten Update Durchschnittswerte. Weitere Informationen finden Sie unter [Verwenden von Warnungsschwellenwerten und Warnmeldungen für Spiegelungsleistungsmetriken &#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md).  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
+ Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** .  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird der Spiegelungsstatus nur für die [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank aktualisiert.  
@@ -79,6 +79,6 @@ EXEC sp_dbmmonitorupdate AdventureWorks2012 ;
  [sp_dbmmonitordropalert &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitordropalert-transact-sql.md)   
  [sp_dbmmonitorhelpalert &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpalert-transact-sql.md)   
  [sp_dbmmonitorhelpmonitoring &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorhelpmonitoring-transact-sql.md)   
- [sp_dbmmonitorresults &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
+ [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)  
   
   

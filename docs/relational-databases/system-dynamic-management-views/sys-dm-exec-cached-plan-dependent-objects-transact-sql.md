@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ca4499645846dacc762d8d3bf130ccc44a7f3155
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097898"
 ---
 # <a name="sysdm_exec_cached_plan_dependent_objects-transact-sql"></a>sys.dm_exec_cached_plan_dependent_objects (Transact-SQL)
@@ -40,10 +40,9 @@ sys.dm_exec_cached_plan_dependent_objects(plan_handle)
   
 ## <a name="arguments"></a>Argumente  
 *plan_handle*  
-Ein Token, das einen Abfrage Ausführungsplan für einen ausgeführten Batch eindeutig identifiziert und dessen Plan sich im Plancache befindet. *plan_handle* ist vom Datentyp **varbinary (64)**.   
+Ein Token, das einen Abfrage Ausführungsplan für einen ausgeführten Batch eindeutig identifiziert und dessen Plan sich im Plancache befindet. *plan_handle* ist **varbinary(64)**   
 
-
-  *plan_handle* kann aus den folgenden dynamischen Verwaltungsobjekten abgerufen werden:  
+*plan_handle* kann aus den folgenden dynamischen Verwaltungsobjekten abgerufen werden:  
   
 -   [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
@@ -71,13 +70,13 @@ Ein Token, das einen Abfrage Ausführungsplan für einen ausgeführten Batch ein
   
 ## <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-|Von|To|Andererseits|Beziehung|  
+|Von|Beschreibung|Andererseits|Beziehung|  
 |----------|--------|--------|------------------|  
 |**dm_exec_cached_plan_dependent_objects**|**dm_os_memory_objects**|**memory_object_address**|1:1|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Dynamische Verwaltungs Sichten und-Funktionen im Zusammenhang mit der Ausführung &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
- [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [sys. syscacheobjects &#40;Transact-SQL-&#41;](../../relational-databases/system-compatibility-views/sys-syscacheobjects-transact-sql.md)  
   
   

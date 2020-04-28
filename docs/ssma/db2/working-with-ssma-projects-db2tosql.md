@@ -10,10 +10,10 @@ ms.assetid: 07abef8a-28e8-4a66-927c-c9a5b8c938ef
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d2c585764e5bb7fffa55624054aecc7a4c589bbe
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68086181"
 ---
 # <a name="working-with-ssma-projects-db2tosql"></a>Arbeiten mit SSMA-Projekten (DB2ToSQL)
@@ -69,7 +69,7 @@ Wenn Sie Daten aus DB2-Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
   
 4.  Wählen Sie in der Dropdown Liste **Migration zu** die Version des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ziels aus, die für die Migration verwendet wird. Die verfügbaren Optionen sind:  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
@@ -95,7 +95,7 @@ Wenn Sie ein Projekt speichern, behält SSMA die Projekteinstellungen und option
   
         Das Speichern von Metadaten kann einige Minuten dauern. Wenn Sie noch keine Metadaten speichern möchten, aktivieren Sie keine Kontrollkästchen.  
   
-    2.  Klicken Sie auf die Schaltfläche **Speichern**.  
+    2.  Klicken Sie auf die Schaltfläche **Save** .  
   
         SSMA analysiert die DB2-Schemas und speichert die Metadaten in der Projektdatei.  
   

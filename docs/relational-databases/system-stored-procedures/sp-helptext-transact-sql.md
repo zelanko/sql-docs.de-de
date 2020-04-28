@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 160d52c8c145828f6a63c104aecb17e04867cee8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68048290"
 ---
 # <a name="sp_helptext-transact-sql"></a>sp_helptext (Transact-SQL)
@@ -40,9 +40,9 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @objname = ] 'name'`Der qualifizierte oder nicht qualifizierte Name eines benutzerdefinierten, Schema bezogenen Objekts. Anführungszeichen sind nur dann erforderlich, wenn ein qualifiziertes Objekt angegeben wird. Bei Angabe eines vollqualifizierten Namens, einschließlich eines Datenbanknamens, muss es sich bei dem Datenbanknamen um den Namen der aktuellen Datenbank handeln. Das Objekt muss in der aktuellen Datenbank vorhanden sein. *Name ist vom Datentyp* **nvarchar (776)** und hat keinen Standardwert.  
+`[ @objname = ] 'name'`Der qualifizierte oder nicht qualifizierte Name eines benutzerdefinierten, Schema bezogenen Objekts. Anführungszeichen sind nur dann erforderlich, wenn ein qualifiziertes Objekt angegeben wird. Bei Angabe eines vollqualifizierten Namens, einschließlich eines Datenbanknamens, muss es sich bei dem Datenbanknamen um den Namen der aktuellen Datenbank handeln. Das Objekt muss in der aktuellen Datenbank vorhanden sein. *name* ist vom Datentyp **nvarchar(776)** und hat keinen Standardwert.  
   
-`[ @columnname = ] 'computed_column_name'`Der Name der berechneten Spalte, für die Definitions Informationen angezeigt werden sollen. Die Tabelle, welche die Spalte beinhaltet, muss als *name*angegeben werden. *column_name* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @columnname = ] 'computed_column_name'`Der Name der berechneten Spalte, für die Definitions Informationen angezeigt werden sollen. Die Tabelle, welche die Spalte beinhaltet, muss als *name*angegeben werden. *column_name* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -91,7 +91,7 @@ GO
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)   
+ [OBJECT_DEFINITION &#40;Transact-SQL-&#41;](../../t-sql/functions/object-definition-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
  [sys.sql_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

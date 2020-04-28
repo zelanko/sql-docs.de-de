@@ -12,10 +12,10 @@ ms.assetid: ede3128c-370d-45a5-a815-3d94eecaea30
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 9dcdeaff1c4782453a9fd57cc709e17ad3200d28
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68086825"
 ---
 # <a name="installing-ssma-for-mysql-client-mysqltosql"></a>Installieren von SSMA für den MySQL-Client (MySqlToSql)
@@ -61,7 +61,7 @@ Nachdem Sie die aktuelle Version heruntergeladen haben, müssen Sie die Installa
   
 1.  Doppelklicken Sie auf SSMA für MySQL *n*. Install. exe, wobei *n* für die Buildnummer steht.  
   
-2.  Klicken Sie auf der Willkommensseite auf **weiter**.  
+2.  Klicken Sie auf der Seite Willkommenauf **Weiter**.  
   
     Wenn die erforderlichen Komponenten nicht installiert sind, wird eine Meldung mit dem Hinweis angezeigt, dass Sie zunächst die erforderlichen Komponenten installieren müssen. Stellen Sie sicher, dass Sie alle Voraussetzungen installiert haben, bevor Sie das Installationsprogramm erneut ausführen.  
   

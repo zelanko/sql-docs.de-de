@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 19b78ff53b5640d74b49d2e5956c39aa1df2e230
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68068068"
 ---
 # <a name="sysplan_guides-transact-sql"></a>sys.plan_guides (Transact-SQL)
@@ -41,17 +41,17 @@ ms.locfileid: "68068068"
 |**is_disabled**|**bit**|1 = Planhinweisliste ist deaktiviert.<br /><br /> 0 = Planhinweisliste ist aktiviert.|  
 |**query_text**|**nvarchar(max)**|Text der Abfrage, anhand derer die Planhinweisliste erstellt wird.|  
 |**scope_type**|**tinyint**|Identifiziert den Bereich der Planhinweisliste.<br /><br /> 1 = OBJECT<br /><br /> 2 = SQL<br /><br /> 3 = TEMPLATE|  
-|**scope_type_desc**|**nvarchar (60)**|Beschreibung des Bereichs der Planhinweisliste.<br /><br /> OBJECT<br /><br /> SQL<br /><br /> TEMPLATE|  
-|**scope_object_id**|**Wartenden**|object_id des Objekts, das den Bereich der Planhinweisliste definiert, wenn der Bereich OBJECT ist.<br /><br /> NULL, wenn der Bereich der Planhinweisliste nicht OBJECT ist.|  
+|**scope_type_desc**|**nvarchar(60)**|Beschreibung des Bereichs der Planhinweisliste.<br /><br /> OBJECT<br /><br /> SQL<br /><br /> TEMPLATE|  
+|**scope_object_id**|**Int**|object_id des Objekts, das den Bereich der Planhinweisliste definiert, wenn der Bereich OBJECT ist.<br /><br /> NULL, wenn der Bereich der Planhinweisliste nicht OBJECT ist.|  
 |**scope_batch**|**nvarchar(max)**|Batch Text, wenn **scope_type** SQL ist.<br /><br /> NULL, wenn der Batchtyp nicht SQL ist.<br /><br /> Wenn NULL und **scope_type** SQL ist, gilt der Wert von **query_text** .|  
-|**Metern**|**nvarchar(max)**|Die Zeichenfolge zur Definition der Liste der Parameter, die mit der Planhinweisliste verknüpft sind.<br /><br /> NULL = Mit der Planhinweisliste ist keine Parameterliste verknüpft.|  
+|**parameters**|**nvarchar(max)**|Die Zeichenfolge zur Definition der Liste der Parameter, die mit der Planhinweisliste verknüpft sind.<br /><br /> NULL = Mit der Planhinweisliste ist keine Parameterliste verknüpft.|  
 |**entgegen**|**nvarchar(max)**|Die Hinweise der OPTION-Klausel, die mit der Planhinweisliste verknüpft sind.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sp_create_plan_guide &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)  
   

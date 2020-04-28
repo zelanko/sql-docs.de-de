@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 7a7a9c18599d13c4db510793a1d75c85bbb7a829
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070864"
 ---
 # <a name="data-mining-extensions-dmx-statements"></a>Data Mining-Erweiterungen (DMX) – Anweisungen
@@ -60,7 +60,7 @@ ms.locfileid: "68070864"
   
 |Thema|BESCHREIBUNG|  
 |-----------|-----------------|  
-|[Data Mining-Erweiterungen &#40;DMX-&#41; Daten Definitions Anweisungen](../dmx/dmx-statements-data-definition.md)|Gehören zur Datendefinitionssprache (Data Definition Language, DDL). Werden dazu verwendet, ein neues Miningmodell (samt Training) zu definieren oder ein vorhandenes Miningmodell aus einer Datenbank zu löschen.|  
+|[Data Mining-Erweiterungen &#40;DMX&#41; – Datendefinitionsanweisungen](../dmx/dmx-statements-data-definition.md)|Gehören zur Datendefinitionssprache (Data Definition Language, DDL). Werden dazu verwendet, ein neues Miningmodell (samt Training) zu definieren oder ein vorhandenes Miningmodell aus einer Datenbank zu löschen.|  
 |[Data Mining-Erweiterungen &#40;DMX-&#41; Daten Bearbeitungsanweisungen](../dmx/dmx-statements-data-manipulation.md)|Gehören zur Datenbearbeitungssprache (Data Manipulation Language, DML). Werden zum Arbeiten mit vorhandenen Miningmodellen verwendet, wozu auch das Durchsuchen eines Modells und das Erstellen von Vorhersagen gehören.|  
   
 ## <a name="see-also"></a>Weitere Informationen  

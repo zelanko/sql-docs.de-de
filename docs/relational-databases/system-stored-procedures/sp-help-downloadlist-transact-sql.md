@@ -18,10 +18,10 @@ ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 40345ed8ad1a10da0088c5c1388c44fa24cad929
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68055192"
 ---
 # <a name="sp_help_downloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
@@ -55,7 +55,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
   
 `[ @operation = ] 'operation'`Der gültige Vorgang für den angegebenen Auftrag. *Operation* ist vom Datentyp **varchar (64)** und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Mängel**|Der Server Vorgang, der den Austritt des Zielservers vom Master- **SQLServerAgent** -Dienst anfordert.|  
 |**DELETE**|Auftragsvorgang, mit dem ein gesamter Auftrag entfernt wird|  
@@ -87,15 +87,15 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**instance_id**|**int**|Eindeutige, ganzzahlige ID der Anweisung|  
-|**source_server**|**nvarchar (30)**|Computername des Servers, vom dem die Anweisung stammt. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7,0 ist dies immer der Computername des Master Servers (MSX).|  
+|**source_server**|**nvarchar(30)**|Computername des Servers, vom dem die Anweisung stammt. In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Version 7,0 ist dies immer der Computername des Master Servers (MSX).|  
 |**operation_code**|**nvarchar(4000)**|Vorgangscode für die Anweisung|  
 |**object_name**|**sysname**|Objekt, das von der Anweisung betroffen ist|  
 |**object_id**|**uniqueidentifier**|ID des Objekts, das von der Anweisung betroffen ist (**job_id** für ein Auftrags Objekt oder 0x00 für ein Server Objekt), oder ein Datenwert, der für die **operation_code**spezifisch ist.|  
-|**target_server**|**nvarchar (30)**|Zielserver, der diese Anweisung herunterladen soll|  
-|**error_message**|**nvarchar (1024)**|Gegebenenfalls Fehlermeldung vom Zielserver, falls beim Verarbeiten dieser Anweisung ein Problem aufgetreten ist.<br /><br /> Hinweis: jede Fehlermeldung blockiert alle weiteren Downloads durch den Zielserver.|  
+|**target_server**|**nvarchar(30)**|Zielserver, der diese Anweisung herunterladen soll|  
+|**error_message**|**nvarchar(1024)**|Gegebenenfalls Fehlermeldung vom Zielserver, falls beim Verarbeiten dieser Anweisung ein Problem aufgetreten ist.<br /><br /> Hinweis: jede Fehlermeldung blockiert alle weiteren Downloads durch den Zielserver.|  
 |**date_posted**|**datetime**|Datum, an dem die Anweisung für die Tabelle bereitgestellt wurde|  
 |**date_downloaded**|**datetime**|Datum, an dem die Anweisung durch den Zielserver heruntergeladen wurde|  
-|**Stands**|**tinyint**|Status des Auftrags:<br /><br /> **0** = noch nicht heruntergeladen<br /><br /> **1** = erfolgreich heruntergeladen.|  
+|**status**|**tinyint**|Status des Auftrags:<br /><br /> **0** = Noch nicht heruntergeladen<br /><br /> **1** = erfolgreich heruntergeladen.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Die Berechtigungen zum Ausführen dieser Prozedur werden standardmäßig Mitgliedern der festen Server Rolle **sysadmin** zugewiesen.  

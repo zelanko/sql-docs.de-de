@@ -13,18 +13,17 @@ ms.assetid: 4e9d0374-0927-4f17-bab9-2215b1b8fea8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 013ca0abae914b511a564ee4d67bd01d398f8bb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68064201"
 ---
 # <a name="database-engine-extended-stored-procedures---reference"></a>Datenbank-Engine: Erweiterte gespeicherten Prozeduren – Referenz
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  
-  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
   
  Die [!INCLUDE[msCoName](../../includes/msconame-md.md)] API für erweiterte gespeicherte Prozeduren, die bereits Teil von Open Data Services ist, bietet eine serverbasierte Anwendungsprogrammierschnittstelle ( [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Application Programming Interface, API) zum Erweitern der Funktionalität. Die API besteht aus C-Funktionen, C++-Funktion und Makros, die zum Erstellen von Anwendungen verwendet werden.  
   

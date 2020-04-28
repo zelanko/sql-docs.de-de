@@ -19,10 +19,10 @@ ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 83e9368b562a7ac200171dc814830b21d677770a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090094"
 ---
 # <a name="sysdm_xtp_system_memory_consumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
@@ -39,14 +39,14 @@ select * from sys.dm_xtp_system_memory_consumers
   
 |Spaltenname|type|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
-|memory_consumer_id|**BIGINT**|Interne ID für Arbeitsspeicherconsumer.|  
+|memory_consumer_id|**bigint**|Interne ID für Arbeitsspeicherconsumer.|  
 |memory_consumer_type|**int**|Eine ganze Zahl, die den Typ des arbeitsspeicherconsumers mit einem der folgenden Werte darstellt:<br /><br /> 0-es darf nicht angezeigt werden. Aggregiert die Speichernutzung von zwei oder mehreren Consumern.<br /><br /> 1-Lookaside: verfolgt die Arbeitsspeicher Nutzung für ein System Lookaside nach.<br /><br /> 2-varheap: verfolgt die Arbeitsspeicher Nutzung für einen Heap variabler Länge nach.<br /><br /> 4-e/a-Seiten Pool: verfolgt die Arbeitsspeicher Nutzung für einen für e/a-Vorgänge verwendeten System Seiten Pool.|  
 |memory_consumer_type_desc|**nvarchar (16)**|Die Beschreibung des Typs des Arbeitsspeicherconsumers:<br /><br /> 0-es darf nicht angezeigt werden.<br /><br /> 1-Lookaside<br /><br /> 2 - VARHEAP<br /><br /> 4 - PGPOOL|  
 |memory_consumer_desc|**nvarchar (64)**|Die Beschreibung der Arbeitsspeicherconsumer-Instanz:<br /><br /> VARHEAP <br />Der Systemheap. Allgemeiner Zweck. Wird derzeit nur verwendet, um Arbeitselemente der Garbage Collection zuzuordnen.<br />ODER<br />Der Lookasideheap. Wird von Lookasides verwendet, wenn die Anzahl der in der Lookasideliste enthaltenen Elemente einen vordefinierten Grenzwert (normalerweise etwa 5.000 Elemente) erreicht.<br /><br /> Pgpool: für e/a-System Pools gibt es drei unterschiedliche Größen: System 4K-Seiten Pool, System 64 K-Seiten Pool und System 256 K-Seiten Pool.|  
-|lookaside_id|**BIGINT**|Die ID des threadlokalen Nebenarbeitsspeicheranbieters.|  
-|pagepool_id|**BIGINT**|Die ID des threadlokalen Seitenpool-Arbeitsspeicheranbieters.|  
-|allocated_bytes|**BIGINT**|Anzahl der für den Consumer reservierten Bytes.|  
-|used_bytes|**BIGINT**|Die von diesem Consumer verwendeten Bytes. Gilt nur für varheap-Arbeitsspeicherconsumer.|  
+|lookaside_id|**bigint**|Die ID des threadlokalen Nebenarbeitsspeicheranbieters.|  
+|pagepool_id|**bigint**|Die ID des threadlokalen Seitenpool-Arbeitsspeicheranbieters.|  
+|allocated_bytes|**bigint**|Anzahl der für den Consumer reservierten Bytes.|  
+|used_bytes|**bigint**|Die von diesem Consumer verwendeten Bytes. Gilt nur für varheap-Arbeitsspeicherconsumer.|  
 |allocation_count|**int**|Anzahl der Zuordnungen.|  
 |partition_count|**int**|Nur interne Verwendung.|  
 |sizeclass_count|**int**|Nur interne Verwendung.|  
@@ -105,6 +105,6 @@ total_allocated_MB   total_used_MB
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungs Sichten für Speicher optimierte Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Dynamische Verwaltungssichten für speicheroptimierte Tabellen (Transact-SQL)](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

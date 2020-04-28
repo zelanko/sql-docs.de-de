@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: acadb311dac786d9f1c5dbcc86fac9b2609fb959
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085799"
 ---
 # <a name="sp_prepare-transact-sql"></a>sp_prepare (Transact-SQL)
@@ -43,15 +43,15 @@ sp_prepare handle OUTPUT, params, stmt, options
  Ist ein SQL Server generierter Bezeichner für den *handle* . *handle* ist ein erforderlicher Parameter mit einem **int** -Rückgabewert.  
   
  *params*  
- Identifiziert parametrisierte Anweisungen. Die *params* -Definition der Variablen wird in der Anweisung an die Stelle der Parametermarkierungen gesetzt. " *para* meters" ist ein erforderlicher Parameter, der den Eingabe Wert " **ntext**", " **NCHAR**" oder " **nvarchar** " aufruft. Geben Sie einen NULL-Wert ein, wenn die Anweisung nicht parametrisiert ist.  
+ Identifiziert parametrisierte Anweisungen. Die *params* -Definition der Variablen wird in der Anweisung an die Stelle der Parametermarkierungen gesetzt. *params* ist ein erforderlicher Parameter, der einen Eingabewert vom Typ **ntext**, **nchar**,oder **nvarchar** erfordert. Geben Sie einen NULL-Wert ein, wenn die Anweisung nicht parametrisiert ist.  
   
  *stmt*  
  Definiert das Resultset des Cursors. Der *stmt* -Parameter ist erforderlich und erfordert einen Eingabe Wert vom Typ **ntext**, **NCHAR**oder **nvarchar** .  
   
- *Optionen*  
+ *options*  
  Ein optionaler Parameter, der eine Beschreibung der Spalten im Cursorresultset zurückgibt. die *Optionen* erfordern den folgenden int-Eingabe Wert:  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |0x0001|RETURN_METADATA|  
   

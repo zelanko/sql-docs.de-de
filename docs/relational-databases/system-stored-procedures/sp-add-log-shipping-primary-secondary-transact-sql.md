@@ -18,10 +18,10 @@ ms.assetid: 23b3e100-5318-410e-b8f3-51c89b2dd777
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 1b3ea170f07eaea32306e0453d492e510062c9b5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68046268"
 ---
 # <a name="sp_add_log_shipping_primary_secondary-transact-sql"></a>sp_add_log_shipping_primary_secondary (Transact-SQL)
@@ -42,11 +42,11 @@ sp_add_log_shipping_primary_secondary
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @primary_database = ] 'primary_database'`Der Name der Datenbank auf dem primären Server. *primary_database* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @primary_database = ] 'primary_database'`Der Name der Datenbank auf dem primären Server. *primary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
-`[ @secondary_server = ] 'secondary_server',`Der Name des sekundären Servers. *Secondary_server* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @secondary_server = ] 'secondary_server',`Der Name des sekundären Servers. *secondary_server* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
-`[ @secondary_database = ] 'secondary_database'`Der Name der sekundären Datenbank. *secondary_database* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @secondary_database = ] 'secondary_database'`Der Name der sekundären Datenbank. *secondary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -55,7 +55,7 @@ sp_add_log_shipping_primary_secondary
  Keine  
   
 ## <a name="remarks"></a>Bemerkungen  
- **sp_add_log_shipping_primary_secondary** muss von der **Master** -Datenbank auf dem primären Server ausgeführt werden.  
+ **sp_add_log_shipping_primary_secondary** muss aus der **master** -Datenbank auf dem primären Server ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Serverrolle **sysadmin** können diese Prozedur ausführen.  
@@ -72,7 +72,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informationen zum Protokoll Versand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

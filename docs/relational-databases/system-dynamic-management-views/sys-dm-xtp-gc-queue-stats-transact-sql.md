@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions
 ms.openlocfilehash: c56fe40ec6864ac48a991e155d06ce7c505ed593
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090198"
 ---
 # <a name="sysdm_xtp_gc_queue_stats-transact-sql"></a>sys.dm_xtp_gc_queue_stats (Transact-SQL)
@@ -42,11 +42,11 @@ ms.locfileid: "68090198"
 |Spaltenname|type|BESCHREIBUNG|  
 |-----------------|----------|-----------------|  
 |queue_id|**int**|Der eindeutige Bezeichner der Warteschlange.|  
-|total_enqueues|**BIGINT**|Die Gesamtanzahl von Arbeitselementen der Garbage Collection, die seit dem Start des Servers in die Warteschlange eingereiht wurden.|  
-|total_dequeues|**BIGINT**|Die Gesamtanzahl von Arbeitselementen der Garbage Collection, die seit dem Start des Servers aus der Warteschlange entfernt wurden.|  
-|current_queue_depth|**BIGINT**|Die aktuelle Anzahl von Arbeitselementen der Garbage Collection, die in dieser Warteschlange vorhanden sind. Dieses Element bedeutet möglicherweise, dass eine oder mehrere Garbage Collections durchgeführt werden sollen.|  
-|maximum_queue_depth|**BIGINT**|Die maximale Tiefe, die diese Warteschlange aufgewiesen hat.|  
-|last_service_ticks|**BIGINT**|CPU-Takte zu dem Zeitpunkt, als die Warteschlange zuletzt aktiv war.|  
+|total_enqueues|**bigint**|Die Gesamtanzahl von Arbeitselementen der Garbage Collection, die seit dem Start des Servers in die Warteschlange eingereiht wurden.|  
+|total_dequeues|**bigint**|Die Gesamtanzahl von Arbeitselementen der Garbage Collection, die seit dem Start des Servers aus der Warteschlange entfernt wurden.|  
+|current_queue_depth|**bigint**|Die aktuelle Anzahl von Arbeitselementen der Garbage Collection, die in dieser Warteschlange vorhanden sind. Dieses Element bedeutet möglicherweise, dass eine oder mehrere Garbage Collections durchgeführt werden sollen.|  
+|maximum_queue_depth|**bigint**|Die maximale Tiefe, die diese Warteschlange aufgewiesen hat.|  
+|last_service_ticks|**bigint**|CPU-Takte zu dem Zeitpunkt, als die Warteschlange zuletzt aktiv war.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW SERVER STATE-Berechtigung.  
@@ -66,6 +66,6 @@ queue_id total_enqueues total_dequeues current_queue_depth  maximum_queue_depth 
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungs Sichten für Speicher optimierte Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Dynamische Verwaltungssichten für speicheroptimierte Tabellen (Transact-SQL)](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

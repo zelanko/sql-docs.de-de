@@ -19,10 +19,10 @@ ms.assetid: 5abe2605-0506-46ec-82b5-6ec08428ba13
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fc4f107ef1c26aa51f3f1d58f910be9721f2a51a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68067834"
 ---
 # <a name="sysdm_repl_traninfo-transact-sql"></a>sys.dm_repl_traninfo (Transact-SQL)
@@ -40,12 +40,12 @@ ms.locfileid: "68067834"
 |**begin_lsn**|**nvarchar (64)**|Protokollsequenznummer (Log Sequence Number, LSN) des Protokolleintrags für den Beginn der Transaktion.|  
 |**commit_lsn**|**nvarchar (64)**|LSN des Protokolldatensatz für den Commit der Transaktion.|  
 |**DBID**|**smallint**|Datenbank-ID|  
-|**rows**|**int**|ID des replizierten Befehls in der Transaktion.|  
+|**Streitigkeiten**|**int**|ID des replizierten Befehls in der Transaktion.|  
 |**xdesid für**|**nvarchar (64)**|Transaktions-ID|  
 |**artcache_table_address**|**varbinary(8)**|Speicherinterne Adresse der zwischengespeicherten Artikeltabellenstruktur, die zuletzt für diese Transaktion verwendet wurde.|  
 |**Servers**|**nvarchar (514)**|Servername.|  
 |**server_len_in_bytes**|**smallint**|Zeichenlänge des Servernamens (in Bytes).|  
-|**Verbindung**|**nvarchar (514)**|Datenbankname.|  
+|**database**|**nvarchar (514)**|Datenbankname.|  
 |**db_len_in_bytes**|**smallint**|Zeichenlänge des Datenbanknamens (in Bytes).|  
 |**originator**|**nvarchar (514)**|Name des Servers, von dem die Transaktion stammt.|  
 |**originator_len_in_bytes**|**smallint**|Zeichenlänge des Servernamens (in Bytes), von dem die Transaktion stammt.|  
@@ -74,7 +74,7 @@ ms.locfileid: "68067834"
  Informationen werden nur für replizierte Datenbankobjekte oder für für Change Data Capture aktivierte Tabellen zurückgegeben, die zurzeit in den Artikelcache geladen sind.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Dynamische Verwaltungs Sichten im Zusammenhang mit der Replikation &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)   
  [Dynamische Verwaltungssichten in Bezug auf Change Data Capture &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/2a771d7d-693a-4f56-9227-02cd00e0e200)  
   

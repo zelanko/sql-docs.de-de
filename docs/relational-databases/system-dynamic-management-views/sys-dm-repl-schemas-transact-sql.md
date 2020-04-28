@@ -18,10 +18,10 @@ ms.assetid: 6f5fefff-8492-4360-bd5b-a97287367914
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 152a8b7f4c933874d8190b95404cbbeb91bb098f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088585"
 ---
 # <a name="sysdm_repl_schemas-transact-sql"></a>sys.dm_repl_schemas (Transact-SQL)
@@ -33,15 +33,15 @@ ms.locfileid: "68088585"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**artcache_schema_address**|**varbinary(8)**|Speicherinterne Adresse der zwischengespeicherten Schemastruktur für den veröffentlichten Tabellenartikel.|  
-|**tabid**|**BIGINT**|ID der replizierten Tabelle.|  
+|**tabid**|**bigint**|ID der replizierten Tabelle.|  
 |**IndexID**|**smallint**|ID eines gruppierten Indexes für die veröffentlichten Tabelle.|  
-|**idSch**|**BIGINT**|ID des Tabellenschemas.|  
+|**idSch**|**bigint**|ID des Tabellenschemas.|  
 |**tabschema**|**nvarchar (510)**|Name des Tabellenschemas.|  
 |**ccTabschema**|**smallint**|Zeichenlänge des Tabellenschemas.|  
 |**tabname**|**nvarchar (510)**|Name der veröffentlichten Tabelle.|  
 |**ccTabname**|**smallint**|Zeichenlänge des veröffentlichten Tabellennamens.|  
-|**rowsetid_delete**|**BIGINT**|ID der gelöschten Zeile.|  
-|**rowsetid_insert**|**BIGINT**|ID der eingefügten Zeile.|  
+|**rowsetid_delete**|**bigint**|ID der gelöschten Zeile.|  
+|**rowsetid_insert**|**bigint**|ID der eingefügten Zeile.|  
 |**num_pk_cols**|**int**|Anzahl der Primärschlüsselspalten.|  
 |**pcitee**|**Binary (8000)**|Zeiger auf die Abfrageausdrucksstruktur, die beim Auswerten der berechneten Spalte verwendet wird.|  
 |**re_numtextcols**|**int**|Anzahl von BLOB-Spalten in der replizierten Tabelle.|  
@@ -56,14 +56,14 @@ ms.locfileid: "68088585"
 |**re_maxlen**|**smallint**|Maximale Länge der veröffentlichten Spalte.|  
 |**re_prec**|**tinyint**|Genauigkeit der veröffentlichten Spalte.|  
 |**re_scale**|**tinyint**|Skalierung der veröffentlichten Spalte.|  
-|**re_collatid**|**BIGINT**|Sortierungs-ID der veröffentlichten Spalte.|  
+|**re_collatid**|**bigint**|Sortierungs-ID der veröffentlichten Spalte.|  
 |**re_xvtype**|**smallint**|Typ der veröffentlichten Spalte.|  
 |**re_offset**|**smallint**|Offset der veröffentlichten Spalte.|  
 |**re_bitpos**|**tinyint**|Bitposition der veröffentlichten Spalte im Bytevektor.|  
 |**re_fNullable**|**tinyint**|Gibt an, ob die veröffentlichte Spalte NULL-Werte unterstützt.|  
 |**re_fAnsiTrim**|**tinyint**|Gibt an, ob ANSI-Kürzung in der veröffentlichten Spalte verwendet wird.|  
 |**re_computed**|**smallint**|Gibt an, ob die veröffentlichte Spalte eine berechnete Spalte ist.|  
-|**se_rowsetid**|**BIGINT**|ID des Rowsets.|  
+|**se_rowsetid**|**bigint**|ID des Rowsets.|  
 |**se_schema_lsn_begin**|**Binary (8000)**|Erste LSN der Schemaversionsprotokollierung.|  
 |**se_schema_lsn_end**|**Binary (8000)**|Letzte LSN der Schemaversionsprotokollierung.|  
 |**se_numcols**|**int**|Anzahl der Spalten.|  
@@ -71,7 +71,7 @@ ms.locfileid: "68088585"
 |**se_maxlen**|**smallint**|Maximale Länge der Spalte.|  
 |**se_prec**|**tinyint**|Genauigkeit der Spalte.|  
 |**se_scale**|**tinyint**|Skalierung der Spalte.|  
-|**se_collatid**|**BIGINT**|Sortierungs-ID der Spalte.|  
+|**se_collatid**|**bigint**|Sortierungs-ID der Spalte.|  
 |**se_xvtype**|**smallint**|Typ der Spalte.|  
 |**se_offset**|**smallint**|Offset der Spalte.|  
 |**se_bitpos**|**tinyint**|Bitposition der Spalte im Bytevektor.|  
@@ -87,7 +87,7 @@ ms.locfileid: "68088585"
  Informationen werden nur für replizierte Datenbankobjekte zurückgegeben, die zurzeit in den Replikationsartikelcache geladen sind.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Dynamische Verwaltungs Sichten im Zusammenhang mit der Replikation &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   
   

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fc0ad8fcdf8c72e1b91df651a75227975d18294e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061816"
 ---
 # <a name="sp_column_privileges-transact-sql"></a>sp_column_privileges (Transact-SQL)
@@ -90,8 +90,8 @@ EXEC sp_column_privileges @table_name = 'Employee'
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
- [REVOKE &#40;Transact-SQL&#41;](../../t-sql/statements/revoke-transact-sql.md)   
+ [Grant &#40;Transact-SQL-&#41;](../../t-sql/statements/grant-transact-sql.md)   
+ [&#40;Transact-SQL-&#41;widerrufen](../../t-sql/statements/revoke-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

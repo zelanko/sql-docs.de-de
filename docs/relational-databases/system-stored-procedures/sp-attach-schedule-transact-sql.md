@@ -18,10 +18,10 @@ ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f85095941311459da2fdc757a11895795ebb418e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68046166"
 ---
 # <a name="sp_attach_schedule-transact-sql"></a>sp_attach_schedule (Transact-SQL)
@@ -76,8 +76,7 @@ sp_attach_schedule
   
  Weitere Informationen zu den Berechtigungen dieser Rollen finden Sie unter [Feste Datenbankrollen des SQL Server-Agents](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prüft, ob der Benutzer Besitzer sowohl des Auftrags als auch des Zeitplans ist.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prüft, ob der Benutzer Besitzer sowohl des Auftrags als auch des Zeitplans ist.  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird ein Zeitplan mit dem Namen `NightlyJobs` erstellt. Aufträge, die diesen Zeitplan verwenden, werden jeden Tag zur Serveruhrzeit `01:00` Uhr ausgeführt. Im Beispiel wird der Zeitplan den Aufträgen `BackupDatabase` und `RunReports` angefügt.  

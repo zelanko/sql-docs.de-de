@@ -21,10 +21,10 @@ ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 0c56aa86c20867cfe2cf1da520922d1c74f9c01c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053339"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
@@ -56,7 +56,7 @@ ms.locfileid: "68053339"
 |**req_spid**|**int**|Interne [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] Prozess-ID der Sitzung, die die Sperre anfordert.|  
 |**req_ecid**|**int**|Ausführungskontext-ID (ECID, Execution Context ID). Gibt an, welcher Thread in einem parallelen Vorgang eine bestimmte Sperre besitzt.|  
 |**req_ownertype**|**smallint**|Typ des der Sperre zugeordneten Objekts:<br /><br /> 1 = Transaktion<br /><br /> 2 = Cursor<br /><br /> 3 = Sitzung<br /><br /> 4 = ExSession<br /><br /> Beachten Sie, dass 3 und 4 eine besondere Version von Sitzungssperren darstellen, die entsprechend Datenbank- und Dateigruppensperren protokollieren.|  
-|**req_transactionID**|**BIGINT**|Eindeutige Transaktions-ID, die in **syslockinfo** und im Profiler-Ereignis verwendet wird|  
+|**req_transactionID**|**bigint**|Eindeutige Transaktions-ID, die in **syslockinfo** und im Profiler-Ereignis verwendet wird|  
 |**req_transactionUOW**|**uniqueidentifier**|Identifiziert die ID der Arbeitseinheit (UOW, Unit of Work) der DTC-Transaktion. Bei Nicht-MS DTC-Transaktionen wird UOW auf 0 festgelegt.|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -64,6 +64,6 @@ ms.locfileid: "68053339"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Zuordnung von Systemtabellen zu System Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Kompatibilitäts Sichten &#40;Transact-SQL-&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Kompatibilitätssichten &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

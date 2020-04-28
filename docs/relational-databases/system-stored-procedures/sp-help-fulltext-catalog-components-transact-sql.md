@@ -18,10 +18,10 @@ ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 213cc6ea9be57590d52755fdbba3151882ac0a38
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68055167"
 ---
 # <a name="sp_help_fulltext_catalog_components-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-SQL)
@@ -46,21 +46,21 @@ sp_help_fulltext_catalog_components
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**Name des voll Text Katalogs**|**int**|Name des Volltextkatalogs.|  
-|**full-text catalog id**|**sysname**|ID des Volltextkatalogs.|  
+|**voll Text Katalog-ID**|**sysname**|ID des Volltextkatalogs.|  
 |**componenttype**|**sysname**|Typ der Komponente. Einer der folgenden:<br /><br /> Filtern<br /><br /> Protokollhandler<br /><br /> Wörtertrennung|  
 |**componentname**|**sysname**|Der Name der Komponente.|  
-|**clsid**|**uniqueidentifier**|Klassenbezeichner der Komponente.|  
+|**CLSID**|**uniqueidentifier**|Klassenbezeichner der Komponente.|  
 |**FullPath**|**nvarchar(256)**|Pfad zum Speicherort der Komponente.<br /><br /> NULL = Aufrufer ist kein Mitglied der festen Serverrolle **serveradmin** .|  
-|**Version**|**nvarchar (30)**|Version der Komponente.|  
-|**manufacturer**|**sysname**|Name des Herstellers der Komponente.|  
+|**version**|**nvarchar(30)**|Version der Komponente.|  
+|**Bauers**|**sysname**|Name des Herstellers der Komponente.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der **public** -Rolle.  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Gespeicherte Prozeduren für die voll Text Suche und die semantische Suche &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
- [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
+ [sys. fulltext_catalogs &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [sp_help_fulltext_system_components &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)   
- [Volltextsuche](../../relational-databases/search/full-text-search.md)  
+ [Voll Text Suche](../../relational-databases/search/full-text-search.md)  
   
   

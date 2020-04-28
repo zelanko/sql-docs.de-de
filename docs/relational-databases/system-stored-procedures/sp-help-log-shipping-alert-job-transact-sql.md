@@ -18,10 +18,10 @@ ms.assetid: 4d4b4577-c393-4961-b2d3-b56e980b787b
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: f97139337b117f1f84f41df56114ca7a35b61fc5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090033"
 ---
 # <a name="sp_help_log_shipping_alert_job-transact-sql"></a>sp_help_log_shipping_alert_job (Transact-SQL)
@@ -49,13 +49,13 @@ sp_help_log_shipping_alert_job
  Diese gespeicherte Prozedur gibt die [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Auftrags-ID des-Agents für den Protokoll Versand-Warnungs Auftrag zurück. Wenn kein Protokollversand-Warnungsauftrag vorhanden ist, wird ein leeres Resultset zurückgegeben.  
   
 ## <a name="remarks"></a>Bemerkungen  
- **sp_help_log_shipping_alert_job** muss in der **Master** -Datenbank auf dem Überwachungs Server ausgeführt werden.  
+ **sp_help_log_shipping_alert_job** muss von der **master** -Datenbank aus auf dem Überwachungsserver ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Serverrolle **sysadmin** können diese Prozedur ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informationen zum Protokoll Versand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

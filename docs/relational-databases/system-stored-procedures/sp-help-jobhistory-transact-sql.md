@@ -18,10 +18,10 @@ ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 10033b2525ba28e79bd31a73bd9e71a7cca15e42
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054928"
 ---
 # <a name="sp_help_jobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
@@ -75,14 +75,14 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 `[ @run_status = ] run_status`Der Ausführungs Status des Auftrags. *run_status* ist vom Datentyp **int**und hat den Standardwert NULL. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
 |**0**|Failed|  
 |**1**|Erfolgreich|  
 |**2**|Wiederholen (nur Schritte)|  
-|**€**|Canceled|  
+|**3**|Canceled|  
 |**4**|In Bearbeitung befindliche Nachricht|  
-|**5@@**|Unknown|  
+|**5**|Unbekannt|  
   
 `[ @minimum_retries = ] minimum_retries`Die Mindestanzahl der Wiederholungs Versuche für einen Auftrag. *minimum_retries* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
@@ -107,7 +107,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**step_name**|**sysname**|Schrittname (NULL für einen Auftragsverlauf).|  
 |**sql_message_id**|**int**|Für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Schritte die letzte [!INCLUDE[tsql](../../includes/tsql-md.md)]-Fehlernummer, die beim Ausführen des Befehls gemeldet wurde.|  
 |**sql_severity**|**int**|Für [!INCLUDE[tsql](../../includes/tsql-md.md)]-Schritte der höchste [!INCLUDE[tsql](../../includes/tsql-md.md)]-Fehlerschweregrad, der beim Ausführen des Befehls gemeldet wurde.|  
-|**Nachricht**|**nvarchar (1024)**|Verlaufsmeldung des Auftrags oder Schritts.|  
+|**Nachricht**|**nvarchar(1024)**|Meldung zu Auftrags- oder Schrittverlauf.|  
 |**run_status**|**int**|Ergebnis des Auftrags oder Schritts.|  
 |**run_date**|**int**|Datum, an dem das Ausführen des Auftrags oder Schritts begann.|  
 |**run_time**|**int**|Uhrzeit, zu der das Ausführen des Auftrags oder Schritts begann.|  
@@ -116,7 +116,7 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
 |**operator_netsent**|**nvarchar (20)**|Operator, dem bezüglich dieses Auftrags eine Netzwerknachricht gesendet wurde (NULL für Schrittverlauf).|  
 |**operator_paged**|**nvarchar (20)**|Operator, der bezüglich dieses Auftrags per Pager benachrichtigt wurde (NULL für Schrittverlauf).|  
 |**retries_attempted**|**int**|Die Wiederholungsversuche für den Schritt (für einen Auftragsverlauf immer 0).|  
-|**Servers**|**nvarchar (30)**|Server, auf dem der Schritt oder Auftrag ausgeführt wird. Ist immer (**local**).|  
+|**Servers**|**nvarchar(30)**|Server, auf dem der Schritt oder Auftrag ausgeführt wird. Ist immer (**local**).|  
   
 ## <a name="remarks"></a>Bemerkungen  
  **sp_help_jobhistory** gibt einen Bericht mit dem Verlauf der angegebenen geplanten Aufträge zurück. Werden keine Parameter angegeben, enthält der Bericht den Verlauf aller geplanten Aufträge.  

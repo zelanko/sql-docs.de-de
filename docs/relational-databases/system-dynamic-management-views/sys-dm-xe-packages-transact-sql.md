@@ -20,10 +20,10 @@ ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 065625fdaca015de9c445e6e6f0e1ad0013f38e4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090260"
 ---
 # <a name="sysdm_xe_packages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
@@ -39,7 +39,7 @@ ms.locfileid: "68090260"
 |description|**nvarchar (3072)**|Die Paketbeschreibung. descriptionis wird vom Paket Ersteller festgelegt und lässt keine NULL-Werte zu.|  
 |capabilities|**int**|Bitmap, die die Funktionen dieses Pakets beschreibt. Lässt NULL-Werte zu.|  
 |capabilities_desc|**nvarchar(256)**|Eine Liste aller möglichen Funktionen für dieses Paket. Lässt NULL-Werte zu.|  
-|module_guid|**nvarchar (60)**|Die GUID des Moduls, das dieses Paket verfügbar macht. Lässt keine NULL-Werte zu.|  
+|module_guid|**nvarchar(60)**|Die GUID des Moduls, das dieses Paket verfügbar macht. Lässt keine NULL-Werte zu.|  
 |module_address|**varbinary(8)**|Die Basisadresse, an der das Modul geladen wird, das das Paket enthält. Ein einzelnes Modul macht möglicherweise mehrere Pakete verfügbar. Lässt keine NULL-Werte zu.|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -54,10 +54,10 @@ ms.locfileid: "68090260"
   
 ||||  
 |-|-|-|  
-|Von|To|Beziehung|  
+|Von|Beschreibung|Beziehung|  
 |sys.dm_xe_packages.module_address|sys.dm_os_loaded_modules.base_address|n:1|  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Weitere Informationen:  
  [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)  
   
   

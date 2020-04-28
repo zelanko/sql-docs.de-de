@@ -20,10 +20,10 @@ ms.assetid: e6dafa4e-e47e-43ec-acfc-88c0af53c1a1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b814f8cb0013a202f88aba76b99cf52c49dd1c1a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061412"
 ---
 # <a name="sysendpoints-transact-sql"></a>sys.endpoints (Transact-SQL)
@@ -36,19 +36,19 @@ ms.locfileid: "68061412"
 |**name**|**sysname**|Name des Endpunkts. Ist innerhalb des Servers eindeutig. Lässt keine NULL-Werte zu.|  
 |**endpoint_id**|**int**|ID des Endpunkts. Ist innerhalb des Servers eindeutig. Ein Endpunkt mit einer ID kleiner 65536 ist ein Systemendpunkt. Lässt keine NULL-Werte zu.|  
 |**principal_id**|**int**|ID des Serverprinzipals, der diesen Endpunkt erstellt hat und besitzt. Lässt NULL-Werte zu.|  
-|**spezifische**|**tinyint**|Endpunktprotokoll.<br /><br /> 1 = HTTP<br /><br /> 2 = TCP<br /><br /> 3 = Named Pipes<br /><br /> 4 = Gemeinsam genutzter Speicherbereich<br /><br /> 5 = Virtual Interface Architecture (VIA)<br /><br /> Lässt keine NULL-Werte zu.|  
-|**protocol_desc**|**nvarchar (60)**|Beschreibung des Endpunktprotokolls. Lässt NULL-Werte zu. Einer der folgenden Werte:<br /><br /> **HTTP**<br /><br /> **TCP**<br /><br /> **NAMED_PIPES**<br /><br /> **SHARED_MEMORY**<br /><br /> **Via** Hinweis: das via-Protokoll ist veraltet. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
+|**protocol**|**tinyint**|Endpunktprotokoll.<br /><br /> 1 = HTTP<br /><br /> 2 = TCP<br /><br /> 3 = Named Pipes<br /><br /> 4 = Gemeinsam genutzter Speicherbereich<br /><br /> 5 = Virtual Interface Architecture (VIA)<br /><br /> Lässt keine NULL-Werte zu.|  
+|**protocol_desc**|**nvarchar(60)**|Beschreibung des Endpunktprotokolls. Lässt NULL-Werte zu. Einer der folgenden Werte:<br /><br /> **HTTP**<br /><br /> **TCP**<br /><br /> **NAMED_PIPES**<br /><br /> **SHARED_MEMORY**<br /><br /> **Via** Hinweis: das via-Protokoll ist veraltet. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
 |**type**|**tinyint**|Nutzlasttyp des Endpunkts.<br /><br /> 1 = SOAP<br /><br /> 2 = TSQL<br /><br /> 3 = SERVICE_BROKER<br /><br /> 4 = DATABASE_MIRRORING<br /><br /> Lässt keine NULL-Werte zu.|  
-|**type_desc**|**nvarchar (60)**|Beschreibung des Endpunkt-Nutzlasttyps. Lässt NULL-Werte zu. Einer der folgenden Werte:<br /><br /> **SOAP**<br /><br /> **TSQL**<br /><br /> **SERVICE_BROKER**<br /><br /> **DATABASE_MIRRORING**|  
-|**Land**|**tinyint**|Der Endpunktstatus.<br /><br /> 0 = STARTED: Anforderungen werden überwacht und verarbeitet.<br /><br /> 1 = STOPPED: Anforderungen werden überwacht, aber nicht verarbeitet.<br /><br /> 2 = DISABLED: Keine Überwachung.<br /><br /> Die Standardstatus lautet 1. Lässt NULL-Werte zu.|  
-|**state_desc**|**nvarchar (60)**|Beschreibung des Endpunktstatus.<br /><br /> STARTED = Anforderungen werden überwacht und verarbeitet.<br /><br /> STOPPED = Anforderungen werden überwacht, aber nicht verarbeitet.<br /><br /> DISABLED = Keine Überwachung.<br /><br /> Der Standardstatus lautet STOPPED.<br /><br /> Lässt NULL-Werte zu.|  
+|**type_desc**|**nvarchar(60)**|Beschreibung des Endpunkt-Nutzlasttyps. Lässt NULL-Werte zu. Einer der folgenden Werte:<br /><br /> **SOAP**<br /><br /> **TSQL**<br /><br /> **SERVICE_BROKER**<br /><br /> **DATABASE_MIRRORING**|  
+|**state**|**tinyint**|Der Endpunktstatus.<br /><br /> 0 = STARTED: Anforderungen werden überwacht und verarbeitet.<br /><br /> 1 = STOPPED: Anforderungen werden überwacht, aber nicht verarbeitet.<br /><br /> 2 = DISABLED: Keine Überwachung.<br /><br /> Die Standardstatus lautet 1. Lässt NULL-Werte zu.|  
+|**state_desc**|**nvarchar(60)**|Beschreibung des Endpunktstatus.<br /><br /> STARTED = Anforderungen werden überwacht und verarbeitet.<br /><br /> STOPPED = Anforderungen werden überwacht, aber nicht verarbeitet.<br /><br /> DISABLED = Keine Überwachung.<br /><br /> Der Standardstatus lautet STOPPED.<br /><br /> Lässt NULL-Werte zu.|  
 |**is_admin_endpoint**|**bit**|Gibt an, ob der Endpunkt Verwaltungszwecken dient.<br /><br /> 0 = Kein Verwaltungsendpunkt.<br /><br /> 1 = Der Endpunkt ist ein Verwaltungsendpunkt.<br /><br /> Lässt keine NULL-Werte zu.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Endpoints Catalog Views &#40;Transact-SQL&#41; (Katalogsichten für Endpunkte &#40;Transact-SQL&#41;)](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
+ [Endpunkte-Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/endpoints-catalog-views-transact-sql.md)   
  [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

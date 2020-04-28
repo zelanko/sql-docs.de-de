@@ -17,10 +17,10 @@ ms.assetid: a616fce9-b4c1-49da-87a7-9d6f74911d8f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fa6fde13ccf4941e61ec29c9a257aeff9ee214eb
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095732"
 ---
 # <a name="mapping-system-tables-to-system-views-transact-sql"></a>Zuordnen von Systemtabellen zu Systemsichten (Transact-SQL)
@@ -75,8 +75,8 @@ ms.locfileid: "68095732"
 |sysfulltextcatalogs|[sys.fulltext_catalogs](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)|Katalogsicht|  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Systemtabellen &#40;Transact-SQL&#41;](../../relational-databases/system-tables/system-tables-transact-sql.md)  
   
   

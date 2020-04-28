@@ -21,10 +21,10 @@ ms.assetid: 85bc086d-8a4e-4949-a23b-bf53044b925c
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 074e114f81db6615a04240f10447a3f711a51cf7
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083753"
 ---
 # <a name="syssp_cdc_generate_wrapper_function-transact-sql"></a>sys.sp_cdc_generate_wrapper_function (Transact-SQL)
@@ -67,7 +67,7 @@ sys.sp_cdc_generate_wrapper_function
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|Spaltentyp|BESCHREIBUNG|  
+|Spaltenname|Spaltentyp|Beschreibung|  
 |-----------------|-----------------|-----------------|  
 |**function_name**|**nvarchar (145)**|Name der generierten Funktion.|  
 |**create_script**|**nvarchar(max)**|Das Skript, mit dem die Wrapperfunktion der Aufzeichnungsinstanz erstellt wird.|  
@@ -104,7 +104,7 @@ DEALLOCATE #hfunctions;
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Gespeicherte Prozeduren für Change Data Capture &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
+ [Gespeicherte Prozeduren für Change Data Capture &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/change-data-capture-stored-procedures-transact-sql.md)   
  [Change Data Capture &#40;SSIS-&#41;](../../integration-services/change-data-capture/change-data-capture-ssis.md)  
   
   

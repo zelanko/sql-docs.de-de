@@ -18,10 +18,10 @@ ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
 author: VanMSFT
 ms.author: vanto
 ms.openlocfilehash: c2d0daf21a479bff171f31beb30e9dc188a9c97b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68094825"
 ---
 # <a name="syspolicy_policy_execution_history_details-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
@@ -32,8 +32,8 @@ ms.locfileid: "68094825"
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|detail_id|**BIGINT**|Bezeichner des Datensatzes. Jeder Datensatz stellt den Versuch dar, einen Bedingungsausdruck in einer Richtlinie auszuwerten oder zu erzwingen. Jede Bedingung hat einen Detaildatensatz für die einzelnen Ziele, wenn sie auf mehrere Ziele angewendet wird.|  
-|history_id|**BIGINT**|Bezeichner des Verlaufsereignisses. Jedes Verlaufsereignis stellt einen Versuch dar, eine Richtlinie auszuführen. Da eine Bedingung mehrere Bedingungsausdrücke und mehrere Ziele haben kann, kann eine history_id mehrere Detaildatensätze erstellen. Verwenden Sie die Spalte history_id, um diese Ansicht mit der [syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md) Ansicht zu verknüpfen.|  
+|detail_id|**bigint**|Bezeichner des Datensatzes. Jeder Datensatz stellt den Versuch dar, einen Bedingungsausdruck in einer Richtlinie auszuwerten oder zu erzwingen. Jede Bedingung hat einen Detaildatensatz für die einzelnen Ziele, wenn sie auf mehrere Ziele angewendet wird.|  
+|history_id|**bigint**|Bezeichner des Verlaufsereignisses. Jedes Verlaufsereignis stellt einen Versuch dar, eine Richtlinie auszuführen. Da eine Bedingung mehrere Bedingungsausdrücke und mehrere Ziele haben kann, kann eine history_id mehrere Detaildatensätze erstellen. Verwenden Sie die Spalte history_id, um diese Ansicht mit der [syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md) Ansicht zu verknüpfen.|  
 |target_query_expression|**nvarchar(max)**|Ziel der Richtlinie und syspolicy_policy_execution_history-Sicht.|  
 |execution_date|**datetime**|Datum und Uhrzeit der Erstellung dieses Detaildatensatzes.|  
 |result|**bit**|Erfolg oder Fehler dieses Ziels und der Auswertung des Bedingungsausdrucks:<br /><br /> 0 (Erfolg) oder 1 (Fehler)|  
@@ -69,7 +69,7 @@ WHERE PolHistDet.result = 0 ;
  Erfordert die Mitgliedschaft in der PolicyAdministratorRole-Rolle in der msdb-Datenbank.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Verwalten von Servern mit der richtlinienbasierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
- [Sichten der Richtlinien basierten Verwaltung &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
+ [Verwalten von Servern mit der Richtlinien basierten Verwaltung](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
+ [Sichten der richtlinienbasierten Verwaltung &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
   
   

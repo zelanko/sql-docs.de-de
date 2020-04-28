@@ -18,10 +18,10 @@ ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c65498b25bfbe0a5eee38a43ea212e29edc26295
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090050"
 ---
 # <a name="sp_help_jobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
@@ -64,9 +64,9 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |-----------------|---------------|-----------------|  
 |**step_id**|**int**|Eindeutiger Bezeichner für den Schritt.|  
 |**step_name**|**sysname**|Name des Auftragsschritts.|  
-|**System**|**nvarchar (40)**|Subsystem, in dem der Schrittbefehl ausgeführt werden soll|  
+|**System**|**nvarchar(40)**|Subsystem, in dem der Schrittbefehl ausgeführt werden soll|  
 |**s**|**nvarchar(max)**|Befehl, der in dem Schritt ausgeführt wird.|  
-|**fahren**|**int**|Bitmaske der Werte, die das Schrittverhalten steuern.|  
+|**flags**|**int**|Bitmaske der Werte, die das Schrittverhalten steuern.|  
 |**cmdexec_success_code**|**int**|Bei einem **CmdExec** -Schritt ist dies der Prozessexitcode eines erfolgreichen Befehls.|  
 |**on_success_action**|**tinyint**|Auszuführende Aktion, wenn der Schritt erfolgreich ist:<br /><br /> **1** = Beenden der Auftrags Erfolgsmeldung.<br /><br /> **2** = beenden Sie den Fehler bei der Auftrags Berichterstattung.<br /><br /> **3** = fahren Sie mit dem nächsten Schritt fort.<br /><br /> **4** = gehe zu Schritt.|  
 |**on_success_step_id**|**int**|Wenn **on_success_action** 4 ist, gibt dies den nächsten Schritt an, der ausgeführt werden soll.|  

@@ -18,10 +18,10 @@ ms.assetid: d29e1c24-3a3c-47a4-a726-4584afa6038a
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: e26fa9b22578d91636eb554c75a55f184869d529
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68046211"
 ---
 # <a name="sp_add_log_shipping_secondary_database-transact-sql"></a>sp_add_log_shipping_secondary_database (Transact-SQL)
@@ -53,11 +53,11 @@ sp_add_log_shipping_secondary_database
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @secondary_database = ] 'secondary_database'`Der Name der sekundären Datenbank. *secondary_database* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @secondary_database = ] 'secondary_database'`Der Name der sekundären Datenbank. *secondary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
-`[ @primary_server = ] 'primary_server'`Der Name der primären Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in der Protokoll Versand Konfiguration. *primary_server* ist vom **Datentyp vom Datentyp sysname** und darf nicht NULL sein.  
+`[ @primary_server = ] 'primary_server'`Der Name der primären Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in der Protokoll Versand Konfiguration. *primary_server* ist vom Datentyp **sysname** und darf nicht NULL sein.  
   
-`[ @primary_database = ] 'primary_database'`Der Name der Datenbank auf dem primären Server. *primary_database* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @primary_database = ] 'primary_database'`Der Name der Datenbank auf dem primären Server. *primary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
 `[ @restore_delay = ] 'restore_delay'`Die Zeitspanne in Minuten, die der sekundäre Server wartet, bevor er eine bestimmte Sicherungsdatei wiederherstellt. *restore_delay* ist vom Datentyp **int** und kann nicht NULL sein. Der Standardwert ist 0.  
   
@@ -85,7 +85,7 @@ sp_add_log_shipping_secondary_database
   
 `[ @threshold_alert_enabled = ] 'threshold_alert_enabled'`Gibt an, ob eine Warnung ausgelöst wird, wenn *backup_threshold* überschritten wird. Der Standardwert 1 bedeutet, dass die Warnung ausgelöst wird. *threshold_alert_enabled* ist **Bit**.  
   
-`[ @history_retention_period = ] 'history_retention_period'`Der Zeitraum in Minuten, in dem der Verlauf beibehalten wird. *history_retention_period* ist vom Datentyp **int**und hat den Standardwert NULL. Falls nichts angegeben wird, wird ein Wert von 14420 verwendet.  
+`[ @history_retention_period = ] 'history_retention_period'`Der Zeitraum in Minuten, in dem der Verlauf beibehalten wird. *history_retention_period* ist vom Datentyp **int**. Der Standardwert ist NULL. Falls nichts angegeben wird, wird ein Wert von 14420 verwendet.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -125,7 +125,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informationen zum Protokoll Versand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

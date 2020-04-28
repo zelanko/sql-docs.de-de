@@ -18,10 +18,10 @@ ms.assetid: 08f9710d-976d-448e-bead-ac9835e87bc5
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 058e1948fa79ed2ba250a4f4d504f95201d1e254
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079082"
 ---
 # <a name="msreplication_objects-transact-sql"></a>MSreplication_objects (Transact-SQL)

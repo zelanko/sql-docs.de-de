@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 64ddba95ec5c7fb8dfa6e6e685fcf9d5b6846fe9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090674"
 ---
 # <a name="sysdm_sql_referenced_entities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
@@ -88,7 +88,7 @@ sys.dm_sql_referenced_entities (
 |referenced_id|**int**|ID der Entität, auf die verwiesen wird. Wenn referenced_minor_id nicht 0 ist, ist referenced_id die Entität, in der die Spalte definiert wird.<br /><br /> Immer NULL für serverübergreifende Verweise.<br /><br /> NULL für datenbankübergreifende Verweise, wenn die ID nicht bestimmt werden kann, weil die Datenbank offline ist oder die Entität nicht gebunden werden kann.<br /><br /> NULL für Verweise innerhalb der Datenbank, wenn die ID nicht bestimmt werden kann. Für nicht Schema gebundene Verweise kann die ID nicht aufgelöst werden, wenn die Entität, auf die verwiesen wird, nicht in der Datenbank vorhanden ist oder wenn die Namensauflösung vom Aufrufer abhängig ist.  Im letzteren Fall wird is_caller_dependent auf 1 festgelegt.<br /><br /> Niemals NULL für schemagebundene Verweise.|  
 |referenced_minor_id|**int**|Die Spalten-ID, wenn es sich bei der Entität, auf die verwiesen wird, um eine Spalte handelt. Andernfalls ist der Wert 0. Beispielsweise hat referenced_minor_is den Wert NULL in der Zeile, in der die Entität, auf die verwiesen wird, selbst aufgeführt wird.<br /><br /> Für nicht schemagebundene Verweise werden Spaltenabhängigkeiten nur gemeldet, wenn alle Entitäten, auf die verwiesen wird, gebunden werden können. Kann eine der Entitäten, auf die verwiesen wird, nicht gebunden werden, werden keine Abhängigkeiten auf Spaltenebene gemeldet, und referenced_minor_id wird auf 0 gesetzt. Siehe Beispiel D.|  
 |referenced_class|**tinyint**|Klasse der Entität, auf die verwiesen wird.<br /><br /> 1 = Objekt oder Spalte<br /><br /> 6 = Typ<br /><br /> 10 = XML-Schemaauflistung<br /><br /> 21 = Partitionsfunktion|  
-|referenced_class_desc|**nvarchar (60)**|Klassenbeschreibung der Entität, auf die verwiesen wird.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
+|referenced_class_desc|**nvarchar(60)**|Klassenbeschreibung der Entität, auf die verwiesen wird.<br /><br /> OBJECT_OR_COLUMN<br /><br /> TYPE<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> PARTITION_FUNCTION|  
 |is_caller_dependent|**bit**|Gibt an, dass die Schemabindung für die Entität, auf die verwiesen wird, zur Laufzeit erfolgt. Deshalb hängt die Auflösung der Entitäts-ID vom Schema des Aufrufers ab. Dies ist der Fall, wenn es sich bei der Entität, auf die verwiesen wird, um eine gespeicherte Prozedur, eine erweiterte gespeicherte Prozedur oder um eine benutzerdefinierte Funktion handelt, die in einer EXECUTE-Anweisung aufgerufen wird.<br /><br /> 1 = Die Entität, auf die verwiesen wird, hängt vom Aufrufer ab und wird zur Laufzeit aufgelöst. In diesem Fall ist referenced_id gleich NULL.<br /><br /> 0 = Die Entitäts-ID, auf die verwiesen wird, ist nicht aufruferabhängig. Immer 0 für schemagebundene Verweise sowie für datenbankübergreifende und serverübergreifende Verweise, die explizit einen Schemanamen angeben. Zum Beispiel ist ein Verweis auf eine Entität im Format `EXEC MyDatabase.MySchema.MyProc` nicht aufruferabhängig. Ein Verweis im Format `EXEC MyDatabase..MyProc` ist jedoch aufruferabhängig.|  
 |is_ambiguous|**bit**|Gibt an, dass der Verweis mehrdeutig ist und zur Laufzeit in eine benutzerdefinierte Funktion, in einen benutzerdefinierten Typ (User-Defined Type, UDT) oder in einen XQuery-Verweis auf eine Spalte vom Typ **XML**aufgelöst werden kann. Angenommen, die `SELECT Sales.GetOrder() FROM Sales.MySales`-Anweisung ist in einer gespeicherten Prozedur definiert. Bis zur Ausführung der gespeicherten Prozedur ist unbekannt, ob `Sales.GetOrder()` eine benutzerdefinierte Funktion im Schema `Sales` oder in der Spalte namens `Sales` vom Typ UDT mit einer Methode namens `GetOrder()` ist.<br /><br /> 1 = Verweis auf eine benutzerdefinierte Funktion oder Spalte, für die die benutzerdefinierte Typmethode (UDT) mehrdeutig ist.<br /><br /> 0 = Verweis ist eindeutig, oder die Entität kann beim Aufruf der Funktion erfolgreich gebunden werden.<br /><br /> Immer 0 für schemagebundene Verweise.|  
 |is_selected|**bit**|1 = Gibt an, dass das Objekt oder die Spalte ausgewählt ist.|  
@@ -122,10 +122,10 @@ sys.dm_sql_referenced_entities (
 |Entitätstyp|Verweisende Entität|Entität, auf die verwiesen wird|  
 |-----------------|------------------------|-----------------------|  
 |Tabelle|Ja*|Ja|  
-|Sicht|Ja|Ja|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]gespeicherte Prozedur * *|Ja|Ja|  
+|Anzeigen|Ja|Ja|  
+|In [!INCLUDE[tsql](../../includes/tsql-md.md)] gespeicherte Prozedur**|Ja|Ja|  
 |Gespeicherte CLR-Prozedur|Nein |Ja|  
-|[!INCLUDE[tsql](../../includes/tsql-md.md)]benutzerdefinierte Funktion|Ja|Ja|  
+|Benutzerdefinierte Funktion in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Ja|  
 |CLR-benutzerdefinierte Funktion|Nein |Ja|  
 |CLR-Trigger (DML und DDL)|Nein|Nein|  
 |DML-Trigger in [!INCLUDE[tsql](../../includes/tsql-md.md)]|Ja|Nein|  
@@ -223,7 +223,7 @@ GO
  dbo         Table1     b                 c  
 ```
 
-### <a name="d-returning-non-schema-bound-column-dependencies"></a>D: Zurückgeben von nicht schemagebundenen Spaltenabhängigkeiten  
+### <a name="d-returning-non-schema-bound-column-dependencies"></a>D. Zurückgeben von nicht schemagebundenen Spaltenabhängigkeiten  
  Im folgenden Beispiel wird die `Table1`-Tabelle gelöscht und die `Table2`-Tabelle sowie die gespeicherte Prozedur `Proc1` erstellt. Die Prozedur verweist auf die `Table2`-Tabelle und auf die nicht vorhandene `Table1`-Tabelle. Die `sys.dm_sql_referenced_entities`-Sicht wird mit der gespeicherten Prozedur ausgeführt, die als verweisende Entität angegeben ist. Das Resultset zeigt eine Zeile für `Table1` und drei Zeilen für `Table2` an. Da `Table1` nicht vorhanden ist, können die Spaltenabhängigkeiten nicht aufgelöst werden, und es wird der Fehler 2020 zurückgegeben. Die Spalte `is_all_columns_found` gibt 0 für `Table1` zurück. Damit wird angegeben, dass einige Spalten nicht ermittelt werden konnten.  
   
 ```sql  
@@ -335,7 +335,7 @@ SELECT
  ```
   
 ## <a name="see-also"></a>Weitere Informationen  
- [sys. dm_sql_referencing_entities &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
+ [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 07dc611371cbff373fb60036c8c16da6656a8de1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088594"
 ---
 # <a name="sysdm_repl_articles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
@@ -35,12 +35,12 @@ ms.locfileid: "68088594"
 |**artcache_table_address**|**varbinary(8)**|Speicherinterne Adresse der zwischengespeicherten Tabellenstruktur für den veröffentlichten Tabellenartikel.|  
 |**artcache_schema_address**|**varbinary(8)**|Speicherinterne Adresse der zwischengespeicherten Artikelschemastruktur für den veröffentlichten Tabellenartikel.|  
 |**artcache_article_address**|**varbinary(8)**|Speicherinterne Adresse der zwischengespeicherten Artikelstruktur für den veröffentlichten Tabellenartikel.|  
-|**artid**|**BIGINT**|Identifiziert jeden Eintrag in dieser Tabelle eindeutig.|  
-|**artfilter**|**BIGINT**|Die ID der zum horizontalen Filtern des Artikels verwendeten gespeicherten Prozedur.|  
-|**artobjid**|**BIGINT**|ID des veröffentlichten Objekts.|  
-|**artpubid**|**BIGINT**|ID der Veröffentlichung, zu der der Artikel gehört.|  
-|**artstatus**|**tinyint**|Die Bitmaske der Artikeloptionen und der Status, der das Ergebnis der bitweisen logischen OR-Operation von mindestens einem der folgenden Werte sein kann:<br /><br /> **1** = Artikel ist aktiv.<br /><br /> **8** = schließen Sie den Spaltennamen in INSERT-Anweisungen ein.<br /><br /> **16** = parametrisierte Anweisungen verwenden.<br /><br /> **24** = beide enthalten den Spaltennamen in INSERT-Anweisungen und verwenden parametrisierte Anweisungen.<br /><br /> Ein aktiver Artikel, der parametrisierte Anweisungen verwendet, würde in dieser Spalte beispielsweise den Wert 17 anzeigen. Der Wert 0 gibt an, dass der Artikel inaktiv ist und keine zusätzlichen Eigenschaften definiert wurden.|  
-|**arttype**|**tinyint**|Artikeltyp:<br /><br /> **1** = Protokoll basierter Artikel.<br /><br /> **3** = Protokoll basierter Artikel mit manuellem Filter.<br /><br /> **5** = Protokoll basierter Artikel mit manueller Sicht.<br /><br /> **7** = Protokoll basierter Artikel mit manuellem Filter und manueller Ansicht.<br /><br /> **8** = Ausführung gespeicherter Prozeduren.<br /><br /> **24** = serialisierbare Ausführung gespeicherter Prozeduren.<br /><br /> **32** = gespeicherte Prozedur (nur Schema).<br /><br /> **64** = Ansicht (nur Schema).<br /><br /> **128** = Funktion (nur Schema).|  
+|**artid**|**bigint**|Identifiziert jeden Eintrag in dieser Tabelle eindeutig.|  
+|**artfilter**|**bigint**|Die ID der zum horizontalen Filtern des Artikels verwendeten gespeicherten Prozedur.|  
+|**artobjid**|**bigint**|ID des veröffentlichten Objekts.|  
+|**artpubid**|**bigint**|ID der Veröffentlichung, zu der der Artikel gehört.|  
+|**artstatus**|**tinyint**|Die Bitmaske der Artikeloptionen und der Status, der das Ergebnis der bitweisen logischen OR-Operation von mindestens einem der folgenden Werte sein kann:<br /><br /> **1** = Artikel ist aktiv.<br /><br /> **8** = Den Spaltennamen in INSERT-Anweisungen einschließen.<br /><br /> **16** = Parametrisierte Anweisungen verwenden.<br /><br /> **24** = Sowohl den Spaltennamen in INSERT-Anweisungen einschließen als auch parametrisierte Anweisungen verwenden.<br /><br /> Ein aktiver Artikel, der parametrisierte Anweisungen verwendet, würde in dieser Spalte beispielsweise den Wert 17 anzeigen. Der Wert 0 gibt an, dass der Artikel inaktiv ist und keine zusätzlichen Eigenschaften definiert wurden.|  
+|**arttype**|**tinyint**|Artikeltyp:<br /><br /> **1** = Protokollbasierter Artikel.<br /><br /> **3** = Protokollbasierter Artikel mit manuell erstelltem Filter.<br /><br /> **5** = Protokollbasierter Artikel mit manuell erstellter Sicht.<br /><br /> **7** = Protokollbasierter Artikel mit manuell erstelltem Filter und manuell erstellter Sicht.<br /><br /> **8** = Ausführung gespeicherter Prozeduren.<br /><br /> **24** = serialisierbare Ausführung gespeicherter Prozeduren.<br /><br /> **32** = gespeicherte Prozedur (nur Schema).<br /><br /> **64** = Ansicht (nur Schema).<br /><br /> **128** = Funktion (nur Schema).|  
 |**wszArtdesttable**|**nvarchar (514)**|Name des veröffentlichten Objekts am Ziel.|  
 |**wszArtdesttableowner**|**nvarchar (514)**|Besitzer des veröffentlichten Objekts am Ziel.|  
 |**wszArtinscmd**|**nvarchar (510)**|Befehl oder gespeicherte Prozedur, der bzw. die für Einfügungen verwendet wird.|  
@@ -62,7 +62,7 @@ ms.locfileid: "68088594"
 |**artgendel2cmd**|**nvarchar (510)**|DELETE-Befehlsvorlage, die beim Abgleichen eines Artikels während der gleichzeitigen Momentaufnahmeverarbeitung verwendet wird.|  
 |**fInReconcile**|**tinyint**|Gibt an, ob ein Artikel zurzeit während der gleichzeitigen Momentaufnahmeverarbeitung abgeglichen wird.|  
 |**fPubAllowUpdate**|**tinyint**|Zeigt an, ob die Veröffentlichung Updates des Abonnements zulässt.|  
-|**intPublicationOptions**|**BIGINT**|Bitmuster, mit dem zusätzliche Veröffentlichungsoptionen angegeben werden, mit den folgenden bitweisen Optionswerten:<br /><br /> **0x1** : für die Peer-zu-Peer-Replikation aktiviert.<br /><br /> **0x2** -nur lokale Änderungen veröffentlichen.<br /><br /> **0x4** -aktiviert für nicht-SQL Server-Abonnenten.|  
+|**intPublicationOptions**|**bigint**|Bitmuster, mit dem zusätzliche Veröffentlichungsoptionen angegeben werden, mit den folgenden bitweisen Optionswerten:<br /><br /> **0x1** : für die Peer-zu-Peer-Replikation aktiviert.<br /><br /> **0x2** -nur lokale Änderungen veröffentlichen.<br /><br /> **0x4** -aktiviert für nicht-SQL Server-Abonnenten.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW DATABASE STATE-Berechtigung für die Veröffentlichungs Datenbank, um **dm_repl_articles**aufzurufen.  
@@ -71,7 +71,7 @@ ms.locfileid: "68088594"
  Informationen werden nur für replizierte Datenbankobjekte zurückgegeben, die zurzeit in den Replikationsartikelcache geladen sind.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Dynamische Verwaltungs Sichten im Zusammenhang mit der Replikation &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/replication-related-dynamic-management-views-transact-sql.md)  
   
   

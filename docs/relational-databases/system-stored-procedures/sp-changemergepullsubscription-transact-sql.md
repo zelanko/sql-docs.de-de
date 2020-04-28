@@ -16,10 +16,10 @@ ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8771d7c821a82733b0664f09c5dadf2128baf877
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090854"
 ---
 # <a name="sp_changemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
@@ -51,7 +51,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
   
 `[ @value = ] 'value'`Der neue Wert für die angegebene Eigenschaft. der Wert ist vom Datentyp **nvarchar (255)**. der *Wert*kann einer der Werte in der Tabelle sein.  
   
-|Eigenschaft|value|BESCHREIBUNG|  
+|Eigenschaft|Wert|BESCHREIBUNG|  
 |--------------|-----------|-----------------|  
 |**alt_snapshot_folder**||Speicherort, an dem der Momentaufnahme Ordner gespeichert wird, wenn der Speicherort nicht oder zusätzlich zum Standard Speicherort ist.|  
 |**Beschreibung**||Die Beschreibung dieses Mergepullabonnements.|  
@@ -65,7 +65,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**ftp_login**||Nur aus Gründen der Abwärtskompatibilität verfügbar. Der Benutzername, mit dem eine Verbindung zum FTP-Dienst hergestellt wird.|  
 |**ftp_password**||Nur aus Gründen der Abwärtskompatibilität verfügbar. Das Benutzerkennwort, mit dem eine Verbindung zum FTP-Dienst hergestellt wird.|  
 |**ftp_port**||Nur aus Gründen der Abwärtskompatibilität verfügbar. Die Anschlussnummer des FTP-Diensts für den Verteiler.|  
-|**Hostname**||Gibt einen Wert für HOST_NAME() an, wenn diese Funktion in der WHERE-Klausel eines Joinfilters oder einer logischen Datensatzbeziehung verwendet wird.|  
+|**hostname**||Gibt einen Wert für HOST_NAME() an, wenn diese Funktion in der WHERE-Klausel eines Joinfilters oder einer logischen Datensatzbeziehung verwendet wird.|  
 |**internet_login**||Der Anmeldename, der vom Merge-Agent zum Herstellen einer Verbindung mit dem Webserver verwendet wird, der die Websynchronisierung mithilfe der Standardauthentifizierung hostet.|  
 |**internet_password**||Das Kennwort für den Anmeldenamen, der vom Merge-Agent zum Herstellen einer Verbindung mit dem Webserver verwendet wird, der die Websynchronisierung mithilfe der Standardauthentifizierung hostet.|  
 |**internet_security_mode**|**1**|Verwendet die Windows-Authentifizierung, wenn eine Verbindung mit dem Webserver hergestellt wird, der die Websynchronisierung hostet.|  
@@ -81,13 +81,13 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ||**1**|Verwendung der Windows-Authentifizierung für die Verbindung mit dem Verleger.|  
 ||**2**|Synchronisierungs Trigger verwenden einen statischen **sysservers** -Eintrag für Remote Prozedur Aufrufe (RPC), und der Verleger muss in der **sysservers** -Tabelle als Remote Server oder Verbindungs Server definiert sein.|  
 |**sync_type**|**Automatisch**|Das Schema und die Ausgangsdaten für veröffentlichte Tabellen werden zuerst an den Abonnenten übertragen.|  
-||**gar**|Der Abonnent verfügt bereits über das Schema und die Ausgangsdaten für veröffentlichte Tabellen; Systemtabellen und Daten werden immer übertragen.|  
-|**use_ftp**|**Fall**|FTP wird anstelle des normalen Protokolls zum Abrufen von Momentaufnahmen verwendet.|  
-||**Alarm**|Das normale Protokoll wird zum Abrufen von Momentaufnahmen verwendet.|  
-|**use_web_sync**|**Fall**|Das Abonnement kann über HTTP synchronisiert werden.|  
-||**Alarm**|Das Abonnement kann über HTTP nicht synchronisiert werden.|  
-|**use_interactive_resolver**|**Fall**|Der interaktive Konfliktlöser wird während der Konfliktlösung verwendet.|  
-||**Alarm**|Der interaktive Konfliktlöser wird nicht verwendet.|  
+||**Keine**|Der Abonnent verfügt bereits über das Schema und die Ausgangsdaten für veröffentlichte Tabellen; Systemtabellen und Daten werden immer übertragen.|  
+|**use_ftp**|**true**|FTP wird anstelle des normalen Protokolls zum Abrufen von Momentaufnahmen verwendet.|  
+||**false**|Das normale Protokoll wird zum Abrufen von Momentaufnahmen verwendet.|  
+|**use_web_sync**|**true**|Das Abonnement kann über HTTP synchronisiert werden.|  
+||**false**|Das Abonnement kann über HTTP nicht synchronisiert werden.|  
+|**use_interactive_resolver**|**true**|Der interaktive Konfliktlöser wird während der Konfliktlösung verwendet.|  
+||**false**|Der interaktive Konfliktlöser wird nicht verwendet.|  
 |**working_directory**||Der vollqualifizierte Pfad zum Verzeichnis, in das die Momentaufnahmedateien mithilfe von FTP übertragen werden, wenn diese Option angegeben ist.|  
 |NULL (Standard)||Gibt die Liste der unterstützten Werte für die- *Eigenschaft*zurück.|  
   
@@ -105,7 +105,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
  Nur Mitglieder der festen Server Rolle **sysadmin** oder der festen Daten Bank Rolle **db_owner** können **sp_changemergepullsubscription**ausführen.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Eigenschaften von Pullabonnements anzeigen und ändern](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
+ [Anzeigen und Ändern der Eigenschaften von Pullabonnements](../../relational-databases/replication/view-and-modify-pull-subscription-properties.md)   
  [sp_addmergepullsubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_dropmergepullsubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
  [sp_helpmergepullsubscription &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)   

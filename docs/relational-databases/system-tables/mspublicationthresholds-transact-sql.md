@@ -18,10 +18,10 @@ ms.assetid: 9da3879f-b1f4-4ab4-abd4-a9a8ac395eba
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 2bf5659dc8a5a440b764b3264556359205646d75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088509"
 ---
 # <a name="mspublicationthresholds-transact-sql"></a>MSpublicationthresholds (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68088509"
 |-----------------|---------------|-----------------|  
 |**publication_id**|**int**|Identifiziert die Veröffentlichung, für die ein Schwellenwert festgelegt wurde.|  
 |**metric_id**|**int**|Identifiziert eine Replikations Leistungs Metrik, die gemäß der Definition in der [msreplmonationsoldmetrics](../../relational-databases/system-tables/msreplmonthresholdmetrics-transact-sql.md) -Systemtabelle überwacht wird.|  
-|**Wert**|**sql_variant**|Der Schwellenwert der überwachten Eigenschaft.|  
+|**value**|**sql_variant**|Der Schwellenwert der überwachten Eigenschaft.|  
 |**shouldalert**|**bit**|Der Wert **1** gibt an, dass eine Warnung generiert werden soll, wenn die Metrik den definierten Schwellenwert überschreitet.|  
 |**IsEnabled**|**bit**|Der Wert **1** gibt an, dass die Überwachung für diese Replikations Leistungs Metrik aktiviert ist.|  
   

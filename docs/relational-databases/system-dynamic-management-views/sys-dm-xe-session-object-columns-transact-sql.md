@@ -20,10 +20,10 @@ ms.assetid: e97f3307-2da6-4c54-b818-a474faec752e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 039c3b0be4feab53215bae22836b7fd5be4ecfb5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090232"
 ---
 # <a name="sysdm_xe_session_object_columns-transact-sql"></a>sys.dm_xe_session_object_columns (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68090232"
 |column_name|**nvarchar(256)**|Der Name des Konfigurationswerts. Lässt keine NULL-Werte zu.|  
 |column_id|**int**|Die ID der Spalte. Ist eindeutig innerhalb des Objekts. Lässt keine NULL-Werte zu.|  
 |column_value|**nvarchar (3072)**|Der konfigurierte Wert der Spalte. Lässt NULL-Werte zu.|  
-|object_type|**nvarchar (60)**|Der Typ des Objekts. Lässt keine NULL-Werte zu. object_type ist einer der folgenden:<br /><br /> Ereignis<br /><br /> target|  
+|object_type|**nvarchar(60)**|Der Typ des Objekts. Lässt keine NULL-Werte zu. object_type ist einer der folgenden:<br /><br /> event<br /><br /> target|  
 |object_name|**nvarchar(256)**|Der Name des Objekts, zu dem diese Spalte gehört. Lässt keine NULL-Werte zu.|  
 |object_package_guid|**uniqueidentifier**|Die GUID des Pakets, das das Objekt enthält. Lässt keine NULL-Werte zu.|  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68090232"
   
 ### <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-|Von|To|Beziehung|  
+|Von|Beschreibung|Beziehung|  
 |----------|--------|------------------|  
 |dm_xe_session_object_columns. object_name<br /><br /> dm_xe_session_object_columns.object_package_guid|sys. dm_xe_objects. package_guid,<br /><br /> sys.dm_xe_objects.name|n:1|  
 |dm_xe_session_object_columns. column_name<br /><br /> dm_xe_session_object_columns.column_id|sys. dm_xe_object_columns. Name,<br /><br /> sys.dm_xe_object_columns.column_id|n:1|  

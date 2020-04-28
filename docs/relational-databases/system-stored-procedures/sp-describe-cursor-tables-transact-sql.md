@@ -18,10 +18,10 @@ ms.assetid: 02c0f81a-54ed-4ca4-aa4f-bb7463a9ab9a
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 5c005ff603f21dca387215cafd9dff572db53960
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053088"
 ---
 # <a name="sp_describe_cursor_tables-transact-sql"></a>sp_describe_cursor_tables (Transact-SQL)
@@ -76,7 +76,7 @@ sp_describe_cursor_tables
 |table owner|**sysname**|Die Benutzer-ID des Tabellenbesitzers.|  
 |Table_name|**sysname**|Name des Objekts oder der Basistabelle. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] geben Servercursor immer das vom Benutzer angegebene Objekt und nicht die Basistabellen zurück.|  
 |Optimizer_hints|**smallint**|Bitmapmuster, das sich aus einer oder mehreren der folgenden Optionen zusammensetzt:<br /><br /> 1 = Sperre auf Zeilenebene (ROWLOCK)<br /><br /> 4 = Sperre auf Seitenebene (PAGELOCK)<br /><br /> 8 = Tabellensperre (TABLOCK)<br /><br /> 16 = Exklusive Tabellensperre (TABLOCKX)<br /><br /> 32 = Updatesperre (UPDLOCK)<br /><br /> 64 = Keine Sperre (NOLOCK)<br /><br /> 128 = Schnelle erste Zeilenoption (FASTFIRST)<br /><br /> 4096 = Wiederholbarer Lesevorgang bei Verwendung mit DECLARE CURSOR (HOLDLOCK)<br /><br /> Bei Angabe mehrerer Optionen wird vom System die restriktivste Option verwendet. sp_describe_cursor_tables zeigt jedoch die Flags an, die in der Abfrage angegeben sind.|  
-|lock_type|**smallint**|Explizit oder implizit für die diesem Cursor zugrunde liegenden Basistabellen angeforderter Scrollsperrentyp. Der Wert kann einer der folgenden sein:<br /><br /> 0 = Keine<br /><br /> 1 = Freigegeben<br /><br /> 3 = Update|  
+|lock_type|**smallint**|Explizit oder implizit für die diesem Cursor zugrunde liegenden Basistabellen angeforderter Scrollsperrentyp. Der Wert kann in folgenden Formen vorliegen:<br /><br /> 0 = Keine<br /><br /> 1 = Freigegeben<br /><br /> 3 = Update|  
 |server_name|**sysname, Werte zulässt**|Der Name des Verbindungsservers, auf dem sich die Tabelle befindet. NULL, wenn OPENQUERY oder OPENROWSET verwendet wird.|  
 |Objectid|**int**|Objekt-ID der Tabelle. 0, wenn OPENQUERY oder OPENROWSET verwendet wird.|  
 |dbid|**int**|ID der Datenbank, in der sich die Tabelle befindet. 0, wenn OPENQUERY oder OPENROWSET verwendet wird.|  
@@ -132,7 +132,7 @@ GO
 ## <a name="see-also"></a>Weitere Informationen  
  [Cursor](../../relational-databases/cursors.md)   
  [CURSOR_STATUS &#40;Transact-SQL-&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
- [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
+ [DECLARE CURSOR &#40;Transact-SQL-&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [sp_cursor_list &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
  [sp_describe_cursor &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-transact-sql.md)   
  [sp_describe_cursor_columns &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   

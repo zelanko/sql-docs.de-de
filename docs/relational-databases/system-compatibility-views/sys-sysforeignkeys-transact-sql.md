@@ -21,10 +21,10 @@ ms.assetid: 41544236-1c46-4501-be88-18c06963b6e8
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: acbf543abeb8e35adb506e1fb381d2fa2018f113
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053449"
 ---
 # <a name="syssysforeignkeys-transact-sql"></a>sys.sysforeignkeys (Transact-SQL)
@@ -37,15 +37,15 @@ ms.locfileid: "68053449"
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**"Verbindungs-ID"**|**int**|ID der FOREIGN KEY-Einschränkung.|  
-|**"f keyid"**|**int**|Objekt-ID der Tabelle mit der FOREIGN KEY-Einschränkung.|  
+|**constid**|**int**|ID der FOREIGN KEY-Einschränkung.|  
+|**fkeyid**|**int**|Objekt-ID der Tabelle mit der FOREIGN KEY-Einschränkung.|  
 |**rkeyid**|**int**|Objekt-ID der Tabelle, auf die in der FOREIGN KEY-Einschränkung verwiesen wird.|  
 |**fkey**|**smallint**|ID der verweisenden Spalte.|  
-|**rKey**|**smallint**|ID der Spalte, auf die verwiesen wird.|  
+|**rkey**|**smallint**|ID der Spalte, auf die verwiesen wird.|  
 |**keyno**|**smallint**|Position der Spalte in der Referenzspaltenliste.|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Zuordnung von Systemtabellen zu System Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Kompatibilitäts Sichten &#40;Transact-SQL-&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Kompatibilitätssichten &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

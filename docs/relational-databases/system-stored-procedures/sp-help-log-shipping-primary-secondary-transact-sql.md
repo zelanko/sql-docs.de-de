@@ -18,10 +18,10 @@ ms.assetid: bc0044b4-7831-4ff9-8856-825c76aa9893
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 3d1c93bb6fecea955e139688b1a8f4f2c1dccc75
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68066822"
 ---
 # <a name="sp_help_log_shipping_primary_secondary-transact-sql"></a>sp_help_log_shipping_primary_secondary (Transact-SQL)
@@ -40,20 +40,20 @@ sp_help_log_shipping_primary_secondary
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @primary_database = ] 'primary_database'`Der Name der Datenbank auf dem primären Server. *primary_database* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @primary_database = ] 'primary_database'`Der Name der Datenbank auf dem primären Server. *primary_database* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="result-sets"></a>Resultsets  
   
-|Spaltenname|BESCHREIBUNG|  
+|Spaltenname|Beschreibung|  
 |-----------------|-----------------|  
 |**secondary_server**|Der Name der sekundären Instanz von [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] in der Protokoll Versand Konfiguration.|  
 |**secondary_database**|Der Name der sekundären Datenbank in der Protokollversandkonfiguration.|  
   
 ## <a name="remarks"></a>Bemerkungen  
- **sp_help_log_shipping_primary_secondary** muss von der **Master** -Datenbank auf dem primären Server ausgeführt werden.  
+ **sp_help_log_shipping_primary_secondary** muss aus der **master** -Datenbank auf dem primären Server ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Nur Mitglieder der festen Serverrolle **sysadmin** können diese Prozedur ausführen.  
@@ -67,7 +67,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Informationen zum Protokollversand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
+ [Informationen zum Protokoll Versand &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

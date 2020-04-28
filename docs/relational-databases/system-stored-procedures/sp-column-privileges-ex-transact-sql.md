@@ -18,10 +18,10 @@ ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cd4251c4b47f67d348b6978c05c07d0ae64d16c8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070358"
 ---
 # <a name="sp_column_privileges_ex-transact-sql"></a>sp_column_privileges_ex (Transact-SQL)
@@ -63,7 +63,7 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
 |**TABLE_NAME**|**sysname**|Tabellenname. Dieses Feld gibt immer einen Wert zurück.|  
 |**COLUMN_NAME**|**sysname**|Der Spaltenname für jede Spalte der zurückgegebenen **table_name** . Dieses Feld gibt immer einen Wert zurück.|  
 |**GRANTOR**|**sysname**|Datenbankbenutzer Name, der **dem aufgelisteten Empfänger**Berechtigungen für dieses **column_name** erteilt hat. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ist diese Spalte immer identisch mit der **TABLE_OWNER**. Dieses Feld gibt immer einen Wert zurück.<br /><br /> Die **GRANTOR** -Spalte kann entweder der Datenbankbesitzer (**TABLE_OWNER**) oder ein anderer Benutzer sein, dem der Datenbankbesitzer mithilfe der WITH GRANT Option-Klausel in der GRANT-Anweisung Berechtigungen erteilt hat.|  
-|**GRANTEE**|**sysname**|Der Name der Datenbank, der von **dem aufgelisteten**Berechtigungs-column_name Berechtigungen für dieses **** erteilt wurden. Dieses Feld gibt immer einen Wert zurück.|  
+|**GRANTEE**|**sysname**|Der Name der Datenbank, der von **dem aufgelisteten**Berechtigungs-column_name Berechtigungen für dieses **COLUMN_NAME** erteilt wurden. Dieses Feld gibt immer einen Wert zurück.|  
 |**Ehre**|**varchar (** 32 **)**|Eine der verfügbaren Spaltenberechtigungen. Spaltenberechtigungen können folgende Werte annehmen (oder auch andere Werte, die von der Datenquelle bei der Definition der Implementierung unterstützt werden):<br /><br /> Select = **GRANTEE** kann Daten für die Spalten abrufen.<br /><br /> INSERT = **GRANTEE** kann Daten für diese Spalte bereitstellen, wenn neue Zeilen (vom Empfänger **) in**die Tabelle eingefügt werden.<br /><br /> Update = **GRANTEE** kann vorhandene Daten in der Spalte ändern.<br /><br /> References = **GRANTEE** kann in einer Primärschlüssel-/Fremdschlüssel Beziehung auf eine Spalte in einer fremd Tabelle verweisen. Primär-/Fremdschlüssel-Beziehungen werden über Tabelleneinschränkungen definiert.|  
 |**IS_GRANTABLE**|**varchar (** 3 **)**|Gibt an, **ob der Empfänger** berechtigt ist, anderen Benutzern Berechtigungen zu erteilen (häufig als "Grant with Grant"-Berechtigung bezeichnet). Dieses Feld kann die Werte YES, NO oder NULL annehmen. Ein unbekannter Wert oder NULL-Wert verweist darauf, dass für die entsprechende Datenquelle die "Berechtigung mit Recht zum Erteilen" nicht zutreffend ist.|  
   

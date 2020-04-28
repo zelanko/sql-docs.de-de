@@ -17,10 +17,10 @@ ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 01154cf477435e9dc5335606d0c11a05aecc492b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68066660"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Projekteinstellungen (Typzuordnung) (accesstosql)
@@ -32,7 +32,7 @@ Die Typzuordnung ist in den Dialogfeldern **Projekteinstellungen** und **Standar
   
 -   Verwenden Sie das Dialogfeld **Standard Projekteinstellungen** , um Konfigurationsoptionen für alle Projekte festzulegen. Um auf die typzuordnungseinstellungen zuzugreifen, wählen Sie **im Menü Extras** die Option **Standard Projekteinstellungen**aus, wählen Sie den Migrations Projekttyp, für den die Einstellungen angezeigt werden müssen/Changed in der Dropdown Liste **Migrations Ziel Version** aus, und klicken Sie im linken Bereich auf **Typzuordnung** .  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Quelltyp**  
 Der zuzuordnende Zugriffs Datentyp.  
   
@@ -44,19 +44,19 @@ Die folgende Tabelle zeigt die Standard Zuordnung zwischen Quell-und Ziel Datent
 |Access-Datentyp|SQL Server-Datentyp|  
 |--------------------|------------------------|  
 |**binärer\*Wert [.. \*]**|**varbinary [\*]**|  
-|**booleschen**|**bit**|  
-|**Hobby**|**tinyint**|  
-|**currency**|**money**|  
+|**boolean**|**bit**|  
+|**byte**|**tinyint**|  
+|**Währungs**|**money**|  
 |**date**|**datetime**|  
-|**Decimal**|**float**|  
+|**decimal**|**float**|  
 |**double**|**float**|  
 |**guid**|**uniqueidentifier**|  
 |**integer**|**smallint**|  
-|**lange**|**int**|  
+|**long**|**int**|  
 |**LONGBINARY**|**varbinary(max)**|  
 |**Memo**|**nvarchar(max)**|  
 |**Memo** für Zugriff 97|**varchar(max)**|  
-|**Gänger**|**wirkliche**|  
+|**single**|**real**|  
 |**Text [\*.. \*]**|**nvarchar [\*]**|  
 |**Text [\*.. ] \*** -für Access 97|**varchar [\*]**|  
   
@@ -69,7 +69,7 @@ Klicken Sie hierauf, um einen Datentyp in der Liste Zuordnung zu bearbeiten.
 **Remove**  
 Klicken Sie hierauf, um die ausgewählte Datentyp Zuordnung aus der Liste Zuordnung zu entfernen.  
   
-**Auf Standard zurücksetzen**  
+**Standard wiederherstellen**  
 Klicken Sie hier, um alle Datentyp Zuordnungen auf die SSMA-Standardwerte zurückzusetzen.  
   
 ## <a name="see-also"></a>Weitere Informationen  

@@ -18,10 +18,10 @@ ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 34473e6eb173a0aabc5c2067e50aeeec27ce5636
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68067742"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
@@ -46,8 +46,8 @@ SEMANTICSIMILARITYDETAILSTABLE
     )  
 ```  
   
-##  <a name="Arguments"></a>Argumente  
- **glaub**  
+##  <a name="arguments"></a><a name="Arguments"></a>Argumentation  
+ **Tabelle**  
  Ist der Name einer Tabelle, für die die Volltext- und die semantische Indizierung aktiviert ist.  
   
  Dieser Name kann einteilig sein oder aus bis zu vier Teilen bestehen, aber ein Remoteservername ist nicht zugelassen.  
@@ -71,7 +71,7 @@ SEMANTICSIMILARITYDETAILSTABLE
 ## <a name="table-returned"></a>Zurückgegebene Tabelle  
  In der folgenden Tabelle werden die Schlüsselausdrücke beschrieben, die von dieser Rowset-Funktion zurückgegeben werden.  
   
-|Column_name|type|BESCHREIBUNG|  
+|Column_name|type|Beschreibung|  
 |------------------|----------|-----------------|  
 |**Schlüssel Ausdruck**|**NVARCHAR**|Der Schlüsselausdruck, der zur Ähnlichkeit zwischen Quelldokument und übereinstimmendem Dokument beiträgt.|  
 |**Endergebnis**|**real**|Ein relativer Wert für diesen Schlüsselausdruck in der Beziehung mit allen anderen Schlüsselausdrücken, die in den beiden Dokumenten ähnlich sind.<br /><br /> Der Wert ist eine Dezimalzahl im Bereich [0,0; 1,0], wobei ein höheres Ergebnis eine höhere Gewichtung und 1,0 ein perfektes Ergebnis darstellt.|  

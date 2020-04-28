@@ -18,10 +18,10 @@ ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7914e3b56dd02d96c02835bf6b4dcc5eb90e8f4b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084879"
 ---
 # <a name="sp_update_jobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
@@ -79,22 +79,22 @@ sp_update_jobstep
   
 `[ @on_success_action = ] success_action`Die Aktion, die ausgeführt werden soll, wenn der Schritt erfolgreich ist. *success_action* ist vom Datentyp **tinyint**. der Standardwert ist NULL. die folgenden Werte sind möglich:  
   
-|value|Beschreibung (Aktion)|  
+|Wert|Beschreibung (Aktion)|  
 |-----------|----------------------------|  
 |**1**|Beenden mit Erfolg|  
 |**2**|Beenden mit Fehler|  
-|**€**|Gehe zum nächsten Schritt|  
+|**3**|Gehe zum nächsten Schritt|  
 |**4**|Gehen Sie zu Schritt *success_step_id.*|  
   
 `[ @on_success_step_id = ] success_step_id`Die ID des Schritts in diesem Auftrag, der ausgeführt werden soll, wenn der Schritt erfolgreich ist und *success_action* **4**ist. *success_step_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
   
 `[ @on_fail_action = ] fail_action`Die Aktion, die ausgeführt werden soll, wenn der Schritt fehlschlägt. *fail_action* ist vom Datentyp **tinyint**und hat den Standardwert NULL und kann einen der folgenden Werte aufweisen.  
   
-|value|Beschreibung (Aktion)|  
+|Wert|Beschreibung (Aktion)|  
 |-----------|----------------------------|  
 |**1**|Beenden mit Erfolg|  
 |**2**|Beenden mit Fehler|  
-|**€**|Gehe zum nächsten Schritt|  
+|**3**|Gehe zum nächsten Schritt|  
 |**4**|Gehen Sie zu Schritt *fail_step_id * *.*|  
   
 `[ @on_fail_step_id = ] fail_step_id`Die ID des Schritts in diesem Auftrag, der ausgeführt werden soll, wenn der Schritt fehlschlägt und *fail_action* **4**ist. *fail_step_id* ist vom Datentyp **int**und hat den Standardwert NULL.  
@@ -119,9 +119,9 @@ sp_update_jobstep
   
 `[ @flags = ] flags`Eine Option, die das Verhalten steuert. *Flags* ist vom Datentyp **int**und kann einen der folgenden Werte aufweisen.  
   
-|value|BESCHREIBUNG|  
+|Wert|BESCHREIBUNG|  
 |-----------|-----------------|  
-|**0** (Standard)|Ausgabedatei überschreiben.|  
+|**0** (Standardwert)|Ausgabedatei überschreiben.|  
 |**2**|An Ausgabedatei anfügen|  
 |**4**|Ausgabe des Transact-SQL-Auftragsschrittes in Schrittverlauf schreiben|  
 |**88**|Protokoll in Tabelle schreiben (vorhandenen Verlauf überschreiben)|  

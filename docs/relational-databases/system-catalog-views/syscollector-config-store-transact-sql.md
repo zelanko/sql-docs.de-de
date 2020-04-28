@@ -19,10 +19,10 @@ ms.assetid: f15f6b05-6808-4b76-b6a8-48dec844cf63
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 174fa1af651c2e713bdb91ba217e896b833467b2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060375"
 ---
 # <a name="syscollector_config_store-transact-sql"></a>syscollector_config_store (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "68060375"
 ## <a name="remarks"></a>Bemerkungen  
  Die Liste der verfügbaren Eigenschaften ist festgelegt, und deren Werte können nur mithilfe der geeigneten gespeicherten Prozedur geändert werden. In der folgenden Tabelle werden die Eigenschaften beschrieben, die durch diese Sicht verfügbar gemacht werden.  
   
-|Eigenschaftenname|BESCHREIBUNG|  
+|Name der Eigenschaft|BESCHREIBUNG|  
 |-------------------|-----------------|  
 |CacheDirectory|Der Name des Verzeichnisses im Dateisystem, in dem die Sammlertyppakete temporäre Informationen speichern.<br /><br /> NULL = das standardmäßige temporäre [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Verzeichnis wird verwendet.|  
 |CacheWindow|Gibt die Datenbeibehaltungsrichtlinie des Cacheverzeichnisses für fehlgeschlagene Datenuploads an.<br /><br /> -1 = Daten aus allen fehlgeschlagenen Uploads beibehalten.<br /><br /> 0 - Keine Daten aus fehlgeschlagenen Uploads beibehalten.<br /><br /> *n* = Daten aus *n* früheren Uploadfehlern beibehalten, wobei *n* >= 1 ist.<br /><br /> Verwenden Sie die gespeicherte Prozedur sp_syscollector_set_cache_window, um diesen Wert zu ändern.|  
@@ -58,13 +58,13 @@ FROM msdb.dbo.syscollector_config_store;
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Gespeicherte Prozeduren für den Datensammler &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
+ [Gespeicherte Prozeduren für den Datensammler &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Datensammler Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [Datensammlung](../../relational-databases/data-collection/data-collection.md)   
  [sp_syscollector_enable_collector &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md)   
  [sp_syscollector_disable_collector &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql.md)   
  [sp_syscollector_set_warehouse_database_name &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-database-name-transact-sql.md)   
  [sp_syscollector_set_warehouse_instance_name &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-warehouse-instance-name-transact-sql.md)   
- [sp_syscollector_set_cache_window &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)  
+ [sp_syscollector_set_cache_window &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-set-cache-window-transact-sql.md)  
   
   

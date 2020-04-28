@@ -12,10 +12,10 @@ ms.assetid: 6772d0c5-258f-4d7b-afb0-b5f810e71af1
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 64040f4a0caf8253e6d6e8a3b00ff21e0cebe6d9
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68075351"
 ---
 # <a name="installing-ssma-components-on-sql-server-mysqltosql"></a>Installieren von SSMA-Komponenten für SQL Server (MySqlToSql)
@@ -74,7 +74,7 @@ Sie können das Erweiterungspaket jederzeit installieren, bevor Sie Daten zu [!I
   
     Die **sysdb** -Datenbank wird mit den für die Datenmigration erforderlichen Tabellen und gespeicherten Prozeduren erstellt (mithilfe der serverseitigen Daten Migrations-Engine), die in dieser Datenbank erstellt werden.  
   
-11. Wählen Sie ja aus, und klicken Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dann auf **** **weiter**, um die Hilfsprogramme für eine andere Instanz von zu installieren. Oder klicken Sie auf **Nein**, um den Assistenten zu beenden.  
+11. Wählen Sie ja aus, und klicken Sie [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]dann auf **Yes** **weiter**, um die Hilfsprogramme für eine andere Instanz von zu installieren. Oder klicken Sie auf **Nein**, um den Assistenten zu beenden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
 [Installieren von SSMA für MySQL-Client &#40;mysqlto SQL&#41;](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)  

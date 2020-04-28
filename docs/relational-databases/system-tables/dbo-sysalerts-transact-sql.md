@@ -20,10 +20,10 @@ ms.assetid: a2c2f50d-61f3-4951-996a-add5ad092cc2
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 4645b586c07635a405b2e678b84c4846762f7582
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084686"
 ---
 # <a name="dbosysalerts-transact-sql"></a>dbo.sysalerts (Transact-SQL)
@@ -33,13 +33,13 @@ ms.locfileid: "68084686"
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**Name**|**int**|Warnungs-ID.|  
+|**id**|**int**|Warnungs-ID.|  
 |**name**|**sysname**|Name der Warnung.|  
 |**event_source**|**nvarchar (100)**|Die Quelle des Ereignisses: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**event_category_id**|**int**|Für die zukünftige Verwendung reserviert.|  
 |**event_id**|**int**|Für die zukünftige Verwendung reserviert.|  
 |**message_id**|**int**|Benutzerdefinierte Nachrichten-ID oder Verweis auf die **sysmessages** -Nachricht, die diese Warnung auslöst.|  
-|**zunehmen**|**int**|Schweregrad, der diese Warnung auslöst.|  
+|**severity**|**int**|Schweregrad, der diese Warnung auslöst.|  
 |**wodurch**|**tinyint**|Status der Warnung:<br /><br /> **0** = deaktiviert.<br /><br /> **1** = aktiviert.|  
 |**delay_between_responses**|**int**|Wartezeit in Sekunden zwischen den Benachrichtigungen für diese Warnung.|  
 |**last_occurrence_date**|**int**|Letztes Auftreten (Datum) der Warnung.|  
@@ -55,7 +55,7 @@ ms.locfileid: "68084686"
 |**count_reset_time**|**int**|Tageszeit, zu der die Anzahl auf **0**zurückgesetzt wird.|  
 |**job_id**|**uniqueidentifier**|ID des Tasks, der ausgeführt wird, wenn die Warnung auftritt.|  
 |**has_notification**|**int**|Anzahl der Operatoren, die eine E-Mail-Benachrichtigung erhalten, wenn die Warnung auftritt.|  
-|**fahren**|**int**|Reserviert.|  
+|**flags**|**int**|Reserviert.|  
 |**performance_condition**|**nvarchar(512)**|Reserviert.|  
 |**category_id**|**int**|Reserviert.|  
   

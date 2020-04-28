@@ -18,10 +18,10 @@ ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f82fc9006012d55902f1b5b3260dc7012fd6640a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053075"
 ---
 # <a name="sp_describe_cursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
@@ -92,8 +92,7 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 ## <a name="remarks"></a>Bemerkungen  
  sp_describe_cursor beschreibt die für einen Servercursor globalen Attribute, wie z. B. die Optionen zum Durchführen eines Bildlaufs und zum Aktualisieren. Mit sp_describe_cursor_columns zeigen Sie eine Beschreibung der Attribute des vom Cursor zurückgegebenen Resultsets an. Mit sp_describe_cursor_tables zeigen Sie an, auf welche Basistabellen der Cursor verweist. Mit sp_cursor_list erhalten Sie einen Bericht der [!INCLUDE[tsql](../../includes/tsql-md.md)]-Servercursor, die für die Verbindung sichtbar sind.  
   
- Eine DECLARE CURSOR-Anweisung kann einen Cursortyp anfordern, den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe der in DECLARE CURSOR enthaltenen SELECT-Anweisung nicht unterstützen kann. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konvertiert den Cursor implizit in einen Typ, der mithilfe der SELECT-Anweisung unterstützt werden kann. Wenn TYPE_WARNING in der DECLARE CURSOR-Anweisung angegeben wird, sendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Anwendung eine Meldung zu Informationszwecken, dass eine Konvertierung durchgeführt wurde. sp_describe_cursor kann dann aufgerufen werden, um den Typ des implementierten Cursors zu bestimmen.  
+ Eine DECLARE CURSOR-Anweisung kann einen Cursortyp anfordern, den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mithilfe der in DECLARE CURSOR enthaltenen SELECT-Anweisung nicht unterstützen kann. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] konvertiert den Cursor implizit in einen Typ, der mithilfe der SELECT-Anweisung unterstützt werden kann. Wenn TYPE_WARNING in der DECLARE CURSOR-Anweisung angegeben wird, sendet [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] der Anwendung eine Meldung zu Informationszwecken, dass eine Konvertierung durchgeführt wurde. sp_describe_cursor kann dann aufgerufen werden, um den Typ des implementierten Cursors zu bestimmen.  
   
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die Mitgliedschaft in der public-Rolle.  
@@ -140,7 +139,7 @@ GO
 ## <a name="see-also"></a>Weitere Informationen  
  [Cursor](../../relational-databases/cursors.md)   
  [CURSOR_STATUS &#40;Transact-SQL-&#41;](../../t-sql/functions/cursor-status-transact-sql.md)   
- [DECLARE CURSOR &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
+ [DECLARE CURSOR &#40;Transact-SQL-&#41;](../../t-sql/language-elements/declare-cursor-transact-sql.md)   
  [sp_cursor_list &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-cursor-list-transact-sql.md)   
  [sp_describe_cursor_columns &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-columns-transact-sql.md)   
  [sp_describe_cursor_tables &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-describe-cursor-tables-transact-sql.md)  

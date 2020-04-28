@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d04238e0f476f39b0158fad4aa3350875d471ecc
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097944"
 ---
 # <a name="sysdm_db_xtp_table_memory_stats-transact-sql"></a>sys.dm_db_xtp_table_memory_stats (Transact-SQL)
@@ -38,10 +38,10 @@ ms.locfileid: "68097944"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|Die Objekt-ID der Tabelle. NULL für In-Memory OLTP-Systemtabellen.|  
-|memory_allocated_for_table_kb|**BIGINT**|Für diese Tabelle zugeordneter Arbeitsspeicher.|  
-|memory_used_by_table_kb|**BIGINT**|Von der Tabelle verwendeter Arbeitsspeicher einschließlich Zeilenversionen.|  
-|memory_allocated_for_indexes_kb|**BIGINT**|Für Indizes dieser Tabelle zugeordneter Arbeitsspeicher.|  
-|memory_used_by_indexes_kb|**BIGINT**|Für Indizes dieser Tabelle verwendeter Speicher.|  
+|memory_allocated_for_table_kb|**bigint**|Für diese Tabelle zugeordneter Arbeitsspeicher.|  
+|memory_used_by_table_kb|**bigint**|Von der Tabelle verwendeter Arbeitsspeicher einschließlich Zeilenversionen.|  
+|memory_allocated_for_indexes_kb|**bigint**|Für Indizes dieser Tabelle zugeordneter Arbeitsspeicher.|  
+|memory_used_by_indexes_kb|**bigint**|Für Indizes dieser Tabelle verwendeter Speicher.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Alle Zeilen werden zurückgegeben, wenn Sie über die VIEW DATABASE STATE-Berechtigung für die aktuelle Datenbank verfügen. Andernfalls wird ein leeres Rowset zurückgegeben.  
@@ -213,6 +213,6 @@ used_memory_mb       target_memory_mb
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Dynamische Verwaltungs Sichten für Speicher optimierte Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [Dynamische Verwaltungssichten für speicheroptimierte Tabellen (Transact-SQL)](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   

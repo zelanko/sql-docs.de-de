@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: b723a706521b24c9aa216c46f617d8ff94997137
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68098556"
 ---
 # <a name="mdx-data-definition---create-action"></a>MDX-Datendefinition – CREATE ACTION
@@ -82,7 +82,7 @@ FOR
   
 |Aktionstyp|BESCHREIBUNG|  
 |-----------------|-----------------|  
-|**Urne**|Die zurückgegebene Aktionszeichenfolge ist eine URL, die mit einem Internetbrowser geöffnet werden sollte.<br /><br /> Hinweis: Wenn diese Aktion nicht `https://` mit oder `https://`beginnt, ist die Aktion für den Browser nicht verfügbar, es sei denn, **SafetyOptions** ist auf **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**festgelegt.|  
+|**URL**|Die zurückgegebene Aktionszeichenfolge ist eine URL, die mit einem Internetbrowser geöffnet werden sollte.<br /><br /> Hinweis: Wenn diese Aktion nicht `https://` mit oder `https://`beginnt, ist die Aktion für den Browser nicht verfügbar, es sei denn, **SafetyOptions** ist auf **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**festgelegt.|  
 |**HTML**|Die zurückgegebene Aktionszeichenfolge ist ein HTML-Skript. Die Zeichenfolge sollte in einer Datei gespeichert werden, und die Datei sollte mit einem Internetbrowser gerendert werden. In diesem Fall kann ein ganzes Skript als Teil des generierten HTML-Codes ausgeführt werden.|  
 |**An**|Die zurückgegebene Aktions Zeichenfolge ist eine Anweisung, die ausgeführt werden muss, indem die **ICommand:: SetText** -Methode eines Befehls Objekts auf die Zeichenfolge festgelegt und die **ICommand:: Execute**-Methode aufgerufen wird. Wenn der Befehl nicht erfolgreich ausgeführt werden kann, wird ein Fehler zurückgegeben.|  
 |**DataSet**|Die zurückgegebene Aktions Zeichenfolge ist eine MDX-Anweisung, die ausgeführt werden muss, indem die **ICommand:: SetText** -Methode eines Befehls Objekts auf die Zeichenfolge festgelegt und die **ICommand:: Execute** -Methode aufgerufen wird. Die angeforderte Schnittstellen-ID (IID) sollte " **IDataset**" lauten. Der Befehl ist erfolgreich, wenn ein Dataset erstellt wurde. Die Clientanwendung sollte dem Benutzer das Durchsuchen des zurückgegebenen Datasets ermöglichen.|  

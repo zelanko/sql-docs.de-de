@@ -12,10 +12,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c26dbafb76ecf318fa497e11ccac09e800691900
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054314"
 ---
 # <a name="sysexternal_tables-transact-sql"></a>sys. external_tables (Transact-SQL)
@@ -23,7 +23,7 @@ ms.locfileid: "68054314"
 
   Enthält eine Zeile für jede externe Tabelle in der aktuellen Datenbank.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|Range|  
+|Spaltenname|Datentyp|BESCHREIBUNG|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
 |\<geerbte Spalten>||Eine Liste der Spalten, die diese Sicht erbt, finden Sie unter [sys. Objects &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).||  
 |max_column_id_used|**int**|Maximale Spalten-ID, die jemals für diese Tabelle verwendet wurde.||  
@@ -35,13 +35,13 @@ ms.locfileid: "68054314"
 |reject_value|**float**|Für externe Tabellen über eine externe Hadoop-Datenquelle:<br /><br /> Bei *reject_type =* value ist dies die Anzahl der Zeilen Umschreibungen, die zulässig sind, bevor ein Fehler bei der Abfrage auftritt.<br /><br /> Bei *reject_type* = Prozentsatz ist dies der Prozentsatz der Zeilen Umschreibungen, die zugelassen werden, bevor die Abfrage fehlschlägt.||  
 |reject_sample_value|**int**|Bei *reject_type* = Prozentsatz ist dies die Anzahl der Zeilen, die entweder erfolgreich oder erfolglos geladen werden sollen, bevor der Prozentsatz der abgelehnten Zeilen berechnet wird.|NULL, wenn reject_type = Value.|  
 |distribution_type|**int**|Bei externen Tabellen über eine SHARD_MAP_MANAGER externe Datenquelle handelt es sich hierbei um die Datenverteilung der Zeilen in den zugrunde liegenden Basistabellen.|0-Sharding<br /><br /> 1-repliziert<br /><br /> 2-Roundrobin|  
-|distribution_desc|**nvarchar (120)**|Bei externen Tabellen über eine SHARD_MAP_MANAGER externe Datenquelle ist dies der Verteilungstyp, der als Zeichenfolge angezeigt wird.||  
+|distribution_desc|**nvarchar(120)**|Bei externen Tabellen über eine SHARD_MAP_MANAGER externe Datenquelle ist dies der Verteilungstyp, der als Zeichenfolge angezeigt wird.||  
 |sharding_column_id|**int**|Bei externen Tabellen über eine SHARD_MAP_MANAGER externe Datenquelle und eine shardverteilung ist dies die Spalten-ID der Spalte, die die shardingschlüsselwerte enthält.||  
 |remote_schema_name|**sysname**|Bei externen Tabellen über eine SHARD_MAP_MANAGER externe Datenquelle ist dies das Schema, in dem sich die Basistabelle auf den Remote Datenbanken befindet (wenn Sie sich von dem Schema unterscheidet, in dem die externe Tabelle definiert ist).||  
 |remote_object_name|**sysname**|Bei externen Tabellen über eine SHARD_MAP_MANAGER externe Datenquelle ist dies der Name der Basistabelle in den Remote Datenbanken (wenn Sie sich vom Namen der externen Tabelle unterscheidet).||  
   
 ## <a name="permissions"></a>Berechtigungen  
- Die Sichtbarkeit der Metadaten in Katalogsichten ist auf sicherungsfähige Elemente eingeschränkt, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ Die Sichtbarkeit der Metadaten in Katalogsichten ist auf sicherungsfähige Elemente eingeschränkt, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde.  Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sys. external_file_formats &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md)   

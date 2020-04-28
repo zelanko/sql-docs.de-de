@@ -19,10 +19,10 @@ ms.assetid: 41782719-f54d-4e11-941a-c050c7576e23
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7f31bc59e918a2a2ca4f0cf9e3833571028e85a6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090800"
 ---
 # <a name="sysdm_server_memory_dumps-transact-sql"></a>sys.dm_server_memory_dumps (Transact-SQL)
@@ -32,9 +32,9 @@ ms.locfileid: "68090800"
  
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**Einfügen**|**nvarchar(256)**|Der Pfad und der Name der Speicherabbilddatei. Darf nicht NULL sein.|  
-|**creation_time**|**datetimeoffset(7)**|Das Datum und die Uhrzeit, zu der die Datei erstellt wurde. Darf nicht NULL sein.|  
-|**size_in_bytes**|**BIGINT**|Größe der Datei in Bytes. Lässt NULL-Werte zu.|  
+|**Einfügen**|**nvarchar(256)**|Der Pfad und der Name der Speicherabbilddatei. Lässt keine NULL-Werte zu.|  
+|**creation_time**|**datetimeoffset(7)**|Das Datum und die Uhrzeit, zu der die Datei erstellt wurde. Lässt keine NULL-Werte zu.|  
+|**size_in_bytes**|**bigint**|Größe der Datei in Bytes. Lässt NULL-Werte zu.|  
   
 ## <a name="general-remarks"></a>Allgemeine Hinweise  
  Bei dem Speicherabbild (Dump) kann es sich um einen Minidump, einen Dump aller Threads oder um einen vollständigen Dump handeln. Die Dateien haben die Erweiterung ".mdmp".  

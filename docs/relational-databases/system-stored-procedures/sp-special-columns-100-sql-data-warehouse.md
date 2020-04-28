@@ -14,10 +14,10 @@ author: ronortloff
 ms.author: rortloff
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 1be02aa5a19e49788aafdfdb9b6f818a66968283
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054846"
 ---
 # <a name="sp_special_columns_100-sql-data-warehouse"></a>sp_special_columns_100 (SQL Data Warehouse)
@@ -52,7 +52,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden die Spalten einer Tabelle zurückgegeben, wenn der aktuelle Benutzer diese Tabelle mit dem angegebenen Namen besitzt. Wenn *Owner* nicht angegeben wird und der aktuelle Benutzer keine Tabelle mit dem angegebenen *Namen*besitzt, wird nach einer Tabelle mit dem angegebenen *Namen* gesucht, die im Besitz des Daten Bank Besitzers ist. Wenn die Tabelle vorhanden ist, werden die zugehörigen Spalten zurückgegeben.  
   
  [ @qualifier=] "*Qualifizierer*"  
- Der Name des Tabellenqualifizierers. *Qualifizierer* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Benennung für Tabellen (*Qualifier.Owner.Name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei einigen anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
+ Der Name des Tabellenqualifizierers. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Benennung für Tabellen (*Qualifier.Owner.Name*). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei einigen anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
   
  [ @col_type=] "*col_type*"  
  Der Spaltentyp. *col_type* ist vom Datentyp **char (** 1 **)**. der Standardwert ist R. Type R gibt die optimale Spalte oder Gruppe von Spalten zurück, die durch Abrufen von Werten aus der Spalte oder den Spalten eine eindeutige Identifizierung der Zeilen in der angegebenen Tabelle ermöglicht. Bei einer Spalte kann es sich entweder um eine Pseudospalte handeln, die speziell zu diesem Zweck erstellt wurde, oder um die Spalte(n) eines eindeutigen Index für die Tabelle. Der Typ "V" gibt ggf. die Spalte(n) in der angegebenen Tabelle zurück, die automatisch von der Datenquelle aktualisiert werden, sobald ein Wert in der Zeile durch eine Transaktion aktualisiert wird.  
@@ -77,11 +77,10 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 |COLUMN_NAME|**sysname**|Der Spaltenname für jede Spalte der zurückgegebenen *Tabelle*. Dieses Feld gibt immer einen Wert zurück.|  
 |DATA_TYPE|**smallint**|ODBC-SQL-Datentyp.|  
 |TYPE_NAME|**sysname**|Datenquellen abhängiger Datentyp Name; beispielsweise " **char**", " **varchar**", " **Money**" oder " **Text**".|  
-|PRECISION|**Wartenden**|Die Genauigkeit der Spalte bezüglich der Datenquelle. Dieses Feld gibt immer einen Wert zurück.|  
-|LENGTH|**Wartenden**|Die Länge in Bytes, die für den Datentyp in der Binär Form in der Datenquelle erforderlich ist, z. b. 10 für **char (** 10 **)**, 4 für **Integer**und 2 für **smallint**.|  
+|PRECISION|**Int**|Die Genauigkeit der Spalte bezüglich der Datenquelle. Dieses Feld gibt immer einen Wert zurück.|  
+|LENGTH|**Int**|Die Länge in Bytes, die für den Datentyp in der Binär Form in der Datenquelle erforderlich ist, z. b. 10 für **char (** 10 **)**, 4 für **Integer**und 2 für **smallint**.|  
 |SCALE|**smallint**|Die Dezimalstellen der Spalte bezüglich der Datenquelle. NULL wird für Datentypen zurückgegeben, auf die Dezimalstellen nicht anwendbar sind.|  
-|PSEUDO_COLUMN|**smallint**|Gibt an, ob es sich bei der Spalte um eine Pseudospalte handelt. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt immer 1 zurück:<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
+|PSEUDO_COLUMN|**smallint**|Gibt an, ob es sich bei der Spalte um eine Pseudospalte handelt. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt immer 1 zurück:<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   
 ## <a name="remarks"></a>Bemerkungen  
  sp_special_columns entspricht SQLSpecialColumns in ODBC. Die zurückgegebenen Ergebnisse sind nach der SCOPE-Spalte geordnet.  
@@ -89,7 +88,7 @@ sp_special_columns_100 [ @table_name = ] 'table_name'
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert SELECT-Berechtigung für das Schema.  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Im folgenden Beispiel werden Informationen zu der Spalte zurückgegeben, die Zeilen in der `FactFinance`-Tabelle eindeutig identifiziert.  
   
 ```  

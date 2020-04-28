@@ -18,10 +18,10 @@ ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 9ee6b9df37e61dcb4eed45bc11431d49b160cf87
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053105"
 ---
 # <a name="sp_depends-transact-sql"></a>sp_depends (Transact-SQL)
@@ -70,7 +70,7 @@ sp_depends [ @objname = ] '<object>'
 |**name**|**nvarchar (257** **)**|Der Name des Elements, für das eine Abhängigkeit vorhanden ist.|  
 |**type**|**nvarchar (16)**|Der Elementtyp.|  
 |**Aktualisiert**|**nvarchar (7)**|Gibt an, ob das Element aktualisiert ist.|  
-|**gewählte**|**nvarchar (8)**|Gibt an, ob das Element in einer SELECT-Anweisung verwendet wird.|  
+|**Ausgewählt**|**nvarchar (8)**|Gibt an, ob das Element in einer SELECT-Anweisung verwendet wird.|  
 |**Kolumne**|**sysname**|Spalte oder Parameter, für die bzw. den die Abhängigkeit vorhanden ist.|  
   
  Im folgenden Resultset werden die Objekte angezeigt, die von * \<Objekt>* abhängig sind.  
@@ -105,7 +105,7 @@ EXEC sp_depends @objname = N'AdventureWorks2012.Production.iWorkOrder' ;
  [Datenbank-Engine gespeicherter Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   
- [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys. sql_dependencies &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-sql-dependencies-transact-sql.md)  
   
   

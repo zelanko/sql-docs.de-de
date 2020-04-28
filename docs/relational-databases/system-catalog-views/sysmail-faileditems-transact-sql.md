@@ -18,10 +18,10 @@ ms.assetid: a31562c5-358e-4cfc-a72d-b3faccc53851
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 586727c86dca057abeb221c828720ea38e24d7b0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060215"
 ---
 # <a name="sysmail_faileditems-transact-sql"></a>sysmail_faileditems (Transact-SQL)
@@ -39,9 +39,9 @@ ms.locfileid: "68060215"
 |**copy_recipients**|**varchar(max)**|Die E-Mail-Adressen derer, die Kopien der Nachricht erhalten.|  
 |**blind_copy_recipients**|**varchar(max)**|Die E-Mail-Adressen derer, die Kopien der Nachricht erhalten, deren Namen jedoch nicht im Nachrichtenkopf angezeigt werden.|  
 |**Betreff**|**nvarchar (510)**|Die Betreffzeile der Nachricht.|  
-|**Instanz**|**varchar(max)**|Mithilfe des Hauptteils der Nachricht|  
+|**body**|**varchar(max)**|Der Textkörper der Nachricht.|  
 |**body_format**|**varchar (20)**|Das Textkörperformat der Nachricht. Mögliche Werte sind TEXT und HTML.|  
-|**Wichtigkeit**|**varchar (6)**|Der **Wichtigkeits** Parameter der Nachricht.|  
+|**importance**|**varchar (6)**|Der **Wichtigkeits** Parameter der Nachricht.|  
 |**/Kleinschreibung**|**varchar (12)**|Der **Sensitivitäts** Parameter der Nachricht.|  
 |**file_attachments**|**varchar(max)**|Eine durch Semikolons getrennte Liste der Dateinamen, die an die E-Mail-Nachricht angehängt wurden.|  
 |**Attachment_encoding**|**varchar (20)**|Der Typ der E-Mail-Anlage.|  

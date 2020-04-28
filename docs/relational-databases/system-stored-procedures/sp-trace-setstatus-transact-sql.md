@@ -18,10 +18,10 @@ ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1e6d3ed9c31307fb032d4ccc3cc950565c39c52c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68095934"
 ---
 # <a name="sp_trace_setstatus-transact-sql"></a>sp_trace_setstatus (Transact-SQL)
@@ -63,10 +63,10 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
 |Rückgabecode|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |**0**|Kein Fehler.|  
-|**1**|Unknown error. (Unbekannter Fehler.)|  
+|**1**|Unbekannter Fehler.|  
 |**88**|Der angegebene Status ist ungültig.|  
-|**21.00**|Das angegebene Ablauf Verfolgungs Handle ist ungültig.|  
-|**13,3**|Nicht genügend Arbeitsspeicher. Wird zurückgegeben, wenn nicht genügend Arbeitsspeicher zum Ausführen der angegebenen Aktion verfügbar ist.|  
+|**9**|Das angegebene Ablauf Verfolgungs Handle ist ungültig.|  
+|**13**|Nicht genügend Arbeitsspeicher. Wird zurückgegeben, wenn nicht genügend Arbeitsspeicher zum Ausführen der angegebenen Aktion verfügbar ist.|  
   
  Wenn die Ablauf Verfolgung bereits in dem angegebenen Zustand ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , wird **0**zurückgegeben.  
   
@@ -80,10 +80,10 @@ sp_trace_setstatus [ @traceid = ] trace_id , [ @status = ] status
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sys. fn_trace_geteventinfo &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [sys.fn_trace_getfilterinfo &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
+ [sys. fn_trace_getfilterinfo &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-trace-getfilterinfo-transact-sql.md)   
  [sp_trace_generateevent &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
+ [sp_trace_setevent &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setfilter &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
  [SQL-Ablaufverfolgung](../../relational-databases/sql-trace/sql-trace.md)  
   
   

@@ -18,10 +18,10 @@ ms.assetid: 5d56d780-ee40-4afc-9c2a-d1723d86e430
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 362735d33f835c7b66e4f0994fd5c4ff6f084f15
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68102191"
 ---
 # <a name="msmerge_partition_groups-transact-sql"></a>MSmerge_partition_groups (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68102191"
 |-----------------|---------------|-----------------|  
 |**partition_id**|**int**|Die Identitätsspalte, die eine eindeutige ID für die vorausberechnete Partition bereitstellt.|  
 |**publication_number**|**smallint**|Die Veröffentlichungsnummer, die in **sysmergepublications**gespeichert wird.|  
-|**maxgen_whenadded**|**BIGINT**|Die höchste bekannte Generierung auf dem Verleger zu dem Zeitpunkt, als die Zeile in dieser Tabelle eingefügt wurde.|  
+|**maxgen_whenadded**|**bigint**|Die höchste bekannte Generierung auf dem Verleger zu dem Zeitpunkt, als die Zeile in dieser Tabelle eingefügt wurde.|  
 |**using_partition_groups**|**bit**|Gibt an, ob die Partition zu einer Veröffentlichung gehört, die vorausberechnete Partitionen verwendet. Die folgenden Werte sind möglich:<br /><br /> **0** = die Veröffentlichung verwendet keine voraus berechneten Partitionen.<br /><br /> **1** = Veröffentlichung verwendet Voraus berechnete Partitionen<br /><br /> Weitere Informationen finden Sie unter [Optimieren Parametrisierter Filter-Leistung mit Vorausberechneten Partitionen ](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md).|  
 |**HOST_NAME_FN**|**nvarchar(128)**|Der bereitgestellte Wert, wenn parametrisierte Zeilenfilter zum Generieren von Partitionen verwendet werden. Weitere Informationen zu parametrisierten Zeilenfiltern finden Sie unter [Parametrisierte Zeilenfilter](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).|  
   

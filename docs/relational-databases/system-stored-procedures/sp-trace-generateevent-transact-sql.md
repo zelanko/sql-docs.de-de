@@ -18,10 +18,10 @@ ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cfeacf9f3c18d3f80b7ad83a3697e33a5797ba22
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096023"
 ---
 # <a name="sp_trace_generateevent-transact-sql"></a>sp_trace_generateevent (Transact-SQL)
@@ -46,9 +46,9 @@ sp_trace_generateevent [ @eventid = ] event_id
 ## <a name="arguments"></a>Argumente  
 `[ @eventid = ] event_id`Die ID des Ereignisses, das aktiviert werden soll. *event_id* ist vom Datentyp **int**und hat keinen Standardwert. Die ID muss eine der Ereignisnummern von 82 bis 91 sein, die mit [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)festgelegte benutzerdefinierte Ereignisse darstellen.  
   
-`[ @userinfo = ] 'user_info'`Die optionale benutzerdefinierte Zeichenfolge, die den Grund für das Ereignis identifiziert. *user_info* ist vom Datentyp **nvarchar (128)** und hat den Standardwert NULL.  
+`[ @userinfo = ] 'user_info'`Die optionale benutzerdefinierte Zeichenfolge, die den Grund für das Ereignis identifiziert. *user_info* ist vom Datentyp **nvarchar(128)** und hat den Standardwert NULL.  
   
-`[ @userdata = ] user_data`Die optionalen benutzerdefinierten Daten für das Ereignis. *user_data* ist vom Datentyp **varbinary (8000)** und hat den Standardwert NULL.  
+`[ @userdata = ] user_data`Die optionalen benutzerdefinierten Daten für das Ereignis. *user_data* ist vom Datentyp **varbinary(8000)** und hat den Standardwert NULL.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  In der folgenden Tabelle werden die Codewerte beschrieben, die die Benutzer nach Abschluss der gespeicherten Prozedur möglicherweise erhalten.  
@@ -56,9 +56,9 @@ sp_trace_generateevent [ @eventid = ] event_id
 |Rückgabecode|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |**0**|Kein Fehler.|  
-|**1**|Unknown error. (Unbekannter Fehler.)|  
-|**€**|Das angegebene Ereignis ist ungültig. Das Ereignis ist möglicherweise nicht vorhanden oder nicht für die gespeicherte Prozedur geeignet.|  
-|**13,3**|Nicht genügend Arbeitsspeicher. Wird zurückgegeben, wenn nicht genügend Arbeitsspeicher zum Ausführen der angegebenen Aktion verfügbar ist.|  
+|**1**|Unbekannter Fehler.|  
+|**3**|Das angegebene Ereignis ist ungültig. Das Ereignis ist möglicherweise nicht vorhanden oder nicht für die gespeicherte Prozedur geeignet.|  
+|**13**|Nicht genügend Arbeitsspeicher. Wird zurückgegeben, wenn nicht genügend Arbeitsspeicher zum Ausführen der angegebenen Aktion verfügbar ist.|  
   
 ## <a name="remarks"></a>Bemerkungen  
  **sp_trace_generateevent** führt viele der Aktionen aus, die zuvor von **den\* xp_trace_** erweiterten gespeicherten Prozeduren ausgeführt wurden. Verwenden Sie **sp_trace_generateevent** anstelle von **xp_trace_generate_event**.  
@@ -94,9 +94,9 @@ you were capturing the event id=82, you will see it in the Profiler output.
 INSERT INTO user_config_test VALUES(1, 'abc');  
 ```  
   
-## <a name="see-also"></a>Weitere Informationen  
+## <a name="see-also"></a>Weitere Informationen:  
  [sys. fn_trace_geteventinfo &#40;Transact-SQL-&#41;](../../relational-databases/system-functions/sys-fn-trace-geteventinfo-transact-sql.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setevent &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [SQL-Ablaufverfolgung](../../relational-databases/sql-trace/sql-trace.md)  
   
   

@@ -21,10 +21,10 @@ ms.assetid: ba9a9a88-55d2-41a7-b09b-342e8b9a54c5
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: 709d1bfe0b1d4288c8eae4ec947a60064cec6b3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68076480"
 ---
 # <a name="syssyspermissions-transact-sql"></a>sys.syspermissions (Transact-SQL)
@@ -37,7 +37,7 @@ ms.locfileid: "68076480"
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**Name**|**int**|ID des Objekts für Objektberechtigungen.<br /><br /> 0 = Anweisungsberechtigungen.|  
+|**id**|**int**|ID des Objekts für Objektberechtigungen.<br /><br /> 0 = Anweisungsberechtigungen.|  
 |**Empfänger**|**smallint**|ID des Benutzers, der Gruppe oder der Rolle, auf den bzw. die sich die Berechtigung auswirkt.|  
 |**GRANTOR**|**smallint**|ID des Benutzers, der Gruppe oder der Rolle, der bzw. die die Berechtigung erteilt oder verweigert hat.|  
 |**actadd**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -51,6 +51,6 @@ ms.locfileid: "68076480"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Zuordnung von Systemtabellen zu System Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Kompatibilitäts Sichten &#40;Transact-SQL-&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Kompatibilitätssichten &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

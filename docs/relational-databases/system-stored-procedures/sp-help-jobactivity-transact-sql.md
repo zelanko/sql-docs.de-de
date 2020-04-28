@@ -18,10 +18,10 @@ ms.assetid: d344864f-b4d3-46b1-8933-b81dec71f511
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 95283eee1a38dbafd9824986188df565103de06c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054984"
 ---
 # <a name="sp_help_jobactivity-transact-sql"></a>sp_help_jobactivity (Transact-SQL)
@@ -69,7 +69,7 @@ sp_help_jobactivity { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**stop_execution_date**|**datetime**|Uhrzeit, zu der die Ausführung des Auftrags beendet wurde.|  
 |**next_scheduled_run_date**|**datetime**|Datum, an dem die nächste Ausführung des Auftrags geplant ist.|  
 |**job_history_id**|**int**|ID für den Auftragsverlauf in der Auftragsverlaufstabelle.|  
-|**Nachricht**|**nvarchar (1024)**|Meldung, die während der letzten Ausführung des Auftrags ausgegeben wurde.|  
+|**Nachricht**|**nvarchar(1024)**|Meldung, die während der letzten Ausführung des Auftrags ausgegeben wurde.|  
 |**run_status**|**int**|Status, der während der letzten Ausführung des Auftrags zurückgegeben wurde:<br /><br /> **0** = Fehler<br /><br /> **1** = erfolgreich<br /><br /> **3** = abgebrochen<br /><br /> **5** = Unbekannter Status|  
 |**operator_id_emailed**|**int**|ID des Operators, der durch eine E-Mail-Nachricht bei Beendigung des Auftrags benachrichtigt wurde.|  
 |**operator_id_netsent**|**int**|ID-Nummer des Operators, der bei Abschluss des Auftrags über **net send** benachrichtigt wurde.|  

@@ -20,10 +20,10 @@ ms.assetid: d96a14f3-4284-45ff-b1fe-4858e540a013
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 8b44824310637b279388ea367cd4ab1d07401d1f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090284"
 ---
 # <a name="sysdm_xe_object_columns-transact-sql"></a>sys.dm_xe_object_columns (Transact-SQL)
@@ -42,10 +42,10 @@ ms.locfileid: "68090284"
 |object_package_guid|**uniqueidentifier**|Die GUID des Pakets, das das Objekt enthält. Lässt keine NULL-Werte zu.|  
 |type_name|**nvarchar(256)**|Der Name des Typs für diese Spalte. Lässt keine NULL-Werte zu.|  
 |type_package_guid|**uniqueidentifier**|Die GUID des Pakets, das den Spaltendatentyp enthält. Lässt keine NULL-Werte zu.|  
-|column_type|**nvarchar (60)**|Gibt an, wie diese Spalte verwendet wird. Lässt keine NULL-Werte zu. column_type kann eine der folgenden sein:<br /><br /> readonly. Die Spalte enthält einen statischen Wert, der nicht geändert werden kann.<br /><br /> Daten. Die Spalte enthält vom Objekt verfügbar gemachte Laufzeitdaten.<br /><br /> customizable. Die Spalte enthält einen Wert, der geändert werden kann.<br /><br /> Hinweis: durch Ändern dieses Werts kann das Verhalten des-Objekts geändert werden.|  
+|column_type|**nvarchar(60)**|Gibt an, wie diese Spalte verwendet wird. Lässt keine NULL-Werte zu. column_type kann eine der folgenden sein:<br /><br /> readonly. Die Spalte enthält einen statischen Wert, der nicht geändert werden kann.<br /><br /> data. Die Spalte enthält vom Objekt verfügbar gemachte Laufzeitdaten.<br /><br /> customizable. Die Spalte enthält einen Wert, der geändert werden kann.<br /><br /> Hinweis: durch Ändern dieses Werts kann das Verhalten des-Objekts geändert werden.|  
 |column_value|**nvarchar(256)**|Zeigt statische Werte an, die der Objektspalte zugeordnet sind. Lässt NULL-Werte zu.|  
 |capabilities|**int**|Eine Bitmap, die die Fähigkeiten der Spalte beschreibt. Lässt NULL-Werte zu.|  
-|capabilities_desc|**nvarchar(256)**|Eine Beschreibung der Fähigkeiten dieser Objektspalte. Die folgenden Werte sind möglich:<br /><br /> Obligatorisch. Der Wert muss festgelegt werden, wenn das übergeordnete Objekt an eine Ereignissitzung gebunden wird.<br /><br /> Lässt NULL-Werte zu.|  
+|capabilities_desc|**nvarchar(256)**|Eine Beschreibung der Fähigkeiten dieser Objektspalte. Die folgenden Werte sind möglich:<br /><br /> Erforderlich. Der Wert muss festgelegt werden, wenn das übergeordnete Objekt an eine Ereignissitzung gebunden wird.<br /><br /> Lässt NULL-Werte zu.|  
 |description|**nvarchar (3072)**|Die Beschreibung dieser Objektspalte. Lässt NULL-Werte zu.|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -53,7 +53,7 @@ ms.locfileid: "68090284"
   
 ### <a name="relationship-cardinalities"></a>Kardinalität der Beziehungen  
   
-|Von|To|Beziehung|  
+|Von|Beschreibung|Beziehung|  
 |----------|--------|------------------|  
 |sys.dm_xe_object_columns.object_name, sys.dm_xe_object_columns.object_package_guid|sys.dm_xe_objects.name,<br /><br /> sys.dm_xe_objects.package_guid|n:1|  
 |sys.dm_xe_object_columns.type_name<br /><br /> sys.dm_xe_object_columns.type_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_objects.package_guid|n:1|  

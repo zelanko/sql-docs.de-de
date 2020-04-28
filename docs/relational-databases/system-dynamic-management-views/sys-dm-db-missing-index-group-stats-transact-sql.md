@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: fa4da39290590591af30e259db910fdc9e5600ac
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68051561"
 ---
 # <a name="sysdm_db_missing_index_group_stats-transact-sql"></a>sys.dm_db_missing_index_group_stats (Transact-SQL)
@@ -38,15 +38,15 @@ ms.locfileid: "68051561"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**group_handle**|**int**|Identifiziert eine Gruppe fehlender Indizes. Dieser Bezeichner ist innerhalb des Servers eindeutig.<br /><br /> Die anderen Spalten stellen Informationen zu allen Abfragen bereit, für die der Index in der Gruppe als fehlend betrachtet wird.<br /><br /> Eine Indexgruppe enthält nur einen Index.|  
-|**unique_compiles**|**BIGINT**|Anzahl der Kompilierungen und Neukompilierungen, die von dieser Gruppe fehlender Indizes profitieren würden. Zu diesem Spaltenwert können Kompilierungen und Neukompilierungen vieler verschiedener Abfragen beitragen.|  
-|**user_seeks**|**BIGINT**|Die Anzahl von durch Benutzerabfragen verursachten Suchvorgängen, für die der empfohlene Index in der Gruppe hätte verwendet werden können.|  
-|**user_scans**|**BIGINT**|Die Anzahl von durch Benutzerabfragen verursachten Scanvorgängen, für die der empfohlene Index in der Gruppe hätte verwendet werden können.|  
+|**unique_compiles**|**bigint**|Anzahl der Kompilierungen und Neukompilierungen, die von dieser Gruppe fehlender Indizes profitieren würden. Zu diesem Spaltenwert können Kompilierungen und Neukompilierungen vieler verschiedener Abfragen beitragen.|  
+|**user_seeks**|**bigint**|Die Anzahl von durch Benutzerabfragen verursachten Suchvorgängen, für die der empfohlene Index in der Gruppe hätte verwendet werden können.|  
+|**user_scans**|**bigint**|Die Anzahl von durch Benutzerabfragen verursachten Scanvorgängen, für die der empfohlene Index in der Gruppe hätte verwendet werden können.|  
 |**last_user_seek**|**datetime**|Das Datum und die Uhrzeit des letzten durch Benutzerabfragen verursachten Suchvorgangs, für den der empfohlene Index in der Gruppe hätte verwendet werden können.|  
 |**last_user_scan**|**datetime**|Das Datum und die Uhrzeit des letzten durch Benutzerabfragen verursachten Scanvorgangs, für den der empfohlene Index in der Gruppe hätte verwendet werden können.|  
 |**avg_total_user_cost**|**float**|Die durchschnittlichen Kosten der Benutzerabfragen, die durch den Index in der Gruppe reduziert werden könnten.|  
 |**avg_user_impact**|**float**|Durchschnittlicher prozentualer Nutzen, der für Benutzerabfragen entstünde, wenn diese Gruppe fehlender Indizes implementiert würde. Der Wert bedeutet, dass die Abfragekosten durchschnittlich um diesen Prozentsatz verringert würden, wenn diese Gruppe fehlender Indizes implementiert würde.|  
-|**system_seeks**|**BIGINT**|Die Anzahl von durch Systemabfragen, beispielsweise Auto Stats-Abfragen, verursachten Suchvorgängen, für die der empfohlene Index in der Gruppe hätte verwendet werden können. Weitere Informationen finden Sie unter [Auto Stats-Ereignisklasse](../../relational-databases/event-classes/auto-stats-event-class.md).|  
-|**system_scans**|**BIGINT**|Die Anzahl von durch Systemabfragen verursachten Scanvorgängen, für die der empfohlene Index in der Gruppe hätte verwendet werden können.|  
+|**system_seeks**|**bigint**|Die Anzahl von durch Systemabfragen, beispielsweise Auto Stats-Abfragen, verursachten Suchvorgängen, für die der empfohlene Index in der Gruppe hätte verwendet werden können. Weitere Informationen finden Sie unter [Auto Stats-Ereignisklasse](../../relational-databases/event-classes/auto-stats-event-class.md).|  
+|**system_scans**|**bigint**|Die Anzahl von durch Systemabfragen verursachten Scanvorgängen, für die der empfohlene Index in der Gruppe hätte verwendet werden können.|  
 |**last_system_seek**|**datetime**|Das Datum und die Uhrzeit des letzten durch Systemabfragen verursachten Systemsuchvorgangs, für den der empfohlene Index in der Gruppe hätte verwendet werden können.|  
 |**last_system_scan**|**datetime**|Das Datum und die Uhrzeit des letzten durch Systemabfragen verursachten Systemscanvorgangs, für den der empfohlene Index in der Gruppe hätte verwendet werden können.|  
 |**avg_total_system_cost**|**float**|Die durchschnittlichen Kosten der Systemabfragen, die durch den Index in der Gruppe reduziert werden könnten.|  
@@ -65,7 +65,7 @@ ms.locfileid: "68051561"
  Die folgenden Beispiele veranschaulichen die Verwendung der dynamischen Verwaltungssicht **sys.dm_db_missing_index_group_stats**.  
   
 ### <a name="a-find-the-10-missing-indexes-with-the-highest-anticipated-improvement-for-user-queries"></a>A. Suchen der 10 fehlenden Indizes mit der größten zu erwartenden Verbesserung für Benutzerabfragen  
- Die folgende Abfrage bestimmt, welche 10 fehlenden Indizes die höchste erwartete kumulative Verbesserung ergeben, sortiert in absteigender Reihenfolge für Benutzerabfragen.  
+ Mit der folgenden Abfrage werden in absteigender Reihenfolge die 10 fehlenden Indizes bestimmt, die die größte zu erwartende Gesamtverbesserung für Benutzerabfragen bewirken würden.  
   
 ```  
 SELECT TOP 10 *  

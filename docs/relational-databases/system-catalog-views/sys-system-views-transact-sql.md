@@ -20,10 +20,10 @@ ms.assetid: a526c410-e7b5-4075-8103-e1f3c6837c3c
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: fce2816d8cb169c5761f47dd0f9dd0a6ed1959f0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078616"
 ---
 # <a name="syssystem_views-transact-sql"></a>sys.system_views (Transact-SQL)
@@ -46,7 +46,7 @@ ms.locfileid: "68078616"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Objektkatalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
- [Katalogsichten &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
+ [Katalog Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [DBCC CHECKDB &#40;Transact-SQL-&#41;](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)   
  [DBCC CHECKTABLE &#40;Transact-SQL-&#41;](../../t-sql/database-console-commands/dbcc-checktable-transact-sql.md)   
  [ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md)  

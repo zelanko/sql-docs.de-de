@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 37fd17f17d8b6aa1a30f48d75258d27f4a45561a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68097798"
 ---
 # <a name="sysdm_exec_distributed_requests-transact-sql"></a>sys. dm_exec_distributed_requests (Transact-SQL)
@@ -36,9 +36,9 @@ ms.locfileid: "68097798"
   
  Basierend auf der Sitzungs-und Anforderungs-ID kann ein Benutzer dann die tatsächlich für die Ausführung generierten Anforderungen über sys. dm_exec_distributed_requests abrufen. Beispielsweise wird eine Abfrage, die reguläre SQL-Tabellen und externe SQL-Tabellen enthält, in verschiedene Anweisungen/Anforderungen zerlegt, die auf den verschiedenen Computeknoten ausgeführt werden. Zum Nachverfolgen der verteilten Schritte auf allen Computeknoten führen wir eine "globale" Ausführungs-ID ein, die verwendet werden kann, um alle Vorgänge auf den Computeknoten zu verfolgen, die einer bestimmten Anforderung bzw. einem Operator zugeordnet sind.  
   
-|Spaltenname|Datentyp|BESCHREIBUNG|Range|  
+|Spaltenname|Datentyp|BESCHREIBUNG|Bereich|  
 |-----------------|---------------|-----------------|-----------|  
-|sql_handle|**varbinary (64)**|Der Schlüssel für diese Ansicht. Eindeutige numerische ID, die der Anforderung zugeordnet ist.|Eindeutig für alle Anforderungen im System.|  
+|sql_handle|**varbinary(64)**|Der Schlüssel für diese Ansicht. Eindeutige numerische ID, die der Anforderung zugeordnet ist.|Eindeutig für alle Anforderungen im System.|  
 |execution_id|**nvarchar (32**|Eindeutige numerische ID, die der Sitzung zugeordnet ist, in der die Abfrage ausgeführt wurde.||  
 |status|**nvarchar (32**|Aktueller Status der Anforderung.|"Pending", "autorisieren", "acquiresystemresources", "Initialisieren", "Plan", "", "", "", "...", "" wird ausgeführt "," abgebrochen "," abgeschlossen "," failed "," abgebrochen ".|  
 |error_id|**nvarchar (36)**|Eindeutige ID des Fehlers, der der Anforderung zugeordnet ist, sofern vorhanden.|Auf NULL festgelegt, wenn kein Fehler aufgetreten ist.|  
@@ -48,7 +48,7 @@ ms.locfileid: "68097798"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Problembehandlung bei polybase mit dynamischen Verwaltungs Sichten](https://msdn.microsoft.com/library/ce9078b7-a750-4f47-b23e-90b83b783d80)   
- [Dynamische Verwaltungssichten und -funktionen &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
+ [Dynamische Verwaltungs Sichten und Funktionen &#40;Transact-SQL-&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [Dynamische Verwaltungs Sichten im Zusammenhang mit der Datenbank &#40;Transact-SQL-&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  
   
   

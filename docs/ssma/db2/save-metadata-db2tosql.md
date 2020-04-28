@@ -10,10 +10,10 @@ ms.assetid: 9a76083e-4902-449e-b125-7e9259fc37f7
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 8fb0c8849ce56fd424a93234d8878b19e19b5bdd
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060098"
 ---
 # <a name="save-metadata-db2tosql"></a>Speichern von Metadaten (DB2ToSQL)
@@ -30,13 +30,13 @@ Gibt an, ob Metadaten in das SSMA-Projekt geladen werden oder ob Metadaten fehle
   
 SSMA lädt bei Bedarf Metadaten in das Projekt. Metadaten werden automatisch geladen, wenn Sie Metadaten durchsuchen und Schemas konvertieren.  
   
-**Alles markieren**  
+**Alle auswählen**  
 Wählt alle aufgelisteten Datenbanken aus.  
   
-**Clear**  
+**Klartext**  
 Löscht das Kontrollkästchen für alle Datenbanken mit fehlenden Metadaten. Sie können das Kontrollkästchen nicht deaktivieren, wenn eine Metadaten geladen wurde.  
   
-**Sicher**  
+**Speichern**  
 Speichert das Projekt und lädt Metadaten für ausgewählte Datenbanken, die über fehlende Metadaten verfügen.  
   
 **Abbrechen**  

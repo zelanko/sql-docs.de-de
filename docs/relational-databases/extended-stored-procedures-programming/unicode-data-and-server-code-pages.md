@@ -15,17 +15,17 @@ ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f32929b9cd5d2f69ae4ffbb8d13f7ec09d9972ae
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68064271"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Unicode-Daten und Server-Codepages
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
     
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]Verwenden Sie stattdessen die CLR-Integration.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Verwenden Sie stattdessen die CLR-Integration.  
   
  Die API für erweiterte gespeicherte Prozeduren ist für die Verarbeitung von Unicode-Daten aktiviert, jedoch nicht für Unicode-Metadaten. Die Unicode-Direktive #define hat keinerlei Wirkung auf die API für erweiterte gespeicherte Prozeduren.  
   

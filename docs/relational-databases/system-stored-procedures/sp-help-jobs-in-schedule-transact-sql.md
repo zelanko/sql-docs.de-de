@@ -18,10 +18,10 @@ ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1713974a8ba90474393ff9bb65f6b98a5c74b601
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054900"
 ---
 # <a name="sp_help_jobs_in_schedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
@@ -54,14 +54,14 @@ sp_help_jobs_in_schedule
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|Eindeutige ID des Auftrags.|  
-|**originating_server**|**nvarchar (30)**|Name des Servers, von dem der Auftrag stammt|  
+|**originating_server**|**nvarchar(30)**|Name des Servers, von dem der Auftrag stammt|  
 |**name**|**sysname**|Der Name des Auftrags.|  
 |**wodurch**|**tinyint**|Zeigt an, ob der Auftrag für die Ausführung aktiviert ist.|  
 |**Beschreibung**|**nvarchar(512)**|Die Beschreibung des Auftrags.|  
 |**start_step_id**|**int**|ID des Schrittes in dem Auftrag, bei dem die Ausführung beginnen soll.|  
-|**Kategorie**|**sysname**|Auftragskategorie|  
+|**category**|**sysname**|Auftragskategorie|  
 |**Eigentor**|**sysname**|Auftragsbesitzer|  
-|**notify_level_eventlog**|**int**|Bitmaske, die anzeigt, unter welchen Umständen ein Benachrichtigungsereignis im Microsoft Windows-Anwendungsprotokoll protokolliert werden soll. Kann einen der folgenden Werte aufweisen:<br /><br /> **0** = nie<br /><br /> **1** = bei erfolgreicher Auftragsausführung<br /><br /> **2** = bei Fehlschlagen des Auftrags<br /><br /> **3** = immer, wenn der Auftrag abgeschlossen ist (unabhängig vom Auftrags Ergebnis)|  
+|**notify_level_eventlog**|**int**|Bitmaske, die anzeigt, unter welchen Umständen ein Benachrichtigungsereignis im Microsoft Windows-Anwendungsprotokoll protokolliert werden soll. Einer der folgenden Werte ist möglich:<br /><br /> **0** = Nie<br /><br /> **1** = bei erfolgreicher Auftragsausführung<br /><br /> **2** = Bei Fehlschlagen des Auftrags<br /><br /> **3** = Immer, wenn der Auftrag abgeschlossen ist (unabhängig vom Ergebnis des Auftrags)|  
 |**notify_level_email**|**int**|Bitmaske, die anzeigt, unter welchen Umständen bei Abschluss eines Auftrags eine Benachrichtigungs-E-Mail gesendet werden soll. Mögliche Werte sind die gleichen wie für **notify_level_eventlog**.|  
 |**notify_level_netsend**|**int**|Bitmaske, die anzeigt, unter welchen Umständen bei Abschluss eines Auftrags eine Netzwerkmeldung gesendet werden soll. Mögliche Werte sind die gleichen wie für **notify_level_eventlog**.|  
 |**notify_level_page**|**int**|Bitmaske, die anzeigt, unter welchen Umständen bei Abschluss eines Auftrags eine Benachrichtigung per Pager gesendet werden soll. Mögliche Werte sind die gleichen wie für **notify_level_eventlog**.|  
@@ -71,7 +71,7 @@ sp_help_jobs_in_schedule
 |**delete_level**|**int**|Bitmaske, die anzeigt, unter welchen Umständen der Auftrag bei Abschluss eines Auftrags gelöscht werden soll. Mögliche Werte sind die gleichen wie für **notify_level_eventlog**.|  
 |**date_created**|**datetime**|Datum, an dem der Auftrag erstellt wurde.|  
 |**date_modified**|**datetime**|Datum, an dem der Auftrag zuletzt geändert wurde.|  
-|**version_number**|**int**|Die Version des Auftrags (wird automatisch bei jeder Auftragsänderung aktualisiert).|  
+|**version_number**|**int**|Version des Auftrags (wird automatisch jedes Mal aktualisiert, wenn der Auftrag geändert wird)|  
 |**last_run_date**|**int**|Datum, an dem die Ausführung des Auftrags zuletzt gestartet wurde|  
 |**last_run_time**|**int**|Uhrzeit, zu der die Ausführung des Auftrags zuletzt gestartet wurde|  
 |**last_run_outcome**|**int**|Ergebnis des Auftrags beim letzten ausführen:<br /><br /> **0** = fehlgeschlagen<br /><br /> **1** = erfolgreich<br /><br /> **3** = abgebrochen<br /><br /> **5** = unbekannt|  

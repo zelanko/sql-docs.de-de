@@ -10,10 +10,10 @@ ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: e6918dac33ce0e69116f713cb8906b2774d00575
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084548"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>Projekteinstellungen (Konvertierung) (DB2ToSQL)
@@ -167,7 +167,7 @@ In der folgenden Tabelle wird gezeigt, wie SSMA die DB2-Sperr Modi konvertiert:
 |Zeilen Freigabe|ROWLOCK, HOLDLOCK|  
 |Zeilen exklusiv|ROWLOCK, xlock, HOLDLOCK|  
 |Freigabe Update = Zeilen Freigabe|ROWLOCK, HOLDLOCK|  
-|Freigeben|TABLOCK, HOLDLOCK|  
+|FREIGEBEN|TABLOCK, HOLDLOCK|  
 |Freigabe von Zeilen exklusiv|TABLOCK, xlock, HOLDLOCK|  
 |Ausschließliche|TABLOCKX, HOLDLOCK|  
   
@@ -371,9 +371,9 @@ Wenn Sie im Feld **Modus** einen Konvertierungsmodus auswählen, wendet SSMA die
 ### <a name="use-isnull-in-replace-function-calls"></a>Verwenden von IsNull in Replace-Funktionsaufrufen  
 Die IsNull-Anweisung wird in Replace-Funktionsaufrufen zum Emulieren des DB2-Verhaltens verwendet. Die folgenden Optionen sind für diese Einstellung vorhanden:  
   
--   JA  
+-   YES  
   
--   NO  
+-   Nein  
   
 Wenn Sie im Feld **Modus** einen Konvertierungsmodus auswählen, wendet SSMA die folgende Einstellung an:  
   
@@ -384,9 +384,9 @@ Wenn Sie im Feld **Modus** einen Konvertierungsmodus auswählen, wendet SSMA die
 ### <a name="use-isnull-in-concat-function-calls"></a>Verwenden von IsNull in Concat-Funktionsaufrufen  
 Die IsNull-Anweisung wird in Concat-Funktionsaufrufen zum Emulieren des DB2-Verhaltens verwendet. Die folgenden Optionen sind für diese Einstellung vorhanden:  
   
--   JA  
+-   YES  
   
--   NO  
+-   Nein  
   
 Wenn Sie im Feld **Modus** einen Konvertierungsmodus auswählen, wendet SSMA die folgende Einstellung an:  
   

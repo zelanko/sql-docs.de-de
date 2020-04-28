@@ -10,10 +10,10 @@ ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 6cb2f4196737cceec2f60684de1b7409f5e383a0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083395"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Herstellen einer Verbindung mit Sybase (SybaseToSQL)
@@ -21,7 +21,7 @@ Verwenden Sie das Dialogfeld **mit Sybase verbinden** , um eine Verbindung mit d
   
 Um auf dieses Dialogfeld zuzugreifen, wählen Sie im Menü **Datei** die Option **mit Sybase verbinden**aus. Wenn Sie bereits eine Verbindung hergestellt haben, stellt der Befehl **erneut eine Verbindung mit Sybase**her.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Anbieter**  
 Wählen Sie einen der installierten Anbieter auf dem Computer aus, um eine Verbindung mit dem Sybase-Server herzustellen.  
   
@@ -38,7 +38,7 @@ Wenn Sie einen nicht standardmäßigen Port für Verbindungen mit ASE verwenden,
 Geben Sie den Benutzernamen ein, der zum Herstellen der Verbindung mit der ASE verwendet wird. Dies ist eine Standardmodus-Option.  
   
 **Kennwort**  
-Geben Sie das Kennwort für den Benutzernamen ein, Dies ist eine Standardmodus-Option.  
+Geben Sie das Kennwort für den Benutzernamen ein. Dies ist eine Standardmodus-Option.  
   
 **Verbindungszeichenfolge**  
 Geben Sie die vollständige Verbindungs Zeichenfolge für die Verbindung mit ASE ein.  
@@ -69,7 +69,7 @@ Verbindungs Zeichenfolgen bestehen aus Parameter Name-Wert-Paaren. Die Parameter
   
     |Einstellung|Parameter Sybase 12,5/15|  
     |-----------|-----------------------------|  
-    |Treibername|Trei|  
+    |Treibername|Treiber|  
     |Servername|Server|  
     |Benutzername|UID|  
     |Kennwort|PWD|  

@@ -10,10 +10,10 @@ ms.assetid: 390ef0c2-107c-4443-9495-80f35f22d168
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 2e00eece4d8a3064806b401975aa299e76518f3f
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061206"
 ---
 # <a name="advanced-object-selection--mysqltosql"></a>Erweiterte Objektauswahl (MySqlToSql)
@@ -25,7 +25,7 @@ Wenn Sie das Dialogfeld zum ersten Mal öffnen, klicken Sie auf **Unterkategorie
   
 Bevor Sie dieses Dialogfeld verwenden, möchten Sie möglicherweise erzwingen, dass SSMA alle Metadaten lädt, indem Sie entweder Schemas oder das Projekt speichern.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Alle Elemente überprüfen**  
 Fügt ein Häkchen neben allen Elementen hinzu. Diese Elemente werden sofort im metadatenexplorer ausgewählt.  
   

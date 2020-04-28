@@ -20,10 +20,10 @@ ms.assetid: 8b17a9a4-b57f-4220-8138-fc73581b1670
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c4f2f4b8ea0184d063a6423f27fdf2cf9c450a05
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078651"
 ---
 # <a name="sysspatial_index_tessellations-transact-sql"></a>sys.spatial_index_tessellations (Transact-SQL)
@@ -45,13 +45,13 @@ ms.locfileid: "68078651"
 |bounding_box_xmax|**float (53)**|X-Koordinate der oberen rechten Ecke des umgebenden Felds, eine von: NULL = ist für ein bestimmtes Mosaik Schema nicht zutreffend (z. b. GEOGRAPHY_GRID) *n* = Wenn tessellation_scheme GEOMETRY_GRID ist, der maximale x-Koordinaten Wert|  
 |bounding_box_ymax|**float (53)**|Die y-Koordinate der oberen rechten Ecke des umgebenden Felds, eine von: NULL = ist für ein bestimmtes Mosaik Schema (z. b. GEOGRAPHY_GRID) *n* = nicht zutreffend, Wenn tessellation_scheme GEOMETRY_GRID ist, der maximale y-Koordinaten Wert|  
 |level_1_grid|**smallint**|Die Dichte des Rasters der obersten Ebene. Wenn tessellation_scheme GEOMETRY_GRID oder GEOGRAPHY_GRID ist, gilt Folgendes: 16 = 4 x 4 Grid (Low) 64 = 8 x 8 Grid (Medium) 256 = 16 by 16 Grid (High) NULL = ist für den angegebenen räumlichen Indextyp oder das Mosaik Schema nicht zutreffend.  NULL wird zurückgegeben, wenn das neue Mosaikschema von SQL Server 11 verwendet wird.|  
-|level_1_grid_desc|**nvarchar (60)**|Die Raster Dichte für das Raster der obersten Ebene, eines der folgenden Werte: niedrig Mittelhohe NULL = ist für den angegebenen räumlichen Indextyp oder das Mosaik Schema nicht zutreffend.  NULL wird zurückgegeben, wenn das neue Mosaikschema von SQL Server 11 verwendet wird.|  
+|level_1_grid_desc|**nvarchar(60)**|Die Raster Dichte für das Raster der obersten Ebene, eines der folgenden Werte: niedrig Mittelhohe NULL = ist für den angegebenen räumlichen Indextyp oder das Mosaik Schema nicht zutreffend.  NULL wird zurückgegeben, wenn das neue Mosaikschema von SQL Server 11 verwendet wird.|  
 |level_2_grid|**smallint**|Die Dichte des Rasters der zweiten Ebene. Wenn tessellation_scheme GEOMETRY_GRID oder GEOGRAPHY_GRID ist, gilt Folgendes: 16 = 4 x 4 Grid (Low) 64 = 8 x 8 Grid (Medium) 256 = 16 by 16 Grid (High) NULL = ist für den angegebenen räumlichen Indextyp oder das Mosaik Schema nicht zutreffend.  NULL wird zurückgegeben, wenn das neue Mosaikschema von SQL Server 11 verwendet wird.|  
-|level_2_grid_desc|**nvarchar (60)**|Die Raster Dichte für das Raster der zweiten Ebene, eines der folgenden Werte: niedrig Mittelhohe NULL = ist für den angegebenen räumlichen Indextyp oder das Mosaik Schema nicht zutreffend.  NULL wird zurückgegeben, wenn das neue Mosaikschema von SQL Server 11 verwendet wird.|  
+|level_2_grid_desc|**nvarchar(60)**|Die Raster Dichte für das Raster der zweiten Ebene, eines der folgenden Werte: niedrig Mittelhohe NULL = ist für den angegebenen räumlichen Indextyp oder das Mosaik Schema nicht zutreffend.  NULL wird zurückgegeben, wenn das neue Mosaikschema von SQL Server 11 verwendet wird.|  
 |level_3_grid|**smallint**|Die Dichte des Rasters der dritten Ebene.   Wenn tessellation_scheme GEOMETRY_GRID oder GEOGRAPHY_GRID ist, gilt Folgendes: 16 = 4 x 4 Grid (Low) 64 = 8 x 8 Grid (Medium) 256 = 16 by 16 Grid (High) NULL = ist für den angegebenen räumlichen Indextyp oder das Mosaik Schema nicht zutreffend.  NULL wird zurückgegeben, wenn das neue Mosaikschema von SQL Server 11 verwendet wird.|  
-|level_3_grid_desc|**nvarchar (60)**|Die Raster Dichte für das Raster der dritten Ebene, eines der folgenden Werte: niedrig Mittelhohe NULL = ist für den angegebenen räumlichen Indextyp oder das Mosaik Schema nicht zutreffend.  NULL wird zurückgegeben, wenn das neue Mosaikschema von SQL Server 11 verwendet wird.|  
+|level_3_grid_desc|**nvarchar(60)**|Die Raster Dichte für das Raster der dritten Ebene, eines der folgenden Werte: niedrig Mittelhohe NULL = ist für den angegebenen räumlichen Indextyp oder das Mosaik Schema nicht zutreffend.  NULL wird zurückgegeben, wenn das neue Mosaikschema von SQL Server 11 verwendet wird.|  
 |level_4_grid|**smallint**|Die Dichte des Rasters der vierten Ebene. Wenn tessellation_scheme GEOMETRY_GRID oder GEOGRAPHY_GRID ist, gilt Folgendes: 16 = 4 x 4 Grid (Low) 64 = 8 x 8 Grid (Medium) 256 = 16 by 16 Grid (High) NULL = ist für den angegebenen räumlichen Indextyp oder das Mosaik Schema nicht zutreffend.  NULL wird zurückgegeben, wenn das neue Mosaikschema von SQL Server 11 verwendet wird.|  
-|level_4_grid_desc|**nvarchar (60)**|Die Raster Dichte für das Raster der vierten Ebene, eines der folgenden Werte: < niedrige mittlere hohe NULL = ist für den angegebenen räumlichen Indextyp oder das Mosaik Schema nicht zutreffend.  NULL wird zurückgegeben, wenn das neue Mosaikschema von SQL Server 11 verwendet wird.|  
+|level_4_grid_desc|**nvarchar(60)**|Die Raster Dichte für das Raster der vierten Ebene, eines der folgenden Werte: < niedrige mittlere hohe NULL = ist für den angegebenen räumlichen Indextyp oder das Mosaik Schema nicht zutreffend.  NULL wird zurückgegeben, wenn das neue Mosaikschema von SQL Server 11 verwendet wird.|  
 |cells_per_object|**int**|Anzahl von Zellen pro räumlichem Objekt. folgende Werte sind möglich: Wenn tessellation_scheme GEOMETRY_GRID oder GEOGRAPHY_GRID ist, *n* = Anzahl der Zellen pro Objekt NULL = nicht zutreffend für den angegebenen räumlichen Indextyp oder das Mosaik Schema.|  
   
 ## <a name="permissions"></a>Berechtigungen  
@@ -62,7 +62,7 @@ ms.locfileid: "68078651"
  [Übersicht über räumliche Indizes](../../relational-databases/spatial/spatial-indexes-overview.md)   
  [sys. Objects &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)   
  [sys. spatial_indexes &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)   
- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
+ [sys. Indexes &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
  [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)  
   
   

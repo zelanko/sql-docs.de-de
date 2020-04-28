@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 2d152b51e0c1c996e0bb3309e554a70683937493
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68088355"
 ---
 # <a name="nonemptycrossjoin-mdx"></a>NonEmptyCrossjoin (MDX)
@@ -34,7 +34,7 @@ NonEmptyCrossjoin(Set_Expression1 [ ,Set_Expression2,...] [,Count ] )
  *Set_Expression2*  
  Ein gültiger MDX-Ausdruck (Multidimensional Expressions), der eine Menge zurückgibt.  
   
- *Countdown*  
+ *Count*  
  Ein gültiger numerischer Ausdruck, der die Anzahl der zurückzugebenden Mengen angibt.  
   
 ## <a name="remarks"></a>Bemerkungen  
@@ -46,6 +46,6 @@ NonEmptyCrossjoin(Set_Expression1 [ ,Set_Expression2,...] [,Count ] )
 >  Diese Funktion ist veraltet, und Sie sollten sie nicht verwenden; sie wird nur beibehalten, um die Abwärtskompatibilität aufrechtzuerhalten. Stattdessen sollten Sie die [vorhanden (MDX)](../mdx/exists-mdx.md) -Funktion mit dem Measure Group Name-Argument oder der [NonEmpty (MDX)](../mdx/nonempty-mdx.md) -Funktion verwenden.  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [MDX-Funktionsreferenz &#40;MDX-&#41;](../mdx/mdx-function-reference-mdx.md)  
+ [MDX-Funktionsreferenz &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

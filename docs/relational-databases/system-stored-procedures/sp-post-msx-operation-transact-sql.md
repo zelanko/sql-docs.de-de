@@ -18,10 +18,10 @@ ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 93e9c574346ad57a6947645552616cd8db46fe85
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056370"
 ---
 # <a name="sp_post_msx_operation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
@@ -59,7 +59,7 @@ sp_post_msx_operation
   
 `[ @specific_target_server = ] 'target_server'`Der Name des Zielservers, für den der angegebene Vorgang gilt. Wenn *job_id* angegeben ist, aber *target_server* nicht angegeben ist, werden die Vorgänge für alle Auftrags Server des Auftrags gesendet. *target_server* ist vom Datentyp **nvarchar (30)** und hat den Standardwert NULL.  
   
-`[ @value = ] value`Das Abruf Intervall in Sekunden. der Wert ist vom Datentyp **int**und hat den Standard *Wert* NULL. Geben Sie diesen Parameter nur an, wenn der *Vorgang* " **set-** Abruf" ist  
+`[ @value = ] value`Das Abruf Intervall in Sekunden. *value* ist vom Datentyp **int**. Der Standardwert ist NULL. Geben Sie diesen Parameter nur an, wenn der *Vorgang* " **set-** Abruf" ist  
   
 `[ @schedule_uid = ] schedule_uid`Der eindeutige Bezeichner für den Zeitplan, auf den der Vorgang angewendet wird. *schedule_uid* ist vom Datentyp **uniqueidentifier**und hat keinen Standardwert.  
   

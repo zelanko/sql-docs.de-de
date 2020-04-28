@@ -9,10 +9,10 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ms.openlocfilehash: 750f8ae7a1b9275bdab734a15134d255916e7d44
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68098523"
 ---
 # <a name="mdx-data-definition---alter-cube"></a>MDX-Datendefinition – ALTER CUBE
@@ -91,7 +91,7 @@ CELL CALCULATION Calculation_Name
  *ParentName*  
  Ein gültiger Zeichenfolgenausdruck, der, sofern das neue Dimensionselement nicht auf der Stammebene erstellt wird, den Namen des ihm übergeordneten Elements bereitstellt.  
   
- *Membername*  
+ *MemberName*  
  Ein gültiger Zeichenfolgenausdruck, der einen Elementnamen bereitstellt.  
   
  *Key_Value*  
@@ -139,7 +139,7 @@ CELL CALCULATION Calculation_Name
  *ParentName*  
  Ein gültiger Zeichenfolgenausdruck, der den Namen des neuen übergeordneten Elements des zu verschiebenden Dimensionselements bereitstellt.  
   
- *Membername*  
+ *MemberName*  
  Ein gültiger Zeichenfolgenausdruck, der einen Elementnamen bereitstellt.  
   
  Unsigned_*Ganzzahl*  
@@ -151,7 +151,7 @@ CELL CALCULATION Calculation_Name
  Mit der UPDATE DIMENSION MEMBER-Klausel können Sie Eigenschaften eines Elements sowie die einem Element zugeordnete benutzerdefinierte Elementformel ändern.  
   
 ### <a name="arguments"></a>Argumente  
- *Membername*  
+ *MemberName*  
  Ein gültiger Zeichenfolgenausdruck, der einen Elementnamen bereitstellt.  
   
  *MDX_Expression*  

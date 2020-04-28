@@ -18,10 +18,10 @@ ms.assetid: a8513f4a-c025-49c8-99c3-4c83cb7f51ed
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ea264c48332f6e72a5f26b330e42cfb1e3d3ff8d
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68061254"
 ---
 # <a name="sp_dbremove-transact-sql"></a>sp_dbremove (Transact-SQL)
@@ -53,7 +53,7 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
  Keine  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
+ Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** .  
   
 ## <a name="examples"></a>Beispiele  
  Dieses Beispiel entfernt die `sales`-Datenbank und alle zugeordneten Dateien.  
@@ -63,9 +63,9 @@ EXEC sp_dbremove sales;
 ```  
   
 ## <a name="see-also"></a>Weitere Informationen  
- [Alter Database &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
- [Create Database &#40;SQL Server Transact-SQL-&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
- [DBCC &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
+ [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
+ [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
+ [DBCC &#40;Transact-SQL-&#41;](../../t-sql/database-console-commands/dbcc-transact-sql.md)   
  [sp_detach_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-detach-db-transact-sql.md)  
   
   

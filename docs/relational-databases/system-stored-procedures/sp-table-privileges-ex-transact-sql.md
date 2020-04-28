@@ -18,10 +18,10 @@ ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: b40f7233bb3c50203a68c0b01cfcbdaf631e0098
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096172"
 ---
 # <a name="sp_table_privileges_ex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
@@ -51,7 +51,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
   
 `[ @table_catalog = ] 'table_catalog'`Der Name der Datenbank, in der sich die angegebene *table_name* befindet. *TABLE_CATALOG* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL.  
   
-`[ @fUsePattern = ] 'fUsePattern'`Bestimmt, ob die Zeichen "_", "%", "[" und "]" als Platzhalter Zeichen interpretiert werden. Gültige Werte sind 0 (Mustervergleich ist deaktiviert) und 1 (Mustervergleich ist aktiviert). *fUsePattern* ist vom Typ **Bit**. der Standardwert ist 1.  
+`[ @fUsePattern = ] 'fUsePattern'`Bestimmt, ob die Zeichen "_", "%", "[" und "]" als Platzhalter Zeichen interpretiert werden. Gültige Werte sind 0 (Mustervergleich ist deaktiviert) und 1 (Mustervergleich ist aktiviert). *fUsePattern* ist vom Datentyp **bit**. Der Standardwert ist 1.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  Keine  
@@ -75,7 +75,7 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
  Erfordert SELECT-Berechtigung für das Schema.  
   
 ## <a name="examples"></a>Beispiele  
- In diesem Beispiel werden die Privileginformationen zu Tabellen zurückgegeben, deren Namen in der `Product`-Datenbank des angegebenen Verbindungsservers [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] mit `Seattle1` beginnen. ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird als Verbindungs Server angenommen).  
+ In diesem Beispiel werden die Privileginformationen zu Tabellen zurückgegeben, deren Namen in der [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)]-Datenbank des angegebenen Verbindungsservers `Product` mit `Seattle1` beginnen. ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] wird als Verbindungs Server angenommen).  
   
 ```  
 EXEC sp_table_privileges_ex @table_server = 'Seattle1',   
@@ -86,7 +86,7 @@ EXEC sp_table_privileges_ex @table_server = 'Seattle1',
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_column_privileges_ex &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-ex-transact-sql.md)   
- [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
+ [Gespeicherte System Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [Gespeicherte Prozeduren für verteilte Abfragen &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)  
   
   

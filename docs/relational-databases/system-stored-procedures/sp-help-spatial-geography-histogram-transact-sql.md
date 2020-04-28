@@ -18,10 +18,10 @@ ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
 author: CarlRabeler
 ms.author: carlrab
 ms.openlocfilehash: 3c2b94b4c76054fb1e9ce6e078f3490ad263a52c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085193"
 ---
 # <a name="sp_help_spatial_geography_histogram-transact-sql"></a>sp_help_spatial_geography_histogram (Transact-SQL)
@@ -57,7 +57,7 @@ sp_help_spatial_geography_histogram [ @tabname =] 'tabname'
 |-----------------|---------------|-----------------|  
 |**cellid**|**int**|Stellt die eindeutige ID jeder Zelle mit einer Anfangs Anzahl von 1 dar.|  
 |**Kern**|**geography**|Ist ein rechteckiges Polygon, das die einzelnen Zellen darstellt. Die Zellenform ist mit der für die räumliche Indizierung verwendeten Zellenform identisch.|  
-|**row_count**|**BIGINT**|Gibt die Anzahl räumlicher Objekte an, die die Zelle berühren oder enthalten.|  
+|**row_count**|**bigint**|Gibt die Anzahl räumlicher Objekte an, die die Zelle berühren oder enthalten.|  
   
 ## <a name="permissions"></a>Berechtigungen  
  Der Benutzer muss ein Mitglied der Datenbankrolle **public** sein. Erfordert die READ ACCESS-Berechtigung für den Server und das Objekt.  

@@ -19,10 +19,10 @@ ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 658487186924fe5547edee70425524b2b4e3be6c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083593"
 ---
 # <a name="migration-wizard-accesstosql"></a>Migrations-Assistent (accesstosql)
@@ -43,7 +43,7 @@ Standardmäßig startet SSMA den Migrations-Assistenten, wenn Sie SSMA starten. 
 Auf der Seite Neues Projekt erstellen können Sie den Projekt Dateinamen, den Speicherort und den Migrations Projekttyp (die Version des Ziel SQL Server für die Migration verwenden) eingeben. Weitere Informationen finden Sie unter [New Project (SSMA)](https://msdn.microsoft.com/ca294f6d-eeb5-42ca-9306-156281a3f0f3)  
   
 ## <a name="add-access-databases-page"></a>Seite "Zugriffs Datenbanken hinzufügen"  
-Auf der Seite Access-Datenbanken hinzufügen Fügen Sie dem Projekt eine oder mehrere Zugriffs Datenbanken hinzu. Sie können einzelne Datenbanken hinzufügen, indem Sie auf **Datenbanken hinzufügen**klicken und dann die Datenbanken im Fenster **Öffnen** auswählen. Sie können Datenbanken auch mithilfe der Schaltfläche **Datenbanken suchen** suchen. Weitere Informationen finden Sie in den folgenden Themen:  
+Auf der Seite Access-Datenbanken hinzufügen Fügen Sie dem Projekt eine oder mehrere Zugriffs Datenbanken hinzu. Sie können einzelne Datenbanken hinzufügen, indem Sie auf **Datenbanken hinzufügen**klicken und dann die Datenbanken im Fenster **Öffnen** auswählen. Sie können Datenbanken auch mithilfe der Schaltfläche **Datenbanken suchen** suchen. Weitere Informationen finden Sie unter den folgenden Themen:  
   
 -   [Hinzufügen und Entfernen von Access-Datenbankdateien](adding-and-removing-access-database-files-accesstosql.md)  
   
@@ -60,7 +60,7 @@ Wählen Sie auf der Seite zu migrierende Objekte auswählen die Objekte aus, die
   
 1.  Erweitern Sie **Access-Metabase**, und erweitern Sie dann **Datenbanken**.  
   
-2.  Führen Sie einen oder mehrere der folgenden Schritte aus:  
+2.  Führen Sie eine oder mehrere der folgenden Aktionen aus:  
   
     -   Aktivieren Sie das Kontrollkästchen neben **Datenbanken**, um alle Datenbanken zu konvertieren.  
   

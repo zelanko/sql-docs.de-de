@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
 ms.openlocfilehash: 0c32af194a1e74e0fd11e65a75109165e81cc4c1
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68090874"
 ---
 # <a name="sysdm_db_wait_stats-azure-sql-database"></a>sys.dm_db_wait_stats (Azure SQL-Datenbank)
@@ -35,11 +35,11 @@ ms.locfileid: "68090874"
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|wait_type|**nvarchar (60)**|Der Name des Wartetyps. Weitere Informationen finden Sie unter [Wartetypen](#WaitTypes) weiter unten in diesem Thema.|  
-|waiting_tasks_count|**BIGINT**|Anzahl von Wartevorgängen für diesen Wartetyp. Dieser Leistungsindikator wird beim Starten eines Wartevorgangs inkrementiert.|  
-|wait_time_ms|**BIGINT**|Gesamtwartezeit für diesen Wartetyp (in Millisekunden). Diese Zeit beinhaltet signal_wait_time_ms.|  
-|max_wait_time_ms|**BIGINT**|Maximale Wartezeit für diesen Wartetyp.|  
-|signal_wait_time_ms|**BIGINT**|Differenz zwischen dem Zeitpunkt der Signalisierung des wartenden Threads und dem Beginn der Ausführung.|  
+|wait_type|**nvarchar(60)**|Der Name des Wartetyps. Weitere Informationen finden Sie unter [Wartetypen](#WaitTypes) weiter unten in diesem Thema.|  
+|waiting_tasks_count|**bigint**|Anzahl von Wartevorgängen für diesen Wartetyp. Dieser Leistungsindikator wird beim Starten eines Wartevorgangs inkrementiert.|  
+|wait_time_ms|**bigint**|Gesamtwartezeit für diesen Wartetyp (in Millisekunden). Diese Zeit beinhaltet signal_wait_time_ms.|  
+|max_wait_time_ms|**bigint**|Maximale Wartezeit für diesen Wartetyp.|  
+|signal_wait_time_ms|**bigint**|Differenz zwischen dem Zeitpunkt der Signalisierung des wartenden Threads und dem Beginn der Ausführung.|  
   
 ## <a name="remarks"></a>Bemerkungen  
   
@@ -62,7 +62,7 @@ ms.locfileid: "68090874"
 ## <a name="permissions"></a>Berechtigungen  
  Erfordert die VIEW DATABASE STATE-Berechtigung auf dem Server.  
   
-##  <a name="WaitTypes"></a>Warte Typen  
+##  <a name="types-of-waits"></a><a name="WaitTypes"></a>Warte Typen  
  Ressourcenwartevorgänge  
  Ressourcenwartevorgänge finden dann statt, wenn ein Arbeitsthread den Zugriff auf eine Ressource anfordert, die nicht verfügbar ist, da sie von einem anderen Arbeitsthread verwendet wird oder noch nicht zur Verfügung steht. Beispiele für Ressourcenwartevorgänge sind Sperren, Latches, Netzwerk- und Datenträger-E/A-Wartevorgänge. Sperren und Latchwartevorgänge sind Vorgänge, die auf Synchronisierungsobjekte warten.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "68090874"
 |FSAGENT|Tritt auf, wenn ein FILESTREAM-Datei-E/A-Vorgang auf eine FILESTREAM-Agent-Ressource wartet, die gerade von einem anderen Datei-E/A-Vorgang verwendet wird.|  
 |FSTR_CONFIG_MUTEX|Tritt bei einem Wartevorgang auf eine andere Neukonfiguration eines FILESTREAM-Funktionen auf, die abgeschlossen werden soll.|  
 |FSTR_CONFIG_RWLOCK|Tritt bei einem Wartevorgang auf die Serialisierung des Zugriffs auf die FILESTREAM-Konfigurationsparameter auf.|  
-|FT_METADATA_MUTEX|Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
+|FT_METADATA_MUTEX|Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
 |FT_RESTART_CRAWL|Tritt auf, wenn ein Volltextcrawl von einem letzten bekannten fehlerfreien Punkt neu gestartet werden muss, um nach einem vorübergehenden Fehler wiederhergestellt zu werden. Durch die Wartezeit können die Arbeitstasks, die zurzeit an der jeweiligen Auffüllung arbeiten, abgeschlossen werden oder den aktuellen Schritt beenden.|  
 |FULLTEXT GATHERER|Tritt bei der Synchronisierung von Volltextvorgängen auf.|  
 |GUARDIAN|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -224,8 +224,7 @@ ms.locfileid: "68090874"
 |MSQL_DQ|Tritt auf, wenn ein Task auf das Ende eines verteilten Abfragevorgangs wartet. Dieser Wartetyp wird verwendet, um mögliche MARS-Anwendungsdeadlocks (Multiple Active Result Sets) zu erkennen. Die Wartezeit wird mit dem Ende des Aufrufs der verteilten Abfrage beendet.|  
 |MSQL_XACT_MGR_MUTEX|Tritt auf, wenn ein Task darauf wartet, in den Besitz des Sitzungstransaktions-Managers zu gelangen, um einen Transaktionsvorgang auf Sitzungsebene auszuführen.|  
 |MSQL_XACT_MUTEX|Tritt während der Synchronisierung der Transaktionsverwendung auf. Eine Anforderung muss den Mutex abrufen, bevor sie die Transaktion verwenden kann.|  
-|MSQL_XP|Tritt auf, wenn ein Task auf das Ende einer erweiterten gespeicherten Prozedur wartet. 
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet diesen Wartestatus, um mögliche MARS-Anwendungsdeadlocks zu erkennen. Die Wartezeit wird mit dem Ende des Aufrufs der erweiterten gespeicherten Prozedur beendet.|  
+|MSQL_XP|Tritt auf, wenn ein Task auf das Ende einer erweiterten gespeicherten Prozedur wartet. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] verwendet diesen Wartestatus, um mögliche MARS-Anwendungsdeadlocks zu erkennen. Die Wartezeit wird mit dem Ende des Aufrufs der erweiterten gespeicherten Prozedur beendet.|  
 |MSSEARCH|Tritt während Aufrufen der Volltextsuche auf. Diese Wartezeit endet, wenn der Volltextvorgang abgeschlossen ist. Sie zeigt keinen Konflikt an, sondern die Dauer von Volltextvorgängen.|  
 |NET_WAITFOR_PACKET|Tritt auf, wenn eine Verbindung während eines Netzwerklesevorgangs auf ein Netzwerkpaket wartet.|  
 |OLEDB|Tritt auf, wenn [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] den OLE DB-Anbieter von [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client aufruft. Dieser Wartetyp wird nicht für die Synchronisierung verwendet. Er zeigt vielmehr die Dauer von Aufrufen des OLE DB-Anbieters an.|  
@@ -380,11 +379,11 @@ ms.locfileid: "68090874"
 |XE_MODULEMGR_SYNC|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |XE_OLS_LOCK|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |XE_PACKAGE_LOCK_BACKOFF|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|FT_COMPROWSET_RWLOCK|Volltext wartet auf Metadatenvorgang für Fragment. Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
-|FT_IFTS_RWLOCK|Volltext wartet auf interne Synchronisierung. Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
+|FT_COMPROWSET_RWLOCK|Volltext wartet auf Metadatenvorgang für Fragment. Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
+|FT_IFTS_RWLOCK|Volltext wartet auf interne Synchronisierung. Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
 |FT_IFTS_SCHEDULER_IDLE_WAIT|Volltext-Wartetyp für den Ruhezustand des Zeitplanungsmoduls. Das Zeitplanungsmodul befindet sich im Leerlauf.|  
-|FT_IFTSHC_MUTEX|Volltext wartet auf einen fdhost-Steuerungsvorgang. Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
-|FT_IFTSISM_MUTEX|Volltext wartet auf einen Kommunikationsvorgang. Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
-|FT_MASTER_MERGE|Volltext wartet auf Masterzusammenführungsvorgang. Wird nur für Informationszwecke dokumentiert. Wird nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
+|FT_IFTSHC_MUTEX|Volltext wartet auf einen fdhost-Steuerungsvorgang. Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
+|FT_IFTSISM_MUTEX|Volltext wartet auf einen Kommunikationsvorgang. Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
+|FT_MASTER_MERGE|Volltext wartet auf Masterzusammenführungsvorgang. Wird nur für Informationszwecke dokumentiert. Nicht unterstützt. Zukünftige Kompatibilität wird nicht sichergestellt.|  
   
   

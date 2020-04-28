@@ -18,10 +18,10 @@ ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: cc058fea8e2ce86584c19a7a93018734f4782f69
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68084764"
 ---
 # <a name="data-tier-application-tables---sysdac_history_internal"></a>Tabellen von Datenschichtanwendung: sysdac_history_internal
@@ -35,18 +35,17 @@ ms.locfileid: "68084764"
 |**sequence_id**|**int**|Identifiziert einen Schritt innerhalb einer Aktion.|  
 |**instance_id**|**uniqueidentifier**|Der Bezeichner der DAC-Instanz. Diese Spalte kann in der Spalte **instance_id** in [dbo. sysdac_instances &#40;Transact-SQL-&#41;](../../relational-databases/system-catalog-views/data-tier-application-views-dbo-sysdac-instances.md)verknüpft werden.|  
 |**action_type**|**tinyint**|Bezeichner des Aktionstyps:<br /><br /> **0** = bereitstellen<br /><br /> **1** = erstellen<br /><br /> **2** = umbenennen<br /><br /> **3** = trennen<br /><br /> **4** = löschen|  
-|**action_type_name**|**varchar (19)**|Name des Aktionstyps:<br /><br /> **etablieren**<br /><br /> **Stelle**<br /><br /> **benen**<br /><br /> **Trennen**<br /><br /> **Lösch**|  
+|**action_type_name**|**varchar (19)**|Name des Aktionstyps:<br /><br /> **etablieren**<br /><br /> **Stelle**<br /><br /> **rename**<br /><br /> **Trennen**<br /><br /> **delete**|  
 |**dac_object_type**|**tinyint**|Bezeichner des Typs des von der Aktion betroffenen Objekts:<br /><br /> **0** = dacpac<br /><br /> **1** = Anmeldung<br /><br /> **2** = Datenbank|  
-|**dac_object_type_name**|**varchar (8)**|Name des Typs des von der Aktion betroffenen Objekts:<br /><br /> **dacpac** = DAC-Instanz<br /><br /> **Anmel**<br /><br /> **Verbindung**|  
+|**dac_object_type_name**|**varchar (8)**|Name des Typs des von der Aktion betroffenen Objekts:<br /><br /> **dacpac** = DAC-Instanz<br /><br /> **Anmel**<br /><br /> **database**|  
 |**action_status**|**tinyint**|Code, der den aktuellen Status der Aktion identifiziert:<br /><br /> **0** = ausstehend<br /><br /> **1** = Erfolg<br /><br /> **2** = Fehler|  
-|**action_status_name**|**varchar (11)**|Aktueller Status der Aktion:<br /><br /> **ausstehende**<br /><br /> **erfolglos**<br /><br /> **fehlerhaft**|  
+|**action_status_name**|**varchar (11)**|Aktueller Status der Aktion:<br /><br /> **ausstehende**<br /><br /> **erfolglos**<br /><br /> **UN**|  
 |**Erforderlich**|**bit**|Wird von [!INCLUDE[ssDE](../../includes/ssde-md.md)] verwendet, wenn das Rollback eines DAC-Vorgangs ausgeführt wird.|  
 |**dac_object_name_pretran**|**sysname**|Name des Objekts, bevor ein Commit für die Transaktion ausgeführt wird, in der die Aktion enthalten ist. Wird nur für Datenbanken und Anmeldenamen verwendet.|  
 |**dac_object_name_posttran**|**sysname**|Name des Objekts, nachdem ein Commit für die Transaktion ausgeführt wurde, in der die Aktion enthalten ist. Wird nur für Datenbanken und Anmeldenamen verwendet.|  
-|**sqlscript**|**nvarchar(max)**|
-  [!INCLUDE[tsql](../../includes/tsql-md.md)]-Skript, das eine Aktion für eine Datenbank oder einen Anmeldenamen implementiert.|  
+|**sqlscript**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)]-Skript, das eine Aktion für eine Datenbank oder einen Anmeldenamen implementiert.|  
 |**Nutz**|**varbinary(max)**|DAC-Paketdefinition, die in einer binären codierten Zeichenfolge gespeichert ist.|  
-|**Iny**|**varchar(max)**|Zeichnet die Anmeldung eines Benutzers auf, der potenziellen Datenverlust in einem DAC-Upgrade als akzeptabel angegeben hat.|  
+|**Kommentare**|**varchar(max)**|Zeichnet die Anmeldung eines Benutzers auf, der potenziellen Datenverlust in einem DAC-Upgrade als akzeptabel angegeben hat.|  
 |**error_string**|**nvarchar(max)**|Fehlermeldung, die im Fall eines Fehler generiert wird.|  
 |**created_by**|**sysname**|Der Anmeldename, unter dem die Aktion, die diesen Eintrag erstellt hat, gestartet wurde.|  
 |**date_created**|**datetime**|Datum und Uhrzeit, zu denen dieser Eintrag erstellt wurde.|  

@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 410f6dcca93614c42de4a703fd591bb1c9cbc59a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68060554"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
@@ -52,14 +52,14 @@ ms.locfileid: "68060554"
 |**last_used_value**|**sql_variant NULL**|Gibt den letzten von der [Next value for](../../t-sql/functions/next-value-for-transact-sql.md) -Funktion generierten Wert zurück. Gilt für SQL Server 2017 und höher.|  
   
 ## <a name="permissions"></a>Berechtigungen  
- In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und späteren Versionen ist die Sichtbarkeit der Metadaten in Katalogsichten auf sicherungsfähige Elemente eingeschränkt, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde. Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ In [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] und späteren Versionen ist die Sichtbarkeit der Metadaten in Katalogsichten auf sicherungsfähige Elemente eingeschränkt, bei denen der Benutzer entweder der Besitzer ist oder für die dem Benutzer eine Berechtigung erteilt wurde.  Weitere Informationen finden Sie unter [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Sequenznummern](../../relational-databases/sequence-numbers/sequence-numbers.md)   
- [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
- [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
- [DROP SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
- [NEXT VALUE FOR &#40;Transact-SQL&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
+ [Create Sequence &#40;Transact-SQL-&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
+ [Alter Sequence &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
+ [Drop Sequence &#40;Transact-SQL-&#41;](../../t-sql/statements/drop-sequence-transact-sql.md)   
+ [Nächster Wert für &#40;Transact-SQL-&#41;](../../t-sql/functions/next-value-for-transact-sql.md)   
  [sp_sequence_get_range &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-sequence-get-range-transact-sql.md)  
   
   

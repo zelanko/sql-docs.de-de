@@ -18,10 +18,10 @@ ms.assetid: 57971787-f9f5-4199-9f64-c2b61a308906
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 6a1a2ce1208dcf359bb0586c3de1fe294644e3a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68054878"
 ---
 # <a name="sp_help_jobserver-transact-sql"></a>sp_help_jobserver (Transact-SQL)
@@ -59,7 +59,7 @@ sp_help_jobserver
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|ID des Zielservers|  
-|**server_name**|**nvarchar (30)**|Computername des Zielservers|  
+|**server_name**|**nvarchar(30)**|Computername des Zielservers|  
 |**enlist_date**|**datetime**|Datum, an dem der Zielserver auf dem Masterserver eingetragen wurde|  
 |**last_poll_date**|**datetime**|Datum, an dem der Zielserver den Masterserver zuletzt abgerufen hat|  
   
@@ -70,7 +70,7 @@ sp_help_jobserver
 |**last_run_date**|**int**|Datum, an dem die Ausführung des Auftrags auf diesem Zielserver zuletzt gestartet wurde|  
 |**last_run_time**|**int**|Uhrzeit, zu der die Ausführung des Auftrags auf diesem Server zuletzt gestartet wurde|  
 |**last_run_duration**|**int**|Dauer des Auftrags bei der letzten Ausführung auf diesem Zielserver (in Sekunden)|  
-|**last_outcome_message**|**nvarchar (1024)**|Beschreibt das letzte Ergebnis des Auftrags|  
+|**last_outcome_message**|**nvarchar(1024)**|Beschreibt das letzte Ergebnis des Auftrags|  
 |**last_run_outcome**|**int**|Ergebnis des Auftrags bei der letzten Ausführung auf diesem Server:<br /><br /> **0** = fehlgeschlagen<br /><br /> **1** = erfolgreich<br /><br /> **3** = abgebrochen<br /><br /> **5** = unbekannt|  
   
 ## <a name="permissions"></a>Berechtigungen  

@@ -18,10 +18,10 @@ ms.assetid: bda66e1b-6bbd-49be-b86e-37efc920e912
 author: MashaMSFT
 ms.author: mathoma
 ms.openlocfilehash: 9948767ca0eca5721207079f978987142653e9c2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68091908"
 ---
 # <a name="xp_sqlmaint-transact-sql"></a>xp_sqlmaint (Transact-SQL)
@@ -48,13 +48,13 @@ xp_sqlmaint 'switch_string'
  Der **-?** der Schalter ist für **xp_sqlmaint**ungültig.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
- Keine. Gibt einen Fehler zurück, wenn das Hilfsprogramm **sqlmaint** fehlschlägt.  
+ Keine Gibt einen Fehler zurück, wenn das Hilfsprogramm **sqlmaint** fehlschlägt.  
   
 ## <a name="remarks"></a>Bemerkungen  
  Wenn diese Prozedur von einem Benutzer aufgerufen wird, der mit SQL Server-Authentifizierung angemeldet ist, werden die Schalter **-U "***login_id***"** und **"-P" für "***Password***"** vor der Ausführung *switch_string* vorangestellt. Wenn der Benutzer mit der Windows-Authentifizierung angemeldet ist, wird *switch_string* ohne Änderung an **sqlmaint**weitergegeben.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
+ Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** .  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel ruft `xp_sqlmaint` das Hilfsprogramm `sqlmaint` auf, um Integritätsprüfungen auszuführen, eine Berichtsdatei zu erstellen und `msdb.dbo.sysdbmaintplan_history` zu aktualisieren.  

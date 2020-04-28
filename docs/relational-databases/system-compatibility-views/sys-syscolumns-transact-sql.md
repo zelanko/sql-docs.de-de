@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c158533188db7e3d72235a69bff1b14546a1a1a8
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68089241"
 ---
 # <a name="syssyscolumns-transact-sql"></a>sys.syscolumns (Transact-SQL)
@@ -39,29 +39,29 @@ ms.locfileid: "68089241"
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Name der Spalte oder des Prozedurparameters|  
-|**Name**|**int**|Objekt-ID der Tabelle, zu der diese Spalte gehört, oder ID der gespeicherten Prozedur, der dieser Parameter zugeordnet ist|  
-|**xType**|**tinyint**|Physischer Speichertyp aus **sys.types**|  
+|**id**|**int**|Objekt-ID der Tabelle, zu der diese Spalte gehört, oder ID der gespeicherten Prozedur, der dieser Parameter zugeordnet ist|  
+|**xtype**|**tinyint**|Physischer Speichertyp aus **sys. types**.|  
 |**typestat**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**smallint**|ID des erweiterten benutzerdefinierten Datentyps. Führt zu einem Überlauf oder gibt NULL zurück, wenn die Anzahl der Datentypen 32.767 übersteigt.|  
-|**Füll**|**smallint**|Maximale physische Speicherlänge aus **sys**.**types**.|  
+|**length**|**smallint**|Maximale physische Speicherlänge aus **sys**.**types**.|  
 |**xprec**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**XScale**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**ColId**|**smallint**|Spalten- oder Parameter-ID|  
+|**xscale**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**colid**|**smallint**|Spalten- oder Parameter-ID|  
 |**xoffset**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**bitpos**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**bleiben**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colstat**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**cDefault**|**int**|ID des Standards für diese Spalte|  
+|**cdefault**|**int**|ID des Standards für diese Spalte|  
 |**-**|**int**|ID der Regel oder CHECK-Einschränkung für diese Spalte|  
 |**Zahl**|**smallint**|Nummer der Unterprozedur, wenn die Prozedur gruppiert ist.<br /><br /> 0 = Einträge, die sich nicht auf eine Prozedur beziehen.|  
 |**colorder**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**autoval**|**varbinary (8000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**kompensieren**|**smallint**|Offset in die Zeile, in der diese Spalte enthalten ist|  
+|**autoval**|**varbinary(8000)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**offset**|**smallint**|Offset in die Zeile, in der diese Spalte enthalten ist|  
 |**collationid**|**int**|ID der Sortierung der Spalte. NULL für nicht zeichenbasierte Spalten.|  
-|**Stands**|**tinyint**|Bitmuster, das zum Beschreiben einer Eigenschaft der Spalte oder des Parameters verwendet wird:<br /><br /> 0x08 = In der Spalte sind NULL-Werte zulässig.<br /><br /> 0x10 = ANSI-Auffüllung war aktiviert, als **varchar** oder **varbinary** -Spalten hinzugefügt wurden. Nachfolgende Leerzeichen werden bei **varchar** -Spalten beibehalten, nachfolgende Nullen werden bei **varbinary** -Spalten beibehalten.<br /><br /> 0x40 = Der Parameter ist ein OUTPUT-Parameter.<br /><br /> 0x80 = Die Spalte ist eine Identitätsspalte.|  
-|**type**|**tinyint**|Physischer Speichertyp aus **sys**. **Typen**.|  
+|**status**|**tinyint**|Bitmuster, das zum Beschreiben einer Eigenschaft der Spalte oder des Parameters verwendet wird:<br /><br /> 0x08 = In der Spalte sind NULL-Werte zulässig.<br /><br /> 0x10 = ANSI-Auffüllung war aktiviert, als **varchar** oder **varbinary** -Spalten hinzugefügt wurden. Nachfolgende Leerzeichen werden bei **varchar** -Spalten beibehalten, nachfolgende Nullen werden bei **varbinary** -Spalten beibehalten.<br /><br /> 0x40 = Der Parameter ist ein OUTPUT-Parameter.<br /><br /> 0x80 = Die Spalte ist eine Identitätsspalte.|  
+|**type**|**tinyint**|Physischer Speichertyp aus **sys**.**types**.|  
 |**usertype**|**smallint**|ID des benutzerdefinierten Datentyps aus **sys.types**. Führt zu einem Überlauf oder gibt NULL zurück, wenn die Anzahl der Datentypen 32.767 übersteigt.|  
-|**printf MT**|**varchar (255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**printfmt**|**varchar (255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**prec**|**smallint**|Genauigkeitsgrad für diese Spalte.<br /><br /> -1 = **xml** oder ein Typ für hohe Werte.|  
 |**scale**|**int**|Dezimalstellen in dieser Spalte.<br /><br /> NULL = Datentyp nicht numerisch.|  
 |**IsComputed**|**int**|Flag, das anzeigt, ob die Spalte berechnet ist:<br /><br /> 0 = Nicht berechnet<br /><br /> 1 = Berechnet|  
@@ -71,6 +71,6 @@ ms.locfileid: "68089241"
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Zuordnung von Systemtabellen zu System Sichten &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Kompatibilitäts Sichten &#40;Transact-SQL-&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
+ [Kompatibilitätssichten &#40;Transact-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)  
   
   

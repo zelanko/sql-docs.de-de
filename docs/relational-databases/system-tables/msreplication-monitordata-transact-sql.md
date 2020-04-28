@@ -18,10 +18,10 @@ ms.assetid: 843d3ffd-a1ef-4fd5-a744-c2252199793e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 886240176188fdcea0c104ca366ec5451528312a
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68079141"
 ---
 # <a name="msreplication_monitordata-transact-sql"></a>MSreplication_monitordata (Transact-SQL)
@@ -43,7 +43,7 @@ ms.locfileid: "68079141"
 |**agent_id**|**int**|ID des Replikations-Agents|  
 |**agent_name**|**sysname**|Name des Replikations-Agent-Auftrags|  
 |**job_id**|**uniqueidentifier**|GUID des Replikations-Agent-Auftrags|  
-|**Stands**|**int**|Der Status des Replikations-Agents. Die folgenden Werte sind möglich:<br /><br /> **1** = gestartet<br /><br /> **2** = erfolgreich<br /><br /> **3** = in Bearbeitung<br /><br /> **4** = im Leerlauf<br /><br /> **5** = wird wiederholt<br /><br /> **6** = fehlgeschlagen|  
+|**status**|**int**|Der Status des Replikations-Agents. Die folgenden Werte sind möglich:<br /><br /> **1** = gestartet<br /><br /> **2** = erfolgreich<br /><br /> **3** = in Bearbeitung<br /><br /> **4** = im Leerlauf<br /><br /> **5** = wird wiederholt<br /><br /> **6** = fehlgeschlagen|  
 |**isagentrunningnow**|**bit**|Ein Flag, das angibt, ob der Agentauftrag gerade ausgeführt wird, wobei der Wert **1** bedeutet, dass der Auftrag ausgeführt wird.|  
 |**davor**|**int**|Schwellenwertwarnung, die von einem Abonnement generiert wird. Sie kann das Ergebnis des logischen OR von mindestens einem der folgenden Werte sein.<br /><br /> **1** = Ablauf: ein Abonnement für eine Transaktions Veröffentlichung hat die Beibehaltungs Dauer um mehr als den zulässigen Schwellenwert überschritten (als Prozentsatz der Beibehaltungs Dauer).<br /><br /> **2** = Latenz: die Zeit, die zum Replizieren von Daten von einem transaktionalen Verleger auf den Abonnenten benötigt wird, überschreitet den Schwellenwert (in Sekunden).<br /><br /> **4** = mergeablauf: ein Abonnement für eine Mergeveröffentlichung hat die Beibehaltungs Dauer um mehr als den zulässigen Schwellenwert überschritten, als Prozentsatz der Beibehaltungs Dauer. 8 = mergefastrunduration - die Zeit zum Synchronisieren eines Mergeabonnements über eine schnelle Netzwerkverbindung überschreitet den Schwellenwert (in Sekunden).<br /><br /> **16** = mergeslowrunduration: die Zeit für die Synchronisierung eines Mergeabonnements überschreitet den Schwellenwert über eine langsame oder DFÜ-Netzwerkverbindung (in Sekunden).<br /><br /> **32** = mergefastrauunspeed-die Übermittlungs Rate für Zeilen während der Synchronisierung eines Mergeabonnements konnte den Schwellenwert (in Zeilen pro Sekunde) über eine schnelle Netzwerkverbindung nicht aufrechterhalten.<br /><br /> **64** = mergeslowrunspeed-die Übermittlungs Rate für Zeilen während der Synchronisierung eines Mergeabonnements konnte den Schwellenwert (in Zeilen pro Sekunde) über eine langsame oder DFÜ-Netzwerkverbindung nicht aufrechterhalten.|  
 |**last_distsync**|**datetime**|Datum und die Uhrzeit, wann der Verteilungs-Agent zuletzt ausgeführt wurde|  

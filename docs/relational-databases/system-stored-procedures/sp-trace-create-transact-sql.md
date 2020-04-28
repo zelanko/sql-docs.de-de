@@ -18,10 +18,10 @@ ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 7d698932bb7ef7e0fd37a0ced8ab536eeb0d5d68
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096032"
 ---
 # <a name="sp_trace_create-transact-sql"></a>sp_trace_create (Transact-SQL)
@@ -94,7 +94,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
 |Rückgabecode|BESCHREIBUNG|  
 |-----------------|-----------------|  
 |0|Kein Fehler.|  
-|1|Unknown error. (Unbekannter Fehler.)|  
+|1|Unbekannter Fehler.|  
 |10|Ungültige Optionen. Wird zurückgegeben, wenn angegebene Optionen inkompatibel sind.|  
 |12|Datei nicht erstellt.|  
 |13|Nicht genügend Arbeitsspeicher. Wird zurückgegeben, wenn nicht genügend Arbeitsspeicher zum Ausführen der angegebenen Aktion verfügbar ist.|  
@@ -135,7 +135,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
     -   **BatchStarting**  
   
-    -   **Ausnahme**  
+    -   **Exception**  
   
     -   **Hingewiesen**  
   
@@ -148,9 +148,9 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
   
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_trace_generateevent &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)   
- [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
- [sp_trace_setfilter &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
- [sp_trace_setstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
+ [sp_trace_setevent &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
+ [sp_trace_setfilter &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)   
+ [sp_trace_setstatus &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)   
  [SQL-Ablaufverfolgung](../../relational-databases/sql-trace/sql-trace.md)  
   
   

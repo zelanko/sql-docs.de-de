@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: dc58447e9893647dfa73643f14455d715625478e
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053047"
 ---
 # <a name="sp_describe_first_result_set-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
@@ -99,10 +99,10 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
 |**ordinal_in_order_by_list**|**smallint NULL**|Die Position dieser Spalte in der ORDER BY-Liste. Gibt NULL zurück, wenn die Spalte nicht in der ORDER BY-Liste angezeigt wird oder die Order by-Liste nicht eindeutig bestimmt werden kann.|  
 |**order_by_list_length**|**smallint NULL**|Die Länge der ORDER BY-Liste. Gibt NULL zurück, wenn keine ORDER BY-Liste vorhanden ist oder die ORDER BY-Liste nicht eindeutig bestimmt werden kann. Beachten Sie, dass dieser Wert für alle Zeilen identisch ist, die von sp_describe_first_result_set zurückgegeben werden **.**|  
 |**order_by_is_descending**|**smallint NULL**|Wenn ordinal_in_order_by_list nicht NULL ist, wird von der **order_by_is_descending**-Spalte die Richtung der ORDER BY-Klausel für diese Spalte gemeldet. Andernfalls wird NULL gemeldet.|  
-|**tds_type_id**|**int NOT NULL**|Zur internen Verwendung.|  
-|**tds_length**|**int NOT NULL**|Zur internen Verwendung.|  
-|**tds_collation_id**|**int NULL**|Zur internen Verwendung.|  
-|**tds_collation_sort_id**|**tinyint NULL**|Zur internen Verwendung.|  
+|**tds_type_id**|**int NOT NULL**|Für die interne Verwendung.|  
+|**tds_length**|**int NOT NULL**|Für die interne Verwendung.|  
+|**tds_collation_id**|**int NULL**|Für die interne Verwendung.|  
+|**tds_collation_sort_id**|**tinyint NULL**|Für die interne Verwendung.|  
   
 ## <a name="remarks"></a>Bemerkungen  
  **sp_describe_first_result_set** wird sichergestellt, dass, wenn die Prozedur die ersten Resultset-Metadaten für (einen hypothetischen) Batch a zurückgibt und dieser Batch (a) anschließend ausgeführt wird, der Batch entweder (1) einen Optimierungs Zeitfehler auslöst. (2) löst einen Laufzeitfehler aus, (3) gibt kein Resultset zurück, oder (4) gibt ein erstes Resultset mit denselben Metadaten zurück, die von **sp_describe_first_result_set**beschrieben werden.  
@@ -190,7 +190,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM dbo.v', null, 0;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|Name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|NULL|NULL|NULL|NULL|  
   
@@ -203,7 +203,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 1
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|Name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|b3|dbo|t|B1|0|  
 |1|2|a|dbo|t|a|1|  
@@ -216,7 +216,7 @@ EXEC sp_describe_first_result_set N'SELECT b2 AS b3 FROM v', null, 2
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-|is_hidden|column_ordinal|name|source_schema|source_table|source_column|is_part_of_unique_key|  
+|is_hidden|column_ordinal|Name|source_schema|source_table|source_column|is_part_of_unique_key|  
 |----------------|---------------------|----------|--------------------|-------------------|--------------------|-------------------------------|  
 |0|1|B3|dbo|v|B2|0|  
 |1|2|ROWSTAT|NULL|NULL|NULL|0|  

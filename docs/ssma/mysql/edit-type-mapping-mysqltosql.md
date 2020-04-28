@@ -10,10 +10,10 @@ ms.assetid: 184f7ab2-725f-491e-a15b-b889f2fb6a68
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: d31304dae7246e425ef54af6d1382af7e885696c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103000"
 ---
 # <a name="edit-type-mapping-mysqltosql"></a>Bearbeiten der Typzuordnung (MySqlToSql)
@@ -27,7 +27,7 @@ Sie können auf dieses Dialogfeld an mehreren Stellen zugreifen:
   
 -   Tabellen spezifische Typzuordnungen überschreiben Datenbank-und Projekttyp Zuordnungen. Datenbankspezifische Zuordnungen überschreiben Projekt Zuordnungen.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
   
 ##### <a name="source-type"></a>Quelltyp  
 Wählen Sie den Quell Datentyp aus, der einem SQL Server Datentyp zugeordnet werden soll.  
@@ -37,7 +37,7 @@ Wenn der Datentyp eine Variable Länge aufweist, werden die folgenden Felder unt
 ##### <a name="from"></a>Von  
 Geben Sie die Mindestlänge für diese Zuordnung an. Beispielsweise können Sie für den **NCHAR** -Datentyp 10 eingeben, um anzugeben, dass diese Zuordnung für einen Bereich gilt, der bei **NCHAR (10) beginnt.**  
   
-##### <a name="to"></a>To  
+##### <a name="to"></a>Beschreibung  
 Geben Sie die maximale Länge für diese Zuordnung an. Beispielsweise können Sie für den **NCHAR** -Datentyp 20 eingeben, um anzugeben, dass diese Zuordnung für einen Bereich gilt, der bei **NCHAR (20) endet.**  
   
 ##### <a name="target-type"></a>Zieltyp  

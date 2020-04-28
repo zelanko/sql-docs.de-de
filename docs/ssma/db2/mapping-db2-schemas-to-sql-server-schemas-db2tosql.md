@@ -10,10 +10,10 @@ ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 50845a9bdf3c3185d7b69bb86a75b2a3d332ef6b
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68074173"
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>Zuordnung von DB2-Schemas zu SQL Server Schemas (DB2ToSQL)
@@ -49,7 +49,7 @@ In SSMA können Sie einem beliebigen verfügbaren [!INCLUDE[ssNoVersion](../../i
   
 -   Zuordnung zu SQL Server  
   
-Sie können Quell Datenbanken einer beliebigen Zieldatenbank zuordnen. Standardmäßig ist die Quelldatenbank der Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank zugeordnet, mit der Sie eine Verbindung mit SSMA hergestellt haben. Wenn die zugeordnete Zieldatenbank nicht in vorhanden ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], wird eine Meldung angezeigt, dass **die Datenbank und/oder das Schema in den Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadaten nicht vorhanden sind. Es würde während der Synchronisierung erstellt werden. Möchten Sie den Vorgang fortsetzen? "** Klicken Sie auf Ja. Entsprechend können Sie das Schema einem nicht vorhandenen Schema unter der Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank zuordnen, das während der Synchronisierung erstellt wird.  
+Sie können Quell Datenbanken einer beliebigen Zieldatenbank zuordnen. Standardmäßig ist die Quelldatenbank der Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank zugeordnet, mit der Sie eine Verbindung mit SSMA hergestellt haben. Wenn die zugeordnete Zieldatenbank nicht in vorhanden ist [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], wird eine Meldung angezeigt, dass **die Datenbank und/oder das Schema in den Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadaten nicht vorhanden sind. Es würde während der Synchronisierung erstellt werden. Möchten Sie den Vorgang fortsetzen? "** Klicken Sie auf „Ja“. Entsprechend können Sie das Schema einem nicht vorhandenen Schema unter der Ziel [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Datenbank zuordnen, das während der Synchronisierung erstellt wird.  
   
 ## <a name="reverting-to-the-default-database-and-schema"></a>Wiederherstellen der Standarddatenbank und des Standard Schemas  
 Wenn Sie die Zuordnung zwischen einem DB2-Schema und einem [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Schema anpassen, können Sie die Zuordnung auf die Standardwerte zurücksetzen.  

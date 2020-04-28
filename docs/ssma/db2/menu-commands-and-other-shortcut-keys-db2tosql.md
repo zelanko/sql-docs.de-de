@@ -10,10 +10,10 @@ ms.assetid: 13189359-73ff-45cf-8225-2a8f7194accc
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 8937eb796d75afdc404ef4815918245cda7f13a5
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68074152"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-db2tosql"></a>Menübefehle und andere Tastenkombinationen (DB2ToSQL)
@@ -54,7 +54,7 @@ Für den Zugriff auf das Menü "Bearbeiten" wird die Tastenkombination ALT + E v
 |Vorheriges suchen.|ALT + E + F + P oder STRG + UMSCHALT + F3|  
 |Weitersuchen|ALT + E + F + N oder Strg + F3|  
   
-## <a name="view-menu-commands"></a>Menübefehle anzeigen  
+## <a name="view-menu-commands"></a>Befehle im Menü "Ansicht"  
 Um auf das Menü Ansicht zuzugreifen, wird die Tastenkombination ALT + V verwendet. In der folgenden Tabelle werden die Tastenkombinationen beschrieben, die für den Zugriff auf Menü Elemente im Menü Ansicht verwendet werden.  
   
 |zu diesem Zweck|Drückt|  
@@ -87,7 +87,7 @@ Um auf das Menü Extras zuzugreifen, wird die Tastenkombination ALT + T verwende
 |Zeigen Sie das Dialogfeld Projekteinstellungen an.|Alt + T + P|  
 |Zeigt das Dialogfeld Standard Projekteinstellungen an.|Alt + T + J|  
   
-## <a name="help-menu-commands"></a>Hilfe Menübefehle  
+## <a name="help-menu-commands"></a>Befehle im Menü "Hilfe"  
 Um auf das Menü "Hilfe" zuzugreifen, wird die Tastenkombination ALT + H verwendet. In der folgenden Tabelle werden die Tastenkombinationen beschrieben, die für den Zugriff auf Menü Elemente im Menü Hilfe verwendet werden.  
   
 |zu diesem Zweck|Drückt|  

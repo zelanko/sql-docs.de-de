@@ -18,10 +18,10 @@ ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 40b1ebc5319c13b5aa84a28e1a5c5546dd62bd03
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68094832"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
@@ -42,7 +42,7 @@ ms.locfileid: "68094832"
 |**pubid**|**uniqueidentifier**|Die ID der Veröffentlichung, zu der der aktuelle Artikel gehört.|  
 |**Namen**|**int**|Die Spitznamenzuordnung zur Identifikation des Artikels.|  
 |**column_tracking**|**int**|Gibt an, ob die Spaltennachverfolgung für den Artikel implementiert wurde.|  
-|**Stands**|**tinyint**|Zeigt den Status des Artikels an. Die folgenden Werte sind möglich:<br /><br /> **1** = nicht synchronisiert: das Anfangs Verarbeitungs Skript zum Veröffentlichen der Tabelle wird bei der nächsten Ausführung des Momentaufnahmen-Agent ausgeführt.<br /><br /> **2** = aktiv: das Anfangs Verarbeitungs Skript zum Veröffentlichen der Tabelle wurde ausgeführt.|  
+|**status**|**tinyint**|Zeigt den Status des Artikels an. Die folgenden Werte sind möglich:<br /><br /> **1** = nicht synchronisiert: das Anfangs Verarbeitungs Skript zum Veröffentlichen der Tabelle wird bei der nächsten Ausführung des Momentaufnahmen-Agent ausgeführt.<br /><br /> **2** = aktiv: das Anfangs Verarbeitungs Skript zum Veröffentlichen der Tabelle wurde ausgeführt.|  
 |**conflict_table**|**sysname**|Der Name der lokalen Tabelle, die die Konflikt verursachenden Datensätze für den aktuellen Artikel enthält. Diese Tabelle dient nur zu Informationszwecken; ihr Inhalt kann mit benutzerdefinierten Konfliktlösungsroutinen oder direkt vom Administrator geändert oder gelöscht werden.|  
 |**creation_script**|**nvarchar(255)**|Das Erstellungsskript für diesen Artikel.|  
 |**conflict_script**|**nvarchar(255)**|Das Konfliktskript für diesen Artikel.|  
@@ -59,14 +59,14 @@ ms.locfileid: "68094832"
 |**resolver_clsid**|**nvarchar(50)**|Die ID des benutzerdefinierten Konfliktlösers. Für einen Geschäftslogikhandler ist dieser Wert NULL.|  
 |**subset_filterclause**|**nvarchar (1000)**|Die Filterklausel für diesen Artikel.|  
 |**missing_col_count**|**int**|Die Anzahl veröffentlichter Spalten, die im Artikel fehlen.|  
-|**missing_cols**|**varbinary (128)**|Das Bitmuster, das die Spalten beschreibt, die im Artikel fehlen.|  
-|**excluded_cols**|**varbinary (128)**|Das Bitmuster der Spalten, die vom Artikel ausgeschlossen sind.|  
+|**missing_cols**|**varbinary(128)**|Das Bitmuster, das die Spalten beschreibt, die im Artikel fehlen.|  
+|**excluded_cols**|**varbinary(128)**|Das Bitmuster der Spalten, die vom Artikel ausgeschlossen sind.|  
 |**excluded_col_count**|**int**|Die Anzahl von Spalten, die aus dem Artikel ausgeschlossen sind.|  
-|**Spalten**|**varbinary (128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**deleted_cols**|**varbinary (128)**|Das Bitmuster, das die Spalten beschreibt, die im Artikel gelöscht wurden.|  
+|**Spalten**|**varbinary(128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**deleted_cols**|**varbinary(128)**|Das Bitmuster, das die Spalten beschreibt, die im Artikel gelöscht wurden.|  
 |**resolver_info**|**nvarchar(255)**|Der Speicherplatz für zusätzliche vom benutzerdefinierten Konfliktlöser benötigte Informationen.|  
 |**view_sel_proc**|**nvarchar (290)**|Der Name einer gespeicherten Prozedur, die der Merge-Agent zum ersten Auffüllen eines Artikels in einer dynamisch gefilterten Veröffentlichung und zum Aufzählen von geänderten Zeilen in einer beliebigen gefilterten Veröffentlichung verwendet.|  
-|**gen_cur**|**BIGINT**|Generiert eine Nummer für lokale Änderungen an der Basistabelle eines Artikels.|  
+|**gen_cur**|**bigint**|Generiert eine Nummer für lokale Änderungen an der Basistabelle eines Artikels.|  
 |**vertical_partition**|**int**|Gibt an, ob die Spaltenfilterung für einen Tabellenartikel aktiviert ist. **0** gibt an, dass keine vertikale Filterung vorhanden ist und alle Spalten veröffentlicht werden.|  
 |**identity_support**|**int**|Gibt an, ob die automatische Verarbeitung der Identitätsbereiche aktiviert ist. **1** bedeutet, dass die Identitäts Bereichs Behandlung aktiviert ist, und **0** bedeutet, dass keine Identitäts Bereichs Unterstützung vorhanden ist.|  
 |**before_image_objid**|**int**|Die Objekt-ID der Nachverfolgungstabelle. Die Nachverfolgungstabelle enthält bestimmte Schlüsselspaltenwerte, wenn Partitionsänderungsoptimierungen für die Veröffentlichung aktiviert wurden.|  
@@ -85,8 +85,8 @@ ms.locfileid: "68094832"
 |**before_upd_view_objid**|**int**|Die ID der Tabellensicht vor Updates.|  
 |**delete_tracking**|**bit**|Zeigt an, ob Löschvorgänge repliziert werden.<br /><br /> **0** = Löschvorgänge werden nicht repliziert.<br /><br /> **1** = Löschvorgänge werden repliziert. Dies ist das Standardverhalten für die Mergereplikation.<br /><br /> Wenn der Wert von *delete_tracking* **0**ist, müssen auf dem Abonnenten gelöschte Zeilen manuell auf dem Verleger entfernt werden, und auf dem Verleger gelöschte Zeilen müssen manuell auf dem Abonnenten entfernt werden.<br /><br /> Hinweis: der Wert **0** führt zu einer nicht Konvergenz.|  
 |**compensate_for_errors**|**bit**|Zeigt an, ob kompensierende Aktionen ausgeführt werden, wenn während der Synchronisierung Fehler auftreten.<br /><br /> **0** = kompensierende Aktionen sind deaktiviert.<br /><br /> **1** = Änderungen, die nicht auf einem Abonnenten oder Verleger angewendet werden können, führen immer zu kompensierenden Aktionen, um diese Änderungen rückgängig zu machen. Dies ist das Standardverhalten der Mergereplikation.<br /><br /> Hinweis: der Wert **0** führt zu einer nicht Konvergenz.|  
-|**pub_range**|**BIGINT**|Die Größe des Identitätsbereichs für den Verleger.|  
-|**Bereich**|**BIGINT**|Die Bereichsgröße der aufeinander folgenden Identitätswerte, die Abonnenten bei einer Anpassung zugewiesen würden.|  
+|**pub_range**|**bigint**|Die Größe des Identitätsbereichs für den Verleger.|  
+|**range**|**bigint**|Die Bereichsgröße der aufeinander folgenden Identitätswerte, die Abonnenten bei einer Anpassung zugewiesen würden.|  
 |**Mindest**|**int**|Als Prozentsatz angegebener Schwellenwert für den Identitätsbereich.|  
 |**stream_blob_columns**|**bit**|Gibt an, ob die Datenstromoptimierung für BLOB-Spalten (Binary Large Object) verwendet wird. der Wert **1** bedeutet, dass die Optimierung versucht wird.|  
 |**preserve_rowguidcol**|**bit**|Zeigt an, ob die Replikation eine vorhandene rowguid-Spalte verwendet. Der Wert **1** bedeutet, dass eine vorhandene ROWGUIDCOL-Spalte verwendet wird. **0** bedeutet, dass die Replikation die ROWGUIDCOL-Spalte hinzugefügt hat.|  

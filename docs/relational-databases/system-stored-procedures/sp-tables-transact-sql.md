@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 71aaa9e52cfca8435501695a4ebf60b2a6aa6ee4
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096050"
 ---
 # <a name="sp_tables-transact-sql"></a>sp_tables (Transact-SQL)
@@ -54,14 +54,14 @@ sp_tables [ [ @table_name = ] 'name' ]
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] werden die Spalten einer Tabelle zurückgegeben, wenn der aktuelle Benutzer diese Tabelle mit dem angegebenen Namen besitzt. Falls der Besitzer nicht angegeben ist und der aktuelle Benutzer keine Tabelle mit dem angegebenen Namen besitzt, wird nach einer Tabelle mit dem angegebenen Namen gesucht, deren Besitzer der Datenbankbesitzer ist. Wenn eine solche Tabelle vorhanden ist, werden die Spalten dieser Tabelle zurückgegeben.  
   
-`[ @table_qualifier = ] 'qualifier'`Der Name des Tabellen Qualifizierers. *Qualifizierer* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Benennung für Tabellen (_Qualifizierer_)**.** _Besitzer_**.** _Name_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
+`[ @table_qualifier = ] 'qualifier'`Der Name des Tabellen Qualifizierers. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Benennung für Tabellen (_Qualifizierer_)**.** _Besitzer_**.** _Name_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei anderen Produkten stellt sie den Servernamen der Datenbankumgebung für die Tabelle dar.  
   
 ``[ , [ @table_type = ] "'type', 'type'" ]``Eine durch Kommas getrennte Liste von Werten, die Informationen zu allen Tabellen der angegebenen Tabellentypen enthält. Dazu zählen **Table**, **systemtable**und **View**. *Type ist vom Datentyp* **varchar (100)** und hat den Standardwert NULL.  
   
 > [!NOTE]  
 >  Jeder Tabellentyp muss in einfache Anführungszeichen und der gesamte Parameter in doppelte Anführungszeichen eingeschlossen werden. Für Tabellentypen müssen Großbuchstaben verwendet werden. Wenn SET QUOTED_IDENTIFIER auf ON festgelegt ist, müssen alle einfachen Anführungszeichen in doppelte Anführungszeichen geändert werden, und der gesamte Parameter muss in einfache Anführungszeichen eingeschlossen werden.  
   
-`[ @fUsePattern = ] 'fUsePattern'`Bestimmt, ob die Zeichen Unterstrich (_), Prozentzeichen (%) und eckige Klammern ([oder]) als Platzhalter Zeichen interpretiert werden. Gültige Werte sind 0 (Mustervergleich ist deaktiviert) und 1 (Mustervergleich ist aktiviert). *fUsePattern* ist vom Typ **Bit**. der Standardwert ist 1.  
+`[ @fUsePattern = ] 'fUsePattern'`Bestimmt, ob die Zeichen Unterstrich (_), Prozentzeichen (%) und eckige Klammern ([oder]) als Platzhalter Zeichen interpretiert werden. Gültige Werte sind 0 (Mustervergleich ist deaktiviert) und 1 (Mustervergleich ist aktiviert). *fUsePattern* ist vom Datentyp **bit**. Der Standardwert ist 1.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  Keine  
@@ -74,8 +74,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 |**TABLE_OWNER**|**sysname**|Der Name des Tabellen Besitzers. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]stellt diese Spalte den Namen des Daten Bank Benutzers dar, der die Tabelle erstellt hat. Dieses Feld gibt immer einen Wert zurück.|  
 |**TABLE_NAME**|**sysname**|Tabellenname. Dieses Feld gibt immer einen Wert zurück.|  
 |**TABLE_TYPE**|**varchar(32)**|Tabelle, Systemtabelle oder Sicht.|  
-|**Rede**|**varchar (254)**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt für diese Spalte keinen Wert zurück.|  
+|**HINWEISE**|**varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt für diese Spalte keinen Wert zurück.|  
   
 ## <a name="remarks"></a>Bemerkungen  
  Für maximale Interoperabilität sollte der Gatewayclient nur den SQL-92-Standard zum SQL-Mustervergleich (die Platzhalterzeichen % und _) voraussetzen.  
@@ -108,7 +107,7 @@ EXEC sp_tables
    @table_qualifier = 'AdventureWorks2012';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### <a name="c-returning-a-list-of-objects-that-can-be-queried-in-the-current-environment"></a>C. Zurückgeben einer Liste von Objekten, die in der aktuellen Umgebung abgefragt werden können  
  Im folgenden Beispiel wird eine Liste von Objekten zurückgegeben, bei denen es sich um Abfragen in der aktuellen Umgebung handeln kann.  
@@ -117,7 +116,7 @@ EXEC sp_tables
 EXEC sp_tables ;  
 ```  
   
-### <a name="d-returning-information-about-the-tables-in-a-specified-schema"></a>D: Zurückgeben von Informationen zu den Tabellen in einem angegebenen Schema  
+### <a name="d-returning-information-about-the-tables-in-a-specified-schema"></a>D. Zurückgeben von Informationen zu den Tabellen in einem angegebenen Schema  
  Im folgenden Beispiel werden Informationen zu den Dimensions Tabellen in der `AdventureWorksPDW201` -Datenbank zurückgegeben.  
   
 ```  

@@ -18,10 +18,10 @@ ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 1eb9a4d1a19f54f9e57e988b350594ce6031b243
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085068"
 ---
 # <a name="sp_help_targetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
@@ -51,12 +51,12 @@ sp_help_targetserver
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
 |**server_id**|**int**|Die Server-ID.|  
-|**server_name**|**nvarchar (30)**|Servername.|  
-|**Hotels**|**nvarchar(200)**|Standort des angegebenen Servers.|  
+|**server_name**|**nvarchar(30)**|Servername.|  
+|**location**|**nvarchar(200)**|Standort des angegebenen Servers.|  
 |**time_zone_adjustment**|**int**|Zeitzonenanpassung ausgehend von der GMT (Greenwich Mean Time) in Stunden.|  
 |**enlist_date**|**datetime**|Datum der Eintragung des angegebenen Servers.|  
 |**last_poll_date**|**datetime**|Datum, an dem der Server zuletzt nach Aufträgen abgefragt wurde.|  
-|**Stands**|**int**|Status des angegebenen Servers.|  
+|**status**|**int**|Status des angegebenen Servers.|  
 |**unread_instructions**|**int**|Gibt an, ob auf dem Server ungelesene Anweisungen vorhanden sind. Wenn alle Zeilen heruntergeladen wurden, ist diese Spalte **0**.|  
 |**local_time**|**datetime**|Lokales Datum und lokale Uhrzeit auf dem Zielserver. Diese basieren auf der lokalen Zeit des Zielservers zum Zeitpunkt des letzten Abrufs des Masterservers.|  
 |**enlisted_by_nt_user**|**nvarchar (100)**|Microsoft Windows-Benutzer, der den Zielserver eingetragen hat.|  

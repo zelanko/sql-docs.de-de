@@ -18,10 +18,10 @@ ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 904a694d73613bb1c40c671b18ca33e5d9b5d0e6
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68085278"
 ---
 # <a name="sp_help_proxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
@@ -51,7 +51,7 @@ sp_help_proxy
   
  In der folgenden Tabelle werden die Werte für jedes Subsystem aufgelistet.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX-Skript|  
 |CmdExec|Betriebssystem (CmdExec)|  
@@ -78,7 +78,7 @@ sp_help_proxy
 |**name**|**sysname**|Der Name des Proxys.|  
 |**credential_identity**|**sysname**|Der Microsoft Windows-Domänenname und -Benutzername für die dem Proxy zugeordneten Anmeldeinformationen.|  
 |**wodurch**|**tinyint**|Gibt an, ob dieser Proxy aktiviert ist. { **0** = nicht aktiviert, **1** = aktiviert}|  
-|**Beschreibung**|**nvarchar (1024)**|Die Beschreibung des Proxys.|  
+|**Beschreibung**|**nvarchar(1024)**|Die Beschreibung des Proxys.|  
 |**user_sid**|**varbinary(85)**|Die Windows-SID des Windows-Benutzers für diesen Proxy.|  
 |**credential_id**|**int**|Die ID für die dem Proxy zugeordneten Anmeldeinformationen.|  
 |**credential_identity_exists**|**int**|Gibt an, ob credential_identity vorhanden ist. { 0 = ist nicht vorhanden, 1 = ist vorhanden }|  

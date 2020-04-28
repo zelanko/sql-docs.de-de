@@ -18,10 +18,10 @@ ms.assetid: e5f57c32-efc0-4455-a74f-684dc2ae51f8
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: f1724f86f9bfc34e505b9ba6ecddae4104270cd0
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68094770"
 ---
 # <a name="syspublications-system-view-transact-sql"></a>syspublications (Systemsicht) (Transact-SQL)
@@ -31,11 +31,11 @@ ms.locfileid: "68094770"
   
 |Spaltenname|Datentyp|BESCHREIBUNG|  
 |-----------------|---------------|-----------------|  
-|**Beschreibung**|**nvarchar(255)**|Der beschreibende Eintrag für die Veröffentlichung.|  
+|**description**|**nvarchar(255)**|Der beschreibende Eintrag für die Veröffentlichung.|  
 |**name**|**sysname**|Der eindeutige der Veröffentlichung zugeordnete Name.|  
 |**pubid**|**int**|Die Identitätsspalte mit einer eindeutigen ID für die Veröffentlichung.|  
 |**repl_freq**|**tinyint**|Replikationshäufigkeit:<br /><br /> **0** = Transaktions basiert (transaktional).<br /><br /> **1** = geplante Tabellen Aktualisierung (Momentaufnahme).|  
-|**Stands**|**tinyint**|Veröffentlichungsstatus:<br /><br /> **0** = inaktiv.<br /><br /> **1** = aktiv.|  
+|**status**|**tinyint**|Veröffentlichungsstatus:<br /><br /> **0** = inaktiv.<br /><br /> **1** = aktiv.|  
 |**sync_method**|**tinyint**|Die Synchronisierungsmethode:<br /><br /> **0** = System eigenes Hilfsprogramm zum Massen kopieren (BCP).<br /><br /> **1** = Zeichen bcp.<br /><br /> **3** = gleichzeitig, d. h., das systemeigene BCP wird verwendet, aber Tabellen sind während der Momentaufnahme nicht gesperrt.<br /><br /> **4** = concurrent_c. Dies bedeutet, dass das bcp-Zeichen verwendet wird, aber Tabellen während der Momentaufnahme nicht gesperrt sind.|  
 |**snapshot_jobid**|**Binary (16)**|Identifiziert den Agentauftrag, der die Anfangsmomentaufnahme generieren soll.|  
 |**independent_agent**|**bit**|Gibt an, ob eine eigenständige Verteilungs-Agent für diese Veröffentlichung vorhanden ist.<br /><br /> **0** = die Veröffentlichung verwendet einen freigegebenen Verteilungs-Agent, und jedes Paar aus Verleger Datenbank und Abonnenten Datenbank verfügt über einen einzelnen freigegebenen Agent.<br /><br /> **1** = für diese Veröffentlichung ist ein eigenständiger Verteilungs-Agent vorhanden.|  
@@ -63,21 +63,21 @@ ms.locfileid: "68094770"
 |**allow_subscription_copy**|**bit**|Gibt an, ob die Möglichkeit zum Kopieren der Abonnementdatenbanken aktiviert wurde, die diese Veröffentlichung abonniert haben. **1** bedeutet, dass das Kopieren zulässig ist.|  
 |**centralized_conflicts**|**bit**|Gibt an, ob Konfliktdatensätze auf dem Verleger gespeichert werden:<br /><br /> **0** = Konflikt Datensätze werden sowohl auf dem Verleger als auch auf dem Abonnenten gespeichert, der den Konflikt verursacht hat.<br /><br /> **1** = Konflikt Datensätze werden auf dem Verleger gespeichert.|  
 |**conflict_retention**|**int**|Gibt die Beibehaltungsdauer für Konfliktdatensätze in Tagen an.|  
-|**conflict_policy**|**int**|Gibt die Richtlinie zur Konfliktlösung an, die für die Option zur verzögerten Aktualisierung über eine Warteschlange verwendet wird. Kann einen der folgenden Werte aufweisen:<br /><br /> **1** = der Verleger gewinnt den Konflikt.<br /><br /> **2** = Abonnent gewinnt den Konflikt.<br /><br /> **3** = das Abonnement wird erneut initialisiert.|  
-|**queue_type**|**int**|Gibt an, welcher Wartenschlangentyp verwendet wird. Kann einen der folgenden Werte aufweisen:<br /><br /> **1** =. MSMQ, der Message Queuing [!INCLUDE[msCoName](../../includes/msconame-md.md)] zum Speichern von Transaktionen verwendet.<br /><br /> **2** =. SQL, das zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Speichern von Transaktionen verwendet.<br /><br /> Hinweis: die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Verwendung von Message Queuing wurde als veraltet markiert und wird nicht mehr unterstützt.|  
+|**conflict_policy**|**int**|Gibt die Richtlinie zur Konfliktlösung an, die für die Option zur verzögerten Aktualisierung über eine Warteschlange verwendet wird. Einer der folgenden Werte ist möglich:<br /><br /> **1** = der Verleger gewinnt den Konflikt.<br /><br /> **2** = Abonnent gewinnt den Konflikt.<br /><br /> **3** = das Abonnement wird erneut initialisiert.|  
+|**queue_type**|**int**|Gibt an, welcher Wartenschlangentyp verwendet wird. Einer der folgenden Werte ist möglich:<br /><br /> **1** =. MSMQ, der Message Queuing [!INCLUDE[msCoName](../../includes/msconame-md.md)] zum Speichern von Transaktionen verwendet.<br /><br /> **2** =. SQL, das zum [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Speichern von Transaktionen verwendet.<br /><br /> Hinweis: die [!INCLUDE[msCoName](../../includes/msconame-md.md)] Verwendung von Message Queuing wurde als veraltet markiert und wird nicht mehr unterstützt.|  
 |**ad_guidname**|**sysname**|Gibt an, ob die Veröffentlichung in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory veröffentlicht wird. Ein gültiger GUID (Globally Unique Identifier) gibt an, dass die Veröffentlichung in Active Directory veröffentlicht wird, und der GUID ist das entsprechende Active Directory-Veröffentlichungsobjekt objectGUID. Wenn dieser Wert NULL ist, wird die Veröffentlichung nicht in Active Directory veröffentlicht.<br /><br /> Hinweis: das Veröffentlichen in Active Directory wird nicht mehr unterstützt.|  
-|**backward_comp_level**|**int**|Datenbankkompatibilitätsgrad, der einen der folgenden Werte annehmen kann:<br /><br /> **** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
+|**backward_comp_level**|**int**|Datenbankkompatibilitätsgrad, der einen der folgenden Werte annehmen kann:<br /><br /> **90** = 90[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].<br /><br /> **100** = 100[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |**allow_initialize_from_backup**|**bit**|Gibt an, ob Abonnenten ein Abonnement für diese Veröffentlichung aus einer Sicherung anstelle einer Anfangs Momentaufnahme initialisieren können. **1** bedeutet, dass Abonnements aus einer Sicherung initialisiert werden können, und **0** bedeutet, dass Sie nicht möglich sind. Weitere Informationen finden Sie unter [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)initialisiert wird.|  
 |**min_autonosync_lsn**|**Binary (1)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**replicate_ddl**|**int**|Gibt an, ob die Schemareplikation für die Veröffentlichung unterstützt wird.<br /><br /> **1** = auf dem Verleger ausgeführte DDL-Anweisungen werden repliziert.<br /><br /> **0** = gibt an, dass DDL-Anweisungen nicht repliziert werden. Weitere Informationen finden Sie unter [Vornehmen von Schemaänderungen in Veröffentlichungsdatenbanken](../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).|  
-|**Optionen**|**int**|Ein Bitmuster, mit dem zusätzliche Veröffentlichungsoptionen angegeben werden. Dabei gibt es folgende bitweise Optionswerte:<br /><br /> **0x1** : für die Peer-zu-Peer-Replikation aktiviert.<br /><br /> **0x2** -nur lokale Änderungen für die Peer-zu-Peer-Replikation veröffentlichen.<br /><br /> **0x4** -aktiviert für nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten.<br /><br /> **0x8** : für Peer-zu-Peer-Konflikterkennung aktiviert.|  
+|**options**|**int**|Ein Bitmuster, mit dem zusätzliche Veröffentlichungsoptionen angegeben werden. Dabei gibt es folgende bitweise Optionswerte:<br /><br /> **0x1** : für die Peer-zu-Peer-Replikation aktiviert.<br /><br /> **0x2** -nur lokale Änderungen für die Peer-zu-Peer-Replikation veröffentlichen.<br /><br /> **0x4** -aktiviert für nicht-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] -Abonnenten.<br /><br /> **0x8** : für Peer-zu-Peer-Konflikterkennung aktiviert.|  
 |**originator_id**|**smallint**|Kennzeichnet jeden Knoten in einer Peer-zu-Peer-Replikationstopologie zum Zweck der Konflikterkennung. Weitere Informationen finden Sie unter [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).|  
   
 ## <a name="see-also"></a>Weitere Informationen  
  [Replikations Tabellen &#40;Transact-SQL-&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [Gespeicherte Replikationsprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
+ [Gespeicherte Replikations Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_addpublication &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [sp_helppublication &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
+ [sp_helppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppublication-transact-sql.md)  
   
   

@@ -22,10 +22,10 @@ ms.assetid: 420fb99e-e60f-445b-b568-da96471f1e8f
 author: rothja
 ms.author: jroth
 ms.openlocfilehash: f8d85103b48b04284966e77595d0cfa927cd6338
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: 6fd8c1914de4c7ac24900fe388ecc7883c740077
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68083762"
 ---
 # <a name="syssp_cdc_disable_db-transact-sql"></a>sys.sp_cdc_disable_db (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "68083762"
 
   Deaktiviert Change Data Capture für die aktuelle Datenbank. Change Data Capture ist nicht in jeder Edition von [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Eine Liste der Funktionen, die von den [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Editionen unterstützt werden, finden Sie unter [Von den SQL Server 2016-Editionen unterstützte Funktionen](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
-**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
+**Gilt für**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] bis zur [aktuellen Version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
  ![Symbol für Themenlink](../../database-engine/configure-windows/media/topic-link.gif "Symbol für Themenlink") [Transact-SQL-Syntaxkonventionen](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -56,7 +56,7 @@ sys.sp_cdc_disable_db
 >  Wenn zum Zeitpunkt der Deaktivierung von Change Data Capture viele Aufzeichnungsinstanzen für die Datenbank definiert sind, kann eine Transaktion mit langer Ausführungszeit dazu führen, dass die Ausführung von sys.sp_cdc_disable_db fehlschlägt. Dieses Problem kann vermieden werden, indem die einzelnen Aufzeichnungsinstanzen vor der Ausführung von sys.sp_cdc_disable_db mithilfe von sys.sp_cdc_disable_table deaktiviert werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
+ Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** .  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird Change Data Capture für die Datenbank `AdventureWorks2012` deaktiviert.  

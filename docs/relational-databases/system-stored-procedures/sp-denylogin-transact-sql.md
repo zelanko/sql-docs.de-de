@@ -18,10 +18,10 @@ ms.assetid: db80f152-e8af-4303-95b6-3a3a7b664374
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 00ba2f254d2ff676eab7c93bb6d0cca7c4ae0901
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68053179"
 ---
 # <a name="sp_denylogin-transact-sql"></a>sp_denylogin (Transact-SQL)
@@ -42,7 +42,7 @@ sp_denylogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @loginame = ] 'login_ '`Der Name eines Windows-Benutzers oder einer Windows-Gruppe. *Login* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert.  
+`[ @loginame = ] 'login_ '`Der Name eines Windows-Benutzers oder einer Windows-Gruppe. *login* ist vom Datentyp **sysname**und hat keinen Standardwert.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
@@ -53,7 +53,7 @@ sp_denylogin [ @loginame = ] 'login'
  **sp_denylogin** kann nicht innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  
   
 ## <a name="permissions"></a>Berechtigungen  
- Erfordert die Mitgliedschaft in der festen Serverrolle **sysadmin** .  
+ Erfordert die Mitgliedschaft in der festen Server Rolle **sysadmin** .  
   
 ## <a name="examples"></a>Beispiele  
  Im folgenden Beispiel wird gezeigt, wie **sp_denylogin** verwendet wird, um `CORPORATE\GeorgeV` zu verhindern, dass Windows-Benutzer eine Verbindung mit dem Server herstellen  
@@ -65,7 +65,7 @@ EXEC sp_denylogin 'CORPORATE\GeorgeV';
 ## <a name="see-also"></a>Weitere Informationen  
  [sp_grantlogin &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [Gespeicherte Sicherheits Prozeduren &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
+ [Alter Login &#40;Transact-SQL-&#41;](../../t-sql/statements/alter-login-transact-sql.md)   
  [Gespeicherte Systemprozeduren &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

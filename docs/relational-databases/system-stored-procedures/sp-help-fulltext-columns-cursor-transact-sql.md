@@ -18,10 +18,10 @@ ms.assetid: 26054e76-53b7-4004-8d48-92ba3435e9d7
 author: MikeRayMSFT
 ms.author: mikeray
 ms.openlocfilehash: 8a9bbd9039e20fad5cf4c22b71e9a85662bf5912
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68055099"
 ---
 # <a name="sp_help_fulltext_columns_cursor-transact-sql"></a>sp_help_fulltext_columns_cursor (Transact-SQL)
@@ -46,9 +46,9 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ## <a name="arguments"></a>Argumente  
 `[ @cursor_return = ] @cursor_variable OUTPUT`Die Ausgabevariable vom Typ **Cursor**. Bei dem Cursor handelt es sich um einen schreibgeschützten, bildlauffähigen, dynamischen Cursor.  
   
-`[ @table_name = ] 'table_name'`Der ein-oder zweiteilige Tabellenname, für den Volltextindex Informationen angefordert werden. *table_name* ist vom Datentyp **nvarchar (517)** und hat den Standardwert NULL. Wenn *table_name* ausgelassen wird, werden die Volltextindex-Spalteninformationen für jede volltextindizierte Tabelle abgerufen.  
+`[ @table_name = ] 'table_name'`Der ein-oder zweiteilige Tabellenname, für den Volltextindex Informationen angefordert werden. *table_name* ist vom Datentyp **nvarchar(517)**. Der Standardwert ist NULL. Wenn *table_name* ausgelassen wird, werden die Volltextindex-Spalteninformationen für jede volltextindizierte Tabelle abgerufen.  
   
-`[ @column_name = ] 'column_name'`Der Name der Spalte, für die die Metadaten des voll Text Indexes gewünscht werden. *column_name* ist vom **Datentyp vom Datentyp sysname** und hat den Standardwert NULL. Wenn *column_name* ausgelassen wird oder den Wert NULL aufweist, werden die Volltextspalteninformationen für jede volltextindizierte Spalte für *table_name*zurückgegeben. Wenn *table_name* ebenfalls ausgelassen wird oder den Wert NULL aufweist, werden die Volltextindex-Spalteninformationen für jede volltextindizierte Spalte aller Tabellen in der Datenbank zurückgegeben.  
+`[ @column_name = ] 'column_name'`Der Name der Spalte, für die die Metadaten des voll Text Indexes gewünscht werden. *column_name* ist vom Datentyp **sysname** . Der Standardwert ist NULL. Wenn *column_name* ausgelassen wird oder den Wert NULL aufweist, werden die Volltextspalteninformationen für jede volltextindizierte Spalte für *table_name*zurückgegeben. Wenn *table_name* ebenfalls ausgelassen wird oder den Wert NULL aufweist, werden die Volltextindex-Spalteninformationen für jede volltextindizierte Spalte aller Tabellen in der Datenbank zurückgegeben.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  0 (Erfolg) oder 1 (Fehler)  

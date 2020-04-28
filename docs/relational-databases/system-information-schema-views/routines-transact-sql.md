@@ -20,10 +20,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 1ec3836db241320beabfbd4672ffad9b22ccaf58
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68078525"
 ---
 # <a name="routines-transact-sql"></a>ROUTINES (Transact-SQL)
@@ -72,7 +72,7 @@ ms.locfileid: "68078525"
 |SCOPE_CATALOG|**nvarchar (** 128 **)**|NULL. Für die zukünftige Verwendung reserviert.|  
 |SCOPE_SCHEMA|**nvarchar (** 128 **)**|NULL. Für die zukünftige Verwendung reserviert.|  
 |SCOPE_NAME|**nvarchar (** 128 **)**|NULL. Für die zukünftige Verwendung reserviert.|  
-|MAXIMUM_CARDINALITY|**BIGINT**|NULL. Für die zukünftige Verwendung reserviert.|  
+|MAXIMUM_CARDINALITY|**bigint**|NULL. Für die zukünftige Verwendung reserviert.|  
 |DTD_IDENTIFIER|**nvarchar (** 128 **)**|NULL. Für die zukünftige Verwendung reserviert.|  
 |ROUTINE_BODY|**nvarchar (** 30 **)**|Gibt SQL für eine [!INCLUDE[tsql](../../includes/tsql-md.md)]-Funktion und EXTERNAL für eine extern geschriebene Funktion zurück.<br /><br /> Funktionen sind immer SQL.|  
 |ROUTINE_DEFINITION|**nvarchar (** 4000 **)**|Gibt die ersten 4000 Zeichen des Definitionstexts der Funktion oder gespeicherten Prozedur zurück, wenn die Funktion oder gespeicherte Prozedur nicht verschlüsselt ist. Andernfalls wird NULL zurückgegeben.<br /><br /> Um sicherzustellen, dass Sie die gesamte Definition erhalten, Fragen Sie die [OBJECT_DEFINITION](../../t-sql/functions/object-definition-transact-sql.md) -Funktion oder die Definition-Spalte in der [sys. sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) -Katalog Sicht ab.|  

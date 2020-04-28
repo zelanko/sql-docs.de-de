@@ -18,10 +18,10 @@ ms.assetid: e58684d1-c394-48de-906e-da6ee91100c3
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: de01ffe595a636356bf5b82ed2c5540cc3f5a092
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68056499"
 ---
 # <a name="sp_droplogin-transact-sql"></a>sp_droplogin (Transact-SQL)
@@ -42,13 +42,13 @@ sp_droplogin [ @loginame = ] 'login'
 ```  
   
 ## <a name="arguments"></a>Argumente  
-`[ @loginame = ] 'login'`Der Anmelde Name, der entfernt werden soll. *Login* ist vom **Datentyp vom Datentyp sysname**und hat keinen Standardwert. der *Anmelde* Name muss bereits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in vorhanden sein.  
+`[ @loginame = ] 'login'`Der Anmelde Name, der entfernt werden soll. *login* ist vom Datentyp **sysname**und hat keinen Standardwert. der *Anmelde* Name muss bereits [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in vorhanden sein.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  „0“ (erfolgreich) oder „1“ (fehlerhaft)  
   
 ## <a name="remarks"></a>Bemerkungen  
- **sp_droplogin** Ruft Drop Login auf.  
+ **sp_droplogin** ruft DROP LOGIN auf.  
   
  **sp_droplogin** kann nicht innerhalb einer benutzerdefinierten Transaktion ausgeführt werden.  
   

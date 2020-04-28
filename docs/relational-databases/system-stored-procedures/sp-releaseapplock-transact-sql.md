@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7b75962019d9b39728ceff0b151e770dd0f51a25
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68075630"
 ---
 # <a name="sp_releaseapplock-transact-sql"></a>sp_releaseapplock (Transact-SQL)
@@ -47,7 +47,7 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
  Der Name einer Sperrressource, der von der Clientanwendung angegeben wird. In der Anwendung muss sichergestellt sein, dass die Ressource eindeutig ist. Der angegebene Name wird intern als Hashwert in einem Wert gespeichert, der im [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Sperren-Manager gespeichert werden kann. *resource_name* ist vom Datentyp **nvarchar (255)** und hat keinen Standardwert. *resource_name* ist binär verglichen. Daher wird die Groß-/Kleinschreibung unabhängig von den Sortierungs Einstellungen der aktuellen Datenbank beachtet.  
   
  [ @LockOwner= ] "*lock_owner*"  
- Der Besitzer der Sperre. Dabei handelt es sich um den Wert von *lock_owner* beim Anfordern der Sperre. *lock_owner* ist vom Datentyp **nvarchar (32)**. Der Wert kann **Transaction** (Standard) oder **Session** sein. Wenn der *lock_owner* Wert **Transaction**ist, wird standardmäßig sp_getapplock der innerhalb einer Transaktion ausgeführt werden muss.  
+ Der Besitzer der Sperre. Dabei handelt es sich um den Wert von *lock_owner* beim Anfordern der Sperre. *lock_owner* ist vom Datentyp **nvarchar(32)**. Der Wert kann **Transaction** (Standard) oder **Session** sein. Wenn der *lock_owner* Wert **Transaction**ist, wird standardmäßig sp_getapplock der innerhalb einer Transaktion ausgeführt werden muss.  
   
  [ @DbPrincipal= ] "*database_principal*"  
  Der Benutzer, die Rolle oder die Anwendungsrolle mit Berechtigungen für ein Objekt in einer Datenbank. Der Aufrufer der Funktion muss ein Member von *database_principal*, dbo oder der db_owner Fixed-Daten Bank Rolle sein, damit die Funktion erfolgreich aufgerufen werden kann. Der Standardwert ist public.  
@@ -55,7 +55,7 @@ sp_releaseapplock [ @Resource = ] 'resource_name'
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  \>= 0 (Erfolg) oder < 0 (Fehler)  
   
-|value|Ergebnis|  
+|Wert|Ergebnis|  
 |-----------|------------|  
 |0|Die Sperre wurde erfolgreich aufgehoben.|  
 |-999|Weist auf einen Fehler bei der Parameterüberprüfung oder einen anderen Aufruffehler hin.|  
@@ -83,6 +83,6 @@ GO
 ## <a name="see-also"></a>Weitere Informationen  
  [APPLOCK_MODE &#40;Transact-SQL-&#41;](../../t-sql/functions/applock-mode-transact-sql.md)   
  [APPLOCK_TEST &#40;Transact-SQL-&#41;](../../t-sql/functions/applock-test-transact-sql.md)   
- [sp_getapplock &#40;Transact-SQL-&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
+ [sp_getapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
   
   

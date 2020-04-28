@@ -16,10 +16,10 @@ ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: c10451148c6f9b2fda231691b770bca3928517f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68075749"
 ---
 # <a name="sp_register_custom_scripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
@@ -42,11 +42,11 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ## <a name="arguments"></a>Argumente  
 `[ @type = ] 'type'`Der Typ der benutzerdefinierten gespeicherten Prozedur oder des Skripts, das registriert wird. *Type ist vom Datentyp* **varchar (16)** und hat keinen Standardwert. die folgenden Werte sind möglich:  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**setze**|Die registrierte, benutzerdefinierte gespeicherte Prozedur wird ausgeführt, wenn eine INSERT-Anweisung repliziert wird.|  
 |**alisierungs**|Die registrierte, benutzerdefinierte gespeicherte Prozedur wird ausgeführt, wenn eine UPDATE-Anweisung repliziert wird.|  
-|**Lösch**|Die registrierte, benutzerdefinierte gespeicherte Prozedur wird ausgeführt, wenn eine DELETE-Anweisung repliziert wird.|  
+|**delete**|Die registrierte, benutzerdefinierte gespeicherte Prozedur wird ausgeführt, wenn eine DELETE-Anweisung repliziert wird.|  
 |**custom_script**|Das Skript wird am Ende des DDL-Triggers (Data Definition Language) ausgeführt.|  
   
 `[ @value = ] 'value'`Der Name einer gespeicherten Prozedur oder eines Namens und der voll qualifizierte Pfad der [!INCLUDE[tsql](../../includes/tsql-md.md)] Skriptdatei, die registriert wird. der Wert ist vom Datentyp **nvarchar (1024)** und hat keinen Standard *Wert* .  

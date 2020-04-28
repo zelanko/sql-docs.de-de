@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8eb18a81ff7910418e5b3c8a3b36a0e4cd94cc36
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68070356"
 ---
 # <a name="sp_columns-transact-sql"></a>sp_columns (Transact-SQL)
@@ -51,7 +51,7 @@ sp_columns [ @table_name = ] object
   
  Wenn der aktuelle Benutzer ein Objekt mit dem angegebenen Namen besitzt, werden die Spalten dieses Objekts zurückgegeben. Wenn *Owner* nicht angegeben wird und der aktuelle Benutzer kein Objekt mit dem angegebenen *Objekt*besitzt, sucht **sp_columns** nach einem Objekt mit dem angegebenen *Objekt* , das im Besitz des Daten Bank Besitzers ist. Sofern ein solches Objekt vorhanden ist, werden dessen Spalten zurückgegeben.  
   
-`[ \@table_qualifier = ] qualifier`Der Name des Objekt Qualifizierers. *Qualifizierer* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Benennung für-Objekte (_Qualifizierer_)**.** _Besitzer_**.** _Name_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei einigen anderen Produkten stellt sie den Servernamen der Datenbankumgebung für das Objekt dar.  
+`[ \@table_qualifier = ] qualifier`Der Name des Objekt Qualifizierers. *qualifier* ist vom Datentyp **sysname**und hat den Standardwert NULL. Verschiedene DBMS-Produkte unterstützen eine dreiteilige Benennung für-Objekte (_Qualifizierer_)**.** _Besitzer_**.** _Name_). In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stellt diese Spalte den Datenbanknamen dar. Bei einigen anderen Produkten stellt sie den Servernamen der Datenbankumgebung für das Objekt dar.  
   
 `[ \@column_name = ] column`Bei handelt es sich um eine einzelne Spalte, die verwendet wird, wenn nur eine Spalte mit Katalog Informationen gewünscht wird. die Spalte ist vom *Datentyp* **nvarchar (384)** und hat den Standardwert NULL. Wenn *Column* nicht angegeben wird, werden alle Spalten zurückgegeben. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]stellt *Column* den Spaltennamen dar, der in der **syscolumschlag** -Tabelle aufgelistet ist. Mustervergleiche mit Platzhalterzeichen werden unterstützt. Für eine optimale Interoperabilität sollte der Gatewayclient nur einen SQL-92-Standardmustervergleich voraussetzen (die Platzhalterzeichen % und _).  
   
@@ -72,18 +72,18 @@ sp_columns [ @table_name = ] object
 |**DATA_TYPE**|**smallint**|Ganzzahliger Code für den ODBC-Datentyp. Wenn es sich um einen Datentyp handelt, der keinem ODBC-Typ zugeordnet werden kann, ist er NULL. Der Name des systemeigenen Datentyps wird in der **TYPE_NAME** Spalte zurückgegeben.|  
 |**TYPE_NAME**|**sysname**|Die Zeichenfolge, die den Datentyp darstellt. Den Datentypnamen stellt das zugrunde liegende DBMS bereit.|  
 |**Präziser**|**int**|Die Anzahl von signifikanten Stellen. Der Rückgabewert für die **Genauigkeits** Spalte ist in Basis 10.|  
-|**Füll**|**int**|Übertragungs Größe der Daten. <sup>1</sup>|  
+|**LENGTH**|**int**|Übertragungs Größe der Daten. <sup>1</sup>|  
 |**Migen**|**smallint**|Die Anzahl der Ziffern rechts vom Dezimalzeichen|  
 |**RADIX**|**smallint**|Die Basis für numerische Datentypen.|  
 |**Werte zulässt**|**smallint**|Gibt die NULL-Zulässigkeit an.<br /><br /> 1 = NULL ist möglich<br /><br /> 0 = NOT NULL|  
-|**Rede**|**varchar (254)**|Dieses Feld gibt immer NULL zurück.|  
+|**HINWEISE**|**varchar (254)**|Dieses Feld gibt immer NULL zurück.|  
 |**COLUMN_DEF**|**nvarchar(4000)**|Standardwert der Spalte|  
 |**SQL_DATA_TYPE**|**smallint**|Der Wert des SQL-Datentyps, wie er im TYPE-Feld des Deskriptors angezeigt wird. Diese Spalte ist identisch mit der **data_type** Spalte, mit Ausnahme der Datentypen **DateTime** und SQL-92 **Interval** . Diese Spalte gibt immer einen Wert zurück.|  
 |**SQL_DATETIME_SUB**|**smallint**|Untertyp Code für **DateTime** -und SQL-92 **Interval** -Datentypen. Bei allen anderen Datentypen gibt diese Spalte NULL zurück.|  
 |**CHAR_OCTET_LENGTH**|**int**|Die maximale Länge (in Byte) einer Spalte eines Zeichendatentyps oder eines ganzzahligen Datentyps. Für alle anderen Datentypen gibt diese Spalte NULL zurück.|  
 |**ORDINAL_POSITION**|**int**|Die Position einer Spalte innerhalb des Objekts. Die erste Spalte im Objekt hat den Wert 1. Diese Spalte gibt immer einen Wert zurück.|  
 |**IS_NULLABLE**|**varchar (254)**|Die NULL-Zulässigkeit einer Spalte innerhalb des Objekts. Die NULL-Zulässigkeit wird gemäß den ISO-Regeln bestimmt. Ein DBMS nach ISO SQL kann keine leere Zeichenfolge zurückgeben.<br /><br /> YES = Spalte kann NULL-Werte enthalten.<br /><br /> NO = Spalte kann keine NULL-Werte enthalten.<br /><br /> Die Spalte gibt eine leere Zeichenfolge zurück, wenn die NULL-Zulässigkeit unbekannt ist.<br /><br /> Der für diese Spalte zurückgegebene Wert unterscheidet sich von dem Wert, der für die **Nullable** -Spalte zurückgegeben wird.|  
-|**SS_DATA_TYPE**|**tinyint**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]der von erweiterten gespeicherten Prozeduren verwendete Datentyp. Weitere Informationen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  
+|**SS_DATA_TYPE**|**tinyint**|Der [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-Datentyp, der von erweiterten gespeicherten Prozeduren verwendet wird. Weitere Informationen finden Sie unter [Datentypen &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|  
   
  <sup>1</sup> Weitere Informationen finden Sie in der Microsoft ODBC-Dokumentation.  
   
@@ -103,7 +103,7 @@ EXEC sp_columns @table_name = N'Department',
    @table_owner = N'HumanResources';  
 ```  
   
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-sssdwfull-and-sspdw"></a>Beispiele: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] und [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  Im folgenden Beispiel werden die Spalteninformationen für die angegebene Tabelle zurückgegeben.  
   
 ```  

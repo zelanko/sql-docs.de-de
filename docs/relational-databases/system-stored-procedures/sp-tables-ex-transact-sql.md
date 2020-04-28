@@ -18,10 +18,10 @@ ms.assetid: 33755c33-7e1e-4ef7-af14-a9cebb1e2ed4
 author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 77d1512c472005e59909342c94a88c4464c4fe5c
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68096076"
 ---
 # <a name="sp_tables_ex-transact-sql"></a>sp_tables_ex (Transact-SQL)
@@ -54,7 +54,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
   
 `[ @table_type = ] 'table_type'`Der Typ der zurück zugebende Tabelle. *TABLE_TYPE* ist vom **Datentyp vom Datentyp sysname**und hat den Standardwert NULL und kann einen der folgenden Werte aufweisen.  
   
-|value|BESCHREIBUNG|  
+|Wert|Beschreibung|  
 |-----------|-----------------|  
 |**Alias**|Der Name eines Alias|  
 |**GLOBAL TEMPORARY**|Der Name einer systemweit verfügbaren temporären Tabelle|  
@@ -63,9 +63,9 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**System Tabelle**|Der Name einer Systemtabelle|  
 |**System Ansicht**|Der Name einer Systemsicht|  
 |**TABLE**|Der Name einer Benutzertabelle|  
-|**VIEW**|Der Name einer Sicht|  
+|**Anschauung**|Der Name einer Sicht|  
   
-`[ @fUsePattern = ] 'fUsePattern'`Bestimmt, ob die **** Zeichen _ **%**,, **[** und **]** als Platzhalter Zeichen interpretiert werden. Gültige Werte sind 0 (Mustervergleich ist deaktiviert) und 1 (Mustervergleich ist aktiviert). *fUsePattern* ist vom Typ **Bit**. der Standardwert ist 1.  
+`[ @fUsePattern = ] 'fUsePattern'`Bestimmt, ob die **_** Zeichen _ **%**,, **[** und **]** als Platzhalter Zeichen interpretiert werden. Gültige Werte sind 0 (Mustervergleich ist deaktiviert) und 1 (Mustervergleich ist aktiviert). *fUsePattern* ist vom Datentyp **bit**. Der Standardwert ist 1.  
   
 ## <a name="return-code-values"></a>Rückgabecodewerte  
  Keine  
@@ -78,8 +78,7 @@ sp_tables_ex [ @table_server = ] 'table_server'
 |**TABLE_SCHEM**|**sysname**|Der Name des Tabellen Besitzers. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]stellt diese Spalte den Namen des Daten Bank Benutzers dar, der die Tabelle erstellt hat. Dieses Feld gibt immer einen Wert zurück.|  
 |**TABLE_NAME**|**sysname**|Tabellenname. Dieses Feld gibt immer einen Wert zurück.|  
 |**TABLE_TYPE**|**varchar(32)**|Tabelle, Systemtabelle oder Sicht.|  
-|**Rede**|**varchar (254)**|
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt für diese Spalte keinen Wert zurück.|  
+|**HINWEISE**|**varchar (254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] gibt für diese Spalte keinen Wert zurück.|  
   
 ## <a name="remarks"></a>Bemerkungen  
  **sp_tables_ex** wird ausgeführt, indem das TABLES-Rowset der **IDBSchemaRowset** -Schnittstelle des OLE DB Anbieters abgefragt wird, der *table_server*entspricht. Die Parameter *table_name*, *TABLE_SCHEMA*, *TABLE_CATALOG*und *Column* werden an diese Schnittstelle übermittelt, um die zurückgegebenen Zeilen einzuschränken.  

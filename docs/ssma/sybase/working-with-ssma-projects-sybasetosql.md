@@ -10,10 +10,10 @@ ms.assetid: 11091d95-c488-48c3-891a-743cac94ac93
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: eb6f035b4d597e2b648134c195b698554dc78e12
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68072470"
 ---
 # <a name="working-with-ssma-projects-sybasetosql"></a>Arbeiten mit SSMA-Projekten (SybaseToSQL)
@@ -64,11 +64,11 @@ Wenn Sie Daten aus ASE-Daten [!INCLUDE[ssNoVersion](../../includes/ssnoversion-m
   
 4.  Wählen Sie in der Dropdown Liste **Migration zu** die Version des [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Ziels aus, die für die Migration verwendet wird. Die verfügbaren Optionen sind:  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2005  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2008  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008  
   
-    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2012  
+    -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012  
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014  
   
@@ -96,7 +96,7 @@ Wenn Sie ein Projekt speichern, behält SSMA die Projekteinstellungen und option
   
         Das Speichern von Metadaten kann einige Minuten dauern. Wenn Sie an diesem Punkt keine Metadaten speichern möchten, aktivieren Sie keine Kontrollkästchen.  
   
-    2.  Klicken Sie auf die Schaltfläche **Speichern**.  
+    2.  Klicken Sie auf die Schaltfläche **Save** .  
   
         SSMA analysiert die Sybase-ASE-Schemas und speichert die Metadaten in der Projektdatei.  
   
