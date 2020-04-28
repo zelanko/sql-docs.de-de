@@ -10,10 +10,10 @@ ms.assetid: 94099d01-ab19-4d58-a172-340c86b4a0f3
 author: Shamikg
 ms.author: Shamikg
 ms.openlocfilehash: 3fe4b59a5131838357d7f58e5333e0ba6b9c80f2
-ms.sourcegitcommit: b87d36c46b39af8b929ad94ec707dee8800950f5
+ms.sourcegitcommit: e042272a38fb646df05152c676e5cbeae3f9cd13
 ms.translationtype: MT
 ms.contentlocale: de-DE
-ms.lasthandoff: 02/08/2020
+ms.lasthandoff: 04/27/2020
 ms.locfileid: "68103233"
 ---
 # <a name="connect-to-mysql-mysqltosql"></a>Herstellen einer Verbindung mit MySQL (MySqlToSql)
@@ -21,7 +21,7 @@ Verwenden Sie das Dialogfeld **mit MySQL verbinden** , um eine Verbindung mit de
   
 Um auf dieses Dialogfeld zuzugreifen, wählen Sie im Menü **Datei** die Option **mit MySQL verbinden**aus. Wenn Sie bereits eine Verbindung hergestellt haben, wird **mit dem Befehl erneut eine Verbindung mit MySQL hergestellt**.  
   
-## <a name="options"></a>Tastatur  
+## <a name="options"></a>Optionen  
 **Anbieter**  
   
 Verfügbarer MySQL-Anbieter ist der MySQL-ODBC 5,1-Treiber (vertrauenswürdig).  
@@ -44,7 +44,7 @@ Geben Sie den Benutzernamen ein, der von SSMA für die Verbindung mit der MySQL-
   
 **Kennwort**  
   
-Geben Sie das Kennwort für den Benutzernamen ein,  
+Geben Sie das Kennwort für den Benutzernamen ein.  
   
 **SSL**  
   
